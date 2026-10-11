@@ -1,3 +1,9 @@
+> **Estado vigente: borrador inicial v0.1.** El último ensayo está en [design/pasaporte-local/](design/pasaporte-local/). No es identidad final aprobada y aún no cubre todas las categorías del portal.
+>
+> Para comenzar el proyecto independiente, leer [PROYECTO_INDEPENDIENTE.md](PROYECTO_INDEPENDIENTE.md) y [AGENTS.md](AGENTS.md). La tipografía y la identidad se revisarán sin referencias a Paradigma Solutions.
+>
+> La entrega cPanel y los ZIP descritos debajo son históricos; no corresponden al último ensayo ni a un portal completo aprobado.
+
 # Explorando Lugares — entrega estática para cPanel
 
 ## Contenido
