@@ -44,17 +44,15 @@ try {
     }
     if ($admin && $tab==='sistema') {
         $pdo=db();
-        $required=['id','request_key','name','business','municipality','category','email','phone','phone_type','participation_version','consent_version','status','created_at'];
         $driver=$pdo->getAttribute(PDO::ATTR_DRIVER_NAME);
-        // getColumnMeta no está disponible de forma consistente en cPanel/MySQL.
-        // Consultamos el esquema con la instrucción propia de cada motor admitido.
-        $schema=$driver==='mysql' ? $pdo->query('SHOW COLUMNS FROM leads')->fetchAll() : $pdo->query('PRAGMA table_info(leads)')->fetchAll();
-        $actual=array_map(static fn(array $column):string => $driver==='mysql' ? $column['Field'] : $column['name'],$schema);
+        // Usar solo SELECT: el usuario de producción no requiere permisos SHOW.
+        $pdo->query('SELECT 1 FROM leads LIMIT 1');
+        $pdo->query('SELECT 1 FROM rate_limits LIMIT 1');
         $system=[
             'database'=>'Conectada',
             'driver'=>$driver==='mysql'?'MySQL/MariaDB':'Controlador no esperado',
-            'leads'=>count(array_diff($required,$actual))===0?'Tabla lista':'Faltan columnas requeridas',
-            'limits'=>$pdo->query('SELECT bucket_key FROM rate_limits LIMIT 0')?'Tabla lista':'No disponible',
+            'leads'=>'Tabla accesible',
+            'limits'=>'Tabla accesible',
             'privacy'=>!empty($config['privacy']['operator']) && !empty($config['privacy']['contact']) && !empty($config['privacy']['retention']) && !empty($config['privacy']['retention_en'])?'Completa':'Pendiente',
             'registration'=>ready()?'Habilitada':'Deshabilitada',
             'server'=>substr((string)$pdo->getAttribute(PDO::ATTR_SERVER_VERSION),0,80),
@@ -69,7 +67,7 @@ try {
 <form method="post"><input type="hidden" name="csrf" value="<?=esc($_SESSION['csrf'])?>"><input type="hidden" name="action" value="logout"><button class="pill light">Cerrar sesión</button></form>
 <nav class="admin-tabs" aria-label="Administración"><a href="?tab=solicitudes" <?=$tab==='solicitudes'?'aria-current="page"':''?>>Solicitudes</a><a href="?tab=sistema" <?=$tab==='sistema'?'aria-current="page"':''?>>Sistema y base de datos</a></nav>
 <?php if($tab==='sistema'): ?>
-<section class="admin-system"><p class="eyebrow">Diagnóstico seguro</p><h2>Sistema y base de datos</h2><p>Este resumen confirma el estado de la conexión y las tablas necesarias. No muestra contraseñas, usuarios, cadenas de conexión ni datos de los contactos.</p><dl><dt>Conexión</dt><dd><?=esc($system['database'])?></dd><dt>Motor</dt><dd><?=esc($system['driver'])?> · <?=esc($system['server'])?></dd><dt>Solicitudes (<code>leads</code>)</dt><dd><?=esc($system['leads'])?></dd><dt>Protección contra abuso (<code>rate_limits</code>)</dt><dd><?=esc($system['limits'])?></dd><dt>Información de privacidad</dt><dd><?=esc($system['privacy'])?></dd><dt>Recepción del formulario</dt><dd><?=esc($system['registration'])?></dd></dl><div class="notice"><strong>Configuración privada</strong><p>La contraseña MySQL y el usuario administrador se configuran únicamente en <code>private/config.php</code>, fuera de la web. Para activar el formulario se completa ese archivo y se vuelve a comprobar aquí. No ejecutes SQL arbitrario desde el navegador.</p></div></section>
+<section class="admin-system"><p class="eyebrow">Diagnóstico seguro</p><h2>Sistema y base de datos</h2><p>Este resumen confirma el estado de la conexión y las tablas necesarias. No muestra contraseñas, usuarios, cadenas de conexión ni datos de los contactos.</p><dl><dt>Conexión</dt><dd><?=esc($system['database'])?></dd><dt>Motor</dt><dd><?=esc($system['driver'])?></dd><dt>Solicitudes (<code>leads</code>)</dt><dd><?=esc($system['leads'])?></dd><dt>Protección contra abuso (<code>rate_limits</code>)</dt><dd><?=esc($system['limits'])?></dd><dt>Información de privacidad</dt><dd><?=esc($system['privacy'])?></dd><dt>Recepción del formulario</dt><dd><?=esc($system['registration'])?></dd></dl><div class="notice"><strong>Configuración privada</strong><p>La contraseña MySQL y el usuario administrador se configuran únicamente en <code>private/config.php</code>, fuera de la web. Para activar el formulario se completa ese archivo y se vuelve a comprobar aquí. No ejecutes SQL arbitrario desde el navegador.</p></div></section>
 <?php else: ?>
 <form method="get" class="admin-filter"><label>Filtrar por estado<select name="status"><option value="">Todos</option><?php foreach(['nuevo','revisado','contactado','archivado'] as $value): ?><option value="<?=$value?>" <?=$value===$status?'selected':''?>><?=esc(ucfirst($value))?></option><?php endforeach ?></select></label><button class="pill light">Filtrar</button></form>
 <p><?=esc($total)?> solicitudes · Página <?=esc($page)?> · Fechas UTC</p>
