@@ -24,6 +24,16 @@ class DeploymentTests(unittest.TestCase):
  def test_reject_unsafe_targets_and_credentials(self):
   for changes in [{'remote_base':'/'},{'remote_base':'/home/user/public_html/otro'},{'remote_base':'/home/user/../otro'},{'public_directory':'private'},{'host':'host;rm'},{'password':'no guardar'},{'site':'otro'},{'port':0}]:
    with self.subTest(changes=changes),self.assertRaises(ValueError):self.load({**self.config,**changes})
+ def test_separate_public_root(self):
+  config={**self.config,'public_root':'/home/usuario/public_html/explorandolugares.com'}
+  self.assertEqual(deploy.public_path(self.load(config)),config['public_root'])
+  remote=Remote();journal={};deploy.activate(remote,config,'test',False,journal,lambda:None)
+  self.assertEqual(journal['activation'][0]['from'],config['public_root'])
+  self.assertEqual(journal['activation'][-1]['to'],config['public_root'])
+  self.assertTrue(journal['activation'][1]['from'].startswith(config['remote_base']))
+ def test_reject_other_public_roots(self):
+  for path in ['/home/usuario/public_html','/home/usuario/public_html/otro.com','/home/otro/public_html/explorandolugares.com','/home/usuario/public_html/../explorandolugares.com',42]:
+   with self.subTest(path=path),self.assertRaises(ValueError):self.load({**self.config,'public_root':path})
  def test_literal_sftp_paths(self):
   self.assertEqual(deploy.quote('/tmp/mi carpeta'), '"/tmp/mi carpeta"')
   for value in ['a\nrm /','a*','a?','a[1]']:
