@@ -1,10 +1,34 @@
-> **Estado vigente: borrador inicial v0.1.** El último ensayo está en [design/pasaporte-local/](design/pasaporte-local/). No es identidad final aprobada y aún no cubre todas las categorías del portal.
->
-> Para comenzar el proyecto independiente, leer [PROYECTO_INDEPENDIENTE.md](PROYECTO_INDEPENDIENTE.md) y [AGENTS.md](AGENTS.md). La tipografía y la identidad se revisarán sin referencias a Paradigma Solutions.
->
-> La entrega cPanel y los ZIP descritos debajo son históricos; no corresponden al último ensayo ni a un portal completo aprobado.
+# Explorando Lugares
 
-# Explorando Lugares — entrega estática para cPanel
+El sitio actual está en **[ensayos/v1/](ensayos/v1/)**: portada, 21 destinos, español e inglés y formulario de participación. Es una entrega para revisión y preparación del despliegue; no se ha publicado en hosting.
+
+`design/pasaporte-local/` conserva el borrador inicial v0.1, sin convertirlo en diseño aprobado. `public/` y los ZIP de la sección histórica no son la entrega vigente.
+
+## Ejecutar el sitio actual
+
+```sh
+python3 scripts/ensayar.py
+```
+
+Abrir http://127.0.0.1:8000/v1/. El servidor sirve únicamente los ensayos y no ejecuta el backend del formulario. Consultar [entorno local](docs/ENTORNO_LOCAL.md).
+
+## Preparar una entrega
+
+```sh
+python3 scripts/preparar-hosting.py
+```
+
+Genera `.local/hosting/` con archivos públicos y componentes privados separados. Esa carpeta está excluida de Git. No publica ni modifica el hosting. Las guías y traducciones se regeneran desde `content/`; consultar [destinos piloto](docs/DESTINOS_PILOTO.md).
+
+Se incluye un backend PHP para captar interesados y una administración privada, con pruebas locales. Su activación requiere confirmar el hosting, base de datos, credenciales y datos de privacidad. El propietario está evaluando alternativas a PHP; no se ha sustituido ni desplegado ese backend. Véase [instalación del backend](backend/README.md).
+
+El script [SFTP](docs/DESPLIEGUE_SFTP.md) conserva configuración de ejemplo, revisión previa y separación pública/privada. No contiene credenciales reales. Revisar [preparación del despliegue](docs/PREPARACION_DESPLIEGUE.md) antes de publicar.
+
+Para el contexto de producto, leer [PROYECTO_INDEPENDIENTE.md](PROYECTO_INDEPENDIENTE.md) y [AGENTS.md](AGENTS.md).
+
+---
+
+# Entrega estática histórica para cPanel
 
 ## Contenido
 - public/: archivos para publicar (HTML, CSS, JavaScript y SVG).

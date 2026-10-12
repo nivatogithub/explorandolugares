@@ -1,0 +1,66 @@
+# Registro de negocios y administración inicial
+
+Todos navegan libremente, incluidos los comercios. Único flujo público inicial: dejar datos para que Explorando Lugares contacte al negocio y evalúe agregarlo manualmente. No hay selección de perfiles ni registro de usuarios. No hay pago, planes contratables, publicación automática, emails automáticos ni cuentas para negocios.
+
+## Entrega para cPanel
+
+Requisitos: PHP 8.2 o posterior con PDO MySQL, MySQL/MariaDB, HTTPS y posibilidad de mantener carpetas privadas fuera de la raíz pública. Confirmar estas capacidades con el hosting antes de activar. El frontend histórico `public/` del repositorio no se modifica.
+
+Ejecutar `python3 scripts/preparar-hosting.py` desde la raíz. Prepara `.local/hosting/` con esta estructura:
+
+```
+hosting/
+  public/                  raíz del dominio: páginas, assets, api/, admin/
+  app/                     lógica PHP privada
+  private/config.php       configuración real, creada manualmente
+  database/mysql.sql       esquema para importar, fuera del sitio público
+  config.example.php       plantilla sin credenciales
+```
+
+En cPanel, asignar al dominio una carpeta pública propia. Situar `app/` y `private/` como hermanas de esa carpeta. Si la estructura no se puede conservar, ajustar los `require` de los dos puntos de entrada PHP para apuntar a la carpeta privada; no subir credenciales al directorio público. Evitar carpetas compartidas con otros sitios.
+
+1. Respaldar el sitio existente antes de reemplazarlo. Esta entrega sigue siendo de revisión: conserva aviso y `noindex`; no se ha desplegado.
+2. Crear una base y un usuario exclusivo desde cPanel. Importar `database/mysql.sql` una sola vez en una base nueva. No elimina tablas existentes. Dar al usuario del sitio permisos SELECT/INSERT/UPDATE/DELETE solo sobre esa base; no necesita privilegios globales o administrativos.
+3. Copiar `config.example.php` a `private/config.php` y completar DSN, usuario y contraseña. Configurar un `app_key` aleatorio de al menos 32 caracteres, un nombre de administrador y un hash de contraseña. No hay credenciales por defecto.
+4. Generar clave y hash con PHP en la terminal del hosting, sin colocar contraseñas en comandos, historial o Git. Ejemplo para clave: `php -r 'echo bin2hex(random_bytes(32)), PHP_EOL;'`. Para contraseña, usar un generador de hash local o la herramienta CLI descrita abajo; guardar solo el hash con `password_hash`, nunca la contraseña en texto plano.
+5. Completar `privacy.operator`, `privacy.contact` y `privacy.retention` con datos reales. El último es el plazo de conservación acordado por el responsable; no viene inventado. Revisar el texto de privacidad antes de activar. Dejar `local_test=false` en hosting.
+6. Comprobar HTTPS, permisos de archivos y que PHP se ejecute correctamente. Configurar cookies/sesiones del hosting y `display_errors=Off`; consultar errores de servidor sin incluir datos personales ni credenciales.
+7. Cambiar `registration_enabled=true` únicamente tras esas comprobaciones. La página consulta al servidor y habilita el botón si están completos los datos de privacidad y existe la tabla.
+8. Entrar a `/admin/index.php` con las credenciales configuradas. Probar un registro propio, la visualización, el filtro por estado, el seguimiento y cierre de sesión. No publicar sin verificar esta conexión en MySQL.
+
+El script de empaquetado no copia configuración real y no modifica una ya creada. Regenerar la entrega cuando se cambien los archivos fuente; revisar diferencias antes de subir. No compartir `.local/hosting/private/` ni incluirla en ZIP públicos. No subir la carpeta completa como raíz pública.
+
+## Datos y controles
+
+Datos solicitados: persona, nombre del negocio, municipio/departamento, tipo de negocio, correo y/o teléfono, descripción opcional, versión de autorización y fecha UTC. El esquema conserva columnas auxiliares de marca/interés por compatibilidad, pero el formulario no las pide y el servidor fija interés=contacto y solicitud de contacto autorizada. No se aceptan archivos ni datos de pago. La autorización queda asociada al registro y los datos son privados. No se envían correos o WhatsApp automáticamente.
+
+El panel requiere contraseña y sesión: no está vinculado desde la navegación pública. Sesión privada expira por inactividad tras 30 minutos; cookie HttpOnly/SameSite y Secure en HTTPS; renovación al entrar, cierre de sesión, protección CSRF en operaciones y escape de contenido. Consultas preparadas. Límite de intentos por conexión, campo contra bots, límite de tamaño por campo y clave de envío para reintentos sin duplicación.
+
+Estados: nuevo, revisado, contactado, archivado. Cambiar estado no publica en el catálogo ni contacta al interesado. “Archivado” conserva los datos; no equivale a borrado. No hay exportación, eliminación desde el panel, múltiples administradores ni recuperación de contraseña todavía. La recuperación inicial consiste en generar y configurar un hash nuevo en la carpeta privada. El responsable debe gestionar las solicitudes de datos y la política de conservación; respaldar y limpiar las tablas con sus herramientas privadas del hosting.
+
+Los límites guardan una clave HMAC derivada de la conexión y ventana temporal, sin dirección IP legible en la tabla. El hosting puede mantener sus propios logs. Limpiar periódicamente: `DELETE FROM rate_limits WHERE expires_at < UNIX_TIMESTAMP();`. No se usa contenido de registros para analítica.
+
+Documentación técnica consultada: [password_hash](https://www.php.net/manual/en/function.password-hash.php), [consultas preparadas PDO](https://www.php.net/manual/en/pdo.prepared-statements.php).
+
+## Pruebas
+
+- `php -l` en archivos PHP y `node --check ensayos/v1/assets/registro.js`.
+- `python3 backend/tests/integration.py`: crea PHP y SQLite temporales, solicita un puerto local, prueba habilitación, validación, consentimiento, CSRF, persistencia, duplicados, autenticación, escape HTML, actualización de estados, cierre y límite de login. Borra los datos temporales al terminar. Nunca usa credenciales de producción.
+- SQLite sirve únicamente para esta prueba aislada. La integración MySQL del hosting sigue pendiente de comprobar.
+- El servidor estático de `ensayos/` no ejecuta PHP: muestra el formulario deshabilitado y explica que no se almacena. No subir PHP a un servidor que lo entregue como texto.
+
+## Idiomas
+
+El sitio público tiene versión inglesa bajo `en/`; el panel funcional privado permanece en español. Configurar `privacy.retention_en` con el plazo de conservación en inglés para habilitar la recepción en ese idioma. El formulario y la API presentan validaciones y confirmaciones en español o inglés. Los datos introducidos por el comercio se conservan tal como fueron enviados. No se traducen nombres de marca ni datos de contacto.
+
+## Canal de contacto telefónico
+
+El formulario guarda Fijo, Celular o WhatsApp en `leads.phone_type`; WhatsApp usa un número celular colombiano. La opción indica cómo prefiere ser contactado, sin verificar la existencia de una cuenta de WhatsApp ni enviar mensajes automáticamente. Registros sin teléfono conservan el canal vacío.
+
+Instalaciones nuevas: usar el esquema actualizado. Bases MySQL existentes: hacer respaldo y ejecutar una sola vez `database/migrations/001-phone-type.mysql.sql` antes de actualizar el backend. Los registros históricos quedan con tipo sin especificar; no se presume que tengan WhatsApp.
+
+## Comprensión del alcance de participación
+
+El formulario exige `understanding=1` además de privacidad, con validación en servidor. Guarda `participation_version=participacion-informativa-v1` y muestra esa versión en administración. El texto documentado en `docs/PARTICIPACION_INFORMATIVA.md` describe una solicitud de contacto, no un contrato ni la aceptación de tarifas futuras.
+
+Para bases existentes, respaldar y ejecutar una vez `database/migrations/002-participation-version.mysql.sql` antes de actualizar el backend (y 001 si no estaba aplicada). Los registros previos conservan el campo vacío. Instalaciones nuevas usan el esquema completo actualizado.
