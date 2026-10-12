@@ -23,6 +23,7 @@ window.EL_EN_MESSAGES = {
   "Guardando tu solicitud…": "Saving your enquiry…",
   "No pudimos confirmar el envío.": "We could not confirm your submission.",
   "Recibimos tus datos de contacto. Gracias por contarnos sobre tu negocio.": "We received your contact details. Thank you for telling us about your business.",
+  "Recibimos tus datos de contacto. Gracias por contarnos sobre tu negocio. Volverás al inicio en unos segundos.": "We received your contact details. Thank you for telling us about your business. You will return to the home page in a few seconds.",
   "No pudimos confirmar si se guardó. Conserva tus datos y vuelve a intentar; el mismo envío no se duplicará.": "We could not confirm whether it was saved. Keep your details and try again; the same submission will not be duplicated.",
   "Selecciona un municipio de Antioquia.": "Select a municipality in Antioquia.",
   "Puedes explorar las opciones y completar el formulario. El envío aún no está disponible; no se guardará información.": "You can explore the options and fill in the form. Submissions are not available yet; no information will be saved.",
