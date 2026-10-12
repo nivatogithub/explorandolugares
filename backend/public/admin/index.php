@@ -45,12 +45,14 @@ try {
     if ($admin && $tab==='sistema') {
         $pdo=db();
         $required=['id','request_key','name','business','municipality','category','email','phone','phone_type','participation_version','consent_version','status','created_at'];
-        $columns=$pdo->query('SELECT * FROM leads LIMIT 0');
-        $actual=[];
-        for ($index=0;$index<$columns->columnCount();$index++) $actual[]=$columns->getColumnMeta($index)['name'];
+        $driver=$pdo->getAttribute(PDO::ATTR_DRIVER_NAME);
+        // getColumnMeta no está disponible de forma consistente en cPanel/MySQL.
+        // Consultamos el esquema con la instrucción propia de cada motor admitido.
+        $schema=$driver==='mysql' ? $pdo->query('SHOW COLUMNS FROM leads')->fetchAll() : $pdo->query('PRAGMA table_info(leads)')->fetchAll();
+        $actual=array_map(static fn(array $column):string => $driver==='mysql' ? $column['Field'] : $column['name'],$schema);
         $system=[
             'database'=>'Conectada',
-            'driver'=>$pdo->getAttribute(PDO::ATTR_DRIVER_NAME)==='mysql'?'MySQL/MariaDB':'Controlador no esperado',
+            'driver'=>$driver==='mysql'?'MySQL/MariaDB':'Controlador no esperado',
             'leads'=>count(array_diff($required,$actual))===0?'Tabla lista':'Faltan columnas requeridas',
             'limits'=>$pdo->query('SELECT bucket_key FROM rate_limits LIMIT 0')?'Tabla lista':'No disponible',
             'privacy'=>!empty($config['privacy']['operator']) && !empty($config['privacy']['contact']) && !empty($config['privacy']['retention']) && !empty($config['privacy']['retention_en'])?'Completa':'Pendiente',
