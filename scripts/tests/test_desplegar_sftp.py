@@ -43,6 +43,8 @@ class DeploymentTests(unittest.TestCase):
   commands=deploy.stage_commands(self.config,'test-release',files)
   uploads=[s for s in commands if s.startswith('put ')]
   self.assertEqual(len(uploads),2)
+  self.assertTrue(any('/public/.well-known/acme-challenge' in command and command.startswith('mkdir ') for command in commands))
+  self.assertTrue(any('/public/cgi-bin' in command and command.startswith('mkdir ') for command in commands))
   self.assertTrue(all('/.el-releases/test-release/' in s for s in uploads))
   self.assertFalse(any(s.startswith(('rm ','rename ')) for s in commands))
  def test_existing_install_preserves_both_directories(self):

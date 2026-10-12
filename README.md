@@ -1,6 +1,6 @@
 # Explorando Lugares
 
-El sitio actual está en **[ensayos/v1/](ensayos/v1/)**: portada, 21 destinos, español e inglés y formulario de participación. Es una entrega para revisión y preparación del despliegue; no se ha publicado en hosting.
+El sitio actual está en **[ensayos/v1/](ensayos/v1/)**: portada, 21 destinos, español e inglés y formulario de participación. Primera versión informativa publicada en https://explorandolugares.com/ el 12 de octubre de 2026. El formulario y la administración siguen deshabilitados por falta de configuración. Ver [registro de publicación](docs/PUBLICACION_2026-10-12.md).
 
 `design/pasaporte-local/` conserva el borrador inicial v0.1, sin convertirlo en diseño aprobado. `public/` y los ZIP de la sección histórica no son la entrega vigente.
 
@@ -20,7 +20,7 @@ python3 scripts/preparar-hosting.py
 
 Genera `.local/hosting/` con archivos públicos y componentes privados separados. Esa carpeta está excluida de Git. No publica ni modifica el hosting. Las guías y traducciones se regeneran desde `content/`; consultar [destinos piloto](docs/DESTINOS_PILOTO.md).
 
-Se incluye un backend PHP para captar interesados y una administración privada, con pruebas locales. Su activación requiere confirmar el hosting, base de datos, credenciales y datos de privacidad. El propietario está evaluando alternativas a PHP; no se ha sustituido ni desplegado ese backend. Véase [instalación del backend](backend/README.md).
+Se incluye un backend PHP para captar interesados y una administración privada, con pruebas locales. Su activación requiere confirmar el hosting, base de datos, credenciales y datos de privacidad. El propietario está evaluando alternativas a PHP; no se ha sustituido. Sus archivos están desplegados, pero la recepción y administración no están configuradas ni activadas. Véase [instalación del backend](backend/README.md).
 
 El script [SFTP](docs/DESPLIEGUE_SFTP.md) conserva configuración de ejemplo, revisión previa y separación pública/privada. No contiene credenciales reales. Revisar [preparación del despliegue](docs/PREPARACION_DESPLIEGUE.md) antes de publicar.
 

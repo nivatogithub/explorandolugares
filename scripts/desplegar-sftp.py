@@ -114,7 +114,9 @@ def stage_commands(config,release_id,files):
     base=config['remote_base'];stage=f'{base}/.el-releases/{release_id}'
     commands=[f'cd {quote(base)}',f'-mkdir {quote(base+"/.el-releases")}',f'mkdir {quote(stage)}']
     directories={str(PurePosixPath(item['relative']).parent) for item in files}
-    expanded=set()
+    # Directorios auxiliares vacíos del dominio cPanel; conservar su estructura.
+    # Los archivos manuales, si aparecen, deben incorporarse tras inspección previa.
+    expanded={'.well-known','.well-known/acme-challenge','cgi-bin'}
     for directory in directories:
         path=PurePosixPath(directory)
         expanded.add(str(path));expanded.update(str(p) for p in path.parents if str(p)!='.')
