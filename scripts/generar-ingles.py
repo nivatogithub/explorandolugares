@@ -123,6 +123,10 @@ def mark_navigation(source,relative_file):
   source=source.replace('</body>','<script src="'+path+'" defer></script></body>')
  return source
 
+# Reaplicar el aviso tras regenerar guías y fichas.
+from runpy import run_path
+run_path(str(ROOT/'scripts/generar-aviso-etapas.py'), run_name='__main__')
+
 files=[p for p in SITE.rglob('*.html') if 'en' not in p.relative_to(SITE).parts]
 for p in files:
  rel=p.relative_to(SITE);source=p.read_text()
