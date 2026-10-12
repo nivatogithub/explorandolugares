@@ -1,6 +1,6 @@
 # Preparación del primer despliegue
 
-Estado al 12 de octubre de 2026: código preparado para revisión en GitHub, sin despliegue en hosting.
+Actualización al 12 de octubre de 2026: primera versión informativa desplegada por autorización del propietario, con formulario deshabilitado. Ver `PUBLICACION_2026-10-12.md`. Los puntos siguientes siguen siendo requisitos para activar la captación y finalizar el lanzamiento; conservar `noindex` fue parte del despliegue de la versión tal como estaba.
 
 ## Qué se entrega
 
