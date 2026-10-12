@@ -62,7 +62,7 @@
         }
         if (first) first.focus();
       } else result.focus();
-      if (response.ok) { ready = false; fields.disabled = true; availability.hidden = false; availability.textContent = t("Recibimos tus datos de contacto. Gracias por contarnos sobre tu negocio."); }
+      if (response.ok) { ready = false; fields.disabled = true; availability.hidden = false; availability.textContent = t("Recibimos tus datos de contacto. Gracias por contarnos sobre tu negocio. Volverás al inicio en unos segundos."); window.setTimeout(() => window.location.assign('../index.html'), 3500); }
     } catch {
       result.textContent = t("No pudimos confirmar si se guardó. Conserva tus datos y vuelve a intentar; el mismo envío no se duplicará.");
       result.focus();

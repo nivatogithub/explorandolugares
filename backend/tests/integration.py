@@ -18,7 +18,7 @@ proc=subprocess.Popen(['php','-d','opcache.enable=0','-S',f'127.0.0.1:{port}','-
 base=f'http://127.0.0.1:{port}'
 client=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
 def call(path,data=None,agent=client):
- payload=urllib.parse.urlencode(data).encode() if data is not None else None
+ payload=urllib.parse.urlencode(data,doseq=True).encode() if data is not None else None
  try:
   with agent.open(base+path,payload,timeout=10) as resp:return resp.status,resp.read().decode(),resp.headers
  except urllib.error.HTTPError as exc:return exc.code,exc.read().decode(),exc.headers
@@ -39,8 +39,10 @@ try:
  assert call('/api/participacion.php',{**valid,'municipality':'Municipio inventado'})[0]==422
  assert call('/api/participacion.php',{**valid,'municipality':'Envigado'})[0]==422
  assert call('/api/participacion.php',{**valid,'consent':'0'})[0]==422
- for value in ['0','', ['1']]:
+ for value in ['0','']:
   assert call('/api/participacion.php',{**valid,'understanding':value})[0]==422
+ invalid_ack={k:v for k,v in valid.items() if k!='understanding'}
+ assert call('/api/participacion.php',{**invalid_ack,'understanding[]':'1'})[0]==422
  missing_ack={k:v for k,v in valid.items() if k!='understanding'}
  assert call('/api/participacion.php',missing_ack)[0]==422
  assert call('/api/participacion.php',{**valid,'email':'mal-formado'})[0]==422
@@ -75,6 +77,9 @@ try:
  assert call('/admin/index.php',{'action':'status','csrf':'incorrecto','id':1,'status':'contactado'})[0]==403
  assert call('/admin/index.php',{'action':'status','csrf':csrf,'id':1,'status':'contactado'})[0]==200
  assert db.execute('SELECT status FROM leads').fetchone()[0]=='contactado'
+ assert call('/admin/index.php',{'action':'delete','csrf':'incorrecto','ids[]':['1','2']})[0]==403
+ assert call('/admin/index.php',{'action':'delete','csrf':csrf,'ids[]':['1','2']})[0]==200
+ assert db.execute('SELECT COUNT(*) FROM leads').fetchone()[0]==2
  status,body,_=call('/admin/index.php',{'action':'logout','csrf':csrf});assert status==200 and 'name="password"' in body
  # Sesión nueva y límite de intentos compartido por IP.
  login_csrf=re.search(r'name="csrf" value="([^"]+)"',body).group(1)
