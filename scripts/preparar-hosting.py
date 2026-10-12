@@ -5,6 +5,7 @@ import shutil
 import argparse
 import subprocess
 import sys
+import hashlib
 root=Path(__file__).resolve().parents[1]
 parser=argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--output',type=Path,default=root/'.local/hosting')
@@ -24,6 +25,15 @@ for src in (root/'ensayos/v1').rglob('*'):
     if src.is_file() and src.suffix in {'.html','.css','.js','.json','.svg','.jpg','.png'}:
         target=public/src.relative_to(root/'ensayos/v1');target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(src,target)
 shutil.copytree(root/'backend/public',public,dirs_exist_ok=True)
+# El hosting conserva CSS durante varios días. Versionar la URL en cada entrega
+# evita que una página HTML nueva use una hoja de estilos anterior desde caché.
+style=public/'assets/style.css'
+if not style.is_file(): raise RuntimeError('Falta assets/style.css en la entrega pública.')
+style_version=hashlib.sha256(style.read_bytes()).hexdigest()[:12]
+for page in public.rglob('*.html'):
+    content=page.read_text()
+    content=content.replace('style.css"',f'style.css?v={style_version}"')
+    page.write_text(content)
 shutil.copytree(root/'backend/app',release/'app',dirs_exist_ok=True)
 shutil.copytree(root/'backend/database',release/'database',dirs_exist_ok=True)
 shutil.copytree(root/'backend/bin',release/'bin',dirs_exist_ok=True)
