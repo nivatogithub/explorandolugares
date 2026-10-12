@@ -17,7 +17,7 @@ SAFE_PATH=re.compile(r'^/[A-Za-z0-9_./-]+$')
 
 def load_config(path):
     data=json.loads(path.read_text())
-    allowed={'site','host','port','user','remote_base','public_directory','identity_file','known_hosts_file'}
+    allowed={'site','host','port','user','remote_base','public_directory','identity_file','known_hosts_file','public_root'}
     if set(data)-allowed: raise ValueError('La configuración contiene campos desconocidos. No guardar contraseñas aquí.')
     if not {'site','host','port','user','remote_base','public_directory','known_hosts_file'}.issubset(data):
         raise ValueError('Configuración incompleta. Usar deploy/sftp.example.json como plantilla.')
@@ -34,6 +34,16 @@ def load_config(path):
     directory=data.get('public_directory','')
     if not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_-]*',directory) or directory in {'app','private','releases'}:
         raise ValueError('Nombre de carpeta pública inválido.')
+    public_root=data.get('public_root')
+    if public_root is not None:
+        # Solo el dominio de este proyecto puede usar una raíz web separada.
+        if not isinstance(public_root,str):raise ValueError('public_root debe ser una ruta absoluta.')
+        root_parts=PurePosixPath(public_root).parts
+        if (not isinstance(public_root,str) or not SAFE_PATH.fullmatch(public_root)
+            or '..' in root_parts or '.' in public_root.split('/') or public_root.endswith('/')
+            or root_parts[-2:]!=('public_html','explorandolugares.com')
+            or len(root_parts)<5 or root_parts[:3]!=parts[:3]):
+            raise ValueError('public_root debe ser la ruta absoluta public_html/explorandolugares.com de la misma cuenta.')
     for key in ['identity_file','known_hosts_file']:
         value=data.get(key,'')
         if not isinstance(value,str) or any(c in value for c in '\r\n\x00'): raise ValueError('Ruta local inválida.')
@@ -69,12 +79,24 @@ class SFTP:
         return result.stdout
 
 
-def build(output):
+def public_path(config):
+    return config.get('public_root') or config['remote_base']+'/'+config['public_directory']
+
+
+def build(output,config=None):
     for folder in ['ensayos/v1','backend/app','backend/public']:
         source=ROOT/folder
         if source.is_symlink() or any(item.is_symlink() for item in source.rglob('*')):
             raise ValueError('La fuente contiene enlaces simbólicos; no se empaqueta.')
     subprocess.run([sys.executable,str(ROOT/'scripts/preparar-hosting.py'),'--output',str(output)],check=True)
+    if config and config.get('public_root'):
+        # Con app fuera de public_html, las entradas PHP necesitan su ruta privada.
+        for relative in ['api/participacion.php','admin/index.php']:
+            entry=output/'public'/relative
+            content=entry.read_text()
+            old="require dirname(__DIR__,2).'/app/bootstrap.php';"
+            if old not in content:raise ValueError('Entrada PHP inesperada; no se publicará una ruta privada incorrecta.')
+            entry.write_text(content.replace(old,"require '"+config['remote_base']+"/app/bootstrap.php';",1))
     files=[]
     for kind in ['public','app']:
         for source in sorted((output/kind).rglob('*')):
@@ -117,11 +139,11 @@ def verify_upload(client,config,release_id,files,directory):
 def activate(client,config,release_id,initial,journal,save):
     base=config['remote_base'];stage=f'{base}/.el-releases/{release_id}'
     # Un despliegue existente debe tener ambos directorios para poder preservar la pareja.
-    if not initial:client.run([f'cd {quote(base+"/"+config["public_directory"])}',f'cd {quote(base+"/app")}'])
+    if not initial:client.run([f'cd {quote(public_path(config))}',f'cd {quote(base+"/app")}'])
     operations=[]
     if not initial:
-        operations.extend([(f'{base}/{config["public_directory"]}',f'{stage}/previous-public'),(f'{base}/app',f'{stage}/previous-app')])
-    operations.extend([(f'{stage}/app',f'{base}/app'),(f'{stage}/public',f'{base}/{config["public_directory"]}')])
+        operations.extend([(public_path(config),f'{stage}/previous-public'),(f'{base}/app',f'{stage}/previous-app')])
+    operations.extend([(f'{stage}/app',f'{base}/app'),(f'{stage}/public',public_path(config))])
     journal['activation']=[];save()
     for source,destination in operations:
         operation={'from':source,'to':destination,'status':'pending'}
@@ -144,13 +166,13 @@ def main(argv=None):
     if args.activate and args.confirm_target!=config['remote_base']:parser.error('Para activar, indica --confirm-target con remote_base exacto.')
     release_id=datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')+'-'+secrets.token_hex(3)
     directory=ROOT/'.local/deploy'/release_id;directory.mkdir(parents=True)
-    files=build(directory/'build')
+    files=build(directory/'build',config)
     journal={'site':'explorandolugares','release':release_id,'host':config['host'],'remote_base':config['remote_base'],
-             'public_directory':config['public_directory'],'files':files,'status':'planned'}
+             'public_directory':config['public_directory'],'public_root':public_path(config),'files':files,'status':'planned'}
     path=directory/'manifest.json'
     def save():path.write_text(json.dumps(journal,indent=2,ensure_ascii=False)+'\n')
     save()
-    print(f'Explorando Lugares → {config["host"]}:{config["remote_base"]}/{config["public_directory"]}')
+    print(f'Explorando Lugares → {config["host"]}:{public_path(config)}')
     print(f'{len(files)} archivos; {sum(x["bytes"] for x in files)/1024/1024:.1f} MiB. Diario: {path}')
     print('No se transfieren private/, configuración real, base de datos, SQL, credenciales ni referencias históricas.')
     if not (args.upload or args.activate): print('Solo revisión: no se conectó al servidor. Usa --upload para transferir o --activate para publicar.');return 0

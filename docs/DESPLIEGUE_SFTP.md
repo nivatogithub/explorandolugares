@@ -6,7 +6,7 @@ Script independiente: `scripts/desplegar-sftp.py`. Solo requiere Python 3 y Open
 
 Copiar `deploy/sftp.example.json` a `.local/sftp.json`, completar los datos propios y mantener el archivo local fuera de Git. No admite passwords ni passphrases en JSON. La autenticación usa una clave SSH autorizada en cPanel, desbloqueada previamente en el agente SSH si corresponde. Con `identity_file` vacío se usa el agente o las identidades predeterminadas de OpenSSH; para aislar el acceso, indicar una clave propia de Explorando Lugares.
 
-Campos: servidor, puerto, usuario, ruta de clave, archivo de huellas verificadas, `remote_base` y `public_directory`. No se reutilizó el host, usuario, clave ni carpeta de Paradigma.
+Campos: servidor, puerto, usuario, ruta de clave, archivo de huellas verificadas, `remote_base`, `public_directory` y, opcionalmente, `public_root`. Por autorización del propietario, la configuración local puede referenciar la misma cuenta y llave SSH del hosting compartido. Solo se reutiliza el acceso técnico; la carpeta, contenidos y configuración de Explorando Lugares son independientes. Nunca copiar la llave privada al proyecto.
 
 Estructura requerida, con base exclusiva fuera de `public_html`, `www`, `htdocs` o `httpdocs`:
 
@@ -18,7 +18,24 @@ Estructura requerida, con base exclusiva fuera de `public_html`, `www`, `htdocs`
   .el-releases/                   versiones y respaldos fuera de la raíz web
 ```
 
-Crear/asignar la raíz pública del dominio en cPanel según esa estructura. Si la cuenta exige otra disposición, adaptar el script y los require PHP antes de usarlo; no cambiar `remote_base` por la raíz del sitio principal. El script sustituye por completo las carpetas `public_directory` y `app`: deben ser exclusivas de esta aplicación. Si existen `.htaccess`, archivos de verificación del dominio, subdominios o contenido manual, incorporar los necesarios a la entrega antes de activar. Los viejos quedan en el respaldo, no en el nuevo sitio. La base de datos y `private/` permanecen fuera de esas carpetas.
+### Raíz del dominio confirmada por el propietario
+
+El dominio usa `public_html/explorandolugares.com`. La configuración local `.local/sftp.json` incorpora `public_root` con esa ruta absoluta dentro de la cuenta; `remote_base` sigue siendo una carpeta exclusiva fuera de `public_html`.
+
+```
+/home/USUARIO/public_html/explorandolugares.com/  sitio público
+/home/USUARIO/explorandolugares/app/             backend privado
+/home/USUARIO/explorandolugares/private/         configuración real
+/home/USUARIO/explorandolugares/.el-releases/    versiones y respaldos
+```
+
+Con `public_root`, el script ajusta las dos entradas PHP solo en el paquete generado para que carguen el backend privado por su ruta absoluta. No modifica los archivos fuente ni sube `private/config.php`. Solo permite ese dominio, en la misma cuenta; rechaza la raíz general `public_html` y otros dominios. El staging y los respaldos permanecen fuera de la web; la activación apunta a `public_root`. `--confirm-target` sigue requiriendo el `remote_base` privado exacto.
+
+La ruta privada debe existir antes de transferir. Inspeccionar la instalación existente antes de escoger actualización o primera instalación: el modo existente requiere sitio público y `app`; no usar `--initial` si alguna de esas carpetas existe. Si hay un sitio público y todavía no hay backend privado, preparar una migración explícita después de respaldar e inspeccionar; no forzar el modo inicial.
+
+Para desbloquear la llave desde Terminal en este Mac, ejecutar `ssh-add --apple-use-keychain ~/.ssh/paradigma_godaddy` e introducir su frase de acceso únicamente en esa Terminal. No enviarla por chat ni guardarla en JSON.
+
+Crear/asignar la raíz pública del dominio en cPanel según la disposición elegida. Si la cuenta exige otra disposición, adaptar el script y los require PHP antes de usarlo; no cambiar `remote_base` por la raíz del sitio principal. El script sustituye por completo las carpetas `public_directory` y `app`: deben ser exclusivas de esta aplicación. Si existen `.htaccess`, archivos de verificación del dominio, subdominios o contenido manual, incorporar los necesarios a la entrega antes de activar. Los viejos quedan en el respaldo, no en el nuevo sitio. La base de datos y `private/` permanecen fuera de esas carpetas.
 
 ## Huella y autenticación
 
@@ -70,6 +87,6 @@ Los respaldos consumen espacio; no hay borrado automático. Programar su revisi�
 
 ## Validación realizada
 
-Pruebas locales con destino ficticio: configuración y rutas inválidas, rechazo de contraseñas, batch con rutas literales, subida solo a versión, respaldo de ambas carpetas, detención ante fallo de activación, primera instalación y comprobación estricta de host. No se ha conectado a un hosting real ni probado renombrados contra un servidor SFTP real.
+Pruebas locales con destino ficticio: configuración y rutas inválidas, rechazo de contraseñas, batch con rutas literales, subida solo a versión, respaldo de ambas carpetas, detención ante fallo de activación, primera instalación y comprobación estricta de host. Se intentó una inspección real de solo lectura; el servidor rechazó la autenticación porque la llave no estaba desbloqueada en el agente disponible. El intento de cargarla requiere su frase de acceso en Terminal. No se transfirió ni modificó ningún archivo remoto. Los renombrados y la ruta remota siguen pendientes de verificar por SFTP.
 
 Referencia técnica: [OpenSSH SFTP](https://man.openbsd.org/sftp) y [StrictHostKeyChecking](https://man.openbsd.org/ssh_config#StrictHostKeyChecking).
