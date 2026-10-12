@@ -15,15 +15,16 @@
       const response = await fetch(form.action, {credentials: 'same-origin', cache: 'no-store'});
       if (!response.ok) throw new Error('unavailable');
       const data = await response.json();
-      if (!data.enabled) { availability.textContent = t(data.message); return; }
+      if (!data.enabled) { availability.hidden = false; availability.textContent = t(data.message); return; }
       form.elements.csrf.value = data.csrf;
       form.elements.request_key.value = data.request_key;
       ready = true;
       button.disabled = false;
-      availability.textContent = t("Puedes enviar tu solicitud. Solo se guardará cuando confirmes el envío.");
+      availability.hidden = true;
       const summary = document.getElementById('privacy-summary');
       summary.textContent = english ? `Data controller: ${data.privacy.operator}. Data enquiries: ${data.privacy.contact}. Retention: ${data.privacy.retention}. Purpose: to contact you about your business and manage your enquiry. Not automatically published or used to subscribe you to advertising.` : `Responsable: ${data.privacy.operator}. Consultas sobre datos: ${data.privacy.contact}. Conservación: ${data.privacy.retention}. Finalidad: contactarte sobre tu negocio y gestionar tu solicitud. No se publica automáticamente ni se usa para suscribirte a publicidad.`;
     } catch {
+      availability.hidden = false;
       availability.textContent = t("Puedes explorar las opciones y completar el formulario. El envío aún no está disponible; no se guardará información.");
     }
   }
@@ -61,7 +62,7 @@
         }
         if (first) first.focus();
       } else result.focus();
-      if (response.ok) { ready = false; fields.disabled = true; availability.textContent = t("Recibimos tus datos de contacto. Gracias por contarnos sobre tu negocio."); }
+      if (response.ok) { ready = false; fields.disabled = true; availability.hidden = false; availability.textContent = t("Recibimos tus datos de contacto. Gracias por contarnos sobre tu negocio."); }
     } catch {
       result.textContent = t("No pudimos confirmar si se guardó. Conserva tus datos y vuelve a intentar; el mismo envío no se duplicará.");
       result.focus();

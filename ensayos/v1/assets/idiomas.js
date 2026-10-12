@@ -18,7 +18,6 @@ window.EL_EN_MESSAGES = {
   "Indica al menos un correo o teléfono.": "Provide at least an email address or phone number.",
   "Selecciona un tipo de negocio.": "Choose a business type.",
   "Necesitamos tu autorización para guardar la solicitud.": "We need your consent to store the enquiry.",
-  "Puedes enviar tu solicitud. Solo se guardará cuando confirmes el envío.": "You can submit your enquiry. It will only be stored when you confirm submission.",
   "Vista de preparación: el envío aún no está disponible. No se enviará ni almacenará información.": "Preview: submissions are not available yet. No information will be sent or stored.",
   "Indica al menos un correo o teléfono para identificar tu solicitud.": "Provide at least an email address or phone number for your enquiry.",
   "Guardando tu solicitud…": "Saving your enquiry…",
