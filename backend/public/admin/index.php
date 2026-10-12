@@ -30,15 +30,33 @@ try {
             $error='Estado o registro inválido.';
         } else {http_response_code(403);$error='Acción no autorizada.';}
     }
-    $admin=!empty($_SESSION['admin']);$rows=[];$total=0;$page=max(1,(int)($_GET['page']??1));
+    $admin=!empty($_SESSION['admin']);$rows=[];$total=0;$system=[];$page=max(1,(int)($_GET['page']??1));
+    $tab=is_string($_GET['tab']??null)?$_GET['tab']:'solicitudes';
+    if (!in_array($tab,['solicitudes','sistema'],true)) $tab='solicitudes';
     $status=is_string($_GET['status']??null)?$_GET['status']:'';
     if (!in_array($status,['nuevo','revisado','contactado','archivado'],true)) $status='';
-    if ($admin) {
+    if ($admin && $tab==='solicitudes') {
         $_SESSION['last_seen']=time();
         $where=$status!==''?' WHERE status=?':'';$params=$status!==''?[$status]:[];
         $q=db()->prepare('SELECT COUNT(*) FROM leads'.$where);$q->execute($params);$total=(int)$q->fetchColumn();
         $offset=($page-1)*25;
         $q=db()->prepare('SELECT * FROM leads'.$where.' ORDER BY id DESC LIMIT 25 OFFSET '.$offset);$q->execute($params);$rows=$q->fetchAll();
+    }
+    if ($admin && $tab==='sistema') {
+        $pdo=db();
+        $required=['id','request_key','name','business','municipality','category','email','phone','phone_type','participation_version','consent_version','status','created_at'];
+        $columns=$pdo->query('SELECT * FROM leads LIMIT 0');
+        $actual=[];
+        for ($index=0;$index<$columns->columnCount();$index++) $actual[]=$columns->getColumnMeta($index)['name'];
+        $system=[
+            'database'=>'Conectada',
+            'driver'=>$pdo->getAttribute(PDO::ATTR_DRIVER_NAME)==='mysql'?'MySQL/MariaDB':'Controlador no esperado',
+            'leads'=>count(array_diff($required,$actual))===0?'Tabla lista':'Faltan columnas requeridas',
+            'limits'=>$pdo->query('SELECT bucket_key FROM rate_limits LIMIT 0')?'Tabla lista':'No disponible',
+            'privacy'=>!empty($config['privacy']['operator']) && !empty($config['privacy']['contact']) && !empty($config['privacy']['retention']) && !empty($config['privacy']['retention_en'])?'Completa':'Pendiente',
+            'registration'=>ready()?'Habilitada':'Deshabilitada',
+            'server'=>substr((string)$pdo->getAttribute(PDO::ATTR_SERVER_VERSION),0,80),
+        ];
     }
 } catch (Throwable $e) {error_log('Explorando Lugares: fallo de administración.');http_response_code(503);exit('El panel no está disponible en este momento.');}
 ?><!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Administración | Explorando Lugares</title><link rel="stylesheet" href="../assets/style.css"></head><body><main class="wrap admin-page"><a class="brand" href="../index.html"><img class="brand-logo" src="../assets/logo.svg" alt="" width="64" height="64"><span>explorando<b>lugares</b></span></a><h1>Contactos de negocios</h1><p>Área privada. Un registro no es una publicación ni un aliado aprobado.</p>
@@ -47,9 +65,14 @@ try {
 <form method="post" class="registration-form"><input type="hidden" name="csrf" value="<?=esc($_SESSION['csrf'])?>"><input type="hidden" name="action" value="login"><label>Usuario<input name="username" required autocomplete="username" maxlength="120"></label><label>Contraseña<input type="password" name="password" required autocomplete="current-password"></label><button class="pill">Entrar al panel</button></form>
 <?php else: ?>
 <form method="post"><input type="hidden" name="csrf" value="<?=esc($_SESSION['csrf'])?>"><input type="hidden" name="action" value="logout"><button class="pill light">Cerrar sesión</button></form>
+<nav class="admin-tabs" aria-label="Administración"><a href="?tab=solicitudes" <?=$tab==='solicitudes'?'aria-current="page"':''?>>Solicitudes</a><a href="?tab=sistema" <?=$tab==='sistema'?'aria-current="page"':''?>>Sistema y base de datos</a></nav>
+<?php if($tab==='sistema'): ?>
+<section class="admin-system"><p class="eyebrow">Diagnóstico seguro</p><h2>Sistema y base de datos</h2><p>Este resumen confirma el estado de la conexión y las tablas necesarias. No muestra contraseñas, usuarios, cadenas de conexión ni datos de los contactos.</p><dl><dt>Conexión</dt><dd><?=esc($system['database'])?></dd><dt>Motor</dt><dd><?=esc($system['driver'])?> · <?=esc($system['server'])?></dd><dt>Solicitudes (<code>leads</code>)</dt><dd><?=esc($system['leads'])?></dd><dt>Protección contra abuso (<code>rate_limits</code>)</dt><dd><?=esc($system['limits'])?></dd><dt>Información de privacidad</dt><dd><?=esc($system['privacy'])?></dd><dt>Recepción del formulario</dt><dd><?=esc($system['registration'])?></dd></dl><div class="notice"><strong>Configuración privada</strong><p>La contraseña MySQL y el usuario administrador se configuran únicamente en <code>private/config.php</code>, fuera de la web. Para activar el formulario se completa ese archivo y se vuelve a comprobar aquí. No ejecutes SQL arbitrario desde el navegador.</p></div></section>
+<?php else: ?>
 <form method="get" class="admin-filter"><label>Filtrar por estado<select name="status"><option value="">Todos</option><?php foreach(['nuevo','revisado','contactado','archivado'] as $value): ?><option value="<?=$value?>" <?=$value===$status?'selected':''?>><?=esc(ucfirst($value))?></option><?php endforeach ?></select></label><button class="pill light">Filtrar</button></form>
 <p><?=esc($total)?> solicitudes · Página <?=esc($page)?> · Fechas UTC</p>
 <?php if(!$rows): ?><div class="notice">No hay solicitudes para mostrar.</div><?php endif ?>
 <?php foreach($rows as $row): ?><article class="admin-lead"><span class="badge"><?=esc($row['status'])?></span><h2><?=esc($row['business'])?></h2><p><?=esc(categories(true)[$row['category']]??$row['category'])?> · <?=esc($row['municipality'])?></p><dl><dt>Persona</dt><dd><?=esc($row['name'])?></dd><dt>Contacto</dt><dd><?=esc($row['email'])?> <?=esc($row['phone'])?><?php if ($row['phone']!==''): ?> · <?=esc(['fijo'=>'Fijo','celular'=>'Celular','whatsapp'=>'WhatsApp'][$row['phone_type']]??'Tipo sin especificar')?><?php endif ?></dd><dt>Solicita contacto</dt><dd><?=$row['wants_contact']?'Sí':'No'?></dd><dt>Descripción</dt><dd class="lead-description"><?=esc($row['description'])?></dd><dt>Conoce el alcance</dt><dd><?=esc($row['participation_version']?:'Sin confirmación registrada')?></dd><dt>Registro</dt><dd><?=esc($row['created_at'])?> · Consentimiento <?=esc($row['consent_version'])?></dd></dl><form method="post"><input type="hidden" name="csrf" value="<?=esc($_SESSION['csrf'])?>"><input type="hidden" name="action" value="status"><input type="hidden" name="id" value="<?=esc($row['id'])?>"><label>Seguimiento<select name="status"><?php foreach(['nuevo','revisado','contactado','archivado'] as $value): ?><option value="<?=$value?>" <?=$value===$row['status']?'selected':''?>><?=esc(ucfirst($value))?></option><?php endforeach ?></select></label><button class="pill light">Guardar estado</button></form></article><?php endforeach ?>
 <div class="pagination"><?php if($page>1): ?><a href="?page=<?=$page-1?>&amp;status=<?=esc($status)?>">← Anterior</a><?php endif ?> <?php if($page*25<$total): ?><a href="?page=<?=$page+1?>&amp;status=<?=esc($status)?>">Siguiente →</a><?php endif ?></div>
+<?php endif ?>
 <?php endif ?></main></body></html>

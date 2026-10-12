@@ -68,6 +68,9 @@ try:
  status,body,headers=call('/admin/index.php',{'action':'login','csrf':csrf,'username':'local-test','password':password})
  assert status==200 and '&lt;script&gt;alert(1)&lt;/script&gt;' in body and '<script>alert(1)</script>' not in body
  assert 'WhatsApp' in body and 'Celular' in body and 'Fijo' in body and 'participacion-informativa-v1' in body
+ status,body,_=call('/admin/index.php?tab=sistema')
+ assert status==200 and 'Sistema y base de datos' in body and 'Conectada' in body and 'Tabla lista' in body
+ assert 'test.sqlite' not in body and config['app_key'] not in body
  csrf=re.search(r'name="csrf" value="([^"]+)"',body).group(1)
  assert call('/admin/index.php',{'action':'status','csrf':'incorrecto','id':1,'status':'contactado'})[0]==403
  assert call('/admin/index.php',{'action':'status','csrf':csrf,'id':1,'status':'contactado'})[0]==200
