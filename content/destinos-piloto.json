@@ -1,0 +1,1503 @@
+{
+  "version": 1,
+  "reviewDate": "2026-10-11",
+  "destinations": [
+    {
+      "slug": "jardin",
+      "name": "Jardín",
+      "region": "Suroeste",
+      "headline": {
+        "es": "Color, café y caminos.",
+        "en": "Colour, coffee and trails."
+      },
+      "intro": {
+        "es": "Balcones de colores y montañas para descubrir entre una conversación y un café.",
+        "en": "Colourful balconies and mountains to explore between a conversation and a coffee."
+      },
+      "history": {
+        "es": "La cultura cafetera y la vida alrededor del parque marcan la identidad de Jardín. Su arquitectura tradicional y la basílica de piedra cuentan la historia de este Pueblo Patrimonio.",
+        "en": "Coffee culture and life around the square shape Jardín’s identity. Traditional architecture and its stone basilica tell the story of this heritage town."
+      },
+      "reasons": [
+        {
+          "es": "Arquitectura y balcones",
+          "en": "Architecture and balconies"
+        },
+        {
+          "es": "Cultura cafetera",
+          "en": "Coffee culture"
+        },
+        {
+          "es": "Caminos entre montañas",
+          "en": "Mountain trails"
+        }
+      ],
+      "places": [
+        {
+          "name": {
+            "es": "Basílica de la Inmaculada Concepción",
+            "en": "Basilica of the Immaculate Conception"
+          },
+          "description": {
+            "es": "Observa su arquitectura de piedra junto al parque.",
+            "en": "Discover its stone architecture beside the square."
+          },
+          "photoIndex": 1,
+          "mapQuery": "Basílica de la Inmaculada Concepción Jardín Antioquia Colombia"
+        },
+        {
+          "name": {
+            "es": "Parque El Libertador",
+            "en": "El Libertador Square"
+          },
+          "description": {
+            "es": "Conoce el punto de encuentro del pueblo y sus cafés.",
+            "en": "Discover the town’s meeting place and cafés."
+          },
+          "photoIndex": 1,
+          "mapQuery": "Parque El Libertador Jardín Antioquia Colombia"
+        },
+        {
+          "name": {
+            "es": "Camino de la Herrera",
+            "en": "La Herrera Trail"
+          },
+          "description": {
+            "es": "Un recorrido para acercarte al paisaje rural.",
+            "en": "A route to discover the rural landscape."
+          },
+          "photoIndex": 2,
+          "mapQuery": "Camino de la Herrera Jardín Antioquia Colombia"
+        }
+      ],
+      "sources": [
+        "https://colombia.travel/es/jardin-antioquia",
+        "https://colombia.travel/es/jardin-antioquia/visita-la-basilica-menor-de-la-inmaculada-concepcion"
+      ],
+      "practical": null,
+      "heroPhotoIndex": 0
+    },
+    {
+      "slug": "guatape",
+      "name": "Guatapé",
+      "region": "Oriente",
+      "headline": {
+        "es": "Historias a todo color.",
+        "en": "Stories in full colour."
+      },
+      "intro": {
+        "es": "Zócalos, calles llenas de detalles y el paisaje del embalse.",
+        "en": "Decorative wall panels, detailed streets and reservoir landscapes."
+      },
+      "history": {
+        "es": "Los zócalos narran oficios y escenas de la vida local. La construcción del embalse transformó el territorio durante el siglo XX y sumó un paisaje de agua a la identidad de Guatapé.",
+        "en": "Decorative wall panels tell stories of local trades and daily life. The reservoir transformed the area during the twentieth century, adding a waterscape to Guatapé’s identity."
+      },
+      "reasons": [
+        {
+          "es": "Zócalos y arquitectura",
+          "en": "Decorative panels and architecture"
+        },
+        {
+          "es": "Paisaje del embalse",
+          "en": "Reservoir landscapes"
+        },
+        {
+          "es": "Miradores",
+          "en": "Viewpoints"
+        }
+      ],
+      "places": [
+        {
+          "name": {
+            "es": "Calles y zócalos",
+            "en": "Streets and decorative panels"
+          },
+          "description": {
+            "es": "Descubre los relieves que cuentan historias del pueblo.",
+            "en": "Discover reliefs that tell the town’s stories."
+          },
+          "photoIndex": 1,
+          "mapQuery": "Plazoleta de los Zócalos Guatapé Antioquia Colombia"
+        },
+        {
+          "name": {
+            "es": "Piedra del Peñol",
+            "en": "Peñol Rock"
+          },
+          "description": {
+            "es": "Un referente del paisaje, con vistas hacia el embalse.",
+            "en": "A landscape landmark overlooking the reservoir."
+          },
+          "photoIndex": 2,
+          "mapQuery": "Piedra del Peñol Guatapé Antioquia Colombia"
+        },
+        {
+          "name": {
+            "es": "Embalse Peñol-Guatapé",
+            "en": "Peñol-Guatapé Reservoir"
+          },
+          "description": {
+            "es": "Conoce su paisaje y consulta los recorridos disponibles con operadores locales.",
+            "en": "Explore the landscape and ask local operators about available trips."
+          },
+          "photoIndex": 3,
+          "mapQuery": "Embalse Peñol-Guatapé Guatapé Antioquia Colombia"
+        }
+      ],
+      "sources": [
+        "https://colombia.travel/en/medellin/guatape-and-piedra-del-penol"
+      ],
+      "practical": null,
+      "heroPhotoIndex": 0
+    },
+    {
+      "slug": "santa-fe-de-antioquia",
+      "name": "Santa Fe de Antioquia",
+      "region": "Occidente",
+      "headline": {
+        "es": "Camina entre historias.",
+        "en": "Walk through history."
+      },
+      "intro": {
+        "es": "Calles empedradas, patios e iglesias en el Occidente antioqueño.",
+        "en": "Cobbled streets, courtyards and churches in western Antioquia."
+      },
+      "history": {
+        "es": "Antigua capital de Antioquia, Santa Fe conserva un centro histórico donde conviven la memoria colonial y republicana. Sus casas, iglesias y el Puente de Occidente invitan a conocer distintas etapas de la región.",
+        "en": "Antioquia’s former capital preserves a historic centre with colonial and republican heritage. Its houses, churches and the Puente de Occidente reveal different chapters of the region’s history."
+      },
+      "reasons": [
+        {
+          "es": "Patrimonio arquitectónico",
+          "en": "Architectural heritage"
+        },
+        {
+          "es": "Historia regional",
+          "en": "Regional history"
+        },
+        {
+          "es": "Paisajes del Cauca",
+          "en": "Cauca landscapes"
+        }
+      ],
+      "places": [
+        {
+          "name": {
+            "es": "Centro histórico",
+            "en": "Historic centre"
+          },
+          "description": {
+            "es": "Recorre sus calles, plazas y fachadas tradicionales.",
+            "en": "Walk through its streets, squares and traditional facades."
+          },
+          "photoIndex": 0,
+          "mapQuery": "Centro histórico Santa Fe de Antioquia Antioquia Colombia"
+        },
+        {
+          "name": {
+            "es": "Iglesia de La Chinca",
+            "en": "La Chinca Church"
+          },
+          "description": {
+            "es": "Una parada para conocer el patrimonio religioso del centro.",
+            "en": "A stop to discover the centre’s religious heritage."
+          },
+          "photoIndex": 1,
+          "mapQuery": "Iglesia de La Chinca Santa Fe de Antioquia Antioquia Colombia"
+        },
+        {
+          "name": {
+            "es": "Puente de Occidente",
+            "en": "Puente de Occidente"
+          },
+          "description": {
+            "es": "El puente une Santa Fe y Olaya sobre el río Cauca.",
+            "en": "The bridge links Santa Fe and Olaya across the Cauca River."
+          },
+          "photoIndex": 3,
+          "mapQuery": "Puente de Occidente Antioquia Colombia"
+        }
+      ],
+      "sources": [
+        "https://colombia.travel/es/santa-fe-de-antioquia",
+        "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Paginas/Presentacion.aspx"
+      ],
+      "practical": null,
+      "heroPhotoIndex": 0
+    },
+    {
+      "slug": "el-penol",
+      "name": "El Peñol",
+      "region": "Oriente",
+      "headline": {
+        "es": "Memoria entre aguas.",
+        "en": "Memories among the waters."
+      },
+      "intro": {
+        "es": "Un pueblo que conserva su memoria alrededor del paisaje del embalse.",
+        "en": "A town preserving its memories beside the reservoir landscape."
+      },
+      "history": {
+        "es": "El traslado del antiguo pueblo por la construcción del embalse cambió la historia de El Peñol. La réplica del Viejo Peñol recuerda esa transformación y conecta a visitantes con la memoria de sus habitantes.",
+        "en": "Relocating the old town for the reservoir changed El Peñol’s history. The replica of Viejo Peñol recalls that transformation and introduces visitors to residents’ memories."
+      },
+      "reasons": [
+        {
+          "es": "Memoria del antiguo pueblo",
+          "en": "Memories of the old town"
+        },
+        {
+          "es": "Paisajes de agua",
+          "en": "Waterscapes"
+        },
+        {
+          "es": "Patrimonio religioso",
+          "en": "Religious heritage"
+        }
+      ],
+      "places": [
+        {
+          "name": {
+            "es": "Réplica del Viejo Peñol",
+            "en": "Replica of Viejo Peñol"
+          },
+          "description": {
+            "es": "Conoce una recreación de la plaza del pueblo anterior.",
+            "en": "Discover a recreation of the former town square."
+          },
+          "photoIndex": 1,
+          "mapQuery": "Réplica del Viejo Peñol El Peñol Antioquia Colombia"
+        },
+        {
+          "name": {
+            "es": "Embalse Peñol-Guatapé",
+            "en": "Peñol-Guatapé Reservoir"
+          },
+          "description": {
+            "es": "Contempla el paisaje que transformó este territorio.",
+            "en": "Take in the landscape that transformed this area."
+          },
+          "photoIndex": 2,
+          "mapQuery": "Embalse Peñol-Guatapé El Peñol Antioquia Colombia"
+        },
+        {
+          "name": {
+            "es": "Templo Nuestra Señora del Rosario",
+            "en": "Our Lady of the Rosary Church"
+          },
+          "description": {
+            "es": "Conocido como Templo Roca, forma parte del nuevo pueblo.",
+            "en": "Known as Templo Roca, it is part of the new town."
+          },
+          "photoIndex": null,
+          "mapQuery": "Templo Nuestra Señora del Rosario El Peñol Antioquia Colombia"
+        }
+      ],
+      "sources": [
+        "https://provincia-abt.gov.co/turismo/el-penol/"
+      ],
+      "practical": null,
+      "heroPhotoIndex": 0
+    },
+    {
+      "slug": "tamesis",
+      "name": "Támesis",
+      "region": "Suroeste",
+      "headline": {
+        "es": "Montañas con memoria.",
+        "en": "Mountains with memories."
+      },
+      "intro": {
+        "es": "Petroglifos, cafetales y cerros que abren la mirada al Suroeste.",
+        "en": "Petroglyphs, coffee fields and hills overlooking southwestern Antioquia."
+      },
+      "history": {
+        "es": "Los petroglifos conservan huellas de la presencia indígena en el territorio. La vida cafetera y los caminos rurales suman otras historias a Támesis, un municipio donde paisaje y memoria se encuentran.",
+        "en": "Petroglyphs preserve traces of Indigenous presence in the area. Coffee growing and rural trails add further stories to Támesis, where landscape and memory meet."
+      },
+      "reasons": [
+        {
+          "es": "Patrimonio arqueológico",
+          "en": "Archaeological heritage"
+        },
+        {
+          "es": "Paisaje cafetero",
+          "en": "Coffee landscapes"
+        },
+        {
+          "es": "Cerros y caminos",
+          "en": "Hills and trails"
+        }
+      ],
+      "places": [
+        {
+          "name": {
+            "es": "Petroglifos",
+            "en": "Petroglyphs"
+          },
+          "description": {
+            "es": "Consulta un recorrido acompañado para conocerlos y cuidar este patrimonio.",
+            "en": "Ask about a guided visit to discover and protect this heritage."
+          },
+          "photoIndex": null,
+          "mapQuery": "Petroglifos Támesis Antioquia Colombia"
+        },
+        {
+          "name": {
+            "es": "Cerro Cristo Rey",
+            "en": "Cristo Rey Hill"
+          },
+          "description": {
+            "es": "Un referente del paisaje para explorar con orientación local.",
+            "en": "A landscape landmark to explore with local guidance."
+          },
+          "photoIndex": null,
+          "mapQuery": "Cerro Cristo Rey Támesis Antioquia Colombia"
+        },
+        {
+          "name": {
+            "es": "Iglesia de San Antonio de Padua",
+            "en": "Saint Anthony of Padua Church"
+          },
+          "description": {
+            "es": "Conoce el templo y el entorno del parque principal.",
+            "en": "Discover the church and the main square surroundings."
+          },
+          "photoIndex": 1,
+          "mapQuery": "Iglesia de San Antonio de Padua Támesis Antioquia Colombia"
+        }
+      ],
+      "sources": [
+        "https://www.antioquia.gov.co/images/pdf/anuario2014/es-CO/capitulos/turismo/rutas/cp-16-3-3/suroeste/tamesis.html",
+        "https://www.antioquia.gov.co/images/img/turismo/2025/los-imperdibles-de-suroeste-20062025-ajustado.pdf"
+      ],
+      "practical": null,
+      "heroPhotoIndex": 0
+    },
+    {
+      "slug": "san-jeronimo",
+      "name": "San Jerónimo",
+      "region": "Occidente",
+      "headline": {
+        "es": "Descanso con historia.",
+        "en": "Rest with a sense of history."
+      },
+      "intro": {
+        "es": "Vida de parque, sabores locales y paisaje cálido del Occidente.",
+        "en": "Life around the square, local flavours and warm western landscapes."
+      },
+      "history": {
+        "es": "Fundado en 1616, San Jerónimo conserva memoria religiosa y rural. Su cercanía con el valle del Cauca y su tradición agrícola acompañan una identidad que también se descubre en el mercado y las veredas.",
+        "en": "Founded in 1616, San Jerónimo preserves religious and rural heritage. Its proximity to the Cauca valley and agricultural traditions shape an identity also found in its market and countryside."
+      },
+      "reasons": [
+        {
+          "es": "Historia y tradición",
+          "en": "History and tradition"
+        },
+        {
+          "es": "Sabores del mercado",
+          "en": "Market flavours"
+        },
+        {
+          "es": "Paisaje rural",
+          "en": "Rural landscapes"
+        }
+      ],
+      "places": [
+        {
+          "name": {
+            "es": "Parque principal",
+            "en": "Main square"
+          },
+          "description": {
+            "es": "Un punto de partida para recorrer el centro del municipio.",
+            "en": "A starting point for exploring the town centre."
+          },
+          "photoIndex": null,
+          "mapQuery": "Parque principal San Jerónimo Antioquia Colombia"
+        },
+        {
+          "name": {
+            "es": "Templo de San Jerónimo",
+            "en": "San Jerónimo Church"
+          },
+          "description": {
+            "es": "Conoce el patrimonio religioso junto al parque.",
+            "en": "Discover religious heritage beside the square."
+          },
+          "photoIndex": 1,
+          "mapQuery": "Templo de San Jerónimo San Jerónimo Antioquia Colombia"
+        },
+        {
+          "name": {
+            "es": "Plaza de mercado",
+            "en": "Market hall"
+          },
+          "description": {
+            "es": "Acércate a los productos y sabores de la vida local.",
+            "en": "Discover produce and flavours from local life."
+          },
+          "photoIndex": null,
+          "mapQuery": "Plaza de mercado San Jerónimo Antioquia Colombia"
+        }
+      ],
+      "sources": [
+        "https://www.sanjeronimo-antioquia.gov.co/MiMunicipio/Paginas/Productos%20Tur%C3%ADsticos.aspx",
+        "https://www.sanjeronimo-antioquia.gov.co/Transparencia/PlaneacionGestionyControl/Plan%20de%20Desarrollo%202024-2027.pdf",
+        "https://www.sanjeronimo-antioquia.gov.co/Transparencia/BancoDocumentos/Bolet%C3%ADn%20virtual%20No.%201%20-%20Oficina%20de%20Turismo%20del%20municipio%20de%20San%20Jer%C3%B3nimo%20-%20Mayo.pdf"
+      ],
+      "practical": null,
+      "heroPhotoIndex": 0
+    },
+    {
+      "slug": "sopetran",
+      "name": "Sopetrán",
+      "region": "Occidente",
+      "headline": {
+        "es": "Frutas, plazas y caminos.",
+        "en": "Fruit, squares and trails."
+      },
+      "intro": {
+        "es": "Descubre un pueblo del Occidente a través de su parque y sus tradiciones.",
+        "en": "Discover a western town through its square and traditions."
+      },
+      "history": {
+        "es": "La agricultura y la devoción religiosa forman parte de la memoria de Sopetrán. Su historia se encuentra en el centro urbano y en la relación de sus habitantes con las tierras cálidas del Occidente.",
+        "en": "Agriculture and religious devotion are part of Sopetrán’s heritage. Its history lives in the town centre and residents’ relationship with the warm lands of western Antioquia."
+      },
+      "reasons": [
+        {
+          "es": "Tradición frutícola",
+          "en": "Fruit-growing traditions"
+        },
+        {
+          "es": "Arquitectura religiosa",
+          "en": "Religious architecture"
+        },
+        {
+          "es": "Vida de parque",
+          "en": "Life around the square"
+        }
+      ],
+      "places": [
+        {
+          "name": {
+            "es": "Parque El Libertador",
+            "en": "El Libertador Square"
+          },
+          "description": {
+            "es": "Conoce el espacio de encuentro del centro urbano.",
+            "en": "Discover the meeting place in the town centre."
+          },
+          "photoIndex": 1,
+          "mapQuery": "Parque El Libertador Sopetrán Antioquia Colombia"
+        },
+        {
+          "name": {
+            "es": "Basílica de Nuestra Señora de la Asunción",
+            "en": "Basilica of Our Lady of the Assumption"
+          },
+          "description": {
+            "es": "Acércate a la tradición religiosa del municipio.",
+            "en": "Explore the town’s religious traditions."
+          },
+          "photoIndex": 1,
+          "mapQuery": "Basílica de Nuestra Señora de la Asunción Sopetrán Antioquia Colombia"
+        },
+        {
+          "name": {
+            "es": "Calles del centro",
+            "en": "Town centre streets"
+          },
+          "description": {
+            "es": "Recorre fachadas y comercios alrededor del parque.",
+            "en": "Walk past facades and shops around the square."
+          },
+          "photoIndex": null,
+          "mapQuery": "Calles del centro Sopetrán Antioquia Colombia"
+        }
+      ],
+      "sources": [
+        "https://www.antioquia.gov.co/images/pdf/anuario2014/es-CO/capitulos/turismo/rutas/cp-16-3-3/occidente/sopetran.html"
+      ],
+      "practical": null,
+      "heroPhotoIndex": 0
+    },
+    {
+      "slug": "san-rafael",
+      "name": "San Rafael",
+      "region": "Oriente",
+      "headline": {
+        "es": "El agua marca el camino.",
+        "en": "Follow the water."
+      },
+      "intro": {
+        "es": "Ríos y paisajes verdes para acercarte al Oriente antioqueño.",
+        "en": "Rivers and green landscapes in eastern Antioquia."
+      },
+      "history": {
+        "es": "La minería, la agricultura y el aprovechamiento del agua forman parte de la historia de San Rafael. Los ríos Arenal, Bizcocho y Guatapé conectan el paisaje con la vida de sus comunidades.",
+        "en": "Mining, agriculture and water use are part of San Rafael’s history. The Arenal, Bizcocho and Guatapé rivers connect the landscape with community life."
+      },
+      "reasons": [
+        {
+          "es": "Ríos y naturaleza",
+          "en": "Rivers and nature"
+        },
+        {
+          "es": "Vida rural",
+          "en": "Rural life"
+        },
+        {
+          "es": "Cultura local",
+          "en": "Local culture"
+        }
+      ],
+      "places": [
+        {
+          "name": {
+            "es": "Río Arenal",
+            "en": "Arenal River"
+          },
+          "description": {
+            "es": "Consulta con habitantes y guías los sectores y condiciones de visita.",
+            "en": "Ask residents and guides about visiting areas and conditions."
+          },
+          "photoIndex": 1,
+          "mapQuery": "Río Arenal San Rafael Antioquia Colombia"
+        },
+        {
+          "name": {
+            "es": "Río Guatapé",
+            "en": "Guatapé River"
+          },
+          "description": {
+            "es": "Conoce su paso por el municipio y sus paisajes.",
+            "en": "Discover its passage through the municipality and surrounding scenery."
+          },
+          "photoIndex": 2,
+          "mapQuery": "Río Guatapé San Rafael Antioquia Colombia"
+        },
+        {
+          "name": {
+            "es": "Templo San Rafael Arcángel",
+            "en": "Saint Raphael the Archangel Church"
+          },
+          "description": {
+            "es": "Una parada para conocer el centro y su patrimonio.",
+            "en": "A stop to discover the centre and its heritage."
+          },
+          "photoIndex": null,
+          "mapQuery": "Templo San Rafael Arcángel San Rafael Antioquia Colombia"
+        }
+      ],
+      "sources": [
+        "https://www.antioquia.gov.co/images/pdf/anuario2014/es-CO/capitulos/turismo/rutas/cp-16-3-3/oriente/san-rafael.html"
+      ],
+      "practical": null,
+      "heroPhotoIndex": 0
+    },
+    {
+      "slug": "cocorna",
+      "name": "Cocorná",
+      "region": "Oriente",
+      "headline": {
+        "es": "Entre montañas y cascadas.",
+        "en": "Among mountains and waterfalls."
+      },
+      "intro": {
+        "es": "Paisajes verdes y agua entre las montañas del Oriente.",
+        "en": "Green scenery and water among eastern Antioquia’s mountains."
+      },
+      "history": {
+        "es": "La vida agrícola y los caminos entre montañas forman parte de la identidad de Cocorná. Su relación con ríos y cascadas permite conocer un territorio rural donde el paisaje acompaña la vida cotidiana.",
+        "en": "Agricultural life and mountain trails shape Cocorná’s identity. Rivers and waterfalls reveal a rural area where landscape accompanies everyday life."
+      },
+      "reasons": [
+        {
+          "es": "Cascadas",
+          "en": "Waterfalls"
+        },
+        {
+          "es": "Paisaje de montaña",
+          "en": "Mountain scenery"
+        },
+        {
+          "es": "Vida campesina",
+          "en": "Rural traditions"
+        }
+      ],
+      "places": [
+        {
+          "name": {
+            "es": "Parque principal",
+            "en": "Main square"
+          },
+          "description": {
+            "es": "Empieza por el centro y conoce la vida del municipio.",
+            "en": "Start in the centre and discover local life."
+          },
+          "photoIndex": 1,
+          "mapQuery": "Parque principal Cocorná Antioquia Colombia"
+        },
+        {
+          "name": {
+            "es": "Cabellera de Venus",
+            "en": "Cabellera de Venus Waterfall"
+          },
+          "description": {
+            "es": "Consulta el acceso y las condiciones del recorrido con un guía local.",
+            "en": "Check access and route conditions with a local guide."
+          },
+          "photoIndex": null,
+          "mapQuery": "Cabellera de Venus Cocorná Antioquia Colombia"
+        },
+        {
+          "name": {
+            "es": "Cascada La Chorrera",
+            "en": "La Chorrera Waterfall"
+          },
+          "description": {
+            "es": "Otro referente natural para conocer con orientación del territorio.",
+            "en": "Another natural landmark to discover with local guidance."
+          },
+          "photoIndex": null,
+          "mapQuery": "Cascada La Chorrera Cocorná Antioquia Colombia"
+        }
+      ],
+      "sources": [
+        "https://www.antioquia.gov.co/images/pdf/anuario2014/es-CO/capitulos/turismo/rutas/cp-16-3-3/oriente/cocorna.html"
+      ],
+      "practical": null,
+      "heroPhotoIndex": 0
+    },
+    {
+      "slug": "venecia",
+      "name": "Venecia",
+      "region": "Suroeste",
+      "headline": {
+        "es": "Una montaña que inspira.",
+        "en": "A mountain that inspires."
+      },
+      "intro": {
+        "es": "Cerro Tusa, cultura cafetera y un pueblo para recorrer.",
+        "en": "Cerro Tusa, coffee culture and a town to explore."
+      },
+      "history": {
+        "es": "Cerro Tusa es un referente natural y cultural de Venecia. Los caminos ancestrales y la vida rural del Suroeste forman parte de un territorio que invita a conocer su paisaje y su memoria.",
+        "en": "Cerro Tusa is a natural and cultural landmark of Venecia. Ancestral trails and rural life in southwestern Antioquia shape a place whose landscapes and memories invite exploration."
+      },
+      "reasons": [
+        {
+          "es": "Cerro Tusa",
+          "en": "Cerro Tusa"
+        },
+        {
+          "es": "Paisaje rural",
+          "en": "Rural landscapes"
+        },
+        {
+          "es": "Patrimonio local",
+          "en": "Local heritage"
+        }
+      ],
+      "places": [
+        {
+          "name": {
+            "es": "Cerro Tusa",
+            "en": "Cerro Tusa"
+          },
+          "description": {
+            "es": "Consulta las visitas y recorridos con los responsables del parque.",
+            "en": "Ask the park operators about visits and routes."
+          },
+          "photoIndex": 3,
+          "mapQuery": "Parque Cerro Tusa Venecia Antioquia Colombia"
+        },
+        {
+          "name": {
+            "es": "Iglesia de San José",
+            "en": "Saint Joseph Church"
+          },
+          "description": {
+            "es": "Conoce uno de los referentes arquitectónicos del pueblo.",
+            "en": "Discover one of the town’s architectural landmarks."
+          },
+          "photoIndex": 0,
+          "mapQuery": "Iglesia de San José Venecia Antioquia Colombia"
+        },
+        {
+          "name": {
+            "es": "Parque principal",
+            "en": "Main square"
+          },
+          "description": {
+            "es": "Recorre el centro y descubre su vida cotidiana.",
+            "en": "Explore the centre and discover everyday life."
+          },
+          "photoIndex": 2,
+          "mapQuery": "Parque principal Venecia Antioquia Colombia"
+        }
+      ],
+      "sources": [
+        "https://www.antioquia.gov.co/index.php/noticias-secretaria-desarrollo-economico/la-gobernacion-de-antioquia-y-comfama-inician-operacion-del-parque-cerro-tusa-un-espacio-para-el-cuidado-de-la-biodiversidad-y-el-turismo-responsable",
+        "https://www.antioquia.gov.co/images/pdf/anuario2014/es-CO/capitulos/turismo/rutas/cp-16-3-3/suroeste/venecia.html"
+      ],
+      "practical": null,
+      "heroPhotoIndex": 3
+    },
+    {
+      "slug": "el-retiro",
+      "name": "El Retiro",
+      "region": "Oriente",
+      "headline": {
+        "es": "Oficios y memoria viva.",
+        "en": "Crafts and living memories."
+      },
+      "intro": {
+        "es": "Calles tradicionales, trabajo en madera y naturaleza en el Oriente.",
+        "en": "Traditional streets, woodworking and nature in eastern Antioquia."
+      },
+      "history": {
+        "es": "La memoria de El Retiro está vinculada a Javiera Londoño y a la libertad de personas esclavizadas. Esa historia convive con sus oficios artesanales y la vida alrededor del parque.",
+        "en": "El Retiro’s heritage is linked to Javiera Londoño and the emancipation of enslaved people. That history lives alongside its traditional crafts and life around the square."
+      },
+      "reasons": [
+        {
+          "es": "Memoria e identidad",
+          "en": "Memory and identity"
+        },
+        {
+          "es": "Oficios artesanales",
+          "en": "Traditional crafts"
+        },
+        {
+          "es": "Naturaleza cercana",
+          "en": "Nearby nature"
+        }
+      ],
+      "places": [
+        {
+          "name": {
+            "es": "Parque principal",
+            "en": "Main square"
+          },
+          "description": {
+            "es": "Camina entre arquitectura tradicional y espacios de encuentro.",
+            "en": "Walk among traditional architecture and meeting places."
+          },
+          "photoIndex": null,
+          "mapQuery": "Parque principal El Retiro Antioquia Colombia"
+        },
+        {
+          "name": {
+            "es": "Salto de Tequendamita",
+            "en": "Tequendamita Waterfall"
+          },
+          "description": {
+            "es": "Una cascada del entorno rural; consulta las condiciones de acceso.",
+            "en": "A rural waterfall; check access conditions."
+          },
+          "photoIndex": 1,
+          "mapQuery": "Salto de Tequendamita El Retiro Antioquia Colombia"
+        },
+        {
+          "name": {
+            "es": "Paisaje rural",
+            "en": "Rural landscapes"
+          },
+          "description": {
+            "es": "Conoce los caminos y oficios del municipio con orientación local.",
+            "en": "Discover local trails and crafts with local guidance."
+          },
+          "photoIndex": 2,
+          "mapQuery": "El Retiro Antioquia Colombia"
+        }
+      ],
+      "sources": [
+        "https://www.radionacional.co/cultura/historia-colombiana/javiera-londono-liberadora-de-esclavos-esclavitud-en-colombia",
+        "https://www.antioquia.gov.co/images/pdf/anuario2014/es-CO/capitulos/turismo/rutas/cp-16-3-3/oriente/el-retiro.html"
+      ],
+      "practical": null,
+      "heroPhotoIndex": 0
+    },
+    {
+      "slug": "san-carlos",
+      "name": "San Carlos",
+      "region": "Oriente",
+      "headline": {
+        "es": "Paisajes que se encuentran.",
+        "en": "Landscapes to discover."
+      },
+      "intro": {
+        "es": "Agua, caminos rurales y vida local en el Oriente antioqueño.",
+        "en": "Water, rural trails and local life in eastern Antioquia."
+      },
+      "history": {
+        "es": "Los ríos y la producción de energía forman parte de la relación de San Carlos con su territorio. Su paisaje rural y los espacios del centro permiten acercarse a las historias de sus comunidades.",
+        "en": "Rivers and energy production are part of San Carlos’s relationship with its territory. Rural landscapes and town-centre spaces offer ways to discover community stories."
+      },
+      "reasons": [
+        {
+          "es": "Ríos y senderos",
+          "en": "Rivers and trails"
+        },
+        {
+          "es": "Paisajes verdes",
+          "en": "Green landscapes"
+        },
+        {
+          "es": "Encuentros locales",
+          "en": "Local encounters"
+        }
+      ],
+      "places": [
+        {
+          "name": {
+            "es": "Parque Simón Bolívar",
+            "en": "Simón Bolívar Square"
+          },
+          "description": {
+            "es": "Conoce el corazón urbano del municipio.",
+            "en": "Discover the heart of the town."
+          },
+          "photoIndex": 0,
+          "mapQuery": "Parque Simón Bolívar San Carlos Antioquia Colombia"
+        },
+        {
+          "name": {
+            "es": "Sendero La Cascada",
+            "en": "La Cascada Trail"
+          },
+          "description": {
+            "es": "Consulta las condiciones para recorrer este espacio natural.",
+            "en": "Check conditions before exploring this natural setting."
+          },
+          "photoIndex": null,
+          "mapQuery": "Sendero La Cascada San Carlos Antioquia Colombia"
+        },
+        {
+          "name": {
+            "es": "Pasitos del Niño Dios",
+            "en": "Pasitos del Niño Dios"
+          },
+          "description": {
+            "es": "Un recorrido junto a la quebrada La Iraca, con orientación local.",
+            "en": "A route beside La Iraca stream, to explore with local guidance."
+          },
+          "photoIndex": null,
+          "mapQuery": "Pasitos del Niño Dios San Carlos Antioquia Colombia"
+        }
+      ],
+      "sources": [
+        "https://www.sancarlos-antioquia.gov.co/MiMunicipio/Paginas/Sitios-de-Interes.aspx",
+        "https://www.antioquia.gov.co/images/pdf/anuario2014/es-CO/capitulos/turismo/rutas/cp-16-3-3/oriente/san-carlos.html"
+      ],
+      "practical": null,
+      "heroPhotoIndex": 0
+    },
+    {
+      "slug": "el-carmen-de-viboral",
+      "name": "El Carmen de Viboral",
+      "region": "Oriente",
+      "headline": {
+        "es": "Historias pintadas a mano.",
+        "en": "Stories painted by hand."
+      },
+      "intro": {
+        "es": "Cerámica, cultura y calles para descubrir el trabajo de sus habitantes.",
+        "en": "Ceramics, culture and streets revealing local craftsmanship."
+      },
+      "history": {
+        "es": "El oficio ceramista ha marcado la vida de El Carmen de Viboral durante más de un siglo. Sus saberes y la decoración a mano forman parte del patrimonio cultural inmaterial reconocido en Colombia.",
+        "en": "Ceramic craftsmanship has shaped El Carmen de Viboral for over a century. Its skills and hand decoration are part of Colombia’s recognised intangible cultural heritage."
+      },
+      "reasons": [
+        {
+          "es": "Tradición ceramista",
+          "en": "Ceramic traditions"
+        },
+        {
+          "es": "Cultura y oficios",
+          "en": "Culture and crafts"
+        },
+        {
+          "es": "Vida de pueblo",
+          "en": "Town life"
+        }
+      ],
+      "places": [
+        {
+          "name": {
+            "es": "Museo de la Cerámica",
+            "en": "Ceramics Museum"
+          },
+          "description": {
+            "es": "Descubre piezas y relatos del oficio alfarero local.",
+            "en": "Discover pottery and stories of local craftsmanship."
+          },
+          "photoIndex": null,
+          "mapQuery": "Museo de la Cerámica El Carmen de Viboral Antioquia Colombia"
+        },
+        {
+          "name": {
+            "es": "Parque principal",
+            "en": "Main square"
+          },
+          "description": {
+            "es": "Un punto para empezar a recorrer el municipio.",
+            "en": "A starting point for exploring the town."
+          },
+          "photoIndex": 0,
+          "mapQuery": "Parque principal El Carmen de Viboral Antioquia Colombia"
+        },
+        {
+          "name": {
+            "es": "Templo Nuestra Señora del Carmen",
+            "en": "Our Lady of Mount Carmel Church"
+          },
+          "description": {
+            "es": "Conoce su arquitectura junto al centro del pueblo.",
+            "en": "Discover its architecture in the town centre."
+          },
+          "photoIndex": 1,
+          "mapQuery": "Templo Nuestra Señora del Carmen El Carmen de Viboral Antioquia Colombia"
+        }
+      ],
+      "sources": [
+        "https://culturaelcarmen.gov.co/patrimonio/museo-de-la-ceramica/",
+        "https://patrimonio.mincultura.gov.co/legislacion/Paginas/Ceramica-del-Carmen-del-Viboral.aspx"
+      ],
+      "practical": null,
+      "heroPhotoIndex": 0
+    },
+    {
+      "slug": "rionegro",
+      "name": "Rionegro",
+      "region": "Oriente",
+      "headline": {
+        "es": "Historia que sigue en movimiento.",
+        "en": "History in motion."
+      },
+      "intro": {
+        "es": "Patrimonio, plazas y sabores en el valle de San Nicolás.",
+        "en": "Heritage, squares and flavours in the San Nicolás valley."
+      },
+      "history": {
+        "es": "Rionegro ocupa un lugar importante en la historia republicana: allí se reunió la Convención de 1863. Sus templos, monumentos y plazas permiten acercarse a esa memoria en una ciudad activa del Oriente.",
+        "en": "Rionegro has an important place in republican history: the 1863 Convention met here. Its churches, monuments and squares reveal that heritage in a lively eastern city."
+      },
+      "reasons": [
+        {
+          "es": "Memoria republicana",
+          "en": "Republican heritage"
+        },
+        {
+          "es": "Patrimonio urbano",
+          "en": "Urban heritage"
+        },
+        {
+          "es": "Sabores y plazas",
+          "en": "Flavours and squares"
+        }
+      ],
+      "places": [
+        {
+          "name": {
+            "es": "Concatedral de San Nicolás",
+            "en": "San Nicolás Co-Cathedral"
+          },
+          "description": {
+            "es": "Conoce el templo que acompaña la plaza principal.",
+            "en": "Discover the church beside the main square."
+          },
+          "photoIndex": 0,
+          "mapQuery": "Concatedral de San Nicolás Rionegro Antioquia Colombia"
+        },
+        {
+          "name": {
+            "es": "Monumento a José María Córdova",
+            "en": "José María Córdova Monument"
+          },
+          "description": {
+            "es": "Una obra de Rodrigo Arenas Betancur en el centro.",
+            "en": "A work by Rodrigo Arenas Betancur in the centre."
+          },
+          "photoIndex": 1,
+          "mapQuery": "Monumento a José María Córdova Rionegro Antioquia Colombia"
+        },
+        {
+          "name": {
+            "es": "San Antonio de Pereira",
+            "en": "San Antonio de Pereira"
+          },
+          "description": {
+            "es": "Descubre su parque y la tradición de postres.",
+            "en": "Discover its square and dessert-making traditions."
+          },
+          "photoIndex": null,
+          "mapQuery": "San Antonio de Pereira Rionegro Antioquia Colombia"
+        }
+      ],
+      "sources": [
+        "https://www.antioquia.gov.co/images/pdf/anuario2014/es-CO/capitulos/turismo/rutas/cp-16-3-3/oriente/rionegro.html",
+        "https://www.senalmemoria.co/piezas/la-constitucion-de-1863-el-sueno-liberal"
+      ],
+      "practical": null,
+      "heroPhotoIndex": 0
+    },
+    {
+      "slug": "medellin",
+      "name": "Medellín",
+      "region": "Valle de Aburrá",
+      "headline": {
+        "es": "La ciudad también se explora.",
+        "en": "The city is yours to explore."
+      },
+      "intro": {
+        "es": "Arte, jardines, barrios, gastronomía y vida nocturna entre montañas.",
+        "en": "Art, gardens, neighbourhoods, food and nightlife among mountains."
+      },
+      "history": {
+        "es": "El comercio y la industria transformaron Medellín en una ciudad central para Antioquia. Hoy sus espacios culturales, barrios y transporte urbano muestran distintas formas de habitar el valle de Aburrá.",
+        "en": "Trade and industry shaped Medellín into a major city in Antioquia. Today, cultural spaces, neighbourhoods and urban transport reveal different ways of living in the Aburrá valley."
+      },
+      "reasons": [
+        {
+          "es": "Arte y cultura urbana",
+          "en": "Art and urban culture"
+        },
+        {
+          "es": "Gastronomía y vida nocturna",
+          "en": "Food and nightlife"
+        },
+        {
+          "es": "Jardines y barrios",
+          "en": "Gardens and neighbourhoods"
+        }
+      ],
+      "places": [
+        {
+          "name": {
+            "es": "Plaza Botero",
+            "en": "Botero Square"
+          },
+          "description": {
+            "es": "Esculturas y patrimonio en el centro de Medellín.",
+            "en": "Sculptures and heritage in central Medellín."
+          },
+          "photoIndex": 1,
+          "mapQuery": "Plaza Botero Medellín Antioquia Colombia"
+        },
+        {
+          "name": {
+            "es": "Jardín Botánico",
+            "en": "Botanical Garden"
+          },
+          "description": {
+            "es": "Un espacio para descubrir vegetación en la ciudad.",
+            "en": "A space for discovering plant life in the city."
+          },
+          "photoIndex": 2,
+          "mapQuery": "Jardín Botánico Joaquín Antonio Uribe Medellín Colombia"
+        },
+        {
+          "name": {
+            "es": "El Poblado",
+            "en": "El Poblado"
+          },
+          "description": {
+            "es": "Recorre un sector con restaurantes, comercio y vida nocturna.",
+            "en": "Explore an area with restaurants, shops and nightlife."
+          },
+          "photoIndex": 3,
+          "mapQuery": "El Poblado Medellín Antioquia Colombia"
+        }
+      ],
+      "sources": [
+        "https://colombia.travel/es/medellin"
+      ],
+      "practical": null,
+      "heroPhotoIndex": 0
+    },
+    {
+      "slug": "necocli",
+      "name": "Necoclí",
+      "region": "Urabá",
+      "headline": {
+        "es": "El Caribe también es Antioquia.",
+        "en": "Antioquia meets the Caribbean."
+      },
+      "intro": {
+        "es": "Paisaje costero, memoria y sabores del Urabá antioqueño.",
+        "en": "Coastal scenery, heritage and flavours in Antioquia’s Urabá region."
+      },
+      "history": {
+        "es": "La historia de Necoclí reúne raíces indígenas y vida caribeña. La pesca, las artesanías y la relación con el mar forman parte de su identidad, junto a comunidades que conservan saberes propios.",
+        "en": "Necoclí’s history brings together Indigenous roots and Caribbean life. Fishing, crafts and a relationship with the sea shape its identity alongside communities preserving their own knowledge."
+      },
+      "reasons": [
+        {
+          "es": "Paisajes del Caribe",
+          "en": "Caribbean landscapes"
+        },
+        {
+          "es": "Cultura y artesanías",
+          "en": "Culture and crafts"
+        },
+        {
+          "es": "Vida costera",
+          "en": "Coastal life"
+        }
+      ],
+      "places": [
+        {
+          "name": {
+            "es": "Playas urbanas",
+            "en": "Town beaches"
+          },
+          "description": {
+            "es": "Conoce el frente costero y consulta las condiciones del mar.",
+            "en": "Discover the waterfront and check sea conditions."
+          },
+          "photoIndex": null,
+          "mapQuery": "Playa El Pescador Necoclí Antioquia Colombia"
+        },
+        {
+          "name": {
+            "es": "Parque principal",
+            "en": "Main square"
+          },
+          "description": {
+            "es": "Acércate al centro y sus espacios de encuentro.",
+            "en": "Explore the centre and its meeting places."
+          },
+          "photoIndex": 1,
+          "mapQuery": "Parque principal Necoclí Antioquia Colombia"
+        },
+        {
+          "name": {
+            "es": "El Totumo",
+            "en": "El Totumo"
+          },
+          "description": {
+            "es": "Un corregimiento para conocer otra parte de la costa municipal.",
+            "en": "A village offering another part of the municipality’s coastline."
+          },
+          "photoIndex": null,
+          "mapQuery": "El Totumo Necoclí Antioquia Colombia"
+        }
+      ],
+      "sources": [
+        "https://necocli-antioquia.gov.co/MiMunicipio/Paginas/Pasado%2C-Presente-y-Futuro.aspx",
+        "https://www.necocli-antioquia.gov.co/NuestraAlcaldia/SaladePrensa/Paginas/El-Totumo-le-apuesta-a-unas-playas-limpias-y-sostenibles-.aspx",
+        "https://www.antioquia.gov.co/images/pdf/anuario2014/es-CO/capitulos/turismo/rutas/cp-16-3-3/uraba/necocli.html"
+      ],
+      "practical": null,
+      "heroPhotoIndex": 2
+    },
+    {
+      "slug": "arboletes",
+      "name": "Arboletes",
+      "region": "Urabá",
+      "headline": {
+        "es": "Mar y paisajes singulares.",
+        "en": "Sea and distinctive landscapes."
+      },
+      "intro": {
+        "es": "La costa Caribe y un volcán de lodo para descubrir otro paisaje de Antioquia.",
+        "en": "The Caribbean coast and a mud volcano reveal another side of Antioquia."
+      },
+      "history": {
+        "es": "La vida de Arboletes reúne tradiciones caribeñas y antioqueñas. La ganadería, la pesca y el turismo acompañan la historia de un municipio costero reconocido por sus playas y su volcán de lodo.",
+        "en": "Life in Arboletes brings together Caribbean and Antioquian traditions. Cattle farming, fishing and tourism accompany the story of a coastal municipality known for its beaches and mud volcano."
+      },
+      "reasons": [
+        {
+          "es": "Costa Caribe",
+          "en": "Caribbean coast"
+        },
+        {
+          "es": "Volcán de lodo",
+          "en": "Mud volcano"
+        },
+        {
+          "es": "Sabores costeros",
+          "en": "Coastal flavours"
+        }
+      ],
+      "places": [
+        {
+          "name": {
+            "es": "Volcán de lodo",
+            "en": "Mud volcano"
+          },
+          "description": {
+            "es": "Consulta las condiciones de visita con sus responsables.",
+            "en": "Check visiting conditions with the operators."
+          },
+          "photoIndex": null,
+          "mapQuery": "Volcán de lodo Arboletes Antioquia Colombia"
+        },
+        {
+          "name": {
+            "es": "Playas de Arboletes",
+            "en": "Arboletes beaches"
+          },
+          "description": {
+            "es": "Recorre la costa y consulta las condiciones del mar.",
+            "en": "Explore the coast and check sea conditions."
+          },
+          "photoIndex": 2,
+          "mapQuery": "Playas de Arboletes Arboletes Antioquia Colombia"
+        },
+        {
+          "name": {
+            "es": "Sector río Hobo",
+            "en": "Hobo River area"
+          },
+          "description": {
+            "es": "Otro paisaje costero del entorno municipal.",
+            "en": "Another coastal landscape in the municipality."
+          },
+          "photoIndex": null,
+          "mapQuery": "Sector río Hobo Arboletes Antioquia Colombia"
+        }
+      ],
+      "sources": [
+        "https://www.antioquia.gov.co/images/pdf/anuario2014/es-CO/capitulos/turismo/rutas/cp-16-3-3/uraba/arboletes.html",
+        "https://www.antioquia.gov.co/index.php/noticias-dagran/gobernacion-de-antioquia-invierte-en-la-recuperacion-de-playas-de-uraba-para-impulsar-el-turismo",
+        "https://es.wikipedia.org/wiki/Arboletes"
+      ],
+      "practical": null,
+      "heroPhotoIndex": 0
+    },
+    {
+      "slug": "puerto-triunfo",
+      "name": "Puerto Triunfo",
+      "region": "Magdalena Medio",
+      "headline": {
+        "es": "El río conecta las historias.",
+        "en": "The river connects the stories."
+      },
+      "intro": {
+        "es": "Vida junto al Magdalena y naturaleza en el corredor de Doradal.",
+        "en": "Life beside the Magdalena and nature around the Doradal corridor."
+      },
+      "history": {
+        "es": "El río Magdalena ha sido una vía de comunicación y sustento para Puerto Triunfo. La cabecera y sus corregimientos muestran esa relación con el agua, mientras Doradal conecta con el turismo del entorno.",
+        "en": "The Magdalena River has provided transport and livelihoods for Puerto Triunfo. The town and its villages reveal that relationship with water, while Doradal connects with tourism in the surrounding area."
+      },
+      "reasons": [
+        {
+          "es": "Paisajes fluviales",
+          "en": "River landscapes"
+        },
+        {
+          "es": "Naturaleza del entorno",
+          "en": "Nearby nature"
+        },
+        {
+          "es": "Vida del Magdalena",
+          "en": "Life on the Magdalena"
+        }
+      ],
+      "places": [
+        {
+          "name": {
+            "es": "Cabecera de Puerto Triunfo",
+            "en": "Puerto Triunfo town centre"
+          },
+          "description": {
+            "es": "Conoce el municipio junto al río Magdalena.",
+            "en": "Discover the town beside the Magdalena River."
+          },
+          "photoIndex": null,
+          "mapQuery": "Cabecera de Puerto Triunfo Puerto Triunfo Antioquia Colombia"
+        },
+        {
+          "name": {
+            "es": "Doradal",
+            "en": "Doradal"
+          },
+          "description": {
+            "es": "Un punto para explorar la oferta local del corredor turístico.",
+            "en": "A starting point for exploring the tourism corridor’s local offerings."
+          },
+          "photoIndex": null,
+          "mapQuery": "Doradal Puerto Triunfo Antioquia Colombia"
+        },
+        {
+          "name": {
+            "es": "Entorno del cañón del Río Claro",
+            "en": "Río Claro canyon surroundings"
+          },
+          "description": {
+            "es": "Un atractivo del corredor cercano; confirma ubicación, acceso y operador.",
+            "en": "An attraction in the nearby corridor; confirm location, access and operator."
+          },
+          "photoIndex": 0,
+          "mapQuery": "Reserva Natural Cañón del Río Claro Antioquia Colombia"
+        }
+      ],
+      "sources": [
+        "https://puertotriunfo-antioquia.gov.co/Transparencia/PlaneacionGestionyControl/Plan%20de%20Desarrollo%202024-2027-%20Acuerdo%20Municipal.pdf",
+        "https://www.puertotriunfo-antioquia.gov.co/Ciudadanos/PortaldeNinos/MiMunicipio/Paginas/Nuestros-Simbolos.aspx"
+      ],
+      "practical": null,
+      "heroPhotoIndex": 0
+    },
+    {
+      "slug": "san-pedro-de-los-milagros",
+      "name": "San Pedro de los Milagros",
+      "region": "Norte",
+      "headline": {
+        "es": "Tradición en el altiplano.",
+        "en": "Traditions in the highlands."
+      },
+      "intro": {
+        "es": "Patrimonio religioso y paisajes rurales del Norte antioqueño.",
+        "en": "Religious heritage and rural landscapes in northern Antioquia."
+      },
+      "history": {
+        "es": "La devoción al Señor de los Milagros forma parte de la historia de San Pedro. La vida agropecuaria y el paisaje del altiplano acompañan una tradición que atrae peregrinos y visitantes.",
+        "en": "Devotion to the Lord of Miracles is part of San Pedro’s history. Agricultural life and highland scenery accompany a tradition that attracts pilgrims and visitors."
+      },
+      "reasons": [
+        {
+          "es": "Patrimonio religioso",
+          "en": "Religious heritage"
+        },
+        {
+          "es": "Paisaje del altiplano",
+          "en": "Highland scenery"
+        },
+        {
+          "es": "Vida rural",
+          "en": "Rural life"
+        }
+      ],
+      "places": [
+        {
+          "name": {
+            "es": "Basílica del Señor de los Milagros",
+            "en": "Basilica of the Lord of Miracles"
+          },
+          "description": {
+            "es": "Conoce el principal referente religioso del municipio.",
+            "en": "Discover the town’s main religious landmark."
+          },
+          "photoIndex": 1,
+          "mapQuery": "Basílica del Señor de los Milagros San Pedro de los Milagros Antioquia Colombia"
+        },
+        {
+          "name": {
+            "es": "Parque principal",
+            "en": "Main square"
+          },
+          "description": {
+            "es": "Recorre el centro y sus espacios de encuentro.",
+            "en": "Explore the centre and its meeting places."
+          },
+          "photoIndex": 0,
+          "mapQuery": "Parque principal San Pedro de los Milagros Antioquia Colombia"
+        },
+        {
+          "name": {
+            "es": "Entorno del embalse Riogrande II",
+            "en": "Riogrande II Reservoir surroundings"
+          },
+          "description": {
+            "es": "Un paisaje compartido con otros municipios del Norte; consulta el acceso.",
+            "en": "A landscape shared with other northern municipalities; check access."
+          },
+          "photoIndex": 2,
+          "mapQuery": "Embalse Riogrande II Antioquia Colombia"
+        }
+      ],
+      "sources": [
+        "https://www.antioquia.gov.co/images/pdf/anuario2014/es-CO/capitulos/turismo/rutas/cp-16-3-3/norte/san-pedro.html",
+        "https://www.antioquia.gov.co/index.php/noticias-secretaria-desarrollo-economico/trece-municipios-de-antioquia-ingresaron-a-la-red-mundial-de-destinos-religiosos"
+      ],
+      "practical": null,
+      "heroPhotoIndex": 0
+    },
+    {
+      "slug": "santa-rosa-de-osos",
+      "name": "Santa Rosa de Osos",
+      "region": "Norte",
+      "headline": {
+        "es": "Memoria y paisaje del Norte.",
+        "en": "Heritage and northern landscapes."
+      },
+      "intro": {
+        "es": "Tradición religiosa, poesía y vida de altiplano.",
+        "en": "Religious traditions, poetry and highland life."
+      },
+      "history": {
+        "es": "La minería forma parte del origen de Santa Rosa de Osos. Su memoria también está vinculada al poeta Porfirio Barba Jacob y a un patrimonio religioso que se encuentra en templos y espacios del centro.",
+        "en": "Mining is part of Santa Rosa de Osos’s origins. Its heritage is also linked to poet Porfirio Barba Jacob and religious landmarks found in churches and central public spaces."
+      },
+      "reasons": [
+        {
+          "es": "Literatura y memoria",
+          "en": "Literature and memory"
+        },
+        {
+          "es": "Arquitectura religiosa",
+          "en": "Religious architecture"
+        },
+        {
+          "es": "Paisaje del Norte",
+          "en": "Northern landscapes"
+        }
+      ],
+      "places": [
+        {
+          "name": {
+            "es": "Parque principal",
+            "en": "Main square"
+          },
+          "description": {
+            "es": "Conoce los monumentos y la vida del centro.",
+            "en": "Discover monuments and life in the centre."
+          },
+          "photoIndex": 0,
+          "mapQuery": "Parque principal Santa Rosa de Osos Antioquia Colombia"
+        },
+        {
+          "name": {
+            "es": "Basílica de Nuestra Señora de las Misericordias",
+            "en": "Basilica of Our Lady of Mercy"
+          },
+          "description": {
+            "es": "Acércate al patrimonio religioso del municipio.",
+            "en": "Explore the town’s religious heritage."
+          },
+          "photoIndex": 1,
+          "mapQuery": "Basílica de Nuestra Señora de las Misericordias Santa Rosa de Osos Antioquia Colombia"
+        },
+        {
+          "name": {
+            "es": "Monumento a Porfirio Barba Jacob",
+            "en": "Porfirio Barba Jacob Monument"
+          },
+          "description": {
+            "es": "Una obra de Rodrigo Arenas Betancur dedicada al poeta.",
+            "en": "A work by Rodrigo Arenas Betancur dedicated to the poet."
+          },
+          "photoIndex": 2,
+          "mapQuery": "Monumento a Porfirio Barba Jacob Santa Rosa de Osos Antioquia Colombia"
+        }
+      ],
+      "sources": [
+        "https://santarosadeosos-antioquia.gov.co/MiMunicipio/Paginas/Pasado-Presente-y-Futuro.aspx",
+        "https://www.santarosadeosos-antioquia.gov.co/MiMunicipio/Paginas/Sitios-de-Interes.aspx"
+      ],
+      "practical": null,
+      "heroPhotoIndex": 0
+    }
+  ]
+}

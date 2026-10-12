@@ -4,3 +4,15 @@ Thumbs.db
 .env.*
 !.env.example
 node_modules/
+__pycache__/
+*.pyc
+.venv/
+.local/
+
+# Configuración real y datos privados de despliegue
+/backend/private/
+/backend/config.php
+/deploy/sftp.json
+*.sqlite
+*.sqlite3
+*.sqlite-journal

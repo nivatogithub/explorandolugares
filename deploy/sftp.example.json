@@ -1,0 +1,10 @@
+{
+  "site": "explorandolugares",
+  "host": "SERVIDOR_SFTP",
+  "port": 22,
+  "user": "USUARIO_SFTP",
+  "remote_base": "/home/USUARIO/explorandolugares",
+  "public_directory": "public",
+  "identity_file": "",
+  "known_hosts_file": "~/.ssh/known_hosts"
+}

@@ -1,0 +1,125 @@
+{
+  "categories": [
+    {
+      "value": "hospedaje",
+      "label": "Hospedaje",
+      "en": "Accommodation"
+    },
+    {
+      "value": "alimentacion",
+      "label": "Alimentación",
+      "en": "Food and dining"
+    },
+    {
+      "value": "licores",
+      "label": "Venta de licores",
+      "en": "Liquor sales"
+    },
+    {
+      "value": "vida-nocturna",
+      "label": "Bares, discotecas y vida nocturna",
+      "en": "Bars, nightclubs and nightlife"
+    },
+    {
+      "value": "comercio",
+      "label": "Supermercados, tiendas y comercio",
+      "en": "Supermarkets, shops and retail"
+    },
+    {
+      "value": "salud",
+      "label": "Farmacia y salud",
+      "en": "Pharmacy and health"
+    },
+    {
+      "value": "experiencias",
+      "label": "Experiencias y actividades",
+      "en": "Experiences and activities"
+    },
+    {
+      "value": "cultura",
+      "label": "Cultura y entretenimiento",
+      "en": "Culture and entertainment"
+    },
+    {
+      "value": "transporte",
+      "label": "Transporte",
+      "en": "Transport"
+    },
+    {
+      "value": "servicios",
+      "label": "Servicios locales",
+      "en": "Local services"
+    },
+    {
+      "value": "otro",
+      "label": "Otro",
+      "en": "Other"
+    }
+  ],
+  "legacyAliases": {
+    "hotel": "hospedaje",
+    "hostal": "hospedaje",
+    "finca": "hospedaje",
+    "glamping": "hospedaje",
+    "apartamento": "hospedaje",
+    "restaurante": "alimentacion",
+    "cafe": "alimentacion",
+    "panaderia": "alimentacion",
+    "comida": "alimentacion",
+    "bar": "vida-nocturna",
+    "discoteca": "vida-nocturna",
+    "artesania": "comercio",
+    "productor": "comercio",
+    "mercado": "comercio",
+    "experiencia": "experiencias",
+    "aventura": "experiencias",
+    "naturaleza": "experiencias",
+    "guia": "experiencias",
+    "agencia": "experiencias",
+    "taller": "cultura",
+    "eventos": "cultura",
+    "alquiler": "transporte",
+    "bienestar": "servicios"
+  },
+  "travelGroups": [
+    {
+      "value": "moverte",
+      "label": "Cómo llegar y moverte",
+      "en": "Getting there and around",
+      "types": [
+        "transporte"
+      ]
+    },
+    {
+      "value": "descansar-comer",
+      "label": "Dónde quedarte y comer",
+      "en": "Where to stay and eat",
+      "types": [
+        "hospedaje",
+        "alimentacion"
+      ]
+    },
+    {
+      "value": "disfrutar",
+      "label": "Qué hacer y disfrutar",
+      "en": "Things to do and enjoy",
+      "types": [
+        "experiencias",
+        "cultura",
+        "vida-nocturna"
+      ]
+    },
+    {
+      "value": "compras-servicios",
+      "label": "Compras y servicios",
+      "en": "Shopping and services",
+      "types": [
+        "comercio",
+        "licores",
+        "salud",
+        "servicios",
+        "otro"
+      ]
+    }
+  ]
+}
