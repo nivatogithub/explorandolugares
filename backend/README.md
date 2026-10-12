@@ -19,7 +19,7 @@ hosting/
 
 En cPanel, asignar al dominio una carpeta pública propia. Situar `app/` y `private/` como hermanas de esa carpeta. Si la estructura no se puede conservar, ajustar los `require` de los dos puntos de entrada PHP para apuntar a la carpeta privada; no subir credenciales al directorio público. Evitar carpetas compartidas con otros sitios.
 
-1. Respaldar el sitio existente antes de reemplazarlo. Esta entrega sigue siendo de revisión: conserva aviso y `noindex`; no se ha desplegado.
+1. Respaldar el sitio existente antes de reemplazarlo. El portal informativo ya está publicado; conserva aviso y `noindex`. La recepción de interesados sigue pendiente de configurar y comprobar en MySQL.
 2. Crear una base y un usuario exclusivo desde cPanel. Importar `database/mysql.sql` una sola vez en una base nueva. No elimina tablas existentes. Dar al usuario del sitio permisos SELECT/INSERT/UPDATE/DELETE solo sobre esa base; no necesita privilegios globales o administrativos.
 3. Copiar `config.example.php` a `private/config.php` y completar DSN, usuario y contraseña. Configurar un `app_key` aleatorio de al menos 32 caracteres, un nombre de administrador y un hash de contraseña. No hay credenciales por defecto.
 4. Generar clave y hash con PHP en la terminal del hosting, sin colocar contraseñas en comandos, historial o Git. Ejemplo para clave: `php -r 'echo bin2hex(random_bytes(32)), PHP_EOL;'`. Para contraseña, usar un generador de hash local o la herramienta CLI descrita abajo; guardar solo el hash con `password_hash`, nunca la contraseña en texto plano.
@@ -64,3 +64,7 @@ Instalaciones nuevas: usar el esquema actualizado. Bases MySQL existentes: hacer
 El formulario exige `understanding=1` además de privacidad, con validación en servidor. Guarda `participation_version=participacion-informativa-v1` y muestra esa versión en administración. El texto documentado en `docs/PARTICIPACION_INFORMATIVA.md` describe una solicitud de contacto, no un contrato ni la aceptación de tarifas futuras.
 
 Para bases existentes, respaldar y ejecutar una vez `database/migrations/002-participation-version.mysql.sql` antes de actualizar el backend (y 001 si no estaba aplicada). Los registros previos conservan el campo vacío. Instalaciones nuevas usan el esquema completo actualizado.
+
+## Herramientas de puesta en marcha
+
+Ver [Administración y datos](../docs/ADMINISTRACION_Y_DATOS.md) para la estructura vigente del hosting y los pasos completos. `scripts/configurar-registros.py` crea configuración privada sin reemplazar archivos; `backend/bin/base-datos.php --instalar` instala únicamente sobre una base MySQL vacía y `--comprobar` revisa conexión y columnas. Son herramientas privadas, nunca páginas públicas. Las fichas y tarjetas dinámicas de comercios siguen siendo el siguiente módulo; el panel actual administra solicitudes.
