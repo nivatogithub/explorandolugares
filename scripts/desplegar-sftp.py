@@ -116,7 +116,7 @@ def stage_commands(config,release_id,files):
     directories={str(PurePosixPath(item['relative']).parent) for item in files}
     # Directorios auxiliares vacíos del dominio cPanel; conservar su estructura.
     # Los archivos manuales, si aparecen, deben incorporarse tras inspección previa.
-    expanded={'.well-known','.well-known/acme-challenge','cgi-bin'}
+    expanded={'public/.well-known','public/.well-known/acme-challenge','public/cgi-bin'}
     for directory in directories:
         path=PurePosixPath(directory)
         expanded.add(str(path));expanded.update(str(p) for p in path.parents if str(p)!='.')
