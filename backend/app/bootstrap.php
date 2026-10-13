@@ -104,13 +104,15 @@ function lead_validation(array $input): array {
     if ($data['email']==='' && $data['phone']==='') $errors['email']='Indica al menos un correo o teléfono.';
     $data['category']=is_string($input['category']??null)?$input['category']:'';
     if (!isset(categories()[$data['category']])) $errors['category']='Selecciona un tipo de negocio.';
-    // Contacto inicial sin cuentas ni perfil comercial. No aceptar intereses enviados por el cliente.
+    // Tipos limitados en servidor: una solicitud especial no se confunde con un negocio normal.
+    $requestType=is_string($input['request_type']??null)?$input['request_type']:'negocio';
+    if (!in_array($requestType,['negocio','impulsor_local'],true)) $errors['request_type']='Revisa el tipo de solicitud.';
     $data['has_brand']='no';
     $data['brand_name']='';
-    $data['interest']='contacto';
+    $data['interest']=$requestType==='impulsor_local'?'impulsor_local':'contacto';
     $data['wants_contact']=1;
     if (($input['consent']??'')!=='1') $errors['consent']='Necesitamos tu autorización para guardar la solicitud.';
     if (($input['understanding']??'')!=='1') $errors['understanding']='Confirma que has leído y entendido cómo participar y el alcance de esta etapa.';
-    $data['participation_version']='participacion-informativa-v1';
+    $data['participation_version']=$requestType==='impulsor_local'?'impulsor-local-propuesta-v1':'participacion-informativa-v1';
     return [$data,$errors];
 }

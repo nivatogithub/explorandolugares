@@ -25,7 +25,7 @@ public={key:data[key] for key in ['department','municipalities','groups','travel
 (ROOT/'ensayos/v1/assets/contact-options.json').write_text(json.dumps(public,ensure_ascii=False,indent=2)+'\n')
 print('OK: opciones JSON compartidas para formulario y servidor.')
 # Respaldo sin dependencia de la descarga: se genera del mismo catálogo.
-page=ROOT/'ensayos/v1/aliados/index.html'
+page=ROOT/'ensayos/v1/aliados/interes/index.html'
 html=page.read_text()
 categories='<option value="">Selecciona una opción</option>'
 for group in data['groups']:
