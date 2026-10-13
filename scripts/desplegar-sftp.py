@@ -127,7 +127,9 @@ def stage_commands(config,release_id,files):
 
 
 def verify_upload(client,config,release_id,files,directory):
-    downloads=directory/'verification';downloads.mkdir()
+    # Una verificación interrumpida puede dejar descargas parciales. Los archivos
+    # se vuelven a bajar con nombres deterministas, por lo que es seguro reanudarla.
+    downloads=directory/'verification';downloads.mkdir(exist_ok=True)
     stage=f'{config["remote_base"]}/.el-releases/{release_id}'
     commands=[]
     for index,item in enumerate(files):
