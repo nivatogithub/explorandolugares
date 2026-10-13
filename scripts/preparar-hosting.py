@@ -14,6 +14,7 @@ subprocess.run([sys.executable,str(root/'scripts/generar-opciones-contacto.py')]
 subprocess.run([sys.executable,str(root/'scripts/generar-destinos.py')],check=True)
 subprocess.run([sys.executable,str(root/'scripts/generar-fichas.py')],check=True)
 subprocess.run([sys.executable,str(root/'scripts/generar-ingles.py')],check=True)
+subprocess.run([sys.executable,str(root/'scripts/generar-creditos.py')],check=True)
 subprocess.run([sys.executable,str(root/'scripts/agregar-favicon.py')],check=True)
 subprocess.run([sys.executable,str(root/'scripts/generar-seo.py')],check=True)
 release=args.output.resolve()

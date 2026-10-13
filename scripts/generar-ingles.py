@@ -8,6 +8,8 @@ import json,os,re
 ROOT=Path(__file__).resolve().parents[1]
 SITE=ROOT/'ensayos/v1'
 D=json.loads((ROOT/'content/en.json').read_text())
+D['Créditos fotográficos']='Photo credits'
+D['Créditos de imágenes']='Image credits'
 options=json.loads((ROOT/'backend/app/contact-options.json').read_text())
 D.update({name:name for name in options['municipalities']})
 for group in options['groups']:
@@ -128,7 +130,7 @@ def mark_navigation(source,relative_file):
 from runpy import run_path
 run_path(str(ROOT/'scripts/generar-aviso-etapas.py'), run_name='__main__')
 
-files=[p for p in SITE.rglob('*.html') if 'en' not in p.relative_to(SITE).parts]
+files=[p for p in SITE.rglob('*.html') if 'en' not in p.relative_to(SITE).parts and 'creditos-fotograficos' not in p.relative_to(SITE).parts]
 for p in files:
  rel=p.relative_to(SITE);source=p.read_text()
  source=re.sub(r'<span class="language-switch".*?</span>','',source,flags=re.S)
