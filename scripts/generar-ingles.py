@@ -113,7 +113,8 @@ def mark_navigation(source,relative_file):
    current=(SITE/relative_file).resolve()
    state=None
    if target==current:state='page'
-   elif target==SITE/'destinos/index.html' and relative_file.parts[0]=='destinos':state='location'
+   elif target==SITE/'destinos/index.html' and 'destinos' in relative_file.parts:state='location'
+   elif 'negocios-locales' in target.parts and 'negocios-locales' in relative_file.parts:state='location'
    if state:tag=tag[:-1]+' aria-current="'+state+'">'
    return tag
   return re.sub(r'<a\b[^>]*>',mark_link,match[0])

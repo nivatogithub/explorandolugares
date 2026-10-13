@@ -33,7 +33,7 @@ def validate(destinations,photos,site=SITE):
    if not (p['license'].startswith(('CC BY','CC0')) or p['license']=='Public domain'):raise ValueError('Licencia no admitida')
 def photo_for(d,photos,index):
  if index is None:return None
- file=f"assets/destinos/{d['slug']}-{index+1}.jpg"
+ file=f"assets/destinos/{d['slug']}-{index+1}.webp"
  return next((p for p in photos[d['slug']] if p['file']==file),None)
 def image(p,lazy=True):
  return '<img src="../../'+escape(p['file'],quote=True)+'" alt="'+escape(p['caption']['es'],quote=True)+f'" width="{p["width"]}" height="{p["height"]}" '+('loading="lazy" decoding="async"' if lazy else 'fetchpriority="high"')+'>'
@@ -65,7 +65,7 @@ def generate():
   cards.append(card(d,hero))
  index=(ROOT/'content/plantillas/indice-destinos.html').read_text()
  jerico={'slug':'jerico','name':'Jericó','region':'Suroeste','intro':{'es':'Cultura, café y tradición entre montañas. Conoce el destino y empieza a imaginar tu visita.'}}
- first=card(jerico,{'file':'assets/jerico.jpg','caption':{'es':'Parque principal de Jericó al atardecer'},'width':800,'height':600})
+ first=card(jerico,{'file':'assets/jerico.webp','caption':{'es':'Parque principal de Jericó al atardecer'},'width':800,'height':600})
  regions=list(dict.fromkeys(d['region'] for d in registry()))
  index=index.replace('{{cards}}',first+''.join(cards)).replace('{{regions}}',''.join('<option value="'+escape(r,quote=True)+'">'+escape(r)+'</option>' for r in regions))
  (SITE/'destinos/index.html').write_text(index)

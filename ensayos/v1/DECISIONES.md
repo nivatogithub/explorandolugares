@@ -28,13 +28,13 @@ Paquete de revisión: `.local/explorando-lugares-v1-candidata.zip`, con páginas
 
 El propietario pidió más contraste y altura en el encabezado, color conservador con calidez y fotografías que expresen la oferta del portal. Se sustituye la figura tipográfica con arco por un mosaico conceptual de seis escenas: pueblo, alojamiento, restaurante, bar, naturaleza y artesanía. Se mantienen logo, fuentes, fondo y footer. Encabezado salvia con franja secundaria diferenciada; botones verde apagado y acentos arcilla/arena.
 
-Imagen `assets/vida-local-concepto-v1.png`: generada con la herramienta integrada de imágenes, explícitamente conceptual, no documentación de comercios reales. Prompt: fotografía editorial natural, mosaico 3×2 de pueblo andino colombiano, patio de alojamiento, comida local, bar cálido, sendero de montaña y artesanías; verde salvia, arcilla suave, marfil y madera; sin textos, marcas o establecimientos identificables. Se muestra una aclaración visible bajo la imagen. Reemplazar o complementar con fotografías autorizadas de destinos y negocios reales cuando se incorporen al catálogo.
+Imagen `assets/vida-local-concepto-v1.webp`: generada con la herramienta integrada de imágenes, explícitamente conceptual, no documentación de comercios reales. Prompt: fotografía editorial natural, mosaico 3×2 de pueblo andino colombiano, patio de alojamiento, comida local, bar cálido, sendero de montaña y artesanías; verde salvia, arcilla suave, marfil y madera; sin textos, marcas o establecimientos identificables. Se muestra una aclaración visible bajo la imagen. Reemplazar o complementar con fotografías autorizadas de destinos y negocios reales cuando se incorporen al catálogo.
 
 ## Nueva pasada: aventura y vida local
 
 Se conserva marca, familias tipográficas, fondo, footer y arquitectura. La portada abre con “Sal de la rutina. Encuentra tu lugar.”; aventura y paisaje tienen una imagen principal con cascada, parapente, rafting y trekking. Una segunda sección presenta descanso, gastronomía, bares, comercio y cultura mediante las escenas conceptuales previas y enlaces de categorías. Sin carruseles ni destinos ficticios. Los enlaces llevan a categorías aún en preparación y no implican disponibilidad de esas actividades en Jericó.
 
-Activo añadido: `assets/naturaleza-aventura-concepto-v2.png`, generado con la herramienta integrada de imágenes. Prompt: composición fotográfica editorial 3:2, panorama luminoso de valle andino con cascada en los dos tercios superiores; tres paneles inferiores con parapente tándem, rafting con equipo de protección y caminantes; colores naturales, sin operadores o lugares reales identificables. Etiqueta conceptual visible.
+Activo añadido: `assets/naturaleza-aventura-concepto-v2.webp`, generado con la herramienta integrada de imágenes. Prompt: composición fotográfica editorial 3:2, panorama luminoso de valle andino con cascada en los dos tercios superiores; tres paneles inferiores con parapente tándem, rafting con equipo de protección y caminantes; colores naturales, sin operadores o lugares reales identificables. Etiqueta conceptual visible.
 
 Verificación: enlaces, anclas y recursos locales de 19 páginas válidos; un h1 en portada; imagen PNG válida. Verificación visual completa en navegador y aprobación del propietario siguen pendientes.
 
@@ -46,7 +46,7 @@ Verificación: enlaces/anclas de 19 páginas, imágenes CSS y diez tarjetas corr
 
 ## Apertura ilustrada y disponibilidad por destino
 
-Petición vigente: descripción a la izquierda y una escena única a la derecha, sin menú sobre la imagen. Se incorpora `assets/mundo-explorando-ilustracion-v1.png`, generado con la herramienta integrada. Prompt: ilustración editorial contemporánea, paisaje andino ficticio continuo con hotel, restaurante, bar, comercio, personas, montañas, cascada, parapente, rafting y caminantes; cálida y sobria, sin paneles, textos o marcas. Se retiran tarjetas de la portada y categorías vacías de Jericó.
+Petición vigente: descripción a la izquierda y una escena única a la derecha, sin menú sobre la imagen. Se incorpora `assets/mundo-explorando-ilustracion-v1.webp`, generado con la herramienta integrada. Prompt: ilustración editorial contemporánea, paisaje andino ficticio continuo con hotel, restaurante, bar, comercio, personas, montañas, cascada, parapente, rafting y caminantes; cálida y sobria, sin paneles, textos o marcas. Se retiran tarjetas de la portada y categorías vacías de Jericó.
 
 El catálogo local usa `assets/catalogo.json`, actualmente vacío. Cada publicación requiere destino, nombre, categoría, registroConfirmado=true, informacionVerificada=true y estado=publicado. Las categorías se forman solo a partir de publicaciones que cumplen todo. No hay sistema de registro, backend ni revisión automática: el archivo debe mantenerse editorialmente con datos reales autorizados. Las páginas de categorías en preparación siguen existiendo como base interna, pero no se ofrecen en el menú de Jericó.
 
@@ -58,7 +58,7 @@ Flujo vigente: navegación pública para todos. “Conecta tu negocio” permite
 
 ## Pueblo / Ciudad y versión bilingüe
 
-Se conserva la ilustración de pueblo y se suma `assets/mundo-explorando-ciudad-v1.png`, generada con la herramienta integrada. Prompt: ilustración editorial de una ciudad colombiana contemporánea ficticia, hotel, restaurantes, bar, comercios, parque, ciclistas, visitantes y montañas; escena continua cálida, sin marcas ni texto. El selector cambia solamente la ilustración; no filtra ni anuncia oferta publicada. Logo, tipografía y footer conservados.
+Se conserva la ilustración de pueblo y se suma `assets/mundo-explorando-ciudad-v1.webp`, generada con la herramienta integrada. Prompt: ilustración editorial de una ciudad colombiana contemporánea ficticia, hotel, restaurantes, bar, comercios, parque, ciclistas, visitantes y montañas; escena continua cálida, sin marcas ni texto. El selector cambia solamente la ilustración; no filtra ni anuncia oferta publicada. Logo, tipografía y footer conservados.
 
 Páginas públicas disponibles en español e inglés, con ES/EN y enlaces a la página equivalente. Inglés estático bajo `en/`, assets compartidos, metadatos e idioma HTML correctos, enlaces alternativos hreflang. Generación reproducible: `python3 scripts/generar-ingles.py`, diccionario `content/en.json`; editar fuentes españolas y regenerar. Mensajes de contacto: `content/messages.en.json`, copias de ejecución en assets y backend. Administración funcional privada continúa en español; no hay cuentas de visitantes ni de negocios.
 

@@ -21,6 +21,8 @@ def generate(site=SITE):
   source=re.sub(r'<a\b[^>]*href="'+re.escape(link)+r'"[^>]*>(?:Etapas|Nuestro avance)</a>','',source)
   if re.search(r'<a\b[^>]*class="pill light"',source):
    source=re.sub(r'(<a\b[^>]*class="pill light"[^>]*>)',lambda m:'<a href="'+link+'">Nuestro avance</a>'+m[0],source,count=1)
+  if is_business:
+   source=re.sub(r'(<a\b[^>]*class="pill light"[^>]*)( aria-current="[^"]*")?([^>]*>)',lambda m:m[1]+' aria-current="location"'+m[3],source,count=1)
   else:
    source=source.replace('<span class="language-switch"','<a href="'+link+'">Nuestro avance</a><span class="language-switch"',1)
   # El acceso a Negocios locales es parte del encabezado global, incluso en páginas solo para viajeros.
