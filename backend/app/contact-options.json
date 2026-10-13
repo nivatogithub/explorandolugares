@@ -1,0 +1,697 @@
+{
+  "department": "Antioquia",
+  "municipalities": [
+    "Jericó",
+    "Jardín",
+    "Guatapé",
+    "Santa Fe de Antioquia",
+    "El Peñol",
+    "Támesis",
+    "San Jerónimo",
+    "Sopetrán",
+    "San Rafael",
+    "Cocorná",
+    "Venecia",
+    "El Retiro",
+    "San Carlos",
+    "El Carmen de Viboral",
+    "Rionegro",
+    "Medellín",
+    "Necoclí",
+    "Arboletes",
+    "Puerto Triunfo",
+    "San Pedro de los Milagros",
+    "Santa Rosa de Osos"
+  ],
+  "groups": [
+    {
+      "label": "Tipo de servicio",
+      "en": "Service type",
+      "pt": "Tipo de serviço",
+      "categories": [
+        {
+          "value": "hospedaje",
+          "label": "Hospedaje",
+          "en": "Accommodation",
+          "pt": "Hospedagem"
+        },
+        {
+          "value": "alimentacion",
+          "label": "Alimentación",
+          "en": "Food and dining",
+          "pt": "Alimentação"
+        },
+        {
+          "value": "licores",
+          "label": "Venta de licores",
+          "en": "Liquor sales",
+          "pt": "Venda de bebidas alcoólicas"
+        },
+        {
+          "value": "vida-nocturna",
+          "label": "Bares, discotecas y vida nocturna",
+          "en": "Bars, nightclubs and nightlife",
+          "pt": "Bares, casas noturnas e vida noturna"
+        },
+        {
+          "value": "comercio",
+          "label": "Supermercados, tiendas y comercio",
+          "en": "Supermarkets, shops and retail",
+          "pt": "Supermercados, lojas e comércio"
+        },
+        {
+          "value": "salud",
+          "label": "Farmacia y salud",
+          "en": "Pharmacy and health",
+          "pt": "Farmácia e saúde"
+        },
+        {
+          "value": "experiencias",
+          "label": "Experiencias y actividades",
+          "en": "Experiences and activities",
+          "pt": "Experiências e atividades"
+        },
+        {
+          "value": "cultura",
+          "label": "Cultura y entretenimiento",
+          "en": "Culture and entertainment",
+          "pt": "Cultura e entretenimento"
+        },
+        {
+          "value": "transporte",
+          "label": "Transporte",
+          "en": "Transport",
+          "pt": "Transporte"
+        },
+        {
+          "value": "servicios",
+          "label": "Servicios locales",
+          "en": "Local services",
+          "pt": "Serviços locais"
+        },
+        {
+          "value": "otro",
+          "label": "Otro",
+          "en": "Other",
+          "pt": "Outro"
+        }
+      ]
+    }
+  ],
+  "source": "https://www.antioquia.gov.co/images/pdf/anuario2014/es-CO/capitulos/generalidades/aspectos/divisiones/cp-1-1-3-2.html",
+  "checked": "2026-10-11",
+  "municipalityCatalog": [
+    {
+      "name": "Jericó",
+      "pilotCategory": 1
+    },
+    {
+      "name": "Jardín",
+      "pilotCategory": 1
+    },
+    {
+      "name": "Guatapé",
+      "pilotCategory": 1
+    },
+    {
+      "name": "Santa Fe de Antioquia",
+      "pilotCategory": 1
+    },
+    {
+      "name": "El Peñol",
+      "pilotCategory": 1
+    },
+    {
+      "name": "Támesis",
+      "pilotCategory": 1
+    },
+    {
+      "name": "San Jerónimo",
+      "pilotCategory": 1
+    },
+    {
+      "name": "Sopetrán",
+      "pilotCategory": 1
+    },
+    {
+      "name": "San Rafael",
+      "pilotCategory": 1
+    },
+    {
+      "name": "Cocorná",
+      "pilotCategory": 1
+    },
+    {
+      "name": "Venecia",
+      "pilotCategory": 1
+    },
+    {
+      "name": "El Retiro",
+      "pilotCategory": 1
+    },
+    {
+      "name": "San Carlos",
+      "pilotCategory": 1
+    },
+    {
+      "name": "El Carmen de Viboral",
+      "pilotCategory": 1
+    },
+    {
+      "name": "Rionegro",
+      "pilotCategory": 1
+    },
+    {
+      "name": "Medellín",
+      "pilotCategory": 1
+    },
+    {
+      "name": "Necoclí",
+      "pilotCategory": 1
+    },
+    {
+      "name": "Arboletes",
+      "pilotCategory": 1
+    },
+    {
+      "name": "Puerto Triunfo",
+      "pilotCategory": 1
+    },
+    {
+      "name": "San Pedro de los Milagros",
+      "pilotCategory": 1
+    },
+    {
+      "name": "Santa Rosa de Osos",
+      "pilotCategory": 1
+    },
+    {
+      "name": "Andes",
+      "pilotCategory": 2
+    },
+    {
+      "name": "Pueblorrico",
+      "pilotCategory": 2
+    },
+    {
+      "name": "Hispania",
+      "pilotCategory": 2
+    },
+    {
+      "name": "Ciudad Bolívar",
+      "pilotCategory": 2
+    },
+    {
+      "name": "Fredonia",
+      "pilotCategory": 2
+    },
+    {
+      "name": "Concordia",
+      "pilotCategory": 2
+    },
+    {
+      "name": "Urrao",
+      "pilotCategory": 2
+    },
+    {
+      "name": "La Pintada",
+      "pilotCategory": 2
+    },
+    {
+      "name": "Santa Bárbara",
+      "pilotCategory": 2
+    },
+    {
+      "name": "Titiribí",
+      "pilotCategory": 2
+    },
+    {
+      "name": "Marinilla",
+      "pilotCategory": 2
+    },
+    {
+      "name": "La Ceja del Tambo",
+      "pilotCategory": 2
+    },
+    {
+      "name": "Guarne",
+      "pilotCategory": 2
+    },
+    {
+      "name": "Sonsón",
+      "pilotCategory": 2
+    },
+    {
+      "name": "Concepción",
+      "pilotCategory": 2
+    },
+    {
+      "name": "Alejandría",
+      "pilotCategory": 2
+    },
+    {
+      "name": "San Vicente Ferrer",
+      "pilotCategory": 2
+    },
+    {
+      "name": "Abejorral",
+      "pilotCategory": 2
+    },
+    {
+      "name": "La Unión",
+      "pilotCategory": 2
+    },
+    {
+      "name": "Granada",
+      "pilotCategory": 2
+    },
+    {
+      "name": "San Luis",
+      "pilotCategory": 2
+    },
+    {
+      "name": "San Francisco",
+      "pilotCategory": 2
+    },
+    {
+      "name": "Envigado",
+      "pilotCategory": 2
+    },
+    {
+      "name": "Sabaneta",
+      "pilotCategory": 2
+    },
+    {
+      "name": "Barbosa",
+      "pilotCategory": 2
+    },
+    {
+      "name": "Copacabana",
+      "pilotCategory": 2
+    },
+    {
+      "name": "Caldas",
+      "pilotCategory": 2
+    },
+    {
+      "name": "Girardota",
+      "pilotCategory": 2
+    },
+    {
+      "name": "La Estrella",
+      "pilotCategory": 2
+    },
+    {
+      "name": "Belmira",
+      "pilotCategory": 2
+    },
+    {
+      "name": "Carolina del Príncipe",
+      "pilotCategory": 2
+    },
+    {
+      "name": "Gómez Plata",
+      "pilotCategory": 2
+    },
+    {
+      "name": "Entrerríos",
+      "pilotCategory": 2
+    },
+    {
+      "name": "Donmatías",
+      "pilotCategory": 2
+    },
+    {
+      "name": "Guadalupe",
+      "pilotCategory": 2
+    },
+    {
+      "name": "San José de la Montaña",
+      "pilotCategory": 2
+    },
+    {
+      "name": "Yarumal",
+      "pilotCategory": 2
+    },
+    {
+      "name": "Frontino",
+      "pilotCategory": 2
+    },
+    {
+      "name": "Buriticá",
+      "pilotCategory": 2
+    },
+    {
+      "name": "Cañasgordas",
+      "pilotCategory": 2
+    },
+    {
+      "name": "Dabeiba",
+      "pilotCategory": 2
+    },
+    {
+      "name": "Heliconia",
+      "pilotCategory": 2
+    },
+    {
+      "name": "Olaya",
+      "pilotCategory": 2
+    },
+    {
+      "name": "Turbo",
+      "pilotCategory": 2
+    },
+    {
+      "name": "San Juan de Urabá",
+      "pilotCategory": 2
+    },
+    {
+      "name": "Mutatá",
+      "pilotCategory": 2
+    },
+    {
+      "name": "Puerto Berrío",
+      "pilotCategory": 2
+    },
+    {
+      "name": "Puerto Nare",
+      "pilotCategory": 2
+    },
+    {
+      "name": "Cisneros",
+      "pilotCategory": 2
+    },
+    {
+      "name": "Santo Domingo",
+      "pilotCategory": 2
+    },
+    {
+      "name": "San Roque",
+      "pilotCategory": 2
+    },
+    {
+      "name": "Yolombó",
+      "pilotCategory": 2
+    },
+    {
+      "name": "Amalfi",
+      "pilotCategory": 2
+    },
+    {
+      "name": "Caucasia",
+      "pilotCategory": 2
+    },
+    {
+      "name": "Amagá",
+      "pilotCategory": 3
+    },
+    {
+      "name": "Betania",
+      "pilotCategory": 3
+    },
+    {
+      "name": "Betulia",
+      "pilotCategory": 3
+    },
+    {
+      "name": "Salgar",
+      "pilotCategory": 3
+    },
+    {
+      "name": "Tarso",
+      "pilotCategory": 3
+    },
+    {
+      "name": "Valparaíso",
+      "pilotCategory": 3
+    },
+    {
+      "name": "El Santuario",
+      "pilotCategory": 3
+    },
+    {
+      "name": "Bello",
+      "pilotCategory": 3
+    },
+    {
+      "name": "Itagüí",
+      "pilotCategory": 3
+    },
+    {
+      "name": "Apartadó",
+      "pilotCategory": 3
+    },
+    {
+      "name": "Carepa",
+      "pilotCategory": 3
+    },
+    {
+      "name": "Chigorodó",
+      "pilotCategory": 3
+    },
+    {
+      "name": "Uramita",
+      "pilotCategory": 3
+    },
+    {
+      "name": "Giraldo",
+      "pilotCategory": 3
+    },
+    {
+      "name": "Ebéjico",
+      "pilotCategory": 3
+    },
+    {
+      "name": "Anzá",
+      "pilotCategory": 3
+    },
+    {
+      "name": "Liborina",
+      "pilotCategory": 3
+    },
+    {
+      "name": "Angostura",
+      "pilotCategory": 3
+    },
+    {
+      "name": "San Andrés de Cuerquia",
+      "pilotCategory": 3
+    },
+    {
+      "name": "Valdivia",
+      "pilotCategory": 3
+    },
+    {
+      "name": "Maceo",
+      "pilotCategory": 3
+    },
+    {
+      "name": "Yondó",
+      "pilotCategory": 3
+    },
+    {
+      "name": "Remedios",
+      "pilotCategory": 3
+    },
+    {
+      "name": "Segovia",
+      "pilotCategory": 3
+    },
+    {
+      "name": "Cáceres",
+      "pilotCategory": 3
+    },
+    {
+      "name": "Tarazá",
+      "pilotCategory": 3
+    },
+    {
+      "name": "Zaragoza",
+      "pilotCategory": 3
+    },
+    {
+      "name": "El Bagre",
+      "pilotCategory": 3
+    },
+    {
+      "name": "Angelópolis",
+      "pilotCategory": 4
+    },
+    {
+      "name": "Caramanta",
+      "pilotCategory": 4
+    },
+    {
+      "name": "Montebello",
+      "pilotCategory": 4
+    },
+    {
+      "name": "Argelia",
+      "pilotCategory": 4
+    },
+    {
+      "name": "Nariño",
+      "pilotCategory": 4
+    },
+    {
+      "name": "Abriaquí",
+      "pilotCategory": 4
+    },
+    {
+      "name": "Armenia",
+      "pilotCategory": 4
+    },
+    {
+      "name": "Caicedo",
+      "pilotCategory": 4
+    },
+    {
+      "name": "Peque",
+      "pilotCategory": 4
+    },
+    {
+      "name": "Sabanalarga",
+      "pilotCategory": 4
+    },
+    {
+      "name": "Briceño",
+      "pilotCategory": 4
+    },
+    {
+      "name": "Campamento",
+      "pilotCategory": 4
+    },
+    {
+      "name": "Ituango",
+      "pilotCategory": 4
+    },
+    {
+      "name": "Toledo",
+      "pilotCategory": 4
+    },
+    {
+      "name": "San Pedro de Urabá",
+      "pilotCategory": 4
+    },
+    {
+      "name": "Murindó",
+      "pilotCategory": 4
+    },
+    {
+      "name": "Vigía del Fuerte",
+      "pilotCategory": 4
+    },
+    {
+      "name": "Caracolí",
+      "pilotCategory": 4
+    },
+    {
+      "name": "Anorí",
+      "pilotCategory": 4
+    },
+    {
+      "name": "Vegachí",
+      "pilotCategory": 4
+    },
+    {
+      "name": "Yalí",
+      "pilotCategory": 4
+    },
+    {
+      "name": "Nechí",
+      "pilotCategory": 4
+    }
+  ],
+  "pilotCategories": [
+    {
+      "id": 1,
+      "label": "Muy turísticos"
+    },
+    {
+      "id": 2,
+      "label": "Turismo normal o emergente"
+    },
+    {
+      "id": 3,
+      "label": "Turismo de paso o comercial"
+    },
+    {
+      "id": 4,
+      "label": "Turismo poco desarrollado"
+    }
+  ],
+  "enabledMunicipalityCategories": [
+    1
+  ],
+  "classificationSource": "Clasificación interna proporcionada por el propietario, 11 de octubre de 2026. No es una clasificación turística oficial.",
+  "legacyCategoryAliases": {
+    "hotel": "hospedaje",
+    "hostal": "hospedaje",
+    "finca": "hospedaje",
+    "glamping": "hospedaje",
+    "apartamento": "hospedaje",
+    "restaurante": "alimentacion",
+    "cafe": "alimentacion",
+    "panaderia": "alimentacion",
+    "comida": "alimentacion",
+    "bar": "vida-nocturna",
+    "discoteca": "vida-nocturna",
+    "artesania": "comercio",
+    "productor": "comercio",
+    "mercado": "comercio",
+    "experiencia": "experiencias",
+    "aventura": "experiencias",
+    "naturaleza": "experiencias",
+    "guia": "experiencias",
+    "agencia": "experiencias",
+    "taller": "cultura",
+    "eventos": "cultura",
+    "alquiler": "transporte",
+    "bienestar": "servicios"
+  },
+  "travelGroups": [
+    {
+      "value": "moverte",
+      "label": "Cómo llegar y moverte",
+      "en": "Getting there and around",
+      "types": [
+        "transporte"
+      ],
+      "pt": "Como chegar e se locomover"
+    },
+    {
+      "value": "descansar-comer",
+      "label": "Dónde quedarte y comer",
+      "en": "Where to stay and eat",
+      "types": [
+        "hospedaje",
+        "alimentacion"
+      ],
+      "pt": "Onde ficar e comer"
+    },
+    {
+      "value": "disfrutar",
+      "label": "Qué hacer y disfrutar",
+      "en": "Things to do and enjoy",
+      "types": [
+        "experiencias",
+        "cultura",
+        "vida-nocturna"
+      ],
+      "pt": "O que fazer e aproveitar"
+    },
+    {
+      "value": "compras-servicios",
+      "label": "Compras y servicios",
+      "en": "Shopping and services",
+      "types": [
+        "comercio",
+        "licores",
+        "salud",
+        "servicios",
+        "otro"
+      ],
+      "pt": "Compras e serviços"
+    }
+  ]
+}

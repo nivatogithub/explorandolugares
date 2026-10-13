@@ -1,0 +1,3 @@
+/* Encabezado exclusivo del índice de Destinos: título y descripción nunca se superponen. */
+.destination-index-head>*{min-width:0}
+.destination-index-head h1{white-space:normal;overflow-wrap:anywhere}
