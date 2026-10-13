@@ -30,5 +30,5 @@ try {
         if (!in_array($e->getCode(),['23000','23505'],true)) throw $e;
         $q=db()->prepare('SELECT id FROM leads WHERE request_key=?');$q->execute([$_POST['request_key']]);if (!$q->fetchColumn()) throw $e;
     }
-    json_response(['message'=>'Recibimos tus datos para contactarte sobre tu negocio. Esto no crea una cuenta ni publica tu negocio automáticamente.']);
+    json_response(['message'=>$data['interest']==='impulsor_local'?'Recibimos tu postulación como impulsor local. La revisaremos antes de asignar un rol, código o beneficio.':'Recibimos tus datos para contactarte sobre tu negocio. Esto no crea una cuenta ni publica tu negocio automáticamente.']);
 } catch (Throwable $e) {error_log('Explorando Lugares: fallo de recepción.');json_response(['message'=>'No pudimos confirmar el registro. Conserva tus datos e intenta nuevamente más tarde.'],503);}

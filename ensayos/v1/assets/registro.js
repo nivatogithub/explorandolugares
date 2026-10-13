@@ -25,7 +25,9 @@
       summary.textContent = english ? `Data controller: ${data.privacy.operator}. Data enquiries: ${data.privacy.contact}. Retention: ${data.privacy.retention}. Purpose: to contact you about your business and manage your enquiry. Not automatically published or used to subscribe you to advertising.` : `Responsable: ${data.privacy.operator}. Consultas sobre datos: ${data.privacy.contact}. Conservación: ${data.privacy.retention}. Finalidad: contactarte sobre tu negocio y gestionar tu solicitud. No se publica automáticamente ni se usa para suscribirte a publicidad.`;
     } catch {
       availability.hidden = false;
-      availability.textContent = t("Puedes explorar las opciones y completar el formulario. El envío aún no está disponible; no se guardará información.");
+      availability.textContent = typeof location !== 'undefined' && (location.hostname === '127.0.0.1' || location.hostname === 'localhost')
+        ? t("Esta es una vista previa local: el formulario no guarda datos aquí. En el sitio publicado, el registro ya está habilitado.")
+        : t("No pudimos comprobar la disponibilidad del envío. Recarga la página e inténtalo de nuevo.");
     }
   }
   form.addEventListener('submit', async event => {

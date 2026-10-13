@@ -64,6 +64,13 @@ try:
   assert call('/api/participacion.php',record,agent=agent)[0]==200
   assert db.execute('SELECT phone,phone_type FROM leads WHERE business=?',(record['business'],)).fetchone()==(expected,phone_type)
  assert db.execute('SELECT COUNT(*) FROM leads').fetchone()[0]==4
+ # Una postulación de impulsor se marca de forma distinta a un registro comercial.
+ agent=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
+ tokens=json.loads(call('/api/participacion.php',agent=agent)[1])
+ promoter={**valid,'business':'Impulsor de prueba','csrf':tokens['csrf'],'request_key':tokens['request_key'],'request_type':'impulsor_local'}
+ status,body,_=call('/api/participacion.php',promoter,agent=agent)
+ assert status==200 and 'postulación como impulsor local' in json.loads(body)['message']
+ assert db.execute('SELECT interest,participation_version FROM leads WHERE business=?',('Impulsor de prueba',)).fetchone()==('impulsor_local','impulsor-local-propuesta-v1')
  status,body,headers=call('/admin/index.php');assert '<script>alert(1)</script>' not in body and 'name="password"' in body
  csrf=re.search(r'name="csrf" value="([^"]+)"',body).group(1)
  assert call('/admin/index.php',{'action':'status','csrf':csrf,'id':1,'status':'contactado'})[0]==403
@@ -79,7 +86,7 @@ try:
  assert db.execute('SELECT status FROM leads').fetchone()[0]=='contactado'
  assert call('/admin/index.php',{'action':'delete','csrf':'incorrecto','ids[]':['1','2']})[0]==403
  assert call('/admin/index.php',{'action':'delete','csrf':csrf,'ids[]':['1','2']})[0]==200
- assert db.execute('SELECT COUNT(*) FROM leads').fetchone()[0]==2
+ assert db.execute('SELECT COUNT(*) FROM leads').fetchone()[0]==3
  status,body,_=call('/admin/index.php',{'action':'logout','csrf':csrf});assert status==200 and 'name="password"' in body
  # Sesión nueva y límite de intentos compartido por IP.
  login_csrf=re.search(r'name="csrf" value="([^"]+)"',body).group(1)
