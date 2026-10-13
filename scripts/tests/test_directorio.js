@@ -10,7 +10,7 @@ class Element {
  focus(){this.focused=true;}
 }
 const walk=(node,test)=>[...(test(node)?[node]:[]),...node.children.flatMap(child=>walk(child,test))];
-const base={destino:'jerico',registroConfirmado:true,informacionVerificada:true,estado:'publicado',slug:'lugar-prueba',nombre:'Prueba <b>literal</b>',tipoServicio:'hospedaje',descripcion:'Texto de prueba',descripcionEn:'Test description',contactoUrl:'https://example.invalid',imagen:'assets/jerico.jpg'};
+const base={destino:'jerico',registroConfirmado:true,informacionVerificada:true,estado:'publicado',slug:'lugar-prueba',nombre:'Prueba <b>literal</b>',tipoServicio:'hospedaje',descripcion:'Texto de prueba',descripcionEn:'Test description',contactoUrl:'https://example.invalid',imagen:'assets/jerico.webp'};
 async function run(lang,records,fail=false,reviews=false){
  const container=new Element('div');container.dataset.destino='jerico';
  vm.runInNewContext(script,{URL,document:{currentScript:{src:'http://localhost:8000/v1/assets/catalogo.js'},documentElement:{lang},getElementById(){return container},createElement:tag=>new Element(tag)},fetch:async url=>({ok:!fail,json:async()=>String(url).includes('contact-options')?options:{publicaciones:records,resenasHabilitadas:reviews}})});
@@ -21,7 +21,7 @@ async function run(lang,records,fail=false,reviews=false){
   const container=await run(lang,[base,{...base,slug:'comida-prueba',tipoServicio:'alimentacion'},{...base,slug:'borrador',estado:'borrador'},{...base,slug:'no-verificado',informacionVerificada:false},{...base,slug:'otro-destino',destino:'otro'},{...base,slug:'desconocido',tipoServicio:'desconocido'}]);
   const tabs=walk(container,node=>node.attributes.role==='tab');assert.equal(tabs.length,2);
   assert.equal(walk(container,node=>node.className==='directory-card').length,2);
-  const photo=walk(container,node=>node.tag==='img')[0];assert.equal(photo.src,'http://localhost:8000/v1/assets/jerico.jpg');
+  const photo=walk(container,node=>node.tag==='img')[0];assert.equal(photo.src,'http://localhost:8000/v1/assets/jerico.webp');
   const links=walk(container,node=>node.tag==='a');assert(links.some(link=>link.href.includes(lang==='en'?'/v1/en/destinos/jerico/lugares/':'/v1/destinos/jerico/lugares/')));
   const food=tabs.find(tab=>tab.dataset.type==='descansar-comer');food.events.click();assert.equal(walk(container,node=>node.className==='directory-card').length,2);
   const service=walk(container,node=>node.id==='directory-service')[0];service.value='alimentacion';service.events.change();assert.equal(walk(container,node=>node.className==='directory-card').length,1);
