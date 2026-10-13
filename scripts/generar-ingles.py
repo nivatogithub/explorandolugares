@@ -68,8 +68,8 @@ def translate(text):
 def relative(target,current):return os.path.relpath(target,(SITE/current).parent).replace(os.sep,'/')
 def lang_links(relative_file,english):
  current=Path('en')/relative_file if english else relative_file
- es=relative(SITE/relative_file,current);en=relative(SITE/'en'/relative_file,current)
- return f'<span class="language-switch" aria-label="{"Language" if english else "Idioma"}"><a href="{escape(es)}" lang="es" hreflang="es" aria-current="{str(not english).lower()}">ES</a><a href="{escape(en)}" lang="en" hreflang="en" aria-current="{str(english).lower()}">EN</a></span>'
+ es=relative(SITE/relative_file,current);en=relative(SITE/'en'/relative_file,current);pt=relative(SITE/'pt-br'/relative_file,current)
+ return f'<span class="language-switch" aria-label="{"Language" if english else "Idioma"}"><a href="{escape(es)}" lang="es" hreflang="es" aria-current="{str(not english).lower()}">ES</a><a href="{escape(en)}" lang="en" hreflang="en" aria-current="{str(english).lower()}">EN</a><a href="{escape(pt)}" lang="pt-BR" hreflang="pt-BR" aria-current="false">PT</a></span>'
 class TranslatePage(HTMLParser):
  def __init__(self,file):super().__init__(convert_charrefs=False);self.file=file;self.output=[];self.skip=0;self.tag=''
  def rewrite(self,url):
@@ -130,7 +130,7 @@ def mark_navigation(source,relative_file):
 from runpy import run_path
 run_path(str(ROOT/'scripts/generar-aviso-etapas.py'), run_name='__main__')
 
-files=[p for p in SITE.rglob('*.html') if 'en' not in p.relative_to(SITE).parts and 'creditos-fotograficos' not in p.relative_to(SITE).parts]
+files=[p for p in SITE.rglob('*.html') if not ({'en','pt-br'} & set(p.relative_to(SITE).parts)) and 'creditos-fotograficos' not in p.relative_to(SITE).parts]
 for p in files:
  rel=p.relative_to(SITE);source=p.read_text()
  source=re.sub(r'<span class="language-switch".*?</span>','',source,flags=re.S)
@@ -142,7 +142,7 @@ for p in files:
  english=english.replace('</nav>',lang_links(rel,True)+'</nav>',1)
  def alternate(eng):
   current=Path('en')/rel if eng else rel
-  return '<link rel="alternate" hreflang="es" href="'+relative(SITE/rel,current)+'"><link rel="alternate" hreflang="en" href="'+relative(SITE/'en'/rel,current)+'">'
+  return '<link rel="alternate" hreflang="es" href="'+relative(SITE/rel,current)+'"><link rel="alternate" hreflang="en" href="'+relative(SITE/'en'/rel,current)+'"><link rel="alternate" hreflang="pt-BR" href="'+relative(SITE/'pt-br'/rel,current)+'">'
  source=source.replace('</head>',alternate(False)+'</head>',1)
  english=english.replace('</head>',alternate(True)+'</head>',1)
  p.write_text(source);dest=SITE/'en'/rel;dest.parent.mkdir(parents=True,exist_ok=True);dest.write_text(english)

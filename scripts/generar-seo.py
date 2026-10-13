@@ -10,10 +10,10 @@ SITE='https://explorandolugares.com'
 # Páginas de navegación o contenido aprobado para aparecer en buscadores.
 PRIVATE_PREFIXES=(('admin',),('api',))
 NOINDEX_PATHS={
-    ('agenda','index.html'), ('en','agenda','index.html'),
-    ('admin','vista-previa.html'), ('en','admin','vista-previa.html'),
+    ('agenda','index.html'), ('en','agenda','index.html'), ('pt-br','agenda','index.html'),
+    ('admin','vista-previa.html'), ('en','admin','vista-previa.html'), ('pt-br','admin','vista-previa.html'),
     ('jerico.html',), ('privacidad.html',),
-    ('en','jerico.html'), ('en','privacidad.html'),
+    ('en','jerico.html'), ('en','privacidad.html'), ('pt-br','jerico.html'), ('pt-br','privacidad.html'),
 }
 NOINDEX_JERICO_SECTIONS={
     'agenda','alojamiento','bares-y-vida-nocturna','comercios-y-productores',
@@ -25,7 +25,7 @@ def approved(relative: PurePosixPath) -> bool:
     parts=relative.parts
     if parts in NOINDEX_PATHS or any(parts[:len(prefix)]==prefix for prefix in PRIVATE_PREFIXES):
         return False
-    for language in ((),('en',)):
+    for language in ((),('en',),('pt-br',)):
         offset=len(language)
         if parts[:offset]==language and parts[offset:offset+2]==('destinos','jerico'):
             return len(parts)<offset+4 or parts[offset+2] not in NOINDEX_JERICO_SECTIONS
@@ -64,6 +64,7 @@ Allow: /
 Disallow: /admin/
 Disallow: /api/
 Disallow: /en/admin/
+Disallow: /pt-br/admin/
 
 Sitemap: https://explorandolugares.com/sitemap.xml
 ''')

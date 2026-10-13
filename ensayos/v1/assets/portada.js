@@ -2,7 +2,11 @@
   const image = document.getElementById('hero-place-image');
   if (!image) return;
   const english = document.documentElement.lang === 'en';
-  const descriptions = english ? {
+  const portuguese = document.documentElement.lang === 'pt-BR';
+  const descriptions = portuguese ? {
+    town: 'Ilustração conceitual de uma vila entre montanhas, com hospedagem, restaurantes, lojas e atividades ao ar livre',
+    city: 'Ilustração conceitual de uma cidade moderna com torres, hotéis, vias expressas, restaurantes, bares e vida noturna'
+  } : english ? {
     town: 'Conceptual illustration of a mountain town with accommodation, restaurants, shops and outdoor activities',
     city: 'Conceptual illustration of a modern city with office towers, hotels, highways, gourmet restaurants, rooftop bars and nightlife'
   } : {

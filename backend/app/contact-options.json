@@ -27,61 +27,73 @@
     {
       "label": "Tipo de servicio",
       "en": "Service type",
+      "pt": "Tipo de serviço",
       "categories": [
         {
           "value": "hospedaje",
           "label": "Hospedaje",
-          "en": "Accommodation"
+          "en": "Accommodation",
+          "pt": "Hospedagem"
         },
         {
           "value": "alimentacion",
           "label": "Alimentación",
-          "en": "Food and dining"
+          "en": "Food and dining",
+          "pt": "Alimentação"
         },
         {
           "value": "licores",
           "label": "Venta de licores",
-          "en": "Liquor sales"
+          "en": "Liquor sales",
+          "pt": "Venda de bebidas alcoólicas"
         },
         {
           "value": "vida-nocturna",
           "label": "Bares, discotecas y vida nocturna",
-          "en": "Bars, nightclubs and nightlife"
+          "en": "Bars, nightclubs and nightlife",
+          "pt": "Bares, casas noturnas e vida noturna"
         },
         {
           "value": "comercio",
           "label": "Supermercados, tiendas y comercio",
-          "en": "Supermarkets, shops and retail"
+          "en": "Supermarkets, shops and retail",
+          "pt": "Supermercados, lojas e comércio"
         },
         {
           "value": "salud",
           "label": "Farmacia y salud",
-          "en": "Pharmacy and health"
+          "en": "Pharmacy and health",
+          "pt": "Farmácia e saúde"
         },
         {
           "value": "experiencias",
           "label": "Experiencias y actividades",
-          "en": "Experiences and activities"
+          "en": "Experiences and activities",
+          "pt": "Experiências e atividades"
         },
         {
           "value": "cultura",
           "label": "Cultura y entretenimiento",
-          "en": "Culture and entertainment"
+          "en": "Culture and entertainment",
+          "pt": "Cultura e entretenimento"
         },
         {
           "value": "transporte",
           "label": "Transporte",
-          "en": "Transport"
+          "en": "Transport",
+          "pt": "Transporte"
         },
         {
           "value": "servicios",
           "label": "Servicios locales",
-          "en": "Local services"
+          "en": "Local services",
+          "pt": "Serviços locais"
         },
         {
           "value": "otro",
           "label": "Otro",
-          "en": "Other"
+          "en": "Other",
+          "pt": "Outro"
         }
       ]
     }
@@ -644,7 +656,8 @@
       "en": "Getting there and around",
       "types": [
         "transporte"
-      ]
+      ],
+      "pt": "Como chegar e se locomover"
     },
     {
       "value": "descansar-comer",
@@ -653,7 +666,8 @@
       "types": [
         "hospedaje",
         "alimentacion"
-      ]
+      ],
+      "pt": "Onde ficar e comer"
     },
     {
       "value": "disfrutar",
@@ -663,7 +677,8 @@
         "experiencias",
         "cultura",
         "vida-nocturna"
-      ]
+      ],
+      "pt": "O que fazer e aproveitar"
     },
     {
       "value": "compras-servicios",
@@ -675,7 +690,8 @@
         "salud",
         "servicios",
         "otro"
-      ]
+      ],
+      "pt": "Compras e serviços"
     }
   ]
 }

@@ -48,6 +48,29 @@ class PublicLinkTests(unittest.TestCase):
         for page,value in forms:
             target=(page.parent/urlsplit(value).path).resolve()
             self.assertTrue(target.is_file(),f'{page.relative_to(self.public)}: form endpoint missing: {value}')
+    def test_trip_planning_page_is_public_in_both_languages(self):
+        for relative, title in (("planea-tu-visita/index.html", "Planea tu visita"), ("en/planea-tu-visita/index.html", "Plan your visit")):
+            source=(self.public/relative).read_text()
+            self.assertIn(title, source, relative)
+            self.assertIn('index,follow', source, relative)
+        sitemap=(self.public/'sitemap.xml').read_text()
+        self.assertIn('https://explorandolugares.com/planea-tu-visita/', sitemap)
+        self.assertIn('https://explorandolugares.com/en/planea-tu-visita/', sitemap)
+
+    def test_business_registration_is_grouped_and_preserves_submission_fields(self):
+        expected = {
+            'negocios-locales/interes/index.html': ('Tu negocio', 'Cómo contactarte', 'Confirma tu solicitud', 'Enviar solicitud'),
+            'en/negocios-locales/interes/index.html': ('Your business', 'How to contact you', 'Confirm your request', 'Send request'),
+        }
+        required_fields = ('name="name"', 'name="business"', 'name="category"', 'name="municipality"', 'name="email"', 'name="phone_number"', 'name="understanding"', 'name="consent"')
+        for relative, labels in expected.items():
+            source=(self.public/relative).read_text()
+            self.assertGreaterEqual(source.count('class="registration-group'), 3, relative)
+            for label in labels: self.assertIn(label, source, relative)
+            for field in required_fields: self.assertIn(field, source, relative)
+        registration_script=(self.public/'assets/registro.js').read_text()
+        self.assertIn("window.location.assign('../../index.html')", registration_script)
+
     def test_image_credit_catalogue_is_available_in_both_languages(self):
         spanish=(self.public/'creditos-fotograficos/index.html').read_text()
         english=(self.public/'en/creditos-fotograficos/index.html').read_text()

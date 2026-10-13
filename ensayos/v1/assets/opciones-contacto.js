@@ -3,6 +3,7 @@
   if (!form) return;
   const source = new URL('contact-options.json', document.currentScript.src);
   const english = document.documentElement.lang === 'en';
+  const portuguese = document.documentElement.lang === 'pt-BR';
   const category = form.elements.category;
   const municipality = form.elements.municipality;
   const requestedTown = new URL(document.URL).searchParams.get('municipio');
@@ -25,21 +26,21 @@
     if (!Array.isArray(data.municipalities) || !data.municipalities.length ||
         !data.municipalities.every(value => typeof value === 'string' && value.trim()) ||
         !Array.isArray(data.groups) || !data.groups.length ||
-        !data.groups.every(group => typeof group.label === 'string' && typeof group.en === 'string' &&
+        !data.groups.every(group => typeof group.label === 'string' && typeof group.en === 'string' && typeof group.pt === 'string' &&
           Array.isArray(group.categories) && group.categories.length && group.categories.every(item =>
-            typeof item.value === 'string' && item.value && typeof item.label === 'string' && typeof item.en === 'string'))) {
+            typeof item.value === 'string' && item.value && typeof item.label === 'string' && typeof item.en === 'string' && typeof item.pt === 'string'))) {
       throw new Error('invalid-options');
     }
     const categories = document.createDocumentFragment();
-    categories.append(option('', english ? 'Select an option' : 'Selecciona una opción'));
+    categories.append(option('', english ? 'Select an option' : (portuguese ? 'Selecione uma opção' : 'Selecciona una opción')));
     for (const group of data.groups) {
       const node = document.createElement('optgroup');
-      node.label = english ? group.en : group.label;
-      for (const item of group.categories) node.append(option(item.value, english ? item.en : item.label));
+      node.label = english ? group.en : (portuguese ? group.pt : group.label);
+      for (const item of group.categories) node.append(option(item.value, english ? item.en : (portuguese ? item.pt : item.label)));
       categories.append(node);
     }
     const towns = document.createDocumentFragment();
-    towns.append(option('', english ? 'Select your municipality' : 'Selecciona tu municipio'));
+    towns.append(option('', english ? 'Select your municipality' : (portuguese ? 'Selecione seu município' : 'Selecciona tu municipio')));
     for (const name of data.municipalities) towns.append(option(name, name));
     // Conservar lo que la persona haya seleccionado mientras se cargaba el JSON.
     const selectedCategory = category.value;

@@ -14,6 +14,7 @@ async function check(lang,fail=false,requested='',initial='Jericó'){
  assert(!municipality.children.some(item=>item.value==='Envigado'));
  assert(!('municipalityCatalog' in data));
  assert.equal(category.children.slice(1).reduce((sum,group)=>sum+group.children.length,0),11);
- assert.equal(category.children[1].label,lang==='en'?'Service type':'Tipo de servicio');
+ assert.equal(category.children[1].label,lang==='en'?'Service type':(lang==='pt-BR'?'Tipo de serviço':'Tipo de servicio'));
+ assert.equal(category.children[1].children[0].textContent,lang==='pt-BR'?'Hospedagem':(lang==='en'?'Accommodation':'Hospedaje'));
 }
-(async()=>{await check('es');await check('en');await check('es',true);await check('es',false,'Medellín','');await check('en',false,'Jardín','');await check('es',true,'Guatapé','');await check('es',false,'Envigado','');await check('es',false,'Medellín','Jericó');console.log('OK: carga JSON ES/EN, 21 municipios del piloto, 11 categorías, conserva selección y respaldo ante fallo.');})().catch(e=>{console.error(e);process.exitCode=1});
+(async()=>{await check('es');await check('en');await check('pt-BR');await check('es',true);await check('es',false,'Medellín','');await check('en',false,'Jardín','');await check('es',true,'Guatapé','');await check('es',false,'Envigado','');await check('es',false,'Medellín','Jericó');console.log('OK: carga JSON ES/EN/PT-BR, 21 municipios del piloto, 11 categorías, conserva selección y respaldo ante fallo.');})().catch(e=>{console.error(e);process.exitCode=1});
