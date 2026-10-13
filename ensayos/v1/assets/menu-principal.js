@@ -9,7 +9,7 @@
   button.className = 'menu-toggle';
   button.setAttribute('aria-controls', id);
   button.setAttribute('aria-expanded', 'false');
-  button.setAttribute('aria-label', document.documentElement.lang === 'en' ? 'Open menu' : 'Abrir menú');
+  button.setAttribute('aria-label', document.documentElement.lang === 'en' ? 'Open menu' : (document.documentElement.lang === 'pt-BR' ? 'Abrir menu' : 'Abrir menú'));
   button.innerHTML = '<span></span><span></span><span></span>';
   nav.before(button);
   const close = () => { header.classList.remove('menu-open'); button.setAttribute('aria-expanded', 'false'); };

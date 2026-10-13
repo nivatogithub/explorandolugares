@@ -7,7 +7,12 @@ ROOT=Path(__file__).resolve().parents[1]
 source=ROOT/'backend/app/contact-options.json'
 data=json.loads(source.read_text())
 taxonomy=json.loads((ROOT/'content/service-categories.json').read_text())
-data['groups']=[{'label':'Tipo de servicio','en':'Service type','categories':taxonomy['categories']}]
+pt=json.loads((ROOT/'content/pt-br.json').read_text())
+PT_OVERRIDES={'Hospedaje':'Hospedagem','Alimentación':'Alimentação','Venta de licores':'Venda de bebidas alcoólicas','Bares, discotecas y vida nocturna':'Bares, casas noturnas e vida noturna','Supermercados, tiendas y comercio':'Supermercados, lojas e comércio','Farmacia y salud':'Farmácia e saúde','Experiencias y actividades':'Experiências e atividades','Cultura y entretenimiento':'Cultura e entretenimento','Servicios locales':'Serviços locais','Cómo llegar y moverte':'Como chegar e se locomover','Dónde quedarte y comer':'Onde ficar e comer','Qué hacer y disfrutar':'O que fazer e aproveitar','Compras y servicios':'Compras e serviços'}
+def pt_text(value): return PT_OVERRIDES.get(value,pt.get(value,value))
+for category in taxonomy['categories']: category['pt']=pt_text(category['label'])
+for group in taxonomy['travelGroups']: group['pt']=pt_text(group['label'])
+data['groups']=[{'label':'Tipo de servicio','en':'Service type','pt':'Tipo de serviço','categories':taxonomy['categories']}]
 data['legacyCategoryAliases']=taxonomy['legacyAliases']
 data['travelGroups']=taxonomy['travelGroups']
 assigned=[value for group in data['travelGroups'] for value in group['types']]

@@ -1,6 +1,6 @@
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
 const script=fs.readFileSync('ensayos/v1/assets/telefono.js','utf8');
-for(const lang of ['es','en']) {
+for(const lang of ['es','en','pt-BR']) {
  const type={value:'celular',addEventListener(event,fn){this[event]=fn}};
  const number={value:'',validity:{patternMismatch:true},setCustomValidity(value){this.message=value},addEventListener(event,fn){this[event]=fn}};
  const prefix={},help={};
@@ -12,4 +12,4 @@ for(const lang of ['es','en']) {
  type.value='fijo';type.change();assert.equal(prefix.textContent,'+57 604');assert.equal(number.maxLength,7);
  assert(new RegExp('^'+number.pattern+'$').test('1234567'));assert(!new RegExp('^'+number.pattern+'$').test('6041234567'));
 }
-console.log('OK: radios celular, WhatsApp y fijo, prefijos automáticos, longitudes y mensajes ES/EN.');
+console.log('OK: radios celular, WhatsApp y fijo, prefijos automáticos, longitudes y mensajes ES/EN/PT-BR.');

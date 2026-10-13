@@ -2,8 +2,9 @@
   const form = document.getElementById('business-registration');
   if (!form) return;
   const english = document.documentElement.lang === 'en';
-  const t = value => english ? (window.EL_EN_MESSAGES[value] || value) : value;
-  if (english) { form.action += '?lang=en'; form.elements.lang.value = 'en'; }
+  const portuguese = document.documentElement.lang === 'pt-BR';
+  const t = value => english ? ((window.EL_EN_MESSAGES || {})[value] || value) : (portuguese ? ((window.EL_PT_MESSAGES || {})[value] || value) : value);
+  if (english || portuguese) { form.action += english ? '?lang=en' : '?lang=pt-br'; form.elements.lang.value = english ? 'en' : 'pt-br'; }
   const fields = document.getElementById('registration-fields');
   const availability = document.getElementById('registration-availability');
   const result = document.getElementById('registration-result');
@@ -22,7 +23,7 @@
       button.disabled = false;
       availability.hidden = true;
       const summary = document.getElementById('privacy-summary');
-      summary.textContent = english ? `Data controller: ${data.privacy.operator}. Data enquiries: ${data.privacy.contact}. Retention: ${data.privacy.retention}. Purpose: to contact you about your business and manage your enquiry. Not automatically published or used to subscribe you to advertising.` : `Responsable: ${data.privacy.operator}. Consultas sobre datos: ${data.privacy.contact}. Conservación: ${data.privacy.retention}. Finalidad: contactarte sobre tu negocio y gestionar tu solicitud. No se publica automáticamente ni se usa para suscribirte a publicidad.`;
+      summary.textContent = portuguese ? `Responsável pelos dados: ${data.privacy.operator}. Dúvidas sobre dados: ${data.privacy.contact}. Retenção: ${data.privacy.retention}. Finalidade: entrar em contato sobre sua empresa e gerenciar sua solicitação. Não será publicada automaticamente nem usada para inscrever você em publicidade.` : english ? `Data controller: ${data.privacy.operator}. Data enquiries: ${data.privacy.contact}. Retention: ${data.privacy.retention}. Purpose: to contact you about your business and manage your enquiry. Not automatically published or used to subscribe you to advertising.` : `Responsable: ${data.privacy.operator}. Consultas sobre datos: ${data.privacy.contact}. Conservación: ${data.privacy.retention}. Finalidad: contactarte sobre tu negocio y gestionar tu solicitud. No se publica automáticamente ni se usa para suscribirte a publicidad.`;
     } catch {
       availability.hidden = false;
       availability.textContent = typeof location !== 'undefined' && (location.hostname === '127.0.0.1' || location.hostname === 'localhost')
@@ -58,13 +59,13 @@
         let first;
         for (const [key, message] of Object.entries(data.errors)) {
           const node = form.querySelector(`[data-error="${key}"]`);
-          if (node) node.textContent = message;
+          if (node) node.textContent = t(message);
           const field = form.elements.namedItem(key === 'phone' ? 'phone_number' : key);
           if (field) { field.setAttribute('aria-invalid', 'true'); first ||= field; }
         }
         if (first) first.focus();
       } else result.focus();
-      if (response.ok) { ready = false; fields.disabled = true; availability.hidden = false; availability.textContent = t("Recibimos tus datos de contacto. Gracias por contarnos sobre tu negocio. Volverás al inicio en unos segundos."); window.setTimeout(() => window.location.assign('../index.html'), 3500); }
+      if (response.ok) { ready = false; fields.disabled = true; availability.hidden = false; availability.textContent = t("Recibimos tus datos de contacto. Gracias por contarnos sobre tu negocio. Volverás al inicio en unos segundos."); window.setTimeout(() => window.location.assign('../../index.html'), 3500); }
     } catch {
       result.textContent = t("No pudimos confirmar si se guardó. Conserva tus datos y vuelve a intentar; el mismo envío no se duplicará.");
       result.focus();
