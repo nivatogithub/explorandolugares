@@ -5,7 +5,7 @@ function node(){return {children:[],append(child){this.children.push(child)},rep
 async function check(lang,fail=false,requested='',initial='Jericó'){
  const category={...node(),value:'experiencias'},municipality={...node(),value:initial,options:data.municipalities.map(value=>({value}))};
  const form={elements:{category,municipality}};
- vm.runInNewContext(script,{URL,document:{URL:'http://127.0.0.1:8000/v1/aliados/index.html?municipio='+encodeURIComponent(requested),currentScript:{src:'http://127.0.0.1:8000/v1/assets/opciones-contacto.js'},documentElement:{lang},getElementById(){return form},createElement:node,createDocumentFragment:node},fetch:async ()=>({ok:!fail,json:async()=>data})});
+ vm.runInNewContext(script,{URL,document:{URL:'http://127.0.0.1:8000/v1/negocios-locales/index.html?municipio='+encodeURIComponent(requested),currentScript:{src:'http://127.0.0.1:8000/v1/assets/opciones-contacto.js'},documentElement:{lang},getElementById(){return form},createElement:node,createDocumentFragment:node},fetch:async ()=>({ok:!fail,json:async()=>data})});
  await new Promise(resolve=>setImmediate(resolve));
  assert.equal(category.value,'experiencias');assert.equal(municipality.value,initial || (data.municipalities.includes(requested) ? requested : ''));
  if(fail){assert.equal(category.children.length,0);return;}

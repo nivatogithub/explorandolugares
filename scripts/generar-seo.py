@@ -12,8 +12,8 @@ PRIVATE_PREFIXES=(('admin',),('api',))
 NOINDEX_PATHS={
     ('agenda','index.html'), ('en','agenda','index.html'),
     ('admin','vista-previa.html'), ('en','admin','vista-previa.html'),
-    ('jerico.html',), ('aliados.html',), ('privacidad.html',),
-    ('en','jerico.html'), ('en','aliados.html'), ('en','privacidad.html'),
+    ('jerico.html',), ('privacidad.html',),
+    ('en','jerico.html'), ('en','privacidad.html'),
 }
 NOINDEX_JERICO_SECTIONS={
     'agenda','alojamiento','bares-y-vida-nocturna','comercios-y-productores',

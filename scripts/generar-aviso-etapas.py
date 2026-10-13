@@ -10,9 +10,9 @@ def generate(site=SITE):
   source=page.read_text()
   if '</header>' not in source:continue
   relative=page.relative_to(site)
-  is_business='aliados' in relative.parts
+  is_business='negocios-locales' in relative.parts
   link=Path(os.path.relpath(site/'etapas/index.html',page.parent)).as_posix()
-  business_link=Path(os.path.relpath(site/'aliados/index.html',page.parent)).as_posix()
+  business_link=Path(os.path.relpath(site/'negocios-locales/index.html',page.parent)).as_posix()
   source=re.sub(r'<!-- etapas-piloto -->.*?<!-- /etapas-piloto -->','',source,flags=re.S)
   banner='<!-- etapas-piloto --><aside class="pilot-banner" aria-label="Etapa piloto · Comenzamos en Jericó"><div class="wrap"><div><strong>Importante · Etapa piloto en Jericó</strong><span>El portal está creciendo. Explora los destinos y conoce nuestros próximos pasos.</span></div><a href="'+link+'">Conoce las etapas →</a></div></aside><!-- /etapas-piloto -->'
   if not is_business:
