@@ -140,6 +140,48 @@ def verify_upload(client,config,release_id,files,directory):
             raise RuntimeError('La verificación de contenido no coincide. No se activó la versión.')
 
 
+def baseline_files(directory):
+    """Carga el último manifiesto activado para un despliegue incremental."""
+    candidates=[]
+    for manifest in (directory/'.local/deploy').glob('*/manifest.json'):
+        try:
+            data=json.loads(manifest.read_text())
+        except json.JSONDecodeError:
+            continue
+        confirmed=data.get('status')=='activated' or (
+            data.get('status')=='needs-inspection'
+            and data.get('activation')
+            and all(item.get('status')=='confirmed' for item in data['activation'])
+        )
+        if confirmed: candidates.append((manifest.stat().st_mtime,data))
+    if not candidates: raise ValueError('No existe una publicación local confirmada para comparar. Usa el despliegue completo una vez.')
+    return max(candidates,key=lambda candidate:candidate[0])[1]['files']
+
+
+def changed_files(previous,current):
+    old={item['relative']:item['sha256'] for item in previous}
+    new={item['relative']:item for item in current}
+    removed=sorted(set(old)-set(new))
+    if removed:
+        raise ValueError('El modo incremental no elimina archivos. Usa el despliegue completo para retirar: '+', '.join(removed[:3]))
+    return [item for item in current if old.get(item['relative'])!=item['sha256']]
+
+
+def incremental_commands(config,files):
+    """SFTP directo al destino activo: solo rutas nuevas o modificadas, sin descargas."""
+    directories=set()
+    commands=[]
+    for item in files:
+        relative=PurePosixPath(item['relative'])
+        root=public_path(config) if relative.parts[0]=='public' else config['remote_base']
+        target=PurePosixPath(root).joinpath(*relative.parts[1:])
+        directories.add(str(target.parent))
+        commands.append((item,str(target)))
+    mkdirs=[f'-mkdir {quote(directory)}' for directory in sorted(directories,key=lambda value:(value.count('/'),value))]
+    puts=[f'put {quote(item["local"])} {quote(target)}' for item,target in commands]
+    return mkdirs+puts
+
+
 def activate(client,config,release_id,initial,journal,save):
     base=config['remote_base'];stage=f'{base}/.el-releases/{release_id}'
     # Un despliegue existente debe tener ambos directorios para poder preservar la pareja.
@@ -163,23 +205,26 @@ def main(argv=None):
     parser.add_argument('--upload',action='store_true',help='Subir a una carpeta de versión; no cambia el sitio.')
     parser.add_argument('--activate',action='store_true',help='Subir y reemplazar public/app conservando la pareja previa.')
     parser.add_argument('--initial',action='store_true',help='Primera instalación: no deben existir las carpetas public/app de destino.')
+    parser.add_argument('--incremental',action='store_true',help='Sube solo archivos modificados desde la última publicación confirmada.')
     parser.add_argument('--confirm-target',help='Para activar, repetir exactamente remote_base de la configuración.')
     args=parser.parse_args(argv)
     if args.initial and not args.activate: parser.error('--initial requiere --activate')
+    if args.incremental and args.initial: parser.error('--incremental no admite --initial')
     config=load_config(args.config.expanduser().resolve())
     if args.activate and args.confirm_target!=config['remote_base']:parser.error('Para activar, indica --confirm-target con remote_base exacto.')
     release_id=datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')+'-'+secrets.token_hex(3)
     directory=ROOT/'.local/deploy'/release_id;directory.mkdir(parents=True)
     files=build(directory/'build',config)
+    selected=changed_files(baseline_files(ROOT),files) if args.incremental else files
     journal={'site':'explorandolugares','release':release_id,'host':config['host'],'remote_base':config['remote_base'],
-             'public_directory':config['public_directory'],'public_root':public_path(config),'files':files,'status':'planned'}
+             'public_directory':config['public_directory'],'public_root':public_path(config),'files':files,'changed_files':len(selected),'status':'planned'}
     path=directory/'manifest.json'
     def save():path.write_text(json.dumps(journal,indent=2,ensure_ascii=False)+'\n')
     save()
     print(f'Explorando Lugares → {config["host"]}:{public_path(config)}')
-    print(f'{len(files)} archivos; {sum(x["bytes"] for x in files)/1024/1024:.1f} MiB. Diario: {path}')
+    print(f'{len(selected)} archivos para transferir; {sum(x["bytes"] for x in selected)/1024/1024:.1f} MiB. Diario: {path}')
     print('No se transfieren private/, configuración real, base de datos, SQL, credenciales ni referencias históricas.')
-    if not (args.upload or args.activate): print('Solo revisión: no se conectó al servidor. Usa --upload para transferir o --activate para publicar.');return 0
+    if not (args.upload or args.activate or args.incremental): print('Solo revisión: no se conectó al servidor. Usa --upload, --activate o --incremental para publicar.');return 0
     known_hosts=Path(config['known_hosts_file']).expanduser()
     if not known_hosts.is_file():raise ValueError('Falta el archivo de huellas verificadas. Consulta docs/DESPLIEGUE_SFTP.md.')
     client=SFTP(config)
@@ -187,16 +232,21 @@ def main(argv=None):
     client.run([f'cd {quote(config["remote_base"])}',f'mkdir {quote(config["remote_base"]+"/.el-deploy-lock")}'])
     journal['status']='uploading';save()
     try:
-        client.run(stage_commands(config,release_id,files))
-        verify_upload(client,config,release_id,files,directory)
-        journal['status']='uploaded';save()
-        if args.activate: activate(client,config,release_id,args.initial,journal,save)
+        if args.incremental:
+            client.run(incremental_commands(config,selected))
+            journal['status']='activated';save()
+        else:
+            client.run(stage_commands(config,release_id,files))
+            verify_upload(client,config,release_id,files,directory)
+            journal['status']='uploaded';save()
+            if args.activate: activate(client,config,release_id,args.initial,journal,save)
         client.run([f'rmdir {quote(config["remote_base"]+"/.el-deploy-lock")}'])
     except (RuntimeError,subprocess.TimeoutExpired,KeyboardInterrupt) as error:
         journal['status']='needs-inspection';save()
         print('Se detuvo el despliegue. No se borraron archivos remotos. Si hay un rename pendiente, su resultado es incierto: inspeccionar el servidor antes de reintentar.',file=sys.stderr)
         raise error
-    if args.activate:print('Transferencia y activación completadas. Verifica HTTPS, PHP y formulario; SFTP no comprueba el funcionamiento del sitio.')
+    if args.incremental:print('Actualización incremental completada. Se subieron únicamente archivos modificados, sin descargar la entrega completa.')
+    elif args.activate:print('Transferencia y activación completadas. Verifica HTTPS, PHP y formulario; SFTP no comprueba el funcionamiento del sitio.')
     else:print(f'Versión subida a {config["remote_base"]}/.el-releases/{release_id}. El sitio activo no cambió.')
     return 0
 

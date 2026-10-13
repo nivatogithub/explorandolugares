@@ -77,5 +77,13 @@ class DeploymentTests(unittest.TestCase):
   with tempfile.TemporaryDirectory() as folder:
    files=[{'relative':'public/index.html','sha256':hashlib.sha256(b'original').hexdigest()}]
    with self.assertRaises(RuntimeError):deploy.verify_upload(ChangedRemote(),self.config,'test',files,Path(folder))
+ def test_incremental_selects_only_changed_and_never_deletes(self):
+  previous=[{'relative':'public/index.html','sha256':'old'},{'relative':'app/bootstrap.php','sha256':'same'}]
+  current=[{'relative':'public/index.html','sha256':'new','local':'/tmp/index.html','bytes':1},{'relative':'app/bootstrap.php','sha256':'same','local':'/tmp/app.php','bytes':1}]
+  changed=deploy.changed_files(previous,current)
+  self.assertEqual([item['relative'] for item in changed],['public/index.html'])
+  commands=deploy.incremental_commands(self.config,changed)
+  self.assertTrue(any(command.startswith('put ') and command.endswith('/public/index.html"') for command in commands))
+  with self.assertRaises(ValueError):deploy.changed_files(previous,current[:1])
 
 if __name__=='__main__':unittest.main()
