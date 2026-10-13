@@ -85,5 +85,12 @@ class DeploymentTests(unittest.TestCase):
   commands=deploy.incremental_commands(self.config,changed)
   self.assertTrue(any(command.startswith('put ') and command.endswith('/public/index.html"') for command in commands))
   with self.assertRaises(ValueError):deploy.changed_files(previous,current[:1])
+ def test_incremental_cleanup_only_removes_known_paths_after_uploads(self):
+  files=[{'relative':'public/negocios-locales/index.html','local':'/tmp/new.html','sha256':'new','bytes':1}]
+  commands=deploy.incremental_commands(self.config,files,['public/aliados/index.html','public/aliados.html'])
+  upload=max(index for index,command in enumerate(commands) if command.startswith('put '))
+  deletion=min(index for index,command in enumerate(commands) if command.startswith('rm '))
+  self.assertLess(upload,deletion)
+  self.assertTrue(any(command.startswith('rmdir ') and command.endswith('/public/aliados\"') for command in commands))
 
 if __name__=='__main__':unittest.main()

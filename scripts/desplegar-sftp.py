@@ -167,8 +167,8 @@ def changed_files(previous,current):
     return [item for item in current if old.get(item['relative'])!=item['sha256']]
 
 
-def incremental_commands(config,files):
-    """SFTP directo al destino activo: solo rutas nuevas o modificadas, sin descargas."""
+def incremental_commands(config,files,removed=()):
+    """SFTP directo al destino activo: carga cambios y elimina solo rutas conocidas."""
     directories=set()
     commands=[]
     for item in files:
@@ -179,7 +179,25 @@ def incremental_commands(config,files):
         commands.append((item,str(target)))
     mkdirs=[f'-mkdir {quote(directory)}' for directory in sorted(directories,key=lambda value:(value.count('/'),value))]
     puts=[f'put {quote(item["local"])} {quote(target)}' for item,target in commands]
-    return mkdirs+puts
+    removed_targets=[]
+    for relative in removed:
+        parts=PurePosixPath(relative)
+        root=public_path(config) if parts.parts[0]=='public' else config['remote_base']
+        removed_targets.append(str(PurePosixPath(root).joinpath(*parts.parts[1:])))
+    # Nunca se eliminan directorios que siguen conteniendo archivos de la nueva entrega.
+    current_parents=set()
+    for item in files:
+        parts=PurePosixPath(item['relative'])
+        root=public_path(config) if parts.parts[0]=='public' else config['remote_base']
+        current_parents.add(str(PurePosixPath(root).joinpath(*parts.parts[1:]).parent))
+    removed_dirs=set()
+    for target in removed_targets:
+        parent=str(PurePosixPath(target).parent)
+        while parent not in current_parents and parent not in {public_path(config),config['remote_base'],'/'}:
+            removed_dirs.add(parent); parent=str(PurePosixPath(parent).parent)
+    deletes=[f'rm {quote(target)}' for target in removed_targets]
+    cleanup=[f'rmdir {quote(directory)}' for directory in sorted(removed_dirs,key=lambda value:value.count('/'),reverse=True)]
+    return mkdirs+puts+deletes+cleanup
 
 
 def activate(client,config,release_id,initial,journal,save):
@@ -206,18 +224,24 @@ def main(argv=None):
     parser.add_argument('--activate',action='store_true',help='Subir y reemplazar public/app conservando la pareja previa.')
     parser.add_argument('--initial',action='store_true',help='Primera instalación: no deben existir las carpetas public/app de destino.')
     parser.add_argument('--incremental',action='store_true',help='Sube solo archivos modificados desde la última publicación confirmada.')
+    parser.add_argument('--remove-removed',action='store_true',help='Con --incremental, retira solo archivos conocidos que ya no existen localmente.')
     parser.add_argument('--confirm-target',help='Para activar, repetir exactamente remote_base de la configuración.')
     args=parser.parse_args(argv)
     if args.initial and not args.activate: parser.error('--initial requiere --activate')
     if args.incremental and args.initial: parser.error('--incremental no admite --initial')
+    if args.remove_removed and not args.incremental: parser.error('--remove-removed requiere --incremental')
     config=load_config(args.config.expanduser().resolve())
     if args.activate and args.confirm_target!=config['remote_base']:parser.error('Para activar, indica --confirm-target con remote_base exacto.')
     release_id=datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')+'-'+secrets.token_hex(3)
     directory=ROOT/'.local/deploy'/release_id;directory.mkdir(parents=True)
     files=build(directory/'build',config)
-    selected=changed_files(baseline_files(ROOT),files) if args.incremental else files
+    previous=baseline_files(ROOT) if args.incremental else []
+    removed=sorted({item['relative'] for item in previous}-{item['relative'] for item in files})
+    if args.incremental and removed and not args.remove_removed:
+        raise ValueError('El modo incremental no elimina archivos. Usa --remove-removed para retirar únicamente rutas conocidas: '+', '.join(removed[:3]))
+    selected=changed_files(previous,files) if args.incremental and not removed else ([item for item in files if {entry['relative']:entry['sha256'] for entry in previous}.get(item['relative'])!=item['sha256']] if args.incremental else files)
     journal={'site':'explorandolugares','release':release_id,'host':config['host'],'remote_base':config['remote_base'],
-             'public_directory':config['public_directory'],'public_root':public_path(config),'files':files,'changed_files':len(selected),'status':'planned'}
+             'public_directory':config['public_directory'],'public_root':public_path(config),'files':files,'changed_files':len(selected),'removed_files':len(removed),'status':'planned'}
     path=directory/'manifest.json'
     def save():path.write_text(json.dumps(journal,indent=2,ensure_ascii=False)+'\n')
     save()
@@ -233,7 +257,7 @@ def main(argv=None):
     journal['status']='uploading';save()
     try:
         if args.incremental:
-            client.run(incremental_commands(config,selected))
+            client.run(incremental_commands(config,selected,removed))
             journal['status']='activated';save()
         else:
             client.run(stage_commands(config,release_id,files))
@@ -245,7 +269,7 @@ def main(argv=None):
         journal['status']='needs-inspection';save()
         print('Se detuvo el despliegue. No se borraron archivos remotos. Si hay un rename pendiente, su resultado es incierto: inspeccionar el servidor antes de reintentar.',file=sys.stderr)
         raise error
-    if args.incremental:print('Actualización incremental completada. Se subieron únicamente archivos modificados, sin descargar la entrega completa.')
+    if args.incremental:print('Actualización incremental completada. Se subieron únicamente archivos modificados'+(' y se retiraron rutas conocidas.' if removed else ', sin descargar la entrega completa.'))
     elif args.activate:print('Transferencia y activación completadas. Verifica HTTPS, PHP y formulario; SFTP no comprueba el funcionamiento del sitio.')
     else:print(f'Versión subida a {config["remote_base"]}/.el-releases/{release_id}. El sitio activo no cambió.')
     return 0
