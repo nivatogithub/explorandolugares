@@ -24,7 +24,7 @@ for page in public.rglob('index.html'):
     if not (root/'ensayos/v1'/page.relative_to(public)).is_file() and '<!-- ficha-generada-explorando -->' in page.read_text():
         page.unlink()
 for src in (root/'ensayos/v1').rglob('*'):
-    if src.is_file() and src.suffix in {'.html','.css','.js','.json','.svg','.jpg','.png','.txt','.xml'}:
+    if src.is_file() and src.suffix in {'.html','.css','.js','.json','.svg','.jpg','.png','.webp','.txt','.xml'}:
         target=public/src.relative_to(root/'ensayos/v1');target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(src,target)
 shutil.copytree(root/'backend/public',public,dirs_exist_ok=True)
 # El hosting conserva CSS durante varios días. Versionar la URL en cada entrega
