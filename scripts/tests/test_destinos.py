@@ -34,7 +34,7 @@ class Destinos(unittest.TestCase):
     text=path.read_text();self.assertIn(d['history']['en' if lang else 'es'],text)
     self.assertNotIn('{{',text)
     self.assertIn('There are no upcoming events published.' if lang else 'No hay próximos eventos publicados.',text)
-    contacts=[u for u in page.links if 'aliados/interes/index.html?' in u]
+    contacts=[u for u in page.links if 'negocios-locales/interes/index.html?' in u]
     self.assertTrue(contacts)
     self.assertTrue(all(parse_qs(urlsplit(u).query)['municipio']==[d['name']] for u in contacts))
  def test_todos_los_enlaces_locales(self):

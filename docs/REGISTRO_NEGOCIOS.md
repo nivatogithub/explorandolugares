@@ -10,7 +10,7 @@ Verificación completada con PHP 8.5.11 y SQLite temporal: recepción deshabilit
 
 Pendientes: confirmar soporte PHP/PDO MySQL y base de datos del cPanel, configurar valores privados y responsable real, revisar política de conservación, comprobar el funcionamiento en MySQL/HTTPS del hosting y realizar revisión visual en navegador. No existe conexión con el hosting ni se ha enviado información real. La prueba con SQLite no valida el motor MySQL. No se han subido cambios a GitHub.
 
-Preparación e instrucciones: `backend/README.md` y `python3 scripts/preparar-hosting.py`. Vista estática del formulario: `ensayos/v1/aliados/index.html`; vista preliminar sin datos del panel: `ensayos/v1/admin/vista-previa.html`. El panel funcional es `backend/public/admin/index.php` y requiere el servidor PHP configurado. La vista estática mantiene el envío deshabilitado y no ejecuta PHP.
+Preparación e instrucciones: `backend/README.md` y `python3 scripts/preparar-hosting.py`. Vista estática del formulario: `ensayos/v1/negocios-locales/index.html`; vista preliminar sin datos del panel: `ensayos/v1/admin/vista-previa.html`. El panel funcional es `backend/public/admin/index.php` y requiere el servidor PHP configurado. La vista estática mantiene el envío deshabilitado y no ejecuta PHP.
 
 ## Alcance simplificado vigente
 

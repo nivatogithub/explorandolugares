@@ -127,3 +127,25 @@ header .header-note{min-height:42px;padding-top:9px;padding-bottom:9px}
 @media(max-width:760px){header .wrap{min-height:66px}.destination-index{padding-top:24px}.destination-index-head,.stages-intro{grid-template-columns:1fr;gap:14px}.destination-index-head{margin-bottom:18px}.destination-index-head h1{white-space:normal;font-size:40px}.destination-index-head>.intro{justify-self:start;margin-bottom:0}.stages-intro{padding-top:26px}.stages-intro .participation-value{margin-top:4px}.business-hero-with-art{min-height:0}}
 /* En ancho intermedio se evita que el título de Destinos invada la introducción. */
 @media(min-width:761px) and (max-width:1100px){.destination-index-head{grid-template-columns:1fr;gap:6px}.destination-index-head h1{white-space:normal;font-size:clamp(42px,5.8vw,56px)}.destination-index-head>.intro{justify-self:start;max-width:700px;margin:0}}
+
+/* Solicitudes: la información aprovecha el ancho y el seguimiento permanece compacto. */
+.admin-lead{display:grid;gap:16px;padding:22px 24px;margin-bottom:14px}
+.admin-lead-head{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:14px 22px;align-items:center}
+.admin-select{margin:0;white-space:nowrap}
+.admin-lead-title h2{margin:0;font-size:24px;line-height:1.15}
+.admin-lead-title p{margin:4px 0 0;font-size:14px;color:#52634f}
+.admin-lead-status{display:flex;align-items:center;gap:10px}
+.admin-status-form{display:flex;align-items:end;gap:8px}
+.admin-status-form label{display:grid;gap:4px;margin:0;font-size:11px;font-weight:700;color:#52634f}
+.admin-status-form label>span{line-height:1}
+.admin-status-form select{min-width:132px;min-height:38px;padding:7px 28px 7px 10px}
+.admin-status-form .pill,.admin-delete .pill{min-height:38px;padding:8px 12px;font-size:12px;gap:0}
+.admin-lead-details{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 24px;margin:0;padding-top:15px;border-top:1px solid #dbe2d6}
+.admin-lead-details>div{min-width:0}
+.admin-lead-details dt{font-size:11px;text-transform:uppercase;letter-spacing:.04em}
+.admin-lead-details dd{margin:4px 0 0;font-size:14px;line-height:1.35}
+.admin-lead-details .admin-contact,.admin-lead-details .admin-description{grid-column:span 2}
+.admin-lead-actions{display:flex;justify-content:flex-end;padding-top:2px}
+.admin-delete{margin:0}
+@media(max-width:1000px){.admin-lead-head{grid-template-columns:auto minmax(0,1fr)}.admin-lead-status{grid-column:1/-1;justify-content:flex-end}.admin-lead-details{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.admin-lead{padding:18px}.admin-lead-head{grid-template-columns:1fr;gap:10px}.admin-select{order:2}.admin-lead-status{grid-column:auto;justify-content:space-between;align-items:start}.admin-status-form{flex:1;justify-content:flex-end}.admin-status-form select{min-width:118px}.admin-lead-details{grid-template-columns:1fr;gap:11px;padding-top:13px}.admin-lead-details .admin-contact,.admin-lead-details .admin-description{grid-column:auto}.admin-lead-actions{justify-content:stretch}.admin-delete{width:100%}.admin-delete .pill{width:100%}}

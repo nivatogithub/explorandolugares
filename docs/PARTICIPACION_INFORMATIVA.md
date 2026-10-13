@@ -2,7 +2,7 @@
 
 Versión confirmada por el formulario: `participacion-informativa-v1`.
 
-Página `/aliados/` ES/EN reorganizada: propósito y valor junto a la introducción; pasos de participación y dudas frecuentes junto al formulario. Los enlaces internos llevan a propósito, funcionamiento, alcance y preguntas; no se inventa un equipo ni una página de quiénes somos sin datos de sus responsables.
+Página `/negocios-locales/` ES/EN reorganizada: propósito y valor junto a la introducción; pasos de participación y dudas frecuentes junto al formulario. Los enlaces internos llevan a propósito, funcionamiento, alcance y preguntas; no se inventa un equipo ni una página de quiénes somos sin datos de sus responsables.
 
 ## Contenido que debe entender el interesado
 
