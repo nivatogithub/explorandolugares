@@ -54,6 +54,12 @@ class DeploymentTests(unittest.TestCase):
   self.assertTrue(ops[1]['to'].endswith('previous-app'))
   self.assertTrue(all(op['status']=='confirmed' for op in ops));self.assertEqual(journal['status'],'activated')
   self.assertFalse(any('/private' in s or s.startswith('rm ') for s in client.commands))
+ def test_activate_uploaded_release_uses_verified_stage_and_keeps_rollback_pair(self):
+  client=Remote();journal={'status':'uploaded'};deploy.activate_uploaded(client,self.config,'test-release',journal,lambda:None)
+  self.assertEqual(journal['status'],'activated')
+  self.assertTrue(any('rename "/home/usuario/explorandolugares/.el-releases/test-release/public"' in command for command in client.commands))
+  self.assertTrue(any('rename "/home/usuario/explorandolugares/.el-releases/test-release/app"' in command for command in client.commands))
+  self.assertTrue(client.commands[-1].startswith('rmdir ') and '.el-deploy-lock' in client.commands[-1])
  def test_failure_stops_activation_and_retains_uncertain_operation(self):
   client=Remote(fail_at=4);journal={}
   with self.assertRaises(RuntimeError):deploy.activate(client,self.config,'test',False,journal,lambda:None)

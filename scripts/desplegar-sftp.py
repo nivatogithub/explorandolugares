@@ -230,6 +230,18 @@ def activate(client,config,release_id,initial,journal,save):
     journal['status']='activated';save()
 
 
+def activate_uploaded(client,config,release_id,journal,save):
+    base=config['remote_base']
+    client.run([f'cd {quote(base)}',f'mkdir {quote(base+"/.el-deploy-lock")}'])
+    journal['status']='activating';save()
+    try:
+        activate(client,config,release_id,False,journal,save)
+        client.run([f'rmdir {quote(base+"/.el-deploy-lock")}'])
+    except (RuntimeError,subprocess.TimeoutExpired,KeyboardInterrupt):
+        journal['status']='needs-inspection';save()
+        raise
+
+
 def main(argv=None):
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--config',type=Path,default=ROOT/'.local/sftp.json')
@@ -239,13 +251,15 @@ def main(argv=None):
     parser.add_argument('--incremental',action='store_true',help='Sube solo archivos modificados desde la última publicación confirmada.')
     parser.add_argument('--remove-removed',action='store_true',help='Con --incremental, retira solo archivos conocidos que ya no existen localmente.')
     parser.add_argument('--verify-release',help='Reanuda la verificación de un staging local interrumpido; no sube ni activa archivos.')
+    parser.add_argument('--activate-release',help='Activa un release previamente subido y verificado, sin transferirlo de nuevo.')
     parser.add_argument('--confirm-target',help='Para activar, repetir exactamente remote_base de la configuración.')
     args=parser.parse_args(argv)
     if args.initial and not args.activate: parser.error('--initial requiere --activate')
+    if args.activate_release and (args.initial or args.activate or args.incremental or args.upload or args.verify_release):parser.error('--activate-release no se combina con otras acciones.')
     if args.incremental and args.initial: parser.error('--incremental no admite --initial')
     if args.remove_removed and not args.incremental: parser.error('--remove-removed requiere --incremental')
     config=load_config(args.config.expanduser().resolve())
-    if args.activate and args.confirm_target!=config['remote_base']:parser.error('Para activar, indica --confirm-target con remote_base exacto.')
+    if (args.activate or args.activate_release) and args.confirm_target!=config['remote_base']:parser.error('Para activar, indica --confirm-target con remote_base exacto.')
     if args.verify_release:
         if not re.fullmatch(r'\d{8}T\d{6}Z-[a-f0-9]{6}',args.verify_release):parser.error('Identificador de release inválido.')
         directory=ROOT/'.local/deploy'/args.verify_release
@@ -264,6 +278,24 @@ def main(argv=None):
         journal['status']='uploaded';journal['verified_after_interruption']=True
         manifest.write_text(json.dumps(journal,indent=2,ensure_ascii=False)+'\n')
         print(f'Release {args.verify_release} verificado y disponible en staging. El sitio activo no cambió.')
+        return 0
+    if args.activate_release:
+        if not re.fullmatch(r'\d{8}T\d{6}Z-[a-f0-9]{6}',args.activate_release):parser.error('Identificador de release inválido.')
+        directory=ROOT/'.local/deploy'/args.activate_release
+        manifest=directory/'manifest.json'
+        if not manifest.is_file():raise ValueError('No existe el diario local de ese release.')
+        journal=json.loads(manifest.read_text())
+        if journal.get('site')!='explorandolugares' or journal.get('remote_base')!=config['remote_base'] or journal.get('status')!='uploaded':
+            raise ValueError('Solo se puede activar un release propio, verificado y subido al mismo destino.')
+        files=journal.get('files',[])
+        for item in files:
+            local=directory/'build'/item['relative']
+            if not local.is_file() or hashlib.sha256(local.read_bytes()).hexdigest()!=item['sha256']:
+                raise ValueError('La entrega local no coincide con el manifiesto; no se activó.')
+        client=SFTP(config)
+        verify_upload(client,config,args.activate_release,files,directory)
+        activate_uploaded(client,config,args.activate_release,journal,lambda:manifest.write_text(json.dumps(journal,indent=2,ensure_ascii=False)+'\n'))
+        print(f'Release {args.activate_release} activado. Verifica el sitio en HTTPS y el formulario.')
         return 0
     release_id=datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')+'-'+secrets.token_hex(3)
     directory=ROOT/'.local/deploy'/release_id;directory.mkdir(parents=True)
