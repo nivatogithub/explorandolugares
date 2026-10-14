@@ -1,5 +1,8 @@
 RewriteEngine On
 
+# Sitemap automático de destinos publicados; conservar la URL ya anunciada.
+RewriteRule ^sitemap\.xml$ sitemap-live.php [L]
+
 # Slugs de destino: la URL pública no revela parámetros ni archivos de plantilla.
 RewriteRule ^destinos/([a-z0-9-]+)(?:/index\.html)?/?$ destino.php?destino=$1&idioma=es [L,QSA,NC]
 RewriteRule ^en/destinos/([a-z0-9-]+)(?:/index\.html)?/?$ destino.php?destino=$1&idioma=en [L,QSA,NC]

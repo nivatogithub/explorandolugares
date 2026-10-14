@@ -2,6 +2,7 @@
 declare(strict_types=1);
 
 $path=parse_url($_SERVER['REQUEST_URI']??'/',PHP_URL_PATH) ?: '/';
+if ($path==='/v1/sitemap.xml') { require dirname(__DIR__).'/backend/public/sitemap-live.php'; return true; }
 if (preg_match('~^/v1/admin/(index|destinos)\.php$~',$path,$admin)) {
     require dirname(__DIR__).'/backend/public/admin/'.$admin[1].'.php';
     return true;
