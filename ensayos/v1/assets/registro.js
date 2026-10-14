@@ -22,8 +22,6 @@
       ready = true;
       button.disabled = false;
       availability.hidden = true;
-      const summary = document.getElementById('privacy-summary');
-      summary.textContent = portuguese ? `Responsável pelos dados: ${data.privacy.operator}. Dúvidas sobre dados: ${data.privacy.contact}. Retenção: ${data.privacy.retention}. Finalidade: entrar em contato sobre sua empresa e gerenciar sua solicitação. Não será publicada automaticamente nem usada para inscrever você em publicidade.` : english ? `Data controller: ${data.privacy.operator}. Data enquiries: ${data.privacy.contact}. Retention: ${data.privacy.retention}. Purpose: to contact you about your business and manage your enquiry. Not automatically published or used to subscribe you to advertising.` : `Responsable: ${data.privacy.operator}. Consultas sobre datos: ${data.privacy.contact}. Conservación: ${data.privacy.retention}. Finalidad: contactarte sobre tu negocio y gestionar tu solicitud. No se publica automáticamente ni se usa para suscribirte a publicidad.`;
     } catch {
       availability.hidden = false;
       availability.textContent = typeof location !== 'undefined' && (location.hostname === '127.0.0.1' || location.hostname === 'localhost')
@@ -48,7 +46,10 @@
       result.textContent = t("Confirma que has leído y entendido cómo participar y el alcance de esta etapa.");
       form.elements.understanding.focus(); return;
     }
-    if (!form.reportValidity()) return;
+    if (!form.reportValidity()) {
+      form.querySelectorAll(':invalid').forEach(field => field.setAttribute('aria-invalid', 'true'));
+      return;
+    }
     button.disabled = true;
     result.textContent = t("Guardando tu solicitud…");
     try {

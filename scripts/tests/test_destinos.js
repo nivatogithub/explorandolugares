@@ -4,11 +4,11 @@ const records = [{name:'Jericó',region:'Suroeste'}, ...JSON.parse(fs.readFileSy
 function check(lang) {
   const nodes = {};
   for (const id of ['destination-grid','destination-search','destination-region','destination-results','destination-previous','destination-next','destination-pagination','destination-page-number','destination-controls','destination-clear']) {
-    nodes[id] = {value:'',hidden:true,disabled:false,listeners:{},addEventListener(type,fn){this.listeners[type]=fn},focus(){},scrollIntoView(){}};
+    nodes[id] = {value:'',hidden:true,disabled:false,listeners:{},addEventListener(type,fn){this.listeners[type]=fn},dispatchEvent(event){const listener=this.listeners[event.type];if(listener)listener(event)},focus(){},scrollIntoView(){}};
   }
   const cards = records.map(d=>({dataset:{name:d.name,region:d.region},hidden:false}));
   nodes['destination-grid'].querySelectorAll = () => cards;
-  vm.runInNewContext(source,{document:{documentElement:{lang},getElementById:id=>nodes[id]}});
+  vm.runInNewContext(source,{Event: class Event { constructor(type, options={}) { this.type=type; Object.assign(this,options); } },document:{documentElement:{lang},getElementById:id=>nodes[id]}});
   const visible=()=>cards.filter(c=>!c.hidden).map(c=>c.dataset.name);
   assert.equal(visible().length,9);
   nodes['destination-next'].listeners.click();assert.equal(visible().length,9);assert(!visible().includes('Jericó'));
