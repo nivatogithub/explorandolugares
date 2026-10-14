@@ -77,4 +77,4 @@ Ver [Administración y datos](../docs/ADMINISTRACION_Y_DATOS.md) para la estruct
 
 ## Advance Admin (rama independiente)
 
-CRM, establecimientos privados, dashboard, plantillas HTML y campañas con revisión y envío manual mediante Resend. Consultar [plan, instalación y pendientes](../PLAN_WORKER_ADVANCE_ADMIN.md). Requiere la migración independiente 007; Resend está deshabilitado por defecto.
+CRM, establecimientos privados, dashboard, plantillas HTML y campañas con revisión y envío manual mediante Resend. Consultar [plan, instalación y pendientes](../PLAN_WORKER_ADVANCE_ADMIN.md). Reutiliza el catálogo territorial y empresarial de destinos. Requiere 007 y la herramienta de integración 008 (ver [contrato compartido](../docs/ADVANCE_ADMIN_MODELO_COMPARTIDO.md)); Resend está deshabilitado por defecto.

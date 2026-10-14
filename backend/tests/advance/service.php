@@ -1,21 +1,28 @@
 <?php
 declare(strict_types=1);
 require dirname(__DIR__,2).'/app/advance/AdvanceAdmin.php';
-function categories(): array {return ['hospedaje'=>'Alojamiento','cultura'=>'Cultura'];}
 function check(bool $ok,string $message): void {if(!$ok)throw new RuntimeException($message);}
 function rejects(Closure $fn): void {try{$fn();}catch(InvalidArgumentException|RuntimeException $e){return;}throw new Exception('Se esperaba rechazo.');}
 $db=new PDO('sqlite::memory:',null,null,[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC]);$db->exec('PRAGMA foreign_keys=ON');
 $db->exec(file_get_contents(dirname(__DIR__,2).'/database/sqlite.sql'));
+$db->exec(file_get_contents(dirname(__DIR__,2).'/database/destinations.sqlite.sql'));
 $db->exec(file_get_contents(dirname(__DIR__,2).'/database/migrations/007-advance-admin.sqlite.sql'));
+require dirname(__DIR__,2).'/app/advance/SharedCatalogMigration.php';
+SharedCatalogMigration::apply($db);SharedCatalogMigration::apply($db);
+$db->exec(file_get_contents(__DIR__.'/shared-fixture.sql'));
 $s=new AdvanceAdmin($db,'admin-test');
-$base=['name'=>'Persona <b>prueba</b>','email'=>'persona@example.invalid','phone'=>'','municipality'=>'Municipio de prueba','relationship'=>'prospecto','source'=>'Prueba local · 2026-10-14','notes'=>'','marketing_consent'=>'0','consent_evidence'=>''];
+$base=['name'=>'Persona <b>prueba</b>','email'=>'persona@example.invalid','phone'=>'','destination_id'=>'1','relationship'=>'prospecto','source'=>'Prueba local · 2026-10-14','notes'=>'','marketing_consent'=>'0','consent_evidence'=>''];
 $id=$s->save('contacts',$base);
 rejects(fn()=>$s->save('contacts',[...$base,'marketing_consent'=>'1']));
 rejects(fn()=>$s->save('contacts',[...$base,'email'=>'incorrecto']));
 $s->save('contacts',[...$base,'id'=>$id,'version'=>1,'marketing_consent'=>'1','consent_evidence'=>'Autorización ficticia para prueba local']);
 rejects(fn()=>$s->save('contacts',[...$base,'id'=>$id,'version'=>1]));
-$est=$s->save('establishments',['name'=>'Establecimiento ficticio','contact_id'=>$id,'municipality'=>'Municipio de prueba','category'=>'cultura','description'=>'Solo prueba','source'=>'Prueba local','verification'=>'pendiente','operation'=>'desconocida','status'=>'borrador']);
-rejects(fn()=>$s->save('establishments',['name'=>'x','municipality'=>'x','category'=>'cultura','source'=>'x','verification'=>'pendiente','operation'=>'desconocida','status'=>'publicado']));
+$est=$s->save('establishments',['name'=>'Establecimiento ficticio','contact_id'=>$id,'destination_id'=>'1','category_code'=>'cultura','slug'=>'establecimiento-prueba','description'=>'Solo prueba','source_note'=>'Prueba local','publication_status'=>'draft']);
+check($db->query('SELECT COUNT(*) FROM businesses')->fetchColumn()===2,'Catálogo compartido sin segunda tabla');
+check(!$db->query("SELECT name FROM sqlite_master WHERE name='advance_establishments'")->fetchColumn(),'Tabla duplicada retirada');
+check($s->find('contacts',$id)['municipality']==='Destino de prueba','Municipio derivado del destino');
+rejects(fn()=>$s->save('contacts',[...$base,'destination_id'=>'9999']));
+rejects(fn()=>$s->save('establishments',['name'=>'x','destination_id'=>'1','category_code'=>'cultura','slug'=>'x','source_note'=>'Prueba','publication_status'=>'published']));
 $template=$s->save('templates',['name'=>'Prueba','subject'=>'Hola {{nombre}}','html'=>'<p>{{nombre}} en {{municipio}}</p>']);
 rejects(fn()=>$s->save('templates',['name'=>'Prueba','subject'=>"Hola\nBcc: x",'html'=>'<p>x</p>']));
 rejects(fn()=>$s->save('templates',['name'=>'Prueba','subject'=>'Hola','html'=>'{{secreto}}']));

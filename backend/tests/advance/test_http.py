@@ -5,7 +5,11 @@ root=Path(__file__).resolve().parents[3]
 work=root/'.local'/('advance-http-'+secrets.token_hex(6)); work.mkdir(parents=True)
 shutil.copytree(root/'backend/app',work/'app');shutil.copytree(root/'backend/public',work/'public');(work/'private').mkdir()
 db=sqlite3.connect(work/'private/test.sqlite')
-db.executescript((root/'backend/database/sqlite.sql').read_text());db.executescript((root/'backend/database/migrations/007-advance-admin.sqlite.sql').read_text())
+db.executescript((root/'backend/database/sqlite.sql').read_text())
+db.executescript((root/'backend/database/destinations.sqlite.sql').read_text())
+db.executescript((root/'backend/database/migrations/007-advance-admin.sqlite.sql').read_text())
+db.executescript((root/'backend/database/migrations/008-advance-shared-catalog.sqlite.sql').read_text())
+db.executescript((root/'backend/tests/advance/shared-fixture.sql').read_text())
 password=secrets.token_urlsafe(24)
 hashed=subprocess.check_output(['php','-r','echo password_hash(trim(stream_get_contents(STDIN)), PASSWORD_DEFAULT);'],input=password.encode()).decode()
 config={'dsn':'sqlite:'+str(work/'private/test.sqlite'),'app_key':secrets.token_hex(32),'admin_user':'advance-local','admin_password_hash':hashed,'local_test':True}
@@ -27,7 +31,7 @@ try:
     assert call('/admin/index.php',{'action':'login','username':'advance-local','password':password,'csrf':csrf})[0]==200
     body=call('/admin/index.php')[1];csrf=re.search(r'name="csrf" value="([^"]+)"',body).group(1)
     assert call(url+'?section=contacts',{'action':'save','csrf':'bad'})[0]==403
-    contact={'action':'save','csrf':csrf,'name':'<script>test</script>','email':'test@example.invalid','municipality':'Prueba','source':'Prueba local','relationship':'prospecto','marketing_consent':'1','consent_evidence':'Prueba local autorizada'}
+    contact={'action':'save','csrf':csrf,'name':'<script>test</script>','email':'test@example.invalid','destination_id':'1','source':'Prueba local','relationship':'prospecto','marketing_consent':'1','consent_evidence':'Prueba local autorizada'}
     status,body,headers=call(url+'?section=contacts',contact)
     assert status==200 and '&lt;script&gt;test&lt;/script&gt;' in body and '<script>test</script>' not in body
     assert headers['Cache-Control']=='no-store' and headers['X-Robots-Tag']=='noindex, nofollow'
@@ -40,7 +44,17 @@ try:
     assert call(url+'?section=campaigns',{'action':'send','csrf':csrf,'delivery_id':1,'confirm_send':'1'})[0]==400
     assert db.execute('SELECT status FROM advance_deliveries').fetchone()[0]=='pendiente'
     assert call(url+'?section=dashboard')[0]==200
-    assert call(url+'?section=establishments')[0]==200
+    status,body,_=call(url+'?section=establishments');assert status==200 and 'Negocio existente' in body
+    status,body,_=call(url+'?section=establishments&id=1');assert status==200 and 'business@example.invalid' in body
+    revision=re.search(r'name="revision" value="([^"]+)"',body).group(1)
+    assert call(url+'?section=establishments',{'action':'link_contact','csrf':csrf,'id':1,'revision':revision,'contact_id':1})[0]==200
+    assert db.execute('SELECT contact_id FROM advance_business_crm WHERE business_id=1').fetchone()[0]==1
+    assert db.execute('SELECT COUNT(*) FROM businesses').fetchone()[0]==1
+    record={'action':'save','csrf':csrf,'id':0,'name':'Nuevo negocio de prueba','destination_id':1,'category_code':'cultura','slug':'nuevo-negocio-prueba','publication_status':'draft','source_note':'Prueba local'}
+    assert call(url+'?section=establishments',record)[0]==200
+    assert db.execute('SELECT COUNT(*) FROM businesses').fetchone()[0]==2
+    assert call(url+'?section=establishments',record)[0]==503 # unicidad por destino/slug
+    assert db.execute('SELECT COUNT(*) FROM businesses').fetchone()[0]==2
     assert call('/admin/index.php',{'action':'logout','csrf':csrf})[0]==200
     assert call(url)[0]==403
     print('OK: HTTP privado, CSRF, escape HTML, preview sandbox, campañas aprobadas manualmente, Resend deshabilitado conserva pendientes y logout.')

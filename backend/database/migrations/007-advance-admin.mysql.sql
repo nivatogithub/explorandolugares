@@ -6,7 +6,7 @@ CREATE TABLE advance_contacts (
  consent_evidence TEXT NOT NULL, suppressed INTEGER NOT NULL DEFAULT 0, version INTEGER NOT NULL DEFAULT 1,
  created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-CREATE INDEX advance_contacts_municipality ON advance_contacts(municipality) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+CREATE INDEX advance_contacts_municipality ON advance_contacts(municipality);
 CREATE INDEX advance_contacts_email ON advance_contacts(email);
 CREATE TABLE advance_establishments (
  id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY, contact_id BIGINT UNSIGNED, FOREIGN KEY (contact_id) REFERENCES advance_contacts(id),

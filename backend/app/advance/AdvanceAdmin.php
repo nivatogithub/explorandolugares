@@ -1,9 +1,11 @@
 <?php
 declare(strict_types=1);
 require_once __DIR__.'/ResendClient.php';
+require_once __DIR__.'/BusinessAdmin.php';
 final class AdvanceAdmin {
     private const TABLES=['contacts','establishments','templates','campaigns','deliveries'];
     public function __construct(private PDO $db, private string $actor) {}
+    public function businesses(): BusinessAdmin {return new BusinessAdmin($this->db,$this->actor);}
     private function query(string $sql,array $params=[]): PDOStatement {$q=$this->db->prepare($sql);$q->execute($params);return $q;}
     private function text(array $data,string $key,int $max,bool $required=false): string {
         $v=$data[$key]??'';
@@ -18,44 +20,43 @@ final class AdvanceAdmin {
     }
     public function rows(string $table,string $search='',int $page=1): array {
         if(!in_array($table,self::TABLES,true))throw new InvalidArgumentException('Sección inválida.');
+        if($table==='establishments')return $this->businesses()->rows($search,$page);
         $where='';$params=[];
         if($search!==''&&in_array($table,['contacts','establishments','templates','campaigns'],true)){$where=' WHERE name LIKE ?';$params[]='%'.substr($search,0,120).'%';}
         return $this->query('SELECT * FROM advance_'.$table.$where.' ORDER BY id DESC LIMIT 25 OFFSET '.((max(1,$page)-1)*25),$params)->fetchAll(PDO::FETCH_ASSOC);
     }
     public function find(string $table,int $id): array {
         if(!in_array($table,self::TABLES,true))throw new InvalidArgumentException('Sección inválida.');
-        $r=$this->query('SELECT * FROM advance_'.$table.' WHERE id=?',[$id])->fetch(PDO::FETCH_ASSOC);
+        if($table==='establishments')return $this->businesses()->find($id);
+        $sql=$table==='contacts' ? "SELECT c.*,COALESCE(dt.display_name,d.slug,c.municipality) AS municipality FROM advance_contacts c LEFT JOIN destinations d ON d.id=c.destination_id LEFT JOIN destination_translations dt ON dt.destination_id=d.id AND dt.locale='es' WHERE c.id=?" : 'SELECT * FROM advance_'.$table.' WHERE id=?';
+        $r=$this->query($sql,[$id])->fetch(PDO::FETCH_ASSOC);
         if(!$r)throw new InvalidArgumentException('Registro inexistente.');return $r;
     }
     public function dashboard(): array {
-        $out=[];foreach(['contacts','establishments','campaigns','deliveries'] as $t)$out[$t]=(int)$this->query('SELECT COUNT(*) FROM advance_'.$t)->fetchColumn();
+        $out=[];foreach(['contacts','campaigns','deliveries'] as $t)$out[$t]=(int)$this->query('SELECT COUNT(*) FROM advance_'.$t)->fetchColumn();
+        $out['establishments']=(int)$this->query('SELECT COUNT(*) FROM businesses')->fetchColumn();
         $out['delivery_status']=$this->query('SELECT status,COUNT(*) AS total FROM advance_deliveries GROUP BY status')->fetchAll(PDO::FETCH_ASSOC);
-        $out['municipalities']=$this->query('SELECT municipality,COUNT(*) AS total FROM advance_contacts GROUP BY municipality ORDER BY total DESC LIMIT 25')->fetchAll(PDO::FETCH_ASSOC);
+        $out['municipalities']=$this->query("SELECT COALESCE(dt.display_name,d.slug,NULLIF(c.municipality,''),'Sin destino vinculado') AS municipality,COUNT(*) AS total FROM advance_contacts c LEFT JOIN destinations d ON d.id=c.destination_id LEFT JOIN destination_translations dt ON dt.destination_id=d.id AND dt.locale='es' GROUP BY c.destination_id,COALESCE(dt.display_name,d.slug,NULLIF(c.municipality,''),'Sin destino vinculado') ORDER BY total DESC LIMIT 25")->fetchAll(PDO::FETCH_ASSOC);
         return $out;
     }
     public function save(string $table,array $data): int {
         if(!in_array($table,['contacts','establishments','templates'],true))throw new InvalidArgumentException('Sección inválida.');
+        if($table==='establishments')return $this->businesses()->save($data);
         $values=['name'=>$this->text($data,'name',$table==='contacts'?120:160,true)];
         if($table==='contacts'){
             $values+=['email'=>strtolower($this->text($data,'email',254)),'phone'=>$this->text($data,'phone',40),
-                'municipality'=>$this->text($data,'municipality',120,true),
+                'municipality'=>'',
                 'relationship'=>$this->choice($data,'relationship',['prospecto','en_revision','aliado','archivado']),
                 'notes'=>$this->text($data,'notes',5000),'source'=>$this->text($data,'source',2000,true),
                 'marketing_consent'=>($data['marketing_consent']??'')==='1'?1:0,
                 'consent_evidence'=>$this->text($data,'consent_evidence',2000),'suppressed'=>($data['suppressed']??'')==='1'?1:0];
+            $destination=($data['destination_id']??'')===''?null:filter_var($data['destination_id'],FILTER_VALIDATE_INT);
+            if($destination!==null&&(!$destination||!$this->query('SELECT id FROM destinations WHERE id=?',[$destination])->fetchColumn()))throw new InvalidArgumentException('Destino inexistente.');
+            $values['destination_id']=$destination;
+            if(!$destination&&!empty($data['id']))$values['municipality']=(string)($this->query('SELECT municipality FROM advance_contacts WHERE id=?',[(int)$data['id']])->fetchColumn()?:'');
             if($values['email']!==''&&!filter_var($values['email'],FILTER_VALIDATE_EMAIL))throw new InvalidArgumentException('Correo inválido.');
             if($values['email']===''&&$values['phone']==='')throw new InvalidArgumentException('Indica un canal de contacto.');
             if($values['marketing_consent']&&!$values['consent_evidence'])throw new InvalidArgumentException('Documenta la autorización de campañas, fuente y fecha.');
-        }elseif($table==='establishments'){
-            $contact=filter_var($data['contact_id']??'',FILTER_VALIDATE_INT);
-            if($contact)$this->find('contacts',$contact);
-            $category=$this->text($data,'category',32,true);
-            if(!isset(categories()[$category]))throw new InvalidArgumentException('Categoría inválida.');
-            $values+=['contact_id'=>$contact?:null,'municipality'=>$this->text($data,'municipality',120,true),'category'=>$category,
-                'description'=>$this->text($data,'description',10000),'source'=>$this->text($data,'source',2000,true),
-                'verification'=>$this->choice($data,'verification',['pendiente','verificado']),
-                'operation'=>$this->choice($data,'operation',['desconocida','abierto','cerrado']),
-                'status'=>$this->choice($data,'status',['borrador','archivado'])];
         }else{
             $values+=['subject'=>$this->text($data,'subject',200,true),'html'=>$this->text($data,'html',60000,true)];
             self::validateTemplate($values['subject'],$values['html']);
