@@ -557,7 +557,7 @@ header nav[aria-label] .language-switch a[aria-current="false"]:hover{background
   }
   header>.wrap:first-child .menu-toggle span{display:block!important;width:22px!important;height:2px!important;background:currentColor!important;border-radius:2px!important}
   header>.wrap:first-child nav[aria-label]{display:none!important}
-  header.menu-open nav[aria-label]{
+  header.menu-open>.wrap:first-child nav[aria-label]{
     position:absolute!important;
     z-index:20!important;
     top:100%!important;
@@ -573,8 +573,8 @@ header nav[aria-label] .language-switch a[aria-current="false"]:hover{background
     border-bottom:3px solid #f5b126!important;
     box-shadow:0 10px 22px #054b4d18!important;
   }
-  header.menu-open nav[aria-label]>a{min-height:auto!important;padding:13px 12px!important;font-size:16px!important}
-  header.menu-open nav[aria-label] .language-switch{display:flex!important;position:static!important;margin:6px 0 0!important;padding:12px!important;border-left:0!important;gap:8px!important}
+  header.menu-open>.wrap:first-child nav[aria-label]>a{min-height:auto!important;padding:13px 12px!important;font-size:16px!important}
+  header.menu-open>.wrap:first-child nav[aria-label] .language-switch{display:flex!important;position:static!important;margin:6px 0 0!important;padding:12px!important;border-left:0!important;gap:8px!important}
   .pilot-banner>.wrap{padding-left:210px!important}
 }
 
@@ -794,3 +794,55 @@ footer .wrap{align-items:center}
 
 /* El auricular sólido conserva su silueta a tamaños pequeños. */
 .footer-contact-whatsapp .footer-contact-icon svg path+path{fill:currentColor;stroke:none}
+
+/* En móvil, el botón permanece visible incluso en ventanas muy estrechas. */
+@media(max-width:760px){
+  header{z-index:3}
+  header>.wrap:first-child{flex-wrap:nowrap;gap:12px}
+  header>.wrap:first-child .brand{min-width:0;flex:1;white-space:normal}
+  header>.wrap:first-child .brand span{min-width:0;white-space:normal;overflow-wrap:anywhere;line-height:1.15}
+  header>.wrap:first-child .menu-toggle{flex:0 0 42px}
+  header.menu-open nav[aria-label]{top:100%;max-height:calc(100dvh - 80px);overflow-y:auto;overscroll-behavior:contain}
+}
+
+/* Menú compacto flotante, separado de la marca y con opciones alineadas. */
+@media(max-width:1190px){
+  header.menu-open>.wrap:first-child nav[aria-label]{
+    position:absolute!important;
+    top:calc(100% - 4px)!important;
+    left:auto!important;
+    right:20px!important;
+    width:min(300px,calc(100vw - 40px))!important;
+    padding:10px!important;
+    gap:2px!important;
+    border:1px solid #efc16e!important;
+    border-radius:12px!important;
+    background:#fffdf8!important;
+    box-shadow:0 12px 30px #33201626!important;
+    max-height:calc(100dvh - 190px);
+    overflow-y:auto;
+  }
+  header.menu-open>.wrap:first-child nav[aria-label]>a{
+    justify-content:flex-start!important;
+    text-align:left!important;
+    min-height:42px!important;
+    padding:10px 12px!important;
+    font-size:14px!important;
+    line-height:1.4!important;
+    border:0!important;
+    border-radius:6px!important;
+    white-space:normal!important;
+  }
+  header.menu-open>.wrap:first-child nav[aria-label] .language-switch{
+    position:static!important;
+    justify-content:flex-start!important;
+    margin:4px 0 0!important;
+    padding:8px 12px!important;
+    border-left:0!important;
+    border-top:1px solid #f2c77e!important;
+    gap:8px!important;
+  }
+}
+@media(max-width:760px){
+  header.menu-open>.wrap:first-child nav[aria-label]{max-height:calc(100dvh - 90px)}
+}
