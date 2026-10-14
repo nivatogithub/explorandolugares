@@ -38,3 +38,7 @@ Las campañas previas que no tienen enlace no se reescriben después de aprobars
 2. Instalación y migraciones reproducibles en MySQL/MariaDB aislado.
 3. Selección de contactos/plantillas desde el panel y visor de auditoría.
 4. Staging: configurar datos reales, revisar plantillas y autorizar un envío de prueba. El despliegue y los envíos reales necesitan la autorización concreta del propietario.
+
+## Entorno local de revisión
+
+El propietario autorizó usar su Mac como entorno de pruebas. Se preparó un panel persistente, con datos ficticios y envíos deshabilitados, accesible únicamente desde el equipo. Ver [acceso y reinicio](ADVANCE_ADMIN_LOCAL.md). Este entorno usa SQLite; la validación específica de MySQL/MariaDB sigue pendiente.
