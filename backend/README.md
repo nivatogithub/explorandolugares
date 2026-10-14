@@ -14,6 +14,7 @@ hosting/
   app/                     lógica PHP privada
   private/config.php       configuración real, creada manualmente
   database/mysql.sql       esquema para importar, fuera del sitio público
+  content/destinos-dinamicos.json catálogo semilla ES/EN/PT-BR para la migración PHP
   config.example.php       plantilla sin credenciales
 ```
 
@@ -29,6 +30,10 @@ En cPanel, asignar al dominio una carpeta pública propia. Situar `app/` y `priv
 8. Entrar a `/admin/index.php` con las credenciales configuradas. Probar un registro propio, la visualización, el filtro por estado, el seguimiento y cierre de sesión. No publicar sin verificar esta conexión en MySQL.
 
 El script de empaquetado no copia configuración real y no modifica una ya creada. Regenerar la entrega cuando se cambien los archivos fuente; revisar diferencias antes de subir. No compartir `.local/hosting/private/` ni incluirla en ZIP públicos. No subir la carpeta completa como raíz pública.
+
+El controlador dinámico de destinos también se incluye en `public/destino.php`, y las reglas de ruta están en `public/.htaccess`. La administración CRUD se abre en `/admin/destinos.php` tras iniciar sesión en el panel; comparte sus controles de sesión y CSRF. La lógica privada va en `app/`; el importador de catálogo y su JSON semilla quedan fuera del directorio público. Aplicar primero `database/migrations/003-dynamic-destinations.mysql.sql`, luego `004-media-origin.mysql.sql` y `005-destination-internal-research.mysql.sql`; importar los datos únicamente en una base de staging vacía.
+
+El editor permite guardar borradores, publicar tras completar contenido en español, inglés y portugués, archivar destinos o borrar destinos sin negocios asociados. Los IDs numéricos son la identidad de destino y de cada lugar de interés; el slug solo resuelve la URL. Las imágenes admiten JPG/PNG/WebP de hasta 5 MB y se almacenan en `public/assets/destinos/{destination_id}/`. La investigación local de competencia, aliados potenciales, prospectos y estrategias se guarda en `destinations.internal_research_json`, solo en el panel privado; no se incorpora a la página pública. Las imágenes generadas se marcan como ilustraciones, no como fotografías documentales. Quitar un vínculo no borra el archivo. Antes de activar el módulo en hosting, probar todas las migraciones y estos flujos en una copia de MySQL de staging; la prueba SQLite local no certifica el hosting.
 
 ## Datos y controles
 
@@ -46,6 +51,7 @@ Documentación técnica consultada: [password_hash](https://www.php.net/manual/e
 
 - `php -l` en archivos PHP y `node --check ensayos/v1/assets/registro.js`.
 - `python3 backend/tests/integration.py`: crea PHP y SQLite temporales, solicita un puerto local, prueba habilitación, validación, consentimiento, CSRF, persistencia, duplicados, autenticación, escape HTML, actualización de estados, cierre y límite de login. Borra los datos temporales al terminar. Nunca usa credenciales de producción.
+- Para probar un destino y sus imágenes sin tocar la base local habitual, inicia otra instancia con `EL_DESTINATIONS_PREVIEW_DB="$PWD/.local/sonson-preview.sqlite" EL_LOCAL_CONFIG_PATH="$PWD/.local/sonson-admin-config.php" EL_ADMIN_MEDIA_ROOT="$PWD/.local/sonson-media" PORT=8015 sh scripts/preview-destinos-dinamicos.sh`; luego usa `scripts/ensayar-paquete-destino.py` con el JSON y la carpeta de imágenes. El ejemplo de Sonsón y su investigación comercial se guardan localmente en `.local/paquetes/sonson/`, excluido de Git.
 - SQLite sirve únicamente para esta prueba aislada. La integración MySQL del hosting sigue pendiente de comprobar.
 - El servidor estático de `ensayos/` no ejecuta PHP: muestra el formulario deshabilitado y explica que no se almacena. No subir PHP a un servidor que lo entregue como texto.
 
@@ -67,4 +73,4 @@ Para bases existentes, respaldar y ejecutar una vez `database/migrations/002-par
 
 ## Herramientas de puesta en marcha
 
-Ver [Administración y datos](../docs/ADMINISTRACION_Y_DATOS.md) para la estructura vigente del hosting y los pasos completos. `scripts/configurar-registros.py` crea configuración privada sin reemplazar archivos; `backend/bin/base-datos.php --instalar` instala únicamente sobre una base MySQL vacía y `--comprobar` revisa conexión y columnas. Son herramientas privadas, nunca páginas públicas. Las fichas y tarjetas dinámicas de comercios siguen siendo el siguiente módulo; el panel actual administra solicitudes.
+Ver [Administración y datos](../docs/ADMINISTRACION_Y_DATOS.md) para la estructura vigente del hosting y los pasos completos. `scripts/configurar-registros.py` crea configuración privada sin reemplazar archivos; `backend/bin/base-datos.php --instalar` instala únicamente sobre una base MySQL vacía y `--comprobar` revisa conexión y columnas. Son herramientas privadas, nunca páginas públicas. El panel administra solicitudes y destinos; las fichas y tarjetas dinámicas de comercios siguen siendo el siguiente módulo.

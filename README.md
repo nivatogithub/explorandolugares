@@ -24,7 +24,7 @@ Se incluye un backend PHP para captar interesados y una administración privada,
 
 El script [SFTP](docs/DESPLIEGUE_SFTP.md) conserva configuración de ejemplo, revisión previa y separación pública/privada. No contiene credenciales reales. Revisar [preparación del despliegue](docs/PREPARACION_DESPLIEGUE.md) antes de publicar.
 
-Para el contexto de producto, leer [PROYECTO_INDEPENDIENTE.md](PROYECTO_INDEPENDIENTE.md) y [AGENTS.md](AGENTS.md).
+Para el contexto de producto, leer [PROYECTO_INDEPENDIENTE.md](PROYECTO_INDEPENDIENTE.md), [contexto y hoja de ruta](docs/CONTEXTO_PRODUCTO_Y_HOJA_DE_RUTA.md), [AGENTS.md](AGENTS.md) y las [reglas para agentes de cualquier proveedor](docs/GOBERNANZA_AGENTES.md). Para encargar un nuevo destino a cualquier IA, adjuntar juntos el [encargo editorial y visual](docs/PLANTILLA_PROMPT_IA_DESTINO.md) y el [JSON de ejemplo importable](ensayos/v1/plantillas/paquete-destino-v1.json).
 
 ---
 

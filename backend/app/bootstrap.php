@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 $configFile = dirname(__DIR__) . '/private/config.php';
+// Preview may inject a private, ignored local config. Never allow this override on a web host.
+if (PHP_SAPI === 'cli-server' && in_array($_SERVER['REMOTE_ADDR'] ?? '', ['127.0.0.1', '::1'], true)) {
+    $localConfig = getenv('EL_LOCAL_CONFIG_PATH');
+    if (is_string($localConfig) && $localConfig !== '') $configFile = $localConfig;
+}
 if (!is_file($configFile)) { http_response_code(503); exit('Configuración del servidor pendiente.'); }
 $config = require $configFile;
 $local = in_array($_SERVER['REMOTE_ADDR'] ?? '', ['127.0.0.1', '::1'], true);

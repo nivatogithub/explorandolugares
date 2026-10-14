@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# Slugs de destino: la URL pública no revela parámetros ni archivos de plantilla.
+RewriteRule ^destinos/([a-z0-9-]+)(?:/index\.html)?/?$ destino.php?destino=$1&idioma=es [L,QSA,NC]
+RewriteRule ^en/destinos/([a-z0-9-]+)(?:/index\.html)?/?$ destino.php?destino=$1&idioma=en [L,QSA,NC]
+RewriteRule ^pt-br/destinos/([a-z0-9-]+)(?:/index\.html)?/?$ destino.php?destino=$1&idioma=pt-BR [L,QSA,NC]
