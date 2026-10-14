@@ -6,7 +6,7 @@ function adminPageStart(string $active,string $title,string $description,string 
     $groups=[
         'Visión general'=>['reports'=>['reports.php','Reportes']],
         'Contenido'=>['destinations'=>['destinos.php','Destinos'],'establishments'=>['advance/index.php?section=establishments','Negocios']],
-        'Relaciones y comunicación'=>['contacts'=>['advance/index.php?section=contacts','CRM y aliados'],'campaigns'=>['advance/index.php?section=campaigns','Campañas'],'templates'=>['advance/index.php?section=templates','Plantillas'],'dashboard'=>['advance/index.php','Resumen CRM']],
+        'Relaciones y comunicación'=>['contacts'=>['advance/index.php?section=contacts','Contactos y seguimiento'],'campaigns'=>['advance/index.php?section=campaigns','Campañas'],'templates'=>['advance/index.php?section=templates','Plantillas'],'dashboard'=>['advance/index.php','Resumen CRM']],
         'Gestión'=>['requests'=>['index.php','Solicitudes'],'system'=>['index.php?tab=sistema','Sistema']],
     ];
     ?><!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title><?=esc($title)?> | Explorando Lugares</title><?php foreach($styles as $style):?><link rel="stylesheet" href="<?=esc($base.$style)?>"><?php endforeach ?><link rel="stylesheet" href="<?=esc($base)?>admin.css?v=unified-1"></head><body class="admin-body"><a class="admin-skip" href="#admin-content">Saltar al contenido</a><div class="admin-shell <?=$signedIn?'':'admin-login'?>">

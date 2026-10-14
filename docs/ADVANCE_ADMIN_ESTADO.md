@@ -46,3 +46,7 @@ El propietario autorizó usar su Mac como entorno de pruebas. Se preparó un pan
 ## Reportes generales
 
 Se añadió una sección privada independiente del CRM para publicación, preparación territorial, composición de negocios por destino, operadores y registro manual de suscripciones/recaudos. Requiere la migración 011. El resumen anterior conserva el foco en CRM/campañas. Ver [alcance, cálculos y pendientes](REPORTES_GENERALES.md). La analítica de tráfico y las aprobaciones formales centralizadas siguen pendientes.
+
+## Seguimiento de negocios en tres frentes
+
+Negocios abre ahora un resumen comercial, de validación y de publicación, con filtros y detalle de pendientes/ofertas/siguiente acción. Usa el catálogo y los periodos/pagos existentes; requiere 012. La agenda de personas se llama Contactos y seguimiento. Ver [definiciones y límites](SEGUIMIENTO_NEGOCIOS.md).

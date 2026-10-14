@@ -62,7 +62,7 @@ final class AdminReports {
                 if($end<$start)throw new InvalidArgumentException('La fecha final debe ser posterior o igual a la inicial.');
                 // Overlapping active periods would inflate counts and hide renewal work.
                 if($this->query("SELECT id FROM business_subscriptions WHERE business_id=? AND status='active' AND starts_on<=? AND ends_on>=?",[$id,$end,$start])->fetchColumn())throw new InvalidArgumentException('Ese negocio ya tiene una suscripción que cubre parte de ese periodo.');
-                $this->query("INSERT INTO business_subscriptions(business_id,reference,status,starts_on,ends_on,created_at) VALUES(?,?,'active',?,?,?)",[$id,$this->text($data,'reference'),$start,$end,$now]);$entity='subscriptions';$id=(int)$this->db->lastInsertId();
+                $this->query("INSERT INTO business_subscriptions(business_id,reference,status,starts_on,ends_on,created_at,plan_name) VALUES(?,?,'active',?,?,?,?)",[$id,$this->text($data,'reference'),$start,$end,$now,is_string($data['plan_name']??null)?substr(trim($data['plan_name']),0,120):'']);$entity='subscriptions';$id=(int)$this->db->lastInsertId();
             }elseif($action==='cancel_subscription'){
                 $id=filter_var($data['subscription_id']??0,FILTER_VALIDATE_INT);
                 if(!$id||!$this->query('SELECT id FROM business_subscriptions WHERE id=?'.($this->db->getAttribute(PDO::ATTR_DRIVER_NAME)==='mysql'?' FOR UPDATE':''),[$id])->fetchColumn())throw new InvalidArgumentException('Suscripción inexistente.');
