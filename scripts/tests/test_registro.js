@@ -8,7 +8,9 @@ async function scenario(mode, invalidCase, lang='es') {
     'registration-availability': {}, 'registration-result': {focus() {}},
     'registration-submit': {disabled: true}, 'privacy-summary': {}
   };
-  const form = {action: '/api/participacion.php', elements: {lang: {}, csrf: {}, request_key: {}, email: {value: invalidCase === 'missing-contact' ? '' : 'test@example.invalid', focus() {}}, phone_number: {value: ''}, consent: {checked: invalidCase !== 'consent', focus() {}}, understanding: {checked: invalidCase !== 'understanding', focus() {}}}, reportValidity() {return invalidCase !== 'invalid-format'}, querySelectorAll() {return []}, addEventListener(name, handler) {this.submit = handler;}};
+  let invalidMarked = false;
+  const invalidField = {setAttribute(name, value) { if (name === 'aria-invalid' && value === 'true') invalidMarked = true; }};
+  const form = {action: '/api/participacion.php', elements: {lang: {}, csrf: {}, request_key: {}, email: {value: invalidCase === 'missing-contact' ? '' : 'test@example.invalid', focus() {}}, phone_number: {value: ''}, consent: {checked: invalidCase !== 'consent', focus() {}}, understanding: {checked: invalidCase !== 'understanding', focus() {}}}, reportValidity() {return invalidCase !== 'invalid-format'}, querySelectorAll(selector) {return selector === ':invalid' && invalidCase === 'invalid-format' ? [invalidField] : []}, addEventListener(name, handler) {this.submit = handler;}};
   nodes['business-registration'] = form;
   let posts = 0;
   const context = {FormData: class {}, document: {documentElement: {lang}, getElementById: id => nodes[id]}, window: {}, fetch: async (url, options) => {
@@ -23,6 +25,7 @@ async function scenario(mode, invalidCase, lang='es') {
   if (mode === 'enabled' && invalidCase) {
     await form.submit({preventDefault() {}});
     assert.equal(posts, 0, 'Consentimiento, contacto y formato requeridos');
+    if (invalidCase === 'invalid-format') assert.equal(invalidMarked, true, 'Los campos obligatorios inválidos quedan marcados visualmente');
   }
   if (mode !== 'enabled') {
     nodes['registration-submit'].disabled = false;
