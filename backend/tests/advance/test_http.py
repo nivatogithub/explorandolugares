@@ -11,6 +11,7 @@ db.executescript((root/'backend/database/migrations/007-advance-admin.sqlite.sql
 db.executescript((root/'backend/database/migrations/008-advance-shared-catalog.sqlite.sql').read_text())
 db.executescript((root/'backend/database/migrations/010-advance-unsubscribe.sqlite.sql').read_text())
 db.executescript((root/'backend/database/migrations/011-admin-reports.sqlite.sql').read_text())
+db.executescript((root/'backend/database/migrations/012-business-follow-up.sqlite.sql').read_text())
 db.executescript((root/'backend/tests/advance/shared-fixture.sql').read_text())
 password=secrets.token_urlsafe(24)
 hashed=subprocess.check_output(['php','-r','echo password_hash(trim(stream_get_contents(STDIN)), PASSWORD_DEFAULT);'],input=password.encode()).decode()

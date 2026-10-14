@@ -5,19 +5,22 @@ require dirname(__DIR__,3).'/app/advance/AdminLayout.php';
 // session_start puede sustituir las cabeceras de caché del bootstrap.
 header('Cache-Control: no-store');
 require dirname(__DIR__,3).'/app/advance/AdvanceAdmin.php';
+require dirname(__DIR__,3).'/app/advance/BusinessFollowUp.php';
 if(empty($config['admin_user'])||empty($config['admin_password_hash'])||strlen($config['app_key']??'')<32){http_response_code(503);exit('Administración pendiente de configuración.');}
 if(isset($_SESSION['admin'])&&time()-(int)($_SESSION['last_seen']??0)>1800)unset($_SESSION['admin']);
 if(empty($_SESSION['admin'])){http_response_code(403);exit('Inicia sesión desde el panel de administración.');}
 $_SESSION['last_seen']=time();
 $service=new AdvanceAdmin(db(),$config['admin_user'],$config);$error='';
 $section=is_string($_GET['section']??null)?$_GET['section']:'dashboard';
-$sections=['dashboard'=>'Resumen CRM y campañas','contacts'=>'CRM y aliados','establishments'=>'Negocios','templates'=>'Plantillas HTML','campaigns'=>'Campañas'];
+$sections=['dashboard'=>'Resumen CRM y campañas','contacts'=>'Contactos y seguimiento','establishments'=>'Negocios','templates'=>'Plantillas HTML','campaigns'=>'Campañas'];
 if(!isset($sections[$section])){http_response_code(404);exit('Sección inexistente.');}
+$followUp=new BusinessFollowUp(db(),$config['admin_user']);
 $id=max(0,(int)($_GET['id']??0));$record=[];$rows=[];$deliveries=[];$stats=[];
 try{
     if($_SERVER['REQUEST_METHOD']==='POST'){
         csrf();$action=$_POST['action']??'';
         if($action==='save'){$id=$service->save($section,$_POST);}
+        elseif($action==='follow_up'&&$section==='establishments'){$id=$followUp->save($_POST);}
         elseif($action==='link_contact'&&$section==='establishments'){$id=$service->businesses()->linkContact($_POST);}
         elseif($action==='import'&&$section==='contacts'){$id=$service->importLead((int)($_POST['lead_id']??0));}
         elseif($action==='create'&&$section==='campaigns'){$id=$service->createCampaign($_POST);}
@@ -43,7 +46,7 @@ try{
     }
 }catch(Throwable $e){http_response_code(503);$error='Advance Admin no está disponible. Comprueba el esquema compartido y las migraciones 007 y 008.';}
 function stateLabel(string $value): string {
-    return ['prospect'=>'Prospecto','under_review'=>'En revisión','partner'=>'Aliado','archived'=>'Archivado',
+    return ['prospect'=>'Prospecto','under_review'=>'En revisión','partner'=>'Relación histórica por revisar','archived'=>'Archivado',
         'draft'=>'Borrador','approved'=>'Aprobada','pending'=>'Pendiente','sending'=>'Enviando',
         'skipped'=>'Omitida','uncertain'=>'Resultado incierto','accepted'=>'Aceptada','published'=>'Publicado'][$value]??$value;
 }
@@ -62,14 +65,22 @@ function preview(string $html): void {
 }
 ?><?php adminPageStart($section,$sections[$section],$section==='dashboard'?'Resultados de contactos y campañas. La visión completa del negocio está en Reportes.':'Gestión privada de Explorando Lugares.','../'); ?>
 <?php if($error):?><p role="alert"><?=esc($error)?></p><?php endif ?><?php if(isset($_GET['saved'])):?><p role="status">Operación guardada.</p><?php endif ?>
+<?php if($section==='establishments'&&!$id&&($_GET['view']??'overview')!=='create'){
+    try{require dirname(__DIR__,3).'/app/advance/views/BusinessOverview.php';}
+    catch(Throwable $e){http_response_code(503);echo '<p role="alert">No se pudo cargar el seguimiento. Revisa la migración 012 y el filtro seleccionado.</p>';}
+    adminPageEnd();exit;
+} ?>
 <?php if($section==='dashboard'):?><h2>Resumen de CRM y campañas</h2><p><a href="../reports.php">Abrir reportes generales del negocio →</a></p><div class="metrics"><?php foreach(['contacts'=>'Contactos','establishments'=>'Negocios del catálogo compartido','campaigns'=>'Campañas','deliveries'=>'Correos preparados'] as $key=>$label):?><article><strong><?=esc($stats[$key]??0)?></strong><p><?=esc($label)?></p></article><?php endforeach ?></div><h2>Contactos por municipio</h2><?php foreach($stats['municipalities']??[] as $item):?><p><?=esc($item['municipality'])?>: <?=esc($item['total'])?></p><?php endforeach ?><h2>Estado de correos</h2><?php foreach($stats['delivery_status']??[] as $item):?><p><?=esc(stateLabel($item['status']))?>: <?=esc($item['total'])?></p><?php endforeach ?><p>“Aceptada” significa aceptada por Resend; no acredita entrega, lectura ni ventas.</p>
 <?php else:?>
 <form method="get" class="filter"><input type="hidden" name="section" value="<?=esc($section)?>"><label>Buscar por nombre<input name="search" value="<?=esc($_GET['search']??'')?>"></label><button>Buscar</button></form>
 <table><thead><tr><th>ID</th><th>Nombre</th><th>Estado / relación</th><th></th></tr></thead><tbody><?php foreach($rows as $row):?><tr><td><?=esc($row['id'])?></td><td><?=esc($row['name'])?></td><td><?=esc(stateLabel($row['publication_status']??$row['status']??$row['relationship']??''))?></td><td><a href="?section=<?=esc($section)?>&amp;id=<?=esc($row['id'])?>">Abrir</a></td></tr><?php endforeach ?></tbody></table>
-<?php $page=max(1,(int)($_GET['page']??1));?><p><?php if($page>1):?><a href="?section=<?=esc($section)?>&amp;page=<?=$page-1?>&amp;search=<?=esc(urlencode($search??''))?>">Anterior</a><?php endif ?> · Página <?=$page?> <?php if(count($rows)===25):?> · <a href="?section=<?=esc($section)?>&amp;page=<?=$page+1?>&amp;search=<?=esc(urlencode($search??''))?>">Siguiente</a><?php endif ?></p><p><a href="?section=<?=esc($section)?>">Crear nuevo</a></p>
+<?php $page=max(1,(int)($_GET['page']??1));?><p><?php if($page>1):?><a href="?section=<?=esc($section)?>&amp;page=<?=$page-1?>&amp;search=<?=esc(urlencode($search??''))?>">Anterior</a><?php endif ?> · Página <?=$page?> <?php if(count($rows)===25):?> · <a href="?section=<?=esc($section)?>&amp;page=<?=$page+1?>&amp;search=<?=esc(urlencode($search??''))?>">Siguiente</a><?php endif ?></p><p><a href="?section=<?=esc($section)?><?=$section==='establishments'?'&amp;view=create':''?>">Crear nuevo</a></p>
 <?php if($section==='establishments'&&$record):?>
 <p>Negocio #<?=esc($record['id'])?> · ID público <?=esc($record['public_id'])?> · <?=esc($record['municipality'])?></p>
 <p>Información: <?=esc($record['information_status'])?> · Reclamación: <?=esc($record['claim_status'])?> · Operación: <?=esc($record['operation_status'])?> · Publicación: <?=esc($record['publication_status'])?></p>
+<?php $tracking=$followUp->find($id);?><details open class="panel"><summary>Seguimiento comercial, validación y publicación</summary><form method="post"><?php token();?><input type="hidden" name="action" value="follow_up"><input type="hidden" name="id" value="<?=esc($id)?>"><input type="hidden" name="follow_up_version" value="<?=esc($tracking['version'])?>">
+<?php selectField('participation_type','Modalidad de participación',['unclassified'=>'Sin clasificar','free'=>'Gratis','subscription'=>'Con suscripción (registrar periodo en Suscripciones)'],$tracking);?><label><input type="checkbox" name="free_confirmed" value="1" <?=!empty($tracking['free_confirmed'])?'checked':''?>> Participación gratuita confirmada</label><p>La suscripción efectiva se calcula con los periodos registrados; elegir esta modalidad no crea un periodo ni acredita un pago.</p>
+<?php areaField('validation_notes','Qué falta validar y evidencias',$tracking);areaField('publication_blockers','Qué impide publicar',$tracking);areaField('offer_notes','Qué podemos ofrecerle (propuesta interna)',$tracking);areaField('next_action','Siguiente acción',$tracking);inputField('follow_up_on','Fecha de seguimiento',$tracking,false,'date');?><button>Guardar seguimiento privado</button></form><p><a href="../reports.php?tab=billing">Registrar plan, periodo o pago</a> · <a href="?section=establishments">Volver al resumen de negocios</a></p></details>
 <h3>Canales del negocio</h3><?php foreach($record['channels'] as $channel):?><p><?=esc($channel['channel'])?>: <?=esc($channel['contact_value'])?> · <?=empty($channel['is_public'])?'Privado':'Público'?></p><?php endforeach ?>
 <h3>Fuentes existentes</h3><?php foreach($record['sources'] as $source):?><p><?=esc($source['source_url'])?> · <?=esc($source['note'])?> · <?=esc($source['checked_at'])?></p><?php endforeach ?>
 <form method="post"><?php token();?><input type="hidden" name="action" value="link_contact"><input type="hidden" name="id" value="<?=esc($record['id'])?>"><input type="hidden" name="revision" value="<?=esc($record['revision'])?>"><?php inputField('contact_id','ID de persona del CRM (vacío para desvincular)',$record,false,'number');?><button>Guardar vínculo CRM</button></form>
@@ -78,7 +89,7 @@ function preview(string $html): void {
 <form method="post"><?php token();?><input type="hidden" name="action" value="save"><input type="hidden" name="id" value="<?=esc($record['id']??0)?>"><input type="hidden" name="version" value="<?=esc($record['version']??0)?>"><input type="hidden" name="revision" value="<?=esc($record['revision']??'')?>">
 <?php inputField('name','Nombre',$record,true);?>
 <?php if($section==='contacts'):?>
-<?php inputField('email','Correo',$record,false,'email');inputField('phone','Teléfono',$record);selectField('destination_id','Destino del catálogo (opcional)',[''=>'Sin destino vinculado']+array_column($service->businesses()->destinations(),'name','id'),$record);selectField('relationship','Relación',['prospect'=>'Prospecto','under_review'=>'En revisión','partner'=>'Aliado confirmado por una persona','archived'=>'Archivado'],$record);areaField('notes','Notas internas',$record);areaField('source','Procedencia y fecha',$record);?>
+<?php inputField('email','Correo',$record,false,'email');inputField('phone','Teléfono',$record);selectField('destination_id','Destino del catálogo (opcional)',[''=>'Sin destino vinculado']+array_column($service->businesses()->destinations(),'name','id'),$record);selectField('relationship','Relación',['prospect'=>'Prospecto','under_review'=>'En revisión','partner'=>'Relación histórica por revisar','archived'=>'Archivado'],$record);areaField('notes','Notas internas',$record);areaField('source','Procedencia y fecha',$record);?>
 <label><input type="checkbox" name="marketing_consent" value="1" <?=!empty($record['marketing_consent'])?'checked':''?>> Autorización explícita de campañas</label><?php areaField('consent_evidence','Evidencia de autorización y fecha',$record);?><label><input type="checkbox" name="suppressed" value="1" <?=!empty($record['suppressed'])?'checked':''?>> Excluir este correo de campañas</label><p>El consentimiento de una solicitud no autoriza campañas automáticamente.</p>
 <?php elseif($section==='establishments'):?>
 <p>Los negocios nuevos se guardan como borradores. Busca el negocio existente antes de crear uno.</p><?php inputField('contact_id','ID del contacto CRM (opcional)',$record,false,'number');selectField('destination_id','Destino',array_column($service->businesses()->destinations(),'name','id'),$record);selectField('category_code','Categoría del catálogo',array_column($service->businesses()->categories(),'name','code')+(isset($record['category_code'])?[$record['category_code']=>$record['category_code']]:[]),$record);inputField('slug','Identificador URL único dentro del destino',$record,true);areaField('summary','Resumen español',$record);areaField('description','Descripción español',$record);inputField('source_url','Nueva fuente editorial (URL)',[],false,'url');areaField('source_note','Nota de la nueva fuente (máximo 500 bytes)',[]);selectField('publication_status','Estado',['draft'=>'Borrador','archived'=>'Archivado'],$record);?>

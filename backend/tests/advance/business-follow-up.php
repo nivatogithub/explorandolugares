@@ -1,0 +1,23 @@
+<?php
+declare(strict_types=1);
+require __DIR__.'/reports.php';require dirname(__DIR__,2).'/app/advance/BusinessFollowUp.php';
+$f=new BusinessFollowUp($db,'test-admin');$o=$f->overview('all','',1,'2026-10-14');
+check($o['counts']['all']===2&&$o['counts']['free']===0,'No asumir que un negocio es gratis');
+$latest=(int)$db->query('SELECT id FROM business_subscriptions WHERE business_id='.(int)$est.' ORDER BY starts_on DESC,id DESC LIMIT 1')->fetchColumn();
+$reports->record('cancel_subscription',['subscription_id'=>$latest]);
+$f->save(['id'=>$est,'follow_up_version'=>0,'participation_type'=>'free','next_action'=>'Revisar representación','offer_notes'=>'Propuesta por definir']);
+check($f->overview('free_unconfirmed','',1,'2026-10-14')['total']===1,'Gratis sin confirmar visible');
+rejects(fn()=>$f->save(['id'=>$est,'follow_up_version'=>0,'participation_type'=>'free']));
+rejects(fn()=>$f->save(['id'=>$est,'follow_up_version'=>1,'participation_type'=>'free','follow_up_on'=>'2026-02-30']));
+$f->save(['id'=>$est,'follow_up_version'=>1,'participation_type'=>'free','free_confirmed'=>'1','publication_blockers'=>'Pendiente revisión de texto']);
+check($f->overview('free_unconfirmed','',1,'2026-10-14')['total']===0,'Confirmación gratuita separada');
+$reports->record('subscription',['business_id'=>1,'reference'=>'follow-up-term','plan_name'=>'Plan ficticio de prueba','starts_on'=>'2026-01-01','ends_on'=>'2026-10-14']);
+$sub=(int)$db->query("SELECT id FROM business_subscriptions WHERE reference='follow-up-term'")->fetchColumn();
+$reports->record('payment',['subscription_id'=>$sub,'reference'=>'follow-up-receipt','entry_type'=>'payment','amount'=>'12.34','currency'=>'COP','received_on'=>'2026-10-14']);
+$o=$f->overview('paid_unpublished','',1,'2026-10-14');check($o['total']===1&&$o['rows'][0]['plan_name']==='Plan ficticio de prueba','Pago, plan y publicación relacionados');
+check($f->overview('due_soon','',1,'2026-10-14')['total']===1,'Vencimiento inclusivo');
+check($f->overview('expired','',1,'2026-10-15')['total']===1,'Vencimiento pasa a expirado');
+check($f->overview('validation','',1,'2026-10-14')['total']===1,'Validación independiente de gratuidad');
+check($db->query('SELECT publication_status FROM businesses WHERE id=1')->fetchColumn()==='draft','Seguimiento no publica');
+check($f->overview('all',"' OR 1=1 --",1,'2026-10-14')['total']===0,'Búsqueda parametrizada');
+echo "OK: negocio único, gratuidad explícita, confirmación separada, plan y pagos, vencimientos, pendientes de validación/publicación y seguimiento con versión.\n";

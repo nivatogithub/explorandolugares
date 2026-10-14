@@ -32,7 +32,7 @@ database=private/'preview.sqlite'
 if not database.exists():
     db=sqlite3.connect(database)
     try:
-        for filename in ['database/sqlite.sql','database/destinations.sqlite.sql','database/migrations/007-advance-admin.sqlite.sql','database/migrations/008-advance-shared-catalog.sqlite.sql','database/migrations/009-advance-english-values.sqlite.sql','database/migrations/010-advance-unsubscribe.sqlite.sql','database/migrations/011-admin-reports.sqlite.sql']:
+        for filename in ['database/sqlite.sql','database/destinations.sqlite.sql','database/migrations/007-advance-admin.sqlite.sql','database/migrations/008-advance-shared-catalog.sqlite.sql','database/migrations/009-advance-english-values.sqlite.sql','database/migrations/010-advance-unsubscribe.sqlite.sql','database/migrations/011-admin-reports.sqlite.sql','database/migrations/012-business-follow-up.sqlite.sql']:
             db.executescript((root/'backend'/filename).read_text())
         db.executescript((root/'backend/tests/advance/shared-fixture.sql').read_text())
         now='2026-10-14 00:00:00'
@@ -50,6 +50,10 @@ else:
         count=db.execute("SELECT COUNT(*) FROM sqlite_master WHERE type='table' AND name IN ('business_subscriptions','subscription_payments','business_capabilities')").fetchone()[0]
         if count==0:db.executescript((root/'backend/database/migrations/011-admin-reports.sqlite.sql').read_text())
         elif count!=3:raise RuntimeError('Esquema parcial de reportes. Revisa la copia local antes de continuar.')
+        has_follow_up=db.execute("SELECT COUNT(*) FROM sqlite_master WHERE type='table' AND name='business_follow_up'").fetchone()[0]
+        has_plan='plan_name' in [row[1] for row in db.execute('PRAGMA table_info(business_subscriptions)')]
+        if not has_follow_up and not has_plan:db.executescript((root/'backend/database/migrations/012-business-follow-up.sqlite.sql').read_text())
+        elif bool(has_follow_up)!=has_plan:raise RuntimeError('Esquema parcial de seguimiento. Revisa la copia local.')
 access=private/'local-access.json'
 if access.exists():
     credentials=json.loads(access.read_text())

@@ -2,6 +2,7 @@
 declare(strict_types=1);
 require __DIR__.'/service.php';require dirname(__DIR__,2).'/app/advance/AdminReports.php';
 $db->exec(file_get_contents(dirname(__DIR__,2).'/database/migrations/011-admin-reports.sqlite.sql'));
+$db->exec(file_get_contents(dirname(__DIR__,2).'/database/migrations/012-business-follow-up.sqlite.sql'));
 $reports=new AdminReports($db,'test-admin');$r=$reports->snapshot('2026-10-14');
 check($r['subscriptions']['registered']===0&&$r['revenue']===[],'Ausencia de registros no inventa ingresos');
 check($r['businesses']['total']===2&&count($r['business_mix'])===1,'Catálogo compartido sin duplicar negocios');
