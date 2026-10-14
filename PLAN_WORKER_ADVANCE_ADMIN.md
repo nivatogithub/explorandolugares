@@ -14,7 +14,7 @@ No se encontró un plan previo en el repositorio consultado. Este plan materiali
 - Baja autoservicio: enlace firmado por entrega, confirmación pública con CSRF, exclusión persistente por correo, consentimiento retirado y pendientes omitidos. Las campañas antiguas sin enlace deben recrearse y aprobarse de nuevo.
 - Resend en PHP con cURL: endpoint HTTPS fijo, timeout, idempotencia por entrega/contenido y guardado de ID del proveedor. Envío manual individual con confirmación, deshabilitado por defecto. No se enviaron correos reales.
 - Sesión/HTTPS/CSRF/throttle existentes; vencimiento por inactividad, consultas parametrizadas, salida escapada, control optimista de versiones para edición, auditoría transaccional de cambios/aprobación y reclamación condicional contra envíos concurrentes.
-- Migraciones MySQL/MariaDB y SQLite 007, 008, 009 y 010: tablas propias de comunicación, referencia opcional del CRM al destino y tabla mínima de vínculo negocio/persona. La herramienta 008 retira la tabla redundante de la primera versión solo si está vacía. No modifica migraciones 003–006 ni el esquema editorial compartido. Ver [contrato de datos y actualización](docs/ADVANCE_ADMIN_MODELO_COMPARTIDO.md).
+- Migraciones MySQL/MariaDB y SQLite 007–011: tablas propias de comunicación, referencia opcional del CRM al destino y tabla mínima de vínculo negocio/persona. La herramienta 008 retira la tabla redundante de la primera versión solo si está vacía. No modifica migraciones 003–006 ni el esquema editorial compartido. Ver [contrato de datos y actualización](docs/ADVANCE_ADMIN_MODELO_COMPARTIDO.md).
 
 ## Instalación para revisión
 
@@ -43,3 +43,5 @@ Pendiente antes de operar campañas comerciales:
 Los registros empresariales se integran al catálogo compartido; cualquier alta nueva permanece en borrador o archivada. Los contenidos publicados existentes solo se consultan. Todo el trabajo permanece en propuesta privada. La implementación no despliega, publica, confirma alianzas ni contacta prospectos por cuenta del agente. No se utilizaron identidad, contactos ni recursos de Paradigma Solutions.
 
 Ver [estado y siguientes entregas](docs/ADVANCE_ADMIN_ESTADO.md) para el progreso actualizado.
+
+La administración cuenta con [Reportes generales](docs/REPORTES_GENERALES.md), separados del resumen CRM/campañas, con registro manual de periodos y movimientos comerciales y clasificación privada de operadores. Esto no aprueba precios ni habilita cobros.
