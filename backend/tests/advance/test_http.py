@@ -33,7 +33,8 @@ try:
     body=call('/admin/index.php')[1];csrf=re.search(r'name="csrf" value="([^"]+)"',body).group(1)
     assert call('/admin/index.php',{'action':'login','username':'advance-local','password':password,'csrf':csrf})[0]==200
     body=call('/admin/index.php')[1];csrf=re.search(r'name="csrf" value="([^"]+)"',body).group(1)
-    status,body,_=call('/admin/reports.php');assert status==200 and 'Reportes generales' in body and 'Medición no conectada' in body
+    status,body,_=call('/admin/reports.php');assert status==200 and 'Reportes generales' in body and 'id="overview"' in body and 'id="traffic"' not in body
+    status,body,_=call('/admin/reports.php?tab=traffic');assert status==200 and 'Medición no conectada' in body and 'id="overview"' not in body
     assert call('/admin/reports.php',{'action':'subscription','csrf':'bad','confirmed':'1'})[0]==403
     sub={'action':'subscription','csrf':csrf,'confirmed':'1','business_id':1,'reference':'http-local','starts_on':'2026-10-01','ends_on':'2026-11-01'}
     assert call('/admin/reports.php',sub)[0]==200
