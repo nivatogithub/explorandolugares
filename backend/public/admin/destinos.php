@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 require dirname(__DIR__,2).'/app/bootstrap.php';
+require dirname(__DIR__,2).'/app/advance/AdminLayout.php';
 require dirname(__DIR__,2).'/app/DestinationAdminService.php';
 if (isset($_SESSION['admin']) && time()-(int)($_SESSION['last_seen']??0)>1800) unset($_SESSION['admin']);
 if (empty($_SESSION['admin'])) { http_response_code(403); exit('Inicia sesión desde el panel de administración.'); }
@@ -41,8 +42,7 @@ function destination_place_fields(array $place,int $i,array $media): void {
     <?php foreach(['es'=>'Español','en'=>'English','pt-BR'=>'Português (Brasil)'] as $locale=>$label):?><label><?=esc($label)?> · Texto alternativo<input name="places[<?=$i?>][image_alt][<?=esc($locale)?>]" maxlength="500" value="<?=esc($place['image_alt'][$locale]??'')?>"></label><label><?=esc($label)?> · Leyenda<input name="places[<?=$i?>][image_caption][<?=esc($locale)?>]" maxlength="500" value="<?=esc($place['image_caption'][$locale]??'')?>"></label><?php endforeach ?>
     </div></details></div></details><?php
 }
-?><!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Destinos | Administración</title><link rel="stylesheet" href="../assets/style.css?v=admin-destinos-3"></head><body><main class="wrap admin-page destination-admin">
-<a class="brand" href="index.php"><span>Explorando<b>Lugares</b></span></a><p><a href="index.php">← Volver al panel</a></p><h1>Administrar destinos</h1><p>Crea y edita la información pública de cada municipio. Puedes guardarlo como borrador mientras completas el contenido.</p>
+?><?php adminPageStart('destinations','Destinos','Gestiona el contenido de cada destino y sus lugares de interés. Guarda borradores mientras completas la información.'); ?>
 <?php if($error):?><p class="notice" role="alert"><?=esc($error)?></p><?php endif ?>
 <?php if(($_GET['saved']??'')==='1'):?><p class="notice" role="status">Destino guardado. ID <?=esc($id)?>.</p><?php elseif(($_GET['saved']??'')==='archived'):?><p class="notice" role="status">Destino archivado; sus relaciones se conservaron.</p><?php elseif(($_GET['saved']??'')==='deleted'):?><p class="notice" role="status">Destino eliminado.</p><?php endif ?>
 <section class="destination-admin-list"><div><h2>Destinos actuales <small>(<?=count($rows)?>)</small></h2><a class="pill" href="destinos.php">Crear municipio</a></div><div class="destination-admin-table"><table><thead><tr><th>Municipio</th><th>Departamento</th><th>Estado</th><th></th></tr></thead><tbody><?php foreach($rows as $row):?><tr><td><?=esc($row['display_name']?:'(sin nombre en español)')?></td><td><?=esc($row['department'])?></td><td><?=esc($row['publication_status']==='published'?'Publicado':($row['publication_status']==='archived'?'Archivado':'Borrador'))?></td><td><a href="destinos.php?id=<?=esc($row['id'])?>">Editar</a></td></tr><?php endforeach ?></tbody></table></div></section>
@@ -102,4 +102,4 @@ function destination_place_fields(array $place,int $i,array $media): void {
  }catch(error){status.textContent=error.message||'No se pudo leer el paquete JSON.';}finally{file.value='';}});
 })();
 </script>
-</main></body></html>
+<?php adminPageEnd(); ?>
