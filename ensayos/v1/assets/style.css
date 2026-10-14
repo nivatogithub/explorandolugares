@@ -793,3 +793,10 @@ footer .wrap{align-items:center}
 .footer-contact-whatsapp:hover,.footer-contact-whatsapp:focus-visible{background:#f0fcf4;border-color:#77c98e;color:#18653a}
 .footer-contact-instagram:hover,.footer-contact-instagram:focus-visible{background:#fff4f7;border-color:#e27398;color:#a92c5c}
 .footer-contact-email:hover,.footer-contact-email:focus-visible{background:#fff2f0;border-color:#e79991;color:#a9342a}
+
+
+/* Los selectores flotantes reflejan la validación obligatoria del campo nativo. */
+.floating-select-native[aria-invalid="true"] + .floating-select-trigger{border-color:#a44327!important;box-shadow:0 0 0 1px #a44327!important}
+
+/* Las confirmaciones obligatorias mantienen la marca junto al comienzo del texto. */
+.required-mark{color:#a83b22;font-weight:800;white-space:nowrap}
