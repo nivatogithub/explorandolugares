@@ -6,5 +6,7 @@ return [
  'app_key'=>'', // 32 bytes aleatorios: bin2hex(random_bytes(32)).
  'admin_user'=>'', 'admin_password_hash'=>'', // password_hash; nunca contraseña en texto plano.
  'registration_enabled'=>false, 'local_test'=>false,
+ // Configuración independiente; remitente real del dominio verificado. No versionar secretos.
+ 'resend'=>['enabled'=>false,'api_key'=>'','from'=>''],
  'privacy'=>['operator'=>'','contact'=>'','retention'=>'','retention_en'=>''],
 ];

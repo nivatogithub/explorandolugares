@@ -1,0 +1,51 @@
+<?php
+declare(strict_types=1);
+require dirname(__DIR__,2).'/app/advance/AdvanceAdmin.php';
+function categories(): array {return ['hospedaje'=>'Alojamiento','cultura'=>'Cultura'];}
+function check(bool $ok,string $message): void {if(!$ok)throw new RuntimeException($message);}
+function rejects(Closure $fn): void {try{$fn();}catch(InvalidArgumentException|RuntimeException $e){return;}throw new Exception('Se esperaba rechazo.');}
+$db=new PDO('sqlite::memory:',null,null,[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC]);$db->exec('PRAGMA foreign_keys=ON');
+$db->exec(file_get_contents(dirname(__DIR__,2).'/database/sqlite.sql'));
+$db->exec(file_get_contents(dirname(__DIR__,2).'/database/migrations/007-advance-admin.sqlite.sql'));
+$s=new AdvanceAdmin($db,'admin-test');
+$base=['name'=>'Persona <b>prueba</b>','email'=>'persona@example.invalid','phone'=>'','municipality'=>'Municipio de prueba','relationship'=>'prospecto','source'=>'Prueba local · 2026-10-14','notes'=>'','marketing_consent'=>'0','consent_evidence'=>''];
+$id=$s->save('contacts',$base);
+rejects(fn()=>$s->save('contacts',[...$base,'marketing_consent'=>'1']));
+rejects(fn()=>$s->save('contacts',[...$base,'email'=>'incorrecto']));
+$s->save('contacts',[...$base,'id'=>$id,'version'=>1,'marketing_consent'=>'1','consent_evidence'=>'Autorización ficticia para prueba local']);
+rejects(fn()=>$s->save('contacts',[...$base,'id'=>$id,'version'=>1]));
+$est=$s->save('establishments',['name'=>'Establecimiento ficticio','contact_id'=>$id,'municipality'=>'Municipio de prueba','category'=>'cultura','description'=>'Solo prueba','source'=>'Prueba local','verification'=>'pendiente','operation'=>'desconocida','status'=>'borrador']);
+rejects(fn()=>$s->save('establishments',['name'=>'x','municipality'=>'x','category'=>'cultura','source'=>'x','verification'=>'pendiente','operation'=>'desconocida','status'=>'publicado']));
+$template=$s->save('templates',['name'=>'Prueba','subject'=>'Hola {{nombre}}','html'=>'<p>{{nombre}} en {{municipio}}</p>']);
+rejects(fn()=>$s->save('templates',['name'=>'Prueba','subject'=>"Hola\nBcc: x",'html'=>'<p>x</p>']));
+rejects(fn()=>$s->save('templates',['name'=>'Prueba','subject'=>'Hola','html'=>'{{secreto}}']));
+$cid=$s->createCampaign(['name'=>'Campaña de prueba','template_id'=>$template,'contact_ids'=>(string)$id]);
+$d=$s->deliveries($cid)[0];check(str_contains($d['html'],'&lt;b&gt;'),'Escape de variables HTML');
+$client=new ResendClient(['enabled'=>true,'from'=>'remitente@example.invalid','api_key'=>'test'],function($payload,$key){check($payload['to']===['persona@example.invalid'],'Destinatario individual');check(str_starts_with($key,'advance-delivery-'),'Clave estable');return ['status'=>200,'body'=>['id'=>'local-provider-id']];});
+rejects(fn()=>$s->sendDelivery((int)$d['id'],$client));
+rejects(fn()=>$s->approve($cid,99));$s->approve($cid,1);rejects(fn()=>$s->approve($cid,1));
+$s->save('templates',['id'=>$template,'version'=>1,'name'=>'Editada','subject'=>'Otro','html'=>'<p>Otra</p>']);
+check($s->deliveries($cid)[0]['html']===$d['html'],'Campaña inmutable ante edición de plantilla');
+$s->sendDelivery((int)$d['id'],$client);check($s->find('deliveries',(int)$d['id'])['status']==='aceptada','Aceptación guardada');rejects(fn()=>$s->sendDelivery((int)$d['id'],$client));
+$cid2=$s->createCampaign(['name'=>'Supresión','template_id'=>$template,'contact_ids'=>(string)$id]);$s->approve($cid2,1);
+$s->save('contacts',[...$base,'id'=>$id,'version'=>2,'marketing_consent'=>'1','consent_evidence'=>'Prueba','suppressed'=>'1']);
+$never=new ResendClient(['enabled'=>true,'from'=>'x@example.invalid','api_key'=>'test'],function(){throw new Exception('No debe enviar');});
+$s->sendDelivery((int)$s->deliveries($cid2)[0]['id'],$never);check($s->deliveries($cid2)[0]['status']==='omitida','Supresión posterior a aprobación');
+rejects(fn()=>$s->createCampaign(['name'=>'No enviar','template_id'=>$template,'contact_ids'=>(string)$id]));
+$s->save('contacts',[...$base,'id'=>$id,'version'=>3,'marketing_consent'=>'1','consent_evidence'=>'Prueba','suppressed'=>'0']);
+$cid3=$s->createCampaign(['name'=>'Error del proveedor','template_id'=>$template,'contact_ids'=>(string)$id]);$s->approve($cid3,1);$did=(int)$s->deliveries($cid3)[0]['id'];
+$fail=new ResendClient(['enabled'=>true,'from'=>'x@example.invalid','api_key'=>'test'],fn()=>['status'=>429,'body'=>['message'=>'no exponer']]);
+rejects(fn()=>$s->sendDelivery($did,$fail));check($s->find('deliveries',$did)['status']==='incierta','Error bloquea reintentos');rejects(fn()=>$s->sendDelivery($did,$client));
+check($s->dashboard()['contacts']===1,'Métricas reales');check($db->query('SELECT COUNT(*) FROM advance_audit')->fetchColumn()>10,'Auditoría');
+check(count($s->rows('contacts',"' OR 1=1 --"))===0,'Consulta parametrizada');
+$before=(int)$db->query('SELECT COUNT(*) FROM advance_campaigns')->fetchColumn();
+rejects(fn()=>$s->createCampaign(['name'=>'Rollback','template_id'=>$template,'contact_ids'=>$id.',99999']));
+check((int)$db->query('SELECT COUNT(*) FROM advance_campaigns')->fetchColumn()===$before,'Campaña parcial revertida');
+$db->exec("INSERT INTO leads(request_key,name,business,municipality,category,email,phone,has_brand,description,interest,consent_version,created_at) VALUES('local-test','Solicitud ficticia','Negocio ficticio','Prueba','hospedaje','lead@example.invalid','','no','','contacto','test','2026-10-14 00:00:00')");
+$imported=$s->importLead(1);check($s->importLead(1)===$imported,'Importación idempotente');
+check((int)$s->find('contacts',$imported)['marketing_consent']===0,'Solicitud no concede consentimiento comercial');
+rejects(fn()=>$s->createCampaign(['name'=>'Sin autorización','template_id'=>$template,'contact_ids'=>(string)$imported]));
+$cid4=$s->createCampaign(['name'=>'Revocación','template_id'=>$template,'contact_ids'=>(string)$id]);$s->approve($cid4,1);
+$s->save('contacts',[...$base,'id'=>$id,'version'=>4,'marketing_consent'=>'0']);
+$s->sendDelivery((int)$s->deliveries($cid4)[0]['id'],$never);check($s->deliveries($cid4)[0]['status']==='omitida','Revocación posterior a aprobación');
+echo "OK: CRM, concurrencia por versión, establecimientos privados, plantillas, snapshots, aprobación, supresión, Resend simulado, errores sin reenvío y auditoría.\n";

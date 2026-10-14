@@ -74,3 +74,7 @@ Para bases existentes, respaldar y ejecutar una vez `database/migrations/002-par
 ## Herramientas de puesta en marcha
 
 Ver [Administración y datos](../docs/ADMINISTRACION_Y_DATOS.md) para la estructura vigente del hosting y los pasos completos. `scripts/configurar-registros.py` crea configuración privada sin reemplazar archivos; `backend/bin/base-datos.php --instalar` instala únicamente sobre una base MySQL vacía y `--comprobar` revisa conexión y columnas. Son herramientas privadas, nunca páginas públicas. El panel administra solicitudes y destinos; las fichas y tarjetas dinámicas de comercios siguen siendo el siguiente módulo.
+
+## Advance Admin (rama independiente)
+
+CRM, establecimientos privados, dashboard, plantillas HTML y campañas con revisión y envío manual mediante Resend. Consultar [plan, instalación y pendientes](../PLAN_WORKER_ADVANCE_ADMIN.md). Requiere la migración independiente 007; Resend está deshabilitado por defecto.
