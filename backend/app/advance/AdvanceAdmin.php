@@ -46,7 +46,7 @@ final class AdvanceAdmin {
         if($table==='contacts'){
             $values+=['email'=>strtolower($this->text($data,'email',254)),'phone'=>$this->text($data,'phone',40),
                 'municipality'=>'',
-                'relationship'=>$this->choice($data,'relationship',['prospecto','en_revision','aliado','archivado']),
+                'relationship'=>$this->choice($data,'relationship',['prospect','under_review','partner','archived']),
                 'notes'=>$this->text($data,'notes',5000),'source'=>$this->text($data,'source',2000,true),
                 'marketing_consent'=>($data['marketing_consent']??'')==='1'?1:0,
                 'consent_evidence'=>$this->text($data,'consent_evidence',2000),'suppressed'=>($data['suppressed']??'')==='1'?1:0];
@@ -80,11 +80,12 @@ final class AdvanceAdmin {
     public static function validateTemplate(string $subject,string $html): void {
         if(preg_match('/[\r\n]/',$subject))throw new InvalidArgumentException('El asunto debe ocupar una línea.');
         preg_match_all('/{{(.*?)}}/s',$subject.$html,$matches);
-        foreach($matches[1] as $key)if(!in_array($key,['nombre','municipio'],true))throw new InvalidArgumentException('Variables permitidas: nombre y municipio.');
+        foreach($matches[1] as $key)if(!in_array($key,['name','municipality','nombre','municipio'],true))throw new InvalidArgumentException('Variables permitidas: name y municipality.');
         // HTML se conserva como contenido privado. Vista previa aislada en iframe sandbox sin scripts/red.
     }
     private static function render(string $text,array $contact,bool $html): string {
-        $values=['{{nombre}}'=>$contact['name'],'{{municipio}}'=>$contact['municipality']];
+        $values=['{{name}}'=>$contact['name'],'{{municipality}}'=>$contact['municipality'],
+            '{{nombre}}'=>$contact['name'],'{{municipio}}'=>$contact['municipality']];
         if($html)$values=array_map(fn($v)=>htmlspecialchars($v,ENT_QUOTES|ENT_SUBSTITUTE,'UTF-8'),$values);
         $result=strtr($text,$values);
         if(!$html)$result=str_replace(["\r","\n"],' ',$result);
@@ -96,8 +97,8 @@ final class AdvanceAdmin {
         $existing=$this->query('SELECT id FROM advance_contacts WHERE lead_id=?',[$id])->fetchColumn();if($existing)return (int)$existing;
         $now=gmdate('Y-m-d H:i:s');
         $this->db->beginTransaction();try{
-            $this->query('INSERT INTO advance_contacts(lead_id,name,email,phone,municipality,notes,source,consent_evidence,created_at,updated_at) VALUES(?,?,?,?,?,?,?,?,?,?)',
-                [$id,$lead['name'],strtolower($lead['email']),$lead['phone'],$lead['municipality'],'','Solicitud #'.$id.' · '.$lead['created_at'],'',$now,$now]);
+            $this->query('INSERT INTO advance_contacts(lead_id,name,email,phone,municipality,notes,source,consent_evidence,created_at,updated_at,relationship) VALUES(?,?,?,?,?,?,?,?,?,?,?)',
+                [$id,$lead['name'],strtolower($lead['email']),$lead['phone'],$lead['municipality'],'','Solicitud #'.$id.' · '.$lead['created_at'],'',$now,$now,'prospect']);
             $new=(int)$this->db->lastInsertId();$this->audit('import_lead','contacts',$new);$this->db->commit();return $new;
         }catch(Throwable $e){$this->db->rollBack();throw $e;}
     }
@@ -107,7 +108,7 @@ final class AdvanceAdmin {
         if(!$ids||count($ids)>100)throw new InvalidArgumentException('Selecciona de 1 a 100 contactos por ID.');
         $this->db->beginTransaction();try{
             $now=gmdate('Y-m-d H:i:s');
-            $this->query('INSERT INTO advance_campaigns(name,subject,html,created_at) VALUES(?,?,?,?)',[$name,$template['subject'],$template['html'],$now]);$id=(int)$this->db->lastInsertId();$emails=[];
+            $this->query('INSERT INTO advance_campaigns(name,subject,html,created_at,status) VALUES(?,?,?,?,?)',[$name,$template['subject'],$template['html'],$now,'draft']);$id=(int)$this->db->lastInsertId();$emails=[];
             foreach($ids as $cid){
                 $c=$this->find('contacts',$cid);
                 if(!$c['marketing_consent']||$c['suppressed']||!filter_var($c['email'],FILTER_VALIDATE_EMAIL))throw new InvalidArgumentException('Todos los destinatarios requieren correo y autorización de campañas vigente.');
@@ -117,15 +118,15 @@ final class AdvanceAdmin {
                 $html=self::render($template['html'],$c,true);
                 if(strlen($html)>60000)throw new InvalidArgumentException('El HTML personalizado supera el límite permitido.');
                 if(strlen($subject)>200)throw new InvalidArgumentException('El asunto personalizado supera 200 bytes.');
-                $this->query('INSERT INTO advance_deliveries(campaign_id,contact_id,email,subject,html,updated_at) VALUES(?,?,?,?,?,?)',
-                    [$id,$cid,$c['email'],$subject,$html,$now]);
+                $this->query('INSERT INTO advance_deliveries(campaign_id,contact_id,email,subject,html,updated_at,status) VALUES(?,?,?,?,?,?,?)',
+                    [$id,$cid,$c['email'],$subject,$html,$now,'pending']);
             }
             $this->audit('create','campaigns',$id);$this->db->commit();return $id;
         }catch(Throwable $e){$this->db->rollBack();throw $e;}
     }
     public function approve(int $id,int $version): void {
         $this->db->beginTransaction();try{
-            $q=$this->query("UPDATE advance_campaigns SET status='aprobada',approved_by=?,approved_at=? WHERE id=? AND version=? AND status='borrador'",[$this->actor,gmdate('Y-m-d H:i:s'),$id,$version]);
+            $q=$this->query("UPDATE advance_campaigns SET status='approved',approved_by=?,approved_at=? WHERE id=? AND version=? AND status='draft'",[$this->actor,gmdate('Y-m-d H:i:s'),$id,$version]);
             if($q->rowCount()!==1)throw new RuntimeException('La campaña no está disponible para aprobación.');
             $this->audit('approve','campaigns',$id);$this->db->commit();
         }catch(Throwable $e){$this->db->rollBack();throw $e;}
@@ -135,17 +136,17 @@ final class AdvanceAdmin {
         $client->assertReady();
         $this->db->beginTransaction();try{
             // Una reclamación condicional evita envíos concurrentes. No se reintentan estados inciertos.
-            $q=$this->query("UPDATE advance_deliveries SET status='enviando',updated_at=? WHERE id=? AND status='pendiente' AND campaign_id IN (SELECT id FROM advance_campaigns WHERE status='aprobada')",[gmdate('Y-m-d H:i:s'),$id]);
+            $q=$this->query("UPDATE advance_deliveries SET status='sending',updated_at=? WHERE id=? AND status='pending' AND campaign_id IN (SELECT id FROM advance_campaigns WHERE status='approved')",[gmdate('Y-m-d H:i:s'),$id]);
             if($q->rowCount()!==1)throw new RuntimeException('Entrega no pendiente o campaña no aprobada.');
             $d=$this->find('deliveries',$id);$c=$this->find('contacts',(int)$d['contact_id']);
             if(!$c['marketing_consent']||$c['suppressed']||$c['email']!==$d['email']||$this->query('SELECT id FROM advance_contacts WHERE email=? AND suppressed=1',[$d['email']])->fetchColumn()){
-                $this->query("UPDATE advance_deliveries SET status='omitida' WHERE id=?",[$id]);$this->audit('suppress','deliveries',$id);$this->db->commit();return;
+                $this->query("UPDATE advance_deliveries SET status='skipped' WHERE id=?",[$id]);$this->audit('suppress','deliveries',$id);$this->db->commit();return;
             }
             $this->audit('dispatch','deliveries',$id);$this->db->commit();
         }catch(Throwable $e){$this->db->rollBack();throw $e;}
         try{$provider=$client->send($d,'advance-delivery-'.$id.'-'.hash('sha256',$d['email'].$d['subject'].$d['html']));}
-        catch(Throwable $e){$this->query("UPDATE advance_deliveries SET status='incierta',updated_at=? WHERE id=?",[gmdate('Y-m-d H:i:s'),$id]);throw $e;}
-        $this->query("UPDATE advance_deliveries SET status='aceptada',provider_id=?,updated_at=? WHERE id=?",[$provider,gmdate('Y-m-d H:i:s'),$id]);
+        catch(Throwable $e){$this->query("UPDATE advance_deliveries SET status='uncertain',updated_at=? WHERE id=?",[gmdate('Y-m-d H:i:s'),$id]);throw $e;}
+        $this->query("UPDATE advance_deliveries SET status='accepted',provider_id=?,updated_at=? WHERE id=?",[$provider,gmdate('Y-m-d H:i:s'),$id]);
         $this->audit('accepted','deliveries',$id);
     }
 }
