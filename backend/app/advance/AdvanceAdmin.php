@@ -2,9 +2,10 @@
 declare(strict_types=1);
 require_once __DIR__.'/ResendClient.php';
 require_once __DIR__.'/BusinessAdmin.php';
+require_once __DIR__.'/Unsubscribe.php';
 final class AdvanceAdmin {
     private const TABLES=['contacts','establishments','templates','campaigns','deliveries'];
-    public function __construct(private PDO $db, private string $actor) {}
+    public function __construct(private PDO $db, private string $actor,private array $config=[]) {}
     public function businesses(): BusinessAdmin {return new BusinessAdmin($this->db,$this->actor);}
     private function query(string $sql,array $params=[]): PDOStatement {$q=$this->db->prepare($sql);$q->execute($params);return $q;}
     private function text(array $data,string $key,int $max,bool $required=false): string {
@@ -54,6 +55,9 @@ final class AdvanceAdmin {
             if($destination!==null&&(!$destination||!$this->query('SELECT id FROM destinations WHERE id=?',[$destination])->fetchColumn()))throw new InvalidArgumentException('Destino inexistente.');
             $values['destination_id']=$destination;
             if(!$destination&&!empty($data['id']))$values['municipality']=(string)($this->query('SELECT municipality FROM advance_contacts WHERE id=?',[(int)$data['id']])->fetchColumn()?:'');
+            if($this->query('SELECT email FROM advance_email_suppressions WHERE email=?',[$values['email']])->fetchColumn()){
+                if($values['marketing_consent']||!$values['suppressed'])throw new InvalidArgumentException('Este correo solicitó la baja y no puede reactivarse desde la edición de contactos.');
+            }
             if($values['email']!==''&&!filter_var($values['email'],FILTER_VALIDATE_EMAIL))throw new InvalidArgumentException('Correo inválido.');
             if($values['email']===''&&$values['phone']==='')throw new InvalidArgumentException('Indica un canal de contacto.');
             if($values['marketing_consent']&&!$values['consent_evidence'])throw new InvalidArgumentException('Documenta la autorización de campañas, fuente y fecha.');
@@ -96,13 +100,15 @@ final class AdvanceAdmin {
         if(!$lead)throw new InvalidArgumentException('Solicitud inexistente.');
         $existing=$this->query('SELECT id FROM advance_contacts WHERE lead_id=?',[$id])->fetchColumn();if($existing)return (int)$existing;
         $now=gmdate('Y-m-d H:i:s');
+        $suppressed=$this->query('SELECT email FROM advance_email_suppressions WHERE email=?',[strtolower($lead['email'])])->fetchColumn()?1:0;
         $this->db->beginTransaction();try{
-            $this->query('INSERT INTO advance_contacts(lead_id,name,email,phone,municipality,notes,source,consent_evidence,created_at,updated_at,relationship) VALUES(?,?,?,?,?,?,?,?,?,?,?)',
-                [$id,$lead['name'],strtolower($lead['email']),$lead['phone'],$lead['municipality'],'','Solicitud #'.$id.' · '.$lead['created_at'],'',$now,$now,'prospect']);
+            $this->query('INSERT INTO advance_contacts(lead_id,name,email,phone,municipality,notes,source,consent_evidence,created_at,updated_at,relationship,suppressed) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)',
+                [$id,$lead['name'],strtolower($lead['email']),$lead['phone'],$lead['municipality'],'','Solicitud #'.$id.' · '.$lead['created_at'],'',$now,$now,'prospect',$suppressed]);
             $new=(int)$this->db->lastInsertId();$this->audit('import_lead','contacts',$new);$this->db->commit();return $new;
         }catch(Throwable $e){$this->db->rollBack();throw $e;}
     }
     public function createCampaign(array $data): int {
+        $unsubscribe=new Unsubscribe($this->db,$this->config);$unsubscribe->assertReady();
         $name=$this->text($data,'name',160,true);$template=$this->find('templates',(int)($data['template_id']??0));
         $ids=array_values(array_unique(array_filter(array_map('intval',explode(',',$this->text($data,'contact_ids',4000,true))),fn($id)=>$id>0)));
         if(!$ids||count($ids)>100)throw new InvalidArgumentException('Selecciona de 1 a 100 contactos por ID.');
@@ -112,7 +118,7 @@ final class AdvanceAdmin {
             foreach($ids as $cid){
                 $c=$this->find('contacts',$cid);
                 if(!$c['marketing_consent']||$c['suppressed']||!filter_var($c['email'],FILTER_VALIDATE_EMAIL))throw new InvalidArgumentException('Todos los destinatarios requieren correo y autorización de campañas vigente.');
-                if($this->query('SELECT id FROM advance_contacts WHERE email=? AND suppressed=1',[$c['email']])->fetchColumn())throw new InvalidArgumentException('Un correo está suprimido.');
+                if($this->query('SELECT email FROM advance_email_suppressions WHERE email=?',[$c['email']])->fetchColumn()||$this->query('SELECT id FROM advance_contacts WHERE email=? AND suppressed=1',[$c['email']])->fetchColumn())throw new InvalidArgumentException('Un correo está suprimido.');
                 if(isset($emails[$c['email']]))continue;$emails[$c['email']]=true;
                 $subject=self::render($template['subject'],$c,false);
                 $html=self::render($template['html'],$c,true);
@@ -120,6 +126,10 @@ final class AdvanceAdmin {
                 if(strlen($subject)>200)throw new InvalidArgumentException('El asunto personalizado supera 200 bytes.');
                 $this->query('INSERT INTO advance_deliveries(campaign_id,contact_id,email,subject,html,updated_at,status) VALUES(?,?,?,?,?,?,?)',
                     [$id,$cid,$c['email'],$subject,$html,$now,'pending']);
+                $deliveryId=(int)$this->db->lastInsertId();$url=$unsubscribe->url($deliveryId,$c['email']);
+                $html=Unsubscribe::appendFooter($html,$url);
+                if(strlen($html)>60000)throw new InvalidArgumentException('El HTML con enlace de baja supera el límite permitido.');
+                $this->query('UPDATE advance_deliveries SET html=?,unsubscribe_url=? WHERE id=?',[$html,$url,$deliveryId]);
             }
             $this->audit('create','campaigns',$id);$this->db->commit();return $id;
         }catch(Throwable $e){$this->db->rollBack();throw $e;}
@@ -134,12 +144,14 @@ final class AdvanceAdmin {
     public function deliveries(int $id): array {return $this->query('SELECT * FROM advance_deliveries WHERE campaign_id=? ORDER BY id',[$id])->fetchAll(PDO::FETCH_ASSOC);}
     public function sendDelivery(int $id,ResendClient $client): void {
         $client->assertReady();
+        $snapshot=$this->find('deliveries',$id);
+        if(empty($snapshot['unsubscribe_url']))throw new RuntimeException('Recrea y revisa la campaña para incluir el enlace de baja antes de enviar.');
         $this->db->beginTransaction();try{
             // Una reclamación condicional evita envíos concurrentes. No se reintentan estados inciertos.
             $q=$this->query("UPDATE advance_deliveries SET status='sending',updated_at=? WHERE id=? AND status='pending' AND campaign_id IN (SELECT id FROM advance_campaigns WHERE status='approved')",[gmdate('Y-m-d H:i:s'),$id]);
             if($q->rowCount()!==1)throw new RuntimeException('Entrega no pendiente o campaña no aprobada.');
             $d=$this->find('deliveries',$id);$c=$this->find('contacts',(int)$d['contact_id']);
-            if(!$c['marketing_consent']||$c['suppressed']||$c['email']!==$d['email']||$this->query('SELECT id FROM advance_contacts WHERE email=? AND suppressed=1',[$d['email']])->fetchColumn()){
+            if(!$c['marketing_consent']||$c['suppressed']||$c['email']!==$d['email']||$this->query('SELECT email FROM advance_email_suppressions WHERE email=?',[$d['email']])->fetchColumn()||$this->query('SELECT id FROM advance_contacts WHERE email=? AND suppressed=1',[$d['email']])->fetchColumn()){
                 $this->query("UPDATE advance_deliveries SET status='skipped' WHERE id=?",[$id]);$this->audit('suppress','deliveries',$id);$this->db->commit();return;
             }
             $this->audit('dispatch','deliveries',$id);$this->db->commit();

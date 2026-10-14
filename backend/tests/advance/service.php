@@ -10,7 +10,9 @@ $db->exec(file_get_contents(dirname(__DIR__,2).'/database/migrations/007-advance
 require dirname(__DIR__,2).'/app/advance/SharedCatalogMigration.php';
 SharedCatalogMigration::apply($db);SharedCatalogMigration::apply($db);
 $db->exec(file_get_contents(__DIR__.'/shared-fixture.sql'));
-$s=new AdvanceAdmin($db,'admin-test');
+$db->exec(file_get_contents(dirname(__DIR__,2).'/database/migrations/010-advance-unsubscribe.sqlite.sql'));
+$testConfig=['app_key'=>str_repeat('x',64),'public_base_url'=>'https://example.invalid'];
+$s=new AdvanceAdmin($db,'admin-test',$testConfig);
 $base=['name'=>'Persona <b>prueba</b>','email'=>'persona@example.invalid','phone'=>'','destination_id'=>'1','relationship'=>'prospect','source'=>'Prueba local · 2026-10-14','notes'=>'','marketing_consent'=>'0','consent_evidence'=>''];
 $id=$s->save('contacts',$base);
 rejects(fn()=>$s->save('contacts',[...$base,'marketing_consent'=>'1']));

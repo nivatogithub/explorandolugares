@@ -18,5 +18,5 @@ AdvanceAdmin::validateTemplate('Hola {{nombre}}','<p>{{municipio}}</p>');
 $s->save('contacts',[...$base,'id'=>$id,'version'=>5,'marketing_consent'=>'1','consent_evidence'=>'Prueba']);
 $t=$s->save('templates',['name'=>'Legacy','subject'=>'Hola {{nombre}}','html'=>'<p>{{municipio}}</p>']);
 $c=$s->createCampaign(['name'=>'Legacy local','template_id'=>$t,'contact_ids'=>(string)$id]);
-check($s->deliveries($c)[0]['html']==='<p>Destino de prueba</p>','Alias anteriores preservados');
+check(str_starts_with($s->deliveries($c)[0]['html'],'<p>Destino de prueba</p>'),'Alias anteriores preservados');
 echo "OK: migración inglesa repetible, payload y aprobación preservados, envíos inciertos bloqueados y compatibilidad de plantillas.\n";

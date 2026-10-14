@@ -16,7 +16,7 @@ El módulo de destinos es propietario del esquema territorial/editorial. Advance
 | Lugares/experiencias | `points_of_interest` y traducciones | Se conservan sin alteración; ninguna segunda entidad de experiencias |
 | Persona/prospecto CRM | `advance_contacts` | Notas, relación comercial, autorización/supresión de campañas y vínculo opcional a solicitud y destino |
 | Relación negocio/CRM | `advance_business_crm` | Solo `business_id`, `contact_id` y versión de edición; no guarda nombre, categoría, estado o dirección del negocio |
-| Comunicación | `advance_templates`, `advance_campaigns`, `advance_deliveries`, `advance_audit` | Datos propios de campañas y auditoría |
+| Comunicación | `advance_templates`, `advance_campaigns`, `advance_deliveries`, `advance_audit`, `advance_email_suppressions` | Datos propios de campañas y auditoría |
 
 `advance_contacts` representa a la persona/prospecto y sus permisos comerciales; `business_contacts` representa un canal del establecimiento. Son conceptos distintos. Vincularlos no expone el correo de una persona ni autoriza campañas. El alcance actual admite un contacto CRM principal por negocio, y el mismo contacto puede vincularse a varios negocios.
 
@@ -59,3 +59,5 @@ Tablas, columnas, relaciones y valores internos nuevos se modelan en inglés. El
 Después de 008, aplicar `009-advance-english-values.mysql.sql` una vez en staging con respaldo y backend detenido. Convierte valores previos y defaults sin modificar HTML, destinatarios, ID de proveedor, versión ni autor/fecha de aprobación. Los estados `sending` y `uncertain` siguen bloqueados para reenvío. La variante SQLite convierte datos; el servicio escribe estados explícitos, sin depender de defaults antiguos. La migración 007 ya usa defaults ingleses en instalaciones nuevas.
 
 Los estados heredados del catálogo compartido (`PUBLICO`, `VERIFICADO`, `NO_RECLAMADO`, etc.) y los de `leads` pertenecen a otros módulos. Este cambio los conserva: traducirlos requiere una migración coordinada de todos sus lectores y escritores. No introduce una segunda nomenclatura almacenada ni tablas paralelas para esos estados.
+
+La migración 010 añade baja autoservicio y exclusión persistente por correo. Ver [estado y configuración](ADVANCE_ADMIN_ESTADO.md).

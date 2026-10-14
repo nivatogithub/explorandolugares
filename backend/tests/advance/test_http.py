@@ -9,10 +9,11 @@ db.executescript((root/'backend/database/sqlite.sql').read_text())
 db.executescript((root/'backend/database/destinations.sqlite.sql').read_text())
 db.executescript((root/'backend/database/migrations/007-advance-admin.sqlite.sql').read_text())
 db.executescript((root/'backend/database/migrations/008-advance-shared-catalog.sqlite.sql').read_text())
+db.executescript((root/'backend/database/migrations/010-advance-unsubscribe.sqlite.sql').read_text())
 db.executescript((root/'backend/tests/advance/shared-fixture.sql').read_text())
 password=secrets.token_urlsafe(24)
 hashed=subprocess.check_output(['php','-r','echo password_hash(trim(stream_get_contents(STDIN)), PASSWORD_DEFAULT);'],input=password.encode()).decode()
-config={'dsn':'sqlite:'+str(work/'private/test.sqlite'),'app_key':secrets.token_hex(32),'admin_user':'advance-local','admin_password_hash':hashed,'local_test':True}
+config={'dsn':'sqlite:'+str(work/'private/test.sqlite'),'app_key':secrets.token_hex(32),'admin_user':'advance-local','admin_password_hash':hashed,'local_test':True,'public_base_url':'https://example.invalid'}
 encoded=base64.b64encode(json.dumps(config).encode()).decode();(work/'private/config.php').write_text("<?php return json_decode(base64_decode('"+encoded+"'), true);")
 with socket.socket() as sock:sock.bind(('127.0.0.1',0));port=sock.getsockname()[1]
 proc=subprocess.Popen(['php','-S',f'127.0.0.1:{port}','-t',str(work/'public')],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
@@ -57,6 +58,20 @@ try:
     assert db.execute('SELECT COUNT(*) FROM businesses').fetchone()[0]==2
     assert call('/admin/index.php',{'action':'logout','csrf':csrf})[0]==200
     assert call(url)[0]==403
-    print('OK: HTTP privado, CSRF, escape HTML, preview sandbox, campañas aprobadas manualmente, Resend deshabilitado conserva pendientes y logout.')
+    unsubscribe_url=db.execute('SELECT unsubscribe_url FROM advance_deliveries WHERE id=1').fetchone()[0]
+    signed=urllib.parse.parse_qs(urllib.parse.urlsplit(unsubscribe_url).query)['token'][0]
+    path='/api/unsubscribe.php?token='+urllib.parse.quote(signed)
+    assert call('/api/unsubscribe.php?token='+signed[:-1]+('0' if signed[-1]!='0' else '1'))[0]==400
+    status,body,headers=call(path);assert status==200 and 'Confirma' in body and 'test@example.invalid' not in body
+    assert headers['Referrer-Policy']=='no-referrer' and headers['Cache-Control']=='no-store'
+    assert db.execute('SELECT suppressed FROM advance_contacts WHERE id=1').fetchone()[0]==0
+    recipient_csrf=re.search(r'name="csrf" value="([^"]+)"',body).group(1)
+    assert call('/api/unsubscribe.php',{'token':signed,'csrf':'bad'})[0]==403
+    status,body,_=call('/api/unsubscribe.php',{'token':signed,'csrf':recipient_csrf});assert status==200 and 'excluido' in body
+    assert db.execute('SELECT suppressed,marketing_consent FROM advance_contacts WHERE id=1').fetchone()==(1,0)
+    assert db.execute('SELECT status FROM advance_deliveries WHERE id=1').fetchone()[0]=='skipped'
+    assert call('/api/unsubscribe.php',{'token':signed,'csrf':recipient_csrf})[0]==200
+    assert db.execute('SELECT COUNT(*) FROM advance_email_suppressions').fetchone()[0]==1
+    print('OK: HTTP privado, CSRF, escape HTML, preview sandbox, campañas aprobadas manualmente, Resend deshabilitado conserva pendientes, logout y baja pública confirmada con CSRF.')
 finally:
     proc.terminate();proc.wait(timeout=5);db.close();shutil.rmtree(work)
