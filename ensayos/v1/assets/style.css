@@ -533,11 +533,11 @@ header nav[aria-label] .language-switch a[aria-current="false"]:hover{background
     display:flex!important;
     justify-content:space-between!important;
     align-items:center!important;
-    height:156px!important;
-    min-height:156px!important;
+    height:auto!important;
+    min-height:172px!important;
     padding:5px 24px!important;
   }
-  header>.wrap:first-child .brand{width:390px!important;height:162px!important}
+  header>.wrap:first-child .brand{width:390px!important;height:162px!important;align-self:center!important;top:0!important}
   header>.wrap:first-child .brand-logo{width:162px!important;height:162px!important;flex-basis:162px!important}
   header>.wrap:first-child .brand span{font-size:38px!important}
   header>.wrap:first-child .menu-toggle{
@@ -557,10 +557,10 @@ header nav[aria-label] .language-switch a[aria-current="false"]:hover{background
   }
   header>.wrap:first-child .menu-toggle span{display:block!important;width:22px!important;height:2px!important;background:currentColor!important;border-radius:2px!important}
   header>.wrap:first-child nav[aria-label]{display:none!important}
-  header.menu-open nav[aria-label]{
+  header.menu-open>.wrap:first-child nav[aria-label]{
     position:absolute!important;
     z-index:20!important;
-    top:156px!important;
+    top:100%!important;
     left:0!important;
     right:0!important;
     display:flex!important;
@@ -573,8 +573,8 @@ header nav[aria-label] .language-switch a[aria-current="false"]:hover{background
     border-bottom:3px solid #f5b126!important;
     box-shadow:0 10px 22px #054b4d18!important;
   }
-  header.menu-open nav[aria-label]>a{min-height:auto!important;padding:13px 12px!important;font-size:16px!important}
-  header.menu-open nav[aria-label] .language-switch{display:flex!important;position:static!important;margin:6px 0 0!important;padding:12px!important;border-left:0!important;gap:8px!important}
+  header.menu-open>.wrap:first-child nav[aria-label]>a{min-height:auto!important;padding:13px 12px!important;font-size:16px!important}
+  header.menu-open>.wrap:first-child nav[aria-label] .language-switch{display:flex!important;position:static!important;margin:6px 0 0!important;padding:12px!important;border-left:0!important;gap:8px!important}
   .pilot-banner>.wrap{padding-left:210px!important}
 }
 
@@ -772,31 +772,77 @@ html,body{overflow-x:hidden}
 .destination-reasons,.destination-history-photo,.highlight-extra{background:#fff0dc!important;border:1px solid #f2c77e!important}.destination-reasons ul,.destination-history-photo figcaption,.highlight-extra p{color:#5e625f!important}.destination-reasons h3,.highlight-extra h3{color:#a83b22!important}
 .highlight-grid article{background:#fff8ed!important;border-color:#f2c77e!important}.highlight-grid article p,.highlight-extra p{color:#5e625f!important}.highlight-grid article .story-number{color:#e85a2a!important}
 
-/* Canales públicos de contacto en el pie del portal. */
+/* Canales de contacto: solo iconos, con área cómoda para pulsar. */
 footer .wrap{align-items:center}
 .footer-contact{display:flex;align-items:center;justify-content:center;gap:9px;flex-wrap:wrap;order:2}
-.footer-contact-link{display:inline-flex;align-items:center;gap:7px;padding:8px 11px;border:1px solid #efc16e;border-radius:999px;background:#fff8ed;color:#064d4e;text-decoration:none;font-weight:700;font-size:12px;line-height:1;transition:transform .18s ease,background .18s ease,border-color .18s ease,color .18s ease}
-.footer-contact-link svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:0 0 auto}
-.footer-contact-whatsapp:hover,.footer-contact-whatsapp:focus-visible{background:#e5f6eb;border-color:#6aae7e;color:#18653a}
-.footer-contact-instagram:hover,.footer-contact-instagram:focus-visible{background:#fff0e5;border-color:#e85a2a;color:#b9371b}
-.footer-contact-email:hover,.footer-contact-email:focus-visible{background:#fff4c9;border-color:#e9af24;color:#6d4c00}
-.footer-contact-link:hover{transform:translateY(-2px)}
-@media(max-width:760px){footer .wrap{align-items:flex-start}.footer-contact{justify-content:flex-start;width:100%;order:0}.footer-contact-link{padding:8px 10px}}
-
-/* Iconos de contacto: mayor presencia y colores reconocibles de cada canal. */
-.footer-contact-link{gap:8px;padding:7px 12px}
-.footer-contact-icon{width:25px;height:25px;display:grid;place-items:center;border-radius:50%;color:#fff;flex:0 0 auto}
-.footer-contact-link .footer-contact-icon svg{width:15px;height:15px;stroke:currentColor;stroke-width:2}
+.footer-contact-link{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0;border:0;background:transparent;text-decoration:none;transition:transform .18s ease}
+.footer-contact-icon{width:42px;height:42px;display:grid;place-items:center;border-radius:50%;color:#fff;flex:0 0 auto}
+.footer-contact-link .footer-contact-icon svg{width:29px;height:29px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .footer-contact-whatsapp .footer-contact-icon{background:#25d366}
 .footer-contact-instagram .footer-contact-icon{background:linear-gradient(135deg,#feda75 0%,#fa7e1e 30%,#d62976 62%,#4f5bd5 100%)}
 .footer-contact-email .footer-contact-icon{background:#ea4335}
-.footer-contact-whatsapp:hover,.footer-contact-whatsapp:focus-visible{background:#f0fcf4;border-color:#77c98e;color:#18653a}
-.footer-contact-instagram:hover,.footer-contact-instagram:focus-visible{background:#fff4f7;border-color:#e27398;color:#a92c5c}
-.footer-contact-email:hover,.footer-contact-email:focus-visible{background:#fff2f0;border-color:#e79991;color:#a9342a}
-
+.footer-contact-link:hover{transform:translateY(-2px)}
+.footer-contact-link:focus-visible{outline:2px solid #064d4e;outline-offset:2px;border-radius:4px}
+@media(max-width:760px){footer .wrap{align-items:flex-start}.footer-contact{justify-content:flex-start;width:100%;order:0}}
+@media(prefers-reduced-motion:reduce){.footer-contact-link{transition:none}.footer-contact-link:hover{transform:none}}
 
 /* Los selectores flotantes reflejan la validación obligatoria del campo nativo. */
 .floating-select-native[aria-invalid="true"] + .floating-select-trigger{border-color:#a44327!important;box-shadow:0 0 0 1px #a44327!important}
 
 /* Las confirmaciones obligatorias mantienen la marca junto al comienzo del texto. */
 .required-mark{color:#a83b22;font-weight:800;white-space:nowrap}
+
+/* El auricular sólido conserva su silueta a tamaños pequeños. */
+.footer-contact-whatsapp .footer-contact-icon svg path+path{fill:currentColor;stroke:none}
+
+/* En móvil, el botón permanece visible incluso en ventanas muy estrechas. */
+@media(max-width:760px){
+  header{z-index:3}
+  header>.wrap:first-child{flex-wrap:nowrap;gap:12px}
+  header>.wrap:first-child .brand{min-width:0;flex:1;white-space:normal}
+  header>.wrap:first-child .brand span{min-width:0;white-space:normal;overflow-wrap:anywhere;line-height:1.15}
+  header>.wrap:first-child .menu-toggle{flex:0 0 42px}
+  header.menu-open nav[aria-label]{top:100%;max-height:calc(100dvh - 80px);overflow-y:auto;overscroll-behavior:contain}
+}
+
+/* Menú compacto flotante, separado de la marca y con opciones alineadas. */
+@media(max-width:1190px){
+  header.menu-open>.wrap:first-child nav[aria-label]{
+    position:absolute!important;
+    top:calc(100% - 4px)!important;
+    left:auto!important;
+    right:20px!important;
+    width:min(300px,calc(100vw - 40px))!important;
+    padding:10px!important;
+    gap:2px!important;
+    border:1px solid #efc16e!important;
+    border-radius:12px!important;
+    background:#fffdf8!important;
+    box-shadow:0 12px 30px #33201626!important;
+    max-height:calc(100dvh - 190px);
+    overflow-y:auto;
+  }
+  header.menu-open>.wrap:first-child nav[aria-label]>a{
+    justify-content:flex-start!important;
+    text-align:left!important;
+    min-height:42px!important;
+    padding:10px 12px!important;
+    font-size:14px!important;
+    line-height:1.4!important;
+    border:0!important;
+    border-radius:6px!important;
+    white-space:normal!important;
+  }
+  header.menu-open>.wrap:first-child nav[aria-label] .language-switch{
+    position:static!important;
+    justify-content:flex-start!important;
+    margin:4px 0 0!important;
+    padding:8px 12px!important;
+    border-left:0!important;
+    border-top:1px solid #f2c77e!important;
+    gap:8px!important;
+  }
+}
+@media(max-width:760px){
+  header.menu-open>.wrap:first-child nav[aria-label]{max-height:calc(100dvh - 90px)}
+}
