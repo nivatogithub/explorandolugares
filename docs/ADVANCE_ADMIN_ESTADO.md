@@ -42,3 +42,7 @@ Las campañas previas que no tienen enlace no se reescriben después de aprobars
 ## Entorno local de revisión
 
 El propietario autorizó usar su Mac como entorno de pruebas. Se preparó un panel persistente, con datos ficticios y envíos deshabilitados, accesible únicamente desde el equipo. Ver [acceso y reinicio](ADVANCE_ADMIN_LOCAL.md). Este entorno usa SQLite; la validación específica de MySQL/MariaDB sigue pendiente.
+
+## Reportes generales
+
+Se añadió una sección privada independiente del CRM para publicación, preparación territorial, composición de negocios por destino, operadores y registro manual de suscripciones/recaudos. Requiere la migración 011. El resumen anterior conserva el foco en CRM/campañas. Ver [alcance, cálculos y pendientes](REPORTES_GENERALES.md). La analítica de tráfico y las aprobaciones formales centralizadas siguen pendientes.

@@ -6,6 +6,7 @@ import argparse, base64, json, secrets, shutil, sqlite3, subprocess, os
 root=Path(__file__).resolve().parents[1]
 parser=argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--port',type=int,default=8037)
+parser.add_argument('--prepare-only',action='store_true',help='Actualizar la copia local sin iniciar otro servidor')
 args=parser.parse_args()
 if not 1024<=args.port<=65535:parser.error('Usa un puerto entre 1024 y 65535.')
 work=root/'.local/advance-preview'
@@ -17,7 +18,7 @@ shutil.copytree(root/'backend/public',work/'public',dirs_exist_ok=True)
 assets=work/'public/assets';assets.mkdir(exist_ok=True)
 for name in ['style.css','logo.svg','select-flotante.js']:
     shutil.copyfile(root/'ensayos/v1/assets'/name,assets/name)
-for name in ['admin/index.php','admin/advance/index.php']:
+for name in ['admin/index.php','admin/advance/index.php','admin/reports.php']:
     path=work/'public'/name
     source=path.read_text().replace('<body>','<body><p role="status">Entorno local · datos ficticios · envíos reales deshabilitados</p>',1)
     path.write_text(source)
@@ -29,7 +30,7 @@ database=private/'preview.sqlite'
 if not database.exists():
     db=sqlite3.connect(database)
     try:
-        for filename in ['database/sqlite.sql','database/destinations.sqlite.sql','database/migrations/007-advance-admin.sqlite.sql','database/migrations/008-advance-shared-catalog.sqlite.sql','database/migrations/009-advance-english-values.sqlite.sql','database/migrations/010-advance-unsubscribe.sqlite.sql']:
+        for filename in ['database/sqlite.sql','database/destinations.sqlite.sql','database/migrations/007-advance-admin.sqlite.sql','database/migrations/008-advance-shared-catalog.sqlite.sql','database/migrations/009-advance-english-values.sqlite.sql','database/migrations/010-advance-unsubscribe.sqlite.sql','database/migrations/011-admin-reports.sqlite.sql']:
             db.executescript((root/'backend'/filename).read_text())
         db.executescript((root/'backend/tests/advance/shared-fixture.sql').read_text())
         now='2026-10-14 00:00:00'
@@ -44,6 +45,9 @@ else:
         # Do not reset or silently modify data entered during previous review sessions.
         db.execute('SELECT unsubscribe_url FROM advance_deliveries LIMIT 0')
         db.execute('SELECT email FROM advance_email_suppressions LIMIT 0')
+        count=db.execute("SELECT COUNT(*) FROM sqlite_master WHERE type='table' AND name IN ('business_subscriptions','subscription_payments','business_capabilities')").fetchone()[0]
+        if count==0:db.executescript((root/'backend/database/migrations/011-admin-reports.sqlite.sql').read_text())
+        elif count!=3:raise RuntimeError('Esquema parcial de reportes. Revisa la copia local antes de continuar.')
 access=private/'local-access.json'
 if access.exists():
     credentials=json.loads(access.read_text())
@@ -64,4 +68,5 @@ print(f'Advance Admin: http://127.0.0.1:{args.port}/admin/advance/index.php',flu
 print('Usuario: '+credentials['username'],flush=True)
 print('Contraseña local: '+credentials['password'],flush=True)
 print('Solo este Mac. SQLite aislada. Datos ficticios persistentes. Resend deshabilitado.',flush=True)
+if args.prepare_only:raise SystemExit(0)
 os.execvp('php',['php','-d','session.save_path='+str(sessions),'-S',f'127.0.0.1:{args.port}','-t',str(work/'public')])
