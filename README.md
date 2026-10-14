@@ -24,7 +24,9 @@ Se incluye un backend PHP para captar interesados y una administración privada,
 
 El script [SFTP](docs/DESPLIEGUE_SFTP.md) conserva configuración de ejemplo, revisión previa y separación pública/privada. No contiene credenciales reales. Revisar [preparación del despliegue](docs/PREPARACION_DESPLIEGUE.md) antes de publicar.
 
-Para el contexto de producto, leer [PROYECTO_INDEPENDIENTE.md](PROYECTO_INDEPENDIENTE.md), [contexto y hoja de ruta](docs/CONTEXTO_PRODUCTO_Y_HOJA_DE_RUTA.md), [AGENTS.md](AGENTS.md) y las [reglas para agentes de cualquier proveedor](docs/GOBERNANZA_AGENTES.md). Para encargar un nuevo destino a cualquier IA, adjuntar juntos el [encargo editorial y visual](docs/PLANTILLA_PROMPT_IA_DESTINO.md) y el [JSON de ejemplo importable](ensayos/v1/plantillas/paquete-destino-v1.json).
+Para el contexto de producto, leer [PROYECTO_INDEPENDIENTE.md](PROYECTO_INDEPENDIENTE.md), [contexto y hoja de ruta](docs/CONTEXTO_PRODUCTO_Y_HOJA_DE_RUTA.md), [AGENTS.md](AGENTS.md) y las [reglas para agentes de cualquier proveedor](docs/GOBERNANZA_AGENTES.md). Para encargar un destino a cualquier IA, adjuntar el [encargo editorial y visual](docs/PLANTILLA_PROMPT_IA_DESTINO.md) y el [manifiesto de ejemplo v2](ensayos/v1/plantillas/paquete-destino-v2.json). La IA debe entregar un ZIP con ese manifiesto y las imágenes; se puede revisar el [ejemplo ZIP importable](backend/public/plantillas/paquete-destino-v2.zip). Los paquetes JSON v1 se conservan solo para compatibilidad.
+
+Para producir imágenes fieles y listas para revisión, consultar la [guía de imágenes generadas con IA](docs/PRODUCCION_IMAGENES_IA.md), el [skill reutilizable](.agents/skills/imagenes-destinos/SKILL.md) y la [plantilla de procedencia](content/templates/procedencia-imagen-ia.json). La generación no publica ni sustituye los créditos de fotos de terceros.
 
 ---
 

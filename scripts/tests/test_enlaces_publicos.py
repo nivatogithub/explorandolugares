@@ -82,6 +82,9 @@ class PublicLinkTests(unittest.TestCase):
     def test_dynamic_destination_runtime_is_included_in_local_package(self):
         self.assertTrue((self.public/'destino.php').is_file())
         self.assertTrue((self.public/'.htaccess').is_file())
+        self.assertTrue((self.public/'admin/paquete-destino.php').is_file())
+        self.assertTrue((self.public/'admin/paquete-destino-imagen.php').is_file())
+        self.assertTrue((self.public/'plantillas/paquete-destino-v2.zip').is_file())
         self.assertTrue((Path(self.temp.name)/'app/DestinationRepository.php').is_file())
         self.assertTrue((Path(self.temp.name)/'content/destinos-dinamicos.json').is_file())
         self.assertTrue((Path(self.temp.name)/'bin/importar-destinos.php').is_file())

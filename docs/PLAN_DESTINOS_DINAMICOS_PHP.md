@@ -31,7 +31,7 @@ Antes de la migración se resolverá cómo persistir el estado comercial sin mez
 
 - Congelar el alcance visual: header, aviso, navegación, portada, historia, motivos, lugares, directorio vacío/lleno, prácticos, eventos, invitación, créditos y footer.
 - Comparar Jericó artesanal con las otras 20 guías generadas; conservar los 63 resultados actuales (21 destinos × 3 idiomas) como referencia.
-- Inventariar los 21 destinos, textos, 3 motivos por municipio, 65 puntos de interés (5 de Jericó y 3 por cada uno de los otros 20), imágenes, licencias, enlaces y contenido ausente.
+- Inventariar los 21 destinos, textos, 3 motivos por municipio, 70 recomendaciones (7 lugares en Jericó y 3 experiencias añadidas, más 3 lugares por cada uno de los otros 20 destinos), imágenes, licencias, enlaces y contenido ausente.
 - Definir un registro editorial de referencia y capturas locales de escritorio/móvil para comparar visualmente.
 
 Aceptación: inventario sin campos desconocidos y lista explícita de contenido faltante; no se editan ni reemplazan las páginas vigentes.
@@ -52,7 +52,7 @@ Aceptación: instalar en una base de pruebas vacía; una segunda importación se
 - Importar historia en bloques, motivos, puntos de interés, enlaces de mapa, imágenes, fuentes y licencias.
 - Registrar nulos conscientemente cuando no existe foto o dato; no inventar información para completar tarjetas.
 
-Aceptación: exactamente 21 destinos, 3 variantes de idioma por destino y 65 puntos de interés; conteos y texto/URLs/imágenes cotejados con la referencia; toda imagen conserva procedencia y permiso.
+Aceptación: exactamente 21 destinos, 3 variantes de idioma por destino y 70 recomendaciones; conteos y texto/URLs/imágenes cotejados con la referencia; toda imagen conserva procedencia y permiso.
 
 ### Hito 3 — Plantilla PHP de destino, primero Jericó
 

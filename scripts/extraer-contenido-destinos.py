@@ -14,6 +14,141 @@ import unicodedata
 ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / "ensayos/v1"
 LOCALES = {"es": "", "en": "en", "pt-BR": "pt-br"}
+JERICO_GENERATED_MEDIA = {
+    "assets/destinos/1/monumento-santa-laura-ilustrado-v2.webp": {
+        "source": ".local/jerico-image-review/generated/monumento-santa-laura-ilustracion-v2.png",
+        "width": 900, "height": 1200,
+        "alt": {
+            "es": "Monumento de bronce a Santa Madre Laura y una niña, en una ilustración editorial de tinta y gouache basada en una fotografía.",
+            "en": "Bronze monument to Saint Mother Laura and a child, in an editorial ink-and-gouache illustration based on a photograph.",
+            "pt-BR": "Monumento de bronze à Santa Madre Laura e uma menina, em ilustração editorial de tinta e guache baseada em uma fotografia."
+        },
+    },
+    "assets/destinos/1/parque-principal-ilustrado.webp": {
+        "source": ".local/jerico-image-review/generated/parque-principal-encuadre-candidato.png",
+        "width": 1100, "height": 825,
+        "alt": {
+            "es": "Parque principal y fachada del centro de Jericó, en ilustración editorial basada en una fotografía de referencia.",
+            "en": "Jericó main square and historic façade, in an editorial illustration based on a reference photograph.",
+            "pt-BR": "Parque principal e fachada do centro de Jericó, em ilustração editorial baseada em uma fotografia de referência."
+        },
+    },
+    "assets/destinos/1/cristo-cerro-el-salvador-ilustrado-v2.webp": {
+        "source": ".local/jerico-image-review/generated/cristo-rey-acercamiento-candidato.png",
+        "width": 1100, "height": 825,
+        "alt": {
+            "es": "Cristo del Cerro El Salvador visto de cerca sobre Jericó, en ilustración editorial basada en una fotografía de referencia.",
+            "en": "Christ statue on El Salvador Hill seen closer above Jericó, in an editorial illustration based on a reference photograph.",
+            "pt-BR": "Cristo do Cerro El Salvador visto de perto sobre Jericó, em ilustração editorial baseada em uma fotografia de referência."
+        },
+    },
+    "assets/destinos/1/santuario-santa-laura-ilustrado-v2.webp": {
+        "source": ".local/jerico-image-review/generated/santuario-fachada-completa-candidato.png",
+        "width": 1100, "height": 825,
+        "alt": {
+            "es": "Santuario de Santa Laura en Jericó, con su fachada rosada y palmas visibles en la entrada, en ilustración editorial basada en una fotografía de referencia.",
+            "en": "Sanctuary of Saint Laura in Jericó, with its pink façade and palms visible at the entrance, in an editorial illustration based on a reference photograph.",
+            "pt-BR": "Santuário de Santa Laura em Jericó, com fachada rosa e palmeiras visíveis na entrada, em ilustração editorial baseada em uma fotografia de referência."
+        },
+    },
+    "assets/destinos/1/casa-santa-laura-ilustrada-v2.webp": {
+        "source": ".local/jerico-image-review/generated/casa-santa-laura-ilustracion-v2.png",
+        "width": 1100, "height": 825,
+        "alt": {
+            "es": "Fachada de la casa natal de Santa Laura en Jericó, reinterpretada en tinta y gouache a partir de una fotografía de referencia.",
+            "en": "Façade of Saint Laura's birthplace in Jericó, reinterpreted in ink and gouache from a reference photograph.",
+            "pt-BR": "Fachada da casa natal de Santa Laura em Jericó, reinterpretada em tinta e guache a partir de uma fotografia de referência."
+        },
+    },
+    "assets/destinos/1/jardin-botanico-los-balsos-ilustrado.webp": {
+        "source": ".local/jerico-image-review/generated/jardin-botanico-los-balsos-ilustracion-v1.png",
+        "width": 1100, "height": 825,
+        "alt": {
+            "es": "Estanque, puente de madera y vegetación del Jardín Botánico Los Balsos, en una ilustración editorial basada en sus elementos documentados.",
+            "en": "Pond, wooden bridge and vegetation at Los Balsos Botanical Garden, in an editorial illustration based on its documented features.",
+            "pt-BR": "Lago, ponte de madeira e vegetação do Jardim Botânico Los Balsos, em uma ilustração editorial baseada em elementos documentados."
+        },
+    },
+    "assets/destinos/1/cerro-de-las-nubes-sendero-ilustrado.webp": {
+        "source": ".local/jerico-image-review/generated/cerro-de-las-nubes-sendero-ilustracion-v1.png",
+        "width": 1100, "height": 825,
+        "alt": {
+            "es": "Sendero de montaña y panorámica de las laderas del Suroeste antioqueño, en una ilustración editorial del Cerro de las Nubes.",
+            "en": "Mountain trail and a panorama of southwestern Antioquia's slopes, in an editorial illustration of Cerro de las Nubes.",
+            "pt-BR": "Trilha de montanha e panorama das encostas do Sudoeste de Antioquia, em uma ilustração editorial do Cerro de las Nubes."
+        },
+    },
+    "assets/destinos/1/chorros-quebradona-ilustrado.webp": {
+        "source": ".local/jerico-image-review/generated/chorros-quebradona-ilustracion-candidata.png",
+        "width": 1100, "height": 620,
+        "alt": {
+            "es": "Cascada de Chorros de Quebradona sobre roca húmeda y vegetación andina, en una ilustración editorial interpretativa.",
+            "en": "Waterfall at Chorros de Quebradona over wet rock and Andean vegetation, in an interpretive editorial illustration.",
+            "pt-BR": "Cachoeira dos Chorros de Quebradona sobre rocha úmida e vegetação andina, em uma ilustração editorial interpretativa."
+        },
+    },
+    "assets/destinos/1/helicoptero-medellin-jerico-ilustracion.webp": {
+        "source": ".local/jerico-experience-candidates/helicoptero-medellin-jerico.png",
+        "width": 1100, "height": 825,
+        "alt": {
+            "es": "Ilustración editorial de un vuelo en helicóptero sobre montañas verdes; representa la actividad de forma general.",
+            "en": "Editorial illustration of a helicopter flight over green mountains, representing the activity in general.",
+            "pt-BR": "Ilustração editorial de um voo de helicóptero sobre montanhas verdes; representa a atividade de forma geral."
+        },
+    },
+    "assets/destinos/1/parapente-puerto-arturo-ilustracion.webp": {
+        "source": ".local/jerico-experience-candidates/parapente-puerto-arturo.png",
+        "width": 1100, "height": 825,
+        "alt": {
+            "es": "Ilustración editorial de un vuelo biplaza en parapente sobre montañas; no representa un punto específico de despegue o aterrizaje.",
+            "en": "Editorial illustration of a tandem paraglider over mountains; it does not depict a specific launch or landing site.",
+            "pt-BR": "Ilustração editorial de um voo duplo de parapente sobre montanhas; não representa um ponto específico de decolagem ou pouso."
+        },
+    },
+    "assets/destinos/1/experiencia-finca-cafetera-ilustracion.webp": {
+        "source": ".local/jerico-experience-candidates/experiencia-finca-cafetera.png",
+        "width": 1100, "height": 825,
+        "alt": {
+            "es": "Ilustración editorial de cafetos con frutos maduros en una ladera de montaña; representa una experiencia cafetera de forma general.",
+            "en": "Editorial illustration of coffee plants with ripe cherries on a mountain slope, representing a coffee experience in general.",
+            "pt-BR": "Ilustração editorial de cafezais com frutos maduros em uma encosta; representa uma experiência cafeeira de forma geral."
+        },
+    },
+}
+JERICO_EXPERIENCES = {
+    "helicoptero-medellin-jerico": {
+        "url": "",
+        "media": "assets/destinos/1/helicoptero-medellin-jerico-ilustracion.webp",
+        "translations": {
+            "es": ("Vuelo privado en helicóptero Medellín–Jericó", "Experiencia de vuelo que podría ofrecer un operador local. Se mostrará cuando exista un acuerdo confirmado y se validen ruta, condiciones y disponibilidad.", ""),
+            "en": ("Private helicopter flight Medellín–Jericó", "A flight experience that may be offered by a local operator. It will appear once an agreement is confirmed and route, conditions and availability are verified.", ""),
+            "pt-BR": ("Voo privativo de helicóptero Medellín–Jericó", "Experiência de voo que poderá ser oferecida por um operador local. Será exibida quando houver um acordo confirmado e rota, condições e disponibilidade estiverem verificadas.", ""),
+        },
+    },
+    "parapente-puerto-arturo": {
+        "url": "",
+        "media": "assets/destinos/1/parapente-puerto-arturo-ilustracion.webp",
+        "translations": {
+            "es": ("Parapente biplaza en Jericó", "Experiencia de parapente que podría ofrecer un operador local. Se mostrará cuando exista un acuerdo confirmado y se validen despegue, aterrizaje, condiciones y disponibilidad.", ""),
+            "en": ("Tandem paragliding in Jericó", "A paragliding experience that may be offered by a local operator. It will appear once an agreement is confirmed and launch, landing, conditions and availability are verified.", ""),
+            "pt-BR": ("Voo duplo de parapente em Jericó", "Experiência de parapente que poderá ser oferecida por um operador local. Será exibida quando houver um acordo confirmado e decolagem, pouso, condições e disponibilidade estiverem verificados.", ""),
+        },
+    },
+    "experiencia-finca-cafetera": {
+        "url": "",
+        "media": "assets/destinos/1/experiencia-finca-cafetera-ilustracion.webp",
+        "translations": {
+            "es": ("Experiencia en finca cafetera", "Experiencia para conocer el cultivo y el proceso del café en una finca de Jericó. Se mostrará cuando se confirme el lugar y exista un acuerdo con quien la ofrece.", ""),
+            "en": ("Coffee farm experience", "An experience to learn about coffee growing and processing at a farm in Jericó. It will appear once the location is verified and an agreement with its provider is confirmed.", ""),
+            "pt-BR": ("Experiência em fazenda de café", "Experiência para conhecer o cultivo e o processamento do café em uma fazenda de Jericó. Será exibida quando o local for confirmado e houver acordo com quem a oferece.", ""),
+        },
+    },
+}
+JERICO_WATERFALL = {
+    "slug": "chorros-de-quebradona",
+    "media": "assets/destinos/1/chorros-quebradona-ilustrado.webp",
+    "map_url": "https://www.google.com/maps/search/?api=1&query=Chorros+de+Quebradona+Jeric%C3%B3+Antioquia+Colombia",
+}
 
 
 class Node:
@@ -254,6 +389,62 @@ def main():
                     used_media.add(record["path"])
         base["translations"] = translations
         result["destinations"].append(base)
+    # Reemplaza en el catálogo dinámico fotos de Jericó por ilustraciones
+    # editoriales locales basadas en referencias y añade experiencias con enlaces
+    # a operadores; las páginas estáticas se mantienen como fuente editorial.
+    jerico = next(d for d in result["destinations"] if d["slug"] == "jerico")
+    for locale, tr in jerico["translations"].items():
+        official_source_labels = {
+            "es": "Atractivos de Jericó · Gobernación de Antioquia ↗",
+            "en": "Jericó attractions · Government of Antioquia ↗",
+            "pt-BR": "Atrações de Jericó · Governo de Antioquia ↗",
+        }
+        official_source = {"url": "https://www.antioquia.gov.co/images/img/turismo/2025/los-imperdibles-de-suroeste-28-30-junio.pdf",
+                           "label": official_source_labels[locale], "section_key": "places"}
+        if official_source not in tr["sources"]:
+            tr["sources"].insert(0, official_source)
+        for target, path in [(tr["hero_media"], "assets/destinos/1/parque-principal-ilustrado.webp"),
+                             (tr["history_media"], "assets/destinos/1/monumento-santa-laura-ilustrado-v2.webp"),
+                             (tr["places"][0]["media"], "assets/destinos/1/parque-principal-ilustrado.webp"),
+                             (tr["places"][1]["media"], "assets/destinos/1/cristo-cerro-el-salvador-ilustrado-v2.webp"),
+                             (tr["places"][2]["media"], "assets/destinos/1/santuario-santa-laura-ilustrado-v2.webp"),
+                             (tr["places"][3]["media"], "assets/destinos/1/casa-santa-laura-ilustrada-v2.webp")]:
+            target["path"] = path
+            target["width"] = JERICO_GENERATED_MEDIA[path]["width"]
+            target["height"] = JERICO_GENERATED_MEDIA[path]["height"]
+            target["alt"] = JERICO_GENERATED_MEDIA[path]["alt"][locale]
+            target["caption"] = target["alt"]
+        garden = tr["places"][4]
+        garden_media_path = "assets/destinos/1/jardin-botanico-los-balsos-ilustrado.webp"
+        garden_info = JERICO_GENERATED_MEDIA[garden_media_path]
+        garden["media"] = {"path": garden_media_path, "width": garden_info["width"],
+                           "height": garden_info["height"], "alt": garden_info["alt"][locale],
+                           "caption": garden_info["alt"][locale]}
+        # Leave these two attractions without imagery until we have approved
+        # local photo references; generic AI scenes could misrepresent them.
+        las_nubes = tr["places"][5]
+        las_nubes["media"] = None
+        waterfall = tr["places"][6]
+        waterfall["slug"] = JERICO_WATERFALL["slug"]
+        waterfall["map_url"] = JERICO_WATERFALL["map_url"]
+        waterfall["description"] = {
+            "es": "Atractivo natural rural de Jericó, mencionado como Chorros de Quebradona. Confirma con fuentes locales dónde inicia el recorrido y las condiciones actuales de acceso.",
+            "en": "A rural natural attraction in Jericó, known as Chorros de Quebradona. Check with local sources for the trailhead and current access conditions.",
+            "pt-BR": "Atrativo natural rural de Jericó, conhecido como Chorros de Quebradona. Confirme com fontes locais onde começa o percurso e as condições atuais de acesso."
+        }[locale]
+        waterfall["media"] = None
+        for slug, experience in JERICO_EXPERIENCES.items():
+            name, description, label = experience["translations"][locale]
+            media_path = experience["media"]
+            media_info = JERICO_GENERATED_MEDIA[media_path]
+            media = {"path": media_path, "alt": media_info["alt"][locale],
+                     "width": media_info["width"], "height": media_info["height"],
+                     "caption": media_info["alt"][locale]}
+            tr["places"].append({"slug": slug, "type": "experience", "publication_status": "draft", "name": name,
+                "description": description, "map_url": "", "external_url": experience["url"],
+                "external_label": label, "media": media})
+    used_media = {media["path"] for d in result["destinations"] for tr in d["translations"].values()
+                  for media in [tr["hero_media"], tr["history_media"], *[p["media"] for p in tr["places"]]] if media}
     all_media = {}
     for dest in result["destinations"]:
         slug = dest["slug"]
@@ -264,34 +455,32 @@ def main():
                 if not media:
                     continue
                 path = media["path"]
-                row = all_media.setdefault(path, {"path": path, "author": "", "source_url": "",
-                    "license_name": "", "license_url": "", "width": media["width"],
-                    "height": media["height"], "translations": {}, "placements": []})
+                generated = JERICO_GENERATED_MEDIA.get(path)
+                row = all_media.setdefault(path, {"path": path, "origin": "ai_generated" if generated else "external",
+                    "author": "Explorando Lugares" if generated else "", "creator": "Explorando Lugares" if generated else "",
+                    "source_url": "", "license_name": "Ilustración editorial generada con IA" if generated else "",
+                    "license_url": "", "width": media["width"], "height": media["height"],
+                    "translations": {}, "placements": []})
                 row["translations"][locale] = {"alt": media["alt"], "caption": media["caption"]}
                 placement = {"destination_slug": slug, "role": role}
                 if placement not in row["placements"]:
                     row["placements"].append(placement)
     missing = []
     for path in used_media:
+        if path in JERICO_GENERATED_MEDIA:
+            continue
         if path not in credits:
             missing.append(path)
         else:
             all_media[path].update(credits[path])
     if missing:
         raise ValueError("Fotos usadas sin crédito/licencia completos: " + ", ".join(sorted(missing)))
-    # The legacy PT-BR Jericó page left two alt texts partly in Spanish; correct
-    # them in the structured migration content without rewriting the backup HTML.
-    pt_alt_overrides = {
-        "assets/jerico/cristo-salvador-directo.webp": "Cristo do Cerro El Salvador visto de uma rua em Jericó",
-    }
-    for path, alt in pt_alt_overrides.items():
-        all_media[path]["translations"]["pt-BR"]["alt"] = alt
     result["media"] = [all_media[key] for key in sorted(all_media)]
     # Validaciones de cobertura y conservación editorial de las páginas actuales.
     if len(result["destinations"]) != 21:
         raise ValueError(f"Se esperaban 21 destinos; hay {len(result['destinations'])}")
-    if sum(len(d["translations"]["es"]["places"]) for d in result["destinations"]) != 65:
-        raise ValueError("El total de atractivos no coincide con las 65 tarjetas actuales")
+    if sum(len(d["translations"]["es"]["places"]) for d in result["destinations"]) != 70:
+        raise ValueError("Se esperaban 70 recomendaciones: 67 lugares base y 3 experiencias de Jericó")
     for d in result["destinations"]:
         for locale in LOCALES:
             tr = d["translations"][locale]
@@ -301,7 +490,7 @@ def main():
                 raise ValueError(f"Cantidad de atractivos no coincide: {d['slug']} / {locale}")
     target = ROOT / "content/destinos-dinamicos.json"
     target.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n")
-    print(f"OK: {len(result['destinations'])} destinos, 3 idiomas, 65 atractivos, {len(result['media'])} imágenes con autoría y licencia.")
+    print(f"OK: {len(result['destinations'])} destinos, 3 idiomas, 70 recomendaciones, {len(result['media'])} imágenes con procedencia.")
 
 
 if __name__ == "__main__":

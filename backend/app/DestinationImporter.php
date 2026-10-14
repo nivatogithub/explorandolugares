@@ -33,9 +33,9 @@ final class DestinationImporter
             $reasonInsert = $pdo->prepare('INSERT INTO destination_reasons (destination_id,display_order) VALUES (?,?)');
             $reasonTranslationInsert = $pdo->prepare('INSERT INTO destination_reason_translations (reason_id,locale,body) VALUES (?,?,?)');
             $poiInsert = $pdo->prepare('INSERT INTO points_of_interest
-                (destination_id,slug,publication_status,display_order) VALUES (?,?,\'published\',?)');
+                (destination_id,slug,poi_type,publication_status,display_order) VALUES (?,?,?,?,?)');
             $poiTranslationInsert = $pdo->prepare('INSERT INTO point_of_interest_translations
-                (point_of_interest_id,locale,name,description,map_url) VALUES (?,?,?,?,?)');
+                (point_of_interest_id,locale,name,description,map_url,external_url,external_label) VALUES (?,?,?,?,?,?,?)');
             $destinationMediaInsert = $pdo->prepare('INSERT INTO destination_media
                 (destination_id,media_asset_id,role,display_order) VALUES (?,?,?,?)');
             $poiMediaInsert = $pdo->prepare('INSERT INTO point_of_interest_media
@@ -90,7 +90,13 @@ final class DestinationImporter
                 $poiIds=[];
                 foreach ($destination['translations']['es']['places'] as $i=>$poi) {
                     self::slug((string)$poi['slug']);
-                    $poiInsert->execute([$destinationId,$poi['slug'],$i+1]);
+                    $type=(string)($poi['type']??'place');
+                    if(!in_array($type,['place','experience'],true))throw new RuntimeException('Tipo de atractivo inválido.');
+                    // Los lugares se importan publicados; las experiencias comerciales
+                    // quedan en borrador hasta que administración confirme el acuerdo.
+                    $status=(string)($poi['publication_status']??($type==='experience'?'draft':'published'));
+                    if(!in_array($status,['draft','published','archived'],true))throw new RuntimeException('Estado de publicación del atractivo inválido.');
+                    $poiInsert->execute([$destinationId,$poi['slug'],$type,$status,$i+1]);
                     $poiIds[$i]=(int)$pdo->lastInsertId(); $counts['points_of_interest']++;
                 }
                 foreach ($catalog['locales'] as $locale) {
@@ -98,8 +104,12 @@ final class DestinationImporter
                     foreach ($tr['history'] as $i=>$body) $storyTranslationInsert->execute([$storyIds[$i],$locale,$body]);
                     foreach ($tr['reasons'] as $i=>$body) $reasonTranslationInsert->execute([$reasonIds[$i],$locale,$body]);
                     foreach ($tr['places'] as $i=>$poi) {
-                        self::https((string)$poi['map_url']);
-                        $poiTranslationInsert->execute([$poiIds[$i],$locale,$poi['name'],$poi['description'],$poi['map_url']]);
+                        $mapUrl=(string)($poi['map_url']??'');$externalUrl=(string)($poi['external_url']??'');
+                        if($mapUrl!=='')self::https($mapUrl);
+                        if($externalUrl!=='')self::https($externalUrl);
+                        $poiStatus=(string)($destination['translations']['es']['places'][$i]['publication_status']??(($poi['type']??'place')==='experience'?'draft':'published'));
+                        if($poiStatus==='published'&&($poi['type']??'place')==='experience'&&($externalUrl===''||trim((string)($poi['external_label']??''))===''))throw new RuntimeException("La experiencia {$poi['slug']} necesita un enlace y texto de consulta en {$locale} antes de publicarse.");
+                        $poiTranslationInsert->execute([$poiIds[$i],$locale,$poi['name'],$poi['description'],$mapUrl,$externalUrl,(string)($poi['external_label']??'')]);
                     }
                 }
             }
@@ -128,16 +138,19 @@ final class DestinationImporter
 
     private static function media(PDO $pdo, array $catalog, array &$counts): array
     {
-        $insert=$pdo->prepare('INSERT INTO media_assets (asset_path,creator,source_url,license_name,license_url,width,height) VALUES (?,?,?,?,?,?,?)');
+        $insert=$pdo->prepare('INSERT INTO media_assets (asset_path,origin,creator,source_url,license_name,license_url,width,height) VALUES (?,?,?,?,?,?,?,?)');
         $translation=$pdo->prepare('INSERT INTO media_asset_translations (media_asset_id,locale,alt_text,caption) VALUES (?,?,?,?)');
         $ids=[];
         foreach ($catalog['media'] as $media) {
             $path=(string)$media['path'];
             if (!preg_match('~^assets/(?!.*(?:^|/)\.\.(?:/|$))[a-zA-Z0-9/_-]+\.(?:webp|png|jpe?g|svg)$~',$path)) throw new RuntimeException('Ruta de medio no permitida.');
-            self::https((string)$media['source_url']); self::https((string)$media['license_url']);
+            $origin=(string)($media['origin']??'external');if(!in_array($origin,['external','own','ai_generated'],true))throw new RuntimeException('Origen de imagen inválido.');
+            if($origin==='external'){self::https((string)$media['source_url']);self::https((string)$media['license_url']);}
             $creator=trim((string)($media['author']??$media['creator']??''));
             if (!$creator || !$media['license_name']) throw new RuntimeException("Crédito incompleto para {$path}.");
-            $insert->execute([$path,$creator,$media['source_url'],$media['license_name'],$media['license_url'],$media['width'],$media['height']]);
+            $source=(string)($media['source_url']??'');$licenseUrl=(string)($media['license_url']??'');
+            if($origin==='external'){self::https($source);self::https($licenseUrl);}
+            $insert->execute([$path,$origin,$creator,$source,$media['license_name'],$licenseUrl,$media['width'],$media['height']]);
             $id=(int)$pdo->lastInsertId(); $ids[$path]=$id; $counts['media_assets']++;
             foreach ($catalog['locales'] as $locale) {
                 $tr=$media['translations'][$locale]??null;

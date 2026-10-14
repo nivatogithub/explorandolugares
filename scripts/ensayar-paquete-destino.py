@@ -3,8 +3,7 @@
 
 Example:
   python3 scripts/ensayar-paquete-destino.py \
-    --package .local/paquetes/sonson/paquete-destino-sonson-v1.json \
-    --images .local/paquetes/sonson/images \
+    --package .local/paquetes/sonson/paquete-destino-sonson.zip \
     --base http://127.0.0.1:8015/v1/ \
     --db .local/sonson-preview.sqlite \
     --media-root .local/sonson-media --keep
@@ -18,6 +17,8 @@ import urllib.error
 import urllib.parse
 import urllib.request
 import uuid
+import tempfile
+import zipfile
 from pathlib import Path
 
 
@@ -51,16 +52,40 @@ def image_fields(prefix, metadata):
 def run():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--package', required=True, type=Path)
-    parser.add_argument('--images', required=True, type=Path)
+    parser.add_argument('--images', type=Path, help='Carpeta de imágenes para un paquete JSON v1 anterior.')
     parser.add_argument('--base', required=True, help='Local preview root, e.g. http://127.0.0.1:8015/v1/')
     parser.add_argument('--db', required=True, type=Path)
     parser.add_argument('--media-root', required=True, type=Path)
     parser.add_argument('--keep', action='store_true', help='Keep the destination draft and uploaded images after checks.')
     args = parser.parse_args()
     base = args.base.rstrip('/') + '/'
-    pack = json.loads(args.package.read_text(encoding='utf-8'))
-    if pack.get('schema_version') != 1 or not isinstance(pack.get('destination'), dict) or not isinstance(pack.get('places'), list):
-        raise SystemExit('El archivo no cumple el paquete de destinos schema_version 1.')
+    image_root = args.images
+    temp_images = None
+    if args.package.suffix.lower() == '.zip':
+        temp_images = tempfile.TemporaryDirectory(prefix='el-destination-package-')
+        image_root = Path(temp_images.name)
+        try:
+            with zipfile.ZipFile(args.package) as archive:
+                pack = json.loads(archive.read('paquete-destino.json'))
+                if pack.get('schema_version') != 2:
+                    raise SystemExit('El ZIP debe usar schema_version 2.')
+                refs = [pack.get('hero_image', {}).get('file')]
+                refs.extend(place.get('image', {}).get('file') for place in pack.get('places', []))
+                for reference in refs:
+                    if not isinstance(reference, str) or not reference.startswith('images/') or '..' in Path(reference).parts or Path(reference).suffix.lower() not in ('.jpg','.jpeg','.png','.webp'):
+                        raise SystemExit('El manifiesto contiene una ruta de imagen no válida.')
+                    destination_file = image_root / Path(reference).name
+                    destination_file.write_bytes(archive.read(reference))
+        except (zipfile.BadZipFile, KeyError, json.JSONDecodeError) as error:
+            raise SystemExit(f'No se pudo leer el paquete ZIP: {error}') from error
+    else:
+        if image_root is None:
+            raise SystemExit('--images es obligatorio para importar un paquete JSON v1.')
+        pack = json.loads(args.package.read_text(encoding='utf-8'))
+        if pack.get('schema_version') != 1:
+            raise SystemExit('El JSON anterior debe usar schema_version 1; para schema_version 2 entrega un ZIP.')
+    if not isinstance(pack.get('destination'), dict) or not isinstance(pack.get('places'), list):
+        raise SystemExit('El paquete no tiene destino y atractivos en el formato esperado.')
     destination = pack['destination']
     slug = destination['slug']
     if not args.keep:
@@ -78,7 +103,7 @@ def run():
     editor = opener.open(base + 'admin/destinos.php').read().decode()
     csrf = re.search(r'name="csrf" value="([^"]+)"', editor).group(1)
 
-    fields = {'csrf':csrf,'action':'save','id':'','slug':slug,'destination_type':'municipality','country_code':'CO',
+    fields = {'csrf':csrf,'action':'save','id':'','slug':slug,'destination_type':destination.get('destination_type','municipality'),'country_code':destination.get('country_code','CO'),
               'department':destination.get('department',''),'subregion':destination.get('subregion',''),
               'latitude':str(destination.get('latitude') or ''),'longitude':str(destination.get('longitude') or ''),
               'publication_status':'draft','display_order':'999',
@@ -94,7 +119,8 @@ def run():
     hero=pack.get('hero_image',{})
     fields.update(image_fields('',hero))
     files=[]
-    hero_path=args.images / f'{slug}-portada.webp'
+    hero_ref=hero.get('file') if args.package.suffix.lower()=='.zip' else None
+    hero_path=image_root / (Path(hero_ref).name if hero_ref else f'{slug}-portada.webp')
     if hero_path.is_file():
         files.append(('hero_upload',hero_path))
     for index, place in enumerate(pack['places']):
@@ -107,7 +133,8 @@ def run():
             fields[f'places[{index}][translations][{locale}][description]']=text.get('description','')
         image=place.get('image',{})
         fields.update(image_fields(f'places[{index}]',image))
-        image_path=args.images / f'{place.get("slug", "")}.webp'
+        image_ref=image.get('file') if args.package.suffix.lower()=='.zip' else None
+        image_path=image_root / (Path(image_ref).name if image_ref else f'{place.get("slug", "")}.webp')
         if image_path.is_file():
             files.append((f'place_uploads[{index}]',image_path))
 
@@ -118,10 +145,10 @@ def run():
         row=db.execute('SELECT slug,publication_status,internal_research_json FROM destinations WHERE id=?',(saved_id,)).fetchone()
         assert row and row[:2]==(slug,'draft'),'El destino no quedó en borrador.'
         research=json.loads(row[2])
-        assert research.get('competitors') and research.get('business_prospects') and research.get('acquisition_strategies'),'No se guardó la investigación comercial completa.'
+        assert isinstance(research,dict) and research.get('schema_version')==1,'No se guardó la investigación interna.'
         assets=db.execute('SELECT asset_path,origin FROM media_assets WHERE asset_path LIKE ?',(f'assets/destinos/{saved_id}/%',)).fetchall()
         assert len(assets)==len(files),'No se registraron todas las imágenes del paquete.'
-        assert all(origin=='ai_generated' for _,origin in assets),'El origen de las ilustraciones debe conservarse.'
+        assert all(origin in ('external','own','ai_generated') for _,origin in assets),'El origen de cada imagen debe conservarse.'
 
     preview=opener.open(base+f'destinos/{slug}/?preview=1').read().decode()
     assert 'Vista previa privada' in preview,'El borrador no abre en vista previa privada.'
@@ -138,6 +165,8 @@ def run():
     print(f'OK: {slug} (ID {saved_id}) importado en borrador; {len(pack["places"])} atractivos, {len(assets)} imágenes, investigación privada, preview autenticado y ruta pública oculta.')
     if args.keep:
         print(f'Conservado para revisión: {base}destinos/{slug}/?preview=1')
+        if temp_images:
+            temp_images.cleanup()
         return
 
     with sqlite3.connect(args.db) as db:
@@ -153,6 +182,8 @@ def run():
         db.commit()
     for relative,_ in assets:
         (args.media_root/relative).unlink(missing_ok=True)
+    if temp_images:
+        temp_images.cleanup()
 
 
 if __name__=='__main__':

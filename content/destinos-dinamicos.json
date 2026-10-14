@@ -32,18 +32,18 @@
             "Por sus miradores y espacios para acercarse a la naturaleza."
           ],
           "hero_media": {
-            "path": "assets/jerico.webp",
-            "alt": "Parque principal de Jericó al atardecer",
-            "width": 800,
-            "height": 600,
-            "caption": "Xemenendura / Wikimedia Commons · CC BY-SA 4.0 · Comprimida y recortada."
+            "path": "assets/destinos/1/parque-principal-ilustrado.webp",
+            "alt": "Parque principal y fachada del centro de Jericó, en ilustración editorial basada en una fotografía de referencia.",
+            "width": 1100,
+            "height": 825,
+            "caption": "Parque principal y fachada del centro de Jericó, en ilustración editorial basada en una fotografía de referencia."
           },
           "history_media": {
-            "path": "assets/jerico/monumento-santa-laura.webp",
-            "alt": "Monumento a Santa Laura Montoya en Jericó",
+            "path": "assets/destinos/1/monumento-santa-laura-ilustrado-v2.webp",
+            "alt": "Monumento de bronce a Santa Madre Laura y una niña, en una ilustración editorial de tinta y gouache basada en una fotografía.",
             "width": 900,
             "height": 1200,
-            "caption": "Santa Madre Laura · Un legado de Jericó"
+            "caption": "Monumento de bronce a Santa Madre Laura y una niña, en una ilustración editorial de tinta y gouache basada en una fotografía."
           },
           "places": [
             {
@@ -52,11 +52,11 @@
               "description": "Recorre el parque principal y las calles cercanas para conocer la arquitectura y la vida cotidiana del pueblo.",
               "map_url": "https://www.google.com/maps/search/?api=1&query=Parque+principal+Jeric%C3%B3+Antioquia+Colombia",
               "media": {
-                "path": "assets/jerico.webp",
-                "alt": "Parque principal y arquitectura del centro de Jericó",
-                "width": 800,
-                "height": 600,
-                "caption": "Parque principal y arquitectura del centro de Jericó"
+                "path": "assets/destinos/1/parque-principal-ilustrado.webp",
+                "alt": "Parque principal y fachada del centro de Jericó, en ilustración editorial basada en una fotografía de referencia.",
+                "width": 1100,
+                "height": 825,
+                "caption": "Parque principal y fachada del centro de Jericó, en ilustración editorial basada en una fotografía de referencia."
               }
             },
             {
@@ -65,11 +65,11 @@
               "description": "Un mirador para contemplar el pueblo y las montañas que lo rodean.",
               "map_url": "https://www.google.com/maps/search/?api=1&query=Cerro+El+Salvador+Jeric%C3%B3+Antioquia+Colombia",
               "media": {
-                "path": "assets/jerico/cristo-salvador-directo.webp",
-                "alt": "Cristo del Cerro El Salvador visto desde una calle de Jericó",
-                "width": 800,
-                "height": 600,
-                "caption": "Cristo del Cerro El Salvador visto desde una calle de Jericó"
+                "path": "assets/destinos/1/cristo-cerro-el-salvador-ilustrado-v2.webp",
+                "alt": "Cristo del Cerro El Salvador visto de cerca sobre Jericó, en ilustración editorial basada en una fotografía de referencia.",
+                "width": 1100,
+                "height": 825,
+                "caption": "Cristo del Cerro El Salvador visto de cerca sobre Jericó, en ilustración editorial basada en una fotografía de referencia."
               }
             },
             {
@@ -78,11 +78,11 @@
               "description": "La iglesia rosada es una de las fachadas que llaman la atención al recorrer Jericó y conocer su patrimonio religioso.",
               "map_url": "https://www.google.com/maps/search/?api=1&query=Santuario%20Santa%20Laura%20Jeric%C3%B3%20Antioquia%20Colombia",
               "media": {
-                "path": "assets/jerico/iglesia-rosada.webp",
-                "alt": "Fachada rosada del Santuario de Santa Laura en Jericó",
-                "width": 674,
-                "height": 1200,
-                "caption": "Fachada rosada del Santuario de Santa Laura en Jericó"
+                "path": "assets/destinos/1/santuario-santa-laura-ilustrado-v2.webp",
+                "alt": "Santuario de Santa Laura en Jericó, con su fachada rosada y palmas visibles en la entrada, en ilustración editorial basada en una fotografía de referencia.",
+                "width": 1100,
+                "height": 825,
+                "caption": "Santuario de Santa Laura en Jericó, con su fachada rosada y palmas visibles en la entrada, en ilustración editorial basada en una fotografía de referencia."
               }
             },
             {
@@ -91,19 +91,90 @@
               "description": "Conoce un lugar vinculado a la historia de Laura Montoya y a la tradición religiosa de Jericó.",
               "map_url": "https://www.google.com/maps/search/?api=1&query=Casa+natal+Santa+Laura+Jeric%C3%B3+Antioquia+Colombia",
               "media": {
-                "path": "assets/jerico/casa-santa-laura.webp",
-                "alt": "Fachada de la casa natal de Santa Laura en Jericó",
-                "width": 800,
-                "height": 600,
-                "caption": "Fachada de la casa natal de Santa Laura en Jericó"
+                "path": "assets/destinos/1/casa-santa-laura-ilustrada-v2.webp",
+                "alt": "Fachada de la casa natal de Santa Laura en Jericó, reinterpretada en tinta y gouache a partir de una fotografía de referencia.",
+                "width": 1100,
+                "height": 825,
+                "caption": "Fachada de la casa natal de Santa Laura en Jericó, reinterpretada en tinta y gouache a partir de una fotografía de referencia."
               }
             },
             {
               "slug": "jardin-botanico-los-balsos",
               "name": "Jardín Botánico Los Balsos",
-              "description": "Un espacio verde junto al casco urbano para disfrutar de la vegetación y observar aves.",
+              "description": "Un jardín de senderos, estanque y vegetación para caminar y observar aves, cerca del casco urbano.",
               "map_url": "https://www.google.com/maps/search/?api=1&query=Jard%C3%ADn+Bot%C3%A1nico+Los+Balsos+Jeric%C3%B3+Antioquia+Colombia",
+              "media": {
+                "path": "assets/destinos/1/jardin-botanico-los-balsos-ilustrado.webp",
+                "width": 1100,
+                "height": 825,
+                "alt": "Estanque, puente de madera y vegetación del Jardín Botánico Los Balsos, en una ilustración editorial basada en sus elementos documentados.",
+                "caption": "Estanque, puente de madera y vegetación del Jardín Botánico Los Balsos, en una ilustración editorial basada en sus elementos documentados."
+              }
+            },
+            {
+              "slug": "subida-al-cerro-de-las-nubes",
+              "name": "Subida al Cerro de las Nubes",
+              "description": "Un recorrido de montaña con miradores hacia el Suroeste antioqueño. Consulta el acceso al sendero y las condiciones locales antes de subir.",
+              "map_url": "https://www.google.com/maps/search/?api=1&query=Cerro+de+las+Nubes+Jeric%C3%B3+Antioquia+Colombia",
               "media": null
+            },
+            {
+              "slug": "chorros-de-quebradona",
+              "name": "Chorros de Quebradona",
+              "description": "Atractivo natural rural de Jericó, mencionado como Chorros de Quebradona. Confirma con fuentes locales dónde inicia el recorrido y las condiciones actuales de acceso.",
+              "map_url": "https://www.google.com/maps/search/?api=1&query=Chorros+de+Quebradona+Jeric%C3%B3+Antioquia+Colombia",
+              "media": null
+            },
+            {
+              "slug": "helicoptero-medellin-jerico",
+              "type": "experience",
+              "publication_status": "draft",
+              "name": "Vuelo privado en helicóptero Medellín–Jericó",
+              "description": "Experiencia de vuelo que podría ofrecer un operador local. Se mostrará cuando exista un acuerdo confirmado y se validen ruta, condiciones y disponibilidad.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/destinos/1/helicoptero-medellin-jerico-ilustracion.webp",
+                "alt": "Ilustración editorial de un vuelo en helicóptero sobre montañas verdes; representa la actividad de forma general.",
+                "width": 1100,
+                "height": 825,
+                "caption": "Ilustración editorial de un vuelo en helicóptero sobre montañas verdes; representa la actividad de forma general."
+              }
+            },
+            {
+              "slug": "parapente-puerto-arturo",
+              "type": "experience",
+              "publication_status": "draft",
+              "name": "Parapente biplaza en Jericó",
+              "description": "Experiencia de parapente que podría ofrecer un operador local. Se mostrará cuando exista un acuerdo confirmado y se validen despegue, aterrizaje, condiciones y disponibilidad.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/destinos/1/parapente-puerto-arturo-ilustracion.webp",
+                "alt": "Ilustración editorial de un vuelo biplaza en parapente sobre montañas; no representa un punto específico de despegue o aterrizaje.",
+                "width": 1100,
+                "height": 825,
+                "caption": "Ilustración editorial de un vuelo biplaza en parapente sobre montañas; no representa un punto específico de despegue o aterrizaje."
+              }
+            },
+            {
+              "slug": "experiencia-finca-cafetera",
+              "type": "experience",
+              "publication_status": "draft",
+              "name": "Experiencia en finca cafetera",
+              "description": "Experiencia para conocer el cultivo y el proceso del café en una finca de Jericó. Se mostrará cuando se confirme el lugar y exista un acuerdo con quien la ofrece.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/destinos/1/experiencia-finca-cafetera-ilustracion.webp",
+                "alt": "Ilustración editorial de cafetos con frutos maduros en una ladera de montaña; representa una experiencia cafetera de forma general.",
+                "width": 1100,
+                "height": 825,
+                "caption": "Ilustración editorial de cafetos con frutos maduros en una ladera de montaña; representa una experiencia cafetera de forma general."
+              }
             }
           ],
           "sources": [
@@ -111,6 +182,11 @@
               "url": "https://normograma.mincultura.gov.co/compilacion/docs/resolucion_mincultura_0663_2018.htm",
               "label": "Historia y patrimonio de Jericó ↗",
               "section_key": "history"
+            },
+            {
+              "url": "https://www.antioquia.gov.co/images/img/turismo/2025/los-imperdibles-de-suroeste-28-30-junio.pdf",
+              "label": "Atractivos de Jericó · Gobernación de Antioquia ↗",
+              "section_key": "places"
             },
             {
               "url": "https://colombia.travel/es/jerico",
@@ -136,18 +212,18 @@
             "For its viewpoints and places to connect with nature."
           ],
           "hero_media": {
-            "path": "assets/jerico.webp",
-            "alt": "Jericó's main square at dusk",
-            "width": 800,
-            "height": 600,
-            "caption": "Xemenendura / Wikimedia Commons · CC BY-SA 4.0 · Compressed and cropped."
+            "path": "assets/destinos/1/parque-principal-ilustrado.webp",
+            "alt": "Jericó main square and historic façade, in an editorial illustration based on a reference photograph.",
+            "width": 1100,
+            "height": 825,
+            "caption": "Jericó main square and historic façade, in an editorial illustration based on a reference photograph."
           },
           "history_media": {
-            "path": "assets/jerico/monumento-santa-laura.webp",
-            "alt": "Monument to Saint Laura Montoya in Jericó",
+            "path": "assets/destinos/1/monumento-santa-laura-ilustrado-v2.webp",
+            "alt": "Bronze monument to Saint Mother Laura and a child, in an editorial ink-and-gouache illustration based on a photograph.",
             "width": 900,
             "height": 1200,
-            "caption": "Mother Laura · A legacy of Jericó"
+            "caption": "Bronze monument to Saint Mother Laura and a child, in an editorial ink-and-gouache illustration based on a photograph."
           },
           "places": [
             {
@@ -156,11 +232,11 @@
               "description": "Explore the main square and nearby streets to discover the town’s architecture and everyday life.",
               "map_url": "https://www.google.com/maps/search/?api=1&query=Parque+principal+Jeric%C3%B3+Antioquia+Colombia",
               "media": {
-                "path": "assets/jerico.webp",
-                "alt": "Main square and architecture in central Jericó",
-                "width": 800,
-                "height": 600,
-                "caption": "Main square and architecture in central Jericó"
+                "path": "assets/destinos/1/parque-principal-ilustrado.webp",
+                "alt": "Jericó main square and historic façade, in an editorial illustration based on a reference photograph.",
+                "width": 1100,
+                "height": 825,
+                "caption": "Jericó main square and historic façade, in an editorial illustration based on a reference photograph."
               }
             },
             {
@@ -169,11 +245,11 @@
               "description": "A viewpoint overlooking the town and the surrounding mountains.",
               "map_url": "https://www.google.com/maps/search/?api=1&query=Cerro+El+Salvador+Jeric%C3%B3+Antioquia+Colombia",
               "media": {
-                "path": "assets/jerico/cristo-salvador-directo.webp",
-                "alt": "Christ statue on El Salvador Hill seen from a street in Jericó",
-                "width": 800,
-                "height": 600,
-                "caption": "Christ statue on El Salvador Hill seen from a street in Jericó"
+                "path": "assets/destinos/1/cristo-cerro-el-salvador-ilustrado-v2.webp",
+                "alt": "Christ statue on El Salvador Hill seen closer above Jericó, in an editorial illustration based on a reference photograph.",
+                "width": 1100,
+                "height": 825,
+                "caption": "Christ statue on El Salvador Hill seen closer above Jericó, in an editorial illustration based on a reference photograph."
               }
             },
             {
@@ -182,11 +258,11 @@
               "description": "The pink church is one of the striking facades you can discover while walking through Jericó and exploring its religious heritage.",
               "map_url": "https://www.google.com/maps/search/?api=1&query=Santuario%20Santa%20Laura%20Jeric%C3%B3%20Antioquia%20Colombia",
               "media": {
-                "path": "assets/jerico/iglesia-rosada.webp",
-                "alt": "Pink facade of the Saint Laura Sanctuary in Jericó",
-                "width": 674,
-                "height": 1200,
-                "caption": "Pink facade of the Saint Laura Sanctuary in Jericó"
+                "path": "assets/destinos/1/santuario-santa-laura-ilustrado-v2.webp",
+                "alt": "Sanctuary of Saint Laura in Jericó, with its pink façade and palms visible at the entrance, in an editorial illustration based on a reference photograph.",
+                "width": 1100,
+                "height": 825,
+                "caption": "Sanctuary of Saint Laura in Jericó, with its pink façade and palms visible at the entrance, in an editorial illustration based on a reference photograph."
               }
             },
             {
@@ -195,19 +271,90 @@
               "description": "Discover a place connected to Laura Montoya’s history and Jericó’s religious heritage.",
               "map_url": "https://www.google.com/maps/search/?api=1&query=Casa+natal+Santa+Laura+Jeric%C3%B3+Antioquia+Colombia",
               "media": {
-                "path": "assets/jerico/casa-santa-laura.webp",
-                "alt": "Facade of Saint Laura’s birthplace in Jericó",
-                "width": 800,
-                "height": 600,
-                "caption": "Facade of Saint Laura’s birthplace in Jericó"
+                "path": "assets/destinos/1/casa-santa-laura-ilustrada-v2.webp",
+                "alt": "Façade of Saint Laura's birthplace in Jericó, reinterpreted in ink and gouache from a reference photograph.",
+                "width": 1100,
+                "height": 825,
+                "caption": "Façade of Saint Laura's birthplace in Jericó, reinterpreted in ink and gouache from a reference photograph."
               }
             },
             {
               "slug": "los-balsos-botanical-garden",
               "name": "Los Balsos Botanical Garden",
-              "description": "A green space near the town centre to enjoy plants and watch birds.",
+              "description": "A garden near town with paths, a pond and abundant vegetation for a quiet walk and birdwatching.",
               "map_url": "https://www.google.com/maps/search/?api=1&query=Jard%C3%ADn+Bot%C3%A1nico+Los+Balsos+Jeric%C3%B3+Antioquia+Colombia",
+              "media": {
+                "path": "assets/destinos/1/jardin-botanico-los-balsos-ilustrado.webp",
+                "width": 1100,
+                "height": 825,
+                "alt": "Pond, wooden bridge and vegetation at Los Balsos Botanical Garden, in an editorial illustration based on its documented features.",
+                "caption": "Pond, wooden bridge and vegetation at Los Balsos Botanical Garden, in an editorial illustration based on its documented features."
+              }
+            },
+            {
+              "slug": "cerro-de-las-nubes-hike",
+              "name": "Cerro de las Nubes hike",
+              "description": "A mountain climb with viewpoints across southwestern Antioquia. Check trail access and local conditions before setting out.",
+              "map_url": "https://www.google.com/maps/search/?api=1&query=Cerro+de+las+Nubes+Jeric%C3%B3+Antioquia+Colombia",
               "media": null
+            },
+            {
+              "slug": "chorros-de-quebradona",
+              "name": "Chorros de Quebradona",
+              "description": "A rural natural attraction in Jericó, known as Chorros de Quebradona. Check with local sources for the trailhead and current access conditions.",
+              "map_url": "https://www.google.com/maps/search/?api=1&query=Chorros+de+Quebradona+Jeric%C3%B3+Antioquia+Colombia",
+              "media": null
+            },
+            {
+              "slug": "helicoptero-medellin-jerico",
+              "type": "experience",
+              "publication_status": "draft",
+              "name": "Private helicopter flight Medellín–Jericó",
+              "description": "A flight experience that may be offered by a local operator. It will appear once an agreement is confirmed and route, conditions and availability are verified.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/destinos/1/helicoptero-medellin-jerico-ilustracion.webp",
+                "alt": "Editorial illustration of a helicopter flight over green mountains, representing the activity in general.",
+                "width": 1100,
+                "height": 825,
+                "caption": "Editorial illustration of a helicopter flight over green mountains, representing the activity in general."
+              }
+            },
+            {
+              "slug": "parapente-puerto-arturo",
+              "type": "experience",
+              "publication_status": "draft",
+              "name": "Tandem paragliding in Jericó",
+              "description": "A paragliding experience that may be offered by a local operator. It will appear once an agreement is confirmed and launch, landing, conditions and availability are verified.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/destinos/1/parapente-puerto-arturo-ilustracion.webp",
+                "alt": "Editorial illustration of a tandem paraglider over mountains; it does not depict a specific launch or landing site.",
+                "width": 1100,
+                "height": 825,
+                "caption": "Editorial illustration of a tandem paraglider over mountains; it does not depict a specific launch or landing site."
+              }
+            },
+            {
+              "slug": "experiencia-finca-cafetera",
+              "type": "experience",
+              "publication_status": "draft",
+              "name": "Coffee farm experience",
+              "description": "An experience to learn about coffee growing and processing at a farm in Jericó. It will appear once the location is verified and an agreement with its provider is confirmed.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/destinos/1/experiencia-finca-cafetera-ilustracion.webp",
+                "alt": "Editorial illustration of coffee plants with ripe cherries on a mountain slope, representing a coffee experience in general.",
+                "width": 1100,
+                "height": 825,
+                "caption": "Editorial illustration of coffee plants with ripe cherries on a mountain slope, representing a coffee experience in general."
+              }
             }
           ],
           "sources": [
@@ -215,6 +362,11 @@
               "url": "https://normograma.mincultura.gov.co/compilacion/docs/resolucion_mincultura_0663_2018.htm",
               "label": "Jericó’s history and heritage ↗",
               "section_key": "history"
+            },
+            {
+              "url": "https://www.antioquia.gov.co/images/img/turismo/2025/los-imperdibles-de-suroeste-28-30-junio.pdf",
+              "label": "Jericó attractions · Government of Antioquia ↗",
+              "section_key": "places"
             },
             {
               "url": "https://colombia.travel/es/jerico",
@@ -240,18 +392,18 @@
             "Pelos seus mirantes e espaços para se aproximar da natureza."
           ],
           "hero_media": {
-            "path": "assets/jerico.webp",
-            "alt": "Parque principal de Jericó ao pôr do sol",
-            "width": 800,
-            "height": 600,
-            "caption": "Xemenendura/Wikimedia Commons · CC BY-SA 4.0 · Comprimido e aparado."
+            "path": "assets/destinos/1/parque-principal-ilustrado.webp",
+            "alt": "Parque principal e fachada do centro de Jericó, em ilustração editorial baseada em uma fotografia de referência.",
+            "width": 1100,
+            "height": 825,
+            "caption": "Parque principal e fachada do centro de Jericó, em ilustração editorial baseada em uma fotografia de referência."
           },
           "history_media": {
-            "path": "assets/jerico/monumento-santa-laura.webp",
-            "alt": "Monumento a Santa Laura Montoya em Jericó",
+            "path": "assets/destinos/1/monumento-santa-laura-ilustrado-v2.webp",
+            "alt": "Monumento de bronze à Santa Madre Laura e uma menina, em ilustração editorial de tinta e guache baseada em uma fotografia.",
             "width": 900,
             "height": 1200,
-            "caption": "Santa Madre Laura · Um legado de Jericó"
+            "caption": "Monumento de bronze à Santa Madre Laura e uma menina, em ilustração editorial de tinta e guache baseada em uma fotografia."
           },
           "places": [
             {
@@ -260,11 +412,11 @@
               "description": "Caminhe pelo parque principal e pelas ruas próximas para conhecer a arquitetura e o cotidiano da cidade.",
               "map_url": "https://www.google.com/maps/search/?api=1&query=Parque+principal+Jeric%C3%B3+Antioquia+Colombia",
               "media": {
-                "path": "assets/jerico.webp",
-                "alt": "Principal parque e arquitetura do centro de Jericó",
-                "width": 800,
-                "height": 600,
-                "caption": "Principal parque e arquitetura do centro de Jericó"
+                "path": "assets/destinos/1/parque-principal-ilustrado.webp",
+                "alt": "Parque principal e fachada do centro de Jericó, em ilustração editorial baseada em uma fotografia de referência.",
+                "width": 1100,
+                "height": 825,
+                "caption": "Parque principal e fachada do centro de Jericó, em ilustração editorial baseada em uma fotografia de referência."
               }
             },
             {
@@ -273,11 +425,11 @@
               "description": "Um miradouro para contemplar a vila e as montanhas que a rodeiam.",
               "map_url": "https://www.google.com/maps/search/?api=1&query=Cerro+El+Salvador+Jeric%C3%B3+Antioquia+Colombia",
               "media": {
-                "path": "assets/jerico/cristo-salvador-directo.webp",
-                "alt": "Cristo del Cerro El Salvador visto de uma rua em Jericó",
-                "width": 800,
-                "height": 600,
-                "caption": "Cristo del Cerro El Salvador visto de uma rua em Jericó"
+                "path": "assets/destinos/1/cristo-cerro-el-salvador-ilustrado-v2.webp",
+                "alt": "Cristo do Cerro El Salvador visto de perto sobre Jericó, em ilustração editorial baseada em uma fotografia de referência.",
+                "width": 1100,
+                "height": 825,
+                "caption": "Cristo do Cerro El Salvador visto de perto sobre Jericó, em ilustração editorial baseada em uma fotografia de referência."
               }
             },
             {
@@ -286,11 +438,11 @@
               "description": "A igreja rosa é uma das fachadas que chamam a atenção quando se percorre Jericó e se conhece o seu património religioso.",
               "map_url": "https://www.google.com/maps/search/?api=1&query=Santuario%20Santa%20Laura%20Jeric%C3%B3%20Antioquia%20Colombia",
               "media": {
-                "path": "assets/jerico/iglesia-rosada.webp",
-                "alt": "Fachada rosa do Santuário de Santa Laura em Jericó",
-                "width": 674,
-                "height": 1200,
-                "caption": "Fachada rosa do Santuário de Santa Laura em Jericó"
+                "path": "assets/destinos/1/santuario-santa-laura-ilustrado-v2.webp",
+                "alt": "Santuário de Santa Laura em Jericó, com fachada rosa e palmeiras visíveis na entrada, em ilustração editorial baseada em uma fotografia de referência.",
+                "width": 1100,
+                "height": 825,
+                "caption": "Santuário de Santa Laura em Jericó, com fachada rosa e palmeiras visíveis na entrada, em ilustração editorial baseada em uma fotografia de referência."
               }
             },
             {
@@ -299,26 +451,107 @@
               "description": "Conheça um lugar ligado à história de Laura Montoya e à tradição religiosa de Jericó.",
               "map_url": "https://www.google.com/maps/search/?api=1&query=Casa+natal+Santa+Laura+Jeric%C3%B3+Antioquia+Colombia",
               "media": {
-                "path": "assets/jerico/casa-santa-laura.webp",
-                "alt": "Fachada da casa natal de Santa Laura em Jericó",
-                "width": 800,
-                "height": 600,
-                "caption": "Fachada da casa natal de Santa Laura em Jericó"
+                "path": "assets/destinos/1/casa-santa-laura-ilustrada-v2.webp",
+                "alt": "Fachada da casa natal de Santa Laura em Jericó, reinterpretada em tinta e guache a partir de uma fotografia de referência.",
+                "width": 1100,
+                "height": 825,
+                "caption": "Fachada da casa natal de Santa Laura em Jericó, reinterpretada em tinta e guache a partir de uma fotografia de referência."
               }
             },
             {
               "slug": "jardim-botanico-los-balsos",
               "name": "Jardim Botânico Los Balsos",
-              "description": "Espaço verde junto à zona urbana para desfrutar da vegetação e observar aves.",
+              "description": "Um jardim com trilhas, lago e vegetação para caminhar e observar aves, perto da área urbana.",
               "map_url": "https://www.google.com/maps/search/?api=1&query=Jard%C3%ADn+Bot%C3%A1nico+Los+Balsos+Jeric%C3%B3+Antioquia+Colombia",
+              "media": {
+                "path": "assets/destinos/1/jardin-botanico-los-balsos-ilustrado.webp",
+                "width": 1100,
+                "height": 825,
+                "alt": "Lago, ponte de madeira e vegetação do Jardim Botânico Los Balsos, em uma ilustração editorial baseada em elementos documentados.",
+                "caption": "Lago, ponte de madeira e vegetação do Jardim Botânico Los Balsos, em uma ilustração editorial baseada em elementos documentados."
+              }
+            },
+            {
+              "slug": "subida-ao-cerro-de-las-nubes",
+              "name": "Subida ao Cerro de las Nubes",
+              "description": "Um percurso de montanha com mirantes para o Sudoeste de Antioquia. Consulte o acesso à trilha e as condições locais antes de subir.",
+              "map_url": "https://www.google.com/maps/search/?api=1&query=Cerro+de+las+Nubes+Jeric%C3%B3+Antioquia+Colombia",
               "media": null
+            },
+            {
+              "slug": "chorros-de-quebradona",
+              "name": "Chorros de Quebradona",
+              "description": "Atrativo natural rural de Jericó, conhecido como Chorros de Quebradona. Confirme com fontes locais onde começa o percurso e as condições atuais de acesso.",
+              "map_url": "https://www.google.com/maps/search/?api=1&query=Chorros+de+Quebradona+Jeric%C3%B3+Antioquia+Colombia",
+              "media": null
+            },
+            {
+              "slug": "helicoptero-medellin-jerico",
+              "type": "experience",
+              "publication_status": "draft",
+              "name": "Voo privativo de helicóptero Medellín–Jericó",
+              "description": "Experiência de voo que poderá ser oferecida por um operador local. Será exibida quando houver um acordo confirmado e rota, condições e disponibilidade estiverem verificadas.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/destinos/1/helicoptero-medellin-jerico-ilustracion.webp",
+                "alt": "Ilustração editorial de um voo de helicóptero sobre montanhas verdes; representa a atividade de forma geral.",
+                "width": 1100,
+                "height": 825,
+                "caption": "Ilustração editorial de um voo de helicóptero sobre montanhas verdes; representa a atividade de forma geral."
+              }
+            },
+            {
+              "slug": "parapente-puerto-arturo",
+              "type": "experience",
+              "publication_status": "draft",
+              "name": "Voo duplo de parapente em Jericó",
+              "description": "Experiência de parapente que poderá ser oferecida por um operador local. Será exibida quando houver um acordo confirmado e decolagem, pouso, condições e disponibilidade estiverem verificados.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/destinos/1/parapente-puerto-arturo-ilustracion.webp",
+                "alt": "Ilustração editorial de um voo duplo de parapente sobre montanhas; não representa um ponto específico de decolagem ou pouso.",
+                "width": 1100,
+                "height": 825,
+                "caption": "Ilustração editorial de um voo duplo de parapente sobre montanhas; não representa um ponto específico de decolagem ou pouso."
+              }
+            },
+            {
+              "slug": "experiencia-finca-cafetera",
+              "type": "experience",
+              "publication_status": "draft",
+              "name": "Experiência em fazenda de café",
+              "description": "Experiência para conhecer o cultivo e o processamento do café em uma fazenda de Jericó. Será exibida quando o local for confirmado e houver acordo com quem a oferece.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/destinos/1/experiencia-finca-cafetera-ilustracion.webp",
+                "alt": "Ilustração editorial de cafezais com frutos maduros em uma encosta; representa uma experiência cafeeira de forma geral.",
+                "width": 1100,
+                "height": 825,
+                "caption": "Ilustração editorial de cafezais com frutos maduros em uma encosta; representa uma experiência cafeeira de forma geral."
+              }
             }
           ],
           "sources": [
             {
+              "url": "https://www.antioquia.gov.co/images/img/turismo/2025/los-imperdibles-de-suroeste-28-30-junio.pdf",
+              "label": "Atrações de Jericó · Governo de Antioquia ↗",
+              "section_key": "places"
+            },
+            {
               "url": "https://normograma.mincultura.gov.co/compilacion/docs/resolucion_mincultura_0663_2018.htm",
               "label": "História e patrimônio de Jericó ↗",
               "section_key": "history"
+            },
+            {
+              "url": "https://www.antioquia.gov.co/images/img/turismo/2025/los-imperdibles-de-suroeste-28-30-junio.pdf",
+              "label": "Atrativos de Jericó · Governo de Antioquia ↗",
+              "section_key": "places"
             },
             {
               "url": "https://colombia.travel/es/jerico",
@@ -5127,8 +5360,293 @@
   ],
   "media": [
     {
+      "path": "assets/destinos/1/casa-santa-laura-ilustrada-v2.webp",
+      "origin": "ai_generated",
+      "author": "Explorando Lugares",
+      "creator": "Explorando Lugares",
+      "source_url": "",
+      "license_name": "Ilustración editorial generada con IA",
+      "license_url": "",
+      "width": 1100,
+      "height": 825,
+      "translations": {
+        "es": {
+          "alt": "Fachada de la casa natal de Santa Laura en Jericó, reinterpretada en tinta y gouache a partir de una fotografía de referencia.",
+          "caption": "Fachada de la casa natal de Santa Laura en Jericó, reinterpretada en tinta y gouache a partir de una fotografía de referencia."
+        },
+        "en": {
+          "alt": "Façade of Saint Laura's birthplace in Jericó, reinterpreted in ink and gouache from a reference photograph.",
+          "caption": "Façade of Saint Laura's birthplace in Jericó, reinterpreted in ink and gouache from a reference photograph."
+        },
+        "pt-BR": {
+          "alt": "Fachada da casa natal de Santa Laura em Jericó, reinterpretada em tinta e guache a partir de uma fotografia de referência.",
+          "caption": "Fachada da casa natal de Santa Laura em Jericó, reinterpretada em tinta e guache a partir de uma fotografia de referência."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "jerico",
+          "role": "poi:4"
+        }
+      ]
+    },
+    {
+      "path": "assets/destinos/1/cristo-cerro-el-salvador-ilustrado-v2.webp",
+      "origin": "ai_generated",
+      "author": "Explorando Lugares",
+      "creator": "Explorando Lugares",
+      "source_url": "",
+      "license_name": "Ilustración editorial generada con IA",
+      "license_url": "",
+      "width": 1100,
+      "height": 825,
+      "translations": {
+        "es": {
+          "alt": "Cristo del Cerro El Salvador visto de cerca sobre Jericó, en ilustración editorial basada en una fotografía de referencia.",
+          "caption": "Cristo del Cerro El Salvador visto de cerca sobre Jericó, en ilustración editorial basada en una fotografía de referencia."
+        },
+        "en": {
+          "alt": "Christ statue on El Salvador Hill seen closer above Jericó, in an editorial illustration based on a reference photograph.",
+          "caption": "Christ statue on El Salvador Hill seen closer above Jericó, in an editorial illustration based on a reference photograph."
+        },
+        "pt-BR": {
+          "alt": "Cristo do Cerro El Salvador visto de perto sobre Jericó, em ilustração editorial baseada em uma fotografia de referência.",
+          "caption": "Cristo do Cerro El Salvador visto de perto sobre Jericó, em ilustração editorial baseada em uma fotografia de referência."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "jerico",
+          "role": "poi:2"
+        }
+      ]
+    },
+    {
+      "path": "assets/destinos/1/experiencia-finca-cafetera-ilustracion.webp",
+      "origin": "ai_generated",
+      "author": "Explorando Lugares",
+      "creator": "Explorando Lugares",
+      "source_url": "",
+      "license_name": "Ilustración editorial generada con IA",
+      "license_url": "",
+      "width": 1100,
+      "height": 825,
+      "translations": {
+        "es": {
+          "alt": "Ilustración editorial de cafetos con frutos maduros en una ladera de montaña; representa una experiencia cafetera de forma general.",
+          "caption": "Ilustración editorial de cafetos con frutos maduros en una ladera de montaña; representa una experiencia cafetera de forma general."
+        },
+        "en": {
+          "alt": "Editorial illustration of coffee plants with ripe cherries on a mountain slope, representing a coffee experience in general.",
+          "caption": "Editorial illustration of coffee plants with ripe cherries on a mountain slope, representing a coffee experience in general."
+        },
+        "pt-BR": {
+          "alt": "Ilustração editorial de cafezais com frutos maduros em uma encosta; representa uma experiência cafeeira de forma geral.",
+          "caption": "Ilustração editorial de cafezais com frutos maduros em uma encosta; representa uma experiência cafeeira de forma geral."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "jerico",
+          "role": "poi:10"
+        }
+      ]
+    },
+    {
+      "path": "assets/destinos/1/helicoptero-medellin-jerico-ilustracion.webp",
+      "origin": "ai_generated",
+      "author": "Explorando Lugares",
+      "creator": "Explorando Lugares",
+      "source_url": "",
+      "license_name": "Ilustración editorial generada con IA",
+      "license_url": "",
+      "width": 1100,
+      "height": 825,
+      "translations": {
+        "es": {
+          "alt": "Ilustración editorial de un vuelo en helicóptero sobre montañas verdes; representa la actividad de forma general.",
+          "caption": "Ilustración editorial de un vuelo en helicóptero sobre montañas verdes; representa la actividad de forma general."
+        },
+        "en": {
+          "alt": "Editorial illustration of a helicopter flight over green mountains, representing the activity in general.",
+          "caption": "Editorial illustration of a helicopter flight over green mountains, representing the activity in general."
+        },
+        "pt-BR": {
+          "alt": "Ilustração editorial de um voo de helicóptero sobre montanhas verdes; representa a atividade de forma geral.",
+          "caption": "Ilustração editorial de um voo de helicóptero sobre montanhas verdes; representa a atividade de forma geral."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "jerico",
+          "role": "poi:8"
+        }
+      ]
+    },
+    {
+      "path": "assets/destinos/1/jardin-botanico-los-balsos-ilustrado.webp",
+      "origin": "ai_generated",
+      "author": "Explorando Lugares",
+      "creator": "Explorando Lugares",
+      "source_url": "",
+      "license_name": "Ilustración editorial generada con IA",
+      "license_url": "",
+      "width": 1100,
+      "height": 825,
+      "translations": {
+        "es": {
+          "alt": "Estanque, puente de madera y vegetación del Jardín Botánico Los Balsos, en una ilustración editorial basada en sus elementos documentados.",
+          "caption": "Estanque, puente de madera y vegetación del Jardín Botánico Los Balsos, en una ilustración editorial basada en sus elementos documentados."
+        },
+        "en": {
+          "alt": "Pond, wooden bridge and vegetation at Los Balsos Botanical Garden, in an editorial illustration based on its documented features.",
+          "caption": "Pond, wooden bridge and vegetation at Los Balsos Botanical Garden, in an editorial illustration based on its documented features."
+        },
+        "pt-BR": {
+          "alt": "Lago, ponte de madeira e vegetação do Jardim Botânico Los Balsos, em uma ilustração editorial baseada em elementos documentados.",
+          "caption": "Lago, ponte de madeira e vegetação do Jardim Botânico Los Balsos, em uma ilustração editorial baseada em elementos documentados."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "jerico",
+          "role": "poi:5"
+        }
+      ]
+    },
+    {
+      "path": "assets/destinos/1/monumento-santa-laura-ilustrado-v2.webp",
+      "origin": "ai_generated",
+      "author": "Explorando Lugares",
+      "creator": "Explorando Lugares",
+      "source_url": "",
+      "license_name": "Ilustración editorial generada con IA",
+      "license_url": "",
+      "width": 900,
+      "height": 1200,
+      "translations": {
+        "es": {
+          "alt": "Monumento de bronce a Santa Madre Laura y una niña, en una ilustración editorial de tinta y gouache basada en una fotografía.",
+          "caption": "Monumento de bronce a Santa Madre Laura y una niña, en una ilustración editorial de tinta y gouache basada en una fotografía."
+        },
+        "en": {
+          "alt": "Bronze monument to Saint Mother Laura and a child, in an editorial ink-and-gouache illustration based on a photograph.",
+          "caption": "Bronze monument to Saint Mother Laura and a child, in an editorial ink-and-gouache illustration based on a photograph."
+        },
+        "pt-BR": {
+          "alt": "Monumento de bronze à Santa Madre Laura e uma menina, em ilustração editorial de tinta e guache baseada em uma fotografia.",
+          "caption": "Monumento de bronze à Santa Madre Laura e uma menina, em ilustração editorial de tinta e guache baseada em uma fotografia."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "jerico",
+          "role": "history"
+        }
+      ]
+    },
+    {
+      "path": "assets/destinos/1/parapente-puerto-arturo-ilustracion.webp",
+      "origin": "ai_generated",
+      "author": "Explorando Lugares",
+      "creator": "Explorando Lugares",
+      "source_url": "",
+      "license_name": "Ilustración editorial generada con IA",
+      "license_url": "",
+      "width": 1100,
+      "height": 825,
+      "translations": {
+        "es": {
+          "alt": "Ilustración editorial de un vuelo biplaza en parapente sobre montañas; no representa un punto específico de despegue o aterrizaje.",
+          "caption": "Ilustración editorial de un vuelo biplaza en parapente sobre montañas; no representa un punto específico de despegue o aterrizaje."
+        },
+        "en": {
+          "alt": "Editorial illustration of a tandem paraglider over mountains; it does not depict a specific launch or landing site.",
+          "caption": "Editorial illustration of a tandem paraglider over mountains; it does not depict a specific launch or landing site."
+        },
+        "pt-BR": {
+          "alt": "Ilustração editorial de um voo duplo de parapente sobre montanhas; não representa um ponto específico de decolagem ou pouso.",
+          "caption": "Ilustração editorial de um voo duplo de parapente sobre montanhas; não representa um ponto específico de decolagem ou pouso."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "jerico",
+          "role": "poi:9"
+        }
+      ]
+    },
+    {
+      "path": "assets/destinos/1/parque-principal-ilustrado.webp",
+      "origin": "ai_generated",
+      "author": "Explorando Lugares",
+      "creator": "Explorando Lugares",
+      "source_url": "",
+      "license_name": "Ilustración editorial generada con IA",
+      "license_url": "",
+      "width": 1100,
+      "height": 825,
+      "translations": {
+        "es": {
+          "alt": "Parque principal y fachada del centro de Jericó, en ilustración editorial basada en una fotografía de referencia.",
+          "caption": "Parque principal y fachada del centro de Jericó, en ilustración editorial basada en una fotografía de referencia."
+        },
+        "en": {
+          "alt": "Jericó main square and historic façade, in an editorial illustration based on a reference photograph.",
+          "caption": "Jericó main square and historic façade, in an editorial illustration based on a reference photograph."
+        },
+        "pt-BR": {
+          "alt": "Parque principal e fachada do centro de Jericó, em ilustração editorial baseada em uma fotografia de referência.",
+          "caption": "Parque principal e fachada do centro de Jericó, em ilustração editorial baseada em uma fotografia de referência."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "jerico",
+          "role": "hero"
+        },
+        {
+          "destination_slug": "jerico",
+          "role": "poi:1"
+        }
+      ]
+    },
+    {
+      "path": "assets/destinos/1/santuario-santa-laura-ilustrado-v2.webp",
+      "origin": "ai_generated",
+      "author": "Explorando Lugares",
+      "creator": "Explorando Lugares",
+      "source_url": "",
+      "license_name": "Ilustración editorial generada con IA",
+      "license_url": "",
+      "width": 1100,
+      "height": 825,
+      "translations": {
+        "es": {
+          "alt": "Santuario de Santa Laura en Jericó, con su fachada rosada y palmas visibles en la entrada, en ilustración editorial basada en una fotografía de referencia.",
+          "caption": "Santuario de Santa Laura en Jericó, con su fachada rosada y palmas visibles en la entrada, en ilustración editorial basada en una fotografía de referencia."
+        },
+        "en": {
+          "alt": "Sanctuary of Saint Laura in Jericó, with its pink façade and palms visible at the entrance, in an editorial illustration based on a reference photograph.",
+          "caption": "Sanctuary of Saint Laura in Jericó, with its pink façade and palms visible at the entrance, in an editorial illustration based on a reference photograph."
+        },
+        "pt-BR": {
+          "alt": "Santuário de Santa Laura em Jericó, com fachada rosa e palmeiras visíveis na entrada, em ilustração editorial baseada em uma fotografia de referência.",
+          "caption": "Santuário de Santa Laura em Jericó, com fachada rosa e palmeiras visíveis na entrada, em ilustração editorial baseada em uma fotografia de referência."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "jerico",
+          "role": "poi:3"
+        }
+      ]
+    },
+    {
       "path": "assets/destinos/arboletes-1.webp",
+      "origin": "external",
       "author": "Hdhdhdybooty",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:Arboletestropical.jpg",
       "license_name": "CC BY-SA 4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -5157,7 +5675,9 @@
     },
     {
       "path": "assets/destinos/arboletes-2.webp",
+      "origin": "external",
       "author": "Carlos Chalarca",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:Arboletes_1_(94757807).jpeg",
       "license_name": "CC BY 3.0",
       "license_url": "https://creativecommons.org/licenses/by/3.0",
@@ -5186,7 +5706,9 @@
     },
     {
       "path": "assets/destinos/arboletes-3.webp",
+      "origin": "external",
       "author": "Carlos Chalarca",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:Ba%C3%B1o_De_Mar_(94757811).jpeg",
       "license_name": "CC BY 3.0",
       "license_url": "https://creativecommons.org/licenses/by/3.0",
@@ -5215,7 +5737,9 @@
     },
     {
       "path": "assets/destinos/cocorna-1.webp",
+      "origin": "external",
       "author": "camilogaleano.com",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:Cocorn%C3%A1_-Antioquia_-_camilogaleano(.)com.jpg",
       "license_name": "CC BY-SA 4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -5244,7 +5768,9 @@
     },
     {
       "path": "assets/destinos/cocorna-2.webp",
+      "origin": "external",
       "author": "Moterocolombia",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:Cocorn%C3%A1_parque.jpg",
       "license_name": "CC BY-SA 4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -5277,7 +5803,9 @@
     },
     {
       "path": "assets/destinos/el-carmen-de-viboral-1.webp",
+      "origin": "external",
       "author": "Fernando Gallo B",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:Panoramica_del_parque_de_El_Carmen_de_viboral_antioquia_colombia_-_panoramio.jpg",
       "license_name": "CC BY 3.0",
       "license_url": "https://creativecommons.org/licenses/by/3.0",
@@ -5310,7 +5838,9 @@
     },
     {
       "path": "assets/destinos/el-carmen-de-viboral-2.webp",
+      "origin": "external",
       "author": "Fernando Gallo B",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:Iglesia_El_carmen_de_viboral_-_panoramio.jpg",
       "license_name": "CC BY 3.0",
       "license_url": "https://creativecommons.org/licenses/by/3.0",
@@ -5343,7 +5873,9 @@
     },
     {
       "path": "assets/destinos/el-penol-1.webp",
+      "origin": "external",
       "author": "Moterocolombia",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:El_Pe%C3%B1ol.jpg",
       "license_name": "CC BY-SA 4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -5372,7 +5904,9 @@
     },
     {
       "path": "assets/destinos/el-penol-2.webp",
+      "origin": "external",
       "author": "Moterocolombia",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:El_Pe%C3%B1ol_r%C3%A9plica_del_pueblo_inundado_para_construir_la_represa.jpg",
       "license_name": "CC BY-SA 4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -5405,7 +5939,9 @@
     },
     {
       "path": "assets/destinos/el-penol-3.webp",
+      "origin": "external",
       "author": "Nathaly 1106",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:Embalse_Pe%C3%B1ol-Guatape.jpg",
       "license_name": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0",
@@ -5434,7 +5970,9 @@
     },
     {
       "path": "assets/destinos/el-retiro-1.webp",
+      "origin": "external",
       "author": "Andres EM",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:El_Retiro-Antioquia.jpg",
       "license_name": "CC BY 2.0",
       "license_url": "https://creativecommons.org/licenses/by/2.0",
@@ -5463,7 +6001,9 @@
     },
     {
       "path": "assets/destinos/el-retiro-2.webp",
+      "origin": "external",
       "author": "SharonFernandezPana",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:Salto_de_Tequendamita,_Antioquia,_Colombia.jpg",
       "license_name": "CC BY-SA 4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -5496,7 +6036,9 @@
     },
     {
       "path": "assets/destinos/el-retiro-3.webp",
+      "origin": "external",
       "author": "Marcas1613",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:Panor%C3%A1mica_zona_rural.jpg",
       "license_name": "CC BY-SA 4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -5525,7 +6067,9 @@
     },
     {
       "path": "assets/destinos/guatape-1.webp",
+      "origin": "external",
       "author": "camilogaleano.com",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:Guatape_-_Antioquia_-_camilogaleano(.)com.jpg",
       "license_name": "CC BY-SA 4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -5554,7 +6098,9 @@
     },
     {
       "path": "assets/destinos/guatape-2.webp",
+      "origin": "external",
       "author": "Pownerus",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:Z%C3%B3calo_Guatap%C3%A9.jpg",
       "license_name": "CC BY-SA 4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -5587,7 +6133,9 @@
     },
     {
       "path": "assets/destinos/guatape-3.webp",
+      "origin": "external",
       "author": "Dasha Shishkova",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:Piedra_del_Pe%C3%B1ol.jpg",
       "license_name": "CC BY-SA 4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -5616,7 +6164,9 @@
     },
     {
       "path": "assets/destinos/guatape-4.webp",
+      "origin": "external",
       "author": "Juan Almonacid",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:Embalse_de_Guatape.jpg",
       "license_name": "CC BY-SA 2.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
@@ -5645,7 +6195,9 @@
     },
     {
       "path": "assets/destinos/jardin-1.webp",
+      "origin": "external",
       "author": "No machine-readable author provided. Scabredon~commonswiki assumed (based on copyright claims).",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:Panor%C3%A1micaJard%C3%ADnAntioquia.jpg",
       "license_name": "Public domain",
       "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
@@ -5674,7 +6226,9 @@
     },
     {
       "path": "assets/destinos/jardin-2.webp",
+      "origin": "external",
       "author": "Hiperion93",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:Bas%C3%ADlica_Menor_de_la_Inmaculada_Concepci%C3%B3n_y_fuente_Parque_El_Libertador_-_Jard%C3%ADn.jpg",
       "license_name": "Public domain",
       "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
@@ -5711,7 +6265,9 @@
     },
     {
       "path": "assets/destinos/jardin-3.webp",
+      "origin": "external",
       "author": "Hiperion93",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:Quebrada_La_Herrera.jpg",
       "license_name": "Public domain",
       "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
@@ -5740,7 +6296,9 @@
     },
     {
       "path": "assets/destinos/medellin-1.webp",
+      "origin": "external",
       "author": "Luis90f",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:Panor%C3%A1mica_de_Medell%C3%ADn_desde_el_Cerro_El_Picacho.jpg",
       "license_name": "CC BY-SA 4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -5769,7 +6327,9 @@
     },
     {
       "path": "assets/destinos/medellin-2.webp",
+      "origin": "external",
       "author": "No machine-readable author provided. Scabredon~commonswiki assumed (based on copyright claims).",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:Pano_Plazo_Botero.jpg",
       "license_name": "Public domain",
       "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
@@ -5802,7 +6362,9 @@
     },
     {
       "path": "assets/destinos/medellin-3.webp",
+      "origin": "external",
       "author": "Jorge Láscar",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:Orchidiarium_-_Medellin_Botanical_Gardens.jpg",
       "license_name": "CC BY-SA 3.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
@@ -5831,7 +6393,9 @@
     },
     {
       "path": "assets/destinos/medellin-4.webp",
+      "origin": "external",
       "author": "User: (WT-shared) CONOCER at  wts wikivoyage",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:El_Poblado_neighborhood.jpg",
       "license_name": "Public domain",
       "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
@@ -5860,7 +6424,9 @@
     },
     {
       "path": "assets/destinos/necocli-1.webp",
+      "origin": "external",
       "author": "No machine-readable author provided. Jorgehossa assumed (based on copyright claims).",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:Necocl%C3%AD_banner.jpg",
       "license_name": "CC BY-SA 2.5",
       "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
@@ -5889,7 +6455,9 @@
     },
     {
       "path": "assets/destinos/necocli-2.webp",
+      "origin": "external",
       "author": "Motero Colombia",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:Necocl%C3%AD_parque_renovado.jpg",
       "license_name": "CC BY-SA 4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -5918,7 +6486,9 @@
     },
     {
       "path": "assets/destinos/necocli-3.webp",
+      "origin": "external",
       "author": "Liu Idárraga Orozco",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:Bajo_Cariban%C3%A1,_vista_desde_el_Cerro_del_%C3%81guila_-_Liu_Id%C3%A1rraga_Orozco.jpg",
       "license_name": "CC BY-SA 4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -5947,7 +6517,9 @@
     },
     {
       "path": "assets/destinos/puerto-triunfo-1.webp",
+      "origin": "external",
       "author": "05591",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:Reserva_Natural_R%C3%ADo_Claro_0.jpg",
       "license_name": "CC BY-SA 4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -5980,7 +6552,9 @@
     },
     {
       "path": "assets/destinos/puerto-triunfo-2.webp",
+      "origin": "external",
       "author": "05591",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:Reserva_Natural_R%C3%ADo_Claro_1.jpg",
       "license_name": "CC BY-SA 4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -6009,7 +6583,9 @@
     },
     {
       "path": "assets/destinos/rionegro-1.webp",
+      "origin": "external",
       "author": "XalD",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:Concatedral_de_San_Nicol%C3%A1s_el_Magno_de_Rionegro_-_exterior_3.jpg",
       "license_name": "CC BY-SA 4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -6042,7 +6618,9 @@
     },
     {
       "path": "assets/destinos/rionegro-2.webp",
+      "origin": "external",
       "author": "Daniel Henao",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:Cordova_de_Arenas_Betancur.JPG",
       "license_name": "CC BY-SA 3.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
@@ -6075,7 +6653,9 @@
     },
     {
       "path": "assets/destinos/san-carlos-1.webp",
+      "origin": "external",
       "author": "Motero colombia",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:San_Carlos_parque.jpg",
       "license_name": "CC BY-SA 4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -6108,7 +6688,9 @@
     },
     {
       "path": "assets/destinos/san-carlos-2.webp",
+      "origin": "external",
       "author": "Davidct811",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:Vereda_agua_linda_San_carlos.jpg",
       "license_name": "CC BY-SA 4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -6137,7 +6719,9 @@
     },
     {
       "path": "assets/destinos/san-jeronimo-1.webp",
+      "origin": "external",
       "author": "SajoR",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:Vista_de_San_jeronimo_-_Antioquia.jpg",
       "license_name": "CC BY-SA 4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -6166,7 +6750,9 @@
     },
     {
       "path": "assets/destinos/san-jeronimo-2.webp",
+      "origin": "external",
       "author": "SajoR",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:Fachada_Templo_del_Municipio_de_San_Jeronimo.jpg",
       "license_name": "CC BY-SA 4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -6199,7 +6785,9 @@
     },
     {
       "path": "assets/destinos/san-pedro-de-los-milagros-1.webp",
+      "origin": "external",
       "author": "~~×α£đ~~es",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:San_Pedro_de_los_Milagros-parque.JPG",
       "license_name": "CC BY-SA 3.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
@@ -6232,7 +6820,9 @@
     },
     {
       "path": "assets/destinos/san-pedro-de-los-milagros-2.webp",
+      "origin": "external",
       "author": "SajoR",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:Basilica_del_Se%C3%B1or_de_los_Milagros-San_Pedro.JPG",
       "license_name": "CC BY-SA 2.5",
       "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
@@ -6265,7 +6855,9 @@
     },
     {
       "path": "assets/destinos/san-pedro-de-los-milagros-3.webp",
+      "origin": "external",
       "author": "laloking97",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:Embalse_de_San_Pedro_y_Entrerrios.jpg",
       "license_name": "CC BY-SA 2.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
@@ -6294,7 +6886,9 @@
     },
     {
       "path": "assets/destinos/san-rafael-1.webp",
+      "origin": "external",
       "author": "Jacques Di Saint",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:Sanrafaelant.jpg",
       "license_name": "CC BY-SA 4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -6323,7 +6917,9 @@
     },
     {
       "path": "assets/destinos/san-rafael-2.webp",
+      "origin": "external",
       "author": "Alejandro Rojas (SajoR)",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:R%C3%ADo_Arenal_-_San_Rafael_1.jpg",
       "license_name": "CC BY-SA 4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -6356,7 +6952,9 @@
     },
     {
       "path": "assets/destinos/san-rafael-3.webp",
+      "origin": "external",
       "author": "Alejandro Rojas (SajoR)",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:R%C3%ADo_Guatap%C3%A9_por_su_paso_por_San_Rafael_1.jpg",
       "license_name": "CC BY-SA 4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -6385,7 +6983,9 @@
     },
     {
       "path": "assets/destinos/santa-fe-de-antioquia-1.webp",
+      "origin": "external",
       "author": "laloking97",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:SANTA_FE_DE_ANTIOQUIA-4.jpg",
       "license_name": "CC BY-SA 2.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
@@ -6418,7 +7018,9 @@
     },
     {
       "path": "assets/destinos/santa-fe-de-antioquia-2.webp",
+      "origin": "external",
       "author": "Amdalex20",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:Iglesia_de_La_Chinca.jpg",
       "license_name": "CC BY-SA 3.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
@@ -6451,7 +7053,9 @@
     },
     {
       "path": "assets/destinos/santa-fe-de-antioquia-4.webp",
+      "origin": "external",
       "author": "Swedish Colombian",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:Puente_de_Occidente-top.jpg",
       "license_name": "CC BY 2.0",
       "license_url": "https://creativecommons.org/licenses/by/2.0",
@@ -6480,7 +7084,9 @@
     },
     {
       "path": "assets/destinos/santa-rosa-de-osos-1.webp",
+      "origin": "external",
       "author": "Estebansro",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:Parque_Santa_Rosa_de_Osos.JPG",
       "license_name": "CC BY-SA 3.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
@@ -6513,7 +7119,9 @@
     },
     {
       "path": "assets/destinos/santa-rosa-de-osos-2.webp",
+      "origin": "external",
       "author": "~~×α£đ~~es",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:Basilica_de_Nra_Sra_de_las_Misericordias-exterior.jpg",
       "license_name": "CC BY-SA 3.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
@@ -6546,7 +7154,9 @@
     },
     {
       "path": "assets/destinos/santa-rosa-de-osos-3.webp",
+      "origin": "external",
       "author": "laloking97",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:Porfirio_Barba_Jacob_de_Rodrigo_Arenas_Betancur.jpg",
       "license_name": "CC BY-SA 2.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
@@ -6575,7 +7185,9 @@
     },
     {
       "path": "assets/destinos/sopetran-1.webp",
+      "origin": "external",
       "author": "laloking97",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:Sopetr%C3%A1n_panor%C3%A1mica.jpg",
       "license_name": "CC BY-SA 2.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
@@ -6604,7 +7216,9 @@
     },
     {
       "path": "assets/destinos/sopetran-2.webp",
+      "origin": "external",
       "author": "XalD",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:Sopetr%C3%A1n,_2022_-_bas%C3%ADlica_y_parque.jpg",
       "license_name": "CC BY-SA 4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -6641,7 +7255,9 @@
     },
     {
       "path": "assets/destinos/tamesis-1.webp",
+      "origin": "external",
       "author": "VX Audiovisual",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:T%C3%A1mesis_%22La_tierra_del_siempre_volver%22.jpg",
       "license_name": "CC BY-SA 4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -6670,7 +7286,9 @@
     },
     {
       "path": "assets/destinos/tamesis-2.webp",
+      "origin": "external",
       "author": "XalD",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:T%C3%A1mesis,_2021_-_calle_de_la_iglesia_01.jpg",
       "license_name": "CC BY-SA 4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -6703,7 +7321,9 @@
     },
     {
       "path": "assets/destinos/venecia-1.webp",
+      "origin": "external",
       "author": "Kalvinandres",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:Iglesia_de_San_Jos%C3%A9_(Venecia)_-_fachada.jpg",
       "license_name": "CC BY-SA 3.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
@@ -6736,7 +7356,9 @@
     },
     {
       "path": "assets/destinos/venecia-3.webp",
+      "origin": "external",
       "author": "XalD",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:Parque_principal_de_Venecia_-_esquina.jpg",
       "license_name": "CC BY-SA 4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -6765,7 +7387,9 @@
     },
     {
       "path": "assets/destinos/venecia-4.webp",
+      "origin": "external",
       "author": "No machine-readable author provided. Kamilokardona assumed (based on copyright claims).",
+      "creator": "",
       "source_url": "https://commons.wikimedia.org/wiki/File:CERRO_TUSA.jpg",
       "license_name": "Public domain",
       "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
@@ -6793,155 +7417,6 @@
         {
           "destination_slug": "venecia",
           "role": "poi:1"
-        }
-      ]
-    },
-    {
-      "path": "assets/jerico.webp",
-      "author": "Xemenendura",
-      "source_url": "https://commons.wikimedia.org/wiki/File:El_parque_Jeric%C3%B3.jpg",
-      "license_name": "CC BY-SA 4.0",
-      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "width": 800,
-      "height": 600,
-      "translations": {
-        "es": {
-          "alt": "Parque principal y arquitectura del centro de Jericó",
-          "caption": "Parque principal y arquitectura del centro de Jericó"
-        },
-        "en": {
-          "alt": "Main square and architecture in central Jericó",
-          "caption": "Main square and architecture in central Jericó"
-        },
-        "pt-BR": {
-          "alt": "Principal parque e arquitetura do centro de Jericó",
-          "caption": "Principal parque e arquitetura do centro de Jericó"
-        }
-      },
-      "placements": [
-        {
-          "destination_slug": "jerico",
-          "role": "hero"
-        },
-        {
-          "destination_slug": "jerico",
-          "role": "poi:1"
-        }
-      ]
-    },
-    {
-      "path": "assets/jerico/casa-santa-laura.webp",
-      "author": "Xemenendura",
-      "source_url": "https://commons.wikimedia.org/wiki/File:Casa_de_la_beata_Laura.jpg",
-      "license_name": "CC BY-SA 4.0",
-      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-      "width": 800,
-      "height": 600,
-      "translations": {
-        "es": {
-          "alt": "Fachada de la casa natal de Santa Laura en Jericó",
-          "caption": "Fachada de la casa natal de Santa Laura en Jericó"
-        },
-        "en": {
-          "alt": "Facade of Saint Laura’s birthplace in Jericó",
-          "caption": "Facade of Saint Laura’s birthplace in Jericó"
-        },
-        "pt-BR": {
-          "alt": "Fachada da casa natal de Santa Laura em Jericó",
-          "caption": "Fachada da casa natal de Santa Laura em Jericó"
-        }
-      },
-      "placements": [
-        {
-          "destination_slug": "jerico",
-          "role": "poi:4"
-        }
-      ]
-    },
-    {
-      "path": "assets/jerico/cristo-salvador-directo.webp",
-      "author": "Xemenendura",
-      "source_url": "https://commons.wikimedia.org/wiki/File:Cristo_en_Jeric%C3%B3.jpg",
-      "license_name": "CC BY-SA 4.0",
-      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-      "width": 800,
-      "height": 600,
-      "translations": {
-        "es": {
-          "alt": "Cristo del Cerro El Salvador visto desde una calle de Jericó",
-          "caption": "Cristo del Cerro El Salvador visto desde una calle de Jericó"
-        },
-        "en": {
-          "alt": "Christ statue on El Salvador Hill seen from a street in Jericó",
-          "caption": "Christ statue on El Salvador Hill seen from a street in Jericó"
-        },
-        "pt-BR": {
-          "alt": "Cristo do Cerro El Salvador visto de uma rua em Jericó",
-          "caption": "Cristo del Cerro El Salvador visto de uma rua em Jericó"
-        }
-      },
-      "placements": [
-        {
-          "destination_slug": "jerico",
-          "role": "poi:2"
-        }
-      ]
-    },
-    {
-      "path": "assets/jerico/iglesia-rosada.webp",
-      "author": "Angel OLMEDO",
-      "source_url": "https://commons.wikimedia.org/wiki/File:Jeric%C3%B3,_santuario_Madre_Laura.jpg",
-      "license_name": "Public domain",
-      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
-      "width": 674,
-      "height": 1200,
-      "translations": {
-        "es": {
-          "alt": "Fachada rosada del Santuario de Santa Laura en Jericó",
-          "caption": "Fachada rosada del Santuario de Santa Laura en Jericó"
-        },
-        "en": {
-          "alt": "Pink facade of the Saint Laura Sanctuary in Jericó",
-          "caption": "Pink facade of the Saint Laura Sanctuary in Jericó"
-        },
-        "pt-BR": {
-          "alt": "Fachada rosa do Santuário de Santa Laura em Jericó",
-          "caption": "Fachada rosa do Santuário de Santa Laura em Jericó"
-        }
-      },
-      "placements": [
-        {
-          "destination_slug": "jerico",
-          "role": "poi:3"
-        }
-      ]
-    },
-    {
-      "path": "assets/jerico/monumento-santa-laura.webp",
-      "author": "Raomir Ramirez Morales",
-      "source_url": "https://commons.wikimedia.org/wiki/File:Santa_Laura_Montoya_Upegui,_Jeric%C3%B3_Antioquia.jpg",
-      "license_name": "CC BY-SA 3.0",
-      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-      "width": 900,
-      "height": 1200,
-      "translations": {
-        "es": {
-          "alt": "Monumento a Santa Laura Montoya en Jericó",
-          "caption": "Santa Madre Laura · Un legado de Jericó"
-        },
-        "en": {
-          "alt": "Monument to Saint Laura Montoya in Jericó",
-          "caption": "Mother Laura · A legacy of Jericó"
-        },
-        "pt-BR": {
-          "alt": "Monumento a Santa Laura Montoya em Jericó",
-          "caption": "Santa Madre Laura · Um legado de Jericó"
-        }
-      },
-      "placements": [
-        {
-          "destination_slug": "jerico",
-          "role": "history"
         }
       ]
     }
