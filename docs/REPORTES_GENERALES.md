@@ -54,3 +54,7 @@ Validación: `php backend/tests/advance/reports.php`, pruebas HTTP privadas y li
 - Motivos editoriales de bloqueo y tareas de implementación explícitas. Las comprobaciones actuales solo señalan faltantes observables; no inventan por qué no se publicó.
 - Filtros por periodo/destino, exportaciones y gestión más completa del ciclo comercial.
 - Validación MySQL/MariaDB, datos reales y conciliación antes de interpretar el reporte como estado real del negocio.
+
+## Navegación por pestañas
+
+Cada sección se muestra por separado mediante `reports.php?tab=overview|work|billing|catalog|traffic`. La pestaña activa queda marcada y su URL permite actualizar o compartir la vista local sin perderla. Guardar datos comerciales vuelve a Suscripciones y recaudo; clasificar operadores vuelve a Negocios por destino. No se usa desplazamiento por anclas para cambiar de reporte.
