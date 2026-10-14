@@ -2,10 +2,12 @@
 """Genera robots.txt, sitemap.xml y las directivas de indexación públicas."""
 from pathlib import Path, PurePosixPath
 from xml.sax.saxutils import escape
+import json
 
 ROOT=Path(__file__).resolve().parents[1]
 PUBLIC=ROOT/'ensayos/v1'
 SITE='https://explorandolugares.com'
+DESTINATION_PUBLICATION=json.loads((ROOT/'content/estado-publicacion-destinos.json').read_text())
 
 # Páginas de navegación o contenido aprobado para aparecer en buscadores.
 PRIVATE_PREFIXES=(('admin',),('api',))
@@ -27,6 +29,9 @@ def approved(relative: PurePosixPath) -> bool:
         return False
     for language in ((),('en',),('pt-br',)):
         offset=len(language)
+        if parts[:offset]==language and len(parts)>offset+1 and parts[offset]=='destinos' and parts[offset+1]!='index.html':
+            if DESTINATION_PUBLICATION.get(parts[offset+1])!='published':
+                return False
         if parts[:offset]==language and parts[offset:offset+2]==('destinos','jerico'):
             return len(parts)<offset+4 or parts[offset+2] not in NOINDEX_JERICO_SECTIONS
     return relative.name=='index.html'

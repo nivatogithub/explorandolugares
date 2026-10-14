@@ -43,10 +43,16 @@ for page in public.rglob('*.html'):
     content=content.replace('style.css"',f'style.css?v={style_version}"')
     page.write_text(content)
 shutil.copytree(root/'backend/app',release/'app',dirs_exist_ok=True)
-shutil.copytree(root/'backend/database',release/'database',dirs_exist_ok=True)
 shutil.copytree(root/'backend/bin',release/'bin',dirs_exist_ok=True)
 content=release/'content';content.mkdir(exist_ok=True)
 shutil.copyfile(root/'content/destinos-dinamicos.json',content/'destinos-dinamicos.json')
+# El importador inicial queda privado junto al backend y a su catálogo semilla.
+# La configuración real y los SQL no se copian a la entrega.
+private_tools=release/'app/bin';private_tools.mkdir(parents=True,exist_ok=True)
+shutil.copyfile(root/'backend/bin/importar-destinos.php',private_tools/'importar-destinos.php')
+private_content=release/'app/content';private_content.mkdir(parents=True,exist_ok=True)
+shutil.copyfile(root/'content/destinos-dinamicos.json',private_content/'destinos-dinamicos.json')
+shutil.copytree(root/'backend/database',release/'app/database',dirs_exist_ok=True)
 shutil.copyfile(root/'backend/README.md',release/'INSTALACION.md')
 (release/'private').mkdir(exist_ok=True)
 shutil.copyfile(root/'backend/config.example.php',release/'config.example.php')

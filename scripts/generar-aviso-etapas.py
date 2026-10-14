@@ -17,7 +17,7 @@ def generate(site=SITE):
   trip_link=Path(os.path.relpath(site/'planea-tu-visita/index.html',page.parent)).as_posix()
   business_link=Path(os.path.relpath(site/'negocios-locales/interes/index.html',page.parent)).as_posix()
   source=re.sub(r'<!-- etapas-piloto -->.*?<!-- /etapas-piloto -->','',source,flags=re.S)
-  banner='<!-- etapas-piloto --><aside class="pilot-banner" aria-label="Etapa piloto · Comenzamos en Jericó"><div class="wrap"><div><strong>Importante · Etapa piloto en Jericó</strong><span>El portal está creciendo. Explora los destinos y conoce nuestros próximos pasos.</span></div><a href="'+link+'">Conoce el portal →</a></div></aside><!-- /etapas-piloto -->'
+  banner='<!-- etapas-piloto --><aside class="pilot-banner" aria-label="Etapa piloto · Comenzamos en Jericó"><div class="wrap"><div><strong>Importante · Etapa piloto en Jericó</strong><span>Por ahora, solo Jericó tiene guía pública. Abriremos nuevos destinos a medida que revisemos su información y sus imágenes.</span></div><a href="'+link+'">Conoce el portal →</a></div></aside><!-- /etapas-piloto -->'
   # En Conoce el portal el aviso duplicaría la información de la propia página.
   if not is_business and relative not in {Path('etapas/index.html'), Path('en/etapas/index.html')}:
    source=source.replace('</header>','</header>'+banner,1)

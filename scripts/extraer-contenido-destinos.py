@@ -365,6 +365,10 @@ def slugify(value):
 def main():
     registry = [{"slug": "jerico", "region": "Suroeste"}] + json.loads(
         (ROOT / "content/destinos-piloto.json").read_text())["destinations"]
+    publication = json.loads((ROOT / "content/estado-publicacion-destinos.json").read_text())
+    registry_slugs = {destination["slug"] for destination in registry}
+    if set(publication) != registry_slugs or any(status not in {"published", "draft"} for status in publication.values()):
+        raise ValueError("El estado de publicación debe definir cada destino piloto como published o draft")
     if {d["slug"] for d in registry} != {p.parent.name for p in (SITE / "destinos").glob("*/index.html")}:
         raise ValueError("El inventario de destino no coincide con las páginas del piloto")
     credits = media_credits()
@@ -382,7 +386,7 @@ def main():
             if locale == "es":
                 base = {"slug": slug, "destination_type": "municipality", "country_code": "CO",
                         "department": "Antioquia", "subregion": destination["region"],
-                        "publication_status": "published", "display_order": len(result["destinations"])+1}
+                        "publication_status": publication[slug], "display_order": len(result["destinations"])+1}
             translations[locale] = data
             for record in [data["hero_media"], data["history_media"], *[p["media"] for p in data["places"]]]:
                 if record:

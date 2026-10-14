@@ -13,6 +13,10 @@ import sys
 
 ROOT=Path(__file__).resolve().parents[1]
 SAFE_PATH=re.compile(r'^/[A-Za-z0-9_./-]+$')
+VERIFY_RELATIVE={
+    'public/.htaccess','public/index.html','public/destino.php','public/sitemap.xml',
+    'app/bootstrap.php','app/bin/importar-destinos.php','app/content/destinos-dinamicos.json',
+}
 
 
 def load_config(path):
@@ -102,7 +106,9 @@ def build(output,config=None):
         for source in sorted((output/kind).rglob('*')):
             if source.is_symlink(): raise ValueError('No transferir enlaces simbólicos.')
             if not source.is_file(): continue
-            if source.suffix not in {'.html','.php','.css','.js','.json','.svg','.webp','.png','.txt','.xml'}: raise ValueError('Archivo no permitido: '+str(source))
+            allowed={'.html','.php','.css','.js','.json','.svg','.webp','.png','.txt','.xml','.zip'}
+            if source.suffix in {'.sql','.md'} and kind=='app': allowed.add(source.suffix)
+            if source.name!='.htaccess' and source.suffix not in allowed: raise ValueError('Archivo no permitido: '+str(source))
             quote(source)
             files.append({'local':str(source),'relative':source.relative_to(output).as_posix(),
                 'bytes':source.stat().st_size,'sha256':hashlib.sha256(source.read_bytes()).hexdigest()})
@@ -127,17 +133,24 @@ def stage_commands(config,release_id,files):
 
 
 def verify_upload(client,config,release_id,files,directory):
-    # Una verificación interrumpida puede dejar descargas parciales. Los archivos
-    # se vuelven a bajar con nombres deterministas, por lo que es seguro reanudarla.
+    # Cada `put` de SFTP termina con error si el servidor rechaza un archivo.
+    # Descargar solo los puntos de control evita volver a leer todas las imágenes.
+    checked=[item for item in files if item['relative'] in VERIFY_RELATIVE]
+    missing=VERIFY_RELATIVE-{item['relative'] for item in checked}
+    if missing:raise RuntimeError('Faltan archivos clave para verificar: '+', '.join(sorted(missing)))
     downloads=directory/'verification';downloads.mkdir(exist_ok=True)
     stage=f'{config["remote_base"]}/.el-releases/{release_id}'
+    # La carga usa orden estable: encontrar el último archivo confirma que SFTP
+    # alcanzó el final del lote sin enumerar ni descargar de nuevo las imágenes.
+    last=files[-1]
+    client.run([f'ls -l {quote(stage+"/"+last["relative"])}'])
     commands=[]
-    for index,item in enumerate(files):
+    for index,item in enumerate(checked):
         commands.append(f'get {quote(stage+"/"+item["relative"])} {quote(downloads/str(index))}')
     client.run(commands)
-    for index,item in enumerate(files):
+    for index,item in enumerate(checked):
         if hashlib.sha256((downloads/str(index)).read_bytes()).hexdigest()!=item['sha256']:
-            raise RuntimeError('La verificación de contenido no coincide. No se activó la versión.')
+            raise RuntimeError('La verificación de un archivo clave no coincide. No se activó la versión.')
 
 
 def baseline_files(directory):
@@ -225,6 +238,7 @@ def main(argv=None):
     parser.add_argument('--initial',action='store_true',help='Primera instalación: no deben existir las carpetas public/app de destino.')
     parser.add_argument('--incremental',action='store_true',help='Sube solo archivos modificados desde la última publicación confirmada.')
     parser.add_argument('--remove-removed',action='store_true',help='Con --incremental, retira solo archivos conocidos que ya no existen localmente.')
+    parser.add_argument('--verify-release',help='Reanuda la verificación de un staging local interrumpido; no sube ni activa archivos.')
     parser.add_argument('--confirm-target',help='Para activar, repetir exactamente remote_base de la configuración.')
     args=parser.parse_args(argv)
     if args.initial and not args.activate: parser.error('--initial requiere --activate')
@@ -232,6 +246,25 @@ def main(argv=None):
     if args.remove_removed and not args.incremental: parser.error('--remove-removed requiere --incremental')
     config=load_config(args.config.expanduser().resolve())
     if args.activate and args.confirm_target!=config['remote_base']:parser.error('Para activar, indica --confirm-target con remote_base exacto.')
+    if args.verify_release:
+        if not re.fullmatch(r'\d{8}T\d{6}Z-[a-f0-9]{6}',args.verify_release):parser.error('Identificador de release inválido.')
+        directory=ROOT/'.local/deploy'/args.verify_release
+        manifest=directory/'manifest.json'
+        if not manifest.is_file():raise ValueError('No existe el diario local de ese release.')
+        journal=json.loads(manifest.read_text())
+        if journal.get('site')!='explorandolugares' or journal.get('remote_base')!=config['remote_base'] or journal.get('status')!='needs-inspection':
+            raise ValueError('Solo se puede reanudar la verificación de un release propio interrumpido en el mismo destino.')
+        files=journal.get('files',[])
+        for item in files:
+            local=directory/'build'/item['relative']
+            if not local.is_file() or hashlib.sha256(local.read_bytes()).hexdigest()!=item['sha256']:
+                raise ValueError('La entrega local no coincide con el manifiesto; no se verificó el staging.')
+        client=SFTP(config)
+        verify_upload(client,config,args.verify_release,files,directory)
+        journal['status']='uploaded';journal['verified_after_interruption']=True
+        manifest.write_text(json.dumps(journal,indent=2,ensure_ascii=False)+'\n')
+        print(f'Release {args.verify_release} verificado y disponible en staging. El sitio activo no cambió.')
+        return 0
     release_id=datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')+'-'+secrets.token_hex(3)
     directory=ROOT/'.local/deploy'/release_id;directory.mkdir(parents=True)
     files=build(directory/'build',config)
@@ -247,7 +280,7 @@ def main(argv=None):
     save()
     print(f'Explorando Lugares → {config["host"]}:{public_path(config)}')
     print(f'{len(selected)} archivos para transferir; {sum(x["bytes"] for x in selected)/1024/1024:.1f} MiB. Diario: {path}')
-    print('No se transfieren private/, configuración real, base de datos, SQL, credenciales ni referencias históricas.')
+    print('No se transfieren private/, configuración real, base de datos ni credenciales; las migraciones SQL van bajo app/database, fuera de la web.')
     if not (args.upload or args.activate or args.incremental): print('Solo revisión: no se conectó al servidor. Usa --upload, --activate o --incremental para publicar.');return 0
     known_hosts=Path(config['known_hosts_file']).expanduser()
     if not known_hosts.is_file():raise ValueError('Falta el archivo de huellas verificadas. Consulta docs/DESPLIEGUE_SFTP.md.')

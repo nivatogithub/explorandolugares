@@ -56,6 +56,15 @@ class PublicLinkTests(unittest.TestCase):
         sitemap=(self.public/'sitemap.xml').read_text()
         self.assertIn('https://explorandolugares.com/planea-tu-visita/', sitemap)
         self.assertIn('https://explorandolugares.com/en/planea-tu-visita/', sitemap)
+        destination_urls=[line for line in sitemap.splitlines() if '/destinos/' in line and '/destinos/</loc>' not in line]
+        self.assertTrue(destination_urls)
+        self.assertTrue(all('/destinos/jerico/' in line for line in destination_urls), destination_urls)
+        directory=(self.public/'destinos/index.html').read_text()
+        self.assertEqual(directory.count('class="destination-card"'),1)
+        for locale in ('', 'en/', 'pt-br/'):
+            draft=self.public/locale/'destinos/jardin/index.html'
+            self.assertIn('noindex,nofollow',draft.read_text())
+        self.assertTrue((self.public/'.htaccess').is_file())
 
     def test_business_registration_is_grouped_and_preserves_submission_fields(self):
         expected = {
@@ -88,6 +97,9 @@ class PublicLinkTests(unittest.TestCase):
         self.assertTrue((Path(self.temp.name)/'app/DestinationRepository.php').is_file())
         self.assertTrue((Path(self.temp.name)/'content/destinos-dinamicos.json').is_file())
         self.assertTrue((Path(self.temp.name)/'bin/importar-destinos.php').is_file())
+        self.assertTrue((Path(self.temp.name)/'app/bin/importar-destinos.php').is_file())
+        self.assertTrue((Path(self.temp.name)/'app/content/destinos-dinamicos.json').is_file())
+        self.assertTrue((Path(self.temp.name)/'app/database/migrations/003-dynamic-destinations.mysql.sql').is_file())
         self.assertFalse((self.public/'private/config.php').exists())
 
 if __name__=='__main__': unittest.main()
