@@ -21,6 +21,7 @@ subprocess.run([sys.executable,str(root/'scripts/agregar-select-flotante.py')],c
 subprocess.run([sys.executable,str(root/'scripts/normalizar-flechas-enlaces.py')],check=True)
 subprocess.run([sys.executable,str(root/'scripts/agregar-favicon.py')],check=True)
 subprocess.run([sys.executable,str(root/'scripts/generar-seo.py')],check=True)
+subprocess.run([sys.executable,str(root/'scripts/agregar-contacto-footer.py')],check=True)
 release=args.output.resolve()
 public=release/'public'
 public.mkdir(parents=True,exist_ok=True)
@@ -29,7 +30,7 @@ for page in public.rglob('index.html'):
     if not (root/'ensayos/v1'/page.relative_to(public)).is_file() and '<!-- ficha-generada-explorando -->' in page.read_text():
         page.unlink()
 for src in (root/'ensayos/v1').rglob('*'):
-    if src.is_file() and src.suffix in {'.html','.css','.js','.json','.svg','.webp','.txt','.xml'}:
+    if src.is_file() and src.suffix in {'.html','.css','.js','.json','.svg','.webp','.png','.txt','.xml'}:
         target=public/src.relative_to(root/'ensayos/v1');target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(src,target)
 shutil.copytree(root/'backend/public',public,dirs_exist_ok=True)
 # El hosting conserva CSS durante varios días. Versionar la URL en cada entrega
