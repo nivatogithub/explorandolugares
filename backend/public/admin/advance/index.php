@@ -8,7 +8,7 @@ if(empty($config['admin_user'])||empty($config['admin_password_hash'])||strlen($
 if(isset($_SESSION['admin'])&&time()-(int)($_SESSION['last_seen']??0)>1800)unset($_SESSION['admin']);
 if(empty($_SESSION['admin'])){http_response_code(403);exit('Inicia sesión desde el panel de administración.');}
 $_SESSION['last_seen']=time();
-$service=new AdvanceAdmin(db(),$config['admin_user']);$error='';
+$service=new AdvanceAdmin(db(),$config['admin_user'],$config);$error='';
 $section=is_string($_GET['section']??null)?$_GET['section']:'dashboard';
 $sections=['dashboard'=>'Dashboard','contacts'=>'CRM y aliados','establishments'=>'Establecimientos','templates'=>'Plantillas HTML','campaigns'=>'Campañas'];
 if(!isset($sections[$section])){http_response_code(404);exit('Sección inexistente.');}

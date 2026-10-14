@@ -7,6 +7,8 @@ return [
  'admin_user'=>'', 'admin_password_hash'=>'', // password_hash; nunca contraseña en texto plano.
  'registration_enabled'=>false, 'local_test'=>false,
  // Configuración independiente; remitente real del dominio verificado. No versionar secretos.
+ // Origen HTTPS y prefijo público del sitio; nunca se toma del encabezado Host.
+ 'public_base_url'=>'',
  'resend'=>['enabled'=>false,'api_key'=>'','from'=>''],
  'privacy'=>['operator'=>'','contact'=>'','retention'=>'','retention_en'=>''],
 ];
