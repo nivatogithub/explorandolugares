@@ -15,3 +15,5 @@
 - Al investigar prospectos locales, incluir solo información empresarial pública con fuente y fecha; marcarlos como pendientes de verificar y no contactarlos automáticamente.
 - Mostrar alternativas de diseño de forma visible y numerada cuando se solicite comparar; evitar carruseles que oculten opciones.
 - No desplegar ni reemplazar el sitio de producción al guardar un borrador. Mantener las versiones y decisiones documentadas.
+
+- Convención del modelo de datos: tablas, columnas, relaciones, claves y nuevos valores internos en inglés. Etiquetas y contenido visible pueden estar en español. Los valores históricos compartidos requieren una migración coordinada; no renombrarlos unilateralmente desde un módulo.

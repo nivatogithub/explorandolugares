@@ -46,3 +46,16 @@ La herramienta usa configuración privada; no muestra credenciales y no acepta S
 Para una instalación nueva: aplicar el esquema de leads, la migración 003 y posteriores del Worker de destinos, importar el catálogo con su herramienta existente, aplicar 007 y ejecutar la herramienta 008. El estado final no tiene `advance_establishments`. Una segunda ejecución de la herramienta confirma el estado final sin repetir columnas ni tablas. Si detecta DDL parcial se detiene; MySQL requiere revisar respaldo/esquema antes de continuar.
 
 No se ejecutó esta migración sobre bases reales. La protección ante registros heredados y la repetición segura se probaron con SQLite. Sigue pendiente comprobar DDL y claves foráneas en MySQL/MariaDB de staging.
+
+## Convención de idioma del modelo
+
+Tablas, columnas, relaciones y valores internos nuevos se modelan en inglés. El panel traduce los estados para mostrarlos en español. Advance Admin usa:
+
+- Relaciones CRM: `prospect`, `under_review`, `partner`, `archived`.
+- Campañas: `draft`, `approved`.
+- Entregas: `pending`, `sending`, `skipped`, `uncertain`, `accepted`.
+- Variables para plantillas nuevas: `{{name}}`, `{{municipality}}`. Los alias anteriores siguen admitidos para no cambiar mensajes ya revisados.
+
+Después de 008, aplicar `009-advance-english-values.mysql.sql` una vez en staging con respaldo y backend detenido. Convierte valores previos y defaults sin modificar HTML, destinatarios, ID de proveedor, versión ni autor/fecha de aprobación. Los estados `sending` y `uncertain` siguen bloqueados para reenvío. La variante SQLite convierte datos; el servicio escribe estados explícitos, sin depender de defaults antiguos. La migración 007 ya usa defaults ingleses en instalaciones nuevas.
+
+Los estados heredados del catálogo compartido (`PUBLICO`, `VERIFICADO`, `NO_RECLAMADO`, etc.) y los de `leads` pertenecen a otros módulos. Este cambio los conserva: traducirlos requiere una migración coordinada de todos sus lectores y escritores. No introduce una segunda nomenclatura almacenada ni tablas paralelas para esos estados.

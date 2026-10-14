@@ -31,18 +31,18 @@ try:
     assert call('/admin/index.php',{'action':'login','username':'advance-local','password':password,'csrf':csrf})[0]==200
     body=call('/admin/index.php')[1];csrf=re.search(r'name="csrf" value="([^"]+)"',body).group(1)
     assert call(url+'?section=contacts',{'action':'save','csrf':'bad'})[0]==403
-    contact={'action':'save','csrf':csrf,'name':'<script>test</script>','email':'test@example.invalid','destination_id':'1','source':'Prueba local','relationship':'prospecto','marketing_consent':'1','consent_evidence':'Prueba local autorizada'}
+    contact={'action':'save','csrf':csrf,'name':'<script>test</script>','email':'test@example.invalid','destination_id':'1','source':'Prueba local','relationship':'prospect','marketing_consent':'1','consent_evidence':'Prueba local autorizada'}
     status,body,headers=call(url+'?section=contacts',contact)
     assert status==200 and '&lt;script&gt;test&lt;/script&gt;' in body and '<script>test</script>' not in body
     assert headers['Cache-Control']=='no-store' and headers['X-Robots-Tag']=='noindex, nofollow'
-    template={'action':'save','csrf':csrf,'name':'Plantilla local','subject':'Hola {{nombre}}','html':'<script>alert(1)</script><p>{{municipio}}</p>'}
+    template={'action':'save','csrf':csrf,'name':'Plantilla local','subject':'Hola {{name}}','html':'<script>alert(1)</script><p>{{municipality}}</p>'}
     status,body,_=call(url+'?section=templates',template);assert status==200 and 'sandbox=""' in body and 'srcdoc="' in body
     assert '<script>alert(1)</script>' not in body and "default-src" in body
-    status,body,_=call(url+'?section=campaigns',{'action':'create','csrf':csrf,'name':'Prueba','template_id':1,'contact_ids':'1'});assert status==200 and 'borrador' in body
+    status,body,_=call(url+'?section=campaigns',{'action':'create','csrf':csrf,'name':'Prueba','template_id':1,'contact_ids':'1'});assert status==200 and 'Borrador' in body
     assert call(url+'?section=campaigns',{'action':'approve','csrf':csrf,'id':1,'version':1})[0]==400
     assert call(url+'?section=campaigns',{'action':'approve','csrf':csrf,'id':1,'version':1,'confirm':'1'})[0]==200
     assert call(url+'?section=campaigns',{'action':'send','csrf':csrf,'delivery_id':1,'confirm_send':'1'})[0]==400
-    assert db.execute('SELECT status FROM advance_deliveries').fetchone()[0]=='pendiente'
+    assert db.execute('SELECT status FROM advance_deliveries').fetchone()[0]=='pending'
     assert call(url+'?section=dashboard')[0]==200
     status,body,_=call(url+'?section=establishments');assert status==200 and 'Negocio existente' in body
     status,body,_=call(url+'?section=establishments&id=1');assert status==200 and 'business@example.invalid' in body
