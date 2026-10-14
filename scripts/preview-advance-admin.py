@@ -22,6 +22,8 @@ for name in ['admin/index.php','admin/advance/index.php','admin/reports.php']:
     path=work/'public'/name
     source=path.read_text().replace('<body>','<body><p role="status">Entorno local · datos ficticios · envíos reales deshabilitados</p>',1)
     path.write_text(source)
+brand_assets=assets/'brand';brand_assets.mkdir(exist_ok=True)
+shutil.copyfile(root/'ensayos/v1/assets/brand/explorando-lugares-logo-v2-transparent.png',brand_assets/'explorando-lugares-logo-v2-transparent.png')
 private=work/'private';private.mkdir(exist_ok=True);os.chmod(private,0o700)
 sessions=private/'sessions';sessions.mkdir(exist_ok=True);os.chmod(sessions,0o700)
 bootstrap=work/'app/bootstrap.php'

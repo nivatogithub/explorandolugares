@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 require dirname(__DIR__,2).'/app/bootstrap.php';
+require dirname(__DIR__,2).'/app/advance/AdminLayout.php';
 if (empty($config['admin_user']) || empty($config['admin_password_hash']) || strlen($config['app_key']??'')<32) {http_response_code(503);exit('Administración pendiente de configuración.');}
 $error='';
 try {
@@ -71,13 +72,13 @@ try {
         ];
     }
 } catch (Throwable $e) {error_log('Explorando Lugares: fallo de administración.');http_response_code(503);exit('El panel no está disponible en este momento.');}
-?><!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Administración | Explorando Lugares</title><link rel="stylesheet" href="../assets/style.css?v=admin-compact-20261013"></head><body><main class="wrap admin-page"><a class="brand" href="../index.html"><img class="brand-logo" src="../assets/logo.svg" alt="" width="64" height="64"><span>explorando<b>lugares</b></span></a><h1>Contactos de negocios</h1><p>Área privada. Un registro no es una publicación ni un aliado aprobado.</p>
+?><?php adminPageStart(!$admin?'login':($tab==='sistema'?'system':'requests'),!$admin?'Entrar a la administración':($tab==='sistema'?'Sistema':'Solicitudes de negocios'),'Gestiona Explorando Lugares desde un mismo panel.'); ?>
 <?php if($error): ?><p role="alert"><?=esc($error)?></p><?php endif ?>
 <?php if(!$admin): ?>
 <form method="post" class="registration-form"><input type="hidden" name="csrf" value="<?=esc($_SESSION['csrf'])?>"><input type="hidden" name="action" value="login"><label>Usuario<input name="username" required autocomplete="username" maxlength="120"></label><label>Contraseña<input type="password" name="password" required autocomplete="current-password"></label><button class="pill">Entrar al panel</button></form>
 <?php else: ?>
-<form method="post"><input type="hidden" name="csrf" value="<?=esc($_SESSION['csrf'])?>"><input type="hidden" name="action" value="logout"><button class="pill light">Cerrar sesión</button></form>
-<nav class="admin-tabs" aria-label="Administración"><a href="?tab=solicitudes" <?=$tab==='solicitudes'?'aria-current="page"':''?>>Solicitudes</a><a href="?tab=sistema" <?=$tab==='sistema'?'aria-current="page"':''?>>Sistema y base de datos</a><a href="destinos.php">Destinos</a><a href="advance/index.php">Advance Admin</a><a href="reports.php">Reportes generales</a></nav>
+
+
 <?php if($tab==='sistema'): ?>
 <section class="admin-system"><p class="eyebrow">Diagnóstico seguro</p><h2>Sistema y base de datos</h2><p>Este resumen confirma el estado de la conexión y las tablas necesarias. No muestra contraseñas, usuarios, cadenas de conexión ni datos de los contactos.</p><dl><dt>Conexión</dt><dd><?=esc($system['database'])?></dd><dt>Motor</dt><dd><?=esc($system['driver'])?></dd><dt>Solicitudes (<code>leads</code>)</dt><dd><?=esc($system['leads'])?></dd><dt>Protección contra abuso (<code>rate_limits</code>)</dt><dd><?=esc($system['limits'])?></dd><dt>Información de privacidad</dt><dd><?=esc($system['privacy'])?></dd><dt>Recepción del formulario</dt><dd><?=esc($system['registration'])?></dd></dl><div class="notice"><strong>Configuración privada</strong><p>La contraseña MySQL y el usuario administrador se configuran únicamente en <code>private/config.php</code>, fuera de la web. Para activar el formulario se completa ese archivo y se vuelve a comprobar aquí. No ejecutes SQL arbitrario desde el navegador.</p></div></section>
 <?php else: ?>
@@ -88,4 +89,4 @@ try {
 <?php if($rows): ?><form id="bulk-delete" method="post" class="bulk-delete"><input type="hidden" name="csrf" value="<?=esc($_SESSION['csrf'])?>"><input type="hidden" name="action" value="delete"><button class="pill danger" disabled>Eliminar seleccionadas</button></form><script>document.getElementById('bulk-delete').addEventListener('submit',function(event){if(!confirm('¿Eliminar definitivamente las solicitudes seleccionadas?'))event.preventDefault()});document.querySelectorAll('[form="bulk-delete"][type="checkbox"]').forEach(function(item){item.addEventListener('change',function(){document.querySelector('#bulk-delete button').disabled=!document.querySelector('[form="bulk-delete"][type="checkbox"]:checked')})})</script><?php endif ?>
 <div class="pagination"><?php if($page>1): ?><a href="?page=<?=$page-1?>&amp;status=<?=esc($status)?>">← Anterior</a><?php endif ?> <?php if($page*25<$total): ?><a href="?page=<?=$page+1?>&amp;status=<?=esc($status)?>">Siguiente →</a><?php endif ?></div>
 <?php endif ?><script src="../assets/select-flotante.js" defer></script>
-<?php endif ?></main></body></html>
+<?php endif ?><?php adminPageEnd(); ?>
