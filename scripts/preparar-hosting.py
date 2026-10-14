@@ -30,7 +30,7 @@ for page in public.rglob('index.html'):
     if not (root/'ensayos/v1'/page.relative_to(public)).is_file() and '<!-- ficha-generada-explorando -->' in page.read_text():
         page.unlink()
 for src in (root/'ensayos/v1').rglob('*'):
-    if src.is_file() and src.suffix in {'.html','.css','.js','.json','.svg','.webp','.png','.txt','.xml'}:
+    if src.is_file() and (src.suffix in {'.html','.css','.js','.json','.svg','.webp','.png','.txt','.xml','.php'} or src.name == '.htaccess'):
         target=public/src.relative_to(root/'ensayos/v1');target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(src,target)
 shutil.copytree(root/'backend/public',public,dirs_exist_ok=True)
 # El hosting conserva CSS durante varios días. Versionar la URL en cada entrega
@@ -45,6 +45,8 @@ for page in public.rglob('*.html'):
 shutil.copytree(root/'backend/app',release/'app',dirs_exist_ok=True)
 shutil.copytree(root/'backend/database',release/'database',dirs_exist_ok=True)
 shutil.copytree(root/'backend/bin',release/'bin',dirs_exist_ok=True)
+content=release/'content';content.mkdir(exist_ok=True)
+shutil.copyfile(root/'content/destinos-dinamicos.json',content/'destinos-dinamicos.json')
 shutil.copyfile(root/'backend/README.md',release/'INSTALACION.md')
 (release/'private').mkdir(exist_ok=True)
 shutil.copyfile(root/'backend/config.example.php',release/'config.example.php')

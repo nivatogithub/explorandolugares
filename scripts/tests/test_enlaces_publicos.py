@@ -79,4 +79,12 @@ class PublicLinkTests(unittest.TestCase):
         self.assertIn('Créditos de imágenes',spanish)
         self.assertIn('Image credits',english)
 
+    def test_dynamic_destination_runtime_is_included_in_local_package(self):
+        self.assertTrue((self.public/'destino.php').is_file())
+        self.assertTrue((self.public/'.htaccess').is_file())
+        self.assertTrue((Path(self.temp.name)/'app/DestinationRepository.php').is_file())
+        self.assertTrue((Path(self.temp.name)/'content/destinos-dinamicos.json').is_file())
+        self.assertTrue((Path(self.temp.name)/'bin/importar-destinos.php').is_file())
+        self.assertFalse((self.public/'private/config.php').exists())
+
 if __name__=='__main__': unittest.main()

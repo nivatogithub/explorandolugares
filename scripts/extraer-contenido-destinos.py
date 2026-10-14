@@ -1,0 +1,308 @@
+#!/usr/bin/env python3
+"""Extrae una instantánea estructurada de las 63 guías HTML existentes.
+
+Herramienta de migración editorial de una sola fuente. No modifica las páginas.
+"""
+from html.parser import HTMLParser
+from pathlib import Path
+from urllib.parse import urlsplit
+import json
+import posixpath
+import re
+import unicodedata
+
+ROOT = Path(__file__).resolve().parents[1]
+SITE = ROOT / "ensayos/v1"
+LOCALES = {"es": "", "en": "en", "pt-BR": "pt-br"}
+
+
+class Node:
+    def __init__(self, tag, attrs=None):
+        self.tag = tag
+        self.attrs = dict(attrs or [])
+        self.children = []
+
+    def text(self):
+        return "".join(c.text() if isinstance(c, Node) else c for c in self.children)
+
+    def find(self, tag=None, *, class_name=None, id_name=None, recursive=True):
+        for child in self.children:
+            if not isinstance(child, Node):
+                continue
+            classes = child.attrs.get("class", "").split()
+            if ((tag is None or child.tag == tag)
+                    and (class_name is None or class_name in classes)
+                    and (id_name is None or child.attrs.get("id") == id_name)):
+                return child
+            if recursive:
+                found = child.find(tag, class_name=class_name, id_name=id_name)
+                if found:
+                    return found
+        return None
+
+    def find_all(self, tag=None, *, class_name=None, id_name=None, recursive=True):
+        found = []
+        for child in self.children:
+            if not isinstance(child, Node):
+                continue
+            classes = child.attrs.get("class", "").split()
+            if ((tag is None or child.tag == tag)
+                    and (class_name is None or class_name in classes)
+                    and (id_name is None or child.attrs.get("id") == id_name)):
+                found.append(child)
+            if recursive:
+                found.extend(child.find_all(tag, class_name=class_name, id_name=id_name))
+        return found
+
+
+class Tree(HTMLParser):
+    VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "param", "source", "track", "wbr"}
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.root = Node("document")
+        self.stack = [self.root]
+
+    def handle_starttag(self, tag, attrs):
+        node = Node(tag, attrs)
+        self.stack[-1].children.append(node)
+        if tag not in self.VOID:
+            self.stack.append(node)
+
+    def handle_startendtag(self, tag, attrs):
+        self.stack[-1].children.append(Node(tag, attrs))
+
+    def handle_endtag(self, tag):
+        for pos in range(len(self.stack) - 1, 0, -1):
+            if self.stack[pos].tag == tag:
+                del self.stack[pos:]
+                return
+
+    def handle_data(self, data):
+        self.stack[-1].children.append(data)
+
+
+def parse(path):
+    tree = Tree()
+    tree.feed(path.read_text())
+    return tree.root
+
+
+def clean(node):
+    return re.sub(r"\s+", " ", node.text()).strip() if node else ""
+
+
+def direct(node, tag, class_name=None):
+    return [c for c in node.children if isinstance(c, Node) and c.tag == tag
+            and (class_name is None or class_name in c.attrs.get("class", "").split())]
+
+
+def image_info(img, page):
+    src = img.attrs.get("src", "")
+    path = posixpath.normpath(posixpath.join(page.parent.relative_to(SITE).as_posix(), src))
+    if not path.startswith("assets/"):
+        raise ValueError(f"Ruta de imagen fuera de assets: {page}: {src}")
+    local = (SITE / path).resolve()
+    if not local.is_relative_to((SITE / "assets").resolve()) or not local.is_file():
+        raise ValueError(f"Imagen ausente o fuera de assets: {page}: {src}")
+    return {"path": path, "alt": img.attrs.get("alt", ""),
+            "width": int(img.attrs["width"]) if img.attrs.get("width", "").isdigit() else None,
+            "height": int(img.attrs["height"]) if img.attrs.get("height", "").isdigit() else None}
+
+
+def parse_page(page):
+    tree = parse(page)
+    head = tree.find("head")
+    main = tree.find("main", class_name="destination-page")
+    if not head or not main:
+        raise ValueError(f"Estructura inesperada: {page}")
+    meta = next((n for n in head.find_all("meta") if n.attrs.get("name") == "description"), None)
+    title = tree.find("title")
+    hero = main.find("section", class_name="destination-hero")
+    overview = main.find("section", id_name="descubre")
+    highlights = main.find("section", id_name="que-conocer")
+    directory = main.find("section", id_name="lugares")
+    if not all([hero, overview, highlights, directory]):
+        raise ValueError(f"Falta sección editorial requerida: {page}")
+    hero_copy = next(n for n in hero.children if isinstance(n, Node) and n.tag == "div")
+    heading = hero_copy.find("h1")
+    breadcrumb = next((n for n in main.find_all("span") if n.attrs.get("aria-current") == "page"), None)
+    name = clean(breadcrumb)
+    if not name:
+        raise ValueError(f"No se encontró el nombre en breadcrumb: {page}")
+    headline = clean(heading.find("em"))
+    intro = clean(hero_copy.find("p", class_name="intro"))
+    eyebrow = clean(hero_copy.find("p", class_name="eyebrow"))
+    history_div = next(n for n in overview.children if isinstance(n, Node) and n.tag == "div")
+    story = [clean(n) for n in direct(history_div, "p")
+             if "eyebrow" not in n.attrs.get("class", "").split()
+             and "credit" not in n.attrs.get("class", "").split() and clean(n)]
+    reasons_aside = overview.find("aside", class_name="destination-reasons")
+    reasons = [clean(n) for n in reasons_aside.find_all("li")] if reasons_aside else []
+    history_figure = overview.find("figure", class_name="destination-history-photo")
+    hero_figure = hero.find("figure")
+    if not hero_figure:
+        raise ValueError(f"Falta imagen principal: {page}")
+    hero_img = hero_figure.find("img")
+    hero_media = image_info(hero_img, page)
+    hero_media["caption"] = clean(hero_figure.find("figcaption"))
+    history_media = None
+    if history_figure:
+        image = history_figure.find("img")
+        history_media = image_info(image, page)
+        history_media["caption"] = clean(history_figure.find("figcaption"))
+    places = []
+    grid = highlights.find("div", class_name="highlight-grid")
+    for article in grid.find_all("article") if grid else []:
+        h3 = article.find("h3")
+        desc = next((n for n in direct(article, "p") if clean(n)), None)
+        map_link = next((n for n in article.find_all("a")
+                         if "map" in clean(n).lower() or "mapa" in clean(n).lower()), None)
+        img = article.find("img")
+        media = image_info(img, page) if img else None
+        if media:
+            media["caption"] = media["alt"]
+        if not h3 or not desc or not map_link:
+            raise ValueError(f"Tarjeta de atractivo incompleta: {page}")
+        places.append({"slug": slugify(clean(h3)), "name": clean(h3), "description": clean(desc),
+                       "map_url": map_link.attrs.get("href", ""), "media": media})
+    extra = highlights.find("div", class_name="highlight-extra")
+    if extra:
+        h3 = extra.find("h3")
+        desc = extra.find("p")
+        map_link = next((n for n in extra.find_all("a") if "maps/search" in n.attrs.get("href", "")), None)
+        if h3 and desc and map_link:
+            places.append({"slug": slugify(clean(h3)), "name": clean(h3), "description": clean(desc),
+                           "map_url": map_link.attrs.get("href", ""), "media": None})
+    sources = []
+    for section_key, section in (("history", overview), ("places", highlights)):
+        for link in section.find_all("a"):
+            href = link.attrs.get("href", "")
+            if (urlsplit(href).scheme == "https" and "google.com/maps" not in href
+                    and "maps/search" not in href):
+                pair = {"url": href, "label": clean(link), "section_key": section_key}
+                if pair not in sources:
+                    sources.append(pair)
+    return {"name": name, "title": clean(title), "meta_description": meta.attrs.get("content", "") if meta else "",
+            "eyebrow": eyebrow, "headline": headline, "intro": intro, "history": story,
+            "reasons": reasons, "hero_media": hero_media, "history_media": history_media,
+            "places": places, "sources": sources}
+
+
+def media_credits():
+    records = {}
+    for destinations in json.loads((ROOT / "content/destinos-fotografias.json").read_text()).values():
+        for row in destinations:
+            records[row["file"]] = {"author": row["author"], "source_url": row["source"],
+                "license_name": row["license"], "license_url": row["licenseUrl"].replace("http://creativecommons.org/", "https://creativecommons.org/")}
+    for row in [
+        {"file": "assets/jerico.webp", "author": "Xemenendura", "source_url": "https://commons.wikimedia.org/wiki/File:El_parque_Jeric%C3%B3.jpg", "license_name": "CC BY-SA 4.0", "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"},
+    ]:
+        records[row["file"]] = {k: v for k, v in row.items() if k != "file"}
+    jerico = json.loads((ROOT / "content/jerico-fotografias.json").read_text())
+    used = {
+        "assets/jerico/casa-santa-laura.webp": 0,
+        "assets/jerico/iglesia-rosada.webp": 1,
+        "assets/jerico/monumento-santa-laura.webp": 2,
+        "assets/jerico/cristo-salvador-directo.webp": 3,
+    }
+    for path, index in used.items():
+        row = jerico[index]
+        metadata = row.get("metadata", {})
+        artist = metadata.get("Artist", {}).get("value", "")
+        artist = re.sub(r"<[^>]*>", "", artist).strip() or metadata.get("Credit", {}).get("value", "")
+        artist = re.sub(r"<[^>]*>", "", artist).strip()
+        raw_license = metadata.get("License", {}).get("value", "")
+        license_name = {"cc-by-sa-3.0": "CC BY-SA 3.0", "cc-by-sa-4.0": "CC BY-SA 4.0", "pd": "Public domain"}.get(raw_license.lower(), raw_license)
+        license_url = metadata.get("LicenseUrl", {}).get("value", "")
+        if not license_url and license_name == "Public domain":
+            license_url = "https://creativecommons.org/publicdomain/mark/1.0/"
+        records[path] = {"author": artist, "source_url": row["source"],
+                         "license_name": license_name, "license_url": license_url}
+    return records
+
+
+def slugify(value):
+    value = unicodedata.normalize("NFKD", value).encode("ascii", "ignore").decode().lower()
+    return re.sub(r"-+", "-", re.sub(r"[^a-z0-9]+", "-", value)).strip("-")
+
+
+def main():
+    registry = [{"slug": "jerico", "region": "Suroeste"}] + json.loads(
+        (ROOT / "content/destinos-piloto.json").read_text())["destinations"]
+    if {d["slug"] for d in registry} != {p.parent.name for p in (SITE / "destinos").glob("*/index.html")}:
+        raise ValueError("El inventario de destino no coincide con las páginas del piloto")
+    credits = media_credits()
+    result = {"schema_version": 1, "locales": list(LOCALES), "destinations": []}
+    used_media = set()
+    for destination in registry:
+        slug = destination["slug"]
+        translations = {}
+        base = None
+        for locale, folder in LOCALES.items():
+            page = SITE / folder / "destinos" / slug / "index.html"
+            if not page.is_file():
+                raise ValueError(f"Falta página {locale}: {page}")
+            data = parse_page(page)
+            if locale == "es":
+                base = {"slug": slug, "destination_type": "municipality", "country_code": "CO",
+                        "department": "Antioquia", "subregion": destination["region"],
+                        "publication_status": "published", "display_order": len(result["destinations"])+1}
+            translations[locale] = data
+            for record in [data["hero_media"], data["history_media"], *[p["media"] for p in data["places"]]]:
+                if record:
+                    used_media.add(record["path"])
+        base["translations"] = translations
+        result["destinations"].append(base)
+    all_media = {}
+    for dest in result["destinations"]:
+        slug = dest["slug"]
+        for locale, data in dest["translations"].items():
+            candidates = [("hero", data["hero_media"]), ("history", data["history_media"])]
+            candidates.extend((f"poi:{i+1}", poi["media"]) for i, poi in enumerate(data["places"]))
+            for role, media in candidates:
+                if not media:
+                    continue
+                path = media["path"]
+                row = all_media.setdefault(path, {"path": path, "author": "", "source_url": "",
+                    "license_name": "", "license_url": "", "width": media["width"],
+                    "height": media["height"], "translations": {}, "placements": []})
+                row["translations"][locale] = {"alt": media["alt"], "caption": media["caption"]}
+                placement = {"destination_slug": slug, "role": role}
+                if placement not in row["placements"]:
+                    row["placements"].append(placement)
+    missing = []
+    for path in used_media:
+        if path not in credits:
+            missing.append(path)
+        else:
+            all_media[path].update(credits[path])
+    if missing:
+        raise ValueError("Fotos usadas sin crédito/licencia completos: " + ", ".join(sorted(missing)))
+    # The legacy PT-BR Jericó page left two alt texts partly in Spanish; correct
+    # them in the structured migration content without rewriting the backup HTML.
+    pt_alt_overrides = {
+        "assets/jerico/cristo-salvador-directo.webp": "Cristo do Cerro El Salvador visto de uma rua em Jericó",
+    }
+    for path, alt in pt_alt_overrides.items():
+        all_media[path]["translations"]["pt-BR"]["alt"] = alt
+    result["media"] = [all_media[key] for key in sorted(all_media)]
+    # Validaciones de cobertura y conservación editorial de las páginas actuales.
+    if len(result["destinations"]) != 21:
+        raise ValueError(f"Se esperaban 21 destinos; hay {len(result['destinations'])}")
+    if sum(len(d["translations"]["es"]["places"]) for d in result["destinations"]) != 65:
+        raise ValueError("El total de atractivos no coincide con las 65 tarjetas actuales")
+    for d in result["destinations"]:
+        for locale in LOCALES:
+            tr = d["translations"][locale]
+            if not tr["headline"] or not tr["intro"] or not tr["history"] or len(tr["reasons"]) != 3:
+                raise ValueError(f"Traducción incompleta: {d['slug']} / {locale}")
+            if len(tr["places"]) != len(d["translations"]["es"]["places"]):
+                raise ValueError(f"Cantidad de atractivos no coincide: {d['slug']} / {locale}")
+    target = ROOT / "content/destinos-dinamicos.json"
+    target.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n")
+    print(f"OK: {len(result['destinations'])} destinos, 3 idiomas, 65 atractivos, {len(result['media'])} imágenes con autoría y licencia.")
+
+
+if __name__ == "__main__":
+    main()
