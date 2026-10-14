@@ -1,0 +1,35 @@
+<?php
+declare(strict_types=1);
+require __DIR__.'/service.php';
+$b=$s->businesses();$existing=$b->find(1);
+check(count($b->rows('Negocio existente'))===1,'Negocio del otro módulo visible sin importar');
+check(count($existing['channels'])===2&&count($existing['sources'])===1,'Canales y fuentes compartidos');
+check($b->categories()===[['code'=>'cultura','name'=>'Cultura de prueba']],'Categorías activas del catálogo');
+$before=[];foreach(['destinations','destination_translations','points_of_interest','business_contacts','business_media','media_assets'] as $table)$before[$table]=$db->query('SELECT * FROM '.$table.' ORDER BY 1')->fetchAll();
+$edit=['id'=>'1','revision'=>$existing['revision'],'name'=>'Nombre revisado','destination_id'=>'1','category_code'=>'cultura','slug'=>'negocio-existente','summary'=>'Resumen revisado','description'=>'Descripción revisada','publication_status'=>'draft','source_url'=>'https://example.invalid/new','source_note'=>'Nueva evidencia','contact_id'=>$imported];
+$b->save($edit);$after=$b->find(1);
+check($after['information_status']==='VERIFICADO'&&$after['claim_status']==='RECLAMADO'&&$after['operation_status']==='ABIERTO','Estados canónicos preservados');
+check($after['translations'][0]['locale']==='en'&&$after['translations'][0]['display_name']==='Existing business','Traducción inglesa preservada');
+check(count($after['sources'])===2,'Fuente previa preservada');
+check((int)$after['contact_id']===$imported,'Vínculo CRM sin copiar canal empresarial');
+rejects(fn()=>$b->save($edit));
+$edit['revision']=$after['revision'];$b->save($edit);check(count($b->find(1)['sources'])===2,'Fuente no duplicada al repetir guardado');
+$current=$b->find(1);$db->exec("UPDATE business_translations SET description='Cambio externo' WHERE business_id=1 AND locale='es'");
+rejects(fn()=>$b->save([...$edit,'revision'=>$current['revision']]));
+rejects(fn()=>$b->save([...$edit,'id'=>0,'slug'=>'negocio-existente']));
+rejects(fn()=>$b->save([...$edit,'id'=>0,'slug'=>'otra','destination_id'=>999]));
+rejects(fn()=>$b->save([...$edit,'id'=>0,'slug'=>'otra','category_code'=>'inexistente']));
+rejects(fn()=>$b->save([...$edit,'id'=>0,'slug'=>'otra','category_code'=>'inactiva']));
+$db->exec("UPDATE businesses SET publication_status='published' WHERE id=1");$published=$b->find(1);
+rejects(fn()=>$b->save([...$edit,'revision'=>$published['revision']]));
+$b->linkContact(['id'=>1,'revision'=>$published['revision'],'contact_id'=>$imported]);
+check($b->find(1)['publication_status']==='published','Vínculo privado no modifica publicación');
+foreach($before as $table=>$expected)check($db->query('SELECT * FROM '.$table.' ORDER BY 1')->fetchAll()===$expected,'Sin cambios ajenos: '.$table);
+// Una instalación anterior con datos debe bloquear DDL antes de tocar cualquier tabla.
+$legacy=new PDO('sqlite::memory:',null,null,[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC]);
+foreach(['/database/sqlite.sql','/database/destinations.sqlite.sql','/database/migrations/007-advance-admin.sqlite.sql'] as $file)$legacy->exec(file_get_contents(dirname(__DIR__,2).$file));
+$legacy->exec("INSERT INTO advance_establishments(name,municipality,category,description,source,created_at,updated_at) VALUES('Heredado','Prueba','cultura','Contenido a conservar','Prueba','2026-10-14','2026-10-14')");
+rejects(fn()=>SharedCatalogMigration::apply($legacy));
+check($legacy->query('SELECT COUNT(*) FROM advance_establishments')->fetchColumn()===1,'Datos heredados intactos');
+check(!in_array('destination_id',array_column($legacy->query('PRAGMA table_info(advance_contacts)')->fetchAll(),'name'),true),'Bloqueo previo a DDL');
+echo "OK: catálogo único, IDs compartidos, traducciones/fuentes/canales/medios preservados, duplicados rechazados, conflicto externo detectado, publicación protegida y migración sin pérdida.\n";
