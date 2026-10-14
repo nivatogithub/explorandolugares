@@ -71,6 +71,12 @@ Para actualizar una instalación existente, con ambas carpetas presentes:
 python3 scripts/desplegar-sftp.py --activate --confirm-target /home/USUARIO/explorandolugares
 ```
 
+Si una versión ya está subida y verificada, puede activarse sin volver a transferirla, después de completar las migraciones de base de datos y comprobar el catálogo:
+
+```sh
+python3 scripts/desplegar-sftp.py --activate-release ID_DEL_RELEASE --confirm-target /home/USUARIO/explorandolugares
+```
+
 Sustituir la ruta de ejemplo por `remote_base` exacto. `--activate` construye/sube una nueva versión; no reutiliza automáticamente una subida anterior. Cada transferencia usa una carpeta nueva. SFTP confirma cada `put`; además, el script vuelve a leer y coteja SHA-256 solo de siete archivos clave, sin descargar de nuevo todas las imágenes. No comprueba funcionamiento PHP, HTTP, SSL o MySQL: verificar esos puntos después del despliegue.
 
 En una actualización, se renombran `public` y `app` antiguas a `previous-public` y `previous-app` dentro de la versión y se activan las nuevas. No se borran archivos remotos ni respaldos. Los renombrados individuales no forman una transacción conjunta: puede haber unos segundos de indisponibilidad. La cuenta necesita permiso para renombrar las carpetas y el servidor debe mantenerlas en el mismo sistema de archivos. No usar este esquema si el hosting no permite renombrar la raíz del dominio.
