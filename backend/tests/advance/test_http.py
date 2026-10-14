@@ -31,6 +31,12 @@ try:
     url='/admin/advance/index.php'
     assert call(url)[0]==403
     assert call('/admin/reports.php')[0]==403
+    status,xml,headers=call('/sitemap-live.php');assert status==200 and '<urlset' in xml and '/admin/' not in xml
+    assert headers.get('X-Robots-Tag') is None and 'application/xml' in headers['Content-Type']
+    db.execute("UPDATE destinations SET publication_status='published' WHERE id=1");db.commit()
+    assert 'https://example.invalid/destinos/destino-prueba/' in call('/sitemap-live.php')[1]
+    db.execute("UPDATE destinations SET publication_status='draft' WHERE id=1");db.commit()
+    assert '/destinos/destino-prueba/' not in call('/sitemap-live.php')[1]
     body=call('/admin/index.php')[1];csrf=re.search(r'name="csrf" value="([^"]+)"',body).group(1)
     assert call('/admin/index.php',{'action':'login','username':'advance-local','password':password,'csrf':csrf})[0]==200
     body=call('/admin/index.php')[1];csrf=re.search(r'name="csrf" value="([^"]+)"',body).group(1)
