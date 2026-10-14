@@ -102,7 +102,7 @@ def build(output,config=None):
         for source in sorted((output/kind).rglob('*')):
             if source.is_symlink(): raise ValueError('No transferir enlaces simbólicos.')
             if not source.is_file(): continue
-            if source.suffix not in {'.html','.php','.css','.js','.json','.svg','.webp','.txt','.xml'}: raise ValueError('Archivo no permitido: '+str(source))
+            if source.suffix not in {'.html','.php','.css','.js','.json','.svg','.webp','.png','.txt','.xml'}: raise ValueError('Archivo no permitido: '+str(source))
             quote(source)
             files.append({'local':str(source),'relative':source.relative_to(output).as_posix(),
                 'bytes':source.stat().st_size,'sha256':hashlib.sha256(source.read_bytes()).hexdigest()})
