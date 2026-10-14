@@ -73,9 +73,11 @@ class DeploymentTests(unittest.TestCase):
   class ChangedRemote:
    def run(self,commands):
     for command in commands:
-     target=command.rsplit(' ',1)[1].strip('"');Path(target).write_bytes(b'alterado')
+     if command.startswith('get '):
+      target=command.rsplit(' ',1)[1].strip('"');Path(target).write_bytes(b'alterado')
   with tempfile.TemporaryDirectory() as folder:
-   files=[{'relative':'public/index.html','sha256':hashlib.sha256(b'original').hexdigest()}]
+   files=[{'relative':path,'sha256':hashlib.sha256(b'original').hexdigest()} for path in deploy.VERIFY_RELATIVE]
+   files.append({'relative':'app/database/migrations/006-final.mysql.sql','sha256':hashlib.sha256(b'original').hexdigest()})
    with self.assertRaises(RuntimeError):deploy.verify_upload(ChangedRemote(),self.config,'test',files,Path(folder))
  def test_incremental_selects_only_changed_and_never_deletes(self):
   previous=[{'relative':'public/index.html','sha256':'old'},{'relative':'app/bootstrap.php','sha256':'same'}]

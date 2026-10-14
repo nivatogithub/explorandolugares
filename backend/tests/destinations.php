@@ -36,7 +36,9 @@ $expectedJericoMedia=['centro-historico'=>'assets/destinos/1/parque-principal-il
 foreach($catalog['destinations'][0]['translations'] as $locale=>$translation)foreach($translation['places'] as $place){if(isset($expectedJericoMedia[$place['slug']]))check($place['media']['path']===$expectedJericoMedia[$place['slug']],'Selected Jericó illustration is stable in every locale: '.$locale.' / '.$place['slug']);if(in_array($place['slug'],['subida-al-cerro-de-las-nubes','chorros-de-quebradona'],true))check($place['media']===null,'Unverified attraction art is omitted until a local reference is approved: '.$locale.' / '.$place['slug']);}
 $jericoCatalog=$catalog['destinations'][0];foreach($jericoCatalog['translations'] as $locale=>$translation)foreach(array_slice($translation['places'],-3) as $experience)check($experience['publication_status']==='draft'&&$experience['external_url']==='','Jericó operator activities stay unlinked drafts after catalog generation: '.$locale.' / '.$experience['slug']);
 $jardin=$repo->findPublished('jardin','en');
-check($jardin!==null && $jardin['locale']==='en' && count($jardin['places'])===3,'Translated destination loads');
+check($jardin===null,'Other pilot destinations remain hidden until approved');
+$jardinPreview=$repo->findPublished('jardin','en',true);
+check($jardinPreview!==null && $jardinPreview['locale']==='en' && $jardinPreview['publication_status']==='draft' && count($jardinPreview['places'])===3,'A draft destination remains available to authenticated preview');
 check($repo->findPublished('not-a-place','es')===null,'Missing destination does not load');
 $pdo->exec("INSERT INTO destinations(slug,destination_type,country_code,department,publication_status) VALUES('destino-borrador','municipality','CO','Antioquia','draft')");
 $draftId=(int)$pdo->lastInsertId();$pdo->prepare('INSERT INTO destination_translations(destination_id,locale,display_name,headline,intro) VALUES(?,?,?,?,?)')->execute([$draftId,'es','Destino borrador','Aún no publicado','Texto de prueba']);
@@ -45,7 +47,8 @@ check($repo->findPublished('destino-borrador','es')===null,'An unpublished desti
 $privateDraft=$repo->findPublished('destino-borrador','es',true);check($privateDraft!==null&&$privateDraft['publication_status']==='draft'&&count($privateDraft['places'])===1,'Private preview can render draft destination and child attractions');
 foreach ($catalog['destinations'] as $record) foreach ($catalog['locales'] as $locale) {
     $page=$repo->findPublished($record['slug'],$locale);
-    check($page!==null && $page['slug']===$record['slug'] && $page['locale']===$locale,'All locale and slug combinations load');
+    if($record['slug']==='jerico')check($page!==null && $page['slug']===$record['slug'] && $page['locale']===$locale,'Jericó is public in every locale');
+    else check($page===null,'Draft is hidden in every locale: '.$record['slug'].' / '.$locale);
 }
 $businessInsert=$pdo->prepare('INSERT INTO businesses(public_id,destination_id,category_code,slug,information_status,claim_status,operation_status,publication_status) VALUES(?,?,?,?,?,?,?,?)');
 $destinationId=(int)$pdo->query("SELECT id FROM destinations WHERE slug='jerico'")->fetchColumn();

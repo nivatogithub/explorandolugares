@@ -44,15 +44,22 @@ class DynamicDestinationRenderTests(unittest.TestCase):
                                 check=True, capture_output=True, text=True)
         return result.stdout
 
-    def test_all_21_destinations_render_in_three_languages(self):
+    def test_only_jerico_is_public_and_other_pilot_destinations_stay_drafts(self):
         for destination in CATALOG["destinations"]:
             for locale in CATALOG["locales"]:
                 with self.subTest(destination=destination["slug"], locale=locale):
                     page = self.render(destination["slug"], locale)
                     expected = destination["translations"][locale]["name"]
-                    self.assertIn(expected, page)
-                    self.assertIn('rel="canonical"', page)
-                    self.assertNotIn("Destino temporalmente no disponible", page)
+                    if destination["slug"] == "jerico":
+                        self.assertIn(expected, page)
+                        self.assertIn('rel="canonical"', page)
+                        self.assertNotIn("Destino temporalmente no disponible", page)
+                    else:
+                        self.assertEqual("Destino no encontrado.", page)
+                        self.assertNotIn(expected, page)
+                        preview = self.render(destination["slug"], locale, preview=True)
+                        self.assertIn(expected, preview)
+                        self.assertIn("Vista previa privada", preview)
 
     def test_operator_experiences_stay_hidden_until_approved(self):
         page = self.render("jerico", "es")
