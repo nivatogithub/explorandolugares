@@ -29,9 +29,9 @@ def language_for(page: Path) -> str:
 def footer_contact(lang: str) -> str:
     labels = TEXT[lang]
     return f'''<nav class="footer-contact" aria-label="{labels['whatsapp']}, {labels['instagram']} y {labels['mail']}">
-<a class="footer-contact-link footer-contact-whatsapp" href="https://wa.me/573234870366" target="_blank" rel="noopener noreferrer" aria-label="{labels['whatsapp']}: +57 323 487 0366"><span class="footer-contact-icon" aria-hidden="true">{ICON_WHATSAPP}</span><span>{labels['whatsapp']}</span></a>
-<a class="footer-contact-link footer-contact-instagram" href="https://www.instagram.com/explorandolugaresco/" target="_blank" rel="noopener noreferrer" aria-label="{labels['instagram']}: @explorandolugaresco"><span class="footer-contact-icon" aria-hidden="true">{ICON_INSTAGRAM}</span><span>Instagram</span></a>
-<a class="footer-contact-link footer-contact-email" href="mailto:contacto@explorandolugares.com" aria-label="{labels['mail']}: contacto@explorandolugares.com"><span class="footer-contact-icon" aria-hidden="true">{ICON_MAIL}</span><span>{labels['mail']}</span></a>
+<a class="footer-contact-link footer-contact-whatsapp" href="https://wa.me/573234870366" target="_blank" rel="noopener noreferrer" aria-label="{labels['whatsapp']}: +57 323 487 0366"><span class="footer-contact-icon" aria-hidden="true">{ICON_WHATSAPP}</span></a>
+<a class="footer-contact-link footer-contact-instagram" href="https://www.instagram.com/explorandolugaresco/" target="_blank" rel="noopener noreferrer" aria-label="{labels['instagram']}: @explorandolugaresco"><span class="footer-contact-icon" aria-hidden="true">{ICON_INSTAGRAM}</span></a>
+<a class="footer-contact-link footer-contact-email" href="mailto:contacto@explorandolugares.com" aria-label="{labels['mail']}: contacto@explorandolugares.com"><span class="footer-contact-icon" aria-hidden="true">{ICON_MAIL}</span></a>
 </nav>'''
 
 
