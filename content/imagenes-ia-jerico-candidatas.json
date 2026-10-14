@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0",
+  "destination": "jerico",
+  "status": "draft_for_human_review",
+  "generated_at": "2026-10-14",
+  "provider": "OpenAI ImageGen integrated tool",
+  "model": "Not exposed by the tool",
+  "note": "These are generic editorial illustrations of activities, not documentary images of a named operator, property, route, launch point, landing point, or current conditions. Do not treat them as approved for production until human review.",
+  "assets": [
+    {
+      "file": "ensayos/v1/assets/destinos/1/helicoptero-medellin-jerico-ilustracion.webp",
+      "master_file_local": ".local/jerico-experience-candidates/helicoptero-medellin-jerico.png",
+      "attraction_id": "helicoptero-medellin-jerico",
+      "alt": {
+        "es": "Ilustración editorial de un vuelo en helicóptero sobre montañas verdes; representa la actividad de forma general.",
+        "en": "Editorial illustration of a helicopter flight over green mountains, representing the activity in general.",
+        "pt-BR": "Ilustração editorial de um voo de helicóptero sobre montanhas verdes; representa a atividade de forma geral."
+      },
+      "prompt": "Clearly illustrated helicopter travel as an activity an independent operator offers between Medellín and Jericó, Colombia, without claiming an exact flight path, aircraft, operator, takeoff point, landing point, or specific view. Open green Andean mountain ridges and a distant valley, no identifiable landmarks or town. One small civilian passenger helicopter in flight. Visible watercolor and gouache brushwork, fine ink contours, polished editorial travel illustration. Wide 4:3 landscape, helicopter recognizable at thumbnail size, landscape remains the main subject. Bright natural daytime; restrained green, teal and cream with subtle terracotta. Generic illustrative activity only, not a photograph or a promise about exact service. No text, logo, watermark, landing pad, urban skyline, multiple aircraft, or military styling.",
+      "fact_source": "https://turismojerico.com/producto/cafe-patrimonio-helicoptero/",
+      "review": "draft; verify crop and suitability; image does not represent a verified route or landing site"
+    },
+    {
+      "file": "ensayos/v1/assets/destinos/1/parapente-puerto-arturo-ilustracion.webp",
+      "master_file_local": ".local/jerico-experience-candidates/parapente-puerto-arturo.png",
+      "attraction_id": "parapente-puerto-arturo",
+      "alt": {
+        "es": "Ilustración editorial de un vuelo biplaza en parapente sobre montañas; no representa un punto específico de despegue o aterrizaje.",
+        "en": "Editorial illustration of a tandem paraglider over mountains; it does not depict a specific launch or landing site.",
+        "pt-BR": "Ilustração editorial de um voo duplo de parapente sobre montanhas; não representa um ponto específico de decolagem ou pouso."
+      },
+      "prompt": "Clearly illustrated tandem paragliding as an activity offered by independent operators in the Jericó region, Colombia. Do not claim a particular operator's flight or an exact launch/landing location. Open green Andean valley with layered hills, no named landmark or buildings. One tandem paraglider with two securely harnessed riders, canopy fully visible and recognizable. Realistic watercolor and gouache illustration with fine ink edges, refined Colombian travel guide. Wide 4:3 crop, paraglider centered and large enough to recognize at small card size. Bright clear daytime; vivid but restrained greens and teal, cream sky, small coral accent. Illustration only. No invented cliff, landing field, signage, extra paragliders, dangerous low flight, text, logos, or watermark.",
+      "fact_source": "https://turismojerico.com/producto/aventura-altura/",
+      "review": "draft; verify crop and suitability; image does not represent a verified launch or landing site"
+    },
+    {
+      "file": "ensayos/v1/assets/destinos/1/experiencia-finca-cafetera-ilustracion.webp",
+      "master_file_local": ".local/jerico-experience-candidates/experiencia-finca-cafetera.png",
+      "attraction_id": "experiencia-finca-cafetera",
+      "alt": {
+        "es": "Ilustración editorial de cafetos con frutos maduros en una ladera de montaña; representa una experiencia cafetera de forma general.",
+        "en": "Editorial illustration of coffee plants with ripe cherries on a mountain slope, representing a coffee experience in general.",
+        "pt-BR": "Ilustração editorial de cafezais com frutos maduros em uma encosta; representa uma experiência cafeeira de forma geral."
+      },
+      "prompt": "Clearly illustrated generic coffee farm experience that could represent a visit to a coffee-growing farm in the Jericó region, without depicting or claiming a specific named farm. Coffee plants on a green Andean hillside; simple traditional farm buildings far in the background, no identifiable landmark. Ripe red coffee cherries among glossy green leaves in the foreground, with a subtle path through the crop. Polished realistic watercolor and gouache illustration with delicate ink contours, refined Colombian travel guide. Wide 4:3 crop; coffee cherries unmistakable at thumbnail size, enough hillside context. Bright soft morning daylight; natural green, warm cream, red coffee cherries, restrained terracotta. Illustration only. No coffee cups, signage, logos, text, watermark, invented tourist facilities, or identifiable people.",
+      "fact_source": "https://turismojerico.com/producto/experiencia-mundo-cafe/",
+      "review": "draft; verify crop and suitability; image does not depict a verified named farm"
+    }
+  ],
+  "visual_decisions": {
+    "status": "selected_for_local_preview_only",
+    "approved_by": "Nivato",
+    "date": "2026-10-14",
+    "note": "Selección visual para revisión local del destino dinámico; no implica autorización de despliegue ni cambia por sí sola el estado editorial del destino.",
+    "selected_places": [
+      {
+        "slug": "centro-historico",
+        "file": "ensayos/v1/assets/destinos/1/parque-principal-ilustrado.webp",
+        "master_file_local": ".local/jerico-image-review/generated/parque-principal-encuadre-candidato.png",
+        "choice": "Parque principal / candidata seleccionada."
+      },
+      {
+        "slug": "cerro-el-salvador",
+        "file": "ensayos/v1/assets/destinos/1/cristo-cerro-el-salvador-ilustrado.webp",
+        "master_file_local": ".local/jerico-image-review/generated/cristo-rey-acercamiento-candidato.png",
+        "choice": "Cristo / candidata de acercamiento seleccionada."
+      },
+      {
+        "slug": "santuario-de-santa-laura",
+        "file": "ensayos/v1/assets/destinos/1/santuario-santa-laura-ilustrado.webp",
+        "master_file_local": ".local/jerico-image-review/generated/santuario-ilustracion-v2.png",
+        "choice": "Versión anterior elegida por sus sombras refinadas. La fotografía de referencia muestra palmas en la entrada; la vegetación adicional al costado derecho de la ilustración no se confirma con el encuadre disponible."
+      },
+      {
+        "slug": "casa-natal-de-santa-laura",
+        "file": "ensayos/v1/assets/destinos/1/casa-santa-laura-ilustrada.webp",
+        "master_file_local": ".local/jerico-image-review/generated/casa-santa-laura-ilustracion-v2.png",
+        "choice": "Ilustración en tinta y gouache seleccionada."
+      }
+    ],
+    "operator_experiences": {
+      "slugs": [
+        "helicoptero-medellin-jerico",
+        "parapente-puerto-arturo",
+        "experiencia-finca-cafetera"
+      ],
+      "status": "draft",
+      "images": "Retener las tres candidatas actuales para revisión local. No mostrar enlaces ni publicar hasta confirmar operadores y acuerdos."
+    },
+    "history_image": {
+      "file": "ensayos/v1/assets/destinos/1/monumento-santa-laura-ilustrado-v2.webp",
+      "master_file_local": ".local/jerico-image-review/generated/monumento-santa-laura-ilustracion-v2.png",
+      "reference_file": "ensayos/v1/assets/jerico/monumento-santa-laura.webp",
+      "choice": "Versión 2 elegida para la vista previa local: recorte cerrado que elimina casi todo el pedestal vacío y usa tinta y gouache visibles, basados en la fotografía real.",
+      "previous_candidate": "ensayos/v1/assets/destinos/1/monumento-santa-laura-ilustrado.webp"
+    }
+  },
+  "natural_attraction_candidates": [
+    {
+      "slug": "chorros-de-quebradona",
+      "file": "ensayos/v1/assets/destinos/1/chorros-quebradona-ilustrado.webp",
+      "master_file_local": ".local/jerico-image-review/generated/chorros-quebradona-ilustracion-candidata.png",
+      "reference_urls": [
+        "https://www.antioquia.gov.co/images/img/turismo/2025/los-imperdibles-de-suroeste-28-30-junio.pdf",
+        "https://antioquia.gov.co/images/pdf/anuario2014/es-CO/capitulos/turismo/atractivos/cp-16-2-1.html?url=https%3A%2F%2Fantioquia.gov.co%2Fimages%2Fpdf%2Fanuario2014%2Fes-CO%2Fcapitulos%2Fturismo.html",
+        "https://es.wikiloc.com/rutas-senderismo/chorros-de-quebradona-jerico-155370461"
+      ],
+      "status": "draft_for_human_review",
+      "review": "El atractivo está documentado; la ilustración es una interpretación editorial basada en descripciones generales y una referencia de estilo. No se comparó la forma exacta de la cascada con una fotografía del sitio. Confirmar su fidelidad antes de aprobar/publicar."
+    }
+  ]
+}

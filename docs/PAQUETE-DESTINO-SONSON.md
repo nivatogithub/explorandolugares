@@ -2,6 +2,8 @@
 
 Estado sugerido: **borrador**. El material queda listo para revisión editorial y carga; no publica el destino ni descarga imágenes automáticamente.
 
+**Actualización 14 de octubre de 2026:** la vista previa local de Sonsón y sus cinco ilustraciones fueron aprobadas visualmente. El paquete importable está en [`content/paquetes/sonson/`](../content/paquetes/sonson/) y el estado detallado de referencias y publicación está en [REVISION_VISUAL_SONSON.md](REVISION_VISUAL_SONSON.md). La aprobación visual mantiene el destino en borrador; no equivale a autorización de uso de las fotografías de referencia.
+
 ## Identidad del destino
 
 | Campo de administración | Valor |
@@ -102,20 +104,21 @@ Crie quatro lugares. Para cada linha, use o mesmo slug e mapa nos três idiomas;
 
 Fuentes oficiales para estos lugares: [Alcaldía — Sitios de interés](https://sonson-antioquia.gov.co/MiMunicipio/Paginas/Sitios-de-Interes.aspx) y [Gobernación de Antioquia — listado de atractivos](https://www.antioquia.gov.co/images/pdf/anuario_2013/es-CO/capitulos/turismo/atractivos/cp-16-2-1.html). La Gobernación registra Centro Histórico, Museo Pablo Jaramillo, Cascada y Sendero Santa Mónica y Cavernas y Cascadas de La Danta. La Alcaldía describe el páramo como reserva ecológica y el museo con una ruta expositiva visual y táctil.
 
-## Imágenes sugeridas y atribución
+## Referencias visuales investigadas
 
-Estas son fuentes descargables de Wikimedia Commons. En cada página, usa **Original file** para descargar; elige la resolución de 1.280 px cuando esté disponible y genera WebP optimizado para el sitio. Mantén el autor, enlace de origen y licencia en los datos del medio. No tomes imágenes de resultados editoriales o redes sociales sin permiso.
+La tabla conserva referencias que se investigaron para preparar el destino; no todas son las referencias exactas de las ilustraciones aprobadas. La lista definitiva para el borrador está en `content/paquetes/sonson/paquete-destino.json`. Mantén autor, fuente y licencia en los datos del medio, y no reutilices fotografías de terceros sin permiso.
 
 | Uso sugerido | Imagen y página de descarga | Autor y licencia | Tamaño original | Alt ES / EN / PT-BR |
 |---|---|---|---:|---|
 | Portada del destino | [Catedral de Sonsón (fachada).jpg](https://commons.wikimedia.org/wiki/File:Catedral_de_Sons%C3%B3n_%28fachada%29.jpg) | ElUsuarioDesconocido · [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | 960 × 720, 132 KB | ES: Fachada de la Catedral de Sonsón. / EN: Façade of Sonsón Cathedral. / PT: Fachada da Catedral de Sonsón. |
 | Lugar: Páramo | [Paramosonson.JPG](https://commons.wikimedia.org/wiki/File:Paramosonson.JPG) | Mauricioagudelo · Dominio público (dedicación del autor) | 2.048 × 1.536, 1,46 MB | ES: Paisaje del Páramo de Sonsón en la cordillera Central. / EN: Landscape of the Sonsón páramo in the Central Andes. / PT: Paisagem do páramo de Sonsón na Cordilheira Central. |
 | Lugar: centro histórico / relieve | [Cerros los Parados.jpg](https://commons.wikimedia.org/wiki/File:Cerros_los_Parados.jpg) | Mauricioagudelo · [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) (también GFDL/FAL) | 2.592 × 1.944, 1,86 MB | ES: Cerros Los Parados en la cordillera Central, Sonsón. / EN: Los Parados hills in the Central Andes, Sonsón. / PT: Morros Los Parados na Cordilheira Central, Sonsón. |
-| Lugar: museo | [Museo de Arte Religioso de Sonsón.jpg](https://commons.wikimedia.org/wiki/File:Museo_de_Arte_Religioso_de_Sons%C3%B3n.jpg) | ElUsuarioDesconocido · [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | 3.264 × 2.448, 1,75 MB | ES: Sede del Museo de Arte Religioso de Sonsón. / EN: Home of the Religious Art Museum in Sonsón. / PT: Sede do Museu de Arte Religiosa de Sonsón. |
+| Lugar: museo | [Ciudadela Educativa y Cultural El Lago, Sonsón](https://commons.wikimedia.org/wiki/File:Ciudadela_Educativa_y_Cultural_El_Lago,_Sons%C3%B3n.jpg) | Ver autor y condiciones en Wikimedia Commons · [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | Consultar en la página del archivo | Referencia del exterior del edificio que alberga el Museo Pablo Jaramillo; la ilustración no representa el interior. |
+| Lugar: cascada Santa Mónica | [Ruta Santa Mónica, Sonsón](https://www.tripadvisor.es/LocationPhotoDirectLink-g4454117-d10844328-i253258152-Ruta_Santa_Monica-Sonson_Antioquia_Department.html) | Tripadvisor · derechos de la fotografía por confirmar | Consultar en la página de origen | Referencia visual para la ilustración; no implica autorización para reutilizar la fotografía. |
 
-**Nota de correspondencia:** no encontré una foto libre, claramente identificada y verificada para la cascada Santa Mónica dentro de esta selección. No reutilices una foto de otra cascada como si fuera ese sitio. Para ese lugar, consigue una foto propia con autorización o deja la tarjeta sin imagen hasta tener una fuente confirmada.
+**Nota de correspondencia:** la portada, el centro histórico y el páramo quedaron aprobados para la vista previa local. Antes de publicación, conserva en el manifiesto las referencias visuales exactas usadas para esas tres ilustraciones. Para la cascada Santa Mónica, la referencia consultada en Tripadvisor requiere confirmar derechos; si no se obtiene autorización, reemplázala por una referencia permitida y verificable o deja la tarjeta sin imagen.
 
-En el formulario actual de administración se pueden subir imágenes nuevas como portada; para asignar las otras tres imágenes a tarjetas, primero deben quedar registradas como medios en la base de datos. Cada una de las páginas de Commons enlazadas tiene un archivo original descargable y su crédito/licencia completos. Si no se quiere operar medios en la base por ahora, crea el destino con portada y lugares sin imagen en borrador.
+El ZIP contiene las cinco ilustraciones aprobadas y se puede importar desde la administración de destinos. La revisión visual no cambia por sí sola el estado de publicación. Para el flujo de carga y sus validaciones, consulta [FORMATO-PAQUETE-DESTINO.md](../backend/database/FORMATO-PAQUETE-DESTINO.md).
 
 ## Fuentes de investigación
 

@@ -28,12 +28,12 @@ final class DestinationAdminService
         $q=$this->pdo->prepare('SELECT r.id,r.display_order,t.locale,t.body FROM destination_reasons r LEFT JOIN destination_reason_translations t ON t.reason_id=r.id WHERE r.destination_id=? ORDER BY r.display_order,r.id');$q->execute([$id]);
         foreach ($q->fetchAll(PDO::FETCH_ASSOC) as $row) if ($row['locale']) $d['reasons'][$row['locale']][]=$row['body'];
         $d['places']=[];
-        $q=$this->pdo->prepare('SELECT p.id,p.slug,p.latitude,p.longitude,p.publication_status,p.display_order,t.locale,t.name,t.description,t.map_url,
+        $q=$this->pdo->prepare('SELECT p.id,p.slug,p.poi_type,p.latitude,p.longitude,p.publication_status,p.display_order,t.locale,t.name,t.description,t.map_url,t.external_url,t.external_label,
                 (SELECT pm.media_asset_id FROM point_of_interest_media pm WHERE pm.point_of_interest_id=p.id ORDER BY pm.display_order LIMIT 1) AS media_asset_id
             FROM points_of_interest p LEFT JOIN point_of_interest_translations t ON t.point_of_interest_id=p.id WHERE p.destination_id=? ORDER BY CASE WHEN p.publication_status=\'archived\' THEN 1 ELSE 0 END,p.display_order,p.id');$q->execute([$id]);
         foreach ($q->fetchAll(PDO::FETCH_ASSOC) as $row) {
             $poiId=(int)$row['id'];
-            if (!isset($d['places'][$poiId])) $d['places'][$poiId]=['id'=>$poiId,'slug'=>$row['slug'],'latitude'=>$row['latitude'],'longitude'=>$row['longitude'],'publication_status'=>$row['publication_status'],'media_asset_id'=>$row['media_asset_id'],'translations'=>[]];
+            if (!isset($d['places'][$poiId])) $d['places'][$poiId]=['id'=>$poiId,'slug'=>$row['slug'],'type'=>$row['poi_type'],'latitude'=>$row['latitude'],'longitude'=>$row['longitude'],'publication_status'=>$row['publication_status'],'media_asset_id'=>$row['media_asset_id'],'translations'=>[]];
             if ($row['locale']) $d['places'][$poiId]['translations'][$row['locale']]=$row;
         }
         $d['places']=array_values($d['places']);
@@ -148,13 +148,16 @@ final class DestinationAdminService
             if ($ps==='') $ps=$this->slugify((string)($place['translations']['es']['name']??''));
             if ($ps==='') continue;
             if (!preg_match('/^[a-z0-9]+(?:-[a-z0-9]+)*$/D',$ps)) throw new RuntimeException('No se pudo crear la dirección del lugar; revisa su nombre en español.');
-            $media=(int)($place['media_asset_id']??0);$poiStatus=(string)($place['publication_status']??'draft');if(!in_array($poiStatus,['draft','published','archived'],true))throw new RuntimeException('El estado de un atractivo no es válido.');$clean=['id'=>max(0,(int)($place['id']??0)),'form_index'=>(int)$formIndex,'slug'=>$ps,'lat'=>null,'lng'=>null,'media'=>$media,'status'=>$poiStatus,'image'=>['image_origin'=>(string)($place['image_origin']??'external'),'image_creator'=>trim((string)($place['image_creator']??'')),'image_source_url'=>trim((string)($place['image_source_url']??'')),'image_license'=>trim((string)($place['image_license']??'')),'image_license_url'=>trim((string)($place['image_license_url']??'')),'image_alt'=>$place['image_alt']??[],'image_caption'=>$place['image_caption']??[]],'translations'=>[]];
+            $media=(int)($place['media_asset_id']??0);$poiStatus=(string)($place['publication_status']??'draft');if(!in_array($poiStatus,['draft','published','archived'],true))throw new RuntimeException('El estado de un atractivo no es válido.');$poiType=(string)($place['type']??'place');if(!in_array($poiType,['place','experience'],true))throw new RuntimeException('El tipo del atractivo no es válido.');$clean=['id'=>max(0,(int)($place['id']??0)),'form_index'=>(int)$formIndex,'slug'=>$ps,'type'=>$poiType,'lat'=>null,'lng'=>null,'media'=>$media,'status'=>$poiStatus,'image'=>['image_origin'=>(string)($place['image_origin']??'external'),'image_creator'=>trim((string)($place['image_creator']??'')),'image_source_url'=>trim((string)($place['image_source_url']??'')),'image_license'=>trim((string)($place['image_license']??'')),'image_license_url'=>trim((string)($place['image_license_url']??'')),'image_alt'=>$place['image_alt']??[],'image_caption'=>$place['image_caption']??[]],'translations'=>[]];
             foreach (['latitude'=>['lat',-90,90],'longitude'=>['lng',-180,180]] as $key=>[$target,$min,$max]) {$v=trim((string)($place[$key]??''));if($v!==''){if(!is_numeric($v)||(float)$v<$min||(float)$v>$max)throw new RuntimeException('Las coordenadas de un lugar están fuera de rango.');$clean[$target]=(float)$v;}}
             foreach (self::LOCALES as $locale) {
-                $p=$place['translations'][$locale]??[];$clean['translations'][$locale]=['name'=>trim((string)($p['name']??'')),'description'=>trim((string)($p['description']??'')),'map_url'=>$this->httpsOrBlank((string)($p['map_url']??''))];
-                if ($this->length($clean['translations'][$locale]['name'])>180||$this->length($clean['translations'][$locale]['description'])>5000) throw new RuntimeException('Un nombre o descripción de lugar supera el límite.');
+                $p=$place['translations'][$locale]??[];$clean['translations'][$locale]=['name'=>trim((string)($p['name']??'')),'description'=>trim((string)($p['description']??'')),'map_url'=>$this->httpsOrBlank((string)($p['map_url']??'')),'external_url'=>$this->httpsOrBlank((string)($p['external_url']??'')),'external_label'=>trim((string)($p['external_label']??''))];
+                if ($this->length($clean['translations'][$locale]['name'])>180||$this->length($clean['translations'][$locale]['description'])>5000||$this->length($clean['translations'][$locale]['external_label'])>180) throw new RuntimeException('Un nombre, descripción o enlace de lugar supera el límite.');
             }
-            if ($poiStatus==='published') foreach (self::LOCALES as $locale) if ($clean['translations'][$locale]['name']===''||$clean['translations'][$locale]['description']==='') throw new RuntimeException("Completa la traducción del atractivo publicado en {$locale}.");
+            if ($poiStatus==='published') foreach (self::LOCALES as $locale) {
+                if ($clean['translations'][$locale]['name']===''||$clean['translations'][$locale]['description']==='') throw new RuntimeException("Completa la traducción del atractivo publicado en {$locale}.");
+                if ($poiType==='experience'&&($clean['translations'][$locale]['external_url']===''||$clean['translations'][$locale]['external_label']==='')) throw new RuntimeException("Completa el enlace y su texto para la experiencia publicada en {$locale}.");
+            }
                 foreach (self::LOCALES as $locale) {
                     if ($clean['translations'][$locale]['map_url']==='') {
                         $query=implode(', ',array_filter([
@@ -252,12 +255,12 @@ final class DestinationAdminService
     private function syncPlaces(int $id,array $places): array
     {
         $q=$this->pdo->prepare('SELECT id FROM points_of_interest WHERE destination_id=? ORDER BY display_order,id');$q->execute([$id]);$existing=array_map('intval',$q->fetchAll(PDO::FETCH_COLUMN));
-        $insert=$this->pdo->prepare('INSERT INTO points_of_interest(destination_id,slug,latitude,longitude,publication_status,display_order) VALUES(?,?,?,?,?,?)');
-        $update=$this->pdo->prepare('UPDATE points_of_interest SET slug=?,latitude=?,longitude=?,publication_status=?,display_order=? WHERE id=?');
-        $tr=$this->pdo->prepare($this->upsert('INSERT INTO point_of_interest_translations(point_of_interest_id,locale,name,description,map_url) VALUES(?,?,?,?,?) ON CONFLICT(point_of_interest_id,locale) DO UPDATE SET name=excluded.name,description=excluded.description,map_url=excluded.map_url','INSERT INTO point_of_interest_translations(point_of_interest_id,locale,name,description,map_url) VALUES(?,?,?,?,?) ON DUPLICATE KEY UPDATE name=VALUES(name),description=VALUES(description),map_url=VALUES(map_url)'));
+        $insert=$this->pdo->prepare('INSERT INTO points_of_interest(destination_id,slug,poi_type,latitude,longitude,publication_status,display_order) VALUES(?,?,?,?,?,?,?)');
+        $update=$this->pdo->prepare('UPDATE points_of_interest SET slug=?,poi_type=?,latitude=?,longitude=?,publication_status=?,display_order=? WHERE id=?');
+        $tr=$this->pdo->prepare($this->upsert('INSERT INTO point_of_interest_translations(point_of_interest_id,locale,name,description,map_url,external_url,external_label) VALUES(?,?,?,?,?,?,?) ON CONFLICT(point_of_interest_id,locale) DO UPDATE SET name=excluded.name,description=excluded.description,map_url=excluded.map_url,external_url=excluded.external_url,external_label=excluded.external_label','INSERT INTO point_of_interest_translations(point_of_interest_id,locale,name,description,map_url,external_url,external_label) VALUES(?,?,?,?,?,?,?) ON DUPLICATE KEY UPDATE name=VALUES(name),description=VALUES(description),map_url=VALUES(map_url),external_url=VALUES(external_url),external_label=VALUES(external_label)'));
         $retained=[];$placeIds=[];
-        foreach($places as $i=>$p){$poiId=$p['id'];if($poiId>0){if(!in_array($poiId,$existing,true))throw new RuntimeException('El ID de un lugar no pertenece a este destino.');$update->execute([$p['slug'],$p['lat'],$p['lng'],$p['status'],$i+1,$poiId]);}else{$insert->execute([$id,$p['slug'],$p['lat'],$p['lng'],$p['status'],$i+1]);$poiId=(int)$this->pdo->lastInsertId();}$retained[]=$poiId;$placeIds[$i]=$poiId;
-            foreach(self::LOCALES as $locale){$v=$p['translations'][$locale];$tr->execute([$poiId,$locale,$v['name'],$v['description'],$v['map_url']]);}
+        foreach($places as $i=>$p){$poiId=$p['id'];if($poiId>0){if(!in_array($poiId,$existing,true))throw new RuntimeException('El ID de un lugar no pertenece a este destino.');$update->execute([$p['slug'],$p['type'],$p['lat'],$p['lng'],$p['status'],$i+1,$poiId]);}else{$insert->execute([$id,$p['slug'],$p['type'],$p['lat'],$p['lng'],$p['status'],$i+1]);$poiId=(int)$this->pdo->lastInsertId();}$retained[]=$poiId;$placeIds[$i]=$poiId;
+            foreach(self::LOCALES as $locale){$v=$p['translations'][$locale];$tr->execute([$poiId,$locale,$v['name'],$v['description'],$v['map_url'],$v['external_url'],$v['external_label']]);}
             $this->pdo->prepare('DELETE FROM point_of_interest_media WHERE point_of_interest_id=?')->execute([$poiId]);
             if($p['media']>0){$q=$this->pdo->prepare('SELECT id FROM media_assets WHERE id=?');$q->execute([$p['media']]);if(!$q->fetchColumn())throw new RuntimeException('La imagen seleccionada para un lugar no existe.');$this->pdo->prepare('INSERT INTO point_of_interest_media(point_of_interest_id,media_asset_id,role,display_order) VALUES(?,?,"gallery",1)')->execute([$poiId,$p['media']]);}
         }

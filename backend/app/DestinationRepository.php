@@ -24,7 +24,7 @@ final class DestinationRepository
         $destination['history_media']=$this->mediaForDestination($id,$locale,'history');
         $stmt=$this->pdo->prepare('SELECT section_key,source_url,source_label,display_order FROM destination_sources WHERE destination_id=? AND locale=? ORDER BY section_key,display_order');
         $stmt->execute([$id,$locale]); $destination['sources']=$stmt->fetchAll(PDO::FETCH_ASSOC);
-        $stmt=$this->pdo->prepare('SELECT p.id,p.slug,tr.name,tr.description,tr.map_url,p.display_order,
+        $stmt=$this->pdo->prepare('SELECT p.id,p.slug,p.poi_type,tr.name,tr.description,tr.map_url,tr.external_url,tr.external_label,p.display_order,
                     m.asset_path,m.origin,m.creator,m.source_url,m.license_name,m.license_url,mt.alt_text,mt.caption,m.width,m.height
                 FROM points_of_interest p JOIN point_of_interest_translations tr ON tr.point_of_interest_id=p.id AND tr.locale=?
                 LEFT JOIN point_of_interest_media pm ON pm.point_of_interest_id=p.id
@@ -35,7 +35,7 @@ final class DestinationRepository
         foreach ($stmt->fetchAll(PDO::FETCH_ASSOC) as $row) {
             $key=(int)$row['id'];
             if (!isset($destination['places'][$key])) $destination['places'][$key]=[
-                'slug'=>$row['slug'],'name'=>$row['name'],'description'=>$row['description'],'map_url'=>$row['map_url'],'media'=>[]
+                'slug'=>$row['slug'],'type'=>$row['poi_type'],'name'=>$row['name'],'description'=>$row['description'],'map_url'=>$row['map_url'],'external_url'=>$row['external_url'],'external_label'=>$row['external_label'],'media'=>[]
             ];
             if ($row['asset_path'] !== null) $destination['places'][$key]['media'][]=$this->mediaRow($row);
         }

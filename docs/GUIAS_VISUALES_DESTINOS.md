@@ -7,6 +7,7 @@ La página de cada pueblo debe despertar interés con imágenes identificadas de
 - Selección compacta de atractivos con imagen, descripción breve y enlace al mapa. Jericó conserva cuatro tarjetas por fila en escritorio; las nuevas guías tienen tres atractivos en una fila, con adaptación a pantallas pequeñas.
 - Información práctica, directorio y convocatoria a negocios conservan el alcance informativo. Los atractivos editoriales no se presentan como comercios inscritos.
 - Documentar lugar, autor, fuente y permiso de cada fotografía; conservar atribución y licencia accesibles. No usar fotos de otros destinos ni imágenes generadas como si documentaran un sitio real.
+- Para crear ilustraciones publicables con IA, seguir [`PRODUCCION_IMAGENES_IA.md`](PRODUCCION_IMAGENES_IA.md) y guardar su trazabilidad con [`procedencia-imagen-ia.json`](../content/templates/procedencia-imagen-ia.json). Las imágenes generadas requieren revisión factual y humana; no sustituyen la procedencia de fotos de terceros.
 
 ## Jericó
 
