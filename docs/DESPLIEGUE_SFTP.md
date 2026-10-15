@@ -71,11 +71,21 @@ Para actualizar una instalación existente, con ambas carpetas presentes:
 python3 scripts/desplegar-sftp.py --activate --confirm-target /home/USUARIO/explorandolugares
 ```
 
-Sustituir la ruta de ejemplo por `remote_base` exacto. `--activate` construye/sube una nueva versión; no reutiliza automáticamente una subida anterior. Cada transferencia usa una carpeta nueva. Comprueba el contenido descargándolo de nuevo por SFTP y cotejando SHA-256 antes de activar. No comprueba funcionamiento PHP, HTTP, SSL o MySQL: verificar esos puntos después del despliegue.
+Si una versión ya está subida y verificada, puede activarse sin volver a transferirla, después de completar las migraciones de base de datos y comprobar el catálogo:
+
+```sh
+python3 scripts/desplegar-sftp.py --activate-release ID_DEL_RELEASE --confirm-target /home/USUARIO/explorandolugares
+```
+
+Sustituir la ruta de ejemplo por `remote_base` exacto. `--activate` construye/sube una nueva versión; no reutiliza automáticamente una subida anterior. Cada transferencia usa una carpeta nueva. SFTP confirma cada `put`; además, el script vuelve a leer y coteja SHA-256 solo de siete archivos clave, sin descargar de nuevo todas las imágenes. No comprueba funcionamiento PHP, HTTP, SSL o MySQL: verificar esos puntos después del despliegue.
 
 En una actualización, se renombran `public` y `app` antiguas a `previous-public` y `previous-app` dentro de la versión y se activan las nuevas. No se borran archivos remotos ni respaldos. Los renombrados individuales no forman una transacción conjunta: puede haber unos segundos de indisponibilidad. La cuenta necesita permiso para renombrar las carpetas y el servidor debe mantenerlas en el mismo sistema de archivos. No usar este esquema si el hosting no permite renombrar la raíz del dominio.
 
-No se transfieren `private/`, SQL, configuración real, credenciales, referencias `sources/`, el borrador v0.1 ni el histórico `public/` del repositorio. La entrega actual conserva el aviso de revisión y `noindex`; preparar la versión final y comprobar sus metadatos antes de hacerla indexable. No habilitar recepción sin configurar MySQL/privacidad conforme a `backend/README.md`.
+No se transfieren `private/`, la configuración real, credenciales, referencias `sources/`, el borrador v0.1 ni el histórico `public/` del repositorio. Las migraciones SQL van dentro de `app/database/`, fuera del directorio público, para que puedan aplicarse por el procedimiento de administración del hosting. No habilitar recepción sin configurar MySQL/privacidad conforme a `backend/README.md`.
+
+## Publicación inicial de destinos
+
+La entrega de octubre de 2026 deja Jericó como único destino publicado; los otros 20 destinos del piloto se importan como borrador. Sonsón se agrega desde su paquete ZIP en el panel de administración y también debe permanecer en borrador. Antes de activar el código dinámico en producción, respaldar la base de datos, aplicar una sola vez las migraciones 003 a 007 enumeradas en `backend/README.md`, ejecutar el importador del catálogo semilla y luego cargar el ZIP de Sonsón desde el panel. El importador se detiene si el catálogo de destinos, categorías o negocios ya contiene filas, y no modifica los registros de interesados. Al final verificar que Jericó es el único destino público, que Sonsón aparece en administración como borrador y que el sitemap solo contiene la guía de Jericó.
 
 ## Interrupción y recuperación
 

@@ -1,10 +1,14 @@
 <?php
 declare(strict_types=1);
-
-require dirname(__DIR__).'/app/DestinationImporter.php';
+$appDirectory=dirname(__DIR__);
+if (!is_file($appDirectory.'/DestinationImporter.php')) $appDirectory.='/app';
+require $appDirectory.'/DestinationImporter.php';
 $root=dirname(__DIR__,2);
 if (!is_file($root.'/content/destinos-dinamicos.json')) $root=dirname(__DIR__);
-$configPath=getenv('EL_DESTINATIONS_CONFIG') ?: dirname(__DIR__).'/private/config.php';
+$configCandidates=[dirname(__DIR__).'/private/config.php',dirname(__DIR__,2).'/private/config.php'];
+$defaultConfig=dirname(__DIR__).'/private/config.php';
+foreach($configCandidates as $candidate) if(is_file($candidate)){$defaultConfig=$candidate;break;}
+$configPath=getenv('EL_DESTINATIONS_CONFIG') ?: $defaultConfig;
 $dsn=getenv('EL_DESTINATIONS_DSN') ?: '';
 $user=getenv('EL_DESTINATIONS_DB_USER') ?: null;
 $password=getenv('EL_DESTINATIONS_DB_PASSWORD') ?: null;
@@ -19,7 +23,7 @@ if ($pdo->getAttribute(PDO::ATTR_DRIVER_NAME)==='mysql' && !in_array('--confirm-
     fwrite(STDERR,"La importación MySQL requiere --confirm-empty-catalog y solo funciona con el catálogo vacío.\n"); exit(2);
 }
 $catalog=json_decode(file_get_contents($root.'/content/destinos-dinamicos.json'),true,512,JSON_THROW_ON_ERROR);
-$options=json_decode(file_get_contents(dirname(__DIR__).'/app/contact-options.json'),true,512,JSON_THROW_ON_ERROR);
+$options=json_decode(file_get_contents($appDirectory.'/contact-options.json'),true,512,JSON_THROW_ON_ERROR);
 try {
     $counts=DestinationImporter::import($pdo,$catalog,$options);
     foreach ($counts as $name=>$count) fwrite(STDOUT,"{$name}: {$count}\n");

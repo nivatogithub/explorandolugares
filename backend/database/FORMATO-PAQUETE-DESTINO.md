@@ -1,18 +1,30 @@
-# Paquete JSON para crear un destino
+# Paquete ZIP para crear un destino
 
-La página de administración acepta archivos `.json` con `schema_version: 1`. La importación solo rellena el formulario del navegador: no escribe en la base de datos. Revisa y edita el contenido, adjunta las imágenes en sus campos y pulsa **Guardar municipio** para almacenarlo como borrador.
+La administración importa un solo archivo `.zip` para preparar un destino completo. El ZIP se valida y se usa para rellenar el formulario; importar no guarda en la base de datos ni publica. Después de revisar textos, traducciones e imágenes, pulsa **Guardar municipio como borrador**. La publicación requiere una acción manual posterior.
 
-El archivo de ejemplo está en `ensayos/v1/plantillas/paquete-destino-v1.json` y se puede descargar desde el formulario. El paquete agrupa:
+## Estructura
 
-Para pedir a otra IA que genere contenido conforme a esta estructura, copia `docs/PLANTILLA_PROMPT_IA_DESTINO.md`. Ese prompt explica las reglas editoriales, las fuentes y cómo mantener el paquete importable.
+```text
+paquete-destino.zip
+├── paquete-destino.json
+└── images/
+    ├── nombre-del-destino-portada.webp
+    ├── atractivo-1.webp
+    └── atractivo-2.webp
+```
 
-- `destination`: identificador opcional, departamento, subregión, coordenadas, traducciones, historia, razones y fuentes.
-- `hero_image`: origen de la imagen (`ai_generated`, `own` o `external`), créditos y textos alternativos/leyendas por idioma para la portada.
-- `places`: atractivo hijo por atractivo, con estado (`draft`, `published` o `archived`), tres traducciones y metadatos opcionales para su imagen (`image_origin`: `ai_generated`, `own` o `external`). Si se omite el estado, queda como borrador.
-- `local_research`: inteligencia interna sobre posicionamiento, competencia, posibles aliados, prospectos comerciales, estrategias de adquisición y fuentes. Se guarda en `destinations.internal_research_json`, dentro de la administración; no se añade al modelo de datos público ni a las páginas renderizadas.
+El manifiesto usa `schema_version: 2`. `destination.destination_type` acepta `municipality`, `city` u `other`, y `destination.country_code` usa el código ISO de dos letras. `hero_image.file` referencia la portada; cada `places[].image.file` referencia una imagen. Un elemento puede incluir `type: "place"` (valor predeterminado) o `type: "experience"`. Las experiencias llevan `external_url` y `external_label` por idioma para enlazar a la persona directamente con un operador; deben ser enlaces HTTPS. El portal no confirma disponibilidad ni gestiona reservas. Las rutas de las imágenes deben empezar por `images/` y usar nombres de archivo seguros. Los nombres deben coincidir exactamente entre el JSON y el ZIP. No incluyas carpetas ni archivos adicionales. El ejemplo completo está en `backend/public/plantillas/paquete-destino-v2.zip`; el manifiesto legible está en `ensayos/v1/plantillas/paquete-destino-v2.json`.
 
-Idiomas admitidos: `es`, `en` y `pt-BR`. Para `history` y `reasons` se usan listas de párrafos o líneas. `sources` admite objetos `{section, label, url}`. Se pueden omitir datos opcionales; antes de publicar se valida que exista el contenido necesario en todos los idiomas. Las imágenes no van dentro del JSON: se seleccionan desde el equipo en el formulario. El guardado las copia al directorio público de medios y registra su origen y textos alternativos. Para imágenes externas se exige autor, página de origen, licencia y enlace de licencia; para imágenes propias o generadas con IA esos enlaces pueden omitirse.
+El paquete debe llevar traducciones completas en español (`es`), inglés (`en`) y portugués de Brasil (`pt-BR`), historia, razones para visitar, atractivos y datos internos opcionales de posicionamiento, competencia, posibles aliados, prospectos y estrategia comercial. Mantén los atractivos en borrador. No inventes negocios, alianzas, fuentes, licencias ni hechos locales. Investigación, prospectos y estrategias permanecen en administración y no se publican.
 
-No incluyas rutas del servidor, contraseñas ni datos de configuración en el paquete. La investigación debe incluir URL y fecha de consulta, separar oportunidades de hechos confirmados, evitar datos personales privados y marcar prospectos como pendientes de validar. Nunca dispara contacto automático.
+Se aceptan imágenes JPG, PNG y WebP, de 240 × 160 hasta 10000 × 10000 px y hasta 5 MB cada una. El ZIP admite hasta 64 MB y hasta 60 MB de contenido descomprimido, con portada y hasta 40 imágenes de atractivos. Optimiza imágenes grandes antes de empaquetarlas. No se admiten SVG, enlaces simbólicos, rutas fuera de `images/`, archivos no referenciados ni imágenes ausentes. Las imágenes externas requieren crédito, origen y licencia verificables; conserva esa información en los campos del JSON.
 
-En MySQL existente, aplicar una sola vez `migrations/005-destination-internal-research.mysql.sql` antes de usar el campo interno. En instalaciones nuevas, usar el esquema vigente. La vista previa local aplica la migración SQLite de forma aislada.
+## Importación y seguridad
+
+1. En **Administración → Destinos**, importa el ZIP.
+2. El servidor valida el manifiesto, nombres y contenido real de las imágenes. Las copias temporales solo quedan disponibles para tu sesión autenticada durante 30 minutos.
+3. El navegador carga textos e imágenes en el formulario para que los revises. Nada se guarda todavía.
+4. Al guardar, PHP valida los campos de nuevo, copia las imágenes a `assets/destinos/{id}/`, registra su procedencia y crea el destino en estado borrador.
+5. Abre la vista previa privada. Solo publica cuando el contenido y las imágenes estén aprobados.
+
+La importación JSON v1 sigue disponible como compatibilidad con paquetes anteriores, pero requiere adjuntar imágenes manualmente. No subas credenciales, archivos de configuración ni datos privados en el ZIP.

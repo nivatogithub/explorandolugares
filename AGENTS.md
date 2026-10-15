@@ -11,6 +11,7 @@
 - No inventar negocios, testimonios, disponibilidad, precios, eventos, contactos o capacidades de reserva/pago.
 - No simular envíos de formularios sin backend. Explicar cualquier alternativa de contacto configurada.
 - Conservar créditos y licencias de recursos. Mantener secretos y datos privados fuera del repositorio.
+- Para crear o revisar ilustraciones de destinos, seguir `.agents/skills/imagenes-destinos/SKILL.md` y `docs/PRODUCCION_IMAGENES_IA.md`; mantener la procedencia aunque una ilustración no requiera crédito fotográfico público.
 - Aplicar `docs/GOBERNANZA_AGENTES.md` a cualquier agente o automatización: propuestas privadas y borradores únicamente; ninguna publicación, contacto comercial, cambio en producción ni despliegue sin aprobación humana explícita.
 - Al investigar prospectos locales, incluir solo información empresarial pública con fuente y fecha; marcarlos como pendientes de verificar y no contactarlos automáticamente.
 - Mostrar alternativas de diseño de forma visible y numerada cuando se solicite comparar; evitar carruseles que oculten opciones.

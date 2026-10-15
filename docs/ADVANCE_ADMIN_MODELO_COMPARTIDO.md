@@ -61,3 +61,7 @@ Después de 008, aplicar `009-advance-english-values.mysql.sql` una vez en stagi
 Los estados heredados del catálogo compartido (`PUBLICO`, `VERIFICADO`, `NO_RECLAMADO`, etc.) y los de `leads` pertenecen a otros módulos. Este cambio los conserva: traducirlos requiere una migración coordinada de todos sus lectores y escritores. No introduce una segunda nomenclatura almacenada ni tablas paralelas para esos estados.
 
 La migración 010 añade baja autoservicio y exclusión persistente por correo. Ver [estado y configuración](ADVANCE_ADMIN_ESTADO.md).
+
+## Integración de producción (main)
+
+Se integró main `c01b776` conservando el sitio público de main y la administración de esta rama. La herramienta `/admin/base-datos.php` reconoce las migraciones de ambas líneas hasta 013; sustituye el procedimiento manual anterior para esta versión. Consultar [resolución, pruebas y actualización segura](INTEGRACION_MAIN_ADVANCE_ADMIN.md). No se modificó producción; falta el ensayo de actualización sobre copia privada en MySQL/MariaDB antes de desplegar.

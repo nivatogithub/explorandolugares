@@ -21,7 +21,12 @@ final class SharedCatalogMigration {
             :(bool)$db->query("SELECT COUNT(*) FROM sqlite_master WHERE type='table' AND name='advance_business_crm'")->fetchColumn();
         if($hasDestination&&$hasLink&&!$hasTable)return;
         if($hasDestination||$hasLink)throw new RuntimeException('Migración parcial: revisar esquema y respaldo antes de continuar.');
-        $sql=file_get_contents(dirname(__DIR__,2).'/database/migrations/008-advance-shared-catalog.'.$driver.'.sql');
+        // Source checkout stores database/ beside app/; hosting packages it inside app/.
+        $filename='008-advance-shared-catalog.'.$driver.'.sql';
+        $migration=dirname(__DIR__).'/database/migrations/'.$filename;
+        if(!is_file($migration))$migration=dirname(__DIR__,2).'/database/migrations/'.$filename;
+        if(!is_file($migration))throw new RuntimeException('Falta la migración del catálogo compartido en la aplicación privada.');
+        $sql=file_get_contents($migration);
         if(!$hasTable)$sql=str_replace('DROP TABLE advance_establishments;','',$sql);
         if($driver==='sqlite')$db->beginTransaction();
         try{
