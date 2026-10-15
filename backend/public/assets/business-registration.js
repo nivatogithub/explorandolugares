@@ -12,7 +12,7 @@
   const newName = document.querySelector('#registration-new-name');
   const submit = document.querySelector('#registration-submit');
   let timer;
-  const endpoint = '/v1/negocios/registro/?search=1';
+  const endpoint = `${form.dataset.searchUrl}?search=1`;
 
   function choose(mode, id = '') {
     type.value = mode;
