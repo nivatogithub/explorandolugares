@@ -52,6 +52,25 @@ class DeploymentTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 deploy.remote_path(self.config, path)
 
+    def test_production_package_rewrites_every_private_app_include(self):
+        with tempfile.TemporaryDirectory() as folder:
+            public = Path(folder) / 'public'
+            (public / 'admin').mkdir(parents=True)
+            (public / 'business').mkdir()
+            admin = public / 'admin/negocios.php'
+            admin.write_text("<?php require dirname(__DIR__,2).'/app/bootstrap.php';\n"
+                             "require dirname(__DIR__,2).'/app/BusinessAdminService.php';")
+            claim = public / 'reclamar-negocio.php'
+            claim.write_text("<?php require __DIR__.'/../app/bootstrap.php';\n"
+                             "require __DIR__.'/../app/BusinessClaimService.php';")
+
+            deploy.rewrite_private_app_includes(public, self.config['remote_base'])
+
+            self.assertEqual(admin.read_text(), "<?php require '/home/usuario/explorandolugares/app/bootstrap.php';\n"
+                             "require '/home/usuario/explorandolugares/app/BusinessAdminService.php';")
+            self.assertEqual(claim.read_text(), "<?php require '/home/usuario/explorandolugares/app/bootstrap.php';\n"
+                             "require '/home/usuario/explorandolugares/app/BusinessClaimService.php';")
+
     def test_only_changed_hashes_are_selected(self):
         previous = {'files': [{'relative': 'public/index.html', 'sha256': 'old'},
                               {'relative': 'app/bootstrap.php', 'sha256': 'same'}]}

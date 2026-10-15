@@ -93,6 +93,23 @@ def public_path(config):
     return config.get('public_root') or config['remote_base'] + '/' + config['public_directory']
 
 
+def rewrite_private_app_includes(public_root, remote_base):
+    """Point public PHP entrypoints to the private app directory on the host."""
+    prefixes = {
+        "dirname(__DIR__,2).'/app/": "'" + remote_base + "/app/",
+        "__DIR__.'/../app/": "'" + remote_base + "/app/",
+    }
+    for entry in public_root.rglob('*.php'):
+        source = entry.read_text()
+        updated = source
+        for old, new in prefixes.items():
+            updated = updated.replace(old, new)
+        if updated != source:
+            entry.write_text(updated)
+        if any(old in updated for old in prefixes):
+            raise ValueError('Quedó una ruta relativa a app/ en un PHP público; se detuvo el empaquetado.')
+
+
 def remote_path(config, relative):
     path = PurePosixPath(relative)
     if path.is_absolute() or not path.parts or path.parts[0] not in {'public', 'app'} or '..' in path.parts:
@@ -117,23 +134,7 @@ def build(output, config=None):
     finally:
         shutil.rmtree(source_temp, ignore_errors=True)
     if config and config.get('public_root'):
-        routes = ['api/participacion.php', 'admin/index.php', 'admin/base-datos.php', 'admin/destinos.php', 'admin/negocios.php',
-                  'admin/suscripciones.php', 'admin/usuarios.php', 'admin/importar-negocios.php', 'admin/reclamaciones.php',
-                  'admin/solicitudes-cuenta.php', 'business/index.php', 'business/register.php', 'business/login.php',
-                  'business/dashboard.php', 'business/logout.php']
-        for relative in routes:
-            entry = output / 'public' / relative
-            text = entry.read_text()
-            old = "require dirname(__DIR__,2).'/app/bootstrap.php';"
-            if old not in text:
-                raise ValueError('Entrada PHP inesperada; se detuvo el empaquetado.')
-            entry.write_text(text.replace(old, "require '" + config['remote_base'] + "/app/bootstrap.php';", 1))
-        claim = output / 'public/reclamar-negocio.php'
-        text = claim.read_text()
-        old = "require __DIR__.'/../app/bootstrap.php';"
-        if old not in text:
-            raise ValueError('Entrada pública inesperada; se detuvo el empaquetado.')
-        claim.write_text(text.replace(old, "require '" + config['remote_base'] + "/app/bootstrap.php';", 1))
+        rewrite_private_app_includes(output / 'public', config['remote_base'])
     files = []
     allowed = {'.html', '.php', '.css', '.js', '.json', '.svg', '.webp', '.png', '.txt', '.xml', '.zip'}
     for kind in ('public', 'app'):
