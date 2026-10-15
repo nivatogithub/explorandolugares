@@ -31,6 +31,14 @@ class DeploymentTests(unittest.TestCase):
   self.assertEqual(journal['activation'][0]['from'],config['public_root'])
   self.assertEqual(journal['activation'][-1]['to'],config['public_root'])
   self.assertTrue(journal['activation'][1]['from'].startswith(config['remote_base']))
+ def test_business_hub_uses_private_app_path_in_domain_root_package(self):
+  config={**self.config,'public_root':'/home/usuario/public_html/explorandolugares.com'}
+  with tempfile.TemporaryDirectory() as folder:
+   output=Path(folder)/'build'
+   deploy.build(output,config)
+   entry=(output/'public/business/index.php').read_text()
+   self.assertIn("require '/home/usuario/explorandolugares/app/bootstrap.php';",entry)
+   self.assertNotIn("require dirname(__DIR__,2).'/app/bootstrap.php';",entry)
  def test_reject_other_public_roots(self):
   for path in ['/home/usuario/public_html','/home/usuario/public_html/otro.com','/home/otro/public_html/explorandolugares.com','/home/usuario/public_html/../explorandolugares.com',42]:
    with self.subTest(path=path),self.assertRaises(ValueError):self.load({**self.config,'public_root':path})

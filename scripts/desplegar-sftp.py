@@ -110,7 +110,7 @@ def build(output,config=None):
         shutil.rmtree(temporary_root,ignore_errors=True)
     if config and config.get('public_root'):
         # Con app fuera de public_html, las entradas PHP necesitan su ruta privada.
-        for relative in ['api/participacion.php','admin/index.php','admin/base-datos.php','admin/destinos.php','admin/negocios.php','admin/suscripciones.php','admin/usuarios.php','admin/importar-negocios.php','admin/reclamaciones.php','admin/solicitudes-cuenta.php','business/register.php','business/login.php','business/dashboard.php','business/logout.php']:
+        for relative in ['api/participacion.php','admin/index.php','admin/base-datos.php','admin/destinos.php','admin/negocios.php','admin/suscripciones.php','admin/usuarios.php','admin/importar-negocios.php','admin/reclamaciones.php','admin/solicitudes-cuenta.php','business/index.php','business/register.php','business/login.php','business/dashboard.php','business/logout.php']:
             entry=output/'public'/relative
             content=entry.read_text()
             old="require dirname(__DIR__,2).'/app/bootstrap.php';"
