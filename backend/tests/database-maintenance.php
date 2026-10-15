@@ -14,6 +14,8 @@ maintenance_check($rejected&&!in_array('phone_type',$pdo->query('PRAGMA table_in
 
 $destinations=new PDO('sqlite::memory:');$destinations->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 $destinations->exec(file_get_contents(dirname(__DIR__).'/database/destinations.sqlite.sql'));
+$preBusinessMigrations=(new DatabaseMaintenance($destinations,$app,$public))->inspect();
+maintenance_check($preBusinessMigrations['migrations']['016-plan-content-limits']==='pending','A pre-existing business summary column does not make migration 016 look partially applied before subscription plans exist');
 $destinations->exec(file_get_contents(dirname(__DIR__).'/database/migrations/006-poi-experience-links.sqlite.sql'));
 $destinations->exec(file_get_contents(dirname(__DIR__).'/database/migrations/008-business-subscriptions.sqlite.sql'));
 $destinations->exec(file_get_contents(dirname(__DIR__).'/database/migrations/009-business-origin.sqlite.sql'));
