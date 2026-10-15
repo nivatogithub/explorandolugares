@@ -11,3 +11,6 @@
 
 /* Group titles are labels, visually distinct from clickable navigation items. */
 .admin-sidebar .admin-nav-group>p{font-size:12px;font-weight:850;letter-spacing:.9px;color:var(--admin-ink);margin:18px 0 8px;padding:8px 12px 5px;border-bottom:1px solid var(--admin-line);cursor:default}.admin-sidebar .admin-nav-group:first-child>p{margin-top:0}.admin-sidebar nav a{font-weight:450}.admin-sidebar nav a[aria-current=page]{font-weight:750}@media(max-width:700px){.admin-sidebar .admin-nav-group>p{font-size:11px;margin-top:8px;padding:6px 7px}}
+
+/* Action hierarchy shared by actual buttons and navigation to creation/edit screens. */
+.admin-main .admin-actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:18px 0}.admin-main a.pill{white-space:normal;line-height:1.35;min-height:40px;text-align:center}.admin-main .admin-action-small{padding:7px 12px;min-height:34px;font-size:12px;white-space:nowrap}.admin-main a.pill:hover,.admin-main button:hover:not(:disabled){filter:brightness(.96)}.admin-main .pill.light:hover{background:#fff0dc}.admin-main .pagination a{display:inline-flex;padding:8px 14px;border:1px solid var(--admin-line);border-radius:6px;background:#fff8ed;text-decoration:none;font-size:13px}
