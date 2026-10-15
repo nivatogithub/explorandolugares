@@ -190,12 +190,18 @@ def changed_files(previous,current):
 
 def incremental_commands(config,files,removed=()):
     """SFTP directo al destino activo: carga cambios y elimina solo rutas conocidas."""
+    def remote_target(relative):
+        parts=PurePosixPath(relative)
+        root=public_path(config) if parts.parts[0]=='public' else config['remote_base']
+        suffix=parts.parts[1:] if parts.parts[0]=='public' else parts.parts
+        return PurePosixPath(root).joinpath(*suffix)
+
     directories=set()
     commands=[]
     for item in files:
         relative=PurePosixPath(item['relative'])
         root=public_path(config) if relative.parts[0]=='public' else config['remote_base']
-        target=PurePosixPath(root).joinpath(*relative.parts[1:])
+        target=remote_target(item['relative'])
         parent=target.parent
         boundary=PurePosixPath(root)
         while parent!=boundary and str(parent)!='/':
@@ -210,15 +216,11 @@ def incremental_commands(config,files,removed=()):
     puts=[f'put {quote(item["local"])} {quote(target)}' for item,target in commands]
     removed_targets=[]
     for relative in removed:
-        parts=PurePosixPath(relative)
-        root=public_path(config) if parts.parts[0]=='public' else config['remote_base']
-        removed_targets.append(str(PurePosixPath(root).joinpath(*parts.parts[1:])))
+        removed_targets.append(str(remote_target(relative)))
     # Nunca se eliminan directorios que siguen conteniendo archivos de la nueva entrega.
     current_parents=set()
     for item in files:
-        parts=PurePosixPath(item['relative'])
-        root=public_path(config) if parts.parts[0]=='public' else config['remote_base']
-        current_parents.add(str(PurePosixPath(root).joinpath(*parts.parts[1:]).parent))
+        current_parents.add(str(remote_target(item['relative']).parent))
     removed_dirs=set()
     for target in removed_targets:
         parent=str(PurePosixPath(target).parent)
