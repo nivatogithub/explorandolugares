@@ -75,6 +75,18 @@ class PublicLinkTests(unittest.TestCase):
                             for locale in ('','en/','pt-br/') for item in drafts))
         self.assertTrue((self.public/'.htaccess').is_file())
 
+    def test_business_portal_supports_domain_root_and_local_v1_preview(self):
+        bootstrap=(ROOT/'backend/app/bootstrap.php').read_text()
+        self.assertIn('function site_path(string $path)',bootstrap)
+        self.assertIn("str_starts_with($requestPath,'/v1/')",bootstrap)
+        for relative in ('business/register.php','business/login.php','business/dashboard.php','business/logout.php','reclamar-negocio.php'):
+            source=(ROOT/'backend/public'/relative).read_text()
+            self.assertNotIn('/v1/',source,relative)
+        registration=(ROOT/'backend/public/business/register.php').read_text()
+        script=(ROOT/'backend/public/assets/business-registration.js').read_text()
+        self.assertIn('data-search-url="<?=esc(site_path(\'/negocios/registro/\'))?>"',registration)
+        self.assertIn('form.dataset.searchUrl',script)
+
     def test_business_registration_is_grouped_and_preserves_submission_fields(self):
         expected = {
             'negocios-locales/interes/index.html': ('Tu negocio', 'Cómo contactarte', 'Confirma tu solicitud', 'Enviar solicitud'),

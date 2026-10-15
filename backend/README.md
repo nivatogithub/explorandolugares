@@ -10,7 +10,7 @@ El registro público de cuenta y solicitud está habilitado solo en los entornos
 
 ### Pruebas privadas en producción
 
-Para probar el flujo sin abrirlo al público, mantener `business_accounts_enabled` en `false` y configurar en el `private/config.php` del hosting una `business_accounts_test_key` aleatoria de al menos 32 caracteres. Entrar una vez por HTTPS a `/v1/negocios/registro/?prueba=LLAVE`; el portal inicia una sesión privada de cuatro horas y redirige enseguida a una URL limpia. Esa sesión permite registro, acceso, tablero y búsqueda/reclamación de negocios; las rutas responden como inexistentes a quienes no tienen llave ni sesión. Al borrar o vaciar `business_accounts_test_key`, las sesiones de prueba dejan de autorizar el acceso. La llave no se versiona ni se distribuye; como aparece en la primera petición, los registros técnicos del hosting podrían conservarla, así que debe ser única y temporal.
+Para probar el flujo sin abrirlo al público, mantener `business_accounts_enabled` en `false` y configurar en el `private/config.php` del hosting una `business_accounts_test_key` aleatoria de al menos 32 caracteres. Entrar una vez por HTTPS a `/negocios/registro/?prueba=LLAVE`; el portal inicia una sesión privada de cuatro horas y redirige enseguida a una URL limpia. Esa sesión permite registro, acceso, tablero y búsqueda/reclamación de negocios; las rutas responden como inexistentes a quienes no tienen llave ni sesión. Al borrar o vaciar `business_accounts_test_key`, las sesiones de prueba dejan de autorizar el acceso. La llave no se versiona ni se distribuye; como aparece en la primera petición, los registros técnicos del hosting podrían conservarla, así que debe ser única y temporal.
 
 ## Entrega para cPanel
 

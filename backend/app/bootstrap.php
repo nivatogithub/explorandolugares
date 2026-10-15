@@ -28,6 +28,12 @@ if (PHP_SAPI !== 'cli') {
 }
 function esc(mixed $value): string { return htmlspecialchars((string)$value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'); }
 function english_request(): bool { return ($_GET['lang'] ?? $_POST['lang'] ?? '') === 'en'; }
+function site_path(string $path): string {
+    $path='/'.ltrim($path,'/');
+    $requestPath=parse_url((string)($_SERVER['REQUEST_URI']??''),PHP_URL_PATH);
+    $prefix=is_string($requestPath)&&($requestPath==='/v1'||str_starts_with($requestPath,'/v1/'))?'/v1':'';
+    return $prefix.$path;
+}
 function response_text(string $value): string {
     if (!english_request()) return $value;
     static $messages;
