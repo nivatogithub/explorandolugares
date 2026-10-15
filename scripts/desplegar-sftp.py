@@ -202,6 +202,10 @@ def incremental_commands(config,files,removed=()):
             directories.add(str(parent))
             parent=parent.parent
         commands.append((item,str(target)))
+    # Public PHP entry points may require newly added app classes. Transfer the
+    # private backend first so a partial incremental run cannot expose entry
+    # points that fail because their dependencies have not arrived yet.
+    commands.sort(key=lambda entry:(0 if entry[0]['relative'].startswith('app/') else 1,entry[0]['relative']))
     mkdirs=[f'-mkdir {quote(directory)}' for directory in sorted(directories,key=lambda value:(value.count('/'),value))]
     puts=[f'put {quote(item["local"])} {quote(target)}' for item,target in commands]
     removed_targets=[]

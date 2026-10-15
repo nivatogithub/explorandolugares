@@ -102,6 +102,13 @@ class DeploymentTests(unittest.TestCase):
   self.assertIn('-mkdir "/home/usuario/public_html/explorandolugares.com/assets/leaflet/images"',dirs)
   self.assertLess(commands.index('-mkdir "/home/usuario/public_html/explorandolugares.com/assets/leaflet"'),upload)
   self.assertLess(commands.index('-mkdir "/home/usuario/public_html/explorandolugares.com/assets/leaflet/images"'),upload)
+ def test_incremental_uploads_backend_before_public_entrypoints(self):
+  files=[{'relative':'public/business/register.php','local':'/tmp/register.php','sha256':'p','bytes':1},
+         {'relative':'app/BusinessAccountPortalService.php','local':'/tmp/service.php','sha256':'a','bytes':1}]
+  commands=deploy.incremental_commands(self.config,files)
+  uploads=[command for command in commands if command.startswith('put ')]
+  self.assertIn('/tmp/service.php',uploads[0])
+  self.assertIn('/tmp/register.php',uploads[1])
  def test_incremental_cleanup_only_removes_known_paths_after_uploads(self):
   files=[{'relative':'public/negocios-locales/index.html','local':'/tmp/new.html','sha256':'new','bytes':1}]
   commands=deploy.incremental_commands(self.config,files,['public/aliados/index.html','public/aliados.html'])
