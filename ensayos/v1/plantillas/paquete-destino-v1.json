@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "destination": {
+    "slug": "sonson",
+    "department": "Antioquia",
+    "subregion": "Páramo",
+    "latitude": 5.7106,
+    "longitude": -75.3107,
+    "translations": {
+      "es": {
+        "display_name": "Sonsón",
+        "eyebrow": "Montañas, memoria y caminos",
+        "headline": "Un paisaje que invita a explorar",
+        "intro": "Descripción inicial en español, para revisar y editar.",
+        "meta_description": "Descripción breve para buscadores."
+      },
+      "en": {
+        "display_name": "Sonsón",
+        "eyebrow": "Mountains, heritage and trails",
+        "headline": "A landscape ready to explore",
+        "intro": "English translation to review and edit.",
+        "meta_description": "Short description for search engines."
+      },
+      "pt-BR": {
+        "display_name": "Sonsón",
+        "eyebrow": "Montanhas, memória e caminhos",
+        "headline": "Uma paisagem para explorar",
+        "intro": "Tradução para português para revisar e editar.",
+        "meta_description": "Descrição breve para mecanismos de busca."
+      }
+    },
+    "history": {
+      "es": ["Primer párrafo de historia.", "Segundo párrafo opcional."],
+      "en": ["First history paragraph.", "Optional second paragraph."],
+      "pt-BR": ["Primeiro parágrafo da história.", "Segundo parágrafo opcional."]
+    },
+    "reasons": {
+      "es": ["Primera razón para visitar."],
+      "en": ["First reason to visit."],
+      "pt-BR": ["Primeiro motivo para visitar."]
+    },
+    "sources": {
+      "es": [{"section": "destination", "label": "Fuente consultada", "url": "https://example.org/"}],
+      "en": [],
+      "pt-BR": []
+    }
+  },
+  "hero_image": {
+    "image_origin": "ai_generated",
+    "image_creator": "Nombre del autor o entidad",
+    "image_source_url": "https://example.org/pagina-de-la-imagen",
+    "image_license": "Licencia autorizada para publicación",
+    "image_license_url": "https://example.org/licencia",
+    "alt": {
+      "es": "Descripción visual de la imagen de portada",
+      "en": "Visual description of the destination cover image",
+      "pt-BR": "Descrição visual da imagem de capa do destino"
+    },
+    "caption": {"es": "", "en": "", "pt-BR": ""}
+  },
+  "places": [
+    {
+      "slug": "parque-principal",
+      "publication_status": "draft",
+      "translations": {
+        "es": {"name": "Parque principal", "description": "Descripción del atractivo."},
+        "en": {"name": "Main square", "description": "Description of the attraction."},
+        "pt-BR": {"name": "Praça principal", "description": "Descrição do atrativo."}
+      },
+      "image": {
+        "image_origin": "ai_generated",
+        "image_creator": "Nombre del autor o entidad",
+        "image_source_url": "https://example.org/pagina-de-la-imagen",
+        "image_license": "Licencia autorizada para publicación",
+        "image_license_url": "https://example.org/licencia",
+        "alt": {"es": "Vista del parque principal", "en": "View of the main square", "pt-BR": "Vista da praça principal"},
+        "caption": {"es": "", "en": "", "pt-BR": ""}
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "2026-10-14",
+    "positioning": "Hipótesis de posicionamiento local para revisar.",
+    "competitors": [
+      {
+        "name": "Nombre del portal o alternativa",
+        "type": "Directorio, mapa, portal turístico u otra alternativa",
+        "url": "https://example.org/",
+        "source_url": "https://example.org/",
+        "checked_at": "2026-10-14",
+        "summary": "Qué ofrece, descrito a partir de la fuente consultada.",
+        "opportunity": "Oportunidad diferenciadora que debe validarse."
+      }
+    ],
+    "potential_allies": [
+      {
+        "name": "Organización o entidad, no una persona particular",
+        "type": "Entidad pública, asociación, institución educativa u organización local",
+        "website_url": "https://example.org/",
+        "source_url": "https://example.org/",
+        "checked_at": "2026-10-14",
+        "reason": "Por qué podría ser pertinente conversar con esta organización.",
+        "status": "identificado_no_contactado"
+      }
+    ],
+    "business_prospects": [
+      {
+        "name": "Nombre del establecimiento en una fuente pública",
+        "category": "Alojamiento, alimentación u otra categoría general",
+        "website_url": "",
+        "source_url": "https://example.org/",
+        "checked_at": "2026-10-14",
+        "evidence": "Qué demuestra la fuente y qué falta confirmar.",
+        "status": "pendiente_verificar_vigencia"
+      }
+    ],
+    "acquisition_strategies": [
+      {
+        "audience": "Segmento local al que se dirige la acción",
+        "value_proposition": "Beneficio que se propone validar con el negocio.",
+        "channel": "Canal público o presencial que se propone usar",
+        "first_action": "Siguiente acción, todavía pendiente de aprobación.",
+        "success_measure": "Indicador observable, sin inventar resultados.",
+        "status": "propuesta"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Fuente consultada",
+        "url": "https://example.org/",
+        "checked_at": "2026-10-14"
+      }
+    ],
+    "notes": [
+      "Esta investigación es interna. No se publica ni autoriza contacto automático."
+    ]
+  }
+}

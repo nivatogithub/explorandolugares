@@ -22,8 +22,9 @@ class Destinos(unittest.TestCase):
   self.assertEqual(names,json.loads((SITE/'assets/contact-options.json').read_text())['municipalities'])
   for lang in ['', 'en/']:
    index=(SITE/(lang+'destinos/index.html')).read_text()
-   self.assertEqual(index.count('class="destination-card"'),21)
-   for slug in ['jerico']+[d['slug'] for d in DATA]:self.assertIn('href="'+slug+'/index.html"',index)
+   self.assertEqual(index.count('class="destination-card"'),1)
+   self.assertIn('href="jerico/index.html"',index)
+   for d in DATA:self.assertNotIn('href="'+d['slug']+'/index.html"',index)
  def test_paginas_bilingues_y_recursos(self):
   for lang in ['', 'en/']:
    for d in DATA:

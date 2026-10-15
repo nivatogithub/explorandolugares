@@ -16,6 +16,8 @@ JERICO_PHOTOS = [
     {"file": "assets/jerico.webp", "caption": {"es": "Centro histórico de Jericó", "en": "Jericó historic centre"}, "author": "Xemenendura", "source": "https://commons.wikimedia.org/wiki/File:El_parque_Jeric%C3%B3.jpg", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"},
     {"file": "assets/jerico/casa-santa-laura.webp", "caption": {"es": "Casa natal de Santa Laura", "en": "Saint Laura’s birthplace"}, "author": "Xemenendura", "source": "https://commons.wikimedia.org/wiki/File:Casa_de_la_beata_Laura.jpg", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"},
     {"file": "assets/jerico/monumento-santa-laura.webp", "caption": {"es": "Monumento a Santa Laura", "en": "Saint Laura monument"}, "author": "Raomir Ramirez Morales", "source": "https://commons.wikimedia.org/wiki/File:Santa_Laura_Montoya_Upegui%2C_Jeric%C3%B3_Antioquia.jpg", "license": "CC BY-SA 3.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"},
+    {"file": "assets/jerico/cristo-salvador-directo.webp", "caption": {"es": "Cristo del Cerro El Salvador", "en": "Christ statue on El Salvador Hill"}, "author": "Xemenendura", "source": "https://commons.wikimedia.org/wiki/File:Cristo_en_Jeric%C3%B3.jpg", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"},
+    {"file": "assets/jerico/iglesia-rosada.webp", "caption": {"es": "Santuario de Santa Laura", "en": "Saint Laura Sanctuary"}, "author": "Angel OLMEDO", "source": "https://commons.wikimedia.org/wiki/File:Jeric%C3%B3,_santuario_Madre_Laura.jpg", "license": "Public domain", "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"},
 ]
 
 PORTAL_ART = [
