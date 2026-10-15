@@ -109,6 +109,12 @@ class DeploymentTests(unittest.TestCase):
   uploads=[command for command in commands if command.startswith('put ')]
   self.assertIn('/tmp/service.php',uploads[0])
   self.assertIn('/tmp/register.php',uploads[1])
+  self.assertIn('/home/usuario/explorandolugares/app/BusinessAccountPortalService.php',uploads[0])
+ def test_incremental_keeps_private_app_prefix_under_remote_base(self):
+  files=[{'relative':'app/database/migrations/019-final.mysql.sql','local':'/tmp/019.sql','sha256':'a','bytes':1}]
+  commands=deploy.incremental_commands(self.config,files)
+  upload=next(command for command in commands if command.startswith('put '))
+  self.assertTrue(upload.endswith('/home/usuario/explorandolugares/app/database/migrations/019-final.mysql.sql"'),upload)
  def test_incremental_cleanup_only_removes_known_paths_after_uploads(self):
   files=[{'relative':'public/negocios-locales/index.html','local':'/tmp/new.html','sha256':'new','bytes':1}]
   commands=deploy.incremental_commands(self.config,files,['public/aliados/index.html','public/aliados.html'])
