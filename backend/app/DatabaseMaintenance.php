@@ -202,6 +202,15 @@ final class DatabaseMaintenance
         foreach (self::MIGRATIONS as $id => $migration) {
             $state = $this->migrationState($migration, $tables);
             if ($state === 'partial') {
+                // Later migrations can appear partial when their prerequisite
+                // tables have not been created yet. Let the ordered migration
+                // pass reach them after their prerequisites are applied; only
+                // block a partial state once all required tables exist.
+                $missingRequirements = array_diff($migration['requires'], $tables);
+                if ($missingRequirements !== []) {
+                    $states[$id] = 'pending';
+                    continue;
+                }
                 throw new RuntimeException('La migración '.$id.' está aplicada parcialmente. Se detuvo sin ejecutar más SQL; revisa columnas y tablas antes de continuar.');
             }
             $states[$id] = $state;
