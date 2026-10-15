@@ -27,3 +27,11 @@ La entrada `/admin/destinos.php` muestra conteos por estado y accesos a Editar/V
 Flujo: crear y guardar como borrador → abrir vista previa privada → corregir contenido/idiomas/atractivos → elegir «Publicar para visitantes» en el editor → guardar tras revisión humana. El backend valida los requisitos existentes. No hay un proceso separado de aprobación por versión en este incremento. Publicar aquí solo modifica la base local y no despliega producción.
 
 La base de esta demostración contiene inicialmente «Destino de prueba» en borrador. No representa ni sincroniza el catálogo completo del Worker de destinos. La copia del renderizador conserva los límites y contenido de la rama actual; no incorpora archivos sin confirmar del otro Worker.
+
+### Destinos: publicación y ubicación
+
+El listado ofrece Editar, Vista previa y Publicar. Publicar abre la sección de revisión del editor; el botón final envía el formulario con CSRF y reutiliza las validaciones del servicio: destino previamente guardado, contenido completo en es/en/pt-BR y al menos un atractivo publicado. No se publica automáticamente al abrir el enlace.
+
+País (`country_code`, dos letras) y departamento/región/estado (`department`) son editables sobre el modelo existente. Los destinos nuevos no asumen Colombia ni Antioquia y usan `destination_type=other`; los registros existentes conservan su tipo. El mapa público utiliza el país registrado. Pendiente definir catálogo de países, divisiones territoriales y posibles reglas de rutas multinacionales. No se han creado tablas geográficas adicionales.
+
+Validación: sintaxis PHP, prueba de DestinationAdminService, suite HTTP Advance Admin y revisión del editor local. La demo sigue siendo una base aislada con datos ficticios.

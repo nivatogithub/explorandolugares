@@ -54,7 +54,7 @@ $t['contact_business']=$locale==='en'?'Contact business':($locale==='pt-BR'?'Ent
 $t['ideas_heading']=$locale==='en'?'What to see in':($locale==='pt-BR'?'O que conhecer em':'Qué conocer en');
 $t['directory_heading']=$locale==='en'?'Directory for':($locale==='pt-BR'?'Diretório de':'Directorio de');
 $t['events_heading']=$locale==='en'?'Events in':($locale==='pt-BR'?'Eventos em':'Eventos en');
-$map='https://www.google.com/maps/search/?api=1&query='.rawurlencode($name.', '.$d['department'].', Colombia');
+$map='https://www.google.com/maps/search/?api=1&query='.rawurlencode(implode(', ',array_filter([$name,$d['department'],$d['country_code']==='CO'?'Colombia':$d['country_code']])));
 $localePrefix=$locale==='es'?'':($locale==='pt-BR'?'pt-br/':'en/');
 $interest=u('/'.$localePrefix.'negocios-locales/interes/index.html').'?municipio='.rawurlencode($name).'#contacto';
 $localizedRoot=u('/'.$localePrefix);
