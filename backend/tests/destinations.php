@@ -3,11 +3,25 @@ declare(strict_types=1);
 
 require dirname(__DIR__).'/app/DestinationImporter.php';
 require dirname(__DIR__).'/app/DestinationRepository.php';
+require dirname(__DIR__).'/app/BusinessRepository.php';
+require dirname(__DIR__).'/app/BusinessAdminService.php';
+require dirname(__DIR__).'/app/BusinessSubscriptionAdminService.php';
+require dirname(__DIR__).'/app/BusinessPublicImporter.php';
+require dirname(__DIR__).'/app/AccountAdminService.php';
 
 function check(bool $ok,string $message): void { if (!$ok) throw new RuntimeException($message); }
 $pdo=new PDO('sqlite::memory:',null,null,[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC]);
 $pdo->exec(file_get_contents(dirname(__DIR__).'/database/destinations.sqlite.sql'));
 $pdo->exec(file_get_contents(dirname(__DIR__).'/database/migrations/006-poi-experience-links.sqlite.sql'));
+$pdo->exec(file_get_contents(dirname(__DIR__).'/database/migrations/008-business-subscriptions.sqlite.sql'));
+$pdo->exec(file_get_contents(dirname(__DIR__).'/database/migrations/009-business-origin.sqlite.sql'));
+$pdo->exec(file_get_contents(dirname(__DIR__).'/database/migrations/010-business-location-subscription-lifecycle.sqlite.sql'));
+$pdo->exec(file_get_contents(dirname(__DIR__).'/database/migrations/011-premium-business-story.sqlite.sql'));
+$pdo->exec(file_get_contents(dirname(__DIR__).'/database/migrations/012-business-image-references.sqlite.sql'));
+$pdo->exec(file_get_contents(dirname(__DIR__).'/database/migrations/013-accounts-location-map.sqlite.sql'));
+$pdo->exec(file_get_contents(dirname(__DIR__).'/database/migrations/014-tiered-business-description.sqlite.sql'));
+$pdo->exec(file_get_contents(dirname(__DIR__).'/database/migrations/015-business-media-quotas.sqlite.sql'));
+$pdo->exec(file_get_contents(dirname(__DIR__).'/database/migrations/016-plan-content-limits.sqlite.sql'));
 $root=dirname(__DIR__,2);
 $catalog=json_decode(file_get_contents($root.'/content/destinos-dinamicos.json'),true,512,JSON_THROW_ON_ERROR);
 $options=json_decode(file_get_contents(dirname(__DIR__).'/app/contact-options.json'),true,512,JSON_THROW_ON_ERROR);
@@ -66,20 +80,80 @@ foreach ($catalog['destinations'] as $record) foreach ($catalog['locales'] as $l
 }
 $businessInsert=$pdo->prepare('INSERT INTO businesses(public_id,destination_id,category_code,slug,information_status,claim_status,operation_status,publication_status) VALUES(?,?,?,?,?,?,?,?)');
 $destinationId=(int)$pdo->query("SELECT id FROM destinations WHERE slug='jerico'")->fetchColumn();
-$businessInsert->execute(['test-published',$destinationId,'alimentacion','sitio-de-prueba','PUBLICO','NO_RECLAMADO','DESCONOCIDO','published']);
+$businessInsert->execute(['aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa',$destinationId,'alimentacion','sitio-de-prueba','PUBLICO','NO_RECLAMADO','DESCONOCIDO','published']);
 $businessInsert->execute(['test-draft',$destinationId,'alimentacion','sitio-borrador','PUBLICO','NO_RECLAMADO','DESCONOCIDO','draft']);
 $businessInsert->execute(['test-closed',$destinationId,'alimentacion','sitio-cerrado','PUBLICO','NO_RECLAMADO','CERRADO_DEFINITIVO','published']);
-$businessId=(int)$pdo->query("SELECT id FROM businesses WHERE public_id='test-published'")->fetchColumn();
-$pdo->prepare('INSERT INTO business_translations(business_id,locale,display_name,summary,description) VALUES(?,?,?,?,?)')->execute([$businessId,'es','Prueba','Descripción breve','Descripción']);
+$businessId=(int)$pdo->query("SELECT id FROM businesses WHERE public_id='aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa'")->fetchColumn();
+$pdo->prepare('INSERT INTO business_subscriptions(business_id,plan_code,billing_frequency,status) VALUES(?,?,?,?)')->execute([$businessId,'featured','monthly','active']);
+$pdo->prepare('INSERT INTO business_translations(business_id,locale,display_name,summary,description,brand_story,featured_services) VALUES(?,?,?,?,?,?,?)')->execute([$businessId,'es','Prueba','Descripción breve','Descripción',null,null]);
 $pdo->prepare('INSERT INTO business_contacts(business_id,channel,contact_value,is_public) VALUES(?,?,?,?)')->execute([$businessId,'whatsapp','+57 300 123 4567',1]);
 $pdo->prepare('INSERT INTO business_contacts(business_id,channel,contact_value,is_public) VALUES(?,?,?,?)')->execute([$businessId,'email','privado@example.test',0]);
 $mediaId=(int)$pdo->query('SELECT id FROM media_assets LIMIT 1')->fetchColumn();
-$pdo->prepare('INSERT INTO business_media(business_id,media_asset_id,display_order) VALUES(?,?,?)')->execute([$businessId,$mediaId,1]);
+$pdo->prepare('INSERT INTO business_media(business_id,media_asset_id,display_order,role) VALUES(?,?,?,?)')->execute([$businessId,$mediaId,1,'logo']);
 $visible=$repo->findPublished('jerico','es')['businesses'];
-check(count($visible)===1 && $visible[0]['public_id']==='test-published','Only published, non-closed businesses appear');
+check(count($visible)===1 && $visible[0]['public_id']==='aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa','Only published, non-closed businesses appear');
+check($visible[0]['plan_code']==='featured'&&isset($visible[0]['features']['highlighted_card']),'The active subscription determines directory card entitlements');
 check($visible[0]['image_path']!==null,'Published business card can load its image');
 $contacts=$repo->findPublished('jerico','es')['public_contacts'][$businessId]??[];
 check(count($contacts)===1 && $contacts[0]['channel']==='whatsapp','Private business contacts stay hidden');
+$pageBusinessId=(int)$pdo->query("SELECT id FROM businesses WHERE public_id='aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa'")->fetchColumn();
+$pdo->prepare('UPDATE business_subscriptions SET plan_code=?,status=? WHERE business_id=?')->execute(['page_premium','active',$pageBusinessId]);
+ $businessPage=(new BusinessRepository($pdo))->findPublicPage('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa','es');
+check($businessPage!==null&&$businessPage['plan_code']==='page_premium'&&isset($businessPage['features']['business_page']),'Page-tier businesses get a dedicated profile rendered from the subscription catalog');
+check((new BusinessRepository($pdo))->findPublicPage('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa','pt-BR')['plan_name']==='Página Premium','The public profile subscription label is localized');
+$pdo->exec("UPDATE subscription_plan_prices SET amount=25000 WHERE plan_code='featured' AND billing_frequency='monthly'");
+$adminService=new BusinessAdminService($pdo,sys_get_temp_dir().'/explorando-lugares-image-references-test');$newBusiness=$adminService->save(['destination_id'=>$destinationId,'category_code'=>'alimentacion','slug'=>'url-que-no-se-debe-usar','display_order'=>'999','publication_status'=>'published','information_status'=>'VERIFICADO','claim_status'=>'RECLAMADO','operation_status'=>'ABIERTO','plan_code'=>'featured','billing_frequency'=>'monthly','address_text'=>'Calle 10, Jericó','location_reference'=>'Frente al parque','location_map_url'=>'https://www.google.com/maps/place/Negocio/@5.7921,-75.7844,18z','map_workflow'=>'1','location_confirmed'=>'1','image_assistance_requested'=>'1','translations'=>['es'=>['display_name'=>'Negocio administrado','summary'=>'Resumen','description'=>'Descripción'],'en'=>['display_name'=>'Managed business','summary'=>'Summary','description'=>'Description'],'pt-BR'=>['display_name'=>'Negócio administrado','summary'=>'Resumo','description'=>'Descrição']],'contacts'=>['whatsapp'=>['value'=>'+573001234567','public'=>1],'phone_fixed'=>['value'=>'+5741234567','public'=>1],'instagram'=>['value'=>'https://instagram.com/negocio','public'=>1]]]);
+check((int)$pdo->query('SELECT image_assistance_requested FROM businesses WHERE id='.$newBusiness)->fetchColumn()===1,'Image generation support preference is recorded separately from public media.');
+$pdo->prepare('INSERT INTO business_media(business_id,media_asset_id,display_order,role) VALUES(?,?,?,?)')->execute([$newBusiness,$mediaId,0,'logo']);
+$pdo->prepare('INSERT INTO business_image_references(business_id,storage_name,original_name,mime_type,file_size,width,height) VALUES(?,?,?,?,?,?,?)')->execute([$newBusiness,str_repeat('a',40).'.jpg','foto-local.jpg','image/jpeg',12345,640,480]);
+$newBusinessRecord=$adminService->find($newBusiness);
+check(count($newBusinessRecord['image_references'])===1&&$newBusinessRecord['image_references'][0]['original_name']==='foto-local.jpg','Uploaded reference media is retrievable as private review material, independently of published media.');
+check($newBusinessRecord!==null&&$newBusinessRecord['publication_status']==='draft'&&$newBusinessRecord['information_status']==='PENDIENTE_REVISION'&&$newBusinessRecord['claim_status']==='NO_RECLAMADO'&&$newBusinessRecord['operation_status']==='DESCONOCIDO'&&$newBusinessRecord['record_origin']==='admin_created','Admin-created business ignores requested statuses and always starts as a private, unverified draft');
+check($newBusinessRecord['slug']==='negocio-administrado'&&count($newBusinessRecord['translations'])===1&&$newBusinessRecord['subscription']['plan_code']==='featured'&&$newBusinessRecord['subscription']['status']==='pending','URL is generated, Spanish is the only initial locale, and the selected tier is attached as unpaid/pending on creation');
+check($newBusinessRecord['address_text']==='Calle 10, Jericó'&&(float)$newBusinessRecord['latitude']===5.7921&&(float)$newBusinessRecord['longitude']===-75.7844&&str_contains($newBusinessRecord['location_map_url'],'openstreetmap.org/?mlat=5.7921')&&(int)$newBusinessRecord['location_confirmed']===1,'Address, destination confirmation and coordinates are tied to the selected map point');
+$tooLong=$adminService->find($newBusiness);$tooLong['id']=$newBusiness;$tooLong['plan_code']='basic';$tooLong['translations']['es']['summary']=str_repeat('á',301);$limitRejected=false;try{$adminService->save($tooLong);}catch(RuntimeException $error){$limitRejected=str_contains($error->getMessage(),'300 caracteres');}check($limitRejected,'The server rejects Basic summaries above 300 Unicode characters.');
+$mapUpdate=$newBusinessRecord;unset($mapUpdate['latitude'],$mapUpdate['longitude']);$mapUpdate['location_map_url']='https://maps.app.goo.gl/example-pin';$mapUpdate['location_map_changed']='1';$mapUpdate['location_confirmed']='1';$adminService->save($mapUpdate);$mapUpdatedRecord=$adminService->find($newBusiness);
+check($mapUpdatedRecord['latitude']===null&&$mapUpdatedRecord['longitude']===null,'Changing to a map link without coordinates clears the old point instead of retaining a mismatched location');
+check($newBusinessRecord['opening_hours']===''&&$newBusinessRecord['capacity_count']===null&&$newBusinessRecord['menu_url']===''&&$newBusinessRecord['reservations_url']==='','Featured-tier creation does not request page-only schedule, capacity, menu or booking details');
+check(!isset($newBusinessRecord['contacts']['phone_fixed']),'A featured-card form does not collect contact channels reserved for own-page tiers.');
+$pdo->prepare('UPDATE businesses SET publication_status="published" WHERE id=?')->execute([$newBusiness]);
+check(count($repo->findPublished('jerico','es')['businesses'])===1,'A pending-review admin record stays hidden even if the publication flag is changed directly');
+$pdo->prepare('INSERT INTO business_subscriptions(business_id,plan_code,status) VALUES(?,?,?)')->execute([$newBusiness,'page','active']);
+check((new BusinessRepository($pdo))->findPublicPage($newBusinessRecord['public_id'],'es')===null,'A pending-review record cannot render its own public business page');
+$pdo->prepare('DELETE FROM business_subscriptions WHERE business_id=?')->execute([$newBusiness]);
+$pdo->prepare('UPDATE businesses SET publication_status="draft" WHERE id=?')->execute([$newBusiness]);
+$newBusinessRecord['translations']['es']['summary']='Resumen actualizado';$newBusinessRecord['translations']['en']=['display_name'=>'Managed business','summary'=>'Summary','description'=>'Description'];
+$adminService->save($newBusinessRecord);
+check($adminService->find($newBusiness)['publication_status']==='draft'&&count($adminService->find($newBusiness)['translations'])===2,'Content edits remain private and preserve only submitted translations');
+check((int)$pdo->query("SELECT COUNT(*) FROM business_media WHERE business_id={$newBusiness} AND role='logo'")->fetchColumn()===1,'Saving the business form does not reassign or remove its approved public logo.');
+$subscriptionService=new BusinessSubscriptionAdminService($pdo);
+check((int)$pdo->query("SELECT COUNT(*) FROM business_subscriptions WHERE business_id={$newBusiness}")->fetchColumn()===1,'The selected subscription is created together with the business form.');
+$pdo->exec("UPDATE subscription_plan_prices SET amount=120000 WHERE plan_code='page' AND billing_frequency='quarterly'");
+$subscriptionService->save(['business_id'=>$newBusiness,'plan_code'=>'page','billing_frequency'=>'quarterly']);
+$subscriptionHistory=$pdo->query("SELECT plan_code,status FROM business_subscriptions WHERE business_id={$newBusiness} ORDER BY id")->fetchAll();
+check(count($subscriptionHistory)===2&&$subscriptionHistory[0]['status']==='cancelled'&&$subscriptionHistory[1]['plan_code']==='page'&&$subscriptionHistory[1]['status']==='pending','A new paid choice keeps history and waits for payment review before enabling entitlements');
+$imported=BusinessPublicImporter::import($pdo,['schema_version'=>'business-import-v1','destination_slug'=>'destino-borrador','businesses'=>[['category_code'=>'alimentacion','name'=>'Importado de prueba','summary'=>'Resumen confirmado por fuente','description'=>'Texto basado en información pública.','sources'=>[['url'=>'https://example.org/negocio','note'=>'Página oficial','checked_at'=>'2026-10-14']]]]]);
+$importedRecord=$pdo->query("SELECT b.id,b.slug,b.record_origin,b.information_status,b.claim_status,b.operation_status,b.publication_status FROM businesses b JOIN business_translations t ON t.business_id=b.id WHERE t.display_name='Importado de prueba'")->fetch();
+check($imported===1&&$importedRecord!==false&&$importedRecord['information_status']==='PUBLICO'&&$importedRecord['publication_status']==='draft'&&$importedRecord['claim_status']==='NO_RECLAMADO'&&$importedRecord['operation_status']==='DESCONOCIDO','JSON public-business import records source status but remains a private draft');
+$sourceCount=(int)$pdo->query("SELECT COUNT(*) FROM business_sources WHERE business_id=".(int)$importedRecord['id'])->fetchColumn();
+check($sourceCount===1,'Public import preserves its source URL and review date');
+$accounts=new AccountAdminService($pdo);
+$travelerId=$accounts->save(['account_type'=>'traveler','display_name'=>'Viajera de prueba','email'=>'traveler@example.test']);
+$account=$pdo->query('SELECT account_type,status,password_hash FROM accounts WHERE id='.(int)$travelerId)->fetch();
+check($account['account_type']==='traveler'&&$account['status']==='pending_activation'&&$account['password_hash']===null,'Traveler accounts can be created without issuing a password or enabling login');
+$emptyBusinessAccountRejected=false;try{$accounts->save(['account_type'=>'business','display_name'=>'Responsable de prueba','email'=>'owner@example.test']);}catch(RuntimeException){$emptyBusinessAccountRejected=true;}
+check($emptyBusinessAccountRejected,'The admin cannot create an empty business account');
+$pdo->prepare('UPDATE businesses SET information_status="ACTIVO",claim_status="RECLAMADO" WHERE id=?')->execute([$businessId]);
+$businessAccountId=$accounts->save(['account_type'=>'business','display_name'=>'Responsable de prueba','email'=>'owner@example.test','business_ids'=>[$businessId]]);
+check((int)$pdo->query('SELECT COUNT(*) FROM business_account_memberships WHERE account_id='.(int)$businessAccountId.' AND business_id='.(int)$businessId.' AND role="owner" AND status="active"')->fetchColumn()===1,'Only a reclaimed and authorized business can be linked to a pending business account');
+$linkRejected=false;try{$accounts->linkBusiness(['account_id'=>$businessAccountId,'business_id'=>(int)$importedRecord['id'],'membership_role'=>'owner']);}catch(RuntimeException){$linkRejected=true;}
+check($linkRejected,'A business account cannot be linked to a public unclaimed business');
+$beforeImportCount=(int)$pdo->query('SELECT COUNT(*) FROM businesses')->fetchColumn();$batchRejected=false;
+try{BusinessPublicImporter::import($pdo,['schema_version'=>'business-import-v1','destination_slug'=>'destino-borrador','businesses'=>[
+ ['category_code'=>'alimentacion','name'=>'Lote válido provisional','summary'=>'','description'=>'','sources'=>[['url'=>'https://example.org/source']]],
+ ['category_code'=>'no-existe','name'=>'Lote inválido','sources'=>[['url'=>'https://example.org/source']]]
+]]);}catch(RuntimeException){$batchRejected=true;}
+check($batchRejected&&(int)$pdo->query('SELECT COUNT(*) FROM businesses')->fetchColumn()===$beforeImportCount,'Invalid JSON batches roll back all inserts');
 $failed=false;try{DestinationImporter::import($pdo,$catalog,$options);}catch(RuntimeException $error){$failed=true;}
 check($failed,'Repeat import into non-empty catalog must be refused');
 check((int)$pdo->query('SELECT COUNT(*) FROM destinations')->fetchColumn()===22,'Refused repeat import leaves data intact, including the private-preview fixture');

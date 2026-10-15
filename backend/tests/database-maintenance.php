@@ -15,8 +15,19 @@ maintenance_check($rejected&&!in_array('phone_type',$pdo->query('PRAGMA table_in
 $destinations=new PDO('sqlite::memory:');$destinations->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 $destinations->exec(file_get_contents(dirname(__DIR__).'/database/destinations.sqlite.sql'));
 $destinations->exec(file_get_contents(dirname(__DIR__).'/database/migrations/006-poi-experience-links.sqlite.sql'));
+$destinations->exec(file_get_contents(dirname(__DIR__).'/database/migrations/008-business-subscriptions.sqlite.sql'));
+$destinations->exec(file_get_contents(dirname(__DIR__).'/database/migrations/009-business-origin.sqlite.sql'));
+$destinations->exec(file_get_contents(dirname(__DIR__).'/database/migrations/010-business-location-subscription-lifecycle.sqlite.sql'));
+$destinations->exec(file_get_contents(dirname(__DIR__).'/database/migrations/011-premium-business-story.sqlite.sql'));
+$destinations->exec(file_get_contents(dirname(__DIR__).'/database/migrations/012-business-image-references.sqlite.sql'));
+$destinations->exec(file_get_contents(dirname(__DIR__).'/database/migrations/013-accounts-location-map.sqlite.sql'));
+$destinations->exec(file_get_contents(dirname(__DIR__).'/database/migrations/014-tiered-business-description.sqlite.sql'));
+$destinations->exec(file_get_contents(dirname(__DIR__).'/database/migrations/015-business-media-quotas.sqlite.sql'));
+$destinations->exec(file_get_contents(dirname(__DIR__).'/database/migrations/016-plan-content-limits.sqlite.sql'));
+$destinations->exec(file_get_contents(dirname(__DIR__).'/database/migrations/017-business-claims.sqlite.sql'));
+$destinations->exec(file_get_contents(dirname(__DIR__).'/database/migrations/018-business-portal.sqlite.sql'));
 $catalogTool=new DatabaseMaintenance($destinations,$app,$public);$catalog=$catalogTool->inspect();
-foreach(['003-dynamic-destinations','004-media-origin','005-destination-internal-research','006-poi-experience-links','007-media-provenance'] as $id){
+foreach(['003-dynamic-destinations','004-media-origin','005-destination-internal-research','006-poi-experience-links','007-media-provenance','008-business-subscriptions','009-business-origin','010-business-location-subscription-lifecycle','011-premium-business-story','012-business-image-references','013-accounts-location-map','014-tiered-business-description','015-business-media-quotas','016-plan-content-limits','017-business-claims','018-business-portal'] as $id){
     maintenance_check($catalog['migrations'][$id]==='applied','Existing destination schema is recognized without rerunning '.$id);
 }
 maintenance_check(!$catalog['empty_database']&&$catalog['catalog_empty']&&$catalog['driver']==='sqlite','Empty catalog is distinguished from empty schema and local SQLite remains non-production');

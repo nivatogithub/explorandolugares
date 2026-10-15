@@ -14,9 +14,11 @@ import sys
 ROOT=Path(__file__).resolve().parents[1]
 SAFE_PATH=re.compile(r'^/[A-Za-z0-9_./-]+$')
 VERIFY_RELATIVE={
-    'public/.htaccess','public/index.html','public/destino.php','public/sitemap.xml',
-    'public/admin/base-datos.php','app/bootstrap.php','app/DatabaseMaintenance.php',
-    'app/bin/importar-destinos.php','app/content/destinos-dinamicos.json',
+    'public/.htaccess','public/index.html','public/assets/style.css','public/destino.php','public/sitemap.xml',
+    'public/admin/base-datos.php','public/admin/negocios.php','public/admin/destinos.php','public/admin/suscripciones.php','public/admin/usuarios.php','public/admin/importar-negocios.php','public/admin/reclamaciones.php','public/admin/solicitudes-cuenta.php','public/admin/_navigation.php','public/reclamar-negocio.php','public/business/register.php','public/business/login.php','public/business/dashboard.php','public/business/logout.php',
+    'public/assets/admin-business-location.js','public/assets/admin-business-form.js','public/assets/admin-subscriptions.js','public/assets/admin-accounts.js','public/assets/business-claim-filter.js','public/assets/business-registration.js','public/admin/imagen-referencia-negocio.php',
+    'app/bootstrap.php','app/BusinessPortalAccess.php','app/DatabaseMaintenance.php','app/BusinessAdminService.php','app/BusinessSubscriptionAdminService.php','app/AccountAdminService.php','app/BusinessPublicImporter.php','app/BusinessClaimService.php','app/BusinessRepository.php',
+    'app/bin/importar-destinos.php','app/bin/importar-negocios.php','app/content/destinos-dinamicos.json','app/content/plantilla-importar-negocios.json','app/database/migrations/009-business-origin.mysql.sql','app/database/migrations/010-business-location-subscription-lifecycle.mysql.sql','app/database/migrations/011-premium-business-story.mysql.sql','app/database/migrations/012-business-image-references.mysql.sql','app/database/migrations/013-accounts-location-map.mysql.sql','app/database/migrations/014-tiered-business-description.mysql.sql','app/database/migrations/015-business-media-quotas.mysql.sql','app/database/migrations/016-plan-content-limits.mysql.sql','app/database/migrations/017-business-claims.mysql.sql','app/database/migrations/018-business-portal.mysql.sql','app/database/migrations/019-business-account-applications.mysql.sql','app/BusinessAccountPortalService.php',
 }
 
 
@@ -96,12 +98,17 @@ def build(output,config=None):
     subprocess.run([sys.executable,str(ROOT/'scripts/preparar-hosting.py'),'--output',str(output)],check=True)
     if config and config.get('public_root'):
         # Con app fuera de public_html, las entradas PHP necesitan su ruta privada.
-        for relative in ['api/participacion.php','admin/index.php','admin/base-datos.php']:
+        for relative in ['api/participacion.php','admin/index.php','admin/base-datos.php','admin/destinos.php','admin/negocios.php','admin/suscripciones.php','admin/usuarios.php','admin/importar-negocios.php','admin/reclamaciones.php','admin/solicitudes-cuenta.php','business/register.php','business/login.php','business/dashboard.php','business/logout.php']:
             entry=output/'public'/relative
             content=entry.read_text()
             old="require dirname(__DIR__,2).'/app/bootstrap.php';"
             if old not in content:raise ValueError('Entrada PHP inesperada; no se publicará una ruta privada incorrecta.')
             entry.write_text(content.replace(old,"require '"+config['remote_base']+"/app/bootstrap.php';",1))
+        claim_entry=output/'public/reclamar-negocio.php'
+        claim_content=claim_entry.read_text()
+        old="require __DIR__.'/../app/bootstrap.php';"
+        if old not in claim_content:raise ValueError('Entrada pública de reclamación inesperada; no se publicará una ruta privada incorrecta.')
+        claim_entry.write_text(claim_content.replace(old,"require '"+config['remote_base']+"/app/bootstrap.php';",1))
     files=[]
     for kind in ['public','app']:
         for source in sorted((output/kind).rglob('*')):
