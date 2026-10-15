@@ -3,6 +3,7 @@ declare(strict_types=1);
 require dirname(__DIR__,2).'/app/bootstrap.php';
 require dirname(__DIR__,2).'/app/advance/AdminLayout.php';
 require dirname(__DIR__,2).'/app/advance/AdminReports.php';
+require dirname(__DIR__,2).'/app/advance/PaymentReview.php';
 header('Cache-Control: no-store');
 if(empty($config['admin_user'])||empty($config['admin_password_hash'])||strlen($config['app_key']??'')<32){http_response_code(503);exit('Administración pendiente de configuración.');}
 if(isset($_SESSION['admin'])&&time()-(int)($_SESSION['last_seen']??0)>1800)unset($_SESSION['admin']);
@@ -10,12 +11,16 @@ if(empty($_SESSION['admin'])){http_response_code(403);exit('Inicia sesión desde
 $tabs=['overview'=>'Resumen','work'=>'Publicación y pendientes','billing'=>'Suscripciones y recaudo','catalog'=>'Negocios por destino','traffic'=>'Tráfico del sitio'];
 $selected=is_string($_GET['tab']??null)?$_GET['tab']:'overview';
 if(!isset($tabs[$selected])){http_response_code(404);exit('Reporte inexistente.');}
-$_SESSION['last_seen']=time();$service=new AdminReports(db(),$config['admin_user']);$error='';$report=[];
+$_SESSION['last_seen']=time();$service=new AdminReports(db(),$config['admin_user']);$error='';$report=[];$paymentReview=new PaymentReview(db(),$config['admin_user']);
 try{
     if($_SERVER['REQUEST_METHOD']==='POST'){
         csrf();if(($_POST['confirmed']??'')!=='1')throw new InvalidArgumentException('Confirma que el registro corresponde a datos revisados.');
         $action=is_string($_POST['action']??null)?$_POST['action']:'';
-        $service->record($action,$_POST);
+        if($action==='report_payment')$paymentReview->submit($_POST);
+        elseif($action==='review_payment'){
+            if(!in_array($_POST['decision']??'', ['confirmed','rejected'],true))throw new InvalidArgumentException('Decisión inválida.');
+            $paymentReview->review($_POST,$_POST['decision']==='confirmed');
+        }else $service->record($action,$_POST);
         header('Location: reports.php?tab='.($action==='capability'?'catalog':'billing').'&saved=1',true,303);exit;
     }
 }catch(Throwable $e){http_response_code($e instanceof PDOException?503:400);$error=$e instanceof PDOException?'No se guardó. Revisa referencias únicas, esquema y registros relacionados.':$e->getMessage();}
@@ -34,6 +39,7 @@ function reportToken(string $action): void {echo '<input type="hidden" name="csr
 <div class="panel table-panel"><h3>Preparación de cada destino</h3><table><thead><tr><th>Destino</th><th>Estado</th><th>Comprobaciones pendientes</th><th>Negocios publicados</th><th></th></tr></thead><tbody><?php foreach($report['destination_readiness'] as $row):$gaps=[];if($row['missing_text'])$gaps[]='Textos básicos en español';if($row['missing_hero'])$gaps[]='Imagen principal';?><tr><td><?=esc($row['name'])?></td><td><span class="badge"><?=esc($row['publication_status']==='published'?'Publicado':'Borrador')?></span></td><td><?=esc($gaps?implode(' · ',$gaps):'Sin faltantes en estas comprobaciones')?></td><td><?=esc($row['published_businesses'])?></td><td><a href="destinos.php?id=<?=esc($row['id'])?>">Revisar</a></td></tr><?php endforeach ?></tbody></table><p class="muted">Estas comprobaciones no reemplazan la revisión editorial, de idiomas, fuentes y permisos de imágenes.</p></div></section>
 <?php endif ?>
 <?php if($selected==='billing'):?><section id="billing"><div class="section-heading"><div><p class="eyebrow">OPERACIÓN COMERCIAL</p><h2>Suscripciones y recaudo registrado</h2></div></div><p class="muted">Registro administrativo manual. No cobra, no fija precios ni sustituye facturación o conciliación bancaria.</p><div class="report-cards"><?php if(!$report['revenue']):?><article class="metric"><p>Recaudo registrado</p><strong>—</strong><small>No hay movimientos registrados; no se interpreta como recaudo real de cero.</small></article><?php endif ?><?php foreach($report['revenue'] as $r):?><article class="metric"><p>Recaudo neto · <?=esc($r['currency'])?></p><strong class="amount"><?=esc(money($r['net_minor']))?></strong><small>Recibido <?=esc(money($r['collected_minor']))?> · Devuelto <?=esc(money($r['refunded_minor']))?></small></article><?php endforeach ?></div>
+<?php try{require dirname(__DIR__,2).'/app/advance/views/PaymentReview.php';}catch(Throwable $e){echo '<p role="alert">No se pudo cargar la revisión de pagos. Revisa la migración 013.</p>';} ?>
 <div class="panel table-panel"><h3>Renovaciones próximas y periodos vencidos</h3><?php if(!$report['renewals']):?><p class="empty">No hay periodos registrados que requieran renovación en esta ventana.</p><?php else:?><table><thead><tr><th>Suscripción</th><th>Negocio</th><th>Destino</th><th>Fin del periodo</th><th>Situación</th></tr></thead><tbody><?php foreach($report['renewals'] as $r):?><tr><td>#<?=esc($r['id'])?> · <?=esc($r['reference'])?></td><td><?=esc($r['business'])?></td><td><?=esc($r['destination'])?></td><td><?=esc($r['ends_on'])?></td><td><span class="badge"><?=esc($r['ends_on']<$report['today']?'Vencida':'Próxima a vencer')?></span></td></tr><?php endforeach ?></tbody></table><?php endif ?><p class="muted">Ventana hasta <?=esc($report['due_until'])?>. Se muestran hasta 100 periodos, los más antiguos primero.</p></div>
 <details class="panel"><summary>Registrar una suscripción o un movimiento confirmado</summary><div class="work-grid"><form method="post" action="?tab=<?=esc($selected)?>"><h3>Periodo de suscripción</h3><?php reportField('business_id','ID del negocio','number');reportField('reference','Referencia única del periodo');reportField('plan_name','Nombre del plan acordado');reportField('starts_on','Inicio','date');reportField('ends_on','Fin','date');reportToken('subscription');?><button>Registrar periodo</button></form><form method="post" action="?tab=<?=esc($selected)?>"><h3>Movimiento recibido</h3><?php reportField('subscription_id','ID de suscripción','number');reportField('reference','Referencia única del comprobante');?><label>Movimiento<select name="entry_type"><option value="payment">Pago recibido</option><option value="refund">Devolución realizada</option></select></label><?php reportField('amount','Importe (ej. 125000.00)');?><label>Moneda<select name="currency"><option>COP</option><option>USD</option><option>EUR</option></select></label><?php reportField('received_on','Fecha del movimiento','date');reportToken('payment');?><button>Registrar movimiento</button></form></div><form method="post" action="?tab=<?=esc($selected)?>"><h3>Marcar una suscripción como cancelada</h3><?php reportField('subscription_id','ID de suscripción','number');reportToken('cancel_subscription');?><p class="muted">Conserva los movimientos y el historial. No realiza una devolución.</p><button>Registrar cancelación</button></form></details></section>
 <?php endif ?>
