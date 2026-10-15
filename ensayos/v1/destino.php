@@ -1,8 +1,15 @@
 <?php
 declare(strict_types=1);
 
-$repositoryPath=dirname(__DIR__,2).'/backend/app/DestinationRepository.php';
-if (!is_file($repositoryPath)) $repositoryPath=dirname(__DIR__).'/app/DestinationRepository.php';
+$repositoryCandidates=[
+    dirname(__DIR__,2).'/backend/app/DestinationRepository.php',
+    dirname(__DIR__,2).'/app/DestinationRepository.php',
+    dirname(__DIR__,2).'/explorandolugares/app/DestinationRepository.php',
+    dirname(__DIR__).'/app/DestinationRepository.php',
+];
+$repositoryPath=null;
+foreach($repositoryCandidates as $candidate) if(is_file($candidate)){$repositoryPath=$candidate;break;}
+if($repositoryPath===null){http_response_code(503);exit('Destino temporalmente no disponible.');}
 require $repositoryPath;
 
 function e(mixed $value): string { return htmlspecialchars((string)$value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'); }
@@ -38,6 +45,7 @@ if($preview){session_name('el_session');$secure=($_SERVER['HTTPS']??'')==='on';s
 $dbPath=getenv('EL_DESTINATIONS_DSN') ?: '';$dbUser=getenv('EL_DESTINATIONS_DB_USER')?:null;$dbPassword=getenv('EL_DESTINATIONS_DB_PASSWORD')?:null;
 if ($dbPath==='') {
     $configPath=dirname(__DIR__).'/private/config.php';
+    if(!is_file($configPath))$configPath=dirname(__DIR__,2).'/explorandolugares/private/config.php';
     if (is_file($configPath)) { $config=require $configPath;$dbPath=(string)($config['dsn']??'');$dbUser=$config['db_user']??null;$dbPassword=$config['db_password']??null; }
 }
 if ($dbPath==='') { http_response_code(503); exit('Destino temporalmente no disponible.'); }
