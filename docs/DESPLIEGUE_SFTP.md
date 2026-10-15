@@ -85,7 +85,7 @@ No se transfieren `private/`, la configuración real, credenciales, referencias 
 
 ## Publicación inicial de destinos
 
-La entrega de octubre de 2026 deja Jericó como único destino publicado; los otros 20 destinos del piloto se importan como borrador. Sonsón se agrega desde su paquete ZIP en el panel de administración y también debe permanecer en borrador. Antes de activar el código dinámico en producción, respaldar la base de datos, aplicar una sola vez las migraciones 003 a 006 enumeradas en `backend/README.md`, ejecutar el importador del catálogo semilla y luego cargar el ZIP de Sonsón desde el panel. El importador se detiene si el catálogo de destinos, categorías o negocios ya contiene filas, y no modifica los registros de interesados. Al final verificar que Jericó es el único destino público, que Sonsón aparece en administración como borrador y que el sitemap solo contiene la guía de Jericó.
+La entrega de octubre de 2026 deja Jericó como único destino publicado; los otros 20 destinos del piloto se importan como borrador. Sonsón se agrega desde su paquete ZIP en el panel de administración y también debe permanecer en borrador. Antes de activar el código dinámico en producción, respaldar la base de datos, aplicar una sola vez las migraciones 003 a 007 enumeradas en `backend/README.md`, ejecutar el importador del catálogo semilla y luego cargar el ZIP de Sonsón desde el panel. El importador se detiene si el catálogo de destinos, categorías o negocios ya contiene filas, y no modifica los registros de interesados. Al final verificar que Jericó es el único destino público, que Sonsón aparece en administración como borrador y que el sitemap solo contiene la guía de Jericó.
 
 ## Interrupción y recuperación
 

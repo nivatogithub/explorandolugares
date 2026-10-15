@@ -138,7 +138,7 @@ final class DestinationImporter
 
     private static function media(PDO $pdo, array $catalog, array &$counts): array
     {
-        $insert=$pdo->prepare('INSERT INTO media_assets (asset_path,origin,creator,source_url,license_name,license_url,width,height) VALUES (?,?,?,?,?,?,?,?)');
+        $insert=$pdo->prepare('INSERT INTO media_assets (asset_path,origin,creator,source_url,license_name,license_url,width,height,provenance_json) VALUES (?,?,?,?,?,?,?,?,?)');
         $translation=$pdo->prepare('INSERT INTO media_asset_translations (media_asset_id,locale,alt_text,caption) VALUES (?,?,?,?)');
         $ids=[];
         foreach ($catalog['media'] as $media) {
@@ -150,7 +150,15 @@ final class DestinationImporter
             if (!$creator || !$media['license_name']) throw new RuntimeException("Crédito incompleto para {$path}.");
             $source=(string)($media['source_url']??'');$licenseUrl=(string)($media['license_url']??'');
             if($origin==='external'){self::https($source);self::https($licenseUrl);}
-            $insert->execute([$path,$origin,$creator,$source,$media['license_name'],$licenseUrl,$media['width'],$media['height']]);
+            $provenance=$media['provenance']??null;
+            if($provenance!==null&&!is_array($provenance))throw new RuntimeException("Procedencia de imagen inválida: {$path}.");
+            if(is_array($provenance)){
+                foreach(['reference_source_url','reference_license_url','factual_basis_url'] as $urlKey){
+                    $url=(string)($provenance[$urlKey]??'');if($url!=='')self::https($url);
+                }
+                $provenanceJson=json_encode($provenance,JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE|JSON_THROW_ON_ERROR);
+            }else $provenanceJson=null;
+            $insert->execute([$path,$origin,$creator,$source,$media['license_name'],$licenseUrl,$media['width'],$media['height'],$provenanceJson]);
             $id=(int)$pdo->lastInsertId(); $ids[$path]=$id; $counts['media_assets']++;
             foreach ($catalog['locales'] as $locale) {
                 $tr=$media['translations'][$locale]??null;

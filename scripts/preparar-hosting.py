@@ -56,4 +56,8 @@ shutil.copytree(root/'backend/database',release/'app/database',dirs_exist_ok=Tru
 shutil.copyfile(root/'backend/README.md',release/'INSTALACION.md')
 (release/'private').mkdir(exist_ok=True)
 shutil.copyfile(root/'backend/config.example.php',release/'config.example.php')
+subprocess.run([
+    sys.executable,str(root/'scripts/limpiar-paquete-publico.py'),
+    '--public',str(public),'--catalog',str(private_content/'destinos-dinamicos.json')
+],check=True)
 print(f'Entrega de revisión: {release}\nRaíz pública: {public}\nConfigurar private/config.php fuera de public/. No hay publicación automática.')
