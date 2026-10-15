@@ -117,10 +117,9 @@ final class DatabaseMaintenance
         ],
         '016-plan-content-limits' => [
             'file' => '016-plan-content-limits.mysql.sql',
-            'checks' => [
-                ['subscription_plans', ['max_summary_chars','max_description_chars','max_brand_story_chars','max_featured_services_chars']],
-                ['business_translations', ['summary']],
-            ],
+            // business_translations.summary predates this migration, so its
+            // existence cannot indicate that this migration was applied.
+            'checks' => [['subscription_plans', ['max_summary_chars','max_description_chars','max_brand_story_chars','max_featured_services_chars']]],
             'value_checks' => [
                 ['subscription_plans','code','basic','max_summary_chars',300],
                 ['subscription_plans','code','featured','max_description_chars',1000],
