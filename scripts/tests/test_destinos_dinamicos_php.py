@@ -72,8 +72,8 @@ class DynamicDestinationRenderTests(unittest.TestCase):
         self.assertIn("Atractivo natural rural de Jericó", page)
         self.assertIn("Confirma con fuentes locales dónde inicia el recorrido", page)
         self.assertIn("jardin-botanico-los-balsos-ilustrado.webp", page)
-        self.assertNotIn("cerro-de-las-nubes-sendero-ilustrado.webp", page)
-        self.assertNotIn("chorros-quebradona-ilustrado.webp", page)
+        self.assertIn("cerro-de-las-nubes-sendero-ilustrado-v2.webp", page)
+        self.assertIn("chorros-quebradona-ilustrado-v2.webp", page)
         self.assertIn("cristo-cerro-el-salvador-ilustrado-v2.webp", page)
         self.assertIn("santuario-santa-laura-ilustrado-v2.webp", page)
         self.assertIn("casa-santa-laura-ilustrada-v2.webp", page)
@@ -87,8 +87,8 @@ class DynamicDestinationRenderTests(unittest.TestCase):
                 for label in labels:
                     self.assertIn(label, localized)
                 self.assertIn("jardin-botanico-los-balsos-ilustrado.webp", localized)
-                self.assertNotIn("cerro-de-las-nubes-sendero-ilustrado.webp", localized)
-                self.assertNotIn("chorros-quebradona-ilustrado.webp", localized)
+                self.assertIn("cerro-de-las-nubes-sendero-ilustrado-v2.webp", localized)
+                self.assertIn("chorros-quebradona-ilustrado-v2.webp", localized)
         self.assertNotIn("Vuelo privado en helicóptero Medellín–Jericó", page)
         self.assertNotIn("Parapente biplaza en Jericó", page)
         self.assertNotIn("Experiencia en finca cafetera", page)
@@ -116,8 +116,8 @@ class DynamicDestinationRenderTests(unittest.TestCase):
             "/v1/assets/destinos/1/santuario-santa-laura-ilustrado-v2.webp",
             "/v1/assets/destinos/1/casa-santa-laura-ilustrada-v2.webp",
             "/v1/assets/destinos/1/jardin-botanico-los-balsos-ilustrado.webp",
-            "/v1/assets/destinos/1/cerro-de-las-nubes-sendero-ilustrado.webp",
-            "/v1/assets/destinos/1/chorros-quebradona-ilustrado.webp",
+            "/v1/assets/destinos/1/cerro-de-las-nubes-sendero-ilustrado-v2.webp",
+            "/v1/assets/destinos/1/chorros-quebradona-ilustrado-v2.webp",
         )
         for relative in assets:
             with self.subTest(asset=relative):
