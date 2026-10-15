@@ -76,6 +76,17 @@ try:
  assert call('/admin/index.php',{'action':'status','csrf':csrf,'id':1,'status':'contactado'})[0]==403
  status,body,headers=call('/admin/index.php',{'action':'login','csrf':csrf,'username':'local-test','password':password})
  assert status==200 and '&lt;script&gt;alert(1)&lt;/script&gt;' in body and '<script>alert(1)</script>' not in body
+ guest=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
+ assert call('/admin/base-datos.php',agent=guest)[0]==403
+ status,body,_=call('/admin/base-datos.php')
+ assert status==200 and 'Herramientas de base de datos' in body and 'sqlite' in body
+ assert 'APLICAR MIGRACIONES' in body and config['app_key'] not in body and password not in body
+ db_csrf=re.search(r'name="csrf" value="([^"]+)"',body).group(1)
+ before_columns=[column[1] for column in db.execute('PRAGMA table_info(leads)').fetchall()]
+ status,body,_=call('/admin/base-datos.php',{'action':'migrate','csrf':db_csrf,'confirmation':'APLICAR MIGRACIONES'})
+ assert status==400 and 'requieren MySQL/MariaDB' in body
+ assert before_columns==[column[1] for column in db.execute('PRAGMA table_info(leads)').fetchall()]
+ status,body,_=call('/admin/index.php')
  assert 'WhatsApp' in body and 'Celular' in body and 'Fijo' in body and 'participacion-informativa-v1' in body
  status,body,_=call('/admin/index.php?tab=sistema')
  assert status==200 and 'Sistema y base de datos' in body and 'Conectada' in body and 'Tabla accesible' in body
