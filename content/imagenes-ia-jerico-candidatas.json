@@ -97,16 +97,32 @@
   },
   "natural_attraction_candidates": [
     {
+      "slug": "subida-al-cerro-de-las-nubes",
+      "file": "ensayos/v1/assets/destinos/1/cerro-de-las-nubes-sendero-ilustrado-v2.webp",
+      "master_file_local": ".local/jerico-image-review/generated/cerro-de-las-nubes-candidata-v2.png",
+      "reference_urls": [
+        "https://es.wikiloc.com/rutas-senderismo/cerro-las-nubes-jerico-antioquia-130350353"
+      ],
+      "reference_image_used": false,
+      "status": "approved_for_destination_card",
+      "review": "Aprobada por el propietario para la tarjeta del atractivo. Ilustración editorial interpretativa basada en la descripción textual del sendero; no se usó una fotografía como entrada visual.",
+      "approved_by": "Propietario de Explorando Lugares",
+      "approved_at": "2026-10-15"
+    },
+    {
       "slug": "chorros-de-quebradona",
-      "file": "ensayos/v1/assets/destinos/1/chorros-quebradona-ilustrado.webp",
-      "master_file_local": ".local/jerico-image-review/generated/chorros-quebradona-ilustracion-candidata.png",
+      "file": "ensayos/v1/assets/destinos/1/chorros-quebradona-ilustrado-v2.webp",
+      "master_file_local": ".local/jerico-image-review/generated/chorros-quebradona-candidata-v2.png",
       "reference_urls": [
         "https://www.antioquia.gov.co/images/img/turismo/2025/los-imperdibles-de-suroeste-28-30-junio.pdf",
         "https://antioquia.gov.co/images/pdf/anuario2014/es-CO/capitulos/turismo/atractivos/cp-16-2-1.html?url=https%3A%2F%2Fantioquia.gov.co%2Fimages%2Fpdf%2Fanuario2014%2Fes-CO%2Fcapitulos%2Fturismo.html",
         "https://es.wikiloc.com/rutas-senderismo/chorros-de-quebradona-jerico-155370461"
       ],
-      "status": "draft_for_human_review",
-      "review": "El atractivo está documentado; la ilustración es una interpretación editorial basada en descripciones generales y una referencia de estilo. No se comparó la forma exacta de la cascada con una fotografía del sitio. Confirmar su fidelidad antes de aprobar/publicar."
+      "status": "approved_for_destination_card",
+      "review": "Aprobada por el propietario para la tarjeta del atractivo. Ilustración editorial interpretativa basada en descripciones textuales; no se usó una fotografía como entrada visual.",
+      "approved_by": "Propietario de Explorando Lugares",
+      "approved_at": "2026-10-15",
+      "reference_image_used": false
     }
   ]
 }

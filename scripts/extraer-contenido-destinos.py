@@ -69,22 +69,38 @@ JERICO_GENERATED_MEDIA = {
             "pt-BR": "Lago, ponte de madeira e vegetação do Jardim Botânico Los Balsos, em uma ilustração editorial baseada em elementos documentados."
         },
     },
-    "assets/destinos/1/cerro-de-las-nubes-sendero-ilustrado.webp": {
-        "source": ".local/jerico-image-review/generated/cerro-de-las-nubes-sendero-ilustracion-v1.png",
+    "assets/destinos/1/cerro-de-las-nubes-sendero-ilustrado-v2.webp": {
+        "source": ".local/jerico-image-review/generated/cerro-de-las-nubes-candidata-v2.png",
         "width": 1100, "height": 825,
         "alt": {
-            "es": "Sendero de montaña y panorámica de las laderas del Suroeste antioqueño, en una ilustración editorial del Cerro de las Nubes.",
-            "en": "Mountain trail and a panorama of southwestern Antioquia's slopes, in an editorial illustration of Cerro de las Nubes.",
-            "pt-BR": "Trilha de montanha e panorama das encostas do Sudoeste de Antioquia, em uma ilustração editorial do Cerro de las Nubes."
+            "es": "Ilustración editorial del sendero de piedra que asciende entre vegetación en el Cerro de las Nubes.",
+            "en": "Editorial illustration of a stone trail climbing through vegetation on Cerro de las Nubes.",
+            "pt-BR": "Ilustração editorial da trilha de pedra que sobe entre a vegetação no Cerro de las Nubes."
+        },
+        "provenance": {
+            "reference_source_url": "https://es.wikiloc.com/rutas-senderismo/cerro-las-nubes-jerico-antioquia-130350353",
+            "factual_basis_url": "https://es.wikiloc.com/rutas-senderismo/cerro-las-nubes-jerico-antioquia-130350353",
+            "reference_type": "Textual description only; no source photograph was used as image input.",
+            "used_reference_images": False,
+            "generated_asset_id": "cerro-de-las-nubes-candidata-v2",
+            "human_approval": "Owner approved the Cerro de las Nubes illustration for the destination card in chat on 2026-10-15."
         },
     },
-    "assets/destinos/1/chorros-quebradona-ilustrado.webp": {
-        "source": ".local/jerico-image-review/generated/chorros-quebradona-ilustracion-candidata.png",
-        "width": 1100, "height": 620,
+    "assets/destinos/1/chorros-quebradona-ilustrado-v2.webp": {
+        "source": ".local/jerico-image-review/generated/chorros-quebradona-candidata-v2.png",
+        "width": 1100, "height": 825,
         "alt": {
-            "es": "Cascada de Chorros de Quebradona sobre roca húmeda y vegetación andina, en una ilustración editorial interpretativa.",
-            "en": "Waterfall at Chorros de Quebradona over wet rock and Andean vegetation, in an interpretive editorial illustration.",
-            "pt-BR": "Cachoeira dos Chorros de Quebradona sobre rocha úmida e vegetação andina, em uma ilustração editorial interpretativa."
+            "es": "Ilustración editorial de una cascada modesta entre roca y vegetación en Chorros de Quebradona.",
+            "en": "Editorial illustration of a modest waterfall among rocks and vegetation at Chorros de Quebradona.",
+            "pt-BR": "Ilustração editorial de uma pequena cachoeira entre pedras e vegetação em Chorros de Quebradona."
+        },
+        "provenance": {
+            "reference_source_url": "https://es.wikiloc.com/rutas-senderismo/chorros-de-quebradona-jerico-155370461",
+            "factual_basis_url": "https://www.corantioquia.gov.co/corantioquia-invita-a-descubrir-y-proteger-los-tesoros-naturales-de-su-jurisdiccion/",
+            "reference_type": "Textual descriptions and route context only; no source photograph was used as image input.",
+            "used_reference_images": False,
+            "generated_asset_id": "chorros-quebradona-candidata-v2",
+            "human_approval": "Owner approved the Chorros de Quebradona illustration for the destination card in chat on 2026-10-15."
         },
     },
     "assets/destinos/1/helicoptero-medellin-jerico-ilustracion.webp": {
@@ -146,7 +162,7 @@ JERICO_EXPERIENCES = {
 }
 JERICO_WATERFALL = {
     "slug": "chorros-de-quebradona",
-    "media": "assets/destinos/1/chorros-quebradona-ilustrado.webp",
+    "media": "assets/destinos/1/chorros-quebradona-ilustrado-v2.webp",
     "map_url": "https://www.google.com/maps/search/?api=1&query=Chorros+de+Quebradona+Jeric%C3%B3+Antioquia+Colombia",
 }
 
@@ -372,6 +388,12 @@ def main():
     if {d["slug"] for d in registry} != {p.parent.name for p in (SITE / "destinos").glob("*/index.html")}:
         raise ValueError("El inventario de destino no coincide con las páginas del piloto")
     credits = media_credits()
+    catalog_path = ROOT / "content/destinos-dinamicos.json"
+    prior_provenance = {}
+    if catalog_path.is_file():
+        old_catalog = json.loads(catalog_path.read_text())
+        prior_provenance = {row["path"]: row["provenance"] for row in old_catalog.get("media", [])
+                            if row.get("provenance")}
     result = {"schema_version": 1, "locales": list(LOCALES), "destinations": []}
     used_media = set()
     for destination in registry:
@@ -424,10 +446,12 @@ def main():
         garden["media"] = {"path": garden_media_path, "width": garden_info["width"],
                            "height": garden_info["height"], "alt": garden_info["alt"][locale],
                            "caption": garden_info["alt"][locale]}
-        # Leave these two attractions without imagery until we have approved
-        # local photo references; generic AI scenes could misrepresent them.
         las_nubes = tr["places"][5]
-        las_nubes["media"] = None
+        nubes_path = "assets/destinos/1/cerro-de-las-nubes-sendero-ilustrado-v2.webp"
+        nubes_info = JERICO_GENERATED_MEDIA[nubes_path]
+        las_nubes["media"] = {"path": nubes_path, "width": nubes_info["width"],
+                               "height": nubes_info["height"], "alt": nubes_info["alt"][locale],
+                               "caption": nubes_info["alt"][locale]}
         waterfall = tr["places"][6]
         waterfall["slug"] = JERICO_WATERFALL["slug"]
         waterfall["map_url"] = JERICO_WATERFALL["map_url"]
@@ -436,7 +460,11 @@ def main():
             "en": "A rural natural attraction in Jericó, known as Chorros de Quebradona. Check with local sources for the trailhead and current access conditions.",
             "pt-BR": "Atrativo natural rural de Jericó, conhecido como Chorros de Quebradona. Confirme com fontes locais onde começa o percurso e as condições atuais de acesso."
         }[locale]
-        waterfall["media"] = None
+        waterfall_path = JERICO_WATERFALL["media"]
+        waterfall_info = JERICO_GENERATED_MEDIA[waterfall_path]
+        waterfall["media"] = {"path": waterfall_path, "width": waterfall_info["width"],
+                               "height": waterfall_info["height"], "alt": waterfall_info["alt"][locale],
+                               "caption": waterfall_info["alt"][locale]}
         for slug, experience in JERICO_EXPERIENCES.items():
             name, description, label = experience["translations"][locale]
             media_path = experience["media"]
@@ -466,6 +494,9 @@ def main():
                     "license_url": "", "width": media["width"], "height": media["height"],
                     "translations": {}, "placements": []})
                 row["translations"][locale] = {"alt": media["alt"], "caption": media["caption"]}
+                provenance = (generated.get("provenance") if generated else None) or prior_provenance.get(path)
+                if provenance:
+                    row["provenance"] = provenance
                 placement = {"destination_slug": slug, "role": role}
                 if placement not in row["placements"]:
                     row["placements"].append(placement)
@@ -492,8 +523,7 @@ def main():
                 raise ValueError(f"Traducción incompleta: {d['slug']} / {locale}")
             if len(tr["places"]) != len(d["translations"]["es"]["places"]):
                 raise ValueError(f"Cantidad de atractivos no coincide: {d['slug']} / {locale}")
-    target = ROOT / "content/destinos-dinamicos.json"
-    target.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n")
+    catalog_path.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n")
     print(f"OK: {len(result['destinations'])} destinos, 3 idiomas, 70 recomendaciones, {len(result['media'])} imágenes con procedencia.")
 
 
