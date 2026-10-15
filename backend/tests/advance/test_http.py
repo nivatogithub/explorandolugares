@@ -1,9 +1,10 @@
 """Prueba privada HTTP de Advance Admin; no llama servicios externos."""
 from pathlib import Path
-import subprocess, json, secrets, sqlite3, shutil, socket, time, urllib.request, urllib.error, urllib.parse, http.cookiejar, re, base64
+import os, subprocess, json, secrets, sqlite3, shutil, socket, time, urllib.request, urllib.error, urllib.parse, http.cookiejar, re, base64
 root=Path(__file__).resolve().parents[3]
 work=root/'.local'/('advance-http-'+secrets.token_hex(6)); work.mkdir(parents=True)
 shutil.copytree(root/'backend/app',work/'app');shutil.copytree(root/'backend/public',work/'public');(work/'private').mkdir()
+shutil.copyfile(root/'ensayos/v1/destino.php',work/'public/destino.php')
 db=sqlite3.connect(work/'private/test.sqlite')
 db.executescript((root/'backend/database/sqlite.sql').read_text())
 db.executescript((root/'backend/database/destinations.sqlite.sql').read_text())
@@ -19,7 +20,7 @@ hashed=subprocess.check_output(['php','-r','echo password_hash(trim(stream_get_c
 config={'dsn':'sqlite:'+str(work/'private/test.sqlite'),'app_key':secrets.token_hex(32),'admin_user':'advance-local','admin_password_hash':hashed,'local_test':True,'public_base_url':'https://example.invalid'}
 encoded=base64.b64encode(json.dumps(config).encode()).decode();(work/'private/config.php').write_text("<?php return json_decode(base64_decode('"+encoded+"'), true);")
 with socket.socket() as sock:sock.bind(('127.0.0.1',0));port=sock.getsockname()[1]
-proc=subprocess.Popen(['php','-S',f'127.0.0.1:{port}','-t',str(work/'public')],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
+proc=subprocess.Popen(['php','-S',f'127.0.0.1:{port}','-t',str(work/'public'),str(root/'scripts/advance-preview-router.php')],env={**os.environ,'EL_ADVANCE_PREVIEW_ROOT':str(work)},stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
 client=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
 def call(path,data=None):
     try:
@@ -32,6 +33,8 @@ try:
     url='/admin/advance/index.php'
     assert call(url)[0]==403
     assert call('/admin/reports.php')[0]==403
+    assert call('/destinos/destino-prueba/?preview=1')[0]==403
+    assert call('/destinos/destino-prueba/')[0]==404
     status,xml,headers=call('/sitemap-live.php');assert status==200 and '<urlset' in xml and '/admin/' not in xml
     assert headers.get('X-Robots-Tag') is None and 'application/xml' in headers['Content-Type']
     db.execute("UPDATE destinations SET publication_status='published' WHERE id=1");db.commit()
@@ -41,6 +44,7 @@ try:
     body=call('/admin/index.php')[1];csrf=re.search(r'name="csrf" value="([^"]+)"',body).group(1)
     assert call('/admin/index.php',{'action':'login','username':'advance-local','password':password,'csrf':csrf})[0]==200
     body=call('/admin/index.php')[1];csrf=re.search(r'name="csrf" value="([^"]+)"',body).group(1)
+    status,preview,_=call('/destinos/destino-prueba/?preview=1');assert status==200 and 'Vista previa privada' in preview
     status,body,_=call('/admin/reports.php');assert status==200 and 'Reportes generales' in body and 'id="overview"' in body and 'id="traffic"' not in body
     status,body,_=call('/admin/reports.php?tab=traffic');assert status==200 and 'Medición no conectada' in body and 'id="overview"' not in body
     assert call('/admin/reports.php',{'action':'subscription','csrf':'bad','confirmed':'1'})[0]==403

@@ -16,7 +16,7 @@ os.chmod(work,0o700)
 shutil.copytree(root/'backend/app',work/'app',dirs_exist_ok=True)
 shutil.copytree(root/'backend/public',work/'public',dirs_exist_ok=True)
 assets=work/'public/assets';assets.mkdir(exist_ok=True)
-for name in ['style.css','logo.svg','select-flotante.js']:
+for name in ['style.css','logo.svg','select-flotante.js','favicon.svg']:
     shutil.copyfile(root/'ensayos/v1/assets'/name,assets/name)
 for name in ['admin/index.php','admin/advance/index.php','admin/reports.php']:
     path=work/'public'/name
@@ -24,6 +24,11 @@ for name in ['admin/index.php','admin/advance/index.php','admin/reports.php']:
     path.write_text(source)
 brand_assets=assets/'brand';brand_assets.mkdir(exist_ok=True)
 shutil.copyfile(root/'ensayos/v1/assets/brand/explorando-lugares-logo-v2-transparent.png',brand_assets/'explorando-lugares-logo-v2-transparent.png')
+renderer=work/'public/destino.php'
+renderer.write_text((root/'ensayos/v1/destino.php').read_text().replace("session_name('el_session');", "session_name('el_advance_preview_"+str(args.port)+"');"))
+# Copy referenced local destination assets only; never read private hosting configuration.
+for source in (root/'ensayos/v1/assets/destinos').glob('*.webp'):
+    target=assets/'destinos'/source.name;target.parent.mkdir(exist_ok=True);shutil.copyfile(source,target)
 private=work/'private';private.mkdir(exist_ok=True);os.chmod(private,0o700)
 sessions=private/'sessions';sessions.mkdir(exist_ok=True);os.chmod(sessions,0o700)
 bootstrap=work/'app/bootstrap.php'
@@ -76,4 +81,5 @@ print('Usuario: '+credentials['username'],flush=True)
 print('Contraseña local: '+credentials['password'],flush=True)
 print('Solo este Mac. SQLite aislada. Datos ficticios persistentes. Resend deshabilitado.',flush=True)
 if args.prepare_only:raise SystemExit(0)
-os.execvp('php',['php','-d','session.save_path='+str(sessions),'-S',f'127.0.0.1:{args.port}','-t',str(work/'public')])
+os.environ['EL_ADVANCE_PREVIEW_ROOT']=str(work)
+os.execvp('php',['php','-d','session.save_path='+str(sessions),'-S',f'127.0.0.1:{args.port}','-t',str(work/'public'),str(root/'scripts/advance-preview-router.php')])
