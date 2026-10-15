@@ -82,18 +82,18 @@ try:
  guest=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
  assert call('/admin/base-datos.php',agent=guest)[0]==403
  status,body,_=call('/admin/base-datos.php')
- assert status==200 and 'Herramientas de base de datos' in body and 'sqlite' in body
- assert 'APLICAR MIGRACIONES' in body and config['app_key'] not in body and password not in body
+ assert status==200 and 'Estado de la base de datos' in body and 'sqlite' in body
+ assert 'confirm_migrations' in body and config['app_key'] not in body and password not in body
  db_csrf=re.search(r'name="csrf" value="([^"]+)"',body).group(1)
  before_columns=[column[1] for column in db.execute('PRAGMA table_info(leads)').fetchall()]
- status,body,_=call('/admin/base-datos.php',{'action':'migrate','csrf':db_csrf,'confirmation':'APLICAR MIGRACIONES'})
+ status,body,_=call('/admin/base-datos.php',{'action':'migrate','csrf':db_csrf,'confirm_migrations':'1'})
  assert status==400 and 'requieren MySQL/MariaDB' in body
  assert before_columns==[column[1] for column in db.execute('PRAGMA table_info(leads)').fetchall()]
  status,body,_=call('/admin/index.php')
  assert 'WhatsApp' in body and 'Celular' in body and 'Fijo' in body and 'participacion-informativa-v1' in body
  status,body,_=call('/admin/index.php?tab=sistema')
  assert status==200 and 'Sistema y base de datos' in body and 'Conectada' in body and 'Tabla accesible' in body
- assert 'Acceso al portal de negocios' in body and 'Cerrado al público' in body and 'Llave de acceso privado para pruebas' in body
+ assert 'Acceso al portal de negocios' in body and 'Cerrado al público' in body and 'Acceso privado para pruebas' in body
  assert 'test.sqlite' not in body and config['app_key'] not in body
  csrf=re.search(r'name="csrf" value="([^"]+)"',body).group(1)
  # Public access requires the explicit confirmation phrase and the admin CSRF token.
@@ -107,6 +107,8 @@ try:
  match=re.search(r'id="generated-business-test-key" type="text" readonly value="([a-f0-9]{64})"',body)
  assert status==200 and match and 'Llave nueva guardada' in body
  test_key=match.group(1)
+ url_match=re.search(r'id="generated-business-test-url" type="text" readonly value="([^"]+)"',body)
+ assert url_match and url_match.group(1)==urllib.parse.quote('/negocios/registro/?prueba='+test_key,safe='/?:=&')
  saved=subprocess.check_output(['php','-r',"$c=require $argv[1]; echo json_encode([$c['business_accounts_enabled']??false,$c['business_accounts_test_key']??'']);",str(work/'private/config.php')]).decode()
  assert json.loads(saved)==[False,test_key]
  assert test_key not in call('/admin/index.php?tab=sistema')[1]
