@@ -15,7 +15,8 @@ ROOT=Path(__file__).resolve().parents[1]
 SAFE_PATH=re.compile(r'^/[A-Za-z0-9_./-]+$')
 VERIFY_RELATIVE={
     'public/.htaccess','public/index.html','public/destino.php','public/sitemap.xml',
-    'app/bootstrap.php','app/bin/importar-destinos.php','app/content/destinos-dinamicos.json',
+    'public/admin/base-datos.php','app/bootstrap.php','app/DatabaseMaintenance.php',
+    'app/bin/importar-destinos.php','app/content/destinos-dinamicos.json',
 }
 
 
@@ -95,7 +96,7 @@ def build(output,config=None):
     subprocess.run([sys.executable,str(ROOT/'scripts/preparar-hosting.py'),'--output',str(output)],check=True)
     if config and config.get('public_root'):
         # Con app fuera de public_html, las entradas PHP necesitan su ruta privada.
-        for relative in ['api/participacion.php','admin/index.php']:
+        for relative in ['api/participacion.php','admin/index.php','admin/base-datos.php']:
             entry=output/'public'/relative
             content=entry.read_text()
             old="require dirname(__DIR__,2).'/app/bootstrap.php';"
