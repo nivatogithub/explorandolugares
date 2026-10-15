@@ -110,6 +110,29 @@ def prune_unreferenced_destination_images(public: Path, catalog: Path) -> list[s
     return removed
 
 
+def prune_unreferenced_image_assets(public: Path, catalog: Path) -> list[str]:
+    """Keep only package images used by runtime text or destination seed paths."""
+    extensions={'.png','.jpg','.jpeg','.webp','.gif','.svg'}
+    text_extensions={'.html','.php','.css','.js','.json','.xml','.txt','.md','.sql'}
+    references=[]
+    for source in public.rglob('*'):
+        if source.is_file() and source.suffix.lower() in text_extensions:
+            references.append(source.read_text(errors='ignore').lower())
+    # The private seed contains the paths read dynamically after import, even
+    # when a destination or attraction is still a draft and has no public HTML.
+    references.append(catalog.read_text(errors='ignore').lower())
+    text='\n'.join(references)
+    removed=[]
+    for asset in (public/'assets').rglob('*'):
+        if asset.is_file() and asset.suffix.lower() in extensions and asset.name.lower() not in text:
+            removed.append(asset.relative_to(public).as_posix())
+            asset.unlink()
+    for folder in sorted((public/'assets').rglob('*'),reverse=True):
+        if folder.is_dir() and not any(folder.iterdir()):
+            folder.rmdir()
+    return removed
+
+
 def clean(public: Path, catalog: Path) -> dict:
     if not public.is_dir() or not catalog.is_file():
         raise ValueError('Se requieren la raíz pública y el catálogo dinámico del paquete.')
@@ -119,10 +142,12 @@ def clean(public: Path, catalog: Path) -> dict:
     sitemap_entries=remove_credit_sitemap_entries(public)
     card_images=replace_legacy_jerico_card(public)
     removed_photos=prune_unreferenced_destination_images(public,catalog)
+    removed_unreferenced=prune_unreferenced_image_assets(public,catalog)
     return {'removed_destination_pages':removed_pages,'removed_credit_pages':removed_credits,
             'removed_credit_links':links,'removed_credit_sitemap_entries':sitemap_entries,
             'updated_jerico_card_images':card_images,
-            'removed_legacy_jerico_photos':removed_photos}
+            'removed_legacy_jerico_photos':removed_photos,
+            'removed_unreferenced_image_assets':removed_unreferenced}
 
 
 if __name__=='__main__':

@@ -46,6 +46,8 @@ El script lo mueve a una papelera fechada en el mismo espacio del hosting. Esto 
 
 La papelera es temporal, no un sistema de respaldo: los archivos del portal están en Git y la base de datos se respalda por separado cuando ya existan datos de clientes que proteger. No se hacen copias adicionales en cada despliegue.
 
+La construcción del paquete también retira imágenes sin referencias en las páginas, CSS/JS/PHP y el catálogo semilla privado. Conserva imágenes de destinos en borrador si están declaradas en ese catálogo. El envío no borra automáticamente archivos remotos obsoletos; antes de retirarlos, compáralos con el manifiesto y confirma que no estén enlazados desde datos de producción.
+
 ## Si una versión sale mal
 
 La recuperación acordada es volver a desplegar la etiqueta estable anterior desde Git. El despliegue directo actualizará solo los archivos que difieran con la versión publicada. Los archivos añadidos por la versión fallida que ya no use el código quedan sin referencia y se anotan para limpieza posterior; no se borran a ciegas. La base de datos requiere evaluación aparte si el cambio fallido incluyó migraciones: Git no revierte datos ni migraciones destructivas.
