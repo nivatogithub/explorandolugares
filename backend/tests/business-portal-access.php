@@ -22,6 +22,14 @@ access_check(BusinessPortalAccess::available($privateConfig, $session, 1001), 'L
 access_check(!BusinessPortalAccess::available($privateConfig, $session, 15400), 'La sesión de pruebas caduca después de cuatro horas.');
 $session = ['business_portal_test_until'=>9999];
 access_check(!BusinessPortalAccess::available($closedConfig, $session, 1000), 'Quitar la llave de configuración revoca sesiones de prueba existentes.');
+$session = ['business_portal_test_until'=>9999,'business_portal_test_key_hash'=>hash('sha256',$secret)];
+access_check(BusinessPortalAccess::available($privateConfig, $session, 1000), 'Una sesión de prueba corresponde a la llave que la creó.');
+$rotatedConfig = ['business_accounts_enabled'=>false, 'business_accounts_test_key'=>str_repeat('cd',32)];
+access_check(!BusinessPortalAccess::available($rotatedConfig, $session, 1000), 'Rotar la llave invalida inmediatamente las sesiones de prueba anteriores.');
+$session=[];
+BusinessPortalAccess::unlockForTesting($privateConfig,$secret,$session,1000);
+$session['business_portal_test_key_hash']='';
+access_check(!BusinessPortalAccess::available($privateConfig, $session, 1001), 'Una sesión sin huella de llave no conserva acceso privado.');
 $enabledConfig = ['business_accounts_enabled'=>true, 'business_accounts_test_key'=>''];
 access_check(BusinessPortalAccess::available($enabledConfig, $session, 1000), 'La activación normal funciona cuando se habilite el registro públicamente.');
 

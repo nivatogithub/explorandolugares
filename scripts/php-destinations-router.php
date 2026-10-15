@@ -2,6 +2,11 @@
 declare(strict_types=1);
 
 $path=parse_url($_SERVER['REQUEST_URI']??'/',PHP_URL_PATH) ?: '/';
+if (preg_match('~^/v1/(en/|pt-br/)?negocios-locales/?$~',$path,$hub)) {
+    $_GET['lang']=match(trim($hub[1]??'','/')) {'en'=>'en','pt-br'=>'pt-br',default=>'es'};
+    require dirname(__DIR__).'/backend/public/business/index.php';
+    return true;
+}
 if ($path==='/v1/negocios/registro/' || $path==='/v1/negocios/registro') { require dirname(__DIR__).'/backend/public/business/register.php'; return true; }
 if ($path==='/v1/negocios/acceso/' || $path==='/v1/negocios/acceso') { require dirname(__DIR__).'/backend/public/business/login.php'; return true; }
 if ($path==='/v1/negocios/portal/' || $path==='/v1/negocios/portal') { require dirname(__DIR__).'/backend/public/business/dashboard.php'; return true; }

@@ -9,6 +9,7 @@ if (PHP_SAPI === 'cli-server' && in_array($_SERVER['REMOTE_ADDR'] ?? '', ['127.0
 if (!is_file($configFile)) { http_response_code(503); exit('Configuración del servidor pendiente.'); }
 $config = require $configFile;
 require_once __DIR__.'/BusinessPortalAccess.php';
+require_once __DIR__.'/BusinessPortalSettings.php';
 $local = in_array($_SERVER['REMOTE_ADDR'] ?? '', ['127.0.0.1', '::1'], true);
 $https = ($_SERVER['HTTPS'] ?? '') === 'on';
 if (PHP_SAPI !== 'cli' && !$https && !(($config['local_test'] ?? false) && $local)) {

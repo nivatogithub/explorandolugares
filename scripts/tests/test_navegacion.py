@@ -1,12 +1,13 @@
 from html.parser import HTMLParser
-from urllib.parse import urlsplit
+from urllib.parse import urlsplit, urljoin
 from pathlib import Path
-import subprocess
-import sys
+import importlib.util
 import tempfile
 import unittest
 
 ROOT=Path(__file__).resolve().parents[2]
+DEPLOY=ROOT/'scripts/desplegar-sftp.py'
+SPEC=importlib.util.spec_from_file_location('navigation_deploy',DEPLOY);deploy=importlib.util.module_from_spec(SPEC);SPEC.loader.exec_module(deploy)
 
 class Links(HTMLParser):
     def __init__(self):
@@ -34,7 +35,7 @@ class NavigationTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.temp=tempfile.TemporaryDirectory()
-        subprocess.run([sys.executable,str(ROOT/'scripts/preparar-hosting.py'),'--output',cls.temp.name],cwd=ROOT,check=True,stdout=subprocess.DEVNULL)
+        deploy.build(Path(cls.temp.name))
         cls.public=Path(cls.temp.name)/'public'
     @classmethod
     def tearDownClass(cls): cls.temp.cleanup()
@@ -84,10 +85,30 @@ class NavigationTests(unittest.TestCase):
         for page in self.public.rglob('negocios-locales/*/index.html'):
             if page.parent.name=='negocios-locales': continue
             parsed=links(page)
-            primary=[item for item in parsed if item['main'] and item['text'].strip() in {'Registrar mi negocio','Register my business','Cadastrar minha empresa'}]
+            primary=[item for item in parsed if item['main'] and item['text'].strip() in {'Negocios locales','Local businesses','Negócios locais'}]
             self.assertEqual(len(primary),1,page)
-            self.assertTrue(primary[0]['attrs'].get('href','').endswith('interes/index.html') or primary[0]['attrs'].get('href','')=='index.html',page)
+            target=urlsplit(urljoin('https://example.invalid/v1/'+page.relative_to(self.public).as_posix(),primary[0]['attrs'].get('href',''))).path
+            self.assertTrue(target.rstrip('/').endswith('/negocios-locales'),(page,target))
             secondary=[item for item in parsed if item['business'] and item['attrs'].get('aria-current')=='page']
             self.assertEqual(len(secondary),1,page)
+    def test_information_and_account_creation_are_distinct_and_gate_aware(self):
+        for relative,label,create_text in [
+            ('negocios-locales/index.html','Negocios locales','Crear cuenta empresarial'),
+            ('en/negocios-locales/index.html','Local businesses','Create a business account'),
+            ('pt-br/negocios-locales/index.html','Negócios locais','Criar conta empresarial'),
+        ]:
+            source=(self.public/relative).read_text()
+            self.assertIn(label,source,relative)
+            self.assertIn('Solicitar información' if relative.startswith('negocios-locales/') else ('Request information' if relative.startswith('en/') else 'Solicitar informações'),source,relative)
+            self.assertIn('BUSINESS_ACCOUNT_ACTION',source,relative)
+            self.assertNotIn(create_text,source,relative)
+    def test_admin_uses_its_own_sidebar_stylesheet(self):
+        admin=(self.public/'admin/index.php').read_text()
+        styles=(self.public/'assets/admin.css').read_text()
+        self.assertIn('admin.css?v=admin-layout-',admin)
+        self.assertIn('.admin-sidebar nav section{display:block!important',styles)
+        self.assertIn('.admin-sidebar nav a,.admin-nav-disabled{display:flex!important',styles)
+        rewrite=(self.public/'.htaccess').read_text()
+        self.assertIn('^negocios-locales/?$ business/index.php?lang=es',rewrite)
 
 if __name__=='__main__': unittest.main()
