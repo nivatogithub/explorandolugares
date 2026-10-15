@@ -40,6 +40,48 @@ try {
                 $q=db()->prepare('DELETE FROM leads WHERE id IN ('.$marks.')');$q->execute(array_values($ids));
                 header('Location: index.php',true,303);exit;
             }
+        } elseif (!empty($_SESSION['admin']) && $action==='business_access') {
+            $enabled=$_POST['business_accounts_enabled']??null;
+            if (!in_array($enabled,['0','1'],true)) {
+                $error='Selecciona si el registro empresarial estará cerrado o abierto al público.';
+            } elseif ($enabled==='1' && ($_POST['confirm_public']??'')!=='ABRIR REGISTRO PUBLICO') {
+                $error='Para abrir el registro al público, escribe exactamente ABRIR REGISTRO PUBLICO.';
+            } else {
+                $nextEnabled=$enabled==='1';
+                $configuredKey=$config['business_accounts_test_key']??'';
+                $nextKey=$nextEnabled?'':(is_string($configuredKey)&&strlen($configuredKey)>=32?$configuredKey:'');
+                try {
+                    BusinessPortalSettings::save($configFile,$nextEnabled,$nextKey);
+                    $config['business_accounts_enabled']=$nextEnabled;
+                    $config['business_accounts_test_key']=$nextKey;
+                    header('Location: index.php?tab=sistema&access_notice=mode-saved',true,303);exit;
+                } catch (Throwable $e) {
+                    error_log('Explorando Lugares: no se pudo guardar el modo de acceso empresarial.');
+                    $error='No se guardó el acceso. Comprueba que el archivo privado permita escritura al proceso del sitio.';
+                }
+            }
+        } elseif (!empty($_SESSION['admin']) && $action==='business_key') {
+            $operation=$_POST['operation']??'';
+            if (!empty($config['business_accounts_enabled'])) {
+                $error='Cierra primero el registro público para administrar la llave de prueba.';
+            } elseif (!in_array($operation,['generate','revoke'],true)) {
+                $error='Acción de llave no válida.';
+            } elseif ($operation==='revoke' && ($_POST['confirm_revoke']??'')!=='1') {
+                $error='Confirma la eliminación de la llave para cerrar las sesiones de prueba.';
+            } else {
+                $nextKey=$operation==='generate'?bin2hex(random_bytes(32)):'';
+                try {
+                    BusinessPortalSettings::save($configFile,false,$nextKey);
+                    $config['business_accounts_enabled']=false;
+                    $config['business_accounts_test_key']=$nextKey;
+                    if ($nextKey!=='') $_SESSION['admin_generated_business_test_key']=$nextKey;
+                    else unset($_SESSION['admin_generated_business_test_key']);
+                    header('Location: index.php?tab=sistema&access_notice='.($nextKey!==''?'key-generated':'key-revoked'),true,303);exit;
+                } catch (Throwable $e) {
+                    error_log('Explorando Lugares: no se pudo guardar la llave privada empresarial.');
+                    $error='No se pudo guardar la llave en la configuración privada. Comprueba permisos del archivo.';
+                }
+            }
         } else {http_response_code(403);$error='Acción no autorizada.';}
     }
     $admin=!empty($_SESSION['admin']);$rows=[];$total=0;$system=[];$page=max(1,(int)($_GET['page']??1));
@@ -55,6 +97,7 @@ try {
         $q=db()->prepare('SELECT * FROM leads'.$where.' ORDER BY id DESC LIMIT 25 OFFSET '.$offset);$q->execute($params);$rows=$q->fetchAll();
     }
     if ($admin && $tab==='sistema') {
+        $_SESSION['last_seen']=time();
         $pdo=db();
         $driver=$pdo->getAttribute(PDO::ATTR_DRIVER_NAME);
         // Usar solo SELECT: el usuario de producción no requiere permisos SHOW.
@@ -68,10 +111,20 @@ try {
             'privacy'=>!empty($config['privacy']['operator']) && !empty($config['privacy']['contact']) && !empty($config['privacy']['retention']) && !empty($config['privacy']['retention_en'])?'Completa':'Pendiente',
             'registration'=>ready()?'Habilitada':'Deshabilitada',
             'server'=>substr((string)$pdo->getAttribute(PDO::ATTR_SERVER_VERSION),0,80),
+            'business_public'=>!empty($config['business_accounts_enabled']),
+            'business_test_key'=>is_string($config['business_accounts_test_key']??null)&&strlen($config['business_accounts_test_key'])>=32,
         ];
+        $generatedBusinessKey=is_string($_SESSION['admin_generated_business_test_key']??null)?$_SESSION['admin_generated_business_test_key']:'';
+        unset($_SESSION['admin_generated_business_test_key']);
+        $accessNotice=match($_GET['access_notice']??'') {
+            'mode-saved'=>'Se guardó el estado del registro empresarial.',
+            'key-generated'=>'Llave nueva guardada. Cópiala y guárdala ahora; no volverá a mostrarse.',
+            'key-revoked'=>'Llave de prueba eliminada. Las sesiones iniciadas con la llave anterior quedan invalidadas.',
+            default=>'',
+        };
     }
 } catch (Throwable $e) {error_log('Explorando Lugares: fallo de administración.');http_response_code(503);exit('El panel no está disponible en este momento.');}
-?><!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Administración | Explorando Lugares</title><link rel="stylesheet" href="../assets/style.css?v=admin-navigation-20261015"></head><body><main class="wrap admin-page"><a class="brand" href="../index.html"><img class="brand-logo" src="../assets/logo.svg" alt="" width="64" height="64"><span>explorando<b>lugares</b></span></a><h1>Contactos de negocios</h1><p>Área privada. Un registro no es una publicación ni un aliado aprobado.</p>
+?><!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Administración | Explorando Lugares</title><link rel="stylesheet" href="../assets/style.css?v=admin-business-access-20261015"><link rel="stylesheet" href="../assets/admin.css?v=admin-layout-20261015"></head><body><main class="wrap admin-page"><a class="brand" href="../index.html"><img class="brand-logo" src="../assets/logo.svg" alt="" width="64" height="64"><span>explorando<b>lugares</b></span></a><h1>Contactos de negocios</h1><p>Área privada. Un registro no es una publicación ni un aliado aprobado.</p>
 <?php if($error): ?><p role="alert"><?=esc($error)?></p><?php endif ?>
 <?php if(!$admin): ?>
 <form method="post" class="registration-form"><input type="hidden" name="csrf" value="<?=esc($_SESSION['csrf'])?>"><input type="hidden" name="action" value="login"><label>Usuario<input name="username" required autocomplete="username" maxlength="120"></label><label>Contraseña<input type="password" name="password" required autocomplete="current-password"></label><button class="pill">Entrar al panel</button></form>
@@ -79,7 +132,13 @@ try {
 <form method="post"><input type="hidden" name="csrf" value="<?=esc($_SESSION['csrf'])?>"><input type="hidden" name="action" value="logout"><button class="pill light">Cerrar sesión</button></form>
 <?php require __DIR__.'/_navigation.php'; ?>
 <?php if($tab==='sistema'): ?>
-<section class="admin-system"><p class="eyebrow">Diagnóstico seguro</p><h2>Sistema y base de datos</h2><p>Este resumen confirma el estado de la conexión y las tablas necesarias. No muestra contraseñas, usuarios, cadenas de conexión ni datos de los contactos.</p><dl><dt>Conexión</dt><dd><?=esc($system['database'])?></dd><dt>Motor</dt><dd><?=esc($system['driver'])?></dd><dt>Solicitudes (<code>leads</code>)</dt><dd><?=esc($system['leads'])?></dd><dt>Protección contra abuso (<code>rate_limits</code>)</dt><dd><?=esc($system['limits'])?></dd><dt>Información de privacidad</dt><dd><?=esc($system['privacy'])?></dd><dt>Recepción del formulario</dt><dd><?=esc($system['registration'])?></dd></dl><div class="notice"><strong>Configuración privada</strong><p>La contraseña MySQL y el usuario administrador se configuran únicamente en <code>private/config.php</code>, fuera de la web. Para activar el formulario se completa ese archivo y se vuelve a comprobar aquí. No ejecutes SQL arbitrario desde el navegador.</p></div></section>
+<?php if($accessNotice): ?><p class="notice" role="status"><?=esc($accessNotice)?></p><?php endif ?>
+<section class="admin-system"><p class="eyebrow">Preproducción</p><h2>Acceso al portal de negocios</h2><p>Controla el registro de cuentas empresariales. En modo privado solo entra quien inicia una sesión con la llave de prueba; al abrir el registro público, cualquier visitante podrá comenzar el proceso.</p>
+<form method="post" class="destination-editor"><input type="hidden" name="csrf" value="<?=esc($_SESSION['csrf'])?>"><input type="hidden" name="action" value="business_access"><fieldset><legend>Registro público</legend><div class="destination-form-grid"><label>Estado<select name="business_accounts_enabled" data-business-public-mode><option value="0" <?=empty($system['business_public'])?'selected':''?>>Cerrado al público</option><option value="1" <?=!empty($system['business_public'])?'selected':''?>>Abierto al público</option></select></label><label data-public-confirmation hidden>Confirmación de apertura<input name="confirm_public" autocomplete="off" placeholder="ABRIR REGISTRO PUBLICO"><small>Escribe la frase exactamente para confirmar que cualquiera podrá registrarse.</small></label></div><p class="notice">Al abrir el registro público se elimina la llave privada de prueba. Para volver a pruebas privadas, cierra el registro y genera una llave nueva.</p><button class="pill" type="submit">Guardar estado del registro</button></fieldset></form>
+<fieldset class="business-access-keyset"><legend>Llave de acceso privado para pruebas</legend><p>Estado: <strong><?=!empty($system['business_test_key'])?'Llave configurada':'Sin llave; acceso de prueba cerrado'?></strong>. La llave nunca se muestra después de guardarla.</p><?php if($generatedBusinessKey!==''): ?><label>Llave nueva · copia y almacena ahora<input id="generated-business-test-key" type="text" readonly value="<?=esc($generatedBusinessKey)?>" autocomplete="off" spellcheck="false"></label><button class="pill light" type="button" data-copy-business-key="generated-business-test-key">Copiar llave</button><p id="business-key-copy-status" role="status" aria-live="polite"></p><?php endif ?>
+<div class="destination-form-grid"><form method="post"><input type="hidden" name="csrf" value="<?=esc($_SESSION['csrf'])?>"><input type="hidden" name="action" value="business_key"><input type="hidden" name="operation" value="generate"><button class="pill light" type="submit" <?=!empty($system['business_public'])?'disabled':''?>><?=!empty($system['business_test_key'])?'Crear llave nueva':'Generar llave de prueba'?></button><small>Si ya existía una llave, esta la reemplaza y revoca las sesiones anteriores.</small></form><form method="post"><input type="hidden" name="csrf" value="<?=esc($_SESSION['csrf'])?>"><input type="hidden" name="action" value="business_key"><input type="hidden" name="operation" value="revoke"><label><input type="checkbox" name="confirm_revoke" value="1" required> Confirmo borrar la llave y cerrar las sesiones de prueba.</label><button class="pill light" type="submit" <?=empty($system['business_test_key'])||!empty($system['business_public'])?'disabled':''?>>Borrar llave y cerrar pruebas</button></form></div></fieldset>
+<p>Para iniciar una prueba, abre una vez <code>/negocios/registro/?prueba=TU_LLAVE</code>. La sesión dura cuatro horas. Al borrar o renovar la llave, las sesiones anteriores dejan de funcionar.</p></section>
+<section class="admin-system"><p class="eyebrow">Diagnóstico seguro</p><h2>Sistema y base de datos</h2><p>Este resumen confirma el estado de la conexión y las tablas necesarias. No muestra contraseñas, usuarios, cadenas de conexión ni datos de los contactos.</p><dl><dt>Conexión</dt><dd><?=esc($system['database'])?></dd><dt>Motor</dt><dd><?=esc($system['driver'])?></dd><dt>Solicitudes (<code>leads</code>)</dt><dd><?=esc($system['leads'])?></dd><dt>Protección contra abuso (<code>rate_limits</code>)</dt><dd><?=esc($system['limits'])?></dd><dt>Información de privacidad</dt><dd><?=esc($system['privacy'])?></dd><dt>Recepción del formulario</dt><dd><?=esc($system['registration'])?></dd></dl><div class="notice"><strong>Configuración privada</strong><p>La contraseña MySQL y el usuario administrador permanecen fuera de la web. Este panel solo actualiza los dos controles del acceso empresarial.</p></div></section>
 <?php else: ?>
 <form method="get" class="admin-filter"><label>Filtrar por estado<select name="status"><option value="">Todos</option><?php foreach(['nuevo','revisado','contactado','archivado'] as $value): ?><option value="<?=$value?>" <?=$value===$status?'selected':''?>><?=esc(ucfirst($value))?></option><?php endforeach ?></select></label><button class="pill light">Filtrar</button></form>
 <p><?=esc($total)?> solicitudes · Página <?=esc($page)?> · Fechas UTC</p>
@@ -87,5 +146,5 @@ try {
 <?php foreach($rows as $row): ?><article class="admin-lead"><div class="admin-lead-head"><label class="admin-select"><input form="bulk-delete" type="checkbox" name="ids[]" value="<?=esc($row['id'])?>"> <span>Seleccionar</span></label><div class="admin-lead-title"><h2><?=esc($row['business'])?></h2><p><?=esc(categories(true)[$row['category']]??$row['category'])?> · <?=esc($row['municipality'])?></p></div><div class="admin-lead-status"><span class="badge"><?=esc($row['status'])?></span><form method="post" class="admin-status-form"><input type="hidden" name="csrf" value="<?=esc($_SESSION['csrf'])?>"><input type="hidden" name="action" value="status"><input type="hidden" name="id" value="<?=esc($row['id'])?>"><label><span>Estado</span><select name="status"><?php foreach(['nuevo','revisado','contactado','archivado'] as $value): ?><option value="<?=$value?>" <?=$value===$row['status']?'selected':''?>><?=esc(ucfirst($value))?></option><?php endforeach ?></select></label><button class="pill light">Guardar</button></form></div></div><dl class="admin-lead-details"><div><dt>Persona</dt><dd><?=esc($row['name'])?></dd></div><div class="admin-contact"><dt>Contacto</dt><dd><?=esc($row['email'])?> <?=esc($row['phone'])?><?php if ($row['phone']!==''): ?> · <?=esc(['fijo'=>'Fijo','celular'=>'Celular','whatsapp'=>'WhatsApp'][$row['phone_type']]??'Tipo sin especificar')?><?php endif ?></dd></div><div><dt>Tipo de solicitud</dt><dd><?=esc($row['interest']==='impulsor_local'?'Postulación de impulsor local':'Registro de negocio')?></dd></div><div><dt>Solicita contacto</dt><dd><?=$row['wants_contact']?'Sí':'No'?></dd></div><div class="admin-description"><dt>Descripción</dt><dd class="lead-description"><?=esc($row['description'])?></dd></div><div><dt>Conoce el alcance</dt><dd><?=esc($row['participation_version']?:'Sin confirmación registrada')?></dd></div><div><dt>Registro</dt><dd><?=esc($row['created_at'])?> · Consentimiento <?=esc($row['consent_version'])?></dd></div></dl><div class="admin-lead-actions"><form method="post" class="admin-delete"><input type="hidden" name="csrf" value="<?=esc($_SESSION['csrf'])?>"><input type="hidden" name="action" value="delete"><input type="hidden" name="ids[]" value="<?=esc($row['id'])?>"><button class="pill danger" onclick="return confirm('¿Eliminar esta solicitud de forma definitiva?')">Eliminar</button></form></div></article><?php endforeach ?>
 <?php if($rows): ?><form id="bulk-delete" method="post" class="bulk-delete"><input type="hidden" name="csrf" value="<?=esc($_SESSION['csrf'])?>"><input type="hidden" name="action" value="delete"><button class="pill danger" disabled>Eliminar seleccionadas</button></form><script>document.getElementById('bulk-delete').addEventListener('submit',function(event){if(!confirm('¿Eliminar definitivamente las solicitudes seleccionadas?'))event.preventDefault()});document.querySelectorAll('[form="bulk-delete"][type="checkbox"]').forEach(function(item){item.addEventListener('change',function(){document.querySelector('#bulk-delete button').disabled=!document.querySelector('[form="bulk-delete"][type="checkbox"]:checked')})})</script><?php endif ?>
 <div class="pagination"><?php if($page>1): ?><a href="?page=<?=$page-1?>&amp;status=<?=esc($status)?>">← Anterior</a><?php endif ?> <?php if($page*25<$total): ?><a href="?page=<?=$page+1?>&amp;status=<?=esc($status)?>">Siguiente →</a><?php endif ?></div>
-<?php endif ?><script src="../assets/select-flotante.js" defer></script>
+<?php endif ?><script src="../assets/select-flotante.js" defer></script><?php if($tab==='sistema'): ?><script src="../assets/admin-business-access.js" defer></script><?php endif ?>
 <?php endif ?></main></body></html>

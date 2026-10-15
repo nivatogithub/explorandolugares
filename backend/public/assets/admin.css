@@ -1,0 +1,26 @@
+/* Navigation and test-access controls owned by the private administration UI. */
+.admin-page:has(.admin-sidebar){box-sizing:border-box;width:calc(100% - 40px);max-width:1440px;margin:0 auto;padding-left:270px}
+.admin-sidebar{position:fixed;z-index:20;top:24px;bottom:24px;left:max(20px,calc((100vw - 1440px)/2 + 20px));width:226px;box-sizing:border-box;overflow:auto;padding:18px 14px;border:1px solid var(--aqua-line);border-radius:14px;background:#fffdf8;box-shadow:0 8px 28px #124c4812}
+.admin-sidebar-brand{display:block;padding:6px 10px 18px;color:var(--ink);font-size:18px;font-weight:750;line-height:1.2;text-decoration:none;border-bottom:1px solid var(--aqua-line)}
+.admin-sidebar-brand strong{display:block;color:var(--ember,#d84e27)}
+.admin-sidebar-brand small{display:block;margin-top:8px;color:var(--muted);font-size:11px;font-weight:650;letter-spacing:.12em;text-transform:uppercase}
+.admin-sidebar nav,.admin-sidebar nav section{display:block!important;column-count:1!important;columns:1!important;grid-template-columns:minmax(0,1fr)!important;width:auto!important;min-width:0!important}
+.admin-sidebar nav section{margin:18px 0 0;break-inside:avoid}
+.admin-sidebar nav h2{margin:0 10px 7px;color:var(--muted);font-size:10px;letter-spacing:.13em;text-transform:uppercase}
+.admin-sidebar nav a,.admin-nav-disabled{display:flex!important;box-sizing:border-box;width:100%;min-width:0;min-height:40px;align-items:center;justify-content:flex-start;gap:7px;margin:2px 0;padding:9px 10px;border-radius:8px;color:var(--ink);font-size:13px;font-weight:650;text-decoration:none;line-height:1.25;white-space:normal;word-break:normal;overflow-wrap:anywhere}
+.admin-sidebar nav a:hover{background:#f2f2e9}
+.admin-sidebar nav a[aria-current=page]{background:var(--ink);color:#fffdf8}
+.admin-nav-disabled{color:#92978e;font-weight:500;cursor:default}
+.admin-nav-disabled small{font-size:9px;white-space:nowrap}
+.admin-page:has(.admin-sidebar)>.brand,.admin-page:has(.admin-sidebar)>p:has(>a[href="index.php"]),.admin-page:has(.admin-sidebar)>p:has(>a[href="negocios.php"]){display:none!important}
+.admin-page:has(.admin-sidebar)>.admin-tabs{display:none}
+.admin-system .business-access-keyset{margin:20px 0;padding:18px;border:1px solid var(--aqua-line);border-radius:10px;background:#fff}
+.admin-system .business-access-keyset>legend{padding:0 8px;font-weight:700}
+.admin-system .business-access-keyset>label{display:grid;gap:7px;margin:14px 0;font-size:13px;font-weight:650}
+.admin-system .business-access-keyset input[readonly]{width:100%;padding:10px 12px;border:1px solid var(--aqua-line);border-radius:7px;background:#f2f3ef;color:var(--ink);font:13px/1.4 ui-monospace,SFMono-Regular,monospace}
+.admin-system .business-access-keyset .destination-form-grid form{display:grid;align-content:start;gap:8px}
+.admin-system .business-access-keyset .destination-form-grid label{display:flex;flex-direction:row;align-items:flex-start;gap:8px;font-weight:500}
+.admin-system .business-access-keyset .destination-form-grid input[type=checkbox]{width:auto;flex:none;margin-top:4px}
+.admin-system .business-access-keyset button:disabled{opacity:.55;cursor:not-allowed}
+@media(max-width:850px){.admin-page:has(.admin-sidebar){width:calc(100% - 28px);padding-left:0}.admin-sidebar{position:static;width:auto;max-height:none;margin:0 0 24px;padding:12px}.admin-sidebar-brand{padding:3px 8px 10px}.admin-sidebar nav section{margin-top:12px}.admin-sidebar nav a,.admin-nav-disabled{font-size:13px;padding:9px 10px}}
+@media(max-width:540px){.admin-sidebar nav section{min-width:0}.admin-sidebar nav a,.admin-nav-disabled{align-items:center;flex-direction:row;justify-content:flex-start}}

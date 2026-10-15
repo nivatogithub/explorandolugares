@@ -2,6 +2,9 @@ RewriteEngine On
 
 # Inicio del buscador y solicitudes de reclamación de negocios.
 RewriteRule ^reclamar-negocio/?$ reclamar-negocio.php [L,QSA]
+RewriteRule ^negocios-locales/?$ business/index.php?lang=es [L,QSA]
+RewriteRule ^en/negocios-locales/?$ business/index.php?lang=en [L,QSA]
+RewriteRule ^pt-br/negocios-locales/?$ business/index.php?lang=pt-br [L,QSA]
 RewriteRule ^negocios/registro/?$ business/register.php [L,QSA]
 RewriteRule ^negocios/acceso/?$ business/login.php [L,QSA]
 RewriteRule ^negocios/portal/?$ business/dashboard.php [L,QSA]

@@ -5,8 +5,11 @@ import subprocess
 import sys
 import tempfile
 import unittest
+import importlib.util
 
 ROOT=Path(__file__).resolve().parents[2]
+DEPLOY=ROOT/'scripts/desplegar-sftp.py'
+SPEC=importlib.util.spec_from_file_location('links_deploy',DEPLOY);deploy=importlib.util.module_from_spec(SPEC);SPEC.loader.exec_module(deploy)
 SKIP_SCHEMES={'http','https','mailto','tel','javascript','data'}
 
 class References(HTMLParser):
@@ -21,7 +24,7 @@ class PublicLinkTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.temp=tempfile.TemporaryDirectory()
-        subprocess.run([sys.executable,str(ROOT/'scripts/preparar-hosting.py'),'--output',cls.temp.name],cwd=ROOT,check=True,stdout=subprocess.DEVNULL)
+        deploy.build(Path(cls.temp.name))
         cls.public=Path(cls.temp.name)/'public'
     @classmethod
     def tearDownClass(cls): cls.temp.cleanup()
