@@ -50,3 +50,7 @@ Se añadió una sección privada independiente del CRM para publicación, prepar
 ## Seguimiento de negocios en tres frentes
 
 Negocios abre ahora un resumen comercial, de validación y de publicación, con filtros y detalle de pendientes/ofertas/siguiente acción. Usa el catálogo y los periodos/pagos existentes; requiere 012. La agenda de personas se llama Contactos y seguimiento. Ver [definiciones y límites](SEGUIMIENTO_NEGOCIOS.md).
+
+## Revisión manual de pagos
+
+Se incorporó el circuito reportado → revisión → confirmado/rechazado, con pagador, referencia, negocio/suscripción, autor de revisión, asiento confirmado único e historial. Negocios muestra pagos por comprobar. Requiere 013; no hay lectura de SMS ni confirmación bancaria automática. Ver [alcance y estados](REVISION_PAGOS_SUSCRIPCIONES.md).

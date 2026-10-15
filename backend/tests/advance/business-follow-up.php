@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 require __DIR__.'/reports.php';require dirname(__DIR__,2).'/app/advance/BusinessFollowUp.php';
+$db->exec(file_get_contents(dirname(__DIR__,2).'/database/migrations/013-subscription-payment-review.sqlite.sql'));
 $f=new BusinessFollowUp($db,'test-admin');$o=$f->overview('all','',1,'2026-10-14');
 check($o['counts']['all']===2&&$o['counts']['free']===0,'No asumir que un negocio es gratis');
 $latest=(int)$db->query('SELECT id FROM business_subscriptions WHERE business_id='.(int)$est.' ORDER BY starts_on DESC,id DESC LIMIT 1')->fetchColumn();

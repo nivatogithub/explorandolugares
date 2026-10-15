@@ -32,7 +32,7 @@ database=private/'preview.sqlite'
 if not database.exists():
     db=sqlite3.connect(database)
     try:
-        for filename in ['database/sqlite.sql','database/destinations.sqlite.sql','database/migrations/007-advance-admin.sqlite.sql','database/migrations/008-advance-shared-catalog.sqlite.sql','database/migrations/009-advance-english-values.sqlite.sql','database/migrations/010-advance-unsubscribe.sqlite.sql','database/migrations/011-admin-reports.sqlite.sql','database/migrations/012-business-follow-up.sqlite.sql']:
+        for filename in ['database/sqlite.sql','database/destinations.sqlite.sql','database/migrations/007-advance-admin.sqlite.sql','database/migrations/008-advance-shared-catalog.sqlite.sql','database/migrations/009-advance-english-values.sqlite.sql','database/migrations/010-advance-unsubscribe.sqlite.sql','database/migrations/011-admin-reports.sqlite.sql','database/migrations/012-business-follow-up.sqlite.sql','database/migrations/013-subscription-payment-review.sqlite.sql']:
             db.executescript((root/'backend'/filename).read_text())
         db.executescript((root/'backend/tests/advance/shared-fixture.sql').read_text())
         now='2026-10-14 00:00:00'
@@ -54,6 +54,7 @@ else:
         has_plan='plan_name' in [row[1] for row in db.execute('PRAGMA table_info(business_subscriptions)')]
         if not has_follow_up and not has_plan:db.executescript((root/'backend/database/migrations/012-business-follow-up.sqlite.sql').read_text())
         elif bool(has_follow_up)!=has_plan:raise RuntimeError('Esquema parcial de seguimiento. Revisa la copia local.')
+        if not db.execute("SELECT COUNT(*) FROM sqlite_master WHERE type='table' AND name='subscription_payment_claims'").fetchone()[0]:db.executescript((root/'backend/database/migrations/013-subscription-payment-review.sqlite.sql').read_text())
 access=private/'local-access.json'
 if access.exists():
     credentials=json.loads(access.read_text())

@@ -12,6 +12,7 @@ db.executescript((root/'backend/database/migrations/008-advance-shared-catalog.s
 db.executescript((root/'backend/database/migrations/010-advance-unsubscribe.sqlite.sql').read_text())
 db.executescript((root/'backend/database/migrations/011-admin-reports.sqlite.sql').read_text())
 db.executescript((root/'backend/database/migrations/012-business-follow-up.sqlite.sql').read_text())
+db.executescript((root/'backend/database/migrations/013-subscription-payment-review.sqlite.sql').read_text())
 db.executescript((root/'backend/tests/advance/shared-fixture.sql').read_text())
 password=secrets.token_urlsafe(24)
 hashed=subprocess.check_output(['php','-r','echo password_hash(trim(stream_get_contents(STDIN)), PASSWORD_DEFAULT);'],input=password.encode()).decode()
@@ -46,6 +47,14 @@ try:
     sub={'action':'subscription','csrf':csrf,'confirmed':'1','business_id':1,'reference':'http-local','starts_on':'2026-10-01','ends_on':'2026-11-01'}
     assert call('/admin/reports.php',sub)[0]==200
     assert db.execute('SELECT COUNT(*) FROM business_subscriptions').fetchone()[0]==1
+    claim={'action':'report_payment','csrf':csrf,'confirmed':'1','subscription_id':1,'reference':'http-payment','payer_name':'Pagador ficticio','amount':'10.00','currency':'COP','reported_on':'2026-10-14','evidence_note':'Prueba local sin pago real'}
+    assert call('/admin/reports.php?tab=billing',claim)[0]==200
+    assert db.execute('SELECT COUNT(*) FROM subscription_payments').fetchone()[0]==0
+    review={'action':'review_payment','csrf':csrf,'confirmed':'1','claim_id':1,'review_note':'Movimiento ficticio cotejado','decision':'confirmed'}
+    assert call('/admin/reports.php?tab=billing',{**review,'csrf':'bad'})[0]==403
+    assert call('/admin/reports.php?tab=billing',review)[0]==200
+    assert db.execute('SELECT COUNT(*) FROM subscription_payments').fetchone()[0]==1
+    assert call('/admin/reports.php?tab=billing',review)[0]==400
     assert call(url+'?section=contacts',{'action':'save','csrf':'bad'})[0]==403
     contact={'action':'save','csrf':csrf,'name':'<script>test</script>','email':'test@example.invalid','destination_id':'1','source':'Prueba local','relationship':'prospect','marketing_consent':'1','consent_evidence':'Prueba local autorizada'}
     status,body,headers=call(url+'?section=contacts',contact)
