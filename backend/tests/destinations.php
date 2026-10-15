@@ -21,6 +21,10 @@ $jerico=$repo->findPublished('jerico','es');
 check($jerico!==null && $jerico['display_name']==='Jericó','Spanish destination loads');
 check(!array_key_exists('internal_research_json',$jerico),'Internal local market research is excluded from public destination data');
 check($jerico['history_media']['path']==='assets/destinos/1/monumento-santa-laura-ilustrado-v2.webp','Jericó history section uses the selected close-cropped monument illustration');
+check(!array_key_exists('provenance_json',$jerico['history_media']),'Private image provenance is excluded from public render data');
+$historyProvenance=json_decode((string)$pdo->query("SELECT provenance_json FROM media_assets WHERE asset_path='assets/destinos/1/monumento-santa-laura-ilustrado-v2.webp'")->fetchColumn(),true,512,JSON_THROW_ON_ERROR);
+check(($historyProvenance['reference_asset_path']??'')==='assets/jerico/monumento-santa-laura.webp'&&($historyProvenance['reference_source_url']??'')==='https://commons.wikimedia.org/wiki/File:Santa_Laura_Montoya_Upegui%2C_Jeric%C3%B3_Antioquia.jpg','Private image provenance records the source photograph, origin and licence');
+check((int)$pdo->query("SELECT COUNT(*) FROM media_assets WHERE origin='ai_generated' AND provenance_json IS NOT NULL")->fetchColumn()===9,'All selected Jericó AI illustrations retain private provenance or factual-basis notes');
 check(count($jerico['history'])===2 && count($jerico['places'])===7,'Public Jericó page shows seven published attractions');
 $publishedExperienceCount=(int)$pdo->query("SELECT COUNT(*) FROM points_of_interest WHERE destination_id=".(int)$jerico['id']." AND poi_type='experience' AND publication_status='published'")->fetchColumn();
 check($publishedExperienceCount===0,'Operator experiences are kept out of public listings until approved');
@@ -69,4 +73,9 @@ check(count($contacts)===1 && $contacts[0]['channel']==='whatsapp','Private busi
 $failed=false;try{DestinationImporter::import($pdo,$catalog,$options);}catch(RuntimeException $error){$failed=true;}
 check($failed,'Repeat import into non-empty catalog must be refused');
 check((int)$pdo->query('SELECT COUNT(*) FROM destinations')->fetchColumn()===22,'Refused repeat import leaves data intact, including the private-preview fixture');
+$upgrade=new PDO('sqlite::memory:',null,null,[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION]);
+$upgrade->exec('CREATE TABLE media_assets (id INTEGER PRIMARY KEY, asset_path TEXT NOT NULL)');
+$upgrade->exec(file_get_contents(dirname(__DIR__).'/database/migrations/007-media-provenance.sqlite.sql'));
+$columns=$upgrade->query('PRAGMA table_info(media_assets)')->fetchAll(PDO::FETCH_COLUMN,1);
+check(in_array('provenance_json',$columns,true),'Migration 007 adds a private provenance field to existing catalogs');
 echo "OK: destination import, locale queries, source metadata, publication filtering, and repeat-import protection.\n";

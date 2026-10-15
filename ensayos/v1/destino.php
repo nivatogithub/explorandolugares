@@ -10,7 +10,7 @@ function u(string $path): string { global $siteBase; return $siteBase.$path; }
 function mediaPath(?array $media): string { return $media ? u('/'.e($media['path'])) : ''; }
 function credit(?array $media): string {
     if (!$media) return '';
-    if (in_array($media['origin']??'external',['own','ai_generated'],true)) return '<figcaption class="credit">'.e($media['creator']).' · '.e($media['license_name']).'</figcaption>';
+    if (in_array($media['origin']??'external',['own','ai_generated'],true)) return '';
     return '<figcaption class="credit"><a href="'.e($media['source_url']).'">'.e($media['creator']).'</a> · <a href="'.e($media['license_url']).'">'.e($media['license_name']).'</a></figcaption>';
 }
 function contactHref(array $contact): ?string {

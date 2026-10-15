@@ -5388,7 +5388,19 @@
           "destination_slug": "jerico",
           "role": "poi:4"
         }
-      ]
+      ],
+      "provenance": {
+        "tool": "OpenAI ImageGen integrated tool",
+        "model": null,
+        "prompt_record_path": "content/imagenes-ia-jerico-candidatas.json",
+        "kind": "reference_photo",
+        "reference_asset_path": "assets/jerico/casa-santa-laura.webp",
+        "reference_source_url": "https://commons.wikimedia.org/wiki/File:Casa_de_la_beata_Laura.jpg",
+        "reference_creator": "Xemenendura",
+        "reference_license_name": "CC BY-SA 4.0",
+        "reference_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "notes": "Ilustración editorial en tinta y gouache basada en la fotografía de referencia."
+      }
     },
     {
       "path": "assets/destinos/1/cristo-cerro-el-salvador-ilustrado-v2.webp",
@@ -5419,7 +5431,19 @@
           "destination_slug": "jerico",
           "role": "poi:2"
         }
-      ]
+      ],
+      "provenance": {
+        "tool": "OpenAI ImageGen integrated tool",
+        "model": null,
+        "prompt_record_path": "content/imagenes-ia-jerico-candidatas.json",
+        "kind": "reference_photo",
+        "reference_asset_path": "assets/jerico/cristo-salvador-directo.webp",
+        "reference_source_url": "https://commons.wikimedia.org/wiki/File:Cristo_en_Jeric%C3%B3.jpg",
+        "reference_creator": "Xemenendura",
+        "reference_license_name": "CC BY-SA 4.0",
+        "reference_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "notes": "Ilustración editorial derivada visualmente de la fotografía de referencia; no se publica la foto fuente."
+      }
     },
     {
       "path": "assets/destinos/1/experiencia-finca-cafetera-ilustracion.webp",
@@ -5450,7 +5474,20 @@
           "destination_slug": "jerico",
           "role": "poi:10"
         }
-      ]
+      ],
+      "provenance": {
+        "tool": "OpenAI ImageGen integrated tool",
+        "model": null,
+        "prompt_record_path": "content/imagenes-ia-jerico-candidatas.json",
+        "kind": "generic_illustrative_concept",
+        "reference_asset_path": null,
+        "reference_source_url": null,
+        "reference_creator": null,
+        "reference_license_name": null,
+        "reference_license_url": null,
+        "factual_basis_url": "https://turismojerico.com/producto/experiencia-mundo-cafe/",
+        "notes": "Concepto ilustrativo general de experiencia cafetera; la fuente respalda la actividad, no representa una finca identificada."
+      }
     },
     {
       "path": "assets/destinos/1/helicoptero-medellin-jerico-ilustracion.webp",
@@ -5481,7 +5518,20 @@
           "destination_slug": "jerico",
           "role": "poi:8"
         }
-      ]
+      ],
+      "provenance": {
+        "tool": "OpenAI ImageGen integrated tool",
+        "model": null,
+        "prompt_record_path": "content/imagenes-ia-jerico-candidatas.json",
+        "kind": "generic_illustrative_concept",
+        "reference_asset_path": null,
+        "reference_source_url": null,
+        "reference_creator": null,
+        "reference_license_name": null,
+        "reference_license_url": null,
+        "factual_basis_url": "https://turismojerico.com/producto/cafe-patrimonio-helicoptero/",
+        "notes": "Concepto ilustrativo general de una actividad; la fuente respalda la existencia de la oferta, no el contenido visual, una ruta o un operador confirmado."
+      }
     },
     {
       "path": "assets/destinos/1/jardin-botanico-los-balsos-ilustrado.webp",
@@ -5512,7 +5562,19 @@
           "destination_slug": "jerico",
           "role": "poi:5"
         }
-      ]
+      ],
+      "provenance": {
+        "tool": "OpenAI ImageGen integrated tool",
+        "model": null,
+        "prompt_record_path": "content/imagenes-ia-jerico-candidatas.json",
+        "kind": "documented_visual_concept",
+        "reference_asset_path": null,
+        "reference_source_url": null,
+        "reference_creator": null,
+        "reference_license_name": null,
+        "reference_license_url": null,
+        "notes": "La ficha aprobada documenta estanque, puente de madera, vegetación y senderos. No se registró una fotografía específica como referencia visual."
+      }
     },
     {
       "path": "assets/destinos/1/monumento-santa-laura-ilustrado-v2.webp",
@@ -5543,7 +5605,19 @@
           "destination_slug": "jerico",
           "role": "history"
         }
-      ]
+      ],
+      "provenance": {
+        "tool": "OpenAI ImageGen integrated tool",
+        "model": null,
+        "prompt_record_path": "content/imagenes-ia-jerico-candidatas.json",
+        "kind": "reference_photo",
+        "reference_asset_path": "assets/jerico/monumento-santa-laura.webp",
+        "reference_source_url": "https://commons.wikimedia.org/wiki/File:Santa_Laura_Montoya_Upegui%2C_Jeric%C3%B3_Antioquia.jpg",
+        "reference_creator": "Raomir Ramirez Morales",
+        "reference_license_name": "CC BY-SA 3.0",
+        "reference_license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "notes": "Ilustración editorial de tinta y gouache basada en la fotografía del monumento."
+      }
     },
     {
       "path": "assets/destinos/1/parapente-puerto-arturo-ilustracion.webp",
@@ -5574,7 +5648,20 @@
           "destination_slug": "jerico",
           "role": "poi:9"
         }
-      ]
+      ],
+      "provenance": {
+        "tool": "OpenAI ImageGen integrated tool",
+        "model": null,
+        "prompt_record_path": "content/imagenes-ia-jerico-candidatas.json",
+        "kind": "generic_illustrative_concept",
+        "reference_asset_path": null,
+        "reference_source_url": null,
+        "reference_creator": null,
+        "reference_license_name": null,
+        "reference_license_url": null,
+        "factual_basis_url": "https://turismojerico.com/producto/aventura-altura/",
+        "notes": "Concepto ilustrativo general de una actividad; la fuente respalda la existencia de la oferta, no el contenido visual, el punto de vuelo o un operador confirmado."
+      }
     },
     {
       "path": "assets/destinos/1/parque-principal-ilustrado.webp",
@@ -5609,7 +5696,19 @@
           "destination_slug": "jerico",
           "role": "poi:1"
         }
-      ]
+      ],
+      "provenance": {
+        "tool": "OpenAI ImageGen integrated tool",
+        "model": null,
+        "prompt_record_path": "content/imagenes-ia-jerico-candidatas.json",
+        "kind": "reference_photo",
+        "reference_asset_path": "assets/jerico.webp",
+        "reference_source_url": "https://commons.wikimedia.org/wiki/File:El_parque_Jeric%C3%B3.jpg",
+        "reference_creator": "Xemenendura",
+        "reference_license_name": "CC BY-SA 4.0",
+        "reference_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "notes": "Ilustración editorial derivada visualmente de la fotografía de referencia; no se publica la foto fuente."
+      }
     },
     {
       "path": "assets/destinos/1/santuario-santa-laura-ilustrado-v2.webp",
@@ -5640,7 +5739,19 @@
           "destination_slug": "jerico",
           "role": "poi:3"
         }
-      ]
+      ],
+      "provenance": {
+        "tool": "OpenAI ImageGen integrated tool",
+        "model": null,
+        "prompt_record_path": "content/imagenes-ia-jerico-candidatas.json",
+        "kind": "reference_photo",
+        "reference_asset_path": "assets/jerico/iglesia-rosada.webp",
+        "reference_source_url": "https://commons.wikimedia.org/wiki/File:Jeric%C3%B3,_santuario_Madre_Laura.jpg",
+        "reference_creator": "Angel OLMEDO",
+        "reference_license_name": "Public domain",
+        "reference_license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "notes": "Ilustración editorial basada en la fotografía de referencia del santuario completo."
+      }
     },
     {
       "path": "assets/destinos/arboletes-1.webp",

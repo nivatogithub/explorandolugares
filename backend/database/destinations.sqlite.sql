@@ -52,7 +52,7 @@ CREATE TABLE media_assets (
  id INTEGER PRIMARY KEY AUTOINCREMENT, asset_path TEXT NOT NULL UNIQUE,
  origin TEXT NOT NULL DEFAULT 'external',
  creator TEXT NOT NULL, source_url TEXT NOT NULL, license_name TEXT NOT NULL,
- license_url TEXT NOT NULL, width INTEGER, height INTEGER
+ license_url TEXT NOT NULL, provenance_json TEXT NULL, width INTEGER, height INTEGER
 );
 CREATE TABLE media_asset_translations (
  media_asset_id INTEGER NOT NULL REFERENCES media_assets(id) ON DELETE CASCADE,

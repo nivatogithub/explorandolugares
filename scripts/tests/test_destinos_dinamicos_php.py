@@ -54,6 +54,8 @@ class DynamicDestinationRenderTests(unittest.TestCase):
                         self.assertIn(expected, page)
                         self.assertIn('rel="canonical"', page)
                         self.assertNotIn("Destino temporalmente no disponible", page)
+                        self.assertNotIn("commons.wikimedia.org/wiki/File", page)
+                        self.assertNotIn("Ilustración editorial generada con IA", page)
                     else:
                         self.assertEqual("Destino no encontrado.", page)
                         self.assertNotIn(expected, page)
