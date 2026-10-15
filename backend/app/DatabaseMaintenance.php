@@ -52,6 +52,97 @@ final class DatabaseMaintenance
             'checks' => [['media_assets', ['provenance_json']]],
             'requires' => ['media_assets'],
         ],
+        '008-business-subscriptions' => [
+            'file' => '008-business-subscriptions.mysql.sql',
+            'checks' => [
+                ['business_media', ['role']],
+                ['subscription_plans', ['code','has_business_page']],
+                ['subscription_plan_translations', ['plan_code','locale','name']],
+                ['subscription_features', ['code']],
+                ['subscription_feature_translations', ['feature_code','locale','name']],
+                ['subscription_plan_features', ['plan_code','feature_code','included']],
+                ['subscription_plan_prices', ['plan_code','billing_frequency','amount']],
+                ['business_subscriptions', ['business_id','plan_code','status']],
+            ],
+            'requires' => ['businesses','business_media'],
+        ],
+        '009-business-origin' => [
+            'file' => '009-business-origin.mysql.sql',
+            'checks' => [['businesses', ['record_origin']]],
+            'requires' => ['businesses'],
+        ],
+        '010-business-location-subscription-lifecycle' => [
+            'file' => '010-business-location-subscription-lifecycle.mysql.sql',
+            'checks' => [
+                ['businesses', ['address_text','location_reference','latitude','longitude','location_source','opening_hours','price_range','capacity_count','menu_url','reservations_url']],
+                ['subscription_plans', ['max_gallery_photos']],
+                ['business_subscriptions', ['publish_not_before','quoted_amount','currency','published_at']],
+            ],
+            'requires' => ['businesses','subscription_plans','business_subscriptions'],
+        ],
+        '011-premium-business-story' => [
+            'file' => '011-premium-business-story.mysql.sql',
+            'checks' => [['business_translations', ['brand_story','featured_services']]],
+            'requires' => ['business_translations'],
+        ],
+        '012-business-image-references' => [
+            'file' => '012-business-image-references.mysql.sql',
+            'checks' => [['businesses', ['image_assistance_requested']], ['business_image_references', ['business_id','storage_name','review_status']]],
+            'requires' => ['businesses'],
+        ],
+        '013-accounts-location-map' => [
+            'file' => '013-accounts-location-map.mysql.sql',
+            'checks' => [
+                ['businesses', ['location_map_url','location_confirmed']],
+                ['accounts', ['public_id','account_type','email','password_hash','status']],
+                ['account_identities', ['account_id','provider','provider_subject']],
+                ['business_account_memberships', ['account_id','business_id','role','status']],
+            ],
+            'requires' => ['businesses','business_subscriptions','subscription_plans'],
+        ],
+        '014-tiered-business-description' => [
+            'file' => '014-tiered-business-description.mysql.sql',
+            'checks' => [],
+            'row_checks' => [['subscription_features','code','extended_description']],
+            'requires' => ['subscription_features','subscription_plan_features'],
+        ],
+        '015-business-media-quotas' => [
+            'file' => '015-business-media-quotas.mysql.sql',
+            'checks' => [],
+            'value_checks' => [
+                ['subscription_plans','code','page','max_gallery_photos',0],
+                ['subscription_plans','code','page_premium','max_gallery_photos',2],
+            ],
+            'requires' => ['subscription_plans'],
+        ],
+        '016-plan-content-limits' => [
+            'file' => '016-plan-content-limits.mysql.sql',
+            'checks' => [
+                ['subscription_plans', ['max_summary_chars','max_description_chars','max_brand_story_chars','max_featured_services_chars']],
+                ['business_translations', ['summary']],
+            ],
+            'value_checks' => [
+                ['subscription_plans','code','basic','max_summary_chars',300],
+                ['subscription_plans','code','featured','max_description_chars',1000],
+                ['subscription_plans','code','page_premium','max_brand_story_chars',1500],
+            ],
+            'requires' => ['subscription_plans','business_translations'],
+        ],
+        '017-business-claims' => [
+            'file' => '017-business-claims.mysql.sql',
+            'checks' => [['business_claim_requests', ['business_id','claimant_name','email','phone','relationship_code','status']]],
+            'requires' => ['businesses'],
+        ],
+        '018-business-portal' => [
+            'file' => '018-business-portal.mysql.sql',
+            'checks' => [['business_claim_requests', ['account_id']]],
+            'requires' => ['accounts','business_claim_requests'],
+        ],
+        '019-business-account-applications' => [
+            'file' => '019-business-account-applications.mysql.sql',
+            'checks' => [['business_account_applications', ['account_id','application_type','business_id','destination_id','category_code','business_name','status']]],
+            'requires' => ['accounts','businesses','destinations','service_categories'],
+        ],
     ];
 
     public function __construct(private PDO $pdo, private string $appRoot, private string $publicRoot)
@@ -64,7 +155,7 @@ final class DatabaseMaintenance
         $driver = (string)$this->pdo->getAttribute(PDO::ATTR_DRIVER_NAME);
         $tables = $this->tables();
         $counts = [];
-        foreach (['leads', 'destinations', 'businesses', 'media_assets'] as $table) {
+        foreach (['leads', 'destinations', 'businesses', 'media_assets', 'business_image_references', 'business_claim_requests', 'business_account_applications'] as $table) {
             if (in_array($table, $tables, true)) {
                 $counts[$table] = (int)$this->pdo->query('SELECT COUNT(*) FROM `'.$table.'`')->fetchColumn();
             } else {
@@ -201,12 +292,25 @@ final class DatabaseMaintenance
     private function migrationState(array $migration, array $tables): string
     {
         $present = 0; $total = 0;
-        foreach ($migration['checks'] as [$table, $columns]) {
+        foreach (($migration['checks']??[]) as [$table, $columns]) {
             $total++;
             if (!in_array($table, $tables, true)) continue;
             $actual = $columns ? $this->columns($table) : [];
             if (!$columns || count(array_diff($columns, $actual)) === 0) $present++;
         }
+        foreach (($migration['row_checks']??[]) as [$table,$column,$value]) {
+            $total++;
+            if (!in_array($table,$tables,true)||!in_array($column,$this->columns($table),true)) continue;
+            $q=$this->pdo->prepare('SELECT COUNT(*) FROM `'.$table.'` WHERE `'.$column.'`=?');$q->execute([$value]);
+            if ((int)$q->fetchColumn()>0) $present++;
+        }
+        foreach (($migration['value_checks']??[]) as [$table,$keyColumn,$keyValue,$valueColumn,$value]) {
+            $total++;
+            if (!in_array($table,$tables,true)||!in_array($keyColumn,$this->columns($table),true)||!in_array($valueColumn,$this->columns($table),true)) continue;
+            $q=$this->pdo->prepare('SELECT COUNT(*) FROM `'.$table.'` WHERE `'.$keyColumn.'`=? AND `'.$valueColumn.'`=?');$q->execute([$keyValue,$value]);
+            if ((int)$q->fetchColumn()>0) $present++;
+        }
+        if ($total===0) throw new RuntimeException('La migración no define controles de estado.');
         if ($present === $total) return 'applied';
         return $present === 0 ? 'pending' : 'partial';
     }

@@ -130,7 +130,7 @@ final class DestinationImporter
         foreach ($options['groups'] as $group) foreach ($group['categories'] as $category) {
             $code=(string)$category['value']; if (isset($seen[$code])) continue; $seen[$code]=true;
             $insert->execute([$code,count($seen)]); $counts['service_categories']++;
-            foreach (['es'=>'label','en'=>'en','pt-br'=>'pt'] as $locale=>$key) {
+            foreach (['es'=>'label','en'=>'en','pt-BR'=>'pt'] as $locale=>$key) {
                 if (!empty($category[$key])) $translation->execute([$code,$locale,$category[$key]]);
             }
         }

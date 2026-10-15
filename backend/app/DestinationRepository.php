@@ -40,17 +40,18 @@ final class DestinationRepository
             if ($row['asset_path'] !== null) $destination['places'][$key]['media'][]=$this->mediaRow($row);
         }
         $destination['places']=array_values($destination['places']);
-        $stmt=$this->pdo->prepare('SELECT DISTINCT c.code,ct.label FROM service_categories c JOIN service_category_translations ct ON ct.category_code=c.code AND ct.locale=? JOIN businesses b ON b.category_code=c.code AND b.destination_id=? AND b.publication_status="published" AND b.operation_status <> "CERRADO_DEFINITIVO" WHERE c.is_active=1 ORDER BY c.display_order');
+        $stmt=$this->pdo->prepare('SELECT DISTINCT c.code,ct.label FROM service_categories c JOIN service_category_translations ct ON ct.category_code=c.code AND LOWER(ct.locale)=LOWER(?) JOIN businesses b ON b.category_code=c.code AND b.destination_id=? AND b.publication_status="published" AND b.information_status<>"PENDIENTE_REVISION" AND b.operation_status <> "CERRADO_DEFINITIVO" WHERE c.is_active=1 ORDER BY c.display_order');
         $stmt->execute([$locale,$id]); $destination['categories']=$stmt->fetchAll(PDO::FETCH_ASSOC);
-        $stmt=$this->pdo->prepare('SELECT b.id,b.public_id,b.slug,b.information_status,b.claim_status,b.operation_status,b.display_order,
+        $stmt=$this->pdo->prepare('SELECT b.id,b.public_id,b.slug,b.information_status,b.claim_status,b.operation_status,b.address_text,b.location_reference,b.latitude,b.longitude,b.location_map_url,
                     c.code,ct.label,bt.display_name,bt.summary,bt.description,
+                    COALESCE((SELECT bs.plan_code FROM business_subscriptions bs WHERE bs.business_id=b.id AND bs.status="active" AND (bs.starts_at IS NULL OR bs.starts_at<=CURRENT_TIMESTAMP) AND (bs.ends_at IS NULL OR bs.ends_at>CURRENT_TIMESTAMP) ORDER BY bs.id DESC LIMIT 1),"free") AS plan_code,
                     m.asset_path AS image_path,m.creator,m.source_url AS image_source,m.license_name,m.license_url,mt.alt_text AS image_alt,mt.caption AS image_caption,m.width,m.height
                 FROM businesses b JOIN business_translations bt ON bt.business_id=b.id AND bt.locale=?
-                JOIN service_categories c ON c.code=b.category_code JOIN service_category_translations ct ON ct.category_code=c.code AND ct.locale=?
-                LEFT JOIN media_assets m ON m.id=(SELECT bm.media_asset_id FROM business_media bm WHERE bm.business_id=b.id ORDER BY bm.display_order,bm.media_asset_id LIMIT 1)
+                JOIN service_categories c ON c.code=b.category_code JOIN service_category_translations ct ON ct.category_code=c.code AND LOWER(ct.locale)=LOWER(?)
+                LEFT JOIN media_assets m ON m.id=(SELECT bm.media_asset_id FROM business_media bm WHERE bm.business_id=b.id AND bm.role="logo" ORDER BY bm.display_order,bm.media_asset_id LIMIT 1)
                 LEFT JOIN media_asset_translations mt ON mt.media_asset_id=m.id AND mt.locale=?
-                WHERE b.destination_id=? AND b.publication_status="published" AND b.operation_status <> "CERRADO_DEFINITIVO"
-                ORDER BY b.display_order,bt.display_name');
+                WHERE b.destination_id=? AND b.publication_status="published" AND b.information_status<>"PENDIENTE_REVISION" AND b.operation_status <> "CERRADO_DEFINITIVO"
+                ORDER BY c.display_order,bt.display_name');
         $stmt->execute([$locale,$locale,$locale,$id]); $destination['businesses']=$stmt->fetchAll(PDO::FETCH_ASSOC);
         $businessIds=array_column($destination['businesses'],'id');$destination['public_contacts']=[];
         if ($businessIds) {
@@ -58,6 +59,15 @@ final class DestinationRepository
             $contacts=$this->pdo->prepare("SELECT business_id,channel,contact_value,display_order FROM business_contacts WHERE is_public=1 AND business_id IN ({$marks}) ORDER BY display_order");
             $contacts->execute($businessIds);
             foreach ($contacts->fetchAll(PDO::FETCH_ASSOC) as $contact) $destination['public_contacts'][(int)$contact['business_id']][]=$contact;
+            $plans=array_values(array_unique(array_column($destination['businesses'],'plan_code')));
+            $planMarks=implode(',',array_fill(0,count($plans),'?'));
+            $featureQuery=$this->pdo->prepare("SELECT plan_code,feature_code FROM subscription_plan_features WHERE included=1 AND plan_code IN ({$planMarks})");
+            $featureQuery->execute($plans);
+            $features=[];
+            foreach($featureQuery->fetchAll(PDO::FETCH_ASSOC) as $feature)$features[$feature['plan_code']][$feature['feature_code']]=true;
+            foreach($destination['businesses'] as &$business)$business['features']=$features[$business['plan_code']]??[];
+            unset($business);
+            $destination['business_features']=$features;
         }
         return $destination;
     }

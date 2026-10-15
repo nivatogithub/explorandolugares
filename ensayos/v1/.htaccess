@@ -1,5 +1,17 @@
 RewriteEngine On
 
+# Inicio del buscador y solicitudes de reclamación de negocios.
+RewriteRule ^reclamar-negocio/?$ reclamar-negocio.php [L,QSA]
+RewriteRule ^negocios/registro/?$ business/register.php [L,QSA]
+RewriteRule ^negocios/acceso/?$ business/login.php [L,QSA]
+RewriteRule ^negocios/portal/?$ business/dashboard.php [L,QSA]
+RewriteRule ^negocios/salir/?$ business/logout.php [L,QSA]
+
+# Páginas públicas de negocios por identificador público opaco.
+RewriteRule ^negocios/([A-Fa-f0-9-]{16,64})/?$ negocio.php?id=$1&idioma=es [L,QSA,NC]
+RewriteRule ^en/negocios/([A-Fa-f0-9-]{16,64})/?$ negocio.php?id=$1&idioma=en [L,QSA,NC]
+RewriteRule ^pt-br/negocios/([A-Fa-f0-9-]{16,64})/?$ negocio.php?id=$1&idioma=pt-BR [L,QSA,NC]
+
 # Slugs de destino: la URL pública no revela parámetros ni archivos de plantilla.
 RewriteRule ^destinos/([a-z0-9-]+)(?:/index\.html)?/?$ destino.php?destino=$1&idioma=es [L,QSA,NC]
 RewriteRule ^en/destinos/([a-z0-9-]+)(?:/index\.html)?/?$ destino.php?destino=$1&idioma=en [L,QSA,NC]
