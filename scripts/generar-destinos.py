@@ -41,6 +41,9 @@ def credit(p):
  return '<a href="'+escape(p['source'],quote=True)+'" target="_blank" rel="noopener noreferrer">'+escape(p['author'])+'</a> · <a href="'+escape(p['licenseUrl'],quote=True)+'" target="_blank" rel="noopener noreferrer">'+escape(p['license'])+'</a>'
 def generate():
  data=read('destinos-piloto.json')['destinations'];photos=read('destinos-fotografias.json');validate(data,photos)
+ publication=read('estado-publicacion-destinos.json')
+ expected={'jerico',*[d['slug'] for d in data]}
+ if set(publication)!=expected or any(status not in {'published','draft'} for status in publication.values()):raise ValueError('El estado de publicación debe definir cada destino piloto como published o draft.')
  # También atribuir archivos de reserva editorial incluidos en el paquete público.
  (SITE/'assets/destinos/creditos.json').write_text(json.dumps(photos,ensure_ascii=False,indent=2)+'\n')
  template=(ROOT/'content/plantillas/destino.html').read_text()
@@ -62,16 +65,16 @@ def generate():
   values={'nombre':escape(d['name']),'slug':d['slug'],'region':escape(d['region']),'intro_meta':escape(d['intro']['es'],quote=True),'headline':escape(d['headline']['es']),'intro':escape(d['intro']['es']),'history':escape(d['history']['es']),'hero':'<figure>'+image(hero,False)+'<figcaption class="credit">'+escape(hero['caption']['es'])+'</figcaption></figure>','history_photo':history_photo,'places':''.join(places),'reasons':''.join('<li>'+escape(r['es'])+'</li>' for r in d['reasons']),'sources':''.join('<li><a href="'+escape(u,quote=True)+'" target="_blank" rel="noopener noreferrer">'+escape(urlsplit(u).netloc)+'</a></li>' for u in d['sources']),'credits':''.join('<li>'+escape(p['caption']['es'])+': '+credit(p)+'</li>' for p in used),'contacto_url':'../../negocios-locales/interes/index.html?'+escape(urlencode({'municipio':d['name']}),quote=True)+'#contacto','mapa_query':escape(urlencode({'query':d['name']+', Antioquia, Colombia'}).split('=',1)[1],quote=True)}
   page=re.sub(r'\{\{([a-z_]+)\}\}',lambda m:values[m[1]],template)
   dest=SITE/'destinos'/d['slug']/'index.html';dest.parent.mkdir(parents=True,exist_ok=True);dest.write_text(page)
-  cards.append(card(d,hero))
+  if publication[d['slug']]=='published':cards.append(card(d,hero))
  index=(ROOT/'content/plantillas/indice-destinos.html').read_text()
  jerico={'slug':'jerico','name':'Jericó','region':'Suroeste','intro':{'es':'Cultura, café y tradición entre montañas. Conoce el destino y empieza a imaginar tu visita.'}}
  first=card(jerico,{'file':'assets/jerico.webp','caption':{'es':'Parque principal de Jericó al atardecer'},'width':800,'height':600})
- regions=list(dict.fromkeys(d['region'] for d in registry()))
+ regions=list(dict.fromkeys(d['region'] for d in registry() if publication[d['slug']]=='published'))
  index=index.replace('{{cards}}',first+''.join(cards)).replace('{{regions}}',''.join('<option value="'+escape(r,quote=True)+'">'+escape(r)+'</option>' for r in regions))
  (SITE/'destinos/index.html').write_text(index)
  # Mismo destino de origen para las invitaciones de Jericó.
  jerico_page=SITE/'destinos/jerico/index.html';s=jerico_page.read_text();s=s.replace('../../negocios-locales/index.html?municipio=Jeric%C3%B3#contacto','../../negocios-locales/interes/index.html?municipio=Jeric%C3%B3#contacto').replace('../../negocios-locales/interes/index.html#contacto','../../negocios-locales/interes/index.html?municipio=Jeric%C3%B3#contacto');jerico_page.write_text(s)
- print(f'OK: {len(data)} guías nuevas, Jericó conservado e índice de {len(data)+1} destinos.')
+ print(f'OK: {len(data)} guías preparadas; índice con {sum(1 for status in publication.values() if status=="published")} destinos publicados.')
 def card(d,p):
  return '<article class="destination-card" data-region="'+escape(d['region'],quote=True)+'" data-name="'+escape(d['name'],quote=True)+'"><a class="destination-card-image" href="'+d['slug']+'/index.html"><img src="../'+escape(p['file'],quote=True)+'" alt="'+escape(p['caption']['es'],quote=True)+f'" width="{p["width"]}" height="{p["height"]}" loading="lazy" decoding="async"></a><div class="copy"><span class="badge">'+escape(d['region'])+'</span><h2><a href="'+d['slug']+'/index.html">'+escape(d['name'])+'</a></h2><p>'+escape(d['intro']['es'])+'</p><a class="text-link" href="'+d['slug']+'/index.html">Conocer el destino →</a></div></article>'
 if __name__=='__main__':generate()

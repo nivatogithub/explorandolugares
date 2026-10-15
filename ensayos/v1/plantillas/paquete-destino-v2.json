@@ -1,0 +1,138 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "municipio-ejemplo",
+    "department": "Departamento de ejemplo",
+    "subregion": "",
+    "latitude": null,
+    "longitude": null,
+    "translations": {
+      "es": {
+        "display_name": "Municipio de ejemplo",
+        "eyebrow": "Una frase breve del destino",
+        "headline": "Un lugar para descubrir",
+        "intro": "Escribe aquí una descripción verificada del municipio.",
+        "meta_description": "Descripción breve y fiel del municipio para buscadores."
+      },
+      "en": {
+        "display_name": "Example municipality",
+        "eyebrow": "A short destination phrase",
+        "headline": "A place to discover",
+        "intro": "Write a verified description of the municipality here.",
+        "meta_description": "A short, accurate description for search engines."
+      },
+      "pt-BR": {
+        "display_name": "Município de exemplo",
+        "eyebrow": "Uma frase breve do destino",
+        "headline": "Um lugar para descobrir",
+        "intro": "Escreva aqui uma descrição verificada do município.",
+        "meta_description": "Descrição breve e fiel do município para mecanismos de busca."
+      }
+    },
+    "history": {
+      "es": [
+        "Texto de história confirmado por fontes."
+      ],
+      "en": [
+        "Texto de história confirmado por fontes."
+      ],
+      "pt-BR": [
+        "Texto de história confirmado por fontes."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Motivo de visita respaldado por información verificada."
+      ],
+      "en": [
+        "Motivo de visita respaldado por información verificada."
+      ],
+      "pt-BR": [
+        "Motivo de visita respaldado por información verificada."
+      ]
+    },
+    "sources": {
+      "es": [],
+      "en": [],
+      "pt-BR": []
+    },
+    "country_code": "CO",
+    "destination_type": "municipality"
+  },
+  "hero_image": {
+    "image_origin": "own",
+    "image_creator": "Ilustración abstracta genérica creada para esta plantilla; reemplazar antes de publicar.",
+    "image_source_url": "https://example.org/pagina-de-la-imagen",
+    "image_license": "Solo demostración; no usar como imagen del destino.",
+    "image_license_url": "https://example.org/licencia",
+    "alt": {
+      "es": "Paisaje ilustrado genérico de muestra; reemplazar con una imagen revisada del destino.",
+      "en": "Generic sample illustrated landscape; replace with a reviewed image of the destination.",
+      "pt-BR": "Paisagem ilustrada genérica de exemplo; substitua por uma imagem revisada do destino."
+    },
+    "caption": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    },
+    "file": "images/ejemplo-portada.png"
+  },
+  "places": [
+    {
+      "slug": "lugar-de-ejemplo",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Lugar de ejemplo",
+          "description": "Descripción de un atractivo basada en información confirmada.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Example place",
+          "description": "Description of an attraction based on confirmed information.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Lugar de exemplo",
+          "description": "Descrição de um atrativo baseada em informações confirmadas.",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/lugar-de-ejemplo.png",
+        "image_origin": "own",
+        "image_creator": "Ilustración abstracta genérica creada para esta plantilla; reemplazar antes de publicar.",
+        "image_source_url": "",
+        "image_license": "Solo demostración; no usar como imagen del destino.",
+        "image_license_url": "",
+        "alt": {
+          "es": "Imagen genérica de muestra para este atractivo; reemplazar antes de usar.",
+          "en": "Generic sample image for this attraction; replace before use.",
+          "pt-BR": "Imagem genérica de exemplo deste atrativo; substitua antes de usar."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "",
+    "positioning": "",
+    "competitors": [],
+    "potential_allies": [],
+    "business_prospects": [],
+    "acquisition_strategies": [],
+    "sources": [],
+    "notes": [
+      "Ejemplo de estructura. Sustituye los datos por investigación respaldada; esta sección nunca se publica automáticamente."
+    ]
+  }
+}

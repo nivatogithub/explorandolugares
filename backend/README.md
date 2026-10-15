@@ -14,6 +14,7 @@ hosting/
   app/                     lógica PHP privada
   private/config.php       configuración real, creada manualmente
   database/mysql.sql       esquema para importar, fuera del sitio público
+  content/destinos-dinamicos.json catálogo semilla ES/EN/PT-BR para la migración PHP
   config.example.php       plantilla sin credenciales
 ```
 
@@ -29,6 +30,12 @@ En cPanel, asignar al dominio una carpeta pública propia. Situar `app/` y `priv
 8. Entrar a `/admin/index.php` con las credenciales configuradas. Probar un registro propio, la visualización, el filtro por estado, el seguimiento y cierre de sesión. No publicar sin verificar esta conexión en MySQL.
 
 El script de empaquetado no copia configuración real y no modifica una ya creada. Regenerar la entrega cuando se cambien los archivos fuente; revisar diferencias antes de subir. No compartir `.local/hosting/private/` ni incluirla en ZIP públicos. No subir la carpeta completa como raíz pública.
+
+El controlador dinámico de destinos también se incluye en `public/destino.php`, y las reglas de ruta están en `public/.htaccess`. La administración CRUD se abre en `/admin/destinos.php` tras iniciar sesión en el panel; comparte sus controles de sesión y CSRF. La lógica privada va en `app/`. El importador de catálogo se despliega en `app/bin/importar-destinos.php`, su semilla en `app/content/destinos-dinamicos.json` y las migraciones en `app/database/migrations/`, fuera del directorio público. Aplicar en orden `app/database/migrations/003-dynamic-destinations.mysql.sql`, `004-media-origin.mysql.sql`, `005-destination-internal-research.mysql.sql`, `006-poi-experience-links.mysql.sql` y `007-media-provenance.mysql.sql`; después importar el catálogo vacío con `cd /home/USUARIO/explorandolugares && php app/bin/importar-destinos.php --confirm-empty-catalog`. El importador no modifica las tablas de interesados. Revisar antes el host y reemplazar `USUARIO` por la cuenta real.
+
+El editor permite importar un paquete ZIP v2, revisar todos los textos en español, inglés y portugués junto con sus imágenes, y guardar el destino como borrador. El ZIP lleva `paquete-destino.json` y las imágenes referenciadas dentro de `images/`; la validación rechaza rutas inseguras, imágenes ausentes/no usadas y formatos o tamaños no admitidos. Las copias temporales se guardan fuera de la web, asociadas a la sesión autenticada, por hasta 30 minutos. Al guardar, PHP valida otra vez y almacena imágenes en `public/assets/destinos/{destination_id}/`. El ejemplo descargable contiene ilustraciones genéricas marcadas para reemplazar; no las publiques como contenido del municipio. Sigue disponible la importación JSON v1 anterior, que requiere adjuntar las imágenes a mano.
+
+Los destinos nuevos no se pueden publicar durante su creación. Para editar destinos existentes, los IDs numéricos son la identidad; el slug solo resuelve la URL. La investigación local de competencia, aliados potenciales, prospectos y estrategias se guarda en `destinations.internal_research_json`, solo en el panel privado; no se incorpora a la página pública. Las imágenes generadas se marcan como ilustraciones, no como fotografías documentales. El importador guarda su procedencia visual en `media_assets.provenance_json`, un campo privado que no se entrega al renderizado público. Las fuentes y licencias de fotografías originales se conservan ahí; los conceptos generados sin foto se marcan como tales. Quitar un vínculo no borra el archivo. El hosting debe habilitar PHP `ZipArchive` y configurar `upload_max_filesize` de 64 MB o más y `post_max_size` de 66 MB o más; usar límites menores que los soportados por el plan contratado. Antes de activar el módulo en hosting, probar todas las migraciones y estos flujos en una copia de MySQL de staging; la prueba SQLite local no certifica el hosting.
 
 ## Datos y controles
 
@@ -46,6 +53,9 @@ Documentación técnica consultada: [password_hash](https://www.php.net/manual/e
 
 - `php -l` en archivos PHP y `node --check ensayos/v1/assets/registro.js`.
 - `python3 backend/tests/integration.py`: crea PHP y SQLite temporales, solicita un puerto local, prueba habilitación, validación, consentimiento, CSRF, persistencia, duplicados, autenticación, escape HTML, actualización de estados, cierre y límite de login. Borra los datos temporales al terminar. Nunca usa credenciales de producción.
+- `php backend/tests/destination-package.php`: valida el ZIP de ejemplo, las traducciones, las referencias y el rechazo de rutas maliciosas e imágenes ausentes.
+- `python3 backend/tests/destination-package-preview.py`: con el servidor local aislado activo, prueba login, carga autenticada del ZIP, lectura privada de imágenes, guardado del borrador y limpieza de archivos temporales; elimina el registro de prueba al terminar.
+- Para probar un destino y sus imágenes sin tocar la base local habitual, inicia otra instancia con `EL_DESTINATIONS_PREVIEW_DB="$PWD/.local/sonson-preview.sqlite" EL_LOCAL_CONFIG_PATH="$PWD/.local/sonson-admin-config.php" EL_ADMIN_MEDIA_ROOT="$PWD/.local/sonson-media" PORT=8015 sh scripts/preview-destinos-dinamicos.sh`; luego usa `scripts/ensayar-paquete-destino.py` con el JSON y la carpeta de imágenes. El ejemplo de Sonsón y su investigación comercial se guardan localmente en `.local/paquetes/sonson/`, excluido de Git.
 - SQLite sirve únicamente para esta prueba aislada. La integración MySQL del hosting sigue pendiente de comprobar.
 - El servidor estático de `ensayos/` no ejecuta PHP: muestra el formulario deshabilitado y explica que no se almacena. No subir PHP a un servidor que lo entregue como texto.
 
@@ -67,4 +77,6 @@ Para bases existentes, respaldar y ejecutar una vez `database/migrations/002-par
 
 ## Herramientas de puesta en marcha
 
-Ver [Administración y datos](../docs/ADMINISTRACION_Y_DATOS.md) para la estructura vigente del hosting y los pasos completos. `scripts/configurar-registros.py` crea configuración privada sin reemplazar archivos; `backend/bin/base-datos.php --instalar` instala únicamente sobre una base MySQL vacía y `--comprobar` revisa conexión y columnas. Son herramientas privadas, nunca páginas públicas. Las fichas y tarjetas dinámicas de comercios siguen siendo el siguiente módulo; el panel actual administra solicitudes.
+Ver [Administración y datos](../docs/ADMINISTRACION_Y_DATOS.md) para la estructura vigente del hosting y los pasos completos. `scripts/configurar-registros.py` crea configuración privada sin reemplazar archivos; `backend/bin/base-datos.php --instalar` instala únicamente sobre una base MySQL vacía y `--comprobar` revisa conexión y columnas. Son herramientas privadas, nunca páginas públicas. El panel administra solicitudes y destinos; las fichas y tarjetas dinámicas de comercios siguen siendo el siguiente módulo.
+
+Tras desplegar una versión que incluya esta herramienta, el administrador autenticado puede abrir `/admin/base-datos.php`. La pantalla comprueba conexión, tablas y estado de las migraciones; permite instalar el esquema base únicamente si la base no tiene tablas, aplicar las migraciones incluidas en el repositorio y cargar el catálogo semilla únicamente cuando el catálogo está vacío. Jericó queda publicado y los otros 20 destinos —incluido Sonsón— conservan el estado borrador definido en el catálogo. Cada escritura pide una frase de confirmación. No acepta SQL arbitrario, no muestra credenciales y no genera copias de respaldo. En bases con datos existentes, las migraciones añaden estructura; si detecta un estado parcial, se detiene para evitar repetir cambios. Esta página queda protegida por la misma sesión y CSRF del panel. No desplegarla por separado de la versión del backend con sus migraciones y semilla.
