@@ -65,6 +65,11 @@ class DynamicDestinationRenderTests(unittest.TestCase):
 
     def test_operator_experiences_stay_hidden_until_approved(self):
         page = self.render("jerico", "es")
+        self.assertIn('class="footer-contact-link footer-contact-whatsapp"', page)
+        self.assertIn('class="footer-contact-link footer-contact-instagram"', page)
+        self.assertIn('class="footer-contact-link footer-contact-email"', page)
+        for label in ("<span>WhatsApp</span>", "<span>Instagram</span>", "<span>Correo</span>", "<span>Email</span>", "<span>E-mail</span>"):
+            self.assertNotIn(label, page)
         self.assertIn("<h3>Jardín Botánico Los Balsos</h3>", page)
         self.assertEqual(page.count("<article"), 7)
         self.assertIn("Subida al Cerro de las Nubes", page)
