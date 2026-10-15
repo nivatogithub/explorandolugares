@@ -19,3 +19,11 @@ No introduce un servicio de correo en el Mac ni abre acceso desde Internet. No l
 Esto valida navegación y lógica con SQLite. Sigue pendiente comprobar instalación, consultas y migraciones en MySQL/MariaDB aislado; no se encontró ese servidor ni Docker instalado al preparar esta revisión. No llamar a esta comprobación una validación de MySQL.
 
 Comprobación realizada: pantalla de login obligatoria con sesión aislada, acceso al dashboard y visualización de un contacto/un negocio de prueba. El servidor local quedó activo en el puerto 8037 al entregar esta revisión.
+
+## Destinos y vista previa
+
+La entrada `/admin/destinos.php` muestra conteos por estado y accesos a Editar/Vista previa por registro. El servidor local incluye el renderizador del destino y un router limitado a rutas públicas de destino/sitemap; comparte únicamente la sesión aislada de este entorno. Ver un borrador requiere `preview=1` y sesión administrativa activa; sin preview la URL del borrador devuelve 404.
+
+Flujo: crear y guardar como borrador → abrir vista previa privada → corregir contenido/idiomas/atractivos → elegir «Publicar para visitantes» en el editor → guardar tras revisión humana. El backend valida los requisitos existentes. No hay un proceso separado de aprobación por versión en este incremento. Publicar aquí solo modifica la base local y no despliega producción.
+
+La base de esta demostración contiene inicialmente «Destino de prueba» en borrador. No representa ni sincroniza el catálogo completo del Worker de destinos. La copia del renderizador conserva los límites y contenido de la rama actual; no incorpora archivos sin confirmar del otro Worker.
