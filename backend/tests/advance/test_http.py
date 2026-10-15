@@ -8,6 +8,7 @@ shutil.copyfile(root/'ensayos/v1/destino.php',work/'public/destino.php')
 db=sqlite3.connect(work/'private/test.sqlite')
 db.executescript((root/'backend/database/sqlite.sql').read_text())
 db.executescript((root/'backend/database/destinations.sqlite.sql').read_text())
+db.executescript((root/'backend/database/migrations/006-poi-experience-links.sqlite.sql').read_text())
 db.executescript((root/'backend/database/migrations/007-advance-admin.sqlite.sql').read_text())
 db.executescript((root/'backend/database/migrations/008-advance-shared-catalog.sqlite.sql').read_text())
 db.executescript((root/'backend/database/migrations/010-advance-unsubscribe.sqlite.sql').read_text())
@@ -44,6 +45,14 @@ try:
     body=call('/admin/index.php')[1];csrf=re.search(r'name="csrf" value="([^"]+)"',body).group(1)
     assert call('/admin/index.php',{'action':'login','username':'advance-local','password':password,'csrf':csrf})[0]==200
     body=call('/admin/index.php')[1];csrf=re.search(r'name="csrf" value="([^"]+)"',body).group(1)
+    status,editor,_=call('/admin/destinos.php?id=1');assert status==200
+    assert 'name="action" value="publish"' in editor and 'name="country_code"' in editor and 'Importar paquete ZIP' in editor
+    assert '<script src="destinos.js" defer></script>' in editor and '<script>' not in editor
+    assert call('/admin/destinos.js')[0]==200
+    assert call('/admin/destinos.php?id=1',{'action':'publish','csrf':'bad','id':1})[0]==403
+    assert call('/admin/destinos.php?id=1',{'action':'publish','csrf':csrf,'id':1,'slug':'destino-prueba','country_code':'CO'})[0]==400
+    assert db.execute('SELECT publication_status FROM destinations WHERE id=1').fetchone()==('draft',)
+    subprocess.run(['python3',str(root/'backend/tests/destination-package-preview.py')],check=True,env={**os.environ,'EL_DESTINATIONS_TEST_BASE':f'http://127.0.0.1:{port}/','EL_DESTINATIONS_TEST_DB':str(work/'private/test.sqlite'),'EL_DESTINATIONS_TEST_MEDIA_ROOT':str(work/'public'),'EL_DESTINATIONS_TEST_USER':'advance-local','EL_DESTINATIONS_TEST_PASSWORD':password})
     status,preview,_=call('/destinos/destino-prueba/?preview=1');assert status==200 and 'Vista previa privada' in preview
     status,body,_=call('/admin/reports.php');assert status==200 and 'Reportes generales' in body and 'id="overview"' in body and 'id="traffic"' not in body
     status,body,_=call('/admin/reports.php?tab=traffic');assert status==200 and 'Medición no conectada' in body and 'id="overview"' not in body

@@ -1,0 +1,41 @@
+<?php
+declare(strict_types=1);
+require dirname(__DIR__,2).'/app/DatabaseMaintenance.php';
+require dirname(__DIR__,2).'/app/DestinationImporter.php';
+require dirname(__DIR__,2).'/app/advance/SharedCatalogMigration.php';
+function upgradeCheck(bool $ok,string $message):void {if(!$ok)throw new RuntimeException($message);}
+$backend=dirname(__DIR__,2);$root=dirname($backend);
+$db=new PDO('sqlite::memory:',null,null,[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC]);
+$db->exec('PRAGMA foreign_keys=ON');
+$db->exec(file_get_contents($backend.'/database/sqlite.sql'));
+$db->exec(file_get_contents($backend.'/database/destinations.sqlite.sql'));
+$db->exec(file_get_contents($backend.'/database/migrations/006-poi-experience-links.sqlite.sql'));
+DestinationImporter::import($db,json_decode(file_get_contents($root.'/content/destinos-dinamicos.json'),true,512,JSON_THROW_ON_ERROR),json_decode(file_get_contents($backend.'/app/contact-options.json'),true,512,JSON_THROW_ON_ERROR));
+$category=$db->query('SELECT code FROM service_categories ORDER BY code LIMIT 1')->fetchColumn();
+$q=$db->prepare("INSERT INTO businesses(id,public_id,destination_id,category_code,slug,publication_status) VALUES(900,'upgrade-fixture',1,?,'upgrade-fixture','published')");$q->execute([$category]);
+$db->exec("INSERT INTO business_translations(business_id,locale,display_name,summary,description) VALUES(900,'es','Fixture','','Existing fixture')");
+$db->exec("INSERT INTO business_contacts(business_id,channel,contact_value,is_public) VALUES(900,'email','fixture@example.invalid',0)");
+$db->exec("INSERT INTO business_media(business_id,media_asset_id) SELECT 900,id FROM media_assets ORDER BY id LIMIT 1");
+$db->exec("INSERT INTO business_sources(business_id,source_url,checked_at,note) VALUES(900,'https://example.invalid','2026-10-14','Fixture')");
+$db->exec("INSERT INTO leads(request_key,name,business,municipality,category,has_brand,description,interest,consent_version,status,created_at) VALUES('upgrade-fixture','Fixture','Fixture','Fixture','Fixture','no','','fixture','test','nuevo','2026-10-14')");
+$tables=$db->query("SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%' ORDER BY name")->fetchAll(PDO::FETCH_COLUMN);
+$snapshot=static function()use($db,$tables):array {$out=[];foreach($tables as $table)$out[$table]=$db->query('SELECT * FROM "'.$table.'" ORDER BY rowid')->fetchAll();return $out;};
+$before=$snapshot();
+$tool=new DatabaseMaintenance($db,$backend.'/app',$root.'/ensayos/v1');
+$states=$tool->inspect()['migrations'];
+upgradeCheck($states['007-media-provenance']==='applied'&&$states['007-advance-admin']==='pending','Both 007 identifiers are independently detected');
+$db->exec(file_get_contents($backend.'/database/migrations/007-advance-admin.sqlite.sql'));
+// A partially applied schema must never be mistaken for a completed migration.
+$db->exec('ALTER TABLE advance_deliveries ADD COLUMN unsubscribe_url TEXT NOT NULL DEFAULT ""');
+upgradeCheck($tool->inspect()['migrations']['010-advance-unsubscribe']==='partial','Partial unsubscribe migration is detected');
+$db->exec('ALTER TABLE advance_deliveries DROP COLUMN unsubscribe_url');
+SharedCatalogMigration::apply($db);SharedCatalogMigration::apply($db);
+foreach(['009-advance-english-values','010-advance-unsubscribe','011-admin-reports','012-business-follow-up','013-subscription-payment-review'] as $migration)$db->exec(file_get_contents($backend.'/database/migrations/'.$migration.'.sqlite.sql'));
+upgradeCheck($before===$snapshot(),'Every pre-existing catalog, media, translation, source, business and lead row survives the upgrade unchanged');
+foreach($tool->inspect()['migrations'] as $id=>$state)upgradeCheck($state==='applied','Complete schema detected for '.$id);
+$db->exec("INSERT INTO advance_contacts(name,email,municipality,relationship,notes,source,consent_evidence,created_at,updated_at) VALUES('Fixture','fixture@example.invalid','','prospecto','','','','2026-10-14','2026-10-14')");
+upgradeCheck($tool->inspect()['migrations']['009-advance-english-values']==='pending','Legacy internal statuses remain detectable without a migration ledger');
+$db->exec(file_get_contents($backend.'/database/migrations/009-advance-english-values.sqlite.sql'));
+upgradeCheck($tool->inspect()['migrations']['009-advance-english-values']==='applied','English normalization is repeatable and recognized');
+upgradeCheck($db->query('PRAGMA foreign_key_check')->fetchAll()===[],'No foreign-key conflicts after integration');
+echo "OK: main-to-Advance upgrade preserves all existing records, separates 007 identifiers, detects partial schema and legacy values, and keeps foreign keys valid. SQLite only; MySQL staging still required.\n";

@@ -7,25 +7,52 @@ require dirname(__DIR__).'/app/DestinationRepository.php';
 function check(bool $ok,string $message): void { if (!$ok) throw new RuntimeException($message); }
 $pdo=new PDO('sqlite::memory:',null,null,[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC]);
 $pdo->exec(file_get_contents(dirname(__DIR__).'/database/destinations.sqlite.sql'));
+$pdo->exec(file_get_contents(dirname(__DIR__).'/database/migrations/006-poi-experience-links.sqlite.sql'));
 $root=dirname(__DIR__,2);
 $catalog=json_decode(file_get_contents($root.'/content/destinos-dinamicos.json'),true,512,JSON_THROW_ON_ERROR);
 $options=json_decode(file_get_contents(dirname(__DIR__).'/app/contact-options.json'),true,512,JSON_THROW_ON_ERROR);
 $counts=DestinationImporter::import($pdo,$catalog,$options);
 check($counts['destinations']===21,'Expected 21 destinations');
 check($counts['translations']===63,'Expected 3 destination translations each');
-check($counts['points_of_interest']===65,'Expected 65 points of interest');
+check($counts['points_of_interest']===70,'Expected 70 points of interest, including Jericó attractions and activities');
 check((int)$pdo->query('SELECT COUNT(*) FROM businesses')->fetchColumn()===0,'Importer must not create businesses');
 $repo=new DestinationRepository($pdo);
 $jerico=$repo->findPublished('jerico','es');
 check($jerico!==null && $jerico['display_name']==='Jericó','Spanish destination loads');
 check(!array_key_exists('internal_research_json',$jerico),'Internal local market research is excluded from public destination data');
-check(count($jerico['history'])===2 && count($jerico['places'])===5,'Jericó editorial structure preserved');
+check($jerico['history_media']['path']==='assets/destinos/1/monumento-santa-laura-ilustrado-v2.webp','Jericó history section uses the selected close-cropped monument illustration');
+check(!array_key_exists('provenance_json',$jerico['history_media']),'Private image provenance is excluded from public render data');
+$historyProvenance=json_decode((string)$pdo->query("SELECT provenance_json FROM media_assets WHERE asset_path='assets/destinos/1/monumento-santa-laura-ilustrado-v2.webp'")->fetchColumn(),true,512,JSON_THROW_ON_ERROR);
+check(($historyProvenance['reference_asset_path']??'')==='assets/jerico/monumento-santa-laura.webp'&&($historyProvenance['reference_source_url']??'')==='https://commons.wikimedia.org/wiki/File:Santa_Laura_Montoya_Upegui%2C_Jeric%C3%B3_Antioquia.jpg','Private image provenance records the source photograph, origin and licence');
+check((int)$pdo->query("SELECT COUNT(*) FROM media_assets WHERE origin='ai_generated' AND provenance_json IS NOT NULL")->fetchColumn()===11,'All selected Jericó AI illustrations retain private provenance or factual-basis notes');
+foreach ([
+    'assets/destinos/1/cerro-de-las-nubes-sendero-ilustrado-v2.webp',
+    'assets/destinos/1/chorros-quebradona-ilustrado-v2.webp',
+] as $approvedImage) {
+    $query=$pdo->prepare('SELECT p.slug,m.provenance_json FROM points_of_interest p JOIN point_of_interest_media pm ON pm.point_of_interest_id=p.id JOIN media_assets m ON m.id=pm.media_asset_id WHERE m.asset_path=?');
+    $query->execute([$approvedImage]);$row=$query->fetch();
+    check($row!==false && in_array($row['slug'],['subida-al-cerro-de-las-nubes','chorros-de-quebradona'],true),'Approved nature-attraction image is connected to its Jericó card');
+    $provenance=json_decode((string)$row['provenance_json'],true,512,JSON_THROW_ON_ERROR);
+    check(($provenance['human_approval']??'')!=='','Approved illustration retains its private approval note');
+}
+check(count($jerico['history'])===2 && count($jerico['places'])===7,'Public Jericó page shows seven published attractions');
+$publishedExperienceCount=(int)$pdo->query("SELECT COUNT(*) FROM points_of_interest WHERE destination_id=".(int)$jerico['id']." AND poi_type='experience' AND publication_status='published'")->fetchColumn();
+check($publishedExperienceCount===0,'Operator experiences are kept out of public listings until approved');
+$jericoPreview=$repo->findPublished('jerico','es',true);
+check($jericoPreview!==null && count($jericoPreview['places'])===10,'Private preview can review draft operator experiences alongside attractions');
+foreach(array_slice($jericoPreview['places'],7) as $experience)check($experience['type']==='experience'&&$experience['external_url']==='','Draft experiences have no external operator link before an agreement');
 check($jerico['places'][1]['media'][0]['creator']!=='','POI image attribution returned');
-check(count(array_filter($jerico['sources'],static fn($source)=>$source['section_key']==='places'))===1,'Attractions source is kept with its own section');
+check(count(array_filter($jerico['sources'],static fn($source)=>$source['section_key']==='places'))===2,'Attractions sources include the Antioquia government tourism guide');
 $jericoPt=$repo->findPublished('jerico','pt-BR');
-check($jericoPt!==null && $jericoPt['places'][1]['media'][0]['alt']==='Cristo do Cerro El Salvador visto de uma rua em Jericó','Portuguese alternative text stays localized');
+check($jericoPt!==null && str_contains($jericoPt['places'][1]['media'][0]['alt'],'visto de perto sobre Jericó') && str_contains($jericoPt['history_media']['alt'],'Santa Madre Laura'),'Portuguese alternative text stays localized for the updated illustrations');
+$jericoVisuals=array_column($catalog['destinations'][0]['translations']['es']['places'],'slug');
+$expectedJericoMedia=['centro-historico'=>'assets/destinos/1/parque-principal-ilustrado.webp','historic-centre'=>'assets/destinos/1/parque-principal-ilustrado.webp','cerro-el-salvador'=>'assets/destinos/1/cristo-cerro-el-salvador-ilustrado-v2.webp','colina-de-el-salvador'=>'assets/destinos/1/cristo-cerro-el-salvador-ilustrado-v2.webp','santuario-de-santa-laura'=>'assets/destinos/1/santuario-santa-laura-ilustrado-v2.webp','saint-laura-sanctuary'=>'assets/destinos/1/santuario-santa-laura-ilustrado-v2.webp','casa-natal-de-santa-laura'=>'assets/destinos/1/casa-santa-laura-ilustrada-v2.webp','birthplace-of-saint-laura'=>'assets/destinos/1/casa-santa-laura-ilustrada-v2.webp','jardin-botanico-los-balsos'=>'assets/destinos/1/jardin-botanico-los-balsos-ilustrado.webp','los-balsos-botanical-garden'=>'assets/destinos/1/jardin-botanico-los-balsos-ilustrado.webp','subida-al-cerro-de-las-nubes'=>'assets/destinos/1/cerro-de-las-nubes-sendero-ilustrado-v2.webp','cerro-de-las-nubes-hike'=>'assets/destinos/1/cerro-de-las-nubes-sendero-ilustrado-v2.webp','subida-ao-cerro-de-las-nubes'=>'assets/destinos/1/cerro-de-las-nubes-sendero-ilustrado-v2.webp','chorros-de-quebradona'=>'assets/destinos/1/chorros-quebradona-ilustrado-v2.webp'];
+foreach($catalog['destinations'][0]['translations'] as $locale=>$translation)foreach($translation['places'] as $place)if(isset($expectedJericoMedia[$place['slug']]))check(($place['media']['path']??null)===$expectedJericoMedia[$place['slug']],'Selected Jericó illustration is stable in every locale: '.$locale.' / '.$place['slug']);
+$jericoCatalog=$catalog['destinations'][0];foreach($jericoCatalog['translations'] as $locale=>$translation)foreach(array_slice($translation['places'],-3) as $experience)check($experience['publication_status']==='draft'&&$experience['external_url']==='','Jericó operator activities stay unlinked drafts after catalog generation: '.$locale.' / '.$experience['slug']);
 $jardin=$repo->findPublished('jardin','en');
-check($jardin!==null && $jardin['locale']==='en' && count($jardin['places'])===3,'Translated destination loads');
+check($jardin===null,'Other pilot destinations remain hidden until approved');
+$jardinPreview=$repo->findPublished('jardin','en',true);
+check($jardinPreview!==null && $jardinPreview['locale']==='en' && $jardinPreview['publication_status']==='draft' && count($jardinPreview['places'])===3,'A draft destination remains available to authenticated preview');
 check($repo->findPublished('not-a-place','es')===null,'Missing destination does not load');
 $pdo->exec("INSERT INTO destinations(slug,destination_type,country_code,department,publication_status) VALUES('destino-borrador','municipality','CO','Antioquia','draft')");
 $draftId=(int)$pdo->lastInsertId();$pdo->prepare('INSERT INTO destination_translations(destination_id,locale,display_name,headline,intro) VALUES(?,?,?,?,?)')->execute([$draftId,'es','Destino borrador','Aún no publicado','Texto de prueba']);
@@ -34,7 +61,8 @@ check($repo->findPublished('destino-borrador','es')===null,'An unpublished desti
 $privateDraft=$repo->findPublished('destino-borrador','es',true);check($privateDraft!==null&&$privateDraft['publication_status']==='draft'&&count($privateDraft['places'])===1,'Private preview can render draft destination and child attractions');
 foreach ($catalog['destinations'] as $record) foreach ($catalog['locales'] as $locale) {
     $page=$repo->findPublished($record['slug'],$locale);
-    check($page!==null && $page['slug']===$record['slug'] && $page['locale']===$locale,'All locale and slug combinations load');
+    if($record['slug']==='jerico')check($page!==null && $page['slug']===$record['slug'] && $page['locale']===$locale,'Jericó is public in every locale');
+    else check($page===null,'Draft is hidden in every locale: '.$record['slug'].' / '.$locale);
 }
 $businessInsert=$pdo->prepare('INSERT INTO businesses(public_id,destination_id,category_code,slug,information_status,claim_status,operation_status,publication_status) VALUES(?,?,?,?,?,?,?,?)');
 $destinationId=(int)$pdo->query("SELECT id FROM destinations WHERE slug='jerico'")->fetchColumn();
@@ -55,4 +83,9 @@ check(count($contacts)===1 && $contacts[0]['channel']==='whatsapp','Private busi
 $failed=false;try{DestinationImporter::import($pdo,$catalog,$options);}catch(RuntimeException $error){$failed=true;}
 check($failed,'Repeat import into non-empty catalog must be refused');
 check((int)$pdo->query('SELECT COUNT(*) FROM destinations')->fetchColumn()===22,'Refused repeat import leaves data intact, including the private-preview fixture');
+$upgrade=new PDO('sqlite::memory:',null,null,[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION]);
+$upgrade->exec('CREATE TABLE media_assets (id INTEGER PRIMARY KEY, asset_path TEXT NOT NULL)');
+$upgrade->exec(file_get_contents(dirname(__DIR__).'/database/migrations/007-media-provenance.sqlite.sql'));
+$columns=$upgrade->query('PRAGMA table_info(media_assets)')->fetchAll(PDO::FETCH_COLUMN,1);
+check(in_array('provenance_json',$columns,true),'Migration 007 adds a private provenance field to existing catalogs');
 echo "OK: destination import, locale queries, source metadata, publication filtering, and repeat-import protection.\n";

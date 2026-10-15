@@ -92,7 +92,7 @@ Esta sección sería investigación interna, no contenido publicado automáticam
 
 El agente debe crear una propuesta privada con autoría, fuente, versión base, fecha, campos modificados y resultados de validación. No recibe SQL libre, shell, credenciales, rutas arbitrarias, capacidades de despliegue, aprobación ni publicación. El panel muestra la diferencia contra el contenido vigente y una vista previa. La aprobación humana debe aplicar exactamente a la versión revisada; si cambia, necesita nueva aprobación. Registrar quién propuso, quién aprobó, qué se publicó y cuándo; habilitar reversión.
 
-El paquete de destinos v1 ya es una frontera inicial agnóstica: cualquier herramienta puede producir JSON e imágenes separadas siguiendo el [encargo editorial y visual](PLANTILLA_PROMPT_IA_DESTINO.md), y una persona lo importa junto con el [JSON de ejemplo](../ensayos/v1/plantillas/paquete-destino-v1.json). El importador actual no equivale a un agente conectado y no publica al subir el archivo.
+El paquete de destinos v2 es una frontera agnóstica: cualquier herramienta puede seguir el [encargo editorial y visual](PLANTILLA_PROMPT_IA_DESTINO.md) y entregar un ZIP con manifiesto JSON e imágenes referenciadas. El panel valida el archivo, llena el formulario para revisión y guarda como borrador solo cuando una persona lo solicita. El JSON v1 sigue disponible como importación antigua y requiere cargar las imágenes por separado. Este importador no equivale a un agente conectado y nunca publica al cargar el archivo.
 
 ## Cómo mantener este contexto útil
 

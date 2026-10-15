@@ -54,3 +54,7 @@ Negocios abre ahora un resumen comercial, de validación y de publicación, con 
 ## Revisión manual de pagos
 
 Se incorporó el circuito reportado → revisión → confirmado/rechazado, con pagador, referencia, negocio/suscripción, autor de revisión, asiento confirmado único e historial. Negocios muestra pagos por comprobar. Requiere 013; no hay lectura de SMS ni confirmación bancaria automática. Ver [alcance y estados](REVISION_PAGOS_SUSCRIPCIONES.md).
+
+## Integración de producción (main)
+
+Se integró main `c01b776` conservando el sitio público de main y la administración de esta rama. La herramienta `/admin/base-datos.php` reconoce las migraciones de ambas líneas hasta 013; sustituye el procedimiento manual anterior para esta versión. Consultar [resolución, pruebas y actualización segura](INTEGRACION_MAIN_ADVANCE_ADMIN.md). No se modificó producción; falta el ensayo de actualización sobre copia privada en MySQL/MariaDB antes de desplegar.

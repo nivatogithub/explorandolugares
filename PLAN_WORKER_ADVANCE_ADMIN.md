@@ -45,3 +45,7 @@ Los registros empresariales se integran al catálogo compartido; cualquier alta 
 Ver [estado y siguientes entregas](docs/ADVANCE_ADMIN_ESTADO.md) para el progreso actualizado.
 
 La administración cuenta con [Reportes generales](docs/REPORTES_GENERALES.md), separados del resumen CRM/campañas, con registro manual de periodos y movimientos comerciales y clasificación privada de operadores. Esto no aprueba precios ni habilita cobros.
+
+## Integración de producción (main)
+
+Se integró main `c01b776` conservando el sitio público de main y la administración de esta rama. La herramienta `/admin/base-datos.php` reconoce las migraciones de ambas líneas hasta 013; sustituye el procedimiento manual anterior para esta versión. Consultar [resolución, pruebas y actualización segura](docs/INTEGRACION_MAIN_ADVANCE_ADMIN.md). No se modificó producción; falta el ensayo de actualización sobre copia privada en MySQL/MariaDB antes de desplegar.

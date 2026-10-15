@@ -19,7 +19,7 @@ Cada dato que proponga debe conservar fuente, fecha de consulta y estado de veri
 
 ## Propuesta y aprobación
 
-El agente debe entregar cambios como una propuesta privada con destino/registro afectado, ID estable, versión base o fecha observada, campos propuestos, fuentes, incertidumbres, archivos de imagen, créditos y resultados de validación. Los paquetes de destino siguen `ensayos/v1/plantillas/paquete-destino-v1.json` y `docs/PLANTILLA_PROMPT_IA_DESTINO.md`.
+El agente debe entregar cambios como una propuesta privada con destino/registro afectado, ID estable, versión base o fecha observada, campos propuestos, fuentes, incertidumbres, archivos de imagen, créditos y resultados de validación. Los paquetes nuevos usan el manifiesto `ensayos/v1/plantillas/paquete-destino-v2.json`, imágenes dentro del ZIP y las reglas de `docs/PLANTILLA_PROMPT_IA_DESTINO.md`. El panel importa el ZIP como formulario revisable y solo guarda en borrador al solicitarlo una persona; publicar siempre requiere una decisión manual. El JSON v1 se mantiene como compatibilidad histórica.
 
 Una persona revisa los textos, hechos, traducciones, imágenes, licencias y vista previa. Solo la persona puede aprobar la versión exacta para publicar. Si el agente modifica cualquier campo después de esa revisión, la nueva versión necesita otra aprobación. Toda publicación debe dejar registro del contenido aprobado, quién aprobó, cuándo y qué versión se publicó.
 

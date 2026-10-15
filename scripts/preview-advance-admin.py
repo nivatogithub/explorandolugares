@@ -14,6 +14,7 @@ work.mkdir(parents=True,exist_ok=True)
 os.chmod(work,0o700)
 # Copy only app/public sources; never serve the checkout, configuration or database.
 shutil.copytree(root/'backend/app',work/'app',dirs_exist_ok=True)
+shutil.copytree(root/'backend/database',work/'app/database',dirs_exist_ok=True)
 shutil.copytree(root/'backend/public',work/'public',dirs_exist_ok=True)
 assets=work/'public/assets';assets.mkdir(exist_ok=True)
 for name in ['style.css','logo.svg','select-flotante.js','favicon.svg']:
@@ -37,7 +38,7 @@ database=private/'preview.sqlite'
 if not database.exists():
     db=sqlite3.connect(database)
     try:
-        for filename in ['database/sqlite.sql','database/destinations.sqlite.sql','database/migrations/007-advance-admin.sqlite.sql','database/migrations/008-advance-shared-catalog.sqlite.sql','database/migrations/009-advance-english-values.sqlite.sql','database/migrations/010-advance-unsubscribe.sqlite.sql','database/migrations/011-admin-reports.sqlite.sql','database/migrations/012-business-follow-up.sqlite.sql','database/migrations/013-subscription-payment-review.sqlite.sql']:
+        for filename in ['database/sqlite.sql','database/destinations.sqlite.sql','database/migrations/006-poi-experience-links.sqlite.sql','database/migrations/007-advance-admin.sqlite.sql','database/migrations/008-advance-shared-catalog.sqlite.sql','database/migrations/009-advance-english-values.sqlite.sql','database/migrations/010-advance-unsubscribe.sqlite.sql','database/migrations/011-admin-reports.sqlite.sql','database/migrations/012-business-follow-up.sqlite.sql','database/migrations/013-subscription-payment-review.sqlite.sql']:
             db.executescript((root/'backend'/filename).read_text())
         db.executescript((root/'backend/tests/advance/shared-fixture.sql').read_text())
         now='2026-10-14 00:00:00'
@@ -49,6 +50,13 @@ if not database.exists():
     os.chmod(database,0o600)
 else:
     with sqlite3.connect(database) as db:
+        # Add main's new columns without replacing local editorial records.
+        poi_columns={row[1] for row in db.execute('PRAGMA table_info(points_of_interest)')}
+        translation_columns={row[1] for row in db.execute('PRAGMA table_info(point_of_interest_translations)')}
+        experience_state=('poi_type' in poi_columns,'external_url' in translation_columns,'external_label' in translation_columns)
+        if not any(experience_state):db.executescript((root/'backend/database/migrations/006-poi-experience-links.sqlite.sql').read_text())
+        elif not all(experience_state):raise RuntimeError('Esquema parcial de experiencias. Revisa la copia local.')
+        if 'provenance_json' not in {row[1] for row in db.execute('PRAGMA table_info(media_assets)')}:db.executescript((root/'backend/database/migrations/007-media-provenance.sqlite.sql').read_text())
         # Do not reset or silently modify data entered during previous review sessions.
         db.execute('SELECT unsubscribe_url FROM advance_deliveries LIMIT 0')
         db.execute('SELECT email FROM advance_email_suppressions LIMIT 0')

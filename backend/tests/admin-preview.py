@@ -38,7 +38,8 @@ expected_count = int(os.environ.get('EL_DESTINATIONS_TEST_COUNT', '21'))
 assert 'Administrar destinos' in editor and f'Destinos actuales <small>({expected_count})</small>' in editor
 assert 'Nuevo municipio' in editor and 'pt-BR' in editor and 'O subir una imagen nueva' in editor
 assert 'los enlaces al mapa se crean automáticamente' in editor
-assert 'Importar paquete JSON' in editor and 'Agregar atractivo' in editor and 'place_uploads' in editor
+assert 'Importar paquete ZIP' in editor and 'paquete-destino.php' in editor and 'Agregar atractivo' in editor and 'place_uploads' in editor
+assert 'Importar JSON anterior' in editor and 'paquete_import_token' in editor
 assert 'Traducciones generales, ubicación y referencias' in editor and 'Identificador URL (slug)' not in editor
 db_path = Path(os.environ.get('EL_DESTINATIONS_TEST_DB', Path(__file__).resolve().parents[2] / '.local/destinos-dinamicos-preview.sqlite'))
 with sqlite3.connect(db_path) as db:
