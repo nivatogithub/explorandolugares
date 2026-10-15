@@ -196,7 +196,11 @@ def incremental_commands(config,files,removed=()):
         relative=PurePosixPath(item['relative'])
         root=public_path(config) if relative.parts[0]=='public' else config['remote_base']
         target=PurePosixPath(root).joinpath(*relative.parts[1:])
-        directories.add(str(target.parent))
+        parent=target.parent
+        boundary=PurePosixPath(root)
+        while parent!=boundary and str(parent)!='/':
+            directories.add(str(parent))
+            parent=parent.parent
         commands.append((item,str(target)))
     mkdirs=[f'-mkdir {quote(directory)}' for directory in sorted(directories,key=lambda value:(value.count('/'),value))]
     puts=[f'put {quote(item["local"])} {quote(target)}' for item,target in commands]
