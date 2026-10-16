@@ -1,0 +1,1096 @@
+{
+  "schema_version": 1,
+  "universe_version": "CO-editorial-v2",
+  "catalog_updated_at": "2026-10-16",
+  "departments": [
+    {
+      "code": "05",
+      "name": "Antioquia",
+      "weight": 3,
+      "places": [
+        {
+          "id": "CO-05-jerico",
+          "name": "Jericó",
+          "slug": "jerico",
+          "municipality_code": "05368",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 1,
+          "weight": 3,
+          "preparing": false
+        },
+        {
+          "id": "CO-05-jardin",
+          "name": "Jardín",
+          "slug": "jardin",
+          "municipality_code": "05364",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 1,
+          "weight": 3,
+          "preparing": false
+        },
+        {
+          "id": "CO-05-sonson",
+          "name": "Sonsón",
+          "slug": "sonson",
+          "municipality_code": "05756",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 2,
+          "weight": 2,
+          "preparing": false
+        },
+        {
+          "id": "CO-05-cauca-viejo",
+          "name": "Cauca Viejo",
+          "slug": "cauca-viejo",
+          "municipality_code": "05368",
+          "parent_place_id": "CO-05-jerico",
+          "type": "autonomous_destination",
+          "priority": 2,
+          "weight": 2,
+          "preparing": false
+        },
+        {
+          "id": "CO-05-guatape",
+          "name": "Guatapé",
+          "slug": "guatape",
+          "municipality_code": "05321",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 1,
+          "weight": 3,
+          "preparing": false
+        },
+        {
+          "id": "CO-05-santa-fe-de-antioquia",
+          "name": "Santa Fe de Antioquia",
+          "slug": "santa-fe-de-antioquia",
+          "municipality_code": "05042",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 1,
+          "weight": 3,
+          "preparing": false
+        },
+        {
+          "id": "CO-05-medellin",
+          "name": "Medellín",
+          "slug": "medellin",
+          "municipality_code": "05001",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 1,
+          "weight": 3,
+          "preparing": false
+        },
+        {
+          "id": "CO-05-el-penol",
+          "name": "El Peñol",
+          "slug": "el-penol",
+          "municipality_code": "05541",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 1,
+          "weight": 3,
+          "preparing": false
+        },
+        {
+          "id": "CO-05-tamesis",
+          "name": "Támesis",
+          "slug": "tamesis",
+          "municipality_code": "05789",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 1,
+          "weight": 3,
+          "preparing": false
+        },
+        {
+          "id": "CO-05-san-jeronimo",
+          "name": "San Jerónimo",
+          "slug": "san-jeronimo",
+          "municipality_code": "05656",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 1,
+          "weight": 3,
+          "preparing": false
+        },
+        {
+          "id": "CO-05-sopetran",
+          "name": "Sopetrán",
+          "slug": "sopetran",
+          "municipality_code": "05761",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 1,
+          "weight": 3,
+          "preparing": false
+        },
+        {
+          "id": "CO-05-san-rafael",
+          "name": "San Rafael",
+          "slug": "san-rafael",
+          "municipality_code": "05667",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 1,
+          "weight": 3,
+          "preparing": false
+        },
+        {
+          "id": "CO-05-cocorna",
+          "name": "Cocorná",
+          "slug": "cocorna",
+          "municipality_code": "05197",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 1,
+          "weight": 3,
+          "preparing": false
+        },
+        {
+          "id": "CO-05-venecia",
+          "name": "Venecia",
+          "slug": "venecia",
+          "municipality_code": "05861",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 1,
+          "weight": 3,
+          "preparing": false
+        },
+        {
+          "id": "CO-05-el-retiro",
+          "name": "El Retiro",
+          "slug": "el-retiro",
+          "municipality_code": "05607",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 1,
+          "weight": 3,
+          "preparing": false
+        },
+        {
+          "id": "CO-05-san-carlos",
+          "name": "San Carlos",
+          "slug": "san-carlos",
+          "municipality_code": "05649",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 1,
+          "weight": 3,
+          "preparing": false
+        },
+        {
+          "id": "CO-05-el-carmen-de-viboral",
+          "name": "El Carmen de Viboral",
+          "slug": "el-carmen-de-viboral",
+          "municipality_code": "05148",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 1,
+          "weight": 3,
+          "preparing": false
+        },
+        {
+          "id": "CO-05-rionegro",
+          "name": "Rionegro",
+          "slug": "rionegro",
+          "municipality_code": "05615",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 1,
+          "weight": 3,
+          "preparing": false
+        },
+        {
+          "id": "CO-05-necocli",
+          "name": "Necoclí",
+          "slug": "necocli",
+          "municipality_code": "05490",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 1,
+          "weight": 3,
+          "preparing": false
+        },
+        {
+          "id": "CO-05-arboletes",
+          "name": "Arboletes",
+          "slug": "arboletes",
+          "municipality_code": "05051",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 1,
+          "weight": 3,
+          "preparing": false
+        },
+        {
+          "id": "CO-05-puerto-triunfo",
+          "name": "Puerto Triunfo",
+          "slug": "puerto-triunfo",
+          "municipality_code": "05591",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 1,
+          "weight": 3,
+          "preparing": false
+        },
+        {
+          "id": "CO-05-san-pedro-de-los-milagros",
+          "name": "San Pedro de los Milagros",
+          "slug": "san-pedro-de-los-milagros",
+          "municipality_code": "05664",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 1,
+          "weight": 3,
+          "preparing": false
+        },
+        {
+          "id": "CO-05-santa-rosa-de-osos",
+          "name": "Santa Rosa de Osos",
+          "slug": "santa-rosa-de-osos",
+          "municipality_code": "05686",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 1,
+          "weight": 3,
+          "preparing": false
+        }
+      ]
+    },
+    {
+      "code": "08",
+      "name": "Atlántico",
+      "weight": 2,
+      "places": [
+        {
+          "id": "CO-08-barranquilla",
+          "name": "Barranquilla",
+          "slug": "barranquilla",
+          "municipality_code": "08001",
+          "parent_place_id": null,
+          "type": "district",
+          "priority": 2,
+          "weight": 2,
+          "preparing": false
+        },
+        {
+          "id": "CO-08-puerto-colombia",
+          "name": "Puerto Colombia",
+          "slug": "puerto-colombia",
+          "municipality_code": "08573",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 2,
+          "weight": 2,
+          "preparing": false
+        }
+      ]
+    },
+    {
+      "code": "11",
+      "name": "Bogotá D.C.",
+      "weight": 2,
+      "places": [
+        {
+          "id": "CO-11-bogota",
+          "name": "Bogotá",
+          "slug": "bogota",
+          "municipality_code": "11001",
+          "parent_place_id": null,
+          "type": "district",
+          "priority": 2,
+          "weight": 2,
+          "preparing": false
+        }
+      ]
+    },
+    {
+      "code": "13",
+      "name": "Bolívar",
+      "weight": 3,
+      "places": [
+        {
+          "id": "CO-13-cartagena",
+          "name": "Cartagena",
+          "slug": "cartagena",
+          "municipality_code": "13001",
+          "parent_place_id": null,
+          "type": "district",
+          "priority": 1,
+          "weight": 3,
+          "preparing": false
+        },
+        {
+          "id": "CO-13-santa-cruz-de-mompox",
+          "name": "Santa Cruz de Mompox",
+          "slug": "santa-cruz-de-mompox",
+          "municipality_code": "13468",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 2,
+          "weight": 2,
+          "preparing": false
+        }
+      ]
+    },
+    {
+      "code": "15",
+      "name": "Boyacá",
+      "weight": 2,
+      "places": [
+        {
+          "id": "CO-15-villa-de-leyva",
+          "name": "Villa de Leyva",
+          "slug": "villa-de-leyva",
+          "municipality_code": "15407",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 2,
+          "weight": 2,
+          "preparing": false
+        },
+        {
+          "id": "CO-15-mongui",
+          "name": "Monguí",
+          "slug": "mongui",
+          "municipality_code": "15466",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 2,
+          "weight": 2,
+          "preparing": false
+        }
+      ]
+    },
+    {
+      "code": "17",
+      "name": "Caldas",
+      "weight": 2,
+      "places": [
+        {
+          "id": "CO-17-manizales",
+          "name": "Manizales",
+          "slug": "manizales",
+          "municipality_code": "17001",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 2,
+          "weight": 2,
+          "preparing": false
+        },
+        {
+          "id": "CO-17-salamina",
+          "name": "Salamina",
+          "slug": "salamina",
+          "municipality_code": "17653",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 2,
+          "weight": 2,
+          "preparing": false
+        }
+      ]
+    },
+    {
+      "code": "18",
+      "name": "Caquetá",
+      "weight": 1,
+      "places": [
+        {
+          "id": "CO-18-florencia",
+          "name": "Florencia",
+          "slug": "florencia",
+          "municipality_code": "18001",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 3,
+          "weight": 1,
+          "preparing": false
+        }
+      ]
+    },
+    {
+      "code": "19",
+      "name": "Cauca",
+      "weight": 2,
+      "places": [
+        {
+          "id": "CO-19-popayan",
+          "name": "Popayán",
+          "slug": "popayan",
+          "municipality_code": "19001",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 2,
+          "weight": 2,
+          "preparing": false
+        },
+        {
+          "id": "CO-19-silvia",
+          "name": "Silvia",
+          "slug": "silvia",
+          "municipality_code": "19743",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 2,
+          "weight": 2,
+          "preparing": false
+        }
+      ]
+    },
+    {
+      "code": "20",
+      "name": "Cesar",
+      "weight": 1,
+      "places": [
+        {
+          "id": "CO-20-valledupar",
+          "name": "Valledupar",
+          "slug": "valledupar",
+          "municipality_code": "20001",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 3,
+          "weight": 1,
+          "preparing": false
+        }
+      ]
+    },
+    {
+      "code": "23",
+      "name": "Córdoba",
+      "weight": 1,
+      "places": [
+        {
+          "id": "CO-23-monteria",
+          "name": "Montería",
+          "slug": "monteria",
+          "municipality_code": "23001",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 3,
+          "weight": 1,
+          "preparing": false
+        },
+        {
+          "id": "CO-23-lorica",
+          "name": "Lorica",
+          "slug": "lorica",
+          "municipality_code": "23417",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 3,
+          "weight": 1,
+          "preparing": false
+        }
+      ]
+    },
+    {
+      "code": "25",
+      "name": "Cundinamarca",
+      "weight": 2,
+      "places": [
+        {
+          "id": "CO-25-zipaquira",
+          "name": "Zipaquirá",
+          "slug": "zipaquira",
+          "municipality_code": "25899",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 2,
+          "weight": 2,
+          "preparing": false
+        },
+        {
+          "id": "CO-25-guatavita",
+          "name": "Guatavita",
+          "slug": "guatavita",
+          "municipality_code": "25326",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 2,
+          "weight": 2,
+          "preparing": false
+        }
+      ]
+    },
+    {
+      "code": "27",
+      "name": "Chocó",
+      "weight": 1,
+      "places": [
+        {
+          "id": "CO-27-nuqui",
+          "name": "Nuquí",
+          "slug": "nuqui",
+          "municipality_code": "27495",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 3,
+          "weight": 1,
+          "preparing": false
+        },
+        {
+          "id": "CO-27-bahia-solano",
+          "name": "Bahía Solano",
+          "slug": "bahia-solano",
+          "municipality_code": "27075",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 3,
+          "weight": 1,
+          "preparing": false
+        }
+      ]
+    },
+    {
+      "code": "41",
+      "name": "Huila",
+      "weight": 2,
+      "places": [
+        {
+          "id": "CO-41-san-agustin",
+          "name": "San Agustín",
+          "slug": "san-agustin",
+          "municipality_code": "41668",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 2,
+          "weight": 2,
+          "preparing": false
+        },
+        {
+          "id": "CO-41-neiva",
+          "name": "Neiva",
+          "slug": "neiva",
+          "municipality_code": "41001",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 2,
+          "weight": 2,
+          "preparing": false
+        }
+      ]
+    },
+    {
+      "code": "44",
+      "name": "La Guajira",
+      "weight": 2,
+      "places": [
+        {
+          "id": "CO-44-riohacha",
+          "name": "Riohacha",
+          "slug": "riohacha",
+          "municipality_code": "44001",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 2,
+          "weight": 2,
+          "preparing": false
+        },
+        {
+          "id": "CO-44-uribia",
+          "name": "Uribia",
+          "slug": "uribia",
+          "municipality_code": "44847",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 2,
+          "weight": 2,
+          "preparing": false
+        }
+      ]
+    },
+    {
+      "code": "47",
+      "name": "Magdalena",
+      "weight": 2,
+      "places": [
+        {
+          "id": "CO-47-santa-marta",
+          "name": "Santa Marta",
+          "slug": "santa-marta",
+          "municipality_code": "47001",
+          "parent_place_id": null,
+          "type": "district",
+          "priority": 2,
+          "weight": 2,
+          "preparing": false
+        }
+      ]
+    },
+    {
+      "code": "50",
+      "name": "Meta",
+      "weight": 2,
+      "places": [
+        {
+          "id": "CO-50-villavicencio",
+          "name": "Villavicencio",
+          "slug": "villavicencio",
+          "municipality_code": "50001",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 2,
+          "weight": 2,
+          "preparing": false
+        },
+        {
+          "id": "CO-50-la-macarena",
+          "name": "La Macarena",
+          "slug": "la-macarena",
+          "municipality_code": "50350",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 2,
+          "weight": 2,
+          "preparing": false
+        }
+      ]
+    },
+    {
+      "code": "52",
+      "name": "Nariño",
+      "weight": 2,
+      "places": [
+        {
+          "id": "CO-52-pasto",
+          "name": "Pasto",
+          "slug": "pasto",
+          "municipality_code": "52001",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 2,
+          "weight": 2,
+          "preparing": false
+        },
+        {
+          "id": "CO-52-ipiales",
+          "name": "Ipiales",
+          "slug": "ipiales",
+          "municipality_code": "52356",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 2,
+          "weight": 2,
+          "preparing": false
+        }
+      ]
+    },
+    {
+      "code": "54",
+      "name": "Norte de Santander",
+      "weight": 1,
+      "places": [
+        {
+          "id": "CO-54-cucuta",
+          "name": "Cúcuta",
+          "slug": "cucuta",
+          "municipality_code": "54001",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 3,
+          "weight": 1,
+          "preparing": false
+        },
+        {
+          "id": "CO-54-pamplona",
+          "name": "Pamplona",
+          "slug": "pamplona",
+          "municipality_code": "54518",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 3,
+          "weight": 1,
+          "preparing": false
+        }
+      ]
+    },
+    {
+      "code": "63",
+      "name": "Quindío",
+      "weight": 3,
+      "places": [
+        {
+          "id": "CO-63-salento",
+          "name": "Salento",
+          "slug": "salento",
+          "municipality_code": "63690",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 1,
+          "weight": 3,
+          "preparing": false
+        },
+        {
+          "id": "CO-63-filandia",
+          "name": "Filandia",
+          "slug": "filandia",
+          "municipality_code": "63272",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 2,
+          "weight": 2,
+          "preparing": false
+        },
+        {
+          "id": "CO-63-armenia",
+          "name": "Armenia",
+          "slug": "armenia",
+          "municipality_code": "63001",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 2,
+          "weight": 2,
+          "preparing": false
+        }
+      ]
+    },
+    {
+      "code": "66",
+      "name": "Risaralda",
+      "weight": 2,
+      "places": [
+        {
+          "id": "CO-66-pereira",
+          "name": "Pereira",
+          "slug": "pereira",
+          "municipality_code": "66001",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 2,
+          "weight": 2,
+          "preparing": false
+        },
+        {
+          "id": "CO-66-santa-rosa-de-cabal",
+          "name": "Santa Rosa de Cabal",
+          "slug": "santa-rosa-de-cabal",
+          "municipality_code": "66682",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 2,
+          "weight": 2,
+          "preparing": false
+        }
+      ]
+    },
+    {
+      "code": "68",
+      "name": "Santander",
+      "weight": 2,
+      "places": [
+        {
+          "id": "CO-68-barichara",
+          "name": "Barichara",
+          "slug": "barichara",
+          "municipality_code": "68079",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 2,
+          "weight": 2,
+          "preparing": false
+        },
+        {
+          "id": "CO-68-san-gil",
+          "name": "San Gil",
+          "slug": "san-gil",
+          "municipality_code": "68679",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 2,
+          "weight": 2,
+          "preparing": false
+        }
+      ]
+    },
+    {
+      "code": "70",
+      "name": "Sucre",
+      "weight": 1,
+      "places": [
+        {
+          "id": "CO-70-sincelejo",
+          "name": "Sincelejo",
+          "slug": "sincelejo",
+          "municipality_code": "70001",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 3,
+          "weight": 1,
+          "preparing": false
+        },
+        {
+          "id": "CO-70-santiago-de-tolu",
+          "name": "Santiago de Tolú",
+          "slug": "santiago-de-tolu",
+          "municipality_code": "70820",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 3,
+          "weight": 1,
+          "preparing": false
+        }
+      ]
+    },
+    {
+      "code": "73",
+      "name": "Tolima",
+      "weight": 2,
+      "places": [
+        {
+          "id": "CO-73-ibague",
+          "name": "Ibagué",
+          "slug": "ibague",
+          "municipality_code": "73001",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 2,
+          "weight": 2,
+          "preparing": false
+        },
+        {
+          "id": "CO-73-honda",
+          "name": "Honda",
+          "slug": "honda",
+          "municipality_code": "73349",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 2,
+          "weight": 2,
+          "preparing": false
+        }
+      ]
+    },
+    {
+      "code": "76",
+      "name": "Valle del Cauca",
+      "weight": 2,
+      "places": [
+        {
+          "id": "CO-76-cali",
+          "name": "Cali",
+          "slug": "cali",
+          "municipality_code": "76001",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 2,
+          "weight": 2,
+          "preparing": false
+        },
+        {
+          "id": "CO-76-guadalajara-de-buga",
+          "name": "Guadalajara de Buga",
+          "slug": "guadalajara-de-buga",
+          "municipality_code": "76111",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 2,
+          "weight": 2,
+          "preparing": false
+        }
+      ]
+    },
+    {
+      "code": "81",
+      "name": "Arauca",
+      "weight": 1,
+      "places": [
+        {
+          "id": "CO-81-arauca",
+          "name": "Arauca",
+          "slug": "arauca",
+          "municipality_code": "81001",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 3,
+          "weight": 1,
+          "preparing": false
+        }
+      ]
+    },
+    {
+      "code": "85",
+      "name": "Casanare",
+      "weight": 1,
+      "places": [
+        {
+          "id": "CO-85-yopal",
+          "name": "Yopal",
+          "slug": "yopal",
+          "municipality_code": "85001",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 3,
+          "weight": 1,
+          "preparing": false
+        }
+      ]
+    },
+    {
+      "code": "86",
+      "name": "Putumayo",
+      "weight": 1,
+      "places": [
+        {
+          "id": "CO-86-mocoa",
+          "name": "Mocoa",
+          "slug": "mocoa",
+          "municipality_code": "86001",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 3,
+          "weight": 1,
+          "preparing": false
+        },
+        {
+          "id": "CO-86-sibundoy",
+          "name": "Sibundoy",
+          "slug": "sibundoy",
+          "municipality_code": "86749",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 3,
+          "weight": 1,
+          "preparing": false
+        }
+      ]
+    },
+    {
+      "code": "88",
+      "name": "San Andrés, Providencia y Santa Catalina",
+      "weight": 2,
+      "places": [
+        {
+          "id": "CO-88-san-andres",
+          "name": "San Andrés",
+          "slug": "san-andres",
+          "municipality_code": "88001",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 2,
+          "weight": 2,
+          "preparing": false
+        },
+        {
+          "id": "CO-88-providencia",
+          "name": "Providencia",
+          "slug": "providencia",
+          "municipality_code": "88564",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 2,
+          "weight": 2,
+          "preparing": false
+        }
+      ]
+    },
+    {
+      "code": "91",
+      "name": "Amazonas",
+      "weight": 2,
+      "places": [
+        {
+          "id": "CO-91-leticia",
+          "name": "Leticia",
+          "slug": "leticia",
+          "municipality_code": "91001",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 2,
+          "weight": 2,
+          "preparing": false
+        },
+        {
+          "id": "CO-91-puerto-narino",
+          "name": "Puerto Nariño",
+          "slug": "puerto-narino",
+          "municipality_code": "91540",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 2,
+          "weight": 2,
+          "preparing": false
+        }
+      ]
+    },
+    {
+      "code": "94",
+      "name": "Guainía",
+      "weight": 1,
+      "places": [
+        {
+          "id": "CO-94-inirida",
+          "name": "Inírida",
+          "slug": "inirida",
+          "municipality_code": "94001",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 3,
+          "weight": 1,
+          "preparing": false
+        }
+      ]
+    },
+    {
+      "code": "95",
+      "name": "Guaviare",
+      "weight": 1,
+      "places": [
+        {
+          "id": "CO-95-san-jose-del-guaviare",
+          "name": "San José del Guaviare",
+          "slug": "san-jose-del-guaviare",
+          "municipality_code": "95001",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 3,
+          "weight": 1,
+          "preparing": false
+        }
+      ]
+    },
+    {
+      "code": "97",
+      "name": "Vaupés",
+      "weight": 1,
+      "places": [
+        {
+          "id": "CO-97-mitu",
+          "name": "Mitú",
+          "slug": "mitu",
+          "municipality_code": "97001",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 3,
+          "weight": 1,
+          "preparing": false
+        }
+      ]
+    },
+    {
+      "code": "99",
+      "name": "Vichada",
+      "weight": 1,
+      "places": [
+        {
+          "id": "CO-99-puerto-carreno",
+          "name": "Puerto Carreño",
+          "slug": "puerto-carreno",
+          "municipality_code": "99001",
+          "parent_place_id": null,
+          "type": "municipality",
+          "priority": 3,
+          "weight": 1,
+          "preparing": false
+        }
+      ]
+    }
+  ]
+}
