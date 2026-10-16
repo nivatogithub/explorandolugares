@@ -53,3 +53,7 @@ La sección pública explica la estrategia de ampliación: tres grupos independi
 ## Propuesta provisional de invitaciones
 
 Franja entre estrategia y pauta, pendiente de revisión visual del propietario. Dos mensajes: familiares/conocidos y comercios. Permite revisar/personalizar, copiar o abrir opciones de compartir/WhatsApp. Se comparten URLs públicas de la plataforma, nunca localhost. No recoge contactos, envía mensajes automáticamente ni registra un clic como invitación entregada. No se publicó en hosting.
+
+## Navegación por pestañas
+
+Cobertura agrupa conteos y mapa; Audiencia agrupa medición y países/evolución; Haz parte agrupa estrategia, invitaciones y pauta. El título e introducción son comunes. Enlaces `#cobertura`, `#audiencia` y `#participar`; `#como-medimos` y `#invitar` siguen abriendo Haz parte. Departamento y municipio se conservan al cambiar de pestaña. Semántica tablist/tab/tabpanel, foco y flechas/Home/End; sin JavaScript el contenido permanece disponible en secciones.
