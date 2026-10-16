@@ -70,3 +70,7 @@ No hay cookies propias ni analítica externa. El servidor puede mantener registr
 Accesibilidad: idioma español, estructura semántica, etiquetas visibles, foco de teclado, enlace para saltar al contenido, movimiento reducido y respuestas anunciadas. SEO: metadatos, canonical, Open Graph, WebSite JSON-LD, robots y sitemap; no garantiza posicionamiento.
 
 Para ampliar destinos: reemplaza o agrega contenido editorial y recursos reales con permisos, conservando la convocatoria abierta. Cada ficha real debe tener información confirmada y contacto autorizado.
+
+## Diseño público
+
+La guía operativa vigente está en [docs/GUIA_ESTILO_PORTAL.md](docs/GUIA_ESTILO_PORTAL.md). Los tokens, su generador y las pruebas de diseño evitan variantes de color accidentales. Las exploraciones históricas no sustituyen esta guía ni las instrucciones actuales del propietario.

@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-16",
+  "scope": "local design review, synthetic preview data; production unchanged",
+  "production_before": {
+    "audience_card": "#fffefa",
+    "selected_tab": "#172b42",
+    "selected_filter": "#172b42",
+    "advertising_panel": "#172b42",
+    "share_action": "#172b42",
+    "editor_computed": "#ffffff"
+  },
+  "local_after": {
+    "card": "#fff8ed",
+    "panel": "#fff0dc",
+    "action": "#c94720",
+    "field": "#fffdf8",
+    "secondary_text": "#5e625f"
+  },
+  "viewports": [
+    {
+      "width": 1600,
+      "overflow": false,
+      "reviewed": [
+        "coverage",
+        "audience",
+        "participation",
+        "invitation editor",
+        "privacy preferences",
+        "period selector",
+        "keyboard tabs"
+      ]
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "reviewed": [
+        "coverage",
+        "audience",
+        "participation"
+      ],
+      "method": "three same-origin preview iframes with visible measurement report"
+    }
+  ],
+  "privacy_actions": {
+    "accept_and_reject_same_background": true,
+    "accept_and_reject_same_border": true
+  },
+  "invitations_sent": false,
+  "deployment_performed": false
+}
