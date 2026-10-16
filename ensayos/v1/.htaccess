@@ -1,5 +1,8 @@
 RewriteEngine On
 
+# Read current publications on every sitemap request; internal rewrite only.
+RewriteRule ^sitemap\.xml$ sitemap-live.php [L]
+
 # Mantén una URL pública por página: el sitemap y los canonical usan la forma
 # de directorio, mientras que muchas páginas enlazan históricamente index.html.
 RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.html(?:[?\s]) [NC]

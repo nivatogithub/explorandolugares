@@ -1,5 +1,32 @@
 # Entorno local y sincronización
 
+## Rutas vigentes: iguales a producción
+
+Desde el 16 de octubre de 2026, el portal se prueba desde la raíz del servidor
+local, sin prefijo `/v1`. Solo cambia el origen:
+`http://127.0.0.1:8011/destinos/jerico/` corresponde a
+`https://explorandolugares.com/destinos/jerico/`.
+
+Para probar PHP, destinos, negocios y panel con SQLite local:
+
+```sh
+PORT=8011 sh scripts/preview-destinos-dinamicos.sh
+```
+
+El arranque prepara `.local/preview-portal/public` con el empaquetador del hosting
+y sirve esa raíz con un router local que reproduce sus rutas amigables. La base,
+configuración y medios de prueba permanecen locales. No modifica producción.
+Las plantillas y el panel ya no detectan `/v1` ni usan `EL_SITE_BASE` para construir
+enlaces. El alias antiguo no se mantiene como otra versión del portal.
+
+`ensayos/v1` sigue siendo una ubicación interna de fuentes históricas utilizadas
+por los generadores; su nombre no se publica en las direcciones. El visor estático
+`scripts/ensayar.py` también sirve esa carpeta directamente en `/`, pero no ejecuta
+PHP y no sustituye la comprobación completa anterior.
+
+Los apartados siguientes conservan el historial inicial del entorno. La regla
+vigente es probar el portal en la raíz y no crear iteraciones con URL diferentes.
+
 Preparado el 11 de octubre de 2026 desde `origin/main`, commit `82c27c1bee64537e215bf9c87f021d6e114279b6`.
 Repositorio: https://github.com/nivatogithub/explorandolugares
 Rama inicial de trabajo: `trabajo/entorno-local`.
@@ -18,7 +45,7 @@ Desde la raíz de esta copia, con Python 3.9 o posterior:
 python3 scripts/ensayar.py
 ```
 
-Abrir http://127.0.0.1:8000/ y detener con Ctrl+C. Si el puerto está ocupado, usar `--port 8001`. El servidor escucha solo en el equipo local, sirve únicamente `ensayos/`, bloquea listados de directorios y enlaces simbólicos hacia fuera, y envía instrucciones para evitar indexación y caché. Es una herramienta de desarrollo, no un servidor de producción.
+Abrir http://127.0.0.1:8000/ y detener con Ctrl+C. Si el puerto está ocupado, usar `--port 8001`. El servidor escucha solo en el equipo local, sirve únicamente `ensayos/v1/`, bloquea listados de directorios y enlaces simbólicos hacia fuera, y envía instrucciones para evitar indexación y caché. Es una herramienta de desarrollo, no un servidor de producción.
 
 Crear cada iteración en `ensayos/`, documentarla allí y agregar su enlace a la entrada. El servidor no expone `.git`, documentos de la raíz ni la entrega histórica. Para consultar el borrador, abrir su archivo local por separado.
 

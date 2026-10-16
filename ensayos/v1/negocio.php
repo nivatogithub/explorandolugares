@@ -31,8 +31,7 @@ function business_price_display(string $value,string $locale):string {return mat
 $id=(string)($_GET['id']??'');$locale=(string)($_GET['idioma']??'es');
 $locale=in_array($locale,['es','en','pt-BR'],true)?$locale:'es';
 $requestPath=parse_url($_SERVER['REQUEST_URI']??'/',PHP_URL_PATH)?:'/';
-$siteBase=getenv('EL_SITE_BASE')!==false?(string)getenv('EL_SITE_BASE'):(str_starts_with($requestPath,'/v1/')?'/v1':'');
-$u=static fn(string $path):string=>$siteBase.$path;
+$u=static fn(string $path):string=>$path;
 $dbDsn=getenv('EL_DESTINATIONS_DSN')?:'';$dbUser=getenv('EL_DESTINATIONS_DB_USER')?:null;$dbPassword=getenv('EL_DESTINATIONS_DB_PASSWORD')?:null;
 if($dbDsn===''){
     $configPath=dirname(__DIR__,2).'/private/config.php';

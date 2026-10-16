@@ -1,6 +1,7 @@
 # Explorando Lugares — instrucciones del repositorio
 
 - Este repositorio pertenece al negocio independiente Explorando Lugares.
+- Las URL locales y de producción deben tener las mismas rutas desde `/`; solo cambia dominio/puerto. No añadir prefijos `/v1` ni `EL_SITE_BASE` a enlaces o formularios. `ensayos/v1` es una carpeta interna, no una ruta pública. Probar el paquete preparado para hosting según `docs/ENTORNO_LOCAL.md`.
 - Leer `PROYECTO_INDEPENDIENTE.md` antes de trabajar. Es el contexto vigente de producto; las instrucciones posteriores del usuario prevalecen.
 - Consultar `docs/CONTEXTO_PRODUCTO_Y_HOJA_DE_RUTA.md` para decisiones de negocio, arquitectura conceptual y elementos futuros; distinguir lo implementado de lo propuesto.
 - Antes de un despliegue completo, leer `docs/PARIDAD_PRODUCCION.md` y verificar el paquete contra el manifiesto remoto confirmado; no publicar desde fuentes desactualizadas ni retirar archivos por omisión.

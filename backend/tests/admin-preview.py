@@ -9,7 +9,7 @@ import urllib.request
 import os
 from pathlib import Path
 
-site = os.environ.get('EL_DESTINATIONS_TEST_BASE', 'http://127.0.0.1:8014/v1/').rstrip('/') + '/'
+site = os.environ.get('EL_DESTINATIONS_TEST_BASE', 'http://127.0.0.1:8014/').rstrip('/') + '/'
 base = site + 'admin/'
 cookies = http.cookiejar.CookieJar()
 opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(cookies))
