@@ -1,0 +1,35 @@
+const assert=require('node:assert/strict');
+const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'/Users/nivato/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const base=process.env.COVERAGE_BASE_URL||'http://127.0.0.1:8036';
+(async()=>{
+ const browser=await chromium.launch({headless:true,channel:'chrome'});
+ try{
+  const page=await browser.newPage({viewport:{width:1440,height:1150}}),errors=[];page.on('pageerror',e=>errors.push(e.message));
+  await page.goto(base+'/cobertura/colombia/');await page.waitForSelector('#map svg > path');
+  assert.equal(await page.locator('#map svg > path').count(),33);
+  await page.locator('#map path[data-code="05"]').click();await page.waitForFunction(()=>document.querySelectorAll('#map svg > path').length===125);
+  assert.equal(await page.locator('#detail-title').innerText(),'Antioquia');
+  assert.match(await page.locator('#department-count').innerText(),/23 destinos/);
+  await page.locator('#municipality').selectOption('05368');
+  assert.match(await page.locator('#municipality-summary').innerText(),/1 de 2/);
+  assert.equal(await page.locator('#places .place').count(),2);
+  assert.equal(await page.locator('#places a').count(),1);
+  assert.match(await page.locator('#places a').getAttribute('href'),/\/destinos\/jerico\/$/);
+  await page.getByRole('button',{name:'Publicados',exact:true}).click();assert.equal(await page.locator('#places .place').count(),1);
+  await page.getByRole('button',{name:'Todos',exact:true}).click();
+  await page.locator('#municipality').selectOption('');await page.locator('#search').fill('sonson');assert.equal(await page.locator('#places .place').count(),1);assert.match(await page.locator('#places').innerText(),/En preparación/);
+  await page.locator('#search').fill('');await page.screenshot({path:'.local/coverage/escritorio.png',fullPage:true});
+  await page.setViewportSize({width:390,height:844});
+  assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'No mobile horizontal overflow');
+  await page.locator('#map path[data-code="05368"]').focus();await page.keyboard.press('Enter');assert.match(await page.locator('#municipality-summary').innerText(),/1 de 2/);
+  await page.screenshot({path:'.local/coverage/movil.png',fullPage:true});
+  await page.reload();await page.waitForFunction(()=>document.querySelector('#municipality').value==='05368');
+  await page.locator('#country-button').click();await page.waitForFunction(()=>document.querySelectorAll('#map svg > path').length===33);
+  await page.locator('#department').selectOption('63');await page.locator('#department').selectOption('05');await page.waitForFunction(()=>document.querySelectorAll('#map svg > path').length===125);assert.equal(await page.locator('#map-title').innerText(),'Antioquia');
+  assert.deepEqual(errors,[]);
+  const offline=await browser.newPage();await offline.route('**/api/cobertura.php',async route=>{const response=await route.fetch();const body=await response.json();body.publication_source_available=false;body.country.coverage_percent=null;await route.fulfill({json:body});});
+  await offline.goto(base+'/cobertura/colombia/');await offline.waitForSelector('#notice:not([hidden])');assert.equal(await offline.locator('#country-percent').innerText(),'—');assert.match(await offline.locator('#notice').innerText(),/no significa/);
+  const fail=await browser.newPage();await fail.route('**/api/cobertura.php',route=>route.fulfill({status:503,json:{error:'unavailable'}}));await fail.goto(base+'/cobertura/colombia/');await fail.waitForSelector('#notice:not([hidden])');assert.match(await fail.locator('#notice').innerText(),/No pudimos cargar/);
+  console.log('OK: country/department/municipality map, filters, links, keyboard, mobile, share URL, race and outage states');
+ }finally{await browser.close();}
+})().catch(e=>{console.error(e);process.exit(1);});
