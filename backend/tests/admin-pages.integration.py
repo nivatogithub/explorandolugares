@@ -21,7 +21,7 @@ DB.row_factory = sqlite3.Row
 DB.execute('PRAGMA foreign_keys=ON')
 DB.executescript((ROOT / 'backend/database/sqlite.sql').read_text())
 DB.executescript((ROOT / 'backend/database/destinations.sqlite.sql').read_text())
-for number in range(8, 26):
+for number in range(8, 27):
     matches = list((ROOT / 'backend/database/migrations').glob(f'{number:03d}-*.sqlite.sql'))
     assert len(matches) == 1, f'Migración SQLite faltante o ambigua: {number:03d}'
     DB.executescript(matches[0].read_text())
@@ -136,6 +136,7 @@ try:
         ('/admin/usuarios.php', 'Cuentas'),
         ('/admin/suscripciones.php', 'Suscripciones'),
         ('/admin/inversionistas.php', 'Inteligencia de negocio e inversión'),
+        ('/admin/contactos-negocios.php', 'Contactos privados de negocios'),
     ]
     # The login is public; all operational pages require an authenticated session.
     for path, _ in paths:
@@ -176,9 +177,12 @@ try:
                     '/admin/usuarios.php': 'Cuentas',
                     '/admin/suscripciones.php': 'Suscripciones',
                     '/admin/inversionistas.php': 'Inteligencia e inversión',
+                    '/admin/contactos-negocios.php': 'Contactos privados',
                 }.get(route)
                 if expected_sidebar:
                     check(active_label == expected_sidebar, f'La sección activa debe ser {expected_sidebar} en {path}; mostró {active_label}')
+            if path == '/admin/contactos-negocios.php':
+                check('<meta name="robots" content="noindex,nofollow">' in body and 'contactos privados' in body.lower(), 'La pantalla de contactos privados debe quedar autenticada y fuera de indexación.')
             if path.startswith('/admin/negocios.php'):
                 workflow = re.search(r'<nav class="admin-workflow-tabs".*?</nav>', body, re.S)
                 check(workflow is not None, f'Faltan las pestañas de Negocios en {path}')
@@ -187,6 +191,43 @@ try:
                 selected_label = re.sub(r'<[^>]+>', '', selected_tabs[0]).strip()
                 expected_tab = {'tab=crear': 'Crear negocio', 'tab=importar': 'Importación masiva', 'tab=revisar': 'Revisar y publicar'}.get(next((part for part in path.split('?')[1:] if part.startswith('tab=')), ''), 'Todos los negocios')
                 check(selected_label == expected_tab, f'La pestaña activa debe ser {expected_tab} en {path}; mostró {selected_label}')
+    contact_csrf = re.search(r'name="csrf" value="([^"]+)"', request('/admin/contactos-negocios.php')[1]).group(1)
+    research_before = DB.execute('SELECT COUNT(*) FROM business_research_contacts').fetchone()[0]
+    business_before_research = DB.execute('SELECT COUNT(*) FROM businesses').fetchone()[0]
+    research_package = json.dumps({
+        'schema_version': 'business-research-contacts-v1',
+        'destination_slug': 'jerico',
+        'businesses': [{'name': 'Hotel de prueba', 'contacts': [{
+            'channel': 'email', 'value': 'hotel@example.invalid',
+            'source_url': 'https://example.invalid/hotel/contacto',
+            'source_type': 'Sitio web oficial', 'source_field': 'Contacto',
+            'source_period': '2026', 'consulted_at': date.today().isoformat(),
+            'evidence_status': 'PUBLICADO_PARA_CLIENTES',
+            'source_note': 'Dato ficticio de prueba',
+            'authorization_status': 'NO_OBTENIDA',
+            'legal_basis_status': 'Pendiente de revisión',
+        }]}],
+    }).encode()
+    status, body, _ = multipart('/admin/contactos-negocios.php',
+        {'csrf': contact_csrf, 'action': 'import_private_contacts'},
+        [('package', 'contactos.json', 'application/json', research_package)])
+    check(status == 200 and '1 observaciones añadidas' in body and 'No se crearon negocios' in body,
+          f'La importación de contactos privados falló o no informó que no crea negocios: {status} {body[-500:]}')
+    research_row = DB.execute('SELECT authorization_status,marketing_consent,campaign_allowed,suppressed FROM business_research_contacts').fetchone()
+    check(tuple(research_row) == ('NO_OBTENIDA', 0, 0, 0), 'La importación no debe inventar consentimiento ni autorización de campañas.')
+    check(DB.execute('SELECT COUNT(*) FROM businesses').fetchone()[0] == business_before_research,
+          'Importar contactos privados creó un negocio.')
+    status, body, _ = request('/admin/contactos-negocios.php?q=hotel')
+    check(status == 200 and 'hotel@example.invalid' in body and 'Consultar fuente' in body,
+          'El administrador no puede consultar el contacto privado con su fuente.')
+    repeated_status, repeated_body, _ = multipart('/admin/contactos-negocios.php',
+        {'csrf': contact_csrf, 'action': 'import_private_contacts'},
+        [('package', 'contactos.json', 'application/json', research_package)])
+    check(repeated_status == 200 and '0 observaciones añadidas' in repeated_body and '1 ya existentes' in repeated_body,
+          'Repetir la importación duplicó un contacto privado.')
+    check(DB.execute('SELECT COUNT(*) FROM business_research_contacts').fetchone()[0] == research_before + 1,
+          'La importación idempotente creó contactos duplicados.')
+
     _, review_html, _ = request('/admin/negocios.php?tab=revisar')
     check('Seleccionar todos los' in review_html and 'Aprobar y publicar seleccionados' in review_html, 'La revisión de negocios debe admitir selección múltiple y publicación por lote.')
     check('Posibles duplicados' in review_html and 'Hospedaje' in review_html, 'La revisión por lote debe permitir filtrar posibles duplicados y categorías antes de publicar.')
