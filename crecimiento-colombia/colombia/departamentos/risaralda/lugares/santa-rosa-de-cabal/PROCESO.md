@@ -1,6 +1,6 @@
 # Santa Rosa de Cabal · Risaralda
 
-ID `CO-66-santa-rosa-de-cabal` · prioridad 2 · puntuación editorial 60.0/100.
+ID `CO-66-santa-rosa-de-cabal` · prioridad 2 · puntuación de preparación 60.0/100.
 Estado inicial: planificado; contenido y publicación pendientes de auditoría.
 
 ## Checklist de ejecución

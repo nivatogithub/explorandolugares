@@ -51,8 +51,7 @@ def validate():
     def scored(row):
         expected=round(sum(inv['score_weights'][k]*row['score_inputs'][k]/5 for k in inv['score_weights']),2)
         require(row['score']==expected,'Puntuación inconsistente '+row['id'])
-        pri=1 if expected>=80 else 2 if expected>=55 else 3
-        require(row['priority']==pri and row['weight']==4-pri,'Prioridad/peso inconsistente '+row['id'])
+        require(row['weight']==4-row['priority'],'Prioridad/peso inconsistente '+row['id'])
     for d in ds:
         require(d['id'] not in departments,'Departamento duplicado');departments.add(d['id']);scored(d)
         require(d['places'],'Departamento sin candidatos')

@@ -1,6 +1,6 @@
 # Santiago de Tolú · Sucre
 
-ID `CO-70-santiago-de-tolu` · prioridad 3 · puntuación editorial 35.0/100.
+ID `CO-70-santiago-de-tolu` · prioridad 3 · puntuación de preparación 35.0/100.
 Estado inicial: planificado; contenido y publicación pendientes de auditoría.
 
 ## Checklist de ejecución

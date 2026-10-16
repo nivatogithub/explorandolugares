@@ -12,7 +12,7 @@ for d in inv['departments']:
     for i,v in enumerate(values):country[i]+=d['weight']*v
     den+=d['weight'];p1.extend(p for p in d['places'] if p['priority']==1)
     lines.append(f"| {d['name']} | {d['priority']} | {len(d['places'])} | {values[0]:.2f}% | {values[1]:.2f}% |")
-lines+=['',f"País: preparación {country[0]/den:.2f}% · publicación comprobada {country[1]/den:.2f}%.",f"MVP: {len(p1)} lugares P1; {sum(byid[p['id']]['state']=='published' for p in p1)} con publicación comprobada.",f"Inventario: {len(ms)} candidatos; {sum(m['state']=='planned' for m in ms)} planificados.",'','No mide territorio, población ni demanda turística. Todo gate inicial está pendiente de auditoría. Cambiar universo o pesos requiere nueva versión y conservar comparación anterior.']
+lines+=['','Grupos departamentales: '+', '.join(f"P{k}={sum(d['priority']==k for d in inv['departments'])}" for k in (1,2,3)), 'Grupos de destinos: '+', '.join(f"P{k}={sum(p['priority']==k for d in inv['departments'] for p in d['places'])}" for k in (1,2,3)),f"País: preparación {country[0]/den:.2f}% · publicación comprobada {country[1]/den:.2f}%.",f"Grupo nacional de destinos P1: {len(p1)} lugares; {sum(byid[p['id']]['state']=='published' for p in p1)} con publicación comprobada.",f"Inventario: {len(ms)} candidatos; {sum(m['state']=='planned' for m in ms)} planificados.",'','No mide territorio, población ni demanda turística. Todo gate inicial está pendiente de auditoría. Cambiar universo o pesos requiere nueva versión y conservar comparación anterior.']
 (ROOT/'COBERTURA.md').write_text('\n'.join(lines)+'\n')
 print('COBERTURA.md actualizado')
 

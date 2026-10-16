@@ -1,6 +1,6 @@
 # Mitú · Vaupés
 
-ID `CO-97-mitu` · prioridad 3 · puntuación editorial 35.0/100.
+ID `CO-97-mitu` · prioridad 3 · puntuación de preparación 35.0/100.
 Estado inicial: planificado; contenido y publicación pendientes de auditoría.
 
 ## Checklist de ejecución

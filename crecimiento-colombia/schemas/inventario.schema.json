@@ -252,6 +252,10 @@
                 "path": {
                   "type": "string",
                   "minLength": 1
+                },
+                "priority_basis": {
+                  "type": "string",
+                  "minLength": 1
                 }
               },
               "required": [
@@ -268,10 +272,15 @@
                 "weight",
                 "reason",
                 "confidence",
-                "path"
+                "path",
+                "priority_basis"
               ],
               "additionalProperties": false
             }
+          },
+          "priority_basis": {
+            "type": "string",
+            "minLength": 1
           }
         },
         "required": [
@@ -286,7 +295,8 @@
           "confidence",
           "unit_type",
           "dane_code",
-          "places"
+          "places",
+          "priority_basis"
         ],
         "additionalProperties": false
       }

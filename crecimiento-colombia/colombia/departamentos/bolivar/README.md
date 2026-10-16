@@ -1,8 +1,6 @@
 # Bolívar
 
-Unidad `CO-13` · prioridad 1 · puntuación 85.0/100.
-
-Candidatos editoriales, no censo completo ni páginas públicas. Consultar inventario raíz para puntuaciones y razones.
+Grupo P1 provisional. La prioridad del departamento no obliga a que todos sus destinos pertenezcan al mismo grupo.
 
 - [Cartagena](lugares/cartagena/PROCESO.md) · P1
 - [Santa Cruz de Mompox](lugares/santa-cruz-de-mompox/PROCESO.md) · P2

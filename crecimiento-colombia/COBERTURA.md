@@ -1,6 +1,6 @@
 # Cobertura recalculada
 
-Universo: `CO-editorial-v1` · inventario 2026-10-16.
+Universo: `CO-editorial-v2` · inventario 2026-10-16.
 
 Preparación con gates y publicación comprobada en este plan. Los estados históricos no se convierten automáticamente en evidencia actual.
 
@@ -40,8 +40,10 @@ Preparación con gates y publicación comprobada en este plan. Los estados hist�
 | Vaupés | 3 | 1 | 0.00% | 0.00% |
 | Vichada | 3 | 1 | 0.00% | 0.00% |
 
+Grupos departamentales: P1=3, P2=17, P3=13
+Grupos de destinos: P1=23, P2=37, P3=18
 País: preparación 0.00% · publicación comprobada 0.00%.
-MVP: 4 lugares P1; 0 con publicación comprobada.
+Grupo nacional de destinos P1: 23 lugares; 0 con publicación comprobada.
 Inventario: 78 candidatos; 78 planificados.
 
 No mide territorio, población ni demanda turística. Todo gate inicial está pendiente de auditoría. Cambiar universo o pesos requiere nueva versión y conservar comparación anterior.

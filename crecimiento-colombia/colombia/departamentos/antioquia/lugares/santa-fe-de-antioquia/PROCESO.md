@@ -1,6 +1,6 @@
 # Santa Fe de Antioquia · Antioquia
 
-ID `CO-05-santa-fe-de-antioquia` · prioridad 2 · puntuación editorial 60.0/100.
+ID `CO-05-santa-fe-de-antioquia` · prioridad 1 · puntuación de preparación 60.0/100.
 Estado inicial: planificado; contenido y publicación pendientes de auditoría.
 
 ## Checklist de ejecución
