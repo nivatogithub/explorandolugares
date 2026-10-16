@@ -1,0 +1,26 @@
+name: Validar plan de cobertura
+on:
+  pull_request:
+    paths:
+      - 'crecimiento-colombia/**'
+      - '.github/workflows/plan-cobertura.yml'
+  push:
+    paths:
+      - 'crecimiento-colombia/**'
+      - '.github/workflows/plan-cobertura.yml'
+permissions:
+  contents: read
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 crecimiento-colombia/scripts/validar.py
+      - run: python3 crecimiento-colombia/scripts/test_validar.py
+      - run: python3 crecimiento-colombia/scripts/operacion.py --report
+      - run: python3 crecimiento-colombia/scripts/test_operacion.py
+      - name: Comprobar reportes actualizados
+        run: git diff --exit-code -- crecimiento-colombia/cobertura-operativa.json crecimiento-colombia/COBERTURA_OPERATIVA.md
