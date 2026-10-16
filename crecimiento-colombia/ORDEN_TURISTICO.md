@@ -2,7 +2,7 @@
 
 Versión CO-turismo-v3 · consulta 2026-10-16 · 100 candidatos / 33 unidades.
 
-Evaluación editorial, no ranking oficial de visitantes. Ver REVISION_TURISTICA_NACIONAL.md. El score turístico no mide contenido realizado; preparación excluida del orden. Todos sin iniciar.
+Evaluación editorial, no ranking oficial de visitantes. Ver REVISION_TURISTICA_NACIONAL.md. El score turístico no mide contenido realizado; preparación excluida del orden. Estados de ejecución vigentes en operacion.json y SEGUIMIENTO_TANDA_1.md.
 
 ## Departamentos revisados
 
