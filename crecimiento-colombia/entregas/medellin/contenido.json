@@ -1,0 +1,293 @@
+{
+  "destination_id": "CO-05-medellin",
+  "status": "draft",
+  "translations": {
+    "es": {
+      "display_name": "Medellín",
+      "eyebrow": "Antioquia · Valle de Aburrá",
+      "headline": "Arte, ciencia y vida urbana en Medellín",
+      "intro": "Medellín reúne espacios para acercarse al arte, la ciencia y la vida de una ciudad del valle de Aburrá. El Museo de Antioquia, el Jardín Botánico, Parque Explora y el MAMM permiten construir una visita con intereses distintos. Esta guía propone combinar espacios culturales y tiempo para conocer la oferta local.",
+      "history": [
+        "El 2 de noviembre de 1675 se estableció la Villa de Nuestra Señora de la Candelaria de Medellín. Su historia posterior estuvo ligada al comercio y al desarrollo industrial.",
+        "La producción de artistas como Débora Arango y Fernando Botero forma parte del patrimonio cultural de la ciudad. Visitar sus museos permite acercarse a miradas diversas sobre la sociedad y su historia."
+      ],
+      "practical": [
+        "Consulta horarios, tarifas y programación directamente con cada recinto antes de viajar; esta entrega no fija precios ni garantiza disponibilidad.",
+        "Planea la movilidad con la información oficial del Metro. No todos los atractivos están en una misma zona: separa las visitas por sectores.",
+        "La accesibilidad depende del recinto y del recorrido; confirma necesidades concretas con el operador. No se garantiza accesibilidad universal."
+      ],
+      "reasons": [
+        "Arte en museos y espacio público",
+        "Ciencia y educación ambiental",
+        "Gastronomía y alojamientos con canales directos"
+      ]
+    },
+    "en": {
+      "display_name": "Medellín",
+      "eyebrow": "Antioquia · Aburrá Valley",
+      "headline": "Art, science and urban life in Medellín",
+      "intro": "Medellín offers places to explore art, science and daily life in the Aburrá Valley. Museo de Antioquia, the Botanical Garden, Parque Explora and MAMM provide different starting points for a visit. This guide suggests combining cultural venues with time to discover local services.",
+      "history": [
+        "The Villa of Nuestra Señora de la Candelaria de Medellín was established on 2 November 1675. Trade and industrial development shaped its later history.",
+        "Artists including Débora Arango and Fernando Botero are part of the city’s cultural heritage. Its museums offer different perspectives on society and history."
+      ],
+      "practical": [
+        "Check opening hours, prices and programmes with each venue before travelling; this draft does not guarantee availability.",
+        "Plan journeys using official Metro information. Attractions are spread across different districts, so group visits by area.",
+        "Accessibility varies by venue and route; confirm specific requirements directly with the operator. Universal access is not guaranteed."
+      ],
+      "reasons": [
+        "Art in museums and public spaces",
+        "Science and environmental education",
+        "Food and accommodation with direct official channels"
+      ]
+    },
+    "pt-BR": {
+      "display_name": "Medellín",
+      "eyebrow": "Antioquia · Vale do Aburrá",
+      "headline": "Arte, ciência e vida urbana em Medellín",
+      "intro": "Medellín reúne espaços para conhecer a arte, a ciência e o cotidiano de uma cidade do vale do Aburrá. O Museo de Antioquia, o Jardim Botânico, o Parque Explora e o MAMM oferecem diferentes pontos de partida. A proposta é combinar espaços culturais com tempo para descobrir os serviços locais.",
+      "history": [
+        "Em 2 de novembro de 1675 foi estabelecida a Vila de Nuestra Señora de la Candelaria de Medellín. O comércio e o desenvolvimento industrial marcaram sua história posterior.",
+        "Artistas como Débora Arango e Fernando Botero fazem parte do patrimônio cultural da cidade. Seus museus permitem conhecer diferentes olhares sobre a sociedade e a história."
+      ],
+      "practical": [
+        "Consulte horários, preços e programação diretamente com cada espaço antes de viajar; este rascunho não garante disponibilidade.",
+        "Planeje os trajetos com as informações oficiais do Metrô. Os atrativos ficam em diferentes setores; organize as visitas por região.",
+        "A acessibilidade depende do espaço e do percurso; confirme necessidades específicas com o operador. Não há garantia de acessibilidade universal."
+      ],
+      "reasons": [
+        "Arte em museus e espaços públicos",
+        "Ciência e educação ambiental",
+        "Gastronomia e hospedagem com canais oficiais diretos"
+      ]
+    }
+  },
+  "places": [
+    {
+      "slug": "museo-antioquia",
+      "type": "place",
+      "publication_status": "draft",
+      "source_ids": [
+        "antioquia"
+      ],
+      "translations": {
+        "es": {
+          "name": "Museo de Antioquia",
+          "description": "Arte e historia regional con salas dedicadas a Fernando Botero y Débora Arango.",
+          "external_url": "https://museodeantioquia.co/",
+          "external_label": "Sitio oficial"
+        },
+        "en": {
+          "name": "Museo de Antioquia",
+          "description": "Art and regional history, including rooms dedicated to Fernando Botero and Débora Arango.",
+          "external_url": "https://museodeantioquia.co/",
+          "external_label": "Sitio oficial"
+        },
+        "pt-BR": {
+          "name": "Museo de Antioquia",
+          "description": "Arte e história regional, com salas dedicadas a Fernando Botero e Débora Arango.",
+          "external_url": "https://museodeantioquia.co/",
+          "external_label": "Sitio oficial"
+        }
+      }
+    },
+    {
+      "slug": "jardin-botanico",
+      "type": "place",
+      "publication_status": "draft",
+      "source_ids": [
+        "botanico"
+      ],
+      "translations": {
+        "es": {
+          "name": "Jardín Botánico Joaquín Antonio Uribe",
+          "description": "Colecciones vivas y actividades de educación ambiental; consulta la programación oficial.",
+          "external_url": "https://www.botanicomedellin.org/",
+          "external_label": "Sitio oficial"
+        },
+        "en": {
+          "name": "Jardín Botánico Joaquín Antonio Uribe",
+          "description": "Living collections and environmental education; check the official programme.",
+          "external_url": "https://www.botanicomedellin.org/",
+          "external_label": "Sitio oficial"
+        },
+        "pt-BR": {
+          "name": "Jardín Botánico Joaquín Antonio Uribe",
+          "description": "Coleções vivas e educação ambiental; consulte a programação oficial.",
+          "external_url": "https://www.botanicomedellin.org/",
+          "external_label": "Sitio oficial"
+        }
+      }
+    },
+    {
+      "slug": "parque-explora",
+      "type": "place",
+      "publication_status": "draft",
+      "source_ids": [
+        "explora"
+      ],
+      "translations": {
+        "es": {
+          "name": "Parque Explora",
+          "description": "Museo de ciencias con acuario y propuesta de aprendizaje interactivo.",
+          "external_url": "https://www.parqueexplora.org/en",
+          "external_label": "Sitio oficial"
+        },
+        "en": {
+          "name": "Parque Explora",
+          "description": "Science museum with an aquarium and interactive learning.",
+          "external_url": "https://www.parqueexplora.org/en",
+          "external_label": "Sitio oficial"
+        },
+        "pt-BR": {
+          "name": "Parque Explora",
+          "description": "Museu de ciências com aquário e aprendizagem interativa.",
+          "external_url": "https://www.parqueexplora.org/en",
+          "external_label": "Sitio oficial"
+        }
+      }
+    },
+    {
+      "slug": "mamm",
+      "type": "place",
+      "publication_status": "draft",
+      "source_ids": [
+        "mamm"
+      ],
+      "translations": {
+        "es": {
+          "name": "Museo de Arte Moderno de Medellín",
+          "description": "Arte moderno y programación cultural; revisa las exposiciones disponibles antes de ir.",
+          "external_url": "https://www.elmamm.org/",
+          "external_label": "Sitio oficial"
+        },
+        "en": {
+          "name": "Museo de Arte Moderno de Medellín",
+          "description": "Modern art and cultural programmes; check available exhibitions before visiting.",
+          "external_url": "https://www.elmamm.org/",
+          "external_label": "Sitio oficial"
+        },
+        "pt-BR": {
+          "name": "Museo de Arte Moderno de Medellín",
+          "description": "Arte moderna e programação cultural; confira as exposições antes da visita.",
+          "external_url": "https://www.elmamm.org/",
+          "external_label": "Sitio oficial"
+        }
+      }
+    }
+  ],
+  "experiences": [
+    {
+      "id": "museo-antioquia-visita",
+      "source_ids": [
+        "antioquia"
+      ],
+      "operator": "Museo de Antioquia",
+      "booking_url": "https://museodeantioquia.co/",
+      "status": "borrador",
+      "translations": {
+        "es": {
+          "name": "Museo de Antioquia",
+          "description": "Arte e historia regional con salas dedicadas a Fernando Botero y Débora Arango."
+        },
+        "en": {
+          "name": "Museo de Antioquia",
+          "description": "Art and regional history, including rooms dedicated to Fernando Botero and Débora Arango."
+        },
+        "pt-BR": {
+          "name": "Museo de Antioquia",
+          "description": "Arte e história regional, com salas dedicadas a Fernando Botero e Débora Arango."
+        }
+      }
+    },
+    {
+      "id": "jardin-botanico-visita",
+      "source_ids": [
+        "botanico"
+      ],
+      "operator": "Jardín Botánico Joaquín Antonio Uribe",
+      "booking_url": "https://www.botanicomedellin.org/",
+      "status": "borrador",
+      "translations": {
+        "es": {
+          "name": "Jardín Botánico Joaquín Antonio Uribe",
+          "description": "Colecciones vivas y actividades de educación ambiental; consulta la programación oficial."
+        },
+        "en": {
+          "name": "Jardín Botánico Joaquín Antonio Uribe",
+          "description": "Living collections and environmental education; check the official programme."
+        },
+        "pt-BR": {
+          "name": "Jardín Botánico Joaquín Antonio Uribe",
+          "description": "Coleções vivas e educação ambiental; consulte a programação oficial."
+        }
+      }
+    },
+    {
+      "id": "parque-explora-visita",
+      "source_ids": [
+        "explora"
+      ],
+      "operator": "Parque Explora",
+      "booking_url": "https://www.parqueexplora.org/en",
+      "status": "borrador",
+      "translations": {
+        "es": {
+          "name": "Parque Explora",
+          "description": "Museo de ciencias con acuario y propuesta de aprendizaje interactivo."
+        },
+        "en": {
+          "name": "Parque Explora",
+          "description": "Science museum with an aquarium and interactive learning."
+        },
+        "pt-BR": {
+          "name": "Parque Explora",
+          "description": "Museu de ciências com aquário e aprendizagem interativa."
+        }
+      }
+    },
+    {
+      "id": "mamm-visita",
+      "source_ids": [
+        "mamm"
+      ],
+      "operator": "Museo de Arte Moderno de Medellín",
+      "booking_url": "https://www.elmamm.org/",
+      "status": "borrador",
+      "translations": {
+        "es": {
+          "name": "Museo de Arte Moderno de Medellín",
+          "description": "Arte moderno y programación cultural; revisa las exposiciones disponibles antes de ir."
+        },
+        "en": {
+          "name": "Museo de Arte Moderno de Medellín",
+          "description": "Modern art and cultural programmes; check available exhibitions before visiting."
+        },
+        "pt-BR": {
+          "name": "Museo de Arte Moderno de Medellín",
+          "description": "Arte moderna e programação cultural; confira as exposições antes da visita."
+        }
+      }
+    }
+  ],
+  "claim_sources": {
+    "intro": [
+      "turismo",
+      "antioquia",
+      "botanico",
+      "explora",
+      "mamm"
+    ],
+    "history": [
+      "historia"
+    ],
+    "practical": [
+      "metro",
+      "botanico",
+      "antioquia",
+      "explora",
+      "mamm"
+    ]
+  }
+}

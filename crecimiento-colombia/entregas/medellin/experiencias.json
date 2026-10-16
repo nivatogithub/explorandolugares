@@ -1,0 +1,94 @@
+[
+  {
+    "id": "museo-antioquia-visita",
+    "source_ids": [
+      "antioquia"
+    ],
+    "operator": "Museo de Antioquia",
+    "booking_url": "https://museodeantioquia.co/",
+    "status": "borrador",
+    "translations": {
+      "es": {
+        "name": "Museo de Antioquia",
+        "description": "Arte e historia regional con salas dedicadas a Fernando Botero y Débora Arango."
+      },
+      "en": {
+        "name": "Museo de Antioquia",
+        "description": "Art and regional history, including rooms dedicated to Fernando Botero and Débora Arango."
+      },
+      "pt-BR": {
+        "name": "Museo de Antioquia",
+        "description": "Arte e história regional, com salas dedicadas a Fernando Botero e Débora Arango."
+      }
+    }
+  },
+  {
+    "id": "jardin-botanico-visita",
+    "source_ids": [
+      "botanico"
+    ],
+    "operator": "Jardín Botánico Joaquín Antonio Uribe",
+    "booking_url": "https://www.botanicomedellin.org/",
+    "status": "borrador",
+    "translations": {
+      "es": {
+        "name": "Jardín Botánico Joaquín Antonio Uribe",
+        "description": "Colecciones vivas y actividades de educación ambiental; consulta la programación oficial."
+      },
+      "en": {
+        "name": "Jardín Botánico Joaquín Antonio Uribe",
+        "description": "Living collections and environmental education; check the official programme."
+      },
+      "pt-BR": {
+        "name": "Jardín Botánico Joaquín Antonio Uribe",
+        "description": "Coleções vivas e educação ambiental; consulte a programação oficial."
+      }
+    }
+  },
+  {
+    "id": "parque-explora-visita",
+    "source_ids": [
+      "explora"
+    ],
+    "operator": "Parque Explora",
+    "booking_url": "https://www.parqueexplora.org/en",
+    "status": "borrador",
+    "translations": {
+      "es": {
+        "name": "Parque Explora",
+        "description": "Museo de ciencias con acuario y propuesta de aprendizaje interactivo."
+      },
+      "en": {
+        "name": "Parque Explora",
+        "description": "Science museum with an aquarium and interactive learning."
+      },
+      "pt-BR": {
+        "name": "Parque Explora",
+        "description": "Museu de ciências com aquário e aprendizagem interativa."
+      }
+    }
+  },
+  {
+    "id": "mamm-visita",
+    "source_ids": [
+      "mamm"
+    ],
+    "operator": "Museo de Arte Moderno de Medellín",
+    "booking_url": "https://www.elmamm.org/",
+    "status": "borrador",
+    "translations": {
+      "es": {
+        "name": "Museo de Arte Moderno de Medellín",
+        "description": "Arte moderno y programación cultural; revisa las exposiciones disponibles antes de ir."
+      },
+      "en": {
+        "name": "Museo de Arte Moderno de Medellín",
+        "description": "Modern art and cultural programmes; check available exhibitions before visiting."
+      },
+      "pt-BR": {
+        "name": "Museo de Arte Moderno de Medellín",
+        "description": "Arte moderna e programação cultural; confira as exposições antes da visita."
+      }
+    }
+  }
+]
