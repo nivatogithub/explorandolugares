@@ -40,6 +40,8 @@ def main():
     for path in sorted((ROOT / 'backend/tests').glob('*.php')):
         run(f'PHP {path.name}', ['php', str(path)])
     run('Navegación, enlaces y despliegue', [sys.executable, '-m', 'unittest', 'discover', '-s', 'scripts/tests', '-p', 'test*.py'])
+    if shutil_which('node'):
+        run('Visibilidad y clics de tarjetas', ['node', 'backend/tests/basic-cards.cjs'])
     run('Integración HTTP de conteo básico sin cookies', [sys.executable, 'backend/tests/basic-audience.integration.py'])
     run('Integración HTTP de participación', [sys.executable, 'backend/tests/integration.py'])
     run('Integración HTTP del panel administrativo', [sys.executable, 'backend/tests/admin-pages.integration.py'])

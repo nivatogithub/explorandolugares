@@ -23,5 +23,5 @@
   document.addEventListener('keydown', event => { if (event.key === 'Escape') close(); });
 })();
 
-/* First-party opt-in analytics; standalone loader, no measurement before consent. */
-(()=>{if(document.querySelector('script[data-el-measurement]'))return;const s=document.createElement('script');s.src='/assets/cobertura/medicion.js?v=1';s.defer=true;s.dataset.elMeasurement='1';document.head.append(s);})();
+/* Shared loader: aggregate counters without visitor cookies plus optional consent-based analytics. */
+(()=>{if(document.querySelector('script[data-el-measurement]'))return;const s=document.createElement('script');s.src='/assets/cobertura/medicion.js?v=5cc75e2b8d2f';s.defer=true;s.dataset.elMeasurement='1';document.head.append(s);})();

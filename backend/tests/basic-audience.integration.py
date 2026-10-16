@@ -31,7 +31,7 @@ with tempfile.TemporaryDirectory(prefix='el-basic-http-') as temporary:
             for _ in range(100):
                 try: status,body,headers=call();break
                 except OSError: time.sleep(.05)
-            assert status==200 and body['enabled'] and body['cookies'] is False and body['identifiers'] is False
+            assert status==200 and body['enabled'] and body['cookies'] is False and body['visitor_identifiers'] is False
             assert 'Set-Cookie' not in headers
             for _ in range(2):
                 status,body,headers=call({'path':'/'})
