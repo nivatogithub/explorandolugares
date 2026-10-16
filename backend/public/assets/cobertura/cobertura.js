@@ -121,5 +121,10 @@
       const params=new URL(location.href).searchParams;const start=params.get('departamento')||'';setDepartment(start);
     }catch(e){$('notice').hidden=false;$('notice').textContent='No pudimos cargar la cobertura. Vuelve a intentar más tarde; puedes seguir explorando las guías desde Destinos.';$('map').replaceChildren(el('p','Información temporalmente no disponible.','map-error'));$('map').setAttribute('aria-busy','false');$('updated').textContent='Sin actualización disponible.';}
   }
+  // Native disclosures retain full content without JS. Apply defaults only on breakpoint changes.
+  const compactView=matchMedia('(max-width: 700px)');
+  const setDisclosureDefaults=()=>document.querySelectorAll('[data-mobile-collapse]').forEach(d=>{d.open=!compactView.matches;});
+  setDisclosureDefaults();
+  compactView.addEventListener('change',setDisclosureDefaults);
   init();
 })();

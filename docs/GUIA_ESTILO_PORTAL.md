@@ -87,7 +87,7 @@ El portal histórico mezcla tipografías en distintas plantillas. Esta convenci�
 
 ### Responsive y accesibilidad
 
-Header/footer conservan su comportamiento compartido. En esta página el explorador pasa a una columna a 960 px; a 700 px se apilan las tarjetas superiores y las tarjetas de audiencia quedan en dos columnas. Evitar columnas demasiado estrechas y scroll horizontal. El mapa sigue siendo Colombia completa con una silueta departamental ampliada, nunca un segundo mapa municipal.
+Header/footer conservan su comportamiento compartido. En esta página el explorador pasa a una columna a 960 px; a 700 px las cifras superiores y de audiencia quedan en dos columnas, con el alcance nacional en una fila completa. Evitar columnas demasiado estrechas y scroll horizontal. El mapa sigue siendo Colombia completa con una silueta departamental ampliada, nunca un segundo mapa municipal.
 
 Contraste calculado con los tokens: acción/texto claro **4,69:1**, texto/tarjeta **13,63:1**, texto secundario/panel **5,53:1**. Son comprobaciones de pares concretos, no una certificación de accesibilidad de todo el portal. Conservar navegación por teclado, foco, etiquetas, áreas de interacción y reducción de movimiento.
 
@@ -156,3 +156,19 @@ Versión local consolidada, con datos de prueba. No confundir estas capturas con
 - [Registro de colores y comprobaciones](../design/portal/verificacion-diseno.json)
 
 La vista local `/__design-review/` muestra las tres pestañas a 390 px y un botón para volver a medir colores y desbordamiento. Solo existe en el servidor de prueba con configuración local; no se incluye en el paquete público. Se comprobaron además una vista de 1600 px, navegación de pestañas por teclado, apertura del periodo, editor de invitación y equivalencia visual de aceptar/rechazar privacidad. No se enviaron mensajes.
+
+## Lectura móvil compacta · 16-10-2026
+
+La primera pantalla debe permitir entender el propósito y llegar a los indicadores sin una introducción extensa. Mantener cifras, alcance, periodo, limitaciones de medición y acciones visibles. Las explicaciones de cobertura, leyenda/procedencia, metodología de ampliación, países y evolución usan `details` nativos: cerrados inicialmente hasta 700 px y abiertos en pantalla amplia. Sin JavaScript siguen abiertos; la elección manual se conserva mientras no cambie el breakpoint. No esconder contenido solo con CSS ni reducir controles por debajo de 44 px.
+
+El mapa sigue visible (275 px en móvil), con selector departamental independiente y las mismas geometrías. No se cambian estadísticas, consentimiento ni filtros. La introducción y la invitación usan textos más breves también en escritorio.
+
+Medición local a 390 px, mismo departamento y fixture, altura de `main` (incluye el aviso local):
+
+|Pestaña|Antes|Después|Reducción aproximada|
+|---|---:|---:|---:|
+|Cobertura|3039 px|2167 px|29%|
+|Audiencia|2164 px|1612 px|26%|
+|Haz parte|3206 px|1997 px|38%|
+
+No hubo desbordamiento horizontal en las tres vistas. En 1600 px los seis desplegables parten abiertos y no hay desbordamiento. Evidencia: [vista compacta](../design/portal/evidencias/movil-compacto.png). Cifras de prueba, no producción. La revisión del resto del portal queda como trabajo separado: priorizar inicio, destino/directorio y formulario comercial; medir recorrido hasta la acción principal antes de aplicar esta pauta. No convertir todo texto editorial en acordeones.
