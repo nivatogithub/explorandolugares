@@ -29,7 +29,7 @@
     if(!rows.length)$('places').append(el('p','No hay destinos que coincidan con estos filtros.','empty'));
     rows.forEach(p=>{const article=el('article',undefined,'place'),top=el('div',undefined,'place-top');top.append(el('h3',p.name),el('span',labels[p.status],'badge '+p.status));article.append(top);
       const parent=data.departments.flatMap(x=>x.places).find(x=>x.id===p.parent_place_id);article.append(el('p',parent?'Destino dentro de '+parent.name:(d?'Guía del destino':p.department_name)));
-      if(p.url&&p.status==='published'){const a=el('a','Explorar la guía ↗');a.href=new URL(p.url.replace(/^\//,''),root).href;article.append(a);} $('places').append(article);
+      if(p.url&&p.status==='published'){const a=el('a','Explorar la guía →');a.href=new URL(p.url.replace(/^\//,''),root).href;article.append(a);} $('places').append(article);
     });
   }
   function featureState(code){const dep=data.departments.find(x=>x.code===code);if(!dep)return 'untracked';return dep.counts.published?'published':dep.counts.in_progress?'in_progress':data.publication_source_available?'pending':'unknown';}

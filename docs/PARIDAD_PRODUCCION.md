@@ -29,8 +29,8 @@ La protección futura exige:
 
 Estas comprobaciones corresponden a las revisiones comparadas y al hosting configurado. Una rama anterior, otro script de publicación o cambios futuros requieren repetir la comparación. No se garantiza el comportamiento de fuentes que no contengan estas protecciones.
 
-## Defecto previo conservado deliberadamente
+## Corrección posterior incluida en v1.2.0
 
-La página publicada de cobertura contiene un enlace de footer a `creditos-fotograficos/index.html`, pero ese recurso ya no aparece en el paquete público. No se elimina el enlace durante esta reconciliación para conservar exactamente el HTML publicado. La prueba de enlaces registra únicamente esta excepción, en esta ruta y con SHA-256 fijo; cualquier cambio a la página invalida la excepción. Debe resolverse como corrección posterior y verificada, sin eliminar procedencia ni atribuciones obligatorias.
+Se retira de cobertura el enlace de footer a la página de créditos que ya no existe en el portal, conservando las fuentes cartográficas, el crédito de DB-IP y la procedencia/licencias privadas. Las flechas de navegación interna de pauta y guía se cambian a `→`, de acuerdo con las reglas del portal. Se elimina la excepción por SHA-256 de las pruebas de enlaces; la validación vuelve a ser estricta para todas las páginas y flechas, incluidas las decorativas.
 
-Las pruebas resuelven correctamente rutas que comienzan en `/` desde la raíz pública y distinguen las flechas decorativas `aria-hidden` del texto accesible de los enlaces. No se modifica el menú ni las flechas de producción para adaptar las fuentes a una prueba antigua.
+Esta corrección cambia únicamente dos archivos desplegables respecto a la producción comprobada: `public/cobertura/colombia/index.html` y `public/assets/cobertura/cobertura.js` (incluido su hash de versión en el HTML). Las dos ramas conservan el mismo paquete. La equivalencia de los 400 archivos descrita antes corresponde a la reconciliación previa; la versión corregida requiere publicar esos dos archivos para actualizar producción. Crear la etiqueta no publica automáticamente.
