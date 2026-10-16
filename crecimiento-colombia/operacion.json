@@ -4,23 +4,33 @@
   "universe_version": "CO-turismo-v3",
   "inventory_sha256": "59366818925d555a46d4f8d30bd8e88f4d270e6e830a46e1d7bd895e78cad9cb",
   "ordering": "department_priority,place_priority,-place_tourism_score,editorial_tie_order,department_tourism_order,place_id",
-  "priority_approval": null,
-  "max_active": 2,
+  "priority_approval": {
+    "actor": "usuario",
+    "explicit": true,
+    "at": "2026-10-16T20:16:41Z",
+    "evidence": "crecimiento-colombia/decisiones/2026-10-16-cuatro-workers.md"
+  },
+  "max_active": 4,
   "third_worker_capacity_evidence": null,
   "workers": [
     {
       "name": "Lugar 1",
-      "current_place_id": null,
+      "current_place_id": "CO-13-cartagena",
       "history": []
     },
     {
       "name": "Lugar 2",
-      "current_place_id": null,
+      "current_place_id": "CO-11-bogota",
       "history": []
     },
     {
       "name": "Lugar 3",
-      "current_place_id": null,
+      "current_place_id": "CO-05-medellin",
+      "history": []
+    },
+    {
+      "name": "Lugar 4",
+      "current_place_id": "CO-47-santa-marta",
       "history": []
     }
   ],
@@ -39,19 +49,33 @@
       "department_priority_basis": "revision_turistica_editorial_v3",
       "source_pointer": "/departments/3/places/0",
       "manifest": "colombia/departamentos/bolivar/lugares/cartagena/lugar.json",
-      "state": "sin_iniciar",
-      "worker": null,
+      "state": "produccion",
+      "worker": "Lugar 1",
       "branch": "lugar/CO/bolivar/cartagena",
       "pr_url": null,
       "preview": null,
       "artifact_hash": null,
       "artifacts": [],
       "approval": null,
-      "start_authorization": null,
-      "events": [],
+      "start_authorization": {
+        "actor": "usuario",
+        "explicit": true,
+        "at": "2026-10-16T20:16:41Z",
+        "evidence": "crecimiento-colombia/decisiones/2026-10-16-cuatro-workers.md"
+      },
+      "events": [
+        {
+          "type": "asignacion",
+          "at": "2026-10-16T20:16:41Z"
+        },
+        {
+          "type": "produccion_inicio",
+          "at": "2026-10-16T20:16:41Z"
+        }
+      ],
       "components": {
         "investigacion": {
-          "status": "pendiente",
+          "status": "en_curso",
           "evidence": [],
           "checked_at": null,
           "reviewer": null
@@ -149,19 +173,33 @@
       "department_priority_basis": "revision_turistica_editorial_v3",
       "source_pointer": "/departments/2/places/0",
       "manifest": "colombia/departamentos/bogota-dc/lugares/bogota/lugar.json",
-      "state": "sin_iniciar",
-      "worker": null,
+      "state": "produccion",
+      "worker": "Lugar 2",
       "branch": "lugar/CO/bogota-dc/bogota",
       "pr_url": null,
       "preview": null,
       "artifact_hash": null,
       "artifacts": [],
       "approval": null,
-      "start_authorization": null,
-      "events": [],
+      "start_authorization": {
+        "actor": "usuario",
+        "explicit": true,
+        "at": "2026-10-16T20:16:41Z",
+        "evidence": "crecimiento-colombia/decisiones/2026-10-16-cuatro-workers.md"
+      },
+      "events": [
+        {
+          "type": "asignacion",
+          "at": "2026-10-16T20:16:41Z"
+        },
+        {
+          "type": "produccion_inicio",
+          "at": "2026-10-16T20:16:41Z"
+        }
+      ],
       "components": {
         "investigacion": {
-          "status": "pendiente",
+          "status": "en_curso",
           "evidence": [],
           "checked_at": null,
           "reviewer": null
@@ -259,19 +297,33 @@
       "department_priority_basis": "revision_turistica_editorial_v3",
       "source_pointer": "/departments/0/places/6",
       "manifest": "colombia/departamentos/antioquia/lugares/medellin/lugar.json",
-      "state": "sin_iniciar",
-      "worker": null,
+      "state": "produccion",
+      "worker": "Lugar 3",
       "branch": "lugar/CO/antioquia/medellin",
       "pr_url": null,
       "preview": null,
       "artifact_hash": null,
       "artifacts": [],
       "approval": null,
-      "start_authorization": null,
-      "events": [],
+      "start_authorization": {
+        "actor": "usuario",
+        "explicit": true,
+        "at": "2026-10-16T20:16:41Z",
+        "evidence": "crecimiento-colombia/decisiones/2026-10-16-cuatro-workers.md"
+      },
+      "events": [
+        {
+          "type": "asignacion",
+          "at": "2026-10-16T20:16:41Z"
+        },
+        {
+          "type": "produccion_inicio",
+          "at": "2026-10-16T20:16:41Z"
+        }
+      ],
       "components": {
         "investigacion": {
-          "status": "pendiente",
+          "status": "en_curso",
           "evidence": [],
           "checked_at": null,
           "reviewer": null
@@ -369,19 +421,33 @@
       "department_priority_basis": "revision_turistica_editorial_v3",
       "source_pointer": "/departments/14/places/0",
       "manifest": "colombia/departamentos/magdalena/lugares/santa-marta/lugar.json",
-      "state": "sin_iniciar",
-      "worker": null,
+      "state": "produccion",
+      "worker": "Lugar 4",
       "branch": "lugar/CO/magdalena/santa-marta",
       "pr_url": null,
       "preview": null,
       "artifact_hash": null,
       "artifacts": [],
       "approval": null,
-      "start_authorization": null,
-      "events": [],
+      "start_authorization": {
+        "actor": "usuario",
+        "explicit": true,
+        "at": "2026-10-16T20:16:41Z",
+        "evidence": "crecimiento-colombia/decisiones/2026-10-16-cuatro-workers.md"
+      },
+      "events": [
+        {
+          "type": "asignacion",
+          "at": "2026-10-16T20:16:41Z"
+        },
+        {
+          "type": "produccion_inicio",
+          "at": "2026-10-16T20:16:41Z"
+        }
+      ],
       "components": {
         "investigacion": {
-          "status": "pendiente",
+          "status": "en_curso",
           "evidence": [],
           "checked_at": null,
           "reviewer": null
@@ -10949,6 +11015,12 @@
       "deferral_reason": "Departamento o lugar P3: fuera del horizonte P1–P2."
     }
   ],
-  "scope_version": "alcance-mediano-plazo-v1",
-  "scope_sha256": "2787728321c306ca2bad99c0240d8e2b734b17da7f30648d2f7ce8b9695f2ca3"
+  "scope_version": "alcance-mediano-plazo-v2",
+  "scope_sha256": "b31e8a7f536af8cdb888e72a83b228fe498ce9324de0626c6fd169ae2e43f601",
+  "capacity_authorization": {
+    "actor": "usuario",
+    "explicit": true,
+    "at": "2026-10-16T20:16:41Z",
+    "evidence": "crecimiento-colombia/decisiones/2026-10-16-cuatro-workers.md"
+  }
 }

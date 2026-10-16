@@ -57,8 +57,9 @@ def validate(data=None):
     tby={t['id']:t for t in tourism['places']}
     require(op['ordering']=='department_priority,place_priority,-place_tourism_score,editorial_tie_order,department_tourism_order,place_id','Método de orden incorrecto')
     qs=op['queue'];require(len(qs)==len(expected),'Cola incompleta')
-    workers=op['workers'];require([w['name'] for w in workers]==['Lugar 1','Lugar 2','Lugar 3'],'Nombres workers inválidos')
-    require(type(op['max_active']) is int and op['max_active'] in (2,3),'Capacidad inválida')
+    workers=op['workers'];require([w['name'] for w in workers]==['Lugar 1','Lugar 2','Lugar 3','Lugar 4'],'Nombres workers inválidos')
+    require(type(op['max_active']) is int and op['max_active'] in (2,3,4),'Capacidad inválida')
+    if op['max_active']==4:evidence(op.get('capacity_authorization'))
     if op['max_active']==3:
         cap=op['third_worker_capacity_evidence'];evidence(cap);samples=cap.get('samples',[])
         require(len(samples)==3 and len(set(samples))==3,'Se requieren tres muestras distintas')
@@ -150,4 +151,4 @@ def report():
 if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('--report',action='store_true');args=parser.parse_args()
     if args.report:report()
-    inv,ms,op=validate();print(f"OK: {len(ms)} lugares; cola estricta; Lugar 1/2/3; WIP {op['max_active']}; sin lanzamiento ni publicación automática.")
+    inv,ms,op=validate();print(f"OK: {len(ms)} lugares; cola estricta; Lugar 1/2/3/4; WIP {op['max_active']}; sin lanzamiento ni publicación automática.")

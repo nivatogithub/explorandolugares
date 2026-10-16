@@ -1,5 +1,7 @@
 # Estado operativo vigente — 16/10/2026
 
+**Decisión vigente 16/10/2026:** categoría 4 conservada para medición, fuera de trabajos. Cuatro workers autorizados: Lugar 1 Cartagena, Lugar 2 Bogotá, Lugar 3 Medellín, Lugar 4 Santa Marta. Esta autorización reemplaza límites anteriores de capacidad; textos, imágenes y publicación siguen pendientes de revisión. Ver `decisiones/2026-10-16-cuatro-workers.md`.
+
 **Alcance vigente:** [ALCANCE.md](ALCANCE.md) y `alcance.json` prevalecen sobre las fases posteriores descritas aquí: P4 excluida; P1–P2 como techo operativo; P3 solo referencia futura. Cola de 97 candidatos, 3 diferidos, cero workers iniciados.
 
 Plan auditado en rama `plan/maestro-cobertura-auditado-20261016`, base a75d341. Ver REVISION_TURISTICA_NACIONAL.md y operacion.json. El archivo histórico REVISION_REPOSITORIO.md describe una revisión previa, no esta ejecución.

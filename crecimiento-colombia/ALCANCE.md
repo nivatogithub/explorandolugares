@@ -1,5 +1,7 @@
 # Alcance vigente de cobertura — 16/10/2026
 
+**Decisión vigente 16/10/2026:** categoría 4 conservada para medición, fuera de trabajos. Cuatro workers autorizados: Lugar 1 Cartagena, Lugar 2 Bogotá, Lugar 3 Medellín, Lugar 4 Santa Marta. Esta autorización reemplaza límites anteriores de capacidad; textos, imágenes y publicación siguen pendientes de revisión. Ver `decisiones/2026-10-16-cuatro-workers.md`.
+
 Decisión del propietario: **prioridad 4 completamente fuera del plan**. P1–P2 es el techo operativo de planificación a mediano plazo; no constituye compromiso de completar P2 ni autorización para iniciar workers.
 
 - P1: primera etapa de cobertura.

@@ -43,7 +43,7 @@ Preparación = gates ponderados originales; publicabilidad = versión completa a
 Objetivo P1–P2: 97 candidatos; P3 diferidos: 3; P4 excluida. Cobertura objetivo (denominador propio): {"prepared_percent": 0.0, "publishable_percent": 0.0, "published_percent": 0.0, "depth_percent": 0.0}
 
 País (universo editorial): prepared_percent=0.00%, publishable_percent=0.00%, published_percent=0.00%, depth_percent=0.00%.
-Sin iniciar: 97; activos: 0; esperando revisión: 0.
+Sin iniciar: 93; activos: 4; esperando revisión: 0.
 Tiempos: sin muestras observadas; no hay diagnóstico de cuello de botella.
 
 Detalle por lugar y tiempos: cobertura-operativa.json. Cero significa ausencia de evidencia en este plan; no ausencia de contenido histórico ni verificación de producción.

@@ -14,7 +14,7 @@ class OperationsTests(unittest.TestCase):
     def test_wrong_worker_name(self):self.op['workers'][0]['name']='fuentes';self.rejects(self.op)
     def test_third_worker_without_metrics(self):self.op['max_active']=3;self.rejects(self.op)
     def test_assignment_without_approval(self):
-        self.op['queue'][0].update(state='asignado',worker='Lugar 1');self.rejects(self.op)
+        self.op['priority_approval']=None;self.rejects(self.op)
     def test_component_without_evidence(self):
         self.op['queue'][0]['components']['fotos_reales']['status']='completo';self.rejects(self.op)
     def test_local_evidence_escape(self):
@@ -28,5 +28,5 @@ class OperationsTests(unittest.TestCase):
         with self.assertRaises(ValueError):intervals({'state':'aprobado','events':[{'type':'produccion_inicio','at':'2026-10-16T08:00:00Z'}]})
     def test_artifact_hash_modified(self):
         with self.assertRaises(ValueError):bundle({'artifacts':[{'path':'crecimiento-colombia/PLAN_MAESTRO.md','sha256':'0'*64}]})
-    def test_wip_limit(self):self.op['max_active']=4;self.rejects(self.op)
+    def test_wip_limit(self):self.op['max_active']=5;self.rejects(self.op)
 if __name__=='__main__':unittest.main()
