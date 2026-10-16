@@ -19,3 +19,6 @@
 #contenido .country-stats,#contenido .explorer,#contenido .audience{background:var(--section-surface);border-color:var(--card-border)}
 #contenido .country-stats article,#contenido .audience-metrics article,#contenido .audience-empty{background:var(--card-surface);border-color:var(--card-border)}
 #contenido .map-panel,#contenido .detail-panel{background:transparent;border-color:var(--card-border)}
+
+/* Top coverage cards match the warm destination-card surface. */
+#contenido .country-stats article{background:#fff8ed;border-color:#f2c77e}
