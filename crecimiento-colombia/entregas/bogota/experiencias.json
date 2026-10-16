@@ -1,0 +1,632 @@
+[
+  {
+    "id": "visita-oro",
+    "nombre": {
+      "es": "Recorrido Museo del Oro",
+      "en": "Gold Museum visit",
+      "pt-BR": "Visita ao Museu do Ouro"
+    },
+    "textos": {
+      "es": "Visita informativa; consultar recorrido oficial e idioma.",
+      "en": "Informational visit; check official tour and language.",
+      "pt-BR": "Visita informativa; confirme roteiro oficial e idioma."
+    },
+    "clase": "editorial_autonoma",
+    "sitio_id": "bogota-museo-oro",
+    "municipio_real": "Bogotá D.C.",
+    "ubicacion": "Carrera6 #15-88, Parque Santander",
+    "fuentes": [
+      "S02"
+    ],
+    "consulta": "2026-10-16",
+    "foto_id": null,
+    "foto_estado": "faltante",
+    "operador": null,
+    "canal_publico": null,
+    "alianza": false,
+    "vigencia_confirmada": false,
+    "registro_verificado": false,
+    "disponibilidad_confirmada": false,
+    "tarifa_confirmada": false,
+    "permisos_confirmados": false,
+    "public_status": "borrador_privado",
+    "bloqueo": null,
+    "aprobado": false,
+    "ilustracion": "no_generada"
+  },
+  {
+    "id": "mirador",
+    "nombre": {
+      "es": "Mirador de Monserrate",
+      "en": "Monserrate viewpoint",
+      "pt-BR": "Mirante de Monserrate"
+    },
+    "textos": {
+      "es": "Visita independiente, transporte sujeto a operación.",
+      "en": "Independent visit, transport subject to operation.",
+      "pt-BR": "Visita independente, transporte sujeito à operação."
+    },
+    "clase": "editorial_autonoma",
+    "sitio_id": "bogota-monserrate",
+    "municipio_real": "Bogotá D.C.",
+    "ubicacion": "Basílica en cima del cerro; transporte Carrera2Este21-48",
+    "fuentes": [
+      "S03"
+    ],
+    "consulta": "2026-10-16",
+    "foto_id": "opcion-1-monserrate",
+    "foto_estado": "referencia_pendiente",
+    "operador": null,
+    "canal_publico": null,
+    "alianza": false,
+    "vigencia_confirmada": false,
+    "registro_verificado": false,
+    "disponibilidad_confirmada": false,
+    "tarifa_confirmada": false,
+    "permisos_confirmados": false,
+    "public_status": "borrador_privado",
+    "bloqueo": null,
+    "aprobado": false,
+    "ilustracion": "no_generada"
+  },
+  {
+    "id": "ambiente",
+    "nombre": {
+      "es": "Exploración Jardín Botánico",
+      "en": "Botanical Garden discovery",
+      "pt-BR": "Exploração Jardim Botânico"
+    },
+    "textos": {
+      "es": "Consulta programación educativa; no prometer guía o Tropicario por foto histórica.",
+      "en": "Check educational programming; historical photo does not promise a guide or current Tropicario.",
+      "pt-BR": "Consulte programação educativa; foto histórica não garante guia ou Tropicario atual."
+    },
+    "clase": "editorial_autonoma",
+    "sitio_id": "bogota-jardin",
+    "municipio_real": "Bogotá D.C.",
+    "ubicacion": "Av Calle63 #68-95",
+    "fuentes": [
+      "S04"
+    ],
+    "consulta": "2026-10-16",
+    "foto_id": "jardin-botanico",
+    "foto_estado": "referencia_pendiente",
+    "operador": null,
+    "canal_publico": null,
+    "alianza": false,
+    "vigencia_confirmada": false,
+    "registro_verificado": false,
+    "disponibilidad_confirmada": false,
+    "tarifa_confirmada": false,
+    "permisos_confirmados": false,
+    "public_status": "borrador_privado",
+    "bloqueo": null,
+    "aprobado": false,
+    "ilustracion": "no_generada"
+  },
+  {
+    "id": "arte",
+    "nombre": {
+      "es": "Arte en la Manzana Cultural",
+      "en": "Art in the Cultural Block",
+      "pt-BR": "Arte na Manzana Cultural"
+    },
+    "textos": {
+      "es": "Visita al Museo Botero; confirmar acceso vigente.",
+      "en": "Visit Museo Botero; check current access.",
+      "pt-BR": "Visite o Museu Botero; confirme acesso atual."
+    },
+    "clase": "editorial_autonoma",
+    "sitio_id": "bogota-botero",
+    "municipio_real": "Bogotá D.C.",
+    "ubicacion": "Calle11 #4-41, La Candelaria",
+    "fuentes": [
+      "S20"
+    ],
+    "consulta": "2026-10-16",
+    "foto_id": null,
+    "foto_estado": "faltante",
+    "operador": null,
+    "canal_publico": null,
+    "alianza": false,
+    "vigencia_confirmada": false,
+    "registro_verificado": false,
+    "disponibilidad_confirmada": false,
+    "tarifa_confirmada": false,
+    "permisos_confirmados": false,
+    "public_status": "borrador_privado",
+    "bloqueo": null,
+    "aprobado": false,
+    "ilustracion": "no_generada"
+  },
+  {
+    "id": "ciencia",
+    "nombre": {
+      "es": "Ciencia interactiva en Maloka",
+      "en": "Interactive science at Maloka",
+      "pt-BR": "Ciência interativa na Maloka"
+    },
+    "textos": {
+      "es": "Elegir actividad oficial y confirmar requisitos.",
+      "en": "Choose an official activity and check requirements.",
+      "pt-BR": "Escolha atividade oficial e confirme requisitos."
+    },
+    "clase": "editorial_autonoma",
+    "sitio_id": "bogota-maloka",
+    "municipio_real": "Bogotá D.C.",
+    "ubicacion": "Carrera68D #24A-51, Ciudad Salitre",
+    "fuentes": [
+      "S21"
+    ],
+    "consulta": "2026-10-16",
+    "foto_id": null,
+    "foto_estado": "faltante",
+    "operador": null,
+    "canal_publico": null,
+    "alianza": false,
+    "vigencia_confirmada": false,
+    "registro_verificado": false,
+    "disponibilidad_confirmada": false,
+    "tarifa_confirmada": false,
+    "permisos_confirmados": false,
+    "public_status": "borrador_privado",
+    "bloqueo": null,
+    "aprobado": false,
+    "ilustracion": "no_generada"
+  },
+  {
+    "id": "cielo",
+    "nombre": {
+      "es": "Astronomía en el Planetario",
+      "en": "Astronomy at the Planetarium",
+      "pt-BR": "Astronomia no Planetário"
+    },
+    "textos": {
+      "es": "Consultar sesión y condiciones del día.",
+      "en": "Check the day’s session and conditions.",
+      "pt-BR": "Consulte sessão e condições do dia."
+    },
+    "clase": "editorial_autonoma",
+    "sitio_id": "bogota-planetario",
+    "municipio_real": "Bogotá D.C.",
+    "ubicacion": "Calle26B #5-93",
+    "fuentes": [
+      "S18"
+    ],
+    "consulta": "2026-10-16",
+    "foto_id": null,
+    "foto_estado": "faltante",
+    "operador": null,
+    "canal_publico": null,
+    "alianza": false,
+    "vigencia_confirmada": false,
+    "registro_verificado": false,
+    "disponibilidad_confirmada": false,
+    "tarifa_confirmada": false,
+    "permisos_confirmados": false,
+    "public_status": "borrador_privado",
+    "bloqueo": null,
+    "aprobado": false,
+    "ilustracion": "no_generada"
+  },
+  {
+    "id": "gastronomia",
+    "nombre": {
+      "es": "Cocinas de La Perseverancia",
+      "en": "La Perseverancia food stalls",
+      "pt-BR": "Cozinhas de La Perseverancia"
+    },
+    "textos": {
+      "es": "Paseo editorial por mercado, consumos y horarios con cada negocio.",
+      "en": "Editorial market visit; purchases and hours depend on each vendor.",
+      "pt-BR": "Passeio editorial pelo mercado; consumo e horários com cada negócio."
+    },
+    "clase": "editorial_autonoma",
+    "sitio_id": "bogota-perseverancia",
+    "municipio_real": "Bogotá D.C.",
+    "ubicacion": "Carrera5 #30A-30, Santa Fe",
+    "fuentes": [
+      "S24"
+    ],
+    "consulta": "2026-10-16",
+    "foto_id": null,
+    "foto_estado": "faltante",
+    "operador": null,
+    "canal_publico": null,
+    "alianza": false,
+    "vigencia_confirmada": false,
+    "registro_verificado": false,
+    "disponibilidad_confirmada": false,
+    "tarifa_confirmada": false,
+    "permisos_confirmados": false,
+    "public_status": "borrador_privado",
+    "bloqueo": null,
+    "aprobado": false,
+    "ilustracion": "no_generada"
+  },
+  {
+    "id": "mercado",
+    "nombre": {
+      "es": "Oficios y mercado en Usaquén",
+      "en": "Crafts and market in Usaquén",
+      "pt-BR": "Artesanato e mercado em Usaquén"
+    },
+    "textos": {
+      "es": "Recorrer mercado según jornada confirmada por asociación.",
+      "en": "Visit the market on an association-confirmed session.",
+      "pt-BR": "Visite o mercado em jornada confirmada pela associação."
+    },
+    "clase": "editorial_autonoma",
+    "sitio_id": "bogota-usaquen",
+    "municipio_real": "Bogotá D.C.",
+    "ubicacion": "Carrera6A entre calles119–120A",
+    "fuentes": [
+      "S27"
+    ],
+    "consulta": "2026-10-16",
+    "foto_id": null,
+    "foto_estado": "faltante",
+    "operador": null,
+    "canal_publico": null,
+    "alianza": false,
+    "vigencia_confirmada": false,
+    "registro_verificado": false,
+    "disponibilidad_confirmada": false,
+    "tarifa_confirmada": false,
+    "permisos_confirmados": false,
+    "public_status": "borrador_privado",
+    "bloqueo": null,
+    "aprobado": false,
+    "ilustracion": "no_generada"
+  },
+  {
+    "id": "ciclovia",
+    "nombre": {
+      "es": "Ciclovía recreativa",
+      "en": "Recreational Ciclovía",
+      "pt-BR": "Ciclovía recreativa"
+    },
+    "textos": {
+      "es": "Programa ciudadano; verificar mapa y cierres. Foto histórica, no oferta de Bike Tours.",
+      "en": "Public programme; check routes and closures. Historical photo, not a Bike Tours offer.",
+      "pt-BR": "Programa público; confira trechos e fechamentos. Foto histórica, não oferta Bike Tours."
+    },
+    "clase": "editorial_autonoma",
+    "sitio_id": null,
+    "municipio_real": "Bogotá D.C.",
+    "ubicacion": "Punto operador Carrera3 #12-42, La Candelaria; recorrido exacto por confirmar",
+    "fuentes": [
+      "S17"
+    ],
+    "consulta": "2026-10-16",
+    "foto_id": "actividad-ciclovia",
+    "foto_estado": "referencia_historica_del_programa_no_operador",
+    "operador": null,
+    "canal_publico": null,
+    "alianza": false,
+    "vigencia_confirmada": false,
+    "registro_verificado": false,
+    "disponibilidad_confirmada": false,
+    "tarifa_confirmada": false,
+    "permisos_confirmados": false,
+    "public_status": "borrador_privado",
+    "bloqueo": null,
+    "aprobado": false,
+    "ilustracion": "no_generada"
+  },
+  {
+    "id": "bike-tour",
+    "nombre": {
+      "es": "Recorrido en bicicleta: Bogotá Bike Tours",
+      "en": "Bicycle tour: Bogotá Bike Tours",
+      "pt-BR": "Passeio de bicicleta: Bogotá Bike Tours"
+    },
+    "textos": {
+      "es": "Oferta en sitio propio; ruta, RNT y disponibilidad por confirmar directamente.",
+      "en": "Offer on operator website; route, registration and availability need direct confirmation.",
+      "pt-BR": "Oferta no site próprio; roteiro, registro e disponibilidade precisam de confirmação."
+    },
+    "clase": "oferta_documentada_operador",
+    "sitio_id": null,
+    "municipio_real": "Bogotá D.C.",
+    "ubicacion": "Punto operador Carrera3 #12-42, La Candelaria; recorrido exacto por confirmar",
+    "fuentes": [
+      "S22"
+    ],
+    "consulta": "2026-10-16",
+    "foto_id": null,
+    "foto_estado": "faltante",
+    "operador": "Bogotá Bike Tours",
+    "canal_publico": "https://www.bogotabiketours.com/",
+    "alianza": false,
+    "vigencia_confirmada": false,
+    "registro_verificado": false,
+    "disponibilidad_confirmada": false,
+    "tarifa_confirmada": false,
+    "permisos_confirmados": false,
+    "public_status": "borrador_privado",
+    "bloqueo": null,
+    "aprobado": false,
+    "ilustracion": "no_generada"
+  },
+  {
+    "id": "graffiti-bike",
+    "nombre": {
+      "es": "Graffiti Bike Tour: Bogotá Bike Tours",
+      "en": "Graffiti Bike Tour: Bogotá Bike Tours",
+      "pt-BR": "Graffiti Bike Tour: Bogotá Bike Tours"
+    },
+    "textos": {
+      "es": "Oferta documentada del operador; no usar Ciclovía como foto de este recorrido.",
+      "en": "Documented operator offer; do not use Ciclovía as a photo of this tour.",
+      "pt-BR": "Oferta documentada do operador; não usar Ciclovía como foto deste passeio."
+    },
+    "clase": "oferta_documentada_operador",
+    "sitio_id": null,
+    "municipio_real": "Bogotá D.C.",
+    "ubicacion": "Punto operador Carrera3 #12-42, La Candelaria; recorrido exacto por confirmar",
+    "fuentes": [
+      "S22"
+    ],
+    "consulta": "2026-10-16",
+    "foto_id": null,
+    "foto_estado": "faltante",
+    "operador": "Bogotá Bike Tours",
+    "canal_publico": "https://www.bogotabiketours.com/",
+    "alianza": false,
+    "vigencia_confirmada": false,
+    "registro_verificado": false,
+    "disponibilidad_confirmada": false,
+    "tarifa_confirmada": false,
+    "permisos_confirmados": false,
+    "public_status": "borrador_privado",
+    "bloqueo": null,
+    "aprobado": false,
+    "ilustracion": "no_generada"
+  },
+  {
+    "id": "cooking",
+    "nombre": {
+      "es": "Clase de cocina: Bogotá Bike Tours",
+      "en": "Cooking class: Bogotá Bike Tours",
+      "pt-BR": "Aula de cozinha: Bogotá Bike Tours"
+    },
+    "textos": {
+      "es": "Oferta listada; sede final, menú y operación pendientes de comprobar.",
+      "en": "Listed offer; final venue, menu and operation still need verification.",
+      "pt-BR": "Oferta listada; local final, cardápio e operação ainda por verificar."
+    },
+    "clase": "oferta_documentada_operador",
+    "sitio_id": null,
+    "municipio_real": "Bogotá D.C.",
+    "ubicacion": "Punto operador Carrera3 #12-42, La Candelaria; recorrido exacto por confirmar",
+    "fuentes": [
+      "S22"
+    ],
+    "consulta": "2026-10-16",
+    "foto_id": null,
+    "foto_estado": "faltante",
+    "operador": "Bogotá Bike Tours",
+    "canal_publico": "https://www.bogotabiketours.com/",
+    "alianza": false,
+    "vigencia_confirmada": false,
+    "registro_verificado": false,
+    "disponibilidad_confirmada": false,
+    "tarifa_confirmada": false,
+    "permisos_confirmados": false,
+    "public_status": "borrador_privado",
+    "bloqueo": null,
+    "aprobado": false,
+    "ilustracion": "no_generada"
+  },
+  {
+    "id": "senderismo",
+    "nombre": {
+      "es": "Senderismo Quebrada La Vieja",
+      "en": "Quebrada La Vieja hiking",
+      "pt-BR": "Trilha Quebrada La Vieja"
+    },
+    "textos": {
+      "es": "Candidato sujeto a reserva EAAB, tramo y apertura actuales.",
+      "en": "Candidate subject to EAAB booking and current section opening.",
+      "pt-BR": "Candidato sujeito à reserva EAAB e abertura do trecho."
+    },
+    "clase": "candidato_por_validar",
+    "sitio_id": "bogota-quebrada",
+    "municipio_real": "Bogotá D.C.",
+    "ubicacion": "Ingreso Calle71 Carrera2Este/Circunvalar, Chapinero",
+    "fuentes": [
+      "S23"
+    ],
+    "consulta": "2026-10-16",
+    "foto_id": null,
+    "foto_estado": "faltante",
+    "operador": null,
+    "canal_publico": null,
+    "alianza": false,
+    "vigencia_confirmada": false,
+    "registro_verificado": false,
+    "disponibilidad_confirmada": false,
+    "tarifa_confirmada": false,
+    "permisos_confirmados": false,
+    "public_status": "oculto",
+    "bloqueo": "No se comprobó cupo/apertura actual; no ofrecer actividad activa.",
+    "aprobado": false,
+    "ilustracion": "no_generada"
+  },
+  {
+    "id": "aves",
+    "nombre": {
+      "es": "Observación de aves Santa María del Lago",
+      "en": "Santa María del Lago birdwatching",
+      "pt-BR": "Observação de aves Santa María del Lago"
+    },
+    "textos": {
+      "es": "Candidato; validar entidad gestora, acceso y guía si aplica.",
+      "en": "Candidate; check managing authority, access and guide if applicable.",
+      "pt-BR": "Candidato; verificar gestor, acesso e guia se aplicável."
+    },
+    "clase": "candidato_por_validar",
+    "sitio_id": "bogota-humedal",
+    "municipio_real": "Bogotá D.C.",
+    "ubicacion": "Engativá; dirección de ingreso exacta pendiente",
+    "fuentes": [
+      "S25"
+    ],
+    "consulta": "2026-10-16",
+    "foto_id": null,
+    "foto_estado": "faltante",
+    "operador": null,
+    "canal_publico": null,
+    "alianza": false,
+    "vigencia_confirmada": false,
+    "registro_verificado": false,
+    "disponibilidad_confirmada": false,
+    "tarifa_confirmada": false,
+    "permisos_confirmados": false,
+    "public_status": "oculto",
+    "bloqueo": "Fuente turística contiene afirmaciones dudosas; contraste pendiente.",
+    "aprobado": false,
+    "ilustracion": "no_generada"
+  },
+  {
+    "id": "cine",
+    "nombre": {
+      "es": "Una función de cine",
+      "en": "A film screening",
+      "pt-BR": "Uma sessão de cinema"
+    },
+    "textos": {
+      "es": "Elegir sesión de la agenda oficial y confirmar requisitos.",
+      "en": "Choose a screening from the official agenda and check requirements.",
+      "pt-BR": "Escolha sessão da agenda oficial e confirme requisitos."
+    },
+    "clase": "editorial_autonoma",
+    "sitio_id": "bogota-cinemateca",
+    "municipio_real": "Bogotá D.C.",
+    "ubicacion": "Carrera3 #19-10",
+    "fuentes": [
+      "S31"
+    ],
+    "consulta": "2026-10-16",
+    "foto_id": null,
+    "foto_estado": "faltante",
+    "operador": null,
+    "canal_publico": null,
+    "alianza": false,
+    "vigencia_confirmada": false,
+    "registro_verificado": false,
+    "disponibilidad_confirmada": false,
+    "tarifa_confirmada": false,
+    "permisos_confirmados": false,
+    "public_status": "borrador_privado",
+    "bloqueo": null,
+    "aprobado": false,
+    "ilustracion": "no_generada"
+  },
+  {
+    "id": "arte-urbano",
+    "nombre": {
+      "es": "Paseo de arte urbano",
+      "en": "Urban art walk",
+      "pt-BR": "Passeio de arte urbana"
+    },
+    "textos": {
+      "es": "Propuesta editorial, no tour del operador BikeTours; circuito por confirmar.",
+      "en": "Editorial proposal, not a BikeTours tour; route needs confirmation.",
+      "pt-BR": "Proposta editorial, não passeio BikeTours; roteiro por confirmar."
+    },
+    "clase": "editorial_autonoma",
+    "sitio_id": "bogota-grafiti",
+    "municipio_real": "Bogotá D.C.",
+    "ubicacion": "Sector Avenida Américas Carrera53A; recorrido exacto pendiente",
+    "fuentes": [
+      "S32"
+    ],
+    "consulta": "2026-10-16",
+    "foto_id": null,
+    "foto_estado": "faltante",
+    "operador": null,
+    "canal_publico": null,
+    "alianza": false,
+    "vigencia_confirmada": false,
+    "registro_verificado": false,
+    "disponibilidad_confirmada": false,
+    "tarifa_confirmada": false,
+    "permisos_confirmados": false,
+    "public_status": "borrador_privado",
+    "bloqueo": null,
+    "aprobado": false,
+    "ilustracion": "no_generada"
+  },
+  {
+    "id": "noche",
+    "nombre": {
+      "es": "Vida nocturna Theatron",
+      "en": "Theatron nightlife",
+      "pt-BR": "Vida noturna Theatron"
+    },
+    "textos": {
+      "es": "Candidato oculto, admisión y programación pendientes.",
+      "en": "Hidden candidate; admission and programme unverified.",
+      "pt-BR": "Candidato oculto; admissão e programação por verificar."
+    },
+    "clase": "candidato_por_validar",
+    "sitio_id": "bogota-theatron",
+    "municipio_real": "Bogotá D.C.",
+    "ubicacion": "Bogotá, Chapinero; dirección exacta pendiente",
+    "fuentes": [
+      "S33"
+    ],
+    "consulta": "2026-10-16",
+    "foto_id": null,
+    "foto_estado": "faltante",
+    "operador": null,
+    "canal_publico": null,
+    "alianza": false,
+    "vigencia_confirmada": false,
+    "registro_verificado": false,
+    "disponibilidad_confirmada": false,
+    "tarifa_confirmada": false,
+    "permisos_confirmados": false,
+    "public_status": "oculto",
+    "bloqueo": "datos operativos y ubicación final pendientes",
+    "aprobado": false,
+    "ilustracion": "no_generada"
+  },
+  {
+    "id": "artes-escenicas",
+    "nombre": {
+      "es": "Una función de artes escénicas",
+      "en": "A performing arts event",
+      "pt-BR": "Uma apresentação de artes cênicas"
+    },
+    "textos": {
+      "es": "Elige una función de la agenda del Centro Nacional de las Artes o Teatro Colón y confirma sala, requisitos y fecha.",
+      "en": "Choose an event from the National Arts Centre or Teatro Colón programme and confirm venue, requirements and date.",
+      "pt-BR": "Escolha evento da agenda do Centro Nacional das Artes ou Teatro Colón e confirme sala, requisitos e data."
+    },
+    "clase": "editorial_autonoma",
+    "sitio_id": "bogota-delia",
+    "municipio_real": "Bogotá D.C.",
+    "ubicacion": "Calle11 #5-60 Centro Nacional de las Artes; Teatro Colón Calle10 #5-32, verificar sala",
+    "fuentes": [
+      "S12"
+    ],
+    "consulta": "2026-10-16",
+    "foto_id": null,
+    "foto_estado": "faltante",
+    "operador": null,
+    "canal_publico": null,
+    "alianza": false,
+    "vigencia_confirmada": false,
+    "registro_verificado": false,
+    "disponibilidad_confirmada": false,
+    "tarifa_confirmada": false,
+    "permisos_confirmados": false,
+    "public_status": "borrador_privado",
+    "bloqueo": null,
+    "aprobado": false,
+    "ilustracion": "no_generada"
+  }
+]
