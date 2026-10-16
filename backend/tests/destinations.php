@@ -23,6 +23,7 @@ $pdo->exec(file_get_contents(dirname(__DIR__).'/database/migrations/013-accounts
 $pdo->exec(file_get_contents(dirname(__DIR__).'/database/migrations/014-tiered-business-description.sqlite.sql'));
 $pdo->exec(file_get_contents(dirname(__DIR__).'/database/migrations/015-business-media-quotas.sqlite.sql'));
 $pdo->exec(file_get_contents(dirname(__DIR__).'/database/migrations/016-plan-content-limits.sqlite.sql'));
+$pdo->exec(file_get_contents(dirname(__DIR__).'/database/migrations/021-business-payment-evidence.sqlite.sql'));
 $pdo->exec(file_get_contents(dirname(__DIR__).'/database/migrations/025-subscription-renewal-history.sqlite.sql'));
 $root=dirname(__DIR__,2);
 $catalog=json_decode(file_get_contents($root.'/content/destinos-dinamicos.json'),true,512,JSON_THROW_ON_ERROR);

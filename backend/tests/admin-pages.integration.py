@@ -550,6 +550,20 @@ try:
     broken_config = dict(config, dsn='sqlite:' + str(broken_path))
     broken_file = WORK / 'private/missing-config.php'
     broken_file.write_text("<?php return json_decode(base64_decode('" + base64.b64encode(json.dumps(broken_config).encode()).decode() + "'), true);\n")
+    DB.execute("INSERT INTO businesses(public_id,destination_id,category_code,slug) SELECT 'delete-http-fixture',destination_id,category_code,'delete-http-fixture' FROM businesses WHERE id=?", (imported_id,))
+    delete_id = DB.execute("SELECT id FROM businesses WHERE public_id='delete-http-fixture'").fetchone()[0]
+    DB.execute("INSERT INTO business_translations(business_id,locale,display_name,summary,description) VALUES(?,'es','Negocio para borrar','','')", (delete_id,))
+    DB.commit()
+    status, body, _ = request('/admin/negocios.php?id='+str(delete_id), opener=ADMIN)
+    check(status == 200 and 'Eliminar definitivamente' in body, 'Falta la confirmación visible de borrado.')
+    delete_csrf = __import__('re').search(r'name="csrf" value="([^"]+)"', body).group(1)
+    unauthenticated = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
+    for opener, token, confirmation in [(unauthenticated, delete_csrf, '1'), (ADMIN, 'invalid', '1'), (ADMIN, delete_csrf, '')]:
+        status, _, _ = request('/admin/negocios.php', {'csrf': token, 'action':'delete', 'id':str(delete_id), 'confirm_delete':confirmation}, opener)
+        check(status in (400,403) and DB.execute('SELECT COUNT(*) FROM businesses WHERE id=?',(delete_id,)).fetchone()[0] == 1, 'Se borró sin sesión, CSRF válido o confirmación.')
+    status, body, _ = request('/admin/negocios.php', {'csrf':delete_csrf,'action':'delete','id':str(delete_id),'confirm_delete':'1'}, ADMIN)
+    check(status == 200 and DB.execute('SELECT COUNT(*) FROM businesses WHERE id=?',(delete_id,)).fetchone()[0] == 0 and 'Negocio eliminado.' in body, f'El borrado confirmado falló: HTTP {status}, {body[:300]}')
+
     broken_env = dict(__import__('os').environ, EL_LOCAL_CONFIG_PATH=str(broken_file))
     # PHP's server reads the env only at startup, so make a second ephemeral listener.
     with socket.socket() as sock:

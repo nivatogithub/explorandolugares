@@ -4,6 +4,32 @@ declare(strict_types=1);
 final class BusinessAdminService
 {
     private const LOCALES=['es','en','pt-BR'];
+    private const PROTECTED_SUBSCRIPTION = '(bs.plan_code<>"free" OR COALESCE(bs.quoted_amount,0)>0 OR bs.reviewed_at IS NOT NULL OR bs.status IN ("paid_pending_publication") OR EXISTS (SELECT 1 FROM business_subscription_payment_evidence pe WHERE pe.subscription_id=bs.id))';
+
+    public function canDelete(int $id): bool
+    {
+        $q=$this->pdo->prepare('SELECT id FROM business_subscriptions bs WHERE bs.business_id=? AND '.self::PROTECTED_SUBSCRIPTION.' LIMIT 1');
+        $q->execute([$id]);
+        return !$q->fetchColumn();
+    }
+
+    public function delete(int $id, bool $confirmed): void
+    {
+        if(!$confirmed)throw new RuntimeException('Confirma que deseas eliminar definitivamente este negocio y sus canales.');
+        $this->pdo->beginTransaction();
+        try {
+            $lock=$this->pdo->getAttribute(PDO::ATTR_DRIVER_NAME)==='mysql'?' FOR UPDATE':'';
+            $q=$this->pdo->prepare('SELECT id FROM businesses WHERE id=?'.$lock);$q->execute([$id]);
+            if(!$q->fetchColumn())throw new RuntimeException('El negocio ya no existe.');
+            // Lock historical subscriptions too: current Free status is insufficient.
+            $q=$this->pdo->prepare('SELECT id FROM business_subscriptions WHERE business_id=?'.$lock);$q->execute([$id]);$q->fetchAll();
+            if(!$this->canDelete($id))throw new RuntimeException('No se puede eliminar: el negocio tiene historial de suscripción paga o comprobantes de pago, aunque actualmente sea Gratis.');
+            $q=$this->pdo->prepare('SELECT storage_name FROM business_image_references WHERE business_id=?');$q->execute([$id]);$files=$q->fetchAll(PDO::FETCH_COLUMN);
+            $q=$this->pdo->prepare('DELETE FROM businesses WHERE id=?');$q->execute([$id]);
+            $this->pdo->commit();
+            foreach($files as $name){if(preg_match('/^[a-f0-9]{40}\.(jpg|png|webp)$/D',(string)$name)){ $path=$this->referenceStorage.'/'.$name;if(is_file($path)&&!@unlink($path))error_log('Explorando Lugares: quedó pendiente retirar una imagen privada de un negocio eliminado.'); }}
+        }catch(Throwable $error){if($this->pdo->inTransaction())$this->pdo->rollBack();throw $error;}
+    }
 
     public function __construct(private PDO $pdo, private string $referenceStorage)
     {
@@ -24,6 +50,7 @@ final class BusinessAdminService
     public function all(): array
     {
         return $this->pdo->query('SELECT b.id,b.public_id,b.destination_id,b.record_origin,b.information_status,b.claim_status,b.operation_status,b.publication_status,b.updated_at,
+                NOT EXISTS (SELECT 1 FROM business_subscriptions bs WHERE bs.business_id=b.id AND '.self::PROTECTED_SUBSCRIPTION.') AS can_delete,
                 d.slug AS destination_slug,dt.display_name AS destination_name,c.code AS category_code,ct.label AS category_label,
                 bt.display_name,
                 (SELECT COUNT(*) FROM business_translations tx JOIN business_translations tx_es ON tx_es.business_id=tx.business_id AND tx_es.locale="es" WHERE tx.business_id=b.id AND tx.display_name<>"" AND (tx.locale="es" OR tx.display_name<>tx_es.display_name OR tx.summary<>tx_es.summary OR tx.description<>tx_es.description OR COALESCE(tx.brand_story,"")<>COALESCE(tx_es.brand_story,"") OR COALESCE(tx.featured_services,"")<>COALESCE(tx_es.featured_services,""))) AS locale_count,
