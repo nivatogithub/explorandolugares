@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+require_once __DIR__.'/BusinessCategories.php';
+
 final class BusinessRepository
 {
     private const LOCALES = ['es','en','pt-BR'];
@@ -56,6 +58,7 @@ final class BusinessRepository
         $business=$query->fetch(PDO::FETCH_ASSOC);
         if (!$business || !(bool)$business['has_business_page']) return null;
         $business['id']=(int)$business['id'];
+        $business=BusinessCategories::enrich($this->pdo,[$business],$locale)[0];
         $business['features']=$this->features((string)$business['plan_code'],$locale);
         if (!isset($business['features']['business_page'])) return null;
         $business['logo']=$this->asset($business['id'],$locale,'logo');

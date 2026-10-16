@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+require_once __DIR__.'/BusinessCategories.php';
+
 final class BusinessAdminService
 {
     private const LOCALES=['es','en','pt-BR'];
@@ -49,7 +51,7 @@ final class BusinessAdminService
 
     public function all(): array
     {
-        return $this->pdo->query('SELECT b.id,b.public_id,b.destination_id,b.record_origin,b.information_status,b.claim_status,b.operation_status,b.publication_status,b.updated_at,
+        $rows=$this->pdo->query('SELECT b.id,b.public_id,b.destination_id,b.record_origin,b.information_status,b.claim_status,b.operation_status,b.publication_status,b.updated_at,
                 NOT EXISTS (SELECT 1 FROM business_subscriptions bs WHERE bs.business_id=b.id AND '.self::PROTECTED_SUBSCRIPTION.') AS can_delete,
                 d.slug AS destination_slug,dt.display_name AS destination_name,c.code AS category_code,ct.label AS category_label,
                 bt.display_name,
@@ -62,6 +64,7 @@ final class BusinessAdminService
             JOIN service_categories c ON c.code=b.category_code JOIN service_category_translations ct ON ct.category_code=c.code AND ct.locale="es"
             JOIN business_translations bt ON bt.business_id=b.id AND bt.locale="es"
             ORDER BY b.updated_at DESC,b.id DESC')->fetchAll(PDO::FETCH_ASSOC);
+        return BusinessCategories::enrich($this->pdo,$rows);
     }
 
     public function find(int $id): ?array
@@ -78,6 +81,7 @@ final class BusinessAdminService
         $row['image_references']=[];$q=$this->pdo->prepare('SELECT id,original_name,mime_type,file_size,width,height,review_status,created_at FROM business_image_references WHERE business_id=? ORDER BY id');$q->execute([$id]);$row['image_references']=$q->fetchAll(PDO::FETCH_ASSOC);
         $q=$this->pdo->prepare('SELECT plan_code,billing_frequency,status,starts_at,ends_at FROM business_subscriptions WHERE business_id=? ORDER BY id DESC LIMIT 1');$q->execute([$id]);$subscription=$q->fetch(PDO::FETCH_ASSOC);
         $row['subscription']=$subscription?:null;
+        $row=BusinessCategories::enrich($this->pdo,[$row])[0];
         return $row;
     }
 
@@ -88,6 +92,7 @@ final class BusinessAdminService
         $category=(string)($input['category_code']??'');$valid=$this->pdo->prepare('SELECT 1 FROM service_categories WHERE code=? AND is_active=1');$valid->execute([$category]);
         if(!$valid->fetchColumn())throw new RuntimeException('Selecciona una categoría válida.');
         $existing=$id?$this->find($id):null;if($id&&!$existing)throw new RuntimeException('El negocio ya no existe.');
+        $categoryCodes=BusinessCategories::validate($this->pdo,$input['category_codes']??array_values(array_diff($existing['category_codes']??[],[$existing['category_code']??''])),$category);
         $submitted=is_array($input['translations']??null)?$input['translations']:[];$translations=[];
         $locales=$id?array_values(array_unique(['es',...array_intersect(self::LOCALES,array_keys($submitted))])):['es'];
         foreach($locales as $locale){$v=is_array($submitted[$locale]??null)?$submitted[$locale]:($existing['translations'][$locale]??[]);$translations[$locale]=['display_name'=>trim((string)($v['display_name']??'')),'summary'=>trim((string)($v['summary']??'')),'description'=>trim((string)($v['description']??'')),'brand_story'=>trim((string)($v['brand_story']??'')),'featured_services'=>trim((string)($v['featured_services']??''))];}
@@ -111,6 +116,7 @@ final class BusinessAdminService
             $imageHelp=$input['image_assistance_requested']??($existing['image_assistance_requested']??'0');if(!in_array((string)$imageHelp,['0','1','2'],true))throw new RuntimeException('Indica si el negocio necesita apoyo con sus imágenes.');$imageHelp=(int)$imageHelp;
             if($id){$q=$this->pdo->prepare('UPDATE businesses SET destination_id=?,category_code=?,address_text=?,location_reference=?,latitude=?,longitude=?,location_source=?,location_map_url=?,location_confirmed=?,opening_hours=?,price_range=?,capacity_count=?,menu_url=?,reservations_url=?,image_assistance_requested=?,publication_status="draft",updated_at=CURRENT_TIMESTAMP WHERE id=?');$q->execute([$destinationId,$category,...array_values($location),$imageHelp,$id]);}
             else{$publicId=$this->uuid();$q=$this->pdo->prepare('INSERT INTO businesses(public_id,destination_id,category_code,address_text,location_reference,latitude,longitude,location_source,location_map_url,location_confirmed,opening_hours,price_range,capacity_count,menu_url,reservations_url,image_assistance_requested,record_origin,slug,information_status,claim_status,operation_status,publication_status,display_order) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,"admin_created",?,"PENDIENTE_REVISION","NO_RECLAMADO","DESCONOCIDO","draft",0)');$q->execute([$publicId,$destinationId,$category,...array_values($location),$imageHelp,$slug]);$id=(int)$this->pdo->lastInsertId();}
+            BusinessCategories::replace($this->pdo,$id,$category,$categoryCodes);
             $this->syncTranslations($id,$translations);$this->syncContacts($id,is_array($input['contacts']??null)?$input['contacts']:[],$features,$existing['contacts']??[]);
             $this->storeImageReferences($id,$input['reference_images']??null,$storedFiles,$this->referenceLimit($planCode));
             $current=$existing['subscription']??null;

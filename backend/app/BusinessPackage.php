@@ -55,7 +55,7 @@ final class BusinessPackage
         $businesses=$manifest['businesses']??null;if(!is_array($businesses)||count($businesses)<1||count($businesses)>self::MAX_BUSINESSES)throw new RuntimeException('El paquete debe incluir entre 1 y 500 negocios.');
         foreach($businesses as $index=>$business){
             if(!is_array($business))throw new RuntimeException('El negocio '.($index+1).' debe ser un objeto.');
-            if(array_diff(array_keys($business),['category_code','information_status','name','summary','description','sources','image_references']))throw new RuntimeException('El negocio '.($index+1).' tiene campos desconocidos.');
+            if(array_diff(array_keys($business),['category_code','category_codes','information_status','name','summary','description','sources','image_references']))throw new RuntimeException('El negocio '.($index+1).' tiene campos desconocidos.');
         }
         self::imageReferences($manifest);
     }

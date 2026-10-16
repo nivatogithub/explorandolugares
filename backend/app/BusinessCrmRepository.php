@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 require_once __DIR__.'/AccountProfileService.php';
+require_once __DIR__.'/BusinessCategories.php';
 require_once __DIR__.'/BusinessResearchContactImporter.php';
 
 /** CRM is a private view of businesses, not a second business registry. */
@@ -39,13 +40,13 @@ final class BusinessCrmRepository
         $summary=$counts;
         if($contactWhere!==''){$where.=$contactWhere;$q=$this->pdo->prepare('SELECT COUNT(*) AS total,COALESCE(SUM(CASE WHEN (crm.research_contact_count+crm.profile_contact_count)>0 THEN 1 ELSE 0 END),0) AS with_contact'.$from.$where);$q->execute($params);$counts=$q->fetch(PDO::FETCH_ASSOC);}
         $total=(int)$counts['total'];$pageSize=max(1,min(100,$pageSize));$pageCount=max(1,(int)ceil($total/$pageSize));$page=max(1,min($page,$pageCount));
-        $q=$this->pdo->prepare('SELECT crm.*'.$from.$where.' ORDER BY crm.display_name,crm.id LIMIT '.$pageSize.' OFFSET '.(($page-1)*$pageSize));$q->execute($params);$rows=$q->fetchAll(PDO::FETCH_ASSOC);
+        $q=$this->pdo->prepare('SELECT crm.*'.$from.$where.' ORDER BY crm.display_name,crm.id LIMIT '.$pageSize.' OFFSET '.(($page-1)*$pageSize));$q->execute($params);$rows=BusinessCategories::enrich($this->pdo,$q->fetchAll(PDO::FETCH_ASSOC));
         return ['summary_total'=>(int)$summary['total'],'summary_with_contact'=>(int)$summary['with_contact'],'summary_without_contact'=>(int)$summary['total']-(int)$summary['with_contact'],'rows'=>$rows,'total'=>$total,'with_contact'=>(int)$counts['with_contact'],'without_contact'=>$total-(int)$counts['with_contact'],'page'=>$page,'page_count'=>$pageCount,'research_ready'=>$research];
     }
 
     public function find(int $id):?array
     {
-        $q=$this->pdo->prepare('SELECT crm.* FROM ('.$this->baseQuery($this->researchReady()).') crm WHERE crm.id=?');$q->execute([$id]);$row=$q->fetch(PDO::FETCH_ASSOC);return $row?:null;
+        $q=$this->pdo->prepare('SELECT crm.* FROM ('.$this->baseQuery($this->researchReady()).') crm WHERE crm.id=?');$q->execute([$id]);$row=$q->fetch(PDO::FETCH_ASSOC);return $row?BusinessCategories::enrich($this->pdo,[$row])[0]:null;
     }
 
     private function baseQuery(bool $research):string
