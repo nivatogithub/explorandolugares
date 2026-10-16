@@ -1,9 +1,9 @@
-# Manizales · Caldas
+# Manizales
 
-ID `CO-17-manizales` · prioridad 2 · puntuación de preparación 60.0/100.
-Estado inicial: planificado; contenido y publicación pendientes de auditoría.
+ID `CO-17-manizales` · P1 turística · preparación 60.0/100 · turismo 82/100 (evaluación editorial).
+Ver turismo.json para fuentes, criterio y categoría anterior.
 
-## Checklist de ejecución
+# Proceso replicable de lugar
 
 ## Identificación y control
 

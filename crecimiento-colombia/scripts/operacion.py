@@ -4,6 +4,7 @@ import argparse,hashlib,json,statistics
 from datetime import datetime
 from pathlib import Path
 from validar import ROOT,validate as validate_original,require,WEIGHTS
+from turismo import ordered_rows
 REPO=ROOT.parent
 COMPONENTS={'investigacion','fuentes_oficiales','textos_es','historia','sitios_interes','experiencias','directorio_gratuito','fotos_reales','derivados','traducciones_en','traducciones_pt','integracion','previsualizacion'}
 STATES={'sin_iniciar','asignado','produccion','revision','correcciones','bloqueado','aprobado','publicado'}
@@ -45,10 +46,10 @@ def validate(data=None):
     inv,manifests=validate_original();op=data or json.loads((ROOT/'operacion.json').read_text())
     require(op['inventory_sha256']==digest((ROOT/'inventario.json').read_bytes()),'Inventario cambió: versionar/revisar cola')
     require(op['universe_version']==inv['universe_version'],'Universo distinto')
-    expected=[]
-    for di,d in enumerate(inv['departments']):
-        for pi,p in enumerate(d['places']):expected.append((d,p,di,pi))
-    expected.sort(key=lambda x:(x[0]['priority'],x[1]['priority'],-x[0]['score'],x[2],-x[1]['score'],x[3]))
+    expected,tourism=ordered_rows(inv)
+    require(op['tourism_sha256']==digest((ROOT/'turismo.json').read_bytes()),'Evaluación turística cambió: revisar/reordenar cola')
+    tby={t['id']:t for t in tourism['places']}
+    require(op['ordering']=='department_priority,place_priority,-place_tourism_score,editorial_tie_order,department_tourism_order,place_id','Método de orden incorrecto')
     qs=op['queue'];require(len(qs)==len(expected),'Cola incompleta')
     workers=op['workers'];require([w['name'] for w in workers]==['Lugar 1','Lugar 2','Lugar 3'],'Nombres workers inválidos')
     require(type(op['max_active']) is int and op['max_active'] in (2,3),'Capacidad inválida')
@@ -65,6 +66,7 @@ def validate(data=None):
     if any(q['state']!='sin_iniciar' for q in qs):evidence(op['priority_approval'])
     for rank,(q,(d,p,di,pi)) in enumerate(zip(qs,expected),1):
         require(q['rank']==rank and q['place_id']==p['id'],'Orden alterado o duplicado')
+        require(q['tourism_score']==tby[p['id']]['tourism_score'] and q['tourism_sources']==tby[p['id']]['sources'],'Turismo de cola desincronizado')
         require(q['source_pointer']==f'/departments/{di}/places/{pi}' and q['manifest']==p['path'],'Trazabilidad alterada')
         for key,value in [('department_priority',d['priority']),('place_priority',p['priority']),('department_score',d['score']),('place_score',p['score']),('priority_basis',p['priority_basis']),('department_priority_basis',d['priority_basis']),('name',p['name']),('department',d['name'])]:require(q[key]==value,'Dato de cola distinto de inventario: '+key)
         require(q['branch']==byid[p['id']]['branch'],'Rama de lugar incorrecta')
@@ -125,9 +127,9 @@ def report():
     den=sum(d['weight'] for d in ds);country={k:sum(d['weight']*d[k] for d in ds)/den for k in keys}
     medians={k:dict(samples=len(v),median_hours=statistics.median(v) if v else None) for k in PAIRS for v in [[p['timings_hours'][k] for p in places if p['timings_hours'][k] is not None]]}
     observed={k:v['median_hours'] for k,v in medians.items() if v['median_hours'] is not None}
-    result=dict(universe_version=inv['universe_version'],scope=inv['scope'],administrative_national_coverage_percent=None,coverage_denominator='78 candidatos editoriales / 33 unidades; país ponderado por departamento, no censo nacional',country=country,departments=ds,places=places,phase_metrics=medians,bottleneck_candidate=max(observed,key=observed.get) if observed else None,active=sum(q['state'] in ACTIVE for q in op['queue']),awaiting_review=sum(q['state']=='revision' for q in op['queue']),not_started=sum(q['state']=='sin_iniciar' for q in op['queue']))
+    result=dict(universe_version=inv['universe_version'],scope=inv['scope'],administrative_national_coverage_percent=None,coverage_denominator=f'{len(places)} candidatos editoriales / {len(ds)} unidades; país ponderado por departamento, no censo nacional',country=country,departments=ds,places=places,phase_metrics=medians,bottleneck_candidate=max(observed,key=observed.get) if observed else None,active=sum(q['state'] in ACTIVE for q in op['queue']),awaiting_review=sum(q['state']=='revision' for q in op['queue']),not_started=sum(q['state']=='sin_iniciar' for q in op['queue']))
     (ROOT/'cobertura-operativa.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
-    lines=['# Cobertura operativa auditada','', 'Universo CO-editorial-v2: 78 candidatos, 33 unidades. Cobertura administrativa nacional: **no calculable** sin censo completo reconciliado.','', 'Preparación = gates ponderados originales; publicabilidad = versión completa aprobada en ambos controles; publicación = estado y evidencia en ambos controles; profundidad = porcentaje de los 13 componentes completos, no medida de riqueza narrativa. Lugares ponderados P1=3/P2=2/P3=1; departamentos igual.','', '| Unidad | Lugares | Preparación | Publicabilidad | Publicación | Profundidad |','|---|---:|---:|---:|---:|---:|']
+    lines=['# Cobertura operativa auditada','', f"Universo {inv['universe_version']}: {len(places)} candidatos, {len(ds)} unidades. Cobertura administrativa nacional: **no calculable** sin censo completo reconciliado.",'', 'Preparación = gates ponderados originales; publicabilidad = versión completa aprobada en ambos controles; publicación = estado y evidencia en ambos controles; profundidad = porcentaje de los 13 componentes completos, no medida de riqueza narrativa. Lugares ponderados P1=3/P2=2/P3=1; departamentos igual.','', '| Unidad | Lugares | Preparación | Publicabilidad | Publicación | Profundidad |','|---|---:|---:|---:|---:|---:|']
     for d in ds:lines.append(f"| {d['name']} | {d['place_count']} | "+' | '.join(f'{d[k]:.2f}%' for k in keys)+' |')
     lines+=['', 'País (universo editorial): '+', '.join(f'{k}={country[k]:.2f}%' for k in keys)+'.',f"Sin iniciar: {result['not_started']}; activos: {result['active']}; esperando revisión: {result['awaiting_review']}.", 'Tiempos: sin muestras observadas; no hay diagnóstico de cuello de botella.' if not observed else 'Medianas por fase: '+json.dumps(medians,ensure_ascii=False), '', 'Detalle por lugar y tiempos: cobertura-operativa.json. Cero significa ausencia de evidencia en este plan; no ausencia de contenido histórico ni verificación de producción.']
     (ROOT/'COBERTURA_OPERATIVA.md').write_text('\n'.join(lines)+'\n');return result

@@ -1,9 +1,9 @@
-# Sopetrán · Antioquia
+# Sopetrán
 
-ID `CO-05-sopetran` · prioridad 1 · puntuación de preparación 60.0/100.
-Estado inicial: planificado; contenido y publicación pendientes de auditoría.
+ID `CO-05-sopetran` · P1 turística · preparación 60.0/100 · turismo 70/100 (evaluación editorial).
+Ver turismo.json para fuentes, criterio y categoría anterior.
 
-## Checklist de ejecución
+# Proceso replicable de lugar
 
 ## Identificación y control
 

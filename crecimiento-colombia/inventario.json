@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "as_of": "2026-10-16",
-  "universe_version": "CO-editorial-v2",
+  "universe_version": "CO-turismo-v3",
   "scope": "curated_candidates_not_all_municipalities",
   "score_weights": {
     "reuse": 35,
@@ -27,7 +27,7 @@
       "score": 85.0,
       "priority": 1,
       "weight": 3,
-      "reason": "Grupo departamental P1 provisional; sin límite de integrantes y sin equivalencia con un lote de lanzamiento",
+      "reason": "Oferta turística nacional/regional; evaluación editorial en turismo.json. Preparación excluida del orden.",
       "confidence": "editorial_estimate",
       "places": [
         {
@@ -48,10 +48,10 @@
           "score": 94.0,
           "priority": 1,
           "weight": 3,
-          "reason": "Prioridad turística del propietario conservada; puntuación de preparación independiente. Fuente: backend/app/contact-options.json",
+          "reason": "Patrimonio, cultura y turismo religioso; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/antioquia/lugares/jerico/lugar.json",
-          "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-05-jardin",
@@ -71,10 +71,10 @@
           "score": 85.0,
           "priority": 1,
           "weight": 3,
-          "reason": "Prioridad turística del propietario conservada; puntuación de preparación independiente. Fuente: backend/app/contact-options.json",
+          "reason": "Pueblo patrimonial y naturaleza; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/antioquia/lugares/jardin/lugar.json",
-          "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-05-sonson",
@@ -94,10 +94,10 @@
           "score": 56.0,
           "priority": 2,
           "weight": 2,
-          "reason": "Prioridad turística del propietario conservada; puntuación de preparación independiente. Fuente: backend/app/contact-options.json",
+          "reason": "Patrimonio y desarrollo emergente; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/antioquia/lugares/sonson/lugar.json",
-          "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-05-cauca-viejo",
@@ -117,10 +117,10 @@
           "score": 60.0,
           "priority": 2,
           "weight": 2,
-          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "reason": "Destino dependiente del circuito Jericó; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/antioquia/lugares/cauca-viejo/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-05-guatape",
@@ -140,10 +140,10 @@
           "score": 60.0,
           "priority": 1,
           "weight": 3,
-          "reason": "Prioridad turística del propietario conservada; puntuación de preparación independiente. Fuente: backend/app/contact-options.json",
+          "reason": "Embalse y producto paisajístico; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/antioquia/lugares/guatape/lugar.json",
-          "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-05-santa-fe-de-antioquia",
@@ -163,10 +163,10 @@
           "score": 60.0,
           "priority": 1,
           "weight": 3,
-          "reason": "Prioridad turística del propietario conservada; puntuación de preparación independiente. Fuente: backend/app/contact-options.json",
+          "reason": "Patrimonio y descanso regional; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/antioquia/lugares/santa-fe-de-antioquia/lugar.json",
-          "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-05-medellin",
@@ -186,10 +186,10 @@
           "score": 60.0,
           "priority": 1,
           "weight": 3,
-          "reason": "Prioridad turística del propietario conservada; puntuación de preparación independiente. Fuente: backend/app/contact-options.json",
+          "reason": "Ciudad, cultura y oferta diversa; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/antioquia/lugares/medellin/lugar.json",
-          "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-05-el-penol",
@@ -209,10 +209,10 @@
           "score": 60.0,
           "priority": 1,
           "weight": 3,
-          "reason": "Prioridad turística del propietario conservada; puntuación de preparación independiente. Fuente: backend/app/contact-options.json",
+          "reason": "Embalse y circuito con Guatapé; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/antioquia/lugares/el-penol/lugar.json",
-          "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-05-tamesis",
@@ -230,12 +230,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 1,
-          "weight": 3,
-          "reason": "Prioridad turística del propietario conservada; puntuación de preparación independiente. Fuente: backend/app/contact-options.json",
+          "priority": 2,
+          "weight": 2,
+          "reason": "Naturaleza con oferta local; consolidación y promoción pendientes; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/antioquia/lugares/tamesis/lugar.json",
-          "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-05-san-jeronimo",
@@ -255,10 +255,10 @@
           "score": 60.0,
           "priority": 1,
           "weight": 3,
-          "reason": "Prioridad turística del propietario conservada; puntuación de preparación independiente. Fuente: backend/app/contact-options.json",
+          "reason": "Descanso, alojamiento y circuito occidental; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/antioquia/lugares/san-jeronimo/lugar.json",
-          "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-05-sopetran",
@@ -278,10 +278,10 @@
           "score": 60.0,
           "priority": 1,
           "weight": 3,
-          "reason": "Prioridad turística del propietario conservada; puntuación de preparación independiente. Fuente: backend/app/contact-options.json",
+          "reason": "Descanso del Occidente cercano; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/antioquia/lugares/sopetran/lugar.json",
-          "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-05-san-rafael",
@@ -299,12 +299,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 1,
-          "weight": 3,
-          "reason": "Prioridad turística del propietario conservada; puntuación de preparación independiente. Fuente: backend/app/contact-options.json",
+          "priority": 2,
+          "weight": 2,
+          "reason": "Ríos y naturaleza regional; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/antioquia/lugares/san-rafael/lugar.json",
-          "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-05-cocorna",
@@ -322,12 +322,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 1,
-          "weight": 3,
-          "reason": "Prioridad turística del propietario conservada; puntuación de preparación independiente. Fuente: backend/app/contact-options.json",
+          "priority": 2,
+          "weight": 2,
+          "reason": "Naturaleza y escapadas regionales; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/antioquia/lugares/cocorna/lugar.json",
-          "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-05-venecia",
@@ -345,12 +345,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 1,
-          "weight": 3,
-          "reason": "Prioridad turística del propietario conservada; puntuación de preparación independiente. Fuente: backend/app/contact-options.json",
+          "priority": 2,
+          "weight": 2,
+          "reason": "Naturaleza y producto regional; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/antioquia/lugares/venecia/lugar.json",
-          "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-05-el-retiro",
@@ -368,12 +368,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 1,
-          "weight": 3,
-          "reason": "Prioridad turística del propietario conservada; puntuación de preparación independiente. Fuente: backend/app/contact-options.json",
+          "priority": 2,
+          "weight": 2,
+          "reason": "Escapada cultural cercana; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/antioquia/lugares/el-retiro/lugar.json",
-          "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-05-san-carlos",
@@ -391,12 +391,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 1,
-          "weight": 3,
-          "reason": "Prioridad turística del propietario conservada; puntuación de preparación independiente. Fuente: backend/app/contact-options.json",
+          "priority": 2,
+          "weight": 2,
+          "reason": "Naturaleza y ríos regionales; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/antioquia/lugares/san-carlos/lugar.json",
-          "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-05-el-carmen-de-viboral",
@@ -414,12 +414,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 1,
-          "weight": 3,
-          "reason": "Prioridad turística del propietario conservada; puntuación de preparación independiente. Fuente: backend/app/contact-options.json",
+          "priority": 2,
+          "weight": 2,
+          "reason": "Cerámica y turismo cultural; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/antioquia/lugares/el-carmen-de-viboral/lugar.json",
-          "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-05-rionegro",
@@ -437,12 +437,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 1,
-          "weight": 3,
-          "reason": "Prioridad turística del propietario conservada; puntuación de preparación independiente. Fuente: backend/app/contact-options.json",
+          "priority": 2,
+          "weight": 2,
+          "reason": "Servicios y circuito del Oriente; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/antioquia/lugares/rionegro/lugar.json",
-          "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-05-necocli",
@@ -460,12 +460,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 1,
-          "weight": 3,
-          "reason": "Prioridad turística del propietario conservada; puntuación de preparación independiente. Fuente: backend/app/contact-options.json",
+          "priority": 2,
+          "weight": 2,
+          "reason": "Playa y acceso al Urabá; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/antioquia/lugares/necocli/lugar.json",
-          "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-05-arboletes",
@@ -483,12 +483,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 1,
-          "weight": 3,
-          "reason": "Prioridad turística del propietario conservada; puntuación de preparación independiente. Fuente: backend/app/contact-options.json",
+          "priority": 2,
+          "weight": 2,
+          "reason": "Playa y producto regional; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/antioquia/lugares/arboletes/lugar.json",
-          "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-05-puerto-triunfo",
@@ -508,10 +508,10 @@
           "score": 60.0,
           "priority": 1,
           "weight": 3,
-          "reason": "Prioridad turística del propietario conservada; puntuación de preparación independiente. Fuente: backend/app/contact-options.json",
+          "reason": "Corredor de naturaleza y recreación; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/antioquia/lugares/puerto-triunfo/lugar.json",
-          "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-05-san-pedro-de-los-milagros",
@@ -529,12 +529,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 1,
-          "weight": 3,
-          "reason": "Prioridad turística del propietario conservada; puntuación de preparación independiente. Fuente: backend/app/contact-options.json",
+          "priority": 2,
+          "weight": 2,
+          "reason": "Turismo religioso regional; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/antioquia/lugares/san-pedro-de-los-milagros/lugar.json",
-          "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-05-santa-rosa-de-osos",
@@ -552,15 +552,15 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 1,
-          "weight": 3,
-          "reason": "Prioridad turística del propietario conservada; puntuación de preparación independiente. Fuente: backend/app/contact-options.json",
+          "priority": 2,
+          "weight": 2,
+          "reason": "Cultura y turismo religioso; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/antioquia/lugares/santa-rosa-de-osos/lugar.json",
-          "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
+          "priority_basis": "revision_turistica_editorial_v3"
         }
       ],
-      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
+      "priority_basis": "revision_turistica_editorial_v3"
     },
     {
       "id": "CO-08",
@@ -576,9 +576,9 @@
         "operations": 3
       },
       "score": 60.0,
-      "priority": 2,
-      "weight": 2,
-      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "priority": 1,
+      "weight": 3,
+      "reason": "Oferta turística nacional/regional; evaluación editorial en turismo.json. Preparación excluida del orden.",
       "confidence": "editorial_estimate",
       "places": [
         {
@@ -597,12 +597,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Carnaval, cultura y oferta urbana; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/atlantico/lugares/barranquilla/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-08-puerto-colombia",
@@ -620,15 +620,15 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Costa y escapada metropolitana; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/atlantico/lugares/puerto-colombia/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         }
       ],
-      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
+      "priority_basis": "revision_turistica_editorial_v3"
     },
     {
       "id": "CO-11",
@@ -644,9 +644,9 @@
         "operations": 3
       },
       "score": 60.0,
-      "priority": 2,
-      "weight": 2,
-      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "priority": 1,
+      "weight": 3,
+      "reason": "Oferta turística nacional/regional; evaluación editorial en turismo.json. Preparación excluida del orden.",
       "confidence": "editorial_estimate",
       "places": [
         {
@@ -665,15 +665,15 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Cultura, patrimonio y oferta urbana; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/bogota-dc/lugares/bogota/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         }
       ],
-      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
+      "priority_basis": "revision_turistica_editorial_v3"
     },
     {
       "id": "CO-13",
@@ -691,7 +691,7 @@
       "score": 85.0,
       "priority": 1,
       "weight": 3,
-      "reason": "Grupo departamental P1 provisional; sin límite de integrantes y sin equivalencia con un lote de lanzamiento",
+      "reason": "Oferta turística nacional/regional; evaluación editorial en turismo.json. Preparación excluida del orden.",
       "confidence": "editorial_estimate",
       "places": [
         {
@@ -712,10 +712,10 @@
           "score": 85.0,
           "priority": 1,
           "weight": 3,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "reason": "Patrimonio y destino vacacional; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/bolivar/lugares/cartagena/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-13-santa-cruz-de-mompox",
@@ -733,15 +733,15 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Patrimonio y turismo cultural; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/bolivar/lugares/santa-cruz-de-mompox/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         }
       ],
-      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
+      "priority_basis": "revision_turistica_editorial_v3"
     },
     {
       "id": "CO-15",
@@ -757,9 +757,9 @@
         "operations": 3
       },
       "score": 60.0,
-      "priority": 2,
-      "weight": 2,
-      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "priority": 1,
+      "weight": 3,
+      "reason": "Oferta turística nacional/regional; evaluación editorial en turismo.json. Preparación excluida del orden.",
       "confidence": "editorial_estimate",
       "places": [
         {
@@ -778,12 +778,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Patrimonio y escapadas nacionales; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/boyaca/lugares/villa-de-leyva/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-15-mongui",
@@ -801,15 +801,61 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Patrimonio y turismo de naturaleza; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/boyaca/lugares/mongui/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
+        },
+        {
+          "id": "CO-15-el-cocuy",
+          "name": "El Cocuy",
+          "slug": "el-cocuy",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 0,
+            "sources": 3,
+            "editorial": 3,
+            "rights": 0,
+            "operations": 2
+          },
+          "score": 31.0,
+          "priority": 1,
+          "weight": 3,
+          "reason": "Turismo de montaña especializado; ver turismo.json. Puntuación score conserva preparación, no turismo.",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/boyaca/lugares/el-cocuy/lugar.json",
+          "priority_basis": "revision_turistica_editorial_v3"
+        },
+        {
+          "id": "CO-15-paipa",
+          "name": "Paipa",
+          "slug": "paipa",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 0,
+            "sources": 3,
+            "editorial": 3,
+            "rights": 0,
+            "operations": 2
+          },
+          "score": 31.0,
+          "priority": 1,
+          "weight": 3,
+          "reason": "Termalismo y turismo regional consolidado; ver turismo.json. Puntuación score conserva preparación, no turismo.",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/boyaca/lugares/paipa/lugar.json",
+          "priority_basis": "revision_turistica_editorial_v3"
         }
       ],
-      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
+      "priority_basis": "revision_turistica_editorial_v3"
     },
     {
       "id": "CO-17",
@@ -825,9 +871,9 @@
         "operations": 3
       },
       "score": 60.0,
-      "priority": 2,
-      "weight": 2,
-      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "priority": 1,
+      "weight": 3,
+      "reason": "Oferta turística nacional/regional; evaluación editorial en turismo.json. Preparación excluida del orden.",
       "confidence": "editorial_estimate",
       "places": [
         {
@@ -846,12 +892,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Cultura y acceso al paisaje cafetero; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/caldas/lugares/manizales/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-17-salamina",
@@ -871,13 +917,13 @@
           "score": 60.0,
           "priority": 2,
           "weight": 2,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "reason": "Patrimonio cafetero; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/caldas/lugares/salamina/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         }
       ],
-      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
+      "priority_basis": "revision_turistica_editorial_v3"
     },
     {
       "id": "CO-18",
@@ -893,9 +939,9 @@
         "operations": 2
       },
       "score": 35.0,
-      "priority": 3,
-      "weight": 1,
-      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "priority": 2,
+      "weight": 2,
+      "reason": "Oferta turística nacional/regional; evaluación editorial en turismo.json. Preparación excluida del orden.",
       "confidence": "editorial_estimate",
       "places": [
         {
@@ -914,15 +960,15 @@
             "operations": 2
           },
           "score": 35.0,
-          "priority": 3,
-          "weight": 1,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 2,
+          "weight": 2,
+          "reason": "Portal amazónico y oferta emergente; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/caqueta/lugares/florencia/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         }
       ],
-      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
+      "priority_basis": "revision_turistica_editorial_v3"
     },
     {
       "id": "CO-19",
@@ -938,9 +984,9 @@
         "operations": 3
       },
       "score": 60.0,
-      "priority": 2,
-      "weight": 2,
-      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "priority": 1,
+      "weight": 3,
+      "reason": "Oferta turística nacional/regional; evaluación editorial en turismo.json. Preparación excluida del orden.",
       "confidence": "editorial_estimate",
       "places": [
         {
@@ -959,12 +1005,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Patrimonio y tradición cultural; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/cauca/lugares/popayan/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-19-silvia",
@@ -984,13 +1030,13 @@
           "score": 60.0,
           "priority": 2,
           "weight": 2,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "reason": "Cultura y circuito regional; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/cauca/lugares/silvia/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         }
       ],
-      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
+      "priority_basis": "revision_turistica_editorial_v3"
     },
     {
       "id": "CO-20",
@@ -1006,9 +1052,9 @@
         "operations": 2
       },
       "score": 35.0,
-      "priority": 3,
-      "weight": 1,
-      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "priority": 2,
+      "weight": 2,
+      "reason": "Oferta turística nacional/regional; evaluación editorial en turismo.json. Preparación excluida del orden.",
       "confidence": "editorial_estimate",
       "places": [
         {
@@ -1027,15 +1073,15 @@
             "operations": 2
           },
           "score": 35.0,
-          "priority": 3,
-          "weight": 1,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Música y turismo cultural estacional; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/cesar/lugares/valledupar/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         }
       ],
-      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
+      "priority_basis": "revision_turistica_editorial_v3"
     },
     {
       "id": "CO-23",
@@ -1051,9 +1097,9 @@
         "operations": 2
       },
       "score": 35.0,
-      "priority": 3,
-      "weight": 1,
-      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "priority": 2,
+      "weight": 2,
+      "reason": "Oferta turística nacional/regional; evaluación editorial en turismo.json. Preparación excluida del orden.",
       "confidence": "editorial_estimate",
       "places": [
         {
@@ -1072,12 +1118,12 @@
             "operations": 2
           },
           "score": 35.0,
-          "priority": 3,
-          "weight": 1,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 2,
+          "weight": 2,
+          "reason": "Oferta urbana y circuito regional; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/cordoba/lugares/monteria/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-23-lorica",
@@ -1095,15 +1141,15 @@
             "operations": 2
           },
           "score": 35.0,
-          "priority": 3,
-          "weight": 1,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 2,
+          "weight": 2,
+          "reason": "Patrimonio y circuito del Sinú; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/cordoba/lugares/lorica/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         }
       ],
-      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
+      "priority_basis": "revision_turistica_editorial_v3"
     },
     {
       "id": "CO-25",
@@ -1119,9 +1165,9 @@
         "operations": 3
       },
       "score": 60.0,
-      "priority": 2,
-      "weight": 2,
-      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "priority": 1,
+      "weight": 3,
+      "reason": "Oferta turística nacional/regional; evaluación editorial en turismo.json. Preparación excluida del orden.",
       "confidence": "editorial_estimate",
       "places": [
         {
@@ -1140,12 +1186,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Atractivo cultural y excursión nacional; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/cundinamarca/lugares/zipaquira/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-25-guatavita",
@@ -1163,15 +1209,84 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Paisaje y circuito de leyenda; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/cundinamarca/lugares/guatavita/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
+        },
+        {
+          "id": "CO-25-guaduas",
+          "name": "Guaduas",
+          "slug": "guaduas",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 0,
+            "sources": 3,
+            "editorial": 3,
+            "rights": 0,
+            "operations": 2
+          },
+          "score": 31.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Patrimonio y turismo regional; ver turismo.json. Puntuación score conserva preparación, no turismo.",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/cundinamarca/lugares/guaduas/lugar.json",
+          "priority_basis": "revision_turistica_editorial_v3"
+        },
+        {
+          "id": "CO-25-girardot",
+          "name": "Girardot",
+          "slug": "girardot",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 0,
+            "sources": 3,
+            "editorial": 3,
+            "rights": 0,
+            "operations": 2
+          },
+          "score": 31.0,
+          "priority": 1,
+          "weight": 3,
+          "reason": "Descanso y turismo regional consolidado; ver turismo.json. Puntuación score conserva preparación, no turismo.",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/cundinamarca/lugares/girardot/lugar.json",
+          "priority_basis": "revision_turistica_editorial_v3"
+        },
+        {
+          "id": "CO-25-villeta",
+          "name": "Villeta",
+          "slug": "villeta",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 0,
+            "sources": 3,
+            "editorial": 3,
+            "rights": 0,
+            "operations": 2
+          },
+          "score": 31.0,
+          "priority": 1,
+          "weight": 3,
+          "reason": "Escapada regional de clima cálido; ver turismo.json. Puntuación score conserva preparación, no turismo.",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/cundinamarca/lugares/villeta/lugar.json",
+          "priority_basis": "revision_turistica_editorial_v3"
         }
       ],
-      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
+      "priority_basis": "revision_turistica_editorial_v3"
     },
     {
       "id": "CO-27",
@@ -1187,9 +1302,9 @@
         "operations": 2
       },
       "score": 35.0,
-      "priority": 3,
-      "weight": 1,
-      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "priority": 1,
+      "weight": 3,
+      "reason": "Oferta turística nacional/regional; evaluación editorial en turismo.json. Preparación excluida del orden.",
       "confidence": "editorial_estimate",
       "places": [
         {
@@ -1208,12 +1323,12 @@
             "operations": 2
           },
           "score": 35.0,
-          "priority": 3,
-          "weight": 1,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Naturaleza y turismo especializado; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/choco/lugares/nuqui/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-27-bahia-solano",
@@ -1231,15 +1346,61 @@
             "operations": 2
           },
           "score": 35.0,
-          "priority": 3,
-          "weight": 1,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Naturaleza y costa Pacífica; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/choco/lugares/bahia-solano/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
+        },
+        {
+          "id": "CO-27-acandi",
+          "name": "Acandí",
+          "slug": "acandi",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 0,
+            "sources": 3,
+            "editorial": 3,
+            "rights": 0,
+            "operations": 2
+          },
+          "score": 31.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Portal municipal del Darién; ver turismo.json. Puntuación score conserva preparación, no turismo.",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/choco/lugares/acandi/lugar.json",
+          "priority_basis": "revision_turistica_editorial_v3"
+        },
+        {
+          "id": "CO-27-capurgana",
+          "name": "Capurganá",
+          "slug": "capurgana",
+          "type": "corregimiento",
+          "parent_place_id": "CO-27-acandi",
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 0,
+            "sources": 3,
+            "editorial": 3,
+            "rights": 0,
+            "operations": 2
+          },
+          "score": 31.0,
+          "priority": 1,
+          "weight": 3,
+          "reason": "Playa y naturaleza del Darién; ver turismo.json. Puntuación score conserva preparación, no turismo.",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/choco/lugares/capurgana/lugar.json",
+          "priority_basis": "revision_turistica_editorial_v3"
         }
       ],
-      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
+      "priority_basis": "revision_turistica_editorial_v3"
     },
     {
       "id": "CO-41",
@@ -1255,9 +1416,9 @@
         "operations": 3
       },
       "score": 60.0,
-      "priority": 2,
-      "weight": 2,
-      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "priority": 1,
+      "weight": 3,
+      "reason": "Oferta turística nacional/regional; evaluación editorial en turismo.json. Preparación excluida del orden.",
       "confidence": "editorial_estimate",
       "places": [
         {
@@ -1276,12 +1437,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Arqueología y patrimonio; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/huila/lugares/san-agustin/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-41-neiva",
@@ -1301,13 +1462,36 @@
           "score": 60.0,
           "priority": 2,
           "weight": 2,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "reason": "Portal regional del Huila; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/huila/lugares/neiva/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
+        },
+        {
+          "id": "CO-41-villavieja",
+          "name": "Villavieja",
+          "slug": "villavieja",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 0,
+            "sources": 3,
+            "editorial": 3,
+            "rights": 0,
+            "operations": 2
+          },
+          "score": 31.0,
+          "priority": 1,
+          "weight": 3,
+          "reason": "Tatacoa y turismo de paisaje; ver turismo.json. Puntuación score conserva preparación, no turismo.",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/huila/lugares/villavieja/lugar.json",
+          "priority_basis": "revision_turistica_editorial_v3"
         }
       ],
-      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
+      "priority_basis": "revision_turistica_editorial_v3"
     },
     {
       "id": "CO-44",
@@ -1323,9 +1507,9 @@
         "operations": 3
       },
       "score": 60.0,
-      "priority": 2,
-      "weight": 2,
-      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "priority": 1,
+      "weight": 3,
+      "reason": "Oferta turística nacional/regional; evaluación editorial en turismo.json. Preparación excluida del orden.",
       "confidence": "editorial_estimate",
       "places": [
         {
@@ -1344,12 +1528,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Portal turístico de La Guajira; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/la-guajira/lugares/riohacha/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-44-uribia",
@@ -1367,15 +1551,61 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Cultura wayúu y acceso a alta Guajira; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/la-guajira/lugares/uribia/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
+        },
+        {
+          "id": "CO-44-dibulla",
+          "name": "Dibulla",
+          "slug": "dibulla",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 0,
+            "sources": 3,
+            "editorial": 3,
+            "rights": 0,
+            "operations": 2
+          },
+          "score": 31.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Circuito costero de La Guajira; ver turismo.json. Puntuación score conserva preparación, no turismo.",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/la-guajira/lugares/dibulla/lugar.json",
+          "priority_basis": "revision_turistica_editorial_v3"
+        },
+        {
+          "id": "CO-44-palomino",
+          "name": "Palomino",
+          "slug": "palomino",
+          "type": "corregimiento",
+          "parent_place_id": "CO-44-dibulla",
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 0,
+            "sources": 3,
+            "editorial": 3,
+            "rights": 0,
+            "operations": 2
+          },
+          "score": 31.0,
+          "priority": 1,
+          "weight": 3,
+          "reason": "Playa y turismo de naturaleza; ver turismo.json. Puntuación score conserva preparación, no turismo.",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/la-guajira/lugares/palomino/lugar.json",
+          "priority_basis": "revision_turistica_editorial_v3"
         }
       ],
-      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
+      "priority_basis": "revision_turistica_editorial_v3"
     },
     {
       "id": "CO-47",
@@ -1391,9 +1621,9 @@
         "operations": 3
       },
       "score": 60.0,
-      "priority": 2,
-      "weight": 2,
-      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "priority": 1,
+      "weight": 3,
+      "reason": "Oferta turística nacional/regional; evaluación editorial en turismo.json. Preparación excluida del orden.",
       "confidence": "editorial_estimate",
       "places": [
         {
@@ -1412,15 +1642,38 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Playa y base de naturaleza; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/magdalena/lugares/santa-marta/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
+        },
+        {
+          "id": "CO-47-minca",
+          "name": "Minca",
+          "slug": "minca",
+          "type": "corregimiento",
+          "parent_place_id": "CO-47-santa-marta",
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 0,
+            "sources": 3,
+            "editorial": 3,
+            "rights": 0,
+            "operations": 2
+          },
+          "score": 31.0,
+          "priority": 1,
+          "weight": 3,
+          "reason": "Naturaleza y circuito de Santa Marta; ver turismo.json. Puntuación score conserva preparación, no turismo.",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/magdalena/lugares/minca/lugar.json",
+          "priority_basis": "revision_turistica_editorial_v3"
         }
       ],
-      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
+      "priority_basis": "revision_turistica_editorial_v3"
     },
     {
       "id": "CO-50",
@@ -1436,9 +1689,9 @@
         "operations": 3
       },
       "score": 60.0,
-      "priority": 2,
-      "weight": 2,
-      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "priority": 1,
+      "weight": 3,
+      "reason": "Oferta turística nacional/regional; evaluación editorial en turismo.json. Preparación excluida del orden.",
       "confidence": "editorial_estimate",
       "places": [
         {
@@ -1457,12 +1710,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Cultura llanera y escapadas; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/meta/lugares/villavicencio/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-50-la-macarena",
@@ -1480,15 +1733,15 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Caño Cristales y naturaleza; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/meta/lugares/la-macarena/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         }
       ],
-      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
+      "priority_basis": "revision_turistica_editorial_v3"
     },
     {
       "id": "CO-52",
@@ -1504,9 +1757,9 @@
         "operations": 3
       },
       "score": 60.0,
-      "priority": 2,
-      "weight": 2,
-      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "priority": 1,
+      "weight": 3,
+      "reason": "Oferta turística nacional/regional; evaluación editorial en turismo.json. Preparación excluida del orden.",
       "confidence": "editorial_estimate",
       "places": [
         {
@@ -1525,12 +1778,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Carnaval, cultura y paisajes; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/narino/lugares/pasto/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-52-ipiales",
@@ -1548,15 +1801,15 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Turismo religioso y circuito fronterizo; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/narino/lugares/ipiales/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         }
       ],
-      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
+      "priority_basis": "revision_turistica_editorial_v3"
     },
     {
       "id": "CO-54",
@@ -1572,9 +1825,9 @@
         "operations": 2
       },
       "score": 35.0,
-      "priority": 3,
-      "weight": 1,
-      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "priority": 2,
+      "weight": 2,
+      "reason": "Oferta turística nacional/regional; evaluación editorial en turismo.json. Preparación excluida del orden.",
       "confidence": "editorial_estimate",
       "places": [
         {
@@ -1593,12 +1846,12 @@
             "operations": 2
           },
           "score": 35.0,
-          "priority": 3,
-          "weight": 1,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 2,
+          "weight": 2,
+          "reason": "Servicios y turismo urbano regional; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/norte-de-santander/lugares/cucuta/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-54-pamplona",
@@ -1616,15 +1869,15 @@
             "operations": 2
           },
           "score": 35.0,
-          "priority": 3,
-          "weight": 1,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 2,
+          "weight": 2,
+          "reason": "Patrimonio y turismo regional; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/norte-de-santander/lugares/pamplona/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         }
       ],
-      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
+      "priority_basis": "revision_turistica_editorial_v3"
     },
     {
       "id": "CO-63",
@@ -1642,7 +1895,7 @@
       "score": 85.0,
       "priority": 1,
       "weight": 3,
-      "reason": "Grupo departamental P1 provisional; sin límite de integrantes y sin equivalencia con un lote de lanzamiento",
+      "reason": "Oferta turística nacional/regional; evaluación editorial en turismo.json. Preparación excluida del orden.",
       "confidence": "editorial_estimate",
       "places": [
         {
@@ -1663,10 +1916,10 @@
           "score": 85.0,
           "priority": 1,
           "weight": 3,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "reason": "Cocora y paisaje cafetero; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/quindio/lugares/salento/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-63-filandia",
@@ -1684,12 +1937,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Paisaje y pueblo cafetero; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/quindio/lugares/filandia/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-63-armenia",
@@ -1707,15 +1960,61 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Base de circuito cafetero; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/quindio/lugares/armenia/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
+        },
+        {
+          "id": "CO-63-montenegro",
+          "name": "Montenegro",
+          "slug": "montenegro",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 0,
+            "sources": 3,
+            "editorial": 3,
+            "rights": 0,
+            "operations": 2
+          },
+          "score": 31.0,
+          "priority": 1,
+          "weight": 3,
+          "reason": "Parque del Café y paisaje cafetero; ver turismo.json. Puntuación score conserva preparación, no turismo.",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/quindio/lugares/montenegro/lugar.json",
+          "priority_basis": "revision_turistica_editorial_v3"
+        },
+        {
+          "id": "CO-63-quimbaya",
+          "name": "Quimbaya",
+          "slug": "quimbaya",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 0,
+            "sources": 3,
+            "editorial": 3,
+            "rights": 0,
+            "operations": 2
+          },
+          "score": 31.0,
+          "priority": 1,
+          "weight": 3,
+          "reason": "Circuito de parques y paisaje cafetero; ver turismo.json. Puntuación score conserva preparación, no turismo.",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/quindio/lugares/quimbaya/lugar.json",
+          "priority_basis": "revision_turistica_editorial_v3"
         }
       ],
-      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
+      "priority_basis": "revision_turistica_editorial_v3"
     },
     {
       "id": "CO-66",
@@ -1731,9 +2030,9 @@
         "operations": 3
       },
       "score": 60.0,
-      "priority": 2,
-      "weight": 2,
-      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "priority": 1,
+      "weight": 3,
+      "reason": "Oferta turística nacional/regional; evaluación editorial en turismo.json. Preparación excluida del orden.",
       "confidence": "editorial_estimate",
       "places": [
         {
@@ -1752,12 +2051,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Base de circuito cafetero; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/risaralda/lugares/pereira/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-66-santa-rosa-de-cabal",
@@ -1775,15 +2074,15 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Termalismo y naturaleza; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/risaralda/lugares/santa-rosa-de-cabal/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         }
       ],
-      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
+      "priority_basis": "revision_turistica_editorial_v3"
     },
     {
       "id": "CO-68",
@@ -1799,9 +2098,9 @@
         "operations": 3
       },
       "score": 60.0,
-      "priority": 2,
-      "weight": 2,
-      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "priority": 1,
+      "weight": 3,
+      "reason": "Oferta turística nacional/regional; evaluación editorial en turismo.json. Preparación excluida del orden.",
       "confidence": "editorial_estimate",
       "places": [
         {
@@ -1820,12 +2119,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Patrimonio y circuito regional; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/santander/lugares/barichara/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-68-san-gil",
@@ -1843,15 +2142,84 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Turismo de aventura consolidado; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/santander/lugares/san-gil/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
+        },
+        {
+          "id": "CO-68-giron",
+          "name": "Girón",
+          "slug": "giron",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 0,
+            "sources": 3,
+            "editorial": 3,
+            "rights": 0,
+            "operations": 2
+          },
+          "score": 31.0,
+          "priority": 1,
+          "weight": 3,
+          "reason": "Patrimonio y circuito metropolitano; ver turismo.json. Puntuación score conserva preparación, no turismo.",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/santander/lugares/giron/lugar.json",
+          "priority_basis": "revision_turistica_editorial_v3"
+        },
+        {
+          "id": "CO-68-bucaramanga",
+          "name": "Bucaramanga",
+          "slug": "bucaramanga",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 0,
+            "sources": 3,
+            "editorial": 3,
+            "rights": 0,
+            "operations": 2
+          },
+          "score": 31.0,
+          "priority": 1,
+          "weight": 3,
+          "reason": "Base de circuitos de Santander; ver turismo.json. Puntuación score conserva preparación, no turismo.",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/santander/lugares/bucaramanga/lugar.json",
+          "priority_basis": "revision_turistica_editorial_v3"
+        },
+        {
+          "id": "CO-68-socorro",
+          "name": "Socorro",
+          "slug": "socorro",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 0,
+            "sources": 3,
+            "editorial": 3,
+            "rights": 0,
+            "operations": 2
+          },
+          "score": 31.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Patrimonio y circuito santandereano; ver turismo.json. Puntuación score conserva preparación, no turismo.",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/santander/lugares/socorro/lugar.json",
+          "priority_basis": "revision_turistica_editorial_v3"
         }
       ],
-      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
+      "priority_basis": "revision_turistica_editorial_v3"
     },
     {
       "id": "CO-70",
@@ -1867,9 +2235,9 @@
         "operations": 2
       },
       "score": 35.0,
-      "priority": 3,
-      "weight": 1,
-      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "priority": 1,
+      "weight": 3,
+      "reason": "Oferta turística nacional/regional; evaluación editorial en turismo.json. Preparación excluida del orden.",
       "confidence": "editorial_estimate",
       "places": [
         {
@@ -1888,12 +2256,12 @@
             "operations": 2
           },
           "score": 35.0,
-          "priority": 3,
-          "weight": 1,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 2,
+          "weight": 2,
+          "reason": "Cultura y servicios regionales; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/sucre/lugares/sincelejo/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-70-santiago-de-tolu",
@@ -1911,15 +2279,61 @@
             "operations": 2
           },
           "score": 35.0,
-          "priority": 3,
-          "weight": 1,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Playa y circuito de Morrosquillo; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/sucre/lugares/santiago-de-tolu/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
+        },
+        {
+          "id": "CO-70-covenas",
+          "name": "Coveñas",
+          "slug": "covenas",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 0,
+            "sources": 3,
+            "editorial": 3,
+            "rights": 0,
+            "operations": 2
+          },
+          "score": 31.0,
+          "priority": 1,
+          "weight": 3,
+          "reason": "Playa y destino vacacional; ver turismo.json. Puntuación score conserva preparación, no turismo.",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/sucre/lugares/covenas/lugar.json",
+          "priority_basis": "revision_turistica_editorial_v3"
+        },
+        {
+          "id": "CO-70-san-onofre",
+          "name": "San Onofre",
+          "slug": "san-onofre",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 0,
+            "sources": 3,
+            "editorial": 3,
+            "rights": 0,
+            "operations": 2
+          },
+          "score": 31.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Costa y naturaleza regional; ver turismo.json. Puntuación score conserva preparación, no turismo.",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/sucre/lugares/san-onofre/lugar.json",
+          "priority_basis": "revision_turistica_editorial_v3"
         }
       ],
-      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
+      "priority_basis": "revision_turistica_editorial_v3"
     },
     {
       "id": "CO-73",
@@ -1935,9 +2349,9 @@
         "operations": 3
       },
       "score": 60.0,
-      "priority": 2,
-      "weight": 2,
-      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "priority": 1,
+      "weight": 3,
+      "reason": "Oferta turística nacional/regional; evaluación editorial en turismo.json. Preparación excluida del orden.",
       "confidence": "editorial_estimate",
       "places": [
         {
@@ -1956,12 +2370,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Cultura musical y naturaleza regional; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/tolima/lugares/ibague/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-73-honda",
@@ -1981,13 +2395,82 @@
           "score": 60.0,
           "priority": 2,
           "weight": 2,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "reason": "Patrimonio y circuito del Magdalena; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/tolima/lugares/honda/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
+        },
+        {
+          "id": "CO-73-murillo",
+          "name": "Murillo",
+          "slug": "murillo",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 0,
+            "sources": 3,
+            "editorial": 3,
+            "rights": 0,
+            "operations": 2
+          },
+          "score": 31.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Paisaje de montaña y naturaleza; ver turismo.json. Puntuación score conserva preparación, no turismo.",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/tolima/lugares/murillo/lugar.json",
+          "priority_basis": "revision_turistica_editorial_v3"
+        },
+        {
+          "id": "CO-73-melgar",
+          "name": "Melgar",
+          "slug": "melgar",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 0,
+            "sources": 3,
+            "editorial": 3,
+            "rights": 0,
+            "operations": 2
+          },
+          "score": 31.0,
+          "priority": 1,
+          "weight": 3,
+          "reason": "Descanso y turismo regional consolidado; ver turismo.json. Puntuación score conserva preparación, no turismo.",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/tolima/lugares/melgar/lugar.json",
+          "priority_basis": "revision_turistica_editorial_v3"
+        },
+        {
+          "id": "CO-73-prado",
+          "name": "Prado",
+          "slug": "prado",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 0,
+            "sources": 3,
+            "editorial": 3,
+            "rights": 0,
+            "operations": 2
+          },
+          "score": 31.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Embalse y recreación regional; ver turismo.json. Puntuación score conserva preparación, no turismo.",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/tolima/lugares/prado/lugar.json",
+          "priority_basis": "revision_turistica_editorial_v3"
         }
       ],
-      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
+      "priority_basis": "revision_turistica_editorial_v3"
     },
     {
       "id": "CO-76",
@@ -2003,9 +2486,9 @@
         "operations": 3
       },
       "score": 60.0,
-      "priority": 2,
-      "weight": 2,
-      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "priority": 1,
+      "weight": 3,
+      "reason": "Oferta turística nacional/regional; evaluación editorial en turismo.json. Preparación excluida del orden.",
       "confidence": "editorial_estimate",
       "places": [
         {
@@ -2024,12 +2507,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Salsa, cultura y oferta urbana; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/valle-del-cauca/lugares/cali/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-76-guadalajara-de-buga",
@@ -2047,15 +2530,38 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Turismo religioso y patrimonio; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/valle-del-cauca/lugares/guadalajara-de-buga/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
+        },
+        {
+          "id": "CO-76-buenaventura",
+          "name": "Buenaventura",
+          "slug": "buenaventura",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 0,
+            "sources": 3,
+            "editorial": 3,
+            "rights": 0,
+            "operations": 2
+          },
+          "score": 31.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Portal turístico del Pacífico; ver turismo.json. Puntuación score conserva preparación, no turismo.",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/valle-del-cauca/lugares/buenaventura/lugar.json",
+          "priority_basis": "revision_turistica_editorial_v3"
         }
       ],
-      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
+      "priority_basis": "revision_turistica_editorial_v3"
     },
     {
       "id": "CO-81",
@@ -2073,7 +2579,7 @@
       "score": 35.0,
       "priority": 3,
       "weight": 1,
-      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "reason": "Oferta turística nacional/regional; evaluación editorial en turismo.json. Preparación excluida del orden.",
       "confidence": "editorial_estimate",
       "places": [
         {
@@ -2094,13 +2600,13 @@
           "score": 35.0,
           "priority": 3,
           "weight": 1,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "reason": "Cultura llanera y turismo de nicho; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/arauca/lugares/arauca/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         }
       ],
-      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
+      "priority_basis": "revision_turistica_editorial_v3"
     },
     {
       "id": "CO-85",
@@ -2116,9 +2622,9 @@
         "operations": 2
       },
       "score": 35.0,
-      "priority": 3,
-      "weight": 1,
-      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "priority": 2,
+      "weight": 2,
+      "reason": "Oferta turística nacional/regional; evaluación editorial en turismo.json. Preparación excluida del orden.",
       "confidence": "editorial_estimate",
       "places": [
         {
@@ -2137,15 +2643,15 @@
             "operations": 2
           },
           "score": 35.0,
-          "priority": 3,
-          "weight": 1,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 2,
+          "weight": 2,
+          "reason": "Portal de naturaleza llanera; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/casanare/lugares/yopal/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         }
       ],
-      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
+      "priority_basis": "revision_turistica_editorial_v3"
     },
     {
       "id": "CO-86",
@@ -2161,9 +2667,9 @@
         "operations": 2
       },
       "score": 35.0,
-      "priority": 3,
-      "weight": 1,
-      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "priority": 2,
+      "weight": 2,
+      "reason": "Oferta turística nacional/regional; evaluación editorial en turismo.json. Preparación excluida del orden.",
       "confidence": "editorial_estimate",
       "places": [
         {
@@ -2182,12 +2688,12 @@
             "operations": 2
           },
           "score": 35.0,
-          "priority": 3,
-          "weight": 1,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 2,
+          "weight": 2,
+          "reason": "Naturaleza y circuito amazónico; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/putumayo/lugares/mocoa/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-86-sibundoy",
@@ -2205,15 +2711,15 @@
             "operations": 2
           },
           "score": 35.0,
-          "priority": 3,
-          "weight": 1,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 2,
+          "weight": 2,
+          "reason": "Cultura y circuito del valle; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/putumayo/lugares/sibundoy/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         }
       ],
-      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
+      "priority_basis": "revision_turistica_editorial_v3"
     },
     {
       "id": "CO-88",
@@ -2229,9 +2735,9 @@
         "operations": 3
       },
       "score": 60.0,
-      "priority": 2,
-      "weight": 2,
-      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "priority": 1,
+      "weight": 3,
+      "reason": "Oferta turística nacional/regional; evaluación editorial en turismo.json. Preparación excluida del orden.",
       "confidence": "editorial_estimate",
       "places": [
         {
@@ -2250,12 +2756,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Destino insular vacacional; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/san-andres-providencia-y-santa-catalina/lugares/san-andres/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-88-providencia",
@@ -2273,15 +2779,15 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Naturaleza y destino insular; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/san-andres-providencia-y-santa-catalina/lugares/providencia/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         }
       ],
-      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
+      "priority_basis": "revision_turistica_editorial_v3"
     },
     {
       "id": "CO-91",
@@ -2297,9 +2803,9 @@
         "operations": 3
       },
       "score": 60.0,
-      "priority": 2,
-      "weight": 2,
-      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "priority": 1,
+      "weight": 3,
+      "reason": "Oferta turística nacional/regional; evaluación editorial en turismo.json. Preparación excluida del orden.",
       "confidence": "editorial_estimate",
       "places": [
         {
@@ -2318,12 +2824,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Portal turístico amazónico; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/amazonas/lugares/leticia/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         },
         {
           "id": "CO-91-puerto-narino",
@@ -2341,15 +2847,15 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Naturaleza y experiencia amazónica; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/amazonas/lugares/puerto-narino/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         }
       ],
-      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
+      "priority_basis": "revision_turistica_editorial_v3"
     },
     {
       "id": "CO-94",
@@ -2365,9 +2871,9 @@
         "operations": 2
       },
       "score": 35.0,
-      "priority": 3,
-      "weight": 1,
-      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "priority": 2,
+      "weight": 2,
+      "reason": "Oferta turística nacional/regional; evaluación editorial en turismo.json. Preparación excluida del orden.",
       "confidence": "editorial_estimate",
       "places": [
         {
@@ -2386,15 +2892,15 @@
             "operations": 2
           },
           "score": 35.0,
-          "priority": 3,
-          "weight": 1,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 2,
+          "weight": 2,
+          "reason": "Paisaje y naturaleza especializada; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/guainia/lugares/inirida/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         }
       ],
-      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
+      "priority_basis": "revision_turistica_editorial_v3"
     },
     {
       "id": "CO-95",
@@ -2410,9 +2916,9 @@
         "operations": 2
       },
       "score": 35.0,
-      "priority": 3,
-      "weight": 1,
-      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "priority": 2,
+      "weight": 2,
+      "reason": "Oferta turística nacional/regional; evaluación editorial en turismo.json. Preparación excluida del orden.",
       "confidence": "editorial_estimate",
       "places": [
         {
@@ -2431,15 +2937,15 @@
             "operations": 2
           },
           "score": 35.0,
-          "priority": 3,
-          "weight": 1,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Naturaleza y arte rupestre; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/guaviare/lugares/san-jose-del-guaviare/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         }
       ],
-      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
+      "priority_basis": "revision_turistica_editorial_v3"
     },
     {
       "id": "CO-97",
@@ -2457,7 +2963,7 @@
       "score": 35.0,
       "priority": 3,
       "weight": 1,
-      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "reason": "Oferta turística nacional/regional; evaluación editorial en turismo.json. Preparación excluida del orden.",
       "confidence": "editorial_estimate",
       "places": [
         {
@@ -2476,15 +2982,15 @@
             "operations": 2
           },
           "score": 35.0,
-          "priority": 3,
-          "weight": 1,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 2,
+          "weight": 2,
+          "reason": "Naturaleza y turismo especializado; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/vaupes/lugares/mitu/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         }
       ],
-      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
+      "priority_basis": "revision_turistica_editorial_v3"
     },
     {
       "id": "CO-99",
@@ -2502,7 +3008,7 @@
       "score": 35.0,
       "priority": 3,
       "weight": 1,
-      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "reason": "Oferta turística nacional/regional; evaluación editorial en turismo.json. Preparación excluida del orden.",
       "confidence": "editorial_estimate",
       "places": [
         {
@@ -2521,15 +3027,15 @@
             "operations": 2
           },
           "score": 35.0,
-          "priority": 3,
-          "weight": 1,
-          "reason": "Candidato editorial; no representa demanda medida",
+          "priority": 2,
+          "weight": 2,
+          "reason": "Naturaleza y turismo especializado; ver turismo.json. Puntuación score conserva preparación, no turismo.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/vichada/lugares/puerto-carreno/lugar.json",
-          "priority_basis": "propuesta_editorial_pendiente_validacion"
+          "priority_basis": "revision_turistica_editorial_v3"
         }
       ],
-      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
+      "priority_basis": "revision_turistica_editorial_v3"
     }
   ]
 }

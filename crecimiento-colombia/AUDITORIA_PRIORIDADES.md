@@ -2,11 +2,15 @@
 
 Base inspeccionada: `a75d341e088ac9734e60f4ca260e673522bd0a1e`. GitHub HEAD/main y HEAD local coinciden. Rama original inspeccionada: main; ramas locales/remotas listadas antes de crear rama aislada. Árbol original con cambios ajenos en backend, docs, scripts y evidencias, preservados.
 
+## Corrección y vigencia
+
+La revisión nacional posterior reemplaza el orden y grupos de este informe: ver REVISION_TURISTICA_NACIONAL.md. La afirmación anterior de ausencia de categorías en contact-options.json era incorrecta por lectura incompleta; corregida a continuación. La cola anterior está conservada en historico/CO-editorial-v2/.
+
 ## Fuente original y límites
 
 `crecimiento-colombia/inventario.json` fue añadido en `4a56b1e`. Contiene prioridades explícitas por departamento y lugar. No existe una clasificación nacional histórica aprobada demostrada por los archivos revisados: las prioridades departamentales y fuera de Antioquia se identifican como propuestas.
 
-`backend/app/contact-options.json`, también inspeccionado en su commit inicial `f002c19`, enumera 21 municipios de Antioquia, pero NO tiene campos P1/P2/P3 ni fórmula turística. El plan previo atribuye esos 21 P1 al propietario el 11/10/2026; esa atribución es documental, no demostrable a partir del JSON de contactos solo. Sonsón P2 se conserva por instrucción registrada en ESTADO_Y_PENDIENTES.md. No se alteraron categorías originales. La referencia a un catálogo histórico de cuatro categorías no aporta un archivo original verificable: no se aplicó ningún mapeo 3/4 → P3.
+`backend/app/contact-options.json` contiene **125 municipios** en `municipalityCatalog`, cada uno con `pilotCategory` 1–4. `classificationSource` atribuye la clasificación interna al propietario el 11/10/2026, expresamente no oficial. Las categorías son Muy turísticos, Turismo normal o emergente, Turismo de paso o comercial y Turismo poco desarrollado. Ambos Támesis y San Jerónimo estaban en categoría 1; el archivo no determina cuál va primero dentro de ella. Se conservó copia íntegra de esos campos en `historico/clasificacion-antioquia-propietario.json`. La revisión solicitada autoriza reevaluar prioridades, conservando categoría anterior por destino. No se alteró el archivo original del portal.
 
 ## Fórmula y orden
 
@@ -22,7 +26,7 @@ P3 (13): Caquetá, Cesar, Córdoba, Chocó, Norte de Santander, Sucre, Arauca, C
 
 Lugares: P1=23, P2=37, P3=18; total 78. Universo editorial CO-editorial-v2: 32 departamentos + Bogotá D.C.; no representa todos los municipios del país.
 
-## Primeros 10 P1 reales del inventario, bajo el orden operativo documentado
+## Primeros 10 de la cola ANTERIOR CO-editorial-v2 (histórico, sustituido)
 
 | Orden | Lugar | Departamento | Depto/lugar | Preparación | Puntero JSON |
 |---|---|---|---|---:|---|

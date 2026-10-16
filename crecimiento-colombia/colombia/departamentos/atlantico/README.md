@@ -1,6 +1,6 @@
 # Atlántico
 
-Grupo P2 provisional. La prioridad del departamento no obliga a que todos sus destinos pertenezcan al mismo grupo.
+P1 turística propuesta; revisión nacional CO-turismo-v3.
 
-- [Barranquilla](lugares/barranquilla/PROCESO.md) · P2
-- [Puerto Colombia](lugares/puerto-colombia/PROCESO.md) · P2
+- [Barranquilla](lugares/barranquilla/PROCESO.md) · P1
+- [Puerto Colombia](lugares/puerto-colombia/PROCESO.md) · P1

@@ -29,3 +29,7 @@ Plan separado en `feature/ampliacion-cobertura-colombia`, basado en `origin/main
 ## Reauditoría vigente 16/10/2026
 
 La afirmación anterior de “P1 históricos” se limita: contact-options.json no contiene prioridades. Se conserva inventario sin reclasificar, con auditoría de procedencia explícita. Rama actual plan/maestro-cobertura-auditado-20261016; workers fijos definidos sin iniciar; cola/seguimiento/validación añadidos. No hay destinos nuevos completos ni publicación verificada.
+
+## Revisión turística nacional posterior
+
+CO-turismo-v3 reemplaza el orden anterior: 100 candidatos, 33 unidades. Corrección: contact-options.json SÍ contiene municipalityCatalog/pilotCategory 1–4. La afirmación anterior de ausencia era un error de lectura; se conserva copia de la clasificación original. Preparación ya no determina orden. Propuesta pendiente de revisión; todos los lugares sin iniciar. Ver REVISION_TURISTICA_NACIONAL.md.

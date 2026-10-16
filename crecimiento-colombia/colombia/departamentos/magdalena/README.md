@@ -1,5 +1,6 @@
 # Magdalena
 
-Grupo P2 provisional. La prioridad del departamento no obliga a que todos sus destinos pertenezcan al mismo grupo.
+P1 turística propuesta; revisión nacional CO-turismo-v3.
 
-- [Santa Marta](lugares/santa-marta/PROCESO.md) · P2
+- [Santa Marta](lugares/santa-marta/PROCESO.md) · P1
+- [Minca](lugares/minca/PROCESO.md) · P1

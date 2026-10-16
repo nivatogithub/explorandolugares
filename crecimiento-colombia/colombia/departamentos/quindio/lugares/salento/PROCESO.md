@@ -1,9 +1,9 @@
-# Salento · Quindío
+# Salento
 
-ID `CO-63-salento` · prioridad 1 · puntuación de preparación 85.0/100.
-Estado inicial: planificado; contenido y publicación pendientes de auditoría.
+ID `CO-63-salento` · P1 turística · preparación 85.0/100 · turismo 94/100 (evaluación editorial).
+Ver turismo.json para fuentes, criterio y categoría anterior.
 
-## Checklist de ejecución
+# Proceso replicable de lugar
 
 ## Identificación y control
 

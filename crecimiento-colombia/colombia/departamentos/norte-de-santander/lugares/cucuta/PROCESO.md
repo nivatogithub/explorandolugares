@@ -1,9 +1,9 @@
-# Cúcuta · Norte de Santander
+# Cúcuta
 
-ID `CO-54-cucuta` · prioridad 3 · puntuación de preparación 35.0/100.
-Estado inicial: planificado; contenido y publicación pendientes de auditoría.
+ID `CO-54-cucuta` · P2 turística · preparación 35.0/100 · turismo 62/100 (evaluación editorial).
+Ver turismo.json para fuentes, criterio y categoría anterior.
 
-## Checklist de ejecución
+# Proceso replicable de lugar
 
 ## Identificación y control
 

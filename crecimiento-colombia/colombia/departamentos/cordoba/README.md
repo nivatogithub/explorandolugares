@@ -1,6 +1,6 @@
 # Córdoba
 
-Grupo P3 provisional. La prioridad del departamento no obliga a que todos sus destinos pertenezcan al mismo grupo.
+P2 turística propuesta; revisión nacional CO-turismo-v3.
 
-- [Montería](lugares/monteria/PROCESO.md) · P3
-- [Lorica](lugares/lorica/PROCESO.md) · P3
+- [Lorica](lugares/lorica/PROCESO.md) · P2
+- [Montería](lugares/monteria/PROCESO.md) · P2

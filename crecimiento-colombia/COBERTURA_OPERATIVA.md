@@ -1,6 +1,6 @@
 # Cobertura operativa auditada
 
-Universo CO-editorial-v2: 78 candidatos, 33 unidades. Cobertura administrativa nacional: **no calculable** sin censo completo reconciliado.
+Universo CO-turismo-v3: 100 candidatos, 33 unidades. Cobertura administrativa nacional: **no calculable** sin censo completo reconciliado.
 
 Preparación = gates ponderados originales; publicabilidad = versión completa aprobada en ambos controles; publicación = estado y evidencia en ambos controles; profundidad = porcentaje de los 13 componentes completos, no medida de riqueza narrativa. Lugares ponderados P1=3/P2=2/P3=1; departamentos igual.
 
@@ -10,26 +10,26 @@ Preparación = gates ponderados originales; publicabilidad = versión completa a
 | Atlántico | 2 | 0.00% | 0.00% | 0.00% | 0.00% |
 | Bogotá D.C. | 1 | 0.00% | 0.00% | 0.00% | 0.00% |
 | Bolívar | 2 | 0.00% | 0.00% | 0.00% | 0.00% |
-| Boyacá | 2 | 0.00% | 0.00% | 0.00% | 0.00% |
+| Boyacá | 4 | 0.00% | 0.00% | 0.00% | 0.00% |
 | Caldas | 2 | 0.00% | 0.00% | 0.00% | 0.00% |
 | Caquetá | 1 | 0.00% | 0.00% | 0.00% | 0.00% |
 | Cauca | 2 | 0.00% | 0.00% | 0.00% | 0.00% |
 | Cesar | 1 | 0.00% | 0.00% | 0.00% | 0.00% |
 | Córdoba | 2 | 0.00% | 0.00% | 0.00% | 0.00% |
-| Cundinamarca | 2 | 0.00% | 0.00% | 0.00% | 0.00% |
-| Chocó | 2 | 0.00% | 0.00% | 0.00% | 0.00% |
-| Huila | 2 | 0.00% | 0.00% | 0.00% | 0.00% |
-| La Guajira | 2 | 0.00% | 0.00% | 0.00% | 0.00% |
-| Magdalena | 1 | 0.00% | 0.00% | 0.00% | 0.00% |
+| Cundinamarca | 5 | 0.00% | 0.00% | 0.00% | 0.00% |
+| Chocó | 4 | 0.00% | 0.00% | 0.00% | 0.00% |
+| Huila | 3 | 0.00% | 0.00% | 0.00% | 0.00% |
+| La Guajira | 4 | 0.00% | 0.00% | 0.00% | 0.00% |
+| Magdalena | 2 | 0.00% | 0.00% | 0.00% | 0.00% |
 | Meta | 2 | 0.00% | 0.00% | 0.00% | 0.00% |
 | Nariño | 2 | 0.00% | 0.00% | 0.00% | 0.00% |
 | Norte de Santander | 2 | 0.00% | 0.00% | 0.00% | 0.00% |
-| Quindío | 3 | 0.00% | 0.00% | 0.00% | 0.00% |
+| Quindío | 5 | 0.00% | 0.00% | 0.00% | 0.00% |
 | Risaralda | 2 | 0.00% | 0.00% | 0.00% | 0.00% |
-| Santander | 2 | 0.00% | 0.00% | 0.00% | 0.00% |
-| Sucre | 2 | 0.00% | 0.00% | 0.00% | 0.00% |
-| Tolima | 2 | 0.00% | 0.00% | 0.00% | 0.00% |
-| Valle del Cauca | 2 | 0.00% | 0.00% | 0.00% | 0.00% |
+| Santander | 5 | 0.00% | 0.00% | 0.00% | 0.00% |
+| Sucre | 4 | 0.00% | 0.00% | 0.00% | 0.00% |
+| Tolima | 5 | 0.00% | 0.00% | 0.00% | 0.00% |
+| Valle del Cauca | 3 | 0.00% | 0.00% | 0.00% | 0.00% |
 | Arauca | 1 | 0.00% | 0.00% | 0.00% | 0.00% |
 | Casanare | 1 | 0.00% | 0.00% | 0.00% | 0.00% |
 | Putumayo | 2 | 0.00% | 0.00% | 0.00% | 0.00% |
@@ -41,7 +41,7 @@ Preparación = gates ponderados originales; publicabilidad = versión completa a
 | Vichada | 1 | 0.00% | 0.00% | 0.00% | 0.00% |
 
 País (universo editorial): prepared_percent=0.00%, publishable_percent=0.00%, published_percent=0.00%, depth_percent=0.00%.
-Sin iniciar: 78; activos: 0; esperando revisión: 0.
+Sin iniciar: 100; activos: 0; esperando revisión: 0.
 Tiempos: sin muestras observadas; no hay diagnóstico de cuello de botella.
 
 Detalle por lugar y tiempos: cobertura-operativa.json. Cero significa ausencia de evidencia en este plan; no ausencia de contenido histórico ni verificación de producción.

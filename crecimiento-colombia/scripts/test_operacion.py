@@ -5,7 +5,7 @@ class OperationsTests(unittest.TestCase):
     def setUp(self):self.op=json.loads((ROOT/'operacion.json').read_text())
     def rejects(self,op):
         with self.assertRaises((ValueError,KeyError,TypeError)):validate(op)
-    def test_real_seed(self):self.assertEqual(len(validate(self.op)[2]['queue']),78)
+    def test_real_seed(self):self.assertEqual(len(validate(self.op)[2]['queue']),100)
     def test_reordered_block(self):
         self.op['queue'][0],self.op['queue'][1]=self.op['queue'][1],self.op['queue'][0];self.rejects(self.op)
     def test_duplicate_place(self):

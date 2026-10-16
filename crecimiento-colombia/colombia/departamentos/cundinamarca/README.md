@@ -1,6 +1,9 @@
 # Cundinamarca
 
-Grupo P2 provisional. La prioridad del departamento no obliga a que todos sus destinos pertenezcan al mismo grupo.
+P1 turística propuesta; revisión nacional CO-turismo-v3.
 
-- [Zipaquirá](lugares/zipaquira/PROCESO.md) · P2
-- [Guatavita](lugares/guatavita/PROCESO.md) · P2
+- [Zipaquirá](lugares/zipaquira/PROCESO.md) · P1
+- [Girardot](lugares/girardot/PROCESO.md) · P1
+- [Guatavita](lugares/guatavita/PROCESO.md) · P1
+- [Villeta](lugares/villeta/PROCESO.md) · P1
+- [Guaduas](lugares/guaduas/PROCESO.md) · P2

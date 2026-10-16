@@ -1,0 +1,2792 @@
+{
+  "version": "CO-turismo-v3",
+  "checked_at": "2026-10-16",
+  "method": "evaluacion_editorial_turistica_no_ranking_oficial",
+  "weights": {
+    "alcance": 40,
+    "producto": 30,
+    "ecosistema": 20,
+    "acceso": 10
+  },
+  "priority_thresholds": {
+    "P1_min": 70,
+    "P2_min": 45
+  },
+  "approval": null,
+  "sources": {
+    "nacional": {
+      "url": "https://colombia.travel/es/donde-ir",
+      "publisher_title": "ProColombia, destinos por regiones",
+      "access_method": "pagina_consultada",
+      "limits": "Marco nacional de oferta; no ranking de afluencia.",
+      "checked_at": "2026-10-16"
+    },
+    "caribe": {
+      "url": "https://colombia.travel/es/donde-ir/gran-caribe-colombiano",
+      "publisher_title": "ProColombia, Gran Caribe",
+      "access_method": "pagina_consultada",
+      "limits": "Oferta caribeña, destinos y conectividad; no conteos municipales.",
+      "checked_at": "2026-10-16"
+    },
+    "occidentales": {
+      "url": "https://colombia.travel/es/donde-ir/andes-occidentales-colombianos",
+      "publisher_title": "ProColombia, Andes Occidentales",
+      "access_method": "pagina_consultada",
+      "limits": "Oferta de Antioquia y Eje Cafetero; no ranking de demanda.",
+      "checked_at": "2026-10-16"
+    },
+    "orientales": {
+      "url": "https://colombia.travel/es/donde-ir/andes-orientales-colombianos",
+      "publisher_title": "ProColombia, Andes Orientales",
+      "access_method": "pagina_consultada",
+      "limits": "Destinos de Bogotá, Boyacá, Santander, Cundinamarca y Tolima.",
+      "checked_at": "2026-10-16"
+    },
+    "pacifico": {
+      "url": "https://colombia.travel/es/donde-ir/pacifico-colombiano",
+      "publisher_title": "ProColombia, Pacífico",
+      "access_method": "pagina_consultada",
+      "limits": "Oferta de costa Pacífica y Valle; condiciones de visita no verificadas.",
+      "checked_at": "2026-10-16"
+    },
+    "macizo": {
+      "url": "https://colombia.travel/es/donde-ir/macizo-colombiano",
+      "publisher_title": "ProColombia, Macizo",
+      "access_method": "pagina_consultada",
+      "limits": "Oferta de Cauca, Nariño y sur andino.",
+      "checked_at": "2026-10-16"
+    },
+    "amazonia": {
+      "url": "https://colombia.travel/es/donde-ir/amazonia-orinoquia-colombiana",
+      "publisher_title": "ProColombia, Amazonía-Orinoquía",
+      "access_method": "pagina_consultada",
+      "limits": "Destinos de naturaleza y portales regionales; promoción no equivale a acceso autorizado.",
+      "checked_at": "2026-10-16"
+    },
+    "flujos": {
+      "url": "https://www.mincit.gov.co/getattachment/estudios-economicos/estadisticas-e-informes/informes-de-turismo/2026/junio/oee-ec-turismo-junio-2026.pdf.aspx",
+      "publisher_title": "MinCIT/OEE, informe enlazado como junio 2026; contenido julio 2026",
+      "access_method": "pdf_consultado",
+      "limits": "Página 19 (índice 18): extranjeros no residentes, julio 2026; Bogotá 35,3%, Antioquia 26,9%, Bolívar 17,5%. No turismo total ni afluencia de municipios.",
+      "checked_at": "2026-10-16"
+    },
+    "estadisticas": {
+      "url": "https://portucolombia.mincit.gov.co/tematicas/estadisticas-territoriales/estadisticas-territoriales-de-turismo-1",
+      "publisher_title": "MinCIT, estadísticas territoriales",
+      "access_method": "pagina_consultada",
+      "limits": "Tablero Power BI no exportado: no se dispone de serie homogénea municipal para estos 100 destinos.",
+      "checked_at": "2026-10-16"
+    },
+    "sanjeronimo": {
+      "url": "https://www.sanjeronimo-antioquia.gov.co/MiMunicipio/Paginas/Presentacion.aspx",
+      "publisher_title": "Alcaldía de San Jerónimo, presentación municipal",
+      "access_method": "pagina_consultada",
+      "limits": "Fuente municipal describe infraestructura de alojamiento; afirmación promocional, no inventario RNT comparado.",
+      "checked_at": "2026-10-16"
+    },
+    "circuito": {
+      "url": "https://sanjeronimo-antioquia.gov.co/NuestraAlcaldia/SaladePrensa/Paginas/Primer-Circuito-Tur%C3%ADstico-del-Occidente-Antioque%C3%B1o-Viaja-sin-Prisa.aspx",
+      "publisher_title": "Alcaldía de San Jerónimo, circuito del Occidente",
+      "access_method": "resultado_busqueda",
+      "limits": "Articulación de San Jerónimo, Sopetrán, Santa Fe de Antioquia y Olaya.",
+      "checked_at": "2026-10-16"
+    },
+    "tamesis": {
+      "url": "https://tamesisantioquia.micolombiadigital.gov.co/sites/tamesisantioquia/content/files/000811/40506_plan-de-desarrollo-tamesis-20242027-la-renovacion-esta-en-marcha.pdf",
+      "publisher_title": "Municipio de Támesis, Plan de Desarrollo 2024–2027",
+      "access_method": "pdf_consultado",
+      "limits": "Páginas impresas 90–91: oferta de alojamientos, guías y operadores junto a diagnóstico de promoción y articulación incipientes. No prueba diferencia cuantitativa con San Jerónimo ni actualización de afluencia a 2026.",
+      "checked_at": "2026-10-16"
+    },
+    "sucre": {
+      "url": "https://regions.colombia.travel/gran-caribe-colombiano/sucre",
+      "publisher_title": "ProColombia, Sucre",
+      "access_method": "pagina_consultada",
+      "limits": "Incluye Tolú, Coveñas y San Onofre.",
+      "checked_at": "2026-10-16"
+    },
+    "andina": {
+      "url": "https://colombia.travel/es/andes-colombianos",
+      "publisher_title": "ProColombia, región andina",
+      "access_method": "resultado_busqueda",
+      "limits": "Lista Guaduas, Girón, Paipa, Cocuy, Socorro, Melgar, Girardot, Villeta y Prado.",
+      "checked_at": "2026-10-16"
+    },
+    "palomino": {
+      "url": "https://colombia.travel/es/palomino",
+      "publisher_title": "ProColombia, Palomino",
+      "access_method": "pagina_consultada",
+      "limits": "Destino de playa y naturaleza; no visitas cuantificadas.",
+      "checked_at": "2026-10-16"
+    },
+    "minca": {
+      "url": "https://colombia.travel/es/encanto/minca-colombia-capital-ecologica-del-pais",
+      "publisher_title": "ProColombia, Minca",
+      "access_method": "pagina_consultada",
+      "limits": "Corregimiento de Santa Marta, oferta de naturaleza.",
+      "checked_at": "2026-10-16"
+    },
+    "capurgana": {
+      "url": "https://colombia.travel/es/choco/capurgana",
+      "publisher_title": "ProColombia, Capurganá",
+      "access_method": "pagina_consultada",
+      "limits": "Corregimiento de Acandí; costa Caribe del Chocó.",
+      "checked_at": "2026-10-16"
+    },
+    "montenegro": {
+      "url": "https://colombia.travel/es/blog/el-parque-del-cafe-en-colombia",
+      "publisher_title": "ProColombia, Parque del Café",
+      "access_method": "resultado_busqueda",
+      "limits": "Ubica Parque del Café en Pueblo Tapao, Montenegro.",
+      "checked_at": "2026-10-16"
+    },
+    "quindio": {
+      "url": "https://regions.colombia.travel/sites/default/files/2022-06/QUINDIO_REVISTA_2021.pdf",
+      "publisher_title": "ProColombia, revista Quindío 2021",
+      "access_method": "resultado_busqueda",
+      "limits": "Incluye Montenegro/Quimbaya; fuente promocional histórica, no afluencia 2026.",
+      "checked_at": "2026-10-16"
+    },
+    "villavieja": {
+      "url": "https://www2.sgc.gov.co/Noticias/Paginas/Valle-de-los-Fantasmas-el-desierto-gris-en-la-Tatacoa.aspx",
+      "publisher_title": "Servicio Geológico Colombiano, Tatacoa",
+      "access_method": "resultado_busqueda",
+      "limits": "Localización del atractivo en Villavieja.",
+      "checked_at": "2026-10-16"
+    },
+    "murillo": {
+      "url": "https://tolima.gov.co/tolima/informacion-general/turismo/1908-municipio-de",
+      "publisher_title": "Gobernación del Tolima, Murillo",
+      "access_method": "resultado_busqueda",
+      "limits": "Ficha turística municipal; no prueba de rutas abiertas.",
+      "checked_at": "2026-10-16"
+    },
+    "legado": {
+      "url": "backend/app/contact-options.json",
+      "publisher_title": "Clasificación interna del propietario, 11/10/2026",
+      "access_method": "archivo_local_completo",
+      "limits": "municipalityCatalog contiene 125 municipios con pilotCategory 1–4; no ranking oficial ni orden dentro de la categoría.",
+      "checked_at": "2026-10-16"
+    }
+  },
+  "departments": [
+    {
+      "id": "CO-05",
+      "name": "Antioquia",
+      "priority": 1,
+      "previous_priority": 1,
+      "tourism_order": 2,
+      "sources": [
+        "occidentales",
+        "flujos"
+      ],
+      "reason": "Concentración de productos turísticos consolidados",
+      "confidence": "editorial_media"
+    },
+    {
+      "id": "CO-08",
+      "name": "Atlántico",
+      "priority": 1,
+      "previous_priority": 2,
+      "tourism_order": 16,
+      "sources": [
+        "caribe"
+      ],
+      "reason": "Concentración de productos turísticos consolidados",
+      "confidence": "editorial_media"
+    },
+    {
+      "id": "CO-11",
+      "name": "Bogotá D.C.",
+      "priority": 1,
+      "previous_priority": 2,
+      "tourism_order": 1,
+      "sources": [
+        "orientales",
+        "flujos"
+      ],
+      "reason": "Concentración de productos turísticos consolidados",
+      "confidence": "editorial_media"
+    },
+    {
+      "id": "CO-13",
+      "name": "Bolívar",
+      "priority": 1,
+      "previous_priority": 1,
+      "tourism_order": 3,
+      "sources": [
+        "caribe",
+        "flujos"
+      ],
+      "reason": "Concentración de productos turísticos consolidados",
+      "confidence": "editorial_media"
+    },
+    {
+      "id": "CO-15",
+      "name": "Boyacá",
+      "priority": 1,
+      "previous_priority": 2,
+      "tourism_order": 7,
+      "sources": [
+        "orientales"
+      ],
+      "reason": "Concentración de productos turísticos consolidados",
+      "confidence": "editorial_media"
+    },
+    {
+      "id": "CO-17",
+      "name": "Caldas",
+      "priority": 1,
+      "previous_priority": 2,
+      "tourism_order": 12,
+      "sources": [
+        "occidentales"
+      ],
+      "reason": "Concentración de productos turísticos consolidados",
+      "confidence": "editorial_media"
+    },
+    {
+      "id": "CO-18",
+      "name": "Caquetá",
+      "priority": 2,
+      "previous_priority": 3,
+      "tourism_order": 29,
+      "sources": [
+        "macizo"
+      ],
+      "reason": "Oferta regional o especializada",
+      "confidence": "editorial_baja"
+    },
+    {
+      "id": "CO-19",
+      "name": "Cauca",
+      "priority": 1,
+      "previous_priority": 2,
+      "tourism_order": 21,
+      "sources": [
+        "macizo"
+      ],
+      "reason": "Concentración de productos turísticos consolidados",
+      "confidence": "editorial_media"
+    },
+    {
+      "id": "CO-20",
+      "name": "Cesar",
+      "priority": 2,
+      "previous_priority": 3,
+      "tourism_order": 23,
+      "sources": [
+        "caribe"
+      ],
+      "reason": "Oferta regional o especializada",
+      "confidence": "editorial_baja"
+    },
+    {
+      "id": "CO-23",
+      "name": "Córdoba",
+      "priority": 2,
+      "previous_priority": 3,
+      "tourism_order": 24,
+      "sources": [
+        "caribe"
+      ],
+      "reason": "Oferta regional o especializada",
+      "confidence": "editorial_baja"
+    },
+    {
+      "id": "CO-25",
+      "name": "Cundinamarca",
+      "priority": 1,
+      "previous_priority": 2,
+      "tourism_order": 10,
+      "sources": [
+        "orientales"
+      ],
+      "reason": "Concentración de productos turísticos consolidados",
+      "confidence": "editorial_media"
+    },
+    {
+      "id": "CO-27",
+      "name": "Chocó",
+      "priority": 1,
+      "previous_priority": 3,
+      "tourism_order": 18,
+      "sources": [
+        "pacifico"
+      ],
+      "reason": "Concentración de productos turísticos consolidados",
+      "confidence": "editorial_media"
+    },
+    {
+      "id": "CO-41",
+      "name": "Huila",
+      "priority": 1,
+      "previous_priority": 2,
+      "tourism_order": 14,
+      "sources": [
+        "macizo"
+      ],
+      "reason": "Concentración de productos turísticos consolidados",
+      "confidence": "editorial_media"
+    },
+    {
+      "id": "CO-44",
+      "name": "La Guajira",
+      "priority": 1,
+      "previous_priority": 2,
+      "tourism_order": 13,
+      "sources": [
+        "caribe"
+      ],
+      "reason": "Concentración de productos turísticos consolidados",
+      "confidence": "editorial_media"
+    },
+    {
+      "id": "CO-47",
+      "name": "Magdalena",
+      "priority": 1,
+      "previous_priority": 2,
+      "tourism_order": 4,
+      "sources": [
+        "caribe"
+      ],
+      "reason": "Concentración de productos turísticos consolidados",
+      "confidence": "editorial_media"
+    },
+    {
+      "id": "CO-50",
+      "name": "Meta",
+      "priority": 1,
+      "previous_priority": 2,
+      "tourism_order": 17,
+      "sources": [
+        "amazonia"
+      ],
+      "reason": "Concentración de productos turísticos consolidados",
+      "confidence": "editorial_media"
+    },
+    {
+      "id": "CO-52",
+      "name": "Nariño",
+      "priority": 1,
+      "previous_priority": 2,
+      "tourism_order": 20,
+      "sources": [
+        "macizo"
+      ],
+      "reason": "Concentración de productos turísticos consolidados",
+      "confidence": "editorial_media"
+    },
+    {
+      "id": "CO-54",
+      "name": "Norte de Santander",
+      "priority": 2,
+      "previous_priority": 3,
+      "tourism_order": 28,
+      "sources": [
+        "orientales"
+      ],
+      "reason": "Oferta regional o especializada",
+      "confidence": "editorial_baja"
+    },
+    {
+      "id": "CO-63",
+      "name": "Quindío",
+      "priority": 1,
+      "previous_priority": 1,
+      "tourism_order": 6,
+      "sources": [
+        "occidentales"
+      ],
+      "reason": "Concentración de productos turísticos consolidados",
+      "confidence": "editorial_media"
+    },
+    {
+      "id": "CO-66",
+      "name": "Risaralda",
+      "priority": 1,
+      "previous_priority": 2,
+      "tourism_order": 11,
+      "sources": [
+        "occidentales"
+      ],
+      "reason": "Concentración de productos turísticos consolidados",
+      "confidence": "editorial_media"
+    },
+    {
+      "id": "CO-68",
+      "name": "Santander",
+      "priority": 1,
+      "previous_priority": 2,
+      "tourism_order": 8,
+      "sources": [
+        "orientales"
+      ],
+      "reason": "Concentración de productos turísticos consolidados",
+      "confidence": "editorial_media"
+    },
+    {
+      "id": "CO-70",
+      "name": "Sucre",
+      "priority": 1,
+      "previous_priority": 3,
+      "tourism_order": 19,
+      "sources": [
+        "caribe"
+      ],
+      "reason": "Concentración de productos turísticos consolidados",
+      "confidence": "editorial_media"
+    },
+    {
+      "id": "CO-73",
+      "name": "Tolima",
+      "priority": 1,
+      "previous_priority": 2,
+      "tourism_order": 22,
+      "sources": [
+        "orientales"
+      ],
+      "reason": "Concentración de productos turísticos consolidados",
+      "confidence": "editorial_media"
+    },
+    {
+      "id": "CO-76",
+      "name": "Valle del Cauca",
+      "priority": 1,
+      "previous_priority": 2,
+      "tourism_order": 9,
+      "sources": [
+        "pacifico"
+      ],
+      "reason": "Concentración de productos turísticos consolidados",
+      "confidence": "editorial_media"
+    },
+    {
+      "id": "CO-81",
+      "name": "Arauca",
+      "priority": 3,
+      "previous_priority": 3,
+      "tourism_order": 33,
+      "sources": [
+        "amazonia"
+      ],
+      "reason": "Desarrollo especializado con evidencia comparativa limitada",
+      "confidence": "editorial_baja"
+    },
+    {
+      "id": "CO-85",
+      "name": "Casanare",
+      "priority": 2,
+      "previous_priority": 3,
+      "tourism_order": 25,
+      "sources": [
+        "amazonia"
+      ],
+      "reason": "Oferta regional o especializada",
+      "confidence": "editorial_baja"
+    },
+    {
+      "id": "CO-86",
+      "name": "Putumayo",
+      "priority": 2,
+      "previous_priority": 3,
+      "tourism_order": 27,
+      "sources": [
+        "macizo"
+      ],
+      "reason": "Oferta regional o especializada",
+      "confidence": "editorial_baja"
+    },
+    {
+      "id": "CO-88",
+      "name": "San Andrés, Providencia y Santa Catalina",
+      "priority": 1,
+      "previous_priority": 2,
+      "tourism_order": 5,
+      "sources": [
+        "caribe"
+      ],
+      "reason": "Concentración de productos turísticos consolidados",
+      "confidence": "editorial_media"
+    },
+    {
+      "id": "CO-91",
+      "name": "Amazonas",
+      "priority": 1,
+      "previous_priority": 2,
+      "tourism_order": 15,
+      "sources": [
+        "amazonia"
+      ],
+      "reason": "Concentración de productos turísticos consolidados",
+      "confidence": "editorial_media"
+    },
+    {
+      "id": "CO-94",
+      "name": "Guainía",
+      "priority": 2,
+      "previous_priority": 3,
+      "tourism_order": 30,
+      "sources": [
+        "amazonia"
+      ],
+      "reason": "Oferta regional o especializada",
+      "confidence": "editorial_baja"
+    },
+    {
+      "id": "CO-95",
+      "name": "Guaviare",
+      "priority": 2,
+      "previous_priority": 3,
+      "tourism_order": 26,
+      "sources": [
+        "amazonia"
+      ],
+      "reason": "Oferta regional o especializada",
+      "confidence": "editorial_baja"
+    },
+    {
+      "id": "CO-97",
+      "name": "Vaupés",
+      "priority": 3,
+      "previous_priority": 3,
+      "tourism_order": 31,
+      "sources": [
+        "amazonia"
+      ],
+      "reason": "Desarrollo especializado con evidencia comparativa limitada",
+      "confidence": "editorial_baja"
+    },
+    {
+      "id": "CO-99",
+      "name": "Vichada",
+      "priority": 3,
+      "previous_priority": 3,
+      "tourism_order": 32,
+      "sources": [
+        "amazonia"
+      ],
+      "reason": "Desarrollo especializado con evidencia comparativa limitada",
+      "confidence": "editorial_baja"
+    }
+  ],
+  "places": [
+    {
+      "id": "CO-05-jerico",
+      "name": "Jericó",
+      "department_id": "CO-05",
+      "priority": 1,
+      "previous_priority": 1,
+      "legacy_pilot_category": 1,
+      "tourism_score": 74.0,
+      "inputs": {
+        "alcance": 4,
+        "producto": 4,
+        "ecosistema": 3,
+        "acceso": 3
+      },
+      "reason": "Patrimonio, cultura y turismo religioso",
+      "sources": [
+        "occidentales",
+        "legado"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1014
+    },
+    {
+      "id": "CO-05-jardin",
+      "name": "Jardín",
+      "department_id": "CO-05",
+      "priority": 1,
+      "previous_priority": 1,
+      "legacy_pilot_category": 1,
+      "tourism_score": 82.0,
+      "inputs": {
+        "alcance": 4,
+        "producto": 5,
+        "ecosistema": 3,
+        "acceso": 4
+      },
+      "reason": "Pueblo patrimonial y naturaleza",
+      "sources": [
+        "occidentales",
+        "legado"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 14
+    },
+    {
+      "id": "CO-05-sonson",
+      "name": "Sonsón",
+      "department_id": "CO-05",
+      "priority": 2,
+      "previous_priority": 2,
+      "legacy_pilot_category": 2,
+      "tourism_score": 48.0,
+      "inputs": {
+        "alcance": 2,
+        "producto": 3,
+        "ecosistema": 2,
+        "acceso": 3
+      },
+      "reason": "Patrimonio y desarrollo emergente",
+      "sources": [
+        "legado"
+      ],
+      "confidence": "editorial_baja",
+      "comparable_visitor_count": null,
+      "tie_order": 1029
+    },
+    {
+      "id": "CO-05-cauca-viejo",
+      "name": "Cauca Viejo",
+      "department_id": "CO-05",
+      "priority": 2,
+      "previous_priority": 2,
+      "legacy_pilot_category": null,
+      "tourism_score": 48.0,
+      "inputs": {
+        "alcance": 2,
+        "producto": 3,
+        "ecosistema": 2,
+        "acceso": 3
+      },
+      "reason": "Destino dependiente del circuito Jericó",
+      "sources": [
+        "legado"
+      ],
+      "confidence": "editorial_baja",
+      "comparable_visitor_count": null,
+      "tie_order": 1030
+    },
+    {
+      "id": "CO-05-guatape",
+      "name": "Guatapé",
+      "department_id": "CO-05",
+      "priority": 1,
+      "previous_priority": 1,
+      "legacy_pilot_category": 1,
+      "tourism_score": 94.0,
+      "inputs": {
+        "alcance": 5,
+        "producto": 5,
+        "ecosistema": 4,
+        "acceso": 4
+      },
+      "reason": "Embalse y producto paisajístico",
+      "sources": [
+        "occidentales",
+        "legado"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 7
+    },
+    {
+      "id": "CO-05-santa-fe-de-antioquia",
+      "name": "Santa Fe de Antioquia",
+      "department_id": "CO-05",
+      "priority": 1,
+      "previous_priority": 1,
+      "legacy_pilot_category": 1,
+      "tourism_score": 84.0,
+      "inputs": {
+        "alcance": 4,
+        "producto": 5,
+        "ecosistema": 3,
+        "acceso": 5
+      },
+      "reason": "Patrimonio y descanso regional",
+      "sources": [
+        "occidentales",
+        "circuito"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 15
+    },
+    {
+      "id": "CO-05-medellin",
+      "name": "Medellín",
+      "department_id": "CO-05",
+      "priority": 1,
+      "previous_priority": 1,
+      "legacy_pilot_category": 1,
+      "tourism_score": 100.0,
+      "inputs": {
+        "alcance": 5,
+        "producto": 5,
+        "ecosistema": 5,
+        "acceso": 5
+      },
+      "reason": "Ciudad, cultura y oferta diversa",
+      "sources": [
+        "nacional",
+        "flujos"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 2
+    },
+    {
+      "id": "CO-05-el-penol",
+      "name": "El Peñol",
+      "department_id": "CO-05",
+      "priority": 1,
+      "previous_priority": 1,
+      "legacy_pilot_category": 1,
+      "tourism_score": 76.0,
+      "inputs": {
+        "alcance": 4,
+        "producto": 4,
+        "ecosistema": 3,
+        "acceso": 4
+      },
+      "reason": "Embalse y circuito con Guatapé",
+      "sources": [
+        "occidentales",
+        "legado"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1016
+    },
+    {
+      "id": "CO-05-tamesis",
+      "name": "Támesis",
+      "department_id": "CO-05",
+      "priority": 2,
+      "previous_priority": 1,
+      "legacy_pilot_category": 1,
+      "tourism_score": 58.0,
+      "inputs": {
+        "alcance": 2,
+        "producto": 4,
+        "ecosistema": 3,
+        "acceso": 3
+      },
+      "reason": "Naturaleza con oferta local; consolidación y promoción pendientes",
+      "sources": [
+        "tamesis",
+        "legado"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1015
+    },
+    {
+      "id": "CO-05-san-jeronimo",
+      "name": "San Jerónimo",
+      "department_id": "CO-05",
+      "priority": 1,
+      "previous_priority": 1,
+      "legacy_pilot_category": 1,
+      "tourism_score": 74.0,
+      "inputs": {
+        "alcance": 3,
+        "producto": 4,
+        "ecosistema": 4,
+        "acceso": 5
+      },
+      "reason": "Descanso, alojamiento y circuito occidental",
+      "sources": [
+        "sanjeronimo",
+        "circuito"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1012
+    },
+    {
+      "id": "CO-05-sopetran",
+      "name": "Sopetrán",
+      "department_id": "CO-05",
+      "priority": 1,
+      "previous_priority": 1,
+      "legacy_pilot_category": 1,
+      "tourism_score": 70.0,
+      "inputs": {
+        "alcance": 3,
+        "producto": 4,
+        "ecosistema": 3,
+        "acceso": 5
+      },
+      "reason": "Descanso del Occidente cercano",
+      "sources": [
+        "circuito",
+        "legado"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1013
+    },
+    {
+      "id": "CO-05-san-rafael",
+      "name": "San Rafael",
+      "department_id": "CO-05",
+      "priority": 2,
+      "previous_priority": 1,
+      "legacy_pilot_category": 1,
+      "tourism_score": 66.0,
+      "inputs": {
+        "alcance": 3,
+        "producto": 4,
+        "ecosistema": 3,
+        "acceso": 3
+      },
+      "reason": "Ríos y naturaleza regional",
+      "sources": [
+        "legado"
+      ],
+      "confidence": "editorial_baja",
+      "comparable_visitor_count": null,
+      "tie_order": 1017
+    },
+    {
+      "id": "CO-05-cocorna",
+      "name": "Cocorná",
+      "department_id": "CO-05",
+      "priority": 2,
+      "previous_priority": 1,
+      "legacy_pilot_category": 1,
+      "tourism_score": 66.0,
+      "inputs": {
+        "alcance": 3,
+        "producto": 4,
+        "ecosistema": 3,
+        "acceso": 3
+      },
+      "reason": "Naturaleza y escapadas regionales",
+      "sources": [
+        "legado"
+      ],
+      "confidence": "editorial_baja",
+      "comparable_visitor_count": null,
+      "tie_order": 1018
+    },
+    {
+      "id": "CO-05-venecia",
+      "name": "Venecia",
+      "department_id": "CO-05",
+      "priority": 2,
+      "previous_priority": 1,
+      "legacy_pilot_category": 1,
+      "tourism_score": 48.0,
+      "inputs": {
+        "alcance": 2,
+        "producto": 3,
+        "ecosistema": 2,
+        "acceso": 3
+      },
+      "reason": "Naturaleza y producto regional",
+      "sources": [
+        "legado"
+      ],
+      "confidence": "editorial_baja",
+      "comparable_visitor_count": null,
+      "tie_order": 1025
+    },
+    {
+      "id": "CO-05-el-retiro",
+      "name": "El Retiro",
+      "department_id": "CO-05",
+      "priority": 2,
+      "previous_priority": 1,
+      "legacy_pilot_category": 1,
+      "tourism_score": 64.0,
+      "inputs": {
+        "alcance": 3,
+        "producto": 3,
+        "ecosistema": 3,
+        "acceso": 5
+      },
+      "reason": "Escapada cultural cercana",
+      "sources": [
+        "legado"
+      ],
+      "confidence": "editorial_baja",
+      "comparable_visitor_count": null,
+      "tie_order": 1020
+    },
+    {
+      "id": "CO-05-san-carlos",
+      "name": "San Carlos",
+      "department_id": "CO-05",
+      "priority": 2,
+      "previous_priority": 1,
+      "legacy_pilot_category": 1,
+      "tourism_score": 66.0,
+      "inputs": {
+        "alcance": 3,
+        "producto": 4,
+        "ecosistema": 3,
+        "acceso": 3
+      },
+      "reason": "Naturaleza y ríos regionales",
+      "sources": [
+        "legado"
+      ],
+      "confidence": "editorial_baja",
+      "comparable_visitor_count": null,
+      "tie_order": 1026
+    },
+    {
+      "id": "CO-05-el-carmen-de-viboral",
+      "name": "El Carmen de Viboral",
+      "department_id": "CO-05",
+      "priority": 2,
+      "previous_priority": 1,
+      "legacy_pilot_category": 1,
+      "tourism_score": 68.0,
+      "inputs": {
+        "alcance": 3,
+        "producto": 4,
+        "ecosistema": 3,
+        "acceso": 4
+      },
+      "reason": "Cerámica y turismo cultural",
+      "sources": [
+        "legado"
+      ],
+      "confidence": "editorial_baja",
+      "comparable_visitor_count": null,
+      "tie_order": 1021
+    },
+    {
+      "id": "CO-05-rionegro",
+      "name": "Rionegro",
+      "department_id": "CO-05",
+      "priority": 2,
+      "previous_priority": 1,
+      "legacy_pilot_category": 1,
+      "tourism_score": 64.0,
+      "inputs": {
+        "alcance": 3,
+        "producto": 3,
+        "ecosistema": 3,
+        "acceso": 5
+      },
+      "reason": "Servicios y circuito del Oriente",
+      "sources": [
+        "legado"
+      ],
+      "confidence": "editorial_baja",
+      "comparable_visitor_count": null,
+      "tie_order": 1022
+    },
+    {
+      "id": "CO-05-necocli",
+      "name": "Necoclí",
+      "department_id": "CO-05",
+      "priority": 2,
+      "previous_priority": 1,
+      "legacy_pilot_category": 1,
+      "tourism_score": 60.0,
+      "inputs": {
+        "alcance": 3,
+        "producto": 3,
+        "ecosistema": 3,
+        "acceso": 3
+      },
+      "reason": "Playa y acceso al Urabá",
+      "sources": [
+        "legado"
+      ],
+      "confidence": "editorial_baja",
+      "comparable_visitor_count": null,
+      "tie_order": 1023
+    },
+    {
+      "id": "CO-05-arboletes",
+      "name": "Arboletes",
+      "department_id": "CO-05",
+      "priority": 2,
+      "previous_priority": 1,
+      "legacy_pilot_category": 1,
+      "tourism_score": 60.0,
+      "inputs": {
+        "alcance": 3,
+        "producto": 3,
+        "ecosistema": 3,
+        "acceso": 3
+      },
+      "reason": "Playa y producto regional",
+      "sources": [
+        "legado"
+      ],
+      "confidence": "editorial_baja",
+      "comparable_visitor_count": null,
+      "tie_order": 1024
+    },
+    {
+      "id": "CO-05-puerto-triunfo",
+      "name": "Puerto Triunfo",
+      "department_id": "CO-05",
+      "priority": 1,
+      "previous_priority": 1,
+      "legacy_pilot_category": 1,
+      "tourism_score": 80.0,
+      "inputs": {
+        "alcance": 4,
+        "producto": 4,
+        "ecosistema": 4,
+        "acceso": 4
+      },
+      "reason": "Corredor de naturaleza y recreación",
+      "sources": [
+        "legado"
+      ],
+      "confidence": "editorial_baja",
+      "comparable_visitor_count": null,
+      "tie_order": 1019
+    },
+    {
+      "id": "CO-05-san-pedro-de-los-milagros",
+      "name": "San Pedro de los Milagros",
+      "department_id": "CO-05",
+      "priority": 2,
+      "previous_priority": 1,
+      "legacy_pilot_category": 1,
+      "tourism_score": 58.0,
+      "inputs": {
+        "alcance": 3,
+        "producto": 3,
+        "ecosistema": 2,
+        "acceso": 4
+      },
+      "reason": "Turismo religioso regional",
+      "sources": [
+        "legado"
+      ],
+      "confidence": "editorial_baja",
+      "comparable_visitor_count": null,
+      "tie_order": 1027
+    },
+    {
+      "id": "CO-05-santa-rosa-de-osos",
+      "name": "Santa Rosa de Osos",
+      "department_id": "CO-05",
+      "priority": 2,
+      "previous_priority": 1,
+      "legacy_pilot_category": 1,
+      "tourism_score": 58.0,
+      "inputs": {
+        "alcance": 3,
+        "producto": 3,
+        "ecosistema": 2,
+        "acceso": 4
+      },
+      "reason": "Cultura y turismo religioso",
+      "sources": [
+        "legado"
+      ],
+      "confidence": "editorial_baja",
+      "comparable_visitor_count": null,
+      "tie_order": 1028
+    },
+    {
+      "id": "CO-08-barranquilla",
+      "name": "Barranquilla",
+      "department_id": "CO-08",
+      "priority": 1,
+      "previous_priority": 2,
+      "legacy_pilot_category": null,
+      "tourism_score": 90.0,
+      "inputs": {
+        "alcance": 5,
+        "producto": 4,
+        "ecosistema": 4,
+        "acceso": 5
+      },
+      "reason": "Carnaval, cultura y oferta urbana",
+      "sources": [
+        "caribe"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1031
+    },
+    {
+      "id": "CO-08-puerto-colombia",
+      "name": "Puerto Colombia",
+      "department_id": "CO-08",
+      "priority": 1,
+      "previous_priority": 2,
+      "legacy_pilot_category": null,
+      "tourism_score": 70.0,
+      "inputs": {
+        "alcance": 3,
+        "producto": 4,
+        "ecosistema": 3,
+        "acceso": 5
+      },
+      "reason": "Costa y escapada metropolitana",
+      "sources": [
+        "caribe"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1032
+    },
+    {
+      "id": "CO-11-bogota",
+      "name": "Bogotá",
+      "department_id": "CO-11",
+      "priority": 1,
+      "previous_priority": 2,
+      "legacy_pilot_category": null,
+      "tourism_score": 100.0,
+      "inputs": {
+        "alcance": 5,
+        "producto": 5,
+        "ecosistema": 5,
+        "acceso": 5
+      },
+      "reason": "Cultura, patrimonio y oferta urbana",
+      "sources": [
+        "orientales",
+        "flujos"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1
+    },
+    {
+      "id": "CO-13-cartagena",
+      "name": "Cartagena",
+      "department_id": "CO-13",
+      "priority": 1,
+      "previous_priority": 1,
+      "legacy_pilot_category": null,
+      "tourism_score": 100.0,
+      "inputs": {
+        "alcance": 5,
+        "producto": 5,
+        "ecosistema": 5,
+        "acceso": 5
+      },
+      "reason": "Patrimonio y destino vacacional",
+      "sources": [
+        "caribe",
+        "flujos"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 0
+    },
+    {
+      "id": "CO-13-santa-cruz-de-mompox",
+      "name": "Santa Cruz de Mompox",
+      "department_id": "CO-13",
+      "priority": 1,
+      "previous_priority": 2,
+      "legacy_pilot_category": null,
+      "tourism_score": 80.0,
+      "inputs": {
+        "alcance": 4,
+        "producto": 5,
+        "ecosistema": 3,
+        "acceso": 3
+      },
+      "reason": "Patrimonio y turismo cultural",
+      "sources": [
+        "caribe"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1033
+    },
+    {
+      "id": "CO-15-villa-de-leyva",
+      "name": "Villa de Leyva",
+      "department_id": "CO-15",
+      "priority": 1,
+      "previous_priority": 2,
+      "legacy_pilot_category": null,
+      "tourism_score": 94.0,
+      "inputs": {
+        "alcance": 5,
+        "producto": 5,
+        "ecosistema": 4,
+        "acceso": 4
+      },
+      "reason": "Patrimonio y escapadas nacionales",
+      "sources": [
+        "orientales"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 6
+    },
+    {
+      "id": "CO-15-mongui",
+      "name": "Monguí",
+      "department_id": "CO-15",
+      "priority": 1,
+      "previous_priority": 2,
+      "legacy_pilot_category": null,
+      "tourism_score": 74.0,
+      "inputs": {
+        "alcance": 4,
+        "producto": 4,
+        "ecosistema": 3,
+        "acceso": 3
+      },
+      "reason": "Patrimonio y turismo de naturaleza",
+      "sources": [
+        "orientales"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1034
+    },
+    {
+      "id": "CO-15-el-cocuy",
+      "name": "El Cocuy",
+      "department_id": "CO-15",
+      "priority": 1,
+      "previous_priority": null,
+      "legacy_pilot_category": null,
+      "tourism_score": 72.0,
+      "inputs": {
+        "alcance": 4,
+        "producto": 4,
+        "ecosistema": 3,
+        "acceso": 2
+      },
+      "reason": "Turismo de montaña especializado",
+      "sources": [
+        "andina"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1085
+    },
+    {
+      "id": "CO-15-paipa",
+      "name": "Paipa",
+      "department_id": "CO-15",
+      "priority": 1,
+      "previous_priority": null,
+      "legacy_pilot_category": null,
+      "tourism_score": 80.0,
+      "inputs": {
+        "alcance": 4,
+        "producto": 4,
+        "ecosistema": 4,
+        "acceso": 4
+      },
+      "reason": "Termalismo y turismo regional consolidado",
+      "sources": [
+        "andina"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1086
+    },
+    {
+      "id": "CO-17-manizales",
+      "name": "Manizales",
+      "department_id": "CO-17",
+      "priority": 1,
+      "previous_priority": 2,
+      "legacy_pilot_category": null,
+      "tourism_score": 82.0,
+      "inputs": {
+        "alcance": 4,
+        "producto": 4,
+        "ecosistema": 4,
+        "acceso": 5
+      },
+      "reason": "Cultura y acceso al paisaje cafetero",
+      "sources": [
+        "occidentales"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1035
+    },
+    {
+      "id": "CO-17-salamina",
+      "name": "Salamina",
+      "department_id": "CO-17",
+      "priority": 2,
+      "previous_priority": 2,
+      "legacy_pilot_category": null,
+      "tourism_score": 66.0,
+      "inputs": {
+        "alcance": 3,
+        "producto": 4,
+        "ecosistema": 3,
+        "acceso": 3
+      },
+      "reason": "Patrimonio cafetero",
+      "sources": [
+        "occidentales"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1036
+    },
+    {
+      "id": "CO-18-florencia",
+      "name": "Florencia",
+      "department_id": "CO-18",
+      "priority": 2,
+      "previous_priority": 3,
+      "legacy_pilot_category": null,
+      "tourism_score": 56.0,
+      "inputs": {
+        "alcance": 3,
+        "producto": 3,
+        "ecosistema": 2,
+        "acceso": 3
+      },
+      "reason": "Portal amazónico y oferta emergente",
+      "sources": [
+        "macizo",
+        "amazonia"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1037
+    },
+    {
+      "id": "CO-19-popayan",
+      "name": "Popayán",
+      "department_id": "CO-19",
+      "priority": 1,
+      "previous_priority": 2,
+      "legacy_pilot_category": null,
+      "tourism_score": 86.0,
+      "inputs": {
+        "alcance": 4,
+        "producto": 5,
+        "ecosistema": 4,
+        "acceso": 4
+      },
+      "reason": "Patrimonio y tradición cultural",
+      "sources": [
+        "macizo"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1038
+    },
+    {
+      "id": "CO-19-silvia",
+      "name": "Silvia",
+      "department_id": "CO-19",
+      "priority": 2,
+      "previous_priority": 2,
+      "legacy_pilot_category": null,
+      "tourism_score": 66.0,
+      "inputs": {
+        "alcance": 3,
+        "producto": 4,
+        "ecosistema": 3,
+        "acceso": 3
+      },
+      "reason": "Cultura y circuito regional",
+      "sources": [
+        "macizo"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1039
+    },
+    {
+      "id": "CO-20-valledupar",
+      "name": "Valledupar",
+      "department_id": "CO-20",
+      "priority": 1,
+      "previous_priority": 3,
+      "legacy_pilot_category": null,
+      "tourism_score": 80.0,
+      "inputs": {
+        "alcance": 4,
+        "producto": 4,
+        "ecosistema": 4,
+        "acceso": 4
+      },
+      "reason": "Música y turismo cultural estacional",
+      "sources": [
+        "caribe"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1040
+    },
+    {
+      "id": "CO-23-monteria",
+      "name": "Montería",
+      "department_id": "CO-23",
+      "priority": 2,
+      "previous_priority": 3,
+      "legacy_pilot_category": null,
+      "tourism_score": 62.0,
+      "inputs": {
+        "alcance": 3,
+        "producto": 3,
+        "ecosistema": 3,
+        "acceso": 4
+      },
+      "reason": "Oferta urbana y circuito regional",
+      "sources": [
+        "caribe"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1041
+    },
+    {
+      "id": "CO-23-lorica",
+      "name": "Lorica",
+      "department_id": "CO-23",
+      "priority": 2,
+      "previous_priority": 3,
+      "legacy_pilot_category": null,
+      "tourism_score": 66.0,
+      "inputs": {
+        "alcance": 3,
+        "producto": 4,
+        "ecosistema": 3,
+        "acceso": 3
+      },
+      "reason": "Patrimonio y circuito del Sinú",
+      "sources": [
+        "caribe"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1042
+    },
+    {
+      "id": "CO-25-zipaquira",
+      "name": "Zipaquirá",
+      "department_id": "CO-25",
+      "priority": 1,
+      "previous_priority": 2,
+      "legacy_pilot_category": null,
+      "tourism_score": 90.0,
+      "inputs": {
+        "alcance": 5,
+        "producto": 4,
+        "ecosistema": 4,
+        "acceso": 5
+      },
+      "reason": "Atractivo cultural y excursión nacional",
+      "sources": [
+        "orientales"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 10
+    },
+    {
+      "id": "CO-25-guatavita",
+      "name": "Guatavita",
+      "department_id": "CO-25",
+      "priority": 1,
+      "previous_priority": 2,
+      "legacy_pilot_category": null,
+      "tourism_score": 76.0,
+      "inputs": {
+        "alcance": 4,
+        "producto": 4,
+        "ecosistema": 3,
+        "acceso": 4
+      },
+      "reason": "Paisaje y circuito de leyenda",
+      "sources": [
+        "orientales"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1044
+    },
+    {
+      "id": "CO-25-guaduas",
+      "name": "Guaduas",
+      "department_id": "CO-25",
+      "priority": 2,
+      "previous_priority": null,
+      "legacy_pilot_category": null,
+      "tourism_score": 68.0,
+      "inputs": {
+        "alcance": 3,
+        "producto": 4,
+        "ecosistema": 3,
+        "acceso": 4
+      },
+      "reason": "Patrimonio y turismo regional",
+      "sources": [
+        "andina"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1087
+    },
+    {
+      "id": "CO-25-girardot",
+      "name": "Girardot",
+      "department_id": "CO-25",
+      "priority": 1,
+      "previous_priority": null,
+      "legacy_pilot_category": null,
+      "tourism_score": 82.0,
+      "inputs": {
+        "alcance": 4,
+        "producto": 4,
+        "ecosistema": 4,
+        "acceso": 5
+      },
+      "reason": "Descanso y turismo regional consolidado",
+      "sources": [
+        "andina"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1096
+    },
+    {
+      "id": "CO-25-villeta",
+      "name": "Villeta",
+      "department_id": "CO-25",
+      "priority": 1,
+      "previous_priority": null,
+      "legacy_pilot_category": null,
+      "tourism_score": 70.0,
+      "inputs": {
+        "alcance": 3,
+        "producto": 4,
+        "ecosistema": 3,
+        "acceso": 5
+      },
+      "reason": "Escapada regional de clima cálido",
+      "sources": [
+        "andina"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1097
+    },
+    {
+      "id": "CO-27-nuqui",
+      "name": "Nuquí",
+      "department_id": "CO-27",
+      "priority": 1,
+      "previous_priority": 3,
+      "legacy_pilot_category": null,
+      "tourism_score": 78.0,
+      "inputs": {
+        "alcance": 4,
+        "producto": 5,
+        "ecosistema": 3,
+        "acceso": 2
+      },
+      "reason": "Naturaleza y turismo especializado",
+      "sources": [
+        "pacifico"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1045
+    },
+    {
+      "id": "CO-27-bahia-solano",
+      "name": "Bahía Solano",
+      "department_id": "CO-27",
+      "priority": 1,
+      "previous_priority": 3,
+      "legacy_pilot_category": null,
+      "tourism_score": 80.0,
+      "inputs": {
+        "alcance": 4,
+        "producto": 5,
+        "ecosistema": 3,
+        "acceso": 3
+      },
+      "reason": "Naturaleza y costa Pacífica",
+      "sources": [
+        "pacifico"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1046
+    },
+    {
+      "id": "CO-27-acandi",
+      "name": "Acandí",
+      "department_id": "CO-27",
+      "priority": 2,
+      "previous_priority": null,
+      "legacy_pilot_category": null,
+      "tourism_score": 58.0,
+      "inputs": {
+        "alcance": 3,
+        "producto": 3,
+        "ecosistema": 3,
+        "acceso": 2
+      },
+      "reason": "Portal municipal del Darién",
+      "sources": [
+        "capurgana",
+        "caribe"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1083
+    },
+    {
+      "id": "CO-27-capurgana",
+      "name": "Capurganá",
+      "department_id": "CO-27",
+      "priority": 1,
+      "previous_priority": null,
+      "legacy_pilot_category": null,
+      "tourism_score": 78.0,
+      "inputs": {
+        "alcance": 4,
+        "producto": 5,
+        "ecosistema": 3,
+        "acceso": 2
+      },
+      "reason": "Playa y naturaleza del Darién",
+      "sources": [
+        "capurgana"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1082
+    },
+    {
+      "id": "CO-41-san-agustin",
+      "name": "San Agustín",
+      "department_id": "CO-41",
+      "priority": 1,
+      "previous_priority": 2,
+      "legacy_pilot_category": null,
+      "tourism_score": 80.0,
+      "inputs": {
+        "alcance": 4,
+        "producto": 5,
+        "ecosistema": 3,
+        "acceso": 3
+      },
+      "reason": "Arqueología y patrimonio",
+      "sources": [
+        "macizo"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 18
+    },
+    {
+      "id": "CO-41-neiva",
+      "name": "Neiva",
+      "department_id": "CO-41",
+      "priority": 2,
+      "previous_priority": 2,
+      "legacy_pilot_category": null,
+      "tourism_score": 62.0,
+      "inputs": {
+        "alcance": 3,
+        "producto": 3,
+        "ecosistema": 3,
+        "acceso": 4
+      },
+      "reason": "Portal regional del Huila",
+      "sources": [
+        "orientales"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1048
+    },
+    {
+      "id": "CO-41-villavieja",
+      "name": "Villavieja",
+      "department_id": "CO-41",
+      "priority": 1,
+      "previous_priority": null,
+      "legacy_pilot_category": null,
+      "tourism_score": 80.0,
+      "inputs": {
+        "alcance": 4,
+        "producto": 5,
+        "ecosistema": 3,
+        "acceso": 3
+      },
+      "reason": "Tatacoa y turismo de paisaje",
+      "sources": [
+        "villavieja"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1094
+    },
+    {
+      "id": "CO-44-riohacha",
+      "name": "Riohacha",
+      "department_id": "CO-44",
+      "priority": 1,
+      "previous_priority": 2,
+      "legacy_pilot_category": null,
+      "tourism_score": 72.0,
+      "inputs": {
+        "alcance": 3,
+        "producto": 4,
+        "ecosistema": 4,
+        "acceso": 4
+      },
+      "reason": "Portal turístico de La Guajira",
+      "sources": [
+        "caribe"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1049
+    },
+    {
+      "id": "CO-44-uribia",
+      "name": "Uribia",
+      "department_id": "CO-44",
+      "priority": 1,
+      "previous_priority": 2,
+      "legacy_pilot_category": null,
+      "tourism_score": 72.0,
+      "inputs": {
+        "alcance": 4,
+        "producto": 4,
+        "ecosistema": 3,
+        "acceso": 2
+      },
+      "reason": "Cultura wayúu y acceso a alta Guajira",
+      "sources": [
+        "caribe"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1050
+    },
+    {
+      "id": "CO-44-dibulla",
+      "name": "Dibulla",
+      "department_id": "CO-44",
+      "priority": 2,
+      "previous_priority": null,
+      "legacy_pilot_category": null,
+      "tourism_score": 60.0,
+      "inputs": {
+        "alcance": 3,
+        "producto": 3,
+        "ecosistema": 3,
+        "acceso": 3
+      },
+      "reason": "Circuito costero de La Guajira",
+      "sources": [
+        "caribe",
+        "palomino"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1084
+    },
+    {
+      "id": "CO-44-palomino",
+      "name": "Palomino",
+      "department_id": "CO-44",
+      "priority": 1,
+      "previous_priority": null,
+      "legacy_pilot_category": null,
+      "tourism_score": 80.0,
+      "inputs": {
+        "alcance": 4,
+        "producto": 5,
+        "ecosistema": 3,
+        "acceso": 3
+      },
+      "reason": "Playa y turismo de naturaleza",
+      "sources": [
+        "palomino"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1080
+    },
+    {
+      "id": "CO-47-santa-marta",
+      "name": "Santa Marta",
+      "department_id": "CO-47",
+      "priority": 1,
+      "previous_priority": 2,
+      "legacy_pilot_category": null,
+      "tourism_score": 96.0,
+      "inputs": {
+        "alcance": 5,
+        "producto": 5,
+        "ecosistema": 4,
+        "acceso": 5
+      },
+      "reason": "Playa y base de naturaleza",
+      "sources": [
+        "caribe"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 3
+    },
+    {
+      "id": "CO-47-minca",
+      "name": "Minca",
+      "department_id": "CO-47",
+      "priority": 1,
+      "previous_priority": null,
+      "legacy_pilot_category": null,
+      "tourism_score": 80.0,
+      "inputs": {
+        "alcance": 4,
+        "producto": 5,
+        "ecosistema": 3,
+        "acceso": 3
+      },
+      "reason": "Naturaleza y circuito de Santa Marta",
+      "sources": [
+        "minca"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1081
+    },
+    {
+      "id": "CO-50-villavicencio",
+      "name": "Villavicencio",
+      "department_id": "CO-50",
+      "priority": 1,
+      "previous_priority": 2,
+      "legacy_pilot_category": null,
+      "tourism_score": 82.0,
+      "inputs": {
+        "alcance": 4,
+        "producto": 4,
+        "ecosistema": 4,
+        "acceso": 5
+      },
+      "reason": "Cultura llanera y escapadas",
+      "sources": [
+        "amazonia"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1051
+    },
+    {
+      "id": "CO-50-la-macarena",
+      "name": "La Macarena",
+      "department_id": "CO-50",
+      "priority": 1,
+      "previous_priority": 2,
+      "legacy_pilot_category": null,
+      "tourism_score": 86.0,
+      "inputs": {
+        "alcance": 5,
+        "producto": 5,
+        "ecosistema": 3,
+        "acceso": 2
+      },
+      "reason": "Caño Cristales y naturaleza",
+      "sources": [
+        "amazonia"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 19
+    },
+    {
+      "id": "CO-52-pasto",
+      "name": "Pasto",
+      "department_id": "CO-52",
+      "priority": 1,
+      "previous_priority": 2,
+      "legacy_pilot_category": null,
+      "tourism_score": 86.0,
+      "inputs": {
+        "alcance": 4,
+        "producto": 5,
+        "ecosistema": 4,
+        "acceso": 4
+      },
+      "reason": "Carnaval, cultura y paisajes",
+      "sources": [
+        "macizo"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1053
+    },
+    {
+      "id": "CO-52-ipiales",
+      "name": "Ipiales",
+      "department_id": "CO-52",
+      "priority": 1,
+      "previous_priority": 2,
+      "legacy_pilot_category": null,
+      "tourism_score": 82.0,
+      "inputs": {
+        "alcance": 4,
+        "producto": 5,
+        "ecosistema": 3,
+        "acceso": 4
+      },
+      "reason": "Turismo religioso y circuito fronterizo",
+      "sources": [
+        "macizo"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1054
+    },
+    {
+      "id": "CO-54-cucuta",
+      "name": "Cúcuta",
+      "department_id": "CO-54",
+      "priority": 2,
+      "previous_priority": 3,
+      "legacy_pilot_category": null,
+      "tourism_score": 62.0,
+      "inputs": {
+        "alcance": 3,
+        "producto": 3,
+        "ecosistema": 3,
+        "acceso": 4
+      },
+      "reason": "Servicios y turismo urbano regional",
+      "sources": [
+        "orientales"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1055
+    },
+    {
+      "id": "CO-54-pamplona",
+      "name": "Pamplona",
+      "department_id": "CO-54",
+      "priority": 2,
+      "previous_priority": 3,
+      "legacy_pilot_category": null,
+      "tourism_score": 60.0,
+      "inputs": {
+        "alcance": 3,
+        "producto": 3,
+        "ecosistema": 3,
+        "acceso": 3
+      },
+      "reason": "Patrimonio y turismo regional",
+      "sources": [
+        "orientales"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1056
+    },
+    {
+      "id": "CO-63-salento",
+      "name": "Salento",
+      "department_id": "CO-63",
+      "priority": 1,
+      "previous_priority": 1,
+      "legacy_pilot_category": null,
+      "tourism_score": 94.0,
+      "inputs": {
+        "alcance": 5,
+        "producto": 5,
+        "ecosistema": 4,
+        "acceso": 4
+      },
+      "reason": "Cocora y paisaje cafetero",
+      "sources": [
+        "occidentales"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 5
+    },
+    {
+      "id": "CO-63-filandia",
+      "name": "Filandia",
+      "department_id": "CO-63",
+      "priority": 1,
+      "previous_priority": 2,
+      "legacy_pilot_category": null,
+      "tourism_score": 82.0,
+      "inputs": {
+        "alcance": 4,
+        "producto": 5,
+        "ecosistema": 3,
+        "acceso": 4
+      },
+      "reason": "Paisaje y pueblo cafetero",
+      "sources": [
+        "occidentales"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 13
+    },
+    {
+      "id": "CO-63-armenia",
+      "name": "Armenia",
+      "department_id": "CO-63",
+      "priority": 1,
+      "previous_priority": 2,
+      "legacy_pilot_category": null,
+      "tourism_score": 82.0,
+      "inputs": {
+        "alcance": 4,
+        "producto": 4,
+        "ecosistema": 4,
+        "acceso": 5
+      },
+      "reason": "Base de circuito cafetero",
+      "sources": [
+        "occidentales"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1058
+    },
+    {
+      "id": "CO-63-montenegro",
+      "name": "Montenegro",
+      "department_id": "CO-63",
+      "priority": 1,
+      "previous_priority": null,
+      "legacy_pilot_category": null,
+      "tourism_score": 86.0,
+      "inputs": {
+        "alcance": 4,
+        "producto": 5,
+        "ecosistema": 4,
+        "acceso": 4
+      },
+      "reason": "Parque del Café y paisaje cafetero",
+      "sources": [
+        "montenegro"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 16
+    },
+    {
+      "id": "CO-63-quimbaya",
+      "name": "Quimbaya",
+      "department_id": "CO-63",
+      "priority": 1,
+      "previous_priority": null,
+      "legacy_pilot_category": null,
+      "tourism_score": 80.0,
+      "inputs": {
+        "alcance": 4,
+        "producto": 4,
+        "ecosistema": 4,
+        "acceso": 4
+      },
+      "reason": "Circuito de parques y paisaje cafetero",
+      "sources": [
+        "quindio"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1093
+    },
+    {
+      "id": "CO-66-pereira",
+      "name": "Pereira",
+      "department_id": "CO-66",
+      "priority": 1,
+      "previous_priority": 2,
+      "legacy_pilot_category": null,
+      "tourism_score": 82.0,
+      "inputs": {
+        "alcance": 4,
+        "producto": 4,
+        "ecosistema": 4,
+        "acceso": 5
+      },
+      "reason": "Base de circuito cafetero",
+      "sources": [
+        "occidentales"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1059
+    },
+    {
+      "id": "CO-66-santa-rosa-de-cabal",
+      "name": "Santa Rosa de Cabal",
+      "department_id": "CO-66",
+      "priority": 1,
+      "previous_priority": 2,
+      "legacy_pilot_category": null,
+      "tourism_score": 86.0,
+      "inputs": {
+        "alcance": 4,
+        "producto": 5,
+        "ecosistema": 4,
+        "acceso": 4
+      },
+      "reason": "Termalismo y naturaleza",
+      "sources": [
+        "occidentales"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 12
+    },
+    {
+      "id": "CO-68-barichara",
+      "name": "Barichara",
+      "department_id": "CO-68",
+      "priority": 1,
+      "previous_priority": 2,
+      "legacy_pilot_category": null,
+      "tourism_score": 90.0,
+      "inputs": {
+        "alcance": 5,
+        "producto": 5,
+        "ecosistema": 3,
+        "acceso": 4
+      },
+      "reason": "Patrimonio y circuito regional",
+      "sources": [
+        "orientales"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 9
+    },
+    {
+      "id": "CO-68-san-gil",
+      "name": "San Gil",
+      "department_id": "CO-68",
+      "priority": 1,
+      "previous_priority": 2,
+      "legacy_pilot_category": null,
+      "tourism_score": 86.0,
+      "inputs": {
+        "alcance": 4,
+        "producto": 5,
+        "ecosistema": 4,
+        "acceso": 4
+      },
+      "reason": "Turismo de aventura consolidado",
+      "sources": [
+        "orientales"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 11
+    },
+    {
+      "id": "CO-68-giron",
+      "name": "Girón",
+      "department_id": "CO-68",
+      "priority": 1,
+      "previous_priority": null,
+      "legacy_pilot_category": null,
+      "tourism_score": 70.0,
+      "inputs": {
+        "alcance": 3,
+        "producto": 4,
+        "ecosistema": 3,
+        "acceso": 5
+      },
+      "reason": "Patrimonio y circuito metropolitano",
+      "sources": [
+        "andina"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1088
+    },
+    {
+      "id": "CO-68-bucaramanga",
+      "name": "Bucaramanga",
+      "department_id": "CO-68",
+      "priority": 1,
+      "previous_priority": null,
+      "legacy_pilot_category": null,
+      "tourism_score": 82.0,
+      "inputs": {
+        "alcance": 4,
+        "producto": 4,
+        "ecosistema": 4,
+        "acceso": 5
+      },
+      "reason": "Base de circuitos de Santander",
+      "sources": [
+        "andina"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1089
+    },
+    {
+      "id": "CO-68-socorro",
+      "name": "Socorro",
+      "department_id": "CO-68",
+      "priority": 2,
+      "previous_priority": null,
+      "legacy_pilot_category": null,
+      "tourism_score": 68.0,
+      "inputs": {
+        "alcance": 3,
+        "producto": 4,
+        "ecosistema": 3,
+        "acceso": 4
+      },
+      "reason": "Patrimonio y circuito santandereano",
+      "sources": [
+        "andina"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1099
+    },
+    {
+      "id": "CO-70-sincelejo",
+      "name": "Sincelejo",
+      "department_id": "CO-70",
+      "priority": 2,
+      "previous_priority": 3,
+      "legacy_pilot_category": null,
+      "tourism_score": 58.0,
+      "inputs": {
+        "alcance": 3,
+        "producto": 3,
+        "ecosistema": 2,
+        "acceso": 4
+      },
+      "reason": "Cultura y servicios regionales",
+      "sources": [
+        "caribe",
+        "sucre"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1062
+    },
+    {
+      "id": "CO-70-santiago-de-tolu",
+      "name": "Santiago de Tolú",
+      "department_id": "CO-70",
+      "priority": 1,
+      "previous_priority": 3,
+      "legacy_pilot_category": null,
+      "tourism_score": 80.0,
+      "inputs": {
+        "alcance": 4,
+        "producto": 4,
+        "ecosistema": 4,
+        "acceso": 4
+      },
+      "reason": "Playa y circuito de Morrosquillo",
+      "sources": [
+        "sucre"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1063
+    },
+    {
+      "id": "CO-70-covenas",
+      "name": "Coveñas",
+      "department_id": "CO-70",
+      "priority": 1,
+      "previous_priority": null,
+      "legacy_pilot_category": null,
+      "tourism_score": 80.0,
+      "inputs": {
+        "alcance": 4,
+        "producto": 4,
+        "ecosistema": 4,
+        "acceso": 4
+      },
+      "reason": "Playa y destino vacacional",
+      "sources": [
+        "sucre"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1078
+    },
+    {
+      "id": "CO-70-san-onofre",
+      "name": "San Onofre",
+      "department_id": "CO-70",
+      "priority": 2,
+      "previous_priority": null,
+      "legacy_pilot_category": null,
+      "tourism_score": 66.0,
+      "inputs": {
+        "alcance": 3,
+        "producto": 4,
+        "ecosistema": 3,
+        "acceso": 3
+      },
+      "reason": "Costa y naturaleza regional",
+      "sources": [
+        "sucre"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1079
+    },
+    {
+      "id": "CO-73-ibague",
+      "name": "Ibagué",
+      "department_id": "CO-73",
+      "priority": 1,
+      "previous_priority": 2,
+      "legacy_pilot_category": null,
+      "tourism_score": 70.0,
+      "inputs": {
+        "alcance": 3,
+        "producto": 4,
+        "ecosistema": 3,
+        "acceso": 5
+      },
+      "reason": "Cultura musical y naturaleza regional",
+      "sources": [
+        "orientales"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1064
+    },
+    {
+      "id": "CO-73-honda",
+      "name": "Honda",
+      "department_id": "CO-73",
+      "priority": 2,
+      "previous_priority": 2,
+      "legacy_pilot_category": null,
+      "tourism_score": 68.0,
+      "inputs": {
+        "alcance": 3,
+        "producto": 4,
+        "ecosistema": 3,
+        "acceso": 4
+      },
+      "reason": "Patrimonio y circuito del Magdalena",
+      "sources": [
+        "orientales"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1065
+    },
+    {
+      "id": "CO-73-murillo",
+      "name": "Murillo",
+      "department_id": "CO-73",
+      "priority": 2,
+      "previous_priority": null,
+      "legacy_pilot_category": null,
+      "tourism_score": 66.0,
+      "inputs": {
+        "alcance": 3,
+        "producto": 4,
+        "ecosistema": 3,
+        "acceso": 3
+      },
+      "reason": "Paisaje de montaña y naturaleza",
+      "sources": [
+        "murillo"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1091
+    },
+    {
+      "id": "CO-73-melgar",
+      "name": "Melgar",
+      "department_id": "CO-73",
+      "priority": 1,
+      "previous_priority": null,
+      "legacy_pilot_category": null,
+      "tourism_score": 82.0,
+      "inputs": {
+        "alcance": 4,
+        "producto": 4,
+        "ecosistema": 4,
+        "acceso": 5
+      },
+      "reason": "Descanso y turismo regional consolidado",
+      "sources": [
+        "andina"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1095
+    },
+    {
+      "id": "CO-73-prado",
+      "name": "Prado",
+      "department_id": "CO-73",
+      "priority": 2,
+      "previous_priority": null,
+      "legacy_pilot_category": null,
+      "tourism_score": 66.0,
+      "inputs": {
+        "alcance": 3,
+        "producto": 4,
+        "ecosistema": 3,
+        "acceso": 3
+      },
+      "reason": "Embalse y recreación regional",
+      "sources": [
+        "andina"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1098
+    },
+    {
+      "id": "CO-76-cali",
+      "name": "Cali",
+      "department_id": "CO-76",
+      "priority": 1,
+      "previous_priority": 2,
+      "legacy_pilot_category": null,
+      "tourism_score": 94.0,
+      "inputs": {
+        "alcance": 5,
+        "producto": 4,
+        "ecosistema": 5,
+        "acceso": 5
+      },
+      "reason": "Salsa, cultura y oferta urbana",
+      "sources": [
+        "pacifico"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 8
+    },
+    {
+      "id": "CO-76-guadalajara-de-buga",
+      "name": "Guadalajara de Buga",
+      "department_id": "CO-76",
+      "priority": 1,
+      "previous_priority": 2,
+      "legacy_pilot_category": null,
+      "tourism_score": 82.0,
+      "inputs": {
+        "alcance": 4,
+        "producto": 5,
+        "ecosistema": 3,
+        "acceso": 4
+      },
+      "reason": "Turismo religioso y patrimonio",
+      "sources": [
+        "pacifico"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1077
+    },
+    {
+      "id": "CO-76-buenaventura",
+      "name": "Buenaventura",
+      "department_id": "CO-76",
+      "priority": 2,
+      "previous_priority": null,
+      "legacy_pilot_category": null,
+      "tourism_score": 66.0,
+      "inputs": {
+        "alcance": 3,
+        "producto": 4,
+        "ecosistema": 3,
+        "acceso": 3
+      },
+      "reason": "Portal turístico del Pacífico",
+      "sources": [
+        "nacional",
+        "pacifico"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1090
+    },
+    {
+      "id": "CO-81-arauca",
+      "name": "Arauca",
+      "department_id": "CO-81",
+      "priority": 3,
+      "previous_priority": 3,
+      "legacy_pilot_category": null,
+      "tourism_score": 42.0,
+      "inputs": {
+        "alcance": 2,
+        "producto": 2,
+        "ecosistema": 2,
+        "acceso": 3
+      },
+      "reason": "Cultura llanera y turismo de nicho",
+      "sources": [
+        "amazonia"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1066
+    },
+    {
+      "id": "CO-85-yopal",
+      "name": "Yopal",
+      "department_id": "CO-85",
+      "priority": 2,
+      "previous_priority": 3,
+      "legacy_pilot_category": null,
+      "tourism_score": 68.0,
+      "inputs": {
+        "alcance": 3,
+        "producto": 4,
+        "ecosistema": 3,
+        "acceso": 4
+      },
+      "reason": "Portal de naturaleza llanera",
+      "sources": [
+        "amazonia"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1067
+    },
+    {
+      "id": "CO-86-mocoa",
+      "name": "Mocoa",
+      "department_id": "CO-86",
+      "priority": 2,
+      "previous_priority": 3,
+      "legacy_pilot_category": null,
+      "tourism_score": 66.0,
+      "inputs": {
+        "alcance": 3,
+        "producto": 4,
+        "ecosistema": 3,
+        "acceso": 3
+      },
+      "reason": "Naturaleza y circuito amazónico",
+      "sources": [
+        "macizo",
+        "amazonia"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1068
+    },
+    {
+      "id": "CO-86-sibundoy",
+      "name": "Sibundoy",
+      "department_id": "CO-86",
+      "priority": 2,
+      "previous_priority": 3,
+      "legacy_pilot_category": null,
+      "tourism_score": 56.0,
+      "inputs": {
+        "alcance": 3,
+        "producto": 3,
+        "ecosistema": 2,
+        "acceso": 3
+      },
+      "reason": "Cultura y circuito del valle",
+      "sources": [
+        "macizo"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1069
+    },
+    {
+      "id": "CO-88-san-andres",
+      "name": "San Andrés",
+      "department_id": "CO-88",
+      "priority": 1,
+      "previous_priority": 2,
+      "legacy_pilot_category": null,
+      "tourism_score": 94.0,
+      "inputs": {
+        "alcance": 5,
+        "producto": 5,
+        "ecosistema": 4,
+        "acceso": 4
+      },
+      "reason": "Destino insular vacacional",
+      "sources": [
+        "caribe"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 4
+    },
+    {
+      "id": "CO-88-providencia",
+      "name": "Providencia",
+      "department_id": "CO-88",
+      "priority": 1,
+      "previous_priority": 2,
+      "legacy_pilot_category": null,
+      "tourism_score": 86.0,
+      "inputs": {
+        "alcance": 5,
+        "producto": 5,
+        "ecosistema": 3,
+        "acceso": 2
+      },
+      "reason": "Naturaleza y destino insular",
+      "sources": [
+        "caribe"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 20
+    },
+    {
+      "id": "CO-91-leticia",
+      "name": "Leticia",
+      "department_id": "CO-91",
+      "priority": 1,
+      "previous_priority": 2,
+      "legacy_pilot_category": null,
+      "tourism_score": 84.0,
+      "inputs": {
+        "alcance": 4,
+        "producto": 5,
+        "ecosistema": 4,
+        "acceso": 3
+      },
+      "reason": "Portal turístico amazónico",
+      "sources": [
+        "amazonia"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 17
+    },
+    {
+      "id": "CO-91-puerto-narino",
+      "name": "Puerto Nariño",
+      "department_id": "CO-91",
+      "priority": 1,
+      "previous_priority": 2,
+      "legacy_pilot_category": null,
+      "tourism_score": 78.0,
+      "inputs": {
+        "alcance": 4,
+        "producto": 5,
+        "ecosistema": 3,
+        "acceso": 2
+      },
+      "reason": "Naturaleza y experiencia amazónica",
+      "sources": [
+        "amazonia"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1072
+    },
+    {
+      "id": "CO-94-inirida",
+      "name": "Inírida",
+      "department_id": "CO-94",
+      "priority": 2,
+      "previous_priority": 3,
+      "legacy_pilot_category": null,
+      "tourism_score": 64.0,
+      "inputs": {
+        "alcance": 3,
+        "producto": 4,
+        "ecosistema": 3,
+        "acceso": 2
+      },
+      "reason": "Paisaje y naturaleza especializada",
+      "sources": [
+        "amazonia"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1073
+    },
+    {
+      "id": "CO-95-san-jose-del-guaviare",
+      "name": "San José del Guaviare",
+      "department_id": "CO-95",
+      "priority": 1,
+      "previous_priority": 3,
+      "legacy_pilot_category": null,
+      "tourism_score": 74.0,
+      "inputs": {
+        "alcance": 4,
+        "producto": 4,
+        "ecosistema": 3,
+        "acceso": 3
+      },
+      "reason": "Naturaleza y arte rupestre",
+      "sources": [
+        "amazonia"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1074
+    },
+    {
+      "id": "CO-97-mitu",
+      "name": "Mitú",
+      "department_id": "CO-97",
+      "priority": 2,
+      "previous_priority": 3,
+      "legacy_pilot_category": null,
+      "tourism_score": 46.0,
+      "inputs": {
+        "alcance": 2,
+        "producto": 3,
+        "ecosistema": 2,
+        "acceso": 2
+      },
+      "reason": "Naturaleza y turismo especializado",
+      "sources": [
+        "amazonia"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1075
+    },
+    {
+      "id": "CO-99-puerto-carreno",
+      "name": "Puerto Carreño",
+      "department_id": "CO-99",
+      "priority": 2,
+      "previous_priority": 3,
+      "legacy_pilot_category": null,
+      "tourism_score": 46.0,
+      "inputs": {
+        "alcance": 2,
+        "producto": 3,
+        "ecosistema": 2,
+        "acceso": 2
+      },
+      "reason": "Naturaleza y turismo especializado",
+      "sources": [
+        "amazonia"
+      ],
+      "confidence": "editorial_media",
+      "comparable_visitor_count": null,
+      "tie_order": 1076
+    }
+  ]
+}

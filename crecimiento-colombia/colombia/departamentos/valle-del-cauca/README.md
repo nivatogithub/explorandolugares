@@ -1,6 +1,7 @@
 # Valle del Cauca
 
-Grupo P2 provisional. La prioridad del departamento no obliga a que todos sus destinos pertenezcan al mismo grupo.
+P1 turística propuesta; revisión nacional CO-turismo-v3.
 
-- [Cali](lugares/cali/PROCESO.md) · P2
-- [Guadalajara de Buga](lugares/guadalajara-de-buga/PROCESO.md) · P2
+- [Cali](lugares/cali/PROCESO.md) · P1
+- [Guadalajara de Buga](lugares/guadalajara-de-buga/PROCESO.md) · P1
+- [Buenaventura](lugares/buenaventura/PROCESO.md) · P2
