@@ -54,6 +54,7 @@ shutil.copyfile(root/'backend/bin/importar-negocios.php',private_tools/'importar
 private_content=release/'app/content';private_content.mkdir(parents=True,exist_ok=True)
 shutil.copyfile(root/'content/destinos-dinamicos.json',private_content/'destinos-dinamicos.json')
 shutil.copyfile(root/'content/plantilla-importar-negocios.json',private_content/'plantilla-importar-negocios.json')
+shutil.copyfile(root/'content/plantilla-paquete-negocios.zip',private_content/'plantilla-paquete-negocios.zip')
 shutil.copytree(root/'backend/database',release/'app/database',dirs_exist_ok=True)
 shutil.copyfile(root/'backend/README.md',release/'INSTALACION.md')
 (release/'private').mkdir(exist_ok=True)

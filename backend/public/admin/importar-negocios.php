@@ -2,10 +2,16 @@
 declare(strict_types=1);
 require dirname(__DIR__,2).'/app/bootstrap.php';
 require dirname(__DIR__,2).'/app/BusinessPublicImporter.php';
+require dirname(__DIR__,2).'/app/BusinessPackage.php';
 if(isset($_SESSION['admin'])&&time()-(int)($_SESSION['last_seen']??0)>1800)unset($_SESSION['admin']);
 if(empty($_SESSION['admin'])){http_response_code(403);exit('Inicia sesión desde el panel de administración.');}
 $_SESSION['last_seen']=time();$error='';$count=0;
 if(($_GET['plantilla']??'')==='1'){
+    if(($_GET['formato']??'')==='zip'){
+        $zipCandidates=[dirname(__DIR__,2).'/app/content/plantilla-paquete-negocios.zip',dirname(__DIR__,3).'/content/plantilla-paquete-negocios.zip'];$zipPath='';foreach($zipCandidates as $candidate)if(is_file($candidate)){$zipPath=$candidate;break;}
+        if($zipPath===''){http_response_code(404);exit('No se encontró la plantilla ZIP.');}
+        header('Content-Type: application/zip');header('Content-Disposition: attachment; filename="plantilla-paquete-negocios.zip"');header('Content-Length: '.filesize($zipPath));readfile($zipPath);exit;
+    }
     $candidates=[dirname(__DIR__,2).'/app/content/plantilla-importar-negocios.json',dirname(__DIR__,3).'/content/plantilla-importar-negocios.json'];
     $path='';foreach($candidates as $candidate)if(is_file($candidate)){$path=$candidate;break;}
     if(!is_file($path)){http_response_code(404);exit('No se encontró la plantilla.');}
@@ -14,17 +20,25 @@ if(($_GET['plantilla']??'')==='1'){
 try{
     if($_SERVER['REQUEST_METHOD']==='POST'){
         csrf();
-        if(($_POST['action']??'')!=='import'||($_POST['confirm_import']??'')!=='1')throw new RuntimeException('Confirma que revisaste el paquete antes de importarlo.');
+        if(($_POST['action']??'')!=='import')throw new RuntimeException('Acción de importación no válida.');
         $upload=$_FILES['package']??null;
-        if(!is_array($upload)||($upload['error']??UPLOAD_ERR_NO_FILE)!==UPLOAD_ERR_OK)throw new RuntimeException('Selecciona un archivo JSON válido.');
-        if((int)$upload['size']<2||(int)$upload['size']>2*1024*1024)throw new RuntimeException('El paquete debe pesar entre 2 bytes y 2 MB.');
-        $package=json_decode((string)file_get_contents((string)$upload['tmp_name']),true,512,JSON_THROW_ON_ERROR);
-        if(!is_array($package))throw new RuntimeException('El archivo no contiene un paquete JSON válido.');
-        $count=BusinessPublicImporter::import(db(),$package);
-        header('Location: importar-negocios.php?importados='.$count,true,303);exit;
+        if(!is_array($upload)||($upload['error']??UPLOAD_ERR_NO_FILE)!==UPLOAD_ERR_OK){$code=(int)($upload['error']??UPLOAD_ERR_NO_FILE);if(in_array($code,[UPLOAD_ERR_INI_SIZE,UPLOAD_ERR_FORM_SIZE],true))throw new RuntimeException('El servidor rechazó el archivo por superar su límite de carga PHP.');throw new RuntimeException('Selecciona un archivo JSON o ZIP válido.');}
+        $filename=(string)($upload['name']??'');$isZip=strtolower(pathinfo($filename,PATHINFO_EXTENSION))==='zip';$images=[];$stage='';
+        try{
+            if($isZip){
+                if((int)$upload['size']<2||(int)$upload['size']>BusinessPackage::MAX_ARCHIVE_BYTES)throw new RuntimeException('El ZIP debe pesar entre 2 bytes y 64 MB.');
+                $stage=rtrim(sys_get_temp_dir(),DIRECTORY_SEPARATOR).DIRECTORY_SEPARATOR.'el-business-package-'.bin2hex(random_bytes(8));if(!mkdir($stage,0700))throw new RuntimeException('No se pudo preparar el espacio temporal del ZIP.');
+                $parsed=BusinessPackage::readZip((string)$upload['tmp_name'],$stage);$package=$parsed['manifest'];$images=$parsed['images'];
+            }else{
+                if((int)$upload['size']<2||(int)$upload['size']>2*1024*1024)throw new RuntimeException('El JSON debe pesar entre 2 bytes y 2 MB.');
+                $package=json_decode((string)file_get_contents((string)$upload['tmp_name']),true,512,JSON_THROW_ON_ERROR);BusinessPackage::validateManifest($package);
+            }
+            $count=BusinessPublicImporter::import(db(),$package,$images,private_storage_path('business-image-references'));$destinationSlug=(string)$package['destination_slug'];
+        }finally{if($stage!=='')BusinessPackage::removeDirectory($stage);}
+        header('Location: negocios.php?tab=importar&importados='.$count.'&destino='.rawurlencode($destinationSlug),true,303);exit;
     }
-}catch(Throwable $exception){$error=$exception instanceof JsonException?'El archivo no tiene JSON válido.':($exception instanceof PDOException?'No se pudo importar el lote. Revisa que las tablas de destinos y negocios estén listas en Base de datos.':$exception->getMessage());if($exception instanceof PDOException)error_log('Explorando Lugares: falló la importación de negocios.');http_response_code(400);}
-$imported=max(0,(int)($_GET['importados']??0));
-?><!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Importar negocios | Administración</title><link rel="stylesheet" href="../assets/style.css?v=admin-navigation-20261015"><link rel="stylesheet" href="../assets/admin.css?v=admin-layout-20261015"></head><body><main class="wrap admin-page destination-admin"><a class="brand" href="index.php"><span>Explorando<b>Lugares</b></span></a><p><a href="index.php">← Volver al panel</a></p><h1>Importar negocios</h1><p>Importa lotes de negocios por destino desde un JSON estructurado.</p><?php $adminPath='importar-negocios.php';require __DIR__.'/_navigation.php'; ?>
-<?php if($error):?><p class="notice" role="alert"><?=esc($error)?><?php if(str_contains($error,'Base de datos')):?> <a href="base-datos.php">Ver estado de la base de datos</a>.<?php endif ?></p><?php endif ?><?php if($imported):?><p class="notice" role="status">Se importaron <?=esc($imported)?> negocios. Todos quedaron como borradores privados y sin reclamar; no se asignaron suscripciones.</p><?php endif ?>
-<section class="destination-editor"><h2>Paquete JSON</h2><p>El lote se valida completo antes de guardar. Si un registro tiene errores, se cancela toda la importación. Cada negocio requiere nombre, categoría activa y por lo menos una fuente comprobable.</p><p><strong>Verificación:</strong> usa <code>PUBLICO</code> para información de fuentes aún no confirmada por el negocio; usa <code>VERIFICADO</code> cuando hayas comprobado los datos y conserves la fuente. Todos quedan sin reclamar para que su representante pueda iniciar el proceso.</p><p>Importar no publica los negocios. Para que aparezcan en el buscador de reclamaciones, revisa cada ficha, registra su suscripción Gratis y publícala desde la administración. El plan Gratis admite la ficha pública de nombre, categoría y ubicación sin publicar contacto.</p><p><a class="pill light" href="importar-negocios.php?plantilla=1">Descargar plantilla de ejemplo</a></p><form method="post" enctype="multipart/form-data"><input type="hidden" name="csrf" value="<?=esc($_SESSION['csrf'])?>"><input type="hidden" name="action" value="import"><label>Archivo de negocios (.json)<input type="file" name="package" accept="application/json,.json" required></label><label class="admin-checkbox-field"><span>Revisé el destino, las categorías y las fuentes. Entiendo que las fichas se guardan como borradores.</span><input type="checkbox" name="confirm_import" value="1" required></label><button class="pill" type="submit">Validar e importar lote</button></form></section></main></body></html>
+}catch(Throwable $exception){$error=$exception instanceof JsonException?'El archivo no tiene JSON válido.':($exception instanceof PDOException?'No se pudo importar el lote. Revisa que las tablas de destinos y negocios estén listas en Base de datos.':$exception->getMessage());if($exception instanceof PDOException)error_log('Explorando Lugares: falló la importación de negocios.');$_SESSION['business_import_error']=$error;header('Location: negocios.php?tab=importar',true,303);exit;}
+// La importación se administra desde la pestaña Negocios > Importar. Se conserva
+// esta ruta para enlaces guardados y para descargar la plantilla de ejemplo.
+header('Location: negocios.php?tab=importar', true, 303);
+exit;

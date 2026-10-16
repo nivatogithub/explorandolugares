@@ -3,6 +3,7 @@
 from pathlib import Path, PurePosixPath
 from xml.sax.saxutils import escape
 import json
+import re
 
 ROOT=Path(__file__).resolve().parents[1]
 PUBLIC=ROOT/'ensayos/v1'
@@ -51,13 +52,26 @@ def set_directive(path: Path, enabled: bool) -> None:
     content=content[:start]+marker+directive+content[end:]
     path.write_text(content)
 
+def set_canonical(path: Path, canonical_url: str, enabled: bool) -> None:
+    content=path.read_text()
+    # Remove old declarations first so rerunning this script remains idempotent.
+    content=re.sub(r'\s*<link\b(?=[^>]*\brel=["\']canonical["\'])[^>]*>', '', content, flags=re.IGNORECASE)
+    if enabled:
+        declaration=f'<link rel="canonical" href="{escape(canonical_url)}">'
+        if '</head>' not in content:
+            raise ValueError(f'Falta </head> en {path.relative_to(PUBLIC)}')
+        content=content.replace('</head>', declaration+'</head>', 1)
+    path.write_text(content)
+
 pages=[]
 for path in sorted(PUBLIC.rglob('*.html')):
     relative=PurePosixPath(path.relative_to(PUBLIC).as_posix())
     enabled=approved(relative)
     set_directive(path,enabled)
+    canonical_url=url_for(relative)
+    set_canonical(path,canonical_url,enabled)
     if enabled:
-        pages.append(url_for(relative))
+        pages.append(canonical_url)
 
 sitemap=['<?xml version="1.0" encoding="UTF-8"?>','<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
 for url in pages:

@@ -1,5 +1,17 @@
 RewriteEngine On
 
+# Mantén una URL pública por página: el sitemap y los canonical usan la forma
+# de directorio, mientras que muchas páginas enlazan históricamente index.html.
+RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.html(?:[?\s]) [NC]
+RewriteRule ^(.*/)?index\.html$ /$1 [R=301,L,NE]
+
+# Normaliza las rutas públicas de destinos con la barra final que declara el sitemap.
+RewriteCond %{THE_REQUEST} \s/+((?:en/|pt-br/)?destinos/[a-z0-9-]+)(?:[?\s]) [NC]
+RewriteRule ^((?:en/|pt-br/)?destinos/[a-z0-9-]+)$ /$1/ [R=301,L,NE]
+
+# Panel privado de inteligencia de negocio e inversión.
+RewriteRule ^admin/inversionistas/?$ admin/inversionistas.php [L,QSA]
+
 # Inicio del buscador y solicitudes de reclamación de negocios.
 RewriteRule ^reclamar-negocio/?$ reclamar-negocio.php [L,QSA]
 RewriteRule ^negocios-locales/?$ business/index.php?lang=es [L,QSA]
@@ -9,6 +21,7 @@ RewriteRule ^negocios/registro/?$ business/register.php [L,QSA]
 RewriteRule ^negocios/acceso/?$ business/login.php [L,QSA]
 RewriteRule ^negocios/portal/?$ business/dashboard.php [L,QSA]
 RewriteRule ^negocios/salir/?$ business/logout.php [L,QSA]
+RewriteRule ^negocios/cambiar-clave/?$ business/password.php [L,QSA]
 
 # Páginas públicas de negocios por identificador público opaco.
 RewriteRule ^negocios/([A-Fa-f0-9-]{16,64})/?$ negocio.php?id=$1&idioma=es [L,QSA,NC]

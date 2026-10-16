@@ -1,6 +1,7 @@
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlsplit, unquote
+from xml.etree import ElementTree
 import subprocess
 import sys
 import tempfile
@@ -19,6 +20,12 @@ class References(HTMLParser):
         for name in ('href','src','action'):
             value=attrs.get(name)
             if value: self.references.append((tag,name,value))
+
+class Canonicals(HTMLParser):
+    def __init__(self): super().__init__(); self.urls=[]
+    def handle_starttag(self,tag,attrs):
+        attrs=dict(attrs)
+        if tag=='link' and attrs.get('rel','').lower()=='canonical': self.urls.append(attrs.get('href',''))
 
 class PublicLinkTests(unittest.TestCase):
     @classmethod
@@ -77,6 +84,20 @@ class PublicLinkTests(unittest.TestCase):
         self.assertTrue(all(not (self.public/f'{locale}destinos/{item["slug"]}/index.html').exists()
                             for locale in ('','en/','pt-br/') for item in drafts))
         self.assertTrue((self.public/'.htaccess').is_file())
+
+    def test_every_static_sitemap_page_declares_the_same_canonical_url(self):
+        sitemap=ElementTree.parse(self.public/'sitemap.xml').getroot()
+        namespace={'sm':'http://www.sitemaps.org/schemas/sitemap/0.9'}
+        for node in sitemap.findall('sm:url/sm:loc',namespace):
+            url=node.text or ''
+            path=urlsplit(url).path.lstrip('/')
+            relative=Path(path)/'index.html' if path else Path('index.html')
+            page=self.public/relative
+            if not page.is_file():  # PHP-rendered destination pages declare canonical at runtime.
+                continue
+            parser=Canonicals(); parser.feed(page.read_text())
+            with self.subTest(url=url):
+                self.assertEqual([url],parser.urls)
 
     def test_business_portal_supports_domain_root_and_local_v1_preview(self):
         bootstrap=(ROOT/'backend/app/bootstrap.php').read_text()
@@ -153,6 +174,15 @@ class PublicLinkTests(unittest.TestCase):
         self.assertTrue((Path(self.temp.name)/'app/database/migrations/012-business-image-references.mysql.sql').is_file())
         self.assertTrue((Path(self.temp.name)/'app/bin/importar-negocios.php').is_file())
         self.assertTrue((Path(self.temp.name)/'app/content/plantilla-importar-negocios.json').is_file())
+        self.assertTrue((Path(self.temp.name)/'app/content/plantilla-paquete-negocios.zip').is_file())
+
+    def test_business_import_admin_offers_zip_with_optional_private_images(self):
+        page=(ROOT/'backend/public/admin/negocios.php').read_text()
+        importer=(ROOT/'backend/public/admin/importar-negocios.php').read_text()
+        self.assertIn('formato=zip',page)
+        self.assertIn('application/zip',page)
+        self.assertIn("BusinessPackage::readZip",importer)
+        self.assertIn("private_storage_path('business-image-references')",importer)
         self.assertFalse((self.public/'private/config.php').exists())
 
 if __name__=='__main__': unittest.main()
