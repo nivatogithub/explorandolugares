@@ -27,7 +27,7 @@
       "score": 85.0,
       "priority": 1,
       "weight": 3,
-      "reason": "MVP acotado de cinco lugares",
+      "reason": "MVP acotado de cuatro lugares; selección editorial provisional pendiente de contrastar prioridades previas",
       "confidence": "editorial_estimate",
       "places": [
         {
@@ -83,16 +83,16 @@
           "dane_code": null,
           "administrative_identity_status": "pending_verification",
           "score_inputs": {
-            "reuse": 5,
+            "reuse": 2,
             "sources": 4,
-            "editorial": 4,
-            "rights": 3,
-            "operations": 4
+            "editorial": 3,
+            "rights": 2,
+            "operations": 3
           },
-          "score": 85.0,
-          "priority": 1,
-          "weight": 3,
-          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "score": 56.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Fuera del MVP por corrección del propietario: material preparado no demuestra prioridad turística. P2 provisional, pendiente de contrastar lista anterior.",
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/antioquia/lugares/sonson/lugar.json"
         },
@@ -662,7 +662,7 @@
       "score": 85.0,
       "priority": 1,
       "weight": 3,
-      "reason": "MVP acotado de cinco lugares",
+      "reason": "MVP acotado de cuatro lugares; selección editorial provisional pendiente de contrastar prioridades previas",
       "confidence": "editorial_estimate",
       "places": [
         {
@@ -1571,7 +1571,7 @@
       "score": 85.0,
       "priority": 1,
       "weight": 3,
-      "reason": "MVP acotado de cinco lugares",
+      "reason": "MVP acotado de cuatro lugares; selección editorial provisional pendiente de contrastar prioridades previas",
       "confidence": "editorial_estimate",
       "places": [
         {

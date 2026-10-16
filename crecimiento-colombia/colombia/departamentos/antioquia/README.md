@@ -6,7 +6,7 @@ Candidatos editoriales, no censo completo ni páginas públicas. Consultar inven
 
 - [Jericó](lugares/jerico/PROCESO.md) · P1
 - [Jardín](lugares/jardin/PROCESO.md) · P1
-- [Sonsón](lugares/sonson/PROCESO.md) · P1
+- [Sonsón](lugares/sonson/PROCESO.md) · P2
 - [Cauca Viejo](lugares/cauca-viejo/PROCESO.md) · P2
 - [Guatapé](lugares/guatape/PROCESO.md) · P2
 - [Santa Fe de Antioquia](lugares/santa-fe-de-antioquia/PROCESO.md) · P2

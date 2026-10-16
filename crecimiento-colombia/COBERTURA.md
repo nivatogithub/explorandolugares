@@ -41,7 +41,7 @@ Preparación con gates y publicación comprobada en este plan. Los estados hist�
 | Vichada | 3 | 1 | 0.00% | 0.00% |
 
 País: preparación 0.00% · publicación comprobada 0.00%.
-MVP: 5 lugares P1; 0 con publicación comprobada.
+MVP: 4 lugares P1; 0 con publicación comprobada.
 Inventario: 78 candidatos; 78 planificados.
 
 No mide territorio, población ni demanda turística. Todo gate inicial está pendiente de auditoría. Cambiar universo o pesos requiere nueva versión y conservar comparación anterior.
