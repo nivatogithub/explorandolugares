@@ -178,6 +178,10 @@
 #contenido .floating-select-trigger:disabled { color: var(--el-muted) !important; background: var(--el-card); cursor: not-allowed; }
 #contenido .floating-select-native[aria-invalid=true]+.floating-select-trigger { border-color: var(--el-focus) !important; box-shadow: 0 0 0 1px var(--el-focus); }
 
+/* Optional explanations use native disclosures, with all content available by keyboard. */
+#contenido .mobile-detail { margin: 0 0 16px; }
+#contenido .mobile-detail>summary { min-height: 44px; padding: 10px 0; color: var(--el-action-hover); font-size: 14px; font-weight: 650; cursor: pointer; }
+#contenido .audience-panels>.mobile-detail { min-width: 0; }
 @media (max-width: 960px) {
   #contenido .explorer { grid-template-columns: 1fr; }
   #contenido .map-panel { border-right: 0; border-bottom: 1px solid var(--el-border); }
@@ -188,28 +192,44 @@
   #contenido .join-actions { flex-basis: 100%; min-width: 0; }
 }
 @media (max-width: 700px) {
-  #contenido .coverage-intro { padding-top: 36px; }
-  #contenido .lead { font-size: 16px; }
+  #contenido .coverage-intro { padding: 24px 0 20px; }
+  #contenido .coverage-intro h1 { font-size: 31px; margin-bottom: 14px; }
+  #contenido .eyebrow { margin-bottom: 8px; }
+  #contenido .lead { font-size: 15px; line-height: 1.5; }
   #contenido .coverage-tabs { width: 100%; gap: 4px; }
   #contenido .coverage-tabs button { flex: 1; min-width: 0; padding: 10px 8px; font-size: 13px; }
-  #contenido .country-stats { grid-template-columns: 1fr; }
-  #contenido .country-stats article { padding: 20px; border-right: 0; border-bottom: 1px solid var(--el-border); }
+  #contenido .country-stats { grid-template-columns: repeat(2,minmax(0,1fr)); margin-bottom: 12px; }
+  #contenido .country-stats article { padding: 12px; border-bottom: 1px solid var(--el-border); }
+  #contenido .country-stats article:nth-child(2) { border-right: 0; }
+  #contenido .country-stats article:last-child { grid-column: 1 / -1; display: flex; align-items: center; flex-wrap: wrap; gap: 4px 12px; }
+  #contenido .country-stats strong { font-size: 30px; line-height: 1.3; }
+  #contenido .country-stats .scope-value { font-size: 18px; margin: 0; }
+  #contenido .country-stats article:last-child small { flex-basis: 100%; }
   #contenido .country-stats article:last-child { border-bottom: 0; }
-  #contenido .map-panel, #contenido .detail-panel, #contenido .audience { padding: 22px; }
-  #contenido .map { height: 365px; }
+  #contenido .map-panel, #contenido .detail-panel, #contenido .audience { padding: 16px; }
+  #contenido .map { height: 275px; }
+  #contenido .map-key { margin-bottom: 0; }
+  #contenido .coverage-tabs { margin-bottom: 16px; }
+  #contenido .catalog-scope { margin-bottom: 12px; }
   #contenido .map-heading { align-items: start; }
   #contenido .map-heading h2 { font-size: 25px; }
   #contenido .map-heading button { padding: 8px 12px; }
   #contenido .coverage-number { flex-wrap: wrap; gap: 12px; }
   #contenido .audience-metrics { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
-  #contenido .audience-metrics article { padding: 15px; }
+  #contenido .audience-metrics article { padding: 12px; }
+  #contenido .audience-metrics { margin-top: 16px; }
+  #contenido .audience-metrics strong { line-height: 1.3; }
+  #contenido .audience-panels { gap: 0; margin-top: 16px; }
   #contenido .audience-heading h2 { font-size: 26px; }
   #contenido .audience-panels, #contenido .invite-options, #contenido .method { grid-template-columns: 1fr; }
   #contenido .method { gap: 10px; padding-bottom: 30px; }
   #contenido .method h2 br { display: none; }
-  #contenido .community-invite, #contenido .join { padding: 24px; }
+  #contenido .community-invite, #contenido .join { padding: 16px; margin-bottom: 20px; }
+  #contenido .invite-options { gap: 12px; margin-top: 16px; }
+  #contenido .invite-options h3 { font-size: 18px; margin: 8px 0; }
+  #contenido .invite-options p { margin-bottom: 12px; }
   #contenido .invite-heading h2 { font-size: 28px; }
-  #contenido .invite-options article, #contenido .invite-preview { padding: 20px; }
+  #contenido .invite-options article, #contenido .invite-preview { padding: 14px; }
   #contenido .invite-share-actions { flex-direction: column; }
 }
 @media (prefers-reduced-motion: reduce) {
