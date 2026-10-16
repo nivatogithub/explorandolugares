@@ -4,12 +4,12 @@
   const $=id=>document.getElementById(id), root=new URL('../../',location.href);
   const el=(tag,text,className)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(className)n.className=className;return n;};
   const normal=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
-  let data=null,department='',municipality='',filter='all',mapVersion=0;const maps=new Map();
+  let data=null,department='',municipality='',filter='all',mapVersion=0,activeTab='cobertura';const maps=new Map();
   const current=()=>data.departments.find(d=>d.code===department);
   async function json(url){const r=await fetch(url,{credentials:'omit',headers:{Accept:'application/json'}});if(!r.ok)throw Error('No disponible');return r.json();}
   async function geometry(file){if(!maps.has(file))maps.set(file,json(new URL('assets/cobertura/'+file,root)).catch(e=>{maps.delete(file);throw e;}));return maps.get(file);}
   const option=(value,text)=>{const o=el('option',text);o.value=value;return o;};
-  function updateUrl(){const url=new URL(location.href);url.search='';if(department)url.searchParams.set('departamento',department);if(municipality)url.searchParams.set('municipio',municipality);history.replaceState(null,'',url);}
+  function updateUrl(){const url=new URL(location.href);if(data){url.search='';if(department)url.searchParams.set('departamento',department);if(municipality)url.searchParams.set('municipio',municipality);}url.hash=activeTab;history.replaceState(null,'',url);}
   function setDepartment(code){department=data.departments.some(d=>d.code===code)?code:'';municipality='';$('department').value=department;$('department').dispatchEvent(new Event('floating-select:refresh'));updateUrl();renderDetail();renderMap();}
   function setMunicipality(code){municipality=current()?.municipalities.some(m=>m.code===code)?code:'';$('municipality').value=municipality;$('municipality').dispatchEvent(new Event('floating-select:refresh'));updateUrl();renderPlaces();highlight();renderAudience();}
   function renderDetail(){
@@ -81,6 +81,23 @@
   $('invite-close').addEventListener('click',()=>{$('invite-preview').hidden=true;document.querySelectorAll('[data-invite]').forEach(b=>b.setAttribute('aria-expanded','false'));inviteTrigger?.focus();});
   $('invite-copy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText($('invite-message').value);$('invite-status').textContent='Invitación copiada. Pégala donde quieras compartirla.';}catch(e){$('invite-message').focus();$('invite-message').select();$('invite-status').textContent='Selecciona y copia el mensaje para compartirlo.';}});
   $('invite-native').addEventListener('click',async()=>{try{await navigator.share({title:'Explorando Lugares',text:$('invite-message').value});$('invite-status').textContent='Opciones de compartir cerradas. No podemos confirmar la entrega del mensaje.';}catch(e){$('invite-status').textContent=e.name==='AbortError'?'Puedes elegir otra opción cuando quieras.':'No se pudo abrir el menú. Puedes copiar la invitación o usar WhatsApp.';}});
+  const pageTabs=[...document.querySelectorAll('[data-page-tab]')];
+  function tabFromHash(){const h=location.hash.slice(1);return ['como-medimos','invitar'].includes(h)?'participar':h==='audiencia'?'audiencia':h==='participar'?'participar':'cobertura';}
+  function activateTab(id,writeUrl=true){
+    activeTab=id;pageTabs.forEach(button=>{const selected=button.dataset.pageTab===id;button.setAttribute('aria-selected',String(selected));button.tabIndex=selected?0:-1;$(button.getAttribute('aria-controls')).hidden=!selected;});
+    // Close floating menus when their panel is hidden; preserve all selected values.
+    document.querySelectorAll('[role="tabpanel"][hidden] .floating-select-trigger[aria-expanded="true"]').forEach(button=>button.click());
+    if(writeUrl)updateUrl();
+  }
+  document.querySelector('.coverage-tabs').hidden=false;activateTab(tabFromHash(),false);
+  pageTabs.forEach((button,index)=>{
+    button.addEventListener('click',()=>activateTab(button.dataset.pageTab));
+    button.addEventListener('keydown',event=>{let target;
+      if(event.key==='ArrowRight')target=(index+1)%pageTabs.length;else if(event.key==='ArrowLeft')target=(index-1+pageTabs.length)%pageTabs.length;else if(event.key==='Home')target=0;else if(event.key==='End')target=pageTabs.length-1;else return;
+      event.preventDefault();activateTab(pageTabs[target].dataset.pageTab);pageTabs[target].focus();
+    });
+  });
+  window.addEventListener('hashchange',()=>{activateTab(tabFromHash(),false);if(['#como-medimos','#invitar'].includes(location.hash))$(location.hash.slice(1)).scrollIntoView({block:'start'});});
   async function init(){
     try{
       data=await json(new URL('api/cobertura.php',root));if(!Array.isArray(data.departments)||!data.country)throw Error('Respuesta inválida');
