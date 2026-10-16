@@ -172,5 +172,46 @@
     "credit": "Santy cardenas / Wikimedia Commons / CC BY-SA 4.0",
     "visual_review": "Inspección local: identidad compatible con descripción, imagen histórica, sin recorte ni deformación; revisión humana pendiente.",
     "reuse_reason": "Foto de la misma Quinta en historia y tarjeta del mismo atractivo"
+  },
+  {
+    "id": "tayrona-buceo",
+    "place_id": "CO-47-santa-marta",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Tayrona_Diving_2.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Tayrona_Diving_2.jpg",
+    "author": "Tisquesusa",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "commercial_use_allowed": true,
+    "transformations_allowed": true,
+    "checked_at": "2026-10-16",
+    "photographed_at": "2016-05-19",
+    "status": "referencia_revision_pendiente",
+    "original_path": "originales/tayrona-buceo-2016.jpg",
+    "sha256": "28fcfcfbbaa5c53f3c5ad23f7aa712dfc8560158499d997297810087f9106a9b",
+    "bytes": 6780147,
+    "derivatives": [
+      {
+        "path": "imagenes/tayrona-buceo-revision.webp",
+        "sha256": "5b8196d4c37d61dc86b6f057c6ee4e5ea81777d4208157d82515be3c17493f26",
+        "bytes": 156292,
+        "dimensions": [
+          1200,
+          834
+        ],
+        "quality": 80,
+        "tool": "Pillow 12.3.0",
+        "changes": "Reducción proporcional sin recorte; WebP técnico para revisión; sin EXIF/GPS",
+        "license": "CC BY-SA 4.0",
+        "within_budget": true
+      }
+    ],
+    "alt": {
+      "es": "Corales y peces observados durante buceo alrededor de Isla Aguja, Tayrona, fotografía de 2016.",
+      "en": "Corals and fish observed while diving around Isla Aguja, Tayrona, photographed in 2016.",
+      "pt-br": "Corais e peixes observados durante mergulho ao redor da Isla Aguja, Tayrona, fotografia de 2016."
+    },
+    "credit": "Tisquesusa / Wikimedia Commons / CC BY-SA 4.0",
+    "visual_review": "Inspeccionada: paisaje submarino, no aparecen buzos; contexto marino histórico, no demuestra excursión de ningún operador.",
+    "reuse_reason": "Referencia contextual para actividad editorial de buceo, NO fotografía de Barracuda ni prueba de estado actual."
   }
 ]
