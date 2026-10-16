@@ -2,6 +2,8 @@
 declare(strict_types=1);
 
 /** Export editable JSON and apply reviewed, sparse updates to existing business IDs. */
+require_once __DIR__.'/BusinessCategories.php';
+
 final class BusinessBulkEditService
 {
     private const PROFILE=['category_code'=>40,'address_text'=>300,'location_reference'=>500,'latitude'=>0,'longitude'=>0,'opening_hours'=>4000,'price_range'=>100,'capacity_count'=>0,'menu_url'=>500,'reservations_url'=>500];
@@ -17,12 +19,12 @@ final class BusinessBulkEditService
     public function export(string $destination,string $category='',string $query=''):array
     {
         $sql='SELECT b.id FROM businesses b JOIN destinations d ON d.id=b.destination_id JOIN business_translations t ON t.business_id=b.id AND t.locale="es" WHERE d.slug=?';$params=[$destination];
-        if($category!==''){$sql.=' AND b.category_code=?';$params[]=$category;}
+        if($category!==''){if(BusinessCategories::ready($this->pdo)){$sql.=' AND (b.category_code=? OR EXISTS (SELECT 1 FROM business_categories bc WHERE bc.business_id=b.id AND bc.category_code=?))';$params[]=$category;$params[]=$category;}else{$sql.=' AND b.category_code=?';$params[]=$category;}}
         if($query!==''){$sql.=' AND t.display_name LIKE ?';$params[]='%'.$query.'%';}
         $q=$this->pdo->prepare($sql.' ORDER BY b.id LIMIT 501');$q->execute($params);$ids=$q->fetchAll(PDO::FETCH_COLUMN);
         if(!$ids||count($ids)>500)throw new RuntimeException('La exportación debe contener entre 1 y 500 negocios. Ajusta los filtros.');
         $businesses=[];
-        foreach($ids as $id){$state=$this->snapshot((int)$id);$businesses[]=['id'=>$state['id'],'public_id'=>$state['public_id'],'version'=>self::version($state),'fields'=>$state['fields'],'translations'=>$state['translations'],'contacts'=>$state['contacts'],'sources'=>$state['sources'],'research_contacts'=>$state['research_contacts'],'_context'=>$state['_context']];}
+        foreach($ids as $id){$state=$this->snapshot((int)$id);$businesses[]=['id'=>$state['id'],'public_id'=>$state['public_id'],'version'=>self::version($state),'fields'=>$state['fields'],'category_codes'=>$state['category_codes'],'translations'=>$state['translations'],'contacts'=>$state['contacts'],'sources'=>$state['sources'],'research_contacts'=>$state['research_contacts'],'_context'=>$state['_context']];}
         return ['schema_version'=>'business-bulk-update-v1','destination_slug'=>$destination,'businesses'=>$businesses];
     }
 
@@ -45,6 +47,7 @@ final class BusinessBulkEditService
                 $updates=[];$params=[];
                 foreach(self::PROFILE as $field=>$_)if($before['fields'][$field]!==$after['fields'][$field]){$updates[]=$field.'=?';$params[]=$after['fields'][$field];}
                 if($updates){$params[]=$id;$this->pdo->prepare('UPDATE businesses SET '.implode(',',$updates).',updated_at=CURRENT_TIMESTAMP WHERE id=?')->execute($params);}
+                if($before['category_codes']!==$after['category_codes']||$before['fields']['category_code']!==$after['fields']['category_code'])BusinessCategories::replace($this->pdo,$id,$after['fields']['category_code'],$after['category_codes']);
                 foreach($after['translations'] as $locale=>$translation){
                     if(($before['translations'][$locale]??null)===$translation)continue;
                     $fields=array_keys(self::TEXT);$values=array_map(static fn($field)=>$translation[$field],$fields);
@@ -87,7 +90,7 @@ final class BusinessBulkEditService
         usort($records,static fn($a,$b)=>strcmp((string)($a['public_id']??''),(string)($b['public_id']??'')));
         foreach($records as $record){
             if(!is_array($record))throw new RuntimeException('Cada negocio debe ser un objeto.');
-            self::keys($record,['id','public_id','version','fields','translations','contacts','sources','research_contacts','_context']);
+            self::keys($record,['id','public_id','version','fields','category_codes','translations','contacts','sources','research_contacts','_context']);
             $publicId=self::text($record['public_id']??'',64);
             if(isset($seen[$publicId]))throw new RuntimeException('El mismo ID aparece dos veces en el archivo.');$seen[$publicId]=true;
             if(!isset($available[$publicId]))throw new RuntimeException('ID inexistente en el destino: '.$publicId.'. No se crearán negocios nuevos.');
@@ -105,6 +108,7 @@ final class BusinessBulkEditService
                 }
                 if(($after['fields']['latitude']===null)!==($after['fields']['longitude']===null))throw new RuntimeException('La ubicación necesita latitud y longitud juntas.');
             }
+            $after['category_codes']=BusinessCategories::validate($this->pdo,$record['category_codes']??array_values(array_diff($before['category_codes'],[$before['fields']['category_code']])),$after['fields']['category_code']);
             if(isset($record['translations'])){
                 if(!is_array($record['translations']))throw new RuntimeException('translations debe ser un objeto.');self::keys($record['translations'],['es','en','pt-BR']);
                 foreach($record['translations'] as $locale=>$fields){
@@ -140,7 +144,8 @@ final class BusinessBulkEditService
             foreach($rows as &$row){$row['id']=(int)$row['id'];foreach(['is_public','display_order','marketing_consent','campaign_allowed','suppressed'] as $field)if(isset($row[$field]))$row[$field]=(int)$row[$field];}unset($row);$collections[$list]=$rows;
         }
         $q=$this->pdo->prepare('SELECT id,plan_code,status FROM business_subscriptions WHERE business_id=? ORDER BY id DESC LIMIT 1'.$suffix);$q->execute([$id]);$subscription=$q->fetch(PDO::FETCH_ASSOC)?:null;if($subscription)$subscription['id']=(int)$subscription['id'];
-        return ['id'=>$id,'public_id'=>$business['public_id'],'fields'=>$fields,'translations'=>$translations,...$collections,'_context'=>['slug'=>$business['slug'],'publication_status'=>$business['publication_status'],'information_status'=>$business['information_status'],'claim_status'=>$business['claim_status'],'operation_status'=>$business['operation_status'],'updated_at'=>$business['updated_at'],'subscription'=>$subscription]];
+        $codes=BusinessCategories::enrich($this->pdo,[$business])[0]['category_codes'];sort($codes);
+        return ['id'=>$id,'public_id'=>$business['public_id'],'category_codes'=>$codes,'fields'=>$fields,'translations'=>$translations,...$collections,'_context'=>['slug'=>$business['slug'],'publication_status'=>$business['publication_status'],'information_status'=>$business['information_status'],'claim_status'=>$business['claim_status'],'operation_status'=>$business['operation_status'],'updated_at'=>$business['updated_at'],'subscription'=>$subscription]];
     }
 
     private function researchSpec():array
@@ -223,6 +228,7 @@ final class BusinessBulkEditService
     private static function diff(array $before,array $after):array
     {
         $changes=[];
+        if($before['category_codes']!==$after['category_codes'])$changes[]=['field'=>'category_codes','before'=>$before['category_codes'],'after'=>$after['category_codes']];
         foreach(['fields','translations'] as $section){
             foreach($after[$section] as $key=>$value){
                 if($section==='translations'){foreach($value as $field=>$text)if(($before[$section][$key][$field]??'')!==$text)$changes[]=['field'=>$section.'.'.$key.'.'.$field,'before'=>$before[$section][$key][$field]??'','after'=>$text];}
@@ -238,7 +244,7 @@ final class BusinessBulkEditService
         return match($list){'contacts'=>self::json([$record['channel'],$record['contact_value']]),'sources'=>self::json([$record['source_url'],$record['checked_at']?:'',$record['note']]),default=>self::researchHash($record)};
     }
     private static function researchHash(array $row):string{return hash('sha256',json_encode(array_map(static fn($key)=>$row[$key],['channel','contact_value','source_url','source_type','source_field','source_period','consulted_at','evidence_status','source_note']),JSON_THROW_ON_ERROR));}
-    private static function version(array $state):string{return hash('sha256',self::json($state));}
+    private static function version(array $state):string{if(($state['category_codes']??[])===[$state['fields']['category_code']])unset($state['category_codes']);return hash('sha256',self::json($state));}
     private static function json(mixed $value):string{return json_encode($value,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES|JSON_THROW_ON_ERROR);}
     private static function blank(mixed $value):bool{return $value===null||(is_string($value)&&trim($value)==='');}
     private static function validUrl(string $value):bool{return (bool)filter_var($value,FILTER_VALIDATE_URL)&&in_array(parse_url($value,PHP_URL_SCHEME),['https','http'],true);}

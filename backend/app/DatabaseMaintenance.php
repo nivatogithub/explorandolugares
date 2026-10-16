@@ -201,6 +201,11 @@ final class DatabaseMaintenance
             'checks' => [['business_email_permissions',['email','decision','evidence']],['business_email_campaigns',['recipients_json','content_hash','status','busy','sync_cursor','provider_campaign_id']],['business_email_audit',['campaign_id','actor','action','detail']]],
             'requires' => ['businesses','business_research_contacts'],
         ],
+        '030-business-categories' => [
+            'file' => '030-business-categories.mysql.sql',
+            'checks' => [['business_categories',['business_id','category_code']]],
+            'requires' => ['businesses','service_categories'],
+        ],
     ];
 
     public function __construct(private PDO $pdo, private string $appRoot, private string $publicRoot)

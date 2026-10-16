@@ -63,6 +63,7 @@ const assert = require('assert/strict');
     // Discard the map draft, then exercise minimal Free saving independently.
     await page.reload();
     await plan.selectOption('free');
+    await page.locator('input[name="category_codes[]"][value="alimentacion"]').check();
     assert(await address.isDisabled());
     assert.equal(await page.locator('#business-frequency').evaluate(e=>e.required),false);
     assert(await form.evaluate(e=>e.checkValidity()));

@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+require_once __DIR__.'/BusinessCategories.php';
+
 final class BusinessPublicImporter
 {
     public static function import(PDO $pdo,array $package,array $images=[],?string $privateStorage=null): int
@@ -27,7 +29,8 @@ final class BusinessPublicImporter
                 if(!in_array($informationStatus,['PUBLICO','VERIFICADO'],true))throw new RuntimeException('La verificación del registro '.($index+1).' debe ser PUBLICO o VERIFICADO.');
                 $q=$pdo->prepare('SELECT 1 FROM service_categories WHERE code=? AND is_active=1');$q->execute([$category]);if(!$q->fetchColumn())throw new RuntimeException('Categoría no válida en el registro '.($index+1).'.');
                 $duplicate=$pdo->prepare('SELECT 1 FROM businesses b JOIN business_translations t ON t.business_id=b.id AND t.locale="es" WHERE b.destination_id=? AND LOWER(TRIM(t.display_name))=LOWER(TRIM(?))');$duplicate->execute([$destinationId,$name]);if($duplicate->fetchColumn())throw new RuntimeException('Ya existe un negocio con ese nombre en el destino: '.$name);
-                $slug=self::uniqueSlug($pdo,$destinationId,$name);$insert->execute([self::uuid(),$destinationId,$category,$slug,$informationStatus]);$id=(int)$pdo->lastInsertId();foreach(['es','en','pt-BR'] as $locale)$translation->execute([$id,$locale,$name,$locale==='es'?$summary:'',$locale==='es'?$description:'']);$freeSubscription->execute([$id]);
+                $categoryCodes=BusinessCategories::validate($pdo,$business['category_codes']??[],$category);
+                $slug=self::uniqueSlug($pdo,$destinationId,$name);$insert->execute([self::uuid(),$destinationId,$category,$slug,$informationStatus]);$id=(int)$pdo->lastInsertId();BusinessCategories::replace($pdo,$id,$category,$categoryCodes);foreach(['es','en','pt-BR'] as $locale)$translation->execute([$id,$locale,$name,$locale==='es'?$summary:'',$locale==='es'?$description:'']);$freeSubscription->execute([$id]);
                 $sources=$business['sources']??[];if(!is_array($sources)||count($sources)<1)throw new RuntimeException('Agrega al menos una fuente comprobable para '.$name.'.');
                 foreach($sources as $item){if(!is_array($item))throw new RuntimeException('Fuente no válida para '.$name.'.');$url=trim((string)($item['url']??''));if(!filter_var($url,FILTER_VALIDATE_URL)||!in_array(parse_url($url,PHP_URL_SCHEME),['http','https'],true)||strlen($url)>1000)throw new RuntimeException('La fuente de '.$name.' debe ser una URL HTTP o HTTPS válida.');$date=trim((string)($item['checked_at']??''));if($date!==''&&!preg_match('/^\d{4}-\d{2}-\d{2}$/D',$date))throw new RuntimeException('La fecha de consulta debe usar AAAA-MM-DD.');$source->execute([$id,$url,$date!==''?$date:null,substr(trim((string)($item['note']??'')),0,500)]);}
                 foreach(($business['image_references']??[]) as $reference){
