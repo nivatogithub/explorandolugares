@@ -186,6 +186,20 @@ final class DatabaseMaintenance
             'checks' => [['business_research_contacts', ['business_id','channel','contact_value','source_url','evidence_status','authorization_status','legal_basis_status','campaign_allowed','suppressed','record_hash']]],
             'requires' => ['businesses'],
         ],
+        '027-business-bulk-update-audit' => [
+            'file' => '027-business-bulk-update-audit.mysql.sql',
+            'checks' => [['business_bulk_update_audit', ['batch_id','business_id','actor','before_json','after_json','changes_json']]],
+            'requires' => ['businesses'],
+        ],
+        '028-people-business-contacts' => [
+            'file' => '028-people-business-contacts.mysql.sql',
+            'checks' => [['people',['public_id','display_name','record_origin']],
+                ['business_person_contacts',['business_id','person_id','status','is_primary','source_type']],
+                ['business_person_contact_roles',['contact_id','role_code']],
+                ['person_channels',['person_id','business_id','channel','channel_value','channel_hash']],
+                ['account_person_links',['account_id','person_id']]],
+            'requires' => ['businesses','accounts'],
+        ],
     ];
 
     public function __construct(private PDO $pdo, private string $appRoot, private string $publicRoot)

@@ -21,7 +21,7 @@ DB.row_factory = sqlite3.Row
 DB.execute('PRAGMA foreign_keys=ON')
 DB.executescript((ROOT / 'backend/database/sqlite.sql').read_text())
 DB.executescript((ROOT / 'backend/database/destinations.sqlite.sql').read_text())
-for number in range(8, 27):
+for number in range(8, 29):
     matches = list((ROOT / 'backend/database/migrations').glob(f'{number:03d}-*.sqlite.sql'))
     assert len(matches) == 1, f'Migración SQLite faltante o ambigua: {number:03d}'
     DB.executescript(matches[0].read_text())
@@ -55,6 +55,9 @@ for index in range(1, 28):
     for locale in ('es', 'en', 'pt-BR'):
         DB.execute('INSERT INTO business_translations(business_id,locale,display_name,summary,description) VALUES(?,?,?,?,?)', (review_business_id, locale, name, '', ''))
     DB.execute("INSERT INTO business_subscriptions(business_id,plan_code,status) VALUES(?,'free','pending_publication')", (review_business_id,))
+DB.execute("INSERT INTO businesses(public_id,destination_id,category_code,record_origin,slug,information_status,claim_status,operation_status,publication_status) VALUES(?,?,?,?,?,?,?,?,?)", ('00000000-0000-4000-8000-000000000099', destination_id, 'hospedaje', 'admin_created', 'negocio-sin-suscripcion', 'PENDIENTE_REVISION', 'NO_RECLAMADO', 'DESCONOCIDO', 'draft'))
+no_subscription_business_id = DB.execute('SELECT last_insert_rowid()').fetchone()[0]
+DB.execute("INSERT INTO business_translations(business_id,locale,display_name,summary,description) VALUES(?,'es','Negocio sin suscripción','', '')", (no_subscription_business_id,))
 DB.commit()
 expected_prices = {'basic': {'monthly': 19900, 'annual': 199000}, 'featured': {'monthly': 49900, 'annual': 499000}, 'page': {'monthly': 69900, 'annual': 699000}, 'page_premium': {'monthly': 119900, 'annual': 1199000}}
 for plan, frequencies in expected_prices.items():
@@ -121,8 +124,8 @@ try:
             time.sleep(.05)
 
     paths = [
-        ('/admin/index.php', 'Contactos de negocios'),
-        ('/admin/index.php?tab=sistema', 'Contactos de negocios'),
+        ('/admin/index.php', 'Solicitudes de participación'),
+        ('/admin/index.php?tab=sistema', 'Solicitudes de participación'),
         ('/admin/base-datos.php', 'Estado de la base de datos'),
         ('/admin/destinos.php', 'Administrar destinos'),
         ('/admin/negocios.php', 'Negocios'),
@@ -136,7 +139,7 @@ try:
         ('/admin/usuarios.php', 'Cuentas'),
         ('/admin/suscripciones.php', 'Suscripciones'),
         ('/admin/inversionistas.php', 'Inteligencia de negocio e inversión'),
-        ('/admin/contactos-negocios.php', 'Contactos privados de negocios'),
+        ('/admin/contactos-negocios.php', 'Canales y contactos'),
     ]
     # The login is public; all operational pages require an authenticated session.
     for path, _ in paths:
@@ -167,22 +170,22 @@ try:
                 active_label = re.sub(r'<[^>]+>', '', active_links[0]).strip()
                 route = path.split('?', 1)[0]
                 expected_sidebar = {
-                    '/admin/index.php': 'Estado del sistema' if 'tab=sistema' in path else 'Solicitudes',
+                    '/admin/index.php': 'Estado del sistema' if 'tab=sistema' in path else 'Solicitudes de participación',
                     '/admin/base-datos.php': 'Base de datos',
                     '/admin/destinos.php': 'Destinos',
                     '/admin/negocios.php': 'Negocios',
                     '/admin/importar-negocios.php': 'Negocios',
-                    '/admin/reclamaciones.php': 'Solicitudes anteriores',
+                    '/admin/reclamaciones.php': 'Reclamos de negocio',
                     '/admin/solicitudes-cuenta.php': 'Solicitudes de cuenta',
                     '/admin/usuarios.php': 'Cuentas',
                     '/admin/suscripciones.php': 'Suscripciones',
                     '/admin/inversionistas.php': 'Inteligencia e inversión',
-                    '/admin/contactos-negocios.php': 'Contactos privados',
+                    '/admin/contactos-negocios.php': 'Canales y contactos',
                 }.get(route)
                 if expected_sidebar:
                     check(active_label == expected_sidebar, f'La sección activa debe ser {expected_sidebar} en {path}; mostró {active_label}')
             if path == '/admin/contactos-negocios.php':
-                check('<meta name="robots" content="noindex,nofollow">' in body and 'contactos privados' in body.lower(), 'La pantalla de contactos privados debe quedar autenticada y fuera de indexación.')
+                check('<meta name="robots" content="noindex,nofollow">' in body and 'Solo administración' in body, 'La pantalla de contactos privados debe quedar autenticada y fuera de indexación.')
             if path == '/admin/negocios.php?tab=importar':
                 check('contactos-negocios.php' in body and 'negocios.php?tab=revisar' in body, 'La pestaña de importación debe enlazar la carga de contactos privados y la revisión/publicación masiva.')
             if path.startswith('/admin/negocios.php'):
@@ -193,7 +196,7 @@ try:
                 selected_label = re.sub(r'<[^>]+>', '', selected_tabs[0]).strip()
                 expected_tab = {'tab=crear': 'Crear negocio', 'tab=importar': 'Importación masiva', 'tab=revisar': 'Revisar y publicar'}.get(next((part for part in path.split('?')[1:] if part.startswith('tab=')), ''), 'Todos los negocios')
                 check(selected_label == expected_tab, f'La pestaña activa debe ser {expected_tab} en {path}; mostró {selected_label}')
-    contact_csrf = re.search(r'name="csrf" value="([^"]+)"', request('/admin/contactos-negocios.php')[1]).group(1)
+    contact_csrf = re.search(r'name="csrf" value="([^"]+)"', request('/admin/contactos-negocios.php?tab=cargar')[1]).group(1)
     research_before = DB.execute('SELECT COUNT(*) FROM business_research_contacts').fetchone()[0]
     business_before_research = DB.execute('SELECT COUNT(*) FROM businesses').fetchone()[0]
     research_package = json.dumps({
@@ -213,19 +216,19 @@ try:
     status, body, _ = multipart('/admin/contactos-negocios.php',
         {'csrf': contact_csrf, 'action': 'import_private_contacts'},
         [('package', 'contactos.json', 'application/json', research_package)])
-    check(status == 200 and '1 observaciones añadidas' in body and 'No se crearon negocios' in body,
+    check(status == 200 and '1 registros de canal y fuente añadidos' in body and 'Se conservaron las fichas existentes' in body,
           f'La importación de contactos privados falló o no informó que no crea negocios: {status} {body[-500:]}')
     research_row = DB.execute('SELECT authorization_status,marketing_consent,campaign_allowed,suppressed FROM business_research_contacts').fetchone()
     check(tuple(research_row) == ('NO_OBTENIDA', 0, 0, 0), 'La importación no debe inventar consentimiento ni autorización de campañas.')
     check(DB.execute('SELECT COUNT(*) FROM businesses').fetchone()[0] == business_before_research,
           'Importar contactos privados creó un negocio.')
-    status, body, _ = request('/admin/contactos-negocios.php?q=hotel')
-    check(status == 200 and 'hotel@example.invalid' in body and 'Consultar fuente' in body,
+    status, body, _ = request('/admin/contactos-negocios.php?business_id=' + str(business_id))
+    check(status == 200 and 'hotel@example.invalid' in body and 'Ver fuente' in body,
           'El administrador no puede consultar el contacto privado con su fuente.')
     repeated_status, repeated_body, _ = multipart('/admin/contactos-negocios.php',
         {'csrf': contact_csrf, 'action': 'import_private_contacts'},
         [('package', 'contactos.json', 'application/json', research_package)])
-    check(repeated_status == 200 and '0 observaciones añadidas' in repeated_body and '1 ya existentes' in repeated_body,
+    check(repeated_status == 200 and '0 registros de canal y fuente añadidos' in repeated_body and '1 ya estaban guardados' in repeated_body,
           'Repetir la importación duplicó un contacto privado.')
     check(DB.execute('SELECT COUNT(*) FROM business_research_contacts').fetchone()[0] == research_before + 1,
           'La importación idempotente creó contactos duplicados.')
@@ -301,6 +304,12 @@ try:
     check(tuple(bulk_row) == ('published','active'), 'La aprobación masiva no activó el registro Gratis tras publicarlo.')
 
     # Create a business through the real admin HTTP handler. It must remain a private draft.
+    failed_create = {'csrf': csrf, 'action': 'save', 'id': '', 'destination_id': str(destination_id), 'category_code': 'categoria_invalida', 'translations[es][display_name]': 'Prueba que debe conservarse', 'plan_code': 'free', 'billing_frequency': 'monthly', 'address_text': 'Parque principal, Jericó', 'map_workflow': '1', 'location_confirmed': '1', 'image_assistance_requested': '0'}
+    failed_status, failed_body, _ = request('/admin/negocios.php', failed_create)
+    check(failed_status == 400 and 'Crear negocio' in failed_body and 'No se guardó el negocio' in failed_body and 'Prueba que debe conservarse' in failed_body, 'Al fallar el alta, el formulario debe permanecer abierto, explicar el error y conservar los campos escritos.')
+    missing_location = {'csrf': csrf, 'action': 'save', 'id': '', 'destination_id': str(destination_id), 'category_code': 'hospedaje', 'translations[es][display_name]': 'Prueba sin punto de mapa', 'plan_code': 'free', 'billing_frequency': 'monthly', 'address_text': 'Parque principal, Jericó', 'map_workflow': '1', 'location_confirmed': '0', 'image_assistance_requested': '0'}
+    location_status, location_body, _ = request('/admin/negocios.php', missing_location)
+    check(location_status == 400 and 'Selecciona el punto exacto en el mapa' in location_body and 'Prueba sin punto de mapa' in location_body, 'El alta sin punto confirmado debe explicar que faltó el mapa y conservar lo escrito.')
     fields = [
         ('csrf', csrf), ('action', 'save'), ('id', ''), ('map_workflow', '1'),
         ('location_confirmed', '0'), ('location_confirmed', '1'),
@@ -318,10 +327,16 @@ try:
             status, body, headers = response.status, response.read().decode(), response.headers
     except urllib.error.HTTPError as error:
         status, body, headers = error.code, error.read().decode(), error.headers
-    check(status == 200 and 'Negocio guardado. Su suscripción se muestra seleccionada abajo' in body, f'No se guardó el negocio ni se abrió su suscripción preseleccionada: {status} {body[:300]}')
+    check(status == 200 and 'Hostal creado por prueba' in body and 'Abrir o editar este negocio' in body and 'Ver altas administrativas' in body, f'No se guardó el negocio ni se mostró el acceso directo al registro creado: {status} {body[:300]}')
     created = DB.execute("SELECT id,publication_status,information_status,claim_status,record_origin,location_confirmed,latitude,longitude FROM businesses WHERE slug='hostal-creado-por-prueba'").fetchone()
     check(created is not None and tuple(created)[1:] == ('draft', 'PENDIENTE_REVISION', 'NO_RECLAMADO', 'admin_created', 1, 5.791, -75.786), 'El negocio no quedó en borrador privado con ubicación y estados esperados.')
     check(DB.execute('SELECT COUNT(*) FROM business_subscriptions WHERE business_id=? AND plan_code="free"', (created['id'],)).fetchone()[0] == 1, 'La creación no registró la suscripción Gratis pendiente.')
+    status, body, _ = request('/admin/negocios.php?tab=lista&origen=admin_created&categoria=hospedaje&q=Hostal+creado+por+prueba')
+    check(status == 200 and 'Hostal creado por prueba' in body and 'No publicado' in body, 'El negocio recién creado no aparece filtrando el listado por categoría y alta administrativa.')
+    check('name="categoria"' in body and 'name="representacion"' not in body, 'La lista administrativa no ofrece categoría como filtro principal.')
+
+    status, subscription_list, _ = request('/admin/suscripciones.php?estado=free')
+    check(status == 200 and 'Negocio sin suscripción' in subscription_list and 'Gratis' in subscription_list and 'Elegir suscripción' in subscription_list, 'Un negocio sin fila explícita de suscripción debe aparecer en el nivel Gratis, con opción de configurar su suscripción.')
 
     future_date = (date.today() + timedelta(days=7)).isoformat()
     status, body, _ = request('/admin/suscripciones.php', {'csrf': csrf, 'action': 'save', 'business_id': created['id'], 'plan_code': 'free', 'billing_frequency': 'monthly', 'publish_not_before': future_date})
@@ -437,6 +452,8 @@ try:
     check(status == 303, f'El representante no pudo enviar el comprobante: HTTP {status} {body[:300]}')
     payment_row = DB.execute('SELECT e.id,e.storage_name,e.account_id,e.status,s.status AS subscription_status,s.quoted_amount FROM business_subscription_payment_evidence e JOIN business_subscriptions s ON s.id=e.subscription_id WHERE e.account_id=? ORDER BY e.id DESC LIMIT 1', (account_row['id'],)).fetchone()
     check(payment_row and payment_row['status']=='pending' and payment_row['subscription_status']=='pending' and payment_row['quoted_amount']==69900 and payment_row['storage_name'] not in [item.name for item in (WORK / 'public').rglob('*') if item.is_file()], 'El comprobante no quedó privado o alteró antes de revisión el pago/la publicación.')
+    status, subscriptions_with_evidence, _ = request('/admin/suscripciones.php?q=Cafeter%C3%ADa')
+    check(status == 200 and 'Ver comprobante' in subscriptions_with_evidence and 'Pendiente de revisión' in subscriptions_with_evidence, 'La fila de suscripción debe enlazar el comprobante pendiente de ese negocio.')
     check(request('/admin/comprobante-pago.php?id=' + str(payment_row['id']), opener=GUEST)[0] == 403, 'Un visitante pudo abrir un soporte privado de pago.')
     with ADMIN.open(BASE + '/admin/comprobante-pago.php?id=' + str(payment_row['id']), timeout=10) as evidence_response:
         check(evidence_response.status == 200 and evidence_response.read() == sample_png, 'El administrador no pudo abrir el comprobante privado.')
