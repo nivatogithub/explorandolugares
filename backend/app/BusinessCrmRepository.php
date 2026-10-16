@@ -20,7 +20,7 @@ final class BusinessCrmRepository
         $destination=trim((string)($filters['destination']??''));$plan=(string)($filters['subscription']??'free');$contact=(string)($filters['contact']??'');$query=trim((string)($filters['query']??''));
         if($destination!==''){$where.=' AND crm.destination_slug=?';$params[]=$destination;}
         if($plan==='free')$where.=' AND crm.current_plan="free"';elseif($plan==='paid')$where.=' AND crm.current_plan<>"free"';elseif($plan!=='all')throw new RuntimeException('Filtro de suscripción no válido.');
-        if($contact==='with')$where.=' AND (crm.research_contact_count+crm.profile_contact_count)>0';elseif($contact==='without')$where.=' AND (crm.research_contact_count+crm.profile_contact_count)=0';elseif($contact!=='')throw new RuntimeException('Filtro de contacto no válido.');
+        if($contact==='with')$contactWhere=' AND (crm.research_contact_count+crm.profile_contact_count)>0';elseif($contact==='without')$contactWhere=' AND (crm.research_contact_count+crm.profile_contact_count)=0';elseif($contact==='')$contactWhere='';else throw new RuntimeException('Filtro de contacto no válido.');
         if($query!==''){
             $where.=' AND (crm.display_name LIKE ? OR EXISTS(SELECT 1 FROM business_contacts pc WHERE pc.business_id=crm.id AND pc.contact_value LIKE ?)';$params[]='%'.$query.'%';$params[]='%'.$query.'%';
             if($research){
@@ -36,9 +36,11 @@ final class BusinessCrmRepository
         }
         $from=' FROM ('.$this->baseQuery($research).') crm';
         $q=$this->pdo->prepare('SELECT COUNT(*) AS total,COALESCE(SUM(CASE WHEN (crm.research_contact_count+crm.profile_contact_count)>0 THEN 1 ELSE 0 END),0) AS with_contact'.$from.$where);$q->execute($params);$counts=$q->fetch(PDO::FETCH_ASSOC);
+        $summary=$counts;
+        if($contactWhere!==''){$where.=$contactWhere;$q=$this->pdo->prepare('SELECT COUNT(*) AS total,COALESCE(SUM(CASE WHEN (crm.research_contact_count+crm.profile_contact_count)>0 THEN 1 ELSE 0 END),0) AS with_contact'.$from.$where);$q->execute($params);$counts=$q->fetch(PDO::FETCH_ASSOC);}
         $total=(int)$counts['total'];$pageSize=max(1,min(100,$pageSize));$pageCount=max(1,(int)ceil($total/$pageSize));$page=max(1,min($page,$pageCount));
         $q=$this->pdo->prepare('SELECT crm.*'.$from.$where.' ORDER BY crm.display_name,crm.id LIMIT '.$pageSize.' OFFSET '.(($page-1)*$pageSize));$q->execute($params);$rows=$q->fetchAll(PDO::FETCH_ASSOC);
-        return ['rows'=>$rows,'total'=>$total,'with_contact'=>(int)$counts['with_contact'],'without_contact'=>$total-(int)$counts['with_contact'],'page'=>$page,'page_count'=>$pageCount,'research_ready'=>$research];
+        return ['summary_total'=>(int)$summary['total'],'summary_with_contact'=>(int)$summary['with_contact'],'summary_without_contact'=>(int)$summary['total']-(int)$summary['with_contact'],'rows'=>$rows,'total'=>$total,'with_contact'=>(int)$counts['with_contact'],'without_contact'=>$total-(int)$counts['with_contact'],'page'=>$page,'page_count'=>$pageCount,'research_ready'=>$research];
     }
 
     public function find(int $id):?array
