@@ -1,5 +1,6 @@
 <?php
 declare(strict_types=1);
+header('Cache-Control: no-store');
 $path=parse_url($_SERVER['REQUEST_URI']??'/',PHP_URL_PATH)?:'/';
 if(preg_match('~^/api/cobertura\.php$~',$path)){require dirname(__DIR__).'/backend/public/api/cobertura.php';return true;}
 foreach(['/backend/public','/ensayos/v1'] as $root){
