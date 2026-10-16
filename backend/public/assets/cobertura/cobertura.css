@@ -40,3 +40,5 @@
 /* Los selectores flotantes reflejan la validación obligatoria del campo nativo. */
 .floating-select-native[aria-invalid="true"] + .floating-select-trigger{border-color:#a44327!important;box-shadow:0 0 0 1px #a44327!important}
 .floating-select-menu{max-height:300px;overflow-y:auto;overscroll-behavior:contain}.floating-select-trigger,.floating-select-option{color:var(--ink)!important;font-size:14px}.floating-select-trigger{border-color:#e9b75f!important}.floating-select-trigger:disabled{background:#f4f3ef;color:#7c8188!important}.floating-select-menu{border-color:#f2c77e!important;box-shadow:0 12px 24px #172b421c!important}.floating-select-option:hover,.floating-select-option:focus-visible,.floating-select-option[aria-selected=true]{background:#fff0dc!important}.floating-select-divider{background:#f2c77e!important}.floating-select-arrow{color:#d84e27!important}.floating-select{display:block}.audience-heading .floating-select{min-width:170px}
+
+.coverage-number strong{font-size:21px;max-width:210px}.coverage-number span{max-width:180px}

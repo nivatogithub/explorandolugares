@@ -12,7 +12,7 @@ Publicado significa que hay una guía con estado público en la base, no calidad
 
 ## Conteos y alcance nacional
 
-Corrección vigente: se cuentan todas las guías públicas de Colombia de la base, no únicamente las que coinciden con los 78 candidatos iniciales. El total de destinos previsto para país y departamentos está en definición; no se muestra porcentaje ni fracción publicada contra el listado inicial. El catálogo inicial solo organiza investigación y el detalle del mapa, nunca representa el inventario turístico completo del país.
+Corrección vigente: se cuentan todas las guías públicas de Colombia de la base, no únicamente las que coinciden con los 78 candidatos iniciales. El alcance está definido: todos los municipios colombianos y destinos turísticos con identidad propia. La reconciliación numérica del inventario sigue siendo trabajo técnico pendiente; no se muestra porcentaje ni fracción publicada contra el listado inicial. El catálogo inicial solo organiza investigación y el detalle del mapa, nunca representa el inventario turístico completo del país.
 
 La cobertura ponderada por prioridades/gates permanece como herramienta privada del plan. No se publica como cobertura nacional hasta definir un universo completo y verificable. Los municipios sin destinos en el listado se muestran fuera del catálogo de seguimiento.
 
@@ -42,8 +42,10 @@ Se intentó descargar DIVIPOLA MGN 2025 desde su servicio oficial; devolvió err
 
 Solo tras autorización concreta, el mismo comando con `--deploy` realiza transferencia incremental acotada: requiere rama sin cambios pendientes y manifiesto remoto idéntico al local; conserva todos los archivos ajenos y no elimina, migra, modifica configuración, cambia DNS o reemplaza `.htaccess`, portada, destinos ni administración. Reescribe únicamente las rutas del nuevo endpoint al backend privado. La página HTML se sube al final. No utiliza el despliegue completo histórico de esta base.
 
-Verificación después de una publicación autorizada: HTTP 200 de página/API/CSS/JS/geometrías; consulta del conteo real de publicaciones y total nacional en definición; selección Antioquia/Jericó; enlaces anónimos a guías publicadas; aviso ante fallos; métodos POST rechazados; comprobación de portada/destino/admin conservados. No anunciar publicación funcional por el mero éxito de SFTP.
+Verificación después de una publicación autorizada: HTTP 200 de página/API/CSS/JS/geometrías; consulta del conteo real de publicaciones y alcance Colombia completa; selección Antioquia/Jericó; enlaces anónimos a guías publicadas; aviso ante fallos; métodos POST rechazados; comprobación de portada/destino/admin conservados. No anunciar publicación funcional por el mero éxito de SFTP.
 
 Acceso inicial por enlace directo. Integrar el enlace en el pie/índice del portal requiere aplicar un cambio mínimo sobre su versión vigente, no reemplazar páginas productivas con los HTML antiguos de `main`. Se mantiene fuera de esta entrega acotada.
 
 Selectores: se reutiliza `select-flotante.js` del portal, empaquetado bajo cobertura para evitar afectar componentes globales. Menús de altura acotada, desplazamiento, selección visible y teclado; título departamental solo en el panel del mapa.
+
+La sección pública explica la estrategia de ampliación: tres grupos independientes de departamentos/destinos, trabajo por lotes, preparación y revisión de cada guía, publicación progresiva y actualización. “Pendiente de incorporar” reemplaza “Fuera del catálogo” en los municipios aún sin destinos en el seguimiento inicial.

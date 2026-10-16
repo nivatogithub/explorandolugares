@@ -14,10 +14,11 @@ expect($snapshot['publication_source_available'],'DB read succeeds');expect($sna
 $jerico=array_values(array_filter($ant['places'],fn($p)=>$p['name']==='Jericó'))[0];$jardin=array_values(array_filter($ant['places'],fn($p)=>$p['name']==='Jardín'))[0];$cauca=array_values(array_filter($ant['places'],fn($p)=>$p['name']==='Cauca Viejo'))[0];
 expect($jerico['status']==='published'&&$jerico['url']==='/destinos/jerico/','Published links only');expect($jardin['status']==='in_progress'&&$jardin['url']===null,'Draft no link');expect($cauca['status']==='pending','Child not automatically published');expect($cauca['municipality_code']===$jerico['municipality_code'],'Child shares geographic municipality');
 expect($ant['coverage_percent']===null,'No departmental percentage without complete scope');
+expect($snapshot['national_scope_status']==='defined','National coverage scope is defined');
 expect($snapshot['country']['coverage_percent']===null&&$snapshot['estimated_destination_total']===null,'No national denominator from 78 candidates');
 expect($snapshot['audience']['status']==='not_configured'&&$snapshot['audience']['metrics']['registered_travelers']===null,'No fake visitor/account metrics');
 $unit=array_values(array_filter($ant['municipalities'],fn($m)=>$m['code']===$jerico['municipality_code']))[0];expect($unit['published_count']===1&&$unit['tracked_count']===2,'Partial municipality clearly counts two destinations');
 expect(count($ant['municipalities'])===125,'All 125 map units of Antioquia included');
 $json=json_encode($snapshot);foreach(['SECRET_NOTE','PRIVATE_DRAFT','private-place','HIDDEN_NAME','internal_notes','blockers','reviewer','base_commit','priority','weight'] as $secret)expect(!str_contains($json,$secret),'No private fields: '.$secret);
 $db->exec('DROP TABLE destinations');expect($service->snapshot($db)['country']['coverage_percent']===null,'Query failure fails closed');
-echo "OK: all CO publications, undefined national scope, absent audience metrics, offline, parent and privacy\n";
+echo "OK: all CO publications, defined scope without invented totals, absent audience metrics, offline, parent and privacy\n";
