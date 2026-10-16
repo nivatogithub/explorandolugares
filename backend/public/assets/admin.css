@@ -223,7 +223,7 @@
 .crm-table th{position:relative}
 .crm-visually-hidden{left:0;top:0}
 
-/* Identified people stay separate from general business channels. */
+/* The responsible account’s personal channels stay separate from business channels. */
 .crm-person-section{margin-top:30px;padding-top:25px;border-top:1px solid #e4d9c9}
 .crm-person-list{display:grid;gap:15px;margin:18px 0}
 .crm-person-card{padding:20px;border:1px solid #e4d9c9;border-radius:11px;background:#fff}
@@ -250,3 +250,7 @@
 .crm-person-end button{padding:0;border:0;background:none;color:#8d3b23;font-family:inherit;font-size:12px;line-height:1.6;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
 @media(max-width:1000px){.crm-role-options{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.crm-person-heading{flex-direction:column;gap:10px}.crm-person-fields,.crm-person-channels,.crm-role-options{grid-template-columns:1fr}.crm-person-card{padding:16px}.crm-person-create,.crm-person-edit{padding:13px}.crm-person-form>.pill{justify-self:stretch}}
+.crm-recipient-form{display:grid;gap:9px;margin-top:12px;min-width:220px}
+.crm-recipient-form label{display:grid;gap:6px;font-size:12px;font-weight:700}
+.crm-recipient-form input{box-sizing:border-box;width:100%;min-height:40px;padding:9px;border:1px solid #c9c9bc;border-radius:7px;background:#fff;color:#293c36;font:inherit}
+.crm-recipient-form>.pill{justify-self:start}

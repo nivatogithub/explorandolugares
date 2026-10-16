@@ -191,14 +191,10 @@ final class DatabaseMaintenance
             'checks' => [['business_bulk_update_audit', ['batch_id','business_id','actor','before_json','after_json','changes_json']]],
             'requires' => ['businesses'],
         ],
-        '028-people-business-contacts' => [
-            'file' => '028-people-business-contacts.mysql.sql',
-            'checks' => [['people',['public_id','display_name','record_origin']],
-                ['business_person_contacts',['business_id','person_id','status','is_primary','source_type']],
-                ['business_person_contact_roles',['contact_id','role_code']],
-                ['person_channels',['person_id','business_id','channel','channel_value','channel_hash']],
-                ['account_person_links',['account_id','person_id']]],
-            'requires' => ['businesses','accounts'],
+        '028-accounts-business-channels' => [
+            'file' => '028-accounts-business-channels.mysql.sql',
+            'checks' => [['accounts',['contact_phone']],['business_research_contacts',['recipient_label']]],
+            'requires' => ['businesses','accounts','business_account_memberships','business_research_contacts'],
         ],
     ];
 
@@ -290,6 +286,10 @@ final class DatabaseMaintenance
                 }
             }
             $file = $this->appRoot.'/database/migrations/'.$migration['file'];
+            if($id==='028-accounts-business-channels'){
+                $duplicates=$this->pdo->query('SELECT business_id FROM business_account_memberships WHERE status="active" GROUP BY business_id HAVING COUNT(*)>1 LIMIT 1')->fetchColumn();
+                if($duplicates!==false)throw new RuntimeException('Hay negocios con más de una cuenta activa. Revisa sus asociaciones antes de habilitar el modelo de cuenta responsable; no se eliminaron asociaciones.');
+            }
             if (!is_file($file)) throw new RuntimeException('No se encontró el archivo de migración '.$migration['file'].'.');
             $this->executeSqlFile($file);
             $after = $this->migrationState($migration, $this->tables());

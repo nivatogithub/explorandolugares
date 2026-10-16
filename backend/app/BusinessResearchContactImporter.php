@@ -15,7 +15,7 @@ final class BusinessResearchContactImporter
         if(!$destinationId)throw new RuntimeException('No existe el destino del paquete.');
         $q=$pdo->prepare('SELECT b.id,t.display_name FROM businesses b JOIN business_translations t ON t.business_id=b.id AND t.locale="es" WHERE b.destination_id=?');$q->execute([$destinationId]);$names=[];
         foreach($q->fetchAll(PDO::FETCH_ASSOC) as $row)$names[self::normalize((string)$row['display_name'])][]=(int)$row['id'];
-        $prepared=[];$matched=[];
+        $prepared=[];$matched=[];$recipientReady=self::recipientReady($pdo);
         foreach($businesses as $business){
             if(!is_array($business)||array_diff(array_keys($business),['name',$collection]))throw new RuntimeException('Registro de negocio no válido.');
             $name=self::text($business['name']??'',180);$ids=$names[self::normalize($name)]??[];
@@ -24,7 +24,7 @@ final class BusinessResearchContactImporter
             if(!is_array($contacts)||!array_is_list($contacts)||count($contacts)<1||count($contacts)>100)throw new RuntimeException('Revisa los canales de «'.$name.'».');
             $matched[$id]=true;
             foreach($contacts as $contact){
-                $allowed=['channel','value','source_url','source_type','source_field','source_period','consulted_at','evidence_status','source_note','authorization_status','legal_basis_status','crm_stage','potential_subscription'];
+                $allowed=['channel','value','source_url','source_type','source_field','source_period','consulted_at','evidence_status','source_note','authorization_status','legal_basis_status','crm_stage','potential_subscription','recipient_label'];
                 if(!is_array($contact)||array_diff(array_keys($contact),$allowed))throw new RuntimeException('Un canal incluye campos desconocidos; la importación no admite publicación ni autorización de campañas.');
                 $channel=self::text($contact['channel']??'',24);
                 if(!in_array($channel,['email','phone','phone_fixed','whatsapp','instagram','facebook','website','linkedin'],true))throw new RuntimeException('Canal no admitido.');
@@ -37,21 +37,40 @@ final class BusinessResearchContactImporter
                 if($data[8]===''||$data[11]==='')throw new RuntimeException('Cada canal necesita su estado de evidencia y de base de uso.');
                 if(!in_array($data[10],['NO_OBTENIDA','PENDIENTE'],true))throw new RuntimeException('Este importador no acredita autorizaciones comerciales.');
                 $hash=hash('sha256',json_encode(array_slice($data,1,9),JSON_THROW_ON_ERROR));
-                $prepared[]=[$data,$hash];
+                $recipient=self::text($contact['recipient_label']??'',180);
+                if($recipient!==''&&!$recipientReady)throw new RuntimeException('Habilita la actualización 028 antes de guardar a quién va dirigido un canal.');
+                $prepared[]=[$data,$hash,$recipient];
             }
         }
         if(count($prepared)>5000)throw new RuntimeException('El paquete supera 5.000 registros de canal y fuente.');
         $result=['businesses'=>count($matched),'inserted'=>0,'existing'=>0];$pdo->beginTransaction();
         try{
-            $exists=$pdo->prepare('SELECT id FROM business_research_contacts WHERE business_id=? AND record_hash=?');
-            $insert=$pdo->prepare('INSERT INTO business_research_contacts(business_id,channel,contact_value,source_url,source_type,source_field,source_period,consulted_at,evidence_status,source_note,authorization_status,legal_basis_status,crm_stage,potential_subscription,record_hash,marketing_consent,campaign_allowed,suppressed) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,0,0,0)');
-            foreach($prepared as [$data,$hash]){
+            $exists=$pdo->prepare('SELECT id'.($recipientReady?',recipient_label':'').' FROM business_research_contacts WHERE business_id=? AND record_hash=?');
+            $insert=$pdo->prepare('INSERT INTO business_research_contacts(business_id,channel,contact_value,source_url,source_type,source_field,source_period,consulted_at,evidence_status,source_note,authorization_status,legal_basis_status,crm_stage,potential_subscription,record_hash,marketing_consent,campaign_allowed,suppressed'.($recipientReady?',recipient_label':'').') VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,0,0,0'.($recipientReady?',?':'').')');
+            foreach($prepared as [$data,$hash,$recipient]){
                 $exists->execute([$data[0],$hash]);
-                if($exists->fetchColumn()){$result['existing']++;continue;}
-                $insert->execute([...$data,$hash]);$result['inserted']++;
+                $existing=$exists->fetch(PDO::FETCH_ASSOC);
+                if($existing){
+                    if($recipient!==''){
+                        if($existing['recipient_label']!==''&&$existing['recipient_label']!==$recipient)throw new RuntimeException('El canal ya tiene un destinatario diferente. Revisa la actualización antes de sobrescribirlo.');
+                        if($existing['recipient_label']==='')$pdo->prepare('UPDATE business_research_contacts SET recipient_label=? WHERE id=?')->execute([$recipient,$existing['id']]);
+                    }
+                    $result['existing']++;continue;
+                }
+                $values=[...$data,$hash];if($recipientReady)$values[]=$recipient;
+                $insert->execute($values);$result['inserted']++;
             }
             $pdo->commit();return $result;
         }catch(Throwable $error){if($pdo->inTransaction())$pdo->rollBack();throw $error;}
+    }
+
+    public static function recipientReady(PDO $pdo):bool
+    {
+        try{$pdo->query('SELECT recipient_label FROM business_research_contacts LIMIT 0');return true;}
+        catch(PDOException $error){
+            if(in_array($error->errorInfo[0]??'',['42S02','42S22'],true)||str_contains($error->getMessage(),'no such table:')||str_contains($error->getMessage(),'no such column:'))return false;
+            throw $error;
+        }
     }
 
     private static function text(mixed $value,int $max):string

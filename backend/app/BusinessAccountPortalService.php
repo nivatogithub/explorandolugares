@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-require_once __DIR__.'/BusinessPersonContactService.php';
+require_once __DIR__.'/AccountProfileService.php';
 
 final class BusinessAccountPortalService
 {
@@ -68,8 +68,8 @@ final class BusinessAccountPortalService
             $insert=$this->pdo->prepare('INSERT INTO business_account_applications(account_id,application_type,business_id,destination_id,category_code,business_name,relationship_code,contact_phone,message,consent_version,status) VALUES(?,?,?,?,?,?,?,?,?,? ,"pending")');
             $insert->execute([$accountId,$type==='existing_business'?'claim_existing':'request_new',$type==='existing_business'?$businessId:null,$destinationId,$category,$businessName,$relationship,$phone,$message,'business-account-onboarding-v1']);
             $applicationId=(int)$this->pdo->lastInsertId();
-            $people=new BusinessPersonContactService($this->pdo);
-            if($people->ready())$people->ensureAccountPerson($accountId);
+            $profile=new AccountProfileService($this->pdo);
+            if($profile->ready())$profile->initializePhone($accountId,$phone);
             if($uploadsPresent){
                 foreach($requiredEvidence as $evidenceType){
                     [$storedName,$originalName,$mime,$bytes]=$this->validateEvidenceUpload($evidenceUploads[$evidenceType]);
@@ -176,13 +176,15 @@ final class BusinessAccountPortalService
                 }else throw new RuntimeException('El tipo de solicitud no se puede aprobar.');
 
                 $role=$row['relationship_code']==='owner'?'owner':'manager';
+                $assigned=$this->pdo->prepare('SELECT account_id FROM business_account_memberships WHERE business_id=? AND status="active"');$assigned->execute([$businessId]);
+                if($assigned->fetchColumn()!==false)throw new RuntimeException('Este negocio ya tiene una cuenta responsable. Revisa su asociación antes de aprobar otra.');
                 $membership=$this->pdo->prepare('INSERT INTO business_account_memberships(account_id,business_id,role,status) VALUES(?,?,?,"active")');
                 $membership->execute([(int)$row['account_id'],$businessId,$role]);
             }
             $this->pdo->prepare('UPDATE business_account_applications SET status=?,admin_note=?,reviewed_at=CURRENT_TIMESTAMP,updated_at=CURRENT_TIMESTAMP WHERE id=?')->execute([$status,substr($note,0,1000),$id]);
             if($status==='approved'){
-                $people=new BusinessPersonContactService($this->pdo);
-                if($people->ready())$people->syncApprovedApplication($id);
+                $profile=new AccountProfileService($this->pdo);
+                if($profile->ready())$profile->syncApprovedApplication($id);
             }
             if($status==='not_approved'&&$row['business_id'])$this->pdo->prepare('UPDATE businesses SET claim_status="NO_RECLAMADO",updated_at=CURRENT_TIMESTAMP WHERE id=? AND claim_status="EN_TRAMITE"')->execute([$row['business_id']]);
             $this->pdo->commit();
