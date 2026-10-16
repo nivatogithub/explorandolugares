@@ -1,5 +1,6 @@
 <?php
 declare(strict_types=1);
+require_once __DIR__.'/CoverageCatalogService.php';
 /** First-party, opt-in measurements. No raw IP, URL query, email or contact values are persisted. */
 final class AnalyticsService {
     public function __construct(private PDO $pdo,private string $key) {}
@@ -27,12 +28,13 @@ final class AnalyticsService {
         foreach($plan['departments'] as $d)foreach($d['places'] as $p)$q->execute([$p['id'],$d['code'],$p['name'],$p['slug'],$p['municipality_code'],$p['parent_place_id'],$p['type'],$p['priority'],$p['weight'],(int)$p['preparing']]);
         $q=$this->pdo->prepare("$insert INTO el_coverage_units(code,department_code,name) VALUES(?,?,?)");foreach($geography as $g)$q->execute([$g['code'],$g['department_code'],$g['name']]);
         $q=$this->pdo->prepare("$insert INTO el_measurement_settings(setting_key,setting_value) VALUES(?,?)");foreach(['enabled'=>'1','started_at'=>gmdate('Y-m-d H:i:s'),'retention_days'=>'180','minimum_public_sessions'=>'5','catalog_version'=>$plan['universe_version']] as $k=>$v)$q->execute([$k,$v]);
+        (new CoverageCatalogService($this->pdo))->synchronize($plan);
     }
     public function planFromDatabase():?array {
         if(!$this->ready())return null;$departments=$this->pdo->query('SELECT code,name,weight FROM el_coverage_departments ORDER BY code')->fetchAll(PDO::FETCH_ASSOC);
         $q=$this->pdo->query('SELECT id,department_code,name,slug,municipality_code,parent_place_id,place_type AS type,priority,weight,preparing FROM el_coverage_places ORDER BY priority,name');$rows=$q->fetchAll(PDO::FETCH_ASSOC);
         foreach($departments as &$d){$d['weight']=(int)$d['weight'];$d['places']=[];foreach($rows as $p){if($p['department_code']!==$d['code'])continue;unset($p['department_code']);$p['preparing']=(bool)$p['preparing'];$p['priority']=(int)$p['priority'];$p['weight']=(int)$p['weight'];$d['places'][]=$p;}}unset($d);
-        return ['schema_version'=>1,'universe_version'=>'database-v1','catalog_updated_at'=>gmdate('Y-m-d'),'departments'=>$departments];
+        return (new CoverageCatalogService($this->pdo))->enrich(['schema_version'=>2,'universe_version'=>'database-v1','catalog_updated_at'=>gmdate('Y-m-d'),'departments'=>$departments]);
     }
     public function geographyFromDatabase():array{return $this->pdo->query('SELECT code,department_code,name FROM el_coverage_units ORDER BY code')->fetchAll(PDO::FETCH_ASSOC);}
     public function hash(string $value):string{return hash_hmac('sha256',$value,$this->key);}

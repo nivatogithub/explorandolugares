@@ -42,6 +42,17 @@ final class CoverageService
             foreach($counts as $state=>$count)$countryCounts[$state]+=$count;
         }
         $countryCounts['published']=count(array_filter($rows,static fn($r)=>$r['publication_status']==='published'));
-        return ['schema_version'=>2,'estimated_destination_total'=>null,'national_scope_status'=>'defined','national_scope'=>'all_municipalities_and_distinct_tourist_places','audience'=>['status'=>'not_configured','source'=>null,'updated_at'=>null,'metrics'=>['anonymous_sessions'=>null,'estimated_visitors'=>null,'registered_travelers'=>null,'active_travelers'=>null,'business_views'=>null,'contact_clicks'=>null],'countries'=>null,'trend'=>null],'universe_version'=>$this->plan['universe_version'],'catalog_updated_at'=>$this->plan['catalog_updated_at'],'checked_at'=>gmdate('c'),'publication_source_available'=>$available,'country'=>['name'=>'Colombia','catalog_count'=>array_sum(array_map(static fn($d)=>$d['catalog_count'],$departments)),'counts'=>$countryCounts,'coverage_percent'=>null],'departments'=>$departments];
+        $targets=[];
+        foreach($this->plan['departments'] as $d)foreach($d['places'] as $p)if(($p['in_work_scope']??false)===true)$targets[]=[$d,$p];
+        $scopeKnown=isset($this->plan['scope_version']);$targetPublished=0;$prepared=0.0;$depth=0.0;$publishable=0;
+        foreach($targets as [$d,$p]){
+            if(($live[self::normalized($d['name']).'|'.$p['slug']]??null)==='published')$targetPublished++;
+            $prepared+=(float)($p['prepared_percent']??0);$depth+=(float)($p['depth_percent']??0);$publishable+=(int)($p['publishable']??false);
+        }
+        $n=count($targets);$ratio=static fn($v)=>$scopeKnown&&$n>0?round(100*$v/$n,2):null;
+        $target=['status'=>$scopeKnown?'configured':'not_configured','scope_version'=>$this->plan['scope_version']??null,'denominator'=>$scopeKnown?$n:null,'published_count'=>$available&&$scopeKnown?$targetPublished:null,'published_percent'=>$available?$ratio($targetPublished):null,'prepared_percent'=>$scopeKnown&&$n?round($prepared/$n,2):null,'depth_percent'=>$scopeKnown&&$n?round($depth/$n,2):null,'publishable_percent'=>$ratio($publishable),'label'=>'Objetivo editorial P1–P2; no cobertura nacional completa','method'=>'Un lugar = una unidad; publicación según base y preparación/profundidad según evidencia del plan'];
+        $registry=$this->plan['measurement_inventory']??[];
+        $reference=['status'=>$registry?'historical_cartographic_reference':'not_configured','municipality_count'=>$registry?count($registry):null,'retained_category4_count'=>$registry?count(array_filter($registry,static fn($g)=>(int)($g['original_priority']??0)===4)):null,'label'=>'Inventario geográfico histórico de referencia; conserva categorías fuera de trabajos. No es censo vigente ni total de destinos turísticos.'];
+        return ['schema_version'=>2,'editorial_target'=>$target,'measurement_reference'=>$reference,'estimated_destination_total'=>null,'national_scope_status'=>'defined','national_scope'=>'all_municipalities_and_distinct_tourist_places','audience'=>['status'=>'not_configured','source'=>null,'updated_at'=>null,'metrics'=>['anonymous_sessions'=>null,'estimated_visitors'=>null,'registered_travelers'=>null,'active_travelers'=>null,'business_views'=>null,'contact_clicks'=>null],'countries'=>null,'trend'=>null],'universe_version'=>$this->plan['universe_version'],'catalog_updated_at'=>$this->plan['catalog_updated_at'],'checked_at'=>gmdate('c'),'publication_source_available'=>$available,'country'=>['name'=>'Colombia','catalog_count'=>array_sum(array_map(static fn($d)=>$d['catalog_count'],$departments)),'counts'=>$countryCounts,'coverage_percent'=>null],'departments'=>$departments];
     }
 }

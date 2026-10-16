@@ -10,7 +10,7 @@ const base=process.env.COVERAGE_BASE_URL||'http://127.0.0.1:8036';
   assert.equal(await page.locator('#map svg > path').count(),33);
   assert.match(await page.locator('#catalog-scope').innerText(),/todos los municipios de Colombia/);
   assert.match(await page.locator('#country-total').innerText(),/Guías públicas de Colombia/);
-  assert.equal(await page.locator('#country-target').innerText(),'Colombia completa');
+  assert.equal(await page.locator('#country-target').innerText(),'—');
   assert.equal(await page.locator('#country-percent').count(),0);
   await page.getByRole('tab',{name:'Audiencia',exact:true}).click();
   assert(await page.locator('#panel-audiencia').isVisible());

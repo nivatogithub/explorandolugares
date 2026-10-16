@@ -4,10 +4,20 @@ on:
     paths:
       - 'crecimiento-colombia/**'
       - '.github/workflows/plan-cobertura.yml'
+      - 'backend/app/CoverageService.php'
+      - 'backend/app/analytics/**'
+      - 'backend/app/content/coverage-*.json'
+      - 'backend/tests/coverage*'
+      - 'scripts/generar-catalogo-cobertura.py'
   push:
     paths:
       - 'crecimiento-colombia/**'
       - '.github/workflows/plan-cobertura.yml'
+      - 'backend/app/CoverageService.php'
+      - 'backend/app/analytics/**'
+      - 'backend/app/content/coverage-*.json'
+      - 'backend/tests/coverage*'
+      - 'scripts/generar-catalogo-cobertura.py'
 permissions:
   contents: read
 jobs:
@@ -25,5 +35,13 @@ jobs:
       - run: python3 crecimiento-colombia/scripts/test_turismo.py
       - run: python3 crecimiento-colombia/scripts/test_alcance.py
       - run: python3 crecimiento-colombia/scripts/turismo.py --report
+      - name: Verificar catálogo y cálculo de cobertura
+        run: |
+          python3 scripts/generar-catalogo-cobertura.py
+          php backend/tests/coverage-service.php
+          php backend/tests/coverage-scope.php
+          php backend/tests/analytics-service.php
+          python3 backend/tests/test_coverage_package.py
+          git diff --exit-code -- backend/app/content/coverage-plan.json
       - name: Comprobar reportes actualizados
         run: git diff --exit-code -- crecimiento-colombia/cobertura-operativa.json crecimiento-colombia/COBERTURA_OPERATIVA.md crecimiento-colombia/ORDEN_TURISTICO.md

@@ -119,6 +119,10 @@
   async function init(){
     try{
       data=await json(new URL('api/cobertura.php',root));if(!Array.isArray(data.departments)||!data.country)throw Error('Respuesta inválida');
+      const target=data.editorial_target;
+      $('country-target').textContent=target?.published_percent==null?'—':Number(target.published_percent).toLocaleString('es-CO')+'%';
+      const targetDetail=$('country-target-detail');
+      if(targetDetail)targetDetail.textContent=target?.denominator==null?'Objetivo temporalmente sin confirmar':`${target.published_count==null?'—':target.published_count} de ${target.denominator} guías del objetivo editorial. No es cobertura nacional completa.`;
       $('country-published').textContent=data.publication_source_available?data.country.counts.published:'—';$('country-total').textContent=data.publication_source_available?'Guías públicas de Colombia consultadas en el portal':'Publicación temporalmente sin confirmar';$('catalog-scope').textContent='Nuestra meta es cubrir todos los municipios de Colombia y sus destinos turísticos. Las guías se incorporan progresivamente, por grupos de prioridad y después de revisar su contenido.';$('country-progress').textContent=data.country.counts.in_progress;
       if(!data.publication_source_available){$('notice').hidden=false;$('notice').textContent='No podemos confirmar ahora cuántas guías están publicadas. Mostramos sin dato, no un cero.';}
       $('updated').textContent='Estado consultado: '+new Intl.DateTimeFormat('es-CO',{dateStyle:'medium',timeStyle:'short',timeZone:'America/Bogota'}).format(new Date(data.checked_at))+' (Colombia). Catálogo: '+data.universe_version+'.';
