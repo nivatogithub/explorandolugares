@@ -21,6 +21,7 @@ Para empezar: [ARRANQUE.md](ARRANQUE.md) detalla el estado, los 21 P1 de Antioqu
 - `plantillas/PROCESO.md`: proceso repetible; `plantillas/entrega.json`: contrato vacío de worker.
 - `COBERTURA.md`: reporte recalculable del universo versionado; no es porcentaje de territorio, población ni turismo colombiano.
 - `FUENTES_OFICIALES_Y_PRIVACIDAD.md`: evidencia consultada y límites de las integraciones.
+- `AUDIENCIA_Y_VALOR_PARA_NEGOCIOS.md`: métricas propuestas de visitas, comunidad viajera, países e interacción con comercios; medición todavía no habilitada.
 - `REVISION_REPOSITORIO.md`: capacidades observadas y límites de esta tarea.
 
 No se modifican portal, base de datos, configuración, contactos, precios ni contenido histórico. No se generan imágenes ni negocios ficticios. Las carpetas de candidatos no equivalen a páginas públicas. Instagram queda en fase independiente.

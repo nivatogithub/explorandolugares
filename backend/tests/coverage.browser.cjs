@@ -7,6 +7,8 @@ const base=process.env.COVERAGE_BASE_URL||'http://127.0.0.1:8036';
   const page=await browser.newPage({viewport:{width:1440,height:1150}}),errors=[];page.on('pageerror',e=>errors.push(e.message));
   await page.goto(base+'/cobertura/colombia/');await page.waitForSelector('#map svg > path');
   assert.equal(await page.locator('#map svg > path').count(),33);
+  assert.match(await page.locator('#catalog-scope').innerText(),/No son todos los destinos turísticos de Colombia/);
+  assert.match(await page.locator('#country-total').innerText(),/lugares seleccionados/);
   await page.locator('#map path[data-code="05"]').click();await page.waitForFunction(()=>document.querySelectorAll('#map svg > path').length===125);
   assert.equal(await page.locator('#detail-title').innerText(),'Antioquia');
   assert.match(await page.locator('#department-count').innerText(),/23 destinos/);
