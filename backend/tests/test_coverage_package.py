@@ -12,6 +12,7 @@ class PackageTests(unittest.TestCase):
  def test_scope_and_activation_order(self):
   pairs=m.sources();self.assertGreaterEqual(len(pairs),64);self.assertEqual(pairs[-1][1],'public/cobertura/colombia/index.html')
   self.assertFalse(any('config.php' in s for s,d in pairs));self.assertEqual([d for s,d in pairs if d.startswith('public/admin/')],['public/admin/medicion.php'])
+  self.assertIn('public/assets/cobertura/medicion.js',[d for s,d in pairs])
   self.assertFalse(any(d in ['public/index.html','public/.htaccess','app/bootstrap.php'] for s,d in pairs))
  def test_wrong_manifest_rejected(self):
   with self.assertRaises(ValueError):m.manifest({'site':'other'},self.config)
