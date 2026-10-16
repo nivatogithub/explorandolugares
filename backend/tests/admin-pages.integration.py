@@ -132,6 +132,7 @@ try:
         ('/admin/index.php?tab=sistema', 'Solicitudes de participación'),
         ('/admin/base-datos.php', 'Estado de la base de datos'),
         ('/admin/destinos.php', 'Administrar destinos'),
+        ('/admin/trasladar-negocios.php', 'Trasladar negocios a Cauca Viejo'),
         ('/admin/negocios.php', 'Negocios'),
         ('/admin/negocios.php?tab=crear', 'Negocios'),
         ('/admin/negocios.php?tab=importar', 'Negocios'),
@@ -181,6 +182,7 @@ try:
                     '/admin/base-datos.php': 'Base de datos',
                     '/admin/destinos.php': 'Destinos',
                     '/admin/negocios.php': 'Negocios',
+                    '/admin/trasladar-negocios.php': 'Negocios',
                     '/admin/importar-negocios.php': 'Negocios',
                     '/admin/reclamaciones.php': 'Reclamos de negocio',
                     '/admin/solicitudes-cuenta.php': 'Solicitudes de cuenta',
@@ -581,6 +583,22 @@ try:
     check(starter['publication_status'] == 'draft' and starter['destination_type'] == 'other' and DB.execute("SELECT COUNT(*) FROM destinations WHERE slug='cauca-viejo'").fetchone()[0] == 1, 'El destino preparado se publicó o duplicó.')
     status, body, _ = request('/admin/negocios.php?id='+str(imported_id), opener=ADMIN)
     check(status == 200 and 'Cauca Viejo' in body, 'El destino en borrador no está disponible para asociar negocios.')
+
+    DB.execute("INSERT INTO businesses(public_id,destination_id,category_code,slug) SELECT 'transfer-http-fixture',destination_id,category_code,'transfer-http-fixture' FROM businesses WHERE id=?", (imported_id,))
+    transfer_id = DB.execute("SELECT id FROM businesses WHERE public_id='transfer-http-fixture'").fetchone()[0]
+    DB.execute("INSERT INTO business_sources(business_id,source_url,note) VALUES(?,'https://example.invalid/rnt','MinCIT RNT 221062')", (transfer_id,))
+    DB.execute("INSERT INTO business_translations(business_id,locale,display_name,summary,description) VALUES(?,'es','Casa Mama Rosita','','')", (transfer_id,))
+    DB.commit()
+    status, body, _ = request('/admin/trasladar-negocios.php', opener=ADMIN)
+    check(status == 200 and 'Casa Mama Rosita' in body and 'Posada Dulcinea' in body, 'La vista previa no muestra candidatos y exclusiones.')
+    transfer_csrf = __import__('re').search(r'name="csrf" value="([^"]+)"', body).group(1)
+    transfer_hash = __import__('re').search(r'name="preview_hash" value="([^"]+)"', body).group(1)
+    data = {'csrf':transfer_csrf,'action':'transfer','preview_hash':transfer_hash,'business_ids[]':str(transfer_id),'confirm_transfer':'1'}
+    bad = dict(data,csrf='invalid');status, _, _ = request('/admin/trasladar-negocios.php', bad, ADMIN)
+    check(status == 403, 'El traslado aceptó una petición sin CSRF válido.')
+    status, body, _ = request('/admin/trasladar-negocios.php', data, ADMIN)
+    check(status == 200 and '1 negocios trasladados' in body and DB.execute('SELECT destination_id FROM businesses WHERE id=?',(transfer_id,)).fetchone()[0] == starter['id'], 'El traslado desde el panel no conservó y reasoció el mismo ID.')
+    check(DB.execute("SELECT COUNT(*) FROM businesses WHERE public_id='transfer-http-fixture'").fetchone()[0] == 1, 'Se duplicó la ficha durante el traslado.')
 
     broken_env = dict(__import__('os').environ, EL_LOCAL_CONFIG_PATH=str(broken_file))
     # PHP's server reads the env only at startup, so make a second ephemeral listener.
