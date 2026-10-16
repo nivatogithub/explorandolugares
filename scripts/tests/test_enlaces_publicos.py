@@ -7,18 +7,10 @@ import sys
 import tempfile
 import unittest
 import importlib.util
-import hashlib
 
 ROOT=Path(__file__).resolve().parents[2]
 DEPLOY=ROOT/'scripts/desplegar-sftp.py'
 SPEC=importlib.util.spec_from_file_location('links_deploy',DEPLOY);deploy=importlib.util.module_from_spec(SPEC);SPEC.loader.exec_module(deploy)
-# Existing production debt, frozen for this byte-for-byte reconciliation only.
-# Coverage still links to the old credits page. Any change to that page invalidates
-# this exception and must fix the link; no new missing links are permitted.
-FROZEN_COVERAGE_SHA256='7361ca925ab2b45562c1baea9db3b9b6f5056b7ad1c2730f8698be434f82f12e'
-def frozen_coverage(page, public):
-    return page.relative_to(public).as_posix() == 'cobertura/colombia/index.html' and hashlib.sha256(page.read_bytes()).hexdigest() == FROZEN_COVERAGE_SHA256
-
 SKIP_SCHEMES={'http','https','mailto','tel','javascript','data'}
 
 class References(HTMLParser):
@@ -55,8 +47,6 @@ class PublicLinkTests(unittest.TestCase):
                 if not str(target).startswith(str(self.public.resolve())):
                     broken.append(f'{page.relative_to(self.public)}: {tag}[{attribute}] escapes public root: {value}')
                 elif not target.exists():
-                    if value == '../../creditos-fotograficos/index.html' and frozen_coverage(page, self.public):
-                        continue  # Known deployed link, recorded in docs/PARIDAD_PRODUCCION.md.
                     relative=target.relative_to(self.public.resolve()).as_posix()
                     route=__import__('re').fullmatch(r'(?:en/|pt-br/)?destinos/([a-z0-9-]+)/index\.html',relative)
                     claim_route=relative.rstrip('/')=='reclamar-negocio' and (self.public/'reclamar-negocio.php').is_file()
@@ -140,10 +130,7 @@ class PublicLinkTests(unittest.TestCase):
             self.assertFalse((self.public/f'{locale}creditos-fotograficos/index.html').exists())
         for suffix in ('.html','.php'):
             for page in self.public.rglob('*'+suffix):
-                if frozen_coverage(page, self.public):
-                    self.assertEqual(page.read_text().count('creditos-fotograficos/index.html'), 1)
-                else:
-                    self.assertNotIn('creditos-fotograficos/index.html',page.read_text(),str(page))
+                self.assertNotIn('creditos-fotograficos/index.html',page.read_text(),str(page))
         self.assertNotIn('creditos-fotograficos', (self.public/'sitemap.xml').read_text())
         catalog=(Path(self.temp.name)/'app/content/destinos-dinamicos.json').read_text()
         self.assertIn('source_url',catalog)

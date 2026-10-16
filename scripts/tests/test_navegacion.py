@@ -52,14 +52,12 @@ class NavigationTests(unittest.TestCase):
     def test_internal_links_use_internal_or_anchor_arrows(self):
         class PublicLinks(HTMLParser):
             def __init__(self):
-                super().__init__(); self.current=None; self.items=[]; self.hidden_spans=[]
+                super().__init__(); self.current=None; self.items=[]
             def handle_starttag(self, tag, attrs):
-                if tag == 'span': self.hidden_spans.append(dict(attrs).get('aria-hidden') == 'true')
                 if tag == 'a': self.current = {'href': dict(attrs).get('href',''), 'text': ''}
             def handle_data(self, data):
-                if self.current and not any(self.hidden_spans): self.current['text'] += data
+                if self.current: self.current['text'] += data
             def handle_endtag(self, tag):
-                if tag == 'span' and self.hidden_spans: self.hidden_spans.pop()
                 if tag == 'a' and self.current:
                     self.items.append(self.current); self.current = None
         for page in self.public.rglob('*.html'):
