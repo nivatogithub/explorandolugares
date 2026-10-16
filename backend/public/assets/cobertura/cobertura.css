@@ -14,9 +14,8 @@
 /* Set page text explicitly instead of inheriting the shared legacy body green. */
 #contenido{color:var(--ink)}#contenido .coverage-intro{margin:0;font-weight:400;color:var(--ink)}#contenido .coverage-intro h1{color:var(--ink)}
 
-/* Warm cards shared with the participation section. Keep map status colors separate. */
-#contenido{--card-surface:#fff0dc;--card-border:#f2c77e}
-#contenido .country-stats,#contenido .country-stats article,#contenido .audience-metrics article,#contenido .audience-empty{background:var(--card-surface);border-color:var(--card-border)}
-
-/* Main panels use the same warm surface as the portal cards. */
-#contenido .explorer,#contenido .map-panel,#contenido .detail-panel,#contenido .audience{background:var(--card-surface);border-color:var(--card-border)}
+/* Same hierarchy as community invitations: warm section, ivory inner cards. */
+#contenido{--section-surface:#fff0dc;--card-surface:#fffefa;--card-border:#f2c77e}
+#contenido .country-stats,#contenido .explorer,#contenido .audience{background:var(--section-surface);border-color:var(--card-border)}
+#contenido .country-stats article,#contenido .audience-metrics article,#contenido .audience-empty{background:var(--card-surface);border-color:var(--card-border)}
+#contenido .map-panel,#contenido .detail-panel{background:transparent;border-color:var(--card-border)}
