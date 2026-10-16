@@ -6,6 +6,7 @@ $activeAdminItem = match (true) {
     $adminPath === 'index.php' && $adminTab === 'sistema' => 'system',
     $adminPath === 'index.php' => 'requests',
     $adminPath === 'negocios.php' => 'businesses',
+    $adminPath === 'trasladar-negocios.php' => 'businesses',
     $adminPath === 'importar-negocios.php' => 'businesses',
     $adminPath === 'contactos-negocios.php' => 'business-research',
     $adminPath === 'actualizar-negocios.php' => 'business-bulk-edit',
