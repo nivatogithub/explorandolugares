@@ -40,7 +40,7 @@ final class BusinessEmailCampaigns
         }catch(Throwable $e){$this->db->rollBack();throw $e;}
     }
 
-    public static function sender(array $settings):array {return array_intersect_key($settings,array_flip(['sender_email','sender_name','reply_to','sender_address']));}
+    public static function sender(array $settings):array {$sender=[];foreach(['sender_email','sender_name','reply_to','sender_address'] as $key)$sender[$key]=(string)($settings[$key]??'');if($sender['reply_to']==='')$sender['reply_to']=$sender['sender_email'];return $sender;}
     private static function digest(array $campaign): string {return hash('sha256',json_encode(array_intersect_key($campaign,array_flip(['name','subject','body','action_url','recipients_json','sender_json'])),JSON_THROW_ON_ERROR));}
     public function create(array $input,array $channelIds,array $settings):int
     {
@@ -102,7 +102,7 @@ final class BusinessEmailCampaigns
         $client->assertReady();$c=$this->get($id);$this->validate($c,$settings);if(!hash_equals($c['content_hash'],$hash)||!(int)$c['provider_campaign_id'])throw new RuntimeException('Revisa la campaña preparada antes de enviarla.');
         if($c['status']!=='prepared')throw new RuntimeException('Este envío ya comenzó o requiere revisión; no se repetirá.');
         $native=$client->request('GET','/emailCampaigns/'.(int)$c['provider_campaign_id']);$sender=json_decode($c['sender_json'],true);
-        if(($native['status']??'')!=='draft'||($native['subject']??'')!==$c['subject']||($native['sender']['email']??'')!==($sender['sender_email']??'')||($native['htmlContent']??'')!==self::html($c)||($native['recipients']['listIds']??[])!==[(int)$c['provider_list_id']]||($native['replyTo']??'')!==($sender['reply_to']??''))throw new RuntimeException('El borrador de Brevo cambió o ya se envió. No se enviará una versión distinta de la aprobada.');
+        if(($native['status']??'')!=='draft'||($native['subject']??'')!==$c['subject']||($native['sender']['email']??'')!==($sender['sender_email']??'')||($native['sender']['name']??'')!==($sender['sender_name']??'')||($native['htmlContent']??'')!==self::html($c)||($native['recipients']['listIds']??[])!==[(int)$c['provider_list_id']]||($native['replyTo']??'')!==($sender['reply_to']??''))throw new RuntimeException('El borrador de Brevo cambió o ya se envió. No se enviará una versión distinta de la aprobada.');
         $provider=$client->request('GET','/contacts/lists/'.(int)$c['provider_list_id'].'/contacts?limit=500');
         $actual=[];foreach(($provider['contacts']??[]) as $contact){if(!empty($contact['emailBlacklisted']))throw new RuntimeException('Brevo excluyó un correo. Revisa la audiencia antes de enviar.');$actual[]=strtolower(trim((string)($contact['email']??'')));}
         $expected=array_column(json_decode($c['recipients_json'],true),'email');sort($actual);sort($expected);
