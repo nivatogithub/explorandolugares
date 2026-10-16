@@ -80,6 +80,8 @@ config_file.write_text("<?php return json_decode(base64_decode('" + base64.b64en
 def save_config():
     config_file.write_text("<?php return json_decode(base64_decode('" + base64.b64encode(json.dumps(config).encode()).decode() + "'), true);\n")
 
+subprocess.run(['php', str(WORK / 'app/analytics/install-basic.php')], check=True, capture_output=True)
+
 with socket.socket() as sock:
     sock.bind(('127.0.0.1', 0))
     PORT = sock.getsockname()[1]
@@ -484,6 +486,17 @@ try:
     check(approved and approved['status']=='approved' and approved['publication_status']=='draft' and approved['claim_status']=='RECLAMADO' and approved['account_id']==account_row['id'], 'La aprobación no creó el borrador privado y la membresía esperados.')
     status, body, _ = request('/business/dashboard.php', opener=business_user)
     check(status == 200 and 'Cafetería de cuenta HTTP' in body and 'draft' in body, 'El tablero no reflejó el negocio asociado después de la aprobación.')
+    own_public_id = DB.execute('SELECT public_id FROM businesses WHERE id=?', (approved['business_id'],)).fetchone()[0]
+    status, audience_json, _ = request('/api/audiencia-entidad.php?type=business&key='+own_public_id, opener=business_user)
+    check(status == 200 and audience_json.startswith('{'), 'Respuesta de estadísticas inesperada: '+str(status)+' '+audience_json[:240])
+    check(json.loads(audience_json)['status']=='enabled', 'El titular no puede consultar sus estadísticas agregadas.')
+    status, _, _ = request('/api/audiencia-entidad.php?type=destination&key=jerico', opener=business_user)
+    check(status == 403, 'Una cuenta comercial no debe consultar estadísticas privadas de destinos.')
+    other_public_id = DB.execute('SELECT public_id FROM businesses WHERE id<>? LIMIT 1', (approved['business_id'],)).fetchone()[0]
+    status, _, _ = request('/api/audiencia-entidad.php?type=business&key='+other_public_id, opener=business_user)
+    check(status == 403, 'Una cuenta comercial no debe consultar otro negocio por cambiar su ID.')
+    status, _, _ = request('/api/audiencia-entidad.php?type=business&key='+own_public_id, opener=GUEST)
+    check(status == 403, 'Las estadísticas comerciales no deben exponerse a visitantes.')
     account_dashboard_csrf = __import__('re').search(r'name="csrf" value="([^"]+)"', body).group(1)
     request('/business/logout.php', {'csrf': account_dashboard_csrf}, business_flow)
     status, body, _ = request('/admin/usuarios.php', {'csrf': csrf, 'action': 'reset_password', 'account_id': account_row['id']}, ADMIN)

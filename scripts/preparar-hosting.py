@@ -71,4 +71,6 @@ subprocess.run([
 shutil.copytree(root/'backend/public/cobertura',public/'cobertura',dirs_exist_ok=True)
 shutil.copytree(root/'backend/public/assets/cobertura',public/'assets/cobertura',dirs_exist_ok=True)
 shutil.copytree(root/'backend/integration-medicion/public',public,dirs_exist_ok=True)
+# Stamp all generated pages after the integration overlay, including general pages.
+subprocess.run([sys.executable,str(root/'scripts/versiones-medicion.py'),'--public',str(public)],check=True)
 print(f'Entrega de revisión: {release}\nRaíz pública: {public}\nConfigurar private/config.php fuera de public/. No hay publicación automática.')

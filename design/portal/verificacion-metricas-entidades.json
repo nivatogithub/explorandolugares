@@ -1,0 +1,35 @@
+{
+  "production_modified": false,
+  "local_fixture_only": true,
+  "private_preview_removed": true,
+  "basic_entity_table": "el_basic_entity_daily",
+  "metrics": [
+    "destination_page_views",
+    "business_page_views",
+    "directory_impressions",
+    "featured_impressions",
+    "profile_clicks"
+  ],
+  "optional_contacts": "separate, consent_only",
+  "owner_access": "only active authorised business membership",
+  "access_tests": {
+    "own_business": 200,
+    "other_business": 403,
+    "destination_as_business": 403,
+    "anonymous": 403
+  },
+  "entitlement_tests": [
+    "standard_page",
+    "premium",
+    "featured_without_page",
+    "expired",
+    "future",
+    "pending_payment",
+    "closed_business"
+  ],
+  "viewability": "50 percent / 1 continuous second; pauses while hidden; once per document",
+  "referrer": "omitted",
+  "visitor_identifiers": false,
+  "browser_preview": "metricas-negocio-privadas.png",
+  "deployment": "pending; main complete packager required"
+}

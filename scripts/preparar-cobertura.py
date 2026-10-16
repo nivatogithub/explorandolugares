@@ -18,10 +18,11 @@ def sources():
   if p.name in {'cobertura.css','portal-tokens.css','cobertura.js','medicion.js','select-flotante.js','departamentos.geojson','procedencia.json'} or re.fullmatch(r'municipios-\d{2}\.geojson',p.name):pairs.append((str(p.relative_to(ROOT)),'public/assets/cobertura/'+p.name))
  for p in sorted((ROOT/'backend/app/analytics').rglob('*')):
   if p.is_file():pairs.append((str(p.relative_to(ROOT)),'app/analytics/'+str(p.relative_to(ROOT/'backend/app/analytics'))))
- for name in ['api/medicion.php','api/actividad.php','admin/medicion.php']:
+ for name in ['api/medicion.php','api/actividad.php','api/audiencia-entidad.php','admin/medicion.php']:
   pairs.append(('backend/public/'+name,'public/'+name))
  for p in sorted((ROOT/'backend/integration-medicion/public').rglob('*')):
   if p.is_file():pairs.append((str(p.relative_to(ROOT)),'public/'+str(p.relative_to(ROOT/'backend/integration-medicion/public'))))
+ pairs.append(('backend/public/business/dashboard.php','public/business/dashboard.php'))
  return sorted(pairs,key=lambda p:4 if p[1]=="public/cobertura/colombia/index.html" else 3 if p[1].endswith("/index.html") else 2 if p[1]=="public/api/cobertura.php" else 1 if p[1].startswith("public/") else 0)
 def manifest(data,config):
  if data.get('site')!='explorandolugares' or data.get('host')!=config['host'] or data.get('remote_base')!=config['remote_base'] or data.get('public_root')!=sftp.public_path(config):raise ValueError('Manifiesto de otro destino o inconsistente')
@@ -55,6 +56,13 @@ def main():
  changed=[x for x in files if old.get(x['relative'],{}).get('sha256')!=x['sha256']]
  print(f'Entrega de cobertura: {len(changed)} archivos, {sum(x["bytes"] for x in changed)//1024} KB. Sin eliminaciones. Activación aditiva separada mediante administración o permiso de despliegue de un uso.')
  report={'prepared_at':datetime.now(timezone.utc).isoformat(),'deployment_performed':False,'files':[{k:v for k,v in x.items() if k!='local'} for x in files]};reportPath=ROOT/'.local/coverage/preparacion.json';reportPath.write_text(json.dumps(report,indent=2)+'\n')
+ # This focused uploader cannot leave other generated pages on an old loader.
+ full=sftp.build(ROOT/'.local/coverage/full-scope-check',config)
+ scoped={x['relative'] for x in files}
+ outside=[x['relative'] for x in full if x['relative'] not in scoped and old.get(x['relative'],{}).get('sha256')!=x['sha256']]
+ if outside:
+  print(f'La versión también cambia {len(outside)} archivos fuera del paquete acotado. Usar scripts/desplegar-sftp.py desde main para esta entrega.')
+  if args.deploy:raise ValueError('Entrega parcial bloqueada: dejaría páginas o módulos con fuentes anteriores. Usar el empaquetador completo.')
  if not args.deploy:
   print('Paquete local .local/coverage/release. No se conectó ni modificó el hosting.');return
  # Require an approved, committed source state. Never upload a mixed work tree.
