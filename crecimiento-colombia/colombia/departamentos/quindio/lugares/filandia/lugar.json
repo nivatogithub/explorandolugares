@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "place_id": "CO-63-filandia",
+  "department_id": "CO-63",
+  "state": "planned",
+  "owner": null,
+  "reviewer": null,
+  "branch": "lugar/CO/quindio/filandia",
+  "pr_url": null,
+  "base_commit": null,
+  "blockers": [
+    "Asignar responsable y auditar fuentes, permisos y estado real"
+  ],
+  "next_action": "Completar PROCESO.md y evidencia específica del lugar",
+  "gates": {
+    "identidad": {
+      "passed": false,
+      "evidence": [],
+      "reviewer": null,
+      "checked_at": null
+    },
+    "fuentes": {
+      "passed": false,
+      "evidence": [],
+      "reviewer": null,
+      "checked_at": null
+    },
+    "texto": {
+      "passed": false,
+      "evidence": [],
+      "reviewer": null,
+      "checked_at": null
+    },
+    "fotos": {
+      "passed": false,
+      "evidence": [],
+      "reviewer": null,
+      "checked_at": null
+    },
+    "idiomas": {
+      "passed": false,
+      "evidence": [],
+      "reviewer": null,
+      "checked_at": null
+    },
+    "directorio": {
+      "passed": false,
+      "evidence": [],
+      "reviewer": null,
+      "checked_at": null
+    },
+    "tecnica": {
+      "passed": false,
+      "evidence": [],
+      "reviewer": null,
+      "checked_at": null
+    },
+    "privacidad": {
+      "passed": false,
+      "evidence": [],
+      "reviewer": null,
+      "checked_at": null
+    },
+    "revision": {
+      "passed": false,
+      "evidence": [],
+      "reviewer": null,
+      "checked_at": null
+    }
+  },
+  "approval": null,
+  "publication": null,
+  "worker_deliveries": []
+}

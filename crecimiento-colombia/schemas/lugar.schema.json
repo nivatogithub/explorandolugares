@@ -1,0 +1,483 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://explorandolugares.com/schemas/crecimiento/v1/lugar.schema.json",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "place_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "department_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "state": {
+      "enum": [
+        "planned",
+        "researching",
+        "draft",
+        "review",
+        "approved",
+        "published",
+        "blocked"
+      ]
+    },
+    "owner": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "reviewer": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "branch": {
+      "type": "string",
+      "minLength": 1
+    },
+    "pr_url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "base_commit": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "blockers": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "next_action": {
+      "type": "string",
+      "minLength": 1
+    },
+    "gates": {
+      "type": "object",
+      "properties": {
+        "identidad": {
+          "type": "object",
+          "properties": {
+            "passed": {
+              "type": "boolean"
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "reviewer": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "checked_at": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "passed",
+            "evidence",
+            "reviewer",
+            "checked_at"
+          ],
+          "additionalProperties": false
+        },
+        "fuentes": {
+          "type": "object",
+          "properties": {
+            "passed": {
+              "type": "boolean"
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "reviewer": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "checked_at": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "passed",
+            "evidence",
+            "reviewer",
+            "checked_at"
+          ],
+          "additionalProperties": false
+        },
+        "texto": {
+          "type": "object",
+          "properties": {
+            "passed": {
+              "type": "boolean"
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "reviewer": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "checked_at": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "passed",
+            "evidence",
+            "reviewer",
+            "checked_at"
+          ],
+          "additionalProperties": false
+        },
+        "fotos": {
+          "type": "object",
+          "properties": {
+            "passed": {
+              "type": "boolean"
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "reviewer": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "checked_at": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "passed",
+            "evidence",
+            "reviewer",
+            "checked_at"
+          ],
+          "additionalProperties": false
+        },
+        "idiomas": {
+          "type": "object",
+          "properties": {
+            "passed": {
+              "type": "boolean"
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "reviewer": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "checked_at": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "passed",
+            "evidence",
+            "reviewer",
+            "checked_at"
+          ],
+          "additionalProperties": false
+        },
+        "directorio": {
+          "type": "object",
+          "properties": {
+            "passed": {
+              "type": "boolean"
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "reviewer": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "checked_at": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "passed",
+            "evidence",
+            "reviewer",
+            "checked_at"
+          ],
+          "additionalProperties": false
+        },
+        "tecnica": {
+          "type": "object",
+          "properties": {
+            "passed": {
+              "type": "boolean"
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "reviewer": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "checked_at": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "passed",
+            "evidence",
+            "reviewer",
+            "checked_at"
+          ],
+          "additionalProperties": false
+        },
+        "privacidad": {
+          "type": "object",
+          "properties": {
+            "passed": {
+              "type": "boolean"
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "reviewer": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "checked_at": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "passed",
+            "evidence",
+            "reviewer",
+            "checked_at"
+          ],
+          "additionalProperties": false
+        },
+        "revision": {
+          "type": "object",
+          "properties": {
+            "passed": {
+              "type": "boolean"
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "reviewer": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "checked_at": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "passed",
+            "evidence",
+            "reviewer",
+            "checked_at"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "identidad",
+        "fuentes",
+        "texto",
+        "fotos",
+        "idiomas",
+        "directorio",
+        "tecnica",
+        "privacidad",
+        "revision"
+      ],
+      "additionalProperties": false
+    },
+    "approval": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "hash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "by": {
+          "type": "string",
+          "minLength": 1
+        },
+        "at": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "hash",
+        "by",
+        "at",
+        "evidence"
+      ],
+      "additionalProperties": false
+    },
+    "publication": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "url": {
+          "type": "string",
+          "pattern": "^https://[^\\s]+$"
+        },
+        "commit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "checked_at": {
+          "type": "string",
+          "minLength": 1
+        },
+        "http_evidence": {
+          "type": "string",
+          "minLength": 1
+        },
+        "authorization_evidence": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "url",
+        "commit",
+        "checked_at",
+        "http_evidence",
+        "authorization_evidence"
+      ],
+      "additionalProperties": false
+    },
+    "worker_deliveries": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "place_id",
+    "department_id",
+    "state",
+    "owner",
+    "reviewer",
+    "branch",
+    "pr_url",
+    "base_commit",
+    "blockers",
+    "next_action",
+    "gates",
+    "approval",
+    "publication",
+    "worker_deliveries"
+  ],
+  "additionalProperties": false
+}
