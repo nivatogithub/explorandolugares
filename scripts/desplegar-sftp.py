@@ -95,18 +95,18 @@ def public_path(config):
 
 def rewrite_private_app_includes(public_root, remote_base):
     """Point public PHP entrypoints to the private app directory on the host."""
-    prefixes = {
-        "dirname(__DIR__,2).'/app/": "'" + remote_base + "/app/",
-        "__DIR__.'/../app/": "'" + remote_base + "/app/",
-    }
+    prefixes = [
+        re.compile(r'''dirname\s*\(\s*__DIR__\s*,\s*2\s*\)\s*\.\s*(['"])/app/'''),
+        re.compile(r'''__DIR__\s*\.\s*(['"])/\.\./app/'''),
+    ]
     for entry in public_root.rglob('*.php'):
         source = entry.read_text()
         updated = source
-        for old, new in prefixes.items():
-            updated = updated.replace(old, new)
+        for pattern in prefixes:
+            updated = pattern.sub(lambda match: match.group(1) + remote_base + '/app/', updated)
         if updated != source:
             entry.write_text(updated)
-        if any(old in updated for old in prefixes):
+        if any(pattern.search(updated) for pattern in prefixes):
             raise ValueError('Quedó una ruta relativa a app/ en un PHP público; se detuvo el empaquetado.')
 
 
@@ -287,6 +287,8 @@ def main(argv=None):
     parser.add_argument('--deploy', action='store_true', help='Sube directamente solo archivos nuevos o modificados.')
     parser.add_argument('--only', action='append', default=[], metavar='RUTA',
                         help='Limita una entrega por ruta exacta del paquete (se puede repetir).')
+    parser.add_argument('--force-file', action='append', default=[], metavar='RUTA',
+                        help='Vuelve a subir una ruta exacta para reparar una diferencia verificada en el hosting.')
     args = parser.parse_args(argv)
     config = load_config(args.config.expanduser().resolve())
     subprocess.run([sys.executable, str(ROOT / 'scripts/verificar-antes-de-desplegar.py')], cwd=ROOT, check=True)
@@ -297,6 +299,9 @@ def main(argv=None):
         if args.only and not previous:
             raise ValueError('Una entrega parcial requiere el manifiesto del último despliegue; primero establece una comparación completa.')
         scoped = select_files(files, args.only)
+        forced = {item['relative'] for item in select_files(files, args.force_file)} if args.force_file else set()
+        if forced - {item['relative'] for item in scoped}:
+            raise ValueError('Una reparación debe estar dentro de las rutas seleccionadas para el despliegue.')
         client = None
         if args.deploy:
             known_hosts = Path(config['known_hosts_file']).expanduser()
@@ -304,7 +309,8 @@ def main(argv=None):
                 raise ValueError('Falta el archivo de huellas verificadas.')
             client = SFTP(config)
         changed = changed_files(previous, files) if previous else files
-        selected = [item for item in changed if item['relative'] in {entry['relative'] for entry in scoped}]
+        changed_paths = {item['relative'] for item in changed} | forced
+        selected = [item for item in scoped if item['relative'] in changed_paths]
         byte_count = sum(item['bytes'] for item in selected)
         obsolete = [] if args.only else obsolete_files(previous, files)
         removed = sorted(item['relative'] for item in obsolete)
