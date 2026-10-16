@@ -34,7 +34,7 @@ El script calcula el hash de cada archivo construido una sola vez y compara ese 
 
 El manifiesto remoto vive en `remote_base/.explorandolugares-deploy.json`, fuera del directorio público, y registra commit, fecha, rutas, tamaños y SHA-256. El manifiesto local está en `.local/deployment-manifest.json` y queda excluido de Git. El local es la base de comparación; el remoto es una copia de consulta, no se descarga durante los despliegues. En la primera ejecución, el script aprovecha el inventario local compacto generado desde el último despliegue registrado. Si no hay comparación local, el plan avisa que subiría el paquete completo.
 
-El script no borra archivos que ya no aparezcan en la versión nueva. Los anota en `removed_not_deleted` para que se puedan revisar y limpiar por separado cuando se confirme que no hacen falta. Tampoco modifica `private/config.php`, credenciales ni la base de datos. No hagas dos despliegues al mismo tiempo.
+En un despliegue completo, el script retira solo archivos que figuren en el manifiesto anterior y ya no estén en el paquete nuevo; no borra archivos que no haya administrado antes. La vista previa enumera esas rutas y el lote SFTP las elimina después de subir los archivos actualizados. Un despliegue `--only` no borra nada. Tampoco modifica `private/config.php`, credenciales ni la base de datos. No hagas dos despliegues al mismo tiempo.
 
 ## Limpieza reversible de releases antiguos
 
@@ -54,11 +54,11 @@ El script lo mueve a una papelera fechada en el mismo espacio del hosting. Esto 
 
 La papelera es temporal, no un sistema de respaldo: los archivos del portal están en Git y la base de datos se respalda por separado cuando ya existan datos de clientes que proteger. No se hacen copias adicionales en cada despliegue.
 
-La construcción del paquete también retira recursos de `assets/` sin referencias en las páginas, CSS/JS/PHP y el catálogo semilla privado. Conserva imágenes de destinos en borrador si están declaradas en ese catálogo, así como los archivos de licencias. El envío no borra automáticamente archivos remotos obsoletos; antes de retirarlos, compáralos con el manifiesto y confirma que no estén enlazados desde datos de producción.
+La construcción del paquete también retira recursos de `assets/` sin referencias en las páginas, CSS/JS/PHP y el catálogo semilla privado. Conserva imágenes de destinos en borrador si están declaradas en ese catálogo, así como los archivos de licencias. La limpieza remota se limita a archivos del manifiesto anterior que el paquete nuevo ya no incluya; el script no explora ni elimina rutas ajenas al manifiesto.
 
 ## Si una versión sale mal
 
-La recuperación acordada es volver a desplegar la etiqueta estable anterior desde Git. El despliegue directo actualizará solo los archivos que difieran con la versión publicada. Los archivos añadidos por la versión fallida que ya no use el código quedan sin referencia y se anotan para limpieza posterior; no se borran a ciegas. La base de datos requiere evaluación aparte si el cambio fallido incluyó migraciones: Git no revierte datos ni migraciones destructivas.
+La recuperación acordada es volver a desplegar la etiqueta estable anterior desde Git. El despliegue directo actualizará solo los archivos que difieran con la versión publicada y retirará los archivos obsoletos que estén registrados en el manifiesto de despliegue. La base de datos requiere evaluación aparte si el cambio fallido incluyó migraciones: Git no revierte datos ni migraciones destructivas.
 
 El envío SFTP confirma transferencia, pero no valida el funcionamiento de PHP, MySQL, formularios ni permisos del hosting. Después de publicar, revisar las páginas y acciones incluidas en la lista de verificación manual de preproducción.
 
