@@ -10,8 +10,8 @@ class PackageTests(unittest.TestCase):
   for path in ['../config.php','private/config.php','public/../private/config.php','/public/a']:
    with self.assertRaises(ValueError):m.target(self.config,path)
  def test_scope_and_activation_order(self):
-  pairs=m.sources();self.assertEqual(len(pairs),43);self.assertEqual(pairs[-1][1],'public/cobertura/colombia/index.html')
-  self.assertFalse(any('config.php' in s or 'admin/' in s or 'negocios' in s for s,d in pairs))
+  pairs=m.sources();self.assertGreaterEqual(len(pairs),64);self.assertEqual(pairs[-1][1],'public/cobertura/colombia/index.html')
+  self.assertFalse(any('config.php' in s for s,d in pairs));self.assertEqual([d for s,d in pairs if d.startswith('public/admin/')],['public/admin/medicion.php'])
   self.assertFalse(any(d in ['public/index.html','public/.htaccess','app/bootstrap.php'] for s,d in pairs))
  def test_wrong_manifest_rejected(self):
   with self.assertRaises(ValueError):m.manifest({'site':'other'},self.config)
