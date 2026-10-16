@@ -1,8 +1,8 @@
 {
-  "version": "alcance-mediano-plazo-v1",
+  "version": "alcance-mediano-plazo-v2",
   "decision_date": "2026-10-16",
   "decision_source": "Instrucción explícita del propietario en esta conversación",
-  "user_instruction": "La prioridad 4 queda totalmente por fuera del plan de trabajo; probablemente solo implementemos hasta la 2 para la cobertura.",
+  "user_instruction": "Conservar categoría 4 para medición, fuera de trabajos; lanzar cuatro workers en orden, consultas web autorizadas.",
   "allowed_department_priorities": [
     1,
     2
@@ -41,8 +41,8 @@
     "Yalí",
     "Nechí"
   ],
-  "p4_policy": "Fuera del plan: sin cola, asignación, metas, fechas, presupuesto ni denominador de cobertura objetivo. No mapear 4 a 3 ni reincorporar sin nueva decisión explícita.",
+  "p4_policy": "Conservar inventario, categoría y denominador de medición general. Fuera de la cola P1/P2 y del objetivo operativo, sin borrado ni mapeo a P3.",
   "p3_policy": "Referencia futura fuera de la cola de ejecución de mediano plazo; ampliar alcance requiere nueva decisión.",
-  "target_policy": "P1 primero y P2 como techo operativo de planificación; no compromete completar todos los P2 ni autoriza iniciar workers.",
+  "target_policy": "P1/P2 como horizonte; primera tanda de cuatro autorizada; aprobación editorial y publicación por separado.",
   "priority_approval": null
 }
