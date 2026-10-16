@@ -10614,9 +10614,12 @@
       "tourism_sources": [
         "macizo"
       ]
-    },
+    }
+  ],
+  "tourism_sha256": "0abb92b7282c4408af8af82dd2c98c54cb853706960bbaa4e3bde38161e1dc9f",
+  "deferred": [
     {
-      "rank": 98,
+      "rank": null,
       "place_id": "CO-97-mitu",
       "name": "Mitú",
       "department_id": "CO-97",
@@ -10722,10 +10725,11 @@
       "tourism_score": 46.0,
       "tourism_sources": [
         "amazonia"
-      ]
+      ],
+      "deferral_reason": "Departamento o lugar P3: fuera del horizonte P1–P2."
     },
     {
-      "rank": 99,
+      "rank": null,
       "place_id": "CO-99-puerto-carreno",
       "name": "Puerto Carreño",
       "department_id": "CO-99",
@@ -10831,10 +10835,11 @@
       "tourism_score": 46.0,
       "tourism_sources": [
         "amazonia"
-      ]
+      ],
+      "deferral_reason": "Departamento o lugar P3: fuera del horizonte P1–P2."
     },
     {
-      "rank": 100,
+      "rank": null,
       "place_id": "CO-81-arauca",
       "name": "Arauca",
       "department_id": "CO-81",
@@ -10940,8 +10945,10 @@
       "tourism_score": 42.0,
       "tourism_sources": [
         "amazonia"
-      ]
+      ],
+      "deferral_reason": "Departamento o lugar P3: fuera del horizonte P1–P2."
     }
   ],
-  "tourism_sha256": "0abb92b7282c4408af8af82dd2c98c54cb853706960bbaa4e3bde38161e1dc9f"
+  "scope_version": "alcance-mediano-plazo-v1",
+  "scope_sha256": "2787728321c306ca2bad99c0240d8e2b734b17da7f30648d2f7ce8b9695f2ca3"
 }

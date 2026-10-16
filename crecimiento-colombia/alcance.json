@@ -1,0 +1,48 @@
+{
+  "version": "alcance-mediano-plazo-v1",
+  "decision_date": "2026-10-16",
+  "decision_source": "Instrucción explícita del propietario en esta conversación",
+  "user_instruction": "La prioridad 4 queda totalmente por fuera del plan de trabajo; probablemente solo implementemos hasta la 2 para la cobertura.",
+  "allowed_department_priorities": [
+    1,
+    2
+  ],
+  "allowed_place_priorities": [
+    1,
+    2
+  ],
+  "deferred_priorities": [
+    3
+  ],
+  "excluded_legacy_categories": [
+    4
+  ],
+  "legacy_category4_names": [
+    "Angelópolis",
+    "Caramanta",
+    "Montebello",
+    "Argelia",
+    "Nariño",
+    "Abriaquí",
+    "Armenia",
+    "Caicedo",
+    "Peque",
+    "Sabanalarga",
+    "Briceño",
+    "Campamento",
+    "Ituango",
+    "Toledo",
+    "San Pedro de Urabá",
+    "Murindó",
+    "Vigía del Fuerte",
+    "Caracolí",
+    "Anorí",
+    "Vegachí",
+    "Yalí",
+    "Nechí"
+  ],
+  "p4_policy": "Fuera del plan: sin cola, asignación, metas, fechas, presupuesto ni denominador de cobertura objetivo. No mapear 4 a 3 ni reincorporar sin nueva decisión explícita.",
+  "p3_policy": "Referencia futura fuera de la cola de ejecución de mediano plazo; ampliar alcance requiere nueva decisión.",
+  "target_policy": "P1 primero y P2 como techo operativo de planificación; no compromete completar todos los P2 ni autoriza iniciar workers.",
+  "priority_approval": null
+}

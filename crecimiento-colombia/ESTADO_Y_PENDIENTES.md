@@ -1,5 +1,7 @@
 # Estado de la entrega
 
+**Alcance vigente:** [ALCANCE.md](ALCANCE.md) y `alcance.json` prevalecen sobre las fases posteriores descritas aquí: P4 excluida; P1–P2 como techo operativo; P3 solo referencia futura. Cola de 97 candidatos, 3 diferidos, cero workers iniciados.
+
 16/10/2026. Implementado como documentación y herramientas locales de planificación; no es implementación del portal ni automatización conectada.
 
 - Creadas 33 unidades (32 departamentos + Bogotá D.C.) y 78 lugares candidatos, cada uno con manifiesto y proceso. Grupos P1/P2/P3 sin cupos; restaurados los 21 municipios P1 históricos de Antioquia. Sonsón conserva P2. Cauca Viejo P2 con padre Jericó.

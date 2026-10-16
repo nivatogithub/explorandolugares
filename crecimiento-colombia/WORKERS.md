@@ -1,5 +1,7 @@
 # Workers fijos por lugar
 
+**Alcance vigente:** [ALCANCE.md](ALCANCE.md) y `alcance.json` prevalecen sobre las fases posteriores descritas aquí: P4 excluida; P1–P2 como techo operativo; P3 solo referencia futura. Cola de 97 candidatos, 3 diferidos, cero workers iniciados.
+
 Los únicos workers operativos son **Lugar 1**, **Lugar 2**, **Lugar 3**. Cada uno completa UN lugar: investigación, fuentes oficiales y hechos trazables, textos ES e historia, sitios de interés, experiencias verificadas, directorio gratuito con negocios reales, fotos reales autorizadas y originales trazables, derivados, EN/PT-BR, integración y previsualización. Fuentes, fotos, redacción y QA son componentes del trabajo, no workers separados. No hay workers lanzados ni asignados en esta entrega.
 
 Un worker conserva el lugar durante revisión y correcciones. Solo puede recibir el siguiente cuando el anterior esté completo y aprobado por el usuario. Se reserva siempre el primer lugar sin iniciar de la cola global; no saltar bloqueados ni duplicar lugares. Una reserva NO inicia producción. El inicio necesita evidencia de autorización humana del lugar concreto. Rama independiente `lugar/CO/<depto>/<lugar>` y PR exclusivo por entrega; crear la rama al iniciar trabajo autorizado. PR y vista previa son requisitos para revisión, no prueba de aprobación ni despliegue.

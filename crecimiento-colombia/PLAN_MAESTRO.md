@@ -1,5 +1,7 @@
 # Lanzamiento nacional por lotes
 
+**Alcance vigente:** [ALCANCE.md](ALCANCE.md) y `alcance.json` prevalecen sobre las fases posteriores descritas aquí: P4 excluida; P1–P2 como techo operativo; P3 solo referencia futura. Cola de 97 candidatos, 3 diferidos, cero workers iniciados.
+
 ## Jerarquía y universo
 
 País `CO` → unidad departamental → lugar. Bogotá D.C. se conserva separada de Cundinamarca y se marca `capital_district`, no departamento. Cada lugar tiene ID estable independiente del slug, tipo `municipality`, `district`, `corregimiento` o `autonomous_destination`, y padre opcional. Cauca Viejo tiene ficha editorial propia y padre Jericó; no se presenta como municipio ni se duplica un negocio en ambas fichas: un negocio conserva un ID y varias relaciones de ubicación/descubrimiento. Un corregimiento puede tener código de centro poblado validado; el destino autónomo conserva código oficial nulo cuando no corresponde. Límites y condición administrativa se verifican antes de publicar.

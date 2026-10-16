@@ -1,5 +1,7 @@
 # Plan maestro de crecimiento de Colombia
 
+**Alcance vigente:** [ALCANCE.md](ALCANCE.md) y `alcance.json` prevalecen sobre las fases posteriores descritas aquí: P4 excluida; P1–P2 como techo operativo; P3 solo referencia futura. Cola de 97 candidatos, 3 diferidos, cero workers iniciados.
+
 Versión 1 · 16 de octubre de 2026 · propuesta operativa local de Explorando Lugares.
 
 Objetivo: lanzar pronto un portal útil y confiable, ampliar por lotes pequeños y atraer visitantes que regresen. Directorio básico gratuito permanente; sin membresía obligatoria para viajeros o comercios. Esta decisión de la solicitud actual reemplaza, para este plan, las hipótesis históricas de suscripción. No modifica precios ni planes del backend.
