@@ -65,3 +65,9 @@ La página reutiliza el header, todos los enlaces de navegación, el selector de
 El mapa conserva siempre las 33 unidades departamentales de Colombia. Seleccionar un departamento amplía su silueta sobre el resto del país atenuado; los departamentos pequeños reciben mayor ampliación. No se solicitan mapas municipales ni existe una segunda navegación por municipio. La búsqueda y los estados del listado siguen filtrando destinos del departamento. “Ver Colombia” restaura el mapa sin selección. Los datos municipales del servicio se conservan para uso de catálogo, pero no aparecen como nivel de navegación en esta página.
 
 Este ajuste se prepara como vista local; no implica despliegue automático.
+
+## Restauración tras publicación de otra rama
+
+El manifiesto de producción `748ddd1` retiró los archivos de esta función mediante el cálculo de obsoletos de un despliegue completo desde una rama que no los contenía. Se comprobó HTTP 403 en la página, 404 en ambas API y ausencia del enlace en el menú. La restauración se prepara sobre los doce archivos públicos vigentes, añadiendo exclusivamente navegación, declaración de privacidad y cargador; se preservan cambios ajenos.
+
+No hacer un despliegue completo desde una rama sin esta función hasta integrar sus fuentes. Actualizar el manifiesto local de publicación evita perder el inventario, pero por sí solo no evita que un paquete completo incompleto vuelva a marcar estos archivos como obsoletos. Mantener entregas incrementales mientras las ramas sigan separadas. Esta tarea no realiza merge de ramas ni cambia datos de publicación de destinos o negocios.
