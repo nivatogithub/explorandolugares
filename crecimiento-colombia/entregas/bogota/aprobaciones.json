@@ -1,0 +1,19 @@
+{
+  "destino_id": "CO-11-bogota",
+  "revision": 1,
+  "eleccion_portada": null,
+  "originales_usos": [],
+  "licencias": [],
+  "textos_por_componente_idioma": [],
+  "ilustraciones": [],
+  "publicacion": false,
+  "rechazos": [
+    {
+      "foto_id": "bogota-vista-monserrate",
+      "uso": "portada",
+      "decision": "rechazado_por_usuario",
+      "motivo": "cables y representatividad"
+    }
+  ],
+  "regla": "Cada aprobación humana requiere id componente, idioma/uso y hash exacto; una elección no aprueba textos/licencia/ilustración/publicación."
+}

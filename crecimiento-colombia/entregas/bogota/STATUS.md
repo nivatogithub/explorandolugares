@@ -1,27 +1,21 @@
-# Lugar 2 — Bogotá — estado real
+# Bogotá — Lugar 2 — revisión 1 reabierta
 
-Rama exclusiva: `lugar/CO/bogota-dc/bogota`. Destino: `CO-11-bogota`. Consulta: 16/10/2026.
+Rama `lugar/CO/bogota-dc/bogota`. Entrada privada `/bogota/` conserva previsualizacion.html; no es URL de producción. Consultas16/10/2026. Procedimiento vigente leído en worktree coordinador: crecimiento-colombia/PROCEDIMIENTO_DESTINOS_V2.md. Modelo Jericó revisado en content/destinos-dinamicos.json: helicóptero/parapente son draft con condiciones pendientes; no se trasladan a Bogotá.
 
-## Ejecutado
+## Ejecutado verificable
 
-Leídos AGENTS.md, contexto independiente, contexto producto, gobernanza, WORKERS y decisión cuatro-workers, skill existente imagenes-destinos y guías de producción/visuales/fotos. La instrucción del propietario autoriza la tanda de cuatro workers, no publicación.
+33 fuentes registradas (página abierta vs resultado indexado distinguidos). 19 sitios documentados con ubicación, categoría, inclusión y textos ES/EN/PT-BR; 18 actividades:12 propuestas editoriales,3 ofertas documentadas de Bogotá Bike Tours,3 candidatos ocultos.10 fichas gratuitas,3 categorías. Todo es borrador, sin alianza ni disponibilidad garantizada; fotos de operadores no se copiaron sin permiso.
 
-13 fuentes documentadas; se distingue página abierta de resultado oficial indexado. Textos originales ES, EN y PT-BR con historia, cinco atractivos, cuatro experiencias informativas e información práctica. Diez fichas gratuitas en alojamiento, gastronomía y cultura; sedes Azahar son establecimientos distintos y no se cuentan como empresas independientes. Cada ficha conserva fuente/fecha, sin reclamar alianzas, contactos ni operación verificada. Previsualización HTML privada y JSON de entrega desacoplado del importador productivo.
+Se conserva foto con cables RECHAZADA por usuario para portada. Dos candidatas visibles juntas, numeradas y sin selección:1 basílica Monserrate Felipe Restrepo Acosta CC BY-SA4.0;2 vista centro/Plaza Bolívar Dante O.P CC0. Tercera foto Plaza/Capitolio oscura con cinta se conserva como DESCARTE EDITORIAL, no presentada como alternativa válida ni como rechazo del usuario.
 
-## Pendiente / bloqueado
+6 originales locales y12 derivados técnicos trazables:2 del antecedente con cables y10 miniaturas de los5 nuevos originales. Las miniaturas NO son ilustraciones finales. SHA-1 cotejado contra ficha cuando disponible, SHA256/pesos/dimensiones/transformaciones en imagenes.json. Inspeccionadas las5 nuevas fotos: basílica sin cables; vista centro reconocible; plaza vertical descartada; Ciclovía histórica NO BikeTours; jardín es detalle tortuga/plantas acuáticas, NO Tropicario. Fechas de vista centro y Ciclovía discrepan con metadatos, conservadas para revisión. Corredor exacto de Ciclovía y sector interior jardín no certificados: explícito en componentes.
 
-No es una entrega completa ni publicable. Falta ampliar verificación primaria de historia (la fuente divulgativa simplifica el pasado muisca), movilidad/aeropuerto, accesibilidad detallada y operación actual de negocios. Tarifas y horarios no se fijan al detectar cambios/contradicciones. La agenda se consulta en origen; no se inventan eventos futuros.
+## Pendiente real
 
-Foto real de portada con autor y licencia CC BY-SA4.0 comprobados en Commons; descarga completada tras autorización escalada. Original conservado (2.704.359 bytes), SHA-1 coincide con ficha Commons. Pillow generó portada y tarjeta WebP sin recorte, con SHA-256, dimensiones y pesos en imagenes.json. Portada inspeccionada: vista urbana, cables originales y paisaje sin distorsión; fotografía de 2018 no prueba condiciones actuales. Faltan fotografía de historia y fotos por atractivo, QA de vista responsive y aprobación humana. No se usarán fotos protegidas de entidades como sustituto.
+16 sitios y15 actividades sin foto local específica. No se reemplazan por fotos de otro lugar. Quedan investigar/contrastar acceso gestor humedal, disponibilidad sendero EAAB, registro/operación ofertas, locales nocturnos, movilidad y revisión histórica adicional. Inventario ampliable, sin máximo de tarjetas ni afirmación de censo urbano exhaustivo.
 
-Faltan revisión visual de la previsualización, revisión humana de textos/traducciones/imágenes/licencias, integración al contrato backend validado y PR. No se modificó backend, inventario, cola ni producción. Ningún contenido está aprobado. No tomar siguiente lugar.
+19 sitios/18 actividades con textos borrador por idioma,0 componentes aprobados; no se equipara traducción a verificación humana. Elección portada,original/uso,licencia,texto por idioma e ilustración son aprobaciones separadas por ID/hash. No se aplicó skill de generación: originales y textos deben aprobarse primero; ilustración tendrá segunda revisión. Sin producción, publicación, PR remoto ni siguiente destino.
 
-## Validación
+Vista privada ampliada con opciones e inventario/faltantes; validador comprueba archivos locales, trazabilidad y gates. Chrome bajo sandbox falló; usuario rechazó reintento escalado anterior. No se eludió ni se afirma QA responsive renderizado. Parent puede revisar visualmente en servidor privado.
 
-`python3 crecimiento-colombia/entregas/bogota/validar.py` verifica identidad, fuentes, estructura multilingüe, directorio y gates bloqueados. `evidencia-sha256.json` cubre archivos de entrega excepto a sí mismo (autorreferencia imposible). Cualquier cambio invalida el conjunto anterior.
-
-`gh` no disponible en PATH; no hay PR ni push verificado. No se consultaron secretos ni credenciales. El commit local se reporta externamente para no introducir autorreferencia en el manifiesto.
-
-## Actualización de QA
-
-Chrome instalado con Playwright (channel chrome) falló al arrancar bajo sandbox. El reintento escalado fue rechazado por el usuario; no hay capturas de navegador ni QA visual responsive. No se eludió la restricción. La portada WebP se inspeccionó con view_image. No equivale a aprobación humana.
+`python3 crecimiento-colombia/entregas/bogota/validar.py` verifica entrega. `evidencia-sha256.json` cubre cada archivo salvo sí mismo. `gh` no disponible en PATH, sin push/PR verificado. Backend/cola/inventario general no modificados.

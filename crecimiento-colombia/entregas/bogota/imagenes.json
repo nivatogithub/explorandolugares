@@ -1,13 +1,13 @@
 {
   "destino_id": "CO-11-bogota",
-  "estado": "parcial_original_y_derivados_portada_disponibles",
+  "estado": "revision_1_reabierta_referencias_sin_aprobar",
   "skill_aplicado": ".agents/skills/imagenes-destinos/SKILL.md",
   "procedimiento_fotos": "crecimiento-colombia/procedimientos/convertir-fotos.md",
   "fecha_consulta": "2026-10-16",
   "activos": [
     {
       "id": "bogota-vista-monserrate",
-      "uso": "portada",
+      "uso": "antecedente_rechazado_portada",
       "tipo": "fotografia_real",
       "fuente": "S13",
       "autor": "Esteban16",
@@ -75,13 +75,406 @@
         "pt-BR": "Vista de Bogotá a partir de Monserrate, fotografia de 2018."
       },
       "revision_visual": "derivado_portada_inspeccionado: vista urbana coherente, cables originales visibles, sin recorte ni distorsion; falta revision humana",
-      "aprobacion_humana": false
+      "aprobacion_humana": false,
+      "estado": "rechazado_por_usuario_para_portada",
+      "motivo_rechazo": "Cables obstruyen vista y no representa la portada deseada. No borrar original/procedencia."
+    },
+    {
+      "id": "opcion-1-monserrate",
+      "fuente": "S14",
+      "tipo": "fotografia_real",
+      "autor": "Felipe Restrepo Acosta",
+      "fecha_toma": "2017-11-10",
+      "pagina_original": "https://commons.wikimedia.org/w/index.php?title=File:2017_Bogotá_Basílica_del_Señor_Caído_de_Monserrate.jpg&oldid=959727373",
+      "url_original": "https://commons.wikimedia.org/wiki/Special:Redirect/file/2017_Bogotá_Basílica_del_Señor_Caído_de_Monserrate.jpg",
+      "licencia": "CC BY-SA 4.0",
+      "url_licencia": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "permite_comercial": true,
+      "permite_adaptacion": true,
+      "condiciones": [
+        "atribución y enlace licencia; indicar cambios; ShareAlike derivados"
+      ],
+      "sha1_original_declarado_commons": "95de3d4d5673244629e30d6e177d02e43e34cbe5",
+      "original_local": "imagenes/originales/opcion-1-monserrate.jpg",
+      "sha256": "4e22b2d8211e661310ecf35601d0b263ecc048ec1b9dd67d55250ebb8ae008ce",
+      "derivados": [
+        {
+          "archivo": "imagenes/derivados/opcion-1-monserrate-revision.webp",
+          "dimensiones": [
+            1200,
+            900
+          ],
+          "bytes": 69332,
+          "sha256": "036c2a8a6120d0585456ccdaaa405aae664e39693f003749ac8994ad6a1c3877",
+          "herramienta": "Pillow 12.3.0",
+          "parametros": {
+            "quality": 82,
+            "method": 6,
+            "max_width": 1200,
+            "exif_removed": true,
+            "crop": null
+          },
+          "licencia": "CC BY-SA 4.0",
+          "uso": "miniatura_tecnica_revision_1_no_ilustracion"
+        },
+        {
+          "archivo": "imagenes/derivados/opcion-1-monserrate-miniatura.webp",
+          "dimensiones": [
+            600,
+            450
+          ],
+          "bytes": 21594,
+          "sha256": "59581d50d941f5577c63c30bef995e060fc65f4cb983dd51d27a174d75e9272c",
+          "herramienta": "Pillow 12.3.0",
+          "parametros": {
+            "quality": 82,
+            "method": 6,
+            "max_width": 600,
+            "exif_removed": true,
+            "crop": null
+          },
+          "licencia": "CC BY-SA 4.0",
+          "uso": "miniatura_tecnica_revision_1_no_ilustracion"
+        }
+      ],
+      "uso": "portada_opcion_1_y_ficha_monserrate",
+      "ubicacion": "Basílica del Señor Caído, cima del cerro Monserrate, Bogotá D.C.",
+      "alt": {
+        "es": "Basílica de Monserrate sobre la ladera arbolada, fotografía de 2017.",
+        "en": "Monserrate Basilica above a wooded hillside, photographed in 2017.",
+        "pt-BR": "Basílica de Monserrate sobre encosta arborizada, fotografia de 2017."
+      },
+      "estado": "referencia_pendiente_aprobacion",
+      "revision_visual": "Inspeccionada: basílica blanca y ladera, sin cables ni obstrucción similar. Candidato1, no aprobado.",
+      "aprobacion_humana": false,
+      "eleccion_portada": false,
+      "aprobacion_original": false,
+      "aprobacion_licencia": false,
+      "aprobacion_ilustracion": false,
+      "dimensiones_original": [
+        5184,
+        3888
+      ],
+      "bytes_original": 5293123
+    },
+    {
+      "id": "opcion-2-centro",
+      "fuente": "S15",
+      "tipo": "fotografia_real",
+      "autor": "Dante O.P",
+      "fecha_toma": "2024-08-18 según ficha; EXIF software 2023 discrepante",
+      "pagina_original": "https://commons.wikimedia.org/w/index.php?title=File:Vista_del_centro_historico_de_Bogotá.jpg&oldid=1210456023",
+      "url_original": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Vista_del_centro_historico_de_Bogotá.jpg",
+      "licencia": "CC0 1.0",
+      "url_licencia": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "permite_comercial": true,
+      "permite_adaptacion": true,
+      "condiciones": [
+        "conservar procedencia editorial; sin restricción copyright declarada en ficha"
+      ],
+      "sha1_original_declarado_commons": "2b376817490f509d16ef385adc5a1faa67fa63ac",
+      "original_local": "imagenes/originales/opcion-2-centro.jpg",
+      "sha256": "6e063faa06ef7e23f3b6d675c72c4599a4bdcfe56b47e41e632d571f7fd33b9d",
+      "derivados": [
+        {
+          "archivo": "imagenes/derivados/opcion-2-centro-revision.webp",
+          "dimensiones": [
+            1044,
+            661
+          ],
+          "bytes": 194050,
+          "sha256": "0422c316b05c8da6db0a4ce88c95245df744e2b53024e3beb54d677ebd454f0e",
+          "herramienta": "Pillow 12.3.0",
+          "parametros": {
+            "quality": 82,
+            "method": 6,
+            "max_width": 1200,
+            "exif_removed": true,
+            "crop": null
+          },
+          "licencia": "CC0 1.0",
+          "uso": "miniatura_tecnica_revision_1_no_ilustracion"
+        },
+        {
+          "archivo": "imagenes/derivados/opcion-2-centro-miniatura.webp",
+          "dimensiones": [
+            600,
+            380
+          ],
+          "bytes": 61236,
+          "sha256": "72c974fbf8c6e3a65de5fbe2416224569c6c91c00e8e656f10907c370f92133f",
+          "herramienta": "Pillow 12.3.0",
+          "parametros": {
+            "quality": 82,
+            "method": 6,
+            "max_width": 600,
+            "exif_removed": true,
+            "crop": null
+          },
+          "licencia": "CC0 1.0",
+          "uso": "miniatura_tecnica_revision_1_no_ilustracion"
+        }
+      ],
+      "uso": "portada_opcion_2_y_historia_plaza",
+      "ubicacion": "Plaza de Bolívar, calles 10–11 entre carreras 7–8, La Candelaria, Bogotá D.C.; punto exacto de cámara no certificado",
+      "alt": {
+        "es": "Vista elevada de la Plaza de Bolívar con torres de la Catedral en primer plano.",
+        "en": "Elevated view of Bolívar Square with Cathedral towers in the foreground.",
+        "pt-BR": "Vista elevada da Praça Bolívar com torres da Catedral em primeiro plano."
+      },
+      "estado": "referencia_pendiente_aprobacion",
+      "revision_visual": "Inspeccionada: vista amplia Plaza Bolívar y torres Catedral; perspectiva urbana representativa. Candidato2, no aprobado.",
+      "aprobacion_humana": false,
+      "eleccion_portada": false,
+      "aprobacion_original": false,
+      "aprobacion_licencia": false,
+      "aprobacion_ilustracion": false,
+      "dimensiones_original": [
+        1044,
+        661
+      ],
+      "bytes_original": 240465
+    },
+    {
+      "id": "opcion-3-plaza",
+      "fuente": "S16",
+      "tipo": "fotografia_real",
+      "autor": "JuanGris (Lucía Estévez)",
+      "fecha_toma": "2012-09-30",
+      "pagina_original": "https://commons.wikimedia.org/w/index.php?title=File:Plaza_de_Bolívar,_Bogotá.JPG&oldid=1219569853",
+      "url_original": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Plaza_de_Bolívar,_Bogotá.JPG",
+      "licencia": "CC BY-SA 3.0",
+      "url_licencia": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "permite_comercial": true,
+      "permite_adaptacion": true,
+      "condiciones": [
+        "atribución y enlace licencia; indicar cambios; ShareAlike derivados"
+      ],
+      "sha1_original_declarado_commons": null,
+      "original_local": "imagenes/originales/opcion-3-plaza.jpg",
+      "sha256": "85f8978aacd0a97050a18587e808c5c50574748936ee1c97d8b7b8ce113ce07e",
+      "derivados": [
+        {
+          "archivo": "imagenes/derivados/opcion-3-plaza-revision.webp",
+          "dimensiones": [
+            1200,
+            1600
+          ],
+          "bytes": 75168,
+          "sha256": "171c3c08a9baac68eb225e1e9ee7e21c89aec56a1dde924ac58f27a09d1f07e4",
+          "herramienta": "Pillow 12.3.0",
+          "parametros": {
+            "quality": 82,
+            "method": 6,
+            "max_width": 1200,
+            "exif_removed": true,
+            "crop": null
+          },
+          "licencia": "CC BY-SA 3.0",
+          "uso": "miniatura_tecnica_revision_1_no_ilustracion"
+        },
+        {
+          "archivo": "imagenes/derivados/opcion-3-plaza-miniatura.webp",
+          "dimensiones": [
+            600,
+            800
+          ],
+          "bytes": 24458,
+          "sha256": "75d8b793bbfcc24bbb19cf1812ef9246183c99bbd26c147b2d85b0c5a24a7a0f",
+          "herramienta": "Pillow 12.3.0",
+          "parametros": {
+            "quality": 82,
+            "method": 6,
+            "max_width": 600,
+            "exif_removed": true,
+            "crop": null
+          },
+          "licencia": "CC BY-SA 3.0",
+          "uso": "miniatura_tecnica_revision_1_no_ilustracion"
+        }
+      ],
+      "uso": "archivo_descartado_editorialmente_portada",
+      "ubicacion": "Plaza de Bolívar frente al Capitolio Nacional, Bogotá D.C.",
+      "alt": {
+        "es": "Estatua de Bolívar ante el Capitolio, foto vertical oscura de 2012.",
+        "en": "Bolívar statue in front of the Capitol, dark vertical photo from 2012.",
+        "pt-BR": "Estátua de Bolívar diante do Capitólio, foto vertical escura de 2012."
+      },
+      "estado": "descartado_editorial_portada",
+      "revision_visual": "Inspeccionada: vertical oscuro y cinta frontal; descartado editorialmente portada, se conserva antecedente.",
+      "aprobacion_humana": false,
+      "eleccion_portada": false,
+      "aprobacion_original": false,
+      "aprobacion_licencia": false,
+      "aprobacion_ilustracion": false,
+      "dimensiones_original": [
+        1200,
+        1600
+      ],
+      "bytes_original": 280724
+    },
+    {
+      "id": "actividad-ciclovia",
+      "fuente": "S29",
+      "tipo": "fotografia_real",
+      "autor": "Jeremy Ordett",
+      "fecha_toma": "2007-08-16 según ficha; EXIF2006 discrepante",
+      "pagina_original": "https://commons.wikimedia.org/w/index.php?title=File:Bogota_Ciclovia.JPG&oldid=1255444223",
+      "url_original": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Bogota_Ciclovia.JPG",
+      "licencia": "Dominio público PD-self",
+      "url_licencia": "https://commons.wikimedia.org/wiki/File:Bogota_Ciclovia.JPG",
+      "permite_comercial": true,
+      "permite_adaptacion": true,
+      "condiciones": [
+        "conservar procedencia editorial; sin restricción copyright declarada en ficha"
+      ],
+      "sha1_original_declarado_commons": "73a8387c455d1f7486f60bdc007b10681bfea4ac",
+      "original_local": "imagenes/originales/actividad-ciclovia.jpg",
+      "sha256": "139127d2b989b73c7a3999a46ee754670f8404dd16a7e65aec08451394166bcb",
+      "derivados": [
+        {
+          "archivo": "imagenes/derivados/actividad-ciclovia-revision.webp",
+          "dimensiones": [
+            1200,
+            903
+          ],
+          "bytes": 129146,
+          "sha256": "789211ef18720aede3e2dda56a96aafd4d4cc0e42c6136395de5b3d34afb302d",
+          "herramienta": "Pillow 12.3.0",
+          "parametros": {
+            "quality": 82,
+            "method": 6,
+            "max_width": 1200,
+            "exif_removed": true,
+            "crop": null
+          },
+          "licencia": "Dominio público PD-self",
+          "uso": "miniatura_tecnica_revision_1_no_ilustracion"
+        },
+        {
+          "archivo": "imagenes/derivados/actividad-ciclovia-miniatura.webp",
+          "dimensiones": [
+            600,
+            452
+          ],
+          "bytes": 46490,
+          "sha256": "a13141e55ac5f73a801e300d2cb85dc77a9750d29a35676817a329e4291740e9",
+          "herramienta": "Pillow 12.3.0",
+          "parametros": {
+            "quality": 82,
+            "method": 6,
+            "max_width": 600,
+            "exif_removed": true,
+            "crop": null
+          },
+          "licencia": "Dominio público PD-self",
+          "uso": "miniatura_tecnica_revision_1_no_ilustracion"
+        }
+      ],
+      "uso": "experiencia_ciclovia_editorial_no_biketours",
+      "ubicacion": "Programa Ciclovía Bogotá D.C.; corredor exacto no certificado, se presenta solo como referencia histórica del programa",
+      "alt": {
+        "es": "Ciclistas en la Ciclovía de Bogotá; fotografía histórica, corredor sin identificar.",
+        "en": "Cyclists on Bogotá Ciclovía; historical photograph, exact corridor unidentified.",
+        "pt-BR": "Ciclistas na Ciclovía de Bogotá; fotografia histórica, trecho não identificado."
+      },
+      "estado": "referencia_pendiente_aprobacion",
+      "revision_visual": "Inspeccionada: ciclistas/señal Ciclovía, registro histórico; corredor exacto no confirmado, no representa BikeTours.",
+      "aprobacion_humana": false,
+      "eleccion_portada": false,
+      "aprobacion_original": false,
+      "aprobacion_licencia": false,
+      "aprobacion_ilustracion": false,
+      "dimensiones_original": [
+        2848,
+        2144
+      ],
+      "bytes_original": 1579341
+    },
+    {
+      "id": "jardin-botanico",
+      "fuente": "S30",
+      "tipo": "fotografia_real",
+      "autor": "DanielGutierrez (Photodaniel)",
+      "fecha_toma": "2015-12-29",
+      "pagina_original": "https://commons.wikimedia.org/w/index.php?title=File:Jardín_Botánico_Bogotá.jpg&oldid=966217305",
+      "url_original": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Jardín_Botánico_Bogotá.jpg",
+      "licencia": "CC BY-SA 4.0",
+      "url_licencia": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "permite_comercial": true,
+      "permite_adaptacion": true,
+      "condiciones": [
+        "atribución y enlace licencia; indicar cambios; ShareAlike derivados"
+      ],
+      "sha1_original_declarado_commons": "9732e933c5056962c2b96e11c42722b75838abe4",
+      "original_local": "imagenes/originales/jardin-botanico.jpg",
+      "sha256": "b107bde48c7c1fef1cfeef5eb2a960343cd4fbd94271541af2a7fed9bfab4dce",
+      "derivados": [
+        {
+          "archivo": "imagenes/derivados/jardin-botanico-revision.webp",
+          "dimensiones": [
+            1200,
+            800
+          ],
+          "bytes": 132572,
+          "sha256": "58f4e4629292feb7b82957c13c5d947651c497e5b9b2e6573c778fd32916ab28",
+          "herramienta": "Pillow 12.3.0",
+          "parametros": {
+            "quality": 82,
+            "method": 6,
+            "max_width": 1200,
+            "exif_removed": true,
+            "crop": null
+          },
+          "licencia": "CC BY-SA 4.0",
+          "uso": "miniatura_tecnica_revision_1_no_ilustracion"
+        },
+        {
+          "archivo": "imagenes/derivados/jardin-botanico-miniatura.webp",
+          "dimensiones": [
+            600,
+            400
+          ],
+          "bytes": 52732,
+          "sha256": "66db99ee1334d3bf2443afaaa0c5269fafa0fea2b40c6aea40cbf23a9e877e6d",
+          "herramienta": "Pillow 12.3.0",
+          "parametros": {
+            "quality": 82,
+            "method": 6,
+            "max_width": 600,
+            "exif_removed": true,
+            "crop": null
+          },
+          "licencia": "CC BY-SA 4.0",
+          "uso": "miniatura_tecnica_revision_1_no_ilustracion"
+        }
+      ],
+      "uso": "ficha_jardin_y_experiencia_ambiental",
+      "ubicacion": "Jardín Botánico José Celestino Mutis, Av Calle63 68-95, Bogotá D.C.; sector exacto no certificado, no etiquetar Tropicario",
+      "alt": {
+        "es": "Detalle de una tortuga entre plantas acuáticas del Jardín Botánico, foto de 2015.",
+        "en": "Detail of a turtle among aquatic plants in the Botanical Garden, 2015 photograph.",
+        "pt-BR": "Detalhe de uma tartaruga entre plantas aquáticas do Jardim Botânico, foto de 2015."
+      },
+      "estado": "referencia_pendiente_aprobacion",
+      "revision_visual": "Inspeccionada: detalle de tortuga sobre vegetación acuática. No inferir especie ni ubicación interior exacta; no representa Tropicario.",
+      "aprobacion_humana": false,
+      "eleccion_portada": false,
+      "aprobacion_original": false,
+      "aprobacion_licencia": false,
+      "aprobacion_ilustracion": false,
+      "dimensiones_original": [
+        5472,
+        3648
+      ],
+      "bytes_original": 16575366
     }
   ],
   "faltantes": [
-    "fotografía de historia",
-    "fotografías individuales de Museo del Oro, Jardín Botánico, MAMBO y Teatro Colón",
-    "revisión original y recortes móvil/escritorio"
+    "Referencias fotos demás sitios y ofertas operador",
+    "QArecortes reales móvil/escritorio",
+    "Revisión humana original,uso,licencia,textos ES/EN/PT-BR separada",
+    "Ilustraciones e integración final solo tras revisión1"
   ],
-  "bloqueo": "Descarga portada resuelta tras permiso escalado. Faltan fotos de historia y atractivos, QA recortes y aprobación humana."
+  "bloqueo": "No ilustrar antes de aprobar originales/usos y textos; faltan fotos varias fichas y QAresponsive."
 }

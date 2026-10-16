@@ -6,7 +6,7 @@
   "departamento": "Bogotá D.C.",
   "worker": "Lugar 2",
   "rama": "lugar/CO/bogota-dc/bogota",
-  "estado": "investigacion_parcial_imagenes_incompletas",
+  "estado": "revision_1_reabierta",
   "publicable": false,
   "aprobado": false,
   "publicado": false,
@@ -19,49 +19,164 @@
       "atractivos": [
         [
           "Museo del Oro",
-          "Acércate al patrimonio arqueológico de Colombia en el museo del Banco de la República junto al Parque Santander. La institución ofrece recorridos guiados; consulta la programación y las condiciones de ingreso.",
+          "Colecciones arqueológicas y visitas del Banco de la República.",
           "S02"
         ],
         [
           "Monserrate",
-          "El cerro reúne una basílica, vistas urbanas y opciones de recorrido natural. Confirma el medio de ascenso disponible: la web del operador muestra un aviso de servicio exclusivamente en funicular para un intervalo de septiembre a octubre.",
+          "Basílica y mirador; confirma transporte disponible antes de subir.",
           "S03"
         ],
         [
           "Jardín Botánico José Celestino Mutis",
-          "Un espacio de investigación, conservación y educación ambiental que permite acercarse a la flora y a los ecosistemas de la región. Consulta el acceso al Tropicario y la agenda antes de ir.",
+          "Investigación y educación ambiental; foto histórica del jardín, no del Tropicario actual.",
           "S04"
         ],
         [
           "MAMBO",
-          "El Museo de Arte Moderno de Bogotá ofrece exposiciones y actividades culturales en el centro de la ciudad. Revisa la muestra vigente y el acceso por la carrera sexta.",
+          "Arte moderno y programación cambiante.",
           "S11"
         ],
         [
-          "Teatro Colón y Centro Nacional de las Artes",
-          "Consulta las visitas comentadas y la programación de sus salas. Las condiciones cambian según la actividad: puede requerir boleta o inscripción.",
+          "Teatro Colón",
+          "Consulta visitas y programación específica del teatro.",
           "S12"
+        ],
+        [
+          "Centro Nacional de las Artes Delia Zapata Olivella",
+          "Salas y programación cultural, condiciones según actividad.",
+          "S12"
+        ],
+        [
+          "Plaza de Bolívar",
+          "Espacio patrimonial del centro; no incluye acceso a interiores institucionales.",
+          "S28"
+        ],
+        [
+          "Museo Botero",
+          "Obras de Botero y colección internacional del Banco de la República.",
+          "S20"
+        ],
+        [
+          "Museo Nacional de Colombia",
+          "Colecciones y exposiciones para explorar la historia nacional.",
+          "S19"
+        ],
+        [
+          "Planetario de Bogotá",
+          "Divulgación astronómica; consulta función vigente y Museo del Espacio.",
+          "S18"
+        ],
+        [
+          "Maloka",
+          "Museo interactivo y programación científica; comprobar condiciones de visita.",
+          "S21"
+        ],
+        [
+          "Plaza de Mercado La Perseverancia",
+          "Mercado y cocinas locales; no representa convenio con sus comerciantes.",
+          "S24"
+        ],
+        [
+          "Mercado de las Pulgas de Usaquén",
+          "Mercado de expositores y artesanías; confirmar jornada con asociación.",
+          "S27"
+        ],
+        [
+          "Parque Simón Bolívar",
+          "Espacio recreativo; distingue parque central de instalaciones del complejo.",
+          "S26"
+        ],
+        [
+          "Quebrada La Vieja",
+          "Sendero con reserva previa y restricciones; confirmar tramo habilitado con EAAB.",
+          "S23"
+        ],
+        [
+          "Cinemateca de Bogotá",
+          "Centro de artes audiovisuales; consultar cartelera actual.",
+          "S31"
+        ],
+        [
+          "Distrito Grafiti Puente Aranda",
+          "Arte urbano en espacio público; confirmar circuito y estado de murales.",
+          "S32"
         ]
       ],
       "experiencias": [
         [
-          "Visita guiada al Museo del Oro",
-          "Actividad ofrecida por el propio museo; consulta idioma, día y condiciones vigentes. No implica reserva desde Explorando Lugares.",
+          "Recorrido Museo del Oro",
+          "Visita informativa; consultar recorrido oficial e idioma.",
           "S02"
         ],
         [
-          "Observación de la ciudad desde Monserrate",
-          "Visita independiente sujeta a operación del transporte y condiciones del lugar; no prometemos un circuito guiado.",
+          "Mirador de Monserrate",
+          "Visita independiente, transporte sujeto a operación.",
           "S03"
         ],
         [
-          "Exploración ambiental en el Jardín Botánico",
-          "Consulta la programación educativa y condiciones del Tropicario directamente con la entidad.",
+          "Exploración Jardín Botánico",
+          "Consulta programación educativa; no prometer guía o Tropicario por foto histórica.",
           "S04"
         ],
         [
-          "Una salida de artes escénicas",
-          "Elige un evento de la agenda oficial del Centro Nacional de las Artes; confirma requisitos y fecha con el organizador.",
+          "Arte en la Manzana Cultural",
+          "Visita al Museo Botero; confirmar acceso vigente.",
+          "S20"
+        ],
+        [
+          "Ciencia interactiva en Maloka",
+          "Elegir actividad oficial y confirmar requisitos.",
+          "S21"
+        ],
+        [
+          "Astronomía en el Planetario",
+          "Consultar sesión y condiciones del día.",
+          "S18"
+        ],
+        [
+          "Cocinas de La Perseverancia",
+          "Paseo editorial por mercado, consumos y horarios con cada negocio.",
+          "S24"
+        ],
+        [
+          "Oficios y mercado en Usaquén",
+          "Recorrer mercado según jornada confirmada por asociación.",
+          "S27"
+        ],
+        [
+          "Ciclovía recreativa",
+          "Programa ciudadano; verificar mapa y cierres. Foto histórica, no oferta de Bike Tours.",
+          "S17"
+        ],
+        [
+          "Recorrido en bicicleta: Bogotá Bike Tours",
+          "Oferta en sitio propio; ruta, RNT y disponibilidad por confirmar directamente.",
+          "S22"
+        ],
+        [
+          "Graffiti Bike Tour: Bogotá Bike Tours",
+          "Oferta documentada del operador; no usar Ciclovía como foto de este recorrido.",
+          "S22"
+        ],
+        [
+          "Clase de cocina: Bogotá Bike Tours",
+          "Oferta listada; sede final, menú y operación pendientes de comprobar.",
+          "S22"
+        ],
+        [
+          "Una función de cine",
+          "Elegir sesión de la agenda oficial y confirmar requisitos.",
+          "S31"
+        ],
+        [
+          "Paseo de arte urbano",
+          "Propuesta editorial, no tour del operador BikeTours; circuito por confirmar.",
+          "S32"
+        ],
+        [
+          "Una función de artes escénicas",
+          "Elige una función de la agenda del Centro Nacional de las Artes o Teatro Colón y confirma sala, requisitos y fecha.",
           "S12"
         ]
       ],
@@ -81,50 +196,165 @@
       "historia": "Bogotá’s history predates Spanish arrival: the savanna was Muisca territory. The colonial foundation dates to 1538. The historic centre connects that past with today’s cultural institutions. The city’s story should not be reduced to a single moment, and accounts of the exact founding site should not be presented as settled fact.",
       "atractivos": [
         [
-          "Gold Museum",
-          "Explore Colombia’s archaeological heritage at the Banco de la República museum beside Santander Park. Check guided visits, admission and current programming with the museum.",
+          "Museo del Oro",
+          "Archaeological collections and Banco de la República visits.",
           "S02"
         ],
         [
           "Monserrate",
-          "The hill combines a basilica, city views and nature activities. Confirm the available ascent method: the operator’s website displays a funicular-only notice for a September–October interval.",
+          "Basilica and viewpoint; confirm available transport before ascending.",
           "S03"
         ],
         [
-          "José Celestino Mutis Botanical Garden",
-          "A place for research, conservation and environmental education focused on regional plants and ecosystems. Check Tropicario admission and programming before visiting.",
+          "Jardín Botánico José Celestino Mutis",
+          "Research and environmental education; historical garden photo, not the current Tropicario.",
           "S04"
         ],
         [
           "MAMBO",
-          "Bogotá’s Museum of Modern Art hosts exhibitions and cultural activities downtown. Check the current exhibition and access from Carrera Sexta.",
+          "Modern art and changing programming.",
           "S11"
         ],
         [
-          "Teatro Colón and the National Arts Centre",
-          "Check guided visits and the programme for each venue. Ticket or registration requirements depend on the activity.",
+          "Teatro Colón",
+          "Check theatre-specific visits and programming.",
           "S12"
+        ],
+        [
+          "Centro Nacional de las Artes Delia Zapata Olivella",
+          "Performance venues and cultural programming; conditions vary by activity.",
+          "S12"
+        ],
+        [
+          "Plaza de Bolívar",
+          "Historic civic square; does not include institutional interior access.",
+          "S28"
+        ],
+        [
+          "Museo Botero",
+          "Botero works and the Banco de la República international collection.",
+          "S20"
+        ],
+        [
+          "Museo Nacional de Colombia",
+          "Collections and exhibitions exploring national history.",
+          "S19"
+        ],
+        [
+          "Planetario de Bogotá",
+          "Astronomy outreach; check current shows and Space Museum access.",
+          "S18"
+        ],
+        [
+          "Maloka",
+          "Interactive museum and science programming; check visiting conditions.",
+          "S21"
+        ],
+        [
+          "Plaza de Mercado La Perseverancia",
+          "Market and local food stalls; no partnership with vendors is implied.",
+          "S24"
+        ],
+        [
+          "Mercado de las Pulgas de Usaquén",
+          "Exhibitors and crafts market; confirm the session with the association.",
+          "S27"
+        ],
+        [
+          "Parque Simón Bolívar",
+          "Recreation space; distinguish the central park from the wider complex.",
+          "S26"
+        ],
+        [
+          "Quebrada La Vieja",
+          "Trail requiring booking and subject to restrictions; confirm the open section with EAAB.",
+          "S23"
+        ],
+        [
+          "Cinemateca de Bogotá",
+          "Audiovisual arts centre; check current screenings.",
+          "S31"
+        ],
+        [
+          "Distrito Grafiti Puente Aranda",
+          "Urban art in public space; check route and mural condition.",
+          "S32"
         ]
       ],
       "experiencias": [
         [
-          "Gold Museum guided visit",
-          "Offered by the museum itself; check language, day and current conditions. No booking is offered by Explorando Lugares.",
+          "Gold Museum visit",
+          "Informational visit; check official tour and language.",
           "S02"
         ],
         [
-          "City views from Monserrate",
-          "An independent visit subject to transport operation and local conditions, without a promised guided circuit.",
+          "Monserrate viewpoint",
+          "Independent visit, transport subject to operation.",
           "S03"
         ],
         [
-          "Environmental discovery at the Botanical Garden",
-          "Ask the institution about educational programming and Tropicario conditions.",
+          "Botanical Garden discovery",
+          "Check educational programming; historical photo does not promise a guide or current Tropicario.",
           "S04"
         ],
         [
-          "An evening of performing arts",
-          "Choose an event from the National Arts Centre’s official programme and confirm the date and requirements with its organiser.",
+          "Art in the Cultural Block",
+          "Visit Museo Botero; check current access.",
+          "S20"
+        ],
+        [
+          "Interactive science at Maloka",
+          "Choose an official activity and check requirements.",
+          "S21"
+        ],
+        [
+          "Astronomy at the Planetarium",
+          "Check the day’s session and conditions.",
+          "S18"
+        ],
+        [
+          "La Perseverancia food stalls",
+          "Editorial market visit; purchases and hours depend on each vendor.",
+          "S24"
+        ],
+        [
+          "Crafts and market in Usaquén",
+          "Visit the market on an association-confirmed session.",
+          "S27"
+        ],
+        [
+          "Recreational Ciclovía",
+          "Public programme; check routes and closures. Historical photo, not a Bike Tours offer.",
+          "S17"
+        ],
+        [
+          "Bicycle tour: Bogotá Bike Tours",
+          "Offer on operator website; route, registration and availability need direct confirmation.",
+          "S22"
+        ],
+        [
+          "Graffiti Bike Tour: Bogotá Bike Tours",
+          "Documented operator offer; do not use Ciclovía as a photo of this tour.",
+          "S22"
+        ],
+        [
+          "Cooking class: Bogotá Bike Tours",
+          "Listed offer; final venue, menu and operation still need verification.",
+          "S22"
+        ],
+        [
+          "A film screening",
+          "Choose a screening from the official agenda and check requirements.",
+          "S31"
+        ],
+        [
+          "Urban art walk",
+          "Editorial proposal, not a BikeTours tour; route needs confirmation.",
+          "S32"
+        ],
+        [
+          "A performing arts event",
+          "Choose an event from the National Arts Centre or Teatro Colón programme and confirm venue, requirements and date.",
           "S12"
         ]
       ],
@@ -144,50 +374,165 @@
       "historia": "A história de Bogotá antecede a chegada espanhola: a savana era território muísca. A fundação colonial data de 1538. O centro histórico permite relacionar esse passado às instituições culturais atuais, sem reduzir a história da cidade a um único momento nem apresentar narrativas sobre o local exato da fundação como fato resolvido.",
       "atractivos": [
         [
-          "Museu do Ouro",
-          "Conheça o patrimônio arqueológico colombiano no museu do Banco de la República, junto ao Parque Santander. Consulte visitas guiadas, programação e condições de entrada.",
+          "Museo del Oro",
+          "Coleções arqueológicas e visitas do Banco de la República.",
           "S02"
         ],
         [
           "Monserrate",
-          "O cerro reúne uma basílica, vistas urbanas e atividades de natureza. Confirme o meio de subida disponível: o operador exibe aviso de transporte exclusivamente por funicular em um intervalo de setembro a outubro.",
+          "Basílica e mirante; confirme o transporte disponível antes de subir.",
           "S03"
         ],
         [
-          "Jardim Botânico José Celestino Mutis",
-          "Espaço de pesquisa, conservação e educação ambiental dedicado à flora e aos ecossistemas da região. Consulte o acesso ao Tropicario e a programação.",
+          "Jardín Botánico José Celestino Mutis",
+          "Pesquisa e educação ambiental; foto histórica do jardim, não do Tropicario atual.",
           "S04"
         ],
         [
           "MAMBO",
-          "O Museu de Arte Moderna de Bogotá oferece exposições e atividades culturais no centro. Confira a mostra atual e a entrada pela Carrera Sexta.",
+          "Arte moderna e programação variável.",
           "S11"
         ],
         [
-          "Teatro Colón e Centro Nacional das Artes",
-          "Consulte visitas comentadas e a programação das salas. A atividade pode exigir ingresso ou inscrição.",
+          "Teatro Colón",
+          "Consulte visitas e programação específicas do teatro.",
           "S12"
+        ],
+        [
+          "Centro Nacional de las Artes Delia Zapata Olivella",
+          "Salas e programação cultural; condições variam por atividade.",
+          "S12"
+        ],
+        [
+          "Plaza de Bolívar",
+          "Praça histórica do centro; não inclui acesso a interiores institucionais.",
+          "S28"
+        ],
+        [
+          "Museo Botero",
+          "Obras de Botero e coleção internacional do Banco de la República.",
+          "S20"
+        ],
+        [
+          "Museo Nacional de Colombia",
+          "Coleções e exposições para explorar a história nacional.",
+          "S19"
+        ],
+        [
+          "Planetario de Bogotá",
+          "Divulgação de astronomia; consulte sessões e acesso ao Museu do Espaço.",
+          "S18"
+        ],
+        [
+          "Maloka",
+          "Museu interativo e programação científica; confirme condições de visita.",
+          "S21"
+        ],
+        [
+          "Plaza de Mercado La Perseverancia",
+          "Mercado e cozinhas locais; não representa parceria com comerciantes.",
+          "S24"
+        ],
+        [
+          "Mercado de las Pulgas de Usaquén",
+          "Mercado de expositores e artesanato; confirme a jornada com a associação.",
+          "S27"
+        ],
+        [
+          "Parque Simón Bolívar",
+          "Espaço de lazer; diferencie o parque central do complexo maior.",
+          "S26"
+        ],
+        [
+          "Quebrada La Vieja",
+          "Trilha com reserva e restrições; confirme o trecho aberto com a EAAB.",
+          "S23"
+        ],
+        [
+          "Cinemateca de Bogotá",
+          "Centro de artes audiovisuais; consulte programação atual.",
+          "S31"
+        ],
+        [
+          "Distrito Grafiti Puente Aranda",
+          "Arte urbana no espaço público; confirme roteiro e estado dos murais.",
+          "S32"
         ]
       ],
       "experiencias": [
         [
-          "Visita guiada ao Museu do Ouro",
-          "Oferecida pelo próprio museu; confirme idioma, dia e condições atuais. Explorando Lugares não realiza reservas.",
+          "Visita ao Museu do Ouro",
+          "Visita informativa; confirme roteiro oficial e idioma.",
           "S02"
         ],
         [
-          "Vista da cidade a partir de Monserrate",
-          "Visita independente sujeita à operação do transporte e às condições locais; não se promete circuito guiado.",
+          "Mirante de Monserrate",
+          "Visita independente, transporte sujeito à operação.",
           "S03"
         ],
         [
-          "Exploração ambiental no Jardim Botânico",
-          "Consulte a programação educativa e as condições do Tropicario diretamente com a instituição.",
+          "Exploração Jardim Botânico",
+          "Consulte programação educativa; foto histórica não garante guia ou Tropicario atual.",
           "S04"
         ],
         [
-          "Um passeio de artes cênicas",
-          "Escolha um evento da agenda oficial do Centro Nacional das Artes e confirme data e requisitos com o organizador.",
+          "Arte na Manzana Cultural",
+          "Visite o Museu Botero; confirme acesso atual.",
+          "S20"
+        ],
+        [
+          "Ciência interativa na Maloka",
+          "Escolha atividade oficial e confirme requisitos.",
+          "S21"
+        ],
+        [
+          "Astronomia no Planetário",
+          "Consulte sessão e condições do dia.",
+          "S18"
+        ],
+        [
+          "Cozinhas de La Perseverancia",
+          "Passeio editorial pelo mercado; consumo e horários com cada negócio.",
+          "S24"
+        ],
+        [
+          "Artesanato e mercado em Usaquén",
+          "Visite o mercado em jornada confirmada pela associação.",
+          "S27"
+        ],
+        [
+          "Ciclovía recreativa",
+          "Programa público; confira trechos e fechamentos. Foto histórica, não oferta Bike Tours.",
+          "S17"
+        ],
+        [
+          "Passeio de bicicleta: Bogotá Bike Tours",
+          "Oferta no site próprio; roteiro, registro e disponibilidade precisam de confirmação.",
+          "S22"
+        ],
+        [
+          "Graffiti Bike Tour: Bogotá Bike Tours",
+          "Oferta documentada do operador; não usar Ciclovía como foto deste passeio.",
+          "S22"
+        ],
+        [
+          "Aula de cozinha: Bogotá Bike Tours",
+          "Oferta listada; local final, cardápio e operação ainda por verificar.",
+          "S22"
+        ],
+        [
+          "Uma sessão de cinema",
+          "Escolha sessão da agenda oficial e confirme requisitos.",
+          "S31"
+        ],
+        [
+          "Passeio de arte urbana",
+          "Proposta editorial, não passeio BikeTours; roteiro por confirmar.",
+          "S32"
+        ],
+        [
+          "Uma apresentação de artes cênicas",
+          "Escolha evento da agenda do Centro Nacional das Artes ou Teatro Colón e confirme sala, requisitos e data.",
           "S12"
         ]
       ],
@@ -207,17 +552,31 @@
   "integracion": "previsualizacion.html",
   "gates": {
     "fuentes": "consulta_documentada",
-    "textos": "borrador_pendiente_revision",
+    "textos": "borradores_ampliados_por_componente_idioma",
     "historia": "borrador_fuente_divulgativa_pendiente_revision",
     "atractivos": "5_borradores_trazables",
-    "experiencias": "4_propuestas_con_fuente_operador",
+    "experiencias": "12_editoriales_3_operador_3_candidatos_ocultos",
     "directorio": "10_fichas_3_categorias_operacion_pendiente",
-    "imagenes": "parcial_portada_lista_faltan_atractivos",
+    "imagenes": "referencias_parciales_pendientes_aprobacion",
     "traducciones": "borrador_ES_EN_PT-BR_pendiente_revision",
     "integracion": "solo_previsualizacion_local",
     "preview_visual": "bloqueado_reintento_chrome_rechazado_usuario",
     "PR": "pendiente",
     "aprobacion": "pendiente",
-    "publicacion": "no_autorizada"
+    "publicacion": "no_autorizada",
+    "ilustraciones": "no_generadas_revision_1_requerida"
+  },
+  "sitios": "sitios.json",
+  "experiencias": "experiencias.json",
+  "aprobaciones": "aprobaciones.json",
+  "preview_ruta": "/bogota/",
+  "revision_componentes": {
+    "sitios": 19,
+    "experiencias": 18,
+    "portadas_candidatas": 2,
+    "portadas_aprobadas": 0,
+    "ilustraciones_generadas": 0,
+    "sitios_sin_foto": 16,
+    "actividades_sin_foto": 15
   }
 }
