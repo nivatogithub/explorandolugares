@@ -11,3 +11,5 @@ No iniciar workers automáticamente. Todos los lugares siguen sin iniciar, sin a
 5. Publicar requiere autorización independiente; este plan no publica.
 
 Validar desde raíz: `python3 crecimiento-colombia/scripts/operacion.py`; pruebas: `python3 crecimiento-colombia/scripts/test_operacion.py`; regenerar métricas: `python3 crecimiento-colombia/scripts/operacion.py --report`.
+
+Validación automática preparada en `.github/workflows/plan-cobertura.yml`: cambios del plan ejecutan validadores, pruebas y comprueban reportes regenerados. No lanza workers ni publica. Su ejecución en GitHub está pendiente de subir la rama; solo las pruebas locales están comprobadas.
