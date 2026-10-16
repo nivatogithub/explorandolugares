@@ -2,6 +2,8 @@
 
 ## Actualización vigente: revisión ampliada V2
 
+Corrección de presentación: la entrada muestra primero Coltejer2006 (Propuesta4, con límite de resolución), Picacho(Propuesta5) y Orquideorama(Propuesta6). Las propuestas1/2/3 obstructiva o de detalle están colapsadas en «Descartadas/solo referencia, no portada», sin control de elección de portada. Se conservan IDs y numeración originales para no invalidar silenciosamente trazabilidad. Aptitud y limitaciones aparecen antes de cada imagen. Validación comprueba este orden y ausencia del selector de portada descartada.
+
 La revisión ampliada prevalece sobre los recuentos de la primera entrega conservada abajo. Se leyó `crecimiento-colombia/PROCEDIMIENTO_DESTINOS_V2.md` desde la carpeta compartida del coordinador. Se mantienen rama/destino exclusivos, sin generar ilustraciones ni publicar.
 
 - Inventario: **28 sitios municipales propuestos**, cuatro excursiones/candidatos externos u ocultos separados, 24 fuentes primarias. Incluye Coltejer, Pueblito Paisa/Cerro Nutibara, Pies Descalzos, Edificio EPM, Catedral Metropolitana, La Candelaria, Parque Lleras, Parque El Poblado, Avenida Jardín, Plaza Botero, Palacio de la Cultura, parques Bolívar/Berrío, Junín, Provenza, Vía Primavera, Manila, El Hueco, Ciudad del Río, Planetario, Casa de la Memoria, Comuna13, El Castillo y Arví, además de los cuatro iniciales. Hay textos ES/EN/PT-BR en borrador, ubicación descriptiva, motivos y faltantes por ficha. Coordenadas/entradas exactas siguen pendientes: no se inventaron GPS ni garantías de acceso.
