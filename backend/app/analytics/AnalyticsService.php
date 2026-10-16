@@ -36,6 +36,10 @@ final class AnalyticsService {
     }
     public function geographyFromDatabase():array{return $this->pdo->query('SELECT code,department_code,name FROM el_coverage_units ORDER BY code')->fetchAll(PDO::FETCH_ASSOC);}
     public function hash(string $value):string{return hash_hmac('sha256',$value,$this->key);}
+    public function sessionMatches(string $session,array $context):bool {
+        $q=$this->pdo->prepare('SELECT account_kind,account_hash FROM el_measurement_sessions WHERE session_hash=?');$q->execute([$this->hash('session|'.$session)]);$row=$q->fetch(PDO::FETCH_ASSOC);
+        return !$row||($row['account_kind']===($context['account_kind']??'anonymous')&&$row['account_hash']===($context['account_hash']??null));
+    }
     public function country(string $ip):string {
         if(!filter_var($ip,FILTER_VALIDATE_IP,FILTER_FLAG_NO_PRIV_RANGE|FILTER_FLAG_NO_RES_RANGE))return 'ZZ';
         $file=__DIR__.'/geoip/country.mmdb';$autoload=__DIR__.'/vendor/maxmind/autoload.php';
@@ -76,7 +80,7 @@ final class AnalyticsService {
         $q=$this->pdo->prepare('SELECT hits FROM el_measurement_limits WHERE bucket_key=?');$q->execute([$bucket]);if((int)$q->fetchColumn()>100)return false;
         $kind=$context['account_kind']??'anonymous';$account=$context['account_hash']??null;if(!in_array($kind,['anonymous','traveler'],true))return false;
         $insert=$mysql?'INSERT IGNORE':'INSERT OR IGNORE';$this->pdo->prepare("$insert INTO el_measurement_sessions(session_hash,visitor_hash,started_at,last_seen_at,country_code,source_channel,account_kind,account_hash) VALUES(?,?,?,?,?,?,?,?)")->execute([$sid,$vid,$now,$now,$context['country']??'ZZ',$context['source']??'direct_unknown',$kind,$account]);
-        $this->pdo->prepare('UPDATE el_measurement_sessions SET last_seen_at=?,account_kind=?,account_hash=? WHERE session_hash=?')->execute([$now,$kind,$account,$sid]);
+        $this->pdo->prepare('UPDATE el_measurement_sessions SET last_seen_at=? WHERE session_hash=?')->execute([$now,$sid]);
         $day=(new DateTimeImmutable($now,new DateTimeZone('UTC')))->setTimezone(new DateTimeZone('America/Bogota'))->format('Y-m-d');
         // Repeated clicks within 30 seconds do not multiply contact intentions.
         if($event['event']==='contact_click'){$q=$this->pdo->prepare("SELECT COUNT(*) FROM el_measurement_events WHERE session_hash=? AND business_public_id=? AND channel=? AND event_name='contact_click' AND occurred_at>=?");$q->execute([$sid,$businessPublic,$channel,gmdate('Y-m-d H:i:s',strtotime($now.' UTC')-30)]);if((int)$q->fetchColumn())return false;}

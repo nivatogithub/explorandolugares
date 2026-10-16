@@ -21,7 +21,8 @@ try{
     $ua=strtolower((string)($_SERVER['HTTP_USER_AGENT']??''));if(preg_match('/bot|crawl|spider|preview|lighthouse|headless|slurp/',$ua)||($_SERVER['HTTP_DNT']??'')==='1'||($_SERVER['HTTP_SEC_GPC']??'')==='1')output_measurement(['accepted'=>false]);
     $service->maintain();
     $context=measurement_account($pdo,$key);if($context['excluded'])output_measurement(['accepted'=>false]);
-    $context['visitor']=measurement_cookie_id('el_stats_visitor',90*86400,$key);$context['session']=measurement_cookie_id('el_stats_session',1800,$key);$context['ip']=(string)($_SERVER['REMOTE_ADDR']??'');$context['country']=$service->country($context['ip']);
+    $context['visitor']=measurement_cookie_id('el_stats_visitor',90*86400,$key);$context['session']=measurement_cookie_id('el_stats_session',1800,$key);if(!$service->sessionMatches($context['session'],$context))$context['session']=measurement_cookie_id('el_stats_session',1800,$key,true);
+    $context['ip']=(string)($_SERVER['REMOTE_ADDR']??'');$context['country']=$service->country($context['ip']);
     $context['source']=in_array($body['source']??'', ['direct_unknown','search','instagram','facebook','referral','campaign'],true)?$body['source']:'direct_unknown';
     $accepted=$service->accept($body,$context,gmdate('Y-m-d H:i:s'));output_measurement(['accepted'=>$accepted]);
 }catch(InvalidArgumentException|JsonException){output_measurement(['error'=>'Evento inválido'],400);}catch(Throwable){output_measurement(['enabled'=>false,'error'=>'Medición temporalmente no disponible'],503);}

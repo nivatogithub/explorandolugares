@@ -7,9 +7,9 @@ function measurement_config():array {
     if(!is_file($path))throw new RuntimeException('Configuración pendiente');return require $path;
 }
 function measurement_db(array $config):PDO{return new PDO($config['dsn'],$config['db_user']??null,$config['db_password']??null,[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC,PDO::ATTR_EMULATE_PREPARES=>false,PDO::ATTR_TIMEOUT=>3]);}
-function measurement_cookie_id(string $name,int $lifetime,string $key):string {
+function measurement_cookie_id(string $name,int $lifetime,string $key,bool $forceNew=false):string {
     $raw=(string)($_COOKIE[$name]??'');$parts=explode('.',$raw);
-    if(count($parts)===3&&preg_match('/^[a-f0-9]{32}$/D',$parts[0])&&ctype_digit($parts[1])&&(int)$parts[1]>=time()&&hash_equals(hash_hmac('sha256',$name.'|'.$parts[0].'|'.$parts[1],$key),$parts[2]))$id=$parts[0];else $id=bin2hex(random_bytes(16));
+    if(!$forceNew&&count($parts)===3&&preg_match('/^[a-f0-9]{32}$/D',$parts[0])&&ctype_digit($parts[1])&&(int)$parts[1]>=time()&&hash_equals(hash_hmac('sha256',$name.'|'.$parts[0].'|'.$parts[1],$key),$parts[2]))$id=$parts[0];else $id=bin2hex(random_bytes(16));
     $expires=time()+$lifetime;$value=$id.'.'.$expires.'.'.hash_hmac('sha256',$name.'|'.$id.'|'.$expires,$key);setcookie($name,$value,['expires'=>$expires,'path'=>'/','secure'=>($_SERVER['HTTPS']??'')==='on','httponly'=>true,'samesite'=>'Lax']);return $id;
 }
 function measurement_account(PDO $pdo,string $key):array {
