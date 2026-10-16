@@ -12,6 +12,10 @@ assert len({p['slug'] for p in c['places']})==len(c['places'])
 choices=json.loads((r/'portadas-propuestas.json').read_text())
 assert len(choices)>=4 and all(not x['selected'] and not x['reference_approved'] for x in choices)
 assert any('coltejer' in x['image_file'] for x in choices)
+preview=(r/'preview.html').read_text()
+assert preview.index('id="portada-4"')<preview.index('id="portada-1"')
+assert 'Descartadas/solo referencia, no portada' in preview
+assert 'data-item="portada-1" data-component="eleccion_portada"' not in preview
 review=json.loads((r/'revision-componentes.json').read_text())
 assert review['selected_cover'] is None and not review['illustrations']['generated'] and not review['publication']['authorized']
 activities=json.loads((r/'experiencias.json').read_text())
