@@ -196,6 +196,11 @@ final class DatabaseMaintenance
             'checks' => [['accounts',['contact_phone']],['business_research_contacts',['recipient_label']]],
             'requires' => ['businesses','accounts','business_account_memberships','business_research_contacts'],
         ],
+        '029-business-email-campaigns' => [
+            'file' => '029-business-email-campaigns.mysql.sql',
+            'checks' => [['business_email_permissions',['email','decision','evidence']],['business_email_campaigns',['recipients_json','content_hash','status','busy','sync_cursor','provider_campaign_id']],['business_email_audit',['campaign_id','actor','action','detail']]],
+            'requires' => ['businesses','business_research_contacts'],
+        ],
     ];
 
     public function __construct(private PDO $pdo, private string $appRoot, private string $publicRoot)
