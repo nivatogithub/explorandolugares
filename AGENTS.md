@@ -3,6 +3,7 @@
 - Este repositorio pertenece al negocio independiente Explorando Lugares.
 - Leer `PROYECTO_INDEPENDIENTE.md` antes de trabajar. Es el contexto vigente de producto; las instrucciones posteriores del usuario prevalecen.
 - Consultar `docs/CONTEXTO_PRODUCTO_Y_HOJA_DE_RUTA.md` para decisiones de negocio, arquitectura conceptual y elementos futuros; distinguir lo implementado de lo propuesto.
+- Antes de cambiar presentación pública, leer `docs/GUIA_ESTILO_PORTAL.md`, reutilizar sus tokens y revisar todos los estados de la página; no añadir parches de color aislados.
 - No importar contexto, contactos, fuentes, paletas, componentes, textos comerciales ni estilo visual de Paradigma Solutions. Su eventual rol es proveedor tecnológico, no marca turística.
 - Tratar `design/pasaporte-local/` como borrador inicial v0.1, no identidad final aprobada. Revisar especialmente la tipografía y ampliar el alcance de categorías.
 - `public/`, los ZIP y las exploraciones anteriores son históricos hasta que el usuario apruebe su sustitución. No confundirlos con el portal completo.

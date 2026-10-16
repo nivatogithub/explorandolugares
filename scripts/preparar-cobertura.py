@@ -15,7 +15,7 @@ def target(config,relative):
 def sources():
  pairs=[('backend/public/cobertura/colombia/index.html','public/cobertura/colombia/index.html'),('backend/public/api/cobertura.php','public/api/cobertura.php'),('backend/app/CoverageService.php','app/CoverageService.php'),('backend/app/content/coverage-plan.json','app/content/coverage-plan.json'),('backend/app/content/coverage-geography.json','app/content/coverage-geography.json')]
  for p in sorted((ROOT/'backend/public/assets/cobertura').iterdir()):
-  if p.name in {'cobertura.css','cobertura.js','medicion.js','select-flotante.js','departamentos.geojson','procedencia.json'} or re.fullmatch(r'municipios-\d{2}\.geojson',p.name):pairs.append((str(p.relative_to(ROOT)),'public/assets/cobertura/'+p.name))
+  if p.name in {'cobertura.css','portal-tokens.css','cobertura.js','medicion.js','select-flotante.js','departamentos.geojson','procedencia.json'} or re.fullmatch(r'municipios-\d{2}\.geojson',p.name):pairs.append((str(p.relative_to(ROOT)),'public/assets/cobertura/'+p.name))
  for p in sorted((ROOT/'backend/app/analytics').rglob('*')):
   if p.is_file():pairs.append((str(p.relative_to(ROOT)),'app/analytics/'+str(p.relative_to(ROOT/'backend/app/analytics'))))
  for name in ['api/medicion.php','admin/medicion.php']:
@@ -45,6 +45,8 @@ def main():
  config=sftp.load_config(args.config);previous=manifest(json.loads(args.manifest.read_text()),config)
  subprocess.run([sys.executable,str(ROOT/'scripts/generar-catalogo-cobertura.py')],check=True)
  subprocess.run(['php',str(ROOT/'backend/tests/coverage-service.php')],check=True)
+ subprocess.run([sys.executable,str(ROOT/'scripts/sincronizar-estilos-cobertura.py'),'--check'],check=True)
+ subprocess.run([sys.executable,str(ROOT/'backend/tests/test_portal_design.py')],check=True)
  files=prepare(config);old={x['relative']:x for x in previous['files']}
  guards=json.loads((ROOT/'backend/integration-medicion/baseline.json').read_text())
  for relative,expected in guards.items():
