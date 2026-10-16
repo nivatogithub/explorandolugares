@@ -22,7 +22,12 @@ for previous in sorted((out/'public').rglob('*')):
   if 'medicion-opcional' not in s:
    section=re.search(r'<section id="medicion-opcional">.*?</section>',ours,re.S)
    assert section;s=s.replace('</main>',section[0]+'</main>')
- elif '/destinos/' in relative and 'medicion.js' not in s and 'menu-principal.js' not in s:
-  assert '</body>' in s;s=s.replace('</body>','<script defer data-el-measurement="1" src="/assets/cobertura/medicion.js?v=1"></script></body>')
+ elif '/destinos/' in relative:
+  assert '</body>' in s
+  if 'cobertura/colombia' not in s:
+   label='We’re growing' if '/en/' in relative else 'Estamos crescendo' if '/pt-br/' in relative else 'Estamos creciendo'
+   s=s.replace('<a class="pill light"',f'<a href="/cobertura/colombia/">{label}</a><a class="pill light"',1)
+  if 'menu-principal.js' not in s:s=s.replace('</body>','<script src="/assets/menu-principal.js?v=20261016" defer></script></body>')
+  if 'medicion.js' not in s:s=s.replace('</body>','<script defer data-el-measurement="1" src="/assets/cobertura/medicion.js?v=1"></script></body>')
  previous.write_text(s)
 (out/'baseline.json').write_text(json.dumps(guards,indent=2)+'\n');print('Rebased integration:',len(guards),'public files; no unrelated changes replaced')
