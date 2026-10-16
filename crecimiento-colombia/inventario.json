@@ -1,0 +1,2424 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-10-16",
+  "universe_version": "CO-editorial-v1",
+  "scope": "curated_candidates_not_all_municipalities",
+  "score_weights": {
+    "reuse": 35,
+    "sources": 25,
+    "editorial": 20,
+    "rights": 10,
+    "operations": 10
+  },
+  "departments": [
+    {
+      "id": "CO-05",
+      "name": "Antioquia",
+      "slug": "antioquia",
+      "unit_type": "department",
+      "dane_code": "05",
+      "score_inputs": {
+        "reuse": 5,
+        "sources": 4,
+        "editorial": 4,
+        "rights": 3,
+        "operations": 4
+      },
+      "score": 85.0,
+      "priority": 1,
+      "weight": 3,
+      "reason": "MVP acotado de cinco lugares",
+      "confidence": "editorial_estimate",
+      "places": [
+        {
+          "id": "CO-05-jerico",
+          "name": "Jericó",
+          "slug": "jerico",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 5,
+            "sources": 5,
+            "editorial": 4,
+            "rights": 4,
+            "operations": 5
+          },
+          "score": 94.0,
+          "priority": 1,
+          "weight": 3,
+          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/antioquia/lugares/jerico/lugar.json"
+        },
+        {
+          "id": "CO-05-jardin",
+          "name": "Jardín",
+          "slug": "jardin",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 5,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 3,
+            "operations": 4
+          },
+          "score": 85.0,
+          "priority": 1,
+          "weight": 3,
+          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/antioquia/lugares/jardin/lugar.json"
+        },
+        {
+          "id": "CO-05-sonson",
+          "name": "Sonsón",
+          "slug": "sonson",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 5,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 3,
+            "operations": 4
+          },
+          "score": 85.0,
+          "priority": 1,
+          "weight": 3,
+          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/antioquia/lugares/sonson/lugar.json"
+        },
+        {
+          "id": "CO-05-cauca-viejo",
+          "name": "Cauca Viejo",
+          "slug": "cauca-viejo",
+          "type": "autonomous_destination",
+          "parent_place_id": "CO-05-jerico",
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/antioquia/lugares/cauca-viejo/lugar.json"
+        },
+        {
+          "id": "CO-05-guatape",
+          "name": "Guatapé",
+          "slug": "guatape",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/antioquia/lugares/guatape/lugar.json"
+        },
+        {
+          "id": "CO-05-santa-fe-de-antioquia",
+          "name": "Santa Fe de Antioquia",
+          "slug": "santa-fe-de-antioquia",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/antioquia/lugares/santa-fe-de-antioquia/lugar.json"
+        },
+        {
+          "id": "CO-05-medellin",
+          "name": "Medellín",
+          "slug": "medellin",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/antioquia/lugares/medellin/lugar.json"
+        },
+        {
+          "id": "CO-05-el-penol",
+          "name": "El Peñol",
+          "slug": "el-penol",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/antioquia/lugares/el-penol/lugar.json"
+        },
+        {
+          "id": "CO-05-tamesis",
+          "name": "Támesis",
+          "slug": "tamesis",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/antioquia/lugares/tamesis/lugar.json"
+        },
+        {
+          "id": "CO-05-san-jeronimo",
+          "name": "San Jerónimo",
+          "slug": "san-jeronimo",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/antioquia/lugares/san-jeronimo/lugar.json"
+        },
+        {
+          "id": "CO-05-sopetran",
+          "name": "Sopetrán",
+          "slug": "sopetran",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/antioquia/lugares/sopetran/lugar.json"
+        },
+        {
+          "id": "CO-05-san-rafael",
+          "name": "San Rafael",
+          "slug": "san-rafael",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/antioquia/lugares/san-rafael/lugar.json"
+        },
+        {
+          "id": "CO-05-cocorna",
+          "name": "Cocorná",
+          "slug": "cocorna",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/antioquia/lugares/cocorna/lugar.json"
+        },
+        {
+          "id": "CO-05-venecia",
+          "name": "Venecia",
+          "slug": "venecia",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/antioquia/lugares/venecia/lugar.json"
+        },
+        {
+          "id": "CO-05-el-retiro",
+          "name": "El Retiro",
+          "slug": "el-retiro",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/antioquia/lugares/el-retiro/lugar.json"
+        },
+        {
+          "id": "CO-05-san-carlos",
+          "name": "San Carlos",
+          "slug": "san-carlos",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/antioquia/lugares/san-carlos/lugar.json"
+        },
+        {
+          "id": "CO-05-el-carmen-de-viboral",
+          "name": "El Carmen de Viboral",
+          "slug": "el-carmen-de-viboral",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/antioquia/lugares/el-carmen-de-viboral/lugar.json"
+        },
+        {
+          "id": "CO-05-rionegro",
+          "name": "Rionegro",
+          "slug": "rionegro",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/antioquia/lugares/rionegro/lugar.json"
+        },
+        {
+          "id": "CO-05-necocli",
+          "name": "Necoclí",
+          "slug": "necocli",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/antioquia/lugares/necocli/lugar.json"
+        },
+        {
+          "id": "CO-05-arboletes",
+          "name": "Arboletes",
+          "slug": "arboletes",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/antioquia/lugares/arboletes/lugar.json"
+        },
+        {
+          "id": "CO-05-puerto-triunfo",
+          "name": "Puerto Triunfo",
+          "slug": "puerto-triunfo",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/antioquia/lugares/puerto-triunfo/lugar.json"
+        },
+        {
+          "id": "CO-05-san-pedro-de-los-milagros",
+          "name": "San Pedro de los Milagros",
+          "slug": "san-pedro-de-los-milagros",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/antioquia/lugares/san-pedro-de-los-milagros/lugar.json"
+        },
+        {
+          "id": "CO-05-santa-rosa-de-osos",
+          "name": "Santa Rosa de Osos",
+          "slug": "santa-rosa-de-osos",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/antioquia/lugares/santa-rosa-de-osos/lugar.json"
+        }
+      ]
+    },
+    {
+      "id": "CO-08",
+      "name": "Atlántico",
+      "slug": "atlantico",
+      "unit_type": "department",
+      "dane_code": "08",
+      "score_inputs": {
+        "reuse": 2,
+        "sources": 4,
+        "editorial": 4,
+        "rights": 2,
+        "operations": 3
+      },
+      "score": 60.0,
+      "priority": 2,
+      "weight": 2,
+      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "confidence": "editorial_estimate",
+      "places": [
+        {
+          "id": "CO-08-barranquilla",
+          "name": "Barranquilla",
+          "slug": "barranquilla",
+          "type": "district",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/atlantico/lugares/barranquilla/lugar.json"
+        },
+        {
+          "id": "CO-08-puerto-colombia",
+          "name": "Puerto Colombia",
+          "slug": "puerto-colombia",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/atlantico/lugares/puerto-colombia/lugar.json"
+        }
+      ]
+    },
+    {
+      "id": "CO-11",
+      "name": "Bogotá D.C.",
+      "slug": "bogota-dc",
+      "unit_type": "capital_district",
+      "dane_code": "11",
+      "score_inputs": {
+        "reuse": 2,
+        "sources": 4,
+        "editorial": 4,
+        "rights": 2,
+        "operations": 3
+      },
+      "score": 60.0,
+      "priority": 2,
+      "weight": 2,
+      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "confidence": "editorial_estimate",
+      "places": [
+        {
+          "id": "CO-11-bogota",
+          "name": "Bogotá",
+          "slug": "bogota",
+          "type": "district",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/bogota-dc/lugares/bogota/lugar.json"
+        }
+      ]
+    },
+    {
+      "id": "CO-13",
+      "name": "Bolívar",
+      "slug": "bolivar",
+      "unit_type": "department",
+      "dane_code": "13",
+      "score_inputs": {
+        "reuse": 5,
+        "sources": 4,
+        "editorial": 4,
+        "rights": 3,
+        "operations": 4
+      },
+      "score": 85.0,
+      "priority": 1,
+      "weight": 3,
+      "reason": "MVP acotado de cinco lugares",
+      "confidence": "editorial_estimate",
+      "places": [
+        {
+          "id": "CO-13-cartagena",
+          "name": "Cartagena",
+          "slug": "cartagena",
+          "type": "district",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 5,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 3,
+            "operations": 4
+          },
+          "score": 85.0,
+          "priority": 1,
+          "weight": 3,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/bolivar/lugares/cartagena/lugar.json"
+        },
+        {
+          "id": "CO-13-santa-cruz-de-mompox",
+          "name": "Santa Cruz de Mompox",
+          "slug": "santa-cruz-de-mompox",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/bolivar/lugares/santa-cruz-de-mompox/lugar.json"
+        }
+      ]
+    },
+    {
+      "id": "CO-15",
+      "name": "Boyacá",
+      "slug": "boyaca",
+      "unit_type": "department",
+      "dane_code": "15",
+      "score_inputs": {
+        "reuse": 2,
+        "sources": 4,
+        "editorial": 4,
+        "rights": 2,
+        "operations": 3
+      },
+      "score": 60.0,
+      "priority": 2,
+      "weight": 2,
+      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "confidence": "editorial_estimate",
+      "places": [
+        {
+          "id": "CO-15-villa-de-leyva",
+          "name": "Villa de Leyva",
+          "slug": "villa-de-leyva",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/boyaca/lugares/villa-de-leyva/lugar.json"
+        },
+        {
+          "id": "CO-15-mongui",
+          "name": "Monguí",
+          "slug": "mongui",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/boyaca/lugares/mongui/lugar.json"
+        }
+      ]
+    },
+    {
+      "id": "CO-17",
+      "name": "Caldas",
+      "slug": "caldas",
+      "unit_type": "department",
+      "dane_code": "17",
+      "score_inputs": {
+        "reuse": 2,
+        "sources": 4,
+        "editorial": 4,
+        "rights": 2,
+        "operations": 3
+      },
+      "score": 60.0,
+      "priority": 2,
+      "weight": 2,
+      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "confidence": "editorial_estimate",
+      "places": [
+        {
+          "id": "CO-17-manizales",
+          "name": "Manizales",
+          "slug": "manizales",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/caldas/lugares/manizales/lugar.json"
+        },
+        {
+          "id": "CO-17-salamina",
+          "name": "Salamina",
+          "slug": "salamina",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/caldas/lugares/salamina/lugar.json"
+        }
+      ]
+    },
+    {
+      "id": "CO-18",
+      "name": "Caquetá",
+      "slug": "caqueta",
+      "unit_type": "department",
+      "dane_code": "18",
+      "score_inputs": {
+        "reuse": 1,
+        "sources": 2,
+        "editorial": 3,
+        "rights": 1,
+        "operations": 2
+      },
+      "score": 35.0,
+      "priority": 3,
+      "weight": 1,
+      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "confidence": "editorial_estimate",
+      "places": [
+        {
+          "id": "CO-18-florencia",
+          "name": "Florencia",
+          "slug": "florencia",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 1,
+            "sources": 2,
+            "editorial": 3,
+            "rights": 1,
+            "operations": 2
+          },
+          "score": 35.0,
+          "priority": 3,
+          "weight": 1,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/caqueta/lugares/florencia/lugar.json"
+        }
+      ]
+    },
+    {
+      "id": "CO-19",
+      "name": "Cauca",
+      "slug": "cauca",
+      "unit_type": "department",
+      "dane_code": "19",
+      "score_inputs": {
+        "reuse": 2,
+        "sources": 4,
+        "editorial": 4,
+        "rights": 2,
+        "operations": 3
+      },
+      "score": 60.0,
+      "priority": 2,
+      "weight": 2,
+      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "confidence": "editorial_estimate",
+      "places": [
+        {
+          "id": "CO-19-popayan",
+          "name": "Popayán",
+          "slug": "popayan",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/cauca/lugares/popayan/lugar.json"
+        },
+        {
+          "id": "CO-19-silvia",
+          "name": "Silvia",
+          "slug": "silvia",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/cauca/lugares/silvia/lugar.json"
+        }
+      ]
+    },
+    {
+      "id": "CO-20",
+      "name": "Cesar",
+      "slug": "cesar",
+      "unit_type": "department",
+      "dane_code": "20",
+      "score_inputs": {
+        "reuse": 1,
+        "sources": 2,
+        "editorial": 3,
+        "rights": 1,
+        "operations": 2
+      },
+      "score": 35.0,
+      "priority": 3,
+      "weight": 1,
+      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "confidence": "editorial_estimate",
+      "places": [
+        {
+          "id": "CO-20-valledupar",
+          "name": "Valledupar",
+          "slug": "valledupar",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 1,
+            "sources": 2,
+            "editorial": 3,
+            "rights": 1,
+            "operations": 2
+          },
+          "score": 35.0,
+          "priority": 3,
+          "weight": 1,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/cesar/lugares/valledupar/lugar.json"
+        }
+      ]
+    },
+    {
+      "id": "CO-23",
+      "name": "Córdoba",
+      "slug": "cordoba",
+      "unit_type": "department",
+      "dane_code": "23",
+      "score_inputs": {
+        "reuse": 1,
+        "sources": 2,
+        "editorial": 3,
+        "rights": 1,
+        "operations": 2
+      },
+      "score": 35.0,
+      "priority": 3,
+      "weight": 1,
+      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "confidence": "editorial_estimate",
+      "places": [
+        {
+          "id": "CO-23-monteria",
+          "name": "Montería",
+          "slug": "monteria",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 1,
+            "sources": 2,
+            "editorial": 3,
+            "rights": 1,
+            "operations": 2
+          },
+          "score": 35.0,
+          "priority": 3,
+          "weight": 1,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/cordoba/lugares/monteria/lugar.json"
+        },
+        {
+          "id": "CO-23-lorica",
+          "name": "Lorica",
+          "slug": "lorica",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 1,
+            "sources": 2,
+            "editorial": 3,
+            "rights": 1,
+            "operations": 2
+          },
+          "score": 35.0,
+          "priority": 3,
+          "weight": 1,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/cordoba/lugares/lorica/lugar.json"
+        }
+      ]
+    },
+    {
+      "id": "CO-25",
+      "name": "Cundinamarca",
+      "slug": "cundinamarca",
+      "unit_type": "department",
+      "dane_code": "25",
+      "score_inputs": {
+        "reuse": 2,
+        "sources": 4,
+        "editorial": 4,
+        "rights": 2,
+        "operations": 3
+      },
+      "score": 60.0,
+      "priority": 2,
+      "weight": 2,
+      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "confidence": "editorial_estimate",
+      "places": [
+        {
+          "id": "CO-25-zipaquira",
+          "name": "Zipaquirá",
+          "slug": "zipaquira",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/cundinamarca/lugares/zipaquira/lugar.json"
+        },
+        {
+          "id": "CO-25-guatavita",
+          "name": "Guatavita",
+          "slug": "guatavita",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/cundinamarca/lugares/guatavita/lugar.json"
+        }
+      ]
+    },
+    {
+      "id": "CO-27",
+      "name": "Chocó",
+      "slug": "choco",
+      "unit_type": "department",
+      "dane_code": "27",
+      "score_inputs": {
+        "reuse": 1,
+        "sources": 2,
+        "editorial": 3,
+        "rights": 1,
+        "operations": 2
+      },
+      "score": 35.0,
+      "priority": 3,
+      "weight": 1,
+      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "confidence": "editorial_estimate",
+      "places": [
+        {
+          "id": "CO-27-nuqui",
+          "name": "Nuquí",
+          "slug": "nuqui",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 1,
+            "sources": 2,
+            "editorial": 3,
+            "rights": 1,
+            "operations": 2
+          },
+          "score": 35.0,
+          "priority": 3,
+          "weight": 1,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/choco/lugares/nuqui/lugar.json"
+        },
+        {
+          "id": "CO-27-bahia-solano",
+          "name": "Bahía Solano",
+          "slug": "bahia-solano",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 1,
+            "sources": 2,
+            "editorial": 3,
+            "rights": 1,
+            "operations": 2
+          },
+          "score": 35.0,
+          "priority": 3,
+          "weight": 1,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/choco/lugares/bahia-solano/lugar.json"
+        }
+      ]
+    },
+    {
+      "id": "CO-41",
+      "name": "Huila",
+      "slug": "huila",
+      "unit_type": "department",
+      "dane_code": "41",
+      "score_inputs": {
+        "reuse": 2,
+        "sources": 4,
+        "editorial": 4,
+        "rights": 2,
+        "operations": 3
+      },
+      "score": 60.0,
+      "priority": 2,
+      "weight": 2,
+      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "confidence": "editorial_estimate",
+      "places": [
+        {
+          "id": "CO-41-san-agustin",
+          "name": "San Agustín",
+          "slug": "san-agustin",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/huila/lugares/san-agustin/lugar.json"
+        },
+        {
+          "id": "CO-41-neiva",
+          "name": "Neiva",
+          "slug": "neiva",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/huila/lugares/neiva/lugar.json"
+        }
+      ]
+    },
+    {
+      "id": "CO-44",
+      "name": "La Guajira",
+      "slug": "la-guajira",
+      "unit_type": "department",
+      "dane_code": "44",
+      "score_inputs": {
+        "reuse": 2,
+        "sources": 4,
+        "editorial": 4,
+        "rights": 2,
+        "operations": 3
+      },
+      "score": 60.0,
+      "priority": 2,
+      "weight": 2,
+      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "confidence": "editorial_estimate",
+      "places": [
+        {
+          "id": "CO-44-riohacha",
+          "name": "Riohacha",
+          "slug": "riohacha",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/la-guajira/lugares/riohacha/lugar.json"
+        },
+        {
+          "id": "CO-44-uribia",
+          "name": "Uribia",
+          "slug": "uribia",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/la-guajira/lugares/uribia/lugar.json"
+        }
+      ]
+    },
+    {
+      "id": "CO-47",
+      "name": "Magdalena",
+      "slug": "magdalena",
+      "unit_type": "department",
+      "dane_code": "47",
+      "score_inputs": {
+        "reuse": 2,
+        "sources": 4,
+        "editorial": 4,
+        "rights": 2,
+        "operations": 3
+      },
+      "score": 60.0,
+      "priority": 2,
+      "weight": 2,
+      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "confidence": "editorial_estimate",
+      "places": [
+        {
+          "id": "CO-47-santa-marta",
+          "name": "Santa Marta",
+          "slug": "santa-marta",
+          "type": "district",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/magdalena/lugares/santa-marta/lugar.json"
+        }
+      ]
+    },
+    {
+      "id": "CO-50",
+      "name": "Meta",
+      "slug": "meta",
+      "unit_type": "department",
+      "dane_code": "50",
+      "score_inputs": {
+        "reuse": 2,
+        "sources": 4,
+        "editorial": 4,
+        "rights": 2,
+        "operations": 3
+      },
+      "score": 60.0,
+      "priority": 2,
+      "weight": 2,
+      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "confidence": "editorial_estimate",
+      "places": [
+        {
+          "id": "CO-50-villavicencio",
+          "name": "Villavicencio",
+          "slug": "villavicencio",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/meta/lugares/villavicencio/lugar.json"
+        },
+        {
+          "id": "CO-50-la-macarena",
+          "name": "La Macarena",
+          "slug": "la-macarena",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/meta/lugares/la-macarena/lugar.json"
+        }
+      ]
+    },
+    {
+      "id": "CO-52",
+      "name": "Nariño",
+      "slug": "narino",
+      "unit_type": "department",
+      "dane_code": "52",
+      "score_inputs": {
+        "reuse": 2,
+        "sources": 4,
+        "editorial": 4,
+        "rights": 2,
+        "operations": 3
+      },
+      "score": 60.0,
+      "priority": 2,
+      "weight": 2,
+      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "confidence": "editorial_estimate",
+      "places": [
+        {
+          "id": "CO-52-pasto",
+          "name": "Pasto",
+          "slug": "pasto",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/narino/lugares/pasto/lugar.json"
+        },
+        {
+          "id": "CO-52-ipiales",
+          "name": "Ipiales",
+          "slug": "ipiales",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/narino/lugares/ipiales/lugar.json"
+        }
+      ]
+    },
+    {
+      "id": "CO-54",
+      "name": "Norte de Santander",
+      "slug": "norte-de-santander",
+      "unit_type": "department",
+      "dane_code": "54",
+      "score_inputs": {
+        "reuse": 1,
+        "sources": 2,
+        "editorial": 3,
+        "rights": 1,
+        "operations": 2
+      },
+      "score": 35.0,
+      "priority": 3,
+      "weight": 1,
+      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "confidence": "editorial_estimate",
+      "places": [
+        {
+          "id": "CO-54-cucuta",
+          "name": "Cúcuta",
+          "slug": "cucuta",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 1,
+            "sources": 2,
+            "editorial": 3,
+            "rights": 1,
+            "operations": 2
+          },
+          "score": 35.0,
+          "priority": 3,
+          "weight": 1,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/norte-de-santander/lugares/cucuta/lugar.json"
+        },
+        {
+          "id": "CO-54-pamplona",
+          "name": "Pamplona",
+          "slug": "pamplona",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 1,
+            "sources": 2,
+            "editorial": 3,
+            "rights": 1,
+            "operations": 2
+          },
+          "score": 35.0,
+          "priority": 3,
+          "weight": 1,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/norte-de-santander/lugares/pamplona/lugar.json"
+        }
+      ]
+    },
+    {
+      "id": "CO-63",
+      "name": "Quindío",
+      "slug": "quindio",
+      "unit_type": "department",
+      "dane_code": "63",
+      "score_inputs": {
+        "reuse": 5,
+        "sources": 4,
+        "editorial": 4,
+        "rights": 3,
+        "operations": 4
+      },
+      "score": 85.0,
+      "priority": 1,
+      "weight": 3,
+      "reason": "MVP acotado de cinco lugares",
+      "confidence": "editorial_estimate",
+      "places": [
+        {
+          "id": "CO-63-salento",
+          "name": "Salento",
+          "slug": "salento",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 5,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 3,
+            "operations": 4
+          },
+          "score": 85.0,
+          "priority": 1,
+          "weight": 3,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/quindio/lugares/salento/lugar.json"
+        },
+        {
+          "id": "CO-63-filandia",
+          "name": "Filandia",
+          "slug": "filandia",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/quindio/lugares/filandia/lugar.json"
+        },
+        {
+          "id": "CO-63-armenia",
+          "name": "Armenia",
+          "slug": "armenia",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/quindio/lugares/armenia/lugar.json"
+        }
+      ]
+    },
+    {
+      "id": "CO-66",
+      "name": "Risaralda",
+      "slug": "risaralda",
+      "unit_type": "department",
+      "dane_code": "66",
+      "score_inputs": {
+        "reuse": 2,
+        "sources": 4,
+        "editorial": 4,
+        "rights": 2,
+        "operations": 3
+      },
+      "score": 60.0,
+      "priority": 2,
+      "weight": 2,
+      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "confidence": "editorial_estimate",
+      "places": [
+        {
+          "id": "CO-66-pereira",
+          "name": "Pereira",
+          "slug": "pereira",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/risaralda/lugares/pereira/lugar.json"
+        },
+        {
+          "id": "CO-66-santa-rosa-de-cabal",
+          "name": "Santa Rosa de Cabal",
+          "slug": "santa-rosa-de-cabal",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/risaralda/lugares/santa-rosa-de-cabal/lugar.json"
+        }
+      ]
+    },
+    {
+      "id": "CO-68",
+      "name": "Santander",
+      "slug": "santander",
+      "unit_type": "department",
+      "dane_code": "68",
+      "score_inputs": {
+        "reuse": 2,
+        "sources": 4,
+        "editorial": 4,
+        "rights": 2,
+        "operations": 3
+      },
+      "score": 60.0,
+      "priority": 2,
+      "weight": 2,
+      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "confidence": "editorial_estimate",
+      "places": [
+        {
+          "id": "CO-68-barichara",
+          "name": "Barichara",
+          "slug": "barichara",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/santander/lugares/barichara/lugar.json"
+        },
+        {
+          "id": "CO-68-san-gil",
+          "name": "San Gil",
+          "slug": "san-gil",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/santander/lugares/san-gil/lugar.json"
+        }
+      ]
+    },
+    {
+      "id": "CO-70",
+      "name": "Sucre",
+      "slug": "sucre",
+      "unit_type": "department",
+      "dane_code": "70",
+      "score_inputs": {
+        "reuse": 1,
+        "sources": 2,
+        "editorial": 3,
+        "rights": 1,
+        "operations": 2
+      },
+      "score": 35.0,
+      "priority": 3,
+      "weight": 1,
+      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "confidence": "editorial_estimate",
+      "places": [
+        {
+          "id": "CO-70-sincelejo",
+          "name": "Sincelejo",
+          "slug": "sincelejo",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 1,
+            "sources": 2,
+            "editorial": 3,
+            "rights": 1,
+            "operations": 2
+          },
+          "score": 35.0,
+          "priority": 3,
+          "weight": 1,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/sucre/lugares/sincelejo/lugar.json"
+        },
+        {
+          "id": "CO-70-santiago-de-tolu",
+          "name": "Santiago de Tolú",
+          "slug": "santiago-de-tolu",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 1,
+            "sources": 2,
+            "editorial": 3,
+            "rights": 1,
+            "operations": 2
+          },
+          "score": 35.0,
+          "priority": 3,
+          "weight": 1,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/sucre/lugares/santiago-de-tolu/lugar.json"
+        }
+      ]
+    },
+    {
+      "id": "CO-73",
+      "name": "Tolima",
+      "slug": "tolima",
+      "unit_type": "department",
+      "dane_code": "73",
+      "score_inputs": {
+        "reuse": 2,
+        "sources": 4,
+        "editorial": 4,
+        "rights": 2,
+        "operations": 3
+      },
+      "score": 60.0,
+      "priority": 2,
+      "weight": 2,
+      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "confidence": "editorial_estimate",
+      "places": [
+        {
+          "id": "CO-73-ibague",
+          "name": "Ibagué",
+          "slug": "ibague",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/tolima/lugares/ibague/lugar.json"
+        },
+        {
+          "id": "CO-73-honda",
+          "name": "Honda",
+          "slug": "honda",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/tolima/lugares/honda/lugar.json"
+        }
+      ]
+    },
+    {
+      "id": "CO-76",
+      "name": "Valle del Cauca",
+      "slug": "valle-del-cauca",
+      "unit_type": "department",
+      "dane_code": "76",
+      "score_inputs": {
+        "reuse": 2,
+        "sources": 4,
+        "editorial": 4,
+        "rights": 2,
+        "operations": 3
+      },
+      "score": 60.0,
+      "priority": 2,
+      "weight": 2,
+      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "confidence": "editorial_estimate",
+      "places": [
+        {
+          "id": "CO-76-cali",
+          "name": "Cali",
+          "slug": "cali",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/valle-del-cauca/lugares/cali/lugar.json"
+        },
+        {
+          "id": "CO-76-guadalajara-de-buga",
+          "name": "Guadalajara de Buga",
+          "slug": "guadalajara-de-buga",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/valle-del-cauca/lugares/guadalajara-de-buga/lugar.json"
+        }
+      ]
+    },
+    {
+      "id": "CO-81",
+      "name": "Arauca",
+      "slug": "arauca",
+      "unit_type": "department",
+      "dane_code": "81",
+      "score_inputs": {
+        "reuse": 1,
+        "sources": 2,
+        "editorial": 3,
+        "rights": 1,
+        "operations": 2
+      },
+      "score": 35.0,
+      "priority": 3,
+      "weight": 1,
+      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "confidence": "editorial_estimate",
+      "places": [
+        {
+          "id": "CO-81-arauca",
+          "name": "Arauca",
+          "slug": "arauca",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 1,
+            "sources": 2,
+            "editorial": 3,
+            "rights": 1,
+            "operations": 2
+          },
+          "score": 35.0,
+          "priority": 3,
+          "weight": 1,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/arauca/lugares/arauca/lugar.json"
+        }
+      ]
+    },
+    {
+      "id": "CO-85",
+      "name": "Casanare",
+      "slug": "casanare",
+      "unit_type": "department",
+      "dane_code": "85",
+      "score_inputs": {
+        "reuse": 1,
+        "sources": 2,
+        "editorial": 3,
+        "rights": 1,
+        "operations": 2
+      },
+      "score": 35.0,
+      "priority": 3,
+      "weight": 1,
+      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "confidence": "editorial_estimate",
+      "places": [
+        {
+          "id": "CO-85-yopal",
+          "name": "Yopal",
+          "slug": "yopal",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 1,
+            "sources": 2,
+            "editorial": 3,
+            "rights": 1,
+            "operations": 2
+          },
+          "score": 35.0,
+          "priority": 3,
+          "weight": 1,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/casanare/lugares/yopal/lugar.json"
+        }
+      ]
+    },
+    {
+      "id": "CO-86",
+      "name": "Putumayo",
+      "slug": "putumayo",
+      "unit_type": "department",
+      "dane_code": "86",
+      "score_inputs": {
+        "reuse": 1,
+        "sources": 2,
+        "editorial": 3,
+        "rights": 1,
+        "operations": 2
+      },
+      "score": 35.0,
+      "priority": 3,
+      "weight": 1,
+      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "confidence": "editorial_estimate",
+      "places": [
+        {
+          "id": "CO-86-mocoa",
+          "name": "Mocoa",
+          "slug": "mocoa",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 1,
+            "sources": 2,
+            "editorial": 3,
+            "rights": 1,
+            "operations": 2
+          },
+          "score": 35.0,
+          "priority": 3,
+          "weight": 1,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/putumayo/lugares/mocoa/lugar.json"
+        },
+        {
+          "id": "CO-86-sibundoy",
+          "name": "Sibundoy",
+          "slug": "sibundoy",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 1,
+            "sources": 2,
+            "editorial": 3,
+            "rights": 1,
+            "operations": 2
+          },
+          "score": 35.0,
+          "priority": 3,
+          "weight": 1,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/putumayo/lugares/sibundoy/lugar.json"
+        }
+      ]
+    },
+    {
+      "id": "CO-88",
+      "name": "San Andrés, Providencia y Santa Catalina",
+      "slug": "san-andres-providencia-y-santa-catalina",
+      "unit_type": "department",
+      "dane_code": "88",
+      "score_inputs": {
+        "reuse": 2,
+        "sources": 4,
+        "editorial": 4,
+        "rights": 2,
+        "operations": 3
+      },
+      "score": 60.0,
+      "priority": 2,
+      "weight": 2,
+      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "confidence": "editorial_estimate",
+      "places": [
+        {
+          "id": "CO-88-san-andres",
+          "name": "San Andrés",
+          "slug": "san-andres",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/san-andres-providencia-y-santa-catalina/lugares/san-andres/lugar.json"
+        },
+        {
+          "id": "CO-88-providencia",
+          "name": "Providencia",
+          "slug": "providencia",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/san-andres-providencia-y-santa-catalina/lugares/providencia/lugar.json"
+        }
+      ]
+    },
+    {
+      "id": "CO-91",
+      "name": "Amazonas",
+      "slug": "amazonas",
+      "unit_type": "department",
+      "dane_code": "91",
+      "score_inputs": {
+        "reuse": 2,
+        "sources": 4,
+        "editorial": 4,
+        "rights": 2,
+        "operations": 3
+      },
+      "score": 60.0,
+      "priority": 2,
+      "weight": 2,
+      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "confidence": "editorial_estimate",
+      "places": [
+        {
+          "id": "CO-91-leticia",
+          "name": "Leticia",
+          "slug": "leticia",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/amazonas/lugares/leticia/lugar.json"
+        },
+        {
+          "id": "CO-91-puerto-narino",
+          "name": "Puerto Nariño",
+          "slug": "puerto-narino",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 2,
+            "sources": 4,
+            "editorial": 4,
+            "rights": 2,
+            "operations": 3
+          },
+          "score": 60.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/amazonas/lugares/puerto-narino/lugar.json"
+        }
+      ]
+    },
+    {
+      "id": "CO-94",
+      "name": "Guainía",
+      "slug": "guainia",
+      "unit_type": "department",
+      "dane_code": "94",
+      "score_inputs": {
+        "reuse": 1,
+        "sources": 2,
+        "editorial": 3,
+        "rights": 1,
+        "operations": 2
+      },
+      "score": 35.0,
+      "priority": 3,
+      "weight": 1,
+      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "confidence": "editorial_estimate",
+      "places": [
+        {
+          "id": "CO-94-inirida",
+          "name": "Inírida",
+          "slug": "inirida",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 1,
+            "sources": 2,
+            "editorial": 3,
+            "rights": 1,
+            "operations": 2
+          },
+          "score": 35.0,
+          "priority": 3,
+          "weight": 1,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/guainia/lugares/inirida/lugar.json"
+        }
+      ]
+    },
+    {
+      "id": "CO-95",
+      "name": "Guaviare",
+      "slug": "guaviare",
+      "unit_type": "department",
+      "dane_code": "95",
+      "score_inputs": {
+        "reuse": 1,
+        "sources": 2,
+        "editorial": 3,
+        "rights": 1,
+        "operations": 2
+      },
+      "score": 35.0,
+      "priority": 3,
+      "weight": 1,
+      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "confidence": "editorial_estimate",
+      "places": [
+        {
+          "id": "CO-95-san-jose-del-guaviare",
+          "name": "San José del Guaviare",
+          "slug": "san-jose-del-guaviare",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 1,
+            "sources": 2,
+            "editorial": 3,
+            "rights": 1,
+            "operations": 2
+          },
+          "score": 35.0,
+          "priority": 3,
+          "weight": 1,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/guaviare/lugares/san-jose-del-guaviare/lugar.json"
+        }
+      ]
+    },
+    {
+      "id": "CO-97",
+      "name": "Vaupés",
+      "slug": "vaupes",
+      "unit_type": "department",
+      "dane_code": "97",
+      "score_inputs": {
+        "reuse": 1,
+        "sources": 2,
+        "editorial": 3,
+        "rights": 1,
+        "operations": 2
+      },
+      "score": 35.0,
+      "priority": 3,
+      "weight": 1,
+      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "confidence": "editorial_estimate",
+      "places": [
+        {
+          "id": "CO-97-mitu",
+          "name": "Mitú",
+          "slug": "mitu",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 1,
+            "sources": 2,
+            "editorial": 3,
+            "rights": 1,
+            "operations": 2
+          },
+          "score": 35.0,
+          "priority": 3,
+          "weight": 1,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/vaupes/lugares/mitu/lugar.json"
+        }
+      ]
+    },
+    {
+      "id": "CO-99",
+      "name": "Vichada",
+      "slug": "vichada",
+      "unit_type": "department",
+      "dane_code": "99",
+      "score_inputs": {
+        "reuse": 1,
+        "sources": 2,
+        "editorial": 3,
+        "rights": 1,
+        "operations": 2
+      },
+      "score": 35.0,
+      "priority": 3,
+      "weight": 1,
+      "reason": "Expansión editorial propuesta; fuentes y permisos por comprobar",
+      "confidence": "editorial_estimate",
+      "places": [
+        {
+          "id": "CO-99-puerto-carreno",
+          "name": "Puerto Carreño",
+          "slug": "puerto-carreno",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": null,
+          "administrative_identity_status": "pending_verification",
+          "score_inputs": {
+            "reuse": 1,
+            "sources": 2,
+            "editorial": 3,
+            "rights": 1,
+            "operations": 2
+          },
+          "score": 35.0,
+          "priority": 3,
+          "weight": 1,
+          "reason": "Candidato editorial; no representa demanda medida",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/vichada/lugares/puerto-carreno/lugar.json"
+        }
+      ]
+    }
+  ]
+}
