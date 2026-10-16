@@ -236,6 +236,20 @@ try:
           'Repetir la importación duplicó un contacto privado.')
     check(DB.execute('SELECT COUNT(*) FROM business_research_contacts').fetchone()[0] == research_before + 1,
           'La importación idempotente creó contactos duplicados.')
+    _, with_channels, _ = request('/admin/contactos-negocios.php?contact=with&subscription=all')
+    _, without_channels, _ = request('/admin/contactos-negocios.php?contact=without&subscription=all')
+    def channel_summary(html):
+        summary = re.search(r'<div class="crm-metrics".*?</div>', html, re.S).group(0)
+        return [int(value) for value in re.findall(r'<strong>([0-9]+)</strong>', summary)]
+    summary_with = channel_summary(with_channels)
+    check(summary_with == channel_summary(without_channels) and summary_with[0] == sum(summary_with[1:]) and summary_with[1] > 0,
+          'Con/Sin canales debe conservar los mismos totales y no ocultar los canales existentes en el resumen.')
+    check('data-open-channels' in with_channels and 'admin-business-channels.js' in with_channels,
+          'Los canales deben abrirse en un diálogo desde la fila del negocio.')
+    _, channel_detail, _ = request('/admin/contactos-negocios.php?business_id=' + str(business_id))
+    check('crm-channel-card-value' in channel_detail and 'Fuentes y opciones' in channel_detail,
+          'El detalle debe mostrar canales en tarjetas y conservar sus fuentes.')
+
 
     status, campaign_html, _ = request('/admin/campanas.php?tab=correos')
     check(status == 200 and 'hotel@example.invalid' in campaign_html and 'Pendiente de revisión' in campaign_html, 'Los correos importados deben verse pendientes; no habilitar campañas automáticamente.')

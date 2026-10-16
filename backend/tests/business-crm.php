@@ -16,6 +16,9 @@ crm_check($view['total']===2&&$view['with_contact']===1&&$view['without_contact'
 crm_check(count($view['rows'])===2&&count(array_unique(array_column($view['rows'],'id')))===2,'Several contact observations do not multiply the business row.');
 crm_check((int)$repo->find(1)['research_contact_count']===1,'Multiple sources for the same channel/value count as one contact.');
 crm_check($repo->overview(['destination'=>'jerico','contact'=>'without'])['rows'][0]['public_id']==='ID-dos','No-contact prospects remain searchable by their existing business IDs.');
+$without=$repo->overview(['destination'=>'jerico','contact'=>'without']);$with=$repo->overview(['destination'=>'jerico','contact'=>'with']);
+crm_check($without['total']===1&&$with['total']===1&&$without['summary_total']===2&&$without['summary_with_contact']===1&&$without['summary_without_contact']===1,'Global summary remains meaningful when the list filters to businesses without channels.');
+crm_check($with['summary_total']===$without['summary_total']&&$with['summary_with_contact']===$without['summary_with_contact'],'Presence filter cannot make existing channels disappear from summary.');
 crm_check($repo->overview(['destination'=>'jerico','subscription'=>'paid'])['total']===1,'Paying customers can be viewed separately without deleting their history.');
 crm_check($repo->overview(['destination'=>'jardin'])['total']===1,'An expired paid subscription is a current free opportunity.');
 crm_check($repo->overview(['query'=>'contacto@example.invalid'])['total']===1,'A contact search finds its business once.');
