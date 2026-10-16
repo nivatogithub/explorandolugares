@@ -5,7 +5,8 @@ require dirname(__DIR__,2).'/app/analytics/BasicAudienceService.php';
 header('Content-Type: application/json; charset=utf-8');header('Cache-Control: private, no-store');
 function entity_output(array $body,int $status=200):never{http_response_code($status);echo json_encode($body,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);exit;}
 if(($_SERVER['REQUEST_METHOD']??'GET')!=='GET')entity_output(['error'=>'Método no permitido'],405);
-$type=(string)($_GET['type']??'');$key=(string)($_GET['key']??'');$days=in_array((int)($_GET['days']??30),[30,90],true)?(int)($_GET['days']??30):30;
+$type=is_string($_GET['type']??null)?$_GET['type']:'';$key=is_string($_GET['key']??null)?$_GET['key']:'';
+$requestedDays=$_GET['days']??30;$days=in_array($requestedDays,[30,'30',90,'90'],true)?(int)$requestedDays:30;
 $admin=!empty($_SESSION['admin'])&&time()-(int)($_SESSION['last_seen']??0)<=1800;
 $owner=!empty($_SESSION['business_account_id'])&&time()-(int)($_SESSION['business_last_seen']??0)<=1800;
 if(!$admin&&!$owner)entity_output(['error'=>'Acceso privado requerido'],403);
