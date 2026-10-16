@@ -2,9 +2,10 @@
 declare(strict_types=1);
 require dirname(__DIR__,2).'/app/CoverageService.php';
 require dirname(__DIR__,2).'/app/analytics/AnalyticsService.php';
+require dirname(__DIR__,2).'/app/analytics/BasicAudienceService.php';
 header('Content-Type: application/json; charset=utf-8');
 header('X-Content-Type-Options: nosniff');
-header('Cache-Control: public, max-age=60');
+header('Cache-Control: no-store');
 if(!in_array($_SERVER['REQUEST_METHOD']??'GET',['GET','HEAD'],true)){
     header('Allow: GET, HEAD');http_response_code(405);echo '{"error":"Método no permitido"}';exit;
 }
@@ -27,6 +28,7 @@ try{
     $department=preg_match('/^[0-9]{2}$/D',(string)($_GET['department']??''))?$_GET['department']:null;
     $municipality=preg_match('/^[0-9]{5}$/D',(string)($_GET['municipality']??''))?$_GET['municipality']:null;
     $result['audience']=$measurement?$measurement->report($days,$department,$municipality):['status'=>'not_configured','metrics'=>[]];
+    $result['audience']['basic']=$pdo?(new BasicAudienceService($pdo,dirname(__DIR__)))->report($days,$department):['status'=>'not_configured','page_views'=>null];
     if(!$result['publication_source_available'])header('Cache-Control: no-store');
     if(($_SERVER['REQUEST_METHOD']??'GET')!=='HEAD')echo json_encode($result,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES|JSON_THROW_ON_ERROR);
 }catch(Throwable){http_response_code(503);header('Cache-Control: no-store');echo '{"error":"La información de cobertura no está disponible en este momento."}';}

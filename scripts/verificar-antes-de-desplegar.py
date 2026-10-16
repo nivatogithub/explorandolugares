@@ -40,6 +40,7 @@ def main():
     for path in sorted((ROOT / 'backend/tests').glob('*.php')):
         run(f'PHP {path.name}', ['php', str(path)])
     run('Navegación, enlaces y despliegue', [sys.executable, '-m', 'unittest', 'discover', '-s', 'scripts/tests', '-p', 'test*.py'])
+    run('Integración HTTP de conteo básico sin cookies', [sys.executable, 'backend/tests/basic-audience.integration.py'])
     run('Integración HTTP de participación', [sys.executable, 'backend/tests/integration.py'])
     run('Integración HTTP del panel administrativo', [sys.executable, 'backend/tests/admin-pages.integration.py'])
     print('\nPRE-DESPLIEGUE APROBADO: todas las pruebas locales incluidas terminaron correctamente.', flush=True)

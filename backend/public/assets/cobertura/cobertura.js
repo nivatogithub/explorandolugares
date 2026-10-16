@@ -6,7 +6,7 @@
   const normal=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
   let data=null,department='',filter='all',mapVersion=0,activeTab='cobertura';const maps=new Map();
   const current=()=>data.departments.find(d=>d.code===department);
-  async function json(url){const r=await fetch(url,{credentials:'omit',headers:{Accept:'application/json'}});if(!r.ok)throw Error('No disponible');return r.json();}
+  async function json(url,options={}){const r=await fetch(url,{credentials:'omit',headers:{Accept:'application/json'},...options});if(!r.ok)throw Error('No disponible');return r.json();}
   async function geometry(file){if(!maps.has(file))maps.set(file,json(new URL('assets/cobertura/'+file,root)).catch(e=>{maps.delete(file);throw e;}));return maps.get(file);}
   const option=(value,text)=>{const o=el('option',text);o.value=value;return o;};
   function updateUrl(){const url=new URL(location.href);if(data){url.search='';if(department)url.searchParams.set('departamento',department);}url.hash=activeTab;history.replaceState(null,'',url);}
@@ -60,23 +60,27 @@
     $('audience-scope').textContent=(d?'Interés por '+d.name:'Audiencia del portal')+' · últimos '+days+' días. Viajeros registrados: comunidad general del portal.';
     const fields={'anonymous_sessions':'anonymous','estimated_visitors':'visitors','registered_travelers':'registered','active_travelers':'active','business_views':'business-views','contact_clicks':'contact'};
     Object.values(fields).forEach(id=>$('audience-'+id).textContent='—');
+    $('audience-basic-views').textContent='—';
     $('audience-status').textContent='Consultando medición…';
     $('audience-measurement-dates').textContent='Consultando las fechas de medición…';
     $('audience-source').replaceChildren();
     try{const url=new URL('api/cobertura.php',root);url.searchParams.set('days',days);if(department)url.searchParams.set('department',department);
-      const a=(await json(url)).audience;if(version!==audienceVersion)return;
-      if(!a||a.status==='not_configured')throw Error('pending');
-      Object.entries(fields).forEach(([metric,id])=>{$('audience-'+id).textContent=a.metrics[metric]===null?'—':Number(a.metrics[metric]).toLocaleString('es-CO');});
-      $('audience-status').textContent=a.status==='collecting_baseline'?'Estamos reuniendo datos para mostrar nuestra audiencia.':'Audiencia medida con navegación autorizada.';
-      $('audience-measurement-dates').textContent='Inicio de medición: '+a.started_at.slice(0,10)+'. Última actualización: '+new Date(a.updated_at).toLocaleString('es-CO')+'.';
+      await window.elBasicPageCount;
+      const a=(await json(url,{cache:'no-store'})).audience;if(version!==audienceVersion)return;
+      if(!a)throw Error('pending');
+      const basic=a.basic, basicReady=basic?.status==='enabled';
+      $('audience-basic-views').textContent=basicReady?Number(basic.page_views).toLocaleString('es-CO'):'—';
+      Object.entries(fields).forEach(([metric,id])=>{$('audience-'+id).textContent=a.metrics?.[metric]==null?'—':Number(a.metrics[metric]).toLocaleString('es-CO');});
+      $('audience-status').textContent=basicReady?'Conteo de páginas sin cookies activo. Los indicadores con permiso representan solo esa parte de la audiencia.':'Conteo sin cookies pendiente de activación. Las demás cifras corresponden a medición con permiso.';
+      $('audience-measurement-dates').textContent=(basicReady?'Conteo básico desde: '+basic.started_at.slice(0,10)+'. ':'')+(a.started_at?'Medición opcional desde: '+a.started_at.slice(0,10)+'. ':'Medición opcional no disponible. ')+(a.updated_at?'Actualización: '+new Date(a.updated_at).toLocaleString('es-CO')+'.':'');
       $('audience-countries').replaceChildren();const region=new Intl.DisplayNames(['es'],{type:'region'});
       if(a.countries?.length)a.countries.forEach(c=>$('audience-countries').append(el('p',(c.code==='ZZ'?'País no disponible':c.code==='OTHER'?'Otros países o conexiones sin identificar (grupos pequeños)':region.of(c.code))+': '+c.count+' vistas de páginas')));else $('audience-countries').textContent='Próximamente: audiencia por país.';
       const attribution=el('a','País aproximado: DB-IP Country Lite');attribution.href='https://db-ip.com/';attribution.rel='noopener noreferrer';$('audience-source').append(attribution);
-      $('audience-trend').replaceChildren(el('p',a.page_views===null?'Aún estamos reuniendo datos para hacer esta comparación.':a.page_views+' vistas de páginas en el periodo.'));
-      $('audience-trend').append(el('p',a.comparison_available?(a.growth_percent===null?'Periodo anterior: '+a.previous_views+' vistas. Aún no procede calcular un porcentaje.':'Cambio frente al periodo anterior: '+a.growth_percent+'%.'):'Necesitamos dos periodos completos para mostrar si las visitas aumentaron o disminuyeron.'));
+      $('audience-trend').replaceChildren(el('p',basicReady?basic.page_views+' páginas vistas sin cookies en el periodo (hoy es parcial).':'Conteo básico pendiente de activación.')) ;
+      if(basicReady)$('audience-trend').append(el('p',basic.comparison_available?('Comparación de días completos ('+basic.comparison_period_start+' al '+basic.comparison_period_end+'): '+basic.comparison_current_views+' vistas; periodo anterior: '+basic.previous_views+'. '+(basic.growth_percent===null?'No calculamos porcentaje sobre cero.':'Cambio: '+basic.growth_percent+'%.')):'Aún estamos reuniendo datos para comparar dos periodos completos.'));
       const sources={direct_unknown:'Acceso directo u origen no identificable',search:'Buscadores',instagram:'Instagram',facebook:'Facebook',referral:'Otros sitios',campaign:'Campañas identificadas'};
-      const origin=el('details');origin.append(el('summary','Cómo llegan al portal'));Object.entries(a.sources||{}).forEach(([key,value])=>origin.append(el('p',(sources[key]||key)+': '+value+' vistas')));$('audience-trend').append(origin);
-      if(a.trend?.length){const details=el('details'),summary=el('summary','Ver vistas por día');details.append(summary);a.trend.forEach(day=>details.append(el('p',day.day+': '+day.views)));$('audience-trend').append(details);}
+      const origin=el('details');origin.append(el('summary','Cómo llegan al portal · con permiso'));if(!a.sources)origin.append(el('p','Sin desglose publicable de la medición opcional.'));Object.entries(a.sources||{}).forEach(([key,value])=>origin.append(el('p',(sources[key]||key)+': '+value+' vistas')));$('audience-trend').append(origin);
+      if(basicReady&&basic.trend?.length){const details=el('details'),summary=el('summary','Ver páginas vistas por día · sin cookies');details.append(summary);basic.trend.forEach(day=>details.append(el('p',day.day+': '+day.views)));$('audience-trend').append(details);}
     }catch{if(version!==audienceVersion)return;$('audience-measurement-dates').textContent='Fechas de medición todavía no disponibles.';$('audience-source').replaceChildren();$('audience-status').textContent='Medición todavía no disponible.';$('audience-countries').textContent='Sin desglose publicable.';$('audience-trend').textContent='Sin histórico comprobado.';}
   }
   // Invitations are composed locally. No contacts are collected and no message is sent automatically.
@@ -129,5 +133,6 @@
   const setDisclosureDefaults=()=>document.querySelectorAll('[data-mobile-collapse]').forEach(d=>{d.open=!compactView.matches;});
   setDisclosureDefaults();
   compactView.addEventListener('change',setDisclosureDefaults);
+  window.addEventListener('el:basic-counted',()=>{if(data)renderAudience();});
   init();
 })();

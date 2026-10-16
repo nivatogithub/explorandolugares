@@ -108,6 +108,8 @@
 #contenido .measurement-status, #contenido .notice { padding: 14px 16px; border: 1px solid var(--el-border); border-radius: var(--el-radius-field); background: var(--el-hover); color: var(--el-text); font-size: 13px; }
 #contenido .audience-metrics { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 14px; margin-top: 24px; }
 #contenido .audience-metrics article { min-width: 0; padding: 20px; border: 1px solid var(--el-border); border-radius: var(--el-radius-card); background: var(--el-card); }
+#contenido .audience-metrics .audience-basic-metric { grid-column: 1 / -1; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+#contenido .audience-basic-metric>div { min-width: 0; }
 #contenido .audience-metrics span { display: block; font-size: 13px; font-weight: 650; }
 #contenido .audience-metrics strong { display: block; font-size: 32px; line-height: 1.6; color: var(--el-text); }
 #contenido .audience-metrics small { display: block; font-size: 12px; color: var(--el-muted); }
