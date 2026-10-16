@@ -6,6 +6,7 @@ ROOT=Path(__file__).resolve().parents[1]
 spec=importlib.util.spec_from_file_location('deploy',ROOT/'scripts/desplegar-sftp.py');mod=importlib.util.module_from_spec(spec);spec.loader.exec_module(mod)
 c=mod.load_config(ROOT.parent/'explorandolugares/.local/sftp.json');client=mod.SFTP(c);out=ROOT/'.local/analytics-base';out.mkdir(parents=True,exist_ok=True)
 paths=['public/assets/menu-principal.js','public/destino.php','public/negocio.php']+[f'public/{prefix}privacidad{suffix}' for prefix in ['', 'en/','pt-br/'] for suffix in ['.html','/index.html']]
+paths += ['public/'+prefix+'destinos/index.html' for prefix in ['', 'en/','pt-br/']]
 client.run([f'get {mod.quote(c["remote_base"]+"/.explorandolugares-deploy.json")} {mod.quote(out/"manifest.json")}'])
 m=json.loads((out/'manifest.json').read_text());assert m['site']=='explorandolugares';entries={f['relative']:f for f in m['files']}
 commands=[]
