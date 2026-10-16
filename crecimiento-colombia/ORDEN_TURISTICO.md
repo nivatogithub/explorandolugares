@@ -42,110 +42,110 @@ Evaluación editorial, no ranking oficial de visitantes. Ver REVISION_TURISTICA_
 | 32 | Vichada | P3 → P3 | Desarrollo especializado con evidencia comparativa limitada | amazonia |
 | 33 | Arauca | P3 → P3 | Desarrollo especializado con evidencia comparativa limitada | amazonia |
 
-## Cola completa por bloques
+## Inventario ordenado: 97 candidatos en alcance P1–P2; 3 diferidos; P4 excluida
 
-| Orden | Lugar | Departamento | Bloque depto/lugar | Turismo editorial /100 | Lugar anterior → propuesto | Categoría histórica Antioquia | Criterio | Fuentes |
+| Orden | Lugar | Departamento | Bloque depto/lugar | Turismo editorial /100 | Lugar anterior → propuesto | Categoría histórica Antioquia | Alcance | Criterio | Fuentes |
 |---:|---|---|---|---:|---|---|---|---|
-| 1 | Cartagena | Bolívar | P1/P1 | 100 | P1 → P1 | — | Patrimonio y destino vacacional | caribe, flujos |
-| 2 | Bogotá | Bogotá D.C. | P1/P1 | 100 | P2 → P1 | — | Cultura, patrimonio y oferta urbana | orientales, flujos |
-| 3 | Medellín | Antioquia | P1/P1 | 100 | P1 → P1 | 1 | Ciudad, cultura y oferta diversa | nacional, flujos |
-| 4 | Santa Marta | Magdalena | P1/P1 | 96 | P2 → P1 | — | Playa y base de naturaleza | caribe |
-| 5 | San Andrés | San Andrés, Providencia y Santa Catalina | P1/P1 | 94 | P2 → P1 | — | Destino insular vacacional | caribe |
-| 6 | Salento | Quindío | P1/P1 | 94 | P1 → P1 | — | Cocora y paisaje cafetero | occidentales |
-| 7 | Villa de Leyva | Boyacá | P1/P1 | 94 | P2 → P1 | — | Patrimonio y escapadas nacionales | orientales |
-| 8 | Guatapé | Antioquia | P1/P1 | 94 | P1 → P1 | 1 | Embalse y producto paisajístico | occidentales, legado |
-| 9 | Cali | Valle del Cauca | P1/P1 | 94 | P2 → P1 | — | Salsa, cultura y oferta urbana | pacifico |
-| 10 | Barichara | Santander | P1/P1 | 90 | P2 → P1 | — | Patrimonio y circuito regional | orientales |
-| 11 | Zipaquirá | Cundinamarca | P1/P1 | 90 | P2 → P1 | — | Atractivo cultural y excursión nacional | orientales |
-| 12 | Barranquilla | Atlántico | P1/P1 | 90 | P2 → P1 | — | Carnaval, cultura y oferta urbana | caribe |
-| 13 | San Gil | Santander | P1/P1 | 86 | P2 → P1 | — | Turismo de aventura consolidado | orientales |
-| 14 | Santa Rosa de Cabal | Risaralda | P1/P1 | 86 | P2 → P1 | — | Termalismo y naturaleza | occidentales |
-| 15 | Montenegro | Quindío | P1/P1 | 86 | nuevo → P1 | — | Parque del Café y paisaje cafetero | montenegro |
-| 16 | La Macarena | Meta | P1/P1 | 86 | P2 → P1 | — | Caño Cristales y naturaleza | amazonia |
-| 17 | Providencia | San Andrés, Providencia y Santa Catalina | P1/P1 | 86 | P2 → P1 | — | Naturaleza y destino insular | caribe |
-| 18 | Popayán | Cauca | P1/P1 | 86 | P2 → P1 | — | Patrimonio y tradición cultural | macizo |
-| 19 | Pasto | Nariño | P1/P1 | 86 | P2 → P1 | — | Carnaval, cultura y paisajes | macizo |
-| 20 | Santa Fe de Antioquia | Antioquia | P1/P1 | 84 | P1 → P1 | 1 | Patrimonio y descanso regional | occidentales, circuito |
-| 21 | Leticia | Amazonas | P1/P1 | 84 | P2 → P1 | — | Portal turístico amazónico | amazonia |
-| 22 | Filandia | Quindío | P1/P1 | 82 | P2 → P1 | — | Paisaje y pueblo cafetero | occidentales |
-| 23 | Jardín | Antioquia | P1/P1 | 82 | P1 → P1 | 1 | Pueblo patrimonial y naturaleza | occidentales, legado |
-| 24 | Manizales | Caldas | P1/P1 | 82 | P2 → P1 | — | Cultura y acceso al paisaje cafetero | occidentales |
-| 25 | Villavicencio | Meta | P1/P1 | 82 | P2 → P1 | — | Cultura llanera y escapadas | amazonia |
-| 26 | Ipiales | Nariño | P1/P1 | 82 | P2 → P1 | — | Turismo religioso y circuito fronterizo | macizo |
-| 27 | Armenia | Quindío | P1/P1 | 82 | P2 → P1 | — | Base de circuito cafetero | occidentales |
-| 28 | Pereira | Risaralda | P1/P1 | 82 | P2 → P1 | — | Base de circuito cafetero | occidentales |
-| 29 | Guadalajara de Buga | Valle del Cauca | P1/P1 | 82 | P2 → P1 | — | Turismo religioso y patrimonio | pacifico |
-| 30 | Bucaramanga | Santander | P1/P1 | 82 | nuevo → P1 | — | Base de circuitos de Santander | andina |
-| 31 | Melgar | Tolima | P1/P1 | 82 | nuevo → P1 | — | Descanso y turismo regional consolidado | andina |
-| 32 | Girardot | Cundinamarca | P1/P1 | 82 | nuevo → P1 | — | Descanso y turismo regional consolidado | andina |
-| 33 | San Agustín | Huila | P1/P1 | 80 | P2 → P1 | — | Arqueología y patrimonio | macizo |
-| 34 | Puerto Triunfo | Antioquia | P1/P1 | 80 | P1 → P1 | 1 | Corredor de naturaleza y recreación | legado |
-| 35 | Santa Cruz de Mompox | Bolívar | P1/P1 | 80 | P2 → P1 | — | Patrimonio y turismo cultural | caribe |
-| 36 | Bahía Solano | Chocó | P1/P1 | 80 | P3 → P1 | — | Naturaleza y costa Pacífica | pacifico |
-| 37 | Santiago de Tolú | Sucre | P1/P1 | 80 | P3 → P1 | — | Playa y circuito de Morrosquillo | sucre |
-| 38 | Coveñas | Sucre | P1/P1 | 80 | nuevo → P1 | — | Playa y destino vacacional | sucre |
-| 39 | Palomino | La Guajira | P1/P1 | 80 | nuevo → P1 | — | Playa y turismo de naturaleza | palomino |
-| 40 | Minca | Magdalena | P1/P1 | 80 | nuevo → P1 | — | Naturaleza y circuito de Santa Marta | minca |
-| 41 | Paipa | Boyacá | P1/P1 | 80 | nuevo → P1 | — | Termalismo y turismo regional consolidado | andina |
-| 42 | Quimbaya | Quindío | P1/P1 | 80 | nuevo → P1 | — | Circuito de parques y paisaje cafetero | quindio |
-| 43 | Villavieja | Huila | P1/P1 | 80 | nuevo → P1 | — | Tatacoa y turismo de paisaje | villavieja |
-| 44 | Nuquí | Chocó | P1/P1 | 78 | P3 → P1 | — | Naturaleza y turismo especializado | pacifico |
-| 45 | Puerto Nariño | Amazonas | P1/P1 | 78 | P2 → P1 | — | Naturaleza y experiencia amazónica | amazonia |
-| 46 | Capurganá | Chocó | P1/P1 | 78 | nuevo → P1 | — | Playa y naturaleza del Darién | capurgana |
-| 47 | El Peñol | Antioquia | P1/P1 | 76 | P1 → P1 | 1 | Embalse y circuito con Guatapé | occidentales, legado |
-| 48 | Guatavita | Cundinamarca | P1/P1 | 76 | P2 → P1 | — | Paisaje y circuito de leyenda | orientales |
-| 49 | San Jerónimo | Antioquia | P1/P1 | 74 | P1 → P1 | 1 | Descanso, alojamiento y circuito occidental | sanjeronimo, circuito |
-| 50 | Jericó | Antioquia | P1/P1 | 74 | P1 → P1 | 1 | Patrimonio, cultura y turismo religioso | occidentales, legado |
-| 51 | Monguí | Boyacá | P1/P1 | 74 | P2 → P1 | — | Patrimonio y turismo de naturaleza | orientales |
-| 52 | Riohacha | La Guajira | P1/P1 | 72 | P2 → P1 | — | Portal turístico de La Guajira | caribe |
-| 53 | Uribia | La Guajira | P1/P1 | 72 | P2 → P1 | — | Cultura wayúu y acceso a alta Guajira | caribe |
-| 54 | El Cocuy | Boyacá | P1/P1 | 72 | nuevo → P1 | — | Turismo de montaña especializado | andina |
-| 55 | Sopetrán | Antioquia | P1/P1 | 70 | P1 → P1 | 1 | Descanso del Occidente cercano | circuito, legado |
-| 56 | Puerto Colombia | Atlántico | P1/P1 | 70 | P2 → P1 | — | Costa y escapada metropolitana | caribe |
-| 57 | Ibagué | Tolima | P1/P1 | 70 | P2 → P1 | — | Cultura musical y naturaleza regional | orientales |
-| 58 | Girón | Santander | P1/P1 | 70 | nuevo → P1 | — | Patrimonio y circuito metropolitano | andina |
-| 59 | Villeta | Cundinamarca | P1/P1 | 70 | nuevo → P1 | — | Escapada regional de clima cálido | andina |
-| 60 | El Carmen de Viboral | Antioquia | P1/P2 | 68 | P1 → P2 | 1 | Cerámica y turismo cultural | legado |
-| 61 | Honda | Tolima | P1/P2 | 68 | P2 → P2 | — | Patrimonio y circuito del Magdalena | orientales |
-| 62 | Guaduas | Cundinamarca | P1/P2 | 68 | nuevo → P2 | — | Patrimonio y turismo regional | andina |
-| 63 | Socorro | Santander | P1/P2 | 68 | nuevo → P2 | — | Patrimonio y circuito santandereano | andina |
-| 64 | San Rafael | Antioquia | P1/P2 | 66 | P1 → P2 | 1 | Ríos y naturaleza regional | legado |
-| 65 | Cocorná | Antioquia | P1/P2 | 66 | P1 → P2 | 1 | Naturaleza y escapadas regionales | legado |
-| 66 | San Carlos | Antioquia | P1/P2 | 66 | P1 → P2 | 1 | Naturaleza y ríos regionales | legado |
-| 67 | Salamina | Caldas | P1/P2 | 66 | P2 → P2 | — | Patrimonio cafetero | occidentales |
-| 68 | Silvia | Cauca | P1/P2 | 66 | P2 → P2 | — | Cultura y circuito regional | macizo |
-| 69 | San Onofre | Sucre | P1/P2 | 66 | nuevo → P2 | — | Costa y naturaleza regional | sucre |
-| 70 | Buenaventura | Valle del Cauca | P1/P2 | 66 | nuevo → P2 | — | Portal turístico del Pacífico | nacional, pacifico |
-| 71 | Murillo | Tolima | P1/P2 | 66 | nuevo → P2 | — | Paisaje de montaña y naturaleza | murillo |
-| 72 | Prado | Tolima | P1/P2 | 66 | nuevo → P2 | — | Embalse y recreación regional | andina |
-| 73 | El Retiro | Antioquia | P1/P2 | 64 | P1 → P2 | 1 | Escapada cultural cercana | legado |
-| 74 | Rionegro | Antioquia | P1/P2 | 64 | P1 → P2 | 1 | Servicios y circuito del Oriente | legado |
-| 75 | Neiva | Huila | P1/P2 | 62 | P2 → P2 | — | Portal regional del Huila | orientales |
-| 76 | Necoclí | Antioquia | P1/P2 | 60 | P1 → P2 | 1 | Playa y acceso al Urabá | legado |
-| 77 | Arboletes | Antioquia | P1/P2 | 60 | P1 → P2 | 1 | Playa y producto regional | legado |
-| 78 | Dibulla | La Guajira | P1/P2 | 60 | nuevo → P2 | — | Circuito costero de La Guajira | caribe, palomino |
-| 79 | Támesis | Antioquia | P1/P2 | 58 | P1 → P2 | 1 | Naturaleza con oferta local; consolidación y promoción pendientes | tamesis, legado |
-| 80 | San Pedro de los Milagros | Antioquia | P1/P2 | 58 | P1 → P2 | 1 | Turismo religioso regional | legado |
-| 81 | Santa Rosa de Osos | Antioquia | P1/P2 | 58 | P1 → P2 | 1 | Cultura y turismo religioso | legado |
-| 82 | Sincelejo | Sucre | P1/P2 | 58 | P3 → P2 | — | Cultura y servicios regionales | caribe, sucre |
-| 83 | Acandí | Chocó | P1/P2 | 58 | nuevo → P2 | — | Portal municipal del Darién | capurgana, caribe |
-| 84 | Venecia | Antioquia | P1/P2 | 48 | P1 → P2 | 1 | Naturaleza y producto regional | legado |
-| 85 | Sonsón | Antioquia | P1/P2 | 48 | P2 → P2 | 2 | Patrimonio y desarrollo emergente | legado |
-| 86 | Cauca Viejo | Antioquia | P1/P2 | 48 | P2 → P2 | — | Destino dependiente del circuito Jericó | legado |
-| 87 | Valledupar | Cesar | P2/P1 | 80 | P3 → P1 | — | Música y turismo cultural estacional | caribe |
-| 88 | San José del Guaviare | Guaviare | P2/P1 | 74 | P3 → P1 | — | Naturaleza y arte rupestre | amazonia |
-| 89 | Yopal | Casanare | P2/P2 | 68 | P3 → P2 | — | Portal de naturaleza llanera | amazonia |
-| 90 | Lorica | Córdoba | P2/P2 | 66 | P3 → P2 | — | Patrimonio y circuito del Sinú | caribe |
-| 91 | Mocoa | Putumayo | P2/P2 | 66 | P3 → P2 | — | Naturaleza y circuito amazónico | macizo, amazonia |
-| 92 | Inírida | Guainía | P2/P2 | 64 | P3 → P2 | — | Paisaje y naturaleza especializada | amazonia |
-| 93 | Montería | Córdoba | P2/P2 | 62 | P3 → P2 | — | Oferta urbana y circuito regional | caribe |
-| 94 | Cúcuta | Norte de Santander | P2/P2 | 62 | P3 → P2 | — | Servicios y turismo urbano regional | orientales |
-| 95 | Pamplona | Norte de Santander | P2/P2 | 60 | P3 → P2 | — | Patrimonio y turismo regional | orientales |
-| 96 | Florencia | Caquetá | P2/P2 | 56 | P3 → P2 | — | Portal amazónico y oferta emergente | macizo, amazonia |
-| 97 | Sibundoy | Putumayo | P2/P2 | 56 | P3 → P2 | — | Cultura y circuito del valle | macizo |
-| 98 | Mitú | Vaupés | P3/P2 | 46 | P3 → P2 | — | Naturaleza y turismo especializado | amazonia |
-| 99 | Puerto Carreño | Vichada | P3/P2 | 46 | P3 → P2 | — | Naturaleza y turismo especializado | amazonia |
-| 100 | Arauca | Arauca | P3/P3 | 42 | P3 → P3 | — | Cultura llanera y turismo de nicho | amazonia |
+| 1 | Cartagena | Bolívar | P1/P1 | 100 | P1 → P1 | — | P1–P2 elegible | Patrimonio y destino vacacional | caribe, flujos |
+| 2 | Bogotá | Bogotá D.C. | P1/P1 | 100 | P2 → P1 | — | P1–P2 elegible | Cultura, patrimonio y oferta urbana | orientales, flujos |
+| 3 | Medellín | Antioquia | P1/P1 | 100 | P1 → P1 | 1 | P1–P2 elegible | Ciudad, cultura y oferta diversa | nacional, flujos |
+| 4 | Santa Marta | Magdalena | P1/P1 | 96 | P2 → P1 | — | P1–P2 elegible | Playa y base de naturaleza | caribe |
+| 5 | San Andrés | San Andrés, Providencia y Santa Catalina | P1/P1 | 94 | P2 → P1 | — | P1–P2 elegible | Destino insular vacacional | caribe |
+| 6 | Salento | Quindío | P1/P1 | 94 | P1 → P1 | — | P1–P2 elegible | Cocora y paisaje cafetero | occidentales |
+| 7 | Villa de Leyva | Boyacá | P1/P1 | 94 | P2 → P1 | — | P1–P2 elegible | Patrimonio y escapadas nacionales | orientales |
+| 8 | Guatapé | Antioquia | P1/P1 | 94 | P1 → P1 | 1 | P1–P2 elegible | Embalse y producto paisajístico | occidentales, legado |
+| 9 | Cali | Valle del Cauca | P1/P1 | 94 | P2 → P1 | — | P1–P2 elegible | Salsa, cultura y oferta urbana | pacifico |
+| 10 | Barichara | Santander | P1/P1 | 90 | P2 → P1 | — | P1–P2 elegible | Patrimonio y circuito regional | orientales |
+| 11 | Zipaquirá | Cundinamarca | P1/P1 | 90 | P2 → P1 | — | P1–P2 elegible | Atractivo cultural y excursión nacional | orientales |
+| 12 | Barranquilla | Atlántico | P1/P1 | 90 | P2 → P1 | — | P1–P2 elegible | Carnaval, cultura y oferta urbana | caribe |
+| 13 | San Gil | Santander | P1/P1 | 86 | P2 → P1 | — | P1–P2 elegible | Turismo de aventura consolidado | orientales |
+| 14 | Santa Rosa de Cabal | Risaralda | P1/P1 | 86 | P2 → P1 | — | P1–P2 elegible | Termalismo y naturaleza | occidentales |
+| 15 | Montenegro | Quindío | P1/P1 | 86 | nuevo → P1 | — | P1–P2 elegible | Parque del Café y paisaje cafetero | montenegro |
+| 16 | La Macarena | Meta | P1/P1 | 86 | P2 → P1 | — | P1–P2 elegible | Caño Cristales y naturaleza | amazonia |
+| 17 | Providencia | San Andrés, Providencia y Santa Catalina | P1/P1 | 86 | P2 → P1 | — | P1–P2 elegible | Naturaleza y destino insular | caribe |
+| 18 | Popayán | Cauca | P1/P1 | 86 | P2 → P1 | — | P1–P2 elegible | Patrimonio y tradición cultural | macizo |
+| 19 | Pasto | Nariño | P1/P1 | 86 | P2 → P1 | — | P1–P2 elegible | Carnaval, cultura y paisajes | macizo |
+| 20 | Santa Fe de Antioquia | Antioquia | P1/P1 | 84 | P1 → P1 | 1 | P1–P2 elegible | Patrimonio y descanso regional | occidentales, circuito |
+| 21 | Leticia | Amazonas | P1/P1 | 84 | P2 → P1 | — | P1–P2 elegible | Portal turístico amazónico | amazonia |
+| 22 | Filandia | Quindío | P1/P1 | 82 | P2 → P1 | — | P1–P2 elegible | Paisaje y pueblo cafetero | occidentales |
+| 23 | Jardín | Antioquia | P1/P1 | 82 | P1 → P1 | 1 | P1–P2 elegible | Pueblo patrimonial y naturaleza | occidentales, legado |
+| 24 | Manizales | Caldas | P1/P1 | 82 | P2 → P1 | — | P1–P2 elegible | Cultura y acceso al paisaje cafetero | occidentales |
+| 25 | Villavicencio | Meta | P1/P1 | 82 | P2 → P1 | — | P1–P2 elegible | Cultura llanera y escapadas | amazonia |
+| 26 | Ipiales | Nariño | P1/P1 | 82 | P2 → P1 | — | P1–P2 elegible | Turismo religioso y circuito fronterizo | macizo |
+| 27 | Armenia | Quindío | P1/P1 | 82 | P2 → P1 | — | P1–P2 elegible | Base de circuito cafetero | occidentales |
+| 28 | Pereira | Risaralda | P1/P1 | 82 | P2 → P1 | — | P1–P2 elegible | Base de circuito cafetero | occidentales |
+| 29 | Guadalajara de Buga | Valle del Cauca | P1/P1 | 82 | P2 → P1 | — | P1–P2 elegible | Turismo religioso y patrimonio | pacifico |
+| 30 | Bucaramanga | Santander | P1/P1 | 82 | nuevo → P1 | — | P1–P2 elegible | Base de circuitos de Santander | andina |
+| 31 | Melgar | Tolima | P1/P1 | 82 | nuevo → P1 | — | P1–P2 elegible | Descanso y turismo regional consolidado | andina |
+| 32 | Girardot | Cundinamarca | P1/P1 | 82 | nuevo → P1 | — | P1–P2 elegible | Descanso y turismo regional consolidado | andina |
+| 33 | San Agustín | Huila | P1/P1 | 80 | P2 → P1 | — | P1–P2 elegible | Arqueología y patrimonio | macizo |
+| 34 | Puerto Triunfo | Antioquia | P1/P1 | 80 | P1 → P1 | 1 | P1–P2 elegible | Corredor de naturaleza y recreación | legado |
+| 35 | Santa Cruz de Mompox | Bolívar | P1/P1 | 80 | P2 → P1 | — | P1–P2 elegible | Patrimonio y turismo cultural | caribe |
+| 36 | Bahía Solano | Chocó | P1/P1 | 80 | P3 → P1 | — | P1–P2 elegible | Naturaleza y costa Pacífica | pacifico |
+| 37 | Santiago de Tolú | Sucre | P1/P1 | 80 | P3 → P1 | — | P1–P2 elegible | Playa y circuito de Morrosquillo | sucre |
+| 38 | Coveñas | Sucre | P1/P1 | 80 | nuevo → P1 | — | P1–P2 elegible | Playa y destino vacacional | sucre |
+| 39 | Palomino | La Guajira | P1/P1 | 80 | nuevo → P1 | — | P1–P2 elegible | Playa y turismo de naturaleza | palomino |
+| 40 | Minca | Magdalena | P1/P1 | 80 | nuevo → P1 | — | P1–P2 elegible | Naturaleza y circuito de Santa Marta | minca |
+| 41 | Paipa | Boyacá | P1/P1 | 80 | nuevo → P1 | — | P1–P2 elegible | Termalismo y turismo regional consolidado | andina |
+| 42 | Quimbaya | Quindío | P1/P1 | 80 | nuevo → P1 | — | P1–P2 elegible | Circuito de parques y paisaje cafetero | quindio |
+| 43 | Villavieja | Huila | P1/P1 | 80 | nuevo → P1 | — | P1–P2 elegible | Tatacoa y turismo de paisaje | villavieja |
+| 44 | Nuquí | Chocó | P1/P1 | 78 | P3 → P1 | — | P1–P2 elegible | Naturaleza y turismo especializado | pacifico |
+| 45 | Puerto Nariño | Amazonas | P1/P1 | 78 | P2 → P1 | — | P1–P2 elegible | Naturaleza y experiencia amazónica | amazonia |
+| 46 | Capurganá | Chocó | P1/P1 | 78 | nuevo → P1 | — | P1–P2 elegible | Playa y naturaleza del Darién | capurgana |
+| 47 | El Peñol | Antioquia | P1/P1 | 76 | P1 → P1 | 1 | P1–P2 elegible | Embalse y circuito con Guatapé | occidentales, legado |
+| 48 | Guatavita | Cundinamarca | P1/P1 | 76 | P2 → P1 | — | P1–P2 elegible | Paisaje y circuito de leyenda | orientales |
+| 49 | San Jerónimo | Antioquia | P1/P1 | 74 | P1 → P1 | 1 | P1–P2 elegible | Descanso, alojamiento y circuito occidental | sanjeronimo, circuito |
+| 50 | Jericó | Antioquia | P1/P1 | 74 | P1 → P1 | 1 | P1–P2 elegible | Patrimonio, cultura y turismo religioso | occidentales, legado |
+| 51 | Monguí | Boyacá | P1/P1 | 74 | P2 → P1 | — | P1–P2 elegible | Patrimonio y turismo de naturaleza | orientales |
+| 52 | Riohacha | La Guajira | P1/P1 | 72 | P2 → P1 | — | P1–P2 elegible | Portal turístico de La Guajira | caribe |
+| 53 | Uribia | La Guajira | P1/P1 | 72 | P2 → P1 | — | P1–P2 elegible | Cultura wayúu y acceso a alta Guajira | caribe |
+| 54 | El Cocuy | Boyacá | P1/P1 | 72 | nuevo → P1 | — | P1–P2 elegible | Turismo de montaña especializado | andina |
+| 55 | Sopetrán | Antioquia | P1/P1 | 70 | P1 → P1 | 1 | P1–P2 elegible | Descanso del Occidente cercano | circuito, legado |
+| 56 | Puerto Colombia | Atlántico | P1/P1 | 70 | P2 → P1 | — | P1–P2 elegible | Costa y escapada metropolitana | caribe |
+| 57 | Ibagué | Tolima | P1/P1 | 70 | P2 → P1 | — | P1–P2 elegible | Cultura musical y naturaleza regional | orientales |
+| 58 | Girón | Santander | P1/P1 | 70 | nuevo → P1 | — | P1–P2 elegible | Patrimonio y circuito metropolitano | andina |
+| 59 | Villeta | Cundinamarca | P1/P1 | 70 | nuevo → P1 | — | P1–P2 elegible | Escapada regional de clima cálido | andina |
+| 60 | El Carmen de Viboral | Antioquia | P1/P2 | 68 | P1 → P2 | 1 | P1–P2 elegible | Cerámica y turismo cultural | legado |
+| 61 | Honda | Tolima | P1/P2 | 68 | P2 → P2 | — | P1–P2 elegible | Patrimonio y circuito del Magdalena | orientales |
+| 62 | Guaduas | Cundinamarca | P1/P2 | 68 | nuevo → P2 | — | P1–P2 elegible | Patrimonio y turismo regional | andina |
+| 63 | Socorro | Santander | P1/P2 | 68 | nuevo → P2 | — | P1–P2 elegible | Patrimonio y circuito santandereano | andina |
+| 64 | San Rafael | Antioquia | P1/P2 | 66 | P1 → P2 | 1 | P1–P2 elegible | Ríos y naturaleza regional | legado |
+| 65 | Cocorná | Antioquia | P1/P2 | 66 | P1 → P2 | 1 | P1–P2 elegible | Naturaleza y escapadas regionales | legado |
+| 66 | San Carlos | Antioquia | P1/P2 | 66 | P1 → P2 | 1 | P1–P2 elegible | Naturaleza y ríos regionales | legado |
+| 67 | Salamina | Caldas | P1/P2 | 66 | P2 → P2 | — | P1–P2 elegible | Patrimonio cafetero | occidentales |
+| 68 | Silvia | Cauca | P1/P2 | 66 | P2 → P2 | — | P1–P2 elegible | Cultura y circuito regional | macizo |
+| 69 | San Onofre | Sucre | P1/P2 | 66 | nuevo → P2 | — | P1–P2 elegible | Costa y naturaleza regional | sucre |
+| 70 | Buenaventura | Valle del Cauca | P1/P2 | 66 | nuevo → P2 | — | P1–P2 elegible | Portal turístico del Pacífico | nacional, pacifico |
+| 71 | Murillo | Tolima | P1/P2 | 66 | nuevo → P2 | — | P1–P2 elegible | Paisaje de montaña y naturaleza | murillo |
+| 72 | Prado | Tolima | P1/P2 | 66 | nuevo → P2 | — | P1–P2 elegible | Embalse y recreación regional | andina |
+| 73 | El Retiro | Antioquia | P1/P2 | 64 | P1 → P2 | 1 | P1–P2 elegible | Escapada cultural cercana | legado |
+| 74 | Rionegro | Antioquia | P1/P2 | 64 | P1 → P2 | 1 | P1–P2 elegible | Servicios y circuito del Oriente | legado |
+| 75 | Neiva | Huila | P1/P2 | 62 | P2 → P2 | — | P1–P2 elegible | Portal regional del Huila | orientales |
+| 76 | Necoclí | Antioquia | P1/P2 | 60 | P1 → P2 | 1 | P1–P2 elegible | Playa y acceso al Urabá | legado |
+| 77 | Arboletes | Antioquia | P1/P2 | 60 | P1 → P2 | 1 | P1–P2 elegible | Playa y producto regional | legado |
+| 78 | Dibulla | La Guajira | P1/P2 | 60 | nuevo → P2 | — | P1–P2 elegible | Circuito costero de La Guajira | caribe, palomino |
+| 79 | Támesis | Antioquia | P1/P2 | 58 | P1 → P2 | 1 | P1–P2 elegible | Naturaleza con oferta local; consolidación y promoción pendientes | tamesis, legado |
+| 80 | San Pedro de los Milagros | Antioquia | P1/P2 | 58 | P1 → P2 | 1 | P1–P2 elegible | Turismo religioso regional | legado |
+| 81 | Santa Rosa de Osos | Antioquia | P1/P2 | 58 | P1 → P2 | 1 | P1–P2 elegible | Cultura y turismo religioso | legado |
+| 82 | Sincelejo | Sucre | P1/P2 | 58 | P3 → P2 | — | P1–P2 elegible | Cultura y servicios regionales | caribe, sucre |
+| 83 | Acandí | Chocó | P1/P2 | 58 | nuevo → P2 | — | P1–P2 elegible | Portal municipal del Darién | capurgana, caribe |
+| 84 | Venecia | Antioquia | P1/P2 | 48 | P1 → P2 | 1 | P1–P2 elegible | Naturaleza y producto regional | legado |
+| 85 | Sonsón | Antioquia | P1/P2 | 48 | P2 → P2 | 2 | P1–P2 elegible | Patrimonio y desarrollo emergente | legado |
+| 86 | Cauca Viejo | Antioquia | P1/P2 | 48 | P2 → P2 | — | P1–P2 elegible | Destino dependiente del circuito Jericó | legado |
+| 87 | Valledupar | Cesar | P2/P1 | 80 | P3 → P1 | — | P1–P2 elegible | Música y turismo cultural estacional | caribe |
+| 88 | San José del Guaviare | Guaviare | P2/P1 | 74 | P3 → P1 | — | P1–P2 elegible | Naturaleza y arte rupestre | amazonia |
+| 89 | Yopal | Casanare | P2/P2 | 68 | P3 → P2 | — | P1–P2 elegible | Portal de naturaleza llanera | amazonia |
+| 90 | Lorica | Córdoba | P2/P2 | 66 | P3 → P2 | — | P1–P2 elegible | Patrimonio y circuito del Sinú | caribe |
+| 91 | Mocoa | Putumayo | P2/P2 | 66 | P3 → P2 | — | P1–P2 elegible | Naturaleza y circuito amazónico | macizo, amazonia |
+| 92 | Inírida | Guainía | P2/P2 | 64 | P3 → P2 | — | P1–P2 elegible | Paisaje y naturaleza especializada | amazonia |
+| 93 | Montería | Córdoba | P2/P2 | 62 | P3 → P2 | — | P1–P2 elegible | Oferta urbana y circuito regional | caribe |
+| 94 | Cúcuta | Norte de Santander | P2/P2 | 62 | P3 → P2 | — | P1–P2 elegible | Servicios y turismo urbano regional | orientales |
+| 95 | Pamplona | Norte de Santander | P2/P2 | 60 | P3 → P2 | — | P1–P2 elegible | Patrimonio y turismo regional | orientales |
+| 96 | Florencia | Caquetá | P2/P2 | 56 | P3 → P2 | — | P1–P2 elegible | Portal amazónico y oferta emergente | macizo, amazonia |
+| 97 | Sibundoy | Putumayo | P2/P2 | 56 | P3 → P2 | — | P1–P2 elegible | Cultura y circuito del valle | macizo |
+| 98 | Mitú | Vaupés | P3/P2 | 46 | P3 → P2 | — | Diferido fuera de cola | Naturaleza y turismo especializado | amazonia |
+| 99 | Puerto Carreño | Vichada | P3/P2 | 46 | P3 → P2 | — | Diferido fuera de cola | Naturaleza y turismo especializado | amazonia |
+| 100 | Arauca | Arauca | P3/P3 | 42 | P3 → P3 | — | Diferido fuera de cola | Cultura llanera y turismo de nicho | amazonia |
 
 ## Fuentes y límites
 
@@ -195,4 +195,4 @@ Cada código de las tablas corresponde a una fuente consultada. Fuente promocion
 
 - **legado**: [Clasificación interna del propietario, 11/10/2026](backend/app/contact-options.json). Consulta 2026-10-16; archivo_local_completo. municipalityCatalog contiene 125 municipios con pilotCategory 1–4; no ranking oficial ni orden dentro de la categoría.
 
-Puntuaciones e inputs: turismo.json; IDs y punteros al inventario: operacion.json. Estados/gates anteriores intactos; sin aprobación de prioridades ni ejecución automática.
+Alcance vigente: ALCANCE.md y alcance.json. Numeración de esta tabla = inventario, no asignación ejecutable. Puntuaciones e inputs: turismo.json; IDs y punteros al inventario: operacion.json. Estados/gates anteriores intactos; sin aprobación de prioridades ni ejecución automática.

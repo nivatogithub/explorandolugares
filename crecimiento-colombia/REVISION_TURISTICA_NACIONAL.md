@@ -1,5 +1,7 @@
 # Revisión turística nacional — 16/10/2026
 
+**Alcance vigente:** [ALCANCE.md](ALCANCE.md) y `alcance.json` prevalecen sobre las fases posteriores descritas aquí: P4 excluida; P1–P2 como techo operativo; P3 solo referencia futura. Cola de 97 candidatos, 3 diferidos, cero workers iniciados.
+
 Se revisaron las 33 unidades territoriales (32 departamentos y Bogotá D.C.) y se reordenaron **100 candidatos editoriales**, incluidos 22 añadidos a los 78 anteriores. No se inspeccionaron todos los municipios del país ni se afirma un censo completo. El catálogo original y la cola anterior están en historico/CO-editorial-v2/; el portal y su contact-options.json no se modificaron.
 
 ## Qué significa este orden

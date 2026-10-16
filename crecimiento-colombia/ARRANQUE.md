@@ -1,5 +1,7 @@
 # Estado operativo vigente — 16/10/2026
 
+**Alcance vigente:** [ALCANCE.md](ALCANCE.md) y `alcance.json` prevalecen sobre las fases posteriores descritas aquí: P4 excluida; P1–P2 como techo operativo; P3 solo referencia futura. Cola de 97 candidatos, 3 diferidos, cero workers iniciados.
+
 Plan auditado en rama `plan/maestro-cobertura-auditado-20261016`, base a75d341. Ver REVISION_TURISTICA_NACIONAL.md y operacion.json. El archivo histórico REVISION_REPOSITORIO.md describe una revisión previa, no esta ejecución.
 
 No iniciar workers automáticamente. Todos los lugares siguen sin iniciar, sin asignación ni aprobación. Nueva clasificación turística nacional propuesta CO-turismo-v3: 100 candidatos de las 33 unidades, con antecedentes conservados. El archivo original de Antioquia sí contiene pilotCategory 1–4; se corrigió la auditoría anterior. Ver ORDEN_TURISTICO.md para cola vigente y fuentes. Preparación excluida del orden turístico.
