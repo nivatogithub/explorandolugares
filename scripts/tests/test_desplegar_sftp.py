@@ -71,6 +71,20 @@ class DeploymentTests(unittest.TestCase):
             self.assertEqual(claim.read_text(), "<?php require '/home/usuario/explorandolugares/app/bootstrap.php';\n"
                              "require '/home/usuario/explorandolugares/app/BusinessClaimService.php';")
 
+    def test_private_includes_accept_spacing_and_quote_styles(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            page = root / 'inversionistas.php'
+            page.write_text("<?php require dirname(__DIR__, 2).'/app/bootstrap.php';\n"
+                            'require dirname ( __DIR__ , 2 ) . "/app/InvestorBusinessIntelligence.php";\n'
+                            'require __DIR__ . "/../app/BusinessPortalAccess.php";')
+            deploy.rewrite_private_app_includes(root, self.config['remote_base'])
+            text = page.read_text()
+            self.assertNotIn('dirname', text)
+            self.assertIn("require '/home/usuario/explorandolugares/app/bootstrap.php';", text)
+            self.assertIn('require "/home/usuario/explorandolugares/app/InvestorBusinessIntelligence.php";', text)
+            self.assertIn('require "/home/usuario/explorandolugares/app/BusinessPortalAccess.php";', text)
+
     def test_only_changed_hashes_are_selected(self):
         previous = {'files': [{'relative': 'public/index.html', 'sha256': 'old'},
                               {'relative': 'app/bootstrap.php', 'sha256': 'same'}]}
