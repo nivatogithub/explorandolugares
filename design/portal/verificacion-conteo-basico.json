@@ -1,0 +1,74 @@
+{
+  "production_modified": false,
+  "tables_activated_in_production": false,
+  "fixture_only": true,
+  "local_http": "passed",
+  "optional_accept": {
+    "basic_increment": 0,
+    "optional_event_increment": 1
+  },
+  "reject_and_refresh": {
+    "basic_increment": 1,
+    "optional_event_increment": 0
+  },
+  "desktop_width": 1600,
+  "desktop_overflow": false,
+  "mobile": [
+    {
+      "view": "Cobertura móvil",
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": false,
+      "panel": "rgb(255, 240, 220)",
+      "card": "rgb(255, 248, 237)",
+      "action": "rgb(201, 71, 32)",
+      "pauta": "rgb(255, 240, 220)",
+      "field": "rgb(255, 253, 248)",
+      "columns": "repeat(2, minmax(0px, 1fr))",
+      "totalHeight": 2525,
+      "contentHeight": 2166.6015625,
+      "heroHeight": 194.27734375,
+      "panelHeight": 1813.271484375,
+      "mapHeight": 275,
+      "cardsHeight": 239.609375
+    },
+    {
+      "view": "Audiencia móvil",
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": false,
+      "panel": "rgb(255, 240, 220)",
+      "card": "rgb(255, 248, 237)",
+      "action": "rgb(201, 71, 32)",
+      "pauta": "rgb(255, 240, 220)",
+      "field": "rgb(255, 253, 248)",
+      "columns": "151.387px 151.387px",
+      "totalHeight": 2005,
+      "contentHeight": 1646.9140625,
+      "heroHeight": 194.27734375,
+      "panelHeight": 1293.583984375,
+      "mapHeight": 0,
+      "cardsHeight": 0
+    },
+    {
+      "view": "Haz parte móvil",
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": false,
+      "panel": "rgb(255, 240, 220)",
+      "card": "rgb(255, 248, 237)",
+      "action": "rgb(201, 71, 32)",
+      "pauta": "rgb(255, 240, 220)",
+      "field": "rgb(255, 253, 248)",
+      "columns": "repeat(2, minmax(0px, 1fr))",
+      "totalHeight": 2356,
+      "contentHeight": 1997.373046875,
+      "heroHeight": 194.27734375,
+      "panelHeight": 1644.04296875,
+      "mapHeight": 0,
+      "cardsHeight": 0
+    }
+  ],
+  "activation": "pending authenticated administration or private CLI",
+  "tag_v1_2_0": "unchanged"
+}

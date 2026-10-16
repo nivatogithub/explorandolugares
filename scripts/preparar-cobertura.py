@@ -18,7 +18,7 @@ def sources():
   if p.name in {'cobertura.css','portal-tokens.css','cobertura.js','medicion.js','select-flotante.js','departamentos.geojson','procedencia.json'} or re.fullmatch(r'municipios-\d{2}\.geojson',p.name):pairs.append((str(p.relative_to(ROOT)),'public/assets/cobertura/'+p.name))
  for p in sorted((ROOT/'backend/app/analytics').rglob('*')):
   if p.is_file():pairs.append((str(p.relative_to(ROOT)),'app/analytics/'+str(p.relative_to(ROOT/'backend/app/analytics'))))
- for name in ['api/medicion.php','admin/medicion.php']:
+ for name in ['api/medicion.php','api/actividad.php','admin/medicion.php']:
   pairs.append(('backend/public/'+name,'public/'+name))
  for p in sorted((ROOT/'backend/integration-medicion/public').rglob('*')):
   if p.is_file():pairs.append((str(p.relative_to(ROOT)),'public/'+str(p.relative_to(ROOT/'backend/integration-medicion/public'))))

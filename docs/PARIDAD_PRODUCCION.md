@@ -34,3 +34,8 @@ Estas comprobaciones corresponden a las revisiones comparadas y al hosting confi
 Se retira de cobertura el enlace de footer a la página de créditos que ya no existe en el portal, conservando las fuentes cartográficas, el crédito de DB-IP y la procedencia/licencias privadas. Las flechas de navegación interna de pauta y guía se cambian a `→`, de acuerdo con las reglas del portal. Se elimina la excepción por SHA-256 de las pruebas de enlaces; la validación vuelve a ser estricta para todas las páginas y flechas, incluidas las decorativas.
 
 Esta corrección cambia únicamente dos archivos desplegables respecto a la producción comprobada: `public/cobertura/colombia/index.html` y `public/assets/cobertura/cobertura.js` (incluido su hash de versión en el HTML). Las dos ramas conservan el mismo paquete. La equivalencia de los 400 archivos descrita antes corresponde a la reconciliación previa; la versión corregida requiere publicar esos dos archivos para actualizar producción. Crear la etiqueta no publica automáticamente.
+
+
+## Cambio posterior: conteo básico sin cookies
+
+La preparación posterior a v1.2.0 añade el módulo documentado en `CONTEO_BASICO_SIN_COOKIES.md`. Main y la rama de ampliación deben conservar la misma revisión; la etiqueta v1.2.0 permanece inmutable en la versión ya desplegada. El candidato nuevo tiene diferencias intencionales respecto al manifiesto de producción y no se considera publicado por pasar las pruebas locales. Construir ambos paquetes, revisar el delta y activar el módulo básico por separado antes de afirmar que funciona en producción.

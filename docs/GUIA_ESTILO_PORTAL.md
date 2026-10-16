@@ -172,3 +172,10 @@ Medición local a 390 px, mismo departamento y fixture, altura de `main` (incluy
 |Haz parte|3206 px|1997 px|38%|
 
 No hubo desbordamiento horizontal en las tres vistas. En 1600 px los seis desplegables parten abiertos y no hay desbordamiento. Evidencia: [vista compacta](../design/portal/evidencias/movil-compacto.png). Cifras de prueba, no producción. La revisión del resto del portal queda como trabajo separado: priorizar inicio, destino/directorio y formulario comercial; medir recorrido hasta la acción principal antes de aplicar esta pauta. No convertir todo texto editorial en acordeones.
+
+
+## Métrica básica sin cookies · candidato posterior a v1.2.0
+
+La tarjeta “Páginas vistas · sin cookies” ocupa una fila completa sobre la rejilla de métricas consentidas. Conserva superficie crema, tipografía funcional y ayuda explícita: son vistas, no personas únicas. Los campos con permiso lo indican en etiqueta o ayuda. No añadir otra paleta para distinguir los métodos. “Cómo medimos” reúne alcance, fechas y fuentes, sin volver a extender la página con avisos técnicos.
+
+Revisión local: 1600 px y tres pestañas a 390 px, sin desbordamiento y con los mismos tokens cálidos. [Vista amplia](../design/portal/evidencias/audiencia-sin-cookies.png), [móvil](../design/portal/evidencias/movil-sin-cookies.png), [registro de comprobaciones](../design/portal/verificacion-conteo-basico.json). Datos de prueba; todavía no es evidencia de funcionamiento en producción.
