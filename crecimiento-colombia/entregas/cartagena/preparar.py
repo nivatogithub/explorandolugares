@@ -104,3 +104,6 @@ with zipfile.ZipFile(P/'cartagena-borrador-v2.zip','w',compression=zipfile.ZIP_D
  for name,content in [('paquete-destino.json',(P/'paquete-v2.json').read_bytes())]+[(m['file'],(P/'imagenes/derivados'/Path(m['file']).name).read_bytes()) for m in [package['hero_image'],*[p['image'] for p in package['places']]]]:
   entry=zipfile.ZipInfo(name,date_time=(2026,10,16,0,0,0)); entry.compress_type=zipfile.ZIP_DEFLATED; archive.writestr(entry,content)
 print('Draft, 10 directory records, 4 research attractions, 3 v2 attractions, 3 languages, 5 originals and 10 derivatives generated. v2 ZIP is draft only.')
+
+# Keep the review aligned with the generated import package.
+exec(compile((P/"revision.py").read_text(), str(P/"revision.py"), "exec"))
