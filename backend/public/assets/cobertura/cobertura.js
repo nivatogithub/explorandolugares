@@ -4,7 +4,6 @@
   const $=id=>document.getElementById(id), root=new URL('../../',location.href);
   const el=(tag,text,className)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(className)n.className=className;return n;};
   const normal=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
-  const percent=n=>n===null?'—':new Intl.NumberFormat('es-CO',{maximumFractionDigits:1}).format(n)+'%';
   let data=null,department='',municipality='',filter='all',mapVersion=0;const maps=new Map();
   const current=()=>data.departments.find(d=>d.code===department);
   async function json(url){const r=await fetch(url,{credentials:'omit',headers:{Accept:'application/json'}});if(!r.ok)throw Error('No disponible');return r.json();}
@@ -12,16 +11,16 @@
   const option=(value,text)=>{const o=el('option',text);o.value=value;return o;};
   function updateUrl(){const url=new URL(location.href);url.search='';if(department)url.searchParams.set('departamento',department);if(municipality)url.searchParams.set('municipio',municipality);history.replaceState(null,'',url);}
   function setDepartment(code){department=data.departments.some(d=>d.code===code)?code:'';municipality='';$('department').value=department;updateUrl();renderDetail();renderMap();}
-  function setMunicipality(code){municipality=current()?.municipalities.some(m=>m.code===code)?code:'';$('municipality').value=municipality;updateUrl();renderPlaces();highlight();}
+  function setMunicipality(code){municipality=current()?.municipalities.some(m=>m.code===code)?code:'';$('municipality').value=municipality;updateUrl();renderPlaces();highlight();renderAudience();}
   function renderDetail(){
     const d=current();$('country-button').hidden=!d;$('map-title').textContent=d?d.name:'Colombia';$('map-kicker').textContent=d?'ACÉRCATE A SUS MUNICIPIOS':'ELIGE POR DÓNDE EMPEZAR';
     $('detail-title').textContent=d?d.name:'Un país por descubrir';$('detail-description').textContent=d?'Estas son las guías del departamento que forman parte de nuestro catálogo.':'Selecciona un departamento o busca entre los destinos del catálogo nacional.';
     $('department-summary').hidden=!d;$('municipality').disabled=!d;$('municipality').replaceChildren(option('','Todos los municipios'));
-    if(d){$('department-percent').textContent=percent(d.coverage_percent);if(d.coverage_percent===null)$('department-progress').removeAttribute('value');else $('department-progress').value=d.coverage_percent;
-      $('department-count').textContent=`${d.counts.published} publicados · ${d.counts.in_progress} en preparación · ${d.catalog_count} destinos en el catálogo`;
+    if(d){$('department-percent').textContent='En definición';
+      $('department-count').textContent=(data.publication_source_available?`${d.counts.published} ${d.counts.published===1?'guía publicada':'guías publicadas'}`:'Publicación sin confirmar')+` · ${d.counts.in_progress} en preparación identificadas. El listado de trabajo aún no es el alcance completo del departamento.`;
       d.municipalities.slice().sort((a,b)=>a.name.localeCompare(b.name,'es')).forEach(m=>$('municipality').append(option(m.code,m.name)));
     }
-    renderPlaces();
+    renderPlaces();renderAudience();
   }
   function renderPlaces(){
     const d=current(), query=normal($('search').value.trim());let rows=(d?[d]:data.departments).flatMap(dep=>dep.places.map(p=>({...p,department_name:dep.name})));
@@ -35,7 +34,7 @@
       if(p.url&&p.status==='published'){const a=el('a','Explorar la guía ↗');a.href=new URL(p.url.replace(/^\//,''),root).href;article.append(a);} $('places').append(article);
     });
     const m=d?.municipalities.find(x=>x.code===municipality);$('municipality-summary').hidden=!m;
-    if(m)$('municipality-summary').textContent=m.tracked_count?`${m.name}: ${m.published_count} de ${m.tracked_count} destinos del catálogo con guía publicada. ${labels[m.status]}.`:`${m.name} aparece en el mapa, pero aún no tiene destinos incorporados a este catálogo.`;
+    if(m)$('municipality-summary').textContent=!data.publication_source_available?'Publicación sin confirmar para '+m.name+'.':m.tracked_count?`${m.name}: ${m.published_count} de ${m.tracked_count} destinos del catálogo con guía publicada. ${labels[m.status]}.`:`${m.name} aparece en el mapa, pero aún no tiene destinos incorporados a este catálogo.`;
     if(d&&municipality)$('map-hint').textContent=m.name+' · '+labels[m.status];
   }
   function highlight(){document.querySelectorAll('#map path[data-code]').forEach(p=>{const selected=p.dataset.code===municipality;p.classList.toggle('selected',selected);p.setAttribute('aria-pressed',String(selected));});}
@@ -60,14 +59,20 @@
     }catch(e){if(version===mapVersion)$('map').replaceChildren(el('p','El mapa no pudo cargarse. Puedes consultar la misma información con las listas de departamentos y municipios.','map-error'));}
     finally{if(version===mapVersion)$('map').setAttribute('aria-busy','false');}
   }
+  function renderAudience(){
+    const d=current(),m=d?.municipalities.find(x=>x.code===municipality),days=$('audience-period').value;
+    $('audience-scope').textContent=(m?'Interés por '+m.name:d?'Interés por '+d.name:'Audiencia del portal en Colombia')+' · últimos '+days+' días. Los viajeros registrados representan la comunidad general del portal.';
+    // No collector/provider is configured. Never fill these slots from coverage fixtures or account stubs.
+    $('audience-status').textContent='Medición aún no habilitada. No hay cifras de visitas, registros ni contactos comprobadas para esta selección.';
+  }
   async function init(){
     try{
       data=await json(new URL('api/cobertura.php',root));if(!Array.isArray(data.departments)||!data.country)throw Error('Respuesta inválida');
-      $('country-percent').textContent=percent(data.country.coverage_percent);$('country-published').textContent=data.publication_source_available?data.country.counts.published:'—';$('country-total').textContent=`Catálogo de trabajo: ${data.country.catalog_count} lugares seleccionados`;$('catalog-scope').textContent=`El seguimiento actual incluye ${data.country.catalog_count} lugares seleccionados para ampliar el portal. No son todos los destinos turísticos de Colombia. El mapa también muestra municipios que aún no forman parte de este catálogo.`;$('country-progress').textContent=data.country.counts.in_progress;$('country-pending').textContent=data.publication_source_available?data.country.counts.pending:'—';
-      if(!data.publication_source_available){$('notice').hidden=false;$('notice').textContent='No podemos confirmar ahora qué guías están publicadas. Los porcentajes se muestran sin dato; esto no significa que la cobertura sea cero.';}
+      $('country-published').textContent=data.publication_source_available?data.country.counts.published:'—';$('country-total').textContent=data.publication_source_available?'Guías públicas de Colombia consultadas en el portal':'Publicación temporalmente sin confirmar';$('catalog-scope').textContent='El total nacional previsto está en definición. El listado inicial de trabajo no es el total de destinos turísticos de Colombia; por eso no mostramos un porcentaje de cobertura nacional.';$('country-progress').textContent=data.country.counts.in_progress;
+      if(!data.publication_source_available){$('notice').hidden=false;$('notice').textContent='No podemos confirmar ahora cuántas guías están publicadas. Mostramos sin dato, no un cero.';}
       $('updated').textContent='Estado consultado: '+new Intl.DateTimeFormat('es-CO',{dateStyle:'medium',timeStyle:'short',timeZone:'America/Bogota'}).format(new Date(data.checked_at))+' (Colombia). Catálogo: '+data.universe_version+'.';
       data.departments.slice().sort((a,b)=>a.name.localeCompare(b.name,'es')).forEach(d=>$('department').append(option(d.code,d.name)));
-      $('department').addEventListener('change',e=>setDepartment(e.target.value));$('municipality').addEventListener('change',e=>setMunicipality(e.target.value));$('country-button').addEventListener('click',()=>setDepartment(''));$('search').addEventListener('input',renderPlaces);
+      $('department').addEventListener('change',e=>setDepartment(e.target.value));$('municipality').addEventListener('change',e=>setMunicipality(e.target.value));$('country-button').addEventListener('click',()=>setDepartment(''));$('search').addEventListener('input',renderPlaces);$('audience-period').addEventListener('change',renderAudience);
       document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{filter=b.dataset.filter;document.querySelectorAll('[data-filter]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));renderPlaces();}));
       const params=new URL(location.href).searchParams;const start=params.get('departamento')||'',mun=params.get('municipio')||'';setDepartment(start);if(mun)setMunicipality(mun);
     }catch(e){$('notice').hidden=false;$('notice').textContent='No pudimos cargar la cobertura. Vuelve a intentar más tarde; puedes seguir explorando las guías desde Destinos.';$('map').replaceChildren(el('p','Información temporalmente no disponible.','map-error'));$('map').setAttribute('aria-busy','false');$('updated').textContent='Sin actualización disponible.';}

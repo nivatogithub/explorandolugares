@@ -10,11 +10,17 @@ La API `backend/public/api/cobertura.php` consulta únicamente slugs, departamen
 
 Publicado significa que hay una guía con estado público en la base, no calidad total aprobada, negocio verificado o alianza. En preparación procede de un borrador ya conocido en el catálogo o de trabajo señalado en el manifiesto. El destino autónomo Cauca Viejo se asocia al municipio Jericó, pero no hereda su publicación.
 
-## Porcentajes
+## Conteos y alcance nacional
 
-Universo inicial: 78 candidatos editoriales, no el total de municipios colombianos. Departamento = peso de destinos publicados / peso de destinos de su catálogo. País = media de porcentajes departamentales ponderada por los pesos departamentales. Pesos P1/P2/P3 = 3/2/1. Se indica conteo absoluto y versión del catálogo. Los municipios del mapa sin destinos del catálogo se muestran fuera del catálogo, no se inventan como tareas pendientes ni se suman al denominador editorial. Publicar una guía no colorea todo un departamento como completo; el color significa que tiene al menos una guía disponible y el porcentaje precisa su avance.
+Corrección vigente: se cuentan todas las guías públicas de Colombia de la base, no únicamente las que coinciden con los 78 candidatos iniciales. El total de destinos previsto para país y departamentos está en definición; no se muestra porcentaje ni fracción publicada contra el listado inicial. El catálogo inicial solo organiza investigación y el detalle del mapa, nunca representa el inventario turístico completo del país.
 
-La preparación ponderada por gates sigue siendo una métrica privada del plan, diferente de la publicación observada. Esta versión no publica porcentajes de calidad sin auditoría.
+La cobertura ponderada por prioridades/gates permanece como herramienta privada del plan. No se publica como cobertura nacional hasta definir un universo completo y verificable. Los municipios sin destinos en el listado se muestran fuera del catálogo de seguimiento.
+
+## Audiencia y participación comercial
+
+Sección entre los conteos y el mapa: sesiones sin login, visitantes únicos estimados, viajeros registrados/activos, vistas de fichas y clics de contacto. Periodos 30/90 días, contexto por departamento/municipio, espacios de países y evolución. Cuentas registradas describen la comunidad global, no se atribuyen al municipio seleccionado. La API v2 declara `audience.status=not_configured`, métricas/serie/países nulos. No hay colector de visitas, integración de analítica ni cómputo de cuentas conectados: se muestra “Medición aún no habilitada”, sin datos ficticios ni cero inventado. Los campos solo reservan la interfaz; la instrumentación se implementará como tarea propia con fuente, privacidad y pruebas.
+
+Invitación a pautar conduce al formulario existente de contacto; no contrata pauta ni cobra. La ficha gratuita conserva un enlace separado. No se afirma crecimiento hasta tener series comparables. Visual actualizado a acento naranja y azul oscuro a partir del acento `#d84e27` del portal más reciente revisado, con mapa azul/ámbar sin verdes.
 
 ## Cartografía y licencia
 
@@ -32,10 +38,10 @@ Se intentó descargar DIVIPOLA MGN 2025 desde su servicio oficial; devolvió err
 
 ## Entrega preparada
 
-`python3 scripts/preparar-cobertura.py --config /ruta/sftp.json --manifest /ruta/deployment-manifest.json` valida y prepara 42 archivos (aprox. 568 KB) en `.local/coverage/release`. No se conecta ni modifica hosting. La configuración es la del proyecto, fuera de Git; el paquete no contiene secretos ni `private/config.php`.
+`python3 scripts/preparar-cobertura.py --config /ruta/sftp.json --manifest /ruta/deployment-manifest.json` valida y prepara 42 archivos (aprox. 575 KB) en `.local/coverage/release`. No se conecta ni modifica hosting. La configuración es la del proyecto, fuera de Git; el paquete no contiene secretos ni `private/config.php`.
 
 Solo tras autorización concreta, el mismo comando con `--deploy` realiza transferencia incremental acotada: requiere rama sin cambios pendientes y manifiesto remoto idéntico al local; conserva todos los archivos ajenos y no elimina, migra, modifica configuración, cambia DNS o reemplaza `.htaccess`, portada, destinos ni administración. Reescribe únicamente las rutas del nuevo endpoint al backend privado. La página HTML se sube al final. No utiliza el despliegue completo histórico de esta base.
 
-Verificación después de una publicación autorizada: HTTP 200 de página/API/CSS/JS/geometrías; consulta de estado real y porcentajes; selección Antioquia/Jericó; enlaces anónimos a guías publicadas; aviso ante fallos; métodos POST rechazados; comprobación de portada/destino/admin conservados. No anunciar publicación funcional por el mero éxito de SFTP.
+Verificación después de una publicación autorizada: HTTP 200 de página/API/CSS/JS/geometrías; consulta del conteo real de publicaciones y total nacional en definición; selección Antioquia/Jericó; enlaces anónimos a guías publicadas; aviso ante fallos; métodos POST rechazados; comprobación de portada/destino/admin conservados. No anunciar publicación funcional por el mero éxito de SFTP.
 
 Acceso inicial por enlace directo. Integrar el enlace en el pie/índice del portal requiere aplicar un cambio mínimo sobre su versión vigente, no reemplazar páginas productivas con los HTML antiguos de `main`. Se mantiene fuera de esta entrega acotada.
