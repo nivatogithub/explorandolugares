@@ -43,7 +43,7 @@ final class BusinessAdminService
     public function options(): array
     {
         return [
-            'destinations'=>$this->pdo->query('SELECT d.id,d.latitude,d.longitude,t.display_name FROM destinations d JOIN destination_translations t ON t.destination_id=d.id AND t.locale="es" ORDER BY d.display_order,t.display_name')->fetchAll(PDO::FETCH_ASSOC),
+            'destinations'=>$this->pdo->query('SELECT d.id,d.latitude,d.longitude,d.destination_type,d.department,d.country_code,t.display_name FROM destinations d JOIN destination_translations t ON t.destination_id=d.id AND t.locale="es" ORDER BY d.display_order,t.display_name')->fetchAll(PDO::FETCH_ASSOC),
             'categories'=>$this->pdo->query('SELECT c.code,t.label FROM service_categories c JOIN service_category_translations t ON t.category_code=c.code AND t.locale="es" WHERE c.is_active=1 ORDER BY c.display_order')->fetchAll(PDO::FETCH_ASSOC),
             'plans'=>(new BusinessSubscriptionAdminService($this->pdo))->options(),
         ];

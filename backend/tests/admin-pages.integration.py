@@ -22,6 +22,7 @@ DB.row_factory = sqlite3.Row
 DB.execute('PRAGMA foreign_keys=ON')
 DB.executescript((ROOT / 'backend/database/sqlite.sql').read_text())
 DB.executescript((ROOT / 'backend/database/destinations.sqlite.sql').read_text())
+DB.executescript((ROOT / 'backend/database/migrations/006-poi-experience-links.sqlite.sql').read_text())
 for number in range(8, 31):
     matches = list((ROOT / 'backend/database/migrations').glob(f'{number:03d}-*.sqlite.sql'))
     assert len(matches) == 1, f'Migración SQLite faltante o ambigua: {number:03d}'
@@ -566,6 +567,20 @@ try:
         check(status in (400,403) and DB.execute('SELECT COUNT(*) FROM businesses WHERE id=?',(delete_id,)).fetchone()[0] == 1, 'Se borró sin sesión, CSRF válido o confirmación.')
     status, body, _ = request('/admin/negocios.php', {'csrf':delete_csrf,'action':'delete','id':str(delete_id),'confirm_delete':'1'}, ADMIN)
     check(status == 200 and DB.execute('SELECT COUNT(*) FROM businesses WHERE id=?',(delete_id,)).fetchone()[0] == 0 and 'Negocio eliminado.' in body, f'El borrado confirmado falló: HTTP {status}, {body[:300]}')
+
+    status, body, _ = request('/admin/destinos.php', opener=ADMIN)
+    check(status == 200 and 'Agregar Cauca Viejo en borrador' in body, 'Falta el alta preparada de Cauca Viejo.')
+    starter_csrf = __import__('re').search(r'name="csrf" value="([^"]+)"', body).group(1)
+    status, _, _ = request('/admin/destinos.php', {'csrf':'invalid','action':'create_starter','starter_slug':'cauca-viejo'}, ADMIN)
+    check(status == 403 and DB.execute("SELECT COUNT(*) FROM destinations WHERE slug='cauca-viejo'").fetchone()[0] == 0, 'Alta preparada sin CSRF válido.')
+    for _ in range(2):
+        status, body, _ = request('/admin/destinos.php', {'csrf':starter_csrf,'action':'create_starter','starter_slug':'cauca-viejo'}, ADMIN)
+        starter_alerts = __import__('re').findall(r'role="alert">(.*?)<', body)
+        check(status == 200 and 'Destino disponible para asociar negocios' in body, f'No se creó o reutilizó el destino preparado: HTTP {status}, {starter_alerts}')
+    starter = DB.execute("SELECT id,publication_status,destination_type FROM destinations WHERE slug='cauca-viejo'").fetchone()
+    check(starter['publication_status'] == 'draft' and starter['destination_type'] == 'other' and DB.execute("SELECT COUNT(*) FROM destinations WHERE slug='cauca-viejo'").fetchone()[0] == 1, 'El destino preparado se publicó o duplicó.')
+    status, body, _ = request('/admin/negocios.php?id='+str(imported_id), opener=ADMIN)
+    check(status == 200 and 'Cauca Viejo' in body, 'El destino en borrador no está disponible para asociar negocios.')
 
     broken_env = dict(__import__('os').environ, EL_LOCAL_CONFIG_PATH=str(broken_file))
     # PHP's server reads the env only at startup, so make a second ephemeral listener.
