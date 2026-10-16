@@ -15,6 +15,7 @@ for previous in sorted((out/'public').rglob('*')):
    assert "  const header = nav.closest('header');" in s;s=s.replace("  const header = nav.closest('header');",anchor+"  const header = nav.closest('header');")
   if 'medicion.js' not in s:s+='\n'+ours[ours.index('/* First-party opt-in analytics;'):]
  elif relative.endswith('.php'):
+  if 'menu-principal.js' not in s:s=s.replace('</body>','<script src="/assets/menu-principal.js?v=20261016" defer></script></body>')
   if 'cobertura/colombia' not in s:s=s.replace('<a class="pill light"','<a href="/cobertura/colombia/">Estamos creciendo</a><a class="pill light"',1)
   if 'medicion.js' not in s:
    assert '</body>' in s;s=s.replace('</body>','<script defer data-el-measurement="1" src="/assets/cobertura/medicion.js?v=1"></script></body>')
