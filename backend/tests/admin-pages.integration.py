@@ -21,7 +21,7 @@ DB.row_factory = sqlite3.Row
 DB.execute('PRAGMA foreign_keys=ON')
 DB.executescript((ROOT / 'backend/database/sqlite.sql').read_text())
 DB.executescript((ROOT / 'backend/database/destinations.sqlite.sql').read_text())
-for number in range(8, 29):
+for number in range(8, 30):
     matches = list((ROOT / 'backend/database/migrations').glob(f'{number:03d}-*.sqlite.sql'))
     assert len(matches) == 1, f'Migración SQLite faltante o ambigua: {number:03d}'
     DB.executescript(matches[0].read_text())
@@ -140,6 +140,9 @@ try:
         ('/admin/suscripciones.php', 'Suscripciones'),
         ('/admin/inversionistas.php', 'Inteligencia de negocio e inversión'),
         ('/admin/contactos-negocios.php', 'Canales y responsable'),
+        ('/admin/campanas.php', 'Campañas por correo'),
+        ('/admin/campanas.php?tab=conexion', 'Remitente y conexión'),
+        ('/admin/campanas.php?tab=correos', 'Correos de negocios'),
     ]
     # The login is public; all operational pages require an authenticated session.
     for path, _ in paths:
@@ -181,6 +184,7 @@ try:
                     '/admin/suscripciones.php': 'Suscripciones',
                     '/admin/inversionistas.php': 'Inteligencia e inversión',
                     '/admin/contactos-negocios.php': 'Canales y responsable',
+                    '/admin/campanas.php': 'Campañas por correo',
                 }.get(route)
                 if expected_sidebar:
                     check(active_label == expected_sidebar, f'La sección activa debe ser {expected_sidebar} en {path}; mostró {active_label}')
@@ -232,6 +236,31 @@ try:
           'Repetir la importación duplicó un contacto privado.')
     check(DB.execute('SELECT COUNT(*) FROM business_research_contacts').fetchone()[0] == research_before + 1,
           'La importación idempotente creó contactos duplicados.')
+
+    status, campaign_html, _ = request('/admin/campanas.php?tab=correos')
+    check(status == 200 and 'hotel@example.invalid' in campaign_html and 'Pendiente de revisión' in campaign_html, 'Los correos importados deben verse pendientes; no habilitar campañas automáticamente.')
+    campaign_csrf = re.search(r'name="csrf" value="([^"]+)"', campaign_html).group(1)
+    channel_id = DB.execute('SELECT id FROM business_research_contacts WHERE contact_value=?', ('hotel@example.invalid',)).fetchone()[0]
+    bad_status, _, _ = request('/admin/campanas.php', {'csrf': 'invalid', 'action': 'permission', 'channel_id': str(channel_id), 'decision': 'allowed', 'confirmed': '1', 'evidence': 'Fictitious permission for local test'})
+    check(bad_status == 403 and DB.execute('SELECT COUNT(*) FROM business_email_permissions').fetchone()[0] == 0, 'La revisión debe exigir CSRF.')
+    status, _, _ = request('/admin/campanas.php', {'csrf': campaign_csrf, 'action': 'create', 'name': 'Prueba bloqueada', 'subject': 'Asunto', 'body': 'Mensaje', 'channels[]': str(channel_id)})
+    check(status == 400 and DB.execute('SELECT COUNT(*) FROM business_email_campaigns').fetchone()[0] == 0, 'No crear campaña con audiencia pendiente.')
+    status, _, _ = request('/admin/campanas.php', {'csrf': campaign_csrf, 'action': 'permission', 'channel_id': str(channel_id), 'decision': 'allowed', 'confirmed': '1', 'evidence': 'Fictitious permission for isolated HTTP test'})
+    check(status == 200, 'La revisión explícita del correo no se guardó.')
+    status, body, _ = request('/admin/campanas.php', {'csrf': campaign_csrf, 'action': 'create', 'name': 'Prueba local', 'subject': 'Asunto local', 'body': '<script>alert(1)</script>', 'channels[]': str(channel_id)})
+    check(status == 200 and '&lt;script&gt;' in body and 'Aprobar esta versión' in body, 'El borrador debe abrir para revisión con contenido escapado.')
+    campaign_row = DB.execute('SELECT id,content_hash FROM business_email_campaigns').fetchone()
+    status, body, _ = request('/admin/campanas.php', {'csrf': campaign_csrf, 'action': 'approve', 'id': str(campaign_row[0]), 'hash': campaign_row[1], 'reviewed': '1'})
+    check(status == 400 and 'Completa y habilita' in body, 'La conexión no configurada debe bloquear aprobación y envío.')
+
+    settings_input = {'csrf': campaign_csrf, 'action': 'settings', 'sender_name': 'Test Sender', 'sender_email': 'sender@example.invalid', 'reply_to': 'reply@example.invalid', 'sender_address': 'Test address', 'api_key': 'fictitious-http-api-key', 'enabled': '1'}
+    status, body, _ = request('/admin/campanas.php', settings_input)
+    check(status == 200 and 'Conexión guardada' in body and 'fictitious-http-api-key' not in body, 'La llave no debe volver en HTML.')
+    private_settings = (WORK / 'private/brevo/settings.json').read_text()
+    check('fictitious-http-api-key' not in private_settings, 'La llave debe quedar cifrada fuera de public/.')
+    status, _, _ = request('/admin/campanas.php', {'csrf': campaign_csrf, 'action': 'approve', 'id': str(campaign_row[0]), 'hash': campaign_row[1], 'reviewed': '1'})
+    check(status == 400, 'Cambiar el remitente requiere un nuevo borrador revisado.')
+    check(DB.execute('SELECT status FROM business_email_campaigns WHERE id=?', (campaign_row[0],)).fetchone()[0] == 'draft', 'Las pruebas HTTP no deben preparar ni enviar campañas al proveedor.')
 
     _, review_html, _ = request('/admin/negocios.php?tab=revisar')
     check('Seleccionar todos los' in review_html and 'Aprobar y publicar seleccionados' in review_html, 'La revisión de negocios debe admitir selección múltiple y publicación por lote.')
