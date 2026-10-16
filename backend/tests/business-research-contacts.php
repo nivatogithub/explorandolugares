@@ -15,6 +15,13 @@ research_check($pdo->query('SELECT publication_status FROM businesses WHERE id=1
 $pdo->exec('UPDATE business_research_contacts SET suppressed=1');
 $repeat=BusinessResearchContactImporter::import($pdo,$package);
 research_check($repeat['inserted']===0&&$repeat['existing']===1&&(int)$pdo->query('SELECT suppressed FROM business_research_contacts')->fetchColumn()===1,'Idempotent import preserves a later suppression decision.');
+$modern=$package;$modern['schema_version']='business-channels-import-v1';
+$modern['businesses'][0]['channels']=$modern['businesses'][0]['contacts'];unset($modern['businesses'][0]['contacts']);
+$repeat=BusinessResearchContactImporter::import($pdo,$modern);
+research_check($repeat['inserted']===0&&$repeat['existing']===1,'The channel schema reuses the legacy evidence without duplication and needs no exported business IDs.');
+$badModern=$modern;$badModern['businesses'][0]['contacts']=[$contact];$failed=false;
+try{BusinessResearchContactImporter::import($pdo,$badModern);}catch(RuntimeException){$failed=true;}
+research_check($failed,'Mixing people/contact and channel collections is rejected.');
 research_check((int)$pdo->query('SELECT COUNT(*) FROM business_research_contacts WHERE campaign_allowed<>0 OR marketing_consent<>0')->fetchColumn()===0,'No campaign permission or consent fabricated.');
 $bad=$package;$bad['businesses'][]=['name'=>'No existe','contacts'=>[$contact]];
 $failed=false;try{BusinessResearchContactImporter::import($pdo,$bad);}catch(RuntimeException $e){$failed=true;}

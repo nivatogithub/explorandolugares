@@ -26,7 +26,22 @@ final class InvestorBusinessIntelligence
             'current' => $this->periodMetrics($from, $to),
             'previous' => $this->periodMetrics($previousFrom, $previousTo),
             'monthly' => $this->monthlyTrend(),
+            'renewal_history_available' => $this->hasRenewalHistory(),
         ];
+    }
+
+    private ?bool $renewalHistoryAvailable = null;
+
+    /** An older production schema may not yet have migration 025; keep all other indicators usable. */
+    private function hasRenewalHistory(): bool
+    {
+        if ($this->renewalHistoryAvailable !== null) return $this->renewalHistoryAvailable;
+        try {
+            $this->pdo->query('SELECT renewal_of_subscription_id FROM business_subscriptions WHERE 1=0');
+            return $this->renewalHistoryAvailable = true;
+        } catch (PDOException) {
+            return $this->renewalHistoryAvailable = false;
+        }
     }
 
     private function snapshot(): array
@@ -60,6 +75,13 @@ final class InvestorBusinessIntelligence
         $payment = $q->fetch(PDO::FETCH_NUM) ?: [0, 0];
         $metrics['payments_marked_reviewed'] = (int)$payment[0];
         $metrics['reviewed_subscription_value_cop'] = (float)$payment[1];
+        if (!$this->hasRenewalHistory()) {
+            $metrics['renewal_due_businesses']=0;
+            $metrics['renewed_businesses']=0;
+            $metrics['retention_rate']=null;
+            $metrics['late_reactivated_businesses']=0;
+            return $metrics;
+        }
         $renewals = $this->pdo->prepare("SELECT COUNT(DISTINCT due.business_id) AS due_businesses,
                 COUNT(DISTINCT CASE WHEN EXISTS (
                     SELECT 1 FROM business_subscriptions successor

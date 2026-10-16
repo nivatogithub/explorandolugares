@@ -79,6 +79,9 @@ try:
  assert call('/admin/index.php',{'action':'status','csrf':csrf,'id':1,'status':'contactado'})[0]==403
  status,body,headers=call('/admin/index.php',{'action':'login','csrf':csrf,'username':'local-test','password':password})
  assert status==200 and '&lt;script&gt;alert(1)&lt;/script&gt;' in body and '<script>alert(1)</script>' not in body
+ assert 'admin-inbox-table' in body and 'name="q"' in body and 'Seleccionar todas las solicitudes de esta página' in body
+ status,filtered,_=call('/admin/index.php?q=Impulsor+de+prueba&status=nuevo')
+ assert status==200 and 'Impulsor de prueba' in filtered and 'Prueba celular' not in filtered
  guest=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
  assert call('/admin/base-datos.php',agent=guest)[0]==403
  status,body,_=call('/admin/base-datos.php')

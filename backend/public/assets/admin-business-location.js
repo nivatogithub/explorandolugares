@@ -7,8 +7,9 @@
   const dialog = $('business-map-dialog');
   const close = $('business-map-close');
   const cancel = $('business-map-cancel');
-  const retry = $('business-map-retry');
   const use = $('business-map-use');
+  const panMode = $('business-map-pan-mode');
+  const markMode = $('business-map-mark-mode');
   const mapNode = $('business-location-map');
   const selection = $('business-map-selection');
   const status = $('location-capture-status');
@@ -29,6 +30,10 @@
   let mapLoadTimer = 0;
   let pendingAddressPoint = null;
   let addressLookupPoint = null;
+  let mapMode = 'pan';
+  let destinationBounds = null;
+  let destinationGeometry = null;
+  let geolocationRequest = 0;
 
   const parseExisting = () => {
     if (!latInput.value.trim() || !lonInput.value.trim()) return null;
@@ -46,6 +51,59 @@
   };
 
   const selectedDestinationName = () => destination.selectedOptions[0]?.dataset.name?.trim() || '';
+
+  const normalizePlace = (value) => String(value || '')
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('es')
+    .replace(/^(municipio de|municipality of|municipio)\s+/u, '')
+    .replace(/[^a-z0-9]+/g, ' ').trim();
+
+  const pointWithinBounds = (point) => {
+    if (!destinationBounds) return null;
+    const [lat, lon] = point;
+    return lat >= destinationBounds.south && lat <= destinationBounds.north
+      && lon >= destinationBounds.west && lon <= destinationBounds.east;
+  };
+
+  const pointInRing = (point, ring) => {
+    const [lat, lon] = point;
+    let inside = false;
+    for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+      const [xi, yi] = ring[i];
+      const [xj, yj] = ring[j];
+      const crosses = (yi > lat) !== (yj > lat)
+        && lon < ((xj - xi) * (lat - yi)) / ((yj - yi) || Number.EPSILON) + xi;
+      if (crosses) inside = !inside;
+    }
+    return inside;
+  };
+
+  const pointInGeometry = (point, geometry) => {
+    if (!geometry?.coordinates) return null;
+    const polygons = geometry.type === 'Polygon' ? [geometry.coordinates]
+      : geometry.type === 'MultiPolygon' ? geometry.coordinates : [];
+    for (const polygon of polygons) {
+      const [outer, ...holes] = polygon;
+      if (outer && pointInRing(point, outer) && !holes.some((ring) => pointInRing(point, ring))) return true;
+    }
+    return polygons.length ? false : null;
+  };
+
+  const setMapMode = (mode) => {
+    mapMode = mode === 'mark' ? 'mark' : 'pan';
+    panMode?.setAttribute('aria-pressed', String(mapMode === 'pan'));
+    markMode?.setAttribute('aria-pressed', String(mapMode === 'mark'));
+    if (map?.dragging) {
+      if (mapMode === 'pan') map.dragging.enable();
+      else map.dragging.disable();
+    }
+    if (marker?.dragging) {
+      if (mapMode === 'mark') marker.dragging.enable();
+      else marker.dragging.disable();
+    }
+    if (mapReady) selection.textContent = mapMode === 'pan'
+      ? 'Modo mover mapa: arrastra para explorar. Cambia a “Marcar punto” para ubicar el negocio.'
+      : 'Modo marcar punto: toca o haz clic en la ubicación exacta del negocio.';
+  };
 
   const geocodeAddress = async () => {
     const text = [address.value.trim(), selectedDestinationName(), 'Colombia'].filter(Boolean).join(', ');
@@ -82,7 +140,10 @@
     const result = await response.json();
     const parts = result.address || {};
     const street = [parts.house_number, parts.road || parts.pedestrian || parts.footway || parts.path].filter(Boolean).join(' ');
-    return street || parts.neighbourhood || parts.suburb || parts.village || parts.town || parts.city || '';
+    return {
+      label: street || parts.neighbourhood || parts.suburb || parts.village || parts.town || parts.city || '',
+      localities: [parts.municipality, parts.town, parts.city, parts.village].filter(Boolean),
+    };
   };
 
   const setMapCenter = (point, zoom = 14) => {
@@ -96,15 +157,17 @@
   };
 
   const geocodeDestination = async () => {
-    const storedPoint = selectedDestination();
-    if (storedPoint) return storedPoint;
     const name = selectedDestinationName();
     if (!name) return null;
 
     const cacheKey = `el-destination-center:${name.toLocaleLowerCase('es')}:co`;
     try {
       const cached = JSON.parse(sessionStorage.getItem(cacheKey) || 'null');
-      if (Array.isArray(cached) && cached.length === 2 && cached.every(Number.isFinite)) return cached;
+      if (cached?.point?.length === 2 && cached.point.every(Number.isFinite)) {
+        destinationBounds = cached.bounds || null;
+        destinationGeometry = cached.geometry || null;
+        return cached;
+      }
     } catch { /* Storage can be disabled; geocoding can still continue. */ }
 
     const params = new URLSearchParams({
@@ -113,6 +176,8 @@
       country: 'Colombia',
       countrycodes: 'co',
       format: 'jsonv2',
+      addressdetails: '1',
+      polygon_geojson: '1',
       limit: '1',
     });
     const response = await fetch(`https://nominatim.openstreetmap.org/search?${params}`, {
@@ -122,24 +187,69 @@
     if (!response.ok) throw new Error('No se pudo encontrar el destino.');
     const results = await response.json();
     const result = results[0];
-    const point = result ? [Number(result.lat), Number(result.lon)] : null;
+    const knownPoint = selectedDestination();
+    const point = knownPoint || (result ? [Number(result.lat), Number(result.lon)] : null);
     if (!point || !point.every(Number.isFinite)) throw new Error('No se encontraron coordenadas para este destino.');
-    try { sessionStorage.setItem(cacheKey, JSON.stringify(point)); } catch { /* Optional cache. */ }
-    return point;
+    const rawBounds = Array.isArray(result?.boundingbox) ? result.boundingbox.map(Number) : null;
+    const bounds = rawBounds?.length === 4 && rawBounds.every(Number.isFinite)
+      ? { south: rawBounds[0] - 0.015, north: rawBounds[1] + 0.015, west: rawBounds[2] - 0.015, east: rawBounds[3] + 0.015 }
+      : null;
+    destinationBounds = bounds;
+    destinationGeometry = result?.geojson?.type && Array.isArray(result.geojson.coordinates) ? result.geojson : null;
+    const resolved = { point, bounds, geometry: destinationGeometry };
+    try { sessionStorage.setItem(cacheKey, JSON.stringify(resolved)); } catch { /* Optional cache. */ }
+    return resolved;
   };
 
-  const centerOnDestination = async () => {
-    if (!map || parseExisting()) return;
+  const applyDestinationBounds = (bounds) => {
+    destinationBounds = bounds || null;
+    if (!map) return;
+    if (!bounds || !window.L?.latLngBounds) {
+      map.setMaxBounds(null);
+      return;
+    }
+    map.setMaxBounds(L.latLngBounds([bounds.south, bounds.west], [bounds.north, bounds.east]));
+    map.options.maxBoundsViscosity = 0.9;
+  };
+
+  const reverseMatchesSelectedDestination = (result) => {
+    const expected = normalizePlace(selectedDestinationName());
+    const actuals = (result?.localities || []).map(normalizePlace).filter(Boolean);
+    if (expected && actuals.length) {
+      return actuals.some((actual) => actual === expected || actual.includes(expected) || expected.includes(actual));
+    }
+    return null;
+  };
+
+  const isInSelectedDestination = async (point, resolvedAddress = null) => {
+    const geometryResult = pointInGeometry(point, destinationGeometry);
+    if (geometryResult !== null) return geometryResult;
+    const withinGeocoderBounds = pointWithinBounds(point);
+    if (withinGeocoderBounds === false) return false;
+    if (resolvedAddress) return reverseMatchesSelectedDestination(resolvedAddress) ?? withinGeocoderBounds;
+    try {
+      const result = await reverseAddress(point);
+      return reverseMatchesSelectedDestination(result) ?? withinGeocoderBounds;
+    } catch {
+      return withinGeocoderBounds;
+    }
+  };
+
+  const centerOnDestination = async (shouldCenter = true) => {
+    if (!map) return;
     const name = selectedDestinationName();
     if (!name) return;
     destinationCenterPending = true;
     selection.textContent = `Buscando el centro de ${name} para mostrar el municipio correcto…`;
     try {
-      const point = await geocodeDestination();
-      if (!point || !map) throw new Error('No se encontraron coordenadas para este destino.');
+      const result = await geocodeDestination();
+      if (!result?.point || !map) throw new Error('No se encontraron coordenadas para este destino.');
+      applyDestinationBounds(result.bounds);
       destinationCenterPending = false;
-      setMapCenter(point, 16);
-      selection.textContent = `Mapa centrado en ${name}. Haz clic en la ubicación exacta del negocio.`;
+      if (shouldCenter) setMapCenter(result.point, 16);
+      selection.textContent = shouldCenter
+        ? `Mapa centrado en ${name}. El pin se conserva; usa “Marcar punto” para seleccionar o cambiar su ubicación.`
+        : `Área de ${name} cargada. El pin existente se conserva.`;
     } catch (error) {
       destinationCenterPending = false;
       selection.textContent = `${error.message} Puedes centrar el mapa en tu ubicación o moverlo manualmente antes de marcar el negocio.`;
@@ -155,20 +265,27 @@
       selection.textContent = 'El mapa no está disponible todavía. Espera a que cargue antes de seleccionar una ubicación.';
       return;
     }
+    if (pointWithinBounds(point) === false || pointInGeometry(point, destinationGeometry) === false) {
+      selection.textContent = `Ese punto queda fuera del área aproximada de ${selectedDestinationName()}. Vuelve al destino y elige un punto dentro de él.`;
+      return;
+    }
     draft = point;
     const [lat, lon] = point;
     selection.textContent = `Punto seleccionado: ${lat.toFixed(6)}, ${lon.toFixed(6)}.`;
     use.disabled = false;
     if (marker) marker.setLatLng(point);
-    else if (map) marker = L.marker(point, { draggable: true }).addTo(map).on('dragend', (event) => updateDraft(event.target.getLatLng().wrap().toArray()));
+    else if (map) marker = L.marker(point, { draggable: mapMode === 'mark' }).addTo(map).on('dragend', (event) => updateDraft(event.target.getLatLng().wrap().toArray()));
+    if (marker?.dragging) {
+      if (mapMode === 'mark') marker.dragging.enable();
+      else marker.dragging.disable();
+    }
   };
 
   const showMapFailure = () => {
     mapReady = false;
     draft = null;
     use.disabled = true;
-    selection.textContent = 'No se pudo cargar OpenStreetMap. Revisa tu conexión y vuelve a intentar; confirma la ubicación solo cuando puedas ver el mapa.';
-    retry.hidden = false;
+    selection.textContent = 'No se pudieron cargar los mapas de OpenStreetMap. Revisa la conexión; al volver a abrir esta ventana se intentará cargarlos de nuevo.';
   };
 
   const ensureMap = () => {
@@ -180,7 +297,7 @@
     const destinationPoint = selectedDestination();
     const initialCenter = existing || destinationPoint || [4.57, -74.29];
     if (!map) {
-      map = L.map(mapNode, { scrollWheelZoom: true }).setView(initialCenter, existing ? 17 : destinationPoint ? 16 : 5);
+      map = L.map(mapNode, { scrollWheelZoom: true, maxBoundsViscosity: 0.9 }).setView(initialCenter, existing ? 17 : destinationPoint ? 16 : 5);
       mapLayer = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         referrerPolicy: 'strict-origin-when-cross-origin',
@@ -194,16 +311,18 @@
       mapLayer.on('tileload', () => {
         mapReady = true;
         window.clearTimeout(mapLoadTimer);
-        retry.hidden = true;
         if (pendingAddressPoint) { const point = pendingAddressPoint; pendingAddressPoint = null; updateDraft(point); }
         else if (draft) updateDraft(draft);
-        else if (!destinationCenterPending) selection.textContent = 'Haz clic en el punto exacto. Puedes arrastrar el mapa y acercarlo con los controles.';
+        else if (!destinationCenterPending) selection.textContent = mapMode === 'pan'
+          ? 'Modo mover mapa: arrastra para explorar. Cambia a “Marcar punto” para ubicar el negocio.'
+          : 'Modo marcar punto: toca o haz clic en la ubicación exacta del negocio.';
       });
       mapLayer.on('load', () => { if (!mapReady) showMapFailure(); });
       mapLayer.addTo(map);
-      map.on('click', (event) => updateDraft(event.latlng.wrap().toArray()));
+      map.on('click', (event) => { if (mapMode === 'mark') updateDraft(event.latlng.wrap().toArray()); });
     } else {
       setMapCenter(initialCenter, existing ? 17 : destinationPoint ? 16 : 5);
+      if (!mapReady) mapLayer?.redraw();
     }
     draft = existing;
     if (draft && mapReady) updateDraft(draft);
@@ -211,14 +330,14 @@
       if (marker) { map.removeLayer(marker); marker = null; }
       use.disabled = true;
     }
-    retry.hidden = true;
     if (!mapReady) {
       selection.textContent = 'Cargando el mapa de OpenStreetMap…';
       window.clearTimeout(mapLoadTimer);
       mapLoadTimer = window.setTimeout(() => showMapFailure(), 10000);
     }
     window.setTimeout(() => map.invalidateSize(), 120);
-    if (!existing && !destinationPoint) centerOnDestination();
+    setMapMode(mapMode);
+    if (!existing || !destinationBounds) centerOnDestination(!existing);
     return true;
   };
 
@@ -231,14 +350,34 @@
   mapNode.append(currentLocation);
   currentLocation.title = 'Centrar en mi ubicación';
 
+  const returnToDestination = document.createElement('button');
+  returnToDestination.type = 'button';
+  returnToDestination.className = 'business-map-target-control';
+  returnToDestination.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12Z"></path><circle cx="12" cy="9" r="2.5"></circle></svg>';
+  returnToDestination.setAttribute('aria-label', 'Volver a centrar el mapa en el destino');
+  returnToDestination.title = 'Volver al destino';
+  mapNode.append(returnToDestination);
+
   const centerOnPoint = (point, zoom, message) => {
     if (!map) return;
     destinationCenterPending = false;
     setMapCenter(point, zoom);
-    draft = null;
-    if (marker) { map.removeLayer(marker); marker = null; }
-    use.disabled = true;
     selection.textContent = message;
+  };
+
+  const centerOnlyIfInDestination = async (point, zoom, source, message) => {
+    const requestId = ++geolocationRequest;
+    selection.textContent = `Comprobando si la ubicación ${source} está dentro de ${selectedDestinationName()}…`;
+    const inside = await isInSelectedDestination(point);
+    if (requestId !== geolocationRequest) return;
+    if (!inside) {
+      const reason = inside === false
+        ? `La ubicación ${source} está fuera de ${selectedDestinationName()}.`
+        : `No se pudo confirmar que la ubicación ${source} esté dentro de ${selectedDestinationName()}.`;
+      selection.textContent = `${reason} El mapa se queda en el destino. Usa “Volver al destino” si te desplazaste.`;
+      return;
+    }
+    centerOnPoint(point, zoom, `${message} El marcador seleccionado se conserva.`);
   };
 
   const centerByIp = async () => {
@@ -252,7 +391,7 @@
     const point = [Number(result.latitude), Number(result.longitude)];
     if (!result.success || !point.every(Number.isFinite)) throw new Error('No se pudo estimar la ubicación por IP.');
     const place = [result.city, result.region].filter(Boolean).join(', ');
-    centerOnPoint(point, 12, `Mapa centrado aproximadamente por IP${place ? ` en ${place}` : ''}. Marca el punto exacto del negocio.`);
+    await centerOnlyIfInDestination(point, 14, 'estimada por IP', `Mapa centrado aproximadamente por IP${place ? ` en ${place}` : ''}.`);
   };
 
   currentLocation.addEventListener('click', () => {
@@ -264,13 +403,17 @@
       (position) => {
         const { latitude, longitude, accuracy } = position.coords;
         const distance = Math.max(0, Math.round(accuracy));
-        centerOnPoint([latitude, longitude], 16, `Mapa centrado con la ubicación del dispositivo (precisión aproximada: ${distance} m). Esto no marca el negocio; selecciona su punto exacto.`);
-        currentLocation.disabled = false;
+        centerOnlyIfInDestination([latitude, longitude], 16, 'del dispositivo', `Mapa centrado con la ubicación del dispositivo (precisión aproximada: ${distance} m).`)
+          .finally(() => { currentLocation.disabled = false; });
       },
       fallback,
       { enableHighAccuracy: true, timeout: 8000, maximumAge: 300000 },
     );
   });
+
+  returnToDestination.addEventListener('click', () => centerOnDestination());
+  panMode?.addEventListener('click', () => setMapMode('pan'));
+  markMode?.addEventListener('click', () => setMapMode('mark'));
 
   open.addEventListener('click', () => {
     if (!destination.value) { status.textContent = 'Selecciona primero el destino.'; destination.focus(); return; }
@@ -278,8 +421,12 @@
     ensureMap();
     if (!parseExisting() && address.value.trim()) {
       selection.textContent = 'Buscando la dirección para centrar el mapa…';
-      geocodeAddress().then((result) => {
+      geocodeAddress().then(async (result) => {
         if (!result || !map) return;
+        if (pointWithinBounds(result.point) === false || await isInSelectedDestination(result.point) === false) {
+          selection.textContent = `La dirección parece estar fuera de ${selectedDestinationName()}. El mapa permanece en el destino; revisa la dirección.`;
+          return;
+        }
         addressLookupPoint = result.point;
         pendingAddressPoint = result.point;
         destinationCenterPending = false;
@@ -290,15 +437,6 @@
   });
   close.addEventListener('click', () => dialog.close());
   cancel.addEventListener('click', () => dialog.close());
-  retry?.addEventListener('click', () => {
-    retry.hidden = true;
-    selection.textContent = 'Reintentando cargar OpenStreetMap…';
-    mapReady = false;
-    window.clearTimeout(mapLoadTimer);
-    mapLayer?.redraw();
-    map?.invalidateSize();
-    mapLoadTimer = window.setTimeout(() => showMapFailure(), 10000);
-  });
   dialog.addEventListener('click', (event) => { if (event.target === dialog) dialog.close(); });
 
   destination.addEventListener('change', () => {
@@ -313,6 +451,8 @@
       destinationCenterPending = false;
       if (marker) { map.removeLayer(marker); marker = null; }
       use.disabled = true;
+      destinationBounds = null;
+      destinationGeometry = null;
       centerOnDestination();
     }
   });
@@ -330,6 +470,29 @@
       selection.textContent = 'El punto está a más de 1 km de la ubicación que encontró el sistema para la dirección. Revisa la dirección o selecciona el punto correcto.';
       return;
     }
+    if (Date.now() - lastReverseLookup < 1100) {
+      selection.textContent = 'Espera un momento antes de confirmar otro punto para no repetir consultas al mapa.';
+      return;
+    }
+    lastReverseLookup = Date.now();
+    use.disabled = true;
+    selection.textContent = 'Comprobando el punto y consultando su dirección…';
+    let resolvedAddress;
+    try {
+      resolvedAddress = await reverseAddress(selectedPoint);
+    } catch {
+      selection.textContent = 'No se pudo verificar el punto con el mapa. Comprueba tu conexión e inténtalo de nuevo.';
+      use.disabled = false;
+      return;
+    }
+    const inside = await isInSelectedDestination(selectedPoint, resolvedAddress);
+    if (inside !== true) {
+      selection.textContent = inside === false
+        ? `La ubicación marcada está fuera de ${selectedDestinationName()}. Elige un punto dentro del destino.`
+        : `No se pudo confirmar que el punto esté dentro de ${selectedDestinationName()}. Verifica la conexión y vuelve a intentarlo.`;
+      use.disabled = false;
+      return;
+    }
     latInput.value = lat.toFixed(7);
     lonInput.value = lon.toFixed(7);
     mapUrl.value = `https://www.openstreetmap.org/?mlat=${encodeURIComponent(lat.toFixed(7))}&mlon=${encodeURIComponent(lon.toFixed(7))}#map=18/${encodeURIComponent(lat.toFixed(7))}/${encodeURIComponent(lon.toFixed(7))}`;
@@ -338,30 +501,16 @@
     const saveButton = document.querySelector('#business-form button[type="submit"]');
     if (saveButton) saveButton.disabled = true;
     dialog.close();
-    status.textContent = `Punto seleccionado: ${lat.toFixed(6)}, ${lon.toFixed(6)}. Consultando la dirección asociada…`;
-    if (Date.now() - lastReverseLookup < 1100) {
-      status.textContent = 'Punto seleccionado. El sistema no repetirá la consulta de dirección tan pronto; intenta de nuevo en unos segundos si necesitas actualizarla.';
-      if (saveButton) window.setTimeout(() => { saveButton.disabled = confirmed.value !== '1'; }, 1100);
-      return;
-    }
-    lastReverseLookup = Date.now();
-    try {
-      const label = await reverseAddress(selectedPoint);
-      if (label) {
-        address.value = label.slice(0, 300);
+    if (resolvedAddress.label) {
+        address.value = resolvedAddress.label.slice(0, 300);
         confirmed.value = '1';
         addressLookupPoint = selectedPoint;
-        status.textContent = `Ubicación lista. Dirección sugerida por el mapa: ${label}. El destino y estas coordenadas quedarán guardados juntos.`;
+        status.textContent = `Ubicación lista. Dirección sugerida por el mapa: ${resolvedAddress.label}. El destino y estas coordenadas quedarán guardados juntos.`;
       } else {
         confirmed.value = address.value.trim() ? '1' : '0';
         addressLookupPoint = selectedPoint;
         status.textContent = address.value.trim() ? 'Ubicación lista. El mapa no encontró nomenclatura en este punto; se guardarán juntos la dirección escrita y el pin seleccionado.' : 'El mapa no encontró una dirección aquí. Escribe una referencia reconocible para poder guardar la ubicación.';
       }
-    } catch {
-      confirmed.value = '0';
-      status.textContent = 'No se pudo validar la dirección con el mapa. Revisa tu conexión e inténtalo de nuevo antes de guardar.';
-    } finally {
-      if (saveButton) saveButton.disabled = confirmed.value !== '1';
-    }
+    if (saveButton) saveButton.disabled = confirmed.value !== '1';
   });
 })();

@@ -220,6 +220,32 @@ class DynamicDestinationRenderTests(unittest.TestCase):
         with sqlite3.connect(self.database) as connection:
             connection.execute("DELETE FROM businesses WHERE id=?",(business_id,))
 
+    def test_bulk_enrichment_keeps_free_location_and_contacts_private(self):
+        public_id='99999999-9999-4999-8999-999999999999'
+        with sqlite3.connect(self.database) as connection:
+            connection.execute('PRAGMA foreign_keys=ON')
+            for name in ['026-business-research-contacts','027-business-bulk-update-audit']:
+                connection.executescript((ROOT/'backend/database/migrations'/f'{name}.sqlite.sql').read_text())
+            destination_id=connection.execute("SELECT id FROM destinations WHERE slug='jerico'").fetchone()[0]
+            business_id=connection.execute('INSERT INTO businesses(public_id,destination_id,category_code,slug,publication_status) VALUES(?,?,?,?,?)',(public_id,destination_id,'hospedaje','prueba-enriquecimiento','published')).lastrowid
+            connection.execute('INSERT INTO business_translations(business_id,locale,display_name,summary,description) VALUES(?,?,?,?,?)',(business_id,'es','Prueba de enriquecimiento privado','',''))
+            connection.execute('INSERT INTO business_subscriptions(business_id,plan_code,status) VALUES(?,?,?)',(business_id,'free','active'))
+        code=("require 'backend/app/BusinessBulkEditService.php';$pdo=new PDO(getenv('EL_DESTINATIONS_DSN'));"
+              "$service=new BusinessBulkEditService($pdo);$p=$service->export('jerico','','Prueba de enriquecimiento privado');"
+              "$p['businesses'][0]['fields']['address_text']='DireccionInternaNoPublicar';"
+              "$p['businesses'][0]['translations']['es']['summary']='ResumenInternoNoPublicar';"
+              "$p['businesses'][0]['contacts'][]=['channel'=>'email','contact_value'=>'privado-bulk@example.invalid'];"
+              "$service->apply($p,'prueba-local');echo 'ok';")
+        result=subprocess.run(['php','-r',code],cwd=ROOT,env=self.env,check=True,capture_output=True,text=True)
+        self.assertEqual(result.stdout,'ok')
+        page=self.render('jerico','es')
+        self.assertIn('Prueba de enriquecimiento privado',page)
+        for private_value in ['DireccionInternaNoPublicar','ResumenInternoNoPublicar','privado-bulk@example.invalid']:
+            self.assertNotIn(private_value,page)
+        with sqlite3.connect(self.database) as connection:
+            self.assertEqual(connection.execute('SELECT address_text,publication_status FROM businesses WHERE id=?',(business_id,)).fetchone(),('DireccionInternaNoPublicar','published'))
+            connection.execute('PRAGMA foreign_keys=ON');connection.execute('DELETE FROM businesses WHERE id=?',(business_id,))
+
     def test_free_public_import_can_publish_without_exposing_a_contact_channel(self):
         with sqlite3.connect(self.database) as connection:
             destination_id=connection.execute("SELECT id FROM destinations WHERE slug='jerico'").fetchone()[0]
@@ -360,7 +386,9 @@ class DynamicDestinationRenderTests(unittest.TestCase):
         self.assertIn('translations[es][display_name]',editor)
         self.assertIn('business-map-open',editor)
         self.assertIn('business-map-dialog',editor)
-        self.assertIn('business-map-retry',editor)
+        self.assertNotIn('business-map-retry',editor)
+        self.assertIn('business-map-pan-mode',editor)
+        self.assertIn('business-map-mark-mode',editor)
         self.assertIn("img-src 'self' https://tile.openstreetmap.org",editor)
         self.assertIn('connect-src \'self\' https://nominatim.openstreetmap.org',editor)
         self.assertIn('https://ipwho.is',editor)
@@ -374,8 +402,12 @@ class DynamicDestinationRenderTests(unittest.TestCase):
         self.assertIn('navigator.geolocation.getCurrentPosition',location)
         self.assertIn('https://ipwho.is/',location)
         self.assertIn('centerOnDestination',location)
+        self.assertIn('Volver al destino',location)
+        self.assertIn('pointInGeometry',location)
+        self.assertIn('map.setMaxBounds',location)
+        self.assertIn('El mapa se queda en el destino',location)
         self.assertIn("mapLayer.on('tileload'",location)
-        self.assertIn('No se pudo cargar OpenStreetMap',location)
+        self.assertIn('No se pudieron cargar los mapas de OpenStreetMap',location)
         self.assertIn('referrerPolicy:',location)
         form_script=(ROOT/'backend/public/assets/admin-business-form.js').read_text()
         self.assertIn('selected.text_limits',form_script)

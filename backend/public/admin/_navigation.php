@@ -8,6 +8,7 @@ $activeAdminItem = match (true) {
     $adminPath === 'negocios.php' => 'businesses',
     $adminPath === 'importar-negocios.php' => 'businesses',
     $adminPath === 'contactos-negocios.php' => 'business-research',
+    $adminPath === 'actualizar-negocios.php' => 'business-bulk-edit',
     $adminPath === 'reclamaciones.php' => 'claims',
     $adminPath === 'solicitudes-cuenta.php' => 'account-applications',
     $adminPath === 'usuarios.php' => 'accounts',
@@ -22,10 +23,11 @@ $activeAdminItem = match (true) {
   <a class="admin-sidebar-brand" href="index.php">Explorando <strong>Lugares</strong><small>Administración</small></a>
   <nav>
     <section><h2>Operación</h2>
-      <a href="index.php?tab=solicitudes" <?= $activeAdminItem === 'requests' ? 'aria-current="page"' : '' ?>>Solicitudes</a>
+      <a href="index.php?tab=solicitudes" <?= $activeAdminItem === 'requests' ? 'aria-current="page"' : '' ?>>Solicitudes de participación</a>
       <a href="negocios.php" <?= $activeAdminItem === 'businesses' ? 'aria-current="page"' : '' ?>>Negocios</a>
-      <a href="contactos-negocios.php" <?= $activeAdminItem === 'business-research' ? 'aria-current="page"' : '' ?>>Contactos privados</a>
-      <a href="reclamaciones.php" <?= $activeAdminItem === 'claims' ? 'aria-current="page"' : '' ?>>Solicitudes anteriores</a>
+      <a href="contactos-negocios.php" <?= $activeAdminItem === 'business-research' ? 'aria-current="page"' : '' ?>>Canales y contactos</a>
+      <a href="actualizar-negocios.php" <?= $activeAdminItem === 'business-bulk-edit' ? 'aria-current="page"' : '' ?>>Exportar / actualizar</a>
+      <a href="reclamaciones.php" <?= $activeAdminItem === 'claims' ? 'aria-current="page"' : '' ?>>Reclamos de negocio</a>
       <a href="solicitudes-cuenta.php" <?= $activeAdminItem === 'account-applications' ? 'aria-current="page"' : '' ?>>Solicitudes de cuenta</a>
       <a href="usuarios.php" <?= $activeAdminItem === 'accounts' ? 'aria-current="page"' : '' ?>>Cuentas</a>
       <a href="suscripciones.php" <?= $activeAdminItem === 'subscriptions' ? 'aria-current="page"' : '' ?>>Suscripciones</a>
