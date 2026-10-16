@@ -164,7 +164,11 @@
     const name = selectedDestinationName();
     if (!name) return null;
 
-    const cacheKey = `el-destination-center:${name.toLocaleLowerCase('es')}:co`;
+    const option = destination.selectedOptions[0];
+    const department = option?.dataset.department || '';
+    const countryCode = option?.dataset.country || 'CO';
+    const country = countryCode === 'CO' ? 'Colombia' : countryCode;
+    const cacheKey = `el-destination-center:v2:${name.toLocaleLowerCase('es')}:${department}:${countryCode}:${option?.dataset.type || ''}`;
     try {
       const cached = JSON.parse(sessionStorage.getItem(cacheKey) || 'null');
       if (cached?.point?.length === 2 && cached.point.every(Number.isFinite)) {
@@ -175,15 +179,19 @@
     } catch { /* Storage can be disabled; geocoding can still continue. */ }
 
     const params = new URLSearchParams({
-      city: name,
-      state: 'Antioquia',
-      country: 'Colombia',
-      countrycodes: 'co',
+      countrycodes: countryCode.toLowerCase(),
       format: 'jsonv2',
       addressdetails: '1',
       polygon_geojson: '1',
       limit: '1',
     });
+    if (option?.dataset.type === 'other') {
+      params.set('q', [name, department, country].filter(Boolean).join(', '));
+    } else {
+      params.set('city', name);
+      if (department) params.set('state', department);
+      params.set('country', country);
+    }
     const response = await fetch(`https://nominatim.openstreetmap.org/search?${params}`, {
       headers: { Accept: 'application/json' },
       signal: AbortSignal.timeout(7000),
