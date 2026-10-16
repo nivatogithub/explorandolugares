@@ -1,8 +1,8 @@
 {
-  "universe_version": "CO-editorial-v2",
+  "universe_version": "CO-turismo-v3",
   "scope": "curated_candidates_not_all_municipalities",
   "administrative_national_coverage_percent": null,
-  "coverage_denominator": "78 candidatos editoriales / 33 unidades; país ponderado por departamento, no censo nacional",
+  "coverage_denominator": "100 candidatos editoriales / 33 unidades; país ponderado por departamento, no censo nacional",
   "country": {
     "prepared_percent": 0.0,
     "publishable_percent": 0.0,
@@ -23,7 +23,7 @@
     {
       "department_id": "CO-08",
       "name": "Atlántico",
-      "weight": 2,
+      "weight": 3,
       "place_count": 2,
       "prepared_percent": 0.0,
       "publishable_percent": 0.0,
@@ -33,7 +33,7 @@
     {
       "department_id": "CO-11",
       "name": "Bogotá D.C.",
-      "weight": 2,
+      "weight": 3,
       "place_count": 1,
       "prepared_percent": 0.0,
       "publishable_percent": 0.0,
@@ -53,8 +53,8 @@
     {
       "department_id": "CO-15",
       "name": "Boyacá",
-      "weight": 2,
-      "place_count": 2,
+      "weight": 3,
+      "place_count": 4,
       "prepared_percent": 0.0,
       "publishable_percent": 0.0,
       "published_percent": 0.0,
@@ -63,7 +63,7 @@
     {
       "department_id": "CO-17",
       "name": "Caldas",
-      "weight": 2,
+      "weight": 3,
       "place_count": 2,
       "prepared_percent": 0.0,
       "publishable_percent": 0.0,
@@ -73,7 +73,7 @@
     {
       "department_id": "CO-18",
       "name": "Caquetá",
-      "weight": 1,
+      "weight": 2,
       "place_count": 1,
       "prepared_percent": 0.0,
       "publishable_percent": 0.0,
@@ -83,7 +83,7 @@
     {
       "department_id": "CO-19",
       "name": "Cauca",
-      "weight": 2,
+      "weight": 3,
       "place_count": 2,
       "prepared_percent": 0.0,
       "publishable_percent": 0.0,
@@ -93,7 +93,7 @@
     {
       "department_id": "CO-20",
       "name": "Cesar",
-      "weight": 1,
+      "weight": 2,
       "place_count": 1,
       "prepared_percent": 0.0,
       "publishable_percent": 0.0,
@@ -103,7 +103,7 @@
     {
       "department_id": "CO-23",
       "name": "Córdoba",
-      "weight": 1,
+      "weight": 2,
       "place_count": 2,
       "prepared_percent": 0.0,
       "publishable_percent": 0.0,
@@ -113,8 +113,8 @@
     {
       "department_id": "CO-25",
       "name": "Cundinamarca",
-      "weight": 2,
-      "place_count": 2,
+      "weight": 3,
+      "place_count": 5,
       "prepared_percent": 0.0,
       "publishable_percent": 0.0,
       "published_percent": 0.0,
@@ -123,8 +123,8 @@
     {
       "department_id": "CO-27",
       "name": "Chocó",
-      "weight": 1,
-      "place_count": 2,
+      "weight": 3,
+      "place_count": 4,
       "prepared_percent": 0.0,
       "publishable_percent": 0.0,
       "published_percent": 0.0,
@@ -133,8 +133,8 @@
     {
       "department_id": "CO-41",
       "name": "Huila",
-      "weight": 2,
-      "place_count": 2,
+      "weight": 3,
+      "place_count": 3,
       "prepared_percent": 0.0,
       "publishable_percent": 0.0,
       "published_percent": 0.0,
@@ -143,8 +143,8 @@
     {
       "department_id": "CO-44",
       "name": "La Guajira",
-      "weight": 2,
-      "place_count": 2,
+      "weight": 3,
+      "place_count": 4,
       "prepared_percent": 0.0,
       "publishable_percent": 0.0,
       "published_percent": 0.0,
@@ -153,8 +153,8 @@
     {
       "department_id": "CO-47",
       "name": "Magdalena",
-      "weight": 2,
-      "place_count": 1,
+      "weight": 3,
+      "place_count": 2,
       "prepared_percent": 0.0,
       "publishable_percent": 0.0,
       "published_percent": 0.0,
@@ -163,7 +163,7 @@
     {
       "department_id": "CO-50",
       "name": "Meta",
-      "weight": 2,
+      "weight": 3,
       "place_count": 2,
       "prepared_percent": 0.0,
       "publishable_percent": 0.0,
@@ -173,7 +173,7 @@
     {
       "department_id": "CO-52",
       "name": "Nariño",
-      "weight": 2,
+      "weight": 3,
       "place_count": 2,
       "prepared_percent": 0.0,
       "publishable_percent": 0.0,
@@ -183,7 +183,7 @@
     {
       "department_id": "CO-54",
       "name": "Norte de Santander",
-      "weight": 1,
+      "weight": 2,
       "place_count": 2,
       "prepared_percent": 0.0,
       "publishable_percent": 0.0,
@@ -194,7 +194,7 @@
       "department_id": "CO-63",
       "name": "Quindío",
       "weight": 3,
-      "place_count": 3,
+      "place_count": 5,
       "prepared_percent": 0.0,
       "publishable_percent": 0.0,
       "published_percent": 0.0,
@@ -203,7 +203,7 @@
     {
       "department_id": "CO-66",
       "name": "Risaralda",
-      "weight": 2,
+      "weight": 3,
       "place_count": 2,
       "prepared_percent": 0.0,
       "publishable_percent": 0.0,
@@ -213,8 +213,8 @@
     {
       "department_id": "CO-68",
       "name": "Santander",
-      "weight": 2,
-      "place_count": 2,
+      "weight": 3,
+      "place_count": 5,
       "prepared_percent": 0.0,
       "publishable_percent": 0.0,
       "published_percent": 0.0,
@@ -223,8 +223,8 @@
     {
       "department_id": "CO-70",
       "name": "Sucre",
-      "weight": 1,
-      "place_count": 2,
+      "weight": 3,
+      "place_count": 4,
       "prepared_percent": 0.0,
       "publishable_percent": 0.0,
       "published_percent": 0.0,
@@ -233,8 +233,8 @@
     {
       "department_id": "CO-73",
       "name": "Tolima",
-      "weight": 2,
-      "place_count": 2,
+      "weight": 3,
+      "place_count": 5,
       "prepared_percent": 0.0,
       "publishable_percent": 0.0,
       "published_percent": 0.0,
@@ -243,8 +243,8 @@
     {
       "department_id": "CO-76",
       "name": "Valle del Cauca",
-      "weight": 2,
-      "place_count": 2,
+      "weight": 3,
+      "place_count": 3,
       "prepared_percent": 0.0,
       "publishable_percent": 0.0,
       "published_percent": 0.0,
@@ -263,7 +263,7 @@
     {
       "department_id": "CO-85",
       "name": "Casanare",
-      "weight": 1,
+      "weight": 2,
       "place_count": 1,
       "prepared_percent": 0.0,
       "publishable_percent": 0.0,
@@ -273,7 +273,7 @@
     {
       "department_id": "CO-86",
       "name": "Putumayo",
-      "weight": 1,
+      "weight": 2,
       "place_count": 2,
       "prepared_percent": 0.0,
       "publishable_percent": 0.0,
@@ -283,7 +283,7 @@
     {
       "department_id": "CO-88",
       "name": "San Andrés, Providencia y Santa Catalina",
-      "weight": 2,
+      "weight": 3,
       "place_count": 2,
       "prepared_percent": 0.0,
       "publishable_percent": 0.0,
@@ -293,7 +293,7 @@
     {
       "department_id": "CO-91",
       "name": "Amazonas",
-      "weight": 2,
+      "weight": 3,
       "place_count": 2,
       "prepared_percent": 0.0,
       "publishable_percent": 0.0,
@@ -303,7 +303,7 @@
     {
       "department_id": "CO-94",
       "name": "Guainía",
-      "weight": 1,
+      "weight": 2,
       "place_count": 1,
       "prepared_percent": 0.0,
       "publishable_percent": 0.0,
@@ -313,7 +313,7 @@
     {
       "department_id": "CO-95",
       "name": "Guaviare",
-      "weight": 1,
+      "weight": 2,
       "place_count": 1,
       "prepared_percent": 0.0,
       "publishable_percent": 0.0,
@@ -465,7 +465,7 @@
     {
       "place_id": "CO-05-tamesis",
       "department_id": "CO-05",
-      "weight": 3,
+      "weight": 2,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -510,7 +510,7 @@
     {
       "place_id": "CO-05-san-rafael",
       "department_id": "CO-05",
-      "weight": 3,
+      "weight": 2,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -525,7 +525,7 @@
     {
       "place_id": "CO-05-cocorna",
       "department_id": "CO-05",
-      "weight": 3,
+      "weight": 2,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -540,7 +540,7 @@
     {
       "place_id": "CO-05-venecia",
       "department_id": "CO-05",
-      "weight": 3,
+      "weight": 2,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -555,7 +555,7 @@
     {
       "place_id": "CO-05-el-retiro",
       "department_id": "CO-05",
-      "weight": 3,
+      "weight": 2,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -570,7 +570,7 @@
     {
       "place_id": "CO-05-san-carlos",
       "department_id": "CO-05",
-      "weight": 3,
+      "weight": 2,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -585,7 +585,7 @@
     {
       "place_id": "CO-05-el-carmen-de-viboral",
       "department_id": "CO-05",
-      "weight": 3,
+      "weight": 2,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -600,7 +600,7 @@
     {
       "place_id": "CO-05-rionegro",
       "department_id": "CO-05",
-      "weight": 3,
+      "weight": 2,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -615,7 +615,7 @@
     {
       "place_id": "CO-05-necocli",
       "department_id": "CO-05",
-      "weight": 3,
+      "weight": 2,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -630,7 +630,7 @@
     {
       "place_id": "CO-05-arboletes",
       "department_id": "CO-05",
-      "weight": 3,
+      "weight": 2,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -660,7 +660,7 @@
     {
       "place_id": "CO-05-san-pedro-de-los-milagros",
       "department_id": "CO-05",
-      "weight": 3,
+      "weight": 2,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -675,7 +675,7 @@
     {
       "place_id": "CO-05-santa-rosa-de-osos",
       "department_id": "CO-05",
-      "weight": 3,
+      "weight": 2,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -690,7 +690,7 @@
     {
       "place_id": "CO-08-barranquilla",
       "department_id": "CO-08",
-      "weight": 2,
+      "weight": 3,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -705,7 +705,7 @@
     {
       "place_id": "CO-08-puerto-colombia",
       "department_id": "CO-08",
-      "weight": 2,
+      "weight": 3,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -720,7 +720,7 @@
     {
       "place_id": "CO-11-bogota",
       "department_id": "CO-11",
-      "weight": 2,
+      "weight": 3,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -750,7 +750,7 @@
     {
       "place_id": "CO-13-santa-cruz-de-mompox",
       "department_id": "CO-13",
-      "weight": 2,
+      "weight": 3,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -765,7 +765,7 @@
     {
       "place_id": "CO-15-villa-de-leyva",
       "department_id": "CO-15",
-      "weight": 2,
+      "weight": 3,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -780,7 +780,37 @@
     {
       "place_id": "CO-15-mongui",
       "department_id": "CO-15",
-      "weight": 2,
+      "weight": 3,
+      "prepared_percent": 0,
+      "publishable_percent": 0,
+      "published_percent": 0,
+      "depth_percent": 0.0,
+      "timings_hours": {
+        "produccion_inicio": null,
+        "revision_solicitada": null,
+        "revision_inicio": null,
+        "correccion_inicio": null
+      }
+    },
+    {
+      "place_id": "CO-15-el-cocuy",
+      "department_id": "CO-15",
+      "weight": 3,
+      "prepared_percent": 0,
+      "publishable_percent": 0,
+      "published_percent": 0,
+      "depth_percent": 0.0,
+      "timings_hours": {
+        "produccion_inicio": null,
+        "revision_solicitada": null,
+        "revision_inicio": null,
+        "correccion_inicio": null
+      }
+    },
+    {
+      "place_id": "CO-15-paipa",
+      "department_id": "CO-15",
+      "weight": 3,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -795,7 +825,7 @@
     {
       "place_id": "CO-17-manizales",
       "department_id": "CO-17",
-      "weight": 2,
+      "weight": 3,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -825,7 +855,7 @@
     {
       "place_id": "CO-18-florencia",
       "department_id": "CO-18",
-      "weight": 1,
+      "weight": 2,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -840,7 +870,7 @@
     {
       "place_id": "CO-19-popayan",
       "department_id": "CO-19",
-      "weight": 2,
+      "weight": 3,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -870,7 +900,7 @@
     {
       "place_id": "CO-20-valledupar",
       "department_id": "CO-20",
-      "weight": 1,
+      "weight": 3,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -885,7 +915,7 @@
     {
       "place_id": "CO-23-monteria",
       "department_id": "CO-23",
-      "weight": 1,
+      "weight": 2,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -900,7 +930,7 @@
     {
       "place_id": "CO-23-lorica",
       "department_id": "CO-23",
-      "weight": 1,
+      "weight": 2,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -915,7 +945,7 @@
     {
       "place_id": "CO-25-zipaquira",
       "department_id": "CO-25",
-      "weight": 2,
+      "weight": 3,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -930,7 +960,52 @@
     {
       "place_id": "CO-25-guatavita",
       "department_id": "CO-25",
+      "weight": 3,
+      "prepared_percent": 0,
+      "publishable_percent": 0,
+      "published_percent": 0,
+      "depth_percent": 0.0,
+      "timings_hours": {
+        "produccion_inicio": null,
+        "revision_solicitada": null,
+        "revision_inicio": null,
+        "correccion_inicio": null
+      }
+    },
+    {
+      "place_id": "CO-25-guaduas",
+      "department_id": "CO-25",
       "weight": 2,
+      "prepared_percent": 0,
+      "publishable_percent": 0,
+      "published_percent": 0,
+      "depth_percent": 0.0,
+      "timings_hours": {
+        "produccion_inicio": null,
+        "revision_solicitada": null,
+        "revision_inicio": null,
+        "correccion_inicio": null
+      }
+    },
+    {
+      "place_id": "CO-25-girardot",
+      "department_id": "CO-25",
+      "weight": 3,
+      "prepared_percent": 0,
+      "publishable_percent": 0,
+      "published_percent": 0,
+      "depth_percent": 0.0,
+      "timings_hours": {
+        "produccion_inicio": null,
+        "revision_solicitada": null,
+        "revision_inicio": null,
+        "correccion_inicio": null
+      }
+    },
+    {
+      "place_id": "CO-25-villeta",
+      "department_id": "CO-25",
+      "weight": 3,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -945,7 +1020,7 @@
     {
       "place_id": "CO-27-nuqui",
       "department_id": "CO-27",
-      "weight": 1,
+      "weight": 3,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -960,7 +1035,37 @@
     {
       "place_id": "CO-27-bahia-solano",
       "department_id": "CO-27",
-      "weight": 1,
+      "weight": 3,
+      "prepared_percent": 0,
+      "publishable_percent": 0,
+      "published_percent": 0,
+      "depth_percent": 0.0,
+      "timings_hours": {
+        "produccion_inicio": null,
+        "revision_solicitada": null,
+        "revision_inicio": null,
+        "correccion_inicio": null
+      }
+    },
+    {
+      "place_id": "CO-27-acandi",
+      "department_id": "CO-27",
+      "weight": 2,
+      "prepared_percent": 0,
+      "publishable_percent": 0,
+      "published_percent": 0,
+      "depth_percent": 0.0,
+      "timings_hours": {
+        "produccion_inicio": null,
+        "revision_solicitada": null,
+        "revision_inicio": null,
+        "correccion_inicio": null
+      }
+    },
+    {
+      "place_id": "CO-27-capurgana",
+      "department_id": "CO-27",
+      "weight": 3,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -975,7 +1080,7 @@
     {
       "place_id": "CO-41-san-agustin",
       "department_id": "CO-41",
-      "weight": 2,
+      "weight": 3,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -1003,9 +1108,24 @@
       }
     },
     {
+      "place_id": "CO-41-villavieja",
+      "department_id": "CO-41",
+      "weight": 3,
+      "prepared_percent": 0,
+      "publishable_percent": 0,
+      "published_percent": 0,
+      "depth_percent": 0.0,
+      "timings_hours": {
+        "produccion_inicio": null,
+        "revision_solicitada": null,
+        "revision_inicio": null,
+        "correccion_inicio": null
+      }
+    },
+    {
       "place_id": "CO-44-riohacha",
       "department_id": "CO-44",
-      "weight": 2,
+      "weight": 3,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -1020,7 +1140,37 @@
     {
       "place_id": "CO-44-uribia",
       "department_id": "CO-44",
+      "weight": 3,
+      "prepared_percent": 0,
+      "publishable_percent": 0,
+      "published_percent": 0,
+      "depth_percent": 0.0,
+      "timings_hours": {
+        "produccion_inicio": null,
+        "revision_solicitada": null,
+        "revision_inicio": null,
+        "correccion_inicio": null
+      }
+    },
+    {
+      "place_id": "CO-44-dibulla",
+      "department_id": "CO-44",
       "weight": 2,
+      "prepared_percent": 0,
+      "publishable_percent": 0,
+      "published_percent": 0,
+      "depth_percent": 0.0,
+      "timings_hours": {
+        "produccion_inicio": null,
+        "revision_solicitada": null,
+        "revision_inicio": null,
+        "correccion_inicio": null
+      }
+    },
+    {
+      "place_id": "CO-44-palomino",
+      "department_id": "CO-44",
+      "weight": 3,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -1035,7 +1185,22 @@
     {
       "place_id": "CO-47-santa-marta",
       "department_id": "CO-47",
-      "weight": 2,
+      "weight": 3,
+      "prepared_percent": 0,
+      "publishable_percent": 0,
+      "published_percent": 0,
+      "depth_percent": 0.0,
+      "timings_hours": {
+        "produccion_inicio": null,
+        "revision_solicitada": null,
+        "revision_inicio": null,
+        "correccion_inicio": null
+      }
+    },
+    {
+      "place_id": "CO-47-minca",
+      "department_id": "CO-47",
+      "weight": 3,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -1050,7 +1215,7 @@
     {
       "place_id": "CO-50-villavicencio",
       "department_id": "CO-50",
-      "weight": 2,
+      "weight": 3,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -1065,7 +1230,7 @@
     {
       "place_id": "CO-50-la-macarena",
       "department_id": "CO-50",
-      "weight": 2,
+      "weight": 3,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -1080,7 +1245,7 @@
     {
       "place_id": "CO-52-pasto",
       "department_id": "CO-52",
-      "weight": 2,
+      "weight": 3,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -1095,7 +1260,7 @@
     {
       "place_id": "CO-52-ipiales",
       "department_id": "CO-52",
-      "weight": 2,
+      "weight": 3,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -1110,7 +1275,7 @@
     {
       "place_id": "CO-54-cucuta",
       "department_id": "CO-54",
-      "weight": 1,
+      "weight": 2,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -1125,7 +1290,7 @@
     {
       "place_id": "CO-54-pamplona",
       "department_id": "CO-54",
-      "weight": 1,
+      "weight": 2,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -1155,7 +1320,7 @@
     {
       "place_id": "CO-63-filandia",
       "department_id": "CO-63",
-      "weight": 2,
+      "weight": 3,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -1170,7 +1335,37 @@
     {
       "place_id": "CO-63-armenia",
       "department_id": "CO-63",
-      "weight": 2,
+      "weight": 3,
+      "prepared_percent": 0,
+      "publishable_percent": 0,
+      "published_percent": 0,
+      "depth_percent": 0.0,
+      "timings_hours": {
+        "produccion_inicio": null,
+        "revision_solicitada": null,
+        "revision_inicio": null,
+        "correccion_inicio": null
+      }
+    },
+    {
+      "place_id": "CO-63-montenegro",
+      "department_id": "CO-63",
+      "weight": 3,
+      "prepared_percent": 0,
+      "publishable_percent": 0,
+      "published_percent": 0,
+      "depth_percent": 0.0,
+      "timings_hours": {
+        "produccion_inicio": null,
+        "revision_solicitada": null,
+        "revision_inicio": null,
+        "correccion_inicio": null
+      }
+    },
+    {
+      "place_id": "CO-63-quimbaya",
+      "department_id": "CO-63",
+      "weight": 3,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -1185,7 +1380,7 @@
     {
       "place_id": "CO-66-pereira",
       "department_id": "CO-66",
-      "weight": 2,
+      "weight": 3,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -1200,7 +1395,7 @@
     {
       "place_id": "CO-66-santa-rosa-de-cabal",
       "department_id": "CO-66",
-      "weight": 2,
+      "weight": 3,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -1215,7 +1410,7 @@
     {
       "place_id": "CO-68-barichara",
       "department_id": "CO-68",
-      "weight": 2,
+      "weight": 3,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -1229,6 +1424,51 @@
     },
     {
       "place_id": "CO-68-san-gil",
+      "department_id": "CO-68",
+      "weight": 3,
+      "prepared_percent": 0,
+      "publishable_percent": 0,
+      "published_percent": 0,
+      "depth_percent": 0.0,
+      "timings_hours": {
+        "produccion_inicio": null,
+        "revision_solicitada": null,
+        "revision_inicio": null,
+        "correccion_inicio": null
+      }
+    },
+    {
+      "place_id": "CO-68-giron",
+      "department_id": "CO-68",
+      "weight": 3,
+      "prepared_percent": 0,
+      "publishable_percent": 0,
+      "published_percent": 0,
+      "depth_percent": 0.0,
+      "timings_hours": {
+        "produccion_inicio": null,
+        "revision_solicitada": null,
+        "revision_inicio": null,
+        "correccion_inicio": null
+      }
+    },
+    {
+      "place_id": "CO-68-bucaramanga",
+      "department_id": "CO-68",
+      "weight": 3,
+      "prepared_percent": 0,
+      "publishable_percent": 0,
+      "published_percent": 0,
+      "depth_percent": 0.0,
+      "timings_hours": {
+        "produccion_inicio": null,
+        "revision_solicitada": null,
+        "revision_inicio": null,
+        "correccion_inicio": null
+      }
+    },
+    {
+      "place_id": "CO-68-socorro",
       "department_id": "CO-68",
       "weight": 2,
       "prepared_percent": 0,
@@ -1245,7 +1485,7 @@
     {
       "place_id": "CO-70-sincelejo",
       "department_id": "CO-70",
-      "weight": 1,
+      "weight": 2,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -1260,7 +1500,37 @@
     {
       "place_id": "CO-70-santiago-de-tolu",
       "department_id": "CO-70",
-      "weight": 1,
+      "weight": 3,
+      "prepared_percent": 0,
+      "publishable_percent": 0,
+      "published_percent": 0,
+      "depth_percent": 0.0,
+      "timings_hours": {
+        "produccion_inicio": null,
+        "revision_solicitada": null,
+        "revision_inicio": null,
+        "correccion_inicio": null
+      }
+    },
+    {
+      "place_id": "CO-70-covenas",
+      "department_id": "CO-70",
+      "weight": 3,
+      "prepared_percent": 0,
+      "publishable_percent": 0,
+      "published_percent": 0,
+      "depth_percent": 0.0,
+      "timings_hours": {
+        "produccion_inicio": null,
+        "revision_solicitada": null,
+        "revision_inicio": null,
+        "correccion_inicio": null
+      }
+    },
+    {
+      "place_id": "CO-70-san-onofre",
+      "department_id": "CO-70",
+      "weight": 2,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -1275,7 +1545,7 @@
     {
       "place_id": "CO-73-ibague",
       "department_id": "CO-73",
-      "weight": 2,
+      "weight": 3,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -1303,8 +1573,8 @@
       }
     },
     {
-      "place_id": "CO-76-cali",
-      "department_id": "CO-76",
+      "place_id": "CO-73-murillo",
+      "department_id": "CO-73",
       "weight": 2,
       "prepared_percent": 0,
       "publishable_percent": 0,
@@ -1318,7 +1588,67 @@
       }
     },
     {
+      "place_id": "CO-73-melgar",
+      "department_id": "CO-73",
+      "weight": 3,
+      "prepared_percent": 0,
+      "publishable_percent": 0,
+      "published_percent": 0,
+      "depth_percent": 0.0,
+      "timings_hours": {
+        "produccion_inicio": null,
+        "revision_solicitada": null,
+        "revision_inicio": null,
+        "correccion_inicio": null
+      }
+    },
+    {
+      "place_id": "CO-73-prado",
+      "department_id": "CO-73",
+      "weight": 2,
+      "prepared_percent": 0,
+      "publishable_percent": 0,
+      "published_percent": 0,
+      "depth_percent": 0.0,
+      "timings_hours": {
+        "produccion_inicio": null,
+        "revision_solicitada": null,
+        "revision_inicio": null,
+        "correccion_inicio": null
+      }
+    },
+    {
+      "place_id": "CO-76-cali",
+      "department_id": "CO-76",
+      "weight": 3,
+      "prepared_percent": 0,
+      "publishable_percent": 0,
+      "published_percent": 0,
+      "depth_percent": 0.0,
+      "timings_hours": {
+        "produccion_inicio": null,
+        "revision_solicitada": null,
+        "revision_inicio": null,
+        "correccion_inicio": null
+      }
+    },
+    {
       "place_id": "CO-76-guadalajara-de-buga",
+      "department_id": "CO-76",
+      "weight": 3,
+      "prepared_percent": 0,
+      "publishable_percent": 0,
+      "published_percent": 0,
+      "depth_percent": 0.0,
+      "timings_hours": {
+        "produccion_inicio": null,
+        "revision_solicitada": null,
+        "revision_inicio": null,
+        "correccion_inicio": null
+      }
+    },
+    {
+      "place_id": "CO-76-buenaventura",
       "department_id": "CO-76",
       "weight": 2,
       "prepared_percent": 0,
@@ -1350,7 +1680,7 @@
     {
       "place_id": "CO-85-yopal",
       "department_id": "CO-85",
-      "weight": 1,
+      "weight": 2,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -1365,7 +1695,7 @@
     {
       "place_id": "CO-86-mocoa",
       "department_id": "CO-86",
-      "weight": 1,
+      "weight": 2,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -1380,7 +1710,7 @@
     {
       "place_id": "CO-86-sibundoy",
       "department_id": "CO-86",
-      "weight": 1,
+      "weight": 2,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -1395,7 +1725,7 @@
     {
       "place_id": "CO-88-san-andres",
       "department_id": "CO-88",
-      "weight": 2,
+      "weight": 3,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -1410,7 +1740,7 @@
     {
       "place_id": "CO-88-providencia",
       "department_id": "CO-88",
-      "weight": 2,
+      "weight": 3,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -1425,7 +1755,7 @@
     {
       "place_id": "CO-91-leticia",
       "department_id": "CO-91",
-      "weight": 2,
+      "weight": 3,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -1440,7 +1770,7 @@
     {
       "place_id": "CO-91-puerto-narino",
       "department_id": "CO-91",
-      "weight": 2,
+      "weight": 3,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -1455,7 +1785,7 @@
     {
       "place_id": "CO-94-inirida",
       "department_id": "CO-94",
-      "weight": 1,
+      "weight": 2,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -1470,7 +1800,7 @@
     {
       "place_id": "CO-95-san-jose-del-guaviare",
       "department_id": "CO-95",
-      "weight": 1,
+      "weight": 3,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -1485,7 +1815,7 @@
     {
       "place_id": "CO-97-mitu",
       "department_id": "CO-97",
-      "weight": 1,
+      "weight": 2,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -1500,7 +1830,7 @@
     {
       "place_id": "CO-99-puerto-carreno",
       "department_id": "CO-99",
-      "weight": 1,
+      "weight": 2,
       "prepared_percent": 0,
       "publishable_percent": 0,
       "published_percent": 0,
@@ -1534,5 +1864,5 @@
   "bottleneck_candidate": null,
   "active": 0,
   "awaiting_review": 0,
-  "not_started": 78
+  "not_started": 100
 }

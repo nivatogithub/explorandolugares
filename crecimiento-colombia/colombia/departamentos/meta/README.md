@@ -1,6 +1,6 @@
 # Meta
 
-Grupo P2 provisional. La prioridad del departamento no obliga a que todos sus destinos pertenezcan al mismo grupo.
+P1 turística propuesta; revisión nacional CO-turismo-v3.
 
-- [Villavicencio](lugares/villavicencio/PROCESO.md) · P2
-- [La Macarena](lugares/la-macarena/PROCESO.md) · P2
+- [La Macarena](lugares/la-macarena/PROCESO.md) · P1
+- [Villavicencio](lugares/villavicencio/PROCESO.md) · P1

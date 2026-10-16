@@ -1,6 +1,6 @@
 # Bolívar
 
-Grupo P1 provisional. La prioridad del departamento no obliga a que todos sus destinos pertenezcan al mismo grupo.
+P1 turística propuesta; revisión nacional CO-turismo-v3.
 
 - [Cartagena](lugares/cartagena/PROCESO.md) · P1
-- [Santa Cruz de Mompox](lugares/santa-cruz-de-mompox/PROCESO.md) · P2
+- [Santa Cruz de Mompox](lugares/santa-cruz-de-mompox/PROCESO.md) · P1

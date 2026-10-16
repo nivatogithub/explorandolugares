@@ -29,3 +29,7 @@ No se modifican portal, base de datos, configuración, contactos, precios ni con
 ## Auditoría y operación vigente (16/10/2026)
 
 Leer primero [AUDITORIA_PRIORIDADES.md](AUDITORIA_PRIORIDADES.md), [ARRANQUE.md](ARRANQUE.md) y [WORKERS.md](WORKERS.md). La cola única está en operacion.json; no elegir lugares manualmente fuera de su orden. Plan operativo implementado localmente; ejecución editorial y aprobación nacional pendientes.
+
+## Orden turístico vigente
+
+La revisión solicitada por el propietario sustituye el orden anterior: [REVISION_TURISTICA_NACIONAL.md](REVISION_TURISTICA_NACIONAL.md), [ORDEN_TURISTICO.md](ORDEN_TURISTICO.md) y turismo.json son la referencia actual. 100 candidatos, no censo del país; prioridades editoriales con evidencia y límites. Se corrigió la afirmación anterior sobre contact-options.json: sí contiene categorías.

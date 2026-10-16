@@ -1,9 +1,9 @@
-# San Andrés · San Andrés, Providencia y Santa Catalina
+# San Andrés
 
-ID `CO-88-san-andres` · prioridad 2 · puntuación de preparación 60.0/100.
-Estado inicial: planificado; contenido y publicación pendientes de auditoría.
+ID `CO-88-san-andres` · P1 turística · preparación 60.0/100 · turismo 94/100 (evaluación editorial).
+Ver turismo.json para fuentes, criterio y categoría anterior.
 
-## Checklist de ejecución
+# Proceso replicable de lugar
 
 ## Identificación y control
 

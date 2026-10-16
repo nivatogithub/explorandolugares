@@ -1,9 +1,9 @@
-# Santa Rosa de Osos · Antioquia
+# Santa Rosa de Osos
 
-ID `CO-05-santa-rosa-de-osos` · prioridad 1 · puntuación de preparación 60.0/100.
-Estado inicial: planificado; contenido y publicación pendientes de auditoría.
+ID `CO-05-santa-rosa-de-osos` · P2 turística · preparación 60.0/100 · turismo 58/100 (evaluación editorial).
+Ver turismo.json para fuentes, criterio y categoría anterior.
 
-## Checklist de ejecución
+# Proceso replicable de lugar
 
 ## Identificación y control
 

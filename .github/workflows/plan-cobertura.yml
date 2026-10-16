@@ -22,5 +22,7 @@ jobs:
       - run: python3 crecimiento-colombia/scripts/test_validar.py
       - run: python3 crecimiento-colombia/scripts/operacion.py --report
       - run: python3 crecimiento-colombia/scripts/test_operacion.py
+      - run: python3 crecimiento-colombia/scripts/test_turismo.py
+      - run: python3 crecimiento-colombia/scripts/turismo.py --report
       - name: Comprobar reportes actualizados
-        run: git diff --exit-code -- crecimiento-colombia/cobertura-operativa.json crecimiento-colombia/COBERTURA_OPERATIVA.md
+        run: git diff --exit-code -- crecimiento-colombia/cobertura-operativa.json crecimiento-colombia/COBERTURA_OPERATIVA.md crecimiento-colombia/ORDEN_TURISTICO.md

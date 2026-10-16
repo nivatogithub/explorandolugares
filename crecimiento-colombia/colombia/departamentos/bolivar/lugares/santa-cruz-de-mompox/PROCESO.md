@@ -1,9 +1,9 @@
-# Santa Cruz de Mompox · Bolívar
+# Santa Cruz de Mompox
 
-ID `CO-13-santa-cruz-de-mompox` · prioridad 2 · puntuación de preparación 60.0/100.
-Estado inicial: planificado; contenido y publicación pendientes de auditoría.
+ID `CO-13-santa-cruz-de-mompox` · P1 turística · preparación 60.0/100 · turismo 80/100 (evaluación editorial).
+Ver turismo.json para fuentes, criterio y categoría anterior.
 
-## Checklist de ejecución
+# Proceso replicable de lugar
 
 ## Identificación y control
 

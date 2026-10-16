@@ -1,6 +1,8 @@
 # La Guajira
 
-Grupo P2 provisional. La prioridad del departamento no obliga a que todos sus destinos pertenezcan al mismo grupo.
+P1 turística propuesta; revisión nacional CO-turismo-v3.
 
-- [Riohacha](lugares/riohacha/PROCESO.md) · P2
-- [Uribia](lugares/uribia/PROCESO.md) · P2
+- [Palomino](lugares/palomino/PROCESO.md) · P1
+- [Riohacha](lugares/riohacha/PROCESO.md) · P1
+- [Uribia](lugares/uribia/PROCESO.md) · P1
+- [Dibulla](lugares/dibulla/PROCESO.md) · P2

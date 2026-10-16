@@ -1,6 +1,8 @@
 # Chocó
 
-Grupo P3 provisional. La prioridad del departamento no obliga a que todos sus destinos pertenezcan al mismo grupo.
+P1 turística propuesta; revisión nacional CO-turismo-v3.
 
-- [Nuquí](lugares/nuqui/PROCESO.md) · P3
-- [Bahía Solano](lugares/bahia-solano/PROCESO.md) · P3
+- [Bahía Solano](lugares/bahia-solano/PROCESO.md) · P1
+- [Nuquí](lugares/nuqui/PROCESO.md) · P1
+- [Capurganá](lugares/capurgana/PROCESO.md) · P1
+- [Acandí](lugares/acandi/PROCESO.md) · P2

@@ -4,12 +4,12 @@
   "name": null,
   "department_id": null,
   "department": null,
-  "department_priority": 1,
-  "place_priority": 1,
-  "department_score": 85.0,
-  "place_score": 94.0,
-  "priority_basis": "clasificacion_propietario_2026-10-11_contact-options",
-  "department_priority_basis": "propuesta_editorial_departamental_pendiente_validacion",
+  "department_priority": null,
+  "place_priority": null,
+  "department_score": null,
+  "place_score": null,
+  "priority_basis": null,
+  "department_priority_basis": null,
   "source_pointer": null,
   "manifest": null,
   "state": "sin_iniciar",
@@ -101,5 +101,7 @@
       "checked_at": null,
       "reviewer": null
     }
-  }
+  },
+  "tourism_score": null,
+  "tourism_sources": []
 }

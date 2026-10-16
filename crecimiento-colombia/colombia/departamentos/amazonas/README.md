@@ -1,6 +1,6 @@
 # Amazonas
 
-Grupo P2 provisional. La prioridad del departamento no obliga a que todos sus destinos pertenezcan al mismo grupo.
+P1 turística propuesta; revisión nacional CO-turismo-v3.
 
-- [Leticia](lugares/leticia/PROCESO.md) · P2
-- [Puerto Nariño](lugares/puerto-narino/PROCESO.md) · P2
+- [Leticia](lugares/leticia/PROCESO.md) · P1
+- [Puerto Nariño](lugares/puerto-narino/PROCESO.md) · P1

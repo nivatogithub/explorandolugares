@@ -1,9 +1,9 @@
-# Jardín · Antioquia
+# Jardín
 
-ID `CO-05-jardin` · prioridad 1 · puntuación de preparación 85.0/100.
-Estado inicial: planificado; contenido y publicación pendientes de auditoría.
+ID `CO-05-jardin` · P1 turística · preparación 85.0/100 · turismo 82/100 (evaluación editorial).
+Ver turismo.json para fuentes, criterio y categoría anterior.
 
-## Checklist de ejecución
+# Proceso replicable de lugar
 
 ## Identificación y control
 

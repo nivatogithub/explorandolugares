@@ -1,6 +1,6 @@
 # Norte de Santander
 
-Grupo P3 provisional. La prioridad del departamento no obliga a que todos sus destinos pertenezcan al mismo grupo.
+P2 turística propuesta; revisión nacional CO-turismo-v3.
 
-- [Cúcuta](lugares/cucuta/PROCESO.md) · P3
-- [Pamplona](lugares/pamplona/PROCESO.md) · P3
+- [Cúcuta](lugares/cucuta/PROCESO.md) · P2
+- [Pamplona](lugares/pamplona/PROCESO.md) · P2

@@ -1,9 +1,9 @@
-# Mitú · Vaupés
+# Mitú
 
-ID `CO-97-mitu` · prioridad 3 · puntuación de preparación 35.0/100.
-Estado inicial: planificado; contenido y publicación pendientes de auditoría.
+ID `CO-97-mitu` · P2 turística · preparación 35.0/100 · turismo 46/100 (evaluación editorial).
+Ver turismo.json para fuentes, criterio y categoría anterior.
 
-## Checklist de ejecución
+# Proceso replicable de lugar
 
 ## Identificación y control
 
