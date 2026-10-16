@@ -35,3 +35,9 @@ La inscripción pública y autenticación de viajeros no se habilitan por esta e
 - SIC: https://sedeelectronica.sic.gov.co/sites/default/files/estados/072022/RE14015-2021.pdf — tratamiento de datos mediante cookies sujeto al régimen de datos personales. Esta entrega elige consentimiento para medición opcional y minimización; no pretende sustituir una revisión jurídica integral.
 - DB-IP oficial: https://db-ip.com/db/download/ip-to-country-lite — datos Lite, CC BY 4.0 y atribución; ver `backend/app/analytics/geoip/PROVENANCE.md`. Actualizar mensualmente. No usar API externa para enviar IP.
 - MaxMind lector oficial: https://github.com/maxmind/MaxMind-DB-Reader-php/releases/tag/v1.14.0 — lector Apache 2.0, licencia incluida.
+
+## Verificación de publicación
+
+2026-10-16: tablas activadas en producción sin shell ni credenciales administrativas. APIs de cobertura y medición respondieron 200; la publicación se consulta desde la base real. Una visita de navegador aceptando medición cambió el estado público a `collecting_baseline`, confirmando persistencia sin exponer grupos pequeños. Se comprobaron portada, Jericó, privacidad y recolector. Esta validación incluye una visita real de prueba; no se generó tráfico masivo ni histórico sintético.
+
+Inventario adicional: 76 HTML públicos administrados en el manifiesto; 61 ya cubiertos por cargador compartido/directo, 12 redirecciones y 3 páginas adicionales que necesitan cargador directo. Ver `backend/integration-medicion/inventory.json`. Los renderizadores PHP de destino y negocio tienen inclusión explícita. Nuevas páginas públicas deben mantener esta inclusión.
