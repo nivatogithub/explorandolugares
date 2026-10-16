@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """HTTP regression checks for authenticated admin pages using a disposable SQLite DB."""
 from pathlib import Path
-import re
+import re, os
 import base64, json, secrets, shutil, socket, sqlite3, subprocess, time
 from datetime import date, timedelta
 import http.cookiejar
@@ -346,11 +346,24 @@ try:
     bulk_row = DB.execute("SELECT b.publication_status,s.status FROM businesses b JOIN business_translations t ON t.business_id=b.id AND t.locale='es' JOIN business_subscriptions s ON s.business_id=b.id WHERE t.display_name='Comercio importado de prueba'").fetchone()
     check(tuple(bulk_row) == ('published','active'), 'La aprobación masiva no activó el registro Gratis tras publicarlo.')
 
+    imported_id = DB.execute("SELECT business_id FROM business_translations WHERE display_name='Comercio importado de prueba' AND locale='es'").fetchone()[0]
+    before_free = DB.execute('SELECT public_id,record_origin FROM businesses WHERE id=?', (imported_id,)).fetchone()
+    count_before_free = DB.execute('SELECT COUNT(*) FROM businesses').fetchone()[0]
+    minimal_free = {'csrf': csrf, 'action': 'save', 'id': str(imported_id), 'destination_id': str(destination_id), 'category_code': 'hospedaje', 'plan_code': 'free', 'map_workflow': '1', 'location_confirmed': '0', 'translations[es][display_name]': 'Comercio importado de prueba'}
+    free_status, free_body, _ = request('/admin/negocios.php', minimal_free)
+    check(free_status == 200 and 'Abrir o editar este negocio' in free_body, 'Editar Gratis debe guardar sin dirección, mapa, teléfono, descripción ni frecuencia de pago.')
+    check(tuple(DB.execute('SELECT public_id,record_origin FROM businesses WHERE id=?', (imported_id,)).fetchone()) == tuple(before_free) and DB.execute('SELECT COUNT(*) FROM businesses').fetchone()[0] == count_before_free, 'Editar Gratis debe conservar ID, origen y el mismo registro.')
+    _, free_form, _ = request('/admin/negocios.php?id=' + str(imported_id))
+    check('data-paid-only hidden disabled' in free_form and not re.search(r'<input[^>]*name="address_text"[^>]*\brequired\b', free_form), 'El HTML gratuito no debe exigir dirección ni permitir validar campos pagos ocultos.')
+
+    if os.environ.get('EL_FREE_EDITOR_BROWSER') == '1':
+        subprocess.run(['/Users/nivato/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node', str(ROOT / 'backend/tests/free-business-editor.browser.cjs')], input=json.dumps({'base': BASE, 'password': password, 'businessId': imported_id}), text=True, check=True)
+
     # Create a business through the real admin HTTP handler. It must remain a private draft.
     failed_create = {'csrf': csrf, 'action': 'save', 'id': '', 'destination_id': str(destination_id), 'category_code': 'categoria_invalida', 'translations[es][display_name]': 'Prueba que debe conservarse', 'plan_code': 'free', 'billing_frequency': 'monthly', 'address_text': 'Parque principal, Jericó', 'map_workflow': '1', 'location_confirmed': '1', 'image_assistance_requested': '0'}
     failed_status, failed_body, _ = request('/admin/negocios.php', failed_create)
     check(failed_status == 400 and 'Crear negocio' in failed_body and 'No se guardó el negocio' in failed_body and 'Prueba que debe conservarse' in failed_body, 'Al fallar el alta, el formulario debe permanecer abierto, explicar el error y conservar los campos escritos.')
-    missing_location = {'csrf': csrf, 'action': 'save', 'id': '', 'destination_id': str(destination_id), 'category_code': 'hospedaje', 'translations[es][display_name]': 'Prueba sin punto de mapa', 'plan_code': 'free', 'billing_frequency': 'monthly', 'address_text': 'Parque principal, Jericó', 'map_workflow': '1', 'location_confirmed': '0', 'image_assistance_requested': '0'}
+    missing_location = {'csrf': csrf, 'action': 'save', 'id': '', 'destination_id': str(destination_id), 'category_code': 'hospedaje', 'translations[es][display_name]': 'Prueba sin punto de mapa', 'plan_code': 'basic', 'billing_frequency': 'monthly', 'address_text': 'Parque principal, Jericó', 'map_workflow': '1', 'location_confirmed': '0', 'image_assistance_requested': '0'}
     location_status, location_body, _ = request('/admin/negocios.php', missing_location)
     check(location_status == 400 and 'Selecciona el punto exacto en el mapa' in location_body and 'Prueba sin punto de mapa' in location_body, 'El alta sin punto confirmado debe explicar que faltó el mapa y conservar lo escrito.')
     fields = [

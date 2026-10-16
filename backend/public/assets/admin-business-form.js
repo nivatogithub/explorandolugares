@@ -6,6 +6,9 @@
  const update=()=>{
    const selected=plans[plan.value]||plans.free||{},features=new Set(selected.features||[]),isFree=plan.value==='free';
    for(const field of form.querySelectorAll('[data-plan-feature]')){const enabled=features.has(field.dataset.planFeature);field.hidden=!enabled;field.querySelectorAll('input,select,textarea').forEach(input=>input.disabled=!enabled);}
+   for(const section of form.querySelectorAll('[data-paid-only]')){section.hidden=isFree;section.disabled=isFree;}
+   const address=form.elements.namedItem('address_text');if(address)address.required=!isFree;
+   if(isFree){const save=form.querySelector('button[type=submit]');if(save)save.disabled=false;}
    const requiredFields={
      'translations[es][summary]':features.has('expanded_details'),
      'translations[es][description]':features.has('extended_description'),
@@ -25,7 +28,7 @@
    if(availableFrequencies.length&&!availableFrequencies.includes(frequency.value))frequency.value=availableFrequencies[0];
    frequencyField.hidden=isFree;frequency.disabled=isFree;frequency.required=!isFree;
    const price=selected.prices?.[frequency.value];
-   quote.textContent=isFree?'Gratis: aparecerá en el directorio con nombre, categoría y ubicación. Los datos de contacto se conservan para revisión y no se publican.':price?.amount?`${selected.name}: ${money(price)} por periodo ${frequency.options[frequency.selectedIndex]?.text.toLowerCase()}. La vigencia empieza al publicar.`:`${selected.name||'Suscripción'}: no hay una tarifa configurada para esta frecuencia. El administrador debe definirla antes de guardar esta elección.`;
+   quote.textContent=isFree?'Gratis: solo requiere nombre, categoría y destino. No necesita dirección, mapa ni datos de contacto; los canales investigados se conservan privados.':price?.amount?`${selected.name}: ${money(price)} por periodo ${frequency.options[frequency.selectedIndex]?.text.toLowerCase()}. La vigencia empieza al publicar.`:`${selected.name||'Suscripción'}: no hay una tarifa configurada para esta frecuencia. El administrador debe definirla antes de guardar esta elección.`;
    const req=(selected.requirements||[]).join(' ');quote.dataset.requirements=req;
    if(details){details.replaceChildren();(selected.requirements||[]).forEach(item=>{const p=document.createElement('p');p.textContent=item;details.append(p);});}
    const refCaps={featured:1,page:2,page_premium:4},limit=refCaps[plan.value]||0;

@@ -33,7 +33,7 @@ $service=new BusinessSubscriptionAdminService($pdo);$plans=array_column($service
 subscription_check($plans['page']['max_gallery_photos']===0&&$plans['page_premium']['max_gallery_photos']===2,'Page includes one cover, while Premium allows up to three total public photos.');
 subscription_check($plans['basic']['text_limits']['summary']===300&&$plans['featured']['text_limits']['description']===1000&&$plans['page']['text_limits']['summary']===750&&$plans['page_premium']['text_limits']['brand_story']===1500,'Text character quotas grow by subscription tier and are returned to the editor.');
 subscription_check(!in_array('extended_description',$plans['basic']['features'],true)&&in_array('extended_description',$plans['featured']['features'],true),'Basic collects only the short summary while Featured unlocks the longer directory description.');
-subscription_check(str_contains(implode(' ',$plans['free']['requirements']),'solo nombre, categoría y ubicación'),'Free exposes only the minimum public listing.');
+subscription_check(str_contains(implode(' ',$plans['free']['requirements']),'Solo requiere nombre, categoría y destino'),'Free exposes only the minimum public listing.');
 subscription_check(str_contains(implode(' ',$plans['page']['requirements']),'dos referencias privadas')&&str_contains(implode(' ',$plans['page']['requirements']),'una imagen para preparar la portada')&&str_contains(implode(' ',$plans['page']['requirements']),'no se publican directamente'),'Page asks for a logo and one visual reference while keeping the published image review separate.');
 subscription_check(str_contains(implode(' ',$plans['page_premium']['requirements']),'hasta 2 fotos adicionales')&&str_contains(implode(' ',$plans['page_premium']['requirements']),'historia o propuesta')&&str_contains(implode(' ',$plans['page_premium']['requirements']),'referencias son privadas'),'Premium lists up to three public photos total, private references and dedicated story content.');
 $pdo->exec("UPDATE subscription_plan_prices SET currency='CO' WHERE plan_code='page' AND billing_frequency='quarterly'");
@@ -42,46 +42,50 @@ subscription_check($invalidCatalogPrices['page']['prices']['quarterly']['amount'
 $badCurrency=false;try{$service->save(['business_id'=>1,'plan_code'=>'page','billing_frequency'=>'quarterly']);}catch(RuntimeException $error){$badCurrency=str_contains($error->getMessage(),'moneda');}
 subscription_check($badCurrency,'The admin subscription handler refuses a configured price with an invalid currency.');
 $pdo->exec("UPDATE subscription_plan_prices SET currency='COP' WHERE plan_code='page' AND billing_frequency='quarterly'");
-$id=$service->save(['business_id'=>1,'plan_code'=>'page','billing_frequency'=>'quarterly','publish_not_before'=>'2026-10-15','payment_reviewed'=>'1']);
+$testBase=new DateTimeImmutable('first day of next month',new DateTimeZone('America/Bogota'));
+$testDate=static fn(int $days):DateTimeImmutable=>$testBase->modify(($days>=0?'+':'').$days.' days')->setTime(12,0);
+$scheduledDay=$testBase->format('Y-m-d');
+$id=$service->save(['business_id'=>1,'plan_code'=>'page','billing_frequency'=>'quarterly','publish_not_before'=>$scheduledDay,'payment_reviewed'=>'1']);
 $q=$pdo->prepare('SELECT * FROM business_subscriptions WHERE id=?');$q->execute([$id]);$sub=$q->fetch(PDO::FETCH_ASSOC);
-subscription_check($sub['status']==='pending'&&$sub['starts_at']===null&&$sub['quoted_amount']==120000&&$sub['publish_not_before']==='2026-10-15','An admin checkbox cannot mark an unverified subscription paid; the quote and publication date are still stored.');
+subscription_check($sub['status']==='pending'&&$sub['starts_at']===null&&$sub['quoted_amount']==120000&&$sub['publish_not_before']===$scheduledDay,'An admin checkbox cannot mark an unverified subscription paid; the quote and publication date are still stored.');
 $pdo->exec("INSERT INTO accounts VALUES(1,'business','active');INSERT INTO business_account_memberships VALUES(1,1,'owner','active');INSERT INTO business_subscription_payment_evidence(subscription_id,account_id,storage_name,original_name,mime_type,file_size,payment_reference,status,admin_note,reviewed_by) VALUES($id,1,'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.png','soporte.png','image/png',68,'TX-1','pending','','')");$evidenceId=(int)$pdo->lastInsertId();
 $paymentStorage=sys_get_temp_dir().'/el-payment-test-'.bin2hex(random_bytes(4));$payments=new BusinessPaymentEvidenceService($pdo,$paymentStorage);
 $pdo->prepare('UPDATE business_subscriptions SET quoted_amount=NULL WHERE id=?')->execute([$id]);$invalidQuoteRejected=false;try{$payments->review($evidenceId,'approved','','admin');}catch(RuntimeException $error){$invalidQuoteRejected=str_contains($error->getMessage(),'importe cotizado');}
 subscription_check($invalidQuoteRejected&&$pdo->query('SELECT status FROM business_subscription_payment_evidence WHERE id='.$evidenceId)->fetchColumn()==='pending','Payment approval refuses a missing quote and keeps the evidence pending for correction.');
 $pdo->prepare('UPDATE business_subscriptions SET quoted_amount=120000 WHERE id=?')->execute([$id]);$payments->review($evidenceId,'approved','','admin');$q->execute([$id]);$sub=$q->fetch(PDO::FETCH_ASSOC);rmdir($paymentStorage);
 subscription_check($sub['status']==='paid_pending_publication'&&$sub['reviewed_at']!==null&&$pdo->query('SELECT publication_status FROM businesses WHERE id=1')->fetchColumn()==='draft','Only an administrator-approved payment evidence marks the subscription paid, and it remains unpublished.');
-$rejected=false;try{$service->publish(1,new DateTimeImmutable('2026-10-14 12:00:00',new DateTimeZone('America/Bogota')));}catch(RuntimeException $error){$rejected=str_contains($error->getMessage(),'fecha elegida');}
+$rejected=false;try{$service->publish(1,$testDate(-1));}catch(RuntimeException $error){$rejected=str_contains($error->getMessage(),'fecha elegida');}
 subscription_check($rejected,'A scheduled listing cannot publish early.');
 $pdo->exec("INSERT INTO business_media VALUES(1,11,2,'gallery'),(1,12,3,'gallery'),(1,13,4,'gallery'),(1,14,5,'gallery'),(1,15,6,'gallery')");
-$quotaRejected=false;try{$service->publish(1,new DateTimeImmutable('2026-10-16 12:00:00',new DateTimeZone('America/Bogota')));}catch(RuntimeException $error){$quotaRejected=str_contains($error->getMessage(),'galería supera el máximo');}
+$quotaRejected=false;try{$service->publish(1,$testDate(0));}catch(RuntimeException $error){$quotaRejected=str_contains($error->getMessage(),'galería supera el máximo');}
 subscription_check($quotaRejected,'A page cannot publish more gallery images than its purchased tier includes.');
 $pdo->exec("DELETE FROM business_media WHERE business_id=1 AND role='gallery' AND media_asset_id BETWEEN 11 AND 15");
-$service->publish(1,new DateTimeImmutable('2026-10-16 12:00:00',new DateTimeZone('America/Bogota')));
+$service->publish(1,$testDate(0));
 $q->execute([$id]);$sub=$q->fetch(PDO::FETCH_ASSOC);
-subscription_check($sub['status']==='active'&&$sub['published_at']==='2026-10-16 17:00:00'&&$sub['starts_at']===$sub['published_at']&&$sub['ends_at']==='2027-01-16 17:00:00','A quarterly subscription expires three calendar months after its actual publication date.');
+subscription_check($sub['status']==='active'&&$sub['published_at']===$testDate(0)->setTimezone(new DateTimeZone('UTC'))->format('Y-m-d H:i:s')&&$sub['starts_at']===$sub['published_at']&&$sub['ends_at']===$testDate(0)->modify('+3 months')->setTimezone(new DateTimeZone('UTC'))->format('Y-m-d H:i:s'),'A quarterly subscription expires three calendar months after its actual publication date.');
 subscription_check($pdo->query('SELECT publication_status FROM businesses WHERE id=1')->fetchColumn()==='published','Publication and benefit activation occur together.');
 $pdo->exec("UPDATE business_contacts SET is_public=0 WHERE business_id=1");
 $pdo->exec("UPDATE business_subscriptions SET status='paid_pending_publication',reviewed_at='2026-10-14 12:00:00' WHERE id=".(int)$id);
 $pdo->exec("UPDATE business_subscriptions SET publish_not_before=NULL WHERE id=".(int)$id);
-$contactRejected=false;try{$service->publish(1,new DateTimeImmutable('2026-10-17 12:00:00',new DateTimeZone('America/Bogota')));}catch(RuntimeException $error){$contactRejected=str_contains($error->getMessage(),'contacto directo');}
+$contactRejected=false;try{$service->publish(1,$testDate(1));}catch(RuntimeException $error){$contactRejected=str_contains($error->getMessage(),'contacto directo');}
 subscription_check($contactRejected,'Paid direct-contact tiers require a publicly authorized phone or WhatsApp.');
 $pdo->exec("UPDATE business_contacts SET is_public=1 WHERE business_id=1");
 $pdo->exec("UPDATE subscription_plan_prices SET amount=240000 WHERE plan_code='page_premium' AND billing_frequency='quarterly'");
 $pdo->exec("UPDATE business_subscriptions SET plan_code='page_premium',billing_frequency='quarterly',status='paid_pending_publication',quoted_amount=240000,publish_not_before=NULL WHERE id=".(int)$id);
-$premiumRejected=false;try{$service->publish(1,new DateTimeImmutable('2026-10-18 12:00:00',new DateTimeZone('America/Bogota')));}catch(RuntimeException $error){$premiumRejected=str_contains($error->getMessage(),'información adicional');}
+$premiumRejected=false;try{$service->publish(1,$testDate(2));}catch(RuntimeException $error){$premiumRejected=str_contains($error->getMessage(),'información adicional');}
 subscription_check($premiumRejected,'Premium publication requires its two additional content sections.');
 $pdo->exec("UPDATE business_translations SET brand_story=CASE locale WHEN 'es' THEN 'Historia del café' WHEN 'en' THEN 'The cafe story' ELSE 'História do café' END,featured_services=CASE locale WHEN 'es' THEN 'Café de origen' WHEN 'en' THEN 'Origin coffee' ELSE 'Café de origem' END WHERE business_id=1");
-$service->publish(1,new DateTimeImmutable('2026-10-18 12:00:00',new DateTimeZone('America/Bogota')));
+$service->publish(1,$testDate(2));
 $q->execute([$id]);$sub=$q->fetch(PDO::FETCH_ASSOC);
-subscription_check($sub['status']==='active'&&$sub['ends_at']==='2027-01-18 17:00:00','Premium renews from the actual publication date after its extra content is ready.');
+subscription_check($sub['status']==='active'&&$sub['ends_at']===$testDate(2)->modify('+3 months')->setTimezone(new DateTimeZone('UTC'))->format('Y-m-d H:i:s'),'Premium renews from the actual publication date after its extra content is ready.');
 $previousEnd=$sub['ends_at'];
 $renewalId=$service->save(['business_id'=>1,'plan_code'=>'page','billing_frequency'=>'quarterly']);
 $pdo->prepare('UPDATE business_subscriptions SET status="paid_pending_publication",reviewed_at="2026-10-19 12:00:00" WHERE id=?')->execute([$renewalId]);
-$service->publish(1,new DateTimeImmutable('2026-10-20 12:00:00',new DateTimeZone('America/Bogota')));
+$service->publish(1,$testDate(4));
 $q->execute([$id]);$previous=$q->fetch(PDO::FETCH_ASSOC);$q->execute([$renewalId]);$renewed=$q->fetch(PDO::FETCH_ASSOC);
 subscription_check($previous['status']==='expired'&&$previous['ends_at']===$previousEnd&&(int)$renewed['renewal_of_subscription_id']===(int)$id,'Publishing a new paid term preserves the prior expiry and links the renewal to its predecessor.');
-$renewals=$pdo->query("SELECT COUNT(DISTINCT due.business_id) FROM business_subscriptions due WHERE due.plan_code<>'free' AND due.status IN ('active','expired') AND due.starts_at IS NOT NULL AND due.ends_at>='2027-01-18 00:00:00' AND due.ends_at<'2027-01-19 00:00:00' AND EXISTS (SELECT 1 FROM business_subscriptions successor WHERE successor.renewal_of_subscription_id=due.id AND successor.starts_at<=due.ends_at AND successor.plan_code<>'free')")->fetchColumn();
+$renewalWindowStart=$testDate(2)->modify('+3 months')->setTime(0,0)->setTimezone(new DateTimeZone('UTC'))->format('Y-m-d H:i:s');$renewalWindowEnd=$testDate(3)->modify('+3 months')->setTime(0,0)->setTimezone(new DateTimeZone('UTC'))->format('Y-m-d H:i:s');
+$renewals=$pdo->query("SELECT COUNT(DISTINCT due.business_id) FROM business_subscriptions due WHERE due.plan_code<>'free' AND due.status IN ('active','expired') AND due.starts_at IS NOT NULL AND due.ends_at>='$renewalWindowStart' AND due.ends_at<'$renewalWindowEnd' AND EXISTS (SELECT 1 FROM business_subscriptions successor WHERE successor.renewal_of_subscription_id=due.id AND successor.starts_at<=due.ends_at AND successor.plan_code<>'free')")->fetchColumn();
 subscription_check((int)$renewals===1,'A renewal published before the previous term expires is counted for the due business.');
 $pdo->exec("UPDATE subscription_plan_prices SET amount=NULL WHERE plan_code='page_premium' AND billing_frequency='quarterly'");
 $badPayment=false;try{$service->save(['business_id'=>1,'plan_code'=>'page_premium','billing_frequency'=>'quarterly','payment_reviewed'=>'1']);}catch(RuntimeException $error){$badPayment=str_contains($error->getMessage(),'tarifa definida');}

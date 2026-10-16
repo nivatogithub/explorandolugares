@@ -499,7 +499,7 @@
     mapChanged.value = '1';
     confirmed.value = '0';
     const saveButton = document.querySelector('#business-form button[type="submit"]');
-    if (saveButton) saveButton.disabled = true;
+    if (saveButton) saveButton.disabled = document.getElementById('business-plan')?.value !== 'free';
     dialog.close();
     if (resolvedAddress.label) {
         address.value = resolvedAddress.label.slice(0, 300);
@@ -511,6 +511,6 @@
         addressLookupPoint = selectedPoint;
         status.textContent = address.value.trim() ? 'Ubicación lista. El mapa no encontró nomenclatura en este punto; se guardarán juntos la dirección escrita y el pin seleccionado.' : 'El mapa no encontró una dirección aquí. Escribe una referencia reconocible para poder guardar la ubicación.';
       }
-    if (saveButton) saveButton.disabled = confirmed.value !== '1';
+    if (saveButton) saveButton.disabled = document.getElementById('business-plan')?.value !== 'free' && confirmed.value !== '1';
   });
 })();
