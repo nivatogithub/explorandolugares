@@ -5,6 +5,8 @@ import subprocess, json, secrets, sqlite3, shutil, socket, time, urllib.request,
 root=Path(__file__).resolve().parents[2]
 work=root/'.local'/('test-'+secrets.token_hex(6));work.mkdir(parents=True)
 shutil.copytree(root/'backend/app',work/'app');shutil.copytree(root/'backend/public',work/'public');(work/'private').mkdir()
+for locale,source in [('es','negocios-locales'),('en','en/negocios-locales'),('pt-br','pt-br/negocios-locales')]:
+ target=work/'public'/source;target.parent.mkdir(parents=True,exist_ok=True);shutil.copytree(root/'ensayos/v1'/source,target)
 db=sqlite3.connect(work/'private/test.sqlite');db.executescript((root/'backend/database/sqlite.sql').read_text())
 password=secrets.token_urlsafe(24)
 hash_value=subprocess.check_output(['php','-r','echo password_hash(trim(stream_get_contents(STDIN)), PASSWORD_DEFAULT);'],input=password.encode()).decode()
@@ -27,6 +29,7 @@ try:
   try:call('/api/participacion.php');break
   except urllib.error.URLError:time.sleep(.05)
  status,body,_=call('/api/participacion.php');assert status==200 and not json.loads(body)['enabled']
+ status,body,_=call('/business/index.php');assert status==200 and 'Para negocios locales' in body and 'Crear cuenta de negocio' not in body
  status,_,_=call('/api/participacion.php',{});assert status==503
  config['registration_enabled']=True;save()
  status,body,_=call('/api/participacion.php');setup=json.loads(body);assert setup['enabled']
@@ -76,22 +79,62 @@ try:
  assert call('/admin/index.php',{'action':'status','csrf':csrf,'id':1,'status':'contactado'})[0]==403
  status,body,headers=call('/admin/index.php',{'action':'login','csrf':csrf,'username':'local-test','password':password})
  assert status==200 and '&lt;script&gt;alert(1)&lt;/script&gt;' in body and '<script>alert(1)</script>' not in body
+ assert 'admin-inbox-table' in body and 'name="q"' in body and 'Seleccionar todas las solicitudes de esta página' in body
+ status,filtered,_=call('/admin/index.php?q=Impulsor+de+prueba&status=nuevo')
+ assert status==200 and 'Impulsor de prueba' in filtered and 'Prueba celular' not in filtered
  guest=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
  assert call('/admin/base-datos.php',agent=guest)[0]==403
  status,body,_=call('/admin/base-datos.php')
- assert status==200 and 'Herramientas de base de datos' in body and 'sqlite' in body
- assert 'APLICAR MIGRACIONES' in body and config['app_key'] not in body and password not in body
+ assert status==200 and 'Estado de la base de datos' in body and 'sqlite' in body
+ assert 'confirm_migrations' in body and config['app_key'] not in body and password not in body
  db_csrf=re.search(r'name="csrf" value="([^"]+)"',body).group(1)
  before_columns=[column[1] for column in db.execute('PRAGMA table_info(leads)').fetchall()]
- status,body,_=call('/admin/base-datos.php',{'action':'migrate','csrf':db_csrf,'confirmation':'APLICAR MIGRACIONES'})
+ status,body,_=call('/admin/base-datos.php',{'action':'migrate','csrf':db_csrf,'confirm_migrations':'1'})
  assert status==400 and 'requieren MySQL/MariaDB' in body
  assert before_columns==[column[1] for column in db.execute('PRAGMA table_info(leads)').fetchall()]
  status,body,_=call('/admin/index.php')
  assert 'WhatsApp' in body and 'Celular' in body and 'Fijo' in body and 'participacion-informativa-v1' in body
  status,body,_=call('/admin/index.php?tab=sistema')
  assert status==200 and 'Sistema y base de datos' in body and 'Conectada' in body and 'Tabla accesible' in body
+ assert 'Acceso de prueba al registro de negocios' in body and 'Acceso para visitantes:' in body and 'Estado de las pruebas' in body
  assert 'test.sqlite' not in body and config['app_key'] not in body
  csrf=re.search(r'name="csrf" value="([^"]+)"',body).group(1)
+ # Public access requires the explicit confirmation phrase and the admin CSRF token.
+ assert call('/admin/index.php?tab=sistema',{'action':'business_key','operation':'generate','csrf':'incorrecto'})[0]==403
+ status,body,_=call('/admin/index.php?tab=sistema',{'action':'business_access','csrf':csrf,'business_accounts_enabled':'1','confirm_public':'incorrecta'})
+ assert status==403
+ saved=subprocess.check_output(['php','-r',"$c=require $argv[1]; echo json_encode([$c['business_accounts_enabled']??false,$c['business_accounts_test_key']??'']);",str(work/'private/config.php')]).decode()
+ assert json.loads(saved)==[False,'']
+ # Generate a private test key; show it only in the immediate post/redirect response.
+ status,body,_=call('/admin/index.php?tab=sistema',{'action':'business_key','operation':'generate','csrf':csrf})
+ match=re.search(r'id="generated-business-test-key" type="text" readonly value="([a-f0-9]{64})"',body)
+ assert status==200 and match and 'Llave nueva guardada' in body
+ test_key=match.group(1)
+ url_match=re.search(r'id="generated-business-test-url" type="text" readonly value="([^"]+)"',body)
+ assert url_match and url_match.group(1)==urllib.parse.quote('/negocios/registro/?prueba='+test_key,safe='/?:=&')
+ saved=subprocess.check_output(['php','-r',"$c=require $argv[1]; echo json_encode([$c['business_accounts_enabled']??false,$c['business_accounts_test_key']??'']);",str(work/'private/config.php')]).decode()
+ assert json.loads(saved)==[False,test_key]
+ assert test_key not in call('/admin/index.php?tab=sistema')[1]
+ test_account=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
+ status,body,_=call('/business/index.php?prueba='+test_key,agent=test_account)
+ assert status==200 and 'Crear cuenta de negocio' in body and 'Ya tengo cuenta' in body
+ public_guest=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
+ assert 'Crear cuenta de negocio' not in call('/business/index.php',agent=public_guest)[1]
+ private_guest=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
+ assert call('/business/register.php',agent=private_guest)[0]==404
+ # Revoking the private test key immediately invalidates sessions created with it.
+ status,body,_=call('/admin/index.php?tab=sistema',{'action':'business_key','operation':'revoke','csrf':csrf})
+ assert status==200 and 'Llave de prueba eliminada' in body
+ assert 'Crear cuenta de negocio' not in call('/business/index.php',agent=test_account)[1]
+ saved=subprocess.check_output(['php','-r',"$c=require $argv[1]; echo json_encode([$c['business_accounts_enabled']??false,$c['business_accounts_test_key']??'']);",str(work/'private/config.php')]).decode()
+ assert json.loads(saved)==[False,'']
+ # Public enablement is not available through the private-test-key controls.
+ status,body,_=call('/admin/index.php?tab=sistema',{'action':'business_access','csrf':csrf,'business_accounts_enabled':'1','confirm_public':'ABRIR REGISTRO PUBLICO'})
+ assert status==403
+ saved=subprocess.check_output(['php','-r',"$c=require $argv[1]; echo json_encode([$c['business_accounts_enabled']??false,$c['business_accounts_test_key']??'']);",str(work/'private/config.php')]).decode()
+ assert json.loads(saved)==[False,'']
+ assert 'Crear cuenta de negocio' not in call('/business/index.php',agent=public_guest)[1]
+ assert call('/business/register.php',agent=private_guest)[0]==404
  assert call('/admin/index.php',{'action':'status','csrf':'incorrecto','id':1,'status':'contactado'})[0]==403
  assert call('/admin/index.php',{'action':'status','csrf':csrf,'id':1,'status':'contactado'})[0]==200
  assert db.execute('SELECT status FROM leads').fetchone()[0]=='contactado'
@@ -105,6 +148,6 @@ try:
  assert status==429
  config['privacy']['operator']='';save()
  assert not json.loads(call('/api/participacion.php')[1])['enabled']
- print('OK: registro deshabilitado sin configuración; consentimiento obligatorio; correo y teléfono válidos; fijo, celular y WhatsApp sin correo; prefijo calculado en servidor; validación; CSRF; guardado real; reintento sin duplicados; acceso privado; escape HTML; seguimiento; cierre de sesión; límite de login; bloqueo sin datos de privacidad.')
+ print('OK: registro deshabilitado sin configuración; consentimiento obligatorio; correo y teléfono válidos; fijo, celular y WhatsApp sin correo; prefijo calculado en servidor; validación; CSRF; guardado real; reintento sin duplicados; ajustes privados del registro empresarial; generación, copia de una sola vista y revocación de llave; el panel no habilita el registro público; escape HTML; seguimiento; cierre de sesión; límite de login; bloqueo sin datos de privacidad.')
 finally:
  proc.terminate();proc.wait(timeout=5);db.close();shutil.rmtree(work)

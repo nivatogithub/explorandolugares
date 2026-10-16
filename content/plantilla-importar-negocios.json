@@ -1,0 +1,21 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "jerico",
+  "businesses": [
+    {
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "name": "REEMPLAZAR - nombre público del establecimiento",
+      "summary": "Descripción breve basada en información comprobable.",
+      "description": "Información en español. No inventar precios, horarios, disponibilidad, contactos ni servicios.",
+      "sources": [
+        {
+          "url": "https://example.com/fuente-del-negocio",
+          "note": "REEMPLAZAR - fuente que respalda los datos del negocio",
+          "checked_at": "2026-10-14"
+        }
+      ],
+      "image_references": []
+    }
+  ]
+}

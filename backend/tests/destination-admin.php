@@ -33,4 +33,12 @@ $draft['id']=$newId;$draft['publication_status']='published';$rejected=false;try
 $category=(string)$pdo->query('SELECT code FROM service_categories LIMIT 1')->fetchColumn();$business=$pdo->prepare('INSERT INTO businesses(public_id,destination_id,category_code,slug) VALUES(?,?,?,?)');$business->execute(['test-public-id',$newId,$category,'negocio-prueba']);
 $blocked=false;try{$admin->delete($newId);}catch(RuntimeException $e){$blocked=true;}admin_check($blocked,'Destination deletion is blocked while a business refers to it');
 $admin->archive($newId);admin_check($admin->find($newId)['publication_status']==='archived','Archive preserves the destination record');$pdo->prepare('DELETE FROM businesses WHERE destination_id=?')->execute([$newId]);$admin->delete($newId);admin_check($admin->find($newId)===null,'Unreferenced destination can be deleted');
+$starterId=$admin->createStarterDraft('cauca-viejo',sys_get_temp_dir());$starter=$admin->find($starterId);
+admin_check($starter['publication_status']==='draft'&&$starter['destination_type']==='other'&&$starter['country_code']==='CO'&&$starter['department']==='Antioquia','Cauca Viejo is a draft tourist destination in the correct department, not a municipality');
+admin_check($starter['latitude']===null&&$starter['longitude']===null&&count($starter['places'])===0,'Starter does not invent coordinates or attractions');
+admin_check(count($starter['translations'])===3&&str_contains($starter['internal_research_json'],'Jericó')&&count($starter['sources']['es'])===1,'Starter keeps proper name, territorial context and source');
+$pdo->prepare('UPDATE destination_translations SET intro=? WHERE destination_id=? AND locale="es"')->execute(['Contenido del usuario',$starterId]);
+$pdo->prepare('UPDATE destinations SET publication_status="archived" WHERE id=?')->execute([$starterId]);
+admin_check($admin->createStarterDraft('cauca-viejo',sys_get_temp_dir())===$starterId&&$admin->find($starterId)['translations']['es']['intro']==='Contenido del usuario'&&$admin->find($starterId)['publication_status']==='archived','Repeat creation preserves existing ID, edited content and publication state');
+$unknownRejected=false;try{$admin->createStarterDraft('../inventado',sys_get_temp_dir());}catch(RuntimeException $e){$unknownRejected=true;}admin_check($unknownRejected,'Only reviewed starter identifiers are accepted');
 echo "OK: destination admin listing, ID-based editing, draft creation, publish validation, archive and safe deletion.\n";

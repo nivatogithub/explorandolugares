@@ -50,14 +50,25 @@ shutil.copyfile(root/'content/destinos-dinamicos.json',content/'destinos-dinamic
 # La configuración real y los SQL no se copian a la entrega.
 private_tools=release/'app/bin';private_tools.mkdir(parents=True,exist_ok=True)
 shutil.copyfile(root/'backend/bin/importar-destinos.php',private_tools/'importar-destinos.php')
+shutil.copyfile(root/'backend/bin/importar-negocios.php',private_tools/'importar-negocios.php')
 private_content=release/'app/content';private_content.mkdir(parents=True,exist_ok=True)
 shutil.copyfile(root/'content/destinos-dinamicos.json',private_content/'destinos-dinamicos.json')
+shutil.copyfile(root/'content/plantilla-importar-negocios.json',private_content/'plantilla-importar-negocios.json')
+shutil.copyfile(root/'content/plantilla-paquete-negocios.zip',private_content/'plantilla-paquete-negocios.zip')
 shutil.copytree(root/'backend/database',release/'app/database',dirs_exist_ok=True)
 shutil.copyfile(root/'backend/README.md',release/'INSTALACION.md')
 (release/'private').mkdir(exist_ok=True)
 shutil.copyfile(root/'backend/config.example.php',release/'config.example.php')
 subprocess.run([
     sys.executable,str(root/'scripts/limpiar-paquete-publico.py'),
-    '--public',str(public),'--catalog',str(private_content/'destinos-dinamicos.json')
+    '--public',str(public),'--catalog',str(private_content/'destinos-dinamicos.json'),
+    '--app',str(release/'app')
 ],check=True)
+# Aplicar al final la integración verificada: los generadores históricos no deben
+# sobrescribir menú, renderizadores ni páginas de privacidad instrumentadas.
+# Cobertura conserva su entrega ya publicada (incluidos créditos y cartografía).
+# El limpiador de assets no puede inferir todas las rutas de datos dinámicas.
+shutil.copytree(root/'backend/public/cobertura',public/'cobertura',dirs_exist_ok=True)
+shutil.copytree(root/'backend/public/assets/cobertura',public/'assets/cobertura',dirs_exist_ok=True)
+shutil.copytree(root/'backend/integration-medicion/public',public,dirs_exist_ok=True)
 print(f'Entrega de revisión: {release}\nRaíz pública: {public}\nConfigurar private/config.php fuera de public/. No hay publicación automática.')

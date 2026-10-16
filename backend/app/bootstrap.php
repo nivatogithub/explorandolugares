@@ -8,6 +8,8 @@ if (PHP_SAPI === 'cli-server' && in_array($_SERVER['REMOTE_ADDR'] ?? '', ['127.0
 }
 if (!is_file($configFile)) { http_response_code(503); exit('Configuración del servidor pendiente.'); }
 $config = require $configFile;
+require_once __DIR__.'/BusinessPortalAccess.php';
+require_once __DIR__.'/BusinessPortalSettings.php';
 $local = in_array($_SERVER['REMOTE_ADDR'] ?? '', ['127.0.0.1', '::1'], true);
 $https = ($_SERVER['HTTPS'] ?? '') === 'on';
 if (PHP_SAPI !== 'cli' && !$https && !(($config['local_test'] ?? false) && $local)) {
@@ -27,6 +29,12 @@ if (PHP_SAPI !== 'cli') {
 }
 function esc(mixed $value): string { return htmlspecialchars((string)$value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'); }
 function english_request(): bool { return ($_GET['lang'] ?? $_POST['lang'] ?? '') === 'en'; }
+function site_path(string $path): string {
+    $path='/'.ltrim($path,'/');
+    $requestPath=parse_url((string)($_SERVER['REQUEST_URI']??''),PHP_URL_PATH);
+    $prefix=is_string($requestPath)&&($requestPath==='/v1'||str_starts_with($requestPath,'/v1/'))?'/v1':'';
+    return $prefix.$path;
+}
 function response_text(string $value): string {
     if (!english_request()) return $value;
     static $messages;
@@ -41,6 +49,11 @@ function db(): PDO {
             [PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION, PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC, PDO::ATTR_EMULATE_PREPARES=>false]);
     }
     return $pdo;
+}
+/** Private uploads live beside the deployed app, never inside the public document root. */
+function private_storage_path(string $area): string {
+    if (!preg_match('/^[a-z0-9-]+$/D', $area)) throw new InvalidArgumentException('Área de almacenamiento inválida.');
+    return dirname(__DIR__).'/private/'.$area;
 }
 function csrf(): void {
     if (!is_string($_POST['csrf'] ?? null) || !hash_equals($_SESSION['csrf'], $_POST['csrf'])) {
@@ -62,6 +75,31 @@ function throttle(string $kind, int $limit, int $seconds, string $extra = ''): b
 function ready(): bool {
     global $config;
     return ($config['registration_enabled'] ?? false) && strlen($config['app_key'] ?? '') >= 32 && !empty($config['privacy']['operator']) && !empty($config['privacy']['contact']) && !empty($config['privacy']['retention']) && (!english_request() || !empty($config['privacy']['retention_en']));
+}
+function business_portal_available(): bool {
+    global $config;
+    return BusinessPortalAccess::available($config, $_SESSION);
+}
+/** Keep account and claim routes private until enabled or unlocked by a configured test key. */
+function require_business_portal_access(): void {
+    global $config;
+    if (business_portal_available()) return;
+    $providedKey = is_string($_GET['prueba'] ?? null) ? $_GET['prueba'] : '';
+    if (BusinessPortalAccess::unlockForTesting($config, $providedKey, $_SESSION)) {
+        session_regenerate_id(true);
+        $_SESSION['csrf'] ??= bin2hex(random_bytes(32));
+        $requestUri = (string)($_SERVER['REQUEST_URI'] ?? '/');
+        $path = parse_url($requestUri, PHP_URL_PATH);
+        if (!is_string($path) || $path === '' || $path[0] !== '/' || str_contains($path, "\r") || str_contains($path, "\n")) $path = '/';
+        $query = [];
+        parse_str((string)(parse_url($requestUri, PHP_URL_QUERY) ?? ''), $query);
+        unset($query['prueba']);
+        $target = $path.($query ? '?'.http_build_query($query) : '');
+        header('Location: '.$target, true, 303);
+        exit;
+    }
+    http_response_code(404);
+    exit('No encontrado.');
 }
 function json_response(array $body, int $status=200): never {
     if (isset($body['message'])) $body['message']=response_text($body['message']);

@@ -3,6 +3,7 @@
 - Este repositorio pertenece al negocio independiente Explorando Lugares.
 - Leer `PROYECTO_INDEPENDIENTE.md` antes de trabajar. Es el contexto vigente de producto; las instrucciones posteriores del usuario prevalecen.
 - Consultar `docs/CONTEXTO_PRODUCTO_Y_HOJA_DE_RUTA.md` para decisiones de negocio, arquitectura conceptual y elementos futuros; distinguir lo implementado de lo propuesto.
+- Antes de un despliegue completo, leer `docs/PARIDAD_PRODUCCION.md` y verificar el paquete contra el manifiesto remoto confirmado; no publicar desde fuentes desactualizadas ni retirar archivos por omisión.
 - Antes de cambiar presentación pública, leer `docs/GUIA_ESTILO_PORTAL.md`, reutilizar sus tokens y revisar todos los estados de la página; no añadir parches de color aislados.
 - No importar contexto, contactos, fuentes, paletas, componentes, textos comerciales ni estilo visual de Paradigma Solutions. Su eventual rol es proveedor tecnológico, no marca turística.
 - Tratar `design/pasaporte-local/` como borrador inicial v0.1, no identidad final aprobada. Revisar especialmente la tipografía y ampliar el alcance de categorías.
@@ -17,3 +18,4 @@
 - Al investigar prospectos locales, incluir solo información empresarial pública con fuente y fecha; marcarlos como pendientes de verificar y no contactarlos automáticamente.
 - Mostrar alternativas de diseño de forma visible y numerada cuando se solicite comparar; evitar carruseles que oculten opciones.
 - No desplegar ni reemplazar el sitio de producción al guardar un borrador. Mantener las versiones y decisiones documentadas.
+- Para pruebas, preparación y publicación, aplicar `docs/REGLAS_OPERATIVAS_DESPLIEGUE.md`: una autorización por tarea concreta cubre los pasos rutinarios de esa tarea; detenerse solo ante los límites de riesgo allí definidos o un bloqueo técnico que exija aprobación.

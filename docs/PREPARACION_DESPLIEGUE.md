@@ -17,7 +17,7 @@ Actualización al 12 de octubre de 2026: primera versión informativa desplegada
 2. Confirmar raíz exclusiva del dominio, acceso SFTP, HTTPS y estructura privada fuera de la raíz pública.
 3. Configurar base de datos y administración con credenciales fuera de Git. Completar responsable, contacto y conservación de datos en privacidad.
 4. Revisar composición responsive en navegador y contenidos finales. No se ha completado la inspección visual en navegador en esta sesión.
-5. Preparar respaldo y plan de reversión del sitio que exista en el dominio.
+5. El despliegue de código ya no crea una copia del sitio: para volver a una versión estable, se vuelve a desplegar su etiqueta de Git. Si una versión incluye cambios de esquema o datos, evaluar esa migración por separado; Git no revierte la base de datos.
 6. Probar en el hosting un registro propio y su consulta privada. El servidor Python solo permite revisar el frontend.
 7. Retirar `noindex,nofollow` de las páginas que se decida publicar y revisar metadatos, dominio y descubrimiento antes del lanzamiento. Las pruebas de esta entrega conservan la protección de ensayo.
 

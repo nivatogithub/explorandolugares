@@ -46,7 +46,14 @@ class Destinos(unittest.TestCase):
     if u.scheme or u.netloc or not u.path:continue
     target=(path.parent/unquote(u.path)).resolve()
     self.assertTrue(target.is_relative_to(SITE.resolve()),(path,href))
+    # Browsers/web servers resolve directory URLs such as `.` to index.html.
+    if target.is_dir() and (target/'index.html').is_file():target=target/'index.html'
     if target.suffix=='.php':continue # Endpoint agregado al paquete PHP, no al servidor estático.
+    route=target.relative_to(SITE.resolve()).as_posix().rstrip('/')
+    dynamic_routes={'negocios/registro':'public/business/register.php','negocios/acceso':'public/business/login.php','negocios/portal':'public/business/dashboard.php','negocios/salir':'public/business/logout.php','reclamar-negocio':'public/reclamar-negocio.php'}
+    if route in dynamic_routes:
+     endpoint=ROOT/'backend'/dynamic_routes[route]
+     self.assertTrue(endpoint.is_file(),(path,href,endpoint));continue
     self.assertTrue(target.is_file(),(path,href))
     if u.fragment and target.suffix=='.html':self.assertIn(unquote(u.fragment),Page(target).ids,(path,href))
 if __name__=='__main__':unittest.main()

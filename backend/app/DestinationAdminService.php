@@ -7,6 +7,43 @@ final class DestinationAdminService
 
     public function __construct(private PDO $pdo) {}
 
+    private function starters():array
+    {
+        return json_decode((string)file_get_contents(__DIR__.'/destination-starters.json'),true,32,JSON_THROW_ON_ERROR);
+    }
+
+    public function starterOptions():array
+    {
+        $options=[];
+        foreach($this->starters() as $slug=>$data)$options[]=['slug'=>$slug,'name'=>$data['translations']['es']['display_name'],'department'=>$data['department'],'municipality'=>$data['municipality'],'existing_id'=>$this->starterMatch($data)];
+        return $options;
+    }
+
+    private function starterMatch(array $data):?int
+    {
+        $expected=mb_strtolower(trim($data['translations']['es']['display_name']),'UTF-8');
+        foreach($this->all() as $row){
+            if($row['slug']!==$data['slug']&&mb_strtolower(trim((string)$row['display_name']),'UTF-8')!==$expected)continue;
+            if($row['country_code']!==$data['country_code']||$row['department']!==$data['department'])throw new RuntimeException('Existe un destino con ese nombre o dirección web en otra ubicación. Revísalo antes de crear otro.');
+            return (int)$row['id'];
+        }
+        return null;
+    }
+
+    public function createStarterDraft(string $slug,string $publicRoot):int
+    {
+        $data=$this->starters()[$slug]??null;
+        if(!is_array($data))throw new RuntimeException('El destino preparado no existe.');
+        if($id=$this->starterMatch($data))return $id;
+        unset($data['municipality']);$data['publication_status']='draft';
+        try{return $this->save($data,[],[],$publicRoot);}
+        catch(PDOException $error){
+            // Repeated/concurrent clicks may hit the unique slug: reuse, never overwrite.
+            if(($error->errorInfo[0]??'')==='23000'&&($id=$this->starterMatch($data)))return $id;
+            throw $error;
+        }
+    }
+
     public function all(): array
     {
         return $this->pdo->query('SELECT d.id,d.slug,d.destination_type,d.country_code,d.department,d.publication_status,d.display_order,t.display_name
