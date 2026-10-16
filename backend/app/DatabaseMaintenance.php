@@ -395,6 +395,9 @@ final class DatabaseMaintenance
     {
         $sql = file_get_contents($file);
         if (!is_string($sql)) throw new RuntimeException('No se pudo leer un archivo SQL permitido.');
+        // Remove full-line SQL comments before splitting statements. A semicolon
+        // inside a comment is text, not a statement boundary.
+        $sql = preg_replace('/^[ \t]*--[^\r\n]*(?:\r?\n|$)/m', '', $sql);
         foreach (explode(';', $sql) as $statement) {
             if (trim($statement) !== '') $this->pdo->exec($statement);
         }
