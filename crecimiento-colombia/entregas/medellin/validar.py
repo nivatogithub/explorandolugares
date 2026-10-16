@@ -7,7 +7,16 @@ b=json.loads((r/'directorio.json').read_text())
 a=json.loads((r/'imagenes.json').read_text())
 s={x['id'] for x in json.loads((r/'fuentes.json').read_text())}
 assert c['status']=='draft' and set(c['translations'])=={'es','en','pt-BR'}
-assert len(c['places'])>=3 and len(b)>=10 and len({x['category'] for x in b})>=3
+assert len(c['places'])>=28 and len(b)>=10 and len({x['category'] for x in b})>=3
+assert len({p['slug'] for p in c['places']})==len(c['places'])
+choices=json.loads((r/'portadas-propuestas.json').read_text())
+assert len(choices)>=4 and all(not x['selected'] and not x['reference_approved'] for x in choices)
+assert any('coltejer' in x['image_file'] for x in choices)
+review=json.loads((r/'revision-componentes.json').read_text())
+assert review['selected_cover'] is None and not review['illustrations']['generated'] and not review['publication']['authorized']
+activities=json.loads((r/'experiencias.json').read_text())
+assert {x['kind'] for x in activities}=={'propuesta_editorial_autonoma','oferta_documentada_operador','candidato_por_validar'}
+assert all(x.get('photo_status') for x in activities)
 for p in c['places']:
  assert set(p['translations'])==set(c['translations'])
  assert set(p['source_ids'])<=s and p['publication_status']=='draft'
@@ -22,4 +31,4 @@ for x in a:
  with Image.open(r/x['file']) as im:assert im.format=='WEBP' and not im.getexif()
 files=sorted(p for p in r.rglob('*') if p.is_file() and p.name!='SHA256SUMS')
 (r/'SHA256SUMS').write_text(''.join(hashlib.sha256(p.read_bytes()).hexdigest()+'  '+str(p.relative_to(r))+'\n' for p in files))
-print('OK: 3 idiomas, 4 atractivos, 10 fichas/3 categorías, 3 originales y derivados, fuentes, hashes y gates de borrador. No certifica importación final, publicación ni aprobación humana.')
+print(f'OK: 3 idiomas, {len(c["places"])} atractivos sin duplicados, 10 fichas/3 categorías, {len(a)} originales/derivados, {len(choices)} propuestas numeradas con aptitud explícita, 3 clases de actividad, fuentes/hashes y decisiones independientes sin aprobación. No certifica importación final ni publicación.')
