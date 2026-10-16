@@ -20,7 +20,12 @@
         "name": "Museo de Antioquia",
         "description": "Arte e história regional, com salas dedicadas a Fernando Botero e Débora Arango."
       }
-    }
+    },
+    "kind": "propuesta_editorial_autonoma",
+    "availability": "no_garantizada",
+    "relationship": "ninguna",
+    "photo_status": "faltante",
+    "review_status": "pendiente"
   },
   {
     "id": "jardin-botanico-visita",
@@ -43,7 +48,14 @@
         "name": "Jardín Botánico Joaquín Antonio Uribe",
         "description": "Coleções vivas e educação ambiental; consulte a programação oficial."
       }
-    }
+    },
+    "kind": "propuesta_editorial_autonoma",
+    "availability": "no_garantizada",
+    "relationship": "ninguna",
+    "photo_status": "referencia_real_lugar_actividad_editorial_sin_aprobar",
+    "review_status": "pendiente",
+    "image_file": "images/medellin-3.webp",
+    "image_scope": "Orquideorama visitable; no demuestra guía, taller, acceso vigente o servicio de operador."
   },
   {
     "id": "parque-explora-visita",
@@ -66,7 +78,12 @@
         "name": "Parque Explora",
         "description": "Museu de ciências com aquário e aprendizagem interativa."
       }
-    }
+    },
+    "kind": "propuesta_editorial_autonoma",
+    "availability": "no_garantizada",
+    "relationship": "ninguna",
+    "photo_status": "faltante",
+    "review_status": "pendiente"
   },
   {
     "id": "mamm-visita",
@@ -89,6 +106,107 @@
         "name": "Museo de Arte Moderno de Medellín",
         "description": "Arte moderna e programação cultural; confira as exposições antes da visita."
       }
-    }
+    },
+    "kind": "propuesta_editorial_autonoma",
+    "availability": "no_garantizada",
+    "relationship": "ninguna",
+    "photo_status": "faltante",
+    "review_status": "pendiente"
+  },
+  {
+    "id": "paseo-centro",
+    "kind": "propuesta_editorial_autonoma",
+    "name": "Arquitectura y patrimonio del centro",
+    "place_ids": [
+      "coltejer",
+      "parque-berrio",
+      "junin",
+      "candelaria",
+      "catedral-metropolitana"
+    ],
+    "source_ids": [
+      "coltejer",
+      "centro"
+    ],
+    "operator": null,
+    "status": "draft",
+    "photo_status": "referencia_real_lugar_actividad_editorial_sin_aprobar",
+    "availability": "sin_promesa",
+    "image_file": "images/coltejer-2013.webp",
+    "image_scope": "Observación exterior de Coltejer; no representa un tour ni operador."
+  },
+  {
+    "id": "laureles-cafes",
+    "kind": "propuesta_editorial_autonoma",
+    "name": "Paseo por Avenida Jardín",
+    "place_ids": [
+      "avenida-jardin"
+    ],
+    "source_ids": [
+      "jardin-laureles"
+    ],
+    "operator": null,
+    "status": "draft",
+    "photo_status": "faltante",
+    "availability": "sin_promesa"
+  },
+  {
+    "id": "epm-visita",
+    "kind": "oferta_documentada_operador",
+    "name": "Visita guiada Edificio EPM",
+    "operator": "EPM",
+    "source_ids": [
+      "epm"
+    ],
+    "url": "https://www.epm.com.co/institucional/sala-de-prensa/noticias-y-novedades/epm-de-puertas-abiertas-para-la-comunidad/",
+    "documented_at": "2024 (página histórica)",
+    "consulted_at": "2026-10-16",
+    "status": "draft",
+    "validity": "pendiente_actualizacion",
+    "registration": "no_comprobado",
+    "availability": "no_comprobada",
+    "price": null,
+    "permission": "pendiente",
+    "relationship": "ninguna",
+    "photo_status": "faltante_foto_actividad_autorizada"
+  },
+  {
+    "id": "city-comuna13",
+    "kind": "oferta_documentada_operador",
+    "name": "City Tour / Comuna 13",
+    "operator": "Medellín Turística",
+    "source_ids": [
+      "operador-city"
+    ],
+    "url": "https://medellinturistica.com/servicios/city-tour-comuna-13/",
+    "consulted_at": "2026-10-16",
+    "status": "draft",
+    "validity": "pagina_publica_no_prueba_vigencia",
+    "registration": "RNT_pendiente_verificar",
+    "availability": "no_comprobada",
+    "price": null,
+    "permission": "pendiente",
+    "relationship": "ninguna",
+    "photo_status": "faltante_foto_actividad_autorizada"
+  },
+  {
+    "id": "jerico-helicoptero-referencia",
+    "kind": "candidato_por_validar",
+    "status": "draft_oculto",
+    "name": "Antecedente helicóptero Medellín–Jericó",
+    "source": "content/destinos-dinamicos.json, places slug helicoptero-medellin-jerico",
+    "reason": "Ficha draft con external_url vacío; ilustración genérica no prueba operación/ruta. No trasladar a Medellín como oferta.",
+    "photo_status": "faltante_foto_real",
+    "operator": null
+  },
+  {
+    "id": "jerico-parapente-referencia",
+    "kind": "candidato_por_validar",
+    "status": "draft_oculto",
+    "name": "Antecedente parapente Puerto Arturo",
+    "source": "content/destinos-dinamicos.json, places slug parapente-puerto-arturo",
+    "reason": "Candidato de Jericó; exige despegue/aterrizaje, condiciones y operador verificados. No es San Félix/Bello ni Medellín.",
+    "photo_status": "faltante_foto_real",
+    "operator": null
   }
 ]
