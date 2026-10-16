@@ -10,7 +10,7 @@ try{
     if($_SERVER['REQUEST_METHOD']!=='POST'){header('Allow: GET, POST');output_measurement(['error'=>'Método no permitido'],405);}
     if((int)($_SERVER['CONTENT_LENGTH']??0)>4096)output_measurement(['error'=>'Tamaño no permitido'],413);
     $origin=parse_url((string)($_SERVER['HTTP_ORIGIN']??''));$host=strtolower((string)($_SERVER['HTTP_HOST']??''));$originHost=strtolower((string)($origin['host']??'')).(isset($origin['port'])?':'.$origin['port']:'');
-    if($originHost!==$host||!in_array($origin['scheme']??'',['https','http'],true)||(!empty($_SERVER['HTTP_SEC_FETCH_SITE'])&&$_SERVER['HTTP_SEC_FETCH_SITE']!=='same-origin'))output_measurement(['error'=>'Origen no permitido'],403);
+    if($originHost!==$host||($origin['scheme']??'')!==((PHP_SAPI==='cli-server'&&($_SERVER['HTTPS']??'')!=='on')?'http':'https')||(!empty($_SERVER['HTTP_SEC_FETCH_SITE'])&&$_SERVER['HTTP_SEC_FETCH_SITE']!=='same-origin'))output_measurement(['error'=>'Origen no permitido'],403);
     if(!str_starts_with(strtolower($_SERVER['CONTENT_TYPE']??''),'application/json'))output_measurement(['error'=>'Formato no permitido'],415);
     $body=json_decode(file_get_contents('php://input'),true,16,JSON_THROW_ON_ERROR);if(!is_array($body))output_measurement(['error'=>'Solicitud inválida'],400);
     if(($body['action']??'')==='revoke'){
