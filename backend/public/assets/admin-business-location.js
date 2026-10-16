@@ -30,10 +30,15 @@
   let mapLoadTimer = 0;
   let pendingAddressPoint = null;
   let addressLookupPoint = null;
-  let mapMode = 'pan';
+  let mapMode = 'mark';
   let destinationBounds = null;
   let destinationGeometry = null;
   let geolocationRequest = 0;
+
+  const coordinates = (latLng) => {
+    const point = latLng.wrap();
+    return [point.lat, point.lng];
+  };
 
   const parseExisting = () => {
     if (!latInput.value.trim() || !lonInput.value.trim()) return null;
@@ -101,7 +106,7 @@
       else marker.dragging.disable();
     }
     if (mapReady) selection.textContent = mapMode === 'pan'
-      ? 'Modo mover mapa: arrastra para explorar. Cambia a “Marcar punto” para ubicar el negocio.'
+      ? 'Arrastra para mover el mapa. Un clic selecciona el punto del negocio.'
       : 'Modo marcar punto: toca o haz clic en la ubicación exacta del negocio.';
   };
 
@@ -148,10 +153,9 @@
 
   const setMapCenter = (point, zoom = 14) => {
     if (!map) return;
-    mapReady = false;
     map.setView(point, zoom);
     window.clearTimeout(mapLoadTimer);
-    mapLoadTimer = window.setTimeout(() => {
+    if (!mapReady) mapLoadTimer = window.setTimeout(() => {
       if (!mapReady) showMapFailure();
     }, 10000);
   };
@@ -206,9 +210,12 @@
     if (!map) return;
     if (!bounds || !window.L?.latLngBounds) {
       map.setMaxBounds(null);
+      map.setMinZoom(selectedDestination() ? 10 : 5);
       return;
     }
-    map.setMaxBounds(L.latLngBounds([bounds.south, bounds.west], [bounds.north, bounds.east]));
+    const area = L.latLngBounds([bounds.south, bounds.west], [bounds.north, bounds.east]);
+    map.setMaxBounds(area);
+    map.setMinZoom(Math.max(10, Math.min(16, map.getBoundsZoom(area))));
     map.options.maxBoundsViscosity = 0.9;
   };
 
@@ -274,7 +281,7 @@
     selection.textContent = `Punto seleccionado: ${lat.toFixed(6)}, ${lon.toFixed(6)}.`;
     use.disabled = false;
     if (marker) marker.setLatLng(point);
-    else if (map) marker = L.marker(point, { draggable: mapMode === 'mark' }).addTo(map).on('dragend', (event) => updateDraft(event.target.getLatLng().wrap().toArray()));
+    else if (map) marker = L.marker(point, { draggable: mapMode === 'mark' }).addTo(map).on('dragend', (event) => updateDraft(coordinates(event.target.getLatLng())));
     if (marker?.dragging) {
       if (mapMode === 'mark') marker.dragging.enable();
       else marker.dragging.disable();
@@ -297,16 +304,15 @@
     const destinationPoint = selectedDestination();
     const initialCenter = existing || destinationPoint || [4.57, -74.29];
     if (!map) {
-      map = L.map(mapNode, { scrollWheelZoom: true, maxBoundsViscosity: 0.9 }).setView(initialCenter, existing ? 17 : destinationPoint ? 16 : 5);
+      map = L.map(mapNode, { scrollWheelZoom: true, minZoom: destinationPoint ? 10 : 5, maxZoom: 19, maxBoundsViscosity: 0.9 }).setView(initialCenter, existing ? 17 : destinationPoint ? 16 : 5);
       mapLayer = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         referrerPolicy: 'strict-origin-when-cross-origin',
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors',
       });
       mapLayer.on('loading', () => {
-        mapReady = false;
         window.clearTimeout(mapLoadTimer);
-        mapLoadTimer = window.setTimeout(() => showMapFailure(), 10000);
+        if (!mapReady) mapLoadTimer = window.setTimeout(() => showMapFailure(), 10000);
       });
       mapLayer.on('tileload', () => {
         mapReady = true;
@@ -314,12 +320,13 @@
         if (pendingAddressPoint) { const point = pendingAddressPoint; pendingAddressPoint = null; updateDraft(point); }
         else if (draft) updateDraft(draft);
         else if (!destinationCenterPending) selection.textContent = mapMode === 'pan'
-          ? 'Modo mover mapa: arrastra para explorar. Cambia a “Marcar punto” para ubicar el negocio.'
+          ? 'Arrastra para mover el mapa. Un clic selecciona el punto del negocio.'
           : 'Modo marcar punto: toca o haz clic en la ubicación exacta del negocio.';
       });
       mapLayer.on('load', () => { if (!mapReady) showMapFailure(); });
       mapLayer.addTo(map);
-      map.on('click', (event) => { if (mapMode === 'mark') updateDraft(event.latlng.wrap().toArray()); });
+      // Leaflet suppresses clicks after dragging, so selecting also works in pan mode.
+      map.on('click', (event) => updateDraft(coordinates(event.latlng)));
     } else {
       setMapCenter(initialCenter, existing ? 17 : destinationPoint ? 16 : 5);
       if (!mapReady) mapLayer?.redraw();
@@ -453,6 +460,7 @@
       use.disabled = true;
       destinationBounds = null;
       destinationGeometry = null;
+      applyDestinationBounds(null);
       centerOnDestination();
     }
   });
