@@ -13,7 +13,7 @@ if($repositoryPath===null){http_response_code(503);exit('Destino temporalmente n
 require $repositoryPath;
 
 function e(mixed $value): string { return htmlspecialchars((string)$value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'); }
-function u(string $path): string { global $siteBase; return $siteBase.$path; }
+function u(string $path): string { return $path; }
 function mediaPath(?array $media): string { return $media ? u('/'.e($media['path'])) : ''; }
 function credit(?array $media): string {
     if (!$media) return '';
@@ -63,7 +63,6 @@ $locale=$d['locale'];$t=langCopy($locale);$name=$d['display_name'];
 $places=array_values(array_filter($d['places'],static fn($place)=>($place['type']??'place')!=='experience'));
 $experiences=array_values(array_filter($d['places'],static fn($place)=>($place['type']??'place')==='experience'));
 $requestPath=parse_url($_SERVER['REQUEST_URI']??'/',PHP_URL_PATH)?:'/';
-$siteBase=getenv('EL_SITE_BASE')!==false?(string)getenv('EL_SITE_BASE'):(str_starts_with($requestPath,'/v1/')?'/v1':'');
 $t['leave_short']=$locale==='en'?'Share your business details':($locale==='pt-BR'?'Deixe seus dados para participar':'Déjanos tus datos para participar');
 $t['verified']=$locale==='en'?'Information checked':($locale==='pt-BR'?'Informações verificadas':'Información verificada');
 $t['public_data']=$locale==='en'?'Public information · not yet verified':($locale==='pt-BR'?'Informações públicas · ainda não verificadas':'Información pública · aún sin verificar');
@@ -84,6 +83,10 @@ $langEsUrl=u('/destinos/'.$slug.'/');$langEnUrl=u('/en/destinos/'.$slug.'/');$la
 $canonicalPath=match($locale){'en'=>'/en/destinos/'.$slug.'/','pt-BR'=>'/pt-br/destinos/'.$slug.'/',default=>'/destinos/'.$slug.'/'};
 $publicOrigin=rtrim(getenv('EL_PUBLIC_BASE_URL')?:'https://explorandolugares.com','/');
 $canonicalUrl=$publicOrigin.$canonicalPath;
+// Redirect only direct template requests, after validating publication/preview.
+if(!$preview && preg_match('~/destino\.php$~',$requestPath)){
+    header('Location: '.$canonicalPath,true,301);exit;
+}
 $historySources=array_values(array_filter($d['sources'],static fn($source)=>$source['section_key']==='history'));
 $placeSources=array_values(array_filter($d['sources'],static fn($source)=>$source['section_key']==='places'));
 $alternateUrls=['es'=>$publicOrigin.'/destinos/'.$slug.'/','en'=>$publicOrigin.'/en/destinos/'.$slug.'/','pt-BR'=>$publicOrigin.'/pt-br/destinos/'.$slug.'/'];

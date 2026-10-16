@@ -87,7 +87,7 @@ class NavigationTests(unittest.TestCase):
             parsed=links(page)
             primary=[item for item in parsed if item['main'] and item['text'].strip() in {'Negocios locales','Local businesses','Negócios locais'}]
             self.assertEqual(len(primary),1,page)
-            target=urlsplit(urljoin('https://example.invalid/v1/'+page.relative_to(self.public).as_posix(),primary[0]['attrs'].get('href',''))).path
+            target=urlsplit(urljoin('https://example.invalid/'+page.relative_to(self.public).as_posix(),primary[0]['attrs'].get('href',''))).path
             self.assertTrue(target.rstrip('/').endswith('/negocios-locales'),(page,target))
             secondary=[item for item in parsed if item['business'] and item['attrs'].get('aria-current')=='page']
             self.assertEqual(len(secondary),1,page)

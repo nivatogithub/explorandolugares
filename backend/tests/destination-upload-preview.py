@@ -16,7 +16,7 @@ import zlib
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-BASE = os.environ.get('EL_DESTINATIONS_TEST_BASE', 'http://127.0.0.1:8014/v1/').rstrip('/') + '/'
+BASE = os.environ.get('EL_DESTINATIONS_TEST_BASE', 'http://127.0.0.1:8014/').rstrip('/') + '/'
 DB = Path(os.environ.get('EL_DESTINATIONS_TEST_DB', ROOT / '.local/destinos-dinamicos-preview.sqlite'))
 MEDIA_ROOT = Path(os.environ.get('EL_DESTINATIONS_TEST_MEDIA_ROOT', ROOT / '.local/destinos-media'))
 cookies = http.cookiejar.CookieJar()

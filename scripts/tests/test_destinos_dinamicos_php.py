@@ -37,7 +37,7 @@ class DynamicDestinationRenderTests(unittest.TestCase):
         env = os.environ | {"EL_DESTINATIONS_DSN": f"sqlite:{cls.database}"}
         subprocess.run(["php", "backend/bin/importar-destinos.php"], cwd=ROOT, env=env,
                        check=True, capture_output=True, text=True)
-        cls.env = env | {"EL_SITE_BASE": "/v1"}
+        cls.env = env
 
     @classmethod
     def tearDownClass(cls):
@@ -52,7 +52,7 @@ class DynamicDestinationRenderTests(unittest.TestCase):
             f"$_GET['destino']={json.dumps(slug)};"
             f"$_GET['idioma']={json.dumps(locale)};"
             f"{session}"
-            f"$_SERVER['REQUEST_URI']='/v1/{uri_locale}destinos/{slug}/';"
+            f"$_SERVER['REQUEST_URI']='/{uri_locale}destinos/{slug}/';"
             "include 'ensayos/v1/destino.php';"
         )
         result = subprocess.run(["php", "-r", php], cwd=ROOT, env=self.env,
@@ -64,7 +64,7 @@ class DynamicDestinationRenderTests(unittest.TestCase):
         php = (
             f"$_GET['id']={json.dumps(public_id)};"
             f"$_GET['idioma']={json.dumps(locale)};"
-            f"$_SERVER['REQUEST_URI']='/v1/{uri_locale}negocios/{public_id}/';"
+            f"$_SERVER['REQUEST_URI']='/{uri_locale}negocios/{public_id}/';"
             "include 'ensayos/v1/negocio.php';"
         )
         result = subprocess.run(["php", "-r", php], cwd=ROOT, env=self.env,
@@ -340,7 +340,7 @@ class DynamicDestinationRenderTests(unittest.TestCase):
         self.assertIn('NF',directory)
         self.assertIn('>Premium</span>',directory)
         self.assertIn('id="negocio-44444444-4444-4444-8444-444444444444"',directory)
-        self.assertIn('href="/v1/negocios/44444444-4444-4444-8444-444444444444/"',directory)
+        self.assertIn('href="/negocios/44444444-4444-4444-8444-444444444444/"',directory)
         page=self.render_business(public_ids["page_premium"],"es")
         self.assertIn("Negocio page_premium",page)
         self.assertIn("Página Premium",page)
@@ -362,13 +362,13 @@ class DynamicDestinationRenderTests(unittest.TestCase):
 
     def test_destination_router_serves_public_destination_assets(self):
         assets = (
-            "/v1/assets/destinos/1/parque-principal-ilustrado.webp",
-            "/v1/assets/destinos/1/cristo-cerro-el-salvador-ilustrado-v2.webp",
-            "/v1/assets/destinos/1/santuario-santa-laura-ilustrado-v2.webp",
-            "/v1/assets/destinos/1/casa-santa-laura-ilustrada-v2.webp",
-            "/v1/assets/destinos/1/jardin-botanico-los-balsos-ilustrado.webp",
-            "/v1/assets/destinos/1/cerro-de-las-nubes-sendero-ilustrado-v2.webp",
-            "/v1/assets/destinos/1/chorros-quebradona-ilustrado-v2.webp",
+            "/assets/destinos/1/parque-principal-ilustrado.webp",
+            "/assets/destinos/1/cristo-cerro-el-salvador-ilustrado-v2.webp",
+            "/assets/destinos/1/santuario-santa-laura-ilustrado-v2.webp",
+            "/assets/destinos/1/casa-santa-laura-ilustrada-v2.webp",
+            "/assets/destinos/1/jardin-botanico-los-balsos-ilustrado.webp",
+            "/assets/destinos/1/cerro-de-las-nubes-sendero-ilustrado-v2.webp",
+            "/assets/destinos/1/chorros-quebradona-ilustrado-v2.webp",
         )
         for relative in assets:
             with self.subTest(asset=relative):

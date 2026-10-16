@@ -74,8 +74,10 @@ class PublicLinkTests(unittest.TestCase):
         self.assertIn('https://explorandolugares.com/planea-tu-visita/', sitemap)
         self.assertIn('https://explorandolugares.com/en/planea-tu-visita/', sitemap)
         destination_urls=[line for line in sitemap.splitlines() if '/destinos/' in line and '/destinos/</loc>' not in line]
-        self.assertTrue(destination_urls)
-        self.assertTrue(all('/destinos/jerico/' in line for line in destination_urls), destination_urls)
+        # Dynamic roots now come from the live DB, never a stale seed inventory.
+        self.assertEqual(destination_urls, [])
+        self.assertTrue((self.public/'sitemap-live.php').is_file())
+        self.assertIn('RewriteRule ^sitemap\\.xml$ sitemap-live.php [L]', (self.public/'.htaccess').read_text())
         directory=(self.public/'destinos/index.html').read_text()
         self.assertEqual(directory.count('class="destination-card"'),1)
         seed=__import__('json').loads((ROOT/'content/destinos-dinamicos.json').read_text())
@@ -99,10 +101,10 @@ class PublicLinkTests(unittest.TestCase):
             with self.subTest(url=url):
                 self.assertEqual([url],parser.urls)
 
-    def test_business_portal_supports_domain_root_and_local_v1_preview(self):
+    def test_business_portal_uses_the_same_root_paths_in_all_environments(self):
         bootstrap=(ROOT/'backend/app/bootstrap.php').read_text()
         self.assertIn('function site_path(string $path)',bootstrap)
-        self.assertIn("str_starts_with($requestPath,'/v1/')",bootstrap)
+        self.assertNotIn("/v1",bootstrap)
         for relative in ('business/register.php','business/login.php','business/dashboard.php','business/logout.php','reclamar-negocio.php'):
             source=(ROOT/'backend/public'/relative).read_text()
             self.assertNotIn('/v1/',source,relative)

@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Sirve únicamente ensayos/ en la interfaz local, sin dependencias externas."""
+"""Sirve únicamente ensayos/v1/ en la interfaz local, sin dependencias externas."""
 import argparse
 from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1] / "ensayos"
+ROOT = Path(__file__).resolve().parents[1] / "ensayos" / "v1"
 
 
 class Handler(SimpleHTTPRequestHandler):

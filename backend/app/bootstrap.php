@@ -31,9 +31,7 @@ function esc(mixed $value): string { return htmlspecialchars((string)$value, ENT
 function english_request(): bool { return ($_GET['lang'] ?? $_POST['lang'] ?? '') === 'en'; }
 function site_path(string $path): string {
     $path='/'.ltrim($path,'/');
-    $requestPath=parse_url((string)($_SERVER['REQUEST_URI']??''),PHP_URL_PATH);
-    $prefix=is_string($requestPath)&&($requestPath==='/v1'||str_starts_with($requestPath,'/v1/'))?'/v1':'';
-    return $prefix.$path;
+    return $path;
 }
 function response_text(string $value): string {
     if (!english_request()) return $value;

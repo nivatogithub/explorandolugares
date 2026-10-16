@@ -31,8 +31,7 @@ function business_price_display(string $value,string $locale):string {return mat
 $id=(string)($_GET['id']??'');$locale=(string)($_GET['idioma']??'es');
 $locale=in_array($locale,['es','en','pt-BR'],true)?$locale:'es';
 $requestPath=parse_url($_SERVER['REQUEST_URI']??'/',PHP_URL_PATH)?:'/';
-$siteBase=getenv('EL_SITE_BASE')!==false?(string)getenv('EL_SITE_BASE'):(str_starts_with($requestPath,'/v1/')?'/v1':'');
-$u=static fn(string $path):string=>$siteBase.$path;
+$u=static fn(string $path):string=>$path;
 $dbDsn=getenv('EL_DESTINATIONS_DSN')?:'';$dbUser=getenv('EL_DESTINATIONS_DB_USER')?:null;$dbPassword=getenv('EL_DESTINATIONS_DB_PASSWORD')?:null;
 if($dbDsn===''){
     $configPath=dirname(__DIR__,2).'/private/config.php';
@@ -51,6 +50,9 @@ $copy=match($locale){
 $prefix=$locale==='en'?'/en':($locale==='pt-BR'?'/pt-br':'');
 $destinationUrl=$u($prefix.'/destinos/'.$business['destination_slug'].'/');
 $pagePath=$prefix.'/negocios/'.$business['public_id'].'/';
+if(preg_match('~/negocio\.php$~',$requestPath)){
+    header('Location: '.$pagePath,true,301);exit;
+}
 $publicOrigin=rtrim(getenv('EL_PUBLIC_BASE_URL')?:'https://explorandolugares.com','/');
 $title=$business['display_name'].' · '.$business['category_label'].' | Explorando Lugares';
 $description=$business['summary']?:substr((string)$business['description'],0,155);

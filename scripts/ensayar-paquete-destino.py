@@ -4,7 +4,7 @@
 Example:
   python3 scripts/ensayar-paquete-destino.py \
     --package .local/paquetes/sonson/paquete-destino-sonson.zip \
-    --base http://127.0.0.1:8015/v1/ \
+    --base http://127.0.0.1:8015/ \
     --db .local/sonson-preview.sqlite \
     --media-root .local/sonson-media --keep
 """
@@ -53,7 +53,7 @@ def run():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--package', required=True, type=Path)
     parser.add_argument('--images', type=Path, help='Carpeta de imágenes para un paquete JSON v1 anterior.')
-    parser.add_argument('--base', required=True, help='Local preview root, e.g. http://127.0.0.1:8015/v1/')
+    parser.add_argument('--base', required=True, help='Local preview root, e.g. http://127.0.0.1:8015/')
     parser.add_argument('--db', required=True, type=Path)
     parser.add_argument('--media-root', required=True, type=Path)
     parser.add_argument('--keep', action='store_true', help='Keep the destination draft and uploaded images after checks.')

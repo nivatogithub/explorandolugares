@@ -24,11 +24,8 @@ try{
     $measurement=$pdo?new AnalyticsService($pdo,(string)($config['app_key']??'')):null;
     if($measurement && $measurement->ready()){$plan=$measurement->planFromDatabase();$geography=$measurement->geographyFromDatabase();}
     $result=(new CoverageService($plan,$geography))->snapshot($pdo);
-    $days=in_array((int)($_GET['days']??30),[30,90],true)?(int)($_GET['days']??30):30;
-    $department=preg_match('/^[0-9]{2}$/D',(string)($_GET['department']??''))?$_GET['department']:null;
-    $municipality=preg_match('/^[0-9]{5}$/D',(string)($_GET['municipality']??''))?$_GET['municipality']:null;
-    $result['audience']=$measurement?$measurement->report($days,$department,$municipality):['status'=>'not_configured','metrics'=>[]];
-    $result['audience']['basic']=$pdo?(new BasicAudienceService($pdo,dirname(__DIR__)))->report($days,$department):['status'=>'not_configured','page_views'=>null];
+    // Public coverage does not expose audience or business activity metrics.
+    unset($result['audience']);
     if(!$result['publication_source_available'])header('Cache-Control: no-store');
     if(($_SERVER['REQUEST_METHOD']??'GET')!=='HEAD')echo json_encode($result,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES|JSON_THROW_ON_ERROR);
 }catch(Throwable){http_response_code(503);header('Cache-Control: no-store');echo '{"error":"La información de cobertura no está disponible en este momento."}';}

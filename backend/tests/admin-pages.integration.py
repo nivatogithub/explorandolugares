@@ -12,6 +12,8 @@ WORK = ROOT / '.local' / ('admin-test-' + secrets.token_hex(6))
 WORK.mkdir(parents=True)
 shutil.copytree(ROOT / 'backend/app', WORK / 'app')
 shutil.copytree(ROOT / 'backend/public', WORK / 'public')
+for renderer in ('destino.php', 'negocio.php'):
+    shutil.copy2(ROOT / 'backend/integration-medicion/public' / renderer, WORK / 'public' / renderer)
 shutil.copytree(ROOT / 'ensayos/v1/assets', WORK / 'public/assets', dirs_exist_ok=True)
 (WORK / 'app/content').mkdir(parents=True, exist_ok=True)
 shutil.copy2(ROOT / 'content/plantilla-importar-negocios.json', WORK / 'app/content/plantilla-importar-negocios.json')
@@ -85,7 +87,7 @@ subprocess.run(['php', str(WORK / 'app/analytics/install-basic.php')], check=Tru
 with socket.socket() as sock:
     sock.bind(('127.0.0.1', 0))
     PORT = sock.getsockname()[1]
-PROCESS = subprocess.Popen(['php', '-d', 'opcache.enable=0', '-S', f'127.0.0.1:{PORT}', '-t', str(WORK / 'public')], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+PROCESS = subprocess.Popen(['php', '-d', 'opcache.enable=0', '-S', f'127.0.0.1:{PORT}', '-t', str(WORK / 'public'), str(ROOT / 'scripts/php-destinations-router.php')], env=os.environ | {'EL_DESTINATIONS_DSN': 'sqlite:' + str(DB_PATH)}, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 BASE = f'http://127.0.0.1:{PORT}'
 ADMIN = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
 GUEST = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
@@ -128,6 +130,32 @@ try:
             break
         except urllib.error.URLError:
             time.sleep(.05)
+
+    status, body, _ = request('/destinos/jerico/', opener=GUEST)
+    check(status == 200 and 'https://explorandolugares.com/destinos/jerico/' in body and '"/v1/' not in body, 'Guía local debe usar rutas de producción sin prefijos.')
+    status, body, _ = request('/negocios/00000000-0000-4000-8000-000000000001/', opener=GUEST)
+    check(status == 200 and '"/v1/' not in body, 'Página propia debe usar rutas raíz.')
+    class NoRedirect(urllib.request.HTTPRedirectHandler):
+        def redirect_request(self, req, fp, code, msg, headers, newurl):
+            return None
+    direct = urllib.request.build_opener(NoRedirect())
+    for source, target in [('/destino.php?destino=jerico&idioma=es', '/destinos/jerico/'), ('/negocio.php?id=00000000-0000-4000-8000-000000000001', '/negocios/00000000-0000-4000-8000-000000000001/')]:
+        status, _, headers = request(source, opener=direct)
+        check(status == 301 and headers.get('Location') == target, 'Plantilla debe redirigir a ruta limpia idéntica en local y producción.')
+    check(request('/v1/destinos/jerico/', opener=GUEST)[0] == 404, 'El prefijo retirado no debe seguir como alias de pruebas.')
+
+    status, body, _ = request('/api/cobertura.php', opener=GUEST)
+    check(status == 200 and 'audience' not in json.loads(body), 'API pública no debe exponer estadísticas de uso privadas.')
+
+    # Sitemap is public read-only: no bootstrap session or private robots header.
+    status, body, headers = request('/sitemap-live.php', opener=GUEST)
+    check(status == 200 and '/destinos/jerico/' in body, 'Sitemap debe leer publicaciones de la base.')
+    check('/negocios/00000000-0000-4000-8000-000000000001/' in body, 'Sitemap debe incluir página propia vigente.')
+    check('Set-Cookie' not in headers and 'noindex' not in headers.get('X-Robots-Tag', ''), 'Sitemap no debe crear sesión ni bloquear indexación.')
+    DB.execute("UPDATE destinations SET publication_status='draft' WHERE id=?", (destination_id,)); DB.commit()
+    status, body, _ = request('/sitemap-live.php', opener=GUEST)
+    check(status == 200 and '/destinos/jerico/' not in body and '/negocios/' not in body, 'Despublicar debe retirar URL sin reconstrucción.')
+    DB.execute("UPDATE destinations SET publication_status='published' WHERE id=?", (destination_id,)); DB.commit()
 
     paths = [
         ('/admin/index.php', 'Solicitudes de participación'),
