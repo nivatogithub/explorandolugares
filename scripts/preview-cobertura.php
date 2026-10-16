@@ -2,7 +2,7 @@
 declare(strict_types=1);
 header('Cache-Control: no-store');
 $path=parse_url($_SERVER['REQUEST_URI']??'/',PHP_URL_PATH)?:'/';
-if(preg_match('~^/api/cobertura\.php$~',$path)){require dirname(__DIR__).'/backend/public/api/cobertura.php';return true;}
+if(in_array($path,['/api/cobertura.php','/api/medicion.php'],true)){require dirname(__DIR__).'/backend/public'.$path;return true;}
 foreach(['/backend/public','/ensayos/v1'] as $root){
  $base=realpath(dirname(__DIR__).$root);$file=realpath($base.rawurldecode($path));
  if($file&&is_dir($file))$file=realpath($file.'/index.html');

@@ -53,17 +53,33 @@
         const commands=polygons.flatMap(p=>p.map(r=>r.map((v,i)=>(i?'L':'M')+v[0]+' '+(-v[1])).join(' ')+'Z')).join(' ');
         path.setAttribute('d',commands);path.setAttribute('fill-rule','evenodd');path.setAttribute('class',state);path.dataset.code=code;path.setAttribute('tabindex','0');path.setAttribute('role','button');path.setAttribute('aria-label',name+' · '+labels[state]);path.setAttribute('aria-pressed','false');
         const title=document.createElementNS(ns,'title');title.textContent=name+' · '+labels[state];path.append(title);
-        const choose=()=>d?setMunicipality(code):setDepartment(code);path.addEventListener('click',choose);path.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();choose();}});path.addEventListener('pointerenter',()=>{$('map-hint').textContent=name+' · '+labels[state];});path.addEventListener('focus',()=>{$('map-hint').textContent=name+' · '+labels[state];});svg.append(path);
+        const choose=()=>{d?setMunicipality(code):setDepartment(code);window.elMeasure?.('map_select',{department,...(municipality?{municipality}:{})});};path.addEventListener('click',choose);path.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();choose();}});path.addEventListener('pointerenter',()=>{$('map-hint').textContent=name+' · '+labels[state];});path.addEventListener('focus',()=>{$('map-hint').textContent=name+' · '+labels[state];});svg.append(path);
       });
       $('map').replaceChildren(svg);highlight();
     }catch(e){if(version===mapVersion)$('map').replaceChildren(el('p','El mapa no pudo cargarse. Puedes consultar la misma información con las listas de departamentos y municipios.','map-error'));}
     finally{if(version===mapVersion)$('map').setAttribute('aria-busy','false');}
   }
-  function renderAudience(){
-    const d=current(),m=d?.municipalities.find(x=>x.code===municipality),days=$('audience-period').value;
-    $('audience-scope').textContent=(m?'Interés por '+m.name:d?'Interés por '+d.name:'Audiencia del portal en Colombia')+' · últimos '+days+' días. Los viajeros registrados representan la comunidad general del portal.';
-    // No collector/provider is configured. Never fill these slots from coverage fixtures or account stubs.
-    $('audience-status').textContent='Medición aún no habilitada. No hay cifras de visitas, registros ni contactos comprobadas para esta selección.';
+  let audienceVersion=0;
+  async function renderAudience(){
+    const version=++audienceVersion,d=current(),m=d?.municipalities.find(x=>x.code===municipality),days=$('audience-period').value;
+    $('audience-scope').textContent=(m?'Interés por '+m.name:d?'Interés por '+d.name:'Audiencia del portal')+' · últimos '+days+' días. Viajeros registrados: comunidad general del portal.';
+    const fields={'anonymous_sessions':'anonymous','estimated_visitors':'visitors','registered_travelers':'registered','active_travelers':'active','business_views':'business-views','contact_clicks':'contact'};
+    Object.values(fields).forEach(id=>$('audience-'+id).textContent='—');
+    $('audience-status').textContent='Consultando medición…';
+    try{const url=new URL('api/cobertura.php',root);url.searchParams.set('days',days);if(department)url.searchParams.set('department',department);if(municipality)url.searchParams.set('municipality',municipality);
+      const a=(await json(url)).audience;if(version!==audienceVersion)return;
+      if(!a||a.status==='not_configured')throw Error('pending');
+      Object.entries(fields).forEach(([metric,id])=>{$('audience-'+id).textContent=a.metrics[metric]===null?'—':Number(a.metrics[metric]).toLocaleString('es-CO');});
+      $('audience-status').textContent=(a.status==='collecting_baseline'?'Estamos reuniendo una base suficiente; ocultamos grupos pequeños para proteger la privacidad. ':'Medición activa. ')+ 'Solo incluye navegación con permiso. Inicio: '+a.started_at.slice(0,10)+'. Actualización: '+new Date(a.updated_at).toLocaleString('es-CO')+'.';
+      $('audience-countries').replaceChildren();const region=new Intl.DisplayNames(['es'],{type:'region'});
+      if(a.countries?.length)a.countries.forEach(c=>$('audience-countries').append(el('p',(c.code==='ZZ'?'País no disponible':c.code==='OTHER'?'Otros países (grupos pequeños)':region.of(c.code))+': '+c.count+' vistas de páginas')));else $('audience-countries').textContent='Todavía no hay un desglose publicable por país.';
+      const attribution=el('a','País aproximado: DB-IP Country Lite');attribution.href='https://db-ip.com/';attribution.rel='noopener noreferrer';$('audience-countries').append(attribution);
+      $('audience-trend').replaceChildren(el('p',a.page_views===null?'Histórico pendiente de una base suficiente.':a.page_views+' vistas de páginas en el periodo.'));
+      $('audience-trend').append(el('p',a.comparison_available?(a.growth_percent===null?'Periodo anterior: '+a.previous_views+' vistas. Aún no procede calcular un porcentaje.':'Cambio frente al periodo anterior: '+a.growth_percent+'%.'):'La comparación se habilita cuando existan dos periodos completos medidos.'));
+      const sources={direct_unknown:'Acceso directo u origen no identificable',search:'Buscadores',instagram:'Instagram',facebook:'Facebook',referral:'Otros sitios',campaign:'Campañas identificadas'};
+      const origin=el('details');origin.append(el('summary','Cómo llegan al portal'));Object.entries(a.sources||{}).forEach(([key,value])=>origin.append(el('p',(sources[key]||key)+': '+value+' vistas')));$('audience-trend').append(origin);
+      if(a.trend?.length){const details=el('details'),summary=el('summary','Ver vistas por día');details.append(summary);a.trend.forEach(day=>details.append(el('p',day.day+': '+day.views)));$('audience-trend').append(details);}
+    }catch{if(version!==audienceVersion)return;$('audience-status').textContent='Medición todavía no disponible. No mostramos cifras inventadas.';$('audience-countries').textContent='Sin desglose publicable.';$('audience-trend').textContent='Sin histórico comprobado.';}
   }
   // Invitations are composed locally. No contacts are collected and no message is sent automatically.
   const invitations={
@@ -73,7 +89,7 @@
   let inviteTrigger=null;
   function refreshInvitation(){ $('invite-whatsapp').href='https://wa.me/?text='+encodeURIComponent($('invite-message').value); }
   document.querySelectorAll('[data-invite]').forEach(button=>button.addEventListener('click',()=>{
-    inviteTrigger=button;const invitation=invitations[button.dataset.invite];$('invite-preview-title').textContent=invitation.title;$('invite-message').value=invitation.message;refreshInvitation();
+    window.elMeasure?.('invitation_open',{channel:button.dataset.invite});inviteTrigger=button;const invitation=invitations[button.dataset.invite];$('invite-preview-title').textContent=invitation.title;$('invite-message').value=invitation.message;refreshInvitation();
     $('invite-preview').hidden=false;$('invite-native').hidden=typeof navigator.share!=='function';$('invite-status').textContent='Tú eliges a quién enviarlo. No se envían mensajes automáticamente.';
     document.querySelectorAll('[data-invite]').forEach(b=>b.setAttribute('aria-expanded',String(b===button)));$('invite-message').focus({preventScroll:true});
   }));
@@ -105,7 +121,7 @@
       if(!data.publication_source_available){$('notice').hidden=false;$('notice').textContent='No podemos confirmar ahora cuántas guías están publicadas. Mostramos sin dato, no un cero.';}
       $('updated').textContent='Estado consultado: '+new Intl.DateTimeFormat('es-CO',{dateStyle:'medium',timeStyle:'short',timeZone:'America/Bogota'}).format(new Date(data.checked_at))+' (Colombia). Catálogo: '+data.universe_version+'.';
       data.departments.slice().sort((a,b)=>a.name.localeCompare(b.name,'es')).forEach(d=>$('department').append(option(d.code,d.name)));
-      $('department').addEventListener('change',e=>setDepartment(e.target.value));$('municipality').addEventListener('change',e=>setMunicipality(e.target.value));$('country-button').addEventListener('click',()=>setDepartment(''));$('search').addEventListener('input',renderPlaces);$('audience-period').addEventListener('change',renderAudience);
+      $('department').addEventListener('change',e=>{setDepartment(e.target.value);if(e.isTrusted&&department)window.elMeasure?.('map_select',{department});});$('municipality').addEventListener('change',e=>setMunicipality(e.target.value));$('country-button').addEventListener('click',()=>setDepartment(''));$('search').addEventListener('input',renderPlaces);$('audience-period').addEventListener('change',renderAudience);
       document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{filter=b.dataset.filter;document.querySelectorAll('[data-filter]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));renderPlaces();}));
       const params=new URL(location.href).searchParams;const start=params.get('departamento')||'',mun=params.get('municipio')||'';setDepartment(start);if(mun)setMunicipality(mun);
     }catch(e){$('notice').hidden=false;$('notice').textContent='No pudimos cargar la cobertura. Vuelve a intentar más tarde; puedes seguir explorando las guías desde Destinos.';$('map').replaceChildren(el('p','Información temporalmente no disponible.','map-error'));$('map').setAttribute('aria-busy','false');$('updated').textContent='Sin actualización disponible.';}
