@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-require_once __DIR__.'/BusinessPersonContactService.php';
+require_once __DIR__.'/AccountProfileService.php';
 
 final class AccountAdminService
 {
@@ -35,8 +35,6 @@ final class AccountAdminService
         try{
             $q=$this->pdo->prepare('INSERT INTO accounts(public_id,account_type,display_name,email,password_hash,status) VALUES(?,?,?,?,NULL,"pending_activation")');
             $q->execute([$this->uuid(),$type,$name,$email]);$id=(int)$this->pdo->lastInsertId();
-            $people=new BusinessPersonContactService($this->pdo);
-            if($people->ready())$people->ensureAccountPerson($id);
             $this->pdo->commit();return $id;
         }catch(Throwable $error){if($this->pdo->inTransaction())$this->pdo->rollBack();throw $error;}
     }
@@ -58,9 +56,14 @@ final class AccountAdminService
         $q=$this->pdo->prepare('SELECT 1 FROM business_account_memberships WHERE account_id=? AND business_id=? AND status="active"');$q->execute([$accountId,$businessId]);if($q->fetchColumn())throw new RuntimeException('Este negocio ya está vinculado a la cuenta.');
         $this->pdo->beginTransaction();
         try{
+            $lock=$this->pdo->getAttribute(PDO::ATTR_DRIVER_NAME)==='mysql'?' FOR UPDATE':'';
+            $q=$this->pdo->prepare('SELECT id FROM businesses WHERE id=?'.$lock);$q->execute([$businessId]);
+            if(!$q->fetchColumn())throw new RuntimeException('El negocio ya no existe.');
+            $q=$this->pdo->prepare('SELECT account_id FROM business_account_memberships WHERE business_id=? AND status="active"');$q->execute([$businessId]);
+            if($q->fetchColumn()!==false)throw new RuntimeException('Este negocio ya tiene una cuenta responsable.');
             $q=$this->pdo->prepare('INSERT INTO business_account_memberships(account_id,business_id,role,status) VALUES(?,?,?,"active")');$q->execute([$accountId,$businessId,$role]);
-            $people=new BusinessPersonContactService($this->pdo);
-            if($people->ready())$people->syncApprovedApplication((int)$applicationId);
+            $profile=new AccountProfileService($this->pdo);
+            if($profile->ready())$profile->syncApprovedApplication((int)$applicationId);
             $this->pdo->commit();
         }catch(Throwable $error){if($this->pdo->inTransaction())$this->pdo->rollBack();throw $error;}
     }

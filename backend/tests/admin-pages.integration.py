@@ -139,7 +139,7 @@ try:
         ('/admin/usuarios.php', 'Cuentas'),
         ('/admin/suscripciones.php', 'Suscripciones'),
         ('/admin/inversionistas.php', 'Inteligencia de negocio e inversión'),
-        ('/admin/contactos-negocios.php', 'Canales y contactos'),
+        ('/admin/contactos-negocios.php', 'Canales y responsable'),
     ]
     # The login is public; all operational pages require an authenticated session.
     for path, _ in paths:
@@ -180,7 +180,7 @@ try:
                     '/admin/usuarios.php': 'Cuentas',
                     '/admin/suscripciones.php': 'Suscripciones',
                     '/admin/inversionistas.php': 'Inteligencia e inversión',
-                    '/admin/contactos-negocios.php': 'Canales y contactos',
+                    '/admin/contactos-negocios.php': 'Canales y responsable',
                 }.get(route)
                 if expected_sidebar:
                     check(active_label == expected_sidebar, f'La sección activa debe ser {expected_sidebar} en {path}; mostró {active_label}')

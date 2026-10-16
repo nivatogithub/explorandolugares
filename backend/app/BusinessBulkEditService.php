@@ -10,6 +10,7 @@ final class BusinessBulkEditService
     private const SOURCE=['source_url'=>1000,'checked_at'=>19,'note'=>500];
     private const RESEARCH=['channel'=>24,'contact_value'=>500,'source_url'=>1000,'source_type'=>80,'source_field'=>80,'source_period'=>120,'consulted_at'=>10,'evidence_status'=>100,'source_note'=>4000,'legal_basis_status'=>500,'crm_stage'=>80,'potential_subscription'=>40];
     private const CHANNELS=['email','phone','phone_fixed','whatsapp','instagram','facebook','website','linkedin'];
+    private ?bool $recipientReady=null;
 
     public function __construct(private PDO $pdo) {}
 
@@ -115,7 +116,7 @@ final class BusinessBulkEditService
                 }
                 ksort($after['translations']);
             }
-            foreach(['contacts'=>self::CONTACT,'sources'=>self::SOURCE,'research_contacts'=>self::RESEARCH] as $list=>$spec)if(isset($record[$list]))$after[$list]=$this->mergeRecords($list,$before[$list],$record[$list],$spec);
+            foreach(['contacts'=>self::CONTACT,'sources'=>self::SOURCE,'research_contacts'=>$this->researchSpec()] as $list=>$spec)if(isset($record[$list]))$after[$list]=$this->mergeRecords($list,$before[$list],$record[$list],$spec);
             $finalNames[$id]=$after['translations']['es']['display_name'];
             $changes=self::diff($before,$after);
             $plan[]=['before'=>$before,'after'=>$after,'changes'=>$changes];
@@ -133,13 +134,25 @@ final class BusinessBulkEditService
         $q=$this->pdo->prepare('SELECT locale,display_name,summary,description,brand_story,featured_services FROM business_translations WHERE business_id=? ORDER BY locale'.$suffix);$q->execute([$id]);$translations=[];
         foreach($q->fetchAll(PDO::FETCH_ASSOC) as $row){$locale=$row['locale'];unset($row['locale']);foreach($row as &$value)$value=(string)($value??'');unset($value);$translations[$locale]=$row;}
         $collections=[];
-        foreach(['contacts'=>['business_contacts',array_merge(['id'],array_keys(self::CONTACT),['is_public','display_order'])],'sources'=>['business_sources',array_merge(['id'],array_keys(self::SOURCE))],'research_contacts'=>['business_research_contacts',array_merge(['id'],array_keys(self::RESEARCH),['authorization_status','marketing_consent','campaign_allowed','suppressed'])]] as $list=>[$table,$columns]){
+        foreach(['contacts'=>['business_contacts',array_merge(['id'],array_keys(self::CONTACT),['is_public','display_order'])],'sources'=>['business_sources',array_merge(['id'],array_keys(self::SOURCE))],'research_contacts'=>['business_research_contacts',array_merge(['id'],array_keys($this->researchSpec()),['authorization_status','marketing_consent','campaign_allowed','suppressed'])]] as $list=>[$table,$columns]){
             if($list==='research_contacts'&&!$this->researchReady()){$collections[$list]=[];continue;}
             $q=$this->pdo->prepare('SELECT '.implode(',',$columns).' FROM '.$table.' WHERE business_id=? ORDER BY id'.$suffix);$q->execute([$id]);$rows=$q->fetchAll(PDO::FETCH_ASSOC);
             foreach($rows as &$row){$row['id']=(int)$row['id'];foreach(['is_public','display_order','marketing_consent','campaign_allowed','suppressed'] as $field)if(isset($row[$field]))$row[$field]=(int)$row[$field];}unset($row);$collections[$list]=$rows;
         }
         $q=$this->pdo->prepare('SELECT id,plan_code,status FROM business_subscriptions WHERE business_id=? ORDER BY id DESC LIMIT 1'.$suffix);$q->execute([$id]);$subscription=$q->fetch(PDO::FETCH_ASSOC)?:null;if($subscription)$subscription['id']=(int)$subscription['id'];
         return ['id'=>$id,'public_id'=>$business['public_id'],'fields'=>$fields,'translations'=>$translations,...$collections,'_context'=>['slug'=>$business['slug'],'publication_status'=>$business['publication_status'],'information_status'=>$business['information_status'],'claim_status'=>$business['claim_status'],'operation_status'=>$business['operation_status'],'updated_at'=>$business['updated_at'],'subscription'=>$subscription]];
+    }
+
+    private function researchSpec():array
+    {
+        if($this->recipientReady===null){
+            try{$this->pdo->query('SELECT recipient_label FROM business_research_contacts LIMIT 0');$this->recipientReady=true;}
+            catch(PDOException $error){
+                if(!in_array($error->errorInfo[0]??'',['42S02','42S22'],true)&&!str_contains($error->getMessage(),'no such table:')&&!str_contains($error->getMessage(),'no such column:'))throw $error;
+                $this->recipientReady=false;
+            }
+        }
+        return self::RESEARCH+($this->recipientReady?['recipient_label'=>180]:[]);
     }
 
     private function mergeRecords(string $list,array $existing,mixed $input,array $spec):array

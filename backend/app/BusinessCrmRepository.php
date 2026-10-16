@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
-require_once __DIR__.'/BusinessPersonContactService.php';
+require_once __DIR__.'/AccountProfileService.php';
+require_once __DIR__.'/BusinessResearchContactImporter.php';
 
 /** CRM is a private view of businesses, not a second business registry. */
 final class BusinessCrmRepository
@@ -22,11 +23,14 @@ final class BusinessCrmRepository
         if($contact==='with')$where.=' AND (crm.research_contact_count+crm.profile_contact_count)>0';elseif($contact==='without')$where.=' AND (crm.research_contact_count+crm.profile_contact_count)=0';elseif($contact!=='')throw new RuntimeException('Filtro de contacto no válido.');
         if($query!==''){
             $where.=' AND (crm.display_name LIKE ? OR EXISTS(SELECT 1 FROM business_contacts pc WHERE pc.business_id=crm.id AND pc.contact_value LIKE ?)';$params[]='%'.$query.'%';$params[]='%'.$query.'%';
-            if($research){$where.=' OR EXISTS(SELECT 1 FROM business_research_contacts rc WHERE rc.business_id=crm.id AND rc.contact_value LIKE ?)';$params[]='%'.$query.'%';}
-            if((new BusinessPersonContactService($this->pdo))->ready()){
-                $where.=' OR EXISTS(SELECT 1 FROM business_person_contacts bc JOIN people p ON p.id=bc.person_id WHERE bc.business_id=crm.id AND bc.status="active" AND p.display_name LIKE ?)
-                    OR EXISTS(SELECT 1 FROM business_person_contacts bc JOIN person_channels ch ON ch.person_id=bc.person_id WHERE bc.business_id=crm.id AND bc.status="active" AND (ch.business_id IS NULL OR ch.business_id=bc.business_id) AND ch.channel_value LIKE ?)';
-                $params[]='%'.$query.'%';$params[]='%'.$query.'%';
+            if($research){
+                $recipientSearch=BusinessResearchContactImporter::recipientReady($this->pdo);
+                $where.=' OR EXISTS(SELECT 1 FROM business_research_contacts rc WHERE rc.business_id=crm.id AND (rc.contact_value LIKE ?'.($recipientSearch?' OR rc.recipient_label LIKE ?':'').'))';
+                $params[]='%'.$query.'%';if($recipientSearch)$params[]='%'.$query.'%';
+            }
+            if((new AccountProfileService($this->pdo))->ready()){
+                $where.=' OR EXISTS(SELECT 1 FROM business_account_memberships m JOIN accounts a ON a.id=m.account_id WHERE m.business_id=crm.id AND m.status="active" AND (a.display_name LIKE ? OR a.email LIKE ? OR a.contact_phone LIKE ?))';
+                $params[]='%'.$query.'%';$params[]='%'.$query.'%';$params[]='%'.$query.'%';
             }
             $where.=')';
         }
@@ -44,7 +48,7 @@ final class BusinessCrmRepository
 
     private function baseQuery(bool $research):string
     {
-        $personCount=(new BusinessPersonContactService($this->pdo))->ready()?'(SELECT COUNT(*) FROM business_person_contacts bc WHERE bc.business_id=b.id AND bc.status="active")':'0';
+        $responsibleName=(new AccountProfileService($this->pdo))->ready()?'COALESCE((SELECT a.display_name FROM business_account_memberships m JOIN accounts a ON a.id=m.account_id WHERE m.business_id=b.id AND m.status="active" LIMIT 1),"")':'""';
         $researchColumns='0 AS research_contact_count,"" AS crm_stage,"" AS potential_subscription';
         if($research){
             $distinct=$this->pdo->getAttribute(PDO::ATTR_DRIVER_NAME)==='mysql'?'CONCAT(r.channel,CHAR(31),r.contact_value)':'r.channel||CHAR(31)||r.contact_value';
@@ -57,7 +61,7 @@ final class BusinessCrmRepository
                 COALESCE(NULLIF(dt.display_name,""),d.slug) AS destination_name,COALESCE(ct.label,b.category_code) AS category_label,
                 COALESCE((SELECT s.plan_code FROM business_subscriptions s WHERE s.business_id=b.id AND s.status="active" AND (s.starts_at IS NULL OR s.starts_at<=CURRENT_TIMESTAMP) AND (s.ends_at IS NULL OR s.ends_at>CURRENT_TIMESTAMP) ORDER BY s.id DESC LIMIT 1),"free") AS current_plan,
                 COALESCE((SELECT s.status FROM business_subscriptions s WHERE s.business_id=b.id ORDER BY s.id DESC LIMIT 1),"sin suscripción") AS subscription_status,
-                (SELECT COUNT(*) FROM business_contacts pc WHERE pc.business_id=b.id) AS profile_contact_count,'.$personCount.' AS person_contact_count,'.$researchColumns.'
+                (SELECT COUNT(*) FROM business_contacts pc WHERE pc.business_id=b.id) AS profile_contact_count,'.$responsibleName.' AS responsible_name,'.$researchColumns.'
             FROM businesses b JOIN destinations d ON d.id=b.destination_id
             LEFT JOIN business_translations t ON t.business_id=b.id AND t.locale="es"
             LEFT JOIN destination_translations dt ON dt.destination_id=d.id AND dt.locale="es"
