@@ -116,8 +116,9 @@ final class InvestorBusinessIntelligence
     private function monthlyTrend(): array
     {
         $zone = new DateTimeZone('UTC');
-        $first = new DateTimeImmutable('first day of this month', $zone)->setTime(0, 0)->modify('-11 months');
-        $end = new DateTimeImmutable('first day of next month', $zone)->setTime(0, 0);
+        // Parenthesize construction for the PHP 8.2 hosting baseline.
+        $first = (new DateTimeImmutable('first day of this month', $zone))->setTime(0, 0)->modify('-11 months');
+        $end = (new DateTimeImmutable('first day of next month', $zone))->setTime(0, 0);
         $from = $first->format('Y-m-d H:i:s');
         $to = $end->format('Y-m-d H:i:s');
         $months = [];
