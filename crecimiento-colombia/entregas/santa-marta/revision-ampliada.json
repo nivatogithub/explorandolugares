@@ -1,0 +1,150 @@
+{
+  "schema_version": 2,
+  "worker": "Lugar 4",
+  "destination": "santa-marta",
+  "state": "correcciones",
+  "inventory": [
+    {
+      "id": "centro",
+      "name": "Centro histórico",
+      "category": "patrimonio",
+      "territorial_scope": "urbano",
+      "source_url": "https://santamarta.gov.co/sala-prensa/noticias/las-maravillas-que-debes-descubrir-en-santa-marta-en-este-2023",
+      "consulted_at": "2026-10-16",
+      "notes": "Recorrido cultural; delimitar calles y paradas.",
+      "text_status": "investigacion_ampliada_pendiente_traducciones",
+      "photo_status": "pendiente",
+      "approval": null
+    },
+    {
+      "id": "catedral",
+      "name": "Catedral",
+      "category": "arquitectura",
+      "territorial_scope": "urbano",
+      "source_url": "https://santamarta.gov.co/sala-prensa/noticias/las-maravillas-que-debes-descubrir-en-santa-marta-en-este-2023",
+      "consulted_at": "2026-10-16",
+      "notes": "Foto histórica disponible; revisión pendiente.",
+      "text_status": "investigacion_ampliada_pendiente_traducciones",
+      "photo_status": "referencia_disponible_pendiente_aprobacion",
+      "approval": null
+    },
+    {
+      "id": "museo-oro",
+      "name": "Museo del Oro Tairona / Casa de la Aduana",
+      "category": "museo",
+      "territorial_scope": "urbano",
+      "source_url": "https://santamarta.gov.co/sala-prensa/noticias/las-maravillas-que-debes-descubrir-en-santa-marta-en-este-2023",
+      "consulted_at": "2026-10-16",
+      "notes": "Completar ficha específica y fotografía autorizada.",
+      "text_status": "investigacion_ampliada_pendiente_traducciones",
+      "photo_status": "pendiente",
+      "approval": null
+    },
+    {
+      "id": "taganga",
+      "name": "Taganga",
+      "category": "costa",
+      "territorial_scope": "distrito",
+      "source_url": "https://santamarta.gov.co/sala-prensa/noticias/las-maravillas-que-debes-descubrir-en-santa-marta-en-este-2023",
+      "consulted_at": "2026-10-16",
+      "notes": "Foto disponible; separar visita a bahía de actividad de buceo.",
+      "text_status": "investigacion_ampliada_pendiente_traducciones",
+      "photo_status": "referencia_disponible_pendiente_aprobacion",
+      "approval": null
+    },
+    {
+      "id": "gayraca",
+      "name": "Gayraca",
+      "category": "naturaleza",
+      "territorial_scope": "Parque Tayrona",
+      "source_url": "https://santamarta.gov.co/sala-prensa/noticias/las-maravillas-que-debes-descubrir-en-santa-marta-en-este-2023",
+      "consulted_at": "2026-10-16",
+      "notes": "Confirmar reglas actuales de parque y acceso; no reutilizar precios de 2023.",
+      "text_status": "investigacion_ampliada_pendiente_traducciones",
+      "photo_status": "pendiente",
+      "approval": null
+    },
+    {
+      "id": "bunkuany",
+      "name": "Bunkuany",
+      "category": "patrimonio",
+      "territorial_scope": "excursión regional por delimitar",
+      "source_url": "https://santamarta.gov.co/sala-prensa/noticias/las-maravillas-que-debes-descubrir-en-santa-marta-en-este-2023",
+      "consulted_at": "2026-10-16",
+      "notes": "Validar jurisdicción, permisos y visita respetuosa antes de integrar.",
+      "text_status": "investigacion_ampliada_pendiente_traducciones",
+      "photo_status": "pendiente",
+      "approval": null
+    },
+    {
+      "id": "kennedy",
+      "name": "Cerro Kennedy",
+      "category": "naturaleza",
+      "territorial_scope": "Sierra Nevada, excursión por delimitar",
+      "source_url": "https://santamarta.gov.co/sala-prensa/noticias/las-maravillas-que-debes-descubrir-en-santa-marta-en-este-2023",
+      "consulted_at": "2026-10-16",
+      "notes": "Validar acceso y operador; no ofrecer senderos privados sin permiso.",
+      "text_status": "investigacion_ampliada_pendiente_traducciones",
+      "photo_status": "pendiente",
+      "approval": null
+    },
+    {
+      "id": "minca",
+      "name": "Minca",
+      "category": "naturaleza",
+      "territorial_scope": "corregimiento / ficha relacionada",
+      "source_url": "https://santamarta.gov.co/sala-prensa/noticias/las-maravillas-que-debes-descubrir-en-santa-marta-en-este-2023",
+      "consulted_at": "2026-10-16",
+      "notes": "Relacionar ficha propia y evitar doble conteo.",
+      "text_status": "investigacion_ampliada_pendiente_traducciones",
+      "photo_status": "pendiente",
+      "approval": null
+    },
+    {
+      "id": "cienaga",
+      "name": "Termales de Ciénaga",
+      "category": "naturaleza",
+      "territorial_scope": "otro municipio: Ciénaga",
+      "source_url": "https://santamarta.gov.co/sala-prensa/noticias/las-maravillas-que-debes-descubrir-en-santa-marta-en-este-2023",
+      "consulted_at": "2026-10-16",
+      "notes": "Fuera de inventario municipal; solo enlace regional, sin afirmaciones terapéuticas.",
+      "text_status": "investigacion_ampliada_pendiente_traducciones",
+      "photo_status": "pendiente",
+      "approval": null
+    },
+    {
+      "id": "quinta",
+      "name": "Quinta de San Pedro Alejandrino",
+      "category": "historia",
+      "territorial_scope": "distrito",
+      "source_url": "https://www.museobolivariano.org.co/",
+      "consulted_at": "2026-10-16",
+      "notes": "Ficha previa y fotografía en entrega; revisión pendiente.",
+      "text_status": "borrador",
+      "photo_status": "referencia_disponible_pendiente_aprobacion",
+      "approval": null
+    }
+  ],
+  "experiences": [
+    {
+      "id": "buceo-taganga",
+      "name": "Buceo con salida desde Taganga",
+      "classification": "oferta_documentada_operador",
+      "operator": "Barracuda Dive Center",
+      "source_url": "https://www.barracudataganga.com/",
+      "consulted_at": "2026-10-16",
+      "evidence": "El sitio propio describe cursos e inmersiones con salida desde Taganga al Tayrona.",
+      "availability_verified": false,
+      "registration_verified": false,
+      "partnership": false,
+      "photo_status": "pendiente_permiso_no_reutilizar_imagen_del_operador",
+      "approval": null,
+      "publication_status": "draft",
+      "notes": "No ofrecer durante cierre del parque; confirmar condiciones actuales. La descripción comercial no demuestra permisos o cupos."
+    }
+  ],
+  "originals_approved": false,
+  "texts_approved": false,
+  "illustrations_generated": false,
+  "publication_approved": false
+}

@@ -7,3 +7,7 @@ Preparado: fuentes institucionales, historia, 3 atractivos, experiencias informa
 Pendiente: revisión humana factual/lingüística/visual; permisos de visita y operación/RNT cuando aplique; privacidad/canal de corrección; integración real con paquete v2/importador y QA del portal; commit/PR remoto y aprobación de versión. El JSON de investigación NO se presenta como paquete v2 importable. El tamaño y procedencia de fotos están comprobados, no su vigencia 2026.
 
 Bloqueos a publicabilidad: falta aprobación humana, integración v2 y comprobación de servicios. No recibir siguiente lugar. Publicación no autorizada.
+
+
+## Corrección de alcance 16/10/2026
+Revisión reabierta: revision-ampliada.json registra 10 entradas (una excluida del municipio y varias excursiones por delimitar), oferta de buceo documentada con operador sin alianza ni permiso verificados. Faltan imágenes de actividades, traducciones ampliadas, opciones de portada y decisiones por componente. Esta ampliación no es una entrega completa para aprobar. Flujo: aprobar originales/textos → skill de ilustración → revisión final → autorización separada de publicación.
