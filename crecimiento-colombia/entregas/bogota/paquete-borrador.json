@@ -1,0 +1,223 @@
+{
+  "schema": "entrega_privada_v1",
+  "compatible_importador_produccion": false,
+  "destino_id": "CO-11-bogota",
+  "nombre": "Bogotá",
+  "departamento": "Bogotá D.C.",
+  "worker": "Lugar 2",
+  "rama": "lugar/CO/bogota-dc/bogota",
+  "estado": "investigacion_parcial_bloqueada_imagenes",
+  "publicable": false,
+  "aprobado": false,
+  "publicado": false,
+  "fuentes": "fuentes.json",
+  "contenido": {
+    "es": {
+      "titulo": "Bogotá: cultura, montaña y vida de barrio",
+      "introduccion": "Bogotá permite combinar colecciones arqueológicas y arte contemporáneo con una mirada a la ciudad desde los cerros orientales. Para una primera visita, organiza las paradas por zonas: el centro histórico y sus museos, Monserrate y, en otra salida, el Jardín Botánico. El directorio reúne opciones informativas; no representa alianzas ni disponibilidad confirmada.",
+      "historia": "La historia de Bogotá comienza antes de la llegada española: la sabana fue territorio muisca. La fundación colonial se sitúa en 1538. Recorrer el centro ayuda a relacionar esa historia con las instituciones y espacios culturales actuales, sin reducir el pasado de la ciudad a un solo momento ni confundir narraciones sobre el sitio exacto de fundación con un hecho resuelto.",
+      "atractivos": [
+        [
+          "Museo del Oro",
+          "Acércate al patrimonio arqueológico de Colombia en el museo del Banco de la República junto al Parque Santander. La institución ofrece recorridos guiados; consulta la programación y las condiciones de ingreso.",
+          "S02"
+        ],
+        [
+          "Monserrate",
+          "El cerro reúne una basílica, vistas urbanas y opciones de recorrido natural. Confirma el medio de ascenso disponible: la web del operador muestra un aviso de servicio exclusivamente en funicular para un intervalo de septiembre a octubre.",
+          "S03"
+        ],
+        [
+          "Jardín Botánico José Celestino Mutis",
+          "Un espacio de investigación, conservación y educación ambiental que permite acercarse a la flora y a los ecosistemas de la región. Consulta el acceso al Tropicario y la agenda antes de ir.",
+          "S04"
+        ],
+        [
+          "MAMBO",
+          "El Museo de Arte Moderno de Bogotá ofrece exposiciones y actividades culturales en el centro de la ciudad. Revisa la muestra vigente y el acceso por la carrera sexta.",
+          "S11"
+        ],
+        [
+          "Teatro Colón y Centro Nacional de las Artes",
+          "Consulta las visitas comentadas y la programación de sus salas. Las condiciones cambian según la actividad: puede requerir boleta o inscripción.",
+          "S12"
+        ]
+      ],
+      "experiencias": [
+        [
+          "Visita guiada al Museo del Oro",
+          "Actividad ofrecida por el propio museo; consulta idioma, día y condiciones vigentes. No implica reserva desde Explorando Lugares.",
+          "S02"
+        ],
+        [
+          "Observación de la ciudad desde Monserrate",
+          "Visita independiente sujeta a operación del transporte y condiciones del lugar; no prometemos un circuito guiado.",
+          "S03"
+        ],
+        [
+          "Exploración ambiental en el Jardín Botánico",
+          "Consulta la programación educativa y condiciones del Tropicario directamente con la entidad.",
+          "S04"
+        ],
+        [
+          "Una salida de artes escénicas",
+          "Elige un evento de la agenda oficial del Centro Nacional de las Artes; confirma requisitos y fecha con el organizador.",
+          "S12"
+        ]
+      ],
+      "practica": [
+        "Agrupa visitas por zona y deja margen para desplazarte: esta guía no estima tiempos de tráfico ni garantiza conexiones.",
+        "Comprueba horarios, tarifas, cierres, cupos y accesibilidad directamente en cada fuente. El Jardín Botánico muestra bloques con horarios diferentes; no se presenta aquí un horario unificado.",
+        "Monserrate anuncia una restricción temporal del transporte; confirma la vigencia y no asumas que teleférico y funicular funcionan simultáneamente.",
+        "El Museo del Oro se encuentra junto al Parque Santander; MAMBO publica su acceso por carrera sexta y el Jardín Botánico su sede en Av. Calle 63 #68-95.",
+        "No se ofrecen reservas, pagos, transporte, asistencia médica ni garantías de seguridad. Para movilidad y acceso al aeropuerto faltan fuentes específicas: no se inventan tarifas ni rutas."
+      ],
+      "directorio_nota": "Directorio gratuito en borrador, con fuentes públicas. Existencia documental consultada; operación, representación y disponibilidad pendientes de verificar. Ninguna ficha es una alianza.",
+      "revision": "Borrador privado. Textos, traducciones e imágenes pendientes de aprobación."
+    },
+    "en": {
+      "titulo": "Bogotá: culture, mountains and neighbourhood life",
+      "introduccion": "Bogotá brings archaeological collections and contemporary art together with views from its eastern hills. Group a first visit by area: the historic centre and its museums, Monserrate and, on a separate outing, the Botanical Garden. The directory is informational; it does not indicate partnerships or confirmed availability.",
+      "historia": "Bogotá’s history predates Spanish arrival: the savanna was Muisca territory. The colonial foundation dates to 1538. The historic centre connects that past with today’s cultural institutions. The city’s story should not be reduced to a single moment, and accounts of the exact founding site should not be presented as settled fact.",
+      "atractivos": [
+        [
+          "Gold Museum",
+          "Explore Colombia’s archaeological heritage at the Banco de la República museum beside Santander Park. Check guided visits, admission and current programming with the museum.",
+          "S02"
+        ],
+        [
+          "Monserrate",
+          "The hill combines a basilica, city views and nature activities. Confirm the available ascent method: the operator’s website displays a funicular-only notice for a September–October interval.",
+          "S03"
+        ],
+        [
+          "José Celestino Mutis Botanical Garden",
+          "A place for research, conservation and environmental education focused on regional plants and ecosystems. Check Tropicario admission and programming before visiting.",
+          "S04"
+        ],
+        [
+          "MAMBO",
+          "Bogotá’s Museum of Modern Art hosts exhibitions and cultural activities downtown. Check the current exhibition and access from Carrera Sexta.",
+          "S11"
+        ],
+        [
+          "Teatro Colón and the National Arts Centre",
+          "Check guided visits and the programme for each venue. Ticket or registration requirements depend on the activity.",
+          "S12"
+        ]
+      ],
+      "experiencias": [
+        [
+          "Gold Museum guided visit",
+          "Offered by the museum itself; check language, day and current conditions. No booking is offered by Explorando Lugares.",
+          "S02"
+        ],
+        [
+          "City views from Monserrate",
+          "An independent visit subject to transport operation and local conditions, without a promised guided circuit.",
+          "S03"
+        ],
+        [
+          "Environmental discovery at the Botanical Garden",
+          "Ask the institution about educational programming and Tropicario conditions.",
+          "S04"
+        ],
+        [
+          "An evening of performing arts",
+          "Choose an event from the National Arts Centre’s official programme and confirm the date and requirements with its organiser.",
+          "S12"
+        ]
+      ],
+      "practica": [
+        "Group visits geographically and allow time for travel; this guide does not estimate traffic or guarantee connections.",
+        "Check opening hours, admission, closures, capacity and accessibility with each venue. The Botanical Garden homepage contains differing schedule blocks; no unified schedule is asserted here.",
+        "Monserrate displays a temporary transport restriction. Confirm its validity and do not assume both cable car and funicular operate at once.",
+        "The Gold Museum is beside Santander Park; MAMBO lists access from Carrera Sexta, and the Botanical Garden lists Av. Calle 63 #68-95.",
+        "No booking, payments, transport, medical help or security guarantees are provided. Airport and mobility sources still need verification; fares and routes are not invented."
+      ],
+      "directorio_nota": "Draft free directory based on public sources. Documentary existence checked; operation, representation and availability remain unverified. Listings do not imply partnerships.",
+      "revision": "Private draft. Text, translations and images await approval."
+    },
+    "pt-BR": {
+      "titulo": "Bogotá: cultura, montanha e vida de bairro",
+      "introduccion": "Bogotá combina coleções arqueológicas e arte contemporânea com vistas a partir dos cerros orientais. Para uma primeira visita, organize as paradas por região: o centro histórico e seus museus, Monserrate e, em outro passeio, o Jardim Botânico. O diretório é informativo; não representa parcerias nem disponibilidade confirmada.",
+      "historia": "A história de Bogotá antecede a chegada espanhola: a savana era território muísca. A fundação colonial data de 1538. O centro histórico permite relacionar esse passado às instituições culturais atuais, sem reduzir a história da cidade a um único momento nem apresentar narrativas sobre o local exato da fundação como fato resolvido.",
+      "atractivos": [
+        [
+          "Museu do Ouro",
+          "Conheça o patrimônio arqueológico colombiano no museu do Banco de la República, junto ao Parque Santander. Consulte visitas guiadas, programação e condições de entrada.",
+          "S02"
+        ],
+        [
+          "Monserrate",
+          "O cerro reúne uma basílica, vistas urbanas e atividades de natureza. Confirme o meio de subida disponível: o operador exibe aviso de transporte exclusivamente por funicular em um intervalo de setembro a outubro.",
+          "S03"
+        ],
+        [
+          "Jardim Botânico José Celestino Mutis",
+          "Espaço de pesquisa, conservação e educação ambiental dedicado à flora e aos ecossistemas da região. Consulte o acesso ao Tropicario e a programação.",
+          "S04"
+        ],
+        [
+          "MAMBO",
+          "O Museu de Arte Moderna de Bogotá oferece exposições e atividades culturais no centro. Confira a mostra atual e a entrada pela Carrera Sexta.",
+          "S11"
+        ],
+        [
+          "Teatro Colón e Centro Nacional das Artes",
+          "Consulte visitas comentadas e a programação das salas. A atividade pode exigir ingresso ou inscrição.",
+          "S12"
+        ]
+      ],
+      "experiencias": [
+        [
+          "Visita guiada ao Museu do Ouro",
+          "Oferecida pelo próprio museu; confirme idioma, dia e condições atuais. Explorando Lugares não realiza reservas.",
+          "S02"
+        ],
+        [
+          "Vista da cidade a partir de Monserrate",
+          "Visita independente sujeita à operação do transporte e às condições locais; não se promete circuito guiado.",
+          "S03"
+        ],
+        [
+          "Exploração ambiental no Jardim Botânico",
+          "Consulte a programação educativa e as condições do Tropicario diretamente com a instituição.",
+          "S04"
+        ],
+        [
+          "Um passeio de artes cênicas",
+          "Escolha um evento da agenda oficial do Centro Nacional das Artes e confirme data e requisitos com o organizador.",
+          "S12"
+        ]
+      ],
+      "practica": [
+        "Agrupe visitas por região e reserve tempo para deslocamentos; este guia não estima trânsito nem garante conexões.",
+        "Confirme horários, preços, fechamentos, vagas e acessibilidade com cada local. A página do Jardim Botânico contém blocos com horários diferentes; não se afirma um horário único.",
+        "Monserrate anuncia restrição temporária de transporte. Confirme a vigência e não suponha que teleférico e funicular operem simultaneamente.",
+        "O Museu do Ouro fica junto ao Parque Santander; o MAMBO informa entrada pela Carrera Sexta e o Jardim Botânico, Av. Calle 63 #68-95.",
+        "Não oferecemos reservas, pagamentos, transporte, assistência médica nem garantias de segurança. Faltam fontes específicas de mobilidade e aeroporto; não se inventam tarifas ou rotas."
+      ],
+      "directorio_nota": "Diretório gratuito em rascunho, baseado em fontes públicas. Existência documental consultada; operação, representação e disponibilidade ainda precisam de verificação. Nenhuma ficha representa parceria.",
+      "revision": "Rascunho privado. Textos, traduções e imagens aguardam aprovação."
+    }
+  },
+  "directorio": "directorio.json",
+  "imagenes": "imagenes.json",
+  "integracion": "previsualizacion.html",
+  "gates": {
+    "fuentes": "consulta_documentada",
+    "textos": "borrador_pendiente_revision",
+    "historia": "borrador_fuente_divulgativa_pendiente_revision",
+    "atractivos": "5_borradores_trazables",
+    "experiencias": "4_propuestas_con_fuente_operador",
+    "directorio": "10_fichas_3_categorias_operacion_pendiente",
+    "imagenes": "bloqueado",
+    "traducciones": "borrador_ES_EN_PT-BR_pendiente_revision",
+    "integracion": "solo_previsualizacion_local",
+    "preview_visual": "pendiente",
+    "PR": "pendiente",
+    "aprobacion": "pendiente",
+    "publicacion": "no_autorizada"
+  }
+}

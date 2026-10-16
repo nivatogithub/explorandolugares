@@ -1,0 +1,52 @@
+{
+  "destino_id": "CO-11-bogota",
+  "estado": "bloqueado_descarga_original",
+  "skill_aplicado": ".agents/skills/imagenes-destinos/SKILL.md",
+  "procedimiento_fotos": "crecimiento-colombia/procedimientos/convertir-fotos.md",
+  "fecha_consulta": "2026-10-16",
+  "activos": [
+    {
+      "id": "bogota-vista-monserrate",
+      "uso": "portada",
+      "tipo": "fotografia_real",
+      "fuente": "S13",
+      "autor": "Esteban16",
+      "fecha_toma": "2018-07-07",
+      "pagina_original": "https://commons.wikimedia.org/w/index.php?title=File:Monserrate,_Bogota.jpg&oldid=1199289042",
+      "url_original": "https://upload.wikimedia.org/wikipedia/commons/7/72/Monserrate%2C_Bogota.jpg",
+      "licencia": "CC BY-SA 4.0",
+      "url_licencia": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "permite_comercial": true,
+      "permite_adaptacion": true,
+      "condiciones": [
+        "atribuir autor y título",
+        "enlazar licencia",
+        "indicar cambios",
+        "derivados bajo misma licencia"
+      ],
+      "credito": "Monserrate, Bogota — Esteban16, CC BY-SA 4.0; recorte/redimensionado solo cuando exista derivado.",
+      "dimensiones_original_declaradas": [
+        4032,
+        3024
+      ],
+      "bytes_original_declarados": 2704359,
+      "sha1_original_declarado_commons": "3d8805032ba1a3f071cfdbb4e5a5cce21e294573",
+      "original_local": null,
+      "sha256": null,
+      "derivados": [],
+      "alt": {
+        "es": "Vista de Bogotá desde Monserrate, fotografía de 2018.",
+        "en": "View of Bogotá from Monserrate, photographed in 2018.",
+        "pt-BR": "Vista de Bogotá a partir de Monserrate, fotografia de 2018."
+      },
+      "revision_visual": "pendiente_original_local",
+      "aprobacion_humana": false
+    }
+  ],
+  "faltantes": [
+    "fotografía de historia",
+    "fotografías individuales de Museo del Oro, Jardín Botánico, MAMBO y Teatro Colón",
+    "revisión original y recortes móvil/escritorio"
+  ],
+  "bloqueo": "curl falló Could not resolve host upload.wikimedia.org; solicitud escalada interrumpida. No se obtuvo archivo ni se fabricaron hashes/derivados. No copiar fotos institucionales protegidas."
+}
