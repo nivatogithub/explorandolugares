@@ -74,14 +74,14 @@ final class BusinessAdminService
             foreach($plan['text_limits'] as $field=>$limit){$limit=(int)$limit;if($limit>0&&self::characterLength($translations[$locale][$field])>$limit)throw new RuntimeException('El campo '.self::textFieldLabel($field).' en '.strtoupper($locale).' supera el límite de '.$limit.' caracteres de esta suscripción.');}
         }
         foreach($translations as $locale=>&$translation){$prior=$existing['translations'][$locale]??[];if(!in_array('expanded_details',$features,true))$translation['summary']=(string)($prior['summary']??'');if(!in_array('extended_description',$features,true))$translation['description']=(string)($prior['description']??'');if(!in_array('brand_presentation',$features,true))foreach(['brand_story','featured_services'] as $key)$translation[$key]=(string)($prior[$key]??'');}unset($translation);
-        $location=$this->locationFields($input,$existing,$features);
+        $location=$this->locationFields($input,$existing,$features,$planCode!=='free');
         $frequency=(string)($input['billing_frequency']??$input['subscription']['billing_frequency']??$existing['subscription']['billing_frequency']??'');if($planCode!=='free'&&$frequency==='')$frequency='monthly';
         // URL, orden, verificación, reclamación, operación, plan y publicación no son datos de alta.
         $slug=$existing['slug']??$this->availableSlug($destinationId,$this->slug($translations['es']['display_name']),0);
         if($existing&&(int)$existing['destination_id']!==$destinationId)$slug=$this->availableSlug($destinationId,$this->slug($translations['es']['display_name']),0);
         $this->pdo->beginTransaction();$storedFiles=[];
         try{
-            $imageHelp=$input['image_assistance_requested']??'0';if(!in_array((string)$imageHelp,['0','1','2'],true))throw new RuntimeException('Indica si el negocio necesita apoyo con sus imágenes.');$imageHelp=(int)$imageHelp;
+            $imageHelp=$input['image_assistance_requested']??($existing['image_assistance_requested']??'0');if(!in_array((string)$imageHelp,['0','1','2'],true))throw new RuntimeException('Indica si el negocio necesita apoyo con sus imágenes.');$imageHelp=(int)$imageHelp;
             if($id){$q=$this->pdo->prepare('UPDATE businesses SET destination_id=?,category_code=?,address_text=?,location_reference=?,latitude=?,longitude=?,location_source=?,location_map_url=?,location_confirmed=?,opening_hours=?,price_range=?,capacity_count=?,menu_url=?,reservations_url=?,image_assistance_requested=?,publication_status="draft",updated_at=CURRENT_TIMESTAMP WHERE id=?');$q->execute([$destinationId,$category,...array_values($location),$imageHelp,$id]);}
             else{$publicId=$this->uuid();$q=$this->pdo->prepare('INSERT INTO businesses(public_id,destination_id,category_code,address_text,location_reference,latitude,longitude,location_source,location_map_url,location_confirmed,opening_hours,price_range,capacity_count,menu_url,reservations_url,image_assistance_requested,record_origin,slug,information_status,claim_status,operation_status,publication_status,display_order) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,"admin_created",?,"PENDIENTE_REVISION","NO_RECLAMADO","DESCONOCIDO","draft",0)');$q->execute([$publicId,$destinationId,$category,...array_values($location),$imageHelp,$slug]);$id=(int)$this->pdo->lastInsertId();}
             $this->syncTranslations($id,$translations);$this->syncContacts($id,is_array($input['contacts']??null)?$input['contacts']:[],$features,$existing['contacts']??[]);
@@ -121,12 +121,15 @@ final class BusinessAdminService
         $this->pdo->prepare('DELETE FROM business_contacts WHERE business_id=?')->execute([$id]);$q=$this->pdo->prepare('INSERT INTO business_contacts(business_id,channel,contact_value,is_public,display_order) VALUES(?,?,?,?,?)');foreach($clean as $order=>$row)$q->execute([$id,$row[0],$row[1],$row[2],$order]);
     }
 
-    private function locationFields(array $input,?array $existing=null,array $features=[]):array
+    private function locationFields(array $input,?array $existing=null,array $features=[],bool $requiresLocation=true):array
     {
-        $address=trim((string)($input['address_text']??''));$reference=trim((string)($input['location_reference']??''));
+        if(!$requiresLocation&&!array_key_exists('address_text',$input)&&!array_key_exists('latitude',$input)&&!array_key_exists('longitude',$input)&&!array_key_exists('location_map_url',$input)){
+            return ['address_text'=>(string)($existing['address_text']??''),'location_reference'=>(string)($existing['location_reference']??''),'latitude'=>$existing['latitude']??null,'longitude'=>$existing['longitude']??null,'location_source'=>$existing['location_source']??null,'location_map_url'=>(string)($existing['location_map_url']??''),'location_confirmed'=>!empty($input['location_map_changed'])?0:(int)($existing['location_confirmed']??0),'opening_hours'=>(string)($existing['opening_hours']??''),'price_range'=>(string)($existing['price_range']??''),'capacity_count'=>$existing['capacity_count']??null,'menu_url'=>(string)($existing['menu_url']??''),'reservations_url'=>(string)($existing['reservations_url']??'')];
+        }
+        $address=trim((string)($input['address_text']??$existing['address_text']??''));$reference=trim((string)($input['location_reference']??$existing['location_reference']??''));
         if(strlen($address)>300||strlen($reference)>500)throw new RuntimeException('La dirección o referencia es demasiado larga.');
-        $hasMapField=!empty($input['map_workflow']);$mapUrl=trim((string)($input['location_map_url']??($existing['location_map_url']??'')));$mapUrl=$this->mapUrl($mapUrl);$coords=$this->coordinatesFromMap($mapUrl);
-        $confirmed=!empty($input['location_confirmed'])?1:((int)($existing['location_confirmed']??0));
+        $hasMapField=$requiresLocation&&!empty($input['map_workflow']);$mapUrl=trim((string)($input['location_map_url']??($existing['location_map_url']??'')));$mapUrl=$this->mapUrl($mapUrl);$coords=$this->coordinatesFromMap($mapUrl);
+        $confirmed=array_key_exists('location_confirmed',$input)?(!empty($input['location_confirmed'])?1:0):((int)($existing['location_confirmed']??0));
         if($hasMapField&&!$confirmed)throw new RuntimeException('Selecciona el punto exacto en el mapa y confirma que dirección y destino coinciden.');
         // Legacy latitude/longitude are accepted only for older internal callers; the form no longer exposes independent coordinates.
         $latText=trim((string)($input['latitude']??''));$lonText=trim((string)($input['longitude']??''));$lat=$latText===''?null:filter_var($latText,FILTER_VALIDATE_FLOAT);$lon=$lonText===''?null:filter_var($lonText,FILTER_VALIDATE_FLOAT);

@@ -30,9 +30,9 @@ final class BusinessSubscriptionAdminService
 
     private static function requirements(string $plan,int $galleryPhotos):array
     {
-        $base=['Base para todos: nombre, categoría, destino, dirección y punto seleccionado en un mapa de OpenStreetMap, sin clave de Google. Confirma que el pin corresponde al negocio y al municipio.'];
+        $base=['Nombre, categoría y destino. Para esta suscripción paga, completa la dirección y confirma su punto en el mapa.'];
         return match($plan){
-            'free'=>[...$base,'Público: solo nombre, categoría y ubicación. El teléfono se conserva para verificación y no se publica; sin descripción ampliada, logo ni fotos.'],
+            'free'=>['Solo requiere nombre, categoría y destino. No exige dirección, mapa, teléfono, descripciones, horarios ni imágenes. Los canales de investigación se conservan privados.'],
             'basic'=>[...$base,'Añade: un resumen corto y al menos un celular/WhatsApp público para contacto directo. No solicita descripción larga, logo, fotos, horarios ni datos operativos.'],
             'featured'=>[...$base,'Añade: descripción intermedia, contacto público y tarjeta destacada. Puede entregar su logo como referencia privada; si no tiene, la tarjeta usa sus iniciales. No incluye fotografías.'],
             'page'=>[...$base,'Añade página propia: descripción completa, logo (si no tiene, se muestran sus iniciales), celular/WhatsApp público, horarios y rango de precios. Puede entregar dos referencias privadas: logo y una imagen para preparar la portada. El equipo crea y revisa la imagen final; las referencias no se publican directamente. Menú/catálogo, reservas, redes y capacidad se piden solo cuando aplican.'],
@@ -80,13 +80,13 @@ final class BusinessSubscriptionAdminService
             if($business['information_status']==='PUBLICO'&&$business['record_origin']!=='public_import')throw new RuntimeException('Verifica la información y la autorización del negocio antes de publicarlo.');
             if(!in_array($business['information_status'],['PUBLICO','VERIFICADO','ACTIVO'],true))throw new RuntimeException('Verifica la información y la autorización del negocio antes de publicarlo.');
             if($business['operation_status']==='CERRADO_DEFINITIVO')throw new RuntimeException('Un negocio con cierre definitivo no se puede publicar.');
-            if($business['record_origin']!=='public_import'&&(trim((string)$business['location_map_url'])===''||!(bool)$business['location_confirmed']))throw new RuntimeException('Confirma en el mapa que la dirección y el punto corresponden al destino antes de publicar.');
             if(($business['latitude']===null)!==($business['longitude']===null))throw new RuntimeException('La latitud y la longitud deben estar completas juntas.');
             if($business['latitude']!==null&&((float)$business['latitude'] < -90||(float)$business['latitude']>90||(float)$business['longitude'] < -180||(float)$business['longitude']>180))throw new RuntimeException('Las coordenadas están fuera de rango.');
             $q=$this->pdo->prepare('SELECT * FROM business_subscriptions WHERE business_id=? ORDER BY id DESC LIMIT 1');$q->execute([$businessId]);$sub=$q->fetch(PDO::FETCH_ASSOC);
             if(!$sub)throw new RuntimeException('Registra la suscripción antes de publicar el negocio.');
-            if(trim((string)$business['address_text'])===''&&($business['latitude']===null||$business['longitude']===null)&&!($business['record_origin']==='public_import'&&$sub['plan_code']==='free'))throw new RuntimeException('Completa una dirección o un punto de ubicación antes de publicar.');
-            if($sub['plan_code']!=='free'||$business['record_origin']!=='public_import'){$q=$this->pdo->prepare('SELECT COUNT(*) FROM business_contacts WHERE business_id=? AND channel IN ("phone","whatsapp") AND contact_value<>""');$q->execute([$businessId]);if((int)$q->fetchColumn()<1)throw new RuntimeException('Registra un celular o WhatsApp de contacto antes de publicar.');}
+            if($sub['plan_code']!=='free'&&(trim((string)$business['location_map_url'])===''||!(bool)$business['location_confirmed']))throw new RuntimeException('Confirma en el mapa que la dirección y el punto corresponden al destino antes de publicar.');
+            if(trim((string)$business['address_text'])===''&&($business['latitude']===null||$business['longitude']===null)&&$sub['plan_code']!=='free')throw new RuntimeException('Completa una dirección o un punto de ubicación antes de publicar.');
+            if($sub['plan_code']!=='free'){$q=$this->pdo->prepare('SELECT COUNT(*) FROM business_contacts WHERE business_id=? AND channel IN ("phone","whatsapp") AND contact_value<>""');$q->execute([$businessId]);if((int)$q->fetchColumn()<1)throw new RuntimeException('Registra un celular o WhatsApp de contacto antes de publicar.');}
             if($sub['publish_not_before']!==null&&$localPublishDate<$sub['publish_not_before'])throw new RuntimeException('La fecha elegida todavía no permite publicar este negocio.');
             if($sub['plan_code']!=='free'&&($sub['status']!=='paid_pending_publication'||$sub['reviewed_at']===null))throw new RuntimeException('Confirma el pago revisado antes de publicar esta suscripción.');
             if($sub['plan_code']!=='free'&&$business['information_status']!=='ACTIVO')throw new RuntimeException('Una suscripción paga requiere que el negocio esté reclamado y autorizado como ACTIVO.');
