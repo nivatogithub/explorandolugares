@@ -57,3 +57,11 @@ Franja entre estrategia y pauta, pendiente de revisión visual del propietario. 
 ## Navegación por pestañas
 
 Cobertura agrupa conteos y mapa; Audiencia agrupa medición y países/evolución; Haz parte agrupa estrategia, invitaciones y pauta. El título e introducción son comunes. Enlaces `#cobertura`, `#audiencia` y `#participar`; `#como-medimos` y `#invitar` siguen abriendo Haz parte. Departamento y municipio se conservan al cambiar de pestaña. Semántica tablist/tab/tabpanel, foco y flechas/Home/End; sin JavaScript el contenido permanece disponible en secciones.
+
+## Ajuste visual y navegación por departamentos
+
+La página reutiliza el header, todos los enlaces de navegación, el selector de idioma y el footer del portal, con `assets/style.css` y el menú compartido. Los estilos propios quedan limitados a `#contenido` para evitar modificar la marca o los elementos de navegación.
+
+El mapa conserva siempre las 33 unidades departamentales de Colombia. Seleccionar un departamento amplía su silueta sobre el resto del país atenuado; los departamentos pequeños reciben mayor ampliación. No se solicitan mapas municipales ni existe una segunda navegación por municipio. La búsqueda y los estados del listado siguen filtrando destinos del departamento. “Ver Colombia” restaura el mapa sin selección. Los datos municipales del servicio se conservan para uso de catálogo, pero no aparecen como nivel de navegación en esta página.
+
+Este ajuste se prepara como vista local; no implica despliegue automático.
