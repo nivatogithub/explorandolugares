@@ -12,7 +12,7 @@ Leídos AGENTS.md, contexto independiente, contexto producto, gobernanza, WORKER
 
 No es una entrega completa ni publicable. Falta ampliar verificación primaria de historia (la fuente divulgativa simplifica el pasado muisca), movilidad/aeropuerto, accesibilidad detallada y operación actual de negocios. Tarifas y horarios no se fijan al detectar cambios/contradicciones. La agenda se consulta en origen; no se inventan eventos futuros.
 
-Una foto real con autor y licencia CC BY-SA4.0 comprobados en Commons; descarga local falló DNS. Escalación solicitada e interrumpida, sin archivo. Faltan fotografía de historia y fotos por atractivo; no hay originales, derivados, hashes de fotos ni QA visual de recortes. El procedimiento reproducible queda preparado, nunca ejecutado contra archivos inexistentes. La foto de 2018 no prueba condiciones actuales. No se usarán fotos protegidas de entidades como sustituto.
+Foto real de portada con autor y licencia CC BY-SA4.0 comprobados en Commons; descarga completada tras autorización escalada. Original conservado (2.704.359 bytes), SHA-1 coincide con ficha Commons. Pillow generó portada y tarjeta WebP sin recorte, con SHA-256, dimensiones y pesos en imagenes.json. Portada inspeccionada: vista urbana, cables originales y paisaje sin distorsión; fotografía de 2018 no prueba condiciones actuales. Faltan fotografía de historia y fotos por atractivo, QA de vista responsive y aprobación humana. No se usarán fotos protegidas de entidades como sustituto.
 
 Faltan revisión visual de la previsualización, revisión humana de textos/traducciones/imágenes/licencias, integración al contrato backend validado y PR. No se modificó backend, inventario, cola ni producción. Ningún contenido está aprobado. No tomar siguiente lugar.
 
@@ -21,3 +21,7 @@ Faltan revisión visual de la previsualización, revisión humana de textos/trad
 `python3 crecimiento-colombia/entregas/bogota/validar.py` verifica identidad, fuentes, estructura multilingüe, directorio y gates bloqueados. `evidencia-sha256.json` cubre archivos de entrega excepto a sí mismo (autorreferencia imposible). Cualquier cambio invalida el conjunto anterior.
 
 `gh` no disponible en PATH; no hay PR ni push verificado. No se consultaron secretos ni credenciales. El commit local se reporta externamente para no introducir autorreferencia en el manifiesto.
+
+## Actualización de QA
+
+Chrome instalado con Playwright (channel chrome) falló al arrancar bajo sandbox. El reintento escalado fue rechazado por el usuario; no hay capturas de navegador ni QA visual responsive. No se eludió la restricción. La portada WebP se inspeccionó con view_image. No equivale a aprobación humana.

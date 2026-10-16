@@ -1,6 +1,6 @@
 {
   "destino_id": "CO-11-bogota",
-  "estado": "bloqueado_descarga_original",
+  "estado": "parcial_original_y_derivados_portada_disponibles",
   "skill_aplicado": ".agents/skills/imagenes-destinos/SKILL.md",
   "procedimiento_fotos": "crecimiento-colombia/procedimientos/convertir-fotos.md",
   "fecha_consulta": "2026-10-16",
@@ -31,15 +31,50 @@
       ],
       "bytes_original_declarados": 2704359,
       "sha1_original_declarado_commons": "3d8805032ba1a3f071cfdbb4e5a5cce21e294573",
-      "original_local": null,
-      "sha256": null,
-      "derivados": [],
+      "original_local": "imagenes/originales/monserrate-bogota.jpg",
+      "sha256": "1a55008770ae55f1ba988e9a34e160fc28cf0eda24e5cb2d406c6232b2fbe5d2",
+      "derivados": [
+        {
+          "archivo": "imagenes/derivados/monserrate-portada.webp",
+          "dimensiones": [
+            1600,
+            1200
+          ],
+          "bytes": 246386,
+          "sha256": "cfe3f4187106c807688a8b1f2cb5f97f9b7bfb1de1d8a842cd274ebb21fd712d",
+          "presupuesto_objetivo": 300000,
+          "dentro_presupuesto": true,
+          "calidad": 82,
+          "recorte": "ninguno; proporcion original",
+          "herramienta": "Pillow 12.3.0",
+          "licencia": "CC BY-SA 4.0",
+          "cambios": "orientacion RGB redimensionado WebP sin metadatos personales",
+          "revision_visual": "pendiente"
+        },
+        {
+          "archivo": "imagenes/derivados/monserrate-tarjeta.webp",
+          "dimensiones": [
+            800,
+            600
+          ],
+          "bytes": 72466,
+          "sha256": "2deb7abeeb34554de452135fa72c364dda88f169faad7125c68ae12e2ca5bbc8",
+          "presupuesto_objetivo": 120000,
+          "dentro_presupuesto": true,
+          "calidad": 82,
+          "recorte": "ninguno; proporcion original",
+          "herramienta": "Pillow 12.3.0",
+          "licencia": "CC BY-SA 4.0",
+          "cambios": "orientacion RGB redimensionado WebP sin metadatos personales",
+          "revision_visual": "pendiente"
+        }
+      ],
       "alt": {
         "es": "Vista de Bogotá desde Monserrate, fotografía de 2018.",
         "en": "View of Bogotá from Monserrate, photographed in 2018.",
         "pt-BR": "Vista de Bogotá a partir de Monserrate, fotografia de 2018."
       },
-      "revision_visual": "pendiente_original_local",
+      "revision_visual": "derivado_portada_inspeccionado: vista urbana coherente, cables originales visibles, sin recorte ni distorsion; falta revision humana",
       "aprobacion_humana": false
     }
   ],
@@ -48,5 +83,5 @@
     "fotografías individuales de Museo del Oro, Jardín Botánico, MAMBO y Teatro Colón",
     "revisión original y recortes móvil/escritorio"
   ],
-  "bloqueo": "curl falló Could not resolve host upload.wikimedia.org; solicitud escalada interrumpida. No se obtuvo archivo ni se fabricaron hashes/derivados. No copiar fotos institucionales protegidas."
+  "bloqueo": "Descarga portada resuelta tras permiso escalado. Faltan fotos de historia y atractivos, QA recortes y aprobación humana."
 }

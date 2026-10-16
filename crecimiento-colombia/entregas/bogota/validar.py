@@ -19,7 +19,9 @@ for lang in ['es','en','pt-BR']:
  assert (p/f'contenido.{lang}.md').is_file()
 assert m['activos'][0]['permite_comercial'] and m['activos'][0]['permite_adaptacion']
 assert not m['activos'][0]['aprobacion_humana']
-assert a['gates']['imagenes']=='bloqueado' and m['activos'][0]['original_local'] is None
+assert a['gates']['imagenes']=='parcial_portada_lista_faltan_atractivos'
+assert m['activos'][0]['original_local'] and len(m['activos'][0]['derivados'])==2
+assert hashlib.sha256((p/m['activos'][0]['original_local']).read_bytes()).hexdigest()==m['activos'][0]['sha256']
 assert 'noindex,nofollow' in (p/'previsualizacion.html').read_text()
 manifest=p/'evidencia-sha256.json'
 if manifest.exists():
