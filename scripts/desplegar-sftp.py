@@ -202,6 +202,12 @@ def changed_files(previous, current):
     return [item for item in current if old.get(item['relative']) != item['sha256']]
 
 
+def obsolete_files(previous, current):
+    """Return only previously manifested files absent from the new full package."""
+    current_names = {item['relative'] for item in current}
+    return [item for item in (previous or {}).get('files', []) if item['relative'] not in current_names]
+
+
 def select_files(files, requested_paths):
     """Limit a deployment to explicit package paths without wildcard matching."""
     if not requested_paths:
@@ -260,17 +266,17 @@ def git_commit():
 
 
 def create_manifest(config, files, previous, commit=None):
-    old_names = {item['relative'] for item in (previous or {}).get('files', [])}
-    names = {item['relative'] for item in files}
     return {'schema_version': 1, 'site': 'explorandolugares', 'host': config['host'],
             'remote_base': config['remote_base'], 'public_root': public_path(config),
             'deployed_at': datetime.now(timezone.utc).isoformat(timespec='seconds'),
-            'commit': commit, 'file_count': len(files), 'removed_not_deleted': sorted(old_names - names),
+            'commit': commit, 'file_count': len(files), 'removed_not_deleted': [],
             'files': [{'relative': item['relative'], 'bytes': item['bytes'], 'sha256': item['sha256']} for item in files]}
 
 
-def deployment_commands(config, files, local_manifest):
+def deployment_commands(config, files, local_manifest, obsolete=()):
     commands = upload_commands(config, files)
+    for item in obsolete:
+        commands.append(f'rm {quote(remote_path(config, item["relative"]))}')
     commands.append(f'put {quote(local_manifest)} {quote(config["remote_base"] + "/" + MANIFEST_NAME)}')
     return commands
 
@@ -300,11 +306,13 @@ def main(argv=None):
         changed = changed_files(previous, files) if previous else files
         selected = [item for item in changed if item['relative'] in {entry['relative'] for entry in scoped}]
         byte_count = sum(item['bytes'] for item in selected)
-        old_names = {item['relative'] for item in (previous or {}).get('files', [])}
-        removed = sorted(old_names - {item['relative'] for item in files})
+        obsolete = [] if args.only else obsolete_files(previous, files)
+        removed = sorted(item['relative'] for item in obsolete)
         print(f'Destino: {config["host"]} → {public_path(config)}')
         print(f'Archivos a subir: {len(selected)} de {len(files)} ({byte_count / 1024 / 1024:.2f} MiB)')
-        print(f'Archivos obsoletos que se conservarán: {len(removed)}')
+        print(f'Archivos obsoletos del manifiesto que se retirarían: {len(removed)}')
+        for relative in removed:
+            print(f'  retirar: {relative}')
         print(f'Manifiesto local: {ROOT / ".local/deployment-manifest.json"}')
         old_hashes = {item['relative']: item['sha256'] for item in (previous or {}).get('files', [])}
         for item in selected:
@@ -323,7 +331,7 @@ def main(argv=None):
         temp_manifest = Path(temporary) / MANIFEST_NAME
         temp_manifest.write_text(manifest_text)
         # Changed content and its new inventory travel through one SFTP session.
-        client.run(deployment_commands(config, selected, temp_manifest))
+        client.run(deployment_commands(config, selected, temp_manifest, obsolete))
         local_manifest.write_text(manifest_text)
         print(f'Despliegue directo completado. Manifiesto actualizado en el hosting y en {local_manifest}.')
         print('Verifica visualmente el sitio y las acciones críticas; el envío SFTP no prueba PHP ni la base de datos.')

@@ -183,6 +183,8 @@ try:
                     check(active_label == expected_sidebar, f'La sección activa debe ser {expected_sidebar} en {path}; mostró {active_label}')
             if path == '/admin/contactos-negocios.php':
                 check('<meta name="robots" content="noindex,nofollow">' in body and 'contactos privados' in body.lower(), 'La pantalla de contactos privados debe quedar autenticada y fuera de indexación.')
+            if path == '/admin/negocios.php?tab=importar':
+                check('contactos-negocios.php' in body and 'negocios.php?tab=revisar' in body, 'La pestaña de importación debe enlazar la carga de contactos privados y la revisión/publicación masiva.')
             if path.startswith('/admin/negocios.php'):
                 workflow = re.search(r'<nav class="admin-workflow-tabs".*?</nav>', body, re.S)
                 check(workflow is not None, f'Faltan las pestañas de Negocios en {path}')

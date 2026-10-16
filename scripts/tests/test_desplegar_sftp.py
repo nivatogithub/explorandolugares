@@ -122,14 +122,25 @@ class DeploymentTests(unittest.TestCase):
         self.assertIn('-mkdir "/home/usuario/public_html/explorandolugares.com/assets/leaflet/images"', commands)
         self.assertFalse(any(command.startswith(('rm ', 'rename ', 'get ')) for command in commands))
 
-    def test_manifest_is_compact_and_reports_without_deleting_obsolete_paths(self):
+    def test_manifest_is_compact_and_full_deploy_records_clean_inventory(self):
         previous = {'files': [{'relative': 'public/old.html', 'sha256': 'a'}]}
         current = [{'relative': 'public/index.html', 'bytes': 12, 'sha256': 'b'}]
         manifest = deploy.create_manifest(self.config, current, previous, 'abc123')
-        self.assertEqual(manifest['removed_not_deleted'], ['public/old.html'])
+        self.assertEqual(manifest['removed_not_deleted'], [])
         self.assertEqual(manifest['files'], current)
         self.assertNotIn('local', json.dumps(manifest))
         self.assertEqual(manifest['commit'], 'abc123')
+
+    def test_only_previously_manifested_obsolete_files_are_removed(self):
+        previous = {'files': [
+            {'relative': 'public/assets/old.js', 'sha256': 'a' * 64},
+            {'relative': 'app/OldService.php', 'sha256': 'b' * 64},
+        ]}
+        current = [{'relative': 'public/assets/new.js', 'sha256': 'c' * 64}]
+        self.assertEqual(deploy.obsolete_files(previous, current), previous['files'])
+        with self.assertRaises(ValueError):
+            deploy.deployment_commands(self.config, [], '/tmp/manifest.json',
+                                       [{'relative': 'public/../../outside'}])
 
     def test_manifest_rejects_another_project_or_path_traversal(self):
         with tempfile.TemporaryDirectory() as folder:
@@ -144,15 +155,17 @@ class DeploymentTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 deploy.parse_manifest(path, self.config)
 
-    def test_one_sftp_batch_uploads_changes_and_then_the_new_manifest(self):
+    def test_one_sftp_batch_uploads_changes_removes_old_managed_files_then_manifest(self):
         files = [{'relative': 'app/Service.php', 'local': '/tmp/service.php'},
                  {'relative': 'public/index.html', 'local': '/tmp/index.html'}]
-        commands = deploy.deployment_commands(self.config, files, '/tmp/new-manifest.json')
+        obsolete = [{'relative': 'public/assets/admin-accounts.js'}]
+        commands = deploy.deployment_commands(self.config, files, '/tmp/new-manifest.json', obsolete)
         self.assertEqual(len([command for command in commands if command.startswith('put ')]), 3)
         self.assertLess(commands.index('put "/tmp/service.php" "/home/usuario/explorandolugares/app/Service.php"'),
                         commands.index('put "/tmp/index.html" "/home/usuario/explorandolugares/public/index.html"'))
+        self.assertEqual(commands[-2], 'rm "/home/usuario/explorandolugares/public/assets/admin-accounts.js"')
         self.assertTrue(commands[-1].endswith('/' + deploy.MANIFEST_NAME + '"'))
-        self.assertFalse(any(command.startswith(('get ', '-get ', 'rm ', 'rename ')) for command in commands))
+        self.assertFalse(any(command.startswith(('get ', '-get ', 'rename ')) for command in commands))
 
     def test_strict_host_checking_remains_enabled(self):
         command = deploy.SFTP(self.config).command
