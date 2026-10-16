@@ -25,3 +25,7 @@ Corrección del propietario: Sonsón no pertenecía a las prioridades turística
 Corrección de alcance: prioridad es pertenencia a uno de tres grupos, no un cupo de tres departamentos ni de cuatro/cinco destinos. La puntuación de preparación no puede sustituir la prioridad turística. Clasificación departamental y destinos fuera de Antioquia aún provisionales; validar antes de presentarlos como decisiones del propietario.
 
 Plan separado en `feature/ampliacion-cobertura-colombia`, basado en `origin/main`; ver `ARRANQUE.md`. El diseño del proceso está terminado; las prioridades nacionales provisionales y la ejecución por lugar están identificadas como trabajo pendiente. No se afirma que la cobertura de destinos esté completada.
+
+## Reauditoría vigente 16/10/2026
+
+La afirmación anterior de “P1 históricos” se limita: contact-options.json no contiene prioridades. Se conserva inventario sin reclasificar, con auditoría de procedencia explícita. Rama actual plan/maestro-cobertura-auditado-20261016; workers fijos definidos sin iniciar; cola/seguimiento/validación añadidos. No hay destinos nuevos completos ni publicación verificada.

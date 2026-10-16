@@ -25,3 +25,7 @@ Para empezar: [ARRANQUE.md](ARRANQUE.md) detalla el estado, los 21 P1 de Antioqu
 - `REVISION_REPOSITORIO.md`: capacidades observadas y límites de esta tarea.
 
 No se modifican portal, base de datos, configuración, contactos, precios ni contenido histórico. No se generan imágenes ni negocios ficticios. Las carpetas de candidatos no equivalen a páginas públicas. Instagram queda en fase independiente.
+
+## Auditoría y operación vigente (16/10/2026)
+
+Leer primero [AUDITORIA_PRIORIDADES.md](AUDITORIA_PRIORIDADES.md), [ARRANQUE.md](ARRANQUE.md) y [WORKERS.md](WORKERS.md). La cola única está en operacion.json; no elegir lugares manualmente fuera de su orden. Plan operativo implementado localmente; ejecución editorial y aprobación nacional pendientes.
