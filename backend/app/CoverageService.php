@@ -10,7 +10,7 @@ final class CoverageService
         return strtolower(preg_replace('/[^a-zA-Z0-9]/','',$plain!==false?$plain:$value));
     }
     public function snapshot(?PDO $pdo): array {
-        $live=[];$available=false;
+        $live=[];$rows=[];$available=false;
         if($pdo!==null){
             try{
                 $rows=$pdo->query("SELECT slug,department,publication_status FROM destinations WHERE country_code='CO' AND publication_status IN ('published','draft')")->fetchAll(PDO::FETCH_ASSOC);
@@ -18,13 +18,13 @@ final class CoverageService
                 $available=true;
             }catch(Throwable){ /* Fail closed: unavailable is not zero publication. */ }
         }
-        $departments=[];$countryWeights=0;$countryCovered=0;$countryCounts=['published'=>0,'in_progress'=>0,'pending'=>0,'unknown'=>0];
+        $departments=[];$countryCounts=['published'=>0,'in_progress'=>0,'pending'=>0,'unknown'=>0];
         foreach($this->plan['departments'] as $department){
-            $places=[];$totalWeight=0;$publishedWeight=0;$counts=['published'=>0,'in_progress'=>0,'pending'=>0,'unknown'=>0];
+            $places=[];$counts=['published'=>0,'in_progress'=>0,'pending'=>0,'unknown'=>0];
             foreach($department['places'] as $place){
                 $liveStatus=$live[self::normalized($department['name']).'|'.$place['slug']]??null;
                 $status=$liveStatus==='published'?'published':(($liveStatus==='draft'||$place['preparing'])?'in_progress':($available?'pending':'unknown'));
-                $counts[$status]++;$totalWeight+=(int)$place['weight'];if($status==='published')$publishedWeight+=(int)$place['weight'];
+                $counts[$status]++;
                 $places[]=['id'=>$place['id'],'name'=>$place['name'],'municipality_code'=>$place['municipality_code'],'parent_place_id'=>$place['parent_place_id'],'type'=>$place['type'],'status'=>$status,'url'=>$status==='published'?'/destinos/'.rawurlencode($place['slug']).'/':null];
             }
             $municipalities=[];
@@ -35,11 +35,13 @@ final class CoverageService
                 $progress=count(array_filter($related,static fn($p)=>$p['status']==='in_progress'));
                 $municipalities[]=['code'=>$unit['code'],'name'=>$unit['name'],'tracked_count'=>count($related),'published_count'=>$public,'status'=>$public>0?'published':($progress>0?'in_progress':(!$related?'untracked':($available?'pending':'unknown')))];
             }
-            $coverage=$available&&$totalWeight>0?round(100*$publishedWeight/$totalWeight,2):null;
+            $allPublished=count(array_filter($rows,static fn($r)=>$r['publication_status']==='published'&&self::normalized($r['department'])===self::normalized($department['name'])));
+            $counts['published']=$allPublished;
+            $coverage=null;
             $departments[]=['code'=>$department['code'],'name'=>$department['name'],'catalog_count'=>count($places),'counts'=>$counts,'coverage_percent'=>$coverage,'places'=>$places,'municipalities'=>$municipalities];
-            $countryWeights+=(int)$department['weight'];if($coverage!==null)$countryCovered+=$department['weight']*$coverage;
             foreach($counts as $state=>$count)$countryCounts[$state]+=$count;
         }
-        return ['schema_version'=>1,'universe_version'=>$this->plan['universe_version'],'catalog_updated_at'=>$this->plan['catalog_updated_at'],'checked_at'=>gmdate('c'),'publication_source_available'=>$available,'country'=>['name'=>'Colombia','catalog_count'=>array_sum($countryCounts),'counts'=>$countryCounts,'coverage_percent'=>$available&&$countryWeights?round($countryCovered/$countryWeights,2):null],'departments'=>$departments];
+        $countryCounts['published']=count(array_filter($rows,static fn($r)=>$r['publication_status']==='published'));
+        return ['schema_version'=>2,'estimated_destination_total'=>null,'national_scope_status'=>'in_definition','audience'=>['status'=>'not_configured','source'=>null,'updated_at'=>null,'metrics'=>['anonymous_sessions'=>null,'estimated_visitors'=>null,'registered_travelers'=>null,'active_travelers'=>null,'business_views'=>null,'contact_clicks'=>null],'countries'=>null,'trend'=>null],'universe_version'=>$this->plan['universe_version'],'catalog_updated_at'=>$this->plan['catalog_updated_at'],'checked_at'=>gmdate('c'),'publication_source_available'=>$available,'country'=>['name'=>'Colombia','catalog_count'=>array_sum(array_map(static fn($d)=>$d['catalog_count'],$departments)),'counts'=>$countryCounts,'coverage_percent'=>null],'departments'=>$departments];
     }
 }

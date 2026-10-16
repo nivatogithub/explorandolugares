@@ -53,3 +53,7 @@ Pruebas exigidas: bots/exclusiones, repetición de evento, sesiones mixtas, camb
 ## Estado observado del repositorio
 
 En la rama del plan no se encontró instrumentación de visitas ni registro público de viajeros. En la rama de negocios hay tabla `accounts` con tipos `traveler|business` y administración de cuentas viajeras pendientes de activación, pero esto NO demuestra un registro público de viajeros operativo ni un conteo real de usuarios activos. No se consultó la base productiva ni un proveedor de analítica en esta tarea. No hay país de residencia en la tabla de cuentas inspeccionada; revisar perfil y versiones vigentes antes de una migración.
+
+## Implementación de interfaz
+
+Añadida a la página de cobertura: tarjetas, periodo 30/90 días, contexto territorial y espacios por país/evolución. Datos aún no conectados, mostrados como no disponibles; no se habilitó recolección, analítica ni consulta de registros de viajeros.
