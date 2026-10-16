@@ -15,9 +15,9 @@ Rama exclusiva: `lugar/CO/bolivar/cartagena`. ID: `CO-13-cartagena`. Investigaci
 ## Gates todavía pendientes
 
 - Sustituir la fotografía de murallas de 2006: se inspeccionó y rechazó por desenfoque. Se conserva como evidencia, marcada no utilizable y excluida de la previsualización; Centro histórico sigue sin imagen asignada.
-- QA responsive en navegador pendiente: Playwright no encontró su navegador instalado. La vista HTML existe, pero no se afirma que haya sido renderizada o comprobada a 390/1440 px.
+- Previsualización PHP del sitio e integración administrativa pendientes. La vista HTML privada sí se comprobó en Chrome a 390/1440 px: sin desbordamiento ni imágenes rotas; capturas y observaciones conservadas.
 - Revisión humana de hechos, textos, traducciones, originales/licencias y composición visual. Ninguna aprobación inferida de la autorización de investigar.
-- Integración con paquete importador v2 y previsualización PHP del sitio, que requiere revisión de esquema y recursos completos. `borrador.json` declara `importer_compatible=false`; no intentar importarlo como paquete v2.
+- Integración y previsualización PHP del sitio pendientes. Se preparó `cartagena-borrador-v2.zip` con `paquete-destino.json`, portada y tres atractivos con fotografías aptas; el validador real `DestinationPackage::validateManifest/readZip` lo acepta (cuatro imágenes). No se ha importado ni guardado en panel. `borrador.json` sigue siendo investigación extendida incompatible directamente con importador; el ZIP es el paquete preparado.
 - Horarios, precios, disponibilidad, rutas aéreas concretas, agenda y accesibilidad detallada no auditados; se omiten y se pide confirmar con el gestor. No se ha certificado la vigencia presencial de negocios.
 - PR remoto pendiente: `gh` no está disponible en esta sesión. No se ha hecho push, merge, publicación ni despliegue.
 
@@ -36,4 +36,11 @@ El validador comprueba integridad técnica; no sustituye inspección geográfica
 
 ## Inspección fotográfica del agente
 
-Inspeccionados visualmente los cinco derivados: panorama La Popa, San Felipe, Getsemaní y fachada MUHCA conservan su identidad y proporción sin recorte. Murallas de 2006 rechazadas por desenfoque del original; no se intenta arreglar con generación ni se usa como evidencia visual aprobada. Diez derivados generados, nueve no significa nueve aprobados: la aprobación humana permanece pendiente para todos.
+Inspeccionados visualmente los cinco derivados: panorama La Popa, San Felipe, Getsemaní y fachada MUHCA conservan su identidad y proporción sin recorte. Murallas de 2006 rechazadas por desenfoque del original; no se intenta arreglar con generación ni se usa como evidencia visual aprobada. Diez derivados generados: ocho candidatos aptos y dos rechazados. La aprobación humana permanece pendiente para todos.
+
+## Validación comprobada
+
+- `validar.py`: coherencia del destino, tres idiomas, diez fichas, fuentes, hashes, formatos, metadatos y presupuestos WebP.
+- Validador real PHP del repositorio: manifiesto v2 y lectura del ZIP aceptados, cuatro imágenes. No se guardó en base de datos.
+- Chrome instalado, Playwright con canal chrome: 390/1440 px sin desbordamiento horizontal ni imágenes rotas; tres secciones de idioma presentes. Capturas inspeccionadas visualmente.
+- QA visual del agente no equivale a aprobación humana. No se ha creado PR remoto ni publicado.
