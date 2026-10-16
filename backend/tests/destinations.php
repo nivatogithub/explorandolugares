@@ -7,6 +7,7 @@ require dirname(__DIR__).'/app/BusinessRepository.php';
 require dirname(__DIR__).'/app/BusinessAdminService.php';
 require dirname(__DIR__).'/app/BusinessSubscriptionAdminService.php';
 require dirname(__DIR__).'/app/BusinessPublicImporter.php';
+require dirname(__DIR__).'/app/BusinessBulkPublicationService.php';
 require dirname(__DIR__).'/app/AccountAdminService.php';
 
 function check(bool $ok,string $message): void { if (!$ok) throw new RuntimeException($message); }
@@ -22,6 +23,7 @@ $pdo->exec(file_get_contents(dirname(__DIR__).'/database/migrations/013-accounts
 $pdo->exec(file_get_contents(dirname(__DIR__).'/database/migrations/014-tiered-business-description.sqlite.sql'));
 $pdo->exec(file_get_contents(dirname(__DIR__).'/database/migrations/015-business-media-quotas.sqlite.sql'));
 $pdo->exec(file_get_contents(dirname(__DIR__).'/database/migrations/016-plan-content-limits.sqlite.sql'));
+$pdo->exec(file_get_contents(dirname(__DIR__).'/database/migrations/025-subscription-renewal-history.sqlite.sql'));
 $root=dirname(__DIR__,2);
 $catalog=json_decode(file_get_contents($root.'/content/destinos-dinamicos.json'),true,512,JSON_THROW_ON_ERROR);
 $options=json_decode(file_get_contents(dirname(__DIR__).'/app/contact-options.json'),true,512,JSON_THROW_ON_ERROR);
@@ -135,6 +137,17 @@ check(count($subscriptionHistory)===2&&$subscriptionHistory[0]['status']==='canc
 $imported=BusinessPublicImporter::import($pdo,['schema_version'=>'business-import-v1','destination_slug'=>'destino-borrador','businesses'=>[['category_code'=>'alimentacion','name'=>'Importado de prueba','summary'=>'Resumen confirmado por fuente','description'=>'Texto basado en información pública.','sources'=>[['url'=>'https://example.org/negocio','note'=>'Página oficial','checked_at'=>'2026-10-14']]]]]);
 $importedRecord=$pdo->query("SELECT b.id,b.slug,b.record_origin,b.information_status,b.claim_status,b.operation_status,b.publication_status FROM businesses b JOIN business_translations t ON t.business_id=b.id WHERE t.display_name='Importado de prueba'")->fetch();
 check($imported===1&&$importedRecord!==false&&$importedRecord['information_status']==='PUBLICO'&&$importedRecord['publication_status']==='draft'&&$importedRecord['claim_status']==='NO_RECLAMADO'&&$importedRecord['operation_status']==='DESCONOCIDO','JSON public-business import records source status but remains a private draft');
+$importedPlan=$pdo->query('SELECT plan_code,status FROM business_subscriptions WHERE business_id='.(int)$importedRecord['id'])->fetch();
+check($importedPlan['plan_code']==='free'&&$importedPlan['status']==='pending_publication','Every imported public listing is explicitly assigned the Free tier and waits for approval');
+$importedLocales=$pdo->query('SELECT locale,display_name FROM business_translations WHERE business_id='.(int)$importedRecord['id'].' ORDER BY locale')->fetchAll();
+check(count($importedLocales)===3&&count(array_unique(array_column($importedLocales,'display_name')))==1,'A proper business name is available in all portal languages without inventing translations');
+$privateImportPreview=$repo->findPublished('destino-borrador','es',true);
+check(count($privateImportPreview['businesses'])===1&&$privateImportPreview['businesses'][0]['display_name']==='Importado de prueba','Draft imported business cards appear in an authenticated destination preview only');
+$publicImportCheck=$repo->findPublished('destino-borrador','es');
+check($publicImportCheck===null,'A draft destination containing imported business cards never leaks into the public directory');
+$subscriptionService->publish((int)$importedRecord['id']);
+$publishedImport=$pdo->query('SELECT b.publication_status,s.plan_code,s.status FROM businesses b JOIN business_subscriptions s ON s.business_id=b.id WHERE b.id='.(int)$importedRecord['id'])->fetch();
+check($publishedImport['publication_status']==='published'&&$publishedImport['plan_code']==='free'&&$publishedImport['status']==='active','A reviewed imported Free listing can publish without exposing contact details or requiring an exact street address');
 $sourceCount=(int)$pdo->query("SELECT COUNT(*) FROM business_sources WHERE business_id=".(int)$importedRecord['id'])->fetchColumn();
 check($sourceCount===1,'Public import preserves its source URL and review date');
 $accounts=new AccountAdminService($pdo);
@@ -142,12 +155,31 @@ $travelerId=$accounts->save(['account_type'=>'traveler','display_name'=>'Viajera
 $account=$pdo->query('SELECT account_type,status,password_hash FROM accounts WHERE id='.(int)$travelerId)->fetch();
 check($account['account_type']==='traveler'&&$account['status']==='pending_activation'&&$account['password_hash']===null,'Traveler accounts can be created without issuing a password or enabling login');
 $emptyBusinessAccountRejected=false;try{$accounts->save(['account_type'=>'business','display_name'=>'Responsable de prueba','email'=>'owner@example.test']);}catch(RuntimeException){$emptyBusinessAccountRejected=true;}
-check($emptyBusinessAccountRejected,'The admin cannot create an empty business account');
+check($emptyBusinessAccountRejected,'The admin cannot create a business account outside the application workflow');
 $pdo->prepare('UPDATE businesses SET information_status="ACTIVO",claim_status="RECLAMADO" WHERE id=?')->execute([$businessId]);
-$businessAccountId=$accounts->save(['account_type'=>'business','display_name'=>'Responsable de prueba','email'=>'owner@example.test','business_ids'=>[$businessId]]);
-check((int)$pdo->query('SELECT COUNT(*) FROM business_account_memberships WHERE account_id='.(int)$businessAccountId.' AND business_id='.(int)$businessId.' AND role="owner" AND status="active"')->fetchColumn()===1,'Only a reclaimed and authorized business can be linked to a pending business account');
-$linkRejected=false;try{$accounts->linkBusiness(['account_id'=>$businessAccountId,'business_id'=>(int)$importedRecord['id'],'membership_role'=>'owner']);}catch(RuntimeException){$linkRejected=true;}
-check($linkRejected,'A business account cannot be linked to a public unclaimed business');
+$businessAccountRejected=false;try{$accounts->save(['account_type'=>'business','display_name'=>'Responsable de prueba','email'=>'owner@example.test','business_ids'=>[$businessId]]);}catch(RuntimeException){$businessAccountRejected=true;}
+check($businessAccountRejected&&(int)$pdo->query("SELECT COUNT(*) FROM accounts WHERE email='owner@example.test'")->fetchColumn()===0,'Even a reclaimed business cannot bypass the business registration and document review workflow');
+$bulkPackage=['schema_version'=>'business-import-v1','destination_slug'=>'jerico','businesses'=>[]];
+for($index=1;$index<=200;$index++)$bulkPackage['businesses'][]=['category_code'=>'alimentacion','information_status'=>'PUBLICO','name'=>'Establecimiento de prueba '.$index,'sources'=>[['url'=>'https://example.org/jerico/'.$index,'note'=>'Fuente validada','checked_at'=>'2026-10-15']]];
+$bulkCount=BusinessPublicImporter::import($pdo,$bulkPackage);
+$bulkStats=$pdo->query("SELECT COUNT(*) AS total,SUM(b.publication_status='draft') AS drafts,SUM(s.plan_code='free' AND s.status='pending_publication') AS free_pending FROM businesses b JOIN business_translations t ON t.business_id=b.id AND t.locale='es' JOIN business_subscriptions s ON s.business_id=b.id WHERE b.destination_id=".$destinationId." AND t.display_name LIKE 'Establecimiento de prueba %'")->fetch();
+check($bulkCount===200&&(int)$bulkStats['total']===200&&(int)$bulkStats['drafts']===200&&(int)$bulkStats['free_pending']===200,'A batch of 200 Jericó listings imports atomically as private, unclaimed Free drafts');
+$jericoBulkPreview=$repo->findPublished('jerico','es',true);$jericoPublicAfterBulk=$repo->findPublished('jerico','es');
+check(count($jericoBulkPreview['businesses'])===201&&count($jericoPublicAfterBulk['businesses'])===1,'Private preview shows all 200 Free cards while public directory remains unchanged');
+$bulkPublish=(new BusinessBulkPublicationService($pdo))->publish(array_column($pdo->query("SELECT b.id FROM businesses b JOIN business_translations t ON t.business_id=b.id AND t.locale='es' WHERE t.display_name LIKE 'Establecimiento de prueba %'")->fetchAll(),'id'));
+check(count($bulkPublish['published'])===200&&count($bulkPublish['skipped'])===0,'Admin can approve and publish 200 eligible imported Free businesses in a single batch');
+$publishedBulk=(int)$pdo->query("SELECT COUNT(*) FROM businesses b JOIN business_translations t ON t.business_id=b.id AND t.locale='es' WHERE t.display_name LIKE 'Establecimiento de prueba %' AND b.publication_status='published'")->fetchColumn();
+check($publishedBulk===200,'Bulk approval publishes all eligible selected records');
+$duplicatePackage=['schema_version'=>'business-import-v1','destination_slug'=>'jerico','businesses'=>[
+ ['category_code'=>'hospedaje','information_status'=>'PUBLICO','name'=>'Hotel La Palma','sources'=>[['url'=>'https://example.org/hotel-la-palma']]],
+ ['category_code'=>'hospedaje','information_status'=>'PUBLICO','name'=>'Hótel La-Palma','sources'=>[['url'=>'https://example.org/hotel-la-palma-2']]],
+]];
+BusinessPublicImporter::import($pdo,$duplicatePackage);
+$duplicateIds=array_column($pdo->query("SELECT b.id FROM businesses b JOIN business_translations t ON t.business_id=b.id AND t.locale='es' WHERE t.display_name LIKE '%La%Palma'")->fetchAll(),'id');
+$duplicateMap=BusinessBulkPublicationService::duplicateMap($pdo->query("SELECT b.id,b.destination_id,t.display_name FROM businesses b JOIN business_translations t ON t.business_id=b.id AND t.locale='es'")->fetchAll());
+check(count($duplicateIds)===2&&count($duplicateMap)>=2,'Duplicate review detects names with accent and punctuation variations in the same destination');
+$duplicatePublish=(new BusinessBulkPublicationService($pdo))->publish($duplicateIds);
+check(count($duplicatePublish['published'])===0&&count($duplicatePublish['skipped'])===2,'Bulk publication blocks possible duplicate records and returns individual review reasons');
 $beforeImportCount=(int)$pdo->query('SELECT COUNT(*) FROM businesses')->fetchColumn();$batchRejected=false;
 try{BusinessPublicImporter::import($pdo,['schema_version'=>'business-import-v1','destination_slug'=>'destino-borrador','businesses'=>[
  ['category_code'=>'alimentacion','name'=>'Lote válido provisional','summary'=>'','description'=>'','sources'=>[['url'=>'https://example.org/source']]],

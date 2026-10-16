@@ -5,16 +5,17 @@
     {
       "category_code": "alimentacion",
       "information_status": "PUBLICO",
-      "name": "Nombre público del establecimiento",
+      "name": "REEMPLAZAR - nombre público del establecimiento",
       "summary": "Descripción breve basada en información comprobable.",
       "description": "Información en español. No inventar precios, horarios, disponibilidad, contactos ni servicios.",
       "sources": [
         {
-          "url": "https://sitio-oficial.example/establecimiento",
-          "note": "Qué dato respalda esta fuente",
+          "url": "https://example.com/fuente-del-negocio",
+          "note": "REEMPLAZAR - fuente que respalda los datos del negocio",
           "checked_at": "2026-10-14"
         }
-      ]
+      ],
+      "image_references": []
     }
   ]
 }

@@ -14,7 +14,7 @@ final class BusinessSubscriptionAdminService
             $plan['max_gallery_photos']=(int)$plan['max_gallery_photos'];
             $plan['text_limits']=['summary'=>(int)$plan['max_summary_chars'],'description'=>(int)$plan['max_description_chars'],'brand_story'=>(int)$plan['max_brand_story_chars'],'featured_services'=>(int)$plan['max_featured_services_chars']];
             $q=$this->pdo->prepare('SELECT billing_frequency,amount,currency FROM subscription_plan_prices WHERE plan_code=?');$q->execute([$plan['code']]);
-            $plan['prices']=[];foreach($q->fetchAll(PDO::FETCH_ASSOC) as $price)$plan['prices'][$price['billing_frequency']]=['amount'=>$price['amount']===null?null:(float)$price['amount'],'currency'=>$price['currency']];
+            $plan['prices']=[];foreach($q->fetchAll(PDO::FETCH_ASSOC) as $price){$amount=$price['amount']===null?null:(float)$price['amount'];$currency=(string)$price['currency'];$valid=$amount!==null&&$amount>0&&preg_match('/^[A-Z]{3}$/',$currency)===1;$plan['prices'][$price['billing_frequency']]=['amount'=>$valid?$amount:null,'currency'=>$valid?$currency:'COP'];}
             $f=$this->pdo->prepare('SELECT feature_code FROM subscription_plan_features WHERE plan_code=? AND included=1');$f->execute([$plan['code']]);$plan['features']=$f->fetchAll(PDO::FETCH_COLUMN);
             $plan['requirements']=[...self::requirements((string)$plan['code'],(int)$plan['max_gallery_photos']),self::contentLimitDescription($plan['text_limits'])];
         }
@@ -57,10 +57,10 @@ final class BusinessSubscriptionAdminService
             if(!$price)throw new RuntimeException('No hay una tarifa cargada para esta suscripción y frecuencia.');
             $amount=$price['amount']===null?null:(float)$price['amount'];$currency=(string)$price['currency'];
             if($amount===null||$amount<=0)throw new RuntimeException('Esta suscripción aún no tiene tarifa definida. No se puede crear ni cotizar hasta que el administrador configure el precio.');
+            if(preg_match('/^[A-Z]{3}$/',$currency)!==1)throw new RuntimeException('La moneda de esta tarifa no es válida. Corrige el catálogo de precios antes de crear la suscripción.');
             if(!empty($input['payment_reviewed'])&&($amount===null||$amount<=0))throw new RuntimeException('No se puede confirmar un pago mientras la tarifa no esté configurada.');
         }
         $status=$plan==='free'?'pending_publication':'pending';$reviewed=null;
-        if($plan!=='free'&&!empty($input['payment_reviewed'])){$status='paid_pending_publication';$reviewed=gmdate('Y-m-d H:i:s');}
         $this->pdo->prepare('UPDATE business_subscriptions SET status="cancelled" WHERE business_id=? AND status IN ("pending","pending_publication","paid_pending_publication")')->execute([$businessId]);
         $q=$this->pdo->prepare('INSERT INTO business_subscriptions(business_id,plan_code,billing_frequency,status,starts_at,ends_at,reviewed_at,publish_not_before,quoted_amount,currency) VALUES(?,?,?,?,NULL,NULL,?,?,?,?)');
         $q->execute([$businessId,$plan,$frequency?:null,$status,$reviewed,$publishNotBefore,$amount,$currency]);
@@ -81,16 +81,21 @@ final class BusinessSubscriptionAdminService
             if(!in_array($business['information_status'],['PUBLICO','VERIFICADO','ACTIVO'],true))throw new RuntimeException('Verifica la información y la autorización del negocio antes de publicarlo.');
             if($business['operation_status']==='CERRADO_DEFINITIVO')throw new RuntimeException('Un negocio con cierre definitivo no se puede publicar.');
             if($business['record_origin']!=='public_import'&&(trim((string)$business['location_map_url'])===''||!(bool)$business['location_confirmed']))throw new RuntimeException('Confirma en el mapa que la dirección y el punto corresponden al destino antes de publicar.');
-            if(trim((string)$business['address_text'])===''&&($business['latitude']===null||$business['longitude']===null))throw new RuntimeException('Completa una dirección o un punto de ubicación antes de publicar.');
             if(($business['latitude']===null)!==($business['longitude']===null))throw new RuntimeException('La latitud y la longitud deben estar completas juntas.');
             if($business['latitude']!==null&&((float)$business['latitude'] < -90||(float)$business['latitude']>90||(float)$business['longitude'] < -180||(float)$business['longitude']>180))throw new RuntimeException('Las coordenadas están fuera de rango.');
             $q=$this->pdo->prepare('SELECT * FROM business_subscriptions WHERE business_id=? ORDER BY id DESC LIMIT 1');$q->execute([$businessId]);$sub=$q->fetch(PDO::FETCH_ASSOC);
             if(!$sub)throw new RuntimeException('Registra la suscripción antes de publicar el negocio.');
+            if(trim((string)$business['address_text'])===''&&($business['latitude']===null||$business['longitude']===null)&&!($business['record_origin']==='public_import'&&$sub['plan_code']==='free'))throw new RuntimeException('Completa una dirección o un punto de ubicación antes de publicar.');
             if($sub['plan_code']!=='free'||$business['record_origin']!=='public_import'){$q=$this->pdo->prepare('SELECT COUNT(*) FROM business_contacts WHERE business_id=? AND channel IN ("phone","whatsapp") AND contact_value<>""');$q->execute([$businessId]);if((int)$q->fetchColumn()<1)throw new RuntimeException('Registra un celular o WhatsApp de contacto antes de publicar.');}
             if($sub['publish_not_before']!==null&&$localPublishDate<$sub['publish_not_before'])throw new RuntimeException('La fecha elegida todavía no permite publicar este negocio.');
             if($sub['plan_code']!=='free'&&($sub['status']!=='paid_pending_publication'||$sub['reviewed_at']===null))throw new RuntimeException('Confirma el pago revisado antes de publicar esta suscripción.');
             if($sub['plan_code']!=='free'&&$business['information_status']!=='ACTIVO')throw new RuntimeException('Una suscripción paga requiere que el negocio esté reclamado y autorizado como ACTIVO.');
             if($sub['plan_code']==='free'&&!in_array($sub['status'],['pending_publication','active'],true))throw new RuntimeException('La suscripción Gratis no está lista para publicarse.');
+            $renewalOf=null;
+            if($sub['plan_code']!=='free'){
+                $previous=$this->pdo->prepare('SELECT id FROM business_subscriptions WHERE business_id=? AND id<>? AND plan_code<>"free" AND status IN ("active","expired") AND starts_at IS NOT NULL AND published_at IS NOT NULL AND reviewed_at IS NOT NULL ORDER BY starts_at DESC,id DESC LIMIT 1');
+                $previous->execute([$businessId,$sub['id']]);$renewalOf=$previous->fetchColumn();$renewalOf=$renewalOf===false?null:(int)$renewalOf;
+            }
             $planQuery=$this->pdo->prepare('SELECT max_gallery_photos FROM subscription_plans WHERE code=?');$planQuery->execute([$sub['plan_code']]);$photoLimit=(int)$planQuery->fetchColumn();
             $mediaQuery=$this->pdo->prepare('SELECT role,COUNT(*) AS amount FROM business_media WHERE business_id=? GROUP BY role');$mediaQuery->execute([$businessId]);$mediaCounts=[];foreach($mediaQuery->fetchAll(PDO::FETCH_ASSOC) as $media)$mediaCounts[$media['role']]=(int)$media['amount'];
             if($sub['plan_code']==='page'||$sub['plan_code']==='page_premium'){
@@ -108,12 +113,14 @@ final class BusinessSubscriptionAdminService
             if(in_array($sub['plan_code'],['featured','page','page_premium'],true))$requiredSpanish[]='description';
             if($sub['plan_code']==='page_premium')array_push($requiredSpanish,'brand_story','featured_services');
             foreach($requiredSpanish as $field)if(trim((string)($translations['es'][$field]??''))==='')throw new RuntimeException('Completa la información adicional que solicita esta suscripción antes de publicar.');
-            foreach(['en','pt-BR'] as $locale){$row=$translations[$locale]??null;if(!$row)throw new RuntimeException('Completa y traduce el contenido a español, inglés y portugués antes de publicar.');foreach($requiredSpanish as $field){$spanish=trim((string)($translations['es'][$field]??''));$translated=trim((string)($row[$field]??''));if($translated===''||$translated===$spanish)throw new RuntimeException('Completa y traduce el contenido a español, inglés y portugués antes de publicar.');}}
-            $q=$this->pdo->prepare('UPDATE business_subscriptions SET status="expired",ends_at=? WHERE business_id=? AND status="active"');$q->execute([$stamp,$businessId]);
+            foreach(['en','pt-BR'] as $locale){$row=$translations[$locale]??null;if(!$row)throw new RuntimeException('Completa y traduce el contenido a español, inglés y portugués antes de publicar.');foreach($requiredSpanish as $field){$spanish=trim((string)($translations['es'][$field]??''));$translated=trim((string)($row[$field]??''));if($translated===''||($field!=='display_name'&&$translated===$spanish))throw new RuntimeException('Completa y traduce el contenido a español, inglés y portugués antes de publicar.');}}
+            // Preserve the contractual end date of a previous term. It is needed to
+            // distinguish renewals made by the expiry date from later reactivations.
+            $q=$this->pdo->prepare('UPDATE business_subscriptions SET status="expired" WHERE business_id=? AND status="active"');$q->execute([$businessId]);
             $starts=$stamp;
             $ends=null;
             if($sub['plan_code']!=='free')$ends=self::addCalendarMonths($publishedAt,self::FREQUENCIES[$sub['billing_frequency']]??0)->setTimezone(new DateTimeZone('UTC'))->format('Y-m-d H:i:s');
-            $q=$this->pdo->prepare('UPDATE business_subscriptions SET status="active",starts_at=?,ends_at=?,published_at=? WHERE id=?');$q->execute([$starts,$ends,$stamp,$sub['id']]);
+            $q=$this->pdo->prepare('UPDATE business_subscriptions SET status="active",starts_at=?,ends_at=?,published_at=?,renewal_of_subscription_id=? WHERE id=?');$q->execute([$starts,$ends,$stamp,$renewalOf,$sub['id']]);
             $q=$this->pdo->prepare('UPDATE businesses SET publication_status="published",updated_at=CURRENT_TIMESTAMP WHERE id=?');$q->execute([$businessId]);
             $this->pdo->commit();
         }catch(Throwable $error){if($this->pdo->inTransaction())$this->pdo->rollBack();throw $error;}

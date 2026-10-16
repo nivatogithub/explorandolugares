@@ -23,12 +23,13 @@ final class BusinessAdminService
 
     public function all(): array
     {
-        return $this->pdo->query('SELECT b.id,b.public_id,b.record_origin,b.information_status,b.claim_status,b.operation_status,b.publication_status,b.updated_at,
+        return $this->pdo->query('SELECT b.id,b.public_id,b.destination_id,b.record_origin,b.information_status,b.claim_status,b.operation_status,b.publication_status,b.updated_at,
                 d.slug AS destination_slug,dt.display_name AS destination_name,c.code AS category_code,ct.label AS category_label,
                 bt.display_name,
                 (SELECT COUNT(*) FROM business_translations tx JOIN business_translations tx_es ON tx_es.business_id=tx.business_id AND tx_es.locale="es" WHERE tx.business_id=b.id AND tx.display_name<>"" AND (tx.locale="es" OR tx.display_name<>tx_es.display_name OR tx.summary<>tx_es.summary OR tx.description<>tx_es.description OR COALESCE(tx.brand_story,"")<>COALESCE(tx_es.brand_story,"") OR COALESCE(tx.featured_services,"")<>COALESCE(tx_es.featured_services,""))) AS locale_count,
                 COALESCE((SELECT bs.plan_code FROM business_subscriptions bs WHERE bs.business_id=b.id ORDER BY bs.id DESC LIMIT 1),"free") AS plan_code,
-                COALESCE((SELECT bs.status FROM business_subscriptions bs WHERE bs.business_id=b.id ORDER BY bs.id DESC LIMIT 1),"sin suscripción") AS subscription_status
+                COALESCE((SELECT bs.status FROM business_subscriptions bs WHERE bs.business_id=b.id ORDER BY bs.id DESC LIMIT 1),"sin suscripción") AS subscription_status,
+                COALESCE((SELECT GROUP_CONCAT(a.email) FROM business_account_memberships m JOIN accounts a ON a.id=m.account_id WHERE m.business_id=b.id AND m.status="active"),"") AS account_email
             FROM businesses b JOIN destinations d ON d.id=b.destination_id
             JOIN destination_translations dt ON dt.destination_id=d.id AND dt.locale="es"
             JOIN service_categories c ON c.code=b.category_code JOIN service_category_translations ct ON ct.category_code=c.code AND ct.locale="es"

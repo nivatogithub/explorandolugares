@@ -40,7 +40,8 @@ final class DestinationRepository
             if ($row['asset_path'] !== null) $destination['places'][$key]['media'][]=$this->mediaRow($row);
         }
         $destination['places']=array_values($destination['places']);
-        $stmt=$this->pdo->prepare('SELECT DISTINCT c.code,ct.label FROM service_categories c JOIN service_category_translations ct ON ct.category_code=c.code AND LOWER(ct.locale)=LOWER(?) JOIN businesses b ON b.category_code=c.code AND b.destination_id=? AND b.publication_status="published" AND b.information_status<>"PENDIENTE_REVISION" AND b.operation_status <> "CERRADO_DEFINITIVO" WHERE c.is_active=1 ORDER BY c.display_order');
+        $businessPublicationFilter=$preview?'b.publication_status IN ("published","draft")':'b.publication_status="published"';
+        $stmt=$this->pdo->prepare('SELECT DISTINCT c.code,ct.label FROM service_categories c JOIN service_category_translations ct ON ct.category_code=c.code AND LOWER(ct.locale)=LOWER(?) JOIN businesses b ON b.category_code=c.code AND b.destination_id=? AND '.$businessPublicationFilter.' AND b.information_status<>"PENDIENTE_REVISION" AND b.operation_status <> "CERRADO_DEFINITIVO" WHERE c.is_active=1 ORDER BY c.display_order');
         $stmt->execute([$locale,$id]); $destination['categories']=$stmt->fetchAll(PDO::FETCH_ASSOC);
         $stmt=$this->pdo->prepare('SELECT b.id,b.public_id,b.slug,b.information_status,b.claim_status,b.operation_status,b.address_text,b.location_reference,b.latitude,b.longitude,b.location_map_url,
                     c.code,ct.label,bt.display_name,bt.summary,bt.description,
@@ -50,7 +51,7 @@ final class DestinationRepository
                 JOIN service_categories c ON c.code=b.category_code JOIN service_category_translations ct ON ct.category_code=c.code AND LOWER(ct.locale)=LOWER(?)
                 LEFT JOIN media_assets m ON m.id=(SELECT bm.media_asset_id FROM business_media bm WHERE bm.business_id=b.id AND bm.role="logo" ORDER BY bm.display_order,bm.media_asset_id LIMIT 1)
                 LEFT JOIN media_asset_translations mt ON mt.media_asset_id=m.id AND mt.locale=?
-                WHERE b.destination_id=? AND b.publication_status="published" AND b.information_status<>"PENDIENTE_REVISION" AND b.operation_status <> "CERRADO_DEFINITIVO"
+                WHERE b.destination_id=? AND '.($preview?'b.publication_status IN ("published","draft")':'b.publication_status="published"').' AND b.information_status<>"PENDIENTE_REVISION" AND b.operation_status <> "CERRADO_DEFINITIVO"
                 ORDER BY c.display_order,bt.display_name');
         $stmt->execute([$locale,$locale,$locale,$id]); $destination['businesses']=$stmt->fetchAll(PDO::FETCH_ASSOC);
         $businessIds=array_column($destination['businesses'],'id');$destination['public_contacts']=[];

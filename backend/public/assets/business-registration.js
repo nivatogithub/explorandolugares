@@ -11,6 +11,9 @@
   const newNameWrap = document.querySelector('#registration-new-name-wrap');
   const newName = document.querySelector('#registration-new-name');
   const submit = document.querySelector('#registration-submit');
+  const relationship = document.querySelector('#registration-relationship');
+  const authorityWrap = document.querySelector('#registration-authority-wrap');
+  const authorityInput = document.querySelector('#registration-authority-document');
   let timer;
   const endpoint = `${form.dataset.searchUrl}?search=1`;
 
@@ -25,6 +28,13 @@
       radio.checked = mode === 'existing_business' && radio.value === id;
     });
   }
+
+  relationship?.addEventListener('change', () => {
+    const needsAuthority = relationship.value === 'authorized_administrator';
+    authorityWrap.hidden = !needsAuthority;
+    authorityInput.required = needsAuthority;
+    if (!needsAuthority) authorityInput.value = '';
+  });
 
   function renderBusinesses(items) {
     results.replaceChildren();

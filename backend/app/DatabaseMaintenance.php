@@ -142,6 +142,45 @@ final class DatabaseMaintenance
             'checks' => [['business_account_applications', ['account_id','application_type','business_id','destination_id','category_code','business_name','status']]],
             'requires' => ['accounts','businesses','destinations','service_categories'],
         ],
+        '020-account-password-resets' => [
+            'file' => '020-account-password-resets.mysql.sql',
+            'checks' => [['account_password_resets', ['account_id','token_hash','expires_at','used_at']]],
+            'requires' => ['accounts'],
+        ],
+        '021-business-payment-evidence' => [
+            'file' => '021-business-payment-evidence.mysql.sql',
+            'checks' => [['business_subscription_payment_evidence', ['subscription_id','account_id','storage_name','mime_type','status','reviewed_at']]],
+            'requires' => ['accounts','business_subscriptions'],
+        ],
+        '022-subscription-prices' => [
+            'file' => '022-subscription-prices.mysql.sql',
+            'value_checks' => [
+                ['subscription_plan_prices','plan_code','basic','amount','19900.00'],
+                ['subscription_plan_prices','plan_code','basic','amount','199000.00'],
+                ['subscription_plan_prices','plan_code','featured','amount','49900.00'],
+                ['subscription_plan_prices','plan_code','featured','amount','499000.00'],
+                ['subscription_plan_prices','plan_code','page','amount','69900.00'],
+                ['subscription_plan_prices','plan_code','page','amount','699000.00'],
+                ['subscription_plan_prices','plan_code','page_premium','amount','119900.00'],
+                ['subscription_plan_prices','plan_code','page_premium','amount','1199000.00'],
+            ],
+            'requires' => ['subscription_plan_prices'],
+        ],
+        '023-business-representation-evidence' => [
+            'file' => '023-business-representation-evidence.mysql.sql',
+            'checks' => [['business_account_application_evidence', ['application_id','evidence_type','storage_name','mime_type','verified_at']]],
+            'requires' => ['business_account_applications'],
+        ],
+        '024-payment-customer-message' => [
+            'file' => '024-payment-customer-message.mysql.sql',
+            'checks' => [['business_subscription_payment_evidence', ['customer_message']]],
+            'requires' => ['business_subscription_payment_evidence'],
+        ],
+        '025-subscription-renewal-history' => [
+            'file' => '025-subscription-renewal-history.mysql.sql',
+            'checks' => [['business_subscriptions', ['renewal_of_subscription_id']]],
+            'requires' => ['business_subscriptions'],
+        ],
     ];
 
     public function __construct(private PDO $pdo, private string $appRoot, private string $publicRoot)
@@ -154,7 +193,7 @@ final class DatabaseMaintenance
         $driver = (string)$this->pdo->getAttribute(PDO::ATTR_DRIVER_NAME);
         $tables = $this->tables();
         $counts = [];
-        foreach (['leads', 'destinations', 'businesses', 'media_assets', 'business_image_references', 'business_claim_requests', 'business_account_applications'] as $table) {
+        foreach (['leads', 'destinations', 'businesses', 'media_assets', 'business_image_references', 'business_claim_requests', 'business_account_applications', 'account_password_resets','business_subscription_payment_evidence'] as $table) {
             if (in_array($table, $tables, true)) {
                 $counts[$table] = (int)$this->pdo->query('SELECT COUNT(*) FROM `'.$table.'`')->fetchColumn();
             } else {

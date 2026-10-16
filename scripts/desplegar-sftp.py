@@ -202,6 +202,38 @@ def changed_files(previous, current):
     return [item for item in current if old.get(item['relative']) != item['sha256']]
 
 
+def select_files(files, requested_paths):
+    """Limit a deployment to explicit package paths without wildcard matching."""
+    if not requested_paths:
+        return files
+    requested = set(requested_paths)
+    available = {item['relative'] for item in files}
+    invalid = sorted(requested - available)
+    if invalid:
+        raise ValueError('Las rutas --only no existen en el paquete: ' + ', '.join(invalid))
+    for relative in requested:
+        remote_path({'remote_base': '/home/deploy/site', 'public_directory': 'public'}, relative)
+    return [item for item in files if item['relative'] in requested]
+
+
+def create_partial_manifest(config, current, previous, uploaded, commit=None):
+    """Record only what is actually live; retain prior hashes for untouched files."""
+    old_files = {item['relative']: item for item in (previous or {}).get('files', [])}
+    for item in uploaded:
+        old_files[item['relative']] = {
+            'relative': item['relative'], 'bytes': item['bytes'], 'sha256': item['sha256']
+        }
+    current_names = {item['relative'] for item in current}
+    return {
+        'schema_version': 1, 'site': 'explorandolugares', 'host': config['host'],
+        'remote_base': config['remote_base'], 'public_root': public_path(config),
+        'deployed_at': datetime.now(timezone.utc).isoformat(timespec='seconds'),
+        'commit': commit, 'file_count': len(old_files),
+        'removed_not_deleted': sorted(set(old_files) - current_names),
+        'files': sorted(old_files.values(), key=lambda item: item['relative']),
+    }
+
+
 def upload_commands(config, files):
     directories = set()
     entries = []
@@ -247,6 +279,8 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--config', type=Path, default=ROOT / '.local/sftp.json')
     parser.add_argument('--deploy', action='store_true', help='Sube directamente solo archivos nuevos o modificados.')
+    parser.add_argument('--only', action='append', default=[], metavar='RUTA',
+                        help='Limita una entrega por ruta exacta del paquete (se puede repetir).')
     args = parser.parse_args(argv)
     config = load_config(args.config.expanduser().resolve())
     subprocess.run([sys.executable, str(ROOT / 'scripts/verificar-antes-de-desplegar.py')], cwd=ROOT, check=True)
@@ -254,13 +288,17 @@ def main(argv=None):
         output = Path(temporary) / 'build'
         files = build(output, config)
         previous = latest_local_manifest(ROOT, config)
+        if args.only and not previous:
+            raise ValueError('Una entrega parcial requiere el manifiesto del último despliegue; primero establece una comparación completa.')
+        scoped = select_files(files, args.only)
         client = None
         if args.deploy:
             known_hosts = Path(config['known_hosts_file']).expanduser()
             if not known_hosts.is_file():
                 raise ValueError('Falta el archivo de huellas verificadas.')
             client = SFTP(config)
-        selected = changed_files(previous, files) if previous else files
+        changed = changed_files(previous, files) if previous else files
+        selected = [item for item in changed if item['relative'] in {entry['relative'] for entry in scoped}]
         byte_count = sum(item['bytes'] for item in selected)
         old_names = {item['relative'] for item in (previous or {}).get('files', [])}
         removed = sorted(old_names - {item['relative'] for item in files})
@@ -277,7 +315,8 @@ def main(argv=None):
             return 0
         if not selected:
             print('El contenido ya coincide; no se subieron archivos del sitio.')
-        manifest = create_manifest(config, files, previous, git_commit())
+        manifest = (create_partial_manifest(config, files, previous, selected, git_commit())
+                    if args.only else create_manifest(config, files, previous, git_commit()))
         manifest_text = json.dumps(manifest, indent=2, ensure_ascii=False) + '\n'
         local_manifest = ROOT / '.local/deployment-manifest.json'
         local_manifest.parent.mkdir(parents=True, exist_ok=True)

@@ -16,6 +16,14 @@ python3 scripts/desplegar-sftp.py
 
 Esto corre las pruebas locales, construye el paquete en una carpeta temporal y muestra cuántos archivos y megabytes cambiarían. No se conecta ni modifica el hosting.
 
+Para una entrega de alcance reducido se puede repetir `--only RUTA_DEL_PAQUETE` por cada archivo autorizado. Por ejemplo, permite desplegar solo las piezas del importador sin publicar cambios acumulados de otras áreas:
+
+```sh
+python3 scripts/desplegar-sftp.py --only app/BusinessPackage.php --only public/admin/negocios.php
+```
+
+La lista usa rutas exactas dentro de `app/` o `public/`, sin comodines. El manifiesto registra el hash nuevo de los archivos enviados y conserva los hashes conocidos de los archivos que quedaron sin tocar; la siguiente entrega completa detectará esos cambios pendientes. Las entregas parciales requieren un manifiesto previo válido.
+
 Cuando quieras publicar ese código:
 
 ```sh

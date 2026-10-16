@@ -15,6 +15,7 @@ if (preg_match('~^/v1/admin/(index|base-datos|destinos|negocios|suscripciones|us
     require dirname(__DIR__).'/backend/public/admin/'.$admin[1].'.php';
     return true;
 }
+if ($path==='/v1/admin/inversionistas' || $path==='/v1/admin/inversionistas/' || $path==='/v1/admin/inversionistas.php') { require dirname(__DIR__).'/backend/public/admin/inversionistas.php'; return true; }
 if (preg_match('~^/v1/assets/destinos/[0-9]+/[a-zA-Z0-9-]+\.(?:jpg|png|webp)$~',$path)) {
     $mediaRoot=getenv('EL_ADMIN_MEDIA_ROOT')?:'';
     $file=$mediaRoot?realpath(rtrim($mediaRoot,'/').substr($path,3)):false;

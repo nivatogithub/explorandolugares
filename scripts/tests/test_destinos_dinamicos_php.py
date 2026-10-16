@@ -1,10 +1,13 @@
 import json
 import os
 import sqlite3
+import struct
 import subprocess
 import tempfile
 import unittest
+import zlib
 from pathlib import Path
+from zipfile import ZIP_DEFLATED, ZipFile
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -30,6 +33,7 @@ class DynamicDestinationRenderTests(unittest.TestCase):
             connection.executescript((ROOT / "backend/database/migrations/016-plan-content-limits.sqlite.sql").read_text())
             connection.executescript((ROOT / "backend/database/migrations/017-business-claims.sqlite.sql").read_text())
             connection.executescript((ROOT / "backend/database/migrations/018-business-portal.sqlite.sql").read_text())
+            connection.executescript((ROOT / "backend/database/migrations/025-subscription-renewal-history.sqlite.sql").read_text())
         env = os.environ | {"EL_DESTINATIONS_DSN": f"sqlite:{cls.database}"}
         subprocess.run(["php", "backend/bin/importar-destinos.php"], cwd=ROOT, env=env,
                        check=True, capture_output=True, text=True)
@@ -84,7 +88,8 @@ class DynamicDestinationRenderTests(unittest.TestCase):
                         self.assertNotIn(expected, page)
                         preview = self.render(destination["slug"], locale, preview=True)
                         self.assertIn(expected, preview)
-                        self.assertIn("Vista previa privada", preview)
+                        preview_label = {"es": "Vista previa privada", "en": "Private preview", "pt-BR": "Prévia privada"}[locale]
+                        self.assertIn(preview_label, preview)
 
     def test_operator_experiences_stay_hidden_until_approved(self):
         page = self.render("jerico", "es")
@@ -151,6 +156,43 @@ class DynamicDestinationRenderTests(unittest.TestCase):
             connection.execute("DELETE FROM businesses WHERE id=(SELECT business_id FROM business_translations WHERE display_name=?)",("Registro de importación verificada",))
         self.assertEqual(row,("VERIFICADO","NO_RECLAMADO","draft","Registro de importación verificada"))
 
+    def test_business_zip_import_keeps_reference_images_private_and_business_unpublished(self):
+        def png_chunk(kind, payload):
+            body=kind+payload
+            return struct.pack('!I',len(payload))+body+struct.pack('!I',zlib.crc32(body)&0xffffffff)
+        width,height=240,160
+        raw=b''.join(b'\x00'+bytes([192,128,64])*width for _ in range(height))
+        png=(b'\x89PNG\r\n\x1a\n'+png_chunk(b'IHDR',struct.pack('!2I5B',width,height,8,2,0,0,0))+
+             png_chunk(b'IDAT',zlib.compress(raw))+png_chunk(b'IEND',b''))
+        business_name=f'Negocio paquete ZIP {os.getpid()}'
+        manifest={"schema_version":"business-import-v1","destination_slug":"jerico","businesses":[{
+            "category_code":"alimentacion","information_status":"PUBLICO","name":business_name,
+            "summary":"Dato de ejemplo","description":"Referencia privada para revisar el perfil.",
+            "sources":[{"url":"https://example.org/business","note":"Prueba de paquete"}],
+            "image_references":[{"file":"images/referencia.png","name":"Foto de referencia"}]
+        }]}
+        with tempfile.TemporaryDirectory(prefix='el-business-zip-test-') as folder:
+            folder=Path(folder);archive=folder/'businesses.zip';stage=folder/'stage';private=folder/'private';stage.mkdir()
+            with ZipFile(archive,'w',ZIP_DEFLATED) as zipped:
+                zipped.writestr('paquete-negocios.json',json.dumps(manifest))
+                zipped.writestr('images/referencia.png',png)
+            code=("require 'backend/app/BusinessPackage.php';require 'backend/app/BusinessPublicImporter.php';"
+                  "$pdo=new PDO(getenv('EL_DESTINATIONS_DSN'));$parsed=BusinessPackage::readZip($argv[1],$argv[2]);"
+                  "$count=BusinessPublicImporter::import($pdo,$parsed['manifest'],$parsed['images'],$argv[3]);"
+                  "$q=$pdo->prepare('SELECT b.publication_status,b.claim_status,r.original_name,r.mime_type,r.file_size,r.storage_name FROM businesses b JOIN business_translations t ON t.business_id=b.id JOIN business_image_references r ON r.business_id=b.id WHERE t.display_name=?');"
+                  "$q->execute([$argv[4]]);echo json_encode([$count,$q->fetch(PDO::FETCH_ASSOC)]);")
+            result=subprocess.run(['php','-r',code,str(archive),str(stage),str(private),business_name],cwd=ROOT,env=self.env,check=True,capture_output=True,text=True)
+            imported,record=json.loads(result.stdout)
+            self.assertEqual(imported,1)
+            self.assertEqual(record['publication_status'],'draft')
+            self.assertEqual(record['claim_status'],'NO_RECLAMADO')
+            self.assertEqual(record['original_name'],'Foto de referencia')
+            self.assertEqual(record['mime_type'],'image/png')
+            self.assertEqual(record['file_size'],len(png))
+            self.assertTrue((private/record['storage_name']).is_file())
+            with sqlite3.connect(self.database) as connection:
+                connection.execute('DELETE FROM businesses WHERE id=(SELECT business_id FROM business_translations WHERE display_name=?)',(business_name,))
+
     def test_public_claim_search_and_review_state_changes(self):
         with sqlite3.connect(self.database) as connection:
             destination_id=connection.execute("SELECT id FROM destinations WHERE slug='jerico'").fetchone()[0]
@@ -202,10 +244,22 @@ class DynamicDestinationRenderTests(unittest.TestCase):
         with sqlite3.connect(self.database) as connection:
             connection.execute("DELETE FROM businesses WHERE id=?",(business_id,))
 
-    def test_admin_navigation_stays_one_column_and_exposes_import_and_claims(self):
+    def test_admin_navigation_stays_one_column_and_keeps_business_import_inside_business_hub(self):
         navigation=(ROOT/"backend/public/admin/_navigation.php").read_text()
+        businesses=(ROOT/"backend/public/admin/negocios.php").read_text()
         styles=(ROOT/"ensayos/v1/assets/style.css").read_text()
-        self.assertIn('href="importar-negocios.php"',navigation)
+        self.assertNotIn('href="importar-negocios.php"',navigation)
+        self.assertIn('href="negocios.php?tab=importar"',businesses)
+        self.assertIn('href="negocios.php?tab=crear"',businesses)
+        self.assertIn('href="negocios.php?tab=revisar"',businesses)
+        self.assertIn('Aprobar y publicar seleccionados',businesses)
+        self.assertIn('Posibles duplicados',businesses)
+        bulk=(ROOT/"backend/app/BusinessBulkPublicationService.php").read_text()
+        self.assertIn("$business['record_origin']!=='public_import'",bulk)
+        self.assertIn("$business['plan_code']!=='free'",bulk)
+        self.assertIn('Posible duplicado de',bulk)
+        script=(ROOT/"backend/public/assets/admin-business-bulk.js").read_text()
+        self.assertIn('window.confirm',script)
         self.assertIn('href="reclamaciones.php"',navigation)
         self.assertIn(".admin-sidebar nav section{display:block!important",styles)
         self.assertIn("column-count:1!important",styles)
@@ -302,7 +356,7 @@ class DynamicDestinationRenderTests(unittest.TestCase):
                           'name="operation_status"','name="information_status"',
                           'name="publication_status"','name="subscription_status"'):
             self.assertNotIn(forbidden,editor)
-        self.assertIn('Guardar borrador',editor)
+        self.assertIn('Guardar negocio y continuar a su suscripción',editor)
         self.assertIn('translations[es][display_name]',editor)
         self.assertIn('business-map-open',editor)
         self.assertIn('business-map-dialog',editor)

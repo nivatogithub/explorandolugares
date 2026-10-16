@@ -8,13 +8,14 @@
     const frequencyField=document.getElementById('frequency-field');
     const priceBox=document.getElementById('subscription-price');
     const requirementsBox=document.getElementById('tier-requirements');
-    const payment=document.getElementById('payment-reviewed');
     const update=()=>{
         const code=plan.value;
+        const available=Object.entries(prices[code]||{}).filter(([,item])=>Number(item?.amount)>0).map(([key])=>key);
+        for(const option of frequency.options){const enabled=available.includes(option.value);option.disabled=!enabled;option.hidden=!enabled;}
+        if(available.length&&!available.includes(frequency.value))frequency.value=available[0];
         const amount=prices[code]?.[frequency.value]?.amount;
         const currency=prices[code]?.[frequency.value]?.currency||'COP';
         frequencyField.hidden=code==='free'||!code;
-        payment.disabled=code==='free'||amount==null||amount<=0;
         if(code==='free')priceBox.textContent='Gratis: no genera cobro.';
         else if(!code)priceBox.textContent='Selecciona una suscripción y frecuencia para consultar su tarifa.';
         else if(amount==null)priceBox.textContent='La tarifa de esta combinación aún no está configurada en la tabla de precios; no se puede confirmar un pago.';

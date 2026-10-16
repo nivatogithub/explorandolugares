@@ -80,6 +80,33 @@ class DeploymentTests(unittest.TestCase):
         self.assertEqual([item['relative'] for item in deploy.changed_files(previous, current)],
                          ['public/index.html', 'public/new.css'])
 
+    def test_partial_scope_is_exact_and_rejects_missing_files(self):
+        files = [{'relative': 'app/Business.php'}, {'relative': 'public/admin/negocios.php'},
+                 {'relative': 'public/index.html'}]
+        selected = deploy.select_files(files, ['app/Business.php', 'public/admin/negocios.php'])
+        self.assertEqual([item['relative'] for item in selected],
+                         ['app/Business.php', 'public/admin/negocios.php'])
+        with self.assertRaises(ValueError):
+            deploy.select_files(files, ['public/admin/missing.php'])
+
+    def test_partial_manifest_preserves_hashes_of_untouched_files(self):
+        previous = {'files': [
+            {'relative': 'public/index.html', 'bytes': 10, 'sha256': 'a' * 64},
+            {'relative': 'app/Old.php', 'bytes': 20, 'sha256': 'b' * 64},
+        ]}
+        current = [
+            {'relative': 'public/index.html', 'bytes': 11, 'sha256': 'c' * 64},
+            {'relative': 'app/Old.php', 'bytes': 20, 'sha256': 'd' * 64},
+            {'relative': 'app/New.php', 'bytes': 30, 'sha256': 'e' * 64},
+        ]
+        manifest = deploy.create_partial_manifest(self.config, current, previous,
+            [current[2]], 'abc123')
+        entries = {item['relative']: item['sha256'] for item in manifest['files']}
+        self.assertEqual(entries, {'public/index.html': 'a' * 64,
+                                   'app/Old.php': 'b' * 64,
+                                   'app/New.php': 'e' * 64})
+        self.assertEqual(manifest['file_count'], 3)
+
     def test_direct_upload_is_incremental_backend_first_and_creates_nested_directories(self):
         files = [
             {'relative': 'public/business/register.php', 'local': '/tmp/register.php'},

@@ -6,13 +6,14 @@ $activeAdminItem = match (true) {
     $adminPath === 'index.php' && $adminTab === 'sistema' => 'system',
     $adminPath === 'index.php' => 'requests',
     $adminPath === 'negocios.php' => 'businesses',
-    $adminPath === 'importar-negocios.php' => 'business-import',
+    $adminPath === 'importar-negocios.php' => 'businesses',
     $adminPath === 'reclamaciones.php' => 'claims',
     $adminPath === 'solicitudes-cuenta.php' => 'account-applications',
     $adminPath === 'usuarios.php' => 'accounts',
     $adminPath === 'suscripciones.php' => 'subscriptions',
     $adminPath === 'destinos.php' || str_starts_with($adminPath, 'paquete-destino') => 'destinations',
     $adminPath === 'base-datos.php' => 'database',
+    $adminPath === 'inversionistas.php' => 'investor-intelligence',
     default => '',
 };
 ?>
@@ -22,15 +23,17 @@ $activeAdminItem = match (true) {
     <section><h2>Operación</h2>
       <a href="index.php?tab=solicitudes" <?= $activeAdminItem === 'requests' ? 'aria-current="page"' : '' ?>>Solicitudes</a>
       <a href="negocios.php" <?= $activeAdminItem === 'businesses' ? 'aria-current="page"' : '' ?>>Negocios</a>
-      <a href="importar-negocios.php" <?= $activeAdminItem === 'business-import' ? 'aria-current="page"' : '' ?>>Importar negocios</a>
-      <a href="reclamaciones.php" <?= $activeAdminItem === 'claims' ? 'aria-current="page"' : '' ?>>Solicitudes anteriores de representación</a>
-      <a href="solicitudes-cuenta.php" <?= $activeAdminItem === 'account-applications' ? 'aria-current="page"' : '' ?>>Solicitudes de cuenta empresarial</a>
-      <a href="usuarios.php" <?= $activeAdminItem === 'accounts' ? 'aria-current="page"' : '' ?>>Cuentas de usuario</a>
+      <a href="reclamaciones.php" <?= $activeAdminItem === 'claims' ? 'aria-current="page"' : '' ?>>Solicitudes anteriores</a>
+      <a href="solicitudes-cuenta.php" <?= $activeAdminItem === 'account-applications' ? 'aria-current="page"' : '' ?>>Solicitudes de cuenta</a>
+      <a href="usuarios.php" <?= $activeAdminItem === 'accounts' ? 'aria-current="page"' : '' ?>>Cuentas</a>
       <a href="suscripciones.php" <?= $activeAdminItem === 'subscriptions' ? 'aria-current="page"' : '' ?>>Suscripciones</a>
     </section>
     <section><h2>Contenido</h2>
       <a href="destinos.php" <?= $activeAdminItem === 'destinations' ? 'aria-current="page"' : '' ?>>Destinos</a>
       <span class="admin-nav-disabled" aria-disabled="true">Reportes <small>Próximamente</small></span>
+    </section>
+    <section><h2>Dirección</h2>
+      <a href="inversionistas.php" <?= $activeAdminItem === 'investor-intelligence' ? 'aria-current="page"' : '' ?>>Inteligencia e inversión</a>
     </section>
     <section><h2>Sistema</h2>
       <a href="index.php?tab=sistema" <?= $activeAdminItem === 'system' ? 'aria-current="page"' : '' ?>>Estado del sistema</a>

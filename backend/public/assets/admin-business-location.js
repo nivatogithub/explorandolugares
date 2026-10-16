@@ -27,6 +27,8 @@
   let mapReady = false;
   let destinationCenterPending = false;
   let mapLoadTimer = 0;
+  let pendingAddressPoint = null;
+  let addressLookupPoint = null;
 
   const parseExisting = () => {
     if (!latInput.value.trim() || !lonInput.value.trim()) return null;
@@ -44,6 +46,44 @@
   };
 
   const selectedDestinationName = () => destination.selectedOptions[0]?.dataset.name?.trim() || '';
+
+  const geocodeAddress = async () => {
+    const text = [address.value.trim(), selectedDestinationName(), 'Colombia'].filter(Boolean).join(', ');
+    if (!address.value.trim()) return null;
+    const params = new URLSearchParams({ q: text, countrycodes: 'co', format: 'jsonv2', limit: '1', addressdetails: '1' });
+    const response = await fetch(`https://nominatim.openstreetmap.org/search?${params}`, {
+      headers: { Accept: 'application/json' },
+      signal: AbortSignal.timeout(7000),
+    });
+    if (!response.ok) throw new Error('No se pudo ubicar la dirección escrita.');
+    const results = await response.json();
+    const result = results[0];
+    if (!result) return null;
+    const point = [Number(result.lat), Number(result.lon)];
+    if (!point.every(Number.isFinite)) return null;
+    return { point, label: result.display_name || '' };
+  };
+
+  const distanceMeters = (a, b) => {
+    const rad = (value) => value * Math.PI / 180;
+    const dLat = rad(b[0] - a[0]);
+    const dLon = rad(b[1] - a[1]);
+    const value = Math.sin(dLat / 2) ** 2 + Math.cos(rad(a[0])) * Math.cos(rad(b[0])) * Math.sin(dLon / 2) ** 2;
+    return 6371000 * 2 * Math.atan2(Math.sqrt(value), Math.sqrt(1 - value));
+  };
+
+  const reverseAddress = async (point) => {
+    const params = new URLSearchParams({ format: 'jsonv2', lat: String(point[0]), lon: String(point[1]), zoom: '18', addressdetails: '1', 'accept-language': 'es' });
+    const response = await fetch(`https://nominatim.openstreetmap.org/reverse?${params}`, {
+      headers: { Accept: 'application/json' },
+      signal: AbortSignal.timeout(7000),
+    });
+    if (!response.ok) throw new Error('No se pudo consultar la dirección de este punto.');
+    const result = await response.json();
+    const parts = result.address || {};
+    const street = [parts.house_number, parts.road || parts.pedestrian || parts.footway || parts.path].filter(Boolean).join(' ');
+    return street || parts.neighbourhood || parts.suburb || parts.village || parts.town || parts.city || '';
+  };
 
   const setMapCenter = (point, zoom = 14) => {
     if (!map) return;
@@ -155,7 +195,8 @@
         mapReady = true;
         window.clearTimeout(mapLoadTimer);
         retry.hidden = true;
-        if (draft) updateDraft(draft);
+        if (pendingAddressPoint) { const point = pendingAddressPoint; pendingAddressPoint = null; updateDraft(point); }
+        else if (draft) updateDraft(draft);
         else if (!destinationCenterPending) selection.textContent = 'Haz clic en el punto exacto. Puedes arrastrar el mapa y acercarlo con los controles.';
       });
       mapLayer.on('load', () => { if (!mapReady) showMapFailure(); });
@@ -184,14 +225,11 @@
   const actions = dialog.querySelector('.business-map-dialog__actions');
   const currentLocation = document.createElement('button');
   currentLocation.type = 'button';
-  currentLocation.className = 'text-link';
-  currentLocation.textContent = 'Centrar en mi ubicación';
+  currentLocation.className = 'business-map-locate-control';
+  currentLocation.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="7.5"></circle><circle cx="12" cy="12" r="2"></circle><path d="M12 1.8v3M12 19.2v3M1.8 12h3M19.2 12h3"></path></svg>';
   currentLocation.setAttribute('aria-label', 'Centrar el mapa con GPS o ubicación aproximada por IP');
-  actions?.prepend(currentLocation);
-  const locationNote = document.createElement('p');
-  locationNote.className = 'map-location-note';
-  locationNote.textContent = 'El navegador pedirá permiso para usar GPS o ubicación de red. Si falla, se consultará una ubicación aproximada por IP a un servicio externo. Esto solo centra el mapa; debes marcar la ubicación exacta del negocio.';
-  actions?.before(locationNote);
+  mapNode.append(currentLocation);
+  currentLocation.title = 'Centrar en mi ubicación';
 
   const centerOnPoint = (point, zoom, message) => {
     if (!map) return;
@@ -235,9 +273,20 @@
   });
 
   open.addEventListener('click', () => {
-    if (!destination.value) { status.textContent = 'Selecciona primero el municipio o destino.'; destination.focus(); return; }
+    if (!destination.value) { status.textContent = 'Selecciona primero el destino.'; destination.focus(); return; }
     dialog.showModal();
     ensureMap();
+    if (!parseExisting() && address.value.trim()) {
+      selection.textContent = 'Buscando la dirección para centrar el mapa…';
+      geocodeAddress().then((result) => {
+        if (!result || !map) return;
+        addressLookupPoint = result.point;
+        pendingAddressPoint = result.point;
+        destinationCenterPending = false;
+        setMapCenter(result.point, 18);
+        if (mapReady) { pendingAddressPoint = null; updateDraft(result.point); }
+      }).catch(() => { selection.textContent = 'No se ubicó la dirección automáticamente. Puedes encontrarla en el mapa y marcar el punto.'; });
+    }
   });
   close.addEventListener('click', () => dialog.close());
   cancel.addEventListener('click', () => dialog.close());
@@ -257,7 +306,7 @@
     lonInput.value = '';
     mapUrl.value = '';
     mapChanged.value = '1';
-    confirmed.checked = false;
+    confirmed.value = '0';
     status.textContent = 'El destino cambió. Elige y confirma de nuevo el punto del negocio.';
     if (map) {
       draft = null;
@@ -267,39 +316,52 @@
       centerOnDestination();
     }
   });
-  [address, reference].filter(Boolean).forEach((input) => input.addEventListener('input', () => {
-    confirmed.checked = false;
+  address.addEventListener('input', () => {
+    confirmed.value = '0';
     mapChanged.value = '1';
-  }));
+    latInput.value = ''; lonInput.value = ''; mapUrl.value = ''; addressLookupPoint = null;
+  });
 
   use.addEventListener('click', async () => {
     if (!draft) return;
     const [lat, lon] = draft;
+    const selectedPoint = [lat, lon];
+    if (addressLookupPoint && distanceMeters(addressLookupPoint, selectedPoint) > 1000) {
+      selection.textContent = 'El punto está a más de 1 km de la ubicación que encontró el sistema para la dirección. Revisa la dirección o selecciona el punto correcto.';
+      return;
+    }
     latInput.value = lat.toFixed(7);
     lonInput.value = lon.toFixed(7);
     mapUrl.value = `https://www.openstreetmap.org/?mlat=${encodeURIComponent(lat.toFixed(7))}&mlon=${encodeURIComponent(lon.toFixed(7))}#map=18/${encodeURIComponent(lat.toFixed(7))}/${encodeURIComponent(lon.toFixed(7))}`;
     mapChanged.value = '1';
-    confirmed.checked = false;
+    confirmed.value = '0';
+    const saveButton = document.querySelector('#business-form button[type="submit"]');
+    if (saveButton) saveButton.disabled = true;
     dialog.close();
-    status.textContent = `Punto guardado: ${lat.toFixed(6)}, ${lon.toFixed(6)}. Revisa la dirección y confirma que corresponde al negocio.`;
+    status.textContent = `Punto seleccionado: ${lat.toFixed(6)}, ${lon.toFixed(6)}. Consultando la dirección asociada…`;
     if (Date.now() - lastReverseLookup < 1100) {
-      status.textContent = 'Punto guardado. Escribe la dirección o una referencia y confirma el punto.';
+      status.textContent = 'Punto seleccionado. El sistema no repetirá la consulta de dirección tan pronto; intenta de nuevo en unos segundos si necesitas actualizarla.';
+      if (saveButton) window.setTimeout(() => { saveButton.disabled = confirmed.value !== '1'; }, 1100);
       return;
     }
     lastReverseLookup = Date.now();
     try {
-      status.textContent = 'Punto guardado. Consultando una dirección aproximada para ayudarte a revisar…';
-      const query = new URLSearchParams({ format: 'jsonv2', lat: String(lat), lon: String(lon), zoom: '18', addressdetails: '1', 'accept-language': 'es' });
-      const response = await fetch(`https://nominatim.openstreetmap.org/reverse?${query}`, { headers: { Accept: 'application/json' } });
-      if (!response.ok) throw new Error('reverse lookup unavailable');
-      const result = await response.json();
-      const label = (result.address?.road || result.address?.pedestrian || result.address?.footway || result.address?.path || result.address?.neighbourhood || result.address?.suburb || result.display_name || '').trim();
+      const label = await reverseAddress(selectedPoint);
       if (label) {
-        if (!address.value.trim()) address.value = label.slice(0, 300);
-        status.textContent = `Punto guardado. Dirección aproximada de OpenStreetMap: ${label}. Revísala y confirma que corresponde al negocio.`;
-      } else status.textContent = 'Punto guardado. No se encontró una dirección aproximada; escribe la dirección o una referencia y confirma el punto.';
+        address.value = label.slice(0, 300);
+        confirmed.value = '1';
+        addressLookupPoint = selectedPoint;
+        status.textContent = `Ubicación lista. Dirección sugerida por el mapa: ${label}. El destino y estas coordenadas quedarán guardados juntos.`;
+      } else {
+        confirmed.value = address.value.trim() ? '1' : '0';
+        addressLookupPoint = selectedPoint;
+        status.textContent = address.value.trim() ? 'Ubicación lista. El mapa no encontró nomenclatura en este punto; se guardarán juntos la dirección escrita y el pin seleccionado.' : 'El mapa no encontró una dirección aquí. Escribe una referencia reconocible para poder guardar la ubicación.';
+      }
     } catch {
-      status.textContent = 'Punto guardado. No se pudo sugerir la dirección automáticamente; complétala manualmente y confirma el punto.';
+      confirmed.value = '0';
+      status.textContent = 'No se pudo validar la dirección con el mapa. Revisa tu conexión e inténtalo de nuevo antes de guardar.';
+    } finally {
+      if (saveButton) saveButton.disabled = confirmed.value !== '1';
     }
   });
 })();

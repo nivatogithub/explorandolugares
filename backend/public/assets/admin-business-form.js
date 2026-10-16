@@ -20,6 +20,9 @@
      if(counter){counter.hidden=!limit;counter.textContent=limit?`${Array.from(field.value).length} / ${limit} caracteres`:'';}
      if(!field.dataset.counterBound){field.addEventListener('input',()=>{const currentPlan=plans[plan.value]||{},currentLimit=Number(currentPlan.text_limits?.[field.dataset.planText]||0),currentCounter=field.closest('label')?.querySelector('[data-text-counter]');if(currentCounter&&currentLimit)currentCounter.textContent=`${Array.from(field.value).length} / ${currentLimit} caracteres`;});field.dataset.counterBound='1';}
    }
+   const availableFrequencies=Object.entries(selected.prices||{}).filter(([,item])=>Number(item?.amount)>0).map(([key])=>key);
+   for(const option of frequency.options){const enabled=availableFrequencies.includes(option.value);option.disabled=!enabled;option.hidden=!enabled;}
+   if(availableFrequencies.length&&!availableFrequencies.includes(frequency.value))frequency.value=availableFrequencies[0];
    frequencyField.hidden=isFree;frequency.disabled=isFree;frequency.required=!isFree;
    const price=selected.prices?.[frequency.value];
    quote.textContent=isFree?'Gratis: aparecerá en el directorio con nombre, categoría y ubicación. Los datos de contacto se conservan para revisión y no se publican.':price?.amount?`${selected.name}: ${money(price)} por periodo ${frequency.options[frequency.selectedIndex]?.text.toLowerCase()}. La vigencia empieza al publicar.`:`${selected.name||'Suscripción'}: no hay una tarifa configurada para esta frecuencia. El administrador debe definirla antes de guardar esta elección.`;
