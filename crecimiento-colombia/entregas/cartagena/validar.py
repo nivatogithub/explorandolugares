@@ -9,6 +9,25 @@ assert d['destination_id']=='CO-13-cartagena' and d['worker']=='Lugar 1'
 assert d['approved'] is False and d['publishable'] is False
 assert set(d['destination']['translations'])=={'es','en','pt-BR'}
 assert len(d['places'])>=3
+inventory=read('inventario-componentes.json')
+assert inventory['sites_total']==len(d['places'])>=17
+assert inventory['experiences_total']==len(d['experiences'])>=9
+assert inventory['illustrations_generated']==0 and not inventory['art_generation_authorized']
+assert inventory['references_human_approved']==0 and inventory['published_sites']==0
+assert len({p['slug'] for p in d['places']})==len(d['places'])
+for exp in d['experiences']:
+ assert exp['experience_class'] in {'editorial_autonoma','oferta_operador_documentada','candidato_por_validar'}
+ assert not exp['public_visible'] and not exp['partnership'] and not exp['availability_confirmed']
+ assert exp['visual_candidates'] and exp['image'] is None
+ if exp['experience_class']=='oferta_operador_documentada':
+  assert exp['operator'] and exp['operator_url'].startswith('https://') and exp['source_ids']
+review=read('revision-componentes.json')
+assert len(review['components'])>=100 and not review['publication_approved']
+assert len({c['id'] for c in review['components']})==len(review['components'])
+for component in review['components']:
+ assert component['decision'] is None
+ assert component['sha256']==hashlib.sha256(json.dumps(component['value'],ensure_ascii=False,sort_keys=True).encode()).hexdigest()
+assert (P/'historial/revision-41-componentes.json').is_file()
 for lang in ['es','en','pt-BR']:
  assert d['destination']['history'][lang] and d['practical'][lang]
  assert all(p['translations'][lang]['description'] for p in d['places'])

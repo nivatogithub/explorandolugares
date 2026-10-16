@@ -1,4 +1,19 @@
-# Lugar 1 · Cartagena · borrador privado
+# Lugar 1 · Cartagena · revisión ampliada reabierta
+
+## Estado vigente después de corrección del propietario
+
+Se conservó el commit8330423 y su revisión de41 componentes en `historial/revision-41-componentes.json`. La revisión nueva tiene116 componentes independientes; ninguna decisión previa se aplica automáticamente. Se leyó el procedimiento coordinador `crecimiento-colombia/PROCEDIMIENTO_DESTINOS_V2.md` y el modelo oculto de experiencias Jericó en `content/destinos-dinamicos.json`. No se copiaron actividades Jericó a Cartagena.
+
+- Inventario ampliado de4 a17 sitios, sin máximo editorial artificial. Cinco sitios tienen referencia fotográfica candidata (no aprobada); doce siguen sin foto apta.
+- Nueve actividades: dos propuestas editoriales autónomas, cuatro ofertas documentadas en páginas propias de operadores y tres candidatos ocultos. Todas sin alianza, disponibilidad, registro operativo, tarifas o permisos certificados. Ninguna se muestra como oferta pública activa.
+- Búsqueda visual específica para bus, buceo/snorkel, catamarán y pesca documentada en `imagenes/propuestas-actividades.json`. Galerías propias sin licencia abierta permanecen no usables y no descargadas. Foto de bus común de2012 rechazada para CitySightseeing.
+- Nuevo original Bernard Gagnon, barcos en La Boquilla2020, CC BY-SA4.0: conservado con hash y dos derivados técnicos, inspeccionado. Sirve como contexto local, NO como prueba de pesca ni del servicio IMPULSE. Las nueve actividades siguen con gate fotográfico pendiente.
+- Dos opciones de portada numeradas visibles conjuntamente, elección separada del original/uso, licencia y textos por idioma. Originales/textos se aprueban antes de cualquier ilustración; después habrá nueva revisión de ilustración. Cero ilustraciones generadas o aprobadas.
+- ZIPv2 actual sigue siendo parcial (tres atractivos con foto apta); no representa todo el inventario ampliado, no se importó al panel y no se publicó.
+- QA Chrome390/1440:116 componentes, dos opciones, cero aprobaciones preseleccionadas, sin elección de portada inferida, sin imágenes rotas ni desbordamiento. Capturas conservadas.
+
+Lo que sigue es el antecedente de la entrega inicial y no reemplaza los pendientes ampliados anteriores.
+
 
 Rama exclusiva: `lugar/CO/bolivar/cartagena`. ID: `CO-13-cartagena`. Investigación web: 16/10/2026. No se ha tomado otro destino.
 

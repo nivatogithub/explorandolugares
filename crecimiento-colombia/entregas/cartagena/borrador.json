@@ -77,7 +77,11 @@
           "external_label": "Fuente / Source / Fonte"
         }
       },
-      "image": null
+      "image": null,
+      "source_ids": [
+        "unesco"
+      ],
+      "image_status": "pendiente_foto_real_licenciada"
     },
     {
       "slug": "san-felipe",
@@ -111,7 +115,12 @@
           "en": "San Felipe de Barajas Castle and its flanking batteries, photographed in 2011.",
           "pt-BR": "Castelo de San Felipe de Barajas e baterias laterais, fotografia de 2011."
         }
-      }
+      },
+      "source_ids": [
+        "unesco",
+        "fortificaciones"
+      ],
+      "image_status": "candidata_revision_original"
     },
     {
       "slug": "getsemani",
@@ -145,7 +154,12 @@
           "en": "Street in Cartagena’s Getsemaní neighbourhood, photographed in 2016.",
           "pt-BR": "Rua do bairro Getsemaní em Cartagena, fotografia de 2016."
         }
-      }
+      },
+      "source_ids": [
+        "unesco",
+        "procolombia"
+      ],
+      "image_status": "candidata_revision_original"
     },
     {
       "slug": "museo-historico",
@@ -179,6 +193,650 @@
           "en": "Façade of the Palace of the Inquisition, home of MUHCA, photographed in 2025.",
           "pt-BR": "Fachada do Palácio da Inquisição, sede do MUHCA, fotografia de 2025."
         }
+      },
+      "source_ids": [
+        "muhca"
+      ],
+      "image_status": "candidata_revision_original"
+    },
+    {
+      "slug": "torre-reloj",
+      "type": "place",
+      "publication_status": "draft",
+      "source_ids": [
+        "centro-ruta"
+      ],
+      "image": null,
+      "image_status": "pendiente_foto_real_licenciada",
+      "translations": {
+        "es": {
+          "name": "Torre del Reloj",
+          "description": "Acceso monumental a la ciudad amurallada; punto para reconocer la relación entre plazas y recinto histórico.",
+          "external_url": "https://colombia.travel/es/cartagena/recorrido-por-el-centro-historico-de-cartagena",
+          "external_label": "Fuente / Source / Fonte"
+        },
+        "en": {
+          "name": "Clock Tower",
+          "description": "Monumental entrance to the walled city and a point from which to read its historic layout.",
+          "external_url": "https://colombia.travel/es/cartagena/recorrido-por-el-centro-historico-de-cartagena",
+          "external_label": "Fuente / Source / Fonte"
+        },
+        "pt-BR": {
+          "name": "Torre do Relógio",
+          "description": "Entrada monumental da cidade amuralhada e ponto para compreender seu traçado histórico.",
+          "external_url": "https://colombia.travel/es/cartagena/recorrido-por-el-centro-historico-de-cartagena",
+          "external_label": "Fuente / Source / Fonte"
+        }
+      },
+      "category": "patrimonio-espacio-publico",
+      "location": {
+        "country": "CO",
+        "department": "Bolívar",
+        "municipality": "Cartagena de Indias",
+        "sector": "Centro histórico / San Diego",
+        "coordinates": null,
+        "location_status": "sector_documentado_sin_georreferenciacion_verificada"
+      },
+      "inclusion": {
+        "included": true,
+        "reason": "Interés turístico y evidencia institucional identificados; ampliación de profundidad."
+      },
+      "text_status": {
+        "es": "borrador_con_fuente_pendiente_revision_humana",
+        "en": "borrador_con_fuente_pendiente_revision_humana",
+        "pt-BR": "borrador_con_fuente_pendiente_revision_humana"
+      }
+    },
+    {
+      "slug": "oro-zenu",
+      "type": "place",
+      "publication_status": "draft",
+      "source_ids": [
+        "oro"
+      ],
+      "image": null,
+      "image_status": "pendiente_foto_real_licenciada",
+      "translations": {
+        "es": {
+          "name": "Museo del Oro Zenú",
+          "description": "Espacio del Banco de la República dedicado al patrimonio arqueológico y cultural Zenú. Confirma visita y exposiciones con el museo.",
+          "external_url": "https://www.banrep.gov.co/es/sucursales/cartagena-museo-del-oro",
+          "external_label": "Fuente / Source / Fonte"
+        },
+        "en": {
+          "name": "Zenú Gold Museum",
+          "description": "Banco de la República museum devoted to Zenú archaeological and cultural heritage. Check visits and exhibitions with the museum.",
+          "external_url": "https://www.banrep.gov.co/es/sucursales/cartagena-museo-del-oro",
+          "external_label": "Fuente / Source / Fonte"
+        },
+        "pt-BR": {
+          "name": "Museu do Ouro Zenú",
+          "description": "Museu do Banco de la República dedicado ao patrimônio arqueológico e cultural Zenú. Confirme visitas e exposições com o museu.",
+          "external_url": "https://www.banrep.gov.co/es/sucursales/cartagena-museo-del-oro",
+          "external_label": "Fuente / Source / Fonte"
+        }
+      },
+      "category": "cultura-museos",
+      "location": {
+        "country": "CO",
+        "department": "Bolívar",
+        "municipality": "Cartagena de Indias",
+        "sector": "Centro histórico / San Diego",
+        "coordinates": null,
+        "location_status": "sector_documentado_sin_georreferenciacion_verificada"
+      },
+      "inclusion": {
+        "included": true,
+        "reason": "Interés turístico y evidencia institucional identificados; ampliación de profundidad."
+      },
+      "text_status": {
+        "es": "borrador_con_fuente_pendiente_revision_humana",
+        "en": "borrador_con_fuente_pendiente_revision_humana",
+        "pt-BR": "borrador_con_fuente_pendiente_revision_humana"
+      }
+    },
+    {
+      "slug": "cerro-popa",
+      "type": "place",
+      "publication_status": "draft",
+      "source_ids": [
+        "popa"
+      ],
+      "image": {
+        "asset_id": "la-popa-2008",
+        "file": "imagenes/derivados/la-popa-2008-tarjeta.webp",
+        "alt": {
+          "es": "Panorama de Cartagena y su bahía desde el cerro de La Popa, fotografía de 2008.",
+          "en": "View of Cartagena and its bay from La Popa hill, photographed in 2008.",
+          "pt-BR": "Panorama de Cartagena e sua baía visto da colina de La Popa, fotografia de 2008."
+        }
+      },
+      "image_status": "referencia_contextual_local_pendiente_aprobacion_por_ubicacion",
+      "translations": {
+        "es": {
+          "name": "Cerro y convento de La Popa",
+          "description": "El conjunto religioso se encuentra sobre el cerro de La Popa; el mirador permite observar Cartagena y su bahía. La fotografía existente muestra el panorama, no la fachada del convento.",
+          "external_url": "https://colombia.travel/en/cartagena-de-indias/la-popa-hill",
+          "external_label": "Fuente / Source / Fonte"
+        },
+        "en": {
+          "name": "La Popa hill and convent",
+          "description": "The religious complex stands on La Popa hill, overlooking Cartagena and its bay. The existing photograph shows the panorama, not the convent façade.",
+          "external_url": "https://colombia.travel/en/cartagena-de-indias/la-popa-hill",
+          "external_label": "Fuente / Source / Fonte"
+        },
+        "pt-BR": {
+          "name": "Colina e convento de La Popa",
+          "description": "O conjunto religioso está na colina de La Popa, com vista de Cartagena e sua baía. A fotografia existente mostra o panorama, não a fachada do convento.",
+          "external_url": "https://colombia.travel/en/cartagena-de-indias/la-popa-hill",
+          "external_label": "Fuente / Source / Fonte"
+        }
+      },
+      "category": "naturaleza",
+      "location": {
+        "country": "CO",
+        "department": "Bolívar",
+        "municipality": "Cartagena de Indias",
+        "sector": "Cerro de La Popa",
+        "coordinates": null,
+        "location_status": "sector_documentado_sin_georreferenciacion_verificada"
+      },
+      "inclusion": {
+        "included": true,
+        "reason": "Interés turístico y evidencia institucional identificados; ampliación de profundidad."
+      },
+      "text_status": {
+        "es": "borrador_con_fuente_pendiente_revision_humana",
+        "en": "borrador_con_fuente_pendiente_revision_humana",
+        "pt-BR": "borrador_con_fuente_pendiente_revision_humana"
+      }
+    },
+    {
+      "slug": "san-pedro-claver",
+      "type": "place",
+      "publication_status": "draft",
+      "source_ids": [
+        "centro-ruta"
+      ],
+      "image": null,
+      "image_status": "pendiente_foto_real_licenciada",
+      "translations": {
+        "es": {
+          "name": "Santuario y Museo San Pedro Claver",
+          "description": "Conjunto religioso y museístico vinculado a la memoria de Pedro Claver y de las personas africanas esclavizadas en Cartagena. Consulta condiciones de visita al gestor.",
+          "external_url": "https://colombia.travel/es/cartagena/recorrido-por-el-centro-historico-de-cartagena",
+          "external_label": "Fuente / Source / Fonte"
+        },
+        "en": {
+          "name": "San Pedro Claver sanctuary and museum",
+          "description": "Religious and museum complex linked to the memory of Pedro Claver and enslaved African people in Cartagena. Check visiting conditions with its manager.",
+          "external_url": "https://colombia.travel/es/cartagena/recorrido-por-el-centro-historico-de-cartagena",
+          "external_label": "Fuente / Source / Fonte"
+        },
+        "pt-BR": {
+          "name": "Santuário e Museu San Pedro Claver",
+          "description": "Conjunto religioso e museológico ligado à memória de Pedro Claver e dos africanos escravizados em Cartagena. Consulte as condições de visita com o gestor.",
+          "external_url": "https://colombia.travel/es/cartagena/recorrido-por-el-centro-historico-de-cartagena",
+          "external_label": "Fuente / Source / Fonte"
+        }
+      },
+      "category": "patrimonio-espacio-publico",
+      "location": {
+        "country": "CO",
+        "department": "Bolívar",
+        "municipality": "Cartagena de Indias",
+        "sector": "Centro histórico / San Diego",
+        "coordinates": null,
+        "location_status": "sector_documentado_sin_georreferenciacion_verificada"
+      },
+      "inclusion": {
+        "included": true,
+        "reason": "Interés turístico y evidencia institucional identificados; ampliación de profundidad."
+      },
+      "text_status": {
+        "es": "borrador_con_fuente_pendiente_revision_humana",
+        "en": "borrador_con_fuente_pendiente_revision_humana",
+        "pt-BR": "borrador_con_fuente_pendiente_revision_humana"
+      }
+    },
+    {
+      "slug": "santo-domingo",
+      "type": "place",
+      "publication_status": "draft",
+      "source_ids": [
+        "centro-ruta"
+      ],
+      "image": null,
+      "image_status": "pendiente_foto_real_licenciada",
+      "translations": {
+        "es": {
+          "name": "Iglesia y plaza de Santo Domingo",
+          "description": "Templo y plaza del centro histórico. Diferencia el recorrido por el espacio público del acceso al interior religioso.",
+          "external_url": "https://colombia.travel/es/cartagena/recorrido-por-el-centro-historico-de-cartagena",
+          "external_label": "Fuente / Source / Fonte"
+        },
+        "en": {
+          "name": "Santo Domingo church and square",
+          "description": "Church and square in the historic centre. Distinguish a walk in the public space from admission to the church.",
+          "external_url": "https://colombia.travel/es/cartagena/recorrido-por-el-centro-historico-de-cartagena",
+          "external_label": "Fuente / Source / Fonte"
+        },
+        "pt-BR": {
+          "name": "Igreja e praça de Santo Domingo",
+          "description": "Igreja e praça do centro histórico. Diferencie o passeio pelo espaço público do acesso ao interior religioso.",
+          "external_url": "https://colombia.travel/es/cartagena/recorrido-por-el-centro-historico-de-cartagena",
+          "external_label": "Fuente / Source / Fonte"
+        }
+      },
+      "category": "patrimonio-espacio-publico",
+      "location": {
+        "country": "CO",
+        "department": "Bolívar",
+        "municipality": "Cartagena de Indias",
+        "sector": "Centro histórico / San Diego",
+        "coordinates": null,
+        "location_status": "sector_documentado_sin_georreferenciacion_verificada"
+      },
+      "inclusion": {
+        "included": true,
+        "reason": "Interés turístico y evidencia institucional identificados; ampliación de profundidad."
+      },
+      "text_status": {
+        "es": "borrador_con_fuente_pendiente_revision_humana",
+        "en": "borrador_con_fuente_pendiente_revision_humana",
+        "pt-BR": "borrador_con_fuente_pendiente_revision_humana"
+      }
+    },
+    {
+      "slug": "santo-toribio",
+      "type": "place",
+      "publication_status": "draft",
+      "source_ids": [
+        "centro-ruta"
+      ],
+      "image": null,
+      "image_status": "pendiente_foto_real_licenciada",
+      "translations": {
+        "es": {
+          "name": "Iglesia de Santo Toribio",
+          "description": "Templo del sector San Diego, junto a la plaza Fernández de Madrid. Respeta celebraciones y confirma si permite visitas.",
+          "external_url": "https://colombia.travel/es/cartagena/recorrido-por-el-centro-historico-de-cartagena",
+          "external_label": "Fuente / Source / Fonte"
+        },
+        "en": {
+          "name": "Santo Toribio church",
+          "description": "Church in the San Diego area beside Fernández de Madrid square. Respect services and confirm visitor access.",
+          "external_url": "https://colombia.travel/es/cartagena/recorrido-por-el-centro-historico-de-cartagena",
+          "external_label": "Fuente / Source / Fonte"
+        },
+        "pt-BR": {
+          "name": "Igreja de Santo Toribio",
+          "description": "Igreja no setor San Diego, junto à praça Fernández de Madrid. Respeite celebrações e confirme o acesso de visitantes.",
+          "external_url": "https://colombia.travel/es/cartagena/recorrido-por-el-centro-historico-de-cartagena",
+          "external_label": "Fuente / Source / Fonte"
+        }
+      },
+      "category": "patrimonio-espacio-publico",
+      "location": {
+        "country": "CO",
+        "department": "Bolívar",
+        "municipality": "Cartagena de Indias",
+        "sector": "Centro histórico / San Diego",
+        "coordinates": null,
+        "location_status": "sector_documentado_sin_georreferenciacion_verificada"
+      },
+      "inclusion": {
+        "included": true,
+        "reason": "Interés turístico y evidencia institucional identificados; ampliación de profundidad."
+      },
+      "text_status": {
+        "es": "borrador_con_fuente_pendiente_revision_humana",
+        "en": "borrador_con_fuente_pendiente_revision_humana",
+        "pt-BR": "borrador_con_fuente_pendiente_revision_humana"
+      }
+    },
+    {
+      "slug": "museo-naval",
+      "type": "place",
+      "publication_status": "draft",
+      "source_ids": [
+        "centro-ruta"
+      ],
+      "image": null,
+      "image_status": "pendiente_foto_real_licenciada",
+      "translations": {
+        "es": {
+          "name": "Museo Naval del Caribe",
+          "description": "Museo cercano a la plaza de Santa Teresa dedicado a la memoria naval. La fuente turística confirma su identificación; programación y acceso requieren consulta directa.",
+          "external_url": "https://colombia.travel/es/cartagena/recorrido-por-el-centro-historico-de-cartagena",
+          "external_label": "Fuente / Source / Fonte"
+        },
+        "en": {
+          "name": "Caribbean Naval Museum",
+          "description": "Museum near Santa Teresa square devoted to naval heritage. The tourism source identifies it; programme and access require direct confirmation.",
+          "external_url": "https://colombia.travel/es/cartagena/recorrido-por-el-centro-historico-de-cartagena",
+          "external_label": "Fuente / Source / Fonte"
+        },
+        "pt-BR": {
+          "name": "Museu Naval do Caribe",
+          "description": "Museu próximo à praça de Santa Teresa dedicado à memória naval. A fonte turística identifica o local; programação e acesso exigem confirmação direta.",
+          "external_url": "https://colombia.travel/es/cartagena/recorrido-por-el-centro-historico-de-cartagena",
+          "external_label": "Fuente / Source / Fonte"
+        }
+      },
+      "category": "cultura-museos",
+      "location": {
+        "country": "CO",
+        "department": "Bolívar",
+        "municipality": "Cartagena de Indias",
+        "sector": "Centro histórico / San Diego",
+        "coordinates": null,
+        "location_status": "sector_documentado_sin_georreferenciacion_verificada"
+      },
+      "inclusion": {
+        "included": true,
+        "reason": "Interés turístico y evidencia institucional identificados; ampliación de profundidad."
+      },
+      "text_status": {
+        "es": "borrador_con_fuente_pendiente_revision_humana",
+        "en": "borrador_con_fuente_pendiente_revision_humana",
+        "pt-BR": "borrador_con_fuente_pendiente_revision_humana"
+      }
+    },
+    {
+      "slug": "plaza-santa-teresa",
+      "type": "place",
+      "publication_status": "draft",
+      "source_ids": [
+        "centro-ruta"
+      ],
+      "image": null,
+      "image_status": "pendiente_foto_real_licenciada",
+      "translations": {
+        "es": {
+          "name": "Plaza de Santa Teresa",
+          "description": "Espacio urbano próximo al Museo Naval y al acceso al recinto histórico. No se promete música, eventos o mesas disponibles.",
+          "external_url": "https://colombia.travel/es/cartagena/recorrido-por-el-centro-historico-de-cartagena",
+          "external_label": "Fuente / Source / Fonte"
+        },
+        "en": {
+          "name": "Santa Teresa square",
+          "description": "Urban square near the Naval Museum and the historic enclosure entrance. Music, events and available tables are not promised.",
+          "external_url": "https://colombia.travel/es/cartagena/recorrido-por-el-centro-historico-de-cartagena",
+          "external_label": "Fuente / Source / Fonte"
+        },
+        "pt-BR": {
+          "name": "Praça de Santa Teresa",
+          "description": "Praça urbana próxima ao Museu Naval e ao acesso ao recinto histórico. Não são prometidos música, eventos ou mesas disponíveis.",
+          "external_url": "https://colombia.travel/es/cartagena/recorrido-por-el-centro-historico-de-cartagena",
+          "external_label": "Fuente / Source / Fonte"
+        }
+      },
+      "category": "patrimonio-espacio-publico",
+      "location": {
+        "country": "CO",
+        "department": "Bolívar",
+        "municipality": "Cartagena de Indias",
+        "sector": "Centro histórico / San Diego",
+        "coordinates": null,
+        "location_status": "sector_documentado_sin_georreferenciacion_verificada"
+      },
+      "inclusion": {
+        "included": true,
+        "reason": "Interés turístico y evidencia institucional identificados; ampliación de profundidad."
+      },
+      "text_status": {
+        "es": "borrador_con_fuente_pendiente_revision_humana",
+        "en": "borrador_con_fuente_pendiente_revision_humana",
+        "pt-BR": "borrador_con_fuente_pendiente_revision_humana"
+      }
+    },
+    {
+      "slug": "portal-dulces",
+      "type": "place",
+      "publication_status": "draft",
+      "source_ids": [
+        "centro-ruta"
+      ],
+      "image": null,
+      "image_status": "pendiente_foto_real_licenciada",
+      "translations": {
+        "es": {
+          "name": "Portal de los Dulces",
+          "description": "Sector comercial para conocer dulces de tradición caribeña. Cada compra y fotografía de vendedores requiere consentimiento y precio confirmado.",
+          "external_url": "https://colombia.travel/es/cartagena/recorrido-por-el-centro-historico-de-cartagena",
+          "external_label": "Fuente / Source / Fonte"
+        },
+        "en": {
+          "name": "Portal de los Dulces",
+          "description": "Commercial area associated with traditional Caribbean sweets. Confirm prices and ask permission before photographing vendors.",
+          "external_url": "https://colombia.travel/es/cartagena/recorrido-por-el-centro-historico-de-cartagena",
+          "external_label": "Fuente / Source / Fonte"
+        },
+        "pt-BR": {
+          "name": "Portal de los Dulces",
+          "description": "Área comercial ligada aos doces de tradição caribenha. Confirme preços e peça autorização antes de fotografar vendedores.",
+          "external_url": "https://colombia.travel/es/cartagena/recorrido-por-el-centro-historico-de-cartagena",
+          "external_label": "Fuente / Source / Fonte"
+        }
+      },
+      "category": "gastronomia-oficios",
+      "location": {
+        "country": "CO",
+        "department": "Bolívar",
+        "municipality": "Cartagena de Indias",
+        "sector": "Centro histórico / San Diego",
+        "coordinates": null,
+        "location_status": "sector_documentado_sin_georreferenciacion_verificada"
+      },
+      "inclusion": {
+        "included": true,
+        "reason": "Interés turístico y evidencia institucional identificados; ampliación de profundidad."
+      },
+      "text_status": {
+        "es": "borrador_con_fuente_pendiente_revision_humana",
+        "en": "borrador_con_fuente_pendiente_revision_humana",
+        "pt-BR": "borrador_con_fuente_pendiente_revision_humana"
+      }
+    },
+    {
+      "slug": "serrezuela",
+      "type": "place",
+      "publication_status": "draft",
+      "source_ids": [
+        "centro-ruta"
+      ],
+      "image": null,
+      "image_status": "pendiente_foto_real_licenciada",
+      "translations": {
+        "es": {
+          "name": "La Serrezuela",
+          "description": "Espacio comercial que integra la antigua plaza de toros. Su mención como atractivo no representa una alianza ni autoriza usar fotos de tiendas.",
+          "external_url": "https://colombia.travel/es/cartagena/recorrido-por-el-centro-historico-de-cartagena",
+          "external_label": "Fuente / Source / Fonte"
+        },
+        "en": {
+          "name": "La Serrezuela",
+          "description": "Commercial space incorporating the former bullring. Its listing does not imply a partnership or permission to use shop photographs.",
+          "external_url": "https://colombia.travel/es/cartagena/recorrido-por-el-centro-historico-de-cartagena",
+          "external_label": "Fuente / Source / Fonte"
+        },
+        "pt-BR": {
+          "name": "La Serrezuela",
+          "description": "Espaço comercial que integra a antiga praça de touros. A indicação não implica parceria nem autorização para usar fotos das lojas.",
+          "external_url": "https://colombia.travel/es/cartagena/recorrido-por-el-centro-historico-de-cartagena",
+          "external_label": "Fuente / Source / Fonte"
+        }
+      },
+      "category": "compras",
+      "location": {
+        "country": "CO",
+        "department": "Bolívar",
+        "municipality": "Cartagena de Indias",
+        "sector": "Centro histórico / San Diego",
+        "coordinates": null,
+        "location_status": "sector_documentado_sin_georreferenciacion_verificada"
+      },
+      "inclusion": {
+        "included": true,
+        "reason": "Interés turístico y evidencia institucional identificados; ampliación de profundidad."
+      },
+      "text_status": {
+        "es": "borrador_con_fuente_pendiente_revision_humana",
+        "en": "borrador_con_fuente_pendiente_revision_humana",
+        "pt-BR": "borrador_con_fuente_pendiente_revision_humana"
+      }
+    },
+    {
+      "slug": "teatro-adolfo-mejia",
+      "type": "place",
+      "publication_status": "draft",
+      "source_ids": [
+        "teatro"
+      ],
+      "image": null,
+      "image_status": "pendiente_foto_real_licenciada",
+      "translations": {
+        "es": {
+          "name": "Teatro Adolfo Mejía",
+          "description": "Escenario patrimonial administrado por el IPCC. Consulta la programación oficial vigente; no se anuncia una función concreta sin fecha confirmada.",
+          "external_url": "https://www.cartagena.gov.co/noticias/teatro-adolfo-mejia-presenta-su-temporada-2026-una-agenda-diversa-abierta-nuevos-publicos",
+          "external_label": "Fuente / Source / Fonte"
+        },
+        "en": {
+          "name": "Adolfo Mejía Theatre",
+          "description": "Heritage theatre managed by IPCC. Check its current official programme; no specific performance is announced without a confirmed date.",
+          "external_url": "https://www.cartagena.gov.co/noticias/teatro-adolfo-mejia-presenta-su-temporada-2026-una-agenda-diversa-abierta-nuevos-publicos",
+          "external_label": "Fuente / Source / Fonte"
+        },
+        "pt-BR": {
+          "name": "Teatro Adolfo Mejía",
+          "description": "Teatro patrimonial administrado pelo IPCC. Consulte a programação oficial atual; nenhuma apresentação específica é anunciada sem data confirmada.",
+          "external_url": "https://www.cartagena.gov.co/noticias/teatro-adolfo-mejia-presenta-su-temporada-2026-una-agenda-diversa-abierta-nuevos-publicos",
+          "external_label": "Fuente / Source / Fonte"
+        }
+      },
+      "category": "cultura-museos",
+      "location": {
+        "country": "CO",
+        "department": "Bolívar",
+        "municipality": "Cartagena de Indias",
+        "sector": "Centro histórico / San Diego",
+        "coordinates": null,
+        "location_status": "sector_documentado_sin_georreferenciacion_verificada"
+      },
+      "inclusion": {
+        "included": true,
+        "reason": "Interés turístico y evidencia institucional identificados; ampliación de profundidad."
+      },
+      "text_status": {
+        "es": "borrador_con_fuente_pendiente_revision_humana",
+        "en": "borrador_con_fuente_pendiente_revision_humana",
+        "pt-BR": "borrador_con_fuente_pendiente_revision_humana"
+      }
+    },
+    {
+      "slug": "la-boquilla",
+      "type": "place",
+      "publication_status": "draft",
+      "source_ids": [
+        "boquilla"
+      ],
+      "image": {
+        "asset_id": "boquilla-2020",
+        "file": "imagenes/derivados/boquilla-2020-tarjeta.webp",
+        "alt": {
+          "es": "Barcos en La Boquilla, Cartagena, en2020; contexto local, sin identificar operador o actividad contratada.",
+          "en": "Boats in La Boquilla, Cartagena, in2020; local context without an identified operator or booked activity.",
+          "pt-BR": "Barcos em La Boquilla, Cartagena, em2020; contexto local sem operador identificado ou atividade contratada."
+        }
+      },
+      "image_status": "referencia_contextual_local_pendiente_aprobacion_por_ubicacion",
+      "translations": {
+        "es": {
+          "name": "La Boquilla",
+          "description": "Corregimiento pesquero de raíces afrocaribeñas al norte de Cartagena. Conoce su territorio con respeto por las comunidades y sin atribuir acceso privado o servicios no contratados.",
+          "external_url": "https://colombia.travel/es/blog/revista-colombia/la-boquilla",
+          "external_label": "Fuente / Source / Fonte"
+        },
+        "en": {
+          "name": "La Boquilla",
+          "description": "Fishing community with Afro-Caribbean roots north of Cartagena. Respect residents and do not assume access to private areas or unbooked services.",
+          "external_url": "https://colombia.travel/es/blog/revista-colombia/la-boquilla",
+          "external_label": "Fuente / Source / Fonte"
+        },
+        "pt-BR": {
+          "name": "La Boquilla",
+          "description": "Comunidade pesqueira de raízes afro-caribenhas ao norte de Cartagena. Respeite os moradores e não presuma acesso a áreas privadas ou serviços não contratados.",
+          "external_url": "https://colombia.travel/es/blog/revista-colombia/la-boquilla",
+          "external_label": "Fuente / Source / Fonte"
+        }
+      },
+      "category": "naturaleza",
+      "location": {
+        "country": "CO",
+        "department": "Bolívar",
+        "municipality": "Cartagena de Indias",
+        "sector": "La Boquilla",
+        "coordinates": null,
+        "location_status": "sector_documentado_sin_georreferenciacion_verificada"
+      },
+      "inclusion": {
+        "included": true,
+        "reason": "Interés turístico y evidencia institucional identificados; ampliación de profundidad."
+      },
+      "text_status": {
+        "es": "borrador_con_fuente_pendiente_revision_humana",
+        "en": "borrador_con_fuente_pendiente_revision_humana",
+        "pt-BR": "borrador_con_fuente_pendiente_revision_humana"
+      }
+    },
+    {
+      "slug": "manglares-boquilla",
+      "type": "place",
+      "publication_status": "draft",
+      "source_ids": [
+        "pesca-boquilla"
+      ],
+      "image": null,
+      "image_status": "pendiente_foto_real_licenciada",
+      "translations": {
+        "es": {
+          "name": "Manglares y ciénagas de La Boquilla",
+          "description": "Paisaje de manglar relacionado con las ciénagas de Juan Polo y la Virgen. Los recorridos en canoa requieren operador, condiciones y permisos reconfirmados.",
+          "external_url": "https://colombia.travel/es/mapa-turismo/pesca-con-locales-en-la-boquilla",
+          "external_label": "Fuente / Source / Fonte"
+        },
+        "en": {
+          "name": "La Boquilla mangroves and lagoons",
+          "description": "Mangrove landscape associated with the Juan Polo and Virgen lagoons. Canoe visits require reconfirmed operators, conditions and permissions.",
+          "external_url": "https://colombia.travel/es/mapa-turismo/pesca-con-locales-en-la-boquilla",
+          "external_label": "Fuente / Source / Fonte"
+        },
+        "pt-BR": {
+          "name": "Manguezais e lagoas de La Boquilla",
+          "description": "Paisagem de manguezais associada às lagoas Juan Polo e Virgen. Passeios de canoa exigem reconfirmação do operador, das condições e das permissões.",
+          "external_url": "https://colombia.travel/es/mapa-turismo/pesca-con-locales-en-la-boquilla",
+          "external_label": "Fuente / Source / Fonte"
+        }
+      },
+      "category": "naturaleza",
+      "location": {
+        "country": "CO",
+        "department": "Bolívar",
+        "municipality": "Cartagena de Indias",
+        "sector": "La Boquilla",
+        "coordinates": null,
+        "location_status": "sector_documentado_sin_georreferenciacion_verificada"
+      },
+      "inclusion": {
+        "included": true,
+        "reason": "Interés turístico y evidencia institucional identificados; ampliación de profundidad."
+      },
+      "text_status": {
+        "es": "borrador_con_fuente_pendiente_revision_humana",
+        "en": "borrador_con_fuente_pendiente_revision_humana",
+        "pt-BR": "borrador_con_fuente_pendiente_revision_humana"
       }
     }
   ],
@@ -195,7 +853,28 @@
         "es": "Caminata de observación por Centro y San Diego; propuesta editorial autónoma, sin guía ni reserva incluida.",
         "en": "Self-directed walk through Centro and San Diego; an editorial suggestion without an included guide or booking.",
         "pt-BR": "Caminhada autônoma por Centro e San Diego; sugestão editorial sem guia ou reserva incluídos."
-      }
+      },
+      "evidence_status": "actividad_editorial_sin_contratacion",
+      "publication_status": "draft",
+      "public_visible": false,
+      "image": null,
+      "image_status": "pendiente_foto_real_de_actividad",
+      "partnership": false,
+      "availability_confirmed": false,
+      "visual_candidates": [
+        {
+          "source_url": "https://commons.wikimedia.org/wiki/File:Getsemani_Street_Scene,_Cartagena,_Colombia_(24217787419).jpg",
+          "status": "contexto_no_actividad",
+          "reason": "Calle de Getsemaní licenciada existente; no representa el recorrido Centro/SanDiego propuesto ni guía contratado; no reasignada."
+        }
+      ],
+      "experience_class": "editorial_autonoma",
+      "blocking_reason": "Falta foto autorizada y aprobación humana.",
+      "registry_status": "no_verificado",
+      "permit_status": "no_verificado",
+      "price_status": "no_verificado",
+      "validity_status": "no_reconfirmada",
+      "geographic_scope": "Cartagena; ruta exacta pendiente de validación"
     },
     {
       "id": "visita-muhca",
@@ -208,7 +887,276 @@
         "es": "Explora las exposiciones del MUHCA; consulta programación y entrada con el museo.",
         "en": "Explore MUHCA’s exhibitions; check its programme and admission with the museum.",
         "pt-BR": "Explore as exposições do MUHCA; consulte a programação e os ingressos com o museu."
-      }
+      },
+      "evidence_status": "actividad_editorial_sin_contratacion",
+      "publication_status": "draft",
+      "public_visible": false,
+      "image": null,
+      "image_status": "pendiente_foto_real_de_actividad",
+      "partnership": false,
+      "availability_confirmed": false,
+      "visual_candidates": [
+        {
+          "source_url": "https://commons.wikimedia.org/wiki/File:Colombia,_Cartagena,_Palacio_de_la_Inquisici%C3%B3n.jpg",
+          "status": "contexto_no_actividad",
+          "reason": "Fachada licenciada existente no muestra visita guiada/exposiciones interiores; permiso y fotografía específicos pendientes."
+        }
+      ],
+      "experience_class": "editorial_autonoma",
+      "blocking_reason": "Falta foto autorizada y aprobación humana.",
+      "registry_status": "no_verificado",
+      "permit_status": "no_verificado",
+      "price_status": "no_verificado",
+      "validity_status": "no_reconfirmada",
+      "geographic_scope": "Cartagena; ruta exacta pendiente de validación"
+    },
+    {
+      "id": "bus-panoramico",
+      "source_ids": [
+        "bus-city"
+      ],
+      "operator": "City Sightseeing Cartagena",
+      "operator_url": "https://citysightseeing.com.co/es/bus-turistico-cartagena/",
+      "evidence_status": "oferta_publica_operador_consultada",
+      "publication_status": "draft",
+      "public_visible": false,
+      "reservable": false,
+      "availability_confirmed": false,
+      "partnership": false,
+      "image": null,
+      "image_status": "pendiente_foto_actividad_y_permiso_no_usar_foto_generica",
+      "translations": {
+        "es": "Recorrido en bus turístico. Oferta identificada para investigar y vincular tras revisión. Consulta al operador requisitos, itinerario, disponibilidad y precio. No existe alianza ni reserva con el portal.",
+        "en": "Tourist bus route. Identified for research and potential linking after review. Check requirements, itinerary, availability and prices with the operator. No partnership or booking with the portal exists.",
+        "pt-BR": "Percurso em ônibus turístico. Oferta identificada para pesquisa e possível indicação após revisão. Consulte requisitos, roteiro, disponibilidade e preços com o operador. Não existe parceria nem reserva com o portal."
+      },
+      "visual_candidates": [
+        {
+          "source_url": "https://city-sightseeing.com/es/15/cartagena/12/bus-turistico-cartagena",
+          "status": "pendiente_permiso_no_usable",
+          "reason": "Galería propia del operador: sin licencia abierta identificada; no descargada. Commons Bus_en_Cartagena,_Colombia.jpg es un bus Chevrolet de2012 sin identificación de operador turístico: rechazado para esta actividad."
+        }
+      ],
+      "experience_class": "oferta_operador_documentada",
+      "blocking_reason": "Falta foto autorizada y aprobación humana.",
+      "registry_status": "no_verificado",
+      "permit_status": "no_verificado",
+      "price_status": "no_verificado",
+      "validity_status": "no_reconfirmada",
+      "geographic_scope": "Cartagena; ruta exacta pendiente de validación"
+    },
+    {
+      "id": "buceo-rosario",
+      "source_ids": [
+        "diving-planet"
+      ],
+      "operator": "Diving Planet",
+      "operator_url": "https://divingplanet.org/",
+      "evidence_status": "oferta_publica_operador_consultada",
+      "publication_status": "draft",
+      "public_visible": false,
+      "reservable": false,
+      "availability_confirmed": false,
+      "partnership": false,
+      "image": null,
+      "image_status": "pendiente_foto_actividad_y_permiso_no_usar_foto_generica",
+      "translations": {
+        "es": "Buceo en el entorno de las Islas del Rosario. Oferta identificada para investigar y vincular tras revisión. Consulta al operador requisitos, itinerario, disponibilidad y precio. No existe alianza ni reserva con el portal.",
+        "en": "Scuba diving around the Rosario Islands. Identified for research and potential linking after review. Check requirements, itinerary, availability and prices with the operator. No partnership or booking with the portal exists.",
+        "pt-BR": "Mergulho no entorno das Ilhas do Rosário. Oferta identificada para pesquisa e possível indicação após revisão. Consulte requisitos, roteiro, disponibilidade e preços com o operador. Não existe parceria nem reserva com o portal."
+      },
+      "visual_candidates": [
+        {
+          "source_url": "https://divingplanet.org/",
+          "status": "pendiente_permiso_no_usable",
+          "reason": "Sitio del operador muestra buceo nocturno y buzo panorámica; sin licencia comercial/adaptación pública verificada ni ubicación individual de toma. No descargada."
+        }
+      ],
+      "experience_class": "oferta_operador_documentada",
+      "blocking_reason": "Falta foto autorizada y aprobación humana.",
+      "registry_status": "no_verificado",
+      "permit_status": "no_verificado",
+      "price_status": "no_verificado",
+      "validity_status": "no_reconfirmada",
+      "geographic_scope": "excursion_costera_fuera_del_nucleo_urbano"
+    },
+    {
+      "id": "snorkel-rosario",
+      "source_ids": [
+        "diving-planet"
+      ],
+      "operator": "Diving Planet",
+      "operator_url": "https://divingplanet.org/",
+      "evidence_status": "oferta_publica_operador_consultada",
+      "publication_status": "draft",
+      "public_visible": false,
+      "reservable": false,
+      "availability_confirmed": false,
+      "partnership": false,
+      "image": null,
+      "image_status": "pendiente_foto_actividad_y_permiso_no_usar_foto_generica",
+      "translations": {
+        "es": "Snorkel en el entorno de las Islas del Rosario. Oferta identificada para investigar y vincular tras revisión. Consulta al operador requisitos, itinerario, disponibilidad y precio. No existe alianza ni reserva con el portal.",
+        "en": "Snorkelling around the Rosario Islands. Identified for research and potential linking after review. Check requirements, itinerary, availability and prices with the operator. No partnership or booking with the portal exists.",
+        "pt-BR": "Snorkel no entorno das Ilhas do Rosário. Oferta identificada para pesquisa e possível indicação após revisão. Consulte requisitos, roteiro, disponibilidade e preços com o operador. Não existe parceria nem reserva com o portal."
+      },
+      "visual_candidates": [
+        {
+          "source_url": "https://divingplanet.org/",
+          "status": "pendiente_permiso_no_usable",
+          "reason": "Oferta de snorkel comprobada pero ninguna foto específica de snorkel en Rosario con derechos identificados. No reutilizar foto genérica de buceo."
+        }
+      ],
+      "experience_class": "oferta_operador_documentada",
+      "blocking_reason": "Falta foto autorizada y aprobación humana.",
+      "registry_status": "no_verificado",
+      "permit_status": "no_verificado",
+      "price_status": "no_verificado",
+      "validity_status": "no_reconfirmada",
+      "geographic_scope": "excursion_costera_fuera_del_nucleo_urbano"
+    },
+    {
+      "id": "catamaran-cartagena",
+      "source_ids": [
+        "bona-vida"
+      ],
+      "operator": "Bona Vida Catamaranes",
+      "operator_url": "https://www.bonavidacatamaranes.com/",
+      "evidence_status": "oferta_publica_operador_consultada",
+      "publication_status": "draft",
+      "public_visible": false,
+      "reservable": false,
+      "availability_confirmed": false,
+      "partnership": false,
+      "image": null,
+      "image_status": "pendiente_foto_actividad_y_permiso_no_usar_foto_generica",
+      "translations": {
+        "es": "Excursión marítima en catamarán. Oferta identificada para investigar y vincular tras revisión. Consulta al operador requisitos, itinerario, disponibilidad y precio. No existe alianza ni reserva con el portal.",
+        "en": "Catamaran excursion. Identified for research and potential linking after review. Check requirements, itinerary, availability and prices with the operator. No partnership or booking with the portal exists.",
+        "pt-BR": "Passeio marítimo de catamarã. Oferta identificada para pesquisa e possível indicação após revisão. Consulte requisitos, roteiro, disponibilidade e preços com o operador. Não existe parceria nem reserva com o portal."
+      },
+      "visual_candidates": [
+        {
+          "source_url": "https://www.bonavidacatamaranes.com/es/galeria-fotos",
+          "status": "pendiente_permiso_no_usable",
+          "reason": "Galería específica del catamarán del operador consultada; copyright2026, sin autorización comercial/adaptación identificada. No descargada."
+        }
+      ],
+      "experience_class": "oferta_operador_documentada",
+      "blocking_reason": "Falta foto autorizada y aprobación humana.",
+      "registry_status": "no_verificado",
+      "permit_status": "no_verificado",
+      "price_status": "no_verificado",
+      "validity_status": "no_reconfirmada",
+      "geographic_scope": "Cartagena; ruta exacta pendiente de validación"
+    },
+    {
+      "id": "pesca-boquilla",
+      "source_ids": [
+        "pesca-boquilla"
+      ],
+      "operator": "IMPULSE Travel",
+      "operator_url": "https://colombia.travel/es/mapa-turismo/pesca-con-locales-en-la-boquilla",
+      "evidence_status": "oferta_institucional_operador_por_reconfirmar",
+      "publication_status": "draft",
+      "public_visible": false,
+      "reservable": false,
+      "availability_confirmed": false,
+      "partnership": false,
+      "image": null,
+      "image_status": "pendiente_foto_actividad_y_permiso_no_usar_foto_generica",
+      "translations": {
+        "es": "Pesca artesanal y manglar en La Boquilla. Oferta identificada para investigar y vincular tras revisión. Consulta al operador requisitos, itinerario, disponibilidad y precio. No existe alianza ni reserva con el portal.",
+        "en": "Traditional fishing and mangroves in La Boquilla. Identified for research and potential linking after review. Check requirements, itinerary, availability and prices with the operator. No partnership or booking with the portal exists.",
+        "pt-BR": "Pesca artesanal e manguezais em La Boquilla. Oferta identificada para pesquisa e possível indicação após revisão. Consulte requisitos, roteiro, disponibilidade e preços com o operador. Não existe parceria nem reserva com o portal."
+      },
+      "visual_candidates": [
+        {
+          "source_url": "https://commons.wikimedia.org/wiki/File:Boats_in_La_Boquilla.jpg",
+          "status": "licencia_CC_BY_SA4_contexto_no_oferta",
+          "reason": "Barcos en La Boquilla, Bernard Gagnon2020; contexto local, no muestra pesca en ejecución ni prueba servicio IMPULSE. Revisar original por uso, sin completar gate foto actividad."
+        },
+        {
+          "source_url": "https://colombia.travel/es/mapa-turismo/pesca-con-locales-en-la-boquilla",
+          "status": "pendiente_permiso_no_usable",
+          "reason": "Fotos atribuidas a IMPULSE en la fuente institucional; sin autorización de reutilización identificada. No descargadas."
+        }
+      ],
+      "experience_class": "candidato_por_validar",
+      "blocking_reason": "Falta reconfirmación directa del operador/oferta y fotografía autorizada; oculto.",
+      "registry_status": "no_verificado",
+      "permit_status": "no_verificado",
+      "price_status": "no_verificado",
+      "validity_status": "no_reconfirmada",
+      "geographic_scope": "Cartagena; ruta exacta pendiente de validación"
+    },
+    {
+      "id": "atardecer-sibarita",
+      "source_ids": [
+        "sibarita"
+      ],
+      "operator": "Sibarita del Mar",
+      "operator_url": "https://sibarita.com.co/en/paseos",
+      "evidence_status": "candidato_oculto",
+      "publication_status": "draft",
+      "public_visible": false,
+      "reservable": false,
+      "availability_confirmed": false,
+      "partnership": false,
+      "image": null,
+      "image_status": "pendiente_foto_actividad_y_permiso_no_usar_foto_generica",
+      "translations": {
+        "es": "Recorrido de atardecer por la bahía. Oferta identificada para investigar y vincular tras revisión. Consulta al operador requisitos, itinerario, disponibilidad y precio. No existe alianza ni reserva con el portal.",
+        "en": "Sunset cruise on the bay. Identified for research and potential linking after review. Check requirements, itinerary, availability and prices with the operator. No partnership or booking with the portal exists.",
+        "pt-BR": "Passeio ao pôr do sol pela baía. Oferta identificada para pesquisa e possível indicação após revisão. Consulte requisitos, roteiro, disponibilidade e preços com o operador. Não existe parceria nem reserva com o portal."
+      },
+      "visual_candidates": [
+        {
+          "source_url": "https://sibarita.com.co/en/paseos",
+          "status": "pendiente_apertura_permiso_no_usable",
+          "reason": "Resultado indexado identifica fotos Sunset Express/Master; apertura directa falló y licencia no comprobada. No descargadas."
+        }
+      ],
+      "experience_class": "candidato_por_validar",
+      "blocking_reason": "Falta reconfirmación directa del operador/oferta y fotografía autorizada; oculto.",
+      "registry_status": "no_verificado",
+      "permit_status": "no_verificado",
+      "price_status": "no_verificado",
+      "validity_status": "no_reconfirmada",
+      "geographic_scope": "Cartagena; ruta exacta pendiente de validación"
+    },
+    {
+      "id": "kayak-bahia-candidato",
+      "source_ids": [],
+      "operator": null,
+      "operator_url": "",
+      "evidence_status": "candidato_oculto_sin_operador_verificado",
+      "publication_status": "draft",
+      "public_visible": false,
+      "reservable": false,
+      "availability_confirmed": false,
+      "partnership": false,
+      "image": null,
+      "image_status": "pendiente",
+      "translations": {
+        "es": "Idea de experiencia de kayak en la bahía para validar con un operador. No es una oferta existente comprobada; mantener oculta.",
+        "en": "Bay kayaking idea to validate with an operator. This is not a verified existing offer; keep hidden.",
+        "pt-BR": "Ideia de experiência de caiaque na baía a validar com um operador. Não é oferta existente comprovada; manter oculta."
+      },
+      "visual_candidates": [
+        {
+          "source_url": "",
+          "status": "sin_referencia_local_verificada",
+          "reason": "No existe operador verificado ni referencia con licencia identificada para esta propuesta. No usar fotografía de otra ciudad."
+        }
+      ],
+      "experience_class": "candidato_por_validar",
+      "blocking_reason": "Falta reconfirmación directa del operador/oferta y fotografía autorizada; oculto.",
+      "registry_status": "no_verificado",
+      "permit_status": "no_verificado",
+      "price_status": "no_verificado",
+      "validity_status": "no_reconfirmada",
+      "geographic_scope": "Cartagena; ruta exacta pendiente de validación"
     }
   ],
   "practical": {
@@ -233,6 +1181,8 @@
   "photo_manifest": "imagenes/manifiesto.json",
   "importer_compatible": false,
   "notes": [
-    "Paquete de investigación privado; no importación v2 aprobada. Falta foto aceptable de murallas, revisión humana e integración importador v2."
+    "Inventario ampliado: no es censo exhaustivo ni límite de sitios. Nuevos sitios sin foto permanecen investigación, nunca se rellenan con IA o imágenes genéricas.",
+    "Paquete v2 parcial conserva los tres atractivos con foto apta; NO representa todo el inventario ampliado.",
+    "Aprobación de original/texto por ubicación e idioma precede cualquier ilustración, que requiere aprobación separada. No se ha generado ilustración."
   ]
 }
