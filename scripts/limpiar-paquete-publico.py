@@ -110,7 +110,33 @@ def prune_unreferenced_destination_images(public: Path, catalog: Path) -> list[s
     return removed
 
 
-def clean(public: Path, catalog: Path) -> dict:
+def prune_unreferenced_assets(public: Path, catalog: Path, app: Path|None=None) -> list[str]:
+    """Keep package assets referenced by runtime or the private destination seed."""
+    text_extensions={'.html','.php','.css','.js','.json','.xml','.txt','.md','.sql'}
+    references=[]
+    for root in (public, app):
+        if root is None or not root.is_dir(): continue
+        for source in root.rglob('*'):
+            if source.is_file() and source.suffix.lower() in text_extensions:
+                references.append(source.read_text(errors='ignore').lower())
+    # The private seed contains the paths read dynamically after import, even
+    # when a destination or attraction is still a draft and has no public HTML.
+    references.append(catalog.read_text(errors='ignore').lower())
+    text='\n'.join(references)
+    removed=[]
+    license_names=('license','licence','copying','notice')
+    for asset in (public/'assets').rglob('*'):
+        if (asset.is_file() and not any(token in asset.name.lower() for token in license_names)
+                and asset.name.lower() not in text):
+            removed.append(asset.relative_to(public).as_posix())
+            asset.unlink()
+    for folder in sorted((public/'assets').rglob('*'),reverse=True):
+        if folder.is_dir() and not any(folder.iterdir()):
+            folder.rmdir()
+    return removed
+
+
+def clean(public: Path, catalog: Path, app: Path|None=None) -> dict:
     if not public.is_dir() or not catalog.is_file():
         raise ValueError('Se requieren la raíz pública y el catálogo dinámico del paquete.')
     removed_pages=remove_redundant_pages(public,catalog)
@@ -119,16 +145,19 @@ def clean(public: Path, catalog: Path) -> dict:
     sitemap_entries=remove_credit_sitemap_entries(public)
     card_images=replace_legacy_jerico_card(public)
     removed_photos=prune_unreferenced_destination_images(public,catalog)
+    removed_unreferenced=prune_unreferenced_assets(public,catalog,app)
     return {'removed_destination_pages':removed_pages,'removed_credit_pages':removed_credits,
             'removed_credit_links':links,'removed_credit_sitemap_entries':sitemap_entries,
             'updated_jerico_card_images':card_images,
-            'removed_legacy_jerico_photos':removed_photos}
+            'removed_legacy_jerico_photos':removed_photos,
+            'removed_unreferenced_assets':removed_unreferenced}
 
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--public',type=Path,required=True)
     parser.add_argument('--catalog',type=Path,required=True)
+    parser.add_argument('--app',type=Path)
     args=parser.parse_args()
-    result=clean(args.public.resolve(),args.catalog.resolve())
+    result=clean(args.public.resolve(),args.catalog.resolve(),args.app.resolve() if args.app else None)
     print(json.dumps(result,ensure_ascii=False,indent=2))

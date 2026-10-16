@@ -1,102 +1,67 @@
 # Despliegue SFTP de Explorando Lugares
 
-Script independiente: `scripts/desplegar-sftp.py`. Solo requiere Python 3 y OpenSSH `sftp`. No ejecuta comandos shell en el hosting, no despliega automáticamente y no consulta credenciales de otros proyectos.
+El despliegue normal es directo e incremental. El script compara SHA-256 del paquete construido con el último manifiesto y transfiere solo archivos nuevos o cambiados. No crea copias del sitio, carpetas de staging, versiones remotas, bloqueos ni una activación posterior.
 
-## Configuración
+## Preparación
 
-Copiar `deploy/sftp.example.json` a `.local/sftp.json`, completar los datos propios y mantener el archivo local fuera de Git. No admite passwords ni passphrases en JSON. La autenticación usa una clave SSH autorizada en cPanel, desbloqueada previamente en el agente SSH si corresponde. Con `identity_file` vacío se usa el agente o las identidades predeterminadas de OpenSSH; para aislar el acceso, indicar una clave propia de Explorando Lugares.
+Completa `.local/sftp.json` a partir de `deploy/sftp.example.json`. No guardes contraseñas ni frases de acceso allí. La conexión requiere que la clave SSH ya esté desbloqueada en el agente y que la huella del servidor esté verificada en el `known_hosts` configurado. El `remote_base` debe ser una carpeta exclusiva fuera de `public_html`; para este dominio `public_root` es `public_html/explorandolugares.com`.
 
-Campos: servidor, puerto, usuario, ruta de clave, archivo de huellas verificadas, `remote_base`, `public_directory` y, opcionalmente, `public_root`. Por autorización del propietario, la configuración local puede referenciar la misma cuenta y llave SSH del hosting compartido. Solo se reutiliza el acceso técnico; la carpeta, contenidos y configuración de Explorando Lugares son independientes. Nunca copiar la llave privada al proyecto.
+## Revisar y publicar
 
-Estructura requerida, con base exclusiva fuera de `public_html`, `www`, `htdocs` o `httpdocs`:
-
-```
-/home/USUARIO/explorandolugares/     remote_base, debe existir
-  public/                         raíz web del dominio, public_directory
-  app/                            PHP privado gestionado por el despliegue
-  private/config.php              configuración real; nunca transferida por este script
-  .el-releases/                   versiones y respaldos fuera de la raíz web
-```
-
-### Raíz del dominio confirmada por el propietario
-
-El dominio usa `public_html/explorandolugares.com`. La configuración local `.local/sftp.json` incorpora `public_root` con esa ruta absoluta dentro de la cuenta; `remote_base` sigue siendo una carpeta exclusiva fuera de `public_html`.
-
-```
-/home/USUARIO/public_html/explorandolugares.com/  sitio público
-/home/USUARIO/explorandolugares/app/             backend privado
-/home/USUARIO/explorandolugares/private/         configuración real
-/home/USUARIO/explorandolugares/.el-releases/    versiones y respaldos
-```
-
-Con `public_root`, el script ajusta las dos entradas PHP solo en el paquete generado para que carguen el backend privado por su ruta absoluta. No modifica los archivos fuente ni sube `private/config.php`. Solo permite ese dominio, en la misma cuenta; rechaza la raíz general `public_html` y otros dominios. El staging y los respaldos permanecen fuera de la web; la activación apunta a `public_root`. `--confirm-target` sigue requiriendo el `remote_base` privado exacto.
-
-La ruta privada debe existir antes de transferir. Inspeccionar la instalación existente antes de escoger actualización o primera instalación: el modo existente requiere sitio público y `app`; no usar `--initial` si alguna de esas carpetas existe. Si hay un sitio público y todavía no hay backend privado, preparar una migración explícita después de respaldar e inspeccionar; no forzar el modo inicial.
-
-Para desbloquear la llave desde Terminal en este Mac, ejecutar `ssh-add --apple-use-keychain ~/.ssh/paradigma_godaddy` e introducir su frase de acceso únicamente en esa Terminal. No enviarla por chat ni guardarla en JSON.
-
-Crear/asignar la raíz pública del dominio en cPanel según la disposición elegida. Si la cuenta exige otra disposición, adaptar el script y los require PHP antes de usarlo; no cambiar `remote_base` por la raíz del sitio principal. El script sustituye por completo las carpetas `public_directory` y `app`: deben ser exclusivas de esta aplicación. Si existen `.htaccess`, archivos de verificación del dominio, subdominios o contenido manual, incorporar los necesarios a la entrega antes de activar. Los viejos quedan en el respaldo, no en el nuevo sitio. La base de datos y `private/` permanecen fuera de esas carpetas.
-
-## Huella y autenticación
-
-La conexión exige una huella ya verificada; no acepta servidores desconocidos automáticamente. Obtener/comparar la huella con la información del proveedor y establecer una conexión interactiva SFTP con el servidor correcto para registrarla. Nunca desactivar `StrictHostKeyChecking` ni confiar solo en una huella descargada de la misma conexión sin contrastarla. El script ignora la configuración SSH personalizada y no usa ProxyJump ni shell remoto.
-
-Autorizar la clave pública en cPanel; no copiar la clave privada al repositorio o al hosting. Si está cifrada, cargarla mediante `ssh-add` antes de ejecutar el script. Las contraseñas de la base se configuran exclusivamente en `private/config.php` por separado.
-
-## Revisar, subir y activar
-
-Desde la raíz de esta copia:
+Desde la raíz del repositorio:
 
 ```sh
 python3 scripts/desplegar-sftp.py
 ```
 
-Sin flags construye una entrega nueva y un manifiesto con archivos, tamaños y SHA-256 en `.local/deploy/`. Muestra el destino y el total; no se conecta. Revisar el manifiesto antes de transferir. Los campos de ejemplo deben sustituirse por datos reales incluso para generar el plan del destino.
+Esto corre las pruebas locales, construye el paquete en una carpeta temporal y muestra cuántos archivos y megabytes cambiarían. No se conecta ni modifica el hosting.
 
-Solo subir y verificar los archivos en una carpeta de versión, sin tocar el sitio activo:
-
-```sh
-python3 scripts/desplegar-sftp.py --upload
-```
-
-Para primera instalación, con `remote_base` existente y sin `public_directory` ni `app` previas:
+Para una entrega de alcance reducido se puede repetir `--only RUTA_DEL_PAQUETE` por cada archivo autorizado. Por ejemplo, permite desplegar solo las piezas del importador sin publicar cambios acumulados de otras áreas:
 
 ```sh
-python3 scripts/desplegar-sftp.py --activate --initial --confirm-target /home/USUARIO/explorandolugares
+python3 scripts/desplegar-sftp.py --only app/BusinessPackage.php --only public/admin/negocios.php
 ```
 
-Para actualizar una instalación existente, con ambas carpetas presentes:
+La lista usa rutas exactas dentro de `app/` o `public/`, sin comodines. El manifiesto registra el hash nuevo de los archivos enviados y conserva los hashes conocidos de los archivos que quedaron sin tocar; la siguiente entrega completa detectará esos cambios pendientes. Las entregas parciales requieren un manifiesto previo válido.
+
+Cuando quieras publicar ese código:
 
 ```sh
-python3 scripts/desplegar-sftp.py --activate --confirm-target /home/USUARIO/explorandolugares
+python3 scripts/desplegar-sftp.py --deploy
 ```
 
-Si una versión ya está subida y verificada, puede activarse sin volver a transferirla, después de completar las migraciones de base de datos y comprobar el catálogo:
+El script calcula el hash de cada archivo construido una sola vez y compara ese inventario con el JSON local del último despliegue. Envía en una sola sesión SFTP los archivos nuevos o modificados y, al final del mismo lote, el JSON nuevo. No consulta ni vuelve a descargar archivos del hosting para verificar hashes. Envía primero `app/` y después los archivos públicos. Tras el envío correcto, actualiza `.local/deployment-manifest.json`. Las migraciones SQL solo se transfieren; este comando no las ejecuta ni modifica datos de la base.
+
+El manifiesto remoto vive en `remote_base/.explorandolugares-deploy.json`, fuera del directorio público, y registra commit, fecha, rutas, tamaños y SHA-256. El manifiesto local está en `.local/deployment-manifest.json` y queda excluido de Git. El local es la base de comparación; el remoto es una copia de consulta, no se descarga durante los despliegues. En la primera ejecución, el script aprovecha el inventario local compacto generado desde el último despliegue registrado. Si no hay comparación local, el plan avisa que subiría el paquete completo.
+
+En un despliegue completo, el script retira solo archivos que figuren en el manifiesto anterior y ya no estén en el paquete nuevo; no borra archivos que no haya administrado antes. La vista previa enumera esas rutas y el lote SFTP las elimina después de subir los archivos actualizados. Un despliegue `--only` no borra nada. Tampoco modifica `private/config.php`, credenciales ni la base de datos. No hagas dos despliegues al mismo tiempo.
+
+## Limpieza reversible de releases antiguos
+
+El despliegue actual no crea releases ni copias. Para inspeccionar las carpetas heredadas del proceso anterior, usa:
 
 ```sh
-python3 scripts/desplegar-sftp.py --activate-release ID_DEL_RELEASE --confirm-target /home/USUARIO/explorandolugares
+python3 scripts/limpiar-hosting-sftp.py
 ```
 
-Sustituir la ruta de ejemplo por `remote_base` exacto. `--activate` construye/sube una nueva versión; no reutiliza automáticamente una subida anterior. Cada transferencia usa una carpeta nueva. SFTP confirma cada `put`; además, el script vuelve a leer y coteja SHA-256 solo de siete archivos clave, sin descargar de nuevo todas las imágenes. No comprueba funcionamiento PHP, HTTP, SSL o MySQL: verificar esos puntos después del despliegue.
+El listado solo revisa `.el-releases/` y `.el-trash/`, fuera del directorio público. Para apartar un release fechado, usa el ID que muestre el listado:
 
-En una actualización, se renombran `public` y `app` antiguas a `previous-public` y `previous-app` dentro de la versión y se activan las nuevas. No se borran archivos remotos ni respaldos. Los renombrados individuales no forman una transacción conjunta: puede haber unos segundos de indisponibilidad. La cuenta necesita permiso para renombrar las carpetas y el servidor debe mantenerlas en el mismo sistema de archivos. No usar este esquema si el hosting no permite renombrar la raíz del dominio.
+```sh
+python3 scripts/limpiar-hosting-sftp.py --quarantine 20261015T030930Z-1409e3
+```
 
-No se transfieren `private/`, la configuración real, credenciales, referencias `sources/`, el borrador v0.1 ni el histórico `public/` del repositorio. Las migraciones SQL van dentro de `app/database/`, fuera del directorio público, para que puedan aplicarse por el procedimiento de administración del hosting. No habilitar recepción sin configurar MySQL/privacidad conforme a `backend/README.md`.
+El script lo mueve a una papelera fechada en el mismo espacio del hosting. Esto permite restaurarlo para una comprobación, pero no libera espacio todavía. Para restaurar, ejecuta `--restore ID_DE_PAPELERA`. Después de comprobar que el sitio funciona y que no hace falta recuperar el release, `--purge ID_DE_PAPELERA` borra permanentemente solo ese release de la papelera. No se aplica a archivos activos, configuración privada, imágenes subidas por usuarios ni base de datos. La lista previa y el ID son requisito; el script se detiene ante carpetas o nombres inesperados.
 
-## Publicación inicial de destinos
+La papelera es temporal, no un sistema de respaldo: los archivos del portal están en Git y la base de datos se respalda por separado cuando ya existan datos de clientes que proteger. No se hacen copias adicionales en cada despliegue.
 
-La entrega de octubre de 2026 deja Jericó como único destino publicado; los otros 20 destinos del piloto se importan como borrador. Sonsón se agrega desde su paquete ZIP en el panel de administración y también debe permanecer en borrador. Antes de activar el código dinámico en producción, respaldar la base de datos, aplicar una sola vez las migraciones 003 a 007 enumeradas en `backend/README.md`, ejecutar el importador del catálogo semilla y luego cargar el ZIP de Sonsón desde el panel. El importador se detiene si el catálogo de destinos, categorías o negocios ya contiene filas, y no modifica los registros de interesados. Al final verificar que Jericó es el único destino público, que Sonsón aparece en administración como borrador y que el sitemap solo contiene la guía de Jericó.
+La construcción del paquete también retira recursos de `assets/` sin referencias en las páginas, CSS/JS/PHP y el catálogo semilla privado. Conserva imágenes de destinos en borrador si están declaradas en ese catálogo, así como los archivos de licencias. La limpieza remota se limita a archivos del manifiesto anterior que el paquete nuevo ya no incluya; el script no explora ni elimina rutas ajenas al manifiesto.
 
-## Interrupción y recuperación
+## Si una versión sale mal
 
-Se usa un bloqueo remoto exclusivo `.el-deploy-lock`. Si queda tras un error, inspeccionar primero el diario `manifest.json` de la operación y el estado remoto. No iniciar otra publicación encima de una incompleta. El script no hace rollback ciego: una pérdida de conexión después de un rename puede dejar su resultado incierto.
+La recuperación acordada es volver a desplegar la etiqueta estable anterior desde Git. El despliegue directo actualizará solo los archivos que difieran con la versión publicada y retirará los archivos obsoletos que estén registrados en el manifiesto de despliegue. La base de datos requiere evaluación aparte si el cambio fallido incluyó migraciones: Git no revierte datos ni migraciones destructivas.
 
-Para recuperar una actualización, detener otras operaciones y revisar cuáles de `previous-public`, `previous-app`, `public` y `app` existen realmente. Si las nuevas están activas, moverlas a nombres libres de respaldo en la versión; después renombrar la pareja `previous-*` a sus ubicaciones originales. Si solo se movió una carpeta antigua, restaurar solo esa. No sobrescribir ni borrar configuraciones. Verificar el sitio y retirar únicamente el directorio vacío de bloqueo al terminar. En primera instalación no hay respaldo previo; preservar lo subido y corregir la configuración antes de continuar.
+El envío SFTP confirma transferencia, pero no valida el funcionamiento de PHP, MySQL, formularios ni permisos del hosting. Después de publicar, revisar las páginas y acciones incluidas en la lista de verificación manual de preproducción.
 
-Los respaldos consumen espacio; no hay borrado automático. Programar su revisión manual y mantener respaldo de base de datos separado.
+## Reducción del historial anterior
 
-## Validación realizada
-
-Pruebas locales con destino ficticio: configuración y rutas inválidas, rechazo de contraseñas, batch con rutas literales, subida solo a versión, respaldo de ambas carpetas, detención ante fallo de activación, primera instalación y comprobación estricta de host. El 12 de octubre de 2026, el propietario desbloqueó la llave en Terminal y se comprobó el acceso real. Se confirmó la raíz del dominio y se inspeccionó su contenido: solo `.well-known/acme-challenge` y `cgi-bin`, ambas sin archivos. Se guardó respaldo local completo y se crearon las carpetas privadas exclusivas del portal. Se preparó una carpeta `app` vacía para que la primera migración preserve la pareja sitio/app mediante el modo de actualización. El staging conserva la estructura de esos directorios auxiliares vacíos; si en futuras instalaciones contienen archivos, incorporarlos a la entrega antes de activar. Consultar el registro de publicación para el resultado final.
-
-Referencia técnica: [OpenSSH SFTP](https://man.openbsd.org/sftp) y [StrictHostKeyChecking](https://man.openbsd.org/ssh_config#StrictHostKeyChecking).
+Los despliegues previos dejaron builds de trabajo en `.local/deploy/`. Se conserva un inventario compacto para iniciar la comparación incremental; los builds fechados y temporales ya no son necesarios. El script nuevo no volverá a crearlos ni a guardar copias del sitio en el hosting.

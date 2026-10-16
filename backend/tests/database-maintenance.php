@@ -12,11 +12,38 @@ maintenance_check($report['migrations']['001-phone-type']==='pending','Missing p
 $rejected=false;try{$tool->applyMigrations();}catch(RuntimeException $e){$rejected=str_contains($e->getMessage(),'MySQL/MariaDB');}
 maintenance_check($rejected&&!in_array('phone_type',$pdo->query('PRAGMA table_info(leads)')->fetchAll(PDO::FETCH_COLUMN,1),true),'Production write actions refuse SQLite and leave it unchanged');
 
+$sqlFile=tempnam(sys_get_temp_dir(),'el-sql-comments-');
+file_put_contents($sqlFile,"-- A semicolon in this comment; must not split SQL.\nCREATE TABLE sql_comment_split_test (id INTEGER PRIMARY KEY);\n");
+$executor=(new ReflectionClass(DatabaseMaintenance::class))->getMethod('executeSqlFile');
+$executor->invoke($tool,$sqlFile);unlink($sqlFile);
+maintenance_check(in_array('sql_comment_split_test',$pdo->query("SELECT name FROM sqlite_master WHERE type='table'")->fetchAll(PDO::FETCH_COLUMN),true),'SQL migration execution ignores semicolons inside full-line comments');
+
 $destinations=new PDO('sqlite::memory:');$destinations->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 $destinations->exec(file_get_contents(dirname(__DIR__).'/database/destinations.sqlite.sql'));
+$preBusinessMigrations=(new DatabaseMaintenance($destinations,$app,$public))->inspect();
+maintenance_check($preBusinessMigrations['migrations']['016-plan-content-limits']==='pending','A pre-existing business summary column does not make migration 016 look partially applied before subscription plans exist');
 $destinations->exec(file_get_contents(dirname(__DIR__).'/database/migrations/006-poi-experience-links.sqlite.sql'));
+$destinations->exec(file_get_contents(dirname(__DIR__).'/database/migrations/008-business-subscriptions.sqlite.sql'));
+$destinations->exec(file_get_contents(dirname(__DIR__).'/database/migrations/009-business-origin.sqlite.sql'));
+$destinations->exec(file_get_contents(dirname(__DIR__).'/database/migrations/010-business-location-subscription-lifecycle.sqlite.sql'));
+$destinations->exec(file_get_contents(dirname(__DIR__).'/database/migrations/011-premium-business-story.sqlite.sql'));
+$destinations->exec(file_get_contents(dirname(__DIR__).'/database/migrations/012-business-image-references.sqlite.sql'));
+$destinations->exec(file_get_contents(dirname(__DIR__).'/database/migrations/013-accounts-location-map.sqlite.sql'));
+$destinations->exec(file_get_contents(dirname(__DIR__).'/database/migrations/014-tiered-business-description.sqlite.sql'));
+$destinations->exec(file_get_contents(dirname(__DIR__).'/database/migrations/015-business-media-quotas.sqlite.sql'));
+$destinations->exec(file_get_contents(dirname(__DIR__).'/database/migrations/016-plan-content-limits.sqlite.sql'));
+$destinations->exec(file_get_contents(dirname(__DIR__).'/database/migrations/017-business-claims.sqlite.sql'));
+$destinations->exec(file_get_contents(dirname(__DIR__).'/database/migrations/018-business-portal.sqlite.sql'));
+$destinations->exec(file_get_contents(dirname(__DIR__).'/database/migrations/019-business-account-applications.sqlite.sql'));
+$destinations->exec(file_get_contents(dirname(__DIR__).'/database/migrations/020-account-password-resets.sqlite.sql'));
+$destinations->exec(file_get_contents(dirname(__DIR__).'/database/migrations/021-business-payment-evidence.sqlite.sql'));
+$destinations->exec(file_get_contents(dirname(__DIR__).'/database/migrations/022-subscription-prices.sqlite.sql'));
+$destinations->exec(file_get_contents(dirname(__DIR__).'/database/migrations/023-business-representation-evidence.sqlite.sql'));
+$destinations->exec(file_get_contents(dirname(__DIR__).'/database/migrations/024-payment-customer-message.sqlite.sql'));
+$destinations->exec(file_get_contents(dirname(__DIR__).'/database/migrations/025-subscription-renewal-history.sqlite.sql'));
+$destinations->exec(file_get_contents(dirname(__DIR__).'/database/migrations/026-business-research-contacts.sqlite.sql'));
 $catalogTool=new DatabaseMaintenance($destinations,$app,$public);$catalog=$catalogTool->inspect();
-foreach(['003-dynamic-destinations','004-media-origin','005-destination-internal-research','006-poi-experience-links','007-media-provenance'] as $id){
+foreach(['003-dynamic-destinations','004-media-origin','005-destination-internal-research','006-poi-experience-links','007-media-provenance','008-business-subscriptions','009-business-origin','010-business-location-subscription-lifecycle','011-premium-business-story','012-business-image-references','013-accounts-location-map','014-tiered-business-description','015-business-media-quotas','016-plan-content-limits','017-business-claims','018-business-portal','019-business-account-applications','020-account-password-resets','021-business-payment-evidence','022-subscription-prices','023-business-representation-evidence','024-payment-customer-message','025-subscription-renewal-history','026-business-research-contacts'] as $id){
     maintenance_check($catalog['migrations'][$id]==='applied','Existing destination schema is recognized without rerunning '.$id);
 }
 maintenance_check(!$catalog['empty_database']&&$catalog['catalog_empty']&&$catalog['driver']==='sqlite','Empty catalog is distinguished from empty schema and local SQLite remains non-production');

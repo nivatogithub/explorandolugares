@@ -52,6 +52,160 @@ final class DatabaseMaintenance
             'checks' => [['media_assets', ['provenance_json']]],
             'requires' => ['media_assets'],
         ],
+        '008-business-subscriptions' => [
+            'file' => '008-business-subscriptions.mysql.sql',
+            'checks' => [
+                ['business_media', ['role']],
+                ['subscription_plans', ['code','has_business_page']],
+                ['subscription_plan_translations', ['plan_code','locale','name']],
+                ['subscription_features', ['code']],
+                ['subscription_feature_translations', ['feature_code','locale','name']],
+                ['subscription_plan_features', ['plan_code','feature_code','included']],
+                ['subscription_plan_prices', ['plan_code','billing_frequency','amount']],
+                ['business_subscriptions', ['business_id','plan_code','status']],
+            ],
+            'requires' => ['businesses','business_media'],
+        ],
+        '009-business-origin' => [
+            'file' => '009-business-origin.mysql.sql',
+            'checks' => [['businesses', ['record_origin']]],
+            'requires' => ['businesses'],
+        ],
+        '010-business-location-subscription-lifecycle' => [
+            'file' => '010-business-location-subscription-lifecycle.mysql.sql',
+            'checks' => [
+                ['businesses', ['address_text','location_reference','latitude','longitude','location_source','opening_hours','price_range','capacity_count','menu_url','reservations_url']],
+                ['subscription_plans', ['max_gallery_photos']],
+                ['business_subscriptions', ['publish_not_before','quoted_amount','currency','published_at']],
+            ],
+            'requires' => ['businesses','subscription_plans','business_subscriptions'],
+        ],
+        '011-premium-business-story' => [
+            'file' => '011-premium-business-story.mysql.sql',
+            'checks' => [['business_translations', ['brand_story','featured_services']]],
+            'requires' => ['business_translations'],
+        ],
+        '012-business-image-references' => [
+            'file' => '012-business-image-references.mysql.sql',
+            'checks' => [['businesses', ['image_assistance_requested']], ['business_image_references', ['business_id','storage_name','review_status']]],
+            'requires' => ['businesses'],
+        ],
+        '013-accounts-location-map' => [
+            'file' => '013-accounts-location-map.mysql.sql',
+            'checks' => [
+                ['businesses', ['location_map_url','location_confirmed']],
+                ['accounts', ['public_id','account_type','email','password_hash','status']],
+                ['account_identities', ['account_id','provider','provider_subject']],
+                ['business_account_memberships', ['account_id','business_id','role','status']],
+            ],
+            'requires' => ['businesses','business_subscriptions','subscription_plans'],
+        ],
+        '014-tiered-business-description' => [
+            'file' => '014-tiered-business-description.mysql.sql',
+            'checks' => [],
+            'row_checks' => [['subscription_features','code','extended_description']],
+            'requires' => ['subscription_features','subscription_plan_features'],
+        ],
+        '015-business-media-quotas' => [
+            'file' => '015-business-media-quotas.mysql.sql',
+            'checks' => [],
+            'value_checks' => [
+                ['subscription_plans','code','page','max_gallery_photos',0],
+                ['subscription_plans','code','page_premium','max_gallery_photos',2],
+            ],
+            'requires' => ['subscription_plans'],
+        ],
+        '016-plan-content-limits' => [
+            'file' => '016-plan-content-limits.mysql.sql',
+            // business_translations.summary predates this migration, so its
+            // existence cannot indicate that this migration was applied.
+            'checks' => [['subscription_plans', ['max_summary_chars','max_description_chars','max_brand_story_chars','max_featured_services_chars']]],
+            'value_checks' => [
+                ['subscription_plans','code','basic','max_summary_chars',300],
+                ['subscription_plans','code','featured','max_description_chars',1000],
+                ['subscription_plans','code','page_premium','max_brand_story_chars',1500],
+            ],
+            'requires' => ['subscription_plans','business_translations'],
+        ],
+        '017-business-claims' => [
+            'file' => '017-business-claims.mysql.sql',
+            'checks' => [['business_claim_requests', ['business_id','claimant_name','email','phone','relationship_code','status']]],
+            'requires' => ['businesses'],
+        ],
+        '018-business-portal' => [
+            'file' => '018-business-portal.mysql.sql',
+            'checks' => [['business_claim_requests', ['account_id']]],
+            'requires' => ['accounts','business_claim_requests'],
+        ],
+        '019-business-account-applications' => [
+            'file' => '019-business-account-applications.mysql.sql',
+            'checks' => [['business_account_applications', ['account_id','application_type','business_id','destination_id','category_code','business_name','status']]],
+            'requires' => ['accounts','businesses','destinations','service_categories'],
+        ],
+        '020-account-password-resets' => [
+            'file' => '020-account-password-resets.mysql.sql',
+            'checks' => [['account_password_resets', ['account_id','token_hash','expires_at','used_at']]],
+            'requires' => ['accounts'],
+        ],
+        '021-business-payment-evidence' => [
+            'file' => '021-business-payment-evidence.mysql.sql',
+            'checks' => [['business_subscription_payment_evidence', ['subscription_id','account_id','storage_name','mime_type','status','reviewed_at']]],
+            'requires' => ['accounts','business_subscriptions'],
+        ],
+        '022-subscription-prices' => [
+            'file' => '022-subscription-prices.mysql.sql',
+            'value_checks' => [
+                ['subscription_plan_prices','plan_code','basic','amount','19900.00'],
+                ['subscription_plan_prices','plan_code','basic','amount','199000.00'],
+                ['subscription_plan_prices','plan_code','featured','amount','49900.00'],
+                ['subscription_plan_prices','plan_code','featured','amount','499000.00'],
+                ['subscription_plan_prices','plan_code','page','amount','69900.00'],
+                ['subscription_plan_prices','plan_code','page','amount','699000.00'],
+                ['subscription_plan_prices','plan_code','page_premium','amount','119900.00'],
+                ['subscription_plan_prices','plan_code','page_premium','amount','1199000.00'],
+            ],
+            'requires' => ['subscription_plan_prices'],
+        ],
+        '023-business-representation-evidence' => [
+            'file' => '023-business-representation-evidence.mysql.sql',
+            'checks' => [['business_account_application_evidence', ['application_id','evidence_type','storage_name','mime_type','verified_at']]],
+            'requires' => ['business_account_applications'],
+        ],
+        '024-payment-customer-message' => [
+            'file' => '024-payment-customer-message.mysql.sql',
+            'checks' => [['business_subscription_payment_evidence', ['customer_message']]],
+            'requires' => ['business_subscription_payment_evidence'],
+        ],
+        '025-subscription-renewal-history' => [
+            'file' => '025-subscription-renewal-history.mysql.sql',
+            'checks' => [['business_subscriptions', ['renewal_of_subscription_id']]],
+            'requires' => ['business_subscriptions'],
+        ],
+        '026-business-research-contacts' => [
+            'file' => '026-business-research-contacts.mysql.sql',
+            'checks' => [['business_research_contacts', ['business_id','channel','contact_value','source_url','evidence_status','authorization_status','legal_basis_status','campaign_allowed','suppressed','record_hash']]],
+            'requires' => ['businesses'],
+        ],
+        '027-business-bulk-update-audit' => [
+            'file' => '027-business-bulk-update-audit.mysql.sql',
+            'checks' => [['business_bulk_update_audit', ['batch_id','business_id','actor','before_json','after_json','changes_json']]],
+            'requires' => ['businesses'],
+        ],
+        '028-accounts-business-channels' => [
+            'file' => '028-accounts-business-channels.mysql.sql',
+            'checks' => [['accounts',['contact_phone']],['business_research_contacts',['recipient_label']]],
+            'requires' => ['businesses','accounts','business_account_memberships','business_research_contacts'],
+        ],
+        '029-business-email-campaigns' => [
+            'file' => '029-business-email-campaigns.mysql.sql',
+            'checks' => [['business_email_permissions',['email','decision','evidence']],['business_email_campaigns',['recipients_json','content_hash','status','busy','sync_cursor','provider_campaign_id']],['business_email_audit',['campaign_id','actor','action','detail']]],
+            'requires' => ['businesses','business_research_contacts'],
+        ],
+        '030-business-categories' => [
+            'file' => '030-business-categories.mysql.sql',
+            'checks' => [['business_categories',['business_id','category_code']]],
+            'requires' => ['businesses','service_categories'],
+        ],
     ];
 
     public function __construct(private PDO $pdo, private string $appRoot, private string $publicRoot)
@@ -64,7 +218,7 @@ final class DatabaseMaintenance
         $driver = (string)$this->pdo->getAttribute(PDO::ATTR_DRIVER_NAME);
         $tables = $this->tables();
         $counts = [];
-        foreach (['leads', 'destinations', 'businesses', 'media_assets'] as $table) {
+        foreach (['leads', 'destinations', 'businesses', 'media_assets', 'business_image_references', 'business_claim_requests', 'business_account_applications', 'account_password_resets','business_subscription_payment_evidence'] as $table) {
             if (in_array($table, $tables, true)) {
                 $counts[$table] = (int)$this->pdo->query('SELECT COUNT(*) FROM `'.$table.'`')->fetchColumn();
             } else {
@@ -111,6 +265,15 @@ final class DatabaseMaintenance
         foreach (self::MIGRATIONS as $id => $migration) {
             $state = $this->migrationState($migration, $tables);
             if ($state === 'partial') {
+                // Later migrations can appear partial when their prerequisite
+                // tables have not been created yet. Let the ordered migration
+                // pass reach them after their prerequisites are applied; only
+                // block a partial state once all required tables exist.
+                $missingRequirements = array_diff($migration['requires'], $tables);
+                if ($missingRequirements !== []) {
+                    $states[$id] = 'pending';
+                    continue;
+                }
                 throw new RuntimeException('La migración '.$id.' está aplicada parcialmente. Se detuvo sin ejecutar más SQL; revisa columnas y tablas antes de continuar.');
             }
             $states[$id] = $state;
@@ -133,6 +296,10 @@ final class DatabaseMaintenance
                 }
             }
             $file = $this->appRoot.'/database/migrations/'.$migration['file'];
+            if($id==='028-accounts-business-channels'){
+                $duplicates=$this->pdo->query('SELECT business_id FROM business_account_memberships WHERE status="active" GROUP BY business_id HAVING COUNT(*)>1 LIMIT 1')->fetchColumn();
+                if($duplicates!==false)throw new RuntimeException('Hay negocios con más de una cuenta activa. Revisa sus asociaciones antes de habilitar el modelo de cuenta responsable; no se eliminaron asociaciones.');
+            }
             if (!is_file($file)) throw new RuntimeException('No se encontró el archivo de migración '.$migration['file'].'.');
             $this->executeSqlFile($file);
             $after = $this->migrationState($migration, $this->tables());
@@ -201,12 +368,25 @@ final class DatabaseMaintenance
     private function migrationState(array $migration, array $tables): string
     {
         $present = 0; $total = 0;
-        foreach ($migration['checks'] as [$table, $columns]) {
+        foreach (($migration['checks']??[]) as [$table, $columns]) {
             $total++;
             if (!in_array($table, $tables, true)) continue;
             $actual = $columns ? $this->columns($table) : [];
             if (!$columns || count(array_diff($columns, $actual)) === 0) $present++;
         }
+        foreach (($migration['row_checks']??[]) as [$table,$column,$value]) {
+            $total++;
+            if (!in_array($table,$tables,true)||!in_array($column,$this->columns($table),true)) continue;
+            $q=$this->pdo->prepare('SELECT COUNT(*) FROM `'.$table.'` WHERE `'.$column.'`=?');$q->execute([$value]);
+            if ((int)$q->fetchColumn()>0) $present++;
+        }
+        foreach (($migration['value_checks']??[]) as [$table,$keyColumn,$keyValue,$valueColumn,$value]) {
+            $total++;
+            if (!in_array($table,$tables,true)||!in_array($keyColumn,$this->columns($table),true)||!in_array($valueColumn,$this->columns($table),true)) continue;
+            $q=$this->pdo->prepare('SELECT COUNT(*) FROM `'.$table.'` WHERE `'.$keyColumn.'`=? AND `'.$valueColumn.'`=?');$q->execute([$keyValue,$value]);
+            if ((int)$q->fetchColumn()>0) $present++;
+        }
+        if ($total===0) throw new RuntimeException('La migración no define controles de estado.');
         if ($present === $total) return 'applied';
         return $present === 0 ? 'pending' : 'partial';
     }
@@ -239,6 +419,9 @@ final class DatabaseMaintenance
     {
         $sql = file_get_contents($file);
         if (!is_string($sql)) throw new RuntimeException('No se pudo leer un archivo SQL permitido.');
+        // Remove full-line SQL comments before splitting statements. A semicolon
+        // inside a comment is text, not a statement boundary.
+        $sql = preg_replace('/^[ \t]*--[^\r\n]*(?:\r?\n|$)/m', '', $sql);
         foreach (explode(';', $sql) as $statement) {
             if (trim($statement) !== '') $this->pdo->exec($statement);
         }
