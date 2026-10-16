@@ -38,10 +38,12 @@ Se intentó descargar DIVIPOLA MGN 2025 desde su servicio oficial; devolvió err
 
 ## Entrega preparada
 
-`python3 scripts/preparar-cobertura.py --config /ruta/sftp.json --manifest /ruta/deployment-manifest.json` valida y prepara 42 archivos (aprox. 575 KB) en `.local/coverage/release`. No se conecta ni modifica hosting. La configuración es la del proyecto, fuera de Git; el paquete no contiene secretos ni `private/config.php`.
+`python3 scripts/preparar-cobertura.py --config /ruta/sftp.json --manifest /ruta/deployment-manifest.json` valida y prepara 43 archivos (aprox. 575 KB) en `.local/coverage/release`. No se conecta ni modifica hosting. La configuración es la del proyecto, fuera de Git; el paquete no contiene secretos ni `private/config.php`.
 
 Solo tras autorización concreta, el mismo comando con `--deploy` realiza transferencia incremental acotada: requiere rama sin cambios pendientes y manifiesto remoto idéntico al local; conserva todos los archivos ajenos y no elimina, migra, modifica configuración, cambia DNS o reemplaza `.htaccess`, portada, destinos ni administración. Reescribe únicamente las rutas del nuevo endpoint al backend privado. La página HTML se sube al final. No utiliza el despliegue completo histórico de esta base.
 
 Verificación después de una publicación autorizada: HTTP 200 de página/API/CSS/JS/geometrías; consulta del conteo real de publicaciones y total nacional en definición; selección Antioquia/Jericó; enlaces anónimos a guías publicadas; aviso ante fallos; métodos POST rechazados; comprobación de portada/destino/admin conservados. No anunciar publicación funcional por el mero éxito de SFTP.
 
 Acceso inicial por enlace directo. Integrar el enlace en el pie/índice del portal requiere aplicar un cambio mínimo sobre su versión vigente, no reemplazar páginas productivas con los HTML antiguos de `main`. Se mantiene fuera de esta entrega acotada.
+
+Selectores: se reutiliza `select-flotante.js` del portal, empaquetado bajo cobertura para evitar afectar componentes globales. Menús de altura acotada, desplazamiento, selección visible y teclado; título departamental solo en el panel del mapa.

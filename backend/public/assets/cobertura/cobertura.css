@@ -10,3 +10,33 @@
 
 /* Match the current portal editorial heading, without the previous green accent. */
 .intro h1{font-family:Georgia,"Times New Roman",serif;font-weight:700;line-height:1.04;letter-spacing:-.045em}.intro h1 span{font-style:italic;color:#bd562f;letter-spacing:-.04em}.map-panel{background:#fff}.map-heading h2,.detail-panel h2{color:var(--ink)}
+
+/* Shared portal floating selectors. */
+.floating-select{position:relative;display:block;width:100%;min-width:0}
+.floating-select-native{position:absolute!important;inline-size:1px!important;block-size:1px!important;opacity:0!important;pointer-events:none!important}
+.floating-select-trigger{display:flex;align-items:center;box-sizing:border-box;width:100%;min-height:44px;padding:11px 15px 11px 12px;border:1px solid #b3c2ad;border-radius:5px;background:#fff;color:#31473f;font:inherit;text-align:left;cursor:pointer}
+.floating-select-label{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.floating-select-divider{align-self:stretch;width:1px;margin-left:auto;margin-right:14px;background:#d6ddd2}
+.floating-select-arrow{font-size:21px;line-height:1;transform:translateY(-2px);color:#395743}
+.floating-select-trigger:focus-visible{outline:3px solid #a44327;outline-offset:3px}
+.floating-select-trigger:disabled{cursor:not-allowed;background:#edf0e8;color:#788170}
+.floating-select-trigger:disabled .floating-select-divider{background:#cdd5c8}
+.floating-select-menu{position:absolute;z-index:30;top:calc(100% + 7px);left:0;right:0;overflow:hidden;border:1px solid #c8d2c3;border-radius:8px;background:#fff;box-shadow:0 12px 24px rgba(35,61,47,.16)}
+.floating-select-option{display:flex;align-items:center;width:100%;min-height:46px;padding:10px 15px;border:0;background:#fff;color:#31473f;font:inherit;text-align:left;cursor:pointer}
+.floating-select-option+.floating-select-option{border-top:1px solid #e1e6dd}
+.floating-select-option:hover,.floating-select-option:focus-visible{background:#eef2ea;outline:0}
+.floating-select-option[aria-selected=true]{background:#e6eee3;color:#284a3c;font-weight:650}
+.floating-select-option span{margin-left:auto;font-size:18px}
+.floating-select.is-open .floating-select-arrow{transform:translateY(2px) rotate(180deg)}
+.floating-select-trigger,.floating-select-option{border-color:#8fc6ba!important;color:var(--ink)!important}
+.floating-select-divider{background:var(--aqua-line)!important}
+.floating-select-arrow{color:var(--orange)!important}
+.floating-select-menu{border-color:var(--aqua-line)!important;box-shadow:0 12px 24px #064d4e1c!important}
+.floating-select-option:hover,.floating-select-option:focus-visible,.floating-select-option[aria-selected=true]{background:var(--aqua-soft)!important;color:var(--ink)!important}
+.floating-select-menu,.floating-select-option{border-color:#f2c77e!important}
+.floating-select-option:hover,.floating-select-option:focus-visible,.floating-select-option[aria-selected=true]{background:#fff0dc!important}
+.floating-select-divider{background:#f2c77e!important}
+.floating-select-arrow{color:#d84e27!important}
+/* Los selectores flotantes reflejan la validación obligatoria del campo nativo. */
+.floating-select-native[aria-invalid="true"] + .floating-select-trigger{border-color:#a44327!important;box-shadow:0 0 0 1px #a44327!important}
+.floating-select-menu{max-height:300px;overflow-y:auto;overscroll-behavior:contain}.floating-select-trigger,.floating-select-option{color:var(--ink)!important;font-size:14px}.floating-select-trigger{border-color:#e9b75f!important}.floating-select-trigger:disabled{background:#f4f3ef;color:#7c8188!important}.floating-select-menu{border-color:#f2c77e!important;box-shadow:0 12px 24px #172b421c!important}.floating-select-option:hover,.floating-select-option:focus-visible,.floating-select-option[aria-selected=true]{background:#fff0dc!important}.floating-select-divider{background:#f2c77e!important}.floating-select-arrow{color:#d84e27!important}.floating-select{display:block}.audience-heading .floating-select{min-width:170px}

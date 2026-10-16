@@ -10,11 +10,11 @@
   async function geometry(file){if(!maps.has(file))maps.set(file,json(new URL('assets/cobertura/'+file,root)).catch(e=>{maps.delete(file);throw e;}));return maps.get(file);}
   const option=(value,text)=>{const o=el('option',text);o.value=value;return o;};
   function updateUrl(){const url=new URL(location.href);url.search='';if(department)url.searchParams.set('departamento',department);if(municipality)url.searchParams.set('municipio',municipality);history.replaceState(null,'',url);}
-  function setDepartment(code){department=data.departments.some(d=>d.code===code)?code:'';municipality='';$('department').value=department;updateUrl();renderDetail();renderMap();}
-  function setMunicipality(code){municipality=current()?.municipalities.some(m=>m.code===code)?code:'';$('municipality').value=municipality;updateUrl();renderPlaces();highlight();renderAudience();}
+  function setDepartment(code){department=data.departments.some(d=>d.code===code)?code:'';municipality='';$('department').value=department;$('department').dispatchEvent(new Event('floating-select:refresh'));updateUrl();renderDetail();renderMap();}
+  function setMunicipality(code){municipality=current()?.municipalities.some(m=>m.code===code)?code:'';$('municipality').value=municipality;$('municipality').dispatchEvent(new Event('floating-select:refresh'));updateUrl();renderPlaces();highlight();renderAudience();}
   function renderDetail(){
     const d=current();$('country-button').hidden=!d;$('map-title').textContent=d?d.name:'Colombia';$('map-kicker').textContent=d?'ACÉRCATE A SUS MUNICIPIOS':'ELIGE POR DÓNDE EMPEZAR';
-    $('detail-title').textContent=d?d.name:'Un país por descubrir';$('detail-description').textContent=d?'Estas son las guías del departamento que forman parte de nuestro catálogo.':'Selecciona un departamento o busca entre los destinos del catálogo nacional.';
+    $('detail-title').textContent=d?'Estado de las guías':'Guías para explorar';$('detail-description').textContent=d?'Estas son las guías del departamento que forman parte de nuestro catálogo.':'Selecciona un departamento o busca entre los destinos del catálogo nacional.';
     $('department-summary').hidden=!d;$('municipality').disabled=!d;$('municipality').replaceChildren(option('','Todos los municipios'));
     if(d){$('department-percent').textContent='En definición';
       $('department-count').textContent=(data.publication_source_available?`${d.counts.published} ${d.counts.published===1?'guía publicada':'guías publicadas'}`:'Publicación sin confirmar')+` · ${d.counts.in_progress} en preparación identificadas. El listado de trabajo aún no es el alcance completo del departamento.`;

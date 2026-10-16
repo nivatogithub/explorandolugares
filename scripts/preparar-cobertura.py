@@ -15,8 +15,8 @@ def target(config,relative):
 def sources():
  pairs=[('backend/public/cobertura/colombia/index.html','public/cobertura/colombia/index.html'),('backend/public/api/cobertura.php','public/api/cobertura.php'),('backend/app/CoverageService.php','app/CoverageService.php'),('backend/app/content/coverage-plan.json','app/content/coverage-plan.json'),('backend/app/content/coverage-geography.json','app/content/coverage-geography.json')]
  for p in sorted((ROOT/'backend/public/assets/cobertura').iterdir()):
-  if p.name in {'cobertura.css','cobertura.js','departamentos.geojson','procedencia.json'} or re.fullmatch(r'municipios-\d{2}\.geojson',p.name):pairs.append((str(p.relative_to(ROOT)),'public/assets/cobertura/'+p.name))
- if len(pairs)!=42:raise ValueError('Inventario de entrega inesperado')
+  if p.name in {'cobertura.css','cobertura.js','select-flotante.js','departamentos.geojson','procedencia.json'} or re.fullmatch(r'municipios-\d{2}\.geojson',p.name):pairs.append((str(p.relative_to(ROOT)),'public/assets/cobertura/'+p.name))
+ if len(pairs)!=43:raise ValueError('Inventario de entrega inesperado')
  return sorted(pairs,key=lambda p:3 if p[1].endswith("/index.html") else 2 if p[1]=="public/api/cobertura.php" else 1 if p[1].startswith("public/") else 0)
 def manifest(data,config):
  if data.get('site')!='explorandolugares' or data.get('host')!=config['host'] or data.get('remote_base')!=config['remote_base'] or data.get('public_root')!=sftp.public_path(config):raise ValueError('Manifiesto de otro destino o inconsistente')
