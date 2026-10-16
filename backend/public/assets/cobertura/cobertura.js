@@ -61,20 +61,23 @@
     const fields={'anonymous_sessions':'anonymous','estimated_visitors':'visitors','registered_travelers':'registered','active_travelers':'active','business_views':'business-views','contact_clicks':'contact'};
     Object.values(fields).forEach(id=>$('audience-'+id).textContent='—');
     $('audience-status').textContent='Consultando medición…';
+    $('audience-measurement-dates').textContent='Consultando las fechas de medición…';
+    $('audience-source').replaceChildren();
     try{const url=new URL('api/cobertura.php',root);url.searchParams.set('days',days);if(department)url.searchParams.set('department',department);
       const a=(await json(url)).audience;if(version!==audienceVersion)return;
       if(!a||a.status==='not_configured')throw Error('pending');
       Object.entries(fields).forEach(([metric,id])=>{$('audience-'+id).textContent=a.metrics[metric]===null?'—':Number(a.metrics[metric]).toLocaleString('es-CO');});
-      $('audience-status').textContent=(a.status==='collecting_baseline'?'Estamos reuniendo una base suficiente; ocultamos grupos pequeños para proteger la privacidad. ':'Medición activa. ')+ 'Solo incluye navegación con permiso. Inicio: '+a.started_at.slice(0,10)+'. Actualización: '+new Date(a.updated_at).toLocaleString('es-CO')+'.';
+      $('audience-status').textContent=a.status==='collecting_baseline'?'Estamos reuniendo datos para mostrar nuestra audiencia.':'Audiencia medida con navegación autorizada.';
+      $('audience-measurement-dates').textContent='Inicio de medición: '+a.started_at.slice(0,10)+'. Última actualización: '+new Date(a.updated_at).toLocaleString('es-CO')+'.';
       $('audience-countries').replaceChildren();const region=new Intl.DisplayNames(['es'],{type:'region'});
-      if(a.countries?.length)a.countries.forEach(c=>$('audience-countries').append(el('p',(c.code==='ZZ'?'País no disponible':c.code==='OTHER'?'Otros países o conexiones sin identificar (grupos pequeños)':region.of(c.code))+': '+c.count+' vistas de páginas')));else $('audience-countries').textContent='Todavía no hay un desglose publicable por país.';
-      const attribution=el('a','País aproximado: DB-IP Country Lite');attribution.href='https://db-ip.com/';attribution.rel='noopener noreferrer';$('audience-countries').append(attribution);
+      if(a.countries?.length)a.countries.forEach(c=>$('audience-countries').append(el('p',(c.code==='ZZ'?'País no disponible':c.code==='OTHER'?'Otros países o conexiones sin identificar (grupos pequeños)':region.of(c.code))+': '+c.count+' vistas de páginas')));else $('audience-countries').textContent='Próximamente: audiencia por país.';
+      const attribution=el('a','País aproximado: DB-IP Country Lite');attribution.href='https://db-ip.com/';attribution.rel='noopener noreferrer';$('audience-source').append(attribution);
       $('audience-trend').replaceChildren(el('p',a.page_views===null?'Histórico pendiente de una base suficiente.':a.page_views+' vistas de páginas en el periodo.'));
       $('audience-trend').append(el('p',a.comparison_available?(a.growth_percent===null?'Periodo anterior: '+a.previous_views+' vistas. Aún no procede calcular un porcentaje.':'Cambio frente al periodo anterior: '+a.growth_percent+'%.'):'La comparación se habilita cuando existan dos periodos completos medidos.'));
       const sources={direct_unknown:'Acceso directo u origen no identificable',search:'Buscadores',instagram:'Instagram',facebook:'Facebook',referral:'Otros sitios',campaign:'Campañas identificadas'};
       const origin=el('details');origin.append(el('summary','Cómo llegan al portal'));Object.entries(a.sources||{}).forEach(([key,value])=>origin.append(el('p',(sources[key]||key)+': '+value+' vistas')));$('audience-trend').append(origin);
       if(a.trend?.length){const details=el('details'),summary=el('summary','Ver vistas por día');details.append(summary);a.trend.forEach(day=>details.append(el('p',day.day+': '+day.views)));$('audience-trend').append(details);}
-    }catch{if(version!==audienceVersion)return;$('audience-status').textContent='Medición todavía no disponible. No mostramos cifras inventadas.';$('audience-countries').textContent='Sin desglose publicable.';$('audience-trend').textContent='Sin histórico comprobado.';}
+    }catch{if(version!==audienceVersion)return;$('audience-measurement-dates').textContent='Fechas de medición todavía no disponibles.';$('audience-source').replaceChildren();$('audience-status').textContent='Medición todavía no disponible.';$('audience-countries').textContent='Sin desglose publicable.';$('audience-trend').textContent='Sin histórico comprobado.';}
   }
   // Invitations are composed locally. No contacts are collected and no message is sent automatically.
   const invitations={
