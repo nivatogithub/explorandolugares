@@ -49,3 +49,7 @@ Acceso inicial por enlace directo. Integrar el enlace en el pie/índice del port
 Selectores: se reutiliza `select-flotante.js` del portal, empaquetado bajo cobertura para evitar afectar componentes globales. Menús de altura acotada, desplazamiento, selección visible y teclado; título departamental solo en el panel del mapa.
 
 La sección pública explica la estrategia de ampliación: tres grupos independientes de departamentos/destinos, trabajo por lotes, preparación y revisión de cada guía, publicación progresiva y actualización. “Pendiente de incorporar” reemplaza “Fuera del catálogo” en los municipios aún sin destinos en el seguimiento inicial.
+
+## Propuesta provisional de invitaciones
+
+Franja entre estrategia y pauta, pendiente de revisión visual del propietario. Dos mensajes: familiares/conocidos y comercios. Permite revisar/personalizar, copiar o abrir opciones de compartir/WhatsApp. Se comparten URLs públicas de la plataforma, nunca localhost. No recoge contactos, envía mensajes automáticamente ni registra un clic como invitación entregada. No se publicó en hosting.
