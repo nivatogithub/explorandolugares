@@ -7,6 +7,7 @@ $activeAdminItem = match (true) {
     $adminPath === 'index.php' => 'requests',
     $adminPath === 'negocios.php' => 'businesses',
     $adminPath === 'importar-negocios.php' => 'businesses',
+    $adminPath === 'contactos-negocios.php' => 'business-research',
     $adminPath === 'reclamaciones.php' => 'claims',
     $adminPath === 'solicitudes-cuenta.php' => 'account-applications',
     $adminPath === 'usuarios.php' => 'accounts',
@@ -23,6 +24,7 @@ $activeAdminItem = match (true) {
     <section><h2>Operación</h2>
       <a href="index.php?tab=solicitudes" <?= $activeAdminItem === 'requests' ? 'aria-current="page"' : '' ?>>Solicitudes</a>
       <a href="negocios.php" <?= $activeAdminItem === 'businesses' ? 'aria-current="page"' : '' ?>>Negocios</a>
+      <a href="contactos-negocios.php" <?= $activeAdminItem === 'business-research' ? 'aria-current="page"' : '' ?>>Contactos privados</a>
       <a href="reclamaciones.php" <?= $activeAdminItem === 'claims' ? 'aria-current="page"' : '' ?>>Solicitudes anteriores</a>
       <a href="solicitudes-cuenta.php" <?= $activeAdminItem === 'account-applications' ? 'aria-current="page"' : '' ?>>Solicitudes de cuenta</a>
       <a href="usuarios.php" <?= $activeAdminItem === 'accounts' ? 'aria-current="page"' : '' ?>>Cuentas</a>

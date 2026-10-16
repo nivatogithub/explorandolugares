@@ -181,6 +181,11 @@ final class DatabaseMaintenance
             'checks' => [['business_subscriptions', ['renewal_of_subscription_id']]],
             'requires' => ['business_subscriptions'],
         ],
+        '026-business-research-contacts' => [
+            'file' => '026-business-research-contacts.mysql.sql',
+            'checks' => [['business_research_contacts', ['business_id','channel','contact_value','source_url','evidence_status','authorization_status','legal_basis_status','campaign_allowed','suppressed','record_hash']]],
+            'requires' => ['businesses'],
+        ],
     ];
 
     public function __construct(private PDO $pdo, private string $appRoot, private string $publicRoot)
