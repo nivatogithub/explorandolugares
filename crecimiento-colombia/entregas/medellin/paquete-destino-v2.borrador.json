@@ -1,0 +1,525 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "medellin",
+    "department": "Antioquia",
+    "subregion": "Valle de Aburrá",
+    "latitude": null,
+    "longitude": null,
+    "translations": {
+      "es": {
+        "display_name": "Medellín",
+        "eyebrow": "Antioquia · Valle de Aburrá",
+        "headline": "Arte, ciencia y vida urbana en Medellín",
+        "intro": "Medellín reúne espacios para acercarse al arte, la ciencia y la vida de una ciudad del valle de Aburrá. El Museo de Antioquia, el Jardín Botánico, Parque Explora y el MAMM permiten construir una visita con intereses distintos. Esta guía propone combinar espacios culturales y tiempo para conocer la oferta local.",
+        "meta_description": "Medellín reúne espacios para acercarse al arte, la ciencia y la vida de una ciudad del valle de Aburrá. El Museo de Antioquia, el Jardín Botánico, Par"
+      },
+      "en": {
+        "display_name": "Medellín",
+        "eyebrow": "Antioquia · Aburrá Valley",
+        "headline": "Art, science and urban life in Medellín",
+        "intro": "Medellín offers places to explore art, science and daily life in the Aburrá Valley. Museo de Antioquia, the Botanical Garden, Parque Explora and MAMM provide different starting points for a visit. This guide suggests combining cultural venues with time to discover local services.",
+        "meta_description": "Medellín offers places to explore art, science and daily life in the Aburrá Valley. Museo de Antioquia, the Botanical Garden, Parque Explora and MAMM "
+      },
+      "pt-BR": {
+        "display_name": "Medellín",
+        "eyebrow": "Antioquia · Vale do Aburrá",
+        "headline": "Arte, ciência e vida urbana em Medellín",
+        "intro": "Medellín reúne espaços para conhecer a arte, a ciência e o cotidiano de uma cidade do vale do Aburrá. O Museo de Antioquia, o Jardim Botânico, o Parque Explora e o MAMM oferecem diferentes pontos de partida. A proposta é combinar espaços culturais com tempo para descobrir os serviços locais.",
+        "meta_description": "Medellín reúne espaços para conhecer a arte, a ciência e o cotidiano de uma cidade do vale do Aburrá. O Museo de Antioquia, o Jardim Botânico, o Parqu"
+      }
+    },
+    "history": {
+      "es": [
+        "El 2 de noviembre de 1675 se estableció la Villa de Nuestra Señora de la Candelaria de Medellín. Su historia posterior estuvo ligada al comercio y al desarrollo industrial.",
+        "La producción de artistas como Débora Arango y Fernando Botero forma parte del patrimonio cultural de la ciudad. Visitar sus museos permite acercarse a miradas diversas sobre la sociedad y su historia."
+      ],
+      "en": [
+        "The Villa of Nuestra Señora de la Candelaria de Medellín was established on 2 November 1675. Trade and industrial development shaped its later history.",
+        "Artists including Débora Arango and Fernando Botero are part of the city’s cultural heritage. Its museums offer different perspectives on society and history."
+      ],
+      "pt-BR": [
+        "Em 2 de novembro de 1675 foi estabelecida a Vila de Nuestra Señora de la Candelaria de Medellín. O comércio e o desenvolvimento industrial marcaram sua história posterior.",
+        "Artistas como Débora Arango e Fernando Botero fazem parte do patrimônio cultural da cidade. Seus museus permitem conhecer diferentes olhares sobre a sociedade e a história."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Arte en museos y espacio público",
+        "Ciencia y educación ambiental",
+        "Gastronomía y alojamientos con canales directos"
+      ],
+      "en": [
+        "Art in museums and public spaces",
+        "Science and environmental education",
+        "Food and accommodation with direct official channels"
+      ],
+      "pt-BR": [
+        "Arte em museus e espaços públicos",
+        "Ciência e educação ambiental",
+        "Gastronomia e hospedagem com canais oficiais diretos"
+      ]
+    },
+    "sources": {
+      "es": [
+        {
+          "label": "Alcaldía de Medellín",
+          "url": "https://www.medellin.gov.co/es/historia-y-simbolos-de-medellin/"
+        },
+        {
+          "label": "Guía oficial de turismo",
+          "url": "https://www.medellin.travel/"
+        },
+        {
+          "label": "Jardín Botánico",
+          "url": "https://www.botanicomedellin.org/"
+        },
+        {
+          "label": "Museo de Antioquia",
+          "url": "https://museodeantioquia.co/"
+        },
+        {
+          "label": "Parque Explora",
+          "url": "https://www.parqueexplora.org/en"
+        },
+        {
+          "label": "MAMM",
+          "url": "https://www.elmamm.org/"
+        },
+        {
+          "label": "Metro de Medellín",
+          "url": "https://www.metrodemedellin.gov.co/"
+        }
+      ],
+      "en": [
+        {
+          "label": "Alcaldía de Medellín",
+          "url": "https://www.medellin.gov.co/es/historia-y-simbolos-de-medellin/"
+        },
+        {
+          "label": "Guía oficial de turismo",
+          "url": "https://www.medellin.travel/"
+        },
+        {
+          "label": "Jardín Botánico",
+          "url": "https://www.botanicomedellin.org/"
+        },
+        {
+          "label": "Museo de Antioquia",
+          "url": "https://museodeantioquia.co/"
+        },
+        {
+          "label": "Parque Explora",
+          "url": "https://www.parqueexplora.org/en"
+        },
+        {
+          "label": "MAMM",
+          "url": "https://www.elmamm.org/"
+        },
+        {
+          "label": "Metro de Medellín",
+          "url": "https://www.metrodemedellin.gov.co/"
+        }
+      ],
+      "pt-BR": [
+        {
+          "label": "Alcaldía de Medellín",
+          "url": "https://www.medellin.gov.co/es/historia-y-simbolos-de-medellin/"
+        },
+        {
+          "label": "Guía oficial de turismo",
+          "url": "https://www.medellin.travel/"
+        },
+        {
+          "label": "Jardín Botánico",
+          "url": "https://www.botanicomedellin.org/"
+        },
+        {
+          "label": "Museo de Antioquia",
+          "url": "https://museodeantioquia.co/"
+        },
+        {
+          "label": "Parque Explora",
+          "url": "https://www.parqueexplora.org/en"
+        },
+        {
+          "label": "MAMM",
+          "url": "https://www.elmamm.org/"
+        },
+        {
+          "label": "Metro de Medellín",
+          "url": "https://www.metrodemedellin.gov.co/"
+        }
+      ]
+    },
+    "country_code": "CO",
+    "destination_type": "municipality"
+  },
+  "hero_image": {
+    "file": "images/medellin-1.webp",
+    "image_origin": "external",
+    "image_creator": "Luis90f",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Panor%C3%A1mica_de_Medell%C3%ADn_desde_el_Cerro_El_Picacho.jpg",
+    "image_license": "CC BY-SA 4.0",
+    "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "alt": {
+      "es": "Medellín desde el Cerro El Picacho",
+      "en": "Medellín from El Picacho hill",
+      "pt-BR": "Medellín do Cerro El Picacho"
+    },
+    "caption": {
+      "es": "Medellín desde el Cerro El Picacho",
+      "en": "Medellín from El Picacho hill",
+      "pt-BR": "Medellín do Cerro El Picacho"
+    }
+  },
+  "places": [
+    {
+      "slug": "museo-antioquia",
+      "type": "place",
+      "publication_status": "draft",
+      "source_ids": [
+        "antioquia"
+      ],
+      "translations": {
+        "es": {
+          "name": "Museo de Antioquia",
+          "description": "Arte e historia regional con salas dedicadas a Fernando Botero y Débora Arango.",
+          "external_url": "https://museodeantioquia.co/",
+          "external_label": "Sitio oficial"
+        },
+        "en": {
+          "name": "Museo de Antioquia",
+          "description": "Art and regional history, including rooms dedicated to Fernando Botero and Débora Arango.",
+          "external_url": "https://museodeantioquia.co/",
+          "external_label": "Sitio oficial"
+        },
+        "pt-BR": {
+          "name": "Museo de Antioquia",
+          "description": "Arte e história regional, com salas dedicadas a Fernando Botero e Débora Arango.",
+          "external_url": "https://museodeantioquia.co/",
+          "external_label": "Sitio oficial"
+        }
+      }
+    },
+    {
+      "slug": "jardin-botanico",
+      "type": "place",
+      "publication_status": "draft",
+      "source_ids": [
+        "botanico"
+      ],
+      "translations": {
+        "es": {
+          "name": "Jardín Botánico Joaquín Antonio Uribe",
+          "description": "Colecciones vivas y actividades de educación ambiental; consulta la programación oficial.",
+          "external_url": "https://www.botanicomedellin.org/",
+          "external_label": "Sitio oficial"
+        },
+        "en": {
+          "name": "Jardín Botánico Joaquín Antonio Uribe",
+          "description": "Living collections and environmental education; check the official programme.",
+          "external_url": "https://www.botanicomedellin.org/",
+          "external_label": "Sitio oficial"
+        },
+        "pt-BR": {
+          "name": "Jardín Botánico Joaquín Antonio Uribe",
+          "description": "Coleções vivas e educação ambiental; consulte a programação oficial.",
+          "external_url": "https://www.botanicomedellin.org/",
+          "external_label": "Sitio oficial"
+        }
+      }
+    },
+    {
+      "slug": "parque-explora",
+      "type": "place",
+      "publication_status": "draft",
+      "source_ids": [
+        "explora"
+      ],
+      "translations": {
+        "es": {
+          "name": "Parque Explora",
+          "description": "Museo de ciencias con acuario y propuesta de aprendizaje interactivo.",
+          "external_url": "https://www.parqueexplora.org/en",
+          "external_label": "Sitio oficial"
+        },
+        "en": {
+          "name": "Parque Explora",
+          "description": "Science museum with an aquarium and interactive learning.",
+          "external_url": "https://www.parqueexplora.org/en",
+          "external_label": "Sitio oficial"
+        },
+        "pt-BR": {
+          "name": "Parque Explora",
+          "description": "Museu de ciências com aquário e aprendizagem interativa.",
+          "external_url": "https://www.parqueexplora.org/en",
+          "external_label": "Sitio oficial"
+        }
+      }
+    },
+    {
+      "slug": "mamm",
+      "type": "place",
+      "publication_status": "draft",
+      "source_ids": [
+        "mamm"
+      ],
+      "translations": {
+        "es": {
+          "name": "Museo de Arte Moderno de Medellín",
+          "description": "Arte moderno y programación cultural; revisa las exposiciones disponibles antes de ir.",
+          "external_url": "https://www.elmamm.org/",
+          "external_label": "Sitio oficial"
+        },
+        "en": {
+          "name": "Museo de Arte Moderno de Medellín",
+          "description": "Modern art and cultural programmes; check available exhibitions before visiting.",
+          "external_url": "https://www.elmamm.org/",
+          "external_label": "Sitio oficial"
+        },
+        "pt-BR": {
+          "name": "Museo de Arte Moderno de Medellín",
+          "description": "Arte moderna e programação cultural; confira as exposições antes da visita.",
+          "external_url": "https://www.elmamm.org/",
+          "external_label": "Sitio oficial"
+        }
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "2026-10-16",
+    "positioning": "Arte, ciencia y servicios urbanos; borrador.",
+    "competitors": [],
+    "potential_allies": [],
+    "business_prospects": [
+      {
+        "name": "Dann Carlton Medellín",
+        "category": "alojamiento",
+        "description": "Hotel con sitio oficial propio.",
+        "url": "https://www.danncarlton.com/",
+        "source_ids": [
+          "dann"
+        ],
+        "consulted_at": "2026-10-16",
+        "publication_status": "draft",
+        "listing_plan": "gratuito",
+        "data_status": "PUBLICO",
+        "verification": "pendiente_verificar_vigencia",
+        "claimed": false,
+        "operating_status": "no_confirmado",
+        "relationship": "ninguna",
+        "contacted": false
+      },
+      {
+        "name": "Elcielo Hotel",
+        "category": "alojamiento",
+        "description": "Hotel en Astorga, El Poblado.",
+        "url": "https://www.elcielohotel.com/",
+        "source_ids": [
+          "cielo"
+        ],
+        "consulted_at": "2026-10-16",
+        "publication_status": "draft",
+        "listing_plan": "gratuito",
+        "data_status": "PUBLICO",
+        "verification": "pendiente_verificar_vigencia",
+        "claimed": false,
+        "operating_status": "no_confirmado",
+        "relationship": "ninguna",
+        "contacted": false
+      },
+      {
+        "name": "Hotel San Fernando Plaza",
+        "category": "alojamiento",
+        "description": "Hotel en El Poblado.",
+        "url": "https://www.hotelsanfernandoplaza.com/",
+        "source_ids": [
+          "fernando"
+        ],
+        "consulted_at": "2026-10-16",
+        "publication_status": "draft",
+        "listing_plan": "gratuito",
+        "data_status": "PUBLICO",
+        "verification": "pendiente_verificar_vigencia",
+        "claimed": false,
+        "operating_status": "no_confirmado",
+        "relationship": "ninguna",
+        "contacted": false
+      },
+      {
+        "name": "Elcielo Restaurant Medellín",
+        "category": "gastronomia",
+        "description": "Restaurante identificado en el sitio del hotel.",
+        "url": "https://www.elcielohotel.com/",
+        "source_ids": [
+          "cielo"
+        ],
+        "consulted_at": "2026-10-16",
+        "publication_status": "draft",
+        "listing_plan": "gratuito",
+        "data_status": "PUBLICO",
+        "verification": "pendiente_verificar_vigencia",
+        "claimed": false,
+        "operating_status": "no_confirmado",
+        "relationship": "ninguna",
+        "contacted": false
+      },
+      {
+        "name": "El Bistró by Juanma",
+        "category": "gastronomia",
+        "description": "Oferta gastronómica identificada en el sitio del hotel.",
+        "url": "https://www.elcielohotel.com/",
+        "source_ids": [
+          "cielo"
+        ],
+        "consulted_at": "2026-10-16",
+        "publication_status": "draft",
+        "listing_plan": "gratuito",
+        "data_status": "PUBLICO",
+        "verification": "pendiente_verificar_vigencia",
+        "claimed": false,
+        "operating_status": "no_confirmado",
+        "relationship": "ninguna",
+        "contacted": false
+      },
+      {
+        "name": "La Sere by Juanma",
+        "category": "gastronomia",
+        "description": "Restaurante italiano identificado en el sitio del hotel.",
+        "url": "https://www.elcielohotel.com/",
+        "source_ids": [
+          "cielo"
+        ],
+        "consulted_at": "2026-10-16",
+        "publication_status": "draft",
+        "listing_plan": "gratuito",
+        "data_status": "PUBLICO",
+        "verification": "pendiente_verificar_vigencia",
+        "claimed": false,
+        "operating_status": "no_confirmado",
+        "relationship": "ninguna",
+        "contacted": false
+      },
+      {
+        "name": "Museo de Antioquia",
+        "category": "cultura",
+        "description": "Institución cultural; ficha informativa, sin alianza.",
+        "url": "https://museodeantioquia.co/",
+        "source_ids": [
+          "antioquia"
+        ],
+        "consulted_at": "2026-10-16",
+        "publication_status": "draft",
+        "listing_plan": "gratuito",
+        "data_status": "PUBLICO",
+        "verification": "pendiente_verificar_vigencia",
+        "claimed": false,
+        "operating_status": "no_confirmado",
+        "relationship": "ninguna",
+        "contacted": false
+      },
+      {
+        "name": "Jardín Botánico Joaquín Antonio Uribe",
+        "category": "cultura",
+        "description": "Institución botánica y cultural; ficha informativa.",
+        "url": "https://www.botanicomedellin.org/",
+        "source_ids": [
+          "botanico"
+        ],
+        "consulted_at": "2026-10-16",
+        "publication_status": "draft",
+        "listing_plan": "gratuito",
+        "data_status": "PUBLICO",
+        "verification": "pendiente_verificar_vigencia",
+        "claimed": false,
+        "operating_status": "no_confirmado",
+        "relationship": "ninguna",
+        "contacted": false
+      },
+      {
+        "name": "Parque Explora",
+        "category": "cultura",
+        "description": "Museo de ciencias; ficha informativa.",
+        "url": "https://www.parqueexplora.org/en",
+        "source_ids": [
+          "explora"
+        ],
+        "consulted_at": "2026-10-16",
+        "publication_status": "draft",
+        "listing_plan": "gratuito",
+        "data_status": "PUBLICO",
+        "verification": "pendiente_verificar_vigencia",
+        "claimed": false,
+        "operating_status": "no_confirmado",
+        "relationship": "ninguna",
+        "contacted": false
+      },
+      {
+        "name": "Museo de Arte Moderno de Medellín",
+        "category": "cultura",
+        "description": "Institución de arte moderno; ficha informativa.",
+        "url": "https://www.elmamm.org/",
+        "source_ids": [
+          "mamm"
+        ],
+        "consulted_at": "2026-10-16",
+        "publication_status": "draft",
+        "listing_plan": "gratuito",
+        "data_status": "PUBLICO",
+        "verification": "pendiente_verificar_vigencia",
+        "claimed": false,
+        "operating_status": "no_confirmado",
+        "relationship": "ninguna",
+        "contacted": false
+      }
+    ],
+    "acquisition_strategies": [],
+    "sources": [
+      {
+        "url": "https://www.medellin.gov.co/es/historia-y-simbolos-de-medellin/",
+        "label": "Alcaldía de Medellín"
+      },
+      {
+        "url": "https://www.medellin.travel/",
+        "label": "Guía oficial de turismo"
+      },
+      {
+        "url": "https://www.botanicomedellin.org/",
+        "label": "Jardín Botánico"
+      },
+      {
+        "url": "https://museodeantioquia.co/",
+        "label": "Museo de Antioquia"
+      },
+      {
+        "url": "https://www.parqueexplora.org/en",
+        "label": "Parque Explora"
+      },
+      {
+        "url": "https://www.elmamm.org/",
+        "label": "MAMM"
+      },
+      {
+        "url": "https://www.metrodemedellin.gov.co/",
+        "label": "Metro de Medellín"
+      },
+      {
+        "url": "https://www.danncarlton.com/",
+        "label": "Dann Carlton Medellín"
+      },
+      {
+        "url": "https://www.elcielohotel.com/",
+        "label": "Elcielo Hotel"
+      },
+      {
+        "url": "https://www.hotelsanfernandoplaza.com/",
+        "label": "Hotel San Fernando Plaza"
+      }
+    ],
+    "notes": [
+      "No contacto, alianza, publicación ni aprobación."
+    ]
+  }
+}
