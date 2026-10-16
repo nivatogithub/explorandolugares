@@ -11,3 +11,5 @@ Bloqueos a publicabilidad: falta aprobación humana, integración v2 y comprobac
 
 ## Corrección de alcance 16/10/2026
 Revisión reabierta: revision-ampliada.json registra 10 entradas (una excluida del municipio y varias excursiones por delimitar), oferta de buceo documentada con operador sin alianza ni permiso verificados. Faltan imágenes de actividades, traducciones ampliadas, opciones de portada y decisiones por componente. Esta ampliación no es una entrega completa para aprobar. Flujo: aprobar originales/textos → skill de ilustración → revisión final → autorización separada de publicación.
+
+Referencia visual añadida: Tayrona Diving2, Tisquesusa, CC BY-SA4.0, 2016; original/metadata/miniatura trazables e inspeccionados. Es paisaje submarino sin buzos y no representa a Barracuda; revisión SMR-EXP-F1. No se generó ilustración.

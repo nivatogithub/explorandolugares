@@ -1,5 +1,5 @@
 {
-  "revision": "0535e4fc0ce6761c9ea82ef7e4b25790c8037079797ab98f75a2e758e5c011b9",
+  "revision": "9b4f89a237e97e49516ab3dcd0cd0f6b0982e07f3f98b3bd9079ba8b33d9dd37",
   "components": [
     {
       "id": "SMR-P1",
@@ -59,6 +59,13 @@
       "id": "SMR-T-pt-br",
       "use": "Texto anterior pt-br; no cubre ampliación pendiente",
       "sha256": "c4dfd82028446a29f63ee2535e60a6d3acb67537bf15dfee353f5ca3cae5e39f",
+      "decision": null
+    },
+    {
+      "id": "SMR-EXP-F1",
+      "asset_id": "tayrona-buceo",
+      "use": "Contexto marino de actividad editorial buceo; no operador",
+      "original_sha256": "28fcfcfbbaa5c53f3c5ad23f7aa712dfc8560158499d997297810087f9106a9b",
       "decision": null
     }
   ],
