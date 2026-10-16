@@ -1,6 +1,6 @@
 # El Peñol · Antioquia
 
-ID `CO-05-el-penol` · prioridad 2 · puntuación editorial 60.0/100.
+ID `CO-05-el-penol` · prioridad 1 · puntuación de preparación 60.0/100.
 Estado inicial: planificado; contenido y publicación pendientes de auditoría.
 
 ## Checklist de ejecución

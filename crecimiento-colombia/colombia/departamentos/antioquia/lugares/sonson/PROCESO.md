@@ -1,6 +1,6 @@
 # Sonsón · Antioquia
 
-ID `CO-05-sonson` · prioridad 2 · puntuación editorial 56.0/100.
+ID `CO-05-sonson` · prioridad 2 · puntuación de preparación 56.0/100.
 Estado inicial: planificado; contenido y publicación pendientes de auditoría.
 
 ## Checklist de ejecución

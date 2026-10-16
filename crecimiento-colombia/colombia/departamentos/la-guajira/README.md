@@ -1,8 +1,6 @@
 # La Guajira
 
-Unidad `CO-44` · prioridad 2 · puntuación 60.0/100.
-
-Candidatos editoriales, no censo completo ni páginas públicas. Consultar inventario raíz para puntuaciones y razones.
+Grupo P2 provisional. La prioridad del departamento no obliga a que todos sus destinos pertenezcan al mismo grupo.
 
 - [Riohacha](lugares/riohacha/PROCESO.md) · P2
 - [Uribia](lugares/uribia/PROCESO.md) · P2

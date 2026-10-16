@@ -1,8 +1,6 @@
 # Quindío
 
-Unidad `CO-63` · prioridad 1 · puntuación 85.0/100.
-
-Candidatos editoriales, no censo completo ni páginas públicas. Consultar inventario raíz para puntuaciones y razones.
+Grupo P1 provisional. La prioridad del departamento no obliga a que todos sus destinos pertenezcan al mismo grupo.
 
 - [Salento](lugares/salento/PROCESO.md) · P1
 - [Filandia](lugares/filandia/PROCESO.md) · P2

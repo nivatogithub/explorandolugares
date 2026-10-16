@@ -1,6 +1,6 @@
 # Cartagena · Bolívar
 
-ID `CO-13-cartagena` · prioridad 1 · puntuación editorial 85.0/100.
+ID `CO-13-cartagena` · prioridad 1 · puntuación de preparación 85.0/100.
 Estado inicial: planificado; contenido y publicación pendientes de auditoría.
 
 ## Checklist de ejecución

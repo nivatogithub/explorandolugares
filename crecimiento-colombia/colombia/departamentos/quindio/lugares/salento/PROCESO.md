@@ -1,6 +1,6 @@
 # Salento · Quindío
 
-ID `CO-63-salento` · prioridad 1 · puntuación editorial 85.0/100.
+ID `CO-63-salento` · prioridad 1 · puntuación de preparación 85.0/100.
 Estado inicial: planificado; contenido y publicación pendientes de auditoría.
 
 ## Checklist de ejecución

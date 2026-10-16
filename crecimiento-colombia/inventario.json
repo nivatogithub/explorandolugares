@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "as_of": "2026-10-16",
-  "universe_version": "CO-editorial-v1",
+  "universe_version": "CO-editorial-v2",
   "scope": "curated_candidates_not_all_municipalities",
   "score_weights": {
     "reuse": 35,
@@ -27,7 +27,7 @@
       "score": 85.0,
       "priority": 1,
       "weight": 3,
-      "reason": "MVP acotado de cuatro lugares; selección editorial provisional pendiente de contrastar prioridades previas",
+      "reason": "Grupo departamental P1 provisional; sin límite de integrantes y sin equivalencia con un lote de lanzamiento",
       "confidence": "editorial_estimate",
       "places": [
         {
@@ -48,9 +48,10 @@
           "score": 94.0,
           "priority": 1,
           "weight": 3,
-          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "reason": "Prioridad turística del propietario conservada; puntuación de preparación independiente. Fuente: backend/app/contact-options.json",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/antioquia/lugares/jerico/lugar.json"
+          "path": "colombia/departamentos/antioquia/lugares/jerico/lugar.json",
+          "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
         },
         {
           "id": "CO-05-jardin",
@@ -70,9 +71,10 @@
           "score": 85.0,
           "priority": 1,
           "weight": 3,
-          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "reason": "Prioridad turística del propietario conservada; puntuación de preparación independiente. Fuente: backend/app/contact-options.json",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/antioquia/lugares/jardin/lugar.json"
+          "path": "colombia/departamentos/antioquia/lugares/jardin/lugar.json",
+          "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
         },
         {
           "id": "CO-05-sonson",
@@ -92,9 +94,10 @@
           "score": 56.0,
           "priority": 2,
           "weight": 2,
-          "reason": "Fuera del MVP por corrección del propietario: material preparado no demuestra prioridad turística. P2 provisional, pendiente de contrastar lista anterior.",
+          "reason": "Prioridad turística del propietario conservada; puntuación de preparación independiente. Fuente: backend/app/contact-options.json",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/antioquia/lugares/sonson/lugar.json"
+          "path": "colombia/departamentos/antioquia/lugares/sonson/lugar.json",
+          "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
         },
         {
           "id": "CO-05-cauca-viejo",
@@ -116,7 +119,8 @@
           "weight": 2,
           "reason": "Reutilizar artefactos locales y revisar evidencia",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/antioquia/lugares/cauca-viejo/lugar.json"
+          "path": "colombia/departamentos/antioquia/lugares/cauca-viejo/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         },
         {
           "id": "CO-05-guatape",
@@ -134,11 +138,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Prioridad turística del propietario conservada; puntuación de preparación independiente. Fuente: backend/app/contact-options.json",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/antioquia/lugares/guatape/lugar.json"
+          "path": "colombia/departamentos/antioquia/lugares/guatape/lugar.json",
+          "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
         },
         {
           "id": "CO-05-santa-fe-de-antioquia",
@@ -156,11 +161,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Prioridad turística del propietario conservada; puntuación de preparación independiente. Fuente: backend/app/contact-options.json",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/antioquia/lugares/santa-fe-de-antioquia/lugar.json"
+          "path": "colombia/departamentos/antioquia/lugares/santa-fe-de-antioquia/lugar.json",
+          "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
         },
         {
           "id": "CO-05-medellin",
@@ -178,11 +184,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Prioridad turística del propietario conservada; puntuación de preparación independiente. Fuente: backend/app/contact-options.json",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/antioquia/lugares/medellin/lugar.json"
+          "path": "colombia/departamentos/antioquia/lugares/medellin/lugar.json",
+          "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
         },
         {
           "id": "CO-05-el-penol",
@@ -200,11 +207,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Prioridad turística del propietario conservada; puntuación de preparación independiente. Fuente: backend/app/contact-options.json",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/antioquia/lugares/el-penol/lugar.json"
+          "path": "colombia/departamentos/antioquia/lugares/el-penol/lugar.json",
+          "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
         },
         {
           "id": "CO-05-tamesis",
@@ -222,11 +230,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Prioridad turística del propietario conservada; puntuación de preparación independiente. Fuente: backend/app/contact-options.json",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/antioquia/lugares/tamesis/lugar.json"
+          "path": "colombia/departamentos/antioquia/lugares/tamesis/lugar.json",
+          "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
         },
         {
           "id": "CO-05-san-jeronimo",
@@ -244,11 +253,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Prioridad turística del propietario conservada; puntuación de preparación independiente. Fuente: backend/app/contact-options.json",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/antioquia/lugares/san-jeronimo/lugar.json"
+          "path": "colombia/departamentos/antioquia/lugares/san-jeronimo/lugar.json",
+          "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
         },
         {
           "id": "CO-05-sopetran",
@@ -266,11 +276,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Prioridad turística del propietario conservada; puntuación de preparación independiente. Fuente: backend/app/contact-options.json",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/antioquia/lugares/sopetran/lugar.json"
+          "path": "colombia/departamentos/antioquia/lugares/sopetran/lugar.json",
+          "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
         },
         {
           "id": "CO-05-san-rafael",
@@ -288,11 +299,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Prioridad turística del propietario conservada; puntuación de preparación independiente. Fuente: backend/app/contact-options.json",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/antioquia/lugares/san-rafael/lugar.json"
+          "path": "colombia/departamentos/antioquia/lugares/san-rafael/lugar.json",
+          "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
         },
         {
           "id": "CO-05-cocorna",
@@ -310,11 +322,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Prioridad turística del propietario conservada; puntuación de preparación independiente. Fuente: backend/app/contact-options.json",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/antioquia/lugares/cocorna/lugar.json"
+          "path": "colombia/departamentos/antioquia/lugares/cocorna/lugar.json",
+          "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
         },
         {
           "id": "CO-05-venecia",
@@ -332,11 +345,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Prioridad turística del propietario conservada; puntuación de preparación independiente. Fuente: backend/app/contact-options.json",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/antioquia/lugares/venecia/lugar.json"
+          "path": "colombia/departamentos/antioquia/lugares/venecia/lugar.json",
+          "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
         },
         {
           "id": "CO-05-el-retiro",
@@ -354,11 +368,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Prioridad turística del propietario conservada; puntuación de preparación independiente. Fuente: backend/app/contact-options.json",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/antioquia/lugares/el-retiro/lugar.json"
+          "path": "colombia/departamentos/antioquia/lugares/el-retiro/lugar.json",
+          "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
         },
         {
           "id": "CO-05-san-carlos",
@@ -376,11 +391,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Prioridad turística del propietario conservada; puntuación de preparación independiente. Fuente: backend/app/contact-options.json",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/antioquia/lugares/san-carlos/lugar.json"
+          "path": "colombia/departamentos/antioquia/lugares/san-carlos/lugar.json",
+          "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
         },
         {
           "id": "CO-05-el-carmen-de-viboral",
@@ -398,11 +414,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Prioridad turística del propietario conservada; puntuación de preparación independiente. Fuente: backend/app/contact-options.json",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/antioquia/lugares/el-carmen-de-viboral/lugar.json"
+          "path": "colombia/departamentos/antioquia/lugares/el-carmen-de-viboral/lugar.json",
+          "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
         },
         {
           "id": "CO-05-rionegro",
@@ -420,11 +437,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Prioridad turística del propietario conservada; puntuación de preparación independiente. Fuente: backend/app/contact-options.json",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/antioquia/lugares/rionegro/lugar.json"
+          "path": "colombia/departamentos/antioquia/lugares/rionegro/lugar.json",
+          "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
         },
         {
           "id": "CO-05-necocli",
@@ -442,11 +460,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Prioridad turística del propietario conservada; puntuación de preparación independiente. Fuente: backend/app/contact-options.json",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/antioquia/lugares/necocli/lugar.json"
+          "path": "colombia/departamentos/antioquia/lugares/necocli/lugar.json",
+          "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
         },
         {
           "id": "CO-05-arboletes",
@@ -464,11 +483,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Prioridad turística del propietario conservada; puntuación de preparación independiente. Fuente: backend/app/contact-options.json",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/antioquia/lugares/arboletes/lugar.json"
+          "path": "colombia/departamentos/antioquia/lugares/arboletes/lugar.json",
+          "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
         },
         {
           "id": "CO-05-puerto-triunfo",
@@ -486,11 +506,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Prioridad turística del propietario conservada; puntuación de preparación independiente. Fuente: backend/app/contact-options.json",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/antioquia/lugares/puerto-triunfo/lugar.json"
+          "path": "colombia/departamentos/antioquia/lugares/puerto-triunfo/lugar.json",
+          "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
         },
         {
           "id": "CO-05-san-pedro-de-los-milagros",
@@ -508,11 +529,12 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Prioridad turística del propietario conservada; puntuación de preparación independiente. Fuente: backend/app/contact-options.json",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/antioquia/lugares/san-pedro-de-los-milagros/lugar.json"
+          "path": "colombia/departamentos/antioquia/lugares/san-pedro-de-los-milagros/lugar.json",
+          "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
         },
         {
           "id": "CO-05-santa-rosa-de-osos",
@@ -530,13 +552,15 @@
             "operations": 3
           },
           "score": 60.0,
-          "priority": 2,
-          "weight": 2,
-          "reason": "Reutilizar artefactos locales y revisar evidencia",
+          "priority": 1,
+          "weight": 3,
+          "reason": "Prioridad turística del propietario conservada; puntuación de preparación independiente. Fuente: backend/app/contact-options.json",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/antioquia/lugares/santa-rosa-de-osos/lugar.json"
+          "path": "colombia/departamentos/antioquia/lugares/santa-rosa-de-osos/lugar.json",
+          "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
         }
-      ]
+      ],
+      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
     },
     {
       "id": "CO-08",
@@ -577,7 +601,8 @@
           "weight": 2,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/atlantico/lugares/barranquilla/lugar.json"
+          "path": "colombia/departamentos/atlantico/lugares/barranquilla/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         },
         {
           "id": "CO-08-puerto-colombia",
@@ -599,9 +624,11 @@
           "weight": 2,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/atlantico/lugares/puerto-colombia/lugar.json"
+          "path": "colombia/departamentos/atlantico/lugares/puerto-colombia/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         }
-      ]
+      ],
+      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
     },
     {
       "id": "CO-11",
@@ -642,9 +669,11 @@
           "weight": 2,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/bogota-dc/lugares/bogota/lugar.json"
+          "path": "colombia/departamentos/bogota-dc/lugares/bogota/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         }
-      ]
+      ],
+      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
     },
     {
       "id": "CO-13",
@@ -662,7 +691,7 @@
       "score": 85.0,
       "priority": 1,
       "weight": 3,
-      "reason": "MVP acotado de cuatro lugares; selección editorial provisional pendiente de contrastar prioridades previas",
+      "reason": "Grupo departamental P1 provisional; sin límite de integrantes y sin equivalencia con un lote de lanzamiento",
       "confidence": "editorial_estimate",
       "places": [
         {
@@ -685,7 +714,8 @@
           "weight": 3,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/bolivar/lugares/cartagena/lugar.json"
+          "path": "colombia/departamentos/bolivar/lugares/cartagena/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         },
         {
           "id": "CO-13-santa-cruz-de-mompox",
@@ -707,9 +737,11 @@
           "weight": 2,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/bolivar/lugares/santa-cruz-de-mompox/lugar.json"
+          "path": "colombia/departamentos/bolivar/lugares/santa-cruz-de-mompox/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         }
-      ]
+      ],
+      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
     },
     {
       "id": "CO-15",
@@ -750,7 +782,8 @@
           "weight": 2,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/boyaca/lugares/villa-de-leyva/lugar.json"
+          "path": "colombia/departamentos/boyaca/lugares/villa-de-leyva/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         },
         {
           "id": "CO-15-mongui",
@@ -772,9 +805,11 @@
           "weight": 2,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/boyaca/lugares/mongui/lugar.json"
+          "path": "colombia/departamentos/boyaca/lugares/mongui/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         }
-      ]
+      ],
+      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
     },
     {
       "id": "CO-17",
@@ -815,7 +850,8 @@
           "weight": 2,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/caldas/lugares/manizales/lugar.json"
+          "path": "colombia/departamentos/caldas/lugares/manizales/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         },
         {
           "id": "CO-17-salamina",
@@ -837,9 +873,11 @@
           "weight": 2,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/caldas/lugares/salamina/lugar.json"
+          "path": "colombia/departamentos/caldas/lugares/salamina/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         }
-      ]
+      ],
+      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
     },
     {
       "id": "CO-18",
@@ -880,9 +918,11 @@
           "weight": 1,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/caqueta/lugares/florencia/lugar.json"
+          "path": "colombia/departamentos/caqueta/lugares/florencia/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         }
-      ]
+      ],
+      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
     },
     {
       "id": "CO-19",
@@ -923,7 +963,8 @@
           "weight": 2,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/cauca/lugares/popayan/lugar.json"
+          "path": "colombia/departamentos/cauca/lugares/popayan/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         },
         {
           "id": "CO-19-silvia",
@@ -945,9 +986,11 @@
           "weight": 2,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/cauca/lugares/silvia/lugar.json"
+          "path": "colombia/departamentos/cauca/lugares/silvia/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         }
-      ]
+      ],
+      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
     },
     {
       "id": "CO-20",
@@ -988,9 +1031,11 @@
           "weight": 1,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/cesar/lugares/valledupar/lugar.json"
+          "path": "colombia/departamentos/cesar/lugares/valledupar/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         }
-      ]
+      ],
+      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
     },
     {
       "id": "CO-23",
@@ -1031,7 +1076,8 @@
           "weight": 1,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/cordoba/lugares/monteria/lugar.json"
+          "path": "colombia/departamentos/cordoba/lugares/monteria/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         },
         {
           "id": "CO-23-lorica",
@@ -1053,9 +1099,11 @@
           "weight": 1,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/cordoba/lugares/lorica/lugar.json"
+          "path": "colombia/departamentos/cordoba/lugares/lorica/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         }
-      ]
+      ],
+      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
     },
     {
       "id": "CO-25",
@@ -1096,7 +1144,8 @@
           "weight": 2,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/cundinamarca/lugares/zipaquira/lugar.json"
+          "path": "colombia/departamentos/cundinamarca/lugares/zipaquira/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         },
         {
           "id": "CO-25-guatavita",
@@ -1118,9 +1167,11 @@
           "weight": 2,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/cundinamarca/lugares/guatavita/lugar.json"
+          "path": "colombia/departamentos/cundinamarca/lugares/guatavita/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         }
-      ]
+      ],
+      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
     },
     {
       "id": "CO-27",
@@ -1161,7 +1212,8 @@
           "weight": 1,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/choco/lugares/nuqui/lugar.json"
+          "path": "colombia/departamentos/choco/lugares/nuqui/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         },
         {
           "id": "CO-27-bahia-solano",
@@ -1183,9 +1235,11 @@
           "weight": 1,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/choco/lugares/bahia-solano/lugar.json"
+          "path": "colombia/departamentos/choco/lugares/bahia-solano/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         }
-      ]
+      ],
+      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
     },
     {
       "id": "CO-41",
@@ -1226,7 +1280,8 @@
           "weight": 2,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/huila/lugares/san-agustin/lugar.json"
+          "path": "colombia/departamentos/huila/lugares/san-agustin/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         },
         {
           "id": "CO-41-neiva",
@@ -1248,9 +1303,11 @@
           "weight": 2,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/huila/lugares/neiva/lugar.json"
+          "path": "colombia/departamentos/huila/lugares/neiva/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         }
-      ]
+      ],
+      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
     },
     {
       "id": "CO-44",
@@ -1291,7 +1348,8 @@
           "weight": 2,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/la-guajira/lugares/riohacha/lugar.json"
+          "path": "colombia/departamentos/la-guajira/lugares/riohacha/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         },
         {
           "id": "CO-44-uribia",
@@ -1313,9 +1371,11 @@
           "weight": 2,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/la-guajira/lugares/uribia/lugar.json"
+          "path": "colombia/departamentos/la-guajira/lugares/uribia/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         }
-      ]
+      ],
+      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
     },
     {
       "id": "CO-47",
@@ -1356,9 +1416,11 @@
           "weight": 2,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/magdalena/lugares/santa-marta/lugar.json"
+          "path": "colombia/departamentos/magdalena/lugares/santa-marta/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         }
-      ]
+      ],
+      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
     },
     {
       "id": "CO-50",
@@ -1399,7 +1461,8 @@
           "weight": 2,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/meta/lugares/villavicencio/lugar.json"
+          "path": "colombia/departamentos/meta/lugares/villavicencio/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         },
         {
           "id": "CO-50-la-macarena",
@@ -1421,9 +1484,11 @@
           "weight": 2,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/meta/lugares/la-macarena/lugar.json"
+          "path": "colombia/departamentos/meta/lugares/la-macarena/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         }
-      ]
+      ],
+      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
     },
     {
       "id": "CO-52",
@@ -1464,7 +1529,8 @@
           "weight": 2,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/narino/lugares/pasto/lugar.json"
+          "path": "colombia/departamentos/narino/lugares/pasto/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         },
         {
           "id": "CO-52-ipiales",
@@ -1486,9 +1552,11 @@
           "weight": 2,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/narino/lugares/ipiales/lugar.json"
+          "path": "colombia/departamentos/narino/lugares/ipiales/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         }
-      ]
+      ],
+      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
     },
     {
       "id": "CO-54",
@@ -1529,7 +1597,8 @@
           "weight": 1,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/norte-de-santander/lugares/cucuta/lugar.json"
+          "path": "colombia/departamentos/norte-de-santander/lugares/cucuta/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         },
         {
           "id": "CO-54-pamplona",
@@ -1551,9 +1620,11 @@
           "weight": 1,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/norte-de-santander/lugares/pamplona/lugar.json"
+          "path": "colombia/departamentos/norte-de-santander/lugares/pamplona/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         }
-      ]
+      ],
+      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
     },
     {
       "id": "CO-63",
@@ -1571,7 +1642,7 @@
       "score": 85.0,
       "priority": 1,
       "weight": 3,
-      "reason": "MVP acotado de cuatro lugares; selección editorial provisional pendiente de contrastar prioridades previas",
+      "reason": "Grupo departamental P1 provisional; sin límite de integrantes y sin equivalencia con un lote de lanzamiento",
       "confidence": "editorial_estimate",
       "places": [
         {
@@ -1594,7 +1665,8 @@
           "weight": 3,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/quindio/lugares/salento/lugar.json"
+          "path": "colombia/departamentos/quindio/lugares/salento/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         },
         {
           "id": "CO-63-filandia",
@@ -1616,7 +1688,8 @@
           "weight": 2,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/quindio/lugares/filandia/lugar.json"
+          "path": "colombia/departamentos/quindio/lugares/filandia/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         },
         {
           "id": "CO-63-armenia",
@@ -1638,9 +1711,11 @@
           "weight": 2,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/quindio/lugares/armenia/lugar.json"
+          "path": "colombia/departamentos/quindio/lugares/armenia/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         }
-      ]
+      ],
+      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
     },
     {
       "id": "CO-66",
@@ -1681,7 +1756,8 @@
           "weight": 2,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/risaralda/lugares/pereira/lugar.json"
+          "path": "colombia/departamentos/risaralda/lugares/pereira/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         },
         {
           "id": "CO-66-santa-rosa-de-cabal",
@@ -1703,9 +1779,11 @@
           "weight": 2,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/risaralda/lugares/santa-rosa-de-cabal/lugar.json"
+          "path": "colombia/departamentos/risaralda/lugares/santa-rosa-de-cabal/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         }
-      ]
+      ],
+      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
     },
     {
       "id": "CO-68",
@@ -1746,7 +1824,8 @@
           "weight": 2,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/santander/lugares/barichara/lugar.json"
+          "path": "colombia/departamentos/santander/lugares/barichara/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         },
         {
           "id": "CO-68-san-gil",
@@ -1768,9 +1847,11 @@
           "weight": 2,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/santander/lugares/san-gil/lugar.json"
+          "path": "colombia/departamentos/santander/lugares/san-gil/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         }
-      ]
+      ],
+      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
     },
     {
       "id": "CO-70",
@@ -1811,7 +1892,8 @@
           "weight": 1,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/sucre/lugares/sincelejo/lugar.json"
+          "path": "colombia/departamentos/sucre/lugares/sincelejo/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         },
         {
           "id": "CO-70-santiago-de-tolu",
@@ -1833,9 +1915,11 @@
           "weight": 1,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/sucre/lugares/santiago-de-tolu/lugar.json"
+          "path": "colombia/departamentos/sucre/lugares/santiago-de-tolu/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         }
-      ]
+      ],
+      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
     },
     {
       "id": "CO-73",
@@ -1876,7 +1960,8 @@
           "weight": 2,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/tolima/lugares/ibague/lugar.json"
+          "path": "colombia/departamentos/tolima/lugares/ibague/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         },
         {
           "id": "CO-73-honda",
@@ -1898,9 +1983,11 @@
           "weight": 2,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/tolima/lugares/honda/lugar.json"
+          "path": "colombia/departamentos/tolima/lugares/honda/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         }
-      ]
+      ],
+      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
     },
     {
       "id": "CO-76",
@@ -1941,7 +2028,8 @@
           "weight": 2,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/valle-del-cauca/lugares/cali/lugar.json"
+          "path": "colombia/departamentos/valle-del-cauca/lugares/cali/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         },
         {
           "id": "CO-76-guadalajara-de-buga",
@@ -1963,9 +2051,11 @@
           "weight": 2,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/valle-del-cauca/lugares/guadalajara-de-buga/lugar.json"
+          "path": "colombia/departamentos/valle-del-cauca/lugares/guadalajara-de-buga/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         }
-      ]
+      ],
+      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
     },
     {
       "id": "CO-81",
@@ -2006,9 +2096,11 @@
           "weight": 1,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/arauca/lugares/arauca/lugar.json"
+          "path": "colombia/departamentos/arauca/lugares/arauca/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         }
-      ]
+      ],
+      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
     },
     {
       "id": "CO-85",
@@ -2049,9 +2141,11 @@
           "weight": 1,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/casanare/lugares/yopal/lugar.json"
+          "path": "colombia/departamentos/casanare/lugares/yopal/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         }
-      ]
+      ],
+      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
     },
     {
       "id": "CO-86",
@@ -2092,7 +2186,8 @@
           "weight": 1,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/putumayo/lugares/mocoa/lugar.json"
+          "path": "colombia/departamentos/putumayo/lugares/mocoa/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         },
         {
           "id": "CO-86-sibundoy",
@@ -2114,9 +2209,11 @@
           "weight": 1,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/putumayo/lugares/sibundoy/lugar.json"
+          "path": "colombia/departamentos/putumayo/lugares/sibundoy/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         }
-      ]
+      ],
+      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
     },
     {
       "id": "CO-88",
@@ -2157,7 +2254,8 @@
           "weight": 2,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/san-andres-providencia-y-santa-catalina/lugares/san-andres/lugar.json"
+          "path": "colombia/departamentos/san-andres-providencia-y-santa-catalina/lugares/san-andres/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         },
         {
           "id": "CO-88-providencia",
@@ -2179,9 +2277,11 @@
           "weight": 2,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/san-andres-providencia-y-santa-catalina/lugares/providencia/lugar.json"
+          "path": "colombia/departamentos/san-andres-providencia-y-santa-catalina/lugares/providencia/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         }
-      ]
+      ],
+      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
     },
     {
       "id": "CO-91",
@@ -2222,7 +2322,8 @@
           "weight": 2,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/amazonas/lugares/leticia/lugar.json"
+          "path": "colombia/departamentos/amazonas/lugares/leticia/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         },
         {
           "id": "CO-91-puerto-narino",
@@ -2244,9 +2345,11 @@
           "weight": 2,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/amazonas/lugares/puerto-narino/lugar.json"
+          "path": "colombia/departamentos/amazonas/lugares/puerto-narino/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         }
-      ]
+      ],
+      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
     },
     {
       "id": "CO-94",
@@ -2287,9 +2390,11 @@
           "weight": 1,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/guainia/lugares/inirida/lugar.json"
+          "path": "colombia/departamentos/guainia/lugares/inirida/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         }
-      ]
+      ],
+      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
     },
     {
       "id": "CO-95",
@@ -2330,9 +2435,11 @@
           "weight": 1,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/guaviare/lugares/san-jose-del-guaviare/lugar.json"
+          "path": "colombia/departamentos/guaviare/lugares/san-jose-del-guaviare/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         }
-      ]
+      ],
+      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
     },
     {
       "id": "CO-97",
@@ -2373,9 +2480,11 @@
           "weight": 1,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/vaupes/lugares/mitu/lugar.json"
+          "path": "colombia/departamentos/vaupes/lugares/mitu/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         }
-      ]
+      ],
+      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
     },
     {
       "id": "CO-99",
@@ -2416,9 +2525,11 @@
           "weight": 1,
           "reason": "Candidato editorial; no representa demanda medida",
           "confidence": "editorial_estimate",
-          "path": "colombia/departamentos/vichada/lugares/puerto-carreno/lugar.json"
+          "path": "colombia/departamentos/vichada/lugares/puerto-carreno/lugar.json",
+          "priority_basis": "propuesta_editorial_pendiente_validacion"
         }
-      ]
+      ],
+      "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"
     }
   ]
 }

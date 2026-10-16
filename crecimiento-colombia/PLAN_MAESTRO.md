@@ -6,13 +6,15 @@ País `CO` → unidad departamental → lugar. Bogotá D.C. se conserva separada
 
 Inventario v1: catálogo editorial de candidatos en todas las unidades, más los destinos piloto locales. No pretende inventariar todos los municipios. Antes de declarar cobertura administrativa nacional completa, importar una versión oficial DANE, registrar fecha, licencia, hash y conteos; reconciliar distritos, centros poblados y destinos autónomos con una tabla de equivalencias revisada. No borrar candidatos al cambiar denominadores: versionar el inventario.
 
-## Tres prioridades y puntuación
+## Tres grupos de prioridad, sin cupos
 
-Cada dimensión de 0 a 5 es una estimación interna: reutilización de contenido 35%, facilidad de fuentes 25%, oportunidad editorial 20%, facilidad de permisos 10%, facilidad operativa 10%. Total = suma(peso × dimensión / 5), entre 0 y 100. Facilidad alta significa menor esfuerzo. No son estadísticas de visitantes ni rankings oficiales. Cada fila guarda vector, razón, confianza y fecha. Recalibrar tras dos lugares terminados usando horas y rechazos reales.
+Departamentos: distribuir todas las unidades en P1, P2 y P3. Destinos: distribuir todos los lugares en P1, P2 y P3, conservando su clasificación propia. Son dos agrupaciones independientes: no son tres departamentos ni tres destinos. No hay un máximo de integrantes por grupo. Los departamentos asignados en v1 son una propuesta provisional que debe validarse; que actualmente haya tres en P1 no define un cupo ni una selección acordada con el propietario.
 
-- P1: puntuación ≥80. MVP de Antioquia, Quindío y Bolívar; solo Jericó, Jardín, Salento y Cartagena. Primero Jericó; después Jardín; Sonsón queda fuera del MVP, con P2 provisional; Salento y Cartagena prueban expansión fuera del piloto. Si un permiso bloquea, avanzar el siguiente P1, sin reducir el criterio de calidad.
-- P2: 55–79. Expansión por corredores y reutilización; incluye Cauca Viejo como prueba de relación padre/hijo. Un lugar puede estar P2 dentro de un departamento P1. No implica prioridad de publicación de todos sus lugares.
-- P3: <55. Investigación y preparación posterior, nunca una valoración de importancia cultural. Elevar prioridad al conseguir material autorizado y fuentes útiles.
+P1 es el grupo del MVP rápido; P2 es la siguiente expansión; P3 es desarrollo posterior. Un destino P2 puede pertenecer a un departamento P1, como Sonsón en Antioquia. La cantidad trabajada simultáneamente es una decisión operativa distinta de la clasificación: dividir P1 en lotes no baja de prioridad a quienes esperan.
+
+La clasificación previa de Antioquia está en `backend/app/contact-options.json`, proporcionada por el propietario el 11/10/2026. Se restauran sus 21 municipios P1. Sonsón conserva P2. No se reemplaza esa decisión por una estimación del agente. Los destinos nacionales sin clasificación previa siguen siendo propuestas para validar. El catálogo histórico tiene cuatro categorías; no se altera: si se incorpora completo al nuevo plan de tres grupos, categorías históricas 3/4 se mapearán a P3 conservando la categoría original y dejando constancia para revisión.
+
+La puntuación actual mide PREPARACIÓN: reutilización 35%, facilidad de fuentes 25%, oportunidad editorial 20%, facilidad de permisos 10%, facilidad operativa 10%; cada dimensión de 0 a 5. Total = suma(peso × dimensión / 5). Es estimación interna, no demanda turística, y NO determina automáticamente P1/P2/P3. `priority_basis` identifica si la prioridad viene del propietario o es una propuesta editorial. Usar puntuación y bloqueos para ordenar trabajo dentro del grupo, sin cambiarlo. Antes de proponer una clasificación turística nacional definitiva, contrastar importancia turística, diversidad territorial, fuentes y prioridades del propietario; no inventar cifras de afluencia.
 
 WIP recomendado: dos lugares en preparación y uno en revisión. Los workers son roles que pueden ejecutarse en serie; no se exige contratar ni conectar agentes para lanzar. Presupuesto y disponibilidad del equipo pendientes. Estimaciones: 1–2 jornadas por lugar reutilizable, 2–4 por lugar nuevo, sin incluir espera de permisos; medir, no prometer fechas.
 
@@ -22,7 +24,7 @@ WIP recomendado: dos lugares en preparación y uno en revisión. Los workers son
 |---|---|---|
 | H0 · base | Inventario y contratos válidos, responsables editor/revisor asignados, privacidad/contacto reales antes de captar datos | Propietario + técnico |
 | H1 · piloto útil | Jericó revisado con fotos reales, 3 atractivos, información práctica, directorio básico trazable y ES/EN/PT-BR; PR revisado y versión aprobada | Editor + revisor |
-| H2 · MVP nacional acotado | Los 4 P1 aprobados; publicación autorizada uno a uno, HTTP/medios/SEO y navegación comprobados; medición respetuosa configurada | Técnico + propietario |
+| H2 · MVP del grupo P1 | Grupo P1 aprobado y publicado progresivamente, con avances por lotes documentados; publicación autorizada uno a uno, HTTP/medios/SEO y navegación comprobados; medición respetuosa configurada | Técnico + propietario |
 | H3 · expansión | Lotes P2 de 5; correcciones atendidas, relación Cauca Viejo/Jericó probada; cuentas según gates del roadmap | Editor + técnico |
 | H4 · retención y negocio | Guardados/listas y reclamación seguros, recomendaciones evaluadas; monetización experimental aprobada | Producto |
 | H5 · Instagram | Estrategia separada después de contenido y medición; calendario y permisos propios; ningún contacto/envío automático | Por asignar |
@@ -45,6 +47,5 @@ Técnica: móvil/escritorio, enlaces y medios sin error, HTML escapado, accesibi
 
 Lugar preparado = suma de gates aprobados: identidad 5%, fuentes 10%, texto 20%, fotos 20%, idiomas 15%, directorio 10%, técnica 10%, privacidad 5%, revisión 5%. Gate parcial puntúa cero. Peso de lugar: P1=3, P2=2, P3=1. Departamento = media ponderada de sus lugares. Peso departamental P1=3/P2=2/P3=1; país = media ponderada de los departamentos, incluido Bogotá. Una unidad sin lugares vale cero, no desaparece del denominador.
 
-Publicación comprobada usa el mismo denominador, pero aporta cero salvo estado `published` y evidencia completa. Reportar además cumplimiento del MVP (P1), conteos absolutos, versión del universo y pendientes de verificar; nunca llamar a esta métrica «Colombia completa». Evitar doble conteo de contenido padre/hijo: sus gates necesitan evidencia específica aunque compartan fuentes o negocios. `scripts/cobertura.py` calcula los resultados; `COBERTURA.md` conserva la última ejecución local.
+Publicación comprobada usa el mismo denominador, pero aporta cero salvo estado `published` y evidencia completa. Reportar además cumplimiento del grupo P1 (MVP), conteos absolutos, versión del universo y pendientes de verificar; nunca llamar a esta métrica «Colombia completa». Evitar doble conteo de contenido padre/hijo: sus gates necesitan evidencia específica aunque compartan fuentes o negocios. `scripts/cobertura.py` calcula los resultados; `COBERTURA.md` conserva la última ejecución local.
 
-Corrección del propietario: Sonsón no pertenecía a las prioridades turísticas anteriores. Su paquete preparado no justifica priorizarlo. No sustituir la priorización turística por disponibilidad de artefactos; contrastar la lista previa antes de cerrar el MVP. Las demás prioridades siguen siendo propuestas, no decisiones históricas del propietario.

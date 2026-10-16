@@ -1,7 +1,5 @@
 # Magdalena
 
-Unidad `CO-47` · prioridad 2 · puntuación 60.0/100.
-
-Candidatos editoriales, no censo completo ni páginas públicas. Consultar inventario raíz para puntuaciones y razones.
+Grupo P2 provisional. La prioridad del departamento no obliga a que todos sus destinos pertenezcan al mismo grupo.
 
 - [Santa Marta](lugares/santa-marta/PROCESO.md) · P2

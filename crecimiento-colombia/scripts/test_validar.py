@@ -11,7 +11,8 @@ class ValidationTests(unittest.TestCase):
     def mutate(self,path,fn):
         data=v.read(path);fn(data);path.write_text(json.dumps(data))
     def test_seed_valid_and_mvp_small(self):
-        inv,ms=v.validate();self.assertEqual(sum(p['priority']==1 for d in inv['departments'] for p in d['places']),4)
+        inv,ms=v.validate();self.assertEqual({p['name'] for d in inv['departments'] if d['id']=='CO-05' for p in d['places'] if p['priority']==1}, {x['name'] for x in json.loads((self.previous.parent/'backend/app/contact-options.json').read_text())['municipalityCatalog'] if x['pilotCategory']==1})
+        self.assertEqual(next(p['priority'] for d in inv['departments'] for p in d['places'] if p['id']=='CO-05-sonson'),2)
         self.assertTrue(all(not g['passed'] for m in ms for g in m['gates'].values()))
     def test_gate_without_evidence_rejected(self):
         self.mutate(self.manifest(),lambda m:m['gates']['fotos'].update(passed=True))

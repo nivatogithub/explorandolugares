@@ -1,6 +1,6 @@
 # Nuquí · Chocó
 
-ID `CO-27-nuqui` · prioridad 3 · puntuación editorial 35.0/100.
+ID `CO-27-nuqui` · prioridad 3 · puntuación de preparación 35.0/100.
 Estado inicial: planificado; contenido y publicación pendientes de auditoría.
 
 ## Checklist de ejecución
