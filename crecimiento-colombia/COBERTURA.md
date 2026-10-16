@@ -44,6 +44,6 @@ Grupos departamentales: P1=22, P2=8, P3=3
 Grupos de destinos: P1=61, P2=38, P3=1
 País: preparación 0.00% · publicación comprobada 0.00%.
 Grupo nacional de destinos P1: 61 lugares; 0 con publicación comprobada.
-Inventario: 100 candidatos; 100 planificados.
+Inventario: 100 candidatos; 96 planificados.
 
 No mide territorio, población ni demanda turística. Todo gate inicial está pendiente de auditoría. Cambiar universo o pesos requiere nueva versión y conservar comparación anterior.
