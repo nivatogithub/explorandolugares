@@ -12,6 +12,12 @@ maintenance_check($report['migrations']['001-phone-type']==='pending','Missing p
 $rejected=false;try{$tool->applyMigrations();}catch(RuntimeException $e){$rejected=str_contains($e->getMessage(),'MySQL/MariaDB');}
 maintenance_check($rejected&&!in_array('phone_type',$pdo->query('PRAGMA table_info(leads)')->fetchAll(PDO::FETCH_COLUMN,1),true),'Production write actions refuse SQLite and leave it unchanged');
 
+$sqlFile=tempnam(sys_get_temp_dir(),'el-sql-comments-');
+file_put_contents($sqlFile,"-- A semicolon in this comment; must not split SQL.\nCREATE TABLE sql_comment_split_test (id INTEGER PRIMARY KEY);\n");
+$executor=(new ReflectionClass(DatabaseMaintenance::class))->getMethod('executeSqlFile');
+$executor->invoke($tool,$sqlFile);unlink($sqlFile);
+maintenance_check(in_array('sql_comment_split_test',$pdo->query("SELECT name FROM sqlite_master WHERE type='table'")->fetchAll(PDO::FETCH_COLUMN),true),'SQL migration execution ignores semicolons inside full-line comments');
+
 $destinations=new PDO('sqlite::memory:');$destinations->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 $destinations->exec(file_get_contents(dirname(__DIR__).'/database/destinations.sqlite.sql'));
 $preBusinessMigrations=(new DatabaseMaintenance($destinations,$app,$public))->inspect();
