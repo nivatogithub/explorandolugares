@@ -10,7 +10,7 @@ class ValidationTests(unittest.TestCase):
         inv=v.read(v.ROOT/'inventario.json');return v.ROOT/inv['departments'][0]['places'][0]['path']
     def mutate(self,path,fn):
         data=v.read(path);fn(data);path.write_text(json.dumps(data))
-    def test_seed_valid_and_mvp_small(self):
+    def test_seed_preserves_owner_priority_groups(self):
         inv,ms=v.validate();self.assertEqual({p['name'] for d in inv['departments'] if d['id']=='CO-05' for p in d['places'] if p['priority']==1}, {x['name'] for x in json.loads((self.previous.parent/'backend/app/contact-options.json').read_text())['municipalityCatalog'] if x['pilotCategory']==1})
         self.assertEqual(next(p['priority'] for d in inv['departments'] for p in d['places'] if p['id']=='CO-05-sonson'),2)
         self.assertTrue(all(not g['passed'] for m in ms for g in m['gates'].values()))
