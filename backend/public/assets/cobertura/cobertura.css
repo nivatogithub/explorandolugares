@@ -13,3 +13,7 @@
 
 /* Set page text explicitly instead of inheriting the shared legacy body green. */
 #contenido{color:var(--ink)}#contenido .coverage-intro{margin:0;font-weight:400;color:var(--ink)}#contenido .coverage-intro h1{color:var(--ink)}
+
+/* Warm cards shared with the participation section. Keep map status colors separate. */
+#contenido{--card-surface:#fff0dc;--card-border:#f2c77e}
+#contenido .country-stats,#contenido .country-stats article,#contenido .audience-metrics article,#contenido .audience-empty{background:var(--card-surface);border-color:var(--card-border)}
