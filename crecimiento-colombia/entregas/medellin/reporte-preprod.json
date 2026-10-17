@@ -75,8 +75,8 @@
   "approval": false,
   "generation": false,
   "publication": false,
-  "database_touched": false,
-  "imported": false,
+  "database_touched": true,
+  "imported": true,
   "history_image_sidecar": "historia-sidecar-preprod.json",
   "history_image_limitation": "Foto contextual2016 desdePicacho distinta de9fotosZIP; integración privada por coordinador pendiente, no muestra1675.",
   "validation": {
@@ -92,5 +92,27 @@
     "Fotos históricas no prueban condiciones actuales.",
     "Aprobación original/textos y segunda revisión antes de IA/publicación.",
     "Coltejer no tarjeta; no eventoMacarena prometido."
-  ]
+  ],
+  "environment": "local_preprod_only",
+  "import_receipt": {
+    "destination": "medellin",
+    "id": 16,
+    "package_sha256": "616de788ce8dcac3dcab8ac0f44212ce42f4e2f596a03a64c0d2690323daf8fb",
+    "loaded_at": "2026-10-17T12:06:53+00:00",
+    "environment": "local_preprod_only",
+    "production_authorized": false,
+    "editorial_approved": false,
+    "provisional_photographs": true,
+    "places": 8,
+    "history_asset_id": 135,
+    "urls": {
+      "es": "http://127.0.0.1:8088/destinos/medellin/",
+      "en": "http://127.0.0.1:8088/en/destinos/medellin/",
+      "pt-BR": "http://127.0.0.1:8088/pt-br/destinos/medellin/"
+    }
+  },
+  "production_authorized": false,
+  "editorial_approved": false,
+  "history_image_imported": true,
+  "live_validation": "verificacion-preprod-v3.json"
 }
