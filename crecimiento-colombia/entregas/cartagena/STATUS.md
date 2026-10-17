@@ -53,3 +53,7 @@ Nueva autorización del propietario: cargar avances incompletos para observacion
 `reporte-preprod.json` conserva hash de paquete/fuente, contenido y faltantes. Ambos lectores PHP reales (ramaCartagena y checkoutpreprod) aceptan el ZIP. Estadosdraft y fuenteslabel/url comprobados; captions no superan500caracteres. El importador semillaDestinationImporter requiere tablasvacías, por lo que no debe usarse directamente sobre MySQLlocalpoblado. La carga serial y previsualización PHP corresponden al coordinador.
 
 No se tocó preprod compartido, BD, contenedores ni navegador. Final editorial/IA/aprobación/publicación siguen pendientes; cargar este avance local no los da por terminados. El ledger y paquete editorial anterior no fueron modificados.
+
+## Correcciones visuales v3 · 17 octubre UTC
+
+Portada generada con skill imagenes-destinos y herramienta integrada image_gen, maestro y WebP en imagenes/ia; pendiente de aprobación humana, sin reemplazo en preprod. Motivos resumidos a cuatro por idioma, reducción ES de 1684 a 263 caracteres, importados en MariaDB local. Diseño corrige columna vacía cuando no hay imagen de historia; Jericó conserva su composición con fotografía. Evidencias escritorio/tablet/móvil guardadas. Tres propuestas de referencia preparadas para centro, San Felipe y Getsemaní; Rosario y La Boquilla pendientes de mejor calidad. Otras tres referencias conservadas provisionalmente, sin inferir aprobación final. No producción.

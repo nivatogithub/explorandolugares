@@ -12,7 +12,11 @@ assert len(d['places'])>=3
 inventory=read('inventario-componentes.json')
 assert inventory['sites_total']==len(d['places'])>=17
 assert inventory['experiences_total']==len(d['experiences'])>=9
-assert inventory['illustrations_generated']==0 and not inventory['art_generation_authorized']
+assert inventory['illustrations_generated']==1 and not inventory['art_generation_authorized']
+hero=read('imagenes/ia/procedencia-portada-v1.json')
+assert hero['review']['status']=='draft_pending_human_review' and not hero['publication']['approved_at']
+assert read('correcciones-v3.json')['hero_generation_authorized'] is True
+assert (P/hero['file']).is_file() and (P/hero['master_file']).is_file()
 assert inventory['references_human_approved']==3 and inventory['published_sites']==0
 assert len({p['slug'] for p in d['places']})==len(d['places'])
 selection=read('seleccion-editorial.json');assert len(selection['selection'])==8 and not selection['approved']

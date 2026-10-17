@@ -5,9 +5,9 @@
   "status": "prepared_not_imported",
   "authority": "Usuario autoriza cargar destinos incompletos en preprod local para observar avances; no producción.",
   "source_package": "paquete-v2.json",
-  "source_package_sha256": "0f4a2ab750c93b91f996494e89ed35636d61ceab7f258ecc93a0ea0c51cd9d91",
+  "source_package_sha256": "36353009311f6be4fe028fd6b739e855d94dbd551183aca6a018a7c5eac00da2",
   "package": "paquete-preprod.zip",
-  "package_sha256": "a0f60f08b7f9e81a08fa73e9bf9a69a3ff88081d92b3e8340a5501b0de3253f4",
+  "package_sha256": "6616870126215d6cec8ad04130926a91acdf3a139eb923d56afe8624bbb6f6ad",
   "manifest": "paquete-preprod.json",
   "locales": [
     "es",
@@ -26,7 +26,7 @@
   ],
   "sites": 8,
   "provisional_photographs": 9,
-  "generated_illustrations": 0,
+  "generated_illustrations": 1,
   "approved_final_illustrations": 0,
   "publication_approved": false,
   "database_modified": false,
@@ -35,8 +35,8 @@
   "missing": [
     {
       "component": "ilustraciones_finales",
-      "status": "no_generadas",
-      "reason": "Referencias y textos modificados pendientes; ejecución condicional aplazada para corregir selección, generación no realizada."
+      "status": "portada_candidata_generada",
+      "reason": "Una portada IA generada pendiente de aprobación. Ocho imágenes de atractivos aún sin generar."
     },
     {
       "component": "revision_editorial_final",
@@ -71,13 +71,5 @@
     "DestinationImporter::import es importador semilla: requiere tablasdestinations/service_categories/businesses vacías y aborta si haydatos. No usar directamente contra preprod poblado.",
     "Conservar estadosdraft al importar y acceder mediante previsualización local autorizada; no convertir autorización de revisión local en publicación de producción.",
     "sources incluye label/url/section_key para compatibilidad con fuentes del importador; los textos turísticos originales y ledger no se alteran."
-  ],
-  "validation": {
-    "worker_php_reader": "PASS8sites9images",
-    "preprod_checkout_php_reader": "PASS8sites9images",
-    "draft_status": "PASS",
-    "source_labels": "PASS",
-    "photo_caption_max500": "PASS",
-    "browser_or_database_used": false
-  }
+  ]
 }
