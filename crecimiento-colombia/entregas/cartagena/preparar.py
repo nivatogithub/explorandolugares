@@ -3,6 +3,8 @@ from pathlib import Path
 import json, hashlib, html, io, zipfile
 from PIL import Image, ImageOps, ImageCms, __version__ as pillow_version
 P = Path(__file__).resolve().parent
+if (P/'contenido-cierre-v9.json').exists():
+    raise SystemExit('Generador histórico bloqueado: usar contenido-cierre-v9.json; no sobrescribir traducciones/aprobaciones.')
 DATE = '2026-10-16'
 def save(name, value):
     (P/name).write_text(json.dumps(value, ensure_ascii=False, indent=2)+'\n')

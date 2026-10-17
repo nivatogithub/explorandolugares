@@ -1,0 +1,98 @@
+{
+  "status": "pending_comparative_cutoff_audit",
+  "scope": "Distrito Cartagena; excursiones fuera de jurisdicción se separan",
+  "inventory_sources": [
+    "https://www.tripadvisor.com/Attractions-g297476-Activities-Cartagena_Cartagena_District_Bolivar_Department.html",
+    "https://colombia.travel/es/cartagena/recorrido-por-el-centro-historico-de-cartagena-de-indias",
+    "https://cartagenadeindias.travel/naturaleza-y-comunitario/boquilla-2/"
+  ],
+  "current_selection": [
+    "centro-historico",
+    "san-felipe",
+    "getsemani",
+    "islas-rosario",
+    "playa-blanca-baru",
+    "cerro-popa",
+    "museo-historico",
+    "la-boquilla"
+  ],
+  "current_inventory": [
+    "centro-historico",
+    "san-felipe",
+    "getsemani",
+    "museo-historico",
+    "torre-reloj",
+    "oro-zenu",
+    "cerro-popa",
+    "san-pedro-claver",
+    "santo-domingo",
+    "santo-toribio",
+    "museo-naval",
+    "plaza-santa-teresa",
+    "portal-dulces",
+    "serrezuela",
+    "teatro-adolfo-mejia",
+    "la-boquilla",
+    "manglares-boquilla",
+    "islas-rosario",
+    "playa-blanca-baru"
+  ],
+  "additional_candidates_to_research": [
+    "bocagrande",
+    "tierra-bomba",
+    "bocachica-fortificaciones",
+    "aviario-nacional-baru",
+    "oceanario-rosario"
+  ],
+  "comparisons_pending": [
+    {
+      "excluded": "torre-reloj",
+      "included": "centro-historico",
+      "question": "Confirmar que la Torre del Reloj está nombrada como parada esencial dentro del recorrido; no excluir símbolo por agrupación ambigua."
+    },
+    {
+      "excluded": "san-pedro-claver",
+      "included": "museo-historico",
+      "question": "Comparar importancia turística con fuentes; no mantener Museo por imagen ya aprobada ni excluir santuario por cuota religiosa."
+    },
+    {
+      "excluded": "bocagrande/tierra-bomba/aviario",
+      "included": "la-boquilla",
+      "question": "Investigar frontera con oferta más amplia; no declarar Boquilla octavo final por variedad de naturaleza/comunidad."
+    }
+  ],
+  "ordered_top8_proposal": [],
+  "evidence_confidence": "pending",
+  "unresolved_comparisons": [
+    "puestos6a8",
+    "agrupaciones de centro histórico",
+    "universo fuera inventario19"
+  ],
+  "cutoff_validated": false,
+  "approvals_preserved": true,
+  "publication_authorized": false,
+  "territorial_sources_checked_no_photos": [
+    {
+      "candidate": "tierra-bomba/bocachica",
+      "sources": [
+        "https://colombia.travel/es/cartagena-de-indias/la-isla-de-tierrabomba",
+        "https://fortificacionescartagena.com.co/es/historia/fortificaciones-de-la-bahia/tierra-bomba/"
+      ],
+      "finding": "Isla/fortificaciones de bahía identificadas, no fuera del distrito por analogía; comparar con corte."
+    },
+    {
+      "candidate": "aviario-nacional-baru",
+      "sources": [
+        "https://colombia.travel/es/cartagena/conoce-el-aviario-nacional"
+      ],
+      "finding": "Equipamiento identificado en vía Cartagena–Barú; visita como experiencia, no inclusión automática."
+    },
+    {
+      "candidate": "la-boquilla",
+      "sources": [
+        "https://cartagenadeindias.travel/naturaleza-y-comunitario/boquilla-2/"
+      ],
+      "finding": "Corregimiento con identidad pesquera; paseos en manglares son experiencias relacionadas, no sustituyen prioridad geográfica."
+    }
+  ]
+}

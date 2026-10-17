@@ -1,0 +1,70 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "eight_unique_places",
+      "passed": true
+    },
+    {
+      "check": "selected_names_descriptions_es",
+      "passed": true
+    },
+    {
+      "check": "seven_experiences_es",
+      "passed": true
+    },
+    {
+      "check": "ten_directory_es",
+      "passed": true
+    },
+    {
+      "check": "selected_names_descriptions_en",
+      "passed": true
+    },
+    {
+      "check": "seven_experiences_en",
+      "passed": true
+    },
+    {
+      "check": "ten_directory_en",
+      "passed": true
+    },
+    {
+      "check": "selected_names_descriptions_pt-BR",
+      "passed": true
+    },
+    {
+      "check": "seven_experiences_pt-BR",
+      "passed": true
+    },
+    {
+      "check": "ten_directory_pt-BR",
+      "passed": true
+    },
+    {
+      "check": "approval_unchanged_decisiones-usuario.json",
+      "passed": true
+    },
+    {
+      "check": "approval_unchanged_aprobaciones-vigentes.json",
+      "passed": true
+    },
+    {
+      "check": "approval_unchanged_historial/decision-usuario-original-3fab25.json",
+      "passed": true
+    },
+    {
+      "check": "no_image_changes",
+      "passed": true
+    },
+    {
+      "check": "no_publication",
+      "passed": true
+    }
+  ],
+  "content_sha256": "e0c763e23593738ddc3df3bcebd30cdba3234e5a9ffad70222b96dd6b7be8f1f",
+  "limits": [
+    "Revisión editorial automática no sustituye aprobación humana.",
+    "Referencias fotográficas y arte final pendientes; no comprobación de diseño final."
+  ]
+}

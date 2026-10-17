@@ -1,0 +1,126 @@
+{
+  "destination": "cartagena",
+  "components": [
+    {
+      "id": "portada",
+      "role": "Imagen principal del destino",
+      "scene": "Panorama reconocible de Cartagena y su bahía; diferente de las ocho tarjetas.",
+      "status": "ilustracion_ia_v1_existente_pendiente_revision",
+      "file": "imagenes/ia/cartagena-portada-la-popa-v1.webp"
+    },
+    {
+      "id": "historia",
+      "role": "Imagen que acompaña la historia",
+      "scene": "Patrimonio portuario o murallas contextualizadas; encuadre distinto de portada y tarjeta del centro.",
+      "status": "pendiente_url_usuario"
+    },
+    {
+      "id": "centro-historico",
+      "role": "Tarjeta de atractivo 1",
+      "name": "Centro histórico y murallas",
+      "status": "referencia_provisional_no_final",
+      "requires_user_selected_reference": true
+    },
+    {
+      "id": "san-felipe",
+      "role": "Tarjeta de atractivo 2",
+      "name": "Castillo de San Felipe de Barajas",
+      "status": "referencia_provisional_no_final",
+      "requires_user_selected_reference": true
+    },
+    {
+      "id": "getsemani",
+      "role": "Tarjeta de atractivo 3",
+      "name": "Getsemaní",
+      "status": "referencia_provisional_no_final",
+      "requires_user_selected_reference": true
+    },
+    {
+      "id": "islas-rosario",
+      "role": "Tarjeta de atractivo 4",
+      "name": "Islas del Rosario",
+      "status": "referencia_provisional_no_final",
+      "requires_user_selected_reference": true
+    },
+    {
+      "id": "playa-blanca-baru",
+      "role": "Tarjeta de atractivo 5",
+      "name": "Playa Blanca · Barú",
+      "status": "referencia_provisional_no_final",
+      "requires_user_selected_reference": true
+    },
+    {
+      "id": "cerro-popa",
+      "role": "Tarjeta de atractivo 6",
+      "name": "Cerro y convento de La Popa",
+      "status": "referencia_provisional_no_final",
+      "requires_user_selected_reference": true
+    },
+    {
+      "id": "san-pedro-claver",
+      "role": "Tarjeta de atractivo 7",
+      "name": "Santuario y Museo San Pedro Claver",
+      "status": "pendiente_url_usuario",
+      "requires_user_selected_reference": true
+    },
+    {
+      "id": "bocagrande",
+      "role": "Tarjeta de atractivo 8",
+      "name": "Bocagrande",
+      "status": "pendiente_url_usuario",
+      "requires_user_selected_reference": true
+    },
+    {
+      "id": "caminhada-patrimonial",
+      "role": "Imagen de experiencia",
+      "name": "Caminar por Centro y San Diego",
+      "scene": "Mostrar la actividad, no repetir la imagen geográfica del atractivo.",
+      "status": "pendiente_url_usuario"
+    },
+    {
+      "id": "visita-muhca",
+      "role": "Imagen de experiencia",
+      "name": "Visitar el Museo Histórico",
+      "scene": "Mostrar la actividad, no repetir la imagen geográfica del atractivo.",
+      "status": "pendiente_url_usuario"
+    },
+    {
+      "id": "bus-panoramico",
+      "role": "Imagen de experiencia",
+      "name": "Recorrer la ciudad en bus turístico",
+      "scene": "Mostrar la actividad, no repetir la imagen geográfica del atractivo.",
+      "status": "pendiente_url_usuario"
+    },
+    {
+      "id": "buceo-rosario",
+      "role": "Imagen de experiencia",
+      "name": "Bucear en las Islas del Rosario",
+      "scene": "Mostrar la actividad, no repetir la imagen geográfica del atractivo.",
+      "status": "pendiente_url_usuario"
+    },
+    {
+      "id": "snorkel-rosario",
+      "role": "Imagen de experiencia",
+      "name": "Hacer snorkel en Rosario",
+      "scene": "Mostrar la actividad, no repetir la imagen geográfica del atractivo.",
+      "status": "pendiente_url_usuario"
+    },
+    {
+      "id": "catamaran-cartagena",
+      "role": "Imagen de experiencia",
+      "name": "Navegar en catamarán",
+      "scene": "Mostrar la actividad, no repetir la imagen geográfica del atractivo.",
+      "status": "pendiente_url_usuario"
+    },
+    {
+      "id": "pesca-boquilla",
+      "role": "Imagen de experiencia",
+      "name": "Conocer manglares y pesca tradicional en La Boquilla",
+      "scene": "Mostrar la actividad, no repetir la imagen geográfica del atractivo.",
+      "status": "pendiente_url_usuario"
+    }
+  ],
+  "final_ai_images_approved": 0,
+  "automatic_search": false,
+  "final_publication_approved": false
+}
