@@ -21,21 +21,20 @@ Copia inicial: `trabajo/preprod`, junto a `trabajo/explorandolugares`, dentro de
 Desde esa copia:
 
 ```sh
-python3 scripts/preprod-local.py build
-python3 scripts/preprod-local.py up
-python3 scripts/preprod-local.py status
-python3 scripts/preprod-local.py logs
-python3 scripts/preprod-local.py down
+./scripts/subir-preprod.sh
+./scripts/bajar-preprod.sh
+./scripts/actualizar-preprod.sh
+./scripts/reconstruir-preprod.sh
 ```
 
-`build` prepara la imagen; `up` genera el paquete de hosting y arranca/reinicia el contenedor. `down` apaga sin eliminar datos. Después de cambiar infraestructura, ejecutar `build` y luego `up`: se detecta una imagen diferente y se recrea únicamente el contenedor, conservando el volumen MySQL y el estado local.
+`subir-preprod.sh` enciende el contenedor existente sin construir ni regenerar código; si falta la instalación, la prepara. `bajar-preprod.sh` lo apaga sin eliminar imagen ni datos. `actualizar-preprod.sh` prepara el código nuevo sin recompilar PHP/MariaDB. `reconstruir-preprod.sh` reconstruye la imagen y actualiza el entorno, únicamente cuando cambian versiones o extensiones. Los scripts arrancan la máquina de Podman si estaba apagada, sin detener otros contenedores. `down` apaga sin eliminar datos. Después de cambiar infraestructura, ejecutar `build` y luego `up`: se detecta una imagen diferente y se recrea únicamente el contenedor, conservando el volumen MariaDB y el estado local.
 
 Portal: http://127.0.0.1:8088/
 Administrador: http://127.0.0.1:8088/admin/
 
-Un contenedor con Apache, PHP 8.3 y MySQL 8.0 en Ubuntu 24.04. Se mantiene sintaxis compatible con PHP 8.2 del hosting; el entorno local no reproduce exactamente su versión, configuración, arquitectura ni TLS. Escucha solo en loopback; MySQL no publica puertos. La red Podman es interna, sin salida a Internet desde la aplicación. Supervisor gestiona ambos servicios.
+Un contenedor x86_64 con Apache, PHP 8.3.33 y MariaDB 10.11.19. Versiones y ajustes observados directamente en GoDaddy el 16 de octubre de 2026, en `infra/preprod/production-runtime.json`. El controlador PDO se llama mysql, pero el motor real de producción es MariaDB. Se fijan límites PHP, modo SQL, charset/collation de servidor, conexión y base, zona horaria y distinción de mayúsculas. El hosting ejecuta PHP mediante LiteSpeed sobre CloudLinux; localmente se usa el módulo Apache sobre Debian. No se clonan los componentes propietarios i360/ionCube ni la infraestructura cPanel, TLS y límites LVE; no es una copia idéntica del hosting. Escucha solo en loopback; MariaDB no publica puertos. La red Podman es interna, sin salida a Internet desde la aplicación. Supervisor gestiona ambos servicios.
 
-La base queda en el volumen `explorando-preprod-mysql`; configuración, credenciales, imágenes locales y documentos privados en `.local/preprod`, excluido de Git. El panel local abre sin contraseña por decisión del propietario. El script de arranque inyecta un acceso exclusivo del paquete local, condicionado a las variables de Apache, configuración local y host loopback; ese acceso no está en las fuentes desplegables de producción. Las cuentas de negocios mantienen su autenticación. Para probar métricas de visitantes, utilizar un navegador/perfil sin sesión administrativa. Las credenciales locales de reserva se generan en `.local/preprod/admin.json`; no usar contraseñas de producción.
+La base vigente queda en el volumen `explorando-preprod-mariadb-10-11`. El volumen anterior `explorando-preprod-mysql` se conserva separado y no se conecta a MariaDB; no se borró ni se convirtió automáticamente. La nueva base carga la semilla versionada, sin copiar registros de producción. La configuración, credenciales, imágenes locales y documentos privados permanecen en `.local/preprod`, excluido de Git. En este equipo, el panel local abre sin contraseña por decisión del propietario mediante `.local/preprod/settings.json` (`admin_without_password: true`). Este archivo está ignorado por Git. Una instalación nueva crea la opción en false y conserva la contraseña. El script de arranque inyecta un acceso exclusivo del paquete local, condicionado a las variables de Apache, configuración local y host loopback; ese acceso no está en las fuentes desplegables de producción. Las cuentas de negocios mantienen su autenticación. Para probar métricas de visitantes, utilizar un navegador/perfil sin sesión administrativa. Las credenciales locales de reserva se generan en `.local/preprod/admin.json`; no usar contraseñas de producción.
 
 Se crea el esquema mediante el mantenedor de migraciones y se carga únicamente el catálogo semilla versionado. No se copia la base real, clientes, contactos, claves o documentos de producción. El catálogo local puede contener borradores históricos que no tienen aprobación pública. Las campañas no tienen proveedor configurado y el correo PHP está desactivado; no introducir credenciales externas en este entorno. Las estadísticas que genere la revisión son exclusivamente locales.
 
@@ -56,3 +55,17 @@ Comprobar las tres pestañas en escritorio y móvil; porcentaje y denominador; a
 ## Compatibilidad comprobada durante el arranque
 
 MySQL estricto detectó tres incompatibilidades previas: DEFAULT de TEXT sin paréntesis (024), columna generada almacenada sobre una clave con borrado en cascada (028) y ordenación DISTINCT por un campo no seleccionado. Se corrigieron para instalaciones nuevas, además de hacer explícito el JSON privado inicial del importador. Las migraciones ya aplicadas en producción no se reejecutan por cambiar sus archivos. Referencia de la restricción de claves: https://dev.mysql.com/doc/refman/8.0/en/create-table-generated-columns.html.
+
+## Verificación de paridad
+
+Después de `build` y `up`, ejecutar `python3 scripts/check-preprod-parity.py`. Compara el PHP de Apache por HTTP, no el CLI, con la observación real de GoDaddy. Comprueba versión exacta PHP, versión MariaDB, arquitectura, límites, extensiones de aplicación y configuración SQL. El endpoint de inspección se añade solo al paquete local; nunca forma parte de producción. El informe queda en `.local/preprod/parity-report.json` y distingue las diferencias de SAPI/componentes del proveedor.
+
+## Acceso administrativo abierto: exclusivamente local
+
+El cambio de acceso directo no se subió a GitHub al rechazarse el permiso. Los archivos de infraestructura describen un entorno local; no activan un acceso abierto en producción. El inyector solo se ejecuta en `preprod-local.py`, después de generar la copia `.local/preprod/release`. El empaquetador de producción no copia `infra/preprod`, no ejecuta el inyector y conserva la autenticación de `backend/app/bootstrap.php`. `test_full_release_coverage.py` comprueba que el paquete de producción no contiene herramientas preprod ni el marcador de sesión local. No volver a subir este cambio sin autorización del propietario.
+
+## Resultado de la comparación local
+
+La revisión por HTTP pasó los 27 controles de versiones, arquitectura, límites PHP, configuración SQL y extensiones de aplicación. Se conservan diferencias explícitas: SAPI LiteSpeed en GoDaddy frente a apache2handler local; los módulos calendar, ftp, imap, mcrypt, readline y shmop del hosting no están reproducidos, ni i360/ionCube/litespeed. Local añade OPcache y sodium. Estos módulos adicionales no son usados por el código actual revisado; las diferencias se informan, no se declaran equivalentes. HTTP local y el acceso administrativo abierto son excepciones intencionales. No es una clonación completa de CloudLinux/cPanel.
+
+La excepción administrativa no se activa en Apache con un valor fijo versionado: Apache solo recibe la variable definida por la configuración privada local. Cambiar `admin_without_password` en `.local/preprod/settings.json` y ejecutar `./scripts/actualizar-preprod.sh` aplica el cambio. El valor de este equipo nunca se añade a commits ni a paquetes de producción.

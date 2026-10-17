@@ -1,0 +1,7 @@
+[mariadb]
+character-set-server=latin1
+collation-server=latin1_swedish_ci
+sql-mode=NO_ENGINE_SUBSTITUTION
+default-time-zone=SYSTEM
+lower-case-table-names=0
+bind-address=127.0.0.1
