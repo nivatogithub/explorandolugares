@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Entorno fijo de revisión: Apache/PHP/MySQL, aislado de producción."""
-import argparse,json,os,secrets,shutil,subprocess,sys
+import argparse,json,os,secrets,shutil,subprocess,sys,time,urllib.request
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 STATE=ROOT/'.local/preprod'; NAME='explorando-preprod'; IMAGE='localhost/explorando-preprod:local'
@@ -19,6 +19,11 @@ def main():
  if subprocess.run(['podman','network','exists',network],cwd=ROOT).returncode!=0:podman('network','create','--internal',network)
  # Build the same managed package used by production, without connecting to hosting.
  release=STATE/'release';run(sys.executable,'scripts/preparar-hosting.py','--output',str(release))
+ # This access bypass exists only in the local build, never in hosting sources.
+ bootstrap=release/'app/bootstrap.php';source=bootstrap.read_text()
+ anchor="    session_start();\n    $_SESSION['csrf'] ??= bin2hex(random_bytes(32));"
+ if source.count(anchor)!=1:raise SystemExit('No se reconoce el punto seguro de sesión local; no se modificó el acceso.')
+ bootstrap.write_text(source.replace(anchor,anchor+"\n    require '/usr/local/lib/preprod-admin-access.php';"))
  (STATE/'private').mkdir(exist_ok=True);(STATE/'media').mkdir(exist_ok=True)
  media=STATE/'media/destinos';media.mkdir(exist_ok=True)
  for source in (release/'public/assets/destinos').rglob('*'):
@@ -41,5 +46,12 @@ def main():
   podman('restart',NAME)
  else:
   podman('run','-d','--name',NAME,'--label','el-preprod-layout=2','--network',network,'--env-file',str(envfile),'-p','127.0.0.1:8088:80','--mount','type=volume,source=explorando-preprod-mysql,target=/var/lib/mysql','-v',str(release)+':/srv/portal:ro','-v',str(STATE)+':/srv/state:rw','-v',str(STATE/'private')+':/srv/portal/private:rw','-v',str(media)+':/srv/portal/public/assets/destinos:rw',IMAGE)
+ for attempt in range(45):
+  try:
+   with urllib.request.urlopen('http://127.0.0.1:8088/api/cobertura.php',timeout=2) as response:ready=json.load(response).get('publication_source_available') is True
+   if ready:break
+  except (OSError,ValueError):pass
+  time.sleep(1)
+ else:raise SystemExit('El contenedor no terminó de iniciar. Consulta scripts/preprod-local.py logs.')
  print('Preproducción: http://127.0.0.1:8088/\nAdministrador: http://127.0.0.1:8088/admin/\nAcceso local privado: '+str(credential))
 if __name__=='__main__':main()
