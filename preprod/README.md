@@ -143,3 +143,7 @@ El enlace del encabezado abre ahora un diálogo de inicio de sesión sobre la p�
 ## Cuenta administradora desde el portal
 
 La migración del acceso administrativo al inicio de sesión público, los permisos y el aprovisionamiento local explícito se documentan en [Autenticación de administrador](../docs/AUTENTICACION_ADMINISTRADOR.md). La credencial de producción no se distribuye con el repositorio: otros equipos deben aprovisionar su propia cuenta autorizada.
+
+## Perfiles permanentes para revisión
+
+Se mantienen cuentas ficticias de viajero, negocio y administrador. Los accesos de este equipo están en `.local/preprod/CUENTAS_PRUEBA.md`. La guía [Cuentas persistentes de prueba](CUENTAS_PRUEBA.md) explica cómo recrearlas en otro equipo o restablecer su acceso sin borrar las pruebas. Se preparan al subir o actualizar el ambiente; también mediante `./preprod/cuentas-prueba.sh`.

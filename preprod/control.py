@@ -37,7 +37,7 @@ def main():
    if old_image==new_image:
     running=subprocess.check_output(['podman','inspect','--format','{{.State.Running}}',NAME],text=True).strip()
     if running!='true':podman('start',NAME)
-    wait_ready();print('Preproducción lista: http://127.0.0.1:8088/ (sin reconstrucción ni reconfiguración)');print(f'Arranque comprobado en {time.monotonic()-operation_started:.1f} segundos.');return
+    wait_ready();run(sys.executable,'preprod/cuentas-prueba.py');print('Preproducción lista: http://127.0.0.1:8088/ (sin reconstrucción ni reconfiguración)');print(f'Arranque comprobado en {time.monotonic()-operation_started:.1f} segundos.');return
   run(sys.executable,'preprod/control.py','up');return
  if subprocess.run(['podman','image','exists',IMAGE],cwd=ROOT).returncode!=0:
   run(sys.executable,'preprod/control.py','build')
@@ -103,5 +103,6 @@ def main():
  else:
   podman('run','--platform','linux/amd64','-d','--name',NAME,'--label','el-preprod-layout=3','--network',network,'--env-file',str(envfile),'-p','127.0.0.1:8088:80','--mount','type=volume,source=explorando-preprod-mariadb-10-11,target=/var/lib/mysql','-v',str(release)+':/srv/portal:ro','-v',str(STATE)+':/srv/state:rw','-v',str(STATE/'private')+':/srv/portal/private:rw','-v',str(media)+':/srv/portal/public/assets/destinos:rw',IMAGE)
  wait_ready()
+ run(sys.executable,'preprod/cuentas-prueba.py')
  print('Preproducción: http://127.0.0.1:8088/\nAdministrador: http://127.0.0.1:8088/admin/\nAcceso local privado: '+str(credential))
 if __name__=='__main__':main()

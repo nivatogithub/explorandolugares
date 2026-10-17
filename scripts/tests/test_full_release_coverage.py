@@ -36,6 +36,10 @@ class FullReleaseCoverageTests(unittest.TestCase):
             self.assertNotIn('public/business/recover.php', packaged)
             self.assertNotIn('public/admin/buzon-local.php', packaged)
             self.assertFalse(any('preprod' in name.lower() for name in packaged), 'Local preprod tools/access must never enter production')
+            self.assertFalse(any('cuentas-prueba' in name or 'test-accounts' in name or 'CUENTAS_PRUEBA' in name for name in packaged), 'Persistent fixture tooling and credentials must stay local')
+            for file in Path(folder).rglob('*'):
+                if file.is_file() and file.suffix in {'.php','.json','.sql'}:
+                    self.assertNotIn('administrador@pruebas.invalid',file.read_text(errors='replace'),str(file))
             for file in Path(folder).rglob('*.php'):
                 self.assertNotIn('/usr/local/lib/preprod-admin-access.php', file.read_text(), str(file))
                 self.assertNotIn("$_SESSION['preprod_admin_open']", file.read_text(), str(file))
