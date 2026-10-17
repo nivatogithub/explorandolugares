@@ -1,98 +1,271 @@
 {
-  "status": "pending_comparative_cutoff_audit",
-  "scope": "Distrito Cartagena; excursiones fuera de jurisdicción se separan",
-  "inventory_sources": [
-    "https://www.tripadvisor.com/Attractions-g297476-Activities-Cartagena_Cartagena_District_Bolivar_Department.html",
-    "https://colombia.travel/es/cartagena/recorrido-por-el-centro-historico-de-cartagena-de-indias",
-    "https://cartagenadeindias.travel/naturaleza-y-comunitario/boquilla-2/"
+  "status": "editorial_proposal_ready_for_review",
+  "consulted_at": "2026-10-17",
+  "scope": "Distrito Cartagena: sectores urbanos, playas e islas vinculadas al destino; no excursiones de otros municipios.",
+  "method": "Juicio editorial: reconocimiento turístico, importancia para primera visita y motivo propio de viaje. Sin puntuaciones inventadas, cuotas por categoría ni condicionamiento a fotos disponibles.",
+  "ordered_top8_proposal": [
+    {
+      "rank": 1,
+      "slug": "centro-historico",
+      "reason": "Núcleo del viaje patrimonial y principal conjunto reconocible; incluye Torre del Reloj, Portal de los Dulces, plazas y murallas sin multiplicar paradas.",
+      "sources": [
+        "https://colombia.travel/es/cartagena",
+        "https://whc.unesco.org/en/list/285/"
+      ],
+      "confidence": "alta"
+    },
+    {
+      "rank": 2,
+      "slug": "san-felipe",
+      "reason": "Fortificación visitable con identidad propia, fuera del paseo intramuros; prioridad de primera visita.",
+      "sources": [
+        "https://colombia.travel/es/cartagena",
+        "https://whc.unesco.org/en/list/285/"
+      ],
+      "confidence": "alta"
+    },
+    {
+      "rank": 3,
+      "slug": "getsemani",
+      "reason": "Barrio con recorrido e identidad cultural propios; separado de Centro/San Diego aunque integrado al conjunto patrimonial.",
+      "sources": [
+        "https://colombia.travel/es/cartagena",
+        "https://whc.unesco.org/en/list/285/"
+      ],
+      "confidence": "alta"
+    },
+    {
+      "rank": 4,
+      "slug": "islas-rosario",
+      "reason": "Motivo de excursión insular y naturaleza marina; no se confunde con Playa Blanca ni con un operador.",
+      "sources": [
+        "https://colombia.travel/es/cartagena/playas-e-islas-del-rosario"
+      ],
+      "confidence": "alta"
+    },
+    {
+      "rank": 5,
+      "slug": "playa-blanca-baru",
+      "reason": "Playa reconocida de Barú y motivo de salida específico; la ficha describe el lugar, no vende un pasadía.",
+      "sources": [
+        "https://colombia.travel/es/cartagena/conoce-la-playa-de-baru",
+        "https://colombia.travel/es/cartagena/playas-e-islas-del-rosario"
+      ],
+      "confidence": "alta"
+    },
+    {
+      "rank": 6,
+      "slug": "cerro-popa",
+      "reason": "Cerro, convento y perspectiva de la ciudad; visita diferenciada del centro histórico.",
+      "sources": [
+        "https://colombia.travel/es/cartagena/el-cerro-de-la-popa"
+      ],
+      "confidence": "media"
+    },
+    {
+      "rank": 7,
+      "slug": "san-pedro-claver",
+      "reason": "Conjunto visitable religioso y museístico singular; conserva su propia ficha por la visita interior y su memoria histórica, no por una cuota de iglesias.",
+      "sources": [
+        "https://colombia.travel/es/cartagena/iglesia-y-monasterio-de-san-pedro-claver"
+      ],
+      "confidence": "media"
+    },
+    {
+      "rank": 8,
+      "slug": "bocagrande",
+      "reason": "Sector urbano de playa reconocido por el portal nacional como núcleo turístico; se prioriza su escala territorial y uso de primera visita frente a recintos más especializados.",
+      "sources": [
+        "https://colombia.travel/es/cartagena",
+        "https://colombia.travel/es/cartagena/playas-e-islas-del-rosario"
+      ],
+      "confidence": "media"
+    }
   ],
-  "current_selection": [
-    "centro-historico",
-    "san-felipe",
-    "getsemani",
-    "islas-rosario",
-    "playa-blanca-baru",
-    "cerro-popa",
-    "museo-historico",
-    "la-boquilla"
-  ],
-  "current_inventory": [
-    "centro-historico",
-    "san-felipe",
-    "getsemani",
-    "museo-historico",
-    "torre-reloj",
-    "oro-zenu",
-    "cerro-popa",
-    "san-pedro-claver",
-    "santo-domingo",
-    "santo-toribio",
-    "museo-naval",
-    "plaza-santa-teresa",
-    "portal-dulces",
-    "serrezuela",
-    "teatro-adolfo-mejia",
-    "la-boquilla",
-    "manglares-boquilla",
-    "islas-rosario",
-    "playa-blanca-baru"
-  ],
-  "additional_candidates_to_research": [
-    "bocagrande",
-    "tierra-bomba",
-    "bocachica-fortificaciones",
-    "aviario-nacional-baru",
-    "oceanario-rosario"
-  ],
-  "comparisons_pending": [
+  "comparisons": [
+    {
+      "excluded": "museo-historico",
+      "compared_to": "bocagrande",
+      "decision": "fuera_de_ocho_conservado",
+      "reason": "Recinto cultural conservado en inventario y visitas; San Pedro Claver ocupa la ficha patrimonial individual y Bocagrande representa un sector turístico completo. No hay cifras comparables que prueben una jerarquía universal; este corte es editorial y revisable.",
+      "sources": [
+        "https://colombia.travel/es/cartagena",
+        "https://colombia.travel/es/cartagena/iglesia-y-monasterio-de-san-pedro-claver"
+      ]
+    },
     {
       "excluded": "torre-reloj",
-      "included": "centro-historico",
-      "question": "Confirmar que la Torre del Reloj está nombrada como parada esencial dentro del recorrido; no excluir símbolo por agrupación ambigua."
+      "compared_to": "bocagrande",
+      "decision": "fuera_de_ocho_conservado",
+      "reason": "Hito del recorrido del centro histórico, no se omite de la explicación del conjunto. No desplaza por separado el sector turístico Bocagrande; no cuenta doble.",
+      "sources": [
+        "https://colombia.travel/es/cartagena",
+        "https://whc.unesco.org/en/list/285/"
+      ]
     },
     {
-      "excluded": "san-pedro-claver",
-      "included": "museo-historico",
-      "question": "Comparar importancia turística con fuentes; no mantener Museo por imagen ya aprobada ni excluir santuario por cuota religiosa."
+      "excluded": "oro-zenu",
+      "compared_to": "bocagrande",
+      "decision": "fuera_de_ocho_conservado",
+      "reason": "Recinto cultural conservado en inventario y visitas; San Pedro Claver ocupa la ficha patrimonial individual y Bocagrande representa un sector turístico completo. No hay cifras comparables que prueben una jerarquía universal; este corte es editorial y revisable.",
+      "sources": [
+        "https://colombia.travel/es/cartagena",
+        "https://colombia.travel/es/cartagena/iglesia-y-monasterio-de-san-pedro-claver"
+      ]
     },
     {
-      "excluded": "bocagrande/tierra-bomba/aviario",
-      "included": "la-boquilla",
-      "question": "Investigar frontera con oferta más amplia; no declarar Boquilla octavo final por variedad de naturaleza/comunidad."
-    }
-  ],
-  "ordered_top8_proposal": [],
-  "evidence_confidence": "pending",
-  "unresolved_comparisons": [
-    "puestos6a8",
-    "agrupaciones de centro histórico",
-    "universo fuera inventario19"
-  ],
-  "cutoff_validated": false,
-  "approvals_preserved": true,
-  "publication_authorized": false,
-  "territorial_sources_checked_no_photos": [
+      "excluded": "santo-domingo",
+      "compared_to": "bocagrande",
+      "decision": "fuera_de_ocho_conservado",
+      "reason": "Hito del recorrido del centro histórico, no se omite de la explicación del conjunto. No desplaza por separado el sector turístico Bocagrande; no cuenta doble.",
+      "sources": [
+        "https://colombia.travel/es/cartagena",
+        "https://whc.unesco.org/en/list/285/"
+      ]
+    },
     {
-      "candidate": "tierra-bomba/bocachica",
+      "excluded": "santo-toribio",
+      "compared_to": "bocagrande",
+      "decision": "fuera_de_ocho_conservado",
+      "reason": "Hito del recorrido del centro histórico, no se omite de la explicación del conjunto. No desplaza por separado el sector turístico Bocagrande; no cuenta doble.",
+      "sources": [
+        "https://colombia.travel/es/cartagena",
+        "https://whc.unesco.org/en/list/285/"
+      ]
+    },
+    {
+      "excluded": "museo-naval",
+      "compared_to": "bocagrande",
+      "decision": "fuera_de_ocho_conservado",
+      "reason": "Recinto cultural conservado en inventario y visitas; San Pedro Claver ocupa la ficha patrimonial individual y Bocagrande representa un sector turístico completo. No hay cifras comparables que prueben una jerarquía universal; este corte es editorial y revisable.",
+      "sources": [
+        "https://colombia.travel/es/cartagena",
+        "https://colombia.travel/es/cartagena/iglesia-y-monasterio-de-san-pedro-claver"
+      ]
+    },
+    {
+      "excluded": "plaza-santa-teresa",
+      "compared_to": "bocagrande",
+      "decision": "fuera_de_ocho_conservado",
+      "reason": "Hito del recorrido del centro histórico, no se omite de la explicación del conjunto. No desplaza por separado el sector turístico Bocagrande; no cuenta doble.",
+      "sources": [
+        "https://colombia.travel/es/cartagena",
+        "https://whc.unesco.org/en/list/285/"
+      ]
+    },
+    {
+      "excluded": "portal-dulces",
+      "compared_to": "bocagrande",
+      "decision": "fuera_de_ocho_conservado",
+      "reason": "Hito del recorrido del centro histórico, no se omite de la explicación del conjunto. No desplaza por separado el sector turístico Bocagrande; no cuenta doble.",
+      "sources": [
+        "https://colombia.travel/es/cartagena",
+        "https://whc.unesco.org/en/list/285/"
+      ]
+    },
+    {
+      "excluded": "serrezuela",
+      "compared_to": "bocagrande",
+      "decision": "fuera_de_ocho_conservado",
+      "reason": "Hito del recorrido del centro histórico, no se omite de la explicación del conjunto. No desplaza por separado el sector turístico Bocagrande; no cuenta doble.",
+      "sources": [
+        "https://colombia.travel/es/cartagena",
+        "https://whc.unesco.org/en/list/285/"
+      ]
+    },
+    {
+      "excluded": "teatro-adolfo-mejia",
+      "compared_to": "bocagrande",
+      "decision": "fuera_de_ocho_conservado",
+      "reason": "Hito del recorrido del centro histórico, no se omite de la explicación del conjunto. No desplaza por separado el sector turístico Bocagrande; no cuenta doble.",
+      "sources": [
+        "https://colombia.travel/es/cartagena",
+        "https://whc.unesco.org/en/list/285/"
+      ]
+    },
+    {
+      "excluded": "la-boquilla",
+      "compared_to": "bocagrande",
+      "decision": "fuera_de_ocho_conservado",
+      "reason": "Alternativa prioritaria para ampliar profundidad y turismo comunitario; se conserva su experiencia de manglar/pesca. Se elige Bocagrande por su reconocimiento como núcleo turístico urbano, no por variedad ni por imagen disponible.",
+      "sources": [
+        "https://cartagenadeindias.travel/naturaleza-y-comunitario/boquilla-2/",
+        "https://colombia.travel/es/cartagena"
+      ]
+    },
+    {
+      "excluded": "manglares-boquilla",
+      "compared_to": "bocagrande",
+      "decision": "fuera_de_ocho_conservado",
+      "reason": "Entorno natural vinculado a La Boquilla; el recorrido en canoa se conserva en experiencias. Su atractivo especializado no se considera superior al sector urbano de Bocagrande para esta primera selección general.",
+      "sources": [
+        "https://cartagenadeindias.travel/naturaleza-y-comunitario/boquilla-2/",
+        "https://colombia.travel/es/cartagena"
+      ]
+    },
+    {
+      "excluded": "tierra-bomba",
+      "compared_to": "bocagrande",
+      "decision": "fuera_de_ocho_conservado",
+      "reason": "Destino insular y fortificaciones relevantes que se conservan en inventario; la selección general ya incluye Rosario y Barú como motivos principales de salida. Su menor prioridad relativa frente a Bocagrande es juicio editorial, sin afluencias comparables que lo demuestren.",
       "sources": [
         "https://colombia.travel/es/cartagena-de-indias/la-isla-de-tierrabomba",
-        "https://fortificacionescartagena.com.co/es/historia/fortificaciones-de-la-bahia/tierra-bomba/"
-      ],
-      "finding": "Isla/fortificaciones de bahía identificadas, no fuera del distrito por analogía; comparar con corte."
+        "https://colombia.travel/es/cartagena"
+      ]
     },
     {
-      "candidate": "aviario-nacional-baru",
+      "excluded": "bocachica-fortificaciones",
+      "compared_to": "bocagrande",
+      "decision": "fuera_de_ocho_conservado",
+      "reason": "Destino insular y fortificaciones relevantes que se conservan en inventario; la selección general ya incluye Rosario y Barú como motivos principales de salida. Su menor prioridad relativa frente a Bocagrande es juicio editorial, sin afluencias comparables que lo demuestren.",
       "sources": [
-        "https://colombia.travel/es/cartagena/conoce-el-aviario-nacional"
-      ],
-      "finding": "Equipamiento identificado en vía Cartagena–Barú; visita como experiencia, no inclusión automática."
+        "https://colombia.travel/es/cartagena-de-indias/la-isla-de-tierrabomba",
+        "https://colombia.travel/es/cartagena"
+      ]
     },
     {
-      "candidate": "la-boquilla",
+      "excluded": "aviario-nacional-baru",
+      "compared_to": "bocagrande",
+      "decision": "fuera_de_ocho_conservado",
+      "reason": "Recinto especializado de Barú. Es candidato importante para familias y aves; para una guía general se prioriza Bocagrande como sector turístico urbano y el Aviario queda como ampliación vinculada a Barú. No se excluye por ser de pago o carecer de foto.",
       "sources": [
-        "https://cartagenadeindias.travel/naturaleza-y-comunitario/boquilla-2/"
-      ],
-      "finding": "Corregimiento con identidad pesquera; paseos en manglares son experiencias relacionadas, no sustituyen prioridad geográfica."
+        "https://colombia.travel/es/cartagena/conoce-el-aviario-nacional",
+        "https://colombia.travel/es/cartagena"
+      ]
+    },
+    {
+      "excluded": "oceanario-rosario",
+      "compared_to": "bocagrande",
+      "decision": "fuera_de_ocho_conservado",
+      "reason": "Recinto específico dentro de la salida Rosario; se conserva como visita/experiencia relacionada, sin duplicar archipiélago. Para esta selección general no desplaza el sector Bocagrande.",
+      "sources": [
+        "https://oceanario.co/",
+        "https://colombia.travel/es/cartagena/playas-e-islas-del-rosario",
+        "https://colombia.travel/es/cartagena"
+      ]
     }
+  ],
+  "inventory_count": 24,
+  "cutoff_comparison_completed": true,
+  "cutoff_validated": false,
+  "human_approved": false,
+  "publication_authorized": false,
+  "limitations": [
+    "No existe en las fuentes consultadas un ranking oficial único de estos ocho. Los puestos6a8 son inferencia editorial con confianza media.",
+    "Tripadvisor consultado mediante resultado indexado; página completa no accesible por límite de tamaño. No se extraen puntuaciones ni afluencias.",
+    "La comparación no prueba que no exista absolutamente otro candidato más prioritario. La propuesta ya tiene una decisión concreta para revisar, sin pedir al propietario que haga la investigación."
+  ],
+  "inventory_sources": [
+    "https://colombia.travel/es/cartagena",
+    "https://whc.unesco.org/en/list/285/",
+    "https://colombia.travel/es/cartagena/playas-e-islas-del-rosario",
+    "https://colombia.travel/es/cartagena/conoce-la-playa-de-baru",
+    "https://colombia.travel/es/cartagena/el-cerro-de-la-popa",
+    "https://colombia.travel/es/cartagena/iglesia-y-monasterio-de-san-pedro-claver",
+    "https://cartagenadeindias.travel/naturaleza-y-comunitario/boquilla-2/",
+    "https://colombia.travel/es/cartagena-de-indias/la-isla-de-tierrabomba",
+    "https://colombia.travel/es/cartagena/conoce-el-aviario-nacional",
+    "https://oceanario.co/",
+    "https://www.tripadvisor.co/Attractions-g297476-Activities-Cartagena_Cartagena_District_Bolivar_Department.html"
   ]
 }
