@@ -95,3 +95,34 @@ No marcar el resultado «sin restricciones», «copyright libre», «fotografía
 Registrar: vía elegida, referencias efectivamente enviadas al generador, base del permiso o ausencia de copia de foto concreta en composición independiente, condiciones del resultado/proveedor, atribuciones necesarias, revisión de similitud/composición y fidelidad, prompt, maestro/derivados y hashes. Estado inicial «pendiente»; «apto para revisión editorial» solo con comprobaciones respaldadas, nunca garantía jurídica automática.
 
 Fuente de alcance general consultada: https://creativecommons.org/faq/#artificial-intelligence-and-cc-licenses y https://creativecommons.org/faq/#when-is-my-use-considered-an-adaptation . Usar una tecnología nueva no elimina las condiciones de una licencia cuando el uso requiere permiso; aplicar las condiciones del recurso concreto, no una etiqueta genérica de «IA».
+
+## Aprendizaje continuo y fuentes de descubrimiento · 17/10/2026
+
+Cada recomendación, crítica, rechazo o corrección relevante del propietario debe producir una actualización del criterio reutilizable antes de volver a presentar el componente. No basta con guardarla en el chat o en STATUS del destino. El coordinador mantiene la regla común, el skill cuando corresponda, el checklist y el registro de decisiones del componente. Conservar la observación concreta y su alcance: una preferencia de encuadre no aprueba otra foto ni convierte un caso particular en regla para lugares donde no aplica.
+
+### Ruta de investigación para evitar búsquedas a ciegas
+
+- **Tripadvisor:** consultar atractivos, fotografías y comentarios para descubrir qué reconocen y visitan los viajeros. Contrastar actualidad, sesgos, identidad territorial y agrupaciones; no tratar el orden de la plataforma como ranking oficial ni como única selección. Las fotos de usuarios ayudan a identificar perspectivas, pero su publicación allí no concede permiso de transformación.
+- **Portales locales de turismo:** consultar guía de la ciudad/departamento, instituto de turismo, operador responsable del atractivo y fuentes locales identificables. Obtener nombres correctos, rasgos distintivos, experiencia de visita, ubicación y contexto; documentar qué fuente confirma cada hecho.
+- **Portales nacionales de turismo:** contrastar con Colombia Travel/ProColombia, MinCIT, Parques Nacionales cuando corresponda y otras entidades responsables. Verificar identidad y relevancia sin confundir contenido promocional con disponibilidad operativa o permisos sobre fotos.
+- Con el sujeto y el encuadre definidos, buscar la referencia original de calidad en esas fuentes y bancos autorizados; Google Imágenes es una herramienta de descubrimiento, no la fuente final. Registrar ficha original, autor y archivo cuando se identifiquen. Si una fuente no está disponible, anotar el bloqueo y continuar con fuentes equivalentes; no esperar indefinidamente ni fingir consulta.
+
+La investigación debe terminar en una lista razonada y un encargo visual, no en una colección de las primeras fotos encontradas. Documentar brevemente fuentes consultadas, candidatos descartados y motivo; reutilizar hallazgos verificados para no repetir búsquedas fallidas. Buscar primero la vista característica y después resolver la vía de publicación IA conforme a las reglas existentes.
+
+### Filtro visual antes de mostrar al propietario
+
+La foto debe ser adecuada, icónica y fácil de reconocer al tamaño real. Preguntarse: ¿qué rasgo concreto identifica este sitio?, ¿se ve completo?, ¿el encuadre muestra lo que el visitante viene a conocer?, ¿podría confundirse con cualquier otra ciudad, bosque o barrio? Si falla, no presentarla como candidata apta.
+
+- **Portadas:** ciudad/pueblo y símbolo dominantes, contexto suficiente, edificios y monumentos sin cortes accidentales; evitar grandes superficies vacías de pavimento, parque, cielo o mar que oculten identidad.
+- **Atractivos:** elemento emblemático reconocible y escena propia del sitio. Un mar genérico no identifica Santa Marta; unos pinos genéricos no identifican Arví; viviendas genéricas no representan el circuito turístico de Comuna 13.
+- **Ejemplo Tayrona del propietario:** kiosco de techo de palma en promontorio rocoso, playa y vegetación hacen reconocible la escena. Confirmar lugar y fuente original; no copiar indiscriminadamente otro kiosco ni inferir aprobación final de archivo a partir de un ejemplo.
+- **Corrección Santa Marta:** Camellón v5 rechazado por exceso de espacio inferior y edificios cortados arriba. Para reemplazo buscar vista elevada con tejido urbano y edificios completos, costa como contexto. Aplicar el criterio de ocupación/encuadre a futuras portadas, sin imponer el mismo tipo de fotografía a todos los destinos.
+
+Inspeccionar imagen completa y recortes de escritorio/móvil antes de pedir aprobación. Presentar opciones buenas numeradas por uso; explicar recomendación en una frase. El propietario decide el componente, no tiene que descubrir por nosotros el lugar o el error evidente. Registrar rechazo, cambio de criterio y siguiente acción; nunca volver a ofrecer la misma referencia rechazada sin explicar una modificación concreta.
+
+### Cierre de cada corrección
+
+1. Registrar decisión por destino, componente, archivo/hash y motivo; no alterar aprobaciones intactas.
+2. Actualizar esta guía si hay aprendizaje reutilizable y el skill visual si afecta selección/generación; reflejar pendientes reales en checklist.
+3. Replicar la regla aplicable en las ramas de workers para que no quede aislada en coordinación.
+4. Verificar que la siguiente propuesta satisface el criterio nuevo. No declarar resuelta la corrección solo por haber actualizado la documentación.
