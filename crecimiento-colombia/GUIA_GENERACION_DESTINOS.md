@@ -227,3 +227,7 @@ Completar todas las tarjetas de «Qué conocer» antes de presentar un destino c
 
 ## Corrección de color · 17/10/2026
 El propietario rechaza mezclar fondos amarillos con salvia/verde. La prueba Cartagena v2 usa página #FAFAFA, panel #F1F2F4 y tarjetas blancas, bordes grises neutros y acento terracota. Sustituye la propuesta salvia anterior; no combinar ambas ni conservar avisos amarillos heredados. Las ilustraciones mantienen sus colores naturales.
+
+
+## Optimización de espacio · Cartagena v10
+Por corrección del propietario: retirar snorkel; títulos consistentes de Qué conocer, Experiencias y Directorio, sin subtítulos ni párrafos introductorios; mantener contenido abierto sin acordeones ni cargar más para los ocho atractivos. Descripciones de tarjetas en una frase breve. Listado gratuito sin descripciones y ampliado de 10 a 30 fichas con fuente oficial. Atribuciones fuera de las tarjetas en créditos accesibles, conservando autores/licencias y procedencia. No dar por vigente la versión anterior larga ni transferir aprobación de los textos anteriores a los nuevos.

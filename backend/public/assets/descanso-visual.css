@@ -20,4 +20,14 @@ body.el-review-rest .experience-art.is-painted img{display:block;width:100%;heig
 body.el-review-rest .experience-art.is-painted>a{display:block;width:100%;height:100%}
 body.el-review-rest h1,body.el-review-rest h2,body.el-review-rest h3,body.el-review-rest h4,body.el-review-rest .destination-nav a{color:var(--el-text)!important}
 body.el-review-rest p,body.el-review-rest li{color:var(--el-muted)}
+body.el-review-rest .compact-section-heading{display:block;margin-bottom:18px;padding:0}
+body.el-review-rest .compact-section-heading h2{font-size:clamp(25px,3vw,34px);line-height:1.15;margin:0}
+body.el-review-rest #que-conocer,body.el-review-rest .destination-experiences,body.el-review-rest #lugares{padding-top:30px;padding-bottom:30px}
+body.el-review-rest .highlight-grid article>p,body.el-review-rest .destination-experience-copy>p{font-size:14px;line-height:1.45;margin:8px 0 12px}
+body.el-review-rest .highlight-grid article h3,body.el-review-rest .destination-experience-copy h4{font-size:18px;line-height:1.2;margin:8px 0}
+body.el-review-rest .highlight-grid article{padding-bottom:14px}
+body.el-review-rest .directory-card-body{padding:12px 14px!important}
+body.el-review-rest .directory-card h3{font-size:16px;line-height:1.25;margin:5px 0}
+body.el-review-rest .directory-card .eyebrow{font-size:10px;margin:0}
+body.el-review-rest .compact-image-credits{font-size:12px;margin:14px 0 0}
 body.el-review-rest img{filter:none}

@@ -1,0 +1,15 @@
+{
+    "environment": "local_preprod_only",
+    "destination": "cartagena",
+    "input_sha256": "0f334c89e11a0552f3a99ebae8afefe45eb960d2d48a614e74ca26bd5324425c",
+    "before": 10,
+    "imported": 20,
+    "visible": {
+        "es": 30,
+        "en": 30,
+        "pt-BR": 30
+    },
+    "publication_status": "draft",
+    "plan": "free",
+    "production_changed": false
+}
