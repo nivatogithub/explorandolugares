@@ -6,15 +6,30 @@
   "state": "investigacion_y_revision_individual_activa",
   "components": {
     "hero": {
-      "status": "rechazado_v5_busqueda_v6",
+      "status": "una_alternativa_rodadero_condicional_y_busqueda_adicional",
       "next": "Inspeccionar dos vistas elevadas con ciudad dominante y costa; presentar opciones numeradas.",
       "reference_approved": false,
-      "generation_approved": false
+      "generation_approved": false,
+      "candidate_ids": [
+        "SM-H6-01"
+      ],
+      "rejected_candidates": [
+        "SM-H6-02"
+      ],
+      "additional_research": "dos_aereos_oficiales_Juan_Cano_pendientes_metadatos_y_descarga"
     },
     "tayrona": {
-      "status": "busqueda_nuevo_encuadre_v6",
+      "status": "dos_opciones_listas_para_eleccion_original",
       "next": "Quiosco Cabo San Juan visible sobre rocas, con playa y agua.",
-      "reference_approved": false
+      "reference_approved": false,
+      "candidate_ids": [
+        "SM-T6-01",
+        "SM-T6-03"
+      ],
+      "rejected_candidates": [
+        "SM-T6-02"
+      ],
+      "crop_review": "simulaciones_anchas_y_moviles_inspeccionadas"
     },
     "acuario": {
       "status": "referencia_2011_debil",
