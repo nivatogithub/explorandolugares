@@ -1,3 +1,23 @@
+# Lugar 3 · Medellín · estado vigente V4
+
+Fecha: 17/10/2026. Rama exclusiva `lugar/CO/antioquia/medellin`. Subtarea de corrección de referencias y traducciones preparada para revisión; destino completo pendiente.
+
+Se retiraron de la revisión vigente la portada con Coltejer diminuto, el bosque genérico de Arví y las viviendas de Comuna 13. Cinco originales completos nuevos fueron descargados por el coordinador e inspeccionados por este worker. `referencias-propuestas-v4.json` conserva autor, fuente, licencia comercial/adaptación, condiciones de IA, encuadre y hashes de originales/derivados.
+
+Tres propuestas aparecen primero en `preview.html`: portada 8 (Coltejer completo reconocible con ciudad, vertical), Arví 1 (estación) y Comuna 13 1 (escaleras eléctricas). Arví 2 (cable pequeño) y Comuna 13 2 (oscura/borrosa) quedan colapsadas como limitadas. Personas y murales visibles exigen decidir el uso concreto antes de transformar. No se seleccionó ninguna referencia ni se generó IA. Los derivados son reducciones técnicas sin recorte ni ampliación, inspeccionadas visualmente.
+
+Identidad y movilidad ES/EN/PT-BR incorporan Metro/Metrocable con fuentes oficiales del operador: J San Javier–La Aurora; L Santo Domingo–Arví. Se mantiene exactamente ocho atractivos, sin novena tarjeta. Las diez actividades (incluidos dos antecedentes ocultos de Jericó) y diez fichas de directorio tienen textos en tres idiomas. Ocho actividades son propuestas visibles: seis autónomas editoriales y dos ofertas documentadas con vigencia pendiente. Cuatro tienen referencia de lugar; cuatro carecen de fotografía específica de actividad/servicio. Una de esas cuatro referencias existentes es un detalle parcial de Coltejer, insuficiente para aprobar recorrido o portada. Ninguna foto de lugar prueba un servicio de operador.
+
+`preview.html` muestra la revisión v4, controles por componente/idioma/hash y exportación local. El ZIP/JSON preprod v3 se preserva como antecedente técnico importado local anteriormente: contiene tres referencias ahora rechazadas y no debe confundirse con paquete visual aprobado. No se regeneró ni reimportó esa versión, no se tocó BD/preprod/producción. Los sidecars de historia normalizados por el coordinador se conservaron.
+
+Pendientes: elección/aprobación individual de referencias y uso; revisión de textos e idiomas; tratamiento de derechos adicionales; fotografías autorizadas de servicios; vigencia y datos de negocios/operadores; ilustraciones solo tras autorización y posterior revisión final; nuevo paquete/integración una vez elegidas referencias. QA de navegador móvil/escritorio por coordinador pendiente; la inspección de originales y derivados sí fue realizada. Cobertura nueva aprobada/publicada: cero. PR remoto pendiente (sin `gh`); no se publicó ni tomó otro destino.
+
+Reproducir revisión vigente: `preparar-revision-v4.py`, después `validar.py`, con Python/Pillow del runtime. No ejecutar preparadores V1/V2/V3 para regenerar revisión vigente: son antecedentes y pueden restaurar fotos rechazadas.
+
+---
+
+<details><summary>Historial de entregas anteriores (puede contener pendientes ya resueltos y referencias rechazadas)</summary>
+
 # Lugar 3 · Medellín
 
 ## Entrega vigente V3 para revisión local · 17/10/2026
@@ -79,3 +99,5 @@ Avance importado únicamente en preproducción local. Ocho tarjetas, portada e i
 ## Nueva política icónica · 17/10/2026
 
 Arví y Comuna 13: referencias actuales reabiertas por ser genéricas; no aptas para imagen final. Coltejer debe distinguirse al tamaño real. Pendiente incorporar Metro/Metrocable en identidad/movilidad ES/EN/PT con fuente del operador. No se sustituyeron fotos ni se importaron textos por esta actualización de políticas.
+
+</details>

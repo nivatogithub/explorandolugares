@@ -2,7 +2,7 @@
   {
     "name": "Dann Carlton Medellín",
     "category": "alojamiento",
-    "description": "Hotel con sitio oficial propio.",
+    "description": "Hotel con información y reservas en su sitio oficial.",
     "url": "https://www.danncarlton.com/",
     "source_ids": [
       "dann"
@@ -15,12 +15,26 @@
     "claimed": false,
     "operating_status": "no_confirmado",
     "relationship": "ninguna",
-    "contacted": false
+    "contacted": false,
+    "translations": {
+      "es": {
+        "name": "Dann Carlton Medellín",
+        "description": "Hotel con información y reservas en su sitio oficial."
+      },
+      "en": {
+        "name": "Dann Carlton Medellín",
+        "description": "Hotel with information and reservations on its official website."
+      },
+      "pt-BR": {
+        "name": "Dann Carlton Medellín",
+        "description": "Hotel com informações e reservas no site oficial."
+      }
+    }
   },
   {
     "name": "Elcielo Hotel",
     "category": "alojamiento",
-    "description": "Hotel en Astorga, El Poblado.",
+    "description": "Hotel en Astorga, El Poblado; consulta sus servicios y reservas directamente.",
     "url": "https://www.elcielohotel.com/",
     "source_ids": [
       "cielo"
@@ -33,12 +47,26 @@
     "claimed": false,
     "operating_status": "no_confirmado",
     "relationship": "ninguna",
-    "contacted": false
+    "contacted": false,
+    "translations": {
+      "es": {
+        "name": "Elcielo Hotel",
+        "description": "Hotel en Astorga, El Poblado; consulta sus servicios y reservas directamente."
+      },
+      "en": {
+        "name": "Elcielo Hotel",
+        "description": "Hotel in Astorga, El Poblado; check services and reservations directly."
+      },
+      "pt-BR": {
+        "name": "Elcielo Hotel",
+        "description": "Hotel em Astorga, El Poblado; consulte serviços e reservas diretamente."
+      }
+    }
   },
   {
     "name": "Hotel San Fernando Plaza",
     "category": "alojamiento",
-    "description": "Hotel en El Poblado.",
+    "description": "Hotel en El Poblado con canal oficial de información y reservas.",
     "url": "https://www.hotelsanfernandoplaza.com/",
     "source_ids": [
       "fernando"
@@ -51,12 +79,26 @@
     "claimed": false,
     "operating_status": "no_confirmado",
     "relationship": "ninguna",
-    "contacted": false
+    "contacted": false,
+    "translations": {
+      "es": {
+        "name": "Hotel San Fernando Plaza",
+        "description": "Hotel en El Poblado con canal oficial de información y reservas."
+      },
+      "en": {
+        "name": "Hotel San Fernando Plaza",
+        "description": "Hotel in El Poblado with an official information and booking channel."
+      },
+      "pt-BR": {
+        "name": "Hotel San Fernando Plaza",
+        "description": "Hotel em El Poblado com canal oficial de informações e reservas."
+      }
+    }
   },
   {
     "name": "Elcielo Restaurant Medellín",
     "category": "gastronomia",
-    "description": "Restaurante identificado en el sitio del hotel.",
+    "description": "Restaurante presentado por Elcielo Hotel; consulta su propuesta y reservas directamente.",
     "url": "https://www.elcielohotel.com/",
     "source_ids": [
       "cielo"
@@ -69,12 +111,26 @@
     "claimed": false,
     "operating_status": "no_confirmado",
     "relationship": "ninguna",
-    "contacted": false
+    "contacted": false,
+    "translations": {
+      "es": {
+        "name": "Elcielo Restaurant Medellín",
+        "description": "Restaurante presentado por Elcielo Hotel; consulta su propuesta y reservas directamente."
+      },
+      "en": {
+        "name": "Elcielo Restaurant Medellín",
+        "description": "Restaurant presented by Elcielo Hotel; check its dining concept and reservations directly."
+      },
+      "pt-BR": {
+        "name": "Elcielo Restaurant Medellín",
+        "description": "Restaurante apresentado pelo Elcielo Hotel; consulte a proposta gastronômica e as reservas diretamente."
+      }
+    }
   },
   {
     "name": "El Bistró by Juanma",
     "category": "gastronomia",
-    "description": "Oferta gastronómica identificada en el sitio del hotel.",
+    "description": "Propuesta gastronómica presentada en el sitio de Elcielo Hotel.",
     "url": "https://www.elcielohotel.com/",
     "source_ids": [
       "cielo"
@@ -87,12 +143,26 @@
     "claimed": false,
     "operating_status": "no_confirmado",
     "relationship": "ninguna",
-    "contacted": false
+    "contacted": false,
+    "translations": {
+      "es": {
+        "name": "El Bistró by Juanma",
+        "description": "Propuesta gastronómica presentada en el sitio de Elcielo Hotel."
+      },
+      "en": {
+        "name": "El Bistró by Juanma",
+        "description": "Dining venue presented on the Elcielo Hotel website."
+      },
+      "pt-BR": {
+        "name": "El Bistró by Juanma",
+        "description": "Espaço gastronômico apresentado no site do Elcielo Hotel."
+      }
+    }
   },
   {
     "name": "La Sere by Juanma",
     "category": "gastronomia",
-    "description": "Restaurante italiano identificado en el sitio del hotel.",
+    "description": "Restaurante de cocina italiana presentado en el sitio de Elcielo Hotel.",
     "url": "https://www.elcielohotel.com/",
     "source_ids": [
       "cielo"
@@ -105,12 +175,26 @@
     "claimed": false,
     "operating_status": "no_confirmado",
     "relationship": "ninguna",
-    "contacted": false
+    "contacted": false,
+    "translations": {
+      "es": {
+        "name": "La Sere by Juanma",
+        "description": "Restaurante de cocina italiana presentado en el sitio de Elcielo Hotel."
+      },
+      "en": {
+        "name": "La Sere by Juanma",
+        "description": "Italian restaurant presented on the Elcielo Hotel website."
+      },
+      "pt-BR": {
+        "name": "La Sere by Juanma",
+        "description": "Restaurante de cozinha italiana apresentado no site do Elcielo Hotel."
+      }
+    }
   },
   {
     "name": "Museo de Antioquia",
     "category": "cultura",
-    "description": "Institución cultural; ficha informativa, sin alianza.",
+    "description": "Colecciones y exposiciones de arte en el centro de Medellín; consulta la programación del museo.",
     "url": "https://museodeantioquia.co/",
     "source_ids": [
       "antioquia"
@@ -123,12 +207,26 @@
     "claimed": false,
     "operating_status": "no_confirmado",
     "relationship": "ninguna",
-    "contacted": false
+    "contacted": false,
+    "translations": {
+      "es": {
+        "name": "Museo de Antioquia",
+        "description": "Colecciones y exposiciones de arte en el centro de Medellín; consulta la programación del museo."
+      },
+      "en": {
+        "name": "Museo de Antioquia",
+        "description": "Art collections and exhibitions in downtown Medellín; check the museum programme."
+      },
+      "pt-BR": {
+        "name": "Museo de Antioquia",
+        "description": "Coleções e exposições de arte no centro de Medellín; consulte a programação do museu."
+      }
+    }
   },
   {
     "name": "Jardín Botánico Joaquín Antonio Uribe",
     "category": "cultura",
-    "description": "Institución botánica y cultural; ficha informativa.",
+    "description": "Colecciones vivas, educación ambiental y programación cultural del Jardín Botánico.",
     "url": "https://www.botanicomedellin.org/",
     "source_ids": [
       "botanico"
@@ -141,12 +239,26 @@
     "claimed": false,
     "operating_status": "no_confirmado",
     "relationship": "ninguna",
-    "contacted": false
+    "contacted": false,
+    "translations": {
+      "es": {
+        "name": "Jardín Botánico Joaquín Antonio Uribe",
+        "description": "Colecciones vivas, educación ambiental y programación cultural del Jardín Botánico."
+      },
+      "en": {
+        "name": "Jardín Botánico Joaquín Antonio Uribe",
+        "description": "Living collections, environmental education and cultural programmes at the Botanical Garden."
+      },
+      "pt-BR": {
+        "name": "Jardín Botánico Joaquín Antonio Uribe",
+        "description": "Coleções vivas, educação ambiental e programação cultural do Jardim Botânico."
+      }
+    }
   },
   {
     "name": "Parque Explora",
     "category": "cultura",
-    "description": "Museo de ciencias; ficha informativa.",
+    "description": "Espacio de ciencia con acuario y experiencias interactivas; consulta las condiciones de visita.",
     "url": "https://www.parqueexplora.org/en",
     "source_ids": [
       "explora"
@@ -159,12 +271,26 @@
     "claimed": false,
     "operating_status": "no_confirmado",
     "relationship": "ninguna",
-    "contacted": false
+    "contacted": false,
+    "translations": {
+      "es": {
+        "name": "Parque Explora",
+        "description": "Espacio de ciencia con acuario y experiencias interactivas; consulta las condiciones de visita."
+      },
+      "en": {
+        "name": "Parque Explora",
+        "description": "Science venue with an aquarium and interactive experiences; check visiting arrangements."
+      },
+      "pt-BR": {
+        "name": "Parque Explora",
+        "description": "Espaço de ciência com aquário e experiências interativas; consulte as condições de visita."
+      }
+    }
   },
   {
     "name": "Museo de Arte Moderno de Medellín",
     "category": "cultura",
-    "description": "Institución de arte moderno; ficha informativa.",
+    "description": "Museo de arte moderno y contemporáneo con exposiciones y programación cultural.",
     "url": "https://www.elmamm.org/",
     "source_ids": [
       "mamm"
@@ -177,6 +303,20 @@
     "claimed": false,
     "operating_status": "no_confirmado",
     "relationship": "ninguna",
-    "contacted": false
+    "contacted": false,
+    "translations": {
+      "es": {
+        "name": "Museo de Arte Moderno de Medellín",
+        "description": "Museo de arte moderno y contemporáneo con exposiciones y programación cultural."
+      },
+      "en": {
+        "name": "Museo de Arte Moderno de Medellín",
+        "description": "Museum of modern and contemporary art with exhibitions and cultural programmes."
+      },
+      "pt-BR": {
+        "name": "Museo de Arte Moderno de Medellín",
+        "description": "Museu de arte moderna e contemporânea com exposições e programação cultural."
+      }
+    }
   }
 ]

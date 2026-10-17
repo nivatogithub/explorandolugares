@@ -21,7 +21,17 @@ if (r/'principales-v3.json').exists():
  assert len({hashlib.sha256((r/f).read_bytes()).hexdigest() for f in references})==9
  assert all(set(p['translations'])=={'es','en','pt-BR'} for p in main)
  assert 'Inventario amplio secundario' in preview
- assert json.loads((r/'inspeccion-visual-v3.json').read_text())['cover_silhouette_verified']
+ assert json.loads((r/'inspeccion-visual-v3.json').read_text())['cover_current_suitability'] is False
+ candidates=json.loads((r/'referencias-propuestas-v4.json').read_text())
+ assert len(candidates)==5 and sum(x['visual_review']['recommend_for_review'] for x in candidates)==3
+ for x in candidates:
+  assert not x['selected'] and not x['human_approved'] and not x['ai_generated']
+  assert hashlib.sha256((r/x['target']).read_bytes()).hexdigest()==x['original_sha256']
+  assert hashlib.sha256((r/x['file']).read_bytes()).hexdigest()==x['sha256']
+  assert x['download_evidence']['full_original']
+  assert x['bytes'] <= (300000 if x['component']=='portada' else 120000)
+  with Image.open(r/x['file']) as im:assert im.format=='WEBP' and not im.getexif()
+ for rejected in ['panorama-2005.webp','arvi-2012.webp','comuna13-2023.webp']:assert rejected not in preview
 else:
  assert preview.index('id="portada-4"')<preview.index('id="portada-1"')
  assert 'Descartadas/solo referencia, no portada' in preview
@@ -31,6 +41,10 @@ assert review['selected_cover'] is None and not review['illustrations']['generat
 activities=json.loads((r/'experiencias.json').read_text())
 assert {x['kind'] for x in activities}=={'propuesta_editorial_autonoma','oferta_documentada_operador','candidato_por_validar'}
 assert all(x.get('photo_status') for x in activities)
+assert all(set(x['translations'])=={'es','en','pt-BR'} for x in activities)
+assert all(set(x['translations'])=={'es','en','pt-BR'} for x in b)
+assert all(c['translations'][l].get('mobility') for l in ['es','en','pt-BR'])
+assert {'metro-j','metro-l','metro-historia'}<=s
 for p in c['places']:
  assert set(p['translations'])==set(c['translations'])
  assert set(p['source_ids'])<=s and p['publication_status']=='draft'
@@ -45,4 +59,5 @@ for x in a:
  with Image.open(r/x['file']) as im:assert im.format=='WEBP' and not im.getexif()
 files=sorted(p for p in r.rglob('*') if p.is_file() and p.name!='SHA256SUMS' and '__pycache__' not in p.parts)
 (r/'SHA256SUMS').write_text(''.join(hashlib.sha256(p.read_bytes()).hexdigest()+'  '+str(p.relative_to(r))+'\n' for p in files))
-print(f'OK: 3 idiomas, {len(c["places"])} sitios amplios, 8principales/9fotosdistintas enZIP, 10fichas/3categorías, {len(a)} archivosfuente trazables/derivados (incluyen miniaturasoficiales, no todosmaestros), decisiones independientes sinaprobación. No certifica importaciónMySQL ni publicación.')
+print('OK V4: cinco originales nuevos y derivados con hashes; tres propuestas revisables, ninguna aprobada; movilidad, diez actividades y diez fichas en tres idiomas. V3 es antecedente local con tres referencias rechazadas.')
+print(f'Antecedentes comprobados: 3 idiomas, {len(c["places"])} sitios amplios, 8principales/9fotosdistintas enZIP, 10fichas/3categorías, {len(a)} archivosfuente trazables/derivados (incluyen miniaturasoficiales, no todosmaestros), decisiones independientes sinaprobación. No certifica importaciónMySQL ni publicación.')
