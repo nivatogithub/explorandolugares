@@ -83,3 +83,7 @@ SalitreMágico sí existe enBogotá y ahora está en el universo: [operador](htt
 La aprobación de ilustración Jardín permanece íntegra en `aprobacion-ilustracion-tropicario-v1.json`: hashes PNG/WebP comprobados contra archivos locales. Aprobar una imagen no aprueba el puesto, el destino ni publicación. SiJardín pasa areserva, conservar activo/aprobación sin regenerar.
 
 Pendiente resolver alcance de sectoresT/G y frontera8; no hay ranking estadístico total ni orden fiable de toda la reserva.31candidatos es universo ampliado de esta auditoría, no todos los atractivos posibles deBogotá. Ningún cambio en selección/BD antes de revisión.
+
+## Comparación explícita con el corte
+
+En universo amplio el octavo propuesto es MuseoNacional. IDT2025-I favoreceNacional frente aSimón/Jardín/Usaquén en turistas internacionales; no es un resultado global ponderado. ParaSalitre/Maloka/Colpatria y otros secundarios falta comparación actual homogénea: no se certifica descarte por ausencia de evidencia. JSON registra cada excluido frente al corte con resultado/confianza. El corte sigue pendiente (`cutoff_validated:false`), sin reimportar.
