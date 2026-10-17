@@ -6,20 +6,22 @@
   "state": "investigacion_y_revision_individual_activa",
   "components": {
     "hero": {
-      "status": "dos_alternativas_distritales_Rodadero_condicionales",
-      "next": "Revisar fotograma13s y límites de sector/recorte; no centrohistórico.",
+      "status": "busqueda_exclusiva_centro_bahia_historica",
+      "next": "Descargar e inspeccionar H7-01/02/03; verificar hitos del centro, bahía y recorte antes de presentarlas.",
       "reference_approved": false,
       "generation_approved": false,
-      "candidate_ids": [
-        "SM-H6-01",
-        "SM-H6-05-t13s"
-      ],
+      "candidate_ids": [],
       "rejected_candidates": [
         "SM-H6-02",
         "SM-H6-03",
         "SM-H6-04"
       ],
-      "additional_research": "video_original_extraido4fotogramas_e_inspeccionado"
+      "additional_research": "video_original_extraido4fotogramas_e_inspeccionado",
+      "excluded_by_human": [
+        "SM-H6-01",
+        "SM-H6-05-t13s"
+      ],
+      "authority": "decision-portada-centro-bahia-historica.json"
     },
     "tayrona": {
       "status": "dos_opciones_listas_para_eleccion_original",
