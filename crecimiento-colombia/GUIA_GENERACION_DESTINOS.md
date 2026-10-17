@@ -199,3 +199,7 @@ Retirar etiquetas visibles repetidas como «Ilustración de actividad»: la fuen
 ### Biblioteca de tipos de lugares · actualización del propietario
 
 El propietario extendió expresamente el enfoque genérico a Qué ver/Qué hacer: centro histórico, playa, convento, santuario, isla, barrio, discoteca y otros tipos. Esta instrucción prevalece sobre la exigencia previa de foto/dibujo exclusivo para cada atractivo en esta prueba. Usar tipo+entorno+rasgos editoriales; no presentar la geometría como fachada o paisaje exactos. Conservar nombre, texto, ubicación y fuentes del lugar real. Mantener una imagen específica reconocible para portada y los recursos originales/aprobaciones históricos. No solicitar fotos por tarjeta cuando se adopte la biblioteca. Elegir un tipo con significado correcto; los tipos aún no dibujados no se consideran implementados por estar mencionados. Cartagena v12:8tipos de lugar y7actividades, pendientes de aprobación visual, solo preprod privado.
+
+### Elaboración del estilo visual
+
+El propietario pidió opciones más elaboradas y con más detalle, evitando un acabado infantil. Antes de extender la biblioteca comparar estilos numerados visibles (no carrusel), con diferencias de trazo, perspectiva y material, no solamente recoloraciones. Conservar legibilidad en tamaño de tarjeta, peso medido y contexto genérico honesto. Estudios de Cartagena en design/cartagena-estilos: no son estilo final aprobado.
