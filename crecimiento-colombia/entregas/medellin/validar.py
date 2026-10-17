@@ -68,5 +68,5 @@ if (r/'verificacion-vigencia-v5.json').exists():
   assert hashlib.sha256((r/x['file']).read_bytes()).hexdigest()==x['sha256'] and x['bytes']<=120000
 files=sorted(p for p in r.rglob('*') if p.is_file() and p.name!='SHA256SUMS' and '__pycache__' not in p.parts)
 (r/'SHA256SUMS').write_text(''.join(hashlib.sha256(p.read_bytes()).hexdigest()+'  '+str(p.relative_to(r))+'\n' for p in files))
-print('OK V4: cinco originales nuevos y derivados con hashes; tres propuestas revisables, ninguna aprobada; movilidad, diez actividades y diez fichas en tres idiomas. V3 es antecedente local con tres referencias rechazadas.')
-print(f'Antecedentes comprobados: 3 idiomas, {len(c["places"])} sitios amplios, 8principales/9fotosdistintas enZIP, 10fichas/3categorías, {len(a)} archivosfuente trazables/derivados (incluyen miniaturasoficiales, no todosmaestros), decisiones independientes sinaprobación. No certifica importaciónMySQL ni publicación.')
+print(f'Antecedente visual V4 conservado. Contenido actual: {len(activities)} experiencias registradas, {len(b)} fichas y tres idiomas; ninguna aprobación nueva. ZIP V3 es histórico y tiene referencias rechazadas.')
+print(f'Antecedentes comprobados: 3 idiomas, {len(c["places"])} sitios amplios, 8 principales/9 fotos distintas enZIP, {len(b)} fichas/3 categorías, {len(a)} archivosfuente trazables/derivados (incluyen miniaturasoficiales, no todosmaestros), decisiones independientes sinaprobación. No certifica importaciónMySQL ni publicación.')

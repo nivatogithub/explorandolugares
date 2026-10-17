@@ -1,4 +1,6 @@
-# Lugar 3 · Medellín · revisión vigente V4 y propuestas separadas V6
+# Lugar 3 · Medellín · cierre textual sin fotos
+
+Cierre actual: `CIERRE_CONTENIDO_SIN_FOTOS.md/.json`, texto ES/EN/PT y roles revisados sin fotografías nuevas. Se conservan los 8 lugares físicos. Metro/Metrocable es experiencia de movilidad; la auditoría anterior con Metro como puesto 3 queda histórica y requiere nuevo corte. Hay 9 experiencias visibles, 2 antecedentes externos ocultos y 0 eventos actuales verificados. Búsqueda/descarga de fotos detenida; propietario enviará URLs. Lotes V7 no ejecutados y protegidos con salida inmediata. Sin IA/BD/preproducción/producción.
 
 Propuestas separadas V6: Plaza Botero y Metro/Metrocable con ES/EN/PT, cuatro originales completos y derivados inspeccionados. Vista `propuestos-top8-v6.html`; dos opciones principales revisables y dos limitadas colapsadas. No aplicadas a selección física, textos vigentes, preview principal, paquete ni aprobaciones. Licencia del fotógrafo y tratamiento de obras/personas diferenciados; no IA.
 

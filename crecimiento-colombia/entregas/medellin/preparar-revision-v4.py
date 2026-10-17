@@ -1,6 +1,6 @@
 """Construye revisión privada; nunca selecciona referencias ni genera IA o importa BD."""
 from pathlib import Path
-import json,hashlib,html
+import json,hashlib,html,sys
 from PIL import Image, ImageOps
 r=Path(__file__).resolve().parent
 read=lambda f:json.loads((r/f).read_text())
@@ -8,8 +8,11 @@ def write(f,d):(r/f).write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n')
 def esc(v):return html.escape(str(v),quote=True)
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 langs=['es','en','pt-BR'];c=read('contenido.json');sources={s['id']:s for s in read('fuentes.json')};main=read('principales-v3.json');assets=read('imagenes.json');candidates=read('descargas-v4.json');inspections=read('inspeccion-visual-v4.json') if (r/'inspeccion-visual-v4.json').exists() else {}
+content_only='--content-only' in sys.argv
+if content_only:candidates=read('referencias-propuestas-v4.json')
 results={d['id']:d for d in read('descargas-v4-resultados.json')} if (r/'descargas-v4-resultados.json').exists() else {}
 for d in candidates:
+ if content_only:continue
  p=r/d['target'];q=r/'images'/(d['id']+'.webp');review=inspections.get(d['id'],{})
  d['visual_review']=review;d['human_approved']=False;d['selected']=False
  if not p.exists():continue
@@ -19,7 +22,7 @@ for d in candidates:
   while q.stat().st_size>budget and quality>54:quality-=4;im.save(q,'WEBP',quality=quality,method=6)
   dims=list(im.size)
  d.update(file=str(q.relative_to(r)),sha256=sha(q),original_sha256=sha(p),dimensions=dims,bytes=q.stat().st_size,status='inspeccionada_sin_aprobacion' if review else 'descargada_pendiente_inspeccion',download_evidence=results.get(d['id']))
-write('referencias-propuestas-v4.json',candidates)
+if not content_only:write('referencias-propuestas-v4.json',candidates)
 byplace={p['slug']:p for p in c['places']}
 for p in main:p['translations']=byplace[p['slug']]['translations']
 write('principales-v3.json',main)
@@ -27,9 +30,13 @@ rejected={'portada':{'file':'images/panorama-2005.webp','reason':'Coltejer dimin
 write('correcciones-referencias-v4.json',{'review_date':'2026-10-17','rejected':rejected,'remaining_main_count':8,'new_cards_added':0,'generation_authorized':False,'publication_authorized':False,'package_v3':'antecedente importado local con tres referencias rechazadas; no reutilizar como versión visual aprobada'})
 # Estado histórico v3 se conserva; no permite que una comprobación técnica cuente como aptitud actual.
 old=read('inspeccion-visual-v3.json');old['cover_current_suitability']=False;old['current_rejection']='Coltejer diminuto; sustituir. Ver inspeccion-visual-v4.json.';write('inspeccion-visual-v3.json',old)
-parts=['<!doctype html><html lang="es"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Medellín · revisión de referencias</title><style>body{font:17px system-ui;line-height:1.6;max-width:1150px;margin:auto;padding:24px}img{max-width:100%;height:auto}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}article{border:1px solid #aaa;padding:18px}.grid img{width:100%;height:330px;object-fit:contain;background:#eee}label{display:block}details{margin:18px 0}.alert{background:#fff2d1;padding:16px}@media(max-width:650px){.grid{grid-template-columns:1fr}}</style><h1>Medellín · referencias y ocho principales</h1><p class="alert">Revisión privada. Referencias propuestas, textos e idiomas se deciden por separado. No hay aprobación de generación ni publicación. Se retiraron de la revisión vigente las tres fotografías rechazadas.</p><label>Revisor <input id="reviewer"></label><button id="export">Exportar decisiones locales</button><p id="status"></p><h2>Referencias nuevas: portada, Arví y Comuna 13</h2><p>Se conservan los números anteriores: portada nueva 8. Arví y Comuna 13 tienen numeración propia. Cada imagen muestra su aptitud antes de la foto.</p><div class="grid">']
+parts=['<!doctype html><html lang="es"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Medellín · revisión de referencias</title><style>body{font:17px system-ui;line-height:1.6;max-width:1150px;margin:auto;padding:24px}img{max-width:100%;height:auto}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}article{border:1px solid #aaa;padding:18px}.grid img{width:100%;height:330px;object-fit:contain;background:#eee}label{display:block}details{margin:18px 0}.alert{background:#fff2d1;padding:16px}@media(max-width:650px){.grid{grid-template-columns:1fr}}</style><h1>Medellín · revisión de contenido y roles</h1><p>Ocho lugares vigentes conservados mientras se revisa el corte. Metro/Metrocable figura como movilidad y experiencia, sin añadir una novena tarjeta. Las fotografías se conservan como antecedentes: el propietario elegirá nuevas URLs. Arví requiere cable de línea L y paisaje, sin estación como preferencia principal.</p><p><a href="CIERRE_CONTENIDO_SIN_FOTOS.md">Cierre de contenido: estado y faltantes</a></p><p class="alert">Revisión privada. Textos, ubicación y roles pendientes de aprobación. Selección de fotografías suspendida hasta recibir URLs del propietario. No hay aprobación de generación ni publicación. Se retiraron de la revisión vigente las tres fotografías rechazadas.</p><label>Revisor <input id="reviewer"></label><button id="export">Exportar decisiones locales</button><p id="status"></p><h2>Historial de referencias: portada, Arví y Comuna 13</h2><p>Se conservan los números anteriores: portada nueva 8. Arví y Comuna 13 tienen numeración propia. Las etiquetas de aptitud conservan la revisión técnica histórica; no equivalen a elección vigente. No se admiten decisiones fotográficas en esta revisión de contenido.</p><div class="grid">']
 def controls(id,components,digest):
- return ''.join(f'<label>{esc(k)}<select data-id="{esc(id)}" data-part="{esc(k)}" data-hash="{esc(digest)}"><option>Pendiente</option><option>Proponer aprobar</option><option>Corregir</option><option>Rechazar</option></select></label>' for k in components)
+ controls_html=[]
+ for k in components:
+  disabled='disabled' if any(t in k for t in ['referencia','licencia','encuadre']) else ''
+  controls_html.append(f'<label>{esc(k)}<select data-id="{esc(id)}" data-part="{esc(k)}" data-hash="{esc(digest)}" {disabled}><option>Pendiente</option><option>Proponer aprobar</option><option>Corregir</option><option>Rechazar</option></select></label>')
+ return ''.join(controls_html)
 def translations(d):
  return ''.join(f'<details {"open" if l=="es" else ""}><summary>{l}</summary><h3>{esc(d[l].get("name",""))}</h3><p>{esc(d[l]["description"])}</p></details>' for l in langs)
 # Recomendadas primero; dudosas/rechazadas solo en sección colapsada.
@@ -53,18 +60,21 @@ parts.append('</div><h2>Historia de Medellín</h2><img src="images/medellin-1.we
 for l in langs:parts.append(f'<details {"open" if l=="es" else ""}><summary>{l}</summary>'+''.join('<p>'+esc(t)+'</p>' for t in c['translations'][l]['history'])+'</details>')
 parts.append(controls('historia',['foto_referencia','texto_es','texto_en','texto_pt-BR'],sha(r/'contenido.json'))+'<h2>Ocho atractivos principales</h2><div class="grid">')
 for p in main:
- parts.append(f'<article id="{esc(p["slug"])}"><h2>{p["order"]}. {esc(p["translations"]["es"]["name"])}</h2><p>{esc(p["reason"])}</p>')
+ parts.append(f'<article id="{esc(p["slug"])}"><h2>{p["order"]}. {esc(p["translations"]["es"]["name"])}</h2><p>Justificación histórica pendiente de auditoría de prioridad: {esc(p["reason"])}</p>')
  if p['slug'] in rejected:parts.append('<p class="alert">Referencia anterior rechazada; revisa las opciones nuevas de arriba. El atractivo conserva su lugar en la selección.</p>')
  else:
   a=p['image'];parts.append(f'<img src="{esc(a["file"])}" alt="{esc(a["alt"]["es"])}"><p>{esc(a["image_creator"])} · <a href="{esc(a["image_source_url"])}">Original</a> · <a href="{esc(a["image_license_url"])}">{esc(a["image_license"])}</a>. Reducción técnica sin recorte.</p>')
  parts.append(translations(p['translations']));parts.append(controls(p['slug'],['ubicacion','texto_es','texto_en','texto_pt-BR']+([] if p['slug'] in rejected else ['foto_referencia','licencia']),sha(r/'principales-v3.json')));parts.append('</article>')
-parts+=['</div><h2>Actividades separadas</h2>']
+parts+=['</div><h2>Experiencias y movilidad · separadas de lugares</h2><p>Recintos y actividades se relacionan por lugar; una experiencia no suma otro lugar cubierto. Fotografías de recintos son referencias históricas y no acreditan un tour ni una imagen propia de actividad.</p>']
 for a in read('experiencias.json'):
  if a['kind']=='candidato_por_validar':continue
  parts.append(f'<article><h3>{esc(a.get("name",a["translations"]["es"]["name"]))}</h3><p>{esc(a["kind"])} · fotografía: {esc(a["photo_status"])}</p>');parts.append(f'<img src="{esc(a["image_file"])}" alt="{esc(a["translations"]["es"]["name"])}"><p>{esc(a.get("image_scope","Referencia del lugar; sin aprobación"))}</p>' if a.get('image_file') else '<p>No hay fotografía específica autorizada del servicio.</p>');credit=next((x for x in assets if x['file']==a.get('image_file')),None)
  if a.get('image_manifest') and (r/a['image_manifest']).exists():credit=read(a['image_manifest'])
  if credit:parts.append(f'<p>{esc(credit["author"])} · <a href="{esc(credit["source_url"])}">Fuente fotográfica original</a> · <a href="{esc(credit["license_url"])}">{esc(credit["license"])}</a>. Reducción técnica sin recorte.</p>')
  parts.append(translations(a['translations']));parts.append(controls(a['id'],['texto_'+l for l in langs]+(['foto_referencia','licencia_y_uso'] if a.get('image_file') else []),sha(r/'experiencias.json')));parts.append('</article>')
+parts+=['<h2>Agenda</h2>']
+for l in langs:parts.append('<p lang="'+l+'">'+esc(c['agenda']['translations'][l])+'</p>')
+parts.append('<p>No hay eventos con fecha vigente verificados en esta entrega; las páginas históricas no se presentan como agenda actual.</p>')
 parts+=['<details><summary>Directorio gratuito propuesto · diez fichas</summary>']
 for b in read('directorio.json'):parts.append(f'<article><h3>{esc(b["name"])}</h3><p><a href="{esc(b["url"])}">Canal oficial</a> · sin relación comercial ni vigencia confirmada</p>'+translations(b['translations'])+'</article>')
 parts+=['</details><details><summary>Inventario amplio secundario · 28 sitios</summary>']

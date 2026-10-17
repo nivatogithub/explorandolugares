@@ -8,7 +8,11 @@ sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 p=read('PROPUESTOS_TOP8_V6.json');refs=read('referencias-propuestos-v6.json')
 assert {x['id'] for x in p['items']}=={'plaza-botero','metro-metrocable'}
 assert all(set(x['translations'])=={'es','en','pt-BR'} and not x['selected_for_main'] and not any(x['approved'].values()) for x in p['items'])
-assert all(sha(r/f)==h for f,h in p['protected_files_sha256'].items())
+closure=read('CIERRE_CONTENIDO_SIN_FOTOS.json') if (r/'CIERRE_CONTENIDO_SIN_FOTOS.json').exists() else {}
+def snapshot_ok(f,h):
+ change=closure.get('authorized_text_changes',{}).get(f,{})
+ return sha(r/f)==h or (change.get('before_sha256')==h and change.get('after_sha256')==sha(r/f))
+assert all(snapshot_ok(f,h) for f,h in p['protected_files_sha256'].items())
 assert len(refs)==4 and len({x['id'] for x in refs})==4
 assert all(not x['selected'] and not x['human_approved'] and not x['ai_generated'] for x in refs)
 assert all(x.get('file') and x.get('visual_review',{}).get('technical_derivative_inspected') for x in refs)

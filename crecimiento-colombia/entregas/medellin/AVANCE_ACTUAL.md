@@ -2,9 +2,11 @@
 
 Actualizado: 17/10/2026. Lugar 3, rama `lugar/CO/antioquia/medellin`.
 
-**Estado real:** subtarea V6 de dos propuestas separadas preparada para revisión; destino completo pendiente. No hay trabajo permanente en segundo plano.
+**Estado real:** subtarea de revisión de contenido y roles terminada para revisión; destino completo pendiente. Sin trabajo permanente en segundo plano.
 
-**Último logro:** cuatro originales completos y cuatro reducciones inspeccionados. `propuestos-top8-v6.html` presenta Plaza Botero opción1 (esculturas completas, CC BY-SA4.0, Steffen Schmitz) y Metro opción1 (tren CAF con Niquía/Coltejer, CC BY4.0, Minoh09). Opciones2 quedan colapsadas por contexto dominante del Palacio o escalera técnica. `referencias-propuestos-v6.json` documenta fuentes, licencias, condiciones y hashes. Dos borradores ES/EN/PT en `PROPUESTOS_TOP8_V6.json/.md`. No se aplican al Top8 vigente.
+**Cierre actual sin fotos:** `CIERRE_CONTENIDO_SIN_FOTOS.md/.json`: 28 borradores de lugar, 8 principales conservados, 9 experiencias visibles (7 autónomas y 2 ofertas documentadas), 2 antecedentes externos ocultos, 0 eventos actuales verificados. Metro/Metrocable solo movilidad/experiencia. Fotos, decisiones y selección conservadas; scripts Arví V7 no ejecutados, ahora inactivos. No buscar ni descargar hasta URLs del propietario.
+
+**Logro anterior:** cuatro originales completos y cuatro reducciones inspeccionados. `propuestos-top8-v6.html` presenta Plaza Botero opción1 (esculturas completas, CC BY-SA4.0, Steffen Schmitz) y Metro opción1 (tren CAF con Niquía/Coltejer, CC BY4.0, Minoh09). Opciones2 quedan colapsadas por contexto dominante del Palacio o escalera técnica. `referencias-propuestos-v6.json` documenta fuentes, licencias, condiciones y hashes. Dos borradores ES/EN/PT en `PROPUESTOS_TOP8_V6.json/.md`. No se aplican al Top8 vigente.
 
 **Siguiente revisión disponible:** textos/ubicación/imagen/uso independientes de estas dos propuestas; contexto de esculturas permanentes revisado aparte de la licencia fotográfica. No autoriza IA ni publicación. QA visual móvil/escritorio pendiente del IAB del coordinador; aquí la herramienta no está disponible. Ningún archivo de selección física, preview vigente, paquete, aprobación o tres candidatas previas fue alterado.
 

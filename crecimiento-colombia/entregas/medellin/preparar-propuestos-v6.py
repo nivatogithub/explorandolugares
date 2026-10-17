@@ -1,6 +1,6 @@
 """Prepara revisión separada de dos propuestas; no altera preview/selección/paquete vigentes."""
 from pathlib import Path
-import json,hashlib,html
+import json,hashlib,html,sys
 from PIL import Image,ImageOps
 r=Path(__file__).resolve().parent
 read=lambda f:json.loads((r/f).read_text())
@@ -8,8 +8,15 @@ def save(f,x):(r/f).write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\n')
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 e=lambda s:html.escape(str(s),quote=True)
 p=read('PROPUESTOS_TOP8_V6.json');photos=read('descargas-propuestos-v6.json');ins=read('inspeccion-propuestos-v6.json') if (r/'inspeccion-propuestos-v6.json').exists() else {};results={x['id']:x for x in read('descargas-propuestos-v6-resultados.json')} if (r/'descargas-propuestos-v6-resultados.json').exists() else {}
-assert all(sha(r/f)==h for f,h in p['protected_files_sha256'].items())
+closure=read('CIERRE_CONTENIDO_SIN_FOTOS.json') if (r/'CIERRE_CONTENIDO_SIN_FOTOS.json').exists() else {}
+def snapshot_ok(f,h):
+ change=closure.get('authorized_text_changes',{}).get(f,{})
+ return sha(r/f)==h or (change.get('before_sha256')==h and change.get('after_sha256')==sha(r/f))
+assert all(snapshot_ok(f,h) for f,h in p['protected_files_sha256'].items())
+content_only='--content-only' in sys.argv
+if content_only:photos=read('referencias-propuestos-v6.json')
 for x in photos:
+ if content_only:continue
  x['visual_review']=ins.get(x['id'],{});orig=r/x['target'];out=r/'images'/(x['id']+'.webp')
  if not orig.exists():continue
  with Image.open(orig) as im:
@@ -17,12 +24,12 @@ for x in photos:
   while out.stat().st_size>120000 and quality>54:quality-=4;im.save(out,'WEBP',quality=quality,method=6)
   dims=list(im.size)
  x.update(file=str(out.relative_to(r)),sha256=sha(out),original_sha256=sha(orig),bytes=out.stat().st_size,dimensions=dims,download_evidence=results.get(x['id']),conversion=dict(tool='Pillow',orientation='EXIF transpose',size='thumbnail1000 LANCZOS, sin ampliar ni recortar',quality=quality,format='WebP',method=6,metadata='EXIF/GPS omitidos'),status='inspeccionada_sin_aprobacion' if x['visual_review'] else 'descargada_pendiente_inspeccion')
-save('referencias-propuestos-v6.json',photos)
-head='<!doctype html><html lang="es"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Medellín · dos propuestas</title><style>body{font:17px system-ui;line-height:1.6;max-width:1100px;margin:auto;padding:24px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}article{border:1px solid #bbb;padding:18px}img{width:100%;height:330px;object-fit:contain;background:#eee}label{display:block}details{margin:16px 0}@media(max-width:650px){.grid{grid-template-columns:1fr}}</style><h1>Medellín · dos propuestas separadas</h1><p>Plaza Botero y Metro/Metrocable están propuestos por la auditoría; todavía no sustituyen fichas de la selección vigente. Ninguna referencia está elegida, aprobada o generada mediante IA.</p><label>Revisor <input id="reviewer"></label><button id="export">Exportar decisiones locales</button>'
+if not content_only:save('referencias-propuestos-v6.json',photos)
+head='<!doctype html><html lang="es"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Medellín · dos propuestas</title><style>body{font:17px system-ui;line-height:1.6;max-width:1100px;margin:auto;padding:24px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}article{border:1px solid #bbb;padding:18px}img{width:100%;height:330px;object-fit:contain;background:#eee}label{display:block}details{margin:16px 0}@media(max-width:650px){.grid{grid-template-columns:1fr}}</style><h1>Medellín · dos propuestas separadas</h1><p>Plaza Botero permanece como lugar candidato. Metro/Metrocable se clasifica como movilidad y experiencia; la propuesta anterior de incluirlo en Top8 requiere revisar el corte de lugares. No se sustituye ninguna de las ocho fichas vigentes. El propietario elegirá las URLs fotográficas; galería histórica de referencia. Ninguna referencia está elegida, aprobada o generada mediante IA.</p><label>Revisor <input id="reviewer"></label><button id="export">Exportar decisiones locales</button>'
 parts=[head];md=['# Dos propuestas de Medellín · V6','','Borradores independientes; no aplicados a selección física, textos vigentes o aprobaciones.']
-def controls(id,components,digest):return ''.join(f'<label>{e(k)}<select data-id="{e(id)}" data-part="{e(k)}" data-hash="{digest}"><option>Pendiente</option><option>Proponer aprobar</option><option>Corregir</option><option>Rechazar</option></select></label>' for k in components)
+def controls(id,components,digest):return ''.join(f'<label>{e(k)}<select data-id="{e(id)}" data-part="{e(k)}" data-hash="{digest}" {"disabled" if any(t in k for t in ["referencia","licencia","encuadre"]) else ""}><option>Pendiente</option><option>Proponer aprobar</option><option>Corregir</option><option>Rechazar</option></select></label>' for k in components)
 for item in p['items']:
- parts.append('<h2>'+e(item['translations']['es']['name'])+'</h2>');md+=['','## '+item['translations']['es']['name']]
+ parts.append('<h2>'+e(item['translations']['es']['name'])+'</h2><p>Rol: '+e(item.get('editorial_role','propuesto'))+'</p>');md+=['','## '+item['translations']['es']['name']]
  for lang,t in item['translations'].items():
   parts.append(f'<details {"open" if lang=="es" else ""}><summary>{lang}</summary><h3>{e(t["name"])}</h3><p>{e(t["description"])}</p><p>{e(t["practical"])}</p></details>');md+=['','### '+lang,'',t['description'],'',t['practical']]
  parts.append(controls(item['id'],['ubicacion','texto_es','texto_en','texto_pt-BR'],sha(r/'PROPUESTOS_TOP8_V6.json')))
