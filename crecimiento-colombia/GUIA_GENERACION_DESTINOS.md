@@ -207,3 +207,7 @@ El propietario pidió opciones más elaboradas y con más detalle, evitando un a
 ### Guía de generación desde descripciones documentadas
 
 Aplicar docs/GUIA_BIBLIOTECA_ILUSTRADA.md y su brief JSON. Dirección solicitada: personajes caricaturescos completos/expresivos, árboles y montañas de formas orgánicas creíbles y edificios de tipologías variadas. No maniquíes de bolitas/palitos, geometría infantil ni filtro amarillo. Preparar hechos visuales desde documentación pública, separados de decisiones artísticas e incógnitas. Seleccionar biblioteca por representación correcta, no al azar; la portada sigue basada en foto real elegida. La actualización documental no equivale a una imagen nueva generada/aprobada.
+
+### Procedimiento reutilizable del worker de imágenes
+
+Documento coordinador: [PROCEDIMIENTO_WORKER_IMAGENES.md](PROCEDIMIENTO_WORKER_IMAGENES.md). Validar con dos o tres destinos antes de extender, con métricas, revisión visual y QA real. La guía de dirección, plantilla y skill existentes conservan sus funciones; no se inicia una biblioteca masiva ni se reactiva seguimiento automático al documentarlo.
