@@ -1,0 +1,606 @@
+{
+  "destino": "CO-11-bogota",
+  "fecha_consulta": "2026-10-17",
+  "estado": "propuesta_auditoria_no_aprobada_no_importada",
+  "universo": {
+    "base": 20,
+    "ampliaciones": 11,
+    "alcance": "31 candidatos examinados; no censo exhaustivo de Bogotá. Once ampliaciones no tienen el mismo nivel de verificación."
+  },
+  "regla": "Ocho de mayor prioridad turística; sin cuotas por categoría, sin disponibilidad de foto como criterio. Monserrate>SalitreMágico.",
+  "metodo": {
+    "tipo": "juicio_editorial_trazable_sin_puntaje_artificial",
+    "jerarquia": [
+      "Jurisdicción real y unidad comparable",
+      "Demanda turística medida por IDT con periodo y población separados",
+      "Convergencia portales viajeros/local/nacional",
+      "Notoriedad y valor de primera visita; resolver frontera8 con evidencia, sin sumar menciones ni reseñas como visitantes"
+    ],
+    "limites": [
+      "2025anual infografía ofrece lista corta, no mide todos candidatos.",
+      "2025-I detalla más sitios pero periodo distinto: no mezclar porcentajes ni inventar total nacional/internacional ponderado.",
+      "Tripadvisor es señal dinámica/personalizada; apertura directa falló y se usó índice. No trasladar su ranking como original aprobado.",
+      "Salitre2019: admisiones históricas no comparables a proporción turistas2025.",
+      "Pertenecer a complejoSimón no fusiona parque central/Jardín/Salitre ni suma conteos."
+    ]
+  },
+  "fuentes": {
+    "IDT25": "https://observatorio.idt.gov.co/sites/default/files/2026-04/Infograf%C3%ADa%20Viajeros%20en%20Bogot%C3%A1%202025.pdf",
+    "IDT25I": "https://observatorio.idt.gov.co/sites/default/files/2025-10/Resultados%20Gran%20Encuesta%20Viajeros%202025-I.pdf",
+    "IDT24": "https://bogota.gov.co/en/node/246056",
+    "TA": "https://www.tripadvisor.co/Attractions-g294074-Activities-Bogota.html",
+    "NACIONAL": "https://colombia.travel/es/bogota",
+    "MUSEONACIONAL": "https://colombia.travel/es/bogota/visita-el-museo-nacional-de-colombia",
+    "JARDIN": "https://colombia.travel/es/bogota/visita-el-jardin-botanico-jose-celestino-mutis",
+    "PARQUES": "https://visitbogota.co/es/blog/en-octubre-el-mes-del-terror-disfruta-en-familia-de-los-parques-de-diversiones-de-bogota",
+    "SALITRE": "https://salitremagico.com.co/contactanos/",
+    "MALOKA": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/maloka-museo-de-ciencia-tecnologia-e-innovacion",
+    "COLPATRIA": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/torre-colpatria",
+    "ZONAS": "https://visitbogota.co/es/que-hacer-en-bogota/gastronomia/circuito-gastronomico-zona-g-zona-t-y-parque-de-la-93",
+    "ZIPA": "https://regions.colombia.travel/andes-orientales-colombianos/cundinamarca",
+    "HISTORICO_PARQUES": "https://observatorio.idt.gov.co/sites/default/files/2024-12/Estudio-Turistas-en-Parques-de-Atracciones-Naturales-y-Museos%20-2019.pdf"
+  },
+  "senales_IDT25_anual": {
+    "periodo": "2025",
+    "internacionales": {
+      "Monserrate": 59.1,
+      "Candelaria": 57.4,
+      "ZonaT": 43.8,
+      "Chorro": 39.4,
+      "ZonaG": 35.5,
+      "MuseoOro": 30.0
+    },
+    "nacionales": {
+      "Monserrate": 25.7,
+      "ZonaT": 23.0,
+      "Candelaria": 22.2,
+      "centros_comerciales_categoria": 21.8,
+      "ZonaG": 18.6,
+      "PlazaBolivar": 11.7
+    },
+    "unidad": "porcentaje de turistas del segmento; respuestas no exclusivas; no sumar"
+  },
+  "propuesta_amplia": [
+    "bogota-monserrate",
+    "bogota-candelaria",
+    "bogota-zona-t",
+    "bogota-zona-g",
+    "bogota-museo-oro",
+    "bogota-plaza",
+    "bogota-botero",
+    "bogota-nacional"
+  ],
+  "alternativa_hitos_sin_zonas_gastronomicas": [
+    "bogota-monserrate",
+    "bogota-candelaria",
+    "bogota-museo-oro",
+    "bogota-plaza",
+    "bogota-botero",
+    "bogota-nacional",
+    "bogota-simon",
+    "bogota-jardin"
+  ],
+  "matriz": [
+    {
+      "id": "bogota-museo-oro",
+      "nombre": "Museo del Oro",
+      "municipio": "Bogotá D.C.",
+      "anterior": 3,
+      "propuesta_amplia": 5,
+      "propuesta_hitos_acotada": 3,
+      "estado": "incluido_propuesta_amplia",
+      "evidencias": [
+        "IDT25",
+        "IDT24",
+        "TA",
+        "NACIONAL"
+      ],
+      "confianza": "alta",
+      "motivo": "Museo con fuerte señal viajera e institucional; central para primera visita.",
+      "orden_reserva": null
+    },
+    {
+      "id": "bogota-monserrate",
+      "nombre": "Cerro de Monserrate",
+      "municipio": "Bogotá D.C.",
+      "anterior": 4,
+      "propuesta_amplia": 1,
+      "propuesta_hitos_acotada": 1,
+      "estado": "incluido_propuesta_amplia",
+      "evidencias": [
+        "IDT25",
+        "IDT24",
+        "TA",
+        "NACIONAL"
+      ],
+      "confianza": "alta",
+      "motivo": "Convergencia de visitas turísticas y reconocimiento; subir de4a1. Restricción humana Monserrate>Salitre respetada.",
+      "orden_reserva": null
+    },
+    {
+      "id": "bogota-jardin",
+      "nombre": "Jardín Botánico de Bogotá",
+      "municipio": "Bogotá D.C.",
+      "anterior": 7,
+      "propuesta_amplia": null,
+      "propuesta_hitos_acotada": 8,
+      "estado": "reserva_no_borrado",
+      "evidencias": [
+        "IDT25I",
+        "JARDIN"
+      ],
+      "confianza": "media",
+      "motivo": "Relevante, pero sin cuota naturaleza ni ventaja por imagen ya aprobada. En escenario amplio queda en reserva; en acotado entra8.",
+      "orden_reserva": null
+    },
+    {
+      "id": "bogota-mambo",
+      "nombre": "MAMBO",
+      "municipio": "Bogotá D.C.",
+      "anterior": null,
+      "propuesta_amplia": null,
+      "propuesta_hitos_acotada": null,
+      "estado": "reserva_no_borrado",
+      "evidencias": [
+        "base_sitios_fuentes"
+      ],
+      "confianza": "baja_comparativa",
+      "motivo": "Conservar inventario secundario: ficha documental existente o candidato ampliado, sin señal comparativa actual suficiente para superar8. Requiere contraste individual antes de ordenar toda la reserva.",
+      "orden_reserva": null
+    },
+    {
+      "id": "bogota-colon",
+      "nombre": "Teatro Colón",
+      "municipio": "Bogotá D.C.",
+      "anterior": null,
+      "propuesta_amplia": null,
+      "propuesta_hitos_acotada": null,
+      "estado": "reserva_no_borrado",
+      "evidencias": [
+        "base_sitios_fuentes"
+      ],
+      "confianza": "baja_comparativa",
+      "motivo": "Conservar inventario secundario: ficha documental existente o candidato ampliado, sin señal comparativa actual suficiente para superar8. Requiere contraste individual antes de ordenar toda la reserva.",
+      "orden_reserva": null
+    },
+    {
+      "id": "bogota-delia",
+      "nombre": "Centro Nacional de las Artes Delia Zapata Olivella",
+      "municipio": "Bogotá D.C.",
+      "anterior": null,
+      "propuesta_amplia": null,
+      "propuesta_hitos_acotada": null,
+      "estado": "reserva_no_borrado",
+      "evidencias": [
+        "base_sitios_fuentes"
+      ],
+      "confianza": "baja_comparativa",
+      "motivo": "Conservar inventario secundario: ficha documental existente o candidato ampliado, sin señal comparativa actual suficiente para superar8. Requiere contraste individual antes de ordenar toda la reserva.",
+      "orden_reserva": null
+    },
+    {
+      "id": "bogota-plaza",
+      "nombre": "Plaza de Bolívar",
+      "municipio": "Bogotá D.C.",
+      "anterior": 1,
+      "propuesta_amplia": 6,
+      "propuesta_hitos_acotada": 4,
+      "estado": "incluido_propuesta_amplia",
+      "evidencias": [
+        "IDT25",
+        "IDT24",
+        "NACIONAL"
+      ],
+      "confianza": "alta",
+      "motivo": "Hito cívico visitado y entidad propia; aunque dentro de Candelaria, tarjeta diferencia conjunto monumental.",
+      "orden_reserva": null
+    },
+    {
+      "id": "bogota-botero",
+      "nombre": "Museo Botero",
+      "municipio": "Bogotá D.C.",
+      "anterior": 5,
+      "propuesta_amplia": 7,
+      "propuesta_hitos_acotada": 5,
+      "estado": "incluido_propuesta_amplia",
+      "evidencias": [
+        "IDT25I",
+        "TA",
+        "NACIONAL"
+      ],
+      "confianza": "alta",
+      "motivo": "Convergencia de notoriedad viajera y colección singular. Posición exacta respecto Plaza es editorial, no estadística.",
+      "orden_reserva": null
+    },
+    {
+      "id": "bogota-nacional",
+      "nombre": "Museo Nacional de Colombia",
+      "municipio": "Bogotá D.C.",
+      "anterior": null,
+      "propuesta_amplia": 8,
+      "propuesta_hitos_acotada": 6,
+      "estado": "incluido_propuesta_amplia",
+      "evidencias": [
+        "IDT25I",
+        "MUSEONACIONAL",
+        "NACIONAL"
+      ],
+      "confianza": "media_alta",
+      "motivo": "Omisión anterior injustificada: señal oficial de visitas internacionales superior a Jardín/Usaquén en2025-I; propuesta entrada al corte.",
+      "orden_reserva": null
+    },
+    {
+      "id": "bogota-planetario",
+      "nombre": "Planetario de Bogotá",
+      "municipio": "Bogotá D.C.",
+      "anterior": null,
+      "propuesta_amplia": null,
+      "propuesta_hitos_acotada": null,
+      "estado": "reserva_no_borrado",
+      "evidencias": [
+        "base_sitios_fuentes"
+      ],
+      "confianza": "baja_comparativa",
+      "motivo": "Conservar inventario secundario: ficha documental existente o candidato ampliado, sin señal comparativa actual suficiente para superar8. Requiere contraste individual antes de ordenar toda la reserva.",
+      "orden_reserva": null
+    },
+    {
+      "id": "bogota-maloka",
+      "nombre": "Maloka",
+      "municipio": "Bogotá D.C.",
+      "anterior": null,
+      "propuesta_amplia": null,
+      "propuesta_hitos_acotada": null,
+      "estado": "reserva_no_borrado",
+      "evidencias": [
+        "MALOKA",
+        "NACIONAL"
+      ],
+      "confianza": "media",
+      "motivo": "Producto científico reconocido; no hay comparación turística actual equivalente que justifique superar corte propuesto.",
+      "orden_reserva": null
+    },
+    {
+      "id": "bogota-perseverancia",
+      "nombre": "Plaza de Mercado La Perseverancia",
+      "municipio": "Bogotá D.C.",
+      "anterior": null,
+      "propuesta_amplia": null,
+      "propuesta_hitos_acotada": null,
+      "estado": "reserva_no_borrado",
+      "evidencias": [
+        "base_sitios_fuentes"
+      ],
+      "confianza": "baja_comparativa",
+      "motivo": "Conservar inventario secundario: ficha documental existente o candidato ampliado, sin señal comparativa actual suficiente para superar8. Requiere contraste individual antes de ordenar toda la reserva.",
+      "orden_reserva": null
+    },
+    {
+      "id": "bogota-usaquen",
+      "nombre": "Usaquén: plaza, calles y mercado",
+      "municipio": "Bogotá D.C.",
+      "anterior": 6,
+      "propuesta_amplia": null,
+      "propuesta_hitos_acotada": null,
+      "estado": "reserva_no_borrado",
+      "evidencias": [
+        "IDT25I",
+        "ZONAS"
+      ],
+      "confianza": "media",
+      "motivo": "Demanda documentada, pero no sostener automáticamente6: evidencia comparativa inferior aNacional ySimón en2025-I.",
+      "orden_reserva": null
+    },
+    {
+      "id": "bogota-simon",
+      "nombre": "Parque Metropolitano Simón Bolívar",
+      "municipio": "Bogotá D.C.",
+      "anterior": 8,
+      "propuesta_amplia": null,
+      "propuesta_hitos_acotada": 7,
+      "estado": "reserva_no_borrado",
+      "evidencias": [
+        "IDT25I",
+        "NACIONAL"
+      ],
+      "confianza": "media",
+      "motivo": "Demanda turística documentada, detrás del MuseoNacional en2025-I. En amplio reserva y en acotado7, sin cuota de variedad.",
+      "orden_reserva": null
+    },
+    {
+      "id": "bogota-quebrada",
+      "nombre": "Quebrada La Vieja",
+      "municipio": "Bogotá D.C.",
+      "anterior": null,
+      "propuesta_amplia": null,
+      "propuesta_hitos_acotada": null,
+      "estado": "reserva_no_borrado",
+      "evidencias": [
+        "base_sitios_fuentes"
+      ],
+      "confianza": "baja_comparativa",
+      "motivo": "Conservar inventario secundario: ficha documental existente o candidato ampliado, sin señal comparativa actual suficiente para superar8. Requiere contraste individual antes de ordenar toda la reserva.",
+      "orden_reserva": null
+    },
+    {
+      "id": "bogota-humedal",
+      "nombre": "Humedal Santa María del Lago",
+      "municipio": "Bogotá D.C.",
+      "anterior": null,
+      "propuesta_amplia": null,
+      "propuesta_hitos_acotada": null,
+      "estado": "reserva_no_borrado",
+      "evidencias": [
+        "base_sitios_fuentes"
+      ],
+      "confianza": "baja_comparativa",
+      "motivo": "Conservar inventario secundario: ficha documental existente o candidato ampliado, sin señal comparativa actual suficiente para superar8. Requiere contraste individual antes de ordenar toda la reserva.",
+      "orden_reserva": null
+    },
+    {
+      "id": "bogota-cinemateca",
+      "nombre": "Cinemateca de Bogotá",
+      "municipio": "Bogotá D.C.",
+      "anterior": null,
+      "propuesta_amplia": null,
+      "propuesta_hitos_acotada": null,
+      "estado": "reserva_no_borrado",
+      "evidencias": [
+        "base_sitios_fuentes"
+      ],
+      "confianza": "baja_comparativa",
+      "motivo": "Conservar inventario secundario: ficha documental existente o candidato ampliado, sin señal comparativa actual suficiente para superar8. Requiere contraste individual antes de ordenar toda la reserva.",
+      "orden_reserva": null
+    },
+    {
+      "id": "bogota-grafiti",
+      "nombre": "Distrito Grafiti Puente Aranda",
+      "municipio": "Bogotá D.C.",
+      "anterior": null,
+      "propuesta_amplia": null,
+      "propuesta_hitos_acotada": null,
+      "estado": "reserva_no_borrado",
+      "evidencias": [
+        "base_sitios_fuentes"
+      ],
+      "confianza": "baja_comparativa",
+      "motivo": "Conservar inventario secundario: ficha documental existente o candidato ampliado, sin señal comparativa actual suficiente para superar8. Requiere contraste individual antes de ordenar toda la reserva.",
+      "orden_reserva": null
+    },
+    {
+      "id": "bogota-theatron",
+      "nombre": "Theatron",
+      "municipio": "Bogotá D.C.",
+      "anterior": null,
+      "propuesta_amplia": null,
+      "propuesta_hitos_acotada": null,
+      "estado": "reserva_no_borrado",
+      "evidencias": [
+        "base_sitios_fuentes"
+      ],
+      "confianza": "baja_comparativa",
+      "motivo": "Conservar inventario secundario: ficha documental existente o candidato ampliado, sin señal comparativa actual suficiente para superar8. Requiere contraste individual antes de ordenar toda la reserva.",
+      "orden_reserva": null
+    },
+    {
+      "id": "bogota-candelaria",
+      "nombre": "La Candelaria y Chorro de Quevedo",
+      "municipio": "Bogotá D.C.",
+      "anterior": 2,
+      "propuesta_amplia": 2,
+      "propuesta_hitos_acotada": 2,
+      "estado": "incluido_propuesta_amplia",
+      "evidencias": [
+        "IDT25",
+        "IDT24",
+        "TA",
+        "NACIONAL"
+      ],
+      "confianza": "alta",
+      "motivo": "Centro histórico de fuerte demanda. Chorro integrado para evitar dos tarjetas de ámbito solapado; Plaza separada por entidad propia.",
+      "orden_reserva": null
+    },
+    {
+      "id": "bogota-salitre",
+      "nombre": "Salitre Mágico",
+      "municipio": "Bogotá D.C.",
+      "anterior": null,
+      "propuesta_amplia": null,
+      "propuesta_hitos_acotada": null,
+      "estado": "reserva_no_borrado",
+      "evidencias": [
+        "PARQUES",
+        "SALITRE",
+        "HISTORICO_PARQUES"
+      ],
+      "confianza": "media",
+      "motivo": "Candidato antes ausente, relevante a turismo familiar/nacional. Volumen entradas parque2019 no equivale turistas2025; no inferir superioridad sobreNacional/Jardín. Monserrate siempre delante.",
+      "orden_reserva": null
+    },
+    {
+      "id": "bogota-colpatria",
+      "nombre": "Torre Colpatria",
+      "municipio": "Bogotá D.C.",
+      "anterior": null,
+      "propuesta_amplia": null,
+      "propuesta_hitos_acotada": null,
+      "estado": "reserva_no_borrado",
+      "evidencias": [
+        "COLPATRIA"
+      ],
+      "confianza": "media",
+      "motivo": "Icono y mirador reconocido; servir como portada no concede puesto en8. Sin dato comparable de visitas turísticas suficiente.",
+      "orden_reserva": null
+    },
+    {
+      "id": "bogota-zona-t",
+      "nombre": "Zona T",
+      "municipio": "Bogotá D.C.",
+      "anterior": null,
+      "propuesta_amplia": 3,
+      "propuesta_hitos_acotada": null,
+      "estado": "incluido_propuesta_amplia",
+      "evidencias": [
+        "IDT25",
+        "ZONAS"
+      ],
+      "confianza": "alta_para_demanda_media_para_unidad",
+      "motivo": "Fuerte demanda nacional/internacional2025; no puede omitirse sin decidir alcance de zonas como atractivo. Propuesta3 en universo amplio.",
+      "orden_reserva": null
+    },
+    {
+      "id": "bogota-zona-g",
+      "nombre": "Zona G",
+      "municipio": "Bogotá D.C.",
+      "anterior": null,
+      "propuesta_amplia": 4,
+      "propuesta_hitos_acotada": null,
+      "estado": "incluido_propuesta_amplia",
+      "evidencias": [
+        "IDT25",
+        "ZONAS"
+      ],
+      "confianza": "alta_para_demanda_media_para_unidad",
+      "motivo": "Fuerte demanda turística2025 y reconocimiento distrital gastronómico. Propuesta4 si las zonas cuentan como tarjeta.",
+      "orden_reserva": null
+    },
+    {
+      "id": "zipaquira-catedral-sal",
+      "nombre": "Catedral de Sal de Zipaquirá",
+      "municipio": "Zipaquirá",
+      "anterior": null,
+      "propuesta_amplia": null,
+      "propuesta_hitos_acotada": null,
+      "estado": "fuera_jurisdiccion",
+      "evidencias": [
+        "ZIPA"
+      ],
+      "confianza": "alta_territorial",
+      "motivo": "Atractivo importante de Zipaquirá,Cundinamarca, no Bogotá; excursión vinculable, sin ocupar cupo/cobertura municipal de Bogotá.",
+      "orden_reserva": null
+    },
+    {
+      "id": "bogota-paloquemao",
+      "nombre": "Plaza de Mercado Paloquemao",
+      "municipio": "Bogotá D.C.",
+      "anterior": null,
+      "propuesta_amplia": null,
+      "propuesta_hitos_acotada": null,
+      "estado": "reserva_no_borrado",
+      "evidencias": [
+        "base_sitios_fuentes"
+      ],
+      "confianza": "baja_comparativa",
+      "motivo": "Conservar inventario secundario: ficha documental existente o candidato ampliado, sin señal comparativa actual suficiente para superar8. Requiere contraste individual antes de ordenar toda la reserva.",
+      "orden_reserva": null
+    },
+    {
+      "id": "bogota-parque93",
+      "nombre": "Parque de la 93",
+      "municipio": "Bogotá D.C.",
+      "anterior": null,
+      "propuesta_amplia": null,
+      "propuesta_hitos_acotada": null,
+      "estado": "reserva_no_borrado",
+      "evidencias": [
+        "base_sitios_fuentes"
+      ],
+      "confianza": "baja_comparativa",
+      "motivo": "Conservar inventario secundario: ficha documental existente o candidato ampliado, sin señal comparativa actual suficiente para superar8. Requiere contraste individual antes de ordenar toda la reserva.",
+      "orden_reserva": null
+    },
+    {
+      "id": "bogota-virgilio",
+      "nombre": "Biblioteca Virgilio Barco",
+      "municipio": "Bogotá D.C.",
+      "anterior": null,
+      "propuesta_amplia": null,
+      "propuesta_hitos_acotada": null,
+      "estado": "reserva_no_borrado",
+      "evidencias": [
+        "base_sitios_fuentes"
+      ],
+      "confianza": "baja_comparativa",
+      "motivo": "Conservar inventario secundario: ficha documental existente o candidato ampliado, sin señal comparativa actual suficiente para superar8. Requiere contraste individual antes de ordenar toda la reserva.",
+      "orden_reserva": null
+    },
+    {
+      "id": "bogota-mundoaventura",
+      "nombre": "Mundo Aventura",
+      "municipio": "Bogotá D.C.",
+      "anterior": null,
+      "propuesta_amplia": null,
+      "propuesta_hitos_acotada": null,
+      "estado": "reserva_no_borrado",
+      "evidencias": [
+        "base_sitios_fuentes"
+      ],
+      "confianza": "baja_comparativa",
+      "motivo": "Conservar inventario secundario: ficha documental existente o candidato ampliado, sin señal comparativa actual suficiente para superar8. Requiere contraste individual antes de ordenar toda la reserva.",
+      "orden_reserva": null
+    },
+    {
+      "id": "bogota-quinta",
+      "nombre": "Quinta de Bolívar",
+      "municipio": "Bogotá D.C.",
+      "anterior": null,
+      "propuesta_amplia": null,
+      "propuesta_hitos_acotada": null,
+      "estado": "reserva_no_borrado",
+      "evidencias": [
+        "base_sitios_fuentes"
+      ],
+      "confianza": "baja_comparativa",
+      "motivo": "Conservar inventario secundario: ficha documental existente o candidato ampliado, sin señal comparativa actual suficiente para superar8. Requiere contraste individual antes de ordenar toda la reserva.",
+      "orden_reserva": null
+    },
+    {
+      "id": "bogota-santaclara",
+      "nombre": "Museo Santa Clara",
+      "municipio": "Bogotá D.C.",
+      "anterior": null,
+      "propuesta_amplia": null,
+      "propuesta_hitos_acotada": null,
+      "estado": "reserva_no_borrado",
+      "evidencias": [
+        "base_sitios_fuentes"
+      ],
+      "confianza": "baja_comparativa",
+      "motivo": "Conservar inventario secundario: ficha documental existente o candidato ampliado, sin señal comparativa actual suficiente para superar8. Requiere contraste individual antes de ordenar toda la reserva.",
+      "orden_reserva": null
+    }
+  ],
+  "casos_por_resolver": [
+    "¿Zonas T/G cuentan como atractivos principales? Son demanda real, no negocios individuales; propuesta amplia las incluye. Si producto las lleva a experiencias/directorio, aplicar escenario acotado expresamente, sin ocultar esa exclusión.",
+    "El corte7–8 del escenarioacotado (Simón/Jardín) frente aSalitre/Maloka/Colpatria sigue confianza media por falta de comparables actuales. No presentar desempate como verdadestadística.",
+    "No cambiar Monserrate por puesto1 deTripadvisor: propuesta1 respaldada IDT y regla humana; ordenOro/Botero/Plaza necesita validación editorial.",
+    "Ampliar validación individual de nuevos candidatosPaloquemao/Parque93/Virgilio/MundoAventura/Quinta/SantaClara sin afirmar ya auditados exhaustivamente."
+  ],
+  "aprobacion_jardin_preservada": {
+    "archivo": "aprobacion-ilustracion-tropicario-v1.json",
+    "decision": "approved",
+    "hashes": {
+      "bogota-tropicario-v1.png": "02a4a5e7b4fa73f5d8f82d0c089d557c90c62a4bf87cbae87a482070737d485a",
+      "bogota-tropicario-v1.webp": "dc722438cc464cbccf05e5717455f2e35a557301683162038ef254ccb87d66bf"
+    },
+    "comprobacion_archivos": {
+      "bogota-tropicario-v1.png": true,
+      "bogota-tropicario-v1.webp": true
+    },
+    "independiente_de_seleccion": true,
+    "publicacion_autorizada": false
+  },
+  "mutaciones_excluidas": [
+    "sitios.json",
+    "seleccion8",
+    "paquete-preprod.zip",
+    "BD",
+    "ilustraciones/aprobaciones existentes"
+  ],
+  "verificacion": {
+    "candidatos_unicos": true,
+    "escenarios_ocho": true,
+    "archivos_aprobacion_sin_mutar": true,
+    "selection_not_mutated": true
+  }
+}
