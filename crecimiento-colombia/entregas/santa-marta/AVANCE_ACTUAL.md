@@ -11,3 +11,5 @@
 **Pendientes independientes:** fotos específicas de experiencias/directorio; referencia distinta para Ciudad Perdida como atractivo frente a su experiencia; Playa Blanca original/permiso; aplicar Top8 coordinadamente. Textos ES/EN/PT de dos candidatos nuevos ya en borrador.
 
 Cero IA, cero cambios de paquete, preprod, BD o producción. Destino incompleto.
+
+**Trabajo independiente posterior:** lote `descargar-componentes-top8-v7.py` preparado para Playa Blanca y caminata Ciudad Perdida; pendiente ejecución por coordinación e inspección. Alerta GPS contradictorio en otra foto de Playa Blanca documentada en `ALERTAS_FUENTES_VISUALES_V7.md`. No confundir estas candidatas pendientes con la portada H7-03 ya lista para elección.
