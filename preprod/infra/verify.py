@@ -32,7 +32,16 @@ try:client.open(request);raise AssertionError('Local HTTP accepted an external h
 except urllib.error.HTTPError as error:assert error.code==403
 get('/destinos/jerico/')
 admin=get('/admin/index.php')
-assert 'Sistema' in admin and 'name="password"' not in admin, 'Local administrator must open without credentials'
+settings=json.loads((ROOT/'.local/preprod/settings.json').read_text())
+if settings.get('admin_without_password') is True:
+ assert 'Sistema' in admin and 'name="password"' not in admin, 'Local administrator must open without credentials'
+else:
+ assert 'name="password"' in admin, 'Fresh local installations must require credentials'
+ token=re.search(r'name="csrf" value="([^"]+)"',admin).group(1)
+ credentials=json.loads((ROOT/'.local/preprod/admin.json').read_text())
+ data=urllib.parse.urlencode({'csrf':token,'action':'login',**credentials}).encode()
+ with client.open(BASE+'/admin/index.php',data=data,timeout=20) as response:
+  assert response.status==200 and 'Sistema' in response.read().decode()
 for path in ['/admin/index.php?tab=sistema','/admin/base-datos.php','/admin/negocios.php','/admin/contactos-negocios.php','/admin/inversionistas.php','/admin/medicion.php','/admin/campanas.php']:
  get(path)
 assert 'name="password"' in get('/negocios/acceso/'), 'Business account login must remain protected'

@@ -1,6 +1,6 @@
 # Explorando Lugares — instrucciones del repositorio
 
-- Flujo obligatorio desde el 16 de octubre de 2026: ramas de trabajo → `preprod` → revisión local y aprobación humana → producción desde el commit aprobado de `preprod` → validación de producción → merge de ese mismo commit a `main`. Leer `docs/PREPRODUCCION.md`. No desplegar directamente desde otras ramas ni integrar lugares no aprobados.
+- Flujo obligatorio desde el 16 de octubre de 2026: ramas de trabajo → `preprod` → revisión local y aprobación humana → producción desde el commit aprobado de `preprod` → validación de producción → merge de ese mismo commit a `main`. Leer `preprod/README.md` y `docs/PREPRODUCCION.md`. No desplegar directamente desde otras ramas ni integrar lugares no aprobados.
 
 - Este repositorio pertenece al negocio independiente Explorando Lugares.
 - Las URL locales y de producción deben tener las mismas rutas desde `/`; solo cambia dominio/puerto. No añadir prefijos `/v1` ni `EL_SITE_BASE` a enlaces o formularios. `ensayos/v1` es una carpeta interna, no una ruta pública. Probar el paquete preparado para hosting según `docs/ENTORNO_LOCAL.md`.

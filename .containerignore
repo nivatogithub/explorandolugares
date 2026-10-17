@@ -1,6 +1,6 @@
-# Only infrastructure is sent to the local image builder. No repository secrets/state.
+# Only the image infrastructure is sent to Podman; local state is never sent.
 *
-!infra/
-infra/*
-!infra/preprod/
-!infra/preprod/**
+!preprod/
+preprod/*
+!preprod/infra/
+!preprod/infra/**
