@@ -2,7 +2,7 @@
 
 Actualizado: 17/10/2026. Lugar 3, rama `lugar/CO/antioquia/medellin`.
 
-**Estado real:** preparando borradores y referencias separados para Plaza Botero y Metro/Metrocable; selección física vigente intacta. No hay ejecución permanente en segundo plano. Destino completo pendiente.
+**Estado real:** dos borradores y metadatos de referencias separados, guardados y validados. Descarga del lote v6 pendiente de coordinación; inspección y cierre visual de esta subtarea aún pendientes. Selección física vigente intacta. No hay proceso de red ejecutándose en este worker. No hay ejecución permanente en segundo plano. Destino completo pendiente.
 
 **Ahora:** `PROPUESTOS_TOP8_V6.json/.md` y `propuestos-top8-v6.html` tienen los dos borradores ES/EN/PT. Lote de cuatro originales `descargar-propuestos-v6.py` preparado para coordinación; descarga/inspección pendientes. No hay IA ni aprobación de uso.
 
