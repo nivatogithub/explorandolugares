@@ -1,0 +1,201 @@
+{
+  "style": "EL-SEMI-REALISTA-1",
+  "approved": false,
+  "publication": "solo_preview_local",
+  "images": [
+    {
+      "key": "portada",
+      "role": "portada",
+      "status": "propuesta_pendiente_revision_humana",
+      "source_sha256": "d40689bd76217617c9df0d7e3ac3fce6c4cc05c23e59b66966de358ea8b0b54f",
+      "reference_files": [
+        "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/worker-lugar-1/crecimiento-colombia/entregas/cartagena/imagenes/originales/la-popa-2008.jpg"
+      ],
+      "limitations": "Vista histórica 2008 derivada de fotografía real CC BY 2.0 de Norma Gòmez",
+      "files": [
+        {
+          "path": "backend/public/assets/cartagena-piloto/portada-640.webp",
+          "bytes": 68378,
+          "width": 640,
+          "height": 389,
+          "sha256": "8e0282490dcc74643024f57d33995e1470851debf2d335f1776c6684e10a54f2"
+        },
+        {
+          "path": "backend/public/assets/cartagena-piloto/portada-1200.webp",
+          "bytes": 199698,
+          "width": 1200,
+          "height": 729,
+          "sha256": "e7ceccc0e22ed9faeec26f276d382b16b57c1706accbd3ddfb38306e4ab4f19c"
+        }
+      ]
+    },
+    {
+      "key": "caminhada-patrimonial",
+      "role": "experiencia",
+      "status": "propuesta_pendiente_revision_humana",
+      "source_sha256": "e54d0cf2b5c201c9950b9f65c3caad59406b86b853a2995531d44c74ac0312a0",
+      "reference_files": [],
+      "limitations": "Composición representativa; no documenta un recinto, operador, persona o ruta reales. Realismo alto: estilo pendiente de revisión.",
+      "files": [
+        {
+          "path": "backend/public/assets/cartagena-piloto/caminhada-patrimonial-480.webp",
+          "bytes": 38046,
+          "width": 480,
+          "height": 320,
+          "sha256": "512809a057ee2cf17e15ea2e119d7652a7036bd2faa11c0b864a7b72649a326c"
+        },
+        {
+          "path": "backend/public/assets/cartagena-piloto/caminhada-patrimonial-800.webp",
+          "bytes": 90976,
+          "width": 800,
+          "height": 533,
+          "sha256": "bd5f65ce3018babb6a7cb5e6ee280c8ba84502f1bd9f62a9998edcf65c8c972c"
+        }
+      ]
+    },
+    {
+      "key": "visita-muhca",
+      "role": "experiencia",
+      "status": "propuesta_pendiente_revision_humana",
+      "source_sha256": "3806374d643654b60eb1319a2749071a4f65c1e1f37971bcaa7debc4fcdbfc69",
+      "reference_files": [],
+      "limitations": "Composición representativa; no documenta un recinto, operador, persona o ruta reales. Realismo alto: estilo pendiente de revisión.",
+      "files": [
+        {
+          "path": "backend/public/assets/cartagena-piloto/visita-muhca-480.webp",
+          "bytes": 20836,
+          "width": 480,
+          "height": 320,
+          "sha256": "468c8ade46f3bf0cc62746edffabe9b24803d9c64f5d95db0c85755fd219ce71"
+        },
+        {
+          "path": "backend/public/assets/cartagena-piloto/visita-muhca-800.webp",
+          "bytes": 46030,
+          "width": 800,
+          "height": 533,
+          "sha256": "fc988923049d9fd0055d0a62d22048b1e7e9fbc8f75c3f7ed5d7bd5c7ee8d9a8"
+        }
+      ]
+    },
+    {
+      "key": "bus-panoramico",
+      "role": "experiencia",
+      "status": "propuesta_pendiente_revision_humana",
+      "source_sha256": "2593a5964a4eb5dd5701cd93d08d55f82af7e7ce539fbb76bbcf2c1cda6cf5e6",
+      "reference_files": [],
+      "limitations": "Composición representativa; no documenta un recinto, operador, persona o ruta reales. Realismo alto: estilo pendiente de revisión.",
+      "files": [
+        {
+          "path": "backend/public/assets/cartagena-piloto/bus-panoramico-480.webp",
+          "bytes": 40866,
+          "width": 480,
+          "height": 320,
+          "sha256": "1a8208e344707cd51ebc936c55918c05bc2f01e3f0105c9b2068e5f211a9bb39"
+        },
+        {
+          "path": "backend/public/assets/cartagena-piloto/bus-panoramico-800.webp",
+          "bytes": 96238,
+          "width": 800,
+          "height": 533,
+          "sha256": "4103dcc69065e771e863754209986128aa04430dfec1cb6af11c5b8d4e025f5c"
+        }
+      ]
+    },
+    {
+      "key": "buceo-rosario",
+      "role": "experiencia",
+      "status": "propuesta_pendiente_revision_humana",
+      "source_sha256": "3ed605b058df9dd0c70a3bdae273b57c22fe2c6ea63450c485fca10717cb4d91",
+      "reference_files": [],
+      "limitations": "Composición representativa; no documenta un recinto, operador, persona o ruta reales. Realismo alto: estilo pendiente de revisión.",
+      "files": [
+        {
+          "path": "backend/public/assets/cartagena-piloto/buceo-rosario-480.webp",
+          "bytes": 41320,
+          "width": 480,
+          "height": 320,
+          "sha256": "bf35f945aa703eb34447e9f92dd3e7dee93e99e78d97fcdc28ed2499bec431cd"
+        },
+        {
+          "path": "backend/public/assets/cartagena-piloto/buceo-rosario-800.webp",
+          "bytes": 101200,
+          "width": 800,
+          "height": 533,
+          "sha256": "7445fcb8e7361db5a5572f1e2c1565a549a2b22877a00a83aa9635ec844cc666"
+        }
+      ]
+    },
+    {
+      "key": "snorkel-rosario",
+      "role": "experiencia",
+      "status": "propuesta_pendiente_revision_humana",
+      "source_sha256": "f8c9e7db805adf95752068a2e7434d56a950c69497f6aceb749f48050aeb246c",
+      "reference_files": [],
+      "limitations": "Composición representativa; no documenta un recinto, operador, persona o ruta reales. Realismo alto: estilo pendiente de revisión.",
+      "files": [
+        {
+          "path": "backend/public/assets/cartagena-piloto/snorkel-rosario-480.webp",
+          "bytes": 40474,
+          "width": 480,
+          "height": 320,
+          "sha256": "3441cbbb9f77edcbd80e674f17f36aa09400719a9d7c42e04069b766f3321c90"
+        },
+        {
+          "path": "backend/public/assets/cartagena-piloto/snorkel-rosario-800.webp",
+          "bytes": 98594,
+          "width": 800,
+          "height": 533,
+          "sha256": "c858797ddb39a16fcd14ad03ce34c7e8b82159ff03cb96a6ae64c96facd829c3"
+        }
+      ]
+    },
+    {
+      "key": "catamaran-cartagena",
+      "role": "experiencia",
+      "status": "propuesta_pendiente_revision_humana",
+      "source_sha256": "79016d4e624e5d0d92ea2d355297f8ca91d0aa5f73321e02ae0bf044d2980f93",
+      "reference_files": [],
+      "limitations": "Composición representativa; no documenta un recinto, operador, persona o ruta reales. Realismo alto: estilo pendiente de revisión.",
+      "files": [
+        {
+          "path": "backend/public/assets/cartagena-piloto/catamaran-cartagena-480.webp",
+          "bytes": 30234,
+          "width": 480,
+          "height": 320,
+          "sha256": "ca18627f394368087a30516511e9c35208173e5410ebe2ba092aad9e31d51dad"
+        },
+        {
+          "path": "backend/public/assets/cartagena-piloto/catamaran-cartagena-800.webp",
+          "bytes": 73022,
+          "width": 800,
+          "height": 533,
+          "sha256": "0a00cd74ab4da218a9b19400e01d0c71ab7d2d6fa386fb3c679d830f198c1189"
+        }
+      ]
+    },
+    {
+      "key": "pesca-boquilla",
+      "role": "experiencia",
+      "status": "propuesta_pendiente_revision_humana",
+      "source_sha256": "5a35adbe8f534c566d2c61d03d31034ebddbc8bda5b070e2ac45297edd48dda1",
+      "reference_files": [],
+      "limitations": "Composición representativa; no documenta un recinto, operador, persona o ruta reales. Realismo alto: estilo pendiente de revisión.",
+      "files": [
+        {
+          "path": "backend/public/assets/cartagena-piloto/pesca-boquilla-480.webp",
+          "bytes": 46794,
+          "width": 480,
+          "height": 320,
+          "sha256": "6b944c228d730e6602bb6f52cd252cc102af84dcb48375f9adbec6f520355135"
+        },
+        {
+          "path": "backend/public/assets/cartagena-piloto/pesca-boquilla-800.webp",
+          "bytes": 109438,
+          "width": 800,
+          "height": 533,
+          "sha256": "b7f4a77411ea8bc69016775b177dc634782003a5a6b3acf58e30087e0f2ad203"
+        }
+      ]
+    }
+  ]
+}
