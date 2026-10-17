@@ -32,3 +32,7 @@ Subtarea concluida: AUDITORIA_TOP8.json y AUDITORIA_TOP8.md documentan31candidat
 ## Integración local Jardín aprobada · 2026-10-17
 
 Paqueteavance generado y leído por validador PHP real:8tarjetas/9imágenes; cambia solo imagen/metadataJardín manteniendo orden/textos/otrosactivos. Archivo paquete-avance-jardin-aprobado.zip; informe reporte-avance-jardin-aprobado.json. Sin importarBD. Conserva WebPaprobado358534bytes yhash, no cumpleobjetivo300KB; no recodificado para mantenerexacto. Propuestas2fachadasMuseoNacional yMalokaactividad enrevision-v5/candidatas.json; lote descargas delegado y pendienteinspección. TextosMuseoNacionalES/EN/PT preparados aparte, no selecciónautomática.
+
+## Lote visual v5 concluido · 2026-10-17
+
+Tres originales descargados e inspeccionados con recortes. Aptas para elección por uso declarado: Nacional1 vista elevada parcial y Maloka1 exterior histórico; Nacional2 detalle queda secundaria. Ver revision-v5/revision.html y qa-recortes.jpg. Manifest autor/licencia/hash/dimensiones en candidatas.json; derivados WebP menores300KB. Ninguna aprobación ni ingreso de Nacional al TOP8. Pendientes escenas específicas de actividades/directorio, decisión editorial TOP8 y demás revisiones. No hay descarga o permiso pendiente en este lote.
