@@ -1,0 +1,42 @@
+{
+  "component_id": null,
+  "role": null,
+  "subject_exact": null,
+  "recognizable_features_required": [],
+  "factual_sources": [],
+  "research_checked_at": null,
+  "photo": {
+    "source_page": null,
+    "download_url": null,
+    "author": null,
+    "license": null,
+    "license_url": null,
+    "commercial_use_verified": false,
+    "adaptation_verified": false,
+    "additional_rights_review": null,
+    "capture_date": null,
+    "full_original_downloaded": false,
+    "local_path": null,
+    "sha256": null,
+    "width": null,
+    "height": null
+  },
+  "visual_review": {
+    "full_image_inspected": false,
+    "desktop_crop_inspected": false,
+    "mobile_crop_inspected": false,
+    "recognizable_without_title": false,
+    "generic_image": false,
+    "evidence": null,
+    "decision": "pending",
+    "reason": null
+  },
+  "human_original_approval": {
+    "approved": false,
+    "sha256": null
+  },
+  "ai_final": {
+    "generated": false,
+    "approved": false
+  }
+}
