@@ -29,3 +29,7 @@ Ajuste de revisión visual: las descripciones públicas de centro histórico y T
 ## Verificación coordinador 17/10/2026
 
 Avance importado únicamente en preproducción local. Ocho tarjetas, portada e imagen de historia distintas; ES/EN/PT-BR, archivos HTTP y hashes comprobados. Revisión visual en navegador interno: botón Cargar más lugares muestra las ocho tarjetas y sus imágenes decodificadas. Fotografías provisionales, sin aprobación editorial ni producción. Ver reporte-preprod.json y verificacion-preprod-v4.json.
+
+## Portada urbana v5 · 17/10/2026
+
+Sustituida referencia de El Morro por toma aérea del Camellón y frente urbano de Santa Marta, fotografía de Giancarlos1234 de enero de 2022, CC BY-SA 4.0. Original completo conservado; WebP técnico, sin IA ni aprobación inferida. Importada solo en preproducción y verificada en ES/EN/PT-BR con ocho atractivos e historia independientes. Evidencia: verificacion-preprod-v5.json y evidencias-v4/portada-camellon-v5-preprod.png.
