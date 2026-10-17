@@ -31,15 +31,11 @@ request=urllib.request.Request(BASE+'/api/medicion.php',headers={'Host':'externa
 try:client.open(request);raise AssertionError('Local HTTP accepted an external host')
 except urllib.error.HTTPError as error:assert error.code==403
 get('/destinos/jerico/')
-login=get('/admin/index.php')
-token=re.search(r'name="csrf" value="([^"]+)"',login).group(1)
-credentials=json.loads((ROOT/'.local/preprod/admin.json').read_text())
-data=urllib.parse.urlencode({'csrf':token,'action':'login',**credentials}).encode()
-with client.open(BASE+'/admin/index.php',data=data,timeout=20) as response:
- assert response.status==200
- assert 'Sistema' in response.read().decode()
+admin=get('/admin/index.php')
+assert 'Sistema' in admin and 'name="password"' not in admin, 'Local administrator must open without credentials'
 for path in ['/admin/index.php?tab=sistema','/admin/base-datos.php','/admin/negocios.php','/admin/contactos-negocios.php','/admin/inversionistas.php','/admin/medicion.php','/admin/campanas.php']:
  get(path)
+assert 'name="password"' in get('/negocios/acceso/'), 'Business account login must remain protected'
 report={'origin':BASE,'checks':'public tabs, aggregate audience, geographic denominator, private drafts, Jerico, consent availability, local admin and seven admin pages','success':True,'production_accessed':False}
 (ROOT/'.local/preprod/verification.json').write_text(json.dumps(report,indent=2)+'\n')
 print('OK: public and authenticated local smoke checks. No production access or external sends.')
