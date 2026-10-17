@@ -187,7 +187,7 @@
       "identity_factual_urls": [
         "https://jbb.gov.co/servicios/tropicario-circuito-de-invernaderos/"
       ],
-      "aprobado": false,
+      "aprobado": true,
       "inspeccion_original": "inspeccionado_visualmente_2026-10-17",
       "inspeccion_recortes": {
         "metodo": "simulacion_cover_center_sin_navegador",
@@ -202,7 +202,7 @@
         "evidencia": "qa-jardin-recortes.jpg",
         "resultado": "Domos principales reconocibles en ambos recortes; opción 2 más clara. Los domos periféricos se recortan parcialmente; conservar encuadre completo para generación."
       },
-      "estado": "apta_para_eleccion_de_referencia_pendiente_aprobacion",
+      "estado": "referencia_aprobada_identidad_verificada_generacion_autorizada",
       "via_IA_propuesta": "transformacion_autorizada_condicionada",
       "condiciones_IA": [
         "Licencia permite uso comercial/adaptación del recurso concreto.",
@@ -218,7 +218,8 @@
       ],
       "bytes": 623590,
       "observacion_visual": "Vista elevada, varios domos completos, arquitectura reconocible y caminos.",
-      "recomendacion": "preferida_para_revision"
+      "recomendacion": "preferida_para_revision",
+      "approval_evidence": "../aprobacion-jardin-tropicario-v1.json"
     },
     {
       "id": "simon-1",
