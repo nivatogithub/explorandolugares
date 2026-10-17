@@ -8,6 +8,6 @@
 
 **Siguiente revisión:** Tayrona SM-T6-01 ya presentado por coordinador, pendiente de decisión; alternativa SM-T6-03. Elegir original solo autoriza el componente expresamente indicado, no el destino completo ni publicación.
 
-**Ahora:** obtener e inspeccionar video aéreo Pexels 31559774 para evaluar fotogramas de portada, mediante `descargar-video-portada-v6.py`. No se promete que cumpla antes de verlo.
+**Ahora:** MP4 Pexels31559774 descargado y hash validado. Extracción AVFoundation compiló, pero decodificador fue bloqueado en sandbox (Cannot Decode -11821/-12911); coordinador tiene comando preciso. CaféE07 inspeccionado como paisaje de fincasMinca, útil solo de contexto; falta foto de proceso/visita. `pendientes-visuales-v6.json` identifica la siguiente acción por componente. Se sigue trabajando sobre pendientes independientes; aún no se ha visto el video ni se promete que cumpla.
 
 **Pendientes:** portada convincente, foto café específica, buceo/caminata/velero mejor compuestos, fotos directorio y aprobación individual. Cero ilustraciones IA generadas y cero cambios v6 en preprod/producción. No se ha declarado destino terminado.
