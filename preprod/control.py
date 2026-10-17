@@ -49,6 +49,18 @@ def main():
  with (STATE/'prepare.log').open('w') as log:
   run(sys.executable,'scripts/preparar-hosting.py','--output',str(release),stdout=log,stderr=subprocess.STDOUT)
  shutil.copyfile(ROOT/'preprod/infra/runtime.php',release/'public/__preprod-runtime.php')
+ # Recovery and its private mailbox exist only in the local release.
+ shutil.copyfile(ROOT/'preprod/infra/recover.php',release/'public/business/recover.php')
+ shutil.copyfile(ROOT/'preprod/infra/mailbox.php',release/'public/admin/buzon-local.php')
+ login=release/'public/business/login.php'
+ text=login.read_text().replace('Si olvidaste tu contraseña, contacta al equipo para que te envíe un enlace temporal de recuperación. Por ahora el envío del enlace es manual.','<a href="/negocios/recuperar-clave/">Olvidé mi contraseña</a> · Preproducción: correo en el buzón local.')
+ login.write_text(text)
+ htaccess=release/'public/.htaccess'
+ text=htaccess.read_text().replace('RewriteEngine On','RewriteEngine On\nRewriteRule ^negocios/recuperar-clave/?$ business/recover.php [L,QSA]',1)
+ htaccess.write_text(text)
+ navigation=release/'public/admin/_navigation.php'
+ navigation.write_text(navigation.read_text().replace('<section><h2>Sistema</h2>','<section><h2>Sistema</h2><a href="buzon-local.php">Buzón local de pruebas</a>'))
+
  # This access bypass exists only in the local build, never in hosting sources.
  bootstrap=release/'app/bootstrap.php';source=bootstrap.read_text()
  anchor="    session_start();\n    $_SESSION['csrf'] ??= bin2hex(random_bytes(32));"

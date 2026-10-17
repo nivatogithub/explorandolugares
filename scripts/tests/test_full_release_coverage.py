@@ -32,6 +32,8 @@ class FullReleaseCoverageTests(unittest.TestCase):
                                 text=versions.stamp(text,asset,versions.digest(location))
                             expected=text.encode()
                         self.assertEqual(packaged.get(relative), hashlib.sha256(expected).hexdigest(), relative)
+            self.assertNotIn('public/business/recover.php', packaged)
+            self.assertNotIn('public/admin/buzon-local.php', packaged)
             self.assertFalse(any('preprod' in name.lower() for name in packaged), 'Local preprod tools/access must never enter production')
             for file in Path(folder).rglob('*.php'):
                 self.assertNotIn('/usr/local/lib/preprod-admin-access.php', file.read_text(), str(file))

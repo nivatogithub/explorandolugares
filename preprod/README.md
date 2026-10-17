@@ -113,3 +113,25 @@ Ninguno de los comandos de esta carpeta despliega a GoDaddy, hace push, modifica
 - Podman no disponible o emulación ausente: completar la instalación/configuración del equipo antes de construir.
 - Error durante la primera construcción: corregirlo y repetir `reconstruir.sh`; las capas completas se reutilizan.
 - Eliminar imágenes, volúmenes o `.local` no es necesario para un reinicio. No hacerlo como reparación rutinaria.
+
+## Probar cuentas empresariales y recuperación
+
+En la configuración local inicial están habilitados `business_accounts_enabled` y `registration_enabled`. El portal empresarial conserva autenticación propia aunque administración local esté sin contraseña.
+
+- Crear cuenta y solicitar un negocio nuevo: `http://127.0.0.1:8088/negocios/registro/`. Buscar el negocio y elegir **Mi negocio no aparece**. La cuenta se crea desde el sitio público; la ficha requiere revisión y aprobación antes de asociarse/publicarse. Usar únicamente documentos ficticios de prueba.
+- Iniciar sesión: `http://127.0.0.1:8088/negocios/acceso/`.
+- Portal y cierre de sesión: `http://127.0.0.1:8088/negocios/portal/`.
+- Solicitar recuperación: `http://127.0.0.1:8088/negocios/recuperar-clave/`.
+- Leer el correo simulado: `http://127.0.0.1:8088/admin/buzon-local.php`, también accesible desde el menú local de Sistema. Requiere acceso administrativo local.
+
+La recuperación usa el servicio existente: enlace de un solo uso que vence a las 24 horas; la base guarda únicamente su hash. El token completo está en el mensaje local para poder probar el flujo. El buzón conserva los últimos 50 mensajes en `.local/preprod/private/mailbox.json`, fuera de Git y de la raíz pública. No compartir ese archivo ni capturas de sus enlaces. El formulario responde igual para correos existentes e inexistentes, y limita solicitudes.
+
+`recover.php`, `buzon-local.php`, sus enlaces y la ruta se añaden **solo al paquete local** desde `preprod/infra/`. Exigen entorno local, configuración de prueba y host loopback. No se incluyen en el paquete de producción. No se envía correo real ni se necesita SMTP. La recuperación pública con entrega real de correo sigue pendiente para producción. Google/Microsoft y otras identidades externas no se habilitan sin configurar sus proveedores.
+
+Comprobación automática:
+
+```sh
+python3 preprod/probar-cuentas.py
+```
+
+Crea una cuenta ficticia temporal, prueba recuperación, contraseña de un solo uso, login y logout, y retira únicamente sus propios datos al terminar. La creación pública de cuenta/solicitud y su revisión se comprueban además en `backend/tests/admin-pages.integration.py` con base desechable. No se crea ni publica un negocio real durante esas pruebas.
