@@ -2,14 +2,29 @@
 declare(strict_types=1);
 require_once __DIR__.'/AccountProfileService.php';
 require_once __DIR__.'/AccountAuthorization.php';
+require_once __DIR__.'/BusinessOnboardingDetails.php';
 
 final class BusinessAccountPortalService
 {
     public function __construct(private PDO $pdo) {}
 
+    public function registerTraveler(string $name,string $email,string $password,string $confirmation,bool $consent): int
+    {
+        $name=trim($name);$email=strtolower(trim($email));
+        if(strlen($name)<2||strlen($name)>180)throw new RuntimeException('Escribe tu nombre, entre 2 y 180 caracteres.');
+        if(!filter_var($email,FILTER_VALIDATE_EMAIL)||strlen($email)>254)throw new RuntimeException('Escribe un correo válido.');
+        if($password!==$confirmation)throw new RuntimeException('Las contraseñas no coinciden.');
+        if(strlen($password)<12||strlen($password)>200||!preg_match('/[A-Za-z]/',$password)||!preg_match('/[0-9]/',$password))throw new RuntimeException('Usa entre 12 y 200 caracteres, con letras y números.');
+        if(!$consent)throw new RuntimeException('Acepta el tratamiento de datos para crear tu cuenta.');
+        if(!throttle('traveler_register',5,3600,$email))throw new RuntimeException('Demasiados intentos de registro.');
+        $q=$this->pdo->prepare('INSERT INTO accounts(public_id,account_type,display_name,email,password_hash,status) VALUES(?,"traveler",?,?,?,"active")');
+        $this->pdo->beginTransaction();
+        try{$q->execute([$this->uuid(),$name,$email,password_hash($password,PASSWORD_DEFAULT)]);$id=(int)$this->pdo->lastInsertId();$this->pdo->prepare('INSERT INTO account_consents(account_id,consent_version) VALUES(?,"traveler-registration-v1")')->execute([$id]);$this->pdo->commit();return $id;}catch(Throwable $e){if($this->pdo->inTransaction())$this->pdo->rollBack();throw $e;}
+    }
+
     public function registrationDestinations(): array
     {
-        return $this->pdo->query('SELECT d.id,t.display_name FROM destinations d JOIN destination_translations t ON t.destination_id=d.id AND t.locale="es" WHERE d.publication_status="published" ORDER BY d.display_order,t.display_name')->fetchAll(PDO::FETCH_ASSOC);
+        return $this->pdo->query('SELECT d.id,d.latitude,d.longitude,d.department,d.country_code,d.destination_type,t.display_name FROM destinations d JOIN destination_translations t ON t.destination_id=d.id AND t.locale="es" WHERE d.publication_status="published" ORDER BY d.display_order,t.display_name')->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function registrationCategories(int $destinationId): array
@@ -21,11 +36,11 @@ final class BusinessAccountPortalService
     public function searchRegistrationBusinesses(int $destinationId,string $category,string $term): array
     {
         $term=trim($term);if($destinationId<1||$category===''||strlen($term)<2)return [];
-        $query=$this->pdo->prepare('SELECT b.id,t.display_name,b.claim_status,b.information_status FROM businesses b JOIN business_translations t ON t.business_id=b.id AND t.locale="es" JOIN destinations d ON d.id=b.destination_id WHERE b.destination_id=? AND b.category_code=? AND d.publication_status="published" AND b.operation_status<>"CERRADO_DEFINITIVO" AND t.display_name LIKE ? ORDER BY t.display_name LIMIT 20');
-        $query->execute([$destinationId,$category,'%'.str_replace(['%','_'],'',$term).'%']);return array_map(static function(array $row):array{$row['can_request']=$row['claim_status']==='NO_RECLAMADO';unset($row['claim_status'],$row['information_status']);return $row;},$query->fetchAll(PDO::FETCH_ASSOC));
+        $query=$this->pdo->prepare('SELECT b.id,t.display_name,b.claim_status,b.information_status FROM businesses b JOIN business_translations t ON t.business_id=b.id AND t.locale="es" JOIN destinations d ON d.id=b.destination_id WHERE b.destination_id=? AND (b.category_code=? OR EXISTS(SELECT 1 FROM business_categories bc WHERE bc.business_id=b.id AND bc.category_code=?)) AND d.publication_status="published" AND b.operation_status<>"CERRADO_DEFINITIVO" AND t.display_name LIKE ? ORDER BY t.display_name LIMIT 20');
+        $query->execute([$destinationId,$category,$category,'%'.str_replace(['%','_'],'',$term).'%']);return array_map(static function(array $row):array{$row['can_request']=$row['claim_status']==='NO_RECLAMADO';unset($row['claim_status'],$row['information_status']);return $row;},$query->fetchAll(PDO::FETCH_ASSOC));
     }
 
-    public function register(string $name, string $email, string $password, array $application, array $evidenceUploads=[], ?string $evidenceStorage=null): int
+    public function register(string $name, string $email, string $password, array $application, array $evidenceUploads=[], ?string $evidenceStorage=null,mixed $referenceUploads=null,?string $referenceStorage=null): int
     {
         $name=trim($name);$email=strtolower(trim($email));
         if(strlen($name)<2||strlen($name)>180)throw new RuntimeException('Escribe tu nombre o el de la persona responsable.');
@@ -53,6 +68,10 @@ final class BusinessAccountPortalService
             foreach($requiredEvidence as $type){$this->validateEvidenceUpload($evidenceUploads[$type]??[]);}
             if(!is_dir($evidenceStorage)&&!mkdir($evidenceStorage,0700,true)&&!is_dir($evidenceStorage))throw new RuntimeException('No se pudo preparar el almacenamiento privado de documentos.');
         }
+        if($type==='new_business'){
+            $duplicate=$this->pdo->prepare('SELECT b.id FROM businesses b JOIN business_translations t ON t.business_id=b.id AND t.locale="es" WHERE b.destination_id=? AND LOWER(TRIM(t.display_name))=LOWER(?) LIMIT 1');$duplicate->execute([$destinationId,$businessName]);
+            if($duplicate->fetchColumn())throw new RuntimeException('Ese negocio ya está registrado en este lugar. Búscalo y solicita asociarlo a tu cuenta.');
+        }
         $storedFiles=[];
         $this->pdo->beginTransaction();
         try{
@@ -69,6 +88,8 @@ final class BusinessAccountPortalService
             $insert=$this->pdo->prepare('INSERT INTO business_account_applications(account_id,application_type,business_id,destination_id,category_code,business_name,relationship_code,contact_phone,message,consent_version,status) VALUES(?,?,?,?,?,?,?,?,?,? ,"pending")');
             $insert->execute([$accountId,$type==='existing_business'?'claim_existing':'request_new',$type==='existing_business'?$businessId:null,$destinationId,$category,$businessName,$relationship,$phone,$message,'business-account-onboarding-v1']);
             $applicationId=(int)$this->pdo->lastInsertId();
+            if($referenceUploads&&$referenceStorage)(new BusinessAdminService($this->pdo,$referenceStorage))->storeApplicationReferences($applicationId,$referenceUploads,$storedFiles);
+            if(!empty($application['business_details']))$this->pdo->prepare('UPDATE business_account_applications SET business_details_json=? WHERE id=?')->execute([json_encode($application['business_details'],JSON_THROW_ON_ERROR|JSON_UNESCAPED_UNICODE),$applicationId]);
             $profile=new AccountProfileService($this->pdo);
             if($profile->ready())$profile->initializePhone($accountId,$phone);
             if($uploadsPresent){
@@ -91,14 +112,14 @@ final class BusinessAccountPortalService
         if(!throttle('business_account_login',10,900,$email))throw new RuntimeException('Demasiados intentos. Inténtalo más tarde.');
         $stmt=$this->pdo->prepare('SELECT id,public_id,account_type,display_name,email,password_hash,status FROM accounts WHERE email=?');
         $stmt->execute([$email]);$account=$stmt->fetch(PDO::FETCH_ASSOC);
-        if(!$account||($account['account_type']!=='business'&&!AccountAuthorization::isAdmin($this->pdo,(int)$account['id']))||$account['status']!=='active'||!$account['password_hash']||!password_verify($password,$account['password_hash']))throw new RuntimeException('Correo o contraseña incorrectos.');
+        if(!$account||!in_array($account['account_type'],['business','traveler'],true)||$account['status']!=='active'||!$account['password_hash']||!password_verify($password,$account['password_hash']))throw new RuntimeException('Correo o contraseña incorrectos.');
         if(password_needs_rehash($account['password_hash'],PASSWORD_DEFAULT)){$this->pdo->prepare('UPDATE accounts SET password_hash=?,updated_at=CURRENT_TIMESTAMP WHERE id=?')->execute([password_hash($password,PASSWORD_DEFAULT),$account['id']]);}
         unset($account['password_hash']);return $account;
     }
 
     public function current(int $id): ?array
     {
-        $stmt=$this->pdo->prepare('SELECT id,public_id,display_name,email,status,email_verified_at FROM accounts WHERE id=? AND status="active" AND (account_type="business" OR EXISTS(SELECT 1 FROM account_roles r WHERE r.account_id=accounts.id AND r.role="administrator"))');
+        $stmt=$this->pdo->prepare('SELECT id,public_id,account_type,display_name,email,status,email_verified_at FROM accounts WHERE id=? AND status="active" AND account_type IN ("business","traveler")');
         $stmt->execute([$id]);$row=$stmt->fetch(PDO::FETCH_ASSOC);return $row?:null;
     }
 
@@ -174,6 +195,8 @@ final class BusinessAccountPortalService
                     $translation=$this->pdo->prepare('INSERT INTO business_translations(business_id,locale,display_name,summary,description) VALUES(?,?,?,?,?)');
                     $translation->execute([$businessId,'es',$row['business_name'],'','']);
                     $this->pdo->prepare('UPDATE business_account_applications SET business_id=? WHERE id=?')->execute([$businessId,$id]);
+                    BusinessOnboardingDetails::apply($this->pdo,$businessId,$row['category_code'],json_decode($row['business_details_json']??'{}',true,32,JSON_THROW_ON_ERROR));
+                    if(!empty($row['business_details_json']))$this->pdo->prepare('INSERT INTO business_image_references(business_id,storage_name,original_name,mime_type,file_size,width,height) SELECT ?,storage_name,original_name,mime_type,file_size,width,height FROM business_application_images WHERE application_id=?')->execute([$businessId,$id]);
                 }else throw new RuntimeException('El tipo de solicitud no se puede aprobar.');
 
                 $role=$row['relationship_code']==='owner'?'owner':'manager';

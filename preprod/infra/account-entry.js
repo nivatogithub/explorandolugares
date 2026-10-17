@@ -2,19 +2,10 @@
   'use strict';
   const header = document.querySelector('header');
   if (!header || document.querySelector('.preprod-account-entry')) return;
-  const languages = header.querySelector('.language-switch');
-  if (!languages) return;
   const locale = document.documentElement.lang.startsWith('pt') ? 'pt-br' : document.documentElement.lang.startsWith('en') ? 'en' : 'es';
-  const copy = {es: ['Iniciar sesión', 'Cerrar sesión', 'Mi cuenta', 'Cuenta de negocio'], en: ['Sign in', 'Sign out', 'My account', 'Business account'], 'pt-br': ['Iniciar sessão', 'Sair', 'Minha conta', 'Conta comercial']}[locale];
-  const column = document.createElement('div');
-  column.className = 'preprod-account-column';
-  languages.before(column);
-  column.append(languages);
-  const bar = document.createElement('div');
-  bar.setAttribute('role', 'group');
-  bar.className = 'preprod-account-entry';
-  bar.setAttribute('aria-label', copy[3]);
-  column.append(bar);
+  const copy = {es: ['Iniciar sesión', 'Cerrar sesión', 'Mi cuenta', 'Tu cuenta'], en: ['Sign in', 'Sign out', 'My account', 'Your account'], 'pt-br': ['Iniciar sessão', 'Sair', 'Minha conta', 'Sua conta']}[locale];
+  const strip = document.createElement('div');strip.className='portal-account-strip';strip.setAttribute('aria-label',copy[3]);
+  const bar = document.createElement('div');bar.className='portal-account-strip-inner preprod-account-entry';strip.append(bar);header.before(strip);
   const modalCopy = {es: ['Correo electrónico','Contraseña','Entrar','Olvidé mi contraseña','¿No tienes cuenta?','Crear cuenta','Cerrar','Preparando acceso…','No se pudo iniciar sesión. Inténtalo de nuevo.'],en: ['Email','Password','Sign in','Forgot password?','No account yet?','Create account','Close','Preparing sign-in…','Unable to sign in. Please try again.'],'pt-br': ['E-mail','Senha','Entrar','Esqueceu sua senha?','Ainda não tem conta?','Cadastre-se','Fechar','Preparando acesso…','Não foi possível entrar. Tente novamente.']}[locale];
   async function showLogin(trigger) {
     if (document.querySelector('.preprod-login-dialog')) return;

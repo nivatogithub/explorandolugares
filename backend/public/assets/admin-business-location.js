@@ -2,7 +2,7 @@
   const $ = (id) => document.getElementById(id);
   const address = $('business-address');
   const reference = $('business-location-reference');
-  const destination = $('business-destination');
+  const destination = $('business-destination') || $('registration-destination');
   const open = $('business-map-open');
   const dialog = $('business-map-dialog');
   const close = $('business-map-close');

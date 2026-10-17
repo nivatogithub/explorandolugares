@@ -25,7 +25,7 @@ DB.execute('PRAGMA foreign_keys=ON')
 DB.executescript((ROOT / 'backend/database/sqlite.sql').read_text())
 DB.executescript((ROOT / 'backend/database/destinations.sqlite.sql').read_text())
 DB.executescript((ROOT / 'backend/database/migrations/006-poi-experience-links.sqlite.sql').read_text())
-for number in range(8, 34):
+for number in range(8, 35):
     matches = list((ROOT / 'backend/database/migrations').glob(f'{number:03d}-*.sqlite.sql'))
     assert len(matches) == 1, f'Migración SQLite faltante o ambigua: {number:03d}'
     DB.executescript(matches[0].read_text())
@@ -477,8 +477,8 @@ try:
     save_config()
     business_cookies = http.cookiejar.CookieJar()
     business_user = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(business_cookies))
-    status, body, _ = request('/business/register.php', opener=business_user)
-    check(status == 200 and 'Vincula tu negocio a una cuenta' in body and 'name="csrf"' in body, f'El registro empresarial privado no abrió: {status} {body[:300]}')
+    status, body, _ = request('/business/register.php?tipo=business', opener=business_user)
+    check(status == 200 and 'Crea tu cuenta de negocio' in body and 'name="csrf"' in body, f'El registro empresarial privado no abrió: {status} {body[:300]}')
     registration_csrf = __import__('re').search(r'name="csrf" value="([^"]+)"', body).group(1)
     class NoBusinessRedirect(urllib.request.HTTPRedirectHandler):
         def redirect_request(self, req, fp, code, msg, headers, newurl):
@@ -487,16 +487,20 @@ try:
     registration_fields = {
         'csrf': registration_csrf, 'application_type': 'new_business', 'business_id': '',
         'business_name': 'Cafetería de cuenta HTTP', 'destination_id': destination_id,
+        'address_text':'Dirección de prueba privada','latitude':'5.79','longitude':'-75.78','summary':'Presentación enviada por el negocio','description':'Descripción privada de prueba','channels[email]':'negocio@example.invalid', 'category_codes[]':'hospedaje',
         'category_code': 'hospedaje', 'display_name': 'Responsable HTTP',
         'email': 'responsable-http@example.invalid', 'phone': '3230000000',
         'relationship_code': 'owner', 'message': 'Adjuntaré matrícula y RUT para validar el negocio.',
         'password': 'ClaveFuerteDePrueba123', 'password_confirm': 'ClaveFuerteDePrueba123', 'consent': '1',
     }
+    import struct,zlib
+    def png_chunk(tag,payload):return struct.pack('!I',len(payload))+tag+payload+struct.pack('!I',zlib.crc32(tag+payload)&0xffffffff)
+    reference_png=b'\x89PNG\r\n\x1a\n'+png_chunk(b'IHDR',struct.pack('!2I5B',240,160,8,2,0,0,0))+png_chunk(b'IDAT',zlib.compress((b'\x00'+b'\xa0\x80\x60'*240)*160))+png_chunk(b'IEND',b'')
     registration_png = base64.b64decode('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aZ1sAAAAASUVORK5CYII=')
     incomplete_fields = dict(registration_fields, email='sin-documentos-http@example.invalid')
     status, body, _ = request('/business/register.php', incomplete_fields, business_flow)
     check(status == 400 and 'Adjunta los documentos obligatorios' in body and DB.execute("SELECT COUNT(*) FROM accounts WHERE email='sin-documentos-http@example.invalid'").fetchone()[0] == 0, 'El registro aceptó una cuenta sin documentos de identidad y del negocio.')
-    status, _, headers = multipart('/business/register.php', registration_fields, [('identity_document', 'identidad.png', 'image/png', registration_png), ('business_registration', 'registro.png', 'image/png', registration_png)], business_flow)
+    status, _, headers = multipart('/business/register.php', registration_fields, [('identity_document', 'identidad.png', 'image/png', registration_png), ('business_registration', 'registro.png', 'image/png', registration_png),('reference_images[]','foto.png','image/png',reference_png)], business_flow)
     check(status == 303, f'El registro web no creó la cuenta y redirigió al tablero: {status}')
     status, body, _ = request('/business/dashboard.php?solicitud=recibida', opener=business_user)
     check(status == 200 and 'Cuenta creada y solicitud recibida' in body and 'Cafetería de cuenta HTTP' in body, f'El registro web no terminó en el estado de solicitud esperado: {status} {body[:500]}')
@@ -533,7 +537,11 @@ try:
     status, body, _ = request('/admin/solicitudes-cuenta.php', review_fields, ADMIN)
     check(status == 200 and 'Se actualizó el estado de la solicitud' in body, 'La administración no pudo aprobar la solicitud web real.')
     approved = DB.execute('SELECT r.status,r.business_id,b.publication_status,b.claim_status,m.account_id FROM business_account_applications r JOIN businesses b ON b.id=r.business_id JOIN business_account_memberships m ON m.business_id=b.id WHERE r.id=?', (application_row['id'],)).fetchone()
+    check(DB.execute('SELECT COUNT(*) FROM business_image_references WHERE business_id=?',(approved['business_id'],)).fetchone()[0]==1,'Las fotos privadas de la solicitud no se conservaron al aprobar.')
     check(approved and approved['status']=='approved' and approved['publication_status']=='draft' and approved['claim_status']=='RECLAMADO' and approved['account_id']==account_row['id'], 'La aprobación no creó el borrador privado y la membresía esperados.')
+    check(DB.execute('SELECT address_text FROM businesses WHERE id=?',(approved['business_id'],)).fetchone()[0]=='Dirección de prueba privada','Se perdieron los datos de ubicación al aprobar.')
+    check(DB.execute('SELECT description FROM business_translations WHERE business_id=? AND locale="es"',(approved['business_id'],)).fetchone()[0]=='Descripción privada de prueba','Se perdió la descripción enviada.')
+    check(tuple(DB.execute('SELECT contact_value,is_public FROM business_contacts WHERE business_id=?',(approved['business_id'],)).fetchone())==('negocio@example.invalid',0),'El canal debe conservarse privado.')
     status, body, _ = request('/business/dashboard.php', opener=business_user)
     check(status == 200 and 'Cafetería de cuenta HTTP' in body and 'draft' in body, 'El tablero no reflejó el negocio asociado después de la aprobación.')
     own_public_id = DB.execute('SELECT public_id FROM businesses WHERE id=?', (approved['business_id'],)).fetchone()[0]
@@ -711,6 +719,21 @@ try:
     finally:
         broken_proc.terminate(); broken_proc.wait(timeout=5)
 
+    traveler_user=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
+    status,choice,_=request('/business/register.php',opener=traveler_user)
+    check(status==200 and 'Viajero o turista' in choice and 'Reclama un negocio' in choice,'Falta la elección de tipo de cuenta.')
+    status,traveler_html,_=request('/business/register.php?tipo=traveler',opener=traveler_user)
+    traveler_csrf=re.search(r'name="csrf" value="([^"]+)"',traveler_html)[1]
+    traveler_fields={'csrf':traveler_csrf,'account_type':'traveler','display_name':'Viajera de prueba','email':'viajera-http@example.invalid','password':'ViajeraTestPassword123','password_confirm':'ViajeraTestPassword123','consent':'1','role':'administrator'}
+    status,_,_=request('/business/register.php',traveler_fields,traveler_user)
+    check(status==200,'No se creó la cuenta viajera.')
+    traveler_row=DB.execute("SELECT id,account_type FROM accounts WHERE email='viajera-http@example.invalid'").fetchone()
+    check(traveler_row and traveler_row['account_type']=='traveler','El registro no conservó el tipo viajero.')
+    check(DB.execute('SELECT COUNT(*) FROM account_roles WHERE account_id=?',(traveler_row['id'],)).fetchone()[0]==0,'El registro público permitió elevar permisos.')
+    check(DB.execute('SELECT COUNT(*) FROM business_account_applications WHERE account_id=?',(traveler_row['id'],)).fetchone()[0]==0,'Un viajero no debe generar solicitudes de negocio.')
+    check(DB.execute('SELECT COUNT(*) FROM account_consents WHERE account_id=?',(traveler_row['id'],)).fetchone()[0]==1,'Falta el consentimiento de la cuenta viajera.')
+    check(request('/admin/usuarios.php',opener=traveler_user)[0]==403,'La cuenta viajera obtuvo acceso al panel.')
+    check('Ya tienes una cuenta de viajero' in request('/business/dashboard.php',opener=traveler_user)[1],'El viajero recibió el tablero comercial.')
     print('OK: páginas administrativas autenticadas y bloqueadas para visitantes; registro/inicio/cierre de sesión empresarial, consulta y aprobación, membresía y borrador privado; enlace administrativo de contraseña con almacenamiento hash, expiración y uso único; controles privados; importación transaccional; alta/suscripción/publicación; errores legibles ante migraciones faltantes.')
 finally:
     PROCESS.terminate(); PROCESS.wait(timeout=5); DB.close(); shutil.rmtree(WORK)

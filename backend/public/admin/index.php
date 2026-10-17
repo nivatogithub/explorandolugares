@@ -67,7 +67,7 @@ try {
 <?php if(!$admin): ?>
 <form method="post" class="registration-form"><input type="hidden" name="csrf" value="<?=esc($_SESSION['csrf'])?>"><input type="hidden" name="action" value="login"><label>Usuario<input name="username" required autocomplete="username" maxlength="120"></label><label>Contraseña<input type="password" name="password" required autocomplete="current-password"></label><button class="pill">Entrar al panel</button></form>
 <?php else: ?>
-<form method="post"><input type="hidden" name="csrf" value="<?=esc($_SESSION['csrf'])?>"><input type="hidden" name="action" value="logout"><button class="pill light">Cerrar sesión</button></form>
+
 <?php require __DIR__.'/_navigation.php'; ?>
 <?php if($tab==='sistema'): ?>
 <?php require __DIR__.'/_system.php'; ?>

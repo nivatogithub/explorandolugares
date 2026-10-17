@@ -154,6 +154,11 @@ final class BusinessAdminService
         $this->pdo->prepare('DELETE FROM business_contacts WHERE business_id=?')->execute([$id]);$q=$this->pdo->prepare('INSERT INTO business_contacts(business_id,channel,contact_value,is_public,display_order) VALUES(?,?,?,?,?)');foreach($clean as $order=>$row)$q->execute([$id,$row[0],$row[1],$row[2],$order]);
     }
 
+    public function submittedLocation(array $input): array
+    {
+        return $this->locationFields($input,null,['business_page'],false);
+    }
+
     private function locationFields(array $input,?array $existing=null,array $features=[],bool $requiresLocation=true):array
     {
         if(!$requiresLocation&&!array_key_exists('address_text',$input)&&!array_key_exists('latitude',$input)&&!array_key_exists('longitude',$input)&&!array_key_exists('location_map_url',$input)){
@@ -215,7 +220,12 @@ final class BusinessAdminService
     }
 
     /** Uploaded photos are private source material and never become public media automatically. */
-    private function storeImageReferences(int $businessId,mixed $uploads,array &$storedFiles,int $tierLimit):void
+    public function storeApplicationReferences(int $applicationId,mixed $uploads,array &$storedFiles):void
+    {
+        $this->storeImageReferences($applicationId,$uploads,$storedFiles,4,'business_application_images','application_id');
+    }
+
+    private function storeImageReferences(int $businessId,mixed $uploads,array &$storedFiles,int $tierLimit,string $table='business_image_references',string $owner='business_id'):void
     {
         if(!is_array($uploads)||!isset($uploads['name'])||!is_array($uploads['name']))return;
         $pending=[];$total=0;
@@ -229,11 +239,11 @@ final class BusinessAdminService
             $total+=$bytes;if($total>32*1024*1024)throw new RuntimeException('Las fotos de referencia pueden sumar hasta 32 MB por guardado.');
             $safeOriginal=preg_replace('~^.*[\\\\/]~','',(string)$original)??'imagen';$pending[]=['tmp'=>$tmp,'name'=>$safeOriginal,'bytes'=>$bytes,'width'=>(int)$info[0],'height'=>(int)$info[1],'mime'=>$mime];
         }
-        $q=$this->pdo->prepare('SELECT COUNT(*) FROM business_image_references WHERE business_id=?');$q->execute([$businessId]);$existing=(int)$q->fetchColumn();
+        $q=$this->pdo->prepare('SELECT COUNT(*) FROM '.$table.' WHERE '.$owner.'=?');$q->execute([$businessId]);$existing=(int)$q->fetchColumn();
         if($pending&&$tierLimit===0)throw new RuntimeException('La suscripción seleccionada no solicita imágenes de referencia.');
         if($existing+count($pending)>max($existing,$tierLimit))throw new RuntimeException('Esta suscripción permite pedir hasta '.$tierLimit.' referencias privadas: logo y material visual incluidos.');
         $extensions=['image/jpeg'=>'jpg','image/png'=>'png','image/webp'=>'webp'];
-        $insert=$this->pdo->prepare('INSERT INTO business_image_references(business_id,storage_name,original_name,mime_type,file_size,width,height) VALUES(?,?,?,?,?,?,?)');
+        $insert=$this->pdo->prepare('INSERT INTO '.$table.'('.$owner.',storage_name,original_name,mime_type,file_size,width,height) VALUES(?,?,?,?,?,?,?)');
         foreach($pending as $image){$name=bin2hex(random_bytes(20)).'.'.$extensions[$image['mime']];$path=$this->referenceStorage.'/'.$name;if(!move_uploaded_file($image['tmp'],$path))throw new RuntimeException('No se pudo guardar una foto de referencia en el almacenamiento privado.');@chmod($path,0600);$storedFiles[]=$path;$insert->execute([$businessId,$name,substr($image['name'],0,255),$image['mime'],$image['bytes'],$image['width'],$image['height']]);}
     }
 
