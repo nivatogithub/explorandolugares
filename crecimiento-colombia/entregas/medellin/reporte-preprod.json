@@ -2,7 +2,7 @@
   "version": 3,
   "destination_id": "CO-05-medellin",
   "zip": "paquete-preprod.zip",
-  "zip_sha256": "65298ff6e0751817507219ffcf11599099455e5859fe8830e624e401760d7cee",
+  "zip_sha256": "616de788ce8dcac3dcab8ac0f44212ce42f4e2f596a03a64c0d2690323daf8fb",
   "main_place_count": 8,
   "unique_image_files": 9,
   "unique_image_hashes": 9,
@@ -91,25 +91,6 @@
   "limits": [
     "Fotos históricas no prueban condiciones actuales.",
     "Aprobación original/textos y segunda revisión antes de IA/publicación.",
-    "Coltejer no tarjeta; no eventoMacarena prometido.",
-    "Cuatro fuentes disponibles como miniaturasoficiales porHTTP429; originalesURLtrazables, maestroscompletos pendientes. Portada960x202histórica, Coltejerpequeño; no ampliar."
-  ],
-  "source_variants": [
-    {
-      "id": "catedral-2012",
-      "variant": "miniatura oficial1280; original429; no afirmar maestro completo"
-    },
-    {
-      "id": "explora-2012",
-      "variant": "miniatura oficial960; original429; maestro completo no recuperado"
-    },
-    {
-      "id": "panorama-2005",
-      "variant": "miniatura oficial960; original429; no ampliar ni afirmar maestro completo"
-    },
-    {
-      "id": "museo-2020",
-      "variant": "miniatura oficial960 verificada href35; original429; no afirmar maestro completo"
-    }
+    "Coltejer no tarjeta; no eventoMacarena prometido."
   ]
 }
