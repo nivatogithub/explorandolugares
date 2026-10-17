@@ -1,5 +1,5 @@
 {
-  "checked": 16,
+  "checked": 19,
   "checks": [
     {
       "id": "SM-H6-01",
@@ -171,7 +171,40 @@
       "file": "imagenes/revision-v6/originales/SM-H6-05.mp4",
       "integrity": "PASS",
       "dimensions": null,
-      "status": "downloaded_pending_visual_identification",
+      "status": "conditional_district_hero_candidate",
+      "approved": false
+    },
+    {
+      "id": "SM-H7-01",
+      "file": "imagenes/centro-bahia-v7/originales/SM-H7-01.jpg",
+      "integrity": "PASS",
+      "dimensions": [
+        6000,
+        4000
+      ],
+      "status": "not_selected_for_hero",
+      "approved": false
+    },
+    {
+      "id": "SM-H7-02",
+      "file": "imagenes/centro-bahia-v7/originales/SM-H7-02.jpg",
+      "integrity": "PASS",
+      "dimensions": [
+        3264,
+        2448
+      ],
+      "status": "rejected_visual_brief",
+      "approved": false
+    },
+    {
+      "id": "SM-H7-03",
+      "file": "imagenes/centro-bahia-v7/originales/SM-H7-03.jpg",
+      "integrity": "PASS",
+      "dimensions": [
+        2048,
+        1213
+      ],
+      "status": "ready_individual_reference_choice",
       "approved": false
     }
   ],

@@ -6,11 +6,13 @@
   "state": "investigacion_y_revision_individual_activa",
   "components": {
     "hero": {
-      "status": "busqueda_exclusiva_centro_bahia_historica",
-      "next": "Descargar e inspeccionar H7-01/02/03; verificar hitos del centro, bahía y recorte antes de presentarlas.",
+      "status": "una_referencia_centro_bahia_lista_para_eleccion",
+      "next": "Elección individual de referencia H7-03 y encuadre propuesto; no generar ni importar antes de autorización.",
       "reference_approved": false,
       "generation_approved": false,
-      "candidate_ids": [],
+      "candidate_ids": [
+        "SM-H7-03"
+      ],
       "rejected_candidates": [
         "SM-H6-02",
         "SM-H6-03",
