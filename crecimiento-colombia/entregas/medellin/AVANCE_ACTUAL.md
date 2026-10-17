@@ -2,9 +2,11 @@
 
 Actualizado: 17/10/2026. Lugar 3, rama `lugar/CO/antioquia/medellin`.
 
-**Estado real:** auditoría de selección de ocho terminada para revisión; propuesta no aplicada. No hay ejecución permanente en segundo plano. Destino completo pendiente.
+**Estado real:** preparando borradores y referencias separados para Plaza Botero y Metro/Metrocable; selección física vigente intacta. No hay ejecución permanente en segundo plano. Destino completo pendiente.
 
-**Auditoría nueva disponible:** `AUDITORIA_TOP8.md` y `AUDITORIA_TOP8.json`:39 candidatos,31 comparaciones explícitas con8º Arví. Propone Comuna13, Plaza Botero, Metro/Metrocable, Explora, Museo Antioquia, Pueblito, Jardín y Arví. Catedral/Pies permanecen en inventario secundario. Poblado/Lleras/Provenza disputan corte sin datos comparables suficientes; no se inventó ranking medido. Ningún texto, imagen, aprobación, preview o ZIP aplicado por esta propuesta.
+**Ahora:** `PROPUESTOS_TOP8_V6.json/.md` y `propuestos-top8-v6.html` tienen los dos borradores ES/EN/PT. Lote de cuatro originales `descargar-propuestos-v6.py` preparado para coordinación; descarga/inspección pendientes. No hay IA ni aprobación de uso.
+
+**Auditoría disponible:** `AUDITORIA_TOP8.md` y `AUDITORIA_TOP8.json`:39 candidatos,31 comparaciones explícitas con8º Arví. Propone Comuna13, Plaza Botero, Metro/Metrocable, Explora, Museo Antioquia, Pueblito, Jardín y Arví. Catedral/Pies permanecen en inventario secundario. Poblado/Lleras/Provenza disputan corte sin datos comparables suficientes; no se inventó ranking medido. Ningún texto, imagen, aprobación, preview o ZIP aplicado por esta propuesta.
 
 **Logro previo:** foto MAMM fachada 2016 (Andrés Molina Mesa, CC BY2.0), original completo y reducción800×532 inspeccionados, asignada a visita autónoma `mamm-visita`. Visible en `preview.html`; manifiesto `imagen-actividad-mamm-v5.json`. No representa visita guiada ni agenda vigente. Se mantienen intactas las tres candidatas v4 listas para elegir.
 
