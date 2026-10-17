@@ -49,6 +49,7 @@ def main():
  with (STATE/'prepare.log').open('w') as log:
   run(sys.executable,'scripts/preparar-hosting.py','--output',str(release),stdout=log,stderr=subprocess.STDOUT)
  shutil.copyfile(ROOT/'preprod/infra/runtime.php',release/'public/__preprod-runtime.php')
+ shutil.copyfile(ROOT/'preprod/infra/account-status.php',release/'public/__preprod-account.php')
  # Recovery and its private mailbox exist only in the local release.
  shutil.copyfile(ROOT/'preprod/infra/recover.php',release/'public/business/recover.php')
  shutil.copyfile(ROOT/'preprod/infra/mailbox.php',release/'public/admin/buzon-local.php')
@@ -56,7 +57,7 @@ def main():
  shutil.copyfile(ROOT/'preprod/infra/account-entry.js',release/'public/assets/preprod-account-entry.js')
  shutil.copyfile(ROOT/'preprod/infra/account-entry.css',release/'public/assets/preprod-account-entry.css')
  menu=release/'public/assets/menu-principal.js'
- menu.write_text(menu.read_text()+"\n(()=>{const css=document.createElement('link');css.rel='stylesheet';css.href='/assets/preprod-account-entry.css?v=3';document.head.append(css);const script=document.createElement('script');script.src='/assets/preprod-account-entry.js?v=2';script.defer=true;document.head.append(script);})();\n")
+ menu.write_text(menu.read_text()+"\n(()=>{const css=document.createElement('link');css.rel='stylesheet';css.href='/assets/preprod-account-entry.css?v=4';document.head.append(css);const script=document.createElement('script');script.src='/assets/preprod-account-entry.js?v=4';script.defer=true;document.head.append(script);})();\n")
 
  login=release/'public/business/login.php'
  text=login.read_text().replace('Si olvidaste tu contraseña, contacta al equipo para que te envíe un enlace temporal de recuperación. Por ahora el envío del enlace es manual.','<a href="/negocios/recuperar-clave/">Olvidé mi contraseña</a> · Preproducción: correo en el buzón local.')

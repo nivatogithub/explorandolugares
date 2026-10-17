@@ -17,6 +17,7 @@ def csrf(body):return re.search(r'name="csrf" value="([^"]+)"',body)[1]
 account=None
 try:
     assert call('/negocios/registro/')[0]==200
+    assert json.loads(call('/__preprod-account.php')[1])['authenticated'] is False
     account=int(php('$q=$p->prepare("INSERT INTO accounts(public_id,account_type,display_name,email,password_hash,status) VALUES(?,\'business\',?, ?, ?,\'active\')"); $q->execute([bin2hex(random_bytes(16)),"Prueba automática local",'+json.dumps(email)+',password_hash('+json.dumps(password)+',PASSWORD_DEFAULT)]); echo $p->lastInsertId();'))
     status,body=call('/negocios/recuperar-clave/');assert status==200
     status,body=call('/negocios/recuperar-clave/',{'csrf':csrf(body),'email':email});assert status==200 and 'Si existe una cuenta' in body
@@ -28,8 +29,10 @@ try:
     assert 'Enlace vencido o no válido' in call('/negocios/cambiar-clave/?token='+token)[1]
     status,body=call('/negocios/acceso/');assert status==200 and 'Olvidé mi contraseña' in body
     status,body=call('/negocios/acceso/',{'csrf':csrf(body),'email':email,'password':new_password});assert status==200 and 'Solicitudes asociadas a tu cuenta' in body
+    state=json.loads(call('/__preprod-account.php')[1]);assert state['authenticated'] is True and state['name']=='Prueba automática local' and len(state['csrf'])==64
     status,body=call('/business/logout.php',{'csrf':csrf(body)});assert status==200 and 'Inicia sesión' in body
     assert 'Inicia sesión' in call('/negocios/portal/')[1]
+    assert json.loads(call('/__preprod-account.php')[1])['authenticated'] is False
     print('OK: public registration available; recovery form/local mailbox; one-use reset; login with new password; logout revokes portal access. No real mail sent.')
 finally:
     if account is not None:
