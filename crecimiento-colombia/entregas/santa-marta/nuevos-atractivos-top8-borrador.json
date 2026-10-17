@@ -1,0 +1,34 @@
+{
+  "state": "draft_not_imported",
+  "reason": "Textos de los dos candidatos incorporados por auditoría turística; no sustituyen el paquete ni tienen aprobación humana.",
+  "items": [
+    {
+      "id": "ciudad-perdida",
+      "source": "https://www.icanh.gov.co/parques-icanh/parque-arqueologico-teyuna/guia-turistica",
+      "jurisdiction": "Distrito de Santa Marta, Magdalena, según ICANH",
+      "translations": {
+        "es": {"name": "Teyuna · Ciudad Perdida", "description": "Entre las montañas de la Sierra Nevada, Teyuna conserva terrazas de piedra y caminos que permiten acercarse al legado de las sociedades indígenas de la región. La visita requiere una caminata de varios días y coordinación con un operador autorizado. Consulta condiciones de acceso y respeta las indicaciones del ICANH y las comunidades del territorio."},
+        "en": {"name": "Teyuna · Lost City", "description": "In the Sierra Nevada mountains, Teyuna preserves stone terraces and paths that reveal the heritage of the region’s Indigenous societies. Visiting requires a multi-day trek arranged with an authorised operator. Check access conditions and follow the guidance of ICANH and the local Indigenous communities."},
+        "pt-BR": {"name": "Teyuna · Cidade Perdida", "description": "Nas montanhas da Sierra Nevada, Teyuna preserva terraços de pedra e caminhos que aproximam o visitante do legado das sociedades indígenas da região. A visita exige uma caminhada de vários dias e organização com uma operadora autorizada. Consulte as condições de acesso e respeite as orientações do ICANH e das comunidades do território."}
+      },
+      "reference_candidate": "SM-E6-05",
+      "image_role_conflict": "La misma referencia no puede usarse simultáneamente como tarjeta de atractivo y experiencia: elegir rol antes de generar y buscar original distinto para el otro componente.",
+      "approved": false
+    },
+    {
+      "id": "playa-blanca",
+      "source": "https://indetur.gov.co/playa-blanca/",
+      "jurisdiction": "Distrito de Santa Marta, sector cercano al Rodadero; no Barú ni playa homónima de otro municipio",
+      "translations": {
+        "es": {"name": "Playa Blanca", "description": "Una excursión en lancha desde El Rodadero permite conocer esta playa de la costa samaria, rodeada por laderas y aguas caribeñas. Es una opción para dedicar una jornada al mar y al paisaje. Confirma transporte autorizado, condiciones de navegación y recomendaciones locales antes de salir; no se trata de Playa Blanca de Barú."},
+        "en": {"name": "Playa Blanca", "description": "A boat trip from El Rodadero leads to this beach on Santa Marta’s coast, framed by hills and Caribbean waters. It offers a day focused on the sea and coastal scenery. Check authorised transport, sailing conditions and local advice before departing; this is not Playa Blanca on Barú."},
+        "pt-BR": {"name": "Playa Blanca", "description": "Um passeio de barco saindo de El Rodadero leva a esta praia da costa de Santa Marta, cercada por encostas e águas caribenhas. É uma opção para dedicar o dia ao mar e à paisagem. Confirme transporte autorizado, condições de navegação e orientações locais antes de sair; não se trata da Playa Blanca de Barú."}
+      },
+      "reference_candidate": null,
+      "image_status": "original específico con licencia y aprobación pendientes",
+      "approved": false
+    }
+  ],
+  "checked_at": "2026-10-17",
+  "publication_authorized": false
+}
