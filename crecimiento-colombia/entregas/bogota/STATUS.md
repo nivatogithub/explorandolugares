@@ -37,3 +37,7 @@ Colpatria es candidata documentada; no asumir que la torre nombrada tentativamen
 ## Imagen definitiva aprobada · Jardín Botánico
 
 Propietario aprueba ilustración bogota-tropicario-v1 para tarjeta Jardín Botánico. Hashes y decisión en aprobacion-ilustracion-tropicario-v1.json. Imagen lista para integración autorizada de avances en preprod; todavía no importada. Resto de imágenes, textos, destino y publicación no se dan por aprobados.
+
+## Jardín aprobado en preproducción
+
+Ilustración Tropicario v1 importada en avance local; ES/EN/PT-BR y bytes/hash del archivo aprobado verificados en verificacion-preprod-jardin-aprobado.json. No publicación ni aprobación global.
