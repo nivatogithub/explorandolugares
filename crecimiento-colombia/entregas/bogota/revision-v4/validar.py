@@ -16,6 +16,15 @@ assert set(texts['contenido'])=={'es','en','pt-BR'}
 assert all(set(t)=={'jardin','simon','historia','movilidad','practica'} for t in texts['contenido'].values())
 b=json.loads((d/'directorio.json').read_text());assert len(b)==10
 assert all(set(x['descripciones'])=={'es','en','pt-BR'} and not x['alianza'] for x in b)
-assert sum(bool(x['direccion']) for x in b)==9
+assert sum(bool(x['direccion']) for x in b)==10
 assert audit['componentes']['aprobacion']['estado']=='0_aprobaciones_v4'
-print('OK:5opcionesporuso,sinaprobaciones,hasheslocales,3idiomas,10fichas/9direcciones,procedenciaypendientesexplícitos.')
+experiences=json.loads((d/'experiencias.json').read_text())
+ciclovia=next(x for x in experiences if x['id']=='ciclovia')
+assert 'Carrera3' not in ciclovia['ubicacion']
+assert ciclovia['clase']=='editorial_autonoma' and ciclovia['operador'] is None
+assert all(x['foto_id']!='actividad-ciclovia' for x in experiences if x['clase']=='oferta_documentada_operador')
+assert all(set(x['textos'])=={'es','en','pt-BR'} and not x['aprobado'] for x in experiences)
+for x in a['options']:
+ if x.get('tipo_archivo_local')=='miniatura_oficial_no_original': assert not x['maestro_completo_disponible']
+
+print('OK:5opcionesporuso,sinaprobaciones,hasheslocales,3idiomas,10fichas/10direcciones,procedenciaypendientesexplícitos.')
