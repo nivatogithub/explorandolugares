@@ -32,7 +32,12 @@
       "image_status": "original_especifico_y_permiso_pendientes",
       "image_asset": null,
       "text_approval": false,
-      "image_approval": false
+      "image_approval": false,
+      "reference_research": {
+        "id": "SM-E6-01",
+        "status": "context_only",
+        "notes": "Peces y coral, sin buceadores. No representa una clase ni al operador Barracuda."
+      }
     },
     {
       "id": "caminata-tayrona",
@@ -62,7 +67,12 @@
       "image_status": "original_especifico_y_permiso_pendientes",
       "image_asset": null,
       "text_approval": false,
-      "image_approval": false
+      "image_approval": false,
+      "reference_research": {
+        "id": "SM-E6-02",
+        "status": "rejected_for_main_activity",
+        "notes": "Sendero real con turistas, uno reconocible domina el encuadre. No representa un grupo de Expotur."
+      }
     },
     {
       "id": "minca-cafe",
@@ -92,7 +102,12 @@
       "image_status": "original_especifico_y_permiso_pendientes",
       "image_asset": null,
       "text_approval": false,
-      "image_approval": false
+      "image_approval": false,
+      "reference_research": {
+        "id": "SM-E6-03",
+        "status": "context_only",
+        "notes": "Colibrí en Minca según fuente. No representa café ni finca; no asignar a la experiencia cafetera."
+      }
     },
     {
       "id": "recorrido-centro",
@@ -122,7 +137,12 @@
       "image_status": "original_especifico_y_permiso_pendientes",
       "image_asset": null,
       "text_approval": false,
-      "image_approval": false
+      "image_approval": false,
+      "reference_research": {
+        "id": "SM-E6-04",
+        "status": "candidate_editorial_stop",
+        "notes": "Parque de los Novios reconocible; parada editorial de recorrido, sin atribuir guía u operador."
+      }
     },
     {
       "id": "ciudad-perdida",
@@ -152,7 +172,12 @@
       "image_status": "original_especifico_y_permiso_pendientes",
       "image_asset": null,
       "text_approval": false,
-      "image_approval": false
+      "image_approval": false,
+      "reference_research": {
+        "id": "SM-E6-05",
+        "status": "candidate_editorial_destination",
+        "notes": "Terrazas arqueológicas Teyuna reconocibles desde arriba; destino del trekking, sin atribuir grupo u operador."
+      }
     },
     {
       "id": "velero-caribe",
@@ -182,7 +207,12 @@
       "image_status": "original_especifico_y_permiso_pendientes",
       "image_asset": null,
       "text_approval": false,
-      "image_approval": false
+      "image_approval": false,
+      "reference_research": {
+        "id": "SM-E6-06",
+        "status": "conditional_editorial_context",
+        "notes": "Velero fondeado al atardecer con El Morro. No identifica embarcación del operador; encuadre vertical corta mástil al adaptar a tarjeta horizontal."
+      }
     }
   ],
   "not_imported": true,
