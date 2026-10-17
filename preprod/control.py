@@ -65,7 +65,7 @@ def main():
  text=htaccess.read_text().replace('RewriteEngine On','RewriteEngine On\nRewriteRule ^negocios/recuperar-clave/?$ business/recover.php [L,QSA]',1)
  htaccess.write_text(text)
  navigation=release/'public/admin/_navigation.php'
- navigation.write_text(navigation.read_text().replace('<section><h2>Sistema</h2>','<section><h2>Probar cuentas en preprod</h2><a href="/negocios/registro/">Crear cuenta de negocio</a><a href="/negocios/acceso/">Iniciar sesión de negocio</a><a href="/negocios/recuperar-clave/">Recuperar contraseña</a><a href="buzon-local.php">Buzón local de pruebas</a></section><section><h2>Sistema</h2>'))
+ navigation.write_text(navigation.read_text().replace('</nav>','<section><h2>Probar cuentas en preprod</h2><a href="/negocios/registro/">Crear cuenta de negocio</a><a href="/negocios/acceso/">Iniciar sesión de negocio</a><a href="/negocios/recuperar-clave/">Recuperar contraseña</a><a href="buzon-local.php">Buzón local de pruebas</a></section></nav>',1))
 
  # Refresh asset versions after adding the local navigation.
  run(sys.executable,'scripts/versiones-medicion.py','--public',str(release/'public'))
