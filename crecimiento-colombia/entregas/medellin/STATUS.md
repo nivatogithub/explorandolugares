@@ -71,3 +71,7 @@ Fecha de consulta: 16/10/2026. ID CO-05-medellin. Rama exclusiva `lugar/CO/antio
 **Estado: investigación y borrador preparados, entrega completa del destino aún pendiente.** Lugar 3 mantiene Medellín y no recibe siguiente destino. Cobertura publicada/aprobada añadida: cero. Las duraciones de revisión/correcciones son desconocidas; no se registran ceros ficticios.
 
 Reproducir: ejecutar `preparar.py` con el Python del runtime que incluye Pillow, después `validar.py`. `SHA256SUMS` cubre todo el directorio excepto sí mismo y se regenera después de cambios; no representa aprobación.
+
+## Verificación coordinador 17/10/2026
+
+Avance importado únicamente en preproducción local. Ocho tarjetas, portada e imagen de historia distintas; ES/EN/PT-BR, archivos HTTP y hashes comprobados. Revisión visual en navegador interno: botón Cargar más lugares muestra las ocho tarjetas y sus imágenes decodificadas. Fotografías provisionales, sin aprobación editorial ni producción. Ver reporte-preprod.json y verificacion-preprod-v3.json.
