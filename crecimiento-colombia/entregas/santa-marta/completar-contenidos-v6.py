@@ -10,10 +10,18 @@ rows=[
  ('recorrido-centro','Visit Santa Marta','https://visitsantamarta.com/en/experiences/free-walking-tour-santa-marta/13',['Recorrido guiado por el centro histórico','Guided walk through the historic centre','Passeio guiado pelo centro histórico'],['Conoce calles, plazas y memoria samaria acompañado por un guía. Consulta el punto de encuentro, el idioma del recorrido y las condiciones de participación directamente con el organizador.','Discover streets, squares and Santa Marta’s history with a guide. Check the meeting point, tour language and participation arrangements directly with the organiser.','Conheça ruas, praças e a memória de Santa Marta com um guia. Consulte o ponto de encontro, o idioma do passeio e as condições de participação diretamente com o organizador.']),
  ('ciudad-perdida','Magic Tour Colombia','https://lostcitytours.com/en/tours/lost-city-4-days/',['Travesía a Ciudad Perdida · Teyuna','Trek to Ciudad Perdida · Teyuna','Travessia à Ciudad Perdida · Teyuna'],['Una expedición de varios días por la Sierra Nevada hasta el parque arqueológico de Teyuna requiere planificación y guía. Consulta exigencia física, permisos, protocolo cultural y disponibilidad con el operador y las autoridades del sitio.','A multi-day expedition through the Sierra Nevada to Teyuna Archaeological Park requires planning and a guide. Check physical demands, permits, cultural protocols and availability with the operator and site authorities.','Uma expedição de vários dias pela Sierra Nevada até o parque arqueológico de Teyuna exige planejamento e guia. Consulte esforço físico, permissões, protocolos culturais e disponibilidade com o operador e as autoridades do sítio.']),
  ('velero-caribe','Velero Santa Marta','https://www.velerosantamarta.com/index-en.html',['Navegación a vela por la costa','Sailing along the coast','Navegação a vela pelo litoral'],['Observa la costa desde el mar en una salida de navegación. El recorrido depende de la propuesta del operador, del tiempo y de las autorizaciones aplicables; confirma puerto de salida, condiciones a bordo y ruta antes de contratar.','See the coast from the sea on a sailing outing. The route depends on the operator’s programme, weather and applicable permissions; confirm the departure harbour, onboard arrangements and itinerary before booking.','Observe o litoral a partir do mar em um passeio a vela. O percurso depende da proposta do operador, do tempo e das autorizações aplicáveis; confirme porto de saída, condições a bordo e roteiro antes de contratar.'])]
-experiences=[]
+existing_path=root/'experiencias-v6.json'
+existing_data=json.loads(existing_path.read_text()) if existing_path.exists() else {}
+experiences=existing_data.get('experiences',[])
+existing_ids={r['id'] for r in experiences}
 for id,op,url,names,descs in rows:
+ if id in existing_ids:continue  # Preserve reviewed text, classifications, references and approvals.
  experiences.append(dict(id=id,destination='santa-marta',operator=op,source_url=url,checked_at='2026-10-17',evidence='Oferta descrita en sitio del operador; no contacto ni validación contractual.',translations={l:dict(name=names[i],description=descs[i]) for i,l in enumerate(langs)},publication_status='draft',availability_verified=False,registration_verified=False,partnership=False,image_status='original_especifico_y_permiso_pendientes',image_asset=None,text_approval=False,image_approval=False))
-save('experiencias-v6.json',dict(schema_version=1,destination='santa-marta',state='borrador_completo_textos_sin_imagenes',consulted_at='2026-10-17',experiences=experiences,not_imported=True,production_authorized=False))
+if existing_data:
+ existing_data['experiences']=experiences
+ save('experiencias-v6.json',existing_data)
+else:
+ save('experiencias-v6.json',dict(schema_version=1,destination='santa-marta',state='borrador_completo_textos_sin_imagenes',consulted_at='2026-10-17',experiences=experiences,not_imported=True,production_authorized=False))
 # Existing business records retained; add translation fields without inventing contacts or current availability.
 directory=json.loads((root/'directorio.json').read_text())
 texts={
@@ -28,6 +36,7 @@ texts={
 'quinta':['Institución cultural que conserva la Quinta de San Pedro Alejandrino y presenta patrimonio vinculado con Simón Bolívar y arte latinoamericano.','A cultural institution preserving Quinta de San Pedro Alejandrino and presenting heritage associated with Simón Bolívar and Latin American art.','Instituição cultural que preserva a Quinta de San Pedro Alejandrino e apresenta patrimônio ligado a Simón Bolívar e à arte latino-americana.'],
  'teatro':['Escenario patrimonial del centro histórico dedicado a las artes escénicas. Consulta una programación vigente antes de planear asistencia a un espectáculo.','A heritage venue in the historic centre devoted to performing arts. Check an up-to-date programme before planning to attend a performance.','Espaço patrimonial do centro histórico dedicado às artes cênicas. Consulte uma programação atualizada antes de planejar assistir a um espetáculo.']}
 for row in directory:
+ if all(l in row.get('translations',{}) for l in langs):continue  # Preserve existing editorial work and decisions.
  key=next((k for k in texts if row['id']=='CO-47-santa-marta-'+k),None)
  if not key:
   # Preserve existing verified prospect; do not fabricate its offer to fill languages.

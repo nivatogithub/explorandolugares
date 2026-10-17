@@ -349,5 +349,40 @@
     "editorial_approved": false,
     "current_programme_verified": false,
     "translations_status": "draft_es_en_pt_source_based_not_approved"
+  },
+  {
+    "id": "CO-47-santa-marta-acuario-rodadero",
+    "place_id": "CO-47-santa-marta",
+    "location_id": "santa-marta:acuario-rodadero",
+    "name": "Centro de Vida Marina (antes Acuario Rodadero)",
+    "category": "cultura_naturaleza_educacion",
+    "source_url": "https://centrodevidamarina.com/",
+    "checked_at": "2026-10-17",
+    "listing_type": "gratuito",
+    "publication_status": "draft",
+    "data_verification": "pending",
+    "claim_status": "unclaimed",
+    "alliance_status": "not_established",
+    "operation_status": "unconfirmed",
+    "rnt_status": "pending_if_applicable",
+    "contacts": null,
+    "translations": {
+      "es": {
+        "name": "Centro de Vida Marina",
+        "description": "Institución de Santa Marta dedicada a exhibiciones y educación sobre biodiversidad marina, antes conocida como Acuario Rodadero."
+      },
+      "en": {
+        "name": "Marine Life Centre",
+        "description": "A Santa Marta institution devoted to exhibitions and education about marine biodiversity, formerly known as Acuario Rodadero."
+      },
+      "pt-BR": {
+        "name": "Centro de Vida Marina",
+        "description": "Instituição de Santa Marta dedicada a exposições e educação sobre biodiversidade marinha, antes conhecida como Acuario Rodadero."
+      }
+    },
+    "text_status": "borrador_es_en_pt_completo",
+    "image_status": "pendiente_original_reciente_y_permiso",
+    "editorial_approved": false,
+    "note": "Identidad y cambio de nombre corroborados en sitio propio; no es Acuario Mundo Marino. Dirección de oficinas no se presenta como acceso al recinto. Sin contacto ni alianza."
   }
 ]

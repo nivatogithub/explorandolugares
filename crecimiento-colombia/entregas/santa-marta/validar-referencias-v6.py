@@ -4,7 +4,7 @@ from pathlib import Path
 from PIL import Image
 root=Path(__file__).resolve().parent
 checks=[]
-for name in ['candidatas-v6.json','portadas-extra-v6.json','fotos-experiencias-v6.json','acuario-referencia-v6.json','cafe-candidata-v6.json','video-portada-v6.json','centro-bahia-v7.json']:
+for name in ['candidatas-v6.json','portadas-extra-v6.json','fotos-experiencias-v6.json','acuario-referencia-v6.json','cafe-candidata-v6.json','video-portada-v6.json','centro-bahia-v7.json','componentes-top8-v7.json']:
  data=json.loads((root/name).read_text());data=data if isinstance(data,list) else [data]
  for r in data:
   filename=r.get('path') or r.get('original_path')

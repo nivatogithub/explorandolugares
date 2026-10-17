@@ -36,3 +36,21 @@ See the coast from the sea on a sailing outing. The route depends on the operato
 
 https://www.velerosantamarta.com/index-en.html
 
+## Visit the Marine Life Centre
+
+Explore the exhibitions at the Marine Life Centre, formerly Acuario Rodadero, and learn about Colombia’s Caribbean biodiversity. Check the programme, access arrangements and visiting conditions directly with the venue. It is a different institution from Acuario Mundo Marino.
+
+https://centrodevidamarina.com/
+
+## Playa Blanca boat excursion
+
+A boat trip from El Rodadero offers a day on the beach and along this bay on Santa Marta’s coast. Check authorised transport, boarding points and sea conditions before leaving. This excursion visits Playa Blanca in Santa Marta, not its namesake on Barú.
+
+https://colombia.travel/es/santa-marta/playa-blanca
+
+## Personal watercraft outing
+
+An option for exploring Santa Marta’s water activities with an authorised provider. Before booking, check permitted areas, age requirements, supervision, protective equipment and sea conditions. Confirm availability and restrictions directly with the provider.
+
+https://www.discoversantamarta.travel/wp-content/uploads/2024/03/07032024-GUIA-GENERAL-DIGITAL-ESP.pdf
+

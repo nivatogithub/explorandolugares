@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "destination": "santa-marta",
-  "state": "borrador_completo_textos_sin_imagenes",
+  "state": "borradores_9_experiencias_es_en_pt_clasificados_sin_importar",
   "consulted_at": "2026-10-17",
   "experiences": [
     {
@@ -37,7 +37,14 @@
         "id": "SM-E6-01",
         "status": "context_only",
         "notes": "Peces y coral, sin buceadores. No representa una clase ni al operador Barracuda."
-      }
+      },
+      "content_type": "experience",
+      "location_id": "santa-marta:taganga",
+      "related_location_ids": [
+        "santa-marta:tayrona"
+      ],
+      "counts_as_top8_place": false,
+      "event_date": null
     },
     {
       "id": "caminata-tayrona",
@@ -72,7 +79,14 @@
         "id": "SM-E6-02",
         "status": "rejected_for_main_activity",
         "notes": "Sendero real con turistas, uno reconocible domina el encuadre. No representa un grupo de Expotur."
-      }
+      },
+      "content_type": "experience",
+      "location_id": "santa-marta:tayrona",
+      "related_location_ids": [
+        "santa-marta:cabo-san-juan"
+      ],
+      "counts_as_top8_place": false,
+      "event_date": null
     },
     {
       "id": "minca-cafe",
@@ -107,7 +121,13 @@
         "id": "SM-E6-03",
         "status": "context_only",
         "notes": "Colibrí en Minca según fuente. No representa café ni finca; no asignar a la experiencia cafetera."
-      }
+      },
+      "content_type": "experience",
+      "location_id": "santa-marta:minca",
+      "related_location_ids": [],
+      "counts_as_top8_place": false,
+      "event_date": null,
+      "editorial_classification_note": "Salida/tour de naturaleza y café, no evento con fecha; no crear agenda ficticia."
     },
     {
       "id": "recorrido-centro",
@@ -142,7 +162,12 @@
         "id": "SM-E6-04",
         "status": "candidate_editorial_stop",
         "notes": "Parque de los Novios reconocible; parada editorial de recorrido, sin atribuir guía u operador."
-      }
+      },
+      "content_type": "experience",
+      "location_id": "santa-marta:centro",
+      "related_location_ids": [],
+      "counts_as_top8_place": false,
+      "event_date": null
     },
     {
       "id": "ciudad-perdida",
@@ -177,7 +202,12 @@
         "id": "SM-E6-05",
         "status": "candidate_editorial_destination",
         "notes": "Terrazas arqueológicas Teyuna reconocibles desde arriba; destino del trekking, sin atribuir grupo u operador."
-      }
+      },
+      "content_type": "experience",
+      "location_id": "santa-marta:ciudad-perdida",
+      "related_location_ids": [],
+      "counts_as_top8_place": false,
+      "event_date": null
     },
     {
       "id": "velero-caribe",
@@ -212,7 +242,119 @@
         "id": "SM-E6-06",
         "status": "conditional_editorial_context",
         "notes": "Velero fondeado al atardecer con El Morro. No identifica embarcación del operador; encuadre vertical corta mástil al adaptar a tarjeta horizontal."
-      }
+      },
+      "content_type": "experience",
+      "location_id": "santa-marta:bahia-historica",
+      "related_location_ids": [],
+      "counts_as_top8_place": false,
+      "event_date": null
+    },
+    {
+      "id": "visita-acuario",
+      "destination": "santa-marta",
+      "operator": "Centro de Vida Marina (antes Acuario Rodadero)",
+      "source_url": "https://centrodevidamarina.com/",
+      "checked_at": "2026-10-17",
+      "evidence": "Fuente propia confirma identidad/actividad; no disponibilidad comercial verificada.",
+      "translations": {
+        "es": {
+          "name": "Visita al Centro de Vida Marina",
+          "description": "Conoce las exhibiciones del Centro de Vida Marina, antes conocido como Acuario Rodadero, y acércate a la biodiversidad del Caribe colombiano. Confirma el programa, el acceso y las condiciones de visita directamente con el establecimiento. Es una institución diferente de Acuario Mundo Marino."
+        },
+        "en": {
+          "name": "Visit the Marine Life Centre",
+          "description": "Explore the exhibitions at the Marine Life Centre, formerly Acuario Rodadero, and learn about Colombia’s Caribbean biodiversity. Check the programme, access arrangements and visiting conditions directly with the venue. It is a different institution from Acuario Mundo Marino."
+        },
+        "pt-BR": {
+          "name": "Visita ao Centro de Vida Marina",
+          "description": "Conheça as exposições do Centro de Vida Marina, antes chamado Acuario Rodadero, e aproxime-se da biodiversidade do Caribe colombiano. Confirme programação, acesso e condições de visita diretamente com o estabelecimento. É uma instituição diferente do Acuario Mundo Marino."
+        }
+      },
+      "publication_status": "draft",
+      "availability_verified": false,
+      "registration_verified": false,
+      "partnership": false,
+      "image_status": "original_especifico_y_permiso_pendientes",
+      "image_asset": null,
+      "text_approval": false,
+      "image_approval": false,
+      "content_type": "experience",
+      "location_id": "santa-marta:acuario-rodadero",
+      "related_location_ids": [],
+      "counts_as_top8_place": false,
+      "event_date": null
+    },
+    {
+      "id": "excursion-playa-blanca",
+      "destination": "santa-marta",
+      "operator": null,
+      "source_url": "https://colombia.travel/es/santa-marta/playa-blanca",
+      "checked_at": "2026-10-17",
+      "evidence": "Fuente institucional identifica excursión geográfica; operador pendiente.",
+      "translations": {
+        "es": {
+          "name": "Excursión a Playa Blanca",
+          "description": "Una salida en lancha desde El Rodadero permite dedicar el día a la playa y al paisaje de esta bahía samaria. Consulta transporte autorizado, puntos de embarque y condiciones del mar antes de salir. Esta excursión corresponde a Playa Blanca de Santa Marta, no a la playa homónima de Barú."
+        },
+        "en": {
+          "name": "Playa Blanca boat excursion",
+          "description": "A boat trip from El Rodadero offers a day on the beach and along this bay on Santa Marta’s coast. Check authorised transport, boarding points and sea conditions before leaving. This excursion visits Playa Blanca in Santa Marta, not its namesake on Barú."
+        },
+        "pt-BR": {
+          "name": "Passeio a Playa Blanca",
+          "description": "Um passeio de barco saindo de El Rodadero permite dedicar o dia à praia e à paisagem desta baía de Santa Marta. Consulte transporte autorizado, pontos de embarque e condições do mar antes de sair. O passeio corresponde à Playa Blanca de Santa Marta, não à praia homônima de Barú."
+        }
+      },
+      "publication_status": "draft",
+      "availability_verified": false,
+      "registration_verified": false,
+      "partnership": false,
+      "image_status": "original_especifico_y_permiso_pendientes",
+      "image_asset": null,
+      "text_approval": false,
+      "image_approval": false,
+      "content_type": "experience",
+      "location_id": "santa-marta:playa-blanca",
+      "related_location_ids": [],
+      "counts_as_top8_place": false,
+      "event_date": null
+    },
+    {
+      "id": "moto-acuatica",
+      "destination": "santa-marta",
+      "operator": null,
+      "source_url": "https://www.discoversantamarta.travel/wp-content/uploads/2024/03/07032024-GUIA-GENERAL-DIGITAL-ESP.pdf",
+      "checked_at": "2026-10-17",
+      "evidence": "Guía turística2024 menciona motos acuáticas, evidencia indexada; PDF35MB excede acceso web directo. No prueba oferta vigente ni prestador específico.",
+      "translations": {
+        "es": {
+          "name": "Paseo en moto acuática",
+          "description": "Una propuesta para explorar la oferta náutica de Santa Marta con un prestador autorizado. Antes de contratar, consulta la zona habilitada, los requisitos de edad, el acompañamiento, el equipo de protección y las condiciones del mar. Confirma disponibilidad y restricciones directamente con el prestador."
+        },
+        "en": {
+          "name": "Personal watercraft outing",
+          "description": "An option for exploring Santa Marta’s water activities with an authorised provider. Before booking, check permitted areas, age requirements, supervision, protective equipment and sea conditions. Confirm availability and restrictions directly with the provider."
+        },
+        "pt-BR": {
+          "name": "Passeio de moto aquática",
+          "description": "Uma proposta para conhecer as atividades náuticas de Santa Marta com um prestador autorizado. Antes de contratar, consulte áreas permitidas, requisitos de idade, acompanhamento, equipamentos de proteção e condições do mar. Confirme disponibilidade e restrições diretamente com o prestador."
+        }
+      },
+      "publication_status": "draft",
+      "availability_verified": false,
+      "registration_verified": false,
+      "partnership": false,
+      "image_status": "original_especifico_y_permiso_pendientes",
+      "image_asset": null,
+      "text_approval": false,
+      "image_approval": false,
+      "content_type": "experience",
+      "location_id": null,
+      "related_location_ids": [],
+      "counts_as_top8_place": false,
+      "event_date": null,
+      "operator_validation_status": "pending",
+      "publication_gate": "No publicar como oferta reservable ni asignar playa concreta hasta verificar prestador y zona."
     }
   ],
   "not_imported": true,

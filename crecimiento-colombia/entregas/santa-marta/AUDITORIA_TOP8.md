@@ -1,5 +1,7 @@
 # Auditoría Top8 · Santa Marta
 
+**Estado vigente tras nueva instrucción humana:** siete lugares geográficos propuestos y octavo pendiente. La tabla de ocho que sigue se conserva como propuesta histórica, no selección aprobada; ver actualización de tipología al final y matriz JSON vigente.
+
 Propuesta editorial razonada, no ranking estadístico ni aforo oficial. Se corrige el criterio anterior de variedad por cuotas: se eligen motivos de viaje y visitas de mayor relevancia turística. La disponibilidad o aprobación de una foto no afecta posición. Tayrona precede expresamente a Rodadero.
 
 | Orden | Atractivo | Motivo | Confianza |
@@ -47,3 +49,11 @@ Propuesta editorial razonada, no ranking estadístico ni aforo oficial. Se corri
 - Paquete actual v5 conserva8 anteriores: falta aplicarCiudad Perdida+Playa Blanca y retirar tarjetas independientes Museo/Acuario tras coordinación; no afirmar web corregida.
 
 No se borran lugares excluidos: inventario y medición conservados. No se importó el cambio ni se generó IA. Originales ya elegidos conservan historial y alcance de aprobación; no trasladar aprobaciones entre componentes.
+
+## Actualización humana posterior · tipología y corte pendiente
+
+**La tabla anterior es propuesta histórica; el puesto8 de Playa Blanca no está resuelto ni aprobado.** Hay siete lugares geográficos propuestos y un corte pendiente; no se rellena artificialmente. La playa se conserva como entidad geográfica candidata y la excursión a ella pertenece a experiencias. Teyuna es sitio arqueológico; la caminata para visitarlo es una experiencia relacionada, sin dobleconteo de lugar.
+
+La visita al Acuario pasa a experiencias por decisión humana. El establecimiento Centro de Vida Marina (antes Acuario Rodadero, distinto de Mundo Marino) se conserva en directorio/referencia. Minca/Taganga/Rodadero mantienen identidades; salida a Minca y café son actividades, no eventos fechados inventados. Moto acuática: propuesta de experiencia con lugar/prestador pendientes y sin oferta vigente afirmada.
+
+La matriz JSON contiene el estado vigente y `CLASIFICACION_LUGARES_EXPERIENCIAS.json` relaciona entidades mediante location_id. Nada se ha aplicado a base de datos, paquete o preprod.

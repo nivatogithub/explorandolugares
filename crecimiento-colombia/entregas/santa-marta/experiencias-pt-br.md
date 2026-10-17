@@ -36,3 +36,21 @@ Observe o litoral a partir do mar em um passeio a vela. O percurso depende da pr
 
 https://www.velerosantamarta.com/index-en.html
 
+## Visita ao Centro de Vida Marina
+
+Conheça as exposições do Centro de Vida Marina, antes chamado Acuario Rodadero, e aproxime-se da biodiversidade do Caribe colombiano. Confirme programação, acesso e condições de visita diretamente com o estabelecimento. É uma instituição diferente do Acuario Mundo Marino.
+
+https://centrodevidamarina.com/
+
+## Passeio a Playa Blanca
+
+Um passeio de barco saindo de El Rodadero permite dedicar o dia à praia e à paisagem desta baía de Santa Marta. Consulte transporte autorizado, pontos de embarque e condições do mar antes de sair. O passeio corresponde à Playa Blanca de Santa Marta, não à praia homônima de Barú.
+
+https://colombia.travel/es/santa-marta/playa-blanca
+
+## Passeio de moto aquática
+
+Uma proposta para conhecer as atividades náuticas de Santa Marta com um prestador autorizado. Antes de contratar, consulte áreas permitidas, requisitos de idade, acompanhamento, equipamentos de proteção e condições do mar. Confirme disponibilidade e restrições diretamente com o prestador.
+
+https://www.discoversantamarta.travel/wp-content/uploads/2024/03/07032024-GUIA-GENERAL-DIGITAL-ESP.pdf
+
