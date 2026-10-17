@@ -38,5 +38,23 @@
   "ai_final": {
     "generated": false,
     "approved": false
+  },
+  "ai_publication_review": {
+    "route": null,
+    "route_options": [
+      "authorized_transformation",
+      "independent_composition"
+    ],
+    "references_actually_sent": [],
+    "permission_basis": null,
+    "independent_composition_basis": null,
+    "output_provider_terms_source": null,
+    "applicable_output_conditions": [],
+    "attributions_required": [],
+    "similarity_and_fidelity_review": null,
+    "detector_is_not_rights_evidence": true,
+    "status": "pending",
+    "editorial_approval": false,
+    "publication_authorized": false
   }
 }
