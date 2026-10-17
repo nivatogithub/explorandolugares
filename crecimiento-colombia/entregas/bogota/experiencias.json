@@ -287,18 +287,18 @@
       "pt-BR": "Ciclovía recreativa"
     },
     "textos": {
-      "es": "Programa ciudadano; verificar mapa y cierres. Foto histórica, no oferta de Bike Tours.",
-      "en": "Public programme; check routes and closures. Historical photo, not a Bike Tours offer.",
-      "pt-BR": "Programa público; confira trechos e fechamentos. Foto histórica, não oferta Bike Tours."
+      "es": "Recorre a pie o en bicicleta un tramo habilitado de la Ciclovía distrital. Consulta corredores y avisos del IDRD antes de salir; esta experiencia editorial es independiente de los tours privados.",
+      "en": "Walk or cycle along an open section of the city Ciclovía. Check IDRD routes and notices before setting out; this editorial experience is independent of private tours.",
+      "pt-BR": "Caminhe ou pedale por um trecho aberto da Ciclovía distrital. Consulte os percursos e avisos do IDRD antes de sair; esta experiência editorial é independente dos passeios privados."
     },
     "clase": "editorial_autonoma",
     "sitio_id": null,
     "municipio_real": "Bogotá D.C.",
-    "ubicacion": "Punto operador Carrera3 #12-42, La Candelaria; recorrido exacto por confirmar",
+    "ubicacion": "Red de corredores del programa distrital Ciclovía; elegir tramo en mapa oficial vigente. No corresponde al punto de encuentro BikeTours.",
     "fuentes": [
       "S17"
     ],
-    "consulta": "2026-10-16",
+    "consulta": "2026-10-17",
     "foto_id": "actividad-ciclovia",
     "foto_estado": "referencia_historica_del_programa_no_operador",
     "operador": null,
@@ -312,7 +312,10 @@
     "public_status": "borrador_privado",
     "bloqueo": null,
     "aprobado": false,
-    "ilustracion": "no_generada"
+    "ilustracion": "no_generada",
+    "fuentes_complementarias": [
+      "https://www.idrd.gov.co/ciclovia/inicio"
+    ]
   },
   {
     "id": "bike-tour",
@@ -322,9 +325,9 @@
       "pt-BR": "Passeio de bicicleta: Bogotá Bike Tours"
     },
     "textos": {
-      "es": "Oferta en sitio propio; ruta, RNT y disponibilidad por confirmar directamente.",
-      "en": "Offer on operator website; route, registration and availability need direct confirmation.",
-      "pt-BR": "Oferta no site próprio; roteiro, registro e disponibilidade precisam de confirmação."
+      "es": "El operador documenta un recorrido en bicicleta por sectores de Bogotá con contexto histórico, arte urbano, mercado y café. El itinerario puede variar por clima y características del grupo; consulta directamente idioma, condiciones y disponibilidad.",
+      "en": "The operator documents a cycling tour through parts of Bogotá, combining history, street art, a market and coffee. The itinerary may vary with weather and the group; check language, conditions and availability directly.",
+      "pt-BR": "O operador apresenta um passeio de bicicleta por setores de Bogotá, combinando história, arte urbana, mercado e café. O roteiro pode variar conforme o clima e o grupo; consulte diretamente idioma, condições e disponibilidade."
     },
     "clase": "oferta_documentada_operador",
     "sitio_id": null,
@@ -333,11 +336,11 @@
     "fuentes": [
       "S22"
     ],
-    "consulta": "2026-10-16",
+    "consulta": "2026-10-17",
     "foto_id": null,
     "foto_estado": "faltante",
     "operador": "Bogotá Bike Tours",
-    "canal_publico": "https://www.bogotabiketours.com/",
+    "canal_publico": "https://www.bogotabiketours.com/service-page/bike-tour-english-or-spanish",
     "alianza": false,
     "vigencia_confirmada": false,
     "registro_verificado": false,

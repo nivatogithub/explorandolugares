@@ -57,7 +57,7 @@
       "uso": "hero",
       "opcion_numero": 2,
       "titulo_original": "Bogotá, Monserrate, 2023-06 CN-02.jpg",
-      "author": "Steffen Schmitz (Carschten)",
+      "author": "© Steffen Schmitz (Carschten) / Wikimedia Commons",
       "source_page": "https://commons.wikimedia.org/wiki/File:Bogot%C3%A1%2C_Monserrate%2C_2023-06_CN-02.jpg",
       "original_url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Bogot%C3%A1%2C_Monserrate%2C_2023-06_CN-02.jpg",
       "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Bogot%C3%A1%2C_Monserrate%2C_2023-06_CN-02.jpg/960px-Bogot%C3%A1%2C_Monserrate%2C_2023-06_CN-02.jpg",
@@ -69,16 +69,28 @@
         4042,
         2713
       ],
-      "local_file": null,
-      "sha256": null,
+      "local_file": "revision-v4/referencias/colpatria-2-thumb.jpg",
+      "sha256": "4eba8dc26a62fde2a6fe80415eccffd8b555417d2ef69bf7a73852da26b9f74e",
       "encargo_visual": "Vista urbana al atardecer; medir tamaño/reconocimiento de Colpatria, no asumir aptitud por serQualityImage.",
       "identity_factual_urls": [
         "https://visitbogota.co/es/que-hacer-en-bogota/cultura/torre-colpatria"
       ],
       "aprobado": false,
-      "inspeccion_original": "pendiente",
-      "inspeccion_recortes": "pendiente",
-      "estado": "pendiente_descarga_no_presentar_como_apta",
+      "inspeccion_original": "miniatura_inspeccionada_no_original_2026-10-17",
+      "inspeccion_recortes": {
+        "metodo": "simulacion_cover_center_sin_navegador",
+        "desktop": [
+          600,
+          330
+        ],
+        "mobile": [
+          350,
+          240
+        ],
+        "evidencia": "qa-miniaturas-recortes.jpg",
+        "resultado": "Colpatria no domina ni queda suficientemente clara en móvil; conservar panorama secundario y elegir hero1 para icono."
+      },
+      "estado": "rechazada_para_colpatria_iconica_panorama_secundario",
       "via_IA_propuesta": "transformacion_autorizada_condicionada",
       "condiciones_IA": [
         "Licencia permite uso comercial/adaptación del recurso concreto.",
@@ -87,7 +99,14 @@
         "Si no se puede cumplir permiso/ShareAlike elegir composición independiente basada en hechos sin subir/copiar expresión de referencia restringida.",
         "No generar hasta aprobación individual de original/uso/texto; luego segunda revisión de ilustración."
       ],
-      "maestro_completo_disponible": false
+      "maestro_completo_disponible": false,
+      "dimensiones_reales": [
+        960,
+        644
+      ],
+      "bytes": 286145,
+      "tipo_archivo_local": "miniatura_oficial_no_original",
+      "observacion_visual": "Panorama desde Monserrate con Bacatá dominante; Colpatria pequeña entre árboles. Alternativa urbana, no recomendada para iconoColpatria."
     },
     {
       "id": "jardin-1",
@@ -218,16 +237,28 @@
         4000,
         3000
       ],
-      "local_file": null,
-      "sha256": null,
+      "local_file": "revision-v4/referencias/simon-1-thumb.jpg",
+      "sha256": "8cc9c5565bb71bce1d58ba328ed03d38720bedcb8da4ecac6adfa801632ebfaa",
       "encargo_visual": "Lago visto desde cascada; escena propia del parque y contexto, no árbol/banco genérico.",
       "identity_factual_urls": [
         "https://www.idrd.gov.co/parques-y-escenarios/parque-simon-bolivar"
       ],
       "aprobado": false,
-      "inspeccion_original": "pendiente",
-      "inspeccion_recortes": "pendiente",
-      "estado": "pendiente_descarga_no_presentar_como_apta",
+      "inspeccion_original": "miniatura_inspeccionada_no_original_2026-10-17",
+      "inspeccion_recortes": {
+        "metodo": "simulacion_cover_center_sin_navegador",
+        "desktop": [
+          600,
+          330
+        ],
+        "mobile": [
+          350,
+          240
+        ],
+        "evidencia": "qa-miniaturas-recortes.jpg",
+        "resultado": "Lago y orillas se conservan en ambos; bote histórico no implica oferta actual."
+      },
+      "estado": "apta_para_eleccion_de_referencia_pendiente_aprobacion",
       "via_IA_propuesta": "transformacion_autorizada_condicionada",
       "condiciones_IA": [
         "Licencia permite uso comercial/adaptación del recurso concreto.",
@@ -236,7 +267,14 @@
         "Si no se puede cumplir permiso/ShareAlike elegir composición independiente basada en hechos sin subir/copiar expresión de referencia restringida.",
         "No generar hasta aprobación individual de original/uso/texto; luego segunda revisión de ilustración."
       ],
-      "maestro_completo_disponible": false
+      "maestro_completo_disponible": false,
+      "dimensiones_reales": [
+        960,
+        720
+      ],
+      "bytes": 117650,
+      "tipo_archivo_local": "miniatura_oficial_no_original",
+      "observacion_visual": "Lago amplio, orillas y contexto reconocible; candidata para tarjeta parque. Foto histórica2010, no garantiza servicio de botes."
     }
   ],
   "rechazos_conservados": [
