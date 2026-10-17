@@ -23,3 +23,5 @@
 - Para investigar, seleccionar atractivos o preparar imágenes/textos de destinos, leer `crecimiento-colombia/GUIA_GENERACION_DESTINOS.md`; aplicar ocho atractivos prioritarios en los destinos amplios actuales y separar portada, historia y fichas.
 
 - Incorporar cada corrección relevante del propietario a las reglas reutilizables y checklist, además del estado del destino. Para descubrir atractivos y encuadres consultar Tripadvisor y contrastar portales turísticos locales/nacionales; exigir fotografías icónicas reconocibles y revisar el recorte antes de presentarlas. Ver la sección Aprendizaje continuo de `crecimiento-colombia/GUIA_GENERACION_DESTINOS.md`.
+
+- Selección principal: ocho de mayor prioridad turística, no ocho por variedad de categorías. Auditar excluidos frente al octavo y justificar orden; aplicar Monserrate > Salitre Mágico y Tayrona > El Rodadero. Ver sección Los ocho de mayor prioridad en `crecimiento-colombia/GUIA_GENERACION_DESTINOS.md`.
