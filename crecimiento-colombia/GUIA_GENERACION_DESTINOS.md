@@ -175,3 +175,11 @@ Cada experiencia requiere escena propia representativa (caminar, navegar, visita
 ## Arví: cabinas y paisaje como referencia principal
 
 Preferencia expresa del propietario: para representar Arví mostrar el cable y el paisaje del parque, con cabinas reconocibles; la fachada de estación no es la referencia principal elegida. Verificar LíneaL/CableArví, no sustituir por otras líneas urbanas. No basta que exista una cabina diminuta en un panorama: debe reconocerse en tarjeta. Conservar referencias anteriores como antecedentes sin fingir aprobación.
+
+## Flujo fotográfico vigente: URLs elegidas por el propietario
+
+Instrucción posterior del propietario,17/10/2026: él buscará manualmente las fotografías y enviará las URLs que elija. Prevalece sobre las instrucciones anteriores de búsqueda autónoma en Tripadvisor/portales/bancos. No iniciar ni reactivar búsquedas o lotes de descarga de nuevas candidatas para llenar alternativas. Conservar fuentes y archivos ya obtenidos y las aprobaciones porhash.
+
+El coordinador presenta qué componentes están identificados, el uso exacto (portada/historia/atractivo/experiencia) y si su inclusión está confirmada o pendiente. No pedir material para una ficha como si ya estuviera seleccionada cuando su prioridad está en discusión. El usuario puede enviar URLs de manera incremental con destino y componente; no exigir formatos técnicos ni un paquete completo. Si uso/elección están claros, registrar sin reconfirmar lo mismo.
+
+Al recibir URL, comprobar fuente original/identidad y preparar una vía permitida para creación IA conforme al skill, explicando solo bloqueos concretos; mantener aprobación de referencia, imagen generada y publicación separadas. No sustituir la elección por otra foto sin comunicarlo. Si es miniatura, localizar su fuente es validación de la URL elegida, no licencia para reiniciar una búsqueda abierta de alternativas. Textos, auditoríaTop8, clasificación, integración y QA pueden seguir en paralelo dentro del alcance autorizado.
