@@ -1,5 +1,5 @@
 {
-  "checked": 19,
+  "checked": 20,
   "checks": [
     {
       "id": "SM-H6-01",
@@ -205,6 +205,17 @@
         1213
       ],
       "status": "ready_individual_reference_choice",
+      "approved": false
+    },
+    {
+      "id": "SM-P7-01",
+      "file": "imagenes/componentes-top8-v7/originales/SM-P7-01.jpg",
+      "integrity": "PASS",
+      "dimensions": [
+        4636,
+        3076
+      ],
+      "status": "not_selected_visual_quality",
       "approved": false
     }
   ],

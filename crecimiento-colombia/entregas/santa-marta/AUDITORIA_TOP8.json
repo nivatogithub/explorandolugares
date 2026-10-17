@@ -1,7 +1,7 @@
 {
   "destination": "santa-marta",
   "date": "2026-10-17",
-  "state": "propuesta_editorial_auditada_no_importada",
+  "state": "propuesta_por_tipo_con_octavo_pendiente_no_importada",
   "method": "Juicio editorial trazable: reconocimiento como motivo de viaje, promoción institucional/nacional, identidad autónoma y alcance turístico. Sin cuotas de variedad ni fórmula numérica inventada. Desempate incierto expresado, nunca resuelto por disponibilidad de foto.",
   "hard_constraints": [
     "exactamente8",
@@ -85,7 +85,8 @@
         "S2"
       ],
       "confidence": "alta",
-      "statistical_rank": false
+      "statistical_rank": false,
+      "entity_type": "geographic_place"
     },
     {
       "id": "ciudad-perdida",
@@ -104,7 +105,8 @@
         "S3"
       ],
       "confidence": "alta",
-      "statistical_rank": false
+      "statistical_rank": false,
+      "entity_type": "geographic_place"
     },
     {
       "id": "minca",
@@ -123,7 +125,8 @@
         "S10"
       ],
       "confidence": "media_alta",
-      "statistical_rank": false
+      "statistical_rank": false,
+      "entity_type": "geographic_place"
     },
     {
       "id": "rodadero",
@@ -142,7 +145,8 @@
         "S10"
       ],
       "confidence": "alta",
-      "statistical_rank": false
+      "statistical_rank": false,
+      "entity_type": "geographic_place"
     },
     {
       "id": "quinta",
@@ -161,7 +165,8 @@
         "S6"
       ],
       "confidence": "media_alta",
-      "statistical_rank": false
+      "statistical_rank": false,
+      "entity_type": "geographic_place"
     },
     {
       "id": "taganga",
@@ -180,7 +185,8 @@
         "S10"
       ],
       "confidence": "media_alta",
-      "statistical_rank": false
+      "statistical_rank": false,
+      "entity_type": "geographic_place"
     },
     {
       "id": "centro",
@@ -201,26 +207,29 @@
         "S10"
       ],
       "confidence": "media_alta",
-      "statistical_rank": false
+      "statistical_rank": false,
+      "entity_type": "geographic_place"
     },
     {
       "id": "playa-blanca",
       "name": "Playa Blanca · sector Rodadero",
-      "included": true,
-      "proposed_order": 8,
+      "included": false,
+      "proposed_order": null,
       "jurisdiction": "Distrito de Santa Marta, Magdalena",
       "jurisdiction_evidence": [
         "S4",
         "S5"
       ],
       "reason": "Excursión costera autónoma promovida por INDETUR, con identidad distinta de la playa urbana Rodadero; octavo puesto provisional frente al Acuario/Museo. No es Playa Blanca de Barú ni de Tayrona.",
-      "comparison_with_eighth": "Corte provisional; evidencia promocional institucional y excursión específica. No hay aforos comparables que demuestren superioridad estadística.",
+      "comparison_with_eighth": "Lugar geográfico conservado; excursión asociada es experiencia. Corte del octavo pendiente por comentario humano; no afirmar posición8 resuelta.",
       "sources": [
         "S4",
         "S5"
       ],
       "confidence": "media",
-      "statistical_rank": false
+      "statistical_rank": false,
+      "entity_type": "geographic_place",
+      "status": "pending_cutoff_geographic_place"
     },
     {
       "id": "museo-oro",
@@ -233,20 +242,22 @@
         "S11"
       ],
       "confidence": "alta_identidad_media_corte",
-      "jurisdiction": "DistritoSanta Marta; ver fuentes y límites de evidencia."
+      "jurisdiction": "DistritoSanta Marta; ver fuentes y límites de evidencia.",
+      "entity_type": "establishment_or_point_of_interest"
     },
     {
       "id": "acuario",
       "name": "Acuario y Museo del Mar del Rodadero",
       "included": false,
-      "status": "fuera_top8_provisional",
-      "comparison_with_eighth": "Atracción familiar relevante; frente al octavo se prioriza excursiónPlaya Blanca por promoción y alcance general del destino, decisión editorial de confianza media. No confundir con Mundo Marino.",
+      "status": "experience_and_establishment_by_human_decision",
+      "comparison_with_eighth": "Visita al Acuario clasificada como experiencia por decisión humana; establecimiento conservado en directorio/referencia. No desplaza automáticamente un lugar ni se borra por tipología.",
       "sources": [
         "S1",
         "S11"
       ],
       "confidence": "media",
-      "jurisdiction": "DistritoSanta Marta; ver fuentes y límites de evidencia."
+      "jurisdiction": "DistritoSanta Marta; ver fuentes y límites de evidencia.",
+      "entity_type": "establishment_or_point_of_interest"
     },
     {
       "id": "bahia-concha",
@@ -258,7 +269,8 @@
         "S2"
       ],
       "confidence": "alta",
-      "jurisdiction": "ParqueTayrona, DistritoSanta Marta"
+      "jurisdiction": "ParqueTayrona, DistritoSanta Marta",
+      "entity_type": "geographic_place"
     },
     {
       "id": "cabo-san-juan",
@@ -270,7 +282,8 @@
         "S2"
       ],
       "confidence": "alta",
-      "jurisdiction": "ParqueTayrona, DistritoSanta Marta"
+      "jurisdiction": "ParqueTayrona, DistritoSanta Marta",
+      "entity_type": "geographic_place"
     },
     {
       "id": "playa-cristal",
@@ -282,7 +295,8 @@
         "S2"
       ],
       "confidence": "alta",
-      "jurisdiction": "ParqueTayrona, DistritoSanta Marta"
+      "jurisdiction": "ParqueTayrona, DistritoSanta Marta",
+      "entity_type": "geographic_place"
     },
     {
       "id": "taironaka",
@@ -295,7 +309,8 @@
         "S9"
       ],
       "confidence": "media",
-      "jurisdiction": "Don Diego, corregimiento Guachaca, Santa Marta; ubicaciónTaironaka contrastada operador y Alcaldía, falta delimitación catastral exacta."
+      "jurisdiction": "Don Diego, corregimiento Guachaca, Santa Marta; ubicaciónTaironaka contrastada operador y Alcaldía, falta delimitación catastral exacta.",
+      "entity_type": "geographic_place"
     },
     {
       "id": "bello-horizonte",
@@ -307,7 +322,8 @@
         "S5"
       ],
       "confidence": "media",
-      "jurisdiction": "DistritoSanta Marta; ver fuentes y límites de evidencia."
+      "jurisdiction": "DistritoSanta Marta; ver fuentes y límites de evidencia.",
+      "entity_type": "geographic_place"
     },
     {
       "id": "pibe",
@@ -319,7 +335,8 @@
         "S11"
       ],
       "confidence": "media",
-      "jurisdiction": "DistritoSanta Marta; ver fuentes y límites de evidencia."
+      "jurisdiction": "DistritoSanta Marta; ver fuentes y límites de evidencia.",
+      "entity_type": "establishment_or_point_of_interest"
     },
     {
       "id": "catedral",
@@ -331,7 +348,8 @@
         "S1"
       ],
       "confidence": "alta",
-      "jurisdiction": "DistritoSanta Marta; ver fuentes y límites de evidencia."
+      "jurisdiction": "DistritoSanta Marta; ver fuentes y límites de evidencia.",
+      "entity_type": "geographic_place"
     },
     {
       "id": "buritaca",
@@ -343,7 +361,8 @@
         "S9"
       ],
       "confidence": "baja_comparacion",
-      "jurisdiction": "DistritoSanta Marta; ver fuentes y límites de evidencia."
+      "jurisdiction": "DistritoSanta Marta; ver fuentes y límites de evidencia.",
+      "entity_type": "geographic_place"
     },
     {
       "id": "palomino",
@@ -355,16 +374,21 @@
         "S1"
       ],
       "confidence": "pendiente_fuente_municipal_especifica",
-      "jurisdiction": "Dibulla, LaGuajira: no validado documental municipal en esta auditoría, pendiente antes de asignar."
+      "jurisdiction": "Dibulla, LaGuajira: no validado documental municipal en esta auditoría, pendiente antes de asignar.",
+      "entity_type": "geographic_place"
     }
   ],
   "uncertainties": [
     "Orden2a 7 editorial: no conteos homogéneos ni ranking oficial; Ciudad Perdida relevancia alta aunque aptitud física limita público.",
-    "Corte8: Playa Blanca vsAcuario vsMuseo no demostradoestadísticamente. Museo integrado explícitamente enCentro; priorización debe revisarse con evidencia comparable.",
     "Taironaka jurisdiccióncontrastada a nivel sector Don Diego, no polígono exacto de predio.",
-    "Paquete actual v5 conserva8 anteriores: falta aplicarCiudad Perdida+Playa Blanca y retirar tarjetas independientes Museo/Acuario tras coordinación; no afirmar web corregida."
+    "Paquete actual v5 conserva8 anteriores: falta aplicarCiudad Perdida+Playa Blanca y retirar tarjetas independientes Museo/Acuario tras coordinación; no afirmar web corregida.",
+    "Actualización humana: separar lugar y actividad; hay7 lugares propuestos y corte8 pendiente. No importar antigua propuesta de PlayaBlanca enposición8 como aprobada."
   ],
   "package_changed": false,
   "ai_generated": false,
-  "publication_authorized": false
+  "publication_authorized": false,
+  "classification_file": "CLASIFICACION_LUGARES_EXPERIENCIAS.json",
+  "top8_confirmed_count": null,
+  "proposed_geographic_count": 7,
+  "eighth_cutoff_status": "pending_human_editorial_decision"
 }

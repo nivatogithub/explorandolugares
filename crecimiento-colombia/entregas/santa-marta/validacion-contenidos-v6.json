@@ -4,7 +4,7 @@
   "checks": [
     {
       "component": "experiences",
-      "count": 6,
+      "count": 9,
       "three_languages": true,
       "sources": true,
       "unique_ids": true,
@@ -13,7 +13,7 @@
     },
     {
       "component": "directory",
-      "count": 10,
+      "count": 11,
       "three_languages": true,
       "sources": true,
       "unique_ids": true,
@@ -27,5 +27,6 @@
   "visual_candidates_count": 14,
   "tayrona_choices_ready": 2,
   "hero_good_choices_complete": false,
-  "visual_scope": "5 originales iniciales +2 portadas extra +1 Acuario +6 experiencias; todos inspeccionados. Descargado no implica apto."
+  "visual_scope": "5 originales iniciales +2 portadas extra +1 Acuario +6 experiencias; todos inspeccionados. Descargado no implica apto.",
+  "classification_validation": "validacion-clasificacion-v7.json"
 }
