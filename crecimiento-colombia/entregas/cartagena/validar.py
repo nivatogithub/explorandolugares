@@ -39,6 +39,19 @@ assert sum(c['decision']=='aprobado' for c in review['components'])==15
 assert not any(c['id'].startswith('CTG-PORTADA-LICENCIA') for c in review['components'])
 assert (P/'historial/revision-41-componentes.json').is_file()
 assert (P/'historial/decision-usuario-original-3fab25.json').is_file()
+if (P/'reporte-preprod.json').exists():
+ report=read('reporte-preprod.json'); package=read('paquete-preprod.json')
+ assert report['intended_environment']=='preprod_local_only' and not report['publication_approved']
+ assert not report['database_modified'] and not report['browser_used'] and not report['container_started']
+ assert report['package_sha256']==hashlib.sha256((P/report['package']).read_bytes()).hexdigest()
+ assert report['source_package_sha256']==hashlib.sha256((P/report['source_package']).read_bytes()).hexdigest()
+ assert len(package['places'])==8 and all(p['publication_status']=='draft' for p in package['places'])
+ assert package['hero_image']['image_origin']=='external'
+ for locale in ['es','en','pt-BR']:
+  assert 'provis' in package['destination']['translations'][locale]['intro'].lower()
+  for source in package['destination']['sources'][locale]:assert source['label'] and source['url'].startswith('https://')
+  for image in [package['hero_image'],*[p['image'] for p in package['places']]]:
+   assert 'provis' in image['caption'][locale].lower() and len(image['caption'][locale])<=500
 for lang in ['es','en','pt-BR']:
  assert d['destination']['history'][lang] and d['practical'][lang]
  assert all(p['translations'][lang]['description'] for p in d['places'])
