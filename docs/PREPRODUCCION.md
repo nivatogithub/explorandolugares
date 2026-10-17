@@ -1,5 +1,7 @@
 # Proceso de preproducción y publicación
 
+La entrada portable es `preprod/README.md`; reúne instalación en otro equipo, configuración local, comandos de operación y diferencias con GoDaddy. Los scripts antiguos en `scripts/` se conservan como accesos de compatibilidad.
+
 Decisión del propietario del 16 de octubre de 2026. Prevalece sobre instrucciones históricas de publicación directa o merge previo a main.
 
 ## Secuencia obligatoria
@@ -32,7 +34,7 @@ Desde esa copia:
 Portal: http://127.0.0.1:8088/
 Administrador: http://127.0.0.1:8088/admin/
 
-Un contenedor x86_64 con Apache, PHP 8.3.33 y MariaDB 10.11.19. Versiones y ajustes observados directamente en GoDaddy el 16 de octubre de 2026, en `infra/preprod/production-runtime.json`. El controlador PDO se llama mysql, pero el motor real de producción es MariaDB. Se fijan límites PHP, modo SQL, charset/collation de servidor, conexión y base, zona horaria y distinción de mayúsculas. El hosting ejecuta PHP mediante LiteSpeed sobre CloudLinux; localmente se usa el módulo Apache sobre Debian. No se clonan los componentes propietarios i360/ionCube ni la infraestructura cPanel, TLS y límites LVE; no es una copia idéntica del hosting. Escucha solo en loopback; MariaDB no publica puertos. La red Podman es interna, sin salida a Internet desde la aplicación. Supervisor gestiona ambos servicios.
+Un contenedor x86_64 con Apache, PHP 8.3.33 y MariaDB 10.11.19. Versiones y ajustes observados directamente en GoDaddy el 16 de octubre de 2026, en `preprod/infra/production-runtime.json`. El controlador PDO se llama mysql, pero el motor real de producción es MariaDB. Se fijan límites PHP, modo SQL, charset/collation de servidor, conexión y base, zona horaria y distinción de mayúsculas. El hosting ejecuta PHP mediante LiteSpeed sobre CloudLinux; localmente se usa el módulo Apache sobre Debian. No se clonan los componentes propietarios i360/ionCube ni la infraestructura cPanel, TLS y límites LVE; no es una copia idéntica del hosting. Escucha solo en loopback; MariaDB no publica puertos. La red Podman es interna, sin salida a Internet desde la aplicación. Supervisor gestiona ambos servicios.
 
 La base vigente queda en el volumen `explorando-preprod-mariadb-10-11`. El volumen anterior `explorando-preprod-mysql` se conserva separado y no se conecta a MariaDB; no se borró ni se convirtió automáticamente. La nueva base carga la semilla versionada, sin copiar registros de producción. La configuración, credenciales, imágenes locales y documentos privados permanecen en `.local/preprod`, excluido de Git. En este equipo, el panel local abre sin contraseña por decisión del propietario mediante `.local/preprod/settings.json` (`admin_without_password: true`). Este archivo está ignorado por Git. Una instalación nueva crea la opción en false y conserva la contraseña. El script de arranque inyecta un acceso exclusivo del paquete local, condicionado a las variables de Apache, configuración local y host loopback; ese acceso no está en las fuentes desplegables de producción. Las cuentas de negocios mantienen su autenticación. Para probar métricas de visitantes, utilizar un navegador/perfil sin sesión administrativa. Las credenciales locales de reserva se generan en `.local/preprod/admin.json`; no usar contraseñas de producción.
 
@@ -62,7 +64,7 @@ Después de `build` y `up`, ejecutar `python3 scripts/check-preprod-parity.py`. 
 
 ## Acceso administrativo abierto: exclusivamente local
 
-El cambio de acceso directo no se subió a GitHub al rechazarse el permiso. Los archivos de infraestructura describen un entorno local; no activan un acceso abierto en producción. El inyector solo se ejecuta en `preprod-local.py`, después de generar la copia `.local/preprod/release`. El empaquetador de producción no copia `infra/preprod`, no ejecuta el inyector y conserva la autenticación de `backend/app/bootstrap.php`. `test_full_release_coverage.py` comprueba que el paquete de producción no contiene herramientas preprod ni el marcador de sesión local. No volver a subir este cambio sin autorización del propietario.
+El cambio de acceso directo no se subió a GitHub al rechazarse el permiso. Los archivos de infraestructura describen un entorno local; no activan un acceso abierto en producción. El inyector solo se ejecuta en `preprod-local.py`, después de generar la copia `.local/preprod/release`. El empaquetador de producción no copia `preprod/infra`, no ejecuta el inyector y conserva la autenticación de `backend/app/bootstrap.php`. `test_full_release_coverage.py` comprueba que el paquete de producción no contiene herramientas preprod ni el marcador de sesión local. No volver a subir este cambio sin autorización del propietario.
 
 ## Resultado de la comparación local
 

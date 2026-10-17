@@ -1,5 +1,4 @@
 #!/bin/sh
 set -eu
 ROOT=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
-cd "$ROOT"
-exec python3 scripts/preprod-local.py up
+exec "$ROOT/preprod/actualizar.sh" "$@"

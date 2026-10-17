@@ -13,13 +13,13 @@ RUN docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp \
  && docker-php-ext-install -j1 gd zip
 RUN docker-php-ext-install -j1 intl soap sockets pcntl exif gettext bz2 xsl
 RUN a2enmod rewrite headers && a2dissite 000-default
-COPY infra/preprod/apache.conf /etc/apache2/sites-enabled/preprod.conf
-COPY infra/preprod/php.ini /usr/local/etc/php/conf.d/zz-godaddy-parity.ini
-COPY infra/preprod/mariadb.cnf /etc/mysql/mariadb.conf.d/99-godaddy-parity.cnf
-COPY infra/preprod/supervisord.conf /etc/supervisor/conf.d/preprod.conf
-COPY infra/preprod/entrypoint.sh /usr/local/bin/preprod-entrypoint
-COPY infra/preprod/admin-access.php /usr/local/lib/preprod-admin-access.php
-COPY infra/preprod/init.php /usr/local/lib/preprod-init.php
+COPY preprod/infra/apache.conf /etc/apache2/sites-enabled/preprod.conf
+COPY preprod/infra/php.ini /usr/local/etc/php/conf.d/zz-godaddy-parity.ini
+COPY preprod/infra/mariadb.cnf /etc/mysql/mariadb.conf.d/99-godaddy-parity.cnf
+COPY preprod/infra/supervisord.conf /etc/supervisor/conf.d/preprod.conf
+COPY preprod/infra/entrypoint.sh /usr/local/bin/preprod-entrypoint
+COPY preprod/infra/admin-access.php /usr/local/lib/preprod-admin-access.php
+COPY preprod/infra/init.php /usr/local/lib/preprod-init.php
 RUN chmod +x /usr/local/bin/preprod-entrypoint
 EXPOSE 80
 ENTRYPOINT ["/usr/local/bin/preprod-entrypoint"]
