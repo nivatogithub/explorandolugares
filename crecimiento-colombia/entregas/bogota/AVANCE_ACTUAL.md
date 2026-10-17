@@ -19,7 +19,7 @@ Descarga original del lago Simón Bolívar devolvió HTTP 429 (Retry-After 1); a
 
 ## Límites
 
-No se ha generado IA ni aprobado/publicado contenido. No se modifica base de datos ni paquete provisional. La revisión de referencias no detiene otras tareas independientes.
+En este lote no se genera IA ni publica contenido. La ilustración del Jardín sí está aprobada por hash; el coordinador reportó su integración en preproducción en5550cb9. Este worker no modifica base de datos y conserva el paquete de avance como evidencia histórica. La revisión de referencias no detiene otras tareas independientes.
 
 ## Actividades · corrección comprobada
 
@@ -36,3 +36,7 @@ Paqueteavance generado y leído por validador PHP real:8tarjetas/9imágenes; cam
 ## Lote visual v5 concluido · 2026-10-17
 
 Tres originales descargados e inspeccionados con recortes. Aptas para elección por uso declarado: Nacional1 vista elevada parcial y Maloka1 exterior histórico; Nacional2 detalle queda secundaria. Ver revision-v5/revision.html y qa-recortes.jpg. Manifest autor/licencia/hash/dimensiones en candidatas.json; derivados WebP menores300KB. Ninguna aprobación ni ingreso de Nacional al TOP8. Pendientes escenas específicas de actividades/directorio, decisión editorial TOP8 y demás revisiones. No hay descarga o permiso pendiente en este lote.
+
+## Actividades v6 · investigación concluida, fotos pendientes
+
+Fuentes oficiales de Planetario y Cinemateca contrastadas por índice tras error de apertura. Textos de astronomía y cine ampliados ES/EN/PT sin fechas/cupos inventados. Referencias específicas de salaPlanetario2014 y muestraslunares2019 documentadas, aún pendientes descarga/inspección. Renovación domo2023 limita uso como espacioactual; fotoCinemateca con fechas contradictorias no se ofrece como sedeactual. No se modifica Jardín aprobado/integrado ni ranking.
