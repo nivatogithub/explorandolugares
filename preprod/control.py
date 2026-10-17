@@ -52,6 +52,12 @@ def main():
  # Recovery and its private mailbox exist only in the local release.
  shutil.copyfile(ROOT/'preprod/infra/recover.php',release/'public/business/recover.php')
  shutil.copyfile(ROOT/'preprod/infra/mailbox.php',release/'public/admin/buzon-local.php')
+ # Make enabled public account flows discoverable without opening production access.
+ shutil.copyfile(ROOT/'preprod/infra/account-entry.js',release/'public/assets/preprod-account-entry.js')
+ shutil.copyfile(ROOT/'preprod/infra/account-entry.css',release/'public/assets/preprod-account-entry.css')
+ menu=release/'public/assets/menu-principal.js'
+ menu.write_text(menu.read_text()+"\n(()=>{const css=document.createElement('link');css.rel='stylesheet';css.href='/assets/preprod-account-entry.css?v=1';document.head.append(css);const script=document.createElement('script');script.src='/assets/preprod-account-entry.js?v=1';script.defer=true;document.head.append(script);})();\n")
+
  login=release/'public/business/login.php'
  text=login.read_text().replace('Si olvidaste tu contraseña, contacta al equipo para que te envíe un enlace temporal de recuperación. Por ahora el envío del enlace es manual.','<a href="/negocios/recuperar-clave/">Olvidé mi contraseña</a> · Preproducción: correo en el buzón local.')
  login.write_text(text)
@@ -59,8 +65,10 @@ def main():
  text=htaccess.read_text().replace('RewriteEngine On','RewriteEngine On\nRewriteRule ^negocios/recuperar-clave/?$ business/recover.php [L,QSA]',1)
  htaccess.write_text(text)
  navigation=release/'public/admin/_navigation.php'
- navigation.write_text(navigation.read_text().replace('<section><h2>Sistema</h2>','<section><h2>Sistema</h2><a href="buzon-local.php">Buzón local de pruebas</a>'))
+ navigation.write_text(navigation.read_text().replace('<section><h2>Sistema</h2>','<section><h2>Probar cuentas en preprod</h2><a href="/negocios/registro/">Crear cuenta de negocio</a><a href="/negocios/acceso/">Iniciar sesión de negocio</a><a href="/negocios/recuperar-clave/">Recuperar contraseña</a><a href="buzon-local.php">Buzón local de pruebas</a></section><section><h2>Sistema</h2>'))
 
+ # Refresh asset versions after adding the local navigation.
+ run(sys.executable,'scripts/versiones-medicion.py','--public',str(release/'public'))
  # This access bypass exists only in the local build, never in hosting sources.
  bootstrap=release/'app/bootstrap.php';source=bootstrap.read_text()
  anchor="    session_start();\n    $_SESSION['csrf'] ??= bin2hex(random_bytes(32));"

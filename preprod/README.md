@@ -135,3 +135,5 @@ python3 preprod/probar-cuentas.py
 ```
 
 Crea una cuenta ficticia temporal, prueba recuperación, contraseña de un solo uso, login y logout, y retira únicamente sus propios datos al terminar. La creación pública de cuenta/solicitud y su revisión se comprueban además en `backend/tests/admin-pages.integration.py` con base desechable. No se crea ni publica un negocio real durante esas pruebas.
+
+Para encontrar los flujos sin escribir URL: el sitio público local muestra **Tu cuenta de negocio → Crear cuenta / Iniciar sesión / Mi cuenta** debajo del encabezado. Administración incluye **Probar cuentas en preprod** con registro, acceso, recuperación y buzón local. Esta navegación se incorpora únicamente al paquete local y sus recursos se versionan después de incorporarla para evitar que la caché oculte los enlaces.
