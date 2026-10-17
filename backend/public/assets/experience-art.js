@@ -3,9 +3,8 @@
   'use strict';
   const script = document.currentScript;
   if (!script || script.dataset.destination !== 'cartagena') return;
-  const locale = document.documentElement.lang;
-  const label = locale.startsWith('en') ? 'Activity illustration' : locale.startsWith('pt') ? 'Ilustração da atividade' : 'Ilustración de actividad';
   const ink = '#172b42', accent = '#c94720', sand = '#f2c77e', sea = '#418d93';
+  const details = `<g fill="#fffdf8" opacity=".8"><path d="M32 66c3-17 23-21 33-7 15-7 28 2 28 13H32Z"/><path d="M462 125c6-21 29-25 42-9 18-8 36 3 36 17h-78Z"/></g><g stroke="#fffdf8" opacity=".45" stroke-width="2"><path d="M24 345h79m15 0h22m328-9h88"/></g>`;
   const common = `<rect width="600" height="360" fill="#fff0dc"/><circle cx="460" cy="83" r="43" fill="${sand}"/><path d="M35 94h64m-40 12h82m344 27h59" stroke="${ink}" stroke-opacity=".15" stroke-width="3" stroke-linecap="round"/><path d="M0 316Q140 278 290 313T600 305V360H0Z" fill="${sand}" opacity=".5"/>`;
   const waves = `<path d="M0 250Q70 225 150 250T300 250T450 250T600 250V360H0Z" fill="${sea}"/><path d="M30 291q28-15 56 0t56 0m45 30q28-15 56 0t56 0m81-32q28-15 56 0t56 0" fill="none" stroke="#fff8ed" stroke-width="4" stroke-linecap="round" opacity=".7"/>`;
   const fish = `<path d="M100 197q30-25 57 0-27 25-57 0l-17 15v-30Z" fill="${sand}"/><circle cx="143" cy="193" r="3" fill="${ink}"/><path d="M450 235q22-18 42 0-20 18-42 0l-13 10v-20Z" fill="#fff0dc"/>`;
@@ -27,10 +26,23 @@
     figure.className = 'experience-art';
     figure.dataset.kind = kind;
     // Only constant local SVG geometry is parsed; no user text enters SVG markup.
-    figure.innerHTML = `<svg viewBox="0 0 600 360" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">${common}${scenes[kind]}</svg>`;
-    const caption = document.createElement('figcaption');
-    caption.textContent = label;
-    figure.append(caption);
+    figure.innerHTML = `<svg viewBox="0 0 600 360" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">${common}${scenes[kind]}${details}</svg>`;
     card.prepend(figure);
   }
+  const fortress = `<path d="M0 300q121-79 261-66t339 42v84H0Z" fill="#718b61"/><path d="m72 263 76-44 122 6 52-51 155 38 53 68-98 42-204-12Z" fill="#bb8256" stroke="${ink}" stroke-width="3" stroke-linejoin="round"/><path d="m72 263 128 22 70-60-122-6Z" fill="#f2c77e"/><path d="m270 225 52-51 155 38-82 51Z" fill="#e5b77d"/><path d="m200 285 70-60 125 38 37 59-204-12Z" fill="#d19a66"/><path d="m250 253 42-44 98 20-28 28Z" fill="#fff0dc"/><path d="m125 218 25-65 101-23 92 24-21 20-52 51Z" fill="#d7aa76" stroke="${ink}" stroke-width="3" stroke-linejoin="round"/><path d="m150 153 101-23 92 24-82 36-136 28Z" fill="#f2c77e"/><path d="m261 190 82-36-21 20-52 51-145-7Z" fill="#c68e60"/><path d="m211 147 7-41 39-7 27 19-4 27Z" fill="#fff0dc" stroke="${ink}" stroke-width="3"/><path d="m217 106 21-17 19 10m-10 17v15" fill="none" stroke="${ink}" stroke-width="3"/><path d="M244 90V52m0 0 29 7-29 10" stroke="${ink}" stroke-width="3" fill="${accent}"/><path d="m463 225 2-36 17-10 17 10 1 46" fill="#e5b77d" stroke="${ink}" stroke-width="3"/><path d="m464 188 18-14 18 14m-18 7v12" fill="none" stroke="${ink}" stroke-width="3"/><path d="m84 315 64-21 58 17 62 12-35 24" fill="none" stroke="#fff0dc" stroke-width="13" stroke-linejoin="round"/><g stroke="#946b48" stroke-width="2" opacity=".65"><path d="m139 246 52 8m90 14 40 9m-40 13 18 4m64-8 20 5m-203-64 34-19m94-7 25 6m47 34 17 5m-155-78 29 7"/></g><path d="m42 260-20-35m20 17-21-3m22 6 16-16m484 52 26-41m-15 18 24-5" fill="none" stroke="#718b61" stroke-width="8" stroke-linecap="round"/>`;
+  const skyline = `<path d="M0 208q115-28 240-8t360-2v162H0Z" fill="${sea}"/><path d="M24 204q214-22 404 20l172 28v35l-172-33Q214 211 24 228Z" fill="${sand}"/><g stroke="${ink}" stroke-width="2.5" stroke-linejoin="round"><path d="m81 207 2-94 31-8 17 102Z" fill="#df9b70"/><path d="M140 207V80l37-10 15 142Z" fill="#fffdf8"/><path d="M202 213V128l29-10 19 98Z" fill="#e5b77d"/><path d="M260 220V54l43-12 20 184Z" fill="#fffdf8"/><path d="M331 228V109l34-9 16 135Z" fill="#df9b70"/><path d="M388 237V87l35-9 20 170Z" fill="#fffdf8"/><path d="M454 248v-97l33-8 21 116Z" fill="#e5b77d"/></g><g stroke="${sea}" stroke-width="3" opacity=".7"><path d="M93 124h20m-20 14h20m-20 14h20m-20 14h20m-20 14h20m38-84h26m-26 15h26m-26 15h26m-26 15h26m-26 15h26m-26 15h26m-26 15h26m91-111h30m-30 15h30m-30 15h30m-30 15h30m-30 15h30m-30 15h30m-30 15h30m-30 15h30m-30 15h30m105-94h25m-25 16h25m-25 16h25m-25 16h25m-25 16h25m-25 16h25m-25 16h25"/></g><path d="M0 292q105-29 231-2t369 31v39H0Z" fill="${sea}"/><path d="M41 318h81m-53 16h30m217-39h65m53 33h92" stroke="#fff8ed" stroke-width="4" stroke-linecap="round"/><g stroke="${ink}" stroke-width="4" fill="none"><path d="m533 288 4-52m0 7-28-9m28 8 25-16m-25 16-7-25"/></g><path d="m509 234 28 7 25-15-15-5-13 10-13-7Z" fill="#718b61"/><path d="m70 268 15 10 28-2-11 9-27-1Z" fill="#fffdf8"/>`;
+  for (const card of document.querySelectorAll('#atractivos-destino > article[data-place-slug]')) {
+    const slug = card.dataset.placeSlug;
+    if (!['san-felipe','bocagrande'].includes(slug)) continue;
+    const figure = document.createElement('figure');
+    figure.className = 'experience-art destination-place-caricature';
+    figure.dataset.kind = slug;
+    figure.setAttribute('role','img');
+    figure.setAttribute('aria-label',card.querySelector('h3').textContent);
+    figure.innerHTML = `<svg viewBox="0 0 600 360" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">${common}${slug === 'san-felipe' ? fortress : skyline}${details}</svg>`;
+    const photo = card.querySelector('.highlight-photo');
+    if (photo) photo.hidden = true;
+    card.prepend(figure);
+  }
+
 })();
