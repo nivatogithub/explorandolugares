@@ -1,0 +1,370 @@
+{
+  "destination": "santa-marta",
+  "date": "2026-10-17",
+  "state": "propuesta_editorial_auditada_no_importada",
+  "method": "Juicio editorial trazable: reconocimiento como motivo de viaje, promoción institucional/nacional, identidad autónoma y alcance turístico. Sin cuotas de variedad ni fórmula numérica inventada. Desempate incierto expresado, nunca resuelto por disponibilidad de foto.",
+  "hard_constraints": [
+    "exactamente8",
+    "Tayrona antes de Rodadero",
+    "sin duplicar hijos de Tayrona",
+    "TagangaMinca Rodadero identidadesconservadas",
+    "fotografía y rol no alteran prioridad"
+  ],
+  "sources": {
+    "S1": {
+      "title": "Colombia Travel · Santa Marta",
+      "url": "https://colombia.travel/en/santa-marta",
+      "consulted_at": "2026-10-17"
+    },
+    "S2": {
+      "title": "Parques Nacionales · Tayrona",
+      "url": "https://www.parquesnacionales.gov.co/nuestros-parques/pnn-tayrona/",
+      "consulted_at": "2026-10-17"
+    },
+    "S3": {
+      "title": "ICANH · ubicación Teyuna",
+      "url": "https://www.icanh.gov.co/parques-icanh/parque-arqueologico-teyuna/guia-turistica",
+      "consulted_at": "2026-10-17"
+    },
+    "S4": {
+      "title": "INDETUR · Playa Blanca",
+      "url": "https://indetur.gov.co/playa-blanca/",
+      "consulted_at": "2026-10-17"
+    },
+    "S5": {
+      "title": "INDETUR · certificación playas2023",
+      "url": "https://indetur.gov.co/2023/12/playa-blanca-recibe-reconocimiento-como-una-de-las-mas-sostenibles-de-colombia/",
+      "consulted_at": "2026-10-17"
+    },
+    "S6": {
+      "title": "Museo Bolivariano · Quinta",
+      "url": "https://www.museobolivariano.org.co/laquinta/",
+      "consulted_at": "2026-10-17"
+    },
+    "S7": {
+      "title": "Banco República · Museo Tairona",
+      "url": "https://banrep.gov.co/es/noticias/nuevo-museo-oro-tairona",
+      "consulted_at": "2026-10-17"
+    },
+    "S8": {
+      "title": "Taironaka · ubicación propia",
+      "url": "https://www.taironaka.com/",
+      "consulted_at": "2026-10-17"
+    },
+    "S9": {
+      "title": "Alcaldía · Don Diego en Guachaca",
+      "url": "https://santamarta.gov.co/sala-prensa/noticias/pmu-para-restitucion-de-bienes-del-estado-en-el-predio-los-acantilados-se",
+      "consulted_at": "2026-10-17"
+    },
+    "S10": {
+      "title": "INDETUR · zonas turísticas",
+      "url": "https://indetur.gov.co/2018/06/definen-gerencias-zonales-para-el-rodadero-taganga-el-centro-guachaca-y-minca/",
+      "consulted_at": "2026-10-17"
+    },
+    "S11": {
+      "title": "Tripadvisor · descubrimiento, no ranking oficial",
+      "url": "https://www.tripadvisor.com/Attractions-g297484-Activities-Santa_Marta_Santa_Marta_Municipality_Magdalena_Department.html",
+      "consulted_at": "2026-10-17"
+    }
+  },
+  "matrix": [
+    {
+      "id": "tayrona",
+      "name": "Parque Nacional Natural Tayrona",
+      "included": true,
+      "proposed_order": 1,
+      "jurisdiction": "Distrito de Santa Marta, Magdalena",
+      "jurisdiction_evidence": [
+        "S1",
+        "S2"
+      ],
+      "reason": "Símbolo natural de convocatoria nacional e internacional; incluye Cabo San Juan, Bahía Concha y otras playas propias sin multiplicar tarjetas.",
+      "comparison_with_eighth": "Prioridad editorial superior a Playa Blanca por reconocimiento como motivo de viaje/circuito principal.",
+      "sources": [
+        "S1",
+        "S2"
+      ],
+      "confidence": "alta",
+      "statistical_rank": false
+    },
+    {
+      "id": "ciudad-perdida",
+      "name": "Teyuna · Ciudad Perdida",
+      "included": true,
+      "proposed_order": 2,
+      "jurisdiction": "Distrito de Santa Marta, Magdalena",
+      "jurisdiction_evidence": [
+        "S1",
+        "S3"
+      ],
+      "reason": "Motivo de viaje internacional autónomo y parque arqueológico administrado por ICANH; excursión exigente de varios días no reduce su relevancia.",
+      "comparison_with_eighth": "Prioridad editorial superior a Playa Blanca por reconocimiento como motivo de viaje/circuito principal.",
+      "sources": [
+        "S1",
+        "S3"
+      ],
+      "confidence": "alta",
+      "statistical_rank": false
+    },
+    {
+      "id": "minca",
+      "name": "Minca",
+      "included": true,
+      "proposed_order": 3,
+      "jurisdiction": "Distrito de Santa Marta, Magdalena",
+      "jurisdiction_evidence": [
+        "S1",
+        "S10"
+      ],
+      "reason": "Destino de montaña/café/naturaleza reconocido de forma independiente en promoción de Santa Marta; conservar identidad de corregimiento.",
+      "comparison_with_eighth": "Prioridad editorial superior a Playa Blanca por reconocimiento como motivo de viaje/circuito principal.",
+      "sources": [
+        "S1",
+        "S10"
+      ],
+      "confidence": "media_alta",
+      "statistical_rank": false
+    },
+    {
+      "id": "rodadero",
+      "name": "El Rodadero",
+      "included": true,
+      "proposed_order": 4,
+      "jurisdiction": "Distrito de Santa Marta, Magdalena",
+      "jurisdiction_evidence": [
+        "S1",
+        "S10"
+      ],
+      "reason": "Balneario y núcleo turístico urbano consolidado, motivo propio de estancia; Tayrona debe precederlo por instrucción expresa del propietario.",
+      "comparison_with_eighth": "Prioridad editorial superior a Playa Blanca por reconocimiento como motivo de viaje/circuito principal.",
+      "sources": [
+        "S1",
+        "S10"
+      ],
+      "confidence": "alta",
+      "statistical_rank": false
+    },
+    {
+      "id": "quinta",
+      "name": "Quinta de San Pedro Alejandrino",
+      "included": true,
+      "proposed_order": 5,
+      "jurisdiction": "Distrito de Santa Marta, Magdalena",
+      "jurisdiction_evidence": [
+        "S1",
+        "S6"
+      ],
+      "reason": "Hito histórico nacional y visita específica, con relevancia propia superior a una parada de museo adicional.",
+      "comparison_with_eighth": "Prioridad editorial superior a Playa Blanca por reconocimiento como motivo de viaje/circuito principal.",
+      "sources": [
+        "S1",
+        "S6"
+      ],
+      "confidence": "media_alta",
+      "statistical_rank": false
+    },
+    {
+      "id": "taganga",
+      "name": "Taganga",
+      "included": true,
+      "proposed_order": 6,
+      "jurisdiction": "Distrito de Santa Marta, Magdalena",
+      "jurisdiction_evidence": [
+        "S1",
+        "S10"
+      ],
+      "reason": "Bahía/pueblo pesquero y base de buceo con reconocimiento propio; no fusionar con Rodadero o centro.",
+      "comparison_with_eighth": "Prioridad editorial superior a Playa Blanca por reconocimiento como motivo de viaje/circuito principal.",
+      "sources": [
+        "S1",
+        "S10"
+      ],
+      "confidence": "media_alta",
+      "statistical_rank": false
+    },
+    {
+      "id": "centro",
+      "name": "Centro histórico y bahía de Santa Marta",
+      "included": true,
+      "proposed_order": 7,
+      "jurisdiction": "Distrito de Santa Marta, Magdalena",
+      "jurisdiction_evidence": [
+        "S1",
+        "S7",
+        "S10"
+      ],
+      "reason": "Circuito urbano fundamental: calles, Catedral, Camellón, Parque de los Novios y Museo del Oro como paradas; no cuotas separadas de iglesias/museos.",
+      "comparison_with_eighth": "Prioridad editorial superior a Playa Blanca por reconocimiento como motivo de viaje/circuito principal.",
+      "sources": [
+        "S1",
+        "S7",
+        "S10"
+      ],
+      "confidence": "media_alta",
+      "statistical_rank": false
+    },
+    {
+      "id": "playa-blanca",
+      "name": "Playa Blanca · sector Rodadero",
+      "included": true,
+      "proposed_order": 8,
+      "jurisdiction": "Distrito de Santa Marta, Magdalena",
+      "jurisdiction_evidence": [
+        "S4",
+        "S5"
+      ],
+      "reason": "Excursión costera autónoma promovida por INDETUR, con identidad distinta de la playa urbana Rodadero; octavo puesto provisional frente al Acuario/Museo. No es Playa Blanca de Barú ni de Tayrona.",
+      "comparison_with_eighth": "Corte provisional; evidencia promocional institucional y excursión específica. No hay aforos comparables que demuestren superioridad estadística.",
+      "sources": [
+        "S4",
+        "S5"
+      ],
+      "confidence": "media",
+      "statistical_rank": false
+    },
+    {
+      "id": "museo-oro",
+      "name": "Museo del Oro Tairona",
+      "included": false,
+      "status": "integrado_en_centro",
+      "comparison_with_eighth": "Visita significativa y rival plausible del octavo; se incluye como parada explícita del circuito Centro, no se borra. No hay prueba para proclamar que Playa Blanca tenga más visitantes.",
+      "sources": [
+        "S7",
+        "S11"
+      ],
+      "confidence": "alta_identidad_media_corte",
+      "jurisdiction": "DistritoSanta Marta; ver fuentes y límites de evidencia."
+    },
+    {
+      "id": "acuario",
+      "name": "Acuario y Museo del Mar del Rodadero",
+      "included": false,
+      "status": "fuera_top8_provisional",
+      "comparison_with_eighth": "Atracción familiar relevante; frente al octavo se prioriza excursiónPlaya Blanca por promoción y alcance general del destino, decisión editorial de confianza media. No confundir con Mundo Marino.",
+      "sources": [
+        "S1",
+        "S11"
+      ],
+      "confidence": "media",
+      "jurisdiction": "DistritoSanta Marta; ver fuentes y límites de evidencia."
+    },
+    {
+      "id": "bahia-concha",
+      "name": "Bahía Concha",
+      "included": false,
+      "status": "integrado_en_tayrona",
+      "comparison_with_eighth": "Sector de Tayrona confirmado por Parques; muy turístico, pero no ocupa una novena tarjeta duplicando al padre.",
+      "sources": [
+        "S2"
+      ],
+      "confidence": "alta",
+      "jurisdiction": "ParqueTayrona, DistritoSanta Marta"
+    },
+    {
+      "id": "cabo-san-juan",
+      "name": "Cabo San Juan",
+      "included": false,
+      "status": "integrado_en_tayrona",
+      "comparison_with_eighth": "Referente principal dentro deTayrona; foto aprobada del componente no crea posición independiente.",
+      "sources": [
+        "S2"
+      ],
+      "confidence": "alta",
+      "jurisdiction": "ParqueTayrona, DistritoSanta Marta"
+    },
+    {
+      "id": "playa-cristal",
+      "name": "Playa Cristal / Neguanje",
+      "included": false,
+      "status": "integrado_en_tayrona",
+      "comparison_with_eighth": "Sector/experiencia del parque; conservar información y acceso, sin doble conteo.",
+      "sources": [
+        "S2"
+      ],
+      "confidence": "alta",
+      "jurisdiction": "ParqueTayrona, DistritoSanta Marta"
+    },
+    {
+      "id": "taironaka",
+      "name": "Taironaka · río Don Diego",
+      "included": false,
+      "status": "fuera_top8_provisional",
+      "comparison_with_eighth": "Sitio arqueológico/ecohotel propio en Don Diego; candidato valioso, evidencia de convocatoria general menor que los 8 seleccionados. No confundirTaironaka con parque Tayrona.",
+      "sources": [
+        "S8",
+        "S9"
+      ],
+      "confidence": "media",
+      "jurisdiction": "Don Diego, corregimiento Guachaca, Santa Marta; ubicaciónTaironaka contrastada operador y Alcaldía, falta delimitación catastral exacta."
+    },
+    {
+      "id": "bello-horizonte",
+      "name": "Bello Horizonte",
+      "included": false,
+      "status": "fuera_top8_provisional",
+      "comparison_with_eighth": "Sector turístico/hotelero real de Santa Marta; frente aPlaya Blanca no hay evidencia revisada que justifique desplazarla por convocatoria como visita específica. Reconocimiento2023 no se presenta como certificación vigente.",
+      "sources": [
+        "S5"
+      ],
+      "confidence": "media",
+      "jurisdiction": "DistritoSanta Marta; ver fuentes y límites de evidencia."
+    },
+    {
+      "id": "pibe",
+      "name": "Monumento a Carlos Valderrama",
+      "included": false,
+      "status": "fuera_top8",
+      "comparison_with_eighth": "Identidad deportiva y parada fotográfica; no evidencia de peso como motivo de viaje por encima del corte.",
+      "sources": [
+        "S11"
+      ],
+      "confidence": "media",
+      "jurisdiction": "DistritoSanta Marta; ver fuentes y límites de evidencia."
+    },
+    {
+      "id": "catedral",
+      "name": "Catedral de Santa Marta",
+      "included": false,
+      "status": "integrado_en_centro",
+      "comparison_with_eighth": "Parada del circuito Centro, no otra tarjeta para completar ocho.",
+      "sources": [
+        "S1"
+      ],
+      "confidence": "alta",
+      "jurisdiction": "DistritoSanta Marta; ver fuentes y límites de evidencia."
+    },
+    {
+      "id": "buritaca",
+      "name": "Buritaca / desembocadura",
+      "included": false,
+      "status": "fuera_top8_provisional",
+      "comparison_with_eighth": "Candidato del corredor rural; falta evidencia comparativa homogénea que lo eleve sobre Playa Blanca; conservar inventario y verificar condiciones antes de textos definitivos.",
+      "sources": [
+        "S9"
+      ],
+      "confidence": "baja_comparacion",
+      "jurisdiction": "DistritoSanta Marta; ver fuentes y límites de evidencia."
+    },
+    {
+      "id": "palomino",
+      "name": "Palomino",
+      "included": false,
+      "status": "fuera_ambito",
+      "comparison_with_eighth": "No incorporar comoSanta Marta por cercanía o tours desde ciudad: jurisdicciónDibulla/LaGuajira requiere guía territorial propia; no afecta denominador Santa Marta.",
+      "sources": [
+        "S1"
+      ],
+      "confidence": "pendiente_fuente_municipal_especifica",
+      "jurisdiction": "Dibulla, LaGuajira: no validado documental municipal en esta auditoría, pendiente antes de asignar."
+    }
+  ],
+  "uncertainties": [
+    "Orden2a 7 editorial: no conteos homogéneos ni ranking oficial; Ciudad Perdida relevancia alta aunque aptitud física limita público.",
+    "Corte8: Playa Blanca vsAcuario vsMuseo no demostradoestadísticamente. Museo integrado explícitamente enCentro; priorización debe revisarse con evidencia comparable.",
+    "Taironaka jurisdiccióncontrastada a nivel sector Don Diego, no polígono exacto de predio.",
+    "Paquete actual v5 conserva8 anteriores: falta aplicarCiudad Perdida+Playa Blanca y retirar tarjetas independientes Museo/Acuario tras coordinación; no afirmar web corregida."
+  ],
+  "package_changed": false,
+  "ai_generated": false,
+  "publication_authorized": false
+}
