@@ -38,11 +38,11 @@ for x in b:
  assert not x['claimed'] and not x['contacted'] and x['publication_status']=='draft'
  assert set(x['source_ids'])<=s
 for x in a:
- assert x['original_downloaded'] and x['commercial_use'] and x['adaptation']
+ assert (x['original_downloaded'] or x.get('downloaded_source_file')) and x['commercial_use'] and x['adaptation']
  assert hashlib.sha256((r/x['file']).read_bytes()).hexdigest()==x['sha256']
  assert hashlib.sha256((r/x['original_file']).read_bytes()).hexdigest()==x['original_sha256']
- assert x['bytes']<=(300000 if 'medellin-1.webp' in x['file'] or 'skyline-2011.webp' in x['file'] else 120000)
+ assert x['bytes']<=(300000 if 'medellin-1.webp' in x['file'] or 'panorama-2005.webp' in x['file'] else 120000)
  with Image.open(r/x['file']) as im:assert im.format=='WEBP' and not im.getexif()
 files=sorted(p for p in r.rglob('*') if p.is_file() and p.name!='SHA256SUMS' and '__pycache__' not in p.parts)
 (r/'SHA256SUMS').write_text(''.join(hashlib.sha256(p.read_bytes()).hexdigest()+'  '+str(p.relative_to(r))+'\n' for p in files))
-print(f'OK: 3 idiomas, {len(c["places"])} atractivos sin duplicados, 10 fichas/3 categorías, {len(a)} originales/derivados, {len(choices)} propuestas numeradas con aptitud explícita, 3 clases de actividad, fuentes/hashes y decisiones independientes sin aprobación. No certifica importación final ni publicación.')
+print(f'OK: 3 idiomas, {len(c["places"])} sitios amplios, 8principales/9fotosdistintas enZIP, 10fichas/3categorías, {len(a)} archivosfuente trazables/derivados (incluyen miniaturasoficiales, no todosmaestros), decisiones independientes sinaprobación. No certifica importaciónMySQL ni publicación.')

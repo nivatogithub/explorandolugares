@@ -16,7 +16,8 @@
     "reference_approved": false,
     "license_review_approved": false,
     "illustration_generated": false,
-    "editorial_eligibility": "rechazada_para_portada"
+    "editorial_eligibility": "historica_no_vigente_para_V3",
+    "current_for_v3": false
   },
   {
     "id": "portada-2",
@@ -35,7 +36,8 @@
     "reference_approved": false,
     "license_review_approved": false,
     "illustration_generated": false,
-    "editorial_eligibility": "solo_detalle_arquitectonico"
+    "editorial_eligibility": "historica_no_vigente_para_V3",
+    "current_for_v3": false
   },
   {
     "id": "portada-3",
@@ -54,7 +56,8 @@
     "reference_approved": false,
     "license_review_approved": false,
     "illustration_generated": false,
-    "editorial_eligibility": "solo_detalle_arquitectonico"
+    "editorial_eligibility": "historica_no_vigente_para_V3",
+    "current_for_v3": false
   },
   {
     "id": "portada-4",
@@ -73,7 +76,8 @@
     "reference_approved": false,
     "license_review_approved": false,
     "illustration_generated": false,
-    "editorial_eligibility": "propuesta_con_limitacion_resolucion"
+    "editorial_eligibility": "historica_no_vigente_para_V3",
+    "current_for_v3": false
   },
   {
     "id": "portada-5",
@@ -92,7 +96,8 @@
     "reference_approved": false,
     "license_review_approved": false,
     "illustration_generated": false,
-    "editorial_eligibility": "propuesta_sin_aprobacion"
+    "editorial_eligibility": "historica_no_vigente_para_V3",
+    "current_for_v3": false
   },
   {
     "id": "portada-6",
@@ -111,6 +116,27 @@
     "reference_approved": false,
     "license_review_approved": false,
     "illustration_generated": false,
-    "editorial_eligibility": "propuesta_sin_aprobacion"
+    "editorial_eligibility": "historica_no_vigente_para_V3",
+    "current_for_v3": false
+  },
+  {
+    "id": "portada-7",
+    "number": 7,
+    "image_file": "images/panorama-2005.webp",
+    "original_file": "originales/panorama-2005.jpg",
+    "sha256": "f415408fdea9826e3c13a9f1a1731f86933ad376461dbbc2b81ae8260f8dcc62",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Medellin_panorama.jpg",
+    "author": "Fabioj (Wikipedia:User:fabioj), según ficha original",
+    "license": "CC BY-SA 3.0",
+    "photograph_date": "2005",
+    "reason": "Vista distante de ciudad y centro conColtejer según anotación fuente; silueta pequeña, histórica. Revisión pendiente, sin ampliar.",
+    "editorial_eligibility": "propuesta_distante_para_V3",
+    "current_for_v3": true,
+    "selected": false,
+    "reference_approved": false,
+    "license_review_approved": false,
+    "illustration_generated": false,
+    "desktop_crop": "sinrecorte,960x202disponible",
+    "mobile_crop": "sinrecorte; revisar reconocimiento deColtejer en plantilla real"
   }
 ]
