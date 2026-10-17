@@ -23,3 +23,7 @@ No iniciar búsqueda automática. El propietario enviará URLs de forma incremen
 | Conocer manglares y pesca tradicional en La Boquilla | Imagen de experiencia | pendiente_url_usuario |
 
 La Boquilla conserva la experiencia de manglar/pesca; Museo Histórico conserva la visita. No transferir sus fotografías automáticamente a otra función. Directorio gratuito: no requiere imágenes para sus tarjetas básicas.
+
+## Actualización v10 · prueba solicitada por el propietario
+
+Las siete experiencias ya tienen ilustraciones SVG genéricas originales en la vista privada. En esta prueba no requieren fotografías ni generación raster. Su aprobación visual sigue pendiente; las fotos antiguas no se borran. Portada, historia y atractivos conservan su flujo de imágenes específicas.
