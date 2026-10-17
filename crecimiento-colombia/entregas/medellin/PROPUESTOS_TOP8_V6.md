@@ -22,9 +22,9 @@ A Plaza Botero reúne esculturas monumentais de Fernando Botero no centro de Med
 
 Planeje seu percurso pelo centro e consulte as condições atuais de acesso à praça e ao museu. Respeite as obras e as pessoas que vivem e trabalham na região.
 
-- Opción1: [plaza-botero-2023](https://commons.wikimedia.org/wiki/File:Medell%C3%ADn,_Plaza_Botero,_2023-07_CN-01.jpg) · © Steffen Schmitz (Carschten) / Wikimedia Commons · 2023-07-05 · [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) · Inspección pendiente.
+- Opción1: [plaza-botero-2023](https://commons.wikimedia.org/wiki/File:Medell%C3%ADn,_Plaza_Botero,_2023-07_CN-01.jpg) · © Steffen Schmitz (Carschten) / Wikimedia Commons · 2023-07-05 · [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) · Apta para revisar: esculturas completas y plaza reconocible.
 
-- Opción2: [plaza-palacio-2017](https://commons.wikimedia.org/wiki/File:Vista_de_Plaza_Botero,_Palacio_de_la_Cultura,_Medellin,_Colombia,_2017-04-11.jpg) · Sebastian Reategui · 2017-04-11 · [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) · Inspección pendiente.
+- Opción2: [plaza-palacio-2017](https://commons.wikimedia.org/wiki/File:Vista_de_Plaza_Botero,_Palacio_de_la_Cultura,_Medellin,_Colombia,_2017-04-11.jpg) · Sebastian Reategui · 2017-04-11 · [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) · Secundaria contextual: domina Palacio; no primera opción para esculturas.
 
 ## Metro y Metrocable de Medellín
 
@@ -46,9 +46,9 @@ O metrô e os teleféricos permitem conhecer o relevo do vale do Aburrá e fazem
 
 A rede abrange vários municípios do vale. Consulte o mapa, o funcionamento e as condições de viagem de cada linha antes de sair. Para chegar ao circuito de arte e escadas rolantes da Comuna 13, planeje também o trecho a partir de San Javier.
 
-- Opción1: [metro-caf-2026](https://commons.wikimedia.org/wiki/File:01-26-2026_-_Tren_CAF_Metro_de_Medell%C3%ADn_(segunda_orden).jpg) · Minoh09 · 2026-01-16 · [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) · Inspección pendiente.
+- Opción1: [metro-caf-2026](https://commons.wikimedia.org/wiki/File:01-26-2026_-_Tren_CAF_Metro_de_Medell%C3%ADn_(segunda_orden).jpg) · Minoh09 · 2026-01-16 · [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) · Apta para revisar: tren de Medellín claramente identificable.
 
-- Opción2: [metro-santo-domingo-2020](https://commons.wikimedia.org/wiki/File:Estaci%C3%B3n_Santo_Domingo,_Medell%C3%ADn_03.jpg) · Bernard Gagnon · 2020-01-24 · [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) · Inspección pendiente.
+- Opción2: [metro-santo-domingo-2020](https://commons.wikimedia.org/wiki/File:Estaci%C3%B3n_Santo_Domingo,_Medell%C3%ADn_03.jpg) · Bernard Gagnon · 2020-01-24 · [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) · No recomendada principal: escalera técnica ocupa el encuadre.
 
 ## Fuentes y derechos
 

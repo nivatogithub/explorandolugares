@@ -28,12 +28,12 @@ for item in p['items']:
  parts.append(controls(item['id'],['ubicacion','texto_es','texto_en','texto_pt-BR'],sha(r/'PROPUESTOS_TOP8_V6.json')))
  parts.append('<h3>Referencias propuestas</h3><div class="grid">')
  for x in [a for a in photos if a['component']==item['id']]:
-  v=x['visual_review'];parts.append(f'<article><h3>Opción {x["number"]} · {e(x["id"])}</h3><p><strong>{e(v.get("aptitude","Pendiente inspección; no recomendada aún"))}</strong></p>')
+  v=x['visual_review'];limited=not v.get('recommend_for_review');parts.append('<details><summary>Solo contexto / limitada: opción '+str(x['number'])+'</summary>' if limited else '');parts.append(f'<article><h3>Opción {x["number"]} · {e(x["id"])}</h3><p><strong>{e(v.get("aptitude","Pendiente inspección; no recomendada aún"))}</strong></p>')
   if x.get('file'):parts.append(f'<img src="{e(x["file"])}" alt="{e(v.get("subject",x["id"]))}">')
   else:parts.append('<p>Descarga pendiente.</p>')
   parts.append(f'<p>{e(x["author"])} · {e(x["taken_at"])} · <a href="{e(x["source_url"])}">Ficha original</a> · <a href="{e(x["license_url"])}">{e(x["license"])}</a>. Reducción técnica sin recorte.</p><p>{e(v.get("observation","Inspección pendiente"))}</p><p>{e(x.get("artwork_review",x.get("territory_review")))}</p><p>{e(x["ai_conditions"])}</p>')
   if v.get('recommend_for_review'):parts.append(controls(x['id'],['referencia','licencia_y_uso','encuadre'],x.get('sha256','')))
-  parts.append('</article>');md+=['',f'- Opción{x["number"]}: [{x["id"]}]({x["source_url"]}) · {x["author"]} · {x["taken_at"]} · [{x["license"]}]({x["license_url"]}) · {v.get("aptitude","Inspección pendiente")}.']
+  parts.append('</article>');parts.append('</details>' if limited else '');md+=['',f'- Opción{x["number"]}: [{x["id"]}]({x["source_url"]}) · {x["author"]} · {x["taken_at"]} · [{x["license"]}]({x["license_url"]}) · {v.get("aptitude","Inspección pendiente")}.']
  parts.append('</div>')
 parts.append('<h2>Fuentes de textos y revisión de derechos</h2>')
 md+=['','## Fuentes y derechos','',p['rights_review']['ai_transformation']]

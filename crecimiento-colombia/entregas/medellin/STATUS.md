@@ -1,4 +1,6 @@
-# Lugar 3 · Medellín · estado vigente V4
+# Lugar 3 · Medellín · revisión vigente V4 y propuestas separadas V6
+
+Propuestas separadas V6: Plaza Botero y Metro/Metrocable con ES/EN/PT, cuatro originales completos y derivados inspeccionados. Vista `propuestos-top8-v6.html`; dos opciones principales revisables y dos limitadas colapsadas. No aplicadas a selección física, textos vigentes, preview principal, paquete ni aprobaciones. Licencia del fotógrafo y tratamiento de obras/personas diferenciados; no IA.
 
 Auditoría más reciente: `AUDITORIA_TOP8.md` / `.json`,39 candidatos y31 comparaciones con el8º. Propone sustituir Catedral/Pies por Plaza Botero y Metro/Metrocable; no aplicada, con disputas de corte explícitas. No hay ranking medido de toda la ciudad ni aprobaciones nuevas.
 

@@ -15,7 +15,7 @@
     "taken_at": "2023-07-05",
     "consulted_at": "2026-10-17",
     "target": "originales/plaza-botero-2023.jpg",
-    "status": "pendiente_descarga_inspeccion",
+    "status": "inspeccionada_sin_aprobacion",
     "selected": false,
     "human_approved": false,
     "ai_generated": false,
@@ -25,7 +25,43 @@
     "ai_conditions": "Elegir y aprobar referencia/uso concreto antes de cualquier IA. Atribuir/enlazar licencia/declarar cambios cuando CC BY; BY-SA requiere licencia compatible del derivado. CC0 de foto no libera automáticamente obras representadas.",
     "framing": "Conservar sujeto icónico y contexto; no recortar esculturas, tren/cabina o arquitectura identificadora. Inspección pendiente.",
     "artwork_review": "Contexto de esculturas permanentes de Fernando Botero y arquitectura exterior. Fuente primaria Ley23 art39 permite ciertas reproducciones de obras permanentes en plazas; registrar caso de uso y límites, no usar escultura aislada como activo3D/merch ni afirmar derechos del fotógrafo sobre escultura. No generada/ni aprobada.",
-    "visual_review": {}
+    "visual_review": {
+      "recommend_for_review": true,
+      "aptitude": "Apta para revisar: esculturas completas y plaza reconocible",
+      "subject": "Plaza Botero con esculturas monumentales completas, palmeras y Museo de Antioquia al fondo",
+      "observation": "La foto conserva las esculturas principales completas y su contexto urbano; no confundir la fachada lateral del Palacio con el Museo del fondo. Personas visibles en plaza pública. La licencia CC BY-SA del fotógrafo no se atribuye a Fernando Botero; uso contextual de obras permanentes revisado aparte, autorización individual de IA pendiente.",
+      "framing": "Conservar animales/figuras completas y entorno; reducción sin recorte. La proporción horizontal amplia funciona como referencia; no cortar peanas para encajar.",
+      "inspected_at": "2026-10-17",
+      "method": "view_image del original completo local",
+      "human_approved": false,
+      "generated_ai": false,
+      "final_crop_approved": false,
+      "technical_derivative_inspected": true,
+      "resize_only_no_crop": true,
+      "browser_mobile_desktop_qa": "pendiente_coordinador_IAB_disponible"
+    },
+    "file": "images/plaza-botero-2023.webp",
+    "sha256": "e33e8c33a0bc4ebaa89c85c892fbeaeece422801d97ce74d803b6af9b940638c",
+    "original_sha256": "4492113a2f601af9694bbd9c556e4137d286fa66c454f31a1f4e489fa4311622",
+    "bytes": 119260,
+    "dimensions": [
+      1000,
+      554
+    ],
+    "download_evidence": {
+      "id": "plaza-botero-2023",
+      "downloaded_url": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Medell%C3%ADn%2C_Plaza_Botero%2C_2023-07_CN-01.jpg",
+      "full_original": true
+    },
+    "conversion": {
+      "tool": "Pillow",
+      "orientation": "EXIF transpose",
+      "size": "thumbnail1000 LANCZOS, sin ampliar ni recortar",
+      "quality": 78,
+      "format": "WebP",
+      "method": 6,
+      "metadata": "EXIF/GPS omitidos"
+    }
   },
   {
     "id": "plaza-palacio-2017",
@@ -43,7 +79,7 @@
     "taken_at": "2017-04-11",
     "consulted_at": "2026-10-17",
     "target": "originales/plaza-palacio-2017.jpg",
-    "status": "pendiente_descarga_inspeccion",
+    "status": "inspeccionada_sin_aprobacion",
     "selected": false,
     "human_approved": false,
     "ai_generated": false,
@@ -53,7 +89,43 @@
     "ai_conditions": "Elegir y aprobar referencia/uso concreto antes de cualquier IA. Atribuir/enlazar licencia/declarar cambios cuando CC BY; BY-SA requiere licencia compatible del derivado. CC0 de foto no libera automáticamente obras representadas.",
     "framing": "Conservar sujeto icónico y contexto; no recortar esculturas, tren/cabina o arquitectura identificadora. Inspección pendiente.",
     "artwork_review": "Contexto de esculturas permanentes de Fernando Botero y arquitectura exterior. Fuente primaria Ley23 art39 permite ciertas reproducciones de obras permanentes en plazas; registrar caso de uso y límites, no usar escultura aislada como activo3D/merch ni afirmar derechos del fotógrafo sobre escultura. No generada/ni aprobada.",
-    "visual_review": {}
+    "visual_review": {
+      "recommend_for_review": false,
+      "aptitude": "Secundaria contextual: domina Palacio; no primera opción para esculturas",
+      "subject": "Vista de Plaza Botero y Palacio de la Cultura con Coltejer detrás",
+      "observation": "Plaza y esculturas visibles en parte inferior, con Palacio como sujeto dominante. Es un contexto urbano auténtico de Medellín, pero las obras quedan pequeñas. Útil como apoyo espacial y no como primera propuesta de tarjeta Plaza Botero.",
+      "framing": "No recortar la parte inferior de plaza/esculturas. Foto contextual, no aprobarla como retrato de una obra concreta.",
+      "inspected_at": "2026-10-17",
+      "method": "view_image del original completo local",
+      "human_approved": false,
+      "generated_ai": false,
+      "final_crop_approved": false,
+      "technical_derivative_inspected": true,
+      "resize_only_no_crop": true,
+      "browser_mobile_desktop_qa": "pendiente_coordinador_IAB_disponible"
+    },
+    "file": "images/plaza-palacio-2017.webp",
+    "sha256": "767c549b16ffed10577bd9a18e263470eab661ee8af88b313111e548fe7d3583",
+    "original_sha256": "11548e2707b7f9eba188df9e839047eb91ea047ecd30e3ef96ca24d42c647aec",
+    "bytes": 109268,
+    "dimensions": [
+      1000,
+      683
+    ],
+    "download_evidence": {
+      "id": "plaza-palacio-2017",
+      "downloaded_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Vista_de_Plaza_Botero%2C_Palacio_de_la_Cultura%2C_Medellin%2C_Colombia%2C_2017-04-11.jpg",
+      "full_original": true
+    },
+    "conversion": {
+      "tool": "Pillow",
+      "orientation": "EXIF transpose",
+      "size": "thumbnail1000 LANCZOS, sin ampliar ni recortar",
+      "quality": 78,
+      "format": "WebP",
+      "method": 6,
+      "metadata": "EXIF/GPS omitidos"
+    }
   },
   {
     "id": "metro-caf-2026",
@@ -71,7 +143,7 @@
     "taken_at": "2026-01-16",
     "consulted_at": "2026-10-17",
     "target": "originales/metro-caf-2026.jpg",
-    "status": "pendiente_descarga_inspeccion",
+    "status": "inspeccionada_sin_aprobacion",
     "selected": false,
     "human_approved": false,
     "ai_generated": false,
@@ -82,7 +154,43 @@
     "framing": "Conservar sujeto icónico y contexto; no recortar esculturas, tren/cabina o arquitectura identificadora. Inspección pendiente.",
     "territory_review": "Ficha Commons identifica Metro de Medellín, contrastar tren/estación visualmente tras descarga. Santo Domingo es nodo de Metrocable, no estación Arví; no confundir con otros sistemas ni líneas J/L.",
     "date_note": "Título01-26-2026, ficha/EXIF16ene2026; se conserva fecha de captura declarada, no inferir día desde título.",
-    "visual_review": {}
+    "visual_review": {
+      "recommend_for_review": true,
+      "aptitude": "Apta para revisar: tren de Medellín claramente identificable",
+      "subject": "Tren CAF del Metro de Medellín sobre vía elevada, letrero Niquía y Coltejer al fondo",
+      "observation": "Frente, laterales del tren, catenaria y skyline reconocibles; destino Niquía y símbolo del Metro verifican sistema local. Coltejer al fondo aporta identidad Medellín. No se infiere estación de toma exacta sin evidencia adicional. Imagen histórica de enero2026; no certifica estado actual de servicio.",
+      "framing": "Preservar frente completo y contexto elevado. Mantener4:3 completo; no adoptar recorte16:9 automático que quite frente/base o edificio.",
+      "inspected_at": "2026-10-17",
+      "method": "view_image del original completo local",
+      "human_approved": false,
+      "generated_ai": false,
+      "final_crop_approved": false,
+      "technical_derivative_inspected": true,
+      "resize_only_no_crop": true,
+      "browser_mobile_desktop_qa": "pendiente_coordinador_IAB_disponible"
+    },
+    "file": "images/metro-caf-2026.webp",
+    "sha256": "0ed02fde977955cd3e64f762ff926178b4c4d7db8372da8f006dde7c69433079",
+    "original_sha256": "cb9c2ba9fbc66f24c6f5d09d427981a51b6e555d7f2638e9abc12baa8ae75ab9",
+    "bytes": 80430,
+    "dimensions": [
+      1000,
+      750
+    ],
+    "download_evidence": {
+      "id": "metro-caf-2026",
+      "downloaded_url": "https://upload.wikimedia.org/wikipedia/commons/7/78/01-26-2026_-_Tren_CAF_Metro_de_Medell%C3%ADn_%28segunda_orden%29.jpg",
+      "full_original": true
+    },
+    "conversion": {
+      "tool": "Pillow",
+      "orientation": "EXIF transpose",
+      "size": "thumbnail1000 LANCZOS, sin ampliar ni recortar",
+      "quality": 82,
+      "format": "WebP",
+      "method": 6,
+      "metadata": "EXIF/GPS omitidos"
+    }
   },
   {
     "id": "metro-santo-domingo-2020",
@@ -100,7 +208,7 @@
     "taken_at": "2020-01-24",
     "consulted_at": "2026-10-17",
     "target": "originales/metro-santo-domingo-2020.jpg",
-    "status": "pendiente_descarga_inspeccion",
+    "status": "inspeccionada_sin_aprobacion",
     "selected": false,
     "human_approved": false,
     "ai_generated": false,
@@ -110,6 +218,42 @@
     "ai_conditions": "Elegir y aprobar referencia/uso concreto antes de cualquier IA. Atribuir/enlazar licencia/declarar cambios cuando CC BY; BY-SA requiere licencia compatible del derivado. CC0 de foto no libera automáticamente obras representadas.",
     "framing": "Conservar sujeto icónico y contexto; no recortar esculturas, tren/cabina o arquitectura identificadora. Inspección pendiente.",
     "territory_review": "Ficha Commons identifica Metro de Medellín, contrastar tren/estación visualmente tras descarga. Santo Domingo es nodo de Metrocable, no estación Arví; no confundir con otros sistemas ni líneas J/L.",
-    "visual_review": {}
+    "visual_review": {
+      "recommend_for_review": false,
+      "aptitude": "No recomendada principal: escalera técnica ocupa el encuadre",
+      "subject": "Cabinas del Metrocable en nodo Santo Domingo, vistas desde estación",
+      "observation": "Cabinas reales con marca Metro a la izquierda identificables, pero escalera técnica amarilla y soporte central dominan la imagen. La fuente identifica Santo Domingo; no rotular Arví ni líneaJ. Se conserva como referencia secundaria del mecanismo/estación, no sustituye una vista icónica clara del recorrido.",
+      "framing": "No intentar salvarla mediante recorte extremo que elimine el contexto; conseguir otra toma si se solicita Metrocable como sujeto principal.",
+      "inspected_at": "2026-10-17",
+      "method": "view_image del original completo local",
+      "human_approved": false,
+      "generated_ai": false,
+      "final_crop_approved": false,
+      "technical_derivative_inspected": true,
+      "resize_only_no_crop": true,
+      "browser_mobile_desktop_qa": "pendiente_coordinador_IAB_disponible"
+    },
+    "file": "images/metro-santo-domingo-2020.webp",
+    "sha256": "1adeea17e2d64275561dc8ec93daef8ff356cfccf548e3374e8fcfd136d9860c",
+    "original_sha256": "3ff8ef19ed5fafc36c9c5b326064db45c1e9be99a3c833399b291e5d889d4465",
+    "bytes": 114794,
+    "dimensions": [
+      1000,
+      666
+    ],
+    "download_evidence": {
+      "id": "metro-santo-domingo-2020",
+      "downloaded_url": "https://upload.wikimedia.org/wikipedia/commons/1/19/Estaci%C3%B3n_Santo_Domingo%2C_Medell%C3%ADn_03.jpg",
+      "full_original": true
+    },
+    "conversion": {
+      "tool": "Pillow",
+      "orientation": "EXIF transpose",
+      "size": "thumbnail1000 LANCZOS, sin ampliar ni recortar",
+      "quality": 74,
+      "format": "WebP",
+      "method": 6,
+      "metadata": "EXIF/GPS omitidos"
+    }
   }
 ]
