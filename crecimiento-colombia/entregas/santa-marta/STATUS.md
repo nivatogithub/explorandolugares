@@ -33,3 +33,7 @@ Avance importado únicamente en preproducción local. Ocho tarjetas, portada e i
 ## Portada urbana v5 · 17/10/2026
 
 Sustituida referencia de El Morro por toma aérea del Camellón y frente urbano de Santa Marta, fotografía de Giancarlos1234 de enero de 2022, CC BY-SA 4.0. Original completo conservado; WebP técnico, sin IA ni aprobación inferida. Importada solo en preproducción y verificada en ES/EN/PT-BR con ocho atractivos e historia independientes. Evidencia: verificacion-preprod-v5.json y evidencias-v4/portada-camellon-v5-preprod.png.
+
+## Revisión humana: portada rechazada · 17/10/2026
+
+El propietario rechaza Camellón v5: exceso de espacio abajo, edificios cortados arriba y poca identidad de ciudad. La referencia no está aprobada para IA. Dirección solicitada: vista elevada con ciudad y edificios completos, costa como contexto. Ejemplo Tayrona: kiosco reconocible sobre rocas y playa; buscar original y encuadre apropiado. Enlaces Google conservados en observaciones-portada-tayrona-v6.json; no se atribuye autor ni permiso desconocidos, ni se infiere aprobación final. Preprod conserva antecedente hasta tener reemplazo validado.
