@@ -1,0 +1,30 @@
+[
+  {
+    "id": "jardin-1",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Domos_del_Tropicario_de_Bogot%C3%A1.jpg",
+    "download_kind": "original",
+    "bytes": 13472868,
+    "sha256": "3fce0af5cf11bb9c9b5a42375820ff3e342644c1422cdca445b261d112308717"
+  },
+  {
+    "id": "jardin-2",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Tropicario_del_Jard%C3%ADn_Bot%C3%A1nico_de_Bogot%C3%A1.jpg",
+    "download_kind": "original",
+    "bytes": 623590,
+    "sha256": "b207525f976879f1d0222b1d804c86a5cdc420e4267e41785825507ee4e37189"
+  },
+  {
+    "id": "simon-1",
+    "error": "HTTP Error 429: Too many requests (f061ab2)",
+    "retry_after": "1",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/d/df/BOG_Lago_Parque_Sim%C3%B3n_Bol%C3%ADvar.JPG",
+    "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/BOG_Lago_Parque_Sim%C3%B3n_Bol%C3%ADvar.JPG/960px-BOG_Lago_Parque_Sim%C3%B3n_Bol%C3%ADvar.JPG"
+  },
+  {
+    "id": "colpatria-2",
+    "error": "HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)",
+    "retry_after": "600",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Bogot%C3%A1%2C_Monserrate%2C_2023-06_CN-02.jpg",
+    "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Bogot%C3%A1%2C_Monserrate%2C_2023-06_CN-02.jpg/960px-Bogot%C3%A1%2C_Monserrate%2C_2023-06_CN-02.jpg"
+  }
+]

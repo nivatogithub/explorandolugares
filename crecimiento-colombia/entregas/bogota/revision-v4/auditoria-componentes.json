@@ -1,0 +1,72 @@
+{
+  "destino": "CO-11-bogota",
+  "fecha": "2026-10-17",
+  "rama": "lugar/CO/bogota-dc/bogota",
+  "componentes": {
+    "inventario": {
+      "documentados": 20,
+      "principales": 8,
+      "estado": "seleccion_editorial_conservada_no_ranking_oficial"
+    },
+    "fuentes": {
+      "base": 33,
+      "nuevas": 15,
+      "estado": "consulta_metodo_y_bloqueos_documentados"
+    },
+    "textos": {
+      "estado": "borradores_ES_EN_PT_con_suplementos_no_aprobados",
+      "correcciones": [
+        "Movilidad/aeropuerto ya tienen fuentes oficiales, retirar afirmación de ausencia total al integrar.",
+        "Historia acota instalaciónmonumento1846, sin resolver fecha única cambio nombreplaza.",
+        "Jardín destaca domosTropicario, parque destaca lago; no fotoanimal/banco como imagenprincipal."
+      ]
+    },
+    "imagenes": {
+      "estado": "referencias_v4_descarga_coordinador_pendiente",
+      "rechazos_criterio": [
+        "tortugaJBB como portadaatractivo",
+        "banco330px parque como referenciafinal",
+        "cablesMonserrate portada",
+        "reusar original historia/plaza/portada"
+      ]
+    },
+    "actividades": {
+      "documentadas": 18,
+      "editoriales": 12,
+      "operador": 3,
+      "ocultas": 3,
+      "estado": "sin_fotos_operador_especificas_ni_confirmacion_RNT/disponibilidad"
+    },
+    "directorio": {
+      "fichas": 10,
+      "categorias": 3,
+      "direcciones_completadas_oficiales": 3,
+      "direccion_pendiente": [
+        "Tequendama Suites Bogotá"
+      ],
+      "estado": "no_alianzas/operacion_no_confirmada"
+    },
+    "idiomas": {
+      "estado": "borradores3idiomas_existentes_suplementados;no_revisor_nativo"
+    },
+    "integracion": {
+      "estado": "paquete_v3_previo_no_modificado;coordinador_reporto_preprod_local;no_nueva_carga"
+    },
+    "aprobacion": {
+      "estado": "0_aprobaciones_v4"
+    },
+    "publicacion": {
+      "estado": "no_autorizada"
+    }
+  },
+  "inconsistencias_base": [
+    "gates atracciones5 obsoleto frente8seleccionadas;no usar para marcar cobertura.",
+    "gate historiafuenteúnicadivulgativa obsoleto:basev3añadiófuente1846,pendientevalidaciónhumana.",
+    "STATUSv1 histórico ymanifiestoviejo no reflejan últimoestado;estaauditoríaes nueva versión, no certificadocompleto."
+  ],
+  "bloqueos_no_editoriales": [
+    "Descarga4nuevasreferencias requiere red delegada coordinador; sinesperarpara textos/auditoría.",
+    "Originales yQArecortes pendientes antes de proponeraptitud.",
+    "PR yverificaciónintegraciónfinal pendientes."
+  ]
+}
