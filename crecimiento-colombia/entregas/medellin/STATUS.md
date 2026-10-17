@@ -75,3 +75,7 @@ Reproducir: ejecutar `preparar.py` con el Python del runtime que incluye Pillow,
 ## Verificación coordinador 17/10/2026
 
 Avance importado únicamente en preproducción local. Ocho tarjetas, portada e imagen de historia distintas; ES/EN/PT-BR, archivos HTTP y hashes comprobados. Revisión visual en navegador interno: botón Cargar más lugares muestra las ocho tarjetas y sus imágenes decodificadas. Fotografías provisionales, sin aprobación editorial ni producción. Ver reporte-preprod.json y verificacion-preprod-v3.json.
+
+## Nueva política icónica · 17/10/2026
+
+Arví y Comuna 13: referencias actuales reabiertas por ser genéricas; no aptas para imagen final. Coltejer debe distinguirse al tamaño real. Pendiente incorporar Metro/Metrocable en identidad/movilidad ES/EN/PT con fuente del operador. No se sustituyeron fotos ni se importaron textos por esta actualización de políticas.

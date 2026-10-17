@@ -20,3 +20,7 @@ Procedencia y licencias de las cuatro fotografías nuevas: `content/jerico-fotog
 Los otros 20 municipios del piloto ya tienen guías ES/EN generadas desde `content/destinos-piloto.json`, con fotografías y permisos en `content/destinos-fotografias.json`. Algunos atractivos se presentan con texto y mapa: no se usa una fotografía de otro lugar para llenar ese espacio. Puerto Triunfo identifica expresamente sus fotografías como el corredor del Río Claro cercano a Doradal, no como la cabecera municipal.
 
 Reglas editoriales vigentes: `crecimiento-colombia/GUIA_GENERACION_DESTINOS.md` (17/10/2026), con separación de portada, historia y atractivos, ocho principales en destinos amplios y prohibición de repetir el original entre componentes.
+
+## Identidad icónica · 17/10/2026
+
+Aplicar la puerta de calidad en `crecimiento-colombia/GUIA_GENERACION_DESTINOS.md`. Portada con símbolo reconocible en el recorte real; atractivo con su rasgo distintivo. Rechazar bosque/viviendas genéricos para Arví/Comuna 13. Investigar Metro/Metrocable como identidad y movilidad de Medellín. Fotografía pública exige licencia comercial y adaptación verificadas; no equivale a uso libre. Ninguna referencia queda apta por ser meramente del municipio.
