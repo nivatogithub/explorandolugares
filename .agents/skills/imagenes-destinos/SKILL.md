@@ -27,3 +27,7 @@ Antes de crear imágenes, lee `docs/PRODUCCION_IMAGENES_IA.md`, `docs/GUIAS_VISU
 - No afirmar que se conoce el origen del material de entrenamiento si el proveedor no lo informa.
 
 La guía completa y la lista de revisión están en `docs/PRODUCCION_IMAGENES_IA.md`.
+
+## Selección icónica obligatoria antes de generación
+
+Aplicar la puerta de calidad de `crecimiento-colombia/GUIA_GENERACION_DESTINOS.md`: investigar símbolos y rasgos distintivos antes de buscar fotos; comprobar permiso comercial/adaptación y derechos adicionales; inspeccionar original y recortes reales. Una foto auténtica pero genérica no es apta. No generar ni completar con IA un símbolo que la referencia no permite verificar. Registrar rechazo/pendiente y opciones buenas por componente; mantener aprobación de original y de ilustración separadas. Incluir movilidad emblemática en investigación (Metro/Metrocable en Medellín).
