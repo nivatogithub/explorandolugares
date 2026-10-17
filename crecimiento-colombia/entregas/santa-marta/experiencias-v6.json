@@ -44,7 +44,9 @@
         "santa-marta:tayrona"
       ],
       "counts_as_top8_place": false,
-      "event_date": null
+      "event_date": null,
+      "text_qa_status": "reviewed_es_en_pt_draft",
+      "text_qa_date": "2026-10-17"
     },
     {
       "id": "caminata-tayrona",
@@ -86,7 +88,9 @@
         "santa-marta:cabo-san-juan"
       ],
       "counts_as_top8_place": false,
-      "event_date": null
+      "event_date": null,
+      "text_qa_status": "reviewed_es_en_pt_draft",
+      "text_qa_date": "2026-10-17"
     },
     {
       "id": "minca-cafe",
@@ -98,15 +102,15 @@
       "translations": {
         "es": {
           "name": "Naturaleza y café en Minca",
-          "description": "Dedica una salida a las laderas de Minca para conocer su paisaje, los cultivos de café y los recorridos de naturaleza. Consulta con el operador qué finca y senderos incluye la propuesta y sus condiciones de acceso."
+          "description": "Recorre las laderas de Minca para acercarte a su paisaje de montaña y a la cultura del café. La visita a una finca y los senderos dependen del recorrido contratado: confirma qué incluye, las condiciones de acceso y la exigencia física con el operador."
         },
         "en": {
           "name": "Nature and coffee in Minca",
-          "description": "Spend a day in Minca’s foothills exploring scenery, coffee growing and nature trails. Ask the operator which farm and trails the programme includes and what access conditions apply."
+          "description": "Explore Minca’s mountain scenery and coffee culture. Farm visits and trails depend on the chosen itinerary: check what is included, access conditions and physical demands with the operator."
         },
         "pt-BR": {
           "name": "Natureza e café em Minca",
-          "description": "Dedique uma saída às encostas de Minca para conhecer a paisagem, o cultivo de café e os percursos de natureza. Consulte o operador sobre a fazenda e as trilhas incluídas e suas condições de acesso."
+          "description": "Explore as encostas de Minca para conhecer a paisagem de montanha e a cultura do café. A visita a uma fazenda e as trilhas dependem do roteiro contratado: confirme o que está incluído, as condições de acesso e o esforço físico com a operadora."
         }
       },
       "publication_status": "draft",
@@ -127,7 +131,9 @@
       "related_location_ids": [],
       "counts_as_top8_place": false,
       "event_date": null,
-      "editorial_classification_note": "Salida/tour de naturaleza y café, no evento con fecha; no crear agenda ficticia."
+      "editorial_classification_note": "Salida/tour de naturaleza y café, no evento con fecha; no crear agenda ficticia.",
+      "text_qa_status": "reviewed_es_en_pt_draft",
+      "text_qa_date": "2026-10-17"
     },
     {
       "id": "recorrido-centro",
@@ -167,7 +173,9 @@
       "location_id": "santa-marta:centro",
       "related_location_ids": [],
       "counts_as_top8_place": false,
-      "event_date": null
+      "event_date": null,
+      "text_qa_status": "reviewed_es_en_pt_draft",
+      "text_qa_date": "2026-10-17"
     },
     {
       "id": "ciudad-perdida",
@@ -179,15 +187,15 @@
       "translations": {
         "es": {
           "name": "Travesía a Ciudad Perdida · Teyuna",
-          "description": "Una expedición de varios días por la Sierra Nevada hasta el parque arqueológico de Teyuna requiere planificación y guía. Consulta exigencia física, permisos, protocolo cultural y disponibilidad con el operador y las autoridades del sitio."
+          "description": "Camina durante varios días por la Sierra Nevada hasta el parque arqueológico de Teyuna. La travesía requiere planificación, guía y preparación física; confirma las condiciones de acceso, los permisos y los protocolos del territorio indígena con el operador y las autoridades del sitio."
         },
         "en": {
           "name": "Trek to Ciudad Perdida · Teyuna",
-          "description": "A multi-day expedition through the Sierra Nevada to Teyuna Archaeological Park requires planning and a guide. Check physical demands, permits, cultural protocols and availability with the operator and site authorities."
+          "description": "Follow a multi-day trek through the Sierra Nevada to Teyuna Archaeological Park. The journey requires planning, a guide and physical preparation; check access conditions, permits and Indigenous territory protocols with the operator and site authorities."
         },
         "pt-BR": {
           "name": "Travessia à Ciudad Perdida · Teyuna",
-          "description": "Uma expedição de vários dias pela Sierra Nevada até o parque arqueológico de Teyuna exige planejamento e guia. Consulte esforço físico, permissões, protocolos culturais e disponibilidade com o operador e as autoridades do sítio."
+          "description": "Caminhe por vários dias pela Sierra Nevada até o parque arqueológico de Teyuna. A travessia exige planejamento, guia e preparo físico; confirme condições de acesso, permissões e protocolos do território indígena com a operadora e as autoridades do sítio."
         }
       },
       "publication_status": "draft",
@@ -207,7 +215,9 @@
       "location_id": "santa-marta:ciudad-perdida",
       "related_location_ids": [],
       "counts_as_top8_place": false,
-      "event_date": null
+      "event_date": null,
+      "text_qa_status": "reviewed_es_en_pt_draft",
+      "text_qa_date": "2026-10-17"
     },
     {
       "id": "velero-caribe",
@@ -247,7 +257,9 @@
       "location_id": "santa-marta:bahia-historica",
       "related_location_ids": [],
       "counts_as_top8_place": false,
-      "event_date": null
+      "event_date": null,
+      "text_qa_status": "reviewed_es_en_pt_draft",
+      "text_qa_date": "2026-10-17"
     },
     {
       "id": "visita-acuario",
@@ -262,7 +274,7 @@
           "description": "Conoce las exhibiciones del Centro de Vida Marina, antes conocido como Acuario Rodadero, y acércate a la biodiversidad del Caribe colombiano. Confirma el programa, el acceso y las condiciones de visita directamente con el establecimiento. Es una institución diferente de Acuario Mundo Marino."
         },
         "en": {
-          "name": "Visit the Marine Life Centre",
+          "name": "Visit Centro de Vida Marina",
           "description": "Explore the exhibitions at the Marine Life Centre, formerly Acuario Rodadero, and learn about Colombia’s Caribbean biodiversity. Check the programme, access arrangements and visiting conditions directly with the venue. It is a different institution from Acuario Mundo Marino."
         },
         "pt-BR": {
@@ -282,7 +294,9 @@
       "location_id": "santa-marta:acuario-rodadero",
       "related_location_ids": [],
       "counts_as_top8_place": false,
-      "event_date": null
+      "event_date": null,
+      "text_qa_status": "reviewed_es_en_pt_draft",
+      "text_qa_date": "2026-10-17"
     },
     {
       "id": "excursion-playa-blanca",
@@ -322,7 +336,9 @@
         "id": "SM-P7-03",
         "status": "conditional_individual_reference_choice",
         "notes": "Para experiencia de excursión; foto2015 brumosa con geografía identificable, encuadres revisados. No foto de operador ni aprobación de puesto8."
-      }
+      },
+      "text_qa_status": "reviewed_es_en_pt_draft",
+      "text_qa_date": "2026-10-17"
     },
     {
       "id": "moto-acuatica",
@@ -334,15 +350,15 @@
       "translations": {
         "es": {
           "name": "Paseo en moto acuática",
-          "description": "Una propuesta para explorar la oferta náutica de Santa Marta con un prestador autorizado. Antes de contratar, consulta la zona habilitada, los requisitos de edad, el acompañamiento, el equipo de protección y las condiciones del mar. Confirma disponibilidad y restricciones directamente con el prestador."
+          "description": "La moto acuática permite una actividad náutica que debe realizarse con un prestador autorizado y en una zona habilitada. Antes de contratar, confirma requisitos de edad, acompañamiento, equipo de protección y condiciones del mar, además de la disponibilidad y las restricciones del servicio."
         },
         "en": {
           "name": "Personal watercraft outing",
-          "description": "An option for exploring Santa Marta’s water activities with an authorised provider. Before booking, check permitted areas, age requirements, supervision, protective equipment and sea conditions. Confirm availability and restrictions directly with the provider."
+          "description": "A personal watercraft outing should take place with an authorised provider in a permitted area. Before booking, check age requirements, supervision, protective equipment and sea conditions, as well as service availability and restrictions."
         },
         "pt-BR": {
           "name": "Passeio de moto aquática",
-          "description": "Uma proposta para conhecer as atividades náuticas de Santa Marta com um prestador autorizado. Antes de contratar, consulte áreas permitidas, requisitos de idade, acompanhamento, equipamentos de proteção e condições do mar. Confirme disponibilidade e restrições diretamente com o prestador."
+          "description": "Um passeio de moto aquática deve ser realizado com um prestador autorizado e em uma área permitida. Antes de contratar, confirme requisitos de idade, acompanhamento, equipamentos de proteção e condições do mar, além da disponibilidade e das restrições do serviço."
         }
       },
       "publication_status": "draft",
@@ -359,7 +375,9 @@
       "counts_as_top8_place": false,
       "event_date": null,
       "operator_validation_status": "pending",
-      "publication_gate": "No publicar como oferta reservable ni asignar playa concreta hasta verificar prestador y zona."
+      "publication_gate": "No publicar como oferta reservable ni asignar playa concreta hasta verificar prestador y zona.",
+      "text_qa_status": "reviewed_es_en_pt_draft",
+      "text_qa_date": "2026-10-17"
     }
   ],
   "not_imported": true,
