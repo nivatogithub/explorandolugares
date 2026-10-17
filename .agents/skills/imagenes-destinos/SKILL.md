@@ -7,6 +7,10 @@ description: Produce and review accurate AI-generated editorial illustrations fo
 
 Antes de crear imágenes, lee `docs/PRODUCCION_IMAGENES_IA.md`, `docs/GUIAS_VISUALES_DESTINOS.md` y `AGENTS.md`.
 
+## Selección de referencias vigente
+
+El propietario buscará las fotografías manualmente y enviará las URLs elegidas. No ejecutar búsquedas abiertas ni lotes nuevos de candidatas; validar la identidad/fuente y uso de las URLs recibidas y preservar decisiones anteriores. Esta instrucción posterior prevalece sobre las búsquedas autónomas descritas más abajo. El resto del flujo de generación, revisión y publicación se conserva.
+
 ## Procedimiento
 
 1. Identifica el destino, el atractivo y el componente/página donde se usará la imagen.
