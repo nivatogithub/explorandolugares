@@ -1,0 +1,31 @@
+{
+  "version": 12,
+  "scope": "cartagena_private_preview_only",
+  "activity_compositions": 7,
+  "place_compositions": 8,
+  "place_type_map": {
+    "centro-historico": "historic-centre",
+    "san-felipe": "fortress",
+    "getsemani": "neighbourhood",
+    "islas-rosario": "islands",
+    "playa-blanca-baru": "beach",
+    "cerro-popa": "convent",
+    "san-pedro-claver": "sanctuary",
+    "bocagrande": "coastal-city"
+  },
+  "meaning": "Representaciones editoriales de tipos de lugares; no fachadas, mapas ni paisajes exactos.",
+  "raw_bytes": 15340,
+  "gzip_bytes": 5113,
+  "source_photos_preserved": true,
+  "database_modified": false,
+  "publication_approved": false,
+  "verification": {
+    "javascript_syntax": "PASS",
+    "browser_attraction_illustrations": 8,
+    "browser_activity_illustrations": 7,
+    "visible_badges": 0,
+    "screenshot": "evidencias-v3/biblioteca-lugares-v12.png",
+    "mobile_visual": "pendiente",
+    "human_visual_approval": "pendiente"
+  }
+}
