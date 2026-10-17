@@ -2,7 +2,7 @@
 
 Actualizado: 17/10/2026. Lugar 3, rama `lugar/CO/antioquia/medellin`.
 
-**Estado real:** en ejecución de subtarea independiente: evidencia de vigencia y fotos de actividades. Las tres propuestas v4 para elección no se modifican. Destino completo pendiente.
+**Estado real:** subtarea de vigencia y coherencia de idiomas completada para revisión; búsqueda fotográfica documentada. Foto MAMM pendiente de ejecución del lote por coordinación. No hay ejecución permanente en segundo plano. Las tres propuestas v4 para elección no se modifican. Destino completo pendiente.
 
 **Último logro:** diez fuentes oficiales de directorio reconsultadas: seis negocios y cuatro instituciones. Informes `verificacion-vigencia-v5.json` y `coherencia-idiomas-v5.json`. RNT 213192 declarado por operador, no validado en registro. Textos ES/EN/PT contrastados sin convertir ofertas históricas en actuales.
 
