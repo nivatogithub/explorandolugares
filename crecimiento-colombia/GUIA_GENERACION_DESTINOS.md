@@ -126,3 +126,7 @@ Inspeccionar imagen completa y recortes de escritorio/móvil antes de pedir apro
 2. Actualizar esta guía si hay aprendizaje reutilizable y el skill visual si afecta selección/generación; reflejar pendientes reales en checklist.
 3. Replicar la regla aplicable en las ramas de workers para que no quede aislada en coordinación.
 4. Verificar que la siguiente propuesta satisface el criterio nuevo. No declarar resuelta la corrección solo por haber actualizado la documentación.
+
+## Continuidad mientras se revisan componentes · 17/10/2026
+
+La espera de aprobación de una referencia bloquea únicamente la generación de esa imagen. Continuar búsqueda/mejora de otras referencias, investigación, textos ES/EN/PT, actividades, directorio y preparación técnica dentro de la misma rama/destino. No cerrar todo el worker por terminar una subtarea o un ZIP provisional. Al entregar, identificar trabajo independiente pendiente y continuarlo; si solo quedan decisiones humanas, informar los componentes exactos. Coordinación comprueba estado real, reactiva tareas pendientes y no promete ejecución permanente entre turnos. No reasignar destino ni publicar sin aprobación correspondiente.
