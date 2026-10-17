@@ -1,5 +1,7 @@
 # Guías visuales por destino — primera etapa
 
+**Dirección actual:** aplicar [Guía de biblioteca ilustrada](GUIA_BIBLIOTECA_ILUSTRADA.md): caricatura orgánica con personajes completos, color de escena independiente de interfaz y tres modos (tipología, lugar específico, portada desde foto real). Esta actualización prevalece sobre requisitos anteriores de foto exclusiva por tarjeta o paleta fija.
+
 La página de cada pueblo debe despertar interés con imágenes identificadas del lugar y acompañarlas de historia breve, motivos para visitarlo y atractivos concretos. La estructura es común; las imágenes y relatos son propios de cada destino.
 
 - Portada con paisaje o vista representativa del destino.

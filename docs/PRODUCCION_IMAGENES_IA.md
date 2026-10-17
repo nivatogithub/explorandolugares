@@ -1,5 +1,7 @@
 # Producción de imágenes ilustradas con IA
 
+**Dirección actual:** aplicar [Guía de biblioteca ilustrada](GUIA_BIBLIOTECA_ILUSTRADA.md): caricatura orgánica con personajes completos, color de escena independiente de interfaz y tres modos (tipología, lugar específico, portada desde foto real). Esta actualización prevalece sobre requisitos anteriores de foto exclusiva por tarjeta o paleta fija.
+
 Guía para preparar imágenes de destinos de Explorando Lugares que sean atractivas, reconocibles y honestas con el lugar representado. Aplica a este repositorio y a cualquier herramienta o proveedor de IA.
 
 ## Principio editorial

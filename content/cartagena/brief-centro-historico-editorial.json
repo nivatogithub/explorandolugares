@@ -1,0 +1,68 @@
+{
+  "schema_version": "editorial-brief-v1",
+  "status": "brief_prepared_not_generated",
+  "mode": "representative_type",
+  "destination_id": "CO-13-cartagena",
+  "component_id": "estudio-tipologia-centro-historico",
+  "semantic_type": "historic-centre",
+  "environment": {
+    "climate": "Caribe; no describe tiempo meteorológico actual",
+    "terrain": "Núcleo urbano histórico; relación con bahía a escala de ciudad, no vista de mar desde cualquier calle",
+    "vegetation": [],
+    "architecture_types": [
+      "civil",
+      "religiosa",
+      "residencial",
+      "fortificaciones"
+    ]
+  },
+  "documented_facts": [
+    {
+      "observation": "El conjunto comprende barrios históricos, calles y edificios civiles, religiosos y residenciales, además de fortificaciones.",
+      "source_url": "https://whc.unesco.org/en/list/285/",
+      "organization": "UNESCO",
+      "consulted_at": "2026-10-17",
+      "status": "checked_text_no_photo_download"
+    }
+  ],
+  "unknowns": [
+    "Calle y perspectiva específicas",
+    "Vegetación/especies de la calle representada",
+    "Fachadas y colores exactos",
+    "Foto real para una portada: no forma parte de este brief de tipología"
+  ],
+  "art_direction": {
+    "language": "caricatura editorial orgánica elaborada de aspecto adulto",
+    "people": "Personajes completos, expresivos y moderadamente caricaturescos; sin cabezas de bolita ni palitos",
+    "vegetation": "Ramificaciones, follaje variado, volumen y tipos compatibles con el entorno",
+    "terrain": "Formas naturales, profundidad y relieve compatible; sin montañas triangulares genéricas",
+    "architecture": "Tipologías diferenciadas, materiales y detalle; no repetir una fachada para todos los lugares",
+    "color": "Colores propios de la escena; sin dominante amarilla ni dependencia de la interfaz",
+    "composition": "Estudio de tipología de calle histórica; personajes caricaturescos caminando con ropa y gestos legibles; no representación literal de un recorrido"
+  },
+  "photo_reference": null,
+  "compatibility": {
+    "required_traits": [],
+    "excluded_traits": [
+      "Mar visible al final de una calle sin verificar",
+      "Montañas o laderas inventadas para Cartagena",
+      "Edificio religioso específico reconstruido sin evidencia"
+    ],
+    "exact_landmark_claim": false
+  },
+  "prompt": "Brief para construir con la guía tras resolver el alcance del encuadre; no ejecutado.",
+  "generation": {
+    "executed": false,
+    "tool": null,
+    "master": null,
+    "derivatives": []
+  },
+  "review": {
+    "factual": "pending",
+    "characters": "pending",
+    "style": "pending",
+    "small_size": "pending",
+    "approved_final_image": false
+  },
+  "production_authorized": false
+}
