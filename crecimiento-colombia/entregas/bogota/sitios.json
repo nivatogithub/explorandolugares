@@ -4,7 +4,7 @@
     "nombre": "Museo del Oro",
     "categoria": "cultura",
     "municipio_real": "Bogotá D.C.",
-    "ubicacion": "Carrera6 #15-88, Parque Santander",
+    "ubicacion": "Carrera 6 #15-88, Parque Santander",
     "fuentes": [
       "S02"
     ],
@@ -32,14 +32,16 @@
       "en": "Gold Museum",
       "pt-BR": "Museu do Ouro"
     },
-    "editorial_order": 3
+    "editorial_order": 3,
+    "tipo_contenido": "lugar",
+    "evento_con_fecha_confirmada": false
   },
   {
     "id": "bogota-monserrate",
     "nombre": "Cerro de Monserrate",
     "categoria": "patrimonio_naturaleza",
     "municipio_real": "Bogotá D.C.",
-    "ubicacion": "Basílica en cima del cerro; transporte Carrera2Este21-48",
+    "ubicacion": "Basílica en cima del cerro; transporte Carrera 2 Este #21-48",
     "fuentes": [
       "S03"
     ],
@@ -67,14 +69,16 @@
       "en": "Monserrate Hill",
       "pt-BR": "Cerro de Monserrate"
     },
-    "editorial_order": 4
+    "editorial_order": 4,
+    "tipo_contenido": "lugar",
+    "evento_con_fecha_confirmada": false
   },
   {
     "id": "bogota-jardin",
     "nombre": "Jardín Botánico de Bogotá",
     "categoria": "naturaleza",
     "municipio_real": "Bogotá D.C.",
-    "ubicacion": "Av Calle63 #68-95",
+    "ubicacion": "Avenida Calle 63 #68-95",
     "fuentes": [
       "S04"
     ],
@@ -102,14 +106,16 @@
       "en": "Bogotá Botanical Garden",
       "pt-BR": "Jardim Botânico de Bogotá"
     },
-    "editorial_order": 7
+    "editorial_order": 7,
+    "tipo_contenido": "lugar",
+    "evento_con_fecha_confirmada": false
   },
   {
     "id": "bogota-mambo",
     "nombre": "MAMBO",
     "categoria": "cultura",
     "municipio_real": "Bogotá D.C.",
-    "ubicacion": "Calle24 #6-00, acceso carrera6",
+    "ubicacion": "Calle 24 #6-00, acceso carrera6",
     "fuentes": [
       "S11"
     ],
@@ -131,14 +137,16 @@
     "ilustracion": "no_generada",
     "integracion": "revision_privada",
     "publicado": false,
-    "editorial_selected": false
+    "editorial_selected": false,
+    "tipo_contenido": "lugar",
+    "evento_con_fecha_confirmada": false
   },
   {
     "id": "bogota-colon",
     "nombre": "Teatro Colón",
     "categoria": "artes_escenicas",
     "municipio_real": "Bogotá D.C.",
-    "ubicacion": "Calle10 #5-32",
+    "ubicacion": "Calle 10 #5-32",
     "fuentes": [
       "S12"
     ],
@@ -160,14 +168,16 @@
     "ilustracion": "no_generada",
     "integracion": "revision_privada",
     "publicado": false,
-    "editorial_selected": false
+    "editorial_selected": false,
+    "tipo_contenido": "lugar",
+    "evento_con_fecha_confirmada": false
   },
   {
     "id": "bogota-delia",
     "nombre": "Centro Nacional de las Artes Delia Zapata Olivella",
     "categoria": "artes_escenicas",
     "municipio_real": "Bogotá D.C.",
-    "ubicacion": "Calle11 #5-60",
+    "ubicacion": "Calle 11 #5-60",
     "fuentes": [
       "S12"
     ],
@@ -189,7 +199,9 @@
     "ilustracion": "no_generada",
     "integracion": "revision_privada",
     "publicado": false,
-    "editorial_selected": false
+    "editorial_selected": false,
+    "tipo_contenido": "lugar",
+    "evento_con_fecha_confirmada": false
   },
   {
     "id": "bogota-plaza",
@@ -224,14 +236,16 @@
       "en": "Bolívar Square",
       "pt-BR": "Praça de Bolívar"
     },
-    "editorial_order": 1
+    "editorial_order": 1,
+    "tipo_contenido": "lugar",
+    "evento_con_fecha_confirmada": false
   },
   {
     "id": "bogota-botero",
     "nombre": "Museo Botero",
     "categoria": "cultura",
     "municipio_real": "Bogotá D.C.",
-    "ubicacion": "Calle11 #4-41, La Candelaria",
+    "ubicacion": "Calle 11 #4-41, La Candelaria",
     "fuentes": [
       "S20",
       "S37"
@@ -260,14 +274,16 @@
       "en": "Botero Museum",
       "pt-BR": "Museu Botero"
     },
-    "editorial_order": 5
+    "editorial_order": 5,
+    "tipo_contenido": "lugar",
+    "evento_con_fecha_confirmada": false
   },
   {
     "id": "bogota-nacional",
     "nombre": "Museo Nacional de Colombia",
     "categoria": "cultura",
     "municipio_real": "Bogotá D.C.",
-    "ubicacion": "Carrera7 #28-66",
+    "ubicacion": "Carrera 7 #28-66",
     "fuentes": [
       "S19"
     ],
@@ -289,14 +305,16 @@
     "ilustracion": "no_generada",
     "integracion": "revision_privada",
     "publicado": false,
-    "editorial_selected": false
+    "editorial_selected": false,
+    "tipo_contenido": "lugar",
+    "evento_con_fecha_confirmada": false
   },
   {
     "id": "bogota-planetario",
     "nombre": "Planetario de Bogotá",
     "categoria": "ciencia",
     "municipio_real": "Bogotá D.C.",
-    "ubicacion": "Calle26B #5-93",
+    "ubicacion": "Calle 26B #5-93",
     "fuentes": [
       "S18"
     ],
@@ -318,14 +336,16 @@
     "ilustracion": "no_generada",
     "integracion": "revision_privada",
     "publicado": false,
-    "editorial_selected": false
+    "editorial_selected": false,
+    "tipo_contenido": "lugar",
+    "evento_con_fecha_confirmada": false
   },
   {
     "id": "bogota-maloka",
     "nombre": "Maloka",
     "categoria": "ciencia",
     "municipio_real": "Bogotá D.C.",
-    "ubicacion": "Carrera68D #24A-51, Ciudad Salitre",
+    "ubicacion": "Carrera 68D #24A-51, Ciudad Salitre",
     "fuentes": [
       "S21"
     ],
@@ -347,14 +367,16 @@
     "ilustracion": "no_generada",
     "integracion": "revision_privada",
     "publicado": false,
-    "editorial_selected": false
+    "editorial_selected": false,
+    "tipo_contenido": "lugar",
+    "evento_con_fecha_confirmada": false
   },
   {
     "id": "bogota-perseverancia",
     "nombre": "Plaza de Mercado La Perseverancia",
     "categoria": "gastronomia",
     "municipio_real": "Bogotá D.C.",
-    "ubicacion": "Carrera5 #30A-30, Santa Fe",
+    "ubicacion": "Carrera 5 #30A-30, Santa Fe",
     "fuentes": [
       "S24"
     ],
@@ -376,14 +398,16 @@
     "ilustracion": "no_generada",
     "integracion": "revision_privada",
     "publicado": false,
-    "editorial_selected": false
+    "editorial_selected": false,
+    "tipo_contenido": "lugar",
+    "evento_con_fecha_confirmada": false
   },
   {
     "id": "bogota-usaquen",
     "nombre": "Usaquén: plaza, calles y mercado",
     "categoria": "compras_oficios",
     "municipio_real": "Bogotá D.C.",
-    "ubicacion": "Carrera6A entre calles119–120A",
+    "ubicacion": "Carrera 6A entre calles 119–120A",
     "fuentes": [
       "S27",
       "S36"
@@ -412,7 +436,9 @@
       "en": "Usaquén: square, streets and market",
       "pt-BR": "Usaquén: praça, ruas e mercado"
     },
-    "editorial_order": 6
+    "editorial_order": 6,
+    "tipo_contenido": "lugar",
+    "evento_con_fecha_confirmada": false
   },
   {
     "id": "bogota-simon",
@@ -448,14 +474,16 @@
       "en": "Simón Bolívar Metropolitan Park",
       "pt-BR": "Parque Metropolitano Simón Bolívar"
     },
-    "editorial_order": 8
+    "editorial_order": 8,
+    "tipo_contenido": "lugar",
+    "evento_con_fecha_confirmada": false
   },
   {
     "id": "bogota-quebrada",
     "nombre": "Quebrada La Vieja",
     "categoria": "naturaleza",
     "municipio_real": "Bogotá D.C.",
-    "ubicacion": "Ingreso Calle71 Carrera2Este/Circunvalar, Chapinero",
+    "ubicacion": "Ingreso Calle 71 Carrera 2 Este/Circunvalar, Chapinero",
     "fuentes": [
       "S23"
     ],
@@ -477,7 +505,9 @@
     "ilustracion": "no_generada",
     "integracion": "revision_privada",
     "publicado": false,
-    "editorial_selected": false
+    "editorial_selected": false,
+    "tipo_contenido": "lugar",
+    "evento_con_fecha_confirmada": false
   },
   {
     "id": "bogota-humedal",
@@ -506,14 +536,16 @@
     "ilustracion": "no_generada",
     "integracion": "revision_privada",
     "publicado": false,
-    "editorial_selected": false
+    "editorial_selected": false,
+    "tipo_contenido": "lugar",
+    "evento_con_fecha_confirmada": false
   },
   {
     "id": "bogota-cinemateca",
     "nombre": "Cinemateca de Bogotá",
     "categoria": "cine",
     "municipio_real": "Bogotá D.C.",
-    "ubicacion": "Carrera3 #19-10",
+    "ubicacion": "Carrera 3 #19-10",
     "fuentes": [
       "S31"
     ],
@@ -535,14 +567,16 @@
     "ilustracion": "no_generada",
     "integracion": "revision_privada",
     "publicado": false,
-    "editorial_selected": false
+    "editorial_selected": false,
+    "tipo_contenido": "lugar",
+    "evento_con_fecha_confirmada": false
   },
   {
     "id": "bogota-grafiti",
     "nombre": "Distrito Grafiti Puente Aranda",
     "categoria": "arte_urbano",
     "municipio_real": "Bogotá D.C.",
-    "ubicacion": "Sector Avenida Américas Carrera53A; recorrido exacto pendiente",
+    "ubicacion": "Sector Avenida Américas Carrera 53A; recorrido exacto pendiente",
     "fuentes": [
       "S32"
     ],
@@ -564,7 +598,9 @@
     "ilustracion": "no_generada",
     "integracion": "revision_privada",
     "publicado": false,
-    "editorial_selected": false
+    "editorial_selected": false,
+    "tipo_contenido": "lugar",
+    "evento_con_fecha_confirmada": false
   },
   {
     "id": "bogota-theatron",
@@ -593,7 +629,9 @@
     "ilustracion": "no_generada",
     "integracion": "revision_privada",
     "publicado": false,
-    "editorial_selected": false
+    "editorial_selected": false,
+    "tipo_contenido": "lugar",
+    "evento_con_fecha_confirmada": false
   },
   {
     "id": "bogota-candelaria",
@@ -628,6 +666,8 @@
       "en": "La Candelaria and Chorro de Quevedo",
       "pt-BR": "La Candelaria e Chorro de Quevedo"
     },
-    "editorial_order": 2
+    "editorial_order": 2,
+    "tipo_contenido": "lugar",
+    "evento_con_fecha_confirmada": false
   }
 ]

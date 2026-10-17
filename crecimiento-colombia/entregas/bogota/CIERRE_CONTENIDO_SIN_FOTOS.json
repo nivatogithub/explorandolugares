@@ -1,0 +1,621 @@
+{
+  "destination": "CO-11-bogota",
+  "worker": "Lugar 2",
+  "branch": "lugar/CO/bogota-dc/bogota",
+  "review_date": "2026-10-17",
+  "task_status": "non_photographic_review_completed",
+  "destination_status": "draft_not_complete_not_publicable",
+  "scope": "Contenido, clasificación y QA local. Sin buscar, descargar ni generar imágenes; sin acceso a BD ni modificación de preproducción.",
+  "review_method": "Lectura editorial ES/EN/PT y fuentes existentes, validación estructural de datos, comprobación criptográfica y lector PHP real del paquete. No se reabrieron las40fuentes ni se certifica operación actual de todos los proveedores.",
+  "current_eight": [
+    {
+      "id": "bogota-plaza",
+      "name": "Plaza de Bolívar",
+      "order_current": 1,
+      "languages": [
+        "es",
+        "en",
+        "pt-BR"
+      ],
+      "name_text_complete": true,
+      "factual_review": "texto conservado contrastado con fuentes ya documentadas; no verificación nueva de operación",
+      "source_ids": [
+        "S28"
+      ],
+      "language_approval": "pending_human",
+      "publicable": false
+    },
+    {
+      "id": "bogota-candelaria",
+      "name": "La Candelaria y Chorro de Quevedo",
+      "order_current": 2,
+      "languages": [
+        "es",
+        "en",
+        "pt-BR"
+      ],
+      "name_text_complete": true,
+      "factual_review": "texto conservado contrastado con fuentes ya documentadas; no verificación nueva de operación",
+      "source_ids": [
+        "S34"
+      ],
+      "language_approval": "pending_human",
+      "publicable": false
+    },
+    {
+      "id": "bogota-museo-oro",
+      "name": "Museo del Oro",
+      "order_current": 3,
+      "languages": [
+        "es",
+        "en",
+        "pt-BR"
+      ],
+      "name_text_complete": true,
+      "factual_review": "texto conservado contrastado con fuentes ya documentadas; no verificación nueva de operación",
+      "source_ids": [
+        "S02"
+      ],
+      "language_approval": "pending_human",
+      "publicable": false
+    },
+    {
+      "id": "bogota-monserrate",
+      "name": "Cerro de Monserrate",
+      "order_current": 4,
+      "languages": [
+        "es",
+        "en",
+        "pt-BR"
+      ],
+      "name_text_complete": true,
+      "factual_review": "texto conservado contrastado con fuentes ya documentadas; no verificación nueva de operación",
+      "source_ids": [
+        "S03"
+      ],
+      "language_approval": "pending_human",
+      "publicable": false
+    },
+    {
+      "id": "bogota-botero",
+      "name": "Museo Botero",
+      "order_current": 5,
+      "languages": [
+        "es",
+        "en",
+        "pt-BR"
+      ],
+      "name_text_complete": true,
+      "factual_review": "texto conservado contrastado con fuentes ya documentadas; no verificación nueva de operación",
+      "source_ids": [
+        "S20",
+        "S37"
+      ],
+      "language_approval": "pending_human",
+      "publicable": false
+    },
+    {
+      "id": "bogota-usaquen",
+      "name": "Usaquén: plaza, calles y mercado",
+      "order_current": 6,
+      "languages": [
+        "es",
+        "en",
+        "pt-BR"
+      ],
+      "name_text_complete": true,
+      "factual_review": "texto conservado contrastado con fuentes ya documentadas; no verificación nueva de operación",
+      "source_ids": [
+        "S27",
+        "S36"
+      ],
+      "language_approval": "pending_human",
+      "publicable": false
+    },
+    {
+      "id": "bogota-jardin",
+      "name": "Jardín Botánico de Bogotá",
+      "order_current": 7,
+      "languages": [
+        "es",
+        "en",
+        "pt-BR"
+      ],
+      "name_text_complete": true,
+      "factual_review": "texto conservado contrastado con fuentes ya documentadas; no verificación nueva de operación",
+      "source_ids": [
+        "S04"
+      ],
+      "language_approval": "pending_human",
+      "publicable": false
+    },
+    {
+      "id": "bogota-simon",
+      "name": "Parque Metropolitano Simón Bolívar",
+      "order_current": 8,
+      "languages": [
+        "es",
+        "en",
+        "pt-BR"
+      ],
+      "name_text_complete": true,
+      "factual_review": "texto conservado contrastado con fuentes ya documentadas; no verificación nueva de operación",
+      "source_ids": [
+        "S26",
+        "S35"
+      ],
+      "language_approval": "pending_human",
+      "publicable": false
+    }
+  ],
+  "experiences_summary": {
+    "editorial_autonoma": 12,
+    "oferta_documentada_operador": 3,
+    "candidato_por_validar": 3
+  },
+  "changes": [
+    "Nueve experiencias tenían notas internas o textos mínimos: mejoradas ES/EN/PT; la política de fotos se mantiene fuera del texto al visitante.",
+    "Formato de calles/carreras corregido en ubicaciones y directorio.",
+    "El Dorado: gate7 traducido como entrance7, por tratarse de puerta en zona pública y no puerta de embarque.",
+    "Localidad Santa Fe escrita sin tilde; sin alterar dirección o ubicación real.",
+    "Campos de clasificación explícita y relación institución/lugar; sin cambiar selección ni sus24textos."
+  ],
+  "classification": {
+    "sites": [
+      {
+        "id": "bogota-museo-oro",
+        "type": "place",
+        "in_current_eight": true,
+        "creates_extra_destination_coverage": false
+      },
+      {
+        "id": "bogota-monserrate",
+        "type": "place",
+        "in_current_eight": true,
+        "creates_extra_destination_coverage": false
+      },
+      {
+        "id": "bogota-jardin",
+        "type": "place",
+        "in_current_eight": true,
+        "creates_extra_destination_coverage": false
+      },
+      {
+        "id": "bogota-mambo",
+        "type": "place",
+        "in_current_eight": false,
+        "creates_extra_destination_coverage": false
+      },
+      {
+        "id": "bogota-colon",
+        "type": "place",
+        "in_current_eight": false,
+        "creates_extra_destination_coverage": false
+      },
+      {
+        "id": "bogota-delia",
+        "type": "place",
+        "in_current_eight": false,
+        "creates_extra_destination_coverage": false
+      },
+      {
+        "id": "bogota-plaza",
+        "type": "place",
+        "in_current_eight": true,
+        "creates_extra_destination_coverage": false
+      },
+      {
+        "id": "bogota-botero",
+        "type": "place",
+        "in_current_eight": true,
+        "creates_extra_destination_coverage": false
+      },
+      {
+        "id": "bogota-nacional",
+        "type": "place",
+        "in_current_eight": false,
+        "creates_extra_destination_coverage": false
+      },
+      {
+        "id": "bogota-planetario",
+        "type": "place",
+        "in_current_eight": false,
+        "creates_extra_destination_coverage": false
+      },
+      {
+        "id": "bogota-maloka",
+        "type": "place",
+        "in_current_eight": false,
+        "creates_extra_destination_coverage": false
+      },
+      {
+        "id": "bogota-perseverancia",
+        "type": "place",
+        "in_current_eight": false,
+        "creates_extra_destination_coverage": false
+      },
+      {
+        "id": "bogota-usaquen",
+        "type": "place",
+        "in_current_eight": true,
+        "creates_extra_destination_coverage": false
+      },
+      {
+        "id": "bogota-simon",
+        "type": "place",
+        "in_current_eight": true,
+        "creates_extra_destination_coverage": false
+      },
+      {
+        "id": "bogota-quebrada",
+        "type": "place",
+        "in_current_eight": false,
+        "creates_extra_destination_coverage": false
+      },
+      {
+        "id": "bogota-humedal",
+        "type": "place",
+        "in_current_eight": false,
+        "creates_extra_destination_coverage": false
+      },
+      {
+        "id": "bogota-cinemateca",
+        "type": "place",
+        "in_current_eight": false,
+        "creates_extra_destination_coverage": false
+      },
+      {
+        "id": "bogota-grafiti",
+        "type": "place",
+        "in_current_eight": false,
+        "creates_extra_destination_coverage": false
+      },
+      {
+        "id": "bogota-theatron",
+        "type": "place",
+        "in_current_eight": false,
+        "creates_extra_destination_coverage": false
+      },
+      {
+        "id": "bogota-candelaria",
+        "type": "place",
+        "in_current_eight": true,
+        "creates_extra_destination_coverage": false
+      }
+    ],
+    "experiences": [
+      {
+        "id": "visita-oro",
+        "type": "experience",
+        "class": "editorial_autonoma",
+        "site_id": "bogota-museo-oro",
+        "operator": null,
+        "status": "borrador_privado",
+        "creates_extra_place_coverage": false
+      },
+      {
+        "id": "mirador",
+        "type": "experience",
+        "class": "editorial_autonoma",
+        "site_id": "bogota-monserrate",
+        "operator": null,
+        "status": "borrador_privado",
+        "creates_extra_place_coverage": false
+      },
+      {
+        "id": "ambiente",
+        "type": "experience",
+        "class": "editorial_autonoma",
+        "site_id": "bogota-jardin",
+        "operator": null,
+        "status": "borrador_privado",
+        "creates_extra_place_coverage": false
+      },
+      {
+        "id": "arte",
+        "type": "experience",
+        "class": "editorial_autonoma",
+        "site_id": "bogota-botero",
+        "operator": null,
+        "status": "borrador_privado",
+        "creates_extra_place_coverage": false
+      },
+      {
+        "id": "ciencia",
+        "type": "experience",
+        "class": "editorial_autonoma",
+        "site_id": "bogota-maloka",
+        "operator": null,
+        "status": "borrador_privado",
+        "creates_extra_place_coverage": false
+      },
+      {
+        "id": "cielo",
+        "type": "experience",
+        "class": "editorial_autonoma",
+        "site_id": "bogota-planetario",
+        "operator": null,
+        "status": "borrador_privado",
+        "creates_extra_place_coverage": false
+      },
+      {
+        "id": "gastronomia",
+        "type": "experience",
+        "class": "editorial_autonoma",
+        "site_id": "bogota-perseverancia",
+        "operator": null,
+        "status": "borrador_privado",
+        "creates_extra_place_coverage": false
+      },
+      {
+        "id": "mercado",
+        "type": "experience",
+        "class": "editorial_autonoma",
+        "site_id": "bogota-usaquen",
+        "operator": null,
+        "status": "borrador_privado",
+        "creates_extra_place_coverage": false
+      },
+      {
+        "id": "ciclovia",
+        "type": "experience",
+        "class": "editorial_autonoma",
+        "site_id": null,
+        "operator": null,
+        "status": "borrador_privado",
+        "creates_extra_place_coverage": false
+      },
+      {
+        "id": "bike-tour",
+        "type": "experience",
+        "class": "oferta_documentada_operador",
+        "site_id": null,
+        "operator": "Bogotá Bike Tours",
+        "status": "borrador_privado",
+        "creates_extra_place_coverage": false
+      },
+      {
+        "id": "graffiti-bike",
+        "type": "experience",
+        "class": "oferta_documentada_operador",
+        "site_id": null,
+        "operator": "Bogotá Bike Tours",
+        "status": "borrador_privado",
+        "creates_extra_place_coverage": false
+      },
+      {
+        "id": "cooking",
+        "type": "experience",
+        "class": "oferta_documentada_operador",
+        "site_id": null,
+        "operator": "Bogotá Bike Tours",
+        "status": "borrador_privado",
+        "creates_extra_place_coverage": false
+      },
+      {
+        "id": "senderismo",
+        "type": "experience",
+        "class": "candidato_por_validar",
+        "site_id": "bogota-quebrada",
+        "operator": null,
+        "status": "oculto",
+        "creates_extra_place_coverage": false
+      },
+      {
+        "id": "aves",
+        "type": "experience",
+        "class": "candidato_por_validar",
+        "site_id": "bogota-humedal",
+        "operator": null,
+        "status": "oculto",
+        "creates_extra_place_coverage": false
+      },
+      {
+        "id": "cine",
+        "type": "experience",
+        "class": "editorial_autonoma",
+        "site_id": "bogota-cinemateca",
+        "operator": null,
+        "status": "borrador_privado",
+        "creates_extra_place_coverage": false
+      },
+      {
+        "id": "arte-urbano",
+        "type": "experience",
+        "class": "editorial_autonoma",
+        "site_id": "bogota-grafiti",
+        "operator": null,
+        "status": "borrador_privado",
+        "creates_extra_place_coverage": false
+      },
+      {
+        "id": "noche",
+        "type": "experience",
+        "class": "candidato_por_validar",
+        "site_id": "bogota-theatron",
+        "operator": null,
+        "status": "oculto",
+        "creates_extra_place_coverage": false
+      },
+      {
+        "id": "artes-escenicas",
+        "type": "experience",
+        "class": "editorial_autonoma",
+        "site_id": "bogota-delia",
+        "operator": null,
+        "status": "borrador_privado",
+        "creates_extra_place_coverage": false
+      }
+    ],
+    "events": [],
+    "directory": [
+      {
+        "id": "CO-11-bogota-hotel-opera",
+        "type": "business_directory",
+        "site_id": null,
+        "partnership": false,
+        "contacted": false,
+        "count_as_attraction": false
+      },
+      {
+        "id": "CO-11-bogota-tequendama-suites",
+        "type": "business_directory",
+        "site_id": null,
+        "partnership": false,
+        "contacted": false,
+        "count_as_attraction": false
+      },
+      {
+        "id": "CO-11-bogota-sofitel-victoria",
+        "type": "business_directory",
+        "site_id": null,
+        "partnership": false,
+        "contacted": false,
+        "count_as_attraction": false
+      },
+      {
+        "id": "CO-11-bogota-el-chato",
+        "type": "business_directory",
+        "site_id": null,
+        "partnership": false,
+        "contacted": false,
+        "count_as_attraction": false
+      },
+      {
+        "id": "CO-11-bogota-leo",
+        "type": "business_directory",
+        "site_id": null,
+        "partnership": false,
+        "contacted": false,
+        "count_as_attraction": false
+      },
+      {
+        "id": "CO-11-bogota-azahar-parque93",
+        "type": "business_directory",
+        "site_id": null,
+        "partnership": false,
+        "contacted": false,
+        "count_as_attraction": false
+      },
+      {
+        "id": "CO-11-bogota-azahar-nogal",
+        "type": "business_directory",
+        "site_id": null,
+        "partnership": false,
+        "contacted": false,
+        "count_as_attraction": false
+      },
+      {
+        "id": "CO-11-bogota-azahar-dorado",
+        "type": "business_directory",
+        "site_id": null,
+        "partnership": false,
+        "contacted": false,
+        "count_as_attraction": false
+      },
+      {
+        "id": "CO-11-bogota-mambo",
+        "type": "institution_directory",
+        "site_id": "bogota-mambo",
+        "partnership": false,
+        "contacted": false,
+        "count_as_attraction": false
+      },
+      {
+        "id": "CO-11-bogota-centro-artes",
+        "type": "institution_directory",
+        "site_id": "bogota-delia",
+        "partnership": false,
+        "contacted": false,
+        "count_as_attraction": false
+      }
+    ],
+    "rules": [
+      "Un recinto y su visita son entidades relacionadas, no dos lugares de cobertura.",
+      "Cine y artes escénicas son propuestas de experiencia; no eventos fechados mientras no exista sesión concreta verificada.",
+      "MAMBO y Delia están en inventario y directorio como entidad relacionada; no contabilizar dos veces.",
+      "Mercado de Usaquén es experiencia ligada al ámbito Usaquén; no crea otro destino ni un noveno cupo.",
+      "Ciclovía es programa y experiencia, no operador BikeTours ni atractivo territorial nuevo."
+    ]
+  },
+  "top8_editorial_decision": {
+    "cutoff_validated": false,
+    "precise_question": "¿La selección principal incluye sectores turísticos visitables de gastronomía/ocio (Zona T y Zona G), igual que hoy incluye La Candelaria y Usaquén, o reserva esas zonas para la sección de experiencias/directorio?",
+    "evidence": "IDT2025 documenta demanda deT/G; excluirlas sin regla de alcance sesga el resultado. Las dos vías son propuestas, no rankings estadísticos cerrados.",
+    "if_sectors_count": [
+      "bogota-monserrate",
+      "bogota-candelaria",
+      "bogota-zona-t",
+      "bogota-zona-g",
+      "bogota-museo-oro",
+      "bogota-plaza",
+      "bogota-botero",
+      "bogota-nacional"
+    ],
+    "if_sectors_separate": [
+      "bogota-monserrate",
+      "bogota-candelaria",
+      "bogota-museo-oro",
+      "bogota-plaza",
+      "bogota-botero",
+      "bogota-nacional",
+      "bogota-simon",
+      "bogota-jardin"
+    ],
+    "remaining_cutoff": "Comparar corte7–8 frente aSalitre/Maloka/Colpatria con criterio de primera visita y datos comparables; afluencia2019 del parque no equivale turistas2025.",
+    "human_constraint": "Monserrate debe estar por delante de Salitre Mágico; propuestaMonserrate1.",
+    "current_selection_not_changed": true,
+    "approval_of_jardin_does_not_force_selection": true
+  },
+  "jardin_preserved": {
+    "approval_file": "aprobacion-ilustracion-tropicario-v1.json",
+    "approved_hashes": {
+      "bogota-tropicario-v1.png": "02a4a5e7b4fa73f5d8f82d0c089d557c90c62a4bf87cbae87a482070737d485a",
+      "bogota-tropicario-v1.webp": "dc722438cc464cbccf05e5717455f2e35a557301683162038ef254ccb87d66bf"
+    },
+    "approval_and_provenance_files_unchanged": true,
+    "package_read_only_checked": "paquete-avance-jardin-aprobado.zip",
+    "preprod_receipt": "reporte-avance-jardin-aprobado.json/import_receipt",
+    "preprod_state": "El coordinador dejó recibo local importado; esta tarea solo lee evidencia, no hace consultaBD ni prueba nueva del sitio servido.",
+    "output_webp_bytes": 358534,
+    "optimization_target_300kb": "not_met_approved_hash_preserved",
+    "meta_alt_caption_approval": "No heredar aprobación de imagen a textos de pie/alt/traducciones."
+  },
+  "checks": {
+    "selected_count": 8,
+    "selected_texts_in_three_languages": 24,
+    "inventory_places": 20,
+    "experiences": 18,
+    "experience_languages": 54,
+    "directory_entries": 10,
+    "directory_languages": 30,
+    "directory_categories": 3,
+    "addresses": 10,
+    "source_register_entries": 40,
+    "source_ids_resolve": true,
+    "unique_ids": true,
+    "approved_jardin_source_and_output_hashes_match": true,
+    "package_php_validator": "DestinationPackage::readZip pass; 8 places/9 images; no DB accessed",
+    "package_order_matches_selection": true,
+    "package_jardin_bytes_match_approved_webp": true,
+    "package_sha256": "113c2b5194c02923e35aca985936405c64400dd1dba04a7d61dcd6778261f87e",
+    "package_report_hash_matches": true,
+    "no_new_web_or_photo_calls_in_this_task": true
+  },
+  "unresolved_non_photo_work": [
+    "Revisión y aprobación humana de textos ES/EN/PT; no afirmar revisión nativa.",
+    "Resolver alcanceT/G y corteTop8 antes de cambiar orden/importar.",
+    "Cooking conserva oferta documental privada pero falta sede, menú, operación y vínculo específico de servicio; no ofrecer reserva o disponibilidad.",
+    "Senderismo, aves y noche permanecen ocultos: acceso/operación/admisión no contrastados suficientemente.",
+    "Fotos de experiencias y directorio no convierten borradores en ofertas operativas; identidad, licencia y revisión se validarán sobre URLs del propietario.",
+    "El paquete actualmente importado no contiene las últimas mejoras de experiencias/directorio de esta revisión; integración futura exige autorización y QA."
+  ],
+  "photo_policy": {
+    "owner_supplies_urls": true,
+    "new_searches_downloads_generation": false,
+    "pending_v6_batch": "Suspender; conservar script/candidatas, no ejecutar sin nueva instrucción del propietario.",
+    "no_photo_url_wait_blocks_textual_review": true
+  },
+  "publication_authorized": false,
+  "coverage_claim": "No incrementar cobertura por18experiencias ni10fichas; no declarar destino completo por contar idiomas o unZIPválido."
+}
