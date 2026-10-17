@@ -28,3 +28,7 @@ Se corrigió la dirección errónea de Ciclovía (arrastraba el punto BikeTours)
 ## Auditoría TOP8 · 2026-10-17
 
 Subtarea concluida: AUDITORIA_TOP8.json y AUDITORIA_TOP8.md documentan31candidatos ydosescenarios explícitos de8, sin cambiar selección/BD. Monserratepropuesto1, antes4. Se detectó que ZonaT/G tienen alta demanda oficial y requieren decisión de alcance. MuseoNacional omitido injustificadamente; Salitre/Maloka/Colpatria evaluados como frontera sin inventar visitas. Zipaquirá fuera de jurisdicción. La aprobación existente de ilustración Jardín se conservó y susdos hashes se verificaron; no equivale a selección ni publicación. Pendiente decisión editorial del alcance y corte, no ejecución silenciosa.
+
+## Integración local Jardín aprobada · 2026-10-17
+
+Paqueteavance generado y leído por validador PHP real:8tarjetas/9imágenes; cambia solo imagen/metadataJardín manteniendo orden/textos/otrosactivos. Archivo paquete-avance-jardin-aprobado.zip; informe reporte-avance-jardin-aprobado.json. Sin importarBD. Conserva WebPaprobado358534bytes yhash, no cumpleobjetivo300KB; no recodificado para mantenerexacto. Propuestas2fachadasMuseoNacional yMalokaactividad enrevision-v5/candidatas.json; lote descargas delegado y pendienteinspección. TextosMuseoNacionalES/EN/PT preparados aparte, no selecciónautomática.
