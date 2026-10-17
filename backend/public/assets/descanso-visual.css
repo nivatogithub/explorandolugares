@@ -30,4 +30,15 @@ body.el-review-rest .directory-card-body{padding:12px 14px!important}
 body.el-review-rest .directory-card h3{font-size:16px;line-height:1.25;margin:5px 0}
 body.el-review-rest .directory-card .eyebrow{font-size:10px;margin:0}
 body.el-review-rest .compact-image-credits{font-size:12px;margin:14px 0 0}
+body.el-review-rest .destination-overview{display:block!important;grid-template-columns:1fr!important;padding:28px 0!important}
+body.el-review-rest .destination-overview>div{width:100%;max-width:none!important}
+body.el-review-rest .compact-history-text{max-width:none!important;margin:12px 0 0;line-height:1.6}
+body.el-review-rest .destination-overview h2{font-size:clamp(25px,3vw,34px);margin:0}
+body.el-review-rest .destination-preview-banner{padding:8px 16px!important;font-size:12px;min-height:0}
+body.el-review-rest .destination-invitation{padding:22px!important;display:flex!important;gap:20px;align-items:center;justify-content:space-between}
+body.el-review-rest .destination-invitation h2{font-size:24px!important;margin:0}
+body.el-review-rest .destination-invitation p{margin:6px 0 0}
+body.el-review-rest .highlight-grid article>h3,body.el-review-rest .highlight-grid article>p{padding-left:12px;padding-right:12px}
+body.el-review-rest .highlight-grid article>.text-link,body.el-review-rest .highlight-grid article>.story-number{margin-left:12px;margin-right:12px}
+@media(max-width:650px){body.el-review-rest .destination-invitation{display:block!important}body.el-review-rest .destination-invitation>.pill{margin-top:14px}}
 body.el-review-rest img{filter:none}
