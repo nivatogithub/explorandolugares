@@ -1,5 +1,11 @@
 # Lugar 3 · Medellín · entrega privada de investigación
 
+## Revisión V3 en preparación: selección turística de exactamente ocho
+
+Nueva instrucción prevalece: ocho principales elegidos por relevancia y variedad; Coltejer exclusivamente portada distante con ciudad y silueta completa. `seleccion-principal-v3.json` selecciona Explora, Pueblito Paisa, Jardín Botánico, Comuna13, Museo de Antioquia, Arví, Catedral Metropolitana y Pies Descalzos. Vida de El Poblado/centro ampliado y agenda quedan secundarios. Macarena no promete conciertos sin agenda confirmada.
+
+Lote de ocho nuevas referencias originales verificadas documentalmente en `descargas-v3.json`; `descargar-v3.py` debe ejecutarlo el coordinador, no el subagente con permisos de red ocultos. `preparar-v3.py` contiene textos ampliados ES/EN/PT y prepara ZIP con nueve fotos distintas después de comprobar inspección visual. Mientras no existan originales e `inspeccion-visual-v3.json` veraz, **ZIP anterior de dos tarjetas es antecedente, no entrega V3 lista**. No se suplanta la selección principal por fotos disponibles. Red, descargas/inspección y nuevo paquete final siguen pendientes al guardar este avance.
+
 ## Avance autorizado para preproducción local
 
 `paquete-preprod.zip` v2 preparado y validado con `DestinationPackage::readZip` real de `../preprod/backend/app/DestinationPackage.php`, usando PHP CLI local8.5.11. Contiene portada reversible Coltejer2006(no aprobada) y **dos tarjetas con imágenes específicas**: Coltejer(detalle arquitectónico2013) y Jardín Botánico(Orquideorama). No se llenan ocho cupos con fotos ajenas. Otros26sitios permanecen en inventario secundario y están excluidos explícitamente del ZIP por faltante visual apto. Actividades separadas no se importan como ofertas.
