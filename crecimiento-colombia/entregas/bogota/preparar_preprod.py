@@ -3,7 +3,12 @@ from pathlib import Path
 import json,hashlib,shutil,zipfile
 from urllib.parse import quote
 def https(url):return quote(url,safe=":/?=&%#-_.~")
-p=Path(__file__).parent;q=p/'preprod-paquete';(q/'images').mkdir(parents=True,exist_ok=True)
+p=Path(__file__).parent
+if (p/'asignacion-imagenes-v3.json').exists():
+ import runpy
+ runpy.run_path(str(p/'preparar-v3.py'),run_name='__main__')
+ raise SystemExit(0)
+q=p/'preprod-paquete';(q/'images').mkdir(parents=True,exist_ok=True)
 r=lambda n:json.loads((p/n).read_text())
 a=r('paquete-borrador.json');sites=r('sitios.json');photos={x['id']:x for x in r('imagenes.json')['activos']};sources={x['id']:x for x in r('fuentes.json')};langs=['es','en','pt-BR']
 selected=['bogota-monserrate','bogota-plaza','bogota-jardin']

@@ -1,0 +1,33 @@
+{
+  "checked_at": "2026-10-17T04:29:29.077232+00:00",
+  "environment": "loopback_preprod_only",
+  "production_accessed": false,
+  "editorial_approved": false,
+  "results": [
+    {
+      "language": "es",
+      "url": "http://127.0.0.1:8088/destinos/bogota/",
+      "attractions": 8,
+      "distinct_destination_images": 10,
+      "history_image": true,
+      "images_http_ok": true
+    },
+    {
+      "language": "en",
+      "url": "http://127.0.0.1:8088/en/destinos/bogota/",
+      "attractions": 8,
+      "distinct_destination_images": 10,
+      "history_image": true,
+      "images_http_ok": true
+    },
+    {
+      "language": "pt-BR",
+      "url": "http://127.0.0.1:8088/pt-br/destinos/bogota/",
+      "attractions": 8,
+      "distinct_destination_images": 10,
+      "history_image": true,
+      "images_http_ok": true
+    }
+  ],
+  "transient_connection_errors": []
+}
