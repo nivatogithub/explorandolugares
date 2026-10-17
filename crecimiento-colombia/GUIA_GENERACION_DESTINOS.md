@@ -54,7 +54,7 @@ Instrucción del propietario, 17/10/2026. No basta con que una foto sea del muni
 - Metro y Metrocable de Medellín: incluir su importancia urbana y utilidad para conocer la ciudad en movilidad e identidad. Distinguir tren Metro, cables urbanos y Cable Arví Línea L; no confundir Línea J/San Javier con acceso directo al circuito de escaleras o con Línea L. Evaluar una experiencia de movilidad si aporta valor, sin ampliar a nueve las ocho tarjetas ni inventar una actividad comercial. Fuente del operador para rutas/condiciones; el sistema del Valle de Aburrá no se restringe administrativamente a Medellín.
 - Monumentos, iglesias y edificios: fachada/silueta o elemento emblemático visible, sin obstáculos decisivos. Parques/museos/actividades: escena o espacio específico que explique la visita, no árboles, paredes o interiores intercambiables.
 
-### Obtención de fotografías con uso comercial permitido
+### Obtención de referencias para resultados IA publicables
 
 «Pública en internet» no significa «libre para uso comercial». Consultar primero banco institucional con permiso explícito, Commons, banco fotográfico con licencia de uso/adaptación comercial o autorización del autor. No copiar la foto de una web turística solo porque esa web es fuente factual. CC BY, CC BY-SA, CC0 o licencia de banco aplicable requieren comprobar condiciones concretas y atribución; descartar NC/solo editorial/permiso ambiguo para este flujo. Revisar también derechos adicionales relevantes de la obra representada, especialmente murales y esculturas; la licencia del fotógrafo no los resuelve automáticamente.
 
@@ -78,3 +78,20 @@ Registrar por imagen: sujeto, rasgos exigidos/visibles, fuente factual, licencia
 - https://visitbogota.co/es/que-hacer-en-bogota/cultura/torre-colpatria
 
 Consulta: 17/10/2026. Las fuentes factuales no conceden por sí mismas permiso para reutilizar sus fotografías. No afirmar operación actual o exclusividad nacional usando únicamente un documento histórico.
+
+## Publicabilidad de resultados IA · precisión del propietario 17/10/2026
+
+El activo definitivo será una creación IA revisada mediante el skill del proyecto. El criterio no es exigir siempre permiso para publicar la fotografía original intacta: hay que comprobar que el uso concreto de referencia y la publicación del resultado previsto están permitidos. No comprar licencias ni pedir permisos al propietario de forma rutinaria si ya hay una vía autorizada documentada.
+
+Elegir una de estas vías antes de generar:
+
+- **Transformación autorizada:** fotografía propia, dominio público o permiso/licencia que cubra suministrarla como referencia, transformarla y publicar el resultado en el portal. Cumplir las condiciones aplicables al derivado, incluidas atribución o compartir igual si corresponden. Un permiso específico para este uso puede servir aunque no permita publicar el original intacto por separado.
+- **Composición nueva independiente:** investigar rasgos verificables del lugar con fuentes factuales, redactar un encargo propio y generar una composición nueva sin subir ni solicitar una copia cercana de una fotografía restringida. Representar el mismo lugar no exige copiar la composición creativa de una foto. Comprobar fidelidad, derechos adicionales pertinentes y condiciones del proveedor; no asumir que cualquier resultado está libre de derechos por ser IA.
+
+Una fotografía vista en internet puede servir como fuente para comprobar hechos observables; eso no concede automáticamente permiso para descargarla/subirla a un generador o producir una adaptación cercana. Si falta permiso para la transformación, usar otra referencia autorizada o la vía de composición independiente; no limitarse a retocar, cambiar colores o borrar marcas de agua. La semejanza debe corresponder al lugar real, no reproducir innecesariamente una fotografía protegida.
+
+No marcar el resultado «sin restricciones», «copyright libre», «fotografía real» ni «publicable» solo por ser IA, por cambiar estilo o por no ser identificado por un detector. No orientar prompts a evadir detección de derechos, procedencia o marcas. Mantener procedencia veraz: generado con IA, referencias y condiciones que sigan aplicando. La ausencia de coincidencias automáticas no es una validación de derechos. La revisión de permisos y fidelidad es distinta de la aprobación editorial humana y de la autorización de publicación.
+
+Registrar: vía elegida, referencias efectivamente enviadas al generador, base del permiso o ausencia de copia de foto concreta en composición independiente, condiciones del resultado/proveedor, atribuciones necesarias, revisión de similitud/composición y fidelidad, prompt, maestro/derivados y hashes. Estado inicial «pendiente»; «apto para revisión editorial» solo con comprobaciones respaldadas, nunca garantía jurídica automática.
+
+Fuente de alcance general consultada: https://creativecommons.org/faq/#artificial-intelligence-and-cc-licenses y https://creativecommons.org/faq/#when-is-my-use-considered-an-adaptation . Usar una tecnología nueva no elimina las condiciones de una licencia cuando el uso requiere permiso; aplicar las condiciones del recurso concreto, no una etiqueta genérica de «IA».

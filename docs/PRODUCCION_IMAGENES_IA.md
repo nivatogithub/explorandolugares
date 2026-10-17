@@ -60,3 +60,7 @@ El portal puede simplificar la página pública de atribuciones para que incluya
 Usa [`content/templates/procedencia-imagen-ia.json`](../content/templates/procedencia-imagen-ia.json). Si se crea o modifica un activo mediante una herramienta externa, su formato, peso, dimensiones, descripción alternativa, idioma, referencias visuales, fuentes factuales, permiso, prompt y revisión deben quedar asociados al destino y al archivo final.
 
 La procedencia guardada no publica la imagen automáticamente. La persona responsable marca el activo aprobado y, por separado, publica el destino o la nueva versión.
+
+## Alcance de permisos para la salida IA · 17/10/2026
+
+Aplicar `crecimiento-colombia/GUIA_GENERACION_DESTINOS.md`, sección Publicabilidad de resultados IA. Se admite permiso específico para transformación y publicación del resultado sin exigir por separado publicar el original intacto. Alternativamente crear una composición independiente a partir de hechos verificados, sin subir/copiar una fotografía restringida. IA, cambio de estilo o ausencia de coincidencias no eliminan restricciones. Registrar condiciones aplicables y procedencia; no prometer exención de derechos ni evadir detección.
