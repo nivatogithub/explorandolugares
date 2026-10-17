@@ -11,3 +11,6 @@
 **Ahora:** coordinador resolvió extracción fuera de sandbox. Cuatro fotogramas reales inspeccionados; t13s ofrece la mejor composición con torres principales completas, curva de bahía y montañas. Comparación desktop/móvil: `imagenes/revision-v6/revision/SM-H6-05-t13s-comparacion.jpg`. Santa Marta consta en ficha del autor; sector Rodadero/Gaira es inferencia visual pendiente de corroborar antes de etiquetado definitivo. Edificios periféricos aún quedan cortados en bordes: se presenta como alternativa condicional, no corrección final garantizada.
 
 **Pendientes:** portada convincente, foto café específica, buceo/caminata/velero mejor compuestos, fotos directorio y aprobación individual. Cero ilustraciones IA generadas y cero cambios v6 en preprod/producción. No se ha declarado destino terminado.
+
+
+**Auditoría Top8 nueva:** propuesta en `AUDITORIA_TOP8.md/.json`: Tayrona, Ciudad Perdida, Minca, Rodadero, Quinta, Taganga, centro histórico/bahía, Playa Blanca. Corte octavo de confianza media; Museo pasa a parada del centro y Acuario queda fuera del Top8 provisional. Inventario no borrado y paquete/preprod aún sin cambiar. Criterio turístico, sin cuotas ni puntuación estadística inventada.
