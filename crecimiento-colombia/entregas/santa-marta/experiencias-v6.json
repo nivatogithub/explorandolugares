@@ -199,9 +199,9 @@
       "text_approval": false,
       "image_approval": false,
       "reference_research": {
-        "id": "SM-E6-05",
-        "status": "candidate_editorial_destination",
-        "notes": "Terrazas arqueológicas Teyuna reconocibles desde arriba; destino del trekking, sin atribuir grupo u operador."
+        "id": "SM-E7-01",
+        "status": "rejected_wrong_activity_scene",
+        "notes": "Cocina nocturna, no trekking; buscar otra referencia. SM-E6-05 aérea reservada como propuesta para sitio geográfico Teyuna, sin duplicarla en experiencia."
       },
       "content_type": "experience",
       "location_id": "santa-marta:ciudad-perdida",
@@ -317,7 +317,12 @@
       "location_id": "santa-marta:playa-blanca",
       "related_location_ids": [],
       "counts_as_top8_place": false,
-      "event_date": null
+      "event_date": null,
+      "reference_research": {
+        "id": "SM-P7-03",
+        "status": "conditional_individual_reference_choice",
+        "notes": "Para experiencia de excursión; foto2015 brumosa con geografía identificable, encuadres revisados. No foto de operador ni aprobación de puesto8."
+      }
     },
     {
       "id": "moto-acuatica",

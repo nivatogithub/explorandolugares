@@ -9,3 +9,9 @@ Lote específico `descargar-componentes-top8-v7.py`: Playa Blanca Santa Marta2 (
 SM-P7-01 descargada e inspeccionada: contexto geográfico coherente con playa samaria al pie de ladera seca y servicios, pero composición gris con personas/rocas dominantes y playa distante. No seleccionada para ficha principal. Se preparan dos alternativas con metadatos y licencia por comprobar antes de descargar. Fuente nacional específica consultada: https://colombia.travel/es/santa-marta/playa-blanca . No copiar sus fotos sin permiso.
 
 SM-E7-01: metadata local confirma CC BY2.0 de William Neuheisel, fuente Flickr revisada,2011-02-09,5184×3456 y coordenadas11.154908,-73.824348. Era una omisión del validador, no prohibición de licencia ni rechazo humano. CC BY2 permite adaptación comercial con atribución/título/fuente/licencia y condiciones aplicables. Allowlist corregida; se reutiliza JSON local sin volver a consultar API. Inspección visual pendiente cuando original esté descargado. Script preserva decisiones y revisiones anteriores al reanudar.
+
+## Inspección posterior del lote descargado
+
+E7-01 descargada: no muestra trekking sino cocina nocturna de campamento con cocinero. Se rechaza para Caminata Ciudad Perdida, pese a título/permiso correctos; no atribuir persona al operador. Teyuna aérea E6-05 queda propuesta para sitio geográfico y no se repite en la experiencia.
+
+P7-02 no mejora: playa lejana con grandes superficies agua/cielo. P7-03 es candidata condicional para excursión Playa Blanca: vista elevada de playa curva/ladera y Morro Gaira/Isla Pelícano, geografía contrastada. Original2015 brumoso; no afirmar aspecto u oferta vigentes. Recortes técnicos de tarjeta/móvil inspeccionados sin IA. El rol experiencia no determina el Top8 geográfico.
