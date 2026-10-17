@@ -18,11 +18,11 @@ La casa donde murió Simón Bolívar en 1830 permite conectar historia, museo y 
 
 ## Centro histórico y Catedral
 
-Recorre las calles del centro, la Catedral y el entorno del Parque de los Novios. Combina arquitectura y vida urbana; la Catedral es una parada del recorrido, no otra tarjeta repetida.
+Recorre las calles del centro, la Catedral y el entorno del Parque de los Novios. Combina arquitectura, plazas y vida urbana en un paseo que puedes continuar hacia el malecón.
 
 ## Taganga
 
-Bahía, embarcaciones de pesca y miradores costeros dan identidad a este corregimiento de Santa Marta. Merece una visita propia y una futura guía diferenciada de El Rodadero; las salidas de buceo se consultan por separado.
+Bahía, embarcaciones de pesca y miradores costeros dan identidad a este corregimiento de Santa Marta. Dedica tiempo a su paisaje y ambiente pesquero, distintos de El Rodadero; consulta las condiciones de las salidas de buceo con sus operadores.
 
 ## El Rodadero
 

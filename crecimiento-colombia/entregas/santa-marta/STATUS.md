@@ -23,3 +23,5 @@ Textos ES/EN/PT-BR y constructor de paquete v2 preparados; cuatro motivos breves
 Los HTML antiguos de tres atractivos son evidencia histórica; la fuente vigente de la revisión v4 será paquete-preprod.json tras construirlo. No confundir la ficha de buceo/operador con la tarjeta de Acuario Rodadero, ni éste con Acuario Mundo Marino.
 
 Comprobación v4 terminada: ZIP con ocho atractivos y nueve imágenes diferentes, más sidecar de historia independiente; textos completos en ES/EN/PT, motivos compactos e integridad verificados. Siete referencias nuevas inspeccionadas; tres originales completos descargados y cuatro variantes oficiales de1280px por limitaciónHTTP429 del servidor, con URL del original completo trazable y descarga completa pendiente. Sigue pendiente importar y verificar la versión nueva en preprod.
+
+Ajuste de revisión visual: las descripciones públicas de centro histórico y Taganga en ES/EN/PT explican la visita sin mencionar tarjetas repetidas ni futuras guías. ZIP regenerado y validaciones de manifiesto, idiomas e integridad aprobadas.
