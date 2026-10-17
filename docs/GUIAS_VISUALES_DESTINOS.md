@@ -4,7 +4,7 @@ La página de cada pueblo debe despertar interés con imágenes identificadas de
 
 - Portada con paisaje o vista representativa del destino.
 - Historia con una persona, oficio o hecho relevante y fotografía relacionada.
-- Selección compacta de atractivos con imagen, descripción breve y enlace al mapa. Jericó conserva cuatro tarjetas por fila en escritorio; las nuevas guías tienen tres atractivos en una fila, con adaptación a pantallas pequeñas.
+- Selección compacta de atractivos con imagen, descripción breve y enlace al mapa. Jericó conserva cuatro tarjetas por fila en escritorio; las nuevas guías adaptan sus columnas a pantallas pequeñas; Cartagena, Bogotá, Medellín y Santa Marta presentan ocho atractivos principales. La cantidad de columnas nunca limita la selección.
 - Información práctica, directorio y convocatoria a negocios conservan el alcance informativo. Los atractivos editoriales no se presentan como comercios inscritos.
 - Documentar lugar, autor, fuente y permiso de cada fotografía; conservar atribución y licencia accesibles. No usar fotos de otros destinos ni imágenes generadas como si documentaran un sitio real.
 - Para crear ilustraciones publicables con IA, seguir [`PRODUCCION_IMAGENES_IA.md`](PRODUCCION_IMAGENES_IA.md) y guardar su trazabilidad con [`procedencia-imagen-ia.json`](../content/templates/procedencia-imagen-ia.json). Las imágenes generadas requieren revisión factual y humana; no sustituyen la procedencia de fotos de terceros.
@@ -18,3 +18,5 @@ Fuentes del contenido: https://colombia.travel/es/jerico y https://colombia.trav
 Procedencia y licencias de las cuatro fotografías nuevas: `content/jerico-fotografias.json`. La foto existente del parque conserva sus créditos. Imágenes inspeccionadas individualmente, redimensionadas y servidas localmente; se pueden abrir completas desde las tarjetas. Vista del Cristo desde una calle, no una toma cercana. Las páginas ES/EN usan las mismas fotografías con textos alternativos traducidos.
 
 Los otros 20 municipios del piloto ya tienen guías ES/EN generadas desde `content/destinos-piloto.json`, con fotografías y permisos en `content/destinos-fotografias.json`. Algunos atractivos se presentan con texto y mapa: no se usa una fotografía de otro lugar para llenar ese espacio. Puerto Triunfo identifica expresamente sus fotografías como el corredor del Río Claro cercano a Doradal, no como la cabecera municipal.
+
+Reglas editoriales vigentes: `crecimiento-colombia/GUIA_GENERACION_DESTINOS.md` (17/10/2026), con separación de portada, historia y atractivos, ocho principales en destinos amplios y prohibición de repetir el original entre componentes.

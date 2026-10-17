@@ -2,7 +2,7 @@
   "schema_version": 2,
   "worker": "Lugar 4",
   "destination": "santa-marta",
-  "state": "correcciones",
+  "state": "revision_v4_ocho_principales_no_aprobado",
   "inventory": [
     {
       "id": "centro",
@@ -123,6 +123,66 @@
       "text_status": "borrador",
       "photo_status": "referencia_disponible_pendiente_aprobacion",
       "approval": null
+    },
+    {
+      "id": "tayrona",
+      "name": "Parque Nacional Natural Tayrona",
+      "category": "naturaleza",
+      "territorial_scope": "distrito / área protegida",
+      "source_url": "https://old.parquesnacionales.gov.co/portal/especial/tayrona/",
+      "consulted_at": "2026-10-17",
+      "notes": "Conservar inventario amplio; selección editorial v4 separada. Validar ficha específica antes de publicar.",
+      "text_status": "borrador_v4",
+      "photo_status": "referencia_por_revisar",
+      "approval": null
+    },
+    {
+      "id": "rodadero",
+      "name": "El Rodadero",
+      "category": "costa",
+      "territorial_scope": "sector urbano / bahía de Gaira",
+      "source_url": "https://colombia.travel/es/santa-marta",
+      "consulted_at": "2026-10-17",
+      "notes": "Conservar inventario amplio; selección editorial v4 separada. Validar ficha específica antes de publicar.",
+      "text_status": "borrador_v4",
+      "photo_status": "referencia_por_revisar",
+      "approval": null
+    },
+    {
+      "id": "acuario",
+      "name": "Acuario y Museo del Mar de El Rodadero",
+      "category": "fauna marina",
+      "territorial_scope": "ensenada Inca Inca, distrito",
+      "source_url": "https://apropiaconsentido.minciencias.gov.co/donde-estamos-3/",
+      "consulted_at": "2026-10-17",
+      "notes": "Conservar inventario amplio; selección editorial v4 separada. Validar ficha específica antes de publicar.",
+      "text_status": "borrador_v4",
+      "photo_status": "referencia_por_revisar",
+      "approval": null
+    },
+    {
+      "id": "pibe",
+      "name": "Monumento al Pibe Valderrama",
+      "category": "identidad deportiva",
+      "territorial_scope": "urbano",
+      "source_url": "https://colombia.travel/es/santa-marta",
+      "consulted_at": "2026-10-17",
+      "notes": "Conservar inventario amplio; selección editorial v4 separada. Validar ficha específica antes de publicar.",
+      "text_status": "investigacion_pendiente_ficha_especifica",
+      "photo_status": "pendiente",
+      "approval": null
+    },
+    {
+      "id": "mundo-marino",
+      "name": "Acuario Mundo Marino",
+      "category": "fauna marina",
+      "territorial_scope": "sector El Rodadero",
+      "source_url": "https://mundomarinoacuario.com.co/preguntas-frecuentes/",
+      "consulted_at": "2026-10-17",
+      "notes": "Conservar inventario amplio; selección editorial v4 separada. Validar ficha específica antes de publicar.",
+      "text_status": "investigacion_pendiente_ficha_especifica",
+      "photo_status": "pendiente",
+      "approval": null
     }
   ],
   "experiences": [
@@ -157,5 +217,15 @@
   "originals_approved": false,
   "texts_approved": false,
   "illustrations_generated": false,
-  "publication_approved": false
+  "publication_approved": false,
+  "primary_selection_v4": [
+    "tayrona",
+    "quinta",
+    "centro",
+    "taganga",
+    "rodadero",
+    "minca",
+    "museo-oro",
+    "acuario"
+  ]
 }
