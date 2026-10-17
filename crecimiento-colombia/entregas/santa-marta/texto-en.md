@@ -18,11 +18,11 @@ The house where Simón Bolívar died in 1830 brings together history, a museum a
 
 ## Historic centre and Cathedral
 
-Walk through the centre, past the Cathedral and around Parque de los Novios. Architecture and urban life share this route; the Cathedral is a stop rather than a duplicate attraction.
+Walk through the centre, past the Cathedral and around Parque de los Novios. Architecture, squares and urban life share a route that you can continue towards the waterfront.
 
 ## Taganga
 
-The bay, fishing boats and coastal viewpoints define this rural district of Santa Marta. It deserves its own visit and a future guide distinct from El Rodadero; diving trips are researched separately.
+The bay, fishing boats and coastal viewpoints define this rural district of Santa Marta. Take time to enjoy its scenery and fishing character, distinct from El Rodadero; check diving arrangements with the operators.
 
 ## El Rodadero
 

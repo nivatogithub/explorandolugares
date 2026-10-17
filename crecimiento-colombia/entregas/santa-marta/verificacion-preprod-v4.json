@@ -1,0 +1,32 @@
+{
+  "checked_at": "2026-10-17T11:51:12.489640+00:00",
+  "zip_sha256": "dee2f3313f47faeca54606488fe945e86434f039277ef3187c20665035440fe0",
+  "results": [
+    {
+      "locale": "es",
+      "url": "http://127.0.0.1:8088/destinos/santa-marta/",
+      "attractions": 8,
+      "distinct_zip_images": 9,
+      "distinct_original_sources": 9,
+      "images_http_hashes_ok": true
+    },
+    {
+      "locale": "en",
+      "url": "http://127.0.0.1:8088/en/destinos/santa-marta/",
+      "attractions": 8,
+      "distinct_zip_images": 9,
+      "distinct_original_sources": 9,
+      "images_http_hashes_ok": true
+    },
+    {
+      "locale": "pt-BR",
+      "url": "http://127.0.0.1:8088/pt-br/destinos/santa-marta/",
+      "attractions": 8,
+      "distinct_zip_images": 9,
+      "distinct_original_sources": 9,
+      "images_http_hashes_ok": true
+    }
+  ],
+  "production_accessed": false,
+  "final_editorial_approval": false
+}
