@@ -18,7 +18,9 @@ Las dos imágenes conservan el quiosco en las simulaciones de recorte ancho/móv
 
 La candidata de dron de Nehemias representa El Rodadero / bahía de Gaira, un sector del distrito con identidad propia, no el centro histórico. Conservada como alternativa condicional; todavía se buscan opciones mejores de ciudad y costa. Se descartó la segunda Pexels por cielo excesivo y edificios cortados. No vuelve a proponerse la portada Camellón rechazada.
 
-## Portada: alternativa urbana costera SM-H6-05 (fotograma13s)
+## DESCARTADA COMO PORTADA · SM-H6-05 (fotograma13s)
+
+**Decisión humana posterior:** la portada debe mostrar centro y bahía histórica exclusivamente. Esta opción de Rodadero queda fuera; las imágenes siguientes se conservan solo como historial, no para elegir.
 
 Uso propuesto: **imagen principal de Santa Marta**, distinta de fichas de atractivos. Original: video aéreo Pexels31559774, Juan Camilo Trujillo Botero,9abril2025, licenciaPexels. Se conservan MP4 y fotogramas reales2560×1440, sinIA. La ficha identifica Santa Marta; Rodadero/Gaira es inferencia visual pendiente de corroboración exacta. No es propuesta identificada como centrohistórico.
 
