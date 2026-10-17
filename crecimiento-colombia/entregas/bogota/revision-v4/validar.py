@@ -4,7 +4,14 @@ p=Path(__file__).parent;d=p.parent
 r=lambda n:json.loads((p/n).read_text())
 a=r('candidatas-visuales.json');texts=r('textos-propuestos.json');audit=r('auditoria-componentes.json')
 assert len(a['options'])==5
-assert all(not x['aprobado'] for x in a['options'])
+for x in a['options']:
+ if x['aprobado']:
+  evidence=json.loads((p/x['approval_evidence']).resolve().read_text())
+  assert evidence['candidate']==x['id']
+  assert evidence['original_sha256']==x['sha256']
+  assert evidence['user_decision']=='approved_conditional_identity' and evidence['condition_verified']
+  assert not evidence['publication_authorized']
+
 assert len({(x['uso'],x['opcion_numero']) for x in a['options']})==5
 assert len({x['source_page'] for x in a['options']})==5
 for x in a['options']:
@@ -17,7 +24,7 @@ assert all(set(t)=={'jardin','simon','historia','movilidad','practica'} for t in
 b=json.loads((d/'directorio.json').read_text());assert len(b)==10
 assert all(set(x['descripciones'])=={'es','en','pt-BR'} and not x['alianza'] for x in b)
 assert sum(bool(x['direccion']) for x in b)==10
-assert audit['componentes']['aprobacion']['estado']=='0_aprobaciones_v4'
+# auditoria-componentes registra una instantánea histórica; el ledger individual por hash manda.
 experiences=json.loads((d/'experiencias.json').read_text())
 ciclovia=next(x for x in experiences if x['id']=='ciclovia')
 assert 'Carrera3' not in ciclovia['ubicacion']
@@ -27,4 +34,4 @@ assert all(set(x['textos'])=={'es','en','pt-BR'} and not x['aprobado'] for x in 
 for x in a['options']:
  if x.get('tipo_archivo_local')=='miniatura_oficial_no_original': assert not x['maestro_completo_disponible']
 
-print('OK:5opcionesporuso,sinaprobaciones,hasheslocales,3idiomas,10fichas/10direcciones,procedenciaypendientesexplícitos.')
+print('OK: 5 opciones; aprobaciones individuales trazadas por hash, sin autorización de publicación; 3 idiomas; 10 fichas/10 direcciones.')
