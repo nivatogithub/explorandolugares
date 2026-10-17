@@ -182,9 +182,9 @@
       "pt-BR": "Astronomia no Planetário"
     },
     "textos": {
-      "es": "Consultar sesión y condiciones del día.",
-      "en": "Check the day’s session and conditions.",
-      "pt-BR": "Consulte sessão e condições do dia."
+      "es": "Explora la astronomía a través de la programación del Planetario de Bogotá. Elige entre las propuestas anunciadas para el domo, el Museo del Espacio y los talleres; confirma fecha, edades y condiciones con el escenario antes de reservar.",
+      "en": "Explore astronomy through Bogotá Planetarium’s programme. Choose from its announced dome shows, Space Museum visits and workshops; confirm dates, age requirements and conditions with the venue before booking.",
+      "pt-BR": "Explore a astronomia por meio da programação do Planetário de Bogotá. Escolha entre as propostas anunciadas para o domo, o Museu do Espaço e as oficinas; confirme datas, idades e condições com o espaço antes de reservar."
     },
     "clase": "editorial_autonoma",
     "sitio_id": "bogota-planetario",
@@ -193,7 +193,7 @@
     "fuentes": [
       "S18"
     ],
-    "consulta": "2026-10-16",
+    "consulta": "2026-10-17",
     "foto_id": null,
     "foto_estado": "faltante",
     "operador": null,
@@ -207,7 +207,11 @@
     "public_status": "borrador_privado",
     "bloqueo": null,
     "aprobado": false,
-    "ilustracion": "no_generada"
+    "ilustracion": "no_generada",
+    "fuentes_complementarias": [
+      "https://planetariodebogota.gov.co/",
+      "https://planetariodebogota.gov.co/node/1564"
+    ]
   },
   {
     "id": "gastronomia",
@@ -500,9 +504,9 @@
       "pt-BR": "Uma sessão de cinema"
     },
     "textos": {
-      "es": "Elegir sesión de la agenda oficial y confirmar requisitos.",
-      "en": "Choose a screening from the official agenda and check requirements.",
-      "pt-BR": "Escolha sessão da agenda oficial e confirme requisitos."
+      "es": "Descubre una película o una exposición de la programación de la Cinemateca de Bogotá. Consulta la sede, la sala y las condiciones de la actividad elegida; una visita editorial no implica entradas ni cupos confirmados.",
+      "en": "Discover a film or exhibition in Bogotá Cinematheque’s programme. Check the venue, screening room and conditions of your chosen activity; this editorial suggestion does not include confirmed tickets or places.",
+      "pt-BR": "Descubra um filme ou uma exposição na programação da Cinemateca de Bogotá. Consulte a sede, a sala e as condições da atividade escolhida; esta sugestão editorial não inclui ingressos nem vagas confirmadas."
     },
     "clase": "editorial_autonoma",
     "sitio_id": "bogota-cinemateca",
@@ -511,7 +515,7 @@
     "fuentes": [
       "S31"
     ],
-    "consulta": "2026-10-16",
+    "consulta": "2026-10-17",
     "foto_id": null,
     "foto_estado": "faltante",
     "operador": null,
@@ -525,7 +529,10 @@
     "public_status": "borrador_privado",
     "bloqueo": null,
     "aprobado": false,
-    "ilustracion": "no_generada"
+    "ilustracion": "no_generada",
+    "fuentes_complementarias": [
+      "https://cinematecadebogota.gov.co/lineas/formas-de-ver"
+    ]
   },
   {
     "id": "arte-urbano",
