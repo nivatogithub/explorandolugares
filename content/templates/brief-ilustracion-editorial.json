@@ -5,12 +5,17 @@
   "destination_id": null,
   "component_id": null,
   "semantic_type": null,
-  "environment": {"climate": null, "terrain": null, "vegetation": [], "architecture_types": []},
+  "environment": {
+    "climate": null,
+    "terrain": null,
+    "vegetation": [],
+    "architecture_types": []
+  },
   "documented_facts": [],
   "unknowns": [],
   "art_direction": {
-    "language": "caricatura editorial orgánica elaborada de aspecto adulto",
-    "people": "Personajes completos, expresivos y moderadamente caricaturescos; sin cabezas de bolita ni palitos",
+    "language": "Ilustración editorial semirrealista con pincelada sutil, profundidad y materiales legibles",
+    "people": "Personajes ilustrados completos y expresivos, anatomía coherente y estilización caricaturesca sutil; sin bolitas/palitos",
     "vegetation": "Ramificaciones, follaje variado, volumen y tipos compatibles con el entorno",
     "terrain": "Formas naturales, profundidad y relieve compatible; sin montañas triangulares genéricas",
     "architecture": "Tipologías diferenciadas, materiales y detalle; no repetir una fachada para todos los lugares",
@@ -18,9 +23,25 @@
     "composition": null
   },
   "photo_reference": null,
-  "compatibility": {"required_traits": [], "excluded_traits": [], "exact_landmark_claim": false},
+  "compatibility": {
+    "required_traits": [],
+    "excluded_traits": [],
+    "exact_landmark_claim": false
+  },
   "prompt": null,
-  "generation": {"executed": false, "tool": null, "master": null, "derivatives": []},
-  "review": {"factual": "pending", "characters": "pending", "style": "pending", "small_size": "pending", "approved_final_image": false},
-  "production_authorized": false
+  "generation": {
+    "executed": false,
+    "tool": null,
+    "master": null,
+    "derivatives": []
+  },
+  "review": {
+    "factual": "pending",
+    "characters": "pending",
+    "style": "pending",
+    "small_size": "pending",
+    "approved_final_image": false
+  },
+  "production_authorized": false,
+  "style_id": "EL-SEMI-REALISTA-1"
 }

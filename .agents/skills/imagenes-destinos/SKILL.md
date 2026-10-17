@@ -5,6 +5,8 @@ description: Produce and review accurate AI-generated editorial illustrations fo
 
 # Imágenes de destinos de Explorando Lugares
 
+Estilo elegido: **EL-SEMI-REALISTA-1**, ilustración semirrealista. Antes del prompt preparar evidencia con `crecimiento-colombia/INSTRUCCION_WORKER_INVESTIGACION_VISUAL.md`. La imagen de estilo no es fuente geográfica. Conservar las preferencias de personajes completos/expresivos y entorno orgánico, con caricaturización sutil; sustituye el acabado global anterior de caricatura exagerada.
+
 Para el trabajo completo del worker, seguir `crecimiento-colombia/PROCEDIMIENTO_WORKER_IMAGENES.md`: pilotos, briefs, biblioteca, generación, revisión, integración y cierre. No autoriza generación masiva ni publicación.
 
 Antes de crear imágenes, lee `docs/GUIA_BIBLIOTECA_ILUSTRADA.md` (dirección actual, brief y tratamiento de personajes/entorno), `docs/PRODUCCION_IMAGENES_IA.md`, `docs/GUIAS_VISUALES_DESTINOS.md` y `AGENTS.md`. Las preferencias actuales de la guía prevalecen sobre la paleta y las exigencias fotográficas anteriores para tarjetas genéricas.
@@ -18,7 +20,7 @@ Para portada o referencia fotográfica, el propietario elige la foto: no reanuda
 1. Identifica el destino, el atractivo y el componente/página donde se usará la imagen.
 2. Verifica sus rasgos con fuentes locales/institucionales y referencias visuales reconocibles. Registra URL y fecha.
 3. Elige vía: transformación autorizada de una referencia cuyo permiso cubra la carga al generador y la publicación del resultado previsto, o composición nueva independiente basada en hechos del lugar sin copiar ni subir una foto restringida. No exigir permiso para publicar el original intacto cuando un permiso específico ya cubra el uso previsto; documentar condiciones del derivado. Consulta la sección de publicabilidad IA de `crecimiento-colombia/GUIA_GENERACION_DESTINOS.md`.
-4. Genera una ilustración nueva con el atractivo principal claramente visible, contexto territorial fiel, composición adecuada al recorte real, colores propios del paisaje independientes de la interfaz y acabado de caricatura editorial orgánica elaborada. Dibujar personas completas y expresivas, vegetación y relieve naturales y tipologías arquitectónicas variadas; no palitos/bolitas, triángulos ni cubos de juguete. Conservar los rasgos específicos documentados; sin texto ni logos.
+4. Genera una ilustración nueva con el atractivo principal claramente visible, contexto territorial fiel, composición adecuada al recorte real, colores propios del paisaje independientes de la interfaz y acabado editorial semirrealista EL-SEMI-REALISTA-1. Dibujar personas completas y expresivas, vegetación y relieve naturales y tipologías arquitectónicas variadas; no palitos/bolitas, triángulos ni cubos de juguete. Conservar los rasgos específicos documentados; sin texto ni logos.
 5. Inspecciona la salida contra las referencias. Recházala si cambia arquitectura, monumento, ubicación, paisaje o acceso, o si el sitio no se reconoce al tamaño de tarjeta.
 6. Guarda el maestro y la versión optimizada, completa el manifiesto `content/templates/procedencia-imagen-ia.json` y deja el activo en borrador.
 7. Solicita revisión humana. No publiques, despliegues, subas a producción ni cambies una imagen pública sin aprobación humana explícita.
