@@ -24,3 +24,7 @@ No se ha generado IA ni aprobado/publicado contenido. No se modifica base de dat
 ## Actividades · corrección comprobada
 
 Se corrigió la dirección errónea de Ciclovía (arrastraba el punto BikeTours), separando red distrital de tourprivado. Texto ES/EN/PT ampliado para Ciclovía y tour en bicicleta con fuente oficial. Foto histórica de Ciclovía reinspeccionada; no representa al operador. Galería operador no tiene licencia de reutilización comprobada; faltan fotos específicas de actividades/negocios.
+
+## Auditoría TOP8 · 2026-10-17
+
+Subtarea concluida: AUDITORIA_TOP8.json y AUDITORIA_TOP8.md documentan31candidatos ydosescenarios explícitos de8, sin cambiar selección/BD. Monserratepropuesto1, antes4. Se detectó que ZonaT/G tienen alta demanda oficial y requieren decisión de alcance. MuseoNacional omitido injustificadamente; Salitre/Maloka/Colpatria evaluados como frontera sin inventar visitas. Zipaquirá fuera de jurisdicción. La aprobación existente de ilustración Jardín se conservó y susdos hashes se verificaron; no equivale a selección ni publicación. Pendiente decisión editorial del alcance y corte, no ejecución silenciosa.
