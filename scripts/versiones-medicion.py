@@ -14,6 +14,9 @@ def stamp(text,name,version):
 
 
 def versions(measurement,menu):
+    css=measurement.with_suffix('.css')
+    measurement_text=stamp(measurement.read_text(),'medicion.css',digest(css))
+    measurement.write_text(measurement_text)
     measurement_version=digest(measurement)
     menu_text=stamp(menu.read_text(),'medicion.js',measurement_version)
     return measurement_version,menu_text,hashlib.sha256(menu_text.encode()).hexdigest()[:12]
