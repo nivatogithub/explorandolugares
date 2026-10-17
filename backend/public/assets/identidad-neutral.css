@@ -1,0 +1,12 @@
+/* Explorando Lugares · identidad neutral v2 */
+:root{--el-page:#FAFAFA;--el-panel:#F1F2F4;--el-card:#FFFFFF;--el-field:#FFFFFF;--el-hover:#E9EBEE;--el-border:#DADDE2;--el-control-border:#BDC2CB;--el-text:#172B42;--el-muted:#60646C;--el-accent:#d84e27;--el-action:#C94720;--el-action-hover:#A83B22;--el-focus:#a44327;--el-on-action:#FFFFFF;--el-published:#315e9d;--el-in-progress:#dfa04e;--el-pending:#bdc7cb;--el-unknown:#87979f}
+body{background:var(--el-page)!important;color:var(--el-text)}
+header,footer{background:var(--el-page)!important;border-color:var(--el-border)!important}
+.pilot-banner{display:none!important}
+h1,h2,h3,h4{color:var(--el-text)}
+.card,.directory-card,.destination-experience-card,.highlight-grid article,.metric-card{background:var(--el-card)!important;border-color:var(--el-border)!important}
+.destination-invitation,.destination-reasons,.destination-nav,.destination-preview-banner{background:var(--el-panel)!important;border-color:var(--el-border)!important}
+input,select,textarea{background:var(--el-field);border-color:var(--el-control-border)}
+.destination-direct-reading .destination-overview{display:block!important;grid-template-columns:1fr!important;padding:28px 0!important}
+.destination-direct-reading .destination-overview>div,.destination-direct-reading .destination-overview p{width:100%;max-width:none!important}
+.destination-direct-reading .destination-overview h2{font-size:clamp(25px,3vw,34px);margin:0 0 12px}
