@@ -193,7 +193,7 @@ final class DestinationAdminService
             }
             if ($poiStatus==='published') foreach (self::LOCALES as $locale) {
                 if ($clean['translations'][$locale]['name']===''||$clean['translations'][$locale]['description']==='') throw new RuntimeException("Completa la traducción del atractivo publicado en {$locale}.");
-                if ($poiType==='experience'&&($clean['translations'][$locale]['external_url']===''||$clean['translations'][$locale]['external_label']==='')) throw new RuntimeException("Completa el enlace y su texto para la experiencia publicada en {$locale}.");
+                if ($clean['translations'][$locale]['external_url']!==''&&$clean['translations'][$locale]['external_label']==='') throw new RuntimeException("Completa el texto del enlace externo en {$locale}.");
             }
                 foreach (self::LOCALES as $locale) {
                     if ($clean['translations'][$locale]['map_url']==='') {

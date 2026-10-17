@@ -52,12 +52,12 @@ foreach ([
     $provenance=json_decode((string)$row['provenance_json'],true,512,JSON_THROW_ON_ERROR);
     check(($provenance['human_approval']??'')!=='','Approved illustration retains its private approval note');
 }
-check(count($jerico['history'])===2 && count($jerico['places'])===7,'Public Jericó page shows seven published attractions');
+check(count($jerico['history'])===2 && count($jerico['places'])===10,'Public Jericó page shows seven attractions and three editorial experiences');
 $publishedExperienceCount=(int)$pdo->query("SELECT COUNT(*) FROM points_of_interest WHERE destination_id=".(int)$jerico['id']." AND poi_type='experience' AND publication_status='published'")->fetchColumn();
-check($publishedExperienceCount===0,'Operator experiences are kept out of public listings until approved');
+check($publishedExperienceCount===3,'Approved editorial experiences are public independently of paid operator placements');
 $jericoPreview=$repo->findPublished('jerico','es',true);
-check($jericoPreview!==null && count($jericoPreview['places'])===10,'Private preview can review draft operator experiences alongside attractions');
-foreach(array_slice($jericoPreview['places'],7) as $experience)check($experience['type']==='experience'&&$experience['external_url']==='','Draft experiences have no external operator link before an agreement');
+check($jericoPreview!==null && count($jericoPreview['places'])===10,'Private preview retains the three editorial experiences alongside attractions');
+foreach(array_slice($jericoPreview['places'],7) as $experience)check($experience['type']==='experience'&&$experience['external_url']==='','Editorial experiences have no uncontracted external operator link');
 check($jerico['places'][1]['media'][0]['creator']!=='','POI image attribution returned');
 check(count(array_filter($jerico['sources'],static fn($source)=>$source['section_key']==='places'))===2,'Attractions sources include the Antioquia government tourism guide');
 $jericoPt=$repo->findPublished('jerico','pt-BR');
@@ -65,7 +65,7 @@ check($jericoPt!==null && str_contains($jericoPt['places'][1]['media'][0]['alt']
 $jericoVisuals=array_column($catalog['destinations'][0]['translations']['es']['places'],'slug');
 $expectedJericoMedia=['centro-historico'=>'assets/destinos/1/parque-principal-ilustrado.webp','historic-centre'=>'assets/destinos/1/parque-principal-ilustrado.webp','cerro-el-salvador'=>'assets/destinos/1/cristo-cerro-el-salvador-ilustrado-v2.webp','colina-de-el-salvador'=>'assets/destinos/1/cristo-cerro-el-salvador-ilustrado-v2.webp','santuario-de-santa-laura'=>'assets/destinos/1/santuario-santa-laura-ilustrado-v2.webp','saint-laura-sanctuary'=>'assets/destinos/1/santuario-santa-laura-ilustrado-v2.webp','casa-natal-de-santa-laura'=>'assets/destinos/1/casa-santa-laura-ilustrada-v2.webp','birthplace-of-saint-laura'=>'assets/destinos/1/casa-santa-laura-ilustrada-v2.webp','jardin-botanico-los-balsos'=>'assets/destinos/1/jardin-botanico-los-balsos-ilustrado.webp','los-balsos-botanical-garden'=>'assets/destinos/1/jardin-botanico-los-balsos-ilustrado.webp','subida-al-cerro-de-las-nubes'=>'assets/destinos/1/cerro-de-las-nubes-sendero-ilustrado-v2.webp','cerro-de-las-nubes-hike'=>'assets/destinos/1/cerro-de-las-nubes-sendero-ilustrado-v2.webp','subida-ao-cerro-de-las-nubes'=>'assets/destinos/1/cerro-de-las-nubes-sendero-ilustrado-v2.webp','chorros-de-quebradona'=>'assets/destinos/1/chorros-quebradona-ilustrado-v2.webp'];
 foreach($catalog['destinations'][0]['translations'] as $locale=>$translation)foreach($translation['places'] as $place)if(isset($expectedJericoMedia[$place['slug']]))check(($place['media']['path']??null)===$expectedJericoMedia[$place['slug']],'Selected Jericó illustration is stable in every locale: '.$locale.' / '.$place['slug']);
-$jericoCatalog=$catalog['destinations'][0];foreach($jericoCatalog['translations'] as $locale=>$translation)foreach(array_slice($translation['places'],-3) as $experience)check($experience['publication_status']==='draft'&&$experience['external_url']==='','Jericó operator activities stay unlinked drafts after catalog generation: '.$locale.' / '.$experience['slug']);
+$jericoCatalog=$catalog['destinations'][0];foreach($jericoCatalog['translations'] as $locale=>$translation)foreach(array_slice($translation['places'],-3) as $experience)check($experience['publication_status']==='published'&&$experience['external_url']==='','Jericó editorial experiences are published without uncontracted operator links: '.$locale.' / '.$experience['slug']);
 $jardin=$repo->findPublished('jardin','en');
 check($jardin===null,'Other pilot destinations remain hidden until approved');
 $jardinPreview=$repo->findPublished('jardin','en',true);

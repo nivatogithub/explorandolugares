@@ -136,27 +136,27 @@ JERICO_EXPERIENCES = {
         "url": "",
         "media": "assets/destinos/1/helicoptero-medellin-jerico-ilustracion.webp",
         "translations": {
-            "es": ("Vuelo privado en helicóptero Medellín–Jericó", "Experiencia de vuelo que podría ofrecer un operador local. Se mostrará cuando exista un acuerdo confirmado y se validen ruta, condiciones y disponibilidad.", ""),
-            "en": ("Private helicopter flight Medellín–Jericó", "A flight experience that may be offered by a local operator. It will appear once an agreement is confirmed and route, conditions and availability are verified.", ""),
-            "pt-BR": ("Voo privativo de helicóptero Medellín–Jericó", "Experiência de voo que poderá ser oferecida por um operador local. Será exibida quando houver um acordo confirmado e rota, condições e disponibilidade estiverem verificadas.", ""),
+            "es": ("Vuelo privado en helicóptero Medellín–Jericó", "Un recorrido aéreo entre Medellín y Jericó para descubrir el paisaje montañoso del Suroeste antioqueño desde otra perspectiva. Confirma con quien preste el servicio la ruta, los puntos de salida y llegada y las condiciones del vuelo.", ""),
+            "en": ("Private helicopter flight Medellín–Jericó", "An aerial journey between Medellín and Jericó to discover the mountain scenery of southwestern Antioquia from another perspective. Confirm the route, departure and arrival points and flight conditions with the service provider.", ""),
+            "pt-BR": ("Voo privativo de helicóptero Medellín–Jericó", "Um percurso aéreo entre Medellín e Jericó para conhecer as paisagens montanhosas do sudoeste de Antioquia de outra perspectiva. Confirme a rota, os pontos de partida e chegada e as condições do voo com o prestador do serviço.", ""),
         },
     },
     "parapente-puerto-arturo": {
         "url": "",
         "media": "assets/destinos/1/parapente-puerto-arturo-ilustracion.webp",
         "translations": {
-            "es": ("Parapente biplaza en Jericó", "Experiencia de parapente que podría ofrecer un operador local. Se mostrará cuando exista un acuerdo confirmado y se validen despegue, aterrizaje, condiciones y disponibilidad.", ""),
-            "en": ("Tandem paragliding in Jericó", "A paragliding experience that may be offered by a local operator. It will appear once an agreement is confirmed and launch, landing, conditions and availability are verified.", ""),
-            "pt-BR": ("Voo duplo de parapente em Jericó", "Experiência de parapente que poderá ser oferecida por um operador local. Será exibida quando houver um acordo confirmado e decolagem, pouso, condições e disponibilidade estiverem verificados.", ""),
+            "es": ("Parapente biplaza en Jericó", "Una experiencia de vuelo biplaza sobre el paisaje del Suroeste antioqueño. El despegue, el aterrizaje, la duración y la realización del vuelo deben confirmarse con el prestador y dependen de las condiciones meteorológicas.", ""),
+            "en": ("Tandem paragliding in Jericó", "A tandem paragliding experience above the landscapes of southwestern Antioquia. Confirm launch and landing locations, duration and whether the flight can take place with the provider; these depend on weather conditions.", ""),
+            "pt-BR": ("Voo duplo de parapente em Jericó", "Uma experiência de voo duplo de parapente sobre as paisagens do sudoeste de Antioquia. Confirme com o prestador os locais de decolagem e pouso, a duração e a realização do voo, que dependem das condições meteorológicas.", ""),
         },
     },
     "experiencia-finca-cafetera": {
         "url": "",
         "media": "assets/destinos/1/experiencia-finca-cafetera-ilustracion.webp",
         "translations": {
-            "es": ("Experiencia en finca cafetera", "Experiencia para conocer el cultivo y el proceso del café en una finca de Jericó. Se mostrará cuando se confirme el lugar y exista un acuerdo con quien la ofrece.", ""),
-            "en": ("Coffee farm experience", "An experience to learn about coffee growing and processing at a farm in Jericó. It will appear once the location is verified and an agreement with its provider is confirmed.", ""),
-            "pt-BR": ("Experiência em fazenda de café", "Experiência para conhecer o cultivo e o processamento do café em uma fazenda de Jericó. Será exibida quando o local for confirmado e houver acordo com quem a oferece.", ""),
+            "es": ("Experiencia en finca cafetera", "Conoce el cultivo y el proceso del café mediante una visita a una finca de Jericó. El recorrido puede acercarte a los cafetales, las formas de preparación y la degustación. Confirma la finca, los contenidos de la visita y la disponibilidad antes de organizarla.", ""),
+            "en": ("Coffee farm experience", "Learn about coffee growing and processing during a visit to a farm in Jericó. A tour may include coffee plants, preparation methods and tasting. Confirm the farm, the activities included and availability before planning your visit.", ""),
+            "pt-BR": ("Experiência em fazenda de café", "Conheça o cultivo e o processamento do café em uma fazenda de Jericó. A visita pode incluir cafezais, métodos de preparo e degustação. Confirme a fazenda, as atividades incluídas e a disponibilidade antes de organizar o passeio.", ""),
         },
     },
 }
@@ -472,7 +472,7 @@ def main():
             media = {"path": media_path, "alt": media_info["alt"][locale],
                      "width": media_info["width"], "height": media_info["height"],
                      "caption": media_info["alt"][locale]}
-            tr["places"].append({"slug": slug, "type": "experience", "publication_status": "draft", "name": name,
+            tr["places"].append({"slug": slug, "type": "experience", "publication_status": "published", "name": name,
                 "description": description, "map_url": "", "external_url": experience["url"],
                 "external_label": label, "media": media})
     used_media = {media["path"] for d in result["destinations"] for tr in d["translations"].values()
