@@ -27,3 +27,7 @@ La Boquilla conserva la experiencia de manglar/pesca; Museo Histórico conserva 
 ## Actualización v10 · prueba solicitada por el propietario
 
 Las siete experiencias ya tienen ilustraciones SVG genéricas originales en la vista privada. En esta prueba no requieren fotografías ni generación raster. Su aprobación visual sigue pendiente; las fotos antiguas no se borran. Portada, historia y atractivos conservan su flujo de imágenes específicas.
+
+## V12 · biblioteca también para lugares
+
+Por nueva instrucción del propietario, las ocho tarjetas de Qué conocer usan composiciones vectoriales representativas por tipo. Ya no se requieren ocho referencias fotográficas para completar esas tarjetas con este enfoque. Quince ilustraciones compartidas (8lugares+7experiencias) están en preview, pendientes de revisión visual. Portada sigue específica. Las instrucciones anteriores de fotografía obligatoria por atractivo quedan sustituidas para esta prueba.

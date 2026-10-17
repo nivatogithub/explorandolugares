@@ -17,3 +17,7 @@ Siete experiencias ilustradas con composición SVG reutilizable, sin fotografía
 ## V11 · comentarios del propietario
 
 Etiqueta de ilustración retirada. Detalle gráfico de experiencias ajustado. Dos caricaturas SVG conceptuales añadidas a Qué conocer: San Felipe y Bocagrande; el resto conserva fotografías o pendientes. Recursos comunes alrededor de11,2KB. Sin búsqueda de fotos, generación raster, cambios BD ni producción. Dirección visual y fidelidad aún pendientes de revisión.
+
+## V12 · quince tarjetas ilustradas
+
+Ocho lugares y siete experiencias ya tienen ilustración genérica de tipo en la vista privada. Biblioteca completa15340bytes (gzip calculado5113bytes). Las fotografías de tarjeta previas se conservan en archivos/BD pero se ocultan en este ensayo. No se piden nuevas URLs para estas quince tarjetas. Falta revisión visual del propietario; portada sigue provisional y el destino no está aprobado para producción.
