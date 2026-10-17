@@ -2,6 +2,10 @@
 
 Estas reglas reducen las autorizaciones repetidas y el trabajo innecesario. Se aplican al repositorio y al hosting de Explorando Lugares junto con `AGENTS.md`, `docs/DESPLIEGUE_SFTP.md` y `docs/GOBERNANZA_AGENTES.md`.
 
+## Preproducción obligatoria
+
+El flujo vigente está en `PREPRODUCCION.md`: integrar en `preprod`, levantar la copia local con Podman, revisar y recibir aprobación explícita del propietario para ese commit, desplegar a producción desde `preprod`, validar y solo entonces integrar el mismo commit en `main`. Una aprobación anterior de otro commit no autoriza publicar esta versión. No desplegar desde ramas de workers.
+
 ## Regla principal: una autorización por tarea
 
 Cuando el propietario pide una tarea concreta —por ejemplo, «prepara y despliega esta versión»— esa instrucción autoriza de una vez los pasos rutinarios necesarios dentro de ese alcance. No se deben pedir permisos separados para cada comando, lectura, prueba o archivo del mismo trabajo.

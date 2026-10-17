@@ -189,6 +189,25 @@ class DeploymentTests(unittest.TestCase):
         self.assertTrue(commands[-1].endswith('/' + deploy.MANIFEST_NAME + '"'))
         self.assertFalse(any(command.startswith(('get ', '-get ', 'rename ')) for command in commands))
 
+    def test_production_requires_preprod_and_explicit_candidate(self):
+        from unittest.mock import patch
+        with patch.object(deploy.subprocess, 'check_output', side_effect=['main\n','a'*40+'\n']):
+            with self.assertRaises(ValueError): deploy.require_approved_preprod('a'*40)
+        with patch.object(deploy.subprocess, 'check_output', side_effect=['preprod\n','a'*40+'\n']):
+            with self.assertRaises(ValueError): deploy.require_approved_preprod(None)
+
+    def test_production_rejects_different_commit_or_dirty_tree(self):
+        from unittest.mock import patch
+        with patch.object(deploy.subprocess, 'check_output', side_effect=['preprod\n','a'*40+'\n','b'*40+'\n']):
+            with self.assertRaises(ValueError): deploy.require_approved_preprod('b'*40)
+        with patch.object(deploy.subprocess, 'check_output', side_effect=['preprod\n','a'*40+'\n','a'*40+'\n',' M app.php\n']):
+            with self.assertRaises(ValueError): deploy.require_approved_preprod('a'*40)
+
+    def test_production_accepts_clean_matching_preprod(self):
+        from unittest.mock import patch
+        with patch.object(deploy.subprocess, 'check_output', side_effect=['preprod\n','a'*40+'\n','a'*40+'\n','']):
+            deploy.require_approved_preprod('a'*40)
+
     def test_strict_host_checking_remains_enabled(self):
         command = deploy.SFTP(self.config).command
         self.assertIn('-oStrictHostKeyChecking=yes', command)

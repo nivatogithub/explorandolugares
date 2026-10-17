@@ -42,7 +42,8 @@ def prepare(config):
   files.append({'relative':relative,'local':str(dst),'bytes':len(raw),'sha256':hashlib.sha256(raw).hexdigest()})
  return files
 def main():
- parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--config',type=Path,required=True);parser.add_argument('--manifest',type=Path,required=True);parser.add_argument('--deploy',action='store_true');args=parser.parse_args()
+ parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--config',type=Path,required=True);parser.add_argument('--manifest',type=Path,required=True);parser.add_argument('--deploy',action='store_true');parser.add_argument('--approved-preprod');args=parser.parse_args()
+ if args.deploy:sftp.require_approved_preprod(args.approved_preprod)
  config=sftp.load_config(args.config);previous=manifest(json.loads(args.manifest.read_text()),config)
  subprocess.run([sys.executable,str(ROOT/'scripts/generar-catalogo-cobertura.py')],check=True)
  subprocess.run(['php',str(ROOT/'backend/tests/coverage-service.php')],check=True)
@@ -61,7 +62,7 @@ def main():
  scoped={x['relative'] for x in files}
  outside=[x['relative'] for x in full if x['relative'] not in scoped and old.get(x['relative'],{}).get('sha256')!=x['sha256']]
  if outside:
-  print(f'La versión también cambia {len(outside)} archivos fuera del paquete acotado. Usar scripts/desplegar-sftp.py desde main para esta entrega.')
+  print(f'La versión también cambia {len(outside)} archivos fuera del paquete acotado. Usar scripts/desplegar-sftp.py desde preprod para esta entrega.')
   if args.deploy:raise ValueError('Entrega parcial bloqueada: dejaría páginas o módulos con fuentes anteriores. Usar el empaquetador completo.')
  if not args.deploy:
   print('Paquete local .local/coverage/release. No se conectó ni modificó el hosting.');return

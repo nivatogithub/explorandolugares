@@ -23,9 +23,11 @@ final class CoverageService
             $places=[];$counts=['published'=>0,'in_progress'=>0,'pending'=>0,'unknown'=>0];
             foreach($department['places'] as $place){
                 $liveStatus=$live[self::normalized($department['name']).'|'.$place['slug']]??null;
-                $status=$liveStatus==='published'?'published':(($liveStatus==='draft'||$place['preparing'])?'in_progress':($available?'pending':'unknown'));
+                // Internal drafts and planning flags never authorize a public announcement.
+                if($liveStatus!=='published' && empty($place['public_announcement']))continue;
+                $status=$liveStatus==='published'?'published':($available?'in_progress':'unknown');
                 $counts[$status]++;
-                $places[]=['id'=>$place['id'],'name'=>$place['name'],'municipality_code'=>$place['municipality_code'],'parent_place_id'=>$place['parent_place_id'],'type'=>$place['type'],'status'=>$status,'url'=>$status==='published'?'/destinos/'.rawurlencode($place['slug']).'/':null];
+                $places[]=['id'=>$place['id'],'name'=>$place['name'],'municipality_code'=>$place['municipality_code'],'parent_place_id'=>null,'type'=>$place['type'],'status'=>$status,'url'=>$status==='published'?'/destinos/'.rawurlencode($place['slug']).'/':null];
             }
             $municipalities=[];
             foreach($this->geography as $unit){
@@ -37,11 +39,14 @@ final class CoverageService
             }
             $allPublished=count(array_filter($rows,static fn($r)=>$r['publication_status']==='published'&&self::normalized($r['department'])===self::normalized($department['name'])));
             $counts['published']=$allPublished;
-            $coverage=null;
-            $departments[]=['code'=>$department['code'],'name'=>$department['name'],'catalog_count'=>count($places),'counts'=>$counts,'coverage_percent'=>$coverage,'places'=>$places,'municipalities'=>$municipalities];
+            $covered=count(array_filter($municipalities,static fn($m)=>$m['published_count']>0));
+            $coverage=$available&&count($municipalities)>0?round(100*$covered/count($municipalities),2):null;
+            $departments[]=['code'=>$department['code'],'name'=>$department['name'],'catalog_count'=>count($places),'counts'=>$counts,'coverage_percent'=>$coverage,'covered_municipalities'=>$covered,'municipality_total'=>count($municipalities),'places'=>$places,'municipalities'=>$municipalities];
             foreach($counts as $state=>$count)$countryCounts[$state]+=$count;
         }
+        $coveredTotal=array_sum(array_column($departments,'covered_municipalities'));
+        $municipalityTotal=array_sum(array_column($departments,'municipality_total'));
         $countryCounts['published']=count(array_filter($rows,static fn($r)=>$r['publication_status']==='published'));
-        return ['schema_version'=>2,'estimated_destination_total'=>null,'national_scope_status'=>'defined','national_scope'=>'all_municipalities_and_distinct_tourist_places','audience'=>['status'=>'not_configured','source'=>null,'updated_at'=>null,'metrics'=>['anonymous_sessions'=>null,'estimated_visitors'=>null,'registered_travelers'=>null,'active_travelers'=>null,'business_views'=>null,'contact_clicks'=>null],'countries'=>null,'trend'=>null],'universe_version'=>$this->plan['universe_version'],'catalog_updated_at'=>$this->plan['catalog_updated_at'],'checked_at'=>gmdate('c'),'publication_source_available'=>$available,'country'=>['name'=>'Colombia','catalog_count'=>array_sum(array_map(static fn($d)=>$d['catalog_count'],$departments)),'counts'=>$countryCounts,'coverage_percent'=>null],'departments'=>$departments];
+        return ['schema_version'=>2,'estimated_destination_total'=>null,'national_scope_status'=>'defined','national_scope'=>'all_municipalities_and_distinct_tourist_places','audience'=>['status'=>'not_configured','source'=>null,'updated_at'=>null,'metrics'=>['anonymous_sessions'=>null,'estimated_visitors'=>null,'registered_travelers'=>null,'active_travelers'=>null,'business_views'=>null,'contact_clicks'=>null],'countries'=>null,'trend'=>null],'universe_version'=>$this->plan['universe_version'],'catalog_updated_at'=>$this->plan['catalog_updated_at'],'checked_at'=>gmdate('c'),'publication_source_available'=>$available,'country'=>['name'=>'Colombia','catalog_count'=>array_sum(array_map(static fn($d)=>$d['catalog_count'],$departments)),'counts'=>$countryCounts,'coverage_percent'=>$available&&$municipalityTotal>0?round(100*$coveredTotal/$municipalityTotal,2):null,'covered_municipalities'=>$coveredTotal,'municipality_total'=>$municipalityTotal,'coverage_basis'=>'municipalities_with_published_guide'],'departments'=>$departments];
     }
 }

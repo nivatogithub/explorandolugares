@@ -22,8 +22,8 @@ final class DestinationImporter
             $mediaIds = self::media($pdo, $catalog, $counts);
 
             $destinationInsert = $pdo->prepare('INSERT INTO destinations
-                (slug,destination_type,country_code,department,subregion,publication_status,display_order)
-                VALUES (?,?,?,?,?,?,?)');
+                (slug,destination_type,country_code,department,subregion,publication_status,display_order,internal_research_json)
+                VALUES (?,?,?,?,?,?,?,?)');
             $translationInsert = $pdo->prepare('INSERT INTO destination_translations
                 (destination_id,locale,display_name,eyebrow,headline,intro,meta_description) VALUES (?,?,?,?,?,?,?)');
             $storyInsert = $pdo->prepare('INSERT INTO destination_story_blocks
@@ -47,7 +47,7 @@ final class DestinationImporter
                 self::requireKeys($destination, ['slug','destination_type','country_code','department','subregion','publication_status','display_order','translations']);
                 self::slug((string)$destination['slug']);
                 $destinationInsert->execute([$destination['slug'],$destination['destination_type'],$destination['country_code'],
-                    $destination['department'],$destination['subregion'],$destination['publication_status'],$destination['display_order']]);
+                    $destination['department'],$destination['subregion'],$destination['publication_status'],$destination['display_order'],'{"schema_version":1}']);
                 $destinationId = (int)$pdo->lastInsertId();
                 $counts['destinations']++;
 

@@ -3,10 +3,11 @@
 No shell, administrator login, credentials download, arbitrary SQL or command execution.
 Both temporary artifacts are removed in finally; they are never part of the site manifest.
 """
-import importlib.util,json,secrets,hashlib,tempfile,urllib.request
+import argparse,importlib.util,json,secrets,hashlib,tempfile,urllib.request
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 spec=importlib.util.spec_from_file_location('deploy',ROOT/'scripts/desplegar-sftp.py');mod=importlib.util.module_from_spec(spec);spec.loader.exec_module(mod)
+parser=argparse.ArgumentParser();parser.add_argument('--approved-preprod',required=True);args=parser.parse_args();mod.require_approved_preprod(args.approved_preprod)
 c=mod.load_config(ROOT.parent/'explorandolugares/.local/sftp.json');client=mod.SFTP(c)
 import time
 name='medicion-activar-'+secrets.token_hex(12)+'.php';remote=mod.public_path(c)+'/api/'+name;grant=c['remote_base']+'/app/analytics/activation-grant.json'
