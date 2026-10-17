@@ -25,7 +25,7 @@ DB.execute('PRAGMA foreign_keys=ON')
 DB.executescript((ROOT / 'backend/database/sqlite.sql').read_text())
 DB.executescript((ROOT / 'backend/database/destinations.sqlite.sql').read_text())
 DB.executescript((ROOT / 'backend/database/migrations/006-poi-experience-links.sqlite.sql').read_text())
-for number in range(8, 32):
+for number in range(8, 33):
     matches = list((ROOT / 'backend/database/migrations').glob(f'{number:03d}-*.sqlite.sql'))
     assert len(matches) == 1, f'Migración SQLite faltante o ambigua: {number:03d}'
     DB.executescript(matches[0].read_text())
@@ -329,6 +329,22 @@ try:
     check(request('/admin/costos.php',cost_fields)[0]==200,'El gasto válido no se guardó.')
     check(DB.execute('SELECT description FROM operating_costs').fetchone()[0]=='Gasto HTTP de prueba','El gasto debe persistirse en la base.')
     check(request('/admin/costos.php',opener=GUEST)[0]==403,'Los costos deben permanecer privados.')
+    receipt_png=base64.b64decode('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aZ1sAAAAASUVORK5CYII=')
+    before_costs=DB.execute('SELECT COUNT(*) FROM operating_costs').fetchone()[0]
+    invalid_file=[('evidence','factura.pdf','application/pdf',b'<html>not a receipt</html>')]
+    check(multipart('/admin/costos.php',cost_fields,invalid_file)[0]==400,'Se aceptó un soporte con tipo falso.')
+    check(DB.execute('SELECT COUNT(*) FROM operating_costs').fetchone()[0]==before_costs,'Un soporte inválido dejó un gasto guardado parcialmente.')
+    check(multipart('/admin/costos.php',cost_fields,[('evidence','pantallazo.png','image/png',receipt_png)])[0]==200,'No se guardó el gasto con pantallazo.')
+    receipt=DB.execute('SELECT * FROM operating_cost_evidence ORDER BY id DESC LIMIT 1').fetchone()
+    check(receipt is not None,'No se conservó el soporte asociado al gasto.')
+    with ADMIN.open(BASE+'/admin/soporte-gasto.php?id='+str(receipt['id'])) as response:
+        check(response.read()==receipt_png and 'attachment' in response.headers.get('Content-Disposition',''),'El soporte privado no se descarga correctamente.')
+    check(request('/admin/soporte-gasto.php?id='+str(receipt['id']),opener=GUEST)[0]==403,'Un visitante pudo obtener una factura privada.')
+    check(not list((WORK/'public').rglob(receipt['storage_name'])),'El soporte quedó publicado dentro de la web.')
+    attach_fields={'csrf':costs_csrf,'action':'attach','cost_id':str(receipt['cost_id'])}
+    check(multipart('/admin/costos.php',attach_fields,[('evidence','recibo.png','image/png',receipt_png)])[0]==200,'No se pudo adjuntar un segundo documento a un gasto existente.')
+    check(DB.execute('SELECT COUNT(*) FROM operating_cost_evidence WHERE cost_id=?',(receipt['cost_id'],)).fetchone()[0]==2,'Se reemplazó un soporte anterior en lugar de conservar ambos.')
+
     review_query = '/admin/negocios.php?tab=revisar&destino=' + str(destination_id) + '&categoria=hospedaje&q=Hotel%20de%20lote&estado=draft&verificacion=PUBLICO&duplicados=no'
     status, review_page_one, _ = request(review_query)
     check(status == 200 and '27 resultados' in review_page_one and 'Página 1 de 2' in review_page_one, 'La revisión de lotes debe paginar y conservar el conteo completo del filtro.')

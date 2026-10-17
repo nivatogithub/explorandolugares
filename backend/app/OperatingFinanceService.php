@@ -6,14 +6,14 @@ final class OperatingFinanceService
     public const REASONS=['price'=>'Precio','value'=>'No obtiene el valor esperado','closure'=>'Cierre del negocio','other'=>'Otro motivo'];
     public function __construct(private PDO $pdo){}
     public function ready():bool{try{$this->pdo->query('SELECT cost_date FROM operating_costs LIMIT 0');$this->pdo->query('SELECT subscription_id FROM subscription_cancellation_requests LIMIT 0');return true;}catch(Throwable){return false;}}
-    public function addCost(array $data,string $actor):void{
+    public function addCost(array $data,string $actor):int{
         $date=(string)($data['cost_date']??'');$amount=trim((string)($data['amount_cop']??''));$category=(string)($data['category']??'');$description=trim((string)($data['description']??''));
         $parsed=DateTimeImmutable::createFromFormat('!Y-m-d',$date);
         if(!$parsed||$parsed->format('Y-m-d')!==$date||$date>gmdate('Y-m-d'))throw new RuntimeException('Indica una fecha válida, sin registrar gastos futuros como realizados.');
         if(!preg_match('/^(?:0|[1-9][0-9]{0,11})(?:\.[0-9]{1,2})?$/D',$amount)||(float)$amount<=0)throw new RuntimeException('Importe COP mayor que cero, sin separadores de miles y con hasta dos decimales.');
         if(!isset(self::CATEGORIES[$category])||$description===''||mb_strlen($description)>500)throw new RuntimeException('Selecciona categoría y una descripción de hasta 500 caracteres.');
         $destination=null;if(($data['destination_id']??'')!==''){$destination=filter_var($data['destination_id'],FILTER_VALIDATE_INT);$q=$this->pdo->prepare('SELECT id FROM destinations WHERE id=?');$q->execute([$destination]);if(!$destination||!$q->fetchColumn())throw new RuntimeException('Lugar no válido.');}
-        $q=$this->pdo->prepare('INSERT INTO operating_costs(cost_date,category,amount_cop,destination_id,description,created_by) VALUES(?,?,?,?,?,?)');$q->execute([$date,$category,$amount,$destination,$description,mb_substr($actor,0,120)]);
+        $q=$this->pdo->prepare('INSERT INTO operating_costs(cost_date,category,amount_cop,destination_id,description,created_by) VALUES(?,?,?,?,?,?)');$q->execute([$date,$category,$amount,$destination,$description,mb_substr($actor,0,120)]);return (int)$this->pdo->lastInsertId();
     }
     public function voidCost(int $id,string $reason):void{$reason=trim($reason);if($reason===''||mb_strlen($reason)>500)throw new RuntimeException('Indica el motivo de anulación (máximo 500 caracteres).');$q=$this->pdo->prepare('UPDATE operating_costs SET voided_at=CURRENT_TIMESTAMP,void_reason=? WHERE id=? AND voided_at IS NULL');$q->execute([$reason,$id]);if($q->rowCount()!==1)throw new RuntimeException('Gasto inexistente o ya anulado.');}
     public function requestCancellation(int $account,int $business,string $reason,string $text):void{

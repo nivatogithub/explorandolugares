@@ -23,3 +23,11 @@ El tablero de inversión reutiliza los servicios de medición existentes. Conteo
 La audiencia se muestra en 30/90 días. Si el selector financiero está en 12 meses, la audiencia permanece explícitamente en 90 días; no se inventa un histórico anual con datos sujetos a retención más corta. Los importes financieros conservan el período seleccionado. La disponibilidad en producción debe validarse después del despliegue; las cifras locales son datos de prueba.
 
 “Capacidad de abrir nuevos lugares” reemplaza “Riesgos y repetibilidad”: evaluar si otro lugar puede incorporarse con costos, plazos, adquisición y retención previsibles. El registro de costos aporta una parte de la evidencia; todavía falta medir horas y resultados comparables.
+
+## Soportes privados de gastos (migración 032)
+
+Puedes adjuntar una factura, recibo o pantallazo al guardar el gasto, o usar **Agregar soporte** en un gasto existente. Admite varios documentos por gasto sin reemplazar los anteriores; cada envío adjunta un archivo. PDF, JPG, PNG o WebP, hasta 8 MB por archivo, comprobados por contenido. El soporte es opcional y los gastos sin adjuntos aparecen como **Sin soporte adjunto**.
+
+Los archivos se guardan en `private/operating-cost-evidence`, fuera de la carpeta pública y del repositorio, con nombre aleatorio y permisos privados. Se conserva nombre original, tamaño, tipo, hash SHA-256, fecha y administrador que lo adjuntó. La descarga requiere sesión administrativa vigente y verifica tamaño/hash. No se entrega una URL pública del archivo. Las copias de seguridad deben incluir tanto la base de datos como esta carpeta privada; copiar únicamente la base no recupera facturas ni pantallazos.
+
+Si falla un soporte al crear el gasto, la transacción revierte el registro y retira el archivo temporal propio que hubiera llegado a guardarse. Anular un gasto no borra sus soportes. No se implementó borrado de documentos históricos desde el panel. Adjuntar una factura no equivale a verificarla fiscalmente ni conciliar su pago.
