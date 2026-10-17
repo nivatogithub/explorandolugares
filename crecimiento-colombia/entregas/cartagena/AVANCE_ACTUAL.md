@@ -13,3 +13,7 @@ No hay publicación en producción ni subida de imágenes nuevas. Portada y refe
 ## Prueba visual v10
 
 Siete experiencias ilustradas con composición SVG reutilizable, sin fotografías nuevas ni escrituras de base. Biblioteca JS/CSS compartida: 7677bytes; gzip teórico 2934bytes (no medición de transferencia del servidor). Habilitada únicamente en preview privado de Cartagena. Aprobación de esta dirección visual pendiente.
+
+## V11 · comentarios del propietario
+
+Etiqueta de ilustración retirada. Detalle gráfico de experiencias ajustado. Dos caricaturas SVG conceptuales añadidas a Qué conocer: San Felipe y Bocagrande; el resto conserva fotografías o pendientes. Recursos comunes alrededor de11,2KB. Sin búsqueda de fotos, generación raster, cambios BD ni producción. Dirección visual y fidelidad aún pendientes de revisión.
