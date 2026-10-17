@@ -2,9 +2,11 @@
 
 Actualizado: 17/10/2026. Lugar 3, rama `lugar/CO/antioquia/medellin`.
 
-**Estado real:** dos borradores y metadatos de referencias separados, guardados y validados. Descarga del lote v6 pendiente de coordinación; inspección y cierre visual de esta subtarea aún pendientes. Selección física vigente intacta. No hay proceso de red ejecutándose en este worker. No hay ejecución permanente en segundo plano. Destino completo pendiente.
+**Estado real:** subtarea V6 de dos propuestas separadas preparada para revisión; destino completo pendiente. No hay trabajo permanente en segundo plano.
 
-**Ahora:** `PROPUESTOS_TOP8_V6.json/.md` y `propuestos-top8-v6.html` tienen los dos borradores ES/EN/PT. Lote de cuatro originales `descargar-propuestos-v6.py` preparado para coordinación; descarga/inspección pendientes. No hay IA ni aprobación de uso.
+**Último logro:** cuatro originales completos y cuatro reducciones inspeccionados. `propuestos-top8-v6.html` presenta Plaza Botero opción1 (esculturas completas, CC BY-SA4.0, Steffen Schmitz) y Metro opción1 (tren CAF con Niquía/Coltejer, CC BY4.0, Minoh09). Opciones2 quedan colapsadas por contexto dominante del Palacio o escalera técnica. `referencias-propuestos-v6.json` documenta fuentes, licencias, condiciones y hashes. Dos borradores ES/EN/PT en `PROPUESTOS_TOP8_V6.json/.md`. No se aplican al Top8 vigente.
+
+**Siguiente revisión disponible:** textos/ubicación/imagen/uso independientes de estas dos propuestas; contexto de esculturas permanentes revisado aparte de la licencia fotográfica. No autoriza IA ni publicación. QA visual móvil/escritorio pendiente del IAB del coordinador; aquí la herramienta no está disponible. Ningún archivo de selección física, preview vigente, paquete, aprobación o tres candidatas previas fue alterado.
 
 **Auditoría disponible:** `AUDITORIA_TOP8.md` y `AUDITORIA_TOP8.json`:39 candidatos,31 comparaciones explícitas con8º Arví. Propone Comuna13, Plaza Botero, Metro/Metrocable, Explora, Museo Antioquia, Pueblito, Jardín y Arví. Catedral/Pies permanecen en inventario secundario. Poblado/Lleras/Provenza disputan corte sin datos comparables suficientes; no se inventó ranking medido. Ningún texto, imagen, aprobación, preview o ZIP aplicado por esta propuesta.
 

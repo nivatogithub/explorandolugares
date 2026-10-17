@@ -11,7 +11,10 @@ assert all(set(x['translations'])=={'es','en','pt-BR'} and not x['selected_for_m
 assert all(sha(r/f)==h for f,h in p['protected_files_sha256'].items())
 assert len(refs)==4 and len({x['id'] for x in refs})==4
 assert all(not x['selected'] and not x['human_approved'] and not x['ai_generated'] for x in refs)
+assert all(x.get('file') and x.get('visual_review',{}).get('technical_derivative_inspected') for x in refs)
+assert sum(x['visual_review']['recommend_for_review'] for x in refs)==2
 for x in refs:
+ assert x['download_evidence']['full_original']
  if not x.get('file'):continue
  assert sha(r/x['target'])==x['original_sha256'] and sha(r/x['file'])==x['sha256'] and x['bytes']<=120000
  with Image.open(r/x['file']) as im:assert im.format=='WEBP' and not im.getexif()
