@@ -1,6 +1,6 @@
 # Guía de estilo operativa de Explorando Lugares
 
-Versión 1 · revisión del 16 de octubre de 2026. Exclusiva de Explorando Lugares.
+Versión 2 · aprobada por el propietario el 17 de octubre de 2026. Exclusiva de Explorando Lugares.
 
 ## Propósito y alcance
 
@@ -8,7 +8,7 @@ Evitar decisiones de color aisladas, variantes accidentales entre páginas y el 
 
 Las instrucciones posteriores del propietario prevalecen. `design/pasaporte-local/`, `public/`, ZIP históricos y la primera paleta verde no son fuentes de estilo para páginas nuevas. Mantener la identidad separada de Paradigma Solutions.
 
-La aplicación inicial se hace en **Estamos creciendo**, sus tres pestañas y el aviso de privacidad. La hoja global del portal conserva reglas históricas contradictorias; no se declara que todo el repositorio haya migrado a este sistema ni se cambia el resto del sitio silenciosamente.
+La identidad vigente es la versión neutra elegida en Cartagena. Se aplica al sitio completo mediante tokens compartidos y scripts/aplicar-identidad-neutral.py durante la construcción. La verificación y aplicación de esta entrega se hacen en preproducción; no equivale a despliegue en producción.
 
 ## Fuentes de verdad
 
@@ -23,23 +23,23 @@ Editar el JSON y regenerar. No crear otra paleta al final de una hoja ni volver 
 
 |Función|Color|Uso|
 |---|---|---|
-|Página|`#fffaf2`|Lienzo cálido del portal|
-|Sección destacada|`#fff0dc`|Contenedor de mapa, audiencia, participación y pauta|
-|Tarjeta|`#fff8ed`|Todas las tarjetas de métricas y contenido dentro de esas secciones|
-|Campo|`#fffdf8`|Selectores, búsqueda y editor de invitación|
-|Hover/aviso destacado|`#ffe4ba`|Interacción y énfasis puntual|
-|Borde|`#f2c77e`|Separación de secciones y tarjetas|
-|Borde de campo|`#e9b75f`|Controles de entrada|
+|Página|`#fafafa`|Lienzo cálido del portal|
+|Sección destacada|`#f1f2f4`|Contenedor de mapa, audiencia, participación y pauta|
+|Tarjeta|`#ffffff`|Todas las tarjetas de métricas y contenido dentro de esas secciones|
+|Campo|`#ffffff`|Selectores, búsqueda y editor de invitación|
+|Hover/aviso destacado|`#e9ebee`|Interacción y énfasis puntual|
+|Borde|`#dadde2`|Separación de secciones y tarjetas|
+|Borde de campo|`#bdc2cb`|Controles de entrada|
 |Texto|`#172b42`|Títulos, cifras y texto principal; no fondos de botones ni grandes paneles|
 |Texto secundario|`#5e625f`|Ayudas y explicaciones|
 |Acento|`#d84e27`|Detalle editorial y departamento seleccionado|
 |Acción|`#c94720`|Botones principales y selección activa|
 |Acción hover/enlace|`#a83b22`|Hover y acciones sobre superficies claras|
-|Texto sobre acción|`#fffdf8`|Etiquetas de botones terracota|
+|Texto sobre acción|`#ffffff`|Etiquetas de botones terracota|
 
 Los colores cálidos ya aparecen en las tarjetas de destinos, el formulario comercial y sus bloques destacados. `#c94720` pertenece a la paleta existente de acción oscura; se usa como relleno para que texto pequeño claro alcance contraste, en lugar de copiar un naranja más claro con poco contraste.
 
-**Jerarquía:** fondo de página → sección amarilla → tarjeta crema → control casi blanco. No poner amarillo idéntico en todos los niveles ni variar cada tarjeta de una misma familia. Usar separación, borde y espacio, no sombras pesadas.
+**Jerarquía:** fondo blanco neutro → sección gris suave → tarjeta blanca → control blanco. No usar fondos amarillos ni salvia en las superficies ni variar cada tarjeta de una misma familia. Usar separación, borde y espacio, no sombras pesadas.
 
 No usar `#fafbfe`, `#e6edf9` u otros azules pálidos como fondo de tarjetas, formularios o paneles de información. No usar azul oscuro/negro como relleno de pestañas, filtros, compartir o bloque de pauta. El azul oscuro sí puede ser tinta.
 
@@ -60,7 +60,7 @@ Reutilizar la estructura y CSS compartidos del portal. Conservar Inicio, Destino
 ### Pestañas, filtros y acciones
 
 - Activo/principal: terracota de acción + texto claro.
-- Inactivo/secundario: crema/campo + texto oscuro o enlace terracota + borde dorado.
+- Inactivo/secundario: blanco/campo + texto oscuro o enlace terracota + borde gris.
 - Hover: tono cálido; foco visible independiente del hover.
 - Usar texto/`aria-selected`/`aria-pressed`, no solo color, para señalar selección.
 - No utilizar relleno navy para distinguir la selección.
@@ -70,7 +70,7 @@ El botón de pauta es principal. Copiar invitación y otras acciones son secunda
 
 ### Tarjetas, formularios y avisos
 
-Tarjetas de Cobertura y Audiencia comparten el mismo token de superficie. Pauta utiliza el contenedor cálido, sin panel navy ni texto blanco heredado. Inputs y textarea comparten el token de campo y el borde de control. Avisos usan amarillo/ámbar suave, texto oscuro y un mensaje explícito.
+Tarjetas de Cobertura y Audiencia comparten el mismo token de superficie. Pauta utiliza el contenedor gris suave, sin panel navy ni texto blanco heredado. Inputs y textarea comparten el token de campo y el borde de control. Avisos informativos usan gris neutro suave, texto oscuro y un mensaje explícito.
 
 No diseñar la tarjeta “sin datos” con otro azul: la ausencia de medición se explica con palabras. No cambiar cálculos, cifras ni estados de publicación para resolver un problema visual.
 
@@ -128,17 +128,17 @@ Estado revisado antes de la consolidación, 16-10-2026, a partir de código y es
 
 |Hallazgo|Evidencia|Corrección local conjunta|
 |---|---|---|
-|Tarjetas casi blancas percibidas como frías|Audiencia calculada `#fffefa`; tarjetas superiores ya en `#fff8ed`|Una sola superficie crema `#fff8ed` para ambas|
+|Tarjetas casi blancas percibidas como frías|Audiencia calculada `#fffefa`; tarjetas superiores ya en `#ffffff`|Una sola superficie blanca `#ffffff` para ambas|
 |Fondos azulados aún definidos en CSS|`#fafbfe` en métricas, cuadros vacíos y editor, con algunas declaraciones anuladas por reglas posteriores|Eliminar declaraciones antiguas y usar tokens; no confundir código muerto con color realmente visible|
 |Pestañas y filtros muy oscuros|Fondo calculado `#172b42`|Terracota de acción|
-|Panel de pauta oscuro|Fondo calculado `#172b42`|Contenedor amarillo y texto oscuro|
+|Panel de pauta oscuro|Fondo calculado `#172b42`|Contenedor gris suave y texto oscuro|
 |Compartir con relleno oscuro|Enlace de WhatsApp calculado `#172b42`|Acción terracota|
 |Editor dependiente del CSS global|Fondo blanco calculado aunque la hoja de página declaraba azul pálido|Campo cálido explícito con compatibilidad de cascada|
 |Selectores repetidos|Varias familias verde/aqua/dorada en la misma hoja|Un componente selector con estados definidos|
 |Parches sucesivos de contenedores|Reglas repetidas cambiaban el mismo fondo|Consolidación en una hoja legible y tokens únicos|
 |Dependencia de números de versión manuales|`?v=17` y variantes anteriores|Versionado automático por contenido|
 
-Referencias contrastadas: estilos del directorio de Jericó (selección terracota), formulario comercial (tarjetas `#fff8ed`, bordes `#f2c77e`), sección Haz parte (sección cálida y tarjetas internas claras) y CSS compartido de producción. El header/footer compartidos conservan rasgos históricos; una limpieza global futura debe revisarse por separado.
+Referencias contrastadas: estilos del directorio de Jericó (selección terracota), formulario comercial (tarjetas `#ffffff`, bordes `#dadde2`), sección Haz parte (sección cálida y tarjetas internas claras) y CSS compartido de producción. El header/footer compartidos conservan rasgos históricos; una limpieza global futura debe revisarse por separado.
 
 ## Despliegue y ramas
 
@@ -176,6 +176,14 @@ No hubo desbordamiento horizontal en las tres vistas. En 1600 px los seis desple
 
 ## Métrica básica sin cookies · candidato posterior a v1.2.0
 
-La tarjeta “Páginas vistas · sin cookies” ocupa una fila completa sobre la rejilla de métricas consentidas. Conserva superficie crema, tipografía funcional y ayuda explícita: son vistas, no personas únicas. Los campos con permiso lo indican en etiqueta o ayuda. No añadir otra paleta para distinguir los métodos. “Cómo medimos” reúne alcance, fechas y fuentes, sin volver a extender la página con avisos técnicos.
+La tarjeta “Páginas vistas · sin cookies” ocupa una fila completa sobre la rejilla de métricas consentidas. Conserva superficie blanca, tipografía funcional y ayuda explícita: son vistas, no personas únicas. Los campos con permiso lo indican en etiqueta o ayuda. No añadir otra paleta para distinguir los métodos. “Cómo medimos” reúne alcance, fechas y fuentes, sin volver a extender la página con avisos técnicos.
 
 Revisión local: 1600 px y tres pestañas a 390 px, sin desbordamiento y con los mismos tokens cálidos. [Vista amplia](../design/portal/evidencias/audiencia-sin-cookies.png), [móvil](../design/portal/evidencias/movil-sin-cookies.png), [registro de comprobaciones](../design/portal/verificacion-conteo-basico.json). Datos de prueba; todavía no es evidencia de funcionamiento en producción.
+
+
+## Identidad vigente: referencia Cartagena · 17/10/2026
+El propietario aprobó ilustraciones semirrealistas, colores neutros y descripciones cortas. Página #FAFAFA, paneles #F1F2F4, tarjetas blancas, bordes #DADDE2, acción #C94720 y tinta #172B42. Sin fondos amarillos ni salvia. Las imágenes conservan su color natural; no aplicar filtros de marca. Se mantienen logo, estados del mapa y señales funcionales cuyo color transmite información.
+
+La historia de Jericó usa un párrafo breve a ancho completo, sin bloque biográfico ni imagen de Madre Laura y sin tarjeta lateral repetida. No se borran fuentes ni archivos históricos. Los anuncios de etapa piloto y «Comenzamos por Jericó» dejan de formar parte de la presentación compartida. No añadir nuevas afirmaciones de cobertura o publicación al retirar esos avisos.
+
+La aprobación de la línea gráfica no aprueba automáticamente cada imagen ni la publicación de Cartagena. El detalle histórico de la versión 1 queda subordinado a esta decisión. Generar tokens con scripts/generar-tokens-portal.py y aplicar la identidad al paquete final con scripts/aplicar-identidad-neutral.py --public RUTA. El constructor lo ejecuta al final para impedir el regreso de hojas heredadas.

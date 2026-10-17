@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Añade navegación y aviso permanente de piloto a las páginas españolas."""
+"""Mantiene navegación y retira el antiguo aviso de piloto."""
 from pathlib import Path
 import os,re
 ROOT=Path(__file__).resolve().parents[1]
@@ -18,10 +18,7 @@ def generate(site=SITE):
   business_link=Path(os.path.relpath(site/'negocios-locales/',page.parent)).as_posix()
   business_label='Negocios locales'
   source=re.sub(r'<!-- etapas-piloto -->.*?<!-- /etapas-piloto -->','',source,flags=re.S)
-  banner='<!-- etapas-piloto --><aside class="pilot-banner" aria-label="Etapa piloto · Comenzamos en Jericó"><div class="wrap"><div><strong>Importante · Etapa piloto en Jericó</strong><span>Por ahora, solo Jericó tiene guía pública. Abriremos nuevos destinos a medida que revisemos su información y sus imágenes.</span></div><a href="'+link+'">Conoce el portal →</a></div></aside><!-- /etapas-piloto -->'
-  # En Conoce el portal el aviso duplicaría la información de la propia página.
-  if not is_business and relative not in {Path('etapas/index.html'), Path('en/etapas/index.html')}:
-   source=source.replace('</header>','</header>'+banner,1)
+  # Aviso retirado por el propietario; no reintroducirlo al regenerar.
   # Enlaces del viajero antes de la llamada comercial, sin duplicarlos al regenerar.
   source=re.sub(r'<a\b[^>]*href="'+re.escape(trip_link)+r'"[^>]*>Planea tu visita</a>','',source)
   source=re.sub(r'<a\b[^>]*href="'+re.escape(link)+r'"[^>]*>(?:Etapas|Nuestro avance|Conoce el portal)</a>','',source)

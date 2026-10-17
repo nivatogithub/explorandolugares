@@ -235,3 +235,7 @@ Por corrección del propietario: retirar snorkel; títulos consistentes de Qué 
 
 ## Lectura directa · Cartagena v11
 Priorizar una frase de introducción y un párrafo histórico breve de ancho completo. Sin columna lateral o espacio vacío para imágenes inexistentes, ni motivos de visita repetidos bajo la introducción. CTA de negocios con una frase y botón. Mantener evidencia y contenido histórico extenso en documentos, sin recargar la lectura de la página. Conservar contexto histórico sensible al resumir. Implementación actual: vista privada, textos ES/EN/PT en TEXTOS_DIRECTOS_V11.json y contenido-cierre-v11.json; MariaDB conserva la versión v10 hasta su siguiente carga.
+
+
+## Identidad visual aprobada para todo el sitio
+Usar docs/GUIA_ESTILO_PORTAL.md v2: neutros, ilustración semirrealista y textos directos. Historia breve a ancho completo, sin reservar huecos para imágenes ausentes. Retirar avisos compartidos de piloto/Jericó; no reintroducir amarillo o salvia. La guía visual aprobada no es aprobación de publicación ni de cada imagen.
