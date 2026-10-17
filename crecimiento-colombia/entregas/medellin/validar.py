@@ -57,6 +57,15 @@ for x in a:
  assert hashlib.sha256((r/x['original_file']).read_bytes()).hexdigest()==x['original_sha256']
  assert x['bytes']<=(300000 if 'medellin-1.webp' in x['file'] or 'panorama-2005.webp' in x['file'] else 120000)
  with Image.open(r/x['file']) as im:assert im.format=='WEBP' and not im.getexif()
+if (r/'verificacion-vigencia-v5.json').exists():
+ v=json.loads((r/'verificacion-vigencia-v5.json').read_text())
+ assert len(v['directory'])==10 and v['summary']['commercial_businesses']==6 and v['summary']['cultural_institutions']==4
+ assert not any(x['registry_verified'] or x['contacted'] or x['availability_confirmed'] for x in v['directory'])
+ if (r/'imagen-actividad-mamm-v5.json').exists():
+  x=json.loads((r/'imagen-actividad-mamm-v5.json').read_text())
+  assert x['inspected']['subject_matches'] and not x['human_approved'] and not x['generated_illustration']
+  assert hashlib.sha256((r/x['original_file']).read_bytes()).hexdigest()==x['original_sha256']
+  assert hashlib.sha256((r/x['file']).read_bytes()).hexdigest()==x['sha256'] and x['bytes']<=120000
 files=sorted(p for p in r.rglob('*') if p.is_file() and p.name!='SHA256SUMS' and '__pycache__' not in p.parts)
 (r/'SHA256SUMS').write_text(''.join(hashlib.sha256(p.read_bytes()).hexdigest()+'  '+str(p.relative_to(r))+'\n' for p in files))
 print('OK V4: cinco originales nuevos y derivados con hashes; tres propuestas revisables, ninguna aprobada; movilidad, diez actividades y diez fichas en tres idiomas. V3 es antecedente local con tres referencias rechazadas.')

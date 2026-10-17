@@ -7,13 +7,13 @@
     "source_ids": [
       "dann"
     ],
-    "consulted_at": "2026-10-16",
+    "consulted_at": "2026-10-17",
     "publication_status": "draft",
     "listing_plan": "gratuito",
     "data_status": "PUBLICO",
-    "verification": "pendiente_verificar_vigencia",
+    "verification": "fuente_publica_reconsultada",
     "claimed": false,
-    "operating_status": "no_confirmado",
+    "operating_status": "presencia_y_oferta_web_observables_no_verificacion_presencial",
     "relationship": "ninguna",
     "contacted": false,
     "translations": {
@@ -29,7 +29,13 @@
         "name": "Dann Carlton Medellín",
         "description": "Hotel com informações e reservas no site oficial."
       }
-    }
+    },
+    "provider_kind": "negocio_comercial",
+    "verification_limits": [
+      "No confirma disponibilidad, cupos o vigencia registral",
+      "No hubo contacto ni reserva",
+      "Sin relación, alianza o reclamo de ficha"
+    ]
   },
   {
     "name": "Elcielo Hotel",
@@ -39,13 +45,13 @@
     "source_ids": [
       "cielo"
     ],
-    "consulted_at": "2026-10-16",
+    "consulted_at": "2026-10-17",
     "publication_status": "draft",
     "listing_plan": "gratuito",
     "data_status": "PUBLICO",
-    "verification": "pendiente_verificar_vigencia",
+    "verification": "fuente_publica_reconsultada",
     "claimed": false,
-    "operating_status": "no_confirmado",
+    "operating_status": "presencia_y_oferta_web_observables_no_verificacion_presencial",
     "relationship": "ninguna",
     "contacted": false,
     "translations": {
@@ -61,7 +67,13 @@
         "name": "Elcielo Hotel",
         "description": "Hotel em Astorga, El Poblado; consulte serviços e reservas diretamente."
       }
-    }
+    },
+    "provider_kind": "negocio_comercial",
+    "verification_limits": [
+      "No confirma disponibilidad, cupos o vigencia registral",
+      "No hubo contacto ni reserva",
+      "Sin relación, alianza o reclamo de ficha"
+    ]
   },
   {
     "name": "Hotel San Fernando Plaza",
@@ -71,13 +83,13 @@
     "source_ids": [
       "fernando"
     ],
-    "consulted_at": "2026-10-16",
+    "consulted_at": "2026-10-17",
     "publication_status": "draft",
     "listing_plan": "gratuito",
     "data_status": "PUBLICO",
-    "verification": "pendiente_verificar_vigencia",
+    "verification": "fuente_publica_reconsultada",
     "claimed": false,
-    "operating_status": "no_confirmado",
+    "operating_status": "presencia_y_oferta_web_observables_no_verificacion_presencial",
     "relationship": "ninguna",
     "contacted": false,
     "translations": {
@@ -93,23 +105,30 @@
         "name": "Hotel San Fernando Plaza",
         "description": "Hotel em El Poblado com canal oficial de informações e reservas."
       }
-    }
+    },
+    "provider_kind": "negocio_comercial",
+    "verification_limits": [
+      "No confirma disponibilidad, cupos o vigencia registral",
+      "No hubo contacto ni reserva",
+      "Sin relación, alianza o reclamo de ficha"
+    ]
   },
   {
     "name": "Elcielo Restaurant Medellín",
     "category": "gastronomia",
     "description": "Restaurante presentado por Elcielo Hotel; consulta su propuesta y reservas directamente.",
-    "url": "https://www.elcielohotel.com/",
+    "url": "https://elcielo.com.co/medellin/",
     "source_ids": [
+      "cielo-restaurante",
       "cielo"
     ],
-    "consulted_at": "2026-10-16",
+    "consulted_at": "2026-10-17",
     "publication_status": "draft",
     "listing_plan": "gratuito",
     "data_status": "PUBLICO",
-    "verification": "pendiente_verificar_vigencia",
+    "verification": "fuente_publica_reconsultada",
     "claimed": false,
-    "operating_status": "no_confirmado",
+    "operating_status": "presencia_y_oferta_web_observables_no_verificacion_presencial",
     "relationship": "ninguna",
     "contacted": false,
     "translations": {
@@ -125,23 +144,30 @@
         "name": "Elcielo Restaurant Medellín",
         "description": "Restaurante apresentado pelo Elcielo Hotel; consulte a proposta gastronômica e as reservas diretamente."
       }
-    }
+    },
+    "provider_kind": "negocio_comercial",
+    "verification_limits": [
+      "No confirma disponibilidad, cupos o vigencia registral",
+      "No hubo contacto ni reserva",
+      "Sin relación, alianza o reclamo de ficha"
+    ]
   },
   {
     "name": "El Bistró by Juanma",
     "category": "gastronomia",
     "description": "Propuesta gastronómica presentada en el sitio de Elcielo Hotel.",
-    "url": "https://www.elcielohotel.com/",
+    "url": "https://elcielo.com.co/medellin/elcielo-bistro/",
     "source_ids": [
+      "cielo-bistro",
       "cielo"
     ],
-    "consulted_at": "2026-10-16",
+    "consulted_at": "2026-10-17",
     "publication_status": "draft",
     "listing_plan": "gratuito",
     "data_status": "PUBLICO",
-    "verification": "pendiente_verificar_vigencia",
+    "verification": "fuente_publica_reconsultada",
     "claimed": false,
-    "operating_status": "no_confirmado",
+    "operating_status": "presencia_y_oferta_web_observables_no_verificacion_presencial",
     "relationship": "ninguna",
     "contacted": false,
     "translations": {
@@ -157,23 +183,30 @@
         "name": "El Bistró by Juanma",
         "description": "Espaço gastronômico apresentado no site do Elcielo Hotel."
       }
-    }
+    },
+    "provider_kind": "negocio_comercial",
+    "verification_limits": [
+      "No confirma disponibilidad, cupos o vigencia registral",
+      "No hubo contacto ni reserva",
+      "Sin relación, alianza o reclamo de ficha"
+    ]
   },
   {
     "name": "La Sere by Juanma",
     "category": "gastronomia",
     "description": "Restaurante de cocina italiana presentado en el sitio de Elcielo Hotel.",
-    "url": "https://www.elcielohotel.com/",
+    "url": "https://lasere.co/",
     "source_ids": [
+      "lasere",
       "cielo"
     ],
-    "consulted_at": "2026-10-16",
+    "consulted_at": "2026-10-17",
     "publication_status": "draft",
     "listing_plan": "gratuito",
     "data_status": "PUBLICO",
-    "verification": "pendiente_verificar_vigencia",
+    "verification": "fuente_publica_reconsultada",
     "claimed": false,
-    "operating_status": "no_confirmado",
+    "operating_status": "presencia_y_oferta_web_observables_no_verificacion_presencial",
     "relationship": "ninguna",
     "contacted": false,
     "translations": {
@@ -189,7 +222,13 @@
         "name": "La Sere by Juanma",
         "description": "Restaurante de cozinha italiana apresentado no site do Elcielo Hotel."
       }
-    }
+    },
+    "provider_kind": "negocio_comercial",
+    "verification_limits": [
+      "No confirma disponibilidad, cupos o vigencia registral",
+      "No hubo contacto ni reserva",
+      "Sin relación, alianza o reclamo de ficha"
+    ]
   },
   {
     "name": "Museo de Antioquia",
@@ -199,13 +238,13 @@
     "source_ids": [
       "antioquia"
     ],
-    "consulted_at": "2026-10-16",
+    "consulted_at": "2026-10-17",
     "publication_status": "draft",
     "listing_plan": "gratuito",
     "data_status": "PUBLICO",
-    "verification": "pendiente_verificar_vigencia",
+    "verification": "fuente_publica_reconsultada",
     "claimed": false,
-    "operating_status": "no_confirmado",
+    "operating_status": "presencia_y_oferta_web_observables_no_verificacion_presencial",
     "relationship": "ninguna",
     "contacted": false,
     "translations": {
@@ -221,7 +260,13 @@
         "name": "Museo de Antioquia",
         "description": "Coleções e exposições de arte no centro de Medellín; consulte a programação do museu."
       }
-    }
+    },
+    "provider_kind": "institucion_cultural",
+    "verification_limits": [
+      "No confirma disponibilidad, cupos o vigencia registral",
+      "No hubo contacto ni reserva",
+      "Sin relación, alianza o reclamo de ficha"
+    ]
   },
   {
     "name": "Jardín Botánico Joaquín Antonio Uribe",
@@ -231,13 +276,13 @@
     "source_ids": [
       "botanico"
     ],
-    "consulted_at": "2026-10-16",
+    "consulted_at": "2026-10-17",
     "publication_status": "draft",
     "listing_plan": "gratuito",
     "data_status": "PUBLICO",
-    "verification": "pendiente_verificar_vigencia",
+    "verification": "fuente_publica_reconsultada",
     "claimed": false,
-    "operating_status": "no_confirmado",
+    "operating_status": "presencia_y_oferta_web_observables_no_verificacion_presencial",
     "relationship": "ninguna",
     "contacted": false,
     "translations": {
@@ -253,7 +298,13 @@
         "name": "Jardín Botánico Joaquín Antonio Uribe",
         "description": "Coleções vivas, educação ambiental e programação cultural do Jardim Botânico."
       }
-    }
+    },
+    "provider_kind": "institucion_cultural",
+    "verification_limits": [
+      "No confirma disponibilidad, cupos o vigencia registral",
+      "No hubo contacto ni reserva",
+      "Sin relación, alianza o reclamo de ficha"
+    ]
   },
   {
     "name": "Parque Explora",
@@ -263,13 +314,13 @@
     "source_ids": [
       "explora"
     ],
-    "consulted_at": "2026-10-16",
+    "consulted_at": "2026-10-17",
     "publication_status": "draft",
     "listing_plan": "gratuito",
     "data_status": "PUBLICO",
-    "verification": "pendiente_verificar_vigencia",
+    "verification": "fuente_publica_reconsultada",
     "claimed": false,
-    "operating_status": "no_confirmado",
+    "operating_status": "presencia_y_oferta_web_observables_no_verificacion_presencial",
     "relationship": "ninguna",
     "contacted": false,
     "translations": {
@@ -285,7 +336,13 @@
         "name": "Parque Explora",
         "description": "Espaço de ciência com aquário e experiências interativas; consulte as condições de visita."
       }
-    }
+    },
+    "provider_kind": "institucion_cultural",
+    "verification_limits": [
+      "No confirma disponibilidad, cupos o vigencia registral",
+      "No hubo contacto ni reserva",
+      "Sin relación, alianza o reclamo de ficha"
+    ]
   },
   {
     "name": "Museo de Arte Moderno de Medellín",
@@ -295,13 +352,13 @@
     "source_ids": [
       "mamm"
     ],
-    "consulted_at": "2026-10-16",
+    "consulted_at": "2026-10-17",
     "publication_status": "draft",
     "listing_plan": "gratuito",
     "data_status": "PUBLICO",
-    "verification": "pendiente_verificar_vigencia",
+    "verification": "fuente_publica_reconsultada",
     "claimed": false,
-    "operating_status": "no_confirmado",
+    "operating_status": "presencia_y_oferta_web_observables_no_verificacion_presencial",
     "relationship": "ninguna",
     "contacted": false,
     "translations": {
@@ -317,6 +374,12 @@
         "name": "Museo de Arte Moderno de Medellín",
         "description": "Museu de arte moderna e contemporânea com exposições e programação cultural."
       }
-    }
+    },
+    "provider_kind": "institucion_cultural",
+    "verification_limits": [
+      "No confirma disponibilidad, cupos o vigencia registral",
+      "No hubo contacto ni reserva",
+      "Sin relación, alianza o reclamo de ficha"
+    ]
   }
 ]
