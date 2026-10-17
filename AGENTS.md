@@ -21,3 +21,5 @@
 - Para pruebas, preparación y publicación, aplicar `docs/REGLAS_OPERATIVAS_DESPLIEGUE.md`: una autorización por tarea concreta cubre los pasos rutinarios de esa tarea; detenerse solo ante los límites de riesgo allí definidos o un bloqueo técnico que exija aprobación.
 
 - Para investigar, seleccionar atractivos o preparar imágenes/textos de destinos, leer `crecimiento-colombia/GUIA_GENERACION_DESTINOS.md`; aplicar ocho atractivos prioritarios en los destinos amplios actuales y separar portada, historia y fichas.
+
+- Incorporar cada corrección relevante del propietario a las reglas reutilizables y checklist, además del estado del destino. Para descubrir atractivos y encuadres consultar Tripadvisor y contrastar portales turísticos locales/nacionales; exigir fotografías icónicas reconocibles y revisar el recorte antes de presentarlas. Ver la sección Aprendizaje continuo de `crecimiento-colombia/GUIA_GENERACION_DESTINOS.md`.
