@@ -26,6 +26,11 @@ if (PHP_SAPI !== 'cli') {
     session_start();
     $_SESSION['csrf'] ??= bin2hex(random_bytes(32));
 }
+if (PHP_SAPI !== 'cli' && !empty($config['unified_admin_only']) && empty($_SESSION['admin_account_id'])) { unset($_SESSION['admin'],$_SESSION['last_seen']); }
+if (PHP_SAPI !== 'cli' && !empty($_SESSION['admin_account_id'])) {
+    require_once __DIR__.'/AccountAuthorization.php';
+    try { AccountAuthorization::synchronize(db(),$_SESSION); } catch (Throwable $error) { unset($_SESSION['admin'],$_SESSION['admin_account_id'],$_SESSION['admin_user']); }
+}
 function esc(mixed $value): string { return htmlspecialchars((string)$value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'); }
 function english_request(): bool { return ($_GET['lang'] ?? $_POST['lang'] ?? '') === 'en'; }
 function site_path(string $path): string {

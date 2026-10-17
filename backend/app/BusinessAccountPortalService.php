@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 require_once __DIR__.'/AccountProfileService.php';
+require_once __DIR__.'/AccountAuthorization.php';
 
 final class BusinessAccountPortalService
 {
@@ -90,14 +91,14 @@ final class BusinessAccountPortalService
         if(!throttle('business_account_login',10,900,$email))throw new RuntimeException('Demasiados intentos. Inténtalo más tarde.');
         $stmt=$this->pdo->prepare('SELECT id,public_id,account_type,display_name,email,password_hash,status FROM accounts WHERE email=?');
         $stmt->execute([$email]);$account=$stmt->fetch(PDO::FETCH_ASSOC);
-        if(!$account||$account['account_type']!=='business'||$account['status']!=='active'||!$account['password_hash']||!password_verify($password,$account['password_hash']))throw new RuntimeException('Correo o contraseña incorrectos.');
+        if(!$account||($account['account_type']!=='business'&&!AccountAuthorization::isAdmin($this->pdo,(int)$account['id']))||$account['status']!=='active'||!$account['password_hash']||!password_verify($password,$account['password_hash']))throw new RuntimeException('Correo o contraseña incorrectos.');
         if(password_needs_rehash($account['password_hash'],PASSWORD_DEFAULT)){$this->pdo->prepare('UPDATE accounts SET password_hash=?,updated_at=CURRENT_TIMESTAMP WHERE id=?')->execute([password_hash($password,PASSWORD_DEFAULT),$account['id']]);}
         unset($account['password_hash']);return $account;
     }
 
     public function current(int $id): ?array
     {
-        $stmt=$this->pdo->prepare('SELECT id,public_id,display_name,email,status,email_verified_at FROM accounts WHERE id=? AND account_type="business" AND status="active"');
+        $stmt=$this->pdo->prepare('SELECT id,public_id,display_name,email,status,email_verified_at FROM accounts WHERE id=? AND status="active" AND (account_type="business" OR EXISTS(SELECT 1 FROM account_roles r WHERE r.account_id=accounts.id AND r.role="administrator"))');
         $stmt->execute([$id]);$row=$stmt->fetch(PDO::FETCH_ASSOC);return $row?:null;
     }
 

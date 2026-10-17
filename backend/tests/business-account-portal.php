@@ -6,6 +6,7 @@ require dirname(__DIR__).'/app/BusinessAccountPortalService.php';
 require dirname(__DIR__).'/app/AccountAdminService.php';
 require dirname(__DIR__).'/app/AccountPasswordResetService.php';
 $pdo=new PDO('sqlite::memory:');$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+$pdo->exec('CREATE TABLE account_roles(account_id INTEGER,role TEXT)');
 $pdo->exec('CREATE TABLE accounts(id INTEGER PRIMARY KEY AUTOINCREMENT,public_id TEXT,account_type TEXT,display_name TEXT,email TEXT UNIQUE,password_hash TEXT,status TEXT,email_verified_at TEXT,created_at TEXT DEFAULT CURRENT_TIMESTAMP,updated_at TEXT DEFAULT CURRENT_TIMESTAMP);
 CREATE TABLE business_translations(business_id INTEGER,locale TEXT,display_name TEXT,summary TEXT DEFAULT "",description TEXT DEFAULT "");
 CREATE TABLE destinations(id INTEGER PRIMARY KEY,slug TEXT,publication_status TEXT,display_order INTEGER);

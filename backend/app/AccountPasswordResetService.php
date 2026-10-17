@@ -8,7 +8,7 @@ final class AccountPasswordResetService
     /** Issues a one-time 24-hour capability; only its digest is stored. */
     public function issue(int $accountId, string $createdBy = 'admin'): string
     {
-        $account=$this->pdo->prepare('SELECT id FROM accounts WHERE id=? AND account_type="business" AND status IN ("active","pending_activation")');
+        $account=$this->pdo->prepare('SELECT id FROM accounts WHERE id=? AND (account_type="business" OR EXISTS(SELECT 1 FROM account_roles ar WHERE ar.account_id=accounts.id AND ar.role="administrator")) AND status IN ("active","pending_activation")');
         $account->execute([$accountId]);
         if(!$account->fetchColumn())throw new RuntimeException('La cuenta no existe, no es empresarial o está deshabilitada.');
         $token=bin2hex(random_bytes(32));
@@ -25,7 +25,7 @@ final class AccountPasswordResetService
     public function isValid(string $token): bool
     {
         if(!preg_match('/^[a-f0-9]{64}$/D',$token))return false;
-        $q=$this->pdo->prepare('SELECT r.expires_at FROM account_password_resets r JOIN accounts a ON a.id=r.account_id WHERE r.token_hash=? AND r.used_at IS NULL AND a.account_type="business" AND a.status<>"disabled"');
+        $q=$this->pdo->prepare('SELECT r.expires_at FROM account_password_resets r JOIN accounts a ON a.id=r.account_id WHERE r.token_hash=? AND r.used_at IS NULL AND (a.account_type="business" OR EXISTS(SELECT 1 FROM account_roles ar WHERE ar.account_id=a.id AND ar.role="administrator")) AND a.status<>"disabled"');
         $q->execute([hash('sha256',$token)]);$expiresAt=$q->fetchColumn();
         return is_string($expiresAt)&&strtotime($expiresAt.' UTC')>time();
     }
@@ -38,7 +38,7 @@ final class AccountPasswordResetService
         $this->pdo->beginTransaction();
         try{
             $lock=$this->pdo->getAttribute(PDO::ATTR_DRIVER_NAME)==='mysql'?' FOR UPDATE':'';
-            $q=$this->pdo->prepare('SELECT r.id,r.account_id,r.expires_at FROM account_password_resets r JOIN accounts a ON a.id=r.account_id WHERE r.token_hash=? AND r.used_at IS NULL AND a.account_type="business" AND a.status<>"disabled"'.$lock);
+            $q=$this->pdo->prepare('SELECT r.id,r.account_id,r.expires_at FROM account_password_resets r JOIN accounts a ON a.id=r.account_id WHERE r.token_hash=? AND r.used_at IS NULL AND (a.account_type="business" OR EXISTS(SELECT 1 FROM account_roles ar WHERE ar.account_id=a.id AND ar.role="administrator")) AND a.status<>"disabled"'.$lock);
             $q->execute([hash('sha256',$token)]);$row=$q->fetch(PDO::FETCH_ASSOC);
             if(!$row||strtotime((string)$row['expires_at'].' UTC')<=time())throw new RuntimeException('El enlace no es válido o ya venció. Solicita uno nuevo al equipo.');
             $update=$this->pdo->prepare('UPDATE accounts SET password_hash=?,status="active",email_verified_at=COALESCE(email_verified_at,CURRENT_TIMESTAMP),updated_at=CURRENT_TIMESTAMP WHERE id=? AND status<>"disabled"');

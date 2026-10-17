@@ -57,7 +57,7 @@ def main():
  shutil.copyfile(ROOT/'preprod/infra/account-entry.js',release/'public/assets/preprod-account-entry.js')
  shutil.copyfile(ROOT/'preprod/infra/account-entry.css',release/'public/assets/preprod-account-entry.css')
  menu=release/'public/assets/menu-principal.js'
- menu.write_text(menu.read_text()+"\n(()=>{const css=document.createElement('link');css.rel='stylesheet';css.href='/assets/preprod-account-entry.css?v=5';document.head.append(css);const script=document.createElement('script');script.src='/assets/preprod-account-entry.js?v=5';script.defer=true;document.head.append(script);})();\n")
+ menu.write_text(menu.read_text()+"\n(()=>{const css=document.createElement('link');css.rel='stylesheet';css.href='/assets/preprod-account-entry.css?v=5';document.head.append(css);const script=document.createElement('script');script.src='/assets/preprod-account-entry.js?v=6';script.defer=true;document.head.append(script);})();\n")
 
  login=release/'public/business/login.php'
  text=login.read_text().replace('Si olvidaste tu contraseña, contacta al equipo para que te envíe un enlace temporal de recuperación. Por ahora el envío del enlace es manual.','<a href="/negocios/recuperar-clave/">Olvidé mi contraseña</a> · Preproducción: correo en el buzón local.')

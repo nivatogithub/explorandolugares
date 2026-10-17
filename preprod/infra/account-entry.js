@@ -84,7 +84,7 @@
     logout.textContent = copy[1];
     form.addEventListener('submit', async e => {e.preventDefault();logout.disabled=true;try{const result=await fetch(form.action,{method:'POST',credentials:'same-origin',body:new URLSearchParams(new FormData(form))});if(result.ok)await refreshAccount();}finally{logout.disabled=false;}});
     form.append(csrf, logout);
-    bar.replaceChildren(name, form);
+    if(account.administrator){const admin=document.createElement('a');admin.href='/admin/index.php';admin.textContent=locale==='en'?'Administration':locale==='pt-br'?'Administração':'Administración';bar.replaceChildren(name,admin,form);}else bar.replaceChildren(name, form);
   } catch { signIn(); }
   }
   signIn();
