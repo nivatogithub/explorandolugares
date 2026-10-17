@@ -1,151 +1,52 @@
 {
-  "destino_id": "CO-11-bogota",
-  "rama": "lugar/CO/bogota-dc/bogota",
-  "schema_version": 2,
   "scope": "solo_preprod_local",
-  "archivo": "paquete-preprod.zip",
-  "sha256_zip": "b93c4630363b851256a59068c802431ad47da54d94c104ee569555e70b692ec8",
-  "sha256_manifest": "6b72ea8a37c0798e85a297efcf9372e9c87014b8daec0c50958fe08b554e0d2b",
-  "portada_provisional": "opcion-1-monserrate",
-  "portada_aprobada": false,
-  "principales_importables": [
-    "bogota-monserrate",
+  "selected": [
     "bogota-plaza",
-    "bogota-jardin"
+    "bogota-candelaria",
+    "bogota-museo-oro",
+    "bogota-monserrate",
+    "bogota-botero",
+    "bogota-usaquen",
+    "bogota-jardin",
+    "bogota-simon"
   ],
-  "max_principales": 8,
-  "numero_principales": 3,
-  "experiencias_importadas": 0,
-  "experiencias_documentadas_separadas": 18,
-  "exclusiones": [
-    {
-      "id": "bogota-museo-oro",
-      "nombre": "Museo del Oro",
-      "motivo": "sin referencia local apta y/o candidato oculto; conservado inventario secundario",
-      "estado": "incluido_borrador"
-    },
-    {
-      "id": "bogota-mambo",
-      "nombre": "MAMBO",
-      "motivo": "sin referencia local apta y/o candidato oculto; conservado inventario secundario",
-      "estado": "incluido_borrador"
-    },
-    {
-      "id": "bogota-colon",
-      "nombre": "Teatro Colón",
-      "motivo": "sin referencia local apta y/o candidato oculto; conservado inventario secundario",
-      "estado": "incluido_borrador"
-    },
-    {
-      "id": "bogota-delia",
-      "nombre": "Centro Nacional de las Artes Delia Zapata Olivella",
-      "motivo": "sin referencia local apta y/o candidato oculto; conservado inventario secundario",
-      "estado": "incluido_borrador"
-    },
-    {
-      "id": "bogota-botero",
-      "nombre": "Museo Botero",
-      "motivo": "sin referencia local apta y/o candidato oculto; conservado inventario secundario",
-      "estado": "incluido_borrador"
-    },
-    {
-      "id": "bogota-nacional",
-      "nombre": "Museo Nacional de Colombia",
-      "motivo": "sin referencia local apta y/o candidato oculto; conservado inventario secundario",
-      "estado": "incluido_borrador"
-    },
-    {
-      "id": "bogota-planetario",
-      "nombre": "Planetario de Bogotá",
-      "motivo": "sin referencia local apta y/o candidato oculto; conservado inventario secundario",
-      "estado": "incluido_borrador"
-    },
-    {
-      "id": "bogota-maloka",
-      "nombre": "Maloka",
-      "motivo": "sin referencia local apta y/o candidato oculto; conservado inventario secundario",
-      "estado": "incluido_borrador"
-    },
-    {
-      "id": "bogota-perseverancia",
-      "nombre": "Plaza de Mercado La Perseverancia",
-      "motivo": "sin referencia local apta y/o candidato oculto; conservado inventario secundario",
-      "estado": "incluido_borrador"
-    },
-    {
-      "id": "bogota-usaquen",
-      "nombre": "Mercado de las Pulgas de Usaquén",
-      "motivo": "sin referencia local apta y/o candidato oculto; conservado inventario secundario",
-      "estado": "incluido_borrador"
-    },
-    {
-      "id": "bogota-simon",
-      "nombre": "Parque Simón Bolívar",
-      "motivo": "sin referencia local apta y/o candidato oculto; conservado inventario secundario",
-      "estado": "incluido_borrador"
-    },
-    {
-      "id": "bogota-quebrada",
-      "nombre": "Quebrada La Vieja",
-      "motivo": "sin referencia local apta y/o candidato oculto; conservado inventario secundario",
-      "estado": "incluido_borrador"
-    },
-    {
-      "id": "bogota-humedal",
-      "nombre": "Humedal Santa María del Lago",
-      "motivo": "sin referencia local apta y/o candidato oculto; conservado inventario secundario",
-      "estado": "candidato_oculto"
-    },
-    {
-      "id": "bogota-cinemateca",
-      "nombre": "Cinemateca de Bogotá",
-      "motivo": "sin referencia local apta y/o candidato oculto; conservado inventario secundario",
-      "estado": "incluido_borrador"
-    },
-    {
-      "id": "bogota-grafiti",
-      "nombre": "Distrito Grafiti Puente Aranda",
-      "motivo": "sin referencia local apta y/o candidato oculto; conservado inventario secundario",
-      "estado": "incluido_borrador"
-    },
-    {
-      "id": "bogota-theatron",
-      "nombre": "Theatron",
-      "motivo": "sin referencia local apta y/o candidato oculto; conservado inventario secundario",
-      "estado": "candidato_oculto"
+  "places": 8,
+  "images": 9,
+  "history_image_prepared": true,
+  "hero_not_monserrate": true,
+  "photographs_approved": false,
+  "texts_approved": false,
+  "generated_illustrations": 0,
+  "production_authorized": false,
+  "sha256_zip": "b38de58fc0f334cef4a14b05df03d753f9ebd26c05cf9eb26292b86fcc4daa37",
+  "loaded_receipt": {
+    "destination": "bogota",
+    "id": 23,
+    "package_sha256": "b38de58fc0f334cef4a14b05df03d753f9ebd26c05cf9eb26292b86fcc4daa37",
+    "loaded_at": "2026-10-17T04:24:34+00:00",
+    "environment": "local_preprod_only",
+    "production_authorized": false,
+    "editorial_approved": false,
+    "provisional_photographs": true,
+    "places": 8,
+    "history_asset_id": 105,
+    "urls": {
+      "es": "http://127.0.0.1:8088/destinos/bogota/",
+      "en": "http://127.0.0.1:8088/en/destinos/bogota/",
+      "pt-BR": "http://127.0.0.1:8088/pt-br/destinos/bogota/"
     }
-  ],
-  "imagenes_ia_generadas": 0,
-  "publicable": false,
-  "publicado_produccion": false,
-  "BD_local_modificada_por_worker": false,
-  "prueba_php_zip": {
-    "resultado": "aprobada",
-    "validador": "../preprod/backend/app/DestinationPackage.php::readZip",
-    "research": "DestinationAdminService::validateInternalResearch via reflection sinconstructor niBD",
-    "idiomas": [
-      "es",
-      "en",
-      "pt-BR"
-    ],
-    "atractivos": 3,
-    "imagenes": 4,
-    "comando": "php crecimiento-colombia/entregas/bogota/validar_preprod.php ../preprod"
   },
-  "limitaciones": [
-    "Solo PREPROD PHP/MySQL local, coordinador importa serialmente. No producción ni aprobación editorial.",
-    "Portada Monserrate sin cables elegida provisionalmente reversible, no aprobación humana.",
-    "Máximo8 principales: se importan3 con referencias locales disponibles;16sitios secundarios conservados en investigación. No rellenar8 con fotos ajenas.",
-    "Foto jardín detalle tortuga/plantas, no vista general ni Tropicario; provisional, pendiente aprobación de aptitud para ficha.",
-    "Foto centro fecha declarada2024 y EXIFsoftware2023 discrepante: pendiente revisión.",
-    "Actividad Ciclovía tiene foto histórica de programa, sin corredor exacto confirmado, no representa BikeTours; actividades permanecen investigación separada, no se importan como principales.",
-    "Sin ilustraciones IA finales; originales/textos revisión1 antes de generar y revisión2 posterior.",
-    "No reservas, pagos, alianza, disponibilidad o RNT confirmados."
+  "verified_local_pages": "verificacion-preprod-v3.json",
+  "visual_evidence": [
+    "evidencias-v3/portada-preprod.png",
+    "evidencias-v3/historia-preprod.png"
   ],
-  "inventarios_fuente": {
-    "sitios": "sitios.json",
-    "actividades": "experiencias.json",
-    "imagenes": "imagenes.json",
-    "fuentes": "fuentes.json"
-  }
+  "legacy_report": "historial/reporte-preprod-v2.json",
+  "limitations": [
+    "Fotografía de ParqueSimón pequeña330x247, originalmayor pendiente.",
+    "JardínBotánico conserva detallehistórico: mejor vista general pendiente.",
+    "La foto del monumento Bolívar es una propuesta provisional vista desde atrás; elegir referencia e ilustraciónfinal antes de publicar.",
+    "Directorio y actividades no integrados.",
+    "Preprod tuvo reinicio y cortes; última comprobación HTTP completada sin errores, foto historia renderizada."
+  ]
 }
