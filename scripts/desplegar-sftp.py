@@ -288,9 +288,20 @@ def deployment_commands(config, files, local_manifest, obsolete=()):
     return commands
 
 
+def require_approved_preprod(approved_ref):
+    current_branch = subprocess.check_output(['git','branch','--show-current'],cwd=ROOT,text=True).strip()
+    current_commit = subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
+    if current_branch != 'preprod' or not approved_ref:
+        raise ValueError('Producción requiere rama preprod y --approved-preprod COMMIT después de aprobación humana local. Lee docs/PREPRODUCCION.md.')
+    approved = subprocess.check_output(['git','rev-parse',approved_ref+'^{commit}'],cwd=ROOT,text=True).strip()
+    if approved != current_commit or subprocess.check_output(['git','status','--porcelain'],cwd=ROOT,text=True).strip():
+        raise ValueError('El commit aprobado debe ser HEAD y el árbol de trabajo debe estar limpio.')
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--config', type=Path, default=ROOT / '.local/sftp.json')
+    parser.add_argument('--approved-preprod', metavar='COMMIT', help='Commit exacto de preprod aprobado por el propietario para producción.')
     parser.add_argument('--deploy', action='store_true', help='Sube directamente solo archivos nuevos o modificados.')
     parser.add_argument('--only', action='append', default=[], metavar='RUTA',
                         help='Limita una entrega por ruta exacta del paquete (se puede repetir).')
@@ -299,6 +310,7 @@ def main(argv=None):
     parser.add_argument('--allow-remove', action='append', default=[], metavar='RUTA',
                         help='Autoriza retirar una ruta obsoleta exacta; nunca elimina por omisión silenciosa.')
     args = parser.parse_args(argv)
+    if args.deploy:require_approved_preprod(args.approved_preprod)
     config = load_config(args.config.expanduser().resolve())
     subprocess.run([sys.executable, str(ROOT / 'scripts/verificar-antes-de-desplegar.py')], cwd=ROOT, check=True)
     with tempfile.TemporaryDirectory(prefix='explorando-deploy-') as temporary:
@@ -313,6 +325,7 @@ def main(argv=None):
             raise ValueError('Una reparación debe estar dentro de las rutas seleccionadas para el despliegue.')
         client = None
         if args.deploy:
+            require_approved_preprod(args.approved_preprod)
             known_hosts = Path(config['known_hosts_file']).expanduser()
             if not known_hosts.is_file():
                 raise ValueError('Falta el archivo de huellas verificadas.')

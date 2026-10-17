@@ -6,6 +6,12 @@ function measurement_config():array {
     if(PHP_SAPI==='cli-server'&&in_array($_SERVER['REMOTE_ADDR']??'',['127.0.0.1','::1'],true))$path=getenv('EL_COVERAGE_TEST_CONFIG')?:$path;
     if(!is_file($path))throw new RuntimeException('Configuración pendiente');return require $path;
 }
+function measurement_local_http():bool {
+    if(PHP_SAPI==='cli-server')return true;
+    if(getenv('EL_PREPROD_LOCAL')!=='1')return false;
+    $host=parse_url('http://'.($_SERVER['HTTP_HOST']??''),PHP_URL_HOST);
+    return in_array($host,['127.0.0.1','localhost','[::1]'],true)&&!empty(measurement_config()['local_test']);
+}
 function measurement_db(array $config):PDO{return new PDO($config['dsn'],$config['db_user']??null,$config['db_password']??null,[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC,PDO::ATTR_EMULATE_PREPARES=>false,PDO::ATTR_TIMEOUT=>3]);}
 function measurement_cookie_id(string $name,int $lifetime,string $key,bool $forceNew=false):string {
     $raw=(string)($_COOKIE[$name]??'');$parts=explode('.',$raw);

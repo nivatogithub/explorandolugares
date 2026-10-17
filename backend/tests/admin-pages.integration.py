@@ -145,7 +145,7 @@ try:
     check(request('/v1/destinos/jerico/', opener=GUEST)[0] == 404, 'El prefijo retirado no debe seguir como alias de pruebas.')
 
     status, body, _ = request('/api/cobertura.php', opener=GUEST)
-    check(status == 200 and 'audience' not in json.loads(body), 'API pública no debe exponer estadísticas de uso privadas.')
+    check(status == 200 and 'audience' in json.loads(body), 'API pública debe ofrecer el resumen agregado de audiencia aprobado.')
 
     # Sitemap is public read-only: no bootstrap session or private robots header.
     status, body, headers = request('/sitemap-live.php', opener=GUEST)

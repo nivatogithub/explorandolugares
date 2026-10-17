@@ -1,0 +1,6 @@
+# Only infrastructure is sent to the local image builder. No repository secrets/state.
+*
+!infra/
+infra/*
+!infra/preprod/
+!infra/preprod/**

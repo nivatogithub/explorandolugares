@@ -10,6 +10,9 @@ if(!in_array($_SERVER['REQUEST_METHOD']??'GET',['GET','HEAD'],true)){
     header('Allow: GET, HEAD');http_response_code(405);echo '{"error":"Método no permitido"}';exit;
 }
 try{
+    foreach(['days','department','municipality'] as $parameter){
+        if(isset($_GET[$parameter])&&!is_string($_GET[$parameter])){http_response_code(400);echo '{"error":"Parámetro inválido"}';exit;}
+    }
     $plan=json_decode(file_get_contents(dirname(__DIR__,2).'/app/content/coverage-plan.json'),true,512,JSON_THROW_ON_ERROR);
     $geography=json_decode(file_get_contents(dirname(__DIR__,2).'/app/content/coverage-geography.json'),true,512,JSON_THROW_ON_ERROR);
     $pdo=null;$configPath=CoverageService::configurationPath();
@@ -24,8 +27,11 @@ try{
     $measurement=$pdo?new AnalyticsService($pdo,(string)($config['app_key']??'')):null;
     if($measurement && $measurement->ready()){$plan=$measurement->planFromDatabase();$geography=$measurement->geographyFromDatabase();}
     $result=(new CoverageService($plan,$geography))->snapshot($pdo);
-    // Public coverage does not expose audience or business activity metrics.
-    unset($result['audience']);
+    $days=in_array((int)($_GET['days']??30),[30,90],true)?(int)($_GET['days']??30):30;
+    $department=preg_match('/^[0-9]{2}$/D',(string)($_GET['department']??''))?$_GET['department']:null;
+    $municipality=preg_match('/^[0-9]{5}$/D',(string)($_GET['municipality']??''))?$_GET['municipality']:null;
+    $result['audience']=$measurement?$measurement->report($days,$department,$municipality):['status'=>'not_configured','metrics'=>[]];
+    $result['audience']['basic']=$pdo?(new BasicAudienceService($pdo,dirname(__DIR__)))->report($days,$department):['status'=>'not_configured','page_views'=>null];
     if(!$result['publication_source_available'])header('Cache-Control: no-store');
     if(($_SERVER['REQUEST_METHOD']??'GET')!=='HEAD')echo json_encode($result,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES|JSON_THROW_ON_ERROR);
 }catch(Throwable){http_response_code(503);header('Cache-Control: no-store');echo '{"error":"La información de cobertura no está disponible en este momento."}';}

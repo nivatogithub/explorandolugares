@@ -10,7 +10,7 @@ if (!is_file($configFile)) { http_response_code(503); exit('Configuración del s
 $config = require $configFile;
 require_once __DIR__.'/BusinessPortalAccess.php';
 require_once __DIR__.'/BusinessPortalSettings.php';
-$local = in_array($_SERVER['REMOTE_ADDR'] ?? '', ['127.0.0.1', '::1'], true);
+$local = in_array($_SERVER['REMOTE_ADDR'] ?? '', ['127.0.0.1', '::1'], true) || (getenv('EL_PREPROD_LOCAL') === '1' && in_array(parse_url('http://'.($_SERVER['HTTP_HOST']??''), PHP_URL_HOST), ['127.0.0.1','localhost','[::1]'], true));
 $https = ($_SERVER['HTTPS'] ?? '') === 'on';
 if (PHP_SAPI !== 'cli' && !$https && !(($config['local_test'] ?? false) && $local)) {
     http_response_code(403); exit('Este servicio requiere HTTPS.');

@@ -1,0 +1,11 @@
+FROM docker.io/library/ubuntu:24.04
+ENV DEBIAN_FRONTEND=noninteractive TZ=America/Bogota
+RUN apt-get update && apt-get install -y --no-install-recommends apache2 libapache2-mod-php php-cli php-mysql php-mbstring php-xml php-curl php-gd php-sqlite3 mysql-server supervisor curl ca-certificates && rm -rf /var/lib/apt/lists/*
+RUN a2enmod rewrite headers && a2dissite 000-default
+COPY infra/preprod/apache.conf /etc/apache2/sites-enabled/preprod.conf
+COPY infra/preprod/supervisord.conf /etc/supervisor/conf.d/preprod.conf
+COPY infra/preprod/entrypoint.sh /usr/local/bin/preprod-entrypoint
+COPY infra/preprod/init.php /usr/local/lib/preprod-init.php
+RUN chmod +x /usr/local/bin/preprod-entrypoint
+EXPOSE 80
+ENTRYPOINT ["/usr/local/bin/preprod-entrypoint"]

@@ -11,14 +11,18 @@ $db->exec('CREATE TABLE destinations(slug TEXT,department TEXT,publication_statu
 $db->exec("INSERT INTO destinations VALUES ('jerico','Antioquia','published','CO','SECRET_NOTE'),('jardin','Antioquia','draft','CO','PRIVATE_DRAFT'),('salento','Quindío','archived','CO','ARCHIVED'),('private-place','Antioquia','draft','CO','HIDDEN_NAME'),('jerico','Other','published','CO','OTHER'),('cartagena','Bolívar','published','XX','FOREIGN')");
 $snapshot=$service->snapshot($db);$ant=array_values(array_filter($snapshot['departments'],fn($d)=>$d['code']==='05'))[0];
 expect($snapshot['publication_source_available'],'DB read succeeds');expect($snapshot['country']['counts']['published']===2,'All published CO destinations count, including outside the initial catalog');
-$jerico=array_values(array_filter($ant['places'],fn($p)=>$p['name']==='Jericó'))[0];$jardin=array_values(array_filter($ant['places'],fn($p)=>$p['name']==='Jardín'))[0];$cauca=array_values(array_filter($ant['places'],fn($p)=>$p['name']==='Cauca Viejo'))[0];
-expect($jerico['status']==='published'&&$jerico['url']==='/destinos/jerico/','Published links only');expect($jardin['status']==='in_progress'&&$jardin['url']===null,'Draft no link');expect($cauca['status']==='pending','Child not automatically published');expect($cauca['municipality_code']===$jerico['municipality_code'],'Child shares geographic municipality');
-expect($ant['coverage_percent']===null,'No departmental percentage without complete scope');
+$jerico=array_values(array_filter($ant['places'],fn($p)=>$p['name']==='Jericó'))[0];
+expect($jerico['status']==='published'&&$jerico['url']==='/destinos/jerico/','Published links only');expect(count($ant['places'])===1,'Unannounced drafts and planned candidates must stay private');expect($jerico['parent_place_id']===null,'Independent places never inherit publication');
+expect($ant['coverage_percent']===0.8&&$ant['municipality_total']===125,'Coverage uses all geographic municipalities, not candidates');
 expect($snapshot['national_scope_status']==='defined','National coverage scope is defined');
-expect($snapshot['country']['coverage_percent']===null&&$snapshot['estimated_destination_total']===null,'No national denominator from 78 candidates');
+expect($snapshot['country']['coverage_percent']>0&&$snapshot['estimated_destination_total']===null,'Municipal coverage has a geographic denominator without inventing tourist-place totals');
 expect($snapshot['audience']['status']==='not_configured'&&$snapshot['audience']['metrics']['registered_travelers']===null,'No fake visitor/account metrics');
-$unit=array_values(array_filter($ant['municipalities'],fn($m)=>$m['code']===$jerico['municipality_code']))[0];expect($unit['published_count']===1&&$unit['tracked_count']===2,'Partial municipality clearly counts two destinations');
+$unit=array_values(array_filter($ant['municipalities'],fn($m)=>$m['code']===$jerico['municipality_code']))[0];expect($unit['published_count']===1&&$unit['tracked_count']===1,'Private candidates excluded from public coverage');
 expect(count($ant['municipalities'])===125,'All 125 map units of Antioquia included');
 $json=json_encode($snapshot);foreach(['SECRET_NOTE','PRIVATE_DRAFT','private-place','HIDDEN_NAME','internal_notes','blockers','reviewer','base_commit','priority','weight'] as $secret)expect(!str_contains($json,$secret),'No private fields: '.$secret);
+// Only an explicit public announcement may expose an unpublished place.
+$approved=$plan;foreach($approved['departments'] as &$dep){foreach($dep['places'] as &$place){if($place['slug']==='jardin')$place['public_announcement']=true;}unset($place);}unset($dep);
+$announced=(new CoverageService($approved,$geo))->snapshot($db);$announcedAnt=array_values(array_filter($announced['departments'],fn($d)=>$d['code']==='05'))[0];
+$announcedJardin=array_values(array_filter($announcedAnt['places'],fn($p)=>$p['name']==='Jardín'));expect(count($announcedJardin)===1&&$announcedJardin[0]['status']==='in_progress'&&$announcedJardin[0]['url']===null,'Explicit announcement does not publish the guide');
 $db->exec('DROP TABLE destinations');expect($service->snapshot($db)['country']['coverage_percent']===null,'Query failure fails closed');
 echo "OK: all CO publications, defined scope without invented totals, absent audience metrics, offline, parent and privacy\n";

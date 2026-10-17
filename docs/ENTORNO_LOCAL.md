@@ -1,5 +1,9 @@
 # Entorno local y sincronización
 
+## Entorno vigente de preproducción
+
+Usar la copia fija `trabajo/preprod`, rama `preprod`, y `python3 scripts/preprod-local.py up`. Revisión en http://127.0.0.1:8088/. Arranque, parada, persistencia y proceso de aprobación: `PREPRODUCCION.md`. El preview SQLite descrito abajo sigue siendo una herramienta auxiliar; no sustituye la aprobación del paquete Apache/MySQL.
+
 ## Rutas vigentes: iguales a producción
 
 Desde el 16 de octubre de 2026, el portal se prueba desde la raíz del servidor

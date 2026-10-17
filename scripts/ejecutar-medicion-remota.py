@@ -4,7 +4,8 @@ import argparse,importlib.util,subprocess,shlex
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 spec=importlib.util.spec_from_file_location('deploy',ROOT/'scripts/desplegar-sftp.py');mod=importlib.util.module_from_spec(spec);spec.loader.exec_module(mod)
-p=argparse.ArgumentParser();p.add_argument('--install',action='store_true');a=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument('--install',action='store_true');p.add_argument('--approved-preprod');a=p.parse_args()
+if a.install:mod.require_approved_preprod(a.approved_preprod)
 c=mod.load_config(ROOT.parent/'explorandolugares/.local/sftp.json')
 cmd=['ssh','-F','/dev/null','-p',str(c['port']),'-oBatchMode=yes','-oStrictHostKeyChecking=yes','-oConnectTimeout=20','-oForwardAgent=no','-oClearAllForwardings=yes','-oUserKnownHostsFile='+str(Path(c['known_hosts_file']).expanduser().resolve())]
 if c.get('identity_file'):cmd+=['-i',str(Path(c['identity_file']).expanduser().resolve()),'-oIdentitiesOnly=yes']
