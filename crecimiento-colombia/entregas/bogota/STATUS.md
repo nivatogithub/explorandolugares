@@ -19,3 +19,9 @@ Se conserva foto con cables RECHAZADA por usuario para portada. Dos candidatas v
 Vista privada ampliada con opciones e inventario/faltantes; validador comprueba archivos locales, trazabilidad y gates. Chrome bajo sandbox falló; usuario rechazó reintento escalado anterior. No se eludió ni se afirma QA responsive renderizado. Parent puede revisar visualmente en servidor privado.
 
 `python3 crecimiento-colombia/entregas/bogota/validar.py` verifica entrega. `evidencia-sha256.json` cubre cada archivo salvo sí mismo. `gh` no disponible en PATH, sin push/PR verificado. Backend/cola/inventario general no modificados.
+
+## PREPROD local autorizado
+
+Paquete v2 `paquete-preprod.zip` preparado sin modificar BD ni worktreePREPROD. Leídos AGENTS.md/docs/PREPRODUCCION.md e importadores PHP de esa copia. Portada Monserrate sin cables provisional/reversible NO aprobada;3principalesdraft con referencias (Monserrate,PlazaBolívar,Jardín);máximo8respetado. Jardín mantiene foto detalle histórica sin afirmar Tropicario.16sitios excluidos de importación principal por foto/faltantes conservados como inventario secundario;18actividades separadas sin importar como principales. Fotografías provisionales de revisión,noIAfinal.
+
+PHP validó ZIP real, imágenes/MIME/dimensiones,manifiesto v2 e investigaciónprivada usando clases PREPROD sinBD. ES/EN/PT-BR completos para los3principales. Coordinador importa serialmente para revisión visual local; no se cambia producción ni se fusiona contenido aprobado inexistente. `reporte-preprod.json` conserva hashZIP y limitaciones.
