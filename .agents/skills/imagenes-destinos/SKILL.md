@@ -5,18 +5,18 @@ description: Produce and review accurate AI-generated editorial illustrations fo
 
 # Imágenes de destinos de Explorando Lugares
 
-Antes de crear imágenes, lee `docs/PRODUCCION_IMAGENES_IA.md`, `docs/GUIAS_VISUALES_DESTINOS.md` y `AGENTS.md`.
+Antes de crear imágenes, lee `docs/GUIA_BIBLIOTECA_ILUSTRADA.md` (dirección actual, brief y tratamiento de personajes/entorno), `docs/PRODUCCION_IMAGENES_IA.md`, `docs/GUIAS_VISUALES_DESTINOS.md` y `AGENTS.md`. Las preferencias actuales de la guía prevalecen sobre la paleta y las exigencias fotográficas anteriores para tarjetas genéricas.
 
 ## Selección de referencias vigente
 
-El propietario buscará las fotografías manualmente y enviará las URLs elegidas. No ejecutar búsquedas abiertas ni lotes nuevos de candidatas; validar la identidad/fuente y uso de las URLs recibidas y preservar decisiones anteriores. Esta instrucción posterior prevalece sobre las búsquedas autónomas descritas más abajo. El resto del flujo de generación, revisión y publicación se conserva.
+Para portada o referencia fotográfica, el propietario elige la foto: no reanudar búsquedas ni descargas automáticas de candidatas. Sí se pueden consultar descripciones y documentación pública para preparar los hechos del brief. Distinguir tipología representativa, lugar concreto y portada desde foto real. Las tarjetas genéricas admiten composiciones originales por tipo y entorno, sin foto de entrada ni pretensión de fachada/geografía exacta. No trasladar esa libertad a una portada factual. La biblioteca se asigna por correspondencia semántica y territorial, nunca al azar para evitar repeticiones. Conservar aprobaciones previas.
 
 ## Procedimiento
 
 1. Identifica el destino, el atractivo y el componente/página donde se usará la imagen.
 2. Verifica sus rasgos con fuentes locales/institucionales y referencias visuales reconocibles. Registra URL y fecha.
 3. Elige vía: transformación autorizada de una referencia cuyo permiso cubra la carga al generador y la publicación del resultado previsto, o composición nueva independiente basada en hechos del lugar sin copiar ni subir una foto restringida. No exigir permiso para publicar el original intacto cuando un permiso específico ya cubra el uso previsto; documentar condiciones del derivado. Consulta la sección de publicabilidad IA de `crecimiento-colombia/GUIA_GENERACION_DESTINOS.md`.
-4. Genera una ilustración nueva con el atractivo principal claramente visible, contexto territorial fiel, composición adecuada al recorte real, paleta editorial del portal y acabado claramente ilustrado de caricatura realista (trazo de tinta/gouache), sin deformar formas y sin texto, logos ni elementos inventados.
+4. Genera una ilustración nueva con el atractivo principal claramente visible, contexto territorial fiel, composición adecuada al recorte real, colores propios del paisaje independientes de la interfaz y acabado de caricatura editorial orgánica elaborada. Dibujar personas completas y expresivas, vegetación y relieve naturales y tipologías arquitectónicas variadas; no palitos/bolitas, triángulos ni cubos de juguete. Conservar los rasgos específicos documentados; sin texto ni logos.
 5. Inspecciona la salida contra las referencias. Recházala si cambia arquitectura, monumento, ubicación, paisaje o acceso, o si el sitio no se reconoce al tamaño de tarjeta.
 6. Guarda el maestro y la versión optimizada, completa el manifiesto `content/templates/procedencia-imagen-ia.json` y deja el activo en borrador.
 7. Solicita revisión humana. No publiques, despliegues, subas a producción ni cambies una imagen pública sin aprobación humana explícita.

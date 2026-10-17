@@ -1,0 +1,326 @@
+{
+  "status": "propuesta_no_generada",
+  "taxonomy": {
+    "places": [
+      "historic-centre",
+      "neighbourhood",
+      "beach",
+      "island",
+      "church",
+      "sanctuary",
+      "convent",
+      "museum",
+      "fortress",
+      "viewpoint",
+      "park",
+      "plaza",
+      "waterfall",
+      "river",
+      "lake",
+      "lagoon",
+      "forest",
+      "paramo",
+      "desert",
+      "cave",
+      "bridge",
+      "market",
+      "archaeology",
+      "garden",
+      "monument",
+      "theatre",
+      "nightclub",
+      "port",
+      "heritage-house",
+      "cultural-centre"
+    ],
+    "activities": [
+      "walking",
+      "trekking",
+      "running",
+      "cycling",
+      "mountain-biking",
+      "paragliding",
+      "skydiving",
+      "climbing",
+      "zipline",
+      "horse-riding",
+      "scuba",
+      "snorkel",
+      "kayak",
+      "rafting",
+      "surf",
+      "sailing",
+      "fishing",
+      "birdwatching",
+      "coffee",
+      "cooking",
+      "food-tasting",
+      "dance",
+      "craft-workshop",
+      "museum-visit",
+      "church-visit",
+      "bus-tour",
+      "metro",
+      "cable-car",
+      "boat-tour",
+      "concert"
+    ]
+  },
+  "allocation_basis": "Hipótesis de planificación; ajustar con demanda real del inventario, no frecuencias medidas.",
+  "variant_targets": [
+    {
+      "type": "historic-centre",
+      "count": 24
+    },
+    {
+      "type": "neighbourhood",
+      "count": 24
+    },
+    {
+      "type": "beach",
+      "count": 24
+    },
+    {
+      "type": "island",
+      "count": 8
+    },
+    {
+      "type": "church",
+      "count": 24
+    },
+    {
+      "type": "sanctuary",
+      "count": 8
+    },
+    {
+      "type": "convent",
+      "count": 8
+    },
+    {
+      "type": "museum",
+      "count": 24
+    },
+    {
+      "type": "fortress",
+      "count": 8
+    },
+    {
+      "type": "viewpoint",
+      "count": 24
+    },
+    {
+      "type": "park",
+      "count": 8
+    },
+    {
+      "type": "plaza",
+      "count": 8
+    },
+    {
+      "type": "waterfall",
+      "count": 8
+    },
+    {
+      "type": "river",
+      "count": 8
+    },
+    {
+      "type": "lake",
+      "count": 8
+    },
+    {
+      "type": "lagoon",
+      "count": 8
+    },
+    {
+      "type": "forest",
+      "count": 8
+    },
+    {
+      "type": "paramo",
+      "count": 8
+    },
+    {
+      "type": "desert",
+      "count": 8
+    },
+    {
+      "type": "cave",
+      "count": 8
+    },
+    {
+      "type": "bridge",
+      "count": 8
+    },
+    {
+      "type": "market",
+      "count": 8
+    },
+    {
+      "type": "archaeology",
+      "count": 8
+    },
+    {
+      "type": "garden",
+      "count": 8
+    },
+    {
+      "type": "monument",
+      "count": 8
+    },
+    {
+      "type": "theatre",
+      "count": 8
+    },
+    {
+      "type": "nightclub",
+      "count": 8
+    },
+    {
+      "type": "port",
+      "count": 8
+    },
+    {
+      "type": "heritage-house",
+      "count": 8
+    },
+    {
+      "type": "cultural-centre",
+      "count": 8
+    },
+    {
+      "type": "walking",
+      "count": 24
+    },
+    {
+      "type": "trekking",
+      "count": 24
+    },
+    {
+      "type": "running",
+      "count": 8
+    },
+    {
+      "type": "cycling",
+      "count": 8
+    },
+    {
+      "type": "mountain-biking",
+      "count": 8
+    },
+    {
+      "type": "paragliding",
+      "count": 8
+    },
+    {
+      "type": "skydiving",
+      "count": 8
+    },
+    {
+      "type": "climbing",
+      "count": 8
+    },
+    {
+      "type": "zipline",
+      "count": 3
+    },
+    {
+      "type": "horse-riding",
+      "count": 3
+    },
+    {
+      "type": "scuba",
+      "count": 3
+    },
+    {
+      "type": "snorkel",
+      "count": 3
+    },
+    {
+      "type": "kayak",
+      "count": 3
+    },
+    {
+      "type": "rafting",
+      "count": 3
+    },
+    {
+      "type": "surf",
+      "count": 3
+    },
+    {
+      "type": "sailing",
+      "count": 3
+    },
+    {
+      "type": "fishing",
+      "count": 3
+    },
+    {
+      "type": "birdwatching",
+      "count": 3
+    },
+    {
+      "type": "coffee",
+      "count": 3
+    },
+    {
+      "type": "cooking",
+      "count": 3
+    },
+    {
+      "type": "food-tasting",
+      "count": 24
+    },
+    {
+      "type": "dance",
+      "count": 3
+    },
+    {
+      "type": "craft-workshop",
+      "count": 3
+    },
+    {
+      "type": "museum-visit",
+      "count": 3
+    },
+    {
+      "type": "church-visit",
+      "count": 3
+    },
+    {
+      "type": "bus-tour",
+      "count": 3
+    },
+    {
+      "type": "metro",
+      "count": 3
+    },
+    {
+      "type": "cable-car",
+      "count": 3
+    },
+    {
+      "type": "boat-tour",
+      "count": 24
+    },
+    {
+      "type": "concert",
+      "count": 3
+    }
+  ],
+  "target_assets": 540,
+  "generated_for_library": 0,
+  "style_studies_generated": 4,
+  "matching_order": [
+    "semantic_type_exact_or_editorially_approved_equivalence",
+    "compatible_environment_and_features",
+    "editorial_approval",
+    "exclude_exact_asset_in_last20_destinations",
+    "exclude_near_duplicate_composition_when_reviewed"
+  ],
+  "insufficient_pool": "No asignar una imagen incompatible; devolver falta de variante compatible para preparar/revisar.",
+  "style_independent_of_site_palette": true,
+  "hero_policy": "reference_real_selected_by_owner_identity_preserved",
+  "human_approved_style": "El propietario expresó agrado por las nuevas imágenes; no eligió una de las tres como estilo final ni aprobó una portada concreta."
+}

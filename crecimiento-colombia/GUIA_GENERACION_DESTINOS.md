@@ -203,3 +203,7 @@ El propietario extendió expresamente el enfoque genérico a Qué ver/Qué hacer
 ### Elaboración del estilo visual
 
 El propietario pidió opciones más elaboradas y con más detalle, evitando un acabado infantil. Antes de extender la biblioteca comparar estilos numerados visibles (no carrusel), con diferencias de trazo, perspectiva y material, no solamente recoloraciones. Conservar legibilidad en tamaño de tarjeta, peso medido y contexto genérico honesto. Estudios de Cartagena en design/cartagena-estilos: no son estilo final aprobado.
+
+### Guía de generación desde descripciones documentadas
+
+Aplicar docs/GUIA_BIBLIOTECA_ILUSTRADA.md y su brief JSON. Dirección solicitada: personajes caricaturescos completos/expresivos, árboles y montañas de formas orgánicas creíbles y edificios de tipologías variadas. No maniquíes de bolitas/palitos, geometría infantil ni filtro amarillo. Preparar hechos visuales desde documentación pública, separados de decisiones artísticas e incógnitas. Seleccionar biblioteca por representación correcta, no al azar; la portada sigue basada en foto real elegida. La actualización documental no equivale a una imagen nueva generada/aprobada.

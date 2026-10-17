@@ -1,0 +1,89 @@
+[
+  {
+    "master_file": "masters/01-editorial-v2.png",
+    "master_sha256": "a8e9b8ef970c8d43fbe4cad7e901f81ffa6ed428da5ea5595e54689bc6029078",
+    "generation_tool": "built-in image_gen",
+    "model": "not_reported_by_tool",
+    "input_photographs": [],
+    "semantic_use": "estudio_de_estilo_barrio_caribeno_imaginario_no_vista_real_de_Cartagena",
+    "derivatives": [
+      {
+        "file": "01-editorial-v2-galeria.webp",
+        "bytes": 165982,
+        "width": 800,
+        "height": 533,
+        "quality": 76,
+        "sha256": "2f0b2994d67f9c14e0fc0ebb5745bcd54250cff60bea344b530987ca4968e19f"
+      },
+      {
+        "file": "01-editorial-v2-tarjeta.webp",
+        "bytes": 57432,
+        "width": 480,
+        "height": 320,
+        "quality": 68,
+        "sha256": "ed37a111881cad30eb4a00b9f0517da178935a92f23585b8f18ea22a79fbcc18"
+      }
+    ],
+    "exact_prompt_file": "prompts.json",
+    "final_style_selected": false,
+    "production_approved": false
+  },
+  {
+    "master_file": "masters/02-gouache.png",
+    "master_sha256": "d7c7f40887b754f708e7365cb6dcd80cc6eac0b14839eb391596edb66e2d8661",
+    "generation_tool": "built-in image_gen",
+    "model": "not_reported_by_tool",
+    "input_photographs": [],
+    "semantic_use": "estudio_de_estilo_barrio_caribeno_imaginario_no_vista_real_de_Cartagena",
+    "derivatives": [
+      {
+        "file": "02-gouache-galeria.webp",
+        "bytes": 137862,
+        "width": 800,
+        "height": 533,
+        "quality": 76,
+        "sha256": "617faa6a442f8c9736b5b9e4a1bdd64090002f89715c24199911dafe39befe3d"
+      },
+      {
+        "file": "02-gouache-tarjeta.webp",
+        "bytes": 50054,
+        "width": 480,
+        "height": 320,
+        "quality": 68,
+        "sha256": "0fcabe4f63005ebfa515905d7f43aa105409975ed3ed3554d80459e78239cd12"
+      }
+    ],
+    "exact_prompt_file": "prompts.json",
+    "final_style_selected": false,
+    "production_approved": false
+  },
+  {
+    "master_file": "masters/03-semirrealista.png",
+    "master_sha256": "fd4f538733a5750ed24288d62c1fb17088ecfee4799981eb30d43f1328f6ddf1",
+    "generation_tool": "built-in image_gen",
+    "model": "not_reported_by_tool",
+    "input_photographs": [],
+    "semantic_use": "estudio_de_estilo_barrio_caribeno_imaginario_no_vista_real_de_Cartagena",
+    "derivatives": [
+      {
+        "file": "03-semirrealista-galeria.webp",
+        "bytes": 132798,
+        "width": 800,
+        "height": 533,
+        "quality": 76,
+        "sha256": "a634cffe1ae6925fb3e7f74d7f4dc838de613f96687decf76b037f6d14c1bb6e"
+      },
+      {
+        "file": "03-semirrealista-tarjeta.webp",
+        "bytes": 46194,
+        "width": 480,
+        "height": 320,
+        "quality": 68,
+        "sha256": "d961b281696df03452c8e366e39ca6884f453516910b4b0756ee80223ec44906"
+      }
+    ],
+    "exact_prompt_file": "prompts.json",
+    "final_style_selected": false,
+    "production_approved": false
+  }
+]
