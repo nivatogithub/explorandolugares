@@ -13,3 +13,13 @@ Bloqueos a publicabilidad: falta aprobación humana, integración v2 y comprobac
 Revisión reabierta: revision-ampliada.json registra 10 entradas (una excluida del municipio y varias excursiones por delimitar), oferta de buceo documentada con operador sin alianza ni permiso verificados. Faltan imágenes de actividades, traducciones ampliadas, opciones de portada y decisiones por componente. Esta ampliación no es una entrega completa para aprobar. Flujo: aprobar originales/textos → skill de ilustración → revisión final → autorización separada de publicación.
 
 Referencia visual añadida: Tayrona Diving2, Tisquesusa, CC BY-SA4.0, 2016; original/metadata/miniatura trazables e inspeccionados. Es paisaje submarino sin buzos y no representa a Barracuda; revisión SMR-EXP-F1. No se generó ilustración.
+
+## Corrección editorial v4 · 17/10/2026
+
+Selección principal ampliada a ocho por relevancia y variedad: Tayrona, Quinta, centro histórico/Catedral, Taganga, Rodadero, Minca, Museo del Oro Tairona y Acuario Rodadero. Investigación y justificación en SELECCION_V4.md; el inventario amplio no se borra. Taganga/Minca conservan identidad como corregimientos; Rodadero es sector diferenciado. Guías autónomas relacionadas pendientes sin doble conteo.
+
+Textos ES/EN/PT-BR y constructor de paquete v2 preparados; cuatro motivos breves. El Morro es propuesta distinta de Catedral para portada. Fotografías históricas de referencia aún no aprobadas; no se ha generado IA. ZIP v2 admite portada+8 tarjetas; historia se carga aparte mediante sidecar local con referencia independiente. La nueva carga en preproducción corresponde al coordinador y debe comprobarse antes de declararse visible.
+
+Los HTML antiguos de tres atractivos son evidencia histórica; la fuente vigente de la revisión v4 será paquete-preprod.json tras construirlo. No confundir la ficha de buceo/operador con la tarjeta de Acuario Rodadero, ni éste con Acuario Mundo Marino.
+
+Comprobación v4 terminada: ZIP con ocho atractivos y nueve imágenes diferentes, más sidecar de historia independiente; textos completos en ES/EN/PT, motivos compactos e integridad verificados. Siete referencias nuevas inspeccionadas; tres originales completos descargados y cuatro variantes oficiales de1280px por limitaciónHTTP429 del servidor, con URL del original completo trazable y descarga completa pendiente. Sigue pendiente importar y verificar la versión nueva en preprod.

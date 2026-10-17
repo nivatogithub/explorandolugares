@@ -1,14 +1,21 @@
 {
   "destination": "santa-marta",
-  "places": 3,
-  "images": 4,
+  "revision": "v4",
+  "places": 8,
+  "images": 10,
+  "package_images": 9,
+  "history_images": 1,
+  "history_sidecar": "santa-marta-history.json",
+  "distinct_image_source_urls": 9,
   "provisional": true,
   "final_ai_images": 0,
+  "production_authorized": false,
+  "preprod_imported": false,
   "missing": [
-    "Imágenes finales IA",
-    "Ampliación de atractivos, actividades y directorio",
-    "Organizar guía independiente Taganga",
-    "Portada provisional repite sujeto Catedral; elegir imagen insignia propia posteriormente."
-  ],
-  "production_authorized": false
+    "Aprobar referencias una por una",
+    "Mejorar referencia acuario: histórica2011, espectáculo no representa toda visita",
+    "Generar y aprobar ilustraciones finales con skill",
+    "Completar actividades y directorio",
+    "Validación visual tras importación coordinador"
+  ]
 }
