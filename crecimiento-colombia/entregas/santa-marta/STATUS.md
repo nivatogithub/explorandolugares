@@ -37,3 +37,9 @@ Sustituida referencia de El Morro por toma aérea del Camellón y frente urbano 
 ## Revisión humana: portada rechazada · 17/10/2026
 
 El propietario rechaza Camellón v5: exceso de espacio abajo, edificios cortados arriba y poca identidad de ciudad. La referencia no está aprobada para IA. Dirección solicitada: vista elevada con ciudad y edificios completos, costa como contexto. Ejemplo Tayrona: kiosco reconocible sobre rocas y playa; buscar original y encuadre apropiado. Enlaces Google conservados en observaciones-portada-tayrona-v6.json; no se atribuye autor ni permiso desconocidos, ni se infiere aprobación final. Preprod conserva antecedente hasta tener reemplazo validado.
+
+## Revisión v6 en curso · 17/10/2026
+
+Portada Camellón v5 rechazada; se buscan vistas elevadas con ciudad dominante, edificios completos y costa. Para Tayrona se exige el quiosco de Cabo San Juan sobre rocas con playa y agua. Las miniaturas Google aportadas solo orientan el encargo; no son origen ni licencia ni aprobación del archivo definitivo. Investigación y condiciones en INVESTIGACION_V6.md. El lote de candidatos se guarda sin sustituir imágenes del paquete ni preprod.
+
+Mientras se eligen referencias, avanzaron seis experiencias con fuentes de operadores y diez propuestas de directorio gratuito, todas con textos ES/EN/PT completos y estado borrador. Validación de idiomas, fuentes e IDs aprobada en validacion-contenidos-v6.json. Faltan fotografías específicas/licencias para actividades y directorio, revisión factual/editorial, generación por componente aprobado e integración/QA. No se contactó a nadie ni se validó disponibilidad, permisos o alianzas.

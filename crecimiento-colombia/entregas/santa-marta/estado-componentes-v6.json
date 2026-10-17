@@ -1,0 +1,64 @@
+{
+  "worker": "Lugar 4",
+  "destination": "santa-marta",
+  "date": "2026-10-17",
+  "branch": "lugar/CO/magdalena/santa-marta",
+  "state": "investigacion_y_revision_individual_activa",
+  "components": {
+    "hero": {
+      "status": "rechazado_v5_busqueda_v6",
+      "next": "Inspeccionar dos vistas elevadas con ciudad dominante y costa; presentar opciones numeradas.",
+      "reference_approved": false,
+      "generation_approved": false
+    },
+    "tayrona": {
+      "status": "busqueda_nuevo_encuadre_v6",
+      "next": "Quiosco Cabo San Juan visible sobre rocas, con playa y agua.",
+      "reference_approved": false
+    },
+    "acuario": {
+      "status": "referencia_2011_debil",
+      "next": "Encontrar instalación reconocible y permiso adecuado; no reemplazar con Mundo Marino."
+    },
+    "history": {
+      "status": "referencia_pendiente_eleccion",
+      "asset": "santa-marta-history.webp"
+    },
+    "places": {
+      "primary_count": 8,
+      "texts_locales": [
+        "es",
+        "en",
+        "pt-BR"
+      ],
+      "editorial_approved": false
+    },
+    "experiences": {
+      "count": 6,
+      "texts_locales": [
+        "es",
+        "en",
+        "pt-BR"
+      ],
+      "text_state": "borrador_completo",
+      "specific_photos_complete": false,
+      "imported": false
+    },
+    "directory": {
+      "count": 10,
+      "texts_locales": [
+        "es",
+        "en",
+        "pt-BR"
+      ],
+      "text_state": "borrador_completo",
+      "photos_complete": false,
+      "imported": false,
+      "claim_status": "unclaimed"
+    }
+  },
+  "final_ai_images": 0,
+  "destination_approved": false,
+  "production_authorized": false,
+  "preprod_modified_in_v6": false
+}

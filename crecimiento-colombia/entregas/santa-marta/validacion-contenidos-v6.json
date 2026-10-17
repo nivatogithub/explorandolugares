@@ -1,0 +1,27 @@
+{
+  "destination": "santa-marta",
+  "revision": "v6",
+  "checks": [
+    {
+      "component": "experiences",
+      "count": 6,
+      "three_languages": true,
+      "sources": true,
+      "unique_ids": true,
+      "draft": true,
+      "images_complete": false
+    },
+    {
+      "component": "directory",
+      "count": 10,
+      "three_languages": true,
+      "sources": true,
+      "unique_ids": true,
+      "draft": true,
+      "images_complete": false
+    }
+  ],
+  "final_package_complete": false,
+  "production_authorized": false,
+  "visual_candidates_checked": false
+}
