@@ -215,3 +215,7 @@ Documento coordinador: [PROCEDIMIENTO_WORKER_IMAGENES.md](PROCEDIMIENTO_WORKER_I
 ### Elección definitiva de estilo
 
 El propietario eligió **ilustración semirrealista EL-SEMI-REALISTA-1**. Ver INSTRUCCION_WORKER_INVESTIGACION_VISUAL.md para búsqueda dirigida, ficha de evidencia y bloques del prompt. La dirección anterior de caricatura editorial global queda sustituida; se mantiene expresividad de personajes con estilización discreta. No confundir referencia de acabado con documentación geográfica ni inferir aprobación de una imagen concreta.
+
+
+## Piloto de descanso visual y estilo semirrealista
+Usar el proceso y límites de entregas/cartagena/PILOTO_SEMIRREALISTA.md. Separar colores UI de arte; página blanco cálido, panel salvia, tarjeta blanca. No aprobar automáticamente resultados fotográficos cuando se pidió ilustración. No confundir las siete experiencias generadas con los ocho atractivos pendientes.
