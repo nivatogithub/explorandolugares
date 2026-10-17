@@ -3,11 +3,10 @@
   "tasks": [
     {
       "component": "hero",
-      "task": "Inspeccionar fotogramas reales video31559774; identificar bahía/sector antes de proponer.",
-      "state": "extraccion_local_bloqueada_decodificador_sandbox",
-      "ready_reference_ids": [
-        "SM-H6-01_condicional_Rodadero"
-      ]
+      "task": "Buscar y verificar encuadre de centro y bahía histórica; descartar Rodadero para portada según decisión humana.",
+      "state": "pendiente_referencia_centro_bahia_historica",
+      "ready_reference_ids": [],
+      "decision_evidence": "decision-portada-centro-bahia-historica.json"
     },
     {
       "component": "tayrona",
