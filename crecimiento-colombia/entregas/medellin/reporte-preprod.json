@@ -1,0 +1,192 @@
+{
+  "destination_id": "CO-05-medellin",
+  "branch": "lugar/CO/antioquia/medellin",
+  "target": "preproduccion_local_privada",
+  "authorized_scope": "cargar avances locales para revisión; no producción ni aprobación editorial",
+  "schema_version": 2,
+  "zip": "paquete-preprod.zip",
+  "zip_sha256": "e040e2ed3aee8a2d1ba668d61b8585276a7871243d0f89af639f23f869e7e398",
+  "imported_by_worker": false,
+  "database_touched": false,
+  "production_touched": false,
+  "editorial_approved": false,
+  "cover": {
+    "file": "images/coltejer-2006.webp",
+    "status": "provisional_reversible_no_aprobada",
+    "limitation": "Coltejer2006 histórico,640x480 sin ampliar"
+  },
+  "main_places_in_package": [
+    "coltejer",
+    "jardin-botanico"
+  ],
+  "main_place_count": 2,
+  "broad_inventory_proposed_count": 28,
+  "excluded_count": 26,
+  "exclusions": [
+    {
+      "slug": "museo-antioquia",
+      "name": "Museo de Antioquia",
+      "reason": "Falta referencia específica autorizada apta; se mantiene en inventario amplio, no se omite investigación."
+    },
+    {
+      "slug": "parque-explora",
+      "name": "Parque Explora",
+      "reason": "Falta referencia específica autorizada apta; se mantiene en inventario amplio, no se omite investigación."
+    },
+    {
+      "slug": "mamm",
+      "name": "Museo de Arte Moderno de Medellín",
+      "reason": "Falta referencia específica autorizada apta; se mantiene en inventario amplio, no se omite investigación."
+    },
+    {
+      "slug": "pueblito-paisa",
+      "name": "Pueblito Paisa / Cerro Nutibara",
+      "reason": "Falta referencia específica autorizada apta; se mantiene en inventario amplio, no se omite investigación."
+    },
+    {
+      "slug": "pies-descalzos",
+      "name": "Parque de los Pies Descalzos",
+      "reason": "Falta referencia específica autorizada apta; se mantiene en inventario amplio, no se omite investigación."
+    },
+    {
+      "slug": "edificio-epm",
+      "name": "Edificio EPM (Edificio Inteligente)",
+      "reason": "Falta referencia específica autorizada apta; se mantiene en inventario amplio, no se omite investigación."
+    },
+    {
+      "slug": "catedral-metropolitana",
+      "name": "Catedral Basílica Metropolitana",
+      "reason": "Falta referencia específica autorizada apta; se mantiene en inventario amplio, no se omite investigación."
+    },
+    {
+      "slug": "candelaria",
+      "name": "Basílica de Nuestra Señora de la Candelaria",
+      "reason": "Falta referencia específica autorizada apta; se mantiene en inventario amplio, no se omite investigación."
+    },
+    {
+      "slug": "parque-lleras",
+      "name": "Parque Lleras",
+      "reason": "Falta referencia específica autorizada apta; se mantiene en inventario amplio, no se omite investigación."
+    },
+    {
+      "slug": "parque-poblado",
+      "name": "Parque El Poblado",
+      "reason": "Falta referencia específica autorizada apta; se mantiene en inventario amplio, no se omite investigación."
+    },
+    {
+      "slug": "avenida-jardin",
+      "name": "Avenida Jardín / Vía Jardín",
+      "reason": "Falta referencia específica autorizada apta; se mantiene en inventario amplio, no se omite investigación."
+    },
+    {
+      "slug": "plaza-botero",
+      "name": "Plaza Botero",
+      "reason": "Falta referencia específica autorizada apta; se mantiene en inventario amplio, no se omite investigación."
+    },
+    {
+      "slug": "palacio-cultura",
+      "name": "Palacio de la Cultura Rafael Uribe Uribe",
+      "reason": "Falta referencia específica autorizada apta; se mantiene en inventario amplio, no se omite investigación."
+    },
+    {
+      "slug": "parque-bolivar",
+      "name": "Parque Bolívar",
+      "reason": "Falta referencia específica autorizada apta; se mantiene en inventario amplio, no se omite investigación."
+    },
+    {
+      "slug": "parque-berrio",
+      "name": "Parque Berrío",
+      "reason": "Falta referencia específica autorizada apta; se mantiene en inventario amplio, no se omite investigación."
+    },
+    {
+      "slug": "junin",
+      "name": "Pasaje Junín",
+      "reason": "Falta referencia específica autorizada apta; se mantiene en inventario amplio, no se omite investigación."
+    },
+    {
+      "slug": "provenza",
+      "name": "Provenza",
+      "reason": "Falta referencia específica autorizada apta; se mantiene en inventario amplio, no se omite investigación."
+    },
+    {
+      "slug": "via-primavera",
+      "name": "Vía Primavera",
+      "reason": "Falta referencia específica autorizada apta; se mantiene en inventario amplio, no se omite investigación."
+    },
+    {
+      "slug": "manila",
+      "name": "Manila",
+      "reason": "Falta referencia específica autorizada apta; se mantiene en inventario amplio, no se omite investigación."
+    },
+    {
+      "slug": "el-hueco",
+      "name": "El Hueco",
+      "reason": "Falta referencia específica autorizada apta; se mantiene en inventario amplio, no se omite investigación."
+    },
+    {
+      "slug": "ciudad-rio",
+      "name": "Ciudad del Río",
+      "reason": "Falta referencia específica autorizada apta; se mantiene en inventario amplio, no se omite investigación."
+    },
+    {
+      "slug": "planetario",
+      "name": "Planetario de Medellín",
+      "reason": "Falta referencia específica autorizada apta; se mantiene en inventario amplio, no se omite investigación."
+    },
+    {
+      "slug": "casa-memoria",
+      "name": "Museo Casa de la Memoria",
+      "reason": "Falta referencia específica autorizada apta; se mantiene en inventario amplio, no se omite investigación."
+    },
+    {
+      "slug": "comuna13",
+      "name": "Comuna 13 / San Javier",
+      "reason": "Falta referencia específica autorizada apta; se mantiene en inventario amplio, no se omite investigación."
+    },
+    {
+      "slug": "museo-castillo",
+      "name": "Museo El Castillo",
+      "reason": "Falta referencia específica autorizada apta; se mantiene en inventario amplio, no se omite investigación."
+    },
+    {
+      "slug": "arvi",
+      "name": "Parque Arví",
+      "reason": "Falta referencia específica autorizada apta; se mantiene en inventario amplio, no se omite investigación."
+    }
+  ],
+  "activities": {
+    "included_in_package": 0,
+    "reason": "Separadas; referencias de servicio y traducciones ampliadas pendientes; no importar como ofertas activas."
+  },
+  "photographic_references": [
+    {
+      "file": "images/coltejer-2006.webp",
+      "sha256": "e373f13ff625fcbd1fbb48ca3390da670394adf5382869a678e42cfbd5153282"
+    },
+    {
+      "file": "images/coltejer-2013.webp",
+      "sha256": "bde71f8a5896f6c0dad232e62b25232322ab55066b9585c452290cfbf2321de6"
+    },
+    {
+      "file": "images/medellin-3.webp",
+      "sha256": "61fcf784da4738105b0ad673775fb22f60c1cc8b3fe1e73a25e2d0902787a410"
+    }
+  ],
+  "validation": {
+    "python_zip": "passed",
+    "php_real_importer": {
+      "status": "passed",
+      "php_version": "8.5.11",
+      "places": 2,
+      "images": 3,
+      "importer_sha256": "2e6667b046405ccde0cd4330d46da378d79bb21250d753ed4aae654a90250098",
+      "note": "CLI PHP local8.5; validar también PHP/MySQL de preprod por coordinador, sin invocar contenedores niBD desde worker."
+    },
+    "database_import": "pending_coordinator"
+  },
+  "limitations": [
+    "Solo2tarjetas listas de28, máximo8no cuota obligatoria.",
+    "No generar ilustraciones antes aprobación referencias/textos.",
+    "Pendientes revisión humana por idioma, licencias/usos, fotos restantes, integración visual real y segunda revisión."
+  ]
+}

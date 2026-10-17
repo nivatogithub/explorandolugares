@@ -1,5 +1,11 @@
 # Lugar 3 · Medellín · entrega privada de investigación
 
+## Avance autorizado para preproducción local
+
+`paquete-preprod.zip` v2 preparado y validado con `DestinationPackage::readZip` real de `../preprod/backend/app/DestinationPackage.php`, usando PHP CLI local8.5.11. Contiene portada reversible Coltejer2006(no aprobada) y **dos tarjetas con imágenes específicas**: Coltejer(detalle arquitectónico2013) y Jardín Botánico(Orquideorama). No se llenan ocho cupos con fotos ajenas. Otros26sitios permanecen en inventario secundario y están excluidos explícitamente del ZIP por faltante visual apto. Actividades separadas no se importan como ofertas.
+
+`reporte-preprod.json` registra hashZIP, archivos, exclusiones y límites. `preparar-preprod.py` reproduce ZIP y validación PHP. Esta autorización permite revisión visual local y correcciones; no es aprobación editorial ni publicación. Coordinador importa serialmente: worker no tocó BD, contenedores, Chrome, fuentes de preprod ni producción. Validación en PHP/MySQL del entorno e importación quedan pendientes del coordinador. No se generó IA final.
+
 ## Actualización vigente: revisión ampliada V2
 
 Corrección de presentación: la entrada muestra primero Coltejer2006 (Propuesta4, con límite de resolución), Picacho(Propuesta5) y Orquideorama(Propuesta6). Las propuestas1/2/3 obstructiva o de detalle están colapsadas en «Descartadas/solo referencia, no portada», sin control de elección de portada. Se conservan IDs y numeración originales para no invalidar silenciosamente trazabilidad. Aptitud y limitaciones aparecen antes de cada imagen. Validación comprueba este orden y ausencia del selector de portada descartada.
