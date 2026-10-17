@@ -27,3 +27,5 @@
 - Selección principal: ocho de mayor prioridad turística, no ocho por variedad de categorías. Auditar excluidos frente al octavo y justificar orden; aplicar Monserrate > Salitre Mágico y Tayrona > El Rodadero. Ver sección Los ocho de mayor prioridad en `crecimiento-colombia/GUIA_GENERACION_DESTINOS.md`.
 
 - Separar lugares/Top8, experiencias y eventos: el sitio es distinto de la caminata/tour/visita; relacionarlos sin duplicar tarjetas, fotos ni cobertura. En Santa Marta, visita al Acuario corresponde a experiencias por decisión del propietario. Ver GUIA_GENERACION_DESTINOS.md.
+
+- Flujo fotográfico posterior: el propietario buscará y elegirá fotos mediante URLs. No continuar búsquedas automáticas de nuevas candidatas; validar las URLs elegidas, conservar aprobaciones y seguir contenido/Top8/QA independiente. Ver flujo vigente al final de GUIA_GENERACION_DESTINOS.md.
