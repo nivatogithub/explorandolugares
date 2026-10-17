@@ -13,9 +13,19 @@ choices=json.loads((r/'portadas-propuestas.json').read_text())
 assert len(choices)>=4 and all(not x['selected'] and not x['reference_approved'] for x in choices)
 assert any('coltejer' in x['image_file'] for x in choices)
 preview=(r/'preview.html').read_text()
-assert preview.index('id="portada-4"')<preview.index('id="portada-1"')
-assert 'Descartadas/solo referencia, no portada' in preview
-assert 'data-item="portada-1" data-component="eleccion_portada"' not in preview
+if (r/'principales-v3.json').exists():
+ main=json.loads((r/'principales-v3.json').read_text());pkg=json.loads((r/'paquete-preprod.json').read_text())
+ assert len(main)==len(pkg['places'])==8 and not any(p['slug']=='coltejer' for p in main)
+ references=[pkg['hero_image']['file']]+[p['image']['file'] for p in pkg['places']]
+ assert len(references)==len(set(references))==9
+ assert len({hashlib.sha256((r/f).read_bytes()).hexdigest() for f in references})==9
+ assert all(set(p['translations'])=={'es','en','pt-BR'} for p in main)
+ assert 'Inventario amplio secundario' in preview
+ assert json.loads((r/'inspeccion-visual-v3.json').read_text())['cover_silhouette_verified']
+else:
+ assert preview.index('id="portada-4"')<preview.index('id="portada-1"')
+ assert 'Descartadas/solo referencia, no portada' in preview
+ assert 'data-item="portada-1" data-component="eleccion_portada"' not in preview
 review=json.loads((r/'revision-componentes.json').read_text())
 assert review['selected_cover'] is None and not review['illustrations']['generated'] and not review['publication']['authorized']
 activities=json.loads((r/'experiencias.json').read_text())
@@ -31,8 +41,8 @@ for x in a:
  assert x['original_downloaded'] and x['commercial_use'] and x['adaptation']
  assert hashlib.sha256((r/x['file']).read_bytes()).hexdigest()==x['sha256']
  assert hashlib.sha256((r/x['original_file']).read_bytes()).hexdigest()==x['original_sha256']
- assert x['bytes']<=(300000 if '1.webp' in x['file'] else 120000)
+ assert x['bytes']<=(300000 if 'medellin-1.webp' in x['file'] or 'skyline-2011.webp' in x['file'] else 120000)
  with Image.open(r/x['file']) as im:assert im.format=='WEBP' and not im.getexif()
-files=sorted(p for p in r.rglob('*') if p.is_file() and p.name!='SHA256SUMS')
+files=sorted(p for p in r.rglob('*') if p.is_file() and p.name!='SHA256SUMS' and '__pycache__' not in p.parts)
 (r/'SHA256SUMS').write_text(''.join(hashlib.sha256(p.read_bytes()).hexdigest()+'  '+str(p.relative_to(r))+'\n' for p in files))
 print(f'OK: 3 idiomas, {len(c["places"])} atractivos sin duplicados, 10 fichas/3 categorías, {len(a)} originales/derivados, {len(choices)} propuestas numeradas con aptitud explícita, 3 clases de actividad, fuentes/hashes y decisiones independientes sin aprobación. No certifica importación final ni publicación.')
