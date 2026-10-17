@@ -20,8 +20,8 @@
     "generation_authorized": false,
     "consulted_at": "2026-10-17",
     "required_sector": "destino_y_rol_identificados_sin_duplicar_original",
-    "visual_inspected": true,
     "visual_review": "Playa y ladera seca con cactus y franja de servicios; fuente propia identifica municipio47001/SantaMarta. Fotografía2015 gris, playa lejana, personas dominantes y rocas en primerplano: no recomendada como imagen principal de ficha; conservar solo evidencia contextual.",
+    "visual_inspected": true,
     "identity_evidence": [
       "https://colombia.travel/es/santa-marta/playa-blanca",
       "https://indetur.gov.co/playa-blanca/"
@@ -41,8 +41,9 @@
       3456
     ],
     "photo_date": "2011-02-09 06:26",
-    "status": "download_blocked",
-    "error": "Revisar permiso específico antes de descargar: CC BY 2.0",
+    "path": "imagenes/componentes-top8-v7/originales/SM-E7-01.jpg",
+    "sha256": "08e04bf58d0e1328e1db92a422ba1745159d2c85dfeab48f4a3c321c47c625ad",
+    "status": "rejected_wrong_activity_scene",
     "approval": false,
     "generation_authorized": false,
     "consulted_at": "2026-10-17",
@@ -54,6 +55,13 @@
       "source": "https://creativecommons.org/licenses/by/2.0/",
       "conditions": "Crédito, título, fuente, licencia y cambios del derivado; sin inferir representación del operador o aprobación editorial.",
       "human_rejection": false
-    }
+    },
+    "visual_inspected": true,
+    "actual_dimensions": [
+      5184,
+      3456
+    ],
+    "visual_review": "Original muestra cocinero sirviendo arroz en cocina de campamento de noche; no sendero ni caminantes. El título del álbum no describe el contenido útil para tarjeta de trekking. Oscuro, personas reconocibles y no se identifica operador. Se descarta para experiencia Caminata Ciudad Perdida.",
+    "operator_identity_verified": false
   }
 ]

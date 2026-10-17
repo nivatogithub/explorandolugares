@@ -1,5 +1,5 @@
 {
-  "checked": 20,
+  "checked": 23,
   "checks": [
     {
       "id": "SM-H6-01",
@@ -216,6 +216,39 @@
         3076
       ],
       "status": "not_selected_visual_quality",
+      "approved": false
+    },
+    {
+      "id": "SM-E7-01",
+      "file": "imagenes/componentes-top8-v7/originales/SM-E7-01.jpg",
+      "integrity": "PASS",
+      "dimensions": [
+        5184,
+        3456
+      ],
+      "status": "rejected_wrong_activity_scene",
+      "approved": false
+    },
+    {
+      "id": "SM-P7-02",
+      "file": "imagenes/playa-blanca-alternativas-v7/originales/SM-P7-02.jpg",
+      "integrity": "PASS",
+      "dimensions": [
+        4000,
+        3000
+      ],
+      "status": "not_selected_distant_beach",
+      "approved": false
+    },
+    {
+      "id": "SM-P7-03",
+      "file": "imagenes/playa-blanca-alternativas-v7/originales/SM-P7-03.jpg",
+      "integrity": "PASS",
+      "dimensions": [
+        4272,
+        2848
+      ],
+      "status": "conditional_individual_reference_choice",
       "approved": false
     }
   ],
