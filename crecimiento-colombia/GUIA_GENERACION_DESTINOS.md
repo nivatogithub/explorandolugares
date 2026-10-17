@@ -219,3 +219,7 @@ El propietario eligió **ilustración semirrealista EL-SEMI-REALISTA-1**. Ver IN
 
 ## Piloto de descanso visual y estilo semirrealista
 Usar el proceso y límites de entregas/cartagena/PILOTO_SEMIRREALISTA.md. Separar colores UI de arte; página blanco cálido, panel salvia, tarjeta blanca. No aprobar automáticamente resultados fotográficos cuando se pidió ilustración. No confundir las siete experiencias generadas con los ocho atractivos pendientes.
+
+
+## Revisión de atractivos semirrealistas · 17/10/2026
+Completar todas las tarjetas de «Qué conocer» antes de presentar un destino como listo para revisión integral. Una generación desde texto no verifica monumentos: cotejar silueta y estructuras, rechazar adiciones y usar una referencia ya aprobada si existe. Guardar el alcance representativo de calles/archipiélagos y las incertidumbres, sin afirmar ubicación exacta de escenas compuestas. Generación e integración local no equivalen a aprobación del propietario. Ver entregas/cartagena/REVISION_ATRACTIVOS_SEMIRREALISTAS.md.
