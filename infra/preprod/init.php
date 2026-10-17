@@ -1,6 +1,6 @@
 <?php
 // Only this disposable local container has access to the root Unix socket.
-$root = new PDO('mysql:unix_socket=/run/mysqld/mysqld.sock;dbname=explorando_preprod', 'root', '', [PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION]);
+$root = new PDO('mysql:unix_socket=/run/mysqld/mysqld.sock;dbname=explorando_preprod;charset=utf8mb4', 'root', '', [PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION]);
 $configFile='/srv/state/private/config.php';
 if (!is_file($configFile)) {
  $password=bin2hex(random_bytes(24));

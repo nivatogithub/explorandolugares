@@ -1,8 +1,21 @@
-FROM docker.io/library/ubuntu:24.04
-ENV DEBIAN_FRONTEND=noninteractive TZ=America/Bogota
-RUN apt-get update && apt-get install -y --no-install-recommends apache2 libapache2-mod-php php-cli php-zip php-mysql php-mbstring php-xml php-curl php-gd php-sqlite3 mysql-server supervisor curl ca-certificates && rm -rf /var/lib/apt/lists/*
+FROM docker.io/library/php:8.3.33-apache-bookworm
+ENV DEBIAN_FRONTEND=noninteractive TZ=America/Phoenix
+# Exact MariaDB upstream release, signed official archive. No production data/config in image.
+RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates curl gnupg supervisor tzdata libonig-dev libzip-dev libicu-dev libxml2-dev libbz2-dev libpng-dev libjpeg62-turbo-dev libwebp-dev libfreetype6-dev libxslt1-dev \
+ && curl -fsSL https://mariadb.org/mariadb_release_signing_key.asc | gpg --dearmor -o /usr/share/keyrings/mariadb.gpg
+RUN echo 'deb [signed-by=/usr/share/keyrings/mariadb.gpg] https://archive.mariadb.org/mariadb-10.11.19/repo/debian bookworm main' > /etc/apt/sources.list.d/mariadb.list \
+ && printf 'Package: *\nPin: origin archive.mariadb.org\nPin-Priority: 1000\n' > /etc/apt/preferences.d/mariadb \
+ && apt-get update && apt-get install -y --no-install-recommends mariadb-server \
+ && mariadbd --version | grep '10.11.19' \
+ && rm -rf /var/lib/apt/lists/*
+RUN docker-php-ext-install -j1 pdo_mysql mysqli
+RUN docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp \
+ && docker-php-ext-install -j1 gd zip
+RUN docker-php-ext-install -j1 intl soap sockets pcntl exif gettext bz2 xsl
 RUN a2enmod rewrite headers && a2dissite 000-default
 COPY infra/preprod/apache.conf /etc/apache2/sites-enabled/preprod.conf
+COPY infra/preprod/php.ini /usr/local/etc/php/conf.d/zz-godaddy-parity.ini
+COPY infra/preprod/mariadb.cnf /etc/mysql/mariadb.conf.d/99-godaddy-parity.cnf
 COPY infra/preprod/supervisord.conf /etc/supervisor/conf.d/preprod.conf
 COPY infra/preprod/entrypoint.sh /usr/local/bin/preprod-entrypoint
 COPY infra/preprod/admin-access.php /usr/local/lib/preprod-admin-access.php

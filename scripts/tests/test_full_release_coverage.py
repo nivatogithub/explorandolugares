@@ -22,6 +22,10 @@ class FullReleaseCoverageTests(unittest.TestCase):
                     if source.is_file():
                         relative = prefix + source.relative_to(root).as_posix()
                         self.assertEqual(packaged.get(relative), hashlib.sha256(source.read_bytes()).hexdigest(), relative)
+            self.assertFalse(any('preprod' in name.lower() for name in packaged), 'Local preprod tools/access must never enter production')
+            for file in Path(folder).rglob('*.php'):
+                self.assertNotIn('/usr/local/lib/preprod-admin-access.php', file.read_text(), str(file))
+                self.assertNotIn("$_SESSION['preprod_admin_open']", file.read_text(), str(file))
             self.assertIn('app/analytics/geoip/country.mmdb', packaged)
             self.assertIn('app/analytics/vendor/maxmind/LICENSE', packaged)
             self.assertFalse(any(p.startswith('private/') or p.endswith('/config.php') for p in packaged))
