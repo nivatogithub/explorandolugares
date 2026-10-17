@@ -1,0 +1,182 @@
+{
+  "destination_id": "CO-05-medellin",
+  "version": 6,
+  "prepared_at": "2026-10-17",
+  "status": "dos_borradores_separados_de_seleccion_vigente",
+  "items": [
+    {
+      "id": "plaza-botero",
+      "status": "propuesto_no_integrado",
+      "location": "Centro de Medellín, entorno Museo de Antioquia y Palacio de la Cultura; acceso puntual por verificar.",
+      "source_ids": [
+        "museo-plaza",
+        "local48",
+        "nacional",
+        "tripadvisor-plaza"
+      ],
+      "translations": {
+        "es": {
+          "name": "Plaza Botero",
+          "description": "Plaza Botero reúne esculturas monumentales de Fernando Botero en el centro de Medellín, entre el Museo de Antioquia y el Palacio de la Cultura Rafael Uribe Uribe. Recorre la plaza para observar las obras y su relación con la arquitectura del entorno. La visita exterior y el acceso a las salas del museo son experiencias distintas que puedes combinar.",
+          "practical": "Ubica tu recorrido en el centro y consulta los accesos actuales a la plaza y al museo. Respeta las obras y el espacio de quienes viven y trabajan en el sector."
+        },
+        "en": {
+          "name": "Plaza Botero",
+          "description": "Plaza Botero brings together monumental sculptures by Fernando Botero in downtown Medellín, between Museo de Antioquia and the Rafael Uribe Uribe Palace of Culture. Walk through the square to explore the works and their architectural setting. The outdoor square and the museum galleries are separate visits that can be combined.",
+          "practical": "Plan your downtown route and check current access arrangements for the square and museum. Respect the artworks and the people who live and work nearby."
+        },
+        "pt-BR": {
+          "name": "Plaza Botero",
+          "description": "A Plaza Botero reúne esculturas monumentais de Fernando Botero no centro de Medellín, entre o Museo de Antioquia e o Palácio da Cultura Rafael Uribe Uribe. Caminhe pela praça para observar as obras e sua relação com a arquitetura ao redor. A visita à praça e o acesso às salas do museu são experiências distintas que podem ser combinadas.",
+          "practical": "Planeje seu percurso pelo centro e consulte as condições atuais de acesso à praça e ao museu. Respeite as obras e as pessoas que vivem e trabalham na região."
+        }
+      },
+      "reference_ids": [
+        "plaza-botero-2023",
+        "plaza-palacio-2017"
+      ],
+      "approved": {
+        "location": false,
+        "reference": false,
+        "license_and_use": false,
+        "text_es": false,
+        "text_en": false,
+        "text_pt_BR": false,
+        "illustration": false
+      },
+      "selected_for_main": false
+    },
+    {
+      "id": "metro-metrocable",
+      "status": "propuesto_no_integrado",
+      "location": "Recorrido por red metropolitana; las referencias visuales deben nombrar estación/línea exacta, no un punto genérico.",
+      "source_ids": [
+        "metro-a",
+        "metro-j",
+        "metro-l",
+        "local48",
+        "nacional",
+        "tripadvisor-movilidad"
+      ],
+      "translations": {
+        "es": {
+          "name": "Metro y Metrocable de Medellín",
+          "description": "El Metro y los cables aéreos permiten conocer el relieve del valle de Aburrá y forman parte de la identidad urbana de Medellín. Un recorrido combina estaciones, trenes y vistas de las laderas según la línea elegida. La línea J une San Javier y La Aurora; la línea L conecta Santo Domingo y Arví. El viaje en cable y la visita al Parque Arví son partes distintas del recorrido.",
+          "practical": "El sistema se extiende por varios municipios del valle. Consulta el mapa, el estado del servicio y las condiciones de cada línea antes de salir. Para llegar al circuito de arte y escaleras de Comuna 13, planea también el trayecto desde San Javier."
+        },
+        "en": {
+          "name": "Medellín Metro and Metrocable",
+          "description": "The Metro and aerial cable lines reveal the landscape of the Aburrá Valley and are part of Medellín’s urban identity. Depending on the line, a journey combines stations, trains and hillside views. Line J links San Javier and La Aurora; line L connects Santo Domingo and Arví. The cable journey and a visit to Parque Arví are separate parts of the trip.",
+          "practical": "The network extends across several valley municipalities. Check the map, service status and travel conditions for each line before setting out. To reach Comuna 13’s art and escalator circuit, also plan the onward journey from San Javier."
+        },
+        "pt-BR": {
+          "name": "Metrô e Metrocable de Medellín",
+          "description": "O metrô e os teleféricos permitem conhecer o relevo do vale do Aburrá e fazem parte da identidade urbana de Medellín. Conforme a linha escolhida, o percurso combina estações, trens e vistas das encostas. A linha J liga San Javier e La Aurora; a linha L conecta Santo Domingo e Arví. O trajeto de teleférico e a visita ao Parque Arví são partes distintas do passeio.",
+          "practical": "A rede abrange vários municípios do vale. Consulte o mapa, o funcionamento e as condições de viagem de cada linha antes de sair. Para chegar ao circuito de arte e escadas rolantes da Comuna 13, planeje também o trecho a partir de San Javier."
+        }
+      },
+      "reference_ids": [
+        "metro-caf-2026",
+        "metro-santo-domingo-2020"
+      ],
+      "approved": {
+        "location": false,
+        "reference": false,
+        "license_and_use": false,
+        "text_es": false,
+        "text_en": false,
+        "text_pt_BR": false,
+        "illustration": false
+      },
+      "selected_for_main": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "museo-plaza",
+      "url": "https://museodeantioquia.co/",
+      "editor": "Museo de Antioquia",
+      "role": "Identidad de plaza y museo, fuente primaria",
+      "consulted_at": "2026-10-17"
+    },
+    {
+      "id": "local48",
+      "url": "https://www.medellin.travel/que-hacer-en-medellin-en-48-horas/",
+      "editor": "Medellín Travel",
+      "role": "Contexto turístico local y recorridos",
+      "consulted_at": "2026-10-17"
+    },
+    {
+      "id": "nacional",
+      "url": "https://colombia.travel/es/medellin",
+      "editor": "Colombia Travel / ProColombia",
+      "role": "Contexto turístico nacional de plaza, arte y movilidad",
+      "consulted_at": "2026-10-17"
+    },
+    {
+      "id": "metro-a",
+      "url": "https://www.metrodemedellin.gov.co/usuarios/sistema-integrado/linea-a",
+      "editor": "Metro de Medellín",
+      "role": "Extensión metropolitana y recorrido A",
+      "consulted_at": "2026-10-17"
+    },
+    {
+      "id": "metro-j",
+      "url": "https://www.metrodemedellin.gov.co/usuarios/sistema-integrado/linea-j",
+      "editor": "Metro de Medellín",
+      "role": "Recorrido J San Javier–La Aurora",
+      "consulted_at": "2026-10-17"
+    },
+    {
+      "id": "metro-l",
+      "url": "https://www.metrodemedellin.gov.co/usuarios/sistema-integrado/linea-l",
+      "editor": "Metro de Medellín",
+      "role": "Recorrido L Santo Domingo–Arví",
+      "consulted_at": "2026-10-17"
+    },
+    {
+      "id": "tripadvisor-plaza",
+      "url": "https://www.tripadvisor.co/Attraction_Review-g297478-d1994585-Reviews-Plaza_Botero-Medellin_Antioquia_Department.html",
+      "editor": "Tripadvisor",
+      "role": "Descubrimiento del sujeto/contexto, sin reutilizar fotografías ni inferir permisos",
+      "consulted_at": "2026-10-17"
+    },
+    {
+      "id": "tripadvisor-movilidad",
+      "url": "https://www.tripadvisor.co/Attractions-g297478-Activities-Medellin_Antioquia_Department.html",
+      "editor": "Tripadvisor",
+      "role": "Descubrimiento de Metro/Metrocable como experiencia; buscador muestra resultados, apertura directa falló, no ranking medido",
+      "consulted_at": "2026-10-17"
+    },
+    {
+      "id": "derechos-plaza",
+      "url": "https://www.wipo.int/wipolex/es/legislation/details/18745",
+      "editor": "WIPO Lex, Ley23/1982 versión referida2017",
+      "role": "Artículo39: reproducciones de obras permanentes en espacios públicos, arquitectura exterior. Fuente jurídica de alcance específico, no licencia del escultor ni aprobación universal de una transformación IA.",
+      "consulted_at": "2026-10-17"
+    }
+  ],
+  "rights_review": {
+    "photo_license_separate_from_artwork": true,
+    "public_art_source": "derechos-plaza",
+    "photography_of_permanent_public_art": "documentar ubicación permanente y contexto; la norma revisada contempla determinadas reproducciones",
+    "ai_transformation": "Caso concreto de composición, referencia enviada, licencias y tratamiento de esculturas debe decidirse antes de generar; no es permiso automático para deformar obras, 3D o productos.",
+    "marks_people": "No afirmar respaldo del Metro ni cesiones de personas. Evitar personajes identificables en composición futura.",
+    "human_authorization": false
+  },
+  "protected_files_sha256": {
+    "contenido.json": "ad39ea4c692574c42202a6cff728ce29348e62619d37b9956df8e260ac14ce70",
+    "principales-v3.json": "47fbe93c42dc076b601d5a6ceec51a456182280c96a4aa76967707506621ecf0",
+    "seleccion-principal-v3.json": "862d38c267f2eae5f623bd5878d0425d1d1a0bc4429debb7eb287106fb29040d",
+    "revision-componentes.json": "e6d6d907185aa8befa60a227fcab04625cc9eeb472050aa78ffbd48a96e135be",
+    "referencias-propuestas-v4.json": "5750f4914eb3ac4d1138bde234ec2e88f7b99a308cd951cb80b8d8434b3cf80c",
+    "preview.html": "29cd92bf6fa194a9b0d03a4da0061bce258f8d6bab6d00df6248b34e1e828144",
+    "paquete-preprod.json": "bbefd5984fedee6531e2950a2635d551e9a9e57751d1c10d3b25f6a439f16249",
+    "paquete-preprod.zip": "616de788ce8dcac3dcab8ac0f44212ce42f4e2f596a03a64c0d2690323daf8fb"
+  },
+  "physical_top8_changed": false,
+  "existing_three_candidates_changed": false,
+  "generated_ai": false,
+  "database_changed": false,
+  "production_changed": false
+}
