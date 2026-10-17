@@ -1,5 +1,5 @@
 {
-  "scope": "preparacion_local_no_importada",
+  "scope": "avance_importado_solo_preprod_local",
   "base": "preprod-v3/paquete-destino.json",
   "base_sha256": "85a43e3ac88cc896589c384751715781c26fd12571f7fda10a4be9aa102f79c8",
   "generator_untouched": "preparar-v3.py",
@@ -24,7 +24,25 @@
   "limit_300kb_met": false,
   "reason_no_reencode": "Preservar exactamente hash aprobado;358534bytes superaobjetivo300KB pero bajo máximoimportador5MB. Nuevaoptimización requiere revisión delderivado.",
   "production_authorized": false,
-  "database_imported": false,
+  "database_imported": true,
   "other_assets_unchanged": true,
-  "notes": "Notas de avance actualizadas para no negar aprobación Jardín; consumidor debe revisar procedencia sidecar antes de importar."
+  "notes": "Notas de avance actualizadas para no negar aprobación Jardín; consumidor debe revisar procedencia sidecar antes de importar.",
+  "import_receipt": {
+    "destination": "bogota",
+    "id": 23,
+    "package_sha256": "113c2b5194c02923e35aca985936405c64400dd1dba04a7d61dcd6778261f87e",
+    "loaded_at": "2026-10-17T17:12:07+00:00",
+    "environment": "local_preprod_only",
+    "production_authorized": false,
+    "editorial_approved": false,
+    "provisional_photographs": true,
+    "places": 8,
+    "history_asset_id": 105,
+    "urls": {
+      "es": "http://127.0.0.1:8088/destinos/bogota/",
+      "en": "http://127.0.0.1:8088/en/destinos/bogota/",
+      "pt-BR": "http://127.0.0.1:8088/pt-br/destinos/bogota/"
+    }
+  },
+  "live_validation": "verificacion-preprod-jardin-aprobado.json"
 }
