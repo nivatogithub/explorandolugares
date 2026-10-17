@@ -113,3 +113,7 @@ Avance importado únicamente en preproducción local. Ocho tarjetas, portada e i
 Arví y Comuna 13: referencias actuales reabiertas por ser genéricas; no aptas para imagen final. Coltejer debe distinguirse al tamaño real. Pendiente incorporar Metro/Metrocable en identidad/movilidad ES/EN/PT con fuente del operador. No se sustituyeron fotos ni se importaron textos por esta actualización de políticas.
 
 </details>
+
+## Decisión humana Arví · cable y paisaje
+
+Propietario prefiere cabinas con paisaje del parque. Estación2011 retirada como recomendación principal; no aprobada. Cable2021 conservado contextual por cabinas pequeñas; buscar mejor encuadre verificando LíneaL. No generar hasta elegir referencia. Ver decision-referencia-arvi-cable-paisaje.json.
