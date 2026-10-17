@@ -9,3 +9,7 @@ Las ocho prioridades son propuesta editorial razonada, no ranking oficial ni sel
 Pendientes: revisar texto y selección; elegir referencias fotográficas faltantes, generar solo componentes autorizados, aprobar arte final, integrar paquete final y revisar diseño completo antes de publicación. Ver IMAGENES_PENDIENTES_V9.md.
 
 No hay publicación en producción ni subida de imágenes nuevas. Portada y referencias existentes siguen provisionales. El destino NO está terminado.
+
+## Prueba visual v10
+
+Siete experiencias ilustradas con composición SVG reutilizable, sin fotografías nuevas ni escrituras de base. Biblioteca JS/CSS compartida: 7677bytes; gzip teórico 2934bytes (no medición de transferencia del servidor). Habilitada únicamente en preview privado de Cartagena. Aprobación de esta dirección visual pendiente.
