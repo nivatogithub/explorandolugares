@@ -18,6 +18,7 @@ $activeAdminItem = match (true) {
     $adminPath === 'destinos.php' || str_starts_with($adminPath, 'paquete-destino') => 'destinations',
     $adminPath === 'base-datos.php' => 'database',
     $adminPath === 'inversionistas.php' => 'investor-intelligence',
+    $adminPath === 'costos.php' => 'costs',
     default => '',
 };
 ?>
@@ -41,6 +42,7 @@ $activeAdminItem = match (true) {
     </section>
     <section><h2>Dirección</h2>
       <a href="inversionistas.php" <?= $activeAdminItem === 'investor-intelligence' ? 'aria-current="page"' : '' ?>>Inteligencia e inversión</a>
+      <a href="costos.php" <?= $activeAdminItem === 'costs' ? 'aria-current="page"' : '' ?>>Costos y cancelaciones</a>
     </section>
     <section><h2>Sistema</h2>
       <a href="index.php?tab=sistema" <?= $activeAdminItem === 'system' ? 'aria-current="page"' : '' ?>>Estado del sistema</a>

@@ -25,7 +25,7 @@ DB.execute('PRAGMA foreign_keys=ON')
 DB.executescript((ROOT / 'backend/database/sqlite.sql').read_text())
 DB.executescript((ROOT / 'backend/database/destinations.sqlite.sql').read_text())
 DB.executescript((ROOT / 'backend/database/migrations/006-poi-experience-links.sqlite.sql').read_text())
-for number in range(8, 31):
+for number in range(8, 32):
     matches = list((ROOT / 'backend/database/migrations').glob(f'{number:03d}-*.sqlite.sql'))
     assert len(matches) == 1, f'Migración SQLite faltante o ambigua: {number:03d}'
     DB.executescript(matches[0].read_text())
@@ -316,11 +316,19 @@ try:
     check('Seleccionar todos los' in review_html and 'Aprobar y publicar seleccionados' in review_html, 'La revisión de negocios debe admitir selección múltiple y publicación por lote.')
     check('Posibles duplicados' in review_html and 'Hospedaje' in review_html, 'La revisión por lote debe permitir filtrar posibles duplicados y categorías antes de publicar.')
     status, body, _ = request('/admin/inversionistas.php?periodo=30')
-    check(status == 200 and 'Últimos 30 días' in body and 'No hay analítica de visitas' in body, 'La inteligencia debe aceptar períodos comparables y aclarar las métricas de visitantes aún no instrumentadas.')
+    check(status == 200 and 'Últimos 30 días' in body and 'Visitantes y comportamiento medido' in body and 'No hay analítica de visitas' not in body, 'La inteligencia debe reutilizar la medición existente y aclarar su alcance.')
     check('Valor asociado a pagos revisados' in body and '19.900 COP' in body and 'Negocios con suscripción paga vigente' in body, 'Debe presentar el valor cotizado y el negocio pago desde registros persistidos.')
     check('100,0%' in body and '1 de 1 negocios con vencimiento renovaron a tiempo' in body, 'La retención debe contar negocios con vencimiento y renovaciones enlazadas dentro del plazo.')
     check('100,0%' in body and '1 de 1 negocios con vencimiento renovaron a tiempo' in body, 'La retención debe contar negocios con vencimiento y renovaciones enlazadas dentro del plazo.')
     check('Actividad nueva; período anterior sin registros' in body or 'Sin actividad en ambos períodos' in body, 'Debe explicar comparaciones sin una base previa sin inventar porcentajes.')
+    status, costs_html, _ = request('/admin/costos.php')
+    check(status==200 and 'Registrar un gasto realizado' in costs_html,'El registro de costos debe estar disponible para administración.')
+    costs_csrf=__import__('re').search(r'name="csrf" value="([^\"]+)"',costs_html).group(1)
+    cost_fields={'csrf':costs_csrf,'action':'add','cost_date':__import__('datetime').datetime.now(__import__('datetime').timezone.utc).strftime('%Y-%m-%d'),'category':'travel','amount_cop':'2400.50','description':'Gasto HTTP de prueba','destination_id':str(destination_id)}
+    check(request('/admin/costos.php',dict(cost_fields,csrf='incorrecto'))[0]==403,'El registro de costos exige CSRF.')
+    check(request('/admin/costos.php',cost_fields)[0]==200,'El gasto válido no se guardó.')
+    check(DB.execute('SELECT description FROM operating_costs').fetchone()[0]=='Gasto HTTP de prueba','El gasto debe persistirse en la base.')
+    check(request('/admin/costos.php',opener=GUEST)[0]==403,'Los costos deben permanecer privados.')
     review_query = '/admin/negocios.php?tab=revisar&destino=' + str(destination_id) + '&categoria=hospedaje&q=Hotel%20de%20lote&estado=draft&verificacion=PUBLICO&duplicados=no'
     status, review_page_one, _ = request(review_query)
     check(status == 200 and '27 resultados' in review_page_one and 'Página 1 de 2' in review_page_one, 'La revisión de lotes debe paginar y conservar el conteo completo del filtro.')

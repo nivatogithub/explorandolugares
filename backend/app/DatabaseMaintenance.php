@@ -206,6 +206,11 @@ final class DatabaseMaintenance
             'checks' => [['business_categories',['business_id','category_code']]],
             'requires' => ['businesses','service_categories'],
         ],
+        '031-costs-cancellation-requests' => [
+            'file'=>'031-costs-cancellation-requests.mysql.sql',
+            'checks'=>[['operating_costs',['cost_date','category','amount_cop','destination_id','voided_at']],['subscription_cancellation_requests',['subscription_id','business_id','account_id','reason_code','status','review_note']]],
+            'requires'=>['businesses','business_subscriptions','accounts','destinations'],
+        ],
     ];
 
     public function __construct(private PDO $pdo, private string $appRoot, private string $publicRoot)
