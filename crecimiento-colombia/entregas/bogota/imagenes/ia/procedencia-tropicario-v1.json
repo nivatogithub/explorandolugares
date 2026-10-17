@@ -1,0 +1,50 @@
+{
+  "asset_id": "bogota-tropicario-v1",
+  "destination": "bogota",
+  "component": "bogota-jardin",
+  "purpose": "attraction_card",
+  "media_type": "ai_generated_illustration",
+  "original_approval": "aprobacion-jardin-tropicario-v1.json",
+  "reference": {
+    "file": "revision-v4/referencias/jardin-2.jpg",
+    "sha256": "b207525f976879f1d0222b1d804c86a5cdc420e4267e41785825507ee4e37189",
+    "author": "Camiloskyyy",
+    "source": "https://commons.wikimedia.org/wiki/File:Tropicario_del_Jard%C3%ADn_Bot%C3%A1nico_de_Bogot%C3%A1.jpg",
+    "license": "CC0 1.0",
+    "used_as_image_input": true
+  },
+  "factual_source": "https://jbb.gov.co/servicios/tropicario-circuito-de-invernaderos/",
+  "generation": {
+    "provider": "OpenAI",
+    "tool": "image_gen",
+    "model": "not_reported",
+    "date": "2026-10-17",
+    "prompt": "Create one new clearly illustrated editorial realistic-caricature image for the Bogotá Jardín Botánico attraction card on Explorando Lugares, based on the approved CC0 Camiloskyyy photograph of the REAL Tropicario del Jardín Botánico José Celestino Mutis in Bogotá. Preserve the factual architecture seen in the reference: interconnected curved glass greenhouse volumes with rounded oval sloping roofs, precise dark metal structural ribs, varied heights, central tall glass domes, lower peripheral domes, pale walkways and steps, landscaped botanical collections and Bogotá urban greenery behind. Keep all six greenhouse volumes consistent with the photographed layout; do not invent extra domes, futuristic towers, mountains, waterfalls, buildings, or services. New editorial ink-and-gouache illustration with visible fine ink lines and matte painted strokes, natural warm cream paths, restrained greens and muted blue-grey glass. The output must clearly read as an illustration, not a photograph or photo filter. Use a slightly wider elevated composition in 3:2 landscape, with the recognizable greenhouse complex as the focus, maintaining enough margin to avoid cutting principal roofs in desktop and mobile cards. Respect the reference's spatial relations and asymmetrical architecture; peripheral objects can simplify but no architectural redesign. Soft clear Bogotá daylight. No text, no logos, no watermarks, no signage, no identifiable people. This is a proposed AI illustration pending human review, not documentary evidence."
+  },
+  "master_file": "bogota-tropicario-v1.png",
+  "derivative_file": "bogota-tropicario-v1.webp",
+  "review": {
+    "coordinator": "Conserva seis volúmenes de invernadero y distribución general, vidrio/ribetes, caminos y entorno; vegetación/colores y detalles simplificados como ilustración. Requiere revisión humana; no fotografía ni prueba de estado actual.",
+    "final_human_approved": false,
+    "production_authorized": false,
+    "preprod_imported": false
+  },
+  "files": {
+    "bogota-tropicario-v1.png": {
+      "sha256": "02a4a5e7b4fa73f5d8f82d0c089d557c90c62a4bf87cbae87a482070737d485a",
+      "bytes": 3980329,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    "bogota-tropicario-v1.webp": {
+      "sha256": "dc722438cc464cbccf05e5717455f2e35a557301683162038ef254ccb87d66bf",
+      "bytes": 358534,
+      "dimensions": [
+        1200,
+        800
+      ]
+    }
+  }
+}
