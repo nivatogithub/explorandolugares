@@ -231,3 +231,7 @@ El propietario rechaza mezclar fondos amarillos con salvia/verde. La prueba Cart
 
 ## Optimización de espacio · Cartagena v10
 Por corrección del propietario: retirar snorkel; títulos consistentes de Qué conocer, Experiencias y Directorio, sin subtítulos ni párrafos introductorios; mantener contenido abierto sin acordeones ni cargar más para los ocho atractivos. Descripciones de tarjetas en una frase breve. Listado gratuito sin descripciones y ampliado de 10 a 30 fichas con fuente oficial. Atribuciones fuera de las tarjetas en créditos accesibles, conservando autores/licencias y procedencia. No dar por vigente la versión anterior larga ni transferir aprobación de los textos anteriores a los nuevos.
+
+
+## Lectura directa · Cartagena v11
+Priorizar una frase de introducción y un párrafo histórico breve de ancho completo. Sin columna lateral o espacio vacío para imágenes inexistentes, ni motivos de visita repetidos bajo la introducción. CTA de negocios con una frase y botón. Mantener evidencia y contenido histórico extenso en documentos, sin recargar la lectura de la página. Conservar contexto histórico sensible al resumir. Implementación actual: vista privada, textos ES/EN/PT en TEXTOS_DIRECTOS_V11.json y contenido-cierre-v11.json; MariaDB conserva la versión v10 hasta su siguiente carga.
