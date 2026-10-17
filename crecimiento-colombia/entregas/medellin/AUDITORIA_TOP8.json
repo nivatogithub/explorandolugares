@@ -1,0 +1,825 @@
+{
+  "destination_id": "CO-05-medellin",
+  "audited_at": "2026-10-17",
+  "status": "propuesta_para_revision_no_aplicada",
+  "scope": {
+    "existing_inventory_records": 32,
+    "existing_principal_count": 8,
+    "added_candidates": 7,
+    "audited_unique_candidates": 39,
+    "exhaustive_city_census": false
+  },
+  "finding": "V3 utilizó variedad como justificación positiva para Catedral y Pies Descalzos y fusionó Plaza Botero con Museo; eso no prueba que fueran los ocho más importantes.",
+  "method": {
+    "priority": "Importancia turística corroborada e identidad específica primero; variedad únicamente desempata importancia equivalente.",
+    "decision_sequence": [
+      "Comprobar identidad territorial y unidad visitable",
+      "Contrastar reconocimiento turístico en fuentes municipal, nacional, operador y plataforma",
+      "Comparar cada excluido con el octavo",
+      "Declarar incertidumbre y conflictos, sin transformar presencia de fuente en medición de demanda",
+      "Variedad solo como desempate explícito; no se necesitó cuota por categorías"
+    ],
+    "formula": null,
+    "scores_invented": false,
+    "visitor_counts_comparable": false,
+    "platform_ranking_official": false,
+    "photo_availability_used": false,
+    "category_quotas_used": false
+  },
+  "proposed_top8": [
+    {
+      "order": 1,
+      "id": "comuna13",
+      "name": "Comuna 13: circuito de arte y escaleras",
+      "source_ids": [
+        "nacional",
+        "memoria",
+        "local48",
+        "comuna-operacion"
+      ],
+      "reason": "Reconocimiento del circuito como visita propia y presencia en guías de destino. Se delimita a arte/escaleras, sin representar toda la comuna.",
+      "evidence_confidence": "alta",
+      "order_confidence": "media",
+      "selection_status": "propuesta_editorial_sin_aprobacion"
+    },
+    {
+      "order": 2,
+      "id": "plaza-botero",
+      "name": "Plaza Botero",
+      "source_ids": [
+        "nacional",
+        "local48",
+        "antioquia",
+        "tripadvisor-lista"
+      ],
+      "reason": "Hito urbano propio con experiencia exterior distinta de entrar al museo. La cercanía no justifica eliminar una de las dos visitas importantes.",
+      "evidence_confidence": "alta",
+      "order_confidence": "media",
+      "selection_status": "propuesta_editorial_sin_aprobacion"
+    },
+    {
+      "order": 3,
+      "id": "metro-metrocable",
+      "name": "Metro y Metrocable: recorrido urbano",
+      "source_ids": [
+        "metro-j",
+        "metro-l",
+        "metro-historia",
+        "local48",
+        "tripadvisor-lista"
+      ],
+      "reason": "Sistema identificador de Medellín y experiencia turística documentada; se separa del parque destino. J San Javier–La Aurora; L Santo Domingo–Arví.",
+      "evidence_confidence": "alta",
+      "order_confidence": "media",
+      "selection_status": "propuesta_editorial_sin_aprobacion"
+    },
+    {
+      "order": 4,
+      "id": "parque-explora",
+      "name": "Parque Explora",
+      "source_ids": [
+        "explora",
+        "nacional",
+        "tripadvisor-lista"
+      ],
+      "reason": "Atracción de destino estable, con acuario y ciencia interactiva y operador propio; corroboración nacional y plataforma. No entra para cubrir cuota familiar.",
+      "evidence_confidence": "alta",
+      "order_confidence": "media",
+      "selection_status": "propuesta_editorial_sin_aprobacion"
+    },
+    {
+      "order": 5,
+      "id": "museo-antioquia",
+      "name": "Museo de Antioquia",
+      "source_ids": [
+        "antioquia",
+        "nacional",
+        "local48",
+        "tripadvisor-lista"
+      ],
+      "reason": "Institución artística de referencia con visita interior independiente de Plaza Botero. No se penaliza por ser otro museo ni se fusiona por proximidad.",
+      "evidence_confidence": "alta",
+      "order_confidence": "media",
+      "selection_status": "propuesta_editorial_sin_aprobacion"
+    },
+    {
+      "order": 6,
+      "id": "pueblito-paisa",
+      "name": "Pueblito Paisa / Cerro Nutibara",
+      "source_ids": [
+        "pueblito",
+        "nacional",
+        "tripadvisor-lista"
+      ],
+      "reason": "Hito de visita turística de Medellín y mirador con identidad propia; recreación de pueblo antioqueño.",
+      "evidence_confidence": "alta",
+      "order_confidence": "media",
+      "selection_status": "propuesta_editorial_sin_aprobacion"
+    },
+    {
+      "order": 7,
+      "id": "jardin-botanico",
+      "name": "Jardín Botánico Joaquín Antonio Uribe",
+      "source_ids": [
+        "botanico",
+        "nacional",
+        "tripadvisor-lista"
+      ],
+      "reason": "Recinto reconocido como atracción autónoma, reiterado por guía nacional y plataforma. Su permanencia responde a relevancia, no a llenar naturaleza urbana.",
+      "evidence_confidence": "alta",
+      "order_confidence": "media",
+      "selection_status": "propuesta_editorial_sin_aprobacion"
+    },
+    {
+      "order": 8,
+      "id": "arvi",
+      "name": "Parque Arví",
+      "source_ids": [
+        "nacional",
+        "guia",
+        "metro-l",
+        "tripadvisor-arvi",
+        "tripadvisor-lista"
+      ],
+      "reason": "Atracción ecoturística con desplazamiento y visita autónoma documentados. El parque no equivale al trayecto Metrocable. Delimitar Santa Elena/ámbito regional.",
+      "evidence_confidence": "alta",
+      "order_confidence": "media-baja",
+      "selection_status": "propuesta_editorial_sin_aprobacion"
+    }
+  ],
+  "eighth_id": "arvi",
+  "excluded_comparisons": [
+    {
+      "id": "mamm",
+      "name": "Museo de Arte Moderno de Medellín",
+      "compared_to_eighth": "arvi",
+      "comparison": "Mantener secundario; Arví como8º tiene presencia más sostenida como excursión autónoma en guías generales revisadas. MAMM es un contendiente cultural fuerte, no se excluye por cuota de museos.",
+      "source_ids": [
+        "mamm",
+        "nacional",
+        "guia"
+      ],
+      "confidence": "media",
+      "relation": "inferior_provisional",
+      "retained_in_inventory": true
+    },
+    {
+      "id": "coltejer",
+      "name": "Edificio Coltejer",
+      "compared_to_eighth": "arvi",
+      "comparison": "No compite por tarjeta por instrucción explícita del propietario: solo icono de portada. No se afirma menor importancia que Arví.",
+      "source_ids": [
+        "coltejer"
+      ],
+      "confidence": "alta",
+      "relation": "fuera_por_instruccion",
+      "retained_in_inventory": true
+    },
+    {
+      "id": "pies-descalzos",
+      "name": "Parque de los Pies Descalzos",
+      "compared_to_eighth": "arvi",
+      "comparison": "La justificación anterior de diversificar espacio público no demuestra importancia superior a Arví. Se propone fuera por menor fuerza de la visita como motivo autónomo en la evidencia cruzada; no por ser parque.",
+      "source_ids": [
+        "guia",
+        "nacional"
+      ],
+      "confidence": "media",
+      "relation": "inferior_provisional",
+      "retained_in_inventory": true
+    },
+    {
+      "id": "edificio-epm",
+      "name": "Edificio EPM (Edificio Inteligente)",
+      "compared_to_eighth": "arvi",
+      "comparison": "Arquitectura relevante y programa histórico de visita, pero no se comprobó oferta de acceso guiado actual comparable a la visita documentada de Arví; conservar en paseo exterior.",
+      "source_ids": [
+        "epm",
+        "guia"
+      ],
+      "confidence": "media",
+      "relation": "inferior_provisional",
+      "retained_in_inventory": true
+    },
+    {
+      "id": "catedral-metropolitana",
+      "name": "Catedral Basílica Metropolitana",
+      "compared_to_eighth": "arvi",
+      "comparison": "Valor patrimonial claro; falta evidencia comparativa de atracción turística que la coloque por encima de Arví. Suprimir la cuota religiosa del razonamiento anterior. Podría disputar el corte con datos adicionales, no se declara objetivamente menor.",
+      "source_ids": [
+        "catedral",
+        "mapa"
+      ],
+      "confidence": "media-baja",
+      "relation": "inferior_provisional",
+      "retained_in_inventory": true
+    },
+    {
+      "id": "candelaria",
+      "name": "Basílica de Nuestra Señora de la Candelaria",
+      "compared_to_eighth": "arvi",
+      "comparison": "Hito histórico del centro, pero la evidencia revisada la sostiene mejor como parada de recorrido que como motivo autónomo por encima de Arví. No se descarta por ser iglesia.",
+      "source_ids": [
+        "centro",
+        "mapa"
+      ],
+      "confidence": "media-baja",
+      "relation": "inferior_provisional",
+      "retained_in_inventory": true
+    },
+    {
+      "id": "parque-lleras",
+      "name": "Parque Lleras",
+      "compared_to_eighth": "arvi",
+      "comparison": "Contendiente cercano al corte: guía nacional y plataforma confirman centralidad turística. Arví se mantiene8º por una experiencia de destino delimitable; NO hay prueba cuantitativa de que supere Lleras. Si se prioriza demanda nocturna, revisar este intercambio.",
+      "source_ids": [
+        "lleras",
+        "nacional",
+        "tripadvisor-lista"
+      ],
+      "confidence": "media-baja",
+      "relation": "disputa_corte_no_resuelta",
+      "retained_in_inventory": true
+    },
+    {
+      "id": "parque-poblado",
+      "name": "Parque El Poblado",
+      "compared_to_eighth": "arvi",
+      "comparison": "El parque concreto es distinto del distrito turístico. Como plaza aislada, la evidencia consultada no supera la visita autónoma a Arví; no atribuirle toda la demanda del barrio.",
+      "source_ids": [
+        "poblado",
+        "nacional"
+      ],
+      "confidence": "media-baja",
+      "relation": "inferior_provisional",
+      "retained_in_inventory": true
+    },
+    {
+      "id": "avenida-jardin",
+      "name": "Avenida Jardín / Vía Jardín",
+      "compared_to_eighth": "arvi",
+      "comparison": "Corredor gastronómico documentado, sin evidencia comparable de atracción autónoma superior al8º. Conservar actividad de paseo/directorio; no confundir con Jardín Botánico.",
+      "source_ids": [
+        "jardin-laureles",
+        "local48"
+      ],
+      "confidence": "media",
+      "relation": "inferior_provisional",
+      "retained_in_inventory": true
+    },
+    {
+      "id": "palacio-cultura",
+      "name": "Palacio de la Cultura Rafael Uribe Uribe",
+      "compared_to_eighth": "arvi",
+      "comparison": "Edificio relevante del entorno Botero, pero no se comprobó evidencia de visita autónoma más fuerte que Arví; proximidad sola tampoco bastaría para excluirlo.",
+      "source_ids": [
+        "mapa",
+        "local48"
+      ],
+      "confidence": "media-baja",
+      "relation": "inferior_provisional",
+      "retained_in_inventory": true
+    },
+    {
+      "id": "parque-bolivar",
+      "name": "Parque Bolívar",
+      "compared_to_eighth": "arvi",
+      "comparison": "Espacio patrimonial vinculado a Catedral, sin evidencia cruzada suficiente para desplazar el8º como motivo principal de visita.",
+      "source_ids": [
+        "mapa"
+      ],
+      "confidence": "baja",
+      "relation": "inferior_provisional",
+      "retained_in_inventory": true
+    },
+    {
+      "id": "parque-berrio",
+      "name": "Parque Berrío",
+      "compared_to_eighth": "arvi",
+      "comparison": "Guía nacional sí lo destaca; la propuesta lo mantiene en recorrido central frente a Arví como excursión propia. Comparación editorial de confianza media-baja, sin conteos que prueben superioridad.",
+      "source_ids": [
+        "nacional",
+        "centro"
+      ],
+      "confidence": "media-baja",
+      "relation": "inferior_provisional",
+      "retained_in_inventory": true
+    },
+    {
+      "id": "junin",
+      "name": "Pasaje Junín",
+      "compared_to_eighth": "arvi",
+      "comparison": "Corredor comercial patrimonial; evidencia disponible sostiene paseo del centro, sin indicio comparativo suficiente para desplazar Arví.",
+      "source_ids": [
+        "compras",
+        "local48"
+      ],
+      "confidence": "media",
+      "relation": "inferior_provisional",
+      "retained_in_inventory": true
+    },
+    {
+      "id": "provenza",
+      "name": "Provenza",
+      "compared_to_eighth": "arvi",
+      "comparison": "Contendiente junto a Lleras/Poblado. No duplicar demanda del distrito entre calles. Con evidencia actual no se resuelve que Arví atraiga más viajeros: mantener reserva de corte, no afirmar inferioridad medida.",
+      "source_ids": [
+        "lleras",
+        "nacional",
+        "poblado-guia"
+      ],
+      "confidence": "media-baja",
+      "relation": "disputa_corte_no_resuelta",
+      "retained_in_inventory": true
+    },
+    {
+      "id": "via-primavera",
+      "name": "Vía Primavera",
+      "compared_to_eighth": "arvi",
+      "comparison": "Comercio/diseño documentados, pero no evidencia de motivo turístico autónomo por encima de Arví; contextual al distrito, no una cuota comercial.",
+      "source_ids": [
+        "compras",
+        "nacional"
+      ],
+      "confidence": "media",
+      "relation": "inferior_provisional",
+      "retained_in_inventory": true
+    },
+    {
+      "id": "manila",
+      "name": "Manila",
+      "compared_to_eighth": "arvi",
+      "comparison": "Barrio con servicios turísticos, sin evidencia comparable que lo coloque como atracción principal por encima de Arví. Separar hospedaje/comida de importancia de un sitio.",
+      "source_ids": [
+        "compras",
+        "nacional"
+      ],
+      "confidence": "media-baja",
+      "relation": "inferior_provisional",
+      "retained_in_inventory": true
+    },
+    {
+      "id": "el-hueco",
+      "name": "El Hueco",
+      "compared_to_eighth": "arvi",
+      "comparison": "Zona comercial relevante, pero no se comprobó centralidad de visita turística mayor que el8º; no inferir demanda turística de actividad comercial general.",
+      "source_ids": [
+        "compras"
+      ],
+      "confidence": "baja",
+      "relation": "inferior_provisional",
+      "retained_in_inventory": true
+    },
+    {
+      "id": "ciudad-rio",
+      "name": "Ciudad del Río",
+      "compared_to_eighth": "arvi",
+      "comparison": "Distrito urbano con MAMM; no sumar demanda del museo dos veces. Evidencia revisada no resuelve superioridad del distrito respecto a Arví.",
+      "source_ids": [
+        "48horas",
+        "mamm"
+      ],
+      "confidence": "media-baja",
+      "relation": "inferior_provisional",
+      "retained_in_inventory": true
+    },
+    {
+      "id": "planetario",
+      "name": "Planetario de Medellín",
+      "compared_to_eighth": "arvi",
+      "comparison": "Atracción autónoma de ciencia, no se excluye por categoría repetida con Explora. Fuentes generales revisadas sostienen mayor centralidad de Arví; mantener evidencia adicional de asistencia pendiente.",
+      "source_ids": [
+        "48horas",
+        "explora",
+        "nacional"
+      ],
+      "confidence": "media",
+      "relation": "inferior_provisional",
+      "retained_in_inventory": true
+    },
+    {
+      "id": "casa-memoria",
+      "name": "Museo Casa de la Memoria",
+      "compared_to_eighth": "arvi",
+      "comparison": "Institución significativa para memoria, no se reemplaza por entretenimiento ni se juzga valor social. Para corte turístico general no se comprobó centralidad mayor que Arví; candidato cultural fuerte.",
+      "source_ids": [
+        "memoria",
+        "nacional"
+      ],
+      "confidence": "media-baja",
+      "relation": "inferior_provisional",
+      "retained_in_inventory": true
+    },
+    {
+      "id": "museo-castillo",
+      "name": "Museo El Castillo",
+      "compared_to_eighth": "arvi",
+      "comparison": "Guía nacional y plataforma lo reconocen; contendiente real. Mantener Arví por mayor reiteración de excursión en guías consultadas, con confianza media y sin negar valor del museo.",
+      "source_ids": [
+        "nacional",
+        "mapa",
+        "tripadvisor-lista",
+        "poblado-guia"
+      ],
+      "confidence": "media",
+      "relation": "inferior_provisional",
+      "retained_in_inventory": true
+    },
+    {
+      "id": "guatape",
+      "name": "Guatapé",
+      "compared_to_eighth": "arvi",
+      "comparison": "No comparable como tarjeta Medellín: destino de otro municipio con cola propia. Puede ser excursión recomendada; no se afirma que sea menos importante que Arví.",
+      "source_ids": [
+        "nacional"
+      ],
+      "confidence": "alta",
+      "relation": "fuera_ambito_territorial",
+      "retained_in_inventory": true
+    },
+    {
+      "id": "penol",
+      "name": "Piedra de El Peñol",
+      "compared_to_eighth": "arvi",
+      "comparison": "Piedra/Peñol es destino externo a Medellín. Se conserva para cobertura propia/excursiones, no se mide inferior a Arví.",
+      "source_ids": [
+        "nacional",
+        "tripadvisor-lista"
+      ],
+      "confidence": "alta",
+      "relation": "fuera_ambito_territorial",
+      "retained_in_inventory": true
+    },
+    {
+      "id": "parapente-san-felix",
+      "name": "Parapente en San Félix",
+      "compared_to_eighth": "arvi",
+      "comparison": "Actividad en territorio externo o metropolitano que exige delimitar sitio/operador; no compite como atractivo municipal listo frente a Arví. No se oculta ni borra de inventario.",
+      "source_ids": [
+        "nacional"
+      ],
+      "confidence": "alta",
+      "relation": "fuera_ambito_territorial",
+      "retained_in_inventory": true
+    },
+    {
+      "id": "helicoptero-jerico",
+      "name": "Helicóptero Medellín–Jericó",
+      "compared_to_eighth": "arvi",
+      "comparison": "Oferta antecedente no verificada de otro destino; no supera el umbral de identidad/operación para comparar demanda con Arví. No se convierte en atractivo de Medellín.",
+      "source_ids": [
+        "nacional"
+      ],
+      "confidence": "alta",
+      "relation": "candidato_sin_verificacion",
+      "retained_in_inventory": true
+    },
+    {
+      "id": "parques-rio",
+      "name": "Parques del Río",
+      "compared_to_eighth": "arvi",
+      "comparison": "Espacio público y escenario turístico relevante, especialmente según agenda. Frente a Arví no se comprobó motivo autónomo con mayor centralidad sostenida; no se descarta por cubrir ya naturaleza ni se fusiona con Pies Descalzos.",
+      "source_ids": [
+        "rio",
+        "guia"
+      ],
+      "confidence": "media",
+      "relation": "inferior_provisional",
+      "retained_in_audit": true
+    },
+    {
+      "id": "la-macarena",
+      "name": "Centro de Espectáculos La Macarena",
+      "compared_to_eighth": "arvi",
+      "comparison": "Recinto cultural real. La importancia de una fecha puede superar cualquier visita del corte, pero la oferta depende de agenda; sin evento vigente confirmado no desplaza Arví en listado permanente. No se afirma que conciertos sean poco turísticos.",
+      "source_ids": [
+        "macarena-agenda",
+        "mapa"
+      ],
+      "confidence": "media",
+      "relation": "agenda_no_comparable_permanente",
+      "retained_in_audit": true
+    },
+    {
+      "id": "el-poblado",
+      "name": "El Poblado: distrito turístico",
+      "compared_to_eighth": "arvi",
+      "comparison": "Contendiente muy fuerte: nacional destaca gastronomía, hospedaje y noche. No reducir todo el distrito a un parque ni sumarlo de nuevo con Provenza/Lleras. No hay datos comparables para demostrar Arví>El Poblado. Corte propuesto provisional, requiere decisión editorial explícita si se admiten distritos amplios como unidad.",
+      "source_ids": [
+        "nacional",
+        "poblado-guia",
+        "lleras"
+      ],
+      "confidence": "media-baja",
+      "relation": "disputa_corte_no_resuelta",
+      "retained_in_audit": true
+    },
+    {
+      "id": "museo-pablo-escobar",
+      "name": "Establecimiento anunciado como Museum Pablo Escobar",
+      "compared_to_eighth": "arvi",
+      "comparison": "La plataforma lo muestra muy alto en captura antigua. Fuente municipal2023 registra intervención de casa-museo concreta; no se verificó identidad/equivalencia y estado del establecimiento listado actualmente. No afirmar cerrado hoy ni inferior a Arví: retener candidato de alta señal y verificación pendiente, no borrar por conveniencia.",
+      "source_ids": [
+        "tripadvisor-lista",
+        "escobar-intervencion"
+      ],
+      "confidence": "baja",
+      "relation": "disputa_por_identidad_y_vigencia",
+      "retained_in_audit": true
+    },
+    {
+      "id": "santafe-comercial",
+      "name": "Centro Comercial Santafé",
+      "compared_to_eighth": "arvi",
+      "comparison": "Atracción comercial destacada por nacional/plataforma. Se propone Arví por motivación de visita independiente del consumo y reconocimiento de excursión; no hay medición turística comparable. El centro puede ser más concurrido en visitas totales sin demostrar demanda viajera mayor.",
+      "source_ids": [
+        "nacional",
+        "tripadvisor-lista"
+      ],
+      "confidence": "media-baja",
+      "relation": "inferior_provisional",
+      "retained_in_audit": true
+    },
+    {
+      "id": "tesoro-comercial",
+      "name": "El Tesoro Parque Comercial",
+      "compared_to_eighth": "arvi",
+      "comparison": "Nacional/plataforma lo identifican. No inferir afluencia turística a partir de flujo de compradores. La superioridad de Arví es juicio de centralidad de viaje, no un conteo de personas.",
+      "source_ids": [
+        "nacional",
+        "tripadvisor-lista"
+      ],
+      "confidence": "media-baja",
+      "relation": "inferior_provisional",
+      "retained_in_audit": true
+    }
+  ],
+  "change_proposal": {
+    "add": [
+      "plaza-botero",
+      "metro-metrocable"
+    ],
+    "remove_from_main": [
+      "catedral-metropolitana",
+      "pies-descalzos"
+    ],
+    "retain_secondary": true,
+    "apply_now": false
+  },
+  "unresolved": [
+    "No existe en la evidencia consultada una serie homogénea de visitantes/turistas por todos los candidatos.",
+    "Orden1–8 propuesto editorialmente: confianza alta en reconocimiento, media o menor en orden exacto.",
+    "El Poblado/Lleras/Provenza disputan corte según unidad editorial y perfil de viaje; no se demostró Arví superior con datos.",
+    "Museo Pablo Escobar requiere identidad y vigencia verificadas; la noticia2023 no prueba situación actual del establecimiento listado.",
+    "Tripadvisor dinámico/personalizado y captura antigua: no copiar posiciones como clasificación vigente.",
+    "Universo auditado limitado al inventario y candidatos explícitos/descubiertos aquí; no censo exhaustivo de toda Medellín."
+  ],
+  "sources": [
+    {
+      "id": "48horas",
+      "url": "https://www.medellin.travel/que-hacer-en-medellin-en-48-horas/?lang=en",
+      "editor": "Alcaldía / Medellín Travel",
+      "consultado": "2026-10-16",
+      "evidence": "Ciudad del Río, museos, Planetario y Avenida Jardín; texto histórico, no agenda actual.",
+      "review": "Fuente ya consultada en esta entrega; no representa ranking medido."
+    },
+    {
+      "id": "antioquia",
+      "url": "https://museodeantioquia.co/",
+      "editor": "Museo de Antioquia",
+      "consultado": "2026-10-17",
+      "evidence": "Salas de Fernando Botero y Débora Arango; Plaza Botero; tienda y visita.",
+      "review": "Fuente ya consultada en esta entrega; no representa ranking medido."
+    },
+    {
+      "id": "botanico",
+      "url": "https://www.botanicomedellin.org/",
+      "editor": "Jardín Botánico",
+      "consultado": "2026-10-17",
+      "evidence": "Colecciones vivas, programación educativa y cultural. Fotografías comerciales requieren consultar permisos del recinto.",
+      "review": "Fuente ya consultada en esta entrega; no representa ranking medido."
+    },
+    {
+      "id": "catedral",
+      "url": "https://arqmedellin.co/parroquias/la-catedral/",
+      "editor": "Arquidiócesis",
+      "consultado": "2026-10-16",
+      "evidence": "Identificación oficial de Catedral Metropolitana.",
+      "review": "Fuente ya consultada en esta entrega; no representa ranking medido."
+    },
+    {
+      "id": "centro",
+      "url": "https://www.medellin.gov.co/es/sala-de-prensa/noticias/medellin-348-anos-de-historia-que-inicio-en-nuestro-centro-consentido-el-corazon-de-la-candelaria/",
+      "editor": "Alcaldía / Medellín Travel",
+      "consultado": "2026-10-16",
+      "evidence": "Distingue iglesia La Candelaria de Catedral Metropolitana; patrimonio central.",
+      "review": "Fuente ya consultada en esta entrega; no representa ranking medido."
+    },
+    {
+      "id": "coltejer",
+      "url": "https://www.medellin.travel/edificio-coltejer/",
+      "editor": "Alcaldía / Medellín Travel",
+      "consultado": "2026-10-16",
+      "evidence": "Hito textil y encuentro Avenida Junín/La Playa. Se omiten altura y superlativos por discrepancia entre fuentes.",
+      "review": "Fuente ya consultada en esta entrega; no representa ranking medido."
+    },
+    {
+      "id": "compras",
+      "url": "https://www.medellin.travel/fashion-and-shopping/?lang=en",
+      "editor": "Alcaldía / Medellín Travel",
+      "consultado": "2026-10-16",
+      "evidence": "Sectores de compras: Manila, Vía Primavera, Junín y El Hueco.",
+      "review": "Fuente ya consultada en esta entrega; no representa ranking medido."
+    },
+    {
+      "id": "comuna-operacion",
+      "url": "https://www.medellin.gov.co/es/sala-de-prensa/noticias/las-escaleras-electricas-de-la-comuna-13-de-medellin-reciben-mantenimiento-para-su-optimo-funcionamiento/",
+      "editor": "Alcaldía de Medellín",
+      "consultado": "2026-10-17",
+      "evidence": "Aviso14nov2025 de mantenimiento hasta mediados2026; verificar estado actual, no asumir cierre vigente."
+    },
+    {
+      "id": "epm",
+      "url": "https://www.epm.com.co/institucional/sala-de-prensa/noticias-y-novedades/epm-de-puertas-abiertas-para-la-comunidad/",
+      "editor": "EPM",
+      "consultado": "2026-10-16",
+      "evidence": "Programa documentado de visitas al Edificio EPM; publicación histórica 2024, vigencia por confirmar.",
+      "review": "Fuente ya consultada en esta entrega; no representa ranking medido."
+    },
+    {
+      "id": "escobar-intervencion",
+      "url": "https://www.medellin.gov.co/es/sala-de-prensa/noticias/la-alcaldia-de-medellin-intervino-la-llamada-casa-museo-pablo-escobar/",
+      "editor": "Alcaldía de Medellín",
+      "consultado": "2026-10-17",
+      "evidence": "Intervención/demolición2023 de un predio concreto Loma del Indio; no se asume que sea el mismo establecimiento actual de Tripadvisor ni que toda oferta esté cerrada hoy."
+    },
+    {
+      "id": "explora",
+      "url": "https://www.parqueexplora.org/en",
+      "editor": "Parque Explora",
+      "consultado": "2026-10-17",
+      "evidence": "Museo de ciencias, planetario y acuario; programación y visita.",
+      "review": "Fuente ya consultada en esta entrega; no representa ranking medido."
+    },
+    {
+      "id": "guia",
+      "url": "https://www.medellin.travel/wp-content/uploads/2021/11/Quick-guide-to-Medellin.pdf",
+      "editor": "Alcaldía / Medellín Travel",
+      "consultado": "2026-10-16",
+      "evidence": "Pies Descalzos, cerros y corregimientos; guía 2021, accesos/operación requieren actualización.",
+      "review": "Fuente ya consultada en esta entrega; no representa ranking medido."
+    },
+    {
+      "id": "jardin-laureles",
+      "url": "https://www.medellin.travel/via-jardin/",
+      "editor": "Alcaldía / Medellín Travel",
+      "consultado": "2026-10-17",
+      "evidence": "Corredor entre los dos parques principales de Laureles; gastronomía y comercios.",
+      "review": "Fuente ya consultada en esta entrega; no representa ranking medido."
+    },
+    {
+      "id": "lleras",
+      "url": "https://www.medellin.travel/parque-lleras/",
+      "editor": "Alcaldía / Medellín Travel",
+      "consultado": "2026-10-16",
+      "evidence": "Lleras en El Poblado, gastronomía/vida nocturna; Provenza y Vía Primavera cercanas pero distintas.",
+      "review": "Fuente ya consultada en esta entrega; no representa ranking medido."
+    },
+    {
+      "id": "local48",
+      "url": "https://www.medellin.travel/que-hacer-en-medellin-en-48-horas/",
+      "editor": "Guía oficial Medellín Travel",
+      "consultado": "2026-10-17",
+      "evidence": "Itinerario combina Plaza Botero y Museo como visitas distintas, Comuna13, cable y Laureles; no orden de importancia."
+    },
+    {
+      "id": "macarena-agenda",
+      "url": "https://www.medellin.travel/caleventos/jorge-celedon-la-historia-mia-1064/",
+      "editor": "Medellín Travel",
+      "consultado": "2026-10-17",
+      "evidence": "Agenda documenta evento26sep2026 ya pasado al consultar17oct2026; demuestra uso cultural, no evento disponible hoy."
+    },
+    {
+      "id": "mamm",
+      "url": "https://www.elmamm.org/",
+      "editor": "MAMM",
+      "consultado": "2026-10-17",
+      "evidence": "Museo de Arte Moderno de Medellín; agenda cultural.",
+      "review": "Fuente ya consultada en esta entrega; no representa ranking medido."
+    },
+    {
+      "id": "mapa",
+      "url": "https://www.medellin.travel/docs/MapatursticodeMedelln.pdf",
+      "editor": "Alcaldía / Medellín Travel",
+      "consultado": "2026-10-16",
+      "evidence": "Inventario turístico institucional: museos, palacio, parques y templos. No usar para horarios actuales ni coordenadas exactas.",
+      "review": "Fuente ya consultada en esta entrega; no representa ranking medido."
+    },
+    {
+      "id": "memoria",
+      "url": "https://www.medellin.travel/turismo-social-en-medellin/",
+      "editor": "Alcaldía / Medellín Travel",
+      "consultado": "2026-10-16",
+      "evidence": "Comuna13 y Casa de la Memoria como lugares distintos; turismo comunitario.",
+      "review": "Fuente ya consultada en esta entrega; no representa ranking medido."
+    },
+    {
+      "id": "metro-historia",
+      "url": "https://www.metrodemedellin.gov.co/quienes-somos/historia/",
+      "editor": "Metro de Medellín",
+      "consultado": "2026-10-17",
+      "evidence": "Historia del sistema: Metro 1995, expansión de cables y línea turística Arví.",
+      "review": "Fuente ya consultada en esta entrega; no representa ranking medido."
+    },
+    {
+      "id": "metro-j",
+      "url": "https://www.metrodemedellin.gov.co/usuarios/sistema-integrado/linea-j",
+      "editor": "Metro de Medellín",
+      "consultado": "2026-10-17",
+      "evidence": "Recorrido San Javier–La Aurora y referencia a conexión terrestre hacia las escaleras; no confundir con línea L.",
+      "review": "Fuente ya consultada en esta entrega; no representa ranking medido."
+    },
+    {
+      "id": "metro-l",
+      "url": "https://www.metrodemedellin.gov.co/usuarios/sistema-integrado/linea-l",
+      "editor": "Metro de Medellín",
+      "consultado": "2026-10-17",
+      "evidence": "Recorrido Santo Domingo–Arví; línea turística con condiciones propias. No se fijan horarios ni tarifas en esta guía.",
+      "review": "Fuente ya consultada en esta entrega; no representa ranking medido."
+    },
+    {
+      "id": "nacional",
+      "url": "https://colombia.travel/es/medellin",
+      "editor": "Colombia Travel / ProColombia",
+      "consultado": "2026-10-17",
+      "evidence": "Página nacional y preguntas frecuentes destacan cultura, Comuna13, Botero, cable, naturaleza y vida de El Poblado; no orden oficial."
+    },
+    {
+      "id": "poblado",
+      "url": "https://www.medellin.gov.co/es/secretaria-de-comunicaciones/puntos-de-conexion-wifi/",
+      "editor": "Alcaldía / Medellín Travel",
+      "consultado": "2026-10-16",
+      "evidence": "Parque El Poblado CR 43 A # 10-01; listado municipal, no certificación de conectividad actual.",
+      "review": "Fuente ya consultada en esta entrega; no representa ranking medido."
+    },
+    {
+      "id": "poblado-guia",
+      "url": "https://www.medellin.travel/wp-content/uploads/2026/03/guia-vive-el-poblado-v1.pdf",
+      "editor": "Medellín Travel",
+      "consultado": "2026-10-17",
+      "evidence": "Guía2026 de El Poblado hallada en buscador. No se leyó PDF completo ni se infiere ranking de todos sus recintos."
+    },
+    {
+      "id": "pueblito",
+      "url": "https://www.medellin.travel/pueblito-paisa-cerro-nutibara/",
+      "editor": "Alcaldía / Medellín Travel",
+      "consultado": "2026-10-16",
+      "evidence": "Recreación de un pueblo antioqueño en Cerro Nutibara; no municipio histórico independiente.",
+      "review": "Fuente ya consultada en esta entrega; no representa ranking medido."
+    },
+    {
+      "id": "rio",
+      "url": "https://www.medellin.travel/parques-del-rio-4/",
+      "editor": "Medellín Travel",
+      "consultado": "2026-10-17",
+      "evidence": "Parque urbano junto al río, visita independiente; página contiene costos históricos que no se trasladan."
+    },
+    {
+      "id": "tripadvisor-arvi",
+      "url": "https://www.tripadvisor.co/Attraction_Review-g297478-d7379806-Reviews-Parque_Arvi-Medellin_Antioquia_Department.html",
+      "editor": "Tripadvisor, contenido de plataforma",
+      "consultado": "2026-10-17",
+      "evidence": "Descubrimiento de sujetos turísticos de Arví. No prueba licencias ni autoriza reutilización de fotos, no determina prioridad.",
+      "review": "Fuente ya consultada en esta entrega; no representa ranking medido."
+    },
+    {
+      "id": "tripadvisor-es",
+      "url": "https://www.tripadvisor.co/Attractions-g297478-Activities-Medellin_Antioquia_Department.html",
+      "editor": "Tripadvisor",
+      "consultado": "2026-10-17",
+      "evidence": "Apertura directa falló; buscador mostró resultados actuales diferentes. No congelar números, puntuaciones o posiciones como datos medidos."
+    },
+    {
+      "id": "tripadvisor-lista",
+      "url": "https://www.tripadvisor.com/Attractions-g297478-Activities-Medellin_Antioquia_Department.html",
+      "editor": "Tripadvisor",
+      "consultado": "2026-10-17",
+      "evidence": "Lista recuperada con rastreo indicado siete meses atrás; algoritmo considera opiniones, visualizaciones y ubicación del usuario. Descubrimiento, no ranking oficial ni conteos comparables actuales."
+    }
+  ],
+  "protected_files_sha256": {
+    "contenido.json": "ad39ea4c692574c42202a6cff728ce29348e62619d37b9956df8e260ac14ce70",
+    "principales-v3.json": "47fbe93c42dc076b601d5a6ceec51a456182280c96a4aa76967707506621ecf0",
+    "seleccion-principal-v3.json": "862d38c267f2eae5f623bd5878d0425d1d1a0bc4429debb7eb287106fb29040d",
+    "revision-componentes.json": "e6d6d907185aa8befa60a227fcab04625cc9eeb472050aa78ffbd48a96e135be",
+    "referencias-propuestas-v4.json": "5750f4914eb3ac4d1138bde234ec2e88f7b99a308cd951cb80b8d8434b3cf80c",
+    "preview.html": "29cd92bf6fa194a9b0d03a4da0061bce258f8d6bab6d00df6248b34e1e828144",
+    "paquete-preprod.json": "bbefd5984fedee6531e2950a2635d551e9a9e57751d1c10d3b25f6a439f16249",
+    "paquete-preprod.zip": "616de788ce8dcac3dcab8ac0f44212ce42f4e2f596a03a64c0d2690323daf8fb"
+  },
+  "approvals_changed": false,
+  "texts_changed": false,
+  "database_changed": false,
+  "generation_authorized": false,
+  "publication_authorized": false
+}

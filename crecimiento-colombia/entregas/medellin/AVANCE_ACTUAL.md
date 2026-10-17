@@ -2,9 +2,11 @@
 
 Actualizado: 17/10/2026. Lugar 3, rama `lugar/CO/antioquia/medellin`.
 
-**Estado real:** subtarea independiente de vigencia, idiomas y búsqueda de fotos preparada para revisión. No hay ejecución permanente en segundo plano. Destino completo pendiente.
+**Estado real:** auditoría de selección de ocho terminada para revisión; propuesta no aplicada. No hay ejecución permanente en segundo plano. Destino completo pendiente.
 
-**Último logro:** foto MAMM fachada 2016 (Andrés Molina Mesa, CC BY2.0), original completo y reducción800×532 inspeccionados, asignada a visita autónoma `mamm-visita`. Visible en `preview.html`; manifiesto `imagen-actividad-mamm-v5.json`. No representa visita guiada ni agenda vigente. Se mantienen intactas las tres candidatas v4 listas para elegir.
+**Auditoría nueva disponible:** `AUDITORIA_TOP8.md` y `AUDITORIA_TOP8.json`:39 candidatos,31 comparaciones explícitas con8º Arví. Propone Comuna13, Plaza Botero, Metro/Metrocable, Explora, Museo Antioquia, Pueblito, Jardín y Arví. Catedral/Pies permanecen en inventario secundario. Poblado/Lleras/Provenza disputan corte sin datos comparables suficientes; no se inventó ranking medido. Ningún texto, imagen, aprobación, preview o ZIP aplicado por esta propuesta.
+
+**Logro previo:** foto MAMM fachada 2016 (Andrés Molina Mesa, CC BY2.0), original completo y reducción800×532 inspeccionados, asignada a visita autónoma `mamm-visita`. Visible en `preview.html`; manifiesto `imagen-actividad-mamm-v5.json`. No representa visita guiada ni agenda vigente. Se mantienen intactas las tres candidatas v4 listas para elegir.
 
 **Evidencias:** diez páginas oficiales de directorio reconsultadas: seis negocios y cuatro instituciones; informes `verificacion-vigencia-v5.json` y `coherencia-idiomas-v5.json`. RNT213192 declarado por operador, no verificado en registro. Textos ES/EN/PT contrastados sin convertir ofertas históricas en actuales.
 

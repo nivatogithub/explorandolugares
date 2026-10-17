@@ -1,5 +1,7 @@
 # Lugar 3 · Medellín · estado vigente V4
 
+Auditoría más reciente: `AUDITORIA_TOP8.md` / `.json`,39 candidatos y31 comparaciones con el8º. Propone sustituir Catedral/Pies por Plaza Botero y Metro/Metrocable; no aplicada, con disputas de corte explícitas. No hay ranking medido de toda la ciudad ni aprobaciones nuevas.
+
 Fecha: 17/10/2026. Rama exclusiva `lugar/CO/antioquia/medellin`. Subtarea de corrección de referencias y traducciones preparada para revisión; destino completo pendiente.
 
 Se retiraron de la revisión vigente la portada con Coltejer diminuto, el bosque genérico de Arví y las viviendas de Comuna 13. Cinco originales completos nuevos fueron descargados por el coordinador e inspeccionados por este worker. `referencias-propuestas-v4.json` conserva autor, fuente, licencia comercial/adaptación, condiciones de IA, encuadre y hashes de originales/derivados.
