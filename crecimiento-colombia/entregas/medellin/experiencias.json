@@ -24,8 +24,10 @@
     "kind": "propuesta_editorial_autonoma",
     "availability": "no_garantizada",
     "relationship": "ninguna",
-    "photo_status": "faltante",
-    "review_status": "pendiente"
+    "photo_status": "referencia_real_lugar_actividad_editorial_sin_aprobar",
+    "review_status": "pendiente",
+    "image_file": "images/museo-2020.webp",
+    "image_scope": "Fotografía del recinto para visita autónoma editorial; no acredita guía, taller, disponibilidad o servicio de operador."
   },
   {
     "id": "jardin-botanico-visita",
@@ -82,8 +84,10 @@
     "kind": "propuesta_editorial_autonoma",
     "availability": "no_garantizada",
     "relationship": "ninguna",
-    "photo_status": "faltante",
-    "review_status": "pendiente"
+    "photo_status": "referencia_real_lugar_actividad_editorial_sin_aprobar",
+    "review_status": "pendiente",
+    "image_file": "images/explora-2012.webp",
+    "image_scope": "Fotografía del recinto para visita autónoma editorial; no acredita guía, taller, disponibilidad o servicio de operador."
   },
   {
     "id": "mamm-visita",
@@ -130,10 +134,24 @@
     ],
     "operator": null,
     "status": "draft",
-    "photo_status": "referencia_real_lugar_actividad_editorial_sin_aprobar",
+    "photo_status": "referencia_parcial_solo_detalle_no_portada",
     "availability": "sin_promesa",
     "image_file": "images/coltejer-2013.webp",
-    "image_scope": "Observación exterior de Coltejer; no representa un tour ni operador."
+    "image_scope": "Detalle exterior parcial de Coltejer; no permite aprobar portada o recorrido completo.",
+    "translations": {
+      "es": {
+        "name": "Arquitectura y patrimonio del centro",
+        "description": "Combina la observación exterior de Coltejer, Junín y los templos del centro en un recorrido por sectores. La Catedral Metropolitana está junto al Parque Bolívar; La Candelaria pertenece al entorno de Parque Berrío. Consulta accesos y respeta las actividades de culto."
+      },
+      "en": {
+        "name": "Downtown architecture and heritage",
+        "description": "Explore Coltejer’s exterior, Junín and downtown churches on an area-based walk. The Metropolitan Cathedral stands beside Parque Bolívar; La Candelaria is near Parque Berrío. Check access arrangements and respect worship activities."
+      },
+      "pt-BR": {
+        "name": "Arquitetura e patrimônio do centro",
+        "description": "Combine a observação externa do Coltejer, Junín e os templos do centro em um passeio por região. A Catedral Metropolitana fica junto ao Parque Bolívar; La Candelaria está perto do Parque Berrío. Consulte os acessos e respeite os momentos de culto."
+      }
+    }
   },
   {
     "id": "laureles-cafes",
@@ -148,7 +166,21 @@
     "operator": null,
     "status": "draft",
     "photo_status": "faltante",
-    "availability": "sin_promesa"
+    "availability": "sin_promesa",
+    "translations": {
+      "es": {
+        "name": "Paseo por Avenida Jardín",
+        "description": "Recorre el corredor de Avenida Jardín en Laureles y explora sus cafés y propuestas gastronómicas. Elige los establecimientos y consulta sus horarios directamente."
+      },
+      "en": {
+        "name": "Walk along Avenida Jardín",
+        "description": "Walk along the Avenida Jardín corridor in Laureles and explore its cafés and dining venues. Choose establishments and check opening times directly."
+      },
+      "pt-BR": {
+        "name": "Passeio pela Avenida Jardín",
+        "description": "Caminhe pelo corredor da Avenida Jardín em Laureles e conheça seus cafés e espaços gastronômicos. Escolha os estabelecimentos e consulte os horários diretamente."
+      }
+    }
   },
   {
     "id": "epm-visita",
@@ -168,7 +200,21 @@
     "price": null,
     "permission": "pendiente",
     "relationship": "ninguna",
-    "photo_status": "faltante_foto_actividad_autorizada"
+    "photo_status": "faltante_foto_actividad_autorizada",
+    "translations": {
+      "es": {
+        "name": "Visita guiada al Edificio EPM",
+        "description": "EPM documentó un programa de visitas para conocer su edificio y actividades. Consulta con la entidad si el programa está vigente y cómo inscribirse antes de planear la visita."
+      },
+      "en": {
+        "name": "Guided visit to the EPM building",
+        "description": "EPM documented a visiting programme introducing its building and activities. Ask the organisation whether the programme is currently running and how to register before planning a visit."
+      },
+      "pt-BR": {
+        "name": "Visita guiada ao Edifício EPM",
+        "description": "A EPM documentou um programa de visitas para conhecer seu edifício e suas atividades. Consulte a entidade sobre a vigência do programa e a inscrição antes de planejar a visita."
+      }
+    }
   },
   {
     "id": "city-comuna13",
@@ -187,7 +233,21 @@
     "price": null,
     "permission": "pendiente",
     "relationship": "ninguna",
-    "photo_status": "faltante_foto_actividad_autorizada"
+    "photo_status": "faltante_foto_actividad_autorizada",
+    "translations": {
+      "es": {
+        "name": "Recorrido por la ciudad y Comuna 13",
+        "description": "Medellín Turística presenta un recorrido por la ciudad y Comuna 13. Consulta el itinerario, las condiciones y la disponibilidad directamente con el operador; la página consultada no confirma una salida concreta."
+      },
+      "en": {
+        "name": "City and Comuna 13 tour",
+        "description": "Medellín Turística presents a city and Comuna 13 tour. Check the itinerary, conditions and availability directly with the operator; the consulted page does not confirm a particular departure."
+      },
+      "pt-BR": {
+        "name": "Passeio pela cidade e Comuna 13",
+        "description": "A Medellín Turística apresenta um passeio pela cidade e Comuna 13. Consulte o itinerário, as condições e a disponibilidade diretamente com o operador; a página consultada não confirma uma saída específica."
+      }
+    }
   },
   {
     "id": "jerico-helicoptero-referencia",
@@ -197,7 +257,21 @@
     "source": "content/destinos-dinamicos.json, places slug helicoptero-medellin-jerico",
     "reason": "Ficha draft con external_url vacío; ilustración genérica no prueba operación/ruta. No trasladar a Medellín como oferta.",
     "photo_status": "faltante_foto_real",
-    "operator": null
+    "operator": null,
+    "translations": {
+      "es": {
+        "name": "Antecedente helicóptero Medellín–Jericó",
+        "description": "Antecedente oculto de Jericó sin operador ni ruta confirmados; no ofrecer como servicio."
+      },
+      "en": {
+        "name": "Medellín–Jericó helicopter candidate",
+        "description": "Hidden Jericó candidate with no confirmed operator or route; do not offer as a service."
+      },
+      "pt-BR": {
+        "name": "Candidato de helicóptero Medellín–Jericó",
+        "description": "Candidato oculto de Jericó sem operador ou rota confirmados; não oferecer como serviço."
+      }
+    }
   },
   {
     "id": "jerico-parapente-referencia",
@@ -207,6 +281,20 @@
     "source": "content/destinos-dinamicos.json, places slug parapente-puerto-arturo",
     "reason": "Candidato de Jericó; exige despegue/aterrizaje, condiciones y operador verificados. No es San Félix/Bello ni Medellín.",
     "photo_status": "faltante_foto_real",
-    "operator": null
+    "operator": null,
+    "translations": {
+      "es": {
+        "name": "Antecedente parapente Puerto Arturo",
+        "description": "Antecedente oculto correspondiente a Jericó; no trasladar a Medellín ni confundir con San Félix o Bello."
+      },
+      "en": {
+        "name": "Puerto Arturo paragliding candidate",
+        "description": "Hidden candidate relating to Jericó; do not transfer it to Medellín or confuse it with San Félix or Bello."
+      },
+      "pt-BR": {
+        "name": "Candidato de parapente Puerto Arturo",
+        "description": "Candidato oculto referente a Jericó; não transferir para Medellín nem confundir com San Félix ou Bello."
+      }
+    }
   }
 ]
