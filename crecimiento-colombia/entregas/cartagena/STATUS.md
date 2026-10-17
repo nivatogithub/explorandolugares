@@ -45,3 +45,11 @@ Se leyó el skill existente `.agents/skills/imagenes-destinos/SKILL.md`, guías 
 - PR remoto/push pendientes: gh ausente en sesión. No se declara acceso de escritura remoto ni publicación.
 
 Reproducción: `preparar.py` produce referencias técnicas, inventario, `seleccionar.py` y `revision8.py`; `validar.py` comprueba la entrega. Todas las decisiones exactas sobreviven en ledger, y cualquier cambio de texto/uso o de original invalida solo el componente afectado.
+
+## Avance autorizado para PREPROD local
+
+Nueva autorización del propietario: cargar avances incompletos para observaciones en preprod local, sin producción. Preparados `paquete-preprod.zip` y `paquete-preprod.json`, separados del paquete editorial. Incluyen ocho atractivos, nueve fotografías de referencia provisional y tres idiomas; encabezados, presentación y leyendas explican que las ilustraciones finales no se han generado/aprobado.
+
+`reporte-preprod.json` conserva hash de paquete/fuente, contenido y faltantes. Ambos lectores PHP reales (ramaCartagena y checkoutpreprod) aceptan el ZIP. Estadosdraft y fuenteslabel/url comprobados; captions no superan500caracteres. El importador semillaDestinationImporter requiere tablasvacías, por lo que no debe usarse directamente sobre MySQLlocalpoblado. La carga serial y previsualización PHP corresponden al coordinador.
+
+No se tocó preprod compartido, BD, contenedores ni navegador. Final editorial/IA/aprobación/publicación siguen pendientes; cargar este avance local no los da por terminados. El ledger y paquete editorial anterior no fueron modificados.

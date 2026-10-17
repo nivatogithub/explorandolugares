@@ -1,0 +1,83 @@
+{
+  "destination_id": "CO-13-cartagena",
+  "destination_slug": "cartagena",
+  "intended_environment": "preprod_local_only",
+  "status": "prepared_not_imported",
+  "authority": "Usuario autoriza cargar destinos incompletos en preprod local para observar avances; no producción.",
+  "source_package": "paquete-v2.json",
+  "source_package_sha256": "0f4a2ab750c93b91f996494e89ed35636d61ceab7f258ecc93a0ea0c51cd9d91",
+  "package": "paquete-preprod.zip",
+  "package_sha256": "a0f60f08b7f9e81a08fa73e9bf9a69a3ff88081d92b3e8340a5501b0de3253f4",
+  "manifest": "paquete-preprod.json",
+  "locales": [
+    "es",
+    "en",
+    "pt-BR"
+  ],
+  "selected_sites": [
+    "centro-historico",
+    "san-felipe",
+    "getsemani",
+    "islas-rosario",
+    "playa-blanca-baru",
+    "cerro-popa",
+    "museo-historico",
+    "la-boquilla"
+  ],
+  "sites": 8,
+  "provisional_photographs": 9,
+  "generated_illustrations": 0,
+  "approved_final_illustrations": 0,
+  "publication_approved": false,
+  "database_modified": false,
+  "container_started": false,
+  "browser_used": false,
+  "missing": [
+    {
+      "component": "ilustraciones_finales",
+      "status": "no_generadas",
+      "reason": "Referencias y textos modificados pendientes; ejecución condicional aplazada para corregir selección, generación no realizada."
+    },
+    {
+      "component": "revision_editorial_final",
+      "status": "pendiente",
+      "reason": "22 aprobaciones históricas y15 intactas activas conservadas; selección y componentes nuevos/modificados no tienen aprobación final."
+    },
+    {
+      "component": "experiencias_publicas",
+      "status": "no_integradas",
+      "count": 9,
+      "reason": "Actividades investigadas y operadores trazables en borrador; fotografías de actividad, permisos y condiciones pendientes. Sin alianzas ni reservas inferidas."
+    },
+    {
+      "component": "directorio_publico",
+      "status": "no_integrado",
+      "count": 10,
+      "reason": "Fichas propuestas en investigación privada, no creación automática de negocios publicados."
+    },
+    {
+      "component": "importacion_preprod",
+      "status": "coordinador_pendiente",
+      "reason": "Carga serial PHP/MySQLlocal fuera de esta rama; ningún acceso o cambio BD compartida realizado."
+    },
+    {
+      "component": "pr_remoto",
+      "status": "pendiente",
+      "reason": "No push/PR remoto creado desde worker."
+    }
+  ],
+  "importer_notes": [
+    "ZIP schema_version2 para DestinationPackage::readZip y ruta de alta de destino existente.",
+    "DestinationImporter::import es importador semilla: requiere tablasdestinations/service_categories/businesses vacías y aborta si haydatos. No usar directamente contra preprod poblado.",
+    "Conservar estadosdraft al importar y acceder mediante previsualización local autorizada; no convertir autorización de revisión local en publicación de producción.",
+    "sources incluye label/url/section_key para compatibilidad con fuentes del importador; los textos turísticos originales y ledger no se alteran."
+  ],
+  "validation": {
+    "worker_php_reader": "PASS8sites9images",
+    "preprod_checkout_php_reader": "PASS8sites9images",
+    "draft_status": "PASS",
+    "source_labels": "PASS",
+    "photo_caption_max500": "PASS",
+    "browser_or_database_used": false
+  }
+}
