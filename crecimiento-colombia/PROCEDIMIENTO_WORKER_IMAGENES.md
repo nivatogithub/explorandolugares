@@ -2,6 +2,10 @@
 
 Estado: proceso propuesto para validar con dos o tres destinos piloto. No autoriza generación masiva ni publicación. Propietario: Explorando Lugares. La instrucción humana más reciente prevalece. Última actualización:17/10/2026.
 
+## Decisión vigente de estilo
+
+El propietario eligió definitivamente ilustración semirrealista, ID EL-SEMI-REALISTA-1. Aplicar [INSTRUCCION_WORKER_INVESTIGACION_VISUAL.md](INSTRUCCION_WORKER_INVESTIGACION_VISUAL.md) antes de generar: investigar evidencia visual, resolver incógnitas y separar referencia de estilo de referencia factual. Las menciones anteriores a caricatura se conservan solo como estilización sutil de personajes, no como acabado global alternativo.
+
 ## Objetivo y alcance
 
 Producir imágenes editoriales atractivas, ligeras y correctamente relacionadas con cada destino, atractivo o experiencia. Reutilizar ilustraciones compatibles sin asignarlas al azar ni hacer pasar una escena genérica por la vista real de un lugar.

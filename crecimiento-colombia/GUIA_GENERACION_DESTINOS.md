@@ -211,3 +211,7 @@ Aplicar docs/GUIA_BIBLIOTECA_ILUSTRADA.md y su brief JSON. Dirección solicitada
 ### Procedimiento reutilizable del worker de imágenes
 
 Documento coordinador: [PROCEDIMIENTO_WORKER_IMAGENES.md](PROCEDIMIENTO_WORKER_IMAGENES.md). Validar con dos o tres destinos antes de extender, con métricas, revisión visual y QA real. La guía de dirección, plantilla y skill existentes conservan sus funciones; no se inicia una biblioteca masiva ni se reactiva seguimiento automático al documentarlo.
+
+### Elección definitiva de estilo
+
+El propietario eligió **ilustración semirrealista EL-SEMI-REALISTA-1**. Ver INSTRUCCION_WORKER_INVESTIGACION_VISUAL.md para búsqueda dirigida, ficha de evidencia y bloques del prompt. La dirección anterior de caricatura editorial global queda sustituida; se mantiene expresividad de personajes con estilización discreta. No confundir referencia de acabado con documentación geográfica ni inferir aprobación de una imagen concreta.
