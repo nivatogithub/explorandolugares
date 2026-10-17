@@ -160,7 +160,7 @@ try:
     paths = [
         ('/admin/index.php', 'Solicitudes de participación'),
         ('/admin/index.php?tab=sistema', 'Solicitudes de participación'),
-        ('/admin/base-datos.php', 'Estado de la base de datos'),
+        ('/admin/base-datos.php', 'Base de datos'),
         ('/admin/destinos.php', 'Administrar destinos'),
         ('/admin/trasladar-negocios.php', 'Trasladar negocios a Cauca Viejo'),
         ('/admin/negocios.php', 'Negocios'),
@@ -447,15 +447,13 @@ try:
     check(status == 400 and 'Verifica la información' in body, f'La publicación permitió un negocio todavía no verificado: {status} {body[-800:]}')
     check(DB.execute('SELECT publication_status FROM businesses WHERE id=?', (created['id'],)).fetchone()[0] == 'draft', 'Un intento de publicación no autorizado cambió la ficha.')
 
-    # Full HTTP flow for a new business account, including private unlock, login,
+    # Full HTTP flow for a new business account, including explicit enablement, login,
     # approval, membership creation and confirmation that the business stays draft.
-    test_key = secrets.token_hex(32)
-    config['business_accounts_enabled'] = False
-    config['business_accounts_test_key'] = test_key
+    config['business_accounts_enabled'] = True
     save_config()
     business_cookies = http.cookiejar.CookieJar()
     business_user = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(business_cookies))
-    status, body, _ = request('/business/register.php?prueba=' + test_key, opener=business_user)
+    status, body, _ = request('/business/register.php', opener=business_user)
     check(status == 200 and 'Vincula tu negocio a una cuenta' in body and 'name="csrf"' in body, f'El registro empresarial privado no abrió: {status} {body[:300]}')
     registration_csrf = __import__('re').search(r'name="csrf" value="([^"]+)"', body).group(1)
     class NoBusinessRedirect(urllib.request.HTTPRedirectHandler):
@@ -487,7 +485,7 @@ try:
     check(all(row['storage_name'] not in [item.name for item in (WORK / 'public').rglob('*') if item.is_file()] for row in representation_rows), 'Los documentos de representación deben quedar fuera del directorio público.')
     check(DB.execute("SELECT COUNT(*) FROM businesses WHERE slug='cafeteria-de-cuenta-http'").fetchone()[0] == 0, 'La solicitud nueva se insertó antes de la aprobación administrativa.')
     anonymous = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
-    check(request('/business/register.php', opener=anonymous)[0] == 404, 'La ruta de registro quedó visible para un visitante sin llave de prueba.')
+    check(request('/business/register.php', opener=anonymous)[0] == 200, 'El registro habilitado debe admitir visitantes sin claves de prueba.')
     dashboard_csrf = __import__('re').search(r'name="csrf" value="([^"]+)"', body).group(1)
     status, _, _ = request('/business/logout.php', {'csrf': dashboard_csrf}, business_flow)
     check(status == 303, 'El cierre de sesión empresarial no completó la redirección.')

@@ -11,27 +11,11 @@ function access_check(bool $condition, string $message): void
     echo "OK: {$message}\n";
 }
 
-$secret = str_repeat('ab', 32);
-$privateConfig = ['business_accounts_enabled'=>false, 'business_accounts_test_key'=>$secret];
-$closedConfig = ['business_accounts_enabled'=>false, 'business_accounts_test_key'=>''];
-$session = [];
-access_check(!BusinessPortalAccess::available($privateConfig, $session, 1000), 'El portal empresarial permanece cerrado sin llave de prueba en la sesión.');
-access_check(!BusinessPortalAccess::unlockForTesting($privateConfig, 'incorrecta', $session, 1000), 'Una llave incorrecta no abre el portal.');
-access_check(BusinessPortalAccess::unlockForTesting($privateConfig, $secret, $session, 1000), 'La llave privada válida inicia la sesión de pruebas.');
-access_check(BusinessPortalAccess::available($privateConfig, $session, 1001), 'La sesión puede navegar las rutas empresariales sin repetir la llave.');
-access_check(!BusinessPortalAccess::available($privateConfig, $session, 15400), 'La sesión de pruebas caduca después de cuatro horas.');
-$session = ['business_portal_test_until'=>9999];
-access_check(!BusinessPortalAccess::available($closedConfig, $session, 1000), 'Quitar la llave de configuración revoca sesiones de prueba existentes.');
-$session = ['business_portal_test_until'=>9999,'business_portal_test_key_hash'=>hash('sha256',$secret)];
-access_check(BusinessPortalAccess::available($privateConfig, $session, 1000), 'Una sesión de prueba corresponde a la llave que la creó.');
-$rotatedConfig = ['business_accounts_enabled'=>false, 'business_accounts_test_key'=>str_repeat('cd',32)];
-access_check(!BusinessPortalAccess::available($rotatedConfig, $session, 1000), 'Rotar la llave invalida inmediatamente las sesiones de prueba anteriores.');
-$session=[];
-BusinessPortalAccess::unlockForTesting($privateConfig,$secret,$session,1000);
-$session['business_portal_test_key_hash']='';
-access_check(!BusinessPortalAccess::available($privateConfig, $session, 1001), 'Una sesión sin huella de llave no conserva acceso privado.');
-$enabledConfig = ['business_accounts_enabled'=>true, 'business_accounts_test_key'=>''];
-access_check(BusinessPortalAccess::available($enabledConfig, $session, 1000), 'La activación normal funciona cuando se habilite el registro públicamente.');
+$session=['business_portal_test_until'=>PHP_INT_MAX,'business_portal_test_key_hash'=>hash('sha256',str_repeat('a',64))];
+access_check(!BusinessPortalAccess::available(['business_accounts_enabled'=>false,'business_accounts_test_key'=>str_repeat('a',64)],$session),'Una llave y sesión antiguas nunca abren el registro cerrado.');
+access_check($session===[],'Las sesiones antiguas de prueba se invalidan.');
+access_check(BusinessPortalAccess::available(['business_accounts_enabled'=>true],$session),'El registro habilitado conserva su acceso normal.');
+access_check(!method_exists(BusinessPortalAccess::class,'unlockForTesting'),'Se eliminó la función de apertura por parámetro.');
 
 foreach (['public/business/register.php','public/business/login.php','public/business/logout.php','public/business/dashboard.php','public/reclamar-negocio.php'] as $route) {
     $source = file_get_contents(dirname(__DIR__).'/'.$route);

@@ -4,14 +4,6 @@ require dirname(__DIR__,2).'/app/bootstrap.php';
 header_remove('X-Robots-Tag');
 
 $locale=match($_GET['lang']??'') {'en'=>'en','pt-br'=>'pt-br',default=>'es'};
-$testKey=is_string($_GET['prueba']??null)?$_GET['prueba']:'';
-if(!business_portal_available() && $testKey!=='' && BusinessPortalAccess::unlockForTesting($config,$testKey,$_SESSION)){
-    session_regenerate_id(true);
-    $path=parse_url((string)($_SERVER['REQUEST_URI']??'/negocios-locales/'),PHP_URL_PATH);
-    $query=[];parse_str((string)(parse_url((string)($_SERVER['REQUEST_URI']??''),PHP_URL_QUERY)??''),$query);unset($query['prueba']);
-    header('Location: '.(is_string($path)&&$path!==''?$path:'/negocios-locales/').($query?'?'.http_build_query($query):''),true,303);exit;
-}
-
 $localizedPages=['es'=>'negocios-locales/index.html','en'=>'en/negocios-locales/index.html','pt-br'=>'pt-br/negocios-locales/index.html'];
 $page=dirname(__DIR__).'/'.$localizedPages[$locale];
 $html=is_file($page)?file_get_contents($page):false;

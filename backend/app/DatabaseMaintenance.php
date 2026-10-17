@@ -241,6 +241,35 @@ final class DatabaseMaintenance
         ];
     }
 
+    public function requirementDetails(): array
+    {
+        $tables=$this->tables();$result=[];
+        foreach(self::MIGRATIONS as $id=>$migration){$lines=[];
+            foreach($migration['checks']??[] as [$table,$columns]){if(!in_array($table,$tables,true)){$lines[]='Falta tabla: '.$table;continue;}$missing=array_diff($columns,$this->columns($table));$lines[]=$missing?'Faltan columnas en '.$table.': '.implode(', ',$missing):'Tabla y columnas comprobadas: '.$table;}
+            foreach($migration['row_checks']??[] as [$table,$column,$value])$lines[]='Registro requerido en '.$table.': '.$column.' = '.$value;
+            foreach($migration['value_checks']??[] as [$table,$key,$value,$column,$expected])$lines[]='Configuración requerida en '.$table.': '.$key.' = '.$value.', '.$column.' = '.$expected;
+            $result[$id]=$lines;
+        }
+        return $result;
+    }
+
+    public function migrationCatalog(): array
+    {
+        $result=[];
+        foreach(self::MIGRATIONS as $id=>$migration){$path=$this->appRoot.'/database/migrations/'.$migration['file'];if(is_file($path))$result[$id]=['file'=>$migration['file'],'sha256'=>hash_file('sha256',$path)];}
+        return $result;
+    }
+
+    public function health(): array
+    {
+        $version=(string)$this->pdo->getAttribute(PDO::ATTR_SERVER_VERSION);
+        $result=['engine'=>stripos($version,'MariaDB')!==false?'MariaDB':($this->pdo->getAttribute(PDO::ATTR_DRIVER_NAME)==='mysql'?'MySQL':'SQLite'),'version'=>$version,'tables'=>[]];
+        if($this->pdo->getAttribute(PDO::ATTR_DRIVER_NAME)!=='mysql')return $result;
+        $tables=$this->pdo->query("SELECT TABLE_NAME,ENGINE,TABLE_ROWS,DATA_LENGTH,INDEX_LENGTH,DATA_FREE FROM information_schema.TABLES WHERE TABLE_SCHEMA=DATABASE() AND TABLE_TYPE='BASE TABLE' ORDER BY TABLE_NAME")->fetchAll(PDO::FETCH_ASSOC);
+        foreach($tables as $row){$q=$this->pdo->prepare('SELECT INDEX_NAME,SEQ_IN_INDEX,COLUMN_NAME,NON_UNIQUE FROM information_schema.STATISTICS WHERE TABLE_SCHEMA=DATABASE() AND TABLE_NAME=? ORDER BY INDEX_NAME,SEQ_IN_INDEX');$q->execute([$row['TABLE_NAME']]);$indexes=[];foreach($q as $index)$indexes[$index['INDEX_NAME']][]=$index['COLUMN_NAME'];$row['indexes']=$indexes;$row['warning']=!isset($indexes['PRIMARY'])?'Sin clave primaria: revisar su necesidad.':'Sin alerta estructural básica';$result['tables'][]=$row;}
+        return $result;
+    }
+
     public function installBaseSchema(): void
     {
         $this->requireMysql();
@@ -256,13 +285,22 @@ final class DatabaseMaintenance
         }
     }
 
-    public function applyMigrations(): array
+    public function applyMigrations(?array $selected = null): array
     {
         $this->requireMysql();
+        if((int)$this->pdo->query("SELECT GET_LOCK(CONCAT('el_schema_',DATABASE()),0)")->fetchColumn()!==1)throw new RuntimeException('Otro proceso está aplicando cambios. Espera y vuelve a validar.');
+        try{return $this->runMigrations($selected);}finally{$this->pdo->query("SELECT RELEASE_LOCK(CONCAT('el_schema_',DATABASE()))");}
+    }
+
+    private function runMigrations(?array $selected = null): array
+    {
+        $this->requireMysql();
+        if ($selected !== null && (!$selected || array_diff($selected, array_keys(self::MIGRATIONS)))) throw new RuntimeException('Selección de migraciones no permitida.');
         $tables = $this->tables();
         if (!$tables) throw new RuntimeException('La base está vacía. Instala primero el esquema base.');
         $states = [];
         foreach (self::MIGRATIONS as $id => $migration) {
+            if ($selected !== null && !in_array($id, $selected, true)) continue;
             $state = $this->migrationState($migration, $tables);
             if ($state === 'partial') {
                 // Later migrations can appear partial when their prerequisite
@@ -282,6 +320,7 @@ final class DatabaseMaintenance
         $this->ensureLedger();
         $results = [];
         foreach (self::MIGRATIONS as $id => $migration) {
+            if ($selected !== null && !in_array($id, $selected, true)) continue;
             $tables = $this->tables();
             $state = $this->migrationState($migration, $tables);
             if ($state === 'applied') {

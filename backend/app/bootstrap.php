@@ -9,7 +9,6 @@ if (PHP_SAPI === 'cli-server' && in_array($_SERVER['REMOTE_ADDR'] ?? '', ['127.0
 if (!is_file($configFile)) { http_response_code(503); exit('Configuración del servidor pendiente.'); }
 $config = require $configFile;
 require_once __DIR__.'/BusinessPortalAccess.php';
-require_once __DIR__.'/BusinessPortalSettings.php';
 $local = in_array($_SERVER['REMOTE_ADDR'] ?? '', ['127.0.0.1', '::1'], true) || (getenv('EL_PREPROD_LOCAL') === '1' && in_array(parse_url('http://'.($_SERVER['HTTP_HOST']??''), PHP_URL_HOST), ['127.0.0.1','localhost','[::1]'], true));
 $https = ($_SERVER['HTTPS'] ?? '') === 'on';
 if (PHP_SAPI !== 'cli' && !$https && !(($config['local_test'] ?? false) && $local)) {
@@ -78,24 +77,9 @@ function business_portal_available(): bool {
     global $config;
     return BusinessPortalAccess::available($config, $_SESSION);
 }
-/** Keep account and claim routes private until enabled or unlocked by a configured test key. */
+/** Account routes are public only when explicitly enabled in private configuration. */
 function require_business_portal_access(): void {
-    global $config;
     if (business_portal_available()) return;
-    $providedKey = is_string($_GET['prueba'] ?? null) ? $_GET['prueba'] : '';
-    if (BusinessPortalAccess::unlockForTesting($config, $providedKey, $_SESSION)) {
-        session_regenerate_id(true);
-        $_SESSION['csrf'] ??= bin2hex(random_bytes(32));
-        $requestUri = (string)($_SERVER['REQUEST_URI'] ?? '/');
-        $path = parse_url($requestUri, PHP_URL_PATH);
-        if (!is_string($path) || $path === '' || $path[0] !== '/' || str_contains($path, "\r") || str_contains($path, "\n")) $path = '/';
-        $query = [];
-        parse_str((string)(parse_url($requestUri, PHP_URL_QUERY) ?? ''), $query);
-        unset($query['prueba']);
-        $target = $path.($query ? '?'.http_build_query($query) : '');
-        header('Location: '.$target, true, 303);
-        exit;
-    }
     http_response_code(404);
     exit('No encontrado.');
 }
