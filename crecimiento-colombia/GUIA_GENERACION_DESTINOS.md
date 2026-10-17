@@ -6,7 +6,7 @@ Actualización del propietario: 17/10/2026. Aplicar junto a PROCEDIMIENTO_DESTIN
 
 Investigar primero un inventario amplio con fuentes oficiales, jurisdicción y motivo de inclusión/exclusión. Elegir después los ocho atractivos principales de las ciudades y destinos amplios actualmente en revisión: Cartagena, Bogotá, Medellín y Santa Marta. Ocho es el máximo general; en un destino pequeño no inventar lugares para completar una cuota. Tres o cuatro columnas son diseño, nunca un límite de investigación. No escoger por disponibilidad de fotografías. Conseguir la referencia del atractivo prioritario y registrar cualquier faltante.
 
-Priorizar importancia turística e identidad, variedad y complementariedad. Evitar llenar la selección con iglesias o museos repetitivos mientras faltan barrios, naturaleza, playas, parques o experiencias esenciales. Explicar la selección editorial: no llamarla ranking oficial ni inventar estadísticas. Conservar candidatos secundarios y sus motivos; no borrarlos de mediciones.
+Priorizar estrictamente importancia turística e identidad; variedad y complementariedad solo desempatan relevancia semejante. Evitar llenar la selección con iglesias o museos repetitivos mientras faltan barrios, naturaleza, playas, parques o experiencias esenciales. Explicar la selección editorial: no llamarla ranking oficial ni inventar estadísticas. Conservar candidatos secundarios y sus motivos; no borrarlos de mediciones.
 
 ## Tres funciones visuales distintas
 
@@ -130,3 +130,25 @@ Inspeccionar imagen completa y recortes de escritorio/móvil antes de pedir apro
 ## Continuidad mientras se revisan componentes · 17/10/2026
 
 La espera de aprobación de una referencia bloquea únicamente la generación de esa imagen. Continuar búsqueda/mejora de otras referencias, investigación, textos ES/EN/PT, actividades, directorio y preparación técnica dentro de la misma rama/destino. No cerrar todo el worker por terminar una subtarea o un ZIP provisional. Al entregar, identificar trabajo independiente pendiente y continuarlo; si solo quedan decisiones humanas, informar los componentes exactos. Coordinación comprueba estado real, reactiva tareas pendientes y no promete ejecución permanente entre turnos. No reasignar destino ni publicar sin aprobación correspondiente.
+
+## Los ocho de mayor prioridad turística · instrucción 17/10/2026
+
+Esta regla prevalece sobre cualquier criterio previo de variedad/complementariedad: la selección principal debe contener los ocho candidatos de mayor prioridad turística dentro del alcance territorial acordado. No elegir ocho ejemplos representativos por categorías. Variedad puede desempatar candidatos de relevancia semejante, nunca desplazar a otro claramente más prioritario.
+
+### Prueba obligatoria del corte
+
+Investigar inventario amplio antes de cerrar la selección; contrastar Tripadvisor (con sus sesgos), portales locales/nacionales y responsables. Comparar cada candidato excluido plausible con el octavo incluido. Si la evidencia favorece al excluido, reemplazar al incluido y reordenar; si no permite decidir, marcar corte pendiente y presentar la comparación concreta, no afirmar que la lista está validada. Auditar también la jerarquía de los puestos1–8, no confundir orden de escritura con orden de prioridad.
+
+Registrar en AUDITORIA_TOP8.json/.md: universo consultado, ámbito territorial, fuentes/fecha, lista ordenada propuesta, razones y evidencia por puesto, candidatos fuera, comparación frente al corte, confianza y dudas por resolver. La prioridad editorial exige juicio respaldado; no inventar cifras de visitantes, puntuaciones, fórmula ni un ranking oficial inexistente. No prometer exhaustividad nacional/municipal absoluta sin haber investigado los candidatos. «Top8 validado» solo después de resolver comparaciones relevantes con evidencia y revisión editorial; la aprobación de fotos no lo valida.
+
+Evaluar reconocimiento turístico, importancia para una primera visita y peso como motivo de viaje; considerar fuentes e información de afluencia solo si hay datos comparables verificados. Un equipamiento muy concurrido por residentes o una buena foto no prueba por sí solo mayor relevancia turística general. Mantener diversidad cuando proceda por empate, sin cuotas de iglesias/museos/parques ni exclusión automática de parques de atracciones.
+
+No excluir un atractivo prioritario porque falte imagen, sea de pago, requiera más investigación o tenga otra categoría. Tampoco incluirlo porque ya tiene foto/ilustración aprobada. Separar lugares visitables permanentes, símbolos de portada, actividades/movilidad, eventos y comercios; no inflar el listado con paradas equivalentes del mismo conjunto. Agrupaciones deben estar justificadas y no ocultar sitios prioritarios.
+
+### Comparaciones expresas del propietario
+
+- Bogotá: Monserrate tiene prioridad superior a Salitre Mágico. Investigar Salitre Mágico y parques comparables frente a candidatos del corte; mencionarlo no lo incorpora automáticamente ni desplaza Monserrate. Confirmar identidad correcta: Salitre Mágico no es el Parque Metropolitano Simón Bolívar aunque estén próximos.
+- Santa Marta: Tayrona tiene prioridad superior a El Rodadero. Una imagen de El Rodadero como candidata de portada no cambia esta relación; función de portada e importancia de una tarjeta son decisiones diferentes.
+- Poblaciones de todos los tamaños: no puede quedar fuera un candidato respaldado como más prioritario que uno incluido. En lugares pequeños investigar menos de8si nohay8justificables; no rellenar.
+
+Conservar inventarios y decisiones históricas; una sustitución de selección no borra aprobaciones de imágenes/textos por hash ni las transfiere al reemplazo. La publicación final exige el proceso de aprobación vigente. Las listas actuales de cuatro destinos quedan como propuestas pendientes de esta auditoría; no se reetiquetan automáticamente como ranking cerrado.
