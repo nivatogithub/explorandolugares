@@ -5,6 +5,8 @@ description: Produce and review accurate AI-generated editorial illustrations fo
 
 # Imágenes de destinos de Explorando Lugares
 
+Para el trabajo completo del worker, seguir `crecimiento-colombia/PROCEDIMIENTO_WORKER_IMAGENES.md`: pilotos, briefs, biblioteca, generación, revisión, integración y cierre. No autoriza generación masiva ni publicación.
+
 Antes de crear imágenes, lee `docs/GUIA_BIBLIOTECA_ILUSTRADA.md` (dirección actual, brief y tratamiento de personajes/entorno), `docs/PRODUCCION_IMAGENES_IA.md`, `docs/GUIAS_VISUALES_DESTINOS.md` y `AGENTS.md`. Las preferencias actuales de la guía prevalecen sobre la paleta y las exigencias fotográficas anteriores para tarjetas genéricas.
 
 ## Selección de referencias vigente
