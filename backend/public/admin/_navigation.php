@@ -22,7 +22,8 @@ $activeAdminItem = match (true) {
     default => '',
 };
 ?>
-<link rel="stylesheet" href="../assets/admin-navigation.css?v=20261017-1">
+<link rel="stylesheet" href="../assets/admin-navigation.css?v=20261017-2">
+<?php require __DIR__.'/../_account-header.php'; ?>
 <aside class="admin-sidebar admin-sidebar-with-system" aria-label="Navegación de administración">
   <a class="admin-sidebar-brand" href="index.php">Explorando <strong>Lugares</strong><small>Administración</small></a>
   <nav>
@@ -41,12 +42,13 @@ $activeAdminItem = match (true) {
       <a href="destinos.php" <?= $activeAdminItem === 'destinations' ? 'aria-current="page"' : '' ?>>Destinos</a>
       <span class="admin-nav-disabled" aria-disabled="true">Reportes <small>Próximamente</small></span>
     </section>
-    <section><h2>Dirección</h2>
+
+  </nav>
+  <nav class="admin-system-shortcuts" aria-label="Diagnóstico del sistema">
+        <section><h2>Dirección</h2>
       <a href="inversionistas.php" <?= $activeAdminItem === 'investor-intelligence' ? 'aria-current="page"' : '' ?>>Inteligencia e inversión</a>
       <a href="costos.php" <?= $activeAdminItem === 'costs' ? 'aria-current="page"' : '' ?>>Costos y cancelaciones</a>
     </section>
-  </nav>
-  <nav class="admin-system-shortcuts" aria-label="Diagnóstico del sistema">
     <section><h2>Sistema</h2>
       <a href="index.php?tab=sistema" <?= $activeAdminItem === 'system' ? 'aria-current="page"' : '' ?>>Estado del sistema</a>
       <a href="base-datos.php" <?= $activeAdminItem === 'database' ? 'aria-current="page"' : '' ?>>Base de datos</a>

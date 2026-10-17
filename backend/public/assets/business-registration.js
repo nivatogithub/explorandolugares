@@ -15,12 +15,13 @@
   const authorityWrap = document.querySelector('#registration-authority-wrap');
   const authorityInput = document.querySelector('#registration-authority-document');
   let timer;
-  const endpoint = `${form.dataset.searchUrl}?search=1`;
+  const endpoint = `${form.dataset.searchUrl}?tipo=business&search=1`;
 
   function choose(mode, id = '') {
     type.value = mode;
     businessId.value = id;
     const isNew = mode === 'new_business';
+    const details=document.querySelector('#registration-new-details');if(details){details.hidden=!isNew;details.disabled=!isNew;}
     newNameWrap.hidden = !isNew;
     newName.required = isNew;
     submit.disabled = !mode;
@@ -73,6 +74,7 @@
       const data = await response.json();
       category.replaceChildren(new Option('Selecciona una categoría', ''));
       for (const item of data.results || []) category.add(new Option(item.label, item.code));
+      const extras=document.querySelector('#registration-extra-categories');if(extras){extras.replaceChildren();for(const item of data.results||[]){const label=document.createElement('label');const input=document.createElement('input');input.type='checkbox';input.name='category_codes[]';input.value=item.code;label.append(input,document.createTextNode(item.label));extras.append(label);}}
       category.disabled = false;
     } catch {
       category.replaceChildren(new Option('No se pudieron cargar las categorías', ''));
@@ -83,7 +85,7 @@
     const term = search.value.trim();
     choose('', '');
     if (term.length < 2 || !destination.value || !category.value) {
-      results.innerHTML = '<p>Escribe al menos dos letras para buscar.</p>'; missing.disabled = !(destination.value && category.value); return;
+      results.innerHTML = '<p>Escribe al menos dos letras para buscar.</p>'; missing.disabled = true; return;
     }
     results.innerHTML = '<p>Buscando…</p>';
     try {
@@ -95,7 +97,7 @@
   }
 
   destination.addEventListener('change', loadCategories);
-  category.addEventListener('change', () => { search.disabled = !category.value; search.value = ''; results.innerHTML = '<p>Escribe el nombre del negocio para buscarlo.</p>'; missing.disabled = !category.value; choose('', ''); if (category.value) search.focus(); });
+  category.addEventListener('change', () => { search.disabled = !category.value; search.value = ''; results.innerHTML = '<p>Escribe el nombre del negocio para buscarlo.</p>'; missing.disabled = true; choose('', ''); if (category.value) search.focus(); });
   search.addEventListener('input', () => { clearTimeout(timer); timer = setTimeout(searchBusinesses, 250); });
   missing.addEventListener('click', () => choose('new_business'));
   form.addEventListener('submit', (event) => {

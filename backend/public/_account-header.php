@@ -1,0 +1,7 @@
+<?php
+declare(strict_types=1);
+if(!function_exists('db')){http_response_code(404);exit;}
+if(isset($_SESSION['business_account_id'])&&time()-(int)($_SESSION['business_last_seen']??0)>1800)unset($_SESSION['business_account_id']);
+require_once dirname((new ReflectionFunction('db'))->getFileName()).'/BusinessAccountPortalService.php';
+$headerAccount=empty($_SESSION['business_account_id'])?null:(new BusinessAccountPortalService(db()))->current((int)$_SESSION['business_account_id']);
+?><link rel="stylesheet" href="/assets/account-header.css?v=1"><div class="portal-account-strip" aria-label="Tu cuenta"><div class="portal-account-strip-inner"><?php if($headerAccount):?><a href="/negocios/portal/" class="portal-account-name"><?=esc($headerAccount['display_name'])?></a><?php if(!empty($_SESSION['admin_account_id'])):?><a href="/admin/index.php">Administración</a><?php endif ?><form method="post" action="/negocios/salir/"><input type="hidden" name="csrf" value="<?=esc($_SESSION['csrf'])?>"><button type="submit">Cerrar sesión</button></form><?php elseif(!empty($_SESSION['admin'])):?><span>Administrador</span><form method="post" action="/admin/index.php"><input type="hidden" name="csrf" value="<?=esc($_SESSION['csrf'])?>"><input type="hidden" name="action" value="logout"><button type="submit">Cerrar sesión</button></form><?php else:?><a href="/negocios/acceso/">Iniciar sesión</a><?php endif ?></div></div>

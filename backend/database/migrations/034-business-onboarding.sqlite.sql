@@ -1,0 +1,3 @@
+ALTER TABLE business_account_applications ADD COLUMN business_details_json TEXT NULL;
+CREATE TABLE account_consents(account_id INTEGER NOT NULL REFERENCES accounts(id) ON DELETE CASCADE,consent_version TEXT NOT NULL,accepted_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,PRIMARY KEY(account_id,consent_version));
+CREATE TABLE business_application_images(id INTEGER PRIMARY KEY AUTOINCREMENT,application_id INTEGER NOT NULL REFERENCES business_account_applications(id) ON DELETE CASCADE,storage_name TEXT NOT NULL UNIQUE,original_name TEXT NOT NULL,mime_type TEXT NOT NULL,file_size INTEGER NOT NULL,width INTEGER NOT NULL,height INTEGER NOT NULL,created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP);

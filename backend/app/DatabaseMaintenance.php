@@ -211,6 +211,11 @@ final class DatabaseMaintenance
             'checks'=>[['operating_costs',['cost_date','category','amount_cop','destination_id','voided_at']],['subscription_cancellation_requests',['subscription_id','business_id','account_id','reason_code','status','review_note']]],
             'requires'=>['businesses','business_subscriptions','accounts','destinations'],
         ],
+        '034-business-onboarding'=>[
+            'file'=>'034-business-onboarding.mysql.sql',
+            'checks'=>[['business_account_applications',['business_details_json']],['account_consents',['account_id','consent_version','accepted_at']],['business_application_images',['application_id','storage_name','mime_type']]],
+            'requires'=>['accounts','business_account_applications'],
+        ],
         '033-account-roles'=>[
             'file'=>'033-account-roles.mysql.sql',
             'checks'=>[['account_roles',['account_id','role','created_at']]],
