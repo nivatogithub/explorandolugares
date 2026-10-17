@@ -1,20 +1,20 @@
-# Lugar 3 · Medellín · entrega privada de investigación
+# Lugar 3 · Medellín
 
 ## Entrega vigente V3 para revisión local · 17/10/2026
 
-**ZIP V3 preparado y comprobado:** exactamente8atractivos principales y9fotografías distintas porarchivo,hashyfuente. Orden: ParqueExplora, PueblitoPaisa, JardínBotánico, Comuna13, MuseoAntioquia, Arví, CatedralMetropolitana y PiesDescalzos. Selección editorial porrelevancia/variedad, independiente defotos; inventario28conservado secundario. Coltejer NOtarjeta.
+El ZIP está preparado y pasó el importador PHP real: ocho atractivos y nueve fotografías diferentes por archivo, hash y fuente. Orden: Parque Explora, Pueblito Paisa, Jardín Botánico, Comuna 13, Museo de Antioquia, Arví, Catedral Metropolitana y Pies Descalzos. Los textos están en ES, EN y PT-BR. Se eligieron por relevancia y variedad, no por disponibilidad de imágenes. El inventario amplio de 28 sitios permanece secundario. Coltejer no es una tarjeta.
 
-Portada propuesta7: panorama distante de2005,Fabioj,CCBYSA3, conColtejer identificado poranotaciónfuente y silueta pequeña visible dentrodecityscape. Fuente disponible960x202: histórica ylimitada,noampliar. Noes aprobacióneditorial. PrimerosplanosColtejer anteriores yskyline2011sinColtejer quedan antecedentes; museo2010interior fue rechazado y reemplazado porfachada2020BernardGagnon.
+La portada propuesta 7 es un panorama distante de 2005 de Fabioj, CC BY-SA 3.0. Incluye la ciudad y la silueta pequeña de Coltejer, identificada también mediante la anotación de la fuente. Solo se recuperó la miniatura oficial de 960 × 202: no ampliar; no es una portada definitiva aprobada. La vista de estadio de 2011 y la foto interior del museo de 2010 fueron rechazadas y se conservan como antecedentes.
 
-Se inspeccionaron los8nuevos archivosrecibidos yla referenciaJardínexistente, ademásderivados revisados parafidelidad ypresupuesto. Licenciascomerciales/adaptación conautores,enlaces ydeclaracióncambios. Cuatro archivosrecuperados son miniaturasoficiales(Catedral,Explora,panorama,Museofachada) porqueoriginales devolvieronHTTP429: **no afirmar maestroscompletos descargados**. URLsoriginales yvariantes/hash trazables en`imagenes.json`,`descargas-v3.json`,`inspeccion-visual-v3.json`.
+Las nueve referencias y sus derivados fueron inspeccionados. Cuatro fuentes se recuperaron como miniaturas oficiales (Catedral, Explora, panorama y fachada del museo) porque los originales devolvieron HTTP 429. No se afirma que esos cuatro maestros completos estén descargados. Las URL originales, variantes, autores, licencias y hashes quedan en los manifiestos. Todas las fotografías son históricas y provisionales; no prueban condiciones actuales. Las tarjetas pesan menos de 120 KB y la portada menos de 300 KB, sin recorte ni ampliación.
 
-`paquete-preprod.zip` pasóel importadorPHP real`DestinationPackage::readZip` delworktreepreprod:8atractivos/9imágenes,tresidiomas,estado draft. Tambiénvalidaciónautomática deIDs,fotos/hashdistintos,referencias,licencias ypresupuestos300KBportada/120KBtarjetas. Fotografías provisionales,noIAfinal. Contenido públicoES/EN/PTsinreferenciasalprocesodetarjetas;geografíaútil distinguiendoCatedral/LaCandelaria,ParquesdelRío/PiesDescalzosySantaElena.
+El archivo opcional `historia-sidecar-preprod.json` propone una foto de Medellín desde Picacho en 2016, distinta de las nueve fotos del ZIP, con relato en tres idiomas. Es contexto del paisaje urbano actual, no representación de la fundación de 1675. Su integración privada está pendiente del coordinador.
 
-Historiaopcional: `historia-sidecar-preprod.json`, fotoPicacho2016diferente detodaslas9delZIPytexto3idiomas; aclaracontextopaisajeurbano2016,noimagendefundación1675. Integraciónprivada sidecarpendientecoordinador.
+`preview.html` presenta portada, historia y los ocho principales; inventario secundario y actividades están separados. Las decisiones locales se pueden exportar por componente e idioma. No hay aprobaciones. Para reproducir esta versión ejecutar `preparar-v3.py` y `validar.py`; los preparadores V1/V2 son antecedentes y no deben sobrescribir V3.
 
-`preview.html` muestraportada,historia,8principalesytresidiomas,coninventariosecundarioyactividadesseparadas;decisioneslocalesexportables,sinaprobaciones. Reproducirsolo`preparar-v3.py`(requierePillow,descargaseinspecciónprevias)y`validar.py`;preparadoresV1/V2sonantecedentesynodebenejecutarsesobrelaversiónvigente.
+Pendientes: importación serial y comprobación visual en PHP/MySQL local por el coordinador; revisión humana de textos, originales y usos; recuperación de maestros completos; ilustraciones posteriores autorizadas y segunda revisión; profundidad restante y actividades. El worker no tocó la base compartida, contenedores, Chrome ni producción. No generó IA ni publicó. El ZIP válido no significa destino aprobado o terminado.
 
-**Pendientes:** coordinadorimportaZIPserialmenteenPHP/MySQLlocalycompruebarenderreal/idiomas/recortes;selección/revisiónhumanadeoriginales,textos,usos/licencias;recuperarmaestroscompletoscuandopermitalafuente;ilustracionesautorizadasdespuésysegundarevisión;profundidadrestanteyactividades. SinBDtocadaporworker,contenedores,Chrome,generaciónIA,publicaciónniaprobación. Losdocumentosanterioressiguientesquedancomohistorialypuedencontenerrecuentossuperados.
+Los apartados siguientes son antecedentes y pueden contener recuentos superados.
 
 ## Revisión V3 en preparación: selección turística de exactamente ocho
 
