@@ -108,7 +108,7 @@ final class DestinationImporter
                         if($mapUrl!=='')self::https($mapUrl);
                         if($externalUrl!=='')self::https($externalUrl);
                         $poiStatus=(string)($destination['translations']['es']['places'][$i]['publication_status']??(($poi['type']??'place')==='experience'?'draft':'published'));
-                        if($poiStatus==='published'&&($poi['type']??'place')==='experience'&&($externalUrl===''||trim((string)($poi['external_label']??''))===''))throw new RuntimeException("La experiencia {$poi['slug']} necesita un enlace y texto de consulta en {$locale} antes de publicarse.");
+                        if($poiStatus==='published'&&$externalUrl!==''&&trim((string)($poi['external_label']??''))==='')throw new RuntimeException("La experiencia {$poi['slug']} necesita un enlace y texto de consulta en {$locale} antes de publicarse.");
                         $poiTranslationInsert->execute([$poiIds[$i],$locale,$poi['name'],$poi['description'],$mapUrl,$externalUrl,(string)($poi['external_label']??'')]);
                     }
                 }

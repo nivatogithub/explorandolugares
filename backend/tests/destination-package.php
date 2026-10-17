@@ -12,6 +12,7 @@ package_check($sonson['manifest']['destination']['slug']==='sonson','The approve
 package_check(count($sonson['manifest']['places'])===4&&count($sonson['images'])===5,'The approved Sonsón package contains its four places and five referenced images.');
 package_check($sonson['manifest']['destination']['translations']['es']['display_name']==='Sonsón','The approved Sonsón package keeps its Spanish destination name.');
 $experience=$example['manifest'];$experience['places'][0]['type']='experience';
+DestinationPackage::validateManifest($experience); // Editorial experience without an operator link is valid.
 foreach(['es'=>'Consultar com o operador','en'=>'Check with operator','pt-BR'=>'Consultar o operador'] as $locale=>$label){$experience['places'][0]['translations'][$locale]['external_url']='https://example.org/experience';$experience['places'][0]['translations'][$locale]['external_label']=$label;}
 DestinationPackage::validateManifest($experience);
 $experience['places'][0]['translations']['es']['external_url']='http://example.org/experience';

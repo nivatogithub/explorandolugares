@@ -112,7 +112,7 @@ final class DestinationPackage
                 if (!is_array($translation) || trim((string)($translation['name'] ?? '')) === '' || trim((string)($translation['description'] ?? '')) === '') throw new RuntimeException('Cada atractivo necesita nombre y descripción en español, inglés y portugués.');
                 $operatorUrl=trim((string)($translation['external_url']??''));
                 if($operatorUrl!==''&&(!filter_var($operatorUrl,FILTER_VALIDATE_URL)||parse_url($operatorUrl,PHP_URL_SCHEME)!=='https'))throw new RuntimeException('Los enlaces a operadores deben usar HTTPS.');
-                if(($place['type']??'place')==='experience'&&($place['publication_status']??'draft')==='published'&&($operatorUrl===''||trim((string)($translation['external_label']??''))===''))throw new RuntimeException('Antes de publicar una experiencia, incluye el enlace y los datos de contacto confirmados en los tres idiomas.');
+                if($operatorUrl!==''&&trim((string)($translation['external_label']??''))==='')throw new RuntimeException('Incluye el texto de cada enlace externo en los tres idiomas.');
             }
         }
         self::imageReferences($manifest);
