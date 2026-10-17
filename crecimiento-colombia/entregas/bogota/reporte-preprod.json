@@ -39,6 +39,7 @@
   "verified_local_pages": "verificacion-preprod-v3.json",
   "visual_evidence": [
     "evidencias-v3/portada-preprod.png",
+    "evidencias-v3/historia-visible-preprod.png",
     "evidencias-v3/historia-preprod.png"
   ],
   "legacy_report": "historial/reporte-preprod-v2.json",
@@ -48,5 +49,14 @@
     "La foto del monumento Bolívar es una propuesta provisional vista desde atrás; elegir referencia e ilustraciónfinal antes de publicar.",
     "Directorio y actividades no integrados.",
     "Preprod tuvo reinicio y cortes; última comprobación HTTP completada sin errores, foto historia renderizada."
-  ]
+  ],
+  "browser_verified": {
+    "hero_colpatria": true,
+    "history_natural_dimensions": [
+      900,
+      1200
+    ],
+    "attractions_visible": 8,
+    "all_attraction_images_decoded": true
+  }
 }
