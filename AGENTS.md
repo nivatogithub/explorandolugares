@@ -19,3 +19,5 @@
 - Mostrar alternativas de diseño de forma visible y numerada cuando se solicite comparar; evitar carruseles que oculten opciones.
 - No desplegar ni reemplazar el sitio de producción al guardar un borrador. Mantener las versiones y decisiones documentadas.
 - Para pruebas, preparación y publicación, aplicar `docs/REGLAS_OPERATIVAS_DESPLIEGUE.md`: una autorización por tarea concreta cubre los pasos rutinarios de esa tarea; detenerse solo ante los límites de riesgo allí definidos o un bloqueo técnico que exija aprobación.
+
+- Para investigar, seleccionar atractivos o preparar imágenes/textos de destinos, leer `crecimiento-colombia/GUIA_GENERACION_DESTINOS.md`; aplicar ocho atractivos prioritarios en los destinos amplios actuales y separar portada, historia y fichas.
