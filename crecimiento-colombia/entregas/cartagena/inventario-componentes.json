@@ -11,7 +11,7 @@
     "candidato_por_validar": 3
   },
   "references_human_approved": 3,
-  "illustrations_generated": 0,
+  "illustrations_generated": 1,
   "illustrations_approved": 0,
   "integrated_sites": 0,
   "published_sites": 0,
@@ -29,5 +29,7 @@
     "instruction": "hay que hacerla con ai siguiendo el skill de iimagnes que tenemos",
     "execution_deferred_reason": "primero corregir selección máximo8 según mensaje actual",
     "final_art_approved": false
-  }
+  },
+  "hero_candidate": "imagenes/ia/procedencia-portada-v1.json",
+  "correction_report": "correcciones-v3.json"
 }

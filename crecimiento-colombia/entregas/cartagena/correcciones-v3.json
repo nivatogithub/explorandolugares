@@ -1,0 +1,71 @@
+{
+  "request": "Acortar verticalmente Por qué visitar; reemplazar cinco referencias; generar portada con skill existente.",
+  "reasons_before_chars": {
+    "es": 1684,
+    "en": 1593,
+    "pt-BR": 1583
+  },
+  "reasons_after_chars": {
+    "es": 263,
+    "en": 251,
+    "pt-BR": 251
+  },
+  "reasons_after": {
+    "es": [
+      "Caminar entre murallas, plazas y balcones del centro histórico.",
+      "Descubrir Getsemaní, su vida de barrio y sus expresiones culturales.",
+      "Conocer la historia caribeña a través de fortalezas y museos.",
+      "Combinar ciudad y mar con una excursión a Barú o las Islas del Rosario."
+    ],
+    "en": [
+      "Walk among the historic centre’s walls, squares and balconies.",
+      "Discover Getsemaní, its neighbourhood life and cultural expressions.",
+      "Explore Caribbean history through fortresses and museums.",
+      "Combine city and sea with a trip to Barú or the Rosario Islands."
+    ],
+    "pt-BR": [
+      "Caminhar entre muralhas, praças e varandas do centro histórico.",
+      "Conhecer Getsemaní, sua vida de bairro e suas expressões culturais.",
+      "Descobrir a história caribenha em fortalezas e museus.",
+      "Combinar cidade e mar com um passeio a Barú ou às Ilhas do Rosário."
+    ]
+  },
+  "reason_approval": "pending_human_review",
+  "reference_replacements": [
+    "centro-historico",
+    "san-felipe",
+    "getsemani",
+    "islas-rosario",
+    "la-boquilla"
+  ],
+  "references_conserved_provisionally": [
+    "playa-blanca-baru",
+    "la-popa",
+    "muhca"
+  ],
+  "conserved_is_final_approval": false,
+  "hero_generation_authorized": true,
+  "hero_final_approved": false,
+  "production_authorized": false,
+  "layout_decision": "Cuatro motivos breves, sin duplicar descripciones de ocho atractivos. Imagen de historia opcional y relacionada; no imagen decorativa obligatoria en motivos.",
+  "hero_generated": 1,
+  "hero_approved": 0,
+  "preprod_reasons_updated": true,
+  "preprod_photographs_replaced": false,
+  "reference_selection_status": {
+    "centro-historico": "propuesta_aerea_para_elegir",
+    "san-felipe": "propuesta_panorama_exterior_y_alternativa_dron_para_elegir",
+    "getsemani": "propuesta_sombrillas_para_elegir",
+    "islas-rosario": "nueva_busqueda_pendiente_calidad_insuficiente",
+    "la-boquilla": "nueva_busqueda_pendiente_calidad_insuficiente"
+  },
+  "visual_evidence": [
+    "evidencias-v3/motivos-preprod.png",
+    "evidencias-v3/motivos-mobile-390.png"
+  ],
+  "checked_views": [
+    "1600px_escritorio",
+    "910px_tablet_tarjeta282px",
+    "390px_iframe_pagina_real"
+  ]
+}
