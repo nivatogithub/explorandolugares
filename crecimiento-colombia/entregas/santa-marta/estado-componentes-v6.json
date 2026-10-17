@@ -14,9 +14,11 @@
         "SM-H6-01"
       ],
       "rejected_candidates": [
-        "SM-H6-02"
+        "SM-H6-02",
+        "SM-H6-03",
+        "SM-H6-04"
       ],
-      "additional_research": "dos_aereos_oficiales_Juan_Cano_pendientes_metadatos_y_descarga"
+      "additional_research": "video_Pexels_31559774_pendiente_descarga_inspeccion"
     },
     "tayrona": {
       "status": "dos_opciones_listas_para_eleccion_original",
@@ -32,8 +34,10 @@
       "crop_review": "simulaciones_anchas_y_moviles_inspeccionadas"
     },
     "acuario": {
-      "status": "referencia_2011_debil",
-      "next": "Encontrar instalación reconocible y permiso adecuado; no reemplazar con Mundo Marino."
+      "status": "original_historico_2010_inspeccionado_condicional",
+      "next": "Revisar entrada reconocible y condición histórica; buscar toma reciente si no satisface.",
+      "candidate_id": "SM-A6-01",
+      "reference_approved": false
     },
     "history": {
       "status": "referencia_pendiente_eleccion",
@@ -57,7 +61,15 @@
       ],
       "text_state": "borrador_completo",
       "specific_photos_complete": false,
-      "imported": false
+      "imported": false,
+      "visual_review": {
+        "SM-E6-01": "context_only",
+        "SM-E6-02": "rejected_for_main_activity",
+        "SM-E6-03": "context_only",
+        "SM-E6-04": "candidate_editorial_stop",
+        "SM-E6-05": "candidate_editorial_destination",
+        "SM-E6-06": "conditional_editorial_context"
+      }
     },
     "directory": {
       "count": 10,

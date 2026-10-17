@@ -44,3 +44,13 @@ La selección de ocho se conserva; Ciudad Perdida se investiga como expedición 
 - Historia/Museo Casa de la Aduana tienen fotos distintas del mismo inmueble. Centro histórico conserva Catedral como referencia pendiente de una vista más completa del recorrido; no presentar su revisión como cerrada.
 - Quinta, Taganga, Rodadero y Minca conservan fuentes y referencias por elegir; no se han aprobado automáticamente por las correcciones de portada/Tayrona.
 - Próximo control: inspeccionar nuevos originales, rechazar encuadres débiles, preparar opciones numeradas y mostrar su función exacta al propietario en chat. Generar solo el componente cuyo original/encargo reciba aprobación individual.
+
+## Inspección ampliada de originales (17 octubre)
+
+Los aéreos oficiales SM-H6-03 y04 muestran puerto/contenedores y barcos/agua respectivamente: se rechazan para portada, aunque su base de dominio público esté documentada. La licencia no sustituye pertinencia editorial.
+
+Se inspeccionaron seis originales de experiencias: E01 solo peces/coral (contexto), E02 turistas en sendero con persona dominante (descartado como imagen principal), E03 colibrí de Minca (contexto natural, no café), E04 Parque de los Novios (parada editorial candidata), E05 Teyuna desde arriba (destino del trekking candidato), E06 velero al ocaso con El Morro (contexto, no embarcación del operador y recorte horizontal inadecuado). No se asignaron activos finales ni se atribuyeron personas/barcos a negocios.
+
+Acuario SM-A6-01 permite identificar la entrada, con letrero y muelle, pero data de2010: referencia histórica condicional, no prueba de aspecto actual. Se prepararon comparaciones técnicas sin generación.
+
+Video original Pexels31559774 localizado para investigar portada urbana; fuente, autor, condiciones y script de descarga preparados. Una imagen de finca Minca de Flickr con CC BY-ND2 se excluyó para transformación; otra foto llamada granosMinca solo documenta Colombia y no acredita finca local. Estas exclusiones permanecen pendientes de reemplazo específico, sin rellenar el paquete con fotos ajenas al componente.
