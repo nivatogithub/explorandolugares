@@ -1,0 +1,30 @@
+{
+  "scope": "preparacion_local_no_importada",
+  "base": "preprod-v3/paquete-destino.json",
+  "base_sha256": "85a43e3ac88cc896589c384751715781c26fd12571f7fda10a4be9aa102f79c8",
+  "generator_untouched": "preparar-v3.py",
+  "selection_preserved": [
+    "plaza",
+    "candelaria",
+    "museo-oro",
+    "monserrate",
+    "botero",
+    "usaquen",
+    "jardin",
+    "simon"
+  ],
+  "only_changed_component": "jardin.image y notas de avance veraces; orden/textos de lugares intactos",
+  "approved_image_sha256": "dc722438cc464cbccf05e5717455f2e35a557301683162038ef254ccb87d66bf",
+  "zip_sha256": "113c2b5194c02923e35aca985936405c64400dd1dba04a7d61dcd6778261f87e",
+  "approval_file": "aprobacion-ilustracion-tropicario-v1.json",
+  "metadata_approval_scope": "Aprobación ilustración, no nuevosalt/caption/traducciones ni puestoTOP8",
+  "provenance_sidecar": "imagenes/ia/procedencia-tropicario-v1.json",
+  "provenance_not_embedded_in_zip_schema2": true,
+  "size_bytes": 358534,
+  "limit_300kb_met": false,
+  "reason_no_reencode": "Preservar exactamente hash aprobado;358534bytes superaobjetivo300KB pero bajo máximoimportador5MB. Nuevaoptimización requiere revisión delderivado.",
+  "production_authorized": false,
+  "database_imported": false,
+  "other_assets_unchanged": true,
+  "notes": "Notas de avance actualizadas para no negar aprobación Jardín; consumidor debe revisar procedencia sidecar antes de importar."
+}
