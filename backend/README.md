@@ -10,7 +10,7 @@ El registro público de cuenta y solicitud está habilitado solo en los entornos
 
 ### Pruebas privadas en producción
 
-El panel `/admin/index.php?tab=sistema` incluye **Preproducción · Acceso al portal de negocios**. Ahí puedes dejar el registro cerrado al público, generar o rotar una llave privada y copiarla una sola vez; también puedes borrar la llave para revocar inmediatamente las sesiones de prueba. El panel actualiza de forma atómica solo `business_accounts_enabled` y `business_accounts_test_key` en `private/config.php`, fuera de la raíz web, y conserva los demás valores. Para probar, inicia una sesión por HTTPS en `/negocios/registro/?prueba=LLAVE`; se limpia enseguida la URL y se habilita una sesión de cuatro horas. Quienes no tengan esa sesión siguen viendo las rutas como inexistentes. Al elegir **Abierto al público**, el panel exige escribir `ABRIR REGISTRO PUBLICO` y borra la llave de prueba. Para volver al modo privado, cierra el acceso público y genera una llave nueva. La llave no se versiona ni se muestra después de generarla; como aparece en la primera petición, los registros técnicos del hosting podrían conservarla, así que mantenla privada.
+El acceso de pruebas mediante `?prueba=` fue retirado. Los flujos empresariales se prueban en preproducción; producción conserva `business_accounts_enabled` como activación explícita en configuración privada.
 
 ## Entrega para cPanel
 
