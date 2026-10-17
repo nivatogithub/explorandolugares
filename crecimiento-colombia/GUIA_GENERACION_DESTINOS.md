@@ -223,3 +223,7 @@ Usar el proceso y límites de entregas/cartagena/PILOTO_SEMIRREALISTA.md. Separa
 
 ## Revisión de atractivos semirrealistas · 17/10/2026
 Completar todas las tarjetas de «Qué conocer» antes de presentar un destino como listo para revisión integral. Una generación desde texto no verifica monumentos: cotejar silueta y estructuras, rechazar adiciones y usar una referencia ya aprobada si existe. Guardar el alcance representativo de calles/archipiélagos y las incertidumbres, sin afirmar ubicación exacta de escenas compuestas. Generación e integración local no equivalen a aprobación del propietario. Ver entregas/cartagena/REVISION_ATRACTIVOS_SEMIRREALISTAS.md.
+
+
+## Corrección de color · 17/10/2026
+El propietario rechaza mezclar fondos amarillos con salvia/verde. La prueba Cartagena v2 usa página #FAFAFA, panel #F1F2F4 y tarjetas blancas, bordes grises neutros y acento terracota. Sustituye la propuesta salvia anterior; no combinar ambas ni conservar avisos amarillos heredados. Las ilustraciones mantienen sus colores naturales.
