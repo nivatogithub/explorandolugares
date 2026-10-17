@@ -15,3 +15,5 @@ body.el-review-rest img{filter:none}
 
 body.el-review-rest .experience-art.is-painted{padding:0;overflow:hidden;}
 body.el-review-rest .experience-art.is-painted img{display:block;width:100%;height:100%;object-fit:cover;}
+
+body.el-review-rest .experience-art.is-painted > a{display:block;width:100%;height:100%;}

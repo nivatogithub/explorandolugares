@@ -23,5 +23,5 @@ Página #FAFAF7, paneles #E8EFEB, tarjetas #FFFFFF, bordes #D7E0DA, botones #C94
 - 16 derivados: 1.142.144 bytes en total; mayor archivo 199.698 bytes. No implica descargar los dos tamaños por imagen.
 - Siete imágenes de experiencias y nueva portada detectadas en navegador; fondo calculado rgb(250,250,247); comprobación sintáctica JS correcta.
 - Estilo pendiente: varias experiencias resultaron de realismo alto y requieren revisión artística humana.
-- Ocho atractivos conservan las ilustraciones SVG anteriores: NO son imágenes finales semirrealistas ni están aprobados por esta entrega.
+- Actualización posterior: los ocho atractivos ya tienen propuestas semirrealistas integradas en la vista privada; reemplazan los SVG anteriores. Ver ATRACCIONES_SEMIRREALISTAS_MANIFIESTO.json y QA_ATRACTIVOS_SEMIRREALISTAS.json. Pendientes de cotejo y aprobación humana individual.
 - Sin cambios de base de datos ni publicación en producción.

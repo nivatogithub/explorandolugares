@@ -1,0 +1,310 @@
+{
+  "approved": false,
+  "scope": "solo_preview_privada_cartagena",
+  "images": [
+    {
+      "key": "centro-historico",
+      "role": "que_conocer",
+      "style": "EL-SEMI-REALISTA-1",
+      "status": "propuesta_pendiente_revision_humana",
+      "generation": "builtin image_gen; composición independiente desde descripción, sin fotografía de entrada",
+      "prompt": "Use case: stylized-concept. Asset: Cartagena 'Qué conocer' attraction card, landscape 3:2. Create a sophisticated clearly HAND-PAINTED SEMI-REALISTIC editorial travel illustration EL-SEMI-REALISTA-1. Visible ink-and-gouache brushwork and expressive organic shapes, detailed convincing architecture and vegetation, rich natural blue/green/terracotta colours, no overall yellow wash. NOT a photograph or photorealistic rendering, NOT flat geometric SVG, NOT childish. People if present fully drawn, gently caricatured expressive faces and complete clothing/body. Composition independent based on documented features, no supplied photographic reference. No text, lettering, logo, watermark, frame. Main subject fills frame with safe space for responsive crop. Scene: Centro Histórico de Cartagena: broad eye-level panorama from Plaza de los Coches toward the iconic ochre-yellow Torre del Reloj gate, square base, clock faces and pointed spire centered over the low stone gateway with three arched passages. Continuous colonial arcades and warm plaster buildings, a few full expressive illustrated visitors. Flat coastal city, no mountains. Make clock tower and gates recognizable, no invented seaside steep street.",
+      "sources": [
+        "https://colombia.travel/es/cartagena/cartagena-colonial",
+        "https://colombia.travel/en/cartagena/visit-gate-and-clock-tower"
+      ],
+      "checked_at": "2026-10-17",
+      "master_sha256": "62e90bd8b60078b55e7839192ba73116f96dcb6528aad8f86f96cd7500fb1bad",
+      "limits": "Interpretación editorial, no fotografía ni levantamiento arquitectónico. Disposición de detalles y estado actual no acreditados por IA.",
+      "files": [
+        {
+          "path": "backend/public/assets/cartagena-piloto/centro-historico-480.webp",
+          "bytes": 39784,
+          "width": 480,
+          "height": 320,
+          "sha256": "6183dc86680fb32008cd1c7922a32089bfe6c7dc5f985f741a5e4a140cee1dca"
+        },
+        {
+          "path": "backend/public/assets/cartagena-piloto/centro-historico-800.webp",
+          "bytes": 100634,
+          "width": 800,
+          "height": 533,
+          "sha256": "b52c981b3df4cfb45d99822c6c7aae8ab53970e2c90b90e5d914d52a5d83c8ca"
+        }
+      ]
+    },
+    {
+      "key": "san-felipe",
+      "role": "que_conocer",
+      "style": "EL-SEMI-REALISTA-1",
+      "status": "propuesta_pendiente_revision_humana",
+      "generation": "builtin image_gen; transformación de referencia real aprobada CTG-02",
+      "prompt": "Use case: style-transfer. Transform ONLY the supplied approved real photograph of Castillo San Felipe de Barajas (2011) to detailed hand-painted semi-realistic editorial illustration EL-SEMI-REALISTA-1, landscape 3:2. Preserve exact physical fortification, walls, broad low bastions, top stone bell gable, red timber staircase, grass and foreground cannon and the real perspective. Do not invent extra sentry towers, pavilions, bay, skyline or buildings. Gentle bright natural daylight, visible organic gouache and ink texture, painterly sky, warm gray stone, fresh greens. Illustrated not photoreal, not geometric, no yellow filter, no text or watermark. Improve atmosphere without changing structure.",
+      "sources": [
+        "https://fortificacionescartagena.com.co/es/historia/castillo-san-felipe-de-barajas/"
+      ],
+      "checked_at": "2026-10-17",
+      "master_sha256": "d9d8b9d5578887f736307e7cfef7b4299e61198eba85dfcd71b27fb2d3fdbed8",
+      "limits": "Interpretación editorial, no fotografía ni levantamiento arquitectónico. Disposición de detalles y estado actual no acreditados por IA.",
+      "files": [
+        {
+          "path": "backend/public/assets/cartagena-piloto/san-felipe-480.webp",
+          "bytes": 33850,
+          "width": 480,
+          "height": 320,
+          "sha256": "f782bc99b97df6169f18dc4cca3046a26216995bf4e82cefe8c1654233b98ed2"
+        },
+        {
+          "path": "backend/public/assets/cartagena-piloto/san-felipe-800.webp",
+          "bytes": 89270,
+          "width": 800,
+          "height": 533,
+          "sha256": "25d795d0cad345e8992f52ad8ca28f38a480dffe8e1d28b70ff6f0c5025f89d8"
+        }
+      ],
+      "reference": {
+        "id": "san-felipe-2011",
+        "type": "photograph",
+        "author": "JuanGris (Lucía Estévez)",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Cartagena-Castillo_San_Felipe_de_Barajas.JPG",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Cartagena-Castillo_San_Felipe_de_Barajas.JPG",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "commercial_use": true,
+        "adaptation": true,
+        "share_alike": true,
+        "consulted_at": "2026-10-16",
+        "photographed_at": "2011-05-08",
+        "credit": "JuanGris (Lucía Estévez) / Wikimedia Commons / CC BY-SA 3.0; redimensionado y convertido a WebP",
+        "original": {
+          "file": "imagenes/originales/san-felipe-2011.jpg",
+          "sha256": "d809d808080c576bd03540700458d7cca24e5344a4fcac32f89df27764afd3b2",
+          "bytes": 3996021
+        },
+        "derivatives": [
+          {
+            "file": "imagenes/derivados/san-felipe-2011-portada.webp",
+            "dimensions": [
+              1600,
+              1200
+            ],
+            "bytes": 253894,
+            "sha256": "794690f38826ef44160ac50483088749c522de354d350190f8525e2fe0b84ae9",
+            "quality": 82,
+            "crop": null,
+            "budget_ok": true
+          },
+          {
+            "file": "imagenes/derivados/san-felipe-2011-tarjeta.webp",
+            "dimensions": [
+              800,
+              600
+            ],
+            "bytes": 74456,
+            "sha256": "9aacdf2b8dafebdf379342624bee0fa3c2ae1c32ae804ac753649d71bbd8de5f",
+            "quality": 82,
+            "crop": null,
+            "budget_ok": true
+          }
+        ],
+        "alt": {
+          "es": "Castillo de San Felipe de Barajas y baterías colaterales, fotografía de 2011.",
+          "en": "San Felipe de Barajas Castle and its flanking batteries, photographed in 2011.",
+          "pt-BR": "Castelo de San Felipe de Barajas e baterias laterais, fotografia de 2011."
+        },
+        "qa_status": "pendiente_revision_visual_humana",
+        "recency_warning": "Fotografía histórica; no acredita estado actual.",
+        "tool": "Pillow 12.3.0",
+        "transforms": [
+          "orientacion EXIF",
+          "sRGB",
+          "sin recorte",
+          "sin ampliacion",
+          "derivado sin EXIF/GPS"
+        ],
+        "approved": false
+      },
+      "discarded_version": "exec-3463980f-bdb6-4c2c-a3f0-b4f868726e8b.png: añadió estructuras; no integrado"
+    },
+    {
+      "key": "getsemani",
+      "role": "que_conocer",
+      "style": "EL-SEMI-REALISTA-1",
+      "status": "propuesta_pendiente_revision_humana",
+      "generation": "builtin image_gen; composición independiente desde descripción, sin fotografía de entrada",
+      "prompt": "Use case: stylized-concept. Asset: Cartagena 'Qué conocer' attraction card, landscape 3:2. Create a sophisticated clearly HAND-PAINTED SEMI-REALISTIC editorial travel illustration EL-SEMI-REALISTA-1. Visible ink-and-gouache brushwork and expressive organic shapes, detailed convincing architecture and vegetation, rich natural blue/green/terracotta colours, no overall yellow wash. NOT a photograph or photorealistic rendering, NOT flat geometric SVG, NOT childish. People if present fully drawn, gently caricatured expressive faces and complete clothing/body. Composition independent based on documented features, no supplied photographic reference. No text, lettering, logo, watermark, frame. Main subject fills frame with safe space for responsive crop. Scene: Getsemaní neighbourhood Cartagena: human-height view down a FLAT narrow street lined with colorful one/two-storey Caribbean colonial houses, wooden doors and window grilles, a few projecting wooden balconies with bougainvillea; overhead colorful triangular pennants and original nonfigurative street mural. Expressive fully drawn residents/visitors in everyday clothes. No copying any existing mural, no logos, no invented cathedral or mountains, no steep road. Focus local lived street identity.",
+      "sources": [
+        "https://cartagenacomisionfilmica.com/es/locaciones"
+      ],
+      "checked_at": "2026-10-17",
+      "master_sha256": "435db915086ed389e7ad6f95ffad0b18dd91a761770e6910a529e09aa33256db",
+      "limits": "Interpretación editorial, no fotografía ni levantamiento arquitectónico. Disposición de detalles y estado actual no acreditados por IA.",
+      "files": [
+        {
+          "path": "backend/public/assets/cartagena-piloto/getsemani-480.webp",
+          "bytes": 47404,
+          "width": 480,
+          "height": 320,
+          "sha256": "55d3e2e6c93ea3e4b525c437f088d7fadfa6b923fabefe461e837766d45816fc"
+        },
+        {
+          "path": "backend/public/assets/cartagena-piloto/getsemani-800.webp",
+          "bytes": 112702,
+          "width": 800,
+          "height": 533,
+          "sha256": "fd600e4c43c1d63f31d069982fe98e0ba3507af2375455553ff2a49e69364764"
+        }
+      ]
+    },
+    {
+      "key": "islas-rosario",
+      "role": "que_conocer",
+      "style": "EL-SEMI-REALISTA-1",
+      "status": "propuesta_pendiente_revision_humana",
+      "generation": "builtin image_gen; composición independiente desde descripción, sin fotografía de entrada",
+      "prompt": "Use case: stylized-concept. Asset: Cartagena 'Qué conocer' attraction card, landscape 3:2. Create a sophisticated clearly HAND-PAINTED SEMI-REALISTIC editorial travel illustration EL-SEMI-REALISTA-1. Visible ink-and-gouache brushwork and expressive organic shapes, detailed convincing architecture and vegetation, rich natural blue/green/terracotta colours, no overall yellow wash. NOT a photograph or photorealistic rendering, NOT flat geometric SVG, NOT childish. People if present fully drawn, gently caricatured expressive faces and complete clothing/body. Composition independent based on documented features, no supplied photographic reference. No text, lettering, logo, watermark, frame. Main subject fills frame with safe space for responsive crop. Scene: Islas del Rosario off Cartagena: oblique aerial editorial landscape of several SMALL LOW coral islands, irregular compact green tree cover, pale shallow turquoise reef patches transitioning into deep blue water, a few simple low structures partly hidden by vegetation, small timber pier and narrow beach strips. Islands clearly separated by water, flat horizon, NO volcanic peaks, no vast Maldives overwater villa resort, no fantasy giant palm beach.",
+      "sources": [
+        "https://colombia.travel/es/cartagena/islas-del-rosario-y-de-san-bernardo"
+      ],
+      "checked_at": "2026-10-17",
+      "master_sha256": "75d5cb369bed0e504f83d446dbeea474419d725cbb65e02cf6986adbc8cd3825",
+      "limits": "Interpretación editorial, no fotografía ni levantamiento arquitectónico. Disposición de detalles y estado actual no acreditados por IA.",
+      "files": [
+        {
+          "path": "backend/public/assets/cartagena-piloto/islas-rosario-480.webp",
+          "bytes": 34048,
+          "width": 480,
+          "height": 320,
+          "sha256": "2a006e4e6272da81a9a6ddc80c59b28852600195cfa3f8f667a33939913f5b48"
+        },
+        {
+          "path": "backend/public/assets/cartagena-piloto/islas-rosario-800.webp",
+          "bytes": 86504,
+          "width": 800,
+          "height": 533,
+          "sha256": "f67c2fd07a367a7730f273415274bfbf3eb434b1cefe376de143ac8dbdec3cf0"
+        }
+      ]
+    },
+    {
+      "key": "playa-blanca-baru",
+      "role": "que_conocer",
+      "style": "EL-SEMI-REALISTA-1",
+      "status": "propuesta_pendiente_revision_humana",
+      "generation": "builtin image_gen; composición independiente desde descripción, sin fotografía de entrada",
+      "prompt": "Use case: stylized-concept. Asset: Cartagena 'Qué conocer' attraction card, landscape 3:2. Create a sophisticated clearly HAND-PAINTED SEMI-REALISTIC editorial travel illustration EL-SEMI-REALISTA-1. Visible ink-and-gouache brushwork and expressive organic shapes, detailed convincing architecture and vegetation, rich natural blue/green/terracotta colours, no overall yellow wash. NOT a photograph or photorealistic rendering, NOT flat geometric SVG, NOT childish. People if present fully drawn, gently caricatured expressive faces and complete clothing/body. Composition independent based on documented features, no supplied photographic reference. No text, lettering, logo, watermark, frame. Main subject fills frame with safe space for responsive crop. Scene: Playa Blanca Barú near Cartagena: elevated oblique view along a long continuous gently curving WHITE SAND beach with clear turquoise shallows fading blue, low green tropical vegetation behind, modest rustic beach shade structures set back and small full drawn visitors for scale. Natural flat coast, beach the focal point, not isolated coral island, no mountains, high-rise hotels or luxury fantasy villas.",
+      "sources": [
+        "https://colombia.travel/es/cartagena/playas-e-islas-del-rosario"
+      ],
+      "checked_at": "2026-10-17",
+      "master_sha256": "f3fe8cdc7a965c8a984f79f3082d28421142579f74d4c1011bfc32ead5d125a5",
+      "limits": "Interpretación editorial, no fotografía ni levantamiento arquitectónico. Disposición de detalles y estado actual no acreditados por IA.",
+      "files": [
+        {
+          "path": "backend/public/assets/cartagena-piloto/playa-blanca-baru-480.webp",
+          "bytes": 35954,
+          "width": 480,
+          "height": 320,
+          "sha256": "a4e60e35e7e76059b990f8305eb78901049ad44fbdf93c03b16c49a8f22543ed"
+        },
+        {
+          "path": "backend/public/assets/cartagena-piloto/playa-blanca-baru-800.webp",
+          "bytes": 92056,
+          "width": 800,
+          "height": 533,
+          "sha256": "f91ccc8e9a262afe750c6122f9aa2bdfedc3699642bf68f8ce2cb5fdb2dc8de8"
+        }
+      ]
+    },
+    {
+      "key": "cerro-popa",
+      "role": "que_conocer",
+      "style": "EL-SEMI-REALISTA-1",
+      "status": "propuesta_pendiente_revision_humana",
+      "generation": "builtin image_gen; composición independiente desde descripción, sin fotografía de entrada",
+      "prompt": "Use case: stylized-concept. Asset: Cartagena 'Qué conocer' attraction card, landscape 3:2. Create a sophisticated clearly HAND-PAINTED SEMI-REALISTIC editorial travel illustration EL-SEMI-REALISTA-1. Visible ink-and-gouache brushwork and expressive organic shapes, detailed convincing architecture and vegetation, rich natural blue/green/terracotta colours, no overall yellow wash. NOT a photograph or photorealistic rendering, NOT flat geometric SVG, NOT childish. People if present fully drawn, gently caricatured expressive faces and complete clothing/body. Composition independent based on documented features, no supplied photographic reference. No text, lettering, logo, watermark, frame. Main subject fills frame with safe space for responsive crop. Scene: Convento de La Popa Cartagena: interior colonial cloister courtyard, whitewashed two-storey arcaded galleries with rounded arches, warm terracotta tiled roof, aged timber balcony railings, flowering tropical plants in garden and stone paving. View from courtyard makes architecture protagonist. This is the hilltop convent, not the previously used panoramic stone cross. No Gothic spires, no fantasy dome, no mountains through cloister.",
+      "sources": [
+        "https://colombia.travel/es/cartagena/el-cerro-de-la-popa"
+      ],
+      "checked_at": "2026-10-17",
+      "master_sha256": "df660155880498556ef5f6ff60670185a21e5148902ce710d26dea5d08edd7da",
+      "limits": "Interpretación editorial, no fotografía ni levantamiento arquitectónico. Disposición de detalles y estado actual no acreditados por IA.",
+      "files": [
+        {
+          "path": "backend/public/assets/cartagena-piloto/cerro-popa-480.webp",
+          "bytes": 38716,
+          "width": 480,
+          "height": 320,
+          "sha256": "815344ed976864b77a41e6795e81ed3eb5939648773b266ab9fe268a4f7c04b5"
+        },
+        {
+          "path": "backend/public/assets/cartagena-piloto/cerro-popa-800.webp",
+          "bytes": 94434,
+          "width": 800,
+          "height": 533,
+          "sha256": "7a0dd03fefc1f8d48db31b1f1b1b89a26dfb60f0e4d4e80a8423cd8490e5ea71"
+        }
+      ]
+    },
+    {
+      "key": "san-pedro-claver",
+      "role": "que_conocer",
+      "style": "EL-SEMI-REALISTA-1",
+      "status": "propuesta_pendiente_revision_humana",
+      "generation": "builtin image_gen; composición independiente desde descripción, sin fotografía de entrada",
+      "prompt": "Use case: stylized-concept. Asset: Cartagena 'Qué conocer' attraction card, landscape 3:2. Create a sophisticated clearly HAND-PAINTED SEMI-REALISTIC editorial travel illustration EL-SEMI-REALISTA-1. Visible ink-and-gouache brushwork and expressive organic shapes, detailed convincing architecture and vegetation, rich natural blue/green/terracotta colours, no overall yellow wash. NOT a photograph or photorealistic rendering, NOT flat geometric SVG, NOT childish. People if present fully drawn, gently caricatured expressive faces and complete clothing/body. Composition independent based on documented features, no supplied photographic reference. No text, lettering, logo, watermark, frame. Main subject fills frame with safe space for responsive crop. Scene: San Pedro Claver church Cartagena: open plaza foreground, monumental weathered warm pale stone BAROQUE facade, central arched entrance with carved stone architectural framing, twin square bell towers and central rounded dome visible rising behind. Adjacent colonial convent stonework, modest palms and a few fully drawn visitors. Eye level wide three-quarter composition preserves complete facade and dome, no yellow clocktower, no Gothic cathedral, no sea directly behind plaza.",
+      "sources": [
+        "https://colombia.travel/es/cartagena/iglesia-y-monasterio-de-san-pedro-claver"
+      ],
+      "checked_at": "2026-10-17",
+      "master_sha256": "61a85a2c2c00e55decc39b3a7b3e8be5ba80e81a1ac23f8c1fd838c3d6786ca8",
+      "limits": "Interpretación editorial, no fotografía ni levantamiento arquitectónico. Disposición de detalles y estado actual no acreditados por IA.",
+      "files": [
+        {
+          "path": "backend/public/assets/cartagena-piloto/san-pedro-claver-480.webp",
+          "bytes": 42328,
+          "width": 480,
+          "height": 320,
+          "sha256": "961fd2a274f4cc602b9369cce37904b0b266ed62137a3f1f5d56e35265bd5c9f"
+        },
+        {
+          "path": "backend/public/assets/cartagena-piloto/san-pedro-claver-800.webp",
+          "bytes": 111028,
+          "width": 800,
+          "height": 533,
+          "sha256": "b7876c822c787115c77f256f2bd2baf8f38641a9212b462a043054d856a2bf77"
+        }
+      ]
+    },
+    {
+      "key": "bocagrande",
+      "role": "que_conocer",
+      "style": "EL-SEMI-REALISTA-1",
+      "status": "propuesta_pendiente_revision_humana",
+      "generation": "builtin image_gen; composición independiente desde descripción, sin fotografía de entrada",
+      "prompt": "Use case: stylized-concept. Asset: Cartagena 'Qué conocer' attraction card, landscape 3:2. Create a sophisticated clearly HAND-PAINTED SEMI-REALISTIC editorial travel illustration EL-SEMI-REALISTA-1. Visible ink-and-gouache brushwork and expressive organic shapes, detailed convincing architecture and vegetation, rich natural blue/green/terracotta colours, no overall yellow wash. NOT a photograph or photorealistic rendering, NOT flat geometric SVG, NOT childish. People if present fully drawn, gently caricatured expressive faces and complete clothing/body. Composition independent based on documented features, no supplied photographic reference. No text, lettering, logo, watermark, frame. Main subject fills frame with safe space for responsive crop. Scene: Bocagrande Cartagena: broad oblique coastal panorama of dense modern slender white and pale glass high-rise buildings behind the long curving URBAN beach and coastal road, warm gray-beige sand, blue Caribbean water, flat peninsula. Architecture and urban coast equally clear, no mountains, white sand deserted island or medieval buildings. Not the La Popa cross viewpoint. Sophisticated city district illustration.",
+      "sources": [
+        "https://colombia.travel/es/cartagena/playas-e-islas-del-rosario"
+      ],
+      "checked_at": "2026-10-17",
+      "master_sha256": "518a466e5532a199a7e054c2f18bd013f38e1efacb43046ba97c0f8c79fe2ded",
+      "limits": "Interpretación editorial, no fotografía ni levantamiento arquitectónico. Disposición de detalles y estado actual no acreditados por IA.",
+      "files": [
+        {
+          "path": "backend/public/assets/cartagena-piloto/bocagrande-480.webp",
+          "bytes": 48742,
+          "width": 480,
+          "height": 320,
+          "sha256": "b5ac70fc73ba8a4d7c8c8ed7c6991dd0144028403a9cad6e3d27600faafa5f76"
+        },
+        {
+          "path": "backend/public/assets/cartagena-piloto/bocagrande-800.webp",
+          "bytes": 123310,
+          "width": 800,
+          "height": 533,
+          "sha256": "bfc8aa4466b45a029b067986dbf797b571376efe2cff823b47fa5b9383f5eb4f"
+        }
+      ]
+    }
+  ]
+}
