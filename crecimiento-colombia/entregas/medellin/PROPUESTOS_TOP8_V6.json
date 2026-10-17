@@ -44,7 +44,10 @@
         "text_pt_BR": false,
         "illustration": false
       },
-      "selected_for_main": false
+      "selected_for_main": false,
+      "editorial_role": "physical_place_candidate",
+      "physical_top8_eligible": true,
+      "classification_update": "Nueva regla de roles: Metro/Metrocable se desarrolla como experiencia/movilidad; propuesta anterior de Top8 no aplicada."
     },
     {
       "id": "metro-metrocable",
@@ -88,7 +91,10 @@
         "text_pt_BR": false,
         "illustration": false
       },
-      "selected_for_main": false
+      "selected_for_main": false,
+      "editorial_role": "mobility_experience",
+      "physical_top8_eligible": false,
+      "classification_update": "Nueva regla de roles: Metro/Metrocable se desarrolla como experiencia/movilidad; propuesta anterior de Top8 no aplicada."
     }
   ],
   "sources": [
@@ -178,5 +184,6 @@
   "existing_three_candidates_changed": false,
   "generated_ai": false,
   "database_changed": false,
-  "production_changed": false
+  "production_changed": false,
+  "role_correction": "La auditoría que incluía Metro como puesto3 es histórica; no aplicar conjunto automáticamente. Reevaluar corte de lugares antes de sustituir los8vigentes."
 }
