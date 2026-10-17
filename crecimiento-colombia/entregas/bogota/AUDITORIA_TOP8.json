@@ -602,5 +602,354 @@
     "escenarios_ocho": true,
     "archivos_aprobacion_sin_mutar": true,
     "selection_not_mutated": true
-  }
+  },
+  "status": "pending_editorial_review",
+  "scope": "BogotáD.C.; excursiones fuera de jurisdicción separadas",
+  "ordered_top8_proposal": [
+    "bogota-monserrate",
+    "bogota-candelaria",
+    "bogota-zona-t",
+    "bogota-zona-g",
+    "bogota-museo-oro",
+    "bogota-plaza",
+    "bogota-botero",
+    "bogota-nacional"
+  ],
+  "human_constraints": [
+    "Monserrate > Salitre Mágico"
+  ],
+  "cutoff_validated": false,
+  "image_approval_does_not_validate_selection": true,
+  "publication_authorized": false,
+  "excluded_comparisons": [
+    {
+      "candidate": "bogota-jardin",
+      "against_cutoff": "bogota-nacional",
+      "evidence": [
+        "IDT25I",
+        "JARDIN"
+      ],
+      "reason": "Relevante, pero sin cuota naturaleza ni ventaja por imagen ya aprobada. En escenario amplio queda en reserva; en acotado entra8. Frente al octavoNacional: datoIDT2025-I internacionales favoreceNacional; nacionales no permiten misma conclusión inequívoca. No imponer peso entre segmentos.",
+      "decision": "favorece_nacional_en_segmento_internacional_corte_global_pendiente",
+      "confidence": "media"
+    },
+    {
+      "candidate": "bogota-mambo",
+      "against_cutoff": "bogota-nacional",
+      "evidence": [
+        "base_sitios_fuentes"
+      ],
+      "reason": "Conservar inventario secundario: ficha documental existente o candidato ampliado, sin señal comparativa actual suficiente para superar8. Requiere contraste individual antes de ordenar toda la reserva. Frente al octavoNacional: no hay dato homogéneo actual extraído que pruebe superioridad o descarte definitivo. Conservado para resolver, no validado por ausencia de evidencia.",
+      "decision": "comparacion_pendiente",
+      "confidence": "baja_comparativa"
+    },
+    {
+      "candidate": "bogota-colon",
+      "against_cutoff": "bogota-nacional",
+      "evidence": [
+        "base_sitios_fuentes"
+      ],
+      "reason": "Conservar inventario secundario: ficha documental existente o candidato ampliado, sin señal comparativa actual suficiente para superar8. Requiere contraste individual antes de ordenar toda la reserva. Frente al octavoNacional: no hay dato homogéneo actual extraído que pruebe superioridad o descarte definitivo. Conservado para resolver, no validado por ausencia de evidencia.",
+      "decision": "comparacion_pendiente",
+      "confidence": "baja_comparativa"
+    },
+    {
+      "candidate": "bogota-delia",
+      "against_cutoff": "bogota-nacional",
+      "evidence": [
+        "base_sitios_fuentes"
+      ],
+      "reason": "Conservar inventario secundario: ficha documental existente o candidato ampliado, sin señal comparativa actual suficiente para superar8. Requiere contraste individual antes de ordenar toda la reserva. Frente al octavoNacional: no hay dato homogéneo actual extraído que pruebe superioridad o descarte definitivo. Conservado para resolver, no validado por ausencia de evidencia.",
+      "decision": "comparacion_pendiente",
+      "confidence": "baja_comparativa"
+    },
+    {
+      "candidate": "bogota-planetario",
+      "against_cutoff": "bogota-nacional",
+      "evidence": [
+        "base_sitios_fuentes"
+      ],
+      "reason": "Conservar inventario secundario: ficha documental existente o candidato ampliado, sin señal comparativa actual suficiente para superar8. Requiere contraste individual antes de ordenar toda la reserva. Frente al octavoNacional: no hay dato homogéneo actual extraído que pruebe superioridad o descarte definitivo. Conservado para resolver, no validado por ausencia de evidencia.",
+      "decision": "comparacion_pendiente",
+      "confidence": "baja_comparativa"
+    },
+    {
+      "candidate": "bogota-maloka",
+      "against_cutoff": "bogota-nacional",
+      "evidence": [
+        "MALOKA",
+        "NACIONAL"
+      ],
+      "reason": "Producto científico reconocido; no hay comparación turística actual equivalente que justifique superar corte propuesto. Frente al octavoNacional: no hay dato homogéneo actual extraído que pruebe superioridad o descarte definitivo. Conservado para resolver, no validado por ausencia de evidencia.",
+      "decision": "comparacion_pendiente",
+      "confidence": "media"
+    },
+    {
+      "candidate": "bogota-perseverancia",
+      "against_cutoff": "bogota-nacional",
+      "evidence": [
+        "base_sitios_fuentes"
+      ],
+      "reason": "Conservar inventario secundario: ficha documental existente o candidato ampliado, sin señal comparativa actual suficiente para superar8. Requiere contraste individual antes de ordenar toda la reserva. Frente al octavoNacional: no hay dato homogéneo actual extraído que pruebe superioridad o descarte definitivo. Conservado para resolver, no validado por ausencia de evidencia.",
+      "decision": "comparacion_pendiente",
+      "confidence": "baja_comparativa"
+    },
+    {
+      "candidate": "bogota-usaquen",
+      "against_cutoff": "bogota-nacional",
+      "evidence": [
+        "IDT25I",
+        "ZONAS"
+      ],
+      "reason": "Demanda documentada, pero no sostener automáticamente6: evidencia comparativa inferior aNacional ySimón en2025-I. Frente al octavoNacional: datoIDT2025-I internacionales favoreceNacional; nacionales no permiten misma conclusión inequívoca. No imponer peso entre segmentos.",
+      "decision": "favorece_nacional_en_segmento_internacional_corte_global_pendiente",
+      "confidence": "media"
+    },
+    {
+      "candidate": "bogota-simon",
+      "against_cutoff": "bogota-nacional",
+      "evidence": [
+        "IDT25I",
+        "NACIONAL"
+      ],
+      "reason": "Demanda turística documentada, detrás del MuseoNacional en2025-I. En amplio reserva y en acotado7, sin cuota de variedad. Frente al octavoNacional: datoIDT2025-I internacionales favoreceNacional; nacionales no permiten misma conclusión inequívoca. No imponer peso entre segmentos.",
+      "decision": "favorece_nacional_en_segmento_internacional_corte_global_pendiente",
+      "confidence": "media"
+    },
+    {
+      "candidate": "bogota-quebrada",
+      "against_cutoff": "bogota-nacional",
+      "evidence": [
+        "base_sitios_fuentes"
+      ],
+      "reason": "Conservar inventario secundario: ficha documental existente o candidato ampliado, sin señal comparativa actual suficiente para superar8. Requiere contraste individual antes de ordenar toda la reserva. Frente al octavoNacional: no hay dato homogéneo actual extraído que pruebe superioridad o descarte definitivo. Conservado para resolver, no validado por ausencia de evidencia.",
+      "decision": "comparacion_pendiente",
+      "confidence": "baja_comparativa"
+    },
+    {
+      "candidate": "bogota-humedal",
+      "against_cutoff": "bogota-nacional",
+      "evidence": [
+        "base_sitios_fuentes"
+      ],
+      "reason": "Conservar inventario secundario: ficha documental existente o candidato ampliado, sin señal comparativa actual suficiente para superar8. Requiere contraste individual antes de ordenar toda la reserva. Frente al octavoNacional: no hay dato homogéneo actual extraído que pruebe superioridad o descarte definitivo. Conservado para resolver, no validado por ausencia de evidencia.",
+      "decision": "comparacion_pendiente",
+      "confidence": "baja_comparativa"
+    },
+    {
+      "candidate": "bogota-cinemateca",
+      "against_cutoff": "bogota-nacional",
+      "evidence": [
+        "base_sitios_fuentes"
+      ],
+      "reason": "Conservar inventario secundario: ficha documental existente o candidato ampliado, sin señal comparativa actual suficiente para superar8. Requiere contraste individual antes de ordenar toda la reserva. Frente al octavoNacional: no hay dato homogéneo actual extraído que pruebe superioridad o descarte definitivo. Conservado para resolver, no validado por ausencia de evidencia.",
+      "decision": "comparacion_pendiente",
+      "confidence": "baja_comparativa"
+    },
+    {
+      "candidate": "bogota-grafiti",
+      "against_cutoff": "bogota-nacional",
+      "evidence": [
+        "base_sitios_fuentes"
+      ],
+      "reason": "Conservar inventario secundario: ficha documental existente o candidato ampliado, sin señal comparativa actual suficiente para superar8. Requiere contraste individual antes de ordenar toda la reserva. Frente al octavoNacional: no hay dato homogéneo actual extraído que pruebe superioridad o descarte definitivo. Conservado para resolver, no validado por ausencia de evidencia.",
+      "decision": "comparacion_pendiente",
+      "confidence": "baja_comparativa"
+    },
+    {
+      "candidate": "bogota-theatron",
+      "against_cutoff": "bogota-nacional",
+      "evidence": [
+        "base_sitios_fuentes"
+      ],
+      "reason": "Conservar inventario secundario: ficha documental existente o candidato ampliado, sin señal comparativa actual suficiente para superar8. Requiere contraste individual antes de ordenar toda la reserva. Frente al octavoNacional: no hay dato homogéneo actual extraído que pruebe superioridad o descarte definitivo. Conservado para resolver, no validado por ausencia de evidencia.",
+      "decision": "comparacion_pendiente",
+      "confidence": "baja_comparativa"
+    },
+    {
+      "candidate": "bogota-salitre",
+      "against_cutoff": "bogota-nacional",
+      "evidence": [
+        "PARQUES",
+        "SALITRE",
+        "HISTORICO_PARQUES"
+      ],
+      "reason": "Candidato antes ausente, relevante a turismo familiar/nacional. Volumen entradas parque2019 no equivale turistas2025; no inferir superioridad sobreNacional/Jardín. Monserrate siempre delante. Frente al octavoNacional: no hay dato homogéneo actual extraído que pruebe superioridad o descarte definitivo. Conservado para resolver, no validado por ausencia de evidencia.",
+      "decision": "comparacion_pendiente",
+      "confidence": "media"
+    },
+    {
+      "candidate": "bogota-colpatria",
+      "against_cutoff": "bogota-nacional",
+      "evidence": [
+        "COLPATRIA"
+      ],
+      "reason": "Icono y mirador reconocido; servir como portada no concede puesto en8. Sin dato comparable de visitas turísticas suficiente. Frente al octavoNacional: no hay dato homogéneo actual extraído que pruebe superioridad o descarte definitivo. Conservado para resolver, no validado por ausencia de evidencia.",
+      "decision": "comparacion_pendiente",
+      "confidence": "media"
+    },
+    {
+      "candidate": "zipaquira-catedral-sal",
+      "against_cutoff": "bogota-nacional",
+      "evidence": [
+        "ZIPA"
+      ],
+      "reason": "Atractivo importante de Zipaquirá,Cundinamarca, no Bogotá; excursión vinculable, sin ocupar cupo/cobertura municipal de Bogotá.",
+      "decision": "no_comparable_fuera_jurisdiccion",
+      "confidence": "alta_territorial"
+    },
+    {
+      "candidate": "bogota-paloquemao",
+      "against_cutoff": "bogota-nacional",
+      "evidence": [
+        "base_sitios_fuentes"
+      ],
+      "reason": "Conservar inventario secundario: ficha documental existente o candidato ampliado, sin señal comparativa actual suficiente para superar8. Requiere contraste individual antes de ordenar toda la reserva. Frente al octavoNacional: no hay dato homogéneo actual extraído que pruebe superioridad o descarte definitivo. Conservado para resolver, no validado por ausencia de evidencia.",
+      "decision": "comparacion_pendiente",
+      "confidence": "baja_comparativa"
+    },
+    {
+      "candidate": "bogota-parque93",
+      "against_cutoff": "bogota-nacional",
+      "evidence": [
+        "base_sitios_fuentes"
+      ],
+      "reason": "Conservar inventario secundario: ficha documental existente o candidato ampliado, sin señal comparativa actual suficiente para superar8. Requiere contraste individual antes de ordenar toda la reserva. Frente al octavoNacional: no hay dato homogéneo actual extraído que pruebe superioridad o descarte definitivo. Conservado para resolver, no validado por ausencia de evidencia.",
+      "decision": "comparacion_pendiente",
+      "confidence": "baja_comparativa"
+    },
+    {
+      "candidate": "bogota-virgilio",
+      "against_cutoff": "bogota-nacional",
+      "evidence": [
+        "base_sitios_fuentes"
+      ],
+      "reason": "Conservar inventario secundario: ficha documental existente o candidato ampliado, sin señal comparativa actual suficiente para superar8. Requiere contraste individual antes de ordenar toda la reserva. Frente al octavoNacional: no hay dato homogéneo actual extraído que pruebe superioridad o descarte definitivo. Conservado para resolver, no validado por ausencia de evidencia.",
+      "decision": "comparacion_pendiente",
+      "confidence": "baja_comparativa"
+    },
+    {
+      "candidate": "bogota-mundoaventura",
+      "against_cutoff": "bogota-nacional",
+      "evidence": [
+        "base_sitios_fuentes"
+      ],
+      "reason": "Conservar inventario secundario: ficha documental existente o candidato ampliado, sin señal comparativa actual suficiente para superar8. Requiere contraste individual antes de ordenar toda la reserva. Frente al octavoNacional: no hay dato homogéneo actual extraído que pruebe superioridad o descarte definitivo. Conservado para resolver, no validado por ausencia de evidencia.",
+      "decision": "comparacion_pendiente",
+      "confidence": "baja_comparativa"
+    },
+    {
+      "candidate": "bogota-quinta",
+      "against_cutoff": "bogota-nacional",
+      "evidence": [
+        "base_sitios_fuentes"
+      ],
+      "reason": "Conservar inventario secundario: ficha documental existente o candidato ampliado, sin señal comparativa actual suficiente para superar8. Requiere contraste individual antes de ordenar toda la reserva. Frente al octavoNacional: no hay dato homogéneo actual extraído que pruebe superioridad o descarte definitivo. Conservado para resolver, no validado por ausencia de evidencia.",
+      "decision": "comparacion_pendiente",
+      "confidence": "baja_comparativa"
+    },
+    {
+      "candidate": "bogota-santaclara",
+      "against_cutoff": "bogota-nacional",
+      "evidence": [
+        "base_sitios_fuentes"
+      ],
+      "reason": "Conservar inventario secundario: ficha documental existente o candidato ampliado, sin señal comparativa actual suficiente para superar8. Requiere contraste individual antes de ordenar toda la reserva. Frente al octavoNacional: no hay dato homogéneo actual extraído que pruebe superioridad o descarte definitivo. Conservado para resolver, no validado por ausencia de evidencia.",
+      "decision": "comparacion_pendiente",
+      "confidence": "baja_comparativa"
+    }
+  ],
+  "inventory_sources": [
+    {
+      "id": "IDT25",
+      "url": "https://observatorio.idt.gov.co/sites/default/files/2026-04/Infograf%C3%ADa%20Viajeros%20en%20Bogot%C3%A1%202025.pdf",
+      "consulted": "2026-10-17",
+      "method": "pdf_abierto"
+    },
+    {
+      "id": "IDT25I",
+      "url": "https://observatorio.idt.gov.co/sites/default/files/2025-10/Resultados%20Gran%20Encuesta%20Viajeros%202025-I.pdf",
+      "consulted": "2026-10-17",
+      "method": "indexado_apertura_fallida"
+    },
+    {
+      "id": "IDT24",
+      "url": "https://bogota.gov.co/en/node/246056",
+      "consulted": "2026-10-17",
+      "method": "consulta_web_y_base_documentada"
+    },
+    {
+      "id": "TA",
+      "url": "https://www.tripadvisor.co/Attractions-g294074-Activities-Bogota.html",
+      "consulted": "2026-10-17",
+      "method": "indexado_apertura_fallida"
+    },
+    {
+      "id": "NACIONAL",
+      "url": "https://colombia.travel/es/bogota",
+      "consulted": "2026-10-17",
+      "method": "consulta_web_y_base_documentada"
+    },
+    {
+      "id": "MUSEONACIONAL",
+      "url": "https://colombia.travel/es/bogota/visita-el-museo-nacional-de-colombia",
+      "consulted": "2026-10-17",
+      "method": "consulta_web_y_base_documentada"
+    },
+    {
+      "id": "JARDIN",
+      "url": "https://colombia.travel/es/bogota/visita-el-jardin-botanico-jose-celestino-mutis",
+      "consulted": "2026-10-17",
+      "method": "consulta_web_y_base_documentada"
+    },
+    {
+      "id": "PARQUES",
+      "url": "https://visitbogota.co/es/blog/en-octubre-el-mes-del-terror-disfruta-en-familia-de-los-parques-de-diversiones-de-bogota",
+      "consulted": "2026-10-17",
+      "method": "consulta_web_y_base_documentada"
+    },
+    {
+      "id": "SALITRE",
+      "url": "https://salitremagico.com.co/contactanos/",
+      "consulted": "2026-10-17",
+      "method": "consulta_web_y_base_documentada"
+    },
+    {
+      "id": "MALOKA",
+      "url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/maloka-museo-de-ciencia-tecnologia-e-innovacion",
+      "consulted": "2026-10-17",
+      "method": "consulta_web_y_base_documentada"
+    },
+    {
+      "id": "COLPATRIA",
+      "url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/torre-colpatria",
+      "consulted": "2026-10-17",
+      "method": "consulta_web_y_base_documentada"
+    },
+    {
+      "id": "ZONAS",
+      "url": "https://visitbogota.co/es/que-hacer-en-bogota/gastronomia/circuito-gastronomico-zona-g-zona-t-y-parque-de-la-93",
+      "consulted": "2026-10-17",
+      "method": "consulta_web_y_base_documentada"
+    },
+    {
+      "id": "ZIPA",
+      "url": "https://regions.colombia.travel/andes-orientales-colombianos/cundinamarca",
+      "consulted": "2026-10-17",
+      "method": "consulta_web_y_base_documentada"
+    },
+    {
+      "id": "HISTORICO_PARQUES",
+      "url": "https://observatorio.idt.gov.co/sites/default/files/2024-12/Estudio-Turistas-en-Parques-de-Atracciones-Naturales-y-Museos%20-2019.pdf",
+      "consulted": "2026-10-17",
+      "method": "consulta_web_y_base_documentada"
+    }
+  ],
+  "evidence_confidence": "Alta liderazgoMonserrate/Candelaria; media composición final8; insuficiente orden totalreserva",
+  "unresolved_comparisons": [
+    "¿Zonas T/G cuentan como atractivos principales? Son demanda real, no negocios individuales; propuesta amplia las incluye. Si producto las lleva a experiencias/directorio, aplicar escenario acotado expresamente, sin ocultar esa exclusión.",
+    "El corte7–8 del escenarioacotado (Simón/Jardín) frente aSalitre/Maloka/Colpatria sigue confianza media por falta de comparables actuales. No presentar desempate como verdadestadística.",
+    "No cambiar Monserrate por puesto1 deTripadvisor: propuesta1 respaldada IDT y regla humana; ordenOro/Botero/Plaza necesita validación editorial.",
+    "Ampliar validación individual de nuevos candidatosPaloquemao/Parque93/Virgilio/MundoAventura/Quinta/SantaClara sin afirmar ya auditados exhaustivamente."
+  ]
 }
