@@ -33,3 +33,7 @@ Selección principal de ocho atractivos: Plaza de Bolívar, La Candelaria/Chorro
 ## Nueva política icónica · 17/10/2026
 
 Colpatria es candidata documentada; no asumir que la torre nombrada tentativamente por el propietario sea Movistar Arena. Verificar identificación y reconocimiento en recorte real antes de imagen final.
+
+## Imagen definitiva aprobada · Jardín Botánico
+
+Propietario aprueba ilustración bogota-tropicario-v1 para tarjeta Jardín Botánico. Hashes y decisión en aprobacion-ilustracion-tropicario-v1.json. Imagen lista para integración autorizada de avances en preprod; todavía no importada. Resto de imágenes, textos, destino y publicación no se dan por aprobados.
