@@ -61,7 +61,10 @@ for p in main:
 parts+=['</div><h2>Actividades separadas</h2>']
 for a in read('experiencias.json'):
  if a['kind']=='candidato_por_validar':continue
- parts.append(f'<article><h3>{esc(a.get("name",a["translations"]["es"]["name"]))}</h3><p>{esc(a["kind"])} · fotografía: {esc(a["photo_status"])}</p>');parts.append(f'<img src="{esc(a["image_file"])}" alt="{esc(a["translations"]["es"]["name"])}"><p>{esc(a.get("image_scope","Referencia del lugar; sin aprobación"))}</p>' if a.get('image_file') else '<p>No hay fotografía específica autorizada del servicio.</p>');parts.append(translations(a['translations']));parts.append(controls(a['id'],['texto_'+l for l in langs],sha(r/'experiencias.json')));parts.append('</article>')
+ parts.append(f'<article><h3>{esc(a.get("name",a["translations"]["es"]["name"]))}</h3><p>{esc(a["kind"])} · fotografía: {esc(a["photo_status"])}</p>');parts.append(f'<img src="{esc(a["image_file"])}" alt="{esc(a["translations"]["es"]["name"])}"><p>{esc(a.get("image_scope","Referencia del lugar; sin aprobación"))}</p>' if a.get('image_file') else '<p>No hay fotografía específica autorizada del servicio.</p>');credit=next((x for x in assets if x['file']==a.get('image_file')),None)
+ if a.get('image_manifest') and (r/a['image_manifest']).exists():credit=read(a['image_manifest'])
+ if credit:parts.append(f'<p>{esc(credit["author"])} · <a href="{esc(credit["source_url"])}">Fuente fotográfica original</a> · <a href="{esc(credit["license_url"])}">{esc(credit["license"])}</a>. Reducción técnica sin recorte.</p>')
+ parts.append(translations(a['translations']));parts.append(controls(a['id'],['texto_'+l for l in langs]+(['foto_referencia','licencia_y_uso'] if a.get('image_file') else []),sha(r/'experiencias.json')));parts.append('</article>')
 parts+=['<details><summary>Directorio gratuito propuesto · diez fichas</summary>']
 for b in read('directorio.json'):parts.append(f'<article><h3>{esc(b["name"])}</h3><p><a href="{esc(b["url"])}">Canal oficial</a> · sin relación comercial ni vigencia confirmada</p>'+translations(b['translations'])+'</article>')
 parts+=['</details><details><summary>Inventario amplio secundario · 28 sitios</summary>']
