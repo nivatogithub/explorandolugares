@@ -70,5 +70,29 @@
   ],
   "cutoff_validated": false,
   "approvals_preserved": true,
-  "publication_authorized": false
+  "publication_authorized": false,
+  "territorial_sources_checked_no_photos": [
+    {
+      "candidate": "tierra-bomba/bocachica",
+      "sources": [
+        "https://colombia.travel/es/cartagena-de-indias/la-isla-de-tierrabomba",
+        "https://fortificacionescartagena.com.co/es/historia/fortificaciones-de-la-bahia/tierra-bomba/"
+      ],
+      "finding": "Isla/fortificaciones de bahía identificadas, no fuera del distrito por analogía; comparar con corte."
+    },
+    {
+      "candidate": "aviario-nacional-baru",
+      "sources": [
+        "https://colombia.travel/es/cartagena/conoce-el-aviario-nacional"
+      ],
+      "finding": "Equipamiento identificado en vía Cartagena–Barú; visita como experiencia, no inclusión automática."
+    },
+    {
+      "candidate": "la-boquilla",
+      "sources": [
+        "https://cartagenadeindias.travel/naturaleza-y-comunitario/boquilla-2/"
+      ],
+      "finding": "Corregimiento con identidad pesquera; paseos en manglares son experiencias relacionadas, no sustituyen prioridad geográfica."
+    }
+  ]
 }

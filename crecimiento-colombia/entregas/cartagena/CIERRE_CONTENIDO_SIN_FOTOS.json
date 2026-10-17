@@ -1,0 +1,42 @@
+{
+  "destination": "cartagena",
+  "scope": "content_review_no_photo_search",
+  "draft_sites": 19,
+  "draft_experiences": 9,
+  "directory_metadata_entries": 10,
+  "site_and_experience_languages": [
+    "es",
+    "en",
+    "pt-BR"
+  ],
+  "missing_site_experience_translations": [],
+  "correction": {
+    "component": "centro-historico.description",
+    "reason": "Retirar explicación interna sobre tarjetas del texto para visitante",
+    "new_draft": "borrador-contenido-sin-fotos-v8.json",
+    "languages": [
+      "es",
+      "en",
+      "pt-BR"
+    ],
+    "approval": false
+  },
+  "directory_missing_trilingual_editorial_text": [
+    "CO-13-cartagena-celele",
+    "CO-13-cartagena-casa-san-agustin",
+    "CO-13-cartagena-charleston",
+    "CO-13-cartagena-santa-clara",
+    "CO-13-cartagena-jardin",
+    "CO-13-cartagena-1621",
+    "CO-13-cartagena-coro",
+    "CO-13-cartagena-botika",
+    "CO-13-cartagena-muhca",
+    "CO-13-cartagena-alma"
+  ],
+  "top8_status": "comparaciones_del_corte_pendientes",
+  "images_searched": false,
+  "approval_ledgers_changed": false,
+  "base_package_changed": false,
+  "preprod_changed": false,
+  "production_changed": false
+}
