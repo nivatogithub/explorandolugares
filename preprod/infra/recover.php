@@ -9,7 +9,7 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
  try{
   csrf();if(!throttle('local_recovery',5,900))throw new RuntimeException('Demasiadas solicitudes. Espera unos minutos.');
   $email=strtolower(trim((string)($_POST['email']??'')));if(!filter_var($email,FILTER_VALIDATE_EMAIL)||strlen($email)>254)throw new RuntimeException('Indica un correo válido.');
-  $q=db()->prepare("SELECT id,email FROM accounts WHERE email=? AND account_type='business' AND status IN ('active','pending_activation')");$q->execute([$email]);$account=$q->fetch();
+  $q=db()->prepare("SELECT id,email FROM accounts WHERE email=? AND (account_type='business' OR EXISTS(SELECT 1 FROM account_roles ar WHERE ar.account_id=accounts.id AND ar.role='administrator')) AND status IN ('active','pending_activation')");$q->execute([$email]);$account=$q->fetch();
   if($account){
    $token=(new AccountPasswordResetService(db()))->issue((int)$account['id'],'preprod-self-service');
    $message=['to'=>$account['email'],'created_at'=>gmdate('c'),'url'=>'http://127.0.0.1:8088/negocios/cambiar-clave/?token='.$token];

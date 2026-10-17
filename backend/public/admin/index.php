@@ -1,13 +1,15 @@
 <?php
 declare(strict_types=1);
 require dirname(__DIR__,2).'/app/bootstrap.php';
-if (empty($config['admin_user']) || empty($config['admin_password_hash']) || strlen($config['app_key']??'')<32) {http_response_code(503);exit('Administración pendiente de configuración.');}
+if (strlen($config['app_key']??'')<32 || (empty($config['unified_admin_only']) && (empty($config['admin_user']) || empty($config['admin_password_hash'])))) {http_response_code(503);exit('Administración pendiente de configuración.');}
 $error='';
+if(!empty($config['unified_admin_only'])&&empty($_SESSION['admin'])){header('Location: /negocios/acceso/',true,303);exit;}
 try {
     if (isset($_SESSION['admin']) && time()-($_SESSION['last_seen']??0)>1800) unset($_SESSION['admin']);
     if ($_SERVER['REQUEST_METHOD']==='POST') {
         csrf();$action=$_POST['action']??'';
         if ($action==='login') {
+            if (!empty($config['unified_admin_only'])) { http_response_code(403);exit('Inicia sesión desde el portal.'); }
             if (!throttle('login',10,900)) {$error='Demasiados intentos. Intenta nuevamente más tarde.';http_response_code(429);}
             else {
                 $user=is_string($_POST['username']??null)?$_POST['username']:'';

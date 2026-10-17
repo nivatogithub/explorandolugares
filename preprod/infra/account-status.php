@@ -9,4 +9,4 @@ if(isset($_SESSION['business_account_id'])&&time()-(int)($_SESSION['business_las
 $account=empty($_SESSION['business_account_id'])?null:(new BusinessAccountPortalService(db()))->current((int)$_SESSION['business_account_id']);
 if(!$account){unset($_SESSION['business_account_id'],$_SESSION['business_last_seen']);json_response(['authenticated'=>false]);}
 $_SESSION['business_last_seen']=time();
-json_response(['authenticated'=>true,'name'=>$account['display_name'],'csrf'=>$_SESSION['csrf']]);
+json_response(['authenticated'=>true,'name'=>$account['display_name'],'csrf'=>$_SESSION['csrf'],'administrator'=>AccountAuthorization::isAdmin(db(),(int)$account['id'])]);

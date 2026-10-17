@@ -25,7 +25,7 @@ DB.execute('PRAGMA foreign_keys=ON')
 DB.executescript((ROOT / 'backend/database/sqlite.sql').read_text())
 DB.executescript((ROOT / 'backend/database/destinations.sqlite.sql').read_text())
 DB.executescript((ROOT / 'backend/database/migrations/006-poi-experience-links.sqlite.sql').read_text())
-for number in range(8, 33):
+for number in range(8, 34):
     matches = list((ROOT / 'backend/database/migrations').glob(f'{number:03d}-*.sqlite.sql'))
     assert len(matches) == 1, f'Migración SQLite faltante o ambigua: {number:03d}'
     DB.executescript(matches[0].read_text())
@@ -199,9 +199,9 @@ try:
             check(status == 200 and 'business-import-v1' in body, f'La plantilla de importación falló: {status} {path}')
         else:
             check(status == 200 and expected in body, f'La página administrativa falló: {status} {path}')
-            check(body.count('class="admin-sidebar"') == 1, f'La página debe mostrar exactamente una navegación lateral en {path}')
+            check(len(re.findall(r'<aside\b[^>]*class="[^"]*\badmin-sidebar\b[^"]*"', body)) == 1, f'La página debe mostrar exactamente una navegación lateral en {path}')
             if not path.endswith('plantilla=1'):
-                sidebar = re.search(r'<aside class="admin-sidebar".*?</aside>', body, re.S)
+                sidebar = re.search(r'<aside\b[^>]*class="[^"]*\badmin-sidebar\b[^"]*".*?</aside>', body, re.S)
                 check(sidebar is not None, f'No se pudo leer el menú lateral en {path}')
                 active_links = re.findall(r'<a\b[^>]*aria-current="page"[^>]*>(.*?)</a>', sidebar.group(0), re.S)
                 check(len(active_links) == 1, f'El menú lateral debe marcar una sola sección activa en {path}; encontró {len(active_links)}')

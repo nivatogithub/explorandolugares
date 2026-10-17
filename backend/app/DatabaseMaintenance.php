@@ -211,6 +211,11 @@ final class DatabaseMaintenance
             'checks'=>[['operating_costs',['cost_date','category','amount_cop','destination_id','voided_at']],['subscription_cancellation_requests',['subscription_id','business_id','account_id','reason_code','status','review_note']]],
             'requires'=>['businesses','business_subscriptions','accounts','destinations'],
         ],
+        '033-account-roles'=>[
+            'file'=>'033-account-roles.mysql.sql',
+            'checks'=>[['account_roles',['account_id','role','created_at']]],
+            'requires'=>['accounts'],
+        ],
         '032-operating-cost-evidence'=>[
             'file'=>'032-operating-cost-evidence.mysql.sql',
             'checks'=>[['operating_cost_evidence',['cost_id','storage_name','original_name','mime_type','file_size','sha256','created_by']]],
