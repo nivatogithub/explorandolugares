@@ -152,3 +152,7 @@ No excluir un atractivo prioritario porque falte imagen, sea de pago, requiera m
 - Poblaciones de todos los tamaños: no puede quedar fuera un candidato respaldado como más prioritario que uno incluido. En lugares pequeños investigar menos de8si nohay8justificables; no rellenar.
 
 Conservar inventarios y decisiones históricas; una sustitución de selección no borra aprobaciones de imágenes/textos por hash ni las transfiere al reemplazo. La publicación final exige el proceso de aprobación vigente. Las listas actuales de cuatro destinos quedan como propuestas pendientes de esta auditoría; no se reetiquetan automáticamente como ranking cerrado.
+
+## Portada Santa Marta: decisión del propietario
+
+Representar el centro y su bahía histórica; El Rodadero no sirve como portada elegida aunque sea turístico y pueda conservarse como atractivo. Validar sector exacto antes de ofrecer una vista costera como identidad de ciudad. Buscar tejido urbano reconocible, edificios completos y contexto de bahía sin exceso de mar/cielo/pavimento. No repetir la candidata Camellónv5 rechazada por encuadre. La elección de un ámbito visual no aprueba una fotografía ni modifica por sí misma elTop8.
