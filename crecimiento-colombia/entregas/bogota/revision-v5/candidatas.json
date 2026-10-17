@@ -15,16 +15,39 @@
     ],
     "encuadre_declarado": "Fachada desde terraza ResidenciasTequendama; inspección aún pendiente.",
     "consulta": "2026-10-17",
-    "estado": "pendiente_descarga_inspeccion",
+    "estado": "apta_para_elegir_referencia_pendiente_aprobacion",
     "approved": false,
     "transformacion_IA": "Licencia permite adaptación con atribución; CC-BY-SA requiere licencia compatible de derivado. Condicionesproveedor/expresiónarquitectura a comprobar antes de generar. No generar sin aprobación individual.",
-    "local_file": null,
-    "sha256": null,
+    "local_file": "originales/nacional-1.jpg",
+    "sha256": "4ed6a53318071f3a3aec87db3ef8381b2dae331acdffbada23a92020b753f16c",
     "factual_basis_url": "https://www.museonacional.gov.co/su-visita/ubicacion/Paginas/default.aspx",
     "alt_propuesto": {
       "es": "Fachada histórica del Museo Nacional de Colombia, Bogotá.",
       "en": "Historical façade of the National Museum of Colombia, Bogotá.",
       "pt-BR": "Fachada histórica do Museu Nacional da Colômbia, Bogotá."
+    },
+    "dimensiones_reales": [
+      2982,
+      1984
+    ],
+    "bytes": 1757705,
+    "derivative_local": "derivados/nacional-1-revision.webp",
+    "derivative_sha256": "ff12f0537b7a08eba6054e3c9849b598664c08e7ea20860a9d389f0145d71b82",
+    "derivative_bytes": 216892,
+    "derivacion": {
+      "procedure": "Pillow EXIFtranspose/RGB, thumbnail1200 sin ampliar, WebPq84; si excede300KB recomprimirq70. Sin recorte; original intacto.",
+      "ai": false
+    },
+    "inspeccion": {
+      "fecha": "2026-10-17",
+      "metodo": "Visual original y simulación cover center 600x330/350x240, sin navegador",
+      "evidencia": "qa-recortes.jpg",
+      "resultado": "Fachada de piedra, acceso y tejados del Panóptico reconocibles desde vista elevada. Extremos laterales fuera de toma y árboles sobre parte del edificio; no es vista del conjunto completo. Ambos recortes conservan acceso y fachada central."
+    },
+    "caption_propuesto": {
+      "es": "Fachada histórica del Museo Nacional de Colombia, Bogotá. · Carlos Gustavo Suárez (Tatosuarez) · CC BY-SA 4.0 · Referencia pendiente de aprobación.",
+      "en": "Historical façade of the National Museum of Colombia, Bogotá. · Carlos Gustavo Suárez (Tatosuarez) · CC BY-SA 4.0 · Reference awaiting approval.",
+      "pt-BR": "Fachada histórica do Museu Nacional da Colômbia, Bogotá. · Carlos Gustavo Suárez (Tatosuarez) · CC BY-SA 4.0 · Referência pendente de aprovação."
     }
   },
   {
@@ -43,16 +66,39 @@
     ],
     "encuadre_declarado": "Fachada principal; pendiente inspección no asumir completa.",
     "consulta": "2026-10-17",
-    "estado": "pendiente_descarga_inspeccion",
+    "estado": "secundaria_no_apta_como_principal",
     "approved": false,
     "transformacion_IA": "Licencia permite adaptación con atribución; CC-BY-SA requiere licencia compatible de derivado. Condicionesproveedor/expresiónarquitectura a comprobar antes de generar. No generar sin aprobación individual.",
-    "local_file": null,
-    "sha256": null,
+    "local_file": "originales/nacional-2.jpg",
+    "sha256": "b7001f967efaf266c15994db7918f9356c43a7038e5d2863420ad687576f010c",
     "factual_basis_url": "https://www.museonacional.gov.co/su-visita/ubicacion/Paginas/default.aspx",
     "alt_propuesto": {
       "es": "Fachada histórica del Museo Nacional de Colombia, Bogotá.",
       "en": "Historical façade of the National Museum of Colombia, Bogotá.",
       "pt-BR": "Fachada histórica do Museu Nacional da Colômbia, Bogotá."
+    },
+    "dimensiones_reales": [
+      5184,
+      3888
+    ],
+    "bytes": 6655887,
+    "derivative_local": "derivados/nacional-2-revision.webp",
+    "derivative_sha256": "14443479a9c85d7c3a6f2370d10830c686344800f52b6a71d7ace8689251d707",
+    "derivative_bytes": 190482,
+    "derivacion": {
+      "procedure": "Pillow EXIFtranspose/RGB, thumbnail1200 sin ampliar, WebPq84; si excede300KB recomprimirq70. Sin recorte; original intacto.",
+      "ai": false
+    },
+    "inspeccion": {
+      "fecha": "2026-10-17",
+      "metodo": "Visual original y simulación cover center 600x330/350x240, sin navegador",
+      "evidencia": "qa-recortes.jpg",
+      "resultado": "Primer plano frontal de nombre y puerta. No muestra el edificio completo y recorte escritorio corta base de puerta. Detalle secundario, no referencia principal."
+    },
+    "caption_propuesto": {
+      "es": "Fachada histórica del Museo Nacional de Colombia, Bogotá. · Felipe Restrepo Acosta · CC BY-SA 4.0 · Referencia pendiente de aprobación.",
+      "en": "Historical façade of the National Museum of Colombia, Bogotá. · Felipe Restrepo Acosta · CC BY-SA 4.0 · Reference awaiting approval.",
+      "pt-BR": "Fachada histórica do Museu Nacional da Colômbia, Bogotá. · Felipe Restrepo Acosta · CC BY-SA 4.0 · Referência pendente de aprovação."
     }
   },
   {
@@ -71,16 +117,39 @@
     ],
     "encuadre_declarado": "Vista desde puente; registro histórico no sesión/instalacióninterior actual.",
     "consulta": "2026-10-17",
-    "estado": "pendiente_descarga_inspeccion",
+    "estado": "apta_para_elegir_referencia_pendiente_aprobacion",
     "approved": false,
     "transformacion_IA": "Licencia permite adaptación con atribución; CC-BY-SA requiere licencia compatible de derivado. Condicionesproveedor/expresiónarquitectura a comprobar antes de generar. No generar sin aprobación individual.",
-    "local_file": null,
-    "sha256": null,
+    "local_file": "originales/actividad-maloka-1.jpg",
+    "sha256": "3d6ad4f1b718b86f473b69596b80ddc3f30cc8d0ce4bee88e4f8f988d23ff383",
     "factual_basis_url": "https://maloka.org/",
     "alt_propuesto": {
       "es": "Vista histórica del exterior de Maloka en Bogotá.",
       "en": "Historical exterior view of Maloka in Bogotá.",
       "pt-BR": "Vista histórica do exterior da Maloka em Bogotá."
+    },
+    "dimensiones_reales": [
+      1200,
+      900
+    ],
+    "bytes": 320393,
+    "derivative_local": "derivados/actividad-maloka-1-revision.webp",
+    "derivative_sha256": "503dd6a993e31ac9587c3da4ce3941dbfdfe82ca0025aae7ab160b455d104217",
+    "derivative_bytes": 161200,
+    "derivacion": {
+      "procedure": "Pillow EXIFtranspose/RGB, thumbnail1200 sin ampliar, WebPq84; si excede300KB recomprimirq70. Sin recorte; original intacto.",
+      "ai": false
+    },
+    "inspeccion": {
+      "fecha": "2026-10-17",
+      "metodo": "Visual original y simulación cover center 600x330/350x240, sin navegador",
+      "evidencia": "qa-recortes.jpg",
+      "resultado": "Domo geodésico exterior completo reconocible en ambos recortes; puente y personas en primer plano. Foto histórica de 2006, no representa taller ni función actual."
+    },
+    "caption_propuesto": {
+      "es": "Vista histórica del exterior de Maloka en Bogotá. · David Mora · CC BY 2.0 · Referencia pendiente de aprobación.",
+      "en": "Historical exterior view of Maloka in Bogotá. · David Mora · CC BY 2.0 · Reference awaiting approval.",
+      "pt-BR": "Vista histórica do exterior da Maloka em Bogotá. · David Mora · CC BY 2.0 · Referência pendente de aprovação."
     }
   }
 ]
