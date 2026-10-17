@@ -27,7 +27,9 @@
     "photo_status": "referencia_real_lugar_actividad_editorial_sin_aprobar",
     "review_status": "pendiente",
     "image_file": "images/museo-2020.webp",
-    "image_scope": "Fotografía del recinto para visita autónoma editorial; no acredita guía, taller, disponibilidad o servicio de operador."
+    "image_scope": "Fotografía del recinto para visita autónoma editorial; no acredita guía, taller, disponibilidad o servicio de operador.",
+    "source_checked_at": "2026-10-17",
+    "validity": "recinto_o_corredor_documentado_no_programacion_fijada"
   },
   {
     "id": "jardin-botanico-visita",
@@ -57,7 +59,9 @@
     "photo_status": "referencia_real_lugar_actividad_editorial_sin_aprobar",
     "review_status": "pendiente",
     "image_file": "images/medellin-3.webp",
-    "image_scope": "Orquideorama visitable; no demuestra guía, taller, acceso vigente o servicio de operador."
+    "image_scope": "Orquideorama visitable; no demuestra guía, taller, acceso vigente o servicio de operador.",
+    "source_checked_at": "2026-10-17",
+    "validity": "recinto_o_corredor_documentado_no_programacion_fijada"
   },
   {
     "id": "parque-explora-visita",
@@ -87,7 +91,9 @@
     "photo_status": "referencia_real_lugar_actividad_editorial_sin_aprobar",
     "review_status": "pendiente",
     "image_file": "images/explora-2012.webp",
-    "image_scope": "Fotografía del recinto para visita autónoma editorial; no acredita guía, taller, disponibilidad o servicio de operador."
+    "image_scope": "Fotografía del recinto para visita autónoma editorial; no acredita guía, taller, disponibilidad o servicio de operador.",
+    "source_checked_at": "2026-10-17",
+    "validity": "recinto_o_corredor_documentado_no_programacion_fijada"
   },
   {
     "id": "mamm-visita",
@@ -115,7 +121,9 @@
     "availability": "no_garantizada",
     "relationship": "ninguna",
     "photo_status": "faltante",
-    "review_status": "pendiente"
+    "review_status": "pendiente",
+    "source_checked_at": "2026-10-17",
+    "validity": "recinto_o_corredor_documentado_no_programacion_fijada"
   },
   {
     "id": "paseo-centro",
@@ -151,7 +159,9 @@
         "name": "Arquitetura e patrimônio do centro",
         "description": "Combine a observação externa do Coltejer, Junín e os templos do centro em um passeio por região. A Catedral Metropolitana fica junto ao Parque Bolívar; La Candelaria está perto do Parque Berrío. Consulte os acessos e respeite os momentos de culto."
       }
-    }
+    },
+    "source_checked_at": "2026-10-17",
+    "validity": "recinto_o_corredor_documentado_no_programacion_fijada"
   },
   {
     "id": "laureles-cafes",
@@ -180,7 +190,9 @@
         "name": "Passeio pela Avenida Jardín",
         "description": "Caminhe pelo corredor da Avenida Jardín em Laureles e conheça seus cafés e espaços gastronômicos. Escolha os estabelecimentos e consulte os horários diretamente."
       }
-    }
+    },
+    "source_checked_at": "2026-10-17",
+    "validity": "recinto_o_corredor_documentado_no_programacion_fijada"
   },
   {
     "id": "epm-visita",
@@ -192,10 +204,10 @@
     ],
     "url": "https://www.epm.com.co/institucional/sala-de-prensa/noticias-y-novedades/epm-de-puertas-abiertas-para-la-comunidad/",
     "documented_at": "2024 (página histórica)",
-    "consulted_at": "2026-10-16",
+    "consulted_at": "2026-10-17",
     "status": "draft",
-    "validity": "pendiente_actualizacion",
-    "registration": "no_comprobado",
+    "validity": "fuente_historica_2024_vigencia_2026_no_comprobada",
+    "registration": "fuente_historica_exige_inscripcion_vigencia_actual_pendiente",
     "availability": "no_comprobada",
     "price": null,
     "permission": "pendiente",
@@ -225,10 +237,10 @@
       "operador-city"
     ],
     "url": "https://medellinturistica.com/servicios/city-tour-comuna-13/",
-    "consulted_at": "2026-10-16",
+    "consulted_at": "2026-10-17",
     "status": "draft",
-    "validity": "pagina_publica_no_prueba_vigencia",
-    "registration": "RNT_pendiente_verificar",
+    "validity": "oferta_web_observable_sin_fecha_salida_confirmada",
+    "registration": "RNT_213192_declarado_en_sitio_no_verificado_registro",
     "availability": "no_comprobada",
     "price": null,
     "permission": "pendiente",
@@ -247,7 +259,10 @@
         "name": "Passeio pela cidade e Comuna 13",
         "description": "A Medellín Turística apresenta um passeio pela cidade e Comuna 13. Consulte o itinerário, as condições e a disponibilidade diretamente com o operador; a página consultada não confirma uma saída específica."
       }
-    }
+    },
+    "rnt_claimed": "213192",
+    "rnt_verified": false,
+    "photo_permission": "no_verificada_sitio_todos_derechos_reservados"
   },
   {
     "id": "jerico-helicoptero-referencia",

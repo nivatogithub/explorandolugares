@@ -14,6 +14,14 @@ Pendientes: elección/aprobación individual de referencias y uso; revisión de 
 
 Reproducir revisión vigente: `preparar-revision-v4.py`, después `validar.py`, con Python/Pillow del runtime. No ejecutar preparadores V1/V2/V3 para regenerar revisión vigente: son antecedentes y pueden restaurar fotos rechazadas.
 
+## Subtarea independiente V5 en ejecución · 17/10/2026
+
+Diez fuentes oficiales reconsultadas y evidencia de oferta pública guardada en `verificacion-vigencia-v5.json`: seis negocios comerciales y cuatro instituciones culturales. No equivale a diez negocios independientes, cupos confirmados o registro vigente. Tres restaurantes del mismo grupo/sede permanecen identificados así. El operador City Tour publica RNT 213192; registro oficial sin resultado verificable en el lector web, no se marcó validado. EPM sigue documentado mediante programa histórico 2024 sin calendario actual comprobado.
+
+Fotos de las cuatro actividades antes faltantes: MAMM fachada 2016 localizada con CC BY2.0 y lote coordinador listo; aún pendiente descarga/inspección. Avenida Jardín sin licencia comercial/adaptable comprobada; EPM visita guiada y City Tour sin permiso fotográfico específico. No se reemplazan por imágenes genéricas ni fotos de otro operador. Búsquedas y condiciones en `busqueda-fotos-actividades.json`. Coherencia ES/EN/PT y límites en `coherencia-idiomas-v5.json`.
+
+QA IAB local intentado en URL8061: herramienta devuelve `Browser is not available: iab`; inventario sin navegadores. No se abrió Chrome ni reinició servicio. `qa-local-v5.json` registra pendiente preciso de QA móvil/escritorio. Verificación estática sí disponible.
+
 ---
 
 <details><summary>Historial de entregas anteriores (puede contener pendientes ya resueltos y referencias rechazadas)</summary>

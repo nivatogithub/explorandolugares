@@ -28,5 +28,37 @@
     "query": "site:commons.wikimedia.org Comuna 13 guided tour license",
     "result": "No se ha validado una foto que pruebe el servicio concreto de los operadores investigados. Una foto de mural no sustituye foto autorizada de actividad.",
     "date": "2026-10-16"
+  },
+  {
+    "activity": "Visita autónoma MAMM",
+    "date": "2026-10-17",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Museo_de_Arte_Moderno_de_Medell%C3%ADn_-_Fachada.jpg",
+    "result": "Original de fachada, Andrés Molina Mesa, CC BY2.0 comprobada; lote preparado, inspección local pendiente. No foto de exposición ni recorrido guiado."
+  },
+  {
+    "activity": "Paseo Avenida Jardín",
+    "date": "2026-10-17",
+    "queries": [
+      "site:commons.wikimedia.org Avenida Jardín Medellín",
+      "Avenida Jardín Creative Commons",
+      "Vía Jardín Wikimedia"
+    ],
+    "source_url": "https://www.medellin.travel/via-jardin/",
+    "result": "Fuente oficial identifica corredor; no licencia comercial/adaptación explícita encontrada. Búsqueda alternativa encontró obra CC BY-NC-ND2.5 en blog, rechazada por no comercial/sin derivadas y antigüedad. No sustituir con parque genérico de Laureles."
+  },
+  {
+    "activity": "Visita guiada EPM",
+    "date": "2026-10-17",
+    "source_url": "https://www.epm.com.co/institucional/sala-de-prensa/noticias-y-novedades/epm-de-puertas-abiertas-para-la-comunidad/",
+    "queries": [
+      "site:epm.com.co Puertas Abiertas 2026 visitas"
+    ],
+    "result": "Programa y fotografías históricas de 2024. No permiso comercial/adaptación ni programación 2026 comprobados. Fachada EPM libre no sería fotografía del servicio guiado."
+  },
+  {
+    "activity": "City Tour Comuna13 Medellín Turística",
+    "date": "2026-10-17",
+    "source_url": "https://medellinturistica.com/servicios/city-tour-comuna-13/",
+    "result": "Oferta pública y número RNT declarado observables; pie todos los derechos reservados. Sin licencia de fotos. Referencia nueva de escaleras de Juan Gómez no acredita guía/servicio de este operador; no asignada como su imagen."
   }
 ]
