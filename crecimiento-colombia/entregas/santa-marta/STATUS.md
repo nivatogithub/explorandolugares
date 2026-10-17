@@ -25,3 +25,7 @@ Los HTML antiguos de tres atractivos son evidencia histórica; la fuente vigente
 Comprobación v4 terminada: ZIP con ocho atractivos y nueve imágenes diferentes, más sidecar de historia independiente; textos completos en ES/EN/PT, motivos compactos e integridad verificados. Siete referencias nuevas inspeccionadas; tres originales completos descargados y cuatro variantes oficiales de1280px por limitaciónHTTP429 del servidor, con URL del original completo trazable y descarga completa pendiente. Sigue pendiente importar y verificar la versión nueva en preprod.
 
 Ajuste de revisión visual: las descripciones públicas de centro histórico y Taganga en ES/EN/PT explican la visita sin mencionar tarjetas repetidas ni futuras guías. ZIP regenerado y validaciones de manifiesto, idiomas e integridad aprobadas.
+
+## Verificación coordinador 17/10/2026
+
+Avance importado únicamente en preproducción local. Ocho tarjetas, portada e imagen de historia distintas; ES/EN/PT-BR, archivos HTTP y hashes comprobados. Revisión visual en navegador interno: botón Cargar más lugares muestra las ocho tarjetas y sus imágenes decodificadas. Fotografías provisionales, sin aprobación editorial ni producción. Ver reporte-preprod.json y verificacion-preprod-v4.json.

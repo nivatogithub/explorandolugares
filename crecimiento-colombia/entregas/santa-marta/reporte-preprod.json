@@ -17,5 +17,28 @@
     "Generar y aprobar ilustraciones finales con skill",
     "Completar actividades y directorio",
     "Validación visual tras importación coordinador"
-  ]
+  ],
+  "imported": true,
+  "database_touched": true,
+  "environment": "local_preprod_only",
+  "import_receipt": {
+    "destination": "santa-marta",
+    "id": 24,
+    "package_sha256": "49b51931d1287f98d3ae48428ea44bc160268d19ce6960661df1f3804809d441",
+    "loaded_at": "2026-10-17T11:52:46+00:00",
+    "environment": "local_preprod_only",
+    "production_authorized": false,
+    "editorial_approved": false,
+    "provisional_photographs": true,
+    "places": 8,
+    "history_asset_id": 115,
+    "urls": {
+      "es": "http://127.0.0.1:8088/destinos/santa-marta/",
+      "en": "http://127.0.0.1:8088/en/destinos/santa-marta/",
+      "pt-BR": "http://127.0.0.1:8088/pt-br/destinos/santa-marta/"
+    }
+  },
+  "editorial_approved": false,
+  "history_image_imported": true,
+  "live_validation": "verificacion-preprod-v4.json"
 }
