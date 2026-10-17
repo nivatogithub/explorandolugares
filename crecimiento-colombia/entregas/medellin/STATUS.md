@@ -1,5 +1,21 @@
 # Lugar 3 · Medellín · entrega privada de investigación
 
+## Entrega vigente V3 para revisión local · 17/10/2026
+
+**ZIP V3 preparado y comprobado:** exactamente8atractivos principales y9fotografías distintas porarchivo,hashyfuente. Orden: ParqueExplora, PueblitoPaisa, JardínBotánico, Comuna13, MuseoAntioquia, Arví, CatedralMetropolitana y PiesDescalzos. Selección editorial porrelevancia/variedad, independiente defotos; inventario28conservado secundario. Coltejer NOtarjeta.
+
+Portada propuesta7: panorama distante de2005,Fabioj,CCBYSA3, conColtejer identificado poranotaciónfuente y silueta pequeña visible dentrodecityscape. Fuente disponible960x202: histórica ylimitada,noampliar. Noes aprobacióneditorial. PrimerosplanosColtejer anteriores yskyline2011sinColtejer quedan antecedentes; museo2010interior fue rechazado y reemplazado porfachada2020BernardGagnon.
+
+Se inspeccionaron los8nuevos archivosrecibidos yla referenciaJardínexistente, ademásderivados revisados parafidelidad ypresupuesto. Licenciascomerciales/adaptación conautores,enlaces ydeclaracióncambios. Cuatro archivosrecuperados son miniaturasoficiales(Catedral,Explora,panorama,Museofachada) porqueoriginales devolvieronHTTP429: **no afirmar maestroscompletos descargados**. URLsoriginales yvariantes/hash trazables en`imagenes.json`,`descargas-v3.json`,`inspeccion-visual-v3.json`.
+
+`paquete-preprod.zip` pasóel importadorPHP real`DestinationPackage::readZip` delworktreepreprod:8atractivos/9imágenes,tresidiomas,estado draft. Tambiénvalidaciónautomática deIDs,fotos/hashdistintos,referencias,licencias ypresupuestos300KBportada/120KBtarjetas. Fotografías provisionales,noIAfinal. Contenido públicoES/EN/PTsinreferenciasalprocesodetarjetas;geografíaútil distinguiendoCatedral/LaCandelaria,ParquesdelRío/PiesDescalzosySantaElena.
+
+Historiaopcional: `historia-sidecar-preprod.json`, fotoPicacho2016diferente detodaslas9delZIPytexto3idiomas; aclaracontextopaisajeurbano2016,noimagendefundación1675. Integraciónprivada sidecarpendientecoordinador.
+
+`preview.html` muestraportada,historia,8principalesytresidiomas,coninventariosecundarioyactividadesseparadas;decisioneslocalesexportables,sinaprobaciones. Reproducirsolo`preparar-v3.py`(requierePillow,descargaseinspecciónprevias)y`validar.py`;preparadoresV1/V2sonantecedentesynodebenejecutarsesobrelaversiónvigente.
+
+**Pendientes:** coordinadorimportaZIPserialmenteenPHP/MySQLlocalycompruebarenderreal/idiomas/recortes;selección/revisiónhumanadeoriginales,textos,usos/licencias;recuperarmaestroscompletoscuandopermitalafuente;ilustracionesautorizadasdespuésysegundarevisión;profundidadrestanteyactividades. SinBDtocadaporworker,contenedores,Chrome,generaciónIA,publicaciónniaprobación. Losdocumentosanterioressiguientesquedancomohistorialypuedencontenerrecuentossuperados.
+
 ## Revisión V3 en preparación: selección turística de exactamente ocho
 
 Nueva instrucción prevalece: ocho principales elegidos por relevancia y variedad; Coltejer exclusivamente portada distante con ciudad y silueta completa. `seleccion-principal-v3.json` selecciona Explora, Pueblito Paisa, Jardín Botánico, Comuna13, Museo de Antioquia, Arví, Catedral Metropolitana y Pies Descalzos. Vida de El Poblado/centro ampliado y agenda quedan secundarios. Macarena no promete conciertos sin agenda confirmada.
