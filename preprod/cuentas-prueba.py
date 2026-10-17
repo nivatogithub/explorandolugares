@@ -43,7 +43,10 @@ def main():
         lines=['# Accesos de prueba de este equipo — solo preproducción local','','Abrir http://127.0.0.1:8088/ y pulsar Iniciar sesión.','','Estas credenciales son ficticias, locales y no funcionan en producción. No compartirlas con clientes.','','| Perfil | Correo actual | Contraseña local |','|---|---|---|']
         for key in PROFILES:
             row=data['profiles'][key];lines.append(f"| {key.capitalize()} | {row['email']} | {row['password']} |")
-        lines+=['','El negocio ficticio queda asociado al perfil Negocio y comienza en borrador con suscripción Gratis. No representa un comercio real.','','Si cambias una contraseña desde el portal, este archivo conserva la clave inicial hasta que ejecutes `./preprod/cuentas-prueba.sh --restablecer`. Ese comando restablece las claves documentadas y los permisos de estas tres cuentas; conserva los datos del negocio y las demás cuentas.','','Guía portable: `preprod/CUENTAS_PRUEBA.md`.']
+        lines+=['','## Negocios asociados a la cuenta de prueba','','| Negocio ficticio | Suscripción actual | Estado de suscripción | Publicación |','|---|---|---|---|']
+        for business in data['profiles']['negocio'].get('businesses',[]):
+            lines.append(f"| {business['display_name']} | {business['plan_code']} | {business['subscription_status']} | {business['publication_status']} |")
+        lines+=['','Los cuatro negocios son ficticios y comienzan en borrador. Gratis queda pendiente de publicación; Destacado, Página Comercial y Premium se configuran mensualmente y quedan pendientes de revisión de pago, sin registrar pagos ni cobros ficticios.','','Si cambias una contraseña desde el portal, este archivo conserva la clave inicial hasta que ejecutes `./preprod/cuentas-prueba.sh --restablecer`. Ese comando restablece las claves documentadas y los permisos de estas tres cuentas; conserva los datos del negocio y las demás cuentas.','','Guía portable: `preprod/CUENTAS_PRUEBA.md`.']
         private_write(STATE/'CUENTAS_PRUEBA.md','\n'.join(lines)+'\n')
     print('Cuentas de prueba persistentes listas. Accesos privados: '+str(STATE/'CUENTAS_PRUEBA.md'))
 if __name__=='__main__':main()
