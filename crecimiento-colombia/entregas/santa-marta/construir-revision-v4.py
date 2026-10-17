@@ -9,7 +9,7 @@ old={x['slug']:x for x in p['places']}
 refs=json.loads((root/'referencias-v4.json').read_text())
 for r in refs:
  im=ImageOps.exif_transpose(Image.open(root/r['original_path'])).convert('RGB');r['downloaded_dimensions']=list(im.size)
- im.thumbnail((1800,1200) if r['id']=='portada-morro' else (1000,800))
+ im.thumbnail((1800,1200) if r['id'].startswith('portada-') else (1000,800))
  name='v4-'+r['id']+'.webp';target=root/'imagenes'/name
  im.save(target,'WEBP',quality=82,method=6)
  r['derivative_path']='imagenes/'+name;r['derivative_sha256']=hashlib.sha256(target.read_bytes()).hexdigest();r['derivative_dimensions']=list(im.size)
@@ -18,7 +18,7 @@ assets={r['id']:r for r in refs}
 def asset(id,alt):
  r=assets[id]
  return {'file':'images/v4-'+id+'.webp','image_origin':'external','image_creator':r['author'],'image_source_url':r['source_page'],'image_license':r['license'],'image_license_url':r['license_url'],'alt':dict(zip(langs,alt)),'caption':{l:r['author']+' / Wikimedia Commons / '+r['license'] for l in langs}}
-p['hero_image']=asset('portada-morro',['El Morro frente a la bahía de Santa Marta, referencia fotográfica de 2015','El Morro off Santa Marta Bay, photographic reference from 2015','El Morro diante da baía de Santa Marta, referência fotográfica de 2015'])
+p['hero_image']=asset('portada-camellon',['Vista aérea del Camellón de la Bahía y el frente urbano de Santa Marta, fotografía de 2022','Aerial view of the bay promenade and Santa Marta waterfront, photograph from 2022','Vista aérea do calçadão da baía e da orla urbana de Santa Marta, fotografia de 2022'])
 # Selection is editorial relevance, independent from availability of a photograph.
 data=[
  ('tayrona',['Parque Nacional Natural Tayrona','Tayrona National Natural Park','Parque Nacional Natural Tayrona'],['Senderos entre bosque tropical, rocas y playas como Cabo San Juan. El parque pertenece al distrito de Santa Marta; consulta accesos, cierres y zonas habilitadas con Parques Nacionales antes de organizar una excursión.','Trails through tropical forest, rock formations and beaches such as Cabo San Juan. The park lies within Santa Marta district; check entry points, closures and authorised areas with National Parks before planning a trip.','Trilhas entre floresta tropical, rochas e praias como Cabo San Juan. O parque fica no distrito de Santa Marta; consulte acessos, fechamentos e áreas autorizadas com Parques Nacionais antes do passeio.'],'https://old.parquesnacionales.gov.co/portal/especial/tayrona/','tayrona',['Cabo San Juan en el Tayrona, fotografía de 2014','Cabo San Juan in Tayrona, photograph from 2014','Cabo San Juan no Tayrona, fotografia de 2014']),

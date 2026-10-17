@@ -1,6 +1,6 @@
 {
   "destination": "santa-marta",
-  "revision": "v4",
+  "revision": "v5_portada_urbana",
   "places": 8,
   "images": 10,
   "package_images": 9,
@@ -10,7 +10,7 @@
   "provisional": true,
   "final_ai_images": 0,
   "production_authorized": false,
-  "preprod_imported": false,
+  "preprod_imported": true,
   "missing": [
     "Aprobar referencias una por una",
     "Mejorar referencia acuario: histórica2011, espectáculo no representa toda visita",
@@ -18,14 +18,11 @@
     "Completar actividades y directorio",
     "Validación visual tras importación coordinador"
   ],
-  "imported": true,
-  "database_touched": true,
-  "environment": "local_preprod_only",
   "import_receipt": {
     "destination": "santa-marta",
     "id": 24,
-    "package_sha256": "49b51931d1287f98d3ae48428ea44bc160268d19ce6960661df1f3804809d441",
-    "loaded_at": "2026-10-17T11:52:46+00:00",
+    "package_sha256": "7e225fda123fd28e1b1271038b698d8e77698c9d2a5bd96cd3936afc1bd834be",
+    "loaded_at": "2026-10-17T12:10:15+00:00",
     "environment": "local_preprod_only",
     "production_authorized": false,
     "editorial_approved": false,
@@ -38,7 +35,6 @@
       "pt-BR": "http://127.0.0.1:8088/pt-br/destinos/santa-marta/"
     }
   },
-  "editorial_approved": false,
-  "history_image_imported": true,
-  "live_validation": "verificacion-preprod-v4.json"
+  "live_validation": "verificacion-preprod-v5.json",
+  "hero_reference": "Camellon_de_la_bahía.jpg · Giancarlos1234 · CC BY-SA 4.0 · 2022-01-15"
 }
