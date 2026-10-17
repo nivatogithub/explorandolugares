@@ -1,61 +1,47 @@
-# Lugar 1 · Cartagena · revisión ampliada reabierta
+# Cartagena · selección de ocho · revisión vigente
 
-## Estado vigente después de corrección del propietario
+Rama exclusiva `lugar/CO/bolivar/cartagena`. Destino CO-13-cartagena. No publicación, panel, contacto comercial, siguiente destino ni generación IA en esta corrección.
 
-Se conservó el commit8330423 y su revisión de41 componentes en `historial/revision-41-componentes.json`. La revisión nueva tiene116 componentes independientes; ninguna decisión previa se aplica automáticamente. Se leyó el procedimiento coordinador `crecimiento-colombia/PROCEDIMIENTO_DESTINOS_V2.md` y el modelo oculto de experiencias Jericó en `content/destinos-dinamicos.json`. No se copiaron actividades Jericó a Cartagena.
+## Decisiones recibidas y preservadas
 
-- Inventario ampliado de4 a17 sitios, sin máximo editorial artificial. Cinco sitios tienen referencia fotográfica candidata (no aprobada); doce siguen sin foto apta.
-- Nueve actividades: dos propuestas editoriales autónomas, cuatro ofertas documentadas en páginas propias de operadores y tres candidatos ocultos. Todas sin alianza, disponibilidad, registro operativo, tarifas o permisos certificados. Ninguna se muestra como oferta pública activa.
-- Búsqueda visual específica para bus, buceo/snorkel, catamarán y pesca documentada en `imagenes/propuestas-actividades.json`. Galerías propias sin licencia abierta permanecen no usables y no descargadas. Foto de bus común de2012 rechazada para CitySightseeing.
-- Nuevo original Bernard Gagnon, barcos en La Boquilla2020, CC BY-SA4.0: conservado con hash y dos derivados técnicos, inspeccionado. Sirve como contexto local, NO como prueba de pesca ni del servicio IMPULSE. Las nueve actividades siguen con gate fotográfico pendiente.
-- Dos opciones de portada numeradas visibles conjuntamente, elección separada del original/uso, licencia y textos por idioma. Originales/textos se aprueban antes de cualquier ilustración; después habrá nueva revisión de ilustración. Cero ilustraciones generadas o aprobadas.
-- ZIPv2 actual sigue siendo parcial (tres atractivos con foto apta); no representa todo el inventario ampliado, no se importó al panel y no se publicó.
-- QA Chrome390/1440:116 componentes, dos opciones, cero aprobaciones preseleccionadas, sin elección de portada inferida, sin imágenes rotas ni desbordamiento. Capturas conservadas.
+Se recibió el exportado original del propietario para revisión `3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a`:116 decisiones,22 aprobadas,93 pendientes y1 solicitud de corrección. Se comprobó hash de revisión completo, cada ID/alcance y el hash canónico de cada valor del manifiesto original. El exportador antiguo no incluía componenthash individual; su vinculación se deriva del manifiesto íntegro que identifica esa revisión, sin fingir que ese campo venía recibido. Bytes originales y snapshot116 están en `historial/`.
 
-Lo que sigue es el antecedente de la entrega inicial y no reemplaza los pendientes ampliados anteriores.
+Quince aprobaciones intactas siguen activas: portada original1, historia3 idiomas, San Felipe foto/textos3 idiomas, Getsemaní textos3 idiomas y MUHCA foto/textos3 idiomas. Otras siete siguen registradas en su versión histórica: Torre del Reloj3 y Oro Zenú ES pasan a investigación secundaria; La Popa3 cambian porque ahora describen claustro en vez de duplicar portada. No se transfieren aprobaciones a textos agrupados o modificados. La nueva foto de Getsemaní permanece pendiente; la foto anterior solicitada a corregir no está en paquete vigente.
 
+`decisiones-usuario.json` conserva todas las decisiones/comentarios. `aprobaciones-vigentes.json` expone IDs, hashes y vinculación originalSHA+uso para las referencias aprobadas. La UI muestra «Ya aprobado» únicamente para componentes válidos y no pide repetirlos. Nuevas exportaciones incluyen también hash individual.
 
-Rama exclusiva: `lugar/CO/bolivar/cartagena`. ID: `CO-13-cartagena`. Investigación web: 16/10/2026. No se ha tomado otro destino.
+La instrucción de CTG-01 «hay que hacerla con ai siguiendo el skill de iimagnes que tenemos» autoriza condicionalmente esa ilustración. Se registra aparte que su ejecución está aplazada: primero corregir selección máximo8 según el mensaje actual. No se revoca esa autorización ni se inventa aprobación de la ilustración final. No se generó ninguna.
 
-## Realizado
+## Selección principal (ocho)
 
-- Leídos AGENTS.md, contexto independiente, contexto producto, gobernanza, WORKERS y autorización de cuatro workers.
-- Aplicados skill existente `.agents/skills/imagenes-destinos/SKILL.md`, guías de imágenes y procedimiento complementario de fotografías. El skill es de ilustración: no se fingió un conversor existente ni se sustituyeron fotos por IA.
-- Fuentes oficiales/institucionales consultadas: UNESCO, ProColombia, Alcaldía, MUHCA y gestor de fortificaciones; trazabilidad por componente en JSON.
-- Textos originales ES con historia, cuatro atractivos, dos experiencias y orientación práctica; traducciones EN y PT-BR pendientes de revisión editorial humana.
-- Diez fichas empresariales/culturales de cuatro categorías para directorio gratuito. Todas son borrador PUBLICO pendiente de verificar, sin reclamación, sin alianza y con operación no confirmada; ningún contacto realizado.
-- Cinco originales fotográficos autorizados conservados (cuatro candidatos aceptables, uno rechazado por desenfoque), con licencia comercial/adaptación, hashes, fecha de captura y derivados WebP reproducibles. Créditos y ShareAlike permanecen asociados al activo.
-- `preview.html` privada con los tres idiomas. No conectada a producción ni panel.
+1. Centro histórico y murallas: patrimonio urbano; agrupa Torre del Reloj y Portal de los Dulces. San Diego se explica como barrio en ES/EN/PT-BR. Foto nueva local de murallas2016.
+2. Castillo de San Felipe de Barajas: referencia y textos aprobados intactos.
+3. Getsemaní: textos aprobados; referencia nueva Joe Ross2016, casas coloridas y calle sin personas dominantes, pendiente.
+4. Islas del Rosario: incorporadas como dimensión insular fuera del núcleo urbano. Referencia específica del sector Cocolise, Isla Grande,2016, sin implicar alianza ni acceso al establecimiento.
+5. Playa Blanca · Barú: península al sur de Cartagena, distinta del archipiélago; referencia aérea específica2019. Fuente institucional de acceso/ubicación conservada.
+6. Cerro y convento de La Popa: claustro2011 distinto de panorama de portada; textos nuevos pendientes.
+7. Museo Histórico de Cartagena: foto y textos aprobados intactos.
+8. La Boquilla: territorio pesquero afrocaribeño y paisaje local; referencia2020 licenciada, pendiente de aprobación.
 
-## Gates todavía pendientes
+La selección completa sigue como propuesta, no aprobación inferida. Los19 sitios investigados no se borran: los11 restantes quedan secundarios, agrupados o pendientes. Nueve actividades permanecen aparte (2 editoriales,4 ofertas documentadas,3 candidatos ocultos), con bloqueos específicos de fotografías/permisos. Una oferta pública de operador no certifica alianza, vigencia, registro, precios, disponibilidad ni permiso operativo.
 
-- Sustituir la fotografía de murallas de 2006: se inspeccionó y rechazó por desenfoque. Se conserva como evidencia, marcada no utilizable y excluida de la previsualización; Centro histórico sigue sin imagen asignada.
-- Previsualización PHP del sitio e integración administrativa pendientes. La vista HTML privada sí se comprobó en Chrome a 390/1440 px: sin desbordamiento ni imágenes rotas; capturas y observaciones conservadas.
-- Revisión humana de hechos, textos, traducciones, originales/licencias y composición visual. Ninguna aprobación inferida de la autorización de investigar.
-- Integración y previsualización PHP del sitio pendientes. Se preparó `cartagena-borrador-v2.zip` con `paquete-destino.json`, portada y tres atractivos con fotografías aptas; el validador real `DestinationPackage::validateManifest/readZip` lo acepta (cuatro imágenes). No se ha importado ni guardado en panel. `borrador.json` sigue siendo investigación extendida incompatible directamente con importador; el ZIP es el paquete preparado.
-- Horarios, precios, disponibilidad, rutas aéreas concretas, agenda y accesibilidad detallada no auditados; se omiten y se pide confirmar con el gestor. No se ha certificado la vigencia presencial de negocios.
-- PR remoto pendiente: `gh` no está disponible en esta sesión. No se ha hecho push, merge, publicación ni despliegue.
+## Fotografías y skill
 
-## Hallazgos de control
+Quince originales conservados,30 derivados WebP técnicos reproducibles; solo nueve activos distintos se usan en paquete de referencias (portada+8 fichas). Son referencias para revisión, NO ilustraciones finales. Fotografías nuevas inspeccionadas visualmente; autores, fecha, originales, licencia comercial/adaptación, hashes, crédito y ShareAlike en manifiesto. El agente verifica esos permisos; se retiraron casillas administrativas de aprobación de licencia. Esto no elimina permisos ni aprobación humana del uso visual.
 
-- ProColombia conserva una lista aérea que menciona VivaAir e Interjet: no se trasladó a contenido vigente. Su recomendación de carruajes tampoco se trasladó.
-- Rechazada foto Commons `01 Castillo de San Felipe.jpg`: pertenece a Almería, España, a pesar del nombre coincidente.
-- Las fotografías de años anteriores no certifican el estado presente del lugar. Fechas y limitación visibles en manifiesto y vista previa.
-- Algunas URLs intentadas fallaron al consultar (Carmen, antiguo dominio de Museo Histórico, Museo Naval, Serrezuela): no se usaron como evidencia de fichas.
+Rechazos y alternativas conservados: murallas2006 desenfocadas; Getsemaní anterior solicitado a corregir; Angosto solo letrero; Rosario9 showdelfines; Rosario140 sin isla individual identificada; Getsemaníbalcones2012 con personas en primer plano. No se presentan como propuestas nuevas aprobadas. `imagenes/referencias-descartadas.json` registra motivos.
 
-## Reproducibilidad y alcance
+Se leyó el skill existente `.agents/skills/imagenes-destinos/SKILL.md`, guías y procedimiento coordinador actualizado. Primero revisión de originales/textos, luego ilustración editorial fiel y segunda revisión de imagen final. Esta corrección no ejecuta esa fase.
 
-Ejecutar `preparar.py` con Python y Pillow 12.3.0 para regenerar textos/JSON/vista previa/derivados desde los originales; ejecutar `validar.py` para comprobar referencias, gates y hashes. `SHA256SUMS.json` cubre todos los archivos de esta entrega salvo sí mismo. Toda modificación requiere nuevo manifiesto y nueva revisión.
+## Paquete e integración
 
-El validador comprueba integridad técnica; no sustituye inspección geográfica, verificación factual o aprobación del usuario. Publicabilidad y publicación siguen en falso. Lugar 1 conserva Cartagena durante correcciones y revisión.
+`paquete-v2.json` y ZIP actuales contienen los8 atractivos seleccionados y9 fotografías de referencia distintas. El ZIP previo de3 atractivos se conserva en `historial/cartagena-v2-parcial-obsoleto.zip`; no es entrega vigente. `paquete-estado.json` declara referencia-only, sin importación administrativa y con integración final bloqueada hasta imágenes finales aprobadas. El paquete pasa validación técnica, pero NO se ofrece como salida IA terminada o publicable.
 
-## Inspección fotográfica del agente
+## Validación y revisión visual
 
-Inspeccionados visualmente los cinco derivados: panorama La Popa, San Felipe, Getsemaní y fachada MUHCA conservan su identidad y proporción sin recorte. Murallas de 2006 rechazadas por desenfoque del original; no se intenta arreglar con generación ni se usa como evidencia visual aprobada. Diez derivados generados: ocho candidatos aptos y dos rechazados. La aprobación humana permanece pendiente para todos.
+- Validación estática: integridad de originales/derivados, metadatos, presupuestos, fuentes, idiomas, exactamente8 seleccionados, Rosario/Barú, ausencia de duplicado de portada,79 componentes y conservación de22 históricas/15 activas. JavaScript de exportación parseado sin ejecutarlo en navegador.
+- PHP real `DestinationPackage::readZip`:8 atractivos y9 imágenes de referencias aceptadas. No se guardó en base de datos.
+- Ningún Chrome visible ni headless se ejecutó en esta corrección. El runner antiguo queda deshabilitado y su código/capturas previos archivados como históricos. QA visual actual corresponde a IAB del coordinador; no se reutilizan capturas Chrome116 como evidencia de vista8.
+- PR remoto/push pendientes: gh ausente en sesión. No se declara acceso de escritura remoto ni publicación.
 
-## Validación comprobada
-
-- `validar.py`: coherencia del destino, tres idiomas, diez fichas, fuentes, hashes, formatos, metadatos y presupuestos WebP.
-- Validador real PHP del repositorio: manifiesto v2 y lectura del ZIP aceptados, cuatro imágenes. No se guardó en base de datos.
-- Chrome instalado, Playwright con canal chrome: 390/1440 px sin desbordamiento horizontal ni imágenes rotas; tres secciones de idioma presentes. Capturas inspeccionadas visualmente.
-- QA visual del agente no equivale a aprobación humana. No se ha creado PR remoto ni publicado.
+Reproducción: `preparar.py` produce referencias técnicas, inventario, `seleccionar.py` y `revision8.py`; `validar.py` comprueba la entrega. Todas las decisiones exactas sobreviven en ledger, y cualquier cambio de texto/uso o de original invalida solo el componente afectado.

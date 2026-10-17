@@ -60,28 +60,39 @@
       "translations": {
         "es": {
           "name": "Centro histórico y murallas",
-          "description": "Recorre plazas y calles de Centro y San Diego, parte del conjunto patrimonial. La ciudad sigue habitada: respeta viviendas y circulación.",
+          "description": "Centro y San Diego son barrios del casco histórico de Cartagena. San Diego es el sector alrededor de su plaza y de la iglesia de Santo Toribio. Recorre murallas, plazas y calles; la Torre del Reloj y el Portal de los Dulces se incluyen en este conjunto, sin multiplicar tarjetas de iglesias o monumentos.",
           "external_url": "https://colombia.travel/es/cartagena-de-indias",
           "external_label": "Fuente / Source / Fonte"
         },
         "en": {
           "name": "Historic centre and city walls",
-          "description": "Explore the squares and streets of Centro and San Diego, part of the heritage ensemble. This is a lived-in city: respect homes and pedestrian movement.",
+          "description": "Centro and San Diego are neighbourhoods in Cartagena’s historic core. San Diego is the area around its square and Santo Toribio church. Explore the walls, squares and streets; the Clock Tower and Portal de los Dulces are included in this ensemble rather than presented as separate church or monument cards.",
           "external_url": "https://colombia.travel/es/cartagena-de-indias",
           "external_label": "Fuente / Source / Fonte"
         },
         "pt-BR": {
           "name": "Centro histórico e muralhas",
-          "description": "Explore praças e ruas de Centro e San Diego, parte do conjunto patrimonial. A cidade é habitada: respeite as casas e a circulação.",
+          "description": "Centro e San Diego são bairros do núcleo histórico de Cartagena. San Diego é o setor ao redor de sua praça e da igreja de Santo Toribio. Explore muralhas, praças e ruas; a Torre do Relógio e o Portal de los Dulces integram este conjunto, sem multiplicar cartões de igrejas ou monumentos.",
           "external_url": "https://colombia.travel/es/cartagena-de-indias",
           "external_label": "Fuente / Source / Fonte"
         }
       },
-      "image": null,
+      "image": {
+        "asset_id": "murallas-2016",
+        "file": "imagenes/derivados/murallas-2016-tarjeta.webp",
+        "alt": {
+          "es": "Murallas del centro histórico de Cartagena, fotografía2016.",
+          "en": "Historic Cartagena city walls, photograph2016.",
+          "pt-BR": "Muralhas do centro histórico de Cartagena, fotografia2016."
+        }
+      },
       "source_ids": [
-        "unesco"
+        "unesco",
+        "centro-ruta"
       ],
-      "image_status": "pendiente_foto_real_licenciada"
+      "image_status": "referencia_real_licenciada_inspeccionada_pendiente_o_aprobada_segun_ledger",
+      "editorial_selected": true,
+      "editorial_reason": "Conjunto urbano emblemático UNESCO; agrupa hitos sin redundancia."
     },
     {
       "slug": "san-felipe",
@@ -120,7 +131,9 @@
         "unesco",
         "fortificaciones"
       ],
-      "image_status": "candidata_revision_original"
+      "image_status": "referencia_real_licenciada_inspeccionada_pendiente_o_aprobada_segun_ledger",
+      "editorial_selected": true,
+      "editorial_reason": "Fortificación principal, identidad patrimonial y texto/referencia aprobados."
     },
     {
       "slug": "getsemani",
@@ -147,19 +160,21 @@
         }
       },
       "image": {
-        "asset_id": "getsemani-2016",
-        "file": "imagenes/derivados/getsemani-2016-tarjeta.webp",
+        "asset_id": "getsemani-casas-2016",
+        "file": "imagenes/derivados/getsemani-casas-2016-tarjeta.webp",
         "alt": {
-          "es": "Calle del barrio Getsemaní en Cartagena, fotografía de 2016.",
-          "en": "Street in Cartagena’s Getsemaní neighbourhood, photographed in 2016.",
-          "pt-BR": "Rua do bairro Getsemaní em Cartagena, fotografia de 2016."
+          "es": "Casas del barrio Getsemaní en Cartagena,2016.",
+          "en": "Houses in Cartagena’s Getsemaní neighbourhood,2016.",
+          "pt-BR": "Casas do bairro Getsemaní em Cartagena,2016."
         }
       },
       "source_ids": [
         "unesco",
         "procolombia"
       ],
-      "image_status": "candidata_revision_original"
+      "image_status": "referencia_real_licenciada_inspeccionada_pendiente_o_aprobada_segun_ledger",
+      "editorial_selected": true,
+      "editorial_reason": "Barrio y vida local; texto aprobado, nueva referencia visual solicitada."
     },
     {
       "slug": "museo-historico",
@@ -197,7 +212,9 @@
       "source_ids": [
         "muhca"
       ],
-      "image_status": "candidata_revision_original"
+      "image_status": "referencia_real_licenciada_inspeccionada_pendiente_o_aprobada_segun_ledger",
+      "editorial_selected": true,
+      "editorial_reason": "Memoria de la ciudad; referencia y textos ya aprobados."
     },
     {
       "slug": "torre-reloj",
@@ -245,7 +262,9 @@
         "es": "borrador_con_fuente_pendiente_revision_humana",
         "en": "borrador_con_fuente_pendiente_revision_humana",
         "pt-BR": "borrador_con_fuente_pendiente_revision_humana"
-      }
+      },
+      "editorial_selected": false,
+      "editorial_reason": "Integrado en centro histórico como hito secundario."
     },
     {
       "slug": "oro-zenu",
@@ -293,7 +312,9 @@
         "es": "borrador_con_fuente_pendiente_revision_humana",
         "en": "borrador_con_fuente_pendiente_revision_humana",
         "pt-BR": "borrador_con_fuente_pendiente_revision_humana"
-      }
+      },
+      "editorial_selected": false,
+      "editorial_reason": "Investigación conservada fuera de selección principal por menor prioridad relativa o redundancia; no borrado."
     },
     {
       "slug": "cerro-popa",
@@ -303,31 +324,31 @@
         "popa"
       ],
       "image": {
-        "asset_id": "la-popa-2008",
-        "file": "imagenes/derivados/la-popa-2008-tarjeta.webp",
+        "asset_id": "popa-convento-2011",
+        "file": "imagenes/derivados/popa-convento-2011-tarjeta.webp",
         "alt": {
-          "es": "Panorama de Cartagena y su bahía desde el cerro de La Popa, fotografía de 2008.",
-          "en": "View of Cartagena and its bay from La Popa hill, photographed in 2008.",
-          "pt-BR": "Panorama de Cartagena e sua baía visto da colina de La Popa, fotografia de 2008."
+          "es": "Claustro del convento de Santa Cruz de La Popa, Cartagena,2011.",
+          "en": "Cloister of Santa Cruz de La Popa convent, Cartagena,2011.",
+          "pt-BR": "Claustro do convento de Santa Cruz de La Popa, Cartagena,2011."
         }
       },
-      "image_status": "referencia_contextual_local_pendiente_aprobacion_por_ubicacion",
+      "image_status": "referencia_real_licenciada_inspeccionada_pendiente_o_aprobada_segun_ledger",
       "translations": {
         "es": {
           "name": "Cerro y convento de La Popa",
-          "description": "El conjunto religioso se encuentra sobre el cerro de La Popa; el mirador permite observar Cartagena y su bahía. La fotografía existente muestra el panorama, no la fachada del convento.",
+          "description": "El convento de Santa Cruz de La Popa se encuentra sobre el cerro de La Popa y combina patrimonio religioso con vistas de Cartagena. Su claustro ofrece otra manera de acercarse a este conjunto histórico. Confirma condiciones de visita y transporte antes de subir.",
           "external_url": "https://colombia.travel/en/cartagena-de-indias/la-popa-hill",
           "external_label": "Fuente / Source / Fonte"
         },
         "en": {
           "name": "La Popa hill and convent",
-          "description": "The religious complex stands on La Popa hill, overlooking Cartagena and its bay. The existing photograph shows the panorama, not the convent façade.",
+          "description": "Santa Cruz de La Popa convent stands on La Popa hill, combining religious heritage with views over Cartagena. Its cloister offers another way to experience this historic complex. Confirm visiting and transport conditions before going up.",
           "external_url": "https://colombia.travel/en/cartagena-de-indias/la-popa-hill",
           "external_label": "Fuente / Source / Fonte"
         },
         "pt-BR": {
           "name": "Colina e convento de La Popa",
-          "description": "O conjunto religioso está na colina de La Popa, com vista de Cartagena e sua baía. A fotografia existente mostra o panorama, não a fachada do convento.",
+          "description": "O convento de Santa Cruz de La Popa fica na colina de La Popa e reúne patrimônio religioso e vistas de Cartagena. Seu claustro oferece outra forma de conhecer esse conjunto histórico. Confirme condições de visita e transporte antes de subir.",
           "external_url": "https://colombia.travel/en/cartagena-de-indias/la-popa-hill",
           "external_label": "Fuente / Source / Fonte"
         }
@@ -349,7 +370,9 @@
         "es": "borrador_con_fuente_pendiente_revision_humana",
         "en": "borrador_con_fuente_pendiente_revision_humana",
         "pt-BR": "borrador_con_fuente_pendiente_revision_humana"
-      }
+      },
+      "editorial_selected": true,
+      "editorial_reason": "Mirador/patrimonio destacado con claustro diferente de foto insignia."
     },
     {
       "slug": "san-pedro-claver",
@@ -397,7 +420,9 @@
         "es": "borrador_con_fuente_pendiente_revision_humana",
         "en": "borrador_con_fuente_pendiente_revision_humana",
         "pt-BR": "borrador_con_fuente_pendiente_revision_humana"
-      }
+      },
+      "editorial_selected": false,
+      "editorial_reason": "Investigación conservada fuera de selección principal por menor prioridad relativa o redundancia; no borrado."
     },
     {
       "slug": "santo-domingo",
@@ -445,7 +470,9 @@
         "es": "borrador_con_fuente_pendiente_revision_humana",
         "en": "borrador_con_fuente_pendiente_revision_humana",
         "pt-BR": "borrador_con_fuente_pendiente_revision_humana"
-      }
+      },
+      "editorial_selected": false,
+      "editorial_reason": "Investigación conservada fuera de selección principal por menor prioridad relativa o redundancia; no borrado."
     },
     {
       "slug": "santo-toribio",
@@ -493,7 +520,9 @@
         "es": "borrador_con_fuente_pendiente_revision_humana",
         "en": "borrador_con_fuente_pendiente_revision_humana",
         "pt-BR": "borrador_con_fuente_pendiente_revision_humana"
-      }
+      },
+      "editorial_selected": false,
+      "editorial_reason": "Investigación conservada fuera de selección principal por menor prioridad relativa o redundancia; no borrado."
     },
     {
       "slug": "museo-naval",
@@ -541,7 +570,9 @@
         "es": "borrador_con_fuente_pendiente_revision_humana",
         "en": "borrador_con_fuente_pendiente_revision_humana",
         "pt-BR": "borrador_con_fuente_pendiente_revision_humana"
-      }
+      },
+      "editorial_selected": false,
+      "editorial_reason": "Investigación conservada fuera de selección principal por menor prioridad relativa o redundancia; no borrado."
     },
     {
       "slug": "plaza-santa-teresa",
@@ -589,7 +620,9 @@
         "es": "borrador_con_fuente_pendiente_revision_humana",
         "en": "borrador_con_fuente_pendiente_revision_humana",
         "pt-BR": "borrador_con_fuente_pendiente_revision_humana"
-      }
+      },
+      "editorial_selected": false,
+      "editorial_reason": "Investigación conservada fuera de selección principal por menor prioridad relativa o redundancia; no borrado."
     },
     {
       "slug": "portal-dulces",
@@ -637,7 +670,9 @@
         "es": "borrador_con_fuente_pendiente_revision_humana",
         "en": "borrador_con_fuente_pendiente_revision_humana",
         "pt-BR": "borrador_con_fuente_pendiente_revision_humana"
-      }
+      },
+      "editorial_selected": false,
+      "editorial_reason": "Integrado en centro histórico como hito secundario."
     },
     {
       "slug": "serrezuela",
@@ -685,7 +720,9 @@
         "es": "borrador_con_fuente_pendiente_revision_humana",
         "en": "borrador_con_fuente_pendiente_revision_humana",
         "pt-BR": "borrador_con_fuente_pendiente_revision_humana"
-      }
+      },
+      "editorial_selected": false,
+      "editorial_reason": "Investigación conservada fuera de selección principal por menor prioridad relativa o redundancia; no borrado."
     },
     {
       "slug": "teatro-adolfo-mejia",
@@ -733,7 +770,9 @@
         "es": "borrador_con_fuente_pendiente_revision_humana",
         "en": "borrador_con_fuente_pendiente_revision_humana",
         "pt-BR": "borrador_con_fuente_pendiente_revision_humana"
-      }
+      },
+      "editorial_selected": false,
+      "editorial_reason": "Investigación conservada fuera de selección principal por menor prioridad relativa o redundancia; no borrado."
     },
     {
       "slug": "la-boquilla",
@@ -751,7 +790,7 @@
           "pt-BR": "Barcos em La Boquilla, Cartagena, em2020; contexto local sem operador identificado ou atividade contratada."
         }
       },
-      "image_status": "referencia_contextual_local_pendiente_aprobacion_por_ubicacion",
+      "image_status": "referencia_real_licenciada_inspeccionada_pendiente_o_aprobada_segun_ledger",
       "translations": {
         "es": {
           "name": "La Boquilla",
@@ -789,7 +828,9 @@
         "es": "borrador_con_fuente_pendiente_revision_humana",
         "en": "borrador_con_fuente_pendiente_revision_humana",
         "pt-BR": "borrador_con_fuente_pendiente_revision_humana"
-      }
+      },
+      "editorial_selected": true,
+      "editorial_reason": "Economía pesquera afrocaribeña y paisaje local; amplía visión fuera del centro."
     },
     {
       "slug": "manglares-boquilla",
@@ -837,7 +878,107 @@
         "es": "borrador_con_fuente_pendiente_revision_humana",
         "en": "borrador_con_fuente_pendiente_revision_humana",
         "pt-BR": "borrador_con_fuente_pendiente_revision_humana"
-      }
+      },
+      "editorial_selected": false,
+      "editorial_reason": "Investigación conservada fuera de selección principal por menor prioridad relativa o redundancia; no borrado."
+    },
+    {
+      "slug": "islas-rosario",
+      "type": "place",
+      "publication_status": "draft",
+      "category": "naturaleza-marina",
+      "source_ids": [
+        "rosario-oficial",
+        "parque-rosario"
+      ],
+      "image": {
+        "asset_id": "rosario-isla-grande-2016",
+        "file": "imagenes/derivados/rosario-isla-grande-2016-tarjeta.webp",
+        "alt": {
+          "es": "Sector Cocolise, Isla Grande, archipiélago del Rosario,2016; no implica alianza ni acceso contratado.",
+          "en": "Cocolise area, Isla Grande, Rosario archipelago,2016; no partnership or booked access implied.",
+          "pt-BR": "Setor Cocolise, Isla Grande, arquipélago do Rosário,2016; sem parceria ou acesso contratado."
+        }
+      },
+      "location": {
+        "country": "CO",
+        "department": "Bolívar",
+        "municipality": "Distrito de Cartagena de Indias",
+        "sector": "zona insular / excursión fuera del núcleo urbano",
+        "coordinates": null
+      },
+      "translations": {
+        "es": {
+          "name": "Islas del Rosario",
+          "description": "Archipiélago caribeño frente a Cartagena, con paisajes insulares y ecosistemas marinos protegidos. Es una excursión fuera del centro urbano: confirma acceso, condiciones de navegación, permisos y cupos con gestores y operadores.",
+          "external_url": "https://colombia.travel/es/cartagena/playas-e-islas-del-rosario",
+          "external_label": "Fuente / Source / Fonte"
+        },
+        "en": {
+          "name": "Rosario Islands",
+          "description": "Caribbean archipelago off Cartagena, with island scenery and protected marine ecosystems. This is an excursion beyond the urban centre: confirm access, navigation conditions, permits and visitor capacity with managers and operators.",
+          "external_url": "https://colombia.travel/es/cartagena/playas-e-islas-del-rosario",
+          "external_label": "Fuente / Source / Fonte"
+        },
+        "pt-BR": {
+          "name": "Ilhas do Rosário",
+          "description": "Arquipélago caribenho diante de Cartagena, com paisagens insulares e ecossistemas marinhos protegidos. É um passeio fora do centro urbano: confirme acesso, condições de navegação, permissões e capacidade com gestores e operadores.",
+          "external_url": "https://colombia.travel/es/cartagena/playas-e-islas-del-rosario",
+          "external_label": "Fuente / Source / Fonte"
+        }
+      },
+      "editorial_selected": true,
+      "editorial_reason": "Dimensión insular esencial omitida antes; naturaleza marina separada de ciudad.",
+      "image_status": "referencia_real_licenciada_inspeccionada_pendiente_o_aprobada_segun_ledger"
+    },
+    {
+      "slug": "playa-blanca-baru",
+      "type": "place",
+      "publication_status": "draft",
+      "category": "naturaleza-marina",
+      "source_ids": [
+        "baru-oficial",
+        "parque-rosario"
+      ],
+      "image": {
+        "asset_id": "playa-blanca-2019",
+        "file": "imagenes/derivados/playa-blanca-2019-tarjeta.webp",
+        "alt": {
+          "es": "Vista aérea de Playa Blanca, Barú, Cartagena,2019.",
+          "en": "Aerial view of Playa Blanca, Barú, Cartagena,2019.",
+          "pt-BR": "Vista aérea de Playa Blanca, Barú, Cartagena,2019."
+        }
+      },
+      "location": {
+        "country": "CO",
+        "department": "Bolívar",
+        "municipality": "Distrito de Cartagena de Indias",
+        "sector": "zona insular / excursión fuera del núcleo urbano",
+        "coordinates": null
+      },
+      "translations": {
+        "es": {
+          "name": "Playa Blanca · Barú",
+          "description": "Playa Blanca se encuentra en Barú, la península al sur de Cartagena, fuera del núcleo urbano. La playa y el archipiélago del Rosario son lugares distintos. Confirma condiciones de acceso y servicios antes de viajar.",
+          "external_url": "https://colombia.travel/es/cartagena/conoce-la-playa-de-baru",
+          "external_label": "Fuente / Source / Fonte"
+        },
+        "en": {
+          "name": "Playa Blanca · Barú",
+          "description": "Playa Blanca is on Barú, the peninsula south of Cartagena, outside the urban centre. The beach and the Rosario archipelago are distinct places. Confirm access and services before travelling.",
+          "external_url": "https://colombia.travel/es/cartagena/conoce-la-playa-de-baru",
+          "external_label": "Fuente / Source / Fonte"
+        },
+        "pt-BR": {
+          "name": "Playa Blanca · Barú",
+          "description": "Playa Blanca fica em Barú, a península ao sul de Cartagena, fora do núcleo urbano. A praia e o arquipélago do Rosário são lugares diferentes. Confirme acesso e serviços antes de viajar.",
+          "external_url": "https://colombia.travel/es/cartagena/conoce-la-playa-de-baru",
+          "external_label": "Fuente / Source / Fonte"
+        }
+      },
+      "editorial_selected": true,
+      "editorial_reason": "Playa costera específica, diferenciada del archipiélago y con localización Barú.",
+      "image_status": "referencia_real_licenciada_inspeccionada_pendiente_o_aprobada_segun_ledger"
     }
   ],
   "experiences": [
@@ -1181,8 +1322,20 @@
   "photo_manifest": "imagenes/manifiesto.json",
   "importer_compatible": false,
   "notes": [
-    "Inventario ampliado: no es censo exhaustivo ni límite de sitios. Nuevos sitios sin foto permanecen investigación, nunca se rellenan con IA o imágenes genéricas.",
-    "Paquete v2 parcial conserva los tres atractivos con foto apta; NO representa todo el inventario ampliado.",
-    "Aprobación de original/texto por ubicación e idioma precede cualquier ilustración, que requiere aprobación separada. No se ha generado ilustración."
-  ]
+    "Selección principal de ocho atractivos con referencias reales aptas. Inventario de investigación conservado aparte.",
+    "22 decisiones históricas preservadas; coincidencia exacta por componente mantiene aprobaciones. Nuevos textos/fotos no heredan aprobación.",
+    "No generar IA todavía: primero corregir selección según instrucción actual. La autorización condicional de portada aprobada permanece registrada."
+  ],
+  "editorial_selection": [
+    "centro-historico",
+    "san-felipe",
+    "getsemani",
+    "islas-rosario",
+    "playa-blanca-baru",
+    "cerro-popa",
+    "museo-historico",
+    "la-boquilla"
+  ],
+  "editorial_maximum": 8,
+  "selection_approved": false
 }
