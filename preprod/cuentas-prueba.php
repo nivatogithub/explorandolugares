@@ -34,27 +34,39 @@ try{
   if($key==='viajero'&&($created||$reset)){$q=$pdo->prepare('SELECT 1 FROM account_consents WHERE account_id=? AND consent_version="preprod-synthetic-fixture-v1"');$q->execute([$id]);if(!$q->fetchColumn())$pdo->prepare('INSERT INTO account_consents(account_id,consent_version) VALUES(?,"preprod-synthetic-fixture-v1")')->execute([$id]);}
   $result[$key]=$account;
   if($key!=='negocio')continue;
-  $businessUuid='f00d0000-0000-4000-8000-000000000010';
-  $q=$pdo->prepare('SELECT id,publication_status FROM businesses WHERE public_id=? FOR UPDATE');$q->execute([$businessUuid]);$business=$q->fetch(PDO::FETCH_ASSOC);$newBusiness=!$business;
-  if($newBusiness){
-   $destination=$pdo->query('SELECT id FROM destinations WHERE slug="jerico" LIMIT 1')->fetchColumn();
-   $category=$pdo->query('SELECT code FROM service_categories WHERE is_active=1 ORDER BY display_order,code LIMIT 1')->fetchColumn();
-   if(!$destination||!$category)throw new RuntimeException('Falta Jericó o el catálogo de categorías para crear el negocio ficticio.');
-   $q=$pdo->prepare('INSERT INTO businesses(public_id,destination_id,category_code,record_origin,slug,information_status,claim_status,operation_status,publication_status,display_order) VALUES(?,?,?,"owner_submitted",?,"ACTIVO","RECLAMADO","DESCONOCIDO","draft",0)');
-   $q->execute([$businessUuid,$destination,$category,'preprod-negocio-ficticio-000010']);$businessId=(int)$pdo->lastInsertId();
-   $pdo->prepare('INSERT INTO business_translations(business_id,locale,display_name,summary,description) VALUES(?,"es",?,?,?)')->execute([$businessId,'Negocio Ficticio De Prueba — Preproducción','Registro ficticio exclusivo para pruebas locales.','Este negocio no existe. Sirve para probar suscripciones, canales y administración en el entorno local.']);
-   (new BusinessSubscriptionAdminService($pdo))->save(['business_id'=>$businessId,'plan_code'=>'free']);
-   $business=['id'=>$businessId,'publication_status'=>'draft'];
+  $businessDefinitions=[
+   ['uuid'=>'f00d0000-0000-4000-8000-000000000010','suffix'=>'000010','plan'=>'free','label'=>'Gratis','name'=>'Negocio Ficticio De Prueba — Preproducción'],
+   ['uuid'=>'f00d0000-0000-4000-8000-000000000011','suffix'=>'000011','plan'=>'featured','label'=>'Destacado','name'=>'Negocio Ficticio Destacado — Preproducción'],
+   ['uuid'=>'f00d0000-0000-4000-8000-000000000012','suffix'=>'000012','plan'=>'page','label'=>'Página Comercial','name'=>'Negocio Ficticio Página Comercial — Preproducción'],
+   ['uuid'=>'f00d0000-0000-4000-8000-000000000013','suffix'=>'000013','plan'=>'page_premium','label'=>'Premium','name'=>'Negocio Ficticio Premium — Preproducción'],
+  ];
+  $result[$key]['businesses']=[];
+  foreach($businessDefinitions as $fixture){
+   $q=$pdo->prepare('SELECT id,publication_status FROM businesses WHERE public_id=? FOR UPDATE');$q->execute([$fixture['uuid']]);$business=$q->fetch(PDO::FETCH_ASSOC);$newBusiness=!$business;
+   if($newBusiness){
+    $destination=$pdo->query('SELECT id FROM destinations WHERE slug="jerico" LIMIT 1')->fetchColumn();
+    $category=$pdo->query('SELECT code FROM service_categories WHERE is_active=1 ORDER BY display_order,code LIMIT 1')->fetchColumn();
+    if(!$destination||!$category)throw new RuntimeException('Falta Jericó o el catálogo de categorías para crear los negocios ficticios.');
+    $q=$pdo->prepare('INSERT INTO businesses(public_id,destination_id,category_code,record_origin,slug,information_status,claim_status,operation_status,publication_status,display_order) VALUES(?,?,?,"owner_submitted",?,"ACTIVO","RECLAMADO","DESCONOCIDO","draft",0)');
+    $q->execute([$fixture['uuid'],$destination,$category,'preprod-negocio-ficticio-'.$fixture['suffix']]);$businessId=(int)$pdo->lastInsertId();
+    $pdo->prepare('INSERT INTO business_translations(business_id,locale,display_name,summary,description) VALUES(?,"es",?,?,?)')->execute([$businessId,$fixture['name'],'Registro ficticio exclusivo para pruebas locales.','Este negocio no existe. Sirve para probar la suscripción '.$fixture['label'].' en el entorno local.']);
+    (new BusinessSubscriptionAdminService($pdo))->save(['business_id'=>$businessId,'plan_code'=>$fixture['plan'],'billing_frequency'=>$fixture['plan']==='free'?'':'monthly']);
+    $business=['id'=>$businessId,'publication_status'=>'draft'];
+   }
+   $businessId=(int)$business['id'];
+   if($newBusiness||$created||$reset){
+    $q=$pdo->prepare('SELECT account_id FROM business_account_memberships WHERE business_id=? AND status="active"');$q->execute([$businessId]);$owner=$q->fetchColumn();
+    if($owner!==false&&(int)$owner!==$id)throw new RuntimeException('Un negocio ficticio está asociado a otra cuenta; revisa esa prueba antes de restablecer.');
+    $q=$pdo->prepare('SELECT id FROM business_account_memberships WHERE business_id=? AND account_id=?');$q->execute([$businessId,$id]);$membership=$q->fetchColumn();
+    if($membership)$pdo->prepare('UPDATE business_account_memberships SET role="owner",status="active" WHERE id=?')->execute([$membership]);
+    else $pdo->prepare('INSERT INTO business_account_memberships(account_id,business_id,role,status) VALUES(?,?,"owner","active")')->execute([$id,$businessId]);
+   }
+   $q=$pdo->prepare('SELECT t.display_name,s.plan_code,s.status AS subscription_status,s.billing_frequency FROM business_translations t LEFT JOIN business_subscriptions s ON s.id=(SELECT MAX(id) FROM business_subscriptions WHERE business_id=t.business_id) WHERE t.business_id=? AND t.locale="es"');$q->execute([$businessId]);$detail=$q->fetch(PDO::FETCH_ASSOC);
+   $result[$key]['businesses'][]=['id'=>$businessId,'public_id'=>$fixture['uuid'],'expected_plan'=>$fixture['plan'],'initial_label'=>$fixture['label'],'publication_status'=>$business['publication_status'],...$detail];
   }
-  $businessId=(int)$business['id'];
-  if($newBusiness||$created||$reset){
-   $q=$pdo->prepare('SELECT account_id FROM business_account_memberships WHERE business_id=? AND status="active"');$q->execute([$businessId]);$owner=$q->fetchColumn();
-   if($owner!==false&&(int)$owner!==$id)throw new RuntimeException('El negocio ficticio está asociado a otra cuenta; revisa esa prueba antes de restablecer.');
-   $q=$pdo->prepare('SELECT id FROM business_account_memberships WHERE business_id=? AND account_id=?');$q->execute([$businessId,$id]);$membership=$q->fetchColumn();
-   if($membership)$pdo->prepare('UPDATE business_account_memberships SET role="owner",status="active" WHERE id=?')->execute([$membership]);
-   else $pdo->prepare('INSERT INTO business_account_memberships(account_id,business_id,role,status) VALUES(?,?,"owner","active")')->execute([$id,$businessId]);
-  }
-  $result[$key]['business_id']=$businessId;$result[$key]['business_publication_status']=$business['publication_status'];
+  // Keep existing consumers of the original Free fixture compatible.
+  $result[$key]['business_id']=$result[$key]['businesses'][0]['id'];
+  $result[$key]['business_publication_status']=$result[$key]['businesses'][0]['publication_status'];
  }
  $pdo->commit();echo json_encode(['profiles'=>$result],JSON_THROW_ON_ERROR|JSON_UNESCAPED_UNICODE);
 }catch(Throwable $e){if($pdo->inTransaction())$pdo->rollBack();throw $e;}
