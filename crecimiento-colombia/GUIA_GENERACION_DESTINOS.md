@@ -28,3 +28,53 @@ Identificar cada imagen por rol, componente, fuente original, autor, licencia, f
 Coordinador mantiene checklist por worker, componente e idioma ES/EN/PT-BR. Revisar originales uno por uno en chat con uso explícito y alternativas; registrar la elección sin aprobar automáticamente el destino. Después de aprobación correspondiente, producir imagen definitiva con .agents/skills/imagenes-destinos/SKILL.md, conservar originales/licencias/maestro/derivados/procedencia y solicitar revisión de la ilustración por separado.
 
 Los avances pueden verse en preproducción local autorizada; no equivalen a imágenes definitivas ni a publicación aprobada. Verificar allí los tres idiomas, ocho fichas reales, imágenes cargadas y diferentes, historia, recortes y diseño. No declarar éxito basándose solo en investigación o ZIP preparado. Cada worker trabaja en su rama y entrega independientemente; no esperar a que todos terminen para revisar. Publicación requiere aprobación humana explícita de la versión final.
+
+## Puerta de calidad: identidad icónica antes de empaquetar
+
+Instrucción del propietario, 17/10/2026. No basta con que una foto sea del municipio o tenga licencia: debe representar lo que el visitante reconoce y viene a conocer. Esta regla aplica a portada, historia, atractivos y actividades en todos los destinos, no solo a las correcciones actuales.
+
+### Investigación antes de buscar imágenes
+
+1. Consultar guía turística institucional/local y fuentes del responsable del atractivo. Identificar los símbolos del destino, experiencias distintivas, patrimonio, transporte emblemático, barrios, naturaleza y alcance territorial. Documentar fuentes y fecha; contrastar nombres ambiguos antes de redactar.
+2. Definir un breve encargo por componente: sujeto exacto, rasgos reconocibles obligatorios, encuadre esperado y qué viene a ver/hacer el visitante. Seleccionar por importancia y luego buscar fotos, nunca al revés.
+3. Buscar por nombre exacto + rasgo: «Coltejer skyline ciudad», «Comuna 13 escaleras eléctricas arte urbano», «Arví estación cable paisaje». Corroborar la ubicación con la fuente; una búsqueda o etiqueta no demuestra identidad.
+4. Registrar qué representa hoy cada destino, incluyendo movilidad e infraestructura característica. No reducir el relato a fundación, iglesias y museos. Separar historia, visita actual, movilidad y agenda; verificar afirmaciones temporales como «único», «el mayor», operación, rutas y horarios antes de publicarlas.
+
+### Portadas que identifican el destino
+
+- Medellín: Coltejer reconocible y completo junto al perfil de ciudad; debe distinguirse al tamaño real de portada. Que exista diminuto en algún punto del original no basta. No volver a usar primer plano aislado ni panorama donde el edificio se pierda en el recorte.
+- Bogotá: verificar el nombre del edificio. Torre Colpatria es un símbolo documentado; Movistar Arena es un recinto de eventos y no debe renombrarse como torre. Registrar la referencia del usuario como tentativa hasta identificarla. Proponer una vista con el hito reconocible y contexto de ciudad; no imponer una portada sin comparación humana.
+- Pueblos: evaluar centro histórico, parque principal, iglesia u otro símbolo propio respaldado por fuentes; no asumir que todos se reconocen por la misma clase de edificio.
+- Destinos costeros: mostrar identidad local, por ejemplo frente urbano y Camellón de Santa Marta; una playa o isla genérica no identifica necesariamente la ciudad.
+
+### Atractivos: mostrar su rasgo distintivo
+
+- Arví: el bosque de pinos genérico actual no supera la nueva puerta de calidad, aunque la foto sea auténtica. Investigar y elegir una imagen identificable del parque y su experiencia, por ejemplo estación/cable Arví con entorno reconocible o un sitio/recorrido específico documentado. No presentar cualquier cable o bosque como Arví.
+- Comuna 13: priorizar el circuito real de arte urbano, murales y/o escaleras eléctricas identificables, no una vista genérica de viviendas. Narrar memoria y transformación con respeto por habitantes; no emplear descripciones despectivas ni reducir toda la comuna al circuito turístico. La vista general actual debe reemplazarse antes de considerarla lista.
+- Metro y Metrocable de Medellín: incluir su importancia urbana y utilidad para conocer la ciudad en movilidad e identidad. Distinguir tren Metro, cables urbanos y Cable Arví Línea L; no confundir Línea J/San Javier con acceso directo al circuito de escaleras o con Línea L. Evaluar una experiencia de movilidad si aporta valor, sin ampliar a nueve las ocho tarjetas ni inventar una actividad comercial. Fuente del operador para rutas/condiciones; el sistema del Valle de Aburrá no se restringe administrativamente a Medellín.
+- Monumentos, iglesias y edificios: fachada/silueta o elemento emblemático visible, sin obstáculos decisivos. Parques/museos/actividades: escena o espacio específico que explique la visita, no árboles, paredes o interiores intercambiables.
+
+### Obtención de fotografías con uso comercial permitido
+
+«Pública en internet» no significa «libre para uso comercial». Consultar primero banco institucional con permiso explícito, Commons, banco fotográfico con licencia de uso/adaptación comercial o autorización del autor. No copiar la foto de una web turística solo porque esa web es fuente factual. CC BY, CC BY-SA, CC0 o licencia de banco aplicable requieren comprobar condiciones concretas y atribución; descartar NC/solo editorial/permiso ambiguo para este flujo. Revisar también derechos adicionales relevantes de la obra representada, especialmente murales y esculturas; la licencia del fotógrafo no los resuelve automáticamente.
+
+Guardar URL de ficha y del archivo, autor, licencia y enlace, fecha de la foto/consulta, dimensiones reales, rol y rasgos visibles. Conservar el original completo; si solo se obtuvo miniatura, declararlo y dejar maestro pendiente. Evitar repetir intentos contra límites de descarga: usar variante oficial documentada cuando exista, buscar otra fuente autorizada o registrar bloqueo. No confundir una miniatura antigua con material final de calidad.
+
+### Descartes obligatorios y revisión
+
+Antes de mostrar una referencia como apta, inspeccionar el archivo completo y el recorte real de portada/tarjeta en escritorio y móvil. Rechazar si el sujeto icónico no se reconoce sin leer el título, si se ve otra zona, si es una imagen genérica, si se obstruye/corta el símbolo, si su resolución es insuficiente o si carece de permisos trazables. La autenticidad geográfica por sí sola no supera la revisión. No marcar automáticamente como apto por número de píxeles: la representatividad exige inspección humana/editorial registrada.
+
+Cuando sea necesario elegir, presentar dos o tres alternativas buenas numeradas para ese componente, con su uso explícito y recomendación. No pasar al propietario un conjunto de fotos deficientes para que haga la investigación del worker. Si ninguna supera la puerta, mantener «pendiente de referencia icónica», sin sustituir por una foto cualquiera ni declarar el componente listo. Los avances existentes pueden seguir visibles en preprod claramente provisionales; no son excepción de calidad final.
+
+Registrar por imagen: sujeto, rasgos exigidos/visibles, fuente factual, licencia comercial/adaptación, original/variante, inspección completa y de recortes, decisión apta/rechazada/pendiente, motivo y aprobación del usuario por hash. Solo después de elegir/aprobar la referencia correspondiente producir la imagen definitiva con el skill existente, verificar fidelidad y revisar el resultado por separado. La IA no debe inventar el rasgo faltante ni ocultar una referencia inadecuada.
+
+### Fuentes verificadas para estas correcciones
+
+- https://www.metrodemedellin.gov.co/usuarios/sistema-integrado/
+- https://www.metrodemedellin.gov.co/quienes-somos/historia/ (inicio comercial 30/11/1995 y Cable Arví Línea L)
+- https://www.medellin.travel/comuna-13-3/ (arte, escaleras y distinción de Línea J)
+- https://www.medellin.travel/parque-arvi/
+- https://colombia.travel/es/bogota/sube-al-mirador-de-la-torre-colpatria
+- https://visitbogota.co/es/que-hacer-en-bogota/cultura/torre-colpatria
+
+Consulta: 17/10/2026. Las fuentes factuales no conceden por sí mismas permiso para reutilizar sus fotografías. No afirmar operación actual o exclusividad nacional usando únicamente un documento histórico.

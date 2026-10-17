@@ -29,3 +29,7 @@ PHP validó ZIP real, imágenes/MIME/dimensiones,manifiesto v2 e investigaciónp
 ## Revisión v3 · ampliación Bogotá
 
 Selección principal de ocho atractivos: Plaza de Bolívar, La Candelaria/Chorro, Museo del Oro, Monserrate, Museo Botero, Usaquén, Jardín Botánico y Parque Simón Bolívar. Inventario20 conservado. Textos ES/EN/PT revisados, pendientes del propietario. Portada cambia a skyline con Colpatria; Monserrate usa fotograma aéreo real Pexels de Ricardo Perez. Imagen histórica independiente: monumento Bolívar, relato documentado de1846. Diez archivos distintos, cero ilustraciones IA. Referencias de años distintos y miniaturas oficiales identificadas; foto de parque pequeña330x247 y jardín histórico detalle son limitaciones pendientes del paquete final. Todas las fotografías y textos sin aprobación editorial. No producción.
+
+## Nueva política icónica · 17/10/2026
+
+Colpatria es candidata documentada; no asumir que la torre nombrada tentativamente por el propietario sea Movistar Arena. Verificar identificación y reconocimiento en recorte real antes de imagen final.
