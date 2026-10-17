@@ -1,0 +1,142 @@
+{
+  "current_revision": "1fb7e17c75bc93b6eafcaffd172af1508134431fcf75620a793f6d8d855438e2",
+  "historical_approved_total": 22,
+  "active_unchanged_total": 15,
+  "active_approvals": [
+    {
+      "id": "CTG-01",
+      "scope": "Opción 1 · original para posible portada · panorama Cartagena desde La Popa (2008); muestra bahía/ciudad, cruz dominante; sin recorte móvil ni escritorio",
+      "component_sha256": "ce23705fde747f70e0a96f0149fbd5668c3b53444be83da48f20b5100e201ab6",
+      "approval_source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "original_use_binding": {
+        "original_sha256": "fe560ccc27d1b4947da701e422956c02dbac71ff612f1695742766cd64344c23",
+        "use": "Opción 1 · original para posible portada · panorama Cartagena desde La Popa (2008); muestra bahía/ciudad, cruz dominante; sin recorte móvil ni escritorio",
+        "source_component_sha256": "ce23705fde747f70e0a96f0149fbd5668c3b53444be83da48f20b5100e201ab6"
+      }
+    },
+    {
+      "id": "CTG-HISTORIA-es",
+      "scope": "Texto de historia · es",
+      "component_sha256": "b56e8644c6d4b1e2267977a2b66bc151f5e9404ba9906655f6e4f7697c5ac27d",
+      "approval_source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "original_use_binding": null
+    },
+    {
+      "id": "CTG-HISTORIA-en",
+      "scope": "Texto de historia · en",
+      "component_sha256": "b57b9b170eca954faa9459e60279774b43c44c68e8dc2d3ee5202089146043f3",
+      "approval_source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "original_use_binding": null
+    },
+    {
+      "id": "CTG-HISTORIA-pt-BR",
+      "scope": "Texto de historia · pt-BR",
+      "component_sha256": "d267a67d157d05f55a7b312191ef7c952fca2946f14e1eb78049b2735b25f453",
+      "approval_source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "original_use_binding": null
+    },
+    {
+      "id": "CTG-02",
+      "scope": "Foto de la ficha «Castillo de San Felipe de Barajas»",
+      "component_sha256": "f121bf2b06e955405b3ce43aa18e507d7ce993ad03f9c8d9c40edcce35fe8a02",
+      "approval_source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "original_use_binding": {
+        "original_sha256": "d809d808080c576bd03540700458d7cca24e5344a4fcac32f89df27764afd3b2",
+        "use": "Foto de la ficha «Castillo de San Felipe de Barajas»",
+        "source_component_sha256": "f121bf2b06e955405b3ce43aa18e507d7ce993ad03f9c8d9c40edcce35fe8a02"
+      }
+    },
+    {
+      "id": "CTG-LUGAR-san-felipe-es",
+      "scope": "Nombre y descripción de «Castillo de San Felipe de Barajas» · es",
+      "component_sha256": "c1768363c93db82c5c82949afe6d86884c13c3623a8e12bf5b0f8ca4ba1ae208",
+      "approval_source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "original_use_binding": null
+    },
+    {
+      "id": "CTG-LUGAR-san-felipe-en",
+      "scope": "Nombre y descripción de «Castillo de San Felipe de Barajas» · en",
+      "component_sha256": "4086d6d7f68b2769339fe6cad3246d7145a908fb82935d6037c25934b330c422",
+      "approval_source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "original_use_binding": null
+    },
+    {
+      "id": "CTG-LUGAR-san-felipe-pt-BR",
+      "scope": "Nombre y descripción de «Castillo de San Felipe de Barajas» · pt-BR",
+      "component_sha256": "ab46fd7ccf8c2a0635e55a739e17ec337626feec424bc92bddc0cb782419c62f",
+      "approval_source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "original_use_binding": null
+    },
+    {
+      "id": "CTG-LUGAR-getsemani-es",
+      "scope": "Nombre y descripción de «Getsemaní» · es",
+      "component_sha256": "104784937acea50e40ba8f859f38d75f5e4f996fe74d66c954d57a7b95334144",
+      "approval_source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "original_use_binding": null
+    },
+    {
+      "id": "CTG-LUGAR-getsemani-en",
+      "scope": "Nombre y descripción de «Getsemaní» · en",
+      "component_sha256": "0da70f7c2f61f6e8e3063264d76a5009cec96476219f5eaeff5a4923280f0890",
+      "approval_source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "original_use_binding": null
+    },
+    {
+      "id": "CTG-LUGAR-getsemani-pt-BR",
+      "scope": "Nombre y descripción de «Getsemaní» · pt-BR",
+      "component_sha256": "671c8a366a811d82317fc6d0a910497fa7b15265081ed7294b6775fd960709f6",
+      "approval_source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "original_use_binding": null
+    },
+    {
+      "id": "CTG-04",
+      "scope": "Foto de la ficha «Museo Histórico de Cartagena»",
+      "component_sha256": "783259d0197e61de66afbdab0b55b768a567d5f67b2a43d04cedc2caed334c7c",
+      "approval_source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "original_use_binding": {
+        "original_sha256": "6bb63329caa48f2746ddf7a7d9c0f270e09c5fed0662680132e573448ab27011",
+        "use": "Foto de la ficha «Museo Histórico de Cartagena»",
+        "source_component_sha256": "783259d0197e61de66afbdab0b55b768a567d5f67b2a43d04cedc2caed334c7c"
+      }
+    },
+    {
+      "id": "CTG-LUGAR-museo-historico-es",
+      "scope": "Nombre y descripción de «Museo Histórico de Cartagena» · es",
+      "component_sha256": "efc213311e3cf848fc70f38a439adb4c3f4107d603fd023251ce4f134733d71e",
+      "approval_source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "original_use_binding": null
+    },
+    {
+      "id": "CTG-LUGAR-museo-historico-en",
+      "scope": "Nombre y descripción de «Museo Histórico de Cartagena» · en",
+      "component_sha256": "b49fde698d691243d878bca1fed5f5506d130d1f2a2f3f808238151443462003",
+      "approval_source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "original_use_binding": null
+    },
+    {
+      "id": "CTG-LUGAR-museo-historico-pt-BR",
+      "scope": "Nombre y descripción de «Museo Histórico de Cartagena» · pt-BR",
+      "component_sha256": "c76488c5c6e19064c5dd4f58f397bef08a3ee9bae20d397b7b5270bc0a1bf1b1",
+      "approval_source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "original_use_binding": null
+    }
+  ],
+  "historical_outside_or_changed": [
+    "CTG-LUGAR-torre-reloj-es",
+    "CTG-LUGAR-torre-reloj-en",
+    "CTG-LUGAR-torre-reloj-pt-BR",
+    "CTG-LUGAR-oro-zenu-es",
+    "CTG-LUGAR-cerro-popa-es",
+    "CTG-LUGAR-cerro-popa-en",
+    "CTG-LUGAR-cerro-popa-pt-BR"
+  ],
+  "conditional_generation_authorization": {
+    "component_id": "CTG-01",
+    "instruction": "hay que hacerla con ai siguiendo el skill de iimagnes que tenemos",
+    "authorized_conditionally": true,
+    "execution_deferred_reason": "primero corregir selección máximo8 según mensaje actual",
+    "final_art_approved": false
+  },
+  "final_art_approved": false,
+  "publication_authorized": false
+}

@@ -1,0 +1,1060 @@
+{
+  "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+  "source_sha256": "bc562f3448b76daf10055e31a73881c5555512a5e654bc61b9e4e8f03649351a",
+  "selected_cover": "1",
+  "publication_approved": false,
+  "illustration_generation_authorized": false,
+  "decisions": [
+    {
+      "id": "CTG-01",
+      "scope": "Opción 1 · original para posible portada · panorama Cartagena desde La Popa (2008); muestra bahía/ciudad, cruz dominante; sin recorte móvil ni escritorio",
+      "component_sha256": "ce23705fde747f70e0a96f0149fbd5668c3b53444be83da48f20b5100e201ab6",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "aprobado",
+      "comment": "hay que hacerla con ai siguiendo el skill de iimagnes que tenemos",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-PORTADA-OPCION-2",
+      "scope": "Opción 2 · original para posible portada · San Felipe de Barajas (2011); patrimonio reconocible, no visión total de Cartagena; sin recorte móvil ni escritorio",
+      "component_sha256": "f121bf2b06e955405b3ce43aa18e507d7ce993ad03f9c8d9c40edcce35fe8a02",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-PORTADA-LICENCIA-1",
+      "scope": "Licencia de referencia candidata de portada 1",
+      "component_sha256": "7e642c4791dfdf80aa6a3fac1a40eb6b2703f0cc78cb43c0831df8109bc5de6e",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "recuerda que no estamos manejando imagnes originales si no imagenes generadas por ai a partir de las originales, esto hacia parte del proceso",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-PORTADA-LICENCIA-2",
+      "scope": "Licencia de referencia candidata de portada 2",
+      "component_sha256": "747b6d3e4372e50f28ce9952e2bc4c2936c6f920f9f0a83087f749e681c2adb8",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-PORTADA-TEXTO-es",
+      "scope": "Título, presentación y descripción de buscadores · es",
+      "component_sha256": "2594da5b32b497cb247002dd0446de3408ce31824d35b73c7f0de1c9945d3a63",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-PORTADA-TEXTO-en",
+      "scope": "Título, presentación y descripción de buscadores · en",
+      "component_sha256": "49f64ddf7e2f3cd93505844e9ae1667aee19b7b0ef2f6e64a4f98cc650d7b876",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-PORTADA-TEXTO-pt-BR",
+      "scope": "Título, presentación y descripción de buscadores · pt-BR",
+      "component_sha256": "9d2be5af93096b5b1777a5af46826ab3733e5652d06254699c3250a7e1856508",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-HISTORIA-es",
+      "scope": "Texto de historia · es",
+      "component_sha256": "b56e8644c6d4b1e2267977a2b66bc151f5e9404ba9906655f6e4f7697c5ac27d",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "aprobado",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-HISTORIA-en",
+      "scope": "Texto de historia · en",
+      "component_sha256": "b57b9b170eca954faa9459e60279774b43c44c68e8dc2d3ee5202089146043f3",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "aprobado",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-HISTORIA-pt-BR",
+      "scope": "Texto de historia · pt-BR",
+      "component_sha256": "d267a67d157d05f55a7b312191ef7c952fca2946f14e1eb78049b2735b25f453",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "aprobado",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-centro-historico-es",
+      "scope": "Nombre y descripción de «Centro histórico y murallas» · es",
+      "component_sha256": "ce6715f4183f0cbb0df57ee9b1189b2f23316fd26fe7d8ba316f2d8afb4ff8c9",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "que es san diego?",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-centro-historico-en",
+      "scope": "Nombre y descripción de «Centro histórico y murallas» · en",
+      "component_sha256": "3524eb361409f8ab3c000a7614e9bb5971afe41141fbeab090f003d0f5c11407",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-centro-historico-pt-BR",
+      "scope": "Nombre y descripción de «Centro histórico y murallas» · pt-BR",
+      "component_sha256": "2607e35dd79bffd384c9ee08ab9c1d476f11f5fc4cf7e19f423625ef8ebbf611",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-02",
+      "scope": "Foto de la ficha «Castillo de San Felipe de Barajas»",
+      "component_sha256": "f121bf2b06e955405b3ce43aa18e507d7ce993ad03f9c8d9c40edcce35fe8a02",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "aprobado",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-san-felipe-es",
+      "scope": "Nombre y descripción de «Castillo de San Felipe de Barajas» · es",
+      "component_sha256": "c1768363c93db82c5c82949afe6d86884c13c3623a8e12bf5b0f8ca4ba1ae208",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "aprobado",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-san-felipe-en",
+      "scope": "Nombre y descripción de «Castillo de San Felipe de Barajas» · en",
+      "component_sha256": "4086d6d7f68b2769339fe6cad3246d7145a908fb82935d6037c25934b330c422",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "aprobado",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-san-felipe-pt-BR",
+      "scope": "Nombre y descripción de «Castillo de San Felipe de Barajas» · pt-BR",
+      "component_sha256": "ab46fd7ccf8c2a0635e55a739e17ec337626feec424bc92bddc0cb782419c62f",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "aprobado",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-03",
+      "scope": "Foto de la ficha «Getsemaní»",
+      "component_sha256": "7e8d3fca150044af84d710c1fa5dd3c3b22cb7361e8923c4caab86fcc389c3aa",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "corregir",
+      "comment": "buscar una mejor foto de getsemani",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-getsemani-es",
+      "scope": "Nombre y descripción de «Getsemaní» · es",
+      "component_sha256": "104784937acea50e40ba8f859f38d75f5e4f996fe74d66c954d57a7b95334144",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "aprobado",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-getsemani-en",
+      "scope": "Nombre y descripción de «Getsemaní» · en",
+      "component_sha256": "0da70f7c2f61f6e8e3063264d76a5009cec96476219f5eaeff5a4923280f0890",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "aprobado",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-getsemani-pt-BR",
+      "scope": "Nombre y descripción de «Getsemaní» · pt-BR",
+      "component_sha256": "671c8a366a811d82317fc6d0a910497fa7b15265081ed7294b6775fd960709f6",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "aprobado",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-04",
+      "scope": "Foto de la ficha «Museo Histórico de Cartagena»",
+      "component_sha256": "783259d0197e61de66afbdab0b55b768a567d5f67b2a43d04cedc2caed334c7c",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "aprobado",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-museo-historico-es",
+      "scope": "Nombre y descripción de «Museo Histórico de Cartagena» · es",
+      "component_sha256": "efc213311e3cf848fc70f38a439adb4c3f4107d603fd023251ce4f134733d71e",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "aprobado",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-museo-historico-en",
+      "scope": "Nombre y descripción de «Museo Histórico de Cartagena» · en",
+      "component_sha256": "b49fde698d691243d878bca1fed5f5506d130d1f2a2f3f808238151443462003",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "aprobado",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-museo-historico-pt-BR",
+      "scope": "Nombre y descripción de «Museo Histórico de Cartagena» · pt-BR",
+      "component_sha256": "c76488c5c6e19064c5dd4f58f397bef08a3ee9bae20d397b7b5270bc0a1bf1b1",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "aprobado",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-torre-reloj-es",
+      "scope": "Nombre y descripción de «Torre del Reloj» · es",
+      "component_sha256": "b9f2ebc5e930444cb371f15c692fa4b314d8086b684a79e2dfa5724b08f85d23",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "aprobado",
+      "comment": "falta la foto hay que buscar una",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-torre-reloj-en",
+      "scope": "Nombre y descripción de «Torre del Reloj» · en",
+      "component_sha256": "3c3a38038800179e763dbe515ddc1d49d87d3836b31471f7d33047a85ce76428",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "aprobado",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-torre-reloj-pt-BR",
+      "scope": "Nombre y descripción de «Torre del Reloj» · pt-BR",
+      "component_sha256": "2da9ccfdb2913061ec5d992a4f4fd3e8774a60541c97a58a31b06b07bf6ebb58",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "aprobado",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-oro-zenu-es",
+      "scope": "Nombre y descripción de «Museo del Oro Zenú» · es",
+      "component_sha256": "d55bcfd8571fbd18a6e716d3aeb031b6242ddc85238f0a8b988c52ad6b6eef27",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "aprobado",
+      "comment": "se necesita la foto, o revisar si este atractivo no es tan importante y no amerita tenerlo",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-oro-zenu-en",
+      "scope": "Nombre y descripción de «Museo del Oro Zenú» · en",
+      "component_sha256": "f3e4871859ece736f0bd6d4fdd23ef4f36ce7c3d039ab13a8d823f89d8319e5d",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-oro-zenu-pt-BR",
+      "scope": "Nombre y descripción de «Museo del Oro Zenú» · pt-BR",
+      "component_sha256": "caf9014696cba7452a0e00bcb9ab012b05dd5eec1bfc65189c3f9a3a0687a6ef",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-FOTO-cerro-popa",
+      "scope": "Foto de la ficha «Cerro y convento de La Popa»",
+      "component_sha256": "ce23705fde747f70e0a96f0149fbd5668c3b53444be83da48f20b5100e201ab6",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "si esta va a ser la foto insignia de cartagena no deberia salir duplicada como atraccion.",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-cerro-popa-es",
+      "scope": "Nombre y descripción de «Cerro y convento de La Popa» · es",
+      "component_sha256": "8204bc188e33ea1dc5b1b7bebbd5f02df6b13106167906c041640cb2ea2418ff",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "aprobado",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-cerro-popa-en",
+      "scope": "Nombre y descripción de «Cerro y convento de La Popa» · en",
+      "component_sha256": "edb59dcd26011145bbb55b1673f23c79306e1e192226f85a5eaf57b78c152e3a",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "aprobado",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-cerro-popa-pt-BR",
+      "scope": "Nombre y descripción de «Cerro y convento de La Popa» · pt-BR",
+      "component_sha256": "19867811fe10fb9a763a399aca6953bcbb1876f33e705fe1a98c849dcc8a170b",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "aprobado",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-san-pedro-claver-es",
+      "scope": "Nombre y descripción de «Santuario y Museo San Pedro Claver» · es",
+      "component_sha256": "b7bf86d09b7d289abc685cf7677b5bfde07ec5caafdcf7890788cf6dae766b2a",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "necesita foto, un atractivo sin foto no sirve",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-san-pedro-claver-en",
+      "scope": "Nombre y descripción de «Santuario y Museo San Pedro Claver» · en",
+      "component_sha256": "18063b6b980613287f0d80ce1dfea487fd54fffc6f807a1f6c56e2533c16ca64",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-san-pedro-claver-pt-BR",
+      "scope": "Nombre y descripción de «Santuario y Museo San Pedro Claver» · pt-BR",
+      "component_sha256": "bacaf09cd05ace5c95972c5f2f99489e8245885630239c73ee83cc2cef3f66c7",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-santo-domingo-es",
+      "scope": "Nombre y descripción de «Iglesia y plaza de Santo Domingo» · es",
+      "component_sha256": "26daeb9778f91fd71f2584738400543c0313eaa08003cbe1ea950588a1422923",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "lo mismo este es un trabajo muy incompleto",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-santo-domingo-en",
+      "scope": "Nombre y descripción de «Iglesia y plaza de Santo Domingo» · en",
+      "component_sha256": "789f11adb86b09a2ebf67eefbecfb75ddb316c73e59c861de868e2f16bae2a16",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-santo-domingo-pt-BR",
+      "scope": "Nombre y descripción de «Iglesia y plaza de Santo Domingo» · pt-BR",
+      "component_sha256": "a3361dcba8c9aa42c68e039ec0311dcb4b371223bd3acb54301256ea791c8a77",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-santo-toribio-es",
+      "scope": "Nombre y descripción de «Iglesia de Santo Toribio» · es",
+      "component_sha256": "db54d8d8e73694d0ef3d564dea0c0f15518792b9e43837776fc4ccbe17e6a25a",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-santo-toribio-en",
+      "scope": "Nombre y descripción de «Iglesia de Santo Toribio» · en",
+      "component_sha256": "cc00292157e03d12e928e1ce13b7b1965f29fdd0711230b47b15e07c78fb3f46",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-santo-toribio-pt-BR",
+      "scope": "Nombre y descripción de «Iglesia de Santo Toribio» · pt-BR",
+      "component_sha256": "96cc14fd4ba092960fdfb88ed4cfa8d4f21093d40c27293d60d1e125dce6b87e",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-museo-naval-es",
+      "scope": "Nombre y descripción de «Museo Naval del Caribe» · es",
+      "component_sha256": "c55abefab7ca3122b63f937355fa6c7a39fbb209806a1df355ffc3fb21830c85",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-museo-naval-en",
+      "scope": "Nombre y descripción de «Museo Naval del Caribe» · en",
+      "component_sha256": "3b9b3cc52567143252ede8ccb43a90ae6dd9223784edf36a2af0c23fef0b8c38",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-museo-naval-pt-BR",
+      "scope": "Nombre y descripción de «Museo Naval del Caribe» · pt-BR",
+      "component_sha256": "e1e92ba705194197b476f2a59a54f17520cd07be7dc26a3e7a28e5052f8951b2",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-plaza-santa-teresa-es",
+      "scope": "Nombre y descripción de «Plaza de Santa Teresa» · es",
+      "component_sha256": "c51e4a8d5bb75599fb545df9c3fae167e05d0b04c9d097baa97e80a6f9b9f72f",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-plaza-santa-teresa-en",
+      "scope": "Nombre y descripción de «Plaza de Santa Teresa» · en",
+      "component_sha256": "9d6225e12849ad6a29ee077467fd0b393c73832781656775bd9c0215b995c58c",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-plaza-santa-teresa-pt-BR",
+      "scope": "Nombre y descripción de «Plaza de Santa Teresa» · pt-BR",
+      "component_sha256": "9c3b9c737f448110c40cee06bb87bae70d770b978caf9ca8fd1b2984359976d9",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-portal-dulces-es",
+      "scope": "Nombre y descripción de «Portal de los Dulces» · es",
+      "component_sha256": "1247c9502c4060cd82a49437cbaa4f87f4d58a4f53834988d407fe0f146b5a8b",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-portal-dulces-en",
+      "scope": "Nombre y descripción de «Portal de los Dulces» · en",
+      "component_sha256": "f737d6c4638f4a000158f286582e481d4a5984cfcb81cc2281d55f5c6f59cacd",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-portal-dulces-pt-BR",
+      "scope": "Nombre y descripción de «Portal de los Dulces» · pt-BR",
+      "component_sha256": "fa07bead55383a231c95c38c1c3491511a834000281e78d97ad662761212328a",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-serrezuela-es",
+      "scope": "Nombre y descripción de «La Serrezuela» · es",
+      "component_sha256": "bad51209ce02fde34f04193fe41b0812b287a69a3718ee67023f0cea023c64a0",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-serrezuela-en",
+      "scope": "Nombre y descripción de «La Serrezuela» · en",
+      "component_sha256": "3d2351bd009d7ce78d5fb178991ae49a3dce3b2001f1821674e589051c326b54",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-serrezuela-pt-BR",
+      "scope": "Nombre y descripción de «La Serrezuela» · pt-BR",
+      "component_sha256": "d658781e9c7197dd6f210b9736bb87baaa03f8a2efb7444563c8740d5bd93822",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-teatro-adolfo-mejia-es",
+      "scope": "Nombre y descripción de «Teatro Adolfo Mejía» · es",
+      "component_sha256": "e37da2762c4600f031d207d7f578fbbd4ee70814ee40f17e149e476c00d0f8b9",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-teatro-adolfo-mejia-en",
+      "scope": "Nombre y descripción de «Teatro Adolfo Mejía» · en",
+      "component_sha256": "90d3e6f60bc763d8078737e8c26bec38cf53b75167552a643a859017e3ce9ce9",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-teatro-adolfo-mejia-pt-BR",
+      "scope": "Nombre y descripción de «Teatro Adolfo Mejía» · pt-BR",
+      "component_sha256": "98f31ad5a15834cc077b275688b9ecd5e37305c76cafb5fe79fafeb9569f7642",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-FOTO-la-boquilla",
+      "scope": "Foto de la ficha «La Boquilla»",
+      "component_sha256": "46f55717628af8784ed757bab282e549f6ad855eedf8c95e2b2bcaffed490153",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-la-boquilla-es",
+      "scope": "Nombre y descripción de «La Boquilla» · es",
+      "component_sha256": "5bf6ea2cf67701284b1d1b487e3f722efacb75315bde34aa9eb8968c604acfc7",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-la-boquilla-en",
+      "scope": "Nombre y descripción de «La Boquilla» · en",
+      "component_sha256": "79ff123f728e717b230ff16841cbd93febb9fddc60f1103c37a43f11c817286f",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-la-boquilla-pt-BR",
+      "scope": "Nombre y descripción de «La Boquilla» · pt-BR",
+      "component_sha256": "f19834392b5f51f13ef1a71eda37223793ae8a5acb379c2df9f23f3e14af9ce6",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-manglares-boquilla-es",
+      "scope": "Nombre y descripción de «Manglares y ciénagas de La Boquilla» · es",
+      "component_sha256": "6a62dbd420ec1cbbaf3f4b70086ebb5994b6dec27d402f819cf7b7ab8df31956",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-manglares-boquilla-en",
+      "scope": "Nombre y descripción de «Manglares y ciénagas de La Boquilla» · en",
+      "component_sha256": "3539d662accc32d5775fd85a9f91dccaa7d9c3196f7bf952c8fc25a6bdfa7b7d",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-LUGAR-manglares-boquilla-pt-BR",
+      "scope": "Nombre y descripción de «Manglares y ciénagas de La Boquilla» · pt-BR",
+      "component_sha256": "2d27ada0576228c2e1274dac2345d15f2918f23dec811da7fe66df4d6ac74057",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-EXP-REFERENCIAS-caminhada-patrimonial",
+      "scope": "Referencias propuestas de actividad; permisos/identidad pendientes, no imagen aprobada",
+      "component_sha256": "da54d4f709e522bc7388bb5a8767c7e2af375feb260bea084fc7259db4a7acfc",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-EXP-caminhada-patrimonial-es",
+      "scope": "Texto borrador privado de experiencia «caminhada-patrimonial» · es · NO habilita oferta, reserva ni publicación",
+      "component_sha256": "3f7167a5600e318bdb3410fac483434eb9aaf6e77f00be958a82affdb3d87086",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-EXP-caminhada-patrimonial-en",
+      "scope": "Texto borrador privado de experiencia «caminhada-patrimonial» · en · NO habilita oferta, reserva ni publicación",
+      "component_sha256": "75ce115d5e175536fcb7074c85c2b62809ab012698b40ce3ecb2b5f2d1f4394d",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-EXP-caminhada-patrimonial-pt-BR",
+      "scope": "Texto borrador privado de experiencia «caminhada-patrimonial» · pt-BR · NO habilita oferta, reserva ni publicación",
+      "component_sha256": "0e50bd759d696d547a4e75d4fda867b48eaa981984a3f26817c051a405d3c025",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-EXP-REFERENCIAS-visita-muhca",
+      "scope": "Referencias propuestas de actividad; permisos/identidad pendientes, no imagen aprobada",
+      "component_sha256": "26fa9e6ae25ae4e963c98330515bf52a4ae0a484127703781be9494936da9a49",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-EXP-visita-muhca-es",
+      "scope": "Texto borrador privado de experiencia «visita-muhca» · es · NO habilita oferta, reserva ni publicación",
+      "component_sha256": "837a6fac9df39ecb99e3238045574f3117bd5c7925194269078383df92116492",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-EXP-visita-muhca-en",
+      "scope": "Texto borrador privado de experiencia «visita-muhca» · en · NO habilita oferta, reserva ni publicación",
+      "component_sha256": "e300db31aaa7cbd71304d3a0dd3507da8f7eb4f25cd75eef859f18877c427996",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-EXP-visita-muhca-pt-BR",
+      "scope": "Texto borrador privado de experiencia «visita-muhca» · pt-BR · NO habilita oferta, reserva ni publicación",
+      "component_sha256": "6ab95760dc328ceb18276f32a9f6210c7fdf6c9e5810e096db8015cb9f4f62ae",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-EXP-REFERENCIAS-bus-panoramico",
+      "scope": "Referencias propuestas de actividad; permisos/identidad pendientes, no imagen aprobada",
+      "component_sha256": "9b7ba3a8ed02c1a2eb48b9dc34cfbb7b992686ca989a7af8a1f549cdd661d909",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-EXP-bus-panoramico-es",
+      "scope": "Texto borrador privado de experiencia «bus-panoramico» · es · NO habilita oferta, reserva ni publicación",
+      "component_sha256": "7f4ae49bb546b8fdd12d41c70468d1250cf72db1439292d16efcbb49f7912608",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-EXP-bus-panoramico-en",
+      "scope": "Texto borrador privado de experiencia «bus-panoramico» · en · NO habilita oferta, reserva ni publicación",
+      "component_sha256": "82db805cbde2f989cb35244ea48872fe38cc707b51f56d75a057d5cadd9b82fe",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-EXP-bus-panoramico-pt-BR",
+      "scope": "Texto borrador privado de experiencia «bus-panoramico» · pt-BR · NO habilita oferta, reserva ni publicación",
+      "component_sha256": "686b1e796fd0e5577aade4632536ce3a6ae8b19834916dc9a9fe38ab9decef91",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-EXP-REFERENCIAS-buceo-rosario",
+      "scope": "Referencias propuestas de actividad; permisos/identidad pendientes, no imagen aprobada",
+      "component_sha256": "0717caa95473ec2c8a8fcc8e064bd010473716c3616ff1b63cb13177059bdbb0",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-EXP-buceo-rosario-es",
+      "scope": "Texto borrador privado de experiencia «buceo-rosario» · es · NO habilita oferta, reserva ni publicación",
+      "component_sha256": "2db91e76242a25190ed50c73fa8ff80240a33df27f1ae1e3a49acf2de5bdcd20",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-EXP-buceo-rosario-en",
+      "scope": "Texto borrador privado de experiencia «buceo-rosario» · en · NO habilita oferta, reserva ni publicación",
+      "component_sha256": "f5e3b19b63ca8d59a29942de4da416201ab05971962c8d733e27ed559f53fd43",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-EXP-buceo-rosario-pt-BR",
+      "scope": "Texto borrador privado de experiencia «buceo-rosario» · pt-BR · NO habilita oferta, reserva ni publicación",
+      "component_sha256": "e08f90dad113640e8997befc6f23b5d9d185dd85e0b2347d29c8136e0da93330",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-EXP-REFERENCIAS-snorkel-rosario",
+      "scope": "Referencias propuestas de actividad; permisos/identidad pendientes, no imagen aprobada",
+      "component_sha256": "f0c9faa1af34bf0657466bebe93882f3d486999b74aaee1a0ff558681c07f30b",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-EXP-snorkel-rosario-es",
+      "scope": "Texto borrador privado de experiencia «snorkel-rosario» · es · NO habilita oferta, reserva ni publicación",
+      "component_sha256": "af433ca949643a139e225c2d23ba8174e6e9d6bc601376c6531f2cd1cab66d6f",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-EXP-snorkel-rosario-en",
+      "scope": "Texto borrador privado de experiencia «snorkel-rosario» · en · NO habilita oferta, reserva ni publicación",
+      "component_sha256": "c5230c390850b3cb6e140b213f6f6d364afa3f2a6b0a1b837ad53bb532f67a14",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-EXP-snorkel-rosario-pt-BR",
+      "scope": "Texto borrador privado de experiencia «snorkel-rosario» · pt-BR · NO habilita oferta, reserva ni publicación",
+      "component_sha256": "34ca5309a645a9c42b02a01fc8d2098b6debf77224e9d83e28f568236ef2cf05",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-EXP-REFERENCIAS-catamaran-cartagena",
+      "scope": "Referencias propuestas de actividad; permisos/identidad pendientes, no imagen aprobada",
+      "component_sha256": "f21d47dcc5d754e05caca261b936568f85fdfa6c8d0e9bcaeca618e567c17bbe",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-EXP-catamaran-cartagena-es",
+      "scope": "Texto borrador privado de experiencia «catamaran-cartagena» · es · NO habilita oferta, reserva ni publicación",
+      "component_sha256": "f26bcd41a043f0a32ffad392afba3f89e5544b8c6ecd723ae7e5dca387fb283a",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-EXP-catamaran-cartagena-en",
+      "scope": "Texto borrador privado de experiencia «catamaran-cartagena» · en · NO habilita oferta, reserva ni publicación",
+      "component_sha256": "05255a0950aa5b7853be04fae4efc0a83f000280cb197d74258803c77b139eee",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-EXP-catamaran-cartagena-pt-BR",
+      "scope": "Texto borrador privado de experiencia «catamaran-cartagena» · pt-BR · NO habilita oferta, reserva ni publicación",
+      "component_sha256": "12f6fd62dba2893d93e7b43754d0207c78f8a28810a96fa19f22a8b347f479ca",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-EXP-PESCA-CONTEXTO",
+      "scope": "Original contextual de barcos La Boquilla; NO muestra pesca ejecutada ni identifica IMPULSE; no completa foto de actividad",
+      "component_sha256": "46f55717628af8784ed757bab282e549f6ad855eedf8c95e2b2bcaffed490153",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-EXP-REFERENCIAS-pesca-boquilla",
+      "scope": "Referencias propuestas de actividad; permisos/identidad pendientes, no imagen aprobada",
+      "component_sha256": "e61ef22282ab711eb1e4481c436d2694aa29cfe0bef0d2eca27cf063e49f5e49",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-EXP-pesca-boquilla-es",
+      "scope": "Texto borrador privado de experiencia «pesca-boquilla» · es · NO habilita oferta, reserva ni publicación",
+      "component_sha256": "10b01ce2ba313f6601944c9114d17a4f755ffd69e5f8e7917662da9969619f56",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-EXP-pesca-boquilla-en",
+      "scope": "Texto borrador privado de experiencia «pesca-boquilla» · en · NO habilita oferta, reserva ni publicación",
+      "component_sha256": "17bf13c69aeee5b50a03805056f6f02a01b6ea63fc813120f59f85c7e836b8ac",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-EXP-pesca-boquilla-pt-BR",
+      "scope": "Texto borrador privado de experiencia «pesca-boquilla» · pt-BR · NO habilita oferta, reserva ni publicación",
+      "component_sha256": "90638505298625caee31a95b756b90b92f750bc4098c8f9b734ab0a313f946e7",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-EXP-REFERENCIAS-atardecer-sibarita",
+      "scope": "Referencias propuestas de actividad; permisos/identidad pendientes, no imagen aprobada",
+      "component_sha256": "146f893c5347bd9b585e505166f59c5a413a3aca2c0a4601b071d7a98376592f",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-EXP-atardecer-sibarita-es",
+      "scope": "Texto borrador privado de experiencia «atardecer-sibarita» · es · NO habilita oferta, reserva ni publicación",
+      "component_sha256": "942f5ee77a989e32b7834ab2726c895fb8167c83f9d90c7af58c7bc3e6a0b030",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-EXP-atardecer-sibarita-en",
+      "scope": "Texto borrador privado de experiencia «atardecer-sibarita» · en · NO habilita oferta, reserva ni publicación",
+      "component_sha256": "7f8629f5fb87de8f90270af7e7814169ff6ccc098024604ba7b1fb84fcde08a4",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-EXP-atardecer-sibarita-pt-BR",
+      "scope": "Texto borrador privado de experiencia «atardecer-sibarita» · pt-BR · NO habilita oferta, reserva ni publicación",
+      "component_sha256": "3d793fa973650b67e19e949c108988e0646ed62dcad58f9ab1664516a23dde3f",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-EXP-REFERENCIAS-kayak-bahia-candidato",
+      "scope": "Referencias propuestas de actividad; permisos/identidad pendientes, no imagen aprobada",
+      "component_sha256": "c371b91ba5a109090b7507707e08e6a9c2df19640052624df13ff8a2daf99909",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-EXP-kayak-bahia-candidato-es",
+      "scope": "Texto borrador privado de experiencia «kayak-bahia-candidato» · es · NO habilita oferta, reserva ni publicación",
+      "component_sha256": "b9efa9560a42a0de52641557b805d0b58505041306b2c0d7751037a596acb5cc",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-EXP-kayak-bahia-candidato-en",
+      "scope": "Texto borrador privado de experiencia «kayak-bahia-candidato» · en · NO habilita oferta, reserva ni publicación",
+      "component_sha256": "99d258a78fcc88f8c9ef0e619810b29c1681b373d234bc3d40ef3a12c78b337a",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-EXP-kayak-bahia-candidato-pt-BR",
+      "scope": "Texto borrador privado de experiencia «kayak-bahia-candidato» · pt-BR · NO habilita oferta, reserva ni publicación",
+      "component_sha256": "3aeb3a10919ac9e941b17cd8c8bc13731ecefdc49637b955c0c3a42c729f85b9",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-PRACTICA-es",
+      "scope": "Información práctica · es",
+      "component_sha256": "bb78f7aa5fb0dce0cebae8cc7b76cb8c235284b5ca232f2311a39232437f587a",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-PRACTICA-en",
+      "scope": "Información práctica · en",
+      "component_sha256": "3d7e8fc9bad94acff1a582b067d88d1269a0a7ed5fff3f8ca4c696c08181cc40",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-PRACTICA-pt-BR",
+      "scope": "Información práctica · pt-BR",
+      "component_sha256": "a95862597c32d46f27e74a4847852972f341e0367d2fbc1ea9dcd2d9716ab636",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-DIR-CO-13-cartagena-celele",
+      "scope": "Ficha gratuita de Celele",
+      "component_sha256": "b7160ef0e852c8483b6a0f86294298b987bc29721122022e58ea3e9f72952d11",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-DIR-CO-13-cartagena-casa-san-agustin",
+      "scope": "Ficha gratuita de Hotel Casa San Agustín",
+      "component_sha256": "278a3141b06fd651deaf8c9a7183201cf2b54bb8554c324043454e6321a134f9",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-DIR-CO-13-cartagena-charleston",
+      "scope": "Ficha gratuita de Charleston Santa Teresa",
+      "component_sha256": "a41b432797959b66a0a7ac9b5fb52331fbf46ee5161622eb1d34534362116d3d",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-DIR-CO-13-cartagena-santa-clara",
+      "scope": "Ficha gratuita de Sofitel Legend Santa Clara",
+      "component_sha256": "4c9b0a02d71152fbc71110e9cf957749984c33320a95a87d52b9a25ecf74dbd7",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-DIR-CO-13-cartagena-jardin",
+      "scope": "Ficha gratuita de Jardín Santa Clara",
+      "component_sha256": "f605b765b4bc39fd84d9d4c12784379e72ee8a2e8e83cfff7f2984b23b2ec558",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-DIR-CO-13-cartagena-1621",
+      "scope": "Ficha gratuita de Restaurante 1621",
+      "component_sha256": "b7b9ddc6aef6dc62a64754862a500e521fd301916c32e3eda51772bcfe6b2cb0",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-DIR-CO-13-cartagena-coro",
+      "scope": "Ficha gratuita de El Coro Lounge Bar",
+      "component_sha256": "07837656724c8d51dd0180b4687fc944bc34f9988a224226e39065b21f6334ce",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-DIR-CO-13-cartagena-botika",
+      "scope": "Ficha gratuita de Botika Santa Clara Bar",
+      "component_sha256": "35c33eada3d8dc243ce003ce3bcf1330865ee4df23fb869f27214e48f0f1c1a3",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-DIR-CO-13-cartagena-muhca",
+      "scope": "Ficha gratuita de Museo Histórico de Cartagena",
+      "component_sha256": "b7e409e63f859fca74d23d9377ae3567962dc15f58e271a91faf0ce51930597d",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    },
+    {
+      "id": "CTG-DIR-CO-13-cartagena-alma",
+      "scope": "Ficha gratuita de Alma",
+      "component_sha256": "00afe3a9eca4147ef597373e33e1ed44881537dd7ca28d4c5e571fbc47af404a",
+      "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "decision": "pendiente",
+      "comment": "",
+      "component_hash_binding": "derivado del manifiesto íntegro identificado por revision; exportación original no incluía hash individual"
+    }
+  ],
+  "conditional_generation_authorization": {
+    "component_id": "CTG-01",
+    "instruction": "hay que hacerla con ai siguiendo el skill de iimagnes que tenemos",
+    "authorized_conditionally": true,
+    "execution_deferred_reason": "primero corregir selección máximo8 según mensaje actual",
+    "final_art_approved": false
+  }
+}

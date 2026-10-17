@@ -13,8 +13,13 @@ inventory=read('inventario-componentes.json')
 assert inventory['sites_total']==len(d['places'])>=17
 assert inventory['experiences_total']==len(d['experiences'])>=9
 assert inventory['illustrations_generated']==0 and not inventory['art_generation_authorized']
-assert inventory['references_human_approved']==0 and inventory['published_sites']==0
+assert inventory['references_human_approved']==3 and inventory['published_sites']==0
 assert len({p['slug'] for p in d['places']})==len(d['places'])
+selection=read('seleccion-editorial.json');assert len(selection['selection'])==8 and not selection['approved']
+selected={p['slug']:p for p in d['places'] if p.get('editorial_selected')}
+assert len(selected)==8 and 'islas-rosario' in selected and 'playa-blanca-baru' in selected
+assert len({p['image']['asset_id'] for p in selected.values()})==8
+assert all(p['image'] and p['image']['asset_id']!=selection['hero_asset'] for p in selected.values())
 for exp in d['experiences']:
  assert exp['experience_class'] in {'editorial_autonoma','oferta_operador_documentada','candidato_por_validar'}
  assert not exp['public_visible'] and not exp['partnership'] and not exp['availability_confirmed']
@@ -22,12 +27,18 @@ for exp in d['experiences']:
  if exp['experience_class']=='oferta_operador_documentada':
   assert exp['operator'] and exp['operator_url'].startswith('https://') and exp['source_ids']
 review=read('revision-componentes.json')
-assert len(review['components'])>=100 and not review['publication_approved']
+assert len(review['components'])>=79 and not review['publication_approved']
 assert len({c['id'] for c in review['components']})==len(review['components'])
 for component in review['components']:
- assert component['decision'] is None
+ assert component['decision'] in {None,'pendiente','corregir','aprobado'}
+ if component['decision']=='aprobado':
+  assert component['approval_source_revision']==read('decisiones-usuario.json')['source_revision']
  assert component['sha256']==hashlib.sha256(json.dumps(component['value'],ensure_ascii=False,sort_keys=True).encode()).hexdigest()
+assert review['historical_approvals']==22 and review['active_unchanged_approvals']==15
+assert sum(c['decision']=='aprobado' for c in review['components'])==15
+assert not any(c['id'].startswith('CTG-PORTADA-LICENCIA') for c in review['components'])
 assert (P/'historial/revision-41-componentes.json').is_file()
+assert (P/'historial/decision-usuario-original-3fab25.json').is_file()
 for lang in ['es','en','pt-BR']:
  assert d['destination']['history'][lang] and d['practical'][lang]
  assert all(p['translations'][lang]['description'] for p in d['places'])

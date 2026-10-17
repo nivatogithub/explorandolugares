@@ -107,5 +107,6 @@ print(f'Private draft: {len(assets)} photographic originals and {sum(len(a["deri
 
 # Expand the inventory without silently constraining it to the partial ZIP.
 exec(compile((P/"ampliar.py").read_text(), str(P/"ampliar.py"), "exec"))
+exec(compile((P/"seleccionar.py").read_text(), str(P/"seleccionar.py"), "exec"))
 # Keep the review aligned with the generated import package.
-exec(compile((P/"revision.py").read_text(), str(P/"revision.py"), "exec"))
+exec(compile((P/"revision8.py").read_text(), str(P/"revision8.py"), "exec"))

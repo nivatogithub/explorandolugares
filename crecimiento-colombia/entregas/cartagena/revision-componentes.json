@@ -1,7 +1,10 @@
 {
   "destination": "cartagena",
-  "revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+  "revision": "1fb7e17c75bc93b6eafcaffd172af1508134431fcf75620a793f6d8d855438e2",
   "publication_approved": false,
+  "selection_approved": false,
+  "historical_approvals": 22,
+  "active_unchanged_approvals": 15,
   "components": [
     {
       "id": "CTG-01",
@@ -69,103 +72,13 @@
         ],
         "approved": false
       },
-      "decision": null
-    },
-    {
-      "id": "CTG-PORTADA-OPCION-2",
-      "scope": "Opción 2 · original para posible portada · San Felipe de Barajas (2011); patrimonio reconocible, no visión total de Cartagena; sin recorte móvil ni escritorio",
-      "sha256": "f121bf2b06e955405b3ce43aa18e507d7ce993ad03f9c8d9c40edcce35fe8a02",
-      "value": {
-        "id": "san-felipe-2011",
-        "type": "photograph",
-        "author": "JuanGris (Lucía Estévez)",
-        "source_page": "https://commons.wikimedia.org/wiki/File:Cartagena-Castillo_San_Felipe_de_Barajas.JPG",
-        "original_url": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Cartagena-Castillo_San_Felipe_de_Barajas.JPG",
-        "license": "CC BY-SA 3.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
-        "commercial_use": true,
-        "adaptation": true,
-        "share_alike": true,
-        "consulted_at": "2026-10-16",
-        "photographed_at": "2011-05-08",
-        "credit": "JuanGris (Lucía Estévez) / Wikimedia Commons / CC BY-SA 3.0; redimensionado y convertido a WebP",
-        "original": {
-          "file": "imagenes/originales/san-felipe-2011.jpg",
-          "sha256": "d809d808080c576bd03540700458d7cca24e5344a4fcac32f89df27764afd3b2",
-          "bytes": 3996021
-        },
-        "derivatives": [
-          {
-            "file": "imagenes/derivados/san-felipe-2011-portada.webp",
-            "dimensions": [
-              1600,
-              1200
-            ],
-            "bytes": 253894,
-            "sha256": "794690f38826ef44160ac50483088749c522de354d350190f8525e2fe0b84ae9",
-            "quality": 82,
-            "crop": null,
-            "budget_ok": true
-          },
-          {
-            "file": "imagenes/derivados/san-felipe-2011-tarjeta.webp",
-            "dimensions": [
-              800,
-              600
-            ],
-            "bytes": 74456,
-            "sha256": "9aacdf2b8dafebdf379342624bee0fa3c2ae1c32ae804ac753649d71bbd8de5f",
-            "quality": 82,
-            "crop": null,
-            "budget_ok": true
-          }
-        ],
-        "alt": {
-          "es": "Castillo de San Felipe de Barajas y baterías colaterales, fotografía de 2011.",
-          "en": "San Felipe de Barajas Castle and its flanking batteries, photographed in 2011.",
-          "pt-BR": "Castelo de San Felipe de Barajas e baterias laterais, fotografia de 2011."
-        },
-        "qa_status": "pendiente_revision_visual_humana",
-        "recency_warning": "Fotografía histórica; no acredita estado actual.",
-        "tool": "Pillow 12.3.0",
-        "transforms": [
-          "orientacion EXIF",
-          "sRGB",
-          "sin recorte",
-          "sin ampliacion",
-          "derivado sin EXIF/GPS"
-        ],
-        "approved": false
-      },
-      "decision": null
-    },
-    {
-      "id": "CTG-PORTADA-LICENCIA-1",
-      "scope": "Licencia de referencia candidata de portada 1",
-      "sha256": "7e642c4791dfdf80aa6a3fac1a40eb6b2703f0cc78cb43c0831df8109bc5de6e",
-      "value": {
-        "es": [
-          "Norma Gòmez",
-          "CC BY 2.0",
-          "https://creativecommons.org/licenses/by/2.0/",
-          "Uso comercial y adaptación permitidos; atribución obligatoria; ShareAlike: False"
-        ]
-      },
-      "decision": null
-    },
-    {
-      "id": "CTG-PORTADA-LICENCIA-2",
-      "scope": "Licencia de referencia candidata de portada 2",
-      "sha256": "747b6d3e4372e50f28ce9952e2bc4c2936c6f920f9f0a83087f749e681c2adb8",
-      "value": {
-        "es": [
-          "JuanGris (Lucía Estévez)",
-          "CC BY-SA 3.0",
-          "https://creativecommons.org/licenses/by-sa/3.0/",
-          "Uso comercial y adaptación permitidos; atribución obligatoria; ShareAlike: True"
-        ]
-      },
-      "decision": null
+      "decision": "aprobado",
+      "approval_source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "approval_image_binding": {
+        "original_sha256": "fe560ccc27d1b4947da701e422956c02dbac71ff612f1695742766cd64344c23",
+        "use": "Opción 1 · original para posible portada · panorama Cartagena desde La Popa (2008); muestra bahía/ciudad, cruz dominante; sin recorte móvil ni escritorio",
+        "source_component_sha256": "ce23705fde747f70e0a96f0149fbd5668c3b53444be83da48f20b5100e201ab6"
+      }
     },
     {
       "id": "CTG-PORTADA-TEXTO-es",
@@ -180,7 +93,9 @@
           "Descubre Cartagena: centro histórico, Castillo de San Felipe de Barajas, Getsemaní, historia y opciones locales para preparar tu visita."
         ]
       },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-PORTADA-TEXTO-en",
@@ -195,7 +110,9 @@
           "Explore Cartagena’s historic centre, San Felipe de Barajas Castle, Getsemaní, history and local businesses to plan your visit."
         ]
       },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-PORTADA-TEXTO-pt-BR",
@@ -210,7 +127,9 @@
           "Conheça Cartagena: centro histórico, Castelo de San Felipe de Barajas, Getsemaní, história e opções locais para planejar sua visita."
         ]
       },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-HISTORIA-es",
@@ -223,7 +142,9 @@
           "En 1984 la UNESCO inscribió el puerto, las fortalezas y el conjunto monumental. El reconocimiento comprende un patrimonio vivo: Centro, San Diego y Getsemaní conservan usos residenciales, culturales y comerciales."
         ]
       },
-      "decision": null
+      "decision": "aprobado",
+      "approval_source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "approval_image_binding": null
     },
     {
       "id": "CTG-HISTORIA-en",
@@ -236,7 +157,9 @@
           "In 1984 UNESCO inscribed the port, fortresses and group of monuments. This is living heritage: Centro, San Diego and Getsemaní retain residential, cultural and commercial uses."
         ]
       },
-      "decision": null
+      "decision": "aprobado",
+      "approval_source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "approval_image_binding": null
     },
     {
       "id": "CTG-HISTORIA-pt-BR",
@@ -249,43 +172,121 @@
           "Em 1984 a UNESCO inscreveu o porto, as fortalezas e o conjunto monumental. Trata-se de um patrimônio vivo: Centro, San Diego e Getsemaní mantêm usos residenciais, culturais e comerciais."
         ]
       },
-      "decision": null
+      "decision": "aprobado",
+      "approval_source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "approval_image_binding": null
+    },
+    {
+      "id": "CTG-FOTO-centro-historico",
+      "scope": "Foto de la ficha «Centro histórico y murallas»",
+      "sha256": "5ae975efb26de09253eecf52298dcd5054962ea07d65db155a6e8c716ebe047f",
+      "value": {
+        "id": "murallas-2016",
+        "type": "photograph",
+        "author": "Joe Ross",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Wall_walkers,_Las_Murallas,_the_walls_of_Cartagena,_Colombia_(24557876196).jpg",
+        "original_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Wall_walkers%2C_Las_Murallas%2C_the_walls_of_Cartagena%2C_Colombia_%2824557876196%29.jpg",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "commercial_use": true,
+        "adaptation": true,
+        "share_alike": true,
+        "consulted_at": "2026-10-16",
+        "photographed_at": "2016-01-10",
+        "credit": "Joe Ross / Wikimedia Commons / CC BY-SA 2.0; redimensionado y convertido a WebP",
+        "original": {
+          "file": "imagenes/originales/murallas-2016.jpg",
+          "sha256": "ad46c942433b99a154b902c3b693b0d0aa2764038117fb8564ea45c8b503d1cc",
+          "bytes": 524607
+        },
+        "derivatives": [
+          {
+            "file": "imagenes/derivados/murallas-2016-portada.webp",
+            "dimensions": [
+              1600,
+              1060
+            ],
+            "bytes": 271202,
+            "sha256": "34c534d1d33f81f1916c3a8ee7adfca8b0a7c6e711d263f675d6debce71fce36",
+            "quality": 77,
+            "crop": null,
+            "budget_ok": true
+          },
+          {
+            "file": "imagenes/derivados/murallas-2016-tarjeta.webp",
+            "dimensions": [
+              800,
+              530
+            ],
+            "bytes": 101294,
+            "sha256": "c8c1a47d0a785cb44e4a46587f8448191e15a87bea0202192d86c30ae6a46969",
+            "quality": 82,
+            "crop": null,
+            "budget_ok": true
+          }
+        ],
+        "alt": {
+          "es": "Murallas del centro histórico de Cartagena, fotografía2016.",
+          "en": "Historic Cartagena city walls, photograph2016.",
+          "pt-BR": "Muralhas do centro histórico de Cartagena, fotografia2016."
+        },
+        "qa_status": "pendiente_revision_visual_humana",
+        "recency_warning": "Fotografía histórica; no acredita estado actual.",
+        "tool": "Pillow 12.3.0",
+        "transforms": [
+          "orientacion EXIF",
+          "sRGB",
+          "sin recorte",
+          "sin ampliacion",
+          "derivado sin EXIF/GPS"
+        ],
+        "approved": false
+      },
+      "decision": null,
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-LUGAR-centro-historico-es",
       "scope": "Nombre y descripción de «Centro histórico y murallas» · es",
-      "sha256": "ce6715f4183f0cbb0df57ee9b1189b2f23316fd26fe7d8ba316f2d8afb4ff8c9",
+      "sha256": "b6953bb94b823da256b790503c5c3ce74abb2e958338b4e9538395dc1e92e899",
       "value": {
         "es": [
           "Centro histórico y murallas",
-          "Recorre plazas y calles de Centro y San Diego, parte del conjunto patrimonial. La ciudad sigue habitada: respeta viviendas y circulación."
+          "Centro y San Diego son barrios del casco histórico de Cartagena. San Diego es el sector alrededor de su plaza y de la iglesia de Santo Toribio. Recorre murallas, plazas y calles; la Torre del Reloj y el Portal de los Dulces se incluyen en este conjunto, sin multiplicar tarjetas de iglesias o monumentos."
         ]
       },
-      "decision": null
+      "decision": null,
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-LUGAR-centro-historico-en",
       "scope": "Nombre y descripción de «Centro histórico y murallas» · en",
-      "sha256": "3524eb361409f8ab3c000a7614e9bb5971afe41141fbeab090f003d0f5c11407",
+      "sha256": "b847582762498b0e08e0ad6cc8821ace29f3d7f9ed8bcc5983f1db6e29c62519",
       "value": {
         "en": [
           "Historic centre and city walls",
-          "Explore the squares and streets of Centro and San Diego, part of the heritage ensemble. This is a lived-in city: respect homes and pedestrian movement."
+          "Centro and San Diego are neighbourhoods in Cartagena’s historic core. San Diego is the area around its square and Santo Toribio church. Explore the walls, squares and streets; the Clock Tower and Portal de los Dulces are included in this ensemble rather than presented as separate church or monument cards."
         ]
       },
-      "decision": null
+      "decision": null,
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-LUGAR-centro-historico-pt-BR",
       "scope": "Nombre y descripción de «Centro histórico y murallas» · pt-BR",
-      "sha256": "2607e35dd79bffd384c9ee08ab9c1d476f11f5fc4cf7e19f423625ef8ebbf611",
+      "sha256": "37358b2950aa614342cf382c9afb865231ec8823fe2c33196134d42a05eb8f62",
       "value": {
         "pt-BR": [
           "Centro histórico e muralhas",
-          "Explore praças e ruas de Centro e San Diego, parte do conjunto patrimonial. A cidade é habitada: respeite as casas e a circulação."
+          "Centro e San Diego são bairros do núcleo histórico de Cartagena. San Diego é o setor ao redor de sua praça e da igreja de Santo Toribio. Explore muralhas, praças e ruas; a Torre do Relógio e o Portal de los Dulces integram este conjunto, sem multiplicar cartões de igrejas ou monumentos."
         ]
       },
-      "decision": null
+      "decision": null,
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-02",
@@ -353,7 +354,13 @@
         ],
         "approved": false
       },
-      "decision": null
+      "decision": "aprobado",
+      "approval_source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "approval_image_binding": {
+        "original_sha256": "d809d808080c576bd03540700458d7cca24e5344a4fcac32f89df27764afd3b2",
+        "use": "Foto de la ficha «Castillo de San Felipe de Barajas»",
+        "source_component_sha256": "f121bf2b06e955405b3ce43aa18e507d7ce993ad03f9c8d9c40edcce35fe8a02"
+      }
     },
     {
       "id": "CTG-LUGAR-san-felipe-es",
@@ -365,7 +372,9 @@
           "La fortificación domina el acceso terrestre histórico desde el cerro de San Lázaro. Consulta al gestor sobre entradas, recorrido y condiciones de accesibilidad."
         ]
       },
-      "decision": null
+      "decision": "aprobado",
+      "approval_source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "approval_image_binding": null
     },
     {
       "id": "CTG-LUGAR-san-felipe-en",
@@ -377,7 +386,9 @@
           "This fortification overlooks the historic land approach from San Lázaro hill. Check tickets, routes and accessibility conditions with its manager."
         ]
       },
-      "decision": null
+      "decision": "aprobado",
+      "approval_source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "approval_image_binding": null
     },
     {
       "id": "CTG-LUGAR-san-felipe-pt-BR",
@@ -389,18 +400,20 @@
           "A fortificação domina o acesso terrestre histórico a partir da colina de San Lázaro. Consulte o gestor sobre ingressos, percurso e acessibilidade."
         ]
       },
-      "decision": null
+      "decision": "aprobado",
+      "approval_source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "approval_image_binding": null
     },
     {
       "id": "CTG-03",
       "scope": "Foto de la ficha «Getsemaní»",
-      "sha256": "7e8d3fca150044af84d710c1fa5dd3c3b22cb7361e8923c4caab86fcc389c3aa",
+      "sha256": "ff2e5aacc594fbd5ef997f8fc8c9d9633c5802daab4a9e6fa387919bcb8c0364",
       "value": {
-        "id": "getsemani-2016",
+        "id": "getsemani-casas-2016",
         "type": "photograph",
         "author": "Joe Ross",
-        "source_page": "https://commons.wikimedia.org/wiki/File:Getsemani_Street_Scene,_Cartagena,_Colombia_(24217787419).jpg",
-        "original_url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Getsemani_Street_Scene%2C_Cartagena%2C_Colombia_%2824217787419%29.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Getsemani_Street_Scene,_Cartagena,_Colombia_(24585540985).jpg",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Getsemani_Street_Scene%2C_Cartagena%2C_Colombia_%2824585540985%29.jpg",
         "license": "CC BY-SA 2.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
         "commercial_use": true,
@@ -410,40 +423,40 @@
         "photographed_at": "2016-01-21",
         "credit": "Joe Ross / Wikimedia Commons / CC BY-SA 2.0; redimensionado y convertido a WebP",
         "original": {
-          "file": "imagenes/originales/getsemani-2016.jpg",
-          "sha256": "75dcf6fa58712ae14ccdd55d749fb668365a1b6c15d750eac77b43d73aaf07b8",
-          "bytes": 386311
+          "file": "imagenes/originales/getsemani-casas-2016.jpg",
+          "sha256": "bf915ebf9bf7859f534ab2e722254a7b3500e7ad8d36514fd5e4cff8affcf8bd",
+          "bytes": 426139
         },
         "derivatives": [
           {
-            "file": "imagenes/derivados/getsemani-2016-portada.webp",
+            "file": "imagenes/derivados/getsemani-casas-2016-portada.webp",
             "dimensions": [
               1600,
               1060
             ],
-            "bytes": 203802,
-            "sha256": "b364217d9a3166e052f7a7e1bbcf62727614a1218b06e53e5c4868d6e56ec834",
+            "bytes": 242000,
+            "sha256": "ddbbafea3e57c35caa6990967442c261bddc30392f576e41e0f0b7e7832e9239",
             "quality": 82,
             "crop": null,
             "budget_ok": true
           },
           {
-            "file": "imagenes/derivados/getsemani-2016-tarjeta.webp",
+            "file": "imagenes/derivados/getsemani-casas-2016-tarjeta.webp",
             "dimensions": [
               800,
               530
             ],
-            "bytes": 66984,
-            "sha256": "8b3d46670819e7fd037164a7544b2e0b26b2f37f0f955035e2cd99f69171fd98",
+            "bytes": 79060,
+            "sha256": "faa0ea49f1f7d17d987f3d6c08cbc228eae9890a40e94782617d0ec87497379a",
             "quality": 82,
             "crop": null,
             "budget_ok": true
           }
         ],
         "alt": {
-          "es": "Calle del barrio Getsemaní en Cartagena, fotografía de 2016.",
-          "en": "Street in Cartagena’s Getsemaní neighbourhood, photographed in 2016.",
-          "pt-BR": "Rua do bairro Getsemaní em Cartagena, fotografia de 2016."
+          "es": "Casas del barrio Getsemaní en Cartagena,2016.",
+          "en": "Houses in Cartagena’s Getsemaní neighbourhood,2016.",
+          "pt-BR": "Casas do bairro Getsemaní em Cartagena,2016."
         },
         "qa_status": "pendiente_revision_visual_humana",
         "recency_warning": "Fotografía histórica; no acredita estado actual.",
@@ -457,7 +470,9 @@
         ],
         "approved": false
       },
-      "decision": null
+      "decision": null,
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-LUGAR-getsemani-es",
@@ -469,7 +484,9 @@
           "Barrio histórico vinculado a artesanos y población trabajadora. Sus calles y expresiones artísticas contemporáneas ofrecen otra lectura de Cartagena; pide permiso antes de fotografiar personas."
         ]
       },
-      "decision": null
+      "decision": "aprobado",
+      "approval_source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "approval_image_binding": null
     },
     {
       "id": "CTG-LUGAR-getsemani-en",
@@ -481,7 +498,9 @@
           "A historic neighbourhood associated with artisans and working communities. Its streets and contemporary artistic expressions offer another view of Cartagena; ask permission before photographing people."
         ]
       },
-      "decision": null
+      "decision": "aprobado",
+      "approval_source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "approval_image_binding": null
     },
     {
       "id": "CTG-LUGAR-getsemani-pt-BR",
@@ -493,7 +512,345 @@
           "Bairro histórico ligado a artesãos e comunidades trabalhadoras. Suas ruas e expressões artísticas contemporâneas oferecem outra leitura de Cartagena; peça autorização antes de fotografar pessoas."
         ]
       },
-      "decision": null
+      "decision": "aprobado",
+      "approval_source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "approval_image_binding": null
+    },
+    {
+      "id": "CTG-FOTO-islas-rosario",
+      "scope": "Foto de la ficha «Islas del Rosario»",
+      "sha256": "1b9f38c5ad3874db1a4a82335d4226328857af08a0ad46203d9e677f8a5e124d",
+      "value": {
+        "id": "rosario-isla-grande-2016",
+        "type": "photograph",
+        "author": "Joe Ross",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Cocolise_Isla_Resort,_Islas_del_Rosario_(23938767624).jpg",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Cocolise_Isla_Resort%2C_Islas_del_Rosario_%2823938767624%29.jpg",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "commercial_use": true,
+        "adaptation": true,
+        "share_alike": true,
+        "consulted_at": "2026-10-16",
+        "photographed_at": "2016-01-17",
+        "credit": "Joe Ross / Wikimedia Commons / CC BY-SA 2.0; redimensionado y convertido a WebP",
+        "original": {
+          "file": "imagenes/originales/rosario-isla-grande-2016.jpg",
+          "sha256": "4cf0df9fafb66b1eb49211649872ce0983e65847ced5b828eb5cd5de3a03abac",
+          "bytes": 308339
+        },
+        "derivatives": [
+          {
+            "file": "imagenes/derivados/rosario-isla-grande-2016-portada.webp",
+            "dimensions": [
+              1600,
+              1060
+            ],
+            "bytes": 153648,
+            "sha256": "79f32f93934c0a357ac4aa423e2be20624f8ff7e4963c113854fadc3ae70512e",
+            "quality": 82,
+            "crop": null,
+            "budget_ok": true
+          },
+          {
+            "file": "imagenes/derivados/rosario-isla-grande-2016-tarjeta.webp",
+            "dimensions": [
+              800,
+              530
+            ],
+            "bytes": 45802,
+            "sha256": "cc3ad47a26dc7610610e4d572d2591505a3c7767df3bce3a8f17e12381ec99e1",
+            "quality": 82,
+            "crop": null,
+            "budget_ok": true
+          }
+        ],
+        "alt": {
+          "es": "Sector Cocolise, Isla Grande, archipiélago del Rosario,2016; no implica alianza ni acceso contratado.",
+          "en": "Cocolise area, Isla Grande, Rosario archipelago,2016; no partnership or booked access implied.",
+          "pt-BR": "Setor Cocolise, Isla Grande, arquipélago do Rosário,2016; sem parceria ou acesso contratado."
+        },
+        "qa_status": "pendiente_revision_visual_humana",
+        "recency_warning": "Fotografía histórica; no acredita estado actual.",
+        "tool": "Pillow 12.3.0",
+        "transforms": [
+          "orientacion EXIF",
+          "sRGB",
+          "sin recorte",
+          "sin ampliacion",
+          "derivado sin EXIF/GPS"
+        ],
+        "approved": false
+      },
+      "decision": null,
+      "approval_source_revision": null,
+      "approval_image_binding": null
+    },
+    {
+      "id": "CTG-LUGAR-islas-rosario-es",
+      "scope": "Nombre y descripción de «Islas del Rosario» · es",
+      "sha256": "33f07213a3cec7a2fb496cc87a259847feebe30cbb6ddde2e333eb889d810438",
+      "value": {
+        "es": [
+          "Islas del Rosario",
+          "Archipiélago caribeño frente a Cartagena, con paisajes insulares y ecosistemas marinos protegidos. Es una excursión fuera del centro urbano: confirma acceso, condiciones de navegación, permisos y cupos con gestores y operadores."
+        ]
+      },
+      "decision": null,
+      "approval_source_revision": null,
+      "approval_image_binding": null
+    },
+    {
+      "id": "CTG-LUGAR-islas-rosario-en",
+      "scope": "Nombre y descripción de «Islas del Rosario» · en",
+      "sha256": "afc9b4810a58ee6690207df9f92454116565768451e010265441c79d61e552f4",
+      "value": {
+        "en": [
+          "Rosario Islands",
+          "Caribbean archipelago off Cartagena, with island scenery and protected marine ecosystems. This is an excursion beyond the urban centre: confirm access, navigation conditions, permits and visitor capacity with managers and operators."
+        ]
+      },
+      "decision": null,
+      "approval_source_revision": null,
+      "approval_image_binding": null
+    },
+    {
+      "id": "CTG-LUGAR-islas-rosario-pt-BR",
+      "scope": "Nombre y descripción de «Islas del Rosario» · pt-BR",
+      "sha256": "60b80d300875fb2b4d2dc940423dc4ee7b81ef3d2e88b20cfeaf5a04cf19cbce",
+      "value": {
+        "pt-BR": [
+          "Ilhas do Rosário",
+          "Arquipélago caribenho diante de Cartagena, com paisagens insulares e ecossistemas marinhos protegidos. É um passeio fora do centro urbano: confirme acesso, condições de navegação, permissões e capacidade com gestores e operadores."
+        ]
+      },
+      "decision": null,
+      "approval_source_revision": null,
+      "approval_image_binding": null
+    },
+    {
+      "id": "CTG-FOTO-playa-blanca-baru",
+      "scope": "Foto de la ficha «Playa Blanca · Barú»",
+      "sha256": "c67f67f36b0ab72a76844ae3b8f83fcb2000439c74803aadcbc0fad9dc3b9c95",
+      "value": {
+        "id": "playa-blanca-2019",
+        "type": "photograph",
+        "author": "Felipeortegag / @f.o.g.photography",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Playa_Blanca,_Bar%C3%BA.jpg",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Playa_Blanca%2C_Bar%C3%BA.jpg",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "commercial_use": true,
+        "adaptation": true,
+        "share_alike": true,
+        "consulted_at": "2026-10-16",
+        "photographed_at": "2019-06-26",
+        "credit": "Felipeortegag / @f.o.g.photography / Wikimedia Commons / CC BY-SA 4.0; redimensionado y convertido a WebP",
+        "original": {
+          "file": "imagenes/originales/playa-blanca-2019.jpg",
+          "sha256": "2137759fa3496dc5851d374e73805acefa3c98ea945f0097a35413d0c88fb935",
+          "bytes": 3498948
+        },
+        "derivatives": [
+          {
+            "file": "imagenes/derivados/playa-blanca-2019-portada.webp",
+            "dimensions": [
+              1600,
+              1200
+            ],
+            "bytes": 249960,
+            "sha256": "008b62c6441ba554cbffe60b08d1216b878aef9dc967a0e28680b64279173cf7",
+            "quality": 77,
+            "crop": null,
+            "budget_ok": true
+          },
+          {
+            "file": "imagenes/derivados/playa-blanca-2019-tarjeta.webp",
+            "dimensions": [
+              800,
+              600
+            ],
+            "bytes": 78094,
+            "sha256": "173f0bc308004b2b810bcd39813949ba71eaf0c25983f7bd5052767714cdc378",
+            "quality": 82,
+            "crop": null,
+            "budget_ok": true
+          }
+        ],
+        "alt": {
+          "es": "Vista aérea de Playa Blanca, Barú, Cartagena,2019.",
+          "en": "Aerial view of Playa Blanca, Barú, Cartagena,2019.",
+          "pt-BR": "Vista aérea de Playa Blanca, Barú, Cartagena,2019."
+        },
+        "qa_status": "pendiente_revision_visual_humana",
+        "recency_warning": "Fotografía histórica; no acredita estado actual.",
+        "tool": "Pillow 12.3.0",
+        "transforms": [
+          "orientacion EXIF",
+          "sRGB",
+          "sin recorte",
+          "sin ampliacion",
+          "derivado sin EXIF/GPS"
+        ],
+        "approved": false
+      },
+      "decision": null,
+      "approval_source_revision": null,
+      "approval_image_binding": null
+    },
+    {
+      "id": "CTG-LUGAR-playa-blanca-baru-es",
+      "scope": "Nombre y descripción de «Playa Blanca · Barú» · es",
+      "sha256": "f7d7beea371038f8feda4d4fb181acfd6b9d8fb7b24a241d527f7a8fc1220109",
+      "value": {
+        "es": [
+          "Playa Blanca · Barú",
+          "Playa Blanca se encuentra en Barú, la península al sur de Cartagena, fuera del núcleo urbano. La playa y el archipiélago del Rosario son lugares distintos. Confirma condiciones de acceso y servicios antes de viajar."
+        ]
+      },
+      "decision": null,
+      "approval_source_revision": null,
+      "approval_image_binding": null
+    },
+    {
+      "id": "CTG-LUGAR-playa-blanca-baru-en",
+      "scope": "Nombre y descripción de «Playa Blanca · Barú» · en",
+      "sha256": "00caa06240748da6ad8248135dcb3088fd550c6623f51738e9ee820227b7968d",
+      "value": {
+        "en": [
+          "Playa Blanca · Barú",
+          "Playa Blanca is on Barú, the peninsula south of Cartagena, outside the urban centre. The beach and the Rosario archipelago are distinct places. Confirm access and services before travelling."
+        ]
+      },
+      "decision": null,
+      "approval_source_revision": null,
+      "approval_image_binding": null
+    },
+    {
+      "id": "CTG-LUGAR-playa-blanca-baru-pt-BR",
+      "scope": "Nombre y descripción de «Playa Blanca · Barú» · pt-BR",
+      "sha256": "e19d91839645014c07117c340d9c359611920df031771a06de472e7270d47f59",
+      "value": {
+        "pt-BR": [
+          "Playa Blanca · Barú",
+          "Playa Blanca fica em Barú, a península ao sul de Cartagena, fora do núcleo urbano. A praia e o arquipélago do Rosário são lugares diferentes. Confirme acesso e serviços antes de viajar."
+        ]
+      },
+      "decision": null,
+      "approval_source_revision": null,
+      "approval_image_binding": null
+    },
+    {
+      "id": "CTG-FOTO-cerro-popa",
+      "scope": "Foto de la ficha «Cerro y convento de La Popa»",
+      "sha256": "89fdba9867b425842ce5e7fe45cc72ca26d118ff0c2fc38d52804b2992dc22e5",
+      "value": {
+        "id": "popa-convento-2011",
+        "type": "photograph",
+        "author": "Munigarro",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Convento_de_Santa_Cruz_de_la_Popa_-_Cartagena.JPG",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Convento_de_Santa_Cruz_de_la_Popa_-_Cartagena.JPG",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "commercial_use": true,
+        "adaptation": true,
+        "share_alike": true,
+        "consulted_at": "2026-10-16",
+        "photographed_at": "2011-04-30",
+        "credit": "Munigarro / Wikimedia Commons / CC BY-SA 3.0; redimensionado y convertido a WebP",
+        "original": {
+          "file": "imagenes/originales/popa-convento-2011.jpg",
+          "sha256": "ef5f2b7ea741469c3f7d44aed4891f69469f2a08eebcc1a77134f01c05d92c0d",
+          "bytes": 2611116
+        },
+        "derivatives": [
+          {
+            "file": "imagenes/derivados/popa-convento-2011-portada.webp",
+            "dimensions": [
+              1600,
+              1063
+            ],
+            "bytes": 282692,
+            "sha256": "5d0fb7c19d0260c479a02c717c03bf51dabb29199dec000bfc69683ba218be4a",
+            "quality": 72,
+            "crop": null,
+            "budget_ok": true
+          },
+          {
+            "file": "imagenes/derivados/popa-convento-2011-tarjeta.webp",
+            "dimensions": [
+              800,
+              531
+            ],
+            "bytes": 115762,
+            "sha256": "ed05f73d3a696710da99b3b381877767dc0ce25079d0cfa67f6f2c7a8a99a495",
+            "quality": 82,
+            "crop": null,
+            "budget_ok": true
+          }
+        ],
+        "alt": {
+          "es": "Claustro del convento de Santa Cruz de La Popa, Cartagena,2011.",
+          "en": "Cloister of Santa Cruz de La Popa convent, Cartagena,2011.",
+          "pt-BR": "Claustro do convento de Santa Cruz de La Popa, Cartagena,2011."
+        },
+        "qa_status": "pendiente_revision_visual_humana",
+        "recency_warning": "Fotografía histórica; no acredita estado actual.",
+        "tool": "Pillow 12.3.0",
+        "transforms": [
+          "orientacion EXIF",
+          "sRGB",
+          "sin recorte",
+          "sin ampliacion",
+          "derivado sin EXIF/GPS"
+        ],
+        "approved": false
+      },
+      "decision": null,
+      "approval_source_revision": null,
+      "approval_image_binding": null
+    },
+    {
+      "id": "CTG-LUGAR-cerro-popa-es",
+      "scope": "Nombre y descripción de «Cerro y convento de La Popa» · es",
+      "sha256": "cb34ea053363d4264a1fa94ae33f755185021834a8ff1b77641e7ed7b3558bfa",
+      "value": {
+        "es": [
+          "Cerro y convento de La Popa",
+          "El convento de Santa Cruz de La Popa se encuentra sobre el cerro de La Popa y combina patrimonio religioso con vistas de Cartagena. Su claustro ofrece otra manera de acercarse a este conjunto histórico. Confirma condiciones de visita y transporte antes de subir."
+        ]
+      },
+      "decision": null,
+      "approval_source_revision": null,
+      "approval_image_binding": null
+    },
+    {
+      "id": "CTG-LUGAR-cerro-popa-en",
+      "scope": "Nombre y descripción de «Cerro y convento de La Popa» · en",
+      "sha256": "3baf0f8641abbde8f7f58665cf083278e2707e789b8e80b1c5704c8b9c008904",
+      "value": {
+        "en": [
+          "La Popa hill and convent",
+          "Santa Cruz de La Popa convent stands on La Popa hill, combining religious heritage with views over Cartagena. Its cloister offers another way to experience this historic complex. Confirm visiting and transport conditions before going up."
+        ]
+      },
+      "decision": null,
+      "approval_source_revision": null,
+      "approval_image_binding": null
+    },
+    {
+      "id": "CTG-LUGAR-cerro-popa-pt-BR",
+      "scope": "Nombre y descripción de «Cerro y convento de La Popa» · pt-BR",
+      "sha256": "a125e96b6fcbb7cd590e671b3d2ab9b18618203c331899d6cf4976afd39a1ff6",
+      "value": {
+        "pt-BR": [
+          "Colina e convento de La Popa",
+          "O convento de Santa Cruz de La Popa fica na colina de La Popa e reúne patrimônio religioso e vistas de Cartagena. Seu claustro oferece outra forma de conhecer esse conjunto histórico. Confirme condições de visita e transporte antes de subir."
+        ]
+      },
+      "decision": null,
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-04",
@@ -561,7 +918,13 @@
         ],
         "approved": false
       },
-      "decision": null
+      "decision": "aprobado",
+      "approval_source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "approval_image_binding": {
+        "original_sha256": "6bb63329caa48f2746ddf7a7d9c0f270e09c5fed0662680132e573448ab27011",
+        "use": "Foto de la ficha «Museo Histórico de Cartagena»",
+        "source_component_sha256": "783259d0197e61de66afbdab0b55b768a567d5f67b2a43d04cedc2caed334c7c"
+      }
     },
     {
       "id": "CTG-LUGAR-museo-historico-es",
@@ -573,7 +936,9 @@
           "El MUHCA propone exposiciones sobre la memoria de Cartagena en el Palacio de la Inquisición. Revisa su información de visita y agenda oficial."
         ]
       },
-      "decision": null
+      "decision": "aprobado",
+      "approval_source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "approval_image_binding": null
     },
     {
       "id": "CTG-LUGAR-museo-historico-en",
@@ -585,7 +950,9 @@
           "MUHCA presents exhibitions on Cartagena’s memory in the Palace of the Inquisition. Check its official visitor information and programme."
         ]
       },
-      "decision": null
+      "decision": "aprobado",
+      "approval_source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "approval_image_binding": null
     },
     {
       "id": "CTG-LUGAR-museo-historico-pt-BR",
@@ -597,471 +964,9 @@
           "O MUHCA apresenta exposições sobre a memória de Cartagena no Palácio da Inquisição. Confira as informações de visita e a programação oficial."
         ]
       },
-      "decision": null
-    },
-    {
-      "id": "CTG-LUGAR-torre-reloj-es",
-      "scope": "Nombre y descripción de «Torre del Reloj» · es",
-      "sha256": "b9f2ebc5e930444cb371f15c692fa4b314d8086b684a79e2dfa5724b08f85d23",
-      "value": {
-        "es": [
-          "Torre del Reloj",
-          "Acceso monumental a la ciudad amurallada; punto para reconocer la relación entre plazas y recinto histórico."
-        ]
-      },
-      "decision": null
-    },
-    {
-      "id": "CTG-LUGAR-torre-reloj-en",
-      "scope": "Nombre y descripción de «Torre del Reloj» · en",
-      "sha256": "3c3a38038800179e763dbe515ddc1d49d87d3836b31471f7d33047a85ce76428",
-      "value": {
-        "en": [
-          "Clock Tower",
-          "Monumental entrance to the walled city and a point from which to read its historic layout."
-        ]
-      },
-      "decision": null
-    },
-    {
-      "id": "CTG-LUGAR-torre-reloj-pt-BR",
-      "scope": "Nombre y descripción de «Torre del Reloj» · pt-BR",
-      "sha256": "2da9ccfdb2913061ec5d992a4f4fd3e8774a60541c97a58a31b06b07bf6ebb58",
-      "value": {
-        "pt-BR": [
-          "Torre do Relógio",
-          "Entrada monumental da cidade amuralhada e ponto para compreender seu traçado histórico."
-        ]
-      },
-      "decision": null
-    },
-    {
-      "id": "CTG-LUGAR-oro-zenu-es",
-      "scope": "Nombre y descripción de «Museo del Oro Zenú» · es",
-      "sha256": "d55bcfd8571fbd18a6e716d3aeb031b6242ddc85238f0a8b988c52ad6b6eef27",
-      "value": {
-        "es": [
-          "Museo del Oro Zenú",
-          "Espacio del Banco de la República dedicado al patrimonio arqueológico y cultural Zenú. Confirma visita y exposiciones con el museo."
-        ]
-      },
-      "decision": null
-    },
-    {
-      "id": "CTG-LUGAR-oro-zenu-en",
-      "scope": "Nombre y descripción de «Museo del Oro Zenú» · en",
-      "sha256": "f3e4871859ece736f0bd6d4fdd23ef4f36ce7c3d039ab13a8d823f89d8319e5d",
-      "value": {
-        "en": [
-          "Zenú Gold Museum",
-          "Banco de la República museum devoted to Zenú archaeological and cultural heritage. Check visits and exhibitions with the museum."
-        ]
-      },
-      "decision": null
-    },
-    {
-      "id": "CTG-LUGAR-oro-zenu-pt-BR",
-      "scope": "Nombre y descripción de «Museo del Oro Zenú» · pt-BR",
-      "sha256": "caf9014696cba7452a0e00bcb9ab012b05dd5eec1bfc65189c3f9a3a0687a6ef",
-      "value": {
-        "pt-BR": [
-          "Museu do Ouro Zenú",
-          "Museu do Banco de la República dedicado ao patrimônio arqueológico e cultural Zenú. Confirme visitas e exposições com o museu."
-        ]
-      },
-      "decision": null
-    },
-    {
-      "id": "CTG-FOTO-cerro-popa",
-      "scope": "Foto de la ficha «Cerro y convento de La Popa»",
-      "sha256": "ce23705fde747f70e0a96f0149fbd5668c3b53444be83da48f20b5100e201ab6",
-      "value": {
-        "id": "la-popa-2008",
-        "type": "photograph",
-        "author": "Norma Gòmez",
-        "source_page": "https://commons.wikimedia.org/wiki/File:Cartagena_de_Indias_desde_el_cerro_La_Popa.jpg",
-        "original_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Cartagena_de_Indias_desde_el_cerro_La_Popa.jpg",
-        "license": "CC BY 2.0",
-        "license_url": "https://creativecommons.org/licenses/by/2.0/",
-        "commercial_use": true,
-        "adaptation": true,
-        "share_alike": false,
-        "consulted_at": "2026-10-16",
-        "photographed_at": "2008-02-01",
-        "credit": "Norma Gòmez / Wikimedia Commons / CC BY 2.0; redimensionado y convertido a WebP",
-        "original": {
-          "file": "imagenes/originales/la-popa-2008.jpg",
-          "sha256": "fe560ccc27d1b4947da701e422956c02dbac71ff612f1695742766cd64344c23",
-          "bytes": 626771
-        },
-        "derivatives": [
-          {
-            "file": "imagenes/derivados/la-popa-2008-portada.webp",
-            "dimensions": [
-              1600,
-              972
-            ],
-            "bytes": 286540,
-            "sha256": "38fc01d6e9333b82561981e48a385cec826a2d1ee7934a65b6e3dce789e27148",
-            "quality": 72,
-            "crop": null,
-            "budget_ok": true
-          },
-          {
-            "file": "imagenes/derivados/la-popa-2008-tarjeta.webp",
-            "dimensions": [
-              800,
-              486
-            ],
-            "bytes": 95086,
-            "sha256": "b497206974fef73d19ace62d2cbb8d5b81b7c8dad6b53cf678d601cb098b4ea8",
-            "quality": 82,
-            "crop": null,
-            "budget_ok": true
-          }
-        ],
-        "alt": {
-          "es": "Panorama de Cartagena y su bahía desde el cerro de La Popa, fotografía de 2008.",
-          "en": "View of Cartagena and its bay from La Popa hill, photographed in 2008.",
-          "pt-BR": "Panorama de Cartagena e sua baía visto da colina de La Popa, fotografia de 2008."
-        },
-        "qa_status": "pendiente_revision_visual_humana",
-        "recency_warning": "Fotografía histórica; no acredita estado actual.",
-        "tool": "Pillow 12.3.0",
-        "transforms": [
-          "orientacion EXIF",
-          "sRGB",
-          "sin recorte",
-          "sin ampliacion",
-          "derivado sin EXIF/GPS"
-        ],
-        "approved": false
-      },
-      "decision": null
-    },
-    {
-      "id": "CTG-LUGAR-cerro-popa-es",
-      "scope": "Nombre y descripción de «Cerro y convento de La Popa» · es",
-      "sha256": "8204bc188e33ea1dc5b1b7bebbd5f02df6b13106167906c041640cb2ea2418ff",
-      "value": {
-        "es": [
-          "Cerro y convento de La Popa",
-          "El conjunto religioso se encuentra sobre el cerro de La Popa; el mirador permite observar Cartagena y su bahía. La fotografía existente muestra el panorama, no la fachada del convento."
-        ]
-      },
-      "decision": null
-    },
-    {
-      "id": "CTG-LUGAR-cerro-popa-en",
-      "scope": "Nombre y descripción de «Cerro y convento de La Popa» · en",
-      "sha256": "edb59dcd26011145bbb55b1673f23c79306e1e192226f85a5eaf57b78c152e3a",
-      "value": {
-        "en": [
-          "La Popa hill and convent",
-          "The religious complex stands on La Popa hill, overlooking Cartagena and its bay. The existing photograph shows the panorama, not the convent façade."
-        ]
-      },
-      "decision": null
-    },
-    {
-      "id": "CTG-LUGAR-cerro-popa-pt-BR",
-      "scope": "Nombre y descripción de «Cerro y convento de La Popa» · pt-BR",
-      "sha256": "19867811fe10fb9a763a399aca6953bcbb1876f33e705fe1a98c849dcc8a170b",
-      "value": {
-        "pt-BR": [
-          "Colina e convento de La Popa",
-          "O conjunto religioso está na colina de La Popa, com vista de Cartagena e sua baía. A fotografia existente mostra o panorama, não a fachada do convento."
-        ]
-      },
-      "decision": null
-    },
-    {
-      "id": "CTG-LUGAR-san-pedro-claver-es",
-      "scope": "Nombre y descripción de «Santuario y Museo San Pedro Claver» · es",
-      "sha256": "b7bf86d09b7d289abc685cf7677b5bfde07ec5caafdcf7890788cf6dae766b2a",
-      "value": {
-        "es": [
-          "Santuario y Museo San Pedro Claver",
-          "Conjunto religioso y museístico vinculado a la memoria de Pedro Claver y de las personas africanas esclavizadas en Cartagena. Consulta condiciones de visita al gestor."
-        ]
-      },
-      "decision": null
-    },
-    {
-      "id": "CTG-LUGAR-san-pedro-claver-en",
-      "scope": "Nombre y descripción de «Santuario y Museo San Pedro Claver» · en",
-      "sha256": "18063b6b980613287f0d80ce1dfea487fd54fffc6f807a1f6c56e2533c16ca64",
-      "value": {
-        "en": [
-          "San Pedro Claver sanctuary and museum",
-          "Religious and museum complex linked to the memory of Pedro Claver and enslaved African people in Cartagena. Check visiting conditions with its manager."
-        ]
-      },
-      "decision": null
-    },
-    {
-      "id": "CTG-LUGAR-san-pedro-claver-pt-BR",
-      "scope": "Nombre y descripción de «Santuario y Museo San Pedro Claver» · pt-BR",
-      "sha256": "bacaf09cd05ace5c95972c5f2f99489e8245885630239c73ee83cc2cef3f66c7",
-      "value": {
-        "pt-BR": [
-          "Santuário e Museu San Pedro Claver",
-          "Conjunto religioso e museológico ligado à memória de Pedro Claver e dos africanos escravizados em Cartagena. Consulte as condições de visita com o gestor."
-        ]
-      },
-      "decision": null
-    },
-    {
-      "id": "CTG-LUGAR-santo-domingo-es",
-      "scope": "Nombre y descripción de «Iglesia y plaza de Santo Domingo» · es",
-      "sha256": "26daeb9778f91fd71f2584738400543c0313eaa08003cbe1ea950588a1422923",
-      "value": {
-        "es": [
-          "Iglesia y plaza de Santo Domingo",
-          "Templo y plaza del centro histórico. Diferencia el recorrido por el espacio público del acceso al interior religioso."
-        ]
-      },
-      "decision": null
-    },
-    {
-      "id": "CTG-LUGAR-santo-domingo-en",
-      "scope": "Nombre y descripción de «Iglesia y plaza de Santo Domingo» · en",
-      "sha256": "789f11adb86b09a2ebf67eefbecfb75ddb316c73e59c861de868e2f16bae2a16",
-      "value": {
-        "en": [
-          "Santo Domingo church and square",
-          "Church and square in the historic centre. Distinguish a walk in the public space from admission to the church."
-        ]
-      },
-      "decision": null
-    },
-    {
-      "id": "CTG-LUGAR-santo-domingo-pt-BR",
-      "scope": "Nombre y descripción de «Iglesia y plaza de Santo Domingo» · pt-BR",
-      "sha256": "a3361dcba8c9aa42c68e039ec0311dcb4b371223bd3acb54301256ea791c8a77",
-      "value": {
-        "pt-BR": [
-          "Igreja e praça de Santo Domingo",
-          "Igreja e praça do centro histórico. Diferencie o passeio pelo espaço público do acesso ao interior religioso."
-        ]
-      },
-      "decision": null
-    },
-    {
-      "id": "CTG-LUGAR-santo-toribio-es",
-      "scope": "Nombre y descripción de «Iglesia de Santo Toribio» · es",
-      "sha256": "db54d8d8e73694d0ef3d564dea0c0f15518792b9e43837776fc4ccbe17e6a25a",
-      "value": {
-        "es": [
-          "Iglesia de Santo Toribio",
-          "Templo del sector San Diego, junto a la plaza Fernández de Madrid. Respeta celebraciones y confirma si permite visitas."
-        ]
-      },
-      "decision": null
-    },
-    {
-      "id": "CTG-LUGAR-santo-toribio-en",
-      "scope": "Nombre y descripción de «Iglesia de Santo Toribio» · en",
-      "sha256": "cc00292157e03d12e928e1ce13b7b1965f29fdd0711230b47b15e07c78fb3f46",
-      "value": {
-        "en": [
-          "Santo Toribio church",
-          "Church in the San Diego area beside Fernández de Madrid square. Respect services and confirm visitor access."
-        ]
-      },
-      "decision": null
-    },
-    {
-      "id": "CTG-LUGAR-santo-toribio-pt-BR",
-      "scope": "Nombre y descripción de «Iglesia de Santo Toribio» · pt-BR",
-      "sha256": "96cc14fd4ba092960fdfb88ed4cfa8d4f21093d40c27293d60d1e125dce6b87e",
-      "value": {
-        "pt-BR": [
-          "Igreja de Santo Toribio",
-          "Igreja no setor San Diego, junto à praça Fernández de Madrid. Respeite celebrações e confirme o acesso de visitantes."
-        ]
-      },
-      "decision": null
-    },
-    {
-      "id": "CTG-LUGAR-museo-naval-es",
-      "scope": "Nombre y descripción de «Museo Naval del Caribe» · es",
-      "sha256": "c55abefab7ca3122b63f937355fa6c7a39fbb209806a1df355ffc3fb21830c85",
-      "value": {
-        "es": [
-          "Museo Naval del Caribe",
-          "Museo cercano a la plaza de Santa Teresa dedicado a la memoria naval. La fuente turística confirma su identificación; programación y acceso requieren consulta directa."
-        ]
-      },
-      "decision": null
-    },
-    {
-      "id": "CTG-LUGAR-museo-naval-en",
-      "scope": "Nombre y descripción de «Museo Naval del Caribe» · en",
-      "sha256": "3b9b3cc52567143252ede8ccb43a90ae6dd9223784edf36a2af0c23fef0b8c38",
-      "value": {
-        "en": [
-          "Caribbean Naval Museum",
-          "Museum near Santa Teresa square devoted to naval heritage. The tourism source identifies it; programme and access require direct confirmation."
-        ]
-      },
-      "decision": null
-    },
-    {
-      "id": "CTG-LUGAR-museo-naval-pt-BR",
-      "scope": "Nombre y descripción de «Museo Naval del Caribe» · pt-BR",
-      "sha256": "e1e92ba705194197b476f2a59a54f17520cd07be7dc26a3e7a28e5052f8951b2",
-      "value": {
-        "pt-BR": [
-          "Museu Naval do Caribe",
-          "Museu próximo à praça de Santa Teresa dedicado à memória naval. A fonte turística identifica o local; programação e acesso exigem confirmação direta."
-        ]
-      },
-      "decision": null
-    },
-    {
-      "id": "CTG-LUGAR-plaza-santa-teresa-es",
-      "scope": "Nombre y descripción de «Plaza de Santa Teresa» · es",
-      "sha256": "c51e4a8d5bb75599fb545df9c3fae167e05d0b04c9d097baa97e80a6f9b9f72f",
-      "value": {
-        "es": [
-          "Plaza de Santa Teresa",
-          "Espacio urbano próximo al Museo Naval y al acceso al recinto histórico. No se promete música, eventos o mesas disponibles."
-        ]
-      },
-      "decision": null
-    },
-    {
-      "id": "CTG-LUGAR-plaza-santa-teresa-en",
-      "scope": "Nombre y descripción de «Plaza de Santa Teresa» · en",
-      "sha256": "9d6225e12849ad6a29ee077467fd0b393c73832781656775bd9c0215b995c58c",
-      "value": {
-        "en": [
-          "Santa Teresa square",
-          "Urban square near the Naval Museum and the historic enclosure entrance. Music, events and available tables are not promised."
-        ]
-      },
-      "decision": null
-    },
-    {
-      "id": "CTG-LUGAR-plaza-santa-teresa-pt-BR",
-      "scope": "Nombre y descripción de «Plaza de Santa Teresa» · pt-BR",
-      "sha256": "9c3b9c737f448110c40cee06bb87bae70d770b978caf9ca8fd1b2984359976d9",
-      "value": {
-        "pt-BR": [
-          "Praça de Santa Teresa",
-          "Praça urbana próxima ao Museu Naval e ao acesso ao recinto histórico. Não são prometidos música, eventos ou mesas disponíveis."
-        ]
-      },
-      "decision": null
-    },
-    {
-      "id": "CTG-LUGAR-portal-dulces-es",
-      "scope": "Nombre y descripción de «Portal de los Dulces» · es",
-      "sha256": "1247c9502c4060cd82a49437cbaa4f87f4d58a4f53834988d407fe0f146b5a8b",
-      "value": {
-        "es": [
-          "Portal de los Dulces",
-          "Sector comercial para conocer dulces de tradición caribeña. Cada compra y fotografía de vendedores requiere consentimiento y precio confirmado."
-        ]
-      },
-      "decision": null
-    },
-    {
-      "id": "CTG-LUGAR-portal-dulces-en",
-      "scope": "Nombre y descripción de «Portal de los Dulces» · en",
-      "sha256": "f737d6c4638f4a000158f286582e481d4a5984cfcb81cc2281d55f5c6f59cacd",
-      "value": {
-        "en": [
-          "Portal de los Dulces",
-          "Commercial area associated with traditional Caribbean sweets. Confirm prices and ask permission before photographing vendors."
-        ]
-      },
-      "decision": null
-    },
-    {
-      "id": "CTG-LUGAR-portal-dulces-pt-BR",
-      "scope": "Nombre y descripción de «Portal de los Dulces» · pt-BR",
-      "sha256": "fa07bead55383a231c95c38c1c3491511a834000281e78d97ad662761212328a",
-      "value": {
-        "pt-BR": [
-          "Portal de los Dulces",
-          "Área comercial ligada aos doces de tradição caribenha. Confirme preços e peça autorização antes de fotografar vendedores."
-        ]
-      },
-      "decision": null
-    },
-    {
-      "id": "CTG-LUGAR-serrezuela-es",
-      "scope": "Nombre y descripción de «La Serrezuela» · es",
-      "sha256": "bad51209ce02fde34f04193fe41b0812b287a69a3718ee67023f0cea023c64a0",
-      "value": {
-        "es": [
-          "La Serrezuela",
-          "Espacio comercial que integra la antigua plaza de toros. Su mención como atractivo no representa una alianza ni autoriza usar fotos de tiendas."
-        ]
-      },
-      "decision": null
-    },
-    {
-      "id": "CTG-LUGAR-serrezuela-en",
-      "scope": "Nombre y descripción de «La Serrezuela» · en",
-      "sha256": "3d2351bd009d7ce78d5fb178991ae49a3dce3b2001f1821674e589051c326b54",
-      "value": {
-        "en": [
-          "La Serrezuela",
-          "Commercial space incorporating the former bullring. Its listing does not imply a partnership or permission to use shop photographs."
-        ]
-      },
-      "decision": null
-    },
-    {
-      "id": "CTG-LUGAR-serrezuela-pt-BR",
-      "scope": "Nombre y descripción de «La Serrezuela» · pt-BR",
-      "sha256": "d658781e9c7197dd6f210b9736bb87baaa03f8a2efb7444563c8740d5bd93822",
-      "value": {
-        "pt-BR": [
-          "La Serrezuela",
-          "Espaço comercial que integra a antiga praça de touros. A indicação não implica parceria nem autorização para usar fotos das lojas."
-        ]
-      },
-      "decision": null
-    },
-    {
-      "id": "CTG-LUGAR-teatro-adolfo-mejia-es",
-      "scope": "Nombre y descripción de «Teatro Adolfo Mejía» · es",
-      "sha256": "e37da2762c4600f031d207d7f578fbbd4ee70814ee40f17e149e476c00d0f8b9",
-      "value": {
-        "es": [
-          "Teatro Adolfo Mejía",
-          "Escenario patrimonial administrado por el IPCC. Consulta la programación oficial vigente; no se anuncia una función concreta sin fecha confirmada."
-        ]
-      },
-      "decision": null
-    },
-    {
-      "id": "CTG-LUGAR-teatro-adolfo-mejia-en",
-      "scope": "Nombre y descripción de «Teatro Adolfo Mejía» · en",
-      "sha256": "90d3e6f60bc763d8078737e8c26bec38cf53b75167552a643a859017e3ce9ce9",
-      "value": {
-        "en": [
-          "Adolfo Mejía Theatre",
-          "Heritage theatre managed by IPCC. Check its current official programme; no specific performance is announced without a confirmed date."
-        ]
-      },
-      "decision": null
-    },
-    {
-      "id": "CTG-LUGAR-teatro-adolfo-mejia-pt-BR",
-      "scope": "Nombre y descripción de «Teatro Adolfo Mejía» · pt-BR",
-      "sha256": "98f31ad5a15834cc077b275688b9ecd5e37305c76cafb5fe79fafeb9569f7642",
-      "value": {
-        "pt-BR": [
-          "Teatro Adolfo Mejía",
-          "Teatro patrimonial administrado pelo IPCC. Consulte a programação oficial atual; nenhuma apresentação específica é anunciada sem data confirmada."
-        ]
-      },
-      "decision": null
+      "decision": "aprobado",
+      "approval_source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+      "approval_image_binding": null
     },
     {
       "id": "CTG-FOTO-la-boquilla",
@@ -1129,7 +1034,9 @@
         ],
         "approved": false
       },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-LUGAR-la-boquilla-es",
@@ -1141,7 +1048,9 @@
           "Corregimiento pesquero de raíces afrocaribeñas al norte de Cartagena. Conoce su territorio con respeto por las comunidades y sin atribuir acceso privado o servicios no contratados."
         ]
       },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-LUGAR-la-boquilla-en",
@@ -1153,7 +1062,9 @@
           "Fishing community with Afro-Caribbean roots north of Cartagena. Respect residents and do not assume access to private areas or unbooked services."
         ]
       },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-LUGAR-la-boquilla-pt-BR",
@@ -1165,54 +1076,9 @@
           "Comunidade pesqueira de raízes afro-caribenhas ao norte de Cartagena. Respeite os moradores e não presuma acesso a áreas privadas ou serviços não contratados."
         ]
       },
-      "decision": null
-    },
-    {
-      "id": "CTG-LUGAR-manglares-boquilla-es",
-      "scope": "Nombre y descripción de «Manglares y ciénagas de La Boquilla» · es",
-      "sha256": "6a62dbd420ec1cbbaf3f4b70086ebb5994b6dec27d402f819cf7b7ab8df31956",
-      "value": {
-        "es": [
-          "Manglares y ciénagas de La Boquilla",
-          "Paisaje de manglar relacionado con las ciénagas de Juan Polo y la Virgen. Los recorridos en canoa requieren operador, condiciones y permisos reconfirmados."
-        ]
-      },
-      "decision": null
-    },
-    {
-      "id": "CTG-LUGAR-manglares-boquilla-en",
-      "scope": "Nombre y descripción de «Manglares y ciénagas de La Boquilla» · en",
-      "sha256": "3539d662accc32d5775fd85a9f91dccaa7d9c3196f7bf952c8fc25a6bdfa7b7d",
-      "value": {
-        "en": [
-          "La Boquilla mangroves and lagoons",
-          "Mangrove landscape associated with the Juan Polo and Virgen lagoons. Canoe visits require reconfirmed operators, conditions and permissions."
-        ]
-      },
-      "decision": null
-    },
-    {
-      "id": "CTG-LUGAR-manglares-boquilla-pt-BR",
-      "scope": "Nombre y descripción de «Manglares y ciénagas de La Boquilla» · pt-BR",
-      "sha256": "2d27ada0576228c2e1274dac2345d15f2918f23dec811da7fe66df4d6ac74057",
-      "value": {
-        "pt-BR": [
-          "Manguezais e lagoas de La Boquilla",
-          "Paisagem de manguezais associada às lagoas Juan Polo e Virgen. Passeios de canoa exigem reconfirmação do operador, das condições e das permissões."
-        ]
-      },
-      "decision": null
-    },
-    {
-      "id": "CTG-EXP-REFERENCIAS-caminhada-patrimonial",
-      "scope": "Referencias propuestas de actividad; permisos/identidad pendientes, no imagen aprobada",
-      "sha256": "da54d4f709e522bc7388bb5a8767c7e2af375feb260bea084fc7259db4a7acfc",
-      "value": {
-        "es": [
-          "{'source_url': 'https://commons.wikimedia.org/wiki/File:Getsemani_Street_Scene,_Cartagena,_Colombia_(24217787419).jpg', 'status': 'contexto_no_actividad', 'reason': 'Calle de Getsemaní licenciada existente; no representa el recorrido Centro/SanDiego propuesto ni guía contratado; no reasignada.'}"
-        ]
-      },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-EXP-caminhada-patrimonial-es",
@@ -1221,7 +1087,9 @@
       "value": {
         "es": "Caminata de observación por Centro y San Diego; propuesta editorial autónoma, sin guía ni reserva incluida."
       },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-EXP-caminhada-patrimonial-en",
@@ -1230,7 +1098,9 @@
       "value": {
         "en": "Self-directed walk through Centro and San Diego; an editorial suggestion without an included guide or booking."
       },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-EXP-caminhada-patrimonial-pt-BR",
@@ -1239,18 +1109,9 @@
       "value": {
         "pt-BR": "Caminhada autônoma por Centro e San Diego; sugestão editorial sem guia ou reserva incluídos."
       },
-      "decision": null
-    },
-    {
-      "id": "CTG-EXP-REFERENCIAS-visita-muhca",
-      "scope": "Referencias propuestas de actividad; permisos/identidad pendientes, no imagen aprobada",
-      "sha256": "26fa9e6ae25ae4e963c98330515bf52a4ae0a484127703781be9494936da9a49",
-      "value": {
-        "es": [
-          "{'source_url': 'https://commons.wikimedia.org/wiki/File:Colombia,_Cartagena,_Palacio_de_la_Inquisici%C3%B3n.jpg', 'status': 'contexto_no_actividad', 'reason': 'Fachada licenciada existente no muestra visita guiada/exposiciones interiores; permiso y fotografía específicos pendientes.'}"
-        ]
-      },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-EXP-visita-muhca-es",
@@ -1259,7 +1120,9 @@
       "value": {
         "es": "Explora las exposiciones del MUHCA; consulta programación y entrada con el museo."
       },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-EXP-visita-muhca-en",
@@ -1268,7 +1131,9 @@
       "value": {
         "en": "Explore MUHCA’s exhibitions; check its programme and admission with the museum."
       },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-EXP-visita-muhca-pt-BR",
@@ -1277,18 +1142,9 @@
       "value": {
         "pt-BR": "Explore as exposições do MUHCA; consulte a programação e os ingressos com o museu."
       },
-      "decision": null
-    },
-    {
-      "id": "CTG-EXP-REFERENCIAS-bus-panoramico",
-      "scope": "Referencias propuestas de actividad; permisos/identidad pendientes, no imagen aprobada",
-      "sha256": "9b7ba3a8ed02c1a2eb48b9dc34cfbb7b992686ca989a7af8a1f549cdd661d909",
-      "value": {
-        "es": [
-          "{'source_url': 'https://city-sightseeing.com/es/15/cartagena/12/bus-turistico-cartagena', 'status': 'pendiente_permiso_no_usable', 'reason': 'Galería propia del operador: sin licencia abierta identificada; no descargada. Commons Bus_en_Cartagena,_Colombia.jpg es un bus Chevrolet de2012 sin identificación de operador turístico: rechazado para esta actividad.'}"
-        ]
-      },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-EXP-bus-panoramico-es",
@@ -1297,7 +1153,9 @@
       "value": {
         "es": "Recorrido en bus turístico. Oferta identificada para investigar y vincular tras revisión. Consulta al operador requisitos, itinerario, disponibilidad y precio. No existe alianza ni reserva con el portal."
       },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-EXP-bus-panoramico-en",
@@ -1306,7 +1164,9 @@
       "value": {
         "en": "Tourist bus route. Identified for research and potential linking after review. Check requirements, itinerary, availability and prices with the operator. No partnership or booking with the portal exists."
       },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-EXP-bus-panoramico-pt-BR",
@@ -1315,18 +1175,9 @@
       "value": {
         "pt-BR": "Percurso em ônibus turístico. Oferta identificada para pesquisa e possível indicação após revisão. Consulte requisitos, roteiro, disponibilidade e preços com o operador. Não existe parceria nem reserva com o portal."
       },
-      "decision": null
-    },
-    {
-      "id": "CTG-EXP-REFERENCIAS-buceo-rosario",
-      "scope": "Referencias propuestas de actividad; permisos/identidad pendientes, no imagen aprobada",
-      "sha256": "0717caa95473ec2c8a8fcc8e064bd010473716c3616ff1b63cb13177059bdbb0",
-      "value": {
-        "es": [
-          "{'source_url': 'https://divingplanet.org/', 'status': 'pendiente_permiso_no_usable', 'reason': 'Sitio del operador muestra buceo nocturno y buzo panorámica; sin licencia comercial/adaptación pública verificada ni ubicación individual de toma. No descargada.'}"
-        ]
-      },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-EXP-buceo-rosario-es",
@@ -1335,7 +1186,9 @@
       "value": {
         "es": "Buceo en el entorno de las Islas del Rosario. Oferta identificada para investigar y vincular tras revisión. Consulta al operador requisitos, itinerario, disponibilidad y precio. No existe alianza ni reserva con el portal."
       },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-EXP-buceo-rosario-en",
@@ -1344,7 +1197,9 @@
       "value": {
         "en": "Scuba diving around the Rosario Islands. Identified for research and potential linking after review. Check requirements, itinerary, availability and prices with the operator. No partnership or booking with the portal exists."
       },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-EXP-buceo-rosario-pt-BR",
@@ -1353,18 +1208,9 @@
       "value": {
         "pt-BR": "Mergulho no entorno das Ilhas do Rosário. Oferta identificada para pesquisa e possível indicação após revisão. Consulte requisitos, roteiro, disponibilidade e preços com o operador. Não existe parceria nem reserva com o portal."
       },
-      "decision": null
-    },
-    {
-      "id": "CTG-EXP-REFERENCIAS-snorkel-rosario",
-      "scope": "Referencias propuestas de actividad; permisos/identidad pendientes, no imagen aprobada",
-      "sha256": "f0c9faa1af34bf0657466bebe93882f3d486999b74aaee1a0ff558681c07f30b",
-      "value": {
-        "es": [
-          "{'source_url': 'https://divingplanet.org/', 'status': 'pendiente_permiso_no_usable', 'reason': 'Oferta de snorkel comprobada pero ninguna foto específica de snorkel en Rosario con derechos identificados. No reutilizar foto genérica de buceo.'}"
-        ]
-      },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-EXP-snorkel-rosario-es",
@@ -1373,7 +1219,9 @@
       "value": {
         "es": "Snorkel en el entorno de las Islas del Rosario. Oferta identificada para investigar y vincular tras revisión. Consulta al operador requisitos, itinerario, disponibilidad y precio. No existe alianza ni reserva con el portal."
       },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-EXP-snorkel-rosario-en",
@@ -1382,7 +1230,9 @@
       "value": {
         "en": "Snorkelling around the Rosario Islands. Identified for research and potential linking after review. Check requirements, itinerary, availability and prices with the operator. No partnership or booking with the portal exists."
       },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-EXP-snorkel-rosario-pt-BR",
@@ -1391,18 +1241,9 @@
       "value": {
         "pt-BR": "Snorkel no entorno das Ilhas do Rosário. Oferta identificada para pesquisa e possível indicação após revisão. Consulte requisitos, roteiro, disponibilidade e preços com o operador. Não existe parceria nem reserva com o portal."
       },
-      "decision": null
-    },
-    {
-      "id": "CTG-EXP-REFERENCIAS-catamaran-cartagena",
-      "scope": "Referencias propuestas de actividad; permisos/identidad pendientes, no imagen aprobada",
-      "sha256": "f21d47dcc5d754e05caca261b936568f85fdfa6c8d0e9bcaeca618e567c17bbe",
-      "value": {
-        "es": [
-          "{'source_url': 'https://www.bonavidacatamaranes.com/es/galeria-fotos', 'status': 'pendiente_permiso_no_usable', 'reason': 'Galería específica del catamarán del operador consultada; copyright2026, sin autorización comercial/adaptación identificada. No descargada.'}"
-        ]
-      },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-EXP-catamaran-cartagena-es",
@@ -1411,7 +1252,9 @@
       "value": {
         "es": "Excursión marítima en catamarán. Oferta identificada para investigar y vincular tras revisión. Consulta al operador requisitos, itinerario, disponibilidad y precio. No existe alianza ni reserva con el portal."
       },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-EXP-catamaran-cartagena-en",
@@ -1420,7 +1263,9 @@
       "value": {
         "en": "Catamaran excursion. Identified for research and potential linking after review. Check requirements, itinerary, availability and prices with the operator. No partnership or booking with the portal exists."
       },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-EXP-catamaran-cartagena-pt-BR",
@@ -1429,87 +1274,9 @@
       "value": {
         "pt-BR": "Passeio marítimo de catamarã. Oferta identificada para pesquisa e possível indicação após revisão. Consulte requisitos, roteiro, disponibilidade e preços com o operador. Não existe parceria nem reserva com o portal."
       },
-      "decision": null
-    },
-    {
-      "id": "CTG-EXP-PESCA-CONTEXTO",
-      "scope": "Original contextual de barcos La Boquilla; NO muestra pesca ejecutada ni identifica IMPULSE; no completa foto de actividad",
-      "sha256": "46f55717628af8784ed757bab282e549f6ad855eedf8c95e2b2bcaffed490153",
-      "value": {
-        "id": "boquilla-2020",
-        "type": "photograph",
-        "author": "Bernard Gagnon",
-        "source_page": "https://commons.wikimedia.org/wiki/File:Boats_in_La_Boquilla.jpg",
-        "original_url": "https://upload.wikimedia.org/wikipedia/commons/0/04/Boats_in_La_Boquilla.jpg",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-        "commercial_use": true,
-        "adaptation": true,
-        "share_alike": true,
-        "consulted_at": "2026-10-16",
-        "photographed_at": "2020-01-27",
-        "credit": "Bernard Gagnon / Wikimedia Commons / CC BY-SA 4.0; redimensionado y convertido a WebP",
-        "original": {
-          "file": "imagenes/originales/boquilla-2020.jpg",
-          "sha256": "785127ced70f16084f2bdd4d49c17e036495aa6270bbd060aa8a452c2c930a2d",
-          "bytes": 5042690
-        },
-        "derivatives": [
-          {
-            "file": "imagenes/derivados/boquilla-2020-portada.webp",
-            "dimensions": [
-              1600,
-              1067
-            ],
-            "bytes": 266542,
-            "sha256": "80cf3189fe0777715dbd9eecda666a73e9a30d5a6032fbf751df7a42c29fe16d",
-            "quality": 72,
-            "crop": null,
-            "budget_ok": true
-          },
-          {
-            "file": "imagenes/derivados/boquilla-2020-tarjeta.webp",
-            "dimensions": [
-              800,
-              533
-            ],
-            "bytes": 86508,
-            "sha256": "6386cf04a2748b5ef1715ba39b4ff17311f725f70a3b740cc20789b3748ffb1c",
-            "quality": 82,
-            "crop": null,
-            "budget_ok": true
-          }
-        ],
-        "alt": {
-          "es": "Barcos en La Boquilla, Cartagena, en2020; contexto local, sin identificar operador o actividad contratada.",
-          "en": "Boats in La Boquilla, Cartagena, in2020; local context without an identified operator or booked activity.",
-          "pt-BR": "Barcos em La Boquilla, Cartagena, em2020; contexto local sem operador identificado ou atividade contratada."
-        },
-        "qa_status": "pendiente_revision_visual_humana",
-        "recency_warning": "Fotografía histórica; no acredita estado actual.",
-        "tool": "Pillow 12.3.0",
-        "transforms": [
-          "orientacion EXIF",
-          "sRGB",
-          "sin recorte",
-          "sin ampliacion",
-          "derivado sin EXIF/GPS"
-        ],
-        "approved": false
-      },
-      "decision": null
-    },
-    {
-      "id": "CTG-EXP-REFERENCIAS-pesca-boquilla",
-      "scope": "Referencias propuestas de actividad; permisos/identidad pendientes, no imagen aprobada",
-      "sha256": "e61ef22282ab711eb1e4481c436d2694aa29cfe0bef0d2eca27cf063e49f5e49",
-      "value": {
-        "es": [
-          "{'source_url': 'https://commons.wikimedia.org/wiki/File:Boats_in_La_Boquilla.jpg', 'status': 'licencia_CC_BY_SA4_contexto_no_oferta', 'reason': 'Barcos en La Boquilla, Bernard Gagnon2020; contexto local, no muestra pesca en ejecución ni prueba servicio IMPULSE. Revisar original por uso, sin completar gate foto actividad.'}",
-          "{'source_url': 'https://colombia.travel/es/mapa-turismo/pesca-con-locales-en-la-boquilla', 'status': 'pendiente_permiso_no_usable', 'reason': 'Fotos atribuidas a IMPULSE en la fuente institucional; sin autorización de reutilización identificada. No descargadas.'}"
-        ]
-      },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-EXP-pesca-boquilla-es",
@@ -1518,7 +1285,9 @@
       "value": {
         "es": "Pesca artesanal y manglar en La Boquilla. Oferta identificada para investigar y vincular tras revisión. Consulta al operador requisitos, itinerario, disponibilidad y precio. No existe alianza ni reserva con el portal."
       },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-EXP-pesca-boquilla-en",
@@ -1527,7 +1296,9 @@
       "value": {
         "en": "Traditional fishing and mangroves in La Boquilla. Identified for research and potential linking after review. Check requirements, itinerary, availability and prices with the operator. No partnership or booking with the portal exists."
       },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-EXP-pesca-boquilla-pt-BR",
@@ -1536,18 +1307,9 @@
       "value": {
         "pt-BR": "Pesca artesanal e manguezais em La Boquilla. Oferta identificada para pesquisa e possível indicação após revisão. Consulte requisitos, roteiro, disponibilidade e preços com o operador. Não existe parceria nem reserva com o portal."
       },
-      "decision": null
-    },
-    {
-      "id": "CTG-EXP-REFERENCIAS-atardecer-sibarita",
-      "scope": "Referencias propuestas de actividad; permisos/identidad pendientes, no imagen aprobada",
-      "sha256": "146f893c5347bd9b585e505166f59c5a413a3aca2c0a4601b071d7a98376592f",
-      "value": {
-        "es": [
-          "{'source_url': 'https://sibarita.com.co/en/paseos', 'status': 'pendiente_apertura_permiso_no_usable', 'reason': 'Resultado indexado identifica fotos Sunset Express/Master; apertura directa falló y licencia no comprobada. No descargadas.'}"
-        ]
-      },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-EXP-atardecer-sibarita-es",
@@ -1556,7 +1318,9 @@
       "value": {
         "es": "Recorrido de atardecer por la bahía. Oferta identificada para investigar y vincular tras revisión. Consulta al operador requisitos, itinerario, disponibilidad y precio. No existe alianza ni reserva con el portal."
       },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-EXP-atardecer-sibarita-en",
@@ -1565,7 +1329,9 @@
       "value": {
         "en": "Sunset cruise on the bay. Identified for research and potential linking after review. Check requirements, itinerary, availability and prices with the operator. No partnership or booking with the portal exists."
       },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-EXP-atardecer-sibarita-pt-BR",
@@ -1574,18 +1340,9 @@
       "value": {
         "pt-BR": "Passeio ao pôr do sol pela baía. Oferta identificada para pesquisa e possível indicação após revisão. Consulte requisitos, roteiro, disponibilidade e preços com o operador. Não existe parceria nem reserva com o portal."
       },
-      "decision": null
-    },
-    {
-      "id": "CTG-EXP-REFERENCIAS-kayak-bahia-candidato",
-      "scope": "Referencias propuestas de actividad; permisos/identidad pendientes, no imagen aprobada",
-      "sha256": "c371b91ba5a109090b7507707e08e6a9c2df19640052624df13ff8a2daf99909",
-      "value": {
-        "es": [
-          "{'source_url': '', 'status': 'sin_referencia_local_verificada', 'reason': 'No existe operador verificado ni referencia con licencia identificada para esta propuesta. No usar fotografía de otra ciudad.'}"
-        ]
-      },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-EXP-kayak-bahia-candidato-es",
@@ -1594,7 +1351,9 @@
       "value": {
         "es": "Idea de experiencia de kayak en la bahía para validar con un operador. No es una oferta existente comprobada; mantener oculta."
       },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-EXP-kayak-bahia-candidato-en",
@@ -1603,7 +1362,9 @@
       "value": {
         "en": "Bay kayaking idea to validate with an operator. This is not a verified existing offer; keep hidden."
       },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-EXP-kayak-bahia-candidato-pt-BR",
@@ -1612,7 +1373,9 @@
       "value": {
         "pt-BR": "Ideia de experiência de caiaque na baía a validar com um operador. Não é oferta existente comprovada; manter oculta."
       },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-PRACTICA-es",
@@ -1625,7 +1388,9 @@
           "Antes de contratar transporte, comida o actividades, confirma el precio total y lo incluido. Horarios, tarifas, disponibilidad y condiciones marítimas no están verificados en este borrador."
         ]
       },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-PRACTICA-en",
@@ -1638,7 +1403,9 @@
           "Before purchasing transport, food or activities, confirm the total price and what is included. Opening times, prices, availability and sea conditions are not verified in this draft."
         ]
       },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-PRACTICA-pt-BR",
@@ -1651,7 +1418,9 @@
           "Antes de contratar transporte, alimentação ou atividades, confirme o preço total e o que está incluído. Horários, preços, disponibilidade e condições marítimas não foram verificados neste rascunho."
         ]
       },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-DIR-CO-13-cartagena-celele",
@@ -1665,7 +1434,9 @@
           "Información pública; no contactado, sin precios, disponibilidad ni fotografías del negocio. El listado gratuito no implica gratuidad del servicio."
         ]
       },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-DIR-CO-13-cartagena-casa-san-agustin",
@@ -1679,7 +1450,9 @@
           "Información pública; no contactado, sin precios, disponibilidad ni fotografías del negocio. El listado gratuito no implica gratuidad del servicio."
         ]
       },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-DIR-CO-13-cartagena-charleston",
@@ -1693,7 +1466,9 @@
           "Información pública; no contactado, sin precios, disponibilidad ni fotografías del negocio. El listado gratuito no implica gratuidad del servicio."
         ]
       },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-DIR-CO-13-cartagena-santa-clara",
@@ -1707,7 +1482,9 @@
           "Información pública; no contactado, sin precios, disponibilidad ni fotografías del negocio. El listado gratuito no implica gratuidad del servicio."
         ]
       },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-DIR-CO-13-cartagena-jardin",
@@ -1721,7 +1498,9 @@
           "Información pública; no contactado, sin precios, disponibilidad ni fotografías del negocio. El listado gratuito no implica gratuidad del servicio."
         ]
       },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-DIR-CO-13-cartagena-1621",
@@ -1735,7 +1514,9 @@
           "Información pública; no contactado, sin precios, disponibilidad ni fotografías del negocio. El listado gratuito no implica gratuidad del servicio."
         ]
       },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-DIR-CO-13-cartagena-coro",
@@ -1749,7 +1530,9 @@
           "Información pública; no contactado, sin precios, disponibilidad ni fotografías del negocio. El listado gratuito no implica gratuidad del servicio."
         ]
       },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-DIR-CO-13-cartagena-botika",
@@ -1763,7 +1546,9 @@
           "Información pública; no contactado, sin precios, disponibilidad ni fotografías del negocio. El listado gratuito no implica gratuidad del servicio."
         ]
       },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-DIR-CO-13-cartagena-muhca",
@@ -1777,7 +1562,9 @@
           "Información pública; no contactado, sin precios, disponibilidad ni fotografías del negocio. El listado gratuito no implica gratuidad del servicio."
         ]
       },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     },
     {
       "id": "CTG-DIR-CO-13-cartagena-alma",
@@ -1791,7 +1578,9 @@
           "Información pública; no contactado, sin precios, disponibilidad ni fotografías del negocio. El listado gratuito no implica gratuidad del servicio."
         ]
       },
-      "decision": null
+      "decision": "pendiente",
+      "approval_source_revision": null,
+      "approval_image_binding": null
     }
   ]
 }
