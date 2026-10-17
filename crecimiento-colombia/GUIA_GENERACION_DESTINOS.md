@@ -156,3 +156,18 @@ Conservar inventarios y decisiones históricas; una sustitución de selección n
 ## Portada Santa Marta: decisión del propietario
 
 Representar el centro y su bahía histórica; El Rodadero no sirve como portada elegida aunque sea turístico y pueda conservarse como atractivo. Validar sector exacto antes de ofrecer una vista costera como identidad de ciudad. Buscar tejido urbano reconocible, edificios completos y contexto de bahía sin exceso de mar/cielo/pavimento. No repetir la candidata Camellónv5 rechazada por encuadre. La elección de un ámbito visual no aprueba una fotografía ni modifica por sí misma elTop8.
+
+## Lugares, experiencias y eventos · corrección del propietario
+
+No confundir el sitio con lo que se hace en él. La selección de hasta8principales corresponde a lugares/atractivos priorizados, no a ocho paquetes de actividades. Las experiencias tienen sección, fuentes, textos e imágenes propios; no desplazan ni rellenan automáticamente los ocho. Relacionar cada experiencia con el lugar/destino y con operador solo cuando esté documentado. Evitar fichas duplicadas para el mismo propósito y reutilizar la misma foto entre lugar y actividad.
+
+- **Lugar/atractivo:** parque, barrio, playa, conjunto histórico o sitio arqueológico, identificado territorialmente; responder qué es y dónde está.
+- **Experiencia:** caminata, excursión, visita organizada/autónoma, buceo, moto acuática, café, navegación; responder qué hace el visitante, en qué lugar y con qué condiciones verificadas. No requiere fingir un operador ni una reserva.
+- **Evento:** acontecimiento con fecha y programación verificables; no llamar «evento» a cualquier tour permanente o excursión. Si el propietario dice «salidas/eventos a Minca», investigar excursiones; solo agenda cuando exista fecha confirmada.
+- **Negocio/operador:** establecimiento o prestador del directorio gratuito, con datos empresariales públicos; la ficha no acredita alianza, cupos ni operación actual por sí sola.
+
+Ejemplos Santa Marta: Teyuna/Ciudad Perdida es sitio arqueológico; trekking a Ciudad Perdida es experiencia. Playa Blanca es playa; la salida en lancha/día de playa es experiencia. Minca es corregimiento/destino relacionado; excursión a Minca, café o aves son experiencias diferentes según documentación, sin multiplicar ofertas inexistentes. El Rodadero es sector; moto acuática es actividad a investigar, no oferta automáticamente disponible. Por preferencia del propietario, **visita al Acuario del Rodadero se presentará como experiencia**; conservar identidad del recinto y datos de directorio, sin confundir con Mundo Marino ni repetir tarjeta del mismo uso en Top8.
+
+Una playa/sitio puede seguir siendo candidato geográfico alTop8, pero ninguna excursión lo vuelve automáticamente prioritario ni lo elimina por ser experiencia. Reabrir las comparaciones del corte cuando cambie clasificación; no completar ocho con actividades por falta de lugares. Las últimas propuestas son borradores hasta resolver prioridad y alcance; preservar investigación y aprobaciones porhash.
+
+Cada experiencia requiere escena propia representativa (caminar, navegar, visitar el acuario, etc.) y texto ES/EN/PT. Una imagen de lugar puede usarse como contexto si se declara, pero no presentar un ave como proceso cafetero, una lancha ajena como operador contratado ni cualquier costa como Playa Blanca. Verificar ubicación, actividad y fuente del responsable antes de darla por lista. Fuente territorial/actividades de referencia: guía distrital https://www.discoversantamarta.travel/wp-content/uploads/2024/03/07032024-GUIA-GENERAL-DIGITAL-ESP.pdf ; no inferir vigencia de horarios, operadores o precios desde esa guía.
