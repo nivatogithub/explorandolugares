@@ -1,0 +1,21 @@
+{
+  "destination": "medellin",
+  "environment": "local_preprod_only",
+  "before": 10,
+  "imported": 20,
+  "visible": {
+    "es": 30,
+    "en": 30,
+    "pt-BR": 30
+  },
+  "publication_status": "published",
+  "plan": "free",
+  "input_sha256": "6e3996cf8374c74e7a6d2ea69b79018317baedf92e9757b859f9436d8fd1450e",
+  "production_changed": false,
+  "browser_qa": {
+    "total_cards": 30,
+    "unique_names": 30,
+    "initial_visible_cards": 12,
+    "load_more_available": true
+  }
+}
