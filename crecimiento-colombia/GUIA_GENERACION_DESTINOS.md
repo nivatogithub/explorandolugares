@@ -261,3 +261,13 @@ Cartagena: el propietario rechaza portada con cruz de La Popa y elige ciudad amu
 ### Franja costera: contraste visual obligatorio
 
 Cartagena: hacer visible la separación muralla → terreno exterior → avenida Santander → borde costero → mar; una vía apenas perceptible no basta. Una fuente textual que menciona un lugar no valida el dibujo: inspeccionar fotografías del entorno antes de afirmar fidelidad. No presentar una interpretación como reproducción topográfica exacta.
+
+
+### Manga con cañones y acceso · precisión pendiente
+
+El propietario prefiere la composición de portada-identidad-v2 e indica una franja de césped con cañones y acceso antes de calle/mar. Identificar el tramo concreto; no añadir la puerta principal ni ubicar cañones en un césped sin contraste, ni confundir el barrio Manga con la manga de césped. Estado en `entregas/cartagena/CORRECCION_FRANJA_CANONES.json`.
+
+
+### Referencia visual de entrada recibida
+
+Captura del propietario: lienzos bajos de muralla gris, entrada vehicular sencilla en un hueco entre muros, acceso curvo y manga amplia con postes blancos/cadenas. No filas de palmeras; no mostrar toda la ciudad ni iglesia monumental inventada. Calle exterior y mar sin playa según explicación del propietario; cañones indicados, no verificables en esa captura. Crear composición independiente con esos rasgos sin copiar interfaz Street View ni afirmar nombre del acceso.
