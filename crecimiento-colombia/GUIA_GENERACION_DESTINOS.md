@@ -256,3 +256,8 @@ No repetir entre ciudades la misma composición de torre en primer plano con sky
 ## Corrección de identidad territorial de portada · 17-10-2026
 
 Cartagena: el propietario rechaza portada con cruz de La Popa y elige ciudad amurallada. La muralla y el conjunto urbano histórico deben dominar, no mar genérico ni Bocagrande. No colocar Torre del Reloj en una ubicación costera inventada para reunir iconos. Validar no solo un símbolo aislado: también relieve, trama urbana, escala, vegetación y proporción de costa. La composición semirrealista no autoriza inventar el contexto. Propuesta nueva en preproducción, resultado pendiente de aprobación.
+
+
+### Franja costera: contraste visual obligatorio
+
+Cartagena: hacer visible la separación muralla → terreno exterior → avenida Santander → borde costero → mar; una vía apenas perceptible no basta. Una fuente textual que menciona un lugar no valida el dibujo: inspeccionar fotografías del entorno antes de afirmar fidelidad. No presentar una interpretación como reproducción topográfica exacta.
