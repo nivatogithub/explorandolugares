@@ -243,3 +243,7 @@ Usar docs/GUIA_ESTILO_PORTAL.md v2: neutros, ilustración semirrealista y textos
 
 ## Corrección vigente: apertura y paginación son independientes
 Conservar las secciones abiertas, pero usar Cargar más: dos filas para fichas con foto y cuatro para tarjetas pequeñas. No interpretar «sin acordeones» como «mostrar todo el inventario». Los límites se calculan con las columnas actuales, también en móvil y por filtro.
+
+## Directorios de ciudades · mínimo30 fichas
+
+Bogotá, Medellín y Santa Marta deben tener al menos30 fichas gratuitas por destino. No dar el componente por completo con10/11. Seleccionar establecimientos y servicios útiles, con categorías diversas y fuente propia o institucional, comprobar ciudad/municipio y evitar duplicados o variantes de un mismo nombre. No rellenar el mínimo con negocios inventados ni contactos deducidos. Registrar consultas, conservar estado de verificación y reclamo; una presencia web no demuestra operación presencial, disponibilidad o alianza. La ficha gratuita mantiene nombre e icono, sin fotografías ni descripciones; carga progresiva por filas. Consultar la entrega vigente indicada en DIRECTORIO_VIGENTE.md antes de regenerar paquetes.
