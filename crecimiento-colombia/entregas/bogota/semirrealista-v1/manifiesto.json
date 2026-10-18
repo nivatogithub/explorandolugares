@@ -1,0 +1,503 @@
+{
+  "destination": "bogota",
+  "style": "EL-SEMI-REALISTA-1",
+  "production_authorized": false,
+  "assets": [
+    {
+      "key": "portada",
+      "role": "hero",
+      "master": "crecimiento-colombia/entregas/bogota/semirrealista-v1/maestros/portada.png",
+      "sha256_master": "c95ca46c842f91e50fd59d7d0c9bcceb8d8f10d8831dc582bffd3a5d551e7993",
+      "prompt": "Use case: stylized-concept. Landscape 3:2 destination website illustration. Sophisticated semi-realistic HAND-PAINTED EDITORIAL illustration EL-SEMI-REALISTA-1, clearly ink and gouache brush texture, adult travel-magazine polish, organic detailed architecture and nature, expressive fully drawn lightly caricatured people if relevant. Not photograph, not flat vector or toy shapes. Natural location-specific blue/green/material colors independent of site interface, no yellow/sepia filter. No text, labels, logos, watermark, frame. Subject readable in small card; preserve entire landmark silhouette in crop. Independent composition from documented description, NOT geographic proof or current-state photograph. Bogotá city identity: a moderately elevated broad view of the dense central city on the high Andean plateau. Iconic Torre Colpatria is the focus: tall slim rectangular dark modern tower with evenly spaced light vertical facade lines and small roof antennas, not a pointed pyramid or round telecom tower. Other central city buildings form context; green Eastern Hills are to the east, high plateau light under blue-white cloud sky. No coastal water or tropical palms, no mountain church as principal subject. Make skyline recognizable and tower complete.",
+      "files": [
+        {
+          "path": "backend/public/assets/bogota-semirrealista/portada-640.webp",
+          "bytes": 85870,
+          "sha256": "68b45aff17b37f52fc8f1366d196c58af168ca102b7eaa91969a221187c7e735"
+        },
+        {
+          "path": "backend/public/assets/bogota-semirrealista/portada-1200.webp",
+          "bytes": 253800,
+          "sha256": "5fd93bf9a888ba0f411353e384a21a3e0b6e7a5f26f452ef572dbb0d0913a88a"
+        }
+      ],
+      "approval": "pending_owner_review",
+      "source_type": "generated_from_documented_description"
+    },
+    {
+      "key": "bogota-plaza",
+      "role": "place",
+      "master": "crecimiento-colombia/entregas/bogota/semirrealista-v1/maestros/bogota-plaza.png",
+      "sha256_master": "5dc97d2770accc38bb361c5c1f04c6d785558b268ec1d6a3c2cc811feac074b5",
+      "prompt": "Use case: stylized-concept. Landscape 3:2 destination website illustration. Sophisticated semi-realistic HAND-PAINTED EDITORIAL illustration EL-SEMI-REALISTA-1, clearly ink and gouache brush texture, adult travel-magazine polish, organic detailed architecture and nature, expressive fully drawn lightly caricatured people if relevant. Not photograph, not flat vector or toy shapes. Natural location-specific blue/green/material colors independent of site interface, no yellow/sepia filter. No text, labels, logos, watermark, frame. Subject readable in small card; preserve entire landmark silhouette in crop. Independent composition from documented description, NOT geographic proof or current-state photograph. Plaza de Bolívar in Bogotá, spacious stone-paved civic square, small bronze standing Bolívar statue on tall simple stone plinth near the middle, large pale stone neoclassical cathedral with twin bell towers on eastern edge, Capitolio's long columned facade at the south. Broad civic square at eye-level, complete towers, restrained Andean city daylight; NOT Cartagena yellow clocktower or tropical palms.",
+      "files": [
+        {
+          "path": "backend/public/assets/bogota-semirrealista/bogota-plaza-480.webp",
+          "bytes": 42486,
+          "sha256": "ce7d78764df08c0d118ebb295ca1f6a73adc8f81a65ef828b3c74c3631aae621"
+        },
+        {
+          "path": "backend/public/assets/bogota-semirrealista/bogota-plaza-800.webp",
+          "bytes": 109274,
+          "sha256": "ed017496074a1107518d23369724dbec58203c86c89234de3b5f19a1f7cfa934"
+        }
+      ],
+      "approval": "pending_owner_review",
+      "source_type": "generated_from_documented_description"
+    },
+    {
+      "key": "bogota-candelaria",
+      "role": "place",
+      "master": "crecimiento-colombia/entregas/bogota/semirrealista-v1/maestros/bogota-candelaria.png",
+      "sha256_master": "ffa7e0544f0466b5a30d81488f24763092af2cb41aedb22e481eb3247d2a5b3b",
+      "prompt": "Use case: stylized-concept. Landscape 3:2 destination website illustration. Sophisticated semi-realistic HAND-PAINTED EDITORIAL illustration EL-SEMI-REALISTA-1, clearly ink and gouache brush texture, adult travel-magazine polish, organic detailed architecture and nature, expressive fully drawn lightly caricatured people if relevant. Not photograph, not flat vector or toy shapes. Natural location-specific blue/green/material colors independent of site interface, no yellow/sepia filter. No text, labels, logos, watermark, frame. Subject readable in small card; preserve entire landmark silhouette in crop. Independent composition from documented description, NOT geographic proof or current-state photograph. La Candelaria and Chorro de Quevedo Bogotá: intimate small urban plaza and sloping cobbled colonial street, low whitewashed houses with red tiled roofs, colored wooden doors, small simple white colonial chapel frontage. Eastern Andean green hills hinted behind. Original non-copied mural accents and fully drawn locals, cool highland light. No coastal Caribbean balconies, no invented monumental cathedral.",
+      "files": [
+        {
+          "path": "backend/public/assets/bogota-semirrealista/bogota-candelaria-480.webp",
+          "bytes": 55696,
+          "sha256": "860bad4091ecd0213eda8e19e7e5eb2215e0736e6121e91b68a4a8e3976a2ebf"
+        },
+        {
+          "path": "backend/public/assets/bogota-semirrealista/bogota-candelaria-800.webp",
+          "bytes": 139860,
+          "sha256": "bfeb63029c99538283ead0ae17e55ca65ac62e7182b4552914e7c4dbfb711450"
+        }
+      ],
+      "approval": "pending_owner_review",
+      "source_type": "generated_from_documented_description"
+    },
+    {
+      "key": "bogota-museo-oro",
+      "role": "place",
+      "master": "crecimiento-colombia/entregas/bogota/semirrealista-v1/maestros/bogota-museo-oro.png",
+      "sha256_master": "ae4b7d337b7fc1ddd39357c9e3d1bf0eea9854003e396e3cca337bf54785a858",
+      "prompt": "Use case: stylized-concept. Landscape 3:2 destination website illustration. Sophisticated semi-realistic HAND-PAINTED EDITORIAL illustration EL-SEMI-REALISTA-1, clearly ink and gouache brush texture, adult travel-magazine polish, organic detailed architecture and nature, expressive fully drawn lightly caricatured people if relevant. Not photograph, not flat vector or toy shapes. Natural location-specific blue/green/material colors independent of site interface, no yellow/sepia filter. No text, labels, logos, watermark, frame. Subject readable in small card; preserve entire landmark silhouette in crop. Independent composition from documented description, NOT geographic proof or current-state photograph. Museo del Oro Bogotá: modern low rectilinear building with broad pale stone facades and horizontal dark glazing beside leafy Parque Santander, urban pedestrian forecourt. Focus recognizable modern museum volume, not a gold-clad palace or giant outdoor treasure sculpture. Architectural editorial interpretation, not current construction record.",
+      "files": [
+        {
+          "path": "backend/public/assets/bogota-semirrealista/bogota-museo-oro-480.webp",
+          "bytes": 43706,
+          "sha256": "58e8b4d3a1e6596a970f7d2429c92599cf1a5952dd08fb2e1e81c1f4342817c8"
+        },
+        {
+          "path": "backend/public/assets/bogota-semirrealista/bogota-museo-oro-800.webp",
+          "bytes": 111588,
+          "sha256": "a724437585751871c4b908ae556bec58dcf715e003bcdd89e86e2845fa930d54"
+        }
+      ],
+      "approval": "pending_owner_review",
+      "source_type": "generated_from_documented_description"
+    },
+    {
+      "key": "bogota-monserrate",
+      "role": "place",
+      "master": "crecimiento-colombia/entregas/bogota/semirrealista-v1/maestros/bogota-monserrate.png",
+      "sha256_master": "b55c41aaa926bdc163fbc92775364b6da595f26b120cd95d25b65d6b16e9db9a",
+      "prompt": "Use case: stylized-concept. Landscape 3:2 destination website illustration. Sophisticated semi-realistic HAND-PAINTED EDITORIAL illustration EL-SEMI-REALISTA-1, clearly ink and gouache brush texture, adult travel-magazine polish, organic detailed architecture and nature, expressive fully drawn lightly caricatured people if relevant. Not photograph, not flat vector or toy shapes. Natural location-specific blue/green/material colors independent of site interface, no yellow/sepia filter. No text, labels, logos, watermark, frame. Subject readable in small card; preserve entire landmark silhouette in crop. Independent composition from documented description, NOT geographic proof or current-state photograph. Monserrate Bogotá from ELEVATED oblique perspective looking down toward the complete white hilltop sanctuary with twin square bell towers and warm terracotta roofs, terraces on green steep Eastern Hill and vast Bogotá plateau city far below. Sanctuary dominates; no frontal view from below, no gigantic snow peaks or sea.",
+      "files": [
+        {
+          "path": "backend/public/assets/bogota-semirrealista/bogota-monserrate-480.webp",
+          "bytes": 58746,
+          "sha256": "2966074242cbc884e2d1275ed80446b2a0842a8d855ed60cb28d505fee5e43d5"
+        },
+        {
+          "path": "backend/public/assets/bogota-semirrealista/bogota-monserrate-800.webp",
+          "bytes": 153102,
+          "sha256": "da89caf723cc4dc4fec2625880285e05ed4ec2df704b1762a01966787811c6ce"
+        }
+      ],
+      "approval": "pending_owner_review",
+      "source_type": "generated_from_documented_description"
+    },
+    {
+      "key": "bogota-botero",
+      "role": "place",
+      "master": "crecimiento-colombia/entregas/bogota/semirrealista-v1/maestros/bogota-botero.png",
+      "sha256_master": "2799dbcdea412c091009fc8be4e6d164dbaf78f397ac726f624ac29dd32bca37",
+      "prompt": "Use case: stylized-concept. Landscape 3:2 destination website illustration. Sophisticated semi-realistic HAND-PAINTED EDITORIAL illustration EL-SEMI-REALISTA-1, clearly ink and gouache brush texture, adult travel-magazine polish, organic detailed architecture and nature, expressive fully drawn lightly caricatured people if relevant. Not photograph, not flat vector or toy shapes. Natural location-specific blue/green/material colors independent of site interface, no yellow/sepia filter. No text, labels, logos, watermark, frame. Subject readable in small card; preserve entire landmark silhouette in crop. Independent composition from documented description, NOT geographic proof or current-state photograph. Museo Botero Bogotá: representative colonial museum courtyard in La Candelaria with white plaster two-storey arcades and dark wood railings, terracotta tiled roof, rectangular planted courtyard and stone paving. Focus museum architecture and peaceful art-visiting context, no copied artwork, no invented giant statue, no claims of exact present exhibition.",
+      "files": [
+        {
+          "path": "backend/public/assets/bogota-semirrealista/bogota-botero-480.webp",
+          "bytes": 51536,
+          "sha256": "a5c366a5cb7c3afd68d24bcb38fa755492ba574ab5070293468678e623c7f56d"
+        },
+        {
+          "path": "backend/public/assets/bogota-semirrealista/bogota-botero-800.webp",
+          "bytes": 123200,
+          "sha256": "1da46f73d3401339c45523f67d5e5f0d817e89b07c6f5695cdb8c199930a8246"
+        }
+      ],
+      "approval": "pending_owner_review",
+      "source_type": "generated_from_documented_description"
+    },
+    {
+      "key": "bogota-usaquen",
+      "role": "place",
+      "master": "crecimiento-colombia/entregas/bogota/semirrealista-v1/maestros/bogota-usaquen.png",
+      "sha256_master": "395ba2fbcdb6a0e3c3c2289e0901343579f0210d22e2e22f3a63b36715d36c1e",
+      "prompt": "Use case: stylized-concept. Landscape 3:2 destination website illustration. Sophisticated semi-realistic HAND-PAINTED EDITORIAL illustration EL-SEMI-REALISTA-1, clearly ink and gouache brush texture, adult travel-magazine polish, organic detailed architecture and nature, expressive fully drawn lightly caricatured people if relevant. Not photograph, not flat vector or toy shapes. Natural location-specific blue/green/material colors independent of site interface, no yellow/sepia filter. No text, labels, logos, watermark, frame. Subject readable in small card; preserve entire landmark silhouette in crop. Independent composition from documented description, NOT geographic proof or current-state photograph. Historic Usaquén Bogotá: intimate main square with trees and modest colonial church, low white and warm-toned facades, tiled roofs, pedestrian craft stalls near plaza, green Eastern Hills in distant background. Keep a Bogotá neighborhood plaza scale, no Caribbean port architecture or skyscraper wall.",
+      "files": [
+        {
+          "path": "backend/public/assets/bogota-semirrealista/bogota-usaquen-480.webp",
+          "bytes": 57598,
+          "sha256": "0728d778e1eb8266e8e29ebd745edc49c2a735182711b82063ba98b72728ab71"
+        },
+        {
+          "path": "backend/public/assets/bogota-semirrealista/bogota-usaquen-800.webp",
+          "bytes": 148330,
+          "sha256": "527132204afe1004951c05fd9c12e6b1afccf5eff40749e668622ea8fcee7c8d"
+        }
+      ],
+      "approval": "pending_owner_review",
+      "source_type": "generated_from_documented_description"
+    },
+    {
+      "key": "bogota-simon",
+      "role": "place",
+      "master": "crecimiento-colombia/entregas/bogota/semirrealista-v1/maestros/bogota-simon.png",
+      "sha256_master": "1179aa53f68514e225d3103d5c4e4a593e34d01d066db49f45a42448e2f0b4f1",
+      "prompt": "Use case: stylized-concept. Landscape 3:2 destination website illustration. Sophisticated semi-realistic HAND-PAINTED EDITORIAL illustration EL-SEMI-REALISTA-1, clearly ink and gouache brush texture, adult travel-magazine polish, organic detailed architecture and nature, expressive fully drawn lightly caricatured people if relevant. Not photograph, not flat vector or toy shapes. Natural location-specific blue/green/material colors independent of site interface, no yellow/sepia filter. No text, labels, logos, watermark, frame. Subject readable in small card; preserve entire landmark silhouette in crop. Independent composition from documented description, NOT geographic proof or current-state photograph. Parque Metropolitano Simón Bolívar Bogotá: wide open freshwater park lake edged by green lawns and mature highland trees, walking paths and small people for scale, broad grassy recreational landscape and very distant city/hills. No ocean, tropical resort, monument giant Bolívar statue or mountains within lake.",
+      "files": [
+        {
+          "path": "backend/public/assets/bogota-semirrealista/bogota-simon-480.webp",
+          "bytes": 50040,
+          "sha256": "9b1edfbcae4b3cea29e2c78376a58afd10af3cb9e7c4cceb9f32978c8f1e0d8f"
+        },
+        {
+          "path": "backend/public/assets/bogota-semirrealista/bogota-simon-800.webp",
+          "bytes": 126504,
+          "sha256": "b2e71dacb697fc4b2abd3fec58d6113b0c50387bc3e66ca0461282dfd9bafe37"
+        }
+      ],
+      "approval": "pending_owner_review",
+      "source_type": "generated_from_documented_description"
+    },
+    {
+      "key": "visita-oro",
+      "role": "experience",
+      "master": "crecimiento-colombia/entregas/bogota/semirrealista-v1/maestros/visita-oro.png",
+      "sha256_master": "e688d8304a606da0ed162223145be0a5ad1cd9442bd1ef143aabe04a746f137e",
+      "prompt": "Use case: stylized-concept. Landscape 3:2 destination website illustration. Sophisticated semi-realistic HAND-PAINTED EDITORIAL illustration EL-SEMI-REALISTA-1, clearly ink and gouache brush texture, adult travel-magazine polish, organic detailed architecture and nature, expressive fully drawn lightly caricatured people if relevant. Not photograph, not flat vector or toy shapes. Natural location-specific blue/green/material colors independent of site interface, no yellow/sepia filter. No text, labels, logos, watermark, frame. Subject readable in small card; preserve entire landmark silhouette in crop. Independent composition from documented description, NOT geographic proof or current-state photograph. Representative Bogotá activity scene, distinct from attraction/hero composition. Two fully drawn adults observing small pre-Columbian goldwork in a glass museum case, attentive museum visit, representative exhibition interior not claimed exact real room or exact artifact.",
+      "files": [
+        {
+          "path": "backend/public/assets/bogota-semirrealista/visita-oro-480.webp",
+          "bytes": 31342,
+          "sha256": "9112197d97483cc85630f4ad5bb2b4738e60168eec5fac2e0bc2fb8966a72cce"
+        },
+        {
+          "path": "backend/public/assets/bogota-semirrealista/visita-oro-800.webp",
+          "bytes": 67834,
+          "sha256": "eee2d10c241fbed20a39e06545910adb9287a465952d46387af6c3e291719ec4"
+        }
+      ],
+      "approval": "pending_owner_review",
+      "source_type": "generated_from_documented_description"
+    },
+    {
+      "key": "mirador",
+      "role": "experience",
+      "master": "crecimiento-colombia/entregas/bogota/semirrealista-v1/maestros/mirador.png",
+      "sha256_master": "2dd47d6b3b60978031bd8e78f67fda1f82d213384808a5a072d43d5182c1524b",
+      "prompt": "Use case: stylized-concept. Landscape 3:2 destination website illustration. Sophisticated semi-realistic HAND-PAINTED EDITORIAL illustration EL-SEMI-REALISTA-1, clearly ink and gouache brush texture, adult travel-magazine polish, organic detailed architecture and nature, expressive fully drawn lightly caricatured people if relevant. Not photograph, not flat vector or toy shapes. Natural location-specific blue/green/material colors independent of site interface, no yellow/sepia filter. No text, labels, logos, watermark, frame. Subject readable in small card; preserve entire landmark silhouette in crop. Independent composition from documented description, NOT geographic proof or current-state photograph. Representative Bogotá activity scene, distinct from attraction/hero composition. Two expressive visitors on a safe stone terrace looking over Bogotá from the green Eastern Hills; city plateau below, telescope/rail secondary, no copied landmark or claim of cablecar operation.",
+      "files": [
+        {
+          "path": "backend/public/assets/bogota-semirrealista/mirador-480.webp",
+          "bytes": 48494,
+          "sha256": "b2b1d8a8ca07b9e28f8628b2ffd733aba21889fc053b835623f2add0429f553f"
+        },
+        {
+          "path": "backend/public/assets/bogota-semirrealista/mirador-800.webp",
+          "bytes": 118558,
+          "sha256": "7d5a6fc7a23b8bcfbe861fc8be78e156729e0e091fc75ba5ed3e42680ab4692f"
+        }
+      ],
+      "approval": "pending_owner_review",
+      "source_type": "generated_from_documented_description"
+    },
+    {
+      "key": "ambiente",
+      "role": "experience",
+      "master": "crecimiento-colombia/entregas/bogota/semirrealista-v1/maestros/ambiente.png",
+      "sha256_master": "1823b64f2152ecc49e14d17511663b3d6b46842a38a05e33005685c9f6d99621",
+      "prompt": "Use case: stylized-concept. Landscape 3:2 destination website illustration. Sophisticated semi-realistic HAND-PAINTED EDITORIAL illustration EL-SEMI-REALISTA-1, clearly ink and gouache brush texture, adult travel-magazine polish, organic detailed architecture and nature, expressive fully drawn lightly caricatured people if relevant. Not photograph, not flat vector or toy shapes. Natural location-specific blue/green/material colors independent of site interface, no yellow/sepia filter. No text, labels, logos, watermark, frame. Subject readable in small card; preserve entire landmark silhouette in crop. Independent composition from documented description, NOT geographic proof or current-state photograph. Representative Bogotá activity scene, distinct from attraction/hero composition. Visitors calmly exploring a botanical garden with varied highland trees, ferns and greenhouse-like background, expressive people, not repetition of the approved Tropicario attraction image.",
+      "files": [
+        {
+          "path": "backend/public/assets/bogota-semirrealista/ambiente-480.webp",
+          "bytes": 54922,
+          "sha256": "bd8bb1faba025f074ab4b58dd4f8aff7b88d7e6616c2fc3302f3ffd4aa56b857"
+        },
+        {
+          "path": "backend/public/assets/bogota-semirrealista/ambiente-800.webp",
+          "bytes": 140252,
+          "sha256": "95df4419e291c95b3870179261985264a7ea90fb017cc7441789dc2f177315cb"
+        }
+      ],
+      "approval": "pending_owner_review",
+      "source_type": "generated_from_documented_description"
+    },
+    {
+      "key": "arte",
+      "role": "experience",
+      "master": "crecimiento-colombia/entregas/bogota/semirrealista-v1/maestros/arte.png",
+      "sha256_master": "2afda4a3319a536a7ac546981a8cedd98768c1821a6fc73efd64d35a527fcca4",
+      "prompt": "Use case: stylized-concept. Landscape 3:2 destination website illustration. Sophisticated semi-realistic HAND-PAINTED EDITORIAL illustration EL-SEMI-REALISTA-1, clearly ink and gouache brush texture, adult travel-magazine polish, organic detailed architecture and nature, expressive fully drawn lightly caricatured people if relevant. Not photograph, not flat vector or toy shapes. Natural location-specific blue/green/material colors independent of site interface, no yellow/sepia filter. No text, labels, logos, watermark, frame. Subject readable in small card; preserve entire landmark silhouette in crop. Independent composition from documented description, NOT geographic proof or current-state photograph. Representative Bogotá activity scene, distinct from attraction/hero composition. Two adults discussing art in a bright colonial courtyard-gallery setting, original abstract paintings only, no copied famous works; activity of viewing art is focus.",
+      "files": [
+        {
+          "path": "backend/public/assets/bogota-semirrealista/arte-480.webp",
+          "bytes": 42832,
+          "sha256": "35536e5c7ca9f57d78299207921619d7e023285ad67240d79d756d76d5bf7336"
+        },
+        {
+          "path": "backend/public/assets/bogota-semirrealista/arte-800.webp",
+          "bytes": 102876,
+          "sha256": "532ac0e95633f618bd272e407c9bfb290f7401e999a01193955215380afae94d"
+        }
+      ],
+      "approval": "pending_owner_review",
+      "source_type": "generated_from_documented_description"
+    },
+    {
+      "key": "ciencia",
+      "role": "experience",
+      "master": "crecimiento-colombia/entregas/bogota/semirrealista-v1/maestros/ciencia.png",
+      "sha256_master": "e00b6daa55cbe1ab26cfc47992fcc362e2d5df126a1a6ff98a8f900fc8258d09",
+      "prompt": "Use case: stylized-concept. Landscape 3:2 destination website illustration. Sophisticated semi-realistic HAND-PAINTED EDITORIAL illustration EL-SEMI-REALISTA-1, clearly ink and gouache brush texture, adult travel-magazine polish, organic detailed architecture and nature, expressive fully drawn lightly caricatured people if relevant. Not photograph, not flat vector or toy shapes. Natural location-specific blue/green/material colors independent of site interface, no yellow/sepia filter. No text, labels, logos, watermark, frame. Subject readable in small card; preserve entire landmark silhouette in crop. Independent composition from documented description, NOT geographic proof or current-state photograph. Representative Bogotá activity scene, distinct from attraction/hero composition. Two adults and child engaging with an interactive hands-on science exhibit: gears/light optics on sturdy table, rounded modern science-centre interior; representative not actual specific Maloka exhibit.",
+      "files": [
+        {
+          "path": "backend/public/assets/bogota-semirrealista/ciencia-480.webp",
+          "bytes": 38958,
+          "sha256": "84ec647d7fb85ff7f87aff1d2c7fa7135264b2e5eed5be141f837081e4cea876"
+        },
+        {
+          "path": "backend/public/assets/bogota-semirrealista/ciencia-800.webp",
+          "bytes": 86472,
+          "sha256": "73799576843e8e5866041c69c7378d28a1b278760e7c8821db8e4975b7c08c10"
+        }
+      ],
+      "approval": "pending_owner_review",
+      "source_type": "generated_from_documented_description"
+    },
+    {
+      "key": "cielo",
+      "role": "experience",
+      "master": "crecimiento-colombia/entregas/bogota/semirrealista-v1/maestros/cielo.png",
+      "sha256_master": "160a28c7244dc5eda901271054b05e372e5bd52e6ee9433040978e37b03c8755",
+      "prompt": "Use case: stylized-concept. Landscape 3:2 destination website illustration. Sophisticated semi-realistic HAND-PAINTED EDITORIAL illustration EL-SEMI-REALISTA-1, clearly ink and gouache brush texture, adult travel-magazine polish, organic detailed architecture and nature, expressive fully drawn lightly caricatured people if relevant. Not photograph, not flat vector or toy shapes. Natural location-specific blue/green/material colors independent of site interface, no yellow/sepia filter. No text, labels, logos, watermark, frame. Subject readable in small card; preserve entire landmark silhouette in crop. Independent composition from documented description, NOT geographic proof or current-state photograph. Representative Bogotá activity scene, distinct from attraction/hero composition. Visitors seated in a planetarium, curved dome screen with stars and constellations, visibly illustrated atmosphere and believable seating; no exact event/program claim.",
+      "files": [
+        {
+          "path": "backend/public/assets/bogota-semirrealista/cielo-480.webp",
+          "bytes": 26012,
+          "sha256": "3cbcf5adf68b0373d34c6af74d8a66b61d0935691d01d752b6cf86955223a61b"
+        },
+        {
+          "path": "backend/public/assets/bogota-semirrealista/cielo-800.webp",
+          "bytes": 63164,
+          "sha256": "c9bf746babb4b15042999ad07dd699bc0f88c05961231c7931fffe3699a3a357"
+        }
+      ],
+      "approval": "pending_owner_review",
+      "source_type": "generated_from_documented_description"
+    },
+    {
+      "key": "gastronomia",
+      "role": "experience",
+      "master": "crecimiento-colombia/entregas/bogota/semirrealista-v1/maestros/gastronomia.png",
+      "sha256_master": "570c161bb9f57b97db53bd763d0d5ac031c8ce329dc56044842919927e21c711",
+      "prompt": "Use case: stylized-concept. Landscape 3:2 destination website illustration. Sophisticated semi-realistic HAND-PAINTED EDITORIAL illustration EL-SEMI-REALISTA-1, clearly ink and gouache brush texture, adult travel-magazine polish, organic detailed architecture and nature, expressive fully drawn lightly caricatured people if relevant. Not photograph, not flat vector or toy shapes. Natural location-specific blue/green/material colors independent of site interface, no yellow/sepia filter. No text, labels, logos, watermark, frame. Subject readable in small card; preserve entire landmark silhouette in crop. Independent composition from documented description, NOT geographic proof or current-state photograph. Representative Bogotá activity scene, distinct from attraction/hero composition. Visitors sharing a warm bowl of ajiaco and vegetables at a modest Bogotá market lunch counter, expressive fully drawn cook and visitor, everyday clothes, realistic highland food, no business logos.",
+      "files": [
+        {
+          "path": "backend/public/assets/bogota-semirrealista/gastronomia-480.webp",
+          "bytes": 44494,
+          "sha256": "2874483cde75253111e59fe5505e7b30b9587919cf1e8b44bea5714e42000e43"
+        },
+        {
+          "path": "backend/public/assets/bogota-semirrealista/gastronomia-800.webp",
+          "bytes": 99956,
+          "sha256": "3afbb76077da7264cb3ff743336689537528e3da9dce1e9710f1a9c2c654af98"
+        }
+      ],
+      "approval": "pending_owner_review",
+      "source_type": "generated_from_documented_description"
+    },
+    {
+      "key": "mercado",
+      "role": "experience",
+      "master": "crecimiento-colombia/entregas/bogota/semirrealista-v1/maestros/mercado.png",
+      "sha256_master": "e8ca2ea8711adeb50b7e794d5ea46b6c48bdf0091d149d8ac71038b388ed8e28",
+      "prompt": "Use case: stylized-concept. Landscape 3:2 destination website illustration. Sophisticated semi-realistic HAND-PAINTED EDITORIAL illustration EL-SEMI-REALISTA-1, clearly ink and gouache brush texture, adult travel-magazine polish, organic detailed architecture and nature, expressive fully drawn lightly caricatured people if relevant. Not photograph, not flat vector or toy shapes. Natural location-specific blue/green/material colors independent of site interface, no yellow/sepia filter. No text, labels, logos, watermark, frame. Subject readable in small card; preserve entire landmark silhouette in crop. Independent composition from documented description, NOT geographic proof or current-state photograph. Representative Bogotá activity scene, distinct from attraction/hero composition. A visitor examines handmade woven crafts at an outdoor artisan stall near low tiled-roof Usaquén buildings; original products, respectful fully drawn artisan, no claim exact current vendor.",
+      "files": [
+        {
+          "path": "backend/public/assets/bogota-semirrealista/mercado-480.webp",
+          "bytes": 59298,
+          "sha256": "29c996e871a6b75efc3a4a9cbc3f225478a2e537f21452ba49a778aff21293a6"
+        },
+        {
+          "path": "backend/public/assets/bogota-semirrealista/mercado-800.webp",
+          "bytes": 138170,
+          "sha256": "d175102c71947663eb96e88b963d6038ab56e8fd3b26b48b0875633d108cf4e7"
+        }
+      ],
+      "approval": "pending_owner_review",
+      "source_type": "generated_from_documented_description"
+    },
+    {
+      "key": "ciclovia",
+      "role": "experience",
+      "master": "crecimiento-colombia/entregas/bogota/semirrealista-v1/maestros/ciclovia.png",
+      "sha256_master": "6d5617bf923ae69ff44f825a3d41ad9f18fdf1121f952490e964ae112f8f68ac",
+      "prompt": "Use case: stylized-concept. Landscape 3:2 destination website illustration. Sophisticated semi-realistic HAND-PAINTED EDITORIAL illustration EL-SEMI-REALISTA-1, clearly ink and gouache brush texture, adult travel-magazine polish, organic detailed architecture and nature, expressive fully drawn lightly caricatured people if relevant. Not photograph, not flat vector or toy shapes. Natural location-specific blue/green/material colors independent of site interface, no yellow/sepia filter. No text, labels, logos, watermark, frame. Subject readable in small card; preserve entire landmark silhouette in crop. Independent composition from documented description, NOT geographic proof or current-state photograph. Representative Bogotá activity scene, distinct from attraction/hero composition. A family of fully drawn cyclists with helmets and a pedestrian on a city avenue temporarily clear of traffic, Bogotá highland urban buildings and green hills; public recreational cycling atmosphere, not branded/private operator.",
+      "files": [
+        {
+          "path": "backend/public/assets/bogota-semirrealista/ciclovia-480.webp",
+          "bytes": 50180,
+          "sha256": "e2c732ae40d59b060a60b55149e40866a759f0f8094147bef094dc79bf8294b4"
+        },
+        {
+          "path": "backend/public/assets/bogota-semirrealista/ciclovia-800.webp",
+          "bytes": 125366,
+          "sha256": "a3274139a80bfe28625d876cfd708f6610419a7c3a0a579447a35942c2b98985"
+        }
+      ],
+      "approval": "pending_owner_review",
+      "source_type": "generated_from_documented_description"
+    },
+    {
+      "key": "bike-tour",
+      "role": "experience",
+      "master": "crecimiento-colombia/entregas/bogota/semirrealista-v1/maestros/bike-tour.png",
+      "sha256_master": "171f94d6461bd8fc93a32c50f0f08627d0317df0d6f93a70a88a2e13e7691ce4",
+      "prompt": "Use case: stylized-concept. Landscape 3:2 destination website illustration. Sophisticated semi-realistic HAND-PAINTED EDITORIAL illustration EL-SEMI-REALISTA-1, clearly ink and gouache brush texture, adult travel-magazine polish, organic detailed architecture and nature, expressive fully drawn lightly caricatured people if relevant. Not photograph, not flat vector or toy shapes. Natural location-specific blue/green/material colors independent of site interface, no yellow/sepia filter. No text, labels, logos, watermark, frame. Subject readable in small card; preserve entire landmark silhouette in crop. Independent composition from documented description, NOT geographic proof or current-state photograph. Representative Bogotá activity scene, distinct from attraction/hero composition. Small group of adult cyclists with helmets listening to an illustrated guide beside colonial Bogotá facades, parked bicycles, safe traffic-free spot; representative city bicycle tour, no identifiable operator/logo.",
+      "files": [
+        {
+          "path": "backend/public/assets/bogota-semirrealista/bike-tour-480.webp",
+          "bytes": 50982,
+          "sha256": "2f21213e8ed6b1f59f710d5cae7baedc8cf0f8869f198f0aa5fd3f7cda421771"
+        },
+        {
+          "path": "backend/public/assets/bogota-semirrealista/bike-tour-800.webp",
+          "bytes": 123440,
+          "sha256": "1aaa2f8fb87805cc08b36e7440bddedb568bc72312e38007adb3465862c3bd4e"
+        }
+      ],
+      "approval": "pending_owner_review",
+      "source_type": "generated_from_documented_description"
+    },
+    {
+      "key": "graffiti-bike",
+      "role": "experience",
+      "master": "crecimiento-colombia/entregas/bogota/semirrealista-v1/maestros/graffiti-bike.png",
+      "sha256_master": "00dbc6a8c68671b7e29f5555a2654704dbb812cb014bd952d242efa5202073d8",
+      "prompt": "Use case: stylized-concept. Landscape 3:2 destination website illustration. Sophisticated semi-realistic HAND-PAINTED EDITORIAL illustration EL-SEMI-REALISTA-1, clearly ink and gouache brush texture, adult travel-magazine polish, organic detailed architecture and nature, expressive fully drawn lightly caricatured people if relevant. Not photograph, not flat vector or toy shapes. Natural location-specific blue/green/material colors independent of site interface, no yellow/sepia filter. No text, labels, logos, watermark, frame. Subject readable in small card; preserve entire landmark silhouette in crop. Independent composition from documented description, NOT geographic proof or current-state photograph. Representative Bogotá activity scene, distinct from attraction/hero composition. Helmeted adult cyclists paused beside an original abstract colorful urban mural in a Bogotá street, guide points to original painted shapes; do not copy existing graffiti artist works or invent an exact street.",
+      "files": [
+        {
+          "path": "backend/public/assets/bogota-semirrealista/graffiti-bike-480.webp",
+          "bytes": 44464,
+          "sha256": "3aa2f3f077d8844b3c1764d75347d9e1c4f15f40d87ad103264b0efdda7910fe"
+        },
+        {
+          "path": "backend/public/assets/bogota-semirrealista/graffiti-bike-800.webp",
+          "bytes": 105782,
+          "sha256": "b286a5e25e5e5aaae3bf009230cfef0364927bc8cb8c9d4b7d3a90f67ff01acb"
+        }
+      ],
+      "approval": "pending_owner_review",
+      "source_type": "generated_from_documented_description"
+    },
+    {
+      "key": "cooking",
+      "role": "experience",
+      "master": "crecimiento-colombia/entregas/bogota/semirrealista-v1/maestros/cooking.png",
+      "sha256_master": "3ed2576e5465b65b43a16c0aa8612278eb3f76b9929964a63a7bab3d93b7bdbb",
+      "prompt": "Use case: stylized-concept. Landscape 3:2 destination website illustration. Sophisticated semi-realistic HAND-PAINTED EDITORIAL illustration EL-SEMI-REALISTA-1, clearly ink and gouache brush texture, adult travel-magazine polish, organic detailed architecture and nature, expressive fully drawn lightly caricatured people if relevant. Not photograph, not flat vector or toy shapes. Natural location-specific blue/green/material colors independent of site interface, no yellow/sepia filter. No text, labels, logos, watermark, frame. Subject readable in small card; preserve entire landmark silhouette in crop. Independent composition from documented description, NOT geographic proof or current-state photograph. Representative Bogotá activity scene, distinct from attraction/hero composition. Adult visitor and local instructor preparing Colombian ingredients at a clean kitchen counter, arepas and vegetables, apron/utensils correct, richly illustrated hands and faces; representative class, no venue/operator claim.",
+      "files": [
+        {
+          "path": "backend/public/assets/bogota-semirrealista/cooking-480.webp",
+          "bytes": 46500,
+          "sha256": "254025d509637e408611597c3548fdf908bb88b9f09ebf4bf17b0c79070056a8"
+        },
+        {
+          "path": "backend/public/assets/bogota-semirrealista/cooking-800.webp",
+          "bytes": 109740,
+          "sha256": "fdf1469a166a450f94914f0e2d20afeda4f90546670ad97b2367eff555c59c67"
+        }
+      ],
+      "approval": "pending_owner_review",
+      "source_type": "generated_from_documented_description"
+    },
+    {
+      "key": "cine",
+      "role": "experience",
+      "master": "crecimiento-colombia/entregas/bogota/semirrealista-v1/maestros/cine.png",
+      "sha256_master": "ea207b5036ec9a6c0dcf591a896014b57daadbc7300d5eff9871f12b9c4a0aa4",
+      "prompt": "Use case: stylized-concept. Landscape 3:2 destination website illustration. Sophisticated semi-realistic HAND-PAINTED EDITORIAL illustration EL-SEMI-REALISTA-1, clearly ink and gouache brush texture, adult travel-magazine polish, organic detailed architecture and nature, expressive fully drawn lightly caricatured people if relevant. Not photograph, not flat vector or toy shapes. Natural location-specific blue/green/material colors independent of site interface, no yellow/sepia filter. No text, labels, logos, watermark, frame. Subject readable in small card; preserve entire landmark silhouette in crop. Independent composition from documented description, NOT geographic proof or current-state photograph. Representative Bogotá activity scene, distinct from attraction/hero composition. A couple entering a contemporary cultural cinema lobby with a softly glowing screen visible beyond, no film titles, posters or identifiable actors; focus experience of cinema, not a specific current screening.",
+      "files": [
+        {
+          "path": "backend/public/assets/bogota-semirrealista/cine-480.webp",
+          "bytes": 30706,
+          "sha256": "3ba73cd6652d493d9c2ae3a8c99983e9b8299702efb480d173e1207c1a7e9c94"
+        },
+        {
+          "path": "backend/public/assets/bogota-semirrealista/cine-800.webp",
+          "bytes": 67492,
+          "sha256": "83c4df357da3d6d0e8dd1401c3f54a7f969b10b006af1086aad38fe26c5c204f"
+        }
+      ],
+      "approval": "pending_owner_review",
+      "source_type": "generated_from_documented_description"
+    },
+    {
+      "key": "arte-urbano",
+      "role": "experience",
+      "master": "crecimiento-colombia/entregas/bogota/semirrealista-v1/maestros/arte-urbano.png",
+      "sha256_master": "9ec8edf07681a3753f3499936037a1482e077ece91d0c307d5aa50d6411619c2",
+      "prompt": "Use case: stylized-concept. Landscape 3:2 destination website illustration. Sophisticated semi-realistic HAND-PAINTED EDITORIAL illustration EL-SEMI-REALISTA-1, clearly ink and gouache brush texture, adult travel-magazine polish, organic detailed architecture and nature, expressive fully drawn lightly caricatured people if relevant. Not photograph, not flat vector or toy shapes. Natural location-specific blue/green/material colors independent of site interface, no yellow/sepia filter. No text, labels, logos, watermark, frame. Subject readable in small card; preserve entire landmark silhouette in crop. Independent composition from documented description, NOT geographic proof or current-state photograph. Representative Bogotá activity scene, distinct from attraction/hero composition. Small group of visitors walking through a Bogotá neighborhood and looking at original colorful abstract street art, fully drawn expressive people, cool highland clothing, no reproduction of known murals.",
+      "files": [
+        {
+          "path": "backend/public/assets/bogota-semirrealista/arte-urbano-480.webp",
+          "bytes": 47488,
+          "sha256": "956e289adc1face7ce7527f5894ad93d3659fcae385aadab6d004d8ee8765fb6"
+        },
+        {
+          "path": "backend/public/assets/bogota-semirrealista/arte-urbano-800.webp",
+          "bytes": 111432,
+          "sha256": "cccca0513293150ccb27425f4212a88bbf943332efc39123be66b70e0dd7c2df"
+        }
+      ],
+      "approval": "pending_owner_review",
+      "source_type": "generated_from_documented_description"
+    },
+    {
+      "key": "artes-escenicas",
+      "role": "experience",
+      "master": "crecimiento-colombia/entregas/bogota/semirrealista-v1/maestros/artes-escenicas.png",
+      "sha256_master": "f29a549779f6df7b9c3871e573f20702aa99bd3677f45b5d4fb8d116b5fa5e6e",
+      "prompt": "Use case: stylized-concept. Landscape 3:2 destination website illustration. Sophisticated semi-realistic HAND-PAINTED EDITORIAL illustration EL-SEMI-REALISTA-1, clearly ink and gouache brush texture, adult travel-magazine polish, organic detailed architecture and nature, expressive fully drawn lightly caricatured people if relevant. Not photograph, not flat vector or toy shapes. Natural location-specific blue/green/material colors independent of site interface, no yellow/sepia filter. No text, labels, logos, watermark, frame. Subject readable in small card; preserve entire landmark silhouette in crop. Independent composition from documented description, NOT geographic proof or current-state photograph. Representative Bogotá activity scene, distinct from attraction/hero composition. Audience watching an intimate theatrical performance in an elegant wood-and-red-seat theatre, original non-identifiable performers with expressive full bodies; no actual event, performer or ticket availability claim.",
+      "files": [
+        {
+          "path": "backend/public/assets/bogota-semirrealista/artes-escenicas-480.webp",
+          "bytes": 36758,
+          "sha256": "0ae06951f3d546cdaf555c1afd60d77c2af6cc5efe5cbe6943785e0209b43db1"
+        },
+        {
+          "path": "backend/public/assets/bogota-semirrealista/artes-escenicas-800.webp",
+          "bytes": 84480,
+          "sha256": "02f2495240fdc087a34cebb0d08ea06b4147bae48392bb450819314dbdfc7e7d"
+        }
+      ],
+      "approval": "pending_owner_review",
+      "source_type": "generated_from_documented_description"
+    },
+    {
+      "key": "bogota-jardin",
+      "role": "place",
+      "approval": "owner_approved_existing",
+      "path": "backend/public/assets/bogota-semirrealista/bogota-jardin-aprobado.webp",
+      "sha256": "dc722438cc464cbccf05e5717455f2e35a557301683162038ef254ccb87d66bf"
+    }
+  ],
+  "sources": [
+    "https://latorrecolpatria.com/",
+    "https://www.banrepcultural.org/bogota/museo-del-oro",
+    "https://monserrate.co/en/plan-your-visit/",
+    "https://bogota.gov.co/mi-ciudad/turismo/guia-turistica-de-bogota"
+  ]
+}

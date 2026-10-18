@@ -1,0 +1,16 @@
+# Bogotá · propuesta semirrealista v1
+
+Alcance: preproducción privada, sin autorización de publicación. Rama propia de Bogotá.
+
+- Portada: Torre Colpatria dentro del paisaje urbano andino, desde descripción documentada.
+- Ocho atractivos: Plaza de Bolívar, La Candelaria, Museo del Oro, Monserrate, Museo Botero, Usaquén, Jardín Botánico y Parque Simón Bolívar.
+- Quince experiencias con ilustraciones separadas de las tarjetas de lugares.
+- Jardín Botánico: se conserva byte por byte la ilustración previamente aprobada; no se extiende esa aprobación a otras imágenes.
+- Tres experiencias con bloqueos documentales continúan ocultas: senderismo, aves y noche.
+- Textos breves ES/EN/PT, historia en un párrafo de ancho completo, secciones abiertas y carga por filas.
+
+`prompts.json` y `manifiesto.json` conservan descripción, procedencia, rol, hashes y medidas. `maestros/` conserva PNG fuera del alojamiento; solo WebP optimizados van a assets. `generaciones.json` registra los archivos originales entregados por el generador.
+
+Las ilustraciones son composiciones editoriales representativas: no fotografías, reconstrucciones métricas de los edificios ni prueba del estado actual de una sala o servicio. Los interiores de museos y actividades son representativos; no copiar obras ni inferir disponibilidad del operador. La selección Top8 procede de la auditoría existente; esta tarea cambia presentación, no afirma un ranking estadístico nuevo.
+
+Revisión: no se observan imágenes rotas; 8 tarjetas y 15 experiencias en el borrador local. Directorio de Bogotá sigue sin comercios cargados en esta base; no se inventaron entradas para llenar tarjetas. Las imágenes nuevas siguen pendientes de aprobación humana.
