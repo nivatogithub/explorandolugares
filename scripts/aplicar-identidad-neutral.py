@@ -30,6 +30,11 @@ body{background:var(--el-page)!important;color:var(--el-text)}
 .directory-card button.directory-icon-action:focus-visible{outline:2px solid var(--el-action);outline-offset:2px}
 .directory-card button.directory-icon-action:hover{background:var(--el-panel)}
 .directory-card-tier-free .directory-business-title{font-size:14px!important;line-height:1.25!important}
+/* Free entries: single compact row, category conveyed by icon and accessible name. */
+.directory-card.directory-card-tier-free .directory-card-body{padding:9px 12px!important}
+.directory-card-tier-free .directory-compact-heading{align-items:center;gap:9px}
+.directory-card.directory-card-tier-free .directory-business-title{margin:0!important;font-size:14px!important;line-height:1.3!important}
+.directory-free-category-icon{display:grid;place-items:center;flex:0 0 28px;width:28px;height:28px;border-radius:7px;background:var(--el-panel);color:var(--el-muted)}
 .directory-card-tier-free .directory-category-chip{padding:2px 5px!important;min-height:0!important;margin:0!important}
 .directory-compact-heading{display:flex;gap:10px;align-items:flex-start;min-width:0}
 .directory-card .directory-business-mark{position:static!important;width:38px!important;height:38px!important;min-width:38px;flex:0 0 38px;margin:0!important;border:1px solid var(--el-border);border-radius:9px;background:var(--el-panel);display:grid;place-items:center}
@@ -90,9 +95,10 @@ input,select,textarea{background:var(--el-field);border-color:var(--el-control-b
   s=re.sub(r'<aside\b[^>]*class="pilot-banner"[^>]*>.*?</aside>','',s,flags=re.S)
   for old,new in {'Comenzamos por Jericó.':'Destinos para descubrir.','La primera guía ya está disponible. Abriremos otros destinos cuando revisemos su información y sus imágenes.':'Explora las guías disponibles.','Começamos por Jericó.':'Destinos para descobrir.','We start with Jericó.':'Destinations to discover.','Starting with Jericó.':'Destinations to discover.'}.items():s=s.replace(old,new)
   s=s.replace('identidad-neutral.js?v=2','identidad-neutral.js?v=3').replace('identidad-neutral.css?v=2','identidad-neutral.css?v=3')
-  s=s.replace('tarjetas-negocios-compactas.js?v=1','tarjetas-negocios-compactas.js?v=3')
-  s=s.replace('tarjetas-negocios-compactas.js?v=2','tarjetas-negocios-compactas.js?v=3')
-  if 'tarjetas-negocios-compactas.js' not in s:s=s.replace('</head>','<script defer src="/assets/tarjetas-negocios-compactas.js?v=3"></script></head>',1)
+  s=s.replace('tarjetas-negocios-compactas.js?v=1','tarjetas-negocios-compactas.js?v=4')
+  s=s.replace('tarjetas-negocios-compactas.js?v=2','tarjetas-negocios-compactas.js?v=4')
+  s=s.replace('tarjetas-negocios-compactas.js?v=3','tarjetas-negocios-compactas.js?v=4')
+  if 'tarjetas-negocios-compactas.js' not in s:s=s.replace('</head>','<script defer src="/assets/tarjetas-negocios-compactas.js?v=4"></script></head>',1)
   if 'cargar-mas-tarjetas.js' not in s:s=s.replace('</head>','<script defer src="/assets/cargar-mas-tarjetas.js?v=1"></script></head>',1)
   if 'identidad-neutral.css' not in s:s=s.replace('</head>',hook+'</head>',1)
   if s!=p.read_text():p.write_text(s);count+=1
