@@ -36,6 +36,7 @@ def main():
 
     run('Tokens y versiones de cobertura', [sys.executable, 'scripts/sincronizar-estilos-cobertura.py', '--check'])
     run('Diseño del portal', [sys.executable, 'backend/tests/test_portal_design.py'])
+    run('Coherencia de oferta comercial y condiciones', [sys.executable, 'backend/tests/test_business_offer_copy.py'])
     run('Paquete incremental de cobertura', [sys.executable, 'backend/tests/test_coverage_package.py'])
     for path in sorted((ROOT / 'backend/tests').glob('*.php')):
         run(f'PHP {path.name}', ['php', str(path)])

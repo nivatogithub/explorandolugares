@@ -98,7 +98,7 @@ final class BusinessSubscriptionAdminService
                 $previous=$this->pdo->prepare('SELECT id FROM business_subscriptions WHERE business_id=? AND id<>? AND plan_code<>"free" AND status IN ("active","expired") AND starts_at IS NOT NULL AND published_at IS NOT NULL AND reviewed_at IS NOT NULL ORDER BY starts_at DESC,id DESC LIMIT 1');
                 $previous->execute([$businessId,$sub['id']]);$renewalOf=$previous->fetchColumn();$renewalOf=$renewalOf===false?null:(int)$renewalOf;
             }
-            $planQuery=$this->pdo->prepare('SELECT max_gallery_photos FROM subscription_plans WHERE code=?');$planQuery->execute([$sub['plan_code']]);$photoLimit=(int)$planQuery->fetchColumn();
+            $planQuery=$this->pdo->prepare('SELECT max_gallery_photos,max_summary_chars,max_description_chars,max_brand_story_chars,max_featured_services_chars FROM subscription_plans WHERE code=?');$planQuery->execute([$sub['plan_code']]);$limits=$planQuery->fetch(PDO::FETCH_ASSOC);if(!$limits)throw new RuntimeException('No se encontró la suscripción.');$photoLimit=(int)$limits['max_gallery_photos'];
             $mediaQuery=$this->pdo->prepare('SELECT role,COUNT(*) AS amount FROM business_media WHERE business_id=? GROUP BY role');$mediaQuery->execute([$businessId]);$mediaCounts=[];foreach($mediaQuery->fetchAll(PDO::FETCH_ASSOC) as $media)$mediaCounts[$media['role']]=(int)$media['amount'];
             if($sub['plan_code']==='page'||$sub['plan_code']==='page_premium'){
                 if(($mediaCounts['cover']??0)<1)throw new RuntimeException('Las suscripciones Página requieren una portada aprobada.');
@@ -110,6 +110,7 @@ final class BusinessSubscriptionAdminService
                 if((int)$q->fetchColumn()<1)throw new RuntimeException('Este nivel incluye contacto directo: publica al menos un teléfono celular o WhatsApp autorizado.');
             }
             $q=$this->pdo->prepare('SELECT locale,display_name,summary,description,brand_story,featured_services FROM business_translations WHERE business_id=?');$q->execute([$businessId]);$translations=[];foreach($q->fetchAll(PDO::FETCH_ASSOC) as $row)$translations[$row['locale']]=$row;
+            foreach($translations as $locale=>$translation)foreach(['summary','description','brand_story','featured_services'] as $field){$limit=(int)$limits['max_'.$field.'_chars'];if($limit>0&&preg_match_all('/./us',(string)($translation[$field]??''))>$limit)throw new RuntimeException('El campo '.$field.' en '.$locale.' supera el límite de '.$limit.' caracteres de esta suscripción.');}
             $requiredSpanish=['display_name'];
             if(in_array($sub['plan_code'],['basic','featured','page','page_premium'],true))$requiredSpanish[]='summary';
             if(in_array($sub['plan_code'],['featured','page','page_premium'],true))$requiredSpanish[]='description';

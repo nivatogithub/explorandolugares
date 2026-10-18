@@ -2,6 +2,8 @@
 
 Criterios solicitados por el propietario el 17 de octubre de 2026. Esta suite no despliega ni autoriza producción. Una función pendiente nunca cuenta como aprobada.
 
+Para comparar lo servido en preproducción y producción, ejecutar `python3 preprod/regresion/paridad_produccion.py`. Alcance, evidencias y requisitos todavía pendientes del recorrido con cuentas técnicas en producción: [PRODUCCION.md](PRODUCCION.md). Las pruebas locales no se contabilizan como pruebas de escritura en producción.
+
 ## Ejecutar
 
 Con preproducción encendida y el código candidato actualizado:
@@ -31,6 +33,8 @@ Los casos PENDIENTE son contratos de aceptación aún sin implementación o auto
 Solo `http://127.0.0.1:8088`, contenedor `explorando-preprod`, configuración `local_test`, directorio privado local y runtime MySQL/MariaDB comprobado. No admite dominio o URL de producción. Credenciales aleatorias por ejecución; no se imprimen ni se guardan en el informe. Se crean personas y negocios inequívocamente sintéticos; uno se publica temporalmente **solo en preprod** para probar la ficha pública. No se alteran negocios importados ni las tres cuentas persistentes. Las consultas/escrituras auxiliares de BD preparan y comprueban fixtures; las acciones de usuario se prueban por HTTP.
 
 La recuperación usa exclusivamente el buzón local. No se invoca proveedor de campañas ni se realiza transferencia/pago real. Al finalizar se eliminan cuenta, relaciones, solicitudes, negocios, correos y evidencias de esa ejecución; un fallo de limpieza también bloquea. Una interrupción forzada puede dejar fixtures con el prefijo `regresion-`; revisar el informe antes de limpiar, sin borrar datos ajenos. No se desactivan límites de abuso: si varias ejecuciones los alcanzan, se informa BLOQUEADA y se espera su ventana. La suite reconoce HTTP429 y mensajes de límite antiabuso en formularios HTTP400; no limpia ni modifica contadores globales.
+
+La limpieza incluye los archivos físicos de imágenes adjuntas a solicitudes y negocios técnicos: borrar la fila no elimina la imagen del disco. El bloque final comprueba que ya no existan las cuentas, negocios, solicitudes, correos e imágenes de esa ejecución. No se declara aprobada la limpieza solo por haber intentado los borrados. Las cuentas y negocios persistentes de demostración local se conservan para revisión; no se trasladan a producción.
 
 ## Regla de paso
 

@@ -80,7 +80,7 @@ function throttle(string $kind, int $limit, int $seconds, string $extra = ''): b
 }
 function ready(): bool {
     global $config;
-    return ($config['registration_enabled'] ?? false) && strlen($config['app_key'] ?? '') >= 32 && !empty($config['privacy']['operator']) && !empty($config['privacy']['contact']) && !empty($config['privacy']['retention']) && (!english_request() || !empty($config['privacy']['retention_en']));
+    return ($config['registration_enabled'] ?? false) && strlen($config['app_key'] ?? '') >= 32 && !empty($config['privacy']['operator']) && !empty($config['privacy']['contact']) && !empty($config['privacy']['retention']) && PortalSettings::retention($config['privacy'],(string)($_GET['lang']??$_POST['lang']??'es'))!=='';
 }
 function business_portal_available(): bool {
     global $config;

@@ -1,5 +1,6 @@
 <?php if(!isset($paymentInstructions)){http_response_code(404);exit;} ?>
 <section class="payment-instructions wide" data-payment-instructions hidden>
+<?php require __DIR__.'/publication-terms.php'; ?>
 <h4>Cómo realizar el pago</h4><p>Referencia para el concepto del pago: <strong><?=esc($checkoutReference)?></strong>. Úsala si tu banco permite agregar una nota.</p>
 <?php if(!empty($paymentInstructions['enabled'])):?>
 <?php if(!empty($paymentInstructions['test_mode'])):?><p class="notice"><strong>SIMULACIÓN — NO ENVÍES DINERO.</strong> El QR, la llave y la cuenta son ficticios. Adjunta únicamente un comprobante de prueba.</p><?php endif ?>

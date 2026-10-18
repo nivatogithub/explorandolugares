@@ -12,9 +12,12 @@ final class PortalSettings
   return ['privacy'=>self::validate($data['privacy'])];
  }
  public static function validate(array $input):array{
-  $result=[];foreach(['operator'=>180,'contact'=>254,'retention'=>2000,'retention_en'=>2000] as $field=>$max){$value=$input[$field]??'';if(!is_string($value)||strlen($value)>$max||preg_match('/[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]/',$value))throw new RuntimeException('Revisa los campos de privacidad.');$result[$field]=trim($value);}
+  $result=[];foreach(['operator'=>180,'contact'=>254,'retention'=>2000,'retention_en'=>2000,'retention_pt'=>2000] as $field=>$max){$value=$input[$field]??'';if(!is_string($value)||strlen($value)>$max||preg_match('/[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]/',$value))throw new RuntimeException('Revisa los campos de privacidad.');$result[$field]=trim($value);}
   if($result['operator']===''||$result['retention']===''||!filter_var($result['contact'],FILTER_VALIDATE_EMAIL))throw new RuntimeException('Completa el responsable, un correo válido y el criterio de conservación en español.');
   return $result;
+ }
+ public static function retention(array $privacy,string $locale):string{
+  $locale=strtolower(str_replace('_','-',$locale));$field=match($locale){'en'=>'retention_en','pt','pt-br'=>'retention_pt',default=>'retention'};return is_string($privacy[$field]??null)?$privacy[$field]:'';
  }
  public static function save(string $directory,array $input,int $actor):void{
   $data=['privacy'=>self::validate($input),'updated_at'=>gmdate('c'),'updated_by_account_id'=>$actor];

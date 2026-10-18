@@ -7,8 +7,8 @@ try {
         db()->query('SELECT 1 FROM leads LIMIT 1');
         $_SESSION['request_key'] ??= bin2hex(random_bytes(24));
         $privacy=$config['privacy'];
-        if (english_request()) $privacy['retention']=$privacy['retention_en'];
-        unset($privacy['retention_en']);
+        $privacy['retention']=PortalSettings::retention($privacy,(string)($_GET['lang']??$_POST['lang']??'es'));
+        unset($privacy['retention_en'],$privacy['retention_pt']);
         json_response(['enabled'=>true,'csrf'=>$_SESSION['csrf'],'request_key'=>$_SESSION['request_key'],'privacy'=>$privacy]);
     }
     if ($_SERVER['REQUEST_METHOD']!=='POST') {header('Allow: GET, POST');json_response(['message'=>'Método no permitido.'],405);}

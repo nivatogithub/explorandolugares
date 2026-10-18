@@ -229,7 +229,7 @@ try:
                 expected_sidebar = {
                     '/admin/index.php': 'Estado del sistema' if 'tab=sistema' in path else 'Solicitudes de participación',
                     '/admin/base-datos.php': 'Base de datos',
-                    '/admin/destinos.php': 'Destinos',
+                    '/admin/destinos.php': 'Lugares',
                     '/admin/negocios.php': 'Negocios',
                     '/admin/trasladar-negocios.php': 'Negocios',
                     '/admin/importar-negocios.php': 'Negocios',
@@ -239,7 +239,7 @@ try:
                     '/admin/suscripciones.php': 'Suscripciones',
                     '/admin/inversionistas.php': 'Inteligencia e inversión',
                     '/admin/contactos-negocios.php': 'Canales y responsable',
-                    '/admin/campanas.php': 'Campañas por correo',
+                    '/admin/campanas.php': 'Conexión con Brevo' if 'tab=conexion' in path else 'Campañas por correo',
                 }.get(route)
                 if expected_sidebar:
                     check(active_label == expected_sidebar, f'La sección activa debe ser {expected_sidebar} en {path}; mostró {active_label}')
@@ -255,6 +255,12 @@ try:
                 selected_label = re.sub(r'<[^>]+>', '', selected_tabs[0]).strip()
                 expected_tab = {'tab=crear': 'Crear negocio', 'tab=importar': 'Importación masiva', 'tab=revisar': 'Revisar y publicar'}.get(next((part for part in path.split('?')[1:] if part.startswith('tab=')), ''), 'Todos los negocios')
                 check(selected_label == expected_tab, f'La pestaña activa debe ser {expected_tab} en {path}; mostró {selected_label}')
+    health_csrf = re.search(r'name="csrf" value="([^"]+)"', request('/admin/campanas.php?tab=conexion')[1]).group(1)
+    check(request('/admin/campanas.php?tab=conexion', {'action': 'check_connection', 'csrf': 'invalid'})[0] == 403, 'Diagnóstico sin CSRF')
+    status, health_body, _ = request('/admin/campanas.php?tab=conexion', {'action': 'check_connection', 'csrf': health_csrf, 'return_to': 'system'})
+    check(status == 200 and 'Salud del correo · Brevo' in health_body and 'Revisar conexión o configuración' in health_body, 'No informa conexión deshabilitada en Salud')
+    check((WORK / 'private/brevo/health.json').is_file(), 'Diagnóstico no persistido en privado')
+    check(request('/admin/campanas.php?tab=conexion', {'action': 'check_connection', 'csrf': health_csrf}, opener=GUEST)[0] == 403, 'Visitante pudo ejecutar el diagnóstico')
     contact_csrf = re.search(r'name="csrf" value="([^"]+)"', request('/admin/contactos-negocios.php?tab=cargar')[1]).group(1)
     research_before = DB.execute('SELECT COUNT(*) FROM business_research_contacts').fetchone()[0]
     business_before_research = DB.execute('SELECT COUNT(*) FROM businesses').fetchone()[0]

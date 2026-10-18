@@ -36,6 +36,9 @@ try:
  assert not json.loads(call('/api/participacion.php?lang=en')[1])['enabled']
  config['privacy']['retention_en']='Only during this test';save()
  english_setup=json.loads(call('/api/participacion.php?lang=en')[1]);assert english_setup['enabled'] and english_setup['privacy']['retention']=='Only during this test'
+ assert not json.loads(call('/api/participacion.php?lang=pt-br')[1])['enabled']
+ config['privacy']['retention_pt']='Somente durante este teste';save()
+ portuguese_setup=json.loads(call('/api/participacion.php?lang=pt-br')[1]);assert portuguese_setup['enabled'] and portuguese_setup['privacy']['retention']=='Somente durante este teste' and 'retention_en' not in portuguese_setup['privacy'] and 'retention_pt' not in portuguese_setup['privacy']
  valid={'csrf':setup['csrf'],'request_key':setup['request_key'],'name':'Persona de prueba','business':'<script>alert(1)</script>','municipality':'Jericó','category':'hospedaje','email':'prueba@example.invalid','phone':'','description':'Descripción de prueba','consent':'1','understanding':'1'}
  assert call('/api/participacion.php',{**valid,'csrf':'incorrecto'})[0]==403
  assert call('/api/participacion.php',{**valid,'category':'inventada'})[0]==422

@@ -1,5 +1,10 @@
 @import url("/assets/cobertura/portal-tokens.css");
-/* Legacy styles force display:block; this scoped override keeps diagnostics visible. */
-.admin-sidebar.admin-sidebar-with-system{display:flex!important;flex-direction:column;overflow:hidden}.admin-sidebar-with-system>.admin-sidebar-brand{flex:0 0 auto}.admin-sidebar-with-system>nav:not(.admin-system-shortcuts){flex:1 1 auto;min-height:0;overflow-y:auto;overflow-x:hidden;scrollbar-gutter:stable}.admin-sidebar-with-system>.admin-system-shortcuts{flex:0 0 auto;padding-top:14px;margin-top:14px;border-top:1px solid #e9d9bf;background:var(--el-card)}.admin-sidebar-with-system>.admin-system-shortcuts>section{margin-top:0}.admin-sidebar-with-system>.admin-system-shortcuts h2{color:var(--el-muted)}@media(max-width:850px){.admin-sidebar.admin-sidebar-with-system{overflow:visible}.admin-sidebar-with-system>nav:not(.admin-system-shortcuts){flex:none;overflow:visible;scrollbar-gutter:auto}}
-
-.admin-sidebar-with-system>nav:not(.admin-system-shortcuts){overflow-y:scroll!important;scrollbar-width:thin;scrollbar-color:#c94720 var(--el-panel)}.admin-sidebar-with-system>.admin-system-shortcuts{padding-top:8px;margin-top:8px}.admin-sidebar-with-system>.admin-system-shortcuts section{margin-top:8px!important}.admin-sidebar-with-system>.admin-system-shortcuts a{min-height:36px;padding:7px 9px}.admin-sidebar-with-system>.admin-system-shortcuts h2{margin-bottom:3px}
+/* Disable multicolumn fragmentation: column-count:1 on a fixed-height aside
+   creates extra horizontal columns and clips entire menu sections. */
+.admin-sidebar.admin-sidebar-with-system,.admin-sidebar.admin-sidebar-with-system nav,.admin-sidebar.admin-sidebar-with-system nav section{columns:auto!important;column-count:auto!important;column-width:auto!important}
+/* A single scroll area keeps every section reachable, including on short screens. */
+.admin-sidebar.admin-sidebar-with-system{display:block!important;overflow-y:auto!important;overflow-x:hidden;scrollbar-gutter:stable;scrollbar-width:thin;scrollbar-color:#c94720 var(--el-panel)}
+.admin-sidebar-with-system>nav:not(.admin-system-shortcuts){overflow:visible!important;min-height:auto}
+.admin-sidebar-with-system>.admin-system-shortcuts{padding-top:12px;margin-top:12px;border-top:1px solid var(--el-line,#e9d9bf);background:var(--el-card)}
+.admin-sidebar-with-system>.admin-system-shortcuts h2{color:var(--el-muted)}
+@media(max-width:850px){.admin-sidebar.admin-sidebar-with-system{overflow:visible!important}}
