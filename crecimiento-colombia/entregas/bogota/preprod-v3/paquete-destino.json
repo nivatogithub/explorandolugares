@@ -1,0 +1,1085 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "bogota",
+    "destination_type": "city",
+    "country_code": "CO",
+    "department": "Bogotá D.C.",
+    "subregion": "Distrito Capital",
+    "translations": {
+      "es": {
+        "display_name": "Bogotá",
+        "eyebrow": "AVANCE LOCAL · imágenes y textos por revisar",
+        "headline": "Cultura, barrios y naturaleza en la capital",
+        "intro": "Bogotá reúne patrimonio, museos, vida de barrio y naturaleza urbana. Recorre el centro histórico y La Candelaria, conoce sus colecciones de arte y arqueología, y reserva otra salida para Usaquén, sus parques o el Jardín Botánico. Agrupa las visitas por zonas para disfrutar la capital a tu ritmo.",
+        "meta_description": "Bogotá reúne patrimonio, museos, vida de barrio y naturaleza urbana. Recorre el centro histórico y La Candelaria, conoce sus colecciones de arte y arqueolo"
+      },
+      "en": {
+        "display_name": "Bogotá",
+        "eyebrow": "LOCAL PREVIEW · images and texts for review",
+        "headline": "Culture, neighbourhoods and nature in the capital",
+        "intro": "Bogotá brings together heritage, museums, neighbourhood life and urban nature. Explore the historic centre and La Candelaria, discover its art and archaeology collections, and plan another outing for Usaquén, the parks or the Botanical Garden. Group visits by area to enjoy the capital at your own pace.",
+        "meta_description": "Bogotá brings together heritage, museums, neighbourhood life and urban nature. Explore the historic centre and La Candelaria, discover its art and archaeol"
+      },
+      "pt-BR": {
+        "display_name": "Bogotá",
+        "eyebrow": "PRÉVIA LOCAL · imagens e textos em revisão",
+        "headline": "Cultura, bairros e natureza na capital",
+        "intro": "Bogotá reúne patrimônio, museus, vida de bairro e natureza urbana. Explore o centro histórico e La Candelaria, conheça as coleções de arte e arqueologia e reserve outro passeio para Usaquén, os parques ou o Jardim Botânico. Organize as visitas por região para aproveitar a capital no seu ritmo.",
+        "meta_description": "Bogotá reúne patrimônio, museus, vida de bairro e natureza urbana. Explore o centro histórico e La Candelaria, conheça as coleções de arte e arqueologia e "
+      }
+    },
+    "history": {
+      "es": [
+        "La sabana de Bogotá fue territorio muisca antes de la llegada española. La fundación colonial se sitúa en 1538; las calles y construcciones del centro conservan huellas de distintas etapas de una ciudad que siguió creciendo y transformándose.",
+        "La Plaza Mayor adquirió el nombre de Plaza de Bolívar en 1846, tras la instalación del monumento al Libertador realizado por Pietro Tenerani. Su entorno reúne edificios e instituciones que ayudan a leer la historia cívica de la capital.",
+        "Hoy, museos, mercados, barrios y espacios culturales muestran una Bogotá diversa. La Candelaria y las colecciones del Banco de la República permiten acercarse a ese patrimonio, mientras el perfil urbano y los cerros orientales revelan otras escalas de la ciudad."
+      ],
+      "en": [
+        "The Bogotá plateau was Muisca territory before the arrival of the Spanish. The colonial founding dates to 1538; the historic centre’s streets and buildings preserve traces of different stages of a city that continued to grow and change.",
+        "The main square took the name Bolívar Square in 1846, following the installation of Pietro Tenerani’s monument to the Liberator. Its surrounding buildings and institutions offer a way to explore the capital’s civic history.",
+        "Today, museums, markets, neighbourhoods and cultural venues reveal Bogotá’s diversity. La Candelaria and the Banco de la República collections introduce its heritage, while the urban skyline and eastern hills reveal other scales of the city."
+      ],
+      "pt-BR": [
+        "A savana de Bogotá era território muisca antes da chegada dos espanhóis. A fundação colonial é situada em 1538; ruas e construções do centro conservam vestígios de diferentes etapas de uma cidade que continuou crescendo e se transformando.",
+        "A praça principal recebeu o nome de Praça de Bolívar em 1846, após a instalação do monumento ao Libertador realizado por Pietro Tenerani. Os edifícios e instituições do entorno ajudam a conhecer a história cívica da capital.",
+        "Hoje, museus, mercados, bairros e espaços culturais revelam uma Bogotá diversa. La Candelaria e as coleções do Banco de la República aproximam o visitante desse patrimônio, enquanto a paisagem urbana e os cerros orientais mostram outras escalas da cidade."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Recorrer el centro histórico y la vida cultural de La Candelaria.",
+        "Conocer colecciones de arte y arqueología.",
+        "Descubrir Usaquén, sus calles y su gastronomía.",
+        "Combinar miradores, parques y diversidad vegetal."
+      ],
+      "en": [
+        "Explore the historic centre and La Candelaria’s cultural life.",
+        "Discover collections of art and archaeology.",
+        "Enjoy Usaquén’s streets and food scene.",
+        "Combine viewpoints, parks and plant diversity."
+      ],
+      "pt-BR": [
+        "Explorar o centro histórico e a vida cultural de La Candelaria.",
+        "Conhecer coleções de arte e arqueologia.",
+        "Descobrir as ruas e a gastronomia de Usaquén.",
+        "Combinar mirantes, parques e diversidade vegetal."
+      ]
+    },
+    "sources": {
+      "es": [
+        {
+          "label": "Secretaría de Cultura: historia",
+          "url": "https://culturarecreacionydeporte.gov.co/es/bogotanitos/bogodatos/sobre-bogota-y-su-historia",
+          "section_key": "history"
+        },
+        {
+          "label": "Banco de la República: visita Museo del Oro",
+          "url": "https://www.banrepcultural.org/bogota/museo-del-oro/visita",
+          "section_key": "places"
+        },
+        {
+          "label": "Cerro de Monserrate operador",
+          "url": "https://monserrate.co/en/",
+          "section_key": "places"
+        },
+        {
+          "label": "Jardín Botánico José Celestino Mutis",
+          "url": "https://jbb.gov.co/",
+          "section_key": "places"
+        },
+        {
+          "label": "Asociación Mercado Pulgas Usaquén",
+          "url": "https://www.mercadopulgasusaquen.com/contactanos/",
+          "section_key": "places"
+        },
+        {
+          "label": "Visit Bogotá: Chorro de Quevedo",
+          "url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/plazoleta-del-chorro-de-quevedo",
+          "section_key": "places"
+        },
+        {
+          "label": "Visit Bogotá: Parque Simón Bolívar",
+          "url": "https://visitbogota.co/es/que-hacer-en-bogota/naturaleza/parque-simon-bolivar",
+          "section_key": "places"
+        },
+        {
+          "label": "Visit Bogotá: Usaquén",
+          "url": "https://visitbogota.co/es/que-hacer-en-bogota/gastronomia/zona-gastronomica-usaquen",
+          "section_key": "places"
+        },
+        {
+          "label": "Visit Bogotá: Museo Botero",
+          "url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/museo-botero-en-bogota",
+          "section_key": "places"
+        },
+        {
+          "label": "Visit Bogotá: Torre Colpatria",
+          "url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/torre-colpatria",
+          "section_key": "places"
+        },
+        {
+          "label": "Banco de la República: estatua de Bolívar y plaza",
+          "url": "https://colecciones.banrepcultural.org/es/document/numismtica/63a069155d96b8790f342e96",
+          "section_key": "history"
+        },
+        {
+          "label": "Visit Bogotá: Plaza de Bolívar",
+          "url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/plaza-de-bolivar",
+          "section_key": "history"
+        }
+      ],
+      "en": [
+        {
+          "label": "Secretaría de Cultura: historia",
+          "url": "https://culturarecreacionydeporte.gov.co/es/bogotanitos/bogodatos/sobre-bogota-y-su-historia",
+          "section_key": "history"
+        },
+        {
+          "label": "Banco de la República: visita Museo del Oro",
+          "url": "https://www.banrepcultural.org/bogota/museo-del-oro/visita",
+          "section_key": "places"
+        },
+        {
+          "label": "Cerro de Monserrate operador",
+          "url": "https://monserrate.co/en/",
+          "section_key": "places"
+        },
+        {
+          "label": "Jardín Botánico José Celestino Mutis",
+          "url": "https://jbb.gov.co/",
+          "section_key": "places"
+        },
+        {
+          "label": "Asociación Mercado Pulgas Usaquén",
+          "url": "https://www.mercadopulgasusaquen.com/contactanos/",
+          "section_key": "places"
+        },
+        {
+          "label": "Visit Bogotá: Chorro de Quevedo",
+          "url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/plazoleta-del-chorro-de-quevedo",
+          "section_key": "places"
+        },
+        {
+          "label": "Visit Bogotá: Parque Simón Bolívar",
+          "url": "https://visitbogota.co/es/que-hacer-en-bogota/naturaleza/parque-simon-bolivar",
+          "section_key": "places"
+        },
+        {
+          "label": "Visit Bogotá: Usaquén",
+          "url": "https://visitbogota.co/es/que-hacer-en-bogota/gastronomia/zona-gastronomica-usaquen",
+          "section_key": "places"
+        },
+        {
+          "label": "Visit Bogotá: Museo Botero",
+          "url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/museo-botero-en-bogota",
+          "section_key": "places"
+        },
+        {
+          "label": "Visit Bogotá: Torre Colpatria",
+          "url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/torre-colpatria",
+          "section_key": "places"
+        },
+        {
+          "label": "Banco de la República: estatua de Bolívar y plaza",
+          "url": "https://colecciones.banrepcultural.org/es/document/numismtica/63a069155d96b8790f342e96",
+          "section_key": "history"
+        },
+        {
+          "label": "Visit Bogotá: Plaza de Bolívar",
+          "url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/plaza-de-bolivar",
+          "section_key": "history"
+        }
+      ],
+      "pt-BR": [
+        {
+          "label": "Secretaría de Cultura: historia",
+          "url": "https://culturarecreacionydeporte.gov.co/es/bogotanitos/bogodatos/sobre-bogota-y-su-historia",
+          "section_key": "history"
+        },
+        {
+          "label": "Banco de la República: visita Museo del Oro",
+          "url": "https://www.banrepcultural.org/bogota/museo-del-oro/visita",
+          "section_key": "places"
+        },
+        {
+          "label": "Cerro de Monserrate operador",
+          "url": "https://monserrate.co/en/",
+          "section_key": "places"
+        },
+        {
+          "label": "Jardín Botánico José Celestino Mutis",
+          "url": "https://jbb.gov.co/",
+          "section_key": "places"
+        },
+        {
+          "label": "Asociación Mercado Pulgas Usaquén",
+          "url": "https://www.mercadopulgasusaquen.com/contactanos/",
+          "section_key": "places"
+        },
+        {
+          "label": "Visit Bogotá: Chorro de Quevedo",
+          "url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/plazoleta-del-chorro-de-quevedo",
+          "section_key": "places"
+        },
+        {
+          "label": "Visit Bogotá: Parque Simón Bolívar",
+          "url": "https://visitbogota.co/es/que-hacer-en-bogota/naturaleza/parque-simon-bolivar",
+          "section_key": "places"
+        },
+        {
+          "label": "Visit Bogotá: Usaquén",
+          "url": "https://visitbogota.co/es/que-hacer-en-bogota/gastronomia/zona-gastronomica-usaquen",
+          "section_key": "places"
+        },
+        {
+          "label": "Visit Bogotá: Museo Botero",
+          "url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/museo-botero-en-bogota",
+          "section_key": "places"
+        },
+        {
+          "label": "Visit Bogotá: Torre Colpatria",
+          "url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/torre-colpatria",
+          "section_key": "places"
+        },
+        {
+          "label": "Banco de la República: estatua de Bolívar y plaza",
+          "url": "https://colecciones.banrepcultural.org/es/document/numismtica/63a069155d96b8790f342e96",
+          "section_key": "history"
+        },
+        {
+          "label": "Visit Bogotá: Plaza de Bolívar",
+          "url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/plaza-de-bolivar",
+          "section_key": "history"
+        }
+      ]
+    }
+  },
+  "hero_image": {
+    "file": "images/bogota-portada-v3.webp",
+    "image_origin": "external",
+    "image_creator": "Tijs Zwinkels",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Skyline_downtown_Bogota.jpg",
+    "image_license": "CC BY-SA 2.0",
+    "image_license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "alt": {
+      "es": "Vista urbana del centro de Bogotá con Torre Colpatria, fotografía de 2009.",
+      "en": "Urban view of central Bogotá with Colpatria Tower, photographed in 2009.",
+      "pt-BR": "Vista urbana do centro de Bogotá com Torre Colpatria, fotografia de 2009."
+    },
+    "caption": {
+      "es": "Vista urbana del centro de Bogotá con Torre Colpatria, fotografía de 2009. · Tijs Zwinkels · CC BY-SA 2.0 · Referencia provisional no aprobada; miniatura técnica sin recorte.",
+      "en": "Urban view of central Bogotá with Colpatria Tower, photographed in 2009. · Tijs Zwinkels · CC BY-SA 2.0 · Unapproved provisional reference; technical thumbnail without cropping.",
+      "pt-BR": "Vista urbana do centro de Bogotá com Torre Colpatria, fotografia de 2009. · Tijs Zwinkels · CC BY-SA 2.0 · Referência provisória não aprovada; miniatura técnica sem recorte."
+    }
+  },
+  "places": [
+    {
+      "slug": "plaza",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Plaza de Bolívar",
+          "description": "Conoce el corazón cívico de Bogotá, rodeado por la Catedral Primada, el Capitolio Nacional, el Palacio de Justicia y el Palacio Liévano. Observa sus fachadas y el monumento a Bolívar desde la plaza.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Plaza%20de%20Bol%C3%ADvar%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Bolívar Square",
+          "description": "Explore Bogotá’s civic heart, framed by the Primatial Cathedral, National Capitol, Palace of Justice and Liévano Palace. View their façades and the Bolívar monument from the square.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Plaza%20de%20Bol%C3%ADvar%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Praça de Bolívar",
+          "description": "Conheça o coração cívico de Bogotá, cercado pela Catedral Primada, pelo Capitólio Nacional, pelo Palácio da Justiça e pelo Palácio Liévano. Observe as fachadas e o monumento a Bolívar a partir da praça.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Plaza%20de%20Bol%C3%ADvar%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/bogota-plaza.webp",
+        "image_origin": "external",
+        "image_creator": "Dante O.P",
+        "image_source_url": "https://commons.wikimedia.org/w/index.php?title=File:Vista_del_centro_historico_de_Bogot%C3%A1.jpg&oldid=1210456023",
+        "image_license": "CC0 1.0",
+        "image_license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "alt": {
+          "es": "Vista elevada de la Plaza de Bolívar con torres de la Catedral en primer plano.",
+          "en": "Elevated view of Bolívar Square with Cathedral towers in the foreground.",
+          "pt-BR": "Vista elevada da Praça Bolívar com torres da Catedral em primeiro plano."
+        },
+        "caption": {
+          "es": "Vista elevada de la Plaza de Bolívar con torres de la Catedral en primer plano. · Dante O.P · CC0 1.0",
+          "en": "Elevated view of Bolívar Square with Cathedral towers in the foreground. · Dante O.P · CC0 1.0",
+          "pt-BR": "Vista elevada da Praça Bolívar com torres da Catedral em primeiro plano. · Dante O.P · CC0 1.0"
+        }
+      }
+    },
+    {
+      "slug": "candelaria",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "La Candelaria y Chorro de Quevedo",
+          "description": "Recorre calles de casonas, balcones y espacios culturales del centro histórico. La plazoleta del Chorro de Quevedo es una parada para descubrir el ambiente del barrio y sus relatos; continúa por las calles cercanas a tu ritmo.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=La%20Candelaria%20y%20Chorro%20de%20Quevedo%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "La Candelaria and Chorro de Quevedo",
+          "description": "Walk through the historic centre’s streets of traditional houses, balconies and cultural spaces. Chorro de Quevedo square is a stop to discover the neighbourhood’s atmosphere and stories; explore the surrounding streets at your own pace.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=La%20Candelaria%20y%20Chorro%20de%20Quevedo%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "La Candelaria e Chorro de Quevedo",
+          "description": "Percorra ruas de casarões, varandas e espaços culturais do centro histórico. A pracinha do Chorro de Quevedo é uma parada para conhecer o ambiente e as histórias do bairro; explore as ruas próximas no seu ritmo.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=La%20Candelaria%20y%20Chorro%20de%20Quevedo%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/bogota-candelaria.webp",
+        "image_origin": "external",
+        "image_creator": "Remi Jouan",
+        "image_source_url": "https://commons.wikimedia.org/wiki/File:Bogota_-_Plazza_del_Chorro_de_Quevedo_%281%29.JPG",
+        "image_license": "CC BY-SA 3.0 elegida entre licencias múltiples",
+        "image_license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "alt": {
+          "es": "Plazoleta del Chorro de Quevedo y fachadas de La Candelaria, fotografía de 2010.",
+          "en": "Chorro de Quevedo square and façades in La Candelaria, photographed in 2010.",
+          "pt-BR": "Praça Chorro de Quevedo e fachadas de La Candelaria, fotografia de 2010."
+        },
+        "caption": {
+          "es": "Plazoleta del Chorro de Quevedo y fachadas de La Candelaria, fotografía de 2010. · Remi Jouan · CC BY-SA 3.0 elegida entre licencias múltiples · Referencia provisional no aprobada; miniatura técnica sin recorte.",
+          "en": "Chorro de Quevedo square and façades in La Candelaria, photographed in 2010. · Remi Jouan · CC BY-SA 3.0 elegida entre licencias múltiples · Unapproved provisional reference; technical thumbnail without cropping.",
+          "pt-BR": "Praça Chorro de Quevedo e fachadas de La Candelaria, fotografia de 2010. · Remi Jouan · CC BY-SA 3.0 elegida entre licencias múltiples · Referência provisória não aprovada; miniatura técnica sem recorte."
+        }
+      }
+    },
+    {
+      "slug": "museo-oro",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Museo del Oro",
+          "description": "Descubre piezas de orfebrería y otros objetos arqueológicos que acercan a las sociedades indígenas del territorio colombiano. El museo del Banco de la República está junto al Parque Santander; consulta sus exposiciones y recorridos oficiales.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20del%20Oro%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Gold Museum",
+          "description": "Discover goldwork and other archaeological objects that introduce Indigenous societies from the territory of Colombia. The Banco de la República museum stands beside Santander Park; check its official exhibitions and tours.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20del%20Oro%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Museu do Ouro",
+          "description": "Descubra peças de ourivesaria e outros objetos arqueológicos que aproximam o visitante das sociedades indígenas do território colombiano. O museu do Banco de la República fica junto ao Parque Santander; consulte exposições e visitas oficiais.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20del%20Oro%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/bogota-museo-oro.webp",
+        "image_origin": "external",
+        "image_creator": "Felipe Restrepo Acosta",
+        "image_source_url": "https://commons.wikimedia.org/wiki/File:BOG_Museo_del_Oro.JPG",
+        "image_license": "CC BY-SA 3.0 elegida entre licencias múltiples",
+        "image_license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "alt": {
+          "es": "Entrada y fachada del Museo del Oro junto al Parque Santander, foto de 2010.",
+          "en": "Gold Museum entrance and façade beside Santander Park, 2010 photo.",
+          "pt-BR": "Entrada e fachada do Museu do Ouro junto ao Parque Santander, foto de 2010."
+        },
+        "caption": {
+          "es": "Entrada y fachada del Museo del Oro junto al Parque Santander, foto de 2010. · Felipe Restrepo Acosta · CC BY-SA 3.0 elegida entre licencias múltiples · Referencia provisional no aprobada; miniatura técnica sin recorte.",
+          "en": "Gold Museum entrance and façade beside Santander Park, 2010 photo. · Felipe Restrepo Acosta · CC BY-SA 3.0 elegida entre licencias múltiples · Unapproved provisional reference; technical thumbnail without cropping.",
+          "pt-BR": "Entrada e fachada do Museu do Ouro junto ao Parque Santander, foto de 2010. · Felipe Restrepo Acosta · CC BY-SA 3.0 elegida entre licencias múltiples · Referência provisória não aprovada; miniatura técnica sem recorte."
+        }
+      }
+    },
+    {
+      "slug": "monserrate",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Cerro de Monserrate",
+          "description": "El santuario sobre los cerros orientales y sus miradores ofrecen otra perspectiva de Bogotá. Confirma las condiciones del sendero, el funicular y el teleférico antes de subir: su operación puede cambiar.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Cerro%20de%20Monserrate%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Monserrate Hill",
+          "description": "The sanctuary in the eastern hills and its viewpoints offer another perspective on Bogotá. Check conditions for the footpath, funicular and cable car before ascending, as operations can change.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Cerro%20de%20Monserrate%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Cerro de Monserrate",
+          "description": "O santuário nos cerros orientais e seus mirantes oferecem outra perspectiva de Bogotá. Confirme as condições da trilha, do funicular e do teleférico antes de subir, pois a operação pode mudar.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Cerro%20de%20Monserrate%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/bogota-monserrate.webp",
+        "image_origin": "external",
+        "image_creator": "Ricardo Perez",
+        "image_source_url": "https://www.pexels.com/video/cerro-de-monserrate-01-18092718/",
+        "image_license": "Pexels License",
+        "image_license_url": "https://www.pexels.com/license/",
+        "alt": {
+          "es": "Vista aérea frontal del santuario de Monserrate y escalinatas: fotograma del video de Ricardo Perez publicado en 2023.",
+          "en": "Frontal aerial view of Monserrate sanctuary and stairs: frame from Ricardo Perez’s video published in 2023.",
+          "pt-BR": "Vista aérea frontal do santuário de Monserrate e escadarias: quadro do vídeo de Ricardo Perez publicado em 2023."
+        },
+        "caption": {
+          "es": "Vista aérea frontal del santuario de Monserrate y escalinatas: fotograma del video de Ricardo Perez publicado en 2023. · Ricardo Perez · Pexels License · Referencia provisional no aprobada; miniatura técnica sin recorte.",
+          "en": "Frontal aerial view of Monserrate sanctuary and stairs: frame from Ricardo Perez’s video published in 2023. · Ricardo Perez · Pexels License · Unapproved provisional reference; technical thumbnail without cropping.",
+          "pt-BR": "Vista aérea frontal do santuário de Monserrate e escadarias: quadro do vídeo de Ricardo Perez publicado em 2023. · Ricardo Perez · Pexels License · Referência provisória não aprovada; miniatura técnica sem recorte."
+        }
+      }
+    },
+    {
+      "slug": "botero",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Museo Botero",
+          "description": "En una casa de La Candelaria, recorre obras de Fernando Botero y una colección internacional de arte. La visita se puede combinar con los espacios de la Manzana Cultural del Banco de la República.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20Botero%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Botero Museum",
+          "description": "In a house in La Candelaria, explore works by Fernando Botero and an international art collection. Combine your visit with the Banco de la República Cultural Block’s other venues.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20Botero%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Museu Botero",
+          "description": "Em uma casa de La Candelaria, conheça obras de Fernando Botero e uma coleção internacional de arte. Combine a visita com os outros espaços da Manzana Cultural do Banco de la República.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20Botero%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/bogota-botero.webp",
+        "image_origin": "external",
+        "image_creator": "Felipe Restrepo Acosta",
+        "image_source_url": "https://commons.wikimedia.org/wiki/File:2019_Bogot%C3%A1_-_Entrada_del_Museo_Botero.jpg",
+        "image_license": "CC BY-SA 4.0",
+        "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "alt": {
+          "es": "Fachada y entrada del Museo Botero, Bogotá, fotografía de 2019.",
+          "en": "Façade and entrance of Museo Botero, Bogotá, photographed in 2019.",
+          "pt-BR": "Fachada e entrada do Museu Botero, Bogotá, fotografia de 2019."
+        },
+        "caption": {
+          "es": "Fachada y entrada del Museo Botero, Bogotá, fotografía de 2019. · Felipe Restrepo Acosta · CC BY-SA 4.0 · Referencia provisional no aprobada; miniatura técnica sin recorte.",
+          "en": "Façade and entrance of Museo Botero, Bogotá, photographed in 2019. · Felipe Restrepo Acosta · CC BY-SA 4.0 · Unapproved provisional reference; technical thumbnail without cropping.",
+          "pt-BR": "Fachada e entrada do Museu Botero, Bogotá, fotografia de 2019. · Felipe Restrepo Acosta · CC BY-SA 4.0 · Referência provisória não aprovada; miniatura técnica sem recorte."
+        }
+      }
+    },
+    {
+      "slug": "usaquen",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Usaquén: plaza, calles y mercado",
+          "description": "En el norte de Bogotá, pasea por el entorno de la plaza fundacional, sus casonas y su oferta gastronómica. El mercado de artesanías suma otra razón para visitarlo; verifica la jornada con sus organizadores.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Usaqu%C3%A9n%3A%20plaza%2C%20calles%20y%20mercado%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Usaquén: square, streets and market",
+          "description": "In northern Bogotá, stroll around the historic square, traditional houses and dining venues. The crafts market offers another reason to visit; confirm its schedule with the organisers.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Usaqu%C3%A9n%3A%20plaza%2C%20calles%20y%20mercado%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Usaquén: praça, ruas e mercado",
+          "description": "No norte de Bogotá, caminhe pelo entorno da praça histórica, seus casarões e espaços gastronômicos. O mercado de artesanato é outro motivo para visitar; confirme os dias de funcionamento com os organizadores.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Usaqu%C3%A9n%3A%20plaza%2C%20calles%20y%20mercado%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/bogota-usaquen.webp",
+        "image_origin": "external",
+        "image_creator": "Edgar Zuniga Jr.",
+        "image_source_url": "https://commons.wikimedia.org/wiki/File:Mercado_de_Pulgas%2C_Usaqu%C3%A9n%2C_Bogot%C3%A1%2C_Colombia.jpg",
+        "image_license": "CC BY 2.0",
+        "image_license_url": "https://creativecommons.org/licenses/by/2.0/",
+        "alt": {
+          "es": "Puestos de artesanías del Mercado de Pulgas de Usaquén, fotografía de 2015.",
+          "en": "Craft stalls at Usaquén flea market, photographed in 2015.",
+          "pt-BR": "Bancas de artesanato no Mercado de Pulgas de Usaquén, fotografia de 2015."
+        },
+        "caption": {
+          "es": "Puestos de artesanías del Mercado de Pulgas de Usaquén, fotografía de 2015. · Edgar Zuniga Jr. · CC BY 2.0 · Referencia provisional no aprobada; miniatura técnica sin recorte.",
+          "en": "Craft stalls at Usaquén flea market, photographed in 2015. · Edgar Zuniga Jr. · CC BY 2.0 · Unapproved provisional reference; technical thumbnail without cropping.",
+          "pt-BR": "Bancas de artesanato no Mercado de Pulgas de Usaquén, fotografia de 2015. · Edgar Zuniga Jr. · CC BY 2.0 · Referência provisória não aprovada; miniatura técnica sem recorte."
+        }
+      }
+    },
+    {
+      "slug": "jardin",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Jardín Botánico de Bogotá",
+          "description": "Acércate a la diversidad vegetal y a la educación ambiental en el Jardín Botánico José Celestino Mutis. Consulta las condiciones del recorrido general y del Tropicario, que tienen accesos y actividades propios.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Jard%C3%ADn%20Bot%C3%A1nico%20de%20Bogot%C3%A1%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Bogotá Botanical Garden",
+          "description": "Discover plant diversity and environmental education at the José Celestino Mutis Botanical Garden. Check conditions for the main garden and the Tropicario, which have their own access arrangements and activities.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Jard%C3%ADn%20Bot%C3%A1nico%20de%20Bogot%C3%A1%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Jardim Botânico de Bogotá",
+          "description": "Conheça a diversidade vegetal e a educação ambiental no Jardim Botânico José Celestino Mutis. Consulte as condições do jardim e do Tropicario, que possuem acessos e atividades próprios.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Jard%C3%ADn%20Bot%C3%A1nico%20de%20Bogot%C3%A1%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/bogota-jardin.webp",
+        "image_origin": "external",
+        "image_creator": "DanielGutierrez (Photodaniel)",
+        "image_source_url": "https://commons.wikimedia.org/w/index.php?title=File:Jard%C3%ADn_Bot%C3%A1nico_Bogot%C3%A1.jpg&oldid=966217305",
+        "image_license": "CC BY-SA 4.0",
+        "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "alt": {
+          "es": "Detalle de una tortuga entre plantas acuáticas del Jardín Botánico, foto de 2015.",
+          "en": "Detail of a turtle among aquatic plants in the Botanical Garden, 2015 photograph.",
+          "pt-BR": "Detalhe de uma tartaruga entre plantas aquáticas do Jardim Botânico, foto de 2015."
+        },
+        "caption": {
+          "es": "Detalle de una tortuga entre plantas acuáticas del Jardín Botánico, foto de 2015. · DanielGutierrez (Photodaniel) · CC BY-SA 4.0",
+          "en": "Detail of a turtle among aquatic plants in the Botanical Garden, 2015 photograph. · DanielGutierrez (Photodaniel) · CC BY-SA 4.0",
+          "pt-BR": "Detalhe de uma tartaruga entre plantas aquáticas do Jardim Botânico, foto de 2015. · DanielGutierrez (Photodaniel) · CC BY-SA 4.0"
+        }
+      }
+    },
+    {
+      "slug": "simon",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Parque Metropolitano Simón Bolívar",
+          "description": "Disfruta de zonas verdes, senderos y vistas del lago en el parque central. Es una pausa al aire libre dentro de la ciudad; otros escenarios del gran complejo recreativo se visitan por separado.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Parque%20Metropolitano%20Sim%C3%B3n%20Bol%C3%ADvar%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Simón Bolívar Metropolitan Park",
+          "description": "Enjoy green spaces, walking paths and lake views in the central park. It offers an outdoor break within the city; other venues in the wider recreational complex are separate visits.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Parque%20Metropolitano%20Sim%C3%B3n%20Bol%C3%ADvar%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Parque Metropolitano Simón Bolívar",
+          "description": "Aproveite áreas verdes, caminhos e vistas do lago no parque central. É uma pausa ao ar livre dentro da cidade; os outros espaços do grande complexo recreativo são visitas separadas.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Parque%20Metropolitano%20Sim%C3%B3n%20Bol%C3%ADvar%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/bogota-simon.webp",
+        "image_origin": "external",
+        "image_creator": "Carlosfpardo",
+        "image_source_url": "https://commons.wikimedia.org/wiki/File:Bogota-_Parque_Sim%C3%B3n_Bolivar.jpg",
+        "image_license": "CC BY 2.0",
+        "image_license_url": "https://creativecommons.org/licenses/by/2.0/",
+        "alt": {
+          "es": "Sendero, arbolado y zona de descanso del Parque Simón Bolívar de Bogotá, fotografía histórica de 2006.",
+          "en": "Path, trees and resting area in Bogotá’s Simón Bolívar Park, historical photograph from 2006.",
+          "pt-BR": "Caminho, árvores e área de descanso do Parque Simón Bolívar de Bogotá, fotografia histórica de 2006."
+        },
+        "caption": {
+          "es": "Sendero, arbolado y zona de descanso del Parque Simón Bolívar de Bogotá, fotografía histórica de 2006. · Carlosfpardo · CC BY 2.0",
+          "en": "Path, trees and resting area in Bogotá’s Simón Bolívar Park, historical photograph from 2006. · Carlosfpardo · CC BY 2.0",
+          "pt-BR": "Caminho, árvores e área de descanso do Parque Simón Bolívar de Bogotá, fotografia histórica de 2006. · Carlosfpardo · CC BY 2.0"
+        }
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "2026-10-17",
+    "positioning": "Ocho atractivos curados; cultura, patrimonio, barrios, parques y naturaleza.",
+    "competitors": [],
+    "potential_allies": [],
+    "business_prospects": [
+      {
+        "id": "CO-11-bogota-hotel-opera",
+        "destino_id": "CO-11-bogota",
+        "nombre": "Hotel de la Ópera",
+        "categoria": "alojamiento",
+        "fuente": "S05",
+        "url": "https://www.hotelopera.com.co/en/",
+        "fecha_consulta": "2026-10-16",
+        "direccion": "Calle 10 #5-72, La Candelaria",
+        "modalidad": "directorio_gratuito",
+        "estado": "borrador",
+        "verificacion": "existencia_documental_consultada_operacion_pendiente",
+        "representante_verificado": false,
+        "reclamado": false,
+        "alianza": false,
+        "contactado": false,
+        "idiomas": {
+          "es": "Hotel de la Ópera",
+          "en": "Hotel de la Ópera",
+          "pt-BR": "Hotel de la Ópera"
+        }
+      },
+      {
+        "id": "CO-11-bogota-tequendama-suites",
+        "destino_id": "CO-11-bogota",
+        "nombre": "Tequendama Suites Bogotá",
+        "categoria": "alojamiento",
+        "fuente": "S06",
+        "url": "https://www.hotelestequendama.com.co/tequendama-suites-bogota.html",
+        "fecha_consulta": "2026-10-16",
+        "direccion": null,
+        "modalidad": "directorio_gratuito",
+        "estado": "borrador",
+        "verificacion": "existencia_documental_consultada_operacion_pendiente",
+        "representante_verificado": false,
+        "reclamado": false,
+        "alianza": false,
+        "contactado": false,
+        "idiomas": {
+          "es": "Tequendama Suites Bogotá",
+          "en": "Tequendama Suites Bogotá",
+          "pt-BR": "Tequendama Suites Bogotá"
+        }
+      },
+      {
+        "id": "CO-11-bogota-sofitel-victoria",
+        "destino_id": "CO-11-bogota",
+        "nombre": "Sofitel Bogotá Victoria Regia",
+        "categoria": "alojamiento",
+        "fuente": "S07",
+        "url": "https://sofitelvictoriaregia.com/",
+        "fecha_consulta": "2026-10-16",
+        "direccion": null,
+        "modalidad": "directorio_gratuito",
+        "estado": "borrador",
+        "verificacion": "existencia_documental_consultada_operacion_pendiente",
+        "representante_verificado": false,
+        "reclamado": false,
+        "alianza": false,
+        "contactado": false,
+        "idiomas": {
+          "es": "Sofitel Bogotá Victoria Regia",
+          "en": "Sofitel Bogotá Victoria Regia",
+          "pt-BR": "Sofitel Bogotá Victoria Regia"
+        }
+      },
+      {
+        "id": "CO-11-bogota-el-chato",
+        "destino_id": "CO-11-bogota",
+        "nombre": "El Chato",
+        "categoria": "gastronomia",
+        "fuente": "S08",
+        "url": "https://www.elchato.co/",
+        "fecha_consulta": "2026-10-16",
+        "direccion": null,
+        "modalidad": "directorio_gratuito",
+        "estado": "borrador",
+        "verificacion": "existencia_documental_consultada_operacion_pendiente",
+        "representante_verificado": false,
+        "reclamado": false,
+        "alianza": false,
+        "contactado": false,
+        "idiomas": {
+          "es": "El Chato",
+          "en": "El Chato",
+          "pt-BR": "El Chato"
+        }
+      },
+      {
+        "id": "CO-11-bogota-leo",
+        "destino_id": "CO-11-bogota",
+        "nombre": "LEO",
+        "categoria": "gastronomia",
+        "fuente": "S09",
+        "url": "https://restauranteleo.com/",
+        "fecha_consulta": "2026-10-16",
+        "direccion": null,
+        "modalidad": "directorio_gratuito",
+        "estado": "borrador",
+        "verificacion": "existencia_documental_consultada_operacion_pendiente",
+        "representante_verificado": false,
+        "reclamado": false,
+        "alianza": false,
+        "contactado": false,
+        "idiomas": {
+          "es": "LEO",
+          "en": "LEO",
+          "pt-BR": "LEO"
+        }
+      },
+      {
+        "id": "CO-11-bogota-azahar-parque93",
+        "destino_id": "CO-11-bogota",
+        "nombre": "Azahar Parque 93",
+        "categoria": "gastronomia",
+        "fuente": "S10",
+        "url": "https://azaharcoffee.com/tiendas/",
+        "fecha_consulta": "2026-10-16",
+        "direccion": "Calle 93B #13-91",
+        "modalidad": "directorio_gratuito",
+        "estado": "borrador",
+        "verificacion": "existencia_documental_consultada_operacion_pendiente",
+        "representante_verificado": false,
+        "reclamado": false,
+        "alianza": false,
+        "contactado": false,
+        "idiomas": {
+          "es": "Azahar Parque 93",
+          "en": "Azahar Parque 93",
+          "pt-BR": "Azahar Parque 93"
+        }
+      },
+      {
+        "id": "CO-11-bogota-azahar-nogal",
+        "destino_id": "CO-11-bogota",
+        "nombre": "Azahar Nogal",
+        "categoria": "gastronomia",
+        "fuente": "S10",
+        "url": "https://azaharcoffee.com/tiendas/",
+        "fecha_consulta": "2026-10-16",
+        "direccion": "Carrera 9 #79A-23",
+        "modalidad": "directorio_gratuito",
+        "estado": "borrador",
+        "verificacion": "existencia_documental_consultada_operacion_pendiente",
+        "representante_verificado": false,
+        "reclamado": false,
+        "alianza": false,
+        "contactado": false,
+        "idiomas": {
+          "es": "Azahar Nogal",
+          "en": "Azahar Nogal",
+          "pt-BR": "Azahar Nogal"
+        }
+      },
+      {
+        "id": "CO-11-bogota-azahar-dorado",
+        "destino_id": "CO-11-bogota",
+        "nombre": "Azahar Aeropuerto El Dorado",
+        "categoria": "gastronomia",
+        "fuente": "S10",
+        "url": "https://azaharcoffee.com/tiendas/",
+        "fecha_consulta": "2026-10-16",
+        "direccion": "Av. El Dorado #103-09, puerta 7, segundo piso, zona pública",
+        "modalidad": "directorio_gratuito",
+        "estado": "borrador",
+        "verificacion": "existencia_documental_consultada_operacion_pendiente",
+        "representante_verificado": false,
+        "reclamado": false,
+        "alianza": false,
+        "contactado": false,
+        "idiomas": {
+          "es": "Azahar Aeropuerto El Dorado",
+          "en": "Azahar Aeropuerto El Dorado",
+          "pt-BR": "Azahar Aeropuerto El Dorado"
+        }
+      },
+      {
+        "id": "CO-11-bogota-mambo",
+        "destino_id": "CO-11-bogota",
+        "nombre": "Museo de Arte Moderno de Bogotá — MAMBO",
+        "categoria": "cultura",
+        "fuente": "S11",
+        "url": "https://www.mambogota.com/visitanos/",
+        "fecha_consulta": "2026-10-16",
+        "direccion": "Calle 24 #6-00",
+        "modalidad": "directorio_gratuito",
+        "estado": "borrador",
+        "verificacion": "existencia_documental_consultada_operacion_pendiente",
+        "representante_verificado": false,
+        "reclamado": false,
+        "alianza": false,
+        "contactado": false,
+        "idiomas": {
+          "es": "Museo de Arte Moderno de Bogotá — MAMBO",
+          "en": "Museo de Arte Moderno de Bogotá — MAMBO",
+          "pt-BR": "Museo de Arte Moderno de Bogotá — MAMBO"
+        }
+      },
+      {
+        "id": "CO-11-bogota-centro-artes",
+        "destino_id": "CO-11-bogota",
+        "nombre": "Centro Nacional de las Artes Delia Zapata Olivella",
+        "categoria": "cultura",
+        "fuente": "S12",
+        "url": "https://www.eneldelia.gov.co/",
+        "fecha_consulta": "2026-10-16",
+        "direccion": "Calle 11 #5-60",
+        "modalidad": "directorio_gratuito",
+        "estado": "borrador",
+        "verificacion": "existencia_documental_consultada_operacion_pendiente",
+        "representante_verificado": false,
+        "reclamado": false,
+        "alianza": false,
+        "contactado": false,
+        "idiomas": {
+          "es": "Centro Nacional de las Artes Delia Zapata Olivella",
+          "en": "Centro Nacional de las Artes Delia Zapata Olivella",
+          "pt-BR": "Centro Nacional de las Artes Delia Zapata Olivella"
+        }
+      }
+    ],
+    "acquisition_strategies": [],
+    "sources": [
+      {
+        "label": "Secretaría de Cultura: historia",
+        "url": "https://culturarecreacionydeporte.gov.co/es/bogotanitos/bogodatos/sobre-bogota-y-su-historia",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Banco de la República: visita Museo del Oro",
+        "url": "https://www.banrepcultural.org/bogota/museo-del-oro/visita",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Cerro de Monserrate operador",
+        "url": "https://monserrate.co/en/",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Jardín Botánico José Celestino Mutis",
+        "url": "https://jbb.gov.co/",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Hotel de la Ópera",
+        "url": "https://www.hotelopera.com.co/en/",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Tequendama Suites Bogotá",
+        "url": "https://www.hotelestequendama.com.co/tequendama-suites-bogota.html",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Sofitel Bogotá Victoria Regia",
+        "url": "https://sofitelvictoriaregia.com/",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "El Chato",
+        "url": "https://www.elchato.co/",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "LEO",
+        "url": "https://restauranteleo.com/",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Azahar tiendas",
+        "url": "https://azaharcoffee.com/tiendas/",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "MAMBO visita",
+        "url": "https://www.mambogota.com/visitanos/",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Centro Nacional de las Artes Delia Zapata Olivella",
+        "url": "https://www.eneldelia.gov.co/",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Commons ficha original Monserrate",
+        "url": "https://commons.wikimedia.org/w/index.php?title=File:Monserrate%2C_Bogota.jpg&oldid=1199289042",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Basílica Monserrate original",
+        "url": "https://commons.wikimedia.org/w/index.php?title=File:2017_Bogot%C3%A1_Bas%C3%ADlica_del_Se%C3%B1or_Ca%C3%ADdo_de_Monserrate.jpg&oldid=959727373",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Vista centro original",
+        "url": "https://commons.wikimedia.org/w/index.php?title=File:Vista_del_centro_historico_de_Bogot%C3%A1.jpg&oldid=1210456023",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Plaza Bolívar original",
+        "url": "https://commons.wikimedia.org/w/index.php?title=File:Plaza_de_Bol%C3%ADvar%2C_Bogot%C3%A1.JPG&oldid=1219569853",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "IDRD Ciclovía",
+        "url": "https://www.idrd.gov.co/ciclovia",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Planetario Bogotá",
+        "url": "https://planetariodebogota.gov.co/",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Museo Nacional",
+        "url": "https://www.museonacional.gov.co/Full/Paginas/default.aspx",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Museo Botero Banco República",
+        "url": "https://www.banrep.gov.co/es/sucursales/bogota-museo-botero",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Maloka programación",
+        "url": "https://maloka.org/programacion/",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Bogotá Bike Tours",
+        "url": "https://www.bogotabiketours.com/",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Quebrada La Vieja Visit Bogotá",
+        "url": "https://visitbogota.co/es/rutas-turisticas/ruta-por-el-sendero-quebrada-la-vieja",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "La Perseverancia Visit Bogotá",
+        "url": "https://www.visitbogota.co/es/atractivo/plazas-mercado/plaza-distrital-mercado-la-perseverancia-all-183",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Santa María del Lago Visit Bogotá",
+        "url": "https://visitbogota.co/es/que-hacer-en-bogota/naturaleza/parque-ecologico-distrital-de-humedal-santa-maria-del-lago",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Parque Simón Bolívar Visit Bogotá",
+        "url": "https://www.visitbogota.co/es/atractivo/escenarios/parque-simon-bolivar-all-239",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Asociación Mercado Pulgas Usaquén",
+        "url": "https://www.mercadopulgasusaquen.com/contactanos/",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "IDPC uso Plaza Bolívar",
+        "url": "https://idpc.gov.co/Transparencia/Resoluciones/2024/Manual_de_Uso_Plaza_de_Bolivar.pdf",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Foto Ciclovía original",
+        "url": "https://commons.wikimedia.org/w/index.php?title=File:Bogota_Ciclovia.JPG&oldid=1255444223",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Foto Jardín Botánico original",
+        "url": "https://commons.wikimedia.org/w/index.php?title=File:Jard%C3%ADn_Bot%C3%A1nico_Bogot%C3%A1.jpg&oldid=966217305",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Cinemateca agenda",
+        "url": "https://cinematecadebogota.gov.co/agenda/11?nid_entityreference_filter=53",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Distrito Grafiti Visit Bogotá",
+        "url": "https://visitbogota.co/en/what-to-do-in-bogota/urban/graffiti-district-puente-aranda",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Theatron operador",
+        "url": "https://www.portaltheatron.co/",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Visit Bogotá: Chorro de Quevedo",
+        "url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/plazoleta-del-chorro-de-quevedo",
+        "consulted_at": "2026-10-17"
+      },
+      {
+        "label": "Visit Bogotá: Parque Simón Bolívar",
+        "url": "https://visitbogota.co/es/que-hacer-en-bogota/naturaleza/parque-simon-bolivar",
+        "consulted_at": "2026-10-17"
+      },
+      {
+        "label": "Visit Bogotá: Usaquén",
+        "url": "https://visitbogota.co/es/que-hacer-en-bogota/gastronomia/zona-gastronomica-usaquen",
+        "consulted_at": "2026-10-17"
+      },
+      {
+        "label": "Visit Bogotá: Museo Botero",
+        "url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/museo-botero-en-bogota",
+        "consulted_at": "2026-10-17"
+      },
+      {
+        "label": "Visit Bogotá: Torre Colpatria",
+        "url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/torre-colpatria",
+        "consulted_at": "2026-10-17"
+      },
+      {
+        "label": "Banco de la República: estatua de Bolívar y plaza",
+        "url": "https://colecciones.banrepcultural.org/es/document/numismtica/63a069155d96b8790f342e96",
+        "consulted_at": "2026-10-17"
+      },
+      {
+        "label": "Visit Bogotá: Plaza de Bolívar",
+        "url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/plaza-de-bolivar",
+        "consulted_at": "2026-10-17"
+      }
+    ],
+    "notes": [
+      "Revisión local autorizada; ninguna aprobación editorial o de producción.",
+      "Portada separada de Monserrate. Ocho principales; inventario investigado20,12 fuera de selección conservados.",
+      "Fotografías provisionales con licencia y origen; ilustraciones finales no generadas.",
+      "Historia independiente en sidecar para enlazar campo existente de administración; ZIPschema2 aún no soporta historia.",
+      "Actividades y directorio investigados no integrados aún."
+    ]
+  }
+}

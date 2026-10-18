@@ -15,9 +15,12 @@
   const authorityWrap = document.querySelector('#registration-authority-wrap');
   const authorityInput = document.querySelector('#registration-authority-document');
   let timer;
+  const selectionNotice=document.createElement('p');selectionNotice.className='notice business-claim-review-message';selectionNotice.setAttribute('role','status');selectionNotice.hidden=true;results.after(selectionNotice);
   const endpoint = `${form.dataset.searchUrl}?tipo=business&search=1`;
 
-  function choose(mode, id = '') {
+  function choose(mode, id = '', reviewMessage = '', isOperator = false) {
+    selectionNotice.textContent=reviewMessage;selectionNotice.hidden=!reviewMessage;
+    form.dataset.operatorEligible = isOperator ? '1' : '0';
     type.value = mode;
     businessId.value = id;
     const isNew = mode === 'new_business';
@@ -25,6 +28,7 @@
     newNameWrap.hidden = !isNew;
     newName.required = isNew;
     submit.disabled = !mode;
+    form.dispatchEvent(new Event('operator-eligibility-change'));
     form.querySelectorAll('.business-registration-option input').forEach((radio) => {
       radio.checked = mode === 'existing_business' && radio.value === id;
     });
@@ -46,7 +50,7 @@
       return;
     }
     const intro = document.createElement('p');
-    intro.textContent = 'Elige el negocio correcto. Los que ya tienen una solicitud o representante aparecen como no disponibles.';
+    intro.textContent = 'Elige el negocio correcto. Si ya tiene un responsable, podrás solicitar una revisión sin modificar su acceso actual.';
     results.append(intro);
     for (const item of items) {
       const label = document.createElement('label');
@@ -56,9 +60,9 @@
       radio.disabled = !item.can_request;
       const copy = document.createElement('span');
       const name = document.createElement('strong'); name.textContent = item.display_name;
-      const state = document.createElement('small'); state.textContent = item.can_request ? 'Está en nuestros registros · puedes solicitar asociarlo' : 'Ya tiene una solicitud o una cuenta asociada';
+      const state = document.createElement('small'); state.textContent = item.requires_review ? (item.review_message || 'Este negocio ya tiene un responsable o una solicitud. Puedes pedir una revisión; no obtendrás acceso automáticamente.') : item.can_request ? 'Está en nuestros registros · puedes solicitar asociarlo' : 'No disponible para nuevas solicitudes en este momento';
       copy.append(name, state); label.append(radio, copy); results.append(label);
-      radio.addEventListener('change', () => { choose('existing_business', item.id); missing.disabled = false; });
+      radio.addEventListener('change', () => { choose('existing_business', String(item.id), item.requires_review ? (item.review_message || 'Tu solicitud necesita revisión y no cambia al responsable actual.') : '', !!item.is_experience_operator); missing.disabled = false; });
     }
     missing.disabled = false;
     choose('', '');

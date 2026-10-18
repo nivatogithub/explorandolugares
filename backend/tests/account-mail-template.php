@@ -1,0 +1,5 @@
+<?php
+declare(strict_types=1);
+require __DIR__.'/../app/AccountMailTemplate.php';
+foreach([true,false] as $verify){$url='https://explorandolugares.com/example?token=TEST&other=1';$mail=AccountMailTemplate::build('persona@example.invalid',$url,$verify);if(!str_contains($mail['htmlContent'],'role="presentation"')||!str_contains($mail['htmlContent'],'alt="Explorando Lugares"')||!str_contains($mail['htmlContent'],'persona@example.invalid')||!str_contains($mail['htmlContent'],'&amp;other=1')||str_contains(strip_tags($mail['htmlContent']),'token=TEST')||!str_contains($mail['textContent'],$url))throw new RuntimeException('Missing email content or exposed action URL');$bad=AccountMailTemplate::build('<script>','https://example.invalid/?q=" onmouseover="evil',$verify,true);if(str_contains($bad['htmlContent'],'<script>')||!str_starts_with($bad['subject'],'[Ejemplo]'))throw new RuntimeException('Unescaped content or unlabeled example');}
+echo "PASS: two HTML templates, logo, recipient, button, text fallback, escaping and example label\n";

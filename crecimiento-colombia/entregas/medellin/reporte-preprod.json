@@ -1,0 +1,118 @@
+{
+  "version": 3,
+  "destination_id": "CO-05-medellin",
+  "zip": "paquete-preprod.zip",
+  "zip_sha256": "616de788ce8dcac3dcab8ac0f44212ce42f4e2f596a03a64c0d2690323daf8fb",
+  "main_place_count": 8,
+  "unique_image_files": 9,
+  "unique_image_hashes": 9,
+  "selection_criterion": "Relevancia turística documentada y variedad: ciencia, patrimonio paisa, naturaleza urbana y rural, memoria comunitaria, arte, patrimonio religioso y espacio público. Selección editorial propuesta, no ranking oficial de visitantes; independiente de disponibilidad fotográfica.",
+  "included": [
+    "parque-explora",
+    "pueblito-paisa",
+    "jardin-botanico",
+    "comuna13",
+    "museo-antioquia",
+    "arvi",
+    "catedral-metropolitana",
+    "pies-descalzos"
+  ],
+  "secondary": [
+    "mamm",
+    "coltejer",
+    "edificio-epm",
+    "candelaria",
+    "parque-lleras",
+    "parque-poblado",
+    "avenida-jardin",
+    "plaza-botero",
+    "palacio-cultura",
+    "parque-bolivar",
+    "parque-berrio",
+    "junin",
+    "provenza",
+    "via-primavera",
+    "manila",
+    "el-hueco",
+    "ciudad-rio",
+    "planetario",
+    "casa-memoria",
+    "museo-castillo"
+  ],
+  "secondary_decisions": [
+    {
+      "slug": "coltejer",
+      "decision": "solo_portada_distante",
+      "reason": "Instrucción explícita: no tarjeta. Fotos cercanas anteriores descartadas como portada. Nueva vista requiere ciudad y silueta completa."
+    },
+    {
+      "slug": "plaza-botero",
+      "decision": "integrado_contexto_museo",
+      "reason": "Evitar duplicar nodo Plaza Botero/Museo entre ocho principales; conserva ficha secundaria."
+    },
+    {
+      "slug": "parque-berrio",
+      "decision": "secundario_centro",
+      "reason": "Conservado en recorrido centro/La Candelaria, sin desplazar variedad de ocho nodos."
+    },
+    {
+      "slug": "parque-lleras",
+      "decision": "secundario_vida_poblado",
+      "reason": "Vida nocturna/gastronomía importantes, conservadas en información ampliada y directorio; no prometer operación de locales."
+    },
+    {
+      "slug": "parques-rio",
+      "decision": "secundario_por_ampliar",
+      "reason": "Evaluado como espacio urbano, sin fusionarlo geográficamente con Pies Descalzos; requiere ficha propia si se elige."
+    },
+    {
+      "slug": "la-macarena",
+      "decision": "agenda_no_principal_permanente",
+      "reason": "No incluir conciertos sin fecha/operador confirmados; eventos dependen agenda y no se prometen."
+    }
+  ],
+  "photographs": "provisionales_reales_no_IAfinal",
+  "approval": false,
+  "generation": false,
+  "publication": false,
+  "database_touched": true,
+  "imported": true,
+  "history_image_sidecar": "medellin-history.json",
+  "history_image_limitation": "Paisaje urbano contextual de 2016, provisional; no imagen de la fundación ni original aprobado.",
+  "validation": {
+    "php_real_importer": {
+      "places": 8,
+      "images": 9,
+      "php": "8.5.11"
+    },
+    "python_unique_images": "passed",
+    "inspection": "inspeccion-visual-v3.json"
+  },
+  "limits": [
+    "Fotos históricas no prueban condiciones actuales.",
+    "Aprobación original/textos y segunda revisión antes de IA/publicación.",
+    "Coltejer no tarjeta; no eventoMacarena prometido."
+  ],
+  "environment": "local_preprod_only",
+  "import_receipt": {
+    "destination": "medellin",
+    "id": 16,
+    "package_sha256": "616de788ce8dcac3dcab8ac0f44212ce42f4e2f596a03a64c0d2690323daf8fb",
+    "loaded_at": "2026-10-17T12:06:53+00:00",
+    "environment": "local_preprod_only",
+    "production_authorized": false,
+    "editorial_approved": false,
+    "provisional_photographs": true,
+    "places": 8,
+    "history_asset_id": 135,
+    "urls": {
+      "es": "http://127.0.0.1:8088/destinos/medellin/",
+      "en": "http://127.0.0.1:8088/en/destinos/medellin/",
+      "pt-BR": "http://127.0.0.1:8088/pt-br/destinos/medellin/"
+    }
+  },
+  "production_authorized": false,
+  "editorial_approved": false,
+  "history_image_imported": true,
+  "live_validation": "verificacion-preprod-v3.json"
+}

@@ -1,0 +1,28 @@
+{
+  "destino_id": "CO-11-bogota",
+  "revision": 3,
+  "eleccion_portada": null,
+  "originales_usos": [],
+  "licencias": [],
+  "textos_por_componente_idioma": [],
+  "ilustraciones": [],
+  "publicacion": false,
+  "rechazos": [
+    {
+      "foto_id": "bogota-vista-monserrate",
+      "uso": "portada",
+      "decision": "rechazado_por_usuario",
+      "motivo": "cables y representatividad"
+    }
+  ],
+  "regla": "Cada aprobación humana requiere id componente, idioma/uso y hash exacto; una elección no aprueba textos/licencia/ilustración/publicación.",
+  "retirada_portada_provisional": {
+    "foto_id": "opcion-1-monserrate",
+    "uso": "hero",
+    "decision": "retirada_por_observacion_usuario",
+    "motivo": "Monserrate no elegido como representación principal; repetía fotografía de tarjeta.",
+    "fecha": "2026-10-17"
+  },
+  "monserrate_tarjeta_requiere": "Nueva perspectiva aérea o elevada del santuario completo",
+  "propuestas_v3_aprobadas": false
+}

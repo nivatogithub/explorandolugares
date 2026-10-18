@@ -1,0 +1,3 @@
+@import url("/assets/cobertura/portal-tokens.css");
+.demo-card-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.demo-card-grid .directory-grid{grid-template-columns:minmax(0,1fr)!important}.demo-card-grid .demo-card-label{font-size:20px}.demo-card-grid .directory-tier{margin:12px 0}.demo-card-grid .directory-card{max-width:420px}@media(max-width:600px){.demo-card-grid{grid-template-columns:1fr}}
+body .demo-card-grid [data-directory-tier] .directory-grid{grid-template-columns:minmax(0,1fr)!important}

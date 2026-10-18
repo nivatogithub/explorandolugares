@@ -1,0 +1,652 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "santa-marta",
+    "country_code": "CO",
+    "department": "Magdalena",
+    "destination_type": "city",
+    "subregion": "Caribe",
+    "latitude": null,
+    "longitude": null,
+    "translations": {
+      "es": {
+        "display_name": "Santa Marta",
+        "eyebrow": "PREPROD · Referencias por aprobar",
+        "headline": "Santa Marta, entre el Caribe y la Sierra",
+        "intro": "El Caribe se encuentra con la Sierra Nevada en un distrito que reúne centro histórico, playas y montaña. Explora cada zona a su ritmo: Taganga, El Rodadero, Minca y Tayrona tienen paisajes e identidades diferentes.",
+        "meta_description": "El Caribe se encuentra con la Sierra Nevada en un distrito que reúne centro histórico, playas y montaña. Explora cada zona a su ritmo: Taganga, El Rodadero"
+      },
+      "en": {
+        "display_name": "Santa Marta",
+        "eyebrow": "PREPROD · References pending approval",
+        "headline": "Santa Marta, between the Caribbean and the Sierra",
+        "intro": "The Caribbean meets the Sierra Nevada in a district combining a historic centre, beaches and mountains. Explore each area at its own pace: Taganga, El Rodadero, Minca and Tayrona have different landscapes and identities.",
+        "meta_description": "The Caribbean meets the Sierra Nevada in a district combining a historic centre, beaches and mountains. Explore each area at its own pace: Taganga, El Roda"
+      },
+      "pt-BR": {
+        "display_name": "Santa Marta",
+        "eyebrow": "PREPROD · Referências pendentes de aprovação",
+        "headline": "Santa Marta, entre o Caribe e a Sierra",
+        "intro": "O Caribe encontra a Sierra Nevada em um distrito que reúne centro histórico, praias e montanha. Explore cada área no seu ritmo: Taganga, El Rodadero, Minca e Tayrona têm paisagens e identidades diferentes.",
+        "meta_description": "O Caribe encontra a Sierra Nevada em um distrito que reúne centro histórico, praias e montanha. Explore cada área no seu ritmo: Taganga, El Rodadero, Minca"
+      }
+    },
+    "history": {
+      "es": [
+        "La arquitectura del centro permite acercarse a la memoria colonial de la ciudad. La Catedral y la Casa de la Aduana son referencias para un recorrido cultural que puede complementarse con el Museo del Oro Tairona. Las colecciones del museo ayudan a interpretar el patrimonio regional sin reducir las comunidades indígenas a una imagen del pasado.",
+        "La Quinta de San Pedro Alejandrino conserva una dimensión distinta de esa memoria: allí murió Simón Bolívar el 17 de diciembre de 1830. El conjunto combina la casa histórica, espacios museales y un jardín botánico."
+      ],
+      "en": [
+        "The historic centre offers an introduction to the city's colonial heritage. The Cathedral and the Customs House are cultural landmarks, complemented by the Tairona Gold Museum. Its collections help explain regional heritage without portraying Indigenous communities only as figures from the past.",
+        "The Quinta de San Pedro Alejandrino preserves another part of this history: Simón Bolívar died there on 17 December 1830. The site combines the historic house, museum spaces and a botanical garden."
+      ],
+      "pt-BR": [
+        "A arquitetura do centro permite conhecer a memória colonial da cidade. A Catedral e a Casa da Aduana são referências culturais que podem ser complementadas pelo Museu do Ouro Tairona. Suas coleções ajudam a interpretar o patrimônio regional sem apresentar as comunidades indígenas apenas como figuras do passado.",
+        "A Quinta de San Pedro Alejandrino conserva outra dimensão dessa história: Simón Bolívar morreu ali em 17 de dezembro de 1830. O conjunto reúne a casa histórica, espaços museológicos e um jardim botânico."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Combina playas caribeñas y montaña.",
+        "Recorre historia, patrimonio y vida urbana.",
+        "Conoce bahías con identidad propia.",
+        "Descubre el café y las aves de la Sierra."
+      ],
+      "en": [
+        "Combine Caribbean beaches and mountains.",
+        "Explore history, heritage and urban life.",
+        "Visit bays with their own identities.",
+        "Discover the Sierra’s coffee and birdlife."
+      ],
+      "pt-BR": [
+        "Combine praias caribenhas e montanha.",
+        "Explore história, patrimônio e vida urbana.",
+        "Conheça baías com identidade própria.",
+        "Descubra o café e as aves da Sierra."
+      ]
+    },
+    "sources": {
+      "es": [
+        {
+          "label": "ProColombia",
+          "url": "https://colombia.travel/es/santa-marta",
+          "section_key": "history"
+        },
+        {
+          "label": "Alcaldía de Santa Marta",
+          "url": "https://santamarta.gov.co/playas-y-reservas-naturales",
+          "section_key": "history"
+        },
+        {
+          "label": "Fundación Museo Bolivariano",
+          "url": "https://www.museobolivariano.org.co/laquinta/",
+          "section_key": "history"
+        },
+        {
+          "label": "ProColombia",
+          "url": "https://colombia.travel/es/santa-marta/quinta-de-san-pedro-alejandrino",
+          "section_key": "history"
+        },
+        {
+          "label": "Banco de la República",
+          "url": "https://babel.banrepcultural.org/digital/collection/p17054coll18/id/1255/",
+          "section_key": "history"
+        },
+        {
+          "label": "Parques Nacionales Naturales",
+          "url": "https://www.parquesnacionales.gov.co/sala-prensa/noticias/el-parque-tayrona-cerrara-15-dias-en-octubre-para-conservacion/",
+          "section_key": "history"
+        },
+        {
+          "label": "Alcaldía de Santa Marta",
+          "url": "https://www.santamarta.gov.co/sala-prensa/noticias/el-cambio-en-la-cultura-avanza-con-la-reinauguracion-del-teatro-santa-marta",
+          "section_key": "history"
+        },
+        {
+          "label": "Parques Nacionales · ubicación Tayrona",
+          "url": "https://old.parquesnacionales.gov.co/portal/especial/tayrona/",
+          "section_key": "history"
+        },
+        {
+          "label": "ProColombia · Minca",
+          "url": "https://colombia.travel/es/santa-marta/descanso-en-minca",
+          "section_key": "history"
+        },
+        {
+          "label": "MinCiencias · Acuario Rodadero",
+          "url": "https://apropiaconsentido.minciencias.gov.co/donde-estamos-3/",
+          "section_key": "history"
+        },
+        {
+          "label": "Mundo Marino · distinción de acuarios",
+          "url": "https://mundomarinoacuario.com.co/preguntas-frecuentes/",
+          "section_key": "history"
+        }
+      ],
+      "en": [
+        {
+          "label": "ProColombia",
+          "url": "https://colombia.travel/es/santa-marta",
+          "section_key": "history"
+        },
+        {
+          "label": "Alcaldía de Santa Marta",
+          "url": "https://santamarta.gov.co/playas-y-reservas-naturales",
+          "section_key": "history"
+        },
+        {
+          "label": "Fundación Museo Bolivariano",
+          "url": "https://www.museobolivariano.org.co/laquinta/",
+          "section_key": "history"
+        },
+        {
+          "label": "ProColombia",
+          "url": "https://colombia.travel/es/santa-marta/quinta-de-san-pedro-alejandrino",
+          "section_key": "history"
+        },
+        {
+          "label": "Banco de la República",
+          "url": "https://babel.banrepcultural.org/digital/collection/p17054coll18/id/1255/",
+          "section_key": "history"
+        },
+        {
+          "label": "Parques Nacionales Naturales",
+          "url": "https://www.parquesnacionales.gov.co/sala-prensa/noticias/el-parque-tayrona-cerrara-15-dias-en-octubre-para-conservacion/",
+          "section_key": "history"
+        },
+        {
+          "label": "Alcaldía de Santa Marta",
+          "url": "https://www.santamarta.gov.co/sala-prensa/noticias/el-cambio-en-la-cultura-avanza-con-la-reinauguracion-del-teatro-santa-marta",
+          "section_key": "history"
+        },
+        {
+          "label": "Parques Nacionales · ubicación Tayrona",
+          "url": "https://old.parquesnacionales.gov.co/portal/especial/tayrona/",
+          "section_key": "history"
+        },
+        {
+          "label": "ProColombia · Minca",
+          "url": "https://colombia.travel/es/santa-marta/descanso-en-minca",
+          "section_key": "history"
+        },
+        {
+          "label": "MinCiencias · Acuario Rodadero",
+          "url": "https://apropiaconsentido.minciencias.gov.co/donde-estamos-3/",
+          "section_key": "history"
+        },
+        {
+          "label": "Mundo Marino · distinción de acuarios",
+          "url": "https://mundomarinoacuario.com.co/preguntas-frecuentes/",
+          "section_key": "history"
+        }
+      ],
+      "pt-BR": [
+        {
+          "label": "ProColombia",
+          "url": "https://colombia.travel/es/santa-marta",
+          "section_key": "history"
+        },
+        {
+          "label": "Alcaldía de Santa Marta",
+          "url": "https://santamarta.gov.co/playas-y-reservas-naturales",
+          "section_key": "history"
+        },
+        {
+          "label": "Fundación Museo Bolivariano",
+          "url": "https://www.museobolivariano.org.co/laquinta/",
+          "section_key": "history"
+        },
+        {
+          "label": "ProColombia",
+          "url": "https://colombia.travel/es/santa-marta/quinta-de-san-pedro-alejandrino",
+          "section_key": "history"
+        },
+        {
+          "label": "Banco de la República",
+          "url": "https://babel.banrepcultural.org/digital/collection/p17054coll18/id/1255/",
+          "section_key": "history"
+        },
+        {
+          "label": "Parques Nacionales Naturales",
+          "url": "https://www.parquesnacionales.gov.co/sala-prensa/noticias/el-parque-tayrona-cerrara-15-dias-en-octubre-para-conservacion/",
+          "section_key": "history"
+        },
+        {
+          "label": "Alcaldía de Santa Marta",
+          "url": "https://www.santamarta.gov.co/sala-prensa/noticias/el-cambio-en-la-cultura-avanza-con-la-reinauguracion-del-teatro-santa-marta",
+          "section_key": "history"
+        },
+        {
+          "label": "Parques Nacionales · ubicación Tayrona",
+          "url": "https://old.parquesnacionales.gov.co/portal/especial/tayrona/",
+          "section_key": "history"
+        },
+        {
+          "label": "ProColombia · Minca",
+          "url": "https://colombia.travel/es/santa-marta/descanso-en-minca",
+          "section_key": "history"
+        },
+        {
+          "label": "MinCiencias · Acuario Rodadero",
+          "url": "https://apropiaconsentido.minciencias.gov.co/donde-estamos-3/",
+          "section_key": "history"
+        },
+        {
+          "label": "Mundo Marino · distinción de acuarios",
+          "url": "https://mundomarinoacuario.com.co/preguntas-frecuentes/",
+          "section_key": "history"
+        }
+      ]
+    }
+  },
+  "hero_image": {
+    "file": "images/v4-portada-camellon.webp",
+    "image_origin": "external",
+    "image_creator": "Giancarlos1234",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Camellon_de_la_bah%C3%ADa.jpg",
+    "image_license": "CC BY-SA 4.0",
+    "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "alt": {
+      "es": "Vista aérea del Camellón de la Bahía y el frente urbano de Santa Marta, fotografía de 2022",
+      "en": "Aerial view of the bay promenade and Santa Marta waterfront, photograph from 2022",
+      "pt-BR": "Vista aérea do calçadão da baía e da orla urbana de Santa Marta, fotografia de 2022"
+    },
+    "caption": {
+      "es": "Giancarlos1234 / Wikimedia Commons / CC BY-SA 4.0",
+      "en": "Giancarlos1234 / Wikimedia Commons / CC BY-SA 4.0",
+      "pt-BR": "Giancarlos1234 / Wikimedia Commons / CC BY-SA 4.0"
+    }
+  },
+  "places": [
+    {
+      "slug": "tayrona",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Parque Nacional Natural Tayrona",
+          "description": "Senderos entre bosque tropical, rocas y playas como Cabo San Juan. El parque pertenece al distrito de Santa Marta; consulta accesos, cierres y zonas habilitadas con Parques Nacionales antes de organizar una excursión.",
+          "external_url": "https://old.parquesnacionales.gov.co/portal/especial/tayrona/",
+          "external_label": "Fuente oficial"
+        },
+        "en": {
+          "name": "Tayrona National Natural Park",
+          "description": "Trails through tropical forest, rock formations and beaches such as Cabo San Juan. The park lies within Santa Marta district; check entry points, closures and authorised areas with National Parks before planning a trip.",
+          "external_url": "https://old.parquesnacionales.gov.co/portal/especial/tayrona/",
+          "external_label": "Official source"
+        },
+        "pt-BR": {
+          "name": "Parque Nacional Natural Tayrona",
+          "description": "Trilhas entre floresta tropical, rochas e praias como Cabo San Juan. O parque fica no distrito de Santa Marta; consulte acessos, fechamentos e áreas autorizadas com Parques Nacionais antes do passeio.",
+          "external_url": "https://old.parquesnacionales.gov.co/portal/especial/tayrona/",
+          "external_label": "Fonte oficial"
+        }
+      },
+      "image": {
+        "file": "images/v4-tayrona.webp",
+        "image_origin": "external",
+        "image_creator": "Uhkabu",
+        "image_source_url": "https://commons.wikimedia.org/wiki/File:El_Cabo_at_Tayrona_National_Park.JPG",
+        "image_license": "CC BY-SA 3.0",
+        "image_license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "alt": {
+          "es": "Cabo San Juan en el Tayrona, fotografía de 2014",
+          "en": "Cabo San Juan in Tayrona, photograph from 2014",
+          "pt-BR": "Cabo San Juan no Tayrona, fotografia de 2014"
+        },
+        "caption": {
+          "es": "Uhkabu / Wikimedia Commons / CC BY-SA 3.0",
+          "en": "Uhkabu / Wikimedia Commons / CC BY-SA 3.0",
+          "pt-BR": "Uhkabu / Wikimedia Commons / CC BY-SA 3.0"
+        }
+      }
+    },
+    {
+      "slug": "quinta",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Quinta de San Pedro Alejandrino",
+          "description": "La casa donde murió Simón Bolívar en 1830 permite conectar historia, museo y jardines. Es una visita cultural dentro de Santa Marta, diferente del paseo por su centro histórico.",
+          "external_url": "https://www.museobolivariano.org.co/laquinta/",
+          "external_label": "Fuente oficial"
+        },
+        "en": {
+          "name": "Quinta de San Pedro Alejandrino",
+          "description": "The house where Simón Bolívar died in 1830 brings together history, a museum and gardens. This cultural visit within Santa Marta complements a walk through the historic centre.",
+          "external_url": "https://www.museobolivariano.org.co/laquinta/",
+          "external_label": "Official source"
+        },
+        "pt-BR": {
+          "name": "Quinta de San Pedro Alejandrino",
+          "description": "A casa onde Simón Bolívar morreu em 1830 reúne história, museu e jardins. Esta visita cultural em Santa Marta complementa o passeio pelo centro histórico.",
+          "external_url": "https://www.museobolivariano.org.co/laquinta/",
+          "external_label": "Fonte oficial"
+        }
+      },
+      "image": {
+        "file": "images/quinta-tarjeta.webp",
+        "image_origin": "external",
+        "image_creator": "Santy cardenas",
+        "image_source_url": "https://commons.wikimedia.org/wiki/File:4%20quinta%20de%20san%20pedro.jpg",
+        "image_license": "CC BY-SA 4.0",
+        "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "alt": {
+          "es": "Jardín y edificio de la Quinta de San Pedro Alejandrino, fotografía de 2016",
+          "en": "Garden and building at Quinta de San Pedro Alejandrino, photograph from 2016",
+          "pt-BR": "Jardim e edifício da Quinta de San Pedro Alejandrino, fotografia de 2016"
+        },
+        "caption": {
+          "es": "PREPROD · Referencia provisional · Santy cardenas / Wikimedia Commons / CC BY-SA 4.0",
+          "en": "PREPROD · Referencia provisional · Santy cardenas / Wikimedia Commons / CC BY-SA 4.0",
+          "pt-BR": "PREPROD · Referencia provisional · Santy cardenas / Wikimedia Commons / CC BY-SA 4.0"
+        }
+      }
+    },
+    {
+      "slug": "centro-historico",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Centro histórico y Catedral",
+          "description": "Recorre las calles del centro, la Catedral y el entorno del Parque de los Novios. Combina arquitectura, plazas y vida urbana en un paseo que puedes continuar hacia el malecón.",
+          "external_url": "https://colombia.travel/es/santa-marta",
+          "external_label": "Fuente oficial"
+        },
+        "en": {
+          "name": "Historic centre and Cathedral",
+          "description": "Walk through the centre, past the Cathedral and around Parque de los Novios. Architecture, squares and urban life share a route that you can continue towards the waterfront.",
+          "external_url": "https://colombia.travel/es/santa-marta",
+          "external_label": "Official source"
+        },
+        "pt-BR": {
+          "name": "Centro histórico e Catedral",
+          "description": "Percorra as ruas do centro, a Catedral e os arredores do Parque de los Novios. Arquitetura, praças e vida urbana se encontram neste passeio, que pode seguir até a orla.",
+          "external_url": "https://colombia.travel/es/santa-marta",
+          "external_label": "Fonte oficial"
+        }
+      },
+      "image": {
+        "file": "images/catedral-tarjeta.webp",
+        "image_origin": "external",
+        "image_creator": "Lombana",
+        "image_source_url": "https://commons.wikimedia.org/wiki/File:Catedral-santamarta.jpg",
+        "image_license": "CC BY-SA 3.0",
+        "image_license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "alt": {
+          "es": "Fachada y torre de la Catedral de Santa Marta, fotografía de 2010",
+          "en": "Facade and tower of Santa Marta Cathedral, photograph from 2010",
+          "pt-BR": "Fachada e torre da Catedral de Santa Marta, fotografia de 2010"
+        },
+        "caption": {
+          "es": "PREPROD · Referencia provisional · Lombana / Wikimedia Commons / CC BY-SA 3.0",
+          "en": "PREPROD · Referencia provisional · Lombana / Wikimedia Commons / CC BY-SA 3.0",
+          "pt-BR": "PREPROD · Referencia provisional · Lombana / Wikimedia Commons / CC BY-SA 3.0"
+        }
+      }
+    },
+    {
+      "slug": "taganga",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Taganga",
+          "description": "Bahía, embarcaciones de pesca y miradores costeros dan identidad a este corregimiento de Santa Marta. Dedica tiempo a su paisaje y ambiente pesquero, distintos de El Rodadero; consulta las condiciones de las salidas de buceo con sus operadores.",
+          "external_url": "https://colombia.travel/es/santa-marta",
+          "external_label": "Fuente oficial"
+        },
+        "en": {
+          "name": "Taganga",
+          "description": "The bay, fishing boats and coastal viewpoints define this rural district of Santa Marta. Take time to enjoy its scenery and fishing character, distinct from El Rodadero; check diving arrangements with the operators.",
+          "external_url": "https://colombia.travel/es/santa-marta",
+          "external_label": "Official source"
+        },
+        "pt-BR": {
+          "name": "Taganga",
+          "description": "A baía, os barcos de pesca e os mirantes costeiros definem este corregimiento de Santa Marta. Dedique tempo à paisagem e ao ambiente pesqueiro, diferentes de El Rodadero; consulte as condições dos mergulhos com os operadores.",
+          "external_url": "https://colombia.travel/es/santa-marta",
+          "external_label": "Fonte oficial"
+        }
+      },
+      "image": {
+        "file": "images/taganga-tarjeta.webp",
+        "image_origin": "external",
+        "image_creator": "Tisquesusa",
+        "image_source_url": "https://commons.wikimedia.org/wiki/File:Taganga%20Sunset.jpg",
+        "image_license": "CC BY-SA 4.0",
+        "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "alt": {
+          "es": "Atardecer sobre la bahía de Taganga, fotografía de 2015",
+          "en": "Sunset over Taganga bay, photograph from 2015",
+          "pt-BR": "Pôr do sol na baía de Taganga, fotografia de 2015"
+        },
+        "caption": {
+          "es": "PREPROD · Referencia provisional · Tisquesusa / Wikimedia Commons / CC BY-SA 4.0",
+          "en": "PREPROD · Referencia provisional · Tisquesusa / Wikimedia Commons / CC BY-SA 4.0",
+          "pt-BR": "PREPROD · Referencia provisional · Tisquesusa / Wikimedia Commons / CC BY-SA 4.0"
+        }
+      }
+    },
+    {
+      "slug": "rodadero",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "El Rodadero",
+          "description": "Playa urbana y paseo costero en la bahía de Gaira, con un ambiente distinto al centro y a Taganga. Es un sector de Santa Marta, con identidad turística propia y opciones para organizar salidas por mar.",
+          "external_url": "https://colombia.travel/es/santa-marta",
+          "external_label": "Fuente oficial"
+        },
+        "en": {
+          "name": "El Rodadero",
+          "description": "An urban beach and waterfront on Gaira Bay, with a character different from downtown and Taganga. This area of Santa Marta has its own tourism identity and serves as a starting point for sea outings.",
+          "external_url": "https://colombia.travel/es/santa-marta",
+          "external_label": "Official source"
+        },
+        "pt-BR": {
+          "name": "El Rodadero",
+          "description": "Praia urbana e passeio à beira-mar na baía de Gaira, com ambiente diferente do centro e de Taganga. Este setor de Santa Marta tem identidade turística própria e serve de ponto de partida para passeios marítimos.",
+          "external_url": "https://colombia.travel/es/santa-marta",
+          "external_label": "Fonte oficial"
+        }
+      },
+      "image": {
+        "file": "images/v4-rodadero.webp",
+        "image_origin": "external",
+        "image_creator": "Sheisale",
+        "image_source_url": "https://commons.wikimedia.org/wiki/File:Vista_general_de_la_playa_de_El_Rodadero.jpg",
+        "image_license": "CC BY-SA 4.0",
+        "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "alt": {
+          "es": "Vista de la playa de El Rodadero, fotografía de 2012",
+          "en": "View of El Rodadero beach, photograph from 2012",
+          "pt-BR": "Vista da praia de El Rodadero, fotografia de 2012"
+        },
+        "caption": {
+          "es": "Sheisale / Wikimedia Commons / CC BY-SA 4.0",
+          "en": "Sheisale / Wikimedia Commons / CC BY-SA 4.0",
+          "pt-BR": "Sheisale / Wikimedia Commons / CC BY-SA 4.0"
+        }
+      }
+    },
+    {
+      "slug": "minca",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Minca",
+          "description": "Este corregimiento en las estribaciones de la Sierra Nevada ofrece paisaje de montaña, café y observación de aves. Planéalo como una salida desde la ciudad y conserva su identidad propia: no es otro municipio ni una playa de Santa Marta.",
+          "external_url": "https://colombia.travel/es/santa-marta/descanso-en-minca",
+          "external_label": "Fuente oficial"
+        },
+        "en": {
+          "name": "Minca",
+          "description": "This rural district in the Sierra Nevada foothills offers mountain scenery, coffee and birdwatching. Plan it as a trip from the city while keeping its distinct identity: it is neither a separate municipality nor a Santa Marta beach.",
+          "external_url": "https://colombia.travel/es/santa-marta/descanso-en-minca",
+          "external_label": "Official source"
+        },
+        "pt-BR": {
+          "name": "Minca",
+          "description": "Este corregimiento nos contrafortes da Sierra Nevada oferece paisagem de montanha, café e observação de aves. Planeje uma saída da cidade preservando sua identidade: não é outro município nem uma praia de Santa Marta.",
+          "external_url": "https://colombia.travel/es/santa-marta/descanso-en-minca",
+          "external_label": "Fonte oficial"
+        }
+      },
+      "image": {
+        "file": "images/v4-minca.webp",
+        "image_origin": "external",
+        "image_creator": "Stoni111121",
+        "image_source_url": "https://commons.wikimedia.org/wiki/File:View_over_Minca.jpg",
+        "image_license": "CC BY-SA 4.0",
+        "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "alt": {
+          "es": "Paisaje de Minca desde el camino a La Candelaria, fotografía de 2016",
+          "en": "Minca landscape from the path to La Candelaria, photograph from 2016",
+          "pt-BR": "Paisagem de Minca no caminho a La Candelaria, fotografia de 2016"
+        },
+        "caption": {
+          "es": "Stoni111121 / Wikimedia Commons / CC BY-SA 4.0",
+          "en": "Stoni111121 / Wikimedia Commons / CC BY-SA 4.0",
+          "pt-BR": "Stoni111121 / Wikimedia Commons / CC BY-SA 4.0"
+        }
+      }
+    },
+    {
+      "slug": "museo-tairona",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Museo del Oro Tairona · Casa de la Aduana",
+          "description": "La Casa de la Aduana reúne patrimonio arqueológico y relatos sobre las sociedades de la Sierra Nevada y Santa Marta. Aporta contexto cultural al viaje más allá de las playas y la memoria colonial.",
+          "external_url": "https://www.santamarta.gov.co/museos",
+          "external_label": "Fuente oficial"
+        },
+        "en": {
+          "name": "Tairona Gold Museum · Customs House",
+          "description": "The Customs House brings together archaeological heritage and stories about the societies of the Sierra Nevada and Santa Marta. It adds cultural context beyond beaches and colonial history.",
+          "external_url": "https://www.santamarta.gov.co/museos",
+          "external_label": "Official source"
+        },
+        "pt-BR": {
+          "name": "Museu do Ouro Tairona · Casa da Aduana",
+          "description": "A Casa da Aduana reúne patrimônio arqueológico e relatos sobre as sociedades da Sierra Nevada e de Santa Marta. Acrescenta contexto cultural à viagem além das praias e da história colonial.",
+          "external_url": "https://www.santamarta.gov.co/museos",
+          "external_label": "Fonte oficial"
+        }
+      },
+      "image": {
+        "file": "images/v4-museo-tairona.webp",
+        "image_origin": "external",
+        "image_creator": "Jdvillalobos",
+        "image_source_url": "https://commons.wikimedia.org/wiki/File:Casa_de_la_Aduana_Santa_Marta.jpg",
+        "image_license": "CC BY-SA 4.0",
+        "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "alt": {
+          "es": "Fachada de la Casa de la Aduana en Santa Marta, fotografía de 2024",
+          "en": "Facade of the Customs House in Santa Marta, photograph from 2024",
+          "pt-BR": "Fachada da Casa da Aduana em Santa Marta, fotografia de 2024"
+        },
+        "caption": {
+          "es": "Jdvillalobos / Wikimedia Commons / CC BY-SA 4.0",
+          "en": "Jdvillalobos / Wikimedia Commons / CC BY-SA 4.0",
+          "pt-BR": "Jdvillalobos / Wikimedia Commons / CC BY-SA 4.0"
+        }
+      }
+    },
+    {
+      "slug": "acuario",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Acuario y Museo del Mar de El Rodadero",
+          "description": "Espacio de visita dedicado a fauna marina en el entorno costero de El Rodadero, al que se llega por mar. No es el Acuario Mundo Marino: son establecimientos diferentes. Consulta directamente condiciones de acceso y programa de visita.",
+          "external_url": "https://apropiaconsentido.minciencias.gov.co/donde-estamos-3/",
+          "external_label": "Fuente oficial"
+        },
+        "en": {
+          "name": "El Rodadero Aquarium and Sea Museum",
+          "description": "A visitor venue devoted to marine fauna on the coast near El Rodadero, reached by sea. It is separate from Acuario Mundo Marino. Check access arrangements and the visitor programme directly with the venue.",
+          "external_url": "https://apropiaconsentido.minciencias.gov.co/donde-estamos-3/",
+          "external_label": "Official source"
+        },
+        "pt-BR": {
+          "name": "Aquário e Museu do Mar de El Rodadero",
+          "description": "Espaço de visita dedicado à fauna marinha no litoral próximo de El Rodadero, com acesso pelo mar. É diferente do Acuario Mundo Marino. Consulte diretamente as condições de acesso e o programa de visita.",
+          "external_url": "https://apropiaconsentido.minciencias.gov.co/donde-estamos-3/",
+          "external_label": "Fonte oficial"
+        }
+      },
+      "image": {
+        "file": "images/v4-acuario.webp",
+        "image_origin": "external",
+        "image_creator": "Petruss",
+        "image_source_url": "https://commons.wikimedia.org/wiki/File:Acuario_el_rodadero.jpg",
+        "image_license": "CC0 1.0",
+        "image_license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "alt": {
+          "es": "Instalaciones del Acuario El Rodadero con delfines, fotografía histórica de 2011",
+          "en": "El Rodadero Aquarium facilities with dolphins, historical photograph from 2011",
+          "pt-BR": "Instalações do Aquário El Rodadero com golfinhos, fotografia histórica de 2011"
+        },
+        "caption": {
+          "es": "Petruss / Wikimedia Commons / CC0 1.0",
+          "en": "Petruss / Wikimedia Commons / CC0 1.0",
+          "pt-BR": "Petruss / Wikimedia Commons / CC0 1.0"
+        }
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "2026-10-16",
+    "positioning": "Avance local, no aprobado para producción.",
+    "competitors": [],
+    "potential_allies": [],
+    "business_prospects": [],
+    "acquisition_strategies": [],
+    "sources": [
+      {
+        "title": "ProColombia",
+        "url": "https://colombia.travel/es/santa-marta"
+      },
+      {
+        "title": "Alcaldía de Santa Marta",
+        "url": "https://santamarta.gov.co/playas-y-reservas-naturales"
+      },
+      {
+        "title": "Fundación Museo Bolivariano",
+        "url": "https://www.museobolivariano.org.co/laquinta/"
+      },
+      {
+        "title": "ProColombia",
+        "url": "https://colombia.travel/es/santa-marta/quinta-de-san-pedro-alejandrino"
+      },
+      {
+        "title": "Banco de la República",
+        "url": "https://babel.banrepcultural.org/digital/collection/p17054coll18/id/1255/"
+      },
+      {
+        "title": "Parques Nacionales Naturales",
+        "url": "https://www.parquesnacionales.gov.co/sala-prensa/noticias/el-parque-tayrona-cerrara-15-dias-en-octubre-para-conservacion/"
+      },
+      {
+        "title": "Alcaldía de Santa Marta",
+        "url": "https://www.santamarta.gov.co/sala-prensa/noticias/el-cambio-en-la-cultura-avanza-con-la-reinauguracion-del-teatro-santa-marta"
+      }
+    ],
+    "notes": [
+      "Selección de ocho principales por relevancia y variedad; inventario amplio preservado en revision-ampliada.json.",
+      "Taganga y Minca: corregimientos del distrito. El Rodadero: sector urbano. Mantener guías autónomas relacionadas sin doble conteo.",
+      "Fotografías históricas de referencia no aprobadas; generación con skill después de elección humana.",
+      "Acuario Rodadero y Acuario Mundo Marino son distintos. Foto acuario2011 provisional, mejorar encuadre sin espectáculo.",
+      "Historia: referencia propia Casa de la Aduana exterior, distinta de portada y tarjetas; sidecar local separado del ZIPv2."
+    ]
+  }
+}

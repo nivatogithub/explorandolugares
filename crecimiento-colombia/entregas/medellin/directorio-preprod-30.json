@@ -1,0 +1,426 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "medellin",
+  "businesses": [
+    {
+      "name": "Dann Carlton Medellín",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.danncarlton.com/",
+          "checked_at": "2026-10-17",
+          "note": "Fuente pública documentada en el inventario del destino. Sin contacto, alianza ni verificación operativa presencial. Ficha gratuita no reclamada; propuesta privada."
+        }
+      ]
+    },
+    {
+      "name": "Elcielo Hotel",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.elcielohotel.com/",
+          "checked_at": "2026-10-17",
+          "note": "Fuente pública documentada en el inventario del destino. Sin contacto, alianza ni verificación operativa presencial. Ficha gratuita no reclamada; propuesta privada."
+        }
+      ]
+    },
+    {
+      "name": "Hotel San Fernando Plaza",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.hotelsanfernandoplaza.com/",
+          "checked_at": "2026-10-17",
+          "note": "Fuente pública documentada en el inventario del destino. Sin contacto, alianza ni verificación operativa presencial. Ficha gratuita no reclamada; propuesta privada."
+        }
+      ]
+    },
+    {
+      "name": "Elcielo Restaurant Medellín",
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://elcielo.com.co/medellin/",
+          "checked_at": "2026-10-17",
+          "note": "Fuente pública documentada en el inventario del destino. Sin contacto, alianza ni verificación operativa presencial. Ficha gratuita no reclamada; propuesta privada."
+        }
+      ]
+    },
+    {
+      "name": "El Bistró by Juanma",
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://elcielo.com.co/medellin/elcielo-bistro/",
+          "checked_at": "2026-10-17",
+          "note": "Fuente pública documentada en el inventario del destino. Sin contacto, alianza ni verificación operativa presencial. Ficha gratuita no reclamada; propuesta privada."
+        }
+      ]
+    },
+    {
+      "name": "La Sere by Juanma",
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://lasere.co/",
+          "checked_at": "2026-10-17",
+          "note": "Fuente pública documentada en el inventario del destino. Sin contacto, alianza ni verificación operativa presencial. Ficha gratuita no reclamada; propuesta privada."
+        }
+      ]
+    },
+    {
+      "name": "Museo de Antioquia",
+      "category_code": "cultura",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://museodeantioquia.co/",
+          "checked_at": "2026-10-17",
+          "note": "Fuente pública documentada en el inventario del destino. Sin contacto, alianza ni verificación operativa presencial. Ficha gratuita no reclamada; propuesta privada."
+        }
+      ]
+    },
+    {
+      "name": "Jardín Botánico Joaquín Antonio Uribe",
+      "category_code": "cultura",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.botanicomedellin.org/",
+          "checked_at": "2026-10-17",
+          "note": "Fuente pública documentada en el inventario del destino. Sin contacto, alianza ni verificación operativa presencial. Ficha gratuita no reclamada; propuesta privada."
+        }
+      ]
+    },
+    {
+      "name": "Parque Explora",
+      "category_code": "cultura",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.parqueexplora.org/en",
+          "checked_at": "2026-10-17",
+          "note": "Fuente pública documentada en el inventario del destino. Sin contacto, alianza ni verificación operativa presencial. Ficha gratuita no reclamada; propuesta privada."
+        }
+      ]
+    },
+    {
+      "name": "Museo de Arte Moderno de Medellín",
+      "category_code": "cultura",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.elmamm.org/",
+          "checked_at": "2026-10-17",
+          "note": "Fuente pública documentada en el inventario del destino. Sin contacto, alianza ni verificación operativa presencial. Ficha gratuita no reclamada; propuesta privada."
+        }
+      ]
+    },
+    {
+      "name": "Medellín Marriott Hotel",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.marriott.com/es/hotel-sitemap/colombia-hotel-sitemap",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Four Points by Sheraton Medellín",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.marriott.com/es/hotel-sitemap/colombia-hotel-sitemap",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "City Express Plus by Marriott Medellín",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.marriott.com/es/hotel-sitemap/colombia-hotel-sitemap",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "ibis Medellín",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://all.accor.com/a/en/destination/city/hotels-medellin-v6563.html",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Novotel Medellín El Tesoro",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://all.accor.com/hotel/B465/index.es.shtml",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Hatoviejo",
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://hatoviejo.com/",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Restaurante In Situ",
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.botanicomedellin.org/vivenos/alimentos-y-bebidas/restaurante-in-situ/",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Café del Bosque — Jardín Botánico",
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.medellin.travel/wp-content/uploads/2024/09/Jardin-Botanico.pdf",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "El Vagón — Jardín Botánico",
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.medellin.travel/wp-content/uploads/2024/09/Jardin-Botanico.pdf",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Tres’08 — El Tesoro",
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://eltesoro.com.co/tres08-cafe-restaurante-y-bar-en-el-tesoro-parque-comercial/",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "El Tesoro Parque Comercial",
+      "category_code": "comercio",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://eltesoro.com.co/",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Centro Comercial Santafé Medellín",
+      "category_code": "comercio",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.santafemedellin.com/",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Centro Comercial Oviedo",
+      "category_code": "comercio",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.medellin.travel/wp-content/uploads/2026/03/guia-vive-el-poblado-v1.pdf",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Monterrey Centro Comercial",
+      "category_code": "comercio",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://monterrey.com.co/",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Museo Casa de la Memoria",
+      "category_code": "cultura",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.museocasadelamemoria.gov.co/",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Teatro Metropolitano José Gutiérrez Gómez",
+      "category_code": "cultura",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.medellin.travel/cultura-y-patrimonio/?lang=en",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Planetario de Medellín",
+      "category_code": "cultura",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.planetariomedellin.org/",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Casa Museo Gardeliana",
+      "category_code": "cultura",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.medellin.gov.co/es/?p=540803",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Metro de Medellín",
+      "category_code": "transporte",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.metrodemedellin.gov.co/",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Museo El Castillo",
+      "category_code": "cultura",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.museoelcastillo.org/",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    }
+  ]
+}

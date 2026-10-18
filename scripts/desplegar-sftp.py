@@ -120,7 +120,7 @@ def remote_path(config, relative):
 
 
 def build(output, config=None):
-    source_folders = ['ensayos/v1', 'backend', 'content', 'scripts']
+    source_folders = ['ensayos/v1', 'backend', 'content', 'scripts', 'design/portal', 'preprod']
     for folder in source_folders:
         source = ROOT / folder
         if source.is_symlink() or any(item.is_symlink() for item in source.rglob('*')):
@@ -258,7 +258,12 @@ def upload_commands(config, files):
             directories.add(str(parent))
             parent = parent.parent
         entries.append((item, str(target)))
-    entries.sort(key=lambda entry: (0 if entry[0]['relative'].startswith('app/') else 1, entry[0]['relative']))
+    def upload_order(entry):
+        relative=entry[0]['relative']
+        # Dependencies first: private services, assets, pages, and routing last.
+        priority=0 if relative.startswith('app/') else (1 if relative.startswith('public/assets/') else (3 if relative=='public/.htaccess' else 2))
+        return priority,relative
+    entries.sort(key=upload_order)
     commands = [f'-mkdir {quote(path)}' for path in sorted(directories, key=lambda value: (value.count('/'), value))]
     commands += [f'put {quote(item["local"])} {quote(target)}' for item, target in entries]
     return commands

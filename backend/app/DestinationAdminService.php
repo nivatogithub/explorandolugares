@@ -106,8 +106,8 @@ final class DestinationAdminService
                 $q=$this->pdo->prepare('UPDATE destinations SET slug=?,destination_type=?,country_code=?,department=?,subregion=?,latitude=?,longitude=?,publication_status=?,display_order=?,updated_at=CURRENT_TIMESTAMP WHERE id=?');
                 $q->execute([$data['slug'],$data['type'],$data['country'],$data['department'],$data['subregion'],$data['lat'],$data['lng'],$data['status'],$data['order'],$id]);
             } else {
-                $q=$this->pdo->prepare('INSERT INTO destinations(slug,destination_type,country_code,department,subregion,latitude,longitude,publication_status,display_order) VALUES(?,?,?,?,?,?,?,?,?)');
-                $q->execute([$data['slug'],$data['type'],$data['country'],$data['department'],$data['subregion'],$data['lat'],$data['lng'],$data['status'],$data['order']]);
+                $q=$this->pdo->prepare('INSERT INTO destinations(slug,destination_type,country_code,department,subregion,latitude,longitude,publication_status,display_order,internal_research_json) VALUES(?,?,?,?,?,?,?,?,?,?)');
+                $q->execute([$data['slug'],$data['type'],$data['country'],$data['department'],$data['subregion'],$data['lat'],$data['lng'],$data['status'],$data['order'],$data['internal_research_json']]);
                 $id=(int)$this->pdo->lastInsertId();
             }
             $this->syncTranslations($id,$data);

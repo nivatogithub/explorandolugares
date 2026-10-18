@@ -1,0 +1,71 @@
+@import url("/assets/cobertura/portal-tokens.css");
+/* Administration uses the same current portal tokens as destination pages.
+   Compatibility !important rules override the historical global portal skin;
+   all overrides are restricted to body.portal-admin. */
+body.portal-admin{--ink:var(--el-text);--muted:var(--el-muted);--ember:var(--el-accent);--aqua:var(--el-action);--aqua-dark:var(--el-action-hover);--aqua-line:var(--el-border);--paper:var(--el-page);--cream:var(--el-card);--line:var(--el-border);background:var(--el-page)!important;color:var(--el-text);font-family:var(--el-font-ui);line-height:1.6}
+.portal-admin .admin-page{padding-top:32px;padding-bottom:48px;min-width:0}
+.portal-admin :is(h1,h2,h3,h4,legend){color:var(--el-text)!important}
+.portal-admin h1{font-family:var(--el-font-editorial);font-size:clamp(30px,3.5vw,44px);line-height:1.15;letter-spacing:-.6px;margin:16px 0 24px}
+.portal-admin :is(h2,h3,h4){font-family:var(--el-font-ui);line-height:1.3}
+.portal-admin h2{font-size:23px}.portal-admin h3{font-size:19px}
+.portal-admin a{color:var(--el-action-hover)}
+.portal-admin .eyebrow{color:var(--el-action)!important}
+.portal-admin .admin-sidebar{background:var(--el-card)!important;border-color:var(--el-border);box-shadow:none;border-radius:var(--el-radius-panel)}
+.portal-admin .admin-sidebar-brand{display:flex;gap:10px;align-items:center;padding:0 2px 16px;font-size:15px;color:var(--el-text);border-color:var(--el-border)}
+.portal-admin .admin-sidebar-brand img{width:66px;height:66px;object-fit:contain;flex:none}
+.portal-admin .admin-sidebar-brand strong{color:var(--el-action)}
+.portal-admin .admin-sidebar-brand small{margin-top:6px;font-size:9px;letter-spacing:.08em}
+.portal-admin .admin-sidebar nav h2{color:var(--el-muted)!important;font-size:10px}
+.portal-admin .admin-sidebar nav a{color:var(--el-text);min-height:44px;font-size:13px;box-shadow:none}
+.portal-admin .admin-sidebar nav a:hover{background:var(--el-hover)}
+.portal-admin .admin-sidebar nav a[aria-current=page]{background:var(--el-action)!important;color:var(--el-on-action)!important;box-shadow:none}
+.portal-admin .admin-sidebar-with-system>.admin-system-shortcuts{background:var(--el-card);border-color:var(--el-border)}
+.portal-admin :is(.admin-workflow-tabs,.admin-tabs){background:var(--el-panel);border-color:var(--el-border);gap:8px;padding:8px;border-radius:12px}
+.portal-admin :is(.admin-workflow-tabs,.admin-tabs) a{color:var(--el-text);background:var(--el-field);border-radius:8px;min-height:44px;padding:10px 16px;box-sizing:border-box;text-decoration:none}
+.portal-admin :is(.admin-workflow-tabs,.admin-tabs) a[aria-current=page]{background:var(--el-action)!important;color:var(--el-on-action)!important;box-shadow:none}
+.portal-admin .pill,.portal-admin button:not(.account-user-menu button):not(.leaflet-control-zoom-in):not(.leaflet-control-zoom-out):not(.floating-select-trigger):not(.floating-select-option):not(.danger){background:var(--el-action)!important;color:var(--el-on-action)!important;border:1px solid var(--el-action)!important;border-radius:var(--el-radius-pill);box-shadow:none;min-height:44px;padding:10px 18px;font:600 14px/1.4 var(--el-font-ui);cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+.portal-admin .pill.light,.portal-admin button.secondary{background:var(--el-field)!important;color:var(--el-action-hover)!important;border-color:var(--el-control-border)!important}
+.portal-admin :is(button,.pill):hover{filter:brightness(.96)}
+.portal-admin :is(button,.pill):disabled{opacity:.5;cursor:not-allowed}
+.portal-admin :is(button,.pill).danger{background:#a32b22!important;border-color:#a32b22!important;color:var(--el-on-action)!important}
+.portal-admin :is(.destination-admin-list,.admin-system,.account-portal-card,.campaign-panel,.campaign-preview,.investor-kpi,.investor-finance-card,.investor-unmeasured,.investor-evidence,.investor-data-note,.investor-period-note,.crm-panel,.crm-metrics>a,.cost-cancellation){background:var(--el-card)!important;border:1px solid var(--el-border);border-radius:var(--el-radius-card);box-shadow:none;color:var(--el-text)}
+.portal-admin :is(.destination-admin-list,.admin-system,.campaign-panel,.crm-panel){padding:24px;margin-top:24px;margin-bottom:24px;min-width:0}
+.portal-admin :is(.destination-editor,.destination-translation,.destination-package-import,.destination-package-preview,fieldset){background:var(--el-field)!important;border:1px solid var(--el-border);border-radius:var(--el-radius-card);padding:20px;min-width:0}
+.portal-admin :is(.notice,.health-meter,.account-next-steps){background:var(--el-panel)!important;border:1px solid var(--el-border);border-radius:12px;padding:16px 20px;color:var(--el-text)!important;line-height:1.6}
+.portal-admin .health-critical{border:2px solid #b42318!important;background:#fff1ee!important;color:#8f1d14!important}
+.portal-admin :is(input:not([type=hidden]):not([type=checkbox]):not([type=radio]):not([type=file]):not([type=color]):not([type=range]),textarea,select){box-sizing:border-box;max-width:100%;min-height:44px;padding:11px 13px;border:1px solid var(--el-control-border)!important;border-radius:var(--el-radius-field);background:var(--el-field)!important;color:var(--el-text)!important;font:400 14px/1.5 var(--el-font-ui);box-shadow:none}
+.portal-admin :is(input,select,textarea):disabled{opacity:.65;background:var(--el-panel)!important}
+.portal-admin textarea{min-height:100px;resize:vertical}
+.portal-admin :is(input[type=checkbox],input[type=radio]){accent-color:var(--el-action)}
+.portal-admin input[type=file]::file-selector-button{padding:10px 14px;margin:0 12px 4px 0;border:1px solid var(--el-control-border);border-radius:8px;background:var(--el-panel);color:var(--el-text);font:inherit;cursor:pointer}
+.portal-admin :is(.registration-form,.campaign-form){display:grid;gap:20px;margin:24px 0}
+.portal-admin :is(.registration-form,.campaign-form,.destination-form-grid) label{gap:8px;color:var(--el-text);line-height:1.5}
+.portal-admin :is(.registration-form,.campaign-form) > label{display:grid}
+.portal-admin .destination-form-grid{gap:20px;align-items:start}
+.portal-admin :is(.destination-editor-actions,.cost-form-actions,.business-bulk-toolbar){gap:12px;margin-top:20px;align-items:center}
+.portal-admin :is(.payment-review-form,.admin-db-action){display:grid;gap:16px}
+.portal-admin .payment-review-form label{display:grid;gap:8px}
+.portal-admin .payment-review-form>div{display:flex;gap:12px;flex-wrap:wrap}
+.portal-admin :is(.destination-admin-table,.health-table){overflow:auto;max-width:100%}
+.portal-admin table{border-collapse:separate;border-spacing:0;width:100%;font-size:14px;color:var(--el-text)}
+.portal-admin :is(th,td){padding:14px 12px;border-bottom:1px solid var(--el-border)!important;vertical-align:top;background:transparent!important;color:var(--el-text)!important;text-align:left}
+.portal-admin th{background:var(--el-panel)!important;font-weight:700}
+.portal-admin tbody tr:hover td{background:var(--el-hover)!important}
+.portal-admin .investor-kpi strong{color:var(--el-text)}
+.portal-admin .investor-gap-grid>article{background:var(--el-card);border-color:var(--el-border)}
+.portal-admin :is(small,.small-note){color:var(--el-muted);line-height:1.6}
+.portal-admin :is(a,button,input,select,textarea,summary):focus-visible{outline:3px solid var(--el-focus)!important;outline-offset:3px}
+.portal-admin details>summary{cursor:pointer}
+.portal-admin .brand-logo{object-fit:contain}
+@media(max-width:850px){.portal-admin .admin-page{padding-top:20px}.portal-admin .admin-sidebar-brand{justify-content:flex-start}.portal-admin .admin-sidebar-brand img{width:58px;height:58px}}
+@media(max-width:600px){.portal-admin :is(.destination-admin-list,.admin-system,.campaign-panel,.crm-panel){padding:18px}.portal-admin :is(.destination-editor,.destination-translation,fieldset){padding:16px}.portal-admin .destination-form-grid{grid-template-columns:minmax(0,1fr)}.portal-admin .business-filter-bar{grid-template-columns:minmax(0,1fr)}.portal-admin :is(.admin-workflow-tabs,.admin-tabs) a{flex:1;text-align:center}}
+/* Select widgets use field styling, even though their accessible trigger is a button. */
+.portal-admin button.floating-select-trigger{background:var(--el-field)!important;color:var(--el-text)!important;border-color:var(--el-control-border)!important;border-radius:var(--el-radius-field);justify-content:space-between;text-align:left;font-weight:400;width:100%;padding:11px 13px}
+.portal-admin .floating-select-menu{background:var(--el-field)!important;border:1px solid var(--el-control-border);color:var(--el-text)}
+.portal-admin button.floating-select-option{background:var(--el-field)!important;color:var(--el-text)!important;border:0!important;border-radius:4px;justify-content:flex-start;text-align:left;width:100%;font-weight:400}
+.portal-admin button.floating-select-option:hover,.portal-admin button.floating-select-option[aria-selected=true]{background:var(--el-hover)!important;color:var(--el-text)!important}
+.portal-admin .portal-account-strip-inner{justify-content:flex-end;flex-wrap:wrap}
+/* The shared account script rebuilds its class list; anchor to the panel slot. */
+.portal-admin .admin-page>.portal-account-strip{position:fixed;top:0;left:0;right:0;z-index:120;width:100%;background:var(--el-field);border-bottom:1px solid var(--el-border)}
+.portal-admin .admin-page>.portal-account-strip>.portal-account-strip-inner{display:flex;justify-content:flex-end;max-width:1440px;min-height:48px;margin:auto;padding:4px 24px;box-sizing:border-box}
+.portal-admin .portal-account-strip :is(a,button){background:transparent!important;color:var(--el-action-hover)!important;border:0!important;border-radius:8px;padding:4px 6px}

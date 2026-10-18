@@ -1,0 +1,54 @@
+{
+  "version": 3,
+  "inspected_at": "2026-10-17",
+  "method": "Inspección visual de archivos locales con view_image; aprobación editorial humana independiente pendiente.",
+  "cover_silhouette_verified": true,
+  "images": {
+    "pueblito-2012": {
+      "usable": true,
+      "notes": "Plaza de la recreación Pueblito Paisa, iglesia/fuente/casas reconocibles; escena histórica con puestos/personas, sin atribuir comercios como aliados.",
+      "approval": false
+    },
+    "comuna13-2023": {
+      "usable": true,
+      "notes": "Panorama barrial en ladera identificado en fuente como Comuna13; cables y azoteas visibles. Referencia del barrio, no foto de graffitour ni operador; evitar afirmar muestra todoSanJavier.",
+      "approval": false
+    },
+    "arvi-2012": {
+      "usable": true,
+      "notes": "Bosque; referencia ambiental ParqueArví según fuente. No identifica sendero habilitado, puntoexacto o disponibilidad.",
+      "approval": false
+    },
+    "pies-2006": {
+      "usable": true,
+      "notes": "Espacio sensorial con bambú/arena y personas; corresponde descripción de parque. No prometer zonas habilitadas actuales.",
+      "approval": false
+    },
+    "catedral-2012": {
+      "usable": true,
+      "notes": "Fachada frontal Catedral Metropolitana de ladrillo, torres/reloj/portales reconocibles. Miniatura oficial1280, extremo superior ajustado al borde, no panorama ni vista del parque. Sin recorte adicional.",
+      "approval": false
+    },
+    "explora-2012": {
+      "usable": true,
+      "notes": "Módulo rojo característico y entorno de ParqueExplora; vista parcial de módulo, no interioracuario. Miniaturaoficial960, sinrecorteadicional, representa arquitectura del recinto; no usarcomo pruebaactual.",
+      "approval": false
+    },
+    "panorama-2005": {
+      "usable": true,
+      "notes": "Panorama urbano distante con centro y montañas. Coltejer corresponde anotación de fuente x1556y266enoriginal3131x660, proyecciónaprox x477y82enminiatura960x202: silueta triangular encentro reconocible sinrecortedeencuadre. Tamaño muy pequeño; candidatohistorico2005 para revisión, no portada definitiva aprobada ni afirmación estadoactual. No ampliar ni recortar para fingir resolución.",
+      "approval": false
+    },
+    "museo-2020": {
+      "usable": true,
+      "notes": "Fachada exterior MuseoAntioquia, entrada y rótulo; no sala interior. Miniaturaoficial960 sinrecorteadicional. Retratoarquitectónico reconocible, foto2020 no prueba programaciónactual.",
+      "approval": false
+    }
+  },
+  "rejected": {
+    "skyline-2011": "Vista de estadio y barrios; no se identifica Coltejer. No apta para portada solicitada.",
+    "museo-2010": "Sala interior con esculturas, no fachada. Rechazada por discordancia del alt previsto y falta de revisión independiente derechos obras interiores."
+  },
+  "cover_current_suitability": false,
+  "current_rejection": "Coltejer diminuto; sustituir. Ver inspeccion-visual-v4.json."
+}

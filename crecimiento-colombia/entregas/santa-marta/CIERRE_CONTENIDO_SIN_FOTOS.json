@@ -1,0 +1,92 @@
+{
+  "destination": "santa-marta",
+  "branch": "lugar/CO/magdalena/santa-marta",
+  "date": "2026-10-17",
+  "status": "contenido_borrador_revisado_sin_fotos_no_publicacion",
+  "scope_complete": [
+    "QA de9 experiencias y11 directorios ES/EN/PT",
+    "Separación lugar/experiencia/institución/evento con location_id",
+    "Borradores geográficos Teyuna, Playa Blanca y Minca",
+    "Comparaciones del corteTop8 sin llenar puesto pendiente",
+    "Revisión de precios/horarios/promesas/eventos y lenguaje de proceso en textos públicos"
+  ],
+  "counts": {
+    "experiences": 9,
+    "directory": 11,
+    "expanded_geographic_drafts": 3,
+    "locations": 13,
+    "top8_proposed": 7,
+    "eighth_pending": true,
+    "events": 0,
+    "languages": [
+      "en",
+      "es",
+      "pt-BR"
+    ]
+  },
+  "checks_passed": 29,
+  "human_decisions_pending": [
+    {
+      "id": "top8-cutoff",
+      "decision": "Resolver octavo lugar geográfico y revisar orden propuesto de siete; no rellenar por categorías o actividades."
+    },
+    {
+      "id": "editorial-text",
+      "decision": "Revisar/aprobar o corregir textos ES/EN/PT de lugares, experiencias y directorio; borradores no aprobados por esta QA."
+    },
+    {
+      "id": "photos-selected-urls",
+      "decision": "Propietario elige y envía URLs por componente. Portada H7-03 y Tayrona conservan estado pendiente; no se reanudan búsquedas/lotes."
+    },
+    {
+      "id": "publication",
+      "decision": "Publicación final requiere aprobación explícita posterior de imagen final, textos y revisión del destino integrado; no autorizada ahora."
+    }
+  ],
+  "research_limits_not_human_approval_substitutes": [
+    {
+      "component": "moto-acuatica",
+      "limit": "Concepto de actividad documentado por guía institucional2024/indexación. Prestador, ubicación concreta y oferta vigente sin verificar; texto es propuesta informativa no reservable. Una aprobación editorial no reemplaza esa verificación."
+    },
+    {
+      "component": "excursion-playa-blanca",
+      "limit": "Excursión territorial documentada; operador no asignado ni disponibilidad prometida."
+    },
+    {
+      "component": "directory",
+      "limit": "Fuentes públicas respaldan identidad/descripción; fichas siguen gratuitas, no reclamadas, sin alianza/contacto automático ni vigencia operativa garantizada."
+    },
+    {
+      "component": "events",
+      "limit": "No hay evento fechado confirmado:0. Tours/salidas a Minca no son agenda."
+    }
+  ],
+  "preservation": {
+    "photographic_and_decision_files_checked": 108,
+    "all_unchanged": true,
+    "approval_fields_preserved_from_previous_commit": true,
+    "new_approval_granted": false,
+    "hero_h7_03": "pending_individual_choice",
+    "tayrona": "pending_individual_choice"
+  },
+  "artifacts": {
+    "qa": "QA_CONTENIDO_SIN_FOTOS.json",
+    "validator": "validar-contenido-sin-fotos.py",
+    "classification": "CLASIFICACION_LUGARES_EXPERIENCIAS.json",
+    "top8": "AUDITORIA_TOP8.json",
+    "experiences": "experiencias-v6.json",
+    "directory": "directorio.json",
+    "geographic_drafts": "nuevos-atractivos-top8-borrador.json"
+  },
+  "destination_complete": false,
+  "publication_authorized": false,
+  "actions_performed": {
+    "photo_search": false,
+    "photo_download": false,
+    "image_generation": false,
+    "database_change": false,
+    "package_change": false,
+    "preprod_change": false,
+    "production_change": false
+  }
+}

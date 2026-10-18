@@ -1,0 +1,41 @@
+{
+  "estado": "referencia_visual_recibida_generacion_pendiente_revision",
+  "base_elegida": "portada-identidad-v2/maestro.png",
+  "comentario_propietario": "Esta versión se acerca más. Falta manga con cañones junto a la muralla, acceso principal, después calle y mar.",
+  "disposicion_requerida": [
+    "centro histórico",
+    "muralla y acceso del tramo por identificar",
+    "franja de césped con cañones indicada por propietario",
+    "calle",
+    "mar"
+  ],
+  "no_confirmado": [
+    "ubicación exacta del acceso",
+    "ubicación de cañones en césped frente a cañones sobre baluarte"
+  ],
+  "fuentes_contrastadas": [
+    "https://cartagena.gov.co/noticias/alcalde-dumek-turbay-pone-marcha-nueva-entrada-centro-historico",
+    "https://cartagenacomisionfilmica.com/es/locaciones/avenida-santander"
+  ],
+  "siguiente_paso": "Composición independiente acotada al tramo; revisar salida antes de integrar.",
+  "produccion_modificada": false,
+  "referencia_usuario": {
+    "origen": "Captura de Google Street View aportada por propietario",
+    "archivo": "codex-clipboard-a6c3d5e7-b169-4cd1-8de1-ce7b066fbbce.png",
+    "sha256": "0ed65381a41c9cb7b7fac40f2fcfdceeaca2521001edf3e02a7a272b01a2e553",
+    "subida_al_generador": false
+  },
+  "observado": [
+    "muralla baja de piedra gris",
+    "entrada vehicular entre lienzos de muralla",
+    "camino de acceso curvo",
+    "césped amplio exterior",
+    "postes bajos blancos unidos por cadenas",
+    "pocos tejados visibles detrás, no panorámica completa"
+  ],
+  "aportado_por_usuario_no_visible_en_captura": [
+    "cañones",
+    "avenida exterior junto al mar sin playa"
+  ],
+  "nombre_tramo": "no confirmado; no rotular como acceso principal de toda la ciudad"
+}

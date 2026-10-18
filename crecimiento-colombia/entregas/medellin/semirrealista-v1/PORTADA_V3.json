@@ -1,0 +1,24 @@
+{
+  "destino": "medellin",
+  "rol": "portada",
+  "tema": "Metro elevado en el centro urbano de Medellín",
+  "estado": "en_generacion",
+  "aprobacion_resultado": "pendiente",
+  "publicacion_produccion": false,
+  "fecha": "2026-10-17",
+  "fuentes_factuales": [
+    "https://www.metrodemedellin.gov.co/usuarios/sistema-integrado/linea-a",
+    "https://www.metrodemedellin.gov.co/al-dia/noticias/transformacion-estacion-parque-berrio"
+  ],
+  "via": "composicion ilustrada independiente; ninguna fotografía subida",
+  "no_reutiliza": "web/metro-metrocable-recorrido-800.webp",
+  "sustituye": "portada-v2 Pueblito Paisa, por decisión del propietario para evitar repetición",
+  "prompt_resumen": "Metro blanco y verde de tres coches sobre viaducto elevado del centro, perspectiva tres cuartos, contexto urbano y montañas del valle de Aburrá; ilustración editorial de tinta/gouache semirrealista, sin foto de entrada, sin Pueblito Paisa ni torre inventada.",
+  "qa": {
+    "imagen_cargada_en_preprod": true,
+    "ruta": "/assets/medellin-semirrealista/web/portada-v3-1200.webp",
+    "captura": "preprod-portada-v3.png",
+    "aprobacion_humana": "pendiente",
+    "produccion": "sin cambios"
+  }
+}

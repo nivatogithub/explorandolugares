@@ -12,10 +12,10 @@ STYLE_VERSION=hashlib.sha256((SITE/'assets/style.css').read_bytes()).hexdigest()
 for page in SITE.rglob('*.html'):
     source=page.read_text()
     has_head='</head>' in source
-    href=Path(os.path.relpath(SITE/'assets/favicon.svg',page.parent)).as_posix()
+    href=Path(os.path.relpath(SITE/'assets/brand/explorando-lugares-logo-v2-transparent.png',page.parent)).as_posix()
     source=re.sub(r'\s*<link\s+rel="(?:icon|shortcut icon)"[^>]*>','',source,flags=re.I)
     source=re.sub(r'(href="[^"]*style\.css)(?:\?v=[^"]*)?(")',r'\1?v='+STYLE_VERSION+r'\2',source)
-    icon=f'<link rel="icon" href="{href}" type="image/svg+xml">'
+    icon=f'<link rel="icon" href="{href}" type="image/png">'
     if has_head:
         source=source.replace('</head>',icon+'</head>',1)
     else:

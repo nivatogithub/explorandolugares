@@ -70,8 +70,8 @@ $filterState=['q'=>$query,'destination'=>$crmFilters['destination'],'subscriptio
 <link rel="stylesheet" href="../assets/style.css"><link rel="stylesheet" href="../assets/admin.css?v=20261015-channel-dialog">
 <script src="../assets/admin-contact-file.js" defer></script>
 <script src="../assets/admin-business-channels.js" defer></script>
-</head>
-<body><main class="wrap admin-page destination-admin crm-page">
+<?php require __DIR__.'/_theme.php'; ?></head>
+<body class="portal-admin"><main class="wrap admin-page destination-admin crm-page">
 <?php require __DIR__.'/_navigation.php'; ?>
 <div class="crm-heading"><div><p class="crm-eyebrow">Seguimiento comercial</p><h1>Canales y responsable</h1><p>Consulta los canales generales del negocio y los datos de su cuenta responsable. Puedes cargar canales encontrados en directorios públicos.</p></div><span class="crm-private-badge">Solo administración</span></div>
 <nav class="admin-workflow-tabs" aria-label="Tareas de canales y responsable">

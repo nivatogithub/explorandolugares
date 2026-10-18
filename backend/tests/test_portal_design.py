@@ -8,8 +8,8 @@ class PortalDesignTests(unittest.TestCase):
   cls.tokens=json.loads((ROOT/'design/portal/tokens.json').read_text());cls.colors=cls.tokens['colors'];cls.css=(ROOT/'backend/public/assets/cobertura/cobertura.css').read_text();cls.page=(ROOT/'backend/public/cobertura/colombia/index.html').read_text()
  def test_generated_tokens_and_versions(self):
   subprocess.run([sys.executable,str(ROOT/'scripts/sincronizar-estilos-cobertura.py'),'--check'],check=True,capture_output=True)
- def test_warm_card_family(self):
-  self.assertEqual(self.colors['card'],'#fff8ed');self.assertEqual(self.colors['panel'],'#fff0dc');self.assertNotEqual(self.colors['card'],self.colors['panel'])
+ def test_approved_neutral_card_family(self):
+  self.assertEqual(self.colors['card'].lower(),'#ffffff');self.assertEqual(self.colors['panel'].lower(),'#f1f2f4');self.assertNotEqual(self.colors['card'],self.colors['panel'])
   for selector in ['.country-stats article','.audience-metrics article','.audience-empty','.invite-options article']:
    pattern=re.escape('#contenido '+selector)+r'[^{}]*\{([^{}]+)\}'
    rules=re.findall(pattern,self.css)

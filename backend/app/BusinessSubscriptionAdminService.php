@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+require_once __DIR__.'/ExperienceOperatorAddon.php';
 final class BusinessSubscriptionAdminService
 {
     private const FREQUENCIES=['monthly'=>1,'quarterly'=>3,'semiannual'=>6,'annual'=>12];
@@ -9,7 +10,7 @@ final class BusinessSubscriptionAdminService
 
     public function options(): array
     {
-        $plans=$this->pdo->query('SELECT p.code,p.max_gallery_photos,p.max_summary_chars,p.max_description_chars,p.max_brand_story_chars,p.max_featured_services_chars,t.name,t.summary FROM subscription_plans p JOIN subscription_plan_translations t ON t.plan_code=p.code AND t.locale="es" WHERE p.is_active=1 ORDER BY p.display_order')->fetchAll(PDO::FETCH_ASSOC);
+        $plans=$this->pdo->query('SELECT p.code,p.max_gallery_photos,p.max_summary_chars,p.max_description_chars,p.max_brand_story_chars,p.max_featured_services_chars,t.name,t.summary FROM subscription_plans p JOIN subscription_plan_translations t ON t.plan_code=p.code AND t.locale="es" WHERE p.is_active=1 AND p.code IN ("free","featured","page","page_premium") ORDER BY p.display_order')->fetchAll(PDO::FETCH_ASSOC);
         foreach($plans as &$plan){
             $plan['max_gallery_photos']=(int)$plan['max_gallery_photos'];
             $plan['text_limits']=['summary'=>(int)$plan['max_summary_chars'],'description'=>(int)$plan['max_description_chars'],'brand_story'=>(int)$plan['max_brand_story_chars'],'featured_services'=>(int)$plan['max_featured_services_chars']];
@@ -46,7 +47,7 @@ final class BusinessSubscriptionAdminService
         $businessId=filter_var($input['business_id']??null,FILTER_VALIDATE_INT);
         $q=$this->pdo->prepare('SELECT id FROM businesses WHERE id=?');$q->execute([$businessId]);
         if(!$businessId||!$q->fetchColumn())throw new RuntimeException('Selecciona un negocio existente.');
-        $plan=(string)($input['plan_code']??'');$q=$this->pdo->prepare('SELECT code FROM subscription_plans WHERE code=? AND is_active=1');$q->execute([$plan]);
+        $plan=(string)($input['plan_code']??'');if(!in_array($plan,['free','featured','page','page_premium'],true))throw new RuntimeException('Selecciona una suscripción vigente.');$q=$this->pdo->prepare('SELECT code FROM subscription_plans WHERE code=? AND is_active=1');$q->execute([$plan]);
         if(!$q->fetchColumn())throw new RuntimeException('Selecciona una suscripción válida.');
         $frequency=trim((string)($input['billing_frequency']??''));
         if($plan==='free')$frequency='';elseif(!isset(self::FREQUENCIES[$frequency]))throw new RuntimeException('Selecciona una frecuencia de pago.');
@@ -84,6 +85,7 @@ final class BusinessSubscriptionAdminService
             if($business['latitude']!==null&&((float)$business['latitude'] < -90||(float)$business['latitude']>90||(float)$business['longitude'] < -180||(float)$business['longitude']>180))throw new RuntimeException('Las coordenadas están fuera de rango.');
             $q=$this->pdo->prepare('SELECT * FROM business_subscriptions WHERE business_id=? ORDER BY id DESC LIMIT 1');$q->execute([$businessId]);$sub=$q->fetch(PDO::FETCH_ASSOC);
             if(!$sub)throw new RuntimeException('Registra la suscripción antes de publicar el negocio.');
+            $operatorService=new ExperienceOperatorAddon($this->pdo);$operator=$operatorService->forSubscription((int)$sub['id']);if($operator){$operatorService->requireEligible($businessId);$destinationQuery=$this->pdo->prepare('SELECT destination_id FROM businesses WHERE id=?');$destinationQuery->execute([$businessId]);$operatorService->quote($sub['plan_code'],(string)$sub['billing_frequency'],(int)$destinationQuery->fetchColumn(),(int)$operator['experience_id']);}
             if($sub['plan_code']!=='free'&&(trim((string)$business['location_map_url'])===''||!(bool)$business['location_confirmed']))throw new RuntimeException('Confirma en el mapa que la dirección y el punto corresponden al destino antes de publicar.');
             if(trim((string)$business['address_text'])===''&&($business['latitude']===null||$business['longitude']===null)&&$sub['plan_code']!=='free')throw new RuntimeException('Completa una dirección o un punto de ubicación antes de publicar.');
             if($sub['plan_code']!=='free'){$q=$this->pdo->prepare('SELECT COUNT(*) FROM business_contacts WHERE business_id=? AND channel IN ("phone","whatsapp") AND contact_value<>""');$q->execute([$businessId]);if((int)$q->fetchColumn()<1)throw new RuntimeException('Registra un celular o WhatsApp de contacto antes de publicar.');}

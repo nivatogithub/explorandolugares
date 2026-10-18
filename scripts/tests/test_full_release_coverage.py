@@ -1,5 +1,8 @@
 """The full release must retain the already reviewed coverage integration."""
 import hashlib
+import subprocess
+import sys
+import shutil
 import importlib.util
 from pathlib import Path
 import tempfile
@@ -17,23 +20,24 @@ class FullReleaseCoverageTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as folder:
             files = deploy.build(Path(folder))
             packaged = {f['relative']: f['sha256'] for f in files}
-            for root, prefix in [(ROOT/'backend/integration-medicion/public', 'public/'),
-                                 (ROOT/'backend/public/cobertura', 'public/cobertura/'),
-                                 (ROOT/'backend/public/assets/cobertura', 'public/assets/cobertura/')]:
-                for source in root.rglob('*'):
-                    if source.is_file():
-                        relative = prefix + source.relative_to(root).as_posix()
-                        expected=source.read_bytes()
-                        # Release URLs are intentionally stamped after the integration overlay.
-                        if source.suffix in {'.php','.html'} or source.name in {'menu-principal.js','medicion.js'}:
-                            text=expected.decode()
-                            for asset in ['medicion.css','medicion.js','menu-principal.js']:
-                                location=Path(folder)/'public/assets'/('cobertura' if asset!='menu-principal.js' else '')/asset
-                                text=versions.stamp(text,asset,versions.digest(location))
-                            expected=text.encode()
-                        self.assertEqual(packaged.get(relative), hashlib.sha256(expected).hexdigest(), relative)
+            # Compare the complete reference overlay after the same approved
+            # presentation/wording transformations as the shipping package.
+            with tempfile.TemporaryDirectory() as reference:
+                ref=Path(reference);(ref/'app').mkdir();(ref/'public').mkdir()
+                sources=[(ROOT/'backend/integration-medicion/public','public'),
+                         (ROOT/'backend/public/cobertura','public/cobertura'),
+                         (ROOT/'backend/public/assets/cobertura','public/assets/cobertura')]
+                paths=set()
+                for source,prefix in sources:
+                    shutil.copytree(source,ref/prefix,dirs_exist_ok=True)
+                    paths.update(prefix+'/'+p.relative_to(source).as_posix() for p in source.rglob('*') if p.is_file())
+                subprocess.run([sys.executable,str(ROOT/'scripts/aplicar-identidad-neutral.py'),'--public',str(ref/'public')],check=True)
+                subprocess.run(['php',str(ROOT/'scripts/aplicar-nomenclatura-lugares.php'),str(ref)],check=True)
+                subprocess.run([sys.executable,str(ROOT/'scripts/versiones-medicion.py'),'--public',str(ref/'public')],check=True)
+                for relative in paths:
+                    self.assertEqual(packaged.get(relative),hashlib.sha256((ref/relative).read_bytes()).hexdigest(),relative)
             self.assertNotIn('public/__preprod-account.php', packaged)
-            self.assertNotIn('public/business/recover.php', packaged)
+            self.assertIn('public/business/recover.php', packaged)
             self.assertNotIn('public/admin/buzon-local.php', packaged)
             self.assertFalse(any('preprod' in name.lower() for name in packaged), 'Local preprod tools/access must never enter production')
             self.assertFalse(any('cuentas-prueba' in name or 'test-accounts' in name or 'CUENTAS_PRUEBA' in name for name in packaged), 'Persistent fixture tooling and credentials must stay local')

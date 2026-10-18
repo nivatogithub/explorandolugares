@@ -1,0 +1,35 @@
+{
+  "checked_at": "2026-10-17T12:07:52.635187+00:00",
+  "zip_sha256": "616de788ce8dcac3dcab8ac0f44212ce42f4e2f596a03a64c0d2690323daf8fb",
+  "results": [
+    {
+      "locale": "es",
+      "url": "http://127.0.0.1:8088/destinos/medellin/",
+      "attractions": 8,
+      "distinct_zip_images": 9,
+      "distinct_original_sources": 10,
+      "history_image": true,
+      "images_http_hashes_ok": true
+    },
+    {
+      "locale": "en",
+      "url": "http://127.0.0.1:8088/en/destinos/medellin/",
+      "attractions": 8,
+      "distinct_zip_images": 9,
+      "distinct_original_sources": 10,
+      "history_image": true,
+      "images_http_hashes_ok": true
+    },
+    {
+      "locale": "pt-BR",
+      "url": "http://127.0.0.1:8088/pt-br/destinos/medellin/",
+      "attractions": 8,
+      "distinct_zip_images": 9,
+      "distinct_original_sources": 10,
+      "history_image": true,
+      "images_http_hashes_ok": true
+    }
+  ],
+  "production_accessed": false,
+  "final_editorial_approval": false
+}

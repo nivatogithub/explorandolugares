@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-17",
+  "rejected_current_hero": "portada-camellon",
+  "rejection_reason": "Exceso de espacio inferior; edificios cortados arriba; identidad urbana insuficiente según propietario.",
+  "visual_directions": [
+    {
+      "component": "santa-marta.tayrona",
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc6wJRl-zXrprpY1lXT7_mPyP-rRix1cfeDNVYBHu8GQ&s=10",
+      "status": "positive_direction_not_final_asset_approval",
+      "observed": "Kiosco de techo de palma sobre promontorio rocoso, playa, agua turquesa y vegetación; identidad de Cabo San Juan por verificar con fuente original.",
+      "original_source_identified": false
+    },
+    {
+      "component": "santa-marta.hero",
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN7IzKlb3fSUu5FGXqIA-uYAewbF6QEvY6O3Mycafzgw&s=10",
+      "status": "positive_direction_not_final_asset_approval",
+      "observed": "Vista aérea urbana con edificios completos, costa y cerros; sector exacto pendiente de comprobar.",
+      "original_source_identified": false
+    }
+  ],
+  "next_review": {
+    "component": "santa-marta.hero",
+    "status": "research_replacement_matching_user_direction",
+    "reference_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN7IzKlb3fSUu5FGXqIA-uYAewbF6QEvY6O3Mycafzgw&s=10",
+    "requirements": [
+      "Vista elevada con tejido urbano dominante",
+      "Edificios completos y costa como contexto",
+      "No exceso de pavimento/parque/agua genérica",
+      "Comprobar ubicación y encuadre escritorio/móvil"
+    ],
+    "approval": false
+  },
+  "production_authorized": false,
+  "generation_authorized": false,
+  "additional_candidate_research": {
+    "source": "https://www.pexels.com/photo/santa-marta-on-sea-coast-in-colombia-17149414/",
+    "author": "NEHEMIAS GOMEZ FOTOGRAFIA",
+    "capture_date": "2023-04-18",
+    "license": "https://www.pexels.com/license/",
+    "status": "research_only_not_confirmed_matching_user_thumbnail"
+  }
+}

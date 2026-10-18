@@ -27,6 +27,7 @@ final class BrevoSettings
         $current=self::load($directory,$appKey);$data=[];
         foreach (['sender_email'=>254,'sender_name'=>120,'reply_to'=>254,'sender_address'=>500] as $field=>$limit) {
             $value=is_string($input[$field]??null)?trim($input[$field]):'';
+            if ($field==='sender_address') $value=preg_replace('/[\r\n\t]+/',' ',$value);
             if (strlen($value)>$limit || preg_match('/[\x00-\x1f\x7f]/',$value)) throw new RuntimeException('Revisa los datos del remitente.');
             $data[$field]=$value;
         }
@@ -34,8 +35,8 @@ final class BrevoSettings
         $data['enabled']=($input['enabled']??'')==='1';
         $key=is_string($input['api_key']??null)?trim($input['api_key']):'';
         if ($key==='') $key=(string)($current['api_key']??'');
-        if (strlen($key)>1000 || preg_match('/[\x00-\x20\x7f]/',$key)) throw new RuntimeException('Revisa la llave de API.');
-        if ($data['enabled']&&($key===''||$data['sender_email']===''||$data['sender_name']===''||$data['sender_address']==='')) throw new RuntimeException('Para habilitar Brevo completa la llave, el remitente y su dirección.');
+        if (strlen($key)>1000 || preg_match('/[\x00-\x20\x7f]/',$key)) throw new RuntimeException('La clave API contiene espacios o saltos de línea dentro del código. Cópiala completa desde Brevo, sin texto adicional.');
+        if($data['enabled']){ $missing=[];foreach(['sender_email'=>'correo del remitente','sender_name'=>'nombre del remitente','sender_address'=>'dirección postal'] as $field=>$label)if($data[$field]==='')$missing[]=$label;if($key==='')$missing[]='clave API';if($missing)throw new RuntimeException('Falta completar: '.implode(', ',$missing).'. No se guardó ningún cambio.'); }
         $nonce=random_bytes(12);$tag='';$cipher=openssl_encrypt($key,'aes-256-gcm',hash('sha256',$appKey,true),OPENSSL_RAW_DATA,$nonce,$tag,'explorando-brevo-v1');
         if (!is_string($cipher)) throw new RuntimeException('No se pudo proteger la llave de Brevo.');
         $data['secret']=base64_encode($nonce.$tag.$cipher);
@@ -43,7 +44,7 @@ final class BrevoSettings
         if (!is_dir($directory)&&!mkdir($directory,0700,true)) throw new RuntimeException('No se pudo preparar la configuración privada.');
         $temporary=tempnam($directory,'.brevo-');
         if (!is_string($temporary)) throw new RuntimeException('No se pudo guardar la conexión.');
-        try {chmod($temporary,0600);$json=json_encode($data,JSON_THROW_ON_ERROR);if(file_put_contents($temporary,$json,LOCK_EX)!==strlen($json))throw new RuntimeException('No se pudo guardar la conexión.');if(!rename($temporary,$directory.'/settings.json'))throw new RuntimeException('No se pudo activar la conexión.');}
+        try {chmod($temporary,0600);$json=json_encode($data,JSON_THROW_ON_ERROR);if(file_put_contents($temporary,$json,LOCK_EX)!==strlen($json))throw new RuntimeException('No se pudo guardar la conexión.');if(!rename($temporary,$directory.'/settings.json'))throw new RuntimeException('No se pudo activar la conexión.');$verified=self::load($directory,$appKey);if(!hash_equals($key,(string)($verified['api_key']??'')))throw new RuntimeException('No se pudo verificar la clave guardada.');}
         finally {if(is_file($temporary))unlink($temporary);}
     }
 }

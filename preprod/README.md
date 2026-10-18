@@ -147,3 +147,32 @@ La migración del acceso administrativo al inicio de sesión público, los permi
 ## Perfiles permanentes para revisión
 
 Se mantienen cuentas ficticias de viajero, negocio y administrador. Los accesos de este equipo están en `.local/preprod/CUENTAS_PRUEBA.md`. La guía [Cuentas persistentes de prueba](CUENTAS_PRUEBA.md) explica cómo recrearlas en otro equipo o restablecer su acceso sin borrar las pruebas. Se preparan al subir o actualizar el ambiente; también mediante `./preprod/cuentas-prueba.sh`.
+
+## Regresión de aceptación antes de proponer producción
+
+Ejecutar `./preprod/regresion.sh` después de actualizar el candidato local. Ver [alcance, criterios y seguridad](regresion/README.md). El informe queda en `.local/preprod/regresion/resultado.html` y JSON. Un fallo, pendiente o comprobación bloqueada devuelve salida distinta de cero: **NO LISTO**. Las pruebas no publican cambios ni sustituyen la aprobación humana. Los recorridos visuales y las funciones todavía no implementadas se indican explícitamente; no se cuentan como aprobados.
+
+### Prueba de correo transaccional real
+
+La conexión se guarda desde Administración → Conexión con Brevo. La API no se pega en chats ni se versiona. El modo habitual conserva el buzón local. Para probar recepción real en una sola dirección autorizada:
+
+```sh
+python3 preprod/correo-real.py --destinatario CORREO_PROPIO
+./preprod/actualizar.sh
+```
+
+El archivo privado `account-mail-test.json` habilita activación y recuperación reales únicamente para esa dirección. Los registros sintéticos y los demás correos siguen en el buzón local. Se requieren las guardas `local_test`, `EL_PREPROD_LOCAL` del servidor local y host loopback, más la conexión Brevo guardada/habilitada. Los enlaces enviados usan exactamente `http://127.0.0.1:8088`; abrirlos en el equipo con preproducción encendida. No cambia configuración de producción ni envía campañas. Guardar el modo no envía mensajes: los solicita el usuario al registrarse o recuperar contraseña.
+
+Para volver al buzón local para todos:
+
+```sh
+python3 preprod/correo-real.py --desactivar
+```
+
+No necesita reconstruir imagen. El destinatario y las llaves permanecen fuera de Git; otro PC debe configurar su propio modo. La prueba aislada `php backend/tests/account-mail-local.php` comprueba límites y URLs sin enviar. Confirmación del proveedor no equivale a recepción: el usuario debe comprobar la bandeja y completar ambos enlaces antes de aprobar.
+
+La prueba real requiere salida a Internet. Cuando el modo privado está habilitado, los scripts conectan una segunda red administrada `explorando-preprod-mail-egress`; no añade puertos publicados y no restringe la red a un dominio. Al desactivar el modo y volver a subir el entorno, la desconectan. El código de correo limita el destinatario y usa la URL fija HTTPS de Brevo. Los comprobantes privados `account-mail-receipts.jsonl` guardan fecha, tipo, hash de destinatario y aceptación/código HTTP; nunca API, contraseña ni enlace. Un aceptado201 no certifica entrega al buzón.
+
+### Arranque persistente en macOS
+
+`subir.sh` inicia Podman mediante un trabajo del servicio de usuario de macOS cuando la máquina está apagada. Así el proceso de virtualización no depende de que continúe abierto el terminal o worker que ejecutó el arranque. No se instala un inicio automático al iniciar sesión. La definición y los registros se generan en `.local/preprod/podman-launch.plist`, `podman-launch.log` y `podman-launch-error.log`; en otro Mac se regeneran con sus propias rutas. El trabajo no se reinicia automáticamente ni cambia volúmenes, credenciales o puertos. `bajar.sh` sigue deteniendo únicamente preproducción.

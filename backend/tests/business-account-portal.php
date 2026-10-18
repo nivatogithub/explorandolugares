@@ -5,6 +5,7 @@ function throttle(string $kind,int $limit,int $seconds,string $extra=''):bool{re
 require dirname(__DIR__).'/app/BusinessAccountPortalService.php';
 require dirname(__DIR__).'/app/AccountAdminService.php';
 require dirname(__DIR__).'/app/AccountPasswordResetService.php';
+require dirname(__DIR__).'/app/AccountEmailVerificationService.php';
 $pdo=new PDO('sqlite::memory:');$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 $pdo->exec('CREATE TABLE account_roles(account_id INTEGER,role TEXT);CREATE TABLE business_categories(business_id INTEGER,category_code TEXT)');
 $pdo->exec('CREATE TABLE accounts(id INTEGER PRIMARY KEY AUTOINCREMENT,public_id TEXT,account_type TEXT,display_name TEXT,email TEXT UNIQUE,password_hash TEXT,status TEXT,email_verified_at TEXT,created_at TEXT DEFAULT CURRENT_TIMESTAMP,updated_at TEXT DEFAULT CURRENT_TIMESTAMP);
@@ -21,13 +22,18 @@ CREATE TABLE business_claim_requests(id INTEGER PRIMARY KEY,account_id INTEGER,b
 $pdo->exec(file_get_contents(dirname(__DIR__).'/database/migrations/019-business-account-applications.sqlite.sql'));
 $pdo->exec(file_get_contents(dirname(__DIR__).'/database/migrations/020-account-password-resets.sqlite.sql'));
 $pdo->exec(file_get_contents(dirname(__DIR__).'/database/migrations/023-business-representation-evidence.sqlite.sql'));
-$pdo->exec("INSERT INTO destinations(id,slug,publication_status,display_order) VALUES(1,'jerico','published',1);INSERT INTO destination_translations VALUES(1,'es','Jericó');INSERT INTO service_categories VALUES('food',1,1);INSERT INTO service_category_translations VALUES('food','es','Alimentación');INSERT INTO businesses VALUES(1,'public-id',1,'food','PUBLICO','NO_RECLAMADO','DESCONOCIDO','published','cafe-prueba',CURRENT_TIMESTAMP);INSERT INTO business_translations VALUES(1,'es','Café de prueba','','');INSERT INTO businesses VALUES(2,'hidden-id',1,'food','PUBLICO','NO_RECLAMADO','DESCONOCIDO','draft','hotel-oculto',CURRENT_TIMESTAMP);INSERT INTO business_translations VALUES(2,'es','Hotel que aún no aparece','','')");
+$pdo->exec(file_get_contents(dirname(__DIR__).'/database/migrations/035-account-email-verifications.sqlite.sql'));
+$pdo->exec("ALTER TABLE business_account_applications ADD COLUMN business_details_json TEXT NOT NULL DEFAULT '{}'");
+$pdo->exec("INSERT INTO destinations(id,slug,publication_status,display_order) VALUES(1,'jerico','published',1);INSERT INTO destination_translations VALUES(1,'es','Jericó');INSERT INTO service_categories VALUES('food',1,1);INSERT INTO service_category_translations VALUES('food','es','Alimentación');INSERT INTO businesses(id,public_id,destination_id,category_code,information_status,claim_status,operation_status,publication_status,slug,updated_at) VALUES(1,'public-id',1,'food','PUBLICO','NO_RECLAMADO','DESCONOCIDO','published','cafe-prueba',CURRENT_TIMESTAMP);INSERT INTO business_translations VALUES(1,'es','Café de prueba','','');INSERT INTO businesses(id,public_id,destination_id,category_code,information_status,claim_status,operation_status,publication_status,slug,updated_at) VALUES(2,'hidden-id',1,'food','PUBLICO','NO_RECLAMADO','DESCONOCIDO','draft','hotel-oculto',CURRENT_TIMESTAMP);INSERT INTO business_translations VALUES(2,'es','Hotel que aún no aparece','','')");
+$pdo->exec('ALTER TABLE businesses ADD COLUMN record_origin TEXT DEFAULT "public_import";CREATE TABLE business_sources(business_id INTEGER,source_url TEXT,checked_at TEXT)');
 $service=new BusinessAccountPortalService($pdo);
 $matches=$service->searchRegistrationBusinesses(1,'food','Hotel que');
 portal_check(count($matches)===1&&$matches[0]['display_name']==='Hotel que aún no aparece'&&$matches[0]['can_request'],'Registration search can find an unpublished business without exposing its private fields.');
 $accountId=$service->register('Responsable local','responsable@example.test','ClaveDePrueba123',['application_type'=>'existing_business','business_id'=>'1','destination_id'=>'1','category_code'=>'food','relationship_code'=>'owner','phone'=>'3230000000','message'=>'Soy su propietario','consent'=>'1']);
+$pendingRejected=false;try{$service->authenticate('responsable@example.test','ClaveDePrueba123');}catch(RuntimeException){$pendingRejected=true;}portal_check($pendingRejected,'Pending account must not authenticate before mailbox verification.');
+$verification=new AccountEmailVerificationService($pdo);$activation=$verification->issue($accountId);$verification->verify($activation);
 $account=$service->authenticate('RESPONSABLE@example.test','ClaveDePrueba123');
-portal_check((int)$account['id']===$accountId&&$account['account_type']==='business'&&$account['status']==='active','Registration creates a business account only alongside its associated request.');
+portal_check((int)$account['id']===$accountId&&$account['account_type']==='traveler'&&$account['status']==='active','Registration creates a personal account, activated by email, with a separate business request.');
 portal_check($service->current($accountId)!==null,'An authenticated business account can load its profile.');
 portal_check($service->businesses($accountId)===[],'A registered account has no business permissions before evidence review and approval.');
 $rejected=false;try{$service->authenticate('responsable@example.test','incorrecta');}catch(RuntimeException){$rejected=true;}
@@ -57,7 +63,7 @@ $verifiedCount=(int)$pdo->query('SELECT COUNT(*) FROM business_account_applicati
 portal_check($verifiedCount===2,'A successful approval records which private identity/business documents were reviewed.');
 $approvedExisting=$pdo->query('SELECT r.status,b.information_status,b.claim_status,m.role FROM business_account_applications r JOIN businesses b ON b.id=r.business_id JOIN business_account_memberships m ON m.business_id=b.id AND m.account_id=r.account_id WHERE r.id='.$existingApplicationId)->fetch(PDO::FETCH_ASSOC);
 portal_check($approvedExisting['status']==='approved'&&$approvedExisting['information_status']==='ACTIVO'&&$approvedExisting['claim_status']==='RECLAMADO'&&$approvedExisting['role']==='owner','Approving an existing-business request authorizes and links the account without publishing.');
-$pdo->exec("INSERT INTO businesses VALUES(3,'another-id',1,'food','ACTIVO','RECLAMADO','ABIERTO','draft','otro-negocio',CURRENT_TIMESTAMP);INSERT INTO business_translations VALUES(3,'es','Otro negocio verificado','','')");
+$pdo->exec("INSERT INTO businesses(id,public_id,destination_id,category_code,information_status,claim_status,operation_status,publication_status,slug,updated_at) VALUES(3,'another-id',1,'food','ACTIVO','RECLAMADO','ABIERTO','draft','otro-negocio',CURRENT_TIMESTAMP);INSERT INTO business_translations VALUES(3,'es','Otro negocio verificado','','')");
 $linkRejected=false;try{(new AccountAdminService($pdo))->linkBusiness(['account_id'=>$accountId,'business_id'=>3,'membership_role'=>'manager']);}catch(RuntimeException $error){$linkRejected=str_contains($error->getMessage(),'solicitud aprobada');}
 portal_check($linkRejected,'A business marked reclaimed cannot be linked without its own approved, evidence-reviewed account application.');
 $pdo->prepare('INSERT INTO business_account_applications(account_id,application_type,business_id,destination_id,category_code,business_name,relationship_code,consent_version,status,reviewed_at) VALUES(?,?,?,?,?,?,?,?,?,CURRENT_TIMESTAMP)')->execute([$accountId,'claim_existing',3,1,'food','Otro negocio verificado','owner','test-v1','approved']);$linkApplicationId=(int)$pdo->lastInsertId();

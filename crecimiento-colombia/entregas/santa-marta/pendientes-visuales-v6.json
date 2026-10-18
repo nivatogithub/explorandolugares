@@ -1,0 +1,72 @@
+{
+  "scope": "cola de componentes, no cola de nuevos destinos",
+  "tasks": [
+    {
+      "component": "hero",
+      "task": "Buscar y verificar encuadre de centro y bahía histórica; descartar Rodadero para portada según decisión humana.",
+      "state": "pendiente_referencia_centro_bahia_historica",
+      "ready_reference_ids": [],
+      "decision_evidence": "decision-portada-centro-bahia-historica.json"
+    },
+    {
+      "component": "tayrona",
+      "task": "Decisión individual referencia original SM-T6-01 o03; luego generación autorizada por componente.",
+      "state": "pendiente_eleccion",
+      "ready_reference_ids": [
+        "SM-T6-01",
+        "SM-T6-03"
+      ]
+    },
+    {
+      "component": "acuario",
+      "task": "Comparar entrada histórica2010 con fuente actual; si no satisface, buscar toma moderna con permiso.",
+      "state": "referencia_historica_condicional",
+      "ready_reference_ids": [
+        "SM-A6-01"
+      ]
+    },
+    {
+      "component": "buceo-taganga",
+      "task": "Buzo y entorno local identificables, sin atribuir persona a centro ajeno.",
+      "state": "foto_actividad_pendiente",
+      "ready_reference_ids": []
+    },
+    {
+      "component": "caminata-tayrona",
+      "task": "Sendero reconocible con caminantes pequeños y composición limpia, sin rostro dominante.",
+      "state": "foto_actividad_pendiente",
+      "ready_reference_ids": []
+    },
+    {
+      "component": "minca-cafe",
+      "task": "Proceso/cultivo cafetero identificable en Minca; paisajeE07 solo contextual.",
+      "state": "foto_actividad_pendiente",
+      "ready_reference_ids": [
+        "SM-E6-07_contexto"
+      ]
+    },
+    {
+      "component": "recorrido-centro",
+      "task": "Elección original de parada ParqueNovios; no atribuir guía/operador.",
+      "state": "candidata_editorial",
+      "ready_reference_ids": [
+        "SM-E6-04"
+      ]
+    },
+    {
+      "component": "ciudad-perdida",
+      "task": "Elección referencia terrazasTeyuna; no atribuir grupo/operador ni acceso actual.",
+      "state": "candidata_editorial",
+      "ready_reference_ids": [
+        "SM-E6-05"
+      ]
+    },
+    {
+      "component": "velero-caribe",
+      "task": "Vela/barco completos en encuadre horizontal con costa local; sin fingir barco de operador.",
+      "state": "foto_actividad_pendiente",
+      "ready_reference_ids": []
+    }
+  ],
+  "directory": "10 fotos de negocio pendientes de original/permiso; textos neutrales ES/EN/PT auditados."
+}

@@ -1,0 +1,103 @@
+/* Explorando Lugares · identidad neutral v2 */
+:root{--el-page:#FAFAFA;--el-panel:#F1F2F4;--el-card:#FFFFFF;--el-field:#FFFFFF;--el-hover:#E9EBEE;--el-border:#DADDE2;--el-control-border:#BDC2CB;--el-text:#172B42;--el-muted:#60646C;--el-accent:#d84e27;--el-action:#C94720;--el-action-hover:#A83B22;--el-focus:#a44327;--el-on-action:#FFFFFF;--el-published:#315e9d;--el-in-progress:#dfa04e;--el-pending:#bdc7cb;--el-unknown:#87979f}
+body{background:var(--el-page)!important;color:var(--el-text)}
+.directory-contact-links{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0;font-size:13px;align-items:center}
+.directory-contact-links a{white-space:nowrap}
+.directory-card .directory-card-body{display:flex;flex-direction:column;min-width:0;gap:0}
+[data-directory-tier="featured"] .directory-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+.directory-card-tier-featured{background:var(--el-card)!important;border:1px solid var(--el-control-border)!important;box-shadow:none!important}
+.directory-card-tier-featured .directory-business-mark{display:none!important}
+.directory-card-tier-featured .directory-card-body{display:grid!important;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:6px!important;padding:12px 14px!important}
+.directory-card.directory-card-tier-featured .directory-business-title{font-size:14px!important;line-height:1.25!important}
+.directory-card.directory-card-tier-featured .directory-icon-actions{margin:0!important;padding:0!important;align-self:center}
+.directory-card-tier-featured .directory-category-chip{padding:2px 5px!important;min-height:0!important;margin:0!important}
+@media(max-width:900px){[data-directory-tier="featured"] .directory-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:600px){[data-directory-tier="featured"] .directory-grid{grid-template-columns:1fr!important}}
+
+.directory-card{min-height:0!important;height:auto!important}
+.directory-card .directory-card-body{height:auto!important;min-height:0!important;grid-template-rows:none!important;padding:14px!important}
+.directory-card .directory-icon-actions{width:100%;justify-content:flex-end!important;margin-top:10px!important;padding-top:0!important}
+.directory-card .directory-status-note{font-size:12px;margin:8px 0}
+.directory-card button.directory-icon-action{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;padding:0;border:0;border-radius:9px;background:transparent;color:var(--el-muted);cursor:pointer}
+.directory-card button.directory-icon-action:focus-visible{outline:2px solid var(--el-action);outline-offset:2px}
+.directory-card button.directory-icon-action:hover{background:var(--el-panel)}
+.directory-card-tier-free .directory-business-title{font-size:14px!important;line-height:1.25!important}
+/* Free entries: single compact row, category conveyed by icon and accessible name. */
+.directory-card.directory-card-tier-free .directory-card-body{padding:9px 12px!important}
+.directory-card-tier-free .directory-compact-heading{align-items:center;gap:9px}
+.directory-card.directory-card-tier-free .directory-business-title{margin:0!important;font-size:14px!important;line-height:1.3!important}
+.directory-free-category-icon{display:grid;place-items:center;flex:0 0 28px;width:28px;height:28px;border-radius:7px;background:var(--el-panel);color:var(--el-muted)}
+.directory-card-tier-free .directory-category-chip{padding:2px 5px!important;min-height:0!important;margin:0!important}
+.directory-compact-heading{display:flex;gap:10px;align-items:flex-start;min-width:0}
+.directory-card .directory-business-mark{position:static!important;width:38px!important;height:38px!important;min-width:38px;flex:0 0 38px;margin:0!important;border:1px solid var(--el-border);border-radius:9px;background:var(--el-panel);display:grid;place-items:center}
+.directory-card .directory-business-mark img{width:100%;height:100%;max-height:38px;object-fit:contain;border-radius:8px}
+.directory-heading-copy{min-width:0;flex:1}
+.directory-card .directory-business-title{font-size:16px!important;line-height:1.3!important;margin:0 0 6px!important;min-height:0}
+.directory-card .directory-business-title a,.directory-card .directory-business-title span{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-decoration:none}
+.directory-card .directory-category-chip{cursor:pointer;display:inline-block;font-size:10px!important;line-height:1.35;letter-spacing:.2px!important;text-transform:none!important;padding:3px 7px;border:1px solid var(--el-border);border-radius:6px;background:var(--el-panel);color:var(--el-muted);margin:0 0 5px!important}
+.directory-card .directory-icon-actions{display:flex;gap:3px;align-items:center;justify-content:flex-end;flex-wrap:wrap;margin-top:auto;padding-top:10px}
+.directory-card a.directory-icon-action{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;padding:0!important;margin:0!important;border:0!important;border-radius:9px;background:transparent;color:var(--el-action-hover);text-decoration:none}
+.directory-card a.directory-icon-action:hover{background:var(--el-panel)}
+.directory-card a.directory-icon-action:focus-visible{outline:2px solid var(--el-action);outline-offset:2px;background:var(--el-panel)}
+
+header,footer{background:var(--el-page)!important;border-color:var(--el-border)!important}
+.pilot-banner{display:none!important}
+.row-load-more{display:block;margin:18px auto 0;min-height:44px;padding:10px 20px;border:1px solid var(--el-control-border);border-radius:8px;background:var(--el-card);color:var(--el-text);cursor:pointer}
+.row-load-more[hidden]{display:none!important}
+.highlight-grid>article[hidden],.destination-experience-list>article[hidden],.directory-grid>article[hidden]{display:none!important}
+h1,h2,h3,h4{color:var(--el-text)}
+.card,.directory-card,.destination-experience-card,.highlight-grid article,.metric-card{background:var(--el-card)!important;border-color:var(--el-border)!important}
+.destination-invitation,.destination-reasons,.destination-nav,.destination-preview-banner{background:var(--el-panel)!important;border-color:var(--el-border)!important}
+input,select,textarea{background:var(--el-field);border-color:var(--el-control-border)}
+.destination-direct-reading .destination-overview{display:block!important;grid-template-columns:1fr!important;padding:28px 0!important}
+.destination-direct-reading .destination-overview>div,.destination-direct-reading .destination-overview p{width:100%;max-width:none!important}
+.destination-direct-reading .destination-overview h2{font-size:clamp(25px,3vw,34px);margin:0 0 12px}
+.destination-direct-reading .compact-section-heading{display:block;margin:0 0 18px;padding:0}
+.destination-direct-reading .compact-section-heading h2{font-size:clamp(25px,3vw,34px);line-height:1.15;margin:0}
+.destination-direct-reading #que-conocer,.destination-direct-reading .destination-experiences,.destination-direct-reading #lugares{padding-top:28px;padding-bottom:28px}
+.destination-direct-reading .highlight-grid article>p,.destination-direct-reading .destination-experience-copy>p{font-size:14px;line-height:1.45;margin:8px 0 12px}
+.destination-direct-reading .highlight-grid article h3,.destination-direct-reading .destination-experience-copy h4{font-size:18px;line-height:1.2;margin:8px 0}
+.destination-direct-reading .highlight-grid article>h3,.destination-direct-reading .highlight-grid article>p{padding-left:12px;padding-right:12px}
+.destination-direct-reading .directory-card-body{padding:12px 14px}
+.destination-direct-reading .destination-invitation{padding:22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.destination-direct-reading .destination-invitation h2{font-size:24px;margin:0}
+.destination-direct-reading .destination-invitation p{margin:6px 0 0}
+@media(max-width:650px){.destination-direct-reading .destination-invitation{display:block}.destination-direct-reading .destination-invitation>.pill{margin-top:14px}}
+
+/* Global vertical rhythm: compact sections, subtle separators; preserve control hit areas. */
+:root{--el-section-space:28px;--el-section-gap:20px;--el-section-rule:#DADDE2}
+main .section,main section.section,main .destination-overview,main .destination-highlights,main .destination-experiences,main .destination-directory{padding-top:var(--el-section-space)!important;padding-bottom:var(--el-section-space)!important;margin-top:0!important;margin-bottom:0!important}
+main>section+section,main>.section+.section,main .destination-experiences,main .directory-tier+.directory-tier{border-top:1px solid var(--el-section-rule)}
+main .sectionhead,main .section-head,main .destination-experiences-heading{margin-top:0!important;margin-bottom:16px!important;gap:12px}
+main .sectionhead h2,main .sectionhead h3,main .section-head h2,main .destination-experiences-heading h2,main .destination-experiences-heading h3{margin-top:0;margin-bottom:0}
+main .hero,main .home-hero,main .home-editorial,main .destination-hero{padding-top:28px!important;padding-bottom:28px!important;row-gap:20px!important;margin-top:0!important;margin-bottom:0!important}
+main .breadcrumbs{padding-top:14px!important;padding-bottom:8px!important;margin-top:0!important;margin-bottom:0!important}
+main .destination-nav{margin-top:0!important;margin-bottom:16px!important;padding-top:12px!important;padding-bottom:12px!important}
+main .destination-invitation{margin-top:20px!important;margin-bottom:20px!important;padding-top:18px!important;padding-bottom:18px!important}
+main .destination-practical{margin-top:18px!important;margin-bottom:18px!important;row-gap:14px!important}
+main .highlight-grid,main .destination-experience-list,main .directory-grid{row-gap:16px!important}
+main .directory-tier{padding-top:20px!important;padding-bottom:20px!important;margin-top:0!important;margin-bottom:0!important}
+main .destination-load-more{margin-top:14px!important;margin-bottom:0!important}
+main .intro{margin-top:12px;margin-bottom:18px}
+body>footer{margin-top:20px!important;padding-top:24px!important;padding-bottom:24px!important}
+/* Administrative and account panels keep readable fields and compact groups. */
+main .panel,main .admin-section,main .form-section{margin-top:16px;margin-bottom:16px}
+main fieldset+fieldset{margin-top:18px;border-top:1px solid var(--el-section-rule)}
+@media(max-width:650px){:root{--el-section-space:20px;--el-section-gap:16px}main .hero,main .home-hero,main .home-editorial,main .destination-hero{padding-top:20px!important;padding-bottom:20px!important}main .sectionhead,main .destination-experiences-heading{margin-bottom:12px!important}body>footer{padding-top:20px!important;padding-bottom:20px!important}}
+
+main .home-editorial-categories{position:static!important;grid-column:1/-1;inset:auto!important;transform:none!important;margin:0!important;padding:8px 0 0!important;border-top:1px solid var(--el-section-rule)!important}
+
+/* One card system for attractions and experiences in every destination. */
+main :is(#atractivos-destino,.destination-experience-list){display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:16px!important;align-items:stretch!important}
+main :is(#atractivos-destino,.destination-experience-list)>article{display:flex!important;flex-direction:column!important;gap:0!important;min-width:0;min-height:0!important;height:100%!important;padding:0 0 14px!important;border:1px solid var(--el-border,#DADDE2)!important;border-radius:12px!important;overflow:hidden;background:#fff}
+main :is(#atractivos-destino,.destination-experience-list)>article[hidden]{display:none!important}
+main :is(#atractivos-destino,.destination-experience-list)>article>.destination-experience-copy{display:contents!important}
+main :is(#atractivos-destino,.destination-experience-list)>article>:is(figure,.highlight-photo,.destination-place-caricature,.experience-art){display:block!important;position:relative!important;width:100%!important;aspect-ratio:3/2!important;height:auto!important;min-height:0!important;margin:0!important;padding:0!important;border:0!important;border-radius:0!important;overflow:hidden}
+main :is(#atractivos-destino,.destination-experience-list)>article img{display:block!important;position:static!important;width:100%!important;height:auto!important;max-height:none!important;aspect-ratio:3/2!important;object-fit:cover!important;border-radius:0!important;margin:0!important}
+main :is(#atractivos-destino,.destination-experience-list) :is(h3,h4){font-size:18px!important;line-height:1.2!important;min-height:43.2px!important;height:43.2px!important;margin:12px 14px 0!important;padding:0!important;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+main :is(#atractivos-destino,.destination-experience-list)>article>p,main .destination-experience-copy>p{font-size:14px!important;line-height:1.45!important;min-height:40.6px!important;height:40.6px!important;margin:8px 14px 0!important;padding:0!important;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+main :is(#atractivos-destino,.destination-experience-list) .story-number{display:none!important}
+main :is(#atractivos-destino,.destination-experience-list)>article>a.text-link,main .destination-experience-copy>a.text-link{font-size:13px!important;line-height:24px!important;height:24px!important;min-height:24px!important;margin:12px 14px 0!important;align-self:flex-start}
+main :is(#atractivos-destino,.destination-experience-list)>article:not(:has(a.text-link))::after{content:'';display:block;height:24px;flex:0 0 24px;margin-top:12px}
+@media(max-width:1000px){main :is(#atractivos-destino,.destination-experience-list){grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:650px){main :is(#atractivos-destino,.destination-experience-list){grid-template-columns:1fr!important}}

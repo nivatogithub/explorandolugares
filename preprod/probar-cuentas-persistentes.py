@@ -17,15 +17,17 @@ for key,row in initial['profiles'].items():
     status,page=call(client,'/negocios/acceso/');assert status==200
     csrf=re.search(r'name="csrf" value="([a-f0-9]+)"',page)[1]
     status,page=call(client,'/negocios/acceso/',{'csrf':csrf,'email':row['email'],'password':row['password']});assert status==200,key+': no se pudo iniciar sesión'
-    state=json.loads(call(client,'/__preprod-account.php')[1]);assert state['authenticated'] is True and state['administrator']==(key=='administrador'),key+': permisos incorrectos'
-    if key=='viajero':assert 'Ya tienes una cuenta de viajero o turista' in page
+    state=json.loads(call(client,'/api/account-session.php')[1]);assert state['authenticated'] is True and state['administrator']==(key=='administrador'),key+': permisos incorrectos'
+    assert 'Mi cuenta' in page,key+': falta portal personal'
+    status,page=call(client,'/negocios/portal/?tab='+('business' if key=='negocio' else 'personal'));assert status==200,key+': no abre la pestaña'
+    if key=='viajero':assert 'Personal' in page and 'Mis negocios' in page
     if key=='negocio':
         assert 'Solicitudes asociadas a tu cuenta' in page
         for business in row['businesses']:
             assert business['display_name'] in page,'Falta un negocio asociado en el portal comercial'
     assert call(client,'/admin/usuarios.php')[0]==(200 if key=='administrador' else 403),key+': acceso administrativo incorrecto'
     assert call(client,'/negocios/salir/',{'csrf':state['csrf']})[0]==200
-    assert json.loads(call(client,'/__preprod-account.php')[1])['authenticated'] is False
+    assert json.loads(call(client,'/api/account-session.php')[1])['authenticated'] is False
     assert call(client,'/admin/usuarios.php')[0]==403
 again=prepare()
 for key,row in initial['profiles'].items():

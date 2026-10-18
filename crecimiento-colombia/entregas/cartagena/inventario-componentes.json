@@ -1,0 +1,35 @@
+{
+  "destination_id": "CO-13-cartagena",
+  "sites_total": 19,
+  "experiences_total": 9,
+  "site_photo_candidates": 8,
+  "site_photos_pending": 11,
+  "experience_photos_pending": 9,
+  "experience_classes": {
+    "editorial_autonoma": 2,
+    "oferta_operador_documentada": 4,
+    "candidato_por_validar": 3
+  },
+  "references_human_approved": 3,
+  "illustrations_generated": 1,
+  "illustrations_approved": 0,
+  "integrated_sites": 0,
+  "published_sites": 0,
+  "exhaustive": false,
+  "art_generation_authorized": false,
+  "publication_approved": false,
+  "selected_sites": 8,
+  "selected_photo_candidates": 8,
+  "historical_component_approvals": 22,
+  "active_unchanged_component_approvals": 15,
+  "package_prepared_sites": 8,
+  "conditional_generation_authorization": {
+    "component_id": "CTG-01",
+    "source_revision": "3fab25acd916eb8cb4e7b2ea71bbdc21b2eda6e7ca23396bfe42adb7dd183b5a",
+    "instruction": "hay que hacerla con ai siguiendo el skill de iimagnes que tenemos",
+    "execution_deferred_reason": "primero corregir selección máximo8 según mensaje actual",
+    "final_art_approved": false
+  },
+  "hero_candidate": "imagenes/ia/procedencia-portada-v1.json",
+  "correction_report": "correcciones-v3.json"
+}

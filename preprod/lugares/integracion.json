@@ -1,0 +1,1931 @@
+{
+  "protected": {
+    "backend/integration-medicion/public/destino.php": "3f6f843ceb8fb31b5f2472bb4df25fa83a3ec7c252566c107c623e69b0844a8d",
+    "ensayos/v1/assets/style.css": "6e36ca28ca0813d5b6ee5a08c4067a6f56ba2cd099590b9ecf683258cd941c0b",
+    "design/portal/tokens.json": "5f77132083eaf4b1e559febb6109fd08bace8eb072114976ab8a42c1f0eefdf9",
+    "scripts/aplicar-identidad-neutral.py": "7330b18ce5e221f7db867da94476817a41ea4182fc965f6366c39ead751d4b8b",
+    "scripts/preparar-hosting.py": "931b88a1409f6d4135ec526a0eb92bdd45a673608f02c01c68cc9101fda85d8f",
+    "backend/public/_account-header.php": "93ea3d382963768614ab2dd0f36374e7e56071c4cb96f872b9216515a1ce4052",
+    "backend/public/admin/_navigation.php": "3a3a8f5bd03b9234aa7e9b37265772de3eb20aa3aa74d52cb35c8b4631ba7011"
+  },
+  "branches": [
+    {
+      "place": "cartagena",
+      "branch": "lugar/CO/bolivar/cartagena",
+      "commit": "07ec99d8a39542b821079d4208819c03d08ad865",
+      "publication_approval": "not_granted_by_this_integration"
+    },
+    {
+      "place": "bogota",
+      "branch": "lugar/CO/bogota-dc/bogota",
+      "commit": "f9b002033ebdf614b6abdf4508a121a1cbd4286c",
+      "publication_approval": "not_granted_by_this_integration"
+    },
+    {
+      "place": "medellin",
+      "branch": "lugar/CO/antioquia/medellin",
+      "commit": "61f8c51986412e140b9a4ab0715d813f29a89442",
+      "publication_approval": "not_granted_by_this_integration"
+    },
+    {
+      "place": "santa-marta",
+      "branch": "lugar/CO/magdalena/santa-marta",
+      "commit": "a95a007db1f3cac07c9542bcf1c8afc3ed7189c8",
+      "publication_approval": "not_granted_by_this_integration"
+    }
+  ],
+  "copied": [
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/paquete-v2.json",
+      "source": "crecimiento-colombia/entregas/cartagena/paquete-v2.json",
+      "sha256": "36353009311f6be4fe028fd6b739e855d94dbd551183aca6a018a7c5eac00da2"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/contenido-cierre-v9.json",
+      "source": "crecimiento-colombia/entregas/cartagena/contenido-cierre-v9.json",
+      "sha256": "e0c763e23593738ddc3df3bcebd30cdba3234e5a9ffad70222b96dd6b7be8f1f"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/INFORME_DIRECTORIO_2026-10-17.json",
+      "source": "crecimiento-colombia/entregas/cartagena/INFORME_DIRECTORIO_2026-10-17.json",
+      "sha256": "b68d0decbb441fa7805ea85fa3a706c8c6bcd14312a7ac34109e229159a0c15d"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/QA_PREPROD_CONTENIDO_V9.json",
+      "source": "crecimiento-colombia/entregas/cartagena/QA_PREPROD_CONTENIDO_V9.json",
+      "sha256": "62651b3c8661d164c76fdcbcd972e05135a5517c703a8aed33e90d9a2b86d07e"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/borrador-contenido-sin-fotos-v8.json",
+      "source": "crecimiento-colombia/entregas/cartagena/borrador-contenido-sin-fotos-v8.json",
+      "sha256": "0ff2eba32493296ec3f13a0d56be0e6fc24ca5f9fcfe40f0617b4d8bb0bb9352"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/TEXTOS_DIRECTOS_V11.json",
+      "source": "crecimiento-colombia/entregas/cartagena/TEXTOS_DIRECTOS_V11.json",
+      "sha256": "275a2f2815d87719c73853018cd6bffcc0f4de79fc5ec688eba106ce603a29c2"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/trazabilidad.json",
+      "source": "crecimiento-colombia/entregas/cartagena/trazabilidad.json",
+      "sha256": "409b3fa0860aa3dbee237c964beed97ae36262dcad5b44630f8f083589cf2ea4"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/fuentes.json",
+      "source": "crecimiento-colombia/entregas/cartagena/fuentes.json",
+      "sha256": "cf8066274302bc91d1c34fa3d77155b3335d218e69f6ae33681ee0dba62b81da"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/IMAGENES_PENDIENTES_V9.md",
+      "source": "crecimiento-colombia/entregas/cartagena/IMAGENES_PENDIENTES_V9.md",
+      "sha256": "26b0f0b44eaedbb30755d9c799beaf329642df24a6713597bb2a09b9c12faca0"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/CORRECCION_FRANJA_CANONES.json",
+      "source": "crecimiento-colombia/entregas/cartagena/CORRECCION_FRANJA_CANONES.json",
+      "sha256": "7ea91f998528130804a19da13b4cfa4c24010cb909e3530f0d9233c656599a3e"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/inventario-componentes.json",
+      "source": "crecimiento-colombia/entregas/cartagena/inventario-componentes.json",
+      "sha256": "64017f32f8d1cc2116f17e4b3933c21e209d6ba42513cc41bc0f834a623312e3"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/RECIBO_DIRECTORIO_V10.json",
+      "source": "crecimiento-colombia/entregas/cartagena/RECIBO_DIRECTORIO_V10.json",
+      "sha256": "a225a29323d13e4a63dadbfcee0e83ce40c4fb4df30d13c72c281f7c5714ad51"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/PRUEBA_ILUSTRACIONES_V10.md",
+      "source": "crecimiento-colombia/entregas/cartagena/PRUEBA_ILUSTRACIONES_V10.md",
+      "sha256": "9b79bd146ab79c78a9975f4fca6c4ac1cf2b0870f8237ad2d3d031f1f943ad3a"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/correcciones-v3.json",
+      "source": "crecimiento-colombia/entregas/cartagena/correcciones-v3.json",
+      "sha256": "d5fb30312c072068597bd49767a2943da63e400a8505242d2c2a8f4192198ba6"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/DIRECTORIO_AMPLIACION_V10.json",
+      "source": "crecimiento-colombia/entregas/cartagena/DIRECTORIO_AMPLIACION_V10.json",
+      "sha256": "0f334c89e11a0552f3a99ebae8afefe45eb960d2d48a614e74ca26bd5324425c"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/CIERRE_CONTENIDO_SIN_FOTOS.json",
+      "source": "crecimiento-colombia/entregas/cartagena/CIERRE_CONTENIDO_SIN_FOTOS.json",
+      "sha256": "ce62971f899704e0b8ca5aab10cd8b2dba17280ffb35fe9e2b8f37a59bd1b780"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/AUDITORIA_TOP8.md",
+      "source": "crecimiento-colombia/entregas/cartagena/AUDITORIA_TOP8.md",
+      "sha256": "a2be2afb25d24d23ecf422da02be3f38767bae356bb586fa0262a0bd374d37f6"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/STATUS.md",
+      "source": "crecimiento-colombia/entregas/cartagena/STATUS.md",
+      "sha256": "ff9aaafd5de188c6b23781703fd6b44bfff035352a7e9f0c1e1c6ffc8dac0b78"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/PRUEBA_CARICATURAS_V11.json",
+      "source": "crecimiento-colombia/entregas/cartagena/PRUEBA_CARICATURAS_V11.json",
+      "sha256": "8664e474973898f66d9561acd2a2e210276384728152de9865aac0015c56e0c1"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/directorio.json",
+      "source": "crecimiento-colombia/entregas/cartagena/directorio.json",
+      "sha256": "7481703ffbdaaec8ba9ce932c8b962213786015831d78131d358440cdca4a691"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/borrador.json",
+      "source": "crecimiento-colombia/entregas/cartagena/borrador.json",
+      "sha256": "daba7479e560ba26eaa239229b78f6428980e47a984e29da0c3dff88d0c2956c"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/QA_COMPACTA_V10.json",
+      "source": "crecimiento-colombia/entregas/cartagena/QA_COMPACTA_V10.json",
+      "sha256": "ac15c30b8ed9cf7d4455452cf4fdd491b1db0ddc866b047789d45a7a13df137b"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/PRUEBA_ILUSTRACIONES_V10.json",
+      "source": "crecimiento-colombia/entregas/cartagena/PRUEBA_ILUSTRACIONES_V10.json",
+      "sha256": "91f68201796981ac49fb77d430cb7f472db901fd586d9c9a0c02954753e99551"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/qa-estatica.json",
+      "source": "crecimiento-colombia/entregas/cartagena/qa-estatica.json",
+      "sha256": "ab010f21387ade3086e4a96f0912bebb7bb02ebd69f74388cb3718ba98795a00"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/AUDITORIA_TOP8.json",
+      "source": "crecimiento-colombia/entregas/cartagena/AUDITORIA_TOP8.json",
+      "sha256": "e974c847bfe5cec4439396094fa6c892c5c4af9e348ec29ecab551eb913ef10e"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/paquete-preprod.json",
+      "source": "crecimiento-colombia/entregas/cartagena/paquete-preprod.json",
+      "sha256": "c06462246c4ffdfa92284e28ce0c549bae1b4decab1f4a99fbbc1e2bc6c0ab15"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/revision-componentes.json",
+      "source": "crecimiento-colombia/entregas/cartagena/revision-componentes.json",
+      "sha256": "87ab94cdd096960fc62618ee0f67fdb699ad7babc8e1be4f348d3e8ed38058bb"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/PILOTO_SEMIRREALISTA.md",
+      "source": "crecimiento-colombia/entregas/cartagena/PILOTO_SEMIRREALISTA.md",
+      "sha256": "e86709469163e1c4ccd806c25a0d04576dfa191217fc19c0cb664d34a79a58ce"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/reporte-preprod.json",
+      "source": "crecimiento-colombia/entregas/cartagena/reporte-preprod.json",
+      "sha256": "cfe730a89b2a19b1caffcb8e97152c406ae863e55060ed88e5a6e5b1ef128195"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/aprobaciones-vigentes.json",
+      "source": "crecimiento-colombia/entregas/cartagena/aprobaciones-vigentes.json",
+      "sha256": "90ef958183997d042fb82b7dbd2966ea689eab61df32a19e848c17c6f675687b"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/SHA256SUMS.json",
+      "source": "crecimiento-colombia/entregas/cartagena/SHA256SUMS.json",
+      "sha256": "fe2192b1ad444a9594e56c591dbf390109cdee8f3a40c5561092d4412473aa24"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/RECIBO_CONTENIDO_V10.json",
+      "source": "crecimiento-colombia/entregas/cartagena/RECIBO_CONTENIDO_V10.json",
+      "sha256": "01955728285171d4c6f52ecdf7d85b26060de9819338f004e1bed64c2db367ad"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/CIERRE_CONTENIDO_SIN_FOTOS.md",
+      "source": "crecimiento-colombia/entregas/cartagena/CIERRE_CONTENIDO_SIN_FOTOS.md",
+      "sha256": "442c32249efd27f5ae8dc131d6efedf721560e0ed367faa2fef827b4513a222b"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/REVISION_CONTENIDO_V9_es.md",
+      "source": "crecimiento-colombia/entregas/cartagena/REVISION_CONTENIDO_V9_es.md",
+      "sha256": "45a037d002ff98324c0f25c420a6c6fcf36a4be095c9e018947f013debb8a413"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/REVISION_CONTENIDO_V9_pt-BR.md",
+      "source": "crecimiento-colombia/entregas/cartagena/REVISION_CONTENIDO_V9_pt-BR.md",
+      "sha256": "a00585dd4c3c708bed3487342f658617ef1cb78b79022a1944c395cfedec66cb"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/ATRACCIONES_SEMIRREALISTAS_MANIFIESTO.json",
+      "source": "crecimiento-colombia/entregas/cartagena/ATRACCIONES_SEMIRREALISTAS_MANIFIESTO.json",
+      "sha256": "54b21be10d9fe452a4f327b2ef6328ed410766c10332ebfede190e7262ebe214"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/CONTENIDO_COMPACTO_V10.json",
+      "source": "crecimiento-colombia/entregas/cartagena/CONTENIDO_COMPACTO_V10.json",
+      "sha256": "49e5879f57d2dbb3fa9530e862adfb981bdfdd4b5f3a04f0fe1867ad7bbc153a"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/REVISION_ATRACTIVOS_SEMIRREALISTAS.md",
+      "source": "crecimiento-colombia/entregas/cartagena/REVISION_ATRACTIVOS_SEMIRREALISTAS.md",
+      "sha256": "69561f9e0b765680700d1c6d0560f2cb8a4c5bf9181fb5e71fb65485f6dd3352"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/IMAGENES_PENDIENTES_V9.json",
+      "source": "crecimiento-colombia/entregas/cartagena/IMAGENES_PENDIENTES_V9.json",
+      "sha256": "ed6f2de1fab0119ed5a90212457b8e60dbe33922b1b265b8328743a97a531f2b"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/REVISION_CONTENIDO_V9_en.md",
+      "source": "crecimiento-colombia/entregas/cartagena/REVISION_CONTENIDO_V9_en.md",
+      "sha256": "92009c0b2057d00be536e3cb8163cf6e65548e469db10b820b7dd2a27cd21173"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/BIBLIOTECA_VISUAL_V12.json",
+      "source": "crecimiento-colombia/entregas/cartagena/BIBLIOTECA_VISUAL_V12.json",
+      "sha256": "1c8a9857af73b4913db6a7ebebccc9049152faaa9cde2285903e9f57d33fde23"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/PILOTO_SEMIRREALISTA_PROMPTS.json",
+      "source": "crecimiento-colombia/entregas/cartagena/PILOTO_SEMIRREALISTA_PROMPTS.json",
+      "sha256": "1f0eae483a47626e629bb824b7d395e79591e9a7149502358930010ca004c0c5"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/reactivacion-y-busqueda-v7.json",
+      "source": "crecimiento-colombia/entregas/cartagena/reactivacion-y-busqueda-v7.json",
+      "sha256": "6c9014e9817e3187dbdf6bedf933d717b36a8934d6ca097bcc3b9dbef3fae8de"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/RECIBO_PREPROD_DIRECTORIO_V9.json",
+      "source": "crecimiento-colombia/entregas/cartagena/RECIBO_PREPROD_DIRECTORIO_V9.json",
+      "sha256": "669d989b44d665116c72d487432b45d26dfcd37c63253c0f5a96fb28ad21cbc1"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/PROMPT_PORTADA_IDENTIDAD_V4.txt",
+      "source": "crecimiento-colombia/entregas/cartagena/PROMPT_PORTADA_IDENTIDAD_V4.txt",
+      "sha256": "9ab0c711a4ba68a3322ef4d037c16ba4a0f52c0a0a77208cf03c12eeecea7c1a"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/seleccion-editorial.json",
+      "source": "crecimiento-colombia/entregas/cartagena/seleccion-editorial.json",
+      "sha256": "d1ebb282ea26345c0ac2672b83506a57373fc1274936c1d2350c159b70c622ec"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/contenido-es.md",
+      "source": "crecimiento-colombia/entregas/cartagena/contenido-es.md",
+      "sha256": "d971de078ffb6a376669b150ee445c12ca6645ea198d39e7ba5b07a97a8cf889"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/decisiones-usuario.json",
+      "source": "crecimiento-colombia/entregas/cartagena/decisiones-usuario.json",
+      "sha256": "ab1915bd8ffa57326a506b12a2be4d1284dcfdbe9cf895caaab09d26f895a32c"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/RECIBO_PREPROD_CONTENIDO_V9.json",
+      "source": "crecimiento-colombia/entregas/cartagena/RECIBO_PREPROD_CONTENIDO_V9.json",
+      "sha256": "06177506360a21ecc5e6657f4a95a337c8df66b5d8c52af7455ab3ec8b8ae626"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/contenido-pt-BR.md",
+      "source": "crecimiento-colombia/entregas/cartagena/contenido-pt-BR.md",
+      "sha256": "690fa6ae525df75245730a5bc5611b9ea444ac0e2cb82bfa96735a8633d51d10"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/contenido-cierre-v11.json",
+      "source": "crecimiento-colombia/entregas/cartagena/contenido-cierre-v11.json",
+      "sha256": "f6477a23acd918ec37658457c1761512aad21d448907de0cec231de80a0e5a4b"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/contenido-cierre-v10.json",
+      "source": "crecimiento-colombia/entregas/cartagena/contenido-cierre-v10.json",
+      "sha256": "3704091468865372489c6b0d7847ccafb39a01d91fe3356d2bf833ded738fc13"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/PROMPT_PORTADA_IDENTIDAD_V3.txt",
+      "source": "crecimiento-colombia/entregas/cartagena/PROMPT_PORTADA_IDENTIDAD_V3.txt",
+      "sha256": "fe9289fd32cc2c9bfa0aaa3b646470a5a2154bb1340cd1c1adcc5c1e228b4973"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/revision-chat-centro-v7.json",
+      "source": "crecimiento-colombia/entregas/cartagena/revision-chat-centro-v7.json",
+      "sha256": "899ca8f32bb859e6be1348a8978b8e4eba93d6678497e90ff0d7be7572297de0"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/PILOTO_SEMIRREALISTA_MANIFIESTO.json",
+      "source": "crecimiento-colombia/entregas/cartagena/PILOTO_SEMIRREALISTA_MANIFIESTO.json",
+      "sha256": "50482a22fc7087fd230c992d07224cdbc3f390e122eb49bd69dd323c75cf00e7"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/PROMPT_PORTADA_IDENTIDAD_V2.txt",
+      "source": "crecimiento-colombia/entregas/cartagena/PROMPT_PORTADA_IDENTIDAD_V2.txt",
+      "sha256": "0601f281b8596527a0db778861fdefb279aeaf0fbc3fa6f0cce8b1eb6a5ddea8"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/QA_CIERRE_V9.json",
+      "source": "crecimiento-colombia/entregas/cartagena/QA_CIERRE_V9.json",
+      "sha256": "648cf1b6a59ab4d24b36fa86b3713886ec3cdad19676e025fd5b4e66ae9a6d87"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/AVANCE_ACTUAL.md",
+      "source": "crecimiento-colombia/entregas/cartagena/AVANCE_ACTUAL.md",
+      "sha256": "f617dce79ee2c7caa369bdabe403bff6ed7853a7e5b6bae0eaec87da31395e37"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/paquete-estado.json",
+      "source": "crecimiento-colombia/entregas/cartagena/paquete-estado.json",
+      "sha256": "d51159a3bf46fe716e164f4031cf2d4fa8dd9e9b6d63288f7dd354cf92235686"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/contenido-en.md",
+      "source": "crecimiento-colombia/entregas/cartagena/contenido-en.md",
+      "sha256": "1f2daf5a48cc43a38e45182cfbc6cc5a94a6929559a08582b734dec3fd2b134f"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/QA_ATRACTIVOS_SEMIRREALISTAS.json",
+      "source": "crecimiento-colombia/entregas/cartagena/QA_ATRACTIVOS_SEMIRREALISTAS.json",
+      "sha256": "4884d341d4a86a4451870b1665b01d93b9e1b5fd03b20b43b0f4f4f41395d72a"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/historial/AUDITORIA_TOP8-antes-cierre-v9.json",
+      "source": "crecimiento-colombia/entregas/cartagena/historial/AUDITORIA_TOP8-antes-cierre-v9.json",
+      "sha256": "1e3d9d7d1234009fdfc84b7d227e9ee67650a1712fea81057e5da85bbd7076db"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/historial/revision116-qa-navegador.json",
+      "source": "crecimiento-colombia/entregas/cartagena/historial/revision116-qa-navegador.json",
+      "sha256": "3a032f7cb8ffa3ab48a7c28734e2725dc63d8e1f74190435a2d07038b4bd5dad"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/historial/revision-116-componentes-3fab25.json",
+      "source": "crecimiento-colombia/entregas/cartagena/historial/revision-116-componentes-3fab25.json",
+      "sha256": "9996c74cc9a7fd1c2942b1d7d78e8b68aa0a40707d4dfe467184fc8f172614a0"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/historial/decision-usuario-original-3fab25.json",
+      "source": "crecimiento-colombia/entregas/cartagena/historial/decision-usuario-original-3fab25.json",
+      "sha256": "bc562f3448b76daf10055e31a73881c5555512a5e654bc61b9e4e8f03649351a"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/historial/revision-41-componentes.json",
+      "source": "crecimiento-colombia/entregas/cartagena/historial/revision-41-componentes.json",
+      "sha256": "4a9e409b69925a8bcdcac4609b631f72182b4a4ec44c0e38955eb3b6d43e2bfc"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/portada-identidad-v2/procedencia.json",
+      "source": "crecimiento-colombia/entregas/cartagena/portada-identidad-v2/procedencia.json",
+      "sha256": "e1a5c26dd7db0667b4596f290de525a9a72f0982df86551c3baef055f666d585"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/portada-identidad-v3/procedencia.json",
+      "source": "crecimiento-colombia/entregas/cartagena/portada-identidad-v3/procedencia.json",
+      "sha256": "eb50ce4ed6b3f50844f4cc72ce3d579d25637208591f768975ab2e3adfe65b2c"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/portada-identidad-v4/procedencia.json",
+      "source": "crecimiento-colombia/entregas/cartagena/portada-identidad-v4/procedencia.json",
+      "sha256": "dc8c8a6265d203fc805848070c519c61e562fdd594391b1f9e7e1295b165d392"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/imagenes/fuentes-adicionales.json",
+      "source": "crecimiento-colombia/entregas/cartagena/imagenes/fuentes-adicionales.json",
+      "sha256": "8ff9fff459c29ef15ee4dfdb6130a04529cd78c6a80ba2197bc71089925fee98"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/imagenes/propuestas-actividades.json",
+      "source": "crecimiento-colombia/entregas/cartagena/imagenes/propuestas-actividades.json",
+      "sha256": "bd293fc461c0fa4d4b89c765ef03d7871fb4991b74b8a249ffcda1d54ac51260"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/imagenes/manifiesto.json",
+      "source": "crecimiento-colombia/entregas/cartagena/imagenes/manifiesto.json",
+      "sha256": "ae869e0a22b10dd6ac7a24b55337f9e0dd4c9c074a06c93bba17bc16880000d7"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/imagenes/referencias-descartadas.json",
+      "source": "crecimiento-colombia/entregas/cartagena/imagenes/referencias-descartadas.json",
+      "sha256": "6ac552995fdf15ed23cf6c2f13f5f333b1d881ca84b1c0189de30ced6b6db8ba"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/imagenes/candidatas-v3/revision-y-procedencia.json",
+      "source": "crecimiento-colombia/entregas/cartagena/imagenes/candidatas-v3/revision-y-procedencia.json",
+      "sha256": "ad04040a805bfc5baccd92bf971e50a5df6087ac96dd58f2b92cdd4fc4085a13"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/imagenes/candidatas-v3/getsemani-calles-metadata.json",
+      "source": "crecimiento-colombia/entregas/cartagena/imagenes/candidatas-v3/getsemani-calles-metadata.json",
+      "sha256": "3c854882dbc5c5387aa295cf5b1bc188bbfd8ca41530d025c14df0f5b074c716"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/imagenes/candidatas-v3/boquilla-metadata.json",
+      "source": "crecimiento-colombia/entregas/cartagena/imagenes/candidatas-v3/boquilla-metadata.json",
+      "sha256": "f821b38c3017e6f650e7726e81e4e557de91ef29063237fd4372dd717ea708c5"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/imagenes/candidatas-v3/rosario-archipielago-metadata.json",
+      "source": "crecimiento-colombia/entregas/cartagena/imagenes/candidatas-v3/rosario-archipielago-metadata.json",
+      "sha256": "6ab28ed6e1e097d5bd1504b7cbde8e47f5abdc884ce14c7724d7dbf1521b3972"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/imagenes/candidatas-v3/san-felipe-panorama-metadata.json",
+      "source": "crecimiento-colombia/entregas/cartagena/imagenes/candidatas-v3/san-felipe-panorama-metadata.json",
+      "sha256": "3e1d38c92c66bff1b04323b80d072b3181259a09c78b597afc0dbf56e9440e91"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/imagenes/candidatas-v3/manifest.json",
+      "source": "crecimiento-colombia/entregas/cartagena/imagenes/candidatas-v3/manifest.json",
+      "sha256": "0392a5b7236bb5b761f0d15ff08183b1d912fca0842472e0b47ce32e2913e6e7"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/imagenes/candidatas-v3/boquilla-panorama-metadata.json",
+      "source": "crecimiento-colombia/entregas/cartagena/imagenes/candidatas-v3/boquilla-panorama-metadata.json",
+      "sha256": "b4b14fab31386feb34f0df941a33306fb01a204db9f82329ae8dc6ce7744bf37"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/cartagena/imagenes/ia/procedencia-portada-v1.json",
+      "source": "crecimiento-colombia/entregas/cartagena/imagenes/ia/procedencia-portada-v1.json",
+      "sha256": "eb0821b4dbf2e36146702e7152f4a2b939dbc015f99f22455fd58cb892db9f3c"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/QA_DIRECTORIO_30.json",
+      "source": "crecimiento-colombia/entregas/bogota/QA_DIRECTORIO_30.json",
+      "sha256": "2f3b5de0a47c0adc5d158da839b358ae2fe7a40772484ae74b06f510e927d0c3"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/contenido.en.md",
+      "source": "crecimiento-colombia/entregas/bogota/contenido.en.md",
+      "sha256": "c88c90c8efc31282a277c71ee4729815facabbffd7f2fa9b6428e73535571026"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/QA_DIRECTORIO_PREPROD.json",
+      "source": "crecimiento-colombia/entregas/bogota/QA_DIRECTORIO_PREPROD.json",
+      "sha256": "311e622cf19fc327ef318c139375a66600283fc0f8ff651ab3467f1bae45a6e9"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/fuentes.json",
+      "source": "crecimiento-colombia/entregas/bogota/fuentes.json",
+      "sha256": "282d432a3a1446ff277541fa259b2bcbfdc50200402590271032794ddad04a72"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/paquete-borrador.json",
+      "source": "crecimiento-colombia/entregas/bogota/paquete-borrador.json",
+      "sha256": "d8379dc89eef926cbc771491c72c13a2abd8e9b484150a808f069ec6c0272fc9"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/contenido.es.md",
+      "source": "crecimiento-colombia/entregas/bogota/contenido.es.md",
+      "sha256": "bdfaebfd8185fe7a079a2a4fc22f0757fc6bc404853722792896e859d6176012"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/PR_BORRADOR.md",
+      "source": "crecimiento-colombia/entregas/bogota/PR_BORRADOR.md",
+      "sha256": "7a9e89ed4933253c57dd0f0f789dfdb875cee90c4f12babf087ca946572cd2af"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/bogota-history.json",
+      "source": "crecimiento-colombia/entregas/bogota/bogota-history.json",
+      "sha256": "028da6e0efe0e50bbb2c48ebcc4290df77b9203b8c56d9831cae9071ad2a8d75"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/CIERRE_CONTENIDO_SIN_FOTOS.json",
+      "source": "crecimiento-colombia/entregas/bogota/CIERRE_CONTENIDO_SIN_FOTOS.json",
+      "sha256": "cb3bb8e1368fe62e8c7b74a9302575b4be4f9a54674d0fd2069f105946bb8225"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/DIRECTORIO_VIGENTE.md",
+      "source": "crecimiento-colombia/entregas/bogota/DIRECTORIO_VIGENTE.md",
+      "sha256": "61a12c6de07aa13e26a4c78ca05edccc1ee611faccddef51a333dd3c9c91b039"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/AUDITORIA_TOP8.md",
+      "source": "crecimiento-colombia/entregas/bogota/AUDITORIA_TOP8.md",
+      "sha256": "fc6d8992e40b36775ce1fe55fbcd11d382a2392d98ba95e666ffc3f16c0f5d69"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/STATUS.md",
+      "source": "crecimiento-colombia/entregas/bogota/STATUS.md",
+      "sha256": "afacde4b8c7bcf5a3be4137b595db7631c5301eb7d701f4ab0c9b2cef4f4f221"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/directorio-preprod-gratuito.json",
+      "source": "crecimiento-colombia/entregas/bogota/directorio-preprod-gratuito.json",
+      "sha256": "ec033b6715d11a8ca3a689bc20c7336fe353d314cfcb7b68721abf81950d2852"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/directorio.json",
+      "source": "crecimiento-colombia/entregas/bogota/directorio.json",
+      "sha256": "ca91c9c06f299cfb15b9bf995926caed1b7a728ecd9469837b63886d479e7851"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/directorio-preprod-30.json",
+      "source": "crecimiento-colombia/entregas/bogota/directorio-preprod-30.json",
+      "sha256": "a94f996b5eb95d8451f4635409d617bec1afab7f84761dfe54b947124dbdfd70"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/mediciones.json",
+      "source": "crecimiento-colombia/entregas/bogota/mediciones.json",
+      "sha256": "694fec7670e4358325939518895b8e2c4b196751a49a41fba59277a1849d33d3"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/AUDITORIA_TOP8.json",
+      "source": "crecimiento-colombia/entregas/bogota/AUDITORIA_TOP8.json",
+      "sha256": "2aa76d9227a9b394105351299658d2fb760a92ae3d0275c6061f16a1c7f67269"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/reporte-preprod-v3.json",
+      "source": "crecimiento-colombia/entregas/bogota/reporte-preprod-v3.json",
+      "sha256": "64ed299298a22c79dd7bc8440b0d173bfaf7223e19c171a6e00e51bffa915676"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/imagenes.json",
+      "source": "crecimiento-colombia/entregas/bogota/imagenes.json",
+      "sha256": "4a678dd67d3b5dd23896d3db9315abf6220953b8ff419b6ff0f9d5efdc77ad73"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/reporte-preprod.json",
+      "source": "crecimiento-colombia/entregas/bogota/reporte-preprod.json",
+      "sha256": "8de3eaef49854922725f8d27557383b34a0ade8c4f8e90ec3c712bbddb709cf8"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/aprobacion-jardin-tropicario-v1.json",
+      "source": "crecimiento-colombia/entregas/bogota/aprobacion-jardin-tropicario-v1.json",
+      "sha256": "010f7879fd04b4ea7316c980833ca845b29fc2e27c49fbe5d04478e5ae92fbc4"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/contenido.pt-BR.md",
+      "source": "crecimiento-colombia/entregas/bogota/contenido.pt-BR.md",
+      "sha256": "b11bcda7d9ff30e15c102f76a11adee463fb80b914aab0400a02fd1325c4f642"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/CIERRE_CONTENIDO_SIN_FOTOS.md",
+      "source": "crecimiento-colombia/entregas/bogota/CIERRE_CONTENIDO_SIN_FOTOS.md",
+      "sha256": "91818b8a2528b39759c5f625f5b9c96cd4e90e35fdc7697307f330ab108f48d9"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/aprobacion-ilustracion-tropicario-v1.json",
+      "source": "crecimiento-colombia/entregas/bogota/aprobacion-ilustracion-tropicario-v1.json",
+      "sha256": "883ca58cc5a7a144dfa7a5da27d0a4054b60aacc35a084fe4b7999970d5fd64a"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/verificacion-preprod-jardin-aprobado.json",
+      "source": "crecimiento-colombia/entregas/bogota/verificacion-preprod-jardin-aprobado.json",
+      "sha256": "1afcf29d5eb8ca3d6505b6f7ecd479bb76462d54677370eace56a2beb08cab54"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/sitios.json",
+      "source": "crecimiento-colombia/entregas/bogota/sitios.json",
+      "sha256": "27b3873529cb3ecebd842f7286e8fbf07a4b32a52e3450166ccb873ca049cfa8"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/evidencia-sha256.json",
+      "source": "crecimiento-colombia/entregas/bogota/evidencia-sha256.json",
+      "sha256": "8dd757c29e3fc09f232d7d4f5bbe1d7aa78d2fece53b034f618aade5e01add81"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/validacion-avance-jardin.json",
+      "source": "crecimiento-colombia/entregas/bogota/validacion-avance-jardin.json",
+      "sha256": "1f5498c8b1cad3baccc7212d96d253fb74ff6844bd3f29e6c113c1c60da403e5"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/reporte-avance-jardin-aprobado.json",
+      "source": "crecimiento-colombia/entregas/bogota/reporte-avance-jardin-aprobado.json",
+      "sha256": "63a13cc734688b3de1a75748002097fdc6eef97d1a2dc50222b998dc7d084923"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/seleccion-editorial-v3.json",
+      "source": "crecimiento-colombia/entregas/bogota/seleccion-editorial-v3.json",
+      "sha256": "4935ccf5f396b0dc1ba9bbfdf9274c7d700f9f0de7577d36e6d705ac0140cc74"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/experiencias.json",
+      "source": "crecimiento-colombia/entregas/bogota/experiencias.json",
+      "sha256": "140d750579a6a637a27b7c3a949f36132b22b307ae97089fbb54d0b4ba85b7e9"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/verificacion-preprod-v3.json",
+      "source": "crecimiento-colombia/entregas/bogota/verificacion-preprod-v3.json",
+      "sha256": "58ef71e9ea737a07a353f8c23d2d490216ec7f92b54cfab33805a9f90a3f17b1"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/AMPLIACION_DIRECTORIO_30.json",
+      "source": "crecimiento-colombia/entregas/bogota/AMPLIACION_DIRECTORIO_30.json",
+      "sha256": "70ed4c55ae5dfa78c383fc5a5d9e631cdf848f467072111f1c07fbee3a3d1540"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/AVANCE_ACTUAL.md",
+      "source": "crecimiento-colombia/entregas/bogota/AVANCE_ACTUAL.md",
+      "sha256": "0ff1c62c75979e11fec118a61b081c66e40b89809a85a75211895c4bdaf9c8de"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/aprobaciones.json",
+      "source": "crecimiento-colombia/entregas/bogota/aprobaciones.json",
+      "sha256": "1bc356155e160ded90435e94cbffba658969d1fdd989fa82a377bc65cfa426e1"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/asignacion-imagenes-v3.json",
+      "source": "crecimiento-colombia/entregas/bogota/asignacion-imagenes-v3.json",
+      "sha256": "ff2a77a850bc4acc878a3647caaca27a3b6480b7af501c64b6093e50b4e93227"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/historial/reporte-preprod-v2.json",
+      "source": "crecimiento-colombia/entregas/bogota/historial/reporte-preprod-v2.json",
+      "sha256": "10a64c23d28f6525c22222cb82c1b9a1e24027f07e710a914a16424808ba1b1e"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/avance-jardin-aprobado/paquete-destino.json",
+      "source": "crecimiento-colombia/entregas/bogota/avance-jardin-aprobado/paquete-destino.json",
+      "sha256": "583dd5789c9aee43faac32ec7aa8a8029ff07d68f4d2e0f75f99092e1efcba97"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/revision-v5/candidatas.json",
+      "source": "crecimiento-colombia/entregas/bogota/revision-v5/candidatas.json",
+      "sha256": "186980e65e5915cc16e25bd465c3afbfee62026bd4924d705a6f2771b1116450"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/revision-v5/textos-nacional-propuesta.json",
+      "source": "crecimiento-colombia/entregas/bogota/revision-v5/textos-nacional-propuesta.json",
+      "sha256": "4f6a7871d64a2c30616cf74bac031a3e513aa5d0ce6919cc72fd2b7212502d21"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/revision-v5/evidencia-sha256.json",
+      "source": "crecimiento-colombia/entregas/bogota/revision-v5/evidencia-sha256.json",
+      "sha256": "bc4a62e1188b9bfcdfc8e437d71274bd8a1ed05231dc083484c2bc7d2cc9b589"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/revision-v5/descubrimiento-actividades.json",
+      "source": "crecimiento-colombia/entregas/bogota/revision-v5/descubrimiento-actividades.json",
+      "sha256": "d637991b2d0ddabd0844627b98603f730800242bb568a1d46d1af428c0379246"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/revision-v5/descargas.json",
+      "source": "crecimiento-colombia/entregas/bogota/revision-v5/descargas.json",
+      "sha256": "2a9d2c4287d4cf6fea2774e3e3d09cd988cff8b714b8ed1d4312b16a81b1de33"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/revision-v5/reporte.json",
+      "source": "crecimiento-colombia/entregas/bogota/revision-v5/reporte.json",
+      "sha256": "d4161223320aa744987830380be7975c04ab7c7b632c5d13f576cce9fb71ec8e"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/revision-v4/fuentes-consultadas.json",
+      "source": "crecimiento-colombia/entregas/bogota/revision-v4/fuentes-consultadas.json",
+      "sha256": "ddce507e93f4445e2693fce33095b0680db8baa504094fb23337568c5b775823"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/revision-v4/auditoria-actividades.json",
+      "source": "crecimiento-colombia/entregas/bogota/revision-v4/auditoria-actividades.json",
+      "sha256": "27b57418a9870b38cfb126bd955873d70af070aca36bf18fc47366faa2df8b3e"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/revision-v4/auditoria-componentes.json",
+      "source": "crecimiento-colombia/entregas/bogota/revision-v4/auditoria-componentes.json",
+      "sha256": "70b4b7e616a9462c7e9d683a6b764db9796a45ae21dc828a64cc71aa1dd95f23"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/revision-v4/candidatas-visuales.json",
+      "source": "crecimiento-colombia/entregas/bogota/revision-v4/candidatas-visuales.json",
+      "sha256": "e490eb2cba8cf1d2e85804e5c4fa5508507c654badf0eac289bd1902116987ff"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/revision-v4/descargas-miniaturas.json",
+      "source": "crecimiento-colombia/entregas/bogota/revision-v4/descargas-miniaturas.json",
+      "sha256": "0297981fe1071597644902f35c7f3b8ed020278c8bae3e0dc6bbc1cf489b426d"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/revision-v4/evidencia-sha256.json",
+      "source": "crecimiento-colombia/entregas/bogota/revision-v4/evidencia-sha256.json",
+      "sha256": "513e8ca63529b8df107fbef7f51f06eef0e5718651adf34cb276bd907d57a124"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/revision-v4/textos-propuestos.json",
+      "source": "crecimiento-colombia/entregas/bogota/revision-v4/textos-propuestos.json",
+      "sha256": "0e4659e12a1d9133fcaf420e12b2932e6d3b704297c3c78e7699ae0bf4df3023"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/revision-v4/descargas.json",
+      "source": "crecimiento-colombia/entregas/bogota/revision-v4/descargas.json",
+      "sha256": "5f40f4857c6886c85eeb856a34f446477ea0ca5f09fbd8eed75de7125e246605"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/preprod-v3/paquete-destino.json",
+      "source": "crecimiento-colombia/entregas/bogota/preprod-v3/paquete-destino.json",
+      "sha256": "85a43e3ac88cc896589c384751715781c26fd12571f7fda10a4be9aa102f79c8"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/semirrealista-v1/QA_INTEGRACION_TRES_DESTINOS.json",
+      "source": "crecimiento-colombia/entregas/bogota/semirrealista-v1/QA_INTEGRACION_TRES_DESTINOS.json",
+      "sha256": "d2205e61f04a100816ad3d20ad1e9f3afdf5a83d71b17b7625088095affc28c5"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/semirrealista-v1/generaciones.json",
+      "source": "crecimiento-colombia/entregas/bogota/semirrealista-v1/generaciones.json",
+      "sha256": "3fe56c301159f17edf717847362c68f8fea40bcde351edcfe25e0cf3ab5f3719"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/semirrealista-v1/QA_LECTURA_DIRECTA.json",
+      "source": "crecimiento-colombia/entregas/bogota/semirrealista-v1/QA_LECTURA_DIRECTA.json",
+      "sha256": "cdcf9da23ef1069f6b61572b8cc71f079193d1c9761454ae17a9b99a50fcaf58"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/semirrealista-v1/PROMPT_PORTADA_V4.txt",
+      "source": "crecimiento-colombia/entregas/bogota/semirrealista-v1/PROMPT_PORTADA_V4.txt",
+      "sha256": "770c2d18aa4ec3159f46da461ef452972949942ff4f6a9771044485faa146398"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/semirrealista-v1/PROMPT_PORTADA_V3.txt",
+      "source": "crecimiento-colombia/entregas/bogota/semirrealista-v1/PROMPT_PORTADA_V3.txt",
+      "sha256": "770c2d18aa4ec3159f46da461ef452972949942ff4f6a9771044485faa146398"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/semirrealista-v1/README.md",
+      "source": "crecimiento-colombia/entregas/bogota/semirrealista-v1/README.md",
+      "sha256": "36b7f44ed8ff066f95520a3170d91795d961715172c7b3a711af3ec7f0ee76e7"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/semirrealista-v1/PORTADA_V2.json",
+      "source": "crecimiento-colombia/entregas/bogota/semirrealista-v1/PORTADA_V2.json",
+      "sha256": "6d8d3888ab80e3cf0f7f86e6412570c65a9dee713fe872ed4e83bffc9c9a026e"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/semirrealista-v1/PORTADA_V3.json",
+      "source": "crecimiento-colombia/entregas/bogota/semirrealista-v1/PORTADA_V3.json",
+      "sha256": "1da8fd9790261a665477f9f5a9bf81740203d87d5e1c7f8515ed115518c5e6d7"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/semirrealista-v1/prompts.json",
+      "source": "crecimiento-colombia/entregas/bogota/semirrealista-v1/prompts.json",
+      "sha256": "6675810e3ceeab704a4e81145fb3dfc74cb204aa1ab960e4f208c24b85c29d15"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/semirrealista-v1/PORTADA_V4.json",
+      "source": "crecimiento-colombia/entregas/bogota/semirrealista-v1/PORTADA_V4.json",
+      "sha256": "c9914eb597b4e6908f29fa5d201404c0ca9b106ce31887f16f53a8422f4cff08"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/semirrealista-v1/VALIDACION.json",
+      "source": "crecimiento-colombia/entregas/bogota/semirrealista-v1/VALIDACION.json",
+      "sha256": "8a8272e5b362970182dfa13b57a9eff48e5430f4302dc281f931646316551a06"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/semirrealista-v1/contenido.json",
+      "source": "crecimiento-colombia/entregas/bogota/semirrealista-v1/contenido.json",
+      "sha256": "385cf2354ba54e128d96177ecb7261191ceccef9bda3514247efb8ae6ebf2f59"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/semirrealista-v1/manifiesto.json",
+      "source": "crecimiento-colombia/entregas/bogota/semirrealista-v1/manifiesto.json",
+      "sha256": "62569937e9d96d6323ad694a4aac9686acac5240c3d4a5a1fd91a006688634f0"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/revision-v6/fuentes-y-limites.json",
+      "source": "crecimiento-colombia/entregas/bogota/revision-v6/fuentes-y-limites.json",
+      "sha256": "1be117797b36342496fffa516ced005f0c0099cf3b96e6e2ef2d69517b710314"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/revision-v6/candidatas.json",
+      "source": "crecimiento-colombia/entregas/bogota/revision-v6/candidatas.json",
+      "sha256": "442bda80539e7a56d5730b7f7a4b9bbe571c8474b7a64cb34f6caa1fe6ce5809"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/preprod-paquete/paquete-destino.json",
+      "source": "crecimiento-colombia/entregas/bogota/preprod-paquete/paquete-destino.json",
+      "sha256": "6b72ea8a37c0798e85a297efcf9372e9c87014b8daec0c50958fe08b554e0d2b"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/imagenes/ia/procedencia-tropicario-v1.json",
+      "source": "crecimiento-colombia/entregas/bogota/imagenes/ia/procedencia-tropicario-v1.json",
+      "sha256": "1d56ae609015ba92c32428efef98f7992ea1df7354d5b3835a47fa88cd2ac17f"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/imagenes/revision-v3/manifest.json",
+      "source": "crecimiento-colombia/entregas/bogota/imagenes/revision-v3/manifest.json",
+      "sha256": "b2ba41fef04713585407952c749b4879f2a392d0decb6e8f64a25d7057b4a5e1"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/bogota/imagenes/revision-v3/asignacion-imagenes-v3.json",
+      "source": "crecimiento-colombia/entregas/bogota/imagenes/revision-v3/asignacion-imagenes-v3.json",
+      "sha256": "7ed27e070657f54715ea2f283f39e2b8dca0c823c0c81e8e904d230190ef7a75"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/QA_DIRECTORIO_30.json",
+      "source": "crecimiento-colombia/entregas/medellin/QA_DIRECTORIO_30.json",
+      "sha256": "8bf885f641ce44d4838f8c94cd560fce8d60c47ec8e0fc575908f1fcd46cc783"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/QA_DIRECTORIO_PREPROD.json",
+      "source": "crecimiento-colombia/entregas/medellin/QA_DIRECTORIO_PREPROD.json",
+      "sha256": "a38aee4a82fd201cd4130b58df63ab8f3c3ddc89d2bec2743282d46245d8a2bf"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/fuentes.json",
+      "source": "crecimiento-colombia/entregas/medellin/fuentes.json",
+      "sha256": "bf36080b347a3373fc03318e06b825a6a913d99a893fd9886b5715c4aa4f18a1"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/verificacion-vigencia-v5.json",
+      "source": "crecimiento-colombia/entregas/medellin/verificacion-vigencia-v5.json",
+      "sha256": "d63bab85b35084c8d2f2a178f898fe1ae8a54d27c4367349c0d8e54d894f472c"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/coherencia-idiomas-v5.json",
+      "source": "crecimiento-colombia/entregas/medellin/coherencia-idiomas-v5.json",
+      "sha256": "fa0a266bb5d4123d77d8edc140fe9f31785ea13ba39ae3165fc56708a4a845b7"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/PROPUESTOS_TOP8_V6.md",
+      "source": "crecimiento-colombia/entregas/medellin/PROPUESTOS_TOP8_V6.md",
+      "sha256": "94c30b2f5da6625a69adfdd7f8875469fa0560d7599a4f78b836d02c4c285763"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/descargas-arvi-v7.json",
+      "source": "crecimiento-colombia/entregas/medellin/descargas-arvi-v7.json",
+      "sha256": "e5e400793e6795814fa8fb41aee7949c6eef17137334e48fcaec87617589851a"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/CIERRE_CONTENIDO_SIN_FOTOS.json",
+      "source": "crecimiento-colombia/entregas/medellin/CIERRE_CONTENIDO_SIN_FOTOS.json",
+      "sha256": "ae94bcbafd797032e0c4148470f529aa9f925f97d5ce45cb9851008c3b2f1f2d"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/qa-local-v5.json",
+      "source": "crecimiento-colombia/entregas/medellin/qa-local-v5.json",
+      "sha256": "70901d1921db73b880ee5a38795bbf5aab55cfb882e0ecc4830705501cf22ea3"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/DIRECTORIO_VIGENTE.md",
+      "source": "crecimiento-colombia/entregas/medellin/DIRECTORIO_VIGENTE.md",
+      "sha256": "61a12c6de07aa13e26a4c78ca05edccc1ee611faccddef51a333dd3c9c91b039"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/referencias-propuestos-v6.json",
+      "source": "crecimiento-colombia/entregas/medellin/referencias-propuestos-v6.json",
+      "sha256": "15551e25cc9a2789a759478ca88a4d477dddde7718632ff713154bf7f781d33a"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/AUDITORIA_TOP8.md",
+      "source": "crecimiento-colombia/entregas/medellin/AUDITORIA_TOP8.md",
+      "sha256": "5429aebf0c0f1fbcac33206bdc74fd0afd5d0ddaa10f9be0fc5549b8234d023d"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/STATUS.md",
+      "source": "crecimiento-colombia/entregas/medellin/STATUS.md",
+      "sha256": "04b4c2aeeb65f8dba73984728ddac5ccc31ef9395a6bc3cbbc26eaa0ba8b7f5a"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/referencias-propuestas-v4.json",
+      "source": "crecimiento-colombia/entregas/medellin/referencias-propuestas-v4.json",
+      "sha256": "5750f4914eb3ac4d1138bde234ec2e88f7b99a308cd951cb80b8d8434b3cf80c"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/directorio-preprod-gratuito.json",
+      "source": "crecimiento-colombia/entregas/medellin/directorio-preprod-gratuito.json",
+      "sha256": "ec22ebe34efa7d0d86dab19be904678830986787c43eae7aa1606ec824184506"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/descargas-propuestos-v6-resultados.json",
+      "source": "crecimiento-colombia/entregas/medellin/descargas-propuestos-v6-resultados.json",
+      "sha256": "af31da683c492604c6ab559af54f446a375813319affa6bbcf2ff8bf61a9f287"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/directorio.json",
+      "source": "crecimiento-colombia/entregas/medellin/directorio.json",
+      "sha256": "ca4c2fd9df8632422c854b81783b69325d1c720630b1406eda638a4ad4098527"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/descargas-actividades-v5-resultados.json",
+      "source": "crecimiento-colombia/entregas/medellin/descargas-actividades-v5-resultados.json",
+      "sha256": "a1d32722641f6c25491a0c52d3ff8150364b64bbc1b6a09e1289d8366c1bc061"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/proteccion-cierre-textual.json",
+      "source": "crecimiento-colombia/entregas/medellin/proteccion-cierre-textual.json",
+      "sha256": "d3224d831f22e041fc6f0407b730be176fe63d23af5fb58486a0bc2bd0925810"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/directorio-preprod-30.json",
+      "source": "crecimiento-colombia/entregas/medellin/directorio-preprod-30.json",
+      "sha256": "6e3996cf8374c74e7a6d2ea69b79018317baedf92e9757b859f9436d8fd1450e"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/historia-sidecar-preprod.json",
+      "source": "crecimiento-colombia/entregas/medellin/historia-sidecar-preprod.json",
+      "sha256": "6b74315a6f5a76536e3845da77c3fb6cf1972344cab7abb1e592909006d4001a"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/descargas-propuestos-v6.json",
+      "source": "crecimiento-colombia/entregas/medellin/descargas-propuestos-v6.json",
+      "sha256": "5e0c7a1c8282b23201bd240406a0e8607bd0c48ce8bcd9247ab1bbedcc1e1c15"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/referencias-rechazadas-v3.json",
+      "source": "crecimiento-colombia/entregas/medellin/referencias-rechazadas-v3.json",
+      "sha256": "06b00e212341b54dec2576f4fb3fbafd98baa819dac975615472b9728a483b6f"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/AUDITORIA_TOP8.json",
+      "source": "crecimiento-colombia/entregas/medellin/AUDITORIA_TOP8.json",
+      "sha256": "03efa49ac8d92336493dc9827ac349f98f839bd07ab3743f9863d087d3e54a7d"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/paquete-preprod.json",
+      "source": "crecimiento-colombia/entregas/medellin/paquete-preprod.json",
+      "sha256": "bbefd5984fedee6531e2950a2635d551e9a9e57751d1c10d3b25f6a439f16249"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/revision-componentes.json",
+      "source": "crecimiento-colombia/entregas/medellin/revision-componentes.json",
+      "sha256": "e6d6d907185aa8befa60a227fcab04625cc9eeb472050aa78ffbd48a96e135be"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/imagenes.json",
+      "source": "crecimiento-colombia/entregas/medellin/imagenes.json",
+      "sha256": "1124a600f2f27f1040cd1f884da017e6fa08511fec18af5d38446b8c9fa7cb13"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/reporte-preprod.json",
+      "source": "crecimiento-colombia/entregas/medellin/reporte-preprod.json",
+      "sha256": "8357fb673337a7ed21286c00cab7c934ab130c67bce06e297b0ac7880564858e"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/decision-referencia-arvi-cable-paisaje.json",
+      "source": "crecimiento-colombia/entregas/medellin/decision-referencia-arvi-cable-paisaje.json",
+      "sha256": "139fadb7387f55250d349ec660e0b292ecd40035f2b33d52b1220a569fd30448"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/imagen-actividad-mamm-v5.json",
+      "source": "crecimiento-colombia/entregas/medellin/imagen-actividad-mamm-v5.json",
+      "sha256": "e620a0befcc0d28d1f11adc053452e25c1c6ce075b76b1613cc188bec11e6c4f"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/inspeccion-visual-v4.json",
+      "source": "crecimiento-colombia/entregas/medellin/inspeccion-visual-v4.json",
+      "sha256": "cf841b8496d5936ac38dd27f40a9df07cff8805c62840069690cf5e1d2b2b9cf"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/inspeccion-propuestos-v6.json",
+      "source": "crecimiento-colombia/entregas/medellin/inspeccion-propuestos-v6.json",
+      "sha256": "9f2ad67a0a1d9e86b38ebf838b113fdbfd68e3ee5d5352b91b664db296d75762"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/descargas-v4.json",
+      "source": "crecimiento-colombia/entregas/medellin/descargas-v4.json",
+      "sha256": "f9fe4b9356ca3be3245746d03347057ab26f1f0417abd4024bf8a386cfa2c37c"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/CIERRE_CONTENIDO_SIN_FOTOS.md",
+      "source": "crecimiento-colombia/entregas/medellin/CIERRE_CONTENIDO_SIN_FOTOS.md",
+      "sha256": "33bc102414f73c641f5dd100119a1ae5d9992b361511bf4acf6be27086c62529"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/correcciones-referencias-v4.json",
+      "source": "crecimiento-colombia/entregas/medellin/correcciones-referencias-v4.json",
+      "sha256": "260676ec48d0a59d68e810cd2c88e897ac57b292218d82e231f3cc770e352daa"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/inventario-ampliado.json",
+      "source": "crecimiento-colombia/entregas/medellin/inventario-ampliado.json",
+      "sha256": "880403a72f2c7aa2145e48ae3280b53354088250ba1d6d89e5b23f14514ebb2c"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/medicion-profundidad.json",
+      "source": "crecimiento-colombia/entregas/medellin/medicion-profundidad.json",
+      "sha256": "a6e9ce3471ced1f1eb1fce73456638c7f4adadb9006e34b0e98398d0930c92ee"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/medellin-history.json",
+      "source": "crecimiento-colombia/entregas/medellin/medellin-history.json",
+      "sha256": "36115f85cdc7c74d4101bab2d5f543d55c890bd9b283bfd93270b1dbed2498e6"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/portadas-propuestas.json",
+      "source": "crecimiento-colombia/entregas/medellin/portadas-propuestas.json",
+      "sha256": "c7bea9a7d2d438ab2c8dc226cbb98246f1443e3be8789a5a2bff72d535b737f2"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/descargas-actividades-v5.json",
+      "source": "crecimiento-colombia/entregas/medellin/descargas-actividades-v5.json",
+      "sha256": "3579726fb2c02dbb515c161b366aca4cf942f6559802a7a0362acc28a028ba72"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/paquete-destino-v2.borrador.json",
+      "source": "crecimiento-colombia/entregas/medellin/paquete-destino-v2.borrador.json",
+      "sha256": "223de7fbba8415b3c8a2e8113367d1341e6632e9720c296837faeb5bbcfabe57"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/busqueda-fotos-actividades.json",
+      "source": "crecimiento-colombia/entregas/medellin/busqueda-fotos-actividades.json",
+      "sha256": "ef9c3194146dd3413da456ab0874ddf75756cc8b79e2989964244fca56b943a0"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/contenido.json",
+      "source": "crecimiento-colombia/entregas/medellin/contenido.json",
+      "sha256": "63d24d1605cc5ff927921fdac81b3e3de5bc9c09b8da6667d1a7ec486a184fec"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/inspeccion-actividad-mamm-v5.json",
+      "source": "crecimiento-colombia/entregas/medellin/inspeccion-actividad-mamm-v5.json",
+      "sha256": "2b805a4c388323e8835d8956437dab5b237330256e94e646e7be35b8148bf6c7"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/principales-v3.json",
+      "source": "crecimiento-colombia/entregas/medellin/principales-v3.json",
+      "sha256": "48529d7532ed8b8f329b4edce7930b2667c65d3317b9f2a4827d0c8051bbe383"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/descargas-v4-resultados.json",
+      "source": "crecimiento-colombia/entregas/medellin/descargas-v4-resultados.json",
+      "sha256": "93f1be51bef9a3c41b464abc75035ded67cb49e1154fbf845dea4e9928b01fbc"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/seleccion-principal-v3.json",
+      "source": "crecimiento-colombia/entregas/medellin/seleccion-principal-v3.json",
+      "sha256": "862d38c267f2eae5f623bd5878d0425d1d1a0bc4429debb7eb287106fb29040d"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/roles-contenido.json",
+      "source": "crecimiento-colombia/entregas/medellin/roles-contenido.json",
+      "sha256": "cf6cea748adab41a5e5db8cf4d1da36b05e4a0eff6e5700d0725d2c53aacfb30"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/experiencias.json",
+      "source": "crecimiento-colombia/entregas/medellin/experiencias.json",
+      "sha256": "e3d045dccdfbd546ec68f458a1015bf83d2198e441ea72ba1dd7d49cc86db98f"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/eventos.json",
+      "source": "crecimiento-colombia/entregas/medellin/eventos.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/verificacion-preprod-v3.json",
+      "source": "crecimiento-colombia/entregas/medellin/verificacion-preprod-v3.json",
+      "sha256": "1fe6015ff8ba5759778c6eba15ad32bb5378e4d2e2903162ce11e8bc632d7f09"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/AMPLIACION_DIRECTORIO_30.json",
+      "source": "crecimiento-colombia/entregas/medellin/AMPLIACION_DIRECTORIO_30.json",
+      "sha256": "8b9ef1cbf93661efd3c1422f7368840c9f517e96e82840c96f99390f00f9f251"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/PROPUESTOS_TOP8_V6.json",
+      "source": "crecimiento-colombia/entregas/medellin/PROPUESTOS_TOP8_V6.json",
+      "sha256": "0190f6509124209c1f33a9c82730622976b6dea16c6414e0a68463a0c8d8ac84"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/AVANCE_ACTUAL.md",
+      "source": "crecimiento-colombia/entregas/medellin/AVANCE_ACTUAL.md",
+      "sha256": "d5612ca122e777f95ecec20c0465719c2ce8c9de0452ef9d1c0f04915ccf55b3"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/descargas-v3.json",
+      "source": "crecimiento-colombia/entregas/medellin/descargas-v3.json",
+      "sha256": "ee6474d22e7effa478297095ef5764e894af9224c627b33255fc84e45aa72c65"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/inspeccion-visual-v3.json",
+      "source": "crecimiento-colombia/entregas/medellin/inspeccion-visual-v3.json",
+      "sha256": "a83a9b3dcfc2fa94017f523ff82aa4f919c5a84c2689357e6870b33a32a3bd06"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/semirrealista-v1/ENTREGA.md",
+      "source": "crecimiento-colombia/entregas/medellin/semirrealista-v1/ENTREGA.md",
+      "sha256": "801b01c0b70c522d1307609f62b61cfefffccd4670a63c757ded1c719b73666b"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/semirrealista-v1/fuentes.json",
+      "source": "crecimiento-colombia/entregas/medellin/semirrealista-v1/fuentes.json",
+      "sha256": "bf36080b347a3373fc03318e06b825a6a913d99a893fd9886b5715c4aa4f18a1"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/semirrealista-v1/ESTADO.md",
+      "source": "crecimiento-colombia/entregas/medellin/semirrealista-v1/ESTADO.md",
+      "sha256": "05d48bcae7c8390a8fae890636dce70bd0bb4ff7e480db1132bd44fbad1204c9"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/semirrealista-v1/GENERACION-ACTUAL.json",
+      "source": "crecimiento-colombia/entregas/medellin/semirrealista-v1/GENERACION-ACTUAL.json",
+      "sha256": "cb2ac89d7aa129e0ff726a0972c0bebc242fdbc0f0fa6af3fa1e043689b0c05c"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/semirrealista-v1/GENERACION-COMPLETA.json",
+      "source": "crecimiento-colombia/entregas/medellin/semirrealista-v1/GENERACION-COMPLETA.json",
+      "sha256": "6e2710527b93394014c1ef9df4e3fe8686b74bcdc7f7fd0c3521f3d5420e486f"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/semirrealista-v1/integracion-medellin.json",
+      "source": "crecimiento-colombia/entregas/medellin/semirrealista-v1/integracion-medellin.json",
+      "sha256": "6f5616e76b8e6c328914f189bb039e7369f0a04f8aaa27e2923d181f8d914fe8"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/semirrealista-v1/paquete-preprod.json",
+      "source": "crecimiento-colombia/entregas/medellin/semirrealista-v1/paquete-preprod.json",
+      "sha256": "533d13122068cee2057d09de6217d8c74df32785f95464cafe4a2d4a6775e571"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/semirrealista-v1/PORTADA_V2.json",
+      "source": "crecimiento-colombia/entregas/medellin/semirrealista-v1/PORTADA_V2.json",
+      "sha256": "c3a971a7467944d5b4cf8e8d33c13c20585fe1f294f2211c8205d2029422aa01"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/semirrealista-v1/GENERACION.json",
+      "source": "crecimiento-colombia/entregas/medellin/semirrealista-v1/GENERACION.json",
+      "sha256": "257f21437249d8878b1a2c9fb68b4d59c32d164fcf5211f8970a6281ad5eb451"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/semirrealista-v1/PORTADA_V3.json",
+      "source": "crecimiento-colombia/entregas/medellin/semirrealista-v1/PORTADA_V3.json",
+      "sha256": "25d93df51b50ab51c3280a2e7302e6600e12e673ad680edfc0a4e9c226d04620"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/semirrealista-v1/PROMPTS.json",
+      "source": "crecimiento-colombia/entregas/medellin/semirrealista-v1/PROMPTS.json",
+      "sha256": "1bba7b38050a63f23da975018e338fdf5a155765112a1f35b11141f4b38304c7"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/semirrealista-v1/VALIDACION.json",
+      "source": "crecimiento-colombia/entregas/medellin/semirrealista-v1/VALIDACION.json",
+      "sha256": "655f9e6aac0d21c314b30e6f1374c7a0a25204f3fe1d855ec19f2c918fb8232f"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/semirrealista-v1/AUTORIZACION_ENCARGO.json",
+      "source": "crecimiento-colombia/entregas/medellin/semirrealista-v1/AUTORIZACION_ENCARGO.json",
+      "sha256": "9baa53829e8f7344184829fe061b9ed191938126a1d27c5deb03c67188797793"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/medellin/semirrealista-v1/MANIFIESTO.json",
+      "source": "crecimiento-colombia/entregas/medellin/semirrealista-v1/MANIFIESTO.json",
+      "sha256": "e49bf9dcd66b309696a77ebda469927215d74f44d97250bd33fbf36e37f28ef6"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/QA_DIRECTORIO_30.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/QA_DIRECTORIO_30.json",
+      "sha256": "24cbeefde59d97a8902decc0928f07921c75fc8798cc42a552b7afff5288c276"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/QA_DIRECTORIO_PREPROD.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/QA_DIRECTORIO_PREPROD.json",
+      "sha256": "2748d4d432f5fc471d0fd71f88225f43c898fcdd8adf1676a5fa6bb15d7aa3ac"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/revision-ampliada.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/revision-ampliada.json",
+      "sha256": "53cd7e771fa1d7a38fceeb70647a165b73838031d0db9da78c9f7a5ea25ef203"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/fuentes.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/fuentes.json",
+      "sha256": "d129b2c7674b0326224c505e725c9a8ac21e4246af5adbb6437bec3c086cb232"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/centro-bahia-v7.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/centro-bahia-v7.json",
+      "sha256": "72a3bd4aed3e2971e218c28a2ad263bea7e0a16783eec385945184585cb97cb7"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/experiencias-pt-br.md",
+      "source": "crecimiento-colombia/entregas/santa-marta/experiencias-pt-br.md",
+      "sha256": "0eb1e2c5b403660989d5c6ed13c148abf0496cec368e3eb05d7b2b7c7c7fa2c3"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/paquete-borrador.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/paquete-borrador.json",
+      "sha256": "bfb0b0856cdb19aee6617268805d7333c80f0745c0b4d91cef5380235a73f072"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/cafe-candidata-v6.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/cafe-candidata-v6.json",
+      "sha256": "2413d1058f8e0cf92c9e58ab5f8e6dcc1f0595435e7cb40bcdd637500fbf5882"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/ALERTAS_FUENTES_VISUALES_V7.md",
+      "source": "crecimiento-colombia/entregas/santa-marta/ALERTAS_FUENTES_VISUALES_V7.md",
+      "sha256": "89702c1d9260ccef9541d3501bed00191b51c8e6d37a400abc28e1dd937f47ff"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/validacion-clasificacion-v7.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/validacion-clasificacion-v7.json",
+      "sha256": "3686df639c9bb9e7eefebb15246b0fb512be4e013b69f72554d86c158ab6ef35"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/auditoria-directorio-v6.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/auditoria-directorio-v6.json",
+      "sha256": "c8c313858ecaa77a88e1070d1ef920fb28e7bedc2562de60c12bc62ebc9d1822"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/INVESTIGACION_V6.md",
+      "source": "crecimiento-colombia/entregas/santa-marta/INVESTIGACION_V6.md",
+      "sha256": "9fb841f283605f1a4d44d892df8395fd0e97dc0cdfa3e2b11b7d1414e187c911"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/CLASIFICACION_LUGARES_EXPERIENCIAS.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/CLASIFICACION_LUGARES_EXPERIENCIAS.json",
+      "sha256": "1dccb5f01bbf135865706161e780abfb236365bccf3e99e12a99a724720155a6"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/validacion-contenidos-v6.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/validacion-contenidos-v6.json",
+      "sha256": "e9e56c1785c1f9446e22e9a701645012150d7fba877a0156978d42e044908827"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/experiencias-es.md",
+      "source": "crecimiento-colombia/entregas/santa-marta/experiencias-es.md",
+      "sha256": "6e766a2901abfdb8727ad7d3284d1b61a2fbfb541fca418f79193affa9fc50f7"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/lugares-ampliados-en.md",
+      "source": "crecimiento-colombia/entregas/santa-marta/lugares-ampliados-en.md",
+      "sha256": "f9753cd8a9c073f16fdf2eeccbc02c1c3b998faaf8080822d03cbf4e328c6e98"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/decision-portada-centro-bahia-historica.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/decision-portada-centro-bahia-historica.json",
+      "sha256": "6fdb7d9ecdbcd0903ea0d133e6bbd116081cc64457a2462c36cf7cc523a5a2bb"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/CIERRE_CONTENIDO_SIN_FOTOS.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/CIERRE_CONTENIDO_SIN_FOTOS.json",
+      "sha256": "7a582738e2d85a384319bde82127f1b8ccfadfbdb781a6085cf8c62e12a9cce8"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/texto-pt-br.md",
+      "source": "crecimiento-colombia/entregas/santa-marta/texto-pt-br.md",
+      "sha256": "b573810fff9ee9e715ddf3cabd0a91cb7b2f29bef320cbd568070ae5b467361a"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/experiencias-v6.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/experiencias-v6.json",
+      "sha256": "d0bf1de0c8ec4229cfb4e3d07046186ab6a9589c5f226ad84962821ab6b5f559"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/DIRECTORIO_VIGENTE.md",
+      "source": "crecimiento-colombia/entregas/santa-marta/DIRECTORIO_VIGENTE.md",
+      "sha256": "61a12c6de07aa13e26a4c78ca05edccc1ee611faccddef51a333dd3c9c91b039"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/AUDITORIA_TOP8.md",
+      "source": "crecimiento-colombia/entregas/santa-marta/AUDITORIA_TOP8.md",
+      "sha256": "d119d839018d4dd665baf1f57e55bf8e6e74a1059ca46f20c0dedf97259283e7"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/STATUS.md",
+      "source": "crecimiento-colombia/entregas/santa-marta/STATUS.md",
+      "sha256": "97bbf003fbdf1510dc8ac43c9c5dfb81195b5897c2a2faad009744b60ec79ad4"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/directorio-preprod-gratuito.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/directorio-preprod-gratuito.json",
+      "sha256": "76b625faf78b89b76df1301d300fec6ffa830f79584dfe3fe41fe0059fe82eb7"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/experiencias-en.md",
+      "source": "crecimiento-colombia/entregas/santa-marta/experiencias-en.md",
+      "sha256": "0c0236b69d4f74d6aba6e357f2a674c13eb686670d342a445de947f53d6cff24"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/lugares-ampliados-es.md",
+      "source": "crecimiento-colombia/entregas/santa-marta/lugares-ampliados-es.md",
+      "sha256": "938f82b591f44abc553b3774068e1305b338258579c51abfa33e2550c5cacedc"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/observaciones-portada-tayrona-v6.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/observaciones-portada-tayrona-v6.json",
+      "sha256": "0165a4bbd10cf203e9d1ae942304bbf4167e1734225428fc6b3d17c827fe5e70"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/directorio.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/directorio.json",
+      "sha256": "fdbf953be783751b0340ba99ab0dfdc27c18badf94baafca2292c9b48660838c"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/candidatas-v6.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/candidatas-v6.json",
+      "sha256": "4d0a8f6fef733414c3ad0ae3c4f5e67e6e8247308c8eaa6469c1c50d52435eb2"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/hashes.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/hashes.json",
+      "sha256": "3cb7a2fea1fb55e2675b2d7f84c18562fd9bca96cde2ece2fc1ea287ddec79d3"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/REVISION_PORTADA_CENTRO_V7.md",
+      "source": "crecimiento-colombia/entregas/santa-marta/REVISION_PORTADA_CENTRO_V7.md",
+      "sha256": "61491da7430dd9679618740ac1512f5fe4444fd08dfb033daa69a7ca1cd40639"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/directorio-preprod-30.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/directorio-preprod-30.json",
+      "sha256": "953c276e17b1ac28d1dad90bd6ef074a2b0ca1e5822ce2e94f64566d600beedd"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/roles-referencias-v7.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/roles-referencias-v7.json",
+      "sha256": "66de7117ce30fbaa2dc4e68b20d06afe32ddc0e85fbba6f964c0638fff88c32f"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/acuario-referencia-v6.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/acuario-referencia-v6.json",
+      "sha256": "bbe9455aae77c2c520b0c368398d081d7c15d9dcb67e074f1c903a222ee8e3df"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/AUDITORIA_TOP8.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/AUDITORIA_TOP8.json",
+      "sha256": "2e005fdbd2ebb12ae34579c0ebc5a20fe7e3ee38c6984c1a912d5131eabd7920"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/paquete-preprod.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/paquete-preprod.json",
+      "sha256": "e568354b90c91e8ab788edee65d549782f187f93b18b1ad1737f10e5bc0ecb3f"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/verificacion-preprod-v4.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/verificacion-preprod-v4.json",
+      "sha256": "ed6541b9961f1d8cc6ee131a2cca12d43f94bb11c2b490a554385662d419ee1c"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/texto-es.md",
+      "source": "crecimiento-colombia/entregas/santa-marta/texto-es.md",
+      "sha256": "fe2aba5259a327a36bd023ddc13ed97441716f6917bd205f2b7329bbb2d34cbe"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/imagenes.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/imagenes.json",
+      "sha256": "c03ef698c09c479911fa04c023bde20f6c875e650a85581e82e83bcee73d3e25"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/playa-blanca-alternativas-v7.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/playa-blanca-alternativas-v7.json",
+      "sha256": "e3b4b0b514be638e636fd981927c06a6a3819f5a5e659f543cf28dacdb9b2ef6"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/reporte-preprod.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/reporte-preprod.json",
+      "sha256": "1db800071d16f68361e7a3eaf3b179c63dd75aae95d69d9b81d18672736feeb5"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/fotos-experiencias-v6.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/fotos-experiencias-v6.json",
+      "sha256": "b1b08890d86140fc441eec97bff2856736247cc9493cc27b124d00e95af0ceb4"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/lugares-ampliados-pt-br.md",
+      "source": "crecimiento-colombia/entregas/santa-marta/lugares-ampliados-pt-br.md",
+      "sha256": "e1c45be1752fae28333e89c044192924e1be9cc1db8095cdc9aed1f995ad47ba"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/revision-referencias.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/revision-referencias.json",
+      "sha256": "9153c40e7ac5ad28b665c360be72660fb1528c9414da01940125e2edde335a01"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/nuevos-atractivos-top8-borrador.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/nuevos-atractivos-top8-borrador.json",
+      "sha256": "d37cb2ee145c5d93a8ccf8285105dcecc58b0b4f4a33f8301656b8d549ba00f5"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/pendientes-visuales-v6.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/pendientes-visuales-v6.json",
+      "sha256": "50626513bb20b3691aa16483d2642de985477bd70a1db3bc1292fa0899bd0452"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/evidencia-licencia-buceo.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/evidencia-licencia-buceo.json",
+      "sha256": "5bdf4c174e496e9055c9d26abea0d85a968431750059fe77ff147c5c27628a20"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/directorio-en.md",
+      "source": "crecimiento-colombia/entregas/santa-marta/directorio-en.md",
+      "sha256": "1fac558d34b4ca3940d791216810f2312bc0fed00b91f5be85a076954f0610dd"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/CIERRE_CONTENIDO_SIN_FOTOS.md",
+      "source": "crecimiento-colombia/entregas/santa-marta/CIERRE_CONTENIDO_SIN_FOTOS.md",
+      "sha256": "6d5e488daba41de6149cee538c161832cbea09e81feedac29512b2d6aae08b1c"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/video-portada-v6.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/video-portada-v6.json",
+      "sha256": "c32a836453fffd1dd350c70ccf9ac989e242304ffaa8f2b15c308b6488c95a2c"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/VERIFICACION_CENTRO_BAHIA_V7.md",
+      "source": "crecimiento-colombia/entregas/santa-marta/VERIFICACION_CENTRO_BAHIA_V7.md",
+      "sha256": "762b21b59e3e68384bebbf2ba7e4668ed6cf1d978b1ccb0ca6bbe1034fe12d9b"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/texto-en.md",
+      "source": "crecimiento-colombia/entregas/santa-marta/texto-en.md",
+      "sha256": "f4c19fba6d6a77f4b2f62fc9983ec69b11bb3d80daeae63b7da7c0ed66a8a848"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/directorio-es.md",
+      "source": "crecimiento-colombia/entregas/santa-marta/directorio-es.md",
+      "sha256": "edabf6055bbad1677517923be145fe1806a03d405cbb416c921a98211ce9ef15"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/QA_CONTENIDO_SIN_FOTOS.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/QA_CONTENIDO_SIN_FOTOS.json",
+      "sha256": "3c07a4842c4597849444c43278701acd02e1ead98c8b347d72169805f32e4077"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/santa-marta-history.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/santa-marta-history.json",
+      "sha256": "98b06b501f1066334792347c635468b3ccefa49711af06d8db00e6865261222c"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/componentes-top8-v7.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/componentes-top8-v7.json",
+      "sha256": "4ecfedc31d87c225dcc13dc1fdce6842f078e41bb0f5b15a15f06d2349a94f98"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/verificacion-preprod-v5.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/verificacion-preprod-v5.json",
+      "sha256": "7dcf3e8837fa32545a564793acfae41ea8e53ea6fee90d7b290a2f351a59588d"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/REVISION_EXCURSION_PLAYA_BLANCA_V7.md",
+      "source": "crecimiento-colombia/entregas/santa-marta/REVISION_EXCURSION_PLAYA_BLANCA_V7.md",
+      "sha256": "451bc7b00e1f5e03030a8d3e6603b4ab97bb7d983a9ff1cbd2f7e2282a9b7219"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/revision-visual-v4.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/revision-visual-v4.json",
+      "sha256": "185997b24fd8dd5fa7b2938f9fc6a4707640d5b8443828c246949576cad5ca27"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/cambio-portada-v5.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/cambio-portada-v5.json",
+      "sha256": "19194094015559d7ea4d360e0541adfed71c48739c9732dc4a2e4af1a505dc67"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/directorio-pt-br.md",
+      "source": "crecimiento-colombia/entregas/santa-marta/directorio-pt-br.md",
+      "sha256": "f55680d6f0f6f1608b6f0eccd9eda04e69b8c9fcd71bda2b09e7102f2aae94cb"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/PROMPT_PORTADA_IDENTIDAD_V3.txt",
+      "source": "crecimiento-colombia/entregas/santa-marta/PROMPT_PORTADA_IDENTIDAD_V3.txt",
+      "sha256": "7043d356ec92455eb48baa608a6fb5990adcb4283f8c8dd68d42aa6ae1e80891"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/REVISION_CHAT_V6.md",
+      "source": "crecimiento-colombia/entregas/santa-marta/REVISION_CHAT_V6.md",
+      "sha256": "b2850868800d2d122a509108b4b64f8274e7a996366b0649b56d65f46ac31f68"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/portadas-extra-v6.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/portadas-extra-v6.json",
+      "sha256": "47d4fe13d11fe5959a6c298498d057171046f5df0ae16fecf2f838ec5764cb4e"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/PROMPT_PORTADA_IDENTIDAD_V2.txt",
+      "source": "crecimiento-colombia/entregas/santa-marta/PROMPT_PORTADA_IDENTIDAD_V2.txt",
+      "sha256": "33695c0dba4cf27a528c8c0e3118c7a4a27054d06f299c7d17bfe64860977ea1"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/AMPLIACION_DIRECTORIO_30.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/AMPLIACION_DIRECTORIO_30.json",
+      "sha256": "6a2aef65152640d5feaf749bf4203b5748a92142aa292c51d21cf47b9c5fd4c3"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/validacion-referencias-v6.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/validacion-referencias-v6.json",
+      "sha256": "33ecc0a9485e790b5b6facf39729de35466797a484d8dd414bc9d1f744ab40d4"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/referencias-v4.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/referencias-v4.json",
+      "sha256": "824b43b12cbaa43f47e3ac120e8aba589f17c9e2cd21c27a86cc8d461a93910b"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/estado-componentes-v6.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/estado-componentes-v6.json",
+      "sha256": "369a517e7b4dcf047df9f95cc230514329df7763ac19b2adbe5aae37fd29b87d"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/AVANCE_ACTUAL.md",
+      "source": "crecimiento-colombia/entregas/santa-marta/AVANCE_ACTUAL.md",
+      "sha256": "81694e8e95efdedd1a952ac186ab59294ffcd92d5bc7c9b467250cff76e37e2e"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/SELECCION_V4.md",
+      "source": "crecimiento-colombia/entregas/santa-marta/SELECCION_V4.md",
+      "sha256": "a45089406a8ebd5f5ecc97a60b20e158af57ba9674f247da43158c3209c33cab"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/portada-identidad-v2/procedencia.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/portada-identidad-v2/procedencia.json",
+      "sha256": "0ddca1df976c0706162f7020aad6bbb4af4c76415a7b2873cf097f3676d9f756"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/portada-identidad-v3/procedencia.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/portada-identidad-v3/procedencia.json",
+      "sha256": "b8b803722ff8ba7c11516a566bcd46ebe04ea82108640976d8e697eee3b435c1"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/originales/v4-acuario.download.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/originales/v4-acuario.download.json",
+      "sha256": "1df9897a687e4201bda2c0636110fa693c86c1c164c1d9e17704fabe6d7ab2d5"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/originales/v4-historia-aduana.download.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/originales/v4-historia-aduana.download.json",
+      "sha256": "086636b26249559e181bf3b31fb8d36636ec86b48cb6e4ed3aeceee03ef707b6"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/originales/v4-rodadero.download.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/originales/v4-rodadero.download.json",
+      "sha256": "6f84b3a574b3feb7f4213485bee63455ba944aa72318b78a821c431a375e57e9"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/originales/v4-minca.download.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/originales/v4-minca.download.json",
+      "sha256": "69e25365a6c2c7e2ba36ca06197bbdcc0e25593e34c4f0361a7fa234c10c80c4"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/semirrealista-v1/GENERACIONES.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/semirrealista-v1/GENERACIONES.json",
+      "sha256": "f01af83b94fe7a3fcb8df6af77e943653de5b38ec55cbae80a45bb10127c8ac2"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/semirrealista-v1/santa-marta-semirrealista.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/semirrealista-v1/santa-marta-semirrealista.json",
+      "sha256": "b14bf4c1ab72d041a8b54acf6ce335f7af5d91471440313954ed752c5c0034d8"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/semirrealista-v1/GENERACIONES-FINALES.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/semirrealista-v1/GENERACIONES-FINALES.json",
+      "sha256": "f01af83b94fe7a3fcb8df6af77e943653de5b38ec55cbae80a45bb10127c8ac2"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/semirrealista-v1/QA_PAQUETE.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/semirrealista-v1/QA_PAQUETE.json",
+      "sha256": "253c725601ee2d84c0a129cb013242af599b0d920875603795c1510f1e534daf"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/semirrealista-v1/CORRECCIONES-PROMPTS.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/semirrealista-v1/CORRECCIONES-PROMPTS.json",
+      "sha256": "47a28ec3dbb271cadfa09b3f9239c94e1fd97145ccaeaa55cef46b3067bb1281"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/semirrealista-v1/MAPA_INTEGRACION.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/semirrealista-v1/MAPA_INTEGRACION.json",
+      "sha256": "86da0f566bb27c93686d25c1d6e85eeef8394ef08cdcc3338816c5fb9447ed31"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/semirrealista-v1/HASHES.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/semirrealista-v1/HASHES.json",
+      "sha256": "6318e884e990e2cc6a29edfa75547720dfd841b839d4075fba387ba8012d58a6"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/semirrealista-v1/CORRECCIONES-ENCUADRE-SEGURIDAD.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/semirrealista-v1/CORRECCIONES-ENCUADRE-SEGURIDAD.json",
+      "sha256": "4b8fd665fc8bd5e1fe8fa456918b91fcb58311cb0f79ff49622b79907babbe40"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/semirrealista-v1/DECISION_TOP8_V1.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/semirrealista-v1/DECISION_TOP8_V1.json",
+      "sha256": "63a744b929c9080a44d1d11196d91e1a77715c36d3f1b622e718ee4c4182a505"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/semirrealista-v1/README.md",
+      "source": "crecimiento-colombia/entregas/santa-marta/semirrealista-v1/README.md",
+      "sha256": "1ab26d52b92c8a339f3cfdcc97c2e4e4769710fb98fac33c9364b8db47c09eef"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/semirrealista-v1/PROMPTS.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/semirrealista-v1/PROMPTS.json",
+      "sha256": "ac4a9c7c0ab6d021e4ca331fe18970f5b9f4171f16575d4ba538672bd25f35bb"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/semirrealista-v1/contenido-cierre-semirrealista-v1.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/semirrealista-v1/contenido-cierre-semirrealista-v1.json",
+      "sha256": "1080a0fb961f2e9217ac8c352e1dce32dc854b557cae7a6582515c64b7b0f289"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/semirrealista-v1/MANIFIESTO.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/semirrealista-v1/MANIFIESTO.json",
+      "sha256": "f2ffcbb69dd4d935be29897bdb201a79c99d48189fbe623613d6edc740daa261"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/imagenes/revision-v6/originales/SM-T6-02.download.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/imagenes/revision-v6/originales/SM-T6-02.download.json",
+      "sha256": "cf998816d3556e04f771d990a72711c8b259c1483e0214b4b946ad4b8ab60b67"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/imagenes/revision-v6/originales/SM-T6-01.download.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/imagenes/revision-v6/originales/SM-T6-01.download.json",
+      "sha256": "67b1ab36c3eec7cac1b6dc578bb1efe3d75d1f0f467d0add01f14b0bc04452f2"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/imagenes/revision-v6/originales/SM-H6-04-wikitext.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/imagenes/revision-v6/originales/SM-H6-04-wikitext.json",
+      "sha256": "730784a752a34a966e69f05c5cd089480ff500d0f60d9ce1dbc68beb3dc9915b"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/imagenes/revision-v6/originales/SM-H6-02.download.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/imagenes/revision-v6/originales/SM-H6-02.download.json",
+      "sha256": "4977b11ee832c4eb5ce3762d10ce8640210a8dc898ce3fe5018d2605fdd6f581"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/imagenes/revision-v6/originales/SM-H6-03-commons.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/imagenes/revision-v6/originales/SM-H6-03-commons.json",
+      "sha256": "d1611f98a004018bfb92785fc860f4d83e11eea1d5b9991f4cba1e809a1bd359"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/imagenes/revision-v6/originales/SM-H6-04-commons.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/imagenes/revision-v6/originales/SM-H6-04-commons.json",
+      "sha256": "1a3134e36cc8275be1b20bcf8d88fbd72366f4c25c196c129917c1874e286285"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/imagenes/revision-v6/originales/SM-H6-01.download.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/imagenes/revision-v6/originales/SM-H6-01.download.json",
+      "sha256": "6f2513d5a9dfe7148cd8e925b51d34a0c762ed5a0ff828b0900f7e864afee18d"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/imagenes/revision-v6/originales/SM-H6-03-wikitext.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/imagenes/revision-v6/originales/SM-H6-03-wikitext.json",
+      "sha256": "29f1264fdb22cd82872274396309c7ed4d5aeef8c01bb1b2e49b0044838d5570"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/imagenes/revision-v6/originales/SM-T6-03.download.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/imagenes/revision-v6/originales/SM-T6-03.download.json",
+      "sha256": "7250b8833f5638d1531cb8af72bc98c504a9e368e30959bea87dd7c7bc5d6a04"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/imagenes/centro-bahia-v7/originales/SM-H7-02-commons.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/imagenes/centro-bahia-v7/originales/SM-H7-02-commons.json",
+      "sha256": "f39fe7f278f04194672faaac56119f898907806e9a0c55208496d5d2148050c5"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/imagenes/centro-bahia-v7/originales/SM-H7-03-commons.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/imagenes/centro-bahia-v7/originales/SM-H7-03-commons.json",
+      "sha256": "378ccda2402a152f5aeaaad6f4135ffa840688d5ab1bc35f8e397bd87bf4cf16"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/imagenes/componentes-top8-v7/originales/SM-P7-01-commons.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/imagenes/componentes-top8-v7/originales/SM-P7-01-commons.json",
+      "sha256": "1eceaddacf1835f808bede11b3f0078a2d1d894f712e9ad538662e206dbee698"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/imagenes/componentes-top8-v7/originales/SM-E7-01-commons.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/imagenes/componentes-top8-v7/originales/SM-E7-01-commons.json",
+      "sha256": "edf94c3cc2b59451047af9ac085b45452e9d810ff4b5ec126a082ef6c3b2382b"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/imagenes/playa-blanca-alternativas-v7/originales/SM-P7-03-commons.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/imagenes/playa-blanca-alternativas-v7/originales/SM-P7-03-commons.json",
+      "sha256": "3c2b3c8790f40042cf1a875bc5c83c8ee3954077b3913212a2385855382fda61"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/imagenes/playa-blanca-alternativas-v7/originales/SM-P7-02-commons.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/imagenes/playa-blanca-alternativas-v7/originales/SM-P7-02-commons.json",
+      "sha256": "41395c99822362c1950e99baede27c7276724efaea04242d6fd35f6ce329fb43"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/imagenes/experiencias-v6/originales/SM-E6-01-commons.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/imagenes/experiencias-v6/originales/SM-E6-01-commons.json",
+      "sha256": "fdef7846546b4c3ad3467b9f2601fb71171934febce5edc47a20548a7b1cb576"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/imagenes/experiencias-v6/originales/SM-E6-04.download.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/imagenes/experiencias-v6/originales/SM-E6-04.download.json",
+      "sha256": "cf8485e7a51a66b14fcbdf13a0482843122b07652f0fcd05ecee3a1f2f72032a"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/imagenes/experiencias-v6/originales/SM-E6-03.download.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/imagenes/experiencias-v6/originales/SM-E6-03.download.json",
+      "sha256": "e87aefcc116062e8750f8f1369b7554ec3e2963aaf69bdfe12c1dc3a7650e19d"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/imagenes/experiencias-v6/originales/SM-E6-02.download.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/imagenes/experiencias-v6/originales/SM-E6-02.download.json",
+      "sha256": "4d71ed82cb7977fb1d7cdbc37788ff57f644326db2085ff9179984ce6c4fe214"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/imagenes/experiencias-v6/originales/SM-E6-06.download.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/imagenes/experiencias-v6/originales/SM-E6-06.download.json",
+      "sha256": "861777121001a7b02f02493949cfbd1af9f88b5fe8228fadfea91b84d8bc71c6"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/imagenes/experiencias-v6/originales/SM-E6-01.download.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/imagenes/experiencias-v6/originales/SM-E6-01.download.json",
+      "sha256": "3e5007b00e5de42c47333138d95d20320848e67e1f4b12bcbfcb1fac9687ed54"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/imagenes/experiencias-v6/originales/SM-E6-05.download.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/imagenes/experiencias-v6/originales/SM-E6-05.download.json",
+      "sha256": "2f3435d7f7596aafd63369001ddc5feda2941113aecd9724ac00f50597b719fe"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/imagenes/experiencias-v6/originales/SM-E6-02-commons.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/imagenes/experiencias-v6/originales/SM-E6-02-commons.json",
+      "sha256": "e5345be6bdf722760cfbd83b40fbe907e4270afc6edf4677857d760846fe3d18"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/imagenes/experiencias-v6/originales/SM-E6-05-commons.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/imagenes/experiencias-v6/originales/SM-E6-05-commons.json",
+      "sha256": "6a3aa22a88bc2b901db9aa606f48668b5b82e1c540ae161c1ebbf2067f6e5a0c"
+    },
+    {
+      "path": "crecimiento-colombia/entregas/santa-marta/imagenes/experiencias-v6/originales/SM-E6-04-commons.json",
+      "source": "crecimiento-colombia/entregas/santa-marta/imagenes/experiencias-v6/originales/SM-E6-04-commons.json",
+      "sha256": "2ff3c9093447731db204d9578a231cbe1861dbcf756295d9de30a6ac3f1d0295"
+    }
+  ],
+  "preserved_conflicts": [
+    {
+      "path": "crecimiento-colombia/colombia/departamentos/bolivar/lugares/cartagena/PROCESO.md",
+      "branch_sha256": "54e9440f081168ec0c752cf549f6b1ad0af779663acd8e9325ba30cdd8913cf2",
+      "preprod_sha256": "f4be3cb2047e1095b576d2331c924cb98ec3a4fef1417d5a174f9bbe74c2f6b6",
+      "resolution": "incorporate_place_specific_tracking_from_pinned_worker; no runtime or publication change"
+    },
+    {
+      "path": "crecimiento-colombia/colombia/departamentos/bolivar/lugares/cartagena/lugar.json",
+      "branch_sha256": "45ac243a38400ae7684e2148120b75709f13edad709a2ba6b688a8872a0485d4",
+      "preprod_sha256": "4fae72e121abb744f63e1ca41820ca93c684c27559e957c58c39e56118e39baa",
+      "resolution": "incorporate_place_specific_tracking_from_pinned_worker; no runtime or publication change"
+    },
+    {
+      "path": "backend/public/assets/bogota-compacta.css",
+      "branch_sha256": "5d4846186c41e108d1f1061bea4fafe2b3262fdcbf773939e99d7e6531e84971",
+      "preprod_sha256": "641387505ec5fa1480ddad0ca1fb859bda2ed3e720c357b082880ba24f2260c3",
+      "resolution": "preserve_current_preprod; no replacement of shared or reviewed design"
+    },
+    {
+      "path": "crecimiento-colombia/colombia/departamentos/bogota-dc/lugares/bogota/PROCESO.md",
+      "branch_sha256": "bfa391c9c01345a2f18db5d3e2254b958661cc997eae4dcc6ff103cb63c051d7",
+      "preprod_sha256": "d4e2507a440219953e48f57a043cfab1d6a3731cfbc135e434f152623da098d6",
+      "resolution": "incorporate_place_specific_tracking_from_pinned_worker; no runtime or publication change"
+    },
+    {
+      "path": "crecimiento-colombia/colombia/departamentos/bogota-dc/lugares/bogota/lugar.json",
+      "branch_sha256": "7041f9d95a99bfc9ac1825dca355e4121c52237fd72d59b63d8fa23591707044",
+      "preprod_sha256": "0f023f7ae2760fbf9a4d18a2e81cb35e079e0bc5cfb53197be22e6d998672dc6",
+      "resolution": "incorporate_place_specific_tracking_from_pinned_worker; no runtime or publication change"
+    },
+    {
+      "path": "crecimiento-colombia/colombia/departamentos/antioquia/lugares/medellin/PROCESO.md",
+      "branch_sha256": "d833fd311e3e1b0a593e1a2090bba5414feef2fe9f8e96642c362c04c81caed7",
+      "preprod_sha256": "b8ff2fdf985301e5624972ebe63e350b8370c4d213deb8cdecc8a6eb5239dd89",
+      "resolution": "incorporate_place_specific_tracking_from_pinned_worker; no runtime or publication change"
+    },
+    {
+      "path": "crecimiento-colombia/colombia/departamentos/antioquia/lugares/medellin/lugar.json",
+      "branch_sha256": "8498e3dcbfd1cd304eaade754506c3bb19211772cfab10e09e49d7b2ad415d95",
+      "preprod_sha256": "34568b0bf198e3db6e53415959457e407e392e7c4dc5110dc7324ebdb5c5d809",
+      "resolution": "incorporate_place_specific_tracking_from_pinned_worker; no runtime or publication change"
+    },
+    {
+      "path": "backend/public/assets/santa-marta-compacta.css",
+      "branch_sha256": "cdb85e4969127cb35f1d0bde1e6fc3ef77e28442ab9875e5cf1809fb3b20d202",
+      "preprod_sha256": "c119ff80a20948b105f7b33cc0cbf69926007809e5ddc624592c1c3661627f0c",
+      "resolution": "preserve_current_preprod; no replacement of shared or reviewed design"
+    },
+    {
+      "path": "crecimiento-colombia/colombia/departamentos/magdalena/lugares/santa-marta/PROCESO.md",
+      "branch_sha256": "1e7fe9211aae7b5a2cb28131c9bd6b08b7611f997a156aa6d96fdb2fb7a4ed7a",
+      "preprod_sha256": "4ea5f99145da83c8bd208195a13f3f1bc0ac9e46dbd3b5f05721b33aedfc2a2a",
+      "resolution": "incorporate_place_specific_tracking_from_pinned_worker; no runtime or publication change"
+    },
+    {
+      "path": "crecimiento-colombia/colombia/departamentos/magdalena/lugares/santa-marta/lugar.json",
+      "branch_sha256": "747c696ad5ef185b054a4fb95fd5469640f438fdf382fa25ea4bcf8870dc98d3",
+      "preprod_sha256": "ce819ad99a37b097abd274ea8e0ceb499ccc2e0579613884b345913a2d56fb04",
+      "resolution": "incorporate_place_specific_tracking_from_pinned_worker; no runtime or publication change"
+    }
+  ],
+  "scope": "Selective incorporation into existing preprod working tree; no wholesale branch merge, database write, publication or production deployment.",
+  "jardin": "Excluded: remains draft; botanical garden of Bogota is a different place.",
+  "validation": {
+    "visual_comparison": {
+      "cartagena": {
+        "same_headings": true,
+        "same_links": true,
+        "same_images_and_dimensions": true,
+        "same_background": true,
+        "no_horizontal_overflow": true,
+        "pixel_identical_capture": true
+      },
+      "bogota": {
+        "same_headings": true,
+        "same_links": true,
+        "same_images_and_dimensions": true,
+        "same_background": true,
+        "no_horizontal_overflow": true,
+        "pixel_identical_capture": true
+      },
+      "medellin": {
+        "same_headings": true,
+        "same_links": true,
+        "same_images_and_dimensions": true,
+        "same_background": true,
+        "no_horizontal_overflow": true,
+        "pixel_identical_capture": true
+      },
+      "santa-marta": {
+        "same_headings": true,
+        "same_links": true,
+        "same_images_and_dimensions": true,
+        "same_background": true,
+        "no_horizontal_overflow": true,
+        "pixel_identical_capture": true
+      }
+    },
+    "production_modified": false,
+    "committed": false,
+    "http": {
+      "pages": [
+        {
+          "place": "cartagena",
+          "locale": "es",
+          "status": 200,
+          "h1": 1,
+          "image_count": 16
+        },
+        {
+          "place": "cartagena",
+          "locale": "en",
+          "status": 200,
+          "h1": 1,
+          "image_count": 16
+        },
+        {
+          "place": "cartagena",
+          "locale": "pt-BR",
+          "status": 200,
+          "h1": 1,
+          "image_count": 16
+        },
+        {
+          "place": "bogota",
+          "locale": "es",
+          "status": 200,
+          "h1": 1,
+          "image_count": 25
+        },
+        {
+          "place": "bogota",
+          "locale": "en",
+          "status": 200,
+          "h1": 1,
+          "image_count": 25
+        },
+        {
+          "place": "bogota",
+          "locale": "pt-BR",
+          "status": 200,
+          "h1": 1,
+          "image_count": 25
+        },
+        {
+          "place": "medellin",
+          "locale": "es",
+          "status": 200,
+          "h1": 1,
+          "image_count": 19
+        },
+        {
+          "place": "medellin",
+          "locale": "en",
+          "status": 200,
+          "h1": 1,
+          "image_count": 19
+        },
+        {
+          "place": "medellin",
+          "locale": "pt-BR",
+          "status": 200,
+          "h1": 1,
+          "image_count": 19
+        },
+        {
+          "place": "santa-marta",
+          "locale": "es",
+          "status": 200,
+          "h1": 1,
+          "image_count": 19
+        },
+        {
+          "place": "santa-marta",
+          "locale": "en",
+          "status": 200,
+          "h1": 1,
+          "image_count": 19
+        },
+        {
+          "place": "santa-marta",
+          "locale": "pt-BR",
+          "status": 200,
+          "h1": 1,
+          "image_count": 19
+        }
+      ],
+      "resources_checked": 97,
+      "public_links_checked": 72,
+      "drafts_remain_private": true,
+      "database_changed": false,
+      "production_changed": false
+    },
+    "browser_interaction": {
+      "place": "santa-marta",
+      "filter_hospedaje": true,
+      "return_to_all": true,
+      "load_more": true,
+      "console_errors": 0
+    }
+  }
+}

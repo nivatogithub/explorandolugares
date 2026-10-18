@@ -21,3 +21,9 @@
   nav.addEventListener('click', event => { if (event.target.closest('a')) close(); });
   document.addEventListener('keydown', event => { if (event.key === 'Escape') close(); });
 })();
+
+// Shared account entry remains hidden when accounts are disabled privately.
+(()=>{if(document.querySelector('script[src*="/assets/account-entry.js"]'))return;const css=document.createElement('link');css.rel='stylesheet';css.href='/assets/account-entry.css?v=3';document.head.append(css);const script=document.createElement('script');script.src='/assets/account-entry.js?v=4';script.defer=true;document.head.append(script);})();
+
+// Preserve existing contact channels and add the consolidated help entry.
+(()=>{const footer=document.querySelector('footer .wrap')||document.querySelector('footer');if(!footer||footer.querySelector('a[href="/contacto.php"]'))return;const link=document.createElement('a');link.href='/contacto.php';link.className='footer-help-link';link.textContent=document.documentElement.lang.startsWith('en')?'Contact and help':document.documentElement.lang.startsWith('pt')?'Contato e ajuda':'Contacto y ayuda';const group=document.createElement('span');group.append(link);footer.append(group);})();

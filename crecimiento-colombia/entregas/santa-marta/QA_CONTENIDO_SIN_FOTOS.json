@@ -1,0 +1,169 @@
+{
+  "date": "2026-10-17",
+  "state": "PASS_textual_draft_qa_not_publication",
+  "checks": [
+    {
+      "check": "counts",
+      "pass": true,
+      "detail": "9 experiencias,11 directorios,3 borradores geográficos ampliados"
+    },
+    {
+      "check": "experiences_unique_ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "experiences_es_en_pt",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "experiences_sources",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "experiences_no_prices_timetables",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "experiences_no_workflow_in_public_copy",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "directory_unique_ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "directory_es_en_pt",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "directory_sources",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "directory_no_prices_timetables",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "directory_no_workflow_in_public_copy",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "geographic_drafts_unique_ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "geographic_drafts_es_en_pt",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "geographic_drafts_sources",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "geographic_drafts_no_prices_timetables",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "geographic_drafts_no_workflow_in_public_copy",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "experience_locations",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "related_locations",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "experiences_not_places",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "no_invented_events",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "moto_not_offer",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "no_implied_booking_or_partnership",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "acuario_as_experience",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "seven_places_eighth_pending",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "tayrona_before_rodadero",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "all_candidates_have_reasons",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "taganga_minca_rodadero_distinct",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "all_draft",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "approval_fields_well_typed",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "counts": {
+    "experiences": 9,
+    "directory": 11,
+    "expanded_geographic_drafts": 3,
+    "locations": 13,
+    "top8_proposed": 7,
+    "eighth_pending": true,
+    "events": 0,
+    "languages": [
+      "en",
+      "es",
+      "pt-BR"
+    ]
+  },
+  "photos_processed": false,
+  "network_used_by_validator": false,
+  "database_changed": false,
+  "package_changed": false
+}

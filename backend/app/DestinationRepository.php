@@ -2,6 +2,7 @@
 declare(strict_types=1);
 
 require_once __DIR__.'/BusinessCategories.php';
+require_once __DIR__.'/ExperienceOperatorAddon.php';
 
 final class DestinationRepository
 {
@@ -37,10 +38,11 @@ final class DestinationRepository
         foreach ($stmt->fetchAll(PDO::FETCH_ASSOC) as $row) {
             $key=(int)$row['id'];
             if (!isset($destination['places'][$key])) $destination['places'][$key]=[
-                'slug'=>$row['slug'],'type'=>$row['poi_type'],'name'=>$row['name'],'description'=>$row['description'],'map_url'=>$row['map_url'],'external_url'=>$row['external_url'],'external_label'=>$row['external_label'],'media'=>[]
+                'id'=>(int)$row['id'],'operators'=>[],'slug'=>$row['slug'],'type'=>$row['poi_type'],'name'=>$row['name'],'description'=>$row['description'],'map_url'=>$row['map_url'],'external_url'=>$row['external_url'],'external_label'=>$row['external_label'],'media'=>[]
             ];
             if ($row['asset_path'] !== null) $destination['places'][$key]['media'][]=$this->mediaRow($row);
         }
+        $addon=new ExperienceOperatorAddon($this->pdo);foreach($destination['places'] as &$place){if($place['type']==='experience')$place['operators']=$addon->active($place['id'],$locale);}unset($place);
         $destination['places']=array_values($destination['places']);
         $businessPublicationFilter=$preview?'b.publication_status IN ("published","draft")':'b.publication_status="published"';
         $categoryJoin=BusinessCategories::ready($this->pdo)?'(b.category_code=c.code OR EXISTS (SELECT 1 FROM business_categories bc WHERE bc.business_id=b.id AND bc.category_code=c.code))':'b.category_code=c.code';

@@ -8,6 +8,10 @@ if (PHP_SAPI === 'cli-server' && in_array($_SERVER['REMOTE_ADDR'] ?? '', ['127.0
 }
 if (!is_file($configFile)) { http_response_code(503); exit('Configuración del servidor pendiente.'); }
 $config = require $configFile;
+require_once __DIR__.'/ProductionRuntimeSettings.php';
+try{$config=array_replace_recursive($config,ProductionRuntimeSettings::load(dirname($configFile)));}catch(Throwable $error){error_log('Explorando Lugares: configuración de ejecución no válida.');http_response_code(503);exit('Revisa la configuración privada del portal.');}
+require_once __DIR__.'/PortalSettings.php';
+try{$portalOverrides=PortalSettings::load(dirname($configFile));if(isset($portalOverrides['privacy']))$config['privacy']=array_replace($config['privacy']??[],$portalOverrides['privacy']);}catch(Throwable $error){error_log('Explorando Lugares: configuración privada de privacidad no válida.');http_response_code(503);exit('Revisa la configuración privada del portal.');}
 require_once __DIR__.'/BusinessPortalAccess.php';
 $local = in_array($_SERVER['REMOTE_ADDR'] ?? '', ['127.0.0.1', '::1'], true) || (getenv('EL_PREPROD_LOCAL') === '1' && in_array(parse_url('http://'.($_SERVER['HTTP_HOST']??''), PHP_URL_HOST), ['127.0.0.1','localhost','[::1]'], true));
 $https = ($_SERVER['HTTPS'] ?? '') === 'on';

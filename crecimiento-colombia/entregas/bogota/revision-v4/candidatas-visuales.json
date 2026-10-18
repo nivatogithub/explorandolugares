@@ -1,0 +1,298 @@
+{
+  "destino": "CO-11-bogota",
+  "estado": "preseleccion_documentada_no_aprobada",
+  "options": [
+    {
+      "id": "hero-1",
+      "uso": "hero",
+      "opcion_numero": 1,
+      "titulo_original": "Skyline downtown Bogota.jpg",
+      "author": "Tijs Zwinkels",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Skyline_downtown_Bogota.jpg",
+      "original_url": "https://upload.wikimedia.org/wikipedia/commons/6/62/Skyline_downtown_Bogota.jpg",
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Skyline_downtown_Bogota.jpg/960px-Skyline_downtown_Bogota.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "fecha_declarada": "2009-07-30",
+      "consulta": "2026-10-17",
+      "dimensiones_declaradas": [
+        3888,
+        2588
+      ],
+      "local_file": "imagenes/revision-v3/originales/portada-colpatria.jpg",
+      "sha256": "c73de2c28395cd0cc809049e3bd5e2c6b2007cd8ed9387731b240d431c9ff69a",
+      "encargo_visual": "Colpatria completa y contexto centro; comprobar techo/base al recortar.",
+      "identity_factual_urls": [
+        "https://visitbogota.co/es/que-hacer-en-bogota/cultura/torre-colpatria"
+      ],
+      "aprobado": false,
+      "inspeccion_original": "ya_inspeccionado_en_revision3;recortes_v4_pendientes",
+      "inspeccion_recortes": {
+        "metodo": "simulacion_cover_center_de_reglas_CSS_leidas_sin_navegador",
+        "desktop": [
+          600,
+          330
+        ],
+        "mobile": [
+          350,
+          240
+        ],
+        "evidencia": "qa-colpatria.jpg",
+        "resultado": "torre_completa_reconocible_con_contexto_urbano_en_ambas_proporciones",
+        "limite": "No equivale a QA sitio real;resoluciónhistórica2009,tejidourbanoactualporrevisar"
+      },
+      "estado": "apta_para_eleccion_de_referencia_pendiente_aprobacion",
+      "via_IA_propuesta": "transformacion_autorizada_condicionada",
+      "condiciones_IA": [
+        "Licencia permite uso comercial/adaptación del recurso concreto.",
+        "CC0 no exige atribución copyright pero se conserva procedencia;CC_BY-SA exige crédito,enlace,cambios ylicencia compatible delderivado.",
+        "Comprobar condiciones del proveedor al suministrar referencia y publicar salida; no declarar librederestricciones.",
+        "Si no se puede cumplir permiso/ShareAlike elegir composición independiente basada en hechos sin subir/copiar expresión de referencia restringida.",
+        "No generar hasta aprobación individual de original/uso/texto; luego segunda revisión de ilustración."
+      ],
+      "maestro_completo_disponible": true
+    },
+    {
+      "id": "colpatria-2",
+      "uso": "hero",
+      "opcion_numero": 2,
+      "titulo_original": "Bogotá, Monserrate, 2023-06 CN-02.jpg",
+      "author": "© Steffen Schmitz (Carschten) / Wikimedia Commons",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Bogot%C3%A1%2C_Monserrate%2C_2023-06_CN-02.jpg",
+      "original_url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Bogot%C3%A1%2C_Monserrate%2C_2023-06_CN-02.jpg",
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Bogot%C3%A1%2C_Monserrate%2C_2023-06_CN-02.jpg/960px-Bogot%C3%A1%2C_Monserrate%2C_2023-06_CN-02.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fecha_declarada": "2023-06-30",
+      "consulta": "2026-10-17",
+      "dimensiones_declaradas": [
+        4042,
+        2713
+      ],
+      "local_file": "revision-v4/referencias/colpatria-2-thumb.jpg",
+      "sha256": "4eba8dc26a62fde2a6fe80415eccffd8b555417d2ef69bf7a73852da26b9f74e",
+      "encargo_visual": "Vista urbana al atardecer; medir tamaño/reconocimiento de Colpatria, no asumir aptitud por serQualityImage.",
+      "identity_factual_urls": [
+        "https://visitbogota.co/es/que-hacer-en-bogota/cultura/torre-colpatria"
+      ],
+      "aprobado": false,
+      "inspeccion_original": "miniatura_inspeccionada_no_original_2026-10-17",
+      "inspeccion_recortes": {
+        "metodo": "simulacion_cover_center_sin_navegador",
+        "desktop": [
+          600,
+          330
+        ],
+        "mobile": [
+          350,
+          240
+        ],
+        "evidencia": "qa-miniaturas-recortes.jpg",
+        "resultado": "Colpatria no domina ni queda suficientemente clara en móvil; conservar panorama secundario y elegir hero1 para icono."
+      },
+      "estado": "rechazada_para_colpatria_iconica_panorama_secundario",
+      "via_IA_propuesta": "transformacion_autorizada_condicionada",
+      "condiciones_IA": [
+        "Licencia permite uso comercial/adaptación del recurso concreto.",
+        "CC0 no exige atribución copyright pero se conserva procedencia;CC_BY-SA exige crédito,enlace,cambios ylicencia compatible delderivado.",
+        "Comprobar condiciones del proveedor al suministrar referencia y publicar salida; no declarar librederestricciones.",
+        "Si no se puede cumplir permiso/ShareAlike elegir composición independiente basada en hechos sin subir/copiar expresión de referencia restringida.",
+        "No generar hasta aprobación individual de original/uso/texto; luego segunda revisión de ilustración."
+      ],
+      "maestro_completo_disponible": false,
+      "dimensiones_reales": [
+        960,
+        644
+      ],
+      "bytes": 286145,
+      "tipo_archivo_local": "miniatura_oficial_no_original",
+      "observacion_visual": "Panorama desde Monserrate con Bacatá dominante; Colpatria pequeña entre árboles. Alternativa urbana, no recomendada para iconoColpatria."
+    },
+    {
+      "id": "jardin-1",
+      "uso": "bogota-jardin",
+      "opcion_numero": 1,
+      "titulo_original": "Domos del Tropicario de Bogotá.jpg",
+      "author": "Jardín Botánico José Celestino Mutis",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Domos_del_Tropicario_de_Bogot%C3%A1.jpg",
+      "original_url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Domos_del_Tropicario_de_Bogot%C3%A1.jpg",
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Domos_del_Tropicario_de_Bogot%C3%A1.jpg/960px-Domos_del_Tropicario_de_Bogot%C3%A1.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fecha_declarada": "Ficha2022-05-16; EXIF2020-10-22 discrepante",
+      "consulta": "2026-10-17",
+      "dimensiones_declaradas": [
+        5464,
+        3070
+      ],
+      "local_file": "revision-v4/referencias/jardin-1.jpg",
+      "sha256": "3fce0af5cf11bb9c9b5a42375820ff3e342644c1422cdca445b261d112308717",
+      "encargo_visual": "Domos de vidrio completos y contexto del circuito; reemplaza detalle genérico tortuga solo tras elección.",
+      "identity_factual_urls": [
+        "https://jbb.gov.co/servicios/tropicario-circuito-de-invernaderos/"
+      ],
+      "aprobado": false,
+      "inspeccion_original": "inspeccionado_visualmente_2026-10-17",
+      "inspeccion_recortes": {
+        "metodo": "simulacion_cover_center_sin_navegador",
+        "desktop": [
+          600,
+          330
+        ],
+        "mobile": [
+          350,
+          240
+        ],
+        "evidencia": "qa-jardin-recortes.jpg",
+        "resultado": "Domos principales reconocibles en ambos recortes; opción 2 más clara. Los domos periféricos se recortan parcialmente; conservar encuadre completo para generación."
+      },
+      "estado": "apta_para_eleccion_de_referencia_pendiente_aprobacion",
+      "via_IA_propuesta": "transformacion_autorizada_condicionada",
+      "condiciones_IA": [
+        "Licencia permite uso comercial/adaptación del recurso concreto.",
+        "CC0 no exige atribución copyright pero se conserva procedencia;CC_BY-SA exige crédito,enlace,cambios ylicencia compatible delderivado.",
+        "Comprobar condiciones del proveedor al suministrar referencia y publicar salida; no declarar librederestricciones.",
+        "Si no se puede cumplir permiso/ShareAlike elegir composición independiente basada en hechos sin subir/copiar expresión de referencia restringida.",
+        "No generar hasta aprobación individual de original/uso/texto; luego segunda revisión de ilustración."
+      ],
+      "maestro_completo_disponible": true,
+      "dimensiones_reales": [
+        5464,
+        3070
+      ],
+      "bytes": 13472868,
+      "observacion_visual": "Domos al atardecer: contraluz y brillo solar; domo lateral parcialmente cortado. Menor claridad que opción 2.",
+      "recomendacion": "alternativa_con_contraluz"
+    },
+    {
+      "id": "jardin-2",
+      "uso": "bogota-jardin",
+      "opcion_numero": 2,
+      "titulo_original": "Tropicario del Jardín Botánico de Bogotá.jpg",
+      "author": "Camiloskyyy",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Tropicario_del_Jard%C3%ADn_Bot%C3%A1nico_de_Bogot%C3%A1.jpg",
+      "original_url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Tropicario_del_Jard%C3%ADn_Bot%C3%A1nico_de_Bogot%C3%A1.jpg",
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Tropicario_del_Jard%C3%ADn_Bot%C3%A1nico_de_Bogot%C3%A1.jpg/960px-Tropicario_del_Jard%C3%ADn_Bot%C3%A1nico_de_Bogot%C3%A1.jpg",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "fecha_declarada": "2024-01-10",
+      "consulta": "2026-10-17",
+      "dimensiones_declaradas": [
+        2000,
+        1500
+      ],
+      "local_file": "revision-v4/referencias/jardin-2.jpg",
+      "sha256": "b207525f976879f1d0222b1d804c86a5cdc420e4267e41785825507ee4e37189",
+      "encargo_visual": "Arquitectura delTropicario; inspeccionar rasgos y encuadre, no ofrecer porlicenciasola.",
+      "identity_factual_urls": [
+        "https://jbb.gov.co/servicios/tropicario-circuito-de-invernaderos/"
+      ],
+      "aprobado": true,
+      "inspeccion_original": "inspeccionado_visualmente_2026-10-17",
+      "inspeccion_recortes": {
+        "metodo": "simulacion_cover_center_sin_navegador",
+        "desktop": [
+          600,
+          330
+        ],
+        "mobile": [
+          350,
+          240
+        ],
+        "evidencia": "qa-jardin-recortes.jpg",
+        "resultado": "Domos principales reconocibles en ambos recortes; opción 2 más clara. Los domos periféricos se recortan parcialmente; conservar encuadre completo para generación."
+      },
+      "estado": "referencia_aprobada_identidad_verificada_generacion_autorizada",
+      "via_IA_propuesta": "transformacion_autorizada_condicionada",
+      "condiciones_IA": [
+        "Licencia permite uso comercial/adaptación del recurso concreto.",
+        "CC0 no exige atribución copyright pero se conserva procedencia;CC_BY-SA exige crédito,enlace,cambios ylicencia compatible delderivado.",
+        "Comprobar condiciones del proveedor al suministrar referencia y publicar salida; no declarar librederestricciones.",
+        "Si no se puede cumplir permiso/ShareAlike elegir composición independiente basada en hechos sin subir/copiar expresión de referencia restringida.",
+        "No generar hasta aprobación individual de original/uso/texto; luego segunda revisión de ilustración."
+      ],
+      "maestro_completo_disponible": true,
+      "dimensiones_reales": [
+        2000,
+        1500
+      ],
+      "bytes": 623590,
+      "observacion_visual": "Vista elevada, varios domos completos, arquitectura reconocible y caminos.",
+      "recomendacion": "preferida_para_revision",
+      "approval_evidence": "../aprobacion-jardin-tropicario-v1.json"
+    },
+    {
+      "id": "simon-1",
+      "uso": "bogota-simon",
+      "opcion_numero": 1,
+      "titulo_original": "BOG Lago Parque Simón Bolívar.JPG",
+      "author": "Felipe Restrepo Acosta",
+      "source_page": "https://commons.wikimedia.org/wiki/File:BOG_Lago_Parque_Sim%C3%B3n_Bol%C3%ADvar.JPG",
+      "original_url": "https://upload.wikimedia.org/wikipedia/commons/d/df/BOG_Lago_Parque_Sim%C3%B3n_Bol%C3%ADvar.JPG",
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/BOG_Lago_Parque_Sim%C3%B3n_Bol%C3%ADvar.JPG/960px-BOG_Lago_Parque_Sim%C3%B3n_Bol%C3%ADvar.JPG",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "fecha_declarada": "2010-12-12",
+      "consulta": "2026-10-17",
+      "dimensiones_declaradas": [
+        4000,
+        3000
+      ],
+      "local_file": "revision-v4/referencias/simon-1-thumb.jpg",
+      "sha256": "8cc9c5565bb71bce1d58ba328ed03d38720bedcb8da4ecac6adfa801632ebfaa",
+      "encargo_visual": "Lago visto desde cascada; escena propia del parque y contexto, no árbol/banco genérico.",
+      "identity_factual_urls": [
+        "https://www.idrd.gov.co/parques-y-escenarios/parque-simon-bolivar"
+      ],
+      "aprobado": false,
+      "inspeccion_original": "miniatura_inspeccionada_no_original_2026-10-17",
+      "inspeccion_recortes": {
+        "metodo": "simulacion_cover_center_sin_navegador",
+        "desktop": [
+          600,
+          330
+        ],
+        "mobile": [
+          350,
+          240
+        ],
+        "evidencia": "qa-miniaturas-recortes.jpg",
+        "resultado": "Lago y orillas se conservan en ambos; bote histórico no implica oferta actual."
+      },
+      "estado": "apta_para_eleccion_de_referencia_pendiente_aprobacion",
+      "via_IA_propuesta": "transformacion_autorizada_condicionada",
+      "condiciones_IA": [
+        "Licencia permite uso comercial/adaptación del recurso concreto.",
+        "CC0 no exige atribución copyright pero se conserva procedencia;CC_BY-SA exige crédito,enlace,cambios ylicencia compatible delderivado.",
+        "Comprobar condiciones del proveedor al suministrar referencia y publicar salida; no declarar librederestricciones.",
+        "Si no se puede cumplir permiso/ShareAlike elegir composición independiente basada en hechos sin subir/copiar expresión de referencia restringida.",
+        "No generar hasta aprobación individual de original/uso/texto; luego segunda revisión de ilustración."
+      ],
+      "maestro_completo_disponible": false,
+      "dimensiones_reales": [
+        960,
+        720
+      ],
+      "bytes": 117650,
+      "tipo_archivo_local": "miniatura_oficial_no_original",
+      "observacion_visual": "Lago amplio, orillas y contexto reconocible; candidata para tarjeta parque. Foto histórica2010, no garantiza servicio de botes."
+    }
+  ],
+  "rechazos_conservados": [
+    {
+      "componente": "bogota-jardin",
+      "activo": "tortuga2015",
+      "motivo": "Detalle genérico sin identidad icónica del circuito; no como ficha principal."
+    },
+    {
+      "componente": "bogota-simon",
+      "activo": "banco330px",
+      "motivo": "Resolución insuficiente y escena genérica; buscar lago específico."
+    },
+    {
+      "componente": "hero",
+      "activo": "monserrate-cables",
+      "motivo": "Rechazohumano;no reofrecer."
+    }
+  ]
+}

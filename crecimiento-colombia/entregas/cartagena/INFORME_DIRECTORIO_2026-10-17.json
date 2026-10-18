@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "destination_id": "CO-13-cartagena",
+  "verified_at": "2026-10-17",
+  "scope": "Solo descripciones del directorio; sin contacto, fotos, importación ni publicación.",
+  "source_observation_limit": "La fuente oficial acredita la descripción institucional; no confirma disponibilidad, operación actual, precios, horarios ni alianzas.",
+  "consultation_notes": [
+    "La página /gastronomy/ de Casa San Agustín respondió con error en una comprobación adicional; Alma se contrastó con la portada oficial, que lo identifica y describe su propuesta.",
+    "Los campos consulted_at y source_url anteriores se conservan; las consultas adicionales y URLs específicas se registran aquí."
+  ],
+  "original_file_sha256": "c03baaf4cb8c89fec3f4063d6f02363a84bd65b7de0676c3c105a67135c7f134",
+  "updated_file_sha256": "7481703ffbdaaec8ba9ce932c8b962213786015831d78131d358440cdca4a691",
+  "validation": {
+    "passed": true,
+    "entry_count": 10,
+    "unique_ids": 10,
+    "locales": [
+      "es",
+      "en",
+      "pt-BR"
+    ],
+    "description_count": 30,
+    "original_fields_and_order_preserved": true,
+    "only_added_field": "translations",
+    "all_descriptions_nonempty_and_under_250_characters": true,
+    "draft_and_unknown_operation_states_preserved": true,
+    "approvals_not_inferred": true,
+    "language_review": "Revisión editorial manual de equivalencia ES/EN/PT-BR; validación estructural automática de los 30 textos. No constituye aprobación humana."
+  },
+  "records": [
+    {
+      "id": "CO-13-cartagena-celele",
+      "name": "Celele",
+      "official_source_url": "https://celelerestaurante.com/",
+      "consulted_at": "2026-10-17",
+      "evidence_summary_es": "Restaurante en Getsemaní centrado en la cocina contemporánea del Caribe colombiano y sus ingredientes regionales.",
+      "evidence_type": "pagina_oficial_entidad",
+      "description_sha256": {
+        "es": "623fb32d7c91e2f364b6130d9c05bac26ddbddc62dd1120a24500fa5f671ca2b",
+        "en": "2c5cfae47699948f8c3a0e47e0ad088f11493df226391ddd661ea3f548739128",
+        "pt-BR": "f1cd58b5b35faf36f9e2686748f9ca93a9979508156c0f1f8ff1538514e0d775"
+      },
+      "editorial_review_status": "pendiente",
+      "operation_verified": false
+    },
+    {
+      "id": "CO-13-cartagena-casa-san-agustin",
+      "name": "Hotel Casa San Agustín",
+      "official_source_url": "https://hotelcasasanagustin.com/",
+      "consulted_at": "2026-10-17",
+      "evidence_summary_es": "Hotel boutique en el centro histórico de Cartagena, integrado por tres casas de arquitectura patrimonial.",
+      "evidence_type": "pagina_oficial_entidad",
+      "description_sha256": {
+        "es": "f073d2b24499a462d673506882b077e2dd929bbc8d834d5a2d0512dc86ea245f",
+        "en": "d86d2148c853bbe910451b58b372fe0efd106d60f0d3e3c516f67b223a9cabdc",
+        "pt-BR": "920e4474309e72db7f10d6b0b51905547467e86376f5c424031a469c2df5d86c"
+      },
+      "editorial_review_status": "pendiente",
+      "operation_verified": false
+    },
+    {
+      "id": "CO-13-cartagena-charleston",
+      "name": "Charleston Santa Teresa",
+      "official_source_url": "https://www.hotelcharlestonsantateresa.com/",
+      "consulted_at": "2026-10-17",
+      "evidence_summary_es": "Hotel en la ciudad amurallada de Cartagena, instalado en un antiguo claustro del siglo XVII.",
+      "evidence_type": "pagina_oficial_entidad",
+      "description_sha256": {
+        "es": "f30c14015a13fb17a76c465b8a1584d58c4cdfa263f05357522396bfb5a2d294",
+        "en": "2c13df26117147e2945ba04f6f19bb6c48206c5a844f17b8175c88d5b5268d61",
+        "pt-BR": "b57088a3823a09b380ea43cc896f24897bea5a1ac55b6304db6f7858900f71f7"
+      },
+      "editorial_review_status": "pendiente",
+      "operation_verified": false
+    },
+    {
+      "id": "CO-13-cartagena-santa-clara",
+      "name": "Sofitel Legend Santa Clara",
+      "official_source_url": "https://www.sofitellegendsantaclara.com/",
+      "consulted_at": "2026-10-17",
+      "evidence_summary_es": "Hotel en el barrio San Diego de Cartagena, ubicado en el antiguo convento de Santa Clara.",
+      "evidence_type": "pagina_oficial_entidad",
+      "description_sha256": {
+        "es": "3b553676eee26365970c7913c9caee6ce76f4397e695636cf8cfc3a9afb64bba",
+        "en": "fde36ea2cf5a7fe18e48451f9e6825fd7c927f1ece6934083044754bc4a6f1f1",
+        "pt-BR": "dc2bdd00e0a8dee968377605ef5328a97700dc97ee84b3d78c7d672c04150da6"
+      },
+      "editorial_review_status": "pendiente",
+      "operation_verified": false
+    },
+    {
+      "id": "CO-13-cartagena-jardin",
+      "name": "Jardín Santa Clara",
+      "official_source_url": "https://www.sofitellegendsantaclara.com/restaurants-bars/jardin-santa-clara/",
+      "consulted_at": "2026-10-17",
+      "evidence_summary_es": "Restaurante del Sofitel Legend Santa Clara, en un entorno ajardinado, con una propuesta gastronómica para compartir.",
+      "evidence_type": "pagina_oficial_entidad",
+      "description_sha256": {
+        "es": "b1e7063586b9ad33145758972324891c7d32bd5e07ec4b6a70dfe61ba3d86ff0",
+        "en": "4226dea0705f5d7a930052d19fa66b253b2633b5589b7ea908fe2dd5eb3c10f8",
+        "pt-BR": "c6ab847428c2e70d052e82b90bfb569531b587af8a953a3de9273e2601a24d4a"
+      },
+      "editorial_review_status": "pendiente",
+      "operation_verified": false
+    },
+    {
+      "id": "CO-13-cartagena-1621",
+      "name": "Restaurante 1621",
+      "official_source_url": "https://www.sofitellegendsantaclara.com/restaurants-bars/1621-restaurant/",
+      "consulted_at": "2026-10-17",
+      "evidence_summary_es": "Restaurante del Sofitel Legend Santa Clara que combina técnicas francesas con ingredientes del Caribe colombiano.",
+      "evidence_type": "pagina_oficial_entidad",
+      "description_sha256": {
+        "es": "700c36c9e30b8672fe113cf82db63b664a5240f0b74040862d55b978bbf79f07",
+        "en": "012e591b713416db1f4103600dbf125263e8f8c60ea6c315802c43cc1573991f",
+        "pt-BR": "57981d7810be0a23da9b5d7f751235fffdde158cb6067d534a9bdad508361989"
+      },
+      "editorial_review_status": "pendiente",
+      "operation_verified": false
+    },
+    {
+      "id": "CO-13-cartagena-coro",
+      "name": "El Coro Lounge Bar",
+      "official_source_url": "https://www.sofitellegendsantaclara.com/restaurants-bars/el-coro-lounge-bar/",
+      "consulted_at": "2026-10-17",
+      "evidence_summary_es": "Bar del Sofitel Legend Santa Clara ubicado en el antiguo coro del convento, con coctelería de inspiración cubana.",
+      "evidence_type": "pagina_oficial_entidad",
+      "description_sha256": {
+        "es": "f8970e84b2c0a672be10d2db31c20b527d6ae17330f83439227b8499327a2c0a",
+        "en": "615ff4bc6f9d04f6fc1e3705d53a52c57f26263cebc10dc13239d5b733609a10",
+        "pt-BR": "b524788055b07128ba83fbe3f3c4c4528572b832c9cbc299f1364422ff0d92e0"
+      },
+      "editorial_review_status": "pendiente",
+      "operation_verified": false
+    },
+    {
+      "id": "CO-13-cartagena-botika",
+      "name": "Botika Santa Clara Bar",
+      "official_source_url": "https://www.sofitellegendsantaclara.com/restaurants-bars/botika-bar/",
+      "consulted_at": "2026-10-17",
+      "evidence_summary_es": "Bar en la terraza del Sofitel Legend Santa Clara, con coctelería inspirada en la botánica y el Caribe colombiano.",
+      "evidence_type": "pagina_oficial_entidad",
+      "description_sha256": {
+        "es": "7bb3c7fc786f62774ed80241a0b9675de4f3552a439adf134f6a4885023f6190",
+        "en": "a0fd0c1424fb2f61136957565463de3c9833fc2272d4e91bdfc57f2e605a3dba",
+        "pt-BR": "5f1f973749ce07c3667293fc2cc05926a113a7bd27562027016b99104a43b033"
+      },
+      "editorial_review_status": "pendiente",
+      "operation_verified": false
+    },
+    {
+      "id": "CO-13-cartagena-muhca",
+      "name": "Museo Histórico de Cartagena",
+      "official_source_url": "https://www.muhca.gov.co/",
+      "consulted_at": "2026-10-17",
+      "evidence_summary_es": "Museo del Palacio de la Inquisición dedicado a la historia y la memoria de Cartagena, con exposiciones permanentes y temporales.",
+      "evidence_type": "pagina_oficial_entidad",
+      "description_sha256": {
+        "es": "5fab523041c0cb260de4fbf552fdfd3cb8a8c855fc472e3ce8ce1adca4f3025a",
+        "en": "31e2ec36c5378fc8d9f05813f0bb75c397cd6679e112609a30ad5eb004285335",
+        "pt-BR": "e3d915f32f308361d0582b5e02d269771cc7834641287535a1206a48b48666bb"
+      },
+      "editorial_review_status": "pendiente",
+      "operation_verified": false
+    },
+    {
+      "id": "CO-13-cartagena-alma",
+      "name": "Alma",
+      "official_source_url": "https://hotelcasasanagustin.com/",
+      "consulted_at": "2026-10-17",
+      "evidence_summary_es": "Restaurante de Casa San Agustín con una propuesta gastronómica vinculada a los sabores de Cartagena.",
+      "evidence_type": "pagina_oficial_entidad",
+      "description_sha256": {
+        "es": "0148aee0884207b498d4ab2551dd65840793c67fc44f5bbe5f6de40ff436c577",
+        "en": "fc2f620f17c79b8e542f8eade7c4e3eeca09ae1aeb55da60d2ad0ecec8087e7a",
+        "pt-BR": "b009044a7359314b63857dd3dc4da74514877a026b64910ab349481129ca4699"
+      },
+      "editorial_review_status": "pendiente",
+      "operation_verified": false
+    }
+  ]
+}
