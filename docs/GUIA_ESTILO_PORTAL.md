@@ -199,3 +199,7 @@ No repetir Destacado dentro de una sección titulada Destacados. Logo o iniciale
 
 ### Cargar más por filas · instrucción vigente
 Las secciones permanecen abiertas. Tarjetas con foto: mostrar inicialmente hasta dos filas. Tarjetas pequeñas del directorio: hasta cuatro filas. Cargar más añade otro bloque del mismo tamaño, según columnas reales de la pantalla. Al cambiar de filtro se reinicia el límite y no se mezclan tarjetas de categorías distintas. Ocultar el botón si ya se ven todos los resultados; los datos continúan presentes y sin JavaScript no se recortan por CSS. Recalcular al redimensionar o abrir un bloque heredado. Sustituye la instrucción anterior de mostrar todas las tarjetas de una vez.
+
+
+### Excepción de logo y tamaño: Destacado
+Destacado usa tarjeta pequeña como Gratis, sin logo ni iniciales, con nombre, etiqueta de categoría y pin de ubicación a la derecha. Rejilla compacta, cuatro filas iniciales. El logo izquierdo y las tarjetas más amplias corresponden a Página/Premium. Esta instrucción sustituye la regla general de logo para todos los planes pagos.

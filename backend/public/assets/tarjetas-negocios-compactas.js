@@ -15,6 +15,9 @@
   for(const card of document.querySelectorAll('.directory-card')){
    if(card.dataset.iconLayout==='1')continue;card.dataset.iconLayout='1';
    const premium=card.classList.contains('directory-card-tier-page_premium');
+   const compactFeatured=card.classList.contains('directory-card-tier-featured');
+   if(compactFeatured)card.querySelectorAll('.directory-business-mark,.directory-contact-links').forEach(n=>n.remove());
+   if(compactFeatured)card.querySelectorAll('.directory-card-body a.text-link:not(.directory-location-link)').forEach(n=>n.remove());
    card.querySelectorAll('.directory-featured-badge').forEach(b=>{if(!premium)b.remove();else{b.innerHTML=svg('star');b.title='Premium';b.setAttribute('aria-label','Premium');b.setAttribute('role','img');b.className='directory-premium-star';}});
    const body=card.querySelector('.directory-card-body');if(!body)continue;
    const title=body.querySelector('h3');const category=body.querySelector(':scope>.eyebrow');const logo=body.querySelector('.directory-business-mark');
@@ -26,7 +29,7 @@
    for(const [selector,kind] of [['.directory-location-link','map'],['.directory-contact-whatsapp','whatsapp'],['.directory-contact-instagram','instagram'],['.directory-contact-email','email'],['.directory-business-page-link','page']]){
     const a=body.querySelector(selector);if(!a)continue;a.classList.add('directory-icon-action');a.title=labels[kind];a.setAttribute('aria-label',labels[kind]);a.innerHTML=svg(kind);actions.append(a);
    }
-   const status=body.querySelector(':scope>p small');if(status){const note=status.parentElement;note.hidden=true;note.classList.add('directory-status-note');const info=document.createElement('button');info.type='button';info.className='directory-icon-action';info.title=status.textContent;info.setAttribute('aria-label',status.textContent);info.setAttribute('aria-expanded','false');info.innerHTML=svg('info');info.addEventListener('click',()=>{note.hidden=!note.hidden;info.setAttribute('aria-expanded',String(!note.hidden));});actions.prepend(info);}
+   const status=body.querySelector(':scope>p small');if(status&&compactFeatured)status.parentElement.remove();if(status&&!compactFeatured){const note=status.parentElement;note.hidden=true;note.classList.add('directory-status-note');const info=document.createElement('button');info.type='button';info.className='directory-icon-action';info.title=status.textContent;info.setAttribute('aria-label',status.textContent);info.setAttribute('aria-expanded','false');info.innerHTML=svg('info');info.addEventListener('click',()=>{note.hidden=!note.hidden;info.setAttribute('aria-expanded',String(!note.hidden));});actions.prepend(info);}
    if(actions.childElementCount)body.append(actions);else actions.remove();
    body.querySelectorAll('.directory-contact-links').forEach(n=>{if(!n.querySelector('a'))n.remove();});
   }
