@@ -190,8 +190,12 @@ La aprobación de la línea gráfica no aprueba automáticamente cada imagen ni 
 
 
 ### Paridad de lectura Jericó / Cartagena
-Las secciones Qué conocer, Experiencias y Directorio permanecen abiertas y presentan títulos del mismo nivel, sin párrafos introductorios ni rótulos redundantes. Mostrar todos los atractivos sin Cargar más. Descripciones de atractivos y actividades en una frase; conservar condiciones esenciales de acceso, clima y confirmación. Directorio sin descripciones, incluido el grupo de fichas gratuitas, y convocatoria de negocios compacta. Evitar que el componente general de acordeones vuelva a plegar una guía ya adaptada.
+Las secciones Qué conocer, Experiencias y Directorio permanecen abiertas y presentan títulos del mismo nivel, sin párrafos introductorios ni rótulos redundantes. Aplicar Cargar más por filas, sin plegar secciones. Descripciones de atractivos y actividades en una frase; conservar condiciones esenciales de acceso, clima y confirmación. Directorio sin descripciones, incluido el grupo de fichas gratuitas, y convocatoria de negocios compacta. Evitar que el componente general de acordeones vuelva a plegar una guía ya adaptada.
 
 
 ### Tarjetas de negocios: acciones por iconos
 No repetir Destacado dentro de una sección titulada Destacados. Logo o iniciales de 38 px a la izquierda, nombre legible (hasta dos líneas, nombre completo accesible) y categoría como etiqueta que filtra el directorio. Fila estable de acciones: pin de ubicación, WhatsApp, Instagram, sobre de correo y globo para página del negocio, según plan y datos públicos disponibles. Mantener el nombre enlazado cuando existe página. Iconos pequeños dentro de áreas táctiles de 44 px; ayuda por título y nombre accesible, foco visible. No convertir toda la tarjeta en un enlace con enlaces anidados ni inventar contactos para llenar huecos. La nota de verificación se consulta con el icono de información. Premium puede conservar su estrella; no añadir rótulos redundantes.
+
+
+### Cargar más por filas · instrucción vigente
+Las secciones permanecen abiertas. Tarjetas con foto: mostrar inicialmente hasta dos filas. Tarjetas pequeñas del directorio: hasta cuatro filas. Cargar más añade otro bloque del mismo tamaño, según columnas reales de la pantalla. Al cambiar de filtro se reinicia el límite y no se mezclan tarjetas de categorías distintas. Ocultar el botón si ya se ven todos los resultados; los datos continúan presentes y sin JavaScript no se recortan por CSS. Recalcular al redimensionar o abrir un bloque heredado. Sustituye la instrucción anterior de mostrar todas las tarjetas de una vez.

@@ -239,3 +239,7 @@ Priorizar una frase de introducción y un párrafo histórico breve de ancho com
 
 ## Identidad visual aprobada para todo el sitio
 Usar docs/GUIA_ESTILO_PORTAL.md v2: neutros, ilustración semirrealista y textos directos. Historia breve a ancho completo, sin reservar huecos para imágenes ausentes. Retirar avisos compartidos de piloto/Jericó; no reintroducir amarillo o salvia. La guía visual aprobada no es aprobación de publicación ni de cada imagen.
+
+
+## Corrección vigente: apertura y paginación son independientes
+Conservar las secciones abiertas, pero usar Cargar más: dos filas para fichas con foto y cuatro para tarjetas pequeñas. No interpretar «sin acordeones» como «mostrar todo el inventario». Los límites se calculan con las columnas actuales, también en móvil y por filtro.

@@ -35,6 +35,9 @@ body{background:var(--el-page)!important;color:var(--el-text)}
 
 header,footer{background:var(--el-page)!important;border-color:var(--el-border)!important}
 .pilot-banner{display:none!important}
+.row-load-more{display:block;margin:18px auto 0;min-height:44px;padding:10px 20px;border:1px solid var(--el-control-border);border-radius:8px;background:var(--el-card);color:var(--el-text);cursor:pointer}
+.row-load-more[hidden]{display:none!important}
+.highlight-grid>article[hidden],.destination-experience-list>article[hidden],.directory-grid>article[hidden]{display:none!important}
 h1,h2,h3,h4{color:var(--el-text)}
 .card,.directory-card,.destination-experience-card,.highlight-grid article,.metric-card{background:var(--el-card)!important;border-color:var(--el-border)!important}
 .destination-invitation,.destination-reasons,.destination-nav,.destination-preview-banner{background:var(--el-panel)!important;border-color:var(--el-border)!important}
@@ -58,6 +61,7 @@ input,select,textarea{background:var(--el-field);border-color:var(--el-control-b
  (assets/'identidad-neutral.css').write_text(css)
  shutil.copy2(ROOT/'backend/public/assets/identidad-neutral.js',assets/'identidad-neutral.js') if assets.resolve()!=(ROOT/'backend/public/assets').resolve() else None
  shutil.copy2(ROOT/'backend/public/assets/tarjetas-negocios-compactas.js',assets/'tarjetas-negocios-compactas.js') if assets.resolve()!=(ROOT/'backend/public/assets').resolve() else None
+ shutil.copy2(ROOT/'backend/public/assets/cargar-mas-tarjetas.js',assets/'cargar-mas-tarjetas.js') if assets.resolve()!=(ROOT/'backend/public/assets').resolve() else None
  # Replace only known former surface/border colours. Preserve map/status colours,
  # illustration SVGs, logos and photographic pixels.
  palette={'#fffaf2':'#fafafa','#fff0dc':'#f1f2f4','#fff8ed':'#ffffff','#fffdf8':'#ffffff','#ffe4ba':'#e9ebee','#f2c77e':'#dadde2','#e9b75f':'#bdc2cb','#fff3dc':'#f1f2f4','#fff4df':'#f1f2f4','#fff7e8':'#ffffff','#fff5df':'#f1f2f4','#fff9ec':'#ffffff','#f0d39a':'#dadde2','#e8efeb':'#f1f2f4','#dfe9e3':'#e9ebee','#d7e0da':'#dadde2','#bacac1':'#bdc2cb','#faf9f5':'#fafafa','#f5b126':'#bdc2cb'}
@@ -78,6 +82,7 @@ input,select,textarea{background:var(--el-field);border-color:var(--el-control-b
   s=s.replace('identidad-neutral.js?v=2','identidad-neutral.js?v=3').replace('identidad-neutral.css?v=2','identidad-neutral.css?v=3')
   s=s.replace('tarjetas-negocios-compactas.js?v=1','tarjetas-negocios-compactas.js?v=2')
   if 'tarjetas-negocios-compactas.js' not in s:s=s.replace('</head>','<script defer src="/assets/tarjetas-negocios-compactas.js?v=2"></script></head>',1)
+  if 'cargar-mas-tarjetas.js' not in s:s=s.replace('</head>','<script defer src="/assets/cargar-mas-tarjetas.js?v=1"></script></head>',1)
   if 'identidad-neutral.css' not in s:s=s.replace('</head>',hook+'</head>',1)
   if s!=p.read_text():p.write_text(s);count+=1
  print(json.dumps({'public':str(public),'updated_pages':count,'updated_stylesheets':css_count,'published':False}))
