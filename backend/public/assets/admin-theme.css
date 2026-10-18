@@ -72,3 +72,6 @@ body.portal-admin{--ink:var(--el-text);--muted:var(--el-muted);--ember:var(--el-
 
 /* Observation controls keep the same spacing as database package actions. */
 .portal-admin #rendimiento .admin-db-action{margin:24px 0 16px;justify-items:start}.portal-admin #rendimiento details{margin-top:24px}.portal-admin #rendimiento summary{cursor:pointer;padding:12px 0;line-height:1.6}
+
+/* Shared editable selector: its arrow is part of the field, not a primary action. */
+.portal-admin button.floating-select-toggle{background:transparent!important;color:var(--el-action)!important;border:0!important;border-left:1px solid var(--el-border)!important;border-radius:0 6px 6px 0;padding:0;min-height:40px}

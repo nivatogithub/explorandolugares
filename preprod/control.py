@@ -86,10 +86,7 @@ def main():
  shutil.copyfile(ROOT/'preprod/infra/account-status.php',release/'public/__preprod-account.php')
  shutil.copyfile(ROOT/'preprod/infra/mailbox.php',release/'public/admin/buzon-local.php')
  shutil.copyfile(ROOT/'preprod/infra/correo-ejemplo.php',release/'public/correo-ejemplo.php')
- navigation=release/'public/admin/_navigation.php'
- navigation.write_text(navigation.read_text().replace('</nav>','<section><h2>Probar cuentas en preprod</h2><a href="/negocios/registro/">Crear cuenta personal</a><a href="/negocios/acceso/">Iniciar sesión</a><a href="/negocios/recuperar-clave/">Recuperar contraseña</a><a href="buzon-local.php">Buzón local de pruebas</a></section></nav>',1))
-
- # Refresh asset versions after adding the local navigation.
+ # Version local assets after adding the isolated test instruments.
  run(sys.executable,'scripts/versiones-medicion.py','--public',str(release/'public'))
  # This access bypass exists only in the local build, never in hosting sources.
  bootstrap=release/'app/bootstrap.php';source=bootstrap.read_text()
