@@ -247,3 +247,7 @@ Conservar las secciones abiertas, pero usar Cargar más: dos filas para fichas c
 ## Directorios de ciudades · mínimo30 fichas
 
 Bogotá, Medellín y Santa Marta deben tener al menos30 fichas gratuitas por destino. No dar el componente por completo con10/11. Seleccionar establecimientos y servicios útiles, con categorías diversas y fuente propia o institucional, comprobar ciudad/municipio y evitar duplicados o variantes de un mismo nombre. No rellenar el mínimo con negocios inventados ni contactos deducidos. Registrar consultas, conservar estado de verificación y reclamo; una presencia web no demuestra operación presencial, disponibilidad o alianza. La ficha gratuita mantiene nombre e icono, sin fotografías ni descripciones; carga progresiva por filas. Consultar la entrega vigente indicada en DIRECTORIO_VIGENTE.md antes de regenerar paquetes.
+
+## Diferenciación de portadas y corrección de estado
+
+No repetir entre ciudades la misma composición de torre en primer plano con skyline y montañas cambiando solo el edificio. Revisar portadas juntas: variar escala, punto de vista, escena y rasgos reales de identidad dentro del mismo estilo. Bogotá v2 usa Plaza de Bolívar a nivel peatonal; Medellín conserva Coltejer y el valle. La elección de estilo no equivale a aprobación de cada imagen. Jardín está pendiente de trabajar y validar por aclaración del propietario; no tratarlo como terminado ni publicarlo por herencia de una lista anterior.
