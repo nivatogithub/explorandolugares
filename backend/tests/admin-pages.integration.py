@@ -260,6 +260,14 @@ try:
     status, health_body, _ = request('/admin/campanas.php?tab=conexion', {'action': 'check_connection', 'csrf': health_csrf, 'return_to': 'system'})
     check(status == 200 and 'Salud del correo · Brevo' in health_body and 'Revisar conexión o configuración' in health_body, 'No informa conexión deshabilitada en Salud')
     check((WORK / 'private/brevo/health.json').is_file(), 'Diagnóstico no persistido en privado')
+    check(health_body.index('Salud del correo · Brevo') < health_body.index('Capacidad y disponibilidad'), 'Brevo debe aparecer primero en Estado del sistema')
+    check('Conexiones y presión de base de datos' not in health_body and 'Intentos de conexión desde el arranque' not in health_body, 'El detalle de base de datos no debe aparecer en Sistema')
+    db_health_body = request('/admin/base-datos.php')[1]
+    check('Conexiones y rendimiento' in db_health_body and 'no permite consultar estos indicadores' in db_health_body, 'No se deben fabricar indicadores cuando el controlador no los ofrece')
+    check(request('/admin/base-datos.php', {'action': 'start_health_period', 'csrf': 'invalid'})[0] == 403, 'Período sin CSRF')
+    db_health_csrf = re.search(r'name="csrf" value="([^"]+)"', db_health_body).group(1)
+    check(request('/admin/base-datos.php', {'action': 'start_health_period', 'csrf': db_health_csrf})[0] == 400, 'No debe iniciar período con contadores no disponibles en SQLite')
+    check(not (WORK / 'private/database-health/period.json').exists(), 'No debe fabricar mediciones ausentes')
     check(request('/admin/campanas.php?tab=conexion', {'action': 'check_connection', 'csrf': health_csrf}, opener=GUEST)[0] == 403, 'Visitante pudo ejecutar el diagnóstico')
     contact_csrf = re.search(r'name="csrf" value="([^"]+)"', request('/admin/contactos-negocios.php?tab=cargar')[1]).group(1)
     research_before = DB.execute('SELECT COUNT(*) FROM business_research_contacts').fetchone()[0]
