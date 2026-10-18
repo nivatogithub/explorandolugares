@@ -188,3 +188,8 @@ Al recibir URL, comprobar fuente original/identidad y preparar una vía permitid
 ## Corrección de identidad de portada · Medellín, 17-10-2026
 
 La portada anterior fue rechazada: el edificio no se reconoce como Coltejer. Su contexto céntrico y remate como aguja son rasgos obligatorios si se vuelve a representar. El propietario admite Pueblito Paisa o Plaza Botero como alternativas. Propuesta v2: Pueblito Paisa (la generación de Plaza Botero falló en el filtro del proveedor); no usar una torre genérica como sustituto. Validar silueta arquitectónica antes de integrar; mantener la aprobación del resultado pendiente y no cambiar producción. Las referencias descriptivas institucionales no equivalen a una fotografía aprobada ni a fidelidad fotográfica.
+
+
+### Portada Medellín v3: Metro urbano
+
+El propietario reemplaza Pueblito Paisa por el Metro en una parte de la ciudad para no repetir el atractivo. Mantener el tren blanco/verde y viaducto urbano como foco, ciudad y valle como contexto. La portada debe tener composición distinta de la ficha Metro/Metrocable; no reutilizar el archivo de la experiencia. v2 queda como antecedente, no portada elegida. Resultado v3 pendiente de revisión humana, solo preproducción.
