@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-17",
+  "javascript_syntax": "pass",
+  "python_syntax": "pass",
+  "initial_browser_check": {
+    "featured_badges": 0,
+    "logo_width_px": 38,
+    "page_globe_label": "Ver página del negocio",
+    "missing_channels_not_invented": true
+  },
+  "final_visual_check": "pendiente: servidor local devolvió ERR_EMPTY_RESPONSE; navegador no permitió abrir HTML file://. No se intentó eludir la restricción.",
+  "changes": [
+    "fila de iconos con áreas táctiles44px",
+    "logo izquierdo38px",
+    "categoría como filtro",
+    "sin etiqueta Destacado repetida",
+    "altura automática sin hueco reservado",
+    "nota de verificación mediante icono información"
+  ],
+  "prototype": "design/portal/muestra-tarjetas-iconos.html",
+  "production_changed": false
+}
