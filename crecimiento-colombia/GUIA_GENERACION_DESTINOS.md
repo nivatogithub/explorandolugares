@@ -183,3 +183,8 @@ Instrucción posterior del propietario,17/10/2026: él buscará manualmente las 
 El coordinador presenta qué componentes están identificados, el uso exacto (portada/historia/atractivo/experiencia) y si su inclusión está confirmada o pendiente. No pedir material para una ficha como si ya estuviera seleccionada cuando su prioridad está en discusión. El usuario puede enviar URLs de manera incremental con destino y componente; no exigir formatos técnicos ni un paquete completo. Si uso/elección están claros, registrar sin reconfirmar lo mismo.
 
 Al recibir URL, comprobar fuente original/identidad y preparar una vía permitida para creación IA conforme al skill, explicando solo bloqueos concretos; mantener aprobación de referencia, imagen generada y publicación separadas. No sustituir la elección por otra foto sin comunicarlo. Si es miniatura, localizar su fuente es validación de la URL elegida, no licencia para reiniciar una búsqueda abierta de alternativas. Textos, auditoríaTop8, clasificación, integración y QA pueden seguir en paralelo dentro del alcance autorizado.
+
+
+## Corrección de identidad territorial de portada · 17-10-2026
+
+Santa Marta: el propietario rechaza la apariencia de Grecia/Italia. Representar la bahía histórica y el Camellón como ciudad caribeña colombiana, trama urbana mayormente plana, playa urbana, Morro separado por agua, sin pueblo blanco escalonado ni acantilados mediterráneos. No confundir con Rodadero o Taganga. Validar no solo un símbolo aislado: también relieve, trama urbana, escala, vegetación y proporción de costa. La composición semirrealista no autoriza inventar el contexto. Propuesta nueva en preproducción, resultado pendiente de aprobación.

@@ -1,0 +1,29 @@
+{
+  "destination": "santa-marta",
+  "role": "hero",
+  "style": "semirrealista editorial tinta/gouache",
+  "date": "2026-10-17",
+  "status": "propuesta_preprod",
+  "approval": "pendiente",
+  "production_changed": false,
+  "master_sha256": "cddf486ff1862347ddf96d4e245a9a7c6db2a34c6fe690efdd4a81ab8fd0678c",
+  "files": [
+    {
+      "path": "backend/public/assets/santa-marta-semirrealista/hero-v2-640.webp",
+      "bytes": 84096,
+      "sha256": "cbafaf5c5e5f1afa04afb68f8d6a4d6d43c4de2dcf51937a2a3134ecc0b83cb1"
+    },
+    {
+      "path": "backend/public/assets/santa-marta-semirrealista/hero-v2-1200.webp",
+      "bytes": 260620,
+      "sha256": "8541434a2544f49623dcea3456654f1fd2177337cf30e04930844c11605f4d0f"
+    }
+  ],
+  "sources": [
+    "https://colombia.travel/es/santa-marta",
+    "https://santamarta.gov.co/sala-prensa/noticias/santa-marta-fortalece-su-oferta-turistica-con-el-nuevo-camellon-de-la-bahia"
+  ],
+  "reference_photos_uploaded": [],
+  "method": "Composición independiente basada en rasgos documentados; no fotografía ni reconstrucción topográfica exacta.",
+  "prompt_file": "../PROMPT_PORTADA_IDENTIDAD_V2.txt"
+}
