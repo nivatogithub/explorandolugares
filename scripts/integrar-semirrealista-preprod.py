@@ -47,7 +47,7 @@ from pathlib import Path
 import json
 R=Path(__file__).resolve().parents[2];P=R/'preprod';result={}
 def media(path,name,hero=False):return dict(path='assets/'+path,alt='Ilustración editorial: '+name,origin='ai_generated',width=1200 if hero else 800,height=800 if hero else 533,caption='')
-b=json.loads((R/'worker-lugar-2/crecimiento-colombia/entregas/bogota/semirrealista-v1/contenido.json').read_text());result['bogota']={'hero':media('bogota-semirrealista/portada-1200.webp','Bogotá · Torre Colpatria',True),'places':{}}
+b=json.loads((R/'worker-lugar-2/crecimiento-colombia/entregas/bogota/semirrealista-v1/contenido.json').read_text());result['bogota']={'hero':media('bogota-semirrealista/portada-v2-1200.webp','Bogotá · Plaza de Bolívar',True),'places':{}}
 for p in b['places']:
  key='bogota-'+p['slug'];path=key+'-800.webp' if key!='bogota-jardin' else 'bogota-jardin-aprobado.webp';result['bogota']['places'][p['slug']]=media('bogota-semirrealista/'+path,p['translations']['es']['name'])
 for e in b['experiences']:
