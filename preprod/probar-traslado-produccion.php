@@ -10,7 +10,9 @@ try{
  $root->exec('SET FOREIGN_KEY_CHECKS=1');
  $pack=json_decode(file_get_contents('/srv/state/evidencia/candidato-produccion.json'),true,64,JSON_THROW_ON_ERROR);$transfer=new ProductionContentTransfer($root);
  $first=$transfer->apply($pack,'/srv/portal/public');$counts=[];foreach(['destinations','businesses','media_assets','business_sources','business_subscriptions'] as $table)$counts[$table]=(int)$root->query('SELECT COUNT(*) FROM `'.$table.'`')->fetchColumn();
- $second=$transfer->apply($pack,'/srv/portal/public');foreach($counts as $table=>$count)if((int)$root->query('SELECT COUNT(*) FROM `'.$table.'`')->fetchColumn()!==$count)throw new RuntimeException('Repeated import duplicated '.$table);
+ // Simulate production keeping a different UUID for the same existing business.
+ $existingId=(int)$root->query('SELECT MIN(id) FROM businesses')->fetchColumn();$uuid='a1111111-2222-4333-8444-555555555555';$root->prepare('UPDATE businesses SET public_id=? WHERE id=?')->execute([$uuid,$existingId]);
+ $second=$transfer->apply($pack,'/srv/portal/public');$check=$root->prepare('SELECT public_id FROM businesses WHERE id=?');$check->execute([$existingId]);if($check->fetchColumn()!==$uuid)throw new RuntimeException('Production UUID was replaced');foreach($counts as $table=>$count)if((int)$root->query('SELECT COUNT(*) FROM `'.$table.'`')->fetchColumn()!==$count)throw new RuntimeException('Repeated import duplicated '.$table);
  if((int)$root->query('SELECT COUNT(*) FROM accounts')->fetchColumn()!==0)throw new RuntimeException('Accounts leaked');
  echo json_encode(['pass'=>true,'counts'=>$counts,'idempotent'=>true,'accounts_imported'=>0,'production_changed'=>false]),"\n";
 }finally{$root->exec('DROP DATABASE `'.$name.'`');}
