@@ -11,5 +11,5 @@ return [
  'account_mail'=>['enabled'=>false,'use_brevo_connection'=>true,'public_origin'=>'https://explorandolugares.com'],
  // Optional actual account quota readings; never use whole-server disk totals as account quota.
  'hosting_storage'=>['quota_bytes'=>null,'used_bytes'=>null,'measured_at'=>null],
- 'privacy'=>['operator'=>'','contact'=>'','retention'=>'','retention_en'=>''],
+ 'privacy'=>['operator'=>'','contact'=>'','retention'=>'','retention_en'=>'','retention_pt'=>''],
 ];

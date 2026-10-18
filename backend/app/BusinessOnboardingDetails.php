@@ -6,7 +6,7 @@ final class BusinessOnboardingDetails
     public static function capture(PDO $pdo,array $input,string $primary,string $storage):array
     {
         $result=['location'=>(new BusinessAdminService($pdo,$storage))->submittedLocation($input),'categories'=>BusinessCategories::validate($pdo,$input['category_codes']??[],$primary),'text'=>[],'channels'=>[]];
-        foreach(['summary'=>500,'description'=>6000,'brand_story'=>4000,'featured_services'=>2000] as $key=>$limit){$text=trim((string)($input[$key]??''));if(mb_strlen($text)>$limit)throw new RuntimeException('El campo '.$key.' supera su longitud permitida.');$result['text'][$key]=$text;}
+        foreach(['summary'=>1000,'description'=>6000,'brand_story'=>4000,'featured_services'=>2000] as $key=>$limit){$text=trim((string)($input[$key]??''));if(mb_strlen($text)>$limit)throw new RuntimeException('El campo '.$key.' supera su longitud permitida.');$result['text'][$key]=$text;}
         foreach(['email','phone','whatsapp','website','instagram','facebook'] as $channel){$value=trim((string)($input['channels'][$channel]??''));if($value==='')continue;if(strlen($value)>500)throw new RuntimeException('El canal es demasiado largo.');$valid=match($channel){'email'=>(bool)filter_var($value,FILTER_VALIDATE_EMAIL),'phone','whatsapp'=>(bool)preg_match('/^\+?[0-9() .-]{7,24}$/D',$value),default=>(bool)filter_var($value,FILTER_VALIDATE_URL)&&in_array(parse_url($value,PHP_URL_SCHEME),['http','https'],true)};if(!$valid)throw new RuntimeException('Revisa el canal '.$channel.'.');$result['channels'][$channel]=$value;}
         return $result;
     }

@@ -62,6 +62,11 @@ $pdo->exec("INSERT INTO business_media VALUES(1,11,2,'gallery'),(1,12,3,'gallery
 $quotaRejected=false;try{$service->publish(1,$testDate(0));}catch(RuntimeException $error){$quotaRejected=str_contains($error->getMessage(),'galería supera el máximo');}
 subscription_check($quotaRejected,'A page cannot publish more gallery images than its purchased tier includes.');
 $pdo->exec("DELETE FROM business_media WHERE business_id=1 AND role='gallery' AND media_asset_id BETWEEN 11 AND 15");
+$summaryUpdate=$pdo->prepare('UPDATE business_translations SET summary=? WHERE business_id=1 AND locale="es"');$summaryUpdate->execute([str_repeat('á',751)]);
+$limitRejected=false;try{$service->publish(1,$testDate(0));}catch(RuntimeException $error){$limitRejected=str_contains($error->getMessage(),'750 caracteres');}
+subscription_check($limitRejected,'Publication must enforce the advertised character limit, including content imported before review.');
+subscription_check($pdo->query('SELECT starts_at FROM business_subscriptions WHERE id='.(int)$id)->fetchColumn()===null,'A failed content review must not start the paid term.');
+$summaryUpdate->execute([str_repeat('á',750)]);
 $service->publish(1,$testDate(0));
 $q->execute([$id]);$sub=$q->fetch(PDO::FETCH_ASSOC);
 subscription_check($sub['status']==='active'&&$sub['published_at']===$testDate(0)->setTimezone(new DateTimeZone('UTC'))->format('Y-m-d H:i:s')&&$sub['starts_at']===$sub['published_at']&&$sub['ends_at']===$testDate(0)->modify('+3 months')->setTimezone(new DateTimeZone('UTC'))->format('Y-m-d H:i:s'),'A quarterly subscription expires three calendar months after its actual publication date.');

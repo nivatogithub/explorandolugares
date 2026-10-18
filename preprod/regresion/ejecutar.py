@@ -258,13 +258,28 @@ finally:
    name=r['storage_name'];check(re.fullmatch(r'[A-Za-z0-9_.-]+',name),'Nombre de archivo no seguro')
    path=ROOT/'.local/preprod/private/business-representation-evidence'/name
    if path.is_file():path.unlink()
+  # Image rows cascade on account/application deletion; their private files do not.
+  # Capture their exact names first, including images copied to our business fixtures.
+  imageFiles=query('SELECT i.storage_name FROM business_application_images i JOIN business_account_applications a ON a.id=i.application_id JOIN accounts c ON c.id=a.account_id WHERE c.email=?',[EMAIL])
+  if fixtures:
+   imageFiles+=query('SELECT storage_name FROM business_image_references WHERE business_id IN ('+','.join('?' for _ in fixtures)+')',fixtures)
+  for r in imageFiles:
+   name=r['storage_name'];check(re.fullmatch(r'[A-Za-z0-9_.-]+',name),'Nombre de imagen inseguro')
+   path=ROOT/'.local/preprod/private/business-image-references'/name
+   check(not path.is_symlink(),'Imagen técnica inesperadamente enlazada')
+   if path.is_file():path.unlink()
   query('DELETE FROM leads WHERE email=?',[EMAIL]);query('DELETE FROM accounts WHERE email IN (?,?)',[EMAIL,EMAIL.replace('@','-owner@')])
   for bid in fixtures:query('DELETE FROM businesses WHERE id=? AND slug LIKE ?',[bid,RUN+'%'])
   mailbox=ROOT/'.local/preprod/private/mailbox.json'
   if mailbox.exists():
    with mailbox.open('r+') as f:
     fcntl.flock(f,fcntl.LOCK_EX);messages=json.load(f);f.seek(0);json.dump([m for m in messages if m.get('to')!=EMAIL],f);f.truncate();fcntl.flock(f,fcntl.LOCK_UN)
-  results.append({'id':'LIMPIEZA','title':'Retirar solo datos sintéticos de esta ejecución','status':'APROBADA','detail':'Cuenta, negocios, solicitudes, evidencias y correos de esta ejecución; cuentas persistentes conservadas.'})
+  check(not query('SELECT id FROM accounts WHERE email IN (?,?)',[EMAIL,EMAIL.replace('@','-owner@')]),'Quedaron cuentas técnicas')
+  check(not query('SELECT id FROM leads WHERE email=?',[EMAIL]),'Quedaron solicitudes técnicas')
+  if fixtures:check(not query('SELECT id FROM businesses WHERE id IN ('+','.join('?' for _ in fixtures)+')',fixtures),'Quedaron negocios técnicos')
+  if mailbox.exists():check(not any(m.get('to')==EMAIL for m in json.loads(mailbox.read_text())),'Quedaron correos técnicos')
+  for r in imageFiles:check(not (ROOT/'.local/preprod/private/business-image-references'/r['storage_name']).exists(),'Quedaron imágenes técnicas')
+  results.append({'id':'LIMPIEZA','title':'Retirar y verificar ausencia de datos sintéticos de esta ejecución','status':'APROBADA','detail':'Cuentas, negocios, solicitudes, imágenes privadas, comprobantes y correos propios retirados y ausencia comprobada; cuentas persistentes conservadas.'})
  except Exception:results.append({'id':'LIMPIEZA','title':'Limpieza de datos sintéticos','status':'FALLIDA','detail':'No se completó la limpieza. Identificador: '+RUN})
  REPORT.mkdir(parents=True,exist_ok=True)
  revision=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip();dirty=bool(subprocess.check_output(['git','status','--porcelain'],cwd=ROOT,text=True))
