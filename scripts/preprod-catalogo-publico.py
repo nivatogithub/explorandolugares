@@ -4,7 +4,7 @@ R=Path(__file__).resolve().parents[2];P=R/'preprod';m=json.loads((P/'.local/prep
 for lang,prefix,more in [('es','','Conocer el destino →'),('en','en/','Explore destination →'),('pt-BR','pt-br/','Conhecer o destino →')]:
  cards=[]
  for slug,row in m['destinations'].items():
-  d=row[lang];path=v.get(slug,{}).get('hero',{}).get('path',d['hero_path']);
+  d=dict(row[lang]);d['intro']=({'es':'Murallas, calles coloniales y vida caribeña.','en':'City walls, colonial streets and Caribbean life.','pt-BR':'Muralhas, ruas coloniais e vida caribenha.'}[lang] if slug=='cartagena' else d['intro']);path=v.get(slug,{}).get('hero',{}).get('path',d['hero_path']);
   if slug=='cartagena':path='assets/cartagena-piloto/portada-1200.webp'
   if not(P/'.local/preprod/release/public'/path).is_file():path=d['hero_path']
   esc=html.escape;url='/'+prefix+'destinos/'+slug+'/'
