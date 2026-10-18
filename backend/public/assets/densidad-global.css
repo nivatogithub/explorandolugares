@@ -1,0 +1,22 @@
+/* Global vertical rhythm: compact sections, subtle separators; preserve control hit areas. */
+:root{--el-section-space:28px;--el-section-gap:20px;--el-section-rule:#DADDE2}
+main .section,main section.section,main .destination-overview,main .destination-highlights,main .destination-experiences,main .destination-directory{padding-top:var(--el-section-space)!important;padding-bottom:var(--el-section-space)!important;margin-top:0!important;margin-bottom:0!important}
+main>section+section,main>.section+.section,main .destination-experiences,main .directory-tier+.directory-tier{border-top:1px solid var(--el-section-rule)}
+main .sectionhead,main .section-head,main .destination-experiences-heading{margin-top:0!important;margin-bottom:16px!important;gap:12px}
+main .sectionhead h2,main .sectionhead h3,main .section-head h2,main .destination-experiences-heading h2,main .destination-experiences-heading h3{margin-top:0;margin-bottom:0}
+main .hero,main .home-hero,main .home-editorial,main .destination-hero{padding-top:28px!important;padding-bottom:28px!important;row-gap:20px!important;margin-top:0!important;margin-bottom:0!important}
+main .breadcrumbs{padding-top:14px!important;padding-bottom:8px!important;margin-top:0!important;margin-bottom:0!important}
+main .destination-nav{margin-top:0!important;margin-bottom:16px!important;padding-top:12px!important;padding-bottom:12px!important}
+main .destination-invitation{margin-top:20px!important;margin-bottom:20px!important;padding-top:18px!important;padding-bottom:18px!important}
+main .destination-practical{margin-top:18px!important;margin-bottom:18px!important;row-gap:14px!important}
+main .highlight-grid,main .destination-experience-list,main .directory-grid{row-gap:16px!important}
+main .directory-tier{padding-top:20px!important;padding-bottom:20px!important;margin-top:0!important;margin-bottom:0!important}
+main .destination-load-more{margin-top:14px!important;margin-bottom:0!important}
+main .intro{margin-top:12px;margin-bottom:18px}
+body>footer{margin-top:20px!important;padding-top:24px!important;padding-bottom:24px!important}
+/* Administrative and account panels keep readable fields and compact groups. */
+main .panel,main .admin-section,main .form-section{margin-top:16px;margin-bottom:16px}
+main fieldset+fieldset{margin-top:18px;border-top:1px solid var(--el-section-rule)}
+@media(max-width:650px){:root{--el-section-space:20px;--el-section-gap:16px}main .hero,main .home-hero,main .home-editorial,main .destination-hero{padding-top:20px!important;padding-bottom:20px!important}main .sectionhead,main .destination-experiences-heading{margin-bottom:12px!important}body>footer{padding-top:20px!important;padding-bottom:20px!important}}
+
+main .home-editorial-categories{position:static!important;grid-column:1/-1;inset:auto!important;transform:none!important;margin:0!important;padding:8px 0 0!important;border-top:1px solid var(--el-section-rule)!important}
