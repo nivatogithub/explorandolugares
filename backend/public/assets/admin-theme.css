@@ -69,3 +69,6 @@ body.portal-admin{--ink:var(--el-text);--muted:var(--el-muted);--ember:var(--el-
 .portal-admin .admin-page>.portal-account-strip{position:fixed;top:0;left:0;right:0;z-index:120;width:100%;background:var(--el-field);border-bottom:1px solid var(--el-border)}
 .portal-admin .admin-page>.portal-account-strip>.portal-account-strip-inner{display:flex;justify-content:flex-end;max-width:1440px;min-height:48px;margin:auto;padding:4px 24px;box-sizing:border-box}
 .portal-admin .portal-account-strip :is(a,button){background:transparent!important;color:var(--el-action-hover)!important;border:0!important;border-radius:8px;padding:4px 6px}
+
+/* Observation controls keep the same spacing as database package actions. */
+.portal-admin #rendimiento .admin-db-action{margin:24px 0 16px;justify-items:start}.portal-admin #rendimiento details{margin-top:24px}.portal-admin #rendimiento summary{cursor:pointer;padding:12px 0;line-height:1.6}

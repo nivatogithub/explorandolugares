@@ -71,3 +71,12 @@ El cambio de acceso directo no se subió a GitHub al rechazarse el permiso. Los 
 La revisión por HTTP pasó los 27 controles de versiones, arquitectura, límites PHP, configuración SQL y extensiones de aplicación. Se conservan diferencias explícitas: SAPI LiteSpeed en GoDaddy frente a apache2handler local; los módulos calendar, ftp, imap, mcrypt, readline y shmop del hosting no están reproducidos, ni i360/ionCube/litespeed. Local añade OPcache y sodium. Estos módulos adicionales no son usados por el código actual revisado; las diferencias se informan, no se declaran equivalentes. HTTP local y el acceso administrativo abierto son excepciones intencionales. No es una clonación completa de CloudLinux/cPanel.
 
 La excepción administrativa no se activa en Apache con un valor fijo versionado: Apache solo recibe la variable definida por la configuración privada local. Cambiar `admin_without_password` en `.local/preprod/settings.json` y ejecutar `./scripts/actualizar-preprod.sh` aplica el cambio. El valor de este equipo nunca se añade a commits ni a paquetes de producción.
+
+
+## Períodos de observación de base de datos
+
+En Administración → Base de datos → Conexiones y rendimiento se puede empezar un período desde cero. El botón guarda una única lectura privada en `private/database-health/period.json`, con permisos 0600, generada en cada ambiente: no hay que copiar `.local` ni ese archivo para instalar en otro equipo. No modifica tablas, no reinicia MariaDB ni ejecuta `FLUSH STATUS`. Los indicadores siguen siendo globales del servidor compartido y no representan visitantes del portal.
+
+La lectura de referencia permite calcular aumentos al volver a abrir la página. Los valores instantáneos (conexiones abiertas, consultas en ejecución) se muestran por separado y no se restan. Si se detecta reinicio del servidor o reducción de un contador, se pide empezar otro período; los indicadores ausentes no se convierten en cero. Un período nuevo reemplaza al anterior, sin acumular históricos ni copias. En SQLite, o cuando el hosting no permite leer contadores globales, no se habilita un período ficticio.
+
+Estado del sistema muestra primero el diagnóstico de Brevo y conserva un resumen de conexión y almacenamiento. Las cifras detalladas de MariaDB y el período se consultan exclusivamente en Base de datos. La comprobación de Brevo es explícita, no envía correos y su resultado vence a los quince minutos.
