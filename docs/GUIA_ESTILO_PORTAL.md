@@ -217,3 +217,9 @@ El propietario solicita amarillo pálido #FFF3DA exclusivamente en header/footer
 Por instrucción del propietario, reducir el espacio vertical en todas las páginas. Ritmo compartido: 28px arriba/abajo por sección en escritorio y20px en móvil; encabezados de sección con16px/12px inferiores; filas de tarjetas separadas16px y Cargar más con14px superiores. Separadores de1px en color de borde neutral entre secciones principales, experiencias y niveles del directorio. Evitar líneas duplicadas dentro de tarjetas y conservar áreas de interacción accesibles. Pie con24px verticales,20px en móvil. No cambiar textos, imágenes ni estados de publicación.
 
 Fuente CSS: `backend/public/assets/densidad-global.css`, incorporada por el generador de identidad neutral a todos los HTML/PHP preparados, incluida administración. La etiqueta de categorías del inicio participa del flujo normal para que la reducción de altura no la superponga al botón. Comprobación local: inicio y destinos28px por sección; separadores finos visibles; catálogo y administración cargan la hoja global nueva. Cambio de presentación en preproducción, sin publicación.
+
+## Imágenes sin apertura ni ampliación · 2026-10-17
+
+No enlazar fotos/ilustraciones a su archivo original ni abrirlas en otra pestaña o visor. La capa compartida elimina href/target de enlaces gráficos al archivo, incluidos los creados después por scripts de destinos, y bloquea activación de ampliadores. Conservar navegación funcional de logo→inicio y tarjeta→destino en la misma pestaña. No alterar enlaces de mapa/contacto. Esto controla la interacción del sitio; no es una protección contra descargar imágenes del navegador.
+
+Validación en preproducción: al pulsar una ilustración de Medellín no cambia página ni abre visor; sus enlaces gráficos no tienen href/target. Logo y tarjetas del inicio conservan sus rutas, sin target externo. Sin cambios de publicación.
