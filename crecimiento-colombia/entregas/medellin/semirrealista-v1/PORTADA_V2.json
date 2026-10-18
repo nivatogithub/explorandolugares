@@ -1,0 +1,52 @@
+{
+  "destino": "medellin",
+  "rol": "portada",
+  "estado": "propuesta_preprod_pendiente_revision_humana",
+  "publicacion_produccion": false,
+  "aprobacion_resultado": "pendiente",
+  "v1": "rechazada por propietario: Coltejer no reconocible",
+  "alternativas_autorizadas": [
+    "Pueblito Paisa",
+    "Plaza Botero"
+  ],
+  "seleccion": "Pueblito Paisa",
+  "intentos": [
+    {
+      "tema": "Plaza Botero",
+      "estado": "fallo_filtro_proveedor_sin_resultado"
+    },
+    {
+      "archivo": "maestros/portada-rechazada-v2a.png",
+      "estado": "rechazada_en_QA",
+      "motivo": "capilla inventada con torre rectangular y escalera monumental"
+    }
+  ],
+  "fuentes_factuales": [
+    "https://www.medellin.travel/pueblito-paisa-cerro-nutibara/",
+    "https://colombia.travel/es/medellin/conoce-el-pueblito-paisa"
+  ],
+  "verificacion_visual_sin_carga_al_generador": "https://www.medellin.travel/wp-content/uploads/2025/11/Pueblito-Paisa-banner-multimedia2-1024x576.jpg",
+  "fecha": "2026-10-17",
+  "via": "composicion_independiente; correccion con imagen propia generada; ninguna fotografia de terceros enviada",
+  "maestro_sha256": "d13fabc542bc9e4215c335a05127e7b8dc0b8110d4de0470ec6039cc2097a97a",
+  "archivos": [
+    {
+      "archivo": "web/portada-v2-640.webp",
+      "bytes": 96444,
+      "sha256": "d59fe383d1b546f1e855cabeec357bf1f30ad5ee3d81b445a8193bedfa11fce2"
+    },
+    {
+      "archivo": "web/portada-v2-1200.webp",
+      "bytes": 278150,
+      "sha256": "3d4e448c0aa5e5b773be8c2ae1de0e380ab09caece3a4695babd85c79d7ba605"
+    }
+  ],
+  "herramienta": "image_gen integrada",
+  "prompt_resumen": "Ilustración editorial semirrealista de Pueblito Paisa: plaza compacta de piedra, fuente pequeña, casas bajas blancas con puertas de colores y tejas de barro; capilla blanca baja de espadaña con hombros curvos, tres vanos y cruz; sin torre rectangular ni escalinata monumental. Tinta/gouache, cielo azul, vegetación natural, sin textos.",
+  "qa": {
+    "navegador": "portada-v2-1200.webp cargada correctamente en /destinos/medellin/",
+    "captura": "preprod-portada-v2.png",
+    "aprobacion_humana": "pendiente",
+    "limite": "Interpretación ilustrada; no fotografía ni levantamiento arquitectónico exacto."
+  }
+}
