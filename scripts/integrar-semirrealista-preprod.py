@@ -89,3 +89,16 @@ for f in [P/'backend/integration-medicion/public/destino.php',P/'.local/preprod/
  text=f.read_text();needle="$langEsUrl=u('/destinos/'.$slug.'/');$langEnUrl=u('/en/destinos/'.$slug.'/');$langPtUrl=u('/pt-br/destinos/'.$slug.'/');"
  if 'Keep private preview when switching language' not in text:text=text.replace(needle,needle+"\n// Keep private preview when switching language; authentication remains required.\nif($preview){$langEsUrl.='?preview=1';$langEnUrl.='?preview=1';$langPtUrl.='?preview=1';}")
  f.write_text(text)
+
+# Strict parity with Jericó/Cartagena: no expandable sections or extra history media.
+for target in [P/'backend/public/assets',P/'.local/preprod/release/public/assets']:
+ for ext in ['js','css']:
+  name='destino-lectura-directa.'+ext
+  shutil.copyfile(R/'worker-lugar-2/backend/public/assets'/name,target/name)
+for f in [P/'backend/integration-medicion/public/destino.php',P/'.local/preprod/release/public/destino.php']:
+ text=f.read_text();marker='<!-- destino-lectura-directa -->'
+ if marker not in text:text=text.replace('</body>',marker+"<?php if($preview && in_array($slug,['bogota','medellin','santa-marta'],true)):?><link rel=\"stylesheet\" href=\"/assets/destino-lectura-directa.css?v=2\"><script defer src=\"/assets/destino-lectura-directa.js?v=2\"></script><?php endif;?></body>")
+ for city in ['bogota','medellin','santa-marta']:
+  for ext in ['js','css']:text=text.replace(city+'-compacta.'+ext+'?v=1',city+'-compacta.'+ext+'?v=2')
+ text=text.replace('/assets/place-sections.js?v=1','/assets/place-sections.js?v=2')
+ f.write_text(text)
