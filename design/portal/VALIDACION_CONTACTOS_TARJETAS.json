@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-17",
+  "checks": {
+    "php_syntax": "pass",
+    "free_no_channels": "pass",
+    "page_only_whatsapp": "pass",
+    "premium_whatsapp_instagram_email": "pass",
+    "missing_channels_hidden": "pass",
+    "invalid_channels_hidden": "pass"
+  },
+  "preview_fixtures": "Tres negocios ficticios sin ubicación ni contactos; no se rellenaron datos inventados.",
+  "source_preprod": "Cambio puntual preservando el resto del renderizador compartido; no commit de cambios ajenos.",
+  "production_changed": false
+}

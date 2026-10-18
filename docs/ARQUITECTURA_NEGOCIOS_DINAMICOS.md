@@ -63,3 +63,10 @@ La migración `012-business-image-references` separa las imágenes entregadas po
 La vista pública `free`, `basic` y `featured` queda dentro de `/destinos/{slug}/`; `page` y `page_premium` usan `/negocios/{public_id}/`. El identificador público es opaco y no revela un ID incremental. Contactos privados, reclamaciones, documentos y fuentes de investigación no deben salir en respuestas públicas. No se acepta código ni HTML de los titulares: se renderizan datos con plantillas controladas por el portal.
 
 El tablero de la cuenta presenta el estado de cada soporte de pago y la respuesta visible del equipo. Las notas internas quedan separadas y privadas; `024-payment-customer-message` añade el campo de respuesta para el participante. `025-subscription-renewal-history` preserva la fecha contractual de vencimiento y enlaza cada nuevo período pago con su antecesor para que el tablero de inversión mida renovaciones a tiempo y reactivaciones posteriores.
+
+
+## Canales visibles en tarjetas · confirmación del propietario 17/10/2026
+- Destacado: ubicación enlazada para encontrar el negocio, cuando exista dirección, coordenadas o enlace de mapa registrado.
+- Página: WhatsApp visible en tarjeta, además del acceso a su página.
+- Premium: WhatsApp, Instagram y correo visibles en la tarjeta.
+Mostrar solo canales públicos registrados y válidos; no inventar ni rellenar con datos del portal. Estos enlaces permanecen fuera de los detalles/descripciones que se retiran para compactar las tarjetas. No borrar la ubicación ni los canales al simplificar el directorio. No cambia precios, contratos o estados de publicación.

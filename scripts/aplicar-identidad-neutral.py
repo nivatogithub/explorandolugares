@@ -9,6 +9,8 @@ def apply(public):
  css='''/* Explorando Lugares · identidad neutral v2 */
 :root{VARIABLES}
 body{background:var(--el-page)!important;color:var(--el-text)}
+.directory-contact-links{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0;font-size:13px;align-items:center}
+.directory-contact-links a{white-space:nowrap}
 header,footer{background:var(--el-page)!important;border-color:var(--el-border)!important}
 .pilot-banner{display:none!important}
 h1,h2,h3,h4{color:var(--el-text)}

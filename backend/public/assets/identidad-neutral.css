@@ -1,6 +1,8 @@
 /* Explorando Lugares · identidad neutral v2 */
 :root{--el-page:#FAFAFA;--el-panel:#F1F2F4;--el-card:#FFFFFF;--el-field:#FFFFFF;--el-hover:#E9EBEE;--el-border:#DADDE2;--el-control-border:#BDC2CB;--el-text:#172B42;--el-muted:#60646C;--el-accent:#d84e27;--el-action:#C94720;--el-action-hover:#A83B22;--el-focus:#a44327;--el-on-action:#FFFFFF;--el-published:#315e9d;--el-in-progress:#dfa04e;--el-pending:#bdc7cb;--el-unknown:#87979f}
 body{background:var(--el-page)!important;color:var(--el-text)}
+.directory-contact-links{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0;font-size:13px;align-items:center}
+.directory-contact-links a{white-space:nowrap}
 header,footer{background:var(--el-page)!important;border-color:var(--el-border)!important}
 .pilot-banner{display:none!important}
 h1,h2,h3,h4{color:var(--el-text)}
