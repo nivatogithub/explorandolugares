@@ -193,3 +193,13 @@ Antes de integrar: revisar silueta del icono, torres de iglesias, edificios inve
 ### Paridad estricta de lectura · corrección del propietario
 
 Bogotá, Medellín y Santa Marta deben seguir todas las reglas de Jericó y Cartagena: ninguna sección del contenido se despliega/recoge, incluidas información práctica y eventos. Mantener carga progresiva por filas; no sustituirla por acordeones. Historia en un único bloque de ancho completo, sin imagen, motivos laterales, etiquetas ni créditos extra. Títulos de sección sin párrafos explicativos. Descripciones breves de atractivos y experiencias; revisión local ES: Bogotá máximo12 palabras, Medellín10, Santa Marta15. Las imágenes deben ocupar su marco sin huecos entre ilustración y texto. Versionar assets para que una caché anterior no restituya el diseño viejo.
+
+
+## Bogotá: portada Colpatria · 17-10-2026
+
+El propietario eligió Torre Colpatria con edificios del centro y cerros orientales al fondo para evitar repetir Plaza de Bolívar. Mantener silueta rectangular esbelta, remate plano y nervaduras verticales; no sustituir por una torre genérica, aguja ni edificio de otra ciudad. Portada v3, composición independiente; selección del tema aprobada, resultado ilustrado pendiente de revisión. Solo preproducción.
+
+
+### Entorno urbano verificable, no parque inventado
+
+Corrección del propietario: la portada Colpatria v3 exagera jardines y aísla la torre, dando apariencia de Central Park. El sector es urbano, junto a Carrera Séptima y Calle 26; el Parque de la Independencia cercano no justifica rodear la torre de un jardín extenso. En v4 priorizar manzanas, calles, andenes y plaza dura; árboles como detalle lateral. Verificar contexto y proporción de vegetación además de la silueta del edificio. v3 rechazada por entorno, conservar historial.

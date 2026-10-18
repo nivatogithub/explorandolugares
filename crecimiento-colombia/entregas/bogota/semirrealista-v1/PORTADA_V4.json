@@ -1,0 +1,33 @@
+{
+  "destination": "bogota",
+  "role": "hero",
+  "version": 4,
+  "style": "EL-SEMI-REALISTA-1",
+  "composition": "Colpatria en un entorno urbano denso, calles y andenes; sin parque extenso inventado",
+  "prompt": "undefined\n",
+  "reference_images_uploaded": [
+    "maestros/portada-v3.png (imagen propia generada)"
+  ],
+  "sources": [
+    "https://visitbogota.co/es/que-hacer-en-bogota/cultura/torre-colpatria",
+    "https://www.idrd.gov.co/parques-y-escenarios/parque-la-independencia-bicentenario"
+  ],
+  "master_sha256": "4ed22310c8918d09872476c5267c687ffe3610a039093d73716f4c0d9482a2cc",
+  "files": [
+    {
+      "file": "portada-v4-640.webp",
+      "bytes": 87970,
+      "sha256": "6f0b471e4321dc3bdbcbdafd7a5fb5487a175037f30c4833ec4ba5bdc882efa8"
+    },
+    {
+      "file": "portada-v4-1200.webp",
+      "bytes": 252778,
+      "sha256": "ce3694ebfe583500db04ac97e1bfa0d021bc60f4e2ea5dea417703453cc08236"
+    }
+  ],
+  "theme_approval": "elegido por propietario",
+  "image_approval": "pendiente",
+  "production_changed": false,
+  "date": "2026-10-17",
+  "limitation": "Composición representativa, no reconstrucción exacta del trazado de calles o edificios vecinos."
+}
