@@ -99,7 +99,7 @@ input,select,textarea{background:var(--el-field);border-color:var(--el-control-b
   if p.name in {'leaflet.css','identidad-neutral.css'}:continue
   s=p.read_text();new=re.sub('|'.join(palette),lambda m:palette[m[0].lower()],s,flags=re.I)
   if new!=s:p.write_text(new);css_count+=1
- hook='<link rel="stylesheet" href="/assets/identidad-neutral.css?v=4"><script defer src="/assets/identidad-neutral.js?v=3"></script>'
+ hook='<link rel="stylesheet" href="/assets/identidad-neutral.css?v=4"><script defer src="/assets/identidad-neutral.js?v=4"></script>'
  count=0
  for p in public.rglob('*'):
   if p.suffix not in {'.html','.php'}:continue
@@ -109,7 +109,8 @@ input,select,textarea{background:var(--el-field);border-color:var(--el-control-b
   s=re.sub(r'<aside\b[^>]*class="pilot-banner"[^>]*>.*?</aside>','',s,flags=re.S)
   for old,new in {'Comenzamos por Jericó.':'Destinos para descubrir.','La primera guía ya está disponible. Abriremos otros destinos cuando revisemos su información y sus imágenes.':'Explora las guías disponibles.','Começamos por Jericó.':'Destinos para descobrir.','We start with Jericó.':'Destinations to discover.','Starting with Jericó.':'Destinations to discover.'}.items():s=s.replace(old,new)
   s=s.replace('identidad-neutral.css?v=3','identidad-neutral.css?v=4')
-  s=s.replace('identidad-neutral.js?v=2','identidad-neutral.js?v=3').replace('identidad-neutral.css?v=2','identidad-neutral.css?v=4')
+  s=s.replace('identidad-neutral.js?v=3','identidad-neutral.js?v=4')
+  s=s.replace('identidad-neutral.js?v=2','identidad-neutral.js?v=4').replace('identidad-neutral.css?v=2','identidad-neutral.css?v=4')
   s=s.replace('tarjetas-negocios-compactas.js?v=1','tarjetas-negocios-compactas.js?v=4')
   s=s.replace('tarjetas-negocios-compactas.js?v=2','tarjetas-negocios-compactas.js?v=4')
   s=s.replace('tarjetas-negocios-compactas.js?v=3','tarjetas-negocios-compactas.js?v=4')
