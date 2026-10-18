@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-17",
+  "owner_reported_complete": [
+    "jardin",
+    "cartagena"
+  ],
+  "publication_authorized_by_this_message": false,
+  "incomplete_active_destinations": {
+    "bogota": [
+      "corte final de atractivos",
+      "resto de ilustraciones y referencias específicas",
+      "integración con estilo vigente y revisión final"
+    ],
+    "medellin": [
+      "corte final de atractivos",
+      "ilustraciones representativas de portada y fichas",
+      "integración y revisión final"
+    ],
+    "santa-marta": [
+      "resolver octavo atractivo",
+      "ilustraciones de portada y componentes",
+      "integración y revisión final"
+    ]
+  },
+  "design": {
+    "public_site": "base neutra aplicada a entrega local y constructor; validaciones finales pendientes",
+    "jerico": "adaptación de lectura y tarjetas implementada; últimas modificaciones pendientes de revisión visual",
+    "admin": "identidad neutra enlazada; admin.css todavía contiene fondos #fcebd8, #faf6ee, #e8eee6, #f3f5ef",
+    "pending_checks": [
+      "tarjetas por plan, iconos, tamaños y filtros",
+      "Cargar más con 2 filas grandes /4 pequeñas en escritorio y móvil",
+      "verificación/completado de canales por suscripción",
+      "panel administrativo: formularios, tablas y estados visuales"
+    ],
+    "last_browser_blocker": "127.0.0.1:8088 no respondió en las últimas comprobaciones"
+  },
+  "sources": [
+    "docs/GUIA_ESTILO_PORTAL.md",
+    "design/portal/VALIDACION_TARJETAS_ICONOS.json",
+    "../worker-lugar-2/crecimiento-colombia/entregas/bogota/CIERRE_CONTENIDO_SIN_FOTOS.json",
+    "../worker-lugar-3/crecimiento-colombia/entregas/medellin/CIERRE_CONTENIDO_SIN_FOTOS.json",
+    "../worker-lugar-4/crecimiento-colombia/entregas/santa-marta/CIERRE_CONTENIDO_SIN_FOTOS.json"
+  ]
+}
