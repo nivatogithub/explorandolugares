@@ -1,3 +1,12 @@
+# Pendientes actualizados · 18/10/2026
+
+- **ENCOLADO:** cierre del comportamiento de creación y reclamación de negocios.
+- **ENCOLADO:** revisión visual móvil completa.
+- **POR REVISAR:** `feature/advance-admin`: seguimiento comercial con próxima acción/fecha, plantillas reutilizables con versiones y evaluación de sus tres cambios sin commit. No fusionar el esquema antiguo ni cambiar Brevo por Resend.
+- **POR REVISAR:** investigación nacional y scripts conservados en `archivo-revision/2026-10-18/`. El manifiesto registra procedencia y etiquetas de recuperación; no son contenido aprobado ni scripts listos para ejecutar.
+
+---
+
 # Estado de la entrega
 
 16/10/2026. Implementado como documentación y herramientas locales de planificación; no es implementación del portal ni automatización conectada.

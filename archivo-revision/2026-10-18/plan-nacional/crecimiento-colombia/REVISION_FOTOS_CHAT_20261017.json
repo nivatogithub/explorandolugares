@@ -1,0 +1,488 @@
+{
+  "started": "2026-10-17",
+  "mode": "chat_one_component_at_a_time",
+  "destinations": [
+    {
+      "worker": "Lugar 1",
+      "destination": "cartagena",
+      "components": [
+        {
+          "id": "cartagena.hero",
+          "role": "hero",
+          "reference_file": "images/la-popa-2008-portada.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Cartagena_de_Indias_desde_el_cerro_La_Popa.jpg",
+          "review_status": "pending_selection",
+          "new_approval_recorded": false,
+          "reason": null
+        },
+        {
+          "id": "cartagena.centro-historico",
+          "role": "attraction",
+          "reference_file": "images/murallas-2016-tarjeta.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Wall_walkers,_Las_Murallas,_the_walls_of_Cartagena,_Colombia_(24557876196).jpg",
+          "review_status": "pending_selection",
+          "new_approval_recorded": false,
+          "reason": null
+        },
+        {
+          "id": "cartagena.san-felipe",
+          "role": "attraction",
+          "reference_file": "images/san-felipe-2011-tarjeta.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Cartagena-Castillo_San_Felipe_de_Barajas.JPG",
+          "review_status": "pending_selection",
+          "new_approval_recorded": false,
+          "reason": null
+        },
+        {
+          "id": "cartagena.getsemani",
+          "role": "attraction",
+          "reference_file": "images/getsemani-casas-2016-tarjeta.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Getsemani_Street_Scene,_Cartagena,_Colombia_(24585540985).jpg",
+          "review_status": "pending_selection",
+          "new_approval_recorded": false,
+          "reason": null
+        },
+        {
+          "id": "cartagena.islas-rosario",
+          "role": "attraction",
+          "reference_file": "images/rosario-isla-grande-2016-tarjeta.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Cocolise_Isla_Resort,_Islas_del_Rosario_(23938767624).jpg",
+          "review_status": "pending_selection",
+          "new_approval_recorded": false,
+          "reason": null
+        },
+        {
+          "id": "cartagena.playa-blanca-baru",
+          "role": "attraction",
+          "reference_file": "images/playa-blanca-2019-tarjeta.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Playa_Blanca,_Bar%C3%BA.jpg",
+          "review_status": "pending_selection",
+          "new_approval_recorded": false,
+          "reason": null
+        },
+        {
+          "id": "cartagena.cerro-popa",
+          "role": "attraction",
+          "reference_file": "images/popa-convento-2011-tarjeta.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Convento_de_Santa_Cruz_de_la_Popa_-_Cartagena.JPG",
+          "review_status": "pending_selection",
+          "new_approval_recorded": false,
+          "reason": null
+        },
+        {
+          "id": "cartagena.museo-historico",
+          "role": "attraction",
+          "reference_file": "images/muhca-2025-tarjeta.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Colombia,_Cartagena,_Palacio_de_la_Inquisici%C3%B3n.jpg",
+          "review_status": "pending_selection",
+          "new_approval_recorded": false,
+          "reason": null
+        },
+        {
+          "id": "cartagena.la-boquilla",
+          "role": "attraction",
+          "reference_file": "images/boquilla-2020-tarjeta.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Boats_in_La_Boquilla.jpg",
+          "review_status": "pending_selection",
+          "new_approval_recorded": false,
+          "reason": null
+        }
+      ],
+      "history_review": "pending_component_review",
+      "activities_review": "inventory_not_final",
+      "previous_decisions_preserved": true
+    },
+    {
+      "worker": "Lugar 2",
+      "destination": "bogota",
+      "components": [
+        {
+          "id": "bogota.hero",
+          "role": "hero",
+          "reference_file": "images/bogota-portada-v3.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Skyline_downtown_Bogota.jpg",
+          "review_status": "pending_selection",
+          "new_approval_recorded": false,
+          "reason": null
+        },
+        {
+          "id": "bogota.plaza",
+          "role": "attraction",
+          "reference_file": "images/bogota-plaza.webp",
+          "source": "https://commons.wikimedia.org/w/index.php?title=File:Vista_del_centro_historico_de_Bogot%C3%A1.jpg&oldid=1210456023",
+          "review_status": "pending_selection",
+          "new_approval_recorded": false,
+          "reason": null
+        },
+        {
+          "id": "bogota.candelaria",
+          "role": "attraction",
+          "reference_file": "images/bogota-candelaria.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Bogota_-_Plazza_del_Chorro_de_Quevedo_%281%29.JPG",
+          "review_status": "pending_selection",
+          "new_approval_recorded": false,
+          "reason": null
+        },
+        {
+          "id": "bogota.museo-oro",
+          "role": "attraction",
+          "reference_file": "images/bogota-museo-oro.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:BOG_Museo_del_Oro.JPG",
+          "review_status": "pending_selection",
+          "new_approval_recorded": false,
+          "reason": null
+        },
+        {
+          "id": "bogota.monserrate",
+          "role": "attraction",
+          "reference_file": "images/bogota-monserrate.webp",
+          "source": "https://www.pexels.com/video/cerro-de-monserrate-01-18092718/",
+          "review_status": "pending_selection",
+          "new_approval_recorded": false,
+          "reason": null
+        },
+        {
+          "id": "bogota.botero",
+          "role": "attraction",
+          "reference_file": "images/bogota-botero.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:2019_Bogot%C3%A1_-_Entrada_del_Museo_Botero.jpg",
+          "review_status": "pending_selection",
+          "new_approval_recorded": false,
+          "reason": null
+        },
+        {
+          "id": "bogota.usaquen",
+          "role": "attraction",
+          "reference_file": "images/bogota-usaquen.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Mercado_de_Pulgas%2C_Usaqu%C3%A9n%2C_Bogot%C3%A1%2C_Colombia.jpg",
+          "review_status": "pending_selection",
+          "new_approval_recorded": false,
+          "reason": null
+        },
+        {
+          "id": "bogota.jardin",
+          "role": "attraction",
+          "reference_file": "images/bogota-jardin.webp",
+          "source": "https://commons.wikimedia.org/w/index.php?title=File:Jard%C3%ADn_Bot%C3%A1nico_Bogot%C3%A1.jpg&oldid=966217305",
+          "review_status": "pending_selection",
+          "new_approval_recorded": false,
+          "reason": null
+        },
+        {
+          "id": "bogota.simon",
+          "role": "attraction",
+          "reference_file": "images/bogota-simon.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Bogota-_Parque_Sim%C3%B3n_Bolivar.jpg",
+          "review_status": "pending_selection",
+          "new_approval_recorded": false,
+          "reason": null
+        }
+      ],
+      "history_review": "pending_component_review",
+      "activities_review": "inventory_not_final",
+      "previous_decisions_preserved": true
+    },
+    {
+      "worker": "Lugar 3",
+      "destination": "medellin",
+      "components": [
+        {
+          "id": "medellin.hero",
+          "role": "hero",
+          "reference_file": "images/panorama-2005.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Medellin_panorama.jpg",
+          "review_status": "replacement_required",
+          "new_approval_recorded": false,
+          "reason": "Nueva puerta de identidad icónica: la referencia actual no cumple para final."
+        },
+        {
+          "id": "medellin.parque-explora",
+          "role": "attraction",
+          "reference_file": "images/explora-2012.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Parque_Explora.jpg",
+          "review_status": "pending_selection",
+          "new_approval_recorded": false,
+          "reason": null
+        },
+        {
+          "id": "medellin.pueblito-paisa",
+          "role": "attraction",
+          "reference_file": "images/pueblito-2012.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Pueblito_Paisa,_Medell%C3%ADn.JPG",
+          "review_status": "pending_selection",
+          "new_approval_recorded": false,
+          "reason": null
+        },
+        {
+          "id": "medellin.jardin-botanico",
+          "role": "attraction",
+          "reference_file": "images/medellin-3.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Orchidiarium_-_Medellin_Botanical_Gardens.jpg",
+          "review_status": "pending_selection",
+          "new_approval_recorded": false,
+          "reason": null
+        },
+        {
+          "id": "medellin.comuna13",
+          "role": "attraction",
+          "reference_file": "images/comuna13-2023.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Comuna_13.png",
+          "review_status": "replacement_required",
+          "new_approval_recorded": false,
+          "reason": "Nueva puerta de identidad icónica: la referencia actual no cumple para final."
+        },
+        {
+          "id": "medellin.museo-antioquia",
+          "role": "attraction",
+          "reference_file": "images/museo-2020.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Museo_de_Antioquia,_Medell%C3%ADn.jpg",
+          "review_status": "pending_selection",
+          "new_approval_recorded": false,
+          "reason": null
+        },
+        {
+          "id": "medellin.arvi",
+          "role": "attraction",
+          "reference_file": "images/arvi-2012.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Bosque_Parque_Arv%C3%AD.JPG",
+          "review_status": "replacement_required",
+          "new_approval_recorded": false,
+          "reason": "Nueva puerta de identidad icónica: la referencia actual no cumple para final."
+        },
+        {
+          "id": "medellin.catedral-metropolitana",
+          "role": "attraction",
+          "reference_file": "images/catedral-2012.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Catedral_Metropolitana_de_Medell%C3%ADn._Vista_frontal._Medellin,_Colombia..JPG",
+          "review_status": "pending_selection",
+          "new_approval_recorded": false,
+          "reason": null
+        },
+        {
+          "id": "medellin.pies-descalzos",
+          "role": "attraction",
+          "reference_file": "images/pies-2006.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:ParquePiesDescalzos.jpg",
+          "review_status": "pending_selection",
+          "new_approval_recorded": false,
+          "reason": null
+        }
+      ],
+      "history_review": "pending_component_review",
+      "activities_review": "inventory_not_final",
+      "previous_decisions_preserved": true
+    },
+    {
+      "worker": "Lugar 4",
+      "destination": "santa-marta",
+      "components": [
+        {
+          "id": "santa-marta.hero",
+          "role": "hero",
+          "reference_file": "images/v4-portada-camellon.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Camellon_de_la_bah%C3%ADa.jpg",
+          "review_status": "pending_selection",
+          "new_approval_recorded": false,
+          "reason": null
+        },
+        {
+          "id": "santa-marta.tayrona",
+          "role": "attraction",
+          "reference_file": "images/v4-tayrona.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:El_Cabo_at_Tayrona_National_Park.JPG",
+          "review_status": "pending_selection",
+          "new_approval_recorded": false,
+          "reason": null
+        },
+        {
+          "id": "santa-marta.quinta",
+          "role": "attraction",
+          "reference_file": "images/quinta-tarjeta.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:4%20quinta%20de%20san%20pedro.jpg",
+          "review_status": "pending_selection",
+          "new_approval_recorded": false,
+          "reason": null
+        },
+        {
+          "id": "santa-marta.centro-historico",
+          "role": "attraction",
+          "reference_file": "images/catedral-tarjeta.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Catedral-santamarta.jpg",
+          "review_status": "pending_selection",
+          "new_approval_recorded": false,
+          "reason": null
+        },
+        {
+          "id": "santa-marta.taganga",
+          "role": "attraction",
+          "reference_file": "images/taganga-tarjeta.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Taganga%20Sunset.jpg",
+          "review_status": "pending_selection",
+          "new_approval_recorded": false,
+          "reason": null
+        },
+        {
+          "id": "santa-marta.rodadero",
+          "role": "attraction",
+          "reference_file": "images/v4-rodadero.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Vista_general_de_la_playa_de_El_Rodadero.jpg",
+          "review_status": "pending_selection",
+          "new_approval_recorded": false,
+          "reason": null
+        },
+        {
+          "id": "santa-marta.minca",
+          "role": "attraction",
+          "reference_file": "images/v4-minca.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:View_over_Minca.jpg",
+          "review_status": "pending_selection",
+          "new_approval_recorded": false,
+          "reason": null
+        },
+        {
+          "id": "santa-marta.museo-tairona",
+          "role": "attraction",
+          "reference_file": "images/v4-museo-tairona.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Casa_de_la_Aduana_Santa_Marta.jpg",
+          "review_status": "pending_selection",
+          "new_approval_recorded": false,
+          "reason": null
+        },
+        {
+          "id": "santa-marta.acuario",
+          "role": "attraction",
+          "reference_file": "images/v4-acuario.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Acuario_el_rodadero.jpg",
+          "review_status": "pending_selection",
+          "new_approval_recorded": false,
+          "reason": null
+        }
+      ],
+      "history_review": "pending_component_review",
+      "activities_review": "inventory_not_final",
+      "previous_decisions_preserved": true
+    }
+  ],
+  "current_review": {
+    "id": "santa-marta.hero",
+    "candidate": "portada-camellon",
+    "original": "trabajo/worker-lugar-4/crecimiento-colombia/entregas/santa-marta/originales/v5-portada-camellon.jpg",
+    "sha256": "566f1147928c909ed4bb9f9cedef384e5550b45f549e16f49051615bd99c26e6",
+    "proposed_use": "Portada principal de Santa Marta; no historia ni tarjeta de atractivo",
+    "status": "rejected_by_user",
+    "approval_scope": "reference_for_AI_generation_only",
+    "generation_authorized": false,
+    "publication_authorized": false
+  },
+  "note": "Este inventario de revisión no invalida ni sustituye aprobaciones históricas por hash. El inicio de revisión no concede aprobación a ninguna referencia.",
+  "decisions": [
+    {
+      "component": "santa-marta.hero",
+      "candidate": "portada-camellon",
+      "decision": "rejected",
+      "reason": "Exceso de espacio inferior; edificios cortados arriba; identidad urbana insuficiente según propietario.",
+      "source": "explicit_user_feedback",
+      "generation_authorized": false
+    },
+    {
+      "component": "bogota.jardin",
+      "candidate": "jardin-2",
+      "original_sha256": "b207525f976879f1d0222b1d804c86a5cdc420e4267e41785825507ee4e37189",
+      "decision": "approved_after_identity_verification",
+      "condition_verified": true,
+      "generation_authorized": true,
+      "generated_asset": "bogota-tropicario-v1",
+      "final_image_approved": false,
+      "production_authorized": false
+    },
+    {
+      "component": "bogota-jardin",
+      "role": "attraction_card",
+      "asset_id": "bogota-tropicario-v1",
+      "decision": "approved",
+      "user_statement": "si apruebo el jardin botanico de bogota",
+      "scope": "Ilustración v1 presentada en el chat para la tarjeta Jardín Botánico; no destino completo ni publicación.",
+      "approved_hashes": {
+        "bogota-tropicario-v1.png": "02a4a5e7b4fa73f5d8f82d0c089d557c90c62a4bf87cbae87a482070737d485a",
+        "bogota-tropicario-v1.webp": "dc722438cc464cbccf05e5717455f2e35a557301683162038ef254ccb87d66bf"
+      },
+      "production_authorized": false,
+      "preprod_imported": false
+    },
+    {
+      "component": "santa-marta.hero",
+      "decision": "center_historic_bay_required",
+      "source": "explicit_human_instruction",
+      "requirement": "Centro histórico y su bahía histórica como identidad de la portada de Santa Marta.",
+      "excluded_as_hero": [
+        "El Rodadero",
+        "Bahía de Gaira",
+        "otras playas genéricas",
+        "video31559774_fotograma_t13s_si_representa_Rodadero"
+      ],
+      "composition": [
+        "Tejido urbano del centro histórico visible",
+        "Bahía histórica como contexto reconocible",
+        "Edificios completos sin cortes accidentales",
+        "Sin exceso de pavimento, mar o cielo que desplace ciudad"
+      ],
+      "prior_rejected_reference": "Camellón v5: exceso abajo y edificios cortados; no volver a proponer sin mejora concreta.",
+      "rodadero_remains_attraction_candidate": true,
+      "reference_approved": false,
+      "generation_authorized": false,
+      "publication_authorized": false
+    },
+    {
+      "component": "medellin.arvi",
+      "role": "attraction_card",
+      "decision": "prefer_cable_and_arvi_landscape",
+      "user_statement": "prefiero una vista del cable y el paisaje arvi",
+      "rejected_as_primary": "arvi-estacion-2011",
+      "current_cable_reference": "arvi-cable-2021 contextual: cabinas pequeñas, buscar mejor candidato",
+      "requirements": [
+        "Cabina completa reconocible al tamaño de tarjeta",
+        "Paisaje identificable del Parque Arví",
+        "Verificar Cable Arví Línea L, no otra línea urbana",
+        "Encadre equilibrado, sin excesivo cielo ni sujeto diminuto"
+      ],
+      "reference_approved": false,
+      "generation_authorized": false,
+      "publication_authorized": false
+    }
+  ],
+  "next_review": {
+    "component": "santa-marta.hero",
+    "status": "research_center_historic_bay_only",
+    "evidence": "../worker-lugar-4/crecimiento-colombia/entregas/santa-marta/decision-portada-centro-bahia-historica.json",
+    "generation_authorized": false
+  },
+  "user_visual_directions": [
+    {
+      "component": "santa-marta.tayrona",
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc6wJRl-zXrprpY1lXT7_mPyP-rRix1cfeDNVYBHu8GQ&s=10",
+      "status": "positive_direction_not_final_asset_approval",
+      "observed": "Kiosco de techo de palma sobre promontorio rocoso, playa, agua turquesa y vegetación; identidad de Cabo San Juan por verificar con fuente original.",
+      "original_source_identified": false
+    },
+    {
+      "component": "santa-marta.hero",
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN7IzKlb3fSUu5FGXqIA-uYAewbF6QEvY6O3Mycafzgw&s=10",
+      "status": "positive_direction_not_final_asset_approval",
+      "observed": "Vista aérea urbana con edificios completos, costa y cerros; sector exacto pendiente de comprobar.",
+      "original_source_identified": false
+    }
+  ],
+  "additional_presented_reviews": [
+    {
+      "id": "bogota.jardin",
+      "candidate": "jardin-2",
+      "role": "attraction_card",
+      "source": "https://commons.wikimedia.org/wiki/File:Tropicario_del_Jard%C3%ADn_Bot%C3%A1nico_de_Bogot%C3%A1.jpg",
+      "local_file": "../worker-lugar-2/crecimiento-colombia/entregas/bogota/revision-v4/referencias/jardin-2.jpg",
+      "status": "reference_approved_AI_v1_pending_final_review",
+      "generation_authorized": true,
+      "publication_authorized": false,
+      "reason": "Domos del Tropicario completos y reconocibles; recomendación del worker e inspección coordinador."
+    }
+  ]
+}

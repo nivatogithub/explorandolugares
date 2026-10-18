@@ -1,0 +1,74 @@
+{
+  "environment": "local_preprod_only",
+  "editorial_approved": false,
+  "production_authorized": false,
+  "receipts": [
+    {
+      "destination": "cartagena",
+      "id": 22,
+      "package_sha256": "6616870126215d6cec8ad04130926a91acdf3a139eb923d56afe8624bbb6f6ad",
+      "loaded_at": "2026-10-17T03:49:39+00:00",
+      "environment": "local_preprod_only",
+      "production_authorized": false,
+      "editorial_approved": false,
+      "provisional_photographs": true,
+      "places": 8,
+      "urls": {
+        "es": "http://127.0.0.1:8088/destinos/cartagena/",
+        "en": "http://127.0.0.1:8088/en/destinos/cartagena/",
+        "pt-BR": "http://127.0.0.1:8088/pt-br/destinos/cartagena/"
+      }
+    },
+    {
+      "destination": "bogota",
+      "id": 23,
+      "package_sha256": "113c2b5194c02923e35aca985936405c64400dd1dba04a7d61dcd6778261f87e",
+      "loaded_at": "2026-10-17T17:12:07+00:00",
+      "environment": "local_preprod_only",
+      "production_authorized": false,
+      "editorial_approved": false,
+      "provisional_photographs": true,
+      "places": 8,
+      "history_asset_id": 105,
+      "urls": {
+        "es": "http://127.0.0.1:8088/destinos/bogota/",
+        "en": "http://127.0.0.1:8088/en/destinos/bogota/",
+        "pt-BR": "http://127.0.0.1:8088/pt-br/destinos/bogota/"
+      }
+    },
+    {
+      "destination": "medellin",
+      "id": 16,
+      "package_sha256": "616de788ce8dcac3dcab8ac0f44212ce42f4e2f596a03a64c0d2690323daf8fb",
+      "loaded_at": "2026-10-17T12:06:53+00:00",
+      "environment": "local_preprod_only",
+      "production_authorized": false,
+      "editorial_approved": false,
+      "provisional_photographs": true,
+      "places": 8,
+      "history_asset_id": 135,
+      "urls": {
+        "es": "http://127.0.0.1:8088/destinos/medellin/",
+        "en": "http://127.0.0.1:8088/en/destinos/medellin/",
+        "pt-BR": "http://127.0.0.1:8088/pt-br/destinos/medellin/"
+      }
+    },
+    {
+      "destination": "santa-marta",
+      "id": 24,
+      "package_sha256": "7e225fda123fd28e1b1271038b698d8e77698c9d2a5bd96cd3936afc1bd834be",
+      "loaded_at": "2026-10-17T12:10:15+00:00",
+      "environment": "local_preprod_only",
+      "production_authorized": false,
+      "editorial_approved": false,
+      "provisional_photographs": true,
+      "places": 8,
+      "history_asset_id": 115,
+      "urls": {
+        "es": "http://127.0.0.1:8088/destinos/santa-marta/",
+        "en": "http://127.0.0.1:8088/en/destinos/santa-marta/",
+        "pt-BR": "http://127.0.0.1:8088/pt-br/destinos/santa-marta/"
+      }
+    }
+  ]
+}

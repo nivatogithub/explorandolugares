@@ -1,0 +1,48 @@
+{
+  "version": "alcance-mediano-plazo-v2",
+  "decision_date": "2026-10-16",
+  "decision_source": "Instrucción explícita del propietario en esta conversación",
+  "user_instruction": "Conservar categoría 4 para medición, fuera de trabajos; lanzar cuatro workers en orden, consultas web autorizadas.",
+  "allowed_department_priorities": [
+    1,
+    2
+  ],
+  "allowed_place_priorities": [
+    1,
+    2
+  ],
+  "deferred_priorities": [
+    3
+  ],
+  "excluded_legacy_categories": [
+    4
+  ],
+  "legacy_category4_names": [
+    "Angelópolis",
+    "Caramanta",
+    "Montebello",
+    "Argelia",
+    "Nariño",
+    "Abriaquí",
+    "Armenia",
+    "Caicedo",
+    "Peque",
+    "Sabanalarga",
+    "Briceño",
+    "Campamento",
+    "Ituango",
+    "Toledo",
+    "San Pedro de Urabá",
+    "Murindó",
+    "Vigía del Fuerte",
+    "Caracolí",
+    "Anorí",
+    "Vegachí",
+    "Yalí",
+    "Nechí"
+  ],
+  "p4_policy": "Conservar inventario, categoría y denominador de medición general. Fuera de la cola P1/P2 y del objetivo operativo, sin borrado ni mapeo a P3.",
+  "p3_policy": "Referencia futura fuera de la cola de ejecución de mediano plazo; ampliar alcance requiere nueva decisión.",
+  "target_policy": "P1/P2 como horizonte; primera tanda de cuatro autorizada; aprobación editorial y publicación por separado.",
+  "priority_approval": null
+}

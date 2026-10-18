@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-17",
+  "scope": "correcciones_obligatorias_no_ejecutadas_por_documentar_politica",
+  "production_changed": false,
+  "items": [
+    {
+      "component": "medellin.hero",
+      "status": "pendiente_mejor_referencia",
+      "requirement": "Coltejer completo reconocible en recorte real con ciudad; panorama histórico diminuto no final apto"
+    },
+    {
+      "component": "medellin.arvi.image",
+      "status": "referencia_actual_rechazada_para_final",
+      "requirement": "Rasgo específico y reconocible de Arví; no pinos genéricos"
+    },
+    {
+      "component": "medellin.comuna13.image",
+      "status": "referencia_actual_rechazada_para_final",
+      "requirement": "Circuito de murales/escaleras reconocibles; comprobar licencias y derechos de obras"
+    },
+    {
+      "component": "medellin.identity_mobility",
+      "status": "pendiente_integracion_ES_EN_PT",
+      "requirement": "Metro/Metrocable e identidad; distinguir Línea J y Cable Arví Línea L; fuente operador"
+    },
+    {
+      "component": "bogota.hero",
+      "status": "candidata_pendiente_eleccion",
+      "requirement": "Colpatria documentada; nombre referido por usuario aún tentativo"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "rank": null,
+  "place_id": null,
+  "name": null,
+  "department_id": null,
+  "department": null,
+  "department_priority": null,
+  "place_priority": null,
+  "department_score": null,
+  "place_score": null,
+  "priority_basis": null,
+  "department_priority_basis": null,
+  "source_pointer": null,
+  "manifest": null,
+  "state": "sin_iniciar",
+  "worker": null,
+  "branch": null,
+  "pr_url": null,
+  "preview": null,
+  "artifact_hash": null,
+  "artifacts": [],
+  "approval": null,
+  "start_authorization": null,
+  "events": [],
+  "components": {
+    "investigacion": {
+      "status": "pendiente",
+      "evidence": [],
+      "checked_at": null,
+      "reviewer": null
+    },
+    "fuentes_oficiales": {
+      "status": "pendiente",
+      "evidence": [],
+      "checked_at": null,
+      "reviewer": null
+    },
+    "textos_es": {
+      "status": "pendiente",
+      "evidence": [],
+      "checked_at": null,
+      "reviewer": null
+    },
+    "historia": {
+      "status": "pendiente",
+      "evidence": [],
+      "checked_at": null,
+      "reviewer": null
+    },
+    "sitios_interes": {
+      "status": "pendiente",
+      "evidence": [],
+      "checked_at": null,
+      "reviewer": null
+    },
+    "experiencias": {
+      "status": "pendiente",
+      "evidence": [],
+      "checked_at": null,
+      "reviewer": null
+    },
+    "directorio_gratuito": {
+      "status": "pendiente",
+      "evidence": [],
+      "checked_at": null,
+      "reviewer": null
+    },
+    "fotos_reales": {
+      "status": "pendiente",
+      "evidence": [],
+      "checked_at": null,
+      "reviewer": null
+    },
+    "derivados": {
+      "status": "pendiente",
+      "evidence": [],
+      "checked_at": null,
+      "reviewer": null
+    },
+    "traducciones_en": {
+      "status": "pendiente",
+      "evidence": [],
+      "checked_at": null,
+      "reviewer": null
+    },
+    "traducciones_pt": {
+      "status": "pendiente",
+      "evidence": [],
+      "checked_at": null,
+      "reviewer": null
+    },
+    "integracion": {
+      "status": "pendiente",
+      "evidence": [],
+      "checked_at": null,
+      "reviewer": null
+    },
+    "previsualizacion": {
+      "status": "pendiente",
+      "evidence": [],
+      "checked_at": null,
+      "reviewer": null
+    }
+  },
+  "tourism_score": null,
+  "tourism_sources": []
+}

@@ -1,0 +1,5 @@
+<?php
+$c=require '/srv/state/private/config.php';if(empty($c['local_test'])||!str_contains($c['dsn'],'dbname=explorando_preprod'))exit(2);
+require '/srv/portal/app/DestinationRepository.php';$p=new PDO($c['dsn'],$c['db_user'],$c['db_password'],[PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC]);$r=new DestinationRepository($p);$out=[];
+foreach(['es','en','pt-BR'] as $l){$d=$r->findPublished('cartagena',$l,true);$places=array_values(array_filter($d['places'],fn($x)=>$x['type']==='place'));$exp=array_values(array_filter($d['places'],fn($x)=>$x['type']==='experience'));$out[$l]=['status'=>$d['publication_status'],'places'=>count($places),'experiences'=>count($exp),'names'=>array_column($places,'name')];if(count($places)!==8||count($exp)!==7||$d['publication_status']!=='draft')throw new Exception('QA failed');}
+file_put_contents('/srv/state/worker-review/qa-cartagena-contenido-v9.json',json_encode($out,JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT));echo json_encode($out,JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT);
