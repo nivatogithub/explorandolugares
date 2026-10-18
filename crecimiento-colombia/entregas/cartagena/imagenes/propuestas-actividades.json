@@ -1,0 +1,80 @@
+{
+  "consulted_at": "2026-10-16",
+  "queries": [
+    "Wikimedia Commons La Boquilla canoe Colombia photo",
+    "Wikimedia Commons City Sightseeing Cartagena bus photo",
+    "site:commons.wikimedia.org Rosario Islands diving File",
+    "site:commons.wikimedia.org Cartagena catamaran File"
+  ],
+  "outcome": "No se encontró foto licenciada específica de servicio/operador que cierre gate actividad. Contexto local de La Boquilla sí localizado.",
+  "activities": {
+    "bus-panoramico": [
+      {
+        "source_url": "https://city-sightseeing.com/es/15/cartagena/12/bus-turistico-cartagena",
+        "status": "pendiente_permiso_no_usable",
+        "reason": "Galería propia del operador: sin licencia abierta identificada; no descargada. Commons Bus_en_Cartagena,_Colombia.jpg es un bus Chevrolet de2012 sin identificación de operador turístico: rechazado para esta actividad."
+      }
+    ],
+    "buceo-rosario": [
+      {
+        "source_url": "https://divingplanet.org/",
+        "status": "pendiente_permiso_no_usable",
+        "reason": "Sitio del operador muestra buceo nocturno y buzo panorámica; sin licencia comercial/adaptación pública verificada ni ubicación individual de toma. No descargada."
+      }
+    ],
+    "snorkel-rosario": [
+      {
+        "source_url": "https://divingplanet.org/",
+        "status": "pendiente_permiso_no_usable",
+        "reason": "Oferta de snorkel comprobada pero ninguna foto específica de snorkel en Rosario con derechos identificados. No reutilizar foto genérica de buceo."
+      }
+    ],
+    "catamaran-cartagena": [
+      {
+        "source_url": "https://www.bonavidacatamaranes.com/es/galeria-fotos",
+        "status": "pendiente_permiso_no_usable",
+        "reason": "Galería específica del catamarán del operador consultada; copyright2026, sin autorización comercial/adaptación identificada. No descargada."
+      }
+    ],
+    "pesca-boquilla": [
+      {
+        "source_url": "https://commons.wikimedia.org/wiki/File:Boats_in_La_Boquilla.jpg",
+        "status": "licencia_CC_BY_SA4_contexto_no_oferta",
+        "reason": "Barcos en La Boquilla, Bernard Gagnon2020; contexto local, no muestra pesca en ejecución ni prueba servicio IMPULSE. Revisar original por uso, sin completar gate foto actividad."
+      },
+      {
+        "source_url": "https://colombia.travel/es/mapa-turismo/pesca-con-locales-en-la-boquilla",
+        "status": "pendiente_permiso_no_usable",
+        "reason": "Fotos atribuidas a IMPULSE en la fuente institucional; sin autorización de reutilización identificada. No descargadas."
+      }
+    ],
+    "atardecer-sibarita": [
+      {
+        "source_url": "https://sibarita.com.co/en/paseos",
+        "status": "pendiente_apertura_permiso_no_usable",
+        "reason": "Resultado indexado identifica fotos Sunset Express/Master; apertura directa falló y licencia no comprobada. No descargadas."
+      }
+    ],
+    "kayak-bahia-candidato": [
+      {
+        "source_url": "",
+        "status": "sin_referencia_local_verificada",
+        "reason": "No existe operador verificado ni referencia con licencia identificada para esta propuesta. No usar fotografía de otra ciudad."
+      }
+    ],
+    "caminhada-patrimonial": [
+      {
+        "source_url": "https://commons.wikimedia.org/wiki/File:Getsemani_Street_Scene,_Cartagena,_Colombia_(24217787419).jpg",
+        "status": "contexto_no_actividad",
+        "reason": "Calle de Getsemaní licenciada existente; no representa el recorrido Centro/SanDiego propuesto ni guía contratado; no reasignada."
+      }
+    ],
+    "visita-muhca": [
+      {
+        "source_url": "https://commons.wikimedia.org/wiki/File:Colombia,_Cartagena,_Palacio_de_la_Inquisici%C3%B3n.jpg",
+        "status": "contexto_no_actividad",
+        "reason": "Fachada licenciada existente no muestra visita guiada/exposiciones interiores; permiso y fotografía específicos pendientes."
+      }
+    ]
+  }
+}

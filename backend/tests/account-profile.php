@@ -11,7 +11,9 @@ function throttle(string $kind,int $limit,int $seconds,string $extra=''):bool{re
 function profile_check(bool $ok,string $message):void{if(!$ok)throw new RuntimeException($message);}
 $pdo=new PDO('sqlite::memory:',null,null,[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC]);$pdo->exec('PRAGMA foreign_keys=ON');
 $pdo->exec(file_get_contents(dirname(__DIR__).'/database/destinations.sqlite.sql'));
-for($i=8;$i<=28;$i++){$files=glob(dirname(__DIR__).'/database/migrations/'.sprintf('%03d',$i).'-*.sqlite.sql');$pdo->exec(file_get_contents($files[0]));}
+// Keep the disposable fixture aligned with the current schema (including 030 categories).
+$schemaMigrations=glob(dirname(__DIR__).'/database/migrations/*.sqlite.sql');sort($schemaMigrations,SORT_STRING);
+foreach($schemaMigrations as $file){if((int)basename($file)>=8)$pdo->exec(file_get_contents($file));}
 $pdo->exec('INSERT INTO destinations(id,slug,publication_status) VALUES(1,"jerico","published"); INSERT INTO destination_translations(destination_id,locale,display_name,headline,intro) VALUES(1,"es","Jericó","",""); INSERT INTO service_categories(code,is_active) VALUES("hospedaje",1); INSERT INTO service_category_translations(category_code,locale,label) VALUES("hospedaje","es","Hospedaje");');
 for($i=1;$i<=3;$i++){$pdo->prepare('INSERT INTO businesses(id,public_id,destination_id,category_code,slug) VALUES(?,?,1,"hospedaje",?)')->execute([$i,'public-'.$i,'negocio-'.$i]);$pdo->prepare('INSERT INTO business_translations(business_id,locale,display_name,summary,description) VALUES(?,"es",?,"","")')->execute([$i,'Negocio '.$i]);}
 $channel=['channel'=>'email','value'=>'info@example.invalid','source_url'=>'https://example.invalid/business','consulted_at'=>'2026-10-15','evidence_status'=>'PUBLICADO_PARA_CLIENTES','legal_basis_status'=>'Pendiente de revisión','recipient_label'=>'Administración'];

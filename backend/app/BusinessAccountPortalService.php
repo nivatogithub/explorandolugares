@@ -1,14 +1,16 @@
 <?php
 declare(strict_types=1);
 require_once __DIR__.'/AccountProfileService.php';
+require_once __DIR__.'/AccountResidence.php';
 require_once __DIR__.'/AccountAuthorization.php';
 require_once __DIR__.'/BusinessOnboardingDetails.php';
+require_once __DIR__.'/BusinessExistenceVerification.php';
 
 final class BusinessAccountPortalService
 {
     public function __construct(private PDO $pdo) {}
 
-    public function registerTraveler(string $name,string $email,string $password,string $confirmation,bool $consent): int
+    public function registerTraveler(string $name,string $email,string $password,string $confirmation,bool $consent,?array $residence=null): int
     {
         $name=trim($name);$email=strtolower(trim($email));
         if(strlen($name)<2||strlen($name)>180)throw new RuntimeException('Escribe tu nombre, entre 2 y 180 caracteres.');
@@ -17,9 +19,9 @@ final class BusinessAccountPortalService
         if(strlen($password)<12||strlen($password)>200||!preg_match('/[A-Za-z]/',$password)||!preg_match('/[0-9]/',$password))throw new RuntimeException('Usa entre 12 y 200 caracteres, con letras y números.');
         if(!$consent)throw new RuntimeException('Acepta el tratamiento de datos para crear tu cuenta.');
         if(!throttle('traveler_register',5,3600,$email))throw new RuntimeException('Demasiados intentos de registro.');
-        $q=$this->pdo->prepare('INSERT INTO accounts(public_id,account_type,display_name,email,password_hash,status) VALUES(?,"traveler",?,?,?,"active")');
+        $q=$this->pdo->prepare('INSERT INTO accounts(public_id,account_type,display_name,email,password_hash,status) VALUES(?,"traveler",?,?,?,"pending_activation")');
         $this->pdo->beginTransaction();
-        try{$q->execute([$this->uuid(),$name,$email,password_hash($password,PASSWORD_DEFAULT)]);$id=(int)$this->pdo->lastInsertId();$this->pdo->prepare('INSERT INTO account_consents(account_id,consent_version) VALUES(?,"traveler-registration-v1")')->execute([$id]);$this->pdo->commit();return $id;}catch(Throwable $e){if($this->pdo->inTransaction())$this->pdo->rollBack();throw $e;}
+        try{$q->execute([$this->uuid(),$name,$email,password_hash($password,PASSWORD_DEFAULT)]);$id=(int)$this->pdo->lastInsertId();if($residence!==null)AccountResidence::save($this->pdo,$id,$residence);$this->pdo->prepare('INSERT INTO account_consents(account_id,consent_version) VALUES(?,"traveler-registration-v1")')->execute([$id]);$this->pdo->commit();return $id;}catch(Throwable $e){if($this->pdo->inTransaction())$this->pdo->rollBack();throw $e;}
     }
 
     public function registrationDestinations(): array
@@ -36,17 +38,20 @@ final class BusinessAccountPortalService
     public function searchRegistrationBusinesses(int $destinationId,string $category,string $term): array
     {
         $term=trim($term);if($destinationId<1||$category===''||strlen($term)<2)return [];
-        $query=$this->pdo->prepare('SELECT b.id,t.display_name,b.claim_status,b.information_status FROM businesses b JOIN business_translations t ON t.business_id=b.id AND t.locale="es" JOIN destinations d ON d.id=b.destination_id WHERE b.destination_id=? AND (b.category_code=? OR EXISTS(SELECT 1 FROM business_categories bc WHERE bc.business_id=b.id AND bc.category_code=?)) AND d.publication_status="published" AND b.operation_status<>"CERRADO_DEFINITIVO" AND t.display_name LIKE ? ORDER BY t.display_name LIMIT 20');
-        $query->execute([$destinationId,$category,$category,'%'.str_replace(['%','_'],'',$term).'%']);return array_map(static function(array $row):array{$row['can_request']=$row['claim_status']==='NO_RECLAMADO';unset($row['claim_status'],$row['information_status']);return $row;},$query->fetchAll(PDO::FETCH_ASSOC));
+        $query=$this->pdo->prepare('SELECT b.id,t.display_name,b.claim_status,b.information_status,EXISTS(SELECT 1 FROM business_account_memberships bm WHERE bm.business_id=b.id AND bm.status="active") AS has_responsible FROM businesses b JOIN business_translations t ON t.business_id=b.id AND t.locale="es" JOIN destinations d ON d.id=b.destination_id WHERE b.destination_id=? AND (b.category_code=? OR EXISTS(SELECT 1 FROM business_categories bc WHERE bc.business_id=b.id AND bc.category_code=?)) AND d.publication_status="published" AND b.operation_status<>"CERRADO_DEFINITIVO" AND t.display_name LIKE ? ORDER BY t.display_name LIMIT 20');
+        $query->execute([$destinationId,$category,$category,'%'.str_replace(['%','_'],'',$term).'%']);return array_map(static function(array $row):array{$row['can_request']=true;$row['requires_review']=$row['claim_status']!=='NO_RECLAMADO'||(bool)$row['has_responsible'];$row['review_message']=$row['requires_review']?'Puedes solicitar la revisión de tu relación con este negocio. No cambiaremos su responsable actual.':'';unset($row['claim_status'],$row['information_status'],$row['has_responsible']);return $row;},$query->fetchAll(PDO::FETCH_ASSOC));
     }
 
-    public function register(string $name, string $email, string $password, array $application, array $evidenceUploads=[], ?string $evidenceStorage=null,mixed $referenceUploads=null,?string $referenceStorage=null): int
+    public function register(string $name, string $email, string $password, array $application, array $evidenceUploads=[], ?string $evidenceStorage=null,mixed $referenceUploads=null,?string $referenceStorage=null,?int $existingAccountId=null): int
     {
+        $existingAccount=$existingAccountId?$this->current($existingAccountId):null;
+        if($existingAccountId&&!$existingAccount)throw new RuntimeException('Inicia sesión para continuar con tu cuenta.');
+        if($existingAccount){$name=$existingAccount['display_name'];$email=$existingAccount['email'];}
         $name=trim($name);$email=strtolower(trim($email));
         if(strlen($name)<2||strlen($name)>180)throw new RuntimeException('Escribe tu nombre o el de la persona responsable.');
         if(!filter_var($email,FILTER_VALIDATE_EMAIL)||strlen($email)>254)throw new RuntimeException('Escribe un correo válido.');
-        if(strlen($password)<12||strlen($password)>200)throw new RuntimeException('La contraseña debe tener entre 12 y 200 caracteres.');
-        if(!preg_match('/[A-Za-z]/',$password)||!preg_match('/[0-9]/',$password))throw new RuntimeException('Combina letras y números en la contraseña.');
+        if(!$existingAccount&&(strlen($password)<12||strlen($password)>200))throw new RuntimeException('La contraseña debe tener entre 12 y 200 caracteres.');
+        if(!$existingAccount&&(!preg_match('/[A-Za-z]/',$password)||!preg_match('/[0-9]/',$password)))throw new RuntimeException('Combina letras y números en la contraseña.');
         if(!throttle('business_account_register',5,3600,$email))throw new RuntimeException('Se alcanzó el límite de registros. Inténtalo más tarde.');
         $type=(string)($application['application_type']??'');$destinationId=(int)($application['destination_id']??0);$category=trim((string)($application['category_code']??''));
         $businessId=(int)($application['business_id']??0);$businessName=trim((string)($application['business_name']??''));
@@ -65,31 +70,50 @@ final class BusinessAccountPortalService
         $uploadsPresent=false;foreach($requiredEvidence as $evidenceType){if(($evidenceUploads[$evidenceType]['error']??UPLOAD_ERR_NO_FILE)!==UPLOAD_ERR_NO_FILE)$uploadsPresent=true;}
         if($uploadsPresent){
             if(!$evidenceStorage)throw new RuntimeException('No está configurado el almacenamiento privado de documentos.');
-            foreach($requiredEvidence as $type){$this->validateEvidenceUpload($evidenceUploads[$type]??[]);}
+            foreach($requiredEvidence as $evidenceType){$this->validateEvidenceUpload($evidenceUploads[$evidenceType]??[]);}
             if(!is_dir($evidenceStorage)&&!mkdir($evidenceStorage,0700,true)&&!is_dir($evidenceStorage))throw new RuntimeException('No se pudo preparar el almacenamiento privado de documentos.');
         }
         if($type==='new_business'){
             $duplicate=$this->pdo->prepare('SELECT b.id FROM businesses b JOIN business_translations t ON t.business_id=b.id AND t.locale="es" WHERE b.destination_id=? AND LOWER(TRIM(t.display_name))=LOWER(?) LIMIT 1');$duplicate->execute([$destinationId,$businessName]);
             if($duplicate->fetchColumn())throw new RuntimeException('Ese negocio ya está registrado en este lugar. Búscalo y solicita asociarlo a tu cuenta.');
         }
-        $storedFiles=[];
+        $existenceAssessment=null;
+        if($type==='new_business'){
+            $destinationQuery=$this->pdo->prepare('SELECT display_name FROM destination_translations WHERE destination_id=? AND locale="es"');$destinationQuery->execute([$destinationId]);
+            $ids=BusinessExistenceVerification::capture(['business_rnt'=>$application['business_details']['existence_inputs']['rnt']??'','business_nit'=>$application['business_details']['existence_inputs']['nit']??'']);
+            $existenceAssessment=BusinessExistenceVerification::assessNew($businessName,(string)$destinationQuery->fetchColumn(),$ids);
+        }
+        $storedFiles=[];$disputedClaim=false;
         $this->pdo->beginTransaction();
         try{
+            if($existingAccountId){$locked=$this->pdo->prepare('SELECT id FROM accounts WHERE id=? AND status="active"'.($this->pdo->getAttribute(PDO::ATTR_DRIVER_NAME)==='mysql'?' FOR UPDATE':''));$locked->execute([$existingAccountId]);if(!$locked->fetchColumn())throw new RuntimeException('La cuenta ya no está disponible.');}
+            $duplicateRequest=$this->pdo->prepare('SELECT id FROM business_account_applications WHERE account_id=? AND destination_id=? AND LOWER(business_name)=LOWER(?) AND status IN ("pending","in_review") LIMIT 1');$duplicateRequest->execute([$existingAccountId??0,$destinationId,$businessName]);if($duplicateRequest->fetchColumn())throw new RuntimeException('Ya tienes una solicitud pendiente para este negocio. Consúltala en Mis negocios.');
             if($type==='existing_business'){
                 $lock=$this->pdo->getAttribute(PDO::ATTR_DRIVER_NAME)==='mysql'?' FOR UPDATE':'';
-                $target=$this->pdo->prepare('SELECT id,claim_status,operation_status FROM businesses WHERE id=? AND destination_id=? AND category_code=?'.$lock);$target->execute([$businessId,$destinationId,$category]);$business=$target->fetch(PDO::FETCH_ASSOC);
+                $target=$this->pdo->prepare('SELECT id,claim_status,operation_status FROM businesses WHERE id=? AND destination_id=? AND (category_code=? OR EXISTS(SELECT 1 FROM business_categories bc WHERE bc.business_id=businesses.id AND bc.category_code=?))'.$lock);$target->execute([$businessId,$destinationId,$category,$category]);$business=$target->fetch(PDO::FETCH_ASSOC);
                 if(!$business)throw new RuntimeException('El negocio elegido ya no está disponible. Vuelve a buscarlo.');
                 if($business['operation_status']==='CERRADO_DEFINITIVO')throw new RuntimeException('Este negocio aparece como cerrado y no admite solicitudes.');
-                if($business['claim_status']!=='NO_RECLAMADO')throw new RuntimeException('Este negocio ya tiene una solicitud o una cuenta asociada. Si lo representas, contáctanos para revisarlo.');
+                $ownerQuery=$this->pdo->prepare('SELECT account_id FROM business_account_memberships WHERE business_id=? AND status="active"');$ownerQuery->execute([$businessId]);$owners=array_map('intval',$ownerQuery->fetchAll(PDO::FETCH_COLUMN));
+                if($existingAccountId&&in_array($existingAccountId,$owners,true))throw new RuntimeException('Este negocio ya está asociado a tu cuenta. Consúltalo en Mis negocios.');
+                $disputedClaim=$business['claim_status']!=='NO_RECLAMADO'||count($owners)>0;
+                $duplicateClaim=$this->pdo->prepare('SELECT id FROM business_account_applications WHERE account_id=? AND business_id=? AND status IN ("pending","in_review") LIMIT 1');$duplicateClaim->execute([$existingAccountId??0,$businessId]);
+                if($duplicateClaim->fetchColumn())throw new RuntimeException('Ya tienes una solicitud pendiente para este negocio. Consúltala en Mis negocios.');
                 $businessNameQuery=$this->pdo->prepare('SELECT display_name FROM business_translations WHERE business_id=? AND locale="es"');$businessNameQuery->execute([$businessId]);$businessName=(string)$businessNameQuery->fetchColumn();
             }
-            $stmt=$this->pdo->prepare('INSERT INTO accounts(public_id,account_type,display_name,email,password_hash,status) VALUES(?,?,?,?,?,"active")');
-            $stmt->execute([$this->uuid(), 'business', $name, $email, password_hash($password,PASSWORD_DEFAULT)]);$accountId=(int)$this->pdo->lastInsertId();
-            $insert=$this->pdo->prepare('INSERT INTO business_account_applications(account_id,application_type,business_id,destination_id,category_code,business_name,relationship_code,contact_phone,message,consent_version,status) VALUES(?,?,?,?,?,?,?,?,?,? ,"pending")');
-            $insert->execute([$accountId,$type==='existing_business'?'claim_existing':'request_new',$type==='existing_business'?$businessId:null,$destinationId,$category,$businessName,$relationship,$phone,$message,'business-account-onboarding-v1']);
+            $accountId=$existingAccountId;
+            if(!$accountId){
+                $stmt=$this->pdo->prepare('INSERT INTO accounts(public_id,account_type,display_name,email,password_hash,status) VALUES(?,"traveler",?,?,?,"pending_activation")');
+                $stmt->execute([$this->uuid(),$name,$email,password_hash($password,PASSWORD_DEFAULT)]);$accountId=(int)$this->pdo->lastInsertId();
+                if(isset($application['account_residence']))AccountResidence::save($this->pdo,$accountId,$application['account_residence']);
+            }
+            $insert=$this->pdo->prepare('INSERT INTO business_account_applications(account_id,application_type,business_id,destination_id,category_code,business_name,relationship_code,contact_phone,message,consent_version,status) VALUES(?,?,?,?,?,?,?,?,?,?,?)');
+            $insert->execute([$accountId,$type==='existing_business'?'claim_existing':'request_new',$type==='existing_business'?$businessId:null,$destinationId,$category,$businessName,$relationship,$phone,$disputedClaim?'RECLAMACIÓN EN REVISIÓN: el negocio ya tiene responsable o una solicitud previa. No cambia su asociación actual. '.substr($message,0,850):$message,'business-account-onboarding-v1',$disputedClaim?'in_review':'pending']);
             $applicationId=(int)$this->pdo->lastInsertId();
             if($referenceUploads&&$referenceStorage)(new BusinessAdminService($this->pdo,$referenceStorage))->storeApplicationReferences($applicationId,$referenceUploads,$storedFiles);
-            if(!empty($application['business_details']))$this->pdo->prepare('UPDATE business_account_applications SET business_details_json=? WHERE id=?')->execute([json_encode($application['business_details'],JSON_THROW_ON_ERROR|JSON_UNESCAPED_UNICODE),$applicationId]);
+            $details=$application['business_details']??[];unset($details['claim_review_kind']);
+            $details['existence_assessment']=$type==='existing_business'?BusinessExistenceVerification::assessExisting($this->pdo,$businessId):$existenceAssessment;
+            if($disputedClaim)$details['claim_review_kind']='disputed_existing';
+            if($details)$this->pdo->prepare('UPDATE business_account_applications SET business_details_json=? WHERE id=?')->execute([json_encode($details,JSON_THROW_ON_ERROR|JSON_UNESCAPED_UNICODE),$applicationId]);
             $profile=new AccountProfileService($this->pdo);
             if($profile->ready())$profile->initializePhone($accountId,$phone);
             if($uploadsPresent){
@@ -101,7 +125,7 @@ final class BusinessAccountPortalService
                     $this->pdo->prepare('INSERT INTO business_account_application_evidence(application_id,evidence_type,storage_name,original_name,mime_type,file_size) VALUES(?,?,?,?,?,?)')->execute([$applicationId,$evidenceType,$storedName,$originalName,$mime,$bytes]);
                 }
             }
-            if($type==='existing_business'){$update=$this->pdo->prepare('UPDATE businesses SET claim_status="EN_TRAMITE",updated_at=CURRENT_TIMESTAMP WHERE id=? AND claim_status="NO_RECLAMADO"');$update->execute([$businessId]);if($update->rowCount()!==1)throw new RuntimeException('El negocio acaba de recibir otra solicitud. Vuelve a buscarlo.');}
+            if($type==='existing_business'&&!$disputedClaim){$update=$this->pdo->prepare('UPDATE businesses SET claim_status="EN_TRAMITE",updated_at=CURRENT_TIMESTAMP WHERE id=? AND claim_status="NO_RECLAMADO"');$update->execute([$businessId]);if($update->rowCount()!==1)throw new RuntimeException('El negocio acaba de recibir otra solicitud. Vuelve a buscarlo.');}
             $this->pdo->commit();return $accountId;
         }catch(Throwable $error){if($this->pdo->inTransaction())$this->pdo->rollBack();foreach($storedFiles as $path)if(is_file($path))@unlink($path);throw $error;}
     }
@@ -125,7 +149,7 @@ final class BusinessAccountPortalService
 
     public function businesses(int $accountId): array
     {
-        $stmt=$this->pdo->prepare('SELECT b.id,b.public_id,b.information_status,b.claim_status,b.operation_status,b.publication_status,
+        $stmt=$this->pdo->prepare('SELECT b.id,b.destination_id,b.public_id,b.information_status,b.claim_status,b.operation_status,b.publication_status,
                 t.display_name,d.slug AS destination_slug,dt.display_name AS destination_name,m.role,
                 (SELECT sp.code FROM business_subscriptions bs JOIN subscription_plans sp ON sp.code=bs.plan_code WHERE bs.business_id=b.id ORDER BY bs.id DESC LIMIT 1) AS plan_code,
                 (SELECT bs.status FROM business_subscriptions bs WHERE bs.business_id=b.id ORDER BY bs.id DESC LIMIT 1) AS subscription_status
@@ -148,8 +172,13 @@ final class BusinessAccountPortalService
 
     public function applications(int $accountId): array
     {
-        $stmt=$this->pdo->prepare('SELECT r.application_type,r.business_name,r.status,r.created_at,t.label AS category_label,dt.display_name AS destination_name FROM business_account_applications r JOIN service_category_translations t ON t.category_code=r.category_code AND t.locale="es" JOIN destination_translations dt ON dt.destination_id=r.destination_id AND dt.locale="es" WHERE r.account_id=? ORDER BY r.created_at DESC');
-        $stmt->execute([$accountId]);return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $stmt=$this->pdo->prepare('SELECT r.application_type,r.business_name,r.status,r.created_at,r.business_details_json,t.label AS category_label,dt.display_name AS destination_name FROM business_account_applications r JOIN service_category_translations t ON t.category_code=r.category_code AND t.locale="es" JOIN destination_translations dt ON dt.destination_id=r.destination_id AND dt.locale="es" WHERE r.account_id=? ORDER BY r.created_at DESC');
+        $stmt->execute([$accountId]);return array_map(static function(array $row):array{
+            $details=json_decode($row['business_details_json']??'{}',true)??[];
+            $row['review_kind']=$details['claim_review_kind']??'standard';
+            $row['review_message']=$row['review_kind']==='disputed_existing'?'Recibimos tu reclamación para revisión. El negocio conserva su responsable actual; esta solicitud no te concede acceso para administrarlo.':'';
+            unset($row['business_details_json']);return $row;
+        },$stmt->fetchAll(PDO::FETCH_ASSOC));
     }
 
     public function adminApplications(): array
@@ -173,6 +202,9 @@ final class BusinessAccountPortalService
             $lock=$this->pdo->getAttribute(PDO::ATTR_DRIVER_NAME)==='mysql'?' FOR UPDATE':'';
             $query=$this->pdo->prepare('SELECT * FROM business_account_applications WHERE id=?'.$lock);$query->execute([$id]);$row=$query->fetch(PDO::FETCH_ASSOC);
             if(!$row||!in_array($row['status'],['pending','in_review'],true))throw new RuntimeException('La solicitud ya fue cerrada o no existe.');
+            $details=json_decode($row['business_details_json']??'{}',true)??[];
+            $isDisputed=($details['claim_review_kind']??'')==='disputed_existing';
+            if($status==='approved'&&$isDisputed)throw new RuntimeException('Esta reclamación requiere resolver la representación con el responsable actual; no se permite cambiar la propiedad desde esta aprobación.');
             if($status==='approved'){
                 $evidenceQuery=$this->pdo->prepare('SELECT id,evidence_type FROM business_account_application_evidence WHERE application_id=?');$evidenceQuery->execute([$id]);$evidence=$evidenceQuery->fetchAll(PDO::FETCH_ASSOC);
                 $required=$this->requiredEvidence((string)$row['relationship_code']);$ids=array_map('intval',$verifiedEvidenceIds);$byType=[];foreach($evidence as $item)$byType[$item['evidence_type']]=$item;
@@ -210,7 +242,7 @@ final class BusinessAccountPortalService
                 $profile=new AccountProfileService($this->pdo);
                 if($profile->ready())$profile->syncApprovedApplication($id);
             }
-            if($status==='not_approved'&&$row['business_id'])$this->pdo->prepare('UPDATE businesses SET claim_status="NO_RECLAMADO",updated_at=CURRENT_TIMESTAMP WHERE id=? AND claim_status="EN_TRAMITE"')->execute([$row['business_id']]);
+            if($status==='not_approved'&&$row['business_id']&&!$isDisputed)$this->pdo->prepare('UPDATE businesses SET claim_status="NO_RECLAMADO",updated_at=CURRENT_TIMESTAMP WHERE id=? AND claim_status="EN_TRAMITE"')->execute([$row['business_id']]);
             $this->pdo->commit();
         }catch(Throwable $error){if($this->pdo->inTransaction())$this->pdo->rollBack();throw $error;}
     }

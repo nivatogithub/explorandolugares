@@ -1,0 +1,31 @@
+@import url("/assets/cobertura/portal-tokens.css");
+.directory-tier{margin:28px 0 36px}.directory-tier-heading{font-size:1.35rem;margin:0 0 16px}.directory-tier .directory-grid{align-items:start}.directory-tier .directory-card{height:auto;min-height:0;align-self:start}.directory-tier[data-directory-tier="free"] .directory-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:12px}.directory-tier[data-directory-tier="free"] .directory-card-body{padding:18px}.directory-tier[hidden],.directory-tier .directory-card[hidden]{display:none!important}
+
+.directory-tier .directory-grid{grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr));align-items:stretch;gap:18px}
+.directory-tier .directory-card{position:relative;align-self:stretch;min-width:0;display:flex;flex-direction:column}
+.directory-tier .directory-card-body{display:flex;flex-direction:column;flex:1;min-width:0;padding:22px}
+.directory-tier .directory-business-title{font-size:21px;line-height:1.3;height:2.6em;min-height:2.6em;margin:10px 0 14px;overflow:hidden;overflow-wrap:anywhere}
+.directory-business-title>a,.directory-business-title>span{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+.directory-tier .directory-card .eyebrow{height:2.8em;line-height:1.4;overflow:hidden;margin:0}
+.directory-tier .directory-description{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;line-height:1.5;height:4.5em;margin:0 0 16px}
+.directory-tier .directory-business-mark{width:64px;height:64px;flex-shrink:0;margin-bottom:16px}
+.directory-tier .directory-business-page-link{margin-top:auto;padding-top:14px}
+.directory-tier .directory-premium-star{position:absolute;right:16px;top:12px;font-size:26px;line-height:1;color:var(--el-action,#c94720);z-index:1}
+.directory-tier .directory-card-tier-page_premium.is-featured{border-width:1px!important;box-shadow:none;background:inherit}
+.directory-tier .directory-card-tier-page .directory-card-body,.directory-tier .directory-card-tier-page_premium .directory-card-body{min-height:365px;padding-top:24px}
+.directory-tier[data-directory-tier="free"] .directory-grid{grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));gap:12px}
+.directory-tier[data-directory-tier="free"] .directory-card-body{padding:18px}
+.directory-tier[data-directory-tier="free"] .directory-business-title{margin:6px 0 0;font-size:18px}
+/* Shared collapsible sections; no fixed content height or inaccessible clipping. */
+.place-disclosure{border-top:1px solid var(--el-border,var(--el-border));padding:16px 0}
+.place-disclosure-summary{cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:18px;list-style:none;padding:12px 0}
+.place-disclosure-summary::-webkit-details-marker{display:none}
+.place-disclosure-summary::after{content:'+';font-size:28px;line-height:1;flex-shrink:0;color:var(--el-action,#c94720)}
+.place-disclosure[open]>.place-disclosure-summary::after{content:'−'}
+.place-disclosure-summary:focus-visible{outline:2px solid var(--el-action,#c94720);outline-offset:5px}
+.place-disclosure-summary>.sectionhead,.place-disclosure-summary>.destination-experiences-heading{width:100%;margin:0}
+.place-disclosure-summary>.directory-tier-heading{margin:0}
+.place-disclosure-content{padding-top:16px}
+.directory-tier>.place-disclosure{padding:8px 0}
+.destination-experiences:has(>.place-disclosure){margin:24px 0}
+@media(max-width:650px){.place-disclosure-summary .sectionhead,.place-disclosure-summary .destination-experiences-heading{display:block}.place-disclosure-summary p{margin-bottom:0}}

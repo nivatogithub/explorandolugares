@@ -1,0 +1,75 @@
+{
+  "maximum": 8,
+  "approved": false,
+  "selection": [
+    {
+      "order": 1,
+      "slug": "centro-historico",
+      "photo_asset": "murallas-2016",
+      "reason": "Conjunto urbano emblemático UNESCO; agrupa hitos sin redundancia."
+    },
+    {
+      "order": 2,
+      "slug": "san-felipe",
+      "photo_asset": "san-felipe-2011",
+      "reason": "Fortificación principal, identidad patrimonial y texto/referencia aprobados."
+    },
+    {
+      "order": 3,
+      "slug": "getsemani",
+      "photo_asset": "getsemani-casas-2016",
+      "reason": "Barrio y vida local; texto aprobado, nueva referencia visual solicitada."
+    },
+    {
+      "order": 4,
+      "slug": "islas-rosario",
+      "photo_asset": "rosario-isla-grande-2016",
+      "reason": "Dimensión insular esencial omitida antes; naturaleza marina separada de ciudad."
+    },
+    {
+      "order": 5,
+      "slug": "playa-blanca-baru",
+      "photo_asset": "playa-blanca-2019",
+      "reason": "Playa costera específica, diferenciada del archipiélago y con localización Barú."
+    },
+    {
+      "order": 6,
+      "slug": "cerro-popa",
+      "photo_asset": "popa-convento-2011",
+      "reason": "Mirador/patrimonio destacado con claustro diferente de foto insignia."
+    },
+    {
+      "order": 7,
+      "slug": "museo-historico",
+      "photo_asset": "muhca-2025",
+      "reason": "Memoria de la ciudad; referencia y textos ya aprobados."
+    },
+    {
+      "order": 8,
+      "slug": "la-boquilla",
+      "photo_asset": "boquilla-2020",
+      "reason": "Economía pesquera afrocaribeña y paisaje local; amplía visión fuera del centro."
+    }
+  ],
+  "historical_inventory_total": 19,
+  "unselected": [
+    "torre-reloj",
+    "oro-zenu",
+    "san-pedro-claver",
+    "santo-domingo",
+    "santo-toribio",
+    "museo-naval",
+    "plaza-santa-teresa",
+    "portal-dulces",
+    "serrezuela",
+    "teatro-adolfo-mejia",
+    "manglares-boquilla"
+  ],
+  "grouped_inside_centre": [
+    "torre-reloj",
+    "portal-dulces"
+  ],
+  "hero_asset": "la-popa-2008",
+  "no_duplicate_hero": true,
+  "illustration_execution_deferred_reason": "primero corregir selección máximo8 según mensaje actual"
+}

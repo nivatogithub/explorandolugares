@@ -1,0 +1,31 @@
+{
+  "consulted_at": "2026-10-17",
+  "sources": [
+    {
+      "url": "https://planetariodebogota.gov.co/",
+      "method": "indexed_after_open_error",
+      "finding": "Programación domo/museo/talleres y reapertura MuseoEspacio; no afirmar entradas concretas."
+    },
+    {
+      "url": "https://planetariodebogota.gov.co/node/1564",
+      "method": "indexed",
+      "finding": "Transformación domo/configuraciónflexible desde2023; sala2014 no acredita estadoactual."
+    },
+    {
+      "url": "https://planetariodebogota.gov.co/programate/museo",
+      "method": "indexed",
+      "finding": "Propuesta educativa de astronomía; confirmar visita/programación."
+    },
+    {
+      "url": "https://cinematecadebogota.gov.co/lineas/formas-de-ver",
+      "method": "indexed",
+      "finding": "Centroartesaudiovisuales desde2019,Carrera3#19-10; agenda cine/exposiciones."
+    }
+  ],
+  "cinemateca_not_selected": {
+    "source": "https://commons.wikimedia.org/wiki/File:Cinemateca_Distrital_de_Bogot%C3%A1.jpg",
+    "reason": "Ficha2019 contradice subida2018 y EXIF2017. No prueba sedeactual inaugurada2019; no descargar como referencia actual sin identificar."
+  },
+  "completed": "Fuentes verificadas y textos astronomía/cine ampliados.",
+  "pending": "Dos archivos visuales delegados a coordinador para descarga/inspección; no fotos aprobadas."
+}

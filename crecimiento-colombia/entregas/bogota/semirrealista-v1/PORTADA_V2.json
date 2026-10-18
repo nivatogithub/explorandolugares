@@ -1,0 +1,36 @@
+{
+  "destination": "bogota",
+  "role": "hero",
+  "version": 2,
+  "style": "EL-SEMI-REALISTA-1",
+  "composition": "Plaza de Bolívar a nivel peatonal, Catedral a la izquierda y Capitolio a la derecha; distinta del panorama de Medellín con Coltejer",
+  "prompt": "Use case: stylized-concept. Create a landscape 3:2 editorial hero illustration of BOGOTÁ, Colombia, EL-SEMI-REALISTA-1. This must be immediately different from an aerial Medellín skyline focused on a tall tower: NO skyscraper panorama, NO high-rise tower as subject, NO aerial view. A human-height wide perspective from the northwest edge of Plaza de Bolívar looking southeast: the recognizable pale stone neoclassical Catedral Primada with its two complete bell towers is on the LEFT/eastern side, the long low neoclassical Capitolio Nacional and its dignified colonnade is on the RIGHT/southern side. Buildings meet the perspective naturally around the broad civic paved square; do not merge them into one fantasy palace. Cathedral sober neoclassical, no Gothic spires, no extra towers. The Bolívar bronze statue and pedestal can appear at modest scale, with small groups of fully drawn expressive mildly caricatured pedestrians and a few pigeons bringing urban life. Cool bright high-altitude daylight, blue-grey clouds, neutral sandstone, slate pavement, subtle warm human clothing; faint green eastern hill context behind the cathedral, not a tropical valley. Architecture occupies most of the composition, avoid large empty pavement foreground. Sophisticated clearly hand-painted ink-and-gouache semi-realistic travel editorial style with fine linework and visible painterly texture; not a photograph, not elementary vector shapes, no yellow/sepia filter. Distinct from an elevated attraction-card overview: this is an immersive eye-level civic city portrait. No text, labels, logos, watermark, border. Preserve entire towers and silhouettes within safe crop margins. Independent representative illustration from documented building descriptions, not an exact current-state geographic reconstruction.",
+  "reference_images_uploaded": [],
+  "sources": [
+    "https://bogota.gov.co/mi-ciudad/cultura-recreacion-y-deporte/gozarse-la-septima-esto-es-todo-lo-que-puede-encontrar",
+    "https://visitbogota.co/es/que-hacer-en-bogota/cultura/catedral-primada-de-colombia"
+  ],
+  "master_sha256": "7087c45bb3b4d8ee7180af47c5224c678e0b6f763fa3843c5d7e52635de9ccbc",
+  "files": [
+    {
+      "file": "portada-v2-640.webp",
+      "bytes": 72612,
+      "sha256": "3a6ba6e3b512fdd0d0389881e053942d36ef293d9b00625325a551f18ec6db2f"
+    },
+    {
+      "file": "portada-v2-1200.webp",
+      "bytes": 214726,
+      "sha256": "7e1b93208c2fda64eee1e4f8d83f67d757cb9b2754b3fe71e3365b7789980f98"
+    }
+  ],
+  "owner_approval": "pending",
+  "production_changed": false,
+  "previous_version": "preserved_as_v1",
+  "note": "Ilustración representativa, no fotografía ni levantamiento arquitectónico exacto.",
+  "preprod_verified": {
+    "http": 200,
+    "image_loaded": true,
+    "new_file": "portada-v2-1200.webp",
+    "owner_approval": "pending"
+  }
+}

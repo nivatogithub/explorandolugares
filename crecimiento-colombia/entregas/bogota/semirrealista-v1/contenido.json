@@ -1,0 +1,2129 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "bogota",
+    "destination_type": "city",
+    "country_code": "CO",
+    "department": "Bogotá D.C.",
+    "subregion": "Distrito Capital",
+    "translations": {
+      "es": {
+        "display_name": "Bogotá",
+        "eyebrow": "Bogotá",
+        "headline": "Cultura entre los cerros",
+        "intro": "Recorre La Candelaria, descubre sus museos y contempla Bogotá desde los cerros.",
+        "meta_description": "Recorre La Candelaria, descubre sus museos y contempla Bogotá desde los cerros."
+      },
+      "en": {
+        "display_name": "Bogotá",
+        "eyebrow": "Bogotá",
+        "headline": "Culture among the hills",
+        "intro": "Explore La Candelaria, discover its museums and see Bogotá from the hills.",
+        "meta_description": "Explore La Candelaria, discover its museums and see Bogotá from the hills."
+      },
+      "pt-BR": {
+        "display_name": "Bogotá",
+        "eyebrow": "Bogotá",
+        "headline": "Cultura entre os morros",
+        "intro": "Explore La Candelaria, conheça seus museus e contemple Bogotá dos morros.",
+        "meta_description": "Explore La Candelaria, conheça seus museus e contemple Bogotá dos morros."
+      }
+    },
+    "history": {
+      "es": [
+        "El territorio de Bogotá fue habitado por los muiscas antes de la fundación española de 1538. La ciudad creció alrededor de su centro histórico y se convirtió en capital de Colombia, reuniendo instituciones, universidades y una amplia vida cultural."
+      ],
+      "en": [
+        "The Bogotá region was inhabited by the Muisca before the Spanish foundation in 1538. The city grew around its historic centre and became Colombia’s capital, bringing together institutions, universities and a broad cultural life."
+      ],
+      "pt-BR": [
+        "O território de Bogotá era habitado pelos muiscas antes da fundação espanhola de 1538. A cidade cresceu ao redor do centro histórico e tornou-se capital da Colômbia, reunindo instituições, universidades e uma ampla vida cultural."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Recorrer el centro histórico y la vida cultural de La Candelaria.",
+        "Conocer colecciones de arte y arqueología.",
+        "Descubrir Usaquén, sus calles y su gastronomía.",
+        "Combinar miradores, parques y diversidad vegetal."
+      ],
+      "en": [
+        "Explore the historic centre and La Candelaria’s cultural life.",
+        "Discover collections of art and archaeology.",
+        "Enjoy Usaquén’s streets and food scene.",
+        "Combine viewpoints, parks and plant diversity."
+      ],
+      "pt-BR": [
+        "Explorar o centro histórico e a vida cultural de La Candelaria.",
+        "Conhecer coleções de arte e arqueologia.",
+        "Descobrir as ruas e a gastronomia de Usaquén.",
+        "Combinar mirantes, parques e diversidade vegetal."
+      ]
+    },
+    "sources": {
+      "es": [
+        {
+          "label": "Secretaría de Cultura: historia",
+          "url": "https://culturarecreacionydeporte.gov.co/es/bogotanitos/bogodatos/sobre-bogota-y-su-historia",
+          "section_key": "history"
+        },
+        {
+          "label": "Banco de la República: visita Museo del Oro",
+          "url": "https://www.banrepcultural.org/bogota/museo-del-oro/visita",
+          "section_key": "places"
+        },
+        {
+          "label": "Cerro de Monserrate operador",
+          "url": "https://monserrate.co/en/",
+          "section_key": "places"
+        },
+        {
+          "label": "Jardín Botánico José Celestino Mutis",
+          "url": "https://jbb.gov.co/",
+          "section_key": "places"
+        },
+        {
+          "label": "Asociación Mercado Pulgas Usaquén",
+          "url": "https://www.mercadopulgasusaquen.com/contactanos/",
+          "section_key": "places"
+        },
+        {
+          "label": "Visit Bogotá: Chorro de Quevedo",
+          "url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/plazoleta-del-chorro-de-quevedo",
+          "section_key": "places"
+        },
+        {
+          "label": "Visit Bogotá: Parque Simón Bolívar",
+          "url": "https://visitbogota.co/es/que-hacer-en-bogota/naturaleza/parque-simon-bolivar",
+          "section_key": "places"
+        },
+        {
+          "label": "Visit Bogotá: Usaquén",
+          "url": "https://visitbogota.co/es/que-hacer-en-bogota/gastronomia/zona-gastronomica-usaquen",
+          "section_key": "places"
+        },
+        {
+          "label": "Visit Bogotá: Museo Botero",
+          "url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/museo-botero-en-bogota",
+          "section_key": "places"
+        },
+        {
+          "label": "Visit Bogotá: Torre Colpatria",
+          "url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/torre-colpatria",
+          "section_key": "places"
+        },
+        {
+          "label": "Banco de la República: estatua de Bolívar y plaza",
+          "url": "https://colecciones.banrepcultural.org/es/document/numismtica/63a069155d96b8790f342e96",
+          "section_key": "history"
+        },
+        {
+          "label": "Visit Bogotá: Plaza de Bolívar",
+          "url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/plaza-de-bolivar",
+          "section_key": "history"
+        }
+      ],
+      "en": [
+        {
+          "label": "Secretaría de Cultura: historia",
+          "url": "https://culturarecreacionydeporte.gov.co/es/bogotanitos/bogodatos/sobre-bogota-y-su-historia",
+          "section_key": "history"
+        },
+        {
+          "label": "Banco de la República: visita Museo del Oro",
+          "url": "https://www.banrepcultural.org/bogota/museo-del-oro/visita",
+          "section_key": "places"
+        },
+        {
+          "label": "Cerro de Monserrate operador",
+          "url": "https://monserrate.co/en/",
+          "section_key": "places"
+        },
+        {
+          "label": "Jardín Botánico José Celestino Mutis",
+          "url": "https://jbb.gov.co/",
+          "section_key": "places"
+        },
+        {
+          "label": "Asociación Mercado Pulgas Usaquén",
+          "url": "https://www.mercadopulgasusaquen.com/contactanos/",
+          "section_key": "places"
+        },
+        {
+          "label": "Visit Bogotá: Chorro de Quevedo",
+          "url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/plazoleta-del-chorro-de-quevedo",
+          "section_key": "places"
+        },
+        {
+          "label": "Visit Bogotá: Parque Simón Bolívar",
+          "url": "https://visitbogota.co/es/que-hacer-en-bogota/naturaleza/parque-simon-bolivar",
+          "section_key": "places"
+        },
+        {
+          "label": "Visit Bogotá: Usaquén",
+          "url": "https://visitbogota.co/es/que-hacer-en-bogota/gastronomia/zona-gastronomica-usaquen",
+          "section_key": "places"
+        },
+        {
+          "label": "Visit Bogotá: Museo Botero",
+          "url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/museo-botero-en-bogota",
+          "section_key": "places"
+        },
+        {
+          "label": "Visit Bogotá: Torre Colpatria",
+          "url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/torre-colpatria",
+          "section_key": "places"
+        },
+        {
+          "label": "Banco de la República: estatua de Bolívar y plaza",
+          "url": "https://colecciones.banrepcultural.org/es/document/numismtica/63a069155d96b8790f342e96",
+          "section_key": "history"
+        },
+        {
+          "label": "Visit Bogotá: Plaza de Bolívar",
+          "url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/plaza-de-bolivar",
+          "section_key": "history"
+        }
+      ],
+      "pt-BR": [
+        {
+          "label": "Secretaría de Cultura: historia",
+          "url": "https://culturarecreacionydeporte.gov.co/es/bogotanitos/bogodatos/sobre-bogota-y-su-historia",
+          "section_key": "history"
+        },
+        {
+          "label": "Banco de la República: visita Museo del Oro",
+          "url": "https://www.banrepcultural.org/bogota/museo-del-oro/visita",
+          "section_key": "places"
+        },
+        {
+          "label": "Cerro de Monserrate operador",
+          "url": "https://monserrate.co/en/",
+          "section_key": "places"
+        },
+        {
+          "label": "Jardín Botánico José Celestino Mutis",
+          "url": "https://jbb.gov.co/",
+          "section_key": "places"
+        },
+        {
+          "label": "Asociación Mercado Pulgas Usaquén",
+          "url": "https://www.mercadopulgasusaquen.com/contactanos/",
+          "section_key": "places"
+        },
+        {
+          "label": "Visit Bogotá: Chorro de Quevedo",
+          "url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/plazoleta-del-chorro-de-quevedo",
+          "section_key": "places"
+        },
+        {
+          "label": "Visit Bogotá: Parque Simón Bolívar",
+          "url": "https://visitbogota.co/es/que-hacer-en-bogota/naturaleza/parque-simon-bolivar",
+          "section_key": "places"
+        },
+        {
+          "label": "Visit Bogotá: Usaquén",
+          "url": "https://visitbogota.co/es/que-hacer-en-bogota/gastronomia/zona-gastronomica-usaquen",
+          "section_key": "places"
+        },
+        {
+          "label": "Visit Bogotá: Museo Botero",
+          "url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/museo-botero-en-bogota",
+          "section_key": "places"
+        },
+        {
+          "label": "Visit Bogotá: Torre Colpatria",
+          "url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/torre-colpatria",
+          "section_key": "places"
+        },
+        {
+          "label": "Banco de la República: estatua de Bolívar y plaza",
+          "url": "https://colecciones.banrepcultural.org/es/document/numismtica/63a069155d96b8790f342e96",
+          "section_key": "history"
+        },
+        {
+          "label": "Visit Bogotá: Plaza de Bolívar",
+          "url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/plaza-de-bolivar",
+          "section_key": "history"
+        }
+      ]
+    }
+  },
+  "places": [
+    {
+      "slug": "plaza",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Plaza de Bolívar",
+          "description": "El corazón cívico de Bogotá, rodeado de edificios históricos.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Plaza%20de%20Bol%C3%ADvar%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Bolívar Square",
+          "description": "Bogotá’s civic heart, surrounded by historic buildings.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Plaza%20de%20Bol%C3%ADvar%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Praça de Bolívar",
+          "description": "O coração cívico de Bogotá, cercado por edifícios históricos.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Plaza%20de%20Bol%C3%ADvar%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        }
+      }
+    },
+    {
+      "slug": "candelaria",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "La Candelaria y Chorro de Quevedo",
+          "description": "Calles coloniales, plazas y espacios culturales del centro histórico.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=La%20Candelaria%20y%20Chorro%20de%20Quevedo%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "La Candelaria and Chorro de Quevedo",
+          "description": "Colonial streets, squares and cultural spaces in the historic centre.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=La%20Candelaria%20y%20Chorro%20de%20Quevedo%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "La Candelaria e Chorro de Quevedo",
+          "description": "Ruas coloniais, praças e espaços culturais no centro histórico.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=La%20Candelaria%20y%20Chorro%20de%20Quevedo%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        }
+      }
+    },
+    {
+      "slug": "museo-oro",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Museo del Oro",
+          "description": "Orfebrería y relatos de las sociedades indígenas de Colombia.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20del%20Oro%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Gold Museum",
+          "description": "Goldwork and stories from Colombia’s Indigenous societies.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20del%20Oro%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Museu do Ouro",
+          "description": "Ourivesaria e histórias das sociedades indígenas da Colômbia.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20del%20Oro%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        }
+      }
+    },
+    {
+      "slug": "monserrate",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Cerro de Monserrate",
+          "description": "Santuario y miradores sobre la ciudad y los cerros.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Cerro%20de%20Monserrate%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Monserrate Hill",
+          "description": "A hilltop sanctuary and viewpoints over the city.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Cerro%20de%20Monserrate%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Cerro de Monserrate",
+          "description": "Santuário e mirantes sobre a cidade e os morros.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Cerro%20de%20Monserrate%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        }
+      }
+    },
+    {
+      "slug": "botero",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Museo Botero",
+          "description": "Arte colombiano e internacional en una casa colonial.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20Botero%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Botero Museum",
+          "description": "Colombian and international art in a colonial house.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20Botero%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Museu Botero",
+          "description": "Arte colombiana e internacional em uma casa colonial.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20Botero%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        }
+      }
+    },
+    {
+      "slug": "usaquen",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Usaquén: plaza, calles y mercado",
+          "description": "Un antiguo núcleo de pueblo con plaza, cafés y mercado de oficios.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Usaqu%C3%A9n%3A%20plaza%2C%20calles%20y%20mercado%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Usaquén: square, streets and market",
+          "description": "A former village centre with a square, cafés and craft market.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Usaqu%C3%A9n%3A%20plaza%2C%20calles%20y%20mercado%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Usaquén: praça, ruas e mercado",
+          "description": "Um antigo núcleo de povoado com praça, cafés e mercado de artesanato.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Usaqu%C3%A9n%3A%20plaza%2C%20calles%20y%20mercado%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        }
+      }
+    },
+    {
+      "slug": "jardin",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Jardín Botánico de Bogotá",
+          "description": "Colecciones vegetales y ecosistemas colombianos en el Tropicario.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Jard%C3%ADn%20Bot%C3%A1nico%20de%20Bogot%C3%A1%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Bogotá Botanical Garden",
+          "description": "Plant collections and Colombian ecosystems in the Tropicarium.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Jard%C3%ADn%20Bot%C3%A1nico%20de%20Bogot%C3%A1%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Jardim Botânico de Bogotá",
+          "description": "Coleções vegetais e ecossistemas colombianos no Tropicário.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Jard%C3%ADn%20Bot%C3%A1nico%20de%20Bogot%C3%A1%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        }
+      }
+    },
+    {
+      "slug": "simon",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Parque Metropolitano Simón Bolívar",
+          "description": "Lago, senderos y zonas verdes para recorrer con calma.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Parque%20Metropolitano%20Sim%C3%B3n%20Bol%C3%ADvar%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Simón Bolívar Metropolitan Park",
+          "description": "A lake, paths and green spaces for an easy stroll.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Parque%20Metropolitano%20Sim%C3%B3n%20Bol%C3%ADvar%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Parque Metropolitano Simón Bolívar",
+          "description": "Lago, caminhos e áreas verdes para passear com calma.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Parque%20Metropolitano%20Sim%C3%B3n%20Bol%C3%ADvar%2C%20Bogot%C3%A1%2C%20Colombia",
+          "external_url": "",
+          "external_label": ""
+        }
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "2026-10-17",
+    "positioning": "Ocho atractivos curados; cultura, patrimonio, barrios, parques y naturaleza.",
+    "competitors": [],
+    "potential_allies": [],
+    "business_prospects": [
+      {
+        "id": "CO-11-bogota-hotel-opera",
+        "destino_id": "CO-11-bogota",
+        "nombre": "Hotel de la Ópera",
+        "categoria": "alojamiento",
+        "fuente": "S05",
+        "url": "https://www.hotelopera.com.co/en/",
+        "fecha_consulta": "2026-10-16",
+        "direccion": "Calle 10 #5-72, La Candelaria",
+        "modalidad": "directorio_gratuito",
+        "estado": "borrador",
+        "verificacion": "existencia_documental_consultada_operacion_pendiente",
+        "representante_verificado": false,
+        "reclamado": false,
+        "alianza": false,
+        "contactado": false,
+        "idiomas": {
+          "es": "Hotel de la Ópera",
+          "en": "Hotel de la Ópera",
+          "pt-BR": "Hotel de la Ópera"
+        }
+      },
+      {
+        "id": "CO-11-bogota-tequendama-suites",
+        "destino_id": "CO-11-bogota",
+        "nombre": "Tequendama Suites Bogotá",
+        "categoria": "alojamiento",
+        "fuente": "S06",
+        "url": "https://www.hotelestequendama.com.co/tequendama-suites-bogota.html",
+        "fecha_consulta": "2026-10-16",
+        "direccion": null,
+        "modalidad": "directorio_gratuito",
+        "estado": "borrador",
+        "verificacion": "existencia_documental_consultada_operacion_pendiente",
+        "representante_verificado": false,
+        "reclamado": false,
+        "alianza": false,
+        "contactado": false,
+        "idiomas": {
+          "es": "Tequendama Suites Bogotá",
+          "en": "Tequendama Suites Bogotá",
+          "pt-BR": "Tequendama Suites Bogotá"
+        }
+      },
+      {
+        "id": "CO-11-bogota-sofitel-victoria",
+        "destino_id": "CO-11-bogota",
+        "nombre": "Sofitel Bogotá Victoria Regia",
+        "categoria": "alojamiento",
+        "fuente": "S07",
+        "url": "https://sofitelvictoriaregia.com/",
+        "fecha_consulta": "2026-10-16",
+        "direccion": null,
+        "modalidad": "directorio_gratuito",
+        "estado": "borrador",
+        "verificacion": "existencia_documental_consultada_operacion_pendiente",
+        "representante_verificado": false,
+        "reclamado": false,
+        "alianza": false,
+        "contactado": false,
+        "idiomas": {
+          "es": "Sofitel Bogotá Victoria Regia",
+          "en": "Sofitel Bogotá Victoria Regia",
+          "pt-BR": "Sofitel Bogotá Victoria Regia"
+        }
+      },
+      {
+        "id": "CO-11-bogota-el-chato",
+        "destino_id": "CO-11-bogota",
+        "nombre": "El Chato",
+        "categoria": "gastronomia",
+        "fuente": "S08",
+        "url": "https://www.elchato.co/",
+        "fecha_consulta": "2026-10-16",
+        "direccion": null,
+        "modalidad": "directorio_gratuito",
+        "estado": "borrador",
+        "verificacion": "existencia_documental_consultada_operacion_pendiente",
+        "representante_verificado": false,
+        "reclamado": false,
+        "alianza": false,
+        "contactado": false,
+        "idiomas": {
+          "es": "El Chato",
+          "en": "El Chato",
+          "pt-BR": "El Chato"
+        }
+      },
+      {
+        "id": "CO-11-bogota-leo",
+        "destino_id": "CO-11-bogota",
+        "nombre": "LEO",
+        "categoria": "gastronomia",
+        "fuente": "S09",
+        "url": "https://restauranteleo.com/",
+        "fecha_consulta": "2026-10-16",
+        "direccion": null,
+        "modalidad": "directorio_gratuito",
+        "estado": "borrador",
+        "verificacion": "existencia_documental_consultada_operacion_pendiente",
+        "representante_verificado": false,
+        "reclamado": false,
+        "alianza": false,
+        "contactado": false,
+        "idiomas": {
+          "es": "LEO",
+          "en": "LEO",
+          "pt-BR": "LEO"
+        }
+      },
+      {
+        "id": "CO-11-bogota-azahar-parque93",
+        "destino_id": "CO-11-bogota",
+        "nombre": "Azahar Parque 93",
+        "categoria": "gastronomia",
+        "fuente": "S10",
+        "url": "https://azaharcoffee.com/tiendas/",
+        "fecha_consulta": "2026-10-16",
+        "direccion": "Calle 93B #13-91",
+        "modalidad": "directorio_gratuito",
+        "estado": "borrador",
+        "verificacion": "existencia_documental_consultada_operacion_pendiente",
+        "representante_verificado": false,
+        "reclamado": false,
+        "alianza": false,
+        "contactado": false,
+        "idiomas": {
+          "es": "Azahar Parque 93",
+          "en": "Azahar Parque 93",
+          "pt-BR": "Azahar Parque 93"
+        }
+      },
+      {
+        "id": "CO-11-bogota-azahar-nogal",
+        "destino_id": "CO-11-bogota",
+        "nombre": "Azahar Nogal",
+        "categoria": "gastronomia",
+        "fuente": "S10",
+        "url": "https://azaharcoffee.com/tiendas/",
+        "fecha_consulta": "2026-10-16",
+        "direccion": "Carrera 9 #79A-23",
+        "modalidad": "directorio_gratuito",
+        "estado": "borrador",
+        "verificacion": "existencia_documental_consultada_operacion_pendiente",
+        "representante_verificado": false,
+        "reclamado": false,
+        "alianza": false,
+        "contactado": false,
+        "idiomas": {
+          "es": "Azahar Nogal",
+          "en": "Azahar Nogal",
+          "pt-BR": "Azahar Nogal"
+        }
+      },
+      {
+        "id": "CO-11-bogota-azahar-dorado",
+        "destino_id": "CO-11-bogota",
+        "nombre": "Azahar Aeropuerto El Dorado",
+        "categoria": "gastronomia",
+        "fuente": "S10",
+        "url": "https://azaharcoffee.com/tiendas/",
+        "fecha_consulta": "2026-10-16",
+        "direccion": "Av. El Dorado #103-09, puerta 7, segundo piso, zona pública",
+        "modalidad": "directorio_gratuito",
+        "estado": "borrador",
+        "verificacion": "existencia_documental_consultada_operacion_pendiente",
+        "representante_verificado": false,
+        "reclamado": false,
+        "alianza": false,
+        "contactado": false,
+        "idiomas": {
+          "es": "Azahar Aeropuerto El Dorado",
+          "en": "Azahar Aeropuerto El Dorado",
+          "pt-BR": "Azahar Aeropuerto El Dorado"
+        }
+      },
+      {
+        "id": "CO-11-bogota-mambo",
+        "destino_id": "CO-11-bogota",
+        "nombre": "Museo de Arte Moderno de Bogotá — MAMBO",
+        "categoria": "cultura",
+        "fuente": "S11",
+        "url": "https://www.mambogota.com/visitanos/",
+        "fecha_consulta": "2026-10-16",
+        "direccion": "Calle 24 #6-00",
+        "modalidad": "directorio_gratuito",
+        "estado": "borrador",
+        "verificacion": "existencia_documental_consultada_operacion_pendiente",
+        "representante_verificado": false,
+        "reclamado": false,
+        "alianza": false,
+        "contactado": false,
+        "idiomas": {
+          "es": "Museo de Arte Moderno de Bogotá — MAMBO",
+          "en": "Museo de Arte Moderno de Bogotá — MAMBO",
+          "pt-BR": "Museo de Arte Moderno de Bogotá — MAMBO"
+        }
+      },
+      {
+        "id": "CO-11-bogota-centro-artes",
+        "destino_id": "CO-11-bogota",
+        "nombre": "Centro Nacional de las Artes Delia Zapata Olivella",
+        "categoria": "cultura",
+        "fuente": "S12",
+        "url": "https://www.eneldelia.gov.co/",
+        "fecha_consulta": "2026-10-16",
+        "direccion": "Calle 11 #5-60",
+        "modalidad": "directorio_gratuito",
+        "estado": "borrador",
+        "verificacion": "existencia_documental_consultada_operacion_pendiente",
+        "representante_verificado": false,
+        "reclamado": false,
+        "alianza": false,
+        "contactado": false,
+        "idiomas": {
+          "es": "Centro Nacional de las Artes Delia Zapata Olivella",
+          "en": "Centro Nacional de las Artes Delia Zapata Olivella",
+          "pt-BR": "Centro Nacional de las Artes Delia Zapata Olivella"
+        }
+      }
+    ],
+    "acquisition_strategies": [],
+    "sources": [
+      {
+        "label": "Secretaría de Cultura: historia",
+        "url": "https://culturarecreacionydeporte.gov.co/es/bogotanitos/bogodatos/sobre-bogota-y-su-historia",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Banco de la República: visita Museo del Oro",
+        "url": "https://www.banrepcultural.org/bogota/museo-del-oro/visita",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Cerro de Monserrate operador",
+        "url": "https://monserrate.co/en/",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Jardín Botánico José Celestino Mutis",
+        "url": "https://jbb.gov.co/",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Hotel de la Ópera",
+        "url": "https://www.hotelopera.com.co/en/",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Tequendama Suites Bogotá",
+        "url": "https://www.hotelestequendama.com.co/tequendama-suites-bogota.html",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Sofitel Bogotá Victoria Regia",
+        "url": "https://sofitelvictoriaregia.com/",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "El Chato",
+        "url": "https://www.elchato.co/",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "LEO",
+        "url": "https://restauranteleo.com/",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Azahar tiendas",
+        "url": "https://azaharcoffee.com/tiendas/",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "MAMBO visita",
+        "url": "https://www.mambogota.com/visitanos/",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Centro Nacional de las Artes Delia Zapata Olivella",
+        "url": "https://www.eneldelia.gov.co/",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Commons ficha original Monserrate",
+        "url": "https://commons.wikimedia.org/w/index.php?title=File:Monserrate%2C_Bogota.jpg&oldid=1199289042",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Basílica Monserrate original",
+        "url": "https://commons.wikimedia.org/w/index.php?title=File:2017_Bogot%C3%A1_Bas%C3%ADlica_del_Se%C3%B1or_Ca%C3%ADdo_de_Monserrate.jpg&oldid=959727373",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Vista centro original",
+        "url": "https://commons.wikimedia.org/w/index.php?title=File:Vista_del_centro_historico_de_Bogot%C3%A1.jpg&oldid=1210456023",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Plaza Bolívar original",
+        "url": "https://commons.wikimedia.org/w/index.php?title=File:Plaza_de_Bol%C3%ADvar%2C_Bogot%C3%A1.JPG&oldid=1219569853",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "IDRD Ciclovía",
+        "url": "https://www.idrd.gov.co/ciclovia",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Planetario Bogotá",
+        "url": "https://planetariodebogota.gov.co/",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Museo Nacional",
+        "url": "https://www.museonacional.gov.co/Full/Paginas/default.aspx",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Museo Botero Banco República",
+        "url": "https://www.banrep.gov.co/es/sucursales/bogota-museo-botero",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Maloka programación",
+        "url": "https://maloka.org/programacion/",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Bogotá Bike Tours",
+        "url": "https://www.bogotabiketours.com/",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Quebrada La Vieja Visit Bogotá",
+        "url": "https://visitbogota.co/es/rutas-turisticas/ruta-por-el-sendero-quebrada-la-vieja",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "La Perseverancia Visit Bogotá",
+        "url": "https://www.visitbogota.co/es/atractivo/plazas-mercado/plaza-distrital-mercado-la-perseverancia-all-183",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Santa María del Lago Visit Bogotá",
+        "url": "https://visitbogota.co/es/que-hacer-en-bogota/naturaleza/parque-ecologico-distrital-de-humedal-santa-maria-del-lago",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Parque Simón Bolívar Visit Bogotá",
+        "url": "https://www.visitbogota.co/es/atractivo/escenarios/parque-simon-bolivar-all-239",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Asociación Mercado Pulgas Usaquén",
+        "url": "https://www.mercadopulgasusaquen.com/contactanos/",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "IDPC uso Plaza Bolívar",
+        "url": "https://idpc.gov.co/Transparencia/Resoluciones/2024/Manual_de_Uso_Plaza_de_Bolivar.pdf",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Foto Ciclovía original",
+        "url": "https://commons.wikimedia.org/w/index.php?title=File:Bogota_Ciclovia.JPG&oldid=1255444223",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Foto Jardín Botánico original",
+        "url": "https://commons.wikimedia.org/w/index.php?title=File:Jard%C3%ADn_Bot%C3%A1nico_Bogot%C3%A1.jpg&oldid=966217305",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Cinemateca agenda",
+        "url": "https://cinematecadebogota.gov.co/agenda/11?nid_entityreference_filter=53",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Distrito Grafiti Visit Bogotá",
+        "url": "https://visitbogota.co/en/what-to-do-in-bogota/urban/graffiti-district-puente-aranda",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Theatron operador",
+        "url": "https://www.portaltheatron.co/",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Visit Bogotá: Chorro de Quevedo",
+        "url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/plazoleta-del-chorro-de-quevedo",
+        "consulted_at": "2026-10-17"
+      },
+      {
+        "label": "Visit Bogotá: Parque Simón Bolívar",
+        "url": "https://visitbogota.co/es/que-hacer-en-bogota/naturaleza/parque-simon-bolivar",
+        "consulted_at": "2026-10-17"
+      },
+      {
+        "label": "Visit Bogotá: Usaquén",
+        "url": "https://visitbogota.co/es/que-hacer-en-bogota/gastronomia/zona-gastronomica-usaquen",
+        "consulted_at": "2026-10-17"
+      },
+      {
+        "label": "Visit Bogotá: Museo Botero",
+        "url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/museo-botero-en-bogota",
+        "consulted_at": "2026-10-17"
+      },
+      {
+        "label": "Visit Bogotá: Torre Colpatria",
+        "url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/torre-colpatria",
+        "consulted_at": "2026-10-17"
+      },
+      {
+        "label": "Banco de la República: estatua de Bolívar y plaza",
+        "url": "https://colecciones.banrepcultural.org/es/document/numismtica/63a069155d96b8790f342e96",
+        "consulted_at": "2026-10-17"
+      },
+      {
+        "label": "Visit Bogotá: Plaza de Bolívar",
+        "url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/plaza-de-bolivar",
+        "consulted_at": "2026-10-17"
+      }
+    ],
+    "notes": [
+      "Revisión local autorizada; ninguna aprobación editorial o de producción.",
+      "Portada separada de Monserrate. Ocho principales; inventario investigado20,12 fuera de selección conservados.",
+      "Fotografías provisionales con licencia y origen; ilustraciones finales no generadas.",
+      "Historia independiente en sidecar para enlazar campo existente de administración; ZIPschema2 aún no soporta historia.",
+      "Actividades y directorio investigados no integrados aún."
+    ]
+  },
+  "experiences": [
+    {
+      "id": "visita-oro",
+      "nombre": {
+        "es": "Recorrido Museo del Oro",
+        "en": "Gold Museum visit",
+        "pt-BR": "Visita ao Museu do Ouro"
+      },
+      "textos": {
+        "es": "Explora las colecciones de orfebrería del Museo del Oro.",
+        "en": "Explore the Gold Museum’s goldwork collections.",
+        "pt-BR": "Explore as coleções de ourivesaria do Museu do Ouro."
+      },
+      "clase": "editorial_autonoma",
+      "sitio_id": "bogota-museo-oro",
+      "municipio_real": "Bogotá D.C.",
+      "ubicacion": "Carrera 6 #15-88, Parque Santander",
+      "fuentes": [
+        "S02"
+      ],
+      "consulta": "2026-10-16",
+      "foto_id": null,
+      "foto_estado": "faltante",
+      "operador": null,
+      "canal_publico": null,
+      "alianza": false,
+      "vigencia_confirmada": false,
+      "registro_verificado": false,
+      "disponibilidad_confirmada": false,
+      "tarifa_confirmada": false,
+      "permisos_confirmados": false,
+      "public_status": "borrador_privado",
+      "bloqueo": null,
+      "aprobado": false,
+      "ilustracion": "no_generada",
+      "textos_anteriores_revision": {
+        "es": "Visita informativa; consultar recorrido oficial e idioma.",
+        "en": "Informational visit; check official tour and language.",
+        "pt-BR": "Visita informativa; confirme roteiro oficial e idioma."
+      },
+      "revision_contenido": "revision_editorial_sin_fotos_2026-10-17_pendiente_usuario",
+      "tipo_contenido": "experiencia",
+      "evento_con_fecha_confirmada": false,
+      "cobertura_lugar_adicional": false,
+      "revision_idiomas": "revision_editorial_asistida_no_aprobacion_humana",
+      "review_ready": true,
+      "display_translations": {
+        "es": {
+          "name": "Recorrido Museo del Oro",
+          "description": "Explora las colecciones de orfebrería del Museo del Oro.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Gold Museum visit",
+          "description": "Explore the Gold Museum’s goldwork collections.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Visita ao Museu do Ouro",
+          "description": "Explore as coleções de ourivesaria do Museu do Ouro.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        }
+      }
+    },
+    {
+      "id": "mirador",
+      "nombre": {
+        "es": "Mirador de Monserrate",
+        "en": "Monserrate viewpoint",
+        "pt-BR": "Mirante de Monserrate"
+      },
+      "textos": {
+        "es": "Sube a Monserrate y contempla la ciudad.",
+        "en": "Go up Monserrate for views across the city.",
+        "pt-BR": "Suba Monserrate e contemple a cidade."
+      },
+      "clase": "editorial_autonoma",
+      "sitio_id": "bogota-monserrate",
+      "municipio_real": "Bogotá D.C.",
+      "ubicacion": "Basílica en cima del cerro; transporte Carrera 2 Este #21-48",
+      "fuentes": [
+        "S03"
+      ],
+      "consulta": "2026-10-16",
+      "foto_id": "opcion-1-monserrate",
+      "foto_estado": "referencia_pendiente",
+      "operador": null,
+      "canal_publico": null,
+      "alianza": false,
+      "vigencia_confirmada": false,
+      "registro_verificado": false,
+      "disponibilidad_confirmada": false,
+      "tarifa_confirmada": false,
+      "permisos_confirmados": false,
+      "public_status": "borrador_privado",
+      "bloqueo": null,
+      "aprobado": false,
+      "ilustracion": "no_generada",
+      "textos_anteriores_revision": {
+        "es": "Visita independiente, transporte sujeto a operación.",
+        "en": "Independent visit, transport subject to operation.",
+        "pt-BR": "Visita independente, transporte sujeito à operação."
+      },
+      "revision_contenido": "revision_editorial_sin_fotos_2026-10-17_pendiente_usuario",
+      "tipo_contenido": "experiencia",
+      "evento_con_fecha_confirmada": false,
+      "cobertura_lugar_adicional": false,
+      "revision_idiomas": "revision_editorial_asistida_no_aprobacion_humana",
+      "review_ready": true,
+      "display_translations": {
+        "es": {
+          "name": "Mirador de Monserrate",
+          "description": "Sube a Monserrate y contempla la ciudad.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Monserrate viewpoint",
+          "description": "Go up Monserrate for views across the city.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Mirante de Monserrate",
+          "description": "Suba Monserrate e contemple a cidade.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        }
+      }
+    },
+    {
+      "id": "ambiente",
+      "nombre": {
+        "es": "Exploración Jardín Botánico",
+        "en": "Botanical Garden discovery",
+        "pt-BR": "Exploração Jardim Botânico"
+      },
+      "textos": {
+        "es": "Recorre jardines y descubre plantas de distintos ecosistemas.",
+        "en": "Walk the gardens and discover plants from different ecosystems.",
+        "pt-BR": "Percorra os jardins e descubra plantas de diferentes ecossistemas."
+      },
+      "clase": "editorial_autonoma",
+      "sitio_id": "bogota-jardin",
+      "municipio_real": "Bogotá D.C.",
+      "ubicacion": "Avenida Calle 63 #68-95",
+      "fuentes": [
+        "S04"
+      ],
+      "consulta": "2026-10-16",
+      "foto_id": "jardin-botanico",
+      "foto_estado": "referencia_pendiente",
+      "operador": null,
+      "canal_publico": null,
+      "alianza": false,
+      "vigencia_confirmada": false,
+      "registro_verificado": false,
+      "disponibilidad_confirmada": false,
+      "tarifa_confirmada": false,
+      "permisos_confirmados": false,
+      "public_status": "borrador_privado",
+      "bloqueo": null,
+      "aprobado": false,
+      "ilustracion": "no_generada",
+      "textos_anteriores_revision": {
+        "es": "Consulta programación educativa; no prometer guía o Tropicario por foto histórica.",
+        "en": "Check educational programming; historical photo does not promise a guide or current Tropicario.",
+        "pt-BR": "Consulte programação educativa; foto histórica não garante guia ou Tropicario atual."
+      },
+      "revision_contenido": "revision_editorial_sin_fotos_2026-10-17_pendiente_usuario",
+      "tipo_contenido": "experiencia",
+      "evento_con_fecha_confirmada": false,
+      "cobertura_lugar_adicional": false,
+      "revision_idiomas": "revision_editorial_asistida_no_aprobacion_humana",
+      "review_ready": true,
+      "display_translations": {
+        "es": {
+          "name": "Exploración Jardín Botánico",
+          "description": "Recorre jardines y descubre plantas de distintos ecosistemas.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Botanical Garden discovery",
+          "description": "Walk the gardens and discover plants from different ecosystems.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Exploração Jardim Botânico",
+          "description": "Percorra os jardins e descubra plantas de diferentes ecossistemas.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        }
+      }
+    },
+    {
+      "id": "arte",
+      "nombre": {
+        "es": "Arte en la Manzana Cultural",
+        "en": "Art in the Cultural Block",
+        "pt-BR": "Arte na Manzana Cultural"
+      },
+      "textos": {
+        "es": "Recorre los espacios de arte de la Manzana Cultural.",
+        "en": "Explore the art spaces of the Cultural Block.",
+        "pt-BR": "Explore os espaços de arte da Manzana Cultural."
+      },
+      "clase": "editorial_autonoma",
+      "sitio_id": "bogota-botero",
+      "municipio_real": "Bogotá D.C.",
+      "ubicacion": "Calle 11 #4-41, La Candelaria",
+      "fuentes": [
+        "S20"
+      ],
+      "consulta": "2026-10-16",
+      "foto_id": null,
+      "foto_estado": "faltante",
+      "operador": null,
+      "canal_publico": null,
+      "alianza": false,
+      "vigencia_confirmada": false,
+      "registro_verificado": false,
+      "disponibilidad_confirmada": false,
+      "tarifa_confirmada": false,
+      "permisos_confirmados": false,
+      "public_status": "borrador_privado",
+      "bloqueo": null,
+      "aprobado": false,
+      "ilustracion": "no_generada",
+      "textos_anteriores_revision": {
+        "es": "Visita al Museo Botero; confirmar acceso vigente.",
+        "en": "Visit Museo Botero; check current access.",
+        "pt-BR": "Visite o Museu Botero; confirme acesso atual."
+      },
+      "revision_contenido": "revision_editorial_sin_fotos_2026-10-17_pendiente_usuario",
+      "tipo_contenido": "experiencia",
+      "evento_con_fecha_confirmada": false,
+      "cobertura_lugar_adicional": false,
+      "revision_idiomas": "revision_editorial_asistida_no_aprobacion_humana",
+      "review_ready": true,
+      "display_translations": {
+        "es": {
+          "name": "Arte en la Manzana Cultural",
+          "description": "Recorre los espacios de arte de la Manzana Cultural.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Art in the Cultural Block",
+          "description": "Explore the art spaces of the Cultural Block.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Arte na Manzana Cultural",
+          "description": "Explore os espaços de arte da Manzana Cultural.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        }
+      }
+    },
+    {
+      "id": "ciencia",
+      "nombre": {
+        "es": "Ciencia interactiva en Maloka",
+        "en": "Interactive science at Maloka",
+        "pt-BR": "Ciência interativa na Maloka"
+      },
+      "textos": {
+        "es": "Descubre experiencias interactivas de ciencia en Maloka.",
+        "en": "Discover interactive science experiences at Maloka.",
+        "pt-BR": "Descubra experiências interativas de ciência no Maloka."
+      },
+      "clase": "editorial_autonoma",
+      "sitio_id": "bogota-maloka",
+      "municipio_real": "Bogotá D.C.",
+      "ubicacion": "Carrera 68D #24A-51, Ciudad Salitre",
+      "fuentes": [
+        "S21"
+      ],
+      "consulta": "2026-10-16",
+      "foto_id": null,
+      "foto_estado": "faltante",
+      "operador": null,
+      "canal_publico": null,
+      "alianza": false,
+      "vigencia_confirmada": false,
+      "registro_verificado": false,
+      "disponibilidad_confirmada": false,
+      "tarifa_confirmada": false,
+      "permisos_confirmados": false,
+      "public_status": "borrador_privado",
+      "bloqueo": null,
+      "aprobado": false,
+      "ilustracion": "no_generada",
+      "textos_anteriores_revision": {
+        "es": "Elegir actividad oficial y confirmar requisitos.",
+        "en": "Choose an official activity and check requirements.",
+        "pt-BR": "Escolha atividade oficial e confirme requisitos."
+      },
+      "revision_contenido": "revision_editorial_sin_fotos_2026-10-17_pendiente_usuario",
+      "tipo_contenido": "experiencia",
+      "evento_con_fecha_confirmada": false,
+      "cobertura_lugar_adicional": false,
+      "revision_idiomas": "revision_editorial_asistida_no_aprobacion_humana",
+      "review_ready": true,
+      "display_translations": {
+        "es": {
+          "name": "Ciencia interactiva en Maloka",
+          "description": "Descubre experiencias interactivas de ciencia en Maloka.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Interactive science at Maloka",
+          "description": "Discover interactive science experiences at Maloka.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Ciência interativa na Maloka",
+          "description": "Descubra experiências interativas de ciência no Maloka.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        }
+      }
+    },
+    {
+      "id": "cielo",
+      "nombre": {
+        "es": "Astronomía en el Planetario",
+        "en": "Astronomy at the Planetarium",
+        "pt-BR": "Astronomia no Planetário"
+      },
+      "textos": {
+        "es": "Acércate a la astronomía en el Planetario de Bogotá.",
+        "en": "Explore astronomy at Bogotá’s Planetarium.",
+        "pt-BR": "Conheça a astronomia no Planetário de Bogotá."
+      },
+      "clase": "editorial_autonoma",
+      "sitio_id": "bogota-planetario",
+      "municipio_real": "Bogotá D.C.",
+      "ubicacion": "Calle 26B #5-93",
+      "fuentes": [
+        "S18"
+      ],
+      "consulta": "2026-10-17",
+      "foto_id": null,
+      "foto_estado": "faltante",
+      "operador": null,
+      "canal_publico": null,
+      "alianza": false,
+      "vigencia_confirmada": false,
+      "registro_verificado": false,
+      "disponibilidad_confirmada": false,
+      "tarifa_confirmada": false,
+      "permisos_confirmados": false,
+      "public_status": "borrador_privado",
+      "bloqueo": null,
+      "aprobado": false,
+      "ilustracion": "no_generada",
+      "fuentes_complementarias": [
+        "https://planetariodebogota.gov.co/",
+        "https://planetariodebogota.gov.co/node/1564"
+      ],
+      "tipo_contenido": "experiencia",
+      "evento_con_fecha_confirmada": false,
+      "cobertura_lugar_adicional": false,
+      "revision_idiomas": "revision_editorial_asistida_no_aprobacion_humana",
+      "review_ready": true,
+      "display_translations": {
+        "es": {
+          "name": "Astronomía en el Planetario",
+          "description": "Acércate a la astronomía en el Planetario de Bogotá.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Astronomy at the Planetarium",
+          "description": "Explore astronomy at Bogotá’s Planetarium.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Astronomia no Planetário",
+          "description": "Conheça a astronomia no Planetário de Bogotá.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        }
+      }
+    },
+    {
+      "id": "gastronomia",
+      "nombre": {
+        "es": "Cocinas de La Perseverancia",
+        "en": "La Perseverancia food stalls",
+        "pt-BR": "Cozinhas de La Perseverancia"
+      },
+      "textos": {
+        "es": "Prueba cocinas tradicionales en la plaza La Perseverancia.",
+        "en": "Try traditional cooking at La Perseverancia market.",
+        "pt-BR": "Prove a cozinha tradicional na praça La Perseverancia."
+      },
+      "clase": "editorial_autonoma",
+      "sitio_id": "bogota-perseverancia",
+      "municipio_real": "Bogotá D.C.",
+      "ubicacion": "Carrera 5 #30A-30, Santa Fe",
+      "fuentes": [
+        "S24"
+      ],
+      "consulta": "2026-10-16",
+      "foto_id": null,
+      "foto_estado": "faltante",
+      "operador": null,
+      "canal_publico": null,
+      "alianza": false,
+      "vigencia_confirmada": false,
+      "registro_verificado": false,
+      "disponibilidad_confirmada": false,
+      "tarifa_confirmada": false,
+      "permisos_confirmados": false,
+      "public_status": "borrador_privado",
+      "bloqueo": null,
+      "aprobado": false,
+      "ilustracion": "no_generada",
+      "textos_anteriores_revision": {
+        "es": "Paseo editorial por mercado, consumos y horarios con cada negocio.",
+        "en": "Editorial market visit; purchases and hours depend on each vendor.",
+        "pt-BR": "Passeio editorial pelo mercado; consumo e horários com cada negócio."
+      },
+      "revision_contenido": "revision_editorial_sin_fotos_2026-10-17_pendiente_usuario",
+      "tipo_contenido": "experiencia",
+      "evento_con_fecha_confirmada": false,
+      "cobertura_lugar_adicional": false,
+      "revision_idiomas": "revision_editorial_asistida_no_aprobacion_humana",
+      "review_ready": true,
+      "display_translations": {
+        "es": {
+          "name": "Cocinas de La Perseverancia",
+          "description": "Prueba cocinas tradicionales en la plaza La Perseverancia.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "La Perseverancia food stalls",
+          "description": "Try traditional cooking at La Perseverancia market.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Cozinhas de La Perseverancia",
+          "description": "Prove a cozinha tradicional na praça La Perseverancia.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        }
+      }
+    },
+    {
+      "id": "mercado",
+      "nombre": {
+        "es": "Oficios y mercado en Usaquén",
+        "en": "Crafts and market in Usaquén",
+        "pt-BR": "Artesanato e mercado em Usaquén"
+      },
+      "textos": {
+        "es": "Conoce artesanías y oficios en el mercado de Usaquén.",
+        "en": "Discover crafts and local trades at Usaquén market.",
+        "pt-BR": "Conheça artesanato e ofícios no mercado de Usaquén."
+      },
+      "clase": "editorial_autonoma",
+      "sitio_id": "bogota-usaquen",
+      "municipio_real": "Bogotá D.C.",
+      "ubicacion": "Carrera 6A entre calles 119–120A",
+      "fuentes": [
+        "S27"
+      ],
+      "consulta": "2026-10-16",
+      "foto_id": null,
+      "foto_estado": "faltante",
+      "operador": null,
+      "canal_publico": null,
+      "alianza": false,
+      "vigencia_confirmada": false,
+      "registro_verificado": false,
+      "disponibilidad_confirmada": false,
+      "tarifa_confirmada": false,
+      "permisos_confirmados": false,
+      "public_status": "borrador_privado",
+      "bloqueo": null,
+      "aprobado": false,
+      "ilustracion": "no_generada",
+      "textos_anteriores_revision": {
+        "es": "Recorrer mercado según jornada confirmada por asociación.",
+        "en": "Visit the market on an association-confirmed session.",
+        "pt-BR": "Visite o mercado em jornada confirmada pela associação."
+      },
+      "revision_contenido": "revision_editorial_sin_fotos_2026-10-17_pendiente_usuario",
+      "tipo_contenido": "experiencia",
+      "evento_con_fecha_confirmada": false,
+      "cobertura_lugar_adicional": false,
+      "revision_idiomas": "revision_editorial_asistida_no_aprobacion_humana",
+      "review_ready": true,
+      "display_translations": {
+        "es": {
+          "name": "Oficios y mercado en Usaquén",
+          "description": "Conoce artesanías y oficios en el mercado de Usaquén.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Crafts and market in Usaquén",
+          "description": "Discover crafts and local trades at Usaquén market.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Artesanato e mercado em Usaquén",
+          "description": "Conheça artesanato e ofícios no mercado de Usaquén.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        }
+      }
+    },
+    {
+      "id": "ciclovia",
+      "nombre": {
+        "es": "Ciclovía recreativa",
+        "en": "Recreational Ciclovía",
+        "pt-BR": "Ciclovía recreativa"
+      },
+      "textos": {
+        "es": "Pedalea o camina por las vías de la Ciclovía.",
+        "en": "Cycle or walk along the Ciclovía routes.",
+        "pt-BR": "Pedale ou caminhe pelas vias da Ciclovía."
+      },
+      "clase": "editorial_autonoma",
+      "sitio_id": null,
+      "municipio_real": "Bogotá D.C.",
+      "ubicacion": "Red de corredores del programa distrital Ciclovía; elegir tramo en mapa oficial vigente. No corresponde al punto de encuentro BikeTours.",
+      "fuentes": [
+        "S17"
+      ],
+      "consulta": "2026-10-17",
+      "foto_id": "actividad-ciclovia",
+      "foto_estado": "referencia_historica_del_programa_no_operador",
+      "operador": null,
+      "canal_publico": null,
+      "alianza": false,
+      "vigencia_confirmada": false,
+      "registro_verificado": false,
+      "disponibilidad_confirmada": false,
+      "tarifa_confirmada": false,
+      "permisos_confirmados": false,
+      "public_status": "borrador_privado",
+      "bloqueo": null,
+      "aprobado": false,
+      "ilustracion": "no_generada",
+      "fuentes_complementarias": [
+        "https://www.idrd.gov.co/ciclovia/inicio"
+      ],
+      "tipo_contenido": "experiencia",
+      "evento_con_fecha_confirmada": false,
+      "cobertura_lugar_adicional": false,
+      "revision_idiomas": "revision_editorial_asistida_no_aprobacion_humana",
+      "review_ready": true,
+      "display_translations": {
+        "es": {
+          "name": "Ciclovía recreativa",
+          "description": "Pedalea o camina por las vías de la Ciclovía.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Recreational Ciclovía",
+          "description": "Cycle or walk along the Ciclovía routes.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Ciclovía recreativa",
+          "description": "Pedale ou caminhe pelas vias da Ciclovía.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        }
+      }
+    },
+    {
+      "id": "bike-tour",
+      "nombre": {
+        "es": "Recorrido en bicicleta: Bogotá Bike Tours",
+        "en": "Bicycle tour: Bogotá Bike Tours",
+        "pt-BR": "Passeio de bicicleta: Bogotá Bike Tours"
+      },
+      "textos": {
+        "es": "Explora Bogotá en bicicleta; consulta rutas y condiciones.",
+        "en": "Explore Bogotá by bicycle; check routes and conditions.",
+        "pt-BR": "Explore Bogotá de bicicleta; consulte rotas e condições."
+      },
+      "clase": "oferta_documentada_operador",
+      "sitio_id": null,
+      "municipio_real": "Bogotá D.C.",
+      "ubicacion": "Punto operador Carrera 3 #12-42, La Candelaria; recorrido exacto por confirmar",
+      "fuentes": [
+        "S22"
+      ],
+      "consulta": "2026-10-17",
+      "foto_id": null,
+      "foto_estado": "faltante",
+      "operador": "Bogotá Bike Tours",
+      "canal_publico": "https://www.bogotabiketours.com/service-page/bike-tour-english-or-spanish",
+      "alianza": false,
+      "vigencia_confirmada": false,
+      "registro_verificado": false,
+      "disponibilidad_confirmada": false,
+      "tarifa_confirmada": false,
+      "permisos_confirmados": false,
+      "public_status": "borrador_privado",
+      "bloqueo": null,
+      "aprobado": false,
+      "ilustracion": "no_generada",
+      "tipo_contenido": "experiencia",
+      "evento_con_fecha_confirmada": false,
+      "cobertura_lugar_adicional": false,
+      "revision_idiomas": "revision_editorial_asistida_no_aprobacion_humana",
+      "review_ready": true,
+      "display_translations": {
+        "es": {
+          "name": "Recorrido en bicicleta: Bogotá Bike Tours",
+          "description": "Explora Bogotá en bicicleta; consulta rutas y condiciones.",
+          "map_url": "",
+          "external_url": "https://www.bogotabiketours.com/service-page/bike-tour-english-or-spanish",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Bicycle tour: Bogotá Bike Tours",
+          "description": "Explore Bogotá by bicycle; check routes and conditions.",
+          "map_url": "",
+          "external_url": "https://www.bogotabiketours.com/service-page/bike-tour-english-or-spanish",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Passeio de bicicleta: Bogotá Bike Tours",
+          "description": "Explore Bogotá de bicicleta; consulte rotas e condições.",
+          "map_url": "",
+          "external_url": "https://www.bogotabiketours.com/service-page/bike-tour-english-or-spanish",
+          "external_label": ""
+        }
+      }
+    },
+    {
+      "id": "graffiti-bike",
+      "nombre": {
+        "es": "Graffiti Bike Tour: Bogotá Bike Tours",
+        "en": "Graffiti Bike Tour: Bogotá Bike Tours",
+        "pt-BR": "Graffiti Bike Tour: Bogotá Bike Tours"
+      },
+      "textos": {
+        "es": "Descubre arte urbano en un recorrido en bicicleta.",
+        "en": "Discover street art on a bicycle tour.",
+        "pt-BR": "Descubra arte urbana em um passeio de bicicleta."
+      },
+      "clase": "oferta_documentada_operador",
+      "sitio_id": null,
+      "municipio_real": "Bogotá D.C.",
+      "ubicacion": "Punto operador Carrera 3 #12-42, La Candelaria; recorrido exacto por confirmar",
+      "fuentes": [
+        "S22"
+      ],
+      "consulta": "2026-10-16",
+      "foto_id": null,
+      "foto_estado": "faltante",
+      "operador": "Bogotá Bike Tours",
+      "canal_publico": "https://www.bogotabiketours.com/",
+      "alianza": false,
+      "vigencia_confirmada": false,
+      "registro_verificado": false,
+      "disponibilidad_confirmada": false,
+      "tarifa_confirmada": false,
+      "permisos_confirmados": false,
+      "public_status": "borrador_privado",
+      "bloqueo": null,
+      "aprobado": false,
+      "ilustracion": "no_generada",
+      "textos_anteriores_revision": {
+        "es": "Oferta documentada del operador; no usar Ciclovía como foto de este recorrido.",
+        "en": "Documented operator offer; do not use Ciclovía as a photo of this tour.",
+        "pt-BR": "Oferta documentada do operador; não usar Ciclovía como foto deste passeio."
+      },
+      "revision_contenido": "revision_editorial_sin_fotos_2026-10-17_pendiente_usuario",
+      "tipo_contenido": "experiencia",
+      "evento_con_fecha_confirmada": false,
+      "cobertura_lugar_adicional": false,
+      "revision_idiomas": "revision_editorial_asistida_no_aprobacion_humana",
+      "review_ready": true,
+      "display_translations": {
+        "es": {
+          "name": "Graffiti Bike Tour: Bogotá Bike Tours",
+          "description": "Descubre arte urbano en un recorrido en bicicleta.",
+          "map_url": "",
+          "external_url": "https://www.bogotabiketours.com/",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Graffiti Bike Tour: Bogotá Bike Tours",
+          "description": "Discover street art on a bicycle tour.",
+          "map_url": "",
+          "external_url": "https://www.bogotabiketours.com/",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Graffiti Bike Tour: Bogotá Bike Tours",
+          "description": "Descubra arte urbana em um passeio de bicicleta.",
+          "map_url": "",
+          "external_url": "https://www.bogotabiketours.com/",
+          "external_label": ""
+        }
+      }
+    },
+    {
+      "id": "cooking",
+      "nombre": {
+        "es": "Clase de cocina: Bogotá Bike Tours",
+        "en": "Cooking class: Bogotá Bike Tours",
+        "pt-BR": "Aula de cozinha: Bogotá Bike Tours"
+      },
+      "textos": {
+        "es": "Conoce ingredientes y técnicas de la cocina local.",
+        "en": "Discover ingredients and techniques from local cooking.",
+        "pt-BR": "Conheça ingredientes e técnicas da cozinha local."
+      },
+      "clase": "oferta_documentada_operador",
+      "sitio_id": null,
+      "municipio_real": "Bogotá D.C.",
+      "ubicacion": "Punto operador Carrera 3 #12-42, La Candelaria; recorrido exacto por confirmar",
+      "fuentes": [
+        "S22"
+      ],
+      "consulta": "2026-10-16",
+      "foto_id": null,
+      "foto_estado": "faltante",
+      "operador": "Bogotá Bike Tours",
+      "canal_publico": "https://www.bogotabiketours.com/",
+      "alianza": false,
+      "vigencia_confirmada": false,
+      "registro_verificado": false,
+      "disponibilidad_confirmada": false,
+      "tarifa_confirmada": false,
+      "permisos_confirmados": false,
+      "public_status": "borrador_privado",
+      "bloqueo": null,
+      "aprobado": false,
+      "ilustracion": "no_generada",
+      "tipo_contenido": "experiencia",
+      "evento_con_fecha_confirmada": false,
+      "cobertura_lugar_adicional": false,
+      "revision_idiomas": "revision_editorial_asistida_no_aprobacion_humana",
+      "review_ready": true,
+      "display_translations": {
+        "es": {
+          "name": "Clase de cocina: Bogotá Bike Tours",
+          "description": "Conoce ingredientes y técnicas de la cocina local.",
+          "map_url": "",
+          "external_url": "https://www.bogotabiketours.com/",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Cooking class: Bogotá Bike Tours",
+          "description": "Discover ingredients and techniques from local cooking.",
+          "map_url": "",
+          "external_url": "https://www.bogotabiketours.com/",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Aula de cozinha: Bogotá Bike Tours",
+          "description": "Conheça ingredientes e técnicas da cozinha local.",
+          "map_url": "",
+          "external_url": "https://www.bogotabiketours.com/",
+          "external_label": ""
+        }
+      }
+    },
+    {
+      "id": "senderismo",
+      "nombre": {
+        "es": "Senderismo Quebrada La Vieja",
+        "en": "Quebrada La Vieja hiking",
+        "pt-BR": "Trilha Quebrada La Vieja"
+      },
+      "textos": {
+        "es": "Candidato sujeto a reserva EAAB, tramo y apertura actuales.",
+        "en": "Candidate subject to EAAB booking and current section opening.",
+        "pt-BR": "Candidato sujeito à reserva EAAB e abertura do trecho."
+      },
+      "clase": "candidato_por_validar",
+      "sitio_id": "bogota-quebrada",
+      "municipio_real": "Bogotá D.C.",
+      "ubicacion": "Ingreso Calle 71 Carrera 2 Este/Circunvalar, Chapinero",
+      "fuentes": [
+        "S23"
+      ],
+      "consulta": "2026-10-16",
+      "foto_id": null,
+      "foto_estado": "faltante",
+      "operador": null,
+      "canal_publico": null,
+      "alianza": false,
+      "vigencia_confirmada": false,
+      "registro_verificado": false,
+      "disponibilidad_confirmada": false,
+      "tarifa_confirmada": false,
+      "permisos_confirmados": false,
+      "public_status": "oculto",
+      "bloqueo": "No se comprobó cupo/apertura actual; no ofrecer actividad activa.",
+      "aprobado": false,
+      "ilustracion": "no_generada",
+      "tipo_contenido": "experiencia",
+      "evento_con_fecha_confirmada": false,
+      "cobertura_lugar_adicional": false,
+      "revision_idiomas": "revision_editorial_asistida_no_aprobacion_humana",
+      "review_ready": false,
+      "display_translations": {
+        "es": {
+          "name": "Senderismo Quebrada La Vieja",
+          "description": "Candidato sujeto a reserva EAAB, tramo y apertura actuales.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Quebrada La Vieja hiking",
+          "description": "Candidate subject to EAAB booking and current section opening.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Trilha Quebrada La Vieja",
+          "description": "Candidato sujeito à reserva EAAB e abertura do trecho.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        }
+      }
+    },
+    {
+      "id": "aves",
+      "nombre": {
+        "es": "Observación de aves Santa María del Lago",
+        "en": "Santa María del Lago birdwatching",
+        "pt-BR": "Observação de aves Santa María del Lago"
+      },
+      "textos": {
+        "es": "Candidato; validar entidad gestora, acceso y guía si aplica.",
+        "en": "Candidate; check managing authority, access and guide if applicable.",
+        "pt-BR": "Candidato; verificar gestor, acesso e guia se aplicável."
+      },
+      "clase": "candidato_por_validar",
+      "sitio_id": "bogota-humedal",
+      "municipio_real": "Bogotá D.C.",
+      "ubicacion": "Engativá; dirección de ingreso exacta pendiente",
+      "fuentes": [
+        "S25"
+      ],
+      "consulta": "2026-10-16",
+      "foto_id": null,
+      "foto_estado": "faltante",
+      "operador": null,
+      "canal_publico": null,
+      "alianza": false,
+      "vigencia_confirmada": false,
+      "registro_verificado": false,
+      "disponibilidad_confirmada": false,
+      "tarifa_confirmada": false,
+      "permisos_confirmados": false,
+      "public_status": "oculto",
+      "bloqueo": "Fuente turística contiene afirmaciones dudosas; contraste pendiente.",
+      "aprobado": false,
+      "ilustracion": "no_generada",
+      "tipo_contenido": "experiencia",
+      "evento_con_fecha_confirmada": false,
+      "cobertura_lugar_adicional": false,
+      "revision_idiomas": "revision_editorial_asistida_no_aprobacion_humana",
+      "review_ready": false,
+      "display_translations": {
+        "es": {
+          "name": "Observación de aves Santa María del Lago",
+          "description": "Candidato; validar entidad gestora, acceso y guía si aplica.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Santa María del Lago birdwatching",
+          "description": "Candidate; check managing authority, access and guide if applicable.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Observação de aves Santa María del Lago",
+          "description": "Candidato; verificar gestor, acesso e guia se aplicável.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        }
+      }
+    },
+    {
+      "id": "cine",
+      "nombre": {
+        "es": "Una función de cine",
+        "en": "A film screening",
+        "pt-BR": "Uma sessão de cinema"
+      },
+      "textos": {
+        "es": "Consulta la programación de la Cinemateca de Bogotá.",
+        "en": "Check the programme at Bogotá’s Cinematheque.",
+        "pt-BR": "Consulte a programação da Cinemateca de Bogotá."
+      },
+      "clase": "editorial_autonoma",
+      "sitio_id": "bogota-cinemateca",
+      "municipio_real": "Bogotá D.C.",
+      "ubicacion": "Carrera 3 #19-10",
+      "fuentes": [
+        "S31"
+      ],
+      "consulta": "2026-10-17",
+      "foto_id": null,
+      "foto_estado": "faltante",
+      "operador": null,
+      "canal_publico": null,
+      "alianza": false,
+      "vigencia_confirmada": false,
+      "registro_verificado": false,
+      "disponibilidad_confirmada": false,
+      "tarifa_confirmada": false,
+      "permisos_confirmados": false,
+      "public_status": "borrador_privado",
+      "bloqueo": null,
+      "aprobado": false,
+      "ilustracion": "no_generada",
+      "fuentes_complementarias": [
+        "https://cinematecadebogota.gov.co/lineas/formas-de-ver"
+      ],
+      "tipo_contenido": "experiencia",
+      "evento_con_fecha_confirmada": false,
+      "cobertura_lugar_adicional": false,
+      "revision_idiomas": "revision_editorial_asistida_no_aprobacion_humana",
+      "review_ready": true,
+      "display_translations": {
+        "es": {
+          "name": "Una función de cine",
+          "description": "Consulta la programación de la Cinemateca de Bogotá.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "A film screening",
+          "description": "Check the programme at Bogotá’s Cinematheque.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Uma sessão de cinema",
+          "description": "Consulte a programação da Cinemateca de Bogotá.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        }
+      }
+    },
+    {
+      "id": "arte-urbano",
+      "nombre": {
+        "es": "Paseo de arte urbano",
+        "en": "Urban art walk",
+        "pt-BR": "Passeio de arte urbana"
+      },
+      "textos": {
+        "es": "Recorre murales y expresiones de arte urbano.",
+        "en": "Explore murals and street art.",
+        "pt-BR": "Explore murais e expressões de arte urbana."
+      },
+      "clase": "editorial_autonoma",
+      "sitio_id": "bogota-grafiti",
+      "municipio_real": "Bogotá D.C.",
+      "ubicacion": "Sector Avenida Américas Carrera 53A; recorrido exacto pendiente",
+      "fuentes": [
+        "S32"
+      ],
+      "consulta": "2026-10-16",
+      "foto_id": null,
+      "foto_estado": "faltante",
+      "operador": null,
+      "canal_publico": null,
+      "alianza": false,
+      "vigencia_confirmada": false,
+      "registro_verificado": false,
+      "disponibilidad_confirmada": false,
+      "tarifa_confirmada": false,
+      "permisos_confirmados": false,
+      "public_status": "borrador_privado",
+      "bloqueo": null,
+      "aprobado": false,
+      "ilustracion": "no_generada",
+      "textos_anteriores_revision": {
+        "es": "Propuesta editorial, no tour del operador BikeTours; circuito por confirmar.",
+        "en": "Editorial proposal, not a BikeTours tour; route needs confirmation.",
+        "pt-BR": "Proposta editorial, não passeio BikeTours; roteiro por confirmar."
+      },
+      "revision_contenido": "revision_editorial_sin_fotos_2026-10-17_pendiente_usuario",
+      "tipo_contenido": "experiencia",
+      "evento_con_fecha_confirmada": false,
+      "cobertura_lugar_adicional": false,
+      "revision_idiomas": "revision_editorial_asistida_no_aprobacion_humana",
+      "review_ready": true,
+      "display_translations": {
+        "es": {
+          "name": "Paseo de arte urbano",
+          "description": "Recorre murales y expresiones de arte urbano.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Urban art walk",
+          "description": "Explore murals and street art.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Passeio de arte urbana",
+          "description": "Explore murais e expressões de arte urbana.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        }
+      }
+    },
+    {
+      "id": "noche",
+      "nombre": {
+        "es": "Vida nocturna Theatron",
+        "en": "Theatron nightlife",
+        "pt-BR": "Vida noturna Theatron"
+      },
+      "textos": {
+        "es": "Candidato oculto, admisión y programación pendientes.",
+        "en": "Hidden candidate; admission and programme unverified.",
+        "pt-BR": "Candidato oculto; admissão e programação por verificar."
+      },
+      "clase": "candidato_por_validar",
+      "sitio_id": "bogota-theatron",
+      "municipio_real": "Bogotá D.C.",
+      "ubicacion": "Bogotá, Chapinero; dirección exacta pendiente",
+      "fuentes": [
+        "S33"
+      ],
+      "consulta": "2026-10-16",
+      "foto_id": null,
+      "foto_estado": "faltante",
+      "operador": null,
+      "canal_publico": null,
+      "alianza": false,
+      "vigencia_confirmada": false,
+      "registro_verificado": false,
+      "disponibilidad_confirmada": false,
+      "tarifa_confirmada": false,
+      "permisos_confirmados": false,
+      "public_status": "oculto",
+      "bloqueo": "datos operativos y ubicación final pendientes",
+      "aprobado": false,
+      "ilustracion": "no_generada",
+      "tipo_contenido": "experiencia",
+      "evento_con_fecha_confirmada": false,
+      "cobertura_lugar_adicional": false,
+      "revision_idiomas": "revision_editorial_asistida_no_aprobacion_humana",
+      "review_ready": false,
+      "display_translations": {
+        "es": {
+          "name": "Vida nocturna Theatron",
+          "description": "Candidato oculto, admisión y programación pendientes.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Theatron nightlife",
+          "description": "Hidden candidate; admission and programme unverified.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Vida noturna Theatron",
+          "description": "Candidato oculto; admissão e programação por verificar.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        }
+      }
+    },
+    {
+      "id": "artes-escenicas",
+      "nombre": {
+        "es": "Una función de artes escénicas",
+        "en": "A performing arts event",
+        "pt-BR": "Uma apresentação de artes cênicas"
+      },
+      "textos": {
+        "es": "Elige una función de teatro, música o danza.",
+        "en": "Choose a theatre, music or dance performance.",
+        "pt-BR": "Escolha uma apresentação de teatro, música ou dança."
+      },
+      "clase": "editorial_autonoma",
+      "sitio_id": "bogota-delia",
+      "municipio_real": "Bogotá D.C.",
+      "ubicacion": "Calle 11 #5-60 Centro Nacional de las Artes; Teatro Colón Calle 10 #5-32, verificar sala",
+      "fuentes": [
+        "S12"
+      ],
+      "consulta": "2026-10-16",
+      "foto_id": null,
+      "foto_estado": "faltante",
+      "operador": null,
+      "canal_publico": null,
+      "alianza": false,
+      "vigencia_confirmada": false,
+      "registro_verificado": false,
+      "disponibilidad_confirmada": false,
+      "tarifa_confirmada": false,
+      "permisos_confirmados": false,
+      "public_status": "borrador_privado",
+      "bloqueo": null,
+      "aprobado": false,
+      "ilustracion": "no_generada",
+      "tipo_contenido": "experiencia",
+      "evento_con_fecha_confirmada": false,
+      "cobertura_lugar_adicional": false,
+      "revision_idiomas": "revision_editorial_asistida_no_aprobacion_humana",
+      "review_ready": true,
+      "display_translations": {
+        "es": {
+          "name": "Una función de artes escénicas",
+          "description": "Elige una función de teatro, música o danza.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "A performing arts event",
+          "description": "Choose a theatre, music or dance performance.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Uma apresentação de artes cênicas",
+          "description": "Escolha uma apresentação de teatro, música ou dança.",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        }
+      }
+    }
+  ],
+  "editorial_selection": [
+    "plaza",
+    "candelaria",
+    "museo-oro",
+    "monserrate",
+    "botero",
+    "usaquen",
+    "jardin",
+    "simon"
+  ],
+  "scope": "private_local_preprod",
+  "production_authorized": false
+}

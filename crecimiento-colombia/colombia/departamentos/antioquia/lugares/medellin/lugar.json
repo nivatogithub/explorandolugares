@@ -2,16 +2,16 @@
   "schema_version": 1,
   "place_id": "CO-05-medellin",
   "department_id": "CO-05",
-  "state": "planned",
-  "owner": null,
+  "state": "researching",
+  "owner": "Lugar 3",
   "reviewer": null,
   "branch": "lugar/CO/antioquia/medellin",
   "pr_url": null,
-  "base_commit": null,
+  "base_commit": "7878eab",
   "blockers": [
     "Asignar responsable y auditar fuentes, permisos y estado real"
   ],
-  "next_action": "Completar PROCESO.md y evidencia específica del lugar",
+  "next_action": "Investigar destino completo en rama independiente; entrega privada, revisión humana pendiente.",
   "gates": {
     "identidad": {
       "passed": false,

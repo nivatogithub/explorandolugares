@@ -1,0 +1,223 @@
+{
+  "destination_id": "CO-05-medellin",
+  "physical_places": [
+    {
+      "id": "museo-antioquia",
+      "role": "physical_place"
+    },
+    {
+      "id": "jardin-botanico",
+      "role": "physical_place"
+    },
+    {
+      "id": "parque-explora",
+      "role": "physical_place"
+    },
+    {
+      "id": "mamm",
+      "role": "physical_place"
+    },
+    {
+      "id": "coltejer",
+      "role": "physical_place"
+    },
+    {
+      "id": "pueblito-paisa",
+      "role": "physical_place"
+    },
+    {
+      "id": "pies-descalzos",
+      "role": "physical_place"
+    },
+    {
+      "id": "edificio-epm",
+      "role": "physical_place"
+    },
+    {
+      "id": "catedral-metropolitana",
+      "role": "physical_place"
+    },
+    {
+      "id": "candelaria",
+      "role": "physical_place"
+    },
+    {
+      "id": "parque-lleras",
+      "role": "physical_place"
+    },
+    {
+      "id": "parque-poblado",
+      "role": "physical_place"
+    },
+    {
+      "id": "avenida-jardin",
+      "role": "physical_place"
+    },
+    {
+      "id": "plaza-botero",
+      "role": "physical_place"
+    },
+    {
+      "id": "palacio-cultura",
+      "role": "physical_place"
+    },
+    {
+      "id": "parque-bolivar",
+      "role": "physical_place"
+    },
+    {
+      "id": "parque-berrio",
+      "role": "physical_place"
+    },
+    {
+      "id": "junin",
+      "role": "physical_place"
+    },
+    {
+      "id": "provenza",
+      "role": "physical_place"
+    },
+    {
+      "id": "via-primavera",
+      "role": "physical_place"
+    },
+    {
+      "id": "manila",
+      "role": "physical_place"
+    },
+    {
+      "id": "el-hueco",
+      "role": "physical_place"
+    },
+    {
+      "id": "ciudad-rio",
+      "role": "physical_place"
+    },
+    {
+      "id": "planetario",
+      "role": "physical_place"
+    },
+    {
+      "id": "casa-memoria",
+      "role": "physical_place"
+    },
+    {
+      "id": "comuna13",
+      "role": "physical_place"
+    },
+    {
+      "id": "museo-castillo",
+      "role": "physical_place"
+    },
+    {
+      "id": "arvi",
+      "role": "physical_place"
+    }
+  ],
+  "experiences": [
+    {
+      "id": "museo-antioquia-visita",
+      "role": "experience",
+      "place_ids": [
+        "museo-antioquia"
+      ],
+      "coverage_counting": "no_suma_otro_lugar"
+    },
+    {
+      "id": "jardin-botanico-visita",
+      "role": "experience",
+      "place_ids": [
+        "jardin-botanico"
+      ],
+      "coverage_counting": "no_suma_otro_lugar"
+    },
+    {
+      "id": "parque-explora-visita",
+      "role": "experience",
+      "place_ids": [
+        "parque-explora"
+      ],
+      "coverage_counting": "no_suma_otro_lugar"
+    },
+    {
+      "id": "mamm-visita",
+      "role": "experience",
+      "place_ids": [
+        "mamm"
+      ],
+      "coverage_counting": "no_suma_otro_lugar"
+    },
+    {
+      "id": "paseo-centro",
+      "role": "experience",
+      "place_ids": [
+        "coltejer",
+        "parque-berrio",
+        "junin",
+        "candelaria",
+        "catedral-metropolitana"
+      ],
+      "coverage_counting": "no_suma_otro_lugar"
+    },
+    {
+      "id": "laureles-cafes",
+      "role": "experience",
+      "place_ids": [
+        "avenida-jardin"
+      ],
+      "coverage_counting": "no_suma_otro_lugar"
+    },
+    {
+      "id": "epm-visita",
+      "role": "experience",
+      "place_ids": [
+        "edificio-epm"
+      ],
+      "coverage_counting": "no_suma_otro_lugar"
+    },
+    {
+      "id": "city-comuna13",
+      "role": "experience",
+      "place_ids": [
+        "comuna13",
+        "plaza-botero",
+        "pueblito-paisa",
+        "pies-descalzos"
+      ],
+      "coverage_counting": "no_suma_otro_lugar"
+    },
+    {
+      "id": "jerico-helicoptero-referencia",
+      "role": "hidden_external_candidate",
+      "place_ids": [],
+      "coverage_counting": "no_suma_otro_lugar"
+    },
+    {
+      "id": "jerico-parapente-referencia",
+      "role": "hidden_external_candidate",
+      "place_ids": [],
+      "coverage_counting": "no_suma_otro_lugar"
+    },
+    {
+      "id": "metro-metrocable-recorrido",
+      "role": "mobility_experience",
+      "place_ids": [],
+      "coverage_counting": "no_suma_otro_lugar"
+    }
+  ],
+  "events": [],
+  "top8_current_ids": [
+    "parque-explora",
+    "pueblito-paisa",
+    "jardin-botanico",
+    "comuna13",
+    "museo-antioquia",
+    "arvi",
+    "catedral-metropolitana",
+    "pies-descalzos"
+  ],
+  "top8_changes_applied": false,
+  "metro_role": "mobility_experience_not_ninth_place",
+  "audit_preserved": "AUDITORIA_TOP8.json/.md, propuesta histórica con Metro; requiere nuevo corte solo lugares",
+  "photography_workflow": "owner_supplies_urls_no_search_download_generation"
+}

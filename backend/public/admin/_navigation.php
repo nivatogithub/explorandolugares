@@ -16,6 +16,10 @@ $activeAdminItem = match (true) {
     $adminPath === 'usuarios.php' => 'accounts',
     $adminPath === 'suscripciones.php' => 'subscriptions',
     $adminPath === 'destinos.php' || str_starts_with($adminPath, 'paquete-destino') => 'destinations',
+    $adminPath === 'reportes.php' => 'reports',
+    $adminPath === 'solicitudes-publicas.php' => 'public-requests',
+    $adminPath === 'medios-pago.php' => 'payment-settings',
+    $adminPath === 'configuracion.php' => 'configuration',
     $adminPath === 'base-datos.php' => 'database',
     $adminPath === 'inversionistas.php' => 'investor-intelligence',
     $adminPath === 'costos.php' => 'costs',
@@ -25,9 +29,10 @@ $activeAdminItem = match (true) {
 <link rel="stylesheet" href="../assets/admin-navigation.css?v=20261017-2">
 <?php require __DIR__.'/../_account-header.php'; ?>
 <aside class="admin-sidebar admin-sidebar-with-system" aria-label="Navegación de administración">
-  <a class="admin-sidebar-brand" href="index.php">Explorando <strong>Lugares</strong><small>Administración</small></a>
+  <a class="admin-sidebar-brand" href="index.php"><img src="/assets/brand/explorando-lugares-logo-v2-transparent.png" width="76" height="76" alt=""><span>Explorando <strong>Lugares</strong><small>Administración</small></span></a>
   <nav>
     <section><h2>Operación</h2>
+      <a href="solicitudes-publicas.php" <?= $activeAdminItem === 'public-requests' ? 'aria-current="page"' : '' ?>>Solicitudes de usuarios</a>
       <a href="index.php?tab=solicitudes" <?= $activeAdminItem === 'requests' ? 'aria-current="page"' : '' ?>>Solicitudes de participación</a>
       <a href="negocios.php" <?= $activeAdminItem === 'businesses' ? 'aria-current="page"' : '' ?>>Negocios</a>
       <a href="contactos-negocios.php" <?= $activeAdminItem === 'business-research' ? 'aria-current="page"' : '' ?>>Canales y responsable</a>
@@ -40,7 +45,7 @@ $activeAdminItem = match (true) {
     </section>
     <section><h2>Contenido</h2>
       <a href="destinos.php" <?= $activeAdminItem === 'destinations' ? 'aria-current="page"' : '' ?>>Destinos</a>
-      <span class="admin-nav-disabled" aria-disabled="true">Reportes <small>Próximamente</small></span>
+      <a href="reportes.php" <?= $activeAdminItem === 'reports' ? 'aria-current="page"' : '' ?>>Reportes de operación</a>
     </section>
 
   </nav>
@@ -50,6 +55,9 @@ $activeAdminItem = match (true) {
       <a href="costos.php" <?= $activeAdminItem === 'costs' ? 'aria-current="page"' : '' ?>>Costos y cancelaciones</a>
     </section>
     <section><h2>Sistema</h2>
+      <a href="medios-pago.php" <?= $activeAdminItem === 'payment-settings' ? 'aria-current="page"' : '' ?>>Medios de pago</a>
+      <a href="configuracion.php" <?= $activeAdminItem === 'configuration' ? 'aria-current="page"' : '' ?>>Configuración del portal</a>
+      <a href="campanas.php?tab=conexion">Conexión con Brevo</a>
       <a href="index.php?tab=sistema" <?= $activeAdminItem === 'system' ? 'aria-current="page"' : '' ?>>Estado del sistema</a>
       <a href="base-datos.php" <?= $activeAdminItem === 'database' ? 'aria-current="page"' : '' ?>>Base de datos</a>
     </section>

@@ -1,0 +1,39 @@
+{
+  "worker": "Lugar 1",
+  "destination": "cartagena",
+  "execution": "coordinador_en_turno_actual",
+  "destination_completed": false,
+  "approval_wait_does_not_stop_research": true,
+  "current_work": [
+    "Revisar referencias centro, San Felipe y Getsemaní contra criterios icónicos",
+    "Mejorar búsqueda Rosario y Boquilla y conservar aprobaciones intactas",
+    "Investigar historia/actividades/directorio y cerrar huecos ES/EN/PT sin generar antes de elección"
+  ],
+  "research": [
+    {
+      "component": "la-boquilla",
+      "discovery_source": "https://www.tripadvisor.co/Attractions-g13115315-Activities-La_Boquilla_Cartagena_District_Bolivar_Department.html",
+      "local_sources": [
+        "https://cartagenadeindias.travel/naturaleza-y-comunitario/boquilla-2/",
+        "https://cartagenadeindias.travel/experiencias/tour-por-los-manglares/"
+      ],
+      "national_source": "https://colombia.travel/es/blog/revista-colombia/la-boquilla",
+      "visual_brief": "Preferir canoa y túnel de manglar identificados en La Boquilla, con entorno de comunidad pesquera; no playa de arena genérica. Foto de la actividad separada de tarjeta si se integra experiencia.",
+      "status": "sujeto_verificado_fotografia_pendiente"
+    },
+    {
+      "component": "centro-historico",
+      "candidate_source": "https://www.pexels.com/photo/cityscape-view-of-cartagena-colombia-34044010/",
+      "status": "fuente_identificada_imagen_no_inspeccionada_no_aprobada",
+      "visual_brief": "Vista elevada del centro con hitos reconocibles y arquitectura completa, no panorama oscuro lejano ni avenida genérica."
+    },
+    {
+      "component": "islas-rosario",
+      "national_source": "https://colombia.travel/es/cartagena/islas-del-rosario-y-de-san-bernardo",
+      "status": "pendiente_referencia_de_isla_identificada",
+      "visual_brief": "Isla/costa insular identificada con paisaje reconocible; no playa genérica ni espectáculo delfines como sustituto."
+    }
+  ],
+  "ai_generation_authorized": false,
+  "production_authorized": false
+}

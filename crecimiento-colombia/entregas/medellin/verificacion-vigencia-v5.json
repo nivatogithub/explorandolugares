@@ -1,0 +1,178 @@
+{
+  "checked_at": "2026-10-17",
+  "method": "Consulta web de páginas oficiales; sin contacto, inscripción o reserva.",
+  "directory": [
+    {
+      "name": "Dann Carlton Medellín",
+      "url": "https://www.danncarlton.com/",
+      "checked_at": "2026-10-17",
+      "page_accessible": true,
+      "public_offer_observed": true,
+      "source_ids": [
+        "dann"
+      ],
+      "registry_verified": false,
+      "contacted": false,
+      "availability_confirmed": false,
+      "kind": "negocio_comercial"
+    },
+    {
+      "name": "Elcielo Hotel",
+      "url": "https://www.elcielohotel.com/",
+      "checked_at": "2026-10-17",
+      "page_accessible": true,
+      "public_offer_observed": true,
+      "source_ids": [
+        "cielo"
+      ],
+      "registry_verified": false,
+      "contacted": false,
+      "availability_confirmed": false,
+      "kind": "negocio_comercial"
+    },
+    {
+      "name": "Hotel San Fernando Plaza",
+      "url": "https://www.hotelsanfernandoplaza.com/",
+      "checked_at": "2026-10-17",
+      "page_accessible": true,
+      "public_offer_observed": true,
+      "source_ids": [
+        "fernando"
+      ],
+      "registry_verified": false,
+      "contacted": false,
+      "availability_confirmed": false,
+      "kind": "negocio_comercial"
+    },
+    {
+      "name": "Elcielo Restaurant Medellín",
+      "url": "https://elcielo.com.co/medellin/",
+      "checked_at": "2026-10-17",
+      "page_accessible": true,
+      "public_offer_observed": true,
+      "source_ids": [
+        "cielo-restaurante",
+        "cielo"
+      ],
+      "registry_verified": false,
+      "contacted": false,
+      "availability_confirmed": false,
+      "kind": "negocio_comercial"
+    },
+    {
+      "name": "El Bistró by Juanma",
+      "url": "https://elcielo.com.co/medellin/elcielo-bistro/",
+      "checked_at": "2026-10-17",
+      "page_accessible": true,
+      "public_offer_observed": true,
+      "source_ids": [
+        "cielo-bistro",
+        "cielo"
+      ],
+      "registry_verified": false,
+      "contacted": false,
+      "availability_confirmed": false,
+      "kind": "negocio_comercial"
+    },
+    {
+      "name": "La Sere by Juanma",
+      "url": "https://lasere.co/",
+      "checked_at": "2026-10-17",
+      "page_accessible": true,
+      "public_offer_observed": true,
+      "source_ids": [
+        "lasere",
+        "cielo"
+      ],
+      "registry_verified": false,
+      "contacted": false,
+      "availability_confirmed": false,
+      "kind": "negocio_comercial"
+    },
+    {
+      "name": "Museo de Antioquia",
+      "url": "https://museodeantioquia.co/",
+      "checked_at": "2026-10-17",
+      "page_accessible": true,
+      "public_offer_observed": true,
+      "source_ids": [
+        "antioquia"
+      ],
+      "registry_verified": false,
+      "contacted": false,
+      "availability_confirmed": false,
+      "kind": "institucion_cultural"
+    },
+    {
+      "name": "Jardín Botánico Joaquín Antonio Uribe",
+      "url": "https://www.botanicomedellin.org/",
+      "checked_at": "2026-10-17",
+      "page_accessible": true,
+      "public_offer_observed": true,
+      "source_ids": [
+        "botanico"
+      ],
+      "registry_verified": false,
+      "contacted": false,
+      "availability_confirmed": false,
+      "kind": "institucion_cultural"
+    },
+    {
+      "name": "Parque Explora",
+      "url": "https://www.parqueexplora.org/en",
+      "checked_at": "2026-10-17",
+      "page_accessible": true,
+      "public_offer_observed": true,
+      "source_ids": [
+        "explora"
+      ],
+      "registry_verified": false,
+      "contacted": false,
+      "availability_confirmed": false,
+      "kind": "institucion_cultural"
+    },
+    {
+      "name": "Museo de Arte Moderno de Medellín",
+      "url": "https://www.elmamm.org/",
+      "checked_at": "2026-10-17",
+      "page_accessible": true,
+      "public_offer_observed": true,
+      "source_ids": [
+        "mamm"
+      ],
+      "registry_verified": false,
+      "contacted": false,
+      "availability_confirmed": false,
+      "kind": "institucion_cultural"
+    }
+  ],
+  "summary": {
+    "commercial_businesses": 6,
+    "cultural_institutions": 4,
+    "public_pages_reviewed": 10,
+    "registry_checks_completed": 0,
+    "availability_confirmed": 0
+  },
+  "operators": [
+    {
+      "id": "epm-visita",
+      "url": "https://www.epm.com.co/institucional/sala-de-prensa/noticias-y-novedades/epm-de-puertas-abiertas-para-la-comunidad/",
+      "source_date": "2024-09-11",
+      "page_accessible": true,
+      "current_2026_validity_confirmed": false,
+      "search": "site:epm.com.co Puertas Abiertas 2026 visitas",
+      "result": "No se encontró publicación actual que confirme calendario, inscripción vigente o permiso fotográfico."
+    },
+    {
+      "id": "city-comuna13",
+      "url": "https://medellinturistica.com/servicios/city-tour-comuna-13/",
+      "page_accessible": true,
+      "offer_documented": true,
+      "rnt_claimed": "213192",
+      "registry_url": "https://rnt.confecamaras.co/establecimientos",
+      "registry_result": "Página accesible sin contenido verificable al lector web; número declarado por operador, estado no validado.",
+      "scheduled_departure_confirmed": false,
+      "image_permission": false
+    }
+  ]
+}

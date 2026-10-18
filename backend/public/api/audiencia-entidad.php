@@ -15,7 +15,7 @@ try {
     if(!$admin){
         require_business_portal_access();
         if($type!=='business')entity_output(['error'=>'Sin acceso a esta entidad'],403);
-        $q=db()->prepare('SELECT b.id FROM businesses b JOIN business_account_memberships m ON m.business_id=b.id JOIN accounts a ON a.id=m.account_id WHERE b.public_id=? AND m.account_id=? AND m.status="active" AND a.account_type="business" AND a.status="active" LIMIT 1');$q->execute([$key,(int)$_SESSION['business_account_id']]);
+        $q=db()->prepare('SELECT b.id FROM businesses b JOIN business_account_memberships m ON m.business_id=b.id JOIN accounts a ON a.id=m.account_id WHERE b.public_id=? AND m.account_id=? AND m.status="active" AND a.status="active" LIMIT 1');$q->execute([$key,(int)$_SESSION['business_account_id']]);
         if(!$q->fetchColumn())entity_output(['error'=>'Sin acceso a esta entidad'],403);
     }
     entity_output((new BasicAudienceService(db(),dirname(__DIR__)))->entityReport($type,$key,$days));

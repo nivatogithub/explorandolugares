@@ -105,7 +105,8 @@ class NavigationTests(unittest.TestCase):
     def test_admin_uses_its_own_sidebar_stylesheet(self):
         admin=(self.public/'admin/index.php').read_text()
         styles=(self.public/'assets/admin.css').read_text()
-        self.assertIn('admin.css?v=admin-workflow-',admin)
+        self.assertIn("require __DIR__.'/_theme.php'",admin)
+        self.assertIn('assets/admin.css',admin)
         self.assertIn('.admin-sidebar nav section{display:block!important',styles)
         self.assertIn('.admin-sidebar nav a,.admin-nav-disabled{display:flex!important',styles)
         rewrite=(self.public/'.htaccess').read_text()

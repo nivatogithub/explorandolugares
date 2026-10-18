@@ -1,0 +1,40 @@
+{
+  "destination": "santa-marta",
+  "revision": "v5_portada_urbana",
+  "places": 8,
+  "images": 10,
+  "package_images": 9,
+  "history_images": 1,
+  "history_sidecar": "santa-marta-history.json",
+  "distinct_image_source_urls": 9,
+  "provisional": true,
+  "final_ai_images": 0,
+  "production_authorized": false,
+  "preprod_imported": true,
+  "missing": [
+    "Aprobar referencias una por una",
+    "Mejorar referencia acuario: histórica2011, espectáculo no representa toda visita",
+    "Generar y aprobar ilustraciones finales con skill",
+    "Completar actividades y directorio",
+    "Validación visual tras importación coordinador"
+  ],
+  "import_receipt": {
+    "destination": "santa-marta",
+    "id": 24,
+    "package_sha256": "7e225fda123fd28e1b1271038b698d8e77698c9d2a5bd96cd3936afc1bd834be",
+    "loaded_at": "2026-10-17T12:10:15+00:00",
+    "environment": "local_preprod_only",
+    "production_authorized": false,
+    "editorial_approved": false,
+    "provisional_photographs": true,
+    "places": 8,
+    "history_asset_id": 115,
+    "urls": {
+      "es": "http://127.0.0.1:8088/destinos/santa-marta/",
+      "en": "http://127.0.0.1:8088/en/destinos/santa-marta/",
+      "pt-BR": "http://127.0.0.1:8088/pt-br/destinos/santa-marta/"
+    }
+  },
+  "live_validation": "verificacion-preprod-v5.json",
+  "hero_reference": "Camellon_de_la_bahía.jpg · Giancarlos1234 · CC BY-SA 4.0 · 2022-01-15"
+}

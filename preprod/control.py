@@ -6,6 +6,30 @@ ROOT=Path(__file__).resolve().parents[1]
 STATE=ROOT/'.local/preprod'; NAME='explorando-preprod'; IMAGE='localhost/explorando-preprod:local'
 def run(*args,**kwargs):return subprocess.run(args,cwd=ROOT,check=True,**kwargs)
 def podman(*args,**kwargs):return run('podman',*args,**kwargs)
+def start_machine():
+ # On macOS, launch through the user service manager so a terminal/worker exit
+ # cannot tear down vfkit and its network helper. No login/startup item is added.
+ if sys.platform!='darwin':
+  podman('machine','start');return
+ import plistlib
+ STATE.mkdir(parents=True,exist_ok=True)
+ label='com.explorandolugares.preprod.podman';domain=f'gui/{os.getuid()}'
+ program=shutil.which('podman')
+ if not program:raise SystemExit('Podman no está instalado.')
+ plist=STATE/'podman-launch.plist'
+ plist.write_bytes(plistlib.dumps({'Label':label,'ProgramArguments':[program,'machine','start'],
+  'AbandonProcessGroup':True,'EnvironmentVariables':{'PATH':os.environ.get('PATH','/usr/bin:/bin')},
+  'StandardOutPath':str(STATE/'podman-launch.log'),'StandardErrorPath':str(STATE/'podman-launch-error.log')}))
+ if subprocess.run(['launchctl','print',domain+'/'+label],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL).returncode!=0:
+  run('launchctl','bootstrap',domain,str(plist))
+ run('launchctl','kickstart',domain+'/'+label)
+ print('Iniciando Podman mediante el servicio de usuario de macOS.',flush=True)
+ for attempt in range(90):
+  try:
+   if subprocess.run(['podman','info','--format','{{.Host.Arch}}'],capture_output=True,timeout=5).returncode==0:return
+  except subprocess.TimeoutExpired:pass
+  time.sleep(1)
+ raise SystemExit('Podman no respondió. Revisa .local/preprod/podman-launch-error.log.')
 def branch():return subprocess.check_output(['git','branch','--show-current'],cwd=ROOT,text=True).strip()
 def wait_ready():
  for attempt in range(120):
@@ -15,12 +39,22 @@ def wait_ready():
   except (OSError,ValueError):pass
   time.sleep(1)
  raise SystemExit('El contenedor no terminó de iniciar. Consulta scripts/preprod-local.py logs.')
+def configure_test_mail_network():
+ # Real-mail testing explicitly opts into outbound networking; no added published ports.
+ test_file=STATE/'private/account-mail-test.json'
+ enabled=test_file.is_file() and not test_file.is_symlink() and json.loads(test_file.read_text()).get('enabled') is True
+ outbound='explorando-preprod-mail-egress'
+ attached=json.loads(subprocess.check_output(['podman','inspect','--format','{{json .NetworkSettings.Networks}}',NAME],text=True)) or {}
+ if enabled and outbound not in attached:
+  if subprocess.run(['podman','network','exists',outbound],cwd=ROOT).returncode!=0:podman('network','create',outbound)
+  podman('network','connect',outbound,NAME)
+ elif not enabled and outbound in attached:podman('network','disconnect',outbound,NAME)
 def main():
  operation_started=time.monotonic()
  parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('action',choices=['build','start','up','down','status','logs']);args=parser.parse_args()
  if args.action in ('up','start','build') and branch()!='preprod':raise SystemExit('Solo se prepara este entorno desde la rama preprod.')
  if args.action in ('build','start','up'):
-  if subprocess.run(['podman','info','--format','{{.Host.Arch}}'],cwd=ROOT,capture_output=True).returncode!=0:podman('machine','start')
+  if subprocess.run(['podman','info','--format','{{.Host.Arch}}'],cwd=ROOT,capture_output=True).returncode!=0:start_machine()
  elif subprocess.run(['podman','info','--format','{{.Host.Arch}}'],cwd=ROOT,capture_output=True).returncode!=0:
   print('Podman está apagado; preproducción también.');return
  STATE.mkdir(parents=True,exist_ok=True)
@@ -37,7 +71,7 @@ def main():
    if old_image==new_image:
     running=subprocess.check_output(['podman','inspect','--format','{{.State.Running}}',NAME],text=True).strip()
     if running!='true':podman('start',NAME)
-    wait_ready();run(sys.executable,'preprod/cuentas-prueba.py');print('Preproducción lista: http://127.0.0.1:8088/ (sin reconstrucción ni reconfiguración)');print(f'Arranque comprobado en {time.monotonic()-operation_started:.1f} segundos.');return
+    configure_test_mail_network();wait_ready();run(sys.executable,'preprod/cuentas-prueba.py');print('Preproducción lista: http://127.0.0.1:8088/ (sin reconstrucción ni reconfiguración)');print(f'Arranque comprobado en {time.monotonic()-operation_started:.1f} segundos.');return
   run(sys.executable,'preprod/control.py','up');return
  if subprocess.run(['podman','image','exists',IMAGE],cwd=ROOT).returncode!=0:
   run(sys.executable,'preprod/control.py','build')
@@ -50,23 +84,10 @@ def main():
   run(sys.executable,'scripts/preparar-hosting.py','--output',str(release),stdout=log,stderr=subprocess.STDOUT)
  shutil.copyfile(ROOT/'preprod/infra/runtime.php',release/'public/__preprod-runtime.php')
  shutil.copyfile(ROOT/'preprod/infra/account-status.php',release/'public/__preprod-account.php')
- # Recovery and its private mailbox exist only in the local release.
- shutil.copyfile(ROOT/'preprod/infra/recover.php',release/'public/business/recover.php')
  shutil.copyfile(ROOT/'preprod/infra/mailbox.php',release/'public/admin/buzon-local.php')
- # Make enabled public account flows discoverable without opening production access.
- shutil.copyfile(ROOT/'preprod/infra/account-entry.js',release/'public/assets/preprod-account-entry.js')
- shutil.copyfile(ROOT/'preprod/infra/account-entry.css',release/'public/assets/preprod-account-entry.css')
- menu=release/'public/assets/menu-principal.js'
- menu.write_text(menu.read_text()+"\n(()=>{const css=document.createElement('link');css.rel='stylesheet';css.href='/assets/preprod-account-entry.css?v=7';document.head.append(css);const script=document.createElement('script');script.src='/assets/preprod-account-entry.js?v=7';script.defer=true;document.head.append(script);})();\n")
-
- login=release/'public/business/login.php'
- text=login.read_text().replace('Si olvidaste tu contraseña, contacta al equipo para que te envíe un enlace temporal de recuperación. Por ahora el envío del enlace es manual.','<a href="/negocios/recuperar-clave/">Olvidé mi contraseña</a> · Preproducción: correo en el buzón local.')
- login.write_text(text)
- htaccess=release/'public/.htaccess'
- text=htaccess.read_text().replace('RewriteEngine On','RewriteEngine On\nRewriteRule ^negocios/recuperar-clave/?$ business/recover.php [L,QSA]',1)
- htaccess.write_text(text)
+ shutil.copyfile(ROOT/'preprod/infra/correo-ejemplo.php',release/'public/correo-ejemplo.php')
  navigation=release/'public/admin/_navigation.php'
- navigation.write_text(navigation.read_text().replace('</nav>','<section><h2>Probar cuentas en preprod</h2><a href="/negocios/registro/">Crear cuenta de negocio</a><a href="/negocios/acceso/">Iniciar sesión de negocio</a><a href="/negocios/recuperar-clave/">Recuperar contraseña</a><a href="buzon-local.php">Buzón local de pruebas</a></section></nav>',1))
+ navigation.write_text(navigation.read_text().replace('</nav>','<section><h2>Probar cuentas en preprod</h2><a href="/negocios/registro/">Crear cuenta personal</a><a href="/negocios/acceso/">Iniciar sesión</a><a href="/negocios/recuperar-clave/">Recuperar contraseña</a><a href="buzon-local.php">Buzón local de pruebas</a></section></nav>',1))
 
  # Refresh asset versions after adding the local navigation.
  run(sys.executable,'scripts/versiones-medicion.py','--public',str(release/'public'))
@@ -102,6 +123,7 @@ def main():
   podman('restart',NAME)
  else:
   podman('run','--platform','linux/amd64','-d','--name',NAME,'--label','el-preprod-layout=3','--network',network,'--env-file',str(envfile),'-p','127.0.0.1:8088:80','--mount','type=volume,source=explorando-preprod-mariadb-10-11,target=/var/lib/mysql','-v',str(release)+':/srv/portal:ro','-v',str(STATE)+':/srv/state:rw','-v',str(STATE/'private')+':/srv/portal/private:rw','-v',str(media)+':/srv/portal/public/assets/destinos:rw',IMAGE)
+ configure_test_mail_network()
  wait_ready()
  run(sys.executable,'preprod/cuentas-prueba.py')
  print('Preproducción: http://127.0.0.1:8088/\nAdministrador: http://127.0.0.1:8088/admin/\nAcceso local privado: '+str(credential))

@@ -19,6 +19,8 @@ CREATE TABLE business_contacts(business_id INTEGER,channel TEXT,contact_value TE
 CREATE TABLE accounts(id INTEGER PRIMARY KEY,account_type TEXT,status TEXT);
 CREATE TABLE business_account_memberships(account_id INTEGER,business_id INTEGER,role TEXT,status TEXT);
 CREATE TABLE business_subscription_payment_evidence(id INTEGER PRIMARY KEY AUTOINCREMENT,subscription_id INTEGER,account_id INTEGER,storage_name TEXT,original_name TEXT,mime_type TEXT,file_size INTEGER,payment_reference TEXT,status TEXT,admin_note TEXT,customer_message TEXT,reviewed_by TEXT,reviewed_at TEXT,submitted_at TEXT DEFAULT CURRENT_TIMESTAMP);');
+$pdo->exec(file_get_contents(__DIR__.'/../database/migrations/040-payment-transaction-details.sqlite.sql'));
+$pdo->exec(file_get_contents(__DIR__.'/../database/migrations/041-experience-operator-addon.sqlite.sql'));
 $pdo->exec("INSERT INTO businesses VALUES(1,'Calle 10 # 5-12',6.1223,-75.7869,'ACTIVO','ABIERTO','draft',CURRENT_TIMESTAMP,'owner_submitted','https://www.google.com/maps/place/Cafe/@6.1223,-75.7869,18z',1);
 INSERT INTO subscription_plans VALUES('free',1,1,0,0,0,0,0,0),('basic',2,1,0,0,300,0,0,0),('featured',3,1,0,0,500,1000,0,0),('page',4,1,0,1,750,2000,0,0),('page_premium',5,1,2,1,1000,3500,1500,1500);
 INSERT INTO subscription_plan_translations VALUES('free','es','Gratis','Directorio'),('basic','es','Básico','Resumen'),('featured','es','Destacado','Tarjeta'),('page','es','Página','Sitio'),('page_premium','es','Página Premium','Sitio ampliado');
@@ -31,8 +33,8 @@ INSERT INTO business_translations VALUES(1,'es','Café de Prueba','Café local',
 INSERT INTO business_contacts VALUES(1,'whatsapp','+573001112233',1);");
 $service=new BusinessSubscriptionAdminService($pdo);$plans=array_column($service->options(),null,'code');
 subscription_check($plans['page']['max_gallery_photos']===0&&$plans['page_premium']['max_gallery_photos']===2,'Page includes one cover, while Premium allows up to three total public photos.');
-subscription_check($plans['basic']['text_limits']['summary']===300&&$plans['featured']['text_limits']['description']===1000&&$plans['page']['text_limits']['summary']===750&&$plans['page_premium']['text_limits']['brand_story']===1500,'Text character quotas grow by subscription tier and are returned to the editor.');
-subscription_check(!in_array('extended_description',$plans['basic']['features'],true)&&in_array('extended_description',$plans['featured']['features'],true),'Basic collects only the short summary while Featured unlocks the longer directory description.');
+subscription_check($plans['featured']['text_limits']['description']===1000&&$plans['page']['text_limits']['summary']===750&&$plans['page_premium']['text_limits']['brand_story']===1500,'Text character quotas grow by subscription tier and are returned to the editor.');
+subscription_check(!isset($plans['basic'])&&count($plans)===4&&in_array('extended_description',$plans['featured']['features'],true),'New choices offer Free, Featured, Page and Premium; legacy Basic is preserved only in storage.');
 subscription_check(str_contains(implode(' ',$plans['free']['requirements']),'Solo requiere nombre, categoría y destino'),'Free exposes only the minimum public listing.');
 subscription_check(str_contains(implode(' ',$plans['page']['requirements']),'dos referencias privadas')&&str_contains(implode(' ',$plans['page']['requirements']),'una imagen para preparar la portada')&&str_contains(implode(' ',$plans['page']['requirements']),'no se publican directamente'),'Page asks for a logo and one visual reference while keeping the published image review separate.');
 subscription_check(str_contains(implode(' ',$plans['page_premium']['requirements']),'hasta 2 fotos adicionales')&&str_contains(implode(' ',$plans['page_premium']['requirements']),'historia o propuesta')&&str_contains(implode(' ',$plans['page_premium']['requirements']),'referencias son privadas'),'Premium lists up to three public photos total, private references and dedicated story content.');
@@ -90,4 +92,11 @@ subscription_check((int)$renewals===1,'A renewal published before the previous t
 $pdo->exec("UPDATE subscription_plan_prices SET amount=NULL WHERE plan_code='page_premium' AND billing_frequency='quarterly'");
 $badPayment=false;try{$service->save(['business_id'=>1,'plan_code'=>'page_premium','billing_frequency'=>'quarterly','payment_reviewed'=>'1']);}catch(RuntimeException $error){$badPayment=str_contains($error->getMessage(),'tarifa definida');}
 subscription_check($badPayment,'A paid subscription cannot be selected until its plan price exists.');
+$before=(int)$pdo->query('SELECT COUNT(*) FROM business_subscriptions')->fetchColumn();
+foreach(['basic','forged'] as $badPlan){$rejected=false;try{$payments->submit(1,1,$badPlan,'monthly','',[]);}catch(RuntimeException $e){$rejected=str_contains($e->getMessage(),'vigente');}subscription_check($rejected,'Forged or legacy plan cannot create a new payment.');}
+foreach(['monthly','quarterly','semiannual','annual'] as $period){$pdo->prepare('DELETE FROM subscription_plan_prices WHERE plan_code="featured" AND billing_frequency=?')->execute([$period]);$rejected=false;try{$payments->submit(1,1,'featured',$period,'',[]);}catch(RuntimeException $e){$rejected=str_contains($e->getMessage(),'tarifa válida');}subscription_check($rejected,'Every supported period rejects payment without a configured price.');}
+$rejected=false;try{$service->save(['business_id'=>1,'plan_code'=>'basic','billing_frequency'=>'monthly']);}catch(RuntimeException $e){$rejected=str_contains($e->getMessage(),'vigente');}subscription_check($rejected,'Admin cannot create new Basic subscription.');
+subscription_check((int)$pdo->query('SELECT COUNT(*) FROM business_subscriptions')->fetchColumn()===$before,'Rejected payment/selection does not mutate subscription history.');
+subscription_check((bool)$pdo->query('SELECT code FROM subscription_plans WHERE code="basic"')->fetchColumn(),'Legacy Basic catalog remains present.');
+@rmdir($paymentStorage);
 echo "OK: tier photo quotas, configured-price snapshot, scheduling gate, actual-publication start and calendar expiry.\n";

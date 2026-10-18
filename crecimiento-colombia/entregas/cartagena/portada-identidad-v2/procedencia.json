@@ -1,0 +1,33 @@
+{
+  "destination": "cartagena",
+  "role": "hero",
+  "style": "semirrealista editorial tinta/gouache",
+  "date": "2026-10-17",
+  "status": "propuesta_preprod",
+  "approval": "pendiente",
+  "production_changed": false,
+  "master_sha256": "dee6210d1f7881c8f70fc85ebeebcb1cdc23e93991da147c0ae275607465facf",
+  "files": [
+    {
+      "path": "backend/public/assets/cartagena-piloto/portada-ciudad-amurallada-v2-640.webp",
+      "bytes": 100522,
+      "sha256": "9310fdf58c63e3fcd6394bc0453991dab0c2bad205d2ad0624e3d26c39f38372"
+    },
+    {
+      "path": "backend/public/assets/cartagena-piloto/portada-ciudad-amurallada-v2-1200.webp",
+      "bytes": 300388,
+      "sha256": "66f51b9a8a0e7b170fd6cc79ce02d2ceeeb8ebc2c8f9b98baf6a12fb6566a0f1"
+    }
+  ],
+  "sources": [
+    "https://colombia.travel/es/cartagena/las-murallas-de-cartagena",
+    "https://cartagenacomisionfilmica.com/es/locaciones/avenida-santander"
+  ],
+  "reference_photos_uploaded": [],
+  "method": "Composición independiente basada en rasgos documentados; no fotografía ni reconstrucción topográfica exacta.",
+  "prompt_file": "../PROMPT_PORTADA_IDENTIDAD_V2.txt",
+  "correction": "Versión inicial descartada: muralla demasiado alta, directamente sobre mar y exceso de torres. Corregida con imagen propia como entrada: muralla baja, Avenida Santander entre mar y muralla, una torre de catedral como contexto.",
+  "reference_generated_images_uploaded": [
+    "exec-5578adad-2ae7-4a39-9f65-2e3955b94cbe.png (imagen propia generada)"
+  ]
+}

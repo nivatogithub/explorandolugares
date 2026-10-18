@@ -37,7 +37,7 @@ class PublicLinkTests(unittest.TestCase):
     def tearDownClass(cls): cls.temp.cleanup()
     def test_all_internal_navigation_and_resources_resolve(self):
         broken=[]
-        dynamic_slugs={item['slug'] for item in __import__('json').loads((ROOT/'content/destinos-dinamicos.json').read_text())['destinations']}
+        dynamic_slugs={item['slug'] for item in __import__('json').loads((ROOT/'content/destinos-dinamicos.json').read_text())['destinations']} | set(__import__('json').loads((ROOT/'content/lugares-publicados.json').read_text())['slugs'])
         for page in self.public.rglob('*.html'):
             parser=References(); parser.feed(page.read_text())
             for tag,attribute,value in parser.references:
@@ -48,7 +48,7 @@ class PublicLinkTests(unittest.TestCase):
                     broken.append(f'{page.relative_to(self.public)}: {tag}[{attribute}] escapes public root: {value}')
                 elif not target.exists():
                     relative=target.relative_to(self.public.resolve()).as_posix()
-                    route=__import__('re').fullmatch(r'(?:en/|pt-br/)?destinos/([a-z0-9-]+)/index\.html',relative)
+                    route=__import__('re').fullmatch(r'(?:en/|pt-br/)?destinos/([a-z0-9-]+)(?:/index\.html)?/?',relative)
                     claim_route=relative.rstrip('/')=='reclamar-negocio' and (self.public/'reclamar-negocio.php').is_file()
                     business_routes={'negocios/registro':'register.php','negocios/acceso':'login.php','negocios/portal':'dashboard.php','negocios/salir':'logout.php'}
                     business_route=relative.rstrip('/') in business_routes and (self.public/'business'/business_routes[relative.rstrip('/')]).is_file()
@@ -79,7 +79,7 @@ class PublicLinkTests(unittest.TestCase):
         self.assertTrue((self.public/'sitemap-live.php').is_file())
         self.assertIn('RewriteRule ^sitemap\\.xml$ sitemap-live.php [L]', (self.public/'.htaccess').read_text())
         directory=(self.public/'destinos/index.html').read_text()
-        self.assertEqual(directory.count('class="destination-card"'),1)
+        self.assertEqual(directory.count('class="destination-card"'),len(__import__('json').loads((ROOT/'content/lugares-publicados.json').read_text())['slugs']))
         seed=__import__('json').loads((ROOT/'content/destinos-dinamicos.json').read_text())
         drafts=[item for item in seed['destinations'] if item['slug']!='jerico']
         self.assertTrue(all(item['publication_status']=='draft' for item in drafts))

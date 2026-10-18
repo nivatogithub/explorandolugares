@@ -1,0 +1,34 @@
+{
+  "destination": "bogota",
+  "total": 30,
+  "preserved": 10,
+  "added": 20,
+  "categories": {
+    "alimentacion": 12,
+    "comercio": 4,
+    "cultura": 3,
+    "hospedaje": 11
+  },
+  "sha256": "a94f996b5eb95d8451f4635409d617bec1afab7f84761dfe54b947124dbdfd70",
+  "sources": [
+    {
+      "url": "https://maloka.org/",
+      "checked_at": "2026-10-17"
+    },
+    {
+      "url": "https://visitbogota.co/en/node/2400",
+      "checked_at": "2026-10-17"
+    },
+    {
+      "url": "https://visitbogota.co/es/donde-comer",
+      "checked_at": "2026-10-17"
+    },
+    {
+      "url": "https://www.marriott.com/es/hotel-sitemap/colombia-hotel-sitemap",
+      "checked_at": "2026-10-17"
+    }
+  ],
+  "scope": "local_preprod_only",
+  "commercial_contact": false,
+  "production_changed": false
+}

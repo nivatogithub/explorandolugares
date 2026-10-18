@@ -1,0 +1,22 @@
+{
+  "destination": "santa-marta",
+  "environment": "local_preprod_only",
+  "before": 11,
+  "imported": 19,
+  "visible": {
+    "es": 30,
+    "en": 30,
+    "pt-BR": 30
+  },
+  "publication_status": "published",
+  "plan": "free",
+  "input_sha256": "953c276e17b1ac28d1dad90bd6ef074a2b0ca1e5822ce2e94f64566d600beedd",
+  "production_changed": false,
+  "browser_qa": {
+    "total_cards": 30,
+    "unique_names": 30,
+    "initial_visible_cards": 12,
+    "load_more_available": true,
+    "visible_after_one_load_more": 24
+  }
+}

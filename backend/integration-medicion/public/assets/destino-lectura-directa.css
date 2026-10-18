@@ -1,0 +1,6 @@
+@import url("/assets/cobertura/portal-tokens.css");
+/* Natural image height, with no empty frame between illustration and copy. */
+.destination-direct-reading #atractivos-destino a.highlight-photo{height:auto;min-height:0;aspect-ratio:auto;display:block}
+.destination-direct-reading #atractivos-destino a.highlight-photo>img{display:block;width:100%;height:auto!important;max-height:none;aspect-ratio:3/2;object-fit:cover}
+.destination-direct-reading #descubre{display:block;grid-template-columns:1fr}
+.destination-direct-reading #descubre>div,.destination-direct-reading #descubre p{width:100%;max-width:none}

@@ -1,0 +1,186 @@
+{
+  "capacidad": "Tres workers simultáneos más coordinador",
+  "nota": "Los nombres worker_fXX en cola son asignaciones planificadas, no agentes ya creados. Los tres IDs /root corresponden a workers activos. Cada siguiente worker se inicia al liberar una plaza y cumplir dependencias.",
+  "asignaciones": [
+    {
+      "id": "F01",
+      "implementacion": "Fichas públicas de negocios",
+      "worker": "/root/f01_fichas_publicas",
+      "estado": "Asignado y en ejecución",
+      "dependencias": "",
+      "limite": "Solo preprod; sin producción, push ni merge. Preservar cambios de otros workers.",
+      "entrega": "Código, pruebas, archivos modificados y limitaciones; revisión e integración por coordinador."
+    },
+    {
+      "id": "F02",
+      "implementacion": "Una política consistente de publicación de lugares",
+      "worker": "worker_f02",
+      "estado": "En cola; worker aún no iniciado",
+      "dependencias": "Aprobaciones editoriales existentes",
+      "limite": "Solo preprod; sin producción, push ni merge. Preservar cambios de otros workers.",
+      "entrega": "Código, pruebas, archivos modificados y limitaciones; revisión e integración por coordinador."
+    },
+    {
+      "id": "F03",
+      "implementacion": "Regresión fiable y reproducible",
+      "worker": "worker_f03",
+      "estado": "En cola; worker aún no iniciado",
+      "dependencias": "",
+      "limite": "Solo preprod; sin producción, push ni merge. Preservar cambios de otros workers.",
+      "entrega": "Código, pruebas, archivos modificados y limitaciones; revisión e integración por coordinador."
+    },
+    {
+      "id": "F04",
+      "implementacion": "Crear cuenta personal y validar correo",
+      "worker": "/root/f04_verificacion_correo",
+      "estado": "Asignado y en ejecución",
+      "dependencias": "Configuración de correo transaccional; buzón local en preprod",
+      "limite": "Solo preprod; sin producción, push ni merge. Preservar cambios de otros workers.",
+      "entrega": "Código, pruebas, archivos modificados y limitaciones; revisión e integración por coordinador."
+    },
+    {
+      "id": "F05",
+      "implementacion": "Mi cuenta: Personal / Mis negocios",
+      "worker": "/root/f05_mi_cuenta",
+      "estado": "Asignado y en ejecución",
+      "dependencias": "F04",
+      "limite": "Solo preprod; sin producción, push ni merge. Preservar cambios de otros workers.",
+      "entrega": "Código, pruebas, archivos modificados y limitaciones; revisión e integración por coordinador."
+    },
+    {
+      "id": "F06",
+      "implementacion": "Cuenta junto a idiomas",
+      "worker": "worker_f06",
+      "estado": "En cola; worker aún no iniciado",
+      "dependencias": "F05",
+      "limite": "Solo preprod; sin producción, push ni merge. Preservar cambios de otros workers.",
+      "entrega": "Código, pruebas, archivos modificados y limitaciones; revisión e integración por coordinador."
+    },
+    {
+      "id": "F07",
+      "implementacion": "Recuperación y correo en producción",
+      "worker": "worker_f07",
+      "estado": "En cola; worker aún no iniciado",
+      "dependencias": "Configuración transaccional real",
+      "limite": "Solo preprod; sin producción, push ni merge. Preservar cambios de otros workers.",
+      "entrega": "Código, pruebas, archivos modificados y limitaciones; revisión e integración por coordinador."
+    },
+    {
+      "id": "F08",
+      "implementacion": "Crear y reclamar con la misma cuenta",
+      "worker": "worker_f08",
+      "estado": "En cola; worker aún no iniciado",
+      "dependencias": "F04/F05",
+      "limite": "Solo preprod; sin producción, push ni merge. Preservar cambios de otros workers.",
+      "entrega": "Código, pruebas, archivos modificados y limitaciones; revisión e integración por coordinador."
+    },
+    {
+      "id": "F09",
+      "implementacion": "Validación automática sin impedir guardar",
+      "worker": "worker_f09",
+      "estado": "En cola; worker aún no iniciado",
+      "dependencias": "Acceso/condiciones del proveedor; política final de publicación",
+      "limite": "Solo preprod; sin producción, push ni merge. Preservar cambios de otros workers.",
+      "entrega": "Código, pruebas, archivos modificados y limitaciones; revisión e integración por coordinador."
+    },
+    {
+      "id": "F10",
+      "implementacion": "Reclamación de negocio ya asociado",
+      "worker": "worker_f10",
+      "estado": "En cola; worker aún no iniciado",
+      "dependencias": "F08/F09",
+      "limite": "Solo preprod; sin producción, push ni merge. Preservar cambios de otros workers.",
+      "entrega": "Código, pruebas, archivos modificados y limitaciones; revisión e integración por coordinador."
+    },
+    {
+      "id": "F11",
+      "implementacion": "Tabla resumida seleccionable al crear negocio",
+      "worker": "worker_f11",
+      "estado": "En cola; worker aún no iniciado",
+      "dependencias": "F08",
+      "limite": "Solo preprod; sin producción, push ni merge. Preservar cambios de otros workers.",
+      "entrega": "Código, pruebas, archivos modificados y limitaciones; revisión e integración por coordinador."
+    },
+    {
+      "id": "F12",
+      "implementacion": "Mensual/trimestral/semestral/anual",
+      "worker": "worker_f12",
+      "estado": "En cola; worker aún no iniciado",
+      "dependencias": "Definir importes trimestrales/semestrales",
+      "limite": "Solo preprod; sin producción, push ni merge. Preservar cambios de otros workers.",
+      "entrega": "Código, pruebas, archivos modificados y limitaciones; revisión e integración por coordinador."
+    },
+    {
+      "id": "F13",
+      "implementacion": "Instrucciones reales de pago",
+      "worker": "worker_f13",
+      "estado": "En cola; worker aún no iniciado",
+      "dependencias": "Datos bancarios/QR reales; F11/F12",
+      "limite": "Solo preprod; sin producción, push ni merge. Preservar cambios de otros workers.",
+      "entrega": "Código, pruebas, archivos modificados y limitaciones; revisión e integración por coordinador."
+    },
+    {
+      "id": "F14",
+      "implementacion": "Complemento opcional de experiencias",
+      "worker": "worker_f14",
+      "estado": "En cola; worker aún no iniciado",
+      "dependencias": "Definir precio, por experiencia o conjunto, duración, suscripciones elegibles y evidencia del operador",
+      "limite": "Solo preprod; sin producción, push ni merge. Preservar cambios de otros workers.",
+      "entrega": "Código, pruebas, archivos modificados y limitaciones; revisión e integración por coordinador."
+    },
+    {
+      "id": "F15",
+      "implementacion": "Navegación pública sin pérdida de enlaces",
+      "worker": "worker_f15",
+      "estado": "En cola; worker aún no iniciado",
+      "dependencias": "F05/F06; auditoria/mapa-navegacion.html",
+      "limite": "Solo preprod; sin producción, push ni merge. Preservar cambios de otros workers.",
+      "entrega": "Código, pruebas, archivos modificados y limitaciones; revisión e integración por coordinador."
+    },
+    {
+      "id": "F16",
+      "implementacion": "Tres contactos diferenciados",
+      "worker": "worker_f16",
+      "estado": "En cola; worker aún no iniciado",
+      "dependencias": "Definir operación de atención y seguimiento",
+      "limite": "Solo preprod; sin producción, push ni merge. Preservar cambios de otros workers.",
+      "entrega": "Código, pruebas, archivos modificados y limitaciones; revisión e integración por coordinador."
+    },
+    {
+      "id": "F17",
+      "implementacion": "Contenido de lugares y directorio",
+      "worker": "worker_f17",
+      "estado": "En cola; worker aún no iniciado",
+      "dependencias": "F01/F02",
+      "limite": "Solo preprod; sin producción, push ni merge. Preservar cambios de otros workers.",
+      "entrega": "Código, pruebas, archivos modificados y limitaciones; revisión e integración por coordinador."
+    },
+    {
+      "id": "F18",
+      "implementacion": "Operaciones administrativas completas",
+      "worker": "worker_f18",
+      "estado": "En cola; worker aún no iniciado",
+      "dependencias": "Diseñar casos específicos por módulo",
+      "limite": "Solo preprod; sin producción, push ni merge. Preservar cambios de otros workers.",
+      "entrega": "Código, pruebas, archivos modificados y limitaciones; revisión e integración por coordinador."
+    },
+    {
+      "id": "F19",
+      "implementacion": "Reportes administrativos",
+      "worker": "worker_f19",
+      "estado": "En cola; worker aún no iniciado",
+      "dependencias": "Definir alcance de reportes",
+      "limite": "Solo preprod; sin producción, push ni merge. Preservar cambios de otros workers.",
+      "entrega": "Código, pruebas, archivos modificados y limitaciones; revisión e integración por coordinador."
+    },
+    {
+      "id": "F20",
+      "implementacion": "Regresión de navegador y puerta de salida",
+      "worker": "worker_f20",
+      "estado": "En cola; worker aún no iniciado",
+      "dependencias": "F01–F18 aplicables; decisiones F19",
+      "limite": "Solo preprod; sin producción, push ni merge. Preservar cambios de otros workers.",
+      "entrega": "Código, pruebas, archivos modificados y limitaciones; revisión e integración por coordinador."
+    }
+  ]
+}

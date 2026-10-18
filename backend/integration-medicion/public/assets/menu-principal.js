@@ -24,4 +24,9 @@
 })();
 
 /* Shared loader: aggregate counters without visitor cookies plus optional consent-based analytics. */
-(()=>{if(document.querySelector('script[data-el-measurement]'))return;const s=document.createElement('script');s.src='/assets/cobertura/medicion.js?v=5cc75e2b8d2f';s.defer=true;s.dataset.elMeasurement='1';document.head.append(s);})();
+(()=>{if(document.querySelector('script[data-el-measurement]'))return;const s=document.createElement('script');s.src='/assets/cobertura/medicion.js?v=04efe382c7c7';s.defer=true;s.dataset.elMeasurement='1';document.head.append(s);})();
+
+(()=>{if(document.querySelector('script[src*="/assets/account-entry.js"]'))return;const css=document.createElement('link');css.rel='stylesheet';css.href='/assets/account-entry.css?v=3';document.head.append(css);const script=document.createElement('script');script.src='/assets/account-entry.js?v=4';script.defer=true;document.head.append(script);})();
+
+// Preserve existing contact channels and add the consolidated help entry.
+(()=>{const footer=document.querySelector('footer .wrap')||document.querySelector('footer');if(!footer||footer.querySelector('a[href="/contacto.php"]'))return;const link=document.createElement('a');link.href='/contacto.php';link.className='footer-help-link';link.textContent=document.documentElement.lang.startsWith('en')?'Contact and help':document.documentElement.lang.startsWith('pt')?'Contato e ajuda':'Contacto y ayuda';const group=document.createElement('span');group.append(link);footer.append(group);})();

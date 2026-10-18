@@ -1,0 +1,67 @@
+[
+  {
+    "id": "SM-P7-01",
+    "title": "Playa Blanca, Santa Marta 2.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Playa_Blanca,_Santa_Marta_2.jpg",
+    "identity": "SantaMarta municipio47001; foto12abril2015RealChunflaiCCBY-SA4, comprobar bahía y relieve con INDETUR antes de elegir.",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Playa_Blanca%2C_Santa_Marta_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "RealChunflai",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_dimensions": [
+      4636,
+      3076
+    ],
+    "photo_date": "2015-04-12",
+    "path": "imagenes/componentes-top8-v7/originales/SM-P7-01.jpg",
+    "sha256": "ac0cc8bbd487319c7767a6ad8371f2ff4ac8749af02871aadee73b34447a3810",
+    "status": "not_selected_visual_quality",
+    "approval": false,
+    "generation_authorized": false,
+    "consulted_at": "2026-10-17",
+    "required_sector": "destino_y_rol_identificados_sin_duplicar_original",
+    "visual_review": "Playa y ladera seca con cactus y franja de servicios; fuente propia identifica municipio47001/SantaMarta. Fotografía2015 gris, playa lejana, personas dominantes y rocas en primerplano: no recomendada como imagen principal de ficha; conservar solo evidencia contextual.",
+    "visual_inspected": true,
+    "identity_evidence": [
+      "https://colombia.travel/es/santa-marta/playa-blanca",
+      "https://indetur.gov.co/playa-blanca/"
+    ]
+  },
+  {
+    "id": "SM-E7-01",
+    "title": "Ciudad Perdida Hike (5479976823).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Ciudad_Perdida_Hike_(5479976823).jpg",
+    "identity": "CaminataCiudadPerdida; resolver autor/licencia y comprobar personas/encuadre, no atribuir grupo a MagicTour.",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/7/76/Ciudad_Perdida_Hike_%285479976823%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "William Neuheisel from DC, US",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source_dimensions": [
+      5184,
+      3456
+    ],
+    "photo_date": "2011-02-09 06:26",
+    "path": "imagenes/componentes-top8-v7/originales/SM-E7-01.jpg",
+    "sha256": "08e04bf58d0e1328e1db92a422ba1745159d2c85dfeab48f4a3c321c47c625ad",
+    "status": "rejected_wrong_activity_scene",
+    "approval": false,
+    "generation_authorized": false,
+    "consulted_at": "2026-10-17",
+    "required_sector": "destino_y_rol_identificados_sin_duplicar_original",
+    "license_review": {
+      "state": "permitted_license_missing_from_allowlist_corrected",
+      "metadata_reused": true,
+      "license": "CC BY 2.0",
+      "source": "https://creativecommons.org/licenses/by/2.0/",
+      "conditions": "Crédito, título, fuente, licencia y cambios del derivado; sin inferir representación del operador o aprobación editorial.",
+      "human_rejection": false
+    },
+    "visual_inspected": true,
+    "actual_dimensions": [
+      5184,
+      3456
+    ],
+    "visual_review": "Original muestra cocinero sirviendo arroz en cocina de campamento de noche; no sendero ni caminantes. El título del álbum no describe el contenido útil para tarjeta de trekking. Oscuro, personas reconocibles y no se identifica operador. Se descarta para experiencia Caminata Ciudad Perdida.",
+    "operator_identity_verified": false
+  }
+]

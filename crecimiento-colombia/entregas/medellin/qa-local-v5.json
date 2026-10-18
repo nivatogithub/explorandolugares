@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-17",
+  "url": "http://127.0.0.1:8061/medellin/",
+  "browser_requested": "iab",
+  "inventory_browsers": [],
+  "result": "Browser is not available: iab",
+  "desktop_qa": "pending_browser_available",
+  "mobile_qa": "pending_browser_available",
+  "chrome_used": false,
+  "service_restarted": false,
+  "static_checks": [
+    "JSON parse",
+    "local img paths exist",
+    "three rejected reference filenames absent from preview",
+    "exactly eight principal cards",
+    "independent local review fields"
+  ]
+}

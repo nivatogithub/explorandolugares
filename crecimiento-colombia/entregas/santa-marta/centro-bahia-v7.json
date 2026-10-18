@@ -1,0 +1,110 @@
+[
+  {
+    "id": "SM-H7-01",
+    "source": "https://www.pexels.com/it-it/foto/vista-panoramica-del-porto-e-dello-skyline-di-santa-marta-38037048/",
+    "download_url": "https://images.pexels.com/photos/38037048/pexels-photo-38037048.jpeg",
+    "author": "Juan Camilo Trujillo Botero",
+    "license": "Pexels License",
+    "license_url": "https://www.pexels.com/license/",
+    "identity": "Ficha puerto/skyline SantaMarta; identificar marina, centro y bahía por hitos antes de proponer.",
+    "path": "imagenes/centro-bahia-v7/originales/SM-H7-01.jpg",
+    "sha256": "107268583c013243ca2eb4dc455c071ad57837ad8ba3ec9ad31c459f1525913c",
+    "status": "not_selected_for_hero",
+    "approval": false,
+    "generation_authorized": false,
+    "consulted_at": "2026-10-17",
+    "required_sector": "centro_y_bahia_historica_exclusivamente",
+    "actual_dimensions": [
+      6000,
+      4000
+    ],
+    "technical_crop": "generado_para_inspeccion_no_aprobado",
+    "visual_review": "Bahía y frente urbano completos, pero perspectiva baja con cielo dominante y foco en torres de Bellavista; no satisface tan bien centro histórico dominante. No proponer para completar número de opciones.",
+    "visual_inspected": true
+  },
+  {
+    "id": "SM-H7-02",
+    "title": "Panoramica de Santa Marta.JPG",
+    "source": "https://commons.wikimedia.org/wiki/File:Panoramica_de_Santa_Marta.JPG",
+    "identity": "Fuente describe vista hacia SantaMarta desde víaRodadero; no equivale a representarRodadero. Foto2009: revisar antigüedad e hitos.",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/1/18/Panoramica_de_Santa_Marta.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "ArturoAparicio",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source_dimensions": [
+      3264,
+      2448
+    ],
+    "photo_date": "2009-10",
+    "path": "imagenes/centro-bahia-v7/originales/SM-H7-02.jpg",
+    "sha256": "68c4b8105c212543f0ff0e85833c051f13321ac468cef05d9098121a3f9c9051",
+    "status": "rejected_visual_brief",
+    "approval": false,
+    "generation_authorized": false,
+    "consulted_at": "2026-10-17",
+    "required_sector": "centro_y_bahia_historica_exclusivamente",
+    "actual_dimensions": [
+      3264,
+      2448
+    ],
+    "technical_crop": "generado_para_inspeccion_no_aprobado",
+    "visual_review": "Panorámica2009 con ciudad diminuta, grandes laderas/canchas y cielo; se descarta.",
+    "visual_inspected": true
+  },
+  {
+    "id": "SM-H7-03",
+    "title": "Vista de la ciudad desde el morro.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Vista_de_la_ciudad_desde_el_morro.jpg",
+    "identity": "Título vista desdeMorro; verificar ciudad y marco real, no asumir por título.",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Vista_de_la_ciudad_desde_el_morro.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Giancarlos1234",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_dimensions": [
+      2048,
+      1213
+    ],
+    "photo_date": "2022-03-31",
+    "path": "imagenes/centro-bahia-v7/originales/SM-H7-03.jpg",
+    "sha256": "e2bc8309ead4aa6ff62e67ef1f1840be705ab3c75a8de690677d888653184c0c",
+    "status": "ready_individual_reference_choice",
+    "approval": false,
+    "generation_authorized": false,
+    "consulted_at": "2026-10-17",
+    "required_sector": "centro_y_bahia_historica_exclusivamente",
+    "actual_dimensions": [
+      2048,
+      1213
+    ],
+    "technical_crop": "generado_para_inspeccion_no_aprobado",
+    "visual_review": "Vista aérea del centro histórico desde El Morro, frente del Camellón, parque Bolívar y Catedral en tejido urbano; identidad contrastada con fuentes locales y mapa. Recorte técnico reduce mar inferior y conserva edificios principales completos.",
+    "visual_inspected": true,
+    "proposed_role": "portada principal Santa Marta: centro y bahía histórica",
+    "crop_box_original_xyxy": [
+      300,
+      30,
+      1740,
+      822
+    ],
+    "crop_method": "Recorte técnico de original real; sin IA, reconstrucción ni retoque arquitectónico.",
+    "desktop_review": "600x330 inspeccionado",
+    "mobile_review": "342x240 inspeccionado; centro/catedral/parque conservados",
+    "history_limit": "Original31mar2022; no prueba estado exacto actual.",
+    "license_conditions": "CC BY-SA4.0: conservar autor, fuente, licencia y cambios; derivado bajo misma licencia o compatible. Aprobación editorial y generación pendientes.",
+    "identity_evidence": [
+      {
+        "landmark": "Camellón frente a El Morro y circuito centro/Catedral",
+        "source": "https://indetur.gov.co/2022/01/santa-marta-fortalece-su-oferta-turistica-con-el-nuevo-camellon-de-la-bahia/"
+      },
+      {
+        "landmark": "Parque Simón Bolívar frente bahía, calles14–15; Catedral en centro",
+        "source": "https://visitsantamarta.com/blog/centro-historico-santa-marta/38"
+      }
+    ],
+    "alt": {
+      "es": "Vista elevada del centro histórico de Santa Marta y el Camellón frente a su bahía, con la Catedral entre los edificios.",
+      "en": "Elevated view of Santa Marta’s historic centre and waterfront on its bay, with the cathedral among the buildings.",
+      "pt-BR": "Vista elevada do centro histórico de Santa Marta e do passeio à beira da baía, com a Catedral entre os edifícios."
+    }
+  }
+]

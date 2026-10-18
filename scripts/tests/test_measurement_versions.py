@@ -6,6 +6,7 @@ class MeasurementVersionTests(unittest.TestCase):
  def test_new_measurement_invalidates_menu_and_every_page_loader(self):
   with tempfile.TemporaryDirectory() as temporary:
    public=Path(temporary);assets=public/'assets';(assets/'cobertura').mkdir(parents=True)
+   (assets/'cobertura/medicion.css').write_text('body{}')
    script=assets/'cobertura/medicion.js';script.write_text('first')
    menu=assets/'menu-principal.js';menu.write_text("s.src='/assets/cobertura/medicion.js?v=1';document.querySelector('script[src*=\"menu-principal.js\"]');")
    page=public/'index.html';page.write_text('<header>Unchanged header/footer</header><script src="assets/menu-principal.js"></script><script src="/assets/cobertura/medicion.js?v=1"></script>')

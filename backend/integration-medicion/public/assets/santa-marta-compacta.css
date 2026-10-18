@@ -1,0 +1,22 @@
+@import url("/assets/cobertura/portal-tokens.css");
+/* Scoped compact review; follows shared portal tokens. */
+body.santa-marta-compacta .sm-history{display:block!important;grid-template-columns:1fr!important;padding-block:28px!important}
+body.santa-marta-compacta .sm-history>div{max-width:none!important;width:100%}
+body.santa-marta-compacta .sm-history p{max-width:none!important;line-height:1.6;margin:12px 0 0}
+body.santa-marta-compacta .sm-history h2,body.santa-marta-compacta .compact-section-heading h2{font-size:clamp(25px,3vw,34px);line-height:1.15;margin:0}
+body.santa-marta-compacta .compact-section-heading{display:block;margin:0 0 18px;padding:0}
+body.santa-marta-compacta .highlight-grid,body.santa-marta-compacta .destination-experience-list{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+body.santa-marta-compacta .highlight-grid>article,body.santa-marta-compacta .destination-experience-card{display:block!important;min-width:0;overflow:hidden;border:1px solid var(--el-border,#ddd);border-radius:12px;background:var(--el-card,#fff);padding:0 0 14px}
+body.santa-marta-compacta .highlight-photo,body.santa-marta-compacta .highlight-grid img,body.santa-marta-compacta .destination-experience-card>img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;filter:none}
+body.santa-marta-compacta .highlight-grid h3,body.santa-marta-compacta .destination-experience-copy h4{font-size:18px;line-height:1.2;margin:12px 0 8px}
+body.santa-marta-compacta .highlight-grid>article>h3,body.santa-marta-compacta .highlight-grid>article>p{padding-inline:14px}
+body.santa-marta-compacta .highlight-grid>article>.text-link{margin-inline:14px}
+body.santa-marta-compacta .destination-experience-copy{padding:0 14px!important}
+body.santa-marta-compacta .highlight-grid>article>p,body.santa-marta-compacta .destination-experience-copy>p{font-size:14px;line-height:1.45;margin:8px 0 12px}
+body.santa-marta-compacta #que-conocer,body.santa-marta-compacta .destination-experiences{padding-block:30px}
+body.santa-marta-compacta .destination-invitation{padding:22px!important}
+body.santa-marta-compacta .destination-invitation h2{font-size:24px!important}
+body.santa-marta-compacta .destination-preview-banner{padding:8px 16px!important;font-size:12px;min-height:0}
+body.santa-marta-compacta article[hidden]{display:none!important}
+@media(max-width:1050px){body.santa-marta-compacta .highlight-grid,body.santa-marta-compacta .destination-experience-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){body.santa-marta-compacta .highlight-grid,body.santa-marta-compacta .destination-experience-list{grid-template-columns:1fr}}

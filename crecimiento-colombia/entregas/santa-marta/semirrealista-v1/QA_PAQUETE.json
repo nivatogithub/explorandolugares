@@ -1,0 +1,555 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "Destination scope",
+      "pass": true
+    },
+    {
+      "check": "8 distinct geographic sites",
+      "pass": true
+    },
+    {
+      "check": "Tayrona before Rodadero",
+      "pass": true
+    },
+    {
+      "check": "No Acuario in Top8",
+      "pass": true
+    },
+    {
+      "check": "9 distinct experiences",
+      "pass": true
+    },
+    {
+      "check": "Place/experience IDs disjoint",
+      "pass": true
+    },
+    {
+      "check": "Import place/experience slugs disjoint",
+      "pass": true
+    },
+    {
+      "check": "History has no image",
+      "pass": true
+    },
+    {
+      "check": "tayrona complete brief translations",
+      "pass": true
+    },
+    {
+      "check": "tayrona unapproved draft",
+      "pass": true
+    },
+    {
+      "check": "ciudad-perdida complete brief translations",
+      "pass": true
+    },
+    {
+      "check": "ciudad-perdida unapproved draft",
+      "pass": true
+    },
+    {
+      "check": "minca complete brief translations",
+      "pass": true
+    },
+    {
+      "check": "minca unapproved draft",
+      "pass": true
+    },
+    {
+      "check": "rodadero complete brief translations",
+      "pass": true
+    },
+    {
+      "check": "rodadero unapproved draft",
+      "pass": true
+    },
+    {
+      "check": "quinta complete brief translations",
+      "pass": true
+    },
+    {
+      "check": "quinta unapproved draft",
+      "pass": true
+    },
+    {
+      "check": "taganga complete brief translations",
+      "pass": true
+    },
+    {
+      "check": "taganga unapproved draft",
+      "pass": true
+    },
+    {
+      "check": "centro-historico complete brief translations",
+      "pass": true
+    },
+    {
+      "check": "centro-historico unapproved draft",
+      "pass": true
+    },
+    {
+      "check": "playa-blanca complete brief translations",
+      "pass": true
+    },
+    {
+      "check": "playa-blanca unapproved draft",
+      "pass": true
+    },
+    {
+      "check": "buceo-taganga complete brief translations",
+      "pass": true
+    },
+    {
+      "check": "buceo-taganga unapproved draft",
+      "pass": true
+    },
+    {
+      "check": "caminata-tayrona complete brief translations",
+      "pass": true
+    },
+    {
+      "check": "caminata-tayrona unapproved draft",
+      "pass": true
+    },
+    {
+      "check": "minca-cafe complete brief translations",
+      "pass": true
+    },
+    {
+      "check": "minca-cafe unapproved draft",
+      "pass": true
+    },
+    {
+      "check": "recorrido-centro complete brief translations",
+      "pass": true
+    },
+    {
+      "check": "recorrido-centro unapproved draft",
+      "pass": true
+    },
+    {
+      "check": "caminata-ciudad-perdida complete brief translations",
+      "pass": true
+    },
+    {
+      "check": "caminata-ciudad-perdida unapproved draft",
+      "pass": true
+    },
+    {
+      "check": "velero-caribe complete brief translations",
+      "pass": true
+    },
+    {
+      "check": "velero-caribe unapproved draft",
+      "pass": true
+    },
+    {
+      "check": "visita-acuario complete brief translations",
+      "pass": true
+    },
+    {
+      "check": "visita-acuario unapproved draft",
+      "pass": true
+    },
+    {
+      "check": "excursion-playa-blanca complete brief translations",
+      "pass": true
+    },
+    {
+      "check": "excursion-playa-blanca unapproved draft",
+      "pass": true
+    },
+    {
+      "check": "moto-acuatica complete brief translations",
+      "pass": true
+    },
+    {
+      "check": "moto-acuatica unapproved draft",
+      "pass": true
+    },
+    {
+      "check": "No confirmed moto offer",
+      "pass": true
+    },
+    {
+      "check": "18 separate selected masters",
+      "pass": true
+    },
+    {
+      "check": "hero master hash",
+      "pass": true
+    },
+    {
+      "check": "hero outside hosting",
+      "pass": true
+    },
+    {
+      "check": "hero-640.webp dimensions/hash",
+      "pass": true
+    },
+    {
+      "check": "hero-1200.webp dimensions/hash",
+      "pass": true
+    },
+    {
+      "check": "hero no inputs or approval",
+      "pass": true
+    },
+    {
+      "check": "tayrona master hash",
+      "pass": true
+    },
+    {
+      "check": "tayrona outside hosting",
+      "pass": true
+    },
+    {
+      "check": "tayrona-480.webp dimensions/hash",
+      "pass": true
+    },
+    {
+      "check": "tayrona-800.webp dimensions/hash",
+      "pass": true
+    },
+    {
+      "check": "tayrona no inputs or approval",
+      "pass": true
+    },
+    {
+      "check": "ciudad-perdida master hash",
+      "pass": true
+    },
+    {
+      "check": "ciudad-perdida outside hosting",
+      "pass": true
+    },
+    {
+      "check": "ciudad-perdida-480.webp dimensions/hash",
+      "pass": true
+    },
+    {
+      "check": "ciudad-perdida-800.webp dimensions/hash",
+      "pass": true
+    },
+    {
+      "check": "ciudad-perdida no inputs or approval",
+      "pass": true
+    },
+    {
+      "check": "minca master hash",
+      "pass": true
+    },
+    {
+      "check": "minca outside hosting",
+      "pass": true
+    },
+    {
+      "check": "minca-480.webp dimensions/hash",
+      "pass": true
+    },
+    {
+      "check": "minca-800.webp dimensions/hash",
+      "pass": true
+    },
+    {
+      "check": "minca no inputs or approval",
+      "pass": true
+    },
+    {
+      "check": "rodadero master hash",
+      "pass": true
+    },
+    {
+      "check": "rodadero outside hosting",
+      "pass": true
+    },
+    {
+      "check": "rodadero-480.webp dimensions/hash",
+      "pass": true
+    },
+    {
+      "check": "rodadero-800.webp dimensions/hash",
+      "pass": true
+    },
+    {
+      "check": "rodadero no inputs or approval",
+      "pass": true
+    },
+    {
+      "check": "quinta master hash",
+      "pass": true
+    },
+    {
+      "check": "quinta outside hosting",
+      "pass": true
+    },
+    {
+      "check": "quinta-480.webp dimensions/hash",
+      "pass": true
+    },
+    {
+      "check": "quinta-800.webp dimensions/hash",
+      "pass": true
+    },
+    {
+      "check": "quinta no inputs or approval",
+      "pass": true
+    },
+    {
+      "check": "taganga master hash",
+      "pass": true
+    },
+    {
+      "check": "taganga outside hosting",
+      "pass": true
+    },
+    {
+      "check": "taganga-480.webp dimensions/hash",
+      "pass": true
+    },
+    {
+      "check": "taganga-800.webp dimensions/hash",
+      "pass": true
+    },
+    {
+      "check": "taganga no inputs or approval",
+      "pass": true
+    },
+    {
+      "check": "centro-historico master hash",
+      "pass": true
+    },
+    {
+      "check": "centro-historico outside hosting",
+      "pass": true
+    },
+    {
+      "check": "centro-historico-480.webp dimensions/hash",
+      "pass": true
+    },
+    {
+      "check": "centro-historico-800.webp dimensions/hash",
+      "pass": true
+    },
+    {
+      "check": "centro-historico no inputs or approval",
+      "pass": true
+    },
+    {
+      "check": "playa-blanca master hash",
+      "pass": true
+    },
+    {
+      "check": "playa-blanca outside hosting",
+      "pass": true
+    },
+    {
+      "check": "playa-blanca-480.webp dimensions/hash",
+      "pass": true
+    },
+    {
+      "check": "playa-blanca-800.webp dimensions/hash",
+      "pass": true
+    },
+    {
+      "check": "playa-blanca no inputs or approval",
+      "pass": true
+    },
+    {
+      "check": "exp-buceo-taganga master hash",
+      "pass": true
+    },
+    {
+      "check": "exp-buceo-taganga outside hosting",
+      "pass": true
+    },
+    {
+      "check": "exp-buceo-taganga-480.webp dimensions/hash",
+      "pass": true
+    },
+    {
+      "check": "exp-buceo-taganga-800.webp dimensions/hash",
+      "pass": true
+    },
+    {
+      "check": "exp-buceo-taganga no inputs or approval",
+      "pass": true
+    },
+    {
+      "check": "exp-caminata-tayrona master hash",
+      "pass": true
+    },
+    {
+      "check": "exp-caminata-tayrona outside hosting",
+      "pass": true
+    },
+    {
+      "check": "exp-caminata-tayrona-480.webp dimensions/hash",
+      "pass": true
+    },
+    {
+      "check": "exp-caminata-tayrona-800.webp dimensions/hash",
+      "pass": true
+    },
+    {
+      "check": "exp-caminata-tayrona no inputs or approval",
+      "pass": true
+    },
+    {
+      "check": "exp-minca-cafe master hash",
+      "pass": true
+    },
+    {
+      "check": "exp-minca-cafe outside hosting",
+      "pass": true
+    },
+    {
+      "check": "exp-minca-cafe-480.webp dimensions/hash",
+      "pass": true
+    },
+    {
+      "check": "exp-minca-cafe-800.webp dimensions/hash",
+      "pass": true
+    },
+    {
+      "check": "exp-minca-cafe no inputs or approval",
+      "pass": true
+    },
+    {
+      "check": "exp-recorrido-centro master hash",
+      "pass": true
+    },
+    {
+      "check": "exp-recorrido-centro outside hosting",
+      "pass": true
+    },
+    {
+      "check": "exp-recorrido-centro-480.webp dimensions/hash",
+      "pass": true
+    },
+    {
+      "check": "exp-recorrido-centro-800.webp dimensions/hash",
+      "pass": true
+    },
+    {
+      "check": "exp-recorrido-centro no inputs or approval",
+      "pass": true
+    },
+    {
+      "check": "exp-ciudad-perdida master hash",
+      "pass": true
+    },
+    {
+      "check": "exp-ciudad-perdida outside hosting",
+      "pass": true
+    },
+    {
+      "check": "exp-ciudad-perdida-480.webp dimensions/hash",
+      "pass": true
+    },
+    {
+      "check": "exp-ciudad-perdida-800.webp dimensions/hash",
+      "pass": true
+    },
+    {
+      "check": "exp-ciudad-perdida no inputs or approval",
+      "pass": true
+    },
+    {
+      "check": "exp-velero-caribe master hash",
+      "pass": true
+    },
+    {
+      "check": "exp-velero-caribe outside hosting",
+      "pass": true
+    },
+    {
+      "check": "exp-velero-caribe-480.webp dimensions/hash",
+      "pass": true
+    },
+    {
+      "check": "exp-velero-caribe-800.webp dimensions/hash",
+      "pass": true
+    },
+    {
+      "check": "exp-velero-caribe no inputs or approval",
+      "pass": true
+    },
+    {
+      "check": "exp-visita-acuario master hash",
+      "pass": true
+    },
+    {
+      "check": "exp-visita-acuario outside hosting",
+      "pass": true
+    },
+    {
+      "check": "exp-visita-acuario-480.webp dimensions/hash",
+      "pass": true
+    },
+    {
+      "check": "exp-visita-acuario-800.webp dimensions/hash",
+      "pass": true
+    },
+    {
+      "check": "exp-visita-acuario no inputs or approval",
+      "pass": true
+    },
+    {
+      "check": "exp-excursion-playa-blanca master hash",
+      "pass": true
+    },
+    {
+      "check": "exp-excursion-playa-blanca outside hosting",
+      "pass": true
+    },
+    {
+      "check": "exp-excursion-playa-blanca-480.webp dimensions/hash",
+      "pass": true
+    },
+    {
+      "check": "exp-excursion-playa-blanca-800.webp dimensions/hash",
+      "pass": true
+    },
+    {
+      "check": "exp-excursion-playa-blanca no inputs or approval",
+      "pass": true
+    },
+    {
+      "check": "exp-moto-acuatica master hash",
+      "pass": true
+    },
+    {
+      "check": "exp-moto-acuatica outside hosting",
+      "pass": true
+    },
+    {
+      "check": "exp-moto-acuatica-480.webp dimensions/hash",
+      "pass": true
+    },
+    {
+      "check": "exp-moto-acuatica-800.webp dimensions/hash",
+      "pass": true
+    },
+    {
+      "check": "exp-moto-acuatica no inputs or approval",
+      "pass": true
+    },
+    {
+      "check": "36 responsive WebPs",
+      "pass": true
+    },
+    {
+      "check": "Import content count/flags",
+      "pass": true
+    },
+    {
+      "check": "Public JSON matches private draft",
+      "pass": true
+    }
+  ],
+  "count": 137,
+  "scope": "File integrity, source associations and translation/role completeness only; browser rendering and human approval not implied."
+}

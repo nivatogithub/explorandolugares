@@ -1,0 +1,385 @@
+{
+  "schema_version": 1,
+  "destination": "santa-marta",
+  "state": "borradores_9_experiencias_es_en_pt_clasificados_sin_importar",
+  "consulted_at": "2026-10-17",
+  "experiences": [
+    {
+      "id": "buceo-taganga",
+      "destination": "santa-marta",
+      "operator": "Barracuda Dive Center",
+      "source_url": "https://www.barracudataganga.com/cursos-de-buceo/",
+      "checked_at": "2026-10-17",
+      "evidence": "Oferta descrita en sitio del operador; no contacto ni validación contractual.",
+      "translations": {
+        "es": {
+          "name": "Buceo con salida desde Taganga",
+          "description": "Explora el paisaje submarino del Tayrona con un centro de buceo de Taganga. Elige una salida acorde con tu experiencia y consulta requisitos, condiciones del mar y zonas habilitadas directamente con el operador."
+        },
+        "en": {
+          "name": "Diving from Taganga",
+          "description": "Explore Tayrona’s underwater scenery with a dive centre based in Taganga. Choose a trip suited to your experience and check requirements, sea conditions and authorised areas directly with the operator."
+        },
+        "pt-BR": {
+          "name": "Mergulho saindo de Taganga",
+          "description": "Explore a paisagem submarina do Tayrona com um centro de mergulho de Taganga. Escolha uma saída adequada à sua experiência e consulte requisitos, condições do mar e áreas autorizadas diretamente com o operador."
+        }
+      },
+      "publication_status": "draft",
+      "availability_verified": false,
+      "registration_verified": false,
+      "partnership": false,
+      "image_status": "original_especifico_y_permiso_pendientes",
+      "image_asset": null,
+      "text_approval": false,
+      "image_approval": false,
+      "reference_research": {
+        "id": "SM-E6-01",
+        "status": "context_only",
+        "notes": "Peces y coral, sin buceadores. No representa una clase ni al operador Barracuda."
+      },
+      "content_type": "experience",
+      "location_id": "santa-marta:taganga",
+      "related_location_ids": [
+        "santa-marta:tayrona"
+      ],
+      "counts_as_top8_place": false,
+      "event_date": null,
+      "text_qa_status": "reviewed_es_en_pt_draft",
+      "text_qa_date": "2026-10-17"
+    },
+    {
+      "id": "caminata-tayrona",
+      "destination": "santa-marta",
+      "operator": "Expotur",
+      "source_url": "https://expotur-eco.com/tours/tour-al-parque-tayrona/",
+      "checked_at": "2026-10-17",
+      "evidence": "Oferta descrita en sitio del operador; no contacto ni validación contractual.",
+      "translations": {
+        "es": {
+          "name": "Caminata a Cabo San Juan",
+          "description": "Combina senderos de bosque tropical con las playas y rocas de Cabo San Juan. Antes de contratar, confirma el recorrido, el esfuerzo requerido, los accesos autorizados y el calendario de cierres del parque."
+        },
+        "en": {
+          "name": "Hike to Cabo San Juan",
+          "description": "Combine tropical forest trails with Cabo San Juan’s beaches and rocks. Before booking, check the route, physical demands, authorised access points and the park’s closure calendar."
+        },
+        "pt-BR": {
+          "name": "Caminhada até Cabo San Juan",
+          "description": "Combine trilhas de floresta tropical com as praias e rochas de Cabo San Juan. Antes de contratar, confirme o percurso, o esforço necessário, os acessos autorizados e o calendário de fechamentos do parque."
+        }
+      },
+      "publication_status": "draft",
+      "availability_verified": false,
+      "registration_verified": false,
+      "partnership": false,
+      "image_status": "original_especifico_y_permiso_pendientes",
+      "image_asset": null,
+      "text_approval": false,
+      "image_approval": false,
+      "reference_research": {
+        "id": "SM-E6-02",
+        "status": "rejected_for_main_activity",
+        "notes": "Sendero real con turistas, uno reconocible domina el encuadre. No representa un grupo de Expotur."
+      },
+      "content_type": "experience",
+      "location_id": "santa-marta:tayrona",
+      "related_location_ids": [
+        "santa-marta:cabo-san-juan"
+      ],
+      "counts_as_top8_place": false,
+      "event_date": null,
+      "text_qa_status": "reviewed_es_en_pt_draft",
+      "text_qa_date": "2026-10-17"
+    },
+    {
+      "id": "minca-cafe",
+      "destination": "santa-marta",
+      "operator": "Expotur",
+      "source_url": "https://expotur-eco.com/tours/tour-a-minca-santa-marta/",
+      "checked_at": "2026-10-17",
+      "evidence": "Oferta descrita en sitio del operador; no contacto ni validación contractual.",
+      "translations": {
+        "es": {
+          "name": "Naturaleza y café en Minca",
+          "description": "Recorre las laderas de Minca para acercarte a su paisaje de montaña y a la cultura del café. La visita a una finca y los senderos dependen del recorrido contratado: confirma qué incluye, las condiciones de acceso y la exigencia física con el operador."
+        },
+        "en": {
+          "name": "Nature and coffee in Minca",
+          "description": "Explore Minca’s mountain scenery and coffee culture. Farm visits and trails depend on the chosen itinerary: check what is included, access conditions and physical demands with the operator."
+        },
+        "pt-BR": {
+          "name": "Natureza e café em Minca",
+          "description": "Explore as encostas de Minca para conhecer a paisagem de montanha e a cultura do café. A visita a uma fazenda e as trilhas dependem do roteiro contratado: confirme o que está incluído, as condições de acesso e o esforço físico com a operadora."
+        }
+      },
+      "publication_status": "draft",
+      "availability_verified": false,
+      "registration_verified": false,
+      "partnership": false,
+      "image_status": "original_especifico_y_permiso_pendientes",
+      "image_asset": null,
+      "text_approval": false,
+      "image_approval": false,
+      "reference_research": {
+        "id": "SM-E6-03",
+        "status": "context_only",
+        "notes": "Colibrí en Minca según fuente. No representa café ni finca; no asignar a la experiencia cafetera."
+      },
+      "content_type": "experience",
+      "location_id": "santa-marta:minca",
+      "related_location_ids": [],
+      "counts_as_top8_place": false,
+      "event_date": null,
+      "editorial_classification_note": "Salida/tour de naturaleza y café, no evento con fecha; no crear agenda ficticia.",
+      "text_qa_status": "reviewed_es_en_pt_draft",
+      "text_qa_date": "2026-10-17"
+    },
+    {
+      "id": "recorrido-centro",
+      "destination": "santa-marta",
+      "operator": "Visit Santa Marta",
+      "source_url": "https://visitsantamarta.com/en/experiences/free-walking-tour-santa-marta/13",
+      "checked_at": "2026-10-17",
+      "evidence": "Oferta descrita en sitio del operador; no contacto ni validación contractual.",
+      "translations": {
+        "es": {
+          "name": "Recorrido guiado por el centro histórico",
+          "description": "Conoce calles, plazas y memoria samaria acompañado por un guía. Consulta el punto de encuentro, el idioma del recorrido y las condiciones de participación directamente con el organizador."
+        },
+        "en": {
+          "name": "Guided walk through the historic centre",
+          "description": "Discover streets, squares and Santa Marta’s history with a guide. Check the meeting point, tour language and participation arrangements directly with the organiser."
+        },
+        "pt-BR": {
+          "name": "Passeio guiado pelo centro histórico",
+          "description": "Conheça ruas, praças e a memória de Santa Marta com um guia. Consulte o ponto de encontro, o idioma do passeio e as condições de participação diretamente com o organizador."
+        }
+      },
+      "publication_status": "draft",
+      "availability_verified": false,
+      "registration_verified": false,
+      "partnership": false,
+      "image_status": "original_especifico_y_permiso_pendientes",
+      "image_asset": null,
+      "text_approval": false,
+      "image_approval": false,
+      "reference_research": {
+        "id": "SM-E6-04",
+        "status": "candidate_editorial_stop",
+        "notes": "Parque de los Novios reconocible; parada editorial de recorrido, sin atribuir guía u operador."
+      },
+      "content_type": "experience",
+      "location_id": "santa-marta:centro",
+      "related_location_ids": [],
+      "counts_as_top8_place": false,
+      "event_date": null,
+      "text_qa_status": "reviewed_es_en_pt_draft",
+      "text_qa_date": "2026-10-17"
+    },
+    {
+      "id": "ciudad-perdida",
+      "destination": "santa-marta",
+      "operator": "Magic Tour Colombia",
+      "source_url": "https://lostcitytours.com/en/tours/lost-city-4-days/",
+      "checked_at": "2026-10-17",
+      "evidence": "Oferta descrita en sitio del operador; no contacto ni validación contractual.",
+      "translations": {
+        "es": {
+          "name": "Travesía a Ciudad Perdida · Teyuna",
+          "description": "Camina durante varios días por la Sierra Nevada hasta el parque arqueológico de Teyuna. La travesía requiere planificación, guía y preparación física; confirma las condiciones de acceso, los permisos y los protocolos del territorio indígena con el operador y las autoridades del sitio."
+        },
+        "en": {
+          "name": "Trek to Ciudad Perdida · Teyuna",
+          "description": "Follow a multi-day trek through the Sierra Nevada to Teyuna Archaeological Park. The journey requires planning, a guide and physical preparation; check access conditions, permits and Indigenous territory protocols with the operator and site authorities."
+        },
+        "pt-BR": {
+          "name": "Travessia à Ciudad Perdida · Teyuna",
+          "description": "Caminhe por vários dias pela Sierra Nevada até o parque arqueológico de Teyuna. A travessia exige planejamento, guia e preparo físico; confirme condições de acesso, permissões e protocolos do território indígena com a operadora e as autoridades do sítio."
+        }
+      },
+      "publication_status": "draft",
+      "availability_verified": false,
+      "registration_verified": false,
+      "partnership": false,
+      "image_status": "original_especifico_y_permiso_pendientes",
+      "image_asset": null,
+      "text_approval": false,
+      "image_approval": false,
+      "reference_research": {
+        "id": "SM-E7-01",
+        "status": "rejected_wrong_activity_scene",
+        "notes": "Cocina nocturna, no trekking; buscar otra referencia. SM-E6-05 aérea reservada como propuesta para sitio geográfico Teyuna, sin duplicarla en experiencia."
+      },
+      "content_type": "experience",
+      "location_id": "santa-marta:ciudad-perdida",
+      "related_location_ids": [],
+      "counts_as_top8_place": false,
+      "event_date": null,
+      "text_qa_status": "reviewed_es_en_pt_draft",
+      "text_qa_date": "2026-10-17"
+    },
+    {
+      "id": "velero-caribe",
+      "destination": "santa-marta",
+      "operator": "Velero Santa Marta",
+      "source_url": "https://www.velerosantamarta.com/index-en.html",
+      "checked_at": "2026-10-17",
+      "evidence": "Oferta descrita en sitio del operador; no contacto ni validación contractual.",
+      "translations": {
+        "es": {
+          "name": "Navegación a vela por la costa",
+          "description": "Observa la costa desde el mar en una salida de navegación. El recorrido depende de la propuesta del operador, del tiempo y de las autorizaciones aplicables; confirma puerto de salida, condiciones a bordo y ruta antes de contratar."
+        },
+        "en": {
+          "name": "Sailing along the coast",
+          "description": "See the coast from the sea on a sailing outing. The route depends on the operator’s programme, weather and applicable permissions; confirm the departure harbour, onboard arrangements and itinerary before booking."
+        },
+        "pt-BR": {
+          "name": "Navegação a vela pelo litoral",
+          "description": "Observe o litoral a partir do mar em um passeio a vela. O percurso depende da proposta do operador, do tempo e das autorizações aplicáveis; confirme porto de saída, condições a bordo e roteiro antes de contratar."
+        }
+      },
+      "publication_status": "draft",
+      "availability_verified": false,
+      "registration_verified": false,
+      "partnership": false,
+      "image_status": "original_especifico_y_permiso_pendientes",
+      "image_asset": null,
+      "text_approval": false,
+      "image_approval": false,
+      "reference_research": {
+        "id": "SM-E6-06",
+        "status": "conditional_editorial_context",
+        "notes": "Velero fondeado al atardecer con El Morro. No identifica embarcación del operador; encuadre vertical corta mástil al adaptar a tarjeta horizontal."
+      },
+      "content_type": "experience",
+      "location_id": "santa-marta:bahia-historica",
+      "related_location_ids": [],
+      "counts_as_top8_place": false,
+      "event_date": null,
+      "text_qa_status": "reviewed_es_en_pt_draft",
+      "text_qa_date": "2026-10-17"
+    },
+    {
+      "id": "visita-acuario",
+      "destination": "santa-marta",
+      "operator": "Centro de Vida Marina (antes Acuario Rodadero)",
+      "source_url": "https://centrodevidamarina.com/",
+      "checked_at": "2026-10-17",
+      "evidence": "Fuente propia confirma identidad/actividad; no disponibilidad comercial verificada.",
+      "translations": {
+        "es": {
+          "name": "Visita al Centro de Vida Marina",
+          "description": "Conoce las exhibiciones del Centro de Vida Marina, antes conocido como Acuario Rodadero, y acércate a la biodiversidad del Caribe colombiano. Confirma el programa, el acceso y las condiciones de visita directamente con el establecimiento. Es una institución diferente de Acuario Mundo Marino."
+        },
+        "en": {
+          "name": "Visit Centro de Vida Marina",
+          "description": "Explore the exhibitions at the Marine Life Centre, formerly Acuario Rodadero, and learn about Colombia’s Caribbean biodiversity. Check the programme, access arrangements and visiting conditions directly with the venue. It is a different institution from Acuario Mundo Marino."
+        },
+        "pt-BR": {
+          "name": "Visita ao Centro de Vida Marina",
+          "description": "Conheça as exposições do Centro de Vida Marina, antes chamado Acuario Rodadero, e aproxime-se da biodiversidade do Caribe colombiano. Confirme programação, acesso e condições de visita diretamente com o estabelecimento. É uma instituição diferente do Acuario Mundo Marino."
+        }
+      },
+      "publication_status": "draft",
+      "availability_verified": false,
+      "registration_verified": false,
+      "partnership": false,
+      "image_status": "original_especifico_y_permiso_pendientes",
+      "image_asset": null,
+      "text_approval": false,
+      "image_approval": false,
+      "content_type": "experience",
+      "location_id": "santa-marta:acuario-rodadero",
+      "related_location_ids": [],
+      "counts_as_top8_place": false,
+      "event_date": null,
+      "text_qa_status": "reviewed_es_en_pt_draft",
+      "text_qa_date": "2026-10-17"
+    },
+    {
+      "id": "excursion-playa-blanca",
+      "destination": "santa-marta",
+      "operator": null,
+      "source_url": "https://colombia.travel/es/santa-marta/playa-blanca",
+      "checked_at": "2026-10-17",
+      "evidence": "Fuente institucional identifica excursión geográfica; operador pendiente.",
+      "translations": {
+        "es": {
+          "name": "Excursión a Playa Blanca",
+          "description": "Una salida en lancha desde El Rodadero permite dedicar el día a la playa y al paisaje de esta bahía samaria. Consulta transporte autorizado, puntos de embarque y condiciones del mar antes de salir. Esta excursión corresponde a Playa Blanca de Santa Marta, no a la playa homónima de Barú."
+        },
+        "en": {
+          "name": "Playa Blanca boat excursion",
+          "description": "A boat trip from El Rodadero offers a day on the beach and along this bay on Santa Marta’s coast. Check authorised transport, boarding points and sea conditions before leaving. This excursion visits Playa Blanca in Santa Marta, not its namesake on Barú."
+        },
+        "pt-BR": {
+          "name": "Passeio a Playa Blanca",
+          "description": "Um passeio de barco saindo de El Rodadero permite dedicar o dia à praia e à paisagem desta baía de Santa Marta. Consulte transporte autorizado, pontos de embarque e condições do mar antes de sair. O passeio corresponde à Playa Blanca de Santa Marta, não à praia homônima de Barú."
+        }
+      },
+      "publication_status": "draft",
+      "availability_verified": false,
+      "registration_verified": false,
+      "partnership": false,
+      "image_status": "original_especifico_y_permiso_pendientes",
+      "image_asset": null,
+      "text_approval": false,
+      "image_approval": false,
+      "content_type": "experience",
+      "location_id": "santa-marta:playa-blanca",
+      "related_location_ids": [],
+      "counts_as_top8_place": false,
+      "event_date": null,
+      "reference_research": {
+        "id": "SM-P7-03",
+        "status": "conditional_individual_reference_choice",
+        "notes": "Para experiencia de excursión; foto2015 brumosa con geografía identificable, encuadres revisados. No foto de operador ni aprobación de puesto8."
+      },
+      "text_qa_status": "reviewed_es_en_pt_draft",
+      "text_qa_date": "2026-10-17"
+    },
+    {
+      "id": "moto-acuatica",
+      "destination": "santa-marta",
+      "operator": null,
+      "source_url": "https://www.discoversantamarta.travel/wp-content/uploads/2024/03/07032024-GUIA-GENERAL-DIGITAL-ESP.pdf",
+      "checked_at": "2026-10-17",
+      "evidence": "Guía turística2024 menciona motos acuáticas, evidencia indexada; PDF35MB excede acceso web directo. No prueba oferta vigente ni prestador específico.",
+      "translations": {
+        "es": {
+          "name": "Paseo en moto acuática",
+          "description": "La moto acuática permite una actividad náutica que debe realizarse con un prestador autorizado y en una zona habilitada. Antes de contratar, confirma requisitos de edad, acompañamiento, equipo de protección y condiciones del mar, además de la disponibilidad y las restricciones del servicio."
+        },
+        "en": {
+          "name": "Personal watercraft outing",
+          "description": "A personal watercraft outing should take place with an authorised provider in a permitted area. Before booking, check age requirements, supervision, protective equipment and sea conditions, as well as service availability and restrictions."
+        },
+        "pt-BR": {
+          "name": "Passeio de moto aquática",
+          "description": "Um passeio de moto aquática deve ser realizado com um prestador autorizado e em uma área permitida. Antes de contratar, confirme requisitos de idade, acompanhamento, equipamentos de proteção e condições do mar, além da disponibilidade e das restrições do serviço."
+        }
+      },
+      "publication_status": "draft",
+      "availability_verified": false,
+      "registration_verified": false,
+      "partnership": false,
+      "image_status": "original_especifico_y_permiso_pendientes",
+      "image_asset": null,
+      "text_approval": false,
+      "image_approval": false,
+      "content_type": "experience",
+      "location_id": null,
+      "related_location_ids": [],
+      "counts_as_top8_place": false,
+      "event_date": null,
+      "operator_validation_status": "pending",
+      "publication_gate": "No publicar como oferta reservable ni asignar playa concreta hasta verificar prestador y zona.",
+      "text_qa_status": "reviewed_es_en_pt_draft",
+      "text_qa_date": "2026-10-17"
+    }
+  ],
+  "not_imported": true,
+  "production_authorized": false
+}

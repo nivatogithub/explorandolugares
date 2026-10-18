@@ -24,8 +24,8 @@ function measurement_account(PDO $pdo,string $key):array {
     if(!isset($_COOKIE['el_session']))return $context;
     session_name('el_session');ini_set('session.use_strict_mode','1');session_start(['read_and_close'=>true]);
     if(!empty($_SESSION['admin']))return ['excluded'=>true,'account_kind'=>'internal','account_hash'=>null];
-    if(!empty($_SESSION['business_account_id']))return ['excluded'=>true,'account_kind'=>'business','account_hash'=>null];
-    $accountId=(int)($_SESSION['traveler_account_id']??$_SESSION['account_id']??0);
-    if($accountId){try{$q=$pdo->prepare("SELECT id FROM accounts WHERE id=? AND account_type='traveler' AND status='active' AND email_verified_at IS NOT NULL");$q->execute([$accountId]);if($q->fetchColumn())$context=['excluded'=>false,'account_kind'=>'traveler','account_hash'=>hash_hmac('sha256','account|'.$accountId,$key)];}catch(Throwable){}}
+    if(!empty($_SESSION['business_account_id'])&&($_SESSION['account_space']??'business')==='business')return ['excluded'=>true,'account_kind'=>'business','account_hash'=>null];
+    $accountId=(int)($_SESSION['business_account_id']??$_SESSION['traveler_account_id']??$_SESSION['account_id']??0);
+    if($accountId){try{$q=$pdo->prepare("SELECT id FROM accounts WHERE id=? AND status='active' AND email_verified_at IS NOT NULL");$q->execute([$accountId]);if($q->fetchColumn())$context=['excluded'=>false,'account_kind'=>'traveler','account_hash'=>hash_hmac('sha256','account|'.$accountId,$key)];}catch(Throwable){}}
     return $context;
 }

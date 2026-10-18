@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "cartagena-portada-la-popa-v1",
+  "destination_id": "CO-13-cartagena",
+  "attraction_id": "panorama-la-popa",
+  "file": "imagenes/ia/cartagena-portada-la-popa-v1.webp",
+  "master_file": "imagenes/ia/cartagena-portada-la-popa-v1.png",
+  "media_type": "ai_generated_illustration",
+  "language": "neutral",
+  "purpose": "destination_hero",
+  "alt_text": {
+    "es": "Ilustración editorial de Cartagena y su bahía desde La Popa, con la cruz de piedra en primer plano.",
+    "en": "Editorial illustration of Cartagena and its bay from La Popa, with the stone cross in the foreground.",
+    "pt-BR": "Ilustração editorial de Cartagena e sua baía vista de La Popa, com a cruz de pedra em primeiro plano."
+  },
+  "generation": {
+    "provider": "OpenAI",
+    "tool": "built-in image_gen",
+    "model": "not_reported_by_tool",
+    "generated_at": "2026-10-17",
+    "prompt": "Use case: stylized-concept. Create a wide landscape editorial illustration for the Cartagena de Indias destination hero on Explorando Lugares. Use the supplied licensed Norma Gòmez CC BY 2.0 photograph as a factual geographical reference, not as a photographic texture. Preserve its view FROM La Popa: weathered stone cross with short horizontal arms and its pale round base on the left foreground, the bay across the middle, the curved Bocagrande skyline behind it, urban neighbourhoods and greenery in the lower foreground, distant low coastline and Caribbean sky. Keep the reference's relative coastline, building masses, orientation and cross proportions faithful; do not add the walled city, islands, churches or imaginary landmarks. Clearly illustrated realistic caricature editorial finish: visible fine ink outlines, simplified architectural shapes, matte gouache brushwork and paper grain, warm natural cream/ochre architecture, green vegetation, deep teal-blue water, restrained terracotta accents. Recognizable geography, no exaggerated buildings. Landscape 1536x1024, compose all important elements inside the central 85% for responsive cropping, preserve the full cross including its top. Pleasant clear Caribbean daylight. No text, logos, watermark, captions, borders, invented boats, people or commercial signs. This must visibly read as a hand-painted illustration, not a photo filter.",
+    "human_operator": "solicitado por propietario; ejecutado por coordinador"
+  },
+  "visual_references": [
+    {
+      "title": "Cartagena de Indias desde el cerro La Popa",
+      "creator": "Norma Gòmez",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cartagena_de_Indias_desde_el_cerro_La_Popa.jpg",
+      "license": "CC BY 2.0",
+      "permission_status": "adaptation_permitted_with_attribution",
+      "used_as_image_input": true,
+      "notes": "Fotografía histórica de 2008; ilustración derivada conserva atribución interna y pública."
+    }
+  ],
+  "fact_sources": [
+    {
+      "title": "La Popa Hill",
+      "url": "https://colombia.travel/en/cartagena-de-indias/la-popa-hill",
+      "organization": "ProColombia",
+      "checked_at": "2026-10-17",
+      "facts_verified": [
+        "Vista panorámica sobre Cartagena desde La Popa"
+      ]
+    }
+  ],
+  "review": {
+    "status": "draft_pending_human_review",
+    "identity_check": "comparada con referencia: cruz, bahía, curva de skyline y masas urbanas reconocibles; simplificación ilustrada, no estado actual",
+    "crop_check_desktop": "pending_actual_template",
+    "crop_check_mobile": "pending_actual_template",
+    "rights_check": "CC BY 2.0 permite adaptación; atribución debe acompañar publicación",
+    "notes": "Generación autorizada expresamente; imagen final todavía no aprobada. No reemplazada en preprod ni producción."
+  },
+  "publication": {
+    "approved_by": "",
+    "approved_at": "",
+    "published_at": ""
+  }
+}

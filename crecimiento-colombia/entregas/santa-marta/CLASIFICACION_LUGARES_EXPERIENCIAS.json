@@ -1,0 +1,212 @@
+{
+  "destination": "santa-marta",
+  "date": "2026-10-17",
+  "status": "draft_mapping_no_database_change",
+  "rules": [
+    "Qué conocer identifica lugares; experiencias identifica actividades.",
+    "Actividad enlaza location_id sin convertirse en otro lugar del Top8.",
+    "Visita al Acuario va en experiencias por decisión humana; establecimiento se conserva como entidad y directorio.",
+    "Lugares geográficos no se borran por tener experiencias asociadas.",
+    "No rellenar ocho ni resolver corte pendiente por disponibilidad de foto.",
+    "Salidas/tours a Minca no son eventos fechados; evento requiere fecha real."
+  ],
+  "locations": [
+    {
+      "location_id": "santa-marta:tayrona",
+      "name": "Parque Nacional Natural Tayrona",
+      "entity_type": "protected_area",
+      "identity_preserved": true,
+      "top8_status": "proposed_place"
+    },
+    {
+      "location_id": "santa-marta:ciudad-perdida",
+      "name": "Teyuna · Ciudad Perdida",
+      "entity_type": "archaeological_site",
+      "identity_preserved": true,
+      "top8_status": "proposed_place"
+    },
+    {
+      "location_id": "santa-marta:minca",
+      "name": "Minca",
+      "entity_type": "corregimiento",
+      "identity_preserved": true,
+      "top8_status": "proposed_place"
+    },
+    {
+      "location_id": "santa-marta:rodadero",
+      "name": "El Rodadero",
+      "entity_type": "urban_sector",
+      "identity_preserved": true,
+      "top8_status": "proposed_place"
+    },
+    {
+      "location_id": "santa-marta:quinta",
+      "name": "Quinta de San Pedro Alejandrino",
+      "entity_type": "heritage_site",
+      "identity_preserved": true,
+      "top8_status": "proposed_place"
+    },
+    {
+      "location_id": "santa-marta:taganga",
+      "name": "Taganga",
+      "entity_type": "corregimiento",
+      "identity_preserved": true,
+      "top8_status": "proposed_place"
+    },
+    {
+      "location_id": "santa-marta:centro",
+      "name": "Centro histórico y bahía",
+      "entity_type": "historic_district",
+      "identity_preserved": true,
+      "top8_status": "proposed_place"
+    },
+    {
+      "location_id": "santa-marta:playa-blanca",
+      "name": "Playa Blanca Santa Marta",
+      "entity_type": "beach",
+      "identity_preserved": true,
+      "top8_status": "pending_cutoff"
+    },
+    {
+      "location_id": "santa-marta:acuario-rodadero",
+      "name": "Centro de Vida Marina / Acuario Rodadero",
+      "entity_type": "establishment",
+      "identity_preserved": true,
+      "top8_status": "inventory_not_separate_top8_card"
+    },
+    {
+      "location_id": "santa-marta:bahia-historica",
+      "name": "Bahía histórica de Santa Marta",
+      "entity_type": "bay",
+      "identity_preserved": true,
+      "top8_status": "inventory_not_separate_top8_card",
+      "coverage_group_location_id": "santa-marta:centro"
+    },
+    {
+      "location_id": "santa-marta:museo-oro",
+      "name": "Museo del Oro Tairona",
+      "entity_type": "museum",
+      "identity_preserved": true,
+      "top8_status": "inventory_not_separate_top8_card",
+      "parent_location_id": "santa-marta:centro"
+    },
+    {
+      "location_id": "santa-marta:bahia-concha",
+      "name": "Bahía Concha",
+      "entity_type": "beach",
+      "identity_preserved": true,
+      "top8_status": "inventory_not_separate_top8_card",
+      "parent_location_id": "santa-marta:tayrona"
+    },
+    {
+      "location_id": "santa-marta:cabo-san-juan",
+      "name": "Cabo San Juan",
+      "entity_type": "coastal_site",
+      "identity_preserved": true,
+      "top8_status": "inventory_not_separate_top8_card",
+      "parent_location_id": "santa-marta:tayrona"
+    }
+  ],
+  "experiences": [
+    {
+      "experience_id": "buceo-taganga",
+      "location_id": "santa-marta:taganga",
+      "related_location_ids": [
+        "santa-marta:tayrona"
+      ],
+      "name_es": "Buceo con salida desde Taganga",
+      "top8_count": false,
+      "operator": "Barracuda Dive Center",
+      "availability_verified": false
+    },
+    {
+      "experience_id": "caminata-tayrona",
+      "location_id": "santa-marta:tayrona",
+      "related_location_ids": [
+        "santa-marta:cabo-san-juan"
+      ],
+      "name_es": "Caminata a Cabo San Juan",
+      "top8_count": false,
+      "operator": "Expotur",
+      "availability_verified": false
+    },
+    {
+      "experience_id": "minca-cafe",
+      "location_id": "santa-marta:minca",
+      "related_location_ids": [],
+      "name_es": "Naturaleza y café en Minca",
+      "top8_count": false,
+      "operator": "Expotur",
+      "availability_verified": false
+    },
+    {
+      "experience_id": "recorrido-centro",
+      "location_id": "santa-marta:centro",
+      "related_location_ids": [],
+      "name_es": "Recorrido guiado por el centro histórico",
+      "top8_count": false,
+      "operator": "Visit Santa Marta",
+      "availability_verified": false
+    },
+    {
+      "experience_id": "ciudad-perdida",
+      "location_id": "santa-marta:ciudad-perdida",
+      "related_location_ids": [],
+      "name_es": "Travesía a Ciudad Perdida · Teyuna",
+      "top8_count": false,
+      "operator": "Magic Tour Colombia",
+      "availability_verified": false
+    },
+    {
+      "experience_id": "velero-caribe",
+      "location_id": "santa-marta:bahia-historica",
+      "related_location_ids": [],
+      "name_es": "Navegación a vela por la costa",
+      "top8_count": false,
+      "operator": "Velero Santa Marta",
+      "availability_verified": false
+    },
+    {
+      "experience_id": "visita-acuario",
+      "location_id": "santa-marta:acuario-rodadero",
+      "related_location_ids": [],
+      "name_es": "Visita al Centro de Vida Marina",
+      "top8_count": false,
+      "operator": "Centro de Vida Marina (antes Acuario Rodadero)",
+      "availability_verified": false
+    },
+    {
+      "experience_id": "excursion-playa-blanca",
+      "location_id": "santa-marta:playa-blanca",
+      "related_location_ids": [],
+      "name_es": "Excursión a Playa Blanca",
+      "top8_count": false,
+      "operator": null,
+      "availability_verified": false
+    },
+    {
+      "experience_id": "moto-acuatica",
+      "location_id": null,
+      "related_location_ids": [],
+      "name_es": "Paseo en moto acuática",
+      "top8_count": false,
+      "operator": null,
+      "availability_verified": false
+    }
+  ],
+  "top8_resolution": {
+    "proposed_geographic_places": 7,
+    "eighth": "pending_human_editorial_cutoff",
+    "playa_blanca_geographic_entity_preserved": true,
+    "experience_excursion_separate": true,
+    "statistical_rank": false
+  },
+  "coverage_rule_proposed": "Contar lugares con identidad canónica una sola vez. Experiencias aportan profundidad del lugar relacionado; no incrementan número de lugares cubiertos. Institución/directorio no duplica cobertura geográfica. Ubicación de moto acuática nula hasta verificación.",
+  "source_guide": "https://www.discoversantamarta.travel/wp-content/uploads/2024/03/07032024-GUIA-GENERAL-DIGITAL-ESP.pdf",
+  "moto_source_limit": "Mención institucional histórica/indexada, sin prueba de oferta vigente.",
+  "ai_generated": false,
+  "database_changed": false,
+  "package_changed": false,
+  "events": [],
+  "event_rule": "Sin eventos fechados confirmados. Las salidas a Minca se mantienen como experiencias, nunca agenda inventada."
+}

@@ -1,0 +1,740 @@
+{
+  "destination": "cartagena",
+  "revision": "9b630228850491a79f17c226a7c183adf0cb8ceb7105908ea0ce362ebd8c38a4",
+  "publication_approved": false,
+  "components": [
+    {
+      "id": "CTG-01",
+      "scope": "Foto principal / portada de Cartagena",
+      "sha256": "ce23705fde747f70e0a96f0149fbd5668c3b53444be83da48f20b5100e201ab6",
+      "value": {
+        "id": "la-popa-2008",
+        "type": "photograph",
+        "author": "Norma Gòmez",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Cartagena_de_Indias_desde_el_cerro_La_Popa.jpg",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Cartagena_de_Indias_desde_el_cerro_La_Popa.jpg",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0/",
+        "commercial_use": true,
+        "adaptation": true,
+        "share_alike": false,
+        "consulted_at": "2026-10-16",
+        "photographed_at": "2008-02-01",
+        "credit": "Norma Gòmez / Wikimedia Commons / CC BY 2.0; redimensionado y convertido a WebP",
+        "original": {
+          "file": "imagenes/originales/la-popa-2008.jpg",
+          "sha256": "fe560ccc27d1b4947da701e422956c02dbac71ff612f1695742766cd64344c23",
+          "bytes": 626771
+        },
+        "derivatives": [
+          {
+            "file": "imagenes/derivados/la-popa-2008-portada.webp",
+            "dimensions": [
+              1600,
+              972
+            ],
+            "bytes": 286540,
+            "sha256": "38fc01d6e9333b82561981e48a385cec826a2d1ee7934a65b6e3dce789e27148",
+            "quality": 72,
+            "crop": null,
+            "budget_ok": true
+          },
+          {
+            "file": "imagenes/derivados/la-popa-2008-tarjeta.webp",
+            "dimensions": [
+              800,
+              486
+            ],
+            "bytes": 95086,
+            "sha256": "b497206974fef73d19ace62d2cbb8d5b81b7c8dad6b53cf678d601cb098b4ea8",
+            "quality": 82,
+            "crop": null,
+            "budget_ok": true
+          }
+        ],
+        "alt": {
+          "es": "Panorama de Cartagena y su bahía desde el cerro de La Popa, fotografía de 2008.",
+          "en": "View of Cartagena and its bay from La Popa hill, photographed in 2008.",
+          "pt-BR": "Panorama de Cartagena e sua baía visto da colina de La Popa, fotografia de 2008."
+        },
+        "qa_status": "pendiente_revision_visual_humana",
+        "recency_warning": "Fotografía histórica; no acredita estado actual.",
+        "tool": "Pillow 12.3.0",
+        "transforms": [
+          "orientacion EXIF",
+          "sRGB",
+          "sin recorte",
+          "sin ampliacion",
+          "derivado sin EXIF/GPS"
+        ],
+        "approved": false
+      },
+      "decision": null
+    },
+    {
+      "id": "CTG-PORTADA-TEXTO-es",
+      "scope": "Título, presentación y descripción de buscadores · es",
+      "sha256": "2594da5b32b497cb247002dd0446de3408ce31824d35b73c7f0de1c9945d3a63",
+      "value": {
+        "es": [
+          "Cartagena de Indias",
+          "Bolívar · Caribe colombiano",
+          "Murallas, barrios y memoria junto al Caribe",
+          "Cartagena reúne patrimonio urbano y vida caribeña. Recorre el centro histórico, reconoce las fortificaciones y reserva tiempo para Getsemaní, sus calles y la economía local. La visita también invita a mirar la historia de la ciudad más allá de sus fachadas.",
+          "Descubre Cartagena: centro histórico, Castillo de San Felipe de Barajas, Getsemaní, historia y opciones locales para preparar tu visita."
+        ]
+      },
+      "decision": null
+    },
+    {
+      "id": "CTG-PORTADA-TEXTO-en",
+      "scope": "Título, presentación y descripción de buscadores · en",
+      "sha256": "49f64ddf7e2f3cd93505844e9ae1667aee19b7b0ef2f6e64a4f98cc650d7b876",
+      "value": {
+        "en": [
+          "Cartagena de Indias",
+          "Bolívar · Colombian Caribbean",
+          "City walls, neighbourhoods and memory by the Caribbean",
+          "Cartagena combines urban heritage with Caribbean life. Explore the historic centre, discover its fortifications and make time for Getsemaní, its streets and local economy. Look beyond the façades to understand the city’s history.",
+          "Explore Cartagena’s historic centre, San Felipe de Barajas Castle, Getsemaní, history and local businesses to plan your visit."
+        ]
+      },
+      "decision": null
+    },
+    {
+      "id": "CTG-PORTADA-TEXTO-pt-BR",
+      "scope": "Título, presentación y descripción de buscadores · pt-BR",
+      "sha256": "9d2be5af93096b5b1777a5af46826ab3733e5652d06254699c3250a7e1856508",
+      "value": {
+        "pt-BR": [
+          "Cartagena de Indias",
+          "Bolívar · Caribe colombiano",
+          "Muralhas, bairros e memória à beira do Caribe",
+          "Cartagena reúne patrimônio urbano e vida caribenha. Explore o centro histórico, conheça as fortificações e reserve tempo para Getsemaní, suas ruas e a economia local. A visita também convida a compreender a história da cidade além das fachadas.",
+          "Conheça Cartagena: centro histórico, Castelo de San Felipe de Barajas, Getsemaní, história e opções locais para planejar sua visita."
+        ]
+      },
+      "decision": null
+    },
+    {
+      "id": "CTG-HISTORIA-es",
+      "scope": "Texto de historia · es",
+      "sha256": "b56e8644c6d4b1e2267977a2b66bc151f5e9404ba9906655f6e4f7697c5ac27d",
+      "value": {
+        "es": [
+          "La fundación colonial de Cartagena de Indias se fecha el 1 de junio de 1533. Su posición en una bahía caribeña la convirtió en un puerto estratégico del sistema colonial español. Esa historia incluye a poblaciones indígenas y africanas esclavizadas, y no se reduce a arquitectura y comercio.",
+          "Las defensas se construyeron y ampliaron durante varios siglos. Murallas y fuertes permiten leer la relación entre la ciudad, la bahía y las disputas por las rutas marítimas. El 11 de noviembre de 1811 Cartagena proclamó su independencia absoluta de España.",
+          "En 1984 la UNESCO inscribió el puerto, las fortalezas y el conjunto monumental. El reconocimiento comprende un patrimonio vivo: Centro, San Diego y Getsemaní conservan usos residenciales, culturales y comerciales."
+        ]
+      },
+      "decision": null
+    },
+    {
+      "id": "CTG-HISTORIA-en",
+      "scope": "Texto de historia · en",
+      "sha256": "b57b9b170eca954faa9459e60279774b43c44c68e8dc2d3ee5202089146043f3",
+      "value": {
+        "en": [
+          "Cartagena’s colonial founding dates to 1 June 1533. Its Caribbean bay made it a strategic port within the Spanish colonial system. This history includes Indigenous people and enslaved Africans, and extends beyond architecture and trade.",
+          "Defences were built and expanded over several centuries. Walls and forts reveal the relationship between the city, its bay and struggles over maritime routes. On 11 November 1811 Cartagena proclaimed its absolute independence from Spain.",
+          "In 1984 UNESCO inscribed the port, fortresses and group of monuments. This is living heritage: Centro, San Diego and Getsemaní retain residential, cultural and commercial uses."
+        ]
+      },
+      "decision": null
+    },
+    {
+      "id": "CTG-HISTORIA-pt-BR",
+      "scope": "Texto de historia · pt-BR",
+      "sha256": "d267a67d157d05f55a7b312191ef7c952fca2946f14e1eb78049b2735b25f453",
+      "value": {
+        "pt-BR": [
+          "A fundação colonial de Cartagena de Indias data de 1º de junho de 1533. Sua posição em uma baía caribenha fez dela um porto estratégico do sistema colonial espanhol. Essa história inclui povos indígenas e africanos escravizados e vai além da arquitetura e do comércio.",
+          "As defesas foram construídas e ampliadas ao longo de vários séculos. Muralhas e fortes revelam a relação entre a cidade, a baía e as disputas pelas rotas marítimas. Em 11 de novembro de 1811 Cartagena proclamou sua independência absoluta da Espanha.",
+          "Em 1984 a UNESCO inscreveu o porto, as fortalezas e o conjunto monumental. Trata-se de um patrimônio vivo: Centro, San Diego e Getsemaní mantêm usos residenciais, culturais e comerciais."
+        ]
+      },
+      "decision": null
+    },
+    {
+      "id": "CTG-LUGAR-centro-historico-es",
+      "scope": "Nombre y descripción de «Centro histórico y murallas» · es",
+      "sha256": "ce6715f4183f0cbb0df57ee9b1189b2f23316fd26fe7d8ba316f2d8afb4ff8c9",
+      "value": {
+        "es": [
+          "Centro histórico y murallas",
+          "Recorre plazas y calles de Centro y San Diego, parte del conjunto patrimonial. La ciudad sigue habitada: respeta viviendas y circulación."
+        ]
+      },
+      "decision": null
+    },
+    {
+      "id": "CTG-LUGAR-centro-historico-en",
+      "scope": "Nombre y descripción de «Centro histórico y murallas» · en",
+      "sha256": "3524eb361409f8ab3c000a7614e9bb5971afe41141fbeab090f003d0f5c11407",
+      "value": {
+        "en": [
+          "Historic centre and city walls",
+          "Explore the squares and streets of Centro and San Diego, part of the heritage ensemble. This is a lived-in city: respect homes and pedestrian movement."
+        ]
+      },
+      "decision": null
+    },
+    {
+      "id": "CTG-LUGAR-centro-historico-pt-BR",
+      "scope": "Nombre y descripción de «Centro histórico y murallas» · pt-BR",
+      "sha256": "2607e35dd79bffd384c9ee08ab9c1d476f11f5fc4cf7e19f423625ef8ebbf611",
+      "value": {
+        "pt-BR": [
+          "Centro histórico e muralhas",
+          "Explore praças e ruas de Centro e San Diego, parte do conjunto patrimonial. A cidade é habitada: respeite as casas e a circulação."
+        ]
+      },
+      "decision": null
+    },
+    {
+      "id": "CTG-02",
+      "scope": "Foto de la ficha «Castillo de San Felipe de Barajas»",
+      "sha256": "f121bf2b06e955405b3ce43aa18e507d7ce993ad03f9c8d9c40edcce35fe8a02",
+      "value": {
+        "id": "san-felipe-2011",
+        "type": "photograph",
+        "author": "JuanGris (Lucía Estévez)",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Cartagena-Castillo_San_Felipe_de_Barajas.JPG",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Cartagena-Castillo_San_Felipe_de_Barajas.JPG",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "commercial_use": true,
+        "adaptation": true,
+        "share_alike": true,
+        "consulted_at": "2026-10-16",
+        "photographed_at": "2011-05-08",
+        "credit": "JuanGris (Lucía Estévez) / Wikimedia Commons / CC BY-SA 3.0; redimensionado y convertido a WebP",
+        "original": {
+          "file": "imagenes/originales/san-felipe-2011.jpg",
+          "sha256": "d809d808080c576bd03540700458d7cca24e5344a4fcac32f89df27764afd3b2",
+          "bytes": 3996021
+        },
+        "derivatives": [
+          {
+            "file": "imagenes/derivados/san-felipe-2011-portada.webp",
+            "dimensions": [
+              1600,
+              1200
+            ],
+            "bytes": 253894,
+            "sha256": "794690f38826ef44160ac50483088749c522de354d350190f8525e2fe0b84ae9",
+            "quality": 82,
+            "crop": null,
+            "budget_ok": true
+          },
+          {
+            "file": "imagenes/derivados/san-felipe-2011-tarjeta.webp",
+            "dimensions": [
+              800,
+              600
+            ],
+            "bytes": 74456,
+            "sha256": "9aacdf2b8dafebdf379342624bee0fa3c2ae1c32ae804ac753649d71bbd8de5f",
+            "quality": 82,
+            "crop": null,
+            "budget_ok": true
+          }
+        ],
+        "alt": {
+          "es": "Castillo de San Felipe de Barajas y baterías colaterales, fotografía de 2011.",
+          "en": "San Felipe de Barajas Castle and its flanking batteries, photographed in 2011.",
+          "pt-BR": "Castelo de San Felipe de Barajas e baterias laterais, fotografia de 2011."
+        },
+        "qa_status": "pendiente_revision_visual_humana",
+        "recency_warning": "Fotografía histórica; no acredita estado actual.",
+        "tool": "Pillow 12.3.0",
+        "transforms": [
+          "orientacion EXIF",
+          "sRGB",
+          "sin recorte",
+          "sin ampliacion",
+          "derivado sin EXIF/GPS"
+        ],
+        "approved": false
+      },
+      "decision": null
+    },
+    {
+      "id": "CTG-LUGAR-san-felipe-es",
+      "scope": "Nombre y descripción de «Castillo de San Felipe de Barajas» · es",
+      "sha256": "c1768363c93db82c5c82949afe6d86884c13c3623a8e12bf5b0f8ca4ba1ae208",
+      "value": {
+        "es": [
+          "Castillo de San Felipe de Barajas",
+          "La fortificación domina el acceso terrestre histórico desde el cerro de San Lázaro. Consulta al gestor sobre entradas, recorrido y condiciones de accesibilidad."
+        ]
+      },
+      "decision": null
+    },
+    {
+      "id": "CTG-LUGAR-san-felipe-en",
+      "scope": "Nombre y descripción de «Castillo de San Felipe de Barajas» · en",
+      "sha256": "4086d6d7f68b2769339fe6cad3246d7145a908fb82935d6037c25934b330c422",
+      "value": {
+        "en": [
+          "San Felipe de Barajas Castle",
+          "This fortification overlooks the historic land approach from San Lázaro hill. Check tickets, routes and accessibility conditions with its manager."
+        ]
+      },
+      "decision": null
+    },
+    {
+      "id": "CTG-LUGAR-san-felipe-pt-BR",
+      "scope": "Nombre y descripción de «Castillo de San Felipe de Barajas» · pt-BR",
+      "sha256": "ab46fd7ccf8c2a0635e55a739e17ec337626feec424bc92bddc0cb782419c62f",
+      "value": {
+        "pt-BR": [
+          "Castelo de San Felipe de Barajas",
+          "A fortificação domina o acesso terrestre histórico a partir da colina de San Lázaro. Consulte o gestor sobre ingressos, percurso e acessibilidade."
+        ]
+      },
+      "decision": null
+    },
+    {
+      "id": "CTG-03",
+      "scope": "Foto de la ficha «Getsemaní»",
+      "sha256": "7e8d3fca150044af84d710c1fa5dd3c3b22cb7361e8923c4caab86fcc389c3aa",
+      "value": {
+        "id": "getsemani-2016",
+        "type": "photograph",
+        "author": "Joe Ross",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Getsemani_Street_Scene,_Cartagena,_Colombia_(24217787419).jpg",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Getsemani_Street_Scene%2C_Cartagena%2C_Colombia_%2824217787419%29.jpg",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "commercial_use": true,
+        "adaptation": true,
+        "share_alike": true,
+        "consulted_at": "2026-10-16",
+        "photographed_at": "2016-01-21",
+        "credit": "Joe Ross / Wikimedia Commons / CC BY-SA 2.0; redimensionado y convertido a WebP",
+        "original": {
+          "file": "imagenes/originales/getsemani-2016.jpg",
+          "sha256": "75dcf6fa58712ae14ccdd55d749fb668365a1b6c15d750eac77b43d73aaf07b8",
+          "bytes": 386311
+        },
+        "derivatives": [
+          {
+            "file": "imagenes/derivados/getsemani-2016-portada.webp",
+            "dimensions": [
+              1600,
+              1060
+            ],
+            "bytes": 203802,
+            "sha256": "b364217d9a3166e052f7a7e1bbcf62727614a1218b06e53e5c4868d6e56ec834",
+            "quality": 82,
+            "crop": null,
+            "budget_ok": true
+          },
+          {
+            "file": "imagenes/derivados/getsemani-2016-tarjeta.webp",
+            "dimensions": [
+              800,
+              530
+            ],
+            "bytes": 66984,
+            "sha256": "8b3d46670819e7fd037164a7544b2e0b26b2f37f0f955035e2cd99f69171fd98",
+            "quality": 82,
+            "crop": null,
+            "budget_ok": true
+          }
+        ],
+        "alt": {
+          "es": "Calle del barrio Getsemaní en Cartagena, fotografía de 2016.",
+          "en": "Street in Cartagena’s Getsemaní neighbourhood, photographed in 2016.",
+          "pt-BR": "Rua do bairro Getsemaní em Cartagena, fotografia de 2016."
+        },
+        "qa_status": "pendiente_revision_visual_humana",
+        "recency_warning": "Fotografía histórica; no acredita estado actual.",
+        "tool": "Pillow 12.3.0",
+        "transforms": [
+          "orientacion EXIF",
+          "sRGB",
+          "sin recorte",
+          "sin ampliacion",
+          "derivado sin EXIF/GPS"
+        ],
+        "approved": false
+      },
+      "decision": null
+    },
+    {
+      "id": "CTG-LUGAR-getsemani-es",
+      "scope": "Nombre y descripción de «Getsemaní» · es",
+      "sha256": "104784937acea50e40ba8f859f38d75f5e4f996fe74d66c954d57a7b95334144",
+      "value": {
+        "es": [
+          "Getsemaní",
+          "Barrio histórico vinculado a artesanos y población trabajadora. Sus calles y expresiones artísticas contemporáneas ofrecen otra lectura de Cartagena; pide permiso antes de fotografiar personas."
+        ]
+      },
+      "decision": null
+    },
+    {
+      "id": "CTG-LUGAR-getsemani-en",
+      "scope": "Nombre y descripción de «Getsemaní» · en",
+      "sha256": "0da70f7c2f61f6e8e3063264d76a5009cec96476219f5eaeff5a4923280f0890",
+      "value": {
+        "en": [
+          "Getsemaní",
+          "A historic neighbourhood associated with artisans and working communities. Its streets and contemporary artistic expressions offer another view of Cartagena; ask permission before photographing people."
+        ]
+      },
+      "decision": null
+    },
+    {
+      "id": "CTG-LUGAR-getsemani-pt-BR",
+      "scope": "Nombre y descripción de «Getsemaní» · pt-BR",
+      "sha256": "671c8a366a811d82317fc6d0a910497fa7b15265081ed7294b6775fd960709f6",
+      "value": {
+        "pt-BR": [
+          "Getsemaní",
+          "Bairro histórico ligado a artesãos e comunidades trabalhadoras. Suas ruas e expressões artísticas contemporâneas oferecem outra leitura de Cartagena; peça autorização antes de fotografar pessoas."
+        ]
+      },
+      "decision": null
+    },
+    {
+      "id": "CTG-04",
+      "scope": "Foto de la ficha «Museo Histórico de Cartagena»",
+      "sha256": "783259d0197e61de66afbdab0b55b768a567d5f67b2a43d04cedc2caed334c7c",
+      "value": {
+        "id": "muhca-2025",
+        "type": "photograph",
+        "author": "Dr. Thomas Liptak",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Colombia,_Cartagena,_Palacio_de_la_Inquisici%C3%B3n.jpg",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Colombia%2C_Cartagena%2C_Palacio_de_la_Inquisici%C3%B3n.jpg",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "commercial_use": true,
+        "adaptation": true,
+        "share_alike": true,
+        "consulted_at": "2026-10-16",
+        "photographed_at": "2025-03-20",
+        "credit": "Dr. Thomas Liptak / Wikimedia Commons / CC BY-SA 4.0; redimensionado y convertido a WebP",
+        "original": {
+          "file": "imagenes/originales/muhca-2025.jpg",
+          "sha256": "6bb63329caa48f2746ddf7a7d9c0f270e09c5fed0662680132e573448ab27011",
+          "bytes": 1747438
+        },
+        "derivatives": [
+          {
+            "file": "imagenes/derivados/muhca-2025-portada.webp",
+            "dimensions": [
+              1600,
+              1067
+            ],
+            "bytes": 252762,
+            "sha256": "68bbfecb5e20a1d049a140c19ee966aa246336ef88e0d77940f5d7bc287bddeb",
+            "quality": 77,
+            "crop": null,
+            "budget_ok": true
+          },
+          {
+            "file": "imagenes/derivados/muhca-2025-tarjeta.webp",
+            "dimensions": [
+              800,
+              533
+            ],
+            "bytes": 110484,
+            "sha256": "7bf8273923a828dea17e195a114c89abe134ffabce0473d5206e6341bf1cd5b2",
+            "quality": 82,
+            "crop": null,
+            "budget_ok": true
+          }
+        ],
+        "alt": {
+          "es": "Fachada del Palacio de la Inquisición, sede del MUHCA, fotografía de 2025.",
+          "en": "Façade of the Palace of the Inquisition, home of MUHCA, photographed in 2025.",
+          "pt-BR": "Fachada do Palácio da Inquisição, sede do MUHCA, fotografia de 2025."
+        },
+        "qa_status": "pendiente_revision_visual_humana",
+        "recency_warning": "Fotografía histórica; no acredita estado actual.",
+        "tool": "Pillow 12.3.0",
+        "transforms": [
+          "orientacion EXIF",
+          "sRGB",
+          "sin recorte",
+          "sin ampliacion",
+          "derivado sin EXIF/GPS"
+        ],
+        "approved": false
+      },
+      "decision": null
+    },
+    {
+      "id": "CTG-LUGAR-museo-historico-es",
+      "scope": "Nombre y descripción de «Museo Histórico de Cartagena» · es",
+      "sha256": "efc213311e3cf848fc70f38a439adb4c3f4107d603fd023251ce4f134733d71e",
+      "value": {
+        "es": [
+          "Museo Histórico de Cartagena",
+          "El MUHCA propone exposiciones sobre la memoria de Cartagena en el Palacio de la Inquisición. Revisa su información de visita y agenda oficial."
+        ]
+      },
+      "decision": null
+    },
+    {
+      "id": "CTG-LUGAR-museo-historico-en",
+      "scope": "Nombre y descripción de «Museo Histórico de Cartagena» · en",
+      "sha256": "b49fde698d691243d878bca1fed5f5506d130d1f2a2f3f808238151443462003",
+      "value": {
+        "en": [
+          "Cartagena History Museum",
+          "MUHCA presents exhibitions on Cartagena’s memory in the Palace of the Inquisition. Check its official visitor information and programme."
+        ]
+      },
+      "decision": null
+    },
+    {
+      "id": "CTG-LUGAR-museo-historico-pt-BR",
+      "scope": "Nombre y descripción de «Museo Histórico de Cartagena» · pt-BR",
+      "sha256": "c76488c5c6e19064c5dd4f58f397bef08a3ee9bae20d397b7b5270bc0a1bf1b1",
+      "value": {
+        "pt-BR": [
+          "Museu Histórico de Cartagena",
+          "O MUHCA apresenta exposições sobre a memória de Cartagena no Palácio da Inquisição. Confira as informações de visita e a programação oficial."
+        ]
+      },
+      "decision": null
+    },
+    {
+      "id": "CTG-EXP-caminhada-patrimonial-es",
+      "scope": "Texto de experiencia «caminhada-patrimonial» · es",
+      "sha256": "3f7167a5600e318bdb3410fac483434eb9aaf6e77f00be958a82affdb3d87086",
+      "value": {
+        "es": "Caminata de observación por Centro y San Diego; propuesta editorial autónoma, sin guía ni reserva incluida."
+      },
+      "decision": null
+    },
+    {
+      "id": "CTG-EXP-caminhada-patrimonial-en",
+      "scope": "Texto de experiencia «caminhada-patrimonial» · en",
+      "sha256": "75ce115d5e175536fcb7074c85c2b62809ab012698b40ce3ecb2b5f2d1f4394d",
+      "value": {
+        "en": "Self-directed walk through Centro and San Diego; an editorial suggestion without an included guide or booking."
+      },
+      "decision": null
+    },
+    {
+      "id": "CTG-EXP-caminhada-patrimonial-pt-BR",
+      "scope": "Texto de experiencia «caminhada-patrimonial» · pt-BR",
+      "sha256": "0e50bd759d696d547a4e75d4fda867b48eaa981984a3f26817c051a405d3c025",
+      "value": {
+        "pt-BR": "Caminhada autônoma por Centro e San Diego; sugestão editorial sem guia ou reserva incluídos."
+      },
+      "decision": null
+    },
+    {
+      "id": "CTG-EXP-visita-muhca-es",
+      "scope": "Texto de experiencia «visita-muhca» · es",
+      "sha256": "837a6fac9df39ecb99e3238045574f3117bd5c7925194269078383df92116492",
+      "value": {
+        "es": "Explora las exposiciones del MUHCA; consulta programación y entrada con el museo."
+      },
+      "decision": null
+    },
+    {
+      "id": "CTG-EXP-visita-muhca-en",
+      "scope": "Texto de experiencia «visita-muhca» · en",
+      "sha256": "e300db31aaa7cbd71304d3a0dd3507da8f7eb4f25cd75eef859f18877c427996",
+      "value": {
+        "en": "Explore MUHCA’s exhibitions; check its programme and admission with the museum."
+      },
+      "decision": null
+    },
+    {
+      "id": "CTG-EXP-visita-muhca-pt-BR",
+      "scope": "Texto de experiencia «visita-muhca» · pt-BR",
+      "sha256": "6ab95760dc328ceb18276f32a9f6210c7fdf6c9e5810e096db8015cb9f4f62ae",
+      "value": {
+        "pt-BR": "Explore as exposições do MUHCA; consulte a programação e os ingressos com o museu."
+      },
+      "decision": null
+    },
+    {
+      "id": "CTG-PRACTICA-es",
+      "scope": "Información práctica · es",
+      "sha256": "bb78f7aa5fb0dce0cebae8cc7b76cb8c235284b5ca232f2311a39232437f587a",
+      "value": {
+        "es": [
+          "Llegada: el aeropuerto de la ciudad es Rafael Núñez; consulta rutas y condiciones vigentes directamente con tu transportador. No se prometen vuelos ni tiempos de traslado.",
+          "Programa caminatas con pausas, agua y protección solar. Confirma condiciones de accesibilidad de cada atractivo; no se ha auditado una ruta accesible.",
+          "Antes de contratar transporte, comida o actividades, confirma el precio total y lo incluido. Horarios, tarifas, disponibilidad y condiciones marítimas no están verificados en este borrador."
+        ]
+      },
+      "decision": null
+    },
+    {
+      "id": "CTG-PRACTICA-en",
+      "scope": "Información práctica · en",
+      "sha256": "3d7e8fc9bad94acff1a582b067d88d1269a0a7ed5fff3f8ca4c696c08181cc40",
+      "value": {
+        "en": [
+          "Arrival: the city’s airport is Rafael Núñez; check current routes and conditions with your carrier. No flights or transfer times are promised.",
+          "Plan walks with breaks, water and sun protection. Confirm accessibility at each attraction; no accessible route has been audited.",
+          "Before purchasing transport, food or activities, confirm the total price and what is included. Opening times, prices, availability and sea conditions are not verified in this draft."
+        ]
+      },
+      "decision": null
+    },
+    {
+      "id": "CTG-PRACTICA-pt-BR",
+      "scope": "Información práctica · pt-BR",
+      "sha256": "a95862597c32d46f27e74a4847852972f341e0367d2fbc1ea9dcd2d9716ab636",
+      "value": {
+        "pt-BR": [
+          "Chegada: o aeroporto da cidade é Rafael Núñez; consulte rotas e condições atuais com sua transportadora. Não são prometidos voos ou tempos de traslado.",
+          "Planeje caminhadas com pausas, água e proteção solar. Confirme a acessibilidade de cada atrativo; nenhum roteiro acessível foi auditado.",
+          "Antes de contratar transporte, alimentação ou atividades, confirme o preço total e o que está incluído. Horários, preços, disponibilidade e condições marítimas não foram verificados neste rascunho."
+        ]
+      },
+      "decision": null
+    },
+    {
+      "id": "CTG-DIR-CO-13-cartagena-celele",
+      "scope": "Ficha gratuita de Celele",
+      "sha256": "b7160ef0e852c8483b6a0f86294298b987bc29721122022e58ea3e9f72952d11",
+      "value": {
+        "es": [
+          "Celele",
+          "gastronomia",
+          "https://celelerestaurante.com/",
+          "Información pública; no contactado, sin precios, disponibilidad ni fotografías del negocio. El listado gratuito no implica gratuidad del servicio."
+        ]
+      },
+      "decision": null
+    },
+    {
+      "id": "CTG-DIR-CO-13-cartagena-casa-san-agustin",
+      "scope": "Ficha gratuita de Hotel Casa San Agustín",
+      "sha256": "278a3141b06fd651deaf8c9a7183201cf2b54bb8554c324043454e6321a134f9",
+      "value": {
+        "es": [
+          "Hotel Casa San Agustín",
+          "alojamiento",
+          "https://hotelcasasanagustin.com/",
+          "Información pública; no contactado, sin precios, disponibilidad ni fotografías del negocio. El listado gratuito no implica gratuidad del servicio."
+        ]
+      },
+      "decision": null
+    },
+    {
+      "id": "CTG-DIR-CO-13-cartagena-charleston",
+      "scope": "Ficha gratuita de Charleston Santa Teresa",
+      "sha256": "a41b432797959b66a0a7ac9b5fb52331fbf46ee5161622eb1d34534362116d3d",
+      "value": {
+        "es": [
+          "Charleston Santa Teresa",
+          "alojamiento",
+          "https://www.hotelcharlestonsantateresa.com/",
+          "Información pública; no contactado, sin precios, disponibilidad ni fotografías del negocio. El listado gratuito no implica gratuidad del servicio."
+        ]
+      },
+      "decision": null
+    },
+    {
+      "id": "CTG-DIR-CO-13-cartagena-santa-clara",
+      "scope": "Ficha gratuita de Sofitel Legend Santa Clara",
+      "sha256": "4c9b0a02d71152fbc71110e9cf957749984c33320a95a87d52b9a25ecf74dbd7",
+      "value": {
+        "es": [
+          "Sofitel Legend Santa Clara",
+          "alojamiento",
+          "https://www.sofitellegendsantaclara.com/restaurants-bars/",
+          "Información pública; no contactado, sin precios, disponibilidad ni fotografías del negocio. El listado gratuito no implica gratuidad del servicio."
+        ]
+      },
+      "decision": null
+    },
+    {
+      "id": "CTG-DIR-CO-13-cartagena-jardin",
+      "scope": "Ficha gratuita de Jardín Santa Clara",
+      "sha256": "f605b765b4bc39fd84d9d4c12784379e72ee8a2e8e83cfff7f2984b23b2ec558",
+      "value": {
+        "es": [
+          "Jardín Santa Clara",
+          "gastronomia",
+          "https://www.sofitellegendsantaclara.com/restaurants-bars/",
+          "Información pública; no contactado, sin precios, disponibilidad ni fotografías del negocio. El listado gratuito no implica gratuidad del servicio."
+        ]
+      },
+      "decision": null
+    },
+    {
+      "id": "CTG-DIR-CO-13-cartagena-1621",
+      "scope": "Ficha gratuita de Restaurante 1621",
+      "sha256": "b7b9ddc6aef6dc62a64754862a500e521fd301916c32e3eda51772bcfe6b2cb0",
+      "value": {
+        "es": [
+          "Restaurante 1621",
+          "gastronomia",
+          "https://www.sofitellegendsantaclara.com/restaurants-bars/",
+          "Información pública; no contactado, sin precios, disponibilidad ni fotografías del negocio. El listado gratuito no implica gratuidad del servicio."
+        ]
+      },
+      "decision": null
+    },
+    {
+      "id": "CTG-DIR-CO-13-cartagena-coro",
+      "scope": "Ficha gratuita de El Coro Lounge Bar",
+      "sha256": "07837656724c8d51dd0180b4687fc944bc34f9988a224226e39065b21f6334ce",
+      "value": {
+        "es": [
+          "El Coro Lounge Bar",
+          "vida-nocturna",
+          "https://www.sofitellegendsantaclara.com/restaurants-bars/",
+          "Información pública; no contactado, sin precios, disponibilidad ni fotografías del negocio. El listado gratuito no implica gratuidad del servicio."
+        ]
+      },
+      "decision": null
+    },
+    {
+      "id": "CTG-DIR-CO-13-cartagena-botika",
+      "scope": "Ficha gratuita de Botika Santa Clara Bar",
+      "sha256": "35c33eada3d8dc243ce003ce3bcf1330865ee4df23fb869f27214e48f0f1c1a3",
+      "value": {
+        "es": [
+          "Botika Santa Clara Bar",
+          "vida-nocturna",
+          "https://www.sofitellegendsantaclara.com/restaurants-bars/",
+          "Información pública; no contactado, sin precios, disponibilidad ni fotografías del negocio. El listado gratuito no implica gratuidad del servicio."
+        ]
+      },
+      "decision": null
+    },
+    {
+      "id": "CTG-DIR-CO-13-cartagena-muhca",
+      "scope": "Ficha gratuita de Museo Histórico de Cartagena",
+      "sha256": "b7e409e63f859fca74d23d9377ae3567962dc15f58e271a91faf0ce51930597d",
+      "value": {
+        "es": [
+          "Museo Histórico de Cartagena",
+          "cultura",
+          "https://www.muhca.gov.co/",
+          "Información pública; no contactado, sin precios, disponibilidad ni fotografías del negocio. El listado gratuito no implica gratuidad del servicio."
+        ]
+      },
+      "decision": null
+    },
+    {
+      "id": "CTG-DIR-CO-13-cartagena-alma",
+      "scope": "Ficha gratuita de Alma",
+      "sha256": "00afe3a9eca4147ef597373e33e1ed44881537dd7ca28d4c5e571fbc47af404a",
+      "value": {
+        "es": [
+          "Alma",
+          "gastronomia",
+          "https://hotelcasasanagustin.com/",
+          "Información pública; no contactado, sin precios, disponibilidad ni fotografías del negocio. El listado gratuito no implica gratuidad del servicio."
+        ]
+      },
+      "decision": null
+    }
+  ]
+}

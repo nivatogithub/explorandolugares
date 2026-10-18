@@ -1,0 +1,695 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "bogota",
+    "destination_type": "city",
+    "country_code": "CO",
+    "department": "Bogotá D.C.",
+    "subregion": "Distrito Capital",
+    "translations": {
+      "es": {
+        "display_name": "Bogotá",
+        "eyebrow": "Bogotá D.C. · Colombia",
+        "headline": "Bogotá: cultura, montaña y vida de barrio",
+        "intro": "Bogotá permite combinar colecciones arqueológicas y arte contemporáneo con una mirada a la ciudad desde los cerros orientales. Para una primera visita, organiza las paradas por zonas: el centro histórico y sus museos, Monserrate y, en otra salida, el Jardín Botánico. El directorio reúne opciones informativas; no representa alianzas ni disponibilidad confirmada.",
+        "meta_description": "Bogotá permite combinar colecciones arqueológicas y arte contemporáneo con una mirada a la ciudad desde los cerros orientales. Para una primera visita, org"
+      },
+      "en": {
+        "display_name": "Bogotá",
+        "eyebrow": "Bogotá D.C. · Colombia",
+        "headline": "Bogotá: culture, mountains and neighbourhood life",
+        "intro": "Bogotá brings archaeological collections and contemporary art together with views from its eastern hills. Group a first visit by area: the historic centre and its museums, Monserrate and, on a separate outing, the Botanical Garden. The directory is informational; it does not indicate partnerships or confirmed availability.",
+        "meta_description": "Bogotá brings archaeological collections and contemporary art together with views from its eastern hills. Group a first visit by area: the historic centre "
+      },
+      "pt-BR": {
+        "display_name": "Bogotá",
+        "eyebrow": "Bogotá D.C. · Colombia",
+        "headline": "Bogotá: cultura, montanha e vida de bairro",
+        "intro": "Bogotá combina coleções arqueológicas e arte contemporânea com vistas a partir dos cerros orientais. Para uma primeira visita, organize as paradas por região: o centro histórico e seus museus, Monserrate e, em outro passeio, o Jardim Botânico. O diretório é informativo; não representa parcerias nem disponibilidade confirmada.",
+        "meta_description": "Bogotá combina coleções arqueológicas e arte contemporânea com vistas a partir dos cerros orientais. Para uma primeira visita, organize as paradas por regi"
+      }
+    },
+    "history": {
+      "es": [
+        "La historia de Bogotá comienza antes de la llegada española: la sabana fue territorio muisca. La fundación colonial se sitúa en 1538. Recorrer el centro ayuda a relacionar esa historia con las instituciones y espacios culturales actuales, sin reducir el pasado de la ciudad a un solo momento ni confundir narraciones sobre el sitio exacto de fundación con un hecho resuelto."
+      ],
+      "en": [
+        "Bogotá’s history predates Spanish arrival: the savanna was Muisca territory. The colonial foundation dates to 1538. The historic centre connects that past with today’s cultural institutions. The city’s story should not be reduced to a single moment, and accounts of the exact founding site should not be presented as settled fact."
+      ],
+      "pt-BR": [
+        "A história de Bogotá antecede a chegada espanhola: a savana era território muísca. A fundação colonial data de 1538. O centro histórico permite relacionar esse passado às instituições culturais atuais, sem reduzir a história da cidade a um único momento nem apresentar narrativas sobre o local exato da fundação como fato resolvido."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Descubrir colecciones y espacios culturales.",
+        "Reconocer el centro histórico y sus plazas.",
+        "Explorar naturaleza urbana con condiciones verificadas."
+      ],
+      "en": [
+        "Discover collections and cultural venues.",
+        "Explore the historic centre and its squares.",
+        "Discover urban nature with checked conditions."
+      ],
+      "pt-BR": [
+        "Conhecer coleções e espaços culturais.",
+        "Explorar o centro histórico e suas praças.",
+        "Conhecer natureza urbana com condições verificadas."
+      ]
+    },
+    "sources": {
+      "es": [
+        {
+          "section": "history",
+          "label": "Secretaría de Cultura: historia",
+          "url": "https://culturarecreacionydeporte.gov.co/es/bogotanitos/bogodatos/sobre-bogota-y-su-historia"
+        },
+        {
+          "section": "places",
+          "label": "Cerro de Monserrate operador",
+          "url": "https://monserrate.co/en/"
+        },
+        {
+          "section": "places",
+          "label": "Jardín Botánico José Celestino Mutis",
+          "url": "https://jbb.gov.co/"
+        },
+        {
+          "section": "places",
+          "label": "IDPC uso Plaza Bolívar",
+          "url": "https://idpc.gov.co/Transparencia/Resoluciones/2024/Manual_de_Uso_Plaza_de_Bolivar.pdf"
+        }
+      ],
+      "en": [
+        {
+          "section": "history",
+          "label": "Secretaría de Cultura: historia",
+          "url": "https://culturarecreacionydeporte.gov.co/es/bogotanitos/bogodatos/sobre-bogota-y-su-historia"
+        },
+        {
+          "section": "places",
+          "label": "Cerro de Monserrate operador",
+          "url": "https://monserrate.co/en/"
+        },
+        {
+          "section": "places",
+          "label": "Jardín Botánico José Celestino Mutis",
+          "url": "https://jbb.gov.co/"
+        },
+        {
+          "section": "places",
+          "label": "IDPC uso Plaza Bolívar",
+          "url": "https://idpc.gov.co/Transparencia/Resoluciones/2024/Manual_de_Uso_Plaza_de_Bolivar.pdf"
+        }
+      ],
+      "pt-BR": [
+        {
+          "section": "history",
+          "label": "Secretaría de Cultura: historia",
+          "url": "https://culturarecreacionydeporte.gov.co/es/bogotanitos/bogodatos/sobre-bogota-y-su-historia"
+        },
+        {
+          "section": "places",
+          "label": "Cerro de Monserrate operador",
+          "url": "https://monserrate.co/en/"
+        },
+        {
+          "section": "places",
+          "label": "Jardín Botánico José Celestino Mutis",
+          "url": "https://jbb.gov.co/"
+        },
+        {
+          "section": "places",
+          "label": "IDPC uso Plaza Bolívar",
+          "url": "https://idpc.gov.co/Transparencia/Resoluciones/2024/Manual_de_Uso_Plaza_de_Bolivar.pdf"
+        }
+      ]
+    }
+  },
+  "hero_image": {
+    "file": "images/bogota-portada-provisional.webp",
+    "image_origin": "external",
+    "image_creator": "Felipe Restrepo Acosta",
+    "image_source_url": "https://commons.wikimedia.org/w/index.php?title=File:2017_Bogot%C3%A1_Bas%C3%ADlica_del_Se%C3%B1or_Ca%C3%ADdo_de_Monserrate.jpg&oldid=959727373",
+    "image_license": "CC BY-SA 4.0",
+    "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "alt": {
+      "es": "Basílica de Monserrate sobre la ladera arbolada, fotografía de 2017.",
+      "en": "Monserrate Basilica above a wooded hillside, photographed in 2017.",
+      "pt-BR": "Basílica de Monserrate sobre encosta arborizada, fotografia de 2017."
+    },
+    "caption": {
+      "es": "Basílica de Monserrate sobre la ladera arbolada, fotografía de 2017. · Felipe Restrepo Acosta · CC BY-SA 4.0 · Fotografía provisional para revisión local; no aprobada.",
+      "en": "Monserrate Basilica above a wooded hillside, photographed in 2017. · Felipe Restrepo Acosta · CC BY-SA 4.0 · Provisional photograph for local review; not approved.",
+      "pt-BR": "Basílica de Monserrate sobre encosta arborizada, fotografia de 2017. · Felipe Restrepo Acosta · CC BY-SA 4.0 · Fotografia provisória para revisão local; não aprovada."
+    }
+  },
+  "places": [
+    {
+      "slug": "monserrate",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Monserrate",
+          "description": "Basílica y mirador; confirma transporte disponible antes de subir. Basílica en cima del cerro; transporte Carrera2Este21-48",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Monserrate",
+          "description": "Basilica and viewpoint; confirm available transport before ascending. Basílica en cima del cerro; transporte Carrera2Este21-48",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Monserrate",
+          "description": "Basílica e mirante; confirme o transporte disponível antes de subir. Basílica en cima del cerro; transporte Carrera2Este21-48",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/bogota-monserrate.webp",
+        "image_origin": "external",
+        "image_creator": "Felipe Restrepo Acosta",
+        "image_source_url": "https://commons.wikimedia.org/w/index.php?title=File:2017_Bogot%C3%A1_Bas%C3%ADlica_del_Se%C3%B1or_Ca%C3%ADdo_de_Monserrate.jpg&oldid=959727373",
+        "image_license": "CC BY-SA 4.0",
+        "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "alt": {
+          "es": "Basílica de Monserrate sobre la ladera arbolada, fotografía de 2017.",
+          "en": "Monserrate Basilica above a wooded hillside, photographed in 2017.",
+          "pt-BR": "Basílica de Monserrate sobre encosta arborizada, fotografia de 2017."
+        },
+        "caption": {
+          "es": "Basílica de Monserrate sobre la ladera arbolada, fotografía de 2017. · Felipe Restrepo Acosta · CC BY-SA 4.0 · Fotografía provisional para revisión local; no aprobada.",
+          "en": "Monserrate Basilica above a wooded hillside, photographed in 2017. · Felipe Restrepo Acosta · CC BY-SA 4.0 · Provisional photograph for local review; not approved.",
+          "pt-BR": "Basílica de Monserrate sobre encosta arborizada, fotografia de 2017. · Felipe Restrepo Acosta · CC BY-SA 4.0 · Fotografia provisória para revisão local; não aprovada."
+        }
+      }
+    },
+    {
+      "slug": "plaza",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Plaza de Bolívar",
+          "description": "Espacio patrimonial del centro; no incluye acceso a interiores institucionales. Calles10–11 entre carreras7–8, La Candelaria",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Plaza de Bolívar",
+          "description": "Historic civic square; does not include institutional interior access. Calles10–11 entre carreras7–8, La Candelaria",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Plaza de Bolívar",
+          "description": "Praça histórica do centro; não inclui acesso a interiores institucionais. Calles10–11 entre carreras7–8, La Candelaria",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/bogota-plaza.webp",
+        "image_origin": "external",
+        "image_creator": "Dante O.P",
+        "image_source_url": "https://commons.wikimedia.org/w/index.php?title=File:Vista_del_centro_historico_de_Bogot%C3%A1.jpg&oldid=1210456023",
+        "image_license": "CC0 1.0",
+        "image_license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "alt": {
+          "es": "Vista elevada de la Plaza de Bolívar con torres de la Catedral en primer plano.",
+          "en": "Elevated view of Bolívar Square with Cathedral towers in the foreground.",
+          "pt-BR": "Vista elevada da Praça Bolívar com torres da Catedral em primeiro plano."
+        },
+        "caption": {
+          "es": "Vista elevada de la Plaza de Bolívar con torres de la Catedral en primer plano. · Dante O.P · CC0 1.0 · Fotografía provisional para revisión local; no aprobada.",
+          "en": "Elevated view of Bolívar Square with Cathedral towers in the foreground. · Dante O.P · CC0 1.0 · Provisional photograph for local review; not approved.",
+          "pt-BR": "Vista elevada da Praça Bolívar com torres da Catedral em primeiro plano. · Dante O.P · CC0 1.0 · Fotografia provisória para revisão local; não aprovada."
+        }
+      }
+    },
+    {
+      "slug": "jardin",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Jardín Botánico José Celestino Mutis",
+          "description": "Investigación y educación ambiental; foto histórica del jardín, no del Tropicario actual. Av Calle63 #68-95",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Jardín Botánico José Celestino Mutis",
+          "description": "Research and environmental education; historical garden photo, not the current Tropicario. Av Calle63 #68-95",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Jardín Botánico José Celestino Mutis",
+          "description": "Pesquisa e educação ambiental; foto histórica do jardim, não do Tropicario atual. Av Calle63 #68-95",
+          "map_url": "",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/bogota-jardin.webp",
+        "image_origin": "external",
+        "image_creator": "DanielGutierrez (Photodaniel)",
+        "image_source_url": "https://commons.wikimedia.org/w/index.php?title=File:Jard%C3%ADn_Bot%C3%A1nico_Bogot%C3%A1.jpg&oldid=966217305",
+        "image_license": "CC BY-SA 4.0",
+        "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "alt": {
+          "es": "Detalle de una tortuga entre plantas acuáticas del Jardín Botánico, foto de 2015.",
+          "en": "Detail of a turtle among aquatic plants in the Botanical Garden, 2015 photograph.",
+          "pt-BR": "Detalhe de uma tartaruga entre plantas aquáticas do Jardim Botânico, foto de 2015."
+        },
+        "caption": {
+          "es": "Detalle de una tortuga entre plantas acuáticas del Jardín Botánico, foto de 2015. · DanielGutierrez (Photodaniel) · CC BY-SA 4.0 · Fotografía provisional para revisión local; no aprobada.",
+          "en": "Detail of a turtle among aquatic plants in the Botanical Garden, 2015 photograph. · DanielGutierrez (Photodaniel) · CC BY-SA 4.0 · Provisional photograph for local review; not approved.",
+          "pt-BR": "Detalhe de uma tartaruga entre plantas aquáticas do Jardim Botânico, foto de 2015. · DanielGutierrez (Photodaniel) · CC BY-SA 4.0 · Fotografia provisória para revisão local; não aprovada."
+        }
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "2026-10-16",
+    "positioning": "Borrador local Bogotá: cultura, patrimonio y naturaleza urbana.",
+    "competitors": [],
+    "potential_allies": [],
+    "business_prospects": [
+      {
+        "id": "CO-11-bogota-hotel-opera",
+        "destino_id": "CO-11-bogota",
+        "nombre": "Hotel de la Ópera",
+        "categoria": "alojamiento",
+        "fuente": "S05",
+        "url": "https://www.hotelopera.com.co/en/",
+        "fecha_consulta": "2026-10-16",
+        "direccion": "Calle 10 #5-72, La Candelaria",
+        "modalidad": "directorio_gratuito",
+        "estado": "borrador",
+        "verificacion": "existencia_documental_consultada_operacion_pendiente",
+        "representante_verificado": false,
+        "reclamado": false,
+        "alianza": false,
+        "contactado": false,
+        "idiomas": {
+          "es": "Hotel de la Ópera",
+          "en": "Hotel de la Ópera",
+          "pt-BR": "Hotel de la Ópera"
+        }
+      },
+      {
+        "id": "CO-11-bogota-tequendama-suites",
+        "destino_id": "CO-11-bogota",
+        "nombre": "Tequendama Suites Bogotá",
+        "categoria": "alojamiento",
+        "fuente": "S06",
+        "url": "https://www.hotelestequendama.com.co/tequendama-suites-bogota.html",
+        "fecha_consulta": "2026-10-16",
+        "direccion": null,
+        "modalidad": "directorio_gratuito",
+        "estado": "borrador",
+        "verificacion": "existencia_documental_consultada_operacion_pendiente",
+        "representante_verificado": false,
+        "reclamado": false,
+        "alianza": false,
+        "contactado": false,
+        "idiomas": {
+          "es": "Tequendama Suites Bogotá",
+          "en": "Tequendama Suites Bogotá",
+          "pt-BR": "Tequendama Suites Bogotá"
+        }
+      },
+      {
+        "id": "CO-11-bogota-sofitel-victoria",
+        "destino_id": "CO-11-bogota",
+        "nombre": "Sofitel Bogotá Victoria Regia",
+        "categoria": "alojamiento",
+        "fuente": "S07",
+        "url": "https://sofitelvictoriaregia.com/",
+        "fecha_consulta": "2026-10-16",
+        "direccion": null,
+        "modalidad": "directorio_gratuito",
+        "estado": "borrador",
+        "verificacion": "existencia_documental_consultada_operacion_pendiente",
+        "representante_verificado": false,
+        "reclamado": false,
+        "alianza": false,
+        "contactado": false,
+        "idiomas": {
+          "es": "Sofitel Bogotá Victoria Regia",
+          "en": "Sofitel Bogotá Victoria Regia",
+          "pt-BR": "Sofitel Bogotá Victoria Regia"
+        }
+      },
+      {
+        "id": "CO-11-bogota-el-chato",
+        "destino_id": "CO-11-bogota",
+        "nombre": "El Chato",
+        "categoria": "gastronomia",
+        "fuente": "S08",
+        "url": "https://www.elchato.co/",
+        "fecha_consulta": "2026-10-16",
+        "direccion": null,
+        "modalidad": "directorio_gratuito",
+        "estado": "borrador",
+        "verificacion": "existencia_documental_consultada_operacion_pendiente",
+        "representante_verificado": false,
+        "reclamado": false,
+        "alianza": false,
+        "contactado": false,
+        "idiomas": {
+          "es": "El Chato",
+          "en": "El Chato",
+          "pt-BR": "El Chato"
+        }
+      },
+      {
+        "id": "CO-11-bogota-leo",
+        "destino_id": "CO-11-bogota",
+        "nombre": "LEO",
+        "categoria": "gastronomia",
+        "fuente": "S09",
+        "url": "https://restauranteleo.com/",
+        "fecha_consulta": "2026-10-16",
+        "direccion": null,
+        "modalidad": "directorio_gratuito",
+        "estado": "borrador",
+        "verificacion": "existencia_documental_consultada_operacion_pendiente",
+        "representante_verificado": false,
+        "reclamado": false,
+        "alianza": false,
+        "contactado": false,
+        "idiomas": {
+          "es": "LEO",
+          "en": "LEO",
+          "pt-BR": "LEO"
+        }
+      },
+      {
+        "id": "CO-11-bogota-azahar-parque93",
+        "destino_id": "CO-11-bogota",
+        "nombre": "Azahar Parque 93",
+        "categoria": "gastronomia",
+        "fuente": "S10",
+        "url": "https://azaharcoffee.com/tiendas/",
+        "fecha_consulta": "2026-10-16",
+        "direccion": "Calle 93B #13-91",
+        "modalidad": "directorio_gratuito",
+        "estado": "borrador",
+        "verificacion": "existencia_documental_consultada_operacion_pendiente",
+        "representante_verificado": false,
+        "reclamado": false,
+        "alianza": false,
+        "contactado": false,
+        "idiomas": {
+          "es": "Azahar Parque 93",
+          "en": "Azahar Parque 93",
+          "pt-BR": "Azahar Parque 93"
+        }
+      },
+      {
+        "id": "CO-11-bogota-azahar-nogal",
+        "destino_id": "CO-11-bogota",
+        "nombre": "Azahar Nogal",
+        "categoria": "gastronomia",
+        "fuente": "S10",
+        "url": "https://azaharcoffee.com/tiendas/",
+        "fecha_consulta": "2026-10-16",
+        "direccion": "Carrera 9 #79A-23",
+        "modalidad": "directorio_gratuito",
+        "estado": "borrador",
+        "verificacion": "existencia_documental_consultada_operacion_pendiente",
+        "representante_verificado": false,
+        "reclamado": false,
+        "alianza": false,
+        "contactado": false,
+        "idiomas": {
+          "es": "Azahar Nogal",
+          "en": "Azahar Nogal",
+          "pt-BR": "Azahar Nogal"
+        }
+      },
+      {
+        "id": "CO-11-bogota-azahar-dorado",
+        "destino_id": "CO-11-bogota",
+        "nombre": "Azahar Aeropuerto El Dorado",
+        "categoria": "gastronomia",
+        "fuente": "S10",
+        "url": "https://azaharcoffee.com/tiendas/",
+        "fecha_consulta": "2026-10-16",
+        "direccion": "Av. El Dorado #103-09, puerta 7, segundo piso, zona pública",
+        "modalidad": "directorio_gratuito",
+        "estado": "borrador",
+        "verificacion": "existencia_documental_consultada_operacion_pendiente",
+        "representante_verificado": false,
+        "reclamado": false,
+        "alianza": false,
+        "contactado": false,
+        "idiomas": {
+          "es": "Azahar Aeropuerto El Dorado",
+          "en": "Azahar Aeropuerto El Dorado",
+          "pt-BR": "Azahar Aeropuerto El Dorado"
+        }
+      },
+      {
+        "id": "CO-11-bogota-mambo",
+        "destino_id": "CO-11-bogota",
+        "nombre": "Museo de Arte Moderno de Bogotá — MAMBO",
+        "categoria": "cultura",
+        "fuente": "S11",
+        "url": "https://www.mambogota.com/visitanos/",
+        "fecha_consulta": "2026-10-16",
+        "direccion": "Calle 24 #6-00",
+        "modalidad": "directorio_gratuito",
+        "estado": "borrador",
+        "verificacion": "existencia_documental_consultada_operacion_pendiente",
+        "representante_verificado": false,
+        "reclamado": false,
+        "alianza": false,
+        "contactado": false,
+        "idiomas": {
+          "es": "Museo de Arte Moderno de Bogotá — MAMBO",
+          "en": "Museo de Arte Moderno de Bogotá — MAMBO",
+          "pt-BR": "Museo de Arte Moderno de Bogotá — MAMBO"
+        }
+      },
+      {
+        "id": "CO-11-bogota-centro-artes",
+        "destino_id": "CO-11-bogota",
+        "nombre": "Centro Nacional de las Artes Delia Zapata Olivella",
+        "categoria": "cultura",
+        "fuente": "S12",
+        "url": "https://www.eneldelia.gov.co/",
+        "fecha_consulta": "2026-10-16",
+        "direccion": "Calle 11 #5-60",
+        "modalidad": "directorio_gratuito",
+        "estado": "borrador",
+        "verificacion": "existencia_documental_consultada_operacion_pendiente",
+        "representante_verificado": false,
+        "reclamado": false,
+        "alianza": false,
+        "contactado": false,
+        "idiomas": {
+          "es": "Centro Nacional de las Artes Delia Zapata Olivella",
+          "en": "Centro Nacional de las Artes Delia Zapata Olivella",
+          "pt-BR": "Centro Nacional de las Artes Delia Zapata Olivella"
+        }
+      }
+    ],
+    "acquisition_strategies": [],
+    "sources": [
+      {
+        "label": "Secretaría de Cultura: historia",
+        "url": "https://culturarecreacionydeporte.gov.co/es/bogotanitos/bogodatos/sobre-bogota-y-su-historia",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Banco de la República: visita Museo del Oro",
+        "url": "https://www.banrepcultural.org/bogota/museo-del-oro/visita",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Cerro de Monserrate operador",
+        "url": "https://monserrate.co/en/",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Jardín Botánico José Celestino Mutis",
+        "url": "https://jbb.gov.co/",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Hotel de la Ópera",
+        "url": "https://www.hotelopera.com.co/en/",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Tequendama Suites Bogotá",
+        "url": "https://www.hotelestequendama.com.co/tequendama-suites-bogota.html",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Sofitel Bogotá Victoria Regia",
+        "url": "https://sofitelvictoriaregia.com/",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "El Chato",
+        "url": "https://www.elchato.co/",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "LEO",
+        "url": "https://restauranteleo.com/",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Azahar tiendas",
+        "url": "https://azaharcoffee.com/tiendas/",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "MAMBO visita",
+        "url": "https://www.mambogota.com/visitanos/",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Centro Nacional de las Artes Delia Zapata Olivella",
+        "url": "https://www.eneldelia.gov.co/",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Commons ficha original Monserrate",
+        "url": "https://commons.wikimedia.org/w/index.php?title=File:Monserrate%2C_Bogota.jpg&oldid=1199289042",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Basílica Monserrate original",
+        "url": "https://commons.wikimedia.org/w/index.php?title=File:2017_Bogot%C3%A1_Bas%C3%ADlica_del_Se%C3%B1or_Ca%C3%ADdo_de_Monserrate.jpg&oldid=959727373",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Vista centro original",
+        "url": "https://commons.wikimedia.org/w/index.php?title=File:Vista_del_centro_historico_de_Bogot%C3%A1.jpg&oldid=1210456023",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Plaza Bolívar original",
+        "url": "https://commons.wikimedia.org/w/index.php?title=File:Plaza_de_Bol%C3%ADvar%2C_Bogot%C3%A1.JPG&oldid=1219569853",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "IDRD Ciclovía",
+        "url": "https://www.idrd.gov.co/ciclovia",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Planetario Bogotá",
+        "url": "https://planetariodebogota.gov.co/",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Museo Nacional",
+        "url": "https://www.museonacional.gov.co/Full/Paginas/default.aspx",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Museo Botero Banco República",
+        "url": "https://www.banrep.gov.co/es/sucursales/bogota-museo-botero",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Maloka programación",
+        "url": "https://maloka.org/programacion/",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Bogotá Bike Tours",
+        "url": "https://www.bogotabiketours.com/",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Quebrada La Vieja Visit Bogotá",
+        "url": "https://visitbogota.co/es/rutas-turisticas/ruta-por-el-sendero-quebrada-la-vieja",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "La Perseverancia Visit Bogotá",
+        "url": "https://www.visitbogota.co/es/atractivo/plazas-mercado/plaza-distrital-mercado-la-perseverancia-all-183",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Santa María del Lago Visit Bogotá",
+        "url": "https://visitbogota.co/es/que-hacer-en-bogota/naturaleza/parque-ecologico-distrital-de-humedal-santa-maria-del-lago",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Parque Simón Bolívar Visit Bogotá",
+        "url": "https://www.visitbogota.co/es/atractivo/escenarios/parque-simon-bolivar-all-239",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Asociación Mercado Pulgas Usaquén",
+        "url": "https://www.mercadopulgasusaquen.com/contactanos/",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "IDPC uso Plaza Bolívar",
+        "url": "https://idpc.gov.co/Transparencia/Resoluciones/2024/Manual_de_Uso_Plaza_de_Bolivar.pdf",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Foto Ciclovía original",
+        "url": "https://commons.wikimedia.org/w/index.php?title=File:Bogota_Ciclovia.JPG&oldid=1255444223",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Foto Jardín Botánico original",
+        "url": "https://commons.wikimedia.org/w/index.php?title=File:Jard%C3%ADn_Bot%C3%A1nico_Bogot%C3%A1.jpg&oldid=966217305",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Cinemateca agenda",
+        "url": "https://cinematecadebogota.gov.co/agenda/11?nid_entityreference_filter=53",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Distrito Grafiti Visit Bogotá",
+        "url": "https://visitbogota.co/en/what-to-do-in-bogota/urban/graffiti-district-puente-aranda",
+        "consulted_at": "2026-10-16"
+      },
+      {
+        "label": "Theatron operador",
+        "url": "https://www.portaltheatron.co/",
+        "consulted_at": "2026-10-16"
+      }
+    ],
+    "notes": [
+      "Solo PREPROD PHP/MySQL local, coordinador importa serialmente. No producción ni aprobación editorial.",
+      "Portada Monserrate sin cables elegida provisionalmente reversible, no aprobación humana.",
+      "Máximo8 principales: se importan3 con referencias locales disponibles;16sitios secundarios conservados en investigación. No rellenar8 con fotos ajenas.",
+      "Foto jardín detalle tortuga/plantas, no vista general ni Tropicario; provisional, pendiente aprobación de aptitud para ficha.",
+      "Foto centro fecha declarada2024 y EXIFsoftware2023 discrepante: pendiente revisión.",
+      "Actividad Ciclovía tiene foto histórica de programa, sin corredor exacto confirmado, no representa BikeTours; actividades permanecen investigación separada, no se importan como principales.",
+      "Sin ilustraciones IA finales; originales/textos revisión1 antes de generar y revisión2 posterior.",
+      "No reservas, pagos, alianza, disponibilidad o RNT confirmados.",
+      "{\"sitios_secundarios\": [{\"id\": \"bogota-museo-oro\", \"nombre\": \"Museo del Oro\", \"inclusion\": \"incluido_borrador\", \"foto_estado\": \"faltante\", \"ubicacion\": \"Carrera6 #15-88, Parque Santander\"}, {\"id\": \"bogota-mambo\", \"nombre\": \"MAMBO\", \"inclusion\": \"incluido_borrador\", \"foto_estado\": \"faltante\", \"ubicacion\": \"Calle24 #6-00, acceso carrera6\"}, {\"id\": \"bogota-colon\", \"nombre\": \"Teatro Colón\", \"inclusion\": \"incluido_borrador\", \"foto_estado\": \"faltante\", \"ubicacion\": \"Calle10 #5-32\"}, {\"id\": \"bogota-delia\", \"nombre\": \"Centro Nacional de las Artes Delia Zapata Olivella\", \"inclusion\": \"incluido_borrador\", \"foto_estado\": \"faltante\", \"ubicacion\": \"Calle11 #5-60\"}, {\"id\": \"bogota-botero\", \"nombre\": \"Museo Botero\", \"inclusion\": \"incluido_borrador\", \"foto_estado\": \"faltante\", \"ubicacion\": \"Calle11 #4-41, La Candelaria\"}, {\"id\": \"bogota-nacional\", \"nombre\": \"Museo Nacional de Colombia\", \"inclusion\": \"incluido_borrador\", \"foto_estado\": \"faltante\", \"ubicacion\": \"Carrera7 #28-66\"}, {\"id\": \"bogota-planetario\", \"nombre\": \"Planetario de Bogotá\", \"inclusion\": \"incluido_borrador\", \"foto_estado\": \"faltante\", \"ubicacion\": \"Calle26B #5-93\"}, {\"id\": \"bogota-maloka\", \"nombre\": \"Maloka\", \"inclusion\": \"incluido_borrador\", \"foto_estado\": \"faltante\", \"ubicacion\": \"Carrera68D #24A-51, Ciudad Salitre\"}, {\"id\": \"bogota-perseverancia\", \"nombre\": \"Plaza de Mercado La Perseverancia\", \"inclusion\": \"incluido_borrador\", \"foto_estado\": \"faltante\", \"ubicacion\": \"Carrera5 #30A-30, Santa Fe\"}, {\"id\": \"bogota-usaquen\", \"nombre\": \"Mercado de las Pulgas de Usaquén\", \"inclusion\": \"incluido_borrador\", \"foto_estado\": \"faltante\", \"ubicacion\": \"Carrera6A entre calles119–120A\"}, {\"id\": \"bogota-simon\", \"nombre\": \"Parque Simón Bolívar\", \"inclusion\": \"incluido_borrador\", \"foto_estado\": \"faltante\", \"ubicacion\": \"Parque central, sector Calles53–63 y carreras60–68; ingreso exacto por confirmar\"}, {\"id\": \"bogota-quebrada\", \"nombre\": \"Quebrada La Vieja\", \"inclusion\": \"incluido_borrador\", \"foto_estado\": \"faltante\", \"ubicacion\": \"Ingreso Calle71 Carrera2Este/Circunvalar, Chapinero\"}, {\"id\": \"bogota-humedal\", \"nombre\": \"Humedal Santa María del Lago\", \"inclusion\": \"candidato_oculto\", \"foto_estado\": \"faltante\", \"ubicacion\": \"Engativá; dirección de ingreso exacta pendiente\"}, {\"id\": \"bogota-cinemateca\", \"nombre\": \"Cinemateca de Bogotá\", \"inclusion\": \"incluido_borrador\", \"foto_estado\": \"faltante\", \"ubicacion\": \"Carrera3 #19-10\"}, {\"id\": \"bogota-grafiti\", \"nombre\": \"Distrito Grafiti Puente Aranda\", \"inclusion\": \"incluido_borrador\", \"foto_estado\": \"faltante\", \"ubicacion\": \"Sector Avenida Américas Carrera53A; recorrido exacto pendiente\"}, {\"id\": \"bogota-theatron\", \"nombre\": \"Theatron\", \"inclusion\": \"candidato_oculto\", \"foto_estado\": \"faltante\", \"ubicacion\": \"Bogotá, Chapinero; dirección exacta pendiente\"}]}"
+    ]
+  }
+}

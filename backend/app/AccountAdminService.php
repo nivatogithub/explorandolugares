@@ -43,7 +43,7 @@ final class AccountAdminService
     {
         $accountId=filter_var($input['account_id']??null,FILTER_VALIDATE_INT);$businessId=filter_var($input['business_id']??null,FILTER_VALIDATE_INT);$role=(string)($input['membership_role']??'owner');
         if(!$accountId||!$businessId||!in_array($role,['owner','manager','editor'],true))throw new RuntimeException('Selecciona una cuenta empresarial, un negocio aprobado y un permiso válido.');
-        $q=$this->pdo->prepare('SELECT id FROM accounts WHERE id=? AND account_type="business" AND status IN ("pending_activation","active")');$q->execute([$accountId]);if(!$q->fetchColumn())throw new RuntimeException('La cuenta no está disponible o no es de tipo empresarial.');
+        $q=$this->pdo->prepare('SELECT id FROM accounts WHERE id=? AND status IN ("pending_activation","active")');$q->execute([$accountId]);if(!$q->fetchColumn())throw new RuntimeException('La cuenta no está disponible o no es de tipo empresarial.');
         $q=$this->pdo->prepare('SELECT a.id FROM business_account_applications a
             JOIN businesses b ON b.id=a.business_id
             WHERE a.account_id=? AND a.business_id=? AND a.status="approved"

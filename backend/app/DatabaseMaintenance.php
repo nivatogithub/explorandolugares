@@ -211,6 +211,17 @@ final class DatabaseMaintenance
             'checks'=>[['operating_costs',['cost_date','category','amount_cop','destination_id','voided_at']],['subscription_cancellation_requests',['subscription_id','business_id','account_id','reason_code','status','review_note']]],
             'requires'=>['businesses','business_subscriptions','accounts','destinations'],
         ],
+        '041-experience-operator-addon'=>['file'=>'041-experience-operator-addon.mysql.sql','checks'=>[['experience_operator_prices',['billing_frequency','amount','currency']],['business_experience_subscriptions',['subscription_id','experience_id','quoted_amount','currency']]],'requires'=>['business_subscriptions','points_of_interest']],
+        '040-payment-transaction-details'=>['file'=>'040-payment-transaction-details.mysql.sql','checks'=>[['business_subscription_payment_evidence',['checkout_reference','transaction_date','paid_amount','payment_method','source_bank']]],'requires'=>['business_subscription_payment_evidence']],
+        '039-payment-instructions'=>['file'=>'039-payment-instructions.mysql.sql','checks'=>[['payment_instructions',['enabled','test_mode','holder','bank','account_number','account_type','breb_key','notes','qr_file','updated_at','updated_by']]],'requires'=>[]],
+        '038-account-residence'=>['file'=>'038-account-residence.mysql.sql','checks'=>[['account_residences',['account_id','country_code','region_code','region_name','city_code','city_name']]],'requires'=>['accounts']],
+        '037-subscription-pricing-policy'=>['file'=>'037-subscription-pricing-policy.mysql.sql','checks'=>[['subscription_pricing_policy',['period_code','billable_months']]],'requires'=>['subscription_plan_prices']],
+        '036-public-requests'=>['file'=>'036-public-requests.mysql.sql','checks'=>[['public_requests',['reference','request_type','status','response_note']]],'requires'=>[]],
+        '035-account-email-verifications'=>[
+            'file'=>'035-account-email-verifications.mysql.sql',
+            'checks'=>[['account_email_verifications',['account_id','token_hash','expires_at','used_at']]],
+            'requires'=>['accounts'],
+        ],
         '034-business-onboarding'=>[
             'file'=>'034-business-onboarding.mysql.sql',
             'checks'=>[['business_account_applications',['business_details_json']],['account_consents',['account_id','consent_version','accepted_at']],['business_application_images',['application_id','storage_name','mime_type']]],

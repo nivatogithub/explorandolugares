@@ -1,0 +1,98 @@
+{
+  "worker": "Lugar 4",
+  "destination": "santa-marta",
+  "date": "2026-10-17",
+  "branch": "lugar/CO/magdalena/santa-marta",
+  "state": "investigacion_y_revision_individual_activa",
+  "components": {
+    "hero": {
+      "status": "una_referencia_centro_bahia_lista_para_eleccion",
+      "next": "Elección individual de referencia H7-03 y encuadre propuesto; no generar ni importar antes de autorización.",
+      "reference_approved": false,
+      "generation_approved": false,
+      "candidate_ids": [
+        "SM-H7-03"
+      ],
+      "rejected_candidates": [
+        "SM-H6-02",
+        "SM-H6-03",
+        "SM-H6-04"
+      ],
+      "additional_research": "video_original_extraido4fotogramas_e_inspeccionado",
+      "excluded_by_human": [
+        "SM-H6-01",
+        "SM-H6-05-t13s"
+      ],
+      "authority": "decision-portada-centro-bahia-historica.json"
+    },
+    "tayrona": {
+      "status": "dos_opciones_listas_para_eleccion_original",
+      "next": "Quiosco Cabo San Juan visible sobre rocas, con playa y agua.",
+      "reference_approved": false,
+      "candidate_ids": [
+        "SM-T6-01",
+        "SM-T6-03"
+      ],
+      "rejected_candidates": [
+        "SM-T6-02"
+      ],
+      "crop_review": "simulaciones_anchas_y_moviles_inspeccionadas"
+    },
+    "acuario": {
+      "status": "original_historico_2010_inspeccionado_condicional",
+      "next": "Revisar entrada reconocible y condición histórica; buscar toma reciente si no satisface.",
+      "candidate_id": "SM-A6-01",
+      "reference_approved": false
+    },
+    "history": {
+      "status": "referencia_pendiente_eleccion",
+      "asset": "santa-marta-history.webp"
+    },
+    "places": {
+      "primary_count": 7,
+      "texts_locales": [
+        "es",
+        "en",
+        "pt-BR"
+      ],
+      "editorial_approved": false,
+      "eighth_slot": "pending_editorial_cutoff",
+      "classification": "separar_geografia_y_actividad_sin_dobleconteo"
+    },
+    "experiences": {
+      "count": 9,
+      "texts_locales": [
+        "es",
+        "en",
+        "pt-BR"
+      ],
+      "text_state": "borrador_completo",
+      "specific_photos_complete": false,
+      "imported": false,
+      "visual_review": {
+        "SM-E6-01": "context_only",
+        "SM-E6-02": "rejected_for_main_activity",
+        "SM-E6-03": "context_only",
+        "SM-E6-04": "candidate_editorial_stop",
+        "SM-E6-05": "candidate_editorial_destination",
+        "SM-E6-06": "conditional_editorial_context"
+      }
+    },
+    "directory": {
+      "count": 11,
+      "texts_locales": [
+        "es",
+        "en",
+        "pt-BR"
+      ],
+      "text_state": "borrador_completo",
+      "photos_complete": false,
+      "imported": false,
+      "claim_status": "unclaimed"
+    }
+  },
+  "final_ai_images": 0,
+  "destination_approved": false,
+  "production_authorized": false,
+  "preprod_modified_in_v6": false
+}

@@ -52,6 +52,7 @@ private_tools=release/'app/bin';private_tools.mkdir(parents=True,exist_ok=True)
 shutil.copyfile(root/'backend/bin/importar-destinos.php',private_tools/'importar-destinos.php')
 shutil.copyfile(root/'backend/bin/importar-negocios.php',private_tools/'importar-negocios.php')
 private_content=release/'app/content';private_content.mkdir(parents=True,exist_ok=True)
+shutil.copyfile(root/'content/release-places-businesses.json',private_content/'release-places-businesses.json')
 shutil.copyfile(root/'content/destinos-dinamicos.json',private_content/'destinos-dinamicos.json')
 shutil.copyfile(root/'content/plantilla-importar-negocios.json',private_content/'plantilla-importar-negocios.json')
 shutil.copyfile(root/'content/plantilla-paquete-negocios.zip',private_content/'plantilla-paquete-negocios.zip')
@@ -71,7 +72,17 @@ subprocess.run([
 shutil.copytree(root/'backend/public/cobertura',public/'cobertura',dirs_exist_ok=True)
 shutil.copytree(root/'backend/public/assets/cobertura',public/'assets/cobertura',dirs_exist_ok=True)
 shutil.copytree(root/'backend/integration-medicion/public',public,dirs_exist_ok=True)
+shutil.copyfile(root/'backend/public/assets/nomenclatura-lugares.js',public/'assets/nomenclatura-lugares.js')
+for asset in ['account-access.css','account-registration.css','account-entry.css']:
+    shutil.copyfile(root/'backend/public/assets'/asset,public/'assets'/asset)
+for obsolete in ['logo.svg','logo-completo.svg','favicon.svg']:
+    (public/'assets'/obsolete).unlink(missing_ok=True)
+subprocess.run([sys.executable,str(root/'scripts/aplicar-identidad-neutral.py'),'--public',str(public)],check=True)
+subprocess.run(['php',str(root/'scripts/aplicar-nomenclatura-lugares.php'),str(release)],check=True)
 # Stamp all generated pages after the integration overlay, including general pages.
 subprocess.run([sys.executable,str(root/'scripts/versiones-medicion.py'),'--public',str(public)],check=True)
 subprocess.run([sys.executable,str(root/'scripts/generar-sitemap-entrega.py'),'--public',str(public)],check=True)
 print(f'Entrega de revisión: {release}\nRaíz pública: {public}\nConfigurar private/config.php fuera de public/. No hay publicación automática.')
+
+# Fail the package if retired identity assets or palette reappear.
+subprocess.run([sys.executable,str(root/'preprod/probar-identidad-vigente.py'),str(public)],check=True)

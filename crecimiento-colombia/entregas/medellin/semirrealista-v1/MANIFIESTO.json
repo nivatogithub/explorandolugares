@@ -1,0 +1,601 @@
+[
+  {
+    "id": "portada",
+    "role": "hero",
+    "style": "EL-SEMI-REALISTA-1",
+    "origin": "ai_generated",
+    "master": "maestros/portada-v1.png",
+    "master_sha256": "0b3c72fcaae6a7e67d9f9541f41a7d78b03a8aab0ed62bbb03213d7d378588ac",
+    "prompt": "Use case: stylized-concept. Create an original independent composition from documented place features; no photographic input. EL-SEMI-REALISTA-1: sophisticated adult SEMI-REALISTIC EDITORIAL PAINTING, visibly hand-painted subtle gouache/ink brushwork, believable architecture and materials, organic trees and atmospheric depth, natural colours, expressive fully drawn anatomically coherent people only when specified. Not photograph, not flat geometric vector, not childish, no yellow wash. Landscape3:2; main subject dominant and complete inside safe margins for small compact cards. No lettering, title, logo, watermark, frame, invented signage or brand endorsement. Elevated distant panoramic view of central Medellín,Aburrá Valley. The REAL COLTEJER building complete and dominant within dense surrounding city and green inhabited Andean slopes. It is a tall rectangular concrete office tower with dark narrow vertical façade fins and its distinctive SEWING-NEEDLE SHAPED FOLDED ROOF crown: broad angular asymmetrical sloping concrete roof planes/pointed edges belonging to the tower, NOT an added round conical pyramid, NOT a needle antenna, NOT an Empire State spire. No tall central spire, no fantasy cathedral. Keep complete top and full tower, realistic surrounding lower downtown blocks, modest blue sky and green mountain backdrop. The silhouette must read Coltejer at small size, city viewed from afar, no ocean. Wide3:2 safe16:9 margins.",
+    "input_images": [],
+    "source_ids": [
+      "coltejer"
+    ],
+    "variants": [
+      {
+        "path": "web/portada-640.webp",
+        "width": 640,
+        "height": 427,
+        "bytes": 77346,
+        "sha256": "16055c689140a63048284c694b26fa3e66a9afffac74a6dcbff40069ae945195"
+      },
+      {
+        "path": "web/portada-1200.webp",
+        "width": 1200,
+        "height": 800,
+        "bytes": 229972,
+        "sha256": "c1591c0a8a3f2b098c60687477fcf0be0a640fa114a64affc0445aeef56624bb"
+      }
+    ],
+    "visual_qa": "inspeccionada_individualmente_propuesta_editorial",
+    "human_approved": false,
+    "publication_approved": false,
+    "interpretation": "Composición ilustrada; geometría, personas, entorno y detalles interpretativos. No acredita estado actual ni servicio contratado."
+  },
+  {
+    "id": "parque-explora",
+    "role": "place",
+    "style": "EL-SEMI-REALISTA-1",
+    "origin": "ai_generated",
+    "master": "maestros/parque-explora-v1.png",
+    "master_sha256": "3dc9747602361ecd36d972e093c61b2f574c7282d59c235e936ac95741f326a3",
+    "prompt": "Use case: stylized-concept. Create an original independent composition from documented place features; no photographic input. EL-SEMI-REALISTA-1: sophisticated adult SEMI-REALISTIC EDITORIAL PAINTING, visibly hand-painted subtle gouache/ink brushwork, believable architecture and materials, organic trees and atmospheric depth, natural colours, expressive fully drawn anatomically coherent people only when specified. Not photograph, not flat geometric vector, not childish, no yellow wash. Landscape3:2; main subject dominant and complete inside safe margins for small compact cards. No lettering, title, logo, watermark, frame, invented signage or brand endorsement. Parque Explora Medellín, exterior architectural view showing the characteristic FOUR large RED RECTANGULAR VOLUMES of its science museum, raised above a landscaped public foreground, restrained modern steel/concrete structure and leafy north-city setting. Bold red boxlike architecture is unmistakable and occupies60percent image; no invented domes, amusement rides or animals outdoors. Bright daylight.",
+    "input_images": [],
+    "source_ids": [
+      "explora"
+    ],
+    "variants": [
+      {
+        "path": "web/parque-explora-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 49404,
+        "sha256": "48811c0ab4a1d16ebcdd9c0a2c3d068191da0232f4b6b1c7e854c6daa4b6ee6d"
+      },
+      {
+        "path": "web/parque-explora-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 124982,
+        "sha256": "01c6dfde7221158ad1bda001ab2ac561938566b896a8f05da063583aa10343a4"
+      }
+    ],
+    "visual_qa": "inspeccionada_individualmente_propuesta_editorial",
+    "human_approved": false,
+    "publication_approved": false,
+    "interpretation": "Composición ilustrada; geometría, personas, entorno y detalles interpretativos. No acredita estado actual ni servicio contratado."
+  },
+  {
+    "id": "pueblito-paisa",
+    "role": "place",
+    "style": "EL-SEMI-REALISTA-1",
+    "origin": "ai_generated",
+    "master": "maestros/pueblito-paisa-v2.png",
+    "master_sha256": "dc2a54c58ae94deec5db414747f3b1db6d6bfef166de6f69e7340f8365ca6178",
+    "prompt": "Use case: stylized-concept. Create an original independent composition from documented place features; no photographic input. EL-SEMI-REALISTA-1: sophisticated adult SEMI-REALISTIC EDITORIAL PAINTING, visibly hand-painted subtle gouache/ink brushwork, believable architecture and materials, organic trees and atmospheric depth, natural colours, expressive fully drawn anatomically coherent people only when specified. Not photograph, not flat geometric vector, not childish, no yellow wash. Landscape3:2; main subject dominant and complete inside safe margins for small compact cards. No lettering, title, logo, watermark, frame, invented signage or brand endorsement. Pueblito Paisa on Cerro Nutibara, Medellín, a small recreated village square. The SIMPLE WHITE plaster church has RED SALMON bands and trim, one large plain dark arched doorway, above it TWO small paired round-arched windows separated by a slender white column. Curved red volute shoulders, one small square white belfry with a SINGLE open round arch, tiny ROUNDED cap and thin cross. NO clock, NO rose window, NO ornate stone trim, NO triangular baroque pediment. Low white clay-tiled houses with colourful wooden trim flank it. The small fountain is BLACK CAST IRON with three delicate tiers and bird on top, inside a low circular planted enclosure, NOT a large stone fountain. Human height view across the village square, a few complete visitors; church fully visible, no invented huge cathedral or distant coastal landscape.",
+    "input_images": [],
+    "source_ids": [
+      "pueblito"
+    ],
+    "variants": [
+      {
+        "path": "web/pueblito-paisa-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 47838,
+        "sha256": "c55b8318c43bb5acdff38ae5f5f5cdbde7363155a0788cc53cec441ec8b8f1fc"
+      },
+      {
+        "path": "web/pueblito-paisa-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 118464,
+        "sha256": "866567e69eecb183185d923cc2d8dabf674862a1265df5dd0eca65833feef143"
+      }
+    ],
+    "visual_qa": "inspeccionada_individualmente_propuesta_editorial",
+    "human_approved": false,
+    "publication_approved": false,
+    "interpretation": "Composición ilustrada; geometría, personas, entorno y detalles interpretativos. No acredita estado actual ni servicio contratado."
+  },
+  {
+    "id": "jardin-botanico",
+    "role": "place",
+    "style": "EL-SEMI-REALISTA-1",
+    "origin": "ai_generated",
+    "master": "maestros/jardin-botanico-v1.png",
+    "master_sha256": "b32b77af35d761fb471b2f183a87addf2d4d34bffd2b6d9f8e8196bc3c59d7bf",
+    "prompt": "Use case: stylized-concept. Create an original independent composition from documented place features; no photographic input. EL-SEMI-REALISTA-1: sophisticated adult SEMI-REALISTIC EDITORIAL PAINTING, visibly hand-painted subtle gouache/ink brushwork, believable architecture and materials, organic trees and atmospheric depth, natural colours, expressive fully drawn anatomically coherent people only when specified. Not photograph, not flat geometric vector, not childish, no yellow wash. Landscape3:2; main subject dominant and complete inside safe margins for small compact cards. No lettering, title, logo, watermark, frame, invented signage or brand endorsement. Orquideorama in Medellín Botanical Garden: low-angle architectural view of the iconic interlinked TIMBER HEXAGONAL flower/tree canopy structures, branching wooden supports and honeycomb roof geometry surrounded by lush organic tropical vegetation. The timber canopy dominates, complete visible structural modules with credible joins and proportions. Dappled daylight, no generic greenhouse glass dome, no invented orchids enlarged as giant trees.",
+    "input_images": [],
+    "source_ids": [
+      "botanico"
+    ],
+    "variants": [
+      {
+        "path": "web/jardin-botanico-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 57912,
+        "sha256": "e9ca5bdc3feee0eb3f9799bfedbc3d75464a4e32a9d4e467c4846285019cb39e"
+      },
+      {
+        "path": "web/jardin-botanico-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 153542,
+        "sha256": "f84f56a562d7480782dcd41e4b87ac6e5d0953ddc74cf9a856964ee877ab6a81"
+      }
+    ],
+    "visual_qa": "inspeccionada_individualmente_propuesta_editorial",
+    "human_approved": false,
+    "publication_approved": false,
+    "interpretation": "Composición ilustrada; geometría, personas, entorno y detalles interpretativos. No acredita estado actual ni servicio contratado."
+  },
+  {
+    "id": "comuna13",
+    "role": "place",
+    "style": "EL-SEMI-REALISTA-1",
+    "origin": "ai_generated",
+    "master": "maestros/comuna13-v1.png",
+    "master_sha256": "72816b09960055747a7e6c2f69890417b7d3b0be6553926f27f195cec74aa665",
+    "prompt": "Use case: stylized-concept. Create an original independent composition from documented place features; no photographic input. EL-SEMI-REALISTA-1: sophisticated adult SEMI-REALISTIC EDITORIAL PAINTING, visibly hand-painted subtle gouache/ink brushwork, believable architecture and materials, organic trees and atmospheric depth, natural colours, expressive fully drawn anatomically coherent people only when specified. Not photograph, not flat geometric vector, not childish, no yellow wash. Landscape3:2; main subject dominant and complete inside safe margins for small compact cards. No lettering, title, logo, watermark, frame, invented signage or brand endorsement. Medellín Comuna13 tourist art/escalator circuit: characteristic outdoor electric escalators under orange-red perforated rectangular metal canopy modules, steep hillside pedestrian paths and closely set brick houses. Frame the actual ORANGE ESCALATOR INFRASTRUCTURE prominently with full rails and recognisable surrounding street; a few complete tiny residents secondary. Original abstract urban mural colours only, no copying any actual mural or portraits, no invented slogans. No generic rooftop panorama.",
+    "input_images": [],
+    "source_ids": [
+      "memoria"
+    ],
+    "variants": [
+      {
+        "path": "web/comuna13-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 54866,
+        "sha256": "d44b171d0e72f57d519628c94acb36e335c46cf721c949ac1ee17d9e29e3b6f2"
+      },
+      {
+        "path": "web/comuna13-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 137088,
+        "sha256": "8a9bd812bab71ceb4828aef5033dd1ce66a202c92dadfd292b3a3fe899085aa3"
+      }
+    ],
+    "visual_qa": "inspeccionada_individualmente_propuesta_editorial",
+    "human_approved": false,
+    "publication_approved": false,
+    "interpretation": "Composición ilustrada; geometría, personas, entorno y detalles interpretativos. No acredita estado actual ni servicio contratado."
+  },
+  {
+    "id": "museo-antioquia",
+    "role": "place",
+    "style": "EL-SEMI-REALISTA-1",
+    "origin": "ai_generated",
+    "master": "maestros/museo-antioquia-v1.png",
+    "master_sha256": "0202f5516b4ea3d0ebdfe2c3f5addcc5bf4044050644fd2e156b9ccd1ac61c33",
+    "prompt": "Use case: stylized-concept. Create an original independent composition from documented place features; no photographic input. EL-SEMI-REALISTA-1: sophisticated adult SEMI-REALISTIC EDITORIAL PAINTING, visibly hand-painted subtle gouache/ink brushwork, believable architecture and materials, organic trees and atmospheric depth, natural colours, expressive fully drawn anatomically coherent people only when specified. Not photograph, not flat geometric vector, not childish, no yellow wash. Landscape3:2; main subject dominant and complete inside safe margins for small compact cards. No lettering, title, logo, watermark, frame, invented signage or brand endorsement. Museo de Antioquia,downtown Medellín, exterior of former municipal palace: broad restrained pale-stone/concrete ART DECO façade with vertical window bays, central tall rectangular entrance section, warm brick side portions, palms and the public square in front. Eye-level near-front angle, museum façade dominates, accurate institutional scale. Do not invent a neoclassical temple or giant staircase, avoid rendering copyrighted sculptures as main subject.",
+    "input_images": [],
+    "source_ids": [
+      "antioquia"
+    ],
+    "variants": [
+      {
+        "path": "web/museo-antioquia-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 43414,
+        "sha256": "42e09263add6dc98f7ff015df69a95a4541cc31c65fe7aa3b43fb890ca348e29"
+      },
+      {
+        "path": "web/museo-antioquia-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 107022,
+        "sha256": "f626cd23f29da52068353cb67503d97d331a8d49f14b54fa072641214ec79213"
+      }
+    ],
+    "visual_qa": "inspeccionada_individualmente_propuesta_editorial",
+    "human_approved": false,
+    "publication_approved": false,
+    "interpretation": "Composición ilustrada; geometría, personas, entorno y detalles interpretativos. No acredita estado actual ni servicio contratado."
+  },
+  {
+    "id": "arvi",
+    "role": "place",
+    "style": "EL-SEMI-REALISTA-1",
+    "origin": "ai_generated",
+    "master": "maestros/arvi-v1.png",
+    "master_sha256": "cf2b338577755ea4c8e03c2c77e819582fef33d264964aacad3372ab090679e0",
+    "prompt": "Use case: stylized-concept. Create an original independent composition from documented place features; no photographic input. EL-SEMI-REALISTA-1: sophisticated adult SEMI-REALISTIC EDITORIAL PAINTING, visibly hand-painted subtle gouache/ink brushwork, believable architecture and materials, organic trees and atmospheric depth, natural colours, expressive fully drawn anatomically coherent people only when specified. Not photograph, not flat geometric vector, not childish, no yellow wash. Landscape3:2; main subject dominant and complete inside safe margins for small compact cards. No lettering, title, logo, watermark, frame, invented signage or brand endorsement. Cable Arví LINE L above the rural forest canopy of Santa Elena,Medellín. One recognizable white compact enclosed gondola cabin with dark panoramic windows and modest green/yellow trim LARGE in foreground, suspended on real cable with support arm, forested rolling hills filling most background. Clear bright soft daylight, organic mixed forest, 15percent sky at most. Cabin takes25percent image, forest60percent; no tiny remote cabin, no station building as primary, no urban hillside red-brick neighbourhoods, no Comuna13/J/K analogy, no lake or waterfall. Editorial interpretation of documented LineL landscape.",
+    "input_images": [],
+    "source_ids": [
+      "metro-l",
+      "guia"
+    ],
+    "variants": [
+      {
+        "path": "web/arvi-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 46998,
+        "sha256": "c4707e98cc48c051805733d4d5906f8956197d4908eda395ac99bf62a5bbcbe0"
+      },
+      {
+        "path": "web/arvi-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 120036,
+        "sha256": "2fa2dc8c35754bcbde957ccc11d0c245bd64a9cada9cc435c15b19e0f5ee9ae8"
+      }
+    ],
+    "visual_qa": "inspeccionada_individualmente_propuesta_editorial",
+    "human_approved": false,
+    "publication_approved": false,
+    "interpretation": "Composición ilustrada; geometría, personas, entorno y detalles interpretativos. No acredita estado actual ni servicio contratado."
+  },
+  {
+    "id": "catedral-metropolitana",
+    "role": "place",
+    "style": "EL-SEMI-REALISTA-1",
+    "origin": "ai_generated",
+    "master": "maestros/catedral-metropolitana-v1.png",
+    "master_sha256": "e760749055f75de820850e322f105947f33af33ef1861b6b061f3c85f93cf539",
+    "prompt": "Use case: stylized-concept. Create an original independent composition from documented place features; no photographic input. EL-SEMI-REALISTA-1: sophisticated adult SEMI-REALISTIC EDITORIAL PAINTING, visibly hand-painted subtle gouache/ink brushwork, believable architecture and materials, organic trees and atmospheric depth, natural colours, expressive fully drawn anatomically coherent people only when specified. Not photograph, not flat geometric vector, not childish, no yellow wash. Landscape3:2; main subject dominant and complete inside safe margins for small compact cards. No lettering, title, logo, watermark, frame, invented signage or brand endorsement. Medellín Metropolitan Cathedral Basilica beside Parque Bolívar: monumental RED-BRICK ROMANESQUE church, symmetrical main façade with two square brick towers, round arches and central rose-window element. Full frontal façade and both tower tops complete, trees and small park foreground, natural warm brick without yellow filter. Not the white Basilica de la Candelaria and not a baroque colonial church, no invented needle spires.",
+    "input_images": [],
+    "source_ids": [
+      "catedral"
+    ],
+    "variants": [
+      {
+        "path": "web/catedral-metropolitana-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 53800,
+        "sha256": "69526d8b5e2b0620ea2fd67cc4df42348f4f0cbfeabda7265badfb14cc868085"
+      },
+      {
+        "path": "web/catedral-metropolitana-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 138456,
+        "sha256": "f87f14d8c93479f0c990e34795de1d9354b8254efb42b2d09931d7b4b6633ce9"
+      }
+    ],
+    "visual_qa": "inspeccionada_individualmente_propuesta_editorial",
+    "human_approved": false,
+    "publication_approved": false,
+    "interpretation": "Composición ilustrada; geometría, personas, entorno y detalles interpretativos. No acredita estado actual ni servicio contratado."
+  },
+  {
+    "id": "pies-descalzos",
+    "role": "place",
+    "style": "EL-SEMI-REALISTA-1",
+    "origin": "ai_generated",
+    "master": "maestros/pies-descalzos-v1.png",
+    "master_sha256": "e1b3c377b3011c7b611428a1439ab7dff062f2fa96413f251c632031979ed2ee",
+    "prompt": "Use case: stylized-concept. Create an original independent composition from documented place features; no photographic input. EL-SEMI-REALISTA-1: sophisticated adult SEMI-REALISTIC EDITORIAL PAINTING, visibly hand-painted subtle gouache/ink brushwork, believable architecture and materials, organic trees and atmospheric depth, natural colours, expressive fully drawn anatomically coherent people only when specified. Not photograph, not flat geometric vector, not childish, no yellow wash. Landscape3:2; main subject dominant and complete inside safe margins for small compact cards. No lettering, title, logo, watermark, frame, invented signage or brand endorsement. Parque de los Pies Descalzos,Medellín: contemporary public sensory park with pale sand walking area, bamboo grove and restrained flat shallow water/stone-edge geometry in modern EPM/Plaza Mayor urban context. Focus landscape design and bamboo/sand composition, not generic jungle. No spectacular fountains, no invented swimming pool or promise every water feature operates. Bright quiet daylight.",
+    "input_images": [],
+    "source_ids": [
+      "guia"
+    ],
+    "variants": [
+      {
+        "path": "web/pies-descalzos-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 44386,
+        "sha256": "9006a260f5f183bb34bd5f34c7f82e3ba8636d946ac39a6ca2ea5376fc74362a"
+      },
+      {
+        "path": "web/pies-descalzos-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 111470,
+        "sha256": "857e8f25049951866df24bde4f88fec01981c2a6f227430fa5ed750934f6e636"
+      }
+    ],
+    "visual_qa": "inspeccionada_individualmente_propuesta_editorial",
+    "human_approved": false,
+    "publication_approved": false,
+    "interpretation": "Composición ilustrada; geometría, personas, entorno y detalles interpretativos. No acredita estado actual ni servicio contratado."
+  },
+  {
+    "id": "museo-antioquia-visita",
+    "role": "experience",
+    "style": "EL-SEMI-REALISTA-1",
+    "origin": "ai_generated",
+    "master": "maestros/museo-antioquia-visita-v1.png",
+    "master_sha256": "8b77f6f15339b4ac95b3a5c9b92df45c43316f9a3a68c4a7e215156c41889dd4",
+    "prompt": "Use case: stylized-concept. Create an original independent composition from documented place features; no photographic input. EL-SEMI-REALISTA-1: sophisticated adult SEMI-REALISTIC EDITORIAL PAINTING, visibly hand-painted subtle gouache/ink brushwork, believable architecture and materials, organic trees and atmospheric depth, natural colours, expressive fully drawn anatomically coherent people only when specified. Not photograph, not flat geometric vector, not childish, no yellow wash. Landscape3:2; main subject dominant and complete inside safe margins for small compact cards. No lettering, title, logo, watermark, frame, invented signage or brand endorsement. Editorial autonomous visit to Museo de Antioquia,Medellín. Distinct from exterior place-card composition: closer pedestrian-scale arrival at its Art-Deco rectangular entrance, two complete adult visitors reading a plain unlettered guide leaflet and looking toward tall window bays/entrance, pale stone and warm-brick façade details, palms to one side. No identifiable real people, no specific exhibition paintings or copied Botero sculpture, no actual guide/operator branding. Depict cultural visiting, not a booked tour.",
+    "input_images": [],
+    "source_ids": [
+      "antioquia"
+    ],
+    "variants": [
+      {
+        "path": "web/museo-antioquia-visita-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 41538,
+        "sha256": "d14631701efce13b4a9b578649531db3ed3ac8e208b25faa568fab07e860d071"
+      },
+      {
+        "path": "web/museo-antioquia-visita-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 100116,
+        "sha256": "c7eeca1f20b36e111683ba2c730912b9b1164b8147b010abcc58401910f0343f"
+      }
+    ],
+    "visual_qa": "inspeccionada_individualmente_propuesta_editorial",
+    "human_approved": false,
+    "publication_approved": false,
+    "interpretation": "Composición ilustrada; geometría, personas, entorno y detalles interpretativos. No acredita estado actual ni servicio contratado."
+  },
+  {
+    "id": "jardin-botanico-visita",
+    "role": "experience",
+    "style": "EL-SEMI-REALISTA-1",
+    "origin": "ai_generated",
+    "master": "maestros/jardin-botanico-visita-v1.png",
+    "master_sha256": "7709f08a4cb51fd4aec962aacd04ace13ed4674c863edc20738e08ca5c8a29f5",
+    "prompt": "Use case: stylized-concept. Create an original independent composition from documented place features; no photographic input. EL-SEMI-REALISTA-1: sophisticated adult SEMI-REALISTIC EDITORIAL PAINTING, visibly hand-painted subtle gouache/ink brushwork, believable architecture and materials, organic trees and atmospheric depth, natural colours, expressive fully drawn anatomically coherent people only when specified. Not photograph, not flat geometric vector, not childish, no yellow wash. Landscape3:2; main subject dominant and complete inside safe margins for small compact cards. No lettering, title, logo, watermark, frame, invented signage or brand endorsement. Autonomous botanical walk in Jardín Botánico Medellín: two complete adult visitors strolling an organic shaded path through richly detailed real-scale tropical foliage, with the recognisable branching timber HEXAGONAL ORQUIDEORAMA canopy in mid-background. Visitors and garden exploration foreground, not the architectural low-angle place-card. No guide/service promise, no invented giant flower or animals, no labels.",
+    "input_images": [],
+    "source_ids": [
+      "botanico"
+    ],
+    "variants": [
+      {
+        "path": "web/jardin-botanico-visita-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 61700,
+        "sha256": "a95811da3ff589ea68a29eda5a404a2241c5bad96a69e28aa8c38bff20d3d4a8"
+      },
+      {
+        "path": "web/jardin-botanico-visita-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 155488,
+        "sha256": "b995acc13495947564748ccae835fadfe3271185e7574358e775003f19e151ac"
+      }
+    ],
+    "visual_qa": "inspeccionada_individualmente_propuesta_editorial",
+    "human_approved": false,
+    "publication_approved": false,
+    "interpretation": "Composición ilustrada; geometría, personas, entorno y detalles interpretativos. No acredita estado actual ni servicio contratado."
+  },
+  {
+    "id": "parque-explora-visita",
+    "role": "experience",
+    "style": "EL-SEMI-REALISTA-1",
+    "origin": "ai_generated",
+    "master": "maestros/parque-explora-visita-v1.png",
+    "master_sha256": "276140f1195f4f8b337cdb74ff2c57887e8bfbc8827b03dc718f2da6c4a617a0",
+    "prompt": "Use case: stylized-concept. Create an original independent composition from documented place features; no photographic input. EL-SEMI-REALISTA-1: sophisticated adult SEMI-REALISTIC EDITORIAL PAINTING, visibly hand-painted subtle gouache/ink brushwork, believable architecture and materials, organic trees and atmospheric depth, natural colours, expressive fully drawn anatomically coherent people only when specified. Not photograph, not flat geometric vector, not childish, no yellow wash. Landscape3:2; main subject dominant and complete inside safe margins for small compact cards. No lettering, title, logo, watermark, frame, invented signage or brand endorsement. Conceptual editorial depiction of hands-on science exploration at Parque Explora Medellín: complete adult and older child engaged with a simple interactive light/colour apparatus on a table, coherent hands, a guide-free discovery moment; recognizable RED RECTANGULAR EXTERIOR VOLUMES glimpsed through wide background opening tie scene to Explora. Apparatus is an illustrative interpretation of interactive learning, NOT a claim of an exact currently available exhibit. No dinosaur, rollercoaster or invented branded workshop, no lettering. Different indoor/close experience composition from exterior place-card.",
+    "input_images": [],
+    "source_ids": [
+      "explora"
+    ],
+    "variants": [
+      {
+        "path": "web/parque-explora-visita-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 28854,
+        "sha256": "70e5a2d727417f215329b5e17bafdb09a1930bdb2d215f63e4b9c56e3fe9a4db"
+      },
+      {
+        "path": "web/parque-explora-visita-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 59704,
+        "sha256": "8f4ca463bdff747d27a06f733201008c1ad3610e40fdd543f273f3ee554df0ca"
+      }
+    ],
+    "visual_qa": "inspeccionada_individualmente_propuesta_editorial",
+    "human_approved": false,
+    "publication_approved": false,
+    "interpretation": "Composición ilustrada; geometría, personas, entorno y detalles interpretativos. No acredita estado actual ni servicio contratado."
+  },
+  {
+    "id": "mamm-visita",
+    "role": "experience",
+    "style": "EL-SEMI-REALISTA-1",
+    "origin": "ai_generated",
+    "master": "maestros/mamm-visita-v1.png",
+    "master_sha256": "2338678ac3f1d82e39408250728d68287e9104d57b800f39d6e7cd0e64e73ff8",
+    "prompt": "Use case: stylized-concept. Create an original independent composition from documented place features; no photographic input. EL-SEMI-REALISTA-1: sophisticated adult SEMI-REALISTIC EDITORIAL PAINTING, visibly hand-painted subtle gouache/ink brushwork, believable architecture and materials, organic trees and atmospheric depth, natural colours, expressive fully drawn anatomically coherent people only when specified. Not photograph, not flat geometric vector, not childish, no yellow wash. Landscape3:2; main subject dominant and complete inside safe margins for small compact cards. No lettering, title, logo, watermark, frame, invented signage or brand endorsement. Autonomous cultural visit to MAMM Medellín in Ciudad del Río: recognisable old TALLERES ROBLEDO red-brick industrial façade with pale central gabled wall, circular upper opening, tall rectangular gridded windows and adjoining modern museum volumes. Show two fully drawn visitors approaching along public pavement, human-height oblique angle with façade behind; do NOT write any words or reproduce exhibition banners/artworks. No invented guided-service branding.",
+    "input_images": [],
+    "source_ids": [
+      "mamm"
+    ],
+    "variants": [
+      {
+        "path": "web/mamm-visita-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 43202,
+        "sha256": "ec5c88cfd776afebacf03a46795f63f297baee0adf9fc3528399dccf3c9908fe"
+      },
+      {
+        "path": "web/mamm-visita-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 118052,
+        "sha256": "661167a21637d9a93844b1c8aae6e9d7d7c1c902f09c76fd3b410d71f268d9cd"
+      }
+    ],
+    "visual_qa": "inspeccionada_individualmente_propuesta_editorial",
+    "human_approved": false,
+    "publication_approved": false,
+    "interpretation": "Composición ilustrada; geometría, personas, entorno y detalles interpretativos. No acredita estado actual ni servicio contratado."
+  },
+  {
+    "id": "paseo-centro",
+    "role": "experience",
+    "style": "EL-SEMI-REALISTA-1",
+    "origin": "ai_generated",
+    "master": "maestros/paseo-centro-v1.png",
+    "master_sha256": "9ec2cabf3f9615f75f1447e94840673df6692f8b1617c375a417f4c7fe918946",
+    "prompt": "Use case: stylized-concept. Create an original independent composition from documented place features; no photographic input. EL-SEMI-REALISTA-1: sophisticated adult SEMI-REALISTIC EDITORIAL PAINTING, visibly hand-painted subtle gouache/ink brushwork, believable architecture and materials, organic trees and atmospheric depth, natural colours, expressive fully drawn anatomically coherent people only when specified. Not photograph, not flat geometric vector, not childish, no yellow wash. Landscape3:2; main subject dominant and complete inside safe margins for small compact cards. No lettering, title, logo, watermark, frame, invented signage or brand endorsement. Editorial self-guided architectural walk in downtown Medellín along Junín/La Playa context: complete adult walkers, pedestrian street scale, recognisable full COLTEJER sewing-needle folded angular roof silhouette further behind modern downtown street blocks, authentic Aburrá Valley urban atmosphere. Distinct intimate street perspective from aerial destination cover. No conical spire or Eiffel-type shape, no invented colonial plaza, no exact tour operator or promised route. No street signs or text.",
+    "input_images": [],
+    "source_ids": [
+      "coltejer",
+      "centro"
+    ],
+    "variants": [
+      {
+        "path": "web/paseo-centro-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 45414,
+        "sha256": "b9474440307f026bbc95ac5c84a60223964228b71ef648e78c975a51ba1679a7"
+      },
+      {
+        "path": "web/paseo-centro-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 111646,
+        "sha256": "9e945f903998286de429523cdf860a626e85777bab51258438d7f381632380e8"
+      }
+    ],
+    "visual_qa": "inspeccionada_individualmente_propuesta_editorial",
+    "human_approved": false,
+    "publication_approved": false,
+    "interpretation": "Composición ilustrada; geometría, personas, entorno y detalles interpretativos. No acredita estado actual ni servicio contratado."
+  },
+  {
+    "id": "laureles-cafes",
+    "role": "experience",
+    "style": "EL-SEMI-REALISTA-1",
+    "origin": "ai_generated",
+    "master": "maestros/laureles-cafes-v1.png",
+    "master_sha256": "a51352300c67aba93a58dd36ee01032dbe33bcb64ad0bc87e511b86390c0fa7f",
+    "prompt": "Use case: stylized-concept. Create an original independent composition from documented place features; no photographic input. EL-SEMI-REALISTA-1: sophisticated adult SEMI-REALISTIC EDITORIAL PAINTING, visibly hand-painted subtle gouache/ink brushwork, believable architecture and materials, organic trees and atmospheric depth, natural colours, expressive fully drawn anatomically coherent people only when specified. Not photograph, not flat geometric vector, not childish, no yellow wash. Landscape3:2; main subject dominant and complete inside safe margins for small compact cards. No lettering, title, logo, watermark, frame, invented signage or brand endorsement. Editorial independent stroll along Avenida Jardín in Laureles,Medellín: human-height view of a leafy contemporary neighbourhood corridor with mature organic street trees, low-rise façades, modest café terraces and two complete adult pedestrians. No named or invented business branding, no unverified mountain panorama or colonial tourist village. This is a contextual interpretation of the documented café/restaurant corridor, not an exact business/location survey or current opening claim. Natural afternoon daylight.",
+    "input_images": [],
+    "source_ids": [
+      "jardin-laureles"
+    ],
+    "variants": [
+      {
+        "path": "web/laureles-cafes-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 56090,
+        "sha256": "69a9bfbb7fbd8f3598f8633ec7ad723cc21814958d5a75e479d994e0e1c4c972"
+      },
+      {
+        "path": "web/laureles-cafes-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 135770,
+        "sha256": "5a98a93f995a7c289ac202d6dd5fef851786fcf4eccb2fa6129d93f62953a010"
+      }
+    ],
+    "visual_qa": "inspeccionada_individualmente_propuesta_editorial",
+    "human_approved": false,
+    "publication_approved": false,
+    "interpretation": "Composición ilustrada; geometría, personas, entorno y detalles interpretativos. No acredita estado actual ni servicio contratado."
+  },
+  {
+    "id": "epm-visita",
+    "role": "experience",
+    "style": "EL-SEMI-REALISTA-1",
+    "origin": "ai_generated",
+    "master": "maestros/epm-visita-v1.png",
+    "master_sha256": "27e9c25197567c575a6f14e69df764cf4f3f40cbe4e55a056bbf435c539c93d9",
+    "prompt": "Use case: stylized-concept. Create an original independent composition from documented place features; no photographic input. EL-SEMI-REALISTA-1: sophisticated adult SEMI-REALISTIC EDITORIAL PAINTING, visibly hand-painted subtle gouache/ink brushwork, believable architecture and materials, organic trees and atmospheric depth, natural colours, expressive fully drawn anatomically coherent people only when specified. Not photograph, not flat geometric vector, not childish, no yellow wash. Landscape3:2; main subject dominant and complete inside safe margins for small compact cards. No lettering, title, logo, watermark, frame, invented signage or brand endorsement. Editorial illustration of the documented historical EPM guided-visit programme in Medellín: small complete adult group listening to one unbranded facilitator in the public forecourt near Edificio EPM and Parque Pies Descalzos. Building remains restrained modern glass/stone background and bamboo/public landscaping supports local context; focus human learning interaction, not invented detailed interior. No employee identity, logo, tickets or promise of current service. Historical-programme contextual illustration only, no claim of present availability. Different composition from empty sensory-park place-card.",
+    "input_images": [],
+    "source_ids": [
+      "epm"
+    ],
+    "variants": [
+      {
+        "path": "web/epm-visita-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 41528,
+        "sha256": "0cae19e3eab86d110f36bf1c650ab8f0e736bb3af5520a201256f88afc0762eb"
+      },
+      {
+        "path": "web/epm-visita-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 98444,
+        "sha256": "025d88fcd50b699a9ff0212b43f72a91d385a7720782ad6377da527d7403f3c3"
+      }
+    ],
+    "visual_qa": "inspeccionada_individualmente_propuesta_editorial",
+    "human_approved": false,
+    "publication_approved": false,
+    "interpretation": "Composición ilustrada; geometría, personas, entorno y detalles interpretativos. No acredita estado actual ni servicio contratado."
+  },
+  {
+    "id": "city-comuna13",
+    "role": "experience",
+    "style": "EL-SEMI-REALISTA-1",
+    "origin": "ai_generated",
+    "master": "maestros/city-comuna13-v1.png",
+    "master_sha256": "dd1a45543b7959e0e0c69736d9b20053290301b81c7d962fccb3c86c0d24be8b",
+    "prompt": "Use case: stylized-concept. Create an original independent composition from documented place features; no photographic input. EL-SEMI-REALISTA-1: sophisticated adult SEMI-REALISTIC EDITORIAL PAINTING, visibly hand-painted subtle gouache/ink brushwork, believable architecture and materials, organic trees and atmospheric depth, natural colours, expressive fully drawn anatomically coherent people only when specified. Not photograph, not flat geometric vector, not childish, no yellow wash. Landscape3:2; main subject dominant and complete inside safe margins for small compact cards. No lettering, title, logo, watermark, frame, invented signage or brand endorsement. Editorial contextual illustration for a documented city/Comuna13 guided-tour offer: small complete adult group listening respectfully to an unbranded local narrator on a pedestrian hillside route, orange-red escalator canopy clearly visible behind with brick-neighbourhood context and ORIGINAL abstract colourful mural accents. Human interaction dominates, distinct from infrastructure place-card. No identifiable real person, no operator uniform or branding, no actual copyrighted mural/portrait, no bus itinerary invented, no claim of availability today.",
+    "input_images": [],
+    "source_ids": [
+      "operador-city",
+      "memoria"
+    ],
+    "variants": [
+      {
+        "path": "web/city-comuna13-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 42552,
+        "sha256": "0834f3048cff7209f635186cd88097cd1e057217bfad36ba52a3844a45592e3a"
+      },
+      {
+        "path": "web/city-comuna13-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 95852,
+        "sha256": "6c48c2524308cf690dc74feac53199dc3237808d5d7e5df27ff08930a070dd41"
+      }
+    ],
+    "visual_qa": "inspeccionada_individualmente_propuesta_editorial",
+    "human_approved": false,
+    "publication_approved": false,
+    "interpretation": "Composición ilustrada; geometría, personas, entorno y detalles interpretativos. No acredita estado actual ni servicio contratado."
+  },
+  {
+    "id": "metro-metrocable-recorrido",
+    "role": "experience",
+    "style": "EL-SEMI-REALISTA-1",
+    "origin": "ai_generated",
+    "master": "maestros/metro-metrocable-recorrido-v1.png",
+    "master_sha256": "d8dd1d4439725bd4f5ba49ca0d2ee4a7833c3146b6679ec698b10d57a708d47c",
+    "prompt": "Use case: stylized-concept. Create an original independent composition from documented place features; no photographic input. EL-SEMI-REALISTA-1: sophisticated adult SEMI-REALISTIC EDITORIAL PAINTING, visibly hand-painted subtle gouache/ink brushwork, believable architecture and materials, organic trees and atmospheric depth, natural colours, expressive fully drawn anatomically coherent people only when specified. Not photograph, not flat geometric vector, not childish, no yellow wash. Landscape3:2; main subject dominant and complete inside safe margins for small compact cards. No lettering, title, logo, watermark, frame, invented signage or brand endorsement. Autonomous mobility experience on Medellín Metro: human-height oblique view of a clearly recognizable white modern electric train with dark curved cab front and green/yellow side bands on elevated tracks through central Medellín. Distinct perspective, no copied photograph; complete train nose foreground and surrounding city/green Aburrá hills. Modest full adult passengers on safe station-side platform secondary, no one on tracks. No train destination text, logos or operator tour branding. Train is Medellín system, not another metro, not LineL cabin; mobility experience not ninth physical attraction.",
+    "input_images": [],
+    "source_ids": [
+      "metro-j",
+      "metro-l",
+      "metro-historia"
+    ],
+    "variants": [
+      {
+        "path": "web/metro-metrocable-recorrido-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 41468,
+        "sha256": "ae7b90d5ce542c24966c2657388b606a265b34d0ef207f7aa0f7378008b38a14"
+      },
+      {
+        "path": "web/metro-metrocable-recorrido-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 101860,
+        "sha256": "f4351de04f4eeb34e223c55fd92c2b677b5ef32b6a4fd5cf3c81a4e840671309"
+      }
+    ],
+    "visual_qa": "inspeccionada_individualmente_propuesta_editorial",
+    "human_approved": false,
+    "publication_approved": false,
+    "interpretation": "Composición ilustrada; geometría, personas, entorno y detalles interpretativos. No acredita estado actual ni servicio contratado."
+  }
+]

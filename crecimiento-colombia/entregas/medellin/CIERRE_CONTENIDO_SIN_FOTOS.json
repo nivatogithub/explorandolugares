@@ -1,0 +1,309 @@
+{
+  "destination_id": "CO-05-medellin",
+  "date": "2026-10-17",
+  "status": "cierre_de_subtarea_textual_para_revision_no_destino_completo",
+  "content_review": {
+    "three_languages_checked": true,
+    "source_basis": "Fuentes ya consultadas en entrega. No nuevas búsquedas/descargas fotográficas.",
+    "scope": "Corrección semántica y taxonomía, no traducción humana aprobada ni certificado de actualidad.",
+    "changes": [
+      "Comuna13 sin repetición; circuito turístico no representa toda San Javier.",
+      "Etiquetas de enlaces oficiales traducidas EN/PT.",
+      "Descripción del recinto separada de visita/tour; relaciones por place_ids.",
+      "Metro/Metrocable como experiencia de movilidad, sin agregar lugar al Top8.",
+      "EPM histórico2024 y CityTour sin prometer salida, RNT o disponibilidad.",
+      "Agenda sin eventos fechados verificados; fuente antigua no convertida en evento actual.",
+      "Fotografías conservadas como historial; propietario elige URLs; controles de foto desactivados."
+    ]
+  },
+  "counts": {
+    "languages": 3,
+    "physical_place_drafts": 28,
+    "main_physical_places": 8,
+    "main_ids": [
+      "parque-explora",
+      "pueblito-paisa",
+      "jardin-botanico",
+      "comuna13",
+      "museo-antioquia",
+      "arvi",
+      "catedral-metropolitana",
+      "pies-descalzos"
+    ],
+    "all_experience_records": 11,
+    "visible_experiences": 9,
+    "autonomous_experiences": 7,
+    "documented_operator_experiences": 2,
+    "hidden_external_candidates": 2,
+    "current_verified_events": 0,
+    "directory_records": 10,
+    "commercial_businesses": 6,
+    "cultural_institutions": 4,
+    "source_records": 34,
+    "visible_experiences_with_venue_reference": 5,
+    "visible_experiences_without_reference": 4,
+    "experience_reference_duplicate_with_main": 3,
+    "contextual_venue_references_not_duplicate_with_main": 2,
+    "approved_experience_photos": 0,
+    "approved_new_content_components": 0,
+    "published_new_components": 0,
+    "missing_language_blocks": 0
+  },
+  "roles": {
+    "top8": "lugares_fisicos_vigentes_8_sin_reordenar",
+    "metro": "mobility_experience",
+    "experiences": "acciones_relacionadas_con_sitio_no_sumar_cobertura_lugar",
+    "events": "fecha_y_oferta_verificadas_no_hay_registros_actuales"
+  },
+  "priority": {
+    "audit_original_preserved": "AUDITORIA_TOP8.json/.md",
+    "latest_role_rule": "La propuesta histórica que ponía Metro en puesto3 no puede aplicarse como8lugares físicos: contiene7lugares+1experiencia. Debe reabrirse corte antes de cambiar selección.",
+    "unresolved": [
+      "Poblado/Lleras/Provenza vsArví sin datos homogéneos de demanda.",
+      "Separar Metro como experiencia exige reevaluar el candidato físico restante; no rellenar por variedad ni por fotos."
+    ],
+    "ranking_measured": false,
+    "selection_changed": false
+  },
+  "experience_photo_qa": [
+    {
+      "id": "museo-antioquia-visita",
+      "role": "experience",
+      "place_ids": [
+        "museo-antioquia"
+      ],
+      "has_venue_reference": true,
+      "image_file": "images/museo-2020.webp",
+      "duplicate_main_place": "museo-antioquia",
+      "image_is_approved": false,
+      "missing": "requiere_URL_propietario_o_revision_de_uso_y_referencia_propia; no buscar automáticamente",
+      "availability_confirmed": false
+    },
+    {
+      "id": "jardin-botanico-visita",
+      "role": "experience",
+      "place_ids": [
+        "jardin-botanico"
+      ],
+      "has_venue_reference": true,
+      "image_file": "images/medellin-3.webp",
+      "duplicate_main_place": "jardin-botanico",
+      "image_is_approved": false,
+      "missing": "requiere_URL_propietario_o_revision_de_uso_y_referencia_propia; no buscar automáticamente",
+      "availability_confirmed": false
+    },
+    {
+      "id": "parque-explora-visita",
+      "role": "experience",
+      "place_ids": [
+        "parque-explora"
+      ],
+      "has_venue_reference": true,
+      "image_file": "images/explora-2012.webp",
+      "duplicate_main_place": "parque-explora",
+      "image_is_approved": false,
+      "missing": "requiere_URL_propietario_o_revision_de_uso_y_referencia_propia; no buscar automáticamente",
+      "availability_confirmed": false
+    },
+    {
+      "id": "mamm-visita",
+      "role": "experience",
+      "place_ids": [
+        "mamm"
+      ],
+      "has_venue_reference": true,
+      "image_file": "images/mamm-fachada-2016.webp",
+      "duplicate_main_place": null,
+      "image_is_approved": false,
+      "missing": "requiere_URL_propietario_o_revision_de_uso_y_referencia_propia; no buscar automáticamente",
+      "availability_confirmed": false
+    },
+    {
+      "id": "paseo-centro",
+      "role": "experience",
+      "place_ids": [
+        "coltejer",
+        "parque-berrio",
+        "junin",
+        "candelaria",
+        "catedral-metropolitana"
+      ],
+      "has_venue_reference": true,
+      "image_file": "images/coltejer-2013.webp",
+      "duplicate_main_place": null,
+      "image_is_approved": false,
+      "missing": "requiere_URL_propietario_o_revision_de_uso_y_referencia_propia; no buscar automáticamente",
+      "availability_confirmed": false
+    },
+    {
+      "id": "laureles-cafes",
+      "role": "experience",
+      "place_ids": [
+        "avenida-jardin"
+      ],
+      "has_venue_reference": false,
+      "image_file": null,
+      "duplicate_main_place": null,
+      "image_is_approved": false,
+      "missing": "requiere_URL_propietario_o_revision_de_uso_y_referencia_propia; no buscar automáticamente",
+      "availability_confirmed": false
+    },
+    {
+      "id": "epm-visita",
+      "role": "experience",
+      "place_ids": [
+        "edificio-epm"
+      ],
+      "has_venue_reference": false,
+      "image_file": null,
+      "duplicate_main_place": null,
+      "image_is_approved": false,
+      "missing": "requiere_URL_propietario_o_revision_de_uso_y_referencia_propia; no buscar automáticamente",
+      "availability_confirmed": false
+    },
+    {
+      "id": "city-comuna13",
+      "role": "experience",
+      "place_ids": [
+        "comuna13",
+        "plaza-botero",
+        "pueblito-paisa",
+        "pies-descalzos"
+      ],
+      "has_venue_reference": false,
+      "image_file": null,
+      "duplicate_main_place": null,
+      "image_is_approved": false,
+      "missing": "requiere_URL_propietario_o_revision_de_uso_y_referencia_propia; no buscar automáticamente",
+      "availability_confirmed": false
+    },
+    {
+      "id": "metro-metrocable-recorrido",
+      "role": "mobility_experience",
+      "place_ids": [],
+      "has_venue_reference": false,
+      "image_file": null,
+      "duplicate_main_place": null,
+      "image_is_approved": false,
+      "missing": "requiere_URL_propietario_o_revision_de_uso_y_referencia_propia; no buscar automáticamente",
+      "availability_confirmed": false
+    }
+  ],
+  "remaining": {
+    "owner_selected_urls": "pendientes; búsqueda automática detenida",
+    "experience_specific_imagery": "4 sin referencia + 3 repetidas del Top8 + 2 contextuales que requieren revisión; 0 aprobadas",
+    "business_validity": "Presencia web revisada el 17/10/2026; no cupos ni RNT verificados.",
+    "operator_validity": "EPM programa histórico; CityTour oferta web, RNT213192 declarado no registro confirmado.",
+    "exact_locations": "Accesos y coordenadas definitivos pendientes para28recintos/distritos; describir ubicaciones no equivale a coordenada validada.",
+    "human_review": "Textos/idiomas, roles, corte Top8, usos de imágenes y posterior salida IA por componente.",
+    "browser_qa": "IAB no disponible en este worker; coordinación verificará vista local. QA estático realizado."
+  },
+  "integration_instructions": [
+    "Leer contenido.json, experiencias.json, roles-contenido.json y eventos.json como borradores. No importar automáticamente.",
+    "Mantener los8ID actuales de principales-v3.json y sus fotos hasta decisión humana sobre selección; no aplicar auditoría histórica sin corregir rol de Metro.",
+    "Integrar movilidad/experiencia Metro en sección propia, sin crear novena tarjeta ni registro físico para contar cobertura.",
+    "Usar place_ids para enlazar experiencia y recinto. Una visita no suma otro destino/lugar; eventos requieren fecha concreta.",
+    "No reutilizar foto de lugar como imagen propia de experiencia sin decisión específica. Mantener referencias históricas; propietario proporcionará URLs.",
+    "Actualizar paquete futuro desde texto corregido solo al resolver revisión e integración; ZIPv3 conserva texto anterior y fotos rechazadas, no es cierre final.",
+    "No modificar aprobaciones; todo texto cambiado requiere revisión de su nuevo hash. No generar IA, importar BD/preprod ni publicar."
+  ],
+  "protected_files": {
+    "seleccion-principal-v3.json": "862d38c267f2eae5f623bd5878d0425d1d1a0bc4429debb7eb287106fb29040d",
+    "revision-componentes.json": "e6d6d907185aa8befa60a227fcab04625cc9eeb472050aa78ffbd48a96e135be",
+    "AUDITORIA_TOP8.json": "03efa49ac8d92336493dc9827ac349f98f839bd07ab3743f9863d087d3e54a7d",
+    "AUDITORIA_TOP8.md": "5429aebf0c0f1fbcac33206bdc74fd0afd5d0ddaa10f9be0fc5549b8234d023d",
+    "imagenes.json": "1124a600f2f27f1040cd1f884da017e6fa08511fec18af5d38446b8c9fa7cb13",
+    "referencias-propuestas-v4.json": "5750f4914eb3ac4d1138bde234ec2e88f7b99a308cd951cb80b8d8434b3cf80c",
+    "inspeccion-visual-v4.json": "cf841b8496d5936ac38dd27f40a9df07cff8805c62840069690cf5e1d2b2b9cf",
+    "paquete-preprod.json": "bbefd5984fedee6531e2950a2635d551e9a9e57751d1c10d3b25f6a439f16249",
+    "paquete-preprod.zip": "616de788ce8dcac3dcab8ac0f44212ce42f4e2f596a03a64c0d2690323daf8fb",
+    "portadas-propuestas.json": "c7bea9a7d2d438ab2c8dc226cbb98246f1443e3be8789a5a2bff72d535b737f2"
+  },
+  "protected_image_files": {
+    "images/arvi-estacion-2011.webp": "c6c28613a3f965911c38cf9923bb71dc81df3bda8e5b39f9438d3f5abf514748",
+    "images/plaza-palacio-2017.webp": "767c549b16ffed10577bd9a18e263470eab661ee8af88b313111e548fe7d3583",
+    "images/arvi-2012.webp": "f87de9210e11088764a463f4fd839e147d9e22c438c2d959c5d3fe5b65c6e985",
+    "images/coltejer-2006.webp": "e373f13ff625fcbd1fbb48ca3390da670394adf5382869a678e42cfbd5153282",
+    "images/plaza-botero-2023.webp": "e33e8c33a0bc4ebaa89c85c892fbeaeece422801d97ce74d803b6af9b940638c",
+    "images/medellin-1.webp": "61058006e55d99b4fa4b6e888a17c65451732a1c775ed56257d66ddfb085af64",
+    "images/panorama-2005.webp": "f415408fdea9826e3c13a9f1a1731f86933ad376461dbbc2b81ae8260f8dcc62",
+    "images/coltejer-2007.webp": "20b4f6bd65a132a0ead500fca42fcc04fafef31ec0a7d861bfff13560af469e9",
+    "images/pueblito-2012.webp": "54fef763ac87ba615fa8d43f01a078620e35a9ffed994c71b5e5422e50947ce3",
+    "images/pies-2006.webp": "04f50125f287a07d57fafa006d9b9cf9a95a289facc31a3e6dc32d9f05ba6beb",
+    "images/catedral-2012.webp": "8d1284ee93f70fdaacb5aa9a278a19b1fa9af549f960baee4dd3e66d91a03d9b",
+    "images/comuna13-2023.webp": "e0e1c4ddcd22a0001ab8a9470e9a1a838222b51ade55ffcdbe933e1af5db503a",
+    "images/coltejer-2018.webp": "01b36938cccda61317d984c3135fb1f89905ff8757be3c1210338d4b59369b22",
+    "images/metro-caf-2026.webp": "0ed02fde977955cd3e64f762ff926178b4c4d7db8372da8f006dde7c69433079",
+    "images/medellin-4.webp": "e213ba8054452b5798de53f75266c146e6857e95e030e3f3a0f395491d8574b2",
+    "images/museo-2020.webp": "71e85ee4c7ff4529962da2a4e30bc76eb170f7252265f26665508be283061d83",
+    "images/arvi-cable-2021.webp": "0ee1d07c82ca0f3f7a39e12259c590b8da5320defe57d36021625018a81c2d95",
+    "images/coltejer-focus-2007.webp": "71711a5368cdb24149fef044dc9973c9876d8a2b188a57d798dece6f3206fc49",
+    "images/comuna-escaleras-2019.webp": "12f74185ab5b91dacc31381b764d91588f1c66f0a627f53a900e4db513afe4df",
+    "images/explora-2012.webp": "43d21960ec7041a80144f688ec21ca4d0e9f6f942511ec142a333bf31bf2083e",
+    "images/mamm-fachada-2016.webp": "f4f988f54dc36673e0b3f67d88870801ae81cc699dd6c0bab1c02ee3a17f62a3",
+    "images/metro-santo-domingo-2020.webp": "1adeea17e2d64275561dc8ec93daef8ff356cfccf548e3374e8fcfd136d9860c",
+    "images/comuna-graffitour-2023.webp": "589e8f16b1907dcb5da42975c87bee1cd38f0ba004de623d25363947fd37605e",
+    "images/medellin-3.webp": "61fcf784da4738105b0ad673775fb22f60c1cc8b3fe1e73a25e2d0902787a410",
+    "images/coltejer-2013.webp": "bde71f8a5896f6c0dad232e62b25232322ab55066b9585c452290cfbf2321de6",
+    "originales/poblado.jpg": "8ee8b63dd0e890828f5e1a7d6d1b53c8bcfee828fe376e25f2b519daa5a9adfc",
+    "originales/explora-2012.jpg": "c490fc5b50f8ce704b7d9a3a5c51948bc0da544455ccdf990e0155852ca85e3a",
+    "originales/mamm-fachada-2016.jpg": "3b328714db60a7ebe4218ca86ee4d29cdd89eeeb2a5df7cd0cbe747e6ae95873",
+    "originales/coltejer-2006.jpg": "04f85b3afefb05e2c82c03395f3835cdaf1e0121af32765a332bcedd615795c8",
+    "originales/coltejer-2007.jpg": "d3bc9cd4c9b2ace4095cdc5244587f5752f414bb08fc5c52ab30a85c4ba6891c",
+    "originales/coltejer-2013.jpg": "b0ce2860f85a72d67ac6f8e6f5362194bf3c80a2dc8d26fa8b13f4d59a099c3f",
+    "originales/metro-santo-domingo-2020.jpg": "3ff8ef19ed5fafc36c9c5b326064db45c1e9be99a3c833399b291e5d889d4465",
+    "originales/metro-caf-2026.jpg": "cb9c2ba9fbc66f24c6f5d09d427981a51b6e555d7f2638e9abc12baa8ae75ab9",
+    "originales/museo-2010.jpg": "00b2eac02ab119fefbe4eb76fd65ee01b087758305481ffb31cee7e318a6ccdf",
+    "originales/comuna-graffitour-2023.jpg": "4dc00176d37641f91fb2f9ab1974681752fb16bf26343f432bb1133a86bfcebf",
+    "originales/catedral-2012.jpg": "dc8b4ee0ca7ea26b8975e2cd46bef224efea0444b0a43d07775d8aaa8a5e1256",
+    "originales/skyline-2011.jpg": "5824cb9bceb9614e9d8d72a1d27071cf8f96a3dc07f0b7fb0aa623f3d99fc9a6",
+    "originales/arvi-cable-2021.jpg": "d691258caad0a02241f4ecde3fee16245ed835cd3cdad04a5b88d37be3e310ff",
+    "originales/museo-2020.jpg": "1ce02acf9fc3f0bff1b0dfacc0cdb6c2af36fa91e0d74297b14a75fa703e6de8",
+    "originales/coltejer-2018.jpg": "6116b036dbc2cce11ff659490cf0ca62e60564a7155921ab3711d9648ca4e7bc",
+    "originales/plaza-palacio-2017.jpg": "11548e2707b7f9eba188df9e839047eb91ea047ecd30e3ef96ca24d42c647aec",
+    "originales/comuna13-2023.png": "b552d876c6c34e7e37b6388af05e8a9094b97b369694be5825f1eac8757c972f",
+    "originales/coltejer-focus-2007.jpg": "f502f647f5d493d5508b935abc68daf2e729bad6036634bff251ade37784be14",
+    "originales/arvi-estacion-2011.jpg": "79994230c67d50105f858f61e5ea5fb973f16f489b1deb463081196b6e2bde79",
+    "originales/picacho.jpg": "1b738aa00bb7e19153eda602f7b1e60fc07dcbb9db5ddd44f7c6123716c8aebc",
+    "originales/orquideorama.jpg": "b7d19acff87ea655e1440b019b1c7798251f21773b42e895a271e1eac29faa1a",
+    "originales/plaza-botero-2023.jpg": "4492113a2f601af9694bbd9c556e4137d286fa66c454f31a1f4e489fa4311622",
+    "originales/arvi-2012.jpg": "fc340e3fd64eff9ed44b7ea6449be564eb93e90bbf078c4a9d3c67c714f6b951",
+    "originales/pueblito-2012.jpg": "9cc0c436febc199e30f27947e4101b430c3ebc867c4b55572fc97aec678eb98d",
+    "originales/pies-2006.jpg": "a31c0cac2942604405d33fa27c2d148d18ce1cecbb55dcec71cbb307a506c0b4",
+    "originales/panorama-2005.jpg": "d0d3fbc152aedd2e72d18fa247521b2677657eb3bf300cb5bd4af8703efd610d",
+    "originales/comuna-escaleras-2019.jpg": "65ee9113efc19f04efc6b4bb8ce4da3a4b6a47e782460e446b53dde45b841e54"
+  },
+  "authorized_text_changes": {
+    "contenido.json": {
+      "before_sha256": "ad39ea4c692574c42202a6cff728ce29348e62619d37b9956df8e260ac14ce70",
+      "after_sha256": "63d24d1605cc5ff927921fdac81b3e3de5bc9c09b8da6667d1a7ec486a184fec",
+      "scope": "Corrección textual/roles autorizada en este turno; no cambia aprobación, imagen, selección física ni ZIP."
+    },
+    "principales-v3.json": {
+      "before_sha256": "47fbe93c42dc076b601d5a6ceec51a456182280c96a4aa76967707506621ecf0",
+      "after_sha256": "48529d7532ed8b8f329b4edce7930b2667c65d3317b9f2a4827d0c8051bbe383",
+      "scope": "Corrección textual/roles autorizada en este turno; no cambia aprobación, imagen, selección física ni ZIP."
+    },
+    "preview.html": {
+      "before_sha256": "29cd92bf6fa194a9b0d03a4da0061bce258f8d6bab6d00df6248b34e1e828144",
+      "after_sha256": "cd190247820e77d257660226645262c7294b895a661bbfbcc422b0b8b9fbb77c",
+      "scope": "Corrección textual/roles autorizada en este turno; no cambia aprobación, imagen, selección física ni ZIP."
+    }
+  },
+  "photography_automation": {
+    "status": "detenida_por_propietario",
+    "unexecuted_artifacts": [
+      "descargar-arvi-v7.py",
+      "consultar-arvi-fuente-v7.py",
+      "descargas-arvi-v7.json"
+    ],
+    "scripts_guarded_inactive": true,
+    "new_photos_downloaded_this_turn": 0,
+    "photos_changed_this_turn": 0
+  },
+  "database_changed": false,
+  "preproduction_changed": false,
+  "production_changed": false,
+  "ai_generated": false,
+  "ledger_changed": false
+}

@@ -1,0 +1,89 @@
+{
+  "scope": "private_preprod_only",
+  "production_changed": false,
+  "owner_approval_pending": true,
+  "destinations": {
+    "bogota": {
+      "status": "draft",
+      "places": 8,
+      "experiences": 15,
+      "illustrations": 24,
+      "db_import": {
+        "destination": "bogota",
+        "content_sha256": "385cf2354ba54e128d96177ecb7261191ceccef9bda3514247efb8ae6ebf2f59",
+        "loaded_at": "2026-10-18T02:24:00+00:00",
+        "environment": "local_preprod_only",
+        "status": "draft",
+        "attractions": 8,
+        "experiences": 15,
+        "uploaded_images": 0,
+        "production_changed": false,
+        "url": "http://127.0.0.1:8088/destinos/bogota/?preview=1"
+      },
+      "broken_images_observed": 0,
+      "collapsed_content_sections_observed": 0
+    },
+    "santa-marta": {
+      "status": "draft",
+      "places": 8,
+      "experiences": 9,
+      "illustrations": 18,
+      "db_import": {
+        "destination": "santa-marta",
+        "content_sha256": "1080a0fb961f2e9217ac8c352e1dce32dc854b557cae7a6582515c64b7b0f289",
+        "loaded_at": "2026-10-18T02:28:58+00:00",
+        "environment": "local_preprod_only",
+        "status": "draft",
+        "attractions": 8,
+        "experiences": 9,
+        "uploaded_images": 0,
+        "production_changed": false,
+        "url": "http://127.0.0.1:8088/destinos/santa-marta/?preview=1"
+      },
+      "broken_images_observed": 0,
+      "collapsed_content_sections_observed": 0
+    },
+    "medellin": {
+      "status": "draft",
+      "places": 8,
+      "experiences": 9,
+      "illustrations": 18,
+      "db_import": {
+        "destination": "medellin",
+        "content_sha256": "d64281f6068024913cfcf02437fa071f728dfb94b0883ac645feb243b86088af",
+        "loaded_at": "2026-10-18T02:41:06+00:00",
+        "environment": "local_preprod_only",
+        "status": "draft",
+        "attractions": 8,
+        "experiences": 9,
+        "uploaded_images": 0,
+        "production_changed": false,
+        "url": "http://127.0.0.1:8088/destinos/medellin/?preview=1"
+      },
+      "broken_images_observed": 0,
+      "collapsed_content_sections_observed": 0
+    }
+  },
+  "notes": [
+    "Previews require an authenticated admin session; authentication remains intact.",
+    "Preview language links preserve preview=1.",
+    "Bogotá original approved Tropicarium bytes preserved.",
+    "Business directories are empty in these local drafts; researched businesses were not invented/imported by this style task.",
+    "PNG masters outside web hosting; server preview media map avoids original photo requests."
+  ],
+  "languages_checked_in_browser": [
+    "es",
+    "en",
+    "pt-BR"
+  ],
+  "santa_marta_load_more_checked": {
+    "initial_visible_at_tablet": 4,
+    "after_one_click": 8,
+    "total": 9
+  },
+  "branches": {
+    "bogota": "lugar/CO/bogota-dc/bogota",
+    "medellin": "lugar/CO/antioquia/medellin",
+    "santa-marta": "lugar/CO/magdalena/santa-marta"
+  }
+}

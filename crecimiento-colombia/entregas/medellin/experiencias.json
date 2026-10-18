@@ -1,0 +1,432 @@
+[
+  {
+    "id": "museo-antioquia-visita",
+    "source_ids": [
+      "antioquia"
+    ],
+    "operator": "Museo de Antioquia",
+    "booking_url": "https://museodeantioquia.co/",
+    "status": "borrador",
+    "translations": {
+      "es": {
+        "name": "Visita al Museo de Antioquia",
+        "description": "Arte e historia regional con salas dedicadas a Fernando Botero y Débora Arango."
+      },
+      "en": {
+        "name": "Visit to Museo de Antioquia",
+        "description": "Art and regional history, including rooms dedicated to Fernando Botero and Débora Arango."
+      },
+      "pt-BR": {
+        "name": "Visita ao Museo de Antioquia",
+        "description": "Arte e história regional, com salas dedicadas a Fernando Botero e Débora Arango."
+      }
+    },
+    "kind": "propuesta_editorial_autonoma",
+    "availability": "no_garantizada",
+    "relationship": "ninguna",
+    "photo_status": "referencia_real_lugar_actividad_editorial_sin_aprobar",
+    "review_status": "pendiente",
+    "image_file": "images/museo-2020.webp",
+    "image_scope": "Fotografía del recinto para visita autónoma editorial; no acredita guía, taller, disponibilidad o servicio de operador.",
+    "source_checked_at": "2026-10-17",
+    "validity": "recinto_o_corredor_documentado_no_programacion_fijada",
+    "place_ids": [
+      "museo-antioquia"
+    ],
+    "editorial_role": "experience",
+    "coverage_counting": "no_suma_otro_lugar",
+    "event_id": null,
+    "service_claim": "propuesta_autonoma_no_tour_contratado",
+    "venue_operator_role": "entidad_del_recinto_no_alianza_ni_guia_confirmada",
+    "image_assignment_qa": "referencia_de_recinto_historica_no_prueba_de_servicio_ni_imagen_final_actividad"
+  },
+  {
+    "id": "jardin-botanico-visita",
+    "source_ids": [
+      "botanico"
+    ],
+    "operator": "Jardín Botánico Joaquín Antonio Uribe",
+    "booking_url": "https://www.botanicomedellin.org/",
+    "status": "borrador",
+    "translations": {
+      "es": {
+        "name": "Recorrido por el Jardín Botánico",
+        "description": "Colecciones vivas y actividades de educación ambiental; consulta la programación oficial."
+      },
+      "en": {
+        "name": "Walk through the Botanical Garden",
+        "description": "Living collections and environmental education; check the official programme."
+      },
+      "pt-BR": {
+        "name": "Passeio pelo Jardim Botânico",
+        "description": "Coleções vivas e educação ambiental; consulte a programação oficial."
+      }
+    },
+    "kind": "propuesta_editorial_autonoma",
+    "availability": "no_garantizada",
+    "relationship": "ninguna",
+    "photo_status": "referencia_real_lugar_actividad_editorial_sin_aprobar",
+    "review_status": "pendiente",
+    "image_file": "images/medellin-3.webp",
+    "image_scope": "Orquideorama visitable; no demuestra guía, taller, acceso vigente o servicio de operador.",
+    "source_checked_at": "2026-10-17",
+    "validity": "recinto_o_corredor_documentado_no_programacion_fijada",
+    "place_ids": [
+      "jardin-botanico"
+    ],
+    "editorial_role": "experience",
+    "coverage_counting": "no_suma_otro_lugar",
+    "event_id": null,
+    "service_claim": "propuesta_autonoma_no_tour_contratado",
+    "venue_operator_role": "entidad_del_recinto_no_alianza_ni_guia_confirmada",
+    "image_assignment_qa": "referencia_de_recinto_historica_no_prueba_de_servicio_ni_imagen_final_actividad"
+  },
+  {
+    "id": "parque-explora-visita",
+    "source_ids": [
+      "explora"
+    ],
+    "operator": "Parque Explora",
+    "booking_url": "https://www.parqueexplora.org/en",
+    "status": "borrador",
+    "translations": {
+      "es": {
+        "name": "Explorar la ciencia en Parque Explora",
+        "description": "Museo de ciencias con acuario y propuesta de aprendizaje interactivo."
+      },
+      "en": {
+        "name": "Explore science at Parque Explora",
+        "description": "Science museum with an aquarium and interactive learning."
+      },
+      "pt-BR": {
+        "name": "Explorar a ciência no Parque Explora",
+        "description": "Museu de ciências com aquário e aprendizagem interativa."
+      }
+    },
+    "kind": "propuesta_editorial_autonoma",
+    "availability": "no_garantizada",
+    "relationship": "ninguna",
+    "photo_status": "referencia_real_lugar_actividad_editorial_sin_aprobar",
+    "review_status": "pendiente",
+    "image_file": "images/explora-2012.webp",
+    "image_scope": "Fotografía del recinto para visita autónoma editorial; no acredita guía, taller, disponibilidad o servicio de operador.",
+    "source_checked_at": "2026-10-17",
+    "validity": "recinto_o_corredor_documentado_no_programacion_fijada",
+    "place_ids": [
+      "parque-explora"
+    ],
+    "editorial_role": "experience",
+    "coverage_counting": "no_suma_otro_lugar",
+    "event_id": null,
+    "service_claim": "propuesta_autonoma_no_tour_contratado",
+    "venue_operator_role": "entidad_del_recinto_no_alianza_ni_guia_confirmada",
+    "image_assignment_qa": "referencia_de_recinto_historica_no_prueba_de_servicio_ni_imagen_final_actividad"
+  },
+  {
+    "id": "mamm-visita",
+    "source_ids": [
+      "mamm"
+    ],
+    "operator": "Museo de Arte Moderno de Medellín",
+    "booking_url": "https://www.elmamm.org/",
+    "status": "borrador",
+    "translations": {
+      "es": {
+        "name": "Visita al MAMM",
+        "description": "Arte moderno y programación cultural; revisa las exposiciones disponibles antes de ir."
+      },
+      "en": {
+        "name": "Visit to MAMM",
+        "description": "Modern art and cultural programmes; check available exhibitions before visiting."
+      },
+      "pt-BR": {
+        "name": "Visita ao MAMM",
+        "description": "Arte moderna e programação cultural; confira as exposições antes da visita."
+      }
+    },
+    "kind": "propuesta_editorial_autonoma",
+    "availability": "no_garantizada",
+    "relationship": "ninguna",
+    "photo_status": "referencia_real_lugar_actividad_editorial_sin_aprobar",
+    "review_status": "pendiente",
+    "source_checked_at": "2026-10-17",
+    "validity": "recinto_o_corredor_documentado_no_programacion_fijada",
+    "image_file": "images/mamm-fachada-2016.webp",
+    "image_scope": "Fachada del MAMM para visita autónoma editorial; no representa una exposición específica, taller ni guía comercial.",
+    "image_manifest": "imagen-actividad-mamm-v5.json",
+    "place_ids": [
+      "mamm"
+    ],
+    "editorial_role": "experience",
+    "coverage_counting": "no_suma_otro_lugar",
+    "event_id": null,
+    "service_claim": "propuesta_autonoma_no_tour_contratado",
+    "venue_operator_role": "entidad_del_recinto_no_alianza_ni_guia_confirmada",
+    "image_assignment_qa": "referencia_de_recinto_historica_no_prueba_de_servicio_ni_imagen_final_actividad"
+  },
+  {
+    "id": "paseo-centro",
+    "kind": "propuesta_editorial_autonoma",
+    "name": "Arquitectura y patrimonio del centro",
+    "place_ids": [
+      "coltejer",
+      "parque-berrio",
+      "junin",
+      "candelaria",
+      "catedral-metropolitana"
+    ],
+    "source_ids": [
+      "coltejer",
+      "centro"
+    ],
+    "operator": null,
+    "status": "draft",
+    "photo_status": "referencia_parcial_solo_detalle_no_portada",
+    "availability": "sin_promesa",
+    "image_file": "images/coltejer-2013.webp",
+    "image_scope": "Detalle exterior parcial de Coltejer; no permite aprobar portada o recorrido completo.",
+    "translations": {
+      "es": {
+        "name": "Arquitectura y patrimonio del centro",
+        "description": "Combina la observación exterior de Coltejer, Junín y los templos del centro en un recorrido por sectores. La Catedral Metropolitana está junto al Parque Bolívar; La Candelaria pertenece al entorno de Parque Berrío. Consulta accesos y respeta las actividades de culto."
+      },
+      "en": {
+        "name": "Downtown architecture and heritage",
+        "description": "Explore Coltejer’s exterior, Junín and downtown churches on an area-based walk. The Metropolitan Cathedral stands beside Parque Bolívar; La Candelaria is near Parque Berrío. Check access arrangements and respect worship activities."
+      },
+      "pt-BR": {
+        "name": "Arquitetura e patrimônio do centro",
+        "description": "Combine a observação externa do Coltejer, Junín e os templos do centro em um passeio por região. A Catedral Metropolitana fica junto ao Parque Bolívar; La Candelaria está perto do Parque Berrío. Consulte os acessos e respeite os momentos de culto."
+      }
+    },
+    "source_checked_at": "2026-10-17",
+    "validity": "recinto_o_corredor_documentado_no_programacion_fijada",
+    "editorial_role": "experience",
+    "coverage_counting": "no_suma_otro_lugar",
+    "event_id": null,
+    "service_claim": "propuesta_autonoma_no_tour_contratado",
+    "venue_operator_role": "entidad_del_recinto_no_alianza_ni_guia_confirmada",
+    "image_assignment_qa": "referencia_de_recinto_historica_no_prueba_de_servicio_ni_imagen_final_actividad"
+  },
+  {
+    "id": "laureles-cafes",
+    "kind": "propuesta_editorial_autonoma",
+    "name": "Paseo por Avenida Jardín",
+    "place_ids": [
+      "avenida-jardin"
+    ],
+    "source_ids": [
+      "jardin-laureles"
+    ],
+    "operator": null,
+    "status": "draft",
+    "photo_status": "faltante",
+    "availability": "sin_promesa",
+    "translations": {
+      "es": {
+        "name": "Paseo por Avenida Jardín",
+        "description": "Recorre el corredor de Avenida Jardín en Laureles y explora sus cafés y propuestas gastronómicas. Elige los establecimientos y consulta sus horarios directamente."
+      },
+      "en": {
+        "name": "Walk along Avenida Jardín",
+        "description": "Walk along the Avenida Jardín corridor in Laureles and explore its cafés and dining venues. Choose establishments and check opening times directly."
+      },
+      "pt-BR": {
+        "name": "Passeio pela Avenida Jardín",
+        "description": "Caminhe pelo corredor da Avenida Jardín em Laureles e conheça seus cafés e espaços gastronômicos. Escolha os estabelecimentos e consulte os horários diretamente."
+      }
+    },
+    "source_checked_at": "2026-10-17",
+    "validity": "recinto_o_corredor_documentado_no_programacion_fijada",
+    "editorial_role": "experience",
+    "coverage_counting": "no_suma_otro_lugar",
+    "event_id": null,
+    "service_claim": "propuesta_autonoma_no_tour_contratado",
+    "venue_operator_role": "entidad_del_recinto_no_alianza_ni_guia_confirmada"
+  },
+  {
+    "id": "epm-visita",
+    "kind": "oferta_documentada_operador",
+    "name": "Visita guiada Edificio EPM",
+    "operator": "EPM",
+    "source_ids": [
+      "epm"
+    ],
+    "url": "https://www.epm.com.co/institucional/sala-de-prensa/noticias-y-novedades/epm-de-puertas-abiertas-para-la-comunidad/",
+    "documented_at": "2024 (página histórica)",
+    "consulted_at": "2026-10-17",
+    "status": "draft",
+    "validity": "fuente_historica_2024_vigencia_2026_no_comprobada",
+    "registration": "fuente_historica_exige_inscripcion_vigencia_actual_pendiente",
+    "availability": "no_comprobada",
+    "price": null,
+    "permission": "pendiente",
+    "relationship": "ninguna",
+    "photo_status": "faltante_foto_actividad_autorizada",
+    "translations": {
+      "es": {
+        "name": "Visita guiada al Edificio EPM",
+        "description": "EPM documentó un programa de visitas para conocer su edificio y actividades. Consulta con la entidad si el programa está vigente y cómo inscribirse antes de planear la visita."
+      },
+      "en": {
+        "name": "Guided visit to the EPM building",
+        "description": "EPM documented a visiting programme introducing its building and activities. Ask the organisation whether the programme is currently running and how to register before planning a visit."
+      },
+      "pt-BR": {
+        "name": "Visita guiada ao Edifício EPM",
+        "description": "A EPM documentou um programa de visitas para conhecer seu edifício e suas atividades. Consulte a entidade sobre a vigência do programa e a inscrição antes de planejar a visita."
+      }
+    },
+    "place_ids": [
+      "edificio-epm"
+    ],
+    "editorial_role": "experience",
+    "coverage_counting": "no_suma_otro_lugar",
+    "event_id": null,
+    "service_claim": "programa_historico_2024_consultar_vigencia_no_salida_prometida"
+  },
+  {
+    "id": "city-comuna13",
+    "kind": "oferta_documentada_operador",
+    "name": "City Tour / Comuna 13",
+    "operator": "Medellín Turística",
+    "source_ids": [
+      "operador-city"
+    ],
+    "url": "https://medellinturistica.com/servicios/city-tour-comuna-13/",
+    "consulted_at": "2026-10-17",
+    "status": "draft",
+    "validity": "oferta_web_observable_sin_fecha_salida_confirmada",
+    "registration": "RNT_213192_declarado_en_sitio_no_verificado_registro",
+    "availability": "no_comprobada",
+    "price": null,
+    "permission": "pendiente",
+    "relationship": "ninguna",
+    "photo_status": "faltante_foto_actividad_autorizada",
+    "translations": {
+      "es": {
+        "name": "Recorrido por la ciudad y Comuna 13",
+        "description": "Medellín Turística presenta un recorrido por la ciudad y Comuna 13. Consulta el itinerario, las condiciones y la disponibilidad directamente con el operador; la página consultada no confirma una salida concreta."
+      },
+      "en": {
+        "name": "City and Comuna 13 tour",
+        "description": "Medellín Turística presents a city and Comuna 13 tour. Check the itinerary, conditions and availability directly with the operator; the consulted page does not confirm a particular departure."
+      },
+      "pt-BR": {
+        "name": "Passeio pela cidade e Comuna 13",
+        "description": "A Medellín Turística apresenta um passeio pela cidade e Comuna 13. Consulte o itinerário, as condições e a disponibilidade diretamente com o operador; a página consultada não confirma uma saída específica."
+      }
+    },
+    "rnt_claimed": "213192",
+    "rnt_verified": false,
+    "photo_permission": "no_verificada_sitio_todos_derechos_reservados",
+    "place_ids": [
+      "comuna13",
+      "plaza-botero",
+      "pueblito-paisa",
+      "pies-descalzos"
+    ],
+    "editorial_role": "experience",
+    "coverage_counting": "no_suma_otro_lugar",
+    "event_id": null,
+    "service_claim": "pagina_de_operador_sin_disponibilidad_o_registro_confirmados"
+  },
+  {
+    "id": "jerico-helicoptero-referencia",
+    "kind": "candidato_por_validar",
+    "status": "draft_oculto",
+    "name": "Antecedente helicóptero Medellín–Jericó",
+    "source": "content/destinos-dinamicos.json, places slug helicoptero-medellin-jerico",
+    "reason": "Ficha draft con external_url vacío; ilustración genérica no prueba operación/ruta. No trasladar a Medellín como oferta.",
+    "photo_status": "faltante_foto_real",
+    "operator": null,
+    "translations": {
+      "es": {
+        "name": "Antecedente helicóptero Medellín–Jericó",
+        "description": "Antecedente oculto de Jericó sin operador ni ruta confirmados; no ofrecer como servicio."
+      },
+      "en": {
+        "name": "Medellín–Jericó helicopter candidate",
+        "description": "Hidden Jericó candidate with no confirmed operator or route; do not offer as a service."
+      },
+      "pt-BR": {
+        "name": "Candidato de helicóptero Medellín–Jericó",
+        "description": "Candidato oculto de Jericó sem operador ou rota confirmados; não oferecer como serviço."
+      }
+    },
+    "editorial_role": "hidden_external_candidate",
+    "coverage_counting": "no_suma_otro_lugar",
+    "event_id": null
+  },
+  {
+    "id": "jerico-parapente-referencia",
+    "kind": "candidato_por_validar",
+    "status": "draft_oculto",
+    "name": "Antecedente parapente Puerto Arturo",
+    "source": "content/destinos-dinamicos.json, places slug parapente-puerto-arturo",
+    "reason": "Candidato de Jericó; exige despegue/aterrizaje, condiciones y operador verificados. No es San Félix/Bello ni Medellín.",
+    "photo_status": "faltante_foto_real",
+    "operator": null,
+    "translations": {
+      "es": {
+        "name": "Antecedente parapente Puerto Arturo",
+        "description": "Antecedente oculto correspondiente a Jericó; no trasladar a Medellín ni confundir con San Félix o Bello."
+      },
+      "en": {
+        "name": "Puerto Arturo paragliding candidate",
+        "description": "Hidden candidate relating to Jericó; do not transfer it to Medellín or confuse it with San Félix or Bello."
+      },
+      "pt-BR": {
+        "name": "Candidato de parapente Puerto Arturo",
+        "description": "Candidato oculto referente a Jericó; não transferir para Medellín nem confundir com San Félix ou Bello."
+      }
+    },
+    "editorial_role": "hidden_external_candidate",
+    "coverage_counting": "no_suma_otro_lugar",
+    "event_id": null
+  },
+  {
+    "id": "metro-metrocable-recorrido",
+    "kind": "propuesta_editorial_autonoma",
+    "editorial_role": "mobility_experience",
+    "status": "draft",
+    "destination_id": "CO-05-medellin",
+    "place_ids": [],
+    "transport_source_ids": [
+      "metro-j",
+      "metro-l",
+      "metro-historia"
+    ],
+    "source_ids": [
+      "metro-j",
+      "metro-l",
+      "metro-historia"
+    ],
+    "operator": null,
+    "venue_operator": "Metro de Medellín",
+    "service_claim": "recorrido_autonomo_no_tour_comercial",
+    "availability": "consultar_estado_y_condiciones_de_linea",
+    "translations": {
+      "es": {
+        "name": "Metro y Metrocable de Medellín",
+        "description": "El Metro y los cables aéreos permiten conocer el relieve del valle de Aburrá y forman parte de la identidad urbana de Medellín. Un recorrido combina estaciones, trenes y vistas de las laderas según la línea elegida. La línea J une San Javier y La Aurora; la línea L conecta Santo Domingo y Arví. El viaje en cable y la visita al Parque Arví son partes distintas del recorrido.",
+        "practical": "El sistema se extiende por varios municipios del valle. Consulta el mapa, el estado del servicio y las condiciones de cada línea antes de salir. Para llegar al circuito de arte y escaleras de Comuna 13, planea también el trayecto desde San Javier."
+      },
+      "en": {
+        "name": "Medellín Metro and Metrocable",
+        "description": "The Metro and aerial cable lines reveal the landscape of the Aburrá Valley and are part of Medellín’s urban identity. Depending on the line, a journey combines stations, trains and hillside views. Line J links San Javier and La Aurora; line L connects Santo Domingo and Arví. The cable journey and a visit to Parque Arví are separate parts of the trip.",
+        "practical": "The network extends across several valley municipalities. Check the map, service status and travel conditions for each line before setting out. To reach Comuna 13’s art and escalator circuit, also plan the onward journey from San Javier."
+      },
+      "pt-BR": {
+        "name": "Metrô e Metrocable de Medellín",
+        "description": "O metrô e os teleféricos permitem conhecer o relevo do vale do Aburrá e fazem parte da identidade urbana de Medellín. Conforme a linha escolhida, o percurso combina estações, trens e vistas das encostas. A linha J liga San Javier e La Aurora; a linha L conecta Santo Domingo e Arví. O trajeto de teleférico e a visita ao Parque Arví são partes distintas do passeio.",
+        "practical": "A rede abrange vários municípios do vale. Consulte o mapa, o funcionamento e as condições de viagem de cada linha antes de sair. Para chegar ao circuito de arte e escadas rolantes da Comuna 13, planeje também o trecho a partir de San Javier."
+      }
+    },
+    "photo_status": "pendiente_URL_elegida_propietario",
+    "review_status": "pendiente",
+    "event_id": null,
+    "coverage_counting": "no_suma_otro_lugar",
+    "relationship": "ninguna"
+  }
+]

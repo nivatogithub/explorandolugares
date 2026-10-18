@@ -91,7 +91,7 @@ class DynamicDestinationRenderTests(unittest.TestCase):
                         preview_label = {"es": "Vista previa privada", "en": "Private preview", "pt-BR": "Prévia privada"}[locale]
                         self.assertIn(preview_label, preview)
 
-    def test_operator_experiences_stay_hidden_until_approved(self):
+    def test_approved_editorial_experiences_are_public_without_free_operator_ads(self):
         page = self.render("jerico", "es")
         self.assertIn('class="footer-contact-link footer-contact-whatsapp"', page)
         self.assertIn('class="footer-contact-link footer-contact-instagram"', page)
@@ -99,7 +99,7 @@ class DynamicDestinationRenderTests(unittest.TestCase):
         for label in ("<span>WhatsApp</span>", "<span>Instagram</span>", "<span>Correo</span>", "<span>Email</span>", "<span>E-mail</span>"):
             self.assertNotIn(label, page)
         self.assertIn("<h3>Jardín Botánico Los Balsos</h3>", page)
-        self.assertEqual(page.count("<article"), 7)
+        self.assertEqual(page.count("<article"), 10)
         self.assertIn("Subida al Cerro de las Nubes", page)
         self.assertIn("<h3>Chorros de Quebradona</h3>", page)
         self.assertIn("Atractivo natural rural de Jericó", page)
@@ -122,9 +122,9 @@ class DynamicDestinationRenderTests(unittest.TestCase):
                 self.assertIn("jardin-botanico-los-balsos-ilustrado.webp", localized)
                 self.assertIn("cerro-de-las-nubes-sendero-ilustrado-v2.webp", localized)
                 self.assertIn("chorros-quebradona-ilustrado-v2.webp", localized)
-        self.assertNotIn("Vuelo privado en helicóptero Medellín–Jericó", page)
-        self.assertNotIn("Parapente biplaza en Jericó", page)
-        self.assertNotIn("Experiencia en finca cafetera", page)
+        self.assertIn("Vuelo privado en helicóptero Medellín–Jericó", page)
+        self.assertIn("Parapente biplaza en Jericó", page)
+        self.assertIn("Experiencia en finca cafetera", page)
         self.assertNotIn("turismojerico.com/producto/", page)
         private = self.render("jerico", "es", preview=True)
         self.assertEqual(private.count('class="destination-experience-card"><img'), 3)
@@ -338,7 +338,8 @@ class DynamicDestinationRenderTests(unittest.TestCase):
         self.assertNotIn('directory-card-details',free_card.group(0))
         self.assertNotIn('WhatsApp',free_card.group(0))
         self.assertIn('NF',directory)
-        self.assertIn('>Premium</span>',directory)
+        self.assertIn('class="directory-premium-star"',directory)
+        self.assertIn('aria-label="Premium"',directory)
         self.assertIn('id="negocio-44444444-4444-4444-8444-444444444444"',directory)
         self.assertIn('href="/negocios/44444444-4444-4444-8444-444444444444/"',directory)
         page=self.render_business(public_ids["page_premium"],"es")
@@ -377,7 +378,7 @@ class DynamicDestinationRenderTests(unittest.TestCase):
                 self.assertTrue(result.stdout.startswith(b"RIFF"), f"The public image route must return {relative}")
 
     def test_business_editor_keeps_lifecycle_and_ranking_fields_out_of_creation(self):
-        editor=(ROOT/"backend/public/admin/negocios.php").read_text()
+        editor=(ROOT/"backend/public/admin/negocios.php").read_text()+(ROOT/"backend/public/_business-map-dialog.php").read_text()
         for forbidden in ('name="slug"','name="display_order"','name="claim_status"',
                           'name="operation_status"','name="information_status"',
                           'name="publication_status"','name="subscription_status"'):

@@ -1,0 +1,32 @@
+{
+  "destination": "cartagena",
+  "role": "hero",
+  "style": "semirrealista editorial tinta/gouache",
+  "date": "2026-10-17",
+  "status": "propuesta_preprod",
+  "approval": "pendiente",
+  "production_changed": false,
+  "master_sha256": "be4f33c8bee4b6705de49ebb6f3c3c33b971869311ff544cc519198b902fdbea",
+  "files": [
+    {
+      "path": "backend/public/assets/cartagena-piloto/portada-ciudad-amurallada-v3-640.webp",
+      "bytes": 102448,
+      "sha256": "9bb227ecb0e489a1214bef2c5de1f093f2843d682a0ba5db4b606620f378a04f"
+    },
+    {
+      "path": "backend/public/assets/cartagena-piloto/portada-ciudad-amurallada-v3-1200.webp",
+      "bytes": 302262,
+      "sha256": "e8a03bc015c75eb5a802027965a29ba6039bf17709668d83e561b9bbda12fd34"
+    }
+  ],
+  "sources": [
+    "https://colombia.travel/es/cartagena/las-murallas-de-cartagena",
+    "https://cartagenacomisionfilmica.com/es/locaciones/avenida-santander"
+  ],
+  "reference_photos_uploaded": [],
+  "method": "Composición independiente basada en rasgos documentados; no fotografía ni reconstrucción topográfica exacta.",
+  "prompt_file": "../PROMPT_PORTADA_IDENTIDAD_V2.txt",
+  "verification_source": "https://cartagenacomisionfilmica.com/es/locaciones/avenida-santander",
+  "reference_generated_image_uploaded": "portada-identidad-v2/maestro.png (imagen propia)",
+  "qa": "Revisión de separación costa-ciudad y vegetación; interpretación ilustrada, resultado pendiente de aprobación."
+}

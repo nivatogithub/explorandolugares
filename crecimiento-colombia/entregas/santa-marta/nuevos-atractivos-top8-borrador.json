@@ -1,0 +1,84 @@
+{
+  "state": "draft_not_imported",
+  "reason": "Textos de los dos candidatos incorporados por auditoría turística; no sustituyen el paquete ni tienen aprobación humana.",
+  "items": [
+    {
+      "id": "ciudad-perdida",
+      "source": "https://www.icanh.gov.co/parques-icanh/parque-arqueologico-teyuna/guia-turistica",
+      "jurisdiction": "Distrito de Santa Marta, Magdalena, según ICANH",
+      "translations": {
+        "es": {
+          "name": "Teyuna · Ciudad Perdida",
+          "description": "Teyuna es un sitio arqueológico de la Sierra Nevada de Santa Marta, en territorio indígena. Sus terrazas, caminos y construcciones de piedra conservan parte del legado de las sociedades de la región. El ICANH administra el parque y su visita está sujeta a condiciones de acceso y protocolos territoriales."
+        },
+        "en": {
+          "name": "Teyuna · Lost City",
+          "description": "Teyuna is an archaeological site in the Sierra Nevada de Santa Marta, within Indigenous territory. Its stone terraces, paths and structures preserve part of the region’s cultural heritage. ICANH administers the park, and visits are subject to access conditions and territorial protocols."
+        },
+        "pt-BR": {
+          "name": "Teyuna · Cidade Perdida",
+          "description": "Teyuna é um sítio arqueológico da Sierra Nevada de Santa Marta, em território indígena. Seus terraços, caminhos e estruturas de pedra preservam parte do legado das sociedades da região. O ICANH administra o parque, cuja visita está sujeita a condições de acesso e protocolos territoriais."
+        }
+      },
+      "reference_candidate": "SM-E6-05",
+      "image_role_conflict": "La misma referencia no puede usarse simultáneamente como tarjeta de atractivo y experiencia: elegir rol antes de generar y buscar original distinto para el otro componente.",
+      "approved": false,
+      "linked_experience_id": "ciudad-perdida",
+      "content_type": "place",
+      "location_id": "santa-marta:ciudad-perdida"
+    },
+    {
+      "id": "playa-blanca",
+      "source": "https://indetur.gov.co/playa-blanca/",
+      "jurisdiction": "Distrito de Santa Marta, sector cercano al Rodadero; no Barú ni playa homónima de otro municipio",
+      "translations": {
+        "es": {
+          "name": "Playa Blanca",
+          "description": "Esta playa de la costa de Santa Marta ocupa una bahía rodeada por laderas, en el entorno de El Rodadero. La franja de arena y el paisaje costero le dan una identidad distinta de la playa urbana de Rodadero. No se trata de la Playa Blanca de Barú."
+        },
+        "en": {
+          "name": "Playa Blanca",
+          "description": "This beach on Santa Marta’s coast lies in a bay framed by hills near El Rodadero. Its sandy shore and coastal setting give it an identity distinct from Rodadero’s urban beach. It is not Playa Blanca on Barú."
+        },
+        "pt-BR": {
+          "name": "Playa Blanca",
+          "description": "Esta praia da costa de Santa Marta ocupa uma baía cercada por encostas, próxima a El Rodadero. A faixa de areia e a paisagem costeira lhe dão uma identidade diferente da praia urbana de Rodadero. Não se trata da Playa Blanca de Barú."
+        }
+      },
+      "reference_candidate": null,
+      "image_status": "original específico con licencia y aprobación pendientes",
+      "approved": false,
+      "top8_status": "pending_editorial_cutoff",
+      "linked_experience_id": "excursion-playa-blanca",
+      "content_type": "place",
+      "location_id": "santa-marta:playa-blanca"
+    },
+    {
+      "id": "minca",
+      "content_type": "place",
+      "location_id": "santa-marta:minca",
+      "source": "https://indetur.gov.co/2018/06/definen-gerencias-zonales-para-el-rodadero-taganga-el-centro-guachaca-y-minca/",
+      "jurisdiction": "Corregimiento del Distrito de Santa Marta, Magdalena",
+      "translations": {
+        "es": {
+          "name": "Minca",
+          "description": "Minca es un corregimiento de las estribaciones de la Sierra Nevada de Santa Marta. Su paisaje de montaña reúne bosques, ríos y cultivos de café, con una identidad propia dentro del distrito."
+        },
+        "en": {
+          "name": "Minca",
+          "description": "Minca is a district settlement in the foothills of the Sierra Nevada de Santa Marta. Its mountain landscape combines forests, rivers and coffee growing, with a distinct identity within Santa Marta."
+        },
+        "pt-BR": {
+          "name": "Minca",
+          "description": "Minca é um corregimiento nas encostas da Sierra Nevada de Santa Marta. Sua paisagem de montanha reúne florestas, rios e cultivo de café, com identidade própria dentro do distrito."
+        }
+      },
+      "approved": false,
+      "top8_status": "proposed_place",
+      "linked_experience_id": "minca-cafe"
+    }
+  ],
+  "checked_at": "2026-10-17",
+  "publication_authorized": false,
+  "classification_status": "geographic_place_drafts_not_experience_cards"
+}

@@ -1,0 +1,21 @@
+{
+  "destination": "bogota",
+  "environment": "local_preprod_only",
+  "before": 10,
+  "imported": 20,
+  "visible": {
+    "es": 30,
+    "en": 30,
+    "pt-BR": 30
+  },
+  "publication_status": "published",
+  "plan": "free",
+  "input_sha256": "a94f996b5eb95d8451f4635409d617bec1afab7f84761dfe54b947124dbdfd70",
+  "production_changed": false,
+  "browser_qa": {
+    "total_cards": 30,
+    "unique_names": 30,
+    "initial_visible_cards": 12,
+    "load_more_available": true
+  }
+}
