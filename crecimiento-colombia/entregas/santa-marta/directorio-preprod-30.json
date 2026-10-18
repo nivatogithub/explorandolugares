@@ -1,0 +1,426 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "santa-marta",
+  "businesses": [
+    {
+      "name": "Hotel Boutique Don Pepe",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://hotelboutiquedonpepe.com/",
+          "checked_at": "2026-10-17",
+          "note": "Fuente pública documentada en el inventario del destino. Sin contacto, alianza ni verificación operativa presencial. Ficha gratuita no reclamada; propuesta privada."
+        }
+      ]
+    },
+    {
+      "name": "Casa de Leda",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://kalihotels.com/en/casa-leda/",
+          "checked_at": "2026-10-17",
+          "note": "Fuente pública documentada en el inventario del destino. Sin contacto, alianza ni verificación operativa presencial. Ficha gratuita no reclamada; propuesta privada."
+        }
+      ]
+    },
+    {
+      "name": "Hotel Boutique Casa Carolina",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.hotelcasacarolina.com/es/",
+          "checked_at": "2026-10-17",
+          "note": "Fuente pública documentada en el inventario del destino. Sin contacto, alianza ni verificación operativa presencial. Ficha gratuita no reclamada; propuesta privada."
+        }
+      ]
+    },
+    {
+      "name": "Ouzo",
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://grupoouzo.com/ouzo-2/",
+          "checked_at": "2026-10-17",
+          "note": "Fuente pública documentada en el inventario del destino. Sin contacto, alianza ni verificación operativa presencial. Ficha gratuita no reclamada; propuesta privada."
+        }
+      ]
+    },
+    {
+      "name": "Little Ouzo",
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://grupoouzo.com/little-ouzo-2/",
+          "checked_at": "2026-10-17",
+          "note": "Fuente pública documentada en el inventario del destino. Sin contacto, alianza ni verificación operativa presencial. Ficha gratuita no reclamada; propuesta privada."
+        }
+      ]
+    },
+    {
+      "name": "Serena Tropical",
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.grupoouzo.com/serenatropical",
+          "checked_at": "2026-10-17",
+          "note": "Fuente pública documentada en el inventario del destino. Sin contacto, alianza ni verificación operativa presencial. Ficha gratuita no reclamada; propuesta privada."
+        }
+      ]
+    },
+    {
+      "name": "Expotur",
+      "category_code": "experiencias",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://expotur-eco.com/",
+          "checked_at": "2026-10-17",
+          "note": "Fuente pública documentada en el inventario del destino. Sin contacto, alianza ni verificación operativa presencial. Ficha gratuita no reclamada; propuesta privada."
+        }
+      ]
+    },
+    {
+      "name": "Magic Tour Colombia",
+      "category_code": "experiencias",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://lostcitytours.com/en/",
+          "checked_at": "2026-10-17",
+          "note": "Fuente pública documentada en el inventario del destino. Sin contacto, alianza ni verificación operativa presencial. Ficha gratuita no reclamada; propuesta privada."
+        }
+      ]
+    },
+    {
+      "name": "Fundación Museo Bolivariano / Quinta de San Pedro Alejandrino",
+      "category_code": "cultura",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.museobolivariano.org.co/laquinta/",
+          "checked_at": "2026-10-17",
+          "note": "Fuente pública documentada en el inventario del destino. Sin contacto, alianza ni verificación operativa presencial. Ficha gratuita no reclamada; propuesta privada."
+        }
+      ]
+    },
+    {
+      "name": "Teatro Santa Marta",
+      "category_code": "cultura",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.santamarta.gov.co/sala-prensa/noticias/el-cambio-en-la-cultura-avanza-con-la-reinauguracion-del-teatro-santa-marta",
+          "checked_at": "2026-10-17",
+          "note": "Fuente pública documentada en el inventario del destino. Sin contacto, alianza ni verificación operativa presencial. Ficha gratuita no reclamada; propuesta privada."
+        }
+      ]
+    },
+    {
+      "name": "Centro de Vida Marina (antes Acuario Rodadero)",
+      "category_code": "cultura",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://centrodevidamarina.com/",
+          "checked_at": "2026-10-17",
+          "note": "Fuente pública documentada en el inventario del destino. Sin contacto, alianza ni verificación operativa presencial. Ficha gratuita no reclamada; propuesta privada."
+        }
+      ]
+    },
+    {
+      "name": "AC Hotel Santa Marta",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.marriott.com/en-us/destinations/colombia/santa-marta.mi",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Courtyard by Marriott Santa Marta Resort",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.marriott.com/en-us/destinations/colombia/santa-marta.mi",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Santa Marta Marriott Resort Playa Dormida",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.marriott.com/en-us/destinations/colombia/santa-marta.mi",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Hilton Santa Marta",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.hilton.com/es/hotels/smrcnhh-hilton-santa-marta/resort-info/",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Hilton Garden Inn Santa Marta",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.hilton.com/es/hotels/smrgigi-hilton-garden-inn-santa-marta/",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Zuana Beach Resort",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.zuana.com/",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "ESTELAR Santamar Hotel & Centro de Convenciones",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.estelarsantamar.com/es/",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Irotama del Sol",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.ghlhoteles.com/es/hoteles/colombia/santa-marta/irotama-del-sol/",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Arrecife Centro Comercial",
+      "category_code": "comercio",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.arrecifecentrocomercial.com.co/",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Zazue Plaza",
+      "category_code": "comercio",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://zazue.com.co/tiendas/",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Big Bang — Arrecife",
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.arrecifecentrocomercial.com.co/",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Hamburgo — Arrecife",
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.arrecifecentrocomercial.com.co/",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Javier Pez — Arrecife",
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.arrecifecentrocomercial.com.co/",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Restaurante El Banano — Arrecife",
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.arrecifecentrocomercial.com.co/",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Orietta’s Cakes — Arrecife",
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.arrecifecentrocomercial.com.co/",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Delicias de Mi Costa — Arrecife",
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.arrecifecentrocomercial.com.co/",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Mr Bono — Arrecife",
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.arrecifecentrocomercial.com.co/",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Museo del Oro Tairona — Casa de la Aduana",
+      "category_code": "cultura",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://enciclopedia.banrepcultural.org/Tairona",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Barracuda Dive Center — Taganga",
+      "category_code": "experiencias",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.barracudataganga.com/",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    }
+  ]
+}
