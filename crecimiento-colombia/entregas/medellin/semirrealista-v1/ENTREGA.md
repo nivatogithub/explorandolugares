@@ -1,0 +1,13 @@
+# Medellín: ilustraciones y contenido para revisión local
+
+18 composiciones independientes EL-SEMI-REALISTA-1: portada, ocho lugares y nueve experiencias. Se conservaron las fotografías y sus decisiones originales. Este encargo autoriza generar, pero no equivale a aprobación visual ni publicación.
+
+`paquete-preprod.zip` contiene esquema 2 validado por DestinationPackage::readZip: 18 WebP y 17 registros (8 place + 9 experience), todos draft. `integracion-medellin.json` presenta destination, places, experiences, display_translations y mapa role/key/slug/path. Las experiencias siguen en places para compatibilidad del importador real.
+
+Para integrar serialmente: importar el ZIP en preproducción; copiar solamente `web/` a `assets/medellin-semirrealista/web/`; colocar medellin-compacta.js y .css en assets. El JS tiene guardia de ruta medellin y usa data-place-slug/data-experience-slug. La portada está en el paquete; su composición completa requiere preservar relación 3:2 o encuadre superior, evitando cortar Coltejer. No copiar maestros, manifests privados ni originales al hosting. Historia textual breve en destination.history, sin imagen. Para continuidad de cargar más y directorio, reutilizar los scripts comunes existentes; este módulo no sustituye sus filtros ni registra negocios.
+
+Vista independiente: preview.html; cambia ES/EN/PT. QA estático y revisión individual de las 18 salidas realizados; QA IAB de integración pendiente del coordinador. QA-contacto.webp permite inspección conjunta. El importador PHP real leyó 18 imágenes / 17 registros sin tocar BD.
+
+Límites de fidelidad: composiciones editoriales, no fotografías ni levantamientos exactos. Se descartó una portada con aguja errónea y una primera iglesia de Pueblito excesivamente ornamentada. Versión corregida conserva la iglesia sencilla, ventanas dobles y fuente de hierro. El entorno de Pueblito, detalles del museo/MAMM/EPM, escenas interactivas y modelo/estación del Metro son interpretativos; no representan una exposición o servicio confirmado. Murales abstractos de Comuna 13 son originales, no reproducen obras concretas. EPM y City Tour requieren confirmar programación con operador; no se inventa alianza. Toda revisión humana permanece pendiente.
+
+Reproducir derivados/paquete: ejecutar compilar.py con Pillow; no genera imágenes ni necesita red. MANIFIESTO.json registra prompts, fuentes documentales, maestros, dimensiones y hashes. Maestros fuera del payload público. VALIDACION.json registra conteos y límites. Fuentes previas se conservan en fuentes.json; no se realizaron nuevas búsquedas fotográficas.
