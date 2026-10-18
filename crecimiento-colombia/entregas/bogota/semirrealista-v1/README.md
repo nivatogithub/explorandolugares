@@ -2,7 +2,7 @@
 
 Alcance: preproducción privada, sin autorización de publicación. Rama propia de Bogotá.
 
-- Portada: Torre Colpatria dentro del paisaje urbano andino, desde descripción documentada.
+- Portada vigente v2: Plaza de Bolívar a nivel peatonal, con Catedral y Capitolio. La portada anterior con Colpatria se conserva como versión rechazada por semejanza compositiva con Medellín.
 - Ocho atractivos: Plaza de Bolívar, La Candelaria, Museo del Oro, Monserrate, Museo Botero, Usaquén, Jardín Botánico y Parque Simón Bolívar.
 - Quince experiencias con ilustraciones separadas de las tarjetas de lugares.
 - Jardín Botánico: se conserva byte por byte la ilustración previamente aprobada; no se extiende esa aprobación a otras imágenes.
