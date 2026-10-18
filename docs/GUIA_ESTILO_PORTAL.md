@@ -211,3 +211,9 @@ El listado gratuito muestra icono semántico de categoría a la izquierda y nomb
 
 ## Ajuste aprobado de cabecera y pie · 17/10/2026
 El propietario solicita amarillo pálido #FFF3DA exclusivamente en header/footer compartidos, con línea fina #D8B48A bajo header y sobre footer. El contenido conserva blanco/grises neutros; no restaurar paneles amarillos ni salvia. Retirar CTA Conoce Jericó del bloque principal del inicio. Títulos de los pasos 1/2/3 en terracota vivo #B84120, mayores y legibles. La composición inicial usa una ilustración grande y tres apoyos alineados debajo, sin inclinaciones ni recortes geométricos. Comparación de tres alternativas en /__composiciones-inicio/.
+
+## Densidad vertical global · 2026-10-17
+
+Por instrucción del propietario, reducir el espacio vertical en todas las páginas. Ritmo compartido: 28px arriba/abajo por sección en escritorio y20px en móvil; encabezados de sección con16px/12px inferiores; filas de tarjetas separadas16px y Cargar más con14px superiores. Separadores de1px en color de borde neutral entre secciones principales, experiencias y niveles del directorio. Evitar líneas duplicadas dentro de tarjetas y conservar áreas de interacción accesibles. Pie con24px verticales,20px en móvil. No cambiar textos, imágenes ni estados de publicación.
+
+Fuente CSS: `backend/public/assets/densidad-global.css`, incorporada por el generador de identidad neutral a todos los HTML/PHP preparados, incluida administración. La etiqueta de categorías del inicio participa del flujo normal para que la reducción de altura no la superponga al botón. Comprobación local: inicio y destinos28px por sección; separadores finos visibles; catálogo y administración cargan la hoja global nueva. Cambio de presentación en preproducción, sin publicación.

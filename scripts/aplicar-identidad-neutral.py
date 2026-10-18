@@ -85,6 +85,8 @@ input,select,textarea{background:var(--el-field);border-color:var(--el-control-b
 @media(max-width:650px){.destination-direct-reading .destination-invitation{display:block}.destination-direct-reading .destination-invitation>.pill{margin-top:14px}}
 
 '''.replace('VARIABLES',variables)
+ density_path=ROOT/'backend/public/assets/densidad-global.css'
+ if density_path.is_file():css+='\n'+density_path.read_text()
  (assets/'identidad-neutral.css').write_text(css)
  shutil.copy2(ROOT/'backend/public/assets/identidad-neutral.js',assets/'identidad-neutral.js') if assets.resolve()!=(ROOT/'backend/public/assets').resolve() else None
  shutil.copy2(ROOT/'backend/public/assets/tarjetas-negocios-compactas.js',assets/'tarjetas-negocios-compactas.js') if assets.resolve()!=(ROOT/'backend/public/assets').resolve() else None
@@ -97,7 +99,7 @@ input,select,textarea{background:var(--el-field);border-color:var(--el-control-b
   if p.name in {'leaflet.css','identidad-neutral.css'}:continue
   s=p.read_text();new=re.sub('|'.join(palette),lambda m:palette[m[0].lower()],s,flags=re.I)
   if new!=s:p.write_text(new);css_count+=1
- hook='<link rel="stylesheet" href="/assets/identidad-neutral.css?v=3"><script defer src="/assets/identidad-neutral.js?v=3"></script>'
+ hook='<link rel="stylesheet" href="/assets/identidad-neutral.css?v=4"><script defer src="/assets/identidad-neutral.js?v=3"></script>'
  count=0
  for p in public.rglob('*'):
   if p.suffix not in {'.html','.php'}:continue
@@ -106,7 +108,8 @@ input,select,textarea{background:var(--el-field);border-color:var(--el-control-b
   s=re.sub(r'<!-- etapas-piloto -->.*?<!-- /etapas-piloto -->','',s,flags=re.S)
   s=re.sub(r'<aside\b[^>]*class="pilot-banner"[^>]*>.*?</aside>','',s,flags=re.S)
   for old,new in {'Comenzamos por Jericó.':'Destinos para descubrir.','La primera guía ya está disponible. Abriremos otros destinos cuando revisemos su información y sus imágenes.':'Explora las guías disponibles.','Começamos por Jericó.':'Destinos para descobrir.','We start with Jericó.':'Destinations to discover.','Starting with Jericó.':'Destinations to discover.'}.items():s=s.replace(old,new)
-  s=s.replace('identidad-neutral.js?v=2','identidad-neutral.js?v=3').replace('identidad-neutral.css?v=2','identidad-neutral.css?v=3')
+  s=s.replace('identidad-neutral.css?v=3','identidad-neutral.css?v=4')
+  s=s.replace('identidad-neutral.js?v=2','identidad-neutral.js?v=3').replace('identidad-neutral.css?v=2','identidad-neutral.css?v=4')
   s=s.replace('tarjetas-negocios-compactas.js?v=1','tarjetas-negocios-compactas.js?v=4')
   s=s.replace('tarjetas-negocios-compactas.js?v=2','tarjetas-negocios-compactas.js?v=4')
   s=s.replace('tarjetas-negocios-compactas.js?v=3','tarjetas-negocios-compactas.js?v=4')
