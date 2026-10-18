@@ -12,6 +12,16 @@ body{background:var(--el-page)!important;color:var(--el-text)}
 .directory-contact-links{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0;font-size:13px;align-items:center}
 .directory-contact-links a{white-space:nowrap}
 .directory-card .directory-card-body{display:flex;flex-direction:column;min-width:0;gap:0}
+[data-directory-tier="featured"] .directory-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+.directory-card-tier-featured{background:var(--el-card)!important;border:1px solid var(--el-control-border)!important;box-shadow:none!important}
+.directory-card-tier-featured .directory-business-mark{display:none!important}
+.directory-card-tier-featured .directory-card-body{display:grid!important;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:6px!important;padding:12px 14px!important}
+.directory-card.directory-card-tier-featured .directory-business-title{font-size:14px!important;line-height:1.25!important}
+.directory-card.directory-card-tier-featured .directory-icon-actions{margin:0!important;padding:0!important;align-self:center}
+.directory-card-tier-featured .directory-category-chip{padding:2px 5px!important;min-height:0!important;margin:0!important}
+@media(max-width:900px){[data-directory-tier="featured"] .directory-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:600px){[data-directory-tier="featured"] .directory-grid{grid-template-columns:1fr!important}}
+
 .directory-card{min-height:0!important;height:auto!important}
 .directory-card .directory-card-body{height:auto!important;min-height:0!important;grid-template-rows:none!important;padding:14px!important}
 .directory-card .directory-icon-actions{width:100%;justify-content:flex-end!important;margin-top:10px!important;padding-top:0!important}
@@ -80,8 +90,9 @@ input,select,textarea{background:var(--el-field);border-color:var(--el-control-b
   s=re.sub(r'<aside\b[^>]*class="pilot-banner"[^>]*>.*?</aside>','',s,flags=re.S)
   for old,new in {'Comenzamos por Jericó.':'Destinos para descubrir.','La primera guía ya está disponible. Abriremos otros destinos cuando revisemos su información y sus imágenes.':'Explora las guías disponibles.','Começamos por Jericó.':'Destinos para descobrir.','We start with Jericó.':'Destinations to discover.','Starting with Jericó.':'Destinations to discover.'}.items():s=s.replace(old,new)
   s=s.replace('identidad-neutral.js?v=2','identidad-neutral.js?v=3').replace('identidad-neutral.css?v=2','identidad-neutral.css?v=3')
-  s=s.replace('tarjetas-negocios-compactas.js?v=1','tarjetas-negocios-compactas.js?v=2')
-  if 'tarjetas-negocios-compactas.js' not in s:s=s.replace('</head>','<script defer src="/assets/tarjetas-negocios-compactas.js?v=2"></script></head>',1)
+  s=s.replace('tarjetas-negocios-compactas.js?v=1','tarjetas-negocios-compactas.js?v=3')
+  s=s.replace('tarjetas-negocios-compactas.js?v=2','tarjetas-negocios-compactas.js?v=3')
+  if 'tarjetas-negocios-compactas.js' not in s:s=s.replace('</head>','<script defer src="/assets/tarjetas-negocios-compactas.js?v=3"></script></head>',1)
   if 'cargar-mas-tarjetas.js' not in s:s=s.replace('</head>','<script defer src="/assets/cargar-mas-tarjetas.js?v=1"></script></head>',1)
   if 'identidad-neutral.css' not in s:s=s.replace('</head>',hook+'</head>',1)
   if s!=p.read_text():p.write_text(s);count+=1

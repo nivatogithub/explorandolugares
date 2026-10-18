@@ -70,3 +70,7 @@ El tablero de la cuenta presenta el estado de cada soporte de pago y la respuest
 - Página: WhatsApp visible en tarjeta, además del acceso a su página.
 - Premium: WhatsApp, Instagram y correo visibles en la tarjeta.
 Mostrar solo canales públicos registrados y válidos; no inventar ni rellenar con datos del portal. Estos enlaces permanecen fuera de los detalles/descripciones que se retiran para compactar las tarjetas. No borrar la ubicación ni los canales al simplificar el directorio. No cambia precios, contratos o estados de publicación.
+
+
+## Corrección vigente: tarjeta Destacado compacta
+Por instrucción del propietario, Destacado no muestra logo ni iniciales. Su tarjeta es pequeña, cercana a Gratis: nombre, categoría y ubicación por icono cuando hay datos válidos. No reutilizar el tamaño ni el encabezado de Página/Premium ni repetir la etiqueta Destacado dentro de su sección. Página y Premium conservan su identidad y canales por plan. Esta corrección de presentación no modifica automáticamente tarifas ni suscripciones contratadas.
