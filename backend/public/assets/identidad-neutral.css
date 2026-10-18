@@ -1,5 +1,5 @@
 /* Explorando Lugares · identidad neutral v2 */
-:root{--el-page:#FAFAFA;--el-panel:#F1F2F4;--el-card:#FFFFFF;--el-field:#FFFFFF;--el-hover:#E9EBEE;--el-border:#DADDE2;--el-control-border:#BDC2CB;--el-text:#172B42;--el-muted:#60646C;--el-accent:#d84e27;--el-action:#C94720;--el-action-hover:#A83B22;--el-focus:#a44327;--el-on-action:#FFFFFF;--el-published:#315e9d;--el-in-progress:#dfa04e;--el-pending:#bdc7cb;--el-unknown:#87979f}
+:root{--el-page:#FAFAFA;--el-panel:#F1F2F4;--el-card:#FFFFFF;--el-field:#FFFFFF;--el-hover:#E9EBEE;--el-border:#DADDE2;--el-control-border:#BDC2CB;--el-text:#172B42;--el-muted:#60646C;--el-accent:#d84e27;--el-action:#C94720;--el-action-hover:#A83B22;--el-focus:#a44327;--el-on-action:#FFFFFF;--el-published:#315e9d;--el-in-progress:#dfa04e;--el-pending:#bdc7cb;--el-unknown:#87979f;--el-shell:#FFF3DA;--el-shell-border:#D8B48A}
 body{background:var(--el-page)!important;color:var(--el-text)}
 .directory-contact-links{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0;font-size:13px;align-items:center}
 .directory-contact-links a{white-space:nowrap}
@@ -40,7 +40,19 @@ body{background:var(--el-page)!important;color:var(--el-text)}
 .directory-card a.directory-icon-action:hover{background:var(--el-panel)}
 .directory-card a.directory-icon-action:focus-visible{outline:2px solid var(--el-action);outline-offset:2px;background:var(--el-panel)}
 
-header,footer{background:var(--el-page)!important;border-color:var(--el-border)!important}
+body header,body footer,body.el-review-rest header,body.el-review-rest footer{background:var(--el-shell,#fff3da)!important;border-color:var(--el-shell-border,#d8b48a)!important}
+body header{border-bottom:1px solid var(--el-shell-border,#d8b48a)!important}
+body footer{border-top:1px solid var(--el-shell-border,#d8b48a)!important}
+.home-editorial-gallery{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;grid-template-rows:auto 78px!important;gap:10px!important;position:relative!important;height:auto!important;min-height:0!important;aspect-ratio:auto!important;padding:0!important;margin:0!important;background:transparent!important;isolation:auto!important}
+.home-editorial-gallery:before,.home-editorial-gallery:after,.home-gallery-accent{display:none!important}
+.home-editorial-gallery .home-gallery-shot{position:relative!important;inset:auto!important;width:100%!important;height:100%!important;transform:none!important;clip-path:none!important;border-radius:12px!important;overflow:hidden!important;box-shadow:none!important;border:0!important;margin:0!important}
+.home-editorial-gallery .home-gallery-shot-main{grid-column:1/-1!important;grid-row:1!important;aspect-ratio:3/2!important}
+.home-editorial-gallery .home-gallery-shot-city,.home-editorial-gallery .home-gallery-shot-jerico,.home-editorial-gallery .home-gallery-shot-experience{grid-row:2!important;aspect-ratio:auto!important}
+.home-editorial-gallery .home-gallery-shot img{display:block;width:100%!important;height:100%!important;object-fit:cover!important;transform:none!important;clip-path:none!important}
+#formas-de-explorar .experience-stories h3{font-size:clamp(22px,2.5vw,28px)!important;line-height:1.2!important;color:#B84120!important;margin:8px 0 12px!important}
+#formas-de-explorar .experience-stories .story-number{color:#B84120!important;font-weight:750!important;font-size:13px!important}
+@media(max-width:650px){.home-editorial-gallery{grid-template-rows:auto 64px!important}}
+
 .pilot-banner{display:none!important}
 .row-load-more{display:block;margin:18px auto 0;min-height:44px;padding:10px 20px;border:1px solid var(--el-control-border);border-radius:8px;background:var(--el-card);color:var(--el-text);cursor:pointer}
 .row-load-more[hidden]{display:none!important}
