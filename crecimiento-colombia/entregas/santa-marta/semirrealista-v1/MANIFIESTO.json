@@ -1,0 +1,1282 @@
+{
+  "style": "EL-SEMI-REALISTA-1",
+  "destination": "santa-marta",
+  "approved": false,
+  "production_authorized": false,
+  "history_image": null,
+  "images": [
+    {
+      "schema_version": "1.0",
+      "asset_id": "hero",
+      "destination_id": "santa-marta",
+      "attraction_id": "hero",
+      "purpose": "hero",
+      "file": "crecimiento-colombia/entregas/santa-marta/semirrealista-v1/maestros/hero.png",
+      "media_type": "ai_generated_illustration",
+      "language": "shared_es_en_pt",
+      "style_id": "EL-SEMI-REALISTA-1",
+      "generation": {
+        "asset_id": "hero",
+        "prompt": "Independent fact-based editorial semi-realistic digital illustration EL-SEMI-REALISTA-1, adult illustrated travel magazine, visible fine painterly brushwork, natural blues/greens/plaster, landscape 3:2, no text, logos, sepia, frame. Elevated view across the HISTORIC BAY of Santa Marta Colombia toward its historic city centre. Long tree-lined Camellon Rodrigo de Bastidas waterfront facing turquoise bay; complete low-rise town buildings occupying central majority, modest scattered modern mid-rise buildings, dry coastal hills set well behind city. Sea only lower quarter. CRITICAL: Santa Marta Cathedral is a SMALL distant white landmark EMBEDDED several blocks inland, with ONE asymmetrical square bell/clock tower on left of a lower gabled church facade and a small rounded dome behind. Never twin towers, never giant cathedral at waterfront. Make cathedral distant enough for city scale to dominate, not architectural closeup. Buildings all complete in frame. No Rodadero or Gaira resort strip, no walls/fortress, no Cartagena landmarks, no copied aerial composition. Original illustrated town-and-bay impression, not exact documentary reconstruction.",
+        "output_hint": "Generated images are saved to /Users/nivato/.codex/generated_images/01a14823-73b0-7690-8d26-5eaec0583b39 as /Users/nivato/.codex/generated_images/01a14823-73b0-7690-8d26-5eaec0583b39/exec-619dbacf-5500-4b4f-9596-6de82aa65f34.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+        "provider": "OpenAI",
+        "tool": "image_gen.imagegen",
+        "model": "not_exposed_by_builtin_tool",
+        "referenced_image_paths": [],
+        "generation_route": "independent_composition_from_documented_facts",
+        "human_result_approved": false,
+        "production_approved": false
+      },
+      "visual_references": [],
+      "fact_sources": [
+        {
+          "url": "https://colombia.travel/es/santa-marta",
+          "checked_at": "2026-10-17",
+          "facts_verified": "Rasgos geográficos/actividad según expediente textual previo; no exactitud topográfica del resultado."
+        }
+      ],
+      "source_sha256": "5b9171c9438362ad7d04dac06ba72cfbf809caadde56916d46bfb4a1da6aafab",
+      "files": [
+        {
+          "path": "backend/public/assets/santa-marta-semirrealista/hero-640.webp",
+          "width": 640,
+          "height": 427,
+          "bytes": 93276,
+          "sha256": "9ed35c8da7d5e67c2be0d5cf8dc486a5e60fac842d9c5d92e269ea03efa910b7"
+        },
+        {
+          "path": "backend/public/assets/santa-marta-semirrealista/hero-1200.webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 289850,
+          "sha256": "ef5439b358efcd7c7b80e1fcb58f54e9fc0e5ae252fd9031c4c247baa6f6b9af"
+        }
+      ],
+      "limitations": "Composición editorial independiente desde rasgos documentados, no fotografía ni reconstrucción exacta.",
+      "rights": {
+        "route": "independent_composition",
+        "photographs_uploaded": false,
+        "style_reference_uploaded": false,
+        "third_party_image_license_applied": false,
+        "provider_result_terms": "Condiciones aplicables de la cuenta/proveedor; no se afirma exclusividad ni ausencia universal de derechos adicionales.",
+        "human_generation_authority": "Encargo actual autoriza composición desde descripciones; no aprobación final."
+      },
+      "review": {
+        "status": "proposal_pending_human_review",
+        "identity_check": "agent_checked_representative_subject_not_exact_reconstruction",
+        "crop_check_desktop": "whole_image_resized_no_crop",
+        "crop_check_mobile": "whole_image_resized_no_crop",
+        "style_check": "high_realism_compare_chosen_style_pending_human_acceptance",
+        "human_result_approved": false
+      },
+      "publication": {
+        "approved_by": null,
+        "approved_at": null,
+        "published_at": null
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "asset_id": "tayrona",
+      "destination_id": "santa-marta",
+      "attraction_id": "tayrona",
+      "purpose": "place",
+      "file": "crecimiento-colombia/entregas/santa-marta/semirrealista-v1/maestros/tayrona.png",
+      "media_type": "ai_generated_illustration",
+      "language": "shared_es_en_pt",
+      "style_id": "EL-SEMI-REALISTA-1",
+      "generation": {
+        "asset_id": "tayrona",
+        "prompt": "Original independent fact-based editorial illustration, not a photo or reconstruction. EL-SEMI-REALISTA-1 adult travel magazine semi-realistic digital painting, visibly painted subtle brush strokes, rich convincing natural materials and atmospheric depth, sophisticated not cartoon/toy. Landscape 3:2, subject clearly occupies frame with safe margins for cards. Natural Caribbean blue and organic greens, no yellow/sepia wash. No lettering, logos, watermarks or border. No invented landmarks, no copied photograph. Cabo San Juan in Tayrona National Natural Park Colombia: iconic small palm-thatched round kiosk on granite rocky promontory between two sandy turquoise coves, big smooth coastal granite boulders, tropical palms and forest. Elevated diagonal coastal view with kiosk recognizable, no urban resort towers.",
+        "output_hint": "Generated images are saved to /Users/nivato/.codex/generated_images/01a14823-73b0-7690-8d26-5eaec0583b39 as /Users/nivato/.codex/generated_images/01a14823-73b0-7690-8d26-5eaec0583b39/exec-042af785-542f-4459-97b1-49a762cc78c3.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+        "provider": "OpenAI",
+        "tool": "image_gen.imagegen",
+        "model": "not_exposed_by_builtin_tool",
+        "referenced_image_paths": [],
+        "generation_route": "independent_composition_from_documented_facts",
+        "human_result_approved": false,
+        "production_approved": false
+      },
+      "visual_references": [],
+      "fact_sources": [
+        {
+          "url": "https://www.parquesnacionales.gov.co/nuestros-parques/pnn-tayrona/",
+          "checked_at": "2026-10-17",
+          "facts_verified": "Rasgos geográficos/actividad según expediente textual previo; no exactitud topográfica del resultado."
+        }
+      ],
+      "source_sha256": "193b09cd115c87bde9e1a481a2d4eb5be6695b2aa8292ac511a28d7897726b15",
+      "files": [
+        {
+          "path": "backend/public/assets/santa-marta-semirrealista/tayrona-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 56680,
+          "sha256": "0b5e18a0696356597ad6df6fb76da948a97b6a8eadab3b784666ee24d761ea8c"
+        },
+        {
+          "path": "backend/public/assets/santa-marta-semirrealista/tayrona-800.webp",
+          "width": 800,
+          "height": 533,
+          "bytes": 152182,
+          "sha256": "ead4789513c728eac63f08778faf98989bfc26ce75918f1cb7ded45a1eaca473"
+        }
+      ],
+      "limitations": "Composición editorial independiente desde rasgos documentados, no fotografía ni reconstrucción exacta.",
+      "rights": {
+        "route": "independent_composition",
+        "photographs_uploaded": false,
+        "style_reference_uploaded": false,
+        "third_party_image_license_applied": false,
+        "provider_result_terms": "Condiciones aplicables de la cuenta/proveedor; no se afirma exclusividad ni ausencia universal de derechos adicionales.",
+        "human_generation_authority": "Encargo actual autoriza composición desde descripciones; no aprobación final."
+      },
+      "review": {
+        "status": "proposal_pending_human_review",
+        "identity_check": "agent_checked_representative_subject_not_exact_reconstruction",
+        "crop_check_desktop": "whole_image_resized_no_crop",
+        "crop_check_mobile": "whole_image_resized_no_crop",
+        "style_check": "high_realism_compare_chosen_style_pending_human_acceptance",
+        "human_result_approved": false
+      },
+      "publication": {
+        "approved_by": null,
+        "approved_at": null,
+        "published_at": null
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "asset_id": "ciudad-perdida",
+      "destination_id": "santa-marta",
+      "attraction_id": "ciudad-perdida",
+      "purpose": "place",
+      "file": "crecimiento-colombia/entregas/santa-marta/semirrealista-v1/maestros/ciudad-perdida.png",
+      "media_type": "ai_generated_illustration",
+      "language": "shared_es_en_pt",
+      "style_id": "EL-SEMI-REALISTA-1",
+      "generation": {
+        "asset_id": "ciudad-perdida",
+        "prompt": "Original independent fact-based editorial illustration, not a photo or reconstruction. EL-SEMI-REALISTA-1 adult travel magazine semi-realistic digital painting, visibly painted subtle brush strokes, rich convincing natural materials and atmospheric depth, sophisticated not cartoon/toy. Landscape 3:2, subject clearly occupies frame with safe margins for cards. Natural Caribbean blue and organic greens, no yellow/sepia wash. No lettering, logos, watermarks or border. No invented landmarks, no copied photograph. Teyuna Ciudad Perdida archaeological site in Sierra Nevada de Santa Marta Colombia: several circular stone terrace foundations stepping along a narrow lush tropical mountain ridge, grass centres, connecting stone paths, dense cloud forest. View from above ridge with believable scale. No intact temple, pyramids, Machu Picchu buildings, statues, snow, tourists centre stage.",
+        "output_hint": "Generated images are saved to /Users/nivato/.codex/generated_images/01a14823-73b0-7690-8d26-5eaec0583b39 as /Users/nivato/.codex/generated_images/01a14823-73b0-7690-8d26-5eaec0583b39/exec-304718ff-58b2-47c3-861b-6437f922af72.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+        "provider": "OpenAI",
+        "tool": "image_gen.imagegen",
+        "model": "not_exposed_by_builtin_tool",
+        "referenced_image_paths": [],
+        "generation_route": "independent_composition_from_documented_facts",
+        "human_result_approved": false,
+        "production_approved": false
+      },
+      "visual_references": [],
+      "fact_sources": [
+        {
+          "url": "https://www.icanh.gov.co/parques-icanh/parque-arqueologico-teyuna/guia-turistica",
+          "checked_at": "2026-10-17",
+          "facts_verified": "Rasgos geográficos/actividad según expediente textual previo; no exactitud topográfica del resultado."
+        }
+      ],
+      "source_sha256": "0f6ad5a843012debd5233ca5d22da19013c1992cb49e9ee638b05a303af6bcb6",
+      "files": [
+        {
+          "path": "backend/public/assets/santa-marta-semirrealista/ciudad-perdida-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 62080,
+          "sha256": "5506ea7ffd6f96ef4680612075edc997cb5cf74d2c1f80371ad103964d6a5a19"
+        },
+        {
+          "path": "backend/public/assets/santa-marta-semirrealista/ciudad-perdida-800.webp",
+          "width": 800,
+          "height": 533,
+          "bytes": 167106,
+          "sha256": "d84f77c9a7d956c5279fba8a0fb9862da87c2c5a1b0b145e230fb75229fefc76"
+        }
+      ],
+      "limitations": "Composición editorial independiente desde rasgos documentados, no fotografía ni reconstrucción exacta.",
+      "rights": {
+        "route": "independent_composition",
+        "photographs_uploaded": false,
+        "style_reference_uploaded": false,
+        "third_party_image_license_applied": false,
+        "provider_result_terms": "Condiciones aplicables de la cuenta/proveedor; no se afirma exclusividad ni ausencia universal de derechos adicionales.",
+        "human_generation_authority": "Encargo actual autoriza composición desde descripciones; no aprobación final."
+      },
+      "review": {
+        "status": "proposal_pending_human_review",
+        "identity_check": "agent_checked_representative_subject_not_exact_reconstruction",
+        "crop_check_desktop": "whole_image_resized_no_crop",
+        "crop_check_mobile": "whole_image_resized_no_crop",
+        "style_check": "high_realism_compare_chosen_style_pending_human_acceptance",
+        "human_result_approved": false
+      },
+      "publication": {
+        "approved_by": null,
+        "approved_at": null,
+        "published_at": null
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "asset_id": "minca",
+      "destination_id": "santa-marta",
+      "attraction_id": "minca",
+      "purpose": "place",
+      "file": "crecimiento-colombia/entregas/santa-marta/semirrealista-v1/maestros/minca.png",
+      "media_type": "ai_generated_illustration",
+      "language": "shared_es_en_pt",
+      "style_id": "EL-SEMI-REALISTA-1",
+      "generation": {
+        "asset_id": "minca",
+        "prompt": "Original independent fact-based editorial illustration, not a photo or reconstruction. EL-SEMI-REALISTA-1 adult travel magazine semi-realistic digital painting, visibly painted subtle brush strokes, rich convincing natural materials and atmospheric depth, sophisticated not cartoon/toy. Landscape 3:2, subject clearly occupies frame with safe margins for cards. Natural Caribbean blue and organic greens, no yellow/sepia wash. No lettering, logos, watermarks or border. No invented landmarks, no copied photograph. Minca corregimiento in Santa Marta foothills Colombia: small inhabited tropical foothill village with low stucco and terracotta-roof houses nestled among very lush green Sierra Nevada mountains, curving modest village road, distant layered green ridges. Human scale, coffee-growing landscape. No snow peaks dominating, no colonial monumental square, no coast/beach or alpine scenery.",
+        "output_hint": "Generated images are saved to /Users/nivato/.codex/generated_images/01a14823-73b0-7690-8d26-5eaec0583b39 as /Users/nivato/.codex/generated_images/01a14823-73b0-7690-8d26-5eaec0583b39/exec-16d6e4a7-10fc-4ab1-98e8-dae300727889.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+        "provider": "OpenAI",
+        "tool": "image_gen.imagegen",
+        "model": "not_exposed_by_builtin_tool",
+        "referenced_image_paths": [],
+        "generation_route": "independent_composition_from_documented_facts",
+        "human_result_approved": false,
+        "production_approved": false
+      },
+      "visual_references": [],
+      "fact_sources": [
+        {
+          "url": "https://colombia.travel/es/santa-marta/descanso-en-minca",
+          "checked_at": "2026-10-17",
+          "facts_verified": "Rasgos geográficos/actividad según expediente textual previo; no exactitud topográfica del resultado."
+        }
+      ],
+      "source_sha256": "1622d2d382e12fe28f867f82071f665a0fb5e5aa7da42f2f49997bc7280d1a2d",
+      "files": [
+        {
+          "path": "backend/public/assets/santa-marta-semirrealista/minca-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 64678,
+          "sha256": "868d4198ecc3d0a6a3d259a43adbcec920501855c61547c07a2a26d2f8a6a78b"
+        },
+        {
+          "path": "backend/public/assets/santa-marta-semirrealista/minca-800.webp",
+          "width": 800,
+          "height": 533,
+          "bytes": 164640,
+          "sha256": "7a30f1d53a405506e6bed1ee917632266b630097a42de410494e7924d17f14ed"
+        }
+      ],
+      "limitations": "Composición editorial independiente desde rasgos documentados, no fotografía ni reconstrucción exacta.",
+      "rights": {
+        "route": "independent_composition",
+        "photographs_uploaded": false,
+        "style_reference_uploaded": false,
+        "third_party_image_license_applied": false,
+        "provider_result_terms": "Condiciones aplicables de la cuenta/proveedor; no se afirma exclusividad ni ausencia universal de derechos adicionales.",
+        "human_generation_authority": "Encargo actual autoriza composición desde descripciones; no aprobación final."
+      },
+      "review": {
+        "status": "proposal_pending_human_review",
+        "identity_check": "agent_checked_representative_subject_not_exact_reconstruction",
+        "crop_check_desktop": "whole_image_resized_no_crop",
+        "crop_check_mobile": "whole_image_resized_no_crop",
+        "style_check": "high_realism_compare_chosen_style_pending_human_acceptance",
+        "human_result_approved": false
+      },
+      "publication": {
+        "approved_by": null,
+        "approved_at": null,
+        "published_at": null
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "asset_id": "rodadero",
+      "destination_id": "santa-marta",
+      "attraction_id": "rodadero",
+      "purpose": "place",
+      "file": "crecimiento-colombia/entregas/santa-marta/semirrealista-v1/maestros/rodadero.png",
+      "media_type": "ai_generated_illustration",
+      "language": "shared_es_en_pt",
+      "style_id": "EL-SEMI-REALISTA-1",
+      "generation": {
+        "asset_id": "rodadero",
+        "prompt": "Original independent fact-based editorial illustration, not a photo or reconstruction. EL-SEMI-REALISTA-1 adult travel magazine semi-realistic digital painting, visibly painted subtle brush strokes, rich convincing natural materials and atmospheric depth, sophisticated not cartoon/toy. Landscape 3:2, subject clearly occupies frame with safe margins for cards. Natural Caribbean blue and organic greens, no yellow/sepia wash. No lettering, logos, watermarks or border. No invented landmarks, no copied photograph. El Rodadero Santa Marta Colombia, specifically the curving urban beach of Gaira bay: lively pale sand with palms, turquoise Caribbean bay, recognizable cluster of modern white coastal hotel/apartment towers following shore and dry green-brown coastal hills behind. Elevated coastal viewpoint, complete buildings not cut. No historic cathedral. This is an attraction illustration, not the historic-bay hero.",
+        "output_hint": "Generated images are saved to /Users/nivato/.codex/generated_images/01a14823-73b0-7690-8d26-5eaec0583b39 as /Users/nivato/.codex/generated_images/01a14823-73b0-7690-8d26-5eaec0583b39/exec-0dc2e5dc-62f3-44ce-9009-e4d2aa3e8cce.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+        "provider": "OpenAI",
+        "tool": "image_gen.imagegen",
+        "model": "not_exposed_by_builtin_tool",
+        "referenced_image_paths": [],
+        "generation_route": "independent_composition_from_documented_facts",
+        "human_result_approved": false,
+        "production_approved": false
+      },
+      "visual_references": [],
+      "fact_sources": [
+        {
+          "url": "https://colombia.travel/es/santa-marta",
+          "checked_at": "2026-10-17",
+          "facts_verified": "Rasgos geográficos/actividad según expediente textual previo; no exactitud topográfica del resultado."
+        }
+      ],
+      "source_sha256": "000c4114ec67e1aea9e52f8033e6133e9303130bc841fdf2a8a213aff9245b2c",
+      "files": [
+        {
+          "path": "backend/public/assets/santa-marta-semirrealista/rodadero-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 57278,
+          "sha256": "17a90c3545a6946f0ef61cd0ca68dbf6131d50431b6d53fb49978b70820b4927"
+        },
+        {
+          "path": "backend/public/assets/santa-marta-semirrealista/rodadero-800.webp",
+          "width": 800,
+          "height": 533,
+          "bytes": 149136,
+          "sha256": "3a46ae0e0d6ac9c93a30c255d803442c3fdab65fcf3a1489466109db16ba685b"
+        }
+      ],
+      "limitations": "Composición editorial independiente desde rasgos documentados, no fotografía ni reconstrucción exacta.",
+      "rights": {
+        "route": "independent_composition",
+        "photographs_uploaded": false,
+        "style_reference_uploaded": false,
+        "third_party_image_license_applied": false,
+        "provider_result_terms": "Condiciones aplicables de la cuenta/proveedor; no se afirma exclusividad ni ausencia universal de derechos adicionales.",
+        "human_generation_authority": "Encargo actual autoriza composición desde descripciones; no aprobación final."
+      },
+      "review": {
+        "status": "proposal_pending_human_review",
+        "identity_check": "agent_checked_representative_subject_not_exact_reconstruction",
+        "crop_check_desktop": "whole_image_resized_no_crop",
+        "crop_check_mobile": "whole_image_resized_no_crop",
+        "style_check": "high_realism_compare_chosen_style_pending_human_acceptance",
+        "human_result_approved": false
+      },
+      "publication": {
+        "approved_by": null,
+        "approved_at": null,
+        "published_at": null
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "asset_id": "quinta",
+      "destination_id": "santa-marta",
+      "attraction_id": "quinta",
+      "purpose": "place",
+      "file": "crecimiento-colombia/entregas/santa-marta/semirrealista-v1/maestros/quinta.png",
+      "media_type": "ai_generated_illustration",
+      "language": "shared_es_en_pt",
+      "style_id": "EL-SEMI-REALISTA-1",
+      "generation": {
+        "asset_id": "quinta",
+        "prompt": "Original independent fact-based editorial illustration, not a photo or reconstruction. EL-SEMI-REALISTA-1 adult travel magazine semi-realistic digital painting, visibly painted subtle brush strokes, rich convincing natural materials and atmospheric depth, sophisticated not cartoon/toy. Landscape 3:2, subject clearly occupies frame with safe margins for cards. Natural Caribbean blue and organic greens, no yellow/sepia wash. No lettering, logos, watermarks or border. No invented landmarks, no copied photograph. Quinta de San Pedro Alejandrino Santa Marta Colombia: historical low one-storey ochre-yellow hacienda building with terracotta tiled roof, shaded veranda, simple traditional wooden details, enormous lush mature tropical garden trees and shaded pathways. Bolivar heritage setting, not a palace or church, no invented statue as central subject. Inviting garden-height view with building recognizable.",
+        "output_hint": "Generated images are saved to /Users/nivato/.codex/generated_images/01a14823-73b0-7690-8d26-5eaec0583b39 as /Users/nivato/.codex/generated_images/01a14823-73b0-7690-8d26-5eaec0583b39/exec-3ebeeaae-637f-45f9-8c07-e10eae0a222d.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+        "provider": "OpenAI",
+        "tool": "image_gen.imagegen",
+        "model": "not_exposed_by_builtin_tool",
+        "referenced_image_paths": [],
+        "generation_route": "independent_composition_from_documented_facts",
+        "human_result_approved": false,
+        "production_approved": false
+      },
+      "visual_references": [],
+      "fact_sources": [
+        {
+          "url": "https://www.museobolivariano.org.co/laquinta/",
+          "checked_at": "2026-10-17",
+          "facts_verified": "Rasgos geográficos/actividad según expediente textual previo; no exactitud topográfica del resultado."
+        }
+      ],
+      "source_sha256": "df788af5b0612c938e4cbd307680e51e52f18a66e6b3a4dfc8bfa3c69302b393",
+      "files": [
+        {
+          "path": "backend/public/assets/santa-marta-semirrealista/quinta-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 65120,
+          "sha256": "d1cd125f7fc42e435a7ad01ad2c62e930f4574e4397fcb6705258470c81bad9e"
+        },
+        {
+          "path": "backend/public/assets/santa-marta-semirrealista/quinta-800.webp",
+          "width": 800,
+          "height": 533,
+          "bytes": 169942,
+          "sha256": "13617f265400e395bec29b12351c410e69a91b74daa0e271dd0b8da87990550e"
+        }
+      ],
+      "limitations": "Composición editorial independiente desde rasgos documentados, no fotografía ni reconstrucción exacta.",
+      "rights": {
+        "route": "independent_composition",
+        "photographs_uploaded": false,
+        "style_reference_uploaded": false,
+        "third_party_image_license_applied": false,
+        "provider_result_terms": "Condiciones aplicables de la cuenta/proveedor; no se afirma exclusividad ni ausencia universal de derechos adicionales.",
+        "human_generation_authority": "Encargo actual autoriza composición desde descripciones; no aprobación final."
+      },
+      "review": {
+        "status": "proposal_pending_human_review",
+        "identity_check": "agent_checked_representative_subject_not_exact_reconstruction",
+        "crop_check_desktop": "whole_image_resized_no_crop",
+        "crop_check_mobile": "whole_image_resized_no_crop",
+        "style_check": "high_realism_compare_chosen_style_pending_human_acceptance",
+        "human_result_approved": false
+      },
+      "publication": {
+        "approved_by": null,
+        "approved_at": null,
+        "published_at": null
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "asset_id": "taganga",
+      "destination_id": "santa-marta",
+      "attraction_id": "taganga",
+      "purpose": "place",
+      "file": "crecimiento-colombia/entregas/santa-marta/semirrealista-v1/maestros/taganga.png",
+      "media_type": "ai_generated_illustration",
+      "language": "shared_es_en_pt",
+      "style_id": "EL-SEMI-REALISTA-1",
+      "generation": {
+        "asset_id": "taganga",
+        "prompt": "Original independent fact-based editorial illustration, not a photo or reconstruction. EL-SEMI-REALISTA-1 adult travel magazine semi-realistic digital painting, visibly painted subtle brush strokes, rich convincing natural materials and atmospheric depth, sophisticated not cartoon/toy. Landscape 3:2, subject clearly occupies frame with safe margins for cards. Natural Caribbean blue and organic greens, no yellow/sepia wash. No lettering, logos, watermarks or border. No invented landmarks, no copied photograph. Taganga fishing village in Santa Marta Colombia: sheltered curving turquoise bay surrounded by dry scrubby cactus hills, small fishing boats near shore, low-rise simple village houses against hills, sandy waterfront. Elevated view from bay edge, warm natural dry coastal geography. No resort towers, cathedral, jungle Tayrona kiosk or invented fort.",
+        "output_hint": "Generated images are saved to /Users/nivato/.codex/generated_images/01a14823-73b0-7690-8d26-5eaec0583b39 as /Users/nivato/.codex/generated_images/01a14823-73b0-7690-8d26-5eaec0583b39/exec-149bcb6f-7f9b-4112-9400-9d3ff38719e3.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+        "provider": "OpenAI",
+        "tool": "image_gen.imagegen",
+        "model": "not_exposed_by_builtin_tool",
+        "referenced_image_paths": [],
+        "generation_route": "independent_composition_from_documented_facts",
+        "human_result_approved": false,
+        "production_approved": false
+      },
+      "visual_references": [],
+      "fact_sources": [
+        {
+          "url": "https://colombia.travel/es/santa-marta/taganga",
+          "checked_at": "2026-10-17",
+          "facts_verified": "Rasgos geográficos/actividad según expediente textual previo; no exactitud topográfica del resultado."
+        }
+      ],
+      "source_sha256": "073cf285b3321b91b9892ffb57c33c0c362e98b1d66cac0717a3a115cc343b38",
+      "files": [
+        {
+          "path": "backend/public/assets/santa-marta-semirrealista/taganga-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 50872,
+          "sha256": "d5014eed84c97e79fda899ccfa373c69ab38eabea59ee3cc5825e797308ae897"
+        },
+        {
+          "path": "backend/public/assets/santa-marta-semirrealista/taganga-800.webp",
+          "width": 800,
+          "height": 533,
+          "bytes": 137184,
+          "sha256": "159d7c8f64baeeec93e114613f181d770c3a991a8c470ebd1bfebf08d30f12db"
+        }
+      ],
+      "limitations": "Composición editorial independiente desde rasgos documentados, no fotografía ni reconstrucción exacta.",
+      "rights": {
+        "route": "independent_composition",
+        "photographs_uploaded": false,
+        "style_reference_uploaded": false,
+        "third_party_image_license_applied": false,
+        "provider_result_terms": "Condiciones aplicables de la cuenta/proveedor; no se afirma exclusividad ni ausencia universal de derechos adicionales.",
+        "human_generation_authority": "Encargo actual autoriza composición desde descripciones; no aprobación final."
+      },
+      "review": {
+        "status": "proposal_pending_human_review",
+        "identity_check": "agent_checked_representative_subject_not_exact_reconstruction",
+        "crop_check_desktop": "whole_image_resized_no_crop",
+        "crop_check_mobile": "whole_image_resized_no_crop",
+        "style_check": "high_realism_compare_chosen_style_pending_human_acceptance",
+        "human_result_approved": false
+      },
+      "publication": {
+        "approved_by": null,
+        "approved_at": null,
+        "published_at": null
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "asset_id": "centro-historico",
+      "destination_id": "santa-marta",
+      "attraction_id": "centro-historico",
+      "purpose": "place",
+      "file": "crecimiento-colombia/entregas/santa-marta/semirrealista-v1/maestros/centro-historico.png",
+      "media_type": "ai_generated_illustration",
+      "language": "shared_es_en_pt",
+      "style_id": "EL-SEMI-REALISTA-1",
+      "generation": {
+        "asset_id": "centro-historico",
+        "prompt": "Independent fact-based semi-realistic editorial digital painting EL-SEMI-REALISTA-1 of historic Santa Marta Colombia, landscape3:2 adult travel illustration with subtle brushwork/material detail, natural white plaster and Caribbean blue, no sepia/text/logos. View from an open historic pedestrian plaza toward the modest WHITE Santa Marta cathedral. CRITICAL actual church shape: SINGLE tall rectangular square bell/clock tower at LEFT of central gabled facade, open bell arches high up, white rounded dome set behind and leftward, facade with central arched entrance and simple triangular pediment. The RIGHT side is LOW, NO second tower. Keep building complete with space above single tower. Human-scale surrounding low traditional town buildings and trees, a few anatomically coherent small complete adult pedestrians. Not a grand invented symmetrical twin-tower basilica, not Cartagena/Jerico. Clearly illustrated original independent viewpoint, not copying a photograph.",
+        "output_hint": "Generated images are saved to /Users/nivato/.codex/generated_images/01a14823-73b0-7690-8d26-5eaec0583b39 as /Users/nivato/.codex/generated_images/01a14823-73b0-7690-8d26-5eaec0583b39/exec-66067a1b-22aa-4c97-966d-1e089f49dd31.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+        "provider": "OpenAI",
+        "tool": "image_gen.imagegen",
+        "model": "not_exposed_by_builtin_tool",
+        "referenced_image_paths": [],
+        "generation_route": "independent_composition_from_documented_facts",
+        "human_result_approved": false,
+        "production_approved": false
+      },
+      "visual_references": [],
+      "fact_sources": [
+        {
+          "url": "https://colombia.travel/es/santa-marta",
+          "checked_at": "2026-10-17",
+          "facts_verified": "Rasgos geográficos/actividad según expediente textual previo; no exactitud topográfica del resultado."
+        }
+      ],
+      "source_sha256": "6a1bf7f72b55cca1c12d6d922cb80b2bce38754742e5a129a63ed8ec3577fff2",
+      "files": [
+        {
+          "path": "backend/public/assets/santa-marta-semirrealista/centro-historico-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 51630,
+          "sha256": "ec0e100045287b28f62cfc31b6bf1252f44151da34b5c4ea4021a66b2324b614"
+        },
+        {
+          "path": "backend/public/assets/santa-marta-semirrealista/centro-historico-800.webp",
+          "width": 800,
+          "height": 533,
+          "bytes": 132634,
+          "sha256": "13c13fffb10dcbc9a40b81622c0df8433b3d24c494c78873f489e95a8e4ac41f"
+        }
+      ],
+      "limitations": "Composición editorial independiente desde rasgos documentados, no fotografía ni reconstrucción exacta.",
+      "rights": {
+        "route": "independent_composition",
+        "photographs_uploaded": false,
+        "style_reference_uploaded": false,
+        "third_party_image_license_applied": false,
+        "provider_result_terms": "Condiciones aplicables de la cuenta/proveedor; no se afirma exclusividad ni ausencia universal de derechos adicionales.",
+        "human_generation_authority": "Encargo actual autoriza composición desde descripciones; no aprobación final."
+      },
+      "review": {
+        "status": "proposal_pending_human_review",
+        "identity_check": "agent_checked_representative_subject_not_exact_reconstruction",
+        "crop_check_desktop": "whole_image_resized_no_crop",
+        "crop_check_mobile": "whole_image_resized_no_crop",
+        "style_check": "high_realism_compare_chosen_style_pending_human_acceptance",
+        "human_result_approved": false
+      },
+      "publication": {
+        "approved_by": null,
+        "approved_at": null,
+        "published_at": null
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "asset_id": "playa-blanca",
+      "destination_id": "santa-marta",
+      "attraction_id": "playa-blanca",
+      "purpose": "place",
+      "file": "crecimiento-colombia/entregas/santa-marta/semirrealista-v1/maestros/playa-blanca.png",
+      "media_type": "ai_generated_illustration",
+      "language": "shared_es_en_pt",
+      "style_id": "EL-SEMI-REALISTA-1",
+      "generation": {
+        "asset_id": "playa-blanca",
+        "prompt": "Original independent fact-based editorial illustration, not a photo or reconstruction. EL-SEMI-REALISTA-1 adult travel magazine semi-realistic digital painting, visibly painted subtle brush strokes, rich convincing natural materials and atmospheric depth, sophisticated not cartoon/toy. Landscape 3:2, subject clearly occupies frame with safe margins for cards. Natural Caribbean blue and organic greens, no yellow/sepia wash. No lettering, logos, watermarks or border. No invented landmarks, no copied photograph. Playa Blanca near El Rodadero, Santa Marta Colombia, NOT Baru Cartagena: small curving pale sandy beach against steep dry rocky coastal hills with sparse cactus/scrub, clear turquoise Gaira bay, a few modest palm-thatched beach shade structures at back. Elevated rocky coastal viewpoint across quiet beach. No coconut jungle, no sprawling resort, no Tayrona promontory or Cabo kiosk.",
+        "output_hint": "Generated images are saved to /Users/nivato/.codex/generated_images/01a14823-73b0-7690-8d26-5eaec0583b39 as /Users/nivato/.codex/generated_images/01a14823-73b0-7690-8d26-5eaec0583b39/exec-2c2d9c22-a254-4dd9-9a67-2d5adffc2eaf.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+        "provider": "OpenAI",
+        "tool": "image_gen.imagegen",
+        "model": "not_exposed_by_builtin_tool",
+        "referenced_image_paths": [],
+        "generation_route": "independent_composition_from_documented_facts",
+        "human_result_approved": false,
+        "production_approved": false
+      },
+      "visual_references": [],
+      "fact_sources": [
+        {
+          "url": "https://indetur.gov.co/playa-blanca/",
+          "checked_at": "2026-10-17",
+          "facts_verified": "Rasgos geográficos/actividad según expediente textual previo; no exactitud topográfica del resultado."
+        }
+      ],
+      "source_sha256": "222c75f0f4a73cd3cdce88a2d51dd234f623ad73db6b3fdbe96f20536d3c62f9",
+      "files": [
+        {
+          "path": "backend/public/assets/santa-marta-semirrealista/playa-blanca-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 53538,
+          "sha256": "78078d1e6da1ac5e68a1511443e4538ede4eaf27833819c768d71a62769be6ac"
+        },
+        {
+          "path": "backend/public/assets/santa-marta-semirrealista/playa-blanca-800.webp",
+          "width": 800,
+          "height": 533,
+          "bytes": 148218,
+          "sha256": "05daa3693b73ff3a366c22fa53147e5812f164ffab60d3c79eece492ddcdcf72"
+        }
+      ],
+      "limitations": "Composición editorial independiente desde rasgos documentados, no fotografía ni reconstrucción exacta.",
+      "rights": {
+        "route": "independent_composition",
+        "photographs_uploaded": false,
+        "style_reference_uploaded": false,
+        "third_party_image_license_applied": false,
+        "provider_result_terms": "Condiciones aplicables de la cuenta/proveedor; no se afirma exclusividad ni ausencia universal de derechos adicionales.",
+        "human_generation_authority": "Encargo actual autoriza composición desde descripciones; no aprobación final."
+      },
+      "review": {
+        "status": "proposal_pending_human_review",
+        "identity_check": "agent_checked_representative_subject_not_exact_reconstruction",
+        "crop_check_desktop": "whole_image_resized_no_crop",
+        "crop_check_mobile": "whole_image_resized_no_crop",
+        "style_check": "high_realism_compare_chosen_style_pending_human_acceptance",
+        "human_result_approved": false
+      },
+      "publication": {
+        "approved_by": null,
+        "approved_at": null,
+        "published_at": null
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "asset_id": "exp-buceo-taganga",
+      "destination_id": "santa-marta",
+      "attraction_id": "buceo-taganga",
+      "purpose": "experience",
+      "file": "crecimiento-colombia/entregas/santa-marta/semirrealista-v1/maestros/exp-buceo-taganga.png",
+      "media_type": "ai_generated_illustration",
+      "language": "shared_es_en_pt",
+      "style_id": "EL-SEMI-REALISTA-1",
+      "generation": {
+        "asset_id": "exp-buceo-taganga",
+        "prompt": "Original independent fact-based editorial illustration, not a photo or reconstruction. EL-SEMI-REALISTA-1 adult travel magazine semi-realistic digital painting, visibly painted subtle brush strokes, rich convincing natural materials and atmospheric depth, sophisticated not cartoon/toy. Landscape 3:2, subject clearly occupies frame with safe margins for cards. Natural Caribbean blue and organic greens, no yellow/sepia wash. No lettering, logos, watermarks or border. No invented landmarks, no copied photograph. Representative recreational SCUBA experience off Taganga Santa Marta Colombia: two complete adult divers underwater in clear blue Caribbean water, anatomically coherent full bodies, proper masks regulators tanks and fins, observing modest tropical reef fish and rock/coral habitat at respectful distance, no touching wildlife. No logos or identifiable operator, no guaranteed rare animals or whale shark.",
+        "output_hint": "Generated images are saved to /Users/nivato/.codex/generated_images/01a14823-73b0-7690-8d26-5eaec0583b39 as /Users/nivato/.codex/generated_images/01a14823-73b0-7690-8d26-5eaec0583b39/exec-397c2190-4bb2-4569-95ee-5d97e1c7b1ba.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+        "provider": "OpenAI",
+        "tool": "image_gen.imagegen",
+        "model": "not_exposed_by_builtin_tool",
+        "referenced_image_paths": [],
+        "generation_route": "independent_composition_from_documented_facts",
+        "human_result_approved": false,
+        "production_approved": false
+      },
+      "visual_references": [],
+      "fact_sources": [
+        {
+          "url": "https://www.barracudataganga.com/cursos-de-buceo/",
+          "checked_at": "2026-10-17",
+          "facts_verified": "Rasgos geográficos/actividad según expediente textual previo; no exactitud topográfica del resultado."
+        }
+      ],
+      "source_sha256": "f344bc7e281c99eb18afdd783488a932e5d2e12cdbf15347bee764e9ca508c02",
+      "files": [
+        {
+          "path": "backend/public/assets/santa-marta-semirrealista/exp-buceo-taganga-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 51876,
+          "sha256": "267e843b269f86a61e9e570dee8469fa9130f90e7714c009ef7a99058fdfaa4d"
+        },
+        {
+          "path": "backend/public/assets/santa-marta-semirrealista/exp-buceo-taganga-800.webp",
+          "width": 800,
+          "height": 533,
+          "bytes": 125168,
+          "sha256": "42745f911d47f9bc743243875efa25a6b2486a9e7f858cfefa51bff14fbbdbec"
+        }
+      ],
+      "limitations": "Composición editorial independiente desde rasgos documentados, no fotografía ni reconstrucción exacta. Escena representativa: no prueba recinto, ruta, operador, personas ni disponibilidad actuales.",
+      "rights": {
+        "route": "independent_composition",
+        "photographs_uploaded": false,
+        "style_reference_uploaded": false,
+        "third_party_image_license_applied": false,
+        "provider_result_terms": "Condiciones aplicables de la cuenta/proveedor; no se afirma exclusividad ni ausencia universal de derechos adicionales.",
+        "human_generation_authority": "Encargo actual autoriza composición desde descripciones; no aprobación final."
+      },
+      "review": {
+        "status": "proposal_pending_human_review",
+        "identity_check": "agent_checked_representative_subject_not_exact_reconstruction",
+        "crop_check_desktop": "whole_image_resized_no_crop",
+        "crop_check_mobile": "whole_image_resized_no_crop",
+        "style_check": "high_realism_compare_chosen_style_pending_human_acceptance",
+        "human_result_approved": false
+      },
+      "publication": {
+        "approved_by": null,
+        "approved_at": null,
+        "published_at": null
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "asset_id": "exp-caminata-tayrona",
+      "destination_id": "santa-marta",
+      "attraction_id": "caminata-tayrona",
+      "purpose": "experience",
+      "file": "crecimiento-colombia/entregas/santa-marta/semirrealista-v1/maestros/exp-caminata-tayrona.png",
+      "media_type": "ai_generated_illustration",
+      "language": "shared_es_en_pt",
+      "style_id": "EL-SEMI-REALISTA-1",
+      "generation": {
+        "asset_id": "exp-caminata-tayrona",
+        "prompt": "Original independent fact-based editorial illustration, not a photo or reconstruction. EL-SEMI-REALISTA-1 adult travel magazine semi-realistic digital painting, visibly painted subtle brush strokes, rich convincing natural materials and atmospheric depth, sophisticated not cartoon/toy. Landscape 3:2, subject clearly occupies frame with safe margins for cards. Natural Caribbean blue and organic greens, no yellow/sepia wash. No lettering, logos, watermarks or border. No invented landmarks, no copied photograph. Representative hiking activity in Tayrona Santa Marta Colombia: two complete adult hikers with small backpacks following a forest walking trail between huge smooth granite boulders and lush tropical plants, glimpses turquoise Caribbean through palms. Human action foreground, landscape context, no repeated aerial kiosk attraction composition. Natural clothes and coherent hands/feet, no route guarantee.",
+        "output_hint": "Generated images are saved to /Users/nivato/.codex/generated_images/01a14823-73b0-7690-8d26-5eaec0583b39 as /Users/nivato/.codex/generated_images/01a14823-73b0-7690-8d26-5eaec0583b39/exec-b577043f-bede-4b7b-a4d0-cb7d088e0a7f.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+        "provider": "OpenAI",
+        "tool": "image_gen.imagegen",
+        "model": "not_exposed_by_builtin_tool",
+        "referenced_image_paths": [],
+        "generation_route": "independent_composition_from_documented_facts",
+        "human_result_approved": false,
+        "production_approved": false
+      },
+      "visual_references": [],
+      "fact_sources": [
+        {
+          "url": "https://expotur-eco.com/tours/tour-al-parque-tayrona/",
+          "checked_at": "2026-10-17",
+          "facts_verified": "Rasgos geográficos/actividad según expediente textual previo; no exactitud topográfica del resultado."
+        }
+      ],
+      "source_sha256": "7f906c8d9f4f8a92c1243d22dddbe33cf24ad1957af76dc87d1b6de666432522",
+      "files": [
+        {
+          "path": "backend/public/assets/santa-marta-semirrealista/exp-caminata-tayrona-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 65168,
+          "sha256": "a686a08b2c0dc5e19a2ca563ead87e7be9e6ac02246501c7c5a6505c82eea959"
+        },
+        {
+          "path": "backend/public/assets/santa-marta-semirrealista/exp-caminata-tayrona-800.webp",
+          "width": 800,
+          "height": 533,
+          "bytes": 162402,
+          "sha256": "0659dac3807b4d1af3127e8443820ab596c84caca9ab62b7903590d9e04d9442"
+        }
+      ],
+      "limitations": "Composición editorial independiente desde rasgos documentados, no fotografía ni reconstrucción exacta. Escena representativa: no prueba recinto, ruta, operador, personas ni disponibilidad actuales.",
+      "rights": {
+        "route": "independent_composition",
+        "photographs_uploaded": false,
+        "style_reference_uploaded": false,
+        "third_party_image_license_applied": false,
+        "provider_result_terms": "Condiciones aplicables de la cuenta/proveedor; no se afirma exclusividad ni ausencia universal de derechos adicionales.",
+        "human_generation_authority": "Encargo actual autoriza composición desde descripciones; no aprobación final."
+      },
+      "review": {
+        "status": "proposal_pending_human_review",
+        "identity_check": "agent_checked_representative_subject_not_exact_reconstruction",
+        "crop_check_desktop": "whole_image_resized_no_crop",
+        "crop_check_mobile": "whole_image_resized_no_crop",
+        "style_check": "high_realism_compare_chosen_style_pending_human_acceptance",
+        "human_result_approved": false
+      },
+      "publication": {
+        "approved_by": null,
+        "approved_at": null,
+        "published_at": null
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "asset_id": "exp-minca-cafe",
+      "destination_id": "santa-marta",
+      "attraction_id": "minca-cafe",
+      "purpose": "experience",
+      "file": "crecimiento-colombia/entregas/santa-marta/semirrealista-v1/maestros/exp-minca-cafe.png",
+      "media_type": "ai_generated_illustration",
+      "language": "shared_es_en_pt",
+      "style_id": "EL-SEMI-REALISTA-1",
+      "generation": {
+        "asset_id": "exp-minca-cafe",
+        "prompt": "Original independent fact-based editorial illustration, not a photo or reconstruction. EL-SEMI-REALISTA-1 adult travel magazine semi-realistic digital painting, visibly painted subtle brush strokes, rich convincing natural materials and atmospheric depth, sophisticated not cartoon/toy. Landscape 3:2, subject clearly occupies frame with safe margins for cards. Natural Caribbean blue and organic greens, no yellow/sepia wash. No lettering, logos, watermarks or border. No invented landmarks, no copied photograph. Representative coffee learning activity in Minca Santa Marta Colombia: complete adult local guide explaining ripe red coffee cherries on a living coffee shrub to two adult visitors in lush shaded mountain coffee-growing garden; one small tasting table with cups nearby, realistic human anatomy and complete hands, no branding or named farm claim. No toucan used as stand-in for coffee activity, no industrial factory.",
+        "output_hint": "Generated images are saved to /Users/nivato/.codex/generated_images/01a14823-73b0-7690-8d26-5eaec0583b39 as /Users/nivato/.codex/generated_images/01a14823-73b0-7690-8d26-5eaec0583b39/exec-5372cfa4-81c4-47b4-b443-c29bf2676c02.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+        "provider": "OpenAI",
+        "tool": "image_gen.imagegen",
+        "model": "not_exposed_by_builtin_tool",
+        "referenced_image_paths": [],
+        "generation_route": "independent_composition_from_documented_facts",
+        "human_result_approved": false,
+        "production_approved": false
+      },
+      "visual_references": [],
+      "fact_sources": [
+        {
+          "url": "https://expotur-eco.com/tours/tour-a-minca-santa-marta/",
+          "checked_at": "2026-10-17",
+          "facts_verified": "Rasgos geográficos/actividad según expediente textual previo; no exactitud topográfica del resultado."
+        }
+      ],
+      "source_sha256": "52ce99da260ee0d94a34b385a022766067006a431b2fd3150fb9913eaf64ea21",
+      "files": [
+        {
+          "path": "backend/public/assets/santa-marta-semirrealista/exp-minca-cafe-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 56222,
+          "sha256": "810b86e600e5890b4136e2d8f3e0ca08cad0d8cf1708bc95f65902611991d792"
+        },
+        {
+          "path": "backend/public/assets/santa-marta-semirrealista/exp-minca-cafe-800.webp",
+          "width": 800,
+          "height": 533,
+          "bytes": 124160,
+          "sha256": "cdf9e39be6ac69fe0fea31a45ad60b427fa787bcb8babc0883b1567e921c9b29"
+        }
+      ],
+      "limitations": "Composición editorial independiente desde rasgos documentados, no fotografía ni reconstrucción exacta. Escena representativa: no prueba recinto, ruta, operador, personas ni disponibilidad actuales.",
+      "rights": {
+        "route": "independent_composition",
+        "photographs_uploaded": false,
+        "style_reference_uploaded": false,
+        "third_party_image_license_applied": false,
+        "provider_result_terms": "Condiciones aplicables de la cuenta/proveedor; no se afirma exclusividad ni ausencia universal de derechos adicionales.",
+        "human_generation_authority": "Encargo actual autoriza composición desde descripciones; no aprobación final."
+      },
+      "review": {
+        "status": "proposal_pending_human_review",
+        "identity_check": "agent_checked_representative_subject_not_exact_reconstruction",
+        "crop_check_desktop": "whole_image_resized_no_crop",
+        "crop_check_mobile": "whole_image_resized_no_crop",
+        "style_check": "high_realism_compare_chosen_style_pending_human_acceptance",
+        "human_result_approved": false
+      },
+      "publication": {
+        "approved_by": null,
+        "approved_at": null,
+        "published_at": null
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "asset_id": "exp-recorrido-centro",
+      "destination_id": "santa-marta",
+      "attraction_id": "recorrido-centro",
+      "purpose": "experience",
+      "file": "crecimiento-colombia/entregas/santa-marta/semirrealista-v1/maestros/exp-recorrido-centro.png",
+      "media_type": "ai_generated_illustration",
+      "language": "shared_es_en_pt",
+      "style_id": "EL-SEMI-REALISTA-1",
+      "generation": {
+        "asset_id": "exp-recorrido-centro",
+        "prompt": "Original independent fact-based editorial illustration, not a photo or reconstruction. EL-SEMI-REALISTA-1 adult travel magazine semi-realistic digital painting, visibly painted subtle brush strokes, rich convincing natural materials and atmospheric depth, sophisticated not cartoon/toy. Landscape 3:2, subject clearly occupies frame with safe margins for cards. Natural Caribbean blue and organic greens, no yellow/sepia wash. No lettering, logos, watermarks or border. No invented landmarks, no copied photograph. Representative guided walking experience historic Santa Marta Colombia: small group of complete adult visitors listening to a guide gesturing on a modest colonial street with wooden balconies and shade trees, believable white/warm plaster buildings, focus on human discovery not repeated cathedral landmark composition. No flags/brand logos, no invented monumental heritage buildings.",
+        "output_hint": "Generated images are saved to /Users/nivato/.codex/generated_images/01a14823-73b0-7690-8d26-5eaec0583b39 as /Users/nivato/.codex/generated_images/01a14823-73b0-7690-8d26-5eaec0583b39/exec-91ccb5a1-193d-4330-9413-06d44711c728.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+        "provider": "OpenAI",
+        "tool": "image_gen.imagegen",
+        "model": "not_exposed_by_builtin_tool",
+        "referenced_image_paths": [],
+        "generation_route": "independent_composition_from_documented_facts",
+        "human_result_approved": false,
+        "production_approved": false
+      },
+      "visual_references": [],
+      "fact_sources": [
+        {
+          "url": "https://visitsantamarta.com/en/experiences/free-walking-tour-santa-marta/13",
+          "checked_at": "2026-10-17",
+          "facts_verified": "Rasgos geográficos/actividad según expediente textual previo; no exactitud topográfica del resultado."
+        }
+      ],
+      "source_sha256": "c3572c5a8245682b9338a550f5777c0ca82250a577ef97794fc02749a8deaaaf",
+      "files": [
+        {
+          "path": "backend/public/assets/santa-marta-semirrealista/exp-recorrido-centro-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 50868,
+          "sha256": "3a69d2581e04e01b3af0ca8e97b647ac842be586cb62903ca6634501e94d1d42"
+        },
+        {
+          "path": "backend/public/assets/santa-marta-semirrealista/exp-recorrido-centro-800.webp",
+          "width": 800,
+          "height": 533,
+          "bytes": 117898,
+          "sha256": "53da41e3eaf5c72632dd6c99d6ff6564f27a45d0754ec084e20effd099419040"
+        }
+      ],
+      "limitations": "Composición editorial independiente desde rasgos documentados, no fotografía ni reconstrucción exacta. Escena representativa: no prueba recinto, ruta, operador, personas ni disponibilidad actuales.",
+      "rights": {
+        "route": "independent_composition",
+        "photographs_uploaded": false,
+        "style_reference_uploaded": false,
+        "third_party_image_license_applied": false,
+        "provider_result_terms": "Condiciones aplicables de la cuenta/proveedor; no se afirma exclusividad ni ausencia universal de derechos adicionales.",
+        "human_generation_authority": "Encargo actual autoriza composición desde descripciones; no aprobación final."
+      },
+      "review": {
+        "status": "proposal_pending_human_review",
+        "identity_check": "agent_checked_representative_subject_not_exact_reconstruction",
+        "crop_check_desktop": "whole_image_resized_no_crop",
+        "crop_check_mobile": "whole_image_resized_no_crop",
+        "style_check": "high_realism_compare_chosen_style_pending_human_acceptance",
+        "human_result_approved": false
+      },
+      "publication": {
+        "approved_by": null,
+        "approved_at": null,
+        "published_at": null
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "asset_id": "exp-ciudad-perdida",
+      "destination_id": "santa-marta",
+      "attraction_id": "ciudad-perdida",
+      "purpose": "experience",
+      "file": "crecimiento-colombia/entregas/santa-marta/semirrealista-v1/maestros/exp-ciudad-perdida.png",
+      "media_type": "ai_generated_illustration",
+      "language": "shared_es_en_pt",
+      "style_id": "EL-SEMI-REALISTA-1",
+      "generation": {
+        "asset_id": "exp-ciudad-perdida",
+        "prompt": "Original independent fact-based editorial illustration, not a photo or reconstruction. EL-SEMI-REALISTA-1 adult travel magazine semi-realistic digital painting, visibly painted subtle brush strokes, rich convincing natural materials and atmospheric depth, sophisticated not cartoon/toy. Landscape 3:2, subject clearly occupies frame with safe margins for cards. Natural Caribbean blue and organic greens, no yellow/sepia wash. No lettering, logos, watermarks or border. No invented landmarks, no copied photograph. Representative multi-day trek to Ciudad Perdida Santa Marta Colombia: two complete adult trekkers with backpacks ascending irregular old stone steps through dense humid tropical Sierra Nevada forest, atmospheric depth, roots and ferns, guide ahead. Focus on walking effort, not repeated aerial terraces. No snowy peaks, temple buildings or promise of route conditions. Coherent hands/feet and full figures.",
+        "output_hint": "Generated images are saved to /Users/nivato/.codex/generated_images/01a14823-73b0-7690-8d26-5eaec0583b39 as /Users/nivato/.codex/generated_images/01a14823-73b0-7690-8d26-5eaec0583b39/exec-f4335110-80fc-4c3e-a756-e7d7e4910a38.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+        "provider": "OpenAI",
+        "tool": "image_gen.imagegen",
+        "model": "not_exposed_by_builtin_tool",
+        "referenced_image_paths": [],
+        "generation_route": "independent_composition_from_documented_facts",
+        "human_result_approved": false,
+        "production_approved": false
+      },
+      "visual_references": [],
+      "fact_sources": [
+        {
+          "url": "https://lostcitytours.com/en/tours/lost-city-4-days/",
+          "checked_at": "2026-10-17",
+          "facts_verified": "Rasgos geográficos/actividad según expediente textual previo; no exactitud topográfica del resultado."
+        }
+      ],
+      "source_sha256": "4e238e9acc85047a884db82e57f5043ab507a402e03b0fe3d83fa769efcb4ae3",
+      "files": [
+        {
+          "path": "backend/public/assets/santa-marta-semirrealista/exp-ciudad-perdida-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 67996,
+          "sha256": "18fd35b86e512fcf6535eb533fc25a21b1b2aa1f5eae0d7262cc3a8879e98e90"
+        },
+        {
+          "path": "backend/public/assets/santa-marta-semirrealista/exp-ciudad-perdida-800.webp",
+          "width": 800,
+          "height": 533,
+          "bytes": 172250,
+          "sha256": "d976bc44e911f8d48dc1691fac7fd7cf7592fb33dce5d63f46c57cf66d5bd354"
+        }
+      ],
+      "limitations": "Composición editorial independiente desde rasgos documentados, no fotografía ni reconstrucción exacta. Escena representativa: no prueba recinto, ruta, operador, personas ni disponibilidad actuales.",
+      "rights": {
+        "route": "independent_composition",
+        "photographs_uploaded": false,
+        "style_reference_uploaded": false,
+        "third_party_image_license_applied": false,
+        "provider_result_terms": "Condiciones aplicables de la cuenta/proveedor; no se afirma exclusividad ni ausencia universal de derechos adicionales.",
+        "human_generation_authority": "Encargo actual autoriza composición desde descripciones; no aprobación final."
+      },
+      "review": {
+        "status": "proposal_pending_human_review",
+        "identity_check": "agent_checked_representative_subject_not_exact_reconstruction",
+        "crop_check_desktop": "whole_image_resized_no_crop",
+        "crop_check_mobile": "whole_image_resized_no_crop",
+        "style_check": "high_realism_compare_chosen_style_pending_human_acceptance",
+        "human_result_approved": false
+      },
+      "publication": {
+        "approved_by": null,
+        "approved_at": null,
+        "published_at": null
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "asset_id": "exp-velero-caribe",
+      "destination_id": "santa-marta",
+      "attraction_id": "velero-caribe",
+      "purpose": "experience",
+      "file": "crecimiento-colombia/entregas/santa-marta/semirrealista-v1/maestros/exp-velero-caribe.png",
+      "media_type": "ai_generated_illustration",
+      "language": "shared_es_en_pt",
+      "style_id": "EL-SEMI-REALISTA-1",
+      "generation": {
+        "asset_id": "exp-velero-caribe",
+        "prompt": "EL-SEMI-REALISTA-1 original independent semi-realistic editorial painted travel illustration, landscape3:2, natural blue/green no sepia/no text/logos. Representative Caribbean sailing off Santa Marta Colombia, dry tropical hills at distance. CRITICAL wide viewpoint from far enough away that ENTIRE SAILING BOAT including TOP OF MAST and both sail tips and bottom hull is INSIDE frame with 15% breathing room above mast. Boat occupies only middle half of image, NOT closeup. A few small full adult passengers in lifejackets. Unbranded singlemast sailboat, no real operator or ownership implied. Visibly illustrated brushwork, convincing materials and sea. No cut mast, no cut sails.",
+        "output_hint": "Generated images are saved to /Users/nivato/.codex/generated_images/01a14823-73b0-7690-8d26-5eaec0583b39 as /Users/nivato/.codex/generated_images/01a14823-73b0-7690-8d26-5eaec0583b39/exec-74531007-23a0-4cbf-b08c-11dc62c7220e.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+        "provider": "OpenAI",
+        "tool": "image_gen.imagegen",
+        "model": "not_exposed_by_builtin_tool",
+        "referenced_image_paths": [],
+        "generation_route": "independent_composition_from_documented_facts",
+        "human_result_approved": false,
+        "production_approved": false
+      },
+      "visual_references": [],
+      "fact_sources": [
+        {
+          "url": "https://www.velerosantamarta.com/index-en.html",
+          "checked_at": "2026-10-17",
+          "facts_verified": "Rasgos geográficos/actividad según expediente textual previo; no exactitud topográfica del resultado."
+        }
+      ],
+      "source_sha256": "7de802d74ff0c2b7c199dc9aa06d0845d84884bcb0c062056468efdc1551b0de",
+      "files": [
+        {
+          "path": "backend/public/assets/santa-marta-semirrealista/exp-velero-caribe-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 42422,
+          "sha256": "1324c3ad44fa404ed74ed23493f326d14b6ee54958e0d41a27714d2501f74760"
+        },
+        {
+          "path": "backend/public/assets/santa-marta-semirrealista/exp-velero-caribe-800.webp",
+          "width": 800,
+          "height": 533,
+          "bytes": 102376,
+          "sha256": "60aa22f9eba20892b07726d14be989be7c915b7c14b7a0e65c913c283b7f54b3"
+        }
+      ],
+      "limitations": "Composición editorial independiente desde rasgos documentados, no fotografía ni reconstrucción exacta. Escena representativa: no prueba recinto, ruta, operador, personas ni disponibilidad actuales.",
+      "rights": {
+        "route": "independent_composition",
+        "photographs_uploaded": false,
+        "style_reference_uploaded": false,
+        "third_party_image_license_applied": false,
+        "provider_result_terms": "Condiciones aplicables de la cuenta/proveedor; no se afirma exclusividad ni ausencia universal de derechos adicionales.",
+        "human_generation_authority": "Encargo actual autoriza composición desde descripciones; no aprobación final."
+      },
+      "review": {
+        "status": "proposal_pending_human_review",
+        "identity_check": "agent_checked_representative_subject_not_exact_reconstruction",
+        "crop_check_desktop": "whole_image_resized_no_crop",
+        "crop_check_mobile": "whole_image_resized_no_crop",
+        "style_check": "high_realism_compare_chosen_style_pending_human_acceptance",
+        "human_result_approved": false
+      },
+      "publication": {
+        "approved_by": null,
+        "approved_at": null,
+        "published_at": null
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "asset_id": "exp-visita-acuario",
+      "destination_id": "santa-marta",
+      "attraction_id": "visita-acuario",
+      "purpose": "experience",
+      "file": "crecimiento-colombia/entregas/santa-marta/semirrealista-v1/maestros/exp-visita-acuario.png",
+      "media_type": "ai_generated_illustration",
+      "language": "shared_es_en_pt",
+      "style_id": "EL-SEMI-REALISTA-1",
+      "generation": {
+        "asset_id": "exp-visita-acuario",
+        "prompt": "Original independent fact-based editorial illustration, not a photo or reconstruction. EL-SEMI-REALISTA-1 adult travel magazine semi-realistic digital painting, visibly painted subtle brush strokes, rich convincing natural materials and atmospheric depth, sophisticated not cartoon/toy. Landscape 3:2, subject clearly occupies frame with safe margins for cards. Natural Caribbean blue and organic greens, no yellow/sepia wash. No lettering, logos, watermarks or border. No invented landmarks, no copied photograph. Representative marine education visit at Centro de Vida Marina, Santa Marta Colombia (formerly Acuario del Rodadero, distinct Mundo Marino): complete adult visitors and one child beside adult observing a large marine exhibit viewing window with modest Caribbean fish in clear blue water, visitor education setting, realistic full human anatomy. No text panels or logos, no claimed exact building reconstruction, no dolphins performing or touching animals. Clearly illustrated representative activity not photographic proof of venue.",
+        "output_hint": "Generated images are saved to /Users/nivato/.codex/generated_images/01a14823-73b0-7690-8d26-5eaec0583b39 as /Users/nivato/.codex/generated_images/01a14823-73b0-7690-8d26-5eaec0583b39/exec-cfe369b4-0128-4ae5-8af8-117eddb4938e.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+        "provider": "OpenAI",
+        "tool": "image_gen.imagegen",
+        "model": "not_exposed_by_builtin_tool",
+        "referenced_image_paths": [],
+        "generation_route": "independent_composition_from_documented_facts",
+        "human_result_approved": false,
+        "production_approved": false
+      },
+      "visual_references": [],
+      "fact_sources": [
+        {
+          "url": "https://centrodevidamarina.com/",
+          "checked_at": "2026-10-17",
+          "facts_verified": "Rasgos geográficos/actividad según expediente textual previo; no exactitud topográfica del resultado."
+        }
+      ],
+      "source_sha256": "31de3e586979f50afdc960ea4d8556b79beb4f0e6d80bd9f3f7dc03b0422fe06",
+      "files": [
+        {
+          "path": "backend/public/assets/santa-marta-semirrealista/exp-visita-acuario-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 46802,
+          "sha256": "f71b36df27f88272e87fc41b9e5f2c818cea83af04bb6e4bf69726195212cfa6"
+        },
+        {
+          "path": "backend/public/assets/santa-marta-semirrealista/exp-visita-acuario-800.webp",
+          "width": 800,
+          "height": 533,
+          "bytes": 113456,
+          "sha256": "d321a0acf1c9531baf0cdd6ae998ae84f72fa211d6c5d47a73cd59f4c0f732d2"
+        }
+      ],
+      "limitations": "Composición editorial independiente desde rasgos documentados, no fotografía ni reconstrucción exacta. Escena representativa: no prueba recinto, ruta, operador, personas ni disponibilidad actuales.",
+      "rights": {
+        "route": "independent_composition",
+        "photographs_uploaded": false,
+        "style_reference_uploaded": false,
+        "third_party_image_license_applied": false,
+        "provider_result_terms": "Condiciones aplicables de la cuenta/proveedor; no se afirma exclusividad ni ausencia universal de derechos adicionales.",
+        "human_generation_authority": "Encargo actual autoriza composición desde descripciones; no aprobación final."
+      },
+      "review": {
+        "status": "proposal_pending_human_review",
+        "identity_check": "agent_checked_representative_subject_not_exact_reconstruction",
+        "crop_check_desktop": "whole_image_resized_no_crop",
+        "crop_check_mobile": "whole_image_resized_no_crop",
+        "style_check": "high_realism_compare_chosen_style_pending_human_acceptance",
+        "human_result_approved": false
+      },
+      "publication": {
+        "approved_by": null,
+        "approved_at": null,
+        "published_at": null
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "asset_id": "exp-excursion-playa-blanca",
+      "destination_id": "santa-marta",
+      "attraction_id": "excursion-playa-blanca",
+      "purpose": "experience",
+      "file": "crecimiento-colombia/entregas/santa-marta/semirrealista-v1/maestros/exp-excursion-playa-blanca.png",
+      "media_type": "ai_generated_illustration",
+      "language": "shared_es_en_pt",
+      "style_id": "EL-SEMI-REALISTA-1",
+      "generation": {
+        "asset_id": "exp-excursion-playa-blanca",
+        "prompt": "Original independent EL-SEMI-REALISTA-1 semi-realistic editorial travel painting landscape3:2, visibly illustrated brushwork, natural Caribbean blues and dry coastal browns/greens, no sepia/logos/lettering. Representative boat excursion toward Playa Blanca near Rodadero Santa Marta Colombia, NOT Baru. Unbranded modest open motorboat seen diagonally from behind on clear turquoise Gaira bay, pale sandy cove under steep dry rocky scrub hillside, no palm jungle. CRITICAL EVERY PERSON including male captain at motor wears visible orange or blue LIFEJACKET correctly fastened. Four adult passengers plus captain, coherent anatomy, full boat safely inside frame with motor and bow complete. No specific operator identity, no actual vessel ownership or guaranteed route claim.",
+        "output_hint": "Generated images are saved to /Users/nivato/.codex/generated_images/01a14823-73b0-7690-8d26-5eaec0583b39 as /Users/nivato/.codex/generated_images/01a14823-73b0-7690-8d26-5eaec0583b39/exec-22e8bf19-b264-4dce-a2be-faac793372ce.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+        "provider": "OpenAI",
+        "tool": "image_gen.imagegen",
+        "model": "not_exposed_by_builtin_tool",
+        "referenced_image_paths": [],
+        "generation_route": "independent_composition_from_documented_facts",
+        "human_result_approved": false,
+        "production_approved": false
+      },
+      "visual_references": [],
+      "fact_sources": [
+        {
+          "url": "https://colombia.travel/es/santa-marta/playa-blanca",
+          "checked_at": "2026-10-17",
+          "facts_verified": "Rasgos geográficos/actividad según expediente textual previo; no exactitud topográfica del resultado."
+        }
+      ],
+      "source_sha256": "2853d5e69181d550fd363ff55ab529723aa8cdcd966dc229247dfecdc84c79f5",
+      "files": [
+        {
+          "path": "backend/public/assets/santa-marta-semirrealista/exp-excursion-playa-blanca-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 59366,
+          "sha256": "7bcfb1c9c461c32d76c2188117e97d8eed263defdeba468a7b945349d3bf594e"
+        },
+        {
+          "path": "backend/public/assets/santa-marta-semirrealista/exp-excursion-playa-blanca-800.webp",
+          "width": 800,
+          "height": 533,
+          "bytes": 159382,
+          "sha256": "003386e6c437a532c7ddddb21c43750270875e5b1313eb33af9f379c799ed5d9"
+        }
+      ],
+      "limitations": "Composición editorial independiente desde rasgos documentados, no fotografía ni reconstrucción exacta. Escena representativa: no prueba recinto, ruta, operador, personas ni disponibilidad actuales.",
+      "rights": {
+        "route": "independent_composition",
+        "photographs_uploaded": false,
+        "style_reference_uploaded": false,
+        "third_party_image_license_applied": false,
+        "provider_result_terms": "Condiciones aplicables de la cuenta/proveedor; no se afirma exclusividad ni ausencia universal de derechos adicionales.",
+        "human_generation_authority": "Encargo actual autoriza composición desde descripciones; no aprobación final."
+      },
+      "review": {
+        "status": "proposal_pending_human_review",
+        "identity_check": "agent_checked_representative_subject_not_exact_reconstruction",
+        "crop_check_desktop": "whole_image_resized_no_crop",
+        "crop_check_mobile": "whole_image_resized_no_crop",
+        "style_check": "high_realism_compare_chosen_style_pending_human_acceptance",
+        "human_result_approved": false
+      },
+      "publication": {
+        "approved_by": null,
+        "approved_at": null,
+        "published_at": null
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "asset_id": "exp-moto-acuatica",
+      "destination_id": "santa-marta",
+      "attraction_id": "moto-acuatica",
+      "purpose": "experience",
+      "file": "crecimiento-colombia/entregas/santa-marta/semirrealista-v1/maestros/exp-moto-acuatica.png",
+      "media_type": "ai_generated_illustration",
+      "language": "shared_es_en_pt",
+      "style_id": "EL-SEMI-REALISTA-1",
+      "generation": {
+        "asset_id": "exp-moto-acuatica",
+        "prompt": "Original independent fact-based editorial illustration, not a photo or reconstruction. EL-SEMI-REALISTA-1 adult travel magazine semi-realistic digital painting, visibly painted subtle brush strokes, rich convincing natural materials and atmospheric depth, sophisticated not cartoon/toy. Landscape 3:2, subject clearly occupies frame with safe margins for cards. Natural Caribbean blue and organic greens, no yellow/sepia wash. No lettering, logos, watermarks or border. No invented landmarks, no copied photograph. Representative personal watercraft activity on Santa Marta Caribbean coast, informational scene only not a verified bookable offer: single adult riding modern unbranded personal watercraft wearing lifejacket at modest speed on blue open water, distant dry tropical coastal hills, no crowded swimming beach, no operator logo. Complete anatomy and machine visible. No location-specific boarding point or service availability implied.",
+        "output_hint": "Generated images are saved to /Users/nivato/.codex/generated_images/01a14823-73b0-7690-8d26-5eaec0583b39 as /Users/nivato/.codex/generated_images/01a14823-73b0-7690-8d26-5eaec0583b39/exec-48e53cae-76e9-4b9a-ab25-a7cc394befb3.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+        "provider": "OpenAI",
+        "tool": "image_gen.imagegen",
+        "model": "not_exposed_by_builtin_tool",
+        "referenced_image_paths": [],
+        "generation_route": "independent_composition_from_documented_facts",
+        "human_result_approved": false,
+        "production_approved": false
+      },
+      "visual_references": [],
+      "fact_sources": [
+        {
+          "url": "https://www.discoversantamarta.travel/wp-content/uploads/2024/03/07032024-GUIA-GENERAL-DIGITAL-ESP.pdf",
+          "checked_at": "2026-10-17",
+          "facts_verified": "Rasgos geográficos/actividad según expediente textual previo; no exactitud topográfica del resultado."
+        }
+      ],
+      "source_sha256": "97ae99547ebe18712210d82162116378488c17a92ecd82961699ccd8723b1b8c",
+      "files": [
+        {
+          "path": "backend/public/assets/santa-marta-semirrealista/exp-moto-acuatica-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 47176,
+          "sha256": "62f891d202ec75acbe5821a465ebf478bfada29e6d797565feec4cc3d03d0bb2"
+        },
+        {
+          "path": "backend/public/assets/santa-marta-semirrealista/exp-moto-acuatica-800.webp",
+          "width": 800,
+          "height": 533,
+          "bytes": 115108,
+          "sha256": "d4ae93596017fb615a41a00333c86d1d0b548fe71139f3a759f552efaeb7cfd3"
+        }
+      ],
+      "limitations": "Composición editorial independiente desde rasgos documentados, no fotografía ni reconstrucción exacta. Escena representativa: no prueba recinto, ruta, operador, personas ni disponibilidad actuales.",
+      "rights": {
+        "route": "independent_composition",
+        "photographs_uploaded": false,
+        "style_reference_uploaded": false,
+        "third_party_image_license_applied": false,
+        "provider_result_terms": "Condiciones aplicables de la cuenta/proveedor; no se afirma exclusividad ni ausencia universal de derechos adicionales.",
+        "human_generation_authority": "Encargo actual autoriza composición desde descripciones; no aprobación final."
+      },
+      "review": {
+        "status": "proposal_pending_human_review",
+        "identity_check": "agent_checked_representative_subject_not_exact_reconstruction",
+        "crop_check_desktop": "whole_image_resized_no_crop",
+        "crop_check_mobile": "whole_image_resized_no_crop",
+        "style_check": "high_realism_compare_chosen_style_pending_human_acceptance",
+        "human_result_approved": false
+      },
+      "publication": {
+        "approved_by": null,
+        "approved_at": null,
+        "published_at": null
+      }
+    }
+  ],
+  "counts": {
+    "hero": 1,
+    "places": 8,
+    "experiences": 9,
+    "masters_selected": 18,
+    "webp": 36
+  },
+  "rejected_masters": [
+    "centro-historico-rechazado-v1.png",
+    "hero-rechazado-v1.png",
+    "exp-excursion-playa-blanca-rechazado-v1.png",
+    "exp-velero-caribe-rechazado-v1.png"
+  ]
+}

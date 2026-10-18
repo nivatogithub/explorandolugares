@@ -1,13 +1,11 @@
 # Lugar 4 · Santa Marta
 
-**Subtarea terminada:** contenido/clasificación/QA textual sin fotografías. Ver `CIERRE_CONTENIDO_SIN_FOTOS.md/.json`. No se afirma trabajo permanente en segundo plano ni destino completo.
+Subtarea de propuesta semirrealista terminada el 17-10-2026. No ejecución permanente en segundo plano.
 
-**Comprobado:** nueve experiencias, once directorios y tres borradores geográficos ES/EN/PT. Veintinueve controles PASS. Sitios/actividades/instituciones/eventos separados con location_id; cero eventos fechados inventados. Top8 mantiene siete propuestos y octavo pendiente, sin rellenar por cuotas ni actividades.
+Último logro: `semirrealista-v1/` contiene 18 maestros elegidos (portada centro/bahía histórica, ocho lugares y nueve experiencias), 36 WebP, textos breves ES/EN/PT, manifiestos, prompts, hashes y paquete compatible de contenido. Historia breve sin imagen. Cuatro salidas defectuosas rechazadas y sustituidas, conservadas fuera del hosting. 135 verificaciones de integridad y sintaxis JS aprobadas.
 
-**Corregido:** ficha geográfica Playa Blanca ya no es un texto de excursión; Minca como lugar y salida/café separados; Teyuna como sitio y trekking separados; visita al Acuario en experiencias, institución en directorio. Moto acuática sin operador/zona/oferta vigente inventados. Textos públicos sin lenguaje interno de fuentes/proceso.
+Siguiente paso: coordinación integra serialmente los assets y contenido en preprod y verifica escritorio/móvil y tres idiomas. Usuario revisa el resultado; no está aprobado ni publicado. No se tocó BD, preprod compartida o producción desde este worker.
 
-**Preservado:**108 archivos de fotografías/decisiones idénticos y campos de aprobación sin cambios. Portada H7-03 y Tayrona pendientes. El propietario buscará y enviará URLs; no ejecutar búsquedas ni lotes preparados anteriormente sin nueva autorización.
+Entrega: `semirrealista-v1/README.md`, `MAPA_INTEGRACION.json`, `contenido-cierre-semirrealista-v1.json`, `QA-contacto-final.jpg`, `integracion-preprod.zip`.
 
-**Próximas decisiones humanas:** corteTop8, revisión de textos, URLs por componente e imágenes finales; publicación posterior requiere aprobación expresa. Verificación factual de oferta/prestadores sigue señalada como límite del borrador, no como aprobación solicitada.
-
-**Sin cambios:** fotografías, IA, paquete/ZIP, BD, preprod o producción.
+No bloqueo técnico de generación. Pendientes: integración visual real y decisiones humanas sobre el resultado. Moto acuática sigue sin operador/embarque/oferta vigente verificados, sin reserva. Directorio mantiene once prospectos trilingües, sin alianzas ni disponibilidad ficticias. Aprobaciones y fotos históricas preservadas.

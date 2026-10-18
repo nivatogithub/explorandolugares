@@ -1,0 +1,174 @@
+{
+  "slug": "santa-marta",
+  "scripts": [
+    "/assets/santa-marta-compacta.js"
+  ],
+  "stylesheets": [
+    "/assets/santa-marta-compacta.css"
+  ],
+  "content": "/assets/santa-marta-semirrealista/contenido.json",
+  "roles": [
+    {
+      "role": "hero",
+      "key": "hero",
+      "slug": "hero",
+      "paths": [
+        "backend/public/assets/santa-marta-semirrealista/hero-640.webp",
+        "backend/public/assets/santa-marta-semirrealista/hero-1200.webp"
+      ]
+    },
+    {
+      "role": "place",
+      "key": "tayrona",
+      "slug": "tayrona",
+      "paths": [
+        "backend/public/assets/santa-marta-semirrealista/tayrona-480.webp",
+        "backend/public/assets/santa-marta-semirrealista/tayrona-800.webp"
+      ]
+    },
+    {
+      "role": "place",
+      "key": "ciudad-perdida",
+      "slug": "ciudad-perdida",
+      "paths": [
+        "backend/public/assets/santa-marta-semirrealista/ciudad-perdida-480.webp",
+        "backend/public/assets/santa-marta-semirrealista/ciudad-perdida-800.webp"
+      ]
+    },
+    {
+      "role": "place",
+      "key": "minca",
+      "slug": "minca",
+      "paths": [
+        "backend/public/assets/santa-marta-semirrealista/minca-480.webp",
+        "backend/public/assets/santa-marta-semirrealista/minca-800.webp"
+      ]
+    },
+    {
+      "role": "place",
+      "key": "rodadero",
+      "slug": "rodadero",
+      "paths": [
+        "backend/public/assets/santa-marta-semirrealista/rodadero-480.webp",
+        "backend/public/assets/santa-marta-semirrealista/rodadero-800.webp"
+      ]
+    },
+    {
+      "role": "place",
+      "key": "quinta",
+      "slug": "quinta",
+      "paths": [
+        "backend/public/assets/santa-marta-semirrealista/quinta-480.webp",
+        "backend/public/assets/santa-marta-semirrealista/quinta-800.webp"
+      ]
+    },
+    {
+      "role": "place",
+      "key": "taganga",
+      "slug": "taganga",
+      "paths": [
+        "backend/public/assets/santa-marta-semirrealista/taganga-480.webp",
+        "backend/public/assets/santa-marta-semirrealista/taganga-800.webp"
+      ]
+    },
+    {
+      "role": "place",
+      "key": "centro-historico",
+      "slug": "centro-historico",
+      "paths": [
+        "backend/public/assets/santa-marta-semirrealista/centro-historico-480.webp",
+        "backend/public/assets/santa-marta-semirrealista/centro-historico-800.webp"
+      ]
+    },
+    {
+      "role": "place",
+      "key": "playa-blanca",
+      "slug": "playa-blanca",
+      "paths": [
+        "backend/public/assets/santa-marta-semirrealista/playa-blanca-480.webp",
+        "backend/public/assets/santa-marta-semirrealista/playa-blanca-800.webp"
+      ]
+    },
+    {
+      "role": "experience",
+      "key": "exp-buceo-taganga",
+      "slug": "buceo-taganga",
+      "paths": [
+        "backend/public/assets/santa-marta-semirrealista/exp-buceo-taganga-480.webp",
+        "backend/public/assets/santa-marta-semirrealista/exp-buceo-taganga-800.webp"
+      ]
+    },
+    {
+      "role": "experience",
+      "key": "exp-caminata-tayrona",
+      "slug": "caminata-tayrona",
+      "paths": [
+        "backend/public/assets/santa-marta-semirrealista/exp-caminata-tayrona-480.webp",
+        "backend/public/assets/santa-marta-semirrealista/exp-caminata-tayrona-800.webp"
+      ]
+    },
+    {
+      "role": "experience",
+      "key": "exp-minca-cafe",
+      "slug": "minca-cafe",
+      "paths": [
+        "backend/public/assets/santa-marta-semirrealista/exp-minca-cafe-480.webp",
+        "backend/public/assets/santa-marta-semirrealista/exp-minca-cafe-800.webp"
+      ]
+    },
+    {
+      "role": "experience",
+      "key": "exp-recorrido-centro",
+      "slug": "recorrido-centro",
+      "paths": [
+        "backend/public/assets/santa-marta-semirrealista/exp-recorrido-centro-480.webp",
+        "backend/public/assets/santa-marta-semirrealista/exp-recorrido-centro-800.webp"
+      ]
+    },
+    {
+      "role": "experience",
+      "key": "exp-ciudad-perdida",
+      "slug": "ciudad-perdida",
+      "paths": [
+        "backend/public/assets/santa-marta-semirrealista/exp-ciudad-perdida-480.webp",
+        "backend/public/assets/santa-marta-semirrealista/exp-ciudad-perdida-800.webp"
+      ]
+    },
+    {
+      "role": "experience",
+      "key": "exp-velero-caribe",
+      "slug": "velero-caribe",
+      "paths": [
+        "backend/public/assets/santa-marta-semirrealista/exp-velero-caribe-480.webp",
+        "backend/public/assets/santa-marta-semirrealista/exp-velero-caribe-800.webp"
+      ]
+    },
+    {
+      "role": "experience",
+      "key": "exp-visita-acuario",
+      "slug": "visita-acuario",
+      "paths": [
+        "backend/public/assets/santa-marta-semirrealista/exp-visita-acuario-480.webp",
+        "backend/public/assets/santa-marta-semirrealista/exp-visita-acuario-800.webp"
+      ]
+    },
+    {
+      "role": "experience",
+      "key": "exp-excursion-playa-blanca",
+      "slug": "excursion-playa-blanca",
+      "paths": [
+        "backend/public/assets/santa-marta-semirrealista/exp-excursion-playa-blanca-480.webp",
+        "backend/public/assets/santa-marta-semirrealista/exp-excursion-playa-blanca-800.webp"
+      ]
+    },
+    {
+      "role": "experience",
+      "key": "exp-moto-acuatica",
+      "slug": "moto-acuatica",
+      "paths": [
+        "backend/public/assets/santa-marta-semirrealista/exp-moto-acuatica-480.webp",
+        "backend/public/assets/santa-marta-semirrealista/exp-moto-acuatica-800.webp"
+      ]
+    }
+  ]
+}
