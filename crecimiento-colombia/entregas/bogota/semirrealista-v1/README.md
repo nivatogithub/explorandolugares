@@ -14,3 +14,9 @@ Alcance: preproducción privada, sin autorización de publicación. Rama propia 
 Las ilustraciones son composiciones editoriales representativas: no fotografías, reconstrucciones métricas de los edificios ni prueba del estado actual de una sala o servicio. Los interiores de museos y actividades son representativos; no copiar obras ni inferir disponibilidad del operador. La selección Top8 procede de la auditoría existente; esta tarea cambia presentación, no afirma un ranking estadístico nuevo.
 
 Revisión: no se observan imágenes rotas; 8 tarjetas y 15 experiencias en el borrador local. Directorio de Bogotá sigue sin comercios cargados en esta base; no se inventaron entradas para llenar tarjetas. Las imágenes nuevas siguen pendientes de aprobación humana.
+
+## Integración compartida
+
+`QA_INTEGRACION_TRES_DESTINOS.json` registra cargas guardadas en MariaDB local y revisión visible de Bogotá, Santa Marta y Medellín. Se comprobaron ES/EN/PT, imágenes y controles de carga progresiva. Los cambios compartidos de preprod se hicieron de forma puntual, conservando el trabajo previo de otros workers.
+
+El script `scripts/integrar-semirrealista-preprod.py` repite la preparación de archivos desde los tres worktrees existentes; el script PHP separado exige entorno local, destino permitido, hash del contenido y estado borrador antes de guardar. La plantilla privada usa un mapa de medios para evitar descargar también las fotos antiguas. La sesión administrativa sigue siendo obligatoria y los enlaces de idiomas conservan `preview=1`.
