@@ -62,7 +62,7 @@
   let audienceVersion=0;
   async function renderAudience(){
     const version=++audienceVersion,d=current(),days=$('audience-period').value;
-    $('audience-scope').textContent=(d?'Interés por '+d.name:'Audiencia del portal')+' · últimos '+days+' días. Viajeros registrados: comunidad general del portal.';
+    $('audience-scope').textContent=(d?'Interés por '+d.name:'Visitas al portal')+' · últimos '+days+' días. Viajeros registrados: comunidad general del portal.';
     const fields={'anonymous_sessions':'anonymous','estimated_visitors':'visitors','registered_travelers':'registered','active_travelers':'active','business_views':'business-views','contact_clicks':'contact'};
     Object.values(fields).forEach(id=>$('audience-'+id).textContent='—');
     $('audience-basic-views').textContent='—';
@@ -76,10 +76,10 @@
       const basic=a.basic, basicReady=basic?.status==='enabled';
       $('audience-basic-views').textContent=basicReady?Number(basic.page_views).toLocaleString('es-CO'):'—';
       Object.entries(fields).forEach(([metric,id])=>{$('audience-'+id).textContent=a.metrics?.[metric]==null?'—':Number(a.metrics[metric]).toLocaleString('es-CO');});
-      $('audience-status').textContent=basicReady?'Conteo de páginas sin cookies activo. Los indicadores con permiso representan solo esa parte de la audiencia.':'Conteo sin cookies pendiente de activación. Las demás cifras corresponden a medición con permiso.';
+      $('audience-status').textContent=basicReady?'Conteo de páginas sin cookies activo. Los indicadores con permiso representan solo las visitas con permiso de medición.':'Conteo sin cookies pendiente de activación. Las demás cifras corresponden a medición con permiso.';
       $('audience-measurement-dates').textContent=(basicReady?'Conteo básico desde: '+basic.started_at.slice(0,10)+'. ':'')+(a.started_at?'Medición opcional desde: '+a.started_at.slice(0,10)+'. ':'Medición opcional no disponible. ')+(a.updated_at?'Actualización: '+new Date(a.updated_at).toLocaleString('es-CO')+'.':'');
       $('audience-countries').replaceChildren();const region=new Intl.DisplayNames(['es'],{type:'region'});
-      if(a.countries?.length)a.countries.forEach(c=>$('audience-countries').append(el('p',(c.code==='ZZ'?'País no disponible':c.code==='OTHER'?'Otros países o conexiones sin identificar (grupos pequeños)':region.of(c.code))+': '+c.count+' vistas de páginas')));else $('audience-countries').textContent='Próximamente: audiencia por país.';
+      if(a.countries?.length)a.countries.forEach(c=>$('audience-countries').append(el('p',(c.code==='ZZ'?'País no disponible':c.code==='OTHER'?'Otros países o conexiones sin identificar (grupos pequeños)':region.of(c.code))+': '+c.count+' vistas de páginas')));else $('audience-countries').textContent='Próximamente: vistas por país.';
       const attribution=el('a','País aproximado: DB-IP Country Lite');attribution.href='https://db-ip.com/';attribution.rel='noopener noreferrer';$('audience-source').append(attribution);
       $('audience-trend').replaceChildren(el('p',basicReady?basic.page_views+' páginas vistas sin cookies en el periodo (hoy es parcial).':'Conteo básico pendiente de activación.')) ;
       if(basicReady)$('audience-trend').append(el('p',basic.comparison_available?('Comparación de días completos ('+basic.comparison_period_start+' al '+basic.comparison_period_end+'): '+basic.comparison_current_views+' vistas; periodo anterior: '+basic.previous_views+'. '+(basic.growth_percent===null?'No calculamos porcentaje sobre cero.':'Cambio: '+basic.growth_percent+'%.')):'Aún estamos reuniendo datos para comparar dos periodos completos.'));
