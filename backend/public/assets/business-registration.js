@@ -27,6 +27,7 @@
     const details=document.querySelector('#registration-new-details');if(details){details.hidden=!isNew;details.disabled=!isNew;}
     newNameWrap.hidden = !isNew;
     newName.required = isNew;
+    const continuation=document.querySelector('#registration-continuation');if(continuation){continuation.hidden=!mode;continuation.disabled=!mode;}
     submit.disabled = !mode;
     form.dispatchEvent(new Event('operator-eligibility-change'));
     form.querySelectorAll('.business-registration-option input').forEach((radio) => {
@@ -68,6 +69,9 @@
     choose('', '');
   }
 
+  const categoryPaths={hospedaje:'M3 19V7h18v12M3 14h18M7 10h3m4 0h3',alimentacion:'M5 3v7m3-7v7m-5-4h7M6 10v11M17 3v18m0-18c5 3 5 8 0 8',licores:'M8 3h8v8a4 4 0 0 1-8 0V3m4 12v6m-4 0h8','vida-nocturna':'M16 3a9 9 0 1 0 5 14A8 8 0 0 1 16 3',comercio:'M4 8h16v13H4V8m3 0V6a5 5 0 0 1 10 0v2',salud:'M9 3h6v6h6v6h-6v6H9v-6H3V9h6V3',experiencias:'m2 20 7-14 5 9 3-5 5 10H2m4-8 3 2 3-2',cultura:'m3 9 9-6 9 6H3m2 2v8m7-8v8m7-8v8M3 21h18',transporte:'M4 16V7h16v9H4m3 0v4m10-4v4M4 12h16',servicios:'m4 20 9-9m-3-7a6 6 0 0 0 7 7l4-4-4 1-1-4a6 6 0 0 0-6 0',otro:'M4 4h6v6H4V4m10 0h6v6h-6V4M4 14h6v6H4v-6m10 0h6v6h-6v-6'};
+  function categoryIcon(code){const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.setAttribute('viewBox','0 0 24 24');svg.setAttribute('class','category-icon');svg.setAttribute('aria-hidden','true');const path=document.createElementNS(svg.namespaceURI,'path');path.setAttribute('d',categoryPaths[code]||categoryPaths.otro);svg.append(path);return svg;}
+  function syncExtraCategories(){for(const input of document.querySelectorAll('#registration-extra-categories input')){const primary=input.value===category.value;input.closest('label').hidden=primary;input.disabled=primary;if(primary)input.checked=false;}}
   async function loadCategories() {
     category.replaceChildren(new Option('Cargando categorías…', ''));
     category.disabled = true; search.disabled = true; missing.disabled = true; choose('', '');
@@ -78,8 +82,8 @@
       const data = await response.json();
       category.replaceChildren(new Option('Selecciona una categoría', ''));
       for (const item of data.results || []) category.add(new Option(item.label, item.code));
-      const extras=document.querySelector('#registration-extra-categories');if(extras){extras.replaceChildren();for(const item of data.results||[]){const label=document.createElement('label');const input=document.createElement('input');input.type='checkbox';input.name='category_codes[]';input.value=item.code;label.append(input,document.createTextNode(item.label));extras.append(label);}}
-      category.disabled = false;
+      const extras=document.querySelector('#registration-extra-categories');if(extras){extras.replaceChildren();for(const item of data.results||[]){const label=document.createElement('label');const input=document.createElement('input');input.type='checkbox';input.name='category_codes[]';input.value=item.code;label.append(input,categoryIcon(item.code),document.createTextNode(item.label));extras.append(label);}}
+      category.disabled = false;syncExtraCategories();
     } catch {
       category.replaceChildren(new Option('No se pudieron cargar las categorías', ''));
     }
@@ -101,7 +105,7 @@
   }
 
   destination.addEventListener('change', loadCategories);
-  category.addEventListener('change', () => { search.disabled = !category.value; search.value = ''; results.innerHTML = '<p>Escribe el nombre del negocio para buscarlo.</p>'; missing.disabled = true; choose('', ''); if (category.value) search.focus(); });
+  category.addEventListener('change', () => { syncExtraCategories(); search.disabled = !category.value; search.value = ''; results.innerHTML = '<p>Escribe el nombre del negocio para buscarlo.</p>'; missing.disabled = true; choose('', ''); if (category.value) search.focus(); });
   search.addEventListener('input', () => { clearTimeout(timer); timer = setTimeout(searchBusinesses, 250); });
   missing.addEventListener('click', () => choose('new_business'));
   form.addEventListener('submit', (event) => {
@@ -109,5 +113,8 @@
       event.preventDefault(); results.focus();
     }
   });
-  if (destination.value) loadCategories();
+  if (destination.value) {
+    let initial={};try{initial=JSON.parse(form.dataset.registrationState||'{}');}catch{}
+    loadCategories().then(()=>{if(initial.category&&Array.from(category.options).some(option=>option.value===initial.category)){category.value=initial.category;search.disabled=false;missing.disabled=false;for(const input of document.querySelectorAll('#registration-extra-categories input'))input.checked=Array.isArray(initial.extras)&&initial.extras.includes(input.value);syncExtraCategories();if(initial.type==='new_business')choose('new_business');}});
+  }
 })();

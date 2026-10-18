@@ -152,7 +152,8 @@ final class BusinessAccountPortalService
         $stmt=$this->pdo->prepare('SELECT b.id,b.destination_id,b.public_id,b.information_status,b.claim_status,b.operation_status,b.publication_status,
                 t.display_name,d.slug AS destination_slug,dt.display_name AS destination_name,m.role,
                 (SELECT sp.code FROM business_subscriptions bs JOIN subscription_plans sp ON sp.code=bs.plan_code WHERE bs.business_id=b.id ORDER BY bs.id DESC LIMIT 1) AS plan_code,
-                (SELECT bs.status FROM business_subscriptions bs WHERE bs.business_id=b.id ORDER BY bs.id DESC LIMIT 1) AS subscription_status
+                (SELECT bs.status FROM business_subscriptions bs WHERE bs.business_id=b.id ORDER BY bs.id DESC LIMIT 1) AS subscription_status,
+                (SELECT bs.plan_code FROM business_subscriptions bs WHERE bs.business_id=b.id AND bs.status="active" AND (bs.starts_at IS NULL OR bs.starts_at<=CURRENT_TIMESTAMP) AND (bs.ends_at IS NULL OR bs.ends_at>CURRENT_TIMESTAMP) ORDER BY bs.id DESC LIMIT 1) AS active_plan_code
             FROM business_account_memberships m JOIN businesses b ON b.id=m.business_id
             JOIN business_translations t ON t.business_id=b.id AND t.locale="es"
             JOIN destinations d ON d.id=b.destination_id JOIN destination_translations dt ON dt.destination_id=d.id AND dt.locale="es"

@@ -116,17 +116,17 @@ Ninguno de los comandos de esta carpeta despliega a GoDaddy, hace push, modifica
 
 ## Probar cuentas empresariales y recuperación
 
-En la configuración local inicial están habilitados `business_accounts_enabled` y `registration_enabled`. El portal empresarial conserva autenticación propia aunque administración local esté sin contraseña.
+En la configuración local inicial están habilitados `business_accounts_enabled` y `registration_enabled`. Las cuentas usan el acceso público unificado. La opción local de administración sin contraseña está desactivada en este entorno; cada equipo configura su acceso explícitamente.
 
-- Crear cuenta y solicitar un negocio nuevo: `http://127.0.0.1:8088/negocios/registro/`. Buscar el negocio y elegir **Mi negocio no aparece**. La cuenta se crea desde el sitio público; la ficha requiere revisión y aprobación antes de asociarse/publicarse. Usar únicamente documentos ficticios de prueba.
+- Crear cuenta personal: `http://127.0.0.1:8088/negocios/registro/`. Tras entrar, usar **Mi cuenta → Mis negocios → Registrar o reclamar un negocio** y buscar antes de crear. La cuenta se crea desde el sitio público; la ficha requiere revisión y aprobación antes de asociarse/publicarse. Usar únicamente documentos ficticios de prueba.
 - Iniciar sesión: `http://127.0.0.1:8088/negocios/acceso/`.
 - Portal y cierre de sesión: `http://127.0.0.1:8088/negocios/portal/`.
 - Solicitar recuperación: `http://127.0.0.1:8088/negocios/recuperar-clave/`.
-- Leer el correo simulado: `http://127.0.0.1:8088/admin/buzon-local.php`, también accesible desde el menú local de Sistema. Requiere acceso administrativo local.
+- Leer el correo simulado: `http://127.0.0.1:8088/admin/buzon-local.php`. Es una herramienta técnica local, fuera del menú normal. Requiere acceso administrativo local.
 
 La recuperación usa el servicio existente: enlace de un solo uso que vence a las 24 horas; la base guarda únicamente su hash. El token completo está en el mensaje local para poder probar el flujo. El buzón conserva los últimos 50 mensajes en `.local/preprod/private/mailbox.json`, fuera de Git y de la raíz pública. No compartir ese archivo ni capturas de sus enlaces. El formulario responde igual para correos existentes e inexistentes, y limita solicitudes.
 
-`recover.php`, `buzon-local.php`, sus enlaces y la ruta se añaden **solo al paquete local** desde `preprod/infra/`. Exigen entorno local, configuración de prueba y host loopback. No se incluyen en el paquete de producción. No se envía correo real ni se necesita SMTP. La recuperación pública con entrega real de correo sigue pendiente para producción. Google/Microsoft y otras identidades externas no se habilitan sin configurar sus proveedores.
+El buzón simulado y su visor se añaden **solo al paquete local** desde `preprod/infra/`. Exigen entorno local, configuración de prueba y host loopback. No se incluyen en producción. El registro, la verificación y la recuperación públicos usan el backend compartido y pueden entregar correo real con Brevo configurado. Las pruebas locales capturan los mensajes en el buzón, salvo un destinatario habilitado expresamente para correo real. Google/Microsoft y otras identidades externas siguen pendientes de configurar.
 
 Comprobación automática:
 
@@ -136,9 +136,19 @@ python3 preprod/probar-cuentas.py
 
 Crea una cuenta ficticia temporal, prueba recuperación, contraseña de un solo uso, login y logout, y retira únicamente sus propios datos al terminar. La creación pública de cuenta/solicitud y su revisión se comprueban además en `backend/tests/admin-pages.integration.py` con base desechable. No se crea ni publica un negocio real durante esas pruebas.
 
-Para encontrar los flujos sin escribir URL: el sitio público local muestra **Iniciar sesión** a la derecha, debajo de los idiomas. Desde esa pantalla están **Crear cuenta** y **Olvidé mi contraseña**. Cuando hay una sesión empresarial válida, el encabezado muestra el nombre de la persona (enlace a su cuenta) y **Cerrar sesión**; al salir vuelve a mostrar el acceso. Los rótulos del encabezado se adaptan a español, inglés o portugués. Administración incluye **Probar cuentas en preprod** con registro, acceso, recuperación y buzón local. Esta navegación se incorpora únicamente al paquete local y sus recursos se versionan después de incorporarla para evitar que la caché oculte los enlaces.
+El encabezado público muestra **Iniciar sesión** junto a los idiomas. El diálogo contiene **Crear cuenta** y **Olvidé mi contraseña**. Una persona autenticada ve su nombre, **Mi cuenta** (Personal / Mis negocios) y **Cerrar sesión**; una administradora también ve **Administración**. No hay accesos de crear cuenta, iniciar sesión, recuperar contraseña ni buzón técnico en el menú administrativo.
 
-El enlace del encabezado abre ahora un diálogo de inicio de sesión sobre la página actual. El formulario utiliza la sesión, CSRF y autenticación existentes; los errores se muestran dentro del diálogo. Al autenticar actualiza nombre/salida en el encabezado y conserva la página. Cierre mediante botón, Escape o fondo exterior. Recuperación y registro siguen disponibles desde el diálogo. La ruta de acceso independiente se conserva para enlaces directos y como alternativa sin JavaScript.
+Acceso, alta personal, recuperación y enlaces de activación/restauración comparten una presentación flotante. Las URL directas conservan sus procesos y muestran el portal de fondo. Mi cuenta, registro/reclamación y pagos usan páginas completas con header/footer comunes. Los formularios se procesan en servidor con CSRF; el diálogo carga ese mismo formulario, sin una segunda implementación de autenticación.
+
+Residencia: Colombia se muestra inicialmente con listas dependientes de Departamento y Municipio / ciudad o pueblo (33 divisiones y 1.122 municipios en el catálogo). Los rótulos se adaptan a ES/EN/PT; los topónimos conservan su nombre. Todos los países están disponibles. Colombia usa listas de departamento y municipio; los demás países usan región y ciudad en texto libre. Solo se habilita y muestra un control por dato, preservando los datos internacionales existentes. Los desplegables son editables y filtran al escribir en el propio campo (sin buscador adicional), sin distinguir mayúsculas o tildes, navegación por teclado y aviso sin coincidencias. Las URL de los componentes de cuenta y del selector se versionan por contenido para evitar que caché conserve implementaciones anteriores.
+
+Identificación privada: empresa o persona natural con RUT utiliza NIT y dígito de verificación; persona sin RUT utiliza su documento; titular extranjero admite pasaporte, CE, PPT o identificación tributaria extranjera. Se valida formato y dígito en navegador y servidor. No se certifica existencia oficial ni representación. El identificador queda en los datos privados de la solicitud, asociado al establecimiento al revisarla; no sustituye el UUID ni impone exclusividad a un titular que opera varios negocios. No requiere una tabla ni migración nueva. Las alternativas de comprobación oficial están documentadas en `docs/VERIFICACION.md`.
+
+El formulario muestra primero la búsqueda. Al elegir crear o reclamar, habilita identificación, suscripción y soportes. Las categorías adicionales muestran iconos y excluyen la principal. Canales, fotos y datos complementarios se agrupan en desplegables. El estado de una solicitud pendiente se distingue de la suscripción vigente. Gratis oculta datos de pago y usa una acción explícita de guardar.
+
+Validación del candidato: `scripts/verificar-antes-de-desplegar.py`, pruebas nuevas `account-page.php` y `business-holder-identity.php`, integración HTTP de identificación privada y separación de suscripción vigente/solicitud. Recorrido visual en navegador de escritorio y ancho efectivo de 390 px; las capturas e informes quedan privados en `.local/preprod/evidencia/estabilizacion-cuentas/`. No se enviaron campañas ni se efectuaron pagos. El diagnóstico de Brevo consultó su API sin enviar correo.
+
+La suite pública general conserva pendientes reales: asignación de negocio libre condicionada a verificación automática (no implementada), contratación bloqueada si se alcanza el límite antiabuso, y consolidación del recorrido visual en el ejecutor. No borrar contadores ni marcar criterios como aprobados por falta de evidencia. El despliegue requiere revisión humana del commit exacto de preprod; luego validación de producción y el mismo commit en main.
 
 ## Cuenta administradora desde el portal
 

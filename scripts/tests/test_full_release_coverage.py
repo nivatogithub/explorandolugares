@@ -31,6 +31,13 @@ class FullReleaseCoverageTests(unittest.TestCase):
                 for source,prefix in sources:
                     shutil.copytree(source,ref/prefix,dirs_exist_ok=True)
                     paths.update(prefix+'/'+p.relative_to(source).as_posix() for p in source.rglob('*') if p.is_file())
+                # The shared menu now hashes account/select dependencies too.
+                # Prepare those original sources so reference and release use
+                # the same dependency graph, while comparing the entire overlay.
+                for name in [*versions.ACCOUNT_COMPONENTS,'account-entry.js']:
+                    candidates=[ROOT/'backend/public/assets'/name,ROOT/'ensayos/v1/assets'/name]
+                    source=next((p for p in candidates if p.is_file()),None)
+                    if source:shutil.copyfile(source,ref/'public/assets'/name)
                 subprocess.run([sys.executable,str(ROOT/'scripts/aplicar-identidad-neutral.py'),'--public',str(ref/'public')],check=True)
                 subprocess.run(['php',str(ROOT/'scripts/aplicar-nomenclatura-lugares.php'),str(ref)],check=True)
                 subprocess.run([sys.executable,str(ROOT/'scripts/versiones-medicion.py'),'--public',str(ref/'public')],check=True)

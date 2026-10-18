@@ -5,7 +5,7 @@ const fs=require('node:fs');
 const vm=require('node:vm');
 const source=fs.readFileSync(require('node:path').join(__dirname,'../public/assets/account-entry.js'),'utf8');
 class Element {
-  constructor(tag){this.tagName=tag;this.children=[];this.attributes={};this.className='';this.classList={add:name=>this.className+=' '+name};}
+  constructor(tag){this.tagName=tag;this.children=[];this.attributes={};this.dataset={};this.className='';this.classList={add:name=>this.className+=' '+name};}
   append(...nodes){for(const node of nodes){node.remove();node.parent=this;this.children.push(node);}}
   prepend(node){node.remove();node.parent=this;this.children.unshift(node);}
   before(node){const parent=this.parent;node.remove();node.parent=parent;parent.children.splice(parent.children.indexOf(this),0,node);}
@@ -22,7 +22,7 @@ async function scenario({withLanguages,authenticated,existing=false,legacy=false
  if(withLanguages){for(const code of ['ES','EN','PT']){const a=new Element('a');a.textContent=code;languages.append(a);}header.append(languages);}
  body.append(header);
  if(existing){const strip=new Element('div');strip.className='portal-account-strip portal-account-fallback';if(legacy)strip.setAttribute('data-admin-legacy','');const inner=new Element('div');inner.className='portal-account-strip-inner';const link=new Element('a');link.textContent=legacy?'Administrador':'Iniciar sesión';inner.append(link);strip.append(inner);body.prepend(strip);}
- const context={document:{documentElement:{lang:'es'},querySelector:s=>body.querySelector(s),createElement:t=>new Element(t)},window:{addEventListener(){}},fetch:async()=>({ok:true,json:async()=>({enabled:true,authenticated,name:'Persona',csrf:'stub',administrator})})};
+ const context={document:{head:new Element('head'),addEventListener(){},documentElement:{lang:'es'},querySelector:s=>body.querySelector(s),createElement:t=>new Element(t)},window:{addEventListener(){}},fetch:async()=>({ok:true,json:async()=>({enabled:true,authenticated,name:'Persona',csrf:'stub',administrator})})};
  await vm.runInNewContext(source,context);
  const strip=body.querySelector('.portal-account-strip');assert.ok(strip);
  if(withLanguages){assert.equal(languages.children[0],strip);assert.equal(body.children.length,1,'no additional header row');assert.equal(languages.children.slice(1).map(x=>x.textContent).join(','),'ES,EN,PT');}

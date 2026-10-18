@@ -533,6 +533,7 @@ try:
             return None
     business_flow = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(business_cookies), NoBusinessRedirect())
     registration_fields = {
+        'holder_kind':'natural_document','holder_name':'Responsable HTTP','holder_document_type':'CC','holder_number':'123456789',
         'residence_country_code':'CO','residence_region_code':'05','residence_city_code':'05368',
         'csrf': registration_csrf, 'application_type': 'new_business', 'business_id': '',
         'business_name': 'Cafetería de cuenta HTTP', 'destination_id': destination_id,
@@ -546,6 +547,9 @@ try:
     def png_chunk(tag,payload):return struct.pack('!I',len(payload))+tag+payload+struct.pack('!I',zlib.crc32(tag+payload)&0xffffffff)
     reference_png=b'\x89PNG\r\n\x1a\n'+png_chunk(b'IHDR',struct.pack('!2I5B',240,160,8,2,0,0,0))+png_chunk(b'IDAT',zlib.compress((b'\x00'+b'\xa0\x80\x60'*240)*160))+png_chunk(b'IEND',b'')
     registration_png = base64.b64decode('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aZ1sAAAAASUVORK5CYII=')
+    missing_holder = dict(registration_fields, holder_kind='')
+    status, body, _ = request('/business/register.php', missing_holder, business_flow)
+    check(status == 400 and 'Selecciona cómo se identifica' in body, 'El registro debe exigir identificación privada del titular.')
     incomplete_fields = dict(registration_fields, email='sin-documentos-http@example.invalid')
     status, body, _ = request('/business/register.php', incomplete_fields, business_flow)
     check(status == 400 and 'Adjunta los documentos obligatorios' in body and DB.execute("SELECT COUNT(*) FROM accounts WHERE email='sin-documentos-http@example.invalid'").fetchone()[0] == 0, 'El registro aceptó una cuenta sin documentos de identidad y del negocio.')
@@ -561,6 +565,9 @@ try:
     application_row = DB.execute("SELECT id,application_type,status,business_id FROM business_account_applications WHERE account_id=?", (account_row['id'],)).fetchone()
     check(account_row and account_row['account_type']=='traveler' and account_row['status']=='active' and account_row['password_hash'], 'El registro no creó una cuenta personal activada con contraseña protegida.')
     check(application_row and tuple(application_row)[1:] == ('request_new','pending',None), 'El alta inicial creó una ficha demasiado pronto o no dejó la solicitud pendiente.')
+    holder = json.loads(DB.execute('SELECT business_details_json FROM business_account_applications WHERE id=?',(application_row['id'],)).fetchone()[0])['holder_identity']
+    check(holder['document_type']=='CC' and holder['number']=='123456789' and not holder['officially_verified'] and not holder['ownership_verified'], 'Debe conservar el documento privado sin afirmar verificación oficial.')
+    check('123456789' not in body, 'Mi cuenta no debe exponer el documento del titular en el listado de solicitudes.')
     representation_rows = DB.execute('SELECT id,evidence_type,storage_name FROM business_account_application_evidence WHERE application_id=? ORDER BY evidence_type', (application_row['id'],)).fetchall()
     check([row['evidence_type'] for row in representation_rows] == ['business_registration','identity_document'], 'La solicitud debe adjuntar evidencia del negocio y de identidad.')
     check(all(row['storage_name'] not in [item.name for item in (WORK / 'public').rglob('*') if item.is_file()] for row in representation_rows), 'Los documentos de representación deben quedar fuera del directorio público.')

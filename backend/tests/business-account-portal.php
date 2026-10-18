@@ -17,7 +17,7 @@ CREATE TABLE service_category_translations(category_code TEXT,locale TEXT,label 
 CREATE TABLE businesses(id INTEGER PRIMARY KEY,public_id TEXT,destination_id INTEGER,category_code TEXT,information_status TEXT,claim_status TEXT,operation_status TEXT,publication_status TEXT,slug TEXT,updated_at TEXT DEFAULT CURRENT_TIMESTAMP);
 CREATE TABLE business_account_memberships(account_id INTEGER,business_id INTEGER,role TEXT,status TEXT);
 CREATE TABLE subscription_plans(code TEXT PRIMARY KEY);
-CREATE TABLE business_subscriptions(id INTEGER PRIMARY KEY,business_id INTEGER,plan_code TEXT,status TEXT);
+CREATE TABLE business_subscriptions(id INTEGER PRIMARY KEY,business_id INTEGER,plan_code TEXT,status TEXT,starts_at TEXT,ends_at TEXT);
 CREATE TABLE business_claim_requests(id INTEGER PRIMARY KEY,account_id INTEGER,business_id INTEGER,status TEXT,created_at TEXT DEFAULT CURRENT_TIMESTAMP);');
 $pdo->exec(file_get_contents(dirname(__DIR__).'/database/migrations/019-business-account-applications.sqlite.sql'));
 $pdo->exec(file_get_contents(dirname(__DIR__).'/database/migrations/020-account-password-resets.sqlite.sql'));
@@ -93,3 +93,7 @@ portal_check($disabledLoginRejected,'A disabled account cannot start a new sessi
 $accountAdmin->setAccountStatus($accountId,'active');
 portal_check($service->current($accountId)!==null,'An administrator can re-enable a disabled account.');
 echo "OK: solicitud vinculada, evidencia de representación requerida, aprobación revisada, autenticación y aislamiento de negocios.\n";
+
+$pdo->exec("INSERT INTO subscription_plans(code) VALUES('free'),('featured');INSERT INTO business_subscriptions(id,business_id,plan_code,status,starts_at,ends_at) VALUES(100,1,'free','active',datetime('now','-1 day'),NULL),(101,1,'featured','pending_payment',NULL,NULL)");
+$owned=$service->businesses($accountId);$owned=array_values(array_filter($owned,static fn($row)=>(int)$row['id']===1));
+portal_check($owned[0]['active_plan_code']==='free'&&$owned[0]['plan_code']==='featured'&&$owned[0]['subscription_status']==='pending_payment','A pending paid request must not replace the active free subscription in the customer portal.');

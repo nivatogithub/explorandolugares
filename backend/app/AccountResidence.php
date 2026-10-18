@@ -8,7 +8,7 @@ final class AccountResidence
   $data=self::catalog();$values=[];
   foreach(['country_code'=>2,'region_code'=>20,'region_name'=>120,'city_code'=>20,'city_name'=>120] as $key=>$max){$v=$input['residence_'.$key]??'';if(!is_string($v)||strlen($v)>$max||preg_match('/[\x00-\x1f\x7f]/',$v))throw new RuntimeException('Revisa tu lugar de residencia.');$values[$key]=trim($v);}
   $c=$values['country_code'];if(!isset($data['countries'][$c]))throw new RuntimeException('Selecciona tu país de residencia.');
-  if(isset($data['regions'][$c])){
+  if(isset($data['regions'][$c])&&($c==='CO'||$values['region_code']!=='')){
    if(!isset($data['regions'][$c][$values['region_code']]))throw new RuntimeException('Selecciona un departamento o estado del país elegido.');
    $values['region_name']=$data['regions'][$c][$values['region_code']];
   }else{if($values['region_name']==='')throw new RuntimeException('Escribe tu región, estado o provincia.');$values['region_code']='';}

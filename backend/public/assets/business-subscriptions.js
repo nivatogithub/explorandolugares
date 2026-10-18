@@ -12,7 +12,8 @@ document.querySelectorAll('.account-payment-form').forEach(form=>{
   const instructions=form.querySelector('[data-payment-instructions]');if(instructions)instructions.hidden=free;
   const transaction=form.querySelector('[data-payment-transaction]');if(transaction){transaction.hidden=free;transaction.querySelectorAll('input,select').forEach(field=>{field.disabled=free;field.required=!free;});}
   frequencyLabel.hidden=free;frequency.disabled=free;proof.required=!free&&quotable;proof.disabled=free||!quotable;
-  if(submit)submit.disabled=!free&&!quotable;
+  if(proof.closest('label'))proof.closest('label').hidden=free;
+  if(submit){submit.disabled=!free&&!quotable;submit.textContent=free?'Guardar suscripción gratuita':'Enviar suscripción y soporte';}
   detail.textContent=(extra?'Suscripción '+format(option.amount,option.currency)+' + operador '+format(extra.amount,extra.currency)+'. ':'')+(requirements[code]||[]).join(' ');
  };
  form.querySelector('[data-operator-experience]')?.addEventListener('change',update);plan.addEventListener('change',update);frequency.addEventListener('change',update);update();
