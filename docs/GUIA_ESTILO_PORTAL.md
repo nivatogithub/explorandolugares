@@ -203,3 +203,7 @@ Las secciones permanecen abiertas. Tarjetas con foto: mostrar inicialmente hasta
 
 ### Excepción de logo y tamaño: Destacado
 Destacado usa tarjeta pequeña como Gratis, sin logo ni iniciales, con nombre, etiqueta de categoría y pin de ubicación a la derecha. Rejilla compacta, cuatro filas iniciales. El logo izquierdo y las tarjetas más amplias corresponden a Página/Premium. Esta instrucción sustituye la regla general de logo para todos los planes pagos.
+
+
+### Gratis: fila compacta con icono de categoría
+El listado gratuito muestra icono semántico de categoría a la izquierda y nombre de hasta dos líneas, sin etiqueta de categoría en una segunda fila, logo, contactos ni descripción. Cada icono conserva el nombre completo de categoría en title/aria-label. Usar símbolos consistentes: cama, cubiertos, botella, copa, tienda, cruz de salud, montaña, edificio cultural, bus y herramientas. Icono de etiqueta como respaldo para categorías nuevas. Mantener filtro textual de categorías encima del listado y Cargar más a cuatro filas.

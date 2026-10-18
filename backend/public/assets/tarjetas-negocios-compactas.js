@@ -9,6 +9,18 @@
  star:'<path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9Z"/>'
  };
  icons.info='<circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7v.5"/>';
+ const categoryIcons={
+ hospedaje:'<path d="M3 19V6m0 8h18v5M3 10h5a3 3 0 0 1 3 3v1m0-5h7a3 3 0 0 1 3 3v2"/><circle cx="7" cy="10" r="2"/>',
+ alimentacion:'<path d="M5 3v6m3-6v6M3 3v6a3 3 0 0 0 6 0V3M6 12v9M18 3c-4 4-4 8 0 8V3Zm0 8v10"/>',
+ licores:'<path d="M9 3h6v4l2 3v11H7V10l2-3V3Zm-2 11h10M9 6h6"/>',
+ 'vida-nocturna':'<path d="m4 4 8 9 8-9H4Zm8 9v8m-4 0h8M16 4l3-3"/>',
+ comercio:'<path d="M3 9h18l-2-6H5L3 9Zm1 0v12h16V9M9 21v-7h6v7M3 9c0 4 4 4 5 0 1 4 5 4 6 0 1 4 7 4 7 0"/>',
+ salud:'<path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6V3Z"/>',
+ experiencias:'<path d="m2 20 7-14 5 9 3-6 5 11H2Zm5-10 2 2 2-2M17 9V3m0 0h5l-2 2 2 2h-5"/>',
+ cultura:'<path d="m2 8 10-5 10 5H2Zm2 3v8m5-8v8m6-8v8m5-8v8M2 21h20"/>',
+ transporte:'<rect x="4" y="3" width="16" height="16" rx="3"/><path d="M4 11h16M7 19v2m10-2v2M8 15h1m6 0h1"/>',
+ servicios:'<path d="m14 6 4 4a6 6 0 0 1-8 7l-6 5-3-3 6-6a6 6 0 0 1 7-8l-3 4 4 4 4-3"/>',
+ otro:'<path d="M3 4h7l11 11-6 6L3 9V4Z"/><circle cx="7" cy="7" r="1"/>'};
  const svg=kind=>'<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">'+icons[kind]+'</svg>';
  const lang=document.documentElement.lang.toLowerCase();const labels=lang.startsWith('en')?{map:'Find on map',whatsapp:'WhatsApp',instagram:'Instagram',email:'Email',page:'Open business page'}:lang.startsWith('pt')?{map:'Ver localização',whatsapp:'WhatsApp',instagram:'Instagram',email:'E-mail',page:'Abrir página do negócio'}:{map:'Ver ubicación',whatsapp:'WhatsApp',instagram:'Instagram',email:'Correo',page:'Ver página del negocio'};
  function improve(){
@@ -24,6 +36,10 @@
    const heading=document.createElement('div');heading.className='directory-compact-heading';const copy=document.createElement('div');copy.className='directory-heading-copy';
    if(logo)heading.append(logo);if(title)copy.append(title);if(category){category.classList.add('directory-category-chip');copy.append(category);}heading.append(copy);body.prepend(heading);
    if(category){const tab=document.querySelector('.directory-tabs [data-category="'+(card.dataset.category||'')+'"]');if(tab){const chip=document.createElement('button');chip.type='button';chip.className=category.className;chip.textContent=category.textContent;chip.title=lang.startsWith('en')?'Filter by this category':lang.startsWith('pt')?'Filtrar por esta categoria':'Filtrar por esta categoría';chip.addEventListener('click',()=>tab.click());category.replaceWith(chip);}}
+   if(card.classList.contains('directory-card-tier-free')){
+    const chip=heading.querySelector('.directory-category-chip');
+    if(chip){const name=chip.textContent;const code=card.dataset.category||'';const path=categoryIcons[code]||categoryIcons.otro;const categoryIcon=document.createElement('span');categoryIcon.className='directory-free-category-icon';categoryIcon.title=name;categoryIcon.setAttribute('role','img');categoryIcon.setAttribute('aria-label',name);categoryIcon.innerHTML='<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+path+'</svg>';chip.remove();heading.prepend(categoryIcon);}
+   }
    const full=title?.getAttribute('title');const name=title?.querySelector('a,span');if(full&&name)name.textContent=full;
    const actions=document.createElement('nav');actions.className='directory-icon-actions';actions.setAttribute('aria-label',lang.startsWith('en')?'Business actions':lang.startsWith('pt')?'Ações do negócio':'Acciones del negocio');
    for(const [selector,kind] of [['.directory-location-link','map'],['.directory-contact-whatsapp','whatsapp'],['.directory-contact-instagram','instagram'],['.directory-contact-email','email'],['.directory-business-page-link','page']]){
