@@ -13,6 +13,9 @@ RewriteCond %{THE_REQUEST} \s/+((?:en/|pt-br/)?destinos/[a-z0-9-]+)(?:[?\s]) [NC
 RewriteRule ^((?:en/|pt-br/)?destinos/[a-z0-9-]+)$ /$1/ [R=301,L,NE]
 
 # Panel privado de inteligencia de negocio e inversión.
+# Resolver explícitamente el directorio: algunos hostings no incluyen index.php
+# en DirectoryIndex y devuelven 403 antes de ejecutar la autenticación del portal.
+RewriteRule ^admin/?$ admin/index.php [L,QSA]
 RewriteRule ^admin/inversionistas/?$ admin/inversionistas.php [L,QSA]
 
 # Inicio del buscador y solicitudes de reclamación de negocios.
