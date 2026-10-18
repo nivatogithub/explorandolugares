@@ -1,162 +1,136 @@
 {
-    "scope": "local_preprod_only",
-    "production_changed": false,
-    "destinations": {
-        "jerico": {
-            "en": {
-                "id": 1,
-                "subregion": "Suroeste",
-                "locale": "en",
-                "name": "Jericó",
-                "intro": "Streets to wander, coffee to share and crafts that tell stories. A destination among the mountains to experience your way.",
-                "hero_path": "assets\/destinos\/1\/parque-principal-ilustrado.webp"
-            },
-            "es": {
-                "id": 1,
-                "subregion": "Suroeste",
-                "locale": "es",
-                "name": "Jericó",
-                "intro": "Calles para recorrer, café para compartir y oficios que cuentan historias. Un destino entre montañas para vivir a tu manera.",
-                "hero_path": "assets\/destinos\/1\/parque-principal-ilustrado.webp"
-            },
-            "pt-BR": {
-                "id": 1,
-                "subregion": "Suroeste",
-                "locale": "pt-BR",
-                "name": "Jericó",
-                "intro": "Ruas para explorar, café para partilhar e comércios que contam histórias. Um destino entre montanhas para viver do seu jeito.",
-                "hero_path": "assets\/destinos\/1\/parque-principal-ilustrado.webp"
-            }
-        },
-        "jardin": {
-            "en": {
-                "id": 2,
-                "subregion": "Suroeste",
-                "locale": "en",
-                "name": "Jardín",
-                "intro": "Colourful balconies and mountains to explore between a conversation and a coffee.",
-                "hero_path": "assets\/destinos\/jardin-1.webp"
-            },
-            "es": {
-                "id": 2,
-                "subregion": "Suroeste",
-                "locale": "es",
-                "name": "Jardín",
-                "intro": "Balcones de colores y montañas para descubrir entre una conversación y un café.",
-                "hero_path": "assets\/destinos\/jardin-1.webp"
-            },
-            "pt-BR": {
-                "id": 2,
-                "subregion": "Suroeste",
-                "locale": "pt-BR",
-                "name": "Jardín",
-                "intro": "Varandas coloridas e montanhas para descobrir entre uma conversa e um café.",
-                "hero_path": "assets\/destinos\/jardin-1.webp"
-            }
-        },
-        "cartagena": {
-            "en": {
-                "id": 22,
-                "subregion": "Caribe",
-                "locale": "en",
-                "name": "Cartagena de Indias",
-                "intro": "Cartagena combines urban heritage with Caribbean life. Explore the historic centre, discover its fortifications and make time for Getsemaní, its streets and local economy. Look beyond the façades to understand the city’s history.",
-                "hero_path": "assets\/destinos\/preprod-cartagena\/38fc01d6e9333b82561981e48a385cec826a2d1ee7934a65b6e3dce789e27148.webp"
-            },
-            "es": {
-                "id": 22,
-                "subregion": "Caribe",
-                "locale": "es",
-                "name": "Cartagena de Indias",
-                "intro": "Cartagena reúne patrimonio urbano y vida caribeña. Recorre el centro histórico, reconoce las fortificaciones y reserva tiempo para Getsemaní, sus calles y la economía local. La visita también invita a mirar la historia de la ciudad más allá de sus fachadas.",
-                "hero_path": "assets\/destinos\/preprod-cartagena\/38fc01d6e9333b82561981e48a385cec826a2d1ee7934a65b6e3dce789e27148.webp"
-            },
-            "pt-BR": {
-                "id": 22,
-                "subregion": "Caribe",
-                "locale": "pt-BR",
-                "name": "Cartagena de Indias",
-                "intro": "Cartagena reúne patrimônio urbano e vida caribenha. Explore o centro histórico, conheça as fortificações e reserve tempo para Getsemaní, suas ruas e a economia local. A visita também convida a compreender a história da cidade além das fachadas.",
-                "hero_path": "assets\/destinos\/preprod-cartagena\/38fc01d6e9333b82561981e48a385cec826a2d1ee7934a65b6e3dce789e27148.webp"
-            }
-        },
-        "bogota": {
-            "en": {
-                "id": 23,
-                "subregion": "Distrito Capital",
-                "locale": "en",
-                "name": "Bogotá",
-                "intro": "Explore La Candelaria, discover its museums and see Bogotá from the hills.",
-                "hero_path": "assets\/destinos\/preprod-bogota\/5709cfce96003975a47cbc7a3dee9e81b35dd71ca7780ea5248b048636ed702a.webp"
-            },
-            "es": {
-                "id": 23,
-                "subregion": "Distrito Capital",
-                "locale": "es",
-                "name": "Bogotá",
-                "intro": "Recorre La Candelaria, descubre sus museos y contempla Bogotá desde los cerros.",
-                "hero_path": "assets\/destinos\/preprod-bogota\/5709cfce96003975a47cbc7a3dee9e81b35dd71ca7780ea5248b048636ed702a.webp"
-            },
-            "pt-BR": {
-                "id": 23,
-                "subregion": "Distrito Capital",
-                "locale": "pt-BR",
-                "name": "Bogotá",
-                "intro": "Explore La Candelaria, conheça seus museus e contemple Bogotá dos morros.",
-                "hero_path": "assets\/destinos\/preprod-bogota\/5709cfce96003975a47cbc7a3dee9e81b35dd71ca7780ea5248b048636ed702a.webp"
-            }
-        },
-        "medellin": {
-            "en": {
-                "id": 16,
-                "subregion": "Valle de Aburrá",
-                "locale": "en",
-                "name": "Medellín",
-                "intro": "Medellín brings together art, science and urban life in the Aburrá Valley.",
-                "hero_path": "assets\/destinos\/preprod-medellin\/f415408fdea9826e3c13a9f1a1731f86933ad376461dbbc2b81ae8260f8dcc62.webp"
-            },
-            "es": {
-                "id": 16,
-                "subregion": "Valle de Aburrá",
-                "locale": "es",
-                "name": "Medellín",
-                "intro": "Medellín combina arte, ciencia y vida urbana en el valle de Aburrá.",
-                "hero_path": "assets\/destinos\/preprod-medellin\/f415408fdea9826e3c13a9f1a1731f86933ad376461dbbc2b81ae8260f8dcc62.webp"
-            },
-            "pt-BR": {
-                "id": 16,
-                "subregion": "Valle de Aburrá",
-                "locale": "pt-BR",
-                "name": "Medellín",
-                "intro": "Medellín reúne arte, ciência e vida urbana no vale do Aburrá.",
-                "hero_path": "assets\/destinos\/preprod-medellin\/f415408fdea9826e3c13a9f1a1731f86933ad376461dbbc2b81ae8260f8dcc62.webp"
-            }
-        },
-        "santa-marta": {
-            "en": {
-                "id": 24,
-                "subregion": "Caribe",
-                "locale": "en",
-                "name": "Santa Marta",
-                "intro": "Discover Santa Marta’s historic bay, beaches and mountains.",
-                "hero_path": "assets\/destinos\/preprod-santa-marta\/1d11231740aec0f9a334ba6535de67a2ad4c4ab50dbc21e31fdfbb69539102ae.webp"
-            },
-            "es": {
-                "id": 24,
-                "subregion": "Caribe",
-                "locale": "es",
-                "name": "Santa Marta",
-                "intro": "Descubre la bahía histórica, las playas y las montañas de Santa Marta.",
-                "hero_path": "assets\/destinos\/preprod-santa-marta\/1d11231740aec0f9a334ba6535de67a2ad4c4ab50dbc21e31fdfbb69539102ae.webp"
-            },
-            "pt-BR": {
-                "id": 24,
-                "subregion": "Caribe",
-                "locale": "pt-BR",
-                "name": "Santa Marta",
-                "intro": "Descubra a baía histórica, as praias e as montanhas de Santa Marta.",
-                "hero_path": "assets\/destinos\/preprod-santa-marta\/1d11231740aec0f9a334ba6535de67a2ad4c4ab50dbc21e31fdfbb69539102ae.webp"
-            }
-        }
+  "scope": "local_preprod_only",
+  "production_changed": false,
+  "destinations": {
+    "jerico": {
+      "en": {
+        "id": 1,
+        "subregion": "Suroeste",
+        "locale": "en",
+        "name": "Jericó",
+        "intro": "Streets to wander, coffee to share and crafts that tell stories. A destination among the mountains to experience your way.",
+        "hero_path": "assets/destinos/1/parque-principal-ilustrado.webp"
+      },
+      "es": {
+        "id": 1,
+        "subregion": "Suroeste",
+        "locale": "es",
+        "name": "Jericó",
+        "intro": "Calles para recorrer, café para compartir y oficios que cuentan historias. Un destino entre montañas para vivir a tu manera.",
+        "hero_path": "assets/destinos/1/parque-principal-ilustrado.webp"
+      },
+      "pt-BR": {
+        "id": 1,
+        "subregion": "Suroeste",
+        "locale": "pt-BR",
+        "name": "Jericó",
+        "intro": "Ruas para explorar, café para partilhar e comércios que contam histórias. Um destino entre montanhas para viver do seu jeito.",
+        "hero_path": "assets/destinos/1/parque-principal-ilustrado.webp"
+      }
+    },
+    "cartagena": {
+      "en": {
+        "id": 22,
+        "subregion": "Caribe",
+        "locale": "en",
+        "name": "Cartagena de Indias",
+        "intro": "Cartagena combines urban heritage with Caribbean life. Explore the historic centre, discover its fortifications and make time for Getsemaní, its streets and local economy. Look beyond the façades to understand the city’s history.",
+        "hero_path": "assets/destinos/preprod-cartagena/38fc01d6e9333b82561981e48a385cec826a2d1ee7934a65b6e3dce789e27148.webp"
+      },
+      "es": {
+        "id": 22,
+        "subregion": "Caribe",
+        "locale": "es",
+        "name": "Cartagena de Indias",
+        "intro": "Cartagena reúne patrimonio urbano y vida caribeña. Recorre el centro histórico, reconoce las fortificaciones y reserva tiempo para Getsemaní, sus calles y la economía local. La visita también invita a mirar la historia de la ciudad más allá de sus fachadas.",
+        "hero_path": "assets/destinos/preprod-cartagena/38fc01d6e9333b82561981e48a385cec826a2d1ee7934a65b6e3dce789e27148.webp"
+      },
+      "pt-BR": {
+        "id": 22,
+        "subregion": "Caribe",
+        "locale": "pt-BR",
+        "name": "Cartagena de Indias",
+        "intro": "Cartagena reúne patrimônio urbano e vida caribenha. Explore o centro histórico, conheça as fortificações e reserve tempo para Getsemaní, suas ruas e a economia local. A visita também convida a compreender a história da cidade além das fachadas.",
+        "hero_path": "assets/destinos/preprod-cartagena/38fc01d6e9333b82561981e48a385cec826a2d1ee7934a65b6e3dce789e27148.webp"
+      }
+    },
+    "bogota": {
+      "en": {
+        "id": 23,
+        "subregion": "Distrito Capital",
+        "locale": "en",
+        "name": "Bogotá",
+        "intro": "Explore La Candelaria, discover its museums and see Bogotá from the hills.",
+        "hero_path": "assets/destinos/preprod-bogota/5709cfce96003975a47cbc7a3dee9e81b35dd71ca7780ea5248b048636ed702a.webp"
+      },
+      "es": {
+        "id": 23,
+        "subregion": "Distrito Capital",
+        "locale": "es",
+        "name": "Bogotá",
+        "intro": "Recorre La Candelaria, descubre sus museos y contempla Bogotá desde los cerros.",
+        "hero_path": "assets/destinos/preprod-bogota/5709cfce96003975a47cbc7a3dee9e81b35dd71ca7780ea5248b048636ed702a.webp"
+      },
+      "pt-BR": {
+        "id": 23,
+        "subregion": "Distrito Capital",
+        "locale": "pt-BR",
+        "name": "Bogotá",
+        "intro": "Explore La Candelaria, conheça seus museus e contemple Bogotá dos morros.",
+        "hero_path": "assets/destinos/preprod-bogota/5709cfce96003975a47cbc7a3dee9e81b35dd71ca7780ea5248b048636ed702a.webp"
+      }
+    },
+    "medellin": {
+      "en": {
+        "id": 16,
+        "subregion": "Valle de Aburrá",
+        "locale": "en",
+        "name": "Medellín",
+        "intro": "Medellín brings together art, science and urban life in the Aburrá Valley.",
+        "hero_path": "assets/destinos/preprod-medellin/f415408fdea9826e3c13a9f1a1731f86933ad376461dbbc2b81ae8260f8dcc62.webp"
+      },
+      "es": {
+        "id": 16,
+        "subregion": "Valle de Aburrá",
+        "locale": "es",
+        "name": "Medellín",
+        "intro": "Medellín combina arte, ciencia y vida urbana en el valle de Aburrá.",
+        "hero_path": "assets/destinos/preprod-medellin/f415408fdea9826e3c13a9f1a1731f86933ad376461dbbc2b81ae8260f8dcc62.webp"
+      },
+      "pt-BR": {
+        "id": 16,
+        "subregion": "Valle de Aburrá",
+        "locale": "pt-BR",
+        "name": "Medellín",
+        "intro": "Medellín reúne arte, ciência e vida urbana no vale do Aburrá.",
+        "hero_path": "assets/destinos/preprod-medellin/f415408fdea9826e3c13a9f1a1731f86933ad376461dbbc2b81ae8260f8dcc62.webp"
+      }
+    },
+    "santa-marta": {
+      "en": {
+        "id": 24,
+        "subregion": "Caribe",
+        "locale": "en",
+        "name": "Santa Marta",
+        "intro": "Discover Santa Marta’s historic bay, beaches and mountains.",
+        "hero_path": "assets/destinos/preprod-santa-marta/1d11231740aec0f9a334ba6535de67a2ad4c4ab50dbc21e31fdfbb69539102ae.webp"
+      },
+      "es": {
+        "id": 24,
+        "subregion": "Caribe",
+        "locale": "es",
+        "name": "Santa Marta",
+        "intro": "Descubre la bahía histórica, las playas y las montañas de Santa Marta.",
+        "hero_path": "assets/destinos/preprod-santa-marta/1d11231740aec0f9a334ba6535de67a2ad4c4ab50dbc21e31fdfbb69539102ae.webp"
+      },
+      "pt-BR": {
+        "id": 24,
+        "subregion": "Caribe",
+        "locale": "pt-BR",
+        "name": "Santa Marta",
+        "intro": "Descubra a baía histórica, as praias e as montanhas de Santa Marta.",
+        "hero_path": "assets/destinos/preprod-santa-marta/1d11231740aec0f9a334ba6535de67a2ad4c4ab50dbc21e31fdfbb69539102ae.webp"
+      }
     }
+  }
 }
