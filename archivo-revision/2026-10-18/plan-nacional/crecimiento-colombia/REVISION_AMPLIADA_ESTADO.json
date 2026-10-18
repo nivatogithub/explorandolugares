@@ -1,0 +1,42 @@
+[
+  {
+    "worker": "Lugar 1",
+    "destination": "Cartagena",
+    "branch": "lugar/CO/bolivar/cartagena",
+    "commit": "7c71e573e2d475a2f0a0a3383409ba73b238acff",
+    "preview": "http://127.0.0.1:8061/cartagena/",
+    "human_approval": null,
+    "publication": false,
+    "current_revision": "1fb7e17c75bc93b6eafcaffd172af1508134431fcf75620a793f6d8d855438e2",
+    "historical_approved_components": 22,
+    "active_unchanged_approved_components": 15,
+    "primary_attractions": 8
+  },
+  {
+    "worker": "Lugar 2",
+    "destination": "Bogotá",
+    "branch": "lugar/CO/bogota-dc/bogota",
+    "commit": "d17cd569d0ab85150659b1861a788f7f13429aa3",
+    "preview": "http://127.0.0.1:8061/bogota/",
+    "human_approval": null,
+    "publication": false
+  },
+  {
+    "worker": "Lugar 3",
+    "destination": "Medellín",
+    "branch": "lugar/CO/antioquia/medellin",
+    "commit": "82c222ed7bc6575d6e7c911aa2c4f0e01ca2ea50",
+    "preview": "http://127.0.0.1:8061/medellin/",
+    "human_approval": null,
+    "publication": false
+  },
+  {
+    "worker": "Lugar 4",
+    "destination": "Santa Marta",
+    "branch": "lugar/CO/magdalena/santa-marta",
+    "commit": "f62ac146751a1d636664798845e098e063144d13",
+    "preview": "http://127.0.0.1:8061/santa-marta/",
+    "human_approval": null,
+    "publication": false
+  }
+]

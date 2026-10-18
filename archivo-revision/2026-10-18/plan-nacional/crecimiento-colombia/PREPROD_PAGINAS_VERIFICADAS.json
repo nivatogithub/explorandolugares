@@ -1,0 +1,102 @@
+{
+  "origin": "http://127.0.0.1:8088",
+  "pages": [
+    {
+      "destination": "cartagena",
+      "locale": "es",
+      "url": "http://127.0.0.1:8088/destinos/cartagena/",
+      "status": 200,
+      "heading": "Cartagena de Indias.Murallas, barrios y memoria junto al Caribe",
+      "images": 10
+    },
+    {
+      "destination": "cartagena",
+      "locale": "en",
+      "url": "http://127.0.0.1:8088/en/destinos/cartagena/",
+      "status": 200,
+      "heading": "Cartagena de Indias.City walls, neighbourhoods and memory by the Caribbean",
+      "images": 10
+    },
+    {
+      "destination": "cartagena",
+      "locale": "pt-BR",
+      "url": "http://127.0.0.1:8088/pt-br/destinos/cartagena/",
+      "status": 200,
+      "heading": "Cartagena de Indias.Muralhas, bairros e memória à beira do Caribe",
+      "images": 10
+    },
+    {
+      "destination": "bogota",
+      "locale": "es",
+      "url": "http://127.0.0.1:8088/destinos/bogota/",
+      "status": 200,
+      "heading": "Bogotá.Bogotá: cultura, montaña y vida de barrio",
+      "images": 5
+    },
+    {
+      "destination": "bogota",
+      "locale": "en",
+      "url": "http://127.0.0.1:8088/en/destinos/bogota/",
+      "status": 200,
+      "heading": "Bogotá.Bogotá: culture, mountains and neighbourhood life",
+      "images": 5
+    },
+    {
+      "destination": "bogota",
+      "locale": "pt-BR",
+      "url": "http://127.0.0.1:8088/pt-br/destinos/bogota/",
+      "status": 200,
+      "heading": "Bogotá.Bogotá: cultura, montanha e vida de bairro",
+      "images": 5
+    },
+    {
+      "destination": "medellin",
+      "locale": "es",
+      "url": "http://127.0.0.1:8088/destinos/medellin/",
+      "status": 200,
+      "heading": "Medellín.Arte, ciencia y vida urbana en Medellín",
+      "images": 4
+    },
+    {
+      "destination": "medellin",
+      "locale": "en",
+      "url": "http://127.0.0.1:8088/en/destinos/medellin/",
+      "status": 200,
+      "heading": "Medellín.Art, science and urban life in Medellín",
+      "images": 4
+    },
+    {
+      "destination": "medellin",
+      "locale": "pt-BR",
+      "url": "http://127.0.0.1:8088/pt-br/destinos/medellin/",
+      "status": 200,
+      "heading": "Medellín.Arte, ciência e vida urbana em Medellín",
+      "images": 4
+    },
+    {
+      "destination": "santa-marta",
+      "locale": "es",
+      "url": "http://127.0.0.1:8088/destinos/santa-marta/",
+      "status": 200,
+      "heading": "Santa Marta.Santa Marta · revisión local",
+      "images": 5
+    },
+    {
+      "destination": "santa-marta",
+      "locale": "en",
+      "url": "http://127.0.0.1:8088/en/destinos/santa-marta/",
+      "status": 200,
+      "heading": "Santa Marta.Santa Marta · revisión local",
+      "images": 5
+    },
+    {
+      "destination": "santa-marta",
+      "locale": "pt-BR",
+      "url": "http://127.0.0.1:8088/pt-br/destinos/santa-marta/",
+      "status": 200,
+      "heading": "Santa Marta.Santa Marta · revisión local",
+      "images": 5
+    }
+  ],
+  "production_accessed": false
+}

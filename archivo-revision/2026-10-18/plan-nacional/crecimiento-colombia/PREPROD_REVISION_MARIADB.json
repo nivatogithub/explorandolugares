@@ -1,0 +1,37 @@
+{
+  "checked_date": "2026-10-16",
+  "action": "runtime_verificado_y_avances_importados",
+  "observed_running_container": {
+    "database": "10.11.19-MariaDB-deb12",
+    "php": "8.3.33",
+    "zip_extension": true,
+    "ZipArchive_class": true
+  },
+  "parity_check": "PASS",
+  "imports_resumed": true,
+  "production_modified": false,
+  "conclusion": "ZIP está habilitado en PHP del entorno MariaDB; no requiere aplicar la receta histórica MySQL.",
+  "previous_audit": {
+    "checked_date": "2026-10-16",
+    "action": "revision_solo_lectura_sin_importaciones",
+    "configured_target": {
+      "database": "MariaDB 10.11.19",
+      "php": "8.3.33",
+      "php_zip_included": true,
+      "volume": "explorando-preprod-mariadb-10-11"
+    },
+    "observed_running_container": {
+      "database": "MySQL 8.0.46-0ubuntu0.24.04.4",
+      "php": "8.3.6",
+      "zip_extension": true,
+      "ZipArchive_class": true,
+      "research_column_nullable": false,
+      "research_column_default": null
+    },
+    "http_parity_probe": "404 en /__preprod-runtime.php; nuevo endpoint aún no disponible en contenedor activo",
+    "conclusion": "Configuración nueva aún no constatada en ejecución; no reutilizar receta ZIP antigua. ZIP pertenece a PHP y ya está incluido en imagen MariaDB prevista.",
+    "imports_resumed": false,
+    "environment_rebuilt": false,
+    "production_modified": false
+  }
+}

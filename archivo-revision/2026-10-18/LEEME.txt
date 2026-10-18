@@ -1,0 +1,9 @@
+POR REVISAR — NO PUBLICAR NI EJECUTAR AUTOMÁTICAMENTE
+
+Este archivo conserva investigación nacional, fuentes, decisiones y scripts históricos de cinco ramas retiradas. No sustituye las decisiones actuales del portal.
+
+Los scripts conservan el código original y pueden apuntar a modelos, entornos o rutas antiguas: requieren revisión y adaptación antes de ejecutarlos. Las antiguas dependencias territoriales, estados de aprobación, proveedores y cifras no se consideran vigentes.
+
+manifest.json relaciona cada rama, commit y ruta original con su copia archivada o con el archivo idéntico ya existente en main. Las versiones duplicadas se guardan una sola vez. Las imágenes, paquetes binarios y el historial completo siguen recuperables mediante las etiquetas archivo/2026-10-18/*.
+
+El empaquetador de producción no incluye esta carpeta. Conservar feature/advance-admin y sus cambios sin commit para evaluación funcional. Reclamaciones y revisión móvil quedan ENCOLADAS.
