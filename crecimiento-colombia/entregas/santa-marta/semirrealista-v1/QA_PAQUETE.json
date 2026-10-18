@@ -22,6 +22,14 @@
       "pass": true
     },
     {
+      "check": "Place/experience IDs disjoint",
+      "pass": true
+    },
+    {
+      "check": "Import place/experience slugs disjoint",
+      "pass": true
+    },
+    {
       "check": "History has no image",
       "pass": true
     },
@@ -122,11 +130,11 @@
       "pass": true
     },
     {
-      "check": "ciudad-perdida complete brief translations",
+      "check": "caminata-ciudad-perdida complete brief translations",
       "pass": true
     },
     {
-      "check": "ciudad-perdida unapproved draft",
+      "check": "caminata-ciudad-perdida unapproved draft",
       "pass": true
     },
     {
@@ -542,6 +550,6 @@
       "pass": true
     }
   ],
-  "count": 135,
+  "count": 137,
   "scope": "File integrity, source associations and translation/role completeness only; browser rendering and human approval not implied."
 }

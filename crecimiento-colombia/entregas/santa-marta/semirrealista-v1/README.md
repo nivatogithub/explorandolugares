@@ -28,4 +28,6 @@ Cuatro salidas rechazadas se conservan fuera del hosting: portada y centro con d
 
 ## Validación
 
-`validar-paquete.py`: 135 verificaciones de traducciones, ocho/nueve roles, límites de oferta, unicidad, archivos, dimensiones y hashes. Sintaxis de JS validada con Node. `QA-contacto-final.jpg` permite inspección de los 18 componentes; es un archivo privado de QA, no un collage para publicar. Pendientes: integración serial y revisión humana del resultado en contexto real.
+`validar-paquete.py`: 137 verificaciones de traducciones, ocho/nueve roles, límites de oferta, unicidad, archivos, dimensiones y hashes. Sintaxis de JS validada con Node. `QA-contacto-final.jpg` permite inspección de los 18 componentes; es un archivo privado de QA, no un collage para publicar. Pendientes: integración serial y revisión humana del resultado en contexto real.
+
+Corrección de integración: la experiencia usa `caminata-ciudad-perdida`; el lugar conserva `ciudad-perdida`. Ambos comparten ubicación relacionada, pero sus identificadores son distintos para respetar UNIQUE(destination, slug). El activo de la experiencia conserva `exp-ciudad-perdida`.

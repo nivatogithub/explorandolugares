@@ -12,6 +12,8 @@ check('8 distinct geographic sites',len(data['places'])==len({r['id'] for r in d
 check('Tayrona before Rodadero',next(r['order'] for r in data['places'] if r['id']=='tayrona')<next(r['order'] for r in data['places'] if r['id']=='rodadero'))
 check('No Acuario in Top8','visita-acuario' not in {r['id'] for r in data['places']} and 'acuario' not in {r['id'] for r in data['places']})
 check('9 distinct experiences',len(data['experiences'])==len({r['id'] for r in data['experiences']})==9)
+check('Place/experience IDs disjoint',not ({r['id'] for r in data['places']} & {r['id'] for r in data['experiences']}))
+check('Import place/experience slugs disjoint',not ({r['slug'] for r in pack['places']} & {r['id'] for r in pack['experiences']}))
 check('History has no image',data['history_image'] is None and manifest['history_image'] is None)
 for row in data['places']+data['experiences']:
  check(row['id']+' complete brief translations',set(row['translations'])=={'es','en','pt-BR'} and all(t['name'] and 10<len(t['description'])<240 for t in row['translations'].values()))
