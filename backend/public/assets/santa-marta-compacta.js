@@ -24,7 +24,7 @@
  const intro=document.querySelector('.destination-hero .intro');if(intro)intro.textContent=copy.intro;
  const em=document.querySelector('.destination-hero h1 em');if(em)em.textContent=copy.headline;
  const figure=document.querySelector('.destination-hero figure');
- if(figure){const caption=document.createElement('figcaption');caption.className='credit';caption.textContent=copy.image_label;figure.replaceChildren(image('hero-v2','Santa Marta · bahía histórica y Camellón',true),caption);}
+ if(figure){const caption=document.createElement('figcaption');caption.className='credit';caption.textContent=copy.image_label;figure.replaceChildren(image('hero-v3','Santa Marta · bahía histórica y Camellón',true),caption);}
  const overview=document.querySelector('#descubre')||document.querySelector('.destination-overview');
  if(overview){overview.classList.add('sm-history');const text=document.createElement('div');const heading=document.createElement('h2');heading.textContent=copy.history_title;const p=document.createElement('p');p.textContent=copy.history;text.append(heading,p);overview.replaceChildren(text);}
  document.querySelectorAll('.destination-hero .eyebrow,.pilot-banner,.destination-business-link').forEach(n=>n.remove());
