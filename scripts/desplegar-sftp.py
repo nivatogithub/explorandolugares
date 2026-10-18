@@ -96,6 +96,7 @@ def public_path(config):
 def rewrite_private_app_includes(public_root, remote_base):
     """Point public PHP entrypoints to the private app directory on the host."""
     prefixes = [
+        re.compile(r'''dirname\s*\(\s*__DIR__\s*\)\s*\.\s*(['"])/app/'''),
         re.compile(r'''dirname\s*\(\s*__DIR__\s*,\s*2\s*\)\s*\.\s*(['"])/app/'''),
         re.compile(r'''__DIR__\s*\.\s*(['"])/\.\./app/'''),
     ]

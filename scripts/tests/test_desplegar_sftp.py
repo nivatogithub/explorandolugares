@@ -64,8 +64,13 @@ class DeploymentTests(unittest.TestCase):
             claim.write_text("<?php require __DIR__.'/../app/bootstrap.php';\n"
                              "require __DIR__.'/../app/BusinessClaimService.php';")
 
+            contact = public / 'contacto.php'
+            contact.write_text("<?php require dirname(__DIR__).'/app/bootstrap.php';\n"
+                               "require dirname ( __DIR__ ) . '/app/PublicRequestService.php';")
             deploy.rewrite_private_app_includes(public, self.config['remote_base'])
 
+            self.assertEqual(contact.read_text(), "<?php require '/home/usuario/explorandolugares/app/bootstrap.php';\n"
+                             "require '/home/usuario/explorandolugares/app/PublicRequestService.php';")
             self.assertEqual(admin.read_text(), "<?php require '/home/usuario/explorandolugares/app/bootstrap.php';\n"
                              "require '/home/usuario/explorandolugares/app/BusinessAdminService.php';")
             self.assertEqual(claim.read_text(), "<?php require '/home/usuario/explorandolugares/app/bootstrap.php';\n"
