@@ -6,7 +6,7 @@ const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/st
  const node=()=>({append(){},prepend(){},remove(){},setAttribute(){},addEventListener(){}});
  const document={documentElement:{lang:'es'},referrer:'',visibilityState:'visible',head:node(),body:node(),createElement:node,createElementNS:node,querySelector:s=>s==='footer'?node():null,querySelectorAll:()=>[card],addEventListener:(name,fn)=>(listeners[name]??=[]).push(fn)};
  class Observer{constructor(callback){this.callback=callback;observer=this;}observe(){}unobserve(){}trigger(ratio){this.callback([{target:card,isIntersecting:ratio>0,intersectionRatio:ratio}]);}}
- const window={IntersectionObserver:Observer,dispatchEvent(){}};
+ const window={IntersectionObserver:Observer,dispatchEvent(){},addEventListener(){}};
  const context={window,document,navigator:{doNotTrack:'0'},localStorage:{getItem:()=>JSON.stringify({allowed:false,version:'measurement-v1',expires:Date.now()+999999}),setItem(){}},location:new URL('https://test.invalid/destinos/jerico/'),URL,Event:class{constructor(type){this.type=type}},crypto:{randomUUID:()=> 'not-used'},IntersectionObserver:Observer,setTimeout:(fn,delay)=>{const key=++next;clock.set(key,{fn,due:now+delay});return key;},clearTimeout:key=>clock.delete(key),fetch:(url,options={})=>{requests.push({url,options});return Promise.resolve({ok:true,json:()=>Promise.resolve(url==='/api/medicion.php'?{enabled:true}:{accepted:true})});}};
  const tick=async(ms)=>{now+=ms;for(const [key,t] of [...clock])if(t.due<=now){clock.delete(key);t.fn();}await Promise.resolve();};
  vm.runInNewContext(fs.readFileSync(__dirname+'/../public/assets/cobertura/medicion.js','utf8'),context);
