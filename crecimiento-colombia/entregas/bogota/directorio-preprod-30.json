@@ -1,0 +1,426 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "bogota",
+  "businesses": [
+    {
+      "name": "Hotel de la Ópera",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.hotelopera.com.co/en/",
+          "checked_at": "2026-10-16",
+          "note": "Fuente pública documentada en el inventario del destino. Sin contacto, alianza ni verificación operativa presencial. Ficha gratuita no reclamada; propuesta privada."
+        }
+      ]
+    },
+    {
+      "name": "Tequendama Suites Bogotá",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.hotelestequendama.com.co/tequendama-suites-bogota.html",
+          "checked_at": "2026-10-17",
+          "note": "Fuente pública documentada en el inventario del destino. Sin contacto, alianza ni verificación operativa presencial. Ficha gratuita no reclamada; propuesta privada."
+        }
+      ]
+    },
+    {
+      "name": "Sofitel Bogotá Victoria Regia",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://sofitelvictoriaregia.com/",
+          "checked_at": "2026-10-16",
+          "note": "Fuente pública documentada en el inventario del destino. Sin contacto, alianza ni verificación operativa presencial. Ficha gratuita no reclamada; propuesta privada."
+        }
+      ]
+    },
+    {
+      "name": "El Chato",
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.elchato.co/",
+          "checked_at": "2026-10-16",
+          "note": "Fuente pública documentada en el inventario del destino. Sin contacto, alianza ni verificación operativa presencial. Ficha gratuita no reclamada; propuesta privada."
+        }
+      ]
+    },
+    {
+      "name": "LEO",
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://restauranteleo.com/",
+          "checked_at": "2026-10-16",
+          "note": "Fuente pública documentada en el inventario del destino. Sin contacto, alianza ni verificación operativa presencial. Ficha gratuita no reclamada; propuesta privada."
+        }
+      ]
+    },
+    {
+      "name": "Azahar Parque 93",
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://azaharcoffee.com/tiendas/",
+          "checked_at": "2026-10-16",
+          "note": "Fuente pública documentada en el inventario del destino. Sin contacto, alianza ni verificación operativa presencial. Ficha gratuita no reclamada; propuesta privada."
+        }
+      ]
+    },
+    {
+      "name": "Azahar Nogal",
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://azaharcoffee.com/tiendas/",
+          "checked_at": "2026-10-16",
+          "note": "Fuente pública documentada en el inventario del destino. Sin contacto, alianza ni verificación operativa presencial. Ficha gratuita no reclamada; propuesta privada."
+        }
+      ]
+    },
+    {
+      "name": "Azahar Aeropuerto El Dorado",
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://azaharcoffee.com/tiendas/",
+          "checked_at": "2026-10-16",
+          "note": "Fuente pública documentada en el inventario del destino. Sin contacto, alianza ni verificación operativa presencial. Ficha gratuita no reclamada; propuesta privada."
+        }
+      ]
+    },
+    {
+      "name": "Museo de Arte Moderno de Bogotá — MAMBO",
+      "category_code": "cultura",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.mambogota.com/visitanos/",
+          "checked_at": "2026-10-16",
+          "note": "Fuente pública documentada en el inventario del destino. Sin contacto, alianza ni verificación operativa presencial. Ficha gratuita no reclamada; propuesta privada."
+        }
+      ]
+    },
+    {
+      "name": "Centro Nacional de las Artes Delia Zapata Olivella",
+      "category_code": "cultura",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.eneldelia.gov.co/",
+          "checked_at": "2026-10-16",
+          "note": "Fuente pública documentada en el inventario del destino. Sin contacto, alianza ni verificación operativa presencial. Ficha gratuita no reclamada; propuesta privada."
+        }
+      ]
+    },
+    {
+      "name": "JW Marriott Hotel Bogotá",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.marriott.com/es/hotel-sitemap/colombia-hotel-sitemap",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "W Bogotá",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.marriott.com/es/hotel-sitemap/colombia-hotel-sitemap",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Bogotá Marriott Hotel",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.marriott.com/es/hotel-sitemap/colombia-hotel-sitemap",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "AC Hotel Bogotá Zona T",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.marriott.com/es/hotel-sitemap/colombia-hotel-sitemap",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Courtyard by Marriott Bogotá Airport",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.marriott.com/es/hotel-sitemap/colombia-hotel-sitemap",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Four Points by Sheraton Bogotá",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.marriott.com/es/hotel-sitemap/colombia-hotel-sitemap",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Sheraton Bogotá Hotel",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.marriott.com/es/hotel-sitemap/colombia-hotel-sitemap",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Residence Inn by Marriott Bogotá",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.marriott.com/es/hotel-sitemap/colombia-hotel-sitemap",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "80 Sillas",
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://visitbogota.co/es/donde-comer",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Seratta Gourmand Market",
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://visitbogota.co/es/donde-comer",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Yakimeshi Roll",
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://visitbogota.co/es/donde-comer",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Italia Artesana",
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://visitbogota.co/es/donde-comer",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Autocar al Pastor",
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://visitbogota.co/es/donde-comer",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Pizzardi Artigianale",
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://visitbogota.co/es/donde-comer",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "La Puerta Falsa",
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://visitbogota.co/es/donde-comer",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Centro Comercial Gran Estación",
+      "category_code": "comercio",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://visitbogota.co/en/node/2400",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Centro Comercial Salitre Plaza",
+      "category_code": "comercio",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://visitbogota.co/en/node/2400",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Centro Comercial Multiplaza Bogotá",
+      "category_code": "comercio",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://visitbogota.co/en/node/2400",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Centro Comercial El Edén",
+      "category_code": "comercio",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://visitbogota.co/en/node/2400",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    },
+    {
+      "name": "Maloka",
+      "category_code": "cultura",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://maloka.org/",
+          "checked_at": "2026-10-17",
+          "note": "Existencia y vinculación al destino documentadas en fuente propia o institucional. Sin contacto ni alianza; operación, disponibilidad y representación no verificadas presencialmente."
+        }
+      ]
+    }
+  ]
+}
