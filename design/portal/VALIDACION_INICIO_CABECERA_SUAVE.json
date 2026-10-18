@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-17",
+  "environment": "preprod_local",
+  "deployment": "python3 preprod/control.py up: completado",
+  "header_background": "rgb(255, 243, 218)",
+  "footer_background": "rgb(255, 243, 218)",
+  "header_separator": "1px #D8B48A; observado0.625px por escala de pantalla",
+  "removed_home_jerico_cta": true,
+  "step_heading_color": "rgb(184, 65, 32)",
+  "step_heading_size": "28px",
+  "home_composition": "imagen principal y3apoyos alineados",
+  "comparison_url": "http://127.0.0.1:8088/__composiciones-inicio/",
+  "private_preview_access_verified": [
+    "cartagena",
+    "bogota",
+    "medellin",
+    "santa-marta"
+  ],
+  "authentication": "sesión normal de administrador local restablecida; sin desactivar protección",
+  "production_changed": false
+}

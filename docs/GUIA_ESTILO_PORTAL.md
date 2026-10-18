@@ -207,3 +207,7 @@ Destacado usa tarjeta pequeña como Gratis, sin logo ni iniciales, con nombre, e
 
 ### Gratis: fila compacta con icono de categoría
 El listado gratuito muestra icono semántico de categoría a la izquierda y nombre de hasta dos líneas, sin etiqueta de categoría en una segunda fila, logo, contactos ni descripción. Cada icono conserva el nombre completo de categoría en title/aria-label. Usar símbolos consistentes: cama, cubiertos, botella, copa, tienda, cruz de salud, montaña, edificio cultural, bus y herramientas. Icono de etiqueta como respaldo para categorías nuevas. Mantener filtro textual de categorías encima del listado y Cargar más a cuatro filas.
+
+
+## Ajuste aprobado de cabecera y pie · 17/10/2026
+El propietario solicita amarillo pálido #FFF3DA exclusivamente en header/footer compartidos, con línea fina #D8B48A bajo header y sobre footer. El contenido conserva blanco/grises neutros; no restaurar paneles amarillos ni salvia. Retirar CTA Conoce Jericó del bloque principal del inicio. Títulos de los pasos 1/2/3 en terracota vivo #B84120, mayores y legibles. La composición inicial usa una ilustración grande y tres apoyos alineados debajo, sin inclinaciones ni recortes geométricos. Comparación de tres alternativas en /__composiciones-inicio/.

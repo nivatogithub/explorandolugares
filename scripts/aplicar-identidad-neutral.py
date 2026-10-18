@@ -48,7 +48,19 @@ body{background:var(--el-page)!important;color:var(--el-text)}
 .directory-card a.directory-icon-action:hover{background:var(--el-panel)}
 .directory-card a.directory-icon-action:focus-visible{outline:2px solid var(--el-action);outline-offset:2px;background:var(--el-panel)}
 
-header,footer{background:var(--el-page)!important;border-color:var(--el-border)!important}
+body header,body footer,body.el-review-rest header,body.el-review-rest footer{background:var(--el-shell,#fff3da)!important;border-color:var(--el-shell-border,#d8b48a)!important}
+body header{border-bottom:1px solid var(--el-shell-border,#d8b48a)!important}
+body footer{border-top:1px solid var(--el-shell-border,#d8b48a)!important}
+.home-editorial-gallery{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;grid-template-rows:auto 78px!important;gap:10px!important;position:relative!important;height:auto!important;min-height:0!important;aspect-ratio:auto!important;padding:0!important;margin:0!important;background:transparent!important;isolation:auto!important}
+.home-editorial-gallery:before,.home-editorial-gallery:after,.home-gallery-accent{display:none!important}
+.home-editorial-gallery .home-gallery-shot{position:relative!important;inset:auto!important;width:100%!important;height:100%!important;transform:none!important;clip-path:none!important;border-radius:12px!important;overflow:hidden!important;box-shadow:none!important;border:0!important;margin:0!important}
+.home-editorial-gallery .home-gallery-shot-main{grid-column:1/-1!important;grid-row:1!important;aspect-ratio:3/2!important}
+.home-editorial-gallery .home-gallery-shot-city,.home-editorial-gallery .home-gallery-shot-jerico,.home-editorial-gallery .home-gallery-shot-experience{grid-row:2!important;aspect-ratio:auto!important}
+.home-editorial-gallery .home-gallery-shot img{display:block;width:100%!important;height:100%!important;object-fit:cover!important;transform:none!important;clip-path:none!important}
+#formas-de-explorar .experience-stories h3{font-size:clamp(22px,2.5vw,28px)!important;line-height:1.2!important;color:#B84120!important;margin:8px 0 12px!important}
+#formas-de-explorar .experience-stories .story-number{color:#B84120!important;font-weight:750!important;font-size:13px!important}
+@media(max-width:650px){.home-editorial-gallery{grid-template-rows:auto 64px!important}}
+
 .pilot-banner{display:none!important}
 .row-load-more{display:block;margin:18px auto 0;min-height:44px;padding:10px 20px;border:1px solid var(--el-control-border);border-radius:8px;background:var(--el-card);color:var(--el-text);cursor:pointer}
 .row-load-more[hidden]{display:none!important}
@@ -100,6 +112,7 @@ input,select,textarea{background:var(--el-field);border-color:var(--el-control-b
   s=s.replace('tarjetas-negocios-compactas.js?v=3','tarjetas-negocios-compactas.js?v=4')
   if 'tarjetas-negocios-compactas.js' not in s:s=s.replace('</head>','<script defer src="/assets/tarjetas-negocios-compactas.js?v=4"></script></head>',1)
   if 'cargar-mas-tarjetas.js' not in s:s=s.replace('</head>','<script defer src="/assets/cargar-mas-tarjetas.js?v=1"></script></head>',1)
+  s=re.sub(r'<a\b[^>]*class="text-link"[^>]*href="[^"]*jerico[^"]*"[^>]*>.*?</a>','',s) if 'home-editorial-actions' in s else s
   if 'identidad-neutral.css' not in s:s=s.replace('</head>',hook+'</head>',1)
   if s!=p.read_text():p.write_text(s);count+=1
  print(json.dumps({'public':str(public),'updated_pages':count,'updated_stylesheets':css_count,'published':False}))
