@@ -251,3 +251,8 @@ Bogotá, Medellín y Santa Marta deben tener al menos30 fichas gratuitas por des
 ## Diferenciación de portadas y corrección de estado
 
 No repetir entre ciudades la misma composición de torre en primer plano con skyline y montañas cambiando solo el edificio. Revisar portadas juntas: variar escala, punto de vista, escena y rasgos reales de identidad dentro del mismo estilo. Bogotá v2 usa Plaza de Bolívar a nivel peatonal; Medellín conserva Coltejer y el valle. La elección de estilo no equivale a aprobación de cada imagen. Jardín está pendiente de trabajar y validar por aclaración del propietario; no tratarlo como terminado ni publicarlo por herencia de una lista anterior.
+
+
+## Corrección de identidad territorial de portada · 17-10-2026
+
+Cartagena: el propietario rechaza portada con cruz de La Popa y elige ciudad amurallada. La muralla y el conjunto urbano histórico deben dominar, no mar genérico ni Bocagrande. No colocar Torre del Reloj en una ubicación costera inventada para reunir iconos. Validar no solo un símbolo aislado: también relieve, trama urbana, escala, vegetación y proporción de costa. La composición semirrealista no autoriza inventar el contexto. Propuesta nueva en preproducción, resultado pendiente de aprobación.
