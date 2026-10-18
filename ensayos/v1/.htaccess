@@ -1,5 +1,12 @@
 RewriteEngine On
 
+# Canonical production host only; leave localhost/preprod unchanged.
+RewriteCond %{HTTP_HOST} ^www\.explorandolugares\.com(?::[0-9]+)?$ [NC]
+RewriteRule ^ https://explorandolugares.com%{REQUEST_URI} [R=301,L,NE]
+RewriteCond %{HTTP_HOST} ^explorandolugares\.com(?::[0-9]+)?$ [NC]
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://explorandolugares.com%{REQUEST_URI} [R=301,L,NE]
+
 # Read current publications on every sitemap request; internal rewrite only.
 RewriteRule ^sitemap\.xml$ sitemap-live.php [L]
 
