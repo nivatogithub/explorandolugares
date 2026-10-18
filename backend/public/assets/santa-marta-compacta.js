@@ -30,7 +30,8 @@
  document.querySelectorAll('.destination-hero .eyebrow,.pilot-banner,.destination-business-link').forEach(n=>n.remove());
  const banner=document.querySelector('.destination-preview-banner');if(banner)banner.textContent=copy.draft;
  const invitation=document.querySelector('.destination-invitation');
- if(invitation){const h=invitation.querySelector('h2');const p=invitation.querySelector('p');if(h)h.textContent=copy.business_title;if(p)p.textContent=copy.business_text;}
+ if(invitation){const button=invitation.querySelector('a.pill');if(button){const content=document.createElement('div');const h=document.createElement('h2');h.textContent=copy.business_title;const p=document.createElement('p');p.textContent=copy.business_text;content.append(h,p);invitation.replaceChildren(content,button);}}
+ document.querySelectorAll('a[href="#descubre"]').forEach(a=>a.textContent=locale==='en'?'History':locale==='pt-BR'?'História':'Historia');
  const practical=document.querySelector('.destination-practical details:first-child p');if(practical)practical.textContent=copy.practical;
  function heading(section,title){
   let head=section.querySelector(':scope>.sectionhead,:scope>.destination-experiences-heading');
