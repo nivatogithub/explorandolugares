@@ -183,3 +183,8 @@ Instrucción posterior del propietario,17/10/2026: él buscará manualmente las 
 El coordinador presenta qué componentes están identificados, el uso exacto (portada/historia/atractivo/experiencia) y si su inclusión está confirmada o pendiente. No pedir material para una ficha como si ya estuviera seleccionada cuando su prioridad está en discusión. El usuario puede enviar URLs de manera incremental con destino y componente; no exigir formatos técnicos ni un paquete completo. Si uso/elección están claros, registrar sin reconfirmar lo mismo.
 
 Al recibir URL, comprobar fuente original/identidad y preparar una vía permitida para creación IA conforme al skill, explicando solo bloqueos concretos; mantener aprobación de referencia, imagen generada y publicación separadas. No sustituir la elección por otra foto sin comunicarlo. Si es miniatura, localizar su fuente es validación de la URL elegida, no licencia para reiniciar una búsqueda abierta de alternativas. Textos, auditoríaTop8, clasificación, integración y QA pueden seguir en paralelo dentro del alcance autorizado.
+
+
+## Corrección de identidad de portada · Medellín, 17-10-2026
+
+La portada anterior fue rechazada: el edificio no se reconoce como Coltejer. Su contexto céntrico y remate como aguja son rasgos obligatorios si se vuelve a representar. El propietario admite Pueblito Paisa o Plaza Botero como alternativas. Propuesta v2: Pueblito Paisa (la generación de Plaza Botero falló en el filtro del proveedor); no usar una torre genérica como sustituto. Validar silueta arquitectónica antes de integrar; mantener la aprobación del resultado pendiente y no cambiar producción. Las referencias descriptivas institucionales no equivalen a una fotografía aprobada ni a fidelidad fotográfica.
