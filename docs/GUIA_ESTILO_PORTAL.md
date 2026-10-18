@@ -187,3 +187,7 @@ El propietario aprobó ilustraciones semirrealistas, colores neutros y descripci
 La historia de Jericó usa un párrafo breve a ancho completo, sin bloque biográfico ni imagen de Madre Laura y sin tarjeta lateral repetida. No se borran fuentes ni archivos históricos. Los anuncios de etapa piloto y «Comenzamos por Jericó» dejan de formar parte de la presentación compartida. No añadir nuevas afirmaciones de cobertura o publicación al retirar esos avisos.
 
 La aprobación de la línea gráfica no aprueba automáticamente cada imagen ni la publicación de Cartagena. El detalle histórico de la versión 1 queda subordinado a esta decisión. Generar tokens con scripts/generar-tokens-portal.py y aplicar la identidad al paquete final con scripts/aplicar-identidad-neutral.py --public RUTA. El constructor lo ejecuta al final para impedir el regreso de hojas heredadas.
+
+
+### Paridad de lectura Jericó / Cartagena
+Las secciones Qué conocer, Experiencias y Directorio permanecen abiertas y presentan títulos del mismo nivel, sin párrafos introductorios ni rótulos redundantes. Mostrar todos los atractivos sin Cargar más. Descripciones de atractivos y actividades en una frase; conservar condiciones esenciales de acceso, clima y confirmación. Directorio sin descripciones, incluido el grupo de fichas gratuitas, y convocatoria de negocios compacta. Evitar que el componente general de acordeones vuelva a plegar una guía ya adaptada.

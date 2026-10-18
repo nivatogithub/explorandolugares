@@ -18,6 +18,18 @@ input,select,textarea{background:var(--el-field);border-color:var(--el-control-b
 .destination-direct-reading .destination-overview{display:block!important;grid-template-columns:1fr!important;padding:28px 0!important}
 .destination-direct-reading .destination-overview>div,.destination-direct-reading .destination-overview p{width:100%;max-width:none!important}
 .destination-direct-reading .destination-overview h2{font-size:clamp(25px,3vw,34px);margin:0 0 12px}
+.destination-direct-reading .compact-section-heading{display:block;margin:0 0 18px;padding:0}
+.destination-direct-reading .compact-section-heading h2{font-size:clamp(25px,3vw,34px);line-height:1.15;margin:0}
+.destination-direct-reading #que-conocer,.destination-direct-reading .destination-experiences,.destination-direct-reading #lugares{padding-top:28px;padding-bottom:28px}
+.destination-direct-reading .highlight-grid article>p,.destination-direct-reading .destination-experience-copy>p{font-size:14px;line-height:1.45;margin:8px 0 12px}
+.destination-direct-reading .highlight-grid article h3,.destination-direct-reading .destination-experience-copy h4{font-size:18px;line-height:1.2;margin:8px 0}
+.destination-direct-reading .highlight-grid article>h3,.destination-direct-reading .highlight-grid article>p{padding-left:12px;padding-right:12px}
+.destination-direct-reading .directory-card-body{padding:12px 14px}
+.destination-direct-reading .destination-invitation{padding:22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.destination-direct-reading .destination-invitation h2{font-size:24px;margin:0}
+.destination-direct-reading .destination-invitation p{margin:6px 0 0}
+@media(max-width:650px){.destination-direct-reading .destination-invitation{display:block}.destination-direct-reading .destination-invitation>.pill{margin-top:14px}}
+
 '''.replace('VARIABLES',variables)
  (assets/'identidad-neutral.css').write_text(css)
  shutil.copy2(ROOT/'backend/public/assets/identidad-neutral.js',assets/'identidad-neutral.js') if assets.resolve()!=(ROOT/'backend/public/assets').resolve() else None
@@ -29,7 +41,7 @@ input,select,textarea{background:var(--el-field);border-color:var(--el-control-b
   if p.name in {'leaflet.css','identidad-neutral.css'}:continue
   s=p.read_text();new=re.sub('|'.join(palette),lambda m:palette[m[0].lower()],s,flags=re.I)
   if new!=s:p.write_text(new);css_count+=1
- hook='<link rel="stylesheet" href="/assets/identidad-neutral.css?v=2"><script defer src="/assets/identidad-neutral.js?v=2"></script>'
+ hook='<link rel="stylesheet" href="/assets/identidad-neutral.css?v=3"><script defer src="/assets/identidad-neutral.js?v=3"></script>'
  count=0
  for p in public.rglob('*'):
   if p.suffix not in {'.html','.php'}:continue
@@ -38,6 +50,7 @@ input,select,textarea{background:var(--el-field);border-color:var(--el-control-b
   s=re.sub(r'<!-- etapas-piloto -->.*?<!-- /etapas-piloto -->','',s,flags=re.S)
   s=re.sub(r'<aside\b[^>]*class="pilot-banner"[^>]*>.*?</aside>','',s,flags=re.S)
   for old,new in {'Comenzamos por Jericó.':'Destinos para descubrir.','La primera guía ya está disponible. Abriremos otros destinos cuando revisemos su información y sus imágenes.':'Explora las guías disponibles.','Começamos por Jericó.':'Destinos para descobrir.','We start with Jericó.':'Destinations to discover.','Starting with Jericó.':'Destinations to discover.'}.items():s=s.replace(old,new)
+  s=s.replace('identidad-neutral.js?v=2','identidad-neutral.js?v=3').replace('identidad-neutral.css?v=2','identidad-neutral.css?v=3')
   if 'identidad-neutral.css' not in s:s=s.replace('</head>',hook+'</head>',1)
   if s!=p.read_text():p.write_text(s);count+=1
  print(json.dumps({'public':str(public),'updated_pages':count,'updated_stylesheets':css_count,'published':False}))
