@@ -229,3 +229,8 @@ Validación en preproducción: al pulsar una ilustración de Medellín no cambia
 Ambas secciones usan un único sistema: tres columnas en escritorio, dos hasta1000px y una hasta650px; imagen3:2, separación16px, título18px con dos líneas reservadas, descripción14px con dos líneas reservadas y espacio equivalente para la acción final. Igual borde, radio y relleno. Las experiencias sin enlace conservan la misma altura mediante un espacio de pie equivalente. Ocultar la numeración/etiqueta redundante dentro de ambas tarjetas. La regla solo afecta atractivos y experiencias: no modifica tamaños por plan del directorio comercial. Mantener carga progresiva de dos filas.
 
 Validación visible en preproducción: en Medellín, Bogotá y Santa Marta cada par mide429×440px en el ancho observado; en Jericó371×401px en su ancho observado. En cada destino las dos secciones coinciden en ancho, alto y altura de imagen. No son tamaños fijos: responden al ancho disponible.
+
+
+## Sustitución de imágenes · 17-10-2026
+
+Una ilustración nueva sustituye el medio anterior desde el servidor: no añadirla sobre una foto oculta ni descargar ambas. Cartagena corregida en preproducción con `scripts/preprod-cartagena-imagen-unica.py`: ocho atractivos y seis experiencias, exactamente una imagen por ficha, cero imágenes de la ruta fotográfica anterior en el DOM. Portada y contenido mantienen las versiones vigentes; originales y créditos históricos se conservan como procedencia, no como imágenes adicionales de tarjeta. PHP validado y captura `docs/evidencias-densidad/cartagena-imagen-unica.png`. No cambia producción.
