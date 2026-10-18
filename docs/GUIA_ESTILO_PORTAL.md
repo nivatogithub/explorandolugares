@@ -223,3 +223,9 @@ Fuente CSS: `backend/public/assets/densidad-global.css`, incorporada por el gene
 No enlazar fotos/ilustraciones a su archivo original ni abrirlas en otra pestaña o visor. La capa compartida elimina href/target de enlaces gráficos al archivo, incluidos los creados después por scripts de destinos, y bloquea activación de ampliadores. Conservar navegación funcional de logo→inicio y tarjeta→destino en la misma pestaña. No alterar enlaces de mapa/contacto. Esto controla la interacción del sitio; no es una protección contra descargar imágenes del navegador.
 
 Validación en preproducción: al pulsar una ilustración de Medellín no cambia página ni abre visor; sus enlaces gráficos no tienen href/target. Logo y tarjetas del inicio conservan sus rutas, sin target externo. Sin cambios de publicación.
+
+## Tarjetas de atractivos y experiencias del mismo tamaño · 2026-10-17
+
+Ambas secciones usan un único sistema: tres columnas en escritorio, dos hasta1000px y una hasta650px; imagen3:2, separación16px, título18px con dos líneas reservadas, descripción14px con dos líneas reservadas y espacio equivalente para la acción final. Igual borde, radio y relleno. Las experiencias sin enlace conservan la misma altura mediante un espacio de pie equivalente. Ocultar la numeración/etiqueta redundante dentro de ambas tarjetas. La regla solo afecta atractivos y experiencias: no modifica tamaños por plan del directorio comercial. Mantener carga progresiva de dos filas.
+
+Validación visible en preproducción: en Medellín, Bogotá y Santa Marta cada par mide429×440px en el ancho observado; en Jericó371×401px en su ancho observado. En cada destino las dos secciones coinciden en ancho, alto y altura de imagen. No son tamaños fijos: responden al ancho disponible.
