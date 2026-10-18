@@ -188,3 +188,8 @@ Al recibir URL, comprobar fuente original/identidad y preparar una vía permitid
 ## Corrección de identidad territorial de portada · 17-10-2026
 
 Santa Marta: el propietario rechaza la apariencia de Grecia/Italia. Representar la bahía histórica y el Camellón como ciudad caribeña colombiana, trama urbana mayormente plana, playa urbana, Morro separado por agua, sin pueblo blanco escalonado ni acantilados mediterráneos. No confundir con Rodadero o Taganga. Validar no solo un símbolo aislado: también relieve, trama urbana, escala, vegetación y proporción de costa. La composición semirrealista no autoriza inventar el contexto. Propuesta nueva en preproducción, resultado pendiente de aprobación.
+
+
+### Franja costera: contraste visual obligatorio
+
+Santa Marta: fotos de la Alcaldía verifican avenida, palmeras y árboles nativos junto al Camellón. No eliminar elementos reales por una duda ni exagerarlos como avenida de Miami: evitar filas uniformes y playa interminable; incluir paseo pavimentado, luminarias y módulos triangulares documentados. Una fuente textual que menciona un lugar no valida el dibujo: inspeccionar fotografías del entorno antes de afirmar fidelidad. No presentar una interpretación como reproducción topográfica exacta.

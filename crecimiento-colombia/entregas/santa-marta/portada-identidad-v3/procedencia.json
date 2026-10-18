@@ -1,0 +1,32 @@
+{
+  "destination": "santa-marta",
+  "role": "hero",
+  "style": "semirrealista editorial tinta/gouache",
+  "date": "2026-10-17",
+  "status": "propuesta_preprod",
+  "approval": "pendiente",
+  "production_changed": false,
+  "master_sha256": "0d1dd282ce615c46d8e1668812c3a16cff5e4c2b5c5e5ad8cf4a5c4079effdb0",
+  "files": [
+    {
+      "path": "backend/public/assets/santa-marta-semirrealista/hero-v3-640.webp",
+      "bytes": 100560,
+      "sha256": "0fded1f963253e07c56c8f5698162f0b8e992ce2e55e1cec8fbcd66eb31ef0cc"
+    },
+    {
+      "path": "backend/public/assets/santa-marta-semirrealista/hero-v3-1200.webp",
+      "bytes": 306068,
+      "sha256": "4f8c7aab98b7e71e12fc26b2ca6850d124acc06efb426cec99d27f7aaca3a369"
+    }
+  ],
+  "sources": [
+    "https://colombia.travel/es/santa-marta",
+    "https://santamarta.gov.co/sala-prensa/noticias/santa-marta-fortalece-su-oferta-turistica-con-el-nuevo-camellon-de-la-bahia"
+  ],
+  "reference_photos_uploaded": [],
+  "method": "Composición independiente basada en rasgos documentados; no fotografía ni reconstrucción topográfica exacta.",
+  "prompt_file": "../PROMPT_PORTADA_IDENTIDAD_V2.txt",
+  "verification_source": "https://santamarta.gov.co/sites/default/files/camellon_de_la_bahia_de_santa_marta_1.jpg",
+  "reference_generated_image_uploaded": "portada-identidad-v2/maestro.png (imagen propia)",
+  "qa": "Revisión de separación costa-ciudad y vegetación; interpretación ilustrada, resultado pendiente de aprobación."
+}
