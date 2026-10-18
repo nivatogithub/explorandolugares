@@ -99,3 +99,18 @@ main fieldset+fieldset{margin-top:18px;border-top:1px solid var(--el-section-rul
 @media(max-width:650px){:root{--el-section-space:20px;--el-section-gap:16px}main .hero,main .home-hero,main .home-editorial,main .destination-hero{padding-top:20px!important;padding-bottom:20px!important}main .sectionhead,main .destination-experiences-heading{margin-bottom:12px!important}body>footer{padding-top:20px!important;padding-bottom:20px!important}}
 
 main .home-editorial-categories{position:static!important;grid-column:1/-1;inset:auto!important;transform:none!important;margin:0!important;padding:8px 0 0!important;border-top:1px solid var(--el-section-rule)!important}
+
+/* One card system for attractions and experiences in every destination. */
+main :is(#atractivos-destino,.destination-experience-list){display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:16px!important;align-items:stretch!important}
+main :is(#atractivos-destino,.destination-experience-list)>article{display:flex!important;flex-direction:column!important;gap:0!important;min-width:0;min-height:0!important;height:100%!important;padding:0 0 14px!important;border:1px solid var(--el-border,#DADDE2)!important;border-radius:12px!important;overflow:hidden;background:#fff}
+main :is(#atractivos-destino,.destination-experience-list)>article[hidden]{display:none!important}
+main :is(#atractivos-destino,.destination-experience-list)>article>.destination-experience-copy{display:contents!important}
+main :is(#atractivos-destino,.destination-experience-list)>article>:is(figure,.highlight-photo,.destination-place-caricature,.experience-art){display:block!important;position:relative!important;width:100%!important;aspect-ratio:3/2!important;height:auto!important;min-height:0!important;margin:0!important;padding:0!important;border:0!important;border-radius:0!important;overflow:hidden}
+main :is(#atractivos-destino,.destination-experience-list)>article img{display:block!important;position:static!important;width:100%!important;height:auto!important;max-height:none!important;aspect-ratio:3/2!important;object-fit:cover!important;border-radius:0!important;margin:0!important}
+main :is(#atractivos-destino,.destination-experience-list) :is(h3,h4){font-size:18px!important;line-height:1.2!important;min-height:43.2px!important;height:43.2px!important;margin:12px 14px 0!important;padding:0!important;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+main :is(#atractivos-destino,.destination-experience-list)>article>p,main .destination-experience-copy>p{font-size:14px!important;line-height:1.45!important;min-height:40.6px!important;height:40.6px!important;margin:8px 14px 0!important;padding:0!important;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+main :is(#atractivos-destino,.destination-experience-list) .story-number{display:none!important}
+main :is(#atractivos-destino,.destination-experience-list)>article>a.text-link,main .destination-experience-copy>a.text-link{font-size:13px!important;line-height:24px!important;height:24px!important;min-height:24px!important;margin:12px 14px 0!important;align-self:flex-start}
+main :is(#atractivos-destino,.destination-experience-list)>article:not(:has(a.text-link))::after{content:'';display:block;height:24px;flex:0 0 24px;margin-top:12px}
+@media(max-width:1000px){main :is(#atractivos-destino,.destination-experience-list){grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:650px){main :is(#atractivos-destino,.destination-experience-list){grid-template-columns:1fr!important}}
