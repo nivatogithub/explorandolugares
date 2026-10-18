@@ -172,6 +172,7 @@ final class DestinationAdminService
             foreach (['display_name'=>120,'eyebrow'=>180,'headline'=>240,'intro'=>5000,'meta_description'=>255] as $key=>$max) {
                 $v=trim((string)($tr[$locale][$key]??''));if ($this->length($v)>$max) throw new RuntimeException("El campo {$key} de {$locale} supera el límite.");$tr[$locale][$key]=$v;
             }
+            if ($status==='published' && preg_match('/borrador\s+local|local\s+draft|rascunho\s+local|imágenes\s+definitivas\s+pendientes|final\s+images\s+pending|imagens\s+finais\s+pendentes/iu',implode(' ',array_map(static fn($key)=>$tr[$locale][$key],['eyebrow','headline','intro','meta_description'])))) throw new RuntimeException('Retira los avisos internos de borrador antes de publicar el lugar.');
             $history[$locale]=$this->lines((string)($history[$locale]??''),5000);
             $reasons[$locale]=$this->lines((string)($reasons[$locale]??''),500);
         }
