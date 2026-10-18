@@ -66,7 +66,7 @@
     const fields={'anonymous_sessions':'anonymous','estimated_visitors':'visitors','registered_travelers':'registered','active_travelers':'active','business_views':'business-views','contact_clicks':'contact'};
     Object.values(fields).forEach(id=>$('audience-'+id).textContent='—');
     $('audience-basic-views').textContent='—';
-    $('audience-status').textContent='Consultando medición…';
+    $('audience-status').textContent='Consultando las estadísticas…';
     $('audience-measurement-dates').textContent='Consultando las fechas de medición…';
     $('audience-source').replaceChildren();
     try{const url=new URL('api/cobertura.php',root);url.searchParams.set('days',days);if(department)url.searchParams.set('department',department);
@@ -76,7 +76,7 @@
       const basic=a.basic, basicReady=basic?.status==='enabled';
       $('audience-basic-views').textContent=basicReady?Number(basic.page_views).toLocaleString('es-CO'):'—';
       Object.entries(fields).forEach(([metric,id])=>{$('audience-'+id).textContent=a.metrics?.[metric]==null?'—':Number(a.metrics[metric]).toLocaleString('es-CO');});
-      $('audience-status').textContent=basicReady?'Conteo de páginas sin cookies activo. Los indicadores con permiso representan solo las visitas con permiso de medición.':'Conteo sin cookies pendiente de activación. Las demás cifras corresponden a medición con permiso.';
+      $('audience-status').textContent=basicReady?'Las páginas consultadas se cuentan sin cookies. Los ingresos anónimos y los demás indicadores solo incluyen a quienes aceptaron la medición; no cubren exactamente las mismas visitas.':'El total de páginas consultadas todavía no está disponible. Las demás cifras solo incluyen a quienes aceptaron la medición.';
       $('audience-measurement-dates').textContent=(basicReady?'Conteo básico desde: '+basic.started_at.slice(0,10)+'. ':'')+(a.started_at?'Medición opcional desde: '+a.started_at.slice(0,10)+'. ':'Medición opcional no disponible. ')+(a.updated_at?'Actualización: '+new Date(a.updated_at).toLocaleString('es-CO')+'.':'');
       $('audience-countries').replaceChildren();const region=new Intl.DisplayNames(['es'],{type:'region'});
       if(a.countries?.length)a.countries.forEach(c=>$('audience-countries').append(el('p',(c.code==='ZZ'?'País no disponible':c.code==='OTHER'?'Otros países o conexiones sin identificar (grupos pequeños)':region.of(c.code))+': '+c.count+' vistas de páginas')));else $('audience-countries').textContent='Próximamente: vistas por país.';

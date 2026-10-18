@@ -186,3 +186,9 @@ La prueba real requiere salida a Internet. Cuando el modo privado está habilita
 ### Arranque persistente en macOS
 
 `subir.sh` inicia Podman mediante un trabajo del servicio de usuario de macOS cuando la máquina está apagada. Así el proceso de virtualización no depende de que continúe abierto el terminal o worker que ejecutó el arranque. No se instala un inicio automático al iniciar sesión. La definición y los registros se generan en `.local/preprod/podman-launch.plist`, `podman-launch.log` y `podman-launch-error.log`; en otro Mac se regeneran con sus propias rutas. El trabajo no se reinicia automáticamente ni cambia volúmenes, credenciales o puertos. `bajar.sh` sigue deteniendo únicamente preproducción.
+
+### Exclusión de pruebas y reinicio de estadísticas
+
+En Preferencias de privacidad, «Excluir este navegador de todas las estadísticas» guarda únicamente el indicador local `el_measurement_excluded_v1`. Bloquea páginas, impresiones, clics y medición opcional; se aplica por navegador, perfil y origen, también entre pestañas abiertas. No identifica el PC ni utiliza IP, y debe activarse aparte en producción y en cada navegador. Al borrar el almacenamiento del navegador se pierde la exclusión.
+
+El reinicio de Medición y cobertura exige administrador, CSRF y confirmación literal. `MeasurementResetService` borra solo contadores y eventos de medición en una transacción y cambia sus fechas de inicio. Conserva configuración de activación, consentimientos, cuentas, negocios, suscripciones y catálogo. No instala ni habilita tablas ausentes. La cuenta de viajeros registrados sigue siendo el total real; no se transforma en cero al reiniciar visitas. No ejecutar reinicios como parte automática de un despliegue.
