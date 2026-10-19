@@ -103,5 +103,16 @@ foreach(['monthly','quarterly','semiannual','annual'] as $period){$pdo->prepare(
 $rejected=false;try{$service->save(['business_id'=>1,'plan_code'=>'basic','billing_frequency'=>'monthly']);}catch(RuntimeException $e){$rejected=str_contains($e->getMessage(),'vigente');}subscription_check($rejected,'Admin cannot create new Basic subscription.');
 subscription_check((int)$pdo->query('SELECT COUNT(*) FROM business_subscriptions')->fetchColumn()===$before,'Rejected payment/selection does not mutate subscription history.');
 subscription_check((bool)$pdo->query('SELECT code FROM subscription_plans WHERE code="basic"')->fetchColumn(),'Legacy Basic catalog remains present.');
+// Failed replacement must preserve an existing request, including inside a caller transaction.
+$pending=$service->save(['business_id'=>1,'plan_code'=>'free']);
+$pdo->exec("CREATE TRIGGER reject_subscription_insert BEFORE INSERT ON business_subscriptions BEGIN SELECT RAISE(ABORT,'injected failure');END");
+foreach([false,true] as $nested){
+ if($nested)$pdo->beginTransaction();
+ $failed=false;try{$service->save(['business_id'=>1,'plan_code'=>'free']);}catch(PDOException){$failed=true;}
+ subscription_check($failed,'Injected INSERT failure reached');
+ subscription_check($pdo->query('SELECT status FROM business_subscriptions WHERE id='.$pending)->fetchColumn()==='pending_publication','Failed replacement never cancels previous request');
+ if($nested){subscription_check($pdo->inTransaction(),'Caller transaction remains usable');$pdo->commit();}
+}
+$pdo->exec('DROP TRIGGER reject_subscription_insert');
 @rmdir($paymentStorage);
 echo "OK: tier photo quotas, configured-price snapshot, scheduling gate, actual-publication start and calendar expiry.\n";

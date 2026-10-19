@@ -202,3 +202,23 @@ El cliente `medicion.js` ya no solicita consentimiento ni emite sesiones, visita
 Para añadir países a una base que ya tiene el conteo básico, aplicar `042-aggregate-country` mediante el proceso de migraciones revisado. En instalaciones nuevas se requiere además la instalación/activación del conteo básico existente. No ejecutar migraciones desde una petición pública. En preproducción puede utilizarse `BasicAudienceService::install()` por CLI local: es idempotente y no reinicia contadores. No activa producción desde esta rama.
 
 La geolocalización utiliza exclusivamente `REMOTE_ADDR` y DB-IP Country Lite local; no confiar en `X-Forwarded-For` sin un proxy confiable configurado. Si no existe base geográfica o la IP es local/privada, contar `ZZ` (sin identificar), nunca inferir Colombia. No hay reconstrucción retrospectiva de países: empieza al activar esta versión. Países se agregan por consultas, no por visitantes únicos; el porcentaje extranjero excluye país desconocido. Los agregados se conservan sin vencimiento automático. «Todos» consulta el histórico disponible desde el último reinicio, sin comparación contra un período anterior. Los registros detallados del sistema antiguo mantienen su política independiente; no se alteran cuentas ni negocios. La migración no elimina estadísticas históricas anteriores ni reinicia datos.
+
+### Revisión de promoción P01 / P06 (19 de octubre)
+
+P01: comparar sin enviar datos `https://explorandolugares.com/negocios-locales/interes/?municipio=Bogot%C3%A1#contacto` con `http://127.0.0.1:8088/negocios-locales/interes/?municipio=Bogot%C3%A1#contacto`. La copia local debe precargar Bogotá D. C. y permitir departamento/municipio de todo el catálogo nacional existente (1.122 unidades, 33 departamentos/distrito). Probar también `?municipio=Mocoa` y `?municipio=Zipaquir%C3%A1`, sin guías publicadas obligatorias. Cambiar departamento debe limpiar municipios incompatibles; los selectores permiten escribir para filtrar. No usar nombres ambiguos sin elegir departamento. Solo el entorno aislado debe recibir pruebas de envío.
+
+Las opciones nacionales usan códigos DANE y el backend calcula el indicativo de teléfono fijo desde el departamento, ignorando prefijos enviados por el cliente. Se conservan valores de clientes anteriores durante el despliegue. Referencia de indicativos: CRC, Circular 127 de 2020, https://normograma.crcom.gov.co/crc/compilacion/docs/circular_crc_0127_2020.htm. La lista para recibir interés no determina qué guías se generan o publican.
+
+P06: `php backend/tests/business-subscriptions.php` reproduce fallos de INSERT en SQLite. Para MariaDB local, ejecutar el contenido de `preprod/probar-suscripcion-atomica.php` por stdin mediante `podman exec -e EL_PREPROD_LOCAL=1 -i explorando-preprod php`. El script exige configuración local, crea una base de nombre aleatorio `el_test_subscription_*`, verifica rollback y savepoint del llamador, fuerza un conflicto entre dos conexiones y comprueba reintento; elimina únicamente su base temporal en finally. No usarlo en hosting ni simular errores sobre suscripciones reales.
+
+El arreglo está en preproducción; requiere revisión y publicación autorizada. La limpieza separada autorizada del registro de prueba productivo ID 4 no despliega código.
+
+### Cierre, suspensión y reactivación de cuentas
+
+La migración `043-account-lifecycle` se aplica en MariaDB local al ejecutar `./preprod/actualizar.sh`; conserva los datos existentes. En producción debe incluirse en el despliegue aprobado antes de validar el acceso. No aplicar desde una petición pública.
+
+- Mi cuenta → Personal → Cerrar mi cuenta: contraseña y confirmación; no elimina los negocios ni sus pagos.
+- Registro con correo existente o Recuperar contraseña: enlace nuevo al correo para cuentas cerradas voluntariamente; confirmación y nueva contraseña. No duplica la cuenta. Los mensajes públicos no revelan si una cuenta está suspendida.
+- Administración → Cuentas: Suspender acceso / Restablecer acceso, motivo obligatorio e historial de responsable y fecha. Las cuentas cerradas requieren confirmación del titular por correo. Deshabilitaciones anteriores se consideran administrativas.
+- Regresiones: `php backend/tests/account-lifecycle.php` y `python3 backend/tests/admin-pages.integration.py` (base desechable y correo simulado). La prueba MariaDB `preprod/probar-ciclo-cuentas.php` se ejecuta por entrada estándar dentro del contenedor con `EL_PREPROD_LOCAL=1`, crea y elimina exclusivamente una base aleatoria `el_test_accounts_*`.
+- La actualización requiere volver a iniciar sesión si la sesión anterior no contiene la prueba privada de credencial vigente. Las cuentas de prueba persistentes se conservan.

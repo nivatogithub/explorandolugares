@@ -21,7 +21,10 @@
     "Arboletes",
     "Puerto Triunfo",
     "San Pedro de los Milagros",
-    "Santa Rosa de Osos"
+    "Santa Rosa de Osos",
+    "Bogotá",
+    "Cartagena",
+    "Santa Marta"
   ],
   "groups": [
     {
@@ -693,5 +696,72 @@
       ],
       "pt": "Compras e serviços"
     }
-  ]
+  ],
+  "additionalContactMunicipalities": [
+    "Bogotá",
+    "Cartagena",
+    "Santa Marta"
+  ],
+  "landlinePrefixes": {
+    "Jericó": "604",
+    "Jardín": "604",
+    "Guatapé": "604",
+    "Santa Fe de Antioquia": "604",
+    "El Peñol": "604",
+    "Támesis": "604",
+    "San Jerónimo": "604",
+    "Sopetrán": "604",
+    "San Rafael": "604",
+    "Cocorná": "604",
+    "Venecia": "604",
+    "El Retiro": "604",
+    "San Carlos": "604",
+    "El Carmen de Viboral": "604",
+    "Rionegro": "604",
+    "Medellín": "604",
+    "Necoclí": "604",
+    "Arboletes": "604",
+    "Puerto Triunfo": "604",
+    "San Pedro de los Milagros": "604",
+    "Santa Rosa de Osos": "604",
+    "Bogotá": "601",
+    "Cartagena": "605",
+    "Santa Marta": "605"
+  },
+  "departmentPrefixes": {
+    "18": "608",
+    "19": "602",
+    "86": "608",
+    "76": "602",
+    "94": "608",
+    "99": "608",
+    "85": "608",
+    "91": "608",
+    "97": "608",
+    "95": "608",
+    "17": "606",
+    "63": "606",
+    "66": "606",
+    "05": "604",
+    "27": "604",
+    "52": "602",
+    "23": "604",
+    "13": "605",
+    "20": "605",
+    "44": "605",
+    "47": "605",
+    "70": "605",
+    "88": "608",
+    "81": "607",
+    "15": "608",
+    "25": "601",
+    "54": "607",
+    "11": "601",
+    "50": "608",
+    "41": "608",
+    "68": "607",
+    "73": "608",
+    "08": "605"
+  },
+  "nationalGeographySource": "content/account-geography.json"
 }

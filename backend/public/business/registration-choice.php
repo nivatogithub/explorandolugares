@@ -3,7 +3,9 @@
 $traveler=true;$error='';
 if($currentAccount){header('Location: /negocios/portal/',true,303);exit;}
 if($_SERVER['REQUEST_METHOD']==='POST'){
- try{csrf();require_once dirname(__DIR__,2).'/app/AccountResidence.php';$residence=AccountResidence::capture($_POST);if(!$traveler)throw new RuntimeException('Selecciona un tipo de cuenta.');$id=$service->registerTraveler((string)($_POST['display_name']??''),(string)($_POST['email']??''),(string)($_POST['password']??''),(string)($_POST['password_confirm']??''),($_POST['consent']??'')==='1',$residence);require_once dirname(__DIR__,2).'/app/AccountVerificationDelivery.php';AccountVerificationDelivery::send(db(),$config,$id);header('Location: /cuenta/verificar-correo/?enviado=1',true,303);exit;}
+ try{csrf();require_once dirname(__DIR__,2).'/app/AccountReactivationDelivery.php';
+ if(!$currentAccount&&AccountReactivationDelivery::existingRegistration(db(),$config,(string)($_POST['email']??''))){header('Location: /negocios/recuperar-clave/?solicitado=1',true,303);exit;}
+ require_once dirname(__DIR__,2).'/app/AccountResidence.php';$residence=AccountResidence::capture($_POST);if(!$traveler)throw new RuntimeException('Selecciona un tipo de cuenta.');$id=$service->registerTraveler((string)($_POST['display_name']??''),(string)($_POST['email']??''),(string)($_POST['password']??''),(string)($_POST['password_confirm']??''),($_POST['consent']??'')==='1',$residence);require_once dirname(__DIR__,2).'/app/AccountVerificationDelivery.php';AccountVerificationDelivery::send(db(),$config,$id);header('Location: /cuenta/verificar-correo/?enviado=1',true,303);exit;}
  catch(Throwable $e){$error=$e instanceof PDOException?'No se pudo crear la cuenta. Si ya tienes una con este correo, inicia sesión.':$e->getMessage();http_response_code(400);}
 }
 require_once __DIR__.'/../_account-page.php';account_page(true);

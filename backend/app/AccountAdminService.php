@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 require_once __DIR__.'/AccountProfileService.php';
+require_once __DIR__.'/AccountLifecycle.php';
 
 final class AccountAdminService
 {
@@ -10,7 +11,7 @@ final class AccountAdminService
     {
         $rows=$this->pdo->query('SELECT id,public_id,account_type,display_name,email,status,email_verified_at,created_at FROM accounts ORDER BY created_at DESC,id DESC')->fetchAll(PDO::FETCH_ASSOC);
         $q=$this->pdo->prepare('SELECT t.display_name FROM business_account_memberships m JOIN business_translations t ON t.business_id=m.business_id AND t.locale="es" WHERE m.account_id=? AND m.status="active" ORDER BY t.display_name');
-        foreach($rows as &$row){$q->execute([$row['id']]);$row['businesses']=implode(', ',$q->fetchAll(PDO::FETCH_COLUMN));}unset($row);
+        foreach($rows as &$row){$row['access_state']=AccountLifecycle::state($this->pdo,(int)$row['id']);if(!empty($row['access_state']['actor_account_id'])){$actor=$this->pdo->prepare('SELECT display_name FROM accounts WHERE id=?');$actor->execute([$row['access_state']['actor_account_id']]);$row['access_state']['actor_name']=$actor->fetchColumn()?:'Cuenta autorizada';}$q->execute([$row['id']]);$row['businesses']=implode(', ',$q->fetchAll(PDO::FETCH_COLUMN));}unset($row);
         return $rows;
     }
 
@@ -68,17 +69,26 @@ final class AccountAdminService
         }catch(Throwable $error){if($this->pdo->inTransaction())$this->pdo->rollBack();throw $error;}
     }
 
-    public function setAccountStatus(int $accountId,string $status):void
+    public function setAccountStatus(int $accountId,string $status,?int $actorId=null,string $reason=''):void
     {
         if($accountId<1||!in_array($status,['active','disabled'],true))throw new RuntimeException('Selecciona una cuenta y un estado válido.');
         $this->pdo->beginTransaction();
         try{
+            $lock=$this->pdo->getAttribute(PDO::ATTR_DRIVER_NAME)==='mysql'?' FOR UPDATE':'';
+            $q=$this->pdo->prepare('SELECT status FROM accounts WHERE id=?'.$lock);$q->execute([$accountId]);$current=$q->fetchColumn();
+            if(!$current||$current==='pending_activation')throw new RuntimeException('La cuenta no está disponible.');
+            $state=AccountLifecycle::state($this->pdo,$accountId);
+            if($status==='active'&&($state['event_type']??'')==='closed')throw new RuntimeException('La persona debe reactivar su cuenta mediante el enlace enviado a su correo.');
+            if($status==='disabled'){
+                if(trim($reason)==='')throw new RuntimeException('Indica el motivo de la suspensión.');
+                $admins=$this->pdo->query('SELECT a.id FROM accounts a JOIN account_roles r ON r.account_id=a.id WHERE a.status="active" AND r.role="administrator" ORDER BY a.id'.$lock)->fetchAll(PDO::FETCH_COLUMN);
+                if(in_array($accountId,array_map('intval',$admins),true)&&count($admins)<2)throw new RuntimeException('No puedes suspender la última cuenta administradora activa.');
+            }
             $query=$this->pdo->prepare('UPDATE accounts SET status=?,updated_at=CURRENT_TIMESTAMP WHERE id=? AND status IN ("active","disabled")');
             $query->execute([$status,$accountId]);
-            if($query->rowCount()!==1)throw new RuntimeException('La cuenta no existe o todavía está pendiente de activación.');
-            if($status==='disabled'){
-                $this->pdo->prepare('UPDATE account_password_resets SET used_at=CURRENT_TIMESTAMP WHERE account_id=? AND used_at IS NULL')->execute([$accountId]);
-            }
+            if($query->rowCount()!==1&&$current!==$status)throw new RuntimeException('La cuenta no existe o todavía está pendiente de activación.');
+            AccountLifecycle::revoke($this->pdo,$accountId);
+            AccountLifecycle::record($this->pdo,$accountId,$status==='disabled'?'suspended':'restored',$actorId,$reason);
             $this->pdo->commit();
         }catch(Throwable $error){if($this->pdo->inTransaction())$this->pdo->rollBack();throw $error;}
     }
