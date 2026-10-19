@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "destination": "covenas",
+  "rule": "Hasta ocho atractivos, sin mínimo ni relleno. Experiencias con oferta trazada internamente y presentación pública neutral.",
+  "items": [
+    {
+      "slug": "primera-ensenada",
+      "kind": "place",
+      "decision": "include",
+      "purpose": "Playas y servicios en uno de los sectores más conocidos de Coveñas.",
+      "source_urls": [
+        "https://www.golfodemorrosquillo.com/sitios/covenas/playas-de-la-primera-ensenada"
+      ],
+      "checked_at": "2026-10-19"
+    },
+    {
+      "slug": "segunda-ensenada",
+      "kind": "place",
+      "decision": "include",
+      "purpose": "Un corredor costero para disfrutar la playa y caminar junto al mar.",
+      "source_urls": [
+        "https://www.dnp.gov.co/Prensa_/Noticias/Paginas/dnp-y-enterritorio-entregan-malecon-turistico-de-covenas.aspx"
+      ],
+      "checked_at": "2026-10-19"
+    },
+    {
+      "slug": "cienaga-la-caimanera",
+      "kind": "place",
+      "decision": "include",
+      "purpose": "Manglares y canales: un ecosistema para conocer con guía local.",
+      "source_urls": [
+        "https://www.golfodemorrosquillo.com/sitios/covenas/cienaga-de-la-caimanera"
+      ],
+      "checked_at": "2026-10-19"
+    },
+    {
+      "slug": "museo-infanteria-marina",
+      "kind": "place",
+      "decision": "include",
+      "purpose": "Historia naval en un recinto militar; confirma el acceso antes de ir.",
+      "source_urls": [
+        "https://www.armada.mil.co/es/content/11-anos-reviviendo-gesta-heroica-los-infantes-marina"
+      ],
+      "checked_at": "2026-10-19"
+    },
+    {
+      "slug": "covenitas",
+      "kind": "place",
+      "decision": "exclude",
+      "purpose": "Otro sector de playa de Coveñas para explorar el litoral.",
+      "source_urls": [
+        "https://www.golfodemorrosquillo.com/covenas?lang=es"
+      ],
+      "checked_at": "2026-10-19",
+      "reason": "Sector de playa cuyo solapamiento con otros sectores ya incluidos no se ha despejado; no sumar una tarjeta para completar cupos."
+    },
+    {
+      "slug": "la-coquerita",
+      "kind": "place",
+      "decision": "include",
+      "purpose": "Un sector costero mencionado entre las playas del municipio.",
+      "source_urls": [
+        "https://www.golfodemorrosquillo.com/sitios/covenas/playas-de-la-coquerita"
+      ],
+      "checked_at": "2026-10-19"
+    },
+    {
+      "slug": "represa-de-villeros",
+      "kind": "place",
+      "decision": "exclude",
+      "purpose": "Un paisaje rural de agua y vegetación; consulta el acceso local.",
+      "source_urls": [
+        "https://www.golfodemorrosquillo.com/covenas?lang=es"
+      ],
+      "checked_at": "2026-10-19",
+      "reason": "Sitio real documentado; falta comprobar condiciones de acceso y finalidad de visita turística actual."
+    },
+    {
+      "slug": "casa-de-la-cultura",
+      "kind": "place",
+      "decision": "exclude",
+      "purpose": "Música y memoria local; consulta sus actividades y horarios.",
+      "source_urls": [
+        "https://www.golfodemorrosquillo.com/covenas?lang=es"
+      ],
+      "checked_at": "2026-10-19",
+      "reason": "Institución real documentada; falta comprobar un programa o acceso visitable actual. No inventar una experiencia de música."
+    },
+    {
+      "slug": "recorrido-manglar",
+      "kind": "experience",
+      "decision": "include",
+      "purpose": "Consulta recorridos guiados por los canales de La Caimanera.",
+      "source_urls": [
+        "https://viajespluscovenas.com/",
+        "https://hotelmanglearena.com/tours/"
+      ],
+      "checked_at": "2026-10-19",
+      "operator": {
+        "name": "Viajes Plus Coveñas",
+        "offer_url": "https://viajespluscovenas.com/",
+        "source_url": "https://viajespluscovenas.com/"
+      },
+      "offer_verified": true,
+      "verification_scope": "Oferta publicada Tour Caimanera; no confirma disponibilidad futura, alianza, suscripción ni titularidad de la operación en sitio.",
+      "corroboration": {
+        "name": "Hotel Manglearena",
+        "offer_url": "https://hotelmanglearena.com/tours/",
+        "scope": "Oferente con sede en Tolú; página confirma recorrido desde Caimanera en Coveñas. No atribuir el hotel al municipio."
+      },
+      "public_presentation": "Neutral; proveedor y URLs solo en expediente interno"
+    },
+    {
+      "slug": "caminar-malecon",
+      "kind": "experience",
+      "decision": "exclude",
+      "purpose": "Recorre el malecón de Segunda Ensenada al final de la tarde.",
+      "source_urls": [
+        "https://www.golfodemorrosquillo.com/covenas?lang=es"
+      ],
+      "checked_at": "2026-10-19",
+      "reason": "Paseo autónomo; no acredita servicio turístico organizado con oferente."
+    },
+    {
+      "slug": "sabores-del-caribe",
+      "kind": "experience",
+      "decision": "exclude",
+      "purpose": "Busca cocina local y consulta la oferta del día en los restaurantes.",
+      "source_urls": [
+        "https://www.golfodemorrosquillo.com/covenas?lang=es"
+      ],
+      "checked_at": "2026-10-19",
+      "reason": "Comer en restaurantes no acredita por sí solo un tour o taller gastronómico."
+    },
+    {
+      "slug": "kayak",
+      "kind": "experience",
+      "decision": "exclude",
+      "purpose": "Consulta prestadores locales y condiciones del mar antes de salir.",
+      "source_urls": [
+        "https://www.golfodemorrosquillo.com/covenas?lang=es"
+      ],
+      "checked_at": "2026-10-19",
+      "reason": "Fuente regional acredita actividad posible, pero no se comprobó una oferta concreta de un prestador. Conservar candidato, no publicar como servicio."
+    }
+  ],
+  "human_approval": "pending"
+}

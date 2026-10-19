@@ -1,14 +1,14 @@
 {
-  "checked_at": "2026-10-19",
-  "destination_manifest_schema": "pass",
-  "business_manifest_schema": "pass",
-  "business_zip_read": "pass",
-  "businesses": 30,
-  "attractions": 8,
-  "experiences": 4,
-  "missing_images": [],
-  "destination_import_ready": true,
-  "database_import_executed": true,
-  "site_qa": "passed_http_and_browser_local_only",
-  "approval": "pending"
+    "checked_at": "2026-10-19",
+    "destination_manifest_schema": "pass",
+    "business_manifest_schema": "pass",
+    "business_zip_read": "pass",
+    "businesses": 30,
+    "attractions": 5,
+    "experiences": 1,
+    "missing_images": [],
+    "destination_import_ready": true,
+    "database_import_executed": false,
+    "site_qa": "not_executed",
+    "approval": "pending"
 }

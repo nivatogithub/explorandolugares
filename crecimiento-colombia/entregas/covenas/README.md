@@ -1,30 +1,31 @@
-# Coveñas — paquete para revisión
+# Coveñas — borrador depurado para revisión
 
-Rama `lugar/CO/sucre/covenas`. Contenido: ocho atractivos, cuatro experiencias, textos ES/EN/PT-BR, 30 fichas documentadas y 13 ilustraciones independientes. Los ZIP se validan con los lectores nativos del repositorio.
+Rama `lugar/CO/sucre/covenas`. Paquete vigente: **cinco atractivos, una experiencia, siete imágenes y 30 fichas**, con textos ES/EN/PT-BR. Hasta ocho es un máximo; no se completan cupos.
 
-## Archivos
+## Selección actual
 
-- `paquete-destino-covenas.zip`: manifiesto v2 e imágenes WebP1200; no contiene maestrosPNG.
-- `paquete-negocios-covenas.zip`: 30 fichas gratuitas sin contactos, descripciones ni fotos inventadas.
-- `procedencia-imagenes.json`: prompt por activo, herramienta, hashes, dimensiones y estado de revisión.
-- `prioridades.json`: selección editorial y candidatos excluidos. No se atribuye un ranking oficial o puntaje nacional inexistente.
-- `CONTACTO_VISUAL.jpg`: control visual conjunto.
-- `validar.php`: manifiestos, ZIPnegocios y archivos referenciados; validación adicional del ZIP destino nativo.
+Primera Ensenada, Segunda Ensenada y malecón agrupados, Ciénaga La Caimanera, Museo de Infantería de Marina y La Coquerita. Consulta las condiciones actuales de acceso, especialmente al recinto militar del museo.
 
-## Límites expresos para revisión
+La única experiencia es **Recorrido por manglares**, con descripción neutral. La oferta pública concreta y sus oferentes se comprueban en `criterios-editoriales.json`, solo para auditoría interna. No se anuncian proveedores, paquetes, contactos ni precios gratuitamente dentro de la experiencia.
 
-Las ilustraciones son composiciones editoriales, no fotografías ni registro del estado actual. Museo de Infantería y Casa de la Cultura tienen escenas temáticas; no representan su fachada, plano o colección exacta. Represa y playas interpretan rasgos del entorno, no un encuadre georreferenciado. La caminata es una actividad interpretativa, no un plano del malecón. Estos límites se conservan en textosalternativos y procedencia; no afirmar aprobación factual de detalle arquitectónico.
+Se apartaron Coveñitas por solapamiento no despejado, Represa de Villeros y Casa de la Cultura por falta de acceso o propósito turístico actual suficientemente contrastado. Caminar por el malecón y comer son planes autónomos; el kayak queda como candidato sin oferente concreto comprobado. La investigación y los originales se conservan. Ver `AUDITORIA_EDITORIAL.md` y `prioridades.json`.
 
-Las 30 fichas tienen fuentes: ocho sitios propios, una vitrina empresarial y 21 listados secundarios. Operación, domicilio exacto y canales pendientes de verificar. No son aliados, inscritos ni negocios verificados. No se publicaron tarifas ni reseñas ajenas.
+## Archivos y evidencia
 
-La fuente `covenas.travel` se retiró al comprobar dominio expirado; se sustituyó por documentación regional/institucional. No se confunden Tolú, San Antero o las islas con el municipio.
+- `paquete-destino-covenas.zip`: manifiesto v2 y los siete WebP referenciados; sin maestros PNG.
+- `paquete-negocios-covenas.zip`: 30 fichas gratuitas documentales, sin cambios ni suscripciones inventadas.
+- `criterios-editoriales.json`: decisión, finalidad, fuentes y oferta por componente.
+- `procedencia-imagenes.json`: prompts, herramienta, hashes y aprobación pendiente; distingue imágenes actualmente incluidas de las conservadas fuera del paquete.
+- `validar.php`: validación nativa de manifiestos, directorio y referencias de imágenes. Usar además lector nativo DestinationPackage y `scripts/validar-criterios-editoriales.py`.
 
-## Presentación
+El museo usa una ilustración temática de historia naval, no un registro de su colección o distribución exacta. Las ilustraciones restantes interpretan los rasgos generales del entorno, no condiciones actuales ni un levantamiento georreferenciado. No se generaron imágenes adicionales para esta depuración.
 
-Aplicar Cartagena/Jericó: fondo neutro, historia completa sin imagen, secciones abiertas, títulos y descripciones breves, tarjetas homogéneas 3:2, Cargar más de dos filas de fotos/cuatro de fichas pequeñas. No abrir ilustraciones al pulsar.
+Las 30 fichas provienen de ocho sitios propios, una vitrina empresarial y 21 listados secundarios. Operación, domicilio y canales siguen pendientes de verificación; no son aliados ni comercios inscritos confirmados.
 
-Paquete completo para revisión; **no aprobado ni publicado en producción**. La integración local se registra por separado.
+## Preproducción
 
-## Integración comprobada
+http://127.0.0.1:8088/destinos/covenas/
 
-Disponible en http://127.0.0.1:8088/destinos/covenas/ sin sesión administrativa. Cargado en MariaDB local con id26; 13 imágenes, ocho atractivos, cuatro experiencias y 30 fichas. Los tres idiomas respondieron HTTP200 y todas las imágenes cargaron. Navegador integrado: secciones abiertas, Cargar más, sin desbordamiento ni enlaces de apertura de imágenes. Aprobación humana pendiente. Evidencia coordinada en `../../lotes/2026-10-19/`.
+Importación exclusivamente local en MariaDB, id26; sin duplicar negocios. Aprobación humana pendiente. Jardín tiene aprobación propia y no transfiere aprobación a este borrador. No se ha publicado este lote en producción.
+
+Diseño compacto común de Cartagena/Jericó: historia sin imagen, secciones abiertas, tarjetas homogéneas, descripciones breves y Cargar más.
