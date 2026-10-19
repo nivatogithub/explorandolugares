@@ -86,11 +86,12 @@ final class AnalyticsService {
         if($event['event']==='contact_click'){$q=$this->pdo->prepare("SELECT COUNT(*) FROM el_measurement_events WHERE session_hash=? AND business_public_id=? AND channel=? AND event_name='contact_click' AND occurred_at>=?");$q->execute([$sid,$businessPublic,$channel,gmdate('Y-m-d H:i:s',strtotime($now.' UTC')-30)]);if((int)$q->fetchColumn())return false;}
         $this->pdo->prepare("$insert INTO el_measurement_events(event_key,session_hash,occurred_at,event_day,event_name,path,department_code,municipality_code,destination_slug,business_public_id,channel) VALUES(?,?,?,?,?,?,?,?,?,?,?)")->execute([$eventKey,$sid,$now,$day,$event['event'],$path,$scope['department_code'],$scope['municipality_code'],$scope['destination_slug'],$businessPublic,$channel]);return true;
     }
-    public function report(int $days=30,?string $department=null,?string $municipality=null,?string $now=null):array {
-        $days=in_array($days,[30,90],true)?$days:30;
+    public function report(int $days=30,?string $department=null,?string $municipality=null,?string $now=null,?string $destination=null):array {
+        $days=in_array($days,[7,30,90],true)?$days:30;
         $empty=['status'=>'not_configured','metrics'=>array_fill_keys(['anonymous_sessions','estimated_visitors','registered_travelers','active_travelers','business_views','contact_clicks'],null),'countries'=>null,'trend'=>null];if(!$this->ready())return $empty;
         $now??=gmdate('Y-m-d H:i:s');$end=strtotime($now.' UTC');$start=gmdate('Y-m-d H:i:s',$end-$days*86400);$prior=gmdate('Y-m-d H:i:s',$end-2*$days*86400);
-        $where='e.occurred_at>=? AND e.occurred_at<?';$args=[$prior,$now];if($department!==null){$where.=' AND e.department_code=?';$args[]=$department;}if($municipality!==null){$where.=' AND e.municipality_code=?';$args[]=$municipality;}
+        $where='e.occurred_at>=? AND e.occurred_at<?';$args=[$prior,$now];if($department!==null){$where.=$department==='25'?" AND e.department_code IN ('25','11')":' AND e.department_code=?';if($department!=='25')$args[]=$department;}if($municipality!==null){$where.=' AND e.municipality_code=?';$args[]=$municipality;}
+        if($destination!==null){$where.=' AND e.destination_slug=?';$args[]=$destination;}
         $q=$this->pdo->prepare("SELECT e.event_name,e.occurred_at,e.event_day,e.session_hash,s.visitor_hash,s.country_code,s.source_channel,s.account_kind,s.account_hash FROM el_measurement_events e JOIN el_measurement_sessions s ON s.session_hash=e.session_hash WHERE $where ORDER BY e.occurred_at");$q->execute($args);$rows=$q->fetchAll(PDO::FETCH_ASSOC);
         $sessions=[];$visitors=[];$anonymous=[];$active=[];$business=0;$contacts=0;$views=0;$previous=0;$countries=[];$countryVisitors=[];$daily=[];$sources=[];
         foreach($rows as $r){if($r['occurred_at']<$start){if($r['event_name']==='page_view')$previous++;continue;}$sessions[$r['session_hash']]=true;$visitors[$r['visitor_hash']]=true;if($r['account_kind']==='anonymous')$anonymous[$r['session_hash']]=true;

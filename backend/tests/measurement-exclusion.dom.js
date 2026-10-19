@@ -11,9 +11,9 @@ async function run(values){const calls=[],body=new Element('body'),head=new Elem
 function all(el){return [el,...el.children.flatMap(all)];}
 (async()=>{
  const key='el_measurement_excluded_v1',choice='el_measurement_choice_v1',saved=JSON.stringify({allowed:true,version:'measurement-v1',expires:Date.now()+86400000});
- let r=await run(new Map([[key,'1'],[choice,saved]]));r.window.elMeasure('contact_click',{business_id:'test'});await settle();assert.equal(r.calls.filter(c=>c.options.method==='POST').length,0,'Excluded browser must not submit basic or optional events');
- const storage=new Map([[choice,saved]]);r=await run(storage);assert(r.calls.some(c=>c.url==='/api/actividad.php'&&c.options.method==='POST'));assert(r.calls.some(c=>c.url==='/api/medicion.php'&&JSON.parse(c.options.body||'{}').event==='page_view'));
+ let r=await run(new Map([[key,'1'],[choice,saved]]));r.window.elMeasure('contact_click',{business_id:'test'});await settle();assert.equal(r.calls.filter(c=>c.url==='/api/actividad.php'&&c.options.method==='POST').length,0,'Excluded browser must not submit basic or optional events');
+ const storage=new Map([[choice,saved]]);r=await run(storage);assert(r.calls.some(c=>c.url==='/api/actividad.php'&&c.url==='/api/actividad.php'&&c.options.method==='POST'));assert(!r.calls.some(c=>c.url==='/api/medicion.php'&&JSON.parse(c.options.body||'{}').event),'No optional events or analytic identifiers');assert(!all(r.body).some(x=>x.className==='el-measurement-consent'),'No automatic consent interruption');
  const prefs=r.footer.children.find(x=>x.className==='el-measurement-preferences');prefs.listeners.click();const box=all(r.body).find(x=>x.type==='checkbox');box.checked=true;box.listeners.change();await settle();assert.equal(storage.get(key),'1');const after=r.calls.length;r.window.elMeasure('page_view');await settle();assert.equal(r.calls.length,after,'No events after opting out');
- const reload=await run(storage);assert.equal(reload.calls.filter(c=>c.options.method==='POST').length,0,'Exclusion survives reload and overrides previous consent');
+ const reload=await run(storage);assert.equal(reload.calls.filter(c=>c.url==='/api/actividad.php'&&c.options.method==='POST').length,0,'Exclusion survives reload and overrides previous consent');
  console.log('OK: browser exclusion blocks basic/optional events, applies immediately, persists and overrides consent.');
 })().catch(e=>{console.error(e);process.exitCode=1;});

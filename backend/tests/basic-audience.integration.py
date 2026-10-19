@@ -49,6 +49,18 @@ with tempfile.TemporaryDirectory(prefix='el-basic-http-') as temporary:
             assert db.execute('SELECT SUM(page_views) FROM el_basic_page_daily').fetchone()[0]==3
             assert [row[1] for row in db.execute('PRAGMA table_info(el_basic_page_daily)')]==['page_day','scope_code','page_views']
             assert db.execute("SELECT COUNT(*) FROM sqlite_master WHERE name IN ('el_measurement_events','el_measurement_sessions')").fetchone()[0]==0
+            assert db.execute('SELECT SUM(page_views) FROM el_basic_country_daily').fetchone()[0]==3
+            assert [row[1] for row in db.execute('PRAGMA table_info(el_basic_country_daily)')]==['page_day','scope_code','destination_slug','country_code','page_views']
+            assert db.execute('SELECT DISTINCT country_code FROM el_basic_country_daily').fetchall()==[('ZZ',)]
+            for payload in [None, {'event':'page_view','consent':True,'policy_version':'measurement-v1','path':'/'}]:
+                request=urllib.request.Request(base+'/api/medicion.php',data=None if payload is None else json.dumps(payload).encode(),headers={'Origin':base,'Content-Type':'application/json'})
+                with urllib.request.urlopen(request) as r:
+                    legacy=json.load(r);assert 'Set-Cookie' not in r.headers
+                    assert legacy.get('enabled') is False if payload is None else legacy['accepted'] is False
+            with urllib.request.urlopen(base+'/api/cobertura.php?days=all') as r:
+                result=json.load(r);assert result['audience']['basic']['page_views']==3
+                assert result['audience']['basic']['period_mode']=='all'
+                assert result['audience']['basic']['comparison_available'] is False
             db.close()
             print('Basic HTTP: OK — no Set-Cookie, no session or event table, consent-independent counting, DNT/GPC, bots, same-origin, private paths and payload allowlist.')
         finally:

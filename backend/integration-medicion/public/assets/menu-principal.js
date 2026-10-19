@@ -24,7 +24,7 @@
 })();
 
 /* Shared loader: aggregate counters without visitor cookies plus optional consent-based analytics. */
-(()=>{if(document.querySelector('script[data-el-measurement]'))return;const s=document.createElement('script');s.src='/assets/cobertura/medicion.js?v=04efe382c7c7';s.defer=true;s.dataset.elMeasurement='1';document.head.append(s);})();
+(()=>{if(document.querySelector('script[data-el-measurement]'))return;const s=document.createElement('script');s.src='/assets/cobertura/medicion.js?v=ec5246223dc4';s.defer=true;s.dataset.elMeasurement='1';document.head.append(s);})();
 
 (()=>{if(document.querySelector('script[src*="/assets/account-entry.js"]'))return;const css=document.createElement('link');css.rel='stylesheet';css.href='/assets/account-entry.css?v=3';document.head.append(css);const script=document.createElement('script');script.src='/assets/account-entry.js?v=4';script.defer=true;document.head.append(script);})();
 

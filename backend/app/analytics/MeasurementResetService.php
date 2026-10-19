@@ -10,7 +10,7 @@ final class MeasurementResetService
     }
     public function reset(string $reason,string $actor):array {
         if(!preg_match('/^[a-z0-9_-]{1,64}$/D',$reason)||!preg_match('/^[a-zA-Z0-9_@.:-]{1,64}$/D',$actor))throw new InvalidArgumentException('Identifica el motivo y el responsable del reinicio.');
-        $counters=['el_measurement_events','el_measurement_sessions','el_measurement_limits','el_basic_page_daily','el_basic_entity_daily'];
+        $counters=['el_measurement_events','el_measurement_sessions','el_measurement_limits','el_basic_page_daily','el_basic_entity_daily','el_basic_country_daily'];
         $settings=['el_measurement_settings','el_basic_settings'];$protected=['accounts','businesses','business_subscriptions','business_account_memberships','el_coverage_places','el_coverage_departments','el_coverage_units'];
         $existing=[];foreach(array_merge($counters,$settings,$protected) as $t)if($this->exists($t))$existing[$t]=true;
         $now=gmdate('Y-m-d H:i:s');$report=['reset_at'=>$now,'reason'=>$reason,'counters'=>[],'protected_counts'=>[]];
