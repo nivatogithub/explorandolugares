@@ -16,8 +16,15 @@
       "images": 13,
       "editorial_evidence": "crecimiento-colombia/entregas/jardin/criterios-editoriales.json",
       "content_commit": "c88c213",
-      "zip_sha256": "1783e4d8e4b78000e00de70185c0863fd533bc07439f957982e79aa6bca83169",
-      "qa": "HTTP200 ES/EN/PT y13imagenes;DOM4ofertasconoperador,sinsaboresnichivagenérica"
+      "zip_sha256": "9ac8321855690db0b53fdcc0b0829de61dc5de3847906e2355814fbee7b0aa13",
+      "qa": "HTTP200 ES/EN/PT y13imagenes;DOM4ofertasconoperador,sinsaboresnichivagenérica",
+      "neutrality_review": "aplicado_y_validado_preprod_ES_EN_PT",
+      "public_titles": [
+        "Tour cafetero",
+        "Avistamiento de aves",
+        "Cueva del Esplendor",
+        "Tour urbano patrimonial"
+      ]
     },
     {
       "slug": "zipaquira",
@@ -25,7 +32,8 @@
       "review": [
         "Recorrer centro, sabores y artesanía no acreditan tour por sí solos",
         "Ruta del Minero y tren: contrastar oferta propia actual"
-      ]
+      ],
+      "neutrality_review": "pendiente_revision_pendientes_y_publicados"
     },
     {
       "slug": "santa-fe-de-antioquia",
@@ -33,7 +41,8 @@
       "review": [
         "Paseo por calles, memoria regional y sabores de tamarindo",
         "Filigrana: distinguir comercio de taller realmente ofrecido"
-      ]
+      ],
+      "neutrality_review": "pendiente_revision_pendientes_y_publicados"
     },
     {
       "slug": "covenas",
@@ -41,30 +50,37 @@
       "review": [
         "Caminar por malecón y comer no son tours operados por sí solos",
         "Kayak y manglar: verificar oferente de actividad exacta"
-      ]
+      ],
+      "neutrality_review": "pendiente_revision_pendientes_y_publicados"
     },
     {
       "slug": "jerico",
       "status": "pendiente_revision_con_nueva_regla",
       "review": [
         "Revisar experiencias existentes y candidatos apícolas con oferente concreto; no añadir aún sin fuente"
-      ]
+      ],
+      "neutrality_review": "pendiente_revision_pendientes_y_publicados"
     },
     {
       "slug": "cartagena",
-      "status": "pendiente_revision_con_nueva_regla"
+      "status": "pendiente_revision_con_nueva_regla",
+      "neutrality_review": "pendiente_revision_pendientes_y_publicados"
     },
     {
       "slug": "bogota",
-      "status": "pendiente_revision_con_nueva_regla"
+      "status": "pendiente_revision_con_nueva_regla",
+      "neutrality_review": "pendiente_revision_pendientes_y_publicados"
     },
     {
       "slug": "medellin",
-      "status": "pendiente_revision_con_nueva_regla"
+      "status": "pendiente_revision_con_nueva_regla",
+      "neutrality_review": "pendiente_revision_pendientes_y_publicados"
     },
     {
       "slug": "santa-marta",
-      "status": "pendiente_revision_con_nueva_regla"
+      "status": "pendiente_revision_con_nueva_regla",
+      "neutrality_review": "pendiente_revision_pendientes_y_publicados"
     }
-  ]
+  ],
+  "public_presentation_rule": "Experiencias neutrales; oferentes y ofertas solo internos; aparición pública comercial mediante módulo pagado autorizado."
 }

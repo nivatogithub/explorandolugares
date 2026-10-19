@@ -1,23 +1,27 @@
-# Experiencias ofrecidas por operadores
+# Experiencias editoriales y presencia pagada de operadores
 
-## Diferencia frente a los atractivos del destino
+## Actividad editorial neutral
 
-Un atractivo público —por ejemplo, una iglesia, un parque, un mirador o una cascada— puede formar parte de la guía del destino cuando su existencia y descripción están verificadas. No requiere un convenio comercial.
+La tarjeta editorial informa qué puede hacerse en el destino. Requiere evidencia interna de que existe una oferta real, pero no anuncia gratuitamente al oferente investigado. Usar título genérico y descripción breve: Tour cafetero, Avistamiento de aves, Cueva del Esplendor o Tour urbano patrimonial.
 
-Una experiencia —por ejemplo, un vuelo, una visita guiada o un recorrido en finca— es una oferta de un operador. No se presenta como atractivo abierto ni como recomendación disponible hasta validar quién la presta y acordar su promoción.
+El nombre de un atractivo físico identifica el lugar. El nombre de una familia, finca comercial, hotel, operador o producto particular no se incorpora automáticamente al título, descripción, texto alternativo o llamada a la acción de una experiencia. No copiar variantes de un paquete: corto/largo, tarifas, horarios, inclusiones o recogidas. La tarjeta describe la actividad sin atribuirle servicios particulares de un proveedor.
 
-## Publicación
+Conservar oferente, oferta exacta, fuentes y fecha en la auditoría interna (`criterios-editoriales.json`), fuera del texto y enlaces comerciales públicos. Comprobar una oferta no acredita afiliación, recomendación, disponibilidad ni derecho a publicidad. Las sugerencias de caminar o comer por cuenta propia no se convierten en tours sin oferta documentada.
 
-- Las experiencias nuevas se importan en estado `draft` por defecto; los atractivos informativos pueden entrar publicados con el destino aprobado.
-- El borrador puede revisarse en una vista previa privada. No aparece en la página pública ni incluye un enlace comercial sin confirmar.
-- Una persona administradora solo cambia la experiencia a `published` cuando el prestador está identificado, existe un acuerdo comercial aprobado y la información de contacto y operación está confirmada.
-- La publicación usa tarjetas gráficas coherentes con las de los atractivos, con una imagen aprobada, descripción clara y contacto del operador. La tarjeta no implica reserva ni pago en línea.
-- Las imágenes ilustrativas sirven para valorar el diseño; no prueban que exista un operador, una ruta o una actividad en una ubicación específica.
+## Presencia comercial del operador
 
-## Modelo comercial por definir
+Un negocio aparece asociado públicamente a la experiencia únicamente mediante contratación y aprobación del módulo comercial correspondiente. La integración existente usa `ExperienceOperatorAddon`: exige condiciones de negocio, suscripción y asociación revisadas. La presencia en experiencias no se vende con el plan Gratis; los planes elegibles y el módulo se validan por el sistema comercial.
 
-La prioridad del portal es entregar información útil al viajero y visibilidad clara al prestador. Para la primera etapa se prefiere evaluar una tarifa fija de publicación o visibilidad, con periodicidad y alcance transparentes. Una comisión sobre ventas solo se usará si el operador la acuerda expresamente y el proceso puede medirse con claridad. No se debe inferir ni activar ninguna comisión por defecto.
+No añadir manualmente nombres, enlaces, WhatsApp, logos o menciones del proveedor en el contenido editorial para eludir esa contratación. El directorio gratuito conserva su alcance independiente y no da presencia gratuita dentro de la experiencia.
 
-## Implementación actual y evolución
+No activar anuncios, asociaciones, suscripciones, comisiones o convenios por haber encontrado una página del oferente. Un anuncio pagado debe distinguirse de la descripción editorial. La tarjeta y el anuncio no implican reserva ni pago del tour dentro del portal.
 
-La tabla de atractivos reutiliza temporalmente el tipo `experience` y el estado de publicación existente para mantener la implementación sencilla. El estado `draft` es la barrera pública actual. Cuando se construya el flujo de prestadores, cada experiencia deberá vincularse a un `business` validado y guardar el estado del convenio y su modalidad comercial como datos estructurados, con historial de aprobación. La publicación seguirá siendo una decisión administrativa explícita.
+## Creación, revisión y publicación
+
+- Hasta ocho atractivos, sin mínimo ni relleno. Tampoco hay cuota de experiencias.
+- Aplicar el filtro de evidencia y neutralidad a sitios nuevos, pendientes y publicados. Registrar qué se revisó realmente; no dar por auditados todos tras corregir un ejemplo.
+- Guardar borradores y revisión humana por separado. La autorización de revisar en preproducción no autoriza publicar en producción ni contratar publicidad.
+- Las ilustraciones no prueban que exista un servicio ni un operador en el lugar.
+- Antes de publicar comprobar textos ES/EN/PT, nombres, enlaces públicos, alternativas de imágenes y asociaciones comerciales reales. No revelar la auditoría empresarial interna como publicidad gratuita.
+
+Este ajuste expreso del propietario sustituye la política histórica que mezclaba la publicación de una actividad genérica con la promoción del prestador. La promoción del prestador sigue requiriendo contratación y aprobación.
