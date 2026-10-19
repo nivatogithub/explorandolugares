@@ -1,5 +1,7 @@
 # Explorando Lugares — instrucciones del repositorio
 
+- Producción recibe tráfico real. Las estadísticas acumuladas son datos protegidos: nunca reiniciar, purgar ni sustituir contadores activos durante despliegues, limpiezas, migraciones o recuperación de código. La recolección normal debe continuar. Solo leer o respaldar; una recuperación de desastre se ensaya en una base distinta y exige conservar/reconciliar todo dato recuperable posterior. En esta entrega de cuentas no se publican cambios de lugares ni imágenes.
+
 - Flujo obligatorio desde el 16 de octubre de 2026: ramas de trabajo → `preprod` → revisión local y aprobación humana → producción desde el commit aprobado de `preprod` → validación de producción → merge de ese mismo commit a `main`. Leer `preprod/README.md` y `docs/PREPRODUCCION.md`. No desplegar directamente desde otras ramas ni integrar lugares no aprobados.
 
 - Este repositorio pertenece al negocio independiente Explorando Lugares.

@@ -18,6 +18,12 @@ class DeploymentTests(unittest.TestCase):
             'public_directory': 'public', 'known_hosts_file': '~/.ssh/known_hosts', 'identity_file': '',
         }
 
+    def test_preserve_place_content_and_images(self):
+        for path in ['public/destinos/bogota/index.html','public/en/destinos/jerico/index.html','public/destino.php','public/assets/cartagena/foto.webp','app/content/published.json']:
+            self.assertTrue(deploy.place_or_image(path),path)
+        for path in ['public/business/password.php','app/AccountLifecycle.php','public/assets/account-registration.css']:
+            self.assertFalse(deploy.place_or_image(path),path)
+
     def load(self, config):
         with tempfile.TemporaryDirectory() as folder:
             path = Path(folder) / 'config.json'

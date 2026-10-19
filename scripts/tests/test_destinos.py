@@ -19,7 +19,7 @@ class Page(HTMLParser):
 class Destinos(unittest.TestCase):
  def test_piloto_exactamente_21(self):
   names=['Jericó']+[d['name'] for d in DATA]
-  self.assertEqual(names,json.loads((SITE/'assets/contact-options.json').read_text())['municipalities'])
+  contacts=json.loads((SITE/'assets/contact-options.json').read_text())['municipalities'];self.assertEqual(names,[n for n in contacts if n not in {'Bogotá','Cartagena','Santa Marta'}]);self.assertTrue({'Bogotá','Cartagena','Santa Marta'}.issubset(contacts))
   for lang in ['', 'en/']:
    index=(SITE/(lang+'destinos/index.html')).read_text()
    self.assertEqual(index.count('class="destination-card"'),1)

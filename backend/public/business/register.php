@@ -29,7 +29,9 @@ $destinations=$service->registrationDestinations();$categories=$destinationId?$s
 try{
  if(!business_portal_available())throw new RuntimeException('El registro de cuentas empresariales todavía no está habilitado.');
  if($_SERVER['REQUEST_METHOD']==='POST'){
-  csrf();require_once dirname(__DIR__,2).'/app/AccountResidence.php';if(!$currentAccount)$residence=AccountResidence::capture($_POST);if(!throttle('business_account_register_form',12,900))throw new RuntimeException('Demasiados intentos. Inténtalo más tarde.');
+  csrf();require_once dirname(__DIR__,2).'/app/AccountReactivationDelivery.php';
+ if(!$currentAccount&&AccountReactivationDelivery::existingRegistration(db(),$config,(string)($_POST['email']??''))){header('Location: /negocios/recuperar-clave/?solicitado=1',true,303);exit;}
+ require_once dirname(__DIR__,2).'/app/AccountResidence.php';if(!$currentAccount)$residence=AccountResidence::capture($_POST);if(!throttle('business_account_register_form',12,900))throw new RuntimeException('Demasiados intentos. Inténtalo más tarde.');
   if(!$currentAccount&&($_POST['password']??'')!==($_POST['password_confirm']??''))throw new RuntimeException('Las contraseñas no coinciden.');
   $application=['application_type'=>(string)($_POST['application_type']??''),'business_id'=>(string)($_POST['business_id']??''),'business_name'=>(string)($_POST['business_name']??''),'destination_id'=>(string)($_POST['destination_id']??''),'category_code'=>(string)($_POST['category_code']??''),'relationship_code'=>(string)($_POST['relationship_code']??''),'phone'=>(string)($_POST['phone']??''),'message'=>(string)($_POST['message']??''),'consent'=>(string)($_POST['consent']??'')];
   if($application['application_type']==='new_business'){$application['business_details']=BusinessOnboardingDetails::capture($pdo,$_POST,$application['category_code'],private_storage_path('business-image-references'));$application['business_details']['existence_inputs']=BusinessExistenceVerification::capture(['business_rnt'=>$_POST['business_rnt']??'']);}
@@ -46,7 +48,7 @@ try{
     'authority_document'=>$_FILES['authority_document']??[],
   ],private_storage_path('business-representation-evidence'),$application['application_type']==='new_business'?($_FILES['reference_images']??null):null,private_storage_path('business-image-references'),$currentAccount?(int)$currentAccount['id']:null);
   if(!$currentAccount){require_once dirname(__DIR__,2).'/app/AccountVerificationDelivery.php';AccountVerificationDelivery::send($pdo,$config,$accountId);header('Location: /cuenta/verificar-correo/?enviado=1',true,303);exit;}
-  session_regenerate_id(true);$_SESSION['business_account_id']=$accountId;$_SESSION['account_space']='business';$_SESSION['business_last_seen']=time();$_SESSION['csrf']=bin2hex(random_bytes(32));
+  require_once dirname(__DIR__,2).'/app/AccountSessionSecurity.php';AccountSessionSecurity::bind(db(),$_SESSION,$accountId);session_regenerate_id(true);$_SESSION['business_account_id']=$accountId;$_SESSION['account_space']='business';$_SESSION['business_last_seen']=time();$_SESSION['csrf']=bin2hex(random_bytes(32));
   header('Location: '.site_path('/negocios/portal/').'?espacio=business&solicitud=recibida',true,303);exit;
  }
 }catch(Throwable $e){$error=$e instanceof PDOException?'Ya existe una cuenta con ese correo o no fue posible guardar la solicitud.':$e->getMessage();http_response_code(400);}

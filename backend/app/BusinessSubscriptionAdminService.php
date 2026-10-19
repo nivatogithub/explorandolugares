@@ -61,11 +61,25 @@ final class BusinessSubscriptionAdminService
             if(preg_match('/^[A-Z]{3}$/',$currency)!==1)throw new RuntimeException('La moneda de esta tarifa no es válida. Corrige el catálogo de precios antes de crear la suscripción.');
             if(!empty($input['payment_reviewed'])&&($amount===null||$amount<=0))throw new RuntimeException('No se puede confirmar un pago mientras la tarifa no esté configurada.');
         }
-        $status=$plan==='free'?'pending_publication':'pending';$reviewed=null;
-        $this->pdo->prepare('UPDATE business_subscriptions SET status="cancelled" WHERE business_id=? AND status IN ("pending","pending_publication","paid_pending_publication")')->execute([$businessId]);
-        $q=$this->pdo->prepare('INSERT INTO business_subscriptions(business_id,plan_code,billing_frequency,status,starts_at,ends_at,reviewed_at,publish_not_before,quoted_amount,currency) VALUES(?,?,?,?,NULL,NULL,?,?,?,?)');
-        $q->execute([$businessId,$plan,$frequency?:null,$status,$reviewed,$publishNotBefore,$amount,$currency]);
-        return (int)$this->pdo->lastInsertId();
+        $ownTransaction=!$this->pdo->inTransaction();$savepoint='subscription_'.bin2hex(random_bytes(6));
+        if($ownTransaction)$this->pdo->beginTransaction();else $this->pdo->exec('SAVEPOINT '.$savepoint);
+        try {
+            // All subscription requests for a business serialize on the same InnoDB row.
+            $lock=$this->pdo->getAttribute(PDO::ATTR_DRIVER_NAME)==='mysql'?' FOR UPDATE':'';
+            $q=$this->pdo->prepare('SELECT id FROM businesses WHERE id=?'.$lock);$q->execute([$businessId]);
+            if(!$q->fetchColumn())throw new RuntimeException('El negocio ya no está disponible.');
+            $status=$plan==='free'?'pending_publication':'pending';$reviewed=null;
+            $this->pdo->prepare('UPDATE business_subscriptions SET status="cancelled" WHERE business_id=? AND status IN ("pending","pending_publication","paid_pending_publication")')->execute([$businessId]);
+            $q=$this->pdo->prepare('INSERT INTO business_subscriptions(business_id,plan_code,billing_frequency,status,starts_at,ends_at,reviewed_at,publish_not_before,quoted_amount,currency) VALUES(?,?,?,?,NULL,NULL,?,?,?,?)');
+            $q->execute([$businessId,$plan,$frequency?:null,$status,$reviewed,$publishNotBefore,$amount,$currency]);
+            $id=(int)$this->pdo->lastInsertId();
+            if($ownTransaction)$this->pdo->commit();else $this->pdo->exec('RELEASE SAVEPOINT '.$savepoint);
+            return $id;
+        } catch(Throwable $error) {
+            if($ownTransaction){if($this->pdo->inTransaction())$this->pdo->rollBack();}
+            elseif($this->pdo->inTransaction()){$this->pdo->exec('ROLLBACK TO SAVEPOINT '.$savepoint);$this->pdo->exec('RELEASE SAVEPOINT '.$savepoint);}
+            throw $error;
+        }
     }
 
     /** Activate the selected tier only when an authorized publication actually goes live. */

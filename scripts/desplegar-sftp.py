@@ -230,6 +230,13 @@ def select_files(files, requested_paths):
     return [item for item in files if item['relative'] in requested]
 
 
+def place_or_image(relative):
+    path=PurePosixPath(relative)
+    return (bool(re.match(r'^public/(?:en/|pt-br/)?destinos(?:/|$)',relative))
+            or relative=='public/destino.php' or relative.startswith('app/content/')
+            or path.suffix.lower() in {'.webp','.png','.jpg','.jpeg','.gif','.svg','.geojson','.mmdb'})
+
+
 def create_partial_manifest(config, current, previous, uploaded, commit=None):
     """Record only what is actually live; retain prior hashes for untouched files."""
     old_files = {item['relative']: item for item in (previous or {}).get('files', [])}
@@ -308,6 +315,8 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--config', type=Path, default=ROOT / '.local/sftp.json')
     parser.add_argument('--approved-preprod', metavar='COMMIT', help='Commit exacto de preprod aprobado por el propietario para producción.')
+    parser.add_argument('--preserve-places',action='store_true',help='Excluye páginas, contenido e imágenes de lugares; conserva sus hashes publicados.')
+    parser.add_argument('--recover',type=Path,help='Recupera solo los archivos de una entrega interrumpida; nunca restaura datos.')
     parser.add_argument('--deploy', action='store_true', help='Sube directamente solo archivos nuevos o modificados.')
     parser.add_argument('--only', action='append', default=[], metavar='RUTA',
                         help='Limita una entrega por ruta exacta del paquete (se puede repetir).')
@@ -318,6 +327,10 @@ def main(argv=None):
     args = parser.parse_args(argv)
     if args.deploy:require_approved_preprod(args.approved_preprod)
     config = load_config(args.config.expanduser().resolve())
+    if args.recover:
+        from deployment_recovery import recover
+        recover(sys.modules[__name__],SFTP(config),config,args.recover,ROOT/'.local/deployment-manifest.json')
+        print('Archivos recuperados. Base de datos y estadísticas intactas.');return 0
     subprocess.run([sys.executable, str(ROOT / 'scripts/verificar-antes-de-desplegar.py')], cwd=ROOT, check=True)
     with tempfile.TemporaryDirectory(prefix='explorando-deploy-') as temporary:
         output = Path(temporary) / 'build'
@@ -326,6 +339,7 @@ def main(argv=None):
         if args.only and not previous:
             raise ValueError('Una entrega parcial requiere el manifiesto del último despliegue; primero establece una comparación completa.')
         scoped = select_files(files, args.only)
+        if args.preserve_places:scoped=[item for item in scoped if not place_or_image(item['relative'])]
         forced = {item['relative'] for item in select_files(files, args.force_file)} if args.force_file else set()
         if forced - {item['relative'] for item in scoped}:
             raise ValueError('Una reparación debe estar dentro de las rutas seleccionadas para el despliegue.')
@@ -340,7 +354,7 @@ def main(argv=None):
         changed_paths = {item['relative'] for item in changed} | forced
         selected = [item for item in scoped if item['relative'] in changed_paths]
         byte_count = sum(item['bytes'] for item in selected)
-        obsolete = [] if args.only else obsolete_files(previous, files)
+        obsolete = [] if args.only or args.preserve_places else obsolete_files(previous, files)
         removed = sorted(item['relative'] for item in obsolete)
         if args.deploy:
             validate_removals(removed, args.allow_remove)
@@ -360,7 +374,7 @@ def main(argv=None):
         if not selected:
             print('El contenido ya coincide; no se subieron archivos del sitio.')
         manifest = (create_partial_manifest(config, files, previous, selected, git_commit())
-                    if args.only else create_manifest(config, files, previous, git_commit()))
+                    if args.only or args.preserve_places else create_manifest(config, files, previous, git_commit()))
         manifest_text = json.dumps(manifest, indent=2, ensure_ascii=False) + '\n'
         local_manifest = ROOT / '.local/deployment-manifest.json'
         local_manifest.parent.mkdir(parents=True, exist_ok=True)
@@ -373,8 +387,10 @@ def main(argv=None):
         if actual != previous:
             raise ValueError('El manifiesto remoto cambió o no coincide con el local; reconciliar antes de publicar. No se subió ningún archivo.')
         # Changed content and its new inventory travel through one SFTP session.
-        client.run(deployment_commands(config, selected, temp_manifest, obsolete))
-        local_manifest.write_text(manifest_text)
+        if obsolete:raise ValueError('Los retiros de archivos deben ejecutarse como una limpieza separada, no en esta entrega recuperable.')
+        from deployment_recovery import protected_deploy
+        journal=protected_deploy(sys.modules[__name__],client,config,selected,previous,temp_manifest,ROOT/'.local/deployment-recovery',local_manifest)
+        print('Registro de recuperación: '+str(journal))
         print(f'Despliegue directo completado. Manifiesto actualizado en el hosting y en {local_manifest}.')
         print('Verifica visualmente el sitio y las acciones críticas; el envío SFTP no prueba PHP ni la base de datos.')
     return 0
