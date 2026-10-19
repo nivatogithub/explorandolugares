@@ -1,0 +1,730 @@
+[
+  {
+    "id": "parque-el-libertador",
+    "role": "place",
+    "status": "draft_for_local_review",
+    "source": {
+      "url": "https://colombia.travel/es/jardin-antioquia/camina-por-el-parque-el-libertador",
+      "checked_at": "2026-10-19",
+      "role": "factual-description-only"
+    },
+    "method": "independent-composition-no-third-party-image-upload",
+    "generation_tool": "builtin image_gen",
+    "prompt": "Landscape 3:2. Create a brand-new independent editorial semi-realistic illustration for Explorando Lugares, clearly visible expressive fine ink outlines and textured gouache brushwork, polished grown-up travel magazine artwork, realistic geography and architecture with gentle caricature. Natural varied colors, restrained neutral light, no yellow cast, no flat elementary geometric shapes, no photorealism, no text/logos/watermarks. No third party photograph is supplied or to be copied. Asset subject: Parque El Libertador in Jardín, Antioquia: distinct close eye-level composition dominated by its low circular fountain basin, stone paths and small landscaped rose garden beds, café chairs and low colonial white buildings around the plaza. Mature shade trees, small groups of townspeople. Do not show the basilica as principal subject; at most tiny partial background. Real everyday Andean village plaza, not European city or tropical promenade. Source Colombia Travel parque El Libertador.",
+    "edit_prompt": "Remove ONLY the small domed church/white tower visible at the far left background behind tree trunks. Replace that small part with continuous low tiled roofs and leafy branches. A domed church is not part of verified view. Keep every other element including fountain, people, colors, garden, framing unchanged.",
+    "edit_input": "own-generated-draft",
+    "original_generation_file": "exec-e7e42e46-33b0-4fec-86da-c83cdd36cd3f.png",
+    "rejected_generation_file": "exec-13b1ca0f-7818-4457-9fcf-5ca8465c0be9.png",
+    "inspection": {
+      "full_image": "inspected",
+      "thumbnail": "inspected-on-review-sheet",
+      "notes": "Se retiró una cúpula ajena del fondo. El parque/fuente se representan editorialmente; no levantamiento fotográfico exacto.",
+      "human_approval": "pending"
+    },
+    "files": [
+      {
+        "path": "maestros/parque-el-libertador.png",
+        "sha256": "6b794f364fdfb082301611b037a57971a9e64f3357ce1bc3151995fb50d3a6ae",
+        "bytes": 3347141,
+        "dimensions": [
+          1536,
+          1024
+        ]
+      },
+      {
+        "path": "images/parque-el-libertador.webp",
+        "sha256": "b9f6d71dee75f8037d0259bd5e263b1561206fd23b2777cf94f362c332768386",
+        "bytes": 128210,
+        "dimensions": [
+          800,
+          533
+        ]
+      },
+      {
+        "path": "images/parque-el-libertador-480.webp",
+        "sha256": "c36bf27d6be6c79b0e1119a998ac574146116a8a040082fe36406df87cba57bc",
+        "bytes": 52996,
+        "dimensions": [
+          480,
+          320
+        ]
+      }
+    ]
+  },
+  {
+    "id": "basilica-inmaculada-concepcion",
+    "role": "place",
+    "status": "draft_for_local_review",
+    "source": {
+      "url": "https://colombia.travel/es/jardin-antioquia/visita-la-basilica-menor-de-la-inmaculada-concepcion",
+      "checked_at": "2026-10-19",
+      "role": "factual-description-only"
+    },
+    "method": "independent-composition-no-third-party-image-upload",
+    "generation_tool": "builtin image_gen",
+    "prompt": "Landscape 3:2. Create a brand-new independent editorial semi-realistic illustration for Explorando Lugares, clearly visible expressive fine ink outlines and textured gouache brushwork, polished grown-up travel magazine artwork, realistic geography and architecture with gentle caricature. Natural varied colors, restrained neutral light, no yellow cast, no flat elementary geometric shapes, no photorealism, no text/logos/watermarks. No third party photograph is supplied or to be copied. Asset subject: Architectural illustration of actual Basílica Menor de la Inmaculada Concepción in Jardín Antioquia, viewed near square from slight low angle, the hand-carved dark grey-brown stone NeoGothic front occupies composition. Exactly TWO matching tall towers with slim silver metal pointed spires, small crosses; central lower pointed gable, arched portals and Gothic windows, whole tower tips visible. No square fountain foreground, no cafe panorama: this is a specific architectural card different from town hero. Blue sky and only small framing branches.",
+    "edit_prompt": null,
+    "edit_input": null,
+    "original_generation_file": "exec-69690340-da17-4ba2-a23d-2d10d7e700f5.png",
+    "rejected_generation_file": null,
+    "inspection": {
+      "full_image": "inspected",
+      "thumbnail": "inspected-on-review-sheet",
+      "notes": "Dos torres de piedra con agujas metálicas; fachada visible completa. Detalles ornamentales interpretados; requiere revisión humana local.",
+      "human_approval": "pending"
+    },
+    "files": [
+      {
+        "path": "maestros/basilica-inmaculada-concepcion.png",
+        "sha256": "2cd5981379ba8e9a2080e3da446cbb14af98cc272380dd6cb1b90abfd19655e2",
+        "bytes": 3588195,
+        "dimensions": [
+          1536,
+          1024
+        ]
+      },
+      {
+        "path": "images/basilica-inmaculada-concepcion.webp",
+        "sha256": "58d4a74dbbb87d6ef870a16653e2773abdaec4cbcdc5bd041e3a677cbb471aa1",
+        "bytes": 107306,
+        "dimensions": [
+          800,
+          533
+        ]
+      },
+      {
+        "path": "images/basilica-inmaculada-concepcion-480.webp",
+        "sha256": "058aab8bd157cbe52da797698c2cb7903470626a6e5815a9019a2cfc9455715d",
+        "bytes": 41408,
+        "dimensions": [
+          480,
+          320
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cueva-del-esplendor",
+    "role": "place",
+    "status": "draft_for_local_review",
+    "source": {
+      "url": "https://antioquia.gov.co/images/img/turismo/2025/los-imperdibles-de-suroeste-28-30-junio.pdf",
+      "checked_at": "2026-10-19",
+      "role": "factual-description-only"
+    },
+    "method": "independent-composition-no-third-party-image-upload",
+    "generation_tool": "builtin image_gen",
+    "prompt": "Landscape 3:2. Create a brand-new independent editorial semi-realistic illustration for Explorando Lugares, clearly visible expressive fine ink outlines and textured gouache brushwork, polished grown-up travel magazine artwork, realistic geography and architecture with gentle caricature. Natural varied colors, restrained neutral light, no yellow cast, no flat elementary geometric shapes, no photorealism, no text/logos/watermarks. No third party photograph is supplied or to be copied. Asset subject: Actual geographic feature Cueva del Esplendor in mountains of Jardín Antioquia: interior rocky grotto, modest single waterfall descends vertically through a natural opening in the overhead rock ceiling into a small shallow pool; view upward at angle from inside with moss on rough dark rock, daylight enters from circular irregular opening high above water column. Close cave chamber, not giant fantasy cavern, no beach, no invented massive lake, no monastery, no bridges. Clearly painted illustration, geological shape plausible.",
+    "edit_prompt": null,
+    "edit_input": null,
+    "original_generation_file": "exec-e8581096-0180-4206-a934-d6b777c3ebdd.png",
+    "rejected_generation_file": null,
+    "inspection": {
+      "full_image": "inspected",
+      "thumbnail": "inspected-on-review-sheet",
+      "notes": "La caída de agua entra por abertura superior; piscina pequeña y roca, sin paisaje fantástico.",
+      "human_approval": "pending"
+    },
+    "files": [
+      {
+        "path": "maestros/cueva-del-esplendor.png",
+        "sha256": "66d94f78b69befffdd54540fa63e0edeea62e15a36f4d32183a0825e6db68be9",
+        "bytes": 3684079,
+        "dimensions": [
+          1536,
+          1024
+        ]
+      },
+      {
+        "path": "images/cueva-del-esplendor.webp",
+        "sha256": "c79cb57e1d75f7f546e7180f01a527b5961d78225dc02b528ab738577f109d88",
+        "bytes": 112896,
+        "dimensions": [
+          800,
+          533
+        ]
+      },
+      {
+        "path": "images/cueva-del-esplendor-480.webp",
+        "sha256": "577118814b17f4cd7aea80471a13fffb875fc4175432ea17fa41c43d1389ac84",
+        "bytes": 42116,
+        "dimensions": [
+          480,
+          320
+        ]
+      }
+    ]
+  },
+  {
+    "id": "reserva-jardin-de-rocas",
+    "role": "place",
+    "status": "draft_for_local_review",
+    "source": {
+      "url": "https://www.jardinderocas.org/",
+      "checked_at": "2026-10-19",
+      "role": "factual-description-only"
+    },
+    "method": "independent-composition-no-third-party-image-upload",
+    "generation_tool": "builtin image_gen",
+    "prompt": "Landscape 3:2. Create a brand-new independent editorial semi-realistic illustration for Explorando Lugares, clearly visible expressive fine ink outlines and textured gouache brushwork, polished grown-up travel magazine artwork, realistic geography and architecture with gentle caricature. Natural varied colors, restrained neutral light, no yellow cast, no flat elementary geometric shapes, no photorealism, no text/logos/watermarks. No third party photograph is supplied or to be copied. Asset subject: Jardín de Rocas Reserve by Volcanes river canyon in Jardín Antioquia. Wildlife-focused close composition of one male Andean cock-of-the-rock Rupicola peruvianus with vivid orange-red disc-like crest, orange-red breast and shoulders, dark black wings with silver-grey wing panel, perched naturally among wet broadleaf Andean vegetation and dark canyon greenery. Proper species anatomy, not parrot, not rooster. Show distinctive bird without artificial feeding and without cages. Natural setting, no fabricated entrance building.",
+    "edit_prompt": null,
+    "edit_input": null,
+    "original_generation_file": "exec-bb058764-dd67-40c7-8d50-9698e9b5a8d1.png",
+    "rejected_generation_file": null,
+    "inspection": {
+      "full_image": "inspected",
+      "thumbnail": "inspected-on-review-sheet",
+      "notes": "Gallito de las rocas naranja, cresta discoidal y alas negras con panel gris. No se promete avistamiento garantizado.",
+      "human_approval": "pending"
+    },
+    "files": [
+      {
+        "path": "maestros/reserva-jardin-de-rocas.png",
+        "sha256": "2968048dac44d2f4bc728b659d3456d6a4b4b337ea8784a27e3599e16c1759ea",
+        "bytes": 3605313,
+        "dimensions": [
+          1536,
+          1024
+        ]
+      },
+      {
+        "path": "images/reserva-jardin-de-rocas.webp",
+        "sha256": "bae062e72778580e59ff2b9795b29afb6fa5b0d6890424186334c6369361e9d8",
+        "bytes": 124158,
+        "dimensions": [
+          800,
+          533
+        ]
+      },
+      {
+        "path": "images/reserva-jardin-de-rocas-480.webp",
+        "sha256": "52f4b69c750074d5871f0d57a4d5d03234f4a725037332927a41f8464f5a4955",
+        "bytes": 51126,
+        "dimensions": [
+          480,
+          320
+        ]
+      }
+    ]
+  },
+  {
+    "id": "la-garrucha",
+    "role": "place",
+    "status": "draft_for_local_review",
+    "source": {
+      "url": "https://jardin.antioquia.in/Sitios-Turisticos/la-garrucha",
+      "checked_at": "2026-10-19",
+      "role": "factual-description-only"
+    },
+    "method": "independent-composition-no-third-party-image-upload",
+    "generation_tool": "builtin image_gen",
+    "prompt": "Landscape 3:2. Create a brand-new independent editorial semi-realistic illustration for Explorando Lugares, clearly visible expressive fine ink outlines and textured gouache brushwork, polished grown-up travel magazine artwork, realistic geography and architecture with gentle caricature. Natural varied colors, restrained neutral light, no yellow cast, no flat elementary geometric shapes, no photorealism, no text/logos/watermarks. No third party photograph is supplied or to be copied. Asset subject: La Garrucha, traditional small aerial cable transport of Jardín Antioquia crossing Volcanes ravine toward Serranías: compact utilitarian rectangular wooden-bodied cabin with simple metal frame and flat sloping roof hanging from overhead cable/pulleys, not a modern round glass gondola. Mid-distance side view above lush green narrow canyon, low tile-roof village glimpsed across hillside and Andean slopes. Cabin unbranded, no text, no giant amusement ride, no alpine ski resort. Independent contextual illustration, not exact engineering survey.",
+    "edit_prompt": "Correct the BACKGROUND only: remove the entirely invented yellow twin-tower church and ALL palm trees and dramatic vertical canyon cliffs. Replace with a nearer modest ordinary green leafy Andean wooded ravine, green hillside, scattered low white tile-roof houses only. Keep suspended simple wooden cabin, metalframe, cable and passengers exactly. No temples or named monuments anywhere; this is rural cable transport at Jardín not another colonial town.",
+    "edit_input": "own-generated-draft",
+    "original_generation_file": "exec-71d2e95d-9465-4d77-96d1-510ba4990fe5.png",
+    "rejected_generation_file": "exec-d830f346-8e1b-481b-8880-0ca1fa040e4e.png",
+    "inspection": {
+      "full_image": "inspected",
+      "thumbnail": "inspected-on-review-sheet",
+      "notes": "Corregido templo/palmeras y cañón excesivo. Cabina artesanal y ladera; no esquema técnico de operación.",
+      "human_approval": "pending"
+    },
+    "files": [
+      {
+        "path": "maestros/la-garrucha.png",
+        "sha256": "a22b5672de8b0bab73fdd666c960e4300f4ef82da567ee5ffb9229b9ca2d665b",
+        "bytes": 3853784,
+        "dimensions": [
+          1536,
+          1024
+        ]
+      },
+      {
+        "path": "images/la-garrucha.webp",
+        "sha256": "41e4155621e2511e5eaadf906c51ac0ee766fef8922d342386e7bc13fd520f6f",
+        "bytes": 149746,
+        "dimensions": [
+          800,
+          533
+        ]
+      },
+      {
+        "path": "images/la-garrucha-480.webp",
+        "sha256": "2497dd6d62d6dce96b4132c6524953bf01c7a43752a3cb4500918291c613f0d4",
+        "bytes": 56140,
+        "dimensions": [
+          480,
+          320
+        ]
+      }
+    ]
+  },
+  {
+    "id": "camino-de-la-herrera",
+    "role": "place",
+    "status": "draft_for_local_review",
+    "source": {
+      "url": "https://otiumtornus.com/circuito-la-cascada-del-amor/",
+      "checked_at": "2026-10-19",
+      "role": "factual-description-only"
+    },
+    "method": "independent-composition-no-third-party-image-upload",
+    "generation_tool": "builtin image_gen",
+    "prompt": "Landscape 3:2. Create a brand-new independent editorial semi-realistic illustration for Explorando Lugares, clearly visible expressive fine ink outlines and textured gouache brushwork, polished grown-up travel magazine artwork, realistic geography and architecture with gentle caricature. Natural varied colors, restrained neutral light, no yellow cast, no flat elementary geometric shapes, no photorealism, no text/logos/watermarks. No third party photograph is supplied or to be copied. Asset subject: Camino de la Herrera in Jardín Antioquia: intimate perspective down an irregular old cobblestone rural path passing modest traditional whitewashed country walls, a wooden fence, leafy shrubs and mountain vegetation, small patches of flowers. Uneven historic stone path is the central recognizable subject; visible connection between village and countryside, no high-alpine trail, no monumental stairs, no church or waterfall invented. No people needed. Source local route operator Ötium Tornus describes surviving stone path and traditional houses.",
+    "edit_prompt": null,
+    "edit_input": null,
+    "original_generation_file": "exec-33f08ac0-8672-48a7-b665-2b016c47b6b0.png",
+    "rejected_generation_file": null,
+    "inspection": {
+      "full_image": "inspected",
+      "thumbnail": "inspected-on-review-sheet",
+      "notes": "Camino de piedra con paisaje rural; no atribuye casa exacta o condición actual del acceso.",
+      "human_approval": "pending"
+    },
+    "files": [
+      {
+        "path": "maestros/camino-de-la-herrera.png",
+        "sha256": "8c909d039beadc53a3207fe409b06f57467a1c4b72a1313f545631a7e276bbc7",
+        "bytes": 4057181,
+        "dimensions": [
+          1536,
+          1024
+        ]
+      },
+      {
+        "path": "images/camino-de-la-herrera.webp",
+        "sha256": "54e0070fdc4dc845a38123b09373916945a29c4c298fb8fff82ec5a3c1bde142",
+        "bytes": 148192,
+        "dimensions": [
+          800,
+          533
+        ]
+      },
+      {
+        "path": "images/camino-de-la-herrera-480.webp",
+        "sha256": "2757dd77bfebeaf4241f43bed5d9de559ca1674a5017c050b052733b0bdc4fcb",
+        "bytes": 57498,
+        "dimensions": [
+          480,
+          320
+        ]
+      }
+    ]
+  },
+  {
+    "id": "casa-museo-clara-rojas",
+    "role": "place",
+    "status": "draft_for_local_review",
+    "source": {
+      "url": "https://mcrpjardin.blogspot.com/p/historia-de-la-casa-museo-clara-rojas.html",
+      "checked_at": "2026-10-19",
+      "role": "factual-description-only"
+    },
+    "method": "independent-composition-no-third-party-image-upload",
+    "generation_tool": "builtin image_gen",
+    "prompt": "Landscape 3:2. Create a brand-new independent editorial semi-realistic illustration for Explorando Lugares, clearly visible expressive fine ink outlines and textured gouache brushwork, polished grown-up travel magazine artwork, realistic geography and architecture with gentle caricature. Natural varied colors, restrained neutral light, no yellow cast, no flat elementary geometric shapes, no photorealism, no text/logos/watermarks. No third party photograph is supplied or to be copied. Asset subject: Casa Museo Clara Rojas Peláez Jardín Antioquia: interior courtyard of historic traditional Antioquian house, based on museum's own documented layout: square open courtyard with modest central water fountain, surrounding covered corridors and wooden columns, high whitewashed earthen walls, red baked-clay roof tiles, doorways to gallery rooms. View from shaded entrance corridor looking into daylight courtyard. Domestic scale, no palatial arches, no European cloister or second-storey mansion, no invented exhibits or paintings. A contextual independent illustration of documented spatial features, not a photographed inventory.",
+    "edit_prompt": null,
+    "edit_input": null,
+    "original_generation_file": "exec-e88779a1-ddba-4b3c-b30a-156f550efa9d.png",
+    "rejected_generation_file": null,
+    "inspection": {
+      "full_image": "inspected",
+      "thumbnail": "inspected-on-review-sheet",
+      "notes": "Patio cuadrado, corredores y fuente documentados por museo. Color/disposición fina interpretados; no fotografía de inventario.",
+      "human_approval": "pending"
+    },
+    "files": [
+      {
+        "path": "maestros/casa-museo-clara-rojas.png",
+        "sha256": "4e5d790647c76e2db795a834d3215b63ba3b8fb90d0893dd8f8ffb7a90920ae8",
+        "bytes": 3270265,
+        "dimensions": [
+          1536,
+          1024
+        ]
+      },
+      {
+        "path": "images/casa-museo-clara-rojas.webp",
+        "sha256": "724bdcc3c38d76501577bf80adf144065e79f4ca13699f538d88bc4bc6662688",
+        "bytes": 94104,
+        "dimensions": [
+          800,
+          533
+        ]
+      },
+      {
+        "path": "images/casa-museo-clara-rojas-480.webp",
+        "sha256": "18c464a2ba25ab9b7a772309365968e4023b77dbf86925321294bc7f6e803da9",
+        "bytes": 37792,
+        "dimensions": [
+          480,
+          320
+        ]
+      }
+    ]
+  },
+  {
+    "id": "reserva-loro-orejiamarillo",
+    "role": "place",
+    "status": "draft_for_local_review",
+    "source": {
+      "url": "https://proaves.org/reserva-proaves-loro-orejiamarillo/",
+      "checked_at": "2026-10-19",
+      "role": "factual-description-only"
+    },
+    "method": "independent-composition-no-third-party-image-upload",
+    "generation_tool": "builtin image_gen",
+    "prompt": "Landscape 3:2. Create a brand-new independent editorial semi-realistic illustration for Explorando Lugares, clearly visible expressive fine ink outlines and textured gouache brushwork, polished grown-up travel magazine artwork, realistic geography and architecture with gentle caricature. Natural varied colors, restrained neutral light, no yellow cast, no flat elementary geometric shapes, no photorealism, no text/logos/watermarks. No third party photograph is supplied or to be copied. Asset subject: ProAves Loro Orejiamarillo reserve near rural Ventanas Jardín Antioquia: high-Andean cloud forest and tall wax palms, one yellow-eared parrot Ognorhynchus icterotis in natural perch foreground; correct green body, yellow forehead and broad yellow cheek/ear patch, grey hooked beak, long green tail. Misty mountain forest at 2700m, not tropical beach. Bird prominent but show cloud forest habitat. No aviary cages, no tourist infrastructure invented. Distinct from cock-of-the-rock card.",
+    "edit_prompt": null,
+    "edit_input": null,
+    "original_generation_file": "exec-c847b493-179e-43f5-bd59-1e181a8c909b.png",
+    "rejected_generation_file": null,
+    "inspection": {
+      "full_image": "inspected",
+      "thumbnail": "inspected-on-review-sheet",
+      "notes": "Ave verde con parche auricular amarillo; bosque montano y palmas de cera, no ambiente costero.",
+      "human_approval": "pending"
+    },
+    "files": [
+      {
+        "path": "maestros/reserva-loro-orejiamarillo.png",
+        "sha256": "7cba0b58610cba322a1673225ebdca7312a8aedb0a5e558449b9a333a34417aa",
+        "bytes": 3604650,
+        "dimensions": [
+          1536,
+          1024
+        ]
+      },
+      {
+        "path": "images/reserva-loro-orejiamarillo.webp",
+        "sha256": "66d7d4d5b0194ccc388abb04adf57e7958629a953b93c3d2c91a53258bc469e5",
+        "bytes": 119682,
+        "dimensions": [
+          800,
+          533
+        ]
+      },
+      {
+        "path": "images/reserva-loro-orejiamarillo-480.webp",
+        "sha256": "4daf9c674ea4ca917271315867fd511c2a04d54ffb9c0ca69f8f168a9c040a46",
+        "bytes": 46422,
+        "dimensions": [
+          480,
+          320
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cafe-en-finca",
+    "role": "experience",
+    "status": "draft_for_local_review",
+    "source": {
+      "url": "https://hotelmacaojardin.com/",
+      "checked_at": "2026-10-19",
+      "role": "factual-description-only"
+    },
+    "method": "independent-composition-no-third-party-image-upload",
+    "generation_tool": "builtin image_gen",
+    "prompt": "Landscape 3:2. Create a brand-new independent editorial semi-realistic illustration for Explorando Lugares, clearly visible expressive fine ink outlines and textured gouache brushwork, polished grown-up travel magazine artwork, realistic geography and architecture with gentle caricature. Natural varied colors, restrained neutral light, no yellow cast, no flat elementary geometric shapes, no photorealism, no text/logos/watermarks. No third party photograph is supplied or to be copied. Asset subject: Coffee growing experience in rural Jardín Antioquia: adult local coffee farmer and two adult visitors beside coffee bushes on sloping Andean farm, hands examining red ripe coffee cherries on branch, basket nearby, layers of green cultivated hills behind. Depict people as detailed semi-realistic caricatures, expressive faces and full anatomical hands, not stick people. Humble work clothes, no brand, no plantation manor or imaginary named farm, no price signs. Focus learning cultivation, not generic cafe table.",
+    "edit_prompt": "Correct only the distant BACKGROUND: remove the isolated rock monolith at upper right and remove the distant church/town towers. Replace with continuous ordinary cultivated green rolling Andean hills and coffee farm plots, without distinctive peak, town or building. Preserve all people, hands, coffee plants, cherries, baskets, colors, illustration style and framing exactly.",
+    "edit_input": "own-generated-draft",
+    "original_generation_file": "exec-8311516f-5e04-49bd-a882-8ca1209ac6f8.png",
+    "rejected_generation_file": "exec-c47242a2-aeff-4c4c-88a5-38fff72d8370.png",
+    "inspection": {
+      "full_image": "inspected",
+      "thumbnail": "inspected-on-review-sheet",
+      "notes": "Corregidos monolito/iglesia inventados; cultivo de café en ladera. No se atribuye finca específica.",
+      "human_approval": "pending"
+    },
+    "files": [
+      {
+        "path": "maestros/cafe-en-finca.png",
+        "sha256": "f8ccfc2837b44c5a9fac004f94425b3ce65d31c130b94aad8212ea849ef52a75",
+        "bytes": 3133403,
+        "dimensions": [
+          1536,
+          1024
+        ]
+      },
+      {
+        "path": "images/cafe-en-finca.webp",
+        "sha256": "109367597283990cf71cbc56eb0f8eabd3ac0bf74fd0edb5c6245c31bfbe2a74",
+        "bytes": 110668,
+        "dimensions": [
+          800,
+          533
+        ]
+      },
+      {
+        "path": "images/cafe-en-finca-480.webp",
+        "sha256": "5a8adeb7f140fb5faa4b797a09e4a3a4c5166a9d3012ce193c70704525e28e19",
+        "bytes": 48862,
+        "dimensions": [
+          480,
+          320
+        ]
+      }
+    ]
+  },
+  {
+    "id": "observacion-aves",
+    "role": "experience",
+    "status": "draft_for_local_review",
+    "source": {
+      "url": "https://www.jardinderocas.org/",
+      "checked_at": "2026-10-19",
+      "role": "factual-description-only"
+    },
+    "method": "independent-composition-no-third-party-image-upload",
+    "generation_tool": "builtin image_gen",
+    "prompt": "Landscape 3:2. Create a brand-new independent editorial semi-realistic illustration for Explorando Lugares, clearly visible expressive fine ink outlines and textured gouache brushwork, polished grown-up travel magazine artwork, realistic geography and architecture with gentle caricature. Natural varied colors, restrained neutral light, no yellow cast, no flat elementary geometric shapes, no photorealism, no text/logos/watermarks. No third party photograph is supplied or to be copied. Asset subject: Birdwatching activity in green Andean forest of Jardín Antioquia: three adult visitors with binoculars and one local guide, quietly looking through canopy from an ordinary forest path, a small distant native bird not giant or tame, subtle greenery, respectful wildlife distance. Person-centered experience with natural varied faces and walking clothes; no cages, touching or feeding animals. Distinct from close-up wildlife reserve cards. No invented branded birding platform.",
+    "edit_prompt": "Correct only distant background: completely remove church and town skyline in center, replacing with continuous leafy Andean forest and ordinary rolling green slopes. No buildings or landmark spires. Keep birdwatchers, binoculars, hands, guide, bird, trees, framing and illustrative style unchanged.",
+    "edit_input": "own-generated-draft",
+    "original_generation_file": "exec-d06c82cb-03ae-4919-8371-ca4559ae0910.png",
+    "rejected_generation_file": "exec-a27a9673-9572-433e-8c3e-8991736743f1.png",
+    "inspection": {
+      "full_image": "inspected",
+      "thumbnail": "inspected-on-review-sheet",
+      "notes": "Eliminado templo genérico. Observación distante sin manipular fauna; personas ficticias.",
+      "human_approval": "pending"
+    },
+    "files": [
+      {
+        "path": "maestros/observacion-aves.png",
+        "sha256": "44b0fe1132fbb4b71a4d711f77f25f70e28f3a64c48c4e47d22d38985728a0d3",
+        "bytes": 3207388,
+        "dimensions": [
+          1536,
+          1024
+        ]
+      },
+      {
+        "path": "images/observacion-aves.webp",
+        "sha256": "13c23874cad5dfa780eda3f76b97300520b7be3db9d03dfcadb2edf186be5073",
+        "bytes": 113462,
+        "dimensions": [
+          800,
+          533
+        ]
+      },
+      {
+        "path": "images/observacion-aves-480.webp",
+        "sha256": "3c6372c6911d7c99333dd77cb99d60b758d6c775f70a94052e886eb42eb5c9f9",
+        "bytes": 48606,
+        "dimensions": [
+          480,
+          320
+        ]
+      }
+    ]
+  },
+  {
+    "id": "caminata-cueva",
+    "role": "experience",
+    "status": "draft_for_local_review",
+    "source": {
+      "url": "https://antioquia.gov.co/images/img/turismo/2025/los-imperdibles-de-suroeste-28-30-junio.pdf",
+      "checked_at": "2026-10-19",
+      "role": "factual-description-only"
+    },
+    "method": "independent-composition-no-third-party-image-upload",
+    "generation_tool": "builtin image_gen",
+    "prompt": "Landscape 3:2. Create a brand-new independent editorial semi-realistic illustration for Explorando Lugares, clearly visible expressive fine ink outlines and textured gouache brushwork, polished grown-up travel magazine artwork, realistic geography and architecture with gentle caricature. Natural varied colors, restrained neutral light, no yellow cast, no flat elementary geometric shapes, no photorealism, no text/logos/watermarks. No third party photograph is supplied or to be copied. Asset subject: Rural hiking experience toward Cueva del Esplendor in mountains of Jardín Antioquia: two adult hikers and adult local guide with small backpacks walking along humid mountain dirt path with low vegetation, rocky slopes, ferns and green Andean hills in background. Only approach trail outside, no waterfall or cave interior visible: distinct from grotto attraction card. Appropriate hiking shoes, expressive realistic cartoon faces, no dangerous posed cliff edge, no alpine snow or beach.",
+    "edit_prompt": "Correct only the distant valley background: remove the town and church towers at lower right entirely, replace that area with ordinary green Andean rural hillside vegetation. No towers, buildings, palm trees, named peaks or monolith. Keep people, clothing, path, backpacks, faces, forest, framing, lighting and illustrative style unchanged.",
+    "edit_input": "own-generated-draft",
+    "original_generation_file": "exec-3e63cbda-e01c-4532-8cf7-963c7bd3656a.png",
+    "rejected_generation_file": "exec-3bac0a02-f6a7-43db-9ee8-f44730fec945.png",
+    "inspection": {
+      "full_image": "inspected",
+      "thumbnail": "inspected-on-review-sheet",
+      "notes": "Eliminado poblado/templo del valle. Actividad de aproximación; no documenta trazado exacto del sendero.",
+      "human_approval": "pending"
+    },
+    "files": [
+      {
+        "path": "maestros/caminata-cueva.png",
+        "sha256": "dbb283d0c1f1052343011c6398268959e8253afc3d69336b14870add0bcc88fb",
+        "bytes": 3360881,
+        "dimensions": [
+          1536,
+          1024
+        ]
+      },
+      {
+        "path": "images/caminata-cueva.webp",
+        "sha256": "7f0b706842461996c82a56e4d329dc82ae07012045080aa803033e0c8d6c6224",
+        "bytes": 120884,
+        "dimensions": [
+          800,
+          533
+        ]
+      },
+      {
+        "path": "images/caminata-cueva-480.webp",
+        "sha256": "8468e4208ec8799de6670eece13cdace5a1560faa393eb7f34ce4aef880c9083",
+        "bytes": 50152,
+        "dimensions": [
+          480,
+          320
+        ]
+      }
+    ]
+  },
+  {
+    "id": "paseo-patrimonial",
+    "role": "experience",
+    "status": "draft_for_local_review",
+    "source": {
+      "url": "https://colombia.travel/es/el-jardin",
+      "checked_at": "2026-10-19",
+      "role": "factual-description-only"
+    },
+    "method": "independent-composition-no-third-party-image-upload",
+    "generation_tool": "builtin image_gen",
+    "prompt": "Landscape 3:2. Create a brand-new independent editorial semi-realistic illustration for Explorando Lugares, clearly visible expressive fine ink outlines and textured gouache brushwork, polished grown-up travel magazine artwork, realistic geography and architecture with gentle caricature. Natural varied colors, restrained neutral light, no yellow cast, no flat elementary geometric shapes, no photorealism, no text/logos/watermarks. No third party photograph is supplied or to be copied. Asset subject: Heritage walking activity in Jardín Antioquia: small group of adults strolling a quiet town street of one and two-storey whitewashed traditional houses with brightly painted wooden doors, balconies and terracotta tiled roofs, one local guide gesturing toward carved woodwork. People and encounter dominate, no basilica, square or fountain repeat. Flat modest street, green Andean hillside glimpsed at end. Proper detailed faces, independent new scene not an exact photo reconstruction.",
+    "edit_prompt": null,
+    "edit_input": null,
+    "original_generation_file": "exec-7c7b687c-0b0a-465d-9bf8-697f55092fb2.png",
+    "rejected_generation_file": null,
+    "inspection": {
+      "full_image": "inspected",
+      "thumbnail": "inspected-on-review-sheet",
+      "notes": "Interacción caminando entre arquitectura local, escena independiente; no domicilio preciso.",
+      "human_approval": "pending"
+    },
+    "files": [
+      {
+        "path": "maestros/paseo-patrimonial.png",
+        "sha256": "21f6fad324921d4af964df223254bb9f69ff3cef841c5fd3f92ce15a3aa93b66",
+        "bytes": 2996485,
+        "dimensions": [
+          1536,
+          1024
+        ]
+      },
+      {
+        "path": "images/paseo-patrimonial.webp",
+        "sha256": "cc83948ba2402359db1690ca11ed60ca83abb9dadfd1bf4f09703dadc01274d6",
+        "bytes": 92212,
+        "dimensions": [
+          800,
+          533
+        ]
+      },
+      {
+        "path": "images/paseo-patrimonial-480.webp",
+        "sha256": "40502d34b18f0687f149bf32e9d84949440d1652e0d9eb5a86be70b2e5885e66",
+        "bytes": 39260,
+        "dimensions": [
+          480,
+          320
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sabores-jardinenos",
+    "role": "experience",
+    "status": "draft_for_local_review",
+    "source": {
+      "url": "https://colombia.travel/es/el-jardin",
+      "checked_at": "2026-10-19",
+      "role": "factual-description-only"
+    },
+    "method": "independent-composition-no-third-party-image-upload",
+    "generation_tool": "builtin image_gen",
+    "prompt": "Landscape 3:2. Create a brand-new independent editorial semi-realistic illustration for Explorando Lugares, clearly visible expressive fine ink outlines and textured gouache brushwork, polished grown-up travel magazine artwork, realistic geography and architecture with gentle caricature. Natural varied colors, restrained neutral light, no yellow cast, no flat elementary geometric shapes, no photorealism, no text/logos/watermarks. No third party photograph is supplied or to be copied. Asset subject: Food-tasting experience in Jardín Antioquia: detailed semi-realistic caricature of two adult visitors sharing small bowls of traditional arequipe milk caramel and local fruit sweets with coffee on a wooden cafe table; welcoming local adult server, modest colorful woodwork behind. Close framing on food and human interaction, neutral whites, browns, red and blue accents, no yellow color wash. No invented business sign or specific branding, no huge feast or alcoholic branding. Independent illustration of documented local sweets tradition. No churches, temple towers, domes, monuments or specific mountain peaks anywhere in the background.",
+    "edit_prompt": null,
+    "edit_input": null,
+    "original_generation_file": "exec-a41fd622-27fd-40b8-bb78-ff7134bf55d6.png",
+    "rejected_generation_file": null,
+    "inspection": {
+      "full_image": "inspected",
+      "thumbnail": "inspected-on-review-sheet",
+      "notes": "Escena de degustación de dulces/café, no menú o restaurante específico.",
+      "human_approval": "pending"
+    },
+    "files": [
+      {
+        "path": "maestros/sabores-jardinenos.png",
+        "sha256": "1f42a21cae732dd3971768d0ab5fb85414230ff540eefa31107093da8805bb6c",
+        "bytes": 3105635,
+        "dimensions": [
+          1536,
+          1024
+        ]
+      },
+      {
+        "path": "images/sabores-jardinenos.webp",
+        "sha256": "7f510d6fb92f00637e6f1a90346e8c784cf066f29f9298e33ad0ef0867187e33",
+        "bytes": 89304,
+        "dimensions": [
+          800,
+          533
+        ]
+      },
+      {
+        "path": "images/sabores-jardinenos-480.webp",
+        "sha256": "8b88abe6a0565bf085ebed3cf9d30f7b8ad7813e496b8964edfa7c0a2b8dfc9b",
+        "bytes": 39034,
+        "dimensions": [
+          480,
+          320
+        ]
+      }
+    ]
+  },
+  {
+    "id": "recorrido-en-chiva",
+    "role": "experience",
+    "status": "draft_for_local_review",
+    "source": {
+      "url": "https://jardin.antioquia.in/Sitios-Turisticos",
+      "checked_at": "2026-10-19",
+      "role": "factual-description-only"
+    },
+    "method": "independent-composition-no-third-party-image-upload",
+    "generation_tool": "builtin image_gen",
+    "prompt": "Landscape 3:2. Create a brand-new independent editorial semi-realistic illustration for Explorando Lugares, clearly visible expressive fine ink outlines and textured gouache brushwork, polished grown-up travel magazine artwork, realistic geography and architecture with gentle caricature. Natural varied colors, restrained neutral light, no yellow cast, no flat elementary geometric shapes, no photorealism, no text/logos/watermarks. No third party photograph is supplied or to be copied. Asset subject: Traditional chiva bus outing in Jardín Antioquia: brightly painted Colombian rural open-sided chiva bus with red blue green panels and conventional front hood on an ordinary mountain road near small tile-roof houses, visitors boarding calmly at roadside with proper anatomical faces, green cultivated Andean mountains behind. Three-quarter close view; vehicle is a bus with wheels not cable car. No lettering, logos or prices, no cliff-edge fantasy road, no claims of a specific operator or route. No churches, temple towers, domes, monuments or specific mountain peaks anywhere in the background.",
+    "edit_prompt": null,
+    "edit_input": null,
+    "original_generation_file": "exec-b0cbb618-82e7-4641-a26b-67d7a67d8341.png",
+    "rejected_generation_file": null,
+    "inspection": {
+      "full_image": "inspected",
+      "thumbnail": "inspected-on-review-sheet",
+      "notes": "Chiva abierta y carretera rural, sin operador ni ruta/horario ficticio.",
+      "human_approval": "pending"
+    },
+    "files": [
+      {
+        "path": "maestros/recorrido-en-chiva.png",
+        "sha256": "58e12d5f474450a71e930f20c88cf8e4151ca3c8d3a1885e4c264a63cdbe0fef",
+        "bytes": 3455340,
+        "dimensions": [
+          1536,
+          1024
+        ]
+      },
+      {
+        "path": "images/recorrido-en-chiva.webp",
+        "sha256": "b970aa246074640931c86d9429b28a5de4063d4012eca786c29f7d9dc5121d4e",
+        "bytes": 113508,
+        "dimensions": [
+          800,
+          533
+        ]
+      },
+      {
+        "path": "images/recorrido-en-chiva-480.webp",
+        "sha256": "8ca9683c3005de36b94d09d58c6033948752a7d9946f10040d3deb1c80654b41",
+        "bytes": 45518,
+        "dimensions": [
+          480,
+          320
+        ]
+      }
+    ]
+  }
+]

@@ -84,10 +84,10 @@ Cafés na praça, arquitetura de pedra e natureza andina.
 ## Estado técnico y siguiente paso
 
 - `paquete-negocios-jardin.zip`: importable por BusinessPackage como borrador, después de que exista el destino; no se ejecutó importación.
-- `paquete-destino.json`: esquema v2 validado, **todavía no es un ZIP importable**: faltan 8 imágenes de atractivos y 6 de experiencias. No rellenar con imágenes repetidas o de otro municipio.
-- `images/jardin-portada-v1.png`: maestro de propuesta, derivados WebP 1200 y640. Sin aprobación humana.
+- `paquete-destino-jardin.zip`: paquete completo con15 imágenes distintas,8 atractivos y6 experiencias. Lectura ZIP, esquema y formulario nativos validados; no importado aún.
+- `maestros/jardin-portada-v1.png`: maestro de propuesta, derivados WebP 1200 y640. Sin aprobación humana.
 - `prioridades.json`: candidatos excluidos, motivos, límites territoriales y agenda sin eventos inventados.
-- `encargos-imagenes.json`:14 roles exactos para próxima etapa.
+- `encargos-imagenes.json`:14 roles exactos, completados en `procedencia-imagenes.json` con prompts, fuentes y hashes.
 - Mantener historia breve de ancho completo sin imagen, tarjetas homogéneas, sin acordeones ni descripción de secciones, Cargar más.
 - Preproducción y producción sin cambios; no push ni PR.
 
@@ -106,3 +106,9 @@ Cafés na praça, arquitetura de pedra e natureza andina.
 - [hoteles](https://jardin.antioquia.in/alojamiento/hoteles) · 2026-10-19
 - [restaurantes](https://jardin.antioquia.in/alimentacion/restaurantes) · 2026-10-19
 - [macao](https://hotelmacaojardin.com/) · 2026-10-19
+
+## Paquete visual completo ·19/10/2026
+
+15 imágenes generadas e inspeccionadas: portada,8 atractivos y6 experiencias. Se corrigieron5 fondos inventados antes de empaquetar. Galería interna `revision-imagenes.jpg`; ningún archivo reutilizado como otra tarjeta. ZIP1,90MB; los originales PNG permanecen aparte y no van al hosting.
+
+Listo para integración de borrador por el coordinador: ver `IMPORTACION.md`. QA del sitio y aprobación humana siguen pendientes.
