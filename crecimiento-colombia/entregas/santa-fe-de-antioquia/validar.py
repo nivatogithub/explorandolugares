@@ -2,7 +2,7 @@
 """Checks editorial completeness; deliberately refuses to call missing-image ZIP ready."""
 import json,pathlib,hashlib,subprocess
 p=pathlib.Path(__file__).resolve().parent
-pkg=json.loads((p/'paquete-destino.borrador.json').read_text()); d=json.loads((p/'directorio-preprod-30.json').read_text())
+pkg=json.loads((p/('paquete-destino.json' if (p/'paquete-destino.json').exists() else 'paquete-destino.borrador.json')).read_text()); d=json.loads((p/'directorio-preprod-30.json').read_text())
 assert len(pkg['places'])==12
 assert sum(x['type']=='place' for x in pkg['places'])==8
 assert len(d['businesses'])==30
