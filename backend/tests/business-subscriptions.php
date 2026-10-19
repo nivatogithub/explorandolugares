@@ -19,6 +19,7 @@ CREATE TABLE business_contacts(business_id INTEGER,channel TEXT,contact_value TE
 CREATE TABLE accounts(id INTEGER PRIMARY KEY,account_type TEXT,status TEXT);
 CREATE TABLE business_account_memberships(account_id INTEGER,business_id INTEGER,role TEXT,status TEXT);
 CREATE TABLE business_subscription_payment_evidence(id INTEGER PRIMARY KEY AUTOINCREMENT,subscription_id INTEGER,account_id INTEGER,storage_name TEXT,original_name TEXT,mime_type TEXT,file_size INTEGER,payment_reference TEXT,status TEXT,admin_note TEXT,customer_message TEXT,reviewed_by TEXT,reviewed_at TEXT,submitted_at TEXT DEFAULT CURRENT_TIMESTAMP);');
+$pdo->exec(file_get_contents(__DIR__.'/../database/migrations/044-subscription-changes.sqlite.sql'));
 $pdo->exec(file_get_contents(__DIR__.'/../database/migrations/040-payment-transaction-details.sqlite.sql'));
 $pdo->exec(file_get_contents(__DIR__.'/../database/migrations/041-experience-operator-addon.sqlite.sql'));
 $pdo->exec("INSERT INTO businesses VALUES(1,'Calle 10 # 5-12',6.1223,-75.7869,'ACTIVO','ABIERTO','draft',CURRENT_TIMESTAMP,'owner_submitted','https://www.google.com/maps/place/Cafe/@6.1223,-75.7869,18z',1);
@@ -54,7 +55,7 @@ $pdo->exec("INSERT INTO accounts VALUES(1,'business','active');INSERT INTO busin
 $paymentStorage=sys_get_temp_dir().'/el-payment-test-'.bin2hex(random_bytes(4));$payments=new BusinessPaymentEvidenceService($pdo,$paymentStorage);
 $pdo->prepare('UPDATE business_subscriptions SET quoted_amount=NULL WHERE id=?')->execute([$id]);$invalidQuoteRejected=false;try{$payments->review($evidenceId,'approved','','admin');}catch(RuntimeException $error){$invalidQuoteRejected=str_contains($error->getMessage(),'importe cotizado');}
 subscription_check($invalidQuoteRejected&&$pdo->query('SELECT status FROM business_subscription_payment_evidence WHERE id='.$evidenceId)->fetchColumn()==='pending','Payment approval refuses a missing quote and keeps the evidence pending for correction.');
-$pdo->prepare('UPDATE business_subscriptions SET quoted_amount=120000 WHERE id=?')->execute([$id]);$payments->review($evidenceId,'approved','','admin');$q->execute([$id]);$sub=$q->fetch(PDO::FETCH_ASSOC);rmdir($paymentStorage);
+$pdo->prepare('UPDATE business_subscriptions SET quoted_amount=120000 WHERE id=?')->execute([$id]);$pdo->exec('UPDATE business_subscription_payment_evidence SET paid_amount=120000');$payments->review($evidenceId,'approved','','admin');$q->execute([$id]);$sub=$q->fetch(PDO::FETCH_ASSOC);rmdir($paymentStorage);
 subscription_check($sub['status']==='paid_pending_publication'&&$sub['reviewed_at']!==null&&$pdo->query('SELECT publication_status FROM businesses WHERE id=1')->fetchColumn()==='draft','Only an administrator-approved payment evidence marks the subscription paid, and it remains unpublished.');
 $rejected=false;try{$service->publish(1,$testDate(-1));}catch(RuntimeException $error){$rejected=str_contains($error->getMessage(),'fecha elegida');}
 subscription_check($rejected,'A scheduled listing cannot publish early.');
@@ -86,9 +87,11 @@ $service->publish(1,$testDate(2));
 $q->execute([$id]);$sub=$q->fetch(PDO::FETCH_ASSOC);
 subscription_check($sub['status']==='active'&&$sub['ends_at']===$testDate(2)->modify('+3 months')->setTimezone(new DateTimeZone('UTC'))->format('Y-m-d H:i:s'),'Premium renews from the actual publication date after its extra content is ready.');
 $previousEnd=$sub['ends_at'];
-$renewalId=$service->save(['business_id'=>1,'plan_code'=>'page','billing_frequency'=>'quarterly']);
+$renewalService=new BusinessSubscriptionAdminService($pdo,$testDate(4));
+$renewalId=$renewalService->save(['business_id'=>1,'plan_code'=>'page','billing_frequency'=>'quarterly']);
 $pdo->prepare('UPDATE business_subscriptions SET status="paid_pending_publication",reviewed_at="2026-10-19 12:00:00" WHERE id=?')->execute([$renewalId]);
-$service->publish(1,$testDate(4));
+$early=false;try{$service->publish(1,$testDate(4));}catch(RuntimeException $e){$early=str_contains($e->getMessage(),'vencimiento');}subscription_check($early,'A lower tier cannot activate before the paid term ends.');
+$service->publish(1,new DateTimeImmutable($previousEnd,new DateTimeZone('UTC')));
 $q->execute([$id]);$previous=$q->fetch(PDO::FETCH_ASSOC);$q->execute([$renewalId]);$renewed=$q->fetch(PDO::FETCH_ASSOC);
 subscription_check($previous['status']==='expired'&&$previous['ends_at']===$previousEnd&&(int)$renewed['renewal_of_subscription_id']===(int)$id,'Publishing a new paid term preserves the prior expiry and links the renewal to its predecessor.');
 $renewalWindowStart=$testDate(2)->modify('+3 months')->setTime(0,0)->setTimezone(new DateTimeZone('UTC'))->format('Y-m-d H:i:s');$renewalWindowEnd=$testDate(3)->modify('+3 months')->setTime(0,0)->setTimezone(new DateTimeZone('UTC'))->format('Y-m-d H:i:s');
