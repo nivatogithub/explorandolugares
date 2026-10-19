@@ -16,8 +16,8 @@
     "experience_images": "6-generadas-inspeccionadas-derivados-y-hashes",
     "history_image": "no-aplica-regla-vigente",
     "archive": "ZIP-completo-validacion-nativa-y-formulario-pass",
-    "integration": "pendiente-coordinador-no-tocar-preprod",
-    "qa_site": "pendiente-coordinador",
+    "integration": "realizada-en-preproduccion-local-por-coordinador",
+    "qa_site": "coordinador-verifico-15-imagenes-8-atractivos-6-experiencias-30-fichas-ES-EN-PT-HTTP200-movil-sin-acordeones-sin-desborde",
     "owner_approval": "pendiente",
     "production": "no-autorizada",
     "qa_images": "15-inspeccionadas-maestros-y-miniaturas"
@@ -29,5 +29,27 @@
     "Credenciales de hosting",
     "Confirmar nuevamente consultas web rutinarias"
   ],
-  "package_complete": true
+  "package_complete": true,
+  "local_integration_receipt": {
+    "reported_by": "coordinador-root",
+    "date": "2026-10-19",
+    "destination_id": 2,
+    "url": "http://127.0.0.1:8088/destinos/jardin/",
+    "package_sha256": "95448ba32079981ff69b8ae15badd5bd7bdf7962ce2313e7c175e7d927842a15",
+    "images": 15,
+    "attractions": 8,
+    "experiences": 6,
+    "businesses": 30,
+    "locales": [
+      "es",
+      "en",
+      "pt-BR"
+    ],
+    "http_status": 200,
+    "mobile_checks": [
+      "sin-acordeones",
+      "sin-desborde"
+    ],
+    "evidence_scope": "Resultado de integración y QA comunicado por el coordinador; no reejecutado por este worker."
+  }
 }
