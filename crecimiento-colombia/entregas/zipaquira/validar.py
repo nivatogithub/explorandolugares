@@ -16,7 +16,7 @@ for b in d['businesses']:
 for l in ['es','en','pt-BR']:
  assert len(p['destination']['history'][l])==1
  assert len(p['destination']['history'][l][0].split())<=60
- assert p['destination']['reasons'][l]==[]
+ assert len(p['destination']['reasons'][l])==1 and p['destination']['reasons'][l][0].strip()
  for row in p['places']:
   t=row['translations'][l]
   assert 1<=len(t['description'].split())<=18
