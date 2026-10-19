@@ -102,3 +102,14 @@ El respaldo comprimido se guarda con permisos 0600 en `private/backups` del host
 `python3 scripts/migrar-cuentas.py` consulta el estado actual sin aplicar SQL. `--apply --approved-preprod COMMIT` exige el commit limpio aprobado de preprod y aplica exclusivamente 043. La herramienta lleva la clase y el SQL candidato a una carpeta privada temporal, sin sustituir el código activo, y los retira al terminar. Primero respaldo y restauración aislada; después aplicar 043, comprobar estados completos y solo entonces publicar el código que la utiliza. No retirar tablas al recuperar código.
 
 La migración crea únicamente las tablas de historial y enlaces de reactivación y conserva los estados anteriores en el historial nuevo. No cambia identificadores, correos, hashes de contraseñas, relaciones comerciales ni tablas estadísticas. Si se interrumpe entre tablas puede reanudarse, verificando estructura e índices existentes; no inventa ni corrige columnas desconocidas. Limita a cinco segundos la espera de metadatos durante este cambio para detenerse en lugar de prolongar una espera. `preprod/probar-migracion-cuentas.php` comprueba casos activo/pendiente/deshabilitado, reanudación, idempotencia y preservación de contadores en base desechable.
+
+
+### Contingencia temporal: cierre obligatorio de cada entrega
+
+Las copias de archivos **no son un archivo histórico de versiones**. Después de comprobar funcionalmente la entrega se ejecuta:
+
+`python3 scripts/desplegar-sftp.py --config CONFIG --finalize .local/deployment-recovery/ID/journal.json --validation-report INFORME.json`
+
+El informe debe tener `schema_version: 1`, `commit` idéntico al del manifiesto publicado y un objeto `checks` con `public_pages`, `accounts`, `statistics` y `assets` a `true`. Estos valores se registran después de las comprobaciones, no por terminar la transferencia. La herramienta vuelve a verificar manifiesto y archivos remotos; después elimina los bytes anteriores/nuevos de contingencia, copias de verificación, manifiestos temporales y restos remotos propios. Conserva únicamente un recibo pequeño con versión, fecha, cantidad de archivos y resultados. Una limpieza interrumpida se puede reintentar.
+
+Un nuevo despliegue se bloquea mientras exista una contingencia anterior sin finalizar; así no se acumulan diez copias por diez publicaciones. Si falla la validación, conservar la contingencia y recuperar o corregir. Una vez finalizada, cualquier versión histórica se recupera desde Git mediante otro despliegue incremental revisado. Este cierre nunca borra respaldos de base de datos ni sus metadatos: tienen su política separada, ya que Git no guarda datos productivos.

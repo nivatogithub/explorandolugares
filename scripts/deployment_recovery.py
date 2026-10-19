@@ -16,7 +16,7 @@ def protected_deploy(api, client, config, selected, previous, manifest_path, rec
     if not previous:raise ValueError('Se requiere un manifiesto previo confirmado para recuperación incremental.')
     recovery_root=Path(recovery_root)
     for pending in recovery_root.glob('*/journal.json'):
-        if json.loads(pending.read_text()).get('state') not in {'complete','recovered','prepared'}:
+        if json.loads(pending.read_text()).get('state') not in {'finalized'}:
             raise ValueError('Hay una entrega interrumpida pendiente de recuperar: '+str(pending))
     run_id=secrets.token_hex(12);folder=recovery_root/run_id;folder.mkdir(parents=True,mode=0o700)
     old={x['relative']:x for x in previous['files']};q=api.quote
@@ -75,6 +75,7 @@ def protected_deploy(api, client, config, selected, previous, manifest_path, rec
 
 def recover(api,client,config,journal_path,local_manifest):
     journal_path=Path(journal_path);j=json.loads(journal_path.read_text());q=api.quote
+    if j.get('state') in {'finalized','validated'}:raise ValueError('Contingencia ya cerrada: recuperar versiones anteriores desde Git.')
     expected=(config['site'],config['host'],config['remote_base'],api.public_path(config))
     if tuple(j.get(k) for k in ['site','host','remote_base','public_root'])!=expected:raise ValueError('El registro pertenece a otro sitio.')
     # Validate every local backup and remote target before restoring even the first byte.
@@ -105,3 +106,53 @@ def recover(api,client,config,journal_path,local_manifest):
     client.run([f'put {q(old_manifest)} {q(tmp)}',f'rename {q(tmp)} {q(remote_manifest)}'])
     Path(local_manifest).write_bytes(old_manifest.read_bytes());j['state']='recovered';save(journal_path,j)
     return j
+
+
+def finalize(api,client,config,journal_path,report_path):
+    """Purge only this delivery's temporary bytes after recorded functional validation."""
+    import shutil
+    from datetime import datetime,timezone
+    journal_path=Path(journal_path).resolve();folder=journal_path.parent
+    j=json.loads(journal_path.read_text());report=json.loads(Path(report_path).read_text());q=api.quote
+    if j.get('state') not in {'complete','recovered','validated'}:raise ValueError('No se limpia una entrega interrumpida o sin recuperar.')
+    if tuple(j.get(k) for k in ['site','host','remote_base','public_root'])!=(config['site'],config['host'],config['remote_base'],api.public_path(config)):raise ValueError('Registro de otro sitio.')
+    source_state=j.get('validated_from',j['state'])
+    if j['state']=='validated':expected=j['validated_manifest']
+    else:
+        expected_path=Path(j['new_manifest'] if source_state=='complete' else j['before_manifest'])
+        if expected_path.resolve().parent!=folder:raise ValueError('Manifiesto fuera del registro.')
+        expected=json.loads(expected_path.read_text())
+    required={'public_pages','accounts','statistics','assets'}
+    checks=report.get('checks',{})
+    if report.get('schema_version')!=1 or not expected.get('commit') or report.get('commit')!=expected['commit'] or not isinstance(checks,dict) or not required.issubset(checks) or not all(value is True for value in checks.values()):raise ValueError('Falta validación funcional aprobada para esta versión exacta.')
+    probe=folder/'final-validation';probe.mkdir(exist_ok=True,mode=0o700)
+    remote_manifest=config['remote_base']+'/'+api.MANIFEST_NAME
+    client.run([f'get {q(remote_manifest)} {q(probe/"manifest")}'])
+    if json.loads((probe/'manifest').read_text())!=expected:raise ValueError('Cambió la versión publicada; se conservan los respaldos.')
+    # Verify live bytes too; functional evidence alone cannot authorize deleting a
+    # contingency for files that no longer match the tested delivery.
+    commands=[]
+    for i,e in enumerate(j['entries']):
+        if e['target']!=api.remote_path(config,e['relative']):raise ValueError('Ruta fuera del paquete.')
+        (probe/str(i)).unlink(missing_ok=True)
+        commands.append(f'-get {q(e["target"])} {q(probe/str(i))}')
+    client.run(commands)
+    for i,e in enumerate(j['entries']):
+        wanted=e['after'] if source_state=='complete' else e['before'];p=probe/str(i)
+        if (digest(p) if p.exists() else None)!=wanted:raise ValueError('Contenido distinto al validado; no se eliminan respaldos.')
+    if not j['stage'].startswith(config['remote_base']+'/private/.incremental-'):raise ValueError('Temporal remoto inválido.')
+    commands=[]
+    for e in j['entries']:commands += [f'-rm {q(e["stage"])}',f'-rm {q(e["stage"]+"-recover")}']
+    commands += [f'-rm {q(j["stage"]+"/manifest")}',f'-rm {q(j["stage"]+"/manifest-recover")}',f'-rmdir {q(j["stage"])}']
+    client.run(commands)
+    receipt={'state':'finalized','site':j['site'],'host':j['host'],'remote_base':j['remote_base'],'public_root':j['public_root'],'commit':expected['commit'],'validated_at':datetime.now(timezone.utc).isoformat(timespec='seconds'),'files':len(j['entries']),'checks':checks,'temporary_backups_removed':True}
+    j.update(state='validated',validated_from=source_state,validated_manifest=expected)
+    save(journal_path,j)  # Retryable even if local cleanup is interrupted.
+    # Limit deletion to this tool's own local delivery folder. No paths from the
+    # journal are used as deletion targets; DB backups live elsewhere.
+    for child in folder.iterdir():
+        if child==journal_path:continue
+        if child.is_symlink() or child.is_file():child.unlink()
+        elif child.is_dir():shutil.rmtree(child)
+    save(journal_path,receipt)
+    return receipt

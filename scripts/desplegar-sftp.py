@@ -316,6 +316,8 @@ def main(argv=None):
     parser.add_argument('--config', type=Path, default=ROOT / '.local/sftp.json')
     parser.add_argument('--approved-preprod', metavar='COMMIT', help='Commit exacto de preprod aprobado por el propietario para producción.')
     parser.add_argument('--preserve-places',action='store_true',help='Excluye páginas, contenido e imágenes de lugares; conserva sus hashes publicados.')
+    parser.add_argument('--finalize',type=Path,help='Limpia la contingencia temporal después de validar funcionalmente la entrega.')
+    parser.add_argument('--validation-report',type=Path,help='Informe funcional de la versión exacta publicada.')
     parser.add_argument('--recover',type=Path,help='Recupera solo los archivos de una entrega interrumpida; nunca restaura datos.')
     parser.add_argument('--deploy', action='store_true', help='Sube directamente solo archivos nuevos o modificados.')
     parser.add_argument('--only', action='append', default=[], metavar='RUTA',
@@ -327,6 +329,11 @@ def main(argv=None):
     args = parser.parse_args(argv)
     if args.deploy:require_approved_preprod(args.approved_preprod)
     config = load_config(args.config.expanduser().resolve())
+    if args.finalize:
+        if not args.validation_report:raise ValueError('Se requiere el informe de validación funcional.')
+        from deployment_recovery import finalize
+        finalize(sys.modules[__name__],SFTP(config),config,args.finalize,args.validation_report)
+        print('Entrega validada: contingencia temporal limpiada; versiones históricas en Git.');return 0
     if args.recover:
         from deployment_recovery import recover
         recover(sys.modules[__name__],SFTP(config),config,args.recover,ROOT/'.local/deployment-manifest.json')
