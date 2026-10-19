@@ -60,6 +60,7 @@ def render_footer(text):
 def apply(public):
     public=Path(public)
     versions={name:hashlib.sha256((public/'assets'/name).read_bytes()).hexdigest()[:12] for name in ['header-controls.css','account-entry.css','cobertura/medicion.css']}
+    navigation_version=hashlib.sha256((public/'assets/language-navigation.js').read_bytes()).hexdigest()[:12]
     count=0
     for path in public.rglob('*'):
         if path.suffix not in {'.html','.php'}:continue
@@ -67,6 +68,8 @@ def apply(public):
         if 'header-language-bar' in updated and '</head>' in updated:
             css=''.join(f'<link rel="stylesheet" href="/assets/{name}?v={version}">' for name,version in versions.items())
             if '/assets/header-controls.css' not in updated:updated=updated.replace('</head>',css+'</head>',1)
+        if 'header-language-bar' in updated and '</head>' in updated and '/assets/language-navigation.js' not in updated:
+            updated=updated.replace('</head>','<script defer src="/assets/language-navigation.js?v='+navigation_version+'"></script></head>',1)
         if updated!=text:path.write_text(updated);count+=1
     print(f'Encabezado preparado antes del primer render: {count} archivos')
 if __name__=='__main__':
