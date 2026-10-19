@@ -1,0 +1,65 @@
+{
+  "checked_at": "2026-10-19",
+  "discovery_source": "https://turismo.encolombia.com/covenas/",
+  "status": "investigacion_no_integrada",
+  "production_changed": false,
+  "current_experience": "Recorrido por manglares",
+  "verified_candidates": [
+    {
+      "slug": "buceo",
+      "public_title": "Buceo",
+      "description_es": "Explora el entorno submarino en una salida guiada.",
+      "operator_internal": "Coveñas Diving Co",
+      "offer_url": "https://covenasdiving.com/",
+      "scope": "Operador con sede en Coveñas; confirmar punto de inmersión, no atribuir todos los puntos al municipio.",
+      "readiness": "oferta_publicada_comprobada;pendiente_textos_completos_imagen_y_revision"
+    },
+    {
+      "slug": "paddleboarding",
+      "public_title": "Paddleboarding",
+      "description_es": "Aprende a remar de pie y recorre la costa en tabla.",
+      "operator_internal": "Suplovers",
+      "offer_url": "https://suplovers.co/clases/",
+      "corroboration": "https://suplovers.co/tours-en-covenas/",
+      "scope": "Agrupar iniciación y paseos; no publicar variantes de paquetes ni multiplicar tarjetas del mismo deporte.",
+      "readiness": "oferta_publicada_comprobada;pendiente_textos_completos_imagen_y_revision"
+    },
+    {
+      "slug": "excursion-san-bernardo",
+      "public_title": "Excursión a las islas de San Bernardo",
+      "description_es": "Navega hacia las islas y conoce sus paisajes costeros.",
+      "operator_internal": "Agencia Coveñas Tours",
+      "offer_url": "https://agenciacovenastours.com/447642660",
+      "scope": "Excursión regional comercializada desde Coveñas; conservar distinción entre recogida, puerto de embarque y municipio de las islas. No atribuir islas al municipio ni afirmar embarque en Coveñas sin verificar.",
+      "readiness": "oferta_publicada_comprobada;pendiente_logistica_textos_imagen_y_revision"
+    },
+    {
+      "slug": "excursion-cispata",
+      "public_title": "Excursión a la bahía de Cispatá",
+      "description_es": "Conoce los manglares de Cispatá en una excursión desde Coveñas.",
+      "operator_internal": "Suplovers",
+      "offer_url": "https://suplovers.co/tours-en-covenas/cispata/",
+      "scope": "Traslado desde Coveñas; actividad en San Antero. Avistamiento de aves es parte del recorrido, no tour independiente comprobado.",
+      "readiness": "oferta_publicada_comprobada;pendiente_textos_completos_imagen_y_revision"
+    }
+  ],
+  "pending_offer_verification": [
+    "Pesca con guía",
+    "Kayak",
+    "Windsurf",
+    "Sunfish/vela",
+    "Kitesurf",
+    "Excursión en bicicleta",
+    "Tour independiente de observación de aves"
+  ],
+  "not_verified": [
+    "Acuario Marino de Coveñas: no identidad/operación confirmada; no añadir desde esta fuente sola"
+  ],
+  "rules": [
+    "Sin nombres/enlaces de operadores en tarjetas editoriales",
+    "No copiar precios, horarios o inclusiones particulares",
+    "Oferta publicada no acredita disponibilidad actual, afiliación ni aprobación editorial",
+    "No confundir visita autónoma al museo con tour organizado",
+    "No duplicar variantes de rutas o cursos como experiencias nuevas"
+  ]
+}
