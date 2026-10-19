@@ -40,3 +40,7 @@ Inventariar los activos realmente usados por cada destino y página de listado. 
 Prioridad: observaciones del propietario y errores de identidad; luego portadas; luego atractivos y experiencias. Revisar también traducciones/alt, mapa, duplicados y caché/imagen de tarjeta exterior. Conservar versiones anteriores y evidencia.
 
 Corregir en rama por destino, preparar paquete y revisar en preproducción. No retirar o reemplazar imágenes en producción automáticamente; publicación solo tras aprobación explícita. Una aprobación histórica se conserva como tal y no se presenta como auditoría aprobada con estas reglas nuevas.
+
+## Vistas de calle y panorámicas
+
+Registrar punto/URL, fecha de captura (separada de fecha de publicación), proveedor y tramo observado. Distinguir recorrido Google Street View de foto360deun colaborador. Comprobar fechas disponibles; una captura antigua no acredita infraestructura actual ni permite negar obras posteriores. No generalizar un tramo a toda la playa. Usar para contraste factual; comprobar permiso antes de adaptar o subir capturas a un generador.
