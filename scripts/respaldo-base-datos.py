@@ -14,13 +14,16 @@ def private_php(config,options,action="database-snapshot.php"):
     token=secrets.token_hex(32);nonce=secrets.token_hex(12);client=api.SFTP(config)
     remote=config['remote_base']+'/private/.snapshot-'+nonce+'.php'
     endpoint=api.public_path(config)+'/api/snapshot-'+nonce+'.php'
-    if action not in {'database-snapshot.php','prepare-account-migration.php'}:raise ValueError('Operación no permitida.')
+    if action not in {'database-snapshot.php','prepare-account-migration.php','backup-retention.php'}:raise ValueError('Operación no permitida.')
     source=(ROOT/'scripts/php'/action).read_text()
     scratch=config['remote_base']+'/private/.migration-'+nonce
     dependencies={}
     if action=='prepare-account-migration.php':
         options=dict(options,app_root=scratch,public_root=api.public_path(config))
         dependencies={'DatabaseMaintenance.php':ROOT/'backend/app/DatabaseMaintenance.php','database/migrations/043-account-lifecycle.mysql.sql':ROOT/'backend/database/migrations/043-account-lifecycle.mysql.sql'}
+    if action in {'database-snapshot.php','backup-retention.php'}:
+        dependencies['BackupRetention.php']=ROOT/'scripts/php/BackupRetention.php'
+        options=dict(options,retention_class=scratch+'/BackupRetention.php')
     guard="""<?php
 header('Cache-Control: no-store');header('X-Robots-Tag: noindex,nofollow');
 if(($_SERVER['REQUEST_METHOD']??'')!=='POST'||time()>EXP||!hash_equals('HASH',hash('sha256',(string)($_SERVER['HTTP_X_SNAPSHOT_TOKEN']??'')))){http_response_code(404);exit;}
@@ -49,6 +52,9 @@ def main():
  source=(ROOT/'scripts/php/database-snapshot.php').read_text().replace('<?php','<?php\n$options=json_decode(base64_decode("'+encoded+'"),true);',1)
  # strict_types must be first statement, including when injecting CLI options.
  source=source.replace('declare(strict_types=1);','')
+ if args.transport=='ssh':
+  retention=(ROOT/'scripts/php/BackupRetention.php').read_text().replace('<?php','',1).replace('declare(strict_types=1);','')
+  source=source.replace('<?php','<?php\n'+retention,1)
  if args.transport=='sftp-php':result=private_php(config,options)
  else:
   response=subprocess.run(ssh(config)+['php'],input=source,text=True,capture_output=True,timeout=600)
@@ -65,5 +71,11 @@ def main():
   while f.read(1048576):pass
  result['local_path']=str(local);result['gzip_verified']=True
  meta=local.with_suffix('.json');meta.write_text(json.dumps(result,indent=2,ensure_ascii=False)+'\n');os.chmod(meta,0o600)
- print(json.dumps({'backup_created':True,'local_path':str(local),'bytes':result['bytes'],'tables':result['tables'],'sha256_verified':True,'statistics_modified':False},ensure_ascii=False))
+ local_options={'directory':str(destination),'remote_directory':str(remote.parent),'apply':True,'retention_class':str(ROOT/'scripts/php/BackupRetention.php')}
+ code=(ROOT/'scripts/php/backup-retention.php').read_text().replace('<?php','<?php\n$options=json_decode('+repr(json.dumps(local_options))+',true);',1).replace('declare(strict_types=1);','')
+ cleanup=subprocess.run(['php'],input=code,text=True,capture_output=True)
+ if cleanup.returncode:raise SystemExit('Respaldo guardado y verificado; conservación local detenida para proteger copias.')
+ local_retention=json.loads(cleanup.stdout)
+ print(json.dumps({'backup_created':True,'local_path':str(local),'bytes':result['bytes'],'tables':result['tables'],'sha256_verified':True,'statistics_modified':False,'host_retention':result.get('retention'),'local_retention':local_retention},ensure_ascii=False))
+ if result.get('retention',{}).get('error'):raise SystemExit('Respaldo verificado; conservación del hosting pendiente de revisión.')
 if __name__=='__main__':main()

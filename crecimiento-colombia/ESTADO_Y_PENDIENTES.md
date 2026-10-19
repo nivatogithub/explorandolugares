@@ -1,3 +1,11 @@
+## 19/10/2026 · Conservación de respaldos implementada
+
+Política 48 horarios / 30 diarios / 12 mensuales UTC, deduplicada por copia física, integrada en el exportador para hosting y Mac. Hash, ruta de origen, tamaño y copia reciente con integridad gzip/CRC como condición de borrado; archivos desconocidos/symlinks protegidos. Aplicada al inventario actual: una copia conservada en hosting y una en Mac, cero eliminaciones y cero archivos ignorados. No accede a tablas ni modifica estadísticas. Pruebas con más de mil copias sintéticas, idempotencia, copias viejas/corruptas y archivos ajenos aprobadas. Falta programar generación periódica y configurar copia externa cifrada.
+
+## P0 · Worker de hotfix reservado
+
+Rama `hotfix/reporte-produccion-20261019`, basada en main 8ff9dde, checkout independiente `trabajo/hotfix-produccion`. Chat «P0 · Hotfix de producción» creado para recibir el reporte urgente del propietario; sin cambios funcionales anticipados ni autorización de publicación. Su atención tiene prioridad máxima. Mantenerlo separado de los cambios acumulados de preprod.
+
 ## Cola posterior al despliegue · solicitud del propietario · 19/10/2026
 
 Estas mejoras se retoman **después del despliegue actual**. No amplían el alcance de la entrega ni autorizan publicar contenido, eventos o cambios comerciales ahora.

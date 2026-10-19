@@ -89,7 +89,7 @@ El respaldo comprimido se guarda con permisos 0600 en `private/backups` del host
 ### Plan operativo propuesto (no automatizado todavía)
 
 - Antes de cambios de esquema: respaldo consistente y verificación de restauración.
-- Diariamente en horario de menor uso: respaldo completo de base; conservar siete diarios, cuatro semanales y tres mensuales. Antes de activar expiración automática, acordar destino y verificar copias; no hay borrado automático en estos scripts.
+- Diariamente en horario de menor uso: respaldo completo de base; conservar siete diarios, cuatro semanales y tres mensuales. La conservación automática implementada se detalla más abajo; no modifica datos activos.
 - Conservar al menos una copia fuera del hosting. La copia del Mac cumple una separación inicial, pero no sustituye una copia externa cifrada y automatizada que sobreviva a la pérdida del equipo. Elegir y configurar ese destino antes de dar el plan por operativo.
 - Prueba de restauración aislada mensual y antes de cambios importantes. Registrar fecha, checksum, tamaño, número de tablas y resultado; alertar ante fallo, sin enviar datos personales.
 - Recuperación habitual de un despliegue: **solo código**, con base y estadísticas actuales intactas. No restaurar un respaldo viejo para corregir un error de PHP.
@@ -113,3 +113,12 @@ Las copias de archivos **no son un archivo histórico de versiones**. Después d
 El informe debe tener `schema_version: 1`, `commit` idéntico al del manifiesto publicado y un objeto `checks` con `public_pages`, `accounts`, `statistics` y `assets` a `true`. Estos valores se registran después de las comprobaciones, no por terminar la transferencia. La herramienta vuelve a verificar manifiesto y archivos remotos; después elimina los bytes anteriores/nuevos de contingencia, copias de verificación, manifiestos temporales y restos remotos propios. Conserva únicamente un recibo pequeño con versión, fecha, cantidad de archivos y resultados. Una limpieza interrumpida se puede reintentar.
 
 Un nuevo despliegue se bloquea mientras exista una contingencia anterior sin finalizar; así no se acumulan diez copias por diez publicaciones. Si falla la validación, conservar la contingencia y recuperar o corregir. Una vez finalizada, cualquier versión histórica se recupera desde Git mediante otro despliegue incremental revisado. Este cierre nunca borra respaldos de base de datos ni sus metadatos: tienen su política separada, ya que Git no guarda datos productivos.
+
+
+### Conservación implementada de respaldos de datos
+
+La herramienta de respaldo aplica en hosting y Mac una política UTC: copia más reciente por hora en las últimas 48 horas, por día en los últimos 30 días y por mes en los últimos 12 meses. Una misma copia puede cubrir varios períodos y no se duplica; quedan como máximo 90 copias verificadas bajo gestión. Siempre conserva la más reciente. La política solo se aplica a nombres y metadatos del exportador, con ruta de origen, tamaño y SHA-256 coincidentes; no toca archivos ajenos, enlaces simbólicos, copias no verificadas, tablas ni estadísticas.
+
+`python3 scripts/limpiar-respaldos.py` muestra la propuesta; `--apply` aplica la conservación en hosting y Mac, y `--local-only` limita la operación al Mac. El borrado de copias vencidas exige otra copia verificada de no más de dos horas, con integridad gzip/CRC. Sin esa protección se detiene. Un bloqueo evita dos limpiezas simultáneas. Los archivos no reconocidos o corruptos se conservan y se reportan para revisión, por lo que la política no sustituye la vigilancia de almacenamiento. Una copia restaurada de prueba mantiene sus metadatos de verificación.
+
+La conservación ya forma parte de cada ejecución futura del exportador, pero **todavía no está programada la creación periódica de respaldos** ni la subida cifrada a Drive. La política elimina únicamente archivos antiguos de respaldo y su metadato; jamás borra registros de producción.

@@ -32,5 +32,7 @@ try{
  finally{unlink($auth);fclose($errorFile);}
  $metadata+=['created_at'=>gmdate('c'),'remote_path'=>$path,'sha256'=>hash_file('sha256',$path),'bytes'=>filesize($path),'consistency'=>'Datos InnoDB en una transacción; no ejecutar cambios de esquema durante el respaldo.'];
  file_put_contents($prefix.'.json',json_encode($metadata,JSON_PRETTY_PRINT|JSON_THROW_ON_ERROR));chmod($prefix.'.json',0600);
+ if(!class_exists('BackupRetention'))require_once $options['retention_class']??__DIR__.'/BackupRetention.php';
+ try{$metadata['retention']=BackupRetention::run($directory,$directory,true);}catch(Throwable){$metadata['retention']=['applied'=>false,'error'=>'No se retiraron todas las copias vencidas; requiere revisión.'];}
  echo json_encode($metadata,JSON_THROW_ON_ERROR);
 }catch(Throwable $e){if(PHP_SAPI==='cli')fwrite(STDERR,"No se completó el respaldo. Revisa disponibilidad, permisos y espacio.\n");else{http_response_code(503);echo json_encode(['error'=>'Respaldo incompleto; revisar permisos, motor y espacio.']);}exit(1);}
