@@ -59,3 +59,11 @@ Regla obligatoria para crear o corregir imágenes que representen un lugar espec
 Registrar en la ficha cartografía, relieve, cobertura de vistas de calle, cámara, rasgos confirmados y límites de evidencia. Una actividad temática sin sitio preciso debe declararse como tal; no se le atribuye fidelidad geográfica. Si representa un fondo identificable, también aplica esta regla.
 
 Consultar mapas y panorámicas para verificar hechos no concede permiso para copiarlos o subir sus capturas al generador: mantener procedencia y condiciones de cada material. Esta regla exige revisión de los publicados; no autoriza reemplazarlos automáticamente.
+
+## Muestreo de 5 a 8 puntos de vista
+
+Para representar un destino o sector específico, consultar como objetivo **5 a 8 puntos distintos de Street View o panorámicas identificadas**, si existe cobertura suficiente. Elegirlos por información útil: acceso, centro del tramo, extremos, borde costero/plaza/atractivo y entorno construido. Girar en un mismo punto aporta orientación, pero no cuenta como otro punto de captura.
+
+No recorrer puntos al azar ni mezclar sectores solo para completar el número. Mantener un área coherente con el encuadre; registrar por punto URL/ubicación, orientación, fecha de captura, proveedor, rasgos confirmados y contradicciones. Evitar repetir tomas que no aportan evidencia. Si hay menos cobertura, documentar cuántos puntos se pudieron inspeccionar y completar con fotos identificadas y cartografía, sin afirmar realizadas las consultas faltantes.
+
+Sintetizar rasgos compartidos y variaciones reales antes del prompt. Resolver diferencias debidas a fecha, marea, obras o ubicación; no construir un collage de edificios y paisajes de puntos incompatibles. Conservar un único punto de cámara plausible. El muestreo mejora la evidencia, pero no garantiza exactitud del resultado: comparar mapa, referencias y salida, rechazar cambios de identidad y mantener aprobación humana por hash.
