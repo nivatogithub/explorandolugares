@@ -5,8 +5,8 @@
   "base_commit": "8ff9dde",
   "date": "2026-10-19",
   "publication_approved": false,
-  "imported": false,
-  "preprod_reviewed": false,
+  "imported": true,
+  "preprod_reviewed": true,
   "components": {
     "research": "entregado_con_fuentes",
     "top8": "propuesta_auditable",
@@ -16,8 +16,28 @@
     "visual_briefs": "14_encargos_ejecutados",
     "images": "14_de_14_borradores",
     "destination_zip": "completo_validado_lector_nativo",
-    "integration": "pendiente_coordinador",
+    "integration": "integrado_preproduccion_local_id_25",
     "human_review": "pendiente"
   },
-  "next_action": "Importar paquete completo en preproducción como borrador y revisar las imágenes/textos con el propietario. No publicar producción."
+  "next_action": "Revisión humana del lugar integrado en preproducción; registrar decisiones por componente. No publicar producción.",
+  "integration_receipt": {
+    "reported_by": "coordinador /root",
+    "url": "http://127.0.0.1:8088/destinos/zipaquira/",
+    "destination_id": 25,
+    "receipt_sha256": "9a957abba75cd9a0d895dd1b3396d43f996ec5b55a220f26b3677748dbbdbdbe",
+    "images": 14,
+    "places": 8,
+    "experiences": 5,
+    "businesses": 30,
+    "languages_http_200": [
+      "es",
+      "en",
+      "pt-BR"
+    ],
+    "mobile_dom": {
+      "accordions": false,
+      "horizontal_overflow": false
+    },
+    "human_approval": false
+  }
 }

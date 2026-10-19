@@ -23,7 +23,7 @@ Se inspeccionaron las fotografías ya contenidas en la guía municipal de 2026. 
 
 ## Límites y revisión pendiente
 
-El paquete está **completo para importar como borrador y revisar**, no aprobado para producción. No se importó contra MariaDB ni se comprobó su página real en navegador; esa integración queda con el coordinador para evitar escrituras concurrentes en preproducción.
+El paquete está **completo para importar como borrador y revisar**, no aprobado para producción. El coordinador ya realizó la importación local y el QA del sitio: destino ID 25, 14 imágenes, 8 atractivos, 5 experiencias y 30 fichas; tres idiomas HTTP 200 y DOM móvil sin acordeones ni desborde horizontal. La revisión humana sigue pendiente.
 
 El Colegio de Gabo usa una escena temática de memoria escolar; no se afirma que sea su patio actual. Museo Arqueológico representa una visita/exposición de cerámica, no piezas catalogadas ni salas exactas. Las experiencias son representaciones editoriales de actividades, no reservas, precios ni disponibilidad garantizados. Arquitectura y entorno son interpretaciones contrastadas, sin promesa de reconstrucción métrica. Horarios, aperturas y vigencia operativa de negocios permanecen sin confirmar.
 
@@ -45,3 +45,7 @@ El propietario debe revisar la vista real, textos e imágenes; cualquier aprobac
 ## Compatibilidad con guardado del destino
 
 Se añadió una razón breve factual en ES/EN/PT porque `DestinationAdminService` exige `reasons` no vacío al guardar. Es un campo de compatibilidad; el diseño compartido lo mantiene oculto y no se agregó panel de motivos en la revisión editorial. Se conservan las mismas 14 imágenes y sus hashes.
+
+## Integración local confirmada por el coordinador
+
+Vista: http://127.0.0.1:8088/destinos/zipaquira/ · ID 25. Recibo SHA-256 `9a957abba75cd9a0d895dd1b3396d43f996ec5b55a220f26b3677748dbbdbdbe`. Esta actualización solo registra estado: no altera ZIP, contenidos, imágenes ni hashes de activos. Los resultados de `qa.json` corresponden al momento de validación anterior a la importación; el recibo posterior se registra en `checklist.json`. Publicación en producción y aprobación humana siguen pendientes.
