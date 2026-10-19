@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Read-only HTTP validation of the four-destination local review batch."""
-import json,urllib.request,urllib.parse,re,concurrent.futures
+import json,urllib.request,urllib.parse,re,concurrent.futures,zipfile
 from html.parser import HTMLParser
 from pathlib import Path
 BASE='http://127.0.0.1:8088'
+STAGING=Path(__file__).resolve().parents[2]/'preprod/.local/preprod/worker-review/lote-20261019'
 SLUGS=['zipaquira','santa-fe-de-antioquia','jardin','covenas']
 class Page(HTMLParser):
  def __init__(self):super().__init__();self.images=[];self.businesses=0;self.links=[];self.free=0
@@ -25,7 +26,8 @@ for slug in SLUGS:
   body,_=get(path);html=body.decode();assert not re.search(r'Fatal error|Uncaught |Warning:|sesión activa de administración|Destino no encontrado',html),path
   parser=Page();parser.feed(html);assert parser.businesses>=30,(path,parser.businesses)
   destimages=[i for i in parser.images if '/assets/destinos/preprod-'+slug+'/' in i.get('src','')]
-  expected={'zipaquira':14,'santa-fe-de-antioquia':13,'jardin':15,'covenas':13}[slug]
+  with zipfile.ZipFile(STAGING/(slug+'.zip')) as z: manifest=json.loads(z.read('paquete-destino.json'))
+  expected=1+len(manifest['places'])
   assert len(destimages)==expected,(path,len(destimages),expected)
   assert len({i['src'] for i in destimages})==expected,'Duplicate image in destination'
   assert all(i.get('alt','').strip() for i in destimages),'Missing alt'

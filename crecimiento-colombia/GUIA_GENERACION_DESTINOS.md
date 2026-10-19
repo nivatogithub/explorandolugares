@@ -10,15 +10,25 @@ Cada worker conserva su destino y rama `lugar/CO/departamento/destino` hasta ter
 
 Consultar primero turismo municipal/departamental, instituciones responsables y portales nacionales. Tripadvisor y portales locales sirven para contrastar importancia y candidatos; no presentar sus listas como un ranking oficial universal. Registrar URL, fecha, afirmación respaldada y dudas. Distinguir sitio, actividad y comercio.
 
-Seleccionar hasta ocho atractivos según relevancia turística real. Comparar candidatos excluidos: no completar cupos repitiendo sectores de un mismo atractivo ni añadiendo iglesias o museos solo para variar categorías. Declarar límites municipales y excursiones vecinas. Registrar si el orden es editorial, oficial o pendiente; no inventar puntajes del sistema nacional original.
+Seleccionar de cero a ocho atractivos según relevancia turística real. Ocho es un techo, nunca una meta ni un mínimo: si solo hay cuatro, cinco o menos candidatos que cumplan, se publican esos y no se sustituyen cupos con relleno. La existencia de ocho tarjetas no acredita calidad ni completitud. Comparar candidatos excluidos: no completar cupos repitiendo sectores de un mismo atractivo ni añadiendo iglesias o museos solo para variar categorías. Declarar límites municipales y excursiones vecinas. Registrar si el orden es editorial, oficial o pendiente; no inventar puntajes del sistema nacional original.
 
-Cada experiencia debe describir una acción concreta y no prometer operador, horario, acceso, seguridad, reserva ni disponibilidad no confirmados. No inventar eventos o contactos.
+### Criterio obligatorio de inclusión de lugares y experiencias
+
+- **Lugar para conocer:** sitio físico identificable, fuente que acredita identidad/ubicación y un propósito de visita concreto. Puede ser una reserva administrada privadamente, pero comprobar cómo se visita; no confundir existencia con acceso libre, guía incluido o funcionamiento actual.
+- **Experiencia:** servicio o actividad organizada con oferente identificable y oferta pública concreta comprobada. Registrar nombre del operador/anfitrión, URL propia de la oferta, fecha y alcance. Una actividad imaginable en el destino no es evidencia de que se ofrezca.
+- Una página que solo enumera ideas, una reseña de un viajero o la frase «consulta operadores locales» no basta para acreditar un tour. Tampoco una reserva que admite visitantes acredita automáticamente un recorrido guiado. Verificar expresamente la modalidad: autónoma, acceso administrado, guiada o servicio contratado.
+- Caminar por calles, probar comida, ver el paisaje o visitar comercios por cuenta propia son sugerencias autónomas; no presentarlas en la sección de experiencias operadas sin oferta comprobable. Si no existe una sección apropiada, retirarlas de esa sección y conservar la investigación; no inventar un tour para llenar tarjetas.
+- Visita a finca cafetera, aviturismo, apicultura/meliponicultura y talleres de oficios son candidatos válidos cuando un productor, reserva u operador realmente los ofrece. Buscar el servicio concreto además de los atractivos famosos. No trasladar una oferta de Jericó a Jardín ni a otro municipio por analogía.
+- Una fuente del oferente acredita una oferta documental, no disponibilidad para una fecha, convenio con Explorando Lugares, registro vigente, pago de publicidad ni operador recomendado. Los anuncios/enlaces de planes comerciales siguen sus reglas propias; no simular suscripciones.
+- No prometer operador, horario, acceso, seguridad, reserva ni disponibilidad no confirmados. No inventar eventos, contactos, nombres comerciales ni paquetes.
+- Guardar `criterios-editoriales.json` como sidecar del paquete: decisión por componente, finalidad, fuentes, fecha y, para experiencias incluidas, oferente y oferta exacta. No añadir campos incompatibles al manifiesto ZIP. Ejecutar el validador editorial además del lector técnico.
+- Aplicar este filtro tanto al crear como al modificar destinos existentes. Los anteriores no quedan aprobados por haber pasado una validación de archivos.
 
 ## Textos y fichas
 
 Preparar ES, EN y PT-BR antes del ZIP. Títulos directos, una frase breve por atractivo/experiencia e historia breve. El esquema exige motivos por idioma aunque la presentación no muestre un panel adicional. No repetir nombre y título del destino.
 
-El directorio del lote usa 30 establecimientos documentados por destino. Incluir fuente y fecha por ficha. Sitio propio, vitrina empresarial y listado secundario tienen diferente fuerza; ninguna fuente documental demuestra por sí sola operación actual, representación o alianza. Conservar vigencia pendiente y no inventar teléfonos, redes o ubicación exacta. Ficha gratuita compacta: icono de categoría y nombre, sin descripción ni foto.
+El directorio del lote usa 30 establecimientos documentados por destino. Este objetivo del directorio no impone ocho atractivos ni una cantidad mínima de experiencias. Incluir fuente y fecha por ficha. Sitio propio, vitrina empresarial y listado secundario tienen diferente fuerza; ninguna fuente documental demuestra por sí sola operación actual, representación o alianza. Conservar vigencia pendiente y no inventar teléfonos, redes o ubicación exacta. Ficha gratuita compacta: icono de categoría y nombre, sin descripción ni foto.
 
 ## Ilustraciones
 
@@ -40,7 +50,7 @@ Cargar más conserva dos filas de tarjetas con foto y cuatro filas de fichas peq
 
 ## Empaquetar, integrar y comprobar
 
-1. Leer manifiestos con DestinationPackage y BusinessPackage reales. Comprobar traducciones, motivos, límites, archivos, MIME, dimensiones y hashes únicos; portada no duplicada en tarjetas.
+1. Leer manifiestos con DestinationPackage y BusinessPackage reales. Comprobar traducciones, motivos, límites, archivos, MIME, dimensiones y hashes únicos; portada no duplicada en tarjetas. No fijar conteos mínimos de atractivos/experiencias en pruebas. Validar cada experiencia incluida contra su oferente y oferta documental.
 2. Validar también DestinationAdminService: un esquema válido no garantiza que el formulario permita guardar/publicar localmente.
 3. Importar secuencialmente en MariaDB local, preservando registros existentes y evitando negocios duplicados. Guardar recibo con hashes exactos. No reiniciar estadísticas ni bases ni importar configuración de producción.
 4. Montar las rutas reales de preproducción. La visibilidad local sin sesión fue autorizada para revisión de este lote; no supone aprobación editorial ni publicación en hosting. Conservar esa distinción en los recibos.
@@ -49,3 +59,7 @@ Cargar más conserva dos filas de tarjetas con foto y cuatro filas de fichas peq
 7. Entregar URL utilizable. «Completo para revisión en preproducción» no equivale a aprobado o publicado en producción. El propietario revisa imágenes, textos y diseño antes de autorizar producción.
 
 Mientras haya ejecución, comunicar avances comprobables y bloqueos; no generar reportes vacíos de actividad. Si una decisión bloquea un componente, continuar los demás del mismo destino. El coordinador no cierra la tarea al recibir solo el ZIP de un worker.
+
+## Corrección solicitada al revisar Jardín
+
+El 19 de octubre de 2026 el propietario aclaró que no desea completar ocho lugares a la fuerza ni presentar paseos libres o gastronomía genérica como tours. Jardín se corrige primero; los otros destinos quedan sujetos al mismo filtro durante su revisión. Hasta comprobar una oferta exacta no se añade un tour apícola por analogía con Jericó. Ver `revisiones/2026-10-19-criterios-experiencias.json` para el seguimiento, sin tratarlo como auditoría ya terminada de todos los destinos.
