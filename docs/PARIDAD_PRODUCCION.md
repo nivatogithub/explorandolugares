@@ -50,3 +50,9 @@ Serie de origen: 5829d7c, 3a8f524, 682725a, a6b0952, 5467d0e, 04535ee, 032a68d, 
 La comprobación directa de producción contrasta diez recursos (encabezado, menú, acceso, tokens, footer/medición, navegación de idiomas, estilos y .htaccess) contra sus bytes remotos y el manifiesto productivo 0401c73. Las cabeceras y pies generados coinciden con los servidos por HTTPS en inicio español, inglés y portugués. No se publica código ni se modifica la base de datos durante esta integración. Evidencia local privada: `.local/header-main/produccion.json` y `verificacion.log`. Esto acredita este alcance de interfaz, no una paridad completa de preprod con producción.
 
 Los ajustes de cuentas, formulario nacional, upgrades y migraciones 043/044 siguen preparados en preprod y requieren su propia publicación. No se incorporan a main por esta integración.
+
+## 19/10/2026 · Integración de la primera auditoría publicada
+
+Producción recibió el paquete acotado de 38 archivos desde preprod `8c8bb66`, con migraciones aditivas 043 y 044 aplicadas. La validación de producción comprobó 21 rutas, carga de clases y cotización de consulta; conservó cinco cuentas, 319 suscripciones y los registros de las ocho tablas de medición. Respaldo previo `db-20261019-221312-e6b2f82e.sql.gz`, restauración aislada verificada. La contingencia temporal de código se cerró tras contrastar los bytes remotos.
+
+Main incorpora selectivamente `5aaf5d50`, `a1067faa`, `b4b052fc`, `1139fe1a` y `79bc07c3`, preservando el encabezado/footer/idiomas integrado previamente. La construcción de main coincide por SHA256 con los 38 archivos del paquete publicado. No se integra toda la historia de preprod: las revisiones editoriales, lugares y trabajos posteriores siguen separados. Las diferencias de caché de cobertura se resolvieron conservando la página vigente de main. Esta integración no implica un nuevo despliegue ni declara cerrados los demás hallazgos pendientes.
