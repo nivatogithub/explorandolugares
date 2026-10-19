@@ -20,7 +20,11 @@ def private_php(config,options,action="database-snapshot.php"):
     dependencies={}
     if action=='prepare-account-migration.php':
         options=dict(options,app_root=scratch,public_root=api.public_path(config))
-        dependencies={'DatabaseMaintenance.php':ROOT/'backend/app/DatabaseMaintenance.php','database/migrations/043-account-lifecycle.mysql.sql':ROOT/'backend/database/migrations/043-account-lifecycle.mysql.sql'}
+        dependencies={'DatabaseMaintenance.php':ROOT/'backend/app/DatabaseMaintenance.php'}
+        migrations=options.get('migrations',['043-account-lifecycle'])
+        if not isinstance(migrations,list) or not migrations or len(set(migrations))!=len(migrations) or set(migrations)-{'043-account-lifecycle','044-subscription-changes'}:raise ValueError('Selección de migraciones no permitida.')
+        for migration in migrations:
+            relative='database/migrations/'+migration+'.mysql.sql';dependencies[relative]=ROOT/'backend'/relative
     if action in {'database-snapshot.php','backup-retention.php'}:
         dependencies['BackupRetention.php']=ROOT/'scripts/php/BackupRetention.php'
         options=dict(options,retention_class=scratch+'/BackupRetention.php')

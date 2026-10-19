@@ -394,7 +394,7 @@ final class DatabaseMaintenance
                 if($duplicates!==false)throw new RuntimeException('Hay negocios con más de una cuenta activa. Revisa sus asociaciones antes de habilitar el modelo de cuenta responsable; no se eliminaron asociaciones.');
             }
             if (!is_file($file)) throw new RuntimeException('No se encontró el archivo de migración '.$migration['file'].'.');
-            if($id==='043-account-lifecycle'){
+            if(in_array($id,['043-account-lifecycle','044-subscription-changes'],true)){
                 $wait=(int)$this->pdo->query('SELECT @@SESSION.lock_wait_timeout')->fetchColumn();
                 $this->pdo->exec('SET SESSION lock_wait_timeout=5');
                 try{$this->executeSqlFile($file);}finally{$this->pdo->exec('SET SESSION lock_wait_timeout='.$wait);}
