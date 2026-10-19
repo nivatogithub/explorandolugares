@@ -73,7 +73,7 @@
     {
       "destination": "covenas",
       "id": 26,
-      "destination_zip_sha256": "b1276d2adef0cb1b1f2961e91c907dfc1851109f81a1984fd2f83721cb8da56f",
+      "destination_zip_sha256": "1321b110e364fe5ca2d96832eac4bb22382a2cd05c793b72d5ce6dd2a63ffca4",
       "business_zip_sha256": "662c9417fa44759b24e37800e212e72adc51aeb42f831e78d85d99821c8fa61b",
       "loaded_at": "2026-10-19T20:01:07+00:00",
       "environment": "local_preprod_only",
@@ -86,16 +86,16 @@
       "url": "http://127.0.0.1:8088/destinos/covenas/",
       "branch": "lugar/CO/sucre/covenas",
       "content_commit": "e98f188",
-      "status": "pendiente_corregir_identidad_portada_y_playas",
+      "status": "costa_v3_en_preprod_pendiente_revision",
       "human_approval": "pending",
       "businesses": 30,
       "qa": "HTTP200 ES/EN/PT; imágenes accesibles; sin sesión administrativa",
       "image_fidelity_approved": false,
       "pending_images": [
-        "primera-ensenada-v2",
-        "segunda-ensenada-v2",
-        "la-coquerita-v2",
-        "covenas-portada"
+        "covenas-portada-v3",
+        "primera-ensenada-v3",
+        "segunda-ensenada-v3",
+        "la-coquerita-v2"
       ]
     }
   ]

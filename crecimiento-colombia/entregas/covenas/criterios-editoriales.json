@@ -13,7 +13,7 @@
       ],
       "checked_at": "2026-10-19",
       "image_review": {
-        "status": "rejected_pending_geolocated_visual_reference",
+        "status": "v3_reference_inspected_pending_human_review",
         "reason": "Feedback del propietario: Primera Ensenada parece europea y construcciones demasiado pegadas; existencia del malecón no acredita apariencia de Segunda Ensenada. No regenerar desde descripción genérica.",
         "sector_visual_verification": "descripciones locales e imágenes públicas consultadas; sin fotografías subidas al generador",
         "required_checks": [
@@ -24,11 +24,10 @@
         ],
         "user_feedback_date": "2026-10-19",
         "source_urls": [
-          "https://www.golfodemorrosquillo.com/sitios/covenas/playas-de-la-primera-ensenada",
-          "https://apartamentoedificiopuertovelero.blogspot.com/"
+          "https://www.hotelpoblado.com/navidad-covenas-hotel-poblado"
         ],
-        "new_file": "images/primera-ensenada-v2.webp",
-        "limitations": "Composición interpretativa: edificios y mobiliario no son un levantamiento exacto del tramo."
+        "new_file": "images/primera-ensenada-v3.webp",
+        "limitations": "Ilustración interpretativa; no reproducción exacta de edificios ni medición de costa."
       }
     },
     {
@@ -41,7 +40,7 @@
       ],
       "checked_at": "2026-10-19",
       "image_review": {
-        "status": "rejected_pending_geolocated_visual_reference",
+        "status": "v3_reference_inspected_pending_human_review",
         "reason": "Feedback del propietario: Primera Ensenada parece europea y construcciones demasiado pegadas; existencia del malecón no acredita apariencia de Segunda Ensenada. No regenerar desde descripción genérica.",
         "sector_visual_verification": "descripciones locales e imágenes públicas consultadas; sin fotografías subidas al generador",
         "required_checks": [
@@ -52,11 +51,11 @@
         ],
         "user_feedback_date": "2026-10-19",
         "source_urls": [
-          "https://www.dnp.gov.co/Prensa_/Noticias/Paginas/dnp-y-enterritorio-entregan-malecon-turistico-de-covenas.aspx",
-          "https://caracol.com.co/2025/12/17/gobernadora-de-sucre-anuncia-ampliacion-de-malecon-covenas-y-nuevas-obras-para-golfo-de-morrosquillo/"
+          "https://x.com/ENTerritorioCo/status/2002202296151912911",
+          "https://pbs.twimg.com/media/G8lAXsxXUAA-nVJ.jpg"
         ],
-        "new_file": "images/segunda-ensenada-v2.webp",
-        "limitations": "Composición interpretativa: edificios y mobiliario no son un levantamiento exacto del tramo."
+        "new_file": "images/segunda-ensenada-v3.webp",
+        "limitations": "Ilustración interpretativa; no reproducción exacta de edificios ni medición de costa."
       }
     },
     {
@@ -199,9 +198,9 @@
     }
   ],
   "human_approval": "pending",
-  "readiness": "blocked_pending_visual_identity_correction",
+  "readiness": "v3_loaded_pending_human_review",
   "hero_image_review": {
-    "status": "rejected_pending_geolocated_visual_reference",
+    "status": "v3_reference_inspected_pending_human_review",
     "feedback": "El propietario señala que la portada parece una playa virgen genérica o Tayrona, no Coveñas como ciudad costera actual.",
     "required_identity": "Contexto costero urbanizado reconocible de Coveñas, sin inventar hitos ni representar toda la costa como virgen.",
     "required_checks": [
@@ -211,6 +210,11 @@
       "vegetación y relieve propios; no selva o montañas del Tayrona"
     ],
     "human_approval": "pending",
-    "updated_at": "2026-10-19"
+    "updated_at": "2026-10-19",
+    "new_file": "images/covenas-portada-v3.webp",
+    "source_urls": [
+      "https://www.hotelpoblado.com/navidad-covenas-hotel-poblado"
+    ],
+    "limitations": "Ilustración interpretativa; no reproducción exacta de edificios ni medición de costa."
   }
 }
