@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-19",
+  "native_manifest_validators": "Both native manifests valid",
+  "top8": 8,
+  "experiences": 5,
+  "businesses": 30,
+  "languages": [
+    "es",
+    "en",
+    "pt-BR"
+  ],
+  "images_present": 0,
+  "images_required": 14,
+  "destination_zip_importable": false,
+  "business_zip_structure_valid": true,
+  "database_import_tested": false,
+  "browser_reviewed": false,
+  "preprod_modified": false,
+  "production_modified": false,
+  "approved": false,
+  "hashes": {
+    "paquete-negocios.json": "6566065efdf72b89f9cb8981011f03af3229549b1c582320d06f2f6cda4ed14a",
+    "fuentes.json": "5ea2f984ea0f8f219f5fecf179f3d110bd70ccd9c56cbcc2171cc481865544d9",
+    "encargos-visuales.json": "031c6a5f099fa038f1d4fff677e9ae19a493bbe802caf33ad5ecc2713218f91d",
+    "auditoria-top8.json": "d4ba444697380e1059dab69f6d9bd49b6f3a1613cb739d1367d67123d5499291",
+    "paquete-destino.borrador.json": "938786488a778e82a1f3e943b4a51a05f37482fef52d0f3b565d3da011483ee2",
+    "revision-editorial.html": "34b2814750d14fed1c9d28359a1a5b91608a551f0522f97431baa4c5752e2e22",
+    "paquete-negocios.zip": "b3a29c6c8e8145c4c3be68fe326f10efcc07f3059f13243ed918b78c63176a23",
+    "checklist.json": "3c4ee799cf1a9e5bb0cd5ecc07a7f659b84b80c294f2a58f7c8add0180a497c2"
+  }
+}

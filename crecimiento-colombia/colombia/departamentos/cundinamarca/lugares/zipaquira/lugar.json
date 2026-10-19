@@ -2,32 +2,39 @@
   "schema_version": 1,
   "place_id": "CO-25-zipaquira",
   "department_id": "CO-25",
-  "state": "planned",
-  "owner": null,
+  "state": "in_progress",
+  "owner": "Lugar 1",
   "reviewer": null,
   "branch": "lugar/CO/cundinamarca/zipaquira",
   "pr_url": null,
-  "base_commit": null,
+  "base_commit": "8ff9dde",
   "blockers": [
-    "Asignar responsable y auditar fuentes, permisos y estado real"
+    "14 ilustraciones y aprobación visual pendientes",
+    "Integración y QA en preproducción pendientes"
   ],
-  "next_action": "Completar PROCESO.md y evidencia específica del lugar",
+  "next_action": "Completar contraste visual y producir primera portada; revisar paquete editorial",
   "gates": {
     "identidad": {
       "passed": false,
-      "evidence": [],
+      "evidence": [
+        "crecimiento-colombia/entregas/zipaquira/qa.json"
+      ],
       "reviewer": null,
       "checked_at": null
     },
     "fuentes": {
       "passed": false,
-      "evidence": [],
+      "evidence": [
+        "crecimiento-colombia/entregas/zipaquira/qa.json"
+      ],
       "reviewer": null,
       "checked_at": null
     },
     "texto": {
       "passed": false,
-      "evidence": [],
+      "evidence": [
+        "crecimiento-colombia/entregas/zipaquira/qa.json"
+      ],
       "reviewer": null,
       "checked_at": null
     },
@@ -39,13 +46,17 @@
     },
     "idiomas": {
       "passed": false,
-      "evidence": [],
+      "evidence": [
+        "crecimiento-colombia/entregas/zipaquira/qa.json"
+      ],
       "reviewer": null,
       "checked_at": null
     },
     "directorio": {
       "passed": false,
-      "evidence": [],
+      "evidence": [
+        "crecimiento-colombia/entregas/zipaquira/qa.json"
+      ],
       "reviewer": null,
       "checked_at": null
     },
@@ -70,5 +81,7 @@
   },
   "approval": null,
   "publication": null,
-  "worker_deliveries": []
+  "worker_deliveries": [
+    "crecimiento-colombia/entregas/zipaquira/README.md"
+  ]
 }

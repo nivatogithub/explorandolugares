@@ -1,0 +1,259 @@
+[
+  {
+    "id": "zipaquira-portada",
+    "role": "hero",
+    "source_ids": [
+      "sal",
+      "mapa-sal"
+    ],
+    "style": "EL-SEMI-REALISTA-1 · tinta y gouache semirrealista, color natural, sin filtro amarillo",
+    "framing": "Portada 3:2; galería de nave subterránea solo tras confirmar eje, cruz y escala con referencias visuales.",
+    "facts_verified_textually": true,
+    "visual_identity_verified": false,
+    "reference_photo_uploaded": false,
+    "generated": false,
+    "approved": false,
+    "blockers": [
+      "Inspección visual específica y encuadre factual pendientes; no generar un monumento por memoria."
+    ],
+    "prompt_template": "Ilustración editorial semirrealista de Portada Catedral de Sal en Zipaquirá. Usar solo rasgos visuales confirmados, tinta y gouache, arquitectura reconocible, sin texto ni logos. No combinar escenas geográficamente distintas. Conservar ambiente de sabana andina, sin mar, palmeras tropicales ni catedrales europeas genéricas."
+  },
+  {
+    "id": "catedral-de-sal",
+    "role": "place",
+    "source_ids": [
+      "sal",
+      "nacional"
+    ],
+    "style": "EL-SEMI-REALISTA-1 · tinta y gouache semirrealista, color natural, sin filtro amarillo",
+    "framing": "Tarjeta 3:2, foco en el elemento nombrado; documentar silueta y entorno antes de generar.",
+    "facts_verified_textually": true,
+    "visual_identity_verified": false,
+    "reference_photo_uploaded": false,
+    "generated": false,
+    "approved": false,
+    "blockers": [
+      "Inspección visual específica y encuadre factual pendientes; no generar un monumento por memoria."
+    ],
+    "prompt_template": "Ilustración editorial semirrealista de Catedral de Sal en Zipaquirá. Usar solo rasgos visuales confirmados, tinta y gouache, arquitectura reconocible, sin texto ni logos. No combinar escenas geográficamente distintas. Conservar ambiente de sabana andina, sin mar, palmeras tropicales ni catedrales europeas genéricas."
+  },
+  {
+    "id": "plaza-comuneros",
+    "role": "place",
+    "source_ids": [
+      "sal",
+      "departamento"
+    ],
+    "style": "EL-SEMI-REALISTA-1 · tinta y gouache semirrealista, color natural, sin filtro amarillo",
+    "framing": "Tarjeta 3:2, foco en el elemento nombrado; documentar silueta y entorno antes de generar.",
+    "facts_verified_textually": true,
+    "visual_identity_verified": false,
+    "reference_photo_uploaded": false,
+    "generated": false,
+    "approved": false,
+    "blockers": [
+      "Inspección visual específica y encuadre factual pendientes; no generar un monumento por memoria."
+    ],
+    "prompt_template": "Ilustración editorial semirrealista de Plaza de los Comuneros en Zipaquirá. Usar solo rasgos visuales confirmados, tinta y gouache, arquitectura reconocible, sin texto ni logos. No combinar escenas geográficamente distintas. Conservar ambiente de sabana andina, sin mar, palmeras tropicales ni catedrales europeas genéricas."
+  },
+  {
+    "id": "catedral-diocesana",
+    "role": "place",
+    "source_ids": [
+      "diocesis"
+    ],
+    "style": "EL-SEMI-REALISTA-1 · tinta y gouache semirrealista, color natural, sin filtro amarillo",
+    "framing": "Tarjeta 3:2, foco en el elemento nombrado; documentar silueta y entorno antes de generar.",
+    "facts_verified_textually": true,
+    "visual_identity_verified": false,
+    "reference_photo_uploaded": false,
+    "generated": false,
+    "approved": false,
+    "blockers": [
+      "Inspección visual específica y encuadre factual pendientes; no generar un monumento por memoria."
+    ],
+    "prompt_template": "Ilustración editorial semirrealista de Catedral Diocesana en Zipaquirá. Usar solo rasgos visuales confirmados, tinta y gouache, arquitectura reconocible, sin texto ni logos. No combinar escenas geográficamente distintas. Conservar ambiente de sabana andina, sin mar, palmeras tropicales ni catedrales europeas genéricas."
+  },
+  {
+    "id": "estacion-tren",
+    "role": "place",
+    "source_ids": [
+      "municipal",
+      "tren"
+    ],
+    "style": "EL-SEMI-REALISTA-1 · tinta y gouache semirrealista, color natural, sin filtro amarillo",
+    "framing": "Tarjeta 3:2, foco en el elemento nombrado; documentar silueta y entorno antes de generar.",
+    "facts_verified_textually": true,
+    "visual_identity_verified": false,
+    "reference_photo_uploaded": false,
+    "generated": false,
+    "approved": false,
+    "blockers": [
+      "Inspección visual específica y encuadre factual pendientes; no generar un monumento por memoria."
+    ],
+    "prompt_template": "Ilustración editorial semirrealista de Estación del Tren en Zipaquirá. Usar solo rasgos visuales confirmados, tinta y gouache, arquitectura reconocible, sin texto ni logos. No combinar escenas geográficamente distintas. Conservar ambiente de sabana andina, sin mar, palmeras tropicales ni catedrales europeas genéricas."
+  },
+  {
+    "id": "colegio-gabo",
+    "role": "place",
+    "source_ids": [
+      "gabo"
+    ],
+    "style": "EL-SEMI-REALISTA-1 · tinta y gouache semirrealista, color natural, sin filtro amarillo",
+    "framing": "Tarjeta 3:2, foco en el elemento nombrado; documentar silueta y entorno antes de generar.",
+    "facts_verified_textually": true,
+    "visual_identity_verified": false,
+    "reference_photo_uploaded": false,
+    "generated": false,
+    "approved": false,
+    "blockers": [
+      "Inspección visual específica y encuadre factual pendientes; no generar un monumento por memoria."
+    ],
+    "prompt_template": "Ilustración editorial semirrealista de El Colegio de Gabo en Zipaquirá. Usar solo rasgos visuales confirmados, tinta y gouache, arquitectura reconocible, sin texto ni logos. No combinar escenas geográficamente distintas. Conservar ambiente de sabana andina, sin mar, palmeras tropicales ni catedrales europeas genéricas."
+  },
+  {
+    "id": "plaza-independencia",
+    "role": "place",
+    "source_ids": [
+      "municipal"
+    ],
+    "style": "EL-SEMI-REALISTA-1 · tinta y gouache semirrealista, color natural, sin filtro amarillo",
+    "framing": "Tarjeta 3:2, foco en el elemento nombrado; documentar silueta y entorno antes de generar.",
+    "facts_verified_textually": true,
+    "visual_identity_verified": false,
+    "reference_photo_uploaded": false,
+    "generated": false,
+    "approved": false,
+    "blockers": [
+      "Inspección visual específica y encuadre factual pendientes; no generar un monumento por memoria."
+    ],
+    "prompt_template": "Ilustración editorial semirrealista de Plaza de la Independencia en Zipaquirá. Usar solo rasgos visuales confirmados, tinta y gouache, arquitectura reconocible, sin texto ni logos. No combinar escenas geográficamente distintas. Conservar ambiente de sabana andina, sin mar, palmeras tropicales ni catedrales europeas genéricas."
+  },
+  {
+    "id": "museo-quevedo",
+    "role": "place",
+    "source_ids": [
+      "departamento",
+      "municipal"
+    ],
+    "style": "EL-SEMI-REALISTA-1 · tinta y gouache semirrealista, color natural, sin filtro amarillo",
+    "framing": "Tarjeta 3:2, foco en el elemento nombrado; documentar silueta y entorno antes de generar.",
+    "facts_verified_textually": true,
+    "visual_identity_verified": false,
+    "reference_photo_uploaded": false,
+    "generated": false,
+    "approved": false,
+    "blockers": [
+      "Inspección visual específica y encuadre factual pendientes; no generar un monumento por memoria."
+    ],
+    "prompt_template": "Ilustración editorial semirrealista de Casa Museo Quevedo Zornoza en Zipaquirá. Usar solo rasgos visuales confirmados, tinta y gouache, arquitectura reconocible, sin texto ni logos. No combinar escenas geográficamente distintas. Conservar ambiente de sabana andina, sin mar, palmeras tropicales ni catedrales europeas genéricas."
+  },
+  {
+    "id": "museo-arqueologico",
+    "role": "place",
+    "source_ids": [
+      "arqueologico"
+    ],
+    "style": "EL-SEMI-REALISTA-1 · tinta y gouache semirrealista, color natural, sin filtro amarillo",
+    "framing": "Tarjeta 3:2, foco en el elemento nombrado; documentar silueta y entorno antes de generar.",
+    "facts_verified_textually": true,
+    "visual_identity_verified": false,
+    "reference_photo_uploaded": false,
+    "generated": false,
+    "approved": false,
+    "blockers": [
+      "Inspección visual específica y encuadre factual pendientes; no generar un monumento por memoria."
+    ],
+    "prompt_template": "Ilustración editorial semirrealista de Museo Arqueológico en Zipaquirá. Usar solo rasgos visuales confirmados, tinta y gouache, arquitectura reconocible, sin texto ni logos. No combinar escenas geográficamente distintas. Conservar ambiente de sabana andina, sin mar, palmeras tropicales ni catedrales europeas genéricas."
+  },
+  {
+    "id": "ruta-del-minero",
+    "role": "experience",
+    "source_ids": [
+      "minero"
+    ],
+    "style": "EL-SEMI-REALISTA-1 · tinta y gouache semirrealista, color natural, sin filtro amarillo",
+    "framing": "Tarjeta 3:2, foco en el elemento nombrado; documentar silueta y entorno antes de generar.",
+    "facts_verified_textually": true,
+    "visual_identity_verified": false,
+    "reference_photo_uploaded": false,
+    "generated": false,
+    "approved": false,
+    "blockers": [
+      "Inspección visual específica y encuadre factual pendientes; no generar un monumento por memoria."
+    ],
+    "prompt_template": "Ilustración editorial semirrealista de Ruta del Minero en Zipaquirá. Usar solo rasgos visuales confirmados, tinta y gouache, arquitectura reconocible, sin texto ni logos. No combinar escenas geográficamente distintas. Conservar ambiente de sabana andina, sin mar, palmeras tropicales ni catedrales europeas genéricas."
+  },
+  {
+    "id": "tren-sabana",
+    "role": "experience",
+    "source_ids": [
+      "tren"
+    ],
+    "style": "EL-SEMI-REALISTA-1 · tinta y gouache semirrealista, color natural, sin filtro amarillo",
+    "framing": "Tarjeta 3:2, foco en el elemento nombrado; documentar silueta y entorno antes de generar.",
+    "facts_verified_textually": true,
+    "visual_identity_verified": false,
+    "reference_photo_uploaded": false,
+    "generated": false,
+    "approved": false,
+    "blockers": [
+      "Inspección visual específica y encuadre factual pendientes; no generar un monumento por memoria."
+    ],
+    "prompt_template": "Ilustración editorial semirrealista de Viajar en el Tren de la Sabana en Zipaquirá. Usar solo rasgos visuales confirmados, tinta y gouache, arquitectura reconocible, sin texto ni logos. No combinar escenas geográficamente distintas. Conservar ambiente de sabana andina, sin mar, palmeras tropicales ni catedrales europeas genéricas."
+  },
+  {
+    "id": "recorrido-historico",
+    "role": "experience",
+    "source_ids": [
+      "citytour"
+    ],
+    "style": "EL-SEMI-REALISTA-1 · tinta y gouache semirrealista, color natural, sin filtro amarillo",
+    "framing": "Tarjeta 3:2, foco en el elemento nombrado; documentar silueta y entorno antes de generar.",
+    "facts_verified_textually": true,
+    "visual_identity_verified": false,
+    "reference_photo_uploaded": false,
+    "generated": false,
+    "approved": false,
+    "blockers": [
+      "Inspección visual específica y encuadre factual pendientes; no generar un monumento por memoria."
+    ],
+    "prompt_template": "Ilustración editorial semirrealista de Recorrer el centro histórico en Zipaquirá. Usar solo rasgos visuales confirmados, tinta y gouache, arquitectura reconocible, sin texto ni logos. No combinar escenas geográficamente distintas. Conservar ambiente de sabana andina, sin mar, palmeras tropicales ni catedrales europeas genéricas."
+  },
+  {
+    "id": "sabores-locales",
+    "role": "experience",
+    "source_ids": [
+      "municipal"
+    ],
+    "style": "EL-SEMI-REALISTA-1 · tinta y gouache semirrealista, color natural, sin filtro amarillo",
+    "framing": "Tarjeta 3:2, foco en el elemento nombrado; documentar silueta y entorno antes de generar.",
+    "facts_verified_textually": true,
+    "visual_identity_verified": false,
+    "reference_photo_uploaded": false,
+    "generated": false,
+    "approved": false,
+    "blockers": [
+      "Inspección visual específica y encuadre factual pendientes; no generar un monumento por memoria."
+    ],
+    "prompt_template": "Ilustración editorial semirrealista de Probar sabores locales en Zipaquirá. Usar solo rasgos visuales confirmados, tinta y gouache, arquitectura reconocible, sin texto ni logos. No combinar escenas geográficamente distintas. Conservar ambiente de sabana andina, sin mar, palmeras tropicales ni catedrales europeas genéricas."
+  },
+  {
+    "id": "artesania-sal",
+    "role": "experience",
+    "source_ids": [
+      "municipal"
+    ],
+    "style": "EL-SEMI-REALISTA-1 · tinta y gouache semirrealista, color natural, sin filtro amarillo",
+    "framing": "Tarjeta 3:2, foco en el elemento nombrado; documentar silueta y entorno antes de generar.",
+    "facts_verified_textually": true,
+    "visual_identity_verified": false,
+    "reference_photo_uploaded": false,
+    "generated": false,
+    "approved": false,
+    "blockers": [
+      "Inspección visual específica y encuadre factual pendientes; no generar un monumento por memoria."
+    ],
+    "prompt_template": "Ilustración editorial semirrealista de Descubrir la artesanía en sal en Zipaquirá. Usar solo rasgos visuales confirmados, tinta y gouache, arquitectura reconocible, sin texto ni logos. No combinar escenas geográficamente distintas. Conservar ambiente de sabana andina, sin mar, palmeras tropicales ni catedrales europeas genéricas."
+  }
+]
