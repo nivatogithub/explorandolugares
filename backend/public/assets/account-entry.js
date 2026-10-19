@@ -6,7 +6,7 @@
   if(!header&&!existing)return;
   if(!document.querySelector('link[data-account-page-style]')){const style=document.createElement('link');style.rel='stylesheet';style.href='/assets/account-page.css';style.dataset.accountPageStyle='';document.head.append(style);}
   const locale = document.documentElement.lang.startsWith('pt') ? 'pt-br' : document.documentElement.lang.startsWith('en') ? 'en' : 'es';
-  const copy = {es: ['Iniciar sesión', 'Cerrar sesión', 'Mi cuenta', 'Tu cuenta'], en: ['Sign in', 'Sign out', 'My account', 'Your account'], 'pt-br': ['Iniciar sessão', 'Sair', 'Minha conta', 'Sua conta']}[locale];
+  const copy = {es: ['Iniciar sesión', 'Cerrar sesión', 'Mi cuenta', 'Tu cuenta'], en: ['Log in', 'Sign out', 'My account', 'Your account'], 'pt-br': ['Iniciar sessão', 'Sair', 'Minha conta', 'Sua conta']}[locale];
   const languages=header?.querySelector('.language-switch');
   const strip=existing||document.createElement('span');strip.className='portal-account-strip';strip.setAttribute('aria-label',copy[3]);
   const bar=existing?.querySelector('.portal-account-strip-inner')||document.createElement('span');bar.className='portal-account-strip-inner account-entry';
@@ -86,7 +86,7 @@
     const link = document.createElement('a');
     link.textContent = copy[0];
     link.href = '/negocios/acceso/' + (locale === 'es' ? '' : '?lang=' + locale);
-    bar.replaceChildren(link);
+    const register=document.createElement('a');register.href='/negocios/registro/'+(locale==='es'?'':'?lang='+locale);register.textContent=locale==='en'?'Sign up':locale==='pt-br'?'Cadastre-se':'Registrarse';register.className='header-register';bar.replaceChildren(link,register);
   };
   async function refreshAccount() {
   try {

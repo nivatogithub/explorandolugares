@@ -73,11 +73,18 @@ shutil.copytree(root/'backend/public/cobertura',public/'cobertura',dirs_exist_ok
 shutil.copytree(root/'backend/public/assets/cobertura',public/'assets/cobertura',dirs_exist_ok=True)
 shutil.copytree(root/'backend/integration-medicion/public',public,dirs_exist_ok=True)
 shutil.copyfile(root/'backend/public/assets/nomenclatura-lugares.js',public/'assets/nomenclatura-lugares.js')
-for asset in ['account-access.css','account-registration.css','account-entry.css']:
+for asset in ['account-access.css','account-registration.css','account-entry.css','header-controls.js','header-controls.css','language-navigation.js']:
     shutil.copyfile(root/'backend/public/assets'/asset,public/'assets'/asset)
+# Older published pages can keep a cached identity sheet; the shared controls
+# carry the same authoritative shell tokens, generated from their single source.
+import json
+shell_tokens=json.loads((root/'design/portal/tokens.json').read_text())['colors']
+controls=public/'assets/header-controls.css'
+controls.write_text(controls.read_text()+'\nhtml:root{--el-shell:'+shell_tokens['shell']+';--el-shell-border:'+shell_tokens['shell-border']+'}\n')
 for obsolete in ['logo.svg','logo-completo.svg','favicon.svg']:
     (public/'assets'/obsolete).unlink(missing_ok=True)
 subprocess.run([sys.executable,str(root/'scripts/aplicar-identidad-neutral.py'),'--public',str(public)],check=True)
+subprocess.run([sys.executable,str(root/'scripts/preparar-encabezado.py'),'--public',str(public)],check=True)
 subprocess.run(['php',str(root/'scripts/aplicar-nomenclatura-lugares.php'),str(release)],check=True)
 # Stamp all generated pages after the integration overlay, including general pages.
 subprocess.run([sys.executable,str(root/'scripts/versiones-medicion.py'),'--public',str(public)],check=True)
