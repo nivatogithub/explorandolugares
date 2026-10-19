@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-19",
+  "requested_by": "propietario",
+  "status": "deferred_not_started",
+  "activation": "manual_after_prerequisites",
+  "prerequisites": [
+    "Terminar la revisión y aprobación de los borradores actuales",
+    "Auditar los destinos publicados con las nuevas reglas y corregir lo que no las cumpla"
+  ],
+  "do_not_start_automatically": true,
+  "workers_assigned": false,
+  "national_priority_scores_changed": false,
+  "destinations": [
+    {
+      "order": 1,
+      "name": "Guatapé",
+      "slug": "guatape",
+      "department": "Antioquia",
+      "status": "not_started",
+      "branch": null
+    },
+    {
+      "order": 2,
+      "name": "Cali",
+      "slug": "cali",
+      "department": "Valle del Cauca",
+      "status": "not_started",
+      "branch": null
+    },
+    {
+      "order": 3,
+      "name": "Barranquilla",
+      "slug": "barranquilla",
+      "department": "Atlántico",
+      "status": "not_started",
+      "branch": null
+    },
+    {
+      "order": 4,
+      "name": "Rincón del Mar",
+      "slug": "rincon-del-mar",
+      "department": "Sucre",
+      "status": "not_started",
+      "branch": null
+    }
+  ],
+  "note": "Cola futura expresamente solicitada; no es autorización para investigar, generar imágenes, crear ramas ni publicar ahora. Rincón del Mar debe modelarse como destino/localidad y comprobar su pertenencia municipal al iniciar, sin asumir municipio independiente."
+}
