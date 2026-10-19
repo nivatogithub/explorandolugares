@@ -84,6 +84,7 @@ controls.write_text(controls.read_text()+'\nhtml:root{--el-shell:'+shell_tokens[
 for obsolete in ['logo.svg','logo-completo.svg','favicon.svg']:
     (public/'assets'/obsolete).unlink(missing_ok=True)
 subprocess.run([sys.executable,str(root/'scripts/aplicar-identidad-neutral.py'),'--public',str(public)],check=True)
+subprocess.run([sys.executable,str(root/'scripts/preparar-encabezado.py'),'--public',str(public)],check=True)
 subprocess.run(['php',str(root/'scripts/aplicar-nomenclatura-lugares.php'),str(release)],check=True)
 # Stamp all generated pages after the integration overlay, including general pages.
 subprocess.run([sys.executable,str(root/'scripts/versiones-medicion.py'),'--public',str(public)],check=True)
