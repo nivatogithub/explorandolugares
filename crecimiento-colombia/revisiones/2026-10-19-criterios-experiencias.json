@@ -1,16 +1,70 @@
 {
- "date":"2026-10-19",
- "rule":"Hasta ocho atractivos, sin mínimo ni relleno; experiencias requieren oferente y oferta exacta comprobable. Aplicar a creación y modificación.",
- "production_changed":false,
- "destinations":[
-  {"slug":"jardin","status":"correccion_en_curso","review":["Identidad y finalidad de Camino de la Herrera, Jardín de Rocas y ProAves","Café, aves y Cueva: validar oferente y oferta","Paseo patrimonial, sabores y chiva: retirar si no hay servicio concreto"]},
-  {"slug":"zipaquira","status":"pendiente_revision_con_nueva_regla","review":["Recorrer centro, sabores y artesanía no acreditan tour por sí solos","Ruta del Minero y tren: contrastar oferta propia actual"]},
-  {"slug":"santa-fe-de-antioquia","status":"pendiente_revision_con_nueva_regla","review":["Paseo por calles, memoria regional y sabores de tamarindo","Filigrana: distinguir comercio de taller realmente ofrecido"]},
-  {"slug":"covenas","status":"pendiente_revision_con_nueva_regla","review":["Caminar por malecón y comer no son tours operados por sí solos","Kayak y manglar: verificar oferente de actividad exacta"]},
-  {"slug":"jerico","status":"pendiente_revision_con_nueva_regla","review":["Revisar experiencias existentes y candidatos apícolas con oferente concreto; no añadir aún sin fuente"]},
-  {"slug":"cartagena","status":"pendiente_revision_con_nueva_regla"},
-  {"slug":"bogota","status":"pendiente_revision_con_nueva_regla"},
-  {"slug":"medellin","status":"pendiente_revision_con_nueva_regla"},
-  {"slug":"santa-marta","status":"pendiente_revision_con_nueva_regla"}
- ]
+  "date": "2026-10-19",
+  "rule": "Hasta ocho atractivos, sin mínimo ni relleno; experiencias requieren oferente y oferta exacta comprobable. Aplicar a creación y modificación.",
+  "production_changed": false,
+  "destinations": [
+    {
+      "slug": "jardin",
+      "status": "corregido_en_preprod_pendiente_aprobacion",
+      "review": [
+        "Identidad y finalidad de Camino de la Herrera, Jardín de Rocas y ProAves",
+        "Café, aves y Cueva: validar oferente y oferta",
+        "Paseo patrimonial, sabores y chiva: retirar si no hay servicio concreto"
+      ],
+      "attractions": 8,
+      "experiences": 4,
+      "images": 13,
+      "editorial_evidence": "crecimiento-colombia/entregas/jardin/criterios-editoriales.json",
+      "content_commit": "c88c213",
+      "zip_sha256": "1783e4d8e4b78000e00de70185c0863fd533bc07439f957982e79aa6bca83169",
+      "qa": "HTTP200 ES/EN/PT y13imagenes;DOM4ofertasconoperador,sinsaboresnichivagenérica"
+    },
+    {
+      "slug": "zipaquira",
+      "status": "pendiente_revision_con_nueva_regla",
+      "review": [
+        "Recorrer centro, sabores y artesanía no acreditan tour por sí solos",
+        "Ruta del Minero y tren: contrastar oferta propia actual"
+      ]
+    },
+    {
+      "slug": "santa-fe-de-antioquia",
+      "status": "pendiente_revision_con_nueva_regla",
+      "review": [
+        "Paseo por calles, memoria regional y sabores de tamarindo",
+        "Filigrana: distinguir comercio de taller realmente ofrecido"
+      ]
+    },
+    {
+      "slug": "covenas",
+      "status": "pendiente_revision_con_nueva_regla",
+      "review": [
+        "Caminar por malecón y comer no son tours operados por sí solos",
+        "Kayak y manglar: verificar oferente de actividad exacta"
+      ]
+    },
+    {
+      "slug": "jerico",
+      "status": "pendiente_revision_con_nueva_regla",
+      "review": [
+        "Revisar experiencias existentes y candidatos apícolas con oferente concreto; no añadir aún sin fuente"
+      ]
+    },
+    {
+      "slug": "cartagena",
+      "status": "pendiente_revision_con_nueva_regla"
+    },
+    {
+      "slug": "bogota",
+      "status": "pendiente_revision_con_nueva_regla"
+    },
+    {
+      "slug": "medellin",
+      "status": "pendiente_revision_con_nueva_regla"
+    },
+    {
+      "slug": "santa-marta",
+      "status": "pendiente_revision_con_nueva_regla"
+    }
+  ]
 }

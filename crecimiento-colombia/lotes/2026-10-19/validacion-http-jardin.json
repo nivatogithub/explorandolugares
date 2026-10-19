@@ -1,0 +1,38 @@
+{
+  "origin": "http://127.0.0.1:8088",
+  "scope": [
+    "jardin"
+  ],
+  "production_accessed": false,
+  "pages": [
+    {
+      "slug": "jardin",
+      "locale": "es",
+      "status": 200,
+      "images": 13,
+      "businesses": 30,
+      "session_required": false
+    },
+    {
+      "slug": "jardin",
+      "locale": "en",
+      "status": 200,
+      "images": 13,
+      "businesses": 30,
+      "session_required": false
+    },
+    {
+      "slug": "jardin",
+      "locale": "pt-BR",
+      "status": 200,
+      "images": 13,
+      "businesses": 30,
+      "session_required": false
+    }
+  ],
+  "unique_destination_images": 13,
+  "all_image_requests_passed": true,
+  "web_image_bytes": 1689090,
+  "editorial_approval": "pending",
+  "success": true
+}
