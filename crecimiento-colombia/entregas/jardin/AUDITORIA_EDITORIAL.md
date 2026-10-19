@@ -37,3 +37,7 @@ Las4 tienen URL exacta en `external_url`, etiqueta en3idiomas y oferente en desc
 - **Apicultura en Jardín:** sí hay oferta propia comprobada: [Tour de la Abeja, Jardín de Aventura](https://jardindeaventura.com/tour/tour-de-las-abejas/). Se documenta como candidata real de Jardín, sin trasladar el ejemplo de Jericó. No se añade en esta revisión ni se genera imagen para completar un número. Miel del Jardín también aparece en búsqueda de su web propia, pero su apertura devolvió502; no se usa ese resultado como condición vigente confirmada.
 
 No se borraron maestros ni materiales históricos de tarjetas retiradas. El ZIP actual incluye exclusivamente portada,8 lugares y4 experiencias pertinentes:13 imágenes distintas; no hay generación nueva en esta revisión.
+
+## Presentación neutral solicitada por el propietario
+
+Los nombres públicos son Tour cafetero, Avistamiento de aves, Cueva del Esplendor y Tour urbano patrimonial, con descripciones breves de la actividad en ES/EN/PT. Se retiraron nombres de familias, hoteles, operadores, productos particulares y enlaces comerciales del manifiesto público. El oferente y la oferta exacta se conservan en criterios-editoriales.json como evidencia interna, sin afirmar afiliación. La asociación pública a un operador requiere el módulo comercial pagado y autorizado; no se activa por investigar una fuente. No se generan nuevas imágenes ni se cambia la selección.

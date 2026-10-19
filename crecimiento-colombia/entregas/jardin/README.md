@@ -73,3 +73,7 @@ Historia: Jardín cresceu entre caminhos de montanha e a cultura cafeeira do sud
 El coordinador confirmó la reimportación en MariaDB local, ID2, del paquete SHA-256 `1783e4d8e4b78000e00de70185c0863fd533bc07439f957982e79aa6bca83169`:8 lugares,4 experiencias,13 imágenes y30 fichas, sin duplicar negocios. HTTP200 en3idiomas,13 imágenes cargadas y DOM con nombres/oferentes correctos, sin sabores genéricos ni chiva, con secciones abiertas. Esta nota registra la QA comunicada por el coordinador; el worker no la reejecutó.
 
 [Ver Jardín en preproducción](http://127.0.0.1:8088/destinos/jardin/). **Revisión y aprobación humana pendientes.** ZIP, contenidos e imágenes intactos al registrar este recibo.
+
+## Presentación neutral solicitada por el propietario
+
+Los nombres públicos son Tour cafetero, Avistamiento de aves, Cueva del Esplendor y Tour urbano patrimonial, con descripciones breves de la actividad en ES/EN/PT. Se retiraron nombres de familias, hoteles, operadores, productos particulares y enlaces comerciales del manifiesto público. El oferente y la oferta exacta se conservan en criterios-editoriales.json como evidencia interna, sin afirmar afiliación. La asociación pública a un operador requiere el módulo comercial pagado y autorizado; no se activa por investigar una fuente. No se generan nuevas imágenes ni se cambia la selección.
