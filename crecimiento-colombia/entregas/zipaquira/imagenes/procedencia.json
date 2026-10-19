@@ -1,0 +1,534 @@
+[
+  {
+    "id": "zipaquira-portada",
+    "tool": "builtin image_gen",
+    "model": "No expuesto por herramienta",
+    "prompt": "Create ONE landscape 3:2 editorial illustration for Explorando Lugares, Zipaquirá Colombia destination hero. Semi-realistic ink-and-gouache travel illustration, sophisticated visible brush texture, convincing architectural perspective, not a photograph, no text, no logo, no watermark. Subject is the UNDERGROUND Salt Cathedral, specifically the monumental nave carved from dark gray salt rock, immense squared rock pillars and rough excavated high ceiling, far end centered large recessed Latin-cross silhouette glowing restrained blue-violet within the rock, discreet floor illumination. Wide interior view from pedestrian height with a few tiny fully drawn visitors for scale, quiet solemn space, detailed mineral texture, natural dark gray rock with blue/violet artificial lighting, warm small human accents, no overall yellow cast. The cruciform recess belongs in rock at far end, not an outdoor church, no freestanding marble cathedral, no stained glass, no daylight sky, no European Gothic spires, no lake, no beach, no lush park. This is an independent documented interpretation, not a copy of any photo. Keep important cross and rock pillars inside central 70% so landscape web cropping does not remove them.",
+    "created_at": "2026-10-19",
+    "master": {
+      "id": "zipaquira-portada",
+      "master_file": "maestros/zipaquira-portada.png",
+      "master_sha256": "a1217e90ab5852e793d6137d5e986b1610c9ab2e74e2c0e3a94291bcfcc90f38",
+      "master_bytes": 3764550,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "web": [
+        {
+          "file": "web/zipaquira-portada-640.webp",
+          "bytes": 68708,
+          "dimensions": [
+            640,
+            427
+          ],
+          "sha256": "7299b14dfae36109c260ef62b79784999a690d5bc29fb22592856686e83691f0"
+        },
+        {
+          "file": "web/zipaquira-portada-1200.webp",
+          "bytes": 225316,
+          "dimensions": [
+            1200,
+            800
+          ],
+          "sha256": "a3ef7a232840e0cf84dc90c44b1d46046046e4f1f3ed4d162b2ef6adbd22ceeb"
+        }
+      ]
+    },
+    "role": "hero",
+    "factual_source_ids": [
+      "sal",
+      "mapa-sal"
+    ],
+    "reference_photos_uploaded": [],
+    "independent_composition": true,
+    "human_approved": false,
+    "status": "draft_pending_human_review",
+    "limits": "Interpretación ilustrada; no prueba de condición actual ni reproducción topográfica exacta. Las escenas temáticas no representan salas o piezas catalogadas exactas."
+  },
+  {
+    "id": "catedral-de-sal",
+    "tool": "builtin image_gen",
+    "model": "No expuesto por herramienta",
+    "prompt": "ONE landscape 3:2 mature ink and gouache editorial illustration for Zipaquirá Colombia, visibly painted, rough mineral textures. Close three-quarter view of a SINGLE simple abstract Latin CROSS-SHAPED NEGATIVE SPACE cut into a dark salt-rock wall in a narrow underground gallery of the Salt Cathedral's Stations of the Cross. Empty cross-shaped cavity illuminated deep blue, no figure in/on the cross. Rough squared salt rock, dark tunnel beyond, muted amber floor spots. This station uses abstract geometry, NOT narrative figurative bas-reliefs. ABSOLUTELY NO sculpture of Jesus, no people carved in rock, no crucifix body, no saints, no figurative religious reliefs or frescoes. One tiny visitor in background only. Clearly independent illustration, no text, no logo. Different from wide nave hero: frame a close mineral wall and cross opening, not a huge hall.",
+    "created_at": "2026-10-19",
+    "master": {
+      "id": "catedral-de-sal",
+      "master_file": "maestros/catedral-de-sal.png",
+      "master_sha256": "f86411fae6a0861074cd2ef7b88dff2b3ec72b9758d58a07d089762e1f186850",
+      "master_bytes": 3539208,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "web": [
+        {
+          "file": "web/catedral-de-sal-640.webp",
+          "bytes": 71580,
+          "dimensions": [
+            640,
+            427
+          ],
+          "sha256": "3aef05101693e10149b67d8c4daa1478e7bff143da83958186649c0102e950dd"
+        }
+      ]
+    },
+    "role": "place",
+    "factual_source_ids": [
+      "sal",
+      "nacional"
+    ],
+    "reference_photos_uploaded": [],
+    "independent_composition": true,
+    "human_approved": false,
+    "status": "draft_pending_human_review",
+    "limits": "Interpretación ilustrada; no prueba de condición actual ni reproducción topográfica exacta. Las escenas temáticas no representan salas o piezas catalogadas exactas."
+  },
+  {
+    "id": "plaza-comuneros",
+    "tool": "builtin image_gen",
+    "model": "No expuesto por herramienta",
+    "prompt": "ONE 3:2 landscape semi-realistic fine ink-and-gouache travel illustration of Plaza de los Comuneros in Zipaquirá Colombia. Broad paved rectangular town square, elevated oblique corner view, only a FEW widely spaced tall palm trees within actual urban square, town and cool green Andean hills beyond. Across plaza, Catedral Diocesana has TWO TALL NARROW RECTANGULAR stone towers of equal height, square clock bands below tall arched bell openings, capped with SMALL STEEP GRAY PYRAMIDAL ROOFS, not domes; the central sandstone church front is lower, sober and relatively narrow, simple flat wall and pilasters, no Baroque statues, no massive classical temple portico. Low two-storey clay-tile-roof white/ochre buildings border square. Church is contextual and smaller than open plaza. NO dome caps, no giant broad cathedral facade, no Gothic spires, no beach, no ocean, no boulevard of palms, no flags, no readable text. Natural varied color, visible brush texture, not photograph, no logos.",
+    "created_at": "2026-10-19",
+    "master": {
+      "id": "plaza-comuneros",
+      "master_file": "maestros/plaza-comuneros.png",
+      "master_sha256": "15203d196d6b087d569133953cece62c0550101b842ff6e717f04dda6ba34116",
+      "master_bytes": 3666142,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "web": [
+        {
+          "file": "web/plaza-comuneros-640.webp",
+          "bytes": 83046,
+          "dimensions": [
+            640,
+            427
+          ],
+          "sha256": "1951f0f0ef3007354a1f085afd985afd2013caba3daad902fd86f2ae3245977d"
+        }
+      ]
+    },
+    "role": "place",
+    "factual_source_ids": [
+      "sal",
+      "departamento"
+    ],
+    "reference_photos_uploaded": [],
+    "independent_composition": true,
+    "human_approved": false,
+    "status": "draft_pending_human_review",
+    "limits": "Interpretación ilustrada; no prueba de condición actual ni reproducción topográfica exacta. Las escenas temáticas no representan salas o piezas catalogadas exactas."
+  },
+  {
+    "id": "catedral-diocesana",
+    "tool": "builtin image_gen",
+    "model": "No expuesto por herramienta",
+    "prompt": "ONE 3:2 landscape semi-realistic fine ink-and-gouache editorial illustration of Catedral Diocesana in Zipaquirá Colombia, front three-quarter pedestrian view. Sober gray/pink sandstone church with TWO TALL SLENDER RECTANGULAR symmetrical belltowers, vertical stacked stone stages, square clock bands below tall arched bell openings, both crowned with SMALL STEEP GRAY PYRAMIDAL CAPS. Central church facade is lower and modestly narrow: restrained flat stone wall, vertical pilasters, three dark entry doorways, little central pediment below tower tops. The two towers visually dominate and are taller relative to width than a generic broad colonial cathedral. NO flat balustrade tower roofs, no hemispherical domes, no onion domes, no overdecorated statues, no huge columned portico, no Gothic architecture. Paved Colombian town square foreground and low adjacent clay-tile buildings, blue highland sky, small human figures, no ocean or tropical boulevard. The above-ground church is entirely different from underground Salt Cathedral. Clearly painted with linework and gouache texture, no text/logos.",
+    "created_at": "2026-10-19",
+    "master": {
+      "id": "catedral-diocesana",
+      "master_file": "maestros/catedral-diocesana.png",
+      "master_sha256": "ff4775dd33b351260d053ef87bf10ad14dbf5f832f1cd47bc027f407f9a033aa",
+      "master_bytes": 3322330,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "web": [
+        {
+          "file": "web/catedral-diocesana-640.webp",
+          "bytes": 64862,
+          "dimensions": [
+            640,
+            427
+          ],
+          "sha256": "c86f3360898148508946d0cb72d1b42350232e016a6fb8a14e038fd5a0b3d99c"
+        }
+      ]
+    },
+    "role": "place",
+    "factual_source_ids": [
+      "diocesis"
+    ],
+    "reference_photos_uploaded": [],
+    "independent_composition": true,
+    "human_approved": false,
+    "status": "draft_pending_human_review",
+    "limits": "Interpretación ilustrada; no prueba de condición actual ni reproducción topográfica exacta. Las escenas temáticas no representan salas o piezas catalogadas exactas."
+  },
+  {
+    "id": "estacion-tren",
+    "tool": "builtin image_gen",
+    "model": "No expuesto por herramienta",
+    "prompt": "Create ONE 3:2 landscape full-bleed travel editorial illustration, EL-SEMI-REALISTA-1. Clearly visible fine ink outlines, nuanced layered gouache brushwork and paper texture, mature semi-realistic illustration rather than a photograph or childish geometry. Natural varied colors independent of UI palette; no yellow filter, no labels, text, lettering, watermarks or logos. Recognizable subject and believable perspective. Zipaquirá Colombia historic railway station in Tres Esquinas: a sober white two-storey rectangular neoclassical station building with rows of tall windows and simple classical trim, a black heritage steam locomotive with restrained yellow piping and red lower buffer beam along platform in foreground. View from side of railway platform shows station and locomotive together, cool Andean daylight, low-rise town. No station name lettering, no alpine chalet, no tropical vegetation, no European palace.",
+    "created_at": "2026-10-19",
+    "master": {
+      "id": "estacion-tren",
+      "master_file": "maestros/estacion-tren.png",
+      "master_sha256": "ec3afd48222c86a98c07e41b331a1318814b9ec72fc0f2be880c693457777b4c",
+      "master_bytes": 3296235,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "web": [
+        {
+          "file": "web/estacion-tren-640.webp",
+          "bytes": 66542,
+          "dimensions": [
+            640,
+            427
+          ],
+          "sha256": "59d5a06d158bd9e89ed91e1db4c21384410d4f52bac812679ce95cd5d58f39ff"
+        }
+      ]
+    },
+    "role": "place",
+    "factual_source_ids": [
+      "municipal",
+      "tren"
+    ],
+    "reference_photos_uploaded": [],
+    "independent_composition": true,
+    "human_approved": false,
+    "status": "draft_pending_human_review",
+    "limits": "Interpretación ilustrada; no prueba de condición actual ni reproducción topográfica exacta. Las escenas temáticas no representan salas o piezas catalogadas exactas."
+  },
+  {
+    "id": "colegio-gabo",
+    "tool": "builtin image_gen",
+    "model": "No expuesto por herramienta",
+    "prompt": "Create ONE 3:2 landscape full-bleed travel editorial illustration, EL-SEMI-REALISTA-1. Clearly visible fine ink outlines, nuanced layered gouache brushwork and paper texture, mature semi-realistic illustration rather than a photograph or childish geometry. Natural varied colors independent of UI palette; no yellow filter, no labels, text, lettering, watermarks or logos. Recognizable subject and believable perspective. Editorial representational scene for El Colegio de Gabo in Zipaquirá Colombia. Quiet traditional Andean Colombian school courtyard: whitewashed adobe walls, clay-tile covered corridor, dark wooden columns, a school desk with open unlettered notebook and fountain pen in foreground, shaded courtyard beyond. Focus on school memories and writing, not a claimed exact reconstruction of the museum facade. No portrait of García Márquez, no readable text, no fantasy books floating, no ocean, no European castle. Honest interpretive educational interior illustration.",
+    "created_at": "2026-10-19",
+    "master": {
+      "id": "colegio-gabo",
+      "master_file": "maestros/colegio-gabo.png",
+      "master_sha256": "ed69a88607c7be7aa41d9564633eadcc5bedc90a760cca9ddff55b1fa916cff5",
+      "master_bytes": 3372622,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "web": [
+        {
+          "file": "web/colegio-gabo-640.webp",
+          "bytes": 69368,
+          "dimensions": [
+            640,
+            427
+          ],
+          "sha256": "82288fa7fb798d4b93ac2ac1c5005c918614d7a068f6fa56422285d0a8911cf1"
+        }
+      ]
+    },
+    "role": "place",
+    "factual_source_ids": [
+      "gabo"
+    ],
+    "reference_photos_uploaded": [],
+    "independent_composition": true,
+    "human_approved": false,
+    "status": "draft_pending_human_review",
+    "limits": "Interpretación ilustrada; no prueba de condición actual ni reproducción topográfica exacta. Las escenas temáticas no representan salas o piezas catalogadas exactas."
+  },
+  {
+    "id": "plaza-independencia",
+    "tool": "builtin image_gen",
+    "model": "No expuesto por herramienta",
+    "prompt": "Create ONE 3:2 landscape full-bleed travel editorial illustration, EL-SEMI-REALISTA-1. Clearly visible fine ink outlines, nuanced layered gouache brushwork and paper texture, mature semi-realistic illustration rather than a photograph or childish geometry. Natural varied colors independent of UI palette; no yellow filter, no labels, text, lettering, watermarks or logos. Recognizable subject and believable perspective. Zipaquirá Colombia Plaza de la Independencia: broad paved public square with low stone terraces, traditional two-storey colored colonial/republican houses with timber balconies and clay tile roofs surrounding it, cafes suggested by a few outdoor tables, flagpoles but no readable signs, modest greenery, cool highland blue daylight. People strolling and talking, coherent town proportions. Different composition from cathedral square: eye-level across terraces toward colorful houses, no cathedral focal point, no ocean or Caribbean palms. Critical correction: NO FLAGS anywhere, no flagpoles, no banners, no Brazilian green-yellow flag. Omit all flags and poles completely. Use a neutral white facade with muted blue and brick-red accents rather than dominant yellow. Broad paved square, low stone terraces, Colombian highland town scale.",
+    "created_at": "2026-10-19",
+    "master": {
+      "id": "plaza-independencia",
+      "master_file": "maestros/plaza-independencia.png",
+      "master_sha256": "c31b88e6bdf95e4190d86f5709014692f4a82bd73e013b0fc61f5074f9a23a27",
+      "master_bytes": 3518777,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "web": [
+        {
+          "file": "web/plaza-independencia-640.webp",
+          "bytes": 83300,
+          "dimensions": [
+            640,
+            427
+          ],
+          "sha256": "7a67ab2aaff03c121d3e68e0de6e2813ae19aac207d7106d20e00323623f199e"
+        }
+      ]
+    },
+    "role": "place",
+    "factual_source_ids": [
+      "municipal"
+    ],
+    "reference_photos_uploaded": [],
+    "independent_composition": true,
+    "human_approved": false,
+    "status": "draft_pending_human_review",
+    "limits": "Interpretación ilustrada; no prueba de condición actual ni reproducción topográfica exacta. Las escenas temáticas no representan salas o piezas catalogadas exactas."
+  },
+  {
+    "id": "museo-quevedo",
+    "tool": "builtin image_gen",
+    "model": "No expuesto por herramienta",
+    "prompt": "Create ONE 3:2 landscape full-bleed travel editorial illustration, EL-SEMI-REALISTA-1. Clearly visible fine ink outlines, nuanced layered gouache brushwork and paper texture, mature semi-realistic illustration rather than a photograph or childish geometry. Natural varied colors independent of UI palette; no yellow filter, no labels, text, lettering, watermarks or logos. Recognizable subject and believable perspective. Original editorial representation of Casa Museo Quevedo Zornoza, Zipaquirá Colombia: intimate traditional domestic courtyard with weathered white walls, terracotta tiled patio, covered clay-tile corridor carried on slender dark-green painted timber posts, timber doors, potted plants and a low round stone fountain. Evoke a historic musical house without inventing exhibited artifacts. Warm soft daylight, organic plants and careful architectural ink drawing. Courtyard seen obliquely, no Gothic church, no tropical palace, no readable signage.",
+    "created_at": "2026-10-19",
+    "master": {
+      "id": "museo-quevedo",
+      "master_file": "maestros/museo-quevedo.png",
+      "master_sha256": "37c48c570f8923defb2a4c29da414b2b3bb0d00fc69745ad3f8571320d8dc298",
+      "master_bytes": 3594002,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "web": [
+        {
+          "file": "web/museo-quevedo-640.webp",
+          "bytes": 79030,
+          "dimensions": [
+            640,
+            427
+          ],
+          "sha256": "0fd7a42673fbf450a42a50525d2833e495d18b8341addc8a4a36299720b27e43"
+        }
+      ]
+    },
+    "role": "place",
+    "factual_source_ids": [
+      "departamento",
+      "municipal"
+    ],
+    "reference_photos_uploaded": [],
+    "independent_composition": true,
+    "human_approved": false,
+    "status": "draft_pending_human_review",
+    "limits": "Interpretación ilustrada; no prueba de condición actual ni reproducción topográfica exacta. Las escenas temáticas no representan salas o piezas catalogadas exactas."
+  },
+  {
+    "id": "museo-arqueologico",
+    "tool": "builtin image_gen",
+    "model": "No expuesto por herramienta",
+    "prompt": "Create ONE 3:2 landscape full-bleed travel editorial illustration, EL-SEMI-REALISTA-1. Clearly visible fine ink outlines, nuanced layered gouache brushwork and paper texture, mature semi-realistic illustration rather than a photograph or childish geometry. Natural varied colors independent of UI palette; no yellow filter, no labels, text, lettering, watermarks or logos. Recognizable subject and believable perspective. Editorial representation of Zipaquirá Archaeological Museum Colombia, focus on a well-lit museum display of a few brown earthenware pre-Hispanic pots and bowls in glass cases, neutral white walls and sober traditional interior. Pottery must be plain believable vessels, no gold treasure or invented specific sacred iconography, no mummies, no Egyptian artifacts, no human remains. Composition close on material texture and museum visit; not a fabricated reconstruction of any catalogued artifact. Clearly illustrated ink-and-gouache.",
+    "created_at": "2026-10-19",
+    "master": {
+      "id": "museo-arqueologico",
+      "master_file": "maestros/museo-arqueologico.png",
+      "master_sha256": "eb3943043ce3ffda9a4a93ea7e33b74765da8984679dbc7f00ad2dd67e02d833",
+      "master_bytes": 3062600,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "web": [
+        {
+          "file": "web/museo-arqueologico-640.webp",
+          "bytes": 46980,
+          "dimensions": [
+            640,
+            427
+          ],
+          "sha256": "330c2aaef1d41cad15786e41558d6915de2c45d6357812a86414c29b6360d8b4"
+        }
+      ]
+    },
+    "role": "place",
+    "factual_source_ids": [
+      "arqueologico"
+    ],
+    "reference_photos_uploaded": [],
+    "independent_composition": true,
+    "human_approved": false,
+    "status": "draft_pending_human_review",
+    "limits": "Interpretación ilustrada; no prueba de condición actual ni reproducción topográfica exacta. Las escenas temáticas no representan salas o piezas catalogadas exactas."
+  },
+  {
+    "id": "ruta-del-minero",
+    "tool": "builtin image_gen",
+    "model": "No expuesto por herramienta",
+    "prompt": "Create ONE 3:2 landscape full-bleed travel editorial illustration, EL-SEMI-REALISTA-1. Clearly visible fine ink outlines, nuanced layered gouache brushwork and paper texture, mature semi-realistic illustration rather than a photograph or childish geometry. Natural varied colors independent of UI palette; no yellow filter, no labels, text, lettering, watermarks or logos. Recognizable subject and believable perspective. Interpretive illustration of a guided salt-mining experience at Zipaquirá Colombia: two adult visitors wearing protective hardhats with headlamps, a guide demonstrating a hand pick against a rough gray salt-rock gallery wall. Human figures fully drawn, tasteful modest caricatural expressiveness, safe stationary demonstration, sturdy shoes. Dark underground tunnel, restrained warm task light and blue ambient light, no machinery or vehicle invented, no children, no fantasy crystals, no tourist digging uncontrolled, no text.",
+    "created_at": "2026-10-19",
+    "master": {
+      "id": "ruta-del-minero",
+      "master_file": "maestros/ruta-del-minero.png",
+      "master_sha256": "05de3dcf06ab35650fbc97aa0a69e0a2ed2a2dbd054a10e49d95a141f1a3cd5b",
+      "master_bytes": 3050580,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "web": [
+        {
+          "file": "web/ruta-del-minero-640.webp",
+          "bytes": 60870,
+          "dimensions": [
+            640,
+            427
+          ],
+          "sha256": "762d794f5c2f0d393b84b1fb4b7021448725798822cb28cfb6134fe2916011ab"
+        }
+      ]
+    },
+    "role": "experience",
+    "factual_source_ids": [
+      "minero"
+    ],
+    "reference_photos_uploaded": [],
+    "independent_composition": true,
+    "human_approved": false,
+    "status": "draft_pending_human_review",
+    "limits": "Interpretación ilustrada; no prueba de condición actual ni reproducción topográfica exacta. Las escenas temáticas no representan salas o piezas catalogadas exactas."
+  },
+  {
+    "id": "tren-sabana",
+    "tool": "builtin image_gen",
+    "model": "No expuesto por herramienta",
+    "prompt": "Create ONE 3:2 landscape full-bleed travel editorial illustration, EL-SEMI-REALISTA-1. Clearly visible fine ink outlines, nuanced layered gouache brushwork and paper texture, mature semi-realistic illustration rather than a photograph or childish geometry. Natural varied colors independent of UI palette; no yellow filter, no labels, text, lettering, watermarks or logos. Recognizable subject and believable perspective. Travel experience illustration of riding Colombia's Tren de la Sabana toward Zipaquirá: black heritage steam locomotive with muted yellow piping and red buffer beam leading passenger carriages on ordinary single railway track across the flat cool green Bogotá savanna, low Andean hills in distance, scattered brick/white low-rise settlement, blue sky with clouds. Train dominates from front three-quarter outdoors, distinct from the station building card. No Alps, no snow, no tropical palms, no invented logos or lettering.",
+    "created_at": "2026-10-19",
+    "master": {
+      "id": "tren-sabana",
+      "master_file": "maestros/tren-sabana.png",
+      "master_sha256": "38b278e42e5ee97ce7a8052c6af3e1c26957296b795b3eef466d7270fffed8bf",
+      "master_bytes": 3441033,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "web": [
+        {
+          "file": "web/tren-sabana-640.webp",
+          "bytes": 80372,
+          "dimensions": [
+            640,
+            427
+          ],
+          "sha256": "5eaa5ea99931178048602c3b12656de3df7132b7505f55fb52ed89f82b0bc18c"
+        }
+      ]
+    },
+    "role": "experience",
+    "factual_source_ids": [
+      "tren"
+    ],
+    "reference_photos_uploaded": [],
+    "independent_composition": true,
+    "human_approved": false,
+    "status": "draft_pending_human_review",
+    "limits": "Interpretación ilustrada; no prueba de condición actual ni reproducción topográfica exacta. Las escenas temáticas no representan salas o piezas catalogadas exactas."
+  },
+  {
+    "id": "recorrido-historico",
+    "tool": "builtin image_gen",
+    "model": "No expuesto por herramienta",
+    "prompt": "Create ONE 3:2 landscape full-bleed travel editorial illustration, EL-SEMI-REALISTA-1. Clearly visible fine ink outlines, nuanced layered gouache brushwork and paper texture, mature semi-realistic illustration rather than a photograph or childish geometry. Natural varied colors independent of UI palette; no yellow filter, no labels, text, lettering, watermarks or logos. Recognizable subject and believable perspective. Interpretive walking experience in historic Zipaquirá Colombia: small group of adult visitors with local guide on an ordinary cool-climate Andean town street, white and muted terracotta two-storey walls, dark timber windows, clay tile roofs, green hills barely visible beyond. Pedestrian-level scene, people more prominent and expressive but respectfully semi-realistic, distinct from monumental squares. No cathedral focal point, no invented landmarks, no Caribbean balconies overloaded with bougainvillea, no ocean or tropical palms.",
+    "created_at": "2026-10-19",
+    "master": {
+      "id": "recorrido-historico",
+      "master_file": "maestros/recorrido-historico.png",
+      "master_sha256": "d510f4a0a55eb88a59ae2fb0659edac24ca065e81bad741c4c8c4b51981af1e7",
+      "master_bytes": 3184681,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "web": [
+        {
+          "file": "web/recorrido-historico-640.webp",
+          "bytes": 70874,
+          "dimensions": [
+            640,
+            427
+          ],
+          "sha256": "8c817488e71c13e44d108193a1f9ce616e8e05d2c7d8e7ef616ad70f8b638bd2"
+        }
+      ]
+    },
+    "role": "experience",
+    "factual_source_ids": [
+      "citytour"
+    ],
+    "reference_photos_uploaded": [],
+    "independent_composition": true,
+    "human_approved": false,
+    "status": "draft_pending_human_review",
+    "limits": "Interpretación ilustrada; no prueba de condición actual ni reproducción topográfica exacta. Las escenas temáticas no representan salas o piezas catalogadas exactas."
+  },
+  {
+    "id": "sabores-locales",
+    "tool": "builtin image_gen",
+    "model": "No expuesto por herramienta",
+    "prompt": "Create ONE 3:2 landscape full-bleed travel editorial illustration, EL-SEMI-REALISTA-1. Clearly visible fine ink outlines, nuanced layered gouache brushwork and paper texture, mature semi-realistic illustration rather than a photograph or childish geometry. Natural varied colors independent of UI palette; no yellow filter, no labels, text, lettering, watermarks or logos. Recognizable subject and believable perspective. Interpretive local food experience in Zipaquirá Colombia: close tabletop composition of traditional Colombian baked rolls and amasijos in a small basket, a clay cup with drink, and a plate of rustic salt-roasted potatoes, one pair of adult hands sharing food. Subtle local traditional dining room, natural terracotta, brown bread and neutral table tones. Culinary still life ink/gouache, detailed and appetizing. No restaurant logo, no promised menu or branded dish, no readable text, no giant yellow background.",
+    "created_at": "2026-10-19",
+    "master": {
+      "id": "sabores-locales",
+      "master_file": "maestros/sabores-locales.png",
+      "master_sha256": "f06837586668752cff7fcda46baf4fcf9a5f79f5bc539faf39f759c7cdf03a3e",
+      "master_bytes": 3235853,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "web": [
+        {
+          "file": "web/sabores-locales-640.webp",
+          "bytes": 72538,
+          "dimensions": [
+            640,
+            427
+          ],
+          "sha256": "c3ade335606527ec3bf179601b73b120e2064e7c3d8e925a88cf44626027977d"
+        }
+      ]
+    },
+    "role": "experience",
+    "factual_source_ids": [
+      "municipal"
+    ],
+    "reference_photos_uploaded": [],
+    "independent_composition": true,
+    "human_approved": false,
+    "status": "draft_pending_human_review",
+    "limits": "Interpretación ilustrada; no prueba de condición actual ni reproducción topográfica exacta. Las escenas temáticas no representan salas o piezas catalogadas exactas."
+  },
+  {
+    "id": "artesania-sal",
+    "tool": "builtin image_gen",
+    "model": "No expuesto por herramienta",
+    "prompt": "Create ONE 3:2 landscape full-bleed travel editorial illustration, EL-SEMI-REALISTA-1. Clearly visible fine ink outlines, nuanced layered gouache brushwork and paper texture, mature semi-realistic illustration rather than a photograph or childish geometry. Natural varied colors independent of UI palette; no yellow filter, no labels, text, lettering, watermarks or logos. Recognizable subject and believable perspective. Interpretive salt craft experience in Zipaquirá Colombia: close view of adult artisan hands working a small pale translucent block of salt with simple hand tools on a wooden bench, a few modest finished salt craft pieces and salt grains, whitewashed workshop wall softly behind. Respectful craft demonstration, organic hands with correct anatomy, detailed semi-realistic ink and gouache textures. Do not reproduce a named artist's specific sculpture or claim exact workshop; no business logos, no fantasy jewels, no readable text.",
+    "created_at": "2026-10-19",
+    "master": {
+      "id": "artesania-sal",
+      "master_file": "maestros/artesania-sal.png",
+      "master_sha256": "0b4b2c9a826aa55d1672c6d550f836ed93ba8a7d9df19805093485fc03334f24",
+      "master_bytes": 3162210,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "web": [
+        {
+          "file": "web/artesania-sal-640.webp",
+          "bytes": 64148,
+          "dimensions": [
+            640,
+            427
+          ],
+          "sha256": "438e43fb8a729fc8d272a7c26f1600c533d597ee07f5eceb751473a458166149"
+        }
+      ]
+    },
+    "role": "experience",
+    "factual_source_ids": [
+      "municipal"
+    ],
+    "reference_photos_uploaded": [],
+    "independent_composition": true,
+    "human_approved": false,
+    "status": "draft_pending_human_review",
+    "limits": "Interpretación ilustrada; no prueba de condición actual ni reproducción topográfica exacta. Las escenas temáticas no representan salas o piezas catalogadas exactas."
+  }
+]

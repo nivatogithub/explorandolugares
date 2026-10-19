@@ -9,10 +9,10 @@
   "pr_url": null,
   "base_commit": "8ff9dde",
   "blockers": [
-    "14 ilustraciones y aprobación visual pendientes",
+    "Revisión humana de textos e ilustraciones pendiente",
     "Integración y QA en preproducción pendientes"
   ],
-  "next_action": "Completar contraste visual y producir primera portada; revisar paquete editorial",
+  "next_action": "Importar ZIP completo en preproducción como borrador y validar vista real; no publicar producción",
   "gates": {
     "identidad": {
       "passed": false,
@@ -40,7 +40,9 @@
     },
     "fotos": {
       "passed": false,
-      "evidence": [],
+      "evidence": [
+        "crecimiento-colombia/entregas/zipaquira/imagenes/procedencia.json"
+      ],
       "reviewer": null,
       "checked_at": null
     },
@@ -62,7 +64,9 @@
     },
     "tecnica": {
       "passed": false,
-      "evidence": [],
+      "evidence": [
+        "crecimiento-colombia/entregas/zipaquira/qa.json"
+      ],
       "reviewer": null,
       "checked_at": null
     },

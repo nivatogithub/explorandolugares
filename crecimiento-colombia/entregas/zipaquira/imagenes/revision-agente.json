@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-19",
+  "review_type": "inspeccion_tecnica_editorial_no_aprobacion_humana",
+  "human_approved": false,
+  "status": "14_borradores_inspeccionados_correcciones_aplicadas_revision_humana_pendiente",
+  "all_outputs_seen_individually": true,
+  "checks": [
+    "Foco identificable en tarjeta",
+    "Tinta y gouache semirrealista",
+    "Sin texto ni logos",
+    "No duplicar hero/atractivo",
+    "Contexto andino y catedral subterránea/exterior separados"
+  ],
+  "rejected_v1": {
+    "catedral-de-sal": "Relieves figurativos inventados; sustituir por cruz abstracta excavada.",
+    "plaza-comuneros": "Remate de torres en cúpula genérica; usar torres estrechas con remates piramidales.",
+    "catedral-diocesana": "Remates planos con balaustrada y ornamentación genérica; corregir silueta.",
+    "plaza-independencia": "Bandera verde/amarilla ajena; eliminar todas las banderas del encuadre."
+  },
+  "limits": [
+    "No se afirma exactitud topográfica de composición o reconstrucción métrica de edificios.",
+    "Colegio de Gabo representa memoria escolar; no prueba el patio/sala actual.",
+    "Museo Arqueológico representa exposición de cerámica sin atribuir piezas inventadas al catálogo real.",
+    "Experiencias representan tipos de actividad; no garantizan proveedor, horario, precio ni acceso.",
+    "Portada subterránea conserva contraste azul-violeta de la roca; valoración estética final corresponde al propietario."
+  ],
+  "corrected_v2": [
+    "catedral-de-sal",
+    "plaza-comuneros",
+    "catedral-diocesana",
+    "plaza-independencia"
+  ],
+  "rejected_files": [
+    {
+      "file": "imagenes/rechazadas/catedral-diocesana-v1.png",
+      "bytes": 3247991,
+      "sha256": "55343a15430955d96218423bc00514b63df8b5c6112a78391404d53ce3b326a2"
+    },
+    {
+      "file": "imagenes/rechazadas/plaza-independencia-v1.png",
+      "bytes": 3466401,
+      "sha256": "4da1c863a67e7a01c1bca54f1bef700a30a3f4711896ba2e3b0b9010c7ffb3f7"
+    },
+    {
+      "file": "imagenes/rechazadas/catedral-de-sal-v1.png",
+      "bytes": 3280618,
+      "sha256": "61b00ea442d1b7b031a17a56f4bbd42f2ff0c7e065821223d9421471c4bb5199"
+    },
+    {
+      "file": "imagenes/rechazadas/plaza-comuneros-v1.png",
+      "bytes": 3690972,
+      "sha256": "1a3011ebb08b56c3ae6dc12d87b22dc84e2320aac55d72cf16bc1dc2016b3ebe"
+    }
+  ]
+}

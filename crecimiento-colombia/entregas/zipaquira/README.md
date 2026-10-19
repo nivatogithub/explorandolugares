@@ -2,7 +2,11 @@
 
 Worker **Lugar 1**, rama `lugar/CO/cundinamarca/zipaquira`, base `8ff9dde`, 19-10-2026.
 
-## Qué existe realmente
+## Estado de la primera entrega (8587869)
+
+Este apartado conserva la evidencia de la entrega editorial anterior. La actualización de imágenes y el estado del ZIP completo se registran en `ESTADO_FINAL.md` y `qa.json`.
+
+## Qué existía en la primera entrega
 
 - 8 atractivos priorizados, 5 experiencias y textos breves completos ES/EN/PT.
 - Historia en un solo párrafo por idioma, sin imagen ni motivos repetidos.

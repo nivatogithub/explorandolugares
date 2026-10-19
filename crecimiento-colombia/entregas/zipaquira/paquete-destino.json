@@ -1,0 +1,750 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "zipaquira",
+    "department": "Cundinamarca",
+    "country_code": "CO",
+    "destination_type": "municipality",
+    "subregion": "Sabana Centro",
+    "latitude": null,
+    "longitude": null,
+    "translations": {
+      "es": {
+        "display_name": "Zipaquirá",
+        "eyebrow": "Cundinamarca · Colombia",
+        "headline": "Sal, patrimonio y vida de la sabana",
+        "intro": "Una catedral bajo tierra y un centro histórico para caminar.",
+        "meta_description": "Una catedral bajo tierra y un centro histórico para caminar."
+      },
+      "en": {
+        "display_name": "Zipaquirá",
+        "eyebrow": "Cundinamarca · Colombia",
+        "headline": "Salt, heritage and life on the savanna",
+        "intro": "An underground cathedral and a historic centre to explore on foot.",
+        "meta_description": "An underground cathedral and a historic centre to explore on foot."
+      },
+      "pt-BR": {
+        "display_name": "Zipaquirá",
+        "eyebrow": "Cundinamarca · Colombia",
+        "headline": "Sal, patrimônio e vida na savana",
+        "intro": "Uma catedral subterrânea e um centro histórico para percorrer a pé.",
+        "meta_description": "Uma catedral subterrânea e um centro histórico para percorrer a pé."
+      }
+    },
+    "history": {
+      "es": [
+        "La sal fue parte del intercambio muisca antes de la colonización española. La fundación colonial de Zipaquirá data de 1600. Su patrimonio salinero convive con plazas, arquitectura y la memoria escolar de Gabriel García Márquez; la actual Catedral de Sal abrió en 1995."
+      ],
+      "en": [
+        "Salt supported Muisca exchange before Spanish colonisation. Zipaquirá’s colonial foundation dates to 1600. Its salt-making heritage shares the city with historic squares, architecture and memories of Gabriel García Márquez’s school years; the current Salt Cathedral opened in 1995."
+      ],
+      "pt-BR": [
+        "O sal integrou as trocas muiscas antes da colonização espanhola. A fundação colonial de Zipaquirá data de 1600. Seu patrimônio salineiro convive com praças, arquitetura e a memória escolar de Gabriel García Márquez; a atual Catedral de Sal abriu em 1995."
+      ]
+    },
+    "reasons": {
+      "es": [],
+      "en": [],
+      "pt-BR": []
+    },
+    "sources": {
+      "es": [
+        {
+          "title": "ProColombia: contexto salinero e historia",
+          "label": "ProColombia",
+          "url": "https://colombia.travel/es/zipaquira",
+          "section_key": "history"
+        },
+        {
+          "title": "ProColombia: Catedral y plaza",
+          "label": "ProColombia",
+          "url": "https://colombia.travel/en/bogota/salt-cathedral-zipaquira",
+          "section_key": "history"
+        },
+        {
+          "title": "Gaceta del Congreso 1696/2023: Colegio de Gabo",
+          "label": "Gaceta del Congreso 1696/2023",
+          "url": "https://sidn.ramajudicial.gov.co/SIDN/PUBLICACIONES%20PERIODICAS/TEXTO%20COMPLETO%20Y%20TABLAS%20DE%20CONTENIDO/GACETA%20DEL%20CONGRESO/GACETA%20DEL%20CONGRESO%202023/GC%201696%20DE%202023.PDF",
+          "section_key": "history"
+        }
+      ],
+      "en": [
+        {
+          "title": "ProColombia: contexto salinero e historia",
+          "label": "ProColombia",
+          "url": "https://colombia.travel/es/zipaquira",
+          "section_key": "history"
+        },
+        {
+          "title": "ProColombia: Catedral y plaza",
+          "label": "ProColombia",
+          "url": "https://colombia.travel/en/bogota/salt-cathedral-zipaquira",
+          "section_key": "history"
+        },
+        {
+          "title": "Gaceta del Congreso 1696/2023: Colegio de Gabo",
+          "label": "Gaceta del Congreso 1696/2023",
+          "url": "https://sidn.ramajudicial.gov.co/SIDN/PUBLICACIONES%20PERIODICAS/TEXTO%20COMPLETO%20Y%20TABLAS%20DE%20CONTENIDO/GACETA%20DEL%20CONGRESO/GACETA%20DEL%20CONGRESO%202023/GC%201696%20DE%202023.PDF",
+          "section_key": "history"
+        }
+      ],
+      "pt-BR": [
+        {
+          "title": "ProColombia: contexto salinero e historia",
+          "label": "ProColombia",
+          "url": "https://colombia.travel/es/zipaquira",
+          "section_key": "history"
+        },
+        {
+          "title": "ProColombia: Catedral y plaza",
+          "label": "ProColombia",
+          "url": "https://colombia.travel/en/bogota/salt-cathedral-zipaquira",
+          "section_key": "history"
+        },
+        {
+          "title": "Gaceta del Congreso 1696/2023: Colegio de Gabo",
+          "label": "Gaceta del Congreso 1696/2023",
+          "url": "https://sidn.ramajudicial.gov.co/SIDN/PUBLICACIONES%20PERIODICAS/TEXTO%20COMPLETO%20Y%20TABLAS%20DE%20CONTENIDO/GACETA%20DEL%20CONGRESO/GACETA%20DEL%20CONGRESO%202023/GC%201696%20DE%202023.PDF",
+          "section_key": "history"
+        }
+      ]
+    }
+  },
+  "hero_image": {
+    "file": "images/zipaquira-portada.webp",
+    "image_origin": "ai_generated",
+    "image_creator": "Ilustración independiente generada con herramienta integrada imagegen; revisión humana pendiente",
+    "image_source_url": "",
+    "image_license": "Salida IA propuesta para Explorando Lugares; no contiene fotografía de terceros de entrada",
+    "image_license_url": "",
+    "alt": {
+      "es": "Zipaquirá: Catedral de Sal · ilustración editorial",
+      "en": "Zipaquirá: Salt Cathedral · editorial illustration",
+      "pt-BR": "Zipaquirá: Catedral de Sal · ilustração editorial"
+    },
+    "caption": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  "places": [
+    {
+      "slug": "catedral-de-sal",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Catedral de Sal",
+          "description": "Un templo subterráneo tallado en la roca salina.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Salt Cathedral",
+          "description": "An underground sanctuary carved into salt rock.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Catedral de Sal",
+          "description": "Um santuário subterrâneo escavado na rocha salina.",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/catedral-de-sal.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Ilustración independiente generada con herramienta integrada imagegen; revisión humana pendiente",
+        "image_source_url": "",
+        "image_license": "Salida IA propuesta para Explorando Lugares; no contiene fotografía de terceros de entrada",
+        "image_license_url": "",
+        "alt": {
+          "es": "Catedral de Sal · ilustración editorial",
+          "en": "Salt Cathedral · editorial illustration",
+          "pt-BR": "Catedral de Sal · ilustração editorial"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "plaza-comuneros",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Plaza de los Comuneros",
+          "description": "El corazón histórico, entre la catedral y edificios patrimoniales.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Plaza de los Comuneros",
+          "description": "The historic heart, framed by the cathedral and heritage buildings.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Praça dos Comuneros",
+          "description": "O coração histórico, entre a catedral e edifícios patrimoniais.",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/plaza-comuneros.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Ilustración independiente generada con herramienta integrada imagegen; revisión humana pendiente",
+        "image_source_url": "",
+        "image_license": "Salida IA propuesta para Explorando Lugares; no contiene fotografía de terceros de entrada",
+        "image_license_url": "",
+        "alt": {
+          "es": "Plaza de los Comuneros · ilustración editorial",
+          "en": "Plaza de los Comuneros · editorial illustration",
+          "pt-BR": "Praça dos Comuneros · ilustração editorial"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "catedral-diocesana",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Catedral Diocesana",
+          "description": "El gran templo de piedra frente a la plaza principal.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Diocesan Cathedral",
+          "description": "The landmark stone church facing the main square.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Catedral Diocesana",
+          "description": "O grande templo de pedra diante da praça principal.",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/catedral-diocesana.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Ilustración independiente generada con herramienta integrada imagegen; revisión humana pendiente",
+        "image_source_url": "",
+        "image_license": "Salida IA propuesta para Explorando Lugares; no contiene fotografía de terceros de entrada",
+        "image_license_url": "",
+        "alt": {
+          "es": "Catedral Diocesana · ilustración editorial",
+          "en": "Diocesan Cathedral · editorial illustration",
+          "pt-BR": "Catedral Diocesana · ilustração editorial"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "estacion-tren",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Estación del Tren",
+          "description": "Arquitectura ferroviaria en la llegada del tren turístico.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Railway Station",
+          "description": "Railway heritage at the tourist train’s arrival point.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Estação Ferroviária",
+          "description": "Patrimônio ferroviário na chegada do trem turístico.",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/estacion-tren.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Ilustración independiente generada con herramienta integrada imagegen; revisión humana pendiente",
+        "image_source_url": "",
+        "image_license": "Salida IA propuesta para Explorando Lugares; no contiene fotografía de terceros de entrada",
+        "image_license_url": "",
+        "alt": {
+          "es": "Estación del Tren · ilustración editorial",
+          "en": "Railway Station · editorial illustration",
+          "pt-BR": "Estação Ferroviária · ilustração editorial"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "colegio-gabo",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "El Colegio de Gabo",
+          "description": "La memoria de los años escolares de Gabriel García Márquez.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Gabo’s School",
+          "description": "Discover the memory of Gabriel García Márquez’s school years.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "O Colégio de Gabo",
+          "description": "A memória dos anos escolares de Gabriel García Márquez.",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/colegio-gabo.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Ilustración independiente generada con herramienta integrada imagegen; revisión humana pendiente",
+        "image_source_url": "",
+        "image_license": "Salida IA propuesta para Explorando Lugares; no contiene fotografía de terceros de entrada",
+        "image_license_url": "",
+        "alt": {
+          "es": "El Colegio de Gabo · ilustración editorial",
+          "en": "Gabo’s School · editorial illustration",
+          "pt-BR": "O Colégio de Gabo · ilustração editorial"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "plaza-independencia",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Plaza de la Independencia",
+          "description": "Una plaza para pasear entre cafés y cocina local.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Plaza de la Independencia",
+          "description": "A square for a stroll among cafés and local food.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Praça da Independência",
+          "description": "Uma praça para passear entre cafés e gastronomia local.",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/plaza-independencia.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Ilustración independiente generada con herramienta integrada imagegen; revisión humana pendiente",
+        "image_source_url": "",
+        "image_license": "Salida IA propuesta para Explorando Lugares; no contiene fotografía de terceros de entrada",
+        "image_license_url": "",
+        "alt": {
+          "es": "Plaza de la Independencia · ilustración editorial",
+          "en": "Plaza de la Independencia · editorial illustration",
+          "pt-BR": "Praça da Independência · ilustração editorial"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "museo-quevedo",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Casa Museo Quevedo Zornoza",
+          "description": "Una casa para acercarse al patrimonio musical de la ciudad.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Quevedo Zornoza House Museum",
+          "description": "A house devoted to the city’s musical heritage.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Casa Museu Quevedo Zornoza",
+          "description": "Uma casa para conhecer o patrimônio musical da cidade.",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/museo-quevedo.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Ilustración independiente generada con herramienta integrada imagegen; revisión humana pendiente",
+        "image_source_url": "",
+        "image_license": "Salida IA propuesta para Explorando Lugares; no contiene fotografía de terceros de entrada",
+        "image_license_url": "",
+        "alt": {
+          "es": "Casa Museo Quevedo Zornoza · ilustración editorial",
+          "en": "Quevedo Zornoza House Museum · editorial illustration",
+          "pt-BR": "Casa Museu Quevedo Zornoza · ilustração editorial"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "museo-arqueologico",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Museo Arqueológico",
+          "description": "Piezas y relatos para conocer el pasado prehispánico.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Archaeological Museum",
+          "description": "Objects and stories that explore the pre-Hispanic past.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Museu Arqueológico",
+          "description": "Peças e relatos para conhecer o passado pré-hispânico.",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/museo-arqueologico.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Ilustración independiente generada con herramienta integrada imagegen; revisión humana pendiente",
+        "image_source_url": "",
+        "image_license": "Salida IA propuesta para Explorando Lugares; no contiene fotografía de terceros de entrada",
+        "image_license_url": "",
+        "alt": {
+          "es": "Museo Arqueológico · ilustración editorial",
+          "en": "Archaeological Museum · editorial illustration",
+          "pt-BR": "Museu Arqueológico · ilustração editorial"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "ruta-del-minero",
+      "type": "experience",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Ruta del Minero",
+          "description": "Explora la extracción de sal con una actividad guiada.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Miner’s Route",
+          "description": "Explore salt extraction through a guided activity.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Rota do Mineiro",
+          "description": "Conheça a extração de sal em uma atividade guiada.",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/ruta-del-minero.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Ilustración independiente generada con herramienta integrada imagegen; revisión humana pendiente",
+        "image_source_url": "",
+        "image_license": "Salida IA propuesta para Explorando Lugares; no contiene fotografía de terceros de entrada",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ruta del Minero · ilustración editorial",
+          "en": "Miner’s Route · editorial illustration",
+          "pt-BR": "Rota do Mineiro · ilustração editorial"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "tren-sabana",
+      "type": "experience",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Viajar en el Tren de la Sabana",
+          "description": "Llega en tren y descubre el paisaje de la sabana.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Ride the Sabana Train",
+          "description": "Arrive by train and discover the savanna landscape.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Viajar no Trem da Sabana",
+          "description": "Chegue de trem e conheça a paisagem da savana.",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/tren-sabana.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Ilustración independiente generada con herramienta integrada imagegen; revisión humana pendiente",
+        "image_source_url": "",
+        "image_license": "Salida IA propuesta para Explorando Lugares; no contiene fotografía de terceros de entrada",
+        "image_license_url": "",
+        "alt": {
+          "es": "Viajar en el Tren de la Sabana · ilustración editorial",
+          "en": "Ride the Sabana Train · editorial illustration",
+          "pt-BR": "Viajar no Trem da Sabana · ilustração editorial"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "recorrido-historico",
+      "type": "experience",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Recorrer el centro histórico",
+          "description": "Conecta plazas, calles y patrimonio en una caminata.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Walk the historic centre",
+          "description": "Connect squares, streets and heritage on foot.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Percorrer o centro histórico",
+          "description": "Conecte praças, ruas e patrimônio em uma caminhada.",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/recorrido-historico.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Ilustración independiente generada con herramienta integrada imagegen; revisión humana pendiente",
+        "image_source_url": "",
+        "image_license": "Salida IA propuesta para Explorando Lugares; no contiene fotografía de terceros de entrada",
+        "image_license_url": "",
+        "alt": {
+          "es": "Recorrer el centro histórico · ilustración editorial",
+          "en": "Walk the historic centre · editorial illustration",
+          "pt-BR": "Percorrer o centro histórico · ilustração editorial"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "sabores-locales",
+      "type": "experience",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Probar sabores locales",
+          "description": "Descubre amasijos y cocina de tradición salinera.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Taste local flavours",
+          "description": "Discover traditional baked goods and salt-country cooking.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Provar sabores locais",
+          "description": "Descubra quitutes e a culinária da tradição salineira.",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/sabores-locales.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Ilustración independiente generada con herramienta integrada imagegen; revisión humana pendiente",
+        "image_source_url": "",
+        "image_license": "Salida IA propuesta para Explorando Lugares; no contiene fotografía de terceros de entrada",
+        "image_license_url": "",
+        "alt": {
+          "es": "Probar sabores locales · ilustración editorial",
+          "en": "Taste local flavours · editorial illustration",
+          "pt-BR": "Provar sabores locais · ilustração editorial"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "artesania-sal",
+      "type": "experience",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Descubrir la artesanía en sal",
+          "description": "Conoce piezas y oficios ligados a la identidad salinera.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Discover salt crafts",
+          "description": "Explore crafts connected to local salt-making identity.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Conhecer o artesanato em sal",
+          "description": "Conheça peças e ofícios ligados à identidade salineira.",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/artesania-sal.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Ilustración independiente generada con herramienta integrada imagegen; revisión humana pendiente",
+        "image_source_url": "",
+        "image_license": "Salida IA propuesta para Explorando Lugares; no contiene fotografía de terceros de entrada",
+        "image_license_url": "",
+        "alt": {
+          "es": "Descubrir la artesanía en sal · ilustración editorial",
+          "en": "Discover salt crafts · editorial illustration",
+          "pt-BR": "Conhecer o artesanato em sal · ilustração editorial"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "2026-10-19",
+    "positioning": "Patrimonio salinero, centro urbano y cultura local",
+    "competitors": [],
+    "potential_allies": [],
+    "business_prospects": [],
+    "acquisition_strategies": [],
+    "sources": [
+      {
+        "url": "https://colombia.travel/es/zipaquira",
+        "checked_at": "2026-10-19"
+      },
+      {
+        "url": "https://colombia.travel/en/bogota/salt-cathedral-zipaquira",
+        "checked_at": "2026-10-19"
+      },
+      {
+        "url": "https://www.zipaquira.travel/wp-content/uploads/2026/02/Guia-Turistica-ZT.pdf",
+        "checked_at": "2026-10-19"
+      },
+      {
+        "url": "https://eldoradoradio.cundinamarca.gov.co/provincias/sabana-centro/zipaquira/",
+        "checked_at": "2026-10-19"
+      },
+      {
+        "url": "https://www.catedraldesal.gov.co/atracciones/museo-arqueologico/",
+        "checked_at": "2026-10-19"
+      },
+      {
+        "url": "https://www.catedraldesal.gov.co/atracciones/ruta-del-minero/",
+        "checked_at": "2026-10-19"
+      },
+      {
+        "url": "https://turistren.com.co/",
+        "checked_at": "2026-10-19"
+      },
+      {
+        "url": "https://diocesisdezipaquira.org/parroquias/parroquia-la-catedral-diocesana-de-zipaquira/",
+        "checked_at": "2026-10-19"
+      },
+      {
+        "url": "https://sidn.ramajudicial.gov.co/SIDN/PUBLICACIONES%20PERIODICAS/TEXTO%20COMPLETO%20Y%20TABLAS%20DE%20CONTENIDO/GACETA%20DEL%20CONGRESO/GACETA%20DEL%20CONGRESO%202023/GC%201696%20DE%202023.PDF",
+        "checked_at": "2026-10-19"
+      },
+      {
+        "url": "https://www.catedraldesal.gov.co/wp-content/uploads/2025/03/MAPA-MINA_v05-interior-y-exterior.pdf",
+        "checked_at": "2026-10-19"
+      },
+      {
+        "url": "https://www.zipaquira.travel/page/2/",
+        "checked_at": "2026-10-19"
+      }
+    ],
+    "notes": [
+      "Borrador privado. No hay alianzas, disponibilidad ni publicación aprobadas."
+    ]
+  }
+}
