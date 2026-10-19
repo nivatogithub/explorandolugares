@@ -8,24 +8,27 @@
   ],
   "attractions_documented": 5,
   "top8_validated": false,
-  "experiences_draft": 1,
+  "experiences_draft": 5,
   "businesses_documented": 30,
   "business_target": 30,
-  "images_generated": 13,
+  "images_generated": 24,
   "images_approved": 0,
   "destination_zip_ready": true,
   "preprod_imported": true,
   "production_published": false,
   "pending": [
-    "Revisión humana de imágenes, textos y diseño",
-    "Confirmación de vigencia comercial antes de promoción a producción"
+    "Aprobación humana de las5experiencias con textos ES/EN/PT y4ilustraciones nuevas",
+    "Corregir identidad de portada,PrimeraEnsenada,SegundaEnsenada yLaCoquerita; versionesactuales rechazadas",
+    "Confirmación de vigencia comercial antes de producción"
   ],
-  "site_qa": "HTTP200 ES/EN/PT;7 imágenes y30negocios;DOM verifica los3 hashes nuevos",
-  "images_in_current_package": 7,
+  "site_qa": "HTTP200 ES/EN/PT;11imágenes accesibles;30negocios;DOM5experiencias sin enlaces comerciales ni desbordamiento",
+  "images_in_current_package": 11,
   "editorial_criteria": "passed_documented_evidence",
   "approval": "pending",
-  "current_package_sha256": "6686513da03af7a42577b703b053d7e9db7553fe189ff0ed65c3c7198ad1beba",
+  "current_package_sha256": "2841b30e594ec04015282c3a793b380b9bb7a3897f2d0a79642f3529fa9860c9",
   "database_import_executed": true,
   "beach_images": "v2_pending_human_review",
-  "coastal_images": "v3_pending_human_review"
+  "coastal_images": "rejected_pending_site_specific_reference",
+  "experience_images": "4nuevas_generadas_e_integradas_pendiente_revision",
+  "experiences": 5
 }

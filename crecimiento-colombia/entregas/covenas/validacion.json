@@ -5,11 +5,13 @@
   "business_zip_read": "pass",
   "businesses": 30,
   "attractions": 5,
-  "experiences": 1,
+  "experiences": 5,
   "missing_images": [],
   "destination_import_ready": true,
   "database_import_executed": true,
-  "site_qa": "HTTP200 ES/EN/PT;7 imágenes y30negocios;DOM verifica los3 hashes nuevos",
+  "site_qa": "HTTP200 ES/EN/PT;11imágenes accesibles;30negocios;DOM5experiencias sin enlaces comerciales ni desbordamiento",
   "approval": "pending",
-  "coastal_images": "v3_pending_human_review"
+  "current_package_sha256": "2841b30e594ec04015282c3a793b380b9bb7a3897f2d0a79642f3529fa9860c9",
+  "coastal_images": "rejected_pending_site_specific_reference",
+  "experience_images": "4nuevas_generadas_e_integradas_pendiente_revision"
 }

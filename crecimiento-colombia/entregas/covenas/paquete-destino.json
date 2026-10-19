@@ -405,6 +405,154 @@
         "image_source_url": "",
         "image_license_url": ""
       }
+    },
+    {
+      "slug": "buceo",
+      "type": "experience",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Buceo",
+          "description": "Explora el entorno submarino en una salida guiada."
+        },
+        "en": {
+          "name": "Scuba diving",
+          "description": "Explore the underwater environment on a guided dive."
+        },
+        "pt-BR": {
+          "name": "Mergulho",
+          "description": "Explore o ambiente submarino em um mergulho guiado."
+        }
+      },
+      "image": {
+        "file": "images/buceo-v1.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "OpenAI · ilustración editorial independiente IA",
+        "alt": {
+          "es": "Ilustración temática: Buceo",
+          "en": "Thematic illustration: Scuba diving",
+          "pt-BR": "Ilustração temática: Mergulho"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        },
+        "image_license": "Generada con IA; borrador para revisión humana",
+        "image_source_url": "",
+        "image_license_url": ""
+      }
+    },
+    {
+      "slug": "paddleboarding",
+      "type": "experience",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Paddleboarding",
+          "description": "Aprende a remar de pie y recorre la costa en tabla."
+        },
+        "en": {
+          "name": "Paddleboarding",
+          "description": "Learn to paddle standing up and explore the coast by board."
+        },
+        "pt-BR": {
+          "name": "Stand up paddle",
+          "description": "Aprenda a remar em pé e explore a costa de prancha."
+        }
+      },
+      "image": {
+        "file": "images/paddleboarding-v1.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "OpenAI · ilustración editorial independiente IA",
+        "alt": {
+          "es": "Ilustración temática: Paddleboarding",
+          "en": "Thematic illustration: Paddleboarding",
+          "pt-BR": "Ilustração temática: Stand up paddle"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        },
+        "image_license": "Generada con IA; borrador para revisión humana",
+        "image_source_url": "",
+        "image_license_url": ""
+      }
+    },
+    {
+      "slug": "excursion-san-bernardo",
+      "type": "experience",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Excursión a las islas de San Bernardo",
+          "description": "Una excursión regional para conocer las islas desde Coveñas."
+        },
+        "en": {
+          "name": "San Bernardo Islands excursion",
+          "description": "A regional excursion to discover the islands from Coveñas."
+        },
+        "pt-BR": {
+          "name": "Passeio às ilhas de San Bernardo",
+          "description": "Uma excursão regional para conhecer as ilhas a partir de Coveñas."
+        }
+      },
+      "image": {
+        "file": "images/excursion-san-bernardo-v1.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "OpenAI · ilustración editorial independiente IA",
+        "alt": {
+          "es": "Ilustración temática: Excursión a las islas de San Bernardo",
+          "en": "Thematic illustration: San Bernardo Islands excursion",
+          "pt-BR": "Ilustração temática: Passeio às ilhas de San Bernardo"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        },
+        "image_license": "Generada con IA; borrador para revisión humana",
+        "image_source_url": "",
+        "image_license_url": ""
+      }
+    },
+    {
+      "slug": "excursion-cispata",
+      "type": "experience",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Excursión a Cispatá",
+          "description": "Desde Coveñas, conoce los manglares de Cispatá, en San Antero."
+        },
+        "en": {
+          "name": "Cispatá excursion",
+          "description": "Travel from Coveñas to discover Cispatá’s mangroves in San Antero."
+        },
+        "pt-BR": {
+          "name": "Passeio a Cispatá",
+          "description": "Saia de Coveñas para conhecer os manguezais de Cispatá, em San Antero."
+        }
+      },
+      "image": {
+        "file": "images/excursion-cispata-v1.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "OpenAI · ilustración editorial independiente IA",
+        "alt": {
+          "es": "Ilustración temática: Excursión a Cispatá",
+          "en": "Thematic illustration: Cispatá excursion",
+          "pt-BR": "Ilustração temática: Passeio a Cispatá"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        },
+        "image_license": "Generada con IA; borrador para revisión humana",
+        "image_source_url": "",
+        "image_license_url": ""
+      }
     }
   ]
 }

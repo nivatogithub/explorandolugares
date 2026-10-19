@@ -1,3 +1,9 @@
+## Actualización vigente: experiencias ampliadas
+
+Coveñas tiene ahora5atractivos,5experiencias,11imágenes en paquete y30fichas gratuitas. Se añadieron Buceo,Paddleboarding,Excursión aSanBernardo yExcursión aCispatá con textos ES/EN/PT e ilustraciones temáticas, sin nombres/enlaces comerciales en tarjetas. Cispatá se identifica enSanAntero. Evidencia interna en criterios-editoriales.json; prompts y archivos en prompts-experiencias-v1.json y images/.
+
+Importado únicamente en preproducción local; HTTP yrecursos verificados en3idiomas. Revisión humana pendiente. Portada ylas3playas mantienen sus versiones rechazadas: esta ampliación no resuelve su identidad visual. No se publicó enproducción.
+
 # Coveñas — borrador depurado para revisión
 
 Rama `lugar/CO/sucre/covenas`. Paquete vigente: **cinco atractivos, una experiencia, siete imágenes y 30 fichas**, con textos ES/EN/PT-BR. Hasta ocho es un máximo; no se completan cupos.
