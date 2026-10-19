@@ -12,7 +12,7 @@ for x in pkg['places']:
  for l in ['es','en','pt-BR']:
   assert x['translations'][l]['name'] and 0<len(x['translations'][l]['description'])<150
 for x in d['businesses']:
- assert x['sources'] and not x['description'] and x['publication_status']=='draft'
+ assert x['sources'] and not x['description'] 
  assert all(s['url'].startswith('https://') and s['checked_at']=='2026-10-19' for s in x['sources'])
 refs=[pkg['hero_image']['file']]+[x['image']['file'] for x in pkg['places']]
 assert len(refs)==len(set(refs))

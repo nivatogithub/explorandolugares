@@ -6,7 +6,7 @@ Fecha: 19/10/2026. Worker Lugar 2. Rama `lugar/CO/antioquia/santa-fe-de-antioqui
 
 Borrador ES/EN/PT-BR con introducción directa, historia de un párrafo sin imagen, ocho atractivos y cuatro experiencias. Directorio de 30 fichas gratuitas documentadas: 16 hospedajes, ocho comercios de filigrana y seis transportes (ver conteo automático; no confundir listado con operación verificada). Todos quedan en borrador y sin canales inferidos. La guía municipal contiene establecimientos históricos: comprobar vigencia antes de publicación; no venderlos como afiliados ni activos verificados.
 
-`paquete-destino.borrador.json` cumple el validador real de manifiestos v2 de `backend/app/DestinationPackage.php`. **No es un ZIP importable todavía:** faltan los 13 archivos visuales; no se usaron rellenos, fotos antiguas ni aprobaciones heredadas. `directorio-preprod-30.json` es el paquete separado del importador de negocios vigente, no un campo improvisado del manifiesto v2.
+`paquete-destino.borrador.json` cumple el validador real de manifiestos v2 de `backend/app/DestinationPackage.php`. **No es un ZIP importable todavía:** faltan los 13 archivos visuales; no se usaron rellenos, fotos antiguas ni aprobaciones heredadas. `directorio-preprod-30.json` es el paquete separado del importador de negocios vigente, no un campo improvisado del manifiesto v2. `paquete-negocios-30.zip` fue leído por BusinessPackage::readZip: 30 negocios y 0 imágenes, sin importar datos. Estados draft/pendiente se conservan en ESTADO_DIRECTORIO.json porque no son campos aceptados por ese importador.
 
 No se importó en MariaDB, no se modificó preprod ni se desplegó. No hay imágenes generadas o aprobadas. La revisión visual y la aprobación integral están pendientes.
 
@@ -22,7 +22,7 @@ El Puente de Occidente une Santa Fe de Antioquia y **Olaya**; su inclusión como
 
 ## Encargo visual siguiente
 
-Seguir `.agents/skills/imagenes-destinos/SKILL.md` y la guía archivada vigente, con tinta/gouache semirrealista. Propuesta de portada: calle del centro con escala baja, fachadas mayormente blancas, aleros de teja y puertas de madera; contexto propio de la ciudad cálida del Occidente antioqueño. Antes de generar cotejar una vista completa del tramo, perspectiva, pavimento y edificios; no dibujar una iglesia genérica ni insertar el puente en el casco urbano. No se genera aún porque el mapa municipal y el texto turístico no bastan para verificar una fachada concreta.
+Seguir `.agents/skills/imagenes-destinos/SKILL.md` y la guía archivada vigente, con tinta/gouache semirrealista. Propuesta de portada: calle del centro con escala baja, fachadas mayormente blancas, aleros de teja y puertas de madera; contexto propio de la ciudad cálida del Occidente antioqueño. Antes de generar cotejar una vista completa del tramo, perspectiva, pavimento y edificios; no dibujar una iglesia genérica ni insertar el puente en el casco urbano. Se contrastó posteriormente la fachada/plaza con fotografía institucional de la Arquidiócesis; ver ENCARGO_PORTADA.md. No se inició generación por cierre de esta entrega solicitado por coordinación.
 
 Las fuentes factuales no son licencias fotográficas. No se descargaron nuevas fotos de referencia ni se usaron fotografías restringidas como entrada. Conservar diferencia entre composición independiente, revisión de fidelidad, aprobación de imagen y autorización final.
 
