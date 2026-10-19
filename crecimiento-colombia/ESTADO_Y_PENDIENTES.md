@@ -1,3 +1,7 @@
+## 19/10/2026 · Próximos destinos, diferidos por el propietario
+
+Después de terminar la aprobación de los borradores actuales y validar/corregir los publicados con las nuevas reglas, conservar este orden: **Guatapé → Cali → Barranquilla → Rincón del Mar**. No iniciar investigación, imágenes, ramas ni workers ahora; sin arranque automático. No modificar puntuaciones nacionales por este registro. Cola estructurada: `revisiones/cola-futura-destinos.json`.
+
 # Pendientes actualizados · 18/10/2026
 
 - **ENCOLADO:** cierre del comportamiento de creación y reclamación de negocios.
