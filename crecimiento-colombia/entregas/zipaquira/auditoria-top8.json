@@ -1,0 +1,223 @@
+{
+  "method": "Valoración editorial 1–5: identidad 40%, relevancia visitante 35%, diferenciación 25%. Sin conteos oficiales de visitantes; no es ranking estadístico ni oficial. Desempate por integración al recorrido. Misma identidad no duplica un componente.",
+  "selection": [
+    {
+      "rank": 1,
+      "slug": "catedral-de-sal",
+      "name": "Catedral de Sal",
+      "scores": {
+        "identity": 5,
+        "visitor_relevance": 5,
+        "distinctiveness": 5
+      },
+      "score": 100,
+      "source_ids": [
+        "sal",
+        "nacional"
+      ],
+      "reason": "Icono inequívoco y principal motivador de viaje.",
+      "selection_status": "propuesta_editorial_no_aprobada"
+    },
+    {
+      "rank": 2,
+      "slug": "plaza-comuneros",
+      "name": "Plaza de los Comuneros",
+      "scores": {
+        "identity": 5,
+        "visitor_relevance": 5,
+        "distinctiveness": 4
+      },
+      "score": 95,
+      "source_ids": [
+        "sal",
+        "departamento"
+      ],
+      "reason": "Conjunto urbano central; engloba lectura exterior del palacio, sin otra tarjeta redundante.",
+      "selection_status": "propuesta_editorial_no_aprobada"
+    },
+    {
+      "rank": 3,
+      "slug": "catedral-diocesana",
+      "name": "Catedral Diocesana",
+      "scores": {
+        "identity": 5,
+        "visitor_relevance": 4,
+        "distinctiveness": 4
+      },
+      "score": 88,
+      "source_ids": [
+        "diocesis"
+      ],
+      "reason": "Distinta de Catedral de Sal: interior y arquitectura propios.",
+      "selection_status": "propuesta_editorial_no_aprobada"
+    },
+    {
+      "rank": 4,
+      "slug": "estacion-tren",
+      "name": "Estación del Tren",
+      "scores": {
+        "identity": 4,
+        "visitor_relevance": 5,
+        "distinctiveness": 4
+      },
+      "score": 87,
+      "source_ids": [
+        "municipal",
+        "tren"
+      ],
+      "reason": "Ancla reconocible de llegada; edificio no equivale al viaje en tren.",
+      "selection_status": "propuesta_editorial_no_aprobada"
+    },
+    {
+      "rank": 5,
+      "slug": "colegio-gabo",
+      "name": "El Colegio de Gabo",
+      "scores": {
+        "identity": 4,
+        "visitor_relevance": 4,
+        "distinctiveness": 5
+      },
+      "score": 85,
+      "source_ids": [
+        "gabo"
+      ],
+      "reason": "Diferenciador literario de escala nacional; acceso a confirmar.",
+      "selection_status": "propuesta_editorial_no_aprobada"
+    },
+    {
+      "rank": 6,
+      "slug": "plaza-independencia",
+      "name": "Plaza de la Independencia",
+      "scores": {
+        "identity": 4,
+        "visitor_relevance": 5,
+        "distinctiveness": 3
+      },
+      "score": 82,
+      "source_ids": [
+        "municipal"
+      ],
+      "reason": "Vida urbana complementaria, no duplicado nominal de Comuneros.",
+      "selection_status": "propuesta_editorial_no_aprobada"
+    },
+    {
+      "rank": 7,
+      "slug": "museo-quevedo",
+      "name": "Casa Museo Quevedo Zornoza",
+      "scores": {
+        "identity": 4,
+        "visitor_relevance": 3,
+        "distinctiveness": 5
+      },
+      "score": 78,
+      "source_ids": [
+        "departamento",
+        "municipal"
+      ],
+      "reason": "Memoria musical propia; no confundir con Francisco de Quevedo.",
+      "selection_status": "propuesta_editorial_no_aprobada"
+    },
+    {
+      "rank": 8,
+      "slug": "museo-arqueologico",
+      "name": "Museo Arqueológico",
+      "scores": {
+        "identity": 3,
+        "visitor_relevance": 4,
+        "distinctiveness": 5
+      },
+      "score": 77,
+      "source_ids": [
+        "arqueologico"
+      ],
+      "reason": "Contenido arqueológico documentado; no se rellena con otro templo.",
+      "selection_status": "propuesta_editorial_no_aprobada"
+    }
+  ],
+  "exclusions": [
+    {
+      "name": "Mina de Nemocón",
+      "reason": "Otro municipio; no adjudicar a Zipaquirá."
+    },
+    {
+      "name": "Parque Jaime Duque",
+      "reason": "Tocancipá; no pertenece al destino."
+    },
+    {
+      "name": "Parque de la Sal",
+      "reason": "Complejo que contiene Catedral y Museo; agrupar para evitar duplicación."
+    },
+    {
+      "name": "Centro histórico",
+      "reason": "Marco de Comuneros/Independencia, no novena tarjeta repetida."
+    },
+    {
+      "name": "Palacio Municipal",
+      "reason": "Integrado en Comuneros; acceso interior a confirmar."
+    },
+    {
+      "name": "Parque Villaveces",
+      "reason": "Complementario; menor diferenciación frente a los ocho seleccionados."
+    },
+    {
+      "name": "Monumento Egan Bernal",
+      "reason": "Complementario; no desplaza Catedral, estación y patrimonio literario."
+    },
+    {
+      "name": "Plaza de los Mártires",
+      "reason": "Complementaria; menos singular en una primera visita."
+    },
+    {
+      "name": "Finkana / Nukasa",
+      "reason": "Oferta de operador/naturaleza complementaria; vigencia y acceso deben validarse antes de entrar al Top8."
+    }
+  ],
+  "experience_classification": [
+    {
+      "slug": "ruta-del-minero",
+      "source_ids": [
+        "minero"
+      ],
+      "kind": "oferta_operador_documentada",
+      "availability_confirmed": false,
+      "partnership": false
+    },
+    {
+      "slug": "tren-sabana",
+      "source_ids": [
+        "tren"
+      ],
+      "kind": "oferta_operador_documentada",
+      "availability_confirmed": false,
+      "partnership": false
+    },
+    {
+      "slug": "recorrido-historico",
+      "source_ids": [
+        "citytour"
+      ],
+      "kind": "editorial_autonoma",
+      "availability_confirmed": false,
+      "partnership": false
+    },
+    {
+      "slug": "sabores-locales",
+      "source_ids": [
+        "municipal"
+      ],
+      "kind": "editorial_autonoma",
+      "availability_confirmed": false,
+      "partnership": false
+    },
+    {
+      "slug": "artesania-sal",
+      "source_ids": [
+        "municipal"
+      ],
+      "kind": "editorial_autonoma",
+      "availability_confirmed": false,
+      "partnership": false
+    }
+  ],
+  "coverage_limit": "No se afirma un censo exhaustivo nacional ni un orden original previamente aprobado. Selección local contrastada con guía institucional 2026 y fuentes primarias."
+}
