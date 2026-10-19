@@ -2,7 +2,7 @@ import importlib.util, sys, json, shlex, hashlib, tempfile, unittest
 from pathlib import Path
 SCRIPTS=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(SCRIPTS))
-from deployment_recovery import protected_deploy, recover
+from deployment_recovery import protected_deploy, recover, finalize
 spec=importlib.util.spec_from_file_location('recovery_api',SCRIPTS/'desplegar-sftp.py');api=importlib.util.module_from_spec(spec);spec.loader.exec_module(api)
 h=lambda b:hashlib.sha256(b).hexdigest()
 class Fake:
@@ -28,7 +28,7 @@ class RecoveryTests(unittest.TestCase):
   selected=[]
   for i,(rel,raw) in enumerate([('public/index.html',b'new'),('app/New.php',b'new dependency')]):
    path=root/str(i);path.write_bytes(raw);selected.append({'relative':rel,'local':str(path),'bytes':len(raw),'sha256':h(raw)})
-  new=root/'new.json';new.write_text(json.dumps({'files':[]}));local=root/'live.json';local.write_text(json.dumps(old))
+  new=root/'new.json';new.write_text(json.dumps({'files':[],'commit':'abc1234'}));local=root/'live.json';local.write_text(json.dumps(old))
   return config,old,client,selected,new,local,old_snapshot
  def test_every_interruption_recovers_only_delta(self):
   for failure in (1,2,3):
@@ -46,6 +46,56 @@ class RecoveryTests(unittest.TestCase):
    journal=protected_deploy(api,client,c,selected,old,new,root/'recovery',local)
    recover(api,client,c,journal,local)
    self.assertEqual(client.files[api.remote_path(c,'public/index.html')],b'old')
+ def validation(self,root):
+  p=root/'validation.json';p.write_text(json.dumps({'schema_version':1,'commit':'abc1234','checks':{k:True for k in ['public_pages','accounts','statistics','assets']}}));return p
+ def test_cleanup_after_validation_keeps_only_receipt(self):
+  with tempfile.TemporaryDirectory() as t:
+   root=Path(t);c,old,client,selected,new,local,before=self.scenario(root)
+   journal=protected_deploy(api,client,c,selected,old,new,root/'recovery',local)
+   finalize(api,client,c,journal,self.validation(root))
+   self.assertEqual(list(journal.parent.iterdir()),[journal])
+   self.assertEqual(json.loads(journal.read_text())['state'],'finalized')
+   with self.assertRaises(ValueError):recover(api,client,c,journal,local)
+ def test_ten_validated_deliveries_keep_receipts_not_file_versions(self):
+  with tempfile.TemporaryDirectory() as t:
+   root=Path(t)
+   for _ in range(10):
+    c,old,client,selected,new,local,before=self.scenario(root)
+    journal=protected_deploy(api,client,c,selected,old,new,root/'recovery',local)
+    finalize(api,client,c,journal,self.validation(root))
+   self.assertEqual(len(list((root/'recovery').glob('*/journal.json'))),10)
+   self.assertEqual(len(list((root/'recovery').glob('*/before-*'))),0)
+   self.assertEqual(len([p for p in (root/'recovery').rglob('*') if p.is_file()]),10)
+ def test_interrupted_local_cleanup_can_be_retried(self):
+  from unittest.mock import patch
+  with tempfile.TemporaryDirectory() as t:
+   root=Path(t);c,old,client,selected,new,local,before=self.scenario(root)
+   journal=protected_deploy(api,client,c,selected,old,new,root/'recovery',local)
+   report=self.validation(root)
+   with patch('shutil.rmtree',side_effect=OSError('interrupted cleanup')):
+    with self.assertRaises(OSError):finalize(api,client,c,journal,report)
+   self.assertEqual(json.loads(journal.read_text())['state'],'validated')
+   finalize(api,client,c,journal,report)
+   self.assertEqual(list(journal.parent.iterdir()),[journal])
+ def test_cannot_accumulate_unvalidated_releases(self):
+  with tempfile.TemporaryDirectory() as t:
+   root=Path(t);c,old,client,selected,new,local,before=self.scenario(root)
+   protected_deploy(api,client,c,selected,old,new,root/'recovery',local)
+   with self.assertRaises(ValueError):protected_deploy(api,client,c,selected,old,new,root/'recovery',local)
+ def test_does_not_clean_without_complete_functional_validation(self):
+  with tempfile.TemporaryDirectory() as t:
+   root=Path(t);c,old,client,selected,new,local,before=self.scenario(root)
+   journal=protected_deploy(api,client,c,selected,old,new,root/'recovery',local)
+   report=self.validation(root);report.write_text(json.dumps({'schema_version':1,'commit':'abc1234','checks':{'public_pages':True}}))
+   with self.assertRaises(ValueError):finalize(api,client,c,journal,report)
+   self.assertTrue(list(journal.parent.glob('before-*')))
+ def test_does_not_clean_if_live_content_changed(self):
+  with tempfile.TemporaryDirectory() as t:
+   root=Path(t);c,old,client,selected,new,local,before=self.scenario(root)
+   journal=protected_deploy(api,client,c,selected,old,new,root/'recovery',local)
+   client.files[api.remote_path(c,'public/index.html')]=b'other change'
+   with self.assertRaises(ValueError):finalize(api,client,c,journal,self.validation(root))
+   self.assertTrue(list(journal.parent.glob('before-*')))
  def test_remote_drift_blocks_before_writes(self):
   with tempfile.TemporaryDirectory() as t:
    root=Path(t);c,old,client,selected,new,local,before=self.scenario(root)
