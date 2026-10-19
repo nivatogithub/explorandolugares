@@ -63,3 +63,17 @@ Mientras haya ejecución, comunicar avances comprobables y bloqueos; no generar 
 ## Corrección solicitada al revisar Jardín
 
 El 19 de octubre de 2026 el propietario aclaró que no desea completar ocho lugares a la fuerza ni presentar paseos libres o gastronomía genérica como tours. Jardín se corrige primero; los otros destinos quedan sujetos al mismo filtro durante su revisión. Hasta comprobar una oferta exacta no se añade un tour apícola por analogía con Jericó. Ver `revisiones/2026-10-19-criterios-experiencias.json` para el seguimiento, sin tratarlo como auditoría ya terminada de todos los destinos.
+
+## Neutralidad editorial y aparición comercial de experiencias
+
+Ajuste expreso del propietario: la comprobación de un oferente es **interna**. La tarjeta pública describe la actividad de forma neutral, sin dar publicidad gratuita al negocio investigado.
+
+- Usar nombres genéricos: Tour cafetero, Avistamiento de aves, Cueva del Esplendor, Tour urbano patrimonial. Mantener el nombre de un atractivo físico cuando identifica el lugar; no convertir el título de la experiencia en el nombre de una empresa, finca, familia o producto comercial.
+- No trasladar a la tarjeta variantes particulares de un proveedor: «tour corto/largo», paquetes, horarios, tarifas, inclusiones o puntos de recogida. Describir de forma breve qué se hace, sin asumir servicios de un paquete específico.
+- Descripciones públicas sin nombre de oferentes, hoteles, familias, fincas comerciales, referencias de investigación, recomendaciones ni atribución promocional. La tarjeta no es una ficha publicitaria gratuita.
+- Conservar operador/anfitrión, URL de la oferta, fecha y evidencia en `criterios-editoriales.json`/auditoría interna. No colocarlos en `external_url`, `external_label` o fuentes comerciales públicas del manifiesto editorial para suplir un anuncio.
+- La aparición pública de un negocio **dentro de una experiencia** requiere contratación del módulo comercial correspondiente, revisión y autorización. Se utiliza el sistema de operadores anunciados existente; investigar un proveedor no lo convierte en anunciante, aliado ni suscriptor. No inventar relaciones comerciales ni activar anuncios por defecto.
+- El listado gratuito del directorio conserva su alcance propio. Esta regla impide publicidad gratuita dentro de las experiencias y no elimina las fichas gratuitas permitidas del directorio.
+- Aplicar esta regla al crear sitios y al revisar los pendientes y publicados. Auditar títulos, descripciones, enlaces, llamadas a la acción y campos alternativos de imágenes. No afirmar revisados todos los sitios por haber corregido Jardín.
+
+En Jardín, Los Correa identifica la familia/oferta cafetera y La Herrera el recorrido; no se usan como marcas de las tarjetas genéricas. La evidencia de esas ofertas permanece interna. Sigue vigente el máximo de ocho atractivos sin mínimo ni relleno y la exigencia de oferta real para incluir experiencias.
