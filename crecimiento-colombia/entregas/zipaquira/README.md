@@ -4,7 +4,7 @@ Worker **Lugar 1**, rama `lugar/CO/cundinamarca/zipaquira`, base `8ff9dde`, 19-1
 
 ## Estado de la primera entrega (8587869)
 
-Este apartado conserva la evidencia de la entrega editorial anterior. La actualización de imágenes y el estado del ZIP completo se registran en `ESTADO_FINAL.md` y `qa.json`.
+Este apartado conserva la evidencia de la entrega editorial anterior. La actualización de imágenes y el estado del ZIP completo se registran en `ESTADO_FINAL.md` y `qa.json`. La integración posterior ya fue confirmada por el coordinador en preproducción (ID 25); la revisión humana sigue pendiente. El recibo está en `checklist.json`.
 
 ## Qué existía en la primera entrega
 
