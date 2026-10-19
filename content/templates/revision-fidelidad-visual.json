@@ -29,5 +29,37 @@
   "human_approval": {
     "decision": "pending",
     "sha256": null
+  },
+  "spatial_verification": {
+    "representation": "specific_place_or_thematic_activity",
+    "cartography": {
+      "source_url": "",
+      "checked_at": null,
+      "coordinates": null,
+      "north_and_coast_orientation": "",
+      "extent_or_scale": "",
+      "confirmed_spatial_relations": []
+    },
+    "terrain": {
+      "source_url": "",
+      "checked_at": null,
+      "relief_confirmed": [],
+      "uncertainties": []
+    },
+    "street_view": {
+      "coverage": "not_checked",
+      "views": [],
+      "fallback_identified_photos": []
+    },
+    "camera": {
+      "observer_location": "",
+      "viewing_direction": "",
+      "foreground": "",
+      "background": "",
+      "left": "",
+      "right": ""
+    },
+    "map_photo_agreement": false,
+    "limitations": []
   }
 }
