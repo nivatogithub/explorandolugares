@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "destination": "",
+  "component": "",
+  "role": "",
+  "status": "blocked_pending_reference",
+  "reference": {
+    "source_page": "",
+    "author": "",
+    "captured_at": null,
+    "checked_at": null,
+    "license": "",
+    "license_url": "",
+    "input_use_allowed": false,
+    "exact_sector_verified": false,
+    "file_sha256": ""
+  },
+  "invariants": [],
+  "generated": {
+    "file": "",
+    "sha256": "",
+    "prompt_file": ""
+  },
+  "comparison": {
+    "passed": false,
+    "failed_invariants": [],
+    "limitations": []
+  },
+  "human_approval": {
+    "decision": "pending",
+    "sha256": null
+  }
+}

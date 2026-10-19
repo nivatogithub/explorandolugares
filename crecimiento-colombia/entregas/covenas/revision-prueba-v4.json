@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "destination": "covenas",
+  "component": "prueba-fidelidad-v4",
+  "role": "Prueba de transformación, no portada ni ensenada asignada",
+  "status": "pending_role_identity_and_human_review",
+  "reference": {
+    "source_page": "https://commons.wikimedia.org/wiki/File:Cove%C3%B1as_-_Vista_playa_1.jpg",
+    "author": "SajoR",
+    "captured_at": "2021-09-25",
+    "checked_at": "2026-10-19",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "input_use_allowed": true,
+    "exact_sector_verified": false,
+    "file_sha256": "14c0c99f5280aa3cf2c7a552f357ac06eca64a8a0b03face447fc59887a210a8"
+  },
+  "invariants": [
+    {
+      "name": "vista desde tierra hacia mar",
+      "result": "coarse_match"
+    },
+    {
+      "name": "carretera y vehículo en primer plano",
+      "result": "coarse_match"
+    },
+    {
+      "name": "poste y cables a la derecha",
+      "result": "coarse_match"
+    },
+    {
+      "name": "carpas próximas a orilla",
+      "result": "coarse_match"
+    },
+    {
+      "name": "palmeras y claros en posición general",
+      "result": "coarse_match"
+    },
+    {
+      "name": "ausencia de skyline o montañas inventadas",
+      "result": "coarse_match"
+    }
+  ],
+  "generated": {
+    "file": "images/prueba-referencia-v4.webp",
+    "master": "images/prueba-referencia-v4-master.png",
+    "sha256": "bef5a8af549da45d46e5490f4f927c8a6d9bef3d08eaef9c9dd758bfdfc1a573",
+    "prompt_file": "prompt-prueba-v4.txt",
+    "tool": "builtin imagegen",
+    "bytes": 224508,
+    "width": 1200,
+    "height": 675,
+    "license": "CC BY-SA 4.0",
+    "attribution": "Adaptación ilustrada mediante IA de Coveñas - Vista playa 1.jpg, SajoR, CC BY-SA 4.0. Se modificó el acabado."
+  },
+  "comparison": {
+    "passed": false,
+    "failed_invariants": [],
+    "limitations": [
+      "Identidad del sector no acreditada; no asignar a una ensenada",
+      "Foto de2021no acredita situación actual",
+      "Coincidencia visual general, no cotejo geométrico perfecto; cielo y detalles secundarios reinterpretados",
+      "No prueba que este encuadre sea representativo de Coveñas como ciudad"
+    ]
+  },
+  "human_approval": {
+    "decision": "pending",
+    "sha256": null
+  }
+}

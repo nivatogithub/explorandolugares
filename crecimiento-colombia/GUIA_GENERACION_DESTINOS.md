@@ -91,3 +91,5 @@ En Jardín, Los Correa identifica la familia/oferta cafetera y La Herrera el rec
 - Coveñas, revisión 2026-10-19: confirmar que existe un malecón no valida su forma ni autoriza imaginarlo. Antes de regenerar costas construidas, identificar referencias visuales del tramo y verificar separación/altura de edificios, espacios entre predios y relación vía-arena-mar. No trasladar fachadas mediterráneas ni comprimir edificaciones por estética.
 
 - Portadas de ciudades costeras: representar su identidad urbana y territorial verificable; una playa genérica no basta. Comprobar tejido construido, separación y altura de edificaciones, infraestructura y relieve. No sustituir la ciudad por un paisaje virgen ni añadir edificios aleatorios para aparentar identidad.
+
+Regla obligatoria de creación y auditoría retroactiva: consultar `docs/REGLAS_FIDELIDAD_VISUAL_DESTINOS.md`. No generar un lugar específico desde ingredientes genéricos ni integrar una salida sin comparación de composición con referencia identificada.
