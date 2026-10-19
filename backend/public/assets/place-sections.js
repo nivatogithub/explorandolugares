@@ -6,7 +6,7 @@
  // Experiences are an independent section, after attractions, in every place.
  if(highlights&&experiences&&highlights.contains(experiences))highlights.after(experiences);
  // semirrealista-open-sections: private city proposals follow the approved open layout.
- if((new URLSearchParams(location.search).get('preview')==='1'||document.body.dataset.placePresentation==='1')&&['bogota','medellin','santa-marta'].some(s=>location.pathname.split('/').includes(s)))return;
+ if((new URLSearchParams(location.search).get('preview')==='1'||document.body.dataset.placePresentation==='1')&&['bogota','medellin','santa-marta','zipaquira','santa-fe-de-antioquia','jardin','covenas'].some(s=>location.pathname.split('/').includes(s)))return;
  const targets=[highlights,experiences,document.getElementById('lugares'),...document.querySelectorAll('[data-directory-tier]')].filter(Boolean);
  for(const section of targets){
   if(section.querySelector(':scope > details.place-disclosure'))continue;
