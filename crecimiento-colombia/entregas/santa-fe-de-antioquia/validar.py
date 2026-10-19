@@ -4,6 +4,8 @@ import json,pathlib,hashlib,subprocess
 p=pathlib.Path(__file__).resolve().parent
 pkg=json.loads((p/('paquete-destino.json' if (p/'paquete-destino.json').exists() else 'paquete-destino.borrador.json')).read_text()); d=json.loads((p/'directorio-preprod-30.json').read_text())
 assert len(pkg['places'])==12
+for locale in ['es','en','pt-BR']:
+ assert pkg['destination']['reasons'][locale] and all(x.strip() for x in pkg['destination']['reasons'][locale])
 assert sum(x['type']=='place' for x in pkg['places'])==8
 assert len(d['businesses'])==30
 assert len({x['name'].casefold() for x in d['businesses']})==30
