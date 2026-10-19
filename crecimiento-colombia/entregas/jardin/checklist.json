@@ -13,14 +13,15 @@
     "directory": "ZIP30-esquema-validado-fichas-gratis-borrador",
     "hero": "borrador-generado-inspeccionado-no-aprobado",
     "attraction_images": "8-generadas-inspeccionadas-derivados-y-hashes",
-    "experience_images": "6-generadas-inspeccionadas-derivados-y-hashes",
+    "experience_images": "4-reutilizadas-pertinentes-con-oferta-trazada",
     "history_image": "no-aplica-regla-vigente",
-    "archive": "ZIP-completo-validacion-nativa-y-formulario-pass",
-    "integration": "realizada-en-preproduccion-local-por-coordinador",
-    "qa_site": "coordinador-verifico-15-imagenes-8-atractivos-6-experiencias-30-fichas-ES-EN-PT-HTTP200-movil-sin-acordeones-sin-desborde",
+    "archive": "ZIP-completo-validacion-nativa-y-criterios-editoriales-pass",
+    "integration": "revision-editorial-pendiente-de-reimportacion-coordinador",
+    "qa_site": "pendiente-sobre-esta-revision",
     "owner_approval": "pendiente",
     "production": "no-autorizada",
-    "qa_images": "15-inspeccionadas-maestros-y-miniaturas"
+    "qa_images": "15-inspeccionadas-maestros-y-miniaturas",
+    "editorial": "8-lugares-documentados-y4-experiencias-con-oferente"
   },
   "needs_from_owner": [
     "Revisión visual del destino integrado en preproducción; publicación en producción requiere aprobación final"
@@ -30,7 +31,7 @@
     "Confirmar nuevamente consultas web rutinarias"
   ],
   "package_complete": true,
-  "local_integration_receipt": {
+  "previous_integration_receipt": {
     "reported_by": "coordinador-root",
     "date": "2026-10-19",
     "destination_id": 2,
