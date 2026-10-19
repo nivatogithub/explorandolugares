@@ -16,3 +16,6 @@ La página no pudo abrirse en esta revisión; no afirmar que se inspeccionó. Fa
 
 ## Antes de generar v3
 Inspeccionar referencias visuales identificadas, documentar rasgos observados y dudas. No enviar fotos ajenas al generador sin permiso suficiente. Generar a partir de hechos verificados y mantener aprobación humana pendiente.
+
+## Portada también rechazada
+El propietario identifica una playa virgen genérica, incluso parecida a Tayrona. La nueva portada debe mostrar Coveñas como destino costero urbanizado actual. Primero fijar un sector reconocible mediante referencias visuales; no añadir edificios aleatorios para simular ciudad ni utilizar vegetación/relieve de otro destino. La portada existente sigue en preproducción, sin aprobación; no se ha generado reemplazo.

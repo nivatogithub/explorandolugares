@@ -199,5 +199,18 @@
     }
   ],
   "human_approval": "pending",
-  "readiness": "blocked_pending_visual_identity_correction"
+  "readiness": "blocked_pending_visual_identity_correction",
+  "hero_image_review": {
+    "status": "rejected_pending_geolocated_visual_reference",
+    "feedback": "El propietario señala que la portada parece una playa virgen genérica o Tayrona, no Coveñas como ciudad costera actual.",
+    "required_identity": "Contexto costero urbanizado reconocible de Coveñas, sin inventar hitos ni representar toda la costa como virgen.",
+    "required_checks": [
+      "identificar sector y punto de vista con referencias visuales accesibles",
+      "construcciones de distintas alturas y separación real",
+      "relación real entre costa, calles, playa y tejido urbano",
+      "vegetación y relieve propios; no selva o montañas del Tayrona"
+    ],
+    "human_approval": "pending",
+    "updated_at": "2026-10-19"
+  }
 }
