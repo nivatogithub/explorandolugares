@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "destination": "jardin",
+  "rule": "Hasta8 atractivos, nunca cuota. Experiencia incluida requiere oferta concreta de oferente identificado y fuente propia. No implica alianza, guía inferida, membresía ni disponibilidad.",
+  "items": [
+    {
+      "slug": "parque-el-libertador",
+      "kind": "place",
+      "decision": "include",
+      "purpose": "El corazón del pueblo: jardines, cafés y fachadas tradicionales.",
+      "source_urls": [
+        "https://colombia.travel/es/jardin-antioquia/camina-por-el-parque-el-libertador"
+      ],
+      "checked_at": "2026-10-19"
+    },
+    {
+      "slug": "basilica-inmaculada-concepcion",
+      "kind": "place",
+      "decision": "include",
+      "purpose": "Piedra labrada y torres neogóticas frente al parque principal.",
+      "source_urls": [
+        "https://colombia.travel/es/jardin-antioquia/visita-la-basilica-menor-de-la-inmaculada-concepcion"
+      ],
+      "checked_at": "2026-10-19"
+    },
+    {
+      "slug": "cueva-del-esplendor",
+      "kind": "place",
+      "decision": "include",
+      "purpose": "Una cascada cae por la abertura de una cueva de montaña.",
+      "source_urls": [
+        "https://antioquia.gov.co/images/img/turismo/2025/los-imperdibles-de-suroeste-28-30-junio.pdf"
+      ],
+      "checked_at": "2026-10-19"
+    },
+    {
+      "slug": "reserva-jardin-de-rocas",
+      "kind": "place",
+      "decision": "include",
+      "purpose": "En Serranías, cerca del centro. Consulta el ingreso; no incluye guía.",
+      "source_urls": [
+        "https://www.jardinderocas.org/",
+        "https://www.jardinderocas.org/contactanos"
+      ],
+      "checked_at": "2026-10-19"
+    },
+    {
+      "slug": "la-garrucha",
+      "kind": "place",
+      "decision": "include",
+      "purpose": "Un cable tradicional conecta las laderas del pueblo.",
+      "source_urls": [
+        "https://jardin.antioquia.in/Sitios-Turisticos/la-garrucha"
+      ],
+      "checked_at": "2026-10-19"
+    },
+    {
+      "slug": "camino-de-la-herrera",
+      "kind": "place",
+      "decision": "include",
+      "purpose": "Camino empedrado entre el pueblo y La Herrera. Consulta su estado.",
+      "source_urls": [
+        "https://colombia.travel/es/el-jardin",
+        "https://otiumtornus.com/circuito-la-cascada-del-amor/"
+      ],
+      "checked_at": "2026-10-19"
+    },
+    {
+      "slug": "casa-museo-clara-rojas",
+      "kind": "place",
+      "decision": "include",
+      "purpose": "Arquitectura doméstica y memoria local junto al parque principal.",
+      "source_urls": [
+        "https://colombia.travel/es/jardin-antioquia/visita-la-casa-museo-clara-rojas-pelaez"
+      ],
+      "checked_at": "2026-10-19"
+    },
+    {
+      "slug": "reserva-loro-orejiamarillo",
+      "kind": "place",
+      "decision": "include",
+      "purpose": "Bosque altoandino en Ventanas. Consulta reserva y acceso con ProAves.",
+      "source_urls": [
+        "https://proaves.org/reserva-proaves-loro-orejiamarillo/"
+      ],
+      "checked_at": "2026-10-19"
+    },
+    {
+      "slug": "cafe-en-finca",
+      "kind": "experience",
+      "decision": "include",
+      "purpose": "Con Hotel Macao, en la finca Los Correa. Consulta disponibilidad.",
+      "source_urls": [
+        "https://hotelmacaojardin.com/tour-cafe-jardin-antioquia/"
+      ],
+      "checked_at": "2026-10-19",
+      "operator": {
+        "name": "Hotel Macao · Tour Cafetero Los Correa",
+        "offer_url": "https://hotelmacaojardin.com/tour-cafe-jardin-antioquia/",
+        "source_url": "https://hotelmacaojardin.com/tour-cafe-jardin-antioquia/"
+      },
+      "offer_verified": true,
+      "verification_scope": "Oferta publicada por el oferente; sin consulta comercial, reserva, cupo, alianza o membresía confirmada."
+    },
+    {
+      "slug": "observacion-aves",
+      "kind": "experience",
+      "decision": "include",
+      "purpose": "Oferta de Montañeros; consulta guía, condiciones y disponibilidad.",
+      "source_urls": [
+        "https://montaneros.co/tours-en-jardin-antioquia/avistamiento-de-aves-la-herrera/"
+      ],
+      "checked_at": "2026-10-19",
+      "operator": {
+        "name": "Montañeros Viajes & Aventura",
+        "offer_url": "https://montaneros.co/tours-en-jardin-antioquia/avistamiento-de-aves-la-herrera/",
+        "source_url": "https://montaneros.co/tours-en-jardin-antioquia/avistamiento-de-aves-la-herrera/"
+      },
+      "offer_verified": true,
+      "verification_scope": "Oferta publicada por el oferente; sin consulta comercial, reserva, cupo, alianza o membresía confirmada.",
+      "qualification": "La página conserva tarifas vencidas el31/01/2026. No se copian precios ni horarios; confirmar vigencia y condiciones con el oferente. No confundir con guía de Reserva Jardín de Rocas."
+    },
+    {
+      "slug": "caminata-cueva",
+      "kind": "experience",
+      "decision": "include",
+      "purpose": "Oferta de Montañeros con transporte y caminata. Consulta condiciones.",
+      "source_urls": [
+        "https://montaneros.co/tours-en-jardin-antioquia/cueva-del-esplendor-tour-corto/"
+      ],
+      "checked_at": "2026-10-19",
+      "operator": {
+        "name": "Montañeros Viajes & Aventura",
+        "offer_url": "https://montaneros.co/tours-en-jardin-antioquia/cueva-del-esplendor-tour-corto/",
+        "source_url": "https://montaneros.co/tours-en-jardin-antioquia/cueva-del-esplendor-tour-corto/"
+      },
+      "offer_verified": true,
+      "verification_scope": "Oferta publicada por el oferente; sin consulta comercial, reserva, cupo, alianza o membresía confirmada.",
+      "qualification": "Montañeros comercializa la oferta y menciona operador aliado sin identificarlo. Se identifica a Montañeros como oferente, no se inventa ejecutor ni alianza con ExplorandoLugares."
+    },
+    {
+      "slug": "paseo-patrimonial",
+      "kind": "experience",
+      "decision": "include",
+      "purpose": "Recorrido ofrecido por Montañeros. Consulta disponibilidad.",
+      "source_urls": [
+        "https://montaneros.co/tours-en-jardin-antioquia/tour-urbano-patrimonial-jardin/"
+      ],
+      "checked_at": "2026-10-19",
+      "operator": {
+        "name": "Montañeros Viajes & Aventura",
+        "offer_url": "https://montaneros.co/tours-en-jardin-antioquia/tour-urbano-patrimonial-jardin/",
+        "source_url": "https://montaneros.co/tours-en-jardin-antioquia/tour-urbano-patrimonial-jardin/"
+      },
+      "offer_verified": true,
+      "verification_scope": "Oferta publicada por el oferente; sin consulta comercial, reserva, cupo, alianza o membresía confirmada."
+    },
+    {
+      "slug": "sabores-jardinenos",
+      "kind": "experience",
+      "decision": "exclude",
+      "purpose": "Comer o probar dulces por cuenta propia no demuestra una experiencia contratada. Se retira del paquete; no se pierde la información histórica.",
+      "source_urls": [
+        "https://colombia.travel/es/el-jardin"
+      ],
+      "checked_at": "2026-10-19",
+      "offer_verified": false
+    },
+    {
+      "slug": "recorrido-en-chiva",
+      "kind": "experience",
+      "decision": "exclude",
+      "purpose": "No se contrastó oferta propia concreta del transportador. Se retira, sin concluir que no exista.",
+      "source_urls": [
+        "https://jardin.antioquia.in/"
+      ],
+      "checked_at": "2026-10-19",
+      "offer_verified": false
+    },
+    {
+      "slug": "tour-de-la-abeja",
+      "kind": "experience",
+      "decision": "exclude",
+      "purpose": "Candidata real comprobada en Jardín: oferta Tour de la Abeja de Jardín de Aventura. No es importación desde Jericó. No se añade en esta revisión: no se necesitan cupos ni imágenes nuevas para rellenar; queda investigada para ampliación con representación propia.",
+      "source_urls": [
+        "https://jardindeaventura.com/tour/tour-de-las-abejas/"
+      ],
+      "checked_at": "2026-10-19",
+      "operator": {
+        "name": "Jardín de Aventura",
+        "offer_url": "https://jardindeaventura.com/tour/tour-de-las-abejas/",
+        "source_url": "https://jardindeaventura.com/tour/tour-de-las-abejas/"
+      },
+      "offer_verified": true
+    }
+  ]
+}
