@@ -8,7 +8,7 @@
 - Historia breve de ancho completo, sin imagen o columna lateral.
 - **14 ilustraciones finales de borrador**: portada subterránea, ocho atractivos y cinco experiencias. Maestros originales, derivados WebP, prompts, procedencia, fuentes y hashes conservados.
 - **30 fichas gratuitas**: 6 alojamientos, 16 restaurantes/cafés y 8 comercios artesanales. Sin fotografías, descripciones, contactos deducidos o alianzas ficticias.
-- `paquete-destino.zip`: **1.145.046 bytes** (~1,09 MiB), manifiesto v2 y 14 imágenes WebP distintas. Solo el WebP de portada de 1200 px y las 13 tarjetas de 640 px se incluyen; maestros y rechazadas no se suben al hosting.
+- `paquete-destino.zip`: **1.145.069 bytes** (~1,09 MiB), manifiesto v2 y 14 imágenes WebP distintas. Solo el WebP de portada de 1200 px y las 13 tarjetas de 640 px se incluyen; maestros y rechazadas no se suben al hosting.
 - `paquete-negocios.zip`: manifiesto `business-import-v1`, 30 fichas sin imágenes.
 - Lectores PHP reales del repositorio `DestinationPackage::readZip` y `BusinessPackage::readZip`: **pasan**, con 14 imágenes y 30 negocios.
 - Verificados textos por idioma, longitud, orden Top8, ausencia de duplicados de nombres/imágenes, rutas, MIME, dimensiones, hashes y portada única en revisión editorial.
@@ -41,3 +41,7 @@ El propietario debe revisar la vista real, textos e imágenes; cualquier aprobac
 `preparar.py` recrea la base editorial (deja imágenes pendientes por diseño). Después ejecutar `imagenes/optimizar.py` con Pillow, `empaquetar.py` y `validar.py`. No volver a importar el archivo `paquete-destino.borrador.json`: el actual completo es `paquete-destino.json` dentro del ZIP.
 
 `revision-editorial.html` es una lectura independiente de los tres idiomas con imágenes; no suplanta la previsualización del sitio real. `qa.json` conserva los resultados exactos. Los estados anteriores de README describen únicamente el commit editorial inicial.
+
+## Compatibilidad con guardado del destino
+
+Se añadió una razón breve factual en ES/EN/PT porque `DestinationAdminService` exige `reasons` no vacío al guardar. Es un campo de compatibilidad; el diseño compartido lo mantiene oculto y no se agregó panel de motivos en la revisión editorial. Se conservan las mismas 14 imágenes y sus hashes.
