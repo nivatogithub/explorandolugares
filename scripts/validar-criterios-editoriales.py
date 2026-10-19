@@ -21,6 +21,8 @@ def validate(manifest,evidence):
   if not urls or not all(urlparse(u).scheme=='https' and urlparse(u).netloc for u in urls):errors.append(slug+': fuentes HTTPS obligatorias')
   if not e.get('checked_at'):errors.append(slug+': fecha de comprobación ausente')
   if p.get('type')=='experience':
+   for locale,t in p.get('translations',{}).items():
+    if t.get('external_url') or t.get('external_label'):errors.append(slug+': promoción comercial pública no permitida en manifiesto editorial neutral / '+locale)
    o=e.get('operator',{})
    if e.get('offer_verified') is not True or not str(o.get('name','')).strip() or not o.get('offer_url') or not o.get('source_url'):errors.append(slug+': no acredita oferente y oferta concreta')
    elif not all(urlparse(o[k]).scheme=='https' and urlparse(o[k]).netloc for k in ['offer_url','source_url']):errors.append(slug+': URL de oferente inválida')
