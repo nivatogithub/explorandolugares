@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 """Read-only HTTP validation of the four-destination local review batch."""
-import json,urllib.request,urllib.parse,re,concurrent.futures,zipfile
+import json,urllib.request,urllib.parse,re,concurrent.futures,zipfile,argparse
 from html.parser import HTMLParser
 from pathlib import Path
 BASE='http://127.0.0.1:8088'
 STAGING=Path(__file__).resolve().parents[2]/'preprod/.local/preprod/worker-review/lote-20261019'
 SLUGS=['zipaquira','santa-fe-de-antioquia','jardin','covenas']
+parser=argparse.ArgumentParser();parser.add_argument('--destination',choices=SLUGS);args=parser.parse_args()
+if args.destination:SLUGS=[args.destination]
 class Page(HTMLParser):
  def __init__(self):super().__init__();self.images=[];self.businesses=0;self.links=[];self.free=0
  def handle_starttag(self,tag,attrs):
@@ -19,7 +21,7 @@ def get(path):
  with urllib.request.urlopen(u,timeout=30) as r:
   assert r.status==200,u
   return r.read(),r.headers.get('Content-Type','')
-report={'origin':BASE,'production_accessed':False,'pages':[]};images=set()
+report={'origin':BASE,'scope':SLUGS,'production_accessed':False,'pages':[]};images=set()
 for slug in SLUGS:
  for locale,prefix in [('es',''),('en','en/'),('pt-BR','pt-br/')]:
   path='/'+prefix+'destinos/'+slug+'/'
@@ -40,5 +42,5 @@ def check_image(path):
  return len(body)
 with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:sizes=list(pool.map(check_image,sorted(images)))
 report.update(unique_destination_images=len(images),all_image_requests_passed=True,web_image_bytes=sum(sizes),editorial_approval='pending',success=True)
-out=Path(__file__).resolve().parents[1]/'crecimiento-colombia/lotes/2026-10-19';out.mkdir(parents=True,exist_ok=True);(out/'validacion-http.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
+out=Path(__file__).resolve().parents[1]/'crecimiento-colombia/lotes/2026-10-19';out.mkdir(parents=True,exist_ok=True);(out/('validacion-http-'+args.destination+'.json' if args.destination else 'validacion-http.json')).write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
 print(json.dumps(report,ensure_ascii=False,indent=2))
