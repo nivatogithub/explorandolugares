@@ -2,11 +2,12 @@
 declare(strict_types=1);
 
 require_once __DIR__.'/ExperienceOperatorAddon.php';
+require_once __DIR__.'/SubscriptionChangeService.php';
 final class BusinessSubscriptionAdminService
 {
     private const FREQUENCIES=['monthly'=>1,'quarterly'=>3,'semiannual'=>6,'annual'=>12];
 
-    public function __construct(private PDO $pdo) {}
+    public function __construct(private PDO $pdo,private ?DateTimeImmutable $clock=null) {}
 
     public function options(): array
     {
@@ -68,11 +69,14 @@ final class BusinessSubscriptionAdminService
             $lock=$this->pdo->getAttribute(PDO::ATTR_DRIVER_NAME)==='mysql'?' FOR UPDATE':'';
             $q=$this->pdo->prepare('SELECT id FROM businesses WHERE id=?'.$lock);$q->execute([$businessId]);
             if(!$q->fetchColumn())throw new RuntimeException('El negocio ya no está disponible.');
+            $changes=new SubscriptionChangeService($this->pdo);$changes->preservePaidRequests((int)$businessId);
+            $changeQuote=$changes->quote((int)$businessId,$plan,$frequency,null,$this->clock);
+            $amount=$plan==='free'?null:SubscriptionChangeService::money($changeQuote['due_cents']);
             $status=$plan==='free'?'pending_publication':'pending';$reviewed=null;
             $this->pdo->prepare('UPDATE business_subscriptions SET status="cancelled" WHERE business_id=? AND status IN ("pending","pending_publication","paid_pending_publication")')->execute([$businessId]);
             $q=$this->pdo->prepare('INSERT INTO business_subscriptions(business_id,plan_code,billing_frequency,status,starts_at,ends_at,reviewed_at,publish_not_before,quoted_amount,currency) VALUES(?,?,?,?,NULL,NULL,?,?,?,?)');
             $q->execute([$businessId,$plan,$frequency?:null,$status,$reviewed,$publishNotBefore,$amount,$currency]);
-            $id=(int)$this->pdo->lastInsertId();
+            $id=(int)$this->pdo->lastInsertId();$changes->capture($id,$changeQuote);
             if($ownTransaction)$this->pdo->commit();else $this->pdo->exec('RELEASE SAVEPOINT '.$savepoint);
             return $id;
         } catch(Throwable $error) {
@@ -90,6 +94,8 @@ final class BusinessSubscriptionAdminService
         $stamp=$publishedAt->setTimezone(new DateTimeZone('UTC'))->format('Y-m-d H:i:s');
         $this->pdo->beginTransaction();
         try{
+            $lock=$this->pdo->getAttribute(PDO::ATTR_DRIVER_NAME)==='mysql'?' FOR UPDATE':'';
+            $q=$this->pdo->prepare('SELECT id FROM businesses WHERE id=?'.$lock);$q->execute([$businessId]);
             $q=$this->pdo->prepare('SELECT id,address_text,latitude,longitude,location_map_url,location_confirmed,information_status,operation_status,record_origin FROM businesses WHERE id=?');$q->execute([$businessId]);$business=$q->fetch(PDO::FETCH_ASSOC);
             if(!$business)throw new RuntimeException('El negocio no existe.');
             if($business['information_status']==='PUBLICO'&&$business['record_origin']!=='public_import')throw new RuntimeException('Verifica la información y la autorización del negocio antes de publicarlo.');
@@ -107,8 +113,9 @@ final class BusinessSubscriptionAdminService
             if($sub['plan_code']!=='free'&&($sub['status']!=='paid_pending_publication'||$sub['reviewed_at']===null))throw new RuntimeException('Confirma el pago revisado antes de publicar esta suscripción.');
             if($sub['plan_code']!=='free'&&$business['information_status']!=='ACTIVO')throw new RuntimeException('Una suscripción paga requiere que el negocio esté reclamado y autorizado como ACTIVO.');
             if($sub['plan_code']==='free'&&!in_array($sub['status'],['pending_publication','active'],true))throw new RuntimeException('La suscripción Gratis no está lista para publicarse.');
+            $activation=(new SubscriptionChangeService($this->pdo))->activation($sub,$publishedAt);
             $renewalOf=null;
-            if($sub['plan_code']!=='free'){
+            if($sub['plan_code']!=='free'&&!$activation){
                 $previous=$this->pdo->prepare('SELECT id FROM business_subscriptions WHERE business_id=? AND id<>? AND plan_code<>"free" AND status IN ("active","expired") AND starts_at IS NOT NULL AND published_at IS NOT NULL AND reviewed_at IS NOT NULL ORDER BY starts_at DESC,id DESC LIMIT 1');
                 $previous->execute([$businessId,$sub['id']]);$renewalOf=$previous->fetchColumn();$renewalOf=$renewalOf===false?null:(int)$renewalOf;
             }
@@ -137,6 +144,7 @@ final class BusinessSubscriptionAdminService
             $starts=$stamp;
             $ends=null;
             if($sub['plan_code']!=='free')$ends=self::addCalendarMonths($publishedAt,self::FREQUENCIES[$sub['billing_frequency']]??0)->setTimezone(new DateTimeZone('UTC'))->format('Y-m-d H:i:s');
+            if($activation)$ends=$activation['ends_at'];
             $q=$this->pdo->prepare('UPDATE business_subscriptions SET status="active",starts_at=?,ends_at=?,published_at=?,renewal_of_subscription_id=? WHERE id=?');$q->execute([$starts,$ends,$stamp,$renewalOf,$sub['id']]);
             $q=$this->pdo->prepare('UPDATE businesses SET publication_status="published",updated_at=CURRENT_TIMESTAMP WHERE id=?');$q->execute([$businessId]);
             $this->pdo->commit();
