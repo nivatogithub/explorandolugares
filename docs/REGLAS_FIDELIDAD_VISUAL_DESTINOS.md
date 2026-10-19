@@ -40,3 +40,22 @@ Inventariar los activos realmente usados por cada destino y página de listado. 
 Prioridad: observaciones del propietario y errores de identidad; luego portadas; luego atractivos y experiencias. Revisar también traducciones/alt, mapa, duplicados y caché/imagen de tarjeta exterior. Conservar versiones anteriores y evidencia.
 
 Corregir en rama por destino, preparar paquete y revisar en preproducción. No retirar o reemplazar imágenes en producción automáticamente; publicación solo tras aprobación explícita. Una aprobación histórica se conserva como tal y no se presenta como auditoría aprobada con estas reglas nuevas.
+
+## Vistas de calle y panorámicas
+
+Registrar punto/URL, fecha de captura (separada de fecha de publicación), proveedor y tramo observado. Distinguir recorrido Google Street View de foto360deun colaborador. Comprobar fechas disponibles; una captura antigua no acredita infraestructura actual ni permite negar obras posteriores. No generalizar un tramo a toda la playa. Usar para contraste factual; comprobar permiso antes de adaptar o subir capturas a un generador.
+
+## Cartografía, relieve y vistas de calle antes de generar
+
+Regla obligatoria para crear o corregir imágenes que representen un lugar específico, incluidos destinos ya publicados. El mapa define la estructura espacial; las fotografías y vistas de calle verifican cómo se ve. Ninguna fuente sustituye a las otras.
+
+1. **Ubicar el tramo.** Guardar fuente cartográfica/URL, fecha de consulta, coordenadas verificadas cuando estén disponibles, escala o extensión aproximada, norte y límites del encuadre. No confundir el punto de una ficha comercial con los límites de una playa o barrio.
+2. **Leer la geografía.** Revisar forma y orientación de costa/bahía/isla, desembocaduras, cuerpos de agua, relieve y pendientes. Consultar terreno/topografía cuando el relieve afecte la escena; no agregar montañas, acantilados o islas ausentes. La cartografía no acredita por sí sola color del agua, arena o vegetación.
+3. **Leer la ocupación.** Contrastar vías y accesos, relación vía–playa–mar, muelles/espolones, manzanas, huellas y separación de edificios y espacios abiertos. Usar vista satelital/aérea si aporta evidencia y está disponible; registrar su antigüedad si consta. No deducir alturas o fachadas de un mapa plano.
+4. **Cruzar con Street View y fotos.** Revisar puntos orientados hacia el mismo tramo; conservar fecha de captura, proveedor y dirección de mirada. Verificar alturas, fachadas, vegetación, arena y mobiliario. Distinguir captura histórica, imagen reciente y obra documentada posterior. Si no hay cobertura, registrar esa ausencia y emplear fotos identificadas; no inventar la vista de calle.
+5. **Fijar la cámara.** Escribir antes del prompt dónde está el observador, hacia dónde mira y qué queda delante/detrás/izquierda/derecha. No combinar puntos de vista incompatibles ni comprimir distancias para hacer caber atractivos. Conservar geometría y relaciones comprobadas; registrar incertidumbres.
+6. **Comparar la salida.** Comprobar orientación, curva de costa, relieve, ubicación relativa de vías, accesos y edificios contra mapa y referencias. Rechazar inversiones, costas ficticias y redistribuciones aunque el resultado sea bonito. Guardar evidencia de la comparación y aprobación por hash.
+
+Registrar en la ficha cartografía, relieve, cobertura de vistas de calle, cámara, rasgos confirmados y límites de evidencia. Una actividad temática sin sitio preciso debe declararse como tal; no se le atribuye fidelidad geográfica. Si representa un fondo identificable, también aplica esta regla.
+
+Consultar mapas y panorámicas para verificar hechos no concede permiso para copiarlos o subir sus capturas al generador: mantener procedencia y condiciones de cada material. Esta regla exige revisión de los publicados; no autoriza reemplazarlos automáticamente.
