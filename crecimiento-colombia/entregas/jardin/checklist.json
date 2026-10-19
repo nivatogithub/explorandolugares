@@ -11,23 +11,23 @@
     "text_en": "borrador-completo",
     "text_pt-BR": "borrador-completo",
     "directory": "ZIP30-esquema-validado-fichas-gratis-borrador",
-    "hero": "borrador-v1-generado-inspeccionado-no-aprobado",
-    "attraction_images": "8-pendientes",
-    "experience_images": "6-pendientes",
+    "hero": "borrador-generado-inspeccionado-no-aprobado",
+    "attraction_images": "8-generadas-inspeccionadas-derivados-y-hashes",
+    "experience_images": "6-generadas-inspeccionadas-derivados-y-hashes",
     "history_image": "no-aplica-regla-vigente",
-    "archive": "bloqueado-hasta-imagenes-no-inventar-zip",
-    "integration": "no-realizada-no-tocar-preprod",
-    "qa_site": "pendiente",
+    "archive": "ZIP-completo-validacion-nativa-y-formulario-pass",
+    "integration": "pendiente-coordinador-no-tocar-preprod",
+    "qa_site": "pendiente-coordinador",
     "owner_approval": "pendiente",
-    "production": "no-autorizada"
+    "production": "no-autorizada",
+    "qa_images": "15-inspeccionadas-maestros-y-miniaturas"
   },
   "needs_from_owner": [
-    "Revisión del borrador de portada cuando se entregue",
-    "Selección/editorial de 8 si desea ajustar candidatos",
-    "Aprobación visual final posterior a integración"
+    "Revisión visual del destino integrado en preproducción; publicación en producción requiere aprobación final"
   ],
   "not_required": [
     "Credenciales de hosting",
     "Confirmar nuevamente consultas web rutinarias"
-  ]
+  ],
+  "package_complete": true
 }
