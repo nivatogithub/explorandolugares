@@ -49,3 +49,10 @@ RewriteRule ^pt-br/negocios/([A-Fa-f0-9-]{16,64})/?$ negocio.php?id=$1&idioma=pt
 RewriteRule ^destinos/([a-z0-9-]+)(?:/index\.html)?/?$ destino.php?destino=$1&idioma=es [L,QSA,NC]
 RewriteRule ^en/destinos/([a-z0-9-]+)(?:/index\.html)?/?$ destino.php?destino=$1&idioma=en [L,QSA,NC]
 RewriteRule ^pt-br/destinos/([a-z0-9-]+)(?:/index\.html)?/?$ destino.php?destino=$1&idioma=pt-BR [L,QSA,NC]
+
+# HTML must revalidate after a deployment; preserve caching for images/assets.
+<IfModule mod_headers.c>
+  <FilesMatch "\.(?:html?|php)$">
+    Header always set Cache-Control "no-cache, max-age=0, must-revalidate"
+  </FilesMatch>
+</IfModule>
