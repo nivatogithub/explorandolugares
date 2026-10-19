@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "scope": "Auditoría requerida; no certifica inventario de producción ni trabajo ya ejecutado",
+  "production_changed": false,
+  "destinations": [
+    {
+      "slug": "covenas",
+      "status": "correccion_visual_rechazada",
+      "historical_approval_preserved": true,
+      "auto_publish": false
+    },
+    {
+      "slug": "cartagena",
+      "status": "pending_inventory_and_visual_audit",
+      "historical_approval_preserved": true,
+      "auto_publish": false
+    },
+    {
+      "slug": "bogota",
+      "status": "pending_inventory_and_visual_audit",
+      "historical_approval_preserved": true,
+      "auto_publish": false
+    },
+    {
+      "slug": "medellin",
+      "status": "pending_inventory_and_visual_audit",
+      "historical_approval_preserved": true,
+      "auto_publish": false
+    },
+    {
+      "slug": "santa-marta",
+      "status": "pending_inventory_and_visual_audit",
+      "historical_approval_preserved": true,
+      "auto_publish": false
+    },
+    {
+      "slug": "jerico",
+      "status": "pending_inventory_and_visual_audit",
+      "historical_approval_preserved": true,
+      "auto_publish": false
+    },
+    {
+      "slug": "jardin",
+      "status": "pending_inventory_and_visual_audit",
+      "historical_approval_preserved": true,
+      "auto_publish": false
+    },
+    {
+      "slug": "zipaquira",
+      "status": "pending_inventory_and_visual_audit",
+      "historical_approval_preserved": true,
+      "auto_publish": false
+    },
+    {
+      "slug": "santa-fe-de-antioquia",
+      "status": "pending_inventory_and_visual_audit",
+      "historical_approval_preserved": true,
+      "auto_publish": false
+    }
+  ]
+}
