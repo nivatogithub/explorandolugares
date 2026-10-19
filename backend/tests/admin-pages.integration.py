@@ -25,7 +25,7 @@ DB.execute('PRAGMA foreign_keys=ON')
 DB.executescript((ROOT / 'backend/database/sqlite.sql').read_text())
 DB.executescript((ROOT / 'backend/database/destinations.sqlite.sql').read_text())
 DB.executescript((ROOT / 'backend/database/migrations/006-poi-experience-links.sqlite.sql').read_text())
-for number in range(8, 44):
+for number in range(8, 45):
     matches = list((ROOT / 'backend/database/migrations').glob(f'{number:03d}-*.sqlite.sql'))
     assert len(matches) == 1, f'Migración SQLite faltante o ambigua: {number:03d}'
     DB.executescript(matches[0].read_text())
@@ -677,6 +677,23 @@ try:
         rendered_status,rendered,_=request('/destino.php?destino=jerico',opener=GUEST)
         operators=re.findall(r'<ul class="experience-paid-operators".*?</ul>',rendered,re.S)
         check(rendered_status==200 and any('Cafetería de cuenta HTTP' in item for item in operators),'El operador vigente no aparece dentro de la experiencia pública.')
+        quote_url='/business/dashboard.php?tab=business&business='+str(business_id)+'&subscription_quote=1&plan_code=page_premium&billing_frequency=monthly&operator_experience_id='+str(addon_experience)
+        quote_status, quote_body, quote_headers=request(quote_url,opener=business_flow)
+        quote_data=json.loads(quote_body)
+        check(quote_status==200 and quote_data['quote']['kind']=='upgrade' and quote_data['quote']['credit_cents']>0 and quote_data['quote']['due_cents']<5000000, 'La cotización pública no aplicó el saldo al upgrade: '+str(quote_status)+' '+quote_body)
+        check(quote_headers.get('Cache-Control')=='no-store' and len(quote_data['token'])==48, 'La cotización no quedó privada y vinculada a la sesión.')
+        check(DB.execute('SELECT status FROM business_subscriptions WHERE id=(SELECT subscription_id FROM business_subscription_payment_evidence WHERE id=?)',(payment_row['id'],)).fetchone()[0]=='active','Cotizar canceló la suscripción vigente.')
+        free_status, free_body, _=request('/business/dashboard.php?tab=business&business='+str(business_id)+'&subscription_quote=1&plan_code=free',opener=business_flow)
+        free_quote=json.loads(free_body)['quote']
+        check(free_status==200 and free_quote['kind']=='renewal' and free_quote['effective_at'] and free_quote['due_cents']==0,'Gratis no quedó reservado para el vencimiento.')
+        upgrade_due=f"{quote_data['quote']['due_cents']/100:.2f}"
+        status, _, _=multipart('/business/dashboard.php?tab=business', {'csrf':account_payment_csrf,'business_id':business_id,'plan_code':'page_premium','billing_frequency':'monthly','operator_experience_id':addon_experience,'subscription_quote_token':quote_data['token'],'payment_reference':'TX-UPGRADE-HTTP','transaction_date':date.today().isoformat(),'paid_amount':upgrade_due,'payment_method':'qr','source_bank':'BANCO FICTICIO'}, [('payment_proof','upgrade.png','image/png',sample_png)], business_flow)
+        check(status==303,'No guardó el comprobante público del upgrade con su diferencia cotizada.')
+        upgrade_row=DB.execute('SELECT s.id,s.quoted_amount,c.credit_cents,c.due_cents,c.original_ends_at,e.id AS evidence_id FROM business_subscriptions s JOIN subscription_changes c ON c.subscription_id=s.id JOIN business_subscription_payment_evidence e ON e.subscription_id=s.id WHERE s.business_id=? ORDER BY s.id DESC LIMIT 1',(business_id,)).fetchone()
+        check(upgrade_row and upgrade_row['due_cents']==quote_data['quote']['due_cents'] and upgrade_row['credit_cents']==quote_data['quote']['credit_cents'],'Perdió el saldo o la diferencia al guardar el comprobante real HTTP.')
+        check(DB.execute('SELECT status FROM business_subscriptions WHERE id=(SELECT subscription_id FROM business_subscription_payment_evidence WHERE id=?)',(payment_row['id'],)).fetchone()[0]=='active','Enviar el comprobante del upgrade desactivó la suscripción anterior.')
+        status,_,_=request('/admin/suscripciones.php',{'csrf':csrf,'action':'review_payment','evidence_id':upgrade_row['evidence_id'],'decision':'rejected','admin_note':'Rechazo sintético controlado de upgrade','customer_message':'Soporte de prueba rechazado para verificar que conservas la suscripción anterior.'},ADMIN)
+        check(status==200,'No pudo rechazar el soporte sintético del upgrade.')
         DB.execute("UPDATE points_of_interest SET publication_status='draft' WHERE id=?",(addon_experience,));DB.commit()
         rendered=request('/destino.php?destino=jerico',opener=GUEST)[1]
         check(not any('Cafetería de cuenta HTTP' in item for item in re.findall(r'<ul class="experience-paid-operators".*?</ul>',rendered,re.S)),'La experiencia oculta sigue anunciando el operador.')
@@ -688,6 +705,11 @@ try:
     status, body, _ = request('/business/dashboard.php?tab=business', opener=business_flow)
     check(status == 200 and 'Pago confirmado' in body and 'todavía requiere aprobación de publicación' in body, 'La cuenta no muestra que el pago se aprobó mientras el negocio sigue en borrador.')
     account_payment_csrf = __import__('re').search(r'name="csrf" value="([^"]+)"', body).group(1)
+    # An approved but unpublished payment must not disappear when selecting again.
+    status, blocked_body, _ = multipart('/business/dashboard.php?tab=business', {'csrf': account_payment_csrf, 'business_id': business_id, 'plan_code': 'free'}, [], business_flow)
+    check(status == 400 and 'pago confirmado pendiente' in blocked_body, 'Permitió reemplazar una solicitud con dinero ya confirmado.')
+    # This isolated fixture now represents an elapsed, previously published term.
+    DB.execute("UPDATE business_subscriptions SET status='expired',starts_at=datetime('now','-31 days'),ends_at=datetime('now','-1 day'),published_at=datetime('now','-31 days') WHERE id=(SELECT subscription_id FROM business_subscription_payment_evidence WHERE id=?)",(payment_row['id'],)); DB.commit()
     status, _, _ = multipart('/business/dashboard.php?tab=business', {'csrf': account_payment_csrf, 'business_id': business_id, 'plan_code': 'page', 'billing_frequency': 'monthly', 'payment_reference': 'TRX-RECHAZO-LOCAL', 'transaction_date':date.today().isoformat(), 'paid_amount':'69901', 'payment_method':'qr', 'source_bank':'BANCO FICTICIO'}, [('payment_proof', 'soporte-segundo.png', 'image/png', sample_png)], business_flow)
     check(status == 303, 'La cuenta no pudo enviar un soporte de reemplazo para probar el flujo de rechazo.')
     check('Difiere del importe esperado' in request('/admin/suscripciones.php',opener=ADMIN)[1], 'No advirtió la diferencia entre importe declarado y cotizado.')
