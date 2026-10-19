@@ -1,65 +1,43 @@
 {
-  "status": "seleccion_editorial_ocho_para_revision",
-  "method": "Selección editorial documentada por relevancia turística, identidad y diferenciación dentro del municipio. No es una clasificación oficial, ni reproduce un puntaje nacional previo. Se agrupan malecón/Segunda Ensenada; se excluyen vecinos y sectores solapados. Ocho es el máximo, no una prueba de que no exista ningún candidato superior.",
+  "status": "cinco_atractivos_documentados_para_revision",
+  "method": "Selección editorial conservadora, sin mínimo de tarjetas. Se mantienen cinco atractivos con propósito verificable, se apartan sectores solapados y accesos no comprobados. No es un ranking oficial.",
   "candidates": [
     {
       "rank": 1,
       "slug": "primera-ensenada",
       "ranking_validated": false,
-      "confidence": "media",
-      "reason": "Atractivo nombrado en fuentes regionales/institucionales; orden editorial sujeto a revisión."
+      "source_url": "https://www.golfodemorrosquillo.com/sitios/covenas/playas-de-la-primera-ensenada",
+      "reason": "Identidad física y propósito de visita documentados; revisar las condiciones actuales de acceso."
     },
     {
       "rank": 2,
       "slug": "segunda-ensenada",
       "ranking_validated": false,
-      "confidence": "media",
-      "reason": "Atractivo nombrado en fuentes regionales/institucionales; orden editorial sujeto a revisión."
+      "source_url": "https://www.dnp.gov.co/Prensa_/Noticias/Paginas/dnp-y-enterritorio-entregan-malecon-turistico-de-covenas.aspx",
+      "reason": "Identidad física y propósito de visita documentados; revisar las condiciones actuales de acceso."
     },
     {
       "rank": 3,
       "slug": "cienaga-la-caimanera",
       "ranking_validated": false,
-      "confidence": "media",
-      "reason": "Atractivo nombrado en fuentes regionales/institucionales; orden editorial sujeto a revisión."
+      "source_url": "https://www.golfodemorrosquillo.com/sitios/covenas/cienaga-de-la-caimanera",
+      "reason": "Identidad física y propósito de visita documentados; revisar las condiciones actuales de acceso."
     },
     {
       "rank": 4,
       "slug": "museo-infanteria-marina",
       "ranking_validated": false,
-      "confidence": "media",
-      "reason": "Atractivo nombrado en fuentes regionales/institucionales; orden editorial sujeto a revisión."
+      "source_url": "https://www.armada.mil.co/es/content/11-anos-reviviendo-gesta-heroica-los-infantes-marina",
+      "reason": "Identidad física y propósito de visita documentados; revisar las condiciones actuales de acceso."
     },
     {
       "rank": 5,
-      "slug": "covenitas",
-      "ranking_validated": false,
-      "confidence": "media",
-      "reason": "Atractivo nombrado en fuentes regionales/institucionales; orden editorial sujeto a revisión."
-    },
-    {
-      "rank": 6,
       "slug": "la-coquerita",
       "ranking_validated": false,
-      "confidence": "media",
-      "reason": "Atractivo nombrado en fuentes regionales/institucionales; orden editorial sujeto a revisión."
-    },
-    {
-      "rank": 7,
-      "slug": "represa-de-villeros",
-      "ranking_validated": false,
-      "confidence": "media",
-      "reason": "Atractivo nombrado en fuentes regionales/institucionales; orden editorial sujeto a revisión."
-    },
-    {
-      "rank": 8,
-      "slug": "casa-de-la-cultura",
-      "ranking_validated": false,
-      "confidence": "media",
-      "reason": "Atractivo nombrado en fuentes regionales/institucionales; orden editorial sujeto a revisión."
+      "source_url": "https://www.golfodemorrosquillo.com/sitios/covenas/playas-de-la-coquerita",
+      "reason": "Identidad física y propósito de visita documentados; revisar las condiciones actuales de acceso."
     }
   ],
-  "missing_slots": 0,
   "excluded": [
     {
       "name": "Tolú, San Antero, Cispatá e islas de San Bernardo",
@@ -69,5 +47,13 @@
       "name": "Punta Piedra, El Edén, La Marta y Boca de la Ciénaga",
       "reason": "Verificar límites y solapamiento con sectores ya incluidos antes de sumar tarjetas."
     }
-  ]
+  ],
+  "exclusions_editorial": {
+    "covenitas": "Sector de playa cuyo solapamiento con otros sectores ya incluidos no se ha despejado; no sumar una tarjeta para completar cupos.",
+    "represa-de-villeros": "Sitio real documentado; falta comprobar condiciones de acceso y finalidad de visita turística actual.",
+    "casa-de-la-cultura": "Institución real documentada; falta comprobar un programa o acceso visitable actual. No inventar una experiencia de música.",
+    "caminar-malecon": "Paseo autónomo; no acredita servicio turístico organizado con oferente.",
+    "sabores-del-caribe": "Comer en restaurantes no acredita por sí solo un tour o taller gastronómico.",
+    "kayak": "Fuente regional acredita actividad posible, pero no se comprobó una oferta concreta de un prestador. Conservar candidato, no publicar como servicio."
+  }
 }
