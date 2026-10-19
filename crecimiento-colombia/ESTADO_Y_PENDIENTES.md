@@ -1,3 +1,7 @@
+## 19/10/2026 · Contingencia de archivos temporal
+
+El cierre de cada despliegue validado elimina las copias de archivos, verificaciones y temporales remotos propios; conserva solo un recibo pequeño. Exige informe funcional del commit exacto y coincidencia de los bytes publicados. Otra entrega se bloquea hasta finalizar la contingencia anterior. Las versiones históricas permanecen en Git, no como copias sucesivas de archivos. Pruebas: limpieza tras validación, conservación ante informe incompleto/cambios ajenos y bloqueo de acumulación. Respaldos de base de datos fuera de esta limpieza. Solo herramientas preparadas, sin desplegar código productivo.
+
 ## Candidato revisado · 19/10/2026
 
 Comprobación general local aprobada después de los cambios. MariaDB: migración reanudable/estados iniciales, ciclo de cuentas y concurrencia de suscripciones aprobados. Plan incremental calculado contra el último manifiesto confirmado: 43 archivos, 998.562 bytes; cero archivos de lugares/imágenes modificados o retirados. Se usará de todos modos `--preserve-places`. El cambio incompleto de CTA de lugares se retiró del candidato y permanece pendiente en P02.
