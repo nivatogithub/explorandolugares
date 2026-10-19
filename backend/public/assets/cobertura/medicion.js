@@ -11,7 +11,7 @@
  fetch('/api/medicion.php',{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'revoke'})}).catch(()=>{});
  const lang=document.documentElement.lang.startsWith('en')?'en':document.documentElement.lang.startsWith('pt')?'pt':'es';
  const text={es:['Privacidad y estadísticas','Contamos consultas y clics de forma agregada, sin cookies analíticas ni identificar navegadores. El país de conexión se obtiene temporalmente de la IP; no guardamos la IP en estas estadísticas.','Excluir este navegador de las estadísticas','Cerrar','Privacidad'],en:['Privacy and statistics','We count page views and clicks in aggregate, without analytics cookies or browser identifiers. Connection country is derived temporarily from IP; the IP is not stored in these statistics.','Exclude this browser from statistics','Close','Privacy'],pt:['Privacidade e estatísticas','Contamos consultas e cliques de forma agregada, sem cookies analíticos nem identificadores de navegador. O país da conexão é obtido temporariamente do IP; não armazenamos o IP nestas estatísticas.','Excluir este navegador das estatísticas','Fechar','Privacidade']}[lang];
- const style=document.createElement('link');style.rel='stylesheet';style.href='/assets/cobertura/medicion.css?v=ea326bce873a';document.head.append(style);
+ if(!document.querySelector('link[href*="/assets/cobertura/medicion.css?v=2825cd17105b"]')){const style=document.createElement('link');style.rel='stylesheet';style.href='/assets/cobertura/medicion.css?v=2825cd17105b';document.head.append(style);}
  function count(payload){if(trackingBlocked())return Promise.resolve(null);return fetch('/api/actividad.php',{method:'POST',credentials:'omit',referrerPolicy:'no-referrer',keepalive:true,headers:{'Content-Type':'application/json'},body:JSON.stringify({path:location.pathname,...payload})}).then(r=>r.ok?r.json():null).catch(()=>null);}
  window.elBasicPageCount=count({});
  function trackCards(){
@@ -36,8 +36,8 @@
   const href=link.getAttribute('href')||'',channel=href.startsWith('tel:')?'phone':href.startsWith('mailto:')?'email':/wa\.me|api\.whatsapp\.com/.test(href)?'whatsapp':/^https?:/.test(href)?'website':null;
   if(channel)count({metric:'contact_click',business_id:id,channel});
  });
- const prefs=document.createElement('button');prefs.type='button';prefs.className='el-measurement-preferences';
- const label=()=>{prefs.textContent=text[0]+(browserExcluded?' · '+text[2]:'');};label();
+ const prefs=document.querySelector('footer .el-measurement-preferences')||document.createElement('button');prefs.type='button';prefs.className='el-measurement-preferences';
+ const label=()=>{prefs.textContent=text[0];prefs.setAttribute('aria-label',text[0]+(browserExcluded?' · '+text[2]:''));};label();
  let panel=null;prefs.addEventListener('click',()=>{
   panel?.remove();panel=document.createElement('aside');panel.className='el-measurement-consent';panel.setAttribute('aria-label',text[0]);
   const title=document.createElement('h2');title.textContent=text[0];const description=document.createElement('p');description.textContent=text[1];
@@ -45,6 +45,6 @@
   box.addEventListener('change',()=>{try{localStorage.setItem(exclusionKey,box.checked?'1':'0');if(localStorage.getItem(exclusionKey)!==(box.checked?'1':'0'))throw Error();browserExcluded=box.checked;label();}catch{box.checked=browserExcluded;caption.textContent=text[2]+' — no se pudo guardar';}});
   const close=document.createElement('button');close.type='button';close.textContent=text[3];close.addEventListener('click',()=>{panel.remove();panel=null;prefs.focus?.();});
   const privacy=document.createElement('a');privacy.href=(lang==='en'?'/en':lang==='pt'?'/pt-br':'')+'/privacidad/';privacy.textContent=text[4];panel.append(title,description,line,close,privacy);document.body.append(panel);
- });(document.querySelector('footer')||document.body).append(prefs);
+ });if(!document.querySelector('footer .el-measurement-preferences'))(document.querySelector('footer')||document.body).append(prefs);
  window.addEventListener('storage',event=>{if(event.key===exclusionKey){browserExcluded=event.newValue==='1';label();}});
 })();
