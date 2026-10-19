@@ -112,3 +112,9 @@ Cafés na praça, arquitetura de pedra e natureza andina.
 15 imágenes generadas e inspeccionadas: portada,8 atractivos y6 experiencias. Se corrigieron5 fondos inventados antes de empaquetar. Galería interna `revision-imagenes.jpg`; ningún archivo reutilizado como otra tarjeta. ZIP1,90MB; los originales PNG permanecen aparte y no van al hosting.
 
 Listo para integración de borrador por el coordinador: ver `IMPORTACION.md`. QA del sitio y aprobación humana siguen pendientes.
+
+## Integración local realizada ·19/10/2026
+
+El coordinador confirmó la importación de esta entrega en [Jardín en preproducción](http://127.0.0.1:8088/destinos/jardin/), ID2, usando el paquete SHA-256 `95448ba32079981ff69b8ae15badd5bd7bdf7962ce2313e7c175e7d927842a15`. Verificó15 imágenes,8 atractivos,6 experiencias y30 fichas; ES/EN/PT-BR conHTTP200 y vista móvil sin acordeones ni desborde. Este registro recoge su comprobación, no una repetición de QA por este worker.
+
+**Revisión humana pendiente.** El destino no se considera aprobado para producción. El ZIP, su hash, los contenidos y las imágenes no se modificaron al registrar este estado.
