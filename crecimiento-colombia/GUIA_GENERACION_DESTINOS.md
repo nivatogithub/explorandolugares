@@ -87,3 +87,5 @@ En Jardín, Los Correa identifica la familia/oferta cafetera y La Herrera el rec
 - Comparar playas del mismo destino lado a lado: cada imagen debe mostrar diferencias verificadas; no basta cambiar colores, cámara o distribución de las mismas palmeras. Si no hay evidencia diferenciadora, investigar o dejar pendiente; no inventar rasgos para diferenciarlas.
 - Registrar por imagen: sector, fuentes/fecha, rasgos confirmados, incertidumbres, elementos prohibidos, motivo de elección del encuadre y resultado de revisión. La aprobación técnica de un archivo no equivale a fidelidad geográfica ni aprobación editorial.
 - Aplicar a destinos nuevos, borradores y revisión de publicados. Ante objeción de identidad, marcar la imagen pendiente de corrección; no declararla lista ni propagarla como ejemplo.
+
+- Coveñas, revisión 2026-10-19: confirmar que existe un malecón no valida su forma ni autoriza imaginarlo. Antes de regenerar costas construidas, identificar referencias visuales del tramo y verificar separación/altura de edificios, espacios entre predios y relación vía-arena-mar. No trasladar fachadas mediterráneas ni comprimir edificaciones por estética.
