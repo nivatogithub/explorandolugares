@@ -1,3 +1,5 @@
+// Refresh the shared identity URL used by older published HTML.
+(()=>{const style=document.querySelector('link[href*="/assets/identidad-neutral.css"]');if(style)style.href='/assets/identidad-neutral.css?v=lino-natural-1';})();
 (()=>{const header=document.querySelector('header'),old=header?.querySelector('.language-switch');if(!header||!old||header.querySelector('.header-language-bar'))return;
 const items=[...old.querySelectorAll(':scope > a[hreflang],:scope > a[lang]')];if(!items.length)return;
 const current=document.documentElement.lang.toLowerCase();const label=current.startsWith('en')?'Language':current.startsWith('pt')?'Idioma':'Idioma';
