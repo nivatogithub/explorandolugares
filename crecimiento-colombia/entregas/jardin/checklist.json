@@ -1,0 +1,33 @@
+{
+  "destination": "jardin",
+  "worker": "Lugar 3",
+  "branch": "lugar/CO/antioquia/jardin",
+  "date": "2026-10-19",
+  "complete": false,
+  "components": {
+    "investigation": "fuentes-consultadas",
+    "priorities": "8-propuestos-con-excluidos",
+    "text_es": "borrador-completo",
+    "text_en": "borrador-completo",
+    "text_pt-BR": "borrador-completo",
+    "directory": "ZIP30-esquema-validado-fichas-gratis-borrador",
+    "hero": "borrador-v1-generado-inspeccionado-no-aprobado",
+    "attraction_images": "8-pendientes",
+    "experience_images": "6-pendientes",
+    "history_image": "no-aplica-regla-vigente",
+    "archive": "bloqueado-hasta-imagenes-no-inventar-zip",
+    "integration": "no-realizada-no-tocar-preprod",
+    "qa_site": "pendiente",
+    "owner_approval": "pendiente",
+    "production": "no-autorizada"
+  },
+  "needs_from_owner": [
+    "Revisión del borrador de portada cuando se entregue",
+    "Selección/editorial de 8 si desea ajustar candidatos",
+    "Aprobación visual final posterior a integración"
+  ],
+  "not_required": [
+    "Credenciales de hosting",
+    "Confirmar nuevamente consultas web rutinarias"
+  ]
+}

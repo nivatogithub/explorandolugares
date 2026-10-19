@@ -1,0 +1,129 @@
+{
+  "status": "propuesta-editorial-no-ranking-oficial",
+  "method": "Orden por identidad y relevancia turística documentada; variedad solo desempata. No seleccionado por fotos ni posiciones patrocinadas. No hay conteos comparables recientes de visitas para afirmar un orden estadístico absoluto.",
+  "selected": [
+    {
+      "rank": 1,
+      "slug": "parque-el-libertador",
+      "name": "Parque El Libertador",
+      "reason": "Núcleo turístico e identidad del municipio; acceso inicial a su patrimonio.",
+      "source_ids": [
+        "parque"
+      ],
+      "jurisdiction": "Jardín, Antioquia"
+    },
+    {
+      "rank": 2,
+      "slug": "basilica-inmaculada-concepcion",
+      "name": "Basílica de la Inmaculada Concepción",
+      "reason": "Hito arquitectónico inequívoco; se visita su templo, no es solo un símbolo.",
+      "source_ids": [
+        "basilica"
+      ],
+      "jurisdiction": "Jardín, Antioquia"
+    },
+    {
+      "rank": 3,
+      "slug": "cueva-del-esplendor",
+      "name": "Cueva del Esplendor",
+      "reason": "Atractivo natural distintivo destacado por la Gobernación; visita rural, no centro urbano.",
+      "source_ids": [
+        "cueva"
+      ],
+      "jurisdiction": "Jardín, Antioquia"
+    },
+    {
+      "rank": 4,
+      "slug": "reserva-jardin-de-rocas",
+      "name": "Reserva Jardín de Rocas",
+      "reason": "Aviturismo distintivo cercano al casco urbano, fuente del administrador.",
+      "source_ids": [
+        "reserva"
+      ],
+      "jurisdiction": "Jardín, Antioquia"
+    },
+    {
+      "rank": 5,
+      "slug": "la-garrucha",
+      "name": "La Garrucha",
+      "reason": "Transporte e identidad local singulares; confirmar funcionamiento antes de prometer trayecto.",
+      "source_ids": [
+        "garrucha"
+      ],
+      "jurisdiction": "Jardín, Antioquia"
+    },
+    {
+      "rank": 6,
+      "slug": "camino-de-la-herrera",
+      "name": "Camino de la Herrera",
+      "reason": "Recorrido patrimonial y de paisaje reconocido por promoción nacional.",
+      "source_ids": [
+        "nacional"
+      ],
+      "jurisdiction": "Jardín, Antioquia"
+    },
+    {
+      "rank": 7,
+      "slug": "casa-museo-clara-rojas",
+      "name": "Casa Museo Clara Rojas Peláez",
+      "reason": "Principal espacio de memoria documentado, evita acumular museos secundarios.",
+      "source_ids": [
+        "museo"
+      ],
+      "jurisdiction": "Jardín, Antioquia"
+    },
+    {
+      "rank": 8,
+      "slug": "reserva-loro-orejiamarillo",
+      "name": "Reserva ProAves Loro Orejiamarillo",
+      "reason": "Importancia de conservación y visita especializada confirmada por ProAves; mayor planificación rural.",
+      "source_ids": [
+        "proaves"
+      ],
+      "jurisdiction": "Jardín, Antioquia"
+    }
+  ],
+  "not_selected": [
+    {
+      "name": "Cascada del Amor",
+      "reason": "Candidato de primera reserva: visita breve y complementaria; revisar si el propietario prioriza paseo fácil frente a ProAves."
+    },
+    {
+      "name": "Charco Corazón",
+      "reason": "Complemento paisajístico; no promover baño sin condiciones confirmadas."
+    },
+    {
+      "name": "Salto del Ángel y Cueva de los Guácharos",
+      "reason": "Recorridos rurales exigentes; requieren comprobación específica de acceso y guía. No confundir Salto del Ángel con Envigado."
+    },
+    {
+      "name": "Cristo Rey y miradores comerciales",
+      "reason": "Panoramas complementarios, sin desplazar los principales circuitos patrimoniales y naturales."
+    },
+    {
+      "name": "Convento y capillas",
+      "reason": "Patrimonio secundario; evitar selección dominada por templos."
+    },
+    {
+      "name": "Café Jardín y Macanas",
+      "reason": "Establecimientos, van al directorio o a experiencias, no desplazan atractivos."
+    },
+    {
+      "name": "Parque del Ave",
+      "reason": "Proyecto reciente en directorio local; no usar posición patrocinada como prioridad turística."
+    },
+    {
+      "name": "Resguardo Karmata Rúa",
+      "reason": "Gobernación lo relaciona en ruta regional, pero no atribuir automáticamente su jurisdicción a Jardín ni promover visita sin coordinación comunitaria."
+    },
+    {
+      "name": "Cable aéreo turístico",
+      "reason": "No confundir con La Garrucha ni prometer operación actual."
+    }
+  ],
+  "events": {
+    "confirmed": [],
+    "status": "sin-fechas-actuales-verificadas",
+    "rule": "Fiestas de la Rosa y agendas culturales solo como eventos al confirmar edición y fecha; no inventar calendario."
+  }
+}
