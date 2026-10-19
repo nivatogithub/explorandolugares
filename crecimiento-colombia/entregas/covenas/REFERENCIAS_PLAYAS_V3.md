@@ -19,3 +19,8 @@ Inspeccionar referencias visuales identificadas, documentar rasgos observados y 
 
 ## Portada también rechazada
 El propietario identifica una playa virgen genérica, incluso parecida a Tayrona. La nueva portada debe mostrar Coveñas como destino costero urbanizado actual. Primero fijar un sector reconocible mediante referencias visuales; no añadir edificios aleatorios para simular ciudad ni utilizar vegetación/relieve de otro destino. La portada existente sigue en preproducción, sin aprobación; no se ha generado reemplazo.
+
+## Revisión realizada y propuestas cargadas
+Se inspeccionaron visualmente en navegador integrado la fotografía aérea de Primera Ensenada publicada por Hotel Poblado y la foto de la infraestructura vial del malecón publicada por ENTerritorio en https://x.com/ENTerritorioCo/status/2002202296151912911 . No se subieron fotografías ajenas al generador.
+Portada y Primera: edificios separados, mezcla de alturas, lotes verdes, construcciones bajas, costa plana con arena discontinua y espolones. Segunda: pavimento rojizo, ciclorruta verde y bolardos blancos, luminarias bifurcadas, andenes, vegetación y construcciones bajas; se descartó una salida intermedia que imaginaba demasiado frente marítimo.
+Tres ilustraciones v3 cargadas en preproducción y comprobadas ES/EN/PT. No reproducen geometría exacta ni acreditan estado actual. Aprobación humana pendiente. Prompts completos en prompts-costa-v3.json, maestros y derivados en images/, procedencia y hashes en procedencia-imagenes.json.
