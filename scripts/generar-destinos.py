@@ -14,7 +14,7 @@ def read(name):return json.loads((ROOT/'content'/name).read_text())
 def registry():
  return [{'slug':'jerico','name':'Jericó','region':'Suroeste'}]+read('destinos-piloto.json')['destinations']
 def validate(destinations,photos,site=SITE):
- active=json.loads((SITE/'assets/contact-options.json').read_text())['municipalities']
+ contact=json.loads((ROOT/'backend/app/contact-options.json').read_text());active=[row['name'] for row in contact['municipalityCatalog'] if row['pilotCategory'] in contact['enabledMunicipalityCategories']]
  if [d['name'] for d in registry()]!=active:raise ValueError('Las guías deben corresponder exactamente al piloto del formulario, en el mismo orden.')
  slugs=[d['slug'] for d in destinations]
  if len(slugs)!=len(set(slugs)):raise ValueError('Rutas duplicadas')

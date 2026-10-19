@@ -12,6 +12,10 @@ D['Créditos fotográficos']='Photo credits'
 D['Créditos de imágenes']='Image credits'
 options=json.loads((ROOT/'backend/app/contact-options.json').read_text())
 D.update({name:name for name in options['municipalities']})
+geo=json.loads((ROOT/'backend/app/content/account-geography.json').read_text());regions=geo['regions']['CO']
+D.update({name.title():name.title() for name in regions.values()})
+D.update({row['name'].title()+' · '+regions[row['department_code']].title():row['name'].title()+' · '+regions[row['department_code']].title() for row in geo['municipalities']})
+
 for group in options['groups']:
  D[group['label']]=group['en']
  for item in group['categories']:D[item['label']]=item['en']

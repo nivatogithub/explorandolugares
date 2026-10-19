@@ -26,6 +26,7 @@ $pdo->exec(file_get_contents(dirname(__DIR__).'/database/migrations/035-account-
 $pdo->exec("ALTER TABLE business_account_applications ADD COLUMN business_details_json TEXT NOT NULL DEFAULT '{}'");
 $pdo->exec("INSERT INTO destinations(id,slug,publication_status,display_order) VALUES(1,'jerico','published',1);INSERT INTO destination_translations VALUES(1,'es','Jericó');INSERT INTO service_categories VALUES('food',1,1);INSERT INTO service_category_translations VALUES('food','es','Alimentación');INSERT INTO businesses(id,public_id,destination_id,category_code,information_status,claim_status,operation_status,publication_status,slug,updated_at) VALUES(1,'public-id',1,'food','PUBLICO','NO_RECLAMADO','DESCONOCIDO','published','cafe-prueba',CURRENT_TIMESTAMP);INSERT INTO business_translations VALUES(1,'es','Café de prueba','','');INSERT INTO businesses(id,public_id,destination_id,category_code,information_status,claim_status,operation_status,publication_status,slug,updated_at) VALUES(2,'hidden-id',1,'food','PUBLICO','NO_RECLAMADO','DESCONOCIDO','draft','hotel-oculto',CURRENT_TIMESTAMP);INSERT INTO business_translations VALUES(2,'es','Hotel que aún no aparece','','')");
 $pdo->exec('ALTER TABLE businesses ADD COLUMN record_origin TEXT DEFAULT "public_import";CREATE TABLE business_sources(business_id INTEGER,source_url TEXT,checked_at TEXT)');
+$pdo->exec(file_get_contents(dirname(__DIR__).'/database/migrations/043-account-lifecycle.sqlite.sql'));
 $service=new BusinessAccountPortalService($pdo);
 $matches=$service->searchRegistrationBusinesses(1,'food','Hotel que');
 portal_check(count($matches)===1&&$matches[0]['display_name']==='Hotel que aún no aparece'&&$matches[0]['can_request'],'Registration search can find an unpublished business without exposing its private fields.');
@@ -86,7 +87,7 @@ $reuseRejected=false;try{$resetService->reset($resetToken,'OtraClavePortal123','
 portal_check($reuseRejected,'A redeemed password reset link cannot be reused.');
 $expiredToken=$resetService->issue($accountId,'admin-local');$pdo->prepare('UPDATE account_password_resets SET expires_at=? WHERE token_hash=?')->execute([gmdate('Y-m-d H:i:s',time()-60),hash('sha256',$expiredToken)]);
 portal_check(!$resetService->isValid($expiredToken),'Expired password reset links are rejected.');
-$accountAdmin=new AccountAdminService($pdo);$accountAdmin->setAccountStatus($accountId,'disabled');
+$accountAdmin=new AccountAdminService($pdo);$accountAdmin->setAccountStatus($accountId,'disabled',null,'Suspensión sintética de prueba');
 portal_check($service->current($accountId)===null,'A disabled account cannot keep using an authenticated session.');
 $disabledLoginRejected=false;try{$service->authenticate('responsable@example.test','NuevaClavePortal123');}catch(RuntimeException){$disabledLoginRejected=true;}
 portal_check($disabledLoginRejected,'A disabled account cannot start a new session.');

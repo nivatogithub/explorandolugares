@@ -1,20 +1,16 @@
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
-const data=JSON.parse(fs.readFileSync('ensayos/v1/assets/contact-options.json','utf8'));
-const script=fs.readFileSync('ensayos/v1/assets/opciones-contacto.js','utf8');
-function node(){return {children:[],append(child){this.children.push(child)},replaceChildren(fragment){this.children=fragment.children}};}
-async function check(lang,fail=false,requested='',initial='Jericó'){
- const category={...node(),value:'experiencias'},municipality={...node(),value:initial,options:data.municipalities.map(value=>({value}))};
- const form={elements:{category,municipality}};
- vm.runInNewContext(script,{URL,document:{URL:'http://127.0.0.1:8000/negocios-locales/index.html?municipio='+encodeURIComponent(requested),currentScript:{src:'http://127.0.0.1:8000/assets/opciones-contacto.js'},documentElement:{lang},getElementById(){return form},createElement:node,createDocumentFragment:node},fetch:async ()=>({ok:!fail,json:async()=>data})});
- await new Promise(resolve=>setImmediate(resolve));
- assert.equal(category.value,'experiencias');assert.equal(municipality.value,initial || (data.municipalities.includes(requested) ? requested : ''));
- if(fail){assert.equal(category.children.length,0);return;}
- assert.equal(municipality.children.length,22);
- assert(municipality.children.some(item=>item.value==='Jericó'));
- assert(!municipality.children.some(item=>item.value==='Envigado'));
- assert(!('municipalityCatalog' in data));
- assert.equal(category.children.slice(1).reduce((sum,group)=>sum+group.children.length,0),11);
- assert.equal(category.children[1].label,lang==='en'?'Service type':(lang==='pt-BR'?'Tipo de serviço':'Tipo de servicio'));
- assert.equal(category.children[1].children[0].textContent,lang==='pt-BR'?'Hospedagem':(lang==='en'?'Accommodation':'Hospedaje'));
-}
-(async()=>{await check('es');await check('en');await check('pt-BR');await check('es',true);await check('es',false,'Medellín','');await check('en',false,'Jardín','');await check('es',true,'Guatapé','');await check('es',false,'Envigado','');await check('es',false,'Medellín','Jericó');console.log('OK: carga JSON ES/EN/PT-BR, 21 municipios del piloto, 11 categorías, conserva selección y respaldo ante fallo.');})().catch(e=>{console.error(e);process.exitCode=1});
+const data=JSON.parse(fs.readFileSync('ensayos/v1/assets/contact-options.json','utf8')),script=fs.readFileSync('ensayos/v1/assets/opciones-contacto.js','utf8');
+class Node{constructor(fragment=false){this.fragment=fragment;this.children=[];this.dataset={};this.listeners={};this.value='';}append(...items){for(const n of items)this.children.push(...(n.fragment?n.children:[n]));}replaceChildren(...items){this.children=[];this.append(...items);}addEventListener(name,fn){this.listeners[name]=fn;}dispatchEvent(event){this.listeners[event.type]?.(event);}get options(){return this.children;}get selectedOptions(){return this.children.filter(n=>n.value===this.value);}}
+async function load(lang,requested='',fail=false){const category=new Node(),municipality=new Node(),contact_department=new Node();category.value='experiencias';
+ const form={elements:{category,municipality,contact_department}};
+ vm.runInNewContext(script,{URL,Event:class{constructor(type){this.type=type;}},document:{URL:'https://example.invalid/negocios-locales/interes/?municipio='+encodeURIComponent(requested),currentScript:{src:'https://example.invalid/assets/opciones-contacto.js'},documentElement:{lang},getElementById:()=>form,createElement:()=>new Node(),createDocumentFragment:()=>new Node(true)},fetch:async()=>({ok:!fail,json:async()=>data})});await new Promise(r=>setImmediate(r));return form.elements;}
+(async()=>{
+ assert.equal(data.nationalMunicipalities.length,1122);assert.equal(Object.keys(data.departments).length,33);
+ for(const lang of ['es','en','pt-BR'])for(const [name,code,dept,prefix] of [['Bogotá','11001','11','601'],['Cartagena','13001','13','605'],['Santa Marta','47001','47','605'],['Medellín','05001','05','604'],['Jericó','05368','05','604'],['Mocoa','86001','86','608'],['Zipaquirá','25899','25','601']]){
+  const e=await load(lang,name);assert.equal(e.municipality.value,code);assert.equal(e.contact_department.value,dept);assert.equal(e.municipality.selectedOptions[0].dataset.landlinePrefix,prefix);assert.equal(e.category.value,'experiencias');assert.equal(e.contact_department.options.length,34);
+ }
+ const e=await load('es','inventado');assert.equal(e.contact_department.value,'');e.contact_department.value='86';e.contact_department.listeners.change();assert(e.municipality.options.some(n=>n.value==='86001'));assert(!e.municipality.options.some(n=>n.value==='11001'));
+ const ambiguous=await load('es','Bolívar');assert.equal(ambiguous.contact_department.value,'','Duplicate names must not pick a random department');
+ const failed=await load('es','Bogotá',true);assert.equal(failed.category.children.length,0,'Static fallback not destroyed by failed fetch');
+ console.log('OK: 1122 national units, 33 departments/district, ES/EN/PT prefill, ambiguous names, server prefixes and failure fallback.');
+})().catch(e=>{console.error(e);process.exitCode=1});

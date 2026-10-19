@@ -217,7 +217,7 @@ try:
     publicid=query('SELECT public_id FROM businesses WHERE id=?',[bid])[0]['public_id'];code,page,_=anon.get('/negocios/'+publicid+'/');check(code==404 and RUN not in page,'Borrador: se esperaba 404 sin datos; HTTP '+str(code))
   case('AZ-03','No exponer los negocios en borrador',drafts)
   def coverage():
-   code,page,_=anon.get('/cobertura/colombia/');check(code==200,'No carga mapa');check(all(x in page for x in ['tab-cobertura','tab-audiencia','tab-participar','country-percent','invite-copy']),'Se perdió pestaña, porcentaje o compartir')
+   code,page,_=anon.get('/cobertura/colombia/');check(code==200,'No carga mapa');check(all(x in page for x in ['tab-cobertura','tab-visitantes','tab-participar','country-percent','invite-copy']),'Se perdió pestaña, porcentaje o compartir')
    code,payload,_=anon.get('/api/cobertura.php');check(code==200 and isinstance(json.loads(payload),dict),'No responde API de cobertura')
   case('PB-03','Cobertura, Audiencia y Haz parte: documento y API',coverage)
   def lead(kind):

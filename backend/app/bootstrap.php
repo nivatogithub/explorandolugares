@@ -30,6 +30,11 @@ if (PHP_SAPI !== 'cli') {
     session_start();
     $_SESSION['csrf'] ??= bin2hex(random_bytes(32));
 }
+if (PHP_SAPI !== 'cli' && !empty($_SESSION['business_account_id'])) {
+    require_once __DIR__.'/AccountSessionSecurity.php';
+    try { AccountSessionSecurity::synchronize(db(),$_SESSION); }
+    catch (Throwable $error) { AccountSessionSecurity::clear($_SESSION); }
+}
 if (PHP_SAPI !== 'cli' && !empty($config['unified_admin_only']) && empty($_SESSION['admin_account_id'])) { unset($_SESSION['admin'],$_SESSION['last_seen']); }
 if (PHP_SAPI !== 'cli' && !empty($_SESSION['admin_account_id'])) {
     require_once __DIR__.'/AccountAuthorization.php';
@@ -116,7 +121,9 @@ function lead_validation(array $input): array {
         $data[$key]=$value;
     }
     foreach (['name','business','municipality'] as $key) if ($data[$key]==='') $errors[$key]='Completa este campo.';
-    if (!in_array($data['municipality'], contact_options()['municipalities'], true)) $errors['municipality']='Selecciona uno de los municipios disponibles.';
+    require_once __DIR__.'/LeadGeography.php';
+    $location=LeadGeography::resolve($data['municipality'],is_string($input['contact_department']??null)?$input['contact_department']:'');
+    if(!$location)$errors['municipality']='Selecciona un municipio del departamento elegido.';else $data['municipality']=$location['label'];
     if ($data['email']!=='' && !filter_var($data['email'], FILTER_VALIDATE_EMAIL)) $errors['email']='Revisa el correo electrónico.';
     $data['phone_type']='';
     // El prefijo se calcula aquí: nunca confiar en un prefijo enviado por el navegador.
@@ -128,10 +135,10 @@ function lead_validation(array $input): array {
         elseif (!is_string($input['phone_number']) || strlen($number)>20) $errors['phone']='Revisa el número de contacto.';
         elseif ($number!=='') {
             if (in_array($type,['celular','whatsapp'],true) && preg_match('/^3[0-9]{9}$/D',$number)) $data['phone']='+57'.$number;
-            elseif ($type==='fijo' && preg_match('/^[0-9]{7}$/D',$number)) $data['phone']='+57604'.$number;
+            elseif ($type==='fijo' && preg_match('/^[0-9]{7}$/D',$number)) $data['phone']='+57'.($location['prefix']??'').$number;
             else $errors['phone']=$type==='fijo'?'Escribe los 7 dígitos del teléfono fijo, sin indicativo.':'Escribe los 10 dígitos del celular, empezando por 3.';
         }
-    } elseif ($data['phone']!=='' && !preg_match('/^\+57(?:3[0-9]{9}|604[0-9]{7})$/D',$data['phone'])) {
+    } elseif ($data['phone']!=='' && !preg_match('/^\+57(?:3[0-9]{9}|60[1-8][0-9]{7})$/D',$data['phone'])) {
         $errors['phone']='Revisa el número de contacto.';
     }
     if ($data['phone']!=='' && isset($type) && in_array($type,['fijo','celular','whatsapp'],true)) $data['phone_type']=$type;
