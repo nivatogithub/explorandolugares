@@ -73,7 +73,7 @@ shutil.copytree(root/'backend/public/cobertura',public/'cobertura',dirs_exist_ok
 shutil.copytree(root/'backend/public/assets/cobertura',public/'assets/cobertura',dirs_exist_ok=True)
 shutil.copytree(root/'backend/integration-medicion/public',public,dirs_exist_ok=True)
 shutil.copyfile(root/'backend/public/assets/nomenclatura-lugares.js',public/'assets/nomenclatura-lugares.js')
-for asset in ['account-access.css','account-registration.css','account-entry.css','header-controls.js','header-controls.css']:
+for asset in ['account-access.css','account-registration.css','account-entry.css','header-controls.js','header-controls.css','language-navigation.js']:
     shutil.copyfile(root/'backend/public/assets'/asset,public/'assets'/asset)
 # Older published pages can keep a cached identity sheet; the shared controls
 # carry the same authoritative shell tokens, generated from their single source.
