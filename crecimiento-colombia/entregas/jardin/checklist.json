@@ -16,8 +16,8 @@
     "experience_images": "4-reutilizadas-pertinentes-con-oferta-trazada",
     "history_image": "no-aplica-regla-vigente",
     "archive": "ZIP-completo-validacion-nativa-y-criterios-editoriales-pass",
-    "integration": "revision-editorial-pendiente-de-reimportacion-coordinador",
-    "qa_site": "pendiente-sobre-esta-revision",
+    "integration": "revision-editorial-reimportada-en-preproduccion-local-por-coordinador",
+    "qa_site": "PASS-coordinador-8-lugares-4-experiencias-13-imagenes-30-fichas-ES-EN-PT-HTTP200-DOM-correcto-sin-duplicados",
     "owner_approval": "pendiente",
     "production": "no-autorizada",
     "qa_images": "15-inspeccionadas-maestros-y-miniaturas",
@@ -52,5 +52,26 @@
       "sin-desborde"
     ],
     "evidence_scope": "Resultado de integración y QA comunicado por el coordinador; no reejecutado por este worker."
+  },
+  "local_integration_receipt": {
+    "reported_by": "coordinador-root",
+    "date": "2026-10-19",
+    "destination_id": 2,
+    "url": "http://127.0.0.1:8088/destinos/jardin/",
+    "package_sha256": "1783e4d8e4b78000e00de70185c0863fd533bc07439f957982e79aa6bca83169",
+    "database": "MariaDB local",
+    "attractions": 8,
+    "experiences": 4,
+    "images": 13,
+    "businesses": 30,
+    "duplicate_businesses_created": false,
+    "qa": {
+      "http_3_locales": 200,
+      "images": "13-PASS",
+      "dom": "4 nombres y oferentes correctos; sabores y chiva ausentes; secciones abiertas"
+    },
+    "evidence_scope": "Comprobaciones comunicadas por el coordinador; no reejecutadas por este worker.",
+    "general_editorial_rule_preprod_commit": "091af7e",
+    "human_approval": "pending"
   }
 }

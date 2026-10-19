@@ -8,7 +8,7 @@ Directorio gratuito:30 fichas. Sin cambios en negocios, portada ni imágenes. Se
 
 Ver `AUDITORIA_EDITORIAL.md` para la explicación por ítem y `criterios-editoriales.json` para decisiones verificables. `validacion.json`: lectorZIP nativo, formulario y criterios editoriales pasan.
 
-**La versión anterior fue integrada en preproducción (recibo histórico en checklist). Esta revisión necesita reimportación y QA del coordinador. Aprobación humana pendiente; sin publicación en producción.**
+**Revisión vigente reimportada y comprobada en preproducción local por el coordinador. Aprobación humana pendiente; sin publicación en producción.**
 
 ## es
 
@@ -67,3 +67,9 @@ Historia: Jardín cresceu entre caminhos de montanha e a cultura cafeeira do sud
 - **Cueva del Esplendor · tour curto**: A Montañeros oferece transporte e caminhada. Consulte as condições.
 - **Tour urbano pelo patrimônio**: Passeio oferecido pela Montañeros. Consulte disponibilidade.
 
+
+## Recibo vigente de integración y QA ·19/10/2026
+
+El coordinador confirmó la reimportación en MariaDB local, ID2, del paquete SHA-256 `1783e4d8e4b78000e00de70185c0863fd533bc07439f957982e79aa6bca83169`:8 lugares,4 experiencias,13 imágenes y30 fichas, sin duplicar negocios. HTTP200 en3idiomas,13 imágenes cargadas y DOM con nombres/oferentes correctos, sin sabores genéricos ni chiva, con secciones abiertas. Esta nota registra la QA comunicada por el coordinador; el worker no la reejecutó.
+
+[Ver Jardín en preproducción](http://127.0.0.1:8088/destinos/jardin/). **Revisión y aprobación humana pendientes.** ZIP, contenidos e imágenes intactos al registrar este recibo.
