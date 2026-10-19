@@ -1,0 +1,38 @@
+{
+  "origin": "http://127.0.0.1:8088",
+  "scope": [
+    "covenas"
+  ],
+  "production_accessed": false,
+  "pages": [
+    {
+      "slug": "covenas",
+      "locale": "es",
+      "status": 200,
+      "images": 7,
+      "businesses": 30,
+      "session_required": false
+    },
+    {
+      "slug": "covenas",
+      "locale": "en",
+      "status": 200,
+      "images": 7,
+      "businesses": 30,
+      "session_required": false
+    },
+    {
+      "slug": "covenas",
+      "locale": "pt-BR",
+      "status": 200,
+      "images": 7,
+      "businesses": 30,
+      "session_required": false
+    }
+  ],
+  "unique_destination_images": 7,
+  "all_image_requests_passed": true,
+  "web_image_bytes": 1428858,
+  "editorial_approval": "pending",
+  "success": true
+}

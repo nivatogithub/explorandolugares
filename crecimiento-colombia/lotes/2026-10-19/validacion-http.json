@@ -1,12 +1,18 @@
 {
   "origin": "http://127.0.0.1:8088",
+  "scope": [
+    "zipaquira",
+    "santa-fe-de-antioquia",
+    "jardin",
+    "covenas"
+  ],
   "production_accessed": false,
   "pages": [
     {
       "slug": "zipaquira",
       "locale": "es",
       "status": 200,
-      "images": 14,
+      "images": 11,
       "businesses": 30,
       "session_required": false
     },
@@ -14,7 +20,7 @@
       "slug": "zipaquira",
       "locale": "en",
       "status": 200,
-      "images": 14,
+      "images": 11,
       "businesses": 30,
       "session_required": false
     },
@@ -22,7 +28,7 @@
       "slug": "zipaquira",
       "locale": "pt-BR",
       "status": 200,
-      "images": 14,
+      "images": 11,
       "businesses": 30,
       "session_required": false
     },
@@ -30,7 +36,7 @@
       "slug": "santa-fe-de-antioquia",
       "locale": "es",
       "status": 200,
-      "images": 13,
+      "images": 9,
       "businesses": 30,
       "session_required": false
     },
@@ -38,7 +44,7 @@
       "slug": "santa-fe-de-antioquia",
       "locale": "en",
       "status": 200,
-      "images": 13,
+      "images": 9,
       "businesses": 30,
       "session_required": false
     },
@@ -46,7 +52,7 @@
       "slug": "santa-fe-de-antioquia",
       "locale": "pt-BR",
       "status": 200,
-      "images": 13,
+      "images": 9,
       "businesses": 30,
       "session_required": false
     },
@@ -54,7 +60,7 @@
       "slug": "jardin",
       "locale": "es",
       "status": 200,
-      "images": 15,
+      "images": 13,
       "businesses": 30,
       "session_required": false
     },
@@ -62,7 +68,7 @@
       "slug": "jardin",
       "locale": "en",
       "status": 200,
-      "images": 15,
+      "images": 13,
       "businesses": 30,
       "session_required": false
     },
@@ -70,7 +76,7 @@
       "slug": "jardin",
       "locale": "pt-BR",
       "status": 200,
-      "images": 15,
+      "images": 13,
       "businesses": 30,
       "session_required": false
     },
@@ -78,7 +84,7 @@
       "slug": "covenas",
       "locale": "es",
       "status": 200,
-      "images": 13,
+      "images": 7,
       "businesses": 30,
       "session_required": false
     },
@@ -86,7 +92,7 @@
       "slug": "covenas",
       "locale": "en",
       "status": 200,
-      "images": 13,
+      "images": 7,
       "businesses": 30,
       "session_required": false
     },
@@ -94,14 +100,14 @@
       "slug": "covenas",
       "locale": "pt-BR",
       "status": 200,
-      "images": 13,
+      "images": 7,
       "businesses": 30,
       "session_required": false
     }
   ],
-  "unique_destination_images": 55,
+  "unique_destination_images": 40,
   "all_image_requests_passed": true,
-  "web_image_bytes": 8549346,
+  "web_image_bytes": 6252654,
   "editorial_approval": "pending",
   "success": true
 }
