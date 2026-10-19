@@ -13,7 +13,7 @@
       ],
       "checked_at": "2026-10-19",
       "image_review": {
-        "status": "v3_reference_inspected_pending_human_review",
+        "status": "rejected_by_owner_requires_site_specific_reference",
         "reason": "Feedback del propietario: Primera Ensenada parece europea y construcciones demasiado pegadas; existencia del malecón no acredita apariencia de Segunda Ensenada. No regenerar desde descripción genérica.",
         "sector_visual_verification": "descripciones locales e imágenes públicas consultadas; sin fotografías subidas al generador",
         "required_checks": [
@@ -40,7 +40,7 @@
       ],
       "checked_at": "2026-10-19",
       "image_review": {
-        "status": "v3_reference_inspected_pending_human_review",
+        "status": "rejected_by_owner_requires_site_specific_reference",
         "reason": "Feedback del propietario: Primera Ensenada parece europea y construcciones demasiado pegadas; existencia del malecón no acredita apariencia de Segunda Ensenada. No regenerar desde descripción genérica.",
         "sector_visual_verification": "descripciones locales e imágenes públicas consultadas; sin fotografías subidas al generador",
         "required_checks": [
@@ -99,7 +99,7 @@
       ],
       "checked_at": "2026-10-19",
       "image_review": {
-        "status": "revised_pending_human_review",
+        "status": "rejected_by_owner_requires_site_specific_reference",
         "reason": "Observación del propietario: imágenes demasiado similares e idealizadas como playas vírgenes con palmeras. No aprobadas.",
         "sector_visual_verification": "descripciones locales e imágenes públicas consultadas; sin fotografías subidas al generador",
         "required_checks": [
@@ -198,9 +198,9 @@
     }
   ],
   "human_approval": "pending",
-  "readiness": "v3_loaded_pending_human_review",
+  "readiness": "blocked_visual_identity_not_approved",
   "hero_image_review": {
-    "status": "v3_reference_inspected_pending_human_review",
+    "status": "rejected_by_owner_v3",
     "feedback": "El propietario señala que la portada parece una playa virgen genérica o Tayrona, no Coveñas como ciudad costera actual.",
     "required_identity": "Contexto costero urbanizado reconocible de Coveñas, sin inventar hitos ni representar toda la costa como virgen.",
     "required_checks": [
