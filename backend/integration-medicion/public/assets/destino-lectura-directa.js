@@ -1,6 +1,6 @@
 /* Compact city layout: open content, progressive rows, history without side content. */
 (()=>{
- const cities=['bogota','medellin','santa-marta'];if(!cities.some(s=>location.pathname.split('/').includes(s)))return;
+ const cities=['bogota','medellin','santa-marta','zipaquira','santa-fe-de-antioquia','jardin','covenas'];if(!cities.some(s=>location.pathname.split('/').includes(s)))return;
  const l=document.documentElement.lang.toLowerCase(),en=l.startsWith('en'),pt=l.startsWith('pt');
  const titles=en?['A brief history','Places to visit','Experiences','Directory']:pt?['História em breve','O que conhecer','Experiências','Diretório']:['Historia en breve','Qué conocer','Experiencias','Directorio'];
  let queued=false;
