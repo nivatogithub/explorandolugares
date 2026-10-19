@@ -1,0 +1,93 @@
+{
+  "method": "Selección editorial razonada, no ranking oficial ni estadísticas de afluencia. Identidad y relevancia turística primero; no diversidad artificial ni disponibilidad de imágenes.",
+  "attractions": [
+    {
+      "rank": 1,
+      "name": "Puente de Occidente",
+      "reason": "Icono de ingeniería y principal excursión patrimonial; compartido con Olaya.",
+      "source": "https://colombia.travel/es/santa-fe-de-antioquia",
+      "confidence": "alta"
+    },
+    {
+      "rank": 2,
+      "name": "Plaza Mayor Simón Bolívar",
+      "reason": "Nodo urbano y orientación del centro; incluye contexto de calles sin duplicar ficha Centro histórico.",
+      "source": "https://colombia.travel/es/santa-fe-de-antioquia",
+      "confidence": "alta"
+    },
+    {
+      "rank": 3,
+      "name": "Catedral de la Inmaculada Concepción",
+      "reason": "Hito arquitectónico principal; vista interior/distinta de plaza, no reutilizar portada.",
+      "source": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Turismo/Revista%20virtual%202025.pdf",
+      "confidence": "alta"
+    },
+    {
+      "rank": 4,
+      "name": "Museo Juan del Corral",
+      "reason": "Museo histórico esencial, no sustituible por otra iglesia secundaria.",
+      "source": "https://www.museonacional.gov.co/Publicaciones/Documents/Diagnostico%20Museos.pdf",
+      "confidence": "alta"
+    },
+    {
+      "rank": 5,
+      "name": "Iglesia de Santa Bárbara",
+      "reason": "Templo histórico destacado y conjunto de plazuela.",
+      "source": "https://colombia.travel/es/santa-fe-de-antioquia",
+      "confidence": "alta"
+    },
+    {
+      "rank": 6,
+      "name": "Museo de Arte Religioso Francisco Cristóbal Toro",
+      "reason": "Colección patrimonial especializada; no duplicar una visita genérica a museo.",
+      "source": "https://colombia.travel/es/santa-fe-de-antioquia",
+      "confidence": "alta"
+    },
+    {
+      "rank": 7,
+      "name": "Plazuela e iglesia de La Chinca",
+      "reason": "Conjunto urbano relevante y recorrible; no sumar iglesia y plazuela como dos fichas.",
+      "source": "https://colombia.travel/es/santa-fe-de-antioquia",
+      "confidence": "alta"
+    },
+    {
+      "rank": 8,
+      "name": "Templo de Jesús Nazareno",
+      "reason": "Octavo provisional: menor confianza que los siete anteriores; revisar frente a alternativas antes de aprobar.",
+      "source": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+      "confidence": "media"
+    }
+  ],
+  "excluded": [
+    {
+      "name": "Centro histórico como ficha aparte",
+      "reason": "Su conjunto queda en Plaza Mayor y recorrido; evitar solapamiento genérico."
+    },
+    {
+      "name": "San Jerónimo, Sopetrán y Olaya como destinos propios",
+      "reason": "Municipios distintos; puente compartido explicado, no absorber su cobertura."
+    },
+    {
+      "name": "Cerro Quitasol",
+      "reason": "No es atractivo de este municipio."
+    },
+    {
+      "name": "Kanaloa",
+      "reason": "Evaluar como experiencia recreativa comercial; acceso vigente y relevancia comparativa pendientes. No desplaza automáticamente patrimonio."
+    },
+    {
+      "name": "Otras capillas, casas y monumentos del mapa",
+      "reason": "Conservar inventario institucional; menor prioridad editorial provisional que núcleo seleccionado."
+    }
+  ],
+  "events": [
+    {
+      "name": "Semana Santa",
+      "state": "Tradición documentada; fechas/programación futuras sin verificar, no evento publicado"
+    },
+    {
+      "name": "Festival de Cine de Santa Fe de Antioquia",
+      "state": "Organizador identificado; próxima programación sin verificar"
+    }
+  ]
+}

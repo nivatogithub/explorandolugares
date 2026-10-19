@@ -1,0 +1,525 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "santa-fe-de-antioquia",
+  "businesses": [
+    {
+      "name": "Hotel Casa de Verano",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+          "checked_at": "2026-10-19",
+          "page": 2,
+          "note": "Guía municipal antigua, fecha editorial no legible. Listado documental, operación y nombre vigente pendientes; sin contacto ni alianza."
+        },
+        {
+          "url": "https://casadeverano.com.co/",
+          "checked_at": "2026-10-19",
+          "note": "Presencia propia localizada; no verificación presencial ni reserva."
+        }
+      ],
+      "verification_status": "pending",
+      "publication_status": "draft"
+    },
+    {
+      "name": "Hotel Casa Morales",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+          "checked_at": "2026-10-19",
+          "page": 2,
+          "note": "Guía municipal antigua, fecha editorial no legible. Listado documental, operación y nombre vigente pendientes; sin contacto ni alianza."
+        }
+      ],
+      "verification_status": "pending",
+      "publication_status": "draft"
+    },
+    {
+      "name": "Hotel Boutique Casa Inca",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+          "checked_at": "2026-10-19",
+          "page": 2,
+          "note": "Guía municipal antigua, fecha editorial no legible. Listado documental, operación y nombre vigente pendientes; sin contacto ni alianza."
+        }
+      ],
+      "verification_status": "pending",
+      "publication_status": "draft"
+    },
+    {
+      "name": "Hotel Nueva Granada",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+          "checked_at": "2026-10-19",
+          "page": 2,
+          "note": "Guía municipal antigua, fecha editorial no legible. Listado documental, operación y nombre vigente pendientes; sin contacto ni alianza."
+        }
+      ],
+      "verification_status": "pending",
+      "publication_status": "draft"
+    },
+    {
+      "name": "Hotel Casa Blanca",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+          "checked_at": "2026-10-19",
+          "page": 2,
+          "note": "Guía municipal antigua, fecha editorial no legible. Listado documental, operación y nombre vigente pendientes; sin contacto ni alianza."
+        }
+      ],
+      "verification_status": "pending",
+      "publication_status": "draft"
+    },
+    {
+      "name": "Hotel Santa Bárbara Colonial",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+          "checked_at": "2026-10-19",
+          "page": 2,
+          "note": "Guía municipal antigua, fecha editorial no legible. Listado documental, operación y nombre vigente pendientes; sin contacto ni alianza."
+        }
+      ],
+      "verification_status": "pending",
+      "publication_status": "draft"
+    },
+    {
+      "name": "Hotel Boutique Al Alma",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+          "checked_at": "2026-10-19",
+          "page": 2,
+          "note": "Guía municipal antigua, fecha editorial no legible. Listado documental, operación y nombre vigente pendientes; sin contacto ni alianza."
+        }
+      ],
+      "verification_status": "pending",
+      "publication_status": "draft"
+    },
+    {
+      "name": "Hotel Guaracú",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+          "checked_at": "2026-10-19",
+          "page": 2,
+          "note": "Guía municipal antigua, fecha editorial no legible. Listado documental, operación y nombre vigente pendientes; sin contacto ni alianza."
+        }
+      ],
+      "verification_status": "pending",
+      "publication_status": "draft"
+    },
+    {
+      "name": "Hotel Las Palmeras Colonial",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+          "checked_at": "2026-10-19",
+          "page": 2,
+          "note": "Guía municipal antigua, fecha editorial no legible. Listado documental, operación y nombre vigente pendientes; sin contacto ni alianza."
+        }
+      ],
+      "verification_status": "pending",
+      "publication_status": "draft"
+    },
+    {
+      "name": "Hotel Caserón del Parque",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+          "checked_at": "2026-10-19",
+          "page": 2,
+          "note": "Guía municipal antigua, fecha editorial no legible. Listado documental, operación y nombre vigente pendientes; sin contacto ni alianza."
+        }
+      ],
+      "verification_status": "pending",
+      "publication_status": "draft"
+    },
+    {
+      "name": "Hotel Villa Occidente",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+          "checked_at": "2026-10-19",
+          "page": 2,
+          "note": "Guía municipal antigua, fecha editorial no legible. Listado documental, operación y nombre vigente pendientes; sin contacto ni alianza."
+        }
+      ],
+      "verification_status": "pending",
+      "publication_status": "draft"
+    },
+    {
+      "name": "Hotel Pueblito Viejo",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+          "checked_at": "2026-10-19",
+          "page": 2,
+          "note": "Guía municipal antigua, fecha editorial no legible. Listado documental, operación y nombre vigente pendientes; sin contacto ni alianza."
+        }
+      ],
+      "verification_status": "pending",
+      "publication_status": "draft"
+    },
+    {
+      "name": "Hotel Los Geranios",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+          "checked_at": "2026-10-19",
+          "page": 2,
+          "note": "Guía municipal antigua, fecha editorial no legible. Listado documental, operación y nombre vigente pendientes; sin contacto ni alianza."
+        }
+      ],
+      "verification_status": "pending",
+      "publication_status": "draft"
+    },
+    {
+      "name": "Hotel Mariscal Robledo",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+          "checked_at": "2026-10-19",
+          "page": 2,
+          "note": "Guía municipal antigua, fecha editorial no legible. Listado documental, operación y nombre vigente pendientes; sin contacto ni alianza."
+        },
+        {
+          "url": "https://www.hotelmariscalrobledo.com/es/index.html",
+          "checked_at": "2026-10-19",
+          "note": "Presencia propia localizada; no verificación presencial ni reserva."
+        }
+      ],
+      "verification_status": "pending",
+      "publication_status": "draft"
+    },
+    {
+      "name": "Hostería de la Plaza Menor",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+          "checked_at": "2026-10-19",
+          "page": 2,
+          "note": "Guía municipal antigua, fecha editorial no legible. Listado documental, operación y nombre vigente pendientes; sin contacto ni alianza."
+        }
+      ],
+      "verification_status": "pending",
+      "publication_status": "draft"
+    },
+    {
+      "name": "Joyería Jimmy",
+      "category_code": "comercio",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+          "checked_at": "2026-10-19",
+          "page": 2,
+          "note": "Guía municipal antigua, fecha editorial no legible. Listado documental, operación y nombre vigente pendientes; sin contacto ni alianza."
+        }
+      ],
+      "verification_status": "pending",
+      "publication_status": "draft"
+    },
+    {
+      "name": "Joyería Colonial",
+      "category_code": "comercio",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+          "checked_at": "2026-10-19",
+          "page": 2,
+          "note": "Guía municipal antigua, fecha editorial no legible. Listado documental, operación y nombre vigente pendientes; sin contacto ni alianza."
+        }
+      ],
+      "verification_status": "pending",
+      "publication_status": "draft"
+    },
+    {
+      "name": "Joyería Benítez",
+      "category_code": "comercio",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+          "checked_at": "2026-10-19",
+          "page": 2,
+          "note": "Guía municipal antigua, fecha editorial no legible. Listado documental, operación y nombre vigente pendientes; sin contacto ni alianza."
+        }
+      ],
+      "verification_status": "pending",
+      "publication_status": "draft"
+    },
+    {
+      "name": "Hotel & Spa Santa Fe Colonial",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://hotelspasantafecolonial.com/guia-completa/",
+          "checked_at": "2026-10-19",
+          "note": "Fuente propia ubica el hotel en el acceso al municipio; presencia web no certifica operación presencial ni alianza."
+        }
+      ],
+      "verification_status": "pending",
+      "publication_status": "draft"
+    },
+    {
+      "name": "Aurum Filigrana",
+      "category_code": "comercio",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+          "checked_at": "2026-10-19",
+          "page": 2,
+          "note": "Guía municipal antigua, fecha editorial no legible. Listado documental, operación y nombre vigente pendientes; sin contacto ni alianza."
+        }
+      ],
+      "verification_status": "pending",
+      "publication_status": "draft"
+    },
+    {
+      "name": "ORFOA",
+      "category_code": "comercio",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+          "checked_at": "2026-10-19",
+          "page": 2,
+          "note": "Guía municipal antigua, fecha editorial no legible. Listado documental, operación y nombre vigente pendientes; sin contacto ni alianza."
+        }
+      ],
+      "verification_status": "pending",
+      "publication_status": "draft"
+    },
+    {
+      "name": "Asociación de Filigrana",
+      "category_code": "comercio",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+          "checked_at": "2026-10-19",
+          "page": 2,
+          "note": "Guía municipal antigua, fecha editorial no legible. Listado documental, operación y nombre vigente pendientes; sin contacto ni alianza."
+        }
+      ],
+      "verification_status": "pending",
+      "publication_status": "draft"
+    },
+    {
+      "name": "Hugo Borja Filigrana",
+      "category_code": "comercio",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+          "checked_at": "2026-10-19",
+          "page": 2,
+          "note": "Guía municipal antigua, fecha editorial no legible. Listado documental, operación y nombre vigente pendientes; sin contacto ni alianza."
+        }
+      ],
+      "verification_status": "pending",
+      "publication_status": "draft"
+    },
+    {
+      "name": "Joyería Leydi",
+      "category_code": "comercio",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+          "checked_at": "2026-10-19",
+          "page": 2,
+          "note": "Guía municipal antigua, fecha editorial no legible. Listado documental, operación y nombre vigente pendientes; sin contacto ni alianza."
+        }
+      ],
+      "verification_status": "pending",
+      "publication_status": "draft"
+    },
+    {
+      "name": "Gómez Hernández",
+      "category_code": "transporte",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+          "checked_at": "2026-10-19",
+          "page": 2,
+          "note": "Guía municipal antigua, fecha editorial no legible. Listado documental, operación y nombre vigente pendientes; sin contacto ni alianza."
+        }
+      ],
+      "verification_status": "pending",
+      "publication_status": "draft"
+    },
+    {
+      "name": "Sotraurabá",
+      "category_code": "transporte",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+          "checked_at": "2026-10-19",
+          "page": 2,
+          "note": "Guía municipal antigua, fecha editorial no legible. Listado documental, operación y nombre vigente pendientes; sin contacto ni alianza."
+        }
+      ],
+      "verification_status": "pending",
+      "publication_status": "draft"
+    },
+    {
+      "name": "Cootransuroccidente",
+      "category_code": "transporte",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+          "checked_at": "2026-10-19",
+          "page": 2,
+          "note": "Guía municipal antigua, fecha editorial no legible. Listado documental, operación y nombre vigente pendientes; sin contacto ni alianza."
+        }
+      ],
+      "verification_status": "pending",
+      "publication_status": "draft"
+    },
+    {
+      "name": "Transmercedes",
+      "category_code": "transporte",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+          "checked_at": "2026-10-19",
+          "page": 2,
+          "note": "Guía municipal antigua, fecha editorial no legible. Listado documental, operación y nombre vigente pendientes; sin contacto ni alianza."
+        }
+      ],
+      "verification_status": "pending",
+      "publication_status": "draft"
+    },
+    {
+      "name": "Coonservicios",
+      "category_code": "transporte",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+          "checked_at": "2026-10-19",
+          "page": 2,
+          "note": "Guía municipal antigua, fecha editorial no legible. Listado documental, operación y nombre vigente pendientes; sin contacto ni alianza."
+        }
+      ],
+      "verification_status": "pending",
+      "publication_status": "draft"
+    },
+    {
+      "name": "Asosantafé",
+      "category_code": "transporte",
+      "information_status": "PUBLICO",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+          "checked_at": "2026-10-19",
+          "page": 2,
+          "note": "Guía municipal antigua, fecha editorial no legible. Listado documental, operación y nombre vigente pendientes; sin contacto ni alianza."
+        }
+      ],
+      "verification_status": "pending",
+      "publication_status": "draft"
+    }
+  ]
+}
