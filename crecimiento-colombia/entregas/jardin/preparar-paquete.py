@@ -56,7 +56,7 @@ except OSError:font=ImageFont.load_default()
 for i,(name,file) in enumerate(entries):
  x=(i%3)*336;y=(i//3)*250;im=Image.open(P/file);im.thumbnail((324,216));sheet.paste(im,(x+6,y));d.text((x+6,y+219),name[:43],fill=(23,43,66),font=font)
 sheet.save(P/'revision-imagenes.jpg',quality=90)
-check=read('checklist.json');check['components'].update({'hero':'borrador-generado-inspeccionado-no-aprobado','attraction_images':'8-generadas-inspeccionadas-derivados-y-hashes','experience_images':str(sum(x['type']=='experience' for x in m['places']))+'-reutilizadas-pertinentes-con-oferta-trazada','archive':'ZIP-completo-listo-validacion-nativa','integration':'pendiente-coordinador-no-tocar-preprod','qa_site':'pendiente-coordinador'});save('checklist.json',check)
+check=read('checklist.json');check['components'].update({'hero':'borrador-generado-inspeccionado-no-aprobado','attraction_images':str(sum(x['type']=='place' for x in m['places']))+'-generadas-inspeccionadas-derivados-y-hashes','experience_images':str(sum(x['type']=='experience' for x in m['places']))+'-reutilizadas-pertinentes-con-oferta-trazada','archive':'ZIP-completo-listo-validacion-nativa','integration':'pendiente-coordinador-no-tocar-preprod','qa_site':'pendiente-coordinador'});save('checklist.json',check)
 # Keep sources added during imagery fact-checking
 sources=read('fuentes.json')
 for id,url in [('museo-propio','https://mcrpjardin.blogspot.com/p/historia-de-la-casa-museo-clara-rojas.html'),('camino-operador','https://otiumtornus.com/circuito-la-cascada-del-amor/')]:
