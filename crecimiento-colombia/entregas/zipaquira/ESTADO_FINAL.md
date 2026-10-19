@@ -1,4 +1,8 @@
-# Zipaquirá · paquete completo para revisión local
+# Zipaquirá · estado vigente
+
+Revisión de criterios del 19-10-2026: **7 atractivos, 3 experiencias respaldadas y neutrales, 11 imágenes existentes, 30 negocios**. ZIP actualizado de 924.151 bytes, validadores nativos y editorial aprobados técnicamente. Pendiente reintegración coordinada y revisión humana; no publicar producción. Ver `AUDITORIA_CRITERIOS_2026-10-19.md` y `criterios-editoriales.json`.
+
+## Historial de la entrega anterior (no describe el ZIP vigente)
 
 19-10-2026 · Lugar 1 · rama `lugar/CO/cundinamarca/zipaquira`.
 

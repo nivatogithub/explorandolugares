@@ -1,16 +1,16 @@
 {
   "date": "2026-10-19",
   "native_manifest_validators": "Both native manifests valid",
-  "top8": 8,
-  "experiences": 5,
+  "attractions": 7,
+  "experiences": 3,
   "businesses": 30,
   "languages": [
     "es",
     "en",
     "pt-BR"
   ],
-  "images_present": 14,
-  "images_required": 14,
+  "images_present": 11,
+  "images_required": 11,
   "destination_zip_importable": true,
   "business_zip_structure_valid": true,
   "database_import_tested": false,
@@ -21,14 +21,24 @@
   "hashes": {
     "paquete-negocios.json": "6566065efdf72b89f9cb8981011f03af3229549b1c582320d06f2f6cda4ed14a",
     "fuentes.json": "5ea2f984ea0f8f219f5fecf179f3d110bd70ccd9c56cbcc2171cc481865544d9",
-    "encargos-visuales.json": "828457d39f962e63de3f1dc856cca910838eb12b0bd224dbcf3a04262aa332c9",
-    "auditoria-top8.json": "d4ba444697380e1059dab69f6d9bd49b6f3a1613cb739d1367d67123d5499291",
-    "paquete-destino.zip": "9a957abba75cd9a0d895dd1b3396d43f996ec5b55a220f26b3677748dbbdbdbe",
-    "paquete-destino.borrador.json": "f3320bc236372040f739e3a57ec39b9a84baf3e3309f03662216240229ed69fa",
-    "revision-editorial.html": "7b63d7fa8eb6bf88d31690c698f9f0a7474aaf5d641d4e54b690f959e6c387b2",
-    "paquete-destino.json": "f9bbb424e71554a2b421b99769286ffd27605c96f2c334e8bef5ae52d4f36652",
+    "encargos-visuales.json": "35dab9a46a50f251f750cdc845895b4eb4b728c61a3992a24d1f605d512cb85f",
+    "auditoria-top8.json": "f3c2a4a0e888febd71f6f7943002649ca2236ccbc6a6179e6489ac125e0a51c7",
+    "criterios-editoriales.json": "2e276b2f514f744d130e3716d900370b73f0535c5f31f7e35c524931f7183683",
+    "paquete-destino.zip": "55bff7a57ea11abaedb8e18df1fd0d6ee6ff79db17d81c99844479dd94cc6803",
+    "paquete-destino.borrador.json": "b21fe0a0591ec3b01eb7fbfad01e00b2c57c5b9f39f23e86601586a344744cd9",
+    "revision-editorial.html": "d252fcbb46429fa830bdca18d8ad0d9778b407f2939f1f225cfc20d6999c28aa",
+    "paquete-destino.json": "e2af5d912baccec2fb74f09413445e13fcc0961f724ee30742a844a37d76bee4",
     "paquete-negocios.zip": "b3a29c6c8e8145c4c3be68fe326f10efcc07f3059f13243ed918b78c63176a23",
-    "checklist.json": "92b47394fa344008b0f1b63ea226b0dae1e27ed96f4c837b4d1cade8b516d0d9"
+    "checklist.json": "986525c37b87d6cba274c54036c20c880731a991d9b4cb8f4786ee83479941c4"
   },
-  "native_zip_validators": "14 destination images; 30 businesses"
+  "native_zip_validators": "11 destination images; 30 businesses",
+  "editorial_criteria": {
+    "destination": "zipaquira",
+    "attractions": 7,
+    "experiences": 3,
+    "errors": [],
+    "success": true,
+    "human_approval": "not_inferred",
+    "factual_truth": "requires_source_review"
+  }
 }

@@ -1,5 +1,7 @@
 # Zipaquirá · entrega editorial privada
 
+**Vigente:** 7 atractivos, 3 experiencias con oferta propia verificada, 11 imágenes y 30 negocios. ZIP actualizado, sin imágenes nuevas ni publicidad de oferentes. Ver `AUDITORIA_CRITERIOS_2026-10-19.md`; falta reintegrar esta revisión y aprobación humana. El resto documenta entregas históricas.
+
 Worker **Lugar 1**, rama `lugar/CO/cundinamarca/zipaquira`, base `8ff9dde`, 19-10-2026.
 
 ## Estado de la primera entrega (8587869)

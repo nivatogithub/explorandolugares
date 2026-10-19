@@ -86,22 +86,6 @@
     },
     {
       "rank": 6,
-      "slug": "plaza-independencia",
-      "name": "Plaza de la Independencia",
-      "scores": {
-        "identity": 4,
-        "visitor_relevance": 5,
-        "distinctiveness": 3
-      },
-      "score": 82,
-      "source_ids": [
-        "municipal"
-      ],
-      "reason": "Vida urbana complementaria, no duplicado nominal de Comuneros.",
-      "selection_status": "propuesta_editorial_no_aprobada"
-    },
-    {
-      "rank": 7,
       "slug": "museo-quevedo",
       "name": "Casa Museo Quevedo Zornoza",
       "scores": {
@@ -118,7 +102,7 @@
       "selection_status": "propuesta_editorial_no_aprobada"
     },
     {
-      "rank": 8,
+      "rank": 7,
       "slug": "museo-arqueologico",
       "name": "Museo Arqueológico",
       "scores": {
@@ -170,54 +154,67 @@
     {
       "name": "Finkana / Nukasa",
       "reason": "Oferta de operador/naturaleza complementaria; vigencia y acceso deben validarse antes de entrar al Top8."
+    },
+    {
+      "name": "Plaza de la Independencia",
+      "reason": "Plaza complementaria del circuito urbano; se retira para evitar llenar ocho tarjetas con otro espacio de función solapada. No implica que sea inexistente ni esté cerrada."
     }
   ],
   "experience_classification": [
     {
       "slug": "ruta-del-minero",
-      "source_ids": [
-        "minero"
+      "decision": "include",
+      "kind": "oferta_operada_documentada",
+      "source_urls": [
+        "https://www.catedraldesal.gov.co/atracciones/ruta-del-minero/",
+        "https://www.catedraldesal.gov.co/atracciones/ruta-del-minero/"
       ],
-      "kind": "oferta_operador_documentada",
-      "availability_confirmed": false,
-      "partnership": false
+      "partnership": false,
+      "availability_confirmed": false
     },
     {
       "slug": "tren-sabana",
-      "source_ids": [
-        "tren"
+      "decision": "include",
+      "kind": "oferta_operada_documentada",
+      "source_urls": [
+        "https://turistren.com.co/",
+        "https://turistren.com.co/"
       ],
-      "kind": "oferta_operador_documentada",
-      "availability_confirmed": false,
-      "partnership": false
+      "partnership": false,
+      "availability_confirmed": false
     },
     {
       "slug": "recorrido-historico",
-      "source_ids": [
-        "citytour"
+      "decision": "include",
+      "kind": "oferta_operada_documentada",
+      "source_urls": [
+        "https://www.zipaquira.travel/citytour/",
+        "https://www.zipaquira.travel/"
       ],
-      "kind": "editorial_autonoma",
-      "availability_confirmed": false,
-      "partnership": false
+      "partnership": false,
+      "availability_confirmed": false
     },
     {
       "slug": "sabores-locales",
-      "source_ids": [
-        "municipal"
+      "decision": "exclude",
+      "kind": "sugerencia_autonoma_excluida",
+      "source_urls": [
+        "https://www.zipaquira.travel/wp-content/uploads/2026/02/Guia-Turistica-ZT.pdf"
       ],
-      "kind": "editorial_autonoma",
-      "availability_confirmed": false,
-      "partnership": false
+      "partnership": false,
+      "availability_confirmed": false
     },
     {
       "slug": "artesania-sal",
-      "source_ids": [
-        "municipal"
+      "decision": "exclude",
+      "kind": "sugerencia_autonoma_excluida",
+      "source_urls": [
+        "https://www.zipaquira.travel/wp-content/uploads/2026/02/Guia-Turistica-ZT.pdf"
       ],
-      "kind": "editorial_autonoma",
-      "availability_confirmed": false,
-      "partnership": false
+      "partnership": false,
+      "availability_confirmed": false
     }
   ],
-  "coverage_limit": "No se afirma un censo exhaustivo nacional ni un orden original previamente aprobado. Selección local contrastada con guía institucional 2026 y fuentes primarias."
+  "coverage_limit": "No se afirma un censo exhaustivo nacional ni un orden original previamente aprobado. Selección local contrastada con guía institucional 2026 y fuentes primarias.",
+  "policy_revision": "19-10-2026: máximo ocho sin mínimo; experiencias solo con oferta real; oferentes internos"
 }

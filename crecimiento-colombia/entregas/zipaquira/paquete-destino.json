@@ -351,49 +351,6 @@
       }
     },
     {
-      "slug": "plaza-independencia",
-      "type": "place",
-      "publication_status": "draft",
-      "translations": {
-        "es": {
-          "name": "Plaza de la Independencia",
-          "description": "Una plaza para pasear entre cafés y cocina local.",
-          "external_url": "",
-          "external_label": ""
-        },
-        "en": {
-          "name": "Plaza de la Independencia",
-          "description": "A square for a stroll among cafés and local food.",
-          "external_url": "",
-          "external_label": ""
-        },
-        "pt-BR": {
-          "name": "Praça da Independência",
-          "description": "Uma praça para passear entre cafés e gastronomia local.",
-          "external_url": "",
-          "external_label": ""
-        }
-      },
-      "image": {
-        "file": "images/plaza-independencia.webp",
-        "image_origin": "ai_generated",
-        "image_creator": "Ilustración independiente generada con herramienta integrada imagegen; revisión humana pendiente",
-        "image_source_url": "",
-        "image_license": "Salida IA propuesta para Explorando Lugares; no contiene fotografía de terceros de entrada",
-        "image_license_url": "",
-        "alt": {
-          "es": "Plaza de la Independencia · ilustración editorial",
-          "en": "Plaza de la Independencia · editorial illustration",
-          "pt-BR": "Praça da Independência · ilustração editorial"
-        },
-        "caption": {
-          "es": "",
-          "en": "",
-          "pt-BR": ""
-        }
-      }
-    },
-    {
       "slug": "museo-quevedo",
       "type": "place",
       "publication_status": "draft",
@@ -485,20 +442,20 @@
       "publication_status": "draft",
       "translations": {
         "es": {
-          "name": "Ruta del Minero",
-          "description": "Explora la extracción de sal con una actividad guiada.",
+          "name": "Experiencia minera",
+          "description": "Conoce la extracción de sal en una actividad organizada.",
           "external_url": "",
           "external_label": ""
         },
         "en": {
-          "name": "Miner’s Route",
-          "description": "Explore salt extraction through a guided activity.",
+          "name": "Mining experience",
+          "description": "Discover salt extraction in an organised activity.",
           "external_url": "",
           "external_label": ""
         },
         "pt-BR": {
-          "name": "Rota do Mineiro",
-          "description": "Conheça a extração de sal em uma atividade guiada.",
+          "name": "Experiência de mineração",
+          "description": "Conheça a extração de sal em uma atividade organizada.",
           "external_url": "",
           "external_label": ""
         }
@@ -511,9 +468,9 @@
         "image_license": "Salida IA propuesta para Explorando Lugares; no contiene fotografía de terceros de entrada",
         "image_license_url": "",
         "alt": {
-          "es": "Ruta del Minero · ilustración editorial",
-          "en": "Miner’s Route · editorial illustration",
-          "pt-BR": "Rota do Mineiro · ilustração editorial"
+          "es": "Experiencia minera · ilustración editorial",
+          "en": "Mining experience · editorial illustration",
+          "pt-BR": "Experiência de mineração · ilustração editorial"
         },
         "caption": {
           "es": "",
@@ -528,20 +485,20 @@
       "publication_status": "draft",
       "translations": {
         "es": {
-          "name": "Viajar en el Tren de la Sabana",
-          "description": "Llega en tren y descubre el paisaje de la sabana.",
+          "name": "Paseo en tren turístico",
+          "description": "Recorre en tren los paisajes de la sabana.",
           "external_url": "",
           "external_label": ""
         },
         "en": {
-          "name": "Ride the Sabana Train",
-          "description": "Arrive by train and discover the savanna landscape.",
+          "name": "Tourist train ride",
+          "description": "Travel through the savanna landscapes by train.",
           "external_url": "",
           "external_label": ""
         },
         "pt-BR": {
-          "name": "Viajar no Trem da Sabana",
-          "description": "Chegue de trem e conheça a paisagem da savana.",
+          "name": "Passeio de trem turístico",
+          "description": "Percorra de trem as paisagens da savana.",
           "external_url": "",
           "external_label": ""
         }
@@ -554,9 +511,9 @@
         "image_license": "Salida IA propuesta para Explorando Lugares; no contiene fotografía de terceros de entrada",
         "image_license_url": "",
         "alt": {
-          "es": "Viajar en el Tren de la Sabana · ilustración editorial",
-          "en": "Ride the Sabana Train · editorial illustration",
-          "pt-BR": "Viajar no Trem da Sabana · ilustração editorial"
+          "es": "Paseo en tren turístico · ilustración editorial",
+          "en": "Tourist train ride · editorial illustration",
+          "pt-BR": "Passeio de trem turístico · ilustração editorial"
         },
         "caption": {
           "es": "",
@@ -571,20 +528,20 @@
       "publication_status": "draft",
       "translations": {
         "es": {
-          "name": "Recorrer el centro histórico",
-          "description": "Conecta plazas, calles y patrimonio en una caminata.",
+          "name": "Tour urbano patrimonial",
+          "description": "Descubre plazas y patrimonio en un recorrido guiado.",
           "external_url": "",
           "external_label": ""
         },
         "en": {
-          "name": "Walk the historic centre",
-          "description": "Connect squares, streets and heritage on foot.",
+          "name": "Heritage walking tour",
+          "description": "Discover squares and heritage on a guided walk.",
           "external_url": "",
           "external_label": ""
         },
         "pt-BR": {
-          "name": "Percorrer o centro histórico",
-          "description": "Conecte praças, ruas e patrimônio em uma caminhada.",
+          "name": "Passeio guiado pelo patrimônio",
+          "description": "Descubra praças e patrimônio em um passeio guiado.",
           "external_url": "",
           "external_label": ""
         }
@@ -597,95 +554,9 @@
         "image_license": "Salida IA propuesta para Explorando Lugares; no contiene fotografía de terceros de entrada",
         "image_license_url": "",
         "alt": {
-          "es": "Recorrer el centro histórico · ilustración editorial",
-          "en": "Walk the historic centre · editorial illustration",
-          "pt-BR": "Percorrer o centro histórico · ilustração editorial"
-        },
-        "caption": {
-          "es": "",
-          "en": "",
-          "pt-BR": ""
-        }
-      }
-    },
-    {
-      "slug": "sabores-locales",
-      "type": "experience",
-      "publication_status": "draft",
-      "translations": {
-        "es": {
-          "name": "Probar sabores locales",
-          "description": "Descubre amasijos y cocina de tradición salinera.",
-          "external_url": "",
-          "external_label": ""
-        },
-        "en": {
-          "name": "Taste local flavours",
-          "description": "Discover traditional baked goods and salt-country cooking.",
-          "external_url": "",
-          "external_label": ""
-        },
-        "pt-BR": {
-          "name": "Provar sabores locais",
-          "description": "Descubra quitutes e a culinária da tradição salineira.",
-          "external_url": "",
-          "external_label": ""
-        }
-      },
-      "image": {
-        "file": "images/sabores-locales.webp",
-        "image_origin": "ai_generated",
-        "image_creator": "Ilustración independiente generada con herramienta integrada imagegen; revisión humana pendiente",
-        "image_source_url": "",
-        "image_license": "Salida IA propuesta para Explorando Lugares; no contiene fotografía de terceros de entrada",
-        "image_license_url": "",
-        "alt": {
-          "es": "Probar sabores locales · ilustración editorial",
-          "en": "Taste local flavours · editorial illustration",
-          "pt-BR": "Provar sabores locais · ilustração editorial"
-        },
-        "caption": {
-          "es": "",
-          "en": "",
-          "pt-BR": ""
-        }
-      }
-    },
-    {
-      "slug": "artesania-sal",
-      "type": "experience",
-      "publication_status": "draft",
-      "translations": {
-        "es": {
-          "name": "Descubrir la artesanía en sal",
-          "description": "Conoce piezas y oficios ligados a la identidad salinera.",
-          "external_url": "",
-          "external_label": ""
-        },
-        "en": {
-          "name": "Discover salt crafts",
-          "description": "Explore crafts connected to local salt-making identity.",
-          "external_url": "",
-          "external_label": ""
-        },
-        "pt-BR": {
-          "name": "Conhecer o artesanato em sal",
-          "description": "Conheça peças e ofícios ligados à identidade salineira.",
-          "external_url": "",
-          "external_label": ""
-        }
-      },
-      "image": {
-        "file": "images/artesania-sal.webp",
-        "image_origin": "ai_generated",
-        "image_creator": "Ilustración independiente generada con herramienta integrada imagegen; revisión humana pendiente",
-        "image_source_url": "",
-        "image_license": "Salida IA propuesta para Explorando Lugares; no contiene fotografía de terceros de entrada",
-        "image_license_url": "",
-        "alt": {
-          "es": "Descubrir la artesanía en sal · ilustración editorial",
-          "en": "Discover salt crafts · editorial illustration",
-          "pt-BR": "Conhecer o artesanato em sal · ilustração editorial"
+          "es": "Tour urbano patrimonial · ilustración editorial",
+          "en": "Heritage walking tour · editorial illustration",
+          "pt-BR": "Passeio guiado pelo patrimônio · ilustração editorial"
         },
         "caption": {
           "es": "",
