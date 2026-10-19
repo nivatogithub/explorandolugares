@@ -13,16 +13,22 @@
       ],
       "checked_at": "2026-10-19",
       "image_review": {
-        "status": "requires_correction",
+        "status": "revised_pending_human_review",
         "reason": "Observación del propietario: imágenes demasiado similares e idealizadas como playas vírgenes con palmeras. No aprobadas.",
-        "sector_visual_verification": "pending",
+        "sector_visual_verification": "descripciones locales e imágenes públicas consultadas; sin fotografías subidas al generador",
         "required_checks": [
           "ancho y continuidad reales de arena, incluidos tramos casi sin playa",
           "urbanización, vías, malecón y borde costero",
           "vegetación del tramo, sin palmeras añadidas",
           "rasgos diferenciadores comprobados entre las tres playas"
         ],
-        "user_feedback_date": "2026-10-19"
+        "user_feedback_date": "2026-10-19",
+        "source_urls": [
+          "https://www.golfodemorrosquillo.com/sitios/covenas/playas-de-la-primera-ensenada",
+          "https://apartamentoedificiopuertovelero.blogspot.com/"
+        ],
+        "new_file": "images/primera-ensenada-v2.webp",
+        "limitations": "Composición interpretativa: edificios y mobiliario no son un levantamiento exacto del tramo."
       }
     },
     {
@@ -35,16 +41,22 @@
       ],
       "checked_at": "2026-10-19",
       "image_review": {
-        "status": "requires_correction",
+        "status": "revised_pending_human_review",
         "reason": "Observación del propietario: imágenes demasiado similares e idealizadas como playas vírgenes con palmeras. No aprobadas.",
-        "sector_visual_verification": "pending",
+        "sector_visual_verification": "descripciones locales e imágenes públicas consultadas; sin fotografías subidas al generador",
         "required_checks": [
           "ancho y continuidad reales de arena, incluidos tramos casi sin playa",
           "urbanización, vías, malecón y borde costero",
           "vegetación del tramo, sin palmeras añadidas",
           "rasgos diferenciadores comprobados entre las tres playas"
         ],
-        "user_feedback_date": "2026-10-19"
+        "user_feedback_date": "2026-10-19",
+        "source_urls": [
+          "https://www.dnp.gov.co/Prensa_/Noticias/Paginas/dnp-y-enterritorio-entregan-malecon-turistico-de-covenas.aspx",
+          "https://caracol.com.co/2025/12/17/gobernadora-de-sucre-anuncia-ampliacion-de-malecon-covenas-y-nuevas-obras-para-golfo-de-morrosquillo/"
+        ],
+        "new_file": "images/segunda-ensenada-v2.webp",
+        "limitations": "Composición interpretativa: edificios y mobiliario no son un levantamiento exacto del tramo."
       }
     },
     {
@@ -88,16 +100,22 @@
       ],
       "checked_at": "2026-10-19",
       "image_review": {
-        "status": "requires_correction",
+        "status": "revised_pending_human_review",
         "reason": "Observación del propietario: imágenes demasiado similares e idealizadas como playas vírgenes con palmeras. No aprobadas.",
-        "sector_visual_verification": "pending",
+        "sector_visual_verification": "descripciones locales e imágenes públicas consultadas; sin fotografías subidas al generador",
         "required_checks": [
           "ancho y continuidad reales de arena, incluidos tramos casi sin playa",
           "urbanización, vías, malecón y borde costero",
           "vegetación del tramo, sin palmeras añadidas",
           "rasgos diferenciadores comprobados entre las tres playas"
         ],
-        "user_feedback_date": "2026-10-19"
+        "user_feedback_date": "2026-10-19",
+        "source_urls": [
+          "https://www.golfodemorrosquillo.com/sitios/covenas/playas-de-la-coquerita",
+          "https://www.tripadvisor.com.br/Attraction_Review-g616329-d10465002-Reviews-Playa_la_Coquerita-Covenas_Sucre_Department.html"
+        ],
+        "new_file": "images/la-coquerita-v2.webp",
+        "limitations": "Composición interpretativa: edificios y mobiliario no son un levantamiento exacto del tramo."
       }
     },
     {
@@ -181,5 +199,5 @@
     }
   ],
   "human_approval": "pending",
-  "readiness": "blocked_by_beach_image_fidelity"
+  "readiness": "beach_images_revised_pending_human_review"
 }

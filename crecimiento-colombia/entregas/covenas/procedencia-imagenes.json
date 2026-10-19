@@ -33,7 +33,7 @@
       "review": "Inspección visual editorial realizada; semántica y rasgos generales plausibles; aprobación humana pendiente. Escenas interpretativas no acreditan distribución exacta del recinto.",
       "factual_sources": "fuentes.json",
       "composition": "landscape_or_activity",
-      "included_in_current_package": true
+      "included_in_current_package": false
     },
     {
       "slug": "segunda-ensenada",
@@ -50,7 +50,7 @@
       "review": "Inspección visual editorial realizada; semántica y rasgos generales plausibles; aprobación humana pendiente. Escenas interpretativas no acreditan distribución exacta del recinto.",
       "factual_sources": "fuentes.json",
       "composition": "landscape_or_activity",
-      "included_in_current_package": true
+      "included_in_current_package": false
     },
     {
       "slug": "cienaga-la-caimanera",
@@ -118,7 +118,7 @@
       "review": "Inspección visual editorial realizada; semántica y rasgos generales plausibles; aprobación humana pendiente. Escenas interpretativas no acreditan distribución exacta del recinto.",
       "factual_sources": "fuentes.json",
       "composition": "landscape_or_activity",
-      "included_in_current_package": true
+      "included_in_current_package": false
     },
     {
       "slug": "represa-de-villeros",
@@ -221,6 +221,69 @@
       "factual_sources": "fuentes.json",
       "composition": "landscape_or_activity",
       "included_in_current_package": false
+    },
+    {
+      "slug": "primera-ensenada-v2",
+      "file": "images/primera-ensenada-v2.webp",
+      "master": "images/primera-ensenada-v2-master.png",
+      "sha256": "43ece633029a7dd1f90dac472f30252aa3f355f1be2c16092d7dc89278524047",
+      "master_sha256": "65214b196d7e3f174f8ab01e875c5b69a3fce29a652c11a58a7e447eeb9b369d",
+      "bytes": 118908,
+      "width": 960,
+      "height": 640,
+      "prompt": "Create ONE landscape 3:2 destination-card illustration. Editorial SEMIREALISTIC hand-painted gouache and ink, detailed believable architecture and coastline, visible brush textures, mature travel illustration, natural neutral colors, no dominant yellow, no text, no logos, no border. Not a photograph. Primera Ensenada, Coveñas, Sucre Colombia. Show a developed Colombian low flat Caribbean coastline viewed obliquely along the shore, a NARROW discontinuous gray beige sand strip with sea close to low property edges and modest concrete waterfront buildings, a few midrise apartment blocks farther along coast, ordinary beach activity. Buildings and constrained beach are the defining subject, not wilderness. No broad white sand, no fantasy palm forest, no mountains, no resort branding. New original composition derived from factual description, do not copy any specific photograph.",
+      "tool": "builtin imagegen",
+      "reference_photo_uploaded": false,
+      "factual_sources": [
+        "https://www.golfodemorrosquillo.com/sitios/covenas/playas-de-la-primera-ensenada",
+        "https://apartamentoedificiopuertovelero.blogspot.com/"
+      ],
+      "checked_at": "2026-10-19",
+      "editorial_approved": false,
+      "included_in_current_package": true,
+      "review": "Inspección de composición y rasgos generales realizada. Interpretación ilustrada; no acredita geometría exacta ni estado actual. Pendiente aprobación humana."
+    },
+    {
+      "slug": "segunda-ensenada-v2",
+      "file": "images/segunda-ensenada-v2.webp",
+      "master": "images/segunda-ensenada-v2-master.png",
+      "sha256": "fba76549b5f6521e89b56c43d3308f06449a6e0333c0dde6d653a134736e6f52",
+      "master_sha256": "cbf9df206cf54c6ae5cb9b869e29efafc3328d31c71faf6eb88913143e4dc523",
+      "bytes": 93090,
+      "width": 960,
+      "height": 640,
+      "prompt": "Create ONE landscape 3:2 destination-card illustration. Editorial SEMIREALISTIC hand-painted gouache and ink, detailed believable architecture and coastline, visible brush textures, mature travel illustration, natural neutral colors, no dominant yellow, no text, no logos, no border. Not a photograph. Segunda Ensenada and its public malecón in Coveñas Sucre Colombia. Show the urban coastal promenade as the main subject: paved pedestrian public walkway parallel to calm muted blue green sea, modest street lighting, low concrete edge, a narrow sand strip between promenade and water, local low buildings inland, a few walkers. Limited sparse vegetation only, not palm avenue. Eye level three quarter diagonal view emphasizing public promenade, not an empty tropical beach. No huge white beach, no mountains, no invented monuments. New original composition derived from factual description, do not copy any specific photograph.",
+      "tool": "builtin imagegen",
+      "reference_photo_uploaded": false,
+      "factual_sources": [
+        "https://www.dnp.gov.co/Prensa_/Noticias/Paginas/dnp-y-enterritorio-entregan-malecon-turistico-de-covenas.aspx",
+        "https://caracol.com.co/2025/12/17/gobernadora-de-sucre-anuncia-ampliacion-de-malecon-covenas-y-nuevas-obras-para-golfo-de-morrosquillo/"
+      ],
+      "checked_at": "2026-10-19",
+      "editorial_approved": false,
+      "included_in_current_package": true,
+      "review": "Inspección de composición y rasgos generales realizada. Interpretación ilustrada; no acredita geometría exacta ni estado actual. Pendiente aprobación humana."
+    },
+    {
+      "slug": "la-coquerita-v2",
+      "file": "images/la-coquerita-v2.webp",
+      "master": "images/la-coquerita-v2-master.png",
+      "sha256": "873c1355bb8010ac303d1b12b5baf86b841ae63f53a98ddd4e0012a45ef27cb3",
+      "master_sha256": "311a01707d452b6a56476c5e545c81804e0d1b73568db16f071d67b79320cbcd",
+      "bytes": 114044,
+      "width": 960,
+      "height": 640,
+      "prompt": "Create ONE landscape 3:2 destination-card illustration. Editorial SEMIREALISTIC hand-painted gouache and ink, detailed believable architecture and coastline, visible brush textures, mature travel illustration, natural neutral colors, no dominant yellow, no text, no logos, no border. Not a photograph. Playa La Coquerita near the center of Coveñas Sucre Colombia. Main subject a lived-in community beach of light GRAY sand, modest rows of colorful canvas beach canopies and rustic shade kiosks, ordinary plastic chairs and a few families, calm shallow muted blue green water and flat horizon. Ground level looking diagonally along active beach. Modest development behind shelters, sparse coastal vegetation, not a virgin palm forest. Do not add names or text, no enormous resort, no cliffs or mountains. Shore modest in width, not expansive white sand. New original composition derived from factual description, do not copy any specific photograph.",
+      "tool": "builtin imagegen",
+      "reference_photo_uploaded": false,
+      "factual_sources": [
+        "https://www.golfodemorrosquillo.com/sitios/covenas/playas-de-la-coquerita",
+        "https://www.tripadvisor.com.br/Attraction_Review-g616329-d10465002-Reviews-Playa_la_Coquerita-Covenas_Sucre_Department.html"
+      ],
+      "checked_at": "2026-10-19",
+      "editorial_approved": false,
+      "included_in_current_package": true,
+      "review": "Inspección de composición y rasgos generales realizada. Interpretación ilustrada; no acredita geometría exacta ni estado actual. Pendiente aprobación humana."
     }
   ]
 }
