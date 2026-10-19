@@ -30,3 +30,6 @@
 
 // Preserve existing contact channels and add the consolidated help entry.
 (()=>{const footer=document.querySelector('footer .wrap')||document.querySelector('footer');if(!footer||footer.querySelector('a[href="/contacto.php"]'))return;const link=document.createElement('a');link.href='/contacto.php';link.className='footer-help-link';link.textContent=document.documentElement.lang.startsWith('en')?'Contact and help':document.documentElement.lang.startsWith('pt')?'Contato e ajuda':'Contacto y ayuda';const group=document.createElement('span');group.append(link);footer.append(group);})();
+
+// Shared language and account controls; preserve original language URLs.
+(()=>{const c=document.createElement('link');c.rel='stylesheet';c.href='/assets/header-controls.css';document.head.append(c);const s=document.createElement('script');s.src='/assets/header-controls.js';s.defer=true;document.head.append(s);})();
