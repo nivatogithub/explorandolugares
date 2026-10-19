@@ -8,18 +8,24 @@
     "translations": {
       "es": {
         "display_name": "Coveñas",
-        "headline": "Playas, manglares e historia naval en el golfo de Morrosquillo.",
-        "intro": "Playas, manglares e historia naval en el golfo de Morrosquillo."
+        "headline": "Playas y manglares",
+        "intro": "Playas, manglares e historia naval en el golfo de Morrosquillo.",
+        "eyebrow": "Sucre · Colombia",
+        "meta_description": "Playas, manglares e historia naval en el golfo de Morrosquillo."
       },
       "en": {
         "display_name": "Coveñas",
-        "headline": "Beaches, mangroves and naval history on the Gulf of Morrosquillo.",
-        "intro": "Beaches, mangroves and naval history on the Gulf of Morrosquillo."
+        "headline": "Beaches and mangroves",
+        "intro": "Beaches, mangroves and naval history on the Gulf of Morrosquillo.",
+        "eyebrow": "Sucre · Colombia",
+        "meta_description": "Beaches, mangroves and naval history on the Gulf of Morrosquillo."
       },
       "pt-BR": {
         "display_name": "Coveñas",
-        "headline": "Praias, manguezais e história naval no golfo de Morrosquillo.",
-        "intro": "Praias, manguezais e história naval no golfo de Morrosquillo."
+        "headline": "Praias e manguezais",
+        "intro": "Praias, manguezais e história naval no golfo de Morrosquillo.",
+        "eyebrow": "Sucre · Colombia",
+        "meta_description": "Praias, manguezais e história naval no golfo de Morrosquillo."
       }
     },
     "history": {
@@ -34,9 +40,15 @@
       ]
     },
     "reasons": {
-      "es": [],
-      "en": [],
-      "pt-BR": []
+      "es": [
+        "Combina las playas del golfo con manglares y memoria naval."
+      ],
+      "en": [
+        "Combines Gulf beaches with mangroves and naval history."
+      ],
+      "pt-BR": [
+        "Combina as praias do golfo com manguezais e memória naval."
+      ]
     },
     "sources": {
       "es": [
@@ -57,13 +69,48 @@
         },
         {
           "section": "destination",
-          "label": "playas",
-          "url": "https://covenas.travel/covenas-destino-de-sol-y-playa-en-el-caribe-colombiano/"
-        },
-        {
-          "section": "destination",
           "label": "historia",
           "url": "https://concejodecovenas.gov.co/wp-content/uploads/2023/03/MANUAL-DE-CONTRATACION-2022-ACTUALIZADO.pdf"
+        },
+        {
+          "section": "places",
+          "label": "regional",
+          "url": "https://www.golfodemorrosquillo.com/covenas?lang=es"
+        },
+        {
+          "section": "places",
+          "label": "primera",
+          "url": "https://www.hotelpoblado.com/"
+        },
+        {
+          "section": "places",
+          "label": "coquerita",
+          "url": "https://www.golfodemorrosquillo.com/sitios/covenas/playas-de-la-coquerita"
+        },
+        {
+          "section": "places",
+          "label": "segunda",
+          "url": "https://www.golfodemorrosquillo.com/sitios/covenas/playas-de-la-segunda-ensenada"
+        },
+        {
+          "section": "places",
+          "label": "caimanera-regional",
+          "url": "https://www.golfodemorrosquillo.com/sitios/covenas/cienaga-de-la-caimanera"
+        },
+        {
+          "section": "places",
+          "label": "villeros",
+          "url": "https://www.golfodemorrosquillo.com/sitios/covenas/represa-de-villeros"
+        },
+        {
+          "section": "places",
+          "label": "cultura",
+          "url": "https://www.golfodemorrosquillo.com/sitios/covenas/casa-de-la-cultura-de-covenas"
+        },
+        {
+          "section": "places",
+          "label": "kayak",
+          "url": "https://www.golfodemorrosquillo.com/sitios/covenas/kayak"
         }
       ],
       "en": [
@@ -84,13 +131,48 @@
         },
         {
           "section": "destination",
-          "label": "playas",
-          "url": "https://covenas.travel/covenas-destino-de-sol-y-playa-en-el-caribe-colombiano/"
-        },
-        {
-          "section": "destination",
           "label": "historia",
           "url": "https://concejodecovenas.gov.co/wp-content/uploads/2023/03/MANUAL-DE-CONTRATACION-2022-ACTUALIZADO.pdf"
+        },
+        {
+          "section": "places",
+          "label": "regional",
+          "url": "https://www.golfodemorrosquillo.com/covenas?lang=es"
+        },
+        {
+          "section": "places",
+          "label": "primera",
+          "url": "https://www.hotelpoblado.com/"
+        },
+        {
+          "section": "places",
+          "label": "coquerita",
+          "url": "https://www.golfodemorrosquillo.com/sitios/covenas/playas-de-la-coquerita"
+        },
+        {
+          "section": "places",
+          "label": "segunda",
+          "url": "https://www.golfodemorrosquillo.com/sitios/covenas/playas-de-la-segunda-ensenada"
+        },
+        {
+          "section": "places",
+          "label": "caimanera-regional",
+          "url": "https://www.golfodemorrosquillo.com/sitios/covenas/cienaga-de-la-caimanera"
+        },
+        {
+          "section": "places",
+          "label": "villeros",
+          "url": "https://www.golfodemorrosquillo.com/sitios/covenas/represa-de-villeros"
+        },
+        {
+          "section": "places",
+          "label": "cultura",
+          "url": "https://www.golfodemorrosquillo.com/sitios/covenas/casa-de-la-cultura-de-covenas"
+        },
+        {
+          "section": "places",
+          "label": "kayak",
+          "url": "https://www.golfodemorrosquillo.com/sitios/covenas/kayak"
         }
       ],
       "pt-BR": [
@@ -111,21 +193,57 @@
         },
         {
           "section": "destination",
-          "label": "playas",
-          "url": "https://covenas.travel/covenas-destino-de-sol-y-playa-en-el-caribe-colombiano/"
-        },
-        {
-          "section": "destination",
           "label": "historia",
           "url": "https://concejodecovenas.gov.co/wp-content/uploads/2023/03/MANUAL-DE-CONTRATACION-2022-ACTUALIZADO.pdf"
+        },
+        {
+          "section": "places",
+          "label": "regional",
+          "url": "https://www.golfodemorrosquillo.com/covenas?lang=es"
+        },
+        {
+          "section": "places",
+          "label": "primera",
+          "url": "https://www.hotelpoblado.com/"
+        },
+        {
+          "section": "places",
+          "label": "coquerita",
+          "url": "https://www.golfodemorrosquillo.com/sitios/covenas/playas-de-la-coquerita"
+        },
+        {
+          "section": "places",
+          "label": "segunda",
+          "url": "https://www.golfodemorrosquillo.com/sitios/covenas/playas-de-la-segunda-ensenada"
+        },
+        {
+          "section": "places",
+          "label": "caimanera-regional",
+          "url": "https://www.golfodemorrosquillo.com/sitios/covenas/cienaga-de-la-caimanera"
+        },
+        {
+          "section": "places",
+          "label": "villeros",
+          "url": "https://www.golfodemorrosquillo.com/sitios/covenas/represa-de-villeros"
+        },
+        {
+          "section": "places",
+          "label": "cultura",
+          "url": "https://www.golfodemorrosquillo.com/sitios/covenas/casa-de-la-cultura-de-covenas"
+        },
+        {
+          "section": "places",
+          "label": "kayak",
+          "url": "https://www.golfodemorrosquillo.com/sitios/covenas/kayak"
         }
       ]
-    }
+    },
+    "subregion": "Golfo de Morrosquillo"
   },
   "hero_image": {
     "file": "images/covenas-portada.webp",
     "image_origin": "ai_generated",
-    "image_creator": "Pendiente de generación y revisión",
+    "image_creator": "OpenAI · ilustración editorial independiente IA",
     "alt": {
       "es": "Ilustración de Coveñas",
       "en": "Illustration of Coveñas",
@@ -135,7 +253,10 @@
       "es": "",
       "en": "",
       "pt-BR": ""
-    }
+    },
+    "image_license": "Generada con IA; borrador para revisión humana",
+    "image_source_url": "",
+    "image_license_url": ""
   },
   "places": [
     {
@@ -145,21 +266,24 @@
       "translations": {
         "es": {
           "name": "Primera Ensenada",
-          "description": "Playas y servicios en uno de los sectores más conocidos de Coveñas."
+          "description": "Playas y servicios en uno de los sectores más conocidos de Coveñas.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Primera%20Ensenada%20Cove%C3%B1as%20Sucre%20Colombia"
         },
         "en": {
           "name": "Primera Ensenada",
-          "description": "Beaches and services in one of Coveñas’ best-known areas."
+          "description": "Beaches and services in one of Coveñas’ best-known areas.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Primera%20Ensenada%20Cove%C3%B1as%20Sucre%20Colombia"
         },
         "pt-BR": {
           "name": "Primera Ensenada",
-          "description": "Praias e serviços em uma das áreas mais conhecidas de Coveñas."
+          "description": "Praias e serviços em uma das áreas mais conhecidas de Coveñas.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Primera%20Ensenada%20Cove%C3%B1as%20Sucre%20Colombia"
         }
       },
       "image": {
         "file": "images/primera-ensenada.webp",
         "image_origin": "ai_generated",
-        "image_creator": "Pendiente de generación y revisión",
+        "image_creator": "OpenAI · ilustración editorial independiente IA",
         "alt": {
           "es": "Primera Ensenada",
           "en": "Primera Ensenada",
@@ -169,7 +293,10 @@
           "es": "",
           "en": "",
           "pt-BR": ""
-        }
+        },
+        "image_license": "Generada con IA; borrador para revisión humana",
+        "image_source_url": "",
+        "image_license_url": ""
       }
     },
     {
@@ -179,21 +306,24 @@
       "translations": {
         "es": {
           "name": "Segunda Ensenada y malecón",
-          "description": "Un corredor costero para disfrutar la playa y caminar junto al mar."
+          "description": "Un corredor costero para disfrutar la playa y caminar junto al mar.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Segunda%20Ensenada%20y%20malec%C3%B3n%20Cove%C3%B1as%20Sucre%20Colombia"
         },
         "en": {
           "name": "Segunda Ensenada and waterfront",
-          "description": "A coastal stretch for beach visits and walks by the sea."
+          "description": "A coastal stretch for beach visits and walks by the sea.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Segunda%20Ensenada%20y%20malec%C3%B3n%20Cove%C3%B1as%20Sucre%20Colombia"
         },
         "pt-BR": {
           "name": "Segunda Ensenada e orla",
-          "description": "Um trecho costeiro para aproveitar a praia e caminhar à beira-mar."
+          "description": "Um trecho costeiro para aproveitar a praia e caminhar à beira-mar.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Segunda%20Ensenada%20y%20malec%C3%B3n%20Cove%C3%B1as%20Sucre%20Colombia"
         }
       },
       "image": {
         "file": "images/segunda-ensenada.webp",
         "image_origin": "ai_generated",
-        "image_creator": "Pendiente de generación y revisión",
+        "image_creator": "OpenAI · ilustración editorial independiente IA",
         "alt": {
           "es": "Segunda Ensenada y malecón",
           "en": "Segunda Ensenada and waterfront",
@@ -203,7 +333,10 @@
           "es": "",
           "en": "",
           "pt-BR": ""
-        }
+        },
+        "image_license": "Generada con IA; borrador para revisión humana",
+        "image_source_url": "",
+        "image_license_url": ""
       }
     },
     {
@@ -213,21 +346,24 @@
       "translations": {
         "es": {
           "name": "Ciénaga La Caimanera",
-          "description": "Manglares y canales: un ecosistema para conocer con guía local."
+          "description": "Manglares y canales: un ecosistema para conocer con guía local.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Ci%C3%A9naga%20La%20Caimanera%20Cove%C3%B1as%20Sucre%20Colombia"
         },
         "en": {
           "name": "La Caimanera wetland",
-          "description": "Mangroves and waterways: an ecosystem to explore with a local guide."
+          "description": "Mangroves and waterways: an ecosystem to explore with a local guide.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Ci%C3%A9naga%20La%20Caimanera%20Cove%C3%B1as%20Sucre%20Colombia"
         },
         "pt-BR": {
           "name": "Ciénaga La Caimanera",
-          "description": "Manguezais e canais: um ecossistema para conhecer com guia local."
+          "description": "Manguezais e canais: um ecossistema para conhecer com guia local.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Ci%C3%A9naga%20La%20Caimanera%20Cove%C3%B1as%20Sucre%20Colombia"
         }
       },
       "image": {
         "file": "images/cienaga-la-caimanera.webp",
         "image_origin": "ai_generated",
-        "image_creator": "Pendiente de generación y revisión",
+        "image_creator": "OpenAI · ilustración editorial independiente IA",
         "alt": {
           "es": "Ciénaga La Caimanera",
           "en": "La Caimanera wetland",
@@ -237,7 +373,10 @@
           "es": "",
           "en": "",
           "pt-BR": ""
-        }
+        },
+        "image_license": "Generada con IA; borrador para revisión humana",
+        "image_source_url": "",
+        "image_license_url": ""
       }
     },
     {
@@ -247,31 +386,37 @@
       "translations": {
         "es": {
           "name": "Museo de Infantería de Marina",
-          "description": "Historia naval en un recinto militar; confirma el acceso antes de ir."
+          "description": "Historia naval en un recinto militar; confirma el acceso antes de ir.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20de%20Infanter%C3%ADa%20de%20Marina%20Cove%C3%B1as%20Sucre%20Colombia"
         },
         "en": {
           "name": "Marine Corps Museum",
-          "description": "Naval history inside a military site; confirm access before visiting."
+          "description": "Naval history inside a military site; confirm access before visiting.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20de%20Infanter%C3%ADa%20de%20Marina%20Cove%C3%B1as%20Sucre%20Colombia"
         },
         "pt-BR": {
           "name": "Museu de Infantaria da Marinha",
-          "description": "História naval em uma área militar; confirme o acesso antes da visita."
+          "description": "História naval em uma área militar; confirme o acesso antes da visita.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20de%20Infanter%C3%ADa%20de%20Marina%20Cove%C3%B1as%20Sucre%20Colombia"
         }
       },
       "image": {
         "file": "images/museo-infanteria-marina.webp",
         "image_origin": "ai_generated",
-        "image_creator": "Pendiente de generación y revisión",
+        "image_creator": "OpenAI · ilustración editorial independiente IA",
         "alt": {
-          "es": "Museo de Infantería de Marina",
-          "en": "Marine Corps Museum",
-          "pt-BR": "Museu de Infantaria da Marinha"
+          "es": "Ilustración temática, no registro del recinto: Museo de Infantería de Marina",
+          "en": "Thematic illustration, not a record of the venue: Marine Corps Museum",
+          "pt-BR": "Ilustração temática, não registro do recinto: Museu de Infantaria da Marinha"
         },
         "caption": {
           "es": "",
           "en": "",
           "pt-BR": ""
-        }
+        },
+        "image_license": "Generada con IA; borrador para revisión humana",
+        "image_source_url": "",
+        "image_license_url": ""
       }
     },
     {
@@ -281,21 +426,24 @@
       "translations": {
         "es": {
           "name": "Coveñitas",
-          "description": "Otro sector de playa de Coveñas para explorar el litoral."
+          "description": "Otro sector de playa de Coveñas para explorar el litoral.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Cove%C3%B1itas%20Cove%C3%B1as%20Sucre%20Colombia"
         },
         "en": {
           "name": "Coveñitas",
-          "description": "Another Coveñas beach area for exploring the coast."
+          "description": "Another Coveñas beach area for exploring the coast.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Cove%C3%B1itas%20Cove%C3%B1as%20Sucre%20Colombia"
         },
         "pt-BR": {
           "name": "Coveñitas",
-          "description": "Outro setor de praia de Coveñas para explorar o litoral."
+          "description": "Outro setor de praia de Coveñas para explorar o litoral.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Cove%C3%B1itas%20Cove%C3%B1as%20Sucre%20Colombia"
         }
       },
       "image": {
         "file": "images/covenitas.webp",
         "image_origin": "ai_generated",
-        "image_creator": "Pendiente de generación y revisión",
+        "image_creator": "OpenAI · ilustración editorial independiente IA",
         "alt": {
           "es": "Coveñitas",
           "en": "Coveñitas",
@@ -305,7 +453,10 @@
           "es": "",
           "en": "",
           "pt-BR": ""
-        }
+        },
+        "image_license": "Generada con IA; borrador para revisión humana",
+        "image_source_url": "",
+        "image_license_url": ""
       }
     },
     {
@@ -315,21 +466,24 @@
       "translations": {
         "es": {
           "name": "La Coquerita",
-          "description": "Un sector costero mencionado entre las playas del municipio."
+          "description": "Un sector costero mencionado entre las playas del municipio.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=La%20Coquerita%20Cove%C3%B1as%20Sucre%20Colombia"
         },
         "en": {
           "name": "La Coquerita",
-          "description": "A coastal area listed among the municipality’s beaches."
+          "description": "A coastal area listed among the municipality’s beaches.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=La%20Coquerita%20Cove%C3%B1as%20Sucre%20Colombia"
         },
         "pt-BR": {
           "name": "La Coquerita",
-          "description": "Uma área costeira citada entre as praias do município."
+          "description": "Uma área costeira citada entre as praias do município.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=La%20Coquerita%20Cove%C3%B1as%20Sucre%20Colombia"
         }
       },
       "image": {
         "file": "images/la-coquerita.webp",
         "image_origin": "ai_generated",
-        "image_creator": "Pendiente de generación y revisión",
+        "image_creator": "OpenAI · ilustración editorial independiente IA",
         "alt": {
           "es": "La Coquerita",
           "en": "La Coquerita",
@@ -339,7 +493,90 @@
           "es": "",
           "en": "",
           "pt-BR": ""
+        },
+        "image_license": "Generada con IA; borrador para revisión humana",
+        "image_source_url": "",
+        "image_license_url": ""
+      }
+    },
+    {
+      "slug": "represa-de-villeros",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Represa de Villeros",
+          "description": "Un paisaje rural de agua y vegetación; consulta el acceso local.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Represa%20de%20Villeros%20Cove%C3%B1as%20Sucre%20Colombia"
+        },
+        "en": {
+          "name": "Villeros Reservoir",
+          "description": "A rural landscape of water and greenery; check local access.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Represa%20de%20Villeros%20Cove%C3%B1as%20Sucre%20Colombia"
+        },
+        "pt-BR": {
+          "name": "Represa de Villeros",
+          "description": "Uma paisagem rural de água e vegetação; consulte o acesso local.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Represa%20de%20Villeros%20Cove%C3%B1as%20Sucre%20Colombia"
         }
+      },
+      "image": {
+        "file": "images/represa-de-villeros.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "OpenAI · ilustración editorial independiente IA",
+        "alt": {
+          "es": "Represa de Villeros",
+          "en": "Villeros Reservoir",
+          "pt-BR": "Represa de Villeros"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        },
+        "image_license": "Generada con IA; borrador para revisión humana",
+        "image_source_url": "",
+        "image_license_url": ""
+      }
+    },
+    {
+      "slug": "casa-de-la-cultura",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Casa de la Cultura",
+          "description": "Música y memoria local; consulta sus actividades y horarios.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Casa%20de%20la%20Cultura%20Cove%C3%B1as%20Sucre%20Colombia"
+        },
+        "en": {
+          "name": "House of Culture",
+          "description": "Local music and memory; check activities and opening times.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Casa%20de%20la%20Cultura%20Cove%C3%B1as%20Sucre%20Colombia"
+        },
+        "pt-BR": {
+          "name": "Casa da Cultura",
+          "description": "Música e memória local; consulte as atividades e os horários.",
+          "map_url": "https://www.google.com/maps/search/?api=1&query=Casa%20de%20la%20Cultura%20Cove%C3%B1as%20Sucre%20Colombia"
+        }
+      },
+      "image": {
+        "file": "images/casa-de-la-cultura.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "OpenAI · ilustración editorial independiente IA",
+        "alt": {
+          "es": "Ilustración temática, no registro del recinto: Casa de la Cultura",
+          "en": "Thematic illustration, not a record of the venue: House of Culture",
+          "pt-BR": "Ilustração temática, não registro do recinto: Casa da Cultura"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        },
+        "image_license": "Generada con IA; borrador para revisión humana",
+        "image_source_url": "",
+        "image_license_url": ""
       }
     },
     {
@@ -349,21 +586,24 @@
       "translations": {
         "es": {
           "name": "Recorrer el manglar",
-          "description": "Consulta recorridos guiados por los canales de La Caimanera."
+          "description": "Consulta recorridos guiados por los canales de La Caimanera.",
+          "map_url": ""
         },
         "en": {
           "name": "Explore the mangroves",
-          "description": "Ask about guided trips through La Caimanera’s waterways."
+          "description": "Ask about guided trips through La Caimanera’s waterways.",
+          "map_url": ""
         },
         "pt-BR": {
           "name": "Explorar o manguezal",
-          "description": "Consulte passeios guiados pelos canais de La Caimanera."
+          "description": "Consulte passeios guiados pelos canais de La Caimanera.",
+          "map_url": ""
         }
       },
       "image": {
         "file": "images/recorrido-manglar.webp",
         "image_origin": "ai_generated",
-        "image_creator": "Pendiente de generación y revisión",
+        "image_creator": "OpenAI · ilustración editorial independiente IA",
         "alt": {
           "es": "Recorrer el manglar",
           "en": "Explore the mangroves",
@@ -373,7 +613,10 @@
           "es": "",
           "en": "",
           "pt-BR": ""
-        }
+        },
+        "image_license": "Generada con IA; borrador para revisión humana",
+        "image_source_url": "",
+        "image_license_url": ""
       }
     },
     {
@@ -383,21 +626,24 @@
       "translations": {
         "es": {
           "name": "Caminar junto al mar",
-          "description": "Recorre el malecón de Segunda Ensenada al final de la tarde."
+          "description": "Recorre el malecón de Segunda Ensenada al final de la tarde.",
+          "map_url": ""
         },
         "en": {
           "name": "Walk by the sea",
-          "description": "Explore Segunda Ensenada’s waterfront in the late afternoon."
+          "description": "Explore Segunda Ensenada’s waterfront in the late afternoon.",
+          "map_url": ""
         },
         "pt-BR": {
           "name": "Caminhar à beira-mar",
-          "description": "Percorra a orla de Segunda Ensenada no fim da tarde."
+          "description": "Percorra a orla de Segunda Ensenada no fim da tarde.",
+          "map_url": ""
         }
       },
       "image": {
         "file": "images/caminar-malecon.webp",
         "image_origin": "ai_generated",
-        "image_creator": "Pendiente de generación y revisión",
+        "image_creator": "OpenAI · ilustración editorial independiente IA",
         "alt": {
           "es": "Caminar junto al mar",
           "en": "Walk by the sea",
@@ -407,7 +653,10 @@
           "es": "",
           "en": "",
           "pt-BR": ""
-        }
+        },
+        "image_license": "Generada con IA; borrador para revisión humana",
+        "image_source_url": "",
+        "image_license_url": ""
       }
     },
     {
@@ -417,21 +666,24 @@
       "translations": {
         "es": {
           "name": "Probar sabores del Caribe",
-          "description": "Busca cocina local y consulta la oferta del día en los restaurantes."
+          "description": "Busca cocina local y consulta la oferta del día en los restaurantes.",
+          "map_url": ""
         },
         "en": {
           "name": "Taste Caribbean flavours",
-          "description": "Look for local cooking and ask restaurants about the day’s menu."
+          "description": "Look for local cooking and ask restaurants about the day’s menu.",
+          "map_url": ""
         },
         "pt-BR": {
           "name": "Provar sabores do Caribe",
-          "description": "Procure a cozinha local e consulte o cardápio do dia nos restaurantes."
+          "description": "Procure a cozinha local e consulte o cardápio do dia nos restaurantes.",
+          "map_url": ""
         }
       },
       "image": {
         "file": "images/sabores-del-caribe.webp",
         "image_origin": "ai_generated",
-        "image_creator": "Pendiente de generación y revisión",
+        "image_creator": "OpenAI · ilustración editorial independiente IA",
         "alt": {
           "es": "Probar sabores del Caribe",
           "en": "Taste Caribbean flavours",
@@ -441,7 +693,50 @@
           "es": "",
           "en": "",
           "pt-BR": ""
+        },
+        "image_license": "Generada con IA; borrador para revisión humana",
+        "image_source_url": "",
+        "image_license_url": ""
+      }
+    },
+    {
+      "slug": "kayak",
+      "type": "experience",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Remar en kayak",
+          "description": "Consulta prestadores locales y condiciones del mar antes de salir.",
+          "map_url": ""
+        },
+        "en": {
+          "name": "Go kayaking",
+          "description": "Check local providers and sea conditions before setting out.",
+          "map_url": ""
+        },
+        "pt-BR": {
+          "name": "Remar de caiaque",
+          "description": "Consulte prestadores locais e as condições do mar antes de sair.",
+          "map_url": ""
         }
+      },
+      "image": {
+        "file": "images/kayak.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "OpenAI · ilustración editorial independiente IA",
+        "alt": {
+          "es": "Remar en kayak",
+          "en": "Go kayaking",
+          "pt-BR": "Remar de caiaque"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        },
+        "image_license": "Generada con IA; borrador para revisión humana",
+        "image_source_url": "",
+        "image_license_url": ""
       }
     }
   ]

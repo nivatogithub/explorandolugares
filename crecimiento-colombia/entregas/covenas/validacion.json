@@ -1,25 +1,14 @@
 {
-    "checked_at": "2026-10-19",
-    "destination_manifest_schema": "pass",
-    "business_manifest_schema": "pass",
-    "business_zip_read": "pass",
-    "businesses": 9,
-    "attractions": 6,
-    "experiences": 3,
-    "missing_images": [
-        "images/covenas-portada.webp",
-        "images/primera-ensenada.webp",
-        "images/segunda-ensenada.webp",
-        "images/cienaga-la-caimanera.webp",
-        "images/museo-infanteria-marina.webp",
-        "images/covenitas.webp",
-        "images/la-coquerita.webp",
-        "images/recorrido-manglar.webp",
-        "images/caminar-malecon.webp",
-        "images/sabores-del-caribe.webp"
-    ],
-    "destination_import_ready": false,
-    "database_import_executed": false,
-    "site_qa": "not_executed",
-    "approval": "pending"
+  "checked_at": "2026-10-19",
+  "destination_manifest_schema": "pass",
+  "business_manifest_schema": "pass",
+  "business_zip_read": "pass",
+  "businesses": 30,
+  "attractions": 8,
+  "experiences": 4,
+  "missing_images": [],
+  "destination_import_ready": true,
+  "database_import_executed": true,
+  "site_qa": "passed_http_and_browser_local_only",
+  "approval": "pending"
 }

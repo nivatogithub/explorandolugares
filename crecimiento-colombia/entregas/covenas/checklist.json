@@ -6,22 +6,19 @@
     "en",
     "pt-BR"
   ],
-  "attractions_documented": 6,
+  "attractions_documented": 8,
   "top8_validated": false,
-  "experiences_draft": 3,
-  "businesses_documented": 9,
+  "experiences_draft": 4,
+  "businesses_documented": 30,
   "business_target": 30,
-  "images_generated": 0,
+  "images_generated": 13,
   "images_approved": 0,
-  "destination_zip_ready": false,
-  "preprod_imported": false,
+  "destination_zip_ready": true,
+  "preprod_imported": true,
   "production_published": false,
   "pending": [
-    "Validar ranking turístico y dos cupos sin duplicar playas",
-    "Ampliar directorio con fuentes identificables",
-    "Preparar y revisar portada geográficamente reconocible",
-    "Generar imágenes y derivados con skill vigente",
-    "QA editorial, accesibilidad e integración en preproducción",
-    "Revisión del propietario"
-  ]
+    "Revisión humana de imágenes, textos y diseño",
+    "Confirmación de vigencia comercial antes de promoción a producción"
+  ],
+  "site_qa": "passed_http_and_browser"
 }
