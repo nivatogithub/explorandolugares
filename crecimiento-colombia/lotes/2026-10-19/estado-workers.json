@@ -45,9 +45,9 @@
     {
       "destination": "jardin",
       "id": 2,
-      "destination_zip_sha256": "1783e4d8e4b78000e00de70185c0863fd533bc07439f957982e79aa6bca83169",
+      "destination_zip_sha256": "9ac8321855690db0b53fdcc0b0829de61dc5de3847906e2355814fbee7b0aa13",
       "business_zip_sha256": "1da62b3d101b8ac9c3f3a612be72225ab987c4a1216fc7a8e4045d45655de104",
-      "loaded_at": "2026-10-19T19:40:54+00:00",
+      "loaded_at": "2026-10-19T19:52:01+00:00",
       "environment": "local_preprod_only",
       "editorial_approved": false,
       "production_changed": false,
@@ -57,12 +57,14 @@
       "new_businesses": 0,
       "url": "http://127.0.0.1:8088/destinos/jardin/",
       "branch": "lugar/CO/antioquia/jardin",
-      "content_commit": "c88c213",
+      "content_commit": "2400c45",
       "status": "corregido_por_feedback_pendiente_revision",
       "human_approval": "pending",
-      "status_commit": "56c2016",
+      "status_commit": "2400c45",
       "editorial_rule_commit": "091af7e",
-      "editorial_evidence": "crecimiento-colombia/entregas/jardin/criterios-editoriales.json"
+      "editorial_evidence": "crecimiento-colombia/entregas/jardin/criterios-editoriales.json",
+      "public_presentation": "neutral_sin_publicidad_gratuita",
+      "neutrality_rule_commit": "a30b51d"
     },
     {
       "destination": "covenas",
