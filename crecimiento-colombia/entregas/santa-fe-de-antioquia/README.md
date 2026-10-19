@@ -41,3 +41,9 @@ UI vigente neutral y compacta; historia fullwidth sin imagen, sin subtítulos de
 - `PROCEDENCIA_IMAGENES.json`: prompts, maestros/derivados, hashes y revisión pendiente. `GENERACIONES_DESCARTADAS.json`: errores conservados.
 - `CONTACTO_VISUAL.jpg` y `REVISION_VISUAL.md`: revisión conjunta y límites de escenas contextuales de museos/Jesús Nazareno. No presentarlas como fotografías o reconstrucciones exactas.
 - Maestros PNG fuera del ZIP público; no subirlos al hosting. Únicamente WebP del paquete y derivados necesarios.
+
+## Integración local confirmada por coordinación
+
+El coordinador importó la entrega en preproducción: http://127.0.0.1:8088/destinos/santa-fe-de-antioquia/ (id 4). Reportó 13 imágenes, ocho atractivos, cuatro experiencias y 30 fichas; ES/EN/PT responden HTTP 200. QA del DOM móvil sin acordeones ni desborde horizontal. Recibo de importación SHA-256: `30fbc70b8f4815f1a6ed14c9b8ec5f3b68c6ca3b84102ef4cc89206c7149aaca`.
+
+Esta confirmación posterior sustituye las menciones anteriores de integración pendiente. Sigue pendiente la revisión y aprobación humana de imágenes y destino. No hay autorización ni despliegue de producción. Este registro no modifica el ZIP, sus hashes, los contenidos o las imágenes.
