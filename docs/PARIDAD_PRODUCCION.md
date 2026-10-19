@@ -39,3 +39,14 @@ Esta corrección cambia únicamente dos archivos desplegables respecto a la prod
 ## Cambio posterior: conteo básico sin cookies
 
 La preparación posterior a v1.2.0 añade el módulo documentado en `CONTEO_BASICO_SIN_COOKIES.md`. Main y la rama de ampliación deben conservar la misma revisión; la etiqueta v1.2.0 permanece inmutable en la versión ya desplegada. El candidato nuevo tiene diferencias intencionales respecto al manifiesto de producción y no se considera publicado por pasar las pruebas locales. Construir ambos paquetes, revisar el delta y activar el módulo básico por separado antes de afirmar que funciona en producción.
+
+
+## Integración de encabezado, footer e idiomas · 19/10/2026
+
+La rama `idiomas-y-registrarse` contiene diez commits propios de interfaz sobre una base que también heredó auditoría y trabajo de lugares no publicados. Para integrar únicamente la interfaz publicada en main se reproduce esa serie desde main en `integracion/header-footer-idiomas-publicados`, sin marcar como integrados los commits heredados de la auditoría. La rama original se conserva; no se reescribe su remoto.
+
+Serie de origen: 5829d7c, 3a8f524, 682725a, a6b0952, 5467d0e, 04535ee, 032a68d, 0ebc5fb, c024d59 y 7dae6e5. Los conflictos de referencias de recursos en renderer/cobertura se resuelven conservando el contenido de main y actualizando solo versiones. Se sincroniza el hash del script de cobertura con el contenido de main, que aún no incluye la auditoría pendiente.
+
+La comprobación directa de producción contrasta diez recursos (encabezado, menú, acceso, tokens, footer/medición, navegación de idiomas, estilos y .htaccess) contra sus bytes remotos y el manifiesto productivo 0401c73. Las cabeceras y pies generados coinciden con los servidos por HTTPS en inicio español, inglés y portugués. No se publica código ni se modifica la base de datos durante esta integración. Evidencia local privada: `.local/header-main/produccion.json` y `verificacion.log`. Esto acredita este alcance de interfaz, no una paridad completa de preprod con producción.
+
+Los ajustes de cuentas, formulario nacional, upgrades y migraciones 043/044 siguen preparados en preprod y requieren su propia publicación. No se incorporan a main por esta integración.
