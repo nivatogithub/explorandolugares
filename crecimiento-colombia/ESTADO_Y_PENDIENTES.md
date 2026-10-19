@@ -1,3 +1,7 @@
+## 19/10/2026 · Próximos destinos, diferidos por el propietario
+
+Después de terminar la aprobación de los borradores actuales y validar/corregir los publicados con las nuevas reglas, conservar este orden: **Guatapé → Cali → Barranquilla → Rincón del Mar**. No iniciar investigación, imágenes, ramas ni workers ahora; sin arranque automático. No modificar puntuaciones nacionales por este registro. Cola estructurada: `revisiones/cola-futura-destinos.json`.
+
 ## 19/10/2026 · Preparación acotada de publicación de primera auditoría
 
 Solicitud actual: preparar, no desplegar. Herramienta reproducible `scripts/preparar-publicacion-auditoria.py`: fuentes del commit Git, lista exacta de archivos propios, contraste opcional del manifiesto y bytes remotos, ZIP de solo el delta y reporte local de exclusiones. No incluye lugares, imágenes, agenda ni estilos/menús de otros workers; no elimina archivos ni traslada datos locales. Las diferencias ajenas se conservan fuera del paquete aunque compartan rama.
