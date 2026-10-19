@@ -195,10 +195,86 @@
       ],
       "checked_at": "2026-10-19",
       "reason": "Fuente regional acredita actividad posible, pero no se comprobó una oferta concreta de un prestador. Conservar candidato, no publicar como servicio."
+    },
+    {
+      "slug": "buceo",
+      "kind": "experience",
+      "decision": "include",
+      "purpose": "Explora el entorno submarino en una salida guiada.",
+      "source_urls": [
+        "https://covenasdiving.com/"
+      ],
+      "checked_at": "2026-10-19",
+      "operator": {
+        "name": "Coveñas Diving Co",
+        "offer_url": "https://covenasdiving.com/",
+        "source_url": "https://covenasdiving.com/"
+      },
+      "offer_verified": true,
+      "verification_scope": "Operador con sede en Coveñas; confirmar punto de inmersión, no atribuir todos los puntos al municipio.",
+      "public_presentation": "Neutral, sin proveedor, precios ni enlaces comerciales; ilustración temática, no sitio exacto",
+      "human_approval": "pending"
+    },
+    {
+      "slug": "paddleboarding",
+      "kind": "experience",
+      "decision": "include",
+      "purpose": "Aprende a remar de pie y recorre la costa en tabla.",
+      "source_urls": [
+        "https://suplovers.co/clases/"
+      ],
+      "checked_at": "2026-10-19",
+      "operator": {
+        "name": "Suplovers",
+        "offer_url": "https://suplovers.co/clases/",
+        "source_url": "https://suplovers.co/clases/"
+      },
+      "offer_verified": true,
+      "verification_scope": "Agrupar iniciación y paseos; no publicar variantes de paquetes ni multiplicar tarjetas del mismo deporte.",
+      "public_presentation": "Neutral, sin proveedor, precios ni enlaces comerciales; ilustración temática, no sitio exacto",
+      "human_approval": "pending"
+    },
+    {
+      "slug": "excursion-san-bernardo",
+      "kind": "experience",
+      "decision": "include",
+      "purpose": "Una excursión regional para conocer las islas desde Coveñas.",
+      "source_urls": [
+        "https://agenciacovenastours.com/447642660"
+      ],
+      "checked_at": "2026-10-19",
+      "operator": {
+        "name": "Agencia Coveñas Tours",
+        "offer_url": "https://agenciacovenastours.com/447642660",
+        "source_url": "https://agenciacovenastours.com/447642660"
+      },
+      "offer_verified": true,
+      "verification_scope": "Excursión regional comercializada desde Coveñas; conservar distinción entre recogida, puerto de embarque y municipio de las islas. No atribuir islas al municipio ni afirmar embarque en Coveñas sin verificar.",
+      "public_presentation": "Neutral, sin proveedor, precios ni enlaces comerciales; ilustración temática, no sitio exacto",
+      "human_approval": "pending"
+    },
+    {
+      "slug": "excursion-cispata",
+      "kind": "experience",
+      "decision": "include",
+      "purpose": "Desde Coveñas, conoce los manglares de Cispatá, en San Antero.",
+      "source_urls": [
+        "https://suplovers.co/tours-en-covenas/cispata/"
+      ],
+      "checked_at": "2026-10-19",
+      "operator": {
+        "name": "Suplovers",
+        "offer_url": "https://suplovers.co/tours-en-covenas/cispata/",
+        "source_url": "https://suplovers.co/tours-en-covenas/cispata/"
+      },
+      "offer_verified": true,
+      "verification_scope": "Traslado desde Coveñas; actividad en San Antero. Avistamiento de aves es parte del recorrido, no tour independiente comprobado.",
+      "public_presentation": "Neutral, sin proveedor, precios ni enlaces comerciales; ilustración temática, no sitio exacto",
+      "human_approval": "pending"
     }
   ],
   "human_approval": "pending",
-  "readiness": "blocked_visual_identity_not_approved",
+  "readiness": "experiencias_listas_para_revision;identidad_imagenes_costeras_pendiente",
   "hero_image_review": {
     "status": "rejected_by_owner_v3",
     "feedback": "El propietario señala que la portada parece una playa virgen genérica o Tayrona, no Coveñas como ciudad costera actual.",

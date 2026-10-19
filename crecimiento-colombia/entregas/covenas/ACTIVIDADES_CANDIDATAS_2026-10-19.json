@@ -1,7 +1,7 @@
 {
   "checked_at": "2026-10-19",
   "discovery_source": "https://turismo.encolombia.com/covenas/",
-  "status": "investigacion_no_integrada",
+  "status": "cuatro_experiencias_integradas_pendiente_aprobacion",
   "production_changed": false,
   "current_experience": "Recorrido por manglares",
   "verified_candidates": [
@@ -12,7 +12,7 @@
       "operator_internal": "Coveñas Diving Co",
       "offer_url": "https://covenasdiving.com/",
       "scope": "Operador con sede en Coveñas; confirmar punto de inmersión, no atribuir todos los puntos al municipio.",
-      "readiness": "oferta_publicada_comprobada;pendiente_textos_completos_imagen_y_revision"
+      "readiness": "integrado_en_paquete_pendiente_aprobacion_preprod"
     },
     {
       "slug": "paddleboarding",
@@ -22,7 +22,7 @@
       "offer_url": "https://suplovers.co/clases/",
       "corroboration": "https://suplovers.co/tours-en-covenas/",
       "scope": "Agrupar iniciación y paseos; no publicar variantes de paquetes ni multiplicar tarjetas del mismo deporte.",
-      "readiness": "oferta_publicada_comprobada;pendiente_textos_completos_imagen_y_revision"
+      "readiness": "integrado_en_paquete_pendiente_aprobacion_preprod"
     },
     {
       "slug": "excursion-san-bernardo",
@@ -31,7 +31,7 @@
       "operator_internal": "Agencia Coveñas Tours",
       "offer_url": "https://agenciacovenastours.com/447642660",
       "scope": "Excursión regional comercializada desde Coveñas; conservar distinción entre recogida, puerto de embarque y municipio de las islas. No atribuir islas al municipio ni afirmar embarque en Coveñas sin verificar.",
-      "readiness": "oferta_publicada_comprobada;pendiente_logistica_textos_imagen_y_revision"
+      "readiness": "integrado_en_paquete_pendiente_aprobacion_preprod"
     },
     {
       "slug": "excursion-cispata",
@@ -40,7 +40,7 @@
       "operator_internal": "Suplovers",
       "offer_url": "https://suplovers.co/tours-en-covenas/cispata/",
       "scope": "Traslado desde Coveñas; actividad en San Antero. Avistamiento de aves es parte del recorrido, no tour independiente comprobado.",
-      "readiness": "oferta_publicada_comprobada;pendiente_textos_completos_imagen_y_revision"
+      "readiness": "integrado_en_paquete_pendiente_aprobacion_preprod"
     }
   ],
   "pending_offer_verification": [
