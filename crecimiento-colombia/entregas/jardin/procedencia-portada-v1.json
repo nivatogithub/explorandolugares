@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "jardin-portada-v1",
+  "destination_id": "jardin",
+  "attraction_id": "",
+  "file": "images/jardin-portada-v1.webp",
+  "media_type": "ai_generated_illustration",
+  "language": "es",
+  "purpose": "destination_hero",
+  "alt_text": "Ilustración del parque El Libertador y la basílica de Jardín",
+  "visual_description": "Plaza, sillas de café y basílica neogótica con dos torres de piedra y remates metálicos. Vista urbana local ilustrada, no foto.",
+  "generation": {
+    "provider": "OpenAI",
+    "model": "builtin image_gen (modelo exacto no expuesto)",
+    "generated_at": "2026-10-19",
+    "prompt": "Create one landscape 3:2 editorial semi-realistic ink and gouache illustration for Jardín, Antioquia, Colombia, a NEW INDEPENDENT composition, not copying any photograph. Draft destination hero. Show Parque El Libertador at human eye-level diagonally across its stone paved plaza, colorful traditional wooden cafe chairs and tables near the foreground edge, small garden beds and mature shade trees; the actual Basílica Menor de la Inmaculada Concepción clearly recognizable in midground: exposed dark brown-grey hand-worked stone neo-Gothic facade, TWO matching tall slim towers on either side, each ending in a pointed silvery metal spire and small cross, central pointed-gable facade with narrow Gothic arched portals and windows. Entire tower silhouettes must be in frame. Surrounding low one/two storey Antioquian buildings white walls with colorful doors and wood balconies, green Andean hills at distance. Restrained natural bright blue sky, stone neutral browns, varied chair reds/blues, detailed visible ink marks and gouache texture, realistic illustrated architecture, modest few cartoon-like people with proper faces and bodies; no text, logos, watermarks, no yellow color wash, no giant tropical palms, no modern skyline, no sea, no spherical-head stick figures. This is an illustrated draft of an actual place, not a photograph; do not add unverified landmarks or invented monumental fountains. Keep composition different from individual church close-up attraction card. Use factual descriptions from Colombia Travel of hand-cut stone neo-Gothic twin towers and Parque El Libertador only; no third-party image supplied.",
+    "human_operator": "worker Lugar 3"
+  },
+  "visual_references": [],
+  "fact_sources": [
+    {
+      "title": "Colombia Travel · parque",
+      "url": "https://colombia.travel/es/jardin-antioquia/camina-por-el-parque-el-libertador",
+      "checked_at": "2026-10-19",
+      "facts_verified": [
+        "Basílica de piedra labrada y dos torres; plaza y entorno montañoso"
+      ]
+    },
+    {
+      "title": "Colombia Travel · basílica",
+      "url": "https://colombia.travel/es/jardin-antioquia/visita-la-basilica-menor-de-la-inmaculada-concepcion",
+      "checked_at": "2026-10-19",
+      "facts_verified": [
+        "Basílica de piedra labrada y dos torres; plaza y entorno montañoso"
+      ]
+    }
+  ],
+  "review": {
+    "status": "draft",
+    "reviewer": "worker Lugar 3",
+    "reviewed_at": "",
+    "identity_check": "revisión-preliminar-rasgos-documentados; falta-confirmación-propietario",
+    "crop_check_desktop": "pending",
+    "crop_check_mobile": "pending",
+    "rights_check": "composición independiente; no se subió ninguna fotografía de terceros",
+    "notes": "Se inspeccionó salida: dos torres completas, piedra y plaza. Geometría exacta, posición de árboles y mobiliario no deben tratarse como levantamiento fotográfico. Acabado aún más fotorrealista que gouache; presentar como propuesta, no aprobado."
+  },
+  "publication": {
+    "approved_by": "",
+    "approved_at": "",
+    "published_at": ""
+  },
+  "files": [
+    {
+      "path": "images/jardin-portada-v1-640.webp",
+      "sha256": "f4b05911c62eaaa19e6b8f61e43c3b5876450a1dd392af00d0a74a3d3d1ec9d0",
+      "bytes": 90468
+    },
+    {
+      "path": "images/jardin-portada-v1.webp",
+      "sha256": "f56935fc6c7bfcc87d5b794f03536e072a91742fa46f08016500956bc698df88",
+      "bytes": 267570
+    },
+    {
+      "path": "images/jardin-portada-v1.png",
+      "sha256": "d2681704ef6f2bd3acb26c488b66893ffd7398dc540aa9b91ee4ff46269888f9",
+      "bytes": 3628138
+    },
+    {
+      "path": "images/jardin-portada-v1-1200.webp",
+      "sha256": "f56935fc6c7bfcc87d5b794f03536e072a91742fa46f08016500956bc698df88",
+      "bytes": 267570
+    }
+  ]
+}
