@@ -1,0 +1,59 @@
+{
+  "status": "provisional_no_top8_validado",
+  "method": "Importancia turística documentada; no inflar conteo dividiendo sectores o incorporando municipios vecinos. Orden editorial provisional, sin puntuación nacional inventada.",
+  "candidates": [
+    {
+      "rank": 1,
+      "slug": "primera-ensenada",
+      "source_id": "playas",
+      "confidence": "alta",
+      "ranking_validated": false
+    },
+    {
+      "rank": 2,
+      "slug": "segunda-ensenada",
+      "source_id": "malecon",
+      "confidence": "alta",
+      "ranking_validated": false
+    },
+    {
+      "rank": 3,
+      "slug": "cienaga-la-caimanera",
+      "source_id": "caimanera",
+      "confidence": "alta",
+      "ranking_validated": false
+    },
+    {
+      "rank": 4,
+      "slug": "museo-infanteria-marina",
+      "source_id": "museo",
+      "confidence": "alta",
+      "ranking_validated": false
+    },
+    {
+      "rank": 5,
+      "slug": "covenitas",
+      "source_id": "playas",
+      "confidence": "media",
+      "ranking_validated": false
+    },
+    {
+      "rank": 6,
+      "slug": "la-coquerita",
+      "source_id": "playas",
+      "confidence": "media",
+      "ranking_validated": false
+    }
+  ],
+  "missing_slots": 2,
+  "excluded": [
+    {
+      "name": "Tolú, San Antero, Cispatá e islas de San Bernardo",
+      "reason": "No presentarlos como atractivos dentro del municipio; excursiones regionales requieren relación territorial explícita."
+    },
+    {
+      "name": "Punta Piedra, El Edén, La Marta y Boca de la Ciénaga",
+      "reason": "Verificar límites y solapamiento con sectores ya incluidos antes de sumar tarjetas."
+    }
+  ]
+}

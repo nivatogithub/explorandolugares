@@ -1,0 +1,448 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "covenas",
+    "country_code": "CO",
+    "destination_type": "municipality",
+    "department": "Sucre",
+    "translations": {
+      "es": {
+        "display_name": "Coveñas",
+        "headline": "Playas, manglares e historia naval en el golfo de Morrosquillo.",
+        "intro": "Playas, manglares e historia naval en el golfo de Morrosquillo."
+      },
+      "en": {
+        "display_name": "Coveñas",
+        "headline": "Beaches, mangroves and naval history on the Gulf of Morrosquillo.",
+        "intro": "Beaches, mangroves and naval history on the Gulf of Morrosquillo."
+      },
+      "pt-BR": {
+        "display_name": "Coveñas",
+        "headline": "Praias, manguezais e história naval no golfo de Morrosquillo.",
+        "intro": "Praias, manguezais e história naval no golfo de Morrosquillo."
+      }
+    },
+    "history": {
+      "es": [
+        "Coveñas reúne tradición costera, actividad portuaria e historia naval. Se constituyó como municipio en 2002; sus ensenadas y los manglares de La Caimanera forman parte de su identidad."
+      ],
+      "en": [
+        "Coveñas combines coastal traditions, port activity and naval history. It became a municipality in 2002; its bays and La Caimanera’s mangroves shape its identity."
+      ],
+      "pt-BR": [
+        "Coveñas reúne tradições costeiras, atividade portuária e história naval. Tornou-se município em 2002; suas enseadas e os manguezais de La Caimanera fazem parte de sua identidade."
+      ]
+    },
+    "reasons": {
+      "es": [],
+      "en": [],
+      "pt-BR": []
+    },
+    "sources": {
+      "es": [
+        {
+          "section": "destination",
+          "label": "malecon",
+          "url": "https://www.dnp.gov.co/Prensa_/Noticias/Paginas/dnp-y-enterritorio-entregan-malecon-turistico-de-covenas.aspx"
+        },
+        {
+          "section": "destination",
+          "label": "museo",
+          "url": "https://www.armada.mil.co/es/content/11-anos-reviviendo-gesta-heroica-los-infantes-marina"
+        },
+        {
+          "section": "destination",
+          "label": "caimanera",
+          "url": "https://carsucre.gov.co/wp-content/uploads/2024/03/INFORME-AVANCE-PAI-CARSUCRE-_31-DE-DICIEMBRE-2023_CARSUCRE_c.pdf"
+        },
+        {
+          "section": "destination",
+          "label": "playas",
+          "url": "https://covenas.travel/covenas-destino-de-sol-y-playa-en-el-caribe-colombiano/"
+        },
+        {
+          "section": "destination",
+          "label": "historia",
+          "url": "https://concejodecovenas.gov.co/wp-content/uploads/2023/03/MANUAL-DE-CONTRATACION-2022-ACTUALIZADO.pdf"
+        }
+      ],
+      "en": [
+        {
+          "section": "destination",
+          "label": "malecon",
+          "url": "https://www.dnp.gov.co/Prensa_/Noticias/Paginas/dnp-y-enterritorio-entregan-malecon-turistico-de-covenas.aspx"
+        },
+        {
+          "section": "destination",
+          "label": "museo",
+          "url": "https://www.armada.mil.co/es/content/11-anos-reviviendo-gesta-heroica-los-infantes-marina"
+        },
+        {
+          "section": "destination",
+          "label": "caimanera",
+          "url": "https://carsucre.gov.co/wp-content/uploads/2024/03/INFORME-AVANCE-PAI-CARSUCRE-_31-DE-DICIEMBRE-2023_CARSUCRE_c.pdf"
+        },
+        {
+          "section": "destination",
+          "label": "playas",
+          "url": "https://covenas.travel/covenas-destino-de-sol-y-playa-en-el-caribe-colombiano/"
+        },
+        {
+          "section": "destination",
+          "label": "historia",
+          "url": "https://concejodecovenas.gov.co/wp-content/uploads/2023/03/MANUAL-DE-CONTRATACION-2022-ACTUALIZADO.pdf"
+        }
+      ],
+      "pt-BR": [
+        {
+          "section": "destination",
+          "label": "malecon",
+          "url": "https://www.dnp.gov.co/Prensa_/Noticias/Paginas/dnp-y-enterritorio-entregan-malecon-turistico-de-covenas.aspx"
+        },
+        {
+          "section": "destination",
+          "label": "museo",
+          "url": "https://www.armada.mil.co/es/content/11-anos-reviviendo-gesta-heroica-los-infantes-marina"
+        },
+        {
+          "section": "destination",
+          "label": "caimanera",
+          "url": "https://carsucre.gov.co/wp-content/uploads/2024/03/INFORME-AVANCE-PAI-CARSUCRE-_31-DE-DICIEMBRE-2023_CARSUCRE_c.pdf"
+        },
+        {
+          "section": "destination",
+          "label": "playas",
+          "url": "https://covenas.travel/covenas-destino-de-sol-y-playa-en-el-caribe-colombiano/"
+        },
+        {
+          "section": "destination",
+          "label": "historia",
+          "url": "https://concejodecovenas.gov.co/wp-content/uploads/2023/03/MANUAL-DE-CONTRATACION-2022-ACTUALIZADO.pdf"
+        }
+      ]
+    }
+  },
+  "hero_image": {
+    "file": "images/covenas-portada.webp",
+    "image_origin": "ai_generated",
+    "image_creator": "Pendiente de generación y revisión",
+    "alt": {
+      "es": "Ilustración de Coveñas",
+      "en": "Illustration of Coveñas",
+      "pt-BR": "Ilustração de Coveñas"
+    },
+    "caption": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  "places": [
+    {
+      "slug": "primera-ensenada",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Primera Ensenada",
+          "description": "Playas y servicios en uno de los sectores más conocidos de Coveñas."
+        },
+        "en": {
+          "name": "Primera Ensenada",
+          "description": "Beaches and services in one of Coveñas’ best-known areas."
+        },
+        "pt-BR": {
+          "name": "Primera Ensenada",
+          "description": "Praias e serviços em uma das áreas mais conhecidas de Coveñas."
+        }
+      },
+      "image": {
+        "file": "images/primera-ensenada.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Pendiente de generación y revisión",
+        "alt": {
+          "es": "Primera Ensenada",
+          "en": "Primera Ensenada",
+          "pt-BR": "Primera Ensenada"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "segunda-ensenada",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Segunda Ensenada y malecón",
+          "description": "Un corredor costero para disfrutar la playa y caminar junto al mar."
+        },
+        "en": {
+          "name": "Segunda Ensenada and waterfront",
+          "description": "A coastal stretch for beach visits and walks by the sea."
+        },
+        "pt-BR": {
+          "name": "Segunda Ensenada e orla",
+          "description": "Um trecho costeiro para aproveitar a praia e caminhar à beira-mar."
+        }
+      },
+      "image": {
+        "file": "images/segunda-ensenada.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Pendiente de generación y revisión",
+        "alt": {
+          "es": "Segunda Ensenada y malecón",
+          "en": "Segunda Ensenada and waterfront",
+          "pt-BR": "Segunda Ensenada e orla"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "cienaga-la-caimanera",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Ciénaga La Caimanera",
+          "description": "Manglares y canales: un ecosistema para conocer con guía local."
+        },
+        "en": {
+          "name": "La Caimanera wetland",
+          "description": "Mangroves and waterways: an ecosystem to explore with a local guide."
+        },
+        "pt-BR": {
+          "name": "Ciénaga La Caimanera",
+          "description": "Manguezais e canais: um ecossistema para conhecer com guia local."
+        }
+      },
+      "image": {
+        "file": "images/cienaga-la-caimanera.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Pendiente de generación y revisión",
+        "alt": {
+          "es": "Ciénaga La Caimanera",
+          "en": "La Caimanera wetland",
+          "pt-BR": "Ciénaga La Caimanera"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "museo-infanteria-marina",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Museo de Infantería de Marina",
+          "description": "Historia naval en un recinto militar; confirma el acceso antes de ir."
+        },
+        "en": {
+          "name": "Marine Corps Museum",
+          "description": "Naval history inside a military site; confirm access before visiting."
+        },
+        "pt-BR": {
+          "name": "Museu de Infantaria da Marinha",
+          "description": "História naval em uma área militar; confirme o acesso antes da visita."
+        }
+      },
+      "image": {
+        "file": "images/museo-infanteria-marina.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Pendiente de generación y revisión",
+        "alt": {
+          "es": "Museo de Infantería de Marina",
+          "en": "Marine Corps Museum",
+          "pt-BR": "Museu de Infantaria da Marinha"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "covenitas",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Coveñitas",
+          "description": "Otro sector de playa de Coveñas para explorar el litoral."
+        },
+        "en": {
+          "name": "Coveñitas",
+          "description": "Another Coveñas beach area for exploring the coast."
+        },
+        "pt-BR": {
+          "name": "Coveñitas",
+          "description": "Outro setor de praia de Coveñas para explorar o litoral."
+        }
+      },
+      "image": {
+        "file": "images/covenitas.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Pendiente de generación y revisión",
+        "alt": {
+          "es": "Coveñitas",
+          "en": "Coveñitas",
+          "pt-BR": "Coveñitas"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "la-coquerita",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "La Coquerita",
+          "description": "Un sector costero mencionado entre las playas del municipio."
+        },
+        "en": {
+          "name": "La Coquerita",
+          "description": "A coastal area listed among the municipality’s beaches."
+        },
+        "pt-BR": {
+          "name": "La Coquerita",
+          "description": "Uma área costeira citada entre as praias do município."
+        }
+      },
+      "image": {
+        "file": "images/la-coquerita.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Pendiente de generación y revisión",
+        "alt": {
+          "es": "La Coquerita",
+          "en": "La Coquerita",
+          "pt-BR": "La Coquerita"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "recorrido-manglar",
+      "type": "experience",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Recorrer el manglar",
+          "description": "Consulta recorridos guiados por los canales de La Caimanera."
+        },
+        "en": {
+          "name": "Explore the mangroves",
+          "description": "Ask about guided trips through La Caimanera’s waterways."
+        },
+        "pt-BR": {
+          "name": "Explorar o manguezal",
+          "description": "Consulte passeios guiados pelos canais de La Caimanera."
+        }
+      },
+      "image": {
+        "file": "images/recorrido-manglar.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Pendiente de generación y revisión",
+        "alt": {
+          "es": "Recorrer el manglar",
+          "en": "Explore the mangroves",
+          "pt-BR": "Explorar o manguezal"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "caminar-malecon",
+      "type": "experience",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Caminar junto al mar",
+          "description": "Recorre el malecón de Segunda Ensenada al final de la tarde."
+        },
+        "en": {
+          "name": "Walk by the sea",
+          "description": "Explore Segunda Ensenada’s waterfront in the late afternoon."
+        },
+        "pt-BR": {
+          "name": "Caminhar à beira-mar",
+          "description": "Percorra a orla de Segunda Ensenada no fim da tarde."
+        }
+      },
+      "image": {
+        "file": "images/caminar-malecon.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Pendiente de generación y revisión",
+        "alt": {
+          "es": "Caminar junto al mar",
+          "en": "Walk by the sea",
+          "pt-BR": "Caminhar à beira-mar"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "sabores-del-caribe",
+      "type": "experience",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Probar sabores del Caribe",
+          "description": "Busca cocina local y consulta la oferta del día en los restaurantes."
+        },
+        "en": {
+          "name": "Taste Caribbean flavours",
+          "description": "Look for local cooking and ask restaurants about the day’s menu."
+        },
+        "pt-BR": {
+          "name": "Provar sabores do Caribe",
+          "description": "Procure a cozinha local e consulte o cardápio do dia nos restaurantes."
+        }
+      },
+      "image": {
+        "file": "images/sabores-del-caribe.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Pendiente de generación y revisión",
+        "alt": {
+          "es": "Probar sabores del Caribe",
+          "en": "Taste Caribbean flavours",
+          "pt-BR": "Provar sabores do Caribe"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    }
+  ]
+}
