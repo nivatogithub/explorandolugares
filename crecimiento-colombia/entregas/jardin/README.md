@@ -77,3 +77,7 @@ El coordinador confirmó la reimportación en MariaDB local, ID2, del paquete SH
 ## Presentación neutral solicitada por el propietario
 
 Los nombres públicos son Tour cafetero, Avistamiento de aves, Cueva del Esplendor y Tour urbano patrimonial, con descripciones breves de la actividad en ES/EN/PT. Se retiraron nombres de familias, hoteles, operadores, productos particulares y enlaces comerciales del manifiesto público. El oferente y la oferta exacta se conservan en criterios-editoriales.json como evidencia interna, sin afirmar afiliación. La asociación pública a un operador requiere el módulo comercial pagado y autorizado; no se activa por investigar una fuente. No se generan nuevas imágenes ni se cambia la selección.
+
+## Aprobación del propietario
+
+Jardín aprobado expresamente en el chat. Se conserva el paquete SHA256 `9ac8321855690db0b53fdcc0b0829de61dc5de3847906e2355814fbee7b0aa13` y contenido `2400c45`. Ver `aprobacion.json`. No se ha desplegado en producción; cualquier cambio del paquete exige nueva revisión.
