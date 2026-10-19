@@ -86,10 +86,16 @@
       "url": "http://127.0.0.1:8088/destinos/covenas/",
       "branch": "lugar/CO/sucre/covenas",
       "content_commit": "e98f188",
-      "status": "corregido_y_validado_pendiente_aprobacion",
+      "status": "pendiente_corregir_identidad_imagenes_playas",
       "human_approval": "pending",
       "businesses": 30,
-      "qa": "HTTP200 ES/EN/PT; imágenes accesibles; sin sesión administrativa"
+      "qa": "HTTP200 ES/EN/PT; imágenes accesibles; sin sesión administrativa",
+      "image_fidelity_approved": false,
+      "pending_images": [
+        "primera-ensenada",
+        "segunda-ensenada",
+        "la-coquerita"
+      ]
     }
   ]
 }
