@@ -1,10 +1,10 @@
 {
   "destination": "santa-fe-de-antioquia",
   "branch": "lugar/CO/antioquia/santa-fe-de-antioquia",
-  "state": "integrated_local_preprod_pending_human_review",
+  "state": "editorially_corrected_pending_preprod_reimport",
   "content_es_en_pt": "draft_complete",
-  "attractions": 8,
-  "experiences": 4,
+  "attractions": 7,
+  "experiences": 1,
   "free_directory": 30,
   "directory_live_operation": "pending",
   "hero": "generated_draft_pending_owner_review",
@@ -13,18 +13,19 @@
   "missing_images": 0,
   "manifest_structure": "validated_php_DestinationPackage",
   "zip_importable": true,
-  "preprod_imported": true,
+  "preprod_imported": false,
   "publicable": false,
   "human_approval": false,
   "production_authorized": false,
   "business_zip_validated_php": true,
   "business_zip": "paquete-negocios-30.zip",
-  "images_selected": 13,
+  "images_selected": 9,
   "zip_native_validation": "DestinationPackage::readZip pass",
   "image_review": "contact_sheet_reviewed; contextual limits in REVISION_VISUAL.md",
   "preprod_destination_id": 4,
   "preprod_url": "http://127.0.0.1:8088/destinos/santa-fe-de-antioquia/",
-  "preprod_qa": {
+  "current_package_images": 9,
+  "previous_preprod_qa": {
     "reported_by": "coordinator",
     "local_import_receipt_sha256": "30fbc70b8f4815f1a6ed14c9b8ec5f3b68c6ca3b84102ef4cc89206c7149aaca",
     "images": 13,
@@ -37,6 +38,7 @@
       "pt-BR"
     ],
     "mobile_no_accordions": true,
-    "mobile_no_horizontal_overflow": true
+    "mobile_no_horizontal_overflow": true,
+    "applies_to_previous_package_only": true
   }
 }

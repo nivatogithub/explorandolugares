@@ -4,7 +4,9 @@ import json,pathlib,hashlib,zipfile,shutil,urllib.parse
 from PIL import Image,ImageOps
 P=pathlib.Path(__file__).resolve().parent
 jobs=json.loads((P/'GENERACIONES.json').read_text())
-pkg=json.loads((P/'paquete-destino.borrador.json').read_text())
+pkg=json.loads((P/'paquete-destino.json').read_text())
+active_keys={pathlib.Path(x['image']['file']).stem for x in pkg['places']}|{pathlib.Path(pkg['hero_image']['file']).stem}
+jobs=[j for j in jobs if j['key'] in active_keys]
 langs=['es','en','pt-BR'];(P/'images').mkdir(exist_ok=True);(P/'maestros').mkdir(exist_ok=True)
 records=[]
 for j in jobs:
@@ -25,19 +27,19 @@ names={
 'paseo-por-calles-y-patios':['Paseo por calles y patios','Walk through streets and courtyards','Passeio por ruas e pátios'],
 'conocer-la-filigrana':['Conocer la filigrana','Discover filigree jewellery','Conheça a filigrana'],
 'sabores-de-tamarindo':['Sabores de tamarindo','Tamarind flavours','Sabores de tamarindo'],
-'recorrido-de-memoria-regional':['Recorrido de memoria regional','Discover regional history','Conheça a história regional']}
+'recorrido-de-memoria-regional':['Tour urbano patrimonial','Guided heritage walk','Passeio urbano patrimonial']}
 for x in pkg['places']:
  for l,n in zip(langs,names.get(x['slug'],[x['translations']['es']['name']]*3)):
   x['translations'][l]['name']=n
   x['image']['alt'][l]={'es':'Ilustración editorial: ','en':'Editorial illustration: ','pt-BR':'Ilustração editorial: '}[l]+n
-for x in pkg['places']:
- if x['type']=='place':
-  q=x['translations']['es']['name']+' Santa Fe de Antioquia Colombia'
-  url='https://www.google.com/maps/search/?api=1&query='+urllib.parse.quote(q)
-  for l,label in zip(langs,['Ver ubicación','View location','Ver localização']):
-   x['translations'][l]['external_url']=url;x['translations'][l]['external_label']=label
-pkg['local_research']['notes']=['Paquete íntegro para importación como borrador: ocho atractivos, cuatro experiencias y trece ilustraciones diferentes. Pendiente revisión humana y ensayo real en preproducción. Las ilustraciones de experiencias y recintos no son reconstrucciones exactas ni operadores contratados.']
+pkg['local_research']['notes']=['Paquete editorial conservador: siete atractivos y un tour urbano con oferta documentada internamente. Pendiente aprobación humana y reimportación en preproducción.']
 (P/'paquete-destino.json').write_text(json.dumps(pkg,ensure_ascii=False,indent=2)+'\n')
+previous=json.loads((P/'PROCEDENCIA_IMAGENES.json').read_text()) if (P/'PROCEDENCIA_IMAGENES.json').exists() else []
+active_ids={x['asset_id'] for x in records}
+for r in records:r['included_in_current_package']=True
+for r in previous:
+ if r['asset_id'] not in active_ids:
+  r['included_in_current_package']=False;records.append(r)
 (P/'PROCEDENCIA_IMAGENES.json').write_text(json.dumps(records,ensure_ascii=False,indent=2)+'\n')
 with zipfile.ZipFile(P/'paquete-destino-santa-fe-de-antioquia.zip','w',zipfile.ZIP_DEFLATED) as z:
  z.write(P/'paquete-destino.json','paquete-destino.json')

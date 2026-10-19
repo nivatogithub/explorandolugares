@@ -1,5 +1,5 @@
 {
-  "method": "Selección editorial razonada, no ranking oficial ni estadísticas de afluencia. Identidad y relevancia turística primero; no diversidad artificial ni disponibilidad de imágenes.",
+  "method": "Selección editorial conservadora sin cuota mínima: siete lugares principales respaldados y un tour organizado; ocho es solo máximo.",
   "attractions": [
     {
       "rank": 1,
@@ -49,13 +49,6 @@
       "reason": "Conjunto urbano relevante y recorrible; no sumar iglesia y plazuela como dos fichas.",
       "source": "https://colombia.travel/es/santa-fe-de-antioquia",
       "confidence": "alta"
-    },
-    {
-      "rank": 8,
-      "name": "Templo de Jesús Nazareno",
-      "reason": "Octavo provisional: menor confianza que los siete anteriores; revisar frente a alternativas antes de aprobar.",
-      "source": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
-      "confidence": "media"
     }
   ],
   "excluded": [
@@ -78,6 +71,10 @@
     {
       "name": "Otras capillas, casas y monumentos del mapa",
       "reason": "Conservar inventario institucional; menor prioridad editorial provisional que núcleo seleccionado."
+    },
+    {
+      "name": "Templo de Jesús Nazareno",
+      "reason": "Octavo provisional de menor certeza, añadido para completar ocho. Se retira sin sustituir por otro cupo."
     }
   ],
   "events": [
