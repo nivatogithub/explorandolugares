@@ -49,7 +49,17 @@
     "street_view": {
       "coverage": "not_checked",
       "views": [],
-      "fallback_identified_photos": []
+      "fallback_identified_photos": [],
+      "sampling": {
+        "target_min_distinct_points": 5,
+        "target_max_distinct_points": 8,
+        "actual_distinct_points": 0,
+        "selection_rationale": "",
+        "coverage_limitations": [],
+        "date_or_spatial_conflicts": [],
+        "shared_features": [],
+        "verified_variations": []
+      }
     },
     "camera": {
       "observer_location": "",
