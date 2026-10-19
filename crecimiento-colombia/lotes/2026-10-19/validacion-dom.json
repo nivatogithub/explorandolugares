@@ -1,0 +1,44 @@
+{
+  "browser": "in-app",
+  "mobileEffectiveWidth": 487,
+  "checks": [
+    {
+      "attractions": 8,
+      "details": 0,
+      "directory": 30,
+      "imageLinks": 0,
+      "overflow": false,
+      "url": "http://127.0.0.1:8088/destinos/zipaquira/",
+      "width": 487
+    },
+    {
+      "attractions": 8,
+      "details": 0,
+      "directory": 30,
+      "imageLinks": 0,
+      "overflow": false,
+      "url": "http://127.0.0.1:8088/destinos/santa-fe-de-antioquia/",
+      "width": 487
+    },
+    {
+      "attractions": 8,
+      "details": 0,
+      "directory": 30,
+      "imageLinks": 0,
+      "overflow": false,
+      "url": "http://127.0.0.1:8088/destinos/jardin/",
+      "width": 487
+    }
+  ],
+  "covenas": {
+    "attractions": 8,
+    "experiences": 4,
+    "directory": 30,
+    "details": 0,
+    "imageLinks": 0,
+    "overflow": false,
+    "pagerBefore": 2,
+    "pagerAfterClick": 4
+  },
+  "editorialApproval": "pending"
+}

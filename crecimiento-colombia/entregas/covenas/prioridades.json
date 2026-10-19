@@ -1,51 +1,65 @@
 {
-  "status": "provisional_no_top8_validado",
-  "method": "Importancia turística documentada; no inflar conteo dividiendo sectores o incorporando municipios vecinos. Orden editorial provisional, sin puntuación nacional inventada.",
+  "status": "seleccion_editorial_ocho_para_revision",
+  "method": "Selección editorial documentada por relevancia turística, identidad y diferenciación dentro del municipio. No es una clasificación oficial, ni reproduce un puntaje nacional previo. Se agrupan malecón/Segunda Ensenada; se excluyen vecinos y sectores solapados. Ocho es el máximo, no una prueba de que no exista ningún candidato superior.",
   "candidates": [
     {
       "rank": 1,
       "slug": "primera-ensenada",
-      "source_id": "playas",
-      "confidence": "alta",
-      "ranking_validated": false
+      "ranking_validated": false,
+      "confidence": "media",
+      "reason": "Atractivo nombrado en fuentes regionales/institucionales; orden editorial sujeto a revisión."
     },
     {
       "rank": 2,
       "slug": "segunda-ensenada",
-      "source_id": "malecon",
-      "confidence": "alta",
-      "ranking_validated": false
+      "ranking_validated": false,
+      "confidence": "media",
+      "reason": "Atractivo nombrado en fuentes regionales/institucionales; orden editorial sujeto a revisión."
     },
     {
       "rank": 3,
       "slug": "cienaga-la-caimanera",
-      "source_id": "caimanera",
-      "confidence": "alta",
-      "ranking_validated": false
+      "ranking_validated": false,
+      "confidence": "media",
+      "reason": "Atractivo nombrado en fuentes regionales/institucionales; orden editorial sujeto a revisión."
     },
     {
       "rank": 4,
       "slug": "museo-infanteria-marina",
-      "source_id": "museo",
-      "confidence": "alta",
-      "ranking_validated": false
+      "ranking_validated": false,
+      "confidence": "media",
+      "reason": "Atractivo nombrado en fuentes regionales/institucionales; orden editorial sujeto a revisión."
     },
     {
       "rank": 5,
       "slug": "covenitas",
-      "source_id": "playas",
+      "ranking_validated": false,
       "confidence": "media",
-      "ranking_validated": false
+      "reason": "Atractivo nombrado en fuentes regionales/institucionales; orden editorial sujeto a revisión."
     },
     {
       "rank": 6,
       "slug": "la-coquerita",
-      "source_id": "playas",
+      "ranking_validated": false,
       "confidence": "media",
-      "ranking_validated": false
+      "reason": "Atractivo nombrado en fuentes regionales/institucionales; orden editorial sujeto a revisión."
+    },
+    {
+      "rank": 7,
+      "slug": "represa-de-villeros",
+      "ranking_validated": false,
+      "confidence": "media",
+      "reason": "Atractivo nombrado en fuentes regionales/institucionales; orden editorial sujeto a revisión."
+    },
+    {
+      "rank": 8,
+      "slug": "casa-de-la-cultura",
+      "ranking_validated": false,
+      "confidence": "media",
+      "reason": "Atractivo nombrado en fuentes regionales/institucionales; orden editorial sujeto a revisión."
     }
   ],
-  "missing_slots": 2,
+  "missing_slots": 0,
   "excluded": [
     {
       "name": "Tolú, San Antero, Cispatá e islas de San Bernardo",
