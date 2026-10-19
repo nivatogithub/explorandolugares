@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "destination": "santa-fe-de-antioquia",
+  "items": [
+    {
+      "slug": "puente-de-occidente",
+      "kind": "place",
+      "decision": "include",
+      "purpose": "Icono de ingeniería y principal excursión patrimonial; compartido con Olaya.",
+      "source_urls": [
+        "https://colombia.travel/es/santa-fe-de-antioquia"
+      ],
+      "checked_at": "2026-10-19"
+    },
+    {
+      "slug": "plaza-mayor-simon-bolivar",
+      "kind": "place",
+      "decision": "include",
+      "purpose": "Nodo urbano y orientación del centro; incluye contexto de calles sin duplicar ficha Centro histórico.",
+      "source_urls": [
+        "https://colombia.travel/es/santa-fe-de-antioquia"
+      ],
+      "checked_at": "2026-10-19"
+    },
+    {
+      "slug": "catedral-de-la-inmaculada-concepcion",
+      "kind": "place",
+      "decision": "include",
+      "purpose": "Hito arquitectónico principal; vista interior/distinta de plaza, no reutilizar portada.",
+      "source_urls": [
+        "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Turismo/Revista%20virtual%202025.pdf"
+      ],
+      "checked_at": "2026-10-19"
+    },
+    {
+      "slug": "museo-juan-del-corral",
+      "kind": "place",
+      "decision": "include",
+      "purpose": "Museo histórico esencial, no sustituible por otra iglesia secundaria.",
+      "source_urls": [
+        "https://www.museonacional.gov.co/Publicaciones/Documents/Diagnostico%20Museos.pdf"
+      ],
+      "checked_at": "2026-10-19"
+    },
+    {
+      "slug": "iglesia-de-santa-barbara",
+      "kind": "place",
+      "decision": "include",
+      "purpose": "Templo histórico destacado y conjunto de plazuela.",
+      "source_urls": [
+        "https://colombia.travel/es/santa-fe-de-antioquia"
+      ],
+      "checked_at": "2026-10-19"
+    },
+    {
+      "slug": "museo-de-arte-religioso-francisco-cristobal-toro",
+      "kind": "place",
+      "decision": "include",
+      "purpose": "Colección patrimonial especializada; no duplicar una visita genérica a museo.",
+      "source_urls": [
+        "https://colombia.travel/es/santa-fe-de-antioquia"
+      ],
+      "checked_at": "2026-10-19"
+    },
+    {
+      "slug": "plazuela-e-iglesia-de-la-chinca",
+      "kind": "place",
+      "decision": "include",
+      "purpose": "Conjunto urbano relevante y recorrible; no sumar iglesia y plazuela como dos fichas.",
+      "source_urls": [
+        "https://colombia.travel/es/santa-fe-de-antioquia"
+      ],
+      "checked_at": "2026-10-19"
+    },
+    {
+      "slug": "recorrido-de-memoria-regional",
+      "kind": "experience",
+      "decision": "include",
+      "purpose": "Recorrido organizado y guiado por el patrimonio del centro, distinto de caminar autónomamente.",
+      "source_urls": [
+        "https://providenciatravel.com/producto/actividades/tour-santa-fe-de-antioquia/"
+      ],
+      "checked_at": "2026-10-19",
+      "operator": {
+        "name": "Providencia Travel",
+        "offer_url": "https://providenciatravel.com/producto/actividades/tour-santa-fe-de-antioquia/",
+        "source_url": "https://providenciatravel.com/"
+      },
+      "offer_verified": true,
+      "scope_note": "Oferta pública propia consultada: recorrido patrimonial acompañado. No certifica disponibilidad, licencia vigente ni alianza. Solo se usa para el tipo de actividad; no se copian inclusiones, variantes, condiciones ni horarios."
+    },
+    {
+      "slug": "templo-de-jesus-nazareno",
+      "kind": "place",
+      "decision": "exclude",
+      "purpose": "Octavo provisional de menor certeza, añadido para completar ocho. Se retira sin sustituir por otro cupo.",
+      "source_urls": [
+        "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf"
+      ],
+      "checked_at": "2026-10-19"
+    },
+    {
+      "slug": "paseo-por-calles-y-patios",
+      "kind": "experience",
+      "decision": "exclude",
+      "purpose": "Caminar autónomamente no es oferta organizada. Solapa el tour urbano respaldado; se retira esta ficha genérica.",
+      "source_urls": [
+        "https://www.viajescomfama.com/destinos/antioquia/santa-fe-de-antioquia-2022"
+      ],
+      "checked_at": "2026-10-19"
+    },
+    {
+      "slug": "conocer-la-filigrana",
+      "kind": "experience",
+      "decision": "exclude",
+      "purpose": "Oficio y talleres comerciales existen, pero no se acreditó un taller autónomo concreto. La oferta vista lo enumera como parada del tour, no clase contratada independiente.",
+      "source_urls": [
+        "https://www.viajescomfama.com/destinos/antioquia/santa-fe-de-antioquia-2022"
+      ],
+      "checked_at": "2026-10-19"
+    },
+    {
+      "slug": "sabores-de-tamarindo",
+      "kind": "experience",
+      "decision": "exclude",
+      "purpose": "Probar productos por cuenta propia no acredita experiencia organizada. La fuente antigua de Comfama y el catálogo turístico no resuelven oferente claramente identificado para esta ficha exacta; se retira conservadoramente.",
+      "source_urls": [
+        "https://www.viajescomfama.com/destinos/antioquia/santa-fe-de-antioquia-2022"
+      ],
+      "checked_at": "2026-10-19"
+    }
+  ]
+}

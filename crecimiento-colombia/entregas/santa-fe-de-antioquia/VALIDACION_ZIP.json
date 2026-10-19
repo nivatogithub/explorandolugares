@@ -2,13 +2,15 @@
   "checked_at": "2026-10-19",
   "validator": "backend/app/DestinationPackage.php::readZip",
   "result": "pass",
-  "places": 12,
-  "images": 13,
-  "bytes": 2981756,
-  "sha256": "30fbc70b8f4815f1a6ed14c9b8ec5f3b68c6ca3b84102ef4cc89206c7149aaca",
+  "places": 8,
+  "images": 9,
+  "bytes": 2220935,
+  "sha256": "707519481e54b6f899b0842e75774cce78f201b21f9ee7766db6297ce6766d15",
   "preprod_imported": false,
   "http_qa": false,
   "human_approved": false,
   "reasons_locales_nonempty": true,
-  "distinct_headline": true
+  "distinct_headline": true,
+  "admin_validation_only": "pass_without_database",
+  "editorial_criteria_validation": "pass"
 }
