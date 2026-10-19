@@ -50,10 +50,33 @@ hist=[
 'O sal integrou as trocas muiscas antes da colonização espanhola. A fundação colonial de Zipaquirá data de 1600. Seu patrimônio salineiro convive com praças, arquitetura e a memória escolar de Gabriel García Márquez; a atual Catedral de Sal abriu em 1995.'
 ]
 pack=dict(schema_version=2,destination=dict(slug='zipaquira',department='Cundinamarca',country_code='CO',destination_type='municipality',subregion='Sabana Centro',latitude=None,longitude=None,translations={l:dict(display_name='Zipaquirá',eyebrow='Cundinamarca · Colombia',headline=head[j],intro=intro[j],meta_description=intro[j]) for j,l in enumerate(L)},history={l:[hist[j]] for j,l in enumerate(L)},reasons={'es': ['Conocer el patrimonio salinero y recorrer el centro histórico.'], 'en': ['Discover salt-making heritage and explore the historic centre.'], 'pt-BR': ['Conhecer o patrimônio salineiro e percorrer o centro histórico.']},sources={l:[dict(title=s['title'],label=s['title'].split(':')[0],url=s['url'],section_key='history') for s in sources if s['id'] in ['nacional','sal','gabo']] for l in L}),hero_image=image('zipaquira-portada',['Zipaquirá: Catedral de Sal','Zipaquirá: Salt Cathedral','Zipaquirá: Catedral de Sal']),places=[item(r,'place') for r in rows]+[item(r,'experience') for r in experiences],local_research=dict(schema_version=1,researched_at=DATE,positioning='Patrimonio salinero, centro urbano y cultura local',competitors=[],potential_allies=[],business_prospects=[],acquisition_strategies=[],sources=[dict(url=s['url'],checked_at=DATE) for s in sources],notes=['Borrador privado. No hay alianzas, disponibilidad ni publicación aprobadas.']))
+
+def apply_current_policy(pack):
+    criteria=json.loads((P/'criterios-editoriales.json').read_text())
+    allowed={x['slug'] for x in criteria['items'] if x['decision']=='include'}
+    pack['places']=[x for x in pack['places'] if x['slug'] in allowed]
+    titles={
+      'ruta-del-minero':['Experiencia minera','Mining experience','Experiência de mineração'],
+      'tren-sabana':['Paseo en tren turístico','Tourist train ride','Passeio de trem turístico'],
+      'recorrido-historico':['Tour urbano patrimonial','Heritage walking tour','Passeio guiado pelo patrimônio']}
+    descriptions={
+      'ruta-del-minero':['Conoce la extracción de sal en una actividad organizada.','Discover salt extraction in an organised activity.','Conheça a extração de sal em uma atividade organizada.'],
+      'tren-sabana':['Recorre en tren los paisajes de la sabana.','Travel through the savanna landscapes by train.','Percorra de trem as paisagens da savana.'],
+      'recorrido-historico':['Descubre plazas y patrimonio en un recorrido guiado.','Discover squares and heritage on a guided walk.','Descubra praças e patrimônio em um passeio guiado.']}
+    for p in pack['places']:
+      if p['type']=='experience':
+        for j,l in enumerate(L):
+          p['translations'][l].update(name=titles[p['slug']][j],description=descriptions[p['slug']][j],external_url='',external_label='')
+          p['image']['alt'][l]=titles[p['slug']][j]+[' · ilustración editorial',' · editorial illustration',' · ilustração editorial'][j]
+    return pack
+pack=apply_current_policy(pack)
+
 save('paquete-destino.borrador.json',pack)
 selection=[]
 for i,r in enumerate(rows):
- a,b,c=r[4];selection.append(dict(rank=i+1,slug=r[0],name=r[1][0],scores=dict(identity=a,visitor_relevance=b,distinctiveness=c),score=8*a+7*b+5*c,source_ids=r[3],reason=r[5],selection_status='propuesta_editorial_no_aprobada'))
+ a,b,c=r[4]
+ if r[0]=='plaza-independencia':continue
+ selection.append(dict(rank=len(selection)+1,slug=r[0],name=r[1][0],scores=dict(identity=a,visitor_relevance=b,distinctiveness=c),score=8*a+7*b+5*c,source_ids=r[3],reason=r[5],selection_status='propuesta_editorial_no_aprobada'))
 save('auditoria-top8.json',dict(method='Valoración editorial 1–5: identidad 40%, relevancia visitante 35%, diferenciación 25%. Sin conteos oficiales de visitantes; no es ranking estadístico ni oficial. Desempate por integración al recorrido. Misma identidad no duplica un componente.',selection=selection,exclusions=[dict(name=n,reason=r) for n,r in [('Mina de Nemocón','Otro municipio; no adjudicar a Zipaquirá.'),('Parque Jaime Duque','Tocancipá; no pertenece al destino.'),('Parque de la Sal','Complejo que contiene Catedral y Museo; agrupar para evitar duplicación.'),('Centro histórico','Marco de Comuneros/Independencia, no novena tarjeta repetida.'),('Palacio Municipal','Integrado en Comuneros; acceso interior a confirmar.'),('Parque Villaveces','Complementario; menor diferenciación frente a los ocho seleccionados.'),('Monumento Egan Bernal','Complementario; no desplaza Catedral, estación y patrimonio literario.'),('Plaza de los Mártires','Complementaria; menos singular en una primera visita.'),('Finkana / Nukasa','Oferta de operador/naturaleza complementaria; vigencia y acceso deben validarse antes de entrar al Top8.')]],experience_classification=[dict(slug=r[0],source_ids=r[3],kind=r[4],availability_confirmed=False,partnership=False) for r in experiences],coverage_limit='No se afirma un censo exhaustivo nacional ni un orden original previamente aprobado. Selección local contrastada con guía institucional 2026 y fuentes primarias.'))
 # Names only: no harvested contacts or inferred claim/operational status.
 hotels=['Hotel Camino de la Sal','Hotel Estación Sabana','Hotel Cacique Real','Hotel Bacatá Plaza','Hotel Boutique MR','Hotel Salinero']
@@ -83,3 +106,9 @@ for l in L:
  out += ['</section>']
 out+=['<section><h2>Directorio gratuito · 30 fichas</h2><div class="grid">']+[f'<article>{html.escape(b["name"])} · {b["category_code"]}</article>' for b in businesses]+['</div></section></html>']
 (P/'revision-editorial.html').write_text('\n'.join(out))
+# Refresh internal eligibility audit without promoting operators publicly.
+a=json.loads((P/'auditoria-top8.json').read_text());criteria=json.loads((P/'criterios-editoriales.json').read_text())
+a['policy_revision']='19-10-2026: máximo ocho sin mínimo; experiencias solo con oferta real; oferentes internos'
+a['experience_classification']=[dict(slug=e['slug'],decision=e['decision'],kind='oferta_operada_documentada' if e.get('offer_verified') else 'sugerencia_autonoma_excluida',source_urls=e['source_urls'],partnership=False,availability_confirmed=False) for e in criteria['items'] if e['kind']=='experience']
+a['exclusions'].append(dict(name='Plaza de la Independencia',reason='Plaza complementaria del circuito urbano; se retira para evitar llenar ocho tarjetas con otro espacio de función solapada. No implica que sea inexistente ni esté cerrada.'))
+save('auditoria-top8.json',a)

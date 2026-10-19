@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "destination": "zipaquira",
+  "items": [
+    {
+      "slug": "catedral-de-sal",
+      "kind": "place",
+      "decision": "include",
+      "purpose": "Conocer el recinto subterráneo y patrimonio minero; acceso administrado, no libre ni con todos los servicios incluidos.",
+      "source_urls": [
+        "https://colombia.travel/en/bogota/salt-cathedral-zipaquira",
+        "https://colombia.travel/es/zipaquira"
+      ],
+      "checked_at": "2026-10-19",
+      "access_mode": "acceso_administrado_o_apertura_por_confirmar"
+    },
+    {
+      "slug": "plaza-comuneros",
+      "kind": "place",
+      "decision": "include",
+      "purpose": "Visitar la plaza central y el conjunto urbano patrimonial desde espacio público.",
+      "source_urls": [
+        "https://colombia.travel/en/bogota/salt-cathedral-zipaquira",
+        "https://eldoradoradio.cundinamarca.gov.co/provincias/sabana-centro/zipaquira/"
+      ],
+      "checked_at": "2026-10-19",
+      "access_mode": "autonomo_exterior"
+    },
+    {
+      "slug": "catedral-diocesana",
+      "kind": "place",
+      "decision": "include",
+      "purpose": "Reconocer la arquitectura del templo exterior; no confundirlo con la catedral subterránea. Culto y acceso interior sujetos al responsable.",
+      "source_urls": [
+        "https://diocesisdezipaquira.org/parroquias/parroquia-la-catedral-diocesana-de-zipaquira/"
+      ],
+      "checked_at": "2026-10-19",
+      "access_mode": "acceso_administrado_o_apertura_por_confirmar"
+    },
+    {
+      "slug": "estacion-tren",
+      "kind": "place",
+      "decision": "include",
+      "purpose": "Conocer el edificio ferroviario desde su entorno; no implica boleto ni viaje incluido.",
+      "source_urls": [
+        "https://www.zipaquira.travel/wp-content/uploads/2026/02/Guia-Turistica-ZT.pdf",
+        "https://turistren.com.co/"
+      ],
+      "checked_at": "2026-10-19",
+      "access_mode": "autonomo_exterior"
+    },
+    {
+      "slug": "colegio-gabo",
+      "kind": "place",
+      "decision": "include",
+      "purpose": "Conocer memoria escolar y literaria de Gabriel García Márquez; apertura de salas por confirmar.",
+      "source_urls": [
+        "https://sidn.ramajudicial.gov.co/SIDN/PUBLICACIONES%20PERIODICAS/TEXTO%20COMPLETO%20Y%20TABLAS%20DE%20CONTENIDO/GACETA%20DEL%20CONGRESO/GACETA%20DEL%20CONGRESO%202023/GC%201696%20DE%202023.PDF"
+      ],
+      "checked_at": "2026-10-19",
+      "access_mode": "acceso_administrado_o_apertura_por_confirmar"
+    },
+    {
+      "slug": "plaza-independencia",
+      "kind": "place",
+      "decision": "exclude",
+      "purpose": "Plaza complementaria del mismo circuito urbano; se retira por redundancia/prioridad, no por inexistencia o cierre.",
+      "source_urls": [
+        "https://www.zipaquira.travel/wp-content/uploads/2026/02/Guia-Turistica-ZT.pdf"
+      ],
+      "checked_at": "2026-10-19",
+      "access_mode": "acceso_administrado_o_apertura_por_confirmar"
+    },
+    {
+      "slug": "museo-quevedo",
+      "kind": "place",
+      "decision": "include",
+      "purpose": "Conocer patrimonio musical en la casa museo; horarios y acceso a confirmar.",
+      "source_urls": [
+        "https://eldoradoradio.cundinamarca.gov.co/provincias/sabana-centro/zipaquira/",
+        "https://www.zipaquira.travel/wp-content/uploads/2026/02/Guia-Turistica-ZT.pdf"
+      ],
+      "checked_at": "2026-10-19",
+      "access_mode": "acceso_administrado_o_apertura_por_confirmar"
+    },
+    {
+      "slug": "museo-arqueologico",
+      "kind": "place",
+      "decision": "include",
+      "purpose": "Conocer el patrimonio prehispánico mediante museo administrado; consultar acceso al responsable.",
+      "source_urls": [
+        "https://www.catedraldesal.gov.co/atracciones/museo-arqueologico/"
+      ],
+      "checked_at": "2026-10-19",
+      "access_mode": "acceso_administrado_o_apertura_por_confirmar"
+    },
+    {
+      "slug": "ruta-del-minero",
+      "kind": "experience",
+      "decision": "include",
+      "purpose": "Actividad organizada de aproximación a la extracción de sal en socavones; modalidad y restricciones en la oferta propia.",
+      "source_urls": [
+        "https://www.catedraldesal.gov.co/atracciones/ruta-del-minero/",
+        "https://www.catedraldesal.gov.co/atracciones/ruta-del-minero/"
+      ],
+      "checked_at": "2026-10-19",
+      "operator": {
+        "name": "Parque de la Sal / Catedral de Sal de Zipaquirá",
+        "offer_url": "https://www.catedraldesal.gov.co/atracciones/ruta-del-minero/",
+        "source_url": "https://www.catedraldesal.gov.co/atracciones/ruta-del-minero/"
+      },
+      "offer_verified": true,
+      "verification": "Fuente propia consultada el 19-10-2026; acredita oferta documental, no disponibilidad para fecha concreta, alianza ni contratación publicitaria."
+    },
+    {
+      "slug": "tren-sabana",
+      "kind": "experience",
+      "decision": "include",
+      "purpose": "Servicio ferroviario turístico que conecta Bogotá y Zipaquirá; boleto/operación a consultar.",
+      "source_urls": [
+        "https://turistren.com.co/",
+        "https://turistren.com.co/"
+      ],
+      "checked_at": "2026-10-19",
+      "operator": {
+        "name": "Turistren",
+        "offer_url": "https://turistren.com.co/",
+        "source_url": "https://turistren.com.co/"
+      },
+      "offer_verified": true,
+      "verification": "Fuente propia consultada el 19-10-2026; acredita oferta documental, no disponibilidad para fecha concreta, alianza ni contratación publicitaria."
+    },
+    {
+      "slug": "recorrido-historico",
+      "kind": "experience",
+      "decision": "include",
+      "purpose": "Recorrido organizado por el centro histórico con inscripción municipal; no inferido de caminar libremente.",
+      "source_urls": [
+        "https://www.zipaquira.travel/citytour/",
+        "https://www.zipaquira.travel/"
+      ],
+      "checked_at": "2026-10-19",
+      "operator": {
+        "name": "Alcaldía de Zipaquirá · Secretaría de Desarrollo Económico y Turismo",
+        "offer_url": "https://www.zipaquira.travel/citytour/",
+        "source_url": "https://www.zipaquira.travel/"
+      },
+      "offer_verified": true,
+      "verification": "Fuente propia consultada el 19-10-2026; acredita oferta documental, no disponibilidad para fecha concreta, alianza ni contratación publicitaria."
+    },
+    {
+      "slug": "sabores-locales",
+      "kind": "experience",
+      "decision": "exclude",
+      "purpose": "Sugerencia autónoma de consumo/visita, sin oferta exacta verificada de tour o taller; no se incluye como experiencia operada.",
+      "source_urls": [
+        "https://www.zipaquira.travel/wp-content/uploads/2026/02/Guia-Turistica-ZT.pdf"
+      ],
+      "checked_at": "2026-10-19",
+      "offer_verified": false
+    },
+    {
+      "slug": "artesania-sal",
+      "kind": "experience",
+      "decision": "exclude",
+      "purpose": "Sugerencia autónoma de consumo/visita, sin oferta exacta verificada de tour o taller; no se incluye como experiencia operada.",
+      "source_urls": [
+        "https://www.zipaquira.travel/wp-content/uploads/2026/02/Guia-Turistica-ZT.pdf"
+      ],
+      "checked_at": "2026-10-19",
+      "offer_verified": false
+    }
+  ],
+  "publication_approved": false,
+  "policy": "docs/POLITICA_EXPERIENCIAS_DE_OPERADORES.md vigente en preprod",
+  "scope": "7 atractivos seleccionados por finalidad; 3 actividades con oferente y oferta concreta. Sin mínimo ni cuota."
+}

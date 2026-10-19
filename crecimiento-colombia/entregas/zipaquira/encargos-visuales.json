@@ -118,25 +118,6 @@
     "image_web": "web/colegio-gabo-640.webp"
   },
   {
-    "id": "plaza-independencia",
-    "role": "place",
-    "source_ids": [
-      "municipal"
-    ],
-    "style": "EL-SEMI-REALISTA-1 · tinta y gouache semirrealista, color natural, sin filtro amarillo",
-    "framing": "Tarjeta 3:2, foco en el elemento nombrado; documentar silueta y entorno antes de generar.",
-    "facts_verified_textually": true,
-    "visual_identity_verified": false,
-    "reference_photo_uploaded": false,
-    "generated": true,
-    "approved": false,
-    "blockers": [
-      "Revisión humana del resultado pendiente"
-    ],
-    "prompt_template": "Ilustración editorial semirrealista de Plaza de la Independencia en Zipaquirá. Usar solo rasgos visuales confirmados, tinta y gouache, arquitectura reconocible, sin texto ni logos. No combinar escenas geográficamente distintas. Conservar ambiente de sabana andina, sin mar, palmeras tropicales ni catedrales europeas genéricas.",
-    "image_web": "web/plaza-independencia-640.webp"
-  },
-  {
     "id": "museo-quevedo",
     "role": "place",
     "source_ids": [
@@ -231,43 +212,5 @@
     ],
     "prompt_template": "Ilustración editorial semirrealista de Recorrer el centro histórico en Zipaquirá. Usar solo rasgos visuales confirmados, tinta y gouache, arquitectura reconocible, sin texto ni logos. No combinar escenas geográficamente distintas. Conservar ambiente de sabana andina, sin mar, palmeras tropicales ni catedrales europeas genéricas.",
     "image_web": "web/recorrido-historico-640.webp"
-  },
-  {
-    "id": "sabores-locales",
-    "role": "experience",
-    "source_ids": [
-      "municipal"
-    ],
-    "style": "EL-SEMI-REALISTA-1 · tinta y gouache semirrealista, color natural, sin filtro amarillo",
-    "framing": "Tarjeta 3:2, foco en el elemento nombrado; documentar silueta y entorno antes de generar.",
-    "facts_verified_textually": true,
-    "visual_identity_verified": false,
-    "reference_photo_uploaded": false,
-    "generated": true,
-    "approved": false,
-    "blockers": [
-      "Revisión humana del resultado pendiente"
-    ],
-    "prompt_template": "Ilustración editorial semirrealista de Probar sabores locales en Zipaquirá. Usar solo rasgos visuales confirmados, tinta y gouache, arquitectura reconocible, sin texto ni logos. No combinar escenas geográficamente distintas. Conservar ambiente de sabana andina, sin mar, palmeras tropicales ni catedrales europeas genéricas.",
-    "image_web": "web/sabores-locales-640.webp"
-  },
-  {
-    "id": "artesania-sal",
-    "role": "experience",
-    "source_ids": [
-      "municipal"
-    ],
-    "style": "EL-SEMI-REALISTA-1 · tinta y gouache semirrealista, color natural, sin filtro amarillo",
-    "framing": "Tarjeta 3:2, foco en el elemento nombrado; documentar silueta y entorno antes de generar.",
-    "facts_verified_textually": true,
-    "visual_identity_verified": false,
-    "reference_photo_uploaded": false,
-    "generated": true,
-    "approved": false,
-    "blockers": [
-      "Revisión humana del resultado pendiente"
-    ],
-    "prompt_template": "Ilustración editorial semirrealista de Descubrir la artesanía en sal en Zipaquirá. Usar solo rasgos visuales confirmados, tinta y gouache, arquitectura reconocible, sin texto ni logos. No combinar escenas geográficamente distintas. Conservar ambiente de sabana andina, sin mar, palmeras tropicales ni catedrales europeas genéricas.",
-    "image_web": "web/artesania-sal-640.webp"
   }
 ]

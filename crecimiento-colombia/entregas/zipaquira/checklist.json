@@ -5,22 +5,23 @@
   "base_commit": "8ff9dde",
   "date": "2026-10-19",
   "publication_approved": false,
-  "imported": true,
-  "preprod_reviewed": true,
+  "imported": false,
+  "preprod_reviewed": false,
   "components": {
     "research": "entregado_con_fuentes",
-    "top8": "propuesta_auditable",
+    "top8": "7_atractivos_sin_cuota",
     "texts_es_en_pt": "borrador_completo",
     "history": "breve_ancho_completo_sin_imagen",
     "directory": "30_fichas_borrador_importable",
-    "visual_briefs": "14_encargos_ejecutados",
-    "images": "14_de_14_borradores",
-    "destination_zip": "completo_validado_lector_nativo",
-    "integration": "integrado_preproduccion_local_id_25",
-    "human_review": "pendiente"
+    "visual_briefs": "11_encargos_activos",
+    "images": "11_de_11_borradores",
+    "destination_zip": "completo_validado_lector_nativo_y_criterio_editorial",
+    "integration": "revision_actual_pendiente_reintegracion_coordinador",
+    "human_review": "pendiente",
+    "experiences": "3_ofertas_propias_verificadas_titulos_neutrales"
   },
-  "next_action": "Revisión humana del lugar integrado en preproducción; registrar decisiones por componente. No publicar producción.",
-  "integration_receipt": {
+  "next_action": "Reintegrar revisión 7 atractivos/3 experiencias/11 imágenes en preproducción; conservar 30 negocios. Revisión humana pendiente.",
+  "previous_revision_integration": {
     "reported_by": "coordinador /root",
     "url": "http://127.0.0.1:8088/destinos/zipaquira/",
     "destination_id": 25,

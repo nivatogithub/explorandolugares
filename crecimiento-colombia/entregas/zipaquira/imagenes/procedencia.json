@@ -235,43 +235,6 @@
     "limits": "Interpretación ilustrada; no prueba de condición actual ni reproducción topográfica exacta. Las escenas temáticas no representan salas o piezas catalogadas exactas."
   },
   {
-    "id": "plaza-independencia",
-    "tool": "builtin image_gen",
-    "model": "No expuesto por herramienta",
-    "prompt": "Create ONE 3:2 landscape full-bleed travel editorial illustration, EL-SEMI-REALISTA-1. Clearly visible fine ink outlines, nuanced layered gouache brushwork and paper texture, mature semi-realistic illustration rather than a photograph or childish geometry. Natural varied colors independent of UI palette; no yellow filter, no labels, text, lettering, watermarks or logos. Recognizable subject and believable perspective. Zipaquirá Colombia Plaza de la Independencia: broad paved public square with low stone terraces, traditional two-storey colored colonial/republican houses with timber balconies and clay tile roofs surrounding it, cafes suggested by a few outdoor tables, flagpoles but no readable signs, modest greenery, cool highland blue daylight. People strolling and talking, coherent town proportions. Different composition from cathedral square: eye-level across terraces toward colorful houses, no cathedral focal point, no ocean or Caribbean palms. Critical correction: NO FLAGS anywhere, no flagpoles, no banners, no Brazilian green-yellow flag. Omit all flags and poles completely. Use a neutral white facade with muted blue and brick-red accents rather than dominant yellow. Broad paved square, low stone terraces, Colombian highland town scale.",
-    "created_at": "2026-10-19",
-    "master": {
-      "id": "plaza-independencia",
-      "master_file": "maestros/plaza-independencia.png",
-      "master_sha256": "c31b88e6bdf95e4190d86f5709014692f4a82bd73e013b0fc61f5074f9a23a27",
-      "master_bytes": 3518777,
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "web": [
-        {
-          "file": "web/plaza-independencia-640.webp",
-          "bytes": 83300,
-          "dimensions": [
-            640,
-            427
-          ],
-          "sha256": "7a67ab2aaff03c121d3e68e0de6e2813ae19aac207d7106d20e00323623f199e"
-        }
-      ]
-    },
-    "role": "place",
-    "factual_source_ids": [
-      "municipal"
-    ],
-    "reference_photos_uploaded": [],
-    "independent_composition": true,
-    "human_approved": false,
-    "status": "draft_pending_human_review",
-    "limits": "Interpretación ilustrada; no prueba de condición actual ni reproducción topográfica exacta. Las escenas temáticas no representan salas o piezas catalogadas exactas."
-  },
-  {
     "id": "museo-quevedo",
     "tool": "builtin image_gen",
     "model": "No expuesto por herramienta",
@@ -450,80 +413,6 @@
     "role": "experience",
     "factual_source_ids": [
       "citytour"
-    ],
-    "reference_photos_uploaded": [],
-    "independent_composition": true,
-    "human_approved": false,
-    "status": "draft_pending_human_review",
-    "limits": "Interpretación ilustrada; no prueba de condición actual ni reproducción topográfica exacta. Las escenas temáticas no representan salas o piezas catalogadas exactas."
-  },
-  {
-    "id": "sabores-locales",
-    "tool": "builtin image_gen",
-    "model": "No expuesto por herramienta",
-    "prompt": "Create ONE 3:2 landscape full-bleed travel editorial illustration, EL-SEMI-REALISTA-1. Clearly visible fine ink outlines, nuanced layered gouache brushwork and paper texture, mature semi-realistic illustration rather than a photograph or childish geometry. Natural varied colors independent of UI palette; no yellow filter, no labels, text, lettering, watermarks or logos. Recognizable subject and believable perspective. Interpretive local food experience in Zipaquirá Colombia: close tabletop composition of traditional Colombian baked rolls and amasijos in a small basket, a clay cup with drink, and a plate of rustic salt-roasted potatoes, one pair of adult hands sharing food. Subtle local traditional dining room, natural terracotta, brown bread and neutral table tones. Culinary still life ink/gouache, detailed and appetizing. No restaurant logo, no promised menu or branded dish, no readable text, no giant yellow background.",
-    "created_at": "2026-10-19",
-    "master": {
-      "id": "sabores-locales",
-      "master_file": "maestros/sabores-locales.png",
-      "master_sha256": "f06837586668752cff7fcda46baf4fcf9a5f79f5bc539faf39f759c7cdf03a3e",
-      "master_bytes": 3235853,
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "web": [
-        {
-          "file": "web/sabores-locales-640.webp",
-          "bytes": 72538,
-          "dimensions": [
-            640,
-            427
-          ],
-          "sha256": "c3ade335606527ec3bf179601b73b120e2064e7c3d8e925a88cf44626027977d"
-        }
-      ]
-    },
-    "role": "experience",
-    "factual_source_ids": [
-      "municipal"
-    ],
-    "reference_photos_uploaded": [],
-    "independent_composition": true,
-    "human_approved": false,
-    "status": "draft_pending_human_review",
-    "limits": "Interpretación ilustrada; no prueba de condición actual ni reproducción topográfica exacta. Las escenas temáticas no representan salas o piezas catalogadas exactas."
-  },
-  {
-    "id": "artesania-sal",
-    "tool": "builtin image_gen",
-    "model": "No expuesto por herramienta",
-    "prompt": "Create ONE 3:2 landscape full-bleed travel editorial illustration, EL-SEMI-REALISTA-1. Clearly visible fine ink outlines, nuanced layered gouache brushwork and paper texture, mature semi-realistic illustration rather than a photograph or childish geometry. Natural varied colors independent of UI palette; no yellow filter, no labels, text, lettering, watermarks or logos. Recognizable subject and believable perspective. Interpretive salt craft experience in Zipaquirá Colombia: close view of adult artisan hands working a small pale translucent block of salt with simple hand tools on a wooden bench, a few modest finished salt craft pieces and salt grains, whitewashed workshop wall softly behind. Respectful craft demonstration, organic hands with correct anatomy, detailed semi-realistic ink and gouache textures. Do not reproduce a named artist's specific sculpture or claim exact workshop; no business logos, no fantasy jewels, no readable text.",
-    "created_at": "2026-10-19",
-    "master": {
-      "id": "artesania-sal",
-      "master_file": "maestros/artesania-sal.png",
-      "master_sha256": "0b4b2c9a826aa55d1672c6d550f836ed93ba8a7d9df19805093485fc03334f24",
-      "master_bytes": 3162210,
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "web": [
-        {
-          "file": "web/artesania-sal-640.webp",
-          "bytes": 64148,
-          "dimensions": [
-            640,
-            427
-          ],
-          "sha256": "438e43fb8a729fc8d272a7c26f1600c533d597ee07f5eceb751473a458166149"
-        }
-      ]
-    },
-    "role": "experience",
-    "factual_source_ids": [
-      "municipal"
     ],
     "reference_photos_uploaded": [],
     "independent_composition": true,
