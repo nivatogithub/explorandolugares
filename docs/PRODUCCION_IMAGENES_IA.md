@@ -60,3 +60,13 @@ El portal puede simplificar la página pública de atribuciones para que incluya
 Usa [`content/templates/procedencia-imagen-ia.json`](../content/templates/procedencia-imagen-ia.json). Si se crea o modifica un activo mediante una herramienta externa, su formato, peso, dimensiones, descripción alternativa, idioma, referencias visuales, fuentes factuales, permiso, prompt y revisión deben quedar asociados al destino y al archivo final.
 
 La procedencia guardada no publica la imagen automáticamente. La persona responsable marca el activo aprobado y, por separado, publica el destino o la nueva versión.
+
+
+## Playas y fidelidad del paisaje costero
+
+- No convertir todas las playas en una misma postal virgen de arena amplia y palmeras. La ilustración semirrealista debe conservar el carácter real del sector.
+- Antes de generar o aprobar, identificar playa, tramo y punto de vista; documentar fuentes y referencias visuales fechadas. Una descripción promocional genérica no acredita su apariencia.
+- Verificar por separado ancho y continuidad de arena (incluidos tramos mínimos o sin playa), erosión, borde con mar, vías, muros/malecón, construcciones y servicios, ocupación, vegetación real, relieve y color habitual del agua. No añadir palmeras, arena, montañas ni eliminar urbanización por estética.
+- Comparar playas del mismo destino lado a lado: cada imagen debe mostrar diferencias verificadas; no basta cambiar colores, cámara o distribución de las mismas palmeras. Si no hay evidencia diferenciadora, investigar o dejar pendiente; no inventar rasgos para diferenciarlas.
+- Registrar por imagen: sector, fuentes/fecha, rasgos confirmados, incertidumbres, elementos prohibidos, motivo de elección del encuadre y resultado de revisión. La aprobación técnica de un archivo no equivale a fidelidad geográfica ni aprobación editorial.
+- Aplicar a destinos nuevos, borradores y revisión de publicados. Ante objeción de identidad, marcar la imagen pendiente de corrección; no declararla lista ni propagarla como ejemplo.

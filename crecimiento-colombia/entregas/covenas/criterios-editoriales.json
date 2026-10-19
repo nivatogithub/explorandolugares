@@ -11,7 +11,19 @@
       "source_urls": [
         "https://www.golfodemorrosquillo.com/sitios/covenas/playas-de-la-primera-ensenada"
       ],
-      "checked_at": "2026-10-19"
+      "checked_at": "2026-10-19",
+      "image_review": {
+        "status": "requires_correction",
+        "reason": "Observación del propietario: imágenes demasiado similares e idealizadas como playas vírgenes con palmeras. No aprobadas.",
+        "sector_visual_verification": "pending",
+        "required_checks": [
+          "ancho y continuidad reales de arena, incluidos tramos casi sin playa",
+          "urbanización, vías, malecón y borde costero",
+          "vegetación del tramo, sin palmeras añadidas",
+          "rasgos diferenciadores comprobados entre las tres playas"
+        ],
+        "user_feedback_date": "2026-10-19"
+      }
     },
     {
       "slug": "segunda-ensenada",
@@ -21,7 +33,19 @@
       "source_urls": [
         "https://www.dnp.gov.co/Prensa_/Noticias/Paginas/dnp-y-enterritorio-entregan-malecon-turistico-de-covenas.aspx"
       ],
-      "checked_at": "2026-10-19"
+      "checked_at": "2026-10-19",
+      "image_review": {
+        "status": "requires_correction",
+        "reason": "Observación del propietario: imágenes demasiado similares e idealizadas como playas vírgenes con palmeras. No aprobadas.",
+        "sector_visual_verification": "pending",
+        "required_checks": [
+          "ancho y continuidad reales de arena, incluidos tramos casi sin playa",
+          "urbanización, vías, malecón y borde costero",
+          "vegetación del tramo, sin palmeras añadidas",
+          "rasgos diferenciadores comprobados entre las tres playas"
+        ],
+        "user_feedback_date": "2026-10-19"
+      }
     },
     {
       "slug": "cienaga-la-caimanera",
@@ -62,7 +86,19 @@
       "source_urls": [
         "https://www.golfodemorrosquillo.com/sitios/covenas/playas-de-la-coquerita"
       ],
-      "checked_at": "2026-10-19"
+      "checked_at": "2026-10-19",
+      "image_review": {
+        "status": "requires_correction",
+        "reason": "Observación del propietario: imágenes demasiado similares e idealizadas como playas vírgenes con palmeras. No aprobadas.",
+        "sector_visual_verification": "pending",
+        "required_checks": [
+          "ancho y continuidad reales de arena, incluidos tramos casi sin playa",
+          "urbanización, vías, malecón y borde costero",
+          "vegetación del tramo, sin palmeras añadidas",
+          "rasgos diferenciadores comprobados entre las tres playas"
+        ],
+        "user_feedback_date": "2026-10-19"
+      }
     },
     {
       "slug": "represa-de-villeros",
@@ -144,5 +180,6 @@
       "reason": "Fuente regional acredita actividad posible, pero no se comprobó una oferta concreta de un prestador. Conservar candidato, no publicar como servicio."
     }
   ],
-  "human_approval": "pending"
+  "human_approval": "pending",
+  "readiness": "blocked_by_beach_image_fidelity"
 }
