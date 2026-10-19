@@ -1,5 +1,6 @@
 """The full release must retain the already reviewed coverage integration."""
 import hashlib
+import json
 import subprocess
 import sys
 import shutil
@@ -34,11 +35,15 @@ class FullReleaseCoverageTests(unittest.TestCase):
                 # The shared menu now hashes account/select dependencies too.
                 # Prepare those original sources so reference and release use
                 # the same dependency graph, while comparing the entire overlay.
-                for name in [*versions.ACCOUNT_COMPONENTS,'account-entry.js']:
+                for name in [*versions.ACCOUNT_COMPONENTS,'account-entry.js','header-controls.css','header-controls.js']:
                     candidates=[ROOT/'backend/public/assets'/name,ROOT/'ensayos/v1/assets'/name]
                     source=next((p for p in candidates if p.is_file()),None)
                     if source:shutil.copyfile(source,ref/'public/assets'/name)
                 subprocess.run([sys.executable,str(ROOT/'scripts/aplicar-identidad-neutral.py'),'--public',str(ref/'public')],check=True)
+                shell=json.loads((ROOT/'design/portal/tokens.json').read_text())['colors']
+                controls=ref/'public/assets/header-controls.css'
+                controls.write_text(controls.read_text()+'\nhtml:root{--el-shell:'+shell['shell']+';--el-shell-border:'+shell['shell-border']+'}\n')
+                subprocess.run([sys.executable,str(ROOT/'scripts/preparar-encabezado.py'),'--public',str(ref/'public')],check=True)
                 subprocess.run(['php',str(ROOT/'scripts/aplicar-nomenclatura-lugares.php'),str(ref)],check=True)
                 subprocess.run([sys.executable,str(ROOT/'scripts/versiones-medicion.py'),'--public',str(ref/'public')],check=True)
                 for relative in paths:
