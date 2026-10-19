@@ -40,13 +40,30 @@ def render(text):
     # Principal navigation must be distinct from the language navigation.
     header=header.replace(menu[0],menu[0][:-1]+' id="menu-principal">',1)
     return text[:head.start()]+header+text[head.end():]
+def render_footer(text):
+    footer=re.search(r'<footer\b[^>]*>.*?</footer>',text,re.S)
+    if not footer:return text
+    dynamic=bool(re.search(r'<html[^\n]*lang="<\?',text))
+    match=re.search(r'<html\s+lang="([^"]+)"',text);locale=match[1] if match and match[1] in COPY else 'es'
+    def word(es,en,pt):
+        if dynamic:return "<?=($locale==='en'?"+repr(en)+":($locale==='pt-BR'?"+repr(pt)+":"+repr(es)+"))?>"
+        return {'es':es,'en':en,'pt-BR':pt}[locale]
+    body=footer[0]
+    if 'href="/contacto.php"' not in body:
+        help='<span><a class="footer-help-link" href="/contacto.php">'+word('Contacto y ayuda','Contact and help','Contato e ajuda')+'</a></span>'
+        end=body.rfind('</div>')
+        body=body[:end]+help+body[end:] if end>=0 else body.replace('</footer>',help+'</footer>')
+    if 'el-measurement-preferences' not in body:
+        button='<button type="button" class="el-measurement-preferences">'+word('Privacidad y estadísticas','Privacy and statistics','Privacidade e estatísticas')+'</button>'
+        body=body.replace('</footer>',button+'</footer>')
+    return text[:footer.start()]+body+text[footer.end():]
 def apply(public):
     public=Path(public)
-    versions={name:hashlib.sha256((public/'assets'/name).read_bytes()).hexdigest()[:12] for name in ['header-controls.css','account-entry.css']}
+    versions={name:hashlib.sha256((public/'assets'/name).read_bytes()).hexdigest()[:12] for name in ['header-controls.css','account-entry.css','cobertura/medicion.css']}
     count=0
     for path in public.rglob('*'):
         if path.suffix not in {'.html','.php'}:continue
-        text=path.read_text();updated=render(text)
+        text=path.read_text();updated=render_footer(render(text))
         if 'header-language-bar' in updated and '</head>' in updated:
             css=''.join(f'<link rel="stylesheet" href="/assets/{name}?v={version}">' for name,version in versions.items())
             if '/assets/header-controls.css' not in updated:updated=updated.replace('</head>',css+'</head>',1)
