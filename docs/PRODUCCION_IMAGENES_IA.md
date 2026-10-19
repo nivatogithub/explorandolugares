@@ -70,3 +70,5 @@ La procedencia guardada no publica la imagen automáticamente. La persona respon
 - Comparar playas del mismo destino lado a lado: cada imagen debe mostrar diferencias verificadas; no basta cambiar colores, cámara o distribución de las mismas palmeras. Si no hay evidencia diferenciadora, investigar o dejar pendiente; no inventar rasgos para diferenciarlas.
 - Registrar por imagen: sector, fuentes/fecha, rasgos confirmados, incertidumbres, elementos prohibidos, motivo de elección del encuadre y resultado de revisión. La aprobación técnica de un archivo no equivale a fidelidad geográfica ni aprobación editorial.
 - Aplicar a destinos nuevos, borradores y revisión de publicados. Ante objeción de identidad, marcar la imagen pendiente de corrección; no declararla lista ni propagarla como ejemplo.
+
+Regla obligatoria de creación y auditoría retroactiva: consultar `docs/REGLAS_FIDELIDAD_VISUAL_DESTINOS.md`. No generar un lugar específico desde ingredientes genéricos ni integrar una salida sin comparación de composición con referencia identificada.
