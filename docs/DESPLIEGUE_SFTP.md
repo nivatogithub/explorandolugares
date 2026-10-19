@@ -1,6 +1,6 @@
 # Despliegue SFTP de Explorando Lugares
 
-El despliegue normal es directo e incremental. El script compara SHA-256 del paquete construido con el último manifiesto y transfiere solo archivos nuevos o cambiados. No crea copias del sitio, carpetas de staging, versiones remotas, bloqueos ni una activación posterior.
+El despliegue normal es directo e incremental. El script compara SHA-256 del paquete construido con el último manifiesto y transfiere solo archivos nuevos o cambiados. No crea copias completas del sitio ni instalaciones paralelas. Usa temporales privados únicamente para los archivos modificados y reemplazo individual verificable, como se explica en Recuperación incremental.
 
 ## Preparación
 
@@ -65,3 +65,40 @@ El envío SFTP confirma transferencia, pero no valida el funcionamiento de PHP, 
 ## Reducción del historial anterior
 
 Los despliegues previos dejaron builds de trabajo en `.local/deploy/`. Se conserva un inventario compacto para iniciar la comparación incremental; los builds fechados y temporales ya no son necesarios. El script nuevo no volverá a crearlos ni a guardar copias del sitio en el hosting.
+
+## Recuperación incremental y tráfico activo (19/10/2026)
+
+El despliegue principal conserva el mismo sitio y las mismas rutas. Antes de sustituir archivos descarga **solo los archivos modificados**, comprueba sus hashes contra el manifiesto y guarda un registro privado en `.local/deployment-recovery/ID/journal.json`. No copia imágenes ni el sitio completo. Transfiere todos los bytes nuevos a temporales privados, verifica su integridad y solo entonces renombra cada archivo completo. El manifiesto se reemplaza al final. Las dependencias nuevas preceden al código que las utiliza; recursos preceden a las páginas.
+
+Una transferencia cortada antes de los renombrados deja el sitio anterior funcionando. Una interrupción durante los renombrados puede dejar una mezcla de versiones; no se promete una transacción global ni indisponibilidad cero. El registro permite comprobar los archivos y recuperar únicamente el cambio, en orden inverso. Si hay cambios ajenos, la recuperación se detiene para no pisarlos. La conexión debe estar restablecida para recuperar. No hay cambio de instalación, de raíz web, DNS ni modo de mantenimiento.
+
+`python3 scripts/desplegar-sftp.py --config CONFIG --recover .local/deployment-recovery/ID/journal.json` restaura exclusivamente código/manifiesto. **Nunca restaura, reinicia ni modifica la base de datos o las estadísticas.** Los retiros intencionales de archivos se realizan aparte de estas entregas recuperables. Conservar el registro y sus archivos anteriores hasta validar la entrega; no borrarlos durante una recuperación pendiente. La copia anterior de código queda protegida por permisos locales, fuera de Git. Probar las funciones de recuperación con `python3 -m unittest discover -s scripts/tests -p test_deployment_recovery.py`.
+
+Para la entrega de cuentas/formularios se debe usar `--preserve-places` y revisar la selección resultante; opcionalmente acotarla más con `--only`: excluir imágenes, archivos de contenido y páginas/renderizadores de lugares. No trasladar la base local ni los datos de demostración. Aplicar antes la migración aditiva 043 y verificar su estado completo; el código anterior puede funcionar con esas tablas añadidas. Recuperar código no requiere retirar las tablas nuevas ni borrar sus datos.
+
+## Respaldo y recuperación de base de datos
+
+`python3 scripts/respaldo-base-datos.py` consulta viabilidad. Con `--create` genera un volcado nativo de MariaDB/MySQL usando `--single-transaction --quick --skip-lock-tables`, con tablas InnoDB, vistas, disparadores, rutinas y eventos. No ejecutar cambios de esquema mientras se genera. No configura bloqueos globales ni modifica contadores. La compresión consume temporalmente CPU y lecturas: medir duración/tamaño y preferir períodos de menor tráfico al automatizar.
+
+El hosting actual permite SFTP pero no consola SSH. El transporte por defecto usa una acción PHP fija, temporal, con token secreto en cabecera, POST, caducidad de diez minutos y retirada al terminar. No acepta SQL ni comandos del cliente. Helper y respaldo viven fuera de la raíz web. No es una función pública permanente ni lleva claves en URL. Si se habilita consola en el futuro, puede usarse `--transport ssh`; no se requiere habilitarla ahora.
+
+El respaldo comprimido se guarda con permisos 0600 en `private/backups` del hosting y se descarga a `.local/database-backups` del Mac. Las credenciales permanecen en el hosting y los datos no se imprimen. Se verifican SHA-256 y gzip. La copia contiene datos personales y debe mantenerse privada; los permisos no equivalen a cifrado.
+
+`python3 scripts/verificar-respaldo-local.py --backup RUTA.sql.gz` comprueba el hash y restaura exclusivamente en una base temporal `el_restore_check_*` del contenedor local, con el planificador de eventos apagado. Comprueba cantidad de tablas y presencia de las tablas estadísticas, y elimina solo esa base temporal. No importa sobre la base activa local ni conecta a producción.
+
+### Plan operativo propuesto (no automatizado todavía)
+
+- Antes de cambios de esquema: respaldo consistente y verificación de restauración.
+- Diariamente en horario de menor uso: respaldo completo de base; conservar siete diarios, cuatro semanales y tres mensuales. Antes de activar expiración automática, acordar destino y verificar copias; no hay borrado automático en estos scripts.
+- Conservar al menos una copia fuera del hosting. La copia del Mac cumple una separación inicial, pero no sustituye una copia externa cifrada y automatizada que sobreviva a la pérdida del equipo. Elegir y configurar ese destino antes de dar el plan por operativo.
+- Prueba de restauración aislada mensual y antes de cambios importantes. Registrar fecha, checksum, tamaño, número de tablas y resultado; alertar ante fallo, sin enviar datos personales.
+- Recuperación habitual de un despliegue: **solo código**, con base y estadísticas actuales intactas. No restaurar un respaldo viejo para corregir un error de PHP.
+- Recuperación de desastre de base: detener escrituras de forma controlada, conservar toda evidencia/datos recuperables actuales, restaurar primero en otra base y reconciliar los datos posteriores antes de cualquier cambio de conexión aprobado. Requiere autorización expresa; este repositorio no ofrece un botón de sobrescritura de producción.
+- Un respaldo diario puede dejar hasta 24 horas sin cubrir si el hosting pierde toda la base. Recuperación a un instante preciso exige binlogs/servicio del proveedor o réplica; eso no está configurado ni verificado. No prometer pérdida cero de visitas con respaldos diarios. No alterar jamás contadores activos para hacer coincidir una copia antigua.
+
+
+### Migración de cuentas preparada para la entrega
+
+`python3 scripts/migrar-cuentas.py` consulta el estado actual sin aplicar SQL. `--apply --approved-preprod COMMIT` exige el commit limpio aprobado de preprod y aplica exclusivamente 043. La herramienta lleva la clase y el SQL candidato a una carpeta privada temporal, sin sustituir el código activo, y los retira al terminar. Primero respaldo y restauración aislada; después aplicar 043, comprobar estados completos y solo entonces publicar el código que la utiliza. No retirar tablas al recuperar código.
+
+La migración crea únicamente las tablas de historial y enlaces de reactivación y conserva los estados anteriores en el historial nuevo. No cambia identificadores, correos, hashes de contraseñas, relaciones comerciales ni tablas estadísticas. Si se interrumpe entre tablas puede reanudarse, verificando estructura e índices existentes; no inventa ni corrige columnas desconocidas. Limita a cinco segundos la espera de metadatos durante este cambio para detenerse en lugar de prolongar una espera. `preprod/probar-migracion-cuentas.php` comprueba casos activo/pendiente/deshabilitado, reanudación, idempotencia y preservación de contadores en base desechable.

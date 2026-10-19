@@ -21,12 +21,16 @@ catalog=data['municipalityCatalog']
 assert len(catalog)==len({item['name'] for item in catalog})
 assert all(item['pilotCategory'] in {1,2,3,4} for item in catalog)
 data['municipalities']=[item['name'] for item in catalog if item['pilotCategory'] in data['enabledMunicipalityCategories']]
+data['municipalities']=list(dict.fromkeys(data['municipalities']+data.get('additionalContactMunicipalities',[])))
 assert data['municipalities']
 # Persistir la selección activa que valida el servidor.
 source.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
 values=[c['value'] for group in data['groups'] for c in group['categories']]
 assert len(values)==len(set(values))
-public={key:data[key] for key in ['department','municipalities','groups','travelGroups']}
+geo=json.loads((ROOT/'backend/app/content/account-geography.json').read_text())
+public={key:data[key] for key in ['department','municipalities','groups','travelGroups','landlinePrefixes','departmentPrefixes']}
+public['departments']=geo['regions']['CO']
+public['nationalMunicipalities']=geo['municipalities']
 (ROOT/'ensayos/v1/assets/contact-options.json').write_text(json.dumps(public,ensure_ascii=False,indent=2)+'\n')
 print('OK: opciones JSON compartidas para formulario y servidor.')
 # Respaldo sin dependencia de la descarga: se genera del mismo catálogo.
@@ -37,8 +41,8 @@ for group in data['groups']:
     categories+='<optgroup label="'+escape(group['label'],quote=True)+'">'
     categories+=''.join('<option value="'+escape(item['value'],quote=True)+'">'+escape(item['label'])+'</option>' for item in group['categories'])
     categories+='</optgroup>'
-towns='<option value="">Selecciona tu municipio</option>'+''.join('<option value="'+escape(name,quote=True)+'">'+escape(name)+'</option>' for name in data['municipalities'])
-for field,options in [('lead-category',categories),('lead-town',towns)]:
+towns='<option value="">Selecciona tu municipio</option>'+''.join('<option data-landline-prefix="'+escape(data['landlinePrefixes'].get(name,''),quote=True)+'" value="'+escape(name,quote=True)+'">'+escape(name)+'</option>' for name in data['municipalities'])
+for field,options in [('lead-category',categories)]:
     html,count=re.subn(r'(<select id="'+field+r'"[^>]*>).*?(</select>)',lambda m:m[1]+options+m[2],html,flags=re.S)
     if count!=1:raise ValueError('No se encontró el selector '+field)
 page.write_text(html)

@@ -69,7 +69,27 @@ try:
   record={**valid,'business':'Prueba '+phone_type,'csrf':tokens['csrf'],'request_key':tokens['request_key'],'email':'','phone_type':phone_type,'phone_number':number,'phone_prefix':'+999','phone':'+999000'}
   assert call('/api/participacion.php',record,agent=agent)[0]==200
   assert db.execute('SELECT phone,phone_type FROM leads WHERE business=?',(record['business'],)).fetchone()==(expected,phone_type)
+
+ # Bogotá and Caribbean cities must work without choosing a different municipality.
+ for town,area in [('Bogotá','601'),('Cartagena','605'),('Santa Marta','605'),('Medellín','604'),('Jericó','604')]:
+  # The throttle is tested separately; reset only this disposable fixture's limits.
+  db.execute('DELETE FROM rate_limits');db.commit()
+  agent=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
+  tokens=json.loads(call('/api/participacion.php',agent=agent)[1])
+  record={**valid,'csrf':tokens['csrf'],'request_key':tokens['request_key'],'municipality':town,'email':'','phone_type':'fijo','phone_number':'1234567','phone_prefix':'+999'}
+  status,body,_=call('/api/participacion.php',record,agent=agent);assert status==200,(town,body)
+  assert db.execute('SELECT municipality,phone FROM leads WHERE request_key=?',(tokens['request_key'],)).fetchone()==(town,'+57'+area+'1234567')
+  db.execute('DELETE FROM leads WHERE request_key=?',(tokens['request_key'],));db.commit()
  assert db.execute('SELECT COUNT(*) FROM leads').fetchone()[0]==4
+ # National codes work independently of published destinations.
+ for code,department,label in [('86001','86','Mocoa'),('25899','25','Zipaquirá'),('05266','05','Envigado')]:
+  db.execute('DELETE FROM rate_limits');db.commit()
+  agent=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()));tokens=json.loads(call('/api/participacion.php',agent=agent)[1])
+  record={**valid,'csrf':tokens['csrf'],'request_key':tokens['request_key'],'municipality':code,'contact_department':department}
+  status,body,_=call('/api/participacion.php',record,agent=agent);assert status==200,(code,body)
+  assert db.execute('SELECT municipality FROM leads WHERE request_key=?',(tokens['request_key'],)).fetchone()[0].startswith(label+' · ')
+  db.execute('DELETE FROM leads WHERE request_key=?',(tokens['request_key'],));db.commit()
+ wrong={**valid,'municipality':'11001','contact_department':'05'};assert call('/api/participacion.php',wrong)[0]==422
  # Una postulación de impulsor se marca de forma distinta a un registro comercial.
  agent=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
  tokens=json.loads(call('/api/participacion.php',agent=agent)[1])

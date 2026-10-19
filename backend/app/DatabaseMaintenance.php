@@ -211,6 +211,7 @@ final class DatabaseMaintenance
             'checks'=>[['operating_costs',['cost_date','category','amount_cop','destination_id','voided_at']],['subscription_cancellation_requests',['subscription_id','business_id','account_id','reason_code','status','review_note']]],
             'requires'=>['businesses','business_subscriptions','accounts','destinations'],
         ],
+        '043-account-lifecycle'=>['file'=>'043-account-lifecycle.mysql.sql','checks'=>[['account_access_events',['account_id','event_type','actor_account_id','reason','created_at']],['account_reactivations',['account_id','token_hash','expires_at','used_at']]],'requires'=>['accounts']],
         '041-experience-operator-addon'=>['file'=>'041-experience-operator-addon.mysql.sql','checks'=>[['experience_operator_prices',['billing_frequency','amount','currency']],['business_experience_subscriptions',['subscription_id','experience_id','quoted_amount','currency']]],'requires'=>['business_subscriptions','points_of_interest']],
         '040-payment-transaction-details'=>['file'=>'040-payment-transaction-details.mysql.sql','checks'=>[['business_subscription_payment_evidence',['checkout_reference','transaction_date','paid_amount','payment_method','source_bank']]],'requires'=>['business_subscription_payment_evidence']],
         '039-payment-instructions'=>['file'=>'039-payment-instructions.mysql.sql','checks'=>[['payment_instructions',['enabled','test_mode','holder','bank','account_number','account_type','breb_key','notes','qr_file','updated_at','updated_by']]],'requires'=>[]],
@@ -323,6 +324,19 @@ final class DatabaseMaintenance
         try{return $this->runMigrations($selected);}finally{$this->pdo->query("SELECT RELEASE_LOCK(CONCAT('el_schema_',DATABASE()))");}
     }
 
+    /** Only missing complete tables may be resumed; never repair unknown columns silently. */
+    private function validateLifecyclePartial(array $tables):void
+    {
+        foreach(self::MIGRATIONS['043-account-lifecycle']['checks'] as [$table,$columns]){
+            if(!in_array($table,$tables,true))continue;
+            $actual=$this->pdo->query('SHOW COLUMNS FROM `'.$table.'`')->fetchAll(PDO::FETCH_COLUMN);
+            if(array_diff(array_merge(['id','created_at'],$columns),$actual))throw new RuntimeException('La tabla '.$table.' tiene una estructura inesperada; no se modificó.');
+            $indexes=$this->pdo->query('SHOW INDEX FROM `'.$table.'`')->fetchAll(PDO::FETCH_ASSOC);
+            $names=array_column($indexes,'Key_name');
+            if(!in_array('PRIMARY',$names,true)||!in_array($table.'_account',$names,true))throw new RuntimeException('Faltan índices de '.$table.'; no se modificó.');
+        }
+    }
+
     private function runMigrations(?array $selected = null): array
     {
         $this->requireMysql();
@@ -333,6 +347,10 @@ final class DatabaseMaintenance
         foreach (self::MIGRATIONS as $id => $migration) {
             if ($selected !== null && !in_array($id, $selected, true)) continue;
             $state = $this->migrationState($migration, $tables);
+            if ($id==='043-account-lifecycle'&&$state==='partial') {
+                $this->validateLifecyclePartial($tables);
+                $state='pending';
+            }
             if ($state === 'partial') {
                 // Later migrations can appear partial when their prerequisite
                 // tables have not been created yet. Let the ordered migration
@@ -354,6 +372,10 @@ final class DatabaseMaintenance
             if ($selected !== null && !in_array($id, $selected, true)) continue;
             $tables = $this->tables();
             $state = $this->migrationState($migration, $tables);
+            if ($id==='043-account-lifecycle'&&$state==='partial') {
+                $this->validateLifecyclePartial($tables);
+                $state='pending';
+            }
             if ($state === 'applied') {
                 $this->recordMigration($id, $migration['file'], 'detected');
                 $results[$id] = 'Ya estaba aplicada; registrada.';
@@ -371,7 +393,11 @@ final class DatabaseMaintenance
                 if($duplicates!==false)throw new RuntimeException('Hay negocios con más de una cuenta activa. Revisa sus asociaciones antes de habilitar el modelo de cuenta responsable; no se eliminaron asociaciones.');
             }
             if (!is_file($file)) throw new RuntimeException('No se encontró el archivo de migración '.$migration['file'].'.');
-            $this->executeSqlFile($file);
+            if($id==='043-account-lifecycle'){
+                $wait=(int)$this->pdo->query('SELECT @@SESSION.lock_wait_timeout')->fetchColumn();
+                $this->pdo->exec('SET SESSION lock_wait_timeout=5');
+                try{$this->executeSqlFile($file);}finally{$this->pdo->exec('SET SESSION lock_wait_timeout='.$wait);}
+            }else $this->executeSqlFile($file);
             $after = $this->migrationState($migration, $this->tables());
             if ($after !== 'applied') throw new RuntimeException('La migración '.$id.' no quedó completa. Se detuvo para revisar el esquema.');
             $this->recordMigration($id, $migration['file'], 'applied');

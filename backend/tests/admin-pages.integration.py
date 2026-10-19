@@ -25,7 +25,7 @@ DB.execute('PRAGMA foreign_keys=ON')
 DB.executescript((ROOT / 'backend/database/sqlite.sql').read_text())
 DB.executescript((ROOT / 'backend/database/destinations.sqlite.sql').read_text())
 DB.executescript((ROOT / 'backend/database/migrations/006-poi-experience-links.sqlite.sql').read_text())
-for number in range(8, 42):
+for number in range(8, 44):
     matches = list((ROOT / 'backend/database/migrations').glob(f'{number:03d}-*.sqlite.sql'))
     assert len(matches) == 1, f'Migración SQLite faltante o ambigua: {number:03d}'
     DB.executescript(matches[0].read_text())
@@ -423,10 +423,10 @@ try:
     # The Accounts page does not create orphaned accounts; accounts enter through registration.
     account_form = {'csrf': csrf, 'action': 'save', 'account_type': 'business', 'display_name': 'Cuenta sin negocio', 'email': 'sin-negocio@example.invalid'}
     status, body, _ = request('/admin/usuarios.php', account_form)
-    check(status == 400 and 'se crean desde el registro de negocio' in body, 'El panel aceptó crear una cuenta empresarial por fuera del registro enlazado.')
+    check(status == 400 and 'Las cuentas se crean desde el registro empresarial' in body, 'El panel aceptó crear una cuenta empresarial por fuera del registro enlazado.')
     account_form.update(account_type='traveler', display_name='Viajera de prueba', email='viajera@example.invalid')
     status, body, _ = request('/admin/usuarios.php', account_form)
-    check(status == 400 and 'se crean desde el registro de negocio' in body, 'El panel permitió crear cuentas pendientes desconectadas del registro público.')
+    check(status == 400 and 'Las cuentas se crean desde el registro empresarial' in body, 'El panel permitió crear cuentas pendientes desconectadas del registro público.')
     check(DB.execute("SELECT COUNT(*) FROM accounts WHERE email IN ('sin-negocio@example.invalid','viajera@example.invalid')").fetchone()[0] == 0, 'Una acción deshabilitada creó cuentas huérfanas.')
 
     # Import page returns validation errors in the integrated Negocios > Importación tab.
@@ -697,18 +697,47 @@ try:
     status, _, _ = request('/admin/suscripciones.php', {'csrf': csrf, 'action': 'review_payment', 'evidence_id': rejected_evidence, 'decision': 'rejected', 'admin_note': internal_note, 'customer_message': rejection_message}, ADMIN)
     status, body, _ = request('/business/dashboard.php?tab=business', opener=business_flow)
     check(status == 200 and 'Comprobante rechazado' in body and rejection_message in body and 'envía un nuevo soporte válido' in body and internal_note not in body, 'El portal no mostró el mensaje para el negocio o expuso la nota interna.')
-    status, body, _ = request('/admin/usuarios.php', {'csrf': csrf, 'action': 'set_status', 'account_id': account_row['id'], 'status': 'disabled'}, ADMIN)
-    check(status == 200 and 'La cuenta quedó deshabilitada' in body, f'La administración no pudo deshabilitar el acceso de una cuenta: HTTP {status}, {body[:300]}')
+    status, body, _ = request('/admin/usuarios.php', {'csrf': csrf, 'action': 'set_status', 'account_id': account_row['id'], 'status': 'disabled', 'reason': 'Suspensión sintética de prueba'}, ADMIN)
+    check(status == 200 and 'La cuenta quedó suspendida' in body, f'La administración no pudo deshabilitar el acceso de una cuenta: HTTP {status}, {body[:300]}')
     status, _, headers = request('/business/dashboard.php?tab=business', opener=business_flow)
     check(status == 303 and headers.get('Location', '').endswith('/negocios/acceso/'), f'Una cuenta deshabilitada conservó el acceso con una sesión abierta: HTTP {status}, destino {headers.get("Location", "")}')
-    status, body, _ = request('/business/login.php', opener=business_user)
+    status, body, _ = request('/business/login.php', opener=business_flow)
     disabled_login_csrf = __import__('re').search(r'name="csrf" value="([^"]+)"', body).group(1)
     status, body, _ = request('/business/login.php', {'csrf': disabled_login_csrf, 'email': 'responsable-http@example.invalid', 'password': 'NuevaClaveHTTP123'}, business_flow)
     check(status == 400 and 'Correo o contraseña incorrectos' in body, 'Una cuenta deshabilitada pudo iniciar sesión nuevamente.')
-    status, body, _ = request('/admin/usuarios.php', {'csrf': csrf, 'action': 'set_status', 'account_id': account_row['id'], 'status': 'active'}, ADMIN)
+    status, body, _ = request('/admin/usuarios.php', {'csrf': csrf, 'action': 'set_status', 'account_id': account_row['id'], 'status': 'active', 'reason': 'Fin de prueba'}, ADMIN)
     check(status == 200 and 'La cuenta quedó habilitada nuevamente' in body, 'La administración no pudo rehabilitar una cuenta deshabilitada.')
     status, _, _ = request('/business/login.php', {'csrf': disabled_login_csrf, 'email': 'responsable-http@example.invalid', 'password': 'NuevaClaveHTTP123'}, business_flow)
     check(status == 303, 'La cuenta rehabilitada no pudo iniciar sesión nuevamente.')
+
+    # Public lifecycle: close -> register again -> local email -> confirm -> same account.
+    lifecycle_id = account_row['id']
+    account_total = DB.execute('SELECT COUNT(*) FROM accounts').fetchone()[0]
+    membership_total = DB.execute('SELECT COUNT(*) FROM business_account_memberships').fetchone()[0]
+    status, body, _ = request('/business/dashboard.php?tab=personal', opener=business_flow)
+    lifecycle_csrf = re.search(r'name="csrf" value="([^"]+)"', body).group(1)
+    status, _, headers = request('/business/dashboard.php?tab=personal', {'csrf': lifecycle_csrf, 'action': 'close_account', 'current_password': 'NuevaClaveHTTP123', 'confirm_closure': '1'}, business_flow)
+    check(status == 303 and 'cuenta=cerrada' in headers.get('Location',''), 'El cierre público no terminó correctamente.')
+    check(DB.execute('SELECT status FROM accounts WHERE id=?',(lifecycle_id,)).fetchone()[0]=='disabled', 'El cierre no desactivó la cuenta.')
+    check(DB.execute('SELECT event_type FROM account_access_events WHERE account_id=? ORDER BY id DESC LIMIT 1',(lifecycle_id,)).fetchone()[0]=='closed', 'El cierre se confundió con una suspensión.')
+    status, body, _ = request('/business/register.php', opener=business_flow)
+    lifecycle_csrf = re.search(r'name="csrf" value="([^"]+)"', body).group(1)
+    status, _, headers = request('/business/register.php', {'csrf': lifecycle_csrf, 'account_type':'traveler', 'email':'responsable-http@example.invalid'}, business_flow)
+    check(status == 303 and 'solicitado=1' in headers.get('Location',''), 'Volver a registrarse no ofreció continuar por correo.')
+    messages = json.loads((WORK/'private/mailbox.json').read_text())
+    message = [m for m in messages if m.get('kind')=='reactivation'][-1]
+    link = urllib.parse.urlparse(message['url'])
+    status, body, _ = request('/business/password.php?'+link.query, opener=business_flow)
+    check(status == 200 and 'Quiero reactivar mi cuenta' in body, 'El enlace no pide confirmar la reactivación.')
+    lifecycle_csrf = re.search(r'name="csrf" value="([^"]+)"', body).group(1)
+    token = urllib.parse.parse_qs(link.query)['token'][0]
+    status, body, _ = request('/business/password.php', {'csrf':lifecycle_csrf, 'reactivacion':'1','token':token,'confirm_reactivation':'1','password':'RegresoSeguroHTTP789','password_confirm':'RegresoSeguroHTTP789'}, business_flow)
+    check(status==200 and 'Cuenta reactivada' in body, 'No se reactivó la cuenta desde el enlace.')
+    check('Enlace vencido o no válido' in request('/business/password.php?'+link.query,opener=business_flow)[1], 'El enlace de reactivación se pudo reutilizar.')
+    check(DB.execute('SELECT COUNT(*) FROM accounts').fetchone()[0]==account_total and DB.execute('SELECT COUNT(*) FROM business_account_memberships').fetchone()[0]==membership_total, 'Reactivar duplicó la cuenta o modificó sus asociaciones.')
+    status, body, _ = request('/business/login.php',opener=business_flow)
+    lifecycle_csrf = re.search(r'name="csrf" value="([^"]+)"', body).group(1)
+    check(request('/business/login.php',{'csrf':lifecycle_csrf,'email':'responsable-http@example.invalid','password':'RegresoSeguroHTTP789'},business_flow)[0]==303,'La cuenta reactivada no permite iniciar sesión.')
 
     # Test graceful behavior against missing database migrations on a separate DB.
     broken_path = WORK / 'private/missing-schema.sqlite'

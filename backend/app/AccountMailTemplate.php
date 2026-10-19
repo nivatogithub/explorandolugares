@@ -3,7 +3,7 @@ declare(strict_types=1);
 /** Table-based transactional mail with inline styling and a plain text alternative. */
 final class AccountMailTemplate
 {
- public static function build(string $email,string $url,bool $verification,bool $example=false):array{
+ public static function build(string $email,string $url,bool $verification,bool $example=false,bool $reactivation=false):array{
   $escape=static fn(string $v)=>htmlspecialchars($v,ENT_QUOTES|ENT_SUBSTITUTE,'UTF-8');
   $type=$verification?'Verificación de correo':'Recuperación de contraseña';
   $title=$verification?'Confirma tu correo y empieza a explorar':'Recupera el acceso a tu cuenta';
@@ -11,6 +11,12 @@ final class AccountMailTemplate
   $button=$verification?'Verificar mi correo':'Crear nueva contraseña';
   $ignore=$verification?'Si no creaste esta cuenta, puedes ignorar este mensaje.':'Si no solicitaste este cambio, ignora este mensaje. Tu contraseña seguirá siendo la misma.';
   $subject=($example?'[Ejemplo] ':'').($verification?'Verifica tu cuenta de Explorando Lugares':'Recupera tu acceso a Explorando Lugares');
+  if($reactivation){
+   $type='Reactivación de cuenta';$title='Vuelve a Explorando Lugares';
+   $intro='Recibimos una solicitud para reactivar tu cuenta cerrada voluntariamente. Confirma que quieres volver y establece una contraseña nueva. Se conservarán tus datos asociados; no se renovarán suscripciones vencidas.';
+   $button='Reactivar mi cuenta';$ignore='Si no solicitaste volver, ignora este mensaje. Tu cuenta seguirá cerrada.';
+   $subject='Reactiva tu cuenta de Explorando Lugares';
+  }
   $notice=$example?'<tr><td style="padding:16px 32px;background:#ffe4ba;color:#172b42;font-size:13px;line-height:20px;text-align:center;"><strong>Ejemplo de diseño.</strong> Este mensaje y su botón no activan una cuenta ni cambian tu contraseña.</td></tr>':'';
   $html='<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'.$escape($type).'</title></head><body style="margin:0;padding:0;background:#fffaf2;color:#172b42;font-family:Arial,Helvetica,sans-serif;">'
   .'<div style="display:none;max-height:0;overflow:hidden;opacity:0;">'.$escape($type).' de tu cuenta de Explorando Lugares.</div>'
