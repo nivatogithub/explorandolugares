@@ -1,4 +1,4 @@
-# Portada · encargo contrastado, sin generar
+# Portada · encargo contrastado y generado
 
 19/10/2026. Rol: portada de Santa Fe de Antioquia y tarjeta exterior sincronizada. Revisión separada de atractivos.
 
@@ -12,4 +12,4 @@ Encargo para una futura composición **independiente**, sin enviar esa fotograf�
 
 La foto es fuente factual, no permiso de adaptación ni entrada autorizada al generador. No se redistribuye. El contraste local de la calle histórica del repositorio confirma casas blancas de un piso, aleros de teja, puertas de madera y pavimento de piedra, pero no sustituye la vista de catedral/plaza.
 
-Estado: **no generada**; el coordinador pidió cerrar la entrega antes de iniciar nuevas imágenes. Siguiente paso autorizado pendiente: generar una propuesta independiente, inspeccionar fidelidad, optimizar maestro/derivados y presentar para revisión humana. No aprobado para publicación.
+Estado actualizado: **portada generada como borrador**, junto con las doce imágenes de fichas. Véanse PROCEDENCIA_IMAGENES.json y REVISION_VISUAL.md. Ninguna aprobación humana ni publicación se infiere.

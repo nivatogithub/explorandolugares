@@ -1,4 +1,4 @@
-# Santa Fe de Antioquia · entrega editorial 1
+# Santa Fe de Antioquia · paquete completo de borrador
 
 Fecha: 19/10/2026. Worker Lugar 2. Rama `lugar/CO/antioquia/santa-fe-de-antioquia`, base `main` 8ff9dde.
 
@@ -6,9 +6,9 @@ Fecha: 19/10/2026. Worker Lugar 2. Rama `lugar/CO/antioquia/santa-fe-de-antioqui
 
 Borrador ES/EN/PT-BR con introducción directa, historia de un párrafo sin imagen, ocho atractivos y cuatro experiencias. Directorio de 30 fichas gratuitas documentadas: 16 hospedajes, ocho comercios de filigrana y seis transportes (ver conteo automático; no confundir listado con operación verificada). Todos quedan en borrador y sin canales inferidos. La guía municipal contiene establecimientos históricos: comprobar vigencia antes de publicación; no venderlos como afiliados ni activos verificados.
 
-`paquete-destino.borrador.json` cumple el validador real de manifiestos v2 de `backend/app/DestinationPackage.php`. **No es un ZIP importable todavía:** faltan los 13 archivos visuales; no se usaron rellenos, fotos antiguas ni aprobaciones heredadas. `directorio-preprod-30.json` es el paquete separado del importador de negocios vigente, no un campo improvisado del manifiesto v2. `paquete-negocios-30.zip` fue leído por BusinessPackage::readZip: 30 negocios y 0 imágenes, sin importar datos. Estados draft/pendiente se conservan en ESTADO_DIRECTORIO.json porque no son campos aceptados por ese importador.
+`paquete-destino.borrador.json` cumple el validador real de manifiestos v2 de `backend/app/DestinationPackage.php`. **ZIP destino completo e importable como borrador:** 13 imágenes seleccionadas y 12 fichas, validado por DestinationPackage::readZip. Se generaron 15 propuestas, descartando dos por errores de arquitectura. `directorio-preprod-30.json` es el paquete separado del importador de negocios vigente, no un campo improvisado del manifiesto v2. `paquete-negocios-30.zip` fue leído por BusinessPackage::readZip: 30 negocios y 0 imágenes, sin importar datos. Estados draft/pendiente se conservan en ESTADO_DIRECTORIO.json porque no son campos aceptados por ese importador.
 
-No se importó en MariaDB, no se modificó preprod ni se desplegó. No hay imágenes generadas o aprobadas. La revisión visual y la aprobación integral están pendientes.
+No se importó en MariaDB, no se modificó preprod ni se desplegó. Hay 13 imágenes seleccionadas y cero aprobadas. La hoja completa se inspeccionó editorialmente; faltan revisión humana y QA del render real en preproducción.
 
 ## Auditoría del contenido previo
 
@@ -22,14 +22,22 @@ El Puente de Occidente une Santa Fe de Antioquia y **Olaya**; su inclusión como
 
 ## Encargo visual siguiente
 
-Seguir `.agents/skills/imagenes-destinos/SKILL.md` y la guía archivada vigente, con tinta/gouache semirrealista. Propuesta de portada: calle del centro con escala baja, fachadas mayormente blancas, aleros de teja y puertas de madera; contexto propio de la ciudad cálida del Occidente antioqueño. Antes de generar cotejar una vista completa del tramo, perspectiva, pavimento y edificios; no dibujar una iglesia genérica ni insertar el puente en el casco urbano. Se contrastó posteriormente la fachada/plaza con fotografía institucional de la Arquidiócesis; ver ENCARGO_PORTADA.md. No se inició generación por cierre de esta entrega solicitado por coordinación.
+Seguir `.agents/skills/imagenes-destinos/SKILL.md` y la guía archivada vigente, con tinta/gouache semirrealista. Propuesta de portada: calle del centro con escala baja, fachadas mayormente blancas, aleros de teja y puertas de madera; contexto propio de la ciudad cálida del Occidente antioqueño. Antes de generar cotejar una vista completa del tramo, perspectiva, pavimento y edificios; no dibujar una iglesia genérica ni insertar el puente en el casco urbano. Se contrastó posteriormente la fachada/plaza con fotografía institucional de la Arquidiócesis; ver ENCARGO_PORTADA.md. La orden posterior de completar revocó ese cierre: portada y doce fichas ya generadas como borradores.
 
 Las fuentes factuales no son licencias fotográficas. No se descargaron nuevas fotos de referencia ni se usaron fotografías restringidas como entrada. Conservar diferencia entre composición independiente, revisión de fidelidad, aprobación de imagen y autorización final.
 
 ## Pruebas
 
-Ejecutar `python3 crecimiento-colombia/entregas/santa-fe-de-antioquia/validar.py`: exige traducciones, 8+4 componentes, 30 nombres únicos, fuentes y estado draft, roles visuales diferentes, y registra los faltantes. `VALIDACION.json` conserva hashes. Validador PHP de manifiesto también pasó; no se ensayó importación ZIP ni HTTP porque faltan medios.
+Ejecutar `python3 crecimiento-colombia/entregas/santa-fe-de-antioquia/validar.py`: exige traducciones, 8+4 componentes, 30 nombres únicos, fuentes y estado draft, roles visuales diferentes, y registra los faltantes. `VALIDACION.json` conserva hashes. El ZIP íntegro pasó el lector nativo PHP con 12 fichas y 13 imágenes. No se ensayó HTTP/preproducción desde esta rama.
 
 ## Integración futura
 
 UI vigente neutral y compacta; historia fullwidth sin imagen, sin subtítulos de sección ni acordeones, tarjetas de atractivos/experiencias iguales y Cargar más según filas. Directorio gratuito solo nombre/icono; no fotos ni descripciones. Integrar únicamente desde esta rama hacia preprod mediante el coordinador y conservar revisión humana. Nada de producción sin autorización explícita.
+
+## Archivos vigentes para coordinación
+
+- `paquete-destino-santa-fe-de-antioquia.zip` y `paquete-destino.json`: entrega visual íntegra; sustituye el manifiesto editorial inicial `.borrador.json` para importación.
+- `paquete-negocios-30.zip`: directorio separado de 30 negocios documentales, vigencia por comprobar.
+- `PROCEDENCIA_IMAGENES.json`: prompts, maestros/derivados, hashes y revisión pendiente. `GENERACIONES_DESCARTADAS.json`: errores conservados.
+- `CONTACTO_VISUAL.jpg` y `REVISION_VISUAL.md`: revisión conjunta y límites de escenas contextuales de museos/Jesús Nazareno. No presentarlas como fotografías o reconstrucciones exactas.
+- Maestros PNG fuera del ZIP público; no subirlos al hosting. Únicamente WebP del paquete y derivados necesarios.

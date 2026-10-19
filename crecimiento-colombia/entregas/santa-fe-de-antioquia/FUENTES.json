@@ -16,5 +16,33 @@
     "sha256": "33421968e3107e0c7f0df3c5024eaa2e4c0760e044862d3b7e64d8c5bbb957d3",
     "file_bytes": 8712580,
     "license": "No se redistribuye PDF ni fotografías; fuente factual, no entrada al generador"
-  }
+  },
+  "additional_visual_fact_sources": [
+    {
+      "url": "https://www.arquisantioquia.co/catedral-basilica-de-la-inmaculada-concepcion-de-santa-fe-de-antioquia/",
+      "checked_at": "2026-10-19",
+      "facts": [
+        "Fachada blanca neoclásica",
+        "Una torre a izquierda del observador",
+        "Costado nororiental de plaza"
+      ]
+    },
+    {
+      "url": "https://fundacionferrocarrildeantioquia.com/proyectos/museo-juan-del-corral/",
+      "checked_at": "2026-10-19",
+      "facts": [
+        "Casa sede adición siglo XIX",
+        "Patio delantero tipo antejardín",
+        "Carpinterías de madera"
+      ]
+    },
+    {
+      "url": "https://www.santafedeantioquia.com.co/turismo-religioso/",
+      "checked_at": "2026-10-19",
+      "facts": [
+        "Conjuntos patrimoniales religiosos",
+        "Museo religioso con patio de arcos de medio punto"
+      ]
+    }
+  ]
 }
