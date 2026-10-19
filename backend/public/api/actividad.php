@@ -16,9 +16,10 @@ try {
     // Read these signals only to discard requests. Never persist or hash them.
     if(($_SERVER['HTTP_DNT']??'')==='1'||($_SERVER['HTTP_SEC_GPC']??'')==='1'||preg_match('/bot|crawl|spider|preview|lighthouse|headless|slurp/',strtolower($_SERVER['HTTP_USER_AGENT']??'')))basic_output(['accepted'=>false]);
     $body=json_decode(file_get_contents('php://input'),true,8,JSON_THROW_ON_ERROR);
-    if(!is_array($body)||!is_string($body['path']??null)||array_diff(array_keys($body),['path','metric','business_id']))basic_output(['accepted'=>false],400);
+    if(!is_array($body)||!is_string($body['path']??null)||array_diff(array_keys($body),['path','metric','business_id','channel']))basic_output(['accepted'=>false],400);
     if(!$service->ready())basic_output(['enabled'=>false],503);
-    if(array_keys($body)===['path'])basic_output(['accepted'=>$service->countPage($body['path'])]);
+    if(array_keys($body)===['path']){$country=(new AnalyticsService(measurement_db($config),''))->country((string)($_SERVER['REMOTE_ADDR']??''));basic_output(['accepted'=>$service->countPage($body['path'],null,$country)]);}
+    if(($body['metric']??'')==='contact_click'){if(count($body)!==4||!is_string($body['business_id']??null)||!is_string($body['channel']??null))basic_output(['accepted'=>false],400);basic_output(['accepted'=>$service->countContact($body['path'],$body['business_id'],$body['channel'])]);}
     if(count($body)!==3||!is_string($body['metric']??null)||!is_string($body['business_id']??null))basic_output(['accepted'=>false],400);
     basic_output(['accepted'=>$service->countCard($body['path'],$body['business_id'],$body['metric'])]);
 }catch(JsonException|InvalidArgumentException){basic_output(['accepted'=>false],400);}catch(Throwable){basic_output(['enabled'=>false],503);}

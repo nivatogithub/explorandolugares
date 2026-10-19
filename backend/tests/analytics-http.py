@@ -7,12 +7,10 @@ def request(data=None,origin=base):
   with opener.open(req) as r:return r.status,json.load(r)
  except urllib.error.HTTPError as e:return e.code,json.load(e)
 jar=http.cookiejar.CookieJar();opener=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(jar))
-assert request()[1]['enabled']
+assert request()[1]['enabled'] is False
 event={'event':'page_view','event_id':secrets.token_hex(16),'path':'/','consent':True,'policy_version':'measurement-v1'}
 assert request(event,'https://untrusted.example')[0]==403 and not list(jar)
-assert request({**event,'consent':False})[0]==403 and not list(jar)
-assert request(event)[1]['accepted']
-assert set(c.name for c in jar)=={'el_stats_visitor','el_stats_session'}
-assert request(event)[1]['accepted'] is False
+assert request({**event,'consent':False})[1]['accepted'] is False and not list(jar)
+assert request(event)[1]['accepted'] is False and not list(jar)
 assert request({'action':'revoke'})[1]['revoked'] and not list(jar)
-print('HTTP: origin, consent, signed cookies, replay, withdrawal OK')
+print('HTTP: legacy measurement retired, no cookie issuance, origin validation and withdrawal OK')
