@@ -13,8 +13,8 @@
       ],
       "checked_at": "2026-10-19",
       "image_review": {
-        "status": "revised_pending_human_review",
-        "reason": "Observación del propietario: imágenes demasiado similares e idealizadas como playas vírgenes con palmeras. No aprobadas.",
+        "status": "rejected_pending_geolocated_visual_reference",
+        "reason": "Feedback del propietario: Primera Ensenada parece europea y construcciones demasiado pegadas; existencia del malecón no acredita apariencia de Segunda Ensenada. No regenerar desde descripción genérica.",
         "sector_visual_verification": "descripciones locales e imágenes públicas consultadas; sin fotografías subidas al generador",
         "required_checks": [
           "ancho y continuidad reales de arena, incluidos tramos casi sin playa",
@@ -41,8 +41,8 @@
       ],
       "checked_at": "2026-10-19",
       "image_review": {
-        "status": "revised_pending_human_review",
-        "reason": "Observación del propietario: imágenes demasiado similares e idealizadas como playas vírgenes con palmeras. No aprobadas.",
+        "status": "rejected_pending_geolocated_visual_reference",
+        "reason": "Feedback del propietario: Primera Ensenada parece europea y construcciones demasiado pegadas; existencia del malecón no acredita apariencia de Segunda Ensenada. No regenerar desde descripción genérica.",
         "sector_visual_verification": "descripciones locales e imágenes públicas consultadas; sin fotografías subidas al generador",
         "required_checks": [
           "ancho y continuidad reales de arena, incluidos tramos casi sin playa",
@@ -199,5 +199,5 @@
     }
   ],
   "human_approval": "pending",
-  "readiness": "beach_images_revised_pending_human_review"
+  "readiness": "blocked_pending_visual_identity_correction"
 }
