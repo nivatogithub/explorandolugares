@@ -86,6 +86,9 @@ for obsolete in ['logo.svg','logo-completo.svg','favicon.svg']:
 subprocess.run([sys.executable,str(root/'scripts/aplicar-identidad-neutral.py'),'--public',str(public)],check=True)
 subprocess.run([sys.executable,str(root/'scripts/preparar-encabezado.py'),'--public',str(public)],check=True)
 subprocess.run(['php',str(root/'scripts/aplicar-nomenclatura-lugares.php'),str(release)],check=True)
+for asset in ['portada-atracciones.js','portada-atracciones.css']:
+    shutil.copyfile(root/'backend/public/assets'/asset,public/'assets'/asset)
+subprocess.run([sys.executable,str(root/'scripts/ajustar-auditoria-publica.py'),'--public',str(public)],check=True)
 # Stamp all generated pages after the integration overlay, including general pages.
 subprocess.run([sys.executable,str(root/'scripts/versiones-medicion.py'),'--public',str(public)],check=True)
 subprocess.run([sys.executable,str(root/'scripts/generar-sitemap-entrega.py'),'--public',str(public)],check=True)
