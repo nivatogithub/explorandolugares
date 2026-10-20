@@ -27,7 +27,8 @@ try{
     }
     $measurement=$pdo?new AnalyticsService($pdo,(string)($config['app_key']??'')):null;
     if($measurement && $measurement->ready()){$plan=$measurement->planFromDatabase();$geography=$measurement->geographyFromDatabase();}
-    $result=(new CoverageService($plan,$geography))->snapshot($pdo);
+    $scope=json_decode(file_get_contents(dirname(__DIR__,2).'/app/content/coverage-scope.json'),true,512,JSON_THROW_ON_ERROR);
+    $result=(new CoverageService($plan,$geography,$scope))->snapshot($pdo);
     $days=($_GET['days']??'')==='all'?'all':(in_array((int)($_GET['days']??30),[7,30,90],true)?(int)($_GET['days']??30):30);
     $department=preg_match('/^[0-9]{2}$/D',(string)($_GET['department']??''))?$_GET['department']:null;
     $municipality=preg_match('/^[0-9]{5}$/D',(string)($_GET['municipality']??''))?$_GET['municipality']:null;

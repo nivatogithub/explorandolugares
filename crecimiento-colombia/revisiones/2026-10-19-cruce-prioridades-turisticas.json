@@ -1,0 +1,2192 @@
+{
+  "recorded_at": "2026-10-19",
+  "status": "research_and_recommendations_ready",
+  "scope": "Revisión privada de prioridades; no crea destinos ni modifica publicación, métricas o cola de producción.",
+  "findings": {
+    "internal_candidates": 78,
+    "internal_priority_groups": {
+      "1": 23,
+      "2": 37,
+      "3": 18
+    },
+    "matched_internal_municipal_units": 73,
+    "historical_corridor_units": 290,
+    "overlap": 72,
+    "corridor_units_missing_from_internal": 218,
+    "identity_pending": []
+  },
+  "interpretation": [
+    "Los 78 son candidatos internos, no el total turístico nacional.",
+    "Los 290 proceden de una transcripción depurada de corredores de 2017; los 302 publicados por MinCIT en 2021 son otra versión, no 12 incorporaciones identificadas.",
+    "La pertenencia al corredor acredita inclusión institucional histórica, no demanda actual ni prioridad 1.",
+    "El score interno mide preparación (reutilización, fuentes, editorial, derechos y operación), no popularidad. Conservarlo separado de prioridad turística.",
+    "Comparación por código municipal: destinos autónomos no se suman como nuevos municipios. Los registros sin correspondencia quedan pendientes."
+  ],
+  "decisions_and_proposals": [
+    {
+      "place": "Sonsón",
+      "current_priority": 2,
+      "recommended_priority": 2,
+      "action": "Conservar P2; no hay cambio de grupo.",
+      "reason": "El páramo y el patrimonio justifican inclusión, pero las fuentes consultadas no acreditan demanda comparativa para ascenderlo a P1.",
+      "sources": [
+        "https://sonson-antioquia.gov.co/NuestraAlcaldia/Saladeprensa/Paginas/10-razones-para-visitar-a-sonson.aspx"
+      ]
+    },
+    {
+      "place": "Abejorral",
+      "current_priority": null,
+      "recommended_priority": 2,
+      "action": "Proponer incorporación al inventario en P2. No incorporado al universo operativo en esta revisión.",
+      "reason": "Oferta diferenciada de patrimonio y aventura. El centro histórico tiene reconocimiento nacional; Casa en el Aire figura en el inventario departamental. No hay datos comparativos de demanda verificados.",
+      "sources": [
+        "https://normograma.mincultura.gov.co/mincultura/compilacion/docs/resolucion_mincultura_3078_2015.htm",
+        "https://antioquia.gov.co/images/pdf/anuario2014/es-CO/capitulos/turismo/atractivos/cp-16-2-1.html"
+      ]
+    },
+    {
+      "place": "Mesopotamia",
+      "parent_municipality": "La Unión, Antioquia",
+      "recommended_priority": 3,
+      "action": "Candidato P3 de investigación; no crear página independiente todavía.",
+      "reason": "Corregimiento identificado; falta demostrar un motivo de visita diferenciado y contenido suficiente para una página autónoma.",
+      "sources": [
+        "https://dssa.gov.co/images/2024/documentos/monitoreo_evaluacion_planes_territoriales/2020-2024/Oriente/La_Union.pdf"
+      ]
+    },
+    {
+      "place": "Salto del Buey",
+      "municipal_context": [
+        "La Ceja",
+        "Abejorral"
+      ],
+      "recommended_priority": null,
+      "action": "Evaluar como atractivo compartido, no municipio adicional; comprobar coordenadas y acceso antes de asignar una ficha.",
+      "reason": "La reserva se sitúa entre ambos municipios según su fuente propia. Puede ser la cascada recordada por el propietario, pero esa identificación no está confirmada.",
+      "sources": [
+        "https://www.saltodelbuey.com/"
+      ]
+    },
+    {
+      "place": "Casa en el Aire / hamacas",
+      "parent_municipality": "Abejorral",
+      "recommended_priority": null,
+      "action": "Registrar evidencia como atractivo/oferta privada; verificar oferta vigente antes de redactar experiencia.",
+      "reason": "No crear destino municipal adicional ni confundir operador investigado con anunciante o aliado. No se ha comprobado que las hamacas recordadas correspondan a esta oferta.",
+      "sources": [
+        "https://antioquia.gov.co/images/pdf/anuario2014/es-CO/capitulos/turismo/atractivos/cp-16-2-1.html"
+      ]
+    }
+  ],
+  "next_updates": [
+    "Revisar por departamento las ausencias del cruce antes de incorporar candidatos.",
+    "Conservar P1 existente; justificar cada ascenso/bajada con fuentes y comparación de oferta, reconocimiento, acceso y oportunidad editorial/comercial.",
+    "Registrar separadamente municipio, cabecera, atractivo, destino autónomo y operador.",
+    "No asignar porcentajes de popularidad ni volumen de turistas sin evidencia.",
+    "No iniciar destinos aplazados de cola-futura-destinos.json ni tocar trabajos de otros workers."
+  ],
+  "current_inventory_snapshot": [
+    {
+      "id": "CO-05-jerico",
+      "name": "Jericó",
+      "department": "Antioquia",
+      "department_code": "05",
+      "priority": 1,
+      "type": "municipality",
+      "score": 94.0,
+      "matched_code": "05368"
+    },
+    {
+      "id": "CO-05-jardin",
+      "name": "Jardín",
+      "department": "Antioquia",
+      "department_code": "05",
+      "priority": 1,
+      "type": "municipality",
+      "score": 85.0,
+      "matched_code": "05364"
+    },
+    {
+      "id": "CO-05-sonson",
+      "name": "Sonsón",
+      "department": "Antioquia",
+      "department_code": "05",
+      "priority": 2,
+      "type": "municipality",
+      "score": 56.0,
+      "matched_code": "05756"
+    },
+    {
+      "id": "CO-05-cauca-viejo",
+      "name": "Cauca Viejo",
+      "department": "Antioquia",
+      "department_code": "05",
+      "priority": 2,
+      "type": "autonomous_destination",
+      "score": 60.0
+    },
+    {
+      "id": "CO-05-guatape",
+      "name": "Guatapé",
+      "department": "Antioquia",
+      "department_code": "05",
+      "priority": 1,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "05321"
+    },
+    {
+      "id": "CO-05-santa-fe-de-antioquia",
+      "name": "Santa Fe de Antioquia",
+      "department": "Antioquia",
+      "department_code": "05",
+      "priority": 1,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "05042"
+    },
+    {
+      "id": "CO-05-medellin",
+      "name": "Medellín",
+      "department": "Antioquia",
+      "department_code": "05",
+      "priority": 1,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "05001"
+    },
+    {
+      "id": "CO-05-el-penol",
+      "name": "El Peñol",
+      "department": "Antioquia",
+      "department_code": "05",
+      "priority": 1,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "05541"
+    },
+    {
+      "id": "CO-05-tamesis",
+      "name": "Támesis",
+      "department": "Antioquia",
+      "department_code": "05",
+      "priority": 1,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "05789"
+    },
+    {
+      "id": "CO-05-san-jeronimo",
+      "name": "San Jerónimo",
+      "department": "Antioquia",
+      "department_code": "05",
+      "priority": 1,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "05656"
+    },
+    {
+      "id": "CO-05-sopetran",
+      "name": "Sopetrán",
+      "department": "Antioquia",
+      "department_code": "05",
+      "priority": 1,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "05761"
+    },
+    {
+      "id": "CO-05-san-rafael",
+      "name": "San Rafael",
+      "department": "Antioquia",
+      "department_code": "05",
+      "priority": 1,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "05667"
+    },
+    {
+      "id": "CO-05-cocorna",
+      "name": "Cocorná",
+      "department": "Antioquia",
+      "department_code": "05",
+      "priority": 1,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "05197"
+    },
+    {
+      "id": "CO-05-venecia",
+      "name": "Venecia",
+      "department": "Antioquia",
+      "department_code": "05",
+      "priority": 1,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "05861"
+    },
+    {
+      "id": "CO-05-el-retiro",
+      "name": "El Retiro",
+      "department": "Antioquia",
+      "department_code": "05",
+      "priority": 1,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "05607"
+    },
+    {
+      "id": "CO-05-san-carlos",
+      "name": "San Carlos",
+      "department": "Antioquia",
+      "department_code": "05",
+      "priority": 1,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "05649"
+    },
+    {
+      "id": "CO-05-el-carmen-de-viboral",
+      "name": "El Carmen de Viboral",
+      "department": "Antioquia",
+      "department_code": "05",
+      "priority": 1,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "05148"
+    },
+    {
+      "id": "CO-05-rionegro",
+      "name": "Rionegro",
+      "department": "Antioquia",
+      "department_code": "05",
+      "priority": 1,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "05615"
+    },
+    {
+      "id": "CO-05-necocli",
+      "name": "Necoclí",
+      "department": "Antioquia",
+      "department_code": "05",
+      "priority": 1,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "05490"
+    },
+    {
+      "id": "CO-05-arboletes",
+      "name": "Arboletes",
+      "department": "Antioquia",
+      "department_code": "05",
+      "priority": 1,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "05051"
+    },
+    {
+      "id": "CO-05-puerto-triunfo",
+      "name": "Puerto Triunfo",
+      "department": "Antioquia",
+      "department_code": "05",
+      "priority": 1,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "05591"
+    },
+    {
+      "id": "CO-05-san-pedro-de-los-milagros",
+      "name": "San Pedro de los Milagros",
+      "department": "Antioquia",
+      "department_code": "05",
+      "priority": 1,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "05664"
+    },
+    {
+      "id": "CO-05-santa-rosa-de-osos",
+      "name": "Santa Rosa de Osos",
+      "department": "Antioquia",
+      "department_code": "05",
+      "priority": 1,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "05686"
+    },
+    {
+      "id": "CO-08-barranquilla",
+      "name": "Barranquilla",
+      "department": "Atlántico",
+      "department_code": "08",
+      "priority": 2,
+      "type": "district",
+      "score": 60.0
+    },
+    {
+      "id": "CO-08-puerto-colombia",
+      "name": "Puerto Colombia",
+      "department": "Atlántico",
+      "department_code": "08",
+      "priority": 2,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "08573"
+    },
+    {
+      "id": "CO-11-bogota",
+      "name": "Bogotá",
+      "department": "Bogotá D.C.",
+      "department_code": "11",
+      "priority": 2,
+      "type": "district",
+      "score": 60.0
+    },
+    {
+      "id": "CO-13-cartagena",
+      "name": "Cartagena",
+      "department": "Bolívar",
+      "department_code": "13",
+      "priority": 1,
+      "type": "district",
+      "score": 85.0
+    },
+    {
+      "id": "CO-13-santa-cruz-de-mompox",
+      "name": "Santa Cruz de Mompox",
+      "department": "Bolívar",
+      "department_code": "13",
+      "priority": 2,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "13468"
+    },
+    {
+      "id": "CO-15-villa-de-leyva",
+      "name": "Villa de Leyva",
+      "department": "Boyacá",
+      "department_code": "15",
+      "priority": 2,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "15407"
+    },
+    {
+      "id": "CO-15-mongui",
+      "name": "Monguí",
+      "department": "Boyacá",
+      "department_code": "15",
+      "priority": 2,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "15466"
+    },
+    {
+      "id": "CO-17-manizales",
+      "name": "Manizales",
+      "department": "Caldas",
+      "department_code": "17",
+      "priority": 2,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "17001"
+    },
+    {
+      "id": "CO-17-salamina",
+      "name": "Salamina",
+      "department": "Caldas",
+      "department_code": "17",
+      "priority": 2,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "17653"
+    },
+    {
+      "id": "CO-18-florencia",
+      "name": "Florencia",
+      "department": "Caquetá",
+      "department_code": "18",
+      "priority": 3,
+      "type": "municipality",
+      "score": 35.0,
+      "matched_code": "18001"
+    },
+    {
+      "id": "CO-19-popayan",
+      "name": "Popayán",
+      "department": "Cauca",
+      "department_code": "19",
+      "priority": 2,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "19001"
+    },
+    {
+      "id": "CO-19-silvia",
+      "name": "Silvia",
+      "department": "Cauca",
+      "department_code": "19",
+      "priority": 2,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "19743"
+    },
+    {
+      "id": "CO-20-valledupar",
+      "name": "Valledupar",
+      "department": "Cesar",
+      "department_code": "20",
+      "priority": 3,
+      "type": "municipality",
+      "score": 35.0,
+      "matched_code": "20001"
+    },
+    {
+      "id": "CO-23-monteria",
+      "name": "Montería",
+      "department": "Córdoba",
+      "department_code": "23",
+      "priority": 3,
+      "type": "municipality",
+      "score": 35.0,
+      "matched_code": "23001"
+    },
+    {
+      "id": "CO-23-lorica",
+      "name": "Lorica",
+      "department": "Córdoba",
+      "department_code": "23",
+      "priority": 3,
+      "type": "municipality",
+      "score": 35.0,
+      "matched_code": "23417"
+    },
+    {
+      "id": "CO-25-zipaquira",
+      "name": "Zipaquirá",
+      "department": "Cundinamarca",
+      "department_code": "25",
+      "priority": 2,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "25899"
+    },
+    {
+      "id": "CO-25-guatavita",
+      "name": "Guatavita",
+      "department": "Cundinamarca",
+      "department_code": "25",
+      "priority": 2,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "25326"
+    },
+    {
+      "id": "CO-27-nuqui",
+      "name": "Nuquí",
+      "department": "Chocó",
+      "department_code": "27",
+      "priority": 3,
+      "type": "municipality",
+      "score": 35.0,
+      "matched_code": "27495"
+    },
+    {
+      "id": "CO-27-bahia-solano",
+      "name": "Bahía Solano",
+      "department": "Chocó",
+      "department_code": "27",
+      "priority": 3,
+      "type": "municipality",
+      "score": 35.0,
+      "matched_code": "27075"
+    },
+    {
+      "id": "CO-41-san-agustin",
+      "name": "San Agustín",
+      "department": "Huila",
+      "department_code": "41",
+      "priority": 2,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "41668"
+    },
+    {
+      "id": "CO-41-neiva",
+      "name": "Neiva",
+      "department": "Huila",
+      "department_code": "41",
+      "priority": 2,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "41001"
+    },
+    {
+      "id": "CO-44-riohacha",
+      "name": "Riohacha",
+      "department": "La Guajira",
+      "department_code": "44",
+      "priority": 2,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "44001"
+    },
+    {
+      "id": "CO-44-uribia",
+      "name": "Uribia",
+      "department": "La Guajira",
+      "department_code": "44",
+      "priority": 2,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "44847"
+    },
+    {
+      "id": "CO-47-santa-marta",
+      "name": "Santa Marta",
+      "department": "Magdalena",
+      "department_code": "47",
+      "priority": 2,
+      "type": "district",
+      "score": 60.0
+    },
+    {
+      "id": "CO-50-villavicencio",
+      "name": "Villavicencio",
+      "department": "Meta",
+      "department_code": "50",
+      "priority": 2,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "50001"
+    },
+    {
+      "id": "CO-50-la-macarena",
+      "name": "La Macarena",
+      "department": "Meta",
+      "department_code": "50",
+      "priority": 2,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "50350"
+    },
+    {
+      "id": "CO-52-pasto",
+      "name": "Pasto",
+      "department": "Nariño",
+      "department_code": "52",
+      "priority": 2,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "52001"
+    },
+    {
+      "id": "CO-52-ipiales",
+      "name": "Ipiales",
+      "department": "Nariño",
+      "department_code": "52",
+      "priority": 2,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "52356"
+    },
+    {
+      "id": "CO-54-cucuta",
+      "name": "Cúcuta",
+      "department": "Norte de Santander",
+      "department_code": "54",
+      "priority": 3,
+      "type": "municipality",
+      "score": 35.0,
+      "matched_code": "54001"
+    },
+    {
+      "id": "CO-54-pamplona",
+      "name": "Pamplona",
+      "department": "Norte de Santander",
+      "department_code": "54",
+      "priority": 3,
+      "type": "municipality",
+      "score": 35.0,
+      "matched_code": "54518"
+    },
+    {
+      "id": "CO-63-salento",
+      "name": "Salento",
+      "department": "Quindío",
+      "department_code": "63",
+      "priority": 1,
+      "type": "municipality",
+      "score": 85.0,
+      "matched_code": "63690"
+    },
+    {
+      "id": "CO-63-filandia",
+      "name": "Filandia",
+      "department": "Quindío",
+      "department_code": "63",
+      "priority": 2,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "63272"
+    },
+    {
+      "id": "CO-63-armenia",
+      "name": "Armenia",
+      "department": "Quindío",
+      "department_code": "63",
+      "priority": 2,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "63001"
+    },
+    {
+      "id": "CO-66-pereira",
+      "name": "Pereira",
+      "department": "Risaralda",
+      "department_code": "66",
+      "priority": 2,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "66001"
+    },
+    {
+      "id": "CO-66-santa-rosa-de-cabal",
+      "name": "Santa Rosa de Cabal",
+      "department": "Risaralda",
+      "department_code": "66",
+      "priority": 2,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "66682"
+    },
+    {
+      "id": "CO-68-barichara",
+      "name": "Barichara",
+      "department": "Santander",
+      "department_code": "68",
+      "priority": 2,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "68079"
+    },
+    {
+      "id": "CO-68-san-gil",
+      "name": "San Gil",
+      "department": "Santander",
+      "department_code": "68",
+      "priority": 2,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "68679"
+    },
+    {
+      "id": "CO-70-sincelejo",
+      "name": "Sincelejo",
+      "department": "Sucre",
+      "department_code": "70",
+      "priority": 3,
+      "type": "municipality",
+      "score": 35.0,
+      "matched_code": "70001"
+    },
+    {
+      "id": "CO-70-santiago-de-tolu",
+      "name": "Santiago de Tolú",
+      "department": "Sucre",
+      "department_code": "70",
+      "priority": 3,
+      "type": "municipality",
+      "score": 35.0,
+      "matched_code": "70820"
+    },
+    {
+      "id": "CO-73-ibague",
+      "name": "Ibagué",
+      "department": "Tolima",
+      "department_code": "73",
+      "priority": 2,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "73001"
+    },
+    {
+      "id": "CO-73-honda",
+      "name": "Honda",
+      "department": "Tolima",
+      "department_code": "73",
+      "priority": 2,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "73349"
+    },
+    {
+      "id": "CO-76-cali",
+      "name": "Cali",
+      "department": "Valle del Cauca",
+      "department_code": "76",
+      "priority": 2,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "76001"
+    },
+    {
+      "id": "CO-76-guadalajara-de-buga",
+      "name": "Guadalajara de Buga",
+      "department": "Valle del Cauca",
+      "department_code": "76",
+      "priority": 2,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "76111"
+    },
+    {
+      "id": "CO-81-arauca",
+      "name": "Arauca",
+      "department": "Arauca",
+      "department_code": "81",
+      "priority": 3,
+      "type": "municipality",
+      "score": 35.0,
+      "matched_code": "81001"
+    },
+    {
+      "id": "CO-85-yopal",
+      "name": "Yopal",
+      "department": "Casanare",
+      "department_code": "85",
+      "priority": 3,
+      "type": "municipality",
+      "score": 35.0,
+      "matched_code": "85001"
+    },
+    {
+      "id": "CO-86-mocoa",
+      "name": "Mocoa",
+      "department": "Putumayo",
+      "department_code": "86",
+      "priority": 3,
+      "type": "municipality",
+      "score": 35.0,
+      "matched_code": "86001"
+    },
+    {
+      "id": "CO-86-sibundoy",
+      "name": "Sibundoy",
+      "department": "Putumayo",
+      "department_code": "86",
+      "priority": 3,
+      "type": "municipality",
+      "score": 35.0,
+      "matched_code": "86749"
+    },
+    {
+      "id": "CO-88-san-andres",
+      "name": "San Andrés",
+      "department": "San Andrés, Providencia y Santa Catalina",
+      "department_code": "88",
+      "priority": 2,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "88001"
+    },
+    {
+      "id": "CO-88-providencia",
+      "name": "Providencia",
+      "department": "San Andrés, Providencia y Santa Catalina",
+      "department_code": "88",
+      "priority": 2,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "88564"
+    },
+    {
+      "id": "CO-91-leticia",
+      "name": "Leticia",
+      "department": "Amazonas",
+      "department_code": "91",
+      "priority": 2,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "91001"
+    },
+    {
+      "id": "CO-91-puerto-narino",
+      "name": "Puerto Nariño",
+      "department": "Amazonas",
+      "department_code": "91",
+      "priority": 2,
+      "type": "municipality",
+      "score": 60.0,
+      "matched_code": "91540"
+    },
+    {
+      "id": "CO-94-inirida",
+      "name": "Inírida",
+      "department": "Guainía",
+      "department_code": "94",
+      "priority": 3,
+      "type": "municipality",
+      "score": 35.0,
+      "matched_code": "94001"
+    },
+    {
+      "id": "CO-95-san-jose-del-guaviare",
+      "name": "San José del Guaviare",
+      "department": "Guaviare",
+      "department_code": "95",
+      "priority": 3,
+      "type": "municipality",
+      "score": 35.0,
+      "matched_code": "95001"
+    },
+    {
+      "id": "CO-97-mitu",
+      "name": "Mitú",
+      "department": "Vaupés",
+      "department_code": "97",
+      "priority": 3,
+      "type": "municipality",
+      "score": 35.0,
+      "matched_code": "97001"
+    },
+    {
+      "id": "CO-99-puerto-carreno",
+      "name": "Puerto Carreño",
+      "department": "Vichada",
+      "department_code": "99",
+      "priority": 3,
+      "type": "municipality",
+      "score": 35.0,
+      "matched_code": "99001"
+    }
+  ],
+  "historical_candidates_to_review": [
+    {
+      "code": "05038",
+      "department_code": "05",
+      "name": "ANGOSTURA",
+      "department": "Antioquia"
+    },
+    {
+      "code": "05660",
+      "department_code": "05",
+      "name": "SAN LUIS",
+      "department": "Antioquia"
+    },
+    {
+      "code": "05440",
+      "department_code": "05",
+      "name": "MARINILLA",
+      "department": "Antioquia"
+    },
+    {
+      "code": "05376",
+      "department_code": "05",
+      "name": "LA CEJA",
+      "department": "Antioquia"
+    },
+    {
+      "code": "05266",
+      "department_code": "05",
+      "name": "ENVIGADO",
+      "department": "Antioquia"
+    },
+    {
+      "code": "05282",
+      "department_code": "05",
+      "name": "FREDONIA",
+      "department": "Antioquia"
+    },
+    {
+      "code": "05501",
+      "department_code": "05",
+      "name": "OLAYA",
+      "department": "Antioquia"
+    },
+    {
+      "code": "05172",
+      "department_code": "05",
+      "name": "CHIGORODÓ",
+      "department": "Antioquia"
+    },
+    {
+      "code": "05045",
+      "department_code": "05",
+      "name": "APARTADÓ",
+      "department": "Antioquia"
+    },
+    {
+      "code": "05837",
+      "department_code": "05",
+      "name": "TURBO",
+      "department": "Antioquia"
+    },
+    {
+      "code": "08296",
+      "department_code": "08",
+      "name": "GALAPA",
+      "department": "Atlántico"
+    },
+    {
+      "code": "08078",
+      "department_code": "08",
+      "name": "BARANOA",
+      "department": "Atlántico"
+    },
+    {
+      "code": "08549",
+      "department_code": "08",
+      "name": "PIOJÓ",
+      "department": "Atlántico"
+    },
+    {
+      "code": "08372",
+      "department_code": "08",
+      "name": "JUAN DE ACOSTA",
+      "department": "Atlántico"
+    },
+    {
+      "code": "08832",
+      "department_code": "08",
+      "name": "TUBARÁ",
+      "department": "Atlántico"
+    },
+    {
+      "code": "08849",
+      "department_code": "08",
+      "name": "USIACURÍ",
+      "department": "Atlántico"
+    },
+    {
+      "code": "08001",
+      "department_code": "08",
+      "name": "BARRANQUILLA",
+      "department": "Atlántico"
+    },
+    {
+      "code": "11001",
+      "department_code": "11",
+      "name": "BOGOTÁ, D.C.",
+      "department": "Bogotá, D.C."
+    },
+    {
+      "code": "13836",
+      "department_code": "13",
+      "name": "TURBACO",
+      "department": "Bolívar"
+    },
+    {
+      "code": "13673",
+      "department_code": "13",
+      "name": "SANTA CATALINA",
+      "department": "Bolívar"
+    },
+    {
+      "code": "13001",
+      "department_code": "13",
+      "name": "CARTAGENA DE INDIAS",
+      "department": "Bolívar"
+    },
+    {
+      "code": "13430",
+      "department_code": "13",
+      "name": "MAGANGUÉ",
+      "department": "Bolívar"
+    },
+    {
+      "code": "15322",
+      "department_code": "15",
+      "name": "GUATEQUE",
+      "department": "Boyacá"
+    },
+    {
+      "code": "15299",
+      "department_code": "15",
+      "name": "GARAGOA",
+      "department": "Boyacá"
+    },
+    {
+      "code": "15798",
+      "department_code": "15",
+      "name": "TENZA",
+      "department": "Boyacá"
+    },
+    {
+      "code": "15455",
+      "department_code": "15",
+      "name": "MIRAFLORES",
+      "department": "Boyacá"
+    },
+    {
+      "code": "15599",
+      "department_code": "15",
+      "name": "RAMIRIQUÍ",
+      "department": "Boyacá"
+    },
+    {
+      "code": "15176",
+      "department_code": "15",
+      "name": "CHIQUINQUIRÁ",
+      "department": "Boyacá"
+    },
+    {
+      "code": "15600",
+      "department_code": "15",
+      "name": "RÁQUIRA",
+      "department": "Boyacá"
+    },
+    {
+      "code": "15835",
+      "department_code": "15",
+      "name": "TURMEQUÉ",
+      "department": "Boyacá"
+    },
+    {
+      "code": "15001",
+      "department_code": "15",
+      "name": "TUNJA",
+      "department": "Boyacá"
+    },
+    {
+      "code": "15516",
+      "department_code": "15",
+      "name": "PAIPA",
+      "department": "Boyacá"
+    },
+    {
+      "code": "15238",
+      "department_code": "15",
+      "name": "DUITAMA",
+      "department": "Boyacá"
+    },
+    {
+      "code": "15806",
+      "department_code": "15",
+      "name": "TIBASOSA",
+      "department": "Boyacá"
+    },
+    {
+      "code": "15822",
+      "department_code": "15",
+      "name": "TOTA",
+      "department": "Boyacá"
+    },
+    {
+      "code": "15362",
+      "department_code": "15",
+      "name": "IZA",
+      "department": "Boyacá"
+    },
+    {
+      "code": "15759",
+      "department_code": "15",
+      "name": "SOGAMOSO",
+      "department": "Boyacá"
+    },
+    {
+      "code": "15491",
+      "department_code": "15",
+      "name": "NOBSA",
+      "department": "Boyacá"
+    },
+    {
+      "code": "15753",
+      "department_code": "15",
+      "name": "SOATÁ",
+      "department": "Boyacá"
+    },
+    {
+      "code": "15244",
+      "department_code": "15",
+      "name": "EL COCUY",
+      "department": "Boyacá"
+    },
+    {
+      "code": "17380",
+      "department_code": "17",
+      "name": "LA DORADA",
+      "department": "Caldas"
+    },
+    {
+      "code": "17013",
+      "department_code": "17",
+      "name": "AGUADAS",
+      "department": "Caldas"
+    },
+    {
+      "code": "17873",
+      "department_code": "17",
+      "name": "VILLAMARÍA",
+      "department": "Caldas"
+    },
+    {
+      "code": "17174",
+      "department_code": "17",
+      "name": "CHINCHINÁ",
+      "department": "Caldas"
+    },
+    {
+      "code": "17088",
+      "department_code": "17",
+      "name": "BELALCÁZAR",
+      "department": "Caldas"
+    },
+    {
+      "code": "18247",
+      "department_code": "18",
+      "name": "EL DONCELLO",
+      "department": "Caquetá"
+    },
+    {
+      "code": "18592",
+      "department_code": "18",
+      "name": "PUERTO RICO",
+      "department": "Caquetá"
+    },
+    {
+      "code": "18753",
+      "department_code": "18",
+      "name": "SAN VICENTE DEL CAGUÁN",
+      "department": "Caquetá"
+    },
+    {
+      "code": "18479",
+      "department_code": "18",
+      "name": "MORELIA",
+      "department": "Caquetá"
+    },
+    {
+      "code": "18029",
+      "department_code": "18",
+      "name": "ALBANIA",
+      "department": "Caquetá"
+    },
+    {
+      "code": "19318",
+      "department_code": "19",
+      "name": "GUAPI",
+      "department": "Cauca"
+    },
+    {
+      "code": "19698",
+      "department_code": "19",
+      "name": "SANTANDER DE QUILICHAO",
+      "department": "Cauca"
+    },
+    {
+      "code": "19548",
+      "department_code": "19",
+      "name": "PIENDAMÓ - TUNÍA",
+      "department": "Cauca"
+    },
+    {
+      "code": "19130",
+      "department_code": "19",
+      "name": "CAJIBÍO",
+      "department": "Cauca"
+    },
+    {
+      "code": "19355",
+      "department_code": "19",
+      "name": "INZÁ",
+      "department": "Cauca"
+    },
+    {
+      "code": "19585",
+      "department_code": "19",
+      "name": "PURACÉ",
+      "department": "Cauca"
+    },
+    {
+      "code": "19807",
+      "department_code": "19",
+      "name": "TIMBÍO",
+      "department": "Cauca"
+    },
+    {
+      "code": "19532",
+      "department_code": "19",
+      "name": "PATÍA",
+      "department": "Cauca"
+    },
+    {
+      "code": "19075",
+      "department_code": "19",
+      "name": "BALBOA",
+      "department": "Cauca"
+    },
+    {
+      "code": "20570",
+      "department_code": "20",
+      "name": "PUEBLO BELLO",
+      "department": "Cesar"
+    },
+    {
+      "code": "20443",
+      "department_code": "20",
+      "name": "MANAURE BALCÓN DEL CESAR",
+      "department": "Cesar"
+    },
+    {
+      "code": "20175",
+      "department_code": "20",
+      "name": "CHIMICHAGUA",
+      "department": "Cesar"
+    },
+    {
+      "code": "23419",
+      "department_code": "23",
+      "name": "LOS CÓRDOBAS",
+      "department": "Córdoba"
+    },
+    {
+      "code": "23574",
+      "department_code": "23",
+      "name": "PUERTO ESCONDIDO",
+      "department": "Córdoba"
+    },
+    {
+      "code": "23500",
+      "department_code": "23",
+      "name": "MOÑITOS",
+      "department": "Córdoba"
+    },
+    {
+      "code": "23675",
+      "department_code": "23",
+      "name": "SAN BERNARDO DEL VIENTO",
+      "department": "Córdoba"
+    },
+    {
+      "code": "23686",
+      "department_code": "23",
+      "name": "SAN PELAYO",
+      "department": "Córdoba"
+    },
+    {
+      "code": "23672",
+      "department_code": "23",
+      "name": "SAN ANTERO",
+      "department": "Córdoba"
+    },
+    {
+      "code": "25612",
+      "department_code": "25",
+      "name": "RICAURTE",
+      "department": "Cundinamarca"
+    },
+    {
+      "code": "25488",
+      "department_code": "25",
+      "name": "NILO",
+      "department": "Cundinamarca"
+    },
+    {
+      "code": "25307",
+      "department_code": "25",
+      "name": "GIRARDOT",
+      "department": "Cundinamarca"
+    },
+    {
+      "code": "25572",
+      "department_code": "25",
+      "name": "PUERTO SALGAR",
+      "department": "Cundinamarca"
+    },
+    {
+      "code": "25320",
+      "department_code": "25",
+      "name": "GUADUAS",
+      "department": "Cundinamarca"
+    },
+    {
+      "code": "25851",
+      "department_code": "25",
+      "name": "ÚTICA",
+      "department": "Cundinamarca"
+    },
+    {
+      "code": "25875",
+      "department_code": "25",
+      "name": "VILLETA",
+      "department": "Cundinamarca"
+    },
+    {
+      "code": "25489",
+      "department_code": "25",
+      "name": "NIMAIMA",
+      "department": "Cundinamarca"
+    },
+    {
+      "code": "25491",
+      "department_code": "25",
+      "name": "NOCAIMA",
+      "department": "Cundinamarca"
+    },
+    {
+      "code": "25290",
+      "department_code": "25",
+      "name": "FUSAGASUGÁ",
+      "department": "Cundinamarca"
+    },
+    {
+      "code": "25245",
+      "department_code": "25",
+      "name": "EL COLEGIO",
+      "department": "Cundinamarca"
+    },
+    {
+      "code": "25645",
+      "department_code": "25",
+      "name": "SAN ANTONIO DEL TEQUENDAMA",
+      "department": "Cundinamarca"
+    },
+    {
+      "code": "25099",
+      "department_code": "25",
+      "name": "BOJACÁ",
+      "department": "Cundinamarca"
+    },
+    {
+      "code": "25181",
+      "department_code": "25",
+      "name": "CHOACHÍ",
+      "department": "Cundinamarca"
+    },
+    {
+      "code": "25377",
+      "department_code": "25",
+      "name": "LA CALERA",
+      "department": "Cundinamarca"
+    },
+    {
+      "code": "25736",
+      "department_code": "25",
+      "name": "SESQUILÉ",
+      "department": "Cundinamarca"
+    },
+    {
+      "code": "25758",
+      "department_code": "25",
+      "name": "SOPÓ",
+      "department": "Cundinamarca"
+    },
+    {
+      "code": "25486",
+      "department_code": "25",
+      "name": "NEMOCÓN",
+      "department": "Cundinamarca"
+    },
+    {
+      "code": "25843",
+      "department_code": "25",
+      "name": "VILLA DE SAN DIEGO DE UBATÉ",
+      "department": "Cundinamarca"
+    },
+    {
+      "code": "27001",
+      "department_code": "27",
+      "name": "QUIBDÓ",
+      "department": "Chocó"
+    },
+    {
+      "code": "27372",
+      "department_code": "27",
+      "name": "JURADÓ",
+      "department": "Chocó"
+    },
+    {
+      "code": "27077",
+      "department_code": "27",
+      "name": "BAJO BAUDÓ",
+      "department": "Chocó"
+    },
+    {
+      "code": "27361",
+      "department_code": "27",
+      "name": "ISTMINA",
+      "department": "Chocó"
+    },
+    {
+      "code": "27450",
+      "department_code": "27",
+      "name": "MEDIO SAN JUAN",
+      "department": "Chocó"
+    },
+    {
+      "code": "27245",
+      "department_code": "27",
+      "name": "EL CARMEN DE ATRATO",
+      "department": "Chocó"
+    },
+    {
+      "code": "27800",
+      "department_code": "27",
+      "name": "UNGUÍA",
+      "department": "Chocó"
+    },
+    {
+      "code": "27006",
+      "department_code": "27",
+      "name": "ACANDÍ",
+      "department": "Chocó"
+    },
+    {
+      "code": "41359",
+      "department_code": "41",
+      "name": "ISNOS",
+      "department": "Huila"
+    },
+    {
+      "code": "41551",
+      "department_code": "41",
+      "name": "PITALITO",
+      "department": "Huila"
+    },
+    {
+      "code": "41006",
+      "department_code": "41",
+      "name": "ACEVEDO",
+      "department": "Huila"
+    },
+    {
+      "code": "41026",
+      "department_code": "41",
+      "name": "ALTAMIRA",
+      "department": "Huila"
+    },
+    {
+      "code": "41298",
+      "department_code": "41",
+      "name": "GARZÓN",
+      "department": "Huila"
+    },
+    {
+      "code": "41306",
+      "department_code": "41",
+      "name": "GIGANTE",
+      "department": "Huila"
+    },
+    {
+      "code": "41518",
+      "department_code": "41",
+      "name": "PAICOL",
+      "department": "Huila"
+    },
+    {
+      "code": "41885",
+      "department_code": "41",
+      "name": "YAGUARÁ",
+      "department": "Huila"
+    },
+    {
+      "code": "41615",
+      "department_code": "41",
+      "name": "RIVERA",
+      "department": "Huila"
+    },
+    {
+      "code": "41016",
+      "department_code": "41",
+      "name": "AIPE",
+      "department": "Huila"
+    },
+    {
+      "code": "41872",
+      "department_code": "41",
+      "name": "VILLAVIEJA",
+      "department": "Huila"
+    },
+    {
+      "code": "44650",
+      "department_code": "44",
+      "name": "SAN JUAN DEL CESAR",
+      "department": "La Guajira"
+    },
+    {
+      "code": "44560",
+      "department_code": "44",
+      "name": "MANAURE",
+      "department": "La Guajira"
+    },
+    {
+      "code": "44090",
+      "department_code": "44",
+      "name": "DIBULLA",
+      "department": "La Guajira"
+    },
+    {
+      "code": "47001",
+      "department_code": "47",
+      "name": "SANTA MARTA",
+      "department": "Magdalena"
+    },
+    {
+      "code": "47189",
+      "department_code": "47",
+      "name": "CIÉNAGA",
+      "department": "Magdalena"
+    },
+    {
+      "code": "47053",
+      "department_code": "47",
+      "name": "ARACATACA",
+      "department": "Magdalena"
+    },
+    {
+      "code": "47745",
+      "department_code": "47",
+      "name": "SITIONUEVO",
+      "department": "Magdalena"
+    },
+    {
+      "code": "47245",
+      "department_code": "47",
+      "name": "EL BANCO",
+      "department": "Magdalena"
+    },
+    {
+      "code": "47692",
+      "department_code": "47",
+      "name": "SAN SEBASTIÁN DE BUENAVISTA",
+      "department": "Magdalena"
+    },
+    {
+      "code": "47570",
+      "department_code": "47",
+      "name": "PUEBLOVIEJO",
+      "department": "Magdalena"
+    },
+    {
+      "code": "47980",
+      "department_code": "47",
+      "name": "ZONA BANANERA",
+      "department": "Magdalena"
+    },
+    {
+      "code": "47268",
+      "department_code": "47",
+      "name": "EL RETÉN",
+      "department": "Magdalena"
+    },
+    {
+      "code": "50683",
+      "department_code": "50",
+      "name": "SAN JUAN DE ARAMA",
+      "department": "Meta"
+    },
+    {
+      "code": "50313",
+      "department_code": "50",
+      "name": "GRANADA",
+      "department": "Meta"
+    },
+    {
+      "code": "50223",
+      "department_code": "50",
+      "name": "CUBARRAL",
+      "department": "Meta"
+    },
+    {
+      "code": "50318",
+      "department_code": "50",
+      "name": "GUAMAL",
+      "department": "Meta"
+    },
+    {
+      "code": "50573",
+      "department_code": "50",
+      "name": "PUERTO LÓPEZ",
+      "department": "Meta"
+    },
+    {
+      "code": "50568",
+      "department_code": "50",
+      "name": "PUERTO GAITÁN",
+      "department": "Meta"
+    },
+    {
+      "code": "50606",
+      "department_code": "50",
+      "name": "RESTREPO",
+      "department": "Meta"
+    },
+    {
+      "code": "52835",
+      "department_code": "52",
+      "name": "SAN ANDRÉS DE TUMACO",
+      "department": "Nariño"
+    },
+    {
+      "code": "52227",
+      "department_code": "52",
+      "name": "CUMBAL",
+      "department": "Nariño"
+    },
+    {
+      "code": "52838",
+      "department_code": "52",
+      "name": "TÚQUERRES",
+      "department": "Nariño"
+    },
+    {
+      "code": "52354",
+      "department_code": "52",
+      "name": "IMUÉS",
+      "department": "Nariño"
+    },
+    {
+      "code": "52683",
+      "department_code": "52",
+      "name": "SANDONÁ",
+      "department": "Nariño"
+    },
+    {
+      "code": "52110",
+      "department_code": "52",
+      "name": "BUESACO",
+      "department": "Nariño"
+    },
+    {
+      "code": "52240",
+      "department_code": "52",
+      "name": "CHACHAGÜÍ",
+      "department": "Nariño"
+    },
+    {
+      "code": "52051",
+      "department_code": "52",
+      "name": "ARBOLEDA",
+      "department": "Nariño"
+    },
+    {
+      "code": "52378",
+      "department_code": "52",
+      "name": "LA CRUZ",
+      "department": "Nariño"
+    },
+    {
+      "code": "52693",
+      "department_code": "52",
+      "name": "SAN PABLO",
+      "department": "Nariño"
+    },
+    {
+      "code": "52399",
+      "department_code": "52",
+      "name": "LA UNIÓN",
+      "department": "Nariño"
+    },
+    {
+      "code": "54498",
+      "department_code": "54",
+      "name": "OCAÑA",
+      "department": "Norte De Santander"
+    },
+    {
+      "code": "54398",
+      "department_code": "54",
+      "name": "LA PLAYA",
+      "department": "Norte De Santander"
+    },
+    {
+      "code": "54003",
+      "department_code": "54",
+      "name": "ÁBREGO",
+      "department": "Norte De Santander"
+    },
+    {
+      "code": "54261",
+      "department_code": "54",
+      "name": "EL ZULIA",
+      "department": "Norte De Santander"
+    },
+    {
+      "code": "54673",
+      "department_code": "54",
+      "name": "SAN CAYETANO",
+      "department": "Norte De Santander"
+    },
+    {
+      "code": "54660",
+      "department_code": "54",
+      "name": "SALAZAR",
+      "department": "Norte De Santander"
+    },
+    {
+      "code": "54239",
+      "department_code": "54",
+      "name": "DURANIA",
+      "department": "Norte De Santander"
+    },
+    {
+      "code": "54874",
+      "department_code": "54",
+      "name": "VILLA DEL ROSARIO",
+      "department": "Norte De Santander"
+    },
+    {
+      "code": "54099",
+      "department_code": "54",
+      "name": "BOCHALEMA",
+      "department": "Norte De Santander"
+    },
+    {
+      "code": "54743",
+      "department_code": "54",
+      "name": "SILOS",
+      "department": "Norte De Santander"
+    },
+    {
+      "code": "54174",
+      "department_code": "54",
+      "name": "CHITAGÁ",
+      "department": "Norte De Santander"
+    },
+    {
+      "code": "54520",
+      "department_code": "54",
+      "name": "PAMPLONITA",
+      "department": "Norte De Santander"
+    },
+    {
+      "code": "54125",
+      "department_code": "54",
+      "name": "CÁCOTA",
+      "department": "Norte De Santander"
+    },
+    {
+      "code": "54480",
+      "department_code": "54",
+      "name": "MUTISCUA",
+      "department": "Norte De Santander"
+    },
+    {
+      "code": "63130",
+      "department_code": "63",
+      "name": "CALARCÁ",
+      "department": "Quindio"
+    },
+    {
+      "code": "63470",
+      "department_code": "63",
+      "name": "MONTENEGRO",
+      "department": "Quindio"
+    },
+    {
+      "code": "63594",
+      "department_code": "63",
+      "name": "QUIMBAYA",
+      "department": "Quindio"
+    },
+    {
+      "code": "63111",
+      "department_code": "63",
+      "name": "BUENAVISTA",
+      "department": "Quindio"
+    },
+    {
+      "code": "63548",
+      "department_code": "63",
+      "name": "PIJAO",
+      "department": "Quindio"
+    },
+    {
+      "code": "66440",
+      "department_code": "66",
+      "name": "MARSELLA",
+      "department": "Risaralda"
+    },
+    {
+      "code": "66170",
+      "department_code": "66",
+      "name": "DOSQUEBRADAS",
+      "department": "Risaralda"
+    },
+    {
+      "code": "66572",
+      "department_code": "66",
+      "name": "PUEBLO RICO",
+      "department": "Risaralda"
+    },
+    {
+      "code": "68276",
+      "department_code": "68",
+      "name": "FLORIDABLANCA",
+      "department": "Santander"
+    },
+    {
+      "code": "68820",
+      "department_code": "68",
+      "name": "TONA",
+      "department": "Santander"
+    },
+    {
+      "code": "68001",
+      "department_code": "68",
+      "name": "BUCARAMANGA",
+      "department": "Santander"
+    },
+    {
+      "code": "68081",
+      "department_code": "68",
+      "name": "BARRANCABERMEJA",
+      "department": "Santander"
+    },
+    {
+      "code": "68547",
+      "department_code": "68",
+      "name": "PIEDECUESTA",
+      "department": "Santander"
+    },
+    {
+      "code": "68160",
+      "department_code": "68",
+      "name": "CEPITÁ",
+      "department": "Santander"
+    },
+    {
+      "code": "68418",
+      "department_code": "68",
+      "name": "LOS SANTOS",
+      "department": "Santander"
+    },
+    {
+      "code": "68229",
+      "department_code": "68",
+      "name": "CURITÍ",
+      "department": "Santander"
+    },
+    {
+      "code": "68307",
+      "department_code": "68",
+      "name": "GIRÓN",
+      "department": "Santander"
+    },
+    {
+      "code": "68895",
+      "department_code": "68",
+      "name": "ZAPATOCA",
+      "department": "Santander"
+    },
+    {
+      "code": "68689",
+      "department_code": "68",
+      "name": "SAN VICENTE DE CHUCURÍ",
+      "department": "Santander"
+    },
+    {
+      "code": "68755",
+      "department_code": "68",
+      "name": "SOCORRO",
+      "department": "Santander"
+    },
+    {
+      "code": "68167",
+      "department_code": "68",
+      "name": "CHARALÁ",
+      "department": "Santander"
+    },
+    {
+      "code": "68861",
+      "department_code": "68",
+      "name": "VÉLEZ",
+      "department": "Santander"
+    },
+    {
+      "code": "70221",
+      "department_code": "70",
+      "name": "COVEÑAS",
+      "department": "Sucre"
+    },
+    {
+      "code": "70670",
+      "department_code": "70",
+      "name": "SAMPUÉS",
+      "department": "Sucre"
+    },
+    {
+      "code": "70215",
+      "department_code": "70",
+      "name": "COROZAL",
+      "department": "Sucre"
+    },
+    {
+      "code": "70508",
+      "department_code": "70",
+      "name": "OVEJAS",
+      "department": "Sucre"
+    },
+    {
+      "code": "70713",
+      "department_code": "70",
+      "name": "SAN ONOFRE",
+      "department": "Sucre"
+    },
+    {
+      "code": "73563",
+      "department_code": "73",
+      "name": "PRADO",
+      "department": "Tolima"
+    },
+    {
+      "code": "73268",
+      "department_code": "73",
+      "name": "ESPINAL",
+      "department": "Tolima"
+    },
+    {
+      "code": "73148",
+      "department_code": "73",
+      "name": "CARMEN DE APICALÁ",
+      "department": "Tolima"
+    },
+    {
+      "code": "73449",
+      "department_code": "73",
+      "name": "MELGAR",
+      "department": "Tolima"
+    },
+    {
+      "code": "73030",
+      "department_code": "73",
+      "name": "AMBALEMA",
+      "department": "Tolima"
+    },
+    {
+      "code": "73411",
+      "department_code": "73",
+      "name": "LÍBANO",
+      "department": "Tolima"
+    },
+    {
+      "code": "73461",
+      "department_code": "73",
+      "name": "MURILLO",
+      "department": "Tolima"
+    },
+    {
+      "code": "73443",
+      "department_code": "73",
+      "name": "SAN SEBASTIÁN DE MARIQUITA",
+      "department": "Tolima"
+    },
+    {
+      "code": "76109",
+      "department_code": "76",
+      "name": "BUENAVENTURA",
+      "department": "Valle Del Cauca"
+    },
+    {
+      "code": "76147",
+      "department_code": "76",
+      "name": "CARTAGO",
+      "department": "Valle Del Cauca"
+    },
+    {
+      "code": "76834",
+      "department_code": "76",
+      "name": "TULUÁ",
+      "department": "Valle Del Cauca"
+    },
+    {
+      "code": "76892",
+      "department_code": "76",
+      "name": "YUMBO",
+      "department": "Valle Del Cauca"
+    },
+    {
+      "code": "76126",
+      "department_code": "76",
+      "name": "CALIMA",
+      "department": "Valle Del Cauca"
+    },
+    {
+      "code": "76400",
+      "department_code": "76",
+      "name": "LA UNIÓN",
+      "department": "Valle Del Cauca"
+    },
+    {
+      "code": "76622",
+      "department_code": "76",
+      "name": "ROLDANILLO",
+      "department": "Valle Del Cauca"
+    },
+    {
+      "code": "76890",
+      "department_code": "76",
+      "name": "YOTOCO",
+      "department": "Valle Del Cauca"
+    },
+    {
+      "code": "76318",
+      "department_code": "76",
+      "name": "GUACARÍ",
+      "department": "Valle Del Cauca"
+    },
+    {
+      "code": "76306",
+      "department_code": "76",
+      "name": "GINEBRA",
+      "department": "Valle Del Cauca"
+    },
+    {
+      "code": "76248",
+      "department_code": "76",
+      "name": "EL CERRITO",
+      "department": "Valle Del Cauca"
+    },
+    {
+      "code": "76364",
+      "department_code": "76",
+      "name": "JAMUNDÍ",
+      "department": "Valle Del Cauca"
+    },
+    {
+      "code": "76020",
+      "department_code": "76",
+      "name": "ALCALÁ",
+      "department": "Valle Del Cauca"
+    },
+    {
+      "code": "76041",
+      "department_code": "76",
+      "name": "ANSERMANUEVO",
+      "department": "Valle Del Cauca"
+    },
+    {
+      "code": "76246",
+      "department_code": "76",
+      "name": "EL CAIRO",
+      "department": "Valle Del Cauca"
+    },
+    {
+      "code": "76122",
+      "department_code": "76",
+      "name": "CAICEDONIA",
+      "department": "Valle Del Cauca"
+    },
+    {
+      "code": "76736",
+      "department_code": "76",
+      "name": "SEVILLA",
+      "department": "Valle Del Cauca"
+    },
+    {
+      "code": "81794",
+      "department_code": "81",
+      "name": "TAME",
+      "department": "Arauca"
+    },
+    {
+      "code": "85162",
+      "department_code": "85",
+      "name": "MONTERREY",
+      "department": "Casanare"
+    },
+    {
+      "code": "85010",
+      "department_code": "85",
+      "name": "AGUAZUL",
+      "department": "Casanare"
+    },
+    {
+      "code": "85139",
+      "department_code": "85",
+      "name": "MANÍ",
+      "department": "Casanare"
+    },
+    {
+      "code": "85250",
+      "department_code": "85",
+      "name": "PAZ DE ARIPORO",
+      "department": "Casanare"
+    },
+    {
+      "code": "85325",
+      "department_code": "85",
+      "name": "SAN LUIS DE PALENQUE",
+      "department": "Casanare"
+    },
+    {
+      "code": "85230",
+      "department_code": "85",
+      "name": "OROCUÉ",
+      "department": "Casanare"
+    },
+    {
+      "code": "86573",
+      "department_code": "86",
+      "name": "PUERTO LEGUÍZAMO",
+      "department": "Putumayo"
+    },
+    {
+      "code": "86568",
+      "department_code": "86",
+      "name": "PUERTO ASÍS",
+      "department": "Putumayo"
+    },
+    {
+      "code": "86320",
+      "department_code": "86",
+      "name": "ORITO",
+      "department": "Putumayo"
+    },
+    {
+      "code": "86569",
+      "department_code": "86",
+      "name": "PUERTO CAICEDO",
+      "department": "Putumayo"
+    },
+    {
+      "code": "86755",
+      "department_code": "86",
+      "name": "SAN FRANCISCO",
+      "department": "Putumayo"
+    },
+    {
+      "code": "97161",
+      "department_code": "97",
+      "name": "CARURÚ",
+      "department": "Vaupés"
+    },
+    {
+      "code": "97666",
+      "department_code": "97",
+      "name": "TARAIRA",
+      "department": "Vaupés"
+    },
+    {
+      "code": "99524",
+      "department_code": "99",
+      "name": "LA PRIMAVERA",
+      "department": "Vichada"
+    },
+    {
+      "code": "99624",
+      "department_code": "99",
+      "name": "SANTA ROSALÍA",
+      "department": "Vichada"
+    }
+  ],
+  "national_reference_source": "https://www.mincit.gov.co/prensa/noticias/turismo/herramienta-para-desarrollo-turistico-territorial",
+  "priority_groups_changed": true,
+  "publications_changed": false,
+  "application": {
+    "date": "2026-10-19",
+    "added": "CO-05-abejorral",
+    "priority": 2,
+    "sonson_priority": 2,
+    "candidate_count": 79,
+    "groups": {
+      "1": 23,
+      "2": 38,
+      "3": 18
+    },
+    "historical_snapshot_note": "findings y current_inventory_snapshot conservan el estado previo de 78 candidatos; application contiene el resultado actualizado.",
+    "production_changed": false
+  }
+}

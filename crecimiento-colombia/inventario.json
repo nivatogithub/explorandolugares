@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "as_of": "2026-10-16",
-  "universe_version": "CO-editorial-v2",
+  "as_of": "2026-10-19",
+  "universe_version": "CO-editorial-v3",
   "scope": "curated_candidates_not_all_municipalities",
   "score_weights": {
     "reuse": 35,
@@ -558,6 +558,29 @@
           "confidence": "editorial_estimate",
           "path": "colombia/departamentos/antioquia/lugares/santa-rosa-de-osos/lugar.json",
           "priority_basis": "clasificacion_propietario_2026-10-11_contact-options"
+        },
+        {
+          "id": "CO-05-abejorral",
+          "name": "Abejorral",
+          "slug": "abejorral",
+          "type": "municipality",
+          "parent_place_id": null,
+          "dane_code": "05002",
+          "administrative_identity_status": "verified",
+          "score_inputs": {
+            "reuse": 0,
+            "sources": 3,
+            "editorial": 2,
+            "rights": 0,
+            "operations": 0
+          },
+          "score": 23.0,
+          "priority": 2,
+          "weight": 2,
+          "reason": "P2 editorial: centro histórico reconocido y atractivos de aventura documentados; sin evidencia comparativa para P1. Preparación pendiente; ver revisión 2026-10-19.",
+          "confidence": "editorial_estimate",
+          "path": "colombia/departamentos/antioquia/lugares/abejorral/lugar.json",
+          "priority_basis": "revision_documentada_2026-10-19"
         }
       ],
       "priority_basis": "propuesta_editorial_departamental_pendiente_validacion"

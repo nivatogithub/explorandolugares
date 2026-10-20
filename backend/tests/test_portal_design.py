@@ -5,7 +5,7 @@ ROOT=Path(__file__).resolve().parents[2]
 class PortalDesignTests(unittest.TestCase):
  @classmethod
  def setUpClass(cls):
-  cls.tokens=json.loads((ROOT/'design/portal/tokens.json').read_text());cls.colors=cls.tokens['colors'];cls.css=(ROOT/'backend/public/assets/cobertura/cobertura.css').read_text();cls.page=(ROOT/'backend/public/cobertura/colombia/index.html').read_text()
+  cls.tokens=json.loads((ROOT/'design/portal/tokens.json').read_text());cls.colors=cls.tokens['colors'];cls.css=(ROOT/'backend/public/assets/cobertura/cobertura-meta.css').read_text();cls.page=(ROOT/'backend/public/cobertura/colombia/index.html').read_text()
  def test_generated_tokens_and_versions(self):
   subprocess.run([sys.executable,str(ROOT/'scripts/sincronizar-estilos-cobertura.py'),'--check'],check=True,capture_output=True)
  def test_approved_neutral_card_family(self):
@@ -21,7 +21,7 @@ class PortalDesignTests(unittest.TestCase):
   self.assertIn('background: var(--el-panel); color: var(--el-text);',self.css)
  def test_token_loading_order(self):
   self.assertLess(self.page.index('assets/style.css?'),self.page.index('assets/cobertura/portal-tokens.css?'))
-  self.assertLess(self.page.index('assets/cobertura/portal-tokens.css?'),self.page.index('assets/cobertura/cobertura.css?'))
+  self.assertLess(self.page.index('assets/cobertura/portal-tokens.css?'),self.page.index('assets/cobertura/cobertura-meta.css?'))
  def test_shared_shell_not_redefined(self):
   self.assertNotRegex(self.css,r'(?:^|})\s*(?:body|header|footer|\.brand)\s*\{')
   self.assertIn('class="coverage-intro"',self.page);self.assertNotIn('class="intro"',self.page)

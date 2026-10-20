@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-19",
+  "branch": "correccion/cobertura-turistica",
+  "base_commit": "5a7fb8a",
+  "status": "integrado_en_preprod_para_validacion",
+  "implemented": [
+    "Selección pública versionada de 221 unidades municipales",
+    "Porcentaje sobre municipios seleccionados nacional y departamental",
+    "Estados fuera del alcance actual",
+    "Guías publicadas separadas del porcentaje territorial",
+    "Abejorral P2 y fuentes de revisión",
+    "Relleno municipal según selección y estado con navegación solo departamental",
+    "Publicaciones municipales nuevas reconocidas por identidad exacta de departamento y slug",
+    "Agrupación visual Cundinamarca y Bogotá con meta combinada",
+    "Cuatro sectores con colores municipales y selección departamental",
+    "Contornos verdes y capa transparente, sin ampliar geometrías",
+    "Leyenda visible y pendientes naranja suave; fuera de meta gris",
+    "Islas compactas dentro del mapa nacional y Caribe",
+    "Buscador y lista extensa retirados; resumen de cobertura departamental"
+  ],
+  "checks_passed": [
+    "coverage-service.php",
+    "coverage-selected-scope.php",
+    "Sintaxis PHP y JavaScript",
+    "test_coverage_package.py: 5 pruebas",
+    "Navegador local: 9 de 221, 4,07%; Antioquia 4 de 24, 16,67%",
+    "Mapa: 1122 polígonos administrativos y selección exclusivamente departamental",
+    "Vista estrecha: ancho del documento igual al de ventana; sin desbordamiento horizontal",
+    "Consola del navegador sin errores",
+    "Paquete real preprod regenerado con base local conservada",
+    "8088: 9 publicaciones, 9/221 municipios, 4,07%",
+    "Selección Magdalena y cambio Visitantes/Cobertura conservan navegación"
+  ],
+  "pending": [
+    "Revisión humana en preprod 8088",
+    "Publicación remota y revisión de paridad antes de autorizar producción"
+  ],
+  "release_notes": [
+    "No se ha desplegado ni modificado medición de visitas.",
+    "La rama parte de preprod, que contiene trabajo de otros workers: no realizar merge completo a main sin revisar diferencias.",
+    "El origen de selección y la popularidad medida son conceptos distintos. No etiquetar fuera del alcance como no turístico."
+  ],
+  "preview_url": "http://127.0.0.1:8088/cobertura/colombia/",
+  "preview_mode": "dynamic_local_database",
+  "visual_regression_fix": {
+    "assets": [
+      "cobertura-meta.css",
+      "cobertura-meta.js"
+    ],
+    "reason": "El paquete compartido 8088 regeneraba archivos genéricos de otra revisión; se evita compartir la vista de diseño.",
+    "audience_chart_fix": "Retirado bloque accidental que borraba los botones de departamentos al actualizar la gráfica.",
+    "verified": [
+      "Nueve publicaciones reales y meta de 221 en snapshot local",
+      "Magdalena seleccionable y botones conservados al alternar Visitantes/Cobertura",
+      "Cero bordes municipales y cero transformaciones SVG",
+      "Colores publicados/pendientes/fuera de meta conservados"
+    ],
+    "limitations": [
+      "8092 es una copia fija de revisión visual, no una fuente de estadísticas en tiempo real.",
+      "No hay cambios de producción."
+    ]
+  }
+}
