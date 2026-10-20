@@ -84,6 +84,11 @@ class NavigationTests(unittest.TestCase):
     def test_business_subpages_keep_primary_and_secondary_state(self):
         for page in self.public.rglob('negocios-locales/*/index.html'):
             if page.parent.name=='negocios-locales': continue
+            if 'data-subscription-redirect' in page.read_text():
+                self.assertEqual(page.parent.name,'planes')
+                self.assertIn('noindex,follow',page.read_text())
+                self.assertIn('negocios-locales/suscripciones/',page.read_text())
+                continue
             parsed=links(page)
             primary=[item for item in parsed if item['main'] and item['text'].strip() in {'Negocios locales','Local businesses','Negócios locais'}]
             self.assertEqual(len(primary),1,page)
