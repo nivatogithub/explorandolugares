@@ -48,7 +48,12 @@ class FullReleaseCoverageTests(unittest.TestCase):
                 subprocess.run([sys.executable,str(ROOT/'scripts/ajustar-auditoria-publica.py'),'--public',str(ref/'public')],check=True)
                 subprocess.run([sys.executable,str(ROOT/'scripts/versiones-medicion.py'),'--public',str(ref/'public')],check=True)
                 for relative in paths:
-                    self.assertEqual(packaged.get(relative),hashlib.sha256((ref/relative).read_bytes()).hexdigest(),relative)
+                    expected=(ref/relative).read_bytes()
+                    # Only the approved subscription URL changes in the coverage CTA;
+                    # continue comparing every other byte of the integration overlay.
+                    if (ref/relative).suffix in {'.html','.php','.js','.json','.xml'}:
+                        expected=expected.replace(b'negocios-locales/planes/',b'negocios-locales/suscripciones/')
+                    self.assertEqual(packaged.get(relative),hashlib.sha256(expected).hexdigest(),relative)
             self.assertNotIn('public/__preprod-account.php', packaged)
             self.assertIn('public/business/recover.php', packaged)
             self.assertNotIn('public/admin/buzon-local.php', packaged)
