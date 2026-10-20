@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-20",
+  "candidate_sha256": "793656ce34b92ba51d6ef8ab04fb2de4a833d6407eb30c3cd6acb046331c2269",
+  "native_zip": "PASS:11 images",
+  "editorial_criteria": "PASS:7 places,3 experiences",
+  "preprod_imported": false,
+  "production_changed": false,
+  "human_approved": false,
+  "overlay_asset_http": "200; JavaScript served; browser DOM pending coordinator check",
+  "comparisons": [
+    "train85 original vs v3: geometry corresponds, exact sector unlocated",
+    "station2012 vs v2: identified facade preserved",
+    "archaeological museum2020 vs v3: facade, not invented exhibits"
+  ]
+}
