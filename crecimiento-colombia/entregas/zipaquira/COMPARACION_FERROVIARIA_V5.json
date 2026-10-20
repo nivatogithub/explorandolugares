@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-20",
+  "destination": "zipaquira",
+  "assets": [
+    {
+      "reference": "tren-patio-zipaquira.jpg",
+      "reference_sha256": "7170c7dd66d7ce62c7717f7c9ddf79a7759665e87a404bf1117b54b2f72e1d31",
+      "web": "imagenes/web/tren-patio-original-v5.webp",
+      "web_sha256": "885d62ec2f316ee3963ecd8a8e44ec265a56793aece1aa59c11866f9f7bb9122",
+      "dimensions": [
+        960,
+        640
+      ],
+      "bytes": 150084,
+      "changes": "Solo recorte3:2, reducción y compresión; sin alteración tonal ni reconstrucción",
+      "author": "Nils Öberg",
+      "license": "CC BY-SA 3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Zipaquira_station_yard.JPG"
+    },
+    {
+      "reference": "estacion-juanperiodista-2018.jpg",
+      "reference_sha256": "9bddeda0f3f04241e13c43563ac7574069f3bfad017fa5d5581f26ff108890b0",
+      "web": "imagenes/web/estacion-original-2018-v5.webp",
+      "web_sha256": "db162b3faa1095c60734118c2f2a5d3b73c15ff6784d9b60649b292d61fb3443",
+      "dimensions": [
+        960,
+        540
+      ],
+      "bytes": 92650,
+      "changes": "Solo reducción y compresión; sin recorte, alteración tonal o reconstrucción",
+      "author": "JuanPeriodista",
+      "license": "CC BY-SA 4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Estaci%C3%B3n_TREN_Zipaquir%C3%A1.jpg"
+    },
+    {
+      "reference": "estacion-vagon-p464thomas-2011.jpg",
+      "reference_sha256": "5f950c501aceb7376079464d59331d16b5cefcbbd972178f8a17343d36d6b12f",
+      "web": "imagenes/web/vagon-original-2011-v5.webp",
+      "web_sha256": "654fc9749363952e7842c2e65d9a6f208459549d158fc549a775fe1e1a45d6ba",
+      "dimensions": [
+        960,
+        720
+      ],
+      "bytes": 97632,
+      "changes": "Solo reducción y compresión; sin recorte, alteración tonal o reconstrucción",
+      "author": "P464thomas",
+      "license": "CC BY-SA 3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Static_train_coach_exhibition_at_Zipaquira_station_on_2.January_2011..JPG"
+    }
+  ],
+  "train_original_used_without_ai": true,
+  "v4_rejected": true,
+  "station_building_plus_train_same_photo_found": false,
+  "station_request_complete": false,
+  "human_approved": false,
+  "preprod_imported": false,
+  "production_changed": false,
+  "candidate_zip_sha256": "fc918f2961a33bfad072b7e9d1f07575a759dea5f399ecfa8622e877321ce7c7",
+  "integration_note": "Aplicar solo imagen y metadatos tren si coordinador modificó Catedral después de V4; no pisar crop actual.",
+  "qa": {
+    "native_zip": "PASS11images",
+    "editorial_criteria": "PASS7places3experiences",
+    "visual_comparison": "Original and derivative inspected separately; V4 idealization rejected",
+    "preprod_browser_tested": false
+  }
+}
