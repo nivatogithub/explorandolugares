@@ -91,6 +91,7 @@ for asset in ['portada-atracciones.js','portada-atracciones.css','subscription-c
 subprocess.run([sys.executable,str(root/'scripts/ajustar-auditoria-publica.py'),'--public',str(public)],check=True)
 # Stamp all generated pages after the integration overlay, including general pages.
 subprocess.run([sys.executable,str(root/'scripts/versiones-medicion.py'),'--public',str(public)],check=True)
+subprocess.run([sys.executable,str(root/'scripts/normalizar-ruta-suscripciones.py'),'--public',str(public)],check=True)
 subprocess.run([sys.executable,str(root/'scripts/generar-sitemap-entrega.py'),'--public',str(public)],check=True)
 print(f'Entrega de revisión: {release}\nRaíz pública: {public}\nConfigurar private/config.php fuera de public/. No hay publicación automática.')
 
