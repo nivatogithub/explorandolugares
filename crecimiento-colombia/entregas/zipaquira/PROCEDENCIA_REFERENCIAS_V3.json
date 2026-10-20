@@ -1,0 +1,425 @@
+{
+  "schema_version": 1,
+  "destination": "zipaquira",
+  "date": "2026-10-20",
+  "integration": {
+    "destination": "zipaquira",
+    "id": 25,
+    "destination_zip_sha256": "dacf339e95e1349f7817b72f1bacef492634d05c46d09c4a976497b3bd6394ac",
+    "business_zip_sha256": "b3a29c6c8e8145c4c3be68fe326f10efcc07f3059f13243ed918b78c63176a23",
+    "loaded_at": "2026-10-20T13:47:18+00:00",
+    "environment": "local_preprod_only",
+    "editorial_approved": false,
+    "production_changed": false,
+    "images": 11,
+    "attractions": 7,
+    "experiences": 3,
+    "new_businesses": 0,
+    "url": "http://127.0.0.1:8088/destinos/zipaquira/"
+  },
+  "package_sha256": "dacf339e95e1349f7817b72f1bacef492634d05c46d09c4a976497b3bd6394ac",
+  "corrected_assets": [
+    {
+      "component": "hero",
+      "role": "hero",
+      "master_file": "imagenes/maestros/portada-fiel-v3.png",
+      "master_sha256": "c91d0ec11f351f49b1e53322bf5363cf2ad376a8ddb4a56a6e41c4be6b852a41",
+      "master_dimensions": [
+        1536,
+        1024
+      ],
+      "reference": {
+        "file": "referencias-autorizadas/sal-azul-2018.jpg",
+        "sha256": "3714b22978a77cd103d0b59da568a31f85631fc098b33c0a6ff3cceddc99ccec",
+        "dimensions": [
+          5472,
+          3648
+        ],
+        "source_url": "https://commons.wikimedia.org/wiki/File:Sal_Azul_02.jpg",
+        "author": "Nestor Gonzalez Alonso",
+        "captured_at": "2018-09-09",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "adaptation_permitted": true,
+        "checked_at": "2026-10-20"
+      },
+      "web": {
+        "file": "imagenes/web/portada-fiel-v3.webp",
+        "package_file": "images/portada-fiel-v3.webp",
+        "sha256": "c2badfad9bda4389dc63d84ce26a38cb544a37dfdfd9751e5d6f44b0eb48c4c5",
+        "dimensions": [
+          1200,
+          800
+        ],
+        "bytes": 232716
+      },
+      "tool": "builtin image_gen",
+      "source_used_directly": true,
+      "changes": "Transformación ilustrada con IA, tinta/gouache; optimización WebP; conservar geometría de la referencia.",
+      "comparison": {
+        "status": "comparacion_de_composicion_realizada_pendiente_revision_humana",
+        "observations": "Ángel a izquierda, cruz al fondo, paredes y techo excavados sin ampliación.",
+        "source_does_not_prove_current_conditions": true,
+        "metric_reconstruction": false
+      },
+      "human_approved": false,
+      "public_metadata": {
+        "image_origin": "ai_generated",
+        "image_creator": "Nestor Gonzalez Alonso · adaptación ilustrada con IA",
+        "image_source_url": "https://commons.wikimedia.org/wiki/File:Sal_Azul_02.jpg",
+        "image_license": "CC BY-SA 4.0",
+        "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    },
+    {
+      "component": "catedral-de-sal",
+      "role": "place",
+      "master_file": "imagenes/maestros/catedral-fiel-v2.png",
+      "master_sha256": "184d7487dca1b40c327e1016ae11153e03971ed4871688c27fb427d16a366239",
+      "master_dimensions": [
+        1060,
+        1484
+      ],
+      "reference": {
+        "file": "referencias-autorizadas/nave-bgag-2020.jpg",
+        "sha256": "bb68ff759658ce7c443334fec62636a49b142ab4bf4e3e01a0d22d5459069f84",
+        "dimensions": [
+          2789,
+          3905
+        ],
+        "source_url": "https://commons.wikimedia.org/wiki/File:Catedral_de_Sal_02.jpg",
+        "author": "Bernard Gagnon",
+        "captured_at": "2020-01-12",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "adaptation_permitted": true,
+        "checked_at": "2026-10-20"
+      },
+      "web": {
+        "file": "imagenes/web/catedral-fiel-v2.webp",
+        "package_file": "images/catedral-fiel-v2.webp",
+        "sha256": "be034a026989068701777078bb0d218912941d32b0d4776804d6edaec6dc0c34",
+        "dimensions": [
+          786,
+          1100
+        ],
+        "bytes": 187520
+      },
+      "tool": "builtin image_gen",
+      "source_used_directly": true,
+      "changes": "Transformación ilustrada con IA, tinta/gouache; optimización WebP; conservar geometría de la referencia.",
+      "comparison": {
+        "status": "comparacion_de_composicion_realizada_pendiente_revision_humana",
+        "observations": "Cruz vertical completa, estratos, altar y bancos; recorte real de tarjeta debe contener toda la cruz.",
+        "source_does_not_prove_current_conditions": true,
+        "metric_reconstruction": false
+      },
+      "human_approved": false,
+      "public_metadata": {
+        "image_origin": "ai_generated",
+        "image_creator": "Bernard Gagnon · adaptación ilustrada con IA",
+        "image_source_url": "https://commons.wikimedia.org/wiki/File:Catedral_de_Sal_02.jpg",
+        "image_license": "CC BY-SA 4.0",
+        "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    },
+    {
+      "component": "estacion-tren",
+      "role": "place",
+      "master_file": "imagenes/maestros/estacion-fiel-v2.png",
+      "master_sha256": "81da92f677d125d20a3d461d399cde923344171e9796783f889dbafc48cbb596",
+      "master_dimensions": [
+        1448,
+        1086
+      ],
+      "reference": {
+        "file": "referencias-autorizadas/estacion-samuel-2012.jpg",
+        "sha256": "b73b2a282ce3f65d795c96e9fd1f54b01f34737fb2e615543b0a86991cf6a42f",
+        "dimensions": [
+          720,
+          540
+        ],
+        "source_url": "https://commons.wikimedia.org/wiki/File:Estacion_del_tren_zipaquira.jpg",
+        "author": "Samuel lizarazo",
+        "captured_at": "2012-09-21",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "adaptation_permitted": true,
+        "checked_at": "2026-10-20"
+      },
+      "web": {
+        "file": "imagenes/web/estacion-fiel-v2.webp",
+        "package_file": "images/estacion-fiel-v2.webp",
+        "sha256": "0f2e3c90ab1eb21daab1da5d01a4386bec67b0b681cdb9d1ceb1d302f44497cb",
+        "dimensions": [
+          960,
+          640
+        ],
+        "bytes": 132474
+      },
+      "tool": "builtin image_gen",
+      "source_used_directly": true,
+      "changes": "Transformación ilustrada con IA, tinta/gouache; optimización WebP; conservar geometría de la referencia.",
+      "comparison": {
+        "status": "comparacion_de_composicion_realizada_pendiente_revision_humana",
+        "observations": "Cinco ventanas superiores, tres accesos, marquesina y remate central; sin tren añadido.",
+        "source_does_not_prove_current_conditions": true,
+        "metric_reconstruction": false
+      },
+      "human_approved": false,
+      "public_metadata": {
+        "image_origin": "ai_generated",
+        "image_creator": "Samuel lizarazo · adaptación ilustrada con IA",
+        "image_source_url": "https://commons.wikimedia.org/wiki/File:Estacion_del_tren_zipaquira.jpg",
+        "image_license": "CC BY-SA 3.0",
+        "image_license_url": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    },
+    {
+      "component": "catedral-diocesana",
+      "role": "place",
+      "master_file": "imagenes/maestros/catedral-diocesana-fiel-v3.png",
+      "master_sha256": "70ab2e31f8be725e70a65f65f2319e8371115cbc20bc22b2a35e12bbce1d4ed9",
+      "master_dimensions": [
+        1536,
+        1024
+      ],
+      "reference": {
+        "file": "referencias-autorizadas/diocesana-2015.jpg",
+        "sha256": "e858eb9c5742a79212408de9a684a9eb0a6769b27531033a001e9e285288c42f",
+        "dimensions": [
+          6000,
+          4000
+        ],
+        "source_url": "https://commons.wikimedia.org/wiki/File:Catedral_Diocesana,_Zipaquir%C3%A1.JPG",
+        "author": "Nbck",
+        "captured_at": "2015-01-25",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "adaptation_permitted": true,
+        "checked_at": "2026-10-20"
+      },
+      "web": {
+        "file": "imagenes/web/catedral-diocesana-fiel-v3.webp",
+        "package_file": "images/catedral-diocesana-fiel-v3.webp",
+        "sha256": "457b21566651f559dd5f32210cb572a4f4b116f68ecde5582b7d9356144a12f5",
+        "dimensions": [
+          960,
+          640
+        ],
+        "bytes": 157498
+      },
+      "tool": "builtin image_gen",
+      "source_used_directly": true,
+      "changes": "Transformación ilustrada con IA, tinta/gouache; optimización WebP; conservar geometría de la referencia.",
+      "comparison": {
+        "status": "comparacion_de_composicion_realizada_pendiente_revision_humana",
+        "observations": "Fachada sobria de ladrillo/piedra, remates curvos, reloj solo a derecha y palacio contiguo a derecha.",
+        "source_does_not_prove_current_conditions": true,
+        "metric_reconstruction": false
+      },
+      "human_approved": false,
+      "public_metadata": {
+        "image_origin": "ai_generated",
+        "image_creator": "Nbck · adaptación ilustrada con IA",
+        "image_source_url": "https://commons.wikimedia.org/wiki/File:Catedral_Diocesana,_Zipaquir%C3%A1.JPG",
+        "image_license": "CC BY-SA 4.0",
+        "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    },
+    {
+      "component": "tren-sabana",
+      "role": "experience",
+      "master_file": "imagenes/maestros/tren-sabana-fiel-v3.png",
+      "master_sha256": "c8cf2f0c14322a1526b75a8049b30315191a498bcd66ef5211d5b16ac038887c",
+      "master_dimensions": [
+        1448,
+        1086
+      ],
+      "reference": {
+        "file": "referencias-autorizadas/tren-85-2007.jpg",
+        "sha256": "90386221306079081a958b6692e55d7d4d97aacd2abe159b9be80b1e74ea2424",
+        "dimensions": [
+          2592,
+          1944
+        ],
+        "source_url": "https://commons.wikimedia.org/wiki/File:Turistren_Passenger_train_with_Steam_locomotive_no_85,_outside_Bogota,_Colombia,_2007.jpg",
+        "author": "Nils Öberg",
+        "captured_at": "2007-02-06 (ficha); EXIF2003 discrepante",
+        "license": "CC0 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "adaptation_permitted": true,
+        "checked_at": "2026-10-20"
+      },
+      "web": {
+        "file": "imagenes/web/tren-sabana-fiel-v3.webp",
+        "package_file": "images/tren-sabana-fiel-v3.webp",
+        "sha256": "b3aa880ce554a51e4b7330c6e86b80a0f1b30f12c0f7a8c2d63b9483ac47d027",
+        "dimensions": [
+          960,
+          640
+        ],
+        "bytes": 226764
+      },
+      "tool": "builtin image_gen",
+      "source_used_directly": true,
+      "changes": "Transformación ilustrada con IA, tinta/gouache; optimización WebP; conservar geometría de la referencia.",
+      "comparison": {
+        "status": "comparacion_de_composicion_realizada_pendiente_revision_humana",
+        "observations": "Locomotora85 verde/negra/roja, tender azul, coches sobre curva y talud reales; tramo fuera de Bogotá, no se afirma ubicación en casco de Zipaquirá.",
+        "source_does_not_prove_current_conditions": true,
+        "metric_reconstruction": false
+      },
+      "human_approved": false,
+      "public_metadata": {
+        "image_origin": "ai_generated",
+        "image_creator": "Nils Öberg · adaptación ilustrada con IA",
+        "image_source_url": "https://commons.wikimedia.org/wiki/File:Turistren_Passenger_train_with_Steam_locomotive_no_85,_outside_Bogota,_Colombia,_2007.jpg",
+        "image_license": "CC0 1.0",
+        "image_license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }
+    },
+    {
+      "component": "plaza-comuneros",
+      "role": "place",
+      "master_file": "imagenes/maestros/plaza-comuneros-fiel-v3.png",
+      "master_sha256": "48d2baddf6bf45f24ea59cfa6559ab9ce9e971f3229e3da565b664a490dd7234",
+      "master_dimensions": [
+        1536,
+        1024
+      ],
+      "reference": {
+        "file": "referencias-autorizadas/plaza-remi-2010.jpg",
+        "sha256": "25acdb2b6410cdffb907f89a9b258d5e99ffcc411ff1d0a4d74619f880bb3034",
+        "dimensions": [
+          1280,
+          853
+        ],
+        "source_url": "https://commons.wikimedia.org/wiki/File:Zipaquira_-_Place_(1).JPG",
+        "author": "Rémi Jouan",
+        "captured_at": "2010-12-20",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "adaptation_permitted": true,
+        "checked_at": "2026-10-20"
+      },
+      "web": {
+        "file": "imagenes/web/plaza-comuneros-fiel-v3.webp",
+        "package_file": "images/plaza-comuneros-fiel-v3.webp",
+        "sha256": "47d7c0bba510661928bc1edd7d88f911faecb10a2194b3a5d025230d0f5af8cf",
+        "dimensions": [
+          960,
+          640
+        ],
+        "bytes": 162978
+      },
+      "tool": "builtin image_gen",
+      "source_used_directly": true,
+      "changes": "Transformación ilustrada con IA, tinta/gouache; optimización WebP; conservar geometría de la referencia.",
+      "comparison": {
+        "status": "comparacion_de_composicion_realizada_pendiente_revision_humana",
+        "observations": "Muro pétreo derecha, casas y galería izquierda, calle al centro, cerro al fondo; decoración histórica de fecha de foto.",
+        "source_does_not_prove_current_conditions": true,
+        "metric_reconstruction": false
+      },
+      "human_approved": false,
+      "public_metadata": {
+        "image_origin": "ai_generated",
+        "image_creator": "Rémi Jouan · adaptación ilustrada con IA",
+        "image_source_url": "https://commons.wikimedia.org/wiki/File:Zipaquira_-_Place_(1).JPG",
+        "image_license": "CC BY-SA 3.0",
+        "image_license_url": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    },
+    {
+      "component": "museo-arqueologico",
+      "role": "place",
+      "master_file": "imagenes/maestros/museo-arqueologico-fiel-v3.png",
+      "master_sha256": "f365882a8937150f85dda112f466cab36a3d106807d576dbcdb5b2fb5a188e2c",
+      "master_dimensions": [
+        1484,
+        1060
+      ],
+      "reference": {
+        "file": "referencias-autorizadas/arqueologico-2020.jpg",
+        "sha256": "2b328e26b9ae62f074a5a5a0441c2dd4b9248fd4335b389296f76cce16f125df",
+        "dimensions": [
+          266,
+          190
+        ],
+        "source_url": "https://commons.wikimedia.org/wiki/File:Museo_arqueol%C3%B3gico_de_Zipaquir%C3%A1.jpg",
+        "author": "POeeurdjds",
+        "captured_at": "2020-07-31",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "adaptation_permitted": true,
+        "checked_at": "2026-10-20"
+      },
+      "web": {
+        "file": "imagenes/web/museo-arqueologico-fiel-v3.webp",
+        "package_file": "images/museo-arqueologico-fiel-v3.webp",
+        "sha256": "f4c5b9217e9a7c57018fe409b9a467b4e7a6350075a697548fd886f20f701e01",
+        "dimensions": [
+          960,
+          640
+        ],
+        "bytes": 144904
+      },
+      "tool": "builtin image_gen",
+      "source_used_directly": true,
+      "changes": "Transformación ilustrada con IA, tinta/gouache; optimización WebP; conservar geometría de la referencia.",
+      "comparison": {
+        "status": "comparacion_de_composicion_realizada_pendiente_revision_humana",
+        "observations": "Fachada blanca, balcón lateral, tres vanos con arco en ala derecha y obelisco a derecha; no colección interior inventada. Referencia266×190 limita detalle fino.",
+        "source_does_not_prove_current_conditions": true,
+        "metric_reconstruction": false
+      },
+      "human_approved": false,
+      "public_metadata": {
+        "image_origin": "ai_generated",
+        "image_creator": "POeeurdjds · adaptación ilustrada con IA",
+        "image_source_url": "https://commons.wikimedia.org/wiki/File:Museo_arqueol%C3%B3gico_de_Zipaquir%C3%A1.jpg",
+        "image_license": "CC BY-SA 4.0",
+        "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    }
+  ],
+  "blocked_assets": [
+    {
+      "component": "colegio-gabo",
+      "status": "rechazada_por_identidad_no_validada",
+      "image_still_referenced_in_package": true,
+      "reason": "Patio escolar y pupitre imaginados; no se corresponden a una sala/cámara acreditada.",
+      "needed": "Foto identificada del edificio o sala con permiso de adaptación."
+    },
+    {
+      "component": "museo-quevedo",
+      "status": "rechazada_por_identidad_no_validada",
+      "image_still_referenced_in_package": true,
+      "reason": "Patio genérico aunque tome rasgos textuales; no conserva geometría de foto como entrada.",
+      "needed": "Foto identificada de Casa Museo Quevedo Zornoza con permiso de adaptación."
+    },
+    {
+      "component": "ruta-del-minero",
+      "status": "rechazada_por_identidad_no_validada",
+      "image_still_referenced_in_package": true,
+      "reason": "Grupo y socavón imaginados; oferta real no acredita esa escena visual.",
+      "needed": "Foto autorizada del recorrido/actividad minera concreta."
+    },
+    {
+      "component": "recorrido-historico",
+      "status": "rechazada_por_identidad_no_validada",
+      "image_still_referenced_in_package": true,
+      "reason": "Grupo y calle genéricos de película; oferta municipal real no acredita esa escena.",
+      "needed": "Foto autorizada del recorrido/entorno real para representar la actividad sin inventar un grupo."
+    }
+  ],
+  "complete_visual_approval": false,
+  "cartography": {
+    "source_url": "https://www.catedraldesal.gov.co/wp-content/uploads/2025/03/MAPA-MINA_v05-interior-y-exterior.pdf",
+    "scope": "Plano del recinto consultado; no reconstrucción métrica de cámara.",
+    "streetview_points_inspected": 0,
+    "reason": "Sin navegador integrado accesible durante esta revisión; se utilizaron fotos identificadas, sin afirmar recorridos StreetView."
+  },
+  "source_coverage": "Fotografías históricas identificadas; no prueban operación o condición2026. Los cuatro bloqueados no se consideran fieles."
+}
