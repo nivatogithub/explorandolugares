@@ -31,6 +31,7 @@ with tempfile.TemporaryDirectory(prefix='el-business-pages-') as temporary:
         migrations = list((ROOT / 'backend/database/migrations').glob(f'{number:03d}-*.sqlite.sql'))
         assert len(migrations) == 1
         db.executescript(migrations[0].read_text())
+    db.executescript((ROOT / 'backend/database/migrations/045-business-service-sections.sqlite.sql').read_text())
     db.execute("INSERT INTO destinations(slug,publication_status) VALUES('prueba','published')")
     destination = db.execute('SELECT last_insert_rowid()').fetchone()[0]
     db.execute("INSERT INTO destination_translations(destination_id,locale,display_name,headline,intro) VALUES(?,'es','Prueba','Prueba','Prueba')", (destination,))
@@ -45,6 +46,9 @@ with tempfile.TemporaryDirectory(prefix='el-business-pages-') as temporary:
         db.execute("INSERT INTO business_translations(business_id,locale,display_name,summary,description) VALUES(?,'es',?,'Resumen','Descripción')", (business, label))
         if tier:
             db.execute("INSERT INTO business_subscriptions(business_id,plan_code,billing_frequency,status,starts_at,ends_at) VALUES(?,?,'monthly','active',datetime('now','-1 day'),datetime('now','+30 days'))", (business,tier))
+    paid_business=db.execute("SELECT id FROM businesses WHERE slug='pago'").fetchone()[0]
+    for locale in ['es','en','pt-BR']:
+        db.execute('INSERT INTO business_service_sections VALUES(?,?,?,?)',(paid_business,locale,'restaurant','<script>alert(1)</script> Cocina local'))
     db.commit()
     encoded = base64.b64encode(json.dumps({'dsn': 'sqlite:' + str(database)}).encode()).decode()
     (work / 'private/config.php').write_text("<?php return json_decode(base64_decode('" + encoded + "'),true);")
@@ -78,6 +82,16 @@ with tempfile.TemporaryDirectory(prefix='el-business-pages-') as temporary:
             shutil.copy2(ROOT/source,work/'public/negocio.php')
             status,html=get('/negocios/'+ids['pago'])
             assert status==200 and '<h1>pago</h1>' in html,(source,status,html[:100])
+            assert 'id="servicio-restaurant"' not in html,'Normal page exposes Premium section'
+            if source.startswith('backend/'):
+                db.execute("UPDATE business_subscriptions SET plan_code='page_premium' WHERE business_id=?",(paid_business,));db.commit()
+                status,premium=get('/negocios/'+ids['pago'])
+                assert status==200 and 'id="servicio-restaurant"' in premium,premium[:200]
+                assert '&lt;script&gt;alert(1)&lt;/script&gt; Cocina local' in premium and '<script>alert(1)</script>' not in premium
+                assert 'id="servicio-lodging"' not in premium and 'id="servicio-other"' not in premium
+                db.execute("UPDATE business_subscriptions SET plan_code='page' WHERE business_id=?",(paid_business,));db.commit()
+                assert 'id="servicio-restaurant"' not in get('/negocios/'+ids['pago'])[1],'Downgrade leaks sections'
+                print('OK: Premium sections render escaped, empty sections hidden, lower tier hides preserved data')
             assert get('/negocios/'+ids['borrador'])[0]==404,source
             assert get('/negocios/'+ids['gratuito'])[0]==404,source
             assert get('/negocios/00000000-0000-4000-8000-999999999999')[0]==404,source

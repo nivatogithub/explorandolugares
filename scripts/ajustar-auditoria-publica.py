@@ -18,6 +18,11 @@ for page in root.rglob('*.html'):
   s=s.replace('Un país de muchos lugares para <em>volver.</em>','Colombia, un país con muchos lugares para <em>volver.</em>')
   if 'portada-atracciones.css' not in s:s=s.replace('</head>','<link rel="stylesheet" href="/assets/portada-atracciones.css"></head>')
  if 'negocios-locales/planes/' in rel:
+  section_copy={'es':('Secciones de servicios','Alojamiento, restaurante y otros servicios: hasta 1.200 caracteres por sección. Las secciones vacías no se muestran.'),'en':('Service sections','Accommodation, restaurant and other services: up to 1,200 characters per section. Empty sections are hidden.'),'pt-br':('Seções de serviços','Hospedagem, restaurante e outros serviços: até 1.200 caracteres por seção. As seções vazias não são exibidas.')}
+  label,detail=section_copy[lang]
+  if 'data-premium-service-row' not in s:
+   row='<tr data-premium-service-row><th scope="row">'+label+'</th><td>—</td><td>—</td><td>—</td><td>'+detail+'</td></tr>'
+   s=s.replace('<tbody>','<tbody>'+row,1)
   notes={'es':'Tarifas de lanzamiento. Conservas el precio contratado durante el período pagado. Cualquier actualización se informará antes de la renovación.','en':'Launch rates. Your contracted price is maintained throughout the paid period. Any change will be communicated before renewal.','pt-br':'Tarifas de lançamento. O preço contratado é mantido durante o período pago. Qualquer atualização será informada antes da renovação.'}
   s=s.replace('Este complemento ofrece visibilidad como operador; no incluye reservas ni garantiza ventas o visitantes.','Este complemento añade presencia dentro de la experiencia, además de tu aparición en el directorio.')
   s=re.sub(r'<p id="tarifas-lanzamiento"[^>]*>.*?</p>','',s,flags=re.S)
