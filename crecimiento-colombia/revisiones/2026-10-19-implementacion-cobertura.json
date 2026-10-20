@@ -2,7 +2,7 @@
   "date": "2026-10-19",
   "branch": "correccion/cobertura-turistica",
   "base_commit": "5a7fb8a",
-  "status": "implementado_en_vista_local_para_revision",
+  "status": "integrado_en_preprod_para_validacion",
   "implemented": [
     "Selección pública versionada de 221 unidades municipales",
     "Porcentaje sobre municipios seleccionados nacional y departamental",
@@ -10,10 +10,13 @@
     "Guías publicadas separadas del porcentaje territorial",
     "Abejorral P2 y fuentes de revisión",
     "Relleno municipal según selección y estado con navegación solo departamental",
-    "Departamento ampliado con borde naranja conservando estados",
-    "Lista inicial de 12 y botón Mostrar más",
     "Publicaciones municipales nuevas reconocidas por identidad exacta de departamento y slug",
-    "Agrupación visual Cundinamarca y Bogotá con meta combinada"
+    "Agrupación visual Cundinamarca y Bogotá con meta combinada",
+    "Cuatro sectores con colores municipales y selección departamental",
+    "Contornos verdes y capa transparente, sin ampliar geometrías",
+    "Leyenda visible y pendientes naranja suave; fuera de meta gris",
+    "Islas compactas dentro del mapa nacional y Caribe",
+    "Buscador y lista extensa retirados; resumen de cobertura departamental"
   ],
   "checks_passed": [
     "coverage-service.php",
@@ -22,32 +25,23 @@
     "test_coverage_package.py: 5 pruebas",
     "Navegador local: 9 de 221, 4,07%; Antioquia 4 de 24, 16,67%",
     "Mapa: 1122 polígonos administrativos y selección exclusivamente departamental",
-    "Filtros y Mostrar más en navegador",
     "Vista estrecha: ancho del documento igual al de ventana; sin desbordamiento horizontal",
-    "Consola del navegador sin errores"
+    "Consola del navegador sin errores",
+    "Paquete real preprod regenerado con base local conservada",
+    "8088: 9 publicaciones, 9/221 municipios, 4,07%",
+    "Selección Magdalena y cambio Visitantes/Cobertura conservan navegación"
   ],
   "pending": [
-    "Revisión humana de la vista local",
-    "Subir rama remota y preparar PR cuando corresponda integrar",
-    "Validar paridad del paquete antes de producción"
+    "Revisión humana en preprod 8088",
+    "Publicación remota y revisión de paridad antes de autorizar producción"
   ],
   "release_notes": [
     "No se ha desplegado ni modificado medición de visitas.",
     "La rama parte de preprod, que contiene trabajo de otros workers: no realizar merge completo a main sin revisar diferencias.",
     "El origen de selección y la popularidad medida son conceptos distintos. No etiquetar fuera del alcance como no turístico."
   ],
-  "preview_url": "http://127.0.0.1:8092/cobertura/colombia/?sector=caribe#cobertura",
-  "latest_visual_revision": {
-    "reason": "Petición del propietario: mapa por departamentos sin mosaico municipal ni desplegable",
-    "changes": [
-      "Selector de departamento retirado de cobertura",
-      "Mapa directo por departamento restaurado",
-      "Fuera del alcance excluido del catálogo seleccionable",
-      "Nombres en capitalización normal: Coveñas verificado en vista local"
-    ],
-    "status": "validated_local"
-  },
-  "preview_mode": "isolated_readonly_snapshot_of_local_publications",
+  "preview_url": "http://127.0.0.1:8088/cobertura/colombia/",
+  "preview_mode": "dynamic_local_database",
   "visual_regression_fix": {
     "assets": [
       "cobertura-meta.css",
