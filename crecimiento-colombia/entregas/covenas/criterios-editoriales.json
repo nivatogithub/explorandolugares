@@ -27,7 +27,13 @@
           "https://www.hotelpoblado.com/navidad-covenas-hotel-poblado"
         ],
         "new_file": "images/primera-ensenada-v3.webp",
-        "limitations": "Ilustración interpretativa; no reproducción exacta de edificios ni medición de costa."
+        "limitations": "Ilustración interpretativa; no reproducción exacta de edificios ni medición de costa.",
+        "street_view_sampling": {
+          "distinct_points": 7,
+          "evidence": "street-view/muestreo-ampliado.json",
+          "status": "completed_with_historical_limits",
+          "image_approval": "still_rejected;sampling_does_not_approve_existing_image"
+        }
       }
     },
     {
@@ -55,7 +61,13 @@
           "https://pbs.twimg.com/media/G8lAXsxXUAA-nVJ.jpg"
         ],
         "new_file": "images/segunda-ensenada-v3.webp",
-        "limitations": "Ilustración interpretativa; no reproducción exacta de edificios ni medición de costa."
+        "limitations": "Ilustración interpretativa; no reproducción exacta de edificios ni medición de costa.",
+        "street_view_sampling": {
+          "distinct_points": 5,
+          "evidence": "street-view/muestreo-ampliado.json",
+          "status": "completed_with_historical_limits",
+          "image_approval": "still_rejected;sampling_does_not_approve_existing_image"
+        }
       }
     },
     {
@@ -114,7 +126,13 @@
           "https://www.tripadvisor.com.br/Attraction_Review-g616329-d10465002-Reviews-Playa_la_Coquerita-Covenas_Sucre_Department.html"
         ],
         "new_file": "images/la-coquerita-v2.webp",
-        "limitations": "Composición interpretativa: edificios y mobiliario no son un levantamiento exacto del tramo."
+        "limitations": "Composición interpretativa: edificios y mobiliario no son un levantamiento exacto del tramo.",
+        "street_view_sampling": {
+          "distinct_points": 5,
+          "evidence": "street-view/muestreo-ampliado.json",
+          "status": "completed_with_historical_limits",
+          "image_approval": "still_rejected;sampling_does_not_approve_existing_image"
+        }
       }
     },
     {
