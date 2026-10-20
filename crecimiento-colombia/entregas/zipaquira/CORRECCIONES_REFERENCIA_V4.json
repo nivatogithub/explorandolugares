@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "destination": "zipaquira",
+  "date": "2026-10-20",
+  "assets": [
+    {
+      "component": "tren-sabana",
+      "master": "imagenes/maestros/tren-patio-fiel-v4.png",
+      "master_sha256": "6667b8e5a3ba2c20830fd5867a40fb2fa4b4192a5c31c58fcce05fc833fd54c0",
+      "web": "imagenes/web/tren-patio-fiel-v4.webp",
+      "web_sha256": "e124f3ae3e4522eb266c2e1a40752d300a15d7b58423bb7b63b47b695ac0dacc",
+      "web_bytes": 207778,
+      "dimensions": [
+        960,
+        640
+      ],
+      "reference_file": "referencias-autorizadas/tren-patio-zipaquira.jpg",
+      "reference_sha256": "7170c7dd66d7ce62c7717f7c9ddf79a7759665e87a404bf1117b54b2f72e1d31",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Zipaquira_station_yard.JPG",
+      "author": "Nils Öberg",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source_used_directly": true,
+      "comparison": "Edición directa de patio ferroviario identificado en Zipaquirá. Conserva cerros, arbolado, edificios industriales, vías y tren. Retira publicidad. Fuente histórica: declarada2007/EXIF2003, sin garantía de material actual.",
+      "human_approved": false
+    },
+    {
+      "component": "recorrido-historico",
+      "master": "imagenes/maestros/urbano-centro-fiel-v4.png",
+      "master_sha256": "415e508847737a2c4948cf9a900c31f67676e992f3435c1ff07a41434f039de6",
+      "web": "imagenes/web/urbano-centro-fiel-v4.webp",
+      "web_sha256": "b1e3f041372ef13952c2f7e944e06acd08e1c4ffa9610c04f1b423c548eb367d",
+      "web_bytes": 183228,
+      "dimensions": [
+        960,
+        640
+      ],
+      "reference_file": "referencias-autorizadas/plaza-remi-2010.jpg",
+      "reference_sha256": "25acdb2b6410cdffb907f89a9b258d5e99ffcc411ff1d0a4d74619f880bb3034",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Zipaquira_-_Place_(1).JPG",
+      "author": "Rémi Jouan",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source_used_directly": true,
+      "comparison": "Edición directa de fotografía identificada de plaza de los Comuneros. Conserva fachada pétrea, edificio blanco con balcón, eje vial y cerro. Grupo de peatones ilustrativo, no prueba de guía/salida.",
+      "human_approved": false
+    },
+    {
+      "component": "ruta-del-minero",
+      "master": "imagenes/maestros/minera-tematica-v4.png",
+      "master_sha256": "bf164542a77a9dd3175762fe433cc437b2de453a5cd8426c5f0ea3e705747453",
+      "web": "imagenes/web/minera-tematica-v4.webp",
+      "web_sha256": "30899c8c5f8fb3b7f044b0e452d8c6be3cc7e022fa75cec2756185db112591c0",
+      "web_bytes": 140012,
+      "dimensions": [
+        960,
+        640
+      ],
+      "reference_file": null,
+      "reference_sha256": null,
+      "source_url": "https://www.catedraldesal.gov.co/atracciones/ruta-del-minero/",
+      "author": "Explorando Lugares · generación IA",
+      "license": "Ilustración temática independiente",
+      "license_url": "",
+      "source_used_directly": false,
+      "comparison": "Descripción oficial acredita picar roca salina. Primer plano temático de manos, herramienta y mineral; NO representación exacta del equipo, recinto, guía o túnel del operador. Sin fotografía de entrada ni arquitectura inventada.",
+      "human_approved": false
+    }
+  ],
+  "pending_without_valid_image": [
+    "colegio-gabo",
+    "museo-quevedo"
+  ],
+  "package_sha256": "247c85528e9ee48c535ae05e6b70aaabb2b45c2f3480eda8ec64bd893483b4d9",
+  "human_approved": false,
+  "preprod_imported": false,
+  "production_changed": false
+}
