@@ -1,5 +1,6 @@
 <?php
 declare(strict_types=1);
+require_once __DIR__.'/BusinessServiceSections.php';
 
 require_once __DIR__.'/ExperienceOperatorAddon.php';
 require_once __DIR__.'/SubscriptionChangeService.php';
@@ -132,6 +133,7 @@ final class BusinessSubscriptionAdminService
             }
             $q=$this->pdo->prepare('SELECT locale,display_name,summary,description,brand_story,featured_services FROM business_translations WHERE business_id=?');$q->execute([$businessId]);$translations=[];foreach($q->fetchAll(PDO::FETCH_ASSOC) as $row)$translations[$row['locale']]=$row;
             foreach($translations as $locale=>$translation)foreach(['summary','description','brand_story','featured_services'] as $field){$limit=(int)$limits['max_'.$field.'_chars'];if($limit>0&&preg_match_all('/./us',(string)($translation[$field]??''))>$limit)throw new RuntimeException('El campo '.$field.' en '.$locale.' supera el límite de '.$limit.' caracteres de esta suscripción.');}
+            if($sub['plan_code']==='page_premium')BusinessServiceSections::publication($this->pdo,$businessId);
             $requiredSpanish=['display_name'];
             if(in_array($sub['plan_code'],['basic','featured','page','page_premium'],true))$requiredSpanish[]='summary';
             if(in_array($sub['plan_code'],['featured','page','page_premium'],true))$requiredSpanish[]='description';

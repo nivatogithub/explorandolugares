@@ -2,6 +2,7 @@
 declare(strict_types=1);
 
 require_once __DIR__.'/BusinessCategories.php';
+require_once __DIR__.'/BusinessServiceSections.php';
 
 final class BusinessAdminService
 {
@@ -71,7 +72,7 @@ final class BusinessAdminService
     {
         $q=$this->pdo->prepare('SELECT * FROM businesses WHERE id=?');$q->execute([$id]);$row=$q->fetch(PDO::FETCH_ASSOC);
         if (!$row) return null;
-        $row['translations']=[];$q=$this->pdo->prepare('SELECT locale,display_name,summary,description,brand_story,featured_services FROM business_translations WHERE business_id=?');$q->execute([$id]);
+        $row['service_sections']=BusinessServiceSections::read($this->pdo,$id);$row['translations']=[];$q=$this->pdo->prepare('SELECT locale,display_name,summary,description,brand_story,featured_services FROM business_translations WHERE business_id=?');$q->execute([$id]);
         foreach($q->fetchAll(PDO::FETCH_ASSOC) as $t)$row['translations'][$t['locale']]=$t;
         $row['contacts']=[];$q=$this->pdo->prepare('SELECT channel,contact_value,is_public FROM business_contacts WHERE business_id=? ORDER BY display_order,id');$q->execute([$id]);
         foreach($q->fetchAll(PDO::FETCH_ASSOC) as $contact)$row['contacts'][$contact['channel']]=$contact;
@@ -101,6 +102,8 @@ final class BusinessAdminService
         foreach($this->options()['plans'] as $candidate)if($candidate['code']===$planCode){$plan=$candidate;break;}
         if(!$plan)throw new RuntimeException('Selecciona la suscripción que corresponde al negocio.');
         $features=$plan['features'];
+        $sections=array_key_exists('service_sections',$input)?BusinessServiceSections::validate($input['service_sections']):null;
+        if($sections&&$planCode!=='page_premium')throw new RuntimeException('Las secciones de servicios requieren Premium.');
         foreach($locales as $locale){
             if(strlen($translations[$locale]['display_name'])>180)throw new RuntimeException('El nombre del negocio supera los 180 caracteres.');
             foreach($plan['text_limits'] as $field=>$limit){$limit=(int)$limit;if($limit>0&&self::characterLength($translations[$locale][$field])>$limit)throw new RuntimeException('El campo '.self::textFieldLabel($field).' en '.strtoupper($locale).' supera el límite de '.$limit.' caracteres de esta suscripción.');}
@@ -117,6 +120,7 @@ final class BusinessAdminService
             if($id){$q=$this->pdo->prepare('UPDATE businesses SET destination_id=?,category_code=?,address_text=?,location_reference=?,latitude=?,longitude=?,location_source=?,location_map_url=?,location_confirmed=?,opening_hours=?,price_range=?,capacity_count=?,menu_url=?,reservations_url=?,image_assistance_requested=?,publication_status="draft",updated_at=CURRENT_TIMESTAMP WHERE id=?');$q->execute([$destinationId,$category,...array_values($location),$imageHelp,$id]);}
             else{$publicId=$this->uuid();$q=$this->pdo->prepare('INSERT INTO businesses(public_id,destination_id,category_code,address_text,location_reference,latitude,longitude,location_source,location_map_url,location_confirmed,opening_hours,price_range,capacity_count,menu_url,reservations_url,image_assistance_requested,record_origin,slug,information_status,claim_status,operation_status,publication_status,display_order) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,"admin_created",?,"PENDIENTE_REVISION","NO_RECLAMADO","DESCONOCIDO","draft",0)');$q->execute([$publicId,$destinationId,$category,...array_values($location),$imageHelp,$slug]);$id=(int)$this->pdo->lastInsertId();}
             BusinessCategories::replace($this->pdo,$id,$category,$categoryCodes);
+            if($sections!==null&&$planCode==='page_premium')BusinessServiceSections::save($this->pdo,$id,$input['service_sections']);
             $this->syncTranslations($id,$translations);$this->syncContacts($id,is_array($input['contacts']??null)?$input['contacts']:[],$features,$existing['contacts']??[]);
             $this->storeImageReferences($id,$input['reference_images']??null,$storedFiles,$this->referenceLimit($planCode));
             $current=$existing['subscription']??null;
