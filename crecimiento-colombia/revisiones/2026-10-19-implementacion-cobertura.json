@@ -36,7 +36,7 @@
     "La rama parte de preprod, que contiene trabajo de otros workers: no realizar merge completo a main sin revisar diferencias.",
     "El origen de selección y la popularidad medida son conceptos distintos. No etiquetar fuera del alcance como no turístico."
   ],
-  "preview_url": "http://127.0.0.1:8088/cobertura/colombia/?departamento=05#cobertura",
+  "preview_url": "http://127.0.0.1:8092/cobertura/colombia/?sector=caribe#cobertura",
   "latest_visual_revision": {
     "reason": "Petición del propietario: mapa por departamentos sin mosaico municipal ni desplegable",
     "changes": [
@@ -46,5 +46,24 @@
       "Nombres en capitalización normal: Coveñas verificado en vista local"
     ],
     "status": "validated_local"
+  },
+  "preview_mode": "isolated_readonly_snapshot_of_local_publications",
+  "visual_regression_fix": {
+    "assets": [
+      "cobertura-meta.css",
+      "cobertura-meta.js"
+    ],
+    "reason": "El paquete compartido 8088 regeneraba archivos genéricos de otra revisión; se evita compartir la vista de diseño.",
+    "audience_chart_fix": "Retirado bloque accidental que borraba los botones de departamentos al actualizar la gráfica.",
+    "verified": [
+      "Nueve publicaciones reales y meta de 221 en snapshot local",
+      "Magdalena seleccionable y botones conservados al alternar Visitantes/Cobertura",
+      "Cero bordes municipales y cero transformaciones SVG",
+      "Colores publicados/pendientes/fuera de meta conservados"
+    ],
+    "limitations": [
+      "8092 es una copia fija de revisión visual, no una fuente de estadísticas en tiempo real.",
+      "No hay cambios de producción."
+    ]
   }
 }
