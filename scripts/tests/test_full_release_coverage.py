@@ -35,7 +35,7 @@ class FullReleaseCoverageTests(unittest.TestCase):
                 # The shared menu now hashes account/select dependencies too.
                 # Prepare those original sources so reference and release use
                 # the same dependency graph, while comparing the entire overlay.
-                for name in [*versions.ACCOUNT_COMPONENTS,'account-entry.js','header-controls.css','header-controls.js','language-navigation.js']:
+                for name in [*versions.ACCOUNT_COMPONENTS,'account-entry.js','header-controls.css','header-controls.js','language-navigation.js','portada-atracciones.js','portada-atracciones.css']:
                     candidates=[ROOT/'backend/public/assets'/name,ROOT/'ensayos/v1/assets'/name]
                     source=next((p for p in candidates if p.is_file()),None)
                     if source:shutil.copyfile(source,ref/'public/assets'/name)
@@ -45,6 +45,7 @@ class FullReleaseCoverageTests(unittest.TestCase):
                 controls.write_text(controls.read_text()+'\nhtml:root{--el-shell:'+shell['shell']+';--el-shell-border:'+shell['shell-border']+'}\n')
                 subprocess.run([sys.executable,str(ROOT/'scripts/preparar-encabezado.py'),'--public',str(ref/'public')],check=True)
                 subprocess.run(['php',str(ROOT/'scripts/aplicar-nomenclatura-lugares.php'),str(ref)],check=True)
+                subprocess.run([sys.executable,str(ROOT/'scripts/ajustar-auditoria-publica.py'),'--public',str(ref/'public')],check=True)
                 subprocess.run([sys.executable,str(ROOT/'scripts/versiones-medicion.py'),'--public',str(ref/'public')],check=True)
                 for relative in paths:
                     self.assertEqual(packaged.get(relative),hashlib.sha256((ref/relative).read_bytes()).hexdigest(),relative)

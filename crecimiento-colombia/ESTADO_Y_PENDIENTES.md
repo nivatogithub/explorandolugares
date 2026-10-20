@@ -1,3 +1,11 @@
+## 19/10/2026 · Segunda auditoría: puntos 1–3 implementados en preprod
+
+Enlaces comerciales diferenciados: registrar/reclamar abre `/negocios/registro/?tipo=business`; solicitar información conserva su formulario. Corregidos encabezado/pie de guías y fichas dinámicas, más páginas generadas ES/EN/PT. Privacidad retira la sección analítica opcional antigua y los avisos de configuración pendiente; conserva una explicación agregada sin cookies analíticas y muestra responsable/contacto/conservación desde los valores públicos configurados, sin inventar plazos. No modifica recolección ni datos históricos.
+
+Portada: seis atracciones de los cinco lugares aprobados, siempre además publicados en base de datos; selección editorial, sin puntuaciones ficticias, imágenes vigentes y enlace a la sección de la guía. Tres columnas/dos filas en escritorio y adaptación a pantallas estrechas. Frase aprobada «Colombia, un país con muchos lugares para volver». Créditos breves de ilustraciones propias («Explorando Lugares»), conservando procedencia en datos y atribución/licencia/enlaces cuando son recursos externos.
+
+Validación: regresión general aprobada, prueba de transformación e idempotencia, consultas HTTP de los tres idiomas, seis imágenes/enlaces por idioma y ausencia de enlaces de registro hacia información en las rutas revisadas. Revisión visual de tarjetas; sin despliegue a producción. Evidencia local: `.local/preprod/auditoria2/validacion.json` y `portada-corregida.png`. Pendientes de revisión del propietario y publicación. Pagos/Premium, nueva agenda, texto de «Por qué participar», título/información práctica e Instagram no se implementan en esta entrega.
+
 ## 19/10/2026 · Segunda auditoría: consolidación posterior a publicación
 
 Registro de pendientes, no autorización de implementación o publicación. Contrastado con la cola de este documento y los informes `entregables/revision-promocion-2026-10-19/ANTES_DE_PROMOCIONAR.md` y `experiencia-publica/informe.md` del proyecto. Las observaciones históricas no se presentan como una nueva inspección de producción.
