@@ -1,10 +1,10 @@
 {
   "destination": "santa-fe-de-antioquia",
   "branch": "lugar/CO/antioquia/santa-fe-de-antioquia",
-  "state": "editorially_corrected_pending_preprod_reimport",
+  "state": "corrected_package_ready_pending_coordinator_import_and_owner_review",
   "content_es_en_pt": "draft_complete",
   "attractions": 7,
-  "experiences": 1,
+  "experiences": 4,
   "free_directory": 30,
   "directory_live_operation": "pending",
   "hero": "generated_draft_pending_owner_review",
@@ -19,26 +19,30 @@
   "production_authorized": false,
   "business_zip_validated_php": true,
   "business_zip": "paquete-negocios-30.zip",
-  "images_selected": 9,
+  "images_selected": 12,
   "zip_native_validation": "DestinationPackage::readZip pass",
-  "image_review": "contact_sheet_reviewed; contextual limits in REVISION_VISUAL.md",
+  "image_review": "Bridge, Santa Barbara and two museums compared to identified references; Juan del Corral is a real display cabinet, not facade; other legacy assets still require fidelity review",
   "preprod_destination_id": 4,
   "preprod_url": "http://127.0.0.1:8088/destinos/santa-fe-de-antioquia/",
-  "current_package_images": 9,
+  "current_package_images": 12,
   "previous_preprod_qa": {
     "reported_by": "coordinator",
-    "local_import_receipt_sha256": "30fbc70b8f4815f1a6ed14c9b8ec5f3b68c6ca3b84102ef4cc89206c7149aaca",
-    "images": 13,
-    "attractions": 8,
-    "experiences": 4,
-    "directory_entries": 30,
+    "local_import_receipt_sha256": "537bd1113e6ba10d65eab054695aefe977ae1e73e4039b684524d180f0f73482",
     "http_200_locales": [
       "es",
       "en",
       "pt-BR"
     ],
-    "mobile_no_accordions": true,
-    "mobile_no_horizontal_overflow": true,
-    "applies_to_previous_package_only": true
-  }
+    "applies_to_previous_package_only": true,
+    "changes": "bridge and Santa Barbara v2"
+  },
+  "package_sha256": "f672b5f0bb694b20025eff176a01bfdd6e306f1aa7096525c94ab5cb846334ef",
+  "package_bytes": 2647901,
+  "pending": [
+    "Coordinator import and current package browser QA",
+    "Owner review and explicit approval",
+    "Juan del Corral facade reference not available: real display cabinet used",
+    "Legacy hero, plaza, cathedral and La Chinca strict visual fidelity review",
+    "Business operating status and experience availability not directly confirmed"
+  ]
 }

@@ -1,30 +1,22 @@
-# Santa Fe de Antioquia · borrador editorial vigente
+# Entrega corregida — Santa Fe de Antioquia
 
-Worker Lugar 2 · rama `lugar/CO/antioquia/santa-fe-de-antioquia` · 19/10/2026.
+Rama: `lugar/CO/antioquia/santa-fe-de-antioquia`. Paquete listo para importación coordinada; no publicado en producción ni aprobado por el propietario.
 
-## Entrega actual
+- ZIP: `paquete-destino-santa-fe-de-antioquia.zip` (2647901 bytes).
+- SHA-256: `f672b5f0bb694b20025eff176a01bfdd6e306f1aa7096525c94ab5cb846334ef`.
+- 7 atractivos, 4 experiencias, 12 imágenes y 30 fichas gratuitas; textos ES/EN/PT.
+- Validación nativa DestinationPackage, DestinationAdminService sin escritura y BusinessPackage: PASS. Criterios editoriales y comprobación local de archivos: PASS.
 
-- **Siete atractivos**, sin rellenar un mínimo; **una experiencia organizada neutral**, con evidencia de oferente/oferta solo en expediente interno.
-- Textos ES/EN/PT, introducción directa, historia breve fullwidth sin imagen ni panel de motivos visible. El esquema mantiene una razón factual en los tres idiomas.
-- **Nueve ilustraciones diferentes** en el ZIP; nueve WebP principales y variantes640 para uso responsivo, con PNG maestros fuera del ZIP web. Quince generaciones históricas: dos rechazadas y cuatro activos posteriormente retirados por criterios editoriales; no confundir generación con inclusión o aprobación.
-- **30 fichas gratuitas documentales**:16hospedajes,8comercios de filigrana,6transportes. Fuente municipal antigua y algunas fuentes propias; vigencia operativa pendiente, sin canales inventados, fotografías o descripciones.
+## Correcciones visibles incluidas
 
-## Archivos para integrar
+Puente de Occidente y Santa Bárbara conservan las composiciones de fotografías identificadas; el coordinador ya había importado esas dos correcciones en el paquete anterior. El museo religioso ahora muestra su fachada real adaptada, no un patio inventado. Juan del Corral muestra una vitrina real documentada, no una sala imaginada: **no es una fachada**. No hay referencia exterior identificada disponible en las descargas actuales; no se declara resuelto ese encargo exterior.
 
-`paquete-destino-santa-fe-de-antioquia.zip` y `paquete-destino.json` son la entrega vigente. El ZIP solo incluye manifiesto y medios efectivamente referenciados. `paquete-negocios-30.zip` es el paquete separado de directorio. `criterios-editoriales.json` y `AUDITORIA_EDITORIAL_V2.md` son expediente interno: no publicidad dentro de las experiencias. `CONTACTO_VISUAL.jpg` muestra solo los componentes actuales.
+Las experiencias quedan ordenadas por propósito distinto y especificidad local: taller de filigrana, cabalgata rural, tour gastronómico y tour urbano patrimonial. Es una selección editorial, sin datos de demanda o ventas. Las fuentes de oferta y oferentes están únicamente en `criterios-editoriales.json`. Filigrana se sustenta en la oferta del propio artesano alojada por Artesanías de Colombia; cabalgata y gastronomía en el catálogo comercial local. El urbano es componente de una excursión desde Medellín: no se verificó contratación independiente en destino y se descartaron las condiciones marítimas erróneas de su página.
 
-`PROCEDENCIA_IMAGENES.json` conserva prompts, herramienta, maestros, derivados, hashes y estado de inclusión. `GENERACIONES_DESCARTADAS.json` y `REVISION_VISUAL.md` explican las correcciones del Puente/Catedral y el alcance contextual de museos/actividades. Una escena ilustrada no prueba la existencia del servicio ni reproduce exactamente un recinto.
+## Estado y límites
 
-## Pruebas
+Importación del ZIP actual y QA visual en preproducción: pendientes del coordinador. URL de revisión: http://127.0.0.1:8088/destinos/santa-fe-de-antioquia/ . La comprobación HTTP de tres idiomas recibida corresponde al paquete anterior SHA537bd111, no al actual.
 
-`validar.py` verifica traducciones, razones, límite máximo8 sin mínimo y sin cuota de experiencias, nombres únicos del directorio, fuentes y archivos de imagen. `validar-nativo.php` lee ZIP con DestinationPackage y aplica DestinationAdminService sin base de datos ni guardado; verifica también el manifiesto de negocios. `../preprod/scripts/validar-criterios-editoriales.py` comprueba elegibilidad documentada y neutralidad. `VALIDACION_ZIP.json` guarda el hash del ZIP actual. Estas pruebas no sustituyen revisión factual ni aprobación humana.
+Portada, plaza, catedral y La Chinca heredadas requieren todavía contraste patrimonial estricto y revisión humana. Las imágenes no tienen aprobación final. La cabalgata y la filigrana son ilustraciones temáticas, no retratos de un operador ni de una ruta exacta. Ofertas publicadas no equivalen a disponibilidad de agenda, operación comprobada o popularidad. Las 30 fichas siguen siendo registros documentales sin verificación de vigencia por contacto.
 
-## Estado real
-
-El paquete anterior fue integrado por coordinación en http://127.0.0.1:8088/destinos/santa-fe-de-antioquia/ (id4) y comprobado HTTP200ES/EN/PT y móvil sin acordeones/desbordes. Recibo histórico: `30fbc70b8f4815f1a6ed14c9b8ec5f3b68c6ca3b84102ef4cc89206c7149aaca`. **Esta revisión editorial necesita reimportación y QA nuevos:** ese recibo no corresponde al ZIP actual.
-
-El coordinador debe retirar/archivar los slugs excluidos según criterios-editoriales.json:un importador que conserva trabajo existente puede mantenerlos si no se hace la transición explícita. Este worker no cambió preprod, DB o producción. Santa Fe sigue pendiente de revisión/aprobación humana.
-
-## Presentación
-
-Reutilizar diseño compartido Cartagena/Jericó: neutros, historia fullwidth sin imagen, secciones abiertas, textos cortos, tarjetas homogéneas3:2 y Cargar más según2filas con foto/4filas pequeñas. No copiar scripts por ciudad que sustituyan contenido ni introducir promoción del oferente como enlace editorial. Puente de Occidente es excursión compartida con Olaya, no expansión ficticia de jurisdicción.
+Originales, referencias y prompts: `auditoria-visual-v2/`; trazabilidad: `PROCEDENCIA_IMAGENES.json`. El ZIP mantiene los créditos de las fotografías adaptadas y las licencias correspondientes.

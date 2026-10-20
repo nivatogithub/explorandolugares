@@ -68,9 +68,11 @@
       "decision": "include",
       "purpose": "Conjunto urbano relevante y recorrible; no sumar iglesia y plazuela como dos fichas.",
       "source_urls": [
-        "https://colombia.travel/es/santa-fe-de-antioquia"
+        "https://colombia.travel/es/santa-fe-de-antioquia",
+        "https://colombia.travel/es/santa-fe-de-antioquia/iglesia-de-nuestra-senora-de-chiquinquira"
       ],
-      "checked_at": "2026-10-19"
+      "checked_at": "2026-10-19",
+      "canonical_name": "Iglesia de Nuestra Señora de Chiquinquirá (La Chinca)"
     },
     {
       "slug": "recorrido-de-memoria-regional",
@@ -87,7 +89,7 @@
         "source_url": "https://providenciatravel.com/"
       },
       "offer_verified": true,
-      "scope_note": "Oferta pública propia consultada: recorrido patrimonial acompañado. No certifica disponibilidad, licencia vigente ni alianza. Solo se usa para el tipo de actividad; no se copian inclusiones, variantes, condiciones ni horarios."
+      "scope_note": "Oferta de Providencia Travel corresponde a excursión desde Medellín con recorrido urbano dentro del itinerario. No acredita contratación autónoma en Santa Fe. La página mezcla condiciones marítimas erróneas; se descartan esas condiciones. Ordenado último: menos distintivo que artesanía, ruralidad y gastronomía; no ranking por ventas/demanda."
     },
     {
       "slug": "templo-de-jesus-nazareno",
@@ -112,12 +114,20 @@
     {
       "slug": "conocer-la-filigrana",
       "kind": "experience",
-      "decision": "exclude",
-      "purpose": "Oficio y talleres comerciales existen, pero no se acreditó un taller autónomo concreto. La oferta vista lo enumera como parada del tour, no clase contratada independiente.",
+      "decision": "include",
+      "purpose": "Taller artesanal experiencial real de filigrana, con participación del visitante; recuperado por nueva oferta exacta, no por mera existencia del oficio.",
       "source_urls": [
-        "https://www.viajescomfama.com/destinos/antioquia/santa-fe-de-antioquia-2022"
+        "https://colombiaartesanal.com.co/taller/reinaldo-hernandez/",
+        "https://colombiaartesanal.com.co/artesanos/reinaldo-hernandez/"
       ],
-      "checked_at": "2026-10-19"
+      "checked_at": "2026-10-20",
+      "operator": {
+        "name": "Reinaldo Hernández — RH Orfebrería",
+        "offer_url": "https://colombiaartesanal.com.co/taller/reinaldo-hernandez/",
+        "source_url": "https://colombiaartesanal.com.co/artesanos/reinaldo-hernandez/"
+      },
+      "offer_verified": true,
+      "scope_note": "Oferta directa del artesano alojada en portal institucional Colombia Artesanal de Artesanías de Colombia, con contacto para agendar. Se verificó existencia documental de taller; no cupos/fecha, ventas o demanda. No se anuncia al artesano públicamente."
     },
     {
       "slug": "sabores-de-tamarindo",
@@ -128,6 +138,68 @@
         "https://www.viajescomfama.com/destinos/antioquia/santa-fe-de-antioquia-2022"
       ],
       "checked_at": "2026-10-19"
+    },
+    {
+      "slug": "cabalgata-rural",
+      "kind": "experience",
+      "decision": "include",
+      "purpose": "Salida a caballo con guía por recorridos rurales de Santa Fe; modalidad distinta de paseo urbano y gastronomía.",
+      "source_urls": [
+        "https://www.santafedeantioquia.com.co/producto/cabalgatas/"
+      ],
+      "checked_at": "2026-10-20",
+      "operator": {
+        "name": "Santa Fe de Antioquia — portal comercial local de tours",
+        "offer_url": "https://www.santafedeantioquia.com.co/producto/cabalgatas/",
+        "source_url": "https://www.santafedeantioquia.com.co/"
+      },
+      "offer_verified": true,
+      "scope_note": "Nombre comercial público del sitio, catálogo propio y canal de atención; no se afirma razón social, registro vigente, representación jurídica ni alianza. Oferta publicada, no reserva, disponibilidad o demanda verificadas. Campos comerciales permanecen internos."
+    },
+    {
+      "slug": "tour-gastronomico",
+      "kind": "experience",
+      "decision": "include",
+      "purpose": "Recorrido organizado con guía y degustaciones de sabores locales; no mera sugerencia de comprar comida.",
+      "source_urls": [
+        "https://www.santafedeantioquia.com.co/producto/tour-de-gastronomia-de-la-ciudad/"
+      ],
+      "checked_at": "2026-10-20",
+      "operator": {
+        "name": "Santa Fe de Antioquia — portal comercial local de tours",
+        "offer_url": "https://www.santafedeantioquia.com.co/producto/tour-de-gastronomia-de-la-ciudad/",
+        "source_url": "https://www.santafedeantioquia.com.co/"
+      },
+      "offer_verified": true,
+      "scope_note": "Nombre comercial público del sitio, catálogo propio y canal de atención; no se afirma razón social, registro vigente, representación jurídica ni alianza. Oferta publicada, no reserva, disponibilidad o demanda verificadas. Campos comerciales permanecen internos."
     }
-  ]
+  ],
+  "additional_experience_candidates": [
+    {
+      "name": "Caminata rural guiada",
+      "source_url": "https://www.santafedeantioquia.com.co/producto/caminatasrurales/",
+      "decision": "documented_not_added",
+      "reason": "Oferta propia con guía/rutas concretas, conservada como alternativa. No se abre otra ficha para ampliar cupo; confirmar ruta concreta y su imagen antes de integrar."
+    },
+    {
+      "name": "Rafting en el río",
+      "source_url": "https://www.festicineantioquia.com/index.php/santafeantioquia/municipio",
+      "decision": "exclude_pending_provider",
+      "reason": "Mención turística institucional no acredita oferente y oferta vigente concreta."
+    },
+    {
+      "name": "Aviturismo / visita cafetera",
+      "source_url": "https://www.santafedeantioquia.com.co/categoria-producto/sin-categorizar/naturaleza-tours/",
+      "decision": "not_verified_not_added",
+      "reason": "Catálogo identifica candidatos; no se verificó ficha exacta ni se cuentan sus48resultados como48experiencias."
+    },
+    {
+      "name": "Carlos Caballos",
+      "source_url": "https://santafedeantioquia.es.tl/",
+      "decision": "corroboration_not_promoted",
+      "reason": "Página propia publica turismo ecuestre y marca local; ficha de programas no recuperada por herramienta. No se añaden contactos o datos operativos deducidos."
+    }
+  ],
+  "visual_audit": "Museos en transformación desde fotografías identificadas; Puente y Santa Bárbara ya comparados e integrados por coordinación.",
+  "experience_order_reason": "Particularidad del oficio y variedad sustantiva comprobable. No se dispone de ventas, afluencia, reservas ni demanda para afirmar un ranking comercial."
 }

@@ -1,0 +1,19 @@
+{
+  "status": "cargado_preprod_pendiente_aprobacion",
+  "package_sha256": "6164c750474bdccebb2a8f324ecd81b9053a6f5f13f383ce78f99841a002f26d",
+  "changes": [
+    "Iglesia de La Chinca ES/EN/PT",
+    "Tour gastronómico ES/EN/PT, público neutral"
+  ],
+  "image": {
+    "tool": "image_gen",
+    "file": "images/tour-gastronomico-v1.webp",
+    "master": "maestros/tour-gastronomico-v1.png",
+    "prompt": "Create a landscape 3:2 mature editorial semi-realistic ink and gouache illustration of a guided local food tasting in Santa Fe de Antioquia Colombia. This is a thematic activity image, NOT an exact restaurant or heritage building. Close tabletop focus on modest small servings of traditional arepas and wrapped tamal, a glass of brown tamarind refreshment and local fruit sweets; two adult visitor hands and a guide gesturing naturally. Simple neutral shaded courtyard background largely out of focus, no invented monuments, no logos, no provider names or text, no prices. Natural restrained colors, clearly visible elegant hand painted strokes, no yellow filter, no childish geometry. Do not imply specific dishes always included or a particular commercial operator.",
+    "type": "tematica_no_recinto_exacto"
+  },
+  "source": "https://www.santafedeantioquia.com.co/producto/tour-de-gastronomia-de-la-ciudad/",
+  "qa": "HTTP200 ES/EN/PT,10imágenes,30negocios",
+  "pending": "Auditoría visual patrimonial y aprobación humana",
+  "production_changed": false
+}

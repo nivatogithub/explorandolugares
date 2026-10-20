@@ -1,0 +1,59 @@
+[
+  {
+    "asset_id": "museo-juan-del-corral-v2",
+    "file": "images/museo-juan-del-corral-v2.webp",
+    "master": "auditoria-visual-v2/maestros/museo-juan-del-corral-v2.png",
+    "master_sha256": "9080100b17d6bad0fbec2c663e681f1f7d4218469cdf768f341f6ce9960cd1dc",
+    "sha256": "781d3fbf0d18deb2bc7d158fa8e14416f0ab927dd8f98f091b7a197d8b9944f0",
+    "prompt": "Restyle this exact identified photograph Casa Museo Juan del Corral - 02, Santa Fe de Antioquia, Colombia (XalD, CC BY-SA 4.0), into a mature ink and gouache semi-realistic editorial illustration. Use the real museum exhibit, NOT an invented colonial courtyard or fabricated museum building. Keep camera angle and relative positions of the illuminated rectangular glass cabinet at right, open historical book low right, small medal/display in middle left, two old blades high within cabinet, deep teal-green doorway behind at left and off-white real walls. Frame closer on the cabinet and adjacent doorway to leave the contemporary cutout figure above OUTSIDE the final frame. Do not invent artworks, gallery objects, extra rooms, visitors or architecture. Do not transcribe the long exhibition text, logos or QR codes; render printed label paragraphs as subtle unreadable painted marks, not new fabricated text. Geometry of cabinet, doorway and displayed historical objects must match the supplied photo. Visible elegant ink/gouache brushwork, natural restrained cream/teal/light gray colors, no yellow filter. Landscape 3:2, narrow neutral paper margin if needed rather than inventing surroundings. The image is an adaptation of an identified reference, not a depiction of current museum operating conditions.",
+    "tool": "builtin image_gen",
+    "generated_at": "2026-10-20",
+    "human_approval": false,
+    "review": "reference compared; pending owner review",
+    "source_inputs": [
+      {
+        "id": "museo-juan-02",
+        "creator": "XalD",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "url": "https://commons.wikimedia.org/wiki/File:Casa_Museo_Juan_del_Corral_-_02.jpg",
+        "captured_at": "2022-01-23"
+      }
+    ]
+  },
+  {
+    "asset_id": "museo-de-arte-religioso-francisco-cristobal-toro-v2",
+    "file": "images/museo-de-arte-religioso-francisco-cristobal-toro-v2.webp",
+    "master": "auditoria-visual-v2/maestros/museo-de-arte-religioso-francisco-cristobal-toro-v2.png",
+    "master_sha256": "ecdf5b013543203820289ffcbd26440838de410fa78bac59c62d3b51c461c944",
+    "sha256": "01244a929a1860c649cacf48e423ad1e1e7bb84c38ef45193f781ce17c8bd696",
+    "prompt": "Restyle this exact identified photograph Museo Arte Religioso-Santa Fe de Antioquia by SajoR, CC BY-SA 2.5, into a refined semi-realistic ink and gouache editorial illustration. STRICT CAMERA AND ARCHITECTURAL GEOMETRY LOCK: preserve the real long two-storey facade receding toward left, exposed gray-brown stone lower storey, plaster-white upper storey, row of tall closed muted-red wooden window shutters with narrow red grilles below, white projecting roof eaves/clay tiles, small arched white entrance lower left of center, low red curb and dark stone cobbled narrow street. Keep heavy black utility pole in left foreground and its wires in the same relative locations, right edge is partial ornate stone/cream pilaster of adjoining church. Same people/bicycle may be loosely painted without identifiable faces. No invented courtyard, arches gallery, balcony railing, gardens, paintings, new cathedral, mountains or wider street. Exact original composition before decorative beauty. Change only medium to detailed natural-color ink/gouache with clearly visible painterly texture. No legible signs, added letters, logos or watermarks. Landscape3:2. Preserve whole facade with narrow paper margins if necessary; no expansion of unseen urban scenery.",
+    "tool": "builtin image_gen",
+    "generated_at": "2026-10-20",
+    "human_approval": false,
+    "review": "reference compared; pending owner review",
+    "source_inputs": [
+      {
+        "id": "museo-religioso",
+        "creator": "SajoR",
+        "license": "CC BY-SA 2.5",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.5/",
+        "url": "https://commons.wikimedia.org/wiki/File:Museo_Arte_Religioso-Santa_Fe_de_Antioquia.jpg",
+        "captured_at": "2010-10-08 (ficha); EXIF2010-09-08, discrepancia conservada"
+      }
+    ]
+  },
+  {
+    "asset_id": "cabalgata-rural-v1",
+    "file": "images/cabalgata-rural-v1.webp",
+    "master": "auditoria-visual-v2/maestros/cabalgata-rural-v1.png",
+    "master_sha256": "4cbe250b3165525944e68acd2c92369fc1f82fabe106248a64646493cd6c09f4",
+    "sha256": "7373a0581858553df3c99d612d850d3ade25b40e8b4b0a4e7190b8489f60c096",
+    "prompt": "Create a 3:2 landscape editorial semi-realistic ink and gouache illustration representing the activity of a GUIDED COUNTRYSIDE HORSE RIDE offered in Santa Fe de Antioquia Colombia. This is explicitly THEMATIC, NOT an exact identifiable trail or a photograph of an actual operator. Show two adult visitors mounted on calm properly proportioned horses with ordinary saddles, with an adult local guide leading them, modest straw riding hats as described in a documented local offer. Place them against a simple unobtrusive wash of dry-tropical shrubs and a plain earthy path, no identifiable mountains skyline, river crossing, bridge, church, farm building, cliffs, pools, brands or distinctive real route. No dangerous stunt, gallop, race or commercial promotional sign. Expressive complete mature human figures with detailed hands/legs, horses anatomically coherent, natural varied greens, clay and blue-gray colors. Clearly painted fine ink and gouache, rich enough for travel editorial, no infantile geometry, no yellow filter, no text or logo. No claim of exact equipment or services of a named provider.",
+    "tool": "builtin image_gen",
+    "generated_at": "2026-10-20",
+    "human_approval": false,
+    "review": "thematic activity; no exact site or operator represented",
+    "source_inputs": []
+  }
+]
