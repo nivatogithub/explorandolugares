@@ -14,25 +14,12 @@
   function setDepartment(code){if(code==='11')code='25';if(code&&!data.departments.some(d=>d.code===code&&d.counts.published>0))return;audienceDestination='';visibleLimit=12;department=data.departments.some(d=>d.code===code)?code:'';updateUrl();renderDetail();renderMap();}
   function renderDetail(){
     const d=current(),capitalRegion=false;$('country-button').hidden=!d;$('map-title').textContent=capitalRegion?'Cundinamarca y Bogotá D. C.':d?d.name:'Colombia';$('map-kicker').textContent=capitalRegion?'DATOS DE '+d.name.toLocaleUpperCase('es-CO'):d?'DEPARTAMENTO SELECCIONADO':'ELIGE POR DÓNDE EMPEZAR';
-    $('detail-title').textContent=d?'Destinos de nuestra selección':'Nuestra selección turística';$('detail-description').textContent=d?'Municipios y destinos incluidos en esta etapa. Los que quedan fuera del alcance no se cuentan como pendientes.':'Selecciona un departamento o busca entre los destinos del catálogo nacional.';
-    $('department-summary').hidden=!d;$('department-coverage-title').textContent=d?'Avance de cobertura en '+d.name:'Avance de cobertura';
+    $('detail-title').textContent=d?'Avance de cobertura en '+d.name:'Avance de cobertura';$('detail-description').textContent='Medimos municipios seleccionados con al menos una guía publicada, sin duplicarlos por tener varios destinos.';
+    $('department-summary').hidden=!d;$('coverage-detail').hidden=!d;
     if(d){$('department-percent').textContent=d.coverage_percent===null?'Sin confirmar':d.coverage_percent.toLocaleString('es-CO')+' %';
       $('department-count').textContent=(data.publication_source_available?`${d.counts.published} ${d.counts.published===1?'guía publicada':'guías publicadas'}`:'Publicación sin confirmar')+` · ${d.covered_municipalities} de ${d.municipality_total} ${d.code==='25'?'municipios y distritos':'municipios'} seleccionados con guía publicada. No mide cobertura de comercios.`;
     }
-    renderPlaces();renderAudience();
-  }
-  function renderPlaces(){
-    const d=current(), query=normal($('search').value.trim());let rows=(d?[d]:data.departments).flatMap(dep=>dep.places.map(p=>({...p,department_name:dep.name})));
-    rows=rows.filter(p=>(filter==='all'||p.status===filter)&&(!query||normal(p.name+' '+p.department_name).includes(query)));
-    rows.sort((a,b)=>({published:0,in_progress:1,pending:2,unknown:3}[a.status]-{published:0,in_progress:1,pending:2,unknown:3}[b.status])||a.name.localeCompare(b.name,'es'));
-    const totalRows=rows.length;rows=rows.slice(0,visibleLimit);$('more-places').hidden=totalRows<=visibleLimit;
-    $('result-count').textContent=`${totalRows} ${totalRows===1?'destino':'destinos'} en esta selección`;
-    $('places').replaceChildren();
-    if(!rows.length)$('places').append(el('p','No hay destinos que coincidan con estos filtros.','empty'));
-    rows.forEach(p=>{const article=el('article',undefined,'place'),top=el('div',undefined,'place-top');top.append(el('h3',p.name),el('span',labels[p.status],'badge '+p.status));article.append(top);
-      article.append(el('p',d?(p.status==='pending'?'Incluido en la meta; guía por desarrollar':'Guía del lugar'):p.department_name));
-      if(p.url&&p.status==='published'){const a=el('a','Explorar la guía →');a.href=new URL(p.url.replace(/^\//,''),root).href;article.append(a);} $('places').append(article);
-    });
+    renderAudience();
   }
   function featureState(code){const dep=data.departments.find(x=>x.code===code);if(!dep||!dep.municipality_total)return 'outside_scope';return dep.counts.published>0?'published':'pending';}
   let savedMapView=null,activeSector='';
@@ -167,7 +154,6 @@
     if(department&&activeSector&&!sectors[activeSector].includes(department)){department='';audienceDestination='';updateUrl();renderDetail();}
     updateUrl();renderMap();
   }));
-  $('more-places').addEventListener('click',()=>{visibleLimit+=12;renderPlaces();});
   async function init(){
     try{
       data=await json(new URL('api/cobertura.php',root));if(!Array.isArray(data.departments)||!data.country)throw Error('Respuesta inválida');
@@ -188,8 +174,7 @@
       
       data.departments.filter(d=>d.counts.published>0).slice().sort((a,b)=>a.name.localeCompare(b.name,'es')).forEach(d=>$('audience-department').append(option(d.code,d.name)));
       $('audience-department').addEventListener('change',e=>setDepartment(e.target.value));$('audience-destination').addEventListener('change',e=>{audienceDestination=e.target.value;renderAudience();});
-      $('country-button').addEventListener('click',()=>{activeSector='';document.querySelectorAll('[data-map-sector]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mapSector==='')));setDepartment('');});$('search').addEventListener('input',renderPlaces);$('audience-period').addEventListener('change',renderAudience);
-      document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{filter=b.dataset.filter;document.querySelectorAll('[data-filter]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));renderPlaces();}));
+      $('country-button').addEventListener('click',()=>{activeSector='';document.querySelectorAll('[data-map-sector]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mapSector==='')));setDepartment('');});$('audience-period').addEventListener('change',renderAudience);
       const params=new URL(location.href).searchParams;const sectorAlias={sur:'oriente',insular:'caribe',occidente:'andina',orinoquia:'oriente',amazonia:'oriente'};const requestedSector=sectorAlias[params.get('sector')]||params.get('sector');if(sectors[requestedSector]){activeSector=requestedSector;document.querySelectorAll('[data-map-sector]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mapSector===activeSector)));}const start=params.get('departamento')||'';setDepartment(data.departments.some(d=>d.code===(start==='11'?'25':start)&&d.counts.published>0)?start:'');
     }catch(e){$('notice').hidden=false;$('notice').textContent='No pudimos cargar la cobertura. Vuelve a intentar más tarde; puedes seguir explorando las guías desde Destinos.';$('map').replaceChildren(el('p','Información temporalmente no disponible.','map-error'));$('map').setAttribute('aria-busy','false');$('updated').textContent='Sin actualización disponible.';}
   }
