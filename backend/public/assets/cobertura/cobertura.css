@@ -327,3 +327,8 @@
 #contenido .map-controls button:hover, #contenido .map-controls button:focus-visible { border-color: var(--el-action); background: var(--el-hover); }
 @media(min-width:1100px){ #contenido .map-panel { border-right: 0; } }
 @media(max-width:640px){ #contenido .map { height: 460px; } }
+
+#contenido .map-sectors { display:flex; flex-wrap:wrap; gap:8px; margin-top:16px; }
+#contenido .map-sectors button { min-height:44px; padding:9px 14px; border:1px solid var(--el-control-border); border-radius:var(--el-radius-pill); background:var(--el-card); color:var(--el-text); cursor:pointer; }
+#contenido .map-sectors button[aria-pressed="true"] { background:var(--el-action); color:var(--el-on-action); border-color:var(--el-action); }
+#contenido .map svg { overflow:visible; }
