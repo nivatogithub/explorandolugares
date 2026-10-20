@@ -12,6 +12,8 @@ No subir fotografías protegidas al generador sin permiso. Conservar fuente, aut
 ## Ferrocarril y rutas
 Separar edificio de estación, lado de vías/andén, patio y recorrido. Buscar la fachada ferroviaria además de la fachada hacia la plaza. No insertar tren arbitrariamente frente al edificio. Una locomotora colombiana no acredita cualquier tramo: verificar ruta, relieve, uso del suelo, entorno urbano/rural y fecha. Si no se geolocaliza el tramo, no atribuirlo a Zipaquirá ni prometer condiciones actuales.
 
+Cuando el vínculo entre edificio y experiencia se acredita documentalmente, puede explicarse mediante texto breve, icono semántico y enlaces internos recíprocos sin forzar ambos en una imagen. La ficha indica su función real y la experiencia identifica el punto de llegada. Los enlaces deben funcionar con teclado, permanecer en la página y revelar el destino si está tras «Cargar más». No usar la vinculación editorial como publicidad, reserva ni garantía de operación para una fecha concreta.
+
 ## Trabajo acotado y entrega
 1. Antes de generar, definir referencia, encuadre e invariantes por componente.
 2. Una prueba y una corrección dirigida por encuadre. Si falla identidad, cambiar de método o declarar el bloqueo concreto; no repetir variantes genéricas.
