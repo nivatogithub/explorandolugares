@@ -345,3 +345,6 @@
 #contenido .islands-inset>p { flex-basis:100%; margin:0; font-size:13px; }
 #contenido .island-card { display:grid; justify-items:center; flex:1; min-width:120px; gap:4px; font-size:13px; }
 #contenido .island-card svg { width:100%; height:100px; }
+
+#contenido .sector-entry { margin:20px 0; padding:18px; border:1px solid var(--el-border); border-radius:var(--el-radius-panel); background:var(--el-card); }
+#contenido .sector-entry h2 { margin:0; font-size:20px; }
