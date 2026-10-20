@@ -34,8 +34,12 @@ final class CoverageService
             foreach($this->scope['municipalities']??[] as $selected){
                 if($selected['department_code']!==$department['code'])continue;
                 if(count(array_filter($places,static fn($p)=>$p['municipality_code']===$selected['code']))>0)continue;
-                $status=$available?'pending':'unknown';$counts[$status]++;
-                $places[]=['id'=>'selected-'.$selected['code'],'name'=>$selected['name'],'municipality_code'=>$selected['code'],'parent_place_id'=>null,'type'=>'municipality','status'=>$status,'url'=>null];
+                $publishedRow=null;
+                foreach($rows as $candidate){
+                    if($candidate['publication_status']==='published' && self::normalized($candidate['department'])===self::normalized($department['name']) && self::normalized($candidate['slug'])===self::normalized($selected['name'])){$publishedRow=$candidate;break;}
+                }
+                $status=$publishedRow?'published':($available?'pending':'unknown');$counts[$status]++;
+                $places[]=['id'=>'selected-'.$selected['code'],'name'=>$selected['name'],'municipality_code'=>$selected['code'],'parent_place_id'=>null,'type'=>'municipality','status'=>$status,'url'=>$publishedRow?'/destinos/'.rawurlencode($publishedRow['slug']).'/':null];
             }
             $municipalities=[];
             foreach($this->geography as $unit){

@@ -4,16 +4,16 @@
   const $=id=>document.getElementById(id), root=new URL('../../',location.href);
   const el=(tag,text,className)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(className)n.className=className;return n;};
   const normal=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
-  let data=null,department='',filter='all',mapVersion=0,activeTab='cobertura';const maps=new Map();
+  let visibleLimit=12;let data=null,department='',filter='all',mapVersion=0,activeTab='cobertura';const maps=new Map();
   const current=()=>data.departments.find(d=>d.code===department);
   async function json(url,options={}){const r=await fetch(url,{credentials:'omit',headers:{Accept:'application/json'},...options});if(!r.ok)throw Error('No disponible');return r.json();}
   async function geometry(file){if(!maps.has(file))maps.set(file,json(new URL('assets/cobertura/'+file,root)).catch(e=>{maps.delete(file);throw e;}));return maps.get(file);}
   const option=(value,text)=>{const o=el('option',text);o.value=value;return o;};
   function updateUrl(){const url=new URL(location.href);if(data){url.search='';if(department)url.searchParams.set('departamento',department);}url.hash=activeTab;history.replaceState(null,'',url);}
-  function setDepartment(code){if(code==='11')code='25';audienceDestination='';department=data.departments.some(d=>d.code===code)?code:'';$('department').value=department;$('department').dispatchEvent(new Event('floating-select:refresh'));updateUrl();renderDetail();renderMap();}
+  function setDepartment(code){if(code==='11')code='25';audienceDestination='';visibleLimit=12;department=data.departments.some(d=>d.code===code)?code:'';$('department').value=department;$('department').dispatchEvent(new Event('floating-select:refresh'));updateUrl();renderDetail();renderMap();}
   function renderDetail(){
     const d=current(),capitalRegion=false;$('country-button').hidden=!d;$('map-title').textContent=capitalRegion?'Cundinamarca y Bogotá D. C.':d?d.name:'Colombia';$('map-kicker').textContent=capitalRegion?'DATOS DE '+d.name.toLocaleUpperCase('es-CO'):d?'DEPARTAMENTO SELECCIONADO':'ELIGE POR DÓNDE EMPEZAR';
-    $('detail-title').textContent=d?'Estado de las guías':'Guías para explorar';$('detail-description').textContent=d?'Estas son las guías del departamento que forman parte de nuestro catálogo.':'Selecciona un departamento o busca entre los destinos del catálogo nacional.';
+    $('detail-title').textContent=d?'Destinos de nuestra selección':'Nuestra selección turística';$('detail-description').textContent=d?'Municipios y destinos incluidos en esta etapa. Los que quedan fuera del alcance no se cuentan como pendientes.':'Selecciona un departamento o busca entre los destinos del catálogo nacional.';
     $('department-summary').hidden=!d;
     if(d){$('department-percent').textContent=d.coverage_percent===null?'Sin confirmar':d.coverage_percent.toLocaleString('es-CO')+' %';
       $('department-count').textContent=(data.publication_source_available?`${d.counts.published} ${d.counts.published===1?'guía publicada':'guías publicadas'}`:'Publicación sin confirmar')+` · ${d.covered_municipalities} de ${d.municipality_total} ${d.code==='25'?'municipios y distritos':'municipios'} seleccionados con guía publicada. No mide cobertura de comercios.`;
@@ -24,41 +24,46 @@
     const d=current(), query=normal($('search').value.trim());let rows=(d?[d]:data.departments).flatMap(dep=>dep.places.map(p=>({...p,department_name:dep.name})));
     rows=rows.filter(p=>(filter==='all'||p.status===filter)&&(!query||normal(p.name+' '+p.department_name).includes(query)));
     rows.sort((a,b)=>({published:0,in_progress:1,pending:2,unknown:3}[a.status]-{published:0,in_progress:1,pending:2,unknown:3}[b.status])||a.name.localeCompare(b.name,'es'));
-    $('result-count').textContent=`${rows.length} ${rows.length===1?'destino':'destinos'} en esta selección`;
+    const totalRows=rows.length;rows=rows.slice(0,visibleLimit);$('more-places').hidden=totalRows<=visibleLimit;
+    $('result-count').textContent=`${totalRows} ${totalRows===1?'destino':'destinos'} en esta selección`;
     $('places').replaceChildren();
     if(!rows.length)$('places').append(el('p','No hay destinos que coincidan con estos filtros.','empty'));
     rows.forEach(p=>{const article=el('article',undefined,'place'),top=el('div',undefined,'place-top');top.append(el('h3',p.name),el('span',labels[p.status],'badge '+p.status));article.append(top);
-      article.append(el('p',d?'Guía del lugar':p.department_name));
+      article.append(el('p',d?(p.status==='pending'?'Incluido en la meta; guía por desarrollar':'Guía del lugar'):p.department_name));
       if(p.url&&p.status==='published'){const a=el('a','Explorar la guía →');a.href=new URL(p.url.replace(/^\//,''),root).href;article.append(a);} $('places').append(article);
     });
   }
   function featureState(code){const dep=data.departments.find(x=>x.code===code);if(!dep)return 'untracked';return dep.counts.published?'published':dep.counts.in_progress?'in_progress':data.publication_source_available?'pending':'unknown';}
   async function renderMap(){
     const version=++mapVersion,d=current();$('map').setAttribute('aria-busy','true');$('map').replaceChildren(el('p','Cargando mapa…'));
-    $('map-hint').textContent=d?(['11','25'].includes(d.code)?'Para facilitar la exploración, agrupamos Bogotá con Cundinamarca. Bogotá es Distrito Capital y no forma parte del departamento; esta agrupación es solo de navegación.':d.name+' resaltado sobre Colombia. Selecciona otro departamento para explorar sus guías.'):'Selecciona un departamento en el mapa o en la lista.';
+    $('map-hint').textContent='Los colores representan municipios seleccionados y su avance. Selecciona un departamento para ampliar el detalle.';
     try{
-      const geo=structuredClone(await geometry('departamentos.geojson'));if(version!==mapVersion)return;
-      const capitalGeometry=geo.features.find(f=>f.properties.code==='11'),regionalGeometry=geo.features.find(f=>f.properties.code==='25');
-      if(capitalGeometry&&regionalGeometry){const polygons=f=>f.geometry.type==='Polygon'?[f.geometry.coordinates]:f.geometry.coordinates;regionalGeometry.geometry={type:'MultiPolygon',coordinates:[...polygons(regionalGeometry),...polygons(capitalGeometry)]};geo.features=geo.features.filter(f=>f.properties.code!=='11');}
-      const ns='http://www.w3.org/2000/svg';const svg=document.createElementNS(ns,'svg');svg.setAttribute('role','group');svg.setAttribute('aria-label','Departamentos de Colombia');
-      const defs=document.createElementNS(ns,'defs');defs.innerHTML='<pattern id="unknown-pattern" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#dce3e5"/><path d="M0 0L6 6" stroke="#91a1a5" stroke-width="2"/></pattern>';svg.append(defs);
+      const geo=structuredClone(await geometry('departamentos.geojson'));
+      const units=await Promise.all(data.departments.flatMap(dep=>(dep.code==='25'?['25','11']:[dep.code]).map(code=>geometry('municipios-'+code+'.geojson'))));
+      if(version!==mapVersion)return;
+      const capital=geo.features.find(f=>f.properties.code==='11'),region=geo.features.find(f=>f.properties.code==='25');
+      const polygons=f=>f.geometry.type==='Polygon'?[f.geometry.coordinates]:f.geometry.coordinates;
+      if(capital&&region){region.geometry={type:'MultiPolygon',coordinates:[...polygons(region),...polygons(capital)]};geo.features=geo.features.filter(f=>f.properties.code!=='11');}
+      const ns='http://www.w3.org/2000/svg',svg=document.createElementNS(ns,'svg');svg.setAttribute('role','group');svg.setAttribute('aria-label','Meta turística de Colombia por municipio; navegación por departamento');
+      const commands=f=>polygons(f).flatMap(p=>p.map(r=>r.map((v,i)=>(i?'L':'M')+v[0]+' '+(-v[1])).join(' ')+'Z')).join(' ');
       const points=[];function walk(c){if(typeof c[0]==='number')points.push(c);else c.forEach(walk);}geo.features.forEach(f=>walk(f.geometry.coordinates));
-      const xs=points.map(p=>p[0]),ys=points.map(p=>-p[1]);const minX=Math.min(...xs),maxX=Math.max(...xs),minY=Math.min(...ys),maxY=Math.max(...ys),w=maxX-minX,h=maxY-minY,pad=Math.max(w,h)*.09;
+      const xs=points.map(p=>p[0]),ys=points.map(p=>-p[1]),minX=Math.min(...xs),maxX=Math.max(...xs),minY=Math.min(...ys),maxY=Math.max(...ys),w=maxX-minX,h=maxY-minY,pad=Math.max(w,h)*.09;
       svg.setAttribute('viewBox',`${minX-pad} ${minY-pad} ${w+pad*2} ${h+pad*2}`);
-      // Bogotá and its surrounding department share one visual enlargement.
-      // Their administrative codes, guide associations and audience scopes stay distinct.
-      const focusCodes=department==='25'?['25','11']:[department];
-      const focusPoints=[];const collectFocus=c=>{if(typeof c[0]==='number')focusPoints.push(c);else c.forEach(collectFocus);};
-      geo.features.filter(f=>focusCodes.includes(f.properties.code)).forEach(f=>collectFocus(f.geometry.coordinates));
-      geo.features.forEach(f=>{const code=f.properties.code==='11'?'25':f.properties.code,name=code==='25'?'Cundinamarca':f.properties.name,state=featureState(code),path=document.createElementNS(ns,'path');const polygons=f.geometry.type==='Polygon'?[f.geometry.coordinates]:f.geometry.coordinates;
-        const commands=polygons.flatMap(p=>p.map(r=>r.map((v,i)=>(i?'L':'M')+v[0]+' '+(-v[1])).join(' ')+'Z')).join(' ');
-        path.setAttribute('d',commands);path.setAttribute('fill-rule','evenodd');path.setAttribute('class',state);path.dataset.code=code;path.setAttribute('tabindex','0');path.setAttribute('role','button');path.setAttribute('aria-label',name+' · '+labels[state]);path.setAttribute('aria-pressed',String(code===department));
-        if(department&&focusCodes.includes(code)){const xx=focusPoints.map(p=>p[0]),yy=focusPoints.map(p=>-p[1]),x0=Math.min(...xx),x1=Math.max(...xx),y0=Math.min(...yy),y1=Math.max(...yy),cx=(x0+x1)/2,cy=(y0+y1)/2,scale=Math.max(1.35,Math.min(3.5,Math.max(w,h)*.22/Math.max(x1-x0,y1-y0)));const tx=Math.max(minX-pad+(x1-x0)*scale/2,Math.min(cx,maxX+pad-(x1-x0)*scale/2)),ty=Math.max(minY-pad+(y1-y0)*scale/2,Math.min(cy,maxY+pad-(y1-y0)*scale/2));path.setAttribute('transform',`translate(${tx} ${ty}) scale(${scale}) translate(${-cx} ${-cy})`);path.classList.add('department-focus');}
-        const title=document.createElementNS(ns,'title');title.textContent=name+' · '+labels[state];path.append(title);
-        const choose=()=>{setDepartment(code);window.elMeasure?.('map_select',{department});};path.addEventListener('click',choose);path.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();choose();}});path.addEventListener('pointerenter',()=>{$('map-hint').textContent=name+' · '+labels[state];});path.addEventListener('focus',()=>{$('map-hint').textContent=name+' · '+labels[state];});svg.append(path);
+      const stateByCode=new Map(data.departments.flatMap(dep=>dep.municipalities.map(m=>[m.code,m.status])));
+      geo.features.forEach(f=>{
+        const code=f.properties.code,dep=data.departments.find(x=>x.code===code);if(!dep)return;
+        const group=document.createElementNS(ns,'g');group.dataset.code=code;group.setAttribute('tabindex','0');group.setAttribute('role','button');group.setAttribute('aria-pressed',String(code===department));
+        const description=dep.name+': '+dep.covered_municipalities+' de '+dep.municipality_total+' municipios seleccionados con guía publicada';group.setAttribute('aria-label',description);
+        units.flatMap(x=>x.features).filter(m=>(m.properties.department_code==='11'?'25':m.properties.department_code)===code).forEach(m=>{
+          const path=document.createElementNS(ns,'path'),state=stateByCode.get(m.properties.code)||'outside_scope';path.setAttribute('d',commands(m));path.setAttribute('fill-rule','evenodd');path.setAttribute('class','municipality '+state);
+          const title=document.createElementNS(ns,'title');title.textContent=m.properties.name+' · '+labels[state];path.append(title);path.addEventListener('pointerenter',()=>{$('map-hint').textContent=title.textContent+' · Selecciona para ver '+dep.name;});group.append(path);
+        });
+        const outline=document.createElementNS(ns,'path');outline.setAttribute('d',commands(f));outline.setAttribute('class','department-outline');group.append(outline);
+        if(code===department){const pp=[];const collect=c=>{if(typeof c[0]==='number')pp.push(c);else c.forEach(collect);};collect(f.geometry.coordinates);const xx=pp.map(p=>p[0]),yy=pp.map(p=>-p[1]),x0=Math.min(...xx),x1=Math.max(...xx),y0=Math.min(...yy),y1=Math.max(...yy),cx=(x0+x1)/2,cy=(y0+y1)/2,scale=Math.max(1.35,Math.min(3.5,Math.max(w,h)*.22/Math.max(x1-x0,y1-y0)));const tx=Math.max(minX-pad+(x1-x0)*scale/2,Math.min(cx,maxX+pad-(x1-x0)*scale/2)),ty=Math.max(minY-pad+(y1-y0)*scale/2,Math.min(cy,maxY+pad-(y1-y0)*scale/2));group.setAttribute('transform',`translate(${tx} ${ty}) scale(${scale}) translate(${-cx} ${-cy})`);group.classList.add('department-focus');}
+        const choose=()=>{setDepartment(code);window.elMeasure?.('map_select',{department});};group.addEventListener('click',choose);group.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();choose();}});group.addEventListener('focus',()=>{$('map-hint').textContent=description;});svg.append(group);
       });
-      const focused=svg.querySelector('.department-focus');svg.querySelectorAll('.department-focus').forEach(path=>svg.append(path));$('map').classList.toggle('has-selection',!!focused);$('map').replaceChildren(svg);
-    }catch(e){if(version===mapVersion)$('map').replaceChildren(el('p','El mapa no pudo cargarse. Puedes consultar la misma información con las listas de departamentos y municipios.','map-error'));}
+      svg.querySelectorAll('.department-focus').forEach(group=>svg.append(group));$('map').classList.toggle('has-selection',!!department);$('map').replaceChildren(svg);
+    }catch(e){if(version===mapVersion)$('map').replaceChildren(el('p','El mapa no pudo cargarse. Puedes consultar la selección turística en la lista.','map-error'));}
     finally{if(version===mapVersion)$('map').setAttribute('aria-busy','false');}
   }
   let audienceVersion=0,audienceDestination='';
@@ -142,13 +147,14 @@
     });
   });
   window.addEventListener('hashchange',()=>{activateTab(tabFromHash(),false);if(['#como-medimos','#invitar'].includes(location.hash))$(location.hash.slice(1)).scrollIntoView({block:'start'});});
+  $('more-places').addEventListener('click',()=>{visibleLimit+=12;renderPlaces();});
   async function init(){
     try{
       data=await json(new URL('api/cobertura.php',root));if(!Array.isArray(data.departments)||!data.country)throw Error('Respuesta inválida');
       // Public navigation groups the capital with Cundinamarca, preserving source geography.
       const capital=data.departments.find(d=>d.code==='11'),region=data.departments.find(d=>d.code==='25');
       if(capital&&region){
-        region.places.push(...capital.places);region.municipalities.push(...capital.municipalities);
+        region.name='Cundinamarca y Bogotá D. C.';region.places.push(...capital.places);region.municipalities.push(...capital.municipalities);
         region.catalog_count+=capital.catalog_count;region.covered_municipalities+=capital.covered_municipalities;region.municipality_total+=capital.municipality_total;
         Object.keys(region.counts).forEach(key=>region.counts[key]+=capital.counts[key]||0);
         region.coverage_percent=data.publication_source_available&&region.municipality_total?Math.round(10000*region.covered_municipalities/region.municipality_total)/100:null;

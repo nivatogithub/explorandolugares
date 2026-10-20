@@ -2,30 +2,39 @@
   "date": "2026-10-19",
   "branch": "correccion/cobertura-turistica",
   "base_commit": "5a7fb8a",
-  "status": "calculo_implementado_presentacion_pendiente",
+  "status": "implementado_en_vista_local_para_revision",
   "implemented": [
     "Selección pública versionada de 221 unidades municipales",
     "Porcentaje sobre municipios seleccionados nacional y departamental",
     "Estados fuera del alcance actual",
     "Guías publicadas separadas del porcentaje territorial",
-    "Abejorral P2 y fuentes de revisión"
+    "Abejorral P2 y fuentes de revisión",
+    "Relleno municipal según selección y estado con navegación solo departamental",
+    "Departamento ampliado con borde naranja conservando estados",
+    "Lista inicial de 12 y botón Mostrar más",
+    "Publicaciones municipales nuevas reconocidas por identidad exacta de departamento y slug",
+    "Agrupación visual Cundinamarca y Bogotá con meta combinada"
   ],
   "checks_passed": [
     "coverage-service.php",
     "coverage-selected-scope.php",
-    "Sintaxis PHP y JavaScript"
+    "Sintaxis PHP y JavaScript",
+    "test_coverage_package.py: 5 pruebas",
+    "Navegador local: 9 de 221, 4,07%; Antioquia 4 de 24, 16,67%",
+    "Mapa: 1122 polígonos administrativos y selección exclusivamente departamental",
+    "Filtros y Mostrar más en navegador",
+    "Vista estrecha: ancho del documento igual al de ventana; sin desbordamiento horizontal",
+    "Consola del navegador sin errores"
   ],
   "pending": [
-    "Completar leyenda y representación clara de municipios seleccionados sin volver a navegación municipal independiente",
-    "Mostrar meta seleccionada y alcance geográfico separados; resolver agrupación Bogotá/Cundinamarca con explicación",
-    "Validación visual desktop y móvil con base local",
-    "Revisar paquete y comparación contra producción y main antes de integrar",
-    "Subir rama remota y preparar PR de alcance acotado",
-    "Integrar a preprod para aprobación humana y posterior despliegue del commit aprobado"
+    "Revisión humana de la vista local",
+    "Subir rama remota y preparar PR cuando corresponda integrar",
+    "Validar paridad del paquete antes de producción"
   ],
   "release_notes": [
     "No se ha desplegado ni modificado medición de visitas.",
     "La rama parte de preprod, que contiene trabajo de otros workers: no realizar merge completo a main sin revisar diferencias.",
     "El origen de selección y la popularidad medida son conceptos distintos. No etiquetar fuera del alcance como no turístico."
-  ]
+  ],
+  "preview_url": "http://127.0.0.1:8088/cobertura/colombia/?departamento=05#cobertura"
 }
