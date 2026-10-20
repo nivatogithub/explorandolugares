@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 require_once __DIR__.'/BusinessCategories.php';
 require_once __DIR__.'/ExperienceOperatorAddon.php';
+require_once __DIR__.'/BusinessContactVisibility.php';
 
 final class DestinationRepository
 {
@@ -65,6 +66,10 @@ final class DestinationRepository
             $contacts=$this->pdo->prepare("SELECT business_id,channel,contact_value,display_order FROM business_contacts WHERE is_public=1 AND business_id IN ({$marks}) ORDER BY display_order");
             $contacts->execute($businessIds);
             foreach ($contacts->fetchAll(PDO::FETCH_ASSOC) as $contact) $destination['public_contacts'][(int)$contact['business_id']][]=$contact;
+            foreach ($destination['businesses'] as $business) {
+                $businessId=(int)$business['id'];
+                $destination['public_contacts'][$businessId]=BusinessContactVisibility::filter((string)$business['plan_code'],$destination['public_contacts'][$businessId]??[]);
+            }
             $plans=array_values(array_unique(array_column($destination['businesses'],'plan_code')));
             $planMarks=implode(',',array_fill(0,count($plans),'?'));
             $featureQuery=$this->pdo->prepare("SELECT plan_code,feature_code FROM subscription_plan_features WHERE included=1 AND plan_code IN ({$planMarks})");

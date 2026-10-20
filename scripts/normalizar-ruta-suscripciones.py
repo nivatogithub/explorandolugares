@@ -22,6 +22,9 @@ def normalize(public):
         if page.is_file() and page.suffix in {'.html', '.php', '.js', '.json', '.xml'}:
             source = page.read_text()
             updated = source.replace(OLD, NEW)
+            for quote in ('"', "'"):
+                for prefix in ('', '../', './'):
+                    updated = updated.replace('href=' + quote + prefix + 'planes/', 'href=' + quote + prefix + 'suscripciones/')
             if updated != source:
                 page.write_text(updated)
     for prefix in ('', 'en/', 'pt-br/'):

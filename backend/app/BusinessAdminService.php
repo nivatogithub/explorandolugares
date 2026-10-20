@@ -150,9 +150,9 @@ final class BusinessAdminService
 
     private function syncContacts(int $id,array $input,array $features,array $existing=[]):void
     {
-        $allowed=['email','phone','phone_fixed','whatsapp','website','instagram','facebook'];$clean=[];
+        $allowed=['email','phone','phone_fixed','whatsapp','website','instagram','facebook','linkedin'];$clean=[];
         foreach($allowed as $channel){$enabled=in_array(in_array($channel,['email','phone','whatsapp'],true)?'direct_contact':'business_page',$features,true);$row=is_array($input[$channel]??null)?$input[$channel]:[];$previous=$existing[$channel]??[];$value=trim((string)($enabled?($row['value']??''):($previous['contact_value']??'')));if($value==='')continue;
-            $ok=match($channel){'email'=>(bool)filter_var($value,FILTER_VALIDATE_EMAIL),'website','instagram','facebook'=>(bool)filter_var($value,FILTER_VALIDATE_URL)&&in_array(parse_url($value,PHP_URL_SCHEME),['https','http'],true),default=>(bool)preg_match('/^\+?[0-9() .-]{7,24}$/D',$value)};
+            $ok=match($channel){'email'=>(bool)filter_var($value,FILTER_VALIDATE_EMAIL),'website','instagram','facebook','linkedin'=>(bool)filter_var($value,FILTER_VALIDATE_URL)&&in_array(parse_url($value,PHP_URL_SCHEME),['https','http'],true),default=>(bool)preg_match('/^\+?[0-9() .-]{7,24}$/D',$value)};
             if(!$ok)throw new RuntimeException('Revisa el dato de contacto de '.strtoupper($channel).'.');$isPublic=$enabled&&!empty($row['public'])?1:($enabled?0:0);$clean[]=[$channel,$value,$isPublic];
         }
         $this->pdo->prepare('DELETE FROM business_contacts WHERE business_id=?')->execute([$id]);$q=$this->pdo->prepare('INSERT INTO business_contacts(business_id,channel,contact_value,is_public,display_order) VALUES(?,?,?,?,?)');foreach($clean as $order=>$row)$q->execute([$id,$row[0],$row[1],$row[2],$order]);

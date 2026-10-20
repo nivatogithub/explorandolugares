@@ -18,6 +18,7 @@ class SubscriptionRouteTest(unittest.TestCase):
                 old = public / prefix / route.OLD / 'index.html'
                 old.parent.mkdir(parents=True)
                 old.write_text('<link rel="canonical" href="https://explorandolugares.com/' + prefix + route.OLD + '"><p>Oferta comercial</p>')
+            (public / 'menu.html').write_text('<a href="../planes/index.html">Suscripciones</a>')
             (public / 'checkout.php').write_text('<a href="/' + route.OLD + '?plan=featured#tarifas">Volver</a>')
             route.normalize(public)
             first = {p.relative_to(public): p.read_bytes() for p in public.rglob('*') if p.is_file()}
@@ -33,6 +34,7 @@ class SubscriptionRouteTest(unittest.TestCase):
             self.assertIn(route.NEW + '?plan=featured#tarifas', (public / 'checkout.php').read_text())
             self.assertEqual((public / '.htaccess').read_text().count(route.RULE), 1)
             self.assertIn('[R=301,L,NE]', route.RULE)
+            self.assertIn('../suscripciones/index.html', (public / 'menu.html').read_text())
 
 
 if __name__ == '__main__':
