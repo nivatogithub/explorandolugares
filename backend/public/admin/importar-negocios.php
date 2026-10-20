@@ -37,7 +37,7 @@ try{
         }finally{if($stage!=='')BusinessPackage::removeDirectory($stage);}
         header('Location: negocios.php?tab=importar&importados='.$count.'&destino='.rawurlencode($destinationSlug),true,303);exit;
     }
-}catch(Throwable $exception){$error=$exception instanceof JsonException?'El archivo no tiene JSON válido.':($exception instanceof PDOException?'No se pudo importar el lote. Revisa que las tablas de destinos y negocios estén listas en Base de datos.':$exception->getMessage());if($exception instanceof PDOException)error_log('Explorando Lugares: falló la importación de negocios.');$_SESSION['business_import_error']=$error;header('Location: negocios.php?tab=importar',true,303);exit;}
+}catch(Throwable $exception){if(class_exists('PortalIncidents',false))PortalIncidents::technical($exception,'importar_negocios');$error=$exception instanceof JsonException?'El archivo no tiene JSON válido.':($exception instanceof PDOException?'No se pudo importar el lote. Revisa que las tablas de destinos y negocios estén listas en Base de datos.':$exception->getMessage());if($exception instanceof PDOException)error_log('Explorando Lugares: falló la importación de negocios.');$_SESSION['business_import_error']=$error;header('Location: negocios.php?tab=importar',true,303);exit;}
 // La importación se administra desde la pestaña Negocios > Importar. Se conserva
 // esta ruta para enlaces guardados y para descargar la plantilla de ejemplo.
 header('Location: negocios.php?tab=importar', true, 303);

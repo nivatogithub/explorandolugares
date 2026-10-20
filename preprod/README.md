@@ -222,3 +222,11 @@ La migración `043-account-lifecycle` se aplica en MariaDB local al ejecutar `./
 - Administración → Cuentas: Suspender acceso / Restablecer acceso, motivo obligatorio e historial de responsable y fecha. Las cuentas cerradas requieren confirmación del titular por correo. Deshabilitaciones anteriores se consideran administrativas.
 - Regresiones: `php backend/tests/account-lifecycle.php` y `python3 backend/tests/admin-pages.integration.py` (base desechable y correo simulado). La prueba MariaDB `preprod/probar-ciclo-cuentas.php` se ejecuta por entrada estándar dentro del contenedor con `EL_PREPROD_LOCAL=1`, crea y elimina exclusivamente una base aleatoria `el_test_accounts_*`.
 - La actualización requiere volver a iniciar sesión si la sesión anterior no contiene la prueba privada de credencial vigente. Las cuentas de prueba persistentes se conservan.
+
+### Incidencias técnicas centralizadas
+
+Administración → Sistema → Errores de ejecución permite consultar referencias `EL-…`, fecha, componente y ubicación técnica. El arranque PHP registra excepciones no controladas, errores fatales posteriores a su instalación y avisos no silenciados; los controladores instrumentados registran excepciones técnicas capturadas. No sustituye los registros del hosting ni detecta interrupciones anteriores al arranque o errores de JavaScript. No envía alertas automáticas.
+
+Los registros quedan fuera del directorio público, en `private/incidents`, con permisos privados y rotación entre dos archivos de aproximadamente 1 MiB cada uno. No guardan mensajes originales de excepción, argumentos, formularios, correos, contraseñas, IP ni parámetros de URL. Las validaciones esperadas del formulario no son incidencias técnicas. No requiere migración ni modifica métricas.
+
+Pruebas: `php backend/tests/portal-incidents.php` comprueba privacidad, permisos y rotación; `python3 backend/tests/admin-pages.integration.py` provoca un fallo en un servidor temporal y comprueba respuesta segura y acceso restringido al panel. `php backend/tests/business-account-portal.php` provoca un fallo de inserción: el alta conjunta revierte sin cuenta huérfana; una cuenta existente permanece y admite reintento sin duplicar solicitudes. Esta última inyección utiliza SQLite, no constituye una prueba de concurrencia en MariaDB.

@@ -5,7 +5,7 @@ if(empty($_SESSION['admin'])||time()-(int)($_SESSION['last_seen']??0)>1800){http
 $error='';$privacy=$config['privacy']??[];
 if($_SERVER['REQUEST_METHOD']==='POST'){
  csrf();try{PortalSettings::save(dirname($configFile),$_POST,(int)($_SESSION['admin_account_id']??0));header('Location: configuracion.php?guardado=1',true,303);exit;}
- catch(Throwable $e){http_response_code(400);$error=$e instanceof RuntimeException?$e->getMessage():'No se pudo guardar la configuración privada.';$privacy=array_intersect_key($_POST,array_flip(['operator','contact','retention','retention_en','retention_pt']));}
+ catch(Throwable $e){if(class_exists('PortalIncidents',false))PortalIncidents::technical($e,'configuracion');http_response_code(400);$error=$e instanceof RuntimeException?$e->getMessage():'No se pudo guardar la configuración privada.';$privacy=array_intersect_key($_POST,array_flip(['operator','contact','retention','retention_en','retention_pt']));}
 }
 $mail=$config['account_mail']??[];
 $localMailTest=false;$localMailReady=false;$testFile=dirname(__DIR__,2).'/private/account-mail-test.json';if(!empty($config['local_test'])&&is_file($testFile)&&!is_link($testFile)){$testSettings=json_decode(file_get_contents($testFile),true);$localMailTest=($testSettings['enabled']??false)===true;if($localMailTest){require_once dirname(__DIR__,2).'/app/AccountMailConfiguration.php';try{$testMail=AccountMailConfiguration::resolve($config,(string)($testSettings['recipient']??''));$localMailReady=!$testMail['mailbox']&&$testMail['delivery']->ready();}catch(Throwable){$localMailReady=false;}}}

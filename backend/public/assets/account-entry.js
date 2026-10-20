@@ -85,8 +85,8 @@
   const signIn = () => {
     const link = document.createElement('a');
     link.textContent = copy[0];
-    link.href = '/negocios/acceso/' + (locale === 'es' ? '' : '?lang=' + locale);
-    const register=document.createElement('a');register.href='/negocios/registro/'+(locale==='es'?'':'?lang='+locale);register.textContent=locale==='en'?'Sign up':locale==='pt-br'?'Cadastre-se':'Registrarse';register.className='header-register';bar.replaceChildren(link,register);
+    link.href = '/negocios/acceso/' + ('?lang=' + locale);
+    const register=document.createElement('a');register.href='/negocios/registro/'+('?lang='+locale);register.textContent=locale==='en'?'Sign up':locale==='pt-br'?'Cadastre-se':'Registrarse';register.className='header-register';bar.replaceChildren(link,register);
   };
   async function refreshAccount() {
   try {

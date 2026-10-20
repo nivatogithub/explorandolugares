@@ -95,6 +95,7 @@ with socket.socket() as sock:
     PORT = sock.getsockname()[1]
 TEST_ROUTER=WORK/'router.php'
 TEST_ROUTER.write_text("<?php $path=parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH);if($path==='/cuenta/verificar-correo/'||$path==='/cuenta/verificar-correo'){require __DIR__.'/public/business/verify-email.php';return true;}return require "+repr(str(ROOT/'scripts/php-destinations-router.php'))+";")
+(WORK / 'public/api/fault-probe.php').write_text("<?php require dirname(__DIR__,2).'/app/bootstrap.php'; throw new RuntimeException('secret@example.invalid password=DO_NOT_EXPOSE');")
 PROCESS = subprocess.Popen(['php', '-d', 'opcache.enable=0', '-d', 'disable_functions=mail,curl_exec,fsockopen,pfsockopen,stream_socket_client', '-S', f'127.0.0.1:{PORT}', '-t', str(WORK / 'public'), str(TEST_ROUTER)], env=os.environ | {'EL_DESTINATIONS_DSN': 'sqlite:' + str(DB_PATH), 'EL_PREPROD_LOCAL':'1'}, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 BASE = f'http://127.0.0.1:{PORT}'
 ADMIN = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
@@ -176,6 +177,12 @@ try:
     check(status == 200 and '/destinos/jerico/' not in body and '/negocios/' not in body, 'Despublicar debe retirar URL sin reconstrucción.')
     DB.execute("UPDATE destinations SET publication_status='published' WHERE id=?", (destination_id,)); DB.commit()
 
+    fault_status,fault_body,_=request('/api/fault-probe.php',opener=GUEST)
+    check(fault_status==503 and 'EL-' in fault_body,'Fallo no controlado debe dar referencia y 503.')
+    check('secret@' not in fault_body and 'DO_NOT_EXPOSE' not in fault_body,'Respuesta de fallo filtró datos.')
+    incident_files=list((WORK/'private/incidents').glob('*.jsonl'))
+    check(incident_files,'Falta registro central del fallo no controlado.')
+    check(all('DO_NOT_EXPOSE' not in p.read_text() and 'secret@' not in p.read_text() for p in incident_files),'Incidencias filtraron mensajes originales.')
     paths = [
         ('/admin/index.php', 'Solicitudes de participación'),
         ('/admin/index.php?tab=sistema', 'Solicitudes de participación'),
@@ -191,6 +198,7 @@ try:
         ('/admin/reclamaciones.php', 'Solicitudes anteriores de representación'),
         ('/admin/solicitudes-cuenta.php', 'Solicitudes de cuenta de negocio'),
         ('/admin/usuarios.php', 'Cuentas'),
+        ('/admin/incidencias.php', 'Errores de ejecución'),
         ('/admin/suscripciones.php', 'Suscripciones'),
         ('/admin/inversionistas.php', 'Inteligencia de negocio e inversión'),
         ('/admin/contactos-negocios.php', 'Canales y responsable'),

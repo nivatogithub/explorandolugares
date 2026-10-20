@@ -24,7 +24,7 @@ try {
         if ($action==='delete'&&$id>0) {$service->delete($id);header('Location: destinos.php?saved=deleted',true,303);exit;}
         throw new RuntimeException('Acción no válida.');
     }
-} catch (Throwable $e) { $error=$e instanceof PDOException?'No se guardó el destino. Revisa que el identificador no esté repetido y que la base tenga la migración dinámica.':$e->getMessage();http_response_code(400); }
+} catch (Throwable $e) {if(class_exists('PortalIncidents',false))PortalIncidents::technical($e,'destinos'); $error=$e instanceof PDOException?'No se guardó el destino. Revisa que el identificador no esté repetido y que la base tenga la migración dinámica.':$e->getMessage();http_response_code(400); }
 $record=$id>0?$service->find($id):null;
 if($id>0&&!$record&&$error===''){$error='No existe un destino con ese ID.';http_response_code(404);}
 $rows=$service->all();$media=$service->mediaOptions();$locales=['es'=>'Español','en'=>'English','pt-BR'=>'Português (Brasil)'];

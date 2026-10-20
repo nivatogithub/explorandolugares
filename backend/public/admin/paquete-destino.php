@@ -18,7 +18,7 @@ try {
     $base=rtrim(sys_get_temp_dir(),DIRECTORY_SEPARATOR).DIRECTORY_SEPARATOR.'el-destination-package-'.bin2hex(random_bytes(8));
     if (!mkdir($base,0700)) throw new RuntimeException('No se pudo preparar el paquete de forma temporal.');
     try { $parsed=DestinationPackage::readZip((string)$upload['tmp_name'],$base); }
-    catch (Throwable $error) { DestinationPackage::removeDirectory($base); throw $error; }
+    catch (Throwable $error) {if(class_exists('PortalIncidents',false))PortalIncidents::technical($error,'paquete_destino'); DestinationPackage::removeDirectory($base); throw $error; }
     foreach (($_SESSION['destination_package_staging']??[]) as $oldToken=>$oldPackage) {
         if (!is_array($oldPackage)) continue;
         DestinationPackage::removeDirectory((string)($oldPackage['directory']??''));
@@ -31,4 +31,4 @@ try {
     $token=bin2hex(random_bytes(24));
     $_SESSION['destination_package_staging'][$token]=['directory'=>$base,'files'=>$files,'expires'=>time()+1800];
     json_response(['manifest'=>$parsed['manifest'],'token'=>$token,'images'=>array_map(static fn($name)=>['path'=>$name,'url'=>'paquete-destino-imagen.php?token='.rawurlencode($token).'&file='.rawurlencode($name)],array_keys($files))]);
-} catch (Throwable $error) { json_response(['message'=>$error->getMessage()],400); }
+} catch (Throwable $error) {if(class_exists('PortalIncidents',false))PortalIncidents::technical($error,'paquete_destino'); json_response(['message'=>$error->getMessage()],400); }

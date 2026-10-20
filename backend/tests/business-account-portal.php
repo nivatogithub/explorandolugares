@@ -98,3 +98,20 @@ echo "OK: solicitud vinculada, evidencia de representación requerida, aprobaci�
 $pdo->exec("INSERT INTO subscription_plans(code) VALUES('free'),('featured');INSERT INTO business_subscriptions(id,business_id,plan_code,status,starts_at,ends_at) VALUES(100,1,'free','active',datetime('now','-1 day'),NULL),(101,1,'featured','pending_payment',NULL,NULL)");
 $owned=$service->businesses($accountId);$owned=array_values(array_filter($owned,static fn($row)=>(int)$row['id']===1));
 portal_check($owned[0]['active_plan_code']==='free'&&$owned[0]['plan_code']==='featured'&&$owned[0]['subscription_status']==='pending_payment','A pending paid request must not replace the active free subscription in the customer portal.');
+
+// Fail after the account INSERT: the account and application must roll back together.
+$beforeAccounts=(int)$pdo->query('SELECT COUNT(*) FROM accounts')->fetchColumn();
+$beforeApplications=(int)$pdo->query('SELECT COUNT(*) FROM business_account_applications')->fetchColumn();
+$pdo->exec("CREATE TRIGGER fail_application BEFORE INSERT ON business_account_applications BEGIN SELECT RAISE(ABORT,'injected failure'); END");
+$input=['application_type'=>'new_business','destination_id'=>'1','category_code'=>'food','business_name'=>'Negocio de fallo sintético','relationship_code'=>'owner','phone'=>'3230000000','message'=>'','consent'=>'1'];
+$failed=false;try{$service->register('Responsable sintético','rollback@example.test','ClaveSintetica123',$input);}catch(PDOException){$failed=true;}
+portal_check($failed&&!$pdo->inTransaction(),'Injected failure must leave no active transaction.');
+portal_check((int)$pdo->query('SELECT COUNT(*) FROM accounts')->fetchColumn()===$beforeAccounts,'Failed combined registration must not leave an orphan account.');
+portal_check((int)$pdo->query('SELECT COUNT(*) FROM business_account_applications')->fetchColumn()===$beforeApplications,'Failed combined registration must not leave an application.');
+$failed=false;try{$service->register('','','',$input,[],null,null,null,$accountId);}catch(PDOException){$failed=true;}
+portal_check($failed&&$service->current($accountId)!==null,'A failed business request must preserve an existing active account.');
+$pdo->exec('DROP TRIGGER fail_application');
+$service->register('','','',$input,[],null,null,null,$accountId);
+$repeatRejected=false;try{$service->register('','','',$input,[],null,null,null,$accountId);}catch(RuntimeException){$repeatRejected=true;}
+portal_check($repeatRejected&&(int)$pdo->query('SELECT COUNT(*) FROM business_account_applications')->fetchColumn()===$beforeApplications+1,'Repeated submission must not duplicate the pending request.');
+echo "OK: injected INSERT failure rolls back new account and application; existing account survives; retry creates exactly one request.\n";
