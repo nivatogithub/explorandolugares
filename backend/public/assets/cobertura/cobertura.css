@@ -362,3 +362,17 @@
 #contenido button.island-card { border:1px solid #9acbab; border-radius:10px; padding:10px; color:var(--el-text); font:inherit; cursor:pointer; background:rgba(99,183,124,.14); }
 #contenido button.island-card.island-selected { background:rgba(99,183,124,.3); border-color:#24613e; }
 #contenido .island-card[aria-disabled="true"] { cursor:default; }
+
+/* Leyenda visible y pendientes en naranja translúcido. */
+#contenido .map path.municipality.pending { fill:#e99a42; fill-opacity:.32; }
+#contenido .island-card path[data-status="pending"] { fill:#e99a42; fill-opacity:.32; }
+#contenido .map-visible-key { display:flex; flex-wrap:wrap; gap:12px 28px; padding:14px 16px; margin:12px 0; background:var(--el-card); border:1px solid var(--el-border); border-radius:var(--el-radius-card); font-size:12px; }
+#contenido .map-visible-key section { display:flex; flex-wrap:wrap; align-items:center; gap:8px 16px; }
+#contenido .map-visible-key h3 { flex-basis:100%; margin:0; font-size:13px; }
+#contenido .map-visible-key span { display:inline-flex; align-items:center; gap:7px; }
+#contenido .map-visible-key i { display:inline-block; width:16px; height:13px; border-radius:3px; border:1px solid rgba(0,0,0,.12); }
+#contenido .map-visible-key .key-published { background:#2f7d50; }
+#contenido .map-visible-key .key-pending { background:rgba(233,154,66,.32); }
+#contenido .map-visible-key .key-outside { background:#E9EBEE; }
+#contenido .map-visible-key .key-available { background:rgba(99,183,124,.14); border-color:#2f7d50; }
+#contenido .map-visible-key .key-selected { background:rgba(99,183,124,.3); border:2px solid #24613e; }
