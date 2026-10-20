@@ -4,6 +4,22 @@ Estas reglas reducen las autorizaciones repetidas y el trabajo innecesario. Se a
 
 ## Preproducción obligatoria
 
+### Coherencia obligatoria desde el 20 de octubre de 2026
+
+Main debe reconstruir la última versión validada de producción: coincidencia de rutas y SHA-256 de TODO el paquete con el manifiesto remoto confirmado. Configuración privada, datos vivos e imágenes cargadas por usuarios se conservan aparte; nunca importar la base local sobre producción.
+
+1. Actualizar referencias Git y consultar el manifiesto remoto. Un solo responsable publica a la vez. Una entrega interrumpida o una referencia cambiada exige reconciliación antes de continuar.
+2. Integrar main en preprod ANTES de aprobar. Revisar cada conflicto y conservar las funcionalidades publicadas. Prohibidos ours/theirs global, reset y force-push para resolver la integración.
+3. Construir desde un commit limpio y revisar todo el delta generado. `desplegar-sftp.py` bloquea una selección que deja otros cambios desplegables del candidato sin publicar. Separar las fuentes o revisar/aprobar un alcance completo; no publicar una parte y fusionar todo después.
+4. Regresión automatizada y revisión visual pertinente sobre el paquete compilado. Distinguir pruebas reales de simulaciones. Aprobación humana del commit y alcance exactos; cambios funcionales posteriores requieren nueva revisión.
+5. Antes de migrar: respaldo privado verificable, restauración ensayada en base aislada y precondiciones de migración comprobadas. Usar respaldo reciente al publicar si ingresaron datos. Nunca reiniciar estadísticas ni sustituir datos por los de preprod.
+6. Despliegue incremental recuperable, dependencias antes que consumidores y migraciones identificadas antes del código que las necesita. No se promete atomicidad global entre archivos ni indisponibilidad cero.
+7. Validar producción: páginas, recursos, cuentas, base de datos y conservación de estadísticas. No introducir datos ficticios ni enviar mensajes reales sin autorización específica. Informe privado: `schema_version: 1`, `commit` igual al manifiesto, `manifest_sha256` mediante `release_guard.manifest_digest`, y comprobaciones booleanas verdaderas, sustentadas por evidencia, en `checks`: `public_pages`, `accounts`, `statistics`, `assets`, `database`.
+8. `python3 scripts/sincronizar-main-produccion.py --validation-report INFORME.json` consulta producción, exige el candidato publicado y el informe exacto, reconstruye todo y vuelve a consultar el manifiesto. Solo si pasa, `--apply` actualiza main local con `--ff-only`. No publica ni hace push automático. Después enviar las referencias autorizadas y comprobar main/preprod local y remoto. Guardar el recibo fuera de Git; no introducir un commit de código adicional solo para registrar la entrega.
+9. Limpiar la contingencia de código solo tras validar; conservar respaldos de base según política. Rollback de código nunca restaura una base antigua sobre datos nuevos. Reconciliar main con la versión recuperada antes de otro despliegue.
+
+Ante una petición de saltarse pasos, recordar brevemente la regla y el riesgo concreto; para urgencias usar un hotfix mínimo por el mismo circuito. Estos controles locales no reemplazan protección de ramas en GitHub ni impiden comandos manuales externos. No presentarlos como garantía absoluta.
+
 El flujo vigente está en `PREPRODUCCION.md`: integrar en `preprod`, levantar la copia local con Podman, revisar y recibir aprobación explícita del propietario para ese commit, desplegar a producción desde `preprod`, validar y solo entonces integrar el mismo commit en `main`. Una aprobación anterior de otro commit no autoriza publicar esta versión. No desplegar desde ramas de workers.
 
 ## Regla principal: una autorización por tarea

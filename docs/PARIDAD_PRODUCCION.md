@@ -1,5 +1,9 @@
 # Paridad de main, cobertura y producción
 
+## Control vigente · 20/10/2026
+
+La integración main → preprod se resolvió en `50ed790`, conservando el código probado de cuentas, suscripciones y cobertura y recuperando la documentación de publicaciones anteriores. Es preparación, no publicación. La reconstrucción del main antiguo difería de 19 archivos publicados: una entrega parcial no demostraba paridad completa. Aplicar la regla de `REGLAS_OPERATIVAS_DESPLIEGUE.md` y `scripts/sincronizar-main-produccion.py`. Main solo avanza tras validar producción y comprobar que su reconstrucción completa coincide con el manifiesto confirmado. No declarar cerrada la reconciliación sin esa evidencia operativa.
+
 Reconciliación del 16 de octubre de 2026. No crea etiquetas ni despliega cambios.
 
 ## Qué se corrigió
