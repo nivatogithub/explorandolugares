@@ -175,7 +175,10 @@
       data.departments.filter(d=>d.counts.published>0).slice().sort((a,b)=>a.name.localeCompare(b.name,'es')).forEach(d=>$('audience-department').append(option(d.code,d.name)));
       $('audience-department').addEventListener('change',e=>setDepartment(e.target.value));$('audience-destination').addEventListener('change',e=>{audienceDestination=e.target.value;renderAudience();});
       $('country-button').addEventListener('click',()=>{activeSector='';document.querySelectorAll('[data-map-sector]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mapSector==='')));setDepartment('');});$('audience-period').addEventListener('change',renderAudience);
-      const params=new URL(location.href).searchParams;const sectorAlias={sur:'oriente',insular:'caribe',occidente:'andina',orinoquia:'oriente',amazonia:'oriente'};const requestedSector=sectorAlias[params.get('sector')]||params.get('sector');if(sectors[requestedSector]){activeSector=requestedSector;document.querySelectorAll('[data-map-sector]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mapSector===activeSector)));}const start=params.get('departamento')||'';setDepartment(data.departments.some(d=>d.code===(start==='11'?'25':start)&&d.counts.published>0)?start:'');
+      // Cada apertura comienza en Colombia completa, sin selección previa.
+      activeSector='';
+      document.querySelectorAll('[data-map-sector]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mapSector==='')));
+      setDepartment('');
     }catch(e){$('notice').hidden=false;$('notice').textContent='No pudimos cargar la cobertura. Vuelve a intentar más tarde; puedes seguir explorando las guías desde Destinos.';$('map').replaceChildren(el('p','Información temporalmente no disponible.','map-error'));$('map').setAttribute('aria-busy','false');$('updated').textContent='Sin actualización disponible.';}
   }
   // Native disclosures retain full content without JS. Apply defaults only on breakpoint changes.
