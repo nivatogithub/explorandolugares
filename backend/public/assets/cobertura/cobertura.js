@@ -1,6 +1,6 @@
 (() => {
   'use strict';
-  const labels={published:'Publicado',in_progress:'En preparación',pending:'Pendiente',unknown:'Sin confirmación',untracked:'Pendiente de incorporar'};
+  const labels={published:'Publicado',in_progress:'En preparación',pending:'Por desarrollar',unknown:'Sin confirmación',untracked:'Fuera del alcance actual',outside_scope:'Fuera del alcance actual'};
   const $=id=>document.getElementById(id), root=new URL('../../',location.href);
   const el=(tag,text,className)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(className)n.className=className;return n;};
   const normal=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
@@ -16,7 +16,7 @@
     $('detail-title').textContent=d?'Estado de las guías':'Guías para explorar';$('detail-description').textContent=d?'Estas son las guías del departamento que forman parte de nuestro catálogo.':'Selecciona un departamento o busca entre los destinos del catálogo nacional.';
     $('department-summary').hidden=!d;
     if(d){$('department-percent').textContent=d.coverage_percent===null?'Sin confirmar':d.coverage_percent.toLocaleString('es-CO')+' %';
-      $('department-count').textContent=(data.publication_source_available?`${d.counts.published} ${d.counts.published===1?'guía publicada':'guías publicadas'}`:'Publicación sin confirmar')+` · ${d.covered_municipalities} de ${d.municipality_total} ${d.code==='25'?'municipios y distritos':'municipios'} con guía publicada. No mide cobertura de comercios.`;
+      $('department-count').textContent=(data.publication_source_available?`${d.counts.published} ${d.counts.published===1?'guía publicada':'guías publicadas'}`:'Publicación sin confirmar')+` · ${d.covered_municipalities} de ${d.municipality_total} ${d.code==='25'?'municipios y distritos':'municipios'} seleccionados con guía publicada. No mide cobertura de comercios.`;
     }
     renderPlaces();renderAudience();
   }
@@ -154,8 +154,8 @@
         region.coverage_percent=data.publication_source_available&&region.municipality_total?Math.round(10000*region.covered_municipalities/region.municipality_total)/100:null;
         data.departments=data.departments.filter(d=>d.code!=='11');
       }
-      $('country-published').textContent=data.publication_source_available?data.country.counts.published:'—';$('country-percent').textContent=data.country.coverage_percent===null?'Sin confirmar':data.country.coverage_percent.toLocaleString('es-CO')+' %';$('country-denominator').textContent=`${data.country.covered_municipalities} de ${data.country.municipality_total} municipios con guía publicada`;
-    $('country-total').textContent=data.publication_source_available?'Guías públicas de Colombia consultadas en el portal':'Publicación temporalmente sin confirmar';$('catalog-scope').textContent='Nuestra meta es cubrir todos los municipios de Colombia y sus destinos turísticos. Las guías se incorporan progresivamente, por grupos de prioridad y después de revisar su contenido.';$('country-progress').textContent=data.country.counts.in_progress;
+      $('country-published').textContent=data.publication_source_available?data.country.counts.published:'—';$('country-percent').textContent=data.country.coverage_percent===null?'Sin confirmar':data.country.coverage_percent.toLocaleString('es-CO')+' %';$('country-denominator').textContent=`${data.country.covered_municipalities} de ${data.country.municipality_total} municipios seleccionados con guía publicada`;
+    $('country-total').textContent=data.publication_source_available?'Guías públicas de Colombia consultadas en el portal':'Publicación temporalmente sin confirmar';$('catalog-scope').textContent='Nuestra meta inicial reúne 221 municipios y unidades territoriales seleccionados por su oferta turística. El porcentaje mide municipios seleccionados con guía publicada; no todos los municipios de Colombia ni todos sus atractivos. La selección puede ampliarse con nuevos descubrimientos.';$('country-progress').textContent=data.country.counts.in_progress;
       if(!data.publication_source_available){$('notice').hidden=false;$('notice').textContent='No podemos confirmar ahora cuántas guías están publicadas. Mostramos sin dato, no un cero.';}
       $('updated').textContent='Estado consultado: '+new Intl.DateTimeFormat('es-CO',{dateStyle:'medium',timeStyle:'short',timeZone:'America/Bogota'}).format(new Date(data.checked_at))+' (Colombia). Catálogo: '+data.universe_version+'.';
       data.departments.slice().sort((a,b)=>a.name.localeCompare(b.name,'es')).forEach(d=>$('department').append(option(d.code,d.name)));
