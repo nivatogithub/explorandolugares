@@ -317,3 +317,13 @@
 #contenido .map path.municipality.department-selectable { cursor: pointer; }
 #contenido .map g.department-focus path.department-outline { stroke: var(--el-accent); stroke-width: 3; stroke-linejoin: round; }
 #contenido .map g:focus-visible path.department-outline { stroke: var(--el-focus); stroke-width: 3; }
+
+/* Ensayo de lectura: más espacio para el mapa, con navegación departamental. */
+#contenido .explorer { grid-template-columns: minmax(0,1fr); }
+#contenido .map { height: 640px; overflow: hidden; }
+#contenido .map svg { overflow: hidden; }
+#contenido .map-controls { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
+#contenido .map-controls button { min-width: 44px; min-height: 44px; padding: 8px 12px; border: 1px solid var(--el-control-border); border-radius: var(--el-radius-field); background: var(--el-card); color: var(--el-text); cursor: pointer; }
+#contenido .map-controls button:hover, #contenido .map-controls button:focus-visible { border-color: var(--el-action); background: var(--el-hover); }
+@media(min-width:1100px){ #contenido .map-panel { border-right: 0; } }
+@media(max-width:640px){ #contenido .map { height: 460px; } }
