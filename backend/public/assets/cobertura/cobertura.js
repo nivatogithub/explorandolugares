@@ -168,7 +168,7 @@
     activeSector=button.dataset.mapSector;savedMapView=null;
     document.querySelectorAll('[data-map-sector]').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));
     if(department&&activeSector&&!sectors[activeSector].includes(department)){department='';audienceDestination='';updateUrl();renderDetail();}
-    updateUrl();renderMap();
+    updateUrl();renderMap().then(()=>{$('map-title').scrollIntoView({behavior:'smooth',block:'start'});});
   }));
   $('more-places').addEventListener('click',()=>{visibleLimit+=12;renderPlaces();});
   async function init(){
