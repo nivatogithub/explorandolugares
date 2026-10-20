@@ -12,7 +12,7 @@ class Client:
  def __init__(self):self.opener=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
  def request(self,path,data=None,files=None):
   assert path.startswith('/') and not path.startswith('//'),'Ruta fuera del entorno'
-  headers={};body=None
+  headers={'X-EL-Local-Regression':'1'};body=None
   if files:
    boundary='----'+secrets.token_hex(16);parts=[]
    for k,v in data.items():parts.append(f'--{boundary}\r\nContent-Disposition: form-data; name="{k}"\r\n\r\n{v}\r\n'.encode())
@@ -138,7 +138,7 @@ try:
   case('AU-05','Cerrar sesión y revocar acceso al portal personal',logout)
   def fixture_businesses():
    d=query('SELECT id FROM destinations WHERE slug=? AND publication_status=?',['jerico','published']);check(d,'Falta Jericó publicado en preprod')
-   category=query('SELECT code FROM service_categories WHERE is_active=1 ORDER BY display_order LIMIT 1')[0]['code'];did=d[0]['id'];aid=account()['id'];other=EMAIL.replace('@','-owner@');query('INSERT INTO accounts(public_id,account_type,display_name,email,status) VALUES(?,"traveler",?,?,"active")',[secrets.token_hex(16),RUN+' propietario',other]);owner=query('SELECT id FROM accounts WHERE email=?',[other])[0]['id']
+   category=query('SELECT code FROM service_categories WHERE is_active=1 ORDER BY display_order LIMIT 1')[0]['code'];did=d[0]['id'];aid=account()['id'];other=EMAIL.replace('@','-owner@');owner_hash=php('echo password_hash(base64_decode("'+base64.b64encode(NEW.encode()).decode()+'"),PASSWORD_DEFAULT);');query('INSERT INTO accounts(public_id,account_type,display_name,email,status,password_hash,email_verified_at) VALUES(?,"traveler",?,?,"active",?,CURRENT_TIMESTAMP)',[secrets.token_hex(16),RUN+' propietario',other,owner_hash]);owner=query('SELECT id FROM accounts WHERE email=?',[other])[0]['id']
    for suffix,claim in [('libre','NO_RECLAMADO'),('ocupado','RECLAMADO'),('publico','NO_RECLAMADO'),('contratacion','RECLAMADO')]:
     publicid=secrets.token_hex(16);name=RUN+' '+suffix
     query('INSERT INTO businesses(public_id,destination_id,category_code,record_origin,slug,information_status,claim_status,operation_status,publication_status) VALUES(?,?,?,"public_import",?,"PUBLICO",?,"ABIERTO","draft")',[publicid,did,category,name,claim]);bid=query('SELECT id FROM businesses WHERE public_id=?',[publicid])[0]['id'];fixtures.append(bid)
@@ -154,15 +154,16 @@ try:
    return did,category
   ctx={}
   def business_setup():
-   ctx['destination'],ctx['category']=fixture_businesses();login(person,NEW);check(person.get('/negocios/portal/?tab=business')[0]==200,'No abre Mis negocios')
+   ctx['destination'],ctx['category']=fixture_businesses();alternate=Client();_,owner_page,_=alternate.get('/negocios/acceso/');alternate.request('/negocios/acceso/',{'csrf':csrf(owner_page),'email':EMAIL.replace('@','-owner@'),'password':NEW});check(alternate.state().get('authenticated'),'No entra propietario sintético alterno');ctx['alternate']=alternate;ctx['alternate_id']=query('SELECT id FROM accounts WHERE email=?',[EMAIL.replace('@','-owner@')])[0]['id'];login(person,NEW);check(person.get('/negocios/portal/?tab=business')[0]==200,'No abre Mis negocios')
   case('NG-00','Preparar negocios sintéticos: libre, asociado y ficha pública con suscripción',business_setup)
   def search():
    url='/negocios/registro/?tipo=business&search=1&'+urllib.parse.urlencode({'destination_id':ctx['destination'],'category':ctx['category'],'q':RUN})
    code,body,_=person.get(url);check(code==200 and RUN in body,'La búsqueda no devuelve negocios sintéticos')
   case('NG-01','Buscar negocio por lugar, categoría y nombre',search)
-  def application(kind,bid=None,plan='free',frequency='monthly'):
-   _,page,_=person.get('/negocios/registro/?tipo=business');fields={'holder_kind':'natural_document','holder_name':RUN,'holder_document_type':'CC','holder_number':'123456789','csrf':csrf(page),'account_type':'business','application_type':kind,'destination_id':ctx['destination'],'category_code':ctx['category'],'relationship_code':'owner','business_name':query('SELECT display_name FROM business_translations WHERE business_id=? AND locale="es"',[bid])[0]['display_name'] if bid else RUN+' nuevo'+(' '+plan if plan!='free' else ''),'business_id':bid or '', 'display_name':RUN,'email':EMAIL,'message':'Solicitud ficticia automatizada','consent':'1','plan_code':plan,'billing_frequency':frequency}
-   return person.request('/negocios/registro/?tipo=business',fields,['identity_document','business_registration'])
+  def application(kind,bid=None,plan='free',frequency='monthly',actor=None):
+   client=actor or person
+   _,page,_=client.get('/negocios/registro/?tipo=business');fields={'holder_kind':'natural_document','holder_name':RUN,'holder_document_type':'CC','holder_number':'123456789','csrf':csrf(page),'account_type':'business','application_type':kind,'destination_id':ctx['destination'],'category_code':ctx['category'],'relationship_code':'owner','business_name':query('SELECT display_name FROM business_translations WHERE business_id=? AND locale="es"',[bid])[0]['display_name'] if bid else RUN+' nuevo'+(' '+plan if plan!='free' else ''),'business_id':bid or '', 'display_name':RUN,'email':EMAIL,'message':'Solicitud ficticia automatizada','consent':'1','plan_code':plan,'billing_frequency':frequency}
+   return client.request('/negocios/registro/?tipo=business',fields,['identity_document','business_registration'])
   def newbusiness():
    code,page,_=application('new_business');check(code==200,'No guarda solicitud de negocio nuevo');apps=query('SELECT id FROM business_account_applications WHERE account_id=? AND application_type="request_new"',[account()['id']]);check(apps,'No persistió solicitud nueva')
   case('NG-02','Crear solicitud de negocio nuevo con la misma cuenta personal',newbusiness)
@@ -249,12 +250,12 @@ except Exception as e:
  results.append({'id':'ENTORNO','title':'Ejecución completa','status':'FALLIDA','detail':type(e).__name__+': la suite fue interrumpida'})
 finally:
  try:
-  paymentFiles=query('SELECT storage_name FROM business_subscription_payment_evidence WHERE account_id IN (SELECT id FROM accounts WHERE email=?)',[EMAIL])
+  paymentFiles=query('SELECT storage_name FROM business_subscription_payment_evidence WHERE account_id IN (SELECT id FROM accounts WHERE email IN (?,?))',[EMAIL,EMAIL.replace('@','-owner@')])
   for r in paymentFiles:
    name=r['storage_name'];check(re.fullmatch(r'[A-Za-z0-9_.-]+',name),'Nombre de comprobante inseguro')
    path=ROOT/'.local/preprod/private/business-payment-evidence'/name
    if path.is_file():path.unlink()
-  rows=query('SELECT e.storage_name FROM business_account_application_evidence e JOIN business_account_applications a ON a.id=e.application_id JOIN accounts c ON c.id=a.account_id WHERE c.email=?',[EMAIL])
+  rows=query('SELECT e.storage_name FROM business_account_application_evidence e JOIN business_account_applications a ON a.id=e.application_id JOIN accounts c ON c.id=a.account_id WHERE c.email IN (?,?)',[EMAIL,EMAIL.replace('@','-owner@')])
   for r in rows:
    # Only exact files referenced by applications created by this run.
    name=r['storage_name'];check(re.fullmatch(r'[A-Za-z0-9_.-]+',name),'Nombre de archivo no seguro')
@@ -262,7 +263,7 @@ finally:
    if path.is_file():path.unlink()
   # Image rows cascade on account/application deletion; their private files do not.
   # Capture their exact names first, including images copied to our business fixtures.
-  imageFiles=query('SELECT i.storage_name FROM business_application_images i JOIN business_account_applications a ON a.id=i.application_id JOIN accounts c ON c.id=a.account_id WHERE c.email=?',[EMAIL])
+  imageFiles=query('SELECT i.storage_name FROM business_application_images i JOIN business_account_applications a ON a.id=i.application_id JOIN accounts c ON c.id=a.account_id WHERE c.email IN (?,?)',[EMAIL,EMAIL.replace('@','-owner@')])
   if fixtures:
    imageFiles+=query('SELECT storage_name FROM business_image_references WHERE business_id IN ('+','.join('?' for _ in fixtures)+')',fixtures)
   for r in imageFiles:

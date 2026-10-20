@@ -3,15 +3,20 @@ declare(strict_types=1);
 if((PHP_SAPI!=='cli'&&!(defined('EL_PRIVATE_SNAPSHOT')&&EL_PRIVATE_SNAPSHOT))||!isset($options))exit(1);
 try{
  $selected=$options['migrations']??['043-account-lifecycle'];
- if(!is_array($selected)||!$selected||array_diff($selected,['043-account-lifecycle','044-subscription-changes'])||count(array_unique($selected))!==count($selected))throw new RuntimeException('Migraciones no permitidas.');
+ if(!is_array($selected)||!$selected||array_diff($selected,['043-account-lifecycle','044-subscription-changes','045-business-service-sections','046-premium-page-aliases'])||count(array_unique($selected))!==count($selected))throw new RuntimeException('Migraciones no permitidas.');
  $c=require $options['config'];$db=new PDO($c['dsn'],$c['db_user'],$c['db_password'],[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC]);
  require $options['app_root'].'/DatabaseMaintenance.php';
  $before=$db->query('SELECT id,status FROM accounts ORDER BY id')->fetchAll();
  $out=['accounts_before'=>count($before),'status_counts'=>[],'statistics_modified'=>false,'account_rows_updated'=>false,'migration'=>'043-account-lifecycle','selected_migrations'=>$selected];foreach($before as $a)$out['status_counts'][$a['status']]=($out['status_counts'][$a['status']]??0)+1;
+ if(array_intersect($selected,['045-business-service-sections','046-premium-page-aliases'])){
+  $parent=$db->query("SELECT t.ENGINE,c.COLUMN_TYPE FROM information_schema.TABLES t JOIN information_schema.COLUMNS c ON c.TABLE_SCHEMA=t.TABLE_SCHEMA AND c.TABLE_NAME=t.TABLE_NAME AND c.COLUMN_NAME='id' WHERE t.TABLE_SCHEMA=DATABASE() AND t.TABLE_NAME='businesses'")->fetch();
+  $out['business_parent_compatible']=$parent&&strtolower((string)$parent['ENGINE'])==='innodb'&&preg_match('/^bigint(?:\([0-9]+\))? unsigned$/i',(string)$parent['COLUMN_TYPE'])===1;
+  if(!$out['business_parent_compatible'])throw new RuntimeException('Revisar compatibilidad de clave de negocios antes de migrar.');
+ }
  if(($options['operation']??'')==='apply'){
   $m=new DatabaseMaintenance($db,$options['app_root'],$options['public_root']);$out['result']=$m->applyMigrations($selected);
   if(in_array('043-account-lifecycle',$selected,true)){$q=$db->prepare('SELECT COUNT(*) FROM account_access_events WHERE account_id=?');foreach($before as $a){$q->execute([$a['id']]);if((int)$q->fetchColumn()<1)throw new RuntimeException('Falta un estado inicial.');}$out['existing_accounts_have_state']=true;}$out['accounts_after']=(int)$db->query('SELECT COUNT(*) FROM accounts')->fetchColumn();
- }else{$tables=$db->query('SHOW TABLES')->fetchAll(PDO::FETCH_COLUMN);$out['new_tables_present']=array_values(array_intersect(['account_access_events','account_reactivations','subscription_changes'],$tables));$out['applied']=false;}
+ }else{$tables=$db->query('SHOW TABLES')->fetchAll(PDO::FETCH_COLUMN);$out['new_tables_present']=array_values(array_intersect(['account_access_events','account_reactivations','subscription_changes','business_service_sections','business_page_aliases'],$tables));$out['applied']=false;}
  $maintenance=new DatabaseMaintenance($db,$options['app_root'],$options['public_root']);$inspection=$maintenance->inspect();
  $out['migration_states']=array_intersect_key($inspection['migrations'],array_flip($selected));
  $out['subscription_rows']=(int)$db->query('SELECT COUNT(*) FROM business_subscriptions')->fetchColumn();
