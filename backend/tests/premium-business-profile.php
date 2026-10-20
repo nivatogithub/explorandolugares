@@ -1,0 +1,16 @@
+<?php
+declare(strict_types=1);
+require dirname(__DIR__).'/app/PremiumBusinessProfile.php';
+function premium_check(bool $v,string $m):void{if(!$v)throw new RuntimeException($m);}
+$p=new PDO('sqlite::memory:',null,null,[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION]);$p->exec('PRAGMA foreign_keys=ON;CREATE TABLE businesses(id INTEGER PRIMARY KEY,public_id TEXT);CREATE TABLE accounts(id INTEGER PRIMARY KEY,status TEXT);CREATE TABLE business_account_memberships(account_id INTEGER,business_id INTEGER,role TEXT,status TEXT);CREATE TABLE business_subscriptions(id INTEGER PRIMARY KEY,business_id INTEGER,plan_code TEXT,status TEXT,starts_at TEXT,ends_at TEXT);INSERT INTO businesses VALUES(1,"uuid-1"),(2,"uuid-2");INSERT INTO accounts VALUES(1,"active"),(2,"active");INSERT INTO business_account_memberships VALUES(1,1,"owner","active"),(2,2,"owner","active");INSERT INTO business_subscriptions VALUES(1,1,"page_premium","active",datetime("now","-1 day"),datetime("now","+1 day")),(2,2,"page_premium","active",datetime("now","-1 day"),datetime("now","+1 day"))');
+foreach(['045-business-service-sections','046-premium-page-aliases'] as $m){$sql=file_get_contents(dirname(__DIR__).'/database/migrations/'.$m.'.sqlite.sql');$p->exec($sql);$p->exec($sql);}
+$sections=['es'=>['restaurant'=>'Cocina local'],'en'=>['restaurant'=>'Local cuisine'],'pt-BR'=>['restaurant'=>'Cozinha local']];
+PremiumBusinessProfile::save($p,1,1,$sections,'hotel-local');premium_check(PremiumBusinessProfile::resolve($p,'hotel-local')==='uuid-1','Alias resolves');
+$before=BusinessServiceSections::read($p,1);
+foreach([[2,1,$sections,'otra-url'],[1,1,['es'=>['restaurant'=>'Sin traducción nueva','other'=>'Texto']], 'otra-url'],[1,1,$sections,'../admin']] as $args){$fail=false;try{PremiumBusinessProfile::save($p,...$args);}catch(RuntimeException){$fail=true;}premium_check($fail,'Invalid request accepted');premium_check(BusinessServiceSections::read($p,1)===$before&&PremiumBusinessProfile::currentAlias($p,1)==='hotel-local','Failed update changed page');}
+$fail=false;try{PremiumBusinessProfile::save($p,2,2,$sections,'hotel-local');}catch(RuntimeException){$fail=true;}premium_check($fail&&PremiumBusinessProfile::currentAlias($p,2)===''&&BusinessServiceSections::read($p,2)===[],'Alias conflict must rollback sections');
+PremiumBusinessProfile::save($p,1,1,$sections,'hotel-renovado');premium_check(PremiumBusinessProfile::resolve($p,'hotel-local')==='uuid-1'&&PremiumBusinessProfile::currentAlias($p,1)==='hotel-renovado','Old alias retained for canonical redirect');
+PremiumBusinessProfile::save($p,1,1,['es'=>['restaurant'=>''],'en'=>['restaurant'=>''],'pt-BR'=>['restaurant'=>'']],'hotel-renovado');premium_check(BusinessServiceSections::read($p,1)===[],'Empty fields must remove sections');
+$p->exec('UPDATE business_subscriptions SET plan_code="page" WHERE business_id=1');$fail=false;try{PremiumBusinessProfile::save($p,1,1,[],'nuevo-alias');}catch(RuntimeException){$fail=true;}premium_check($fail&&PremiumBusinessProfile::resolve($p,'hotel-renovado')===null,'Lower tier must not use Premium alias/editor');
+premium_check(PremiumBusinessProfile::resolve($p,'invalid--slug')===null,'Malformed slug returns not found');
+echo "OK: Premium owner editor, authorization, tier enforcement, atomic rollback, translation gate, alias uniqueness/history and invalid routes.\n";

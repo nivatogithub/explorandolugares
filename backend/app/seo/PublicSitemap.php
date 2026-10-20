@@ -1,5 +1,6 @@
 <?php
 declare(strict_types=1);
+require_once dirname(__DIR__).'/PremiumBusinessProfile.php';
 final class PublicSitemap {
     public function __construct(private PDO $db) {}
     public function xml(string $base,string $staticXml): string {
@@ -13,7 +14,7 @@ final class PublicSitemap {
             $path=$prefix.'/destinos/'.$row['slug'].'/';$published[$path]=true;$urls[$base.$path]=true;
         }
         // Same publication and current plan gates as the public business renderer.
-        $businesses=$this->db->query('SELECT b.public_id,t.locale FROM businesses b
+        $businesses=$this->db->query('SELECT b.id,b.public_id,t.locale,sp.code AS plan_code FROM businesses b
             JOIN destinations d ON d.id=b.destination_id AND d.publication_status="published"
             JOIN business_translations t ON t.business_id=b.id
             JOIN service_category_translations ct ON ct.category_code=b.category_code AND LOWER(ct.locale)=LOWER(t.locale)
@@ -29,7 +30,8 @@ final class PublicSitemap {
         foreach($businesses as $row){
             if(!preg_match('/^[a-f0-9-]{16,64}$/iD',$row['public_id']))continue;
             $prefix=match($row['locale']){'en'=>'/en','pt-BR'=>'/pt-br',default=>''};
-            $urls[$base.$prefix.'/negocios/'.$row['public_id'].'/']=true;
+            $alias=$row['plan_code']==='page_premium'?PremiumBusinessProfile::currentAlias($this->db,(int)$row['id']):'';
+            $urls[$base.$prefix.'/negocios/'.($alias!==''?'perfil/'.$alias:$row['public_id']).'/']=true;
         }
         if($staticXml!==''){
             if(strlen($staticXml)>10*1024*1024||preg_match('/<!DOCTYPE|<!ENTITY/i',$staticXml))throw new RuntimeException('Sitemap estático inválido.');

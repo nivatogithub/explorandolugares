@@ -24,6 +24,8 @@
     type.value = mode;
     businessId.value = id;
     const isNew = mode === 'new_business';
+    for(const name of ['identity_document','business_registration']){const field=form.querySelector(`[name="${name}"]`);if(field)field.required=isNew;}
+    if(authorityInput)authorityInput.required=isNew&&relationship?.value==='authorized_administrator';
     const details=document.querySelector('#registration-new-details');if(details){details.hidden=!isNew;details.disabled=!isNew;}
     newNameWrap.hidden = !isNew;
     newName.required = isNew;
@@ -36,7 +38,7 @@
   }
 
   relationship?.addEventListener('change', () => {
-    const needsAuthority = relationship.value === 'authorized_administrator';
+    const needsAuthority = type.value==='new_business'&&relationship.value === 'authorized_administrator';
     authorityWrap.hidden = !needsAuthority;
     authorityInput.required = needsAuthority;
     if (!needsAuthority) authorityInput.value = '';
@@ -61,7 +63,7 @@
       radio.disabled = !item.can_request;
       const copy = document.createElement('span');
       const name = document.createElement('strong'); name.textContent = item.display_name;
-      const state = document.createElement('small'); state.textContent = item.requires_review ? (item.review_message || 'Este negocio ya tiene un responsable o una solicitud. Puedes pedir una revisión; no obtendrás acceso automáticamente.') : item.can_request ? 'Está en nuestros registros · puedes solicitar asociarlo' : 'No disponible para nuevas solicitudes en este momento';
+      const state = document.createElement('small'); state.textContent = item.requires_review ? (item.review_message || 'Este negocio ya tiene un responsable o una solicitud. Puedes pedir una revisión; no obtendrás acceso automáticamente.') : item.can_request ? 'Sin responsable · puedes reclamarlo y administrarlo con tu cuenta' : 'No disponible para nuevas solicitudes en este momento';
       copy.append(name, state); label.append(radio, copy); results.append(label);
       radio.addEventListener('change', () => { choose('existing_business', String(item.id), item.requires_review ? (item.review_message || 'Tu solicitud necesita revisión y no cambia al responsable actual.') : '', !!item.is_experience_operator); missing.disabled = false; });
     }

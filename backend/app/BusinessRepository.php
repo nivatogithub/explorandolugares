@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 require_once __DIR__.'/BusinessCategories.php';
 require_once __DIR__.'/BusinessServiceSections.php';
+require_once __DIR__.'/PremiumBusinessProfile.php';
 
 final class BusinessRepository
 {
@@ -66,6 +67,7 @@ final class BusinessRepository
         $business['cover']=$this->asset($business['id'],$locale,'cover');
         $business['gallery']=$this->gallery($business['id'],$locale,(int)$business['max_gallery_photos']);
         $business['contacts']=$this->contacts($business['id']);
+        $business['page_alias']=$business['plan_code']==='page_premium'?PremiumBusinessProfile::currentAlias($this->pdo,$business['id']):'';
         $business['service_sections']=$business['plan_code']==='page_premium'?(BusinessServiceSections::read($this->pdo,$business['id'])[$locale]??[]):[];
         return $business;
     }

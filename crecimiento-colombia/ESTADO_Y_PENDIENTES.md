@@ -1,3 +1,17 @@
+## Cierre de cinco ajustes comerciales · Solo preproducción
+
+Implementado: edición de secciones y URL personalizada Premium desde Mi cuenta; límites de texto por suscripción en el alta y servidor; reclamación automática de negocios sin responsable, con correo verificado; disputa y conciliación manual cuando ya hay responsable; texto vigente de «Por qué participar» ES/EN/PT; comparador móvil de una suscripción por vez con elección/precio visibles y tabla completa en escritorio.
+
+Una cuenta nueva sin correo verificado no reserva negocios. Al activar el correo se comprueba nuevamente si hay responsable; si apareció uno, la solicitud pasa a disputa. Reclamar no publica ni activa beneficios pagos. Resolver una disputa requiere confirmación explícita y nota de conciliación del administrador; se revocan, sin borrar, las asociaciones anteriores dentro de la misma transacción. No se afirma verificación oficial de identidad/existencia por esta asignación.
+
+URL Premium: `/negocios/perfil/alias/`, única por negocio; se conservan alias anteriores para redirección a la canónica vigente. Sitemap actualizado. Una suscripción inferior no habilita ese alias ni su editor. Migración aditiva 046, además de 045 para las secciones. No se aplicó nada en producción.
+
+Validación: regresión local general aprobada; pruebas de límite exacto/exceso Unicode en los cuatro niveles; HTTP de edición propia/CSRF/acceso ajeno; renderizado Premium, escape y ocultamiento en nivel inferior; alias canónico/redirecciones; conciliación con fallo y rollback. Prueba MariaDB aislada `preprod/probar-reclamacion-premium.php`: dos conexiones, espera por bloqueo y reintento, un responsable, segunda reclamación en disputa, rollback de INSERT, comprobación de propietario al activar correo y persistencia Premium. La base temporal se retiró.
+
+Navegador: guardado real sobre negocio ficticio Premium desde Mi cuenta y redirección pública a su alias; cuatro límites del alta comprobados sin enviar formulario; móvil 390 px sin desbordamiento y escritorio con cinco columnas. Evidencias privadas en `.local/preprod/regresion/`: `premium-editado-desde-cuenta.png`, `comparador-movil.png`, `limites-registro-visual.json`. Los pagos y correos de estas pruebas son simulados. No certifica toda la aceptación visual pendiente del complemento de experiencias ni una validación productiva.
+
+Pendiente de aprobación/publicación y configuración de pagos reales con el propietario. Los cambios ajenos del inventario nacional y Abejorral no se incluyen en esta entrega. Este estado sustituye los pendientes anteriores de URL Premium, edición desde Mi cuenta, límites iniciales y reclamación exclusivamente manual.
+
 ## 19/10/2026 · Menú móvil: alineación compartida corregida en preprod
 
 Causa reproducida en Suscripciones a 390 px CSS: el enlace «Negocios locales» heredaba `margin-left:auto`, equivalente a 135,8 px en la muestra; las demás filas tenían margen cero. La regla anterior ya alineaba texto y justificación, pero no anulaba este margen. La corrección queda en `backend/public/assets/header-controls.css`, dentro del breakpoint móvil/tablet y limitada a los enlaces directos de `#menu-principal`: margen cero, ancho completo y alineación uniforme. No cambia idiomas, cuenta ni navegación de escritorio.

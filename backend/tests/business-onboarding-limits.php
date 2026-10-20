@@ -1,0 +1,7 @@
+<?php
+declare(strict_types=1);
+require dirname(__DIR__).'/app/BusinessOnboardingDetails.php';
+$p=new PDO('sqlite::memory:',null,null,[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION]);$p->exec('CREATE TABLE service_categories(code TEXT,is_active INTEGER);INSERT INTO service_categories VALUES("hospedaje",1);CREATE TABLE subscription_plans(code TEXT,is_active INTEGER,max_summary_chars INTEGER,max_description_chars INTEGER,max_brand_story_chars INTEGER,max_featured_services_chars INTEGER)');
+$expected=['free'=>[0,0,0,0],'featured'=>[500,1000,0,0],'page'=>[750,2000,0,0],'page_premium'=>[1000,3500,1500,1500]];
+foreach($expected as $plan=>$limits){$p->prepare('INSERT INTO subscription_plans VALUES(?,1,?,?,?,?)')->execute([$plan,...$limits]);foreach(['summary','description','brand_story','featured_services'] as $i=>$field){$input=['plan_code'=>$plan,$field=>str_repeat('á',$limits[$i])];$v=BusinessOnboardingDetails::capture($p,$input,'hospedaje',sys_get_temp_dir());if($v['text'][$field]!==$input[$field])throw new RuntimeException('Boundary truncated');$failed=false;try{BusinessOnboardingDetails::capture($p,['plan_code'=>$plan,$field=>str_repeat('á',$limits[$i]+1)],'hospedaje',sys_get_temp_dir());}catch(RuntimeException){$failed=true;}if(!$failed)throw new RuntimeException('Exceeded tier accepted');}}
+echo "OK: all four subscription text limits at registration, exact Unicode boundary accepted, excess and non-included fields rejected.\n";

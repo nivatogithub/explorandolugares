@@ -41,6 +41,9 @@ RewriteRule ^negocios/salir/?$ business/logout.php [L,QSA]
 RewriteRule ^negocios/cambiar-clave/?$ business/password.php [L,QSA]
 
 # Páginas públicas de negocios por identificador público opaco.
+RewriteRule ^negocios/perfil/([a-z][a-z0-9-]{2,69})/?$ negocio.php?alias=$1&idioma=es [L,QSA]
+RewriteRule ^en/negocios/perfil/([a-z][a-z0-9-]{2,69})/?$ negocio.php?alias=$1&idioma=en [L,QSA]
+RewriteRule ^pt-br/negocios/perfil/([a-z][a-z0-9-]{2,69})/?$ negocio.php?alias=$1&idioma=pt-BR [L,QSA]
 RewriteRule ^negocios/([A-Fa-f0-9-]{16,64})/?$ negocio.php?id=$1&idioma=es [L,QSA,NC]
 RewriteRule ^en/negocios/([A-Fa-f0-9-]{16,64})/?$ negocio.php?id=$1&idioma=en [L,QSA,NC]
 RewriteRule ^pt-br/negocios/([A-Fa-f0-9-]{16,64})/?$ negocio.php?id=$1&idioma=pt-BR [L,QSA,NC]

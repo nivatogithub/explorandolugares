@@ -25,7 +25,7 @@ DB.execute('PRAGMA foreign_keys=ON')
 DB.executescript((ROOT / 'backend/database/sqlite.sql').read_text())
 DB.executescript((ROOT / 'backend/database/destinations.sqlite.sql').read_text())
 DB.executescript((ROOT / 'backend/database/migrations/006-poi-experience-links.sqlite.sql').read_text())
-for number in range(8, 45):
+for number in range(8, 47):
     matches = list((ROOT / 'backend/database/migrations').glob(f'{number:03d}-*.sqlite.sql'))
     assert len(matches) == 1, f'Migración SQLite faltante o ambigua: {number:03d}'
     DB.executescript(matches[0].read_text())
@@ -543,7 +543,7 @@ try:
     registration_fields = {
         'holder_kind':'natural_document','holder_name':'Responsable HTTP','holder_document_type':'CC','holder_number':'123456789',
         'residence_country_code':'CO','residence_region_code':'05','residence_city_code':'05368',
-        'csrf': registration_csrf, 'application_type': 'new_business', 'business_id': '',
+        'plan_code':'featured','billing_frequency':'monthly','csrf': registration_csrf, 'application_type': 'new_business', 'business_id': '',
         'business_name': 'Cafetería de cuenta HTTP', 'destination_id': destination_id,
         'address_text':'Dirección de prueba privada','latitude':'5.79','longitude':'-75.78','summary':'Presentación enviada por el negocio','description':'Descripción privada de prueba','channels[email]':'negocio@example.invalid', 'category_codes[]':'hospedaje',
         'category_code': 'hospedaje', 'display_name': 'Responsable HTTP',
@@ -768,6 +768,20 @@ try:
     status, body, _ = request('/business/login.php',opener=business_flow)
     lifecycle_csrf = re.search(r'name="csrf" value="([^"]+)"', body).group(1)
     check(request('/business/login.php',{'csrf':lifecycle_csrf,'email':'responsable-http@example.invalid','password':'RegresoSeguroHTTP789'},business_flow)[0]==303,'La cuenta reactivada no permite iniciar sesión.')
+
+    # Public owner edits Premium without entering administration; all external services remain mocked.
+    premium_business=approved['business_id']
+    DB.execute("INSERT INTO business_subscriptions(business_id,plan_code,billing_frequency,status,starts_at,ends_at) VALUES(?,'page_premium','monthly','active',datetime('now','-1 day'),datetime('now','+30 days'))",(premium_business,));DB.commit()
+    status,profile_page,_=request('/business/dashboard.php?tab=business&business='+str(premium_business),opener=business_flow)
+    check(status==200 and 'Editar tu página Premium' in profile_page,'Premium owner editor missing')
+    profile_fields={'csrf':re.search(r'name="csrf" value="([^"]+)"',profile_page)[1],'action':'premium_profile','business_id':premium_business,'page_alias':'hotel-publico-prueba','service_sections[es][restaurant]':'Cocina regional','service_sections[en][restaurant]':'Regional cuisine','service_sections[pt-BR][restaurant]':'Cozinha regional'}
+    status,_,_=request('/business/dashboard.php?tab=business',profile_fields,business_flow)
+    check(status==303 and DB.execute('SELECT alias FROM business_page_aliases WHERE business_id=? AND is_current=1',(premium_business,)).fetchone()[0]=='hotel-publico-prueba','Public owner update failed')
+    before_sections=DB.execute('SELECT * FROM business_service_sections WHERE business_id=?',(premium_business,)).fetchall()
+    status,_,_=request('/business/dashboard.php?tab=business',dict(profile_fields,csrf='invalid'),business_flow)
+    check(status>=400 and DB.execute('SELECT * FROM business_service_sections WHERE business_id=?',(premium_business,)).fetchall()==before_sections,'Profile update bypasses CSRF')
+    status,_,_=request('/business/dashboard.php?tab=business',dict(profile_fields,business_id=no_subscription_business_id),business_flow)
+    check(status==404,'Profile update accepts another business ID')
 
     # Test graceful behavior against missing database migrations on a separate DB.
     broken_path = WORK / 'private/missing-schema.sqlite'

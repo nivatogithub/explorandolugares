@@ -18,6 +18,8 @@ for page in root.rglob('*.html'):
   s=s.replace('Un país de muchos lugares para <em>volver.</em>','Colombia, un país con muchos lugares para <em>volver.</em>')
   if 'portada-atracciones.css' not in s:s=s.replace('</head>','<link rel="stylesheet" href="/assets/portada-atracciones.css"></head>')
  if 'negocios-locales/planes/' in rel:
+  if 'subscription-comparison.css' not in s:s=s.replace('</head>','<link rel="stylesheet" href="/assets/subscription-comparison.css"></head>')
+  if 'subscription-comparison.js' not in s:s=s.replace('</body>','<script src="/assets/subscription-comparison.js" defer></script></body>')
   section_copy={'es':('Secciones de servicios','Alojamiento, restaurante y otros servicios: hasta 1.200 caracteres por sección. Las secciones vacías no se muestran.'),'en':('Service sections','Accommodation, restaurant and other services: up to 1,200 characters per section. Empty sections are hidden.'),'pt-br':('Seções de serviços','Hospedagem, restaurante e outros serviços: até 1.200 caracteres por seção. As seções vazias não são exibidas.')}
   label,detail=section_copy[lang]
   if 'data-premium-service-row' not in s:
@@ -28,6 +30,15 @@ for page in root.rglob('*.html'):
   s=re.sub(r'<p id="tarifas-lanzamiento"[^>]*>.*?</p>','',s,flags=re.S)
   note='<p id="tarifas-lanzamiento" class="notice simulator-pricing-note">'+notes[lang]+'</p>'
   s=re.sub(r'(<p class="simulator-total">.*?</p>)',lambda m:m[1]+note,s,count=1,flags=re.S)
+ if 'negocios-locales/por-que-participar/' in rel:
+  business_copy={
+   'es':('Por qué participar','Tu negocio, dentro del lugar que quieren conocer.','Explorando Lugares conecta las guías de los lugares con sus negocios locales. Elige la suscripción que corresponde a la información que quieres presentar.','Gratis muestra nombre y categoría. Destacado añade descripción y contacto. Página Comercial ofrece una página propia y portada. Premium amplía la página con historia, servicios, secciones opcionales y hasta dos fotos adicionales.','Las fotos y los contactos se publican según la suscripción contratada y las autorizaciones correspondientes. La aparición no garantiza visitas ni ventas.','Puedes registrar un negocio nuevo o reclamar uno existente desde tu cuenta. Solicitar información es un formulario de consulta y no registra un negocio.','Comparar suscripciones','Registrar o reclamar un negocio','Solicitar información'),
+   'en':('Why take part','Your business, within the place visitors want to explore.','Explorando Lugares connects place guides with local businesses. Choose the subscription that fits the information you want to present.','Free shows name and category. Featured adds description and contact. Commercial Page provides a dedicated page and cover. Premium adds story, services, optional sections and up to two additional photos.','Photos and contacts are published according to the purchased subscription and relevant permissions. A listing does not guarantee visits or sales.','Register a new business or claim an existing one from your account. Requesting information is an enquiry and does not register a business.','Compare subscriptions','Register or claim a business','Request information'),
+   'pt-br':('Por que participar','Seu negócio, dentro do lugar que as pessoas querem conhecer.','Explorando Lugares conecta os guias dos lugares aos negócios locais. Escolha a assinatura adequada às informações que deseja apresentar.','Grátis mostra nome e categoria. Destaque acrescenta descrição e contato. Página Comercial oferece página própria e capa. Premium amplia a página com história, serviços, seções opcionais e até duas fotos adicionais.','Fotos e contatos são publicados conforme a assinatura contratada e as autorizações correspondentes. A presença não garante visitas nem vendas.','Cadastre um novo negócio ou reivindique um existente em sua conta. Solicitar informações é uma consulta e não cadastra um negócio.','Comparar assinaturas','Cadastrar ou reivindicar um negócio','Solicitar informações')}
+  b=business_copy[lang];prefix='' if lang=='es' else '/'+lang
+  content='<section class="section"><p class="eyebrow">'+b[0]+'</p><h1>'+b[1]+'</h1><p class="intro">'+b[2]+'</p><p>'+b[3]+'</p><p>'+b[4]+'</p><p>'+b[5]+'</p><p><a class="pill" href="'+prefix+'/negocios-locales/planes/">'+b[6]+'</a></p><p><a class="text-link" href="/negocios/registro/?tipo=business&amp;lang='+lang+'">'+b[7]+'</a></p><p><a href="'+prefix+'/negocios-locales/interes/">'+b[8]+'</a></p></section>'
+  # Preserve the business subnavigation preceding the first editorial section.
+  s=re.sub(r'(<main[^>]*>.*?</nav>).*?(</main>)',lambda m:m[1]+content+m[2],s,count=1,flags=re.S)
  if '/privacidad/' in '/'+rel and '</main>' in s:
   s=re.sub(r'<section id="datos-configurados">.*?</section>','',s,flags=re.S)
   s=re.sub(r'<section id="medicion-opcional">.*?</section>','',s,flags=re.S)
@@ -36,7 +47,7 @@ for page in root.rglob('*.html'):
   s=re.sub(r'<p>(?:La configuración de los datos del responsable|The configuration of|The data controller&#39;s details|The data controller.s details|A configuração dos dados|A configuração do controlador).*?</p>','',s,flags=re.S)
   s=s.replace('</main>','<section id="datos-configurados"><p>'+c['retention']+'</p><div data-privacy-info></div></section><section id="conteo-basico"><h2>'+c['measure']+'</h2><p>'+c['basic']+'</p><p><a href="https://db-ip.com/">IP Geolocation by DB-IP</a> · Country Lite, CC BY 4.0.</p></section></main>')
  if ('data-home-attractions' in s or 'data-privacy-info' in s) and 'portada-atracciones.js' not in s:s=s.replace('</body>','<script src="/assets/portada-atracciones.js" defer></script></body>')
- for asset in ['portada-atracciones.js','portada-atracciones.css']:
+ for asset in ['portada-atracciones.js','portada-atracciones.css','subscription-comparison.js','subscription-comparison.css']:
   path=root/'assets'/asset
   if path.exists():
    version=hashlib.sha256(path.read_bytes()).hexdigest()[:12]
