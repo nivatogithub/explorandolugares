@@ -37,7 +37,7 @@
   function featureState(code){const dep=data.departments.find(x=>x.code===code);if(!dep||!dep.municipality_total)return 'outside_scope';return dep.counts.published>0?'published':'pending';}
   async function renderMap(){
     const version=++mapVersion,d=current();$('map').setAttribute('aria-busy','true');$('map').replaceChildren(el('p','Cargando mapa…'));
-    $('map-hint').textContent='Azul: municipio publicado. Ámbar: incluido en la meta, sin publicar. Gris: fuera del alcance. Selecciona una zona azul para consultar su departamento.';
+    $('map-hint').textContent=d?'Departamento seleccionado: '+d.name+'. El borde naranja delimita todo el departamento; los colores interiores corresponden a sus municipios.':'Selecciona cualquier zona de un departamento con lugares publicados. Los colores interiores corresponden a municipios.';
     try{
       const geo=structuredClone(await geometry('departamentos.geojson'));
       const units=await Promise.all(data.departments.flatMap(dep=>(dep.code==='25'?['25','11']:[dep.code]).map(code=>geometry('municipios-'+code+'.geojson'))));
@@ -56,8 +56,8 @@
         const group=document.createElementNS(ns,'g');group.dataset.code=code;group.setAttribute('tabindex',dep.counts.published>0?'0':'-1');group.setAttribute('role','button');if(!dep.counts.published)group.setAttribute('aria-disabled','true');group.setAttribute('aria-pressed',String(code===department));
         const description=dep.name+': '+dep.covered_municipalities+' de '+dep.municipality_total+' municipios seleccionados con guía publicada';group.setAttribute('aria-label',description);
         units.flatMap(x=>x.features).filter(m=>(m.properties.department_code==='11'?'25':m.properties.department_code)===code).forEach(m=>{
-          const path=document.createElementNS(ns,'path'),state=stateByCode.get(m.properties.code)||'outside_scope';path.setAttribute('d',commands(m));path.setAttribute('fill-rule','evenodd');path.setAttribute('class','municipality '+state);if(state!=='published'){path.setAttribute('aria-disabled','true');path.addEventListener('click',e=>e.stopPropagation());}
-          const title=document.createElementNS(ns,'title');title.textContent=m.properties.name+' · '+labels[state];path.append(title);path.addEventListener('pointerenter',()=>{$('map-hint').textContent=title.textContent+(state==='published'?' · Selecciona para ver '+dep.name:state==='pending'?' · Dentro de la meta; sin publicar.':' · Fuera del alcance; sin selección.');});group.append(path);
+          const path=document.createElementNS(ns,'path'),state=stateByCode.get(m.properties.code)||'outside_scope';path.setAttribute('d',commands(m));path.setAttribute('fill-rule','evenodd');path.setAttribute('class','municipality '+state);path.setAttribute('aria-disabled',String(!dep.counts.published));if(dep.counts.published)path.classList.add('department-selectable');
+          const title=document.createElementNS(ns,'title');title.textContent=displayName(m.properties.name)+' · '+labels[state];path.append(title);path.addEventListener('pointerenter',()=>{$('map-hint').textContent=description+(dep.counts.published?' · Selecciona este departamento.':' · Todavía no seleccionable.');});group.append(path);
         });
         const outline=document.createElementNS(ns,'path');outline.setAttribute('d',commands(f));outline.setAttribute('class','department-outline');group.append(outline);
         if(code===department)group.classList.add('department-focus');
