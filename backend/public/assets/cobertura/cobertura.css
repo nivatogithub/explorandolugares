@@ -351,3 +351,14 @@
 
 #contenido .map-panel .sector-entry { margin:0 0 22px; padding:0 0 18px; border:0; border-bottom:1px solid var(--el-border); border-radius:0; background:transparent; }
 #contenido .map-panel .sector-entry h2 { font-size:16px; }
+
+/* Ensayo solicitado: verde publicado y disponibilidad con capas transparentes. */
+#panel-cobertura { --el-published:#2f7d50; }
+#contenido .map path.department-overlay { pointer-events:none; stroke:none; }
+#contenido .map g.department-available path.department-outline { stroke:#2f7d50; stroke-width:1; }
+#contenido .map g.department-focus path.department-outline { stroke:#24613e; stroke-width:2; }
+#contenido .map g.department-available:hover path.department-overlay { fill-opacity:.22; }
+#contenido .map g.department-focus:hover path.department-overlay { fill-opacity:.3; }
+#contenido button.island-card { border:1px solid #9acbab; border-radius:10px; padding:10px; color:var(--el-text); font:inherit; cursor:pointer; background:rgba(99,183,124,.14); }
+#contenido button.island-card.island-selected { background:rgba(99,183,124,.3); border-color:#24613e; }
+#contenido .island-card[aria-disabled="true"] { cursor:default; }
