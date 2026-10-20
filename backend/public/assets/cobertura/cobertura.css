@@ -313,3 +313,7 @@
 #contenido .map g.department-focus path.department-outline { stroke: var(--el-accent); stroke-width: 1.7; }
 #contenido .map g:focus-visible path.department-outline { stroke: var(--el-focus); stroke-width: 1.7; }
 #contenido .map path.municipality:hover { stroke: none; }
+
+#contenido .map path.municipality.department-selectable { cursor: pointer; }
+#contenido .map g.department-focus path.department-outline { stroke: var(--el-accent); stroke-width: 3; stroke-linejoin: round; }
+#contenido .map g:focus-visible path.department-outline { stroke: var(--el-focus); stroke-width: 3; }
