@@ -19,4 +19,7 @@ $plan=$read('coverage-plan');foreach($plan['departments'] as &$dep){if($dep['cod
 $db->exec("INSERT INTO destinations VALUES ('test-subplace','Antioquia','published','CO')");
 $second=(new CoverageService($plan,$read('coverage-geography'),$scope))->snapshot($db);
 check($second['country']['covered_municipalities']===1,'Multiple guides must not duplicate municipal coverage');
+$db->exec("INSERT INTO destinations VALUES ('covenas','Sucre','published','CO')");
+$added=(new CoverageService($read('coverage-plan'),$read('coverage-geography'),$scope))->snapshot($db);
+check($added['country']['covered_municipalities']===2,'New municipal publication in selection counts without initial catalog entry');
 echo "OK: 221 target units, departmental denominator, out-of-scope, offline and municipal deduplication\n";
