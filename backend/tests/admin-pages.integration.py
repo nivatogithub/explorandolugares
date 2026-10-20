@@ -192,7 +192,7 @@ try:
         ('/admin/negocios.php', 'Negocios'),
         ('/admin/negocios.php?tab=crear', 'Negocios'),
         ('/admin/negocios.php?tab=importar', 'Negocios'),
-        ('/admin/negocios.php?tab=revisar', 'Revisar negocios importados'),
+        ('/admin/negocios.php?tab=revisar', 'Publicar importaciones Gratis sin representante'),
         ('/admin/importar-negocios.php', 'Importar varios negocios'),
         ('/admin/importar-negocios.php?plantilla=1', 'schema_version'),
         ('/admin/reclamaciones.php', 'Solicitudes anteriores de representación'),
@@ -261,7 +261,7 @@ try:
                 selected_tabs = re.findall(r'<a\b[^>]*aria-current="page"[^>]*>(.*?)</a>', workflow.group(0), re.S)
                 check(len(selected_tabs) == 1, f'Negocios debe marcar una sola pestaña activa en {path}; encontró {len(selected_tabs)}')
                 selected_label = re.sub(r'<[^>]+>', '', selected_tabs[0]).strip()
-                expected_tab = {'tab=crear': 'Crear negocio', 'tab=importar': 'Importación masiva', 'tab=revisar': 'Revisar y publicar'}.get(next((part for part in path.split('?')[1:] if part.startswith('tab=')), ''), 'Todos los negocios')
+                expected_tab = {'tab=crear': 'Crear negocio', 'tab=importar': 'Importación masiva', 'tab=revisar': 'Publicar importaciones Gratis sin representante'}.get(next((part for part in path.split('?')[1:] if part.startswith('tab=')), ''), 'Catálogo y cobertura')
                 check(selected_label == expected_tab, f'La pestaña activa debe ser {expected_tab} en {path}; mostró {selected_label}')
     health_csrf = re.search(r'name="csrf" value="([^"]+)"', request('/admin/campanas.php?tab=conexion')[1]).group(1)
     check(request('/admin/campanas.php?tab=conexion', {'action': 'check_connection', 'csrf': 'invalid'})[0] == 403, 'Diagnóstico sin CSRF')
@@ -573,6 +573,19 @@ try:
     application_row = DB.execute("SELECT id,application_type,status,business_id FROM business_account_applications WHERE account_id=?", (account_row['id'],)).fetchone()
     check(account_row and account_row['account_type']=='traveler' and account_row['status']=='active' and account_row['password_hash'], 'El registro no creó una cuenta personal activada con contraseña protegida.')
     check(application_row and tuple(application_row)[1:] == ('request_new','pending',None), 'El alta inicial creó una ficha demasiado pronto o no dejó la solicitud pendiente.')
+    # Read-only administrative detail and all-origin operational views.
+    detail_url='/admin/solicitud-detalle.php?tipo=account&id='+str(application_row['id'])
+    view_snapshot=lambda:{name:[tuple(row) for row in DB.execute('SELECT * FROM '+name+' ORDER BY 1')] for name in ('businesses','business_account_applications','business_account_memberships','business_subscriptions')}
+    before_admin_view=view_snapshot()
+    check(request(detail_url,opener=GUEST)[0]==403,'Request detail must remain private.')
+    status,detail,_=request(detail_url)
+    check(status==200 and 'Cafetería de cuenta HTTP' in detail and 'Enviado por la persona' in detail and 'No hay una asociación activa' in detail,'Administrative request detail did not distinguish submission and active association.')
+    check(request('/admin/solicitud-detalle.php?tipo=account&id=999999')[0]==404,'Missing request must return 404.')
+    check(request(detail_url,{'action':'approve'})[0]==405,'Detail must not accept writes.')
+    for view in ('atencion','pendientes'):
+        status,view_body,_=request('/admin/negocios.php?tab='+view)
+        check(status==200 and 'Cafetería de cuenta HTTP' in view_body and 'solicitudes pendientes sin ficha' in view_body,'Operational view must include pending requests without a business.')
+    check(view_snapshot()==before_admin_view,'Viewing administrative details must not mutate businesses, requests, memberships or subscriptions.')
     holder = json.loads(DB.execute('SELECT business_details_json FROM business_account_applications WHERE id=?',(application_row['id'],)).fetchone()[0])['holder_identity']
     check(holder['document_type']=='CC' and holder['number']=='123456789' and not holder['officially_verified'] and not holder['ownership_verified'], 'Debe conservar el documento privado sin afirmar verificación oficial.')
     check('123456789' not in body, 'Mi cuenta no debe exponer el documento del titular en el listado de solicitudes.')
@@ -606,6 +619,8 @@ try:
     check(status == 200 and 'Se actualizó el estado de la solicitud' in body, 'La administración no pudo aprobar la solicitud web real.')
     approved = DB.execute('SELECT r.status,r.business_id,b.publication_status,b.claim_status,m.account_id FROM business_account_applications r JOIN businesses b ON b.id=r.business_id JOIN business_account_memberships m ON m.business_id=b.id WHERE r.id=?', (application_row['id'],)).fetchone()
     check(DB.execute('SELECT COUNT(*) FROM business_image_references WHERE business_id=?',(approved['business_id'],)).fetchone()[0]==1,'Las fotos privadas de la solicitud no se conservaron al aprobar.')
+    status,all_pending,_=request('/admin/negocios.php?'+urllib.parse.urlencode({'tab':'pendientes','q':'Cafetería de cuenta HTTP'}))
+    check(status==200 and 'Cafetería de cuenta HTTP' in all_pending and 'Abrir negocio' in all_pending,'General review must include owner_submitted drafts.')
     check(approved and approved['status']=='approved' and approved['publication_status']=='draft' and approved['claim_status']=='RECLAMADO' and approved['account_id']==account_row['id'], 'La aprobación no creó el borrador privado y la membresía esperados.')
     check(DB.execute('SELECT address_text FROM businesses WHERE id=?',(approved['business_id'],)).fetchone()[0]=='Dirección de prueba privada','Se perdieron los datos de ubicación al aprobar.')
     check(DB.execute('SELECT description FROM business_translations WHERE business_id=? AND locale="es"',(approved['business_id'],)).fetchone()[0]=='Descripción privada de prueba','Se perdió la descripción enviada.')
