@@ -426,6 +426,6 @@
 
 /* En mapas nacionales estrechos, reservar espacio real para el recuadro de islas. */
 #contenido .map-stage { container-type:inline-size; }
-@container (max-width:760px) {
+@container (max-width:1000px) {
  #contenido .map-stage:has([data-map-sector=""][aria-pressed="true"]) > .map { padding-top:150px; height:610px; }
 }
