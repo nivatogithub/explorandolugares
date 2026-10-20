@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "destination": "zipaquira",
+  "date": "2026-10-20",
+  "base_stage_zip": "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/preprod/.local/preprod/worker-review/lote-20261019/zipaquira.zip",
+  "base_sha256": "6934821b6f1e3863ac8d9a473a483a18037da73706ef965d36a9d287a2284639",
+  "candidate_sha256": "05a2dc00ca4e6e002dae2beee56be241cdce60ab7ad643967d5370b1fad80dcd",
+  "places": [
+    {
+      "slug": "estacion-tren",
+      "translations": {
+        "es": {
+          "description": "Aquí llega el tren turístico desde Bogotá. Conoce el edificio y consulta la experiencia ferroviaria."
+        },
+        "en": {
+          "description": "Arrival station for the tourist train from Bogotá. Explore the building and its railway experience."
+        },
+        "pt-BR": {
+          "description": "Aqui chega o trem turístico de Bogotá. Conheça o edifício e a experiência ferroviária."
+        }
+      }
+    },
+    {
+      "slug": "tren-sabana",
+      "translations": {
+        "es": {
+          "description": "Viaja desde Bogotá y llega a la estación de Zipaquirá. Consulta salidas y condiciones."
+        },
+        "en": {
+          "description": "Travel from Bogotá to Zipaquirá station on a heritage train. Check departures and conditions."
+        },
+        "pt-BR": {
+          "description": "Viaje de Bogotá até a estação de Zipaquirá em trem histórico. Consulte saídas e condições."
+        }
+      }
+    }
+  ],
+  "runtime_asset": "runtime/place-relations.js",
+  "runtime_sha256": "0b176a328de099c2cc3ca14a4b975e7ea5fe6bdf9321b925902e91dfa20e040e",
+  "image_bytes_unchanged": true,
+  "image_metadata_unchanged": true,
+  "approved_colegio_quevedo_unchanged": true,
+  "source_urls": [
+    "https://turistren.com.co/",
+    "https://turistren.com.co/planifica-tu-viaje/",
+    "https://mapcarta.com/es/N761227000"
+  ],
+  "evidence": "Itinerario oficial enumera Estación del Tren de Zipaquirá como llegada y partida del regreso. NodoOSM5.02164,-74.00115 corrobora estación y operador, sin certificar geometría del andén.",
+  "public_links": "Solo anclas internas recíprocas, icono ferroviario SVG reutilizable; sin marca comercial, reserva o nueva pestaña.",
+  "preprod_imported": false,
+  "production_changed": false,
+  "station_component_human_approved": false,
+  "integration_note": "Aplicar textos selectivamente y cargar runtime. Conservar recorteCSSV6 y ajustes del coordinador; imágenes y aprobaciones no se tocan."
+}
