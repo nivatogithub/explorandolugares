@@ -404,3 +404,28 @@
 #contenido .map-stage .island-card strong { font-size:10px; }
 #contenido .map-stage .island-card span { font-size:9px; color:var(--el-muted); }
 @media(max-width:640px){ #contenido .map-stage .islands-inset { width:158px; top:6px; left:6px; padding:7px; } #contenido .map-stage .island-card svg { height:32px; } }
+
+/* Navegación compacta sobre el mapa; documentación al pie de página. */
+#contenido .map-panel .map-controls { position:absolute; z-index:3; top:10px; right:10px; width:188px; display:grid; gap:8px; }
+#contenido .map-panel .map-controls details { margin:0; padding:10px; border:1px solid var(--el-control-border); border-radius:10px; background:rgba(255,255,255,.96); }
+#contenido .map-panel .map-controls summary { cursor:pointer; font-size:13px; font-weight:700; color:var(--el-text); }
+#contenido .map-panel .map-controls .map-sectors { margin-top:6px; gap:4px; display:grid; }
+#contenido .map-panel .map-controls button { width:100%; min-height:36px; margin:0; padding:6px 8px; font-size:12px; line-height:1.25; border-radius:7px; text-align:left; }
+#contenido .map-panel .map-controls .selectable-departments { margin:6px 0 0; padding:0; border:0; background:transparent; display:grid; gap:4px; }
+#contenido .map-panel .map-controls .selectable-departments p { font-size:11px; font-weight:400; margin:0 0 3px; }
+#contenido .map-stage > .map { box-sizing:border-box; padding-right:208px; }
+#contenido .map-documentation { margin:28px 0 16px; padding-top:16px; border-top:1px solid var(--el-border); }
+#contenido .map-documentation .map-hint { min-height:0; }
+@media(max-width:640px) {
+ #contenido .map-panel .map-controls { width:146px; top:6px; right:6px; gap:5px; }
+ #contenido .map-panel .map-controls details { padding:8px; }
+ #contenido .map-panel .map-controls button { min-height:44px; }
+ #contenido .map-stage > .map { padding-right:0; padding-top:135px; }
+ #contenido .map-panel .map-controls details[open] { max-height:245px; overflow:auto; }
+}
+
+/* En mapas nacionales estrechos, reservar espacio real para el recuadro de islas. */
+#contenido .map-stage { container-type:inline-size; }
+@container (max-width:1000px) {
+ #contenido .map-stage:has([data-map-sector=""][aria-pressed="true"]) > .map { padding-top:150px; height:610px; }
+}

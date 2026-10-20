@@ -6,7 +6,7 @@ ROOT=Path(__file__).resolve().parents[1]
 p=argparse.ArgumentParser();p.add_argument('--check',action='store_true');args=p.parse_args()
 subprocess.run([sys.executable,str(ROOT/'scripts/generar-tokens-portal.py'),*(['--check'] if args.check else [])],check=True)
 page=ROOT/'backend/public/cobertura/colombia/index.html';actual=page.read_text();expected=actual
-for name in ['portal-tokens.css','cobertura.css','cobertura.js','medicion.js']:
+for name in ['portal-tokens.css','cobertura-meta.css','cobertura-meta.js','medicion.js']:
  digest=hashlib.sha256((ROOT/'backend/public/assets/cobertura'/name).read_bytes()).hexdigest()[:12]
  pattern=r'(assets/cobertura/'+re.escape(name)+r')\?v=[^"\s]+'
  expected,count=re.subn(pattern,lambda m:m[1]+'?v='+digest,expected)
