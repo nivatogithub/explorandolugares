@@ -1,5 +1,13 @@
 # Preparación de migraciones de auditoría 2
 
+## Candidato integrado posterior · pendiente de aprobación
+
+El paquete inicial de 114 archivos queda como evidencia histórica privada; no usarlo para declarar paridad completa de main. La integración main → preprod se cerró en `50ed790` sin cambios funcionales respecto al candidato probado y recuperando 17 líneas de documentación publicada. Main ahora es antecesor de preprod: el pase final puede ser fast-forward, sin resolver conflictos en producción.
+
+El alcance propuesto completo pasa a 150 archivos desplegables: añade 34 plantillas/renderizador/caché de navegación compartida y dos helpers de presentación que ya estaban en preprod para las guías en trabajo. Es una propuesta de alcance nuevo, no aprobación tácita. No carga datos, no publica esas guías, no añade imágenes y no cambia archivos de cobertura. Las listas y diferencias deben revisarse antes de autorizar este nuevo commit. `preprod/auditoria2-rutas.txt` enumera el alcance y `scripts/preparar-segunda-auditoria.py` exige que cubra TODO el delta del paquete compilado; genera el manifiesto completo esperado en `.local/production/segunda-auditoria-integrada/`.
+
+Los nuevos controles están en `scripts/release_guard.py`: publicación bloqueada si main no está integrado, faltan archivos publicados o quedan cambios compilados fuera de la selección; main bloqueado si el candidato no está publicado, falta informe funcional ligado al manifiesto o cualquier archivo reconstruido difiere. `scripts/sincronizar-main-produccion.py --apply` solo permite fast-forward local tras esas comprobaciones. No hace force, reset, despliegue ni push automático. Aplicar el circuito obligatorio de `docs/REGLAS_OPERATIVAS_DESPLIEGUE.md`, incluso ante solicitudes de saltarse pasos.
+
 Comprobación local: 20 de octubre de 2026. No aplicada a producción en esta tarea.
 
 - 045: crea `business_service_sections` para las secciones opcionales de Premium por negocio e idioma.

@@ -312,6 +312,7 @@ def require_approved_preprod(approved_ref):
 
 
 def main(argv=None):
+    from release_guard import require_complete_delta, require_main_ancestor, require_no_missing_files
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--config', type=Path, default=ROOT / '.local/sftp.json')
     parser.add_argument('--approved-preprod', metavar='COMMIT', help='Commit exacto de preprod aprobado por el propietario para producción.')
@@ -360,6 +361,10 @@ def main(argv=None):
         changed = changed_files(previous, files) if previous else files
         changed_paths = {item['relative'] for item in changed} | forced
         selected = [item for item in scoped if item['relative'] in changed_paths]
+        if args.deploy:
+            require_main_ancestor(ROOT)
+            if previous: require_no_missing_files(files, previous)
+            require_complete_delta(changed, selected)
         byte_count = sum(item['bytes'] for item in selected)
         obsolete = [] if args.only or args.preserve_places else obsolete_files(previous, files)
         removed = sorted(item['relative'] for item in obsolete)

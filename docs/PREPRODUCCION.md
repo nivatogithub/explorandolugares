@@ -1,5 +1,7 @@
 # Proceso de preproducción y publicación
 
+Regla vigente del 20/10/2026: main debe reconstruir exactamente la última producción validada. Integrar main en preprod antes de aprobar; publicar el delta completo del candidato aprobado; validar producción y sus migraciones; comprobar paridad completa; solo entonces fast-forward de main mediante `scripts/sincronizar-main-produccion.py`. No saltarse pasos por urgencia ni fusionar toda una rama después de publicar solo una parte. El detalle vinculante está en `REGLAS_OPERATIVAS_DESPLIEGUE.md`; los apartados históricos siguientes no sustituyen esta regla.
+
 La entrada portable es `preprod/README.md`; reúne instalación en otro equipo, configuración local, comandos de operación y diferencias con GoDaddy. Los scripts antiguos en `scripts/` se conservan como accesos de compatibilidad.
 
 Decisión del propietario del 16 de octubre de 2026. Prevalece sobre instrucciones históricas de publicación directa o merge previo a main.
