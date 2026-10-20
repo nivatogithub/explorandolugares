@@ -1,5 +1,4 @@
 <?php
-// Shared private-panel skin. The public portal retains its own layout.
-$adminIdentityVersion=substr(hash_file('sha256',__DIR__.'/../assets/identidad-neutral.css'),0,12);
-$adminThemeVersion=substr(hash_file('sha256',__DIR__.'/../assets/admin-theme.css'),0,12);
-?><link rel="stylesheet" href="/assets/cobertura/portal-tokens.css"><link rel="stylesheet" href="/assets/identidad-neutral.css?v=<?=esc($adminIdentityVersion)?>"><link rel="stylesheet" href="/assets/admin-theme.css?v=<?=esc($adminThemeVersion)?>">
+require_once __DIR__.'/_asset.php';
+foreach (['style.css','admin.css','cobertura/portal-tokens.css','identidad-neutral.css','admin-theme.css'] as $asset):
+?><link rel="stylesheet" href="<?=esc(admin_asset($asset))?>"><?php endforeach ?>

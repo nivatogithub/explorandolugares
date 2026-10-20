@@ -75,3 +75,8 @@ body.portal-admin{--ink:var(--el-text);--muted:var(--el-muted);--ember:var(--el-
 
 /* Shared editable selector: its arrow is part of the field, not a primary action. */
 .portal-admin button.floating-select-toggle{background:transparent!important;color:var(--el-action)!important;border:0!important;border-left:1px solid var(--el-border)!important;border-radius:0 6px 6px 0;padding:0;min-height:40px}
+
+/* Short state controls remain native and usable in scrollable tables. */
+.portal-admin .admin-status-form--row {display:flex;flex-wrap:wrap;align-items:center;gap:.65rem;min-width:13rem}
+.portal-admin .admin-status-form--row select[data-native-select] {width:auto;flex:1 1 8rem;min-height:2.75rem;padding:.5rem .7rem;border:1px solid var(--portal-border,#b8c8c4);border-radius:.6rem;background:#fff;color:var(--portal-ink,#173f3a)}
+.portal-admin .admin-status-form--row button {margin:0;white-space:normal}

@@ -25,7 +25,7 @@ DB.execute('PRAGMA foreign_keys=ON')
 DB.executescript((ROOT / 'backend/database/sqlite.sql').read_text())
 DB.executescript((ROOT / 'backend/database/destinations.sqlite.sql').read_text())
 DB.executescript((ROOT / 'backend/database/migrations/006-poi-experience-links.sqlite.sql').read_text())
-for number in range(8, 47):
+for number in range(8, 48):
     matches = list((ROOT / 'backend/database/migrations').glob(f'{number:03d}-*.sqlite.sql'))
     assert len(matches) == 1, f'Migración SQLite faltante o ambigua: {number:03d}'
     DB.executescript(matches[0].read_text())
@@ -65,6 +65,7 @@ for index in range(1, 28):
 DB.execute("INSERT INTO businesses(public_id,destination_id,category_code,record_origin,slug,information_status,claim_status,operation_status,publication_status) VALUES(?,?,?,?,?,?,?,?,?)", ('00000000-0000-4000-8000-000000000099', destination_id, 'hospedaje', 'admin_created', 'negocio-sin-suscripcion', 'PENDIENTE_REVISION', 'NO_RECLAMADO', 'DESCONOCIDO', 'draft'))
 no_subscription_business_id = DB.execute('SELECT last_insert_rowid()').fetchone()[0]
 DB.execute("INSERT INTO business_translations(business_id,locale,display_name,summary,description) VALUES(?,'es','Negocio sin suscripción','', '')", (no_subscription_business_id,))
+DB.execute("INSERT INTO leads(request_key,name,business,municipality,category,has_brand,description,interest,consent_version,created_at) VALUES('admin-repair','Persona ficticia','Consulta <script>alert(1)</script>','Jericó','hospedaje','no','Mensaje sintético','negocio','test','2026-10-20 00:00:00')")
 DB.commit()
 expected_prices = {'basic': {'monthly': 19900, 'annual': 199000}, 'featured': {'monthly': 49900, 'annual': 499000}, 'page': {'monthly': 69900, 'annual': 699000}, 'page_premium': {'monthly': 119900, 'annual': 1199000}}
 for plan, frequencies in expected_prices.items():
@@ -198,6 +199,8 @@ try:
         ('/admin/reclamaciones.php', 'Solicitudes anteriores de representación'),
         ('/admin/solicitudes-cuenta.php', 'Solicitudes de cuenta de negocio'),
         ('/admin/usuarios.php', 'Cuentas'),
+        ('/admin/atencion-comercios.php', 'Atención a comercios'),
+        ('/admin/atencion-comercios.php?view=review', 'Revisión y publicación'),
         ('/admin/incidencias.php', 'Errores de ejecución'),
         ('/admin/suscripciones.php', 'Suscripciones'),
         ('/admin/inversionistas.php', 'Inteligencia de negocio e inversión'),
@@ -220,6 +223,28 @@ try:
     ADMIN = GUEST
     GUEST = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
 
+    # Private detail and informational link must not confer permissions or publish.
+    detail='/admin/solicitud-detalle.php?type=lead&id=1'
+    check(request(detail,opener=GUEST)[0]==403,'El detalle debe ser privado.')
+    check(request('/admin/solicitud-detalle.php?type=lead&id=99999')[0]==404,'ID inexistente debe devolver 404.')
+    detail_html=request(detail)[1]
+    check('&lt;script&gt;' in detail_html and '<script>alert(1)</script>' not in detail_html,'Escape de solicitud.')
+    check('Enviado por la persona' in request('/admin/solicitud-detalle.php?type=account&id=1')[1],'Detalle de cuenta con evidencia enviada.')
+    link_csrf=re.search(r'name="csrf" value="([^"]+)"',request(detail+'&search=Hotel')[1]).group(1)
+    check(request(detail,{'csrf':'invalid','action':'link','business_id':business_id,'confirm':'1'})[0]==403,'Vínculo exige CSRF.')
+    before_memberships=DB.execute('SELECT COUNT(*) FROM business_account_memberships').fetchone()[0]
+    before_publications=DB.execute('SELECT COUNT(*) FROM businesses WHERE publication_status="published"').fetchone()[0]
+    for attempt in range(2):
+        check(request(detail,{'csrf':link_csrf,'action':'link','business_id':business_id,'confirm':'1'})[0]==200,'Guardar vínculo informativo.')
+    check(DB.execute('SELECT COUNT(*) FROM lead_business_links').fetchone()[0]==1,'Vínculo repetido no duplica.')
+    check(DB.execute('SELECT COUNT(*) FROM business_account_memberships').fetchone()[0]==before_memberships,'Vincular no otorga permisos.')
+    check(DB.execute('SELECT COUNT(*) FROM businesses WHERE publication_status="published"').fetchone()[0]==before_publications,'Vincular no publica.')
+    status_csrf=re.search(r'name="csrf" value="([^"]+)"',request('/admin/index.php')[1]).group(1)
+    body=request('/admin/index.php',{'csrf':status_csrf,'action':'status','id':'1','status':'archivado','return_status':'nuevo','return_q':'Consulta','return_page':'99'})[1]
+    check('dejó de aparecer' in body and 'Página 1' in body,'Estado conserva contexto y ajusta página.')
+    body=request('/admin/index.php',{'csrf':status_csrf,'action':'status','id':'9999','status':'nuevo'})[1]
+    check('ya no existe' in body,'ID ausente no anuncia éxito.')
+
     for path, expected in paths:
         status, body, _ = request(path)
         if path.endswith('plantilla=1'):
@@ -238,9 +263,9 @@ try:
                     '/admin/index.php': 'Estado del sistema' if 'tab=sistema' in path else 'Solicitudes de participación',
                     '/admin/base-datos.php': 'Base de datos',
                     '/admin/destinos.php': 'Lugares',
-                    '/admin/negocios.php': 'Negocios',
-                    '/admin/trasladar-negocios.php': 'Negocios',
-                    '/admin/importar-negocios.php': 'Negocios',
+                    '/admin/negocios.php': 'Catálogo y cobertura',
+                    '/admin/trasladar-negocios.php': 'Catálogo y cobertura',
+                    '/admin/importar-negocios.php': 'Catálogo y cobertura',
                     '/admin/reclamaciones.php': 'Reclamos de negocio',
                     '/admin/solicitudes-cuenta.php': 'Solicitudes de cuenta',
                     '/admin/usuarios.php': 'Cuentas',
@@ -261,7 +286,7 @@ try:
                 selected_tabs = re.findall(r'<a\b[^>]*aria-current="page"[^>]*>(.*?)</a>', workflow.group(0), re.S)
                 check(len(selected_tabs) == 1, f'Negocios debe marcar una sola pestaña activa en {path}; encontró {len(selected_tabs)}')
                 selected_label = re.sub(r'<[^>]+>', '', selected_tabs[0]).strip()
-                expected_tab = {'tab=crear': 'Crear negocio', 'tab=importar': 'Importación masiva', 'tab=revisar': 'Revisar y publicar'}.get(next((part for part in path.split('?')[1:] if part.startswith('tab=')), ''), 'Todos los negocios')
+                expected_tab = {'tab=crear': 'Crear negocio', 'tab=importar': 'Importación masiva', 'tab=revisar': 'Publicar importaciones Gratis sin representante'}.get(next((part for part in path.split('?')[1:] if part.startswith('tab=')), ''), 'Todos los negocios')
                 check(selected_label == expected_tab, f'La pestaña activa debe ser {expected_tab} en {path}; mostró {selected_label}')
     health_csrf = re.search(r'name="csrf" value="([^"]+)"', request('/admin/campanas.php?tab=conexion')[1]).group(1)
     check(request('/admin/campanas.php?tab=conexion', {'action': 'check_connection', 'csrf': 'invalid'})[0] == 403, 'Diagnóstico sin CSRF')
@@ -404,7 +429,7 @@ try:
     status, review_page_two, _ = request(review_query + '&pagina=2')
     check(status == 200 and '27 resultados' in review_page_two and 'Página 2 de 2' in review_page_two, 'La segunda página debe conservar los filtros del lote.')
     review_csrf = re.search(r'name="csrf" value="([^"]+)"', review_page_two).group(1)
-    bulk_fields = {'csrf': review_csrf, 'action': 'publish_imported_bulk', 'select_all_filtered': '1', 'filter_destination': str(destination_id), 'filter_category': 'hospedaje', 'filter_query': 'Hotel de lote', 'filter_status': 'draft', 'filter_verification': 'PUBLICO', 'filter_duplicates': 'no'}
+    bulk_fields = {'review_token': re.search(r'name="review_token" value="([^"]+)"',review_page_two).group(1), 'csrf': review_csrf, 'action': 'publish_imported_bulk', 'select_all_filtered': '1', 'filter_destination': str(destination_id), 'filter_category': 'hospedaje', 'filter_query': 'Hotel de lote', 'filter_status': 'draft', 'filter_verification': 'PUBLICO', 'filter_duplicates': 'no'}
     status, bulk_result, _ = request('/admin/negocios.php?tab=revisar', bulk_fields)
     check(status == 200 and 'Lote revisado: 27 publicados' in bulk_result, 'Seleccionar todos los resultados filtrados debe incluir registros de ambas páginas.')
     _, html, _ = request('/admin/index.php')
@@ -452,7 +477,8 @@ try:
     check(tuple(imported) == ('draft','NO_RECLAMADO','PUBLICO','public_import','free','pending_publication'), 'La ficha importada no quedó como Gratis, privada y sin reclamar.')
     imported_locales = DB.execute("SELECT locale,display_name FROM business_translations WHERE business_id=(SELECT business_id FROM business_translations WHERE display_name='Comercio importado de prueba' AND locale='es')").fetchall()
     check(len(imported_locales) == 3 and len({row['display_name'] for row in imported_locales}) == 1, 'La importación masiva no conservó el nombre propio en los tres idiomas del portal.')
-    status, body, _ = request('/admin/negocios.php?tab=revisar', {'csrf': csrf, 'action': 'publish_imported_bulk', 'select_all_filtered': '1', 'filter_destination': str(destination_id), 'filter_category': 'hospedaje', 'filter_status': 'draft', 'filter_verification': 'PUBLICO', 'filter_duplicates': 'no'})
+    fresh_review=request('/admin/negocios.php?tab=revisar')[1]
+    status, body, _ = request('/admin/negocios.php?tab=revisar', {'review_token':re.search(r'name="review_token" value="([^"]+)"',fresh_review).group(1),'csrf': csrf, 'action': 'publish_imported_bulk', 'select_all_filtered': '1', 'filter_destination': str(destination_id), 'filter_category': 'hospedaje', 'filter_status': 'draft', 'filter_verification': 'PUBLICO', 'filter_duplicates': 'no'})
     check(status == 200 and 'Lote revisado: 1 publicados' in body, 'La aprobación masiva filtrada no publicó el negocio importado seleccionado.')
     bulk_row = DB.execute("SELECT b.publication_status,s.status FROM businesses b JOIN business_translations t ON t.business_id=b.id AND t.locale='es' JOIN business_subscriptions s ON s.business_id=b.id WHERE t.display_name='Comercio importado de prueba'").fetchone()
     check(tuple(bulk_row) == ('published','active'), 'La aprobación masiva no activó el registro Gratis tras publicarlo.')

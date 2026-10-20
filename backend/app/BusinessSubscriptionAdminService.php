@@ -87,17 +87,21 @@ final class BusinessSubscriptionAdminService
         }
     }
 
-    /** Activate the selected tier only when an authorized publication actually goes live. */
-    public function publish(int $businessId,?DateTimeImmutable $publishedAt=null): void
+    /** Read-only readiness check using the same rules as the publication action. */
+    public function publicationBlockers(int $businessId): array
     {
-        $publishedAt??=new DateTimeImmutable('now',new DateTimeZone('America/Bogota'));
-        $localPublishDate=$publishedAt->setTimezone(new DateTimeZone('America/Bogota'))->format('Y-m-d');
-        $stamp=$publishedAt->setTimezone(new DateTimeZone('UTC'))->format('Y-m-d H:i:s');
-        $this->pdo->beginTransaction();
-        try{
-            $lock=$this->pdo->getAttribute(PDO::ATTR_DRIVER_NAME)==='mysql'?' FOR UPDATE':'';
-            $q=$this->pdo->prepare('SELECT id FROM businesses WHERE id=?'.$lock);$q->execute([$businessId]);
-            $q=$this->pdo->prepare('SELECT id,address_text,latitude,longitude,location_map_url,location_confirmed,information_status,operation_status,record_origin FROM businesses WHERE id=?');$q->execute([$businessId]);$business=$q->fetch(PDO::FETCH_ASSOC);
+        $q=$this->pdo->prepare('SELECT * FROM businesses WHERE id=?');$q->execute([$businessId]);
+        try {
+            $this->requirePublicationReady($q->fetch(PDO::FETCH_ASSOC),$businessId,(new DateTimeImmutable('now',new DateTimeZone('America/Bogota')))->format('Y-m-d'));
+            return [];
+        } catch (RuntimeException $error) {
+            if($error instanceof PDOException)throw $error;
+            return [$error->getMessage()];
+        }
+    }
+
+    private function requirePublicationReady(array|false $business,int $businessId,string $localPublishDate): array
+    {
             if(!$business)throw new RuntimeException('El negocio no existe.');
             if($business['information_status']==='PUBLICO'&&$business['record_origin']!=='public_import')throw new RuntimeException('Verifica la información y la autorización del negocio antes de publicarlo.');
             if(!in_array($business['information_status'],['PUBLICO','VERIFICADO','ACTIVO'],true))throw new RuntimeException('Verifica la información y la autorización del negocio antes de publicarlo.');
@@ -114,6 +118,22 @@ final class BusinessSubscriptionAdminService
             if($sub['plan_code']!=='free'&&($sub['status']!=='paid_pending_publication'||$sub['reviewed_at']===null))throw new RuntimeException('Confirma el pago revisado antes de publicar esta suscripción.');
             if($sub['plan_code']!=='free'&&$business['information_status']!=='ACTIVO')throw new RuntimeException('Una suscripción paga requiere que el negocio esté reclamado y autorizado como ACTIVO.');
             if($sub['plan_code']==='free'&&!in_array($sub['status'],['pending_publication','active'],true))throw new RuntimeException('La suscripción Gratis no está lista para publicarse.');
+        return $sub;
+    }
+
+    /** Activate the selected tier only when an authorized publication actually goes live. */
+    public function publish(int $businessId,?DateTimeImmutable $publishedAt=null,?callable $precondition=null): void
+    {
+        $publishedAt??=new DateTimeImmutable('now',new DateTimeZone('America/Bogota'));
+        $localPublishDate=$publishedAt->setTimezone(new DateTimeZone('America/Bogota'))->format('Y-m-d');
+        $stamp=$publishedAt->setTimezone(new DateTimeZone('UTC'))->format('Y-m-d H:i:s');
+        $this->pdo->beginTransaction();
+        try{
+            $lock=$this->pdo->getAttribute(PDO::ATTR_DRIVER_NAME)==='mysql'?' FOR UPDATE':'';
+            $q=$this->pdo->prepare('SELECT id FROM businesses WHERE id=?'.$lock);$q->execute([$businessId]);
+            if($precondition!==null)$precondition();
+            $q=$this->pdo->prepare('SELECT id,address_text,latitude,longitude,location_map_url,location_confirmed,information_status,operation_status,record_origin FROM businesses WHERE id=?');$q->execute([$businessId]);$business=$q->fetch(PDO::FETCH_ASSOC);
+            $sub=$this->requirePublicationReady($business,$businessId,$localPublishDate);
             $activation=(new SubscriptionChangeService($this->pdo))->activation($sub,$publishedAt);
             $renewalOf=null;
             if($sub['plan_code']!=='free'&&!$activation){

@@ -117,5 +117,9 @@ foreach([false,true] as $nested){
  if($nested){subscription_check($pdo->inTransaction(),'Caller transaction remains usable');$pdo->commit();}
 }
 $pdo->exec('DROP TRIGGER reject_subscription_insert');
+$beforePublication=$pdo->query('SELECT publication_status FROM businesses WHERE id=1')->fetchColumn();
+try{$service->publish(1,null,static function():void{throw new RuntimeException('stale-review');});throw new RuntimeException('Missing version guard');}catch(RuntimeException $e){subscription_check($e->getMessage()==='stale-review','Version precondition rejects stale review');}
+subscription_check($pdo->query('SELECT publication_status FROM businesses WHERE id=1')->fetchColumn()===$beforePublication,'Rejected review leaves publication unchanged');
+subscription_check(!$pdo->inTransaction(),'Rejected review rolls back transaction');
 @rmdir($paymentStorage);
 echo "OK: tier photo quotas, configured-price snapshot, scheduling gate, actual-publication start and calendar expiry.\n";

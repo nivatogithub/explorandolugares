@@ -6,7 +6,7 @@ final class BusinessBulkPublicationService
     public function __construct(private PDO $pdo) {}
 
     /** Publish only selected public-import Free drafts; return per-row decisions instead of hiding failures. */
-    public function publish(array $businessIds): array
+    public function publish(array $businessIds,array $expectedVersions=[]): array
     {
         $ids=array_values(array_unique(array_filter(array_map(static fn($id):int=>(int)$id,$businessIds),static fn(int $id):bool=>$id>0)));
         if(!$ids||count($ids)>500)throw new RuntimeException('Selecciona entre 1 y 500 negocios.');
@@ -29,10 +29,23 @@ final class BusinessBulkPublicationService
                 if(self::looksLikeDuplicate($name,(string)$other['display_name'])){$reason='Posible duplicado de «'.(string)$other['display_name'].'». Revisa ambos registros individualmente.';break;}
             }
             if($reason!==''){$results['skipped'][]=['id'=>$id,'name'=>$name,'reason'=>$reason];continue;}
-            try{$publisher->publish($id);$results['published'][]=['id'=>$id,'name'=>$name];}
+            try{$publisher->publish($id,null,$expectedVersions ? function() use($id,$expectedVersions):void {if(!isset($expectedVersions[$id])||!hash_equals((string)$expectedVersions[$id],$this->reviewVersion($id)))throw new RuntimeException('La ficha cambió después de revisarla. Actualiza la lista y vuelve a confirmar.');} : null);$results['published'][]=['id'=>$id,'name'=>$name];}
             catch(Throwable $error){$results['skipped'][]=['id'=>$id,'name'=>$name,'reason'=>$error->getMessage()];}
         }
         return $results;
+    }
+
+    /** Snapshot used only by the private review flow; no personal payload is persisted. */
+    public function reviewVersion(int $id): string
+    {
+        $snapshot=[];
+        foreach(['businesses'=>'id','business_translations'=>'business_id','business_categories'=>'business_id','business_subscriptions'=>'business_id','business_account_memberships'=>'business_id','business_contacts'=>'business_id','business_media'=>'business_id'] as $table=>$column){
+            $q=$this->pdo->prepare('SELECT * FROM '.$table.' WHERE '.$column.'=?');$q->execute([$id]);
+            $items=$q->fetchAll(PDO::FETCH_ASSOC);foreach($items as &$item)ksort($item);unset($item);
+            usort($items,static fn(array $a,array $b):int=>strcmp(json_encode($a),json_encode($b)));
+            $snapshot[$table]=$items;
+        }
+        return hash('sha256',json_encode($snapshot,JSON_THROW_ON_ERROR));
     }
 
     public static function looksLikeDuplicate(string $left,string $right):bool

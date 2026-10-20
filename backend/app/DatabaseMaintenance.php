@@ -212,6 +212,7 @@ final class DatabaseMaintenance
             'requires'=>['businesses','business_subscriptions','accounts','destinations'],
         ],
         '046-premium-page-aliases'=>['file'=>'046-premium-page-aliases.mysql.sql','checks'=>[['business_page_aliases',['alias','business_id','is_current','created_at']]],'requires'=>['businesses']],
+        '047-lead-business-links'=>['file'=>'047-lead-business-links.mysql.sql','checks'=>[['lead_business_links',['lead_id','business_id','linked_by','created_at']]],'requires'=>['leads','businesses']],
         '045-business-service-sections'=>['file'=>'045-business-service-sections.mysql.sql','checks'=>[['business_service_sections',['business_id','locale','section_code','description']]],'requires'=>['businesses']],
         '044-subscription-changes'=>['file'=>'044-subscription-changes.mysql.sql','checks'=>[['subscription_changes',['subscription_id','source_subscription_id','change_kind','quoted_at','term_starts_at','effective_at','original_ends_at','source_full_cents','target_full_cents','credit_cents','target_remaining_cents','due_cents','currency']]],'requires'=>['business_subscriptions']],
         '043-account-lifecycle'=>['file'=>'043-account-lifecycle.mysql.sql','checks'=>[['account_access_events',['account_id','event_type','actor_account_id','reason','created_at']],['account_reactivations',['account_id','token_hash','expires_at','used_at']]],'requires'=>['accounts']],
