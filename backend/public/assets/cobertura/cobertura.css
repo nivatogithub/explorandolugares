@@ -308,3 +308,6 @@
 @media(max-width:640px) { #contenido .places { max-height: 360px; } #contenido .map { height: 370px; } }
 
 #contenido .map.has-selection g path.municipality, #contenido .map.has-selection g path.department-outline { opacity: 1; }
+
+#contenido .map path.municipality.outside_scope { cursor: default; }
+#contenido .map path.municipality.outside_scope:hover { stroke: none; }
