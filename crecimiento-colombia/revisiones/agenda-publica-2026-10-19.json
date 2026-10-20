@@ -1,0 +1,223 @@
+{
+  "schema_version": 1,
+  "purpose": "private_event_research_not_import_or_publication",
+  "checked_on": "2026-10-19",
+  "timezone": "America/Bogota",
+  "production_published_places": [
+    "jerico",
+    "bogota",
+    "cartagena",
+    "medellin",
+    "santa-marta"
+  ],
+  "scope": [
+    "arboletes",
+    "cocorna",
+    "el-carmen-de-viboral",
+    "el-penol",
+    "el-retiro",
+    "guatape",
+    "necocli",
+    "puerto-triunfo",
+    "rionegro",
+    "san-carlos",
+    "san-jeronimo",
+    "san-pedro-de-los-milagros",
+    "san-rafael",
+    "santa-rosa-de-osos",
+    "sopetran",
+    "tamesis",
+    "venecia",
+    "bogota",
+    "cartagena",
+    "covenas",
+    "jardin",
+    "jerico",
+    "medellin",
+    "santa-fe-de-antioquia",
+    "santa-marta",
+    "zipaquira",
+    "sonson",
+    "cauca-viejo"
+  ],
+  "method": "Primera búsqueda de candidatos en fuentes oficiales y organizadores; consultas agrupadas para parte de los borradores. No es un barrido exhaustivo de cada agenda municipal. Una fecha recurrente o un extracto de búsqueda no se considera un evento confirmado.",
+  "place_status": {
+    "arboletes": "requires_individual_source_review",
+    "cocorna": "requires_individual_source_review",
+    "el-carmen-de-viboral": "requires_individual_source_review",
+    "el-penol": "requires_individual_source_review",
+    "el-retiro": "requires_individual_source_review",
+    "guatape": "requires_individual_source_review",
+    "necocli": "requires_individual_source_review",
+    "puerto-triunfo": "requires_individual_source_review",
+    "rionegro": "candidate_or_source_found",
+    "san-carlos": "requires_individual_source_review",
+    "san-jeronimo": "requires_individual_source_review",
+    "san-pedro-de-los-milagros": "requires_individual_source_review",
+    "san-rafael": "requires_individual_source_review",
+    "santa-rosa-de-osos": "requires_individual_source_review",
+    "sopetran": "requires_individual_source_review",
+    "tamesis": "requires_individual_source_review",
+    "venecia": "requires_individual_source_review",
+    "bogota": "candidate_or_source_found",
+    "cartagena": "candidate_or_source_found",
+    "covenas": "requires_individual_source_review",
+    "jardin": "requires_individual_source_review",
+    "jerico": "candidate_or_source_found",
+    "medellin": "candidate_or_source_found",
+    "santa-fe-de-antioquia": "candidate_or_source_found",
+    "santa-marta": "candidate_or_source_found",
+    "zipaquira": "requires_individual_source_review",
+    "sonson": "candidate_or_source_found",
+    "cauca-viejo": "requires_individual_source_review"
+  },
+  "items": [
+    {
+      "place": "bogota",
+      "name": "Hip Hop al Parque",
+      "start_date": "2026-10-24",
+      "end_date": "2026-10-25",
+      "venue": "Parque Simón Bolívar",
+      "source": "https://www.idartes.gov.co/es/noticias/idartes-anuncia-la-fecha-de-los-festivales-al-parque-2026-y-confirma-la-historica",
+      "status": "announced_by_primary_source",
+      "missing": [
+        "horarios y condiciones de acceso actualizados"
+      ],
+      "published": false,
+      "checked_on": "2026-10-19"
+    },
+    {
+      "place": "bogota",
+      "name": "Salsa al Parque",
+      "start_date": "2026-11-28",
+      "end_date": "2026-11-29",
+      "venue": "Parque Simón Bolívar",
+      "source": "https://www.idartes.gov.co/es/noticias/idartes-anuncia-la-fecha-de-los-festivales-al-parque-2026-y-confirma-la-historica",
+      "status": "announced_by_primary_source",
+      "missing": [
+        "programación y horarios específicos"
+      ],
+      "published": false,
+      "checked_on": "2026-10-19"
+    },
+    {
+      "place": "medellin",
+      "name": "14.ª Fiesta de la Diversidad Cultural",
+      "start_date": "2026-10-24",
+      "end_date": "2026-10-25",
+      "source": "https://www.medellin.gov.co/es/eventos/14-a-fiesta-de-la-diversidad-cultural/",
+      "status": "announced_by_primary_source",
+      "missing": [
+        "confirmar sede, horarios y condiciones de acceso"
+      ],
+      "published": false,
+      "checked_on": "2026-10-19"
+    },
+    {
+      "place": "medellin",
+      "name": "Miradas Medellín",
+      "start_date": "2026-11-03",
+      "end_date": "2026-11-08",
+      "source": "https://www.medellin.gov.co/es/eventos/miradas-medellin/",
+      "status": "announced_by_primary_source",
+      "missing": [
+        "programación por sede y horarios"
+      ],
+      "published": false,
+      "checked_on": "2026-10-19"
+    },
+    {
+      "place": "santa-fe-de-antioquia",
+      "name": "Festival de Artes de la Calle",
+      "start_date": "2026-11-13",
+      "end_date": "2026-11-16",
+      "venue": "Calles, parques y plazas de Santa Fe de Antioquia",
+      "access": "Ingreso libre y sin costo según organizador",
+      "source": "https://www.comfama.com/festivales/artes-de-la-calle/",
+      "status": "announced_by_primary_source",
+      "missing": [
+        "seleccionar actividades concretas; programación sujeta a cambios"
+      ],
+      "published": false,
+      "checked_on": "2026-10-19"
+    },
+    {
+      "place": "rionegro",
+      "name": "Final de Juegos Deportivos Departamentales de Antioquia",
+      "start_date": "2026-11-30",
+      "end_date": "2026-12-11",
+      "venue": "Rionegro y Envigado; sedes específicas pendientes",
+      "source": "https://indeportesantioquia.gov.co/tamesis-sera-la-casa-de-los-juegos-departamentales-de-antioquia-2026-en-su-edicion-numero-49-juego-de-todos-para-el-suroeste/",
+      "status": "announced_by_primary_source",
+      "missing": [
+        "escenarios de Rionegro, programación y acceso del público"
+      ],
+      "published": false,
+      "checked_on": "2026-10-19"
+    },
+    {
+      "place": "jerico",
+      "name": "Las notas de Tita",
+      "start_date": null,
+      "end_date": null,
+      "source": "https://museomaja.com/",
+      "status": "not_reconfirmed",
+      "missing": [
+        "la fecha 24/10 fue reportada anteriormente, no reconfirmada en esta revisión",
+        "el sitio del museo no devolvió texto verificable; revisar anuncio original"
+      ],
+      "published": false,
+      "checked_on": "2026-10-19"
+    },
+    {
+      "place": "cartagena",
+      "name": "Agenda cultural 2026 del IPCC",
+      "start_date": null,
+      "end_date": null,
+      "source": "https://www.cartagena.gov.co/noticias/heroica-vivira-cultura-todo-el-ano-alcaldia-cartagena-presenta-agenda-cultural-2026",
+      "status": "search_result_only",
+      "missing": [
+        "la página falló al abrir; no elevar el extracto de búsqueda a evento confirmado",
+        "confirmar cada actividad, fecha y sede"
+      ],
+      "published": false,
+      "checked_on": "2026-10-19"
+    },
+    {
+      "place": "santa-marta",
+      "name": "Agenda pública Eventful",
+      "source": "https://eventful.santamarta.gov.co/index.php",
+      "status": "source_identified",
+      "missing": [
+        "seleccionar y verificar eventos posteriores al 19/10/2026"
+      ],
+      "published": false,
+      "checked_on": "2026-10-19"
+    },
+    {
+      "place": "sonson",
+      "name": "Celebración de los 75 años de la Industrial",
+      "source": "https://www.periodicoelparamo.com/sonson-celebra-los-75-anos-de-la-industrial-con-llama-olimpica-desfile-de-bandas-y-gran-baile-popular/",
+      "status": "secondary_source_only",
+      "missing": [
+        "reconfirmar anuncio con organizador y acceso público; no publicar como confirmado"
+      ],
+      "published": false,
+      "checked_on": "2026-10-19"
+    }
+  ],
+  "discarded": [
+    {
+      "place": "jardin",
+      "event": "VI Festival de Tango",
+      "reason": "Terminó el 18/10/2026; no presentarlo como próximo",
+      "source": "https://www.comfenalcoantioquia.com.co/eventos-comfenalco/2026/octubre/vi-festival-de-tango-de-jardin-fileteado-y-bandoneon"
+    },
+    {
+      "place": "tamesis",
+      "event": "Subregional de Juegos Departamentales",
+      "reason": "29/09–03/10/2026, pasado; la final futura corresponde a Rionegro/Envigado, no Támesis"
+    }
+  ],
+  "publication_rule": "Completar lugar/fechas/condiciones, redactar resumen propio, verificar vigencia y recibir aprobación antes de importar. No publicar borradores de lugares ni copiar imágenes de anuncios sin permiso."
+}

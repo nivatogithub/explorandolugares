@@ -17,6 +17,10 @@ for page in root.rglob('*.html'):
   s=re.sub(r'(<section id="destinos" class="section">).*?</section>',lambda m:'<section id="destinos" class="section"><div class="sectionhead"><div><p class="eyebrow">'+c['title']+'</p><h2>'+c['heading']+'</h2></div><p>'+c['intro']+'</p></div><div class="home-attractions" data-home-attractions><p>'+c['fallback']+'</p></div><p><a class="text-link" href="'+prefix+'/destinos/">'+c['all']+'</a></p></section>',s,flags=re.S)
   s=s.replace('Un país de muchos lugares para <em>volver.</em>','Colombia, un país con muchos lugares para <em>volver.</em>')
   if 'portada-atracciones.css' not in s:s=s.replace('</head>','<link rel="stylesheet" href="/assets/portada-atracciones.css"></head>')
+ if 'negocios-locales/planes/' in rel:
+  notes={'es':'Tarifas de lanzamiento. Conservas el precio contratado durante el período pagado. Cualquier actualización se informará antes de la renovación.','en':'Launch rates. Your contracted price is maintained throughout the paid period. Any change will be communicated before renewal.','pt-br':'Tarifas de lançamento. O preço contratado é mantido durante o período pago. Qualquer atualização será informada antes da renovação.'}
+  s=s.replace('Este complemento ofrece visibilidad como operador; no incluye reservas ni garantiza ventas o visitantes.','Este complemento añade presencia dentro de la experiencia, además de tu aparición en el directorio.')
+  if 'id="tarifas-lanzamiento"' not in s:s=s.replace('</main>','<p id="tarifas-lanzamiento" class="notice">'+notes[lang]+'</p></main>')
  if '/privacidad/' in '/'+rel and '</main>' in s:
   s=re.sub(r'<section id="datos-configurados">.*?</section>','',s,flags=re.S)
   s=re.sub(r'<section id="medicion-opcional">.*?</section>','',s,flags=re.S)
