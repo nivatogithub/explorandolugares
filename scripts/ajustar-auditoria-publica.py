@@ -20,7 +20,9 @@ for page in root.rglob('*.html'):
  if 'negocios-locales/planes/' in rel:
   notes={'es':'Tarifas de lanzamiento. Conservas el precio contratado durante el período pagado. Cualquier actualización se informará antes de la renovación.','en':'Launch rates. Your contracted price is maintained throughout the paid period. Any change will be communicated before renewal.','pt-br':'Tarifas de lançamento. O preço contratado é mantido durante o período pago. Qualquer atualização será informada antes da renovação.'}
   s=s.replace('Este complemento ofrece visibilidad como operador; no incluye reservas ni garantiza ventas o visitantes.','Este complemento añade presencia dentro de la experiencia, además de tu aparición en el directorio.')
-  if 'id="tarifas-lanzamiento"' not in s:s=s.replace('</main>','<p id="tarifas-lanzamiento" class="notice">'+notes[lang]+'</p></main>')
+  s=re.sub(r'<p id="tarifas-lanzamiento"[^>]*>.*?</p>','',s,flags=re.S)
+  note='<p id="tarifas-lanzamiento" class="notice simulator-pricing-note">'+notes[lang]+'</p>'
+  s=re.sub(r'(<p class="simulator-total">.*?</p>)',lambda m:m[1]+note,s,count=1,flags=re.S)
  if '/privacidad/' in '/'+rel and '</main>' in s:
   s=re.sub(r'<section id="datos-configurados">.*?</section>','',s,flags=re.S)
   s=re.sub(r'<section id="medicion-opcional">.*?</section>','',s,flags=re.S)
