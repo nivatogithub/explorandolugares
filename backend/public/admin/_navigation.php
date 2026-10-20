@@ -5,6 +5,7 @@ $adminTab = (string)($_GET['tab'] ?? '');
 $activeAdminItem = match (true) {
     $adminPath === 'index.php' && $adminTab === 'sistema' => 'system',
     $adminPath === 'index.php' => 'requests',
+    $adminPath === 'atencion-comercios.php' => ($_GET['view']??'') === 'review' ? 'business-review' : 'business-attention',
     $adminPath === 'negocios.php' => 'businesses',
     $adminPath === 'trasladar-negocios.php' => 'businesses',
     $adminPath === 'importar-negocios.php' => 'businesses',
@@ -34,9 +35,11 @@ $activeAdminItem = match (true) {
   <a class="admin-sidebar-brand" href="index.php"><img src="/assets/brand/explorando-lugares-logo-v2-transparent.png" width="76" height="76" alt=""><span>Explorando <strong>Lugares</strong><small>Administración</small></span></a>
   <nav>
     <section><h2>Operación</h2>
+      <a href="atencion-comercios.php" <?= $activeAdminItem === 'business-attention' ? 'aria-current="page"' : '' ?>>Atención a comercios</a>
+      <a href="atencion-comercios.php?view=review" <?= $activeAdminItem === 'business-review' ? 'aria-current="page"' : '' ?>>Revisión y publicación</a>
       <a href="solicitudes-publicas.php" <?= $activeAdminItem === 'public-requests' ? 'aria-current="page"' : '' ?>>Solicitudes de usuarios</a>
       <a href="index.php?tab=solicitudes" <?= $activeAdminItem === 'requests' ? 'aria-current="page"' : '' ?>>Solicitudes de participación</a>
-      <a href="negocios.php" <?= $activeAdminItem === 'businesses' ? 'aria-current="page"' : '' ?>>Negocios</a>
+      <a href="negocios.php" <?= $activeAdminItem === 'businesses' ? 'aria-current="page"' : '' ?>>Catálogo y cobertura</a>
       <a href="contactos-negocios.php" <?= $activeAdminItem === 'business-research' ? 'aria-current="page"' : '' ?>>Canales y responsable</a>
       <a href="actualizar-negocios.php" <?= $activeAdminItem === 'business-bulk-edit' ? 'aria-current="page"' : '' ?>>Exportar / actualizar</a>
       <a href="campanas.php" <?= $activeAdminItem === 'campaigns' ? 'aria-current="page"' : '' ?>>Campañas por correo</a>

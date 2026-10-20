@@ -6,7 +6,7 @@
   const normalize=value=>value.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase(locale).trim();
   function closeAll(except){for(const control of [...openMenus])if(control!==except)control.close();}
   function enhance(select){
-    if(select.dataset.floatingSelect==='ready'||select.multiple||select.size>1)return;
+    if(select.hasAttribute('data-native-select')||select.dataset.floatingSelect==='ready'||select.multiple||select.size>1)return;
     select.dataset.floatingSelect='ready';
     const wrapper=document.createElement('span');wrapper.className='floating-select';select.before(wrapper);wrapper.append(select);
     select.classList.add('floating-select-native');select.tabIndex=-1;select.setAttribute('aria-hidden','true');
