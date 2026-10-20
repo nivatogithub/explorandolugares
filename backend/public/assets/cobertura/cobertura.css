@@ -302,3 +302,14 @@
 #contenido .legend .pending { background: var(--el-in-progress); }
 #contenido .legend .outside_scope { background: var(--el-hover); border: 1px solid var(--el-border); }
 @media(max-width:640px) { #contenido .map { height: 370px; } }
+
+/* Ensayo municipal sin divisiones internas ni ampliación geográfica. */
+#contenido .map g { outline: none; }
+#contenido .map path.municipality { stroke: none; cursor: default; }
+#contenido .map path.municipality.published { fill: var(--el-published); cursor: pointer; }
+#contenido .map path.municipality.pending { fill: var(--el-in-progress); }
+#contenido .map path.municipality.outside_scope { fill: var(--el-hover); }
+#contenido .map path.department-outline { fill: none; stroke: var(--el-muted); stroke-width: .6; pointer-events: none; }
+#contenido .map g.department-focus path.department-outline { stroke: var(--el-accent); stroke-width: 1.7; }
+#contenido .map g:focus-visible path.department-outline { stroke: var(--el-focus); stroke-width: 1.7; }
+#contenido .map path.municipality:hover { stroke: none; }
