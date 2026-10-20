@@ -47,6 +47,12 @@ with tempfile.TemporaryDirectory(prefix='el-business-pages-') as temporary:
         db.execute("INSERT INTO business_translations(business_id,locale,display_name,summary,description) VALUES(?,'es',?,'Resumen','Descripción')", (business, label))
         if tier:
             db.execute("INSERT INTO business_subscriptions(business_id,plan_code,billing_frequency,status,starts_at,ends_at) VALUES(?,?,'monthly','active',datetime('now','-1 day'),datetime('now','+30 days'))", (business,tier))
+    contact_values={'phone':'+573001234567','phone_fixed':'6041234567','whatsapp':'+573001234568','email':'visible@example.test','instagram':'https://instagram.com/visibleexample','website':'https://visibleexample.test','facebook':'https://facebook.com/visibleexample','linkedin':'https://linkedin.com/company/visibleexample'}
+    for business_id, in db.execute('SELECT id FROM businesses').fetchall():
+        for channel,value in contact_values.items():
+            db.execute('INSERT INTO business_contacts(business_id,channel,contact_value,is_public) VALUES(?,?,?,1)',(business_id,channel,value))
+        db.execute("INSERT INTO business_contacts(business_id,channel,contact_value,is_public) VALUES(?,'email','private@example.test',0)",(business_id,))
+    original_contacts=db.execute('SELECT COUNT(*) FROM business_contacts').fetchone()[0]
     paid_business=db.execute("SELECT id FROM businesses WHERE slug='pago'").fetchone()[0]
     for locale in ['es','en','pt-BR']:
         db.execute('INSERT INTO business_service_sections VALUES(?,?,?,?)',(paid_business,locale,'restaurant','<script>alert(1)</script> Cocina local'))
@@ -54,12 +60,12 @@ with tempfile.TemporaryDirectory(prefix='el-business-pages-') as temporary:
     encoded = base64.b64encode(json.dumps({'dsn': 'sqlite:' + str(database)}).encode()).decode()
     (work / 'private/config.php').write_text("<?php return json_decode(base64_decode('" + encoded + "'),true);")
     (work / 'router.php').write_text("""<?php
-    if ($_SERVER['REQUEST_URI']==='/directory') {
+    if (in_array($_SERVER['REQUEST_URI'],['/directory','/directory-contacts'],true)) {
       require __DIR__.'/app/DestinationRepository.php';
       $config=require __DIR__.'/private/config.php';
       $pdo=new PDO($config['dsn']);
       header('Content-Type: application/json');
-      echo json_encode((new DestinationRepository($pdo))->findPublished('prueba','es')['businesses']);return;
+      echo json_encode((new DestinationRepository($pdo))->findPublished('prueba','es')[$_SERVER['REQUEST_URI']==='/directory'?'businesses':'public_contacts']);return;
     }
     if(preg_match('~/negocios/perfil/([^/]+)/?$~',parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH),$m))$_GET['alias']=$m[1];else $_GET['id']=basename(parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH));
     require __DIR__.'/public/negocio.php';
@@ -85,10 +91,15 @@ with tempfile.TemporaryDirectory(prefix='el-business-pages-') as temporary:
             assert status==200 and '<h1>pago</h1>' in html,(source,status,html[:100])
             assert 'id="servicio-restaurant"' not in html,'Normal page exposes Premium section'
             if source.startswith('backend/'):
+                for channel,value in contact_values.items():
+                    assert ((value.lstrip('+') if channel=='whatsapp' else value) in html)==(channel in ['phone','phone_fixed','whatsapp','email','instagram']),('Page contact policy',channel)
+                assert 'private@example.test' not in html
                 db.execute("UPDATE business_subscriptions SET plan_code='page_premium' WHERE business_id=?",(paid_business,));db.commit()
                 db.execute('INSERT INTO business_page_aliases(alias,business_id,is_current) VALUES(?,?,1)',('hotel-de-prueba',paid_business));db.execute('INSERT INTO business_page_aliases(alias,business_id,is_current) VALUES(?,?,0)',('hotel-anterior',paid_business));db.commit()
                 status,premium=get('/negocios/'+ids['pago'])
                 assert status==200 and 'id="servicio-restaurant"' in premium,premium[:200]
+                assert all((value.lstrip('+') if channel=='whatsapp' else value) in premium for channel,value in contact_values.items()), 'Premium omitted public contact'
+                assert 'private@example.test' not in premium
                 assert 'https://explorandolugares.com/negocios/perfil/hotel-de-prueba/' in premium
                 assert '/negocios/perfil/hotel-de-prueba/' in get('/negocios/perfil/hotel-anterior/')[1]
 
@@ -107,6 +118,15 @@ with tempfile.TemporaryDirectory(prefix='el-business-pages-') as temporary:
         assert names=={'pago','gratuito'},names
         free=next(row for row in rows if row['display_name']=='gratuito')
         assert free['plan_code']=='free' and 'business_page' not in free['features'],free
+        contact_map=json.loads(get('/directory-contacts')[1])
+        free_id=db.execute("SELECT id FROM businesses WHERE slug='gratuito'").fetchone()[0]
+        assert contact_map[str(free_id)]==[], 'Free contacts leaked through repository'
+        assert {x['channel'] for x in contact_map[str(paid_business)]}=={'phone','phone_fixed','whatsapp','email','instagram'}
+        db.execute("UPDATE business_subscriptions SET ends_at=datetime('now','-1 day') WHERE business_id=?",(paid_business,));db.commit()
+        assert get('/negocios/'+ids['pago'])[0]==404
+        assert json.loads(get('/directory-contacts')[1])[str(paid_business)]==[], 'Expired subscription leaks contacts'
+        assert db.execute('SELECT COUNT(*) FROM business_contacts').fetchone()[0]==original_contacts, 'Visibility deleted stored contacts'
+        print('OK: page/Premium contact matrix, private/expired/free contacts hidden; stored channels preserved')
         print('OK: free published business stays in directory without paid page; draft excluded')
         db.execute("UPDATE destinations SET publication_status='draft' WHERE id=?",(destination,));db.commit()
         assert get('/negocios/'+ids['pago'])[0]==404
