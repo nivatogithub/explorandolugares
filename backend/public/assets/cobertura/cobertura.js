@@ -35,6 +35,7 @@
     });
   }
   function featureState(code){const dep=data.departments.find(x=>x.code===code);if(!dep||!dep.municipality_total)return 'outside_scope';return dep.counts.published>0?'published':'pending';}
+  let savedMapView=null;
   async function renderMap(){
     const version=++mapVersion,d=current();$('map').setAttribute('aria-busy','true');$('map').replaceChildren(el('p','Cargando mapa…'));
     $('map-hint').textContent=d?'Departamento seleccionado: '+d.name+'. El borde naranja delimita todo el departamento; los colores interiores corresponden a sus municipios.':'Selecciona cualquier zona de un departamento con lugares publicados. Los colores interiores corresponden a municipios.';
@@ -49,7 +50,7 @@
       const commands=f=>polygons(f).flatMap(p=>p.map(r=>r.map((v,i)=>(i?'L':'M')+v[0]+' '+(-v[1])).join(' ')+'Z')).join(' ');
       const points=[];function walk(c){if(typeof c[0]==='number')points.push(c);else c.forEach(walk);}geo.features.forEach(f=>walk(f.geometry.coordinates));
       const xs=points.map(p=>p[0]),ys=points.map(p=>-p[1]),minX=Math.min(...xs),maxX=Math.max(...xs),minY=Math.min(...ys),maxY=Math.max(...ys),w=maxX-minX,h=maxY-minY,pad=Math.max(w,h)*.09;
-      svg.setAttribute('viewBox',`${minX-pad} ${minY-pad} ${w+pad*2} ${h+pad*2}`);
+      svg.setAttribute('viewBox',`${minX-pad} ${minY-pad} ${w+pad*2} ${h+pad*2}`);svg.dataset.baseView=svg.getAttribute('viewBox');if(savedMapView)svg.setAttribute('viewBox',savedMapView);
       const stateByCode=new Map(data.departments.flatMap(dep=>dep.municipalities.map(m=>[m.code,m.status])));
       geo.features.forEach(f=>{
         const code=f.properties.code,dep=data.departments.find(x=>x.code===code);if(!dep)return;
@@ -148,6 +149,15 @@
     });
   });
   window.addEventListener('hashchange',()=>{activateTab(tabFromHash(),false);if(['#como-medimos','#invitar'].includes(location.hash))$(location.hash.slice(1)).scrollIntoView({block:'start'});});
+  document.querySelectorAll('[data-map-view]').forEach(button=>button.addEventListener('click',()=>{
+    const svg=$('map').querySelector('svg');if(!svg)return;
+    const base=svg.dataset.baseView.split(' ').map(Number),v=svg.getAttribute('viewBox').split(' ').map(Number),action=button.dataset.mapView;
+    if(action==='reset'){savedMapView=null;svg.setAttribute('viewBox',base.join(' '));return;}
+    if(action==='in'||action==='out'){
+      const factor=action==='in'?.7:1/.7,newW=Math.max(base[2]/8,Math.min(base[2],v[2]*factor)),newH=newW*base[3]/base[2];v[0]+=(v[2]-newW)/2;v[1]+=(v[3]-newH)/2;v[2]=newW;v[3]=newH;
+    }else if(action==='left')v[0]-=v[2]*.2;else if(action==='right')v[0]+=v[2]*.2;else if(action==='up')v[1]-=v[3]*.2;else if(action==='down')v[1]+=v[3]*.2;
+    v[0]=Math.max(base[0],Math.min(base[0]+base[2]-v[2],v[0]));v[1]=Math.max(base[1],Math.min(base[1]+base[3]-v[3],v[1]));savedMapView=v.join(' ');svg.setAttribute('viewBox',savedMapView);
+  }));
   $('more-places').addEventListener('click',()=>{visibleLimit+=12;renderPlaces();});
   async function init(){
     try{
