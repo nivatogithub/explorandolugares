@@ -311,3 +311,15 @@
 
 #contenido .map path.municipality.outside_scope { cursor: default; }
 #contenido .map path.municipality.outside_scope:hover { stroke: none; }
+
+/* Tres estados públicos; solo departamentos con publicación admiten interacción. */
+#contenido .map path[aria-disabled="true"] { cursor: default; }
+#contenido .map path[aria-disabled="true"]:hover { stroke: var(--el-field); stroke-width: 1; }
+#contenido .map path.published { fill: var(--el-published); stroke: var(--el-field); stroke-width: 1.4; }
+#contenido .map path.pending { fill: var(--el-shell-border); }
+#contenido .map path.outside_scope { fill: var(--el-hover); }
+#contenido .map path.published.department-focus { fill: var(--el-published); stroke: var(--el-accent); stroke-width: 2.5; }
+#contenido .legend .pending { background: var(--el-shell-border); }
+#contenido .legend .outside_scope { background: var(--el-hover); border: 1px solid var(--el-border); }
+#contenido .country-stats article[hidden] { display: none; }
+#contenido .country-stats { grid-template-columns: repeat(2,minmax(0,1fr)); }
