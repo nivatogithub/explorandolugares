@@ -13,9 +13,11 @@ def run(env):
  def application_prices():
   current()
   for plan,frequency,expected in [('featured','quarterly',124750),('page','semiannual',363480),('page_premium','annual',1199000)]:
-   code,page,_=env['application']('new_business',plan=plan,frequency=frequency)
+   actor=env['ctx']['alternate'] if plan=='page_premium' else None
+   target=env['ctx']['alternate_id'] if actor else env['account']()['id']
+   code,page,_=env['application']('new_business',plan=plan,frequency=frequency,actor=actor)
    check(code==200,'No guarda alta pública '+plan)
-   rows=query('SELECT business_details_json FROM business_account_applications WHERE account_id=? AND application_type="request_new" ORDER BY id DESC LIMIT 1',[env['account']()['id']])
+   rows=query('SELECT business_details_json FROM business_account_applications WHERE account_id=? AND application_type="request_new" ORDER BY id DESC LIMIT 1',[target])
    q=json.loads(rows[0]['business_details_json'])['requested_subscription']
    check(q['plan_code']==plan and q['billing_frequency']==frequency and float(q['quoted_amount'])==expected,'No conserva elección y cotización '+plan)
  case('NG-06','Alta pública: tres suscripciones pagas con sus precios y períodos',application_prices)
