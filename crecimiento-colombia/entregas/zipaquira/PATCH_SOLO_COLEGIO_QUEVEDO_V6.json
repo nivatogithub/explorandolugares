@@ -1,0 +1,52 @@
+{
+  "destination": "zipaquira",
+  "selective_integration_only": true,
+  "preserve_catedral_crop": true,
+  "preserve_train_original_v5": true,
+  "places": [
+    {
+      "slug": "colegio-gabo",
+      "image": {
+        "file": "images/colegio-gabo-hechos-v6b.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · ilustración IA desde hechos documentados; revisión pendiente",
+        "image_source_url": "",
+        "image_license": "Propuesta IA aproximada; no se subieron fotografías de terceros como entrada",
+        "image_license_url": "",
+        "alt": {
+          "es": "Patio del antiguo liceo de Zipaquirá · ilustración aproximada basada en rasgos documentados",
+          "en": "Courtyard of the former Zipaquirá school · approximate illustration based on documented features",
+          "pt-BR": "Pátio do antigo liceu de Zipaquirá · ilustração aproximada baseada em características documentadas"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      },
+      "local_web": "imagenes/web/colegio-gabo-hechos-v6b.webp"
+    },
+    {
+      "slug": "museo-quevedo",
+      "image": {
+        "file": "images/museo-quevedo-hechos-v6.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · ilustración IA desde hechos documentados; revisión pendiente",
+        "image_source_url": "",
+        "image_license": "Propuesta IA aproximada; no se subieron fotografías de terceros como entrada",
+        "image_license_url": "",
+        "alt": {
+          "es": "Entrada de la Casa Museo Quevedo · ilustración aproximada basada en rasgos documentados",
+          "en": "Entrance to the Quevedo House Museum · approximate illustration based on documented features",
+          "pt-BR": "Entrada da Casa Museu Quevedo · ilustração aproximada baseada em características documentadas"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      },
+      "local_web": "imagenes/web/museo-quevedo-hechos-v6.webp"
+    }
+  ]
+}

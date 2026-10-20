@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "destination": "zipaquira",
+  "date": "2026-10-20",
+  "method": "Observación pública para hechos; generación independiente desde ficha, sin cargar las fotos protegidas",
+  "policy": "docs/CIERRE_OPERATIVO_DESTINOS.md",
+  "assets": [
+    {
+      "source_urls": [
+        "https://zipaquiraturistica.com/la-ciudad/centro-cultural-casa-del-nobel-gabriel-garcia-marquez",
+        "https://fontur.com.co/sites/default/files/2020-12/CAPITULO_ZIPAQUIRA.PDF"
+      ],
+      "observed_image_url": "https://zipaquiraturistica.com/dashboard-zipa-turis/storage/ciudades/17.webp",
+      "facts": [
+        "Patio central sin jardín ni fuente",
+        "Dos pisos con galerías en U y teja de barro",
+        "Postes de madera naranja/rojo y estructura azul",
+        "Muros blancos con zócalo rojo",
+        "Ventanas rectangulares azules con reja a derecha",
+        "Puertas rectangulares y tres pequeñas placas circulares al fondo"
+      ],
+      "prompt_summary": "Patio U de dos pisos, galerías y postes naranja/cobalto, muros blanco/rojo, teja, patio pavimentado sin jardín, puertas y ventanas rectangulares. Prohibidos fuentes, arcos, libros gigantes y hotel genérico.",
+      "comparison": "Conserva estructura U/dos pisos, postes, colores y vanos rectangulares. Una corrección ajustó a tres placas y cuatro vanos inferiores; la baranda aún tiene balaustros más torneados y piso más irregular que evidencia. No exactitud de carpintería, separación de vanos o pavimento.",
+      "attempts": 2,
+      "approval_status": "approximate_proposal_human_review_required",
+      "component": "colegio-gabo",
+      "checked_at": "2026-10-20",
+      "tool": "builtin image_gen",
+      "third_party_photo_uploaded": false,
+      "reference_file_uploaded": null,
+      "master_file": "imagenes/maestros/colegio-gabo-hechos-v6b.png",
+      "master_sha256": "237670ef1968935769f1a2cb228a300c5c80b85a007fd9437cf5481ae962b099",
+      "web_file": "imagenes/web/colegio-gabo-hechos-v6b.webp",
+      "web_sha256": "2cbb7125f72b0a9500c573ba94c7359ac43843cab5fbb43570441559dfd9739e",
+      "web_bytes": 141110,
+      "dimensions": [
+        960,
+        640
+      ],
+      "human_approved": false
+    },
+    {
+      "source_urls": [
+        "https://www.zipaquira.travel/casa-museo-guillermoquevedo-zornoza/",
+        "https://fontur.com.co/sites/default/files/2020-12/CAPITULO_ZIPAQUIRA.PDF"
+      ],
+      "observed_image_url": "https://www.zipaquira.travel/wp-content/uploads/2025/12/1-6.jpg",
+      "facts": [
+        "Calle3 número7-69 identificado por municipio y FONTUR",
+        "Una planta blanca bajo teja de barro",
+        "Portón central oscuro con jambas de grandes bloques de piedra beige",
+        "Ventana alta azul enrejada a cada lado del acceso",
+        "Acera estrecha en adoquín junto a calle asfaltada"
+      ],
+      "prompt_summary": "Encuadre frontal acotado de portón entre dos ventanas azules; jambas segmentadas beige con remates simples, blanco, teja, cadena baja y dos bolardos. Sin patio inventado, segundo piso, jardín, arcos, letras o piezas interiores.",
+      "comparison": "Coinciden composición puerta/ventanas, jambas, teja y acera. Se simplificaron placas, molduras, proporciones y cableado; no se representa la totalidad del inmueble ni colección interior.",
+      "attempts": 1,
+      "approval_status": "approximate_proposal_human_review_required",
+      "component": "museo-quevedo",
+      "checked_at": "2026-10-20",
+      "tool": "builtin image_gen",
+      "third_party_photo_uploaded": false,
+      "reference_file_uploaded": null,
+      "master_file": "imagenes/maestros/museo-quevedo-hechos-v6.png",
+      "master_sha256": "5e90accfe0fbed01d0ced11c16217fa2c01164ceaeaa8a1196eacaef234c8611",
+      "web_file": "imagenes/web/museo-quevedo-hechos-v6.webp",
+      "web_sha256": "8343cec5244d0eaf8a2833092354ca7cb91c547890b80d0f1113496a0699a9fd",
+      "web_bytes": 126798,
+      "dimensions": [
+        960,
+        640
+      ],
+      "human_approved": false
+    }
+  ],
+  "base_zip_sha256": "fc918f2961a33bfad072b7e9d1f07575a759dea5f399ecfa8622e877321ce7c7",
+  "candidate_sha256": "6934821b6f1e3863ac8d9a473a483a18037da73706ef965d36a9d287a2284639",
+  "preprod_imported": false,
+  "production_changed": false,
+  "human_approved": false,
+  "closed_pending": [
+    "Estación: no se acreditó encuadre conjunto edificio-vías/tren. CUA no ofrece navegador y Maps/StreetView no fue observado; no generar relación espacial supuesta.",
+    "Revisión humana de dos propuestas aproximadas. No certificar carpintería, vanos o pavimento exactos del colegio."
+  ],
+  "cartography_checked": [
+    "https://mapcarta.com/es/N761227000"
+  ],
+  "cartography_scope": "Nodo ferroviario5.02164,-74.00115 y operador. No prueba orientación de andén ni fachada lateral."
+}
