@@ -41,7 +41,7 @@ if($dbDsn===''){
     if(is_file($configPath)){$config=require $configPath;$dbDsn=(string)($config['dsn']??'');$dbUser=$config['db_user']??null;$dbPassword=$config['db_password']??null;}
 }
 if($dbDsn===''){http_response_code(503);exit('Negocio temporalmente no disponible.');}
-try{$pdo=new PDO($dbDsn,$dbUser,$dbPassword,[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC]);$repository=new BusinessRepository($pdo);$business=isset($elBusinessDemoPlan)?businessDemo($pdo,$elBusinessDemoPlan):$repository->findPublicPage($id,$locale);}
+try{$pdo=new PDO($dbDsn,$dbUser,$dbPassword,[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC]);$repository=new BusinessRepository($pdo);if(isset($_GET['alias'])){$id=PremiumBusinessProfile::resolve($pdo,(string)$_GET['alias'])??'';}$business=isset($elBusinessDemoPlan)?businessDemo($pdo,$elBusinessDemoPlan):$repository->findPublicPage($id,$locale);}
 catch(Throwable $error){if(class_exists('PortalIncidents',false))PortalIncidents::capture($error,'negocio');error_log('business-page: '.$error->getMessage());http_response_code(503);exit('Negocio temporalmente no disponible.');}
 if(!$business){http_response_code(404);exit('Negocio no encontrado.');}
 $copy=match($locale){
@@ -51,8 +51,8 @@ $copy=match($locale){
 };
 $prefix=$locale==='en'?'/en':($locale==='pt-BR'?'/pt-br':'');
 $destinationUrl=$u($prefix.'/destinos/'.$business['destination_slug'].'/');
-$pagePath=$prefix.'/negocios/'.$business['public_id'].'/';
-if(preg_match('~/negocio\.php$~',$requestPath)){
+$pagePath=$prefix.'/negocios/'.(!empty($business['page_alias'])?'perfil/'.$business['page_alias']:$business['public_id']).'/';
+if(preg_match('~/negocio\.php$~',$requestPath)||((!empty($business['page_alias'])||isset($_GET['alias']))&&$requestPath!==$pagePath)){
     header('Location: '.$pagePath,true,301);exit;
 }
 $publicOrigin=rtrim(getenv('EL_PUBLIC_BASE_URL')?:'https://explorandolugares.com','/');

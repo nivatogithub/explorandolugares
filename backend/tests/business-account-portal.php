@@ -36,12 +36,12 @@ $verification=new AccountEmailVerificationService($pdo);$activation=$verificatio
 $account=$service->authenticate('RESPONSABLE@example.test','ClaveDePrueba123');
 portal_check((int)$account['id']===$accountId&&$account['account_type']==='traveler'&&$account['status']==='active','Registration creates a personal account, activated by email, with a separate business request.');
 portal_check($service->current($accountId)!==null,'An authenticated business account can load its profile.');
-portal_check($service->businesses($accountId)===[],'A registered account has no business permissions before evidence review and approval.');
+portal_check(count($service->businesses($accountId))===1,'An unowned existing business is assigned automatically after account verification.');
 $rejected=false;try{$service->authenticate('responsable@example.test','incorrecta');}catch(RuntimeException){$rejected=true;}
 portal_check($rejected,'Invalid credentials never authenticate.');
 $apps=$service->applications($accountId);
 portal_check(count($apps)===1&&$apps[0]['business_name']==='Café de prueba'&&$apps[0]['application_type']==='claim_existing','The account portal can follow its business association request.');
-portal_check((string)$pdo->query('SELECT claim_status FROM businesses WHERE id=1')->fetchColumn()==='EN_TRAMITE','An existing business becomes unavailable to duplicate claim requests while its account request is reviewed.');
+portal_check((string)$pdo->query('SELECT claim_status FROM businesses WHERE id=1')->fetchColumn()==='RECLAMADO','An unowned business becomes reclaimed without changing publication or activating a paid subscription.');
 $accountsBefore=(int)$pdo->query('SELECT COUNT(*) FROM accounts')->fetchColumn();$failed=false;
 try{$service->register('Persona sin negocio','sin-negocio@example.test','ClaveDePrueba123',[]);}catch(RuntimeException){$failed=true;}
 portal_check($failed&&(int)$pdo->query('SELECT COUNT(*) FROM accounts')->fetchColumn()===$accountsBefore,'An account cannot be created without a matched business or a new-business request.');
@@ -55,6 +55,8 @@ $pdo->prepare('INSERT INTO business_account_application_evidence(application_id,
 $authorityRequired=false;try{$service->reviewApplication($newApplicationId,'approved','Identidad y registro oficial revisados',[$newIdentityId,$newBusinessDocId]);}catch(RuntimeException $error){$authorityRequired=str_contains($error->getMessage(),'autorización');}
 portal_check($authorityRequired,'An administrator acting on behalf of a legal representative must provide an authorization letter before account approval.');
 $existingApplicationId=(int)$pdo->query('SELECT id FROM business_account_applications WHERE account_id='.$accountId)->fetchColumn();
+// Keep exercising review of legacy pending applications separately from the new direct claim path.
+$pdo->exec('DELETE FROM business_account_memberships WHERE account_id='.(int)$accountId.' AND business_id=1');$pdo->exec("UPDATE business_account_applications SET status='pending' WHERE id=".$existingApplicationId);$pdo->exec("UPDATE businesses SET claim_status='EN_TRAMITE',information_status='PUBLICO' WHERE id=1");
 $pdo->prepare('INSERT INTO business_account_application_evidence(application_id,evidence_type,storage_name,original_name,mime_type,file_size) VALUES(?,?,?,?,?,?)')->execute([$existingApplicationId,'identity_document',str_repeat('a',48).'.png','identidad.png','image/png',128]);$identityEvidenceId=(int)$pdo->lastInsertId();
 $pdo->prepare('INSERT INTO business_account_application_evidence(application_id,evidence_type,storage_name,original_name,mime_type,file_size) VALUES(?,?,?,?,?,?)')->execute([$existingApplicationId,'business_registration',str_repeat('b',48).'.pdf','matricula.pdf','application/pdf',256]);$businessEvidenceId=(int)$pdo->lastInsertId();
 $evidenceRequired=false;try{$service->reviewApplication($existingApplicationId,'approved','Identidad y matrícula mercantil revisadas');}catch(RuntimeException $error){$evidenceRequired=str_contains($error->getMessage(),'Marca como revisados');}

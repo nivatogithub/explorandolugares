@@ -1,5 +1,6 @@
 <?php
 declare(strict_types=1);
+require_once __DIR__.'/AutomaticBusinessClaim.php';
 /** New accounts remain pending until a one-use email capability is confirmed. */
 final class AccountEmailVerificationService
 {
@@ -28,6 +29,7 @@ final class AccountEmailVerificationService
             $q=$this->pdo->prepare('SELECT v.id,v.account_id,v.expires_at FROM account_email_verifications v JOIN accounts a ON a.id=v.account_id WHERE token_hash=? AND used_at IS NULL AND a.status="pending_activation"'.$lock);$q->execute([hash('sha256',$token)]);$row=$q->fetch(PDO::FETCH_ASSOC);
             if(!$row||strtotime($row['expires_at'].' UTC')<=time())throw new RuntimeException('El enlace no es válido o ya venció. Solicita uno nuevo.');
             $q=$this->pdo->prepare('UPDATE accounts SET status="active",email_verified_at=CURRENT_TIMESTAMP,updated_at=CURRENT_TIMESTAMP WHERE id=? AND status="pending_activation"');$q->execute([$row['account_id']]);if($q->rowCount()!==1)throw new RuntimeException('La cuenta no está disponible.');
+            AutomaticBusinessClaim::afterActivation($this->pdo,(int)$row['account_id']);
             $this->pdo->prepare('UPDATE account_email_verifications SET used_at=CURRENT_TIMESTAMP WHERE account_id=? AND used_at IS NULL')->execute([$row['account_id']]);$this->pdo->commit();
         }catch(Throwable $e){if($this->pdo->inTransaction())$this->pdo->rollBack();throw $e;}
     }

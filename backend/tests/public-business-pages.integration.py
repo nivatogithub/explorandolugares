@@ -32,6 +32,7 @@ with tempfile.TemporaryDirectory(prefix='el-business-pages-') as temporary:
         assert len(migrations) == 1
         db.executescript(migrations[0].read_text())
     db.executescript((ROOT / 'backend/database/migrations/045-business-service-sections.sqlite.sql').read_text())
+    db.executescript((ROOT / 'backend/database/migrations/046-premium-page-aliases.sqlite.sql').read_text())
     db.execute("INSERT INTO destinations(slug,publication_status) VALUES('prueba','published')")
     destination = db.execute('SELECT last_insert_rowid()').fetchone()[0]
     db.execute("INSERT INTO destination_translations(destination_id,locale,display_name,headline,intro) VALUES(?,'es','Prueba','Prueba','Prueba')", (destination,))
@@ -60,7 +61,7 @@ with tempfile.TemporaryDirectory(prefix='el-business-pages-') as temporary:
       header('Content-Type: application/json');
       echo json_encode((new DestinationRepository($pdo))->findPublished('prueba','es')['businesses']);return;
     }
-    $_GET['id']=basename(parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH));
+    if(preg_match('~/negocios/perfil/([^/]+)/?$~',parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH),$m))$_GET['alias']=$m[1];else $_GET['id']=basename(parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH));
     require __DIR__.'/public/negocio.php';
     """)
     with socket.socket() as sock:
@@ -85,12 +86,17 @@ with tempfile.TemporaryDirectory(prefix='el-business-pages-') as temporary:
             assert 'id="servicio-restaurant"' not in html,'Normal page exposes Premium section'
             if source.startswith('backend/'):
                 db.execute("UPDATE business_subscriptions SET plan_code='page_premium' WHERE business_id=?",(paid_business,));db.commit()
+                db.execute('INSERT INTO business_page_aliases(alias,business_id,is_current) VALUES(?,?,1)',('hotel-de-prueba',paid_business));db.execute('INSERT INTO business_page_aliases(alias,business_id,is_current) VALUES(?,?,0)',('hotel-anterior',paid_business));db.commit()
                 status,premium=get('/negocios/'+ids['pago'])
                 assert status==200 and 'id="servicio-restaurant"' in premium,premium[:200]
+                assert 'https://explorandolugares.com/negocios/perfil/hotel-de-prueba/' in premium
+                assert '/negocios/perfil/hotel-de-prueba/' in get('/negocios/perfil/hotel-anterior/')[1]
+
                 assert '&lt;script&gt;alert(1)&lt;/script&gt; Cocina local' in premium and '<script>alert(1)</script>' not in premium
                 assert 'id="servicio-lodging"' not in premium and 'id="servicio-other"' not in premium
                 db.execute("UPDATE business_subscriptions SET plan_code='page' WHERE business_id=?",(paid_business,));db.commit()
                 assert 'id="servicio-restaurant"' not in get('/negocios/'+ids['pago'])[1],'Downgrade leaks sections'
+                assert get('/negocios/perfil/hotel-de-prueba/')[0]==404,'Lower tier resolves Premium alias'
                 print('OK: Premium sections render escaped, empty sections hidden, lower tier hides preserved data')
             assert get('/negocios/'+ids['borrador'])[0]==404,source
             assert get('/negocios/'+ids['gratuito'])[0]==404,source
