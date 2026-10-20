@@ -48,6 +48,10 @@
       const capital=geo.features.find(f=>f.properties.code==='11'),region=geo.features.find(f=>f.properties.code==='25');
       const polygons=f=>f.geometry.type==='Polygon'?[f.geometry.coordinates]:f.geometry.coordinates;
       if(capital&&region){region.geometry={type:'MultiPolygon',coordinates:[...polygons(region),...polygons(capital)]};geo.features=geo.features.filter(f=>f.properties.code!=='11');}
+      const navigation=$('selectable-departments');navigation.replaceChildren();
+      const available=data.departments.filter(dep=>dep.counts.published>0&&geo.features.some(feature=>feature.properties.code===dep.code));
+      navigation.append(el('p',available.length?'Puedes seleccionar estos departamentos:':'Este sector todavía no tiene destinos publicados. Puedes ver su cobertura, pero no hay departamentos disponibles para consultar.'));
+      available.forEach(dep=>{const button=el('button',dep.name);button.type='button';button.setAttribute('aria-pressed',String(dep.code===department));button.addEventListener('click',()=>setDepartment(dep.code));navigation.append(button);});
       const ns='http://www.w3.org/2000/svg',svg=document.createElementNS(ns,'svg');svg.setAttribute('role','group');svg.setAttribute('aria-label','Meta turística de Colombia por municipio; navegación por departamento');
       const commands=f=>polygons(f).flatMap(p=>p.map(r=>r.map((v,i)=>(i?'L':'M')+v[0]+' '+(-v[1])).join(' ')+'Z')).join(' ');
       const points=[];function walk(c){if(typeof c[0]==='number')points.push(c);else c.forEach(walk);}geo.features.forEach(f=>walk(f.geometry.coordinates));
@@ -56,7 +60,7 @@
       const stateByCode=new Map(data.departments.flatMap(dep=>dep.municipalities.map(m=>[m.code,m.status])));
       geo.features.forEach(f=>{
         const code=f.properties.code,dep=data.departments.find(x=>x.code===code);if(!dep)return;
-        const group=document.createElementNS(ns,'g');group.dataset.code=code;group.setAttribute('tabindex',dep.counts.published>0?'0':'-1');group.setAttribute('role','button');if(!dep.counts.published)group.setAttribute('aria-disabled','true');group.setAttribute('aria-pressed',String(code===department));
+        const group=document.createElementNS(ns,'g');group.dataset.code=code;if(dep.counts.published>0)group.classList.add('department-available');group.setAttribute('tabindex',dep.counts.published>0?'0':'-1');group.setAttribute('role','button');if(!dep.counts.published)group.setAttribute('aria-disabled','true');group.setAttribute('aria-pressed',String(code===department));
         const description=dep.name+': '+dep.covered_municipalities+' de '+dep.municipality_total+' municipios seleccionados con guía publicada';group.setAttribute('aria-label',description);
         units.flatMap(x=>x.features).filter(m=>(m.properties.department_code==='11'?'25':m.properties.department_code)===code).forEach(m=>{
           const path=document.createElementNS(ns,'path'),state=stateByCode.get(m.properties.code)||'outside_scope';path.setAttribute('d',commands(m));path.setAttribute('fill-rule','evenodd');path.setAttribute('class','municipality '+state);path.setAttribute('aria-disabled',String(!dep.counts.published));if(dep.counts.published)path.classList.add('department-selectable');
@@ -80,7 +84,11 @@
     const host=$('dashboard-traffic-chart');host.replaceChildren();
     if(basic?.status!=='enabled'){host.append(el('p','El conteo sin cookies todavía no está disponible.'));return;}
     const rows=basic.trend||[];if(!rows.length){host.append(el('p','Todavía no hay consultas registradas en este período.'));return;}
-    const ns='http://www.w3.org/2000/svg',svg=document.createElementNS(ns,'svg');svg.setAttribute('viewBox','0 0 640 180');svg.setAttribute('role','img');svg.setAttribute('class','dashboard-trend-svg');svg.setAttribute('aria-label','Páginas consultadas por día, sin cookies.');
+    const navigation=$('selectable-departments');navigation.replaceChildren();
+      const available=data.departments.filter(dep=>dep.counts.published>0&&geo.features.some(feature=>feature.properties.code===dep.code));
+      navigation.append(el('p',available.length?'Puedes seleccionar estos departamentos:':'Este sector todavía no tiene destinos publicados. Puedes ver su cobertura, pero no hay departamentos disponibles para consultar.'));
+      available.forEach(dep=>{const button=el('button',dep.name);button.type='button';button.setAttribute('aria-pressed',String(dep.code===department));button.addEventListener('click',()=>setDepartment(dep.code));navigation.append(button);});
+      const ns='http://www.w3.org/2000/svg',svg=document.createElementNS(ns,'svg');svg.setAttribute('viewBox','0 0 640 180');svg.setAttribute('role','img');svg.setAttribute('class','dashboard-trend-svg');svg.setAttribute('aria-label','Páginas consultadas por día, sin cookies.');
     const max=Math.max(1,...rows.map(r=>r.views)),path=document.createElementNS(ns,'path');path.setAttribute('d',rows.map((r,i)=>(i?'L':'M')+(30+i*580/Math.max(1,rows.length-1))+' '+(150-r.views*125/max)).join(' '));path.setAttribute('class','trend-line');svg.append(path);
     [[18,20,number(max)],[18,150,'0']].forEach(([x,y,value])=>{const label=document.createElementNS(ns,'text');label.setAttribute('x',x);label.setAttribute('y',y);label.textContent=value;svg.append(label);});
     [[30,rows[0].day],[480,rows[rows.length-1].day]].forEach(([x,text])=>{const label=document.createElementNS(ns,'text');label.setAttribute('x',x);label.setAttribute('y','176');label.textContent=text;svg.append(label);});host.append(svg);

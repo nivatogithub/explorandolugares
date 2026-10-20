@@ -332,3 +332,10 @@
 #contenido .map-sectors button { min-height:44px; padding:9px 14px; border:1px solid var(--el-control-border); border-radius:var(--el-radius-pill); background:var(--el-card); color:var(--el-text); cursor:pointer; }
 #contenido .map-sectors button[aria-pressed="true"] { background:var(--el-action); color:var(--el-on-action); border-color:var(--el-action); }
 #contenido .map svg { overflow:visible; }
+
+#contenido .selectable-departments { margin:16px 0; padding:14px; background:var(--el-card); border:1px solid var(--el-control-border); border-radius:var(--el-radius-card); }
+#contenido .selectable-departments p { margin:0 0 8px; font-size:14px; font-weight:650; }
+#contenido .selectable-departments button { min-height:44px; margin:4px 6px 4px 0; padding:8px 14px; background:var(--el-card); border:1px solid var(--el-published); border-radius:var(--el-radius-pill); color:var(--el-published); cursor:pointer; }
+#contenido .selectable-departments button[aria-pressed="true"] { background:var(--el-published); color:var(--el-on-action); }
+#contenido .map g.department-available path.department-outline { stroke:var(--el-published); stroke-width:1.6; }
+#contenido .map g.department-focus path.department-outline { stroke:var(--el-accent); stroke-width:3; }
