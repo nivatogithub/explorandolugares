@@ -23,6 +23,10 @@ body header>.wrap:first-child>a.brand>.brand-logo{width:clamp(76px,12vw,140px)!i
 body header>.wrap:first-child>.header-language-bar{grid-column:2!important;margin:0!important;}
 body header>.wrap:first-child>.menu-toggle{grid-column:3!important;flex-shrink:0!important;}
 body header>.wrap:first-child>nav{grid-column:1/-1!important;}
+/* The desktop business pill can inherit margin-left:auto. All mobile rows share
+   the same box; exclude language/account controls by targeting the primary nav. */
+body header.menu-open>.wrap:first-child>nav#menu-principal>a{display:flex!important;align-items:center!important;justify-content:flex-start!important;align-self:stretch!important;text-align:left!important;margin:0!important;width:100%!important;min-width:0!important;max-width:none!important;box-sizing:border-box!important;}
+
 }
 @media(max-width:650px){
 body header>.wrap:first-child{padding:10px 12px!important;column-gap:8px!important;}
