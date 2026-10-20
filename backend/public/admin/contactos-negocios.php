@@ -9,7 +9,7 @@ $_SESSION['last_seen']=time();$error='';$result=null;$ready=false;$rows=[];$tota
 $crm=null;$overview=['rows'=>[],'total'=>0,'with_contact'=>0,'without_contact'=>0,'page'=>1,'page_count'=>1];$selectedBusiness=null;$profileContacts=[];$destinations=[];
 $accountService=null;$accountProfileReady=false;$responsibleAccounts=[];$accountResult='';$recipientReady=false;
 try{$accountService=new AccountProfileService(db());$accountProfileReady=$accountService->ready();}
-catch(Throwable $exception){$error='No se pudo consultar la cuenta responsable. Revisa Base de datos.';}
+catch(Throwable $exception){if(class_exists('PortalIncidents',false))PortalIncidents::technical($exception,'contactos_negocios');$error='No se pudo consultar la cuenta responsable. Revisa Base de datos.';}
 try{db()->query('SELECT id FROM business_research_contacts LIMIT 1');$ready=true;$recipientReady=BusinessResearchContactImporter::recipientReady(db());}
 catch(PDOException $exception){$error='Falta habilitar la carga de canales privados (026). Puedes revisarla en Base de datos.';}
 if($_SERVER['REQUEST_METHOD']==='POST'){
@@ -30,7 +30,7 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
         if(!is_array($package))throw new RuntimeException('El paquete debe ser un objeto JSON.');
         $result=BusinessChannelImporter::import(db(),$package);
         }else throw new RuntimeException('Acción no válida.');
-    }catch(Throwable $exception){http_response_code(400);$error=$exception instanceof PDOException?'No se guardaron los datos. Revisa la estructura de Base de datos.':($exception instanceof JsonException?'El archivo no contiene JSON válido.':$exception->getMessage());}
+    }catch(Throwable $exception){if(class_exists('PortalIncidents',false))PortalIncidents::technical($exception,'contactos_negocios');http_response_code(400);$error=$exception instanceof PDOException?'No se guardaron los datos. Revisa la estructura de Base de datos.':($exception instanceof JsonException?'El archivo no contiene JSON válido.':$exception->getMessage());}
 }
 $tab=($_GET['tab']??'')==='cargar'?'cargar':'consultar';
 if($_SERVER['REQUEST_METHOD']==='POST')$tab=in_array($_POST['action']??'',['import_private_contacts','import_business_channels'],true)?'cargar':'consultar';
@@ -43,7 +43,7 @@ try{
         $selectedBusiness=$crm->find($businessId);$q=db()->prepare('SELECT channel,contact_value,is_public FROM business_contacts WHERE business_id=? ORDER BY display_order,id');$q->execute([$businessId]);$profileContacts=$q->fetchAll(PDO::FETCH_ASSOC);
         if($selectedBusiness&&$accountProfileReady){$responsibleAccounts=$accountService->forBusiness($businessId);}
     }
-}catch(Throwable $exception){$error=$exception instanceof PDOException?'No se pudo consultar el CRM. Revisa la estructura de negocios en Base de datos.':$exception->getMessage();}
+}catch(Throwable $exception){if(class_exists('PortalIncidents',false))PortalIncidents::technical($exception,'contactos_negocios');$error=$exception instanceof PDOException?'No se pudo consultar el CRM. Revisa la estructura de negocios en Base de datos.':$exception->getMessage();}
 if($ready&&$businessId){
     $where=' WHERE 1=1';$params=[];
     if($businessId){$where.=' AND b.id=?';$params[]=$businessId;}

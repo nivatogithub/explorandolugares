@@ -94,7 +94,7 @@ try:
    code,page,_=anon.get(route);check(code==200 and 'Correo verificado' in page,'No confirmó enlace válido');row=account();check(row['status']=='active' and row['email_verified_at'],'No persistió activación y fecha');check(not anon.state().get('authenticated'),'Activación creó sesión sin pedir contraseña');check(anon.get(route)[0]==400,'Se reutilizó enlace de activación')
   case('CU-04','Activar correo por HTTP: válido, vencido, alterado y de un solo uso',activate)
   def badsignup():
-   c=Client();_,page,_=c.get('/negocios/registro/?tipo=traveler');code,_,_=c.request('/negocios/registro/?tipo=traveler',{'csrf':csrf(page),'residence_country_code':'CO','residence_region_code':'05','residence_city_code':'05368','account_type':'traveler','display_name':RUN,'email':EMAIL,'password':'123','password_confirm':'otra','consent':'1'});check(code>=400,'Aceptó datos inválidos');check(len(query('SELECT id FROM accounts WHERE email=?',[EMAIL]))==1,'Duplicó cuenta')
+   c=Client();_,page,_=c.get('/negocios/registro/?tipo=traveler');code,_,_=c.request('/negocios/registro/?tipo=traveler',{'csrf':csrf(page),'residence_country_code':'CO','residence_region_code':'05','residence_city_code':'05368','account_type':'traveler','display_name':RUN,'email':RUN+'-invalid@pruebas.invalid','password':'123','password_confirm':'otra','consent':'1'});check(code>=400,'Aceptó datos inválidos');check(not query('SELECT id FROM accounts WHERE email=?',[RUN+'-invalid@pruebas.invalid']),'Creó cuenta inválida');check(len(query('SELECT id FROM accounts WHERE email=?',[EMAIL]))==1,'Duplicó cuenta')
   case('CU-05','Contraseñas inválidas o distintas no crean otra cuenta',badsignup)
   case('AU-01','Acceso con correo y contraseña asignada',lambda:login(Client()))
   def wrongpassword():
@@ -120,7 +120,7 @@ try:
    check(person.request('/negocios/salir/',{'csrf':'invalido'})[0]==403,'Logout acepta CSRF inválido');check(person.state()['authenticated'],'CSRF inválido cerró sesión')
   case('AZ-02','Rechazar acciones sin CSRF válido',csrfguard)
   def recovery():
-   c=Client();_,page,_=c.get('/negocios/recuperar-clave/');code,page,_=c.request('/negocios/recuperar-clave/',{'csrf':csrf(page),'email':EMAIL});check(code==200 and 'Si existe una cuenta' in page,'No confirma recepción genérica')
+   c=Client();_,page,_=c.get('/negocios/recuperar-clave/');code,page,_=c.request('/negocios/recuperar-clave/',{'csrf':csrf(page),'email':EMAIL});check(code==200 and 'recibirás instrucciones para continuar' in page,'No confirma recepción genérica')
    messages=json.loads((ROOT/'.local/preprod/private/mailbox.json').read_text());message=next((m for m in reversed(messages) if m['to']==EMAIL and '/cambiar-clave/' in m.get('url','')),None);check(message,'No llegó correo al buzón local')
    link=urllib.parse.urlsplit(message['url']);check(link.netloc=='127.0.0.1:8088','Enlace sale de preprod');path=link.path+'?'+link.query
    code,page,_=c.get(path);check(code==200 and 'Nueva contraseña' in page,'No abre restablecimiento')
@@ -139,7 +139,7 @@ try:
   def fixture_businesses():
    d=query('SELECT id FROM destinations WHERE slug=? AND publication_status=?',['jerico','published']);check(d,'Falta Jericó publicado en preprod')
    category=query('SELECT code FROM service_categories WHERE is_active=1 ORDER BY display_order LIMIT 1')[0]['code'];did=d[0]['id'];aid=account()['id'];other=EMAIL.replace('@','-owner@');query('INSERT INTO accounts(public_id,account_type,display_name,email,status) VALUES(?,"traveler",?,?,"active")',[secrets.token_hex(16),RUN+' propietario',other]);owner=query('SELECT id FROM accounts WHERE email=?',[other])[0]['id']
-   for suffix,claim in [('libre','NO_RECLAMADO'),('ocupado','RECLAMADO'),('publico','NO_RECLAMADO')]:
+   for suffix,claim in [('libre','NO_RECLAMADO'),('ocupado','RECLAMADO'),('publico','NO_RECLAMADO'),('contratacion','RECLAMADO')]:
     publicid=secrets.token_hex(16);name=RUN+' '+suffix
     query('INSERT INTO businesses(public_id,destination_id,category_code,record_origin,slug,information_status,claim_status,operation_status,publication_status) VALUES(?,?,?,"public_import",?,"PUBLICO",?,"ABIERTO","draft")',[publicid,did,category,name,claim]);bid=query('SELECT id FROM businesses WHERE public_id=?',[publicid])[0]['id'];fixtures.append(bid)
     query('INSERT INTO business_translations(business_id,locale,display_name,summary,description) VALUES(?,"es",?,"","")',[bid,name]);query('INSERT INTO business_subscriptions(business_id,plan_code,status) VALUES(?,"free","pending_publication")',[bid])
@@ -149,6 +149,8 @@ try:
     if suffix=='ocupado':
      # Owner is the newly created synthetic person. A separate authenticated claimant is tested below.
      query('INSERT INTO business_account_memberships(account_id,business_id,role,status) VALUES(?,?,"owner","active")',[owner,bid])
+    if suffix=='contratacion':
+     query('INSERT INTO business_account_memberships(account_id,business_id,role,status) VALUES(?,?,"owner","active")',[aid,bid])
    return did,category
   ctx={}
   def business_setup():

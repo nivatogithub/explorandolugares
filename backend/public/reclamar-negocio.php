@@ -13,7 +13,7 @@ try{
         if(!ready())throw new RuntimeException('La recepción de solicitudes no está habilitada en este momento.');
         $service->submit($_POST);$success=true;
     }
-}catch(Throwable $exception){$error=$exception instanceof PDOException?'No se pudo guardar la solicitud. Vuelve a intentarlo más tarde.':$exception->getMessage();http_response_code(400);}
+}catch(Throwable $exception){if(class_exists('PortalIncidents',false))PortalIncidents::technical($exception,'reclamar_negocio');$error=$exception instanceof PDOException?'No se pudo guardar la solicitud. Vuelve a intentarlo más tarde.':$exception->getMessage();http_response_code(400);}
 $destinations=$service->destinations();$destinationId=max(0,(int)($_GET['destino']??$_POST['destination_id']??0));
 $destinationIds=array_map(static fn($row)=>(int)$row['id'],$destinations);if(!in_array($destinationId,$destinationIds,true))$destinationId=0;
 $categories=$destinationId?$service->categories($destinationId):[];$category=(string)($_GET['categoria']??$_POST['category_code']??'');

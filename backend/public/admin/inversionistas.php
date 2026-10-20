@@ -7,7 +7,7 @@ if (empty($_SESSION['admin'])) { http_response_code(403); exit('Inicia sesión d
 $_SESSION['last_seen']=time();
 $days=(int)($_GET['periodo']??90);if(!in_array($days,[30,90,365],true))$days=90;
 $error='';$report=null;
-try{$report=(new InvestorBusinessIntelligence(db()))->report($days);}catch(Throwable $e){error_log('Explorando Lugares: no se pudo cargar inteligencia de negocio: '.$e->getMessage());$error='No se pudo consultar toda la información. Revisa el estado de Base de datos y las migraciones requeridas.';http_response_code(503);}
+try{$report=(new InvestorBusinessIntelligence(db()))->report($days);}catch(Throwable $e){if(class_exists('PortalIncidents',false))PortalIncidents::technical($e,'inversionistas');error_log('Explorando Lugares: no se pudo cargar inteligencia de negocio: '.$e->getMessage());$error='No se pudo consultar toda la información. Revisa el estado de Base de datos y las migraciones requeridas.';http_response_code(503);}
 $appRoot=dirname((new ReflectionFunction('db'))->getFileName());
 require_once $appRoot.'/OperatingFinanceService.php';
 require_once $appRoot.'/analytics/BasicAudienceService.php';

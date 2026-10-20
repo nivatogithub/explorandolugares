@@ -6,6 +6,7 @@ $repositoryCandidates=[dirname(__DIR__).'/app/BusinessRepository.php',dirname(__
 $repositoryPath=null;foreach($repositoryCandidates as $candidate)if(is_file($candidate)){$repositoryPath=$candidate;break;}
 if($repositoryPath===null){http_response_code(503);exit('Negocio temporalmente no disponible.');}
 require $repositoryPath;
+$incidentClass=dirname($repositoryPath).'/PortalIncidents.php';if(is_file($incidentClass)){require_once $incidentClass;PortalIncidents::install(dirname(dirname($repositoryPath)).'/private/incidents');}
 function business_escape(mixed $value): string { return htmlspecialchars((string)$value,ENT_QUOTES|ENT_SUBSTITUTE,'UTF-8'); }
 function business_contact_url(array $contact): ?string {
     $value=trim((string)($contact['contact_value']??''));
@@ -41,7 +42,7 @@ if($dbDsn===''){
 }
 if($dbDsn===''){http_response_code(503);exit('Negocio temporalmente no disponible.');}
 try{$pdo=new PDO($dbDsn,$dbUser,$dbPassword,[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC]);$repository=new BusinessRepository($pdo);$business=isset($elBusinessDemoPlan)?businessDemo($pdo,$elBusinessDemoPlan):$repository->findPublicPage($id,$locale);}
-catch(Throwable $error){error_log('business-page: '.$error->getMessage());http_response_code(503);exit('Negocio temporalmente no disponible.');}
+catch(Throwable $error){if(class_exists('PortalIncidents',false))PortalIncidents::capture($error,'negocio');error_log('business-page: '.$error->getMessage());http_response_code(503);exit('Negocio temporalmente no disponible.');}
 if(!$business){http_response_code(404);exit('Negocio no encontrado.');}
 $copy=match($locale){
     'en'=>['home'=>'Home','destinations'=>'Destinations','trip'=>'Plan your visit','portal'=>'About the portal','register'=>'List my business','back'=>'Back to the destination','about'=>'About this business','gallery'=>'Photos','contact'=>'Contact','location'=>'Location','hours'=>'Opening hours','price'=>'Price range','capacity'=>'Capacity','menu'=>'Menu or catalog','reservations'=>'Bookings and inquiries','map'=>'Open map','status'=>$business['information_status']==='VERIFICADO'?'Information checked':'Public information · not yet verified','privacy'=>'Privacy','tag'=>'Business page'],

@@ -8,7 +8,8 @@ def run(env):
  person,anon,fixtures=env['person'],env['anon'],env['fixtures']
  def current():
   if not fixtures:raise env['Blocked']('Sin fixtures del conjunto NG-00.')
-  return env['account']()['id'],fixtures[2]
+  # A first purchase must not reuse the active paid business used to test public pages.
+  return env['account']()['id'],fixtures[3]
  def application_prices():
   current()
   for plan,frequency,expected in [('featured','quarterly',124750),('page','semiannual',363480),('page_premium','annual',1199000)]:

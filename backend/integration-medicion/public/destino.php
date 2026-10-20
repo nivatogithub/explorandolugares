@@ -11,6 +11,7 @@ $repositoryPath=null;
 foreach($repositoryCandidates as $candidate) if(is_file($candidate)){$repositoryPath=$candidate;break;}
 if($repositoryPath===null){http_response_code(503);exit('Destino temporalmente no disponible.');}
 require $repositoryPath;
+$incidentClass=dirname($repositoryPath).'/PortalIncidents.php';if(is_file($incidentClass)){require_once $incidentClass;PortalIncidents::install(dirname(dirname($repositoryPath)).'/private/incidents');}
 
 require_once dirname($repositoryPath).'/views/directory-helpers.php';
 
@@ -37,7 +38,7 @@ if ($dbPath==='') { http_response_code(503); exit('Destino temporalmente no disp
 $localShowcase=false;$localConfigFile=dirname(__DIR__).'/private/config.php';
 if(is_file($localConfigFile)){$localCfg=require $localConfigFile;$localShowcase=!empty($localCfg['local_test'])&&str_contains($dbPath,'dbname=explorando_preprod');}
 try { $pdo=new PDO($dbPath,$dbUser,$dbPassword,[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC]);$repo=new DestinationRepository($pdo);$d=$repo->findPublished($slug,$locale,$preview); }
-catch(Throwable $error) { error_log('destination-page: '.$error->getMessage());http_response_code(503);exit('Destino temporalmente no disponible.'); }
+catch(Throwable $error) {if(class_exists('PortalIncidents',false))PortalIncidents::capture($error,'destino'); error_log('destination-page: '.$error->getMessage());http_response_code(503);exit('Destino temporalmente no disponible.'); }
 if (!$d) { http_response_code(404); exit('Destino no encontrado.'); }
 $locale=$d['locale'];$t=langCopy($locale);$name=$d['display_name'];
 // Release approved by the owner: presentation does not require local_test or preview.

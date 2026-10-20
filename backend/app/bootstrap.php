@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 $configFile = dirname(__DIR__) . '/private/config.php';
+require_once __DIR__.'/PortalIncidents.php';
+PortalIncidents::install(dirname(__DIR__).'/private/incidents');
 // Preview may inject a private, ignored local config. Never allow this override on a web host.
 if (PHP_SAPI === 'cli-server' && in_array($_SERVER['REMOTE_ADDR'] ?? '', ['127.0.0.1', '::1'], true)) {
     $localConfig = getenv('EL_LOCAL_CONFIG_PATH');
@@ -9,9 +11,9 @@ if (PHP_SAPI === 'cli-server' && in_array($_SERVER['REMOTE_ADDR'] ?? '', ['127.0
 if (!is_file($configFile)) { http_response_code(503); exit('Configuración del servidor pendiente.'); }
 $config = require $configFile;
 require_once __DIR__.'/ProductionRuntimeSettings.php';
-try{$config=array_replace_recursive($config,ProductionRuntimeSettings::load(dirname($configFile)));}catch(Throwable $error){error_log('Explorando Lugares: configuración de ejecución no válida.');http_response_code(503);exit('Revisa la configuración privada del portal.');}
+try{$config=array_replace_recursive($config,ProductionRuntimeSettings::load(dirname($configFile)));}catch(Throwable $error){PortalIncidents::capture($error,'runtime_configuration');error_log('Explorando Lugares: configuración de ejecución no válida.');http_response_code(503);exit('Revisa la configuración privada del portal.');}
 require_once __DIR__.'/PortalSettings.php';
-try{$portalOverrides=PortalSettings::load(dirname($configFile));if(isset($portalOverrides['privacy']))$config['privacy']=array_replace($config['privacy']??[],$portalOverrides['privacy']);}catch(Throwable $error){error_log('Explorando Lugares: configuración privada de privacidad no válida.');http_response_code(503);exit('Revisa la configuración privada del portal.');}
+try{$portalOverrides=PortalSettings::load(dirname($configFile));if(isset($portalOverrides['privacy']))$config['privacy']=array_replace($config['privacy']??[],$portalOverrides['privacy']);}catch(Throwable $error){PortalIncidents::capture($error,'runtime_configuration');error_log('Explorando Lugares: configuración privada de privacidad no válida.');http_response_code(503);exit('Revisa la configuración privada del portal.');}
 require_once __DIR__.'/BusinessPortalAccess.php';
 $local = in_array($_SERVER['REMOTE_ADDR'] ?? '', ['127.0.0.1', '::1'], true) || (getenv('EL_PREPROD_LOCAL') === '1' && in_array(parse_url('http://'.($_SERVER['HTTP_HOST']??''), PHP_URL_HOST), ['127.0.0.1','localhost','[::1]'], true));
 $https = ($_SERVER['HTTPS'] ?? '') === 'on';
@@ -33,12 +35,12 @@ if (PHP_SAPI !== 'cli') {
 if (PHP_SAPI !== 'cli' && !empty($_SESSION['business_account_id'])) {
     require_once __DIR__.'/AccountSessionSecurity.php';
     try { AccountSessionSecurity::synchronize(db(),$_SESSION); }
-    catch (Throwable $error) { AccountSessionSecurity::clear($_SESSION); }
+    catch (Throwable $error) { PortalIncidents::capture($error,'session_sync');AccountSessionSecurity::clear($_SESSION); }
 }
 if (PHP_SAPI !== 'cli' && !empty($config['unified_admin_only']) && empty($_SESSION['admin_account_id'])) { unset($_SESSION['admin'],$_SESSION['last_seen']); }
 if (PHP_SAPI !== 'cli' && !empty($_SESSION['admin_account_id'])) {
     require_once __DIR__.'/AccountAuthorization.php';
-    try { AccountAuthorization::synchronize(db(),$_SESSION); } catch (Throwable $error) { unset($_SESSION['admin'],$_SESSION['admin_account_id'],$_SESSION['admin_user']); }
+    try { AccountAuthorization::synchronize(db(),$_SESSION); } catch (Throwable $error) { PortalIncidents::capture($error,'admin_session_sync');unset($_SESSION['admin'],$_SESSION['admin_account_id'],$_SESSION['admin_user']); }
 }
 function esc(mixed $value): string { return htmlspecialchars((string)$value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'); }
 function english_request(): bool { return ($_GET['lang'] ?? $_POST['lang'] ?? '') === 'en'; }

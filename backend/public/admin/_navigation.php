@@ -24,6 +24,7 @@ $activeAdminItem = match (true) {
     $adminPath === 'base-datos.php' => 'database',
     $adminPath === 'inversionistas.php' => 'investor-intelligence',
     $adminPath === 'costos.php' => 'costs',
+    $adminPath === 'incidencias.php' => 'incidents',
     default => '',
 };
 ?>
@@ -62,6 +63,7 @@ $activeAdminItem = match (true) {
       <a href="configuracion.php" <?= $activeAdminItem === 'configuration' ? 'aria-current="page"' : '' ?>>Configuración del portal</a>
       <a href="campanas.php?tab=conexion" <?= $activeAdminItem === 'brevo-connection' ? 'aria-current="page"' : '' ?>>Conexión con Brevo</a>
       <a href="index.php?tab=sistema" <?= $activeAdminItem === 'system' ? 'aria-current="page"' : '' ?>>Estado del sistema</a>
+      <a href="incidencias.php" <?= $activeAdminItem === 'incidents' ? 'aria-current="page"' : '' ?>>Errores de ejecución</a>
       <a href="base-datos.php" <?= $activeAdminItem === 'database' ? 'aria-current="page"' : '' ?>>Base de datos</a>
     </section>
   </nav>

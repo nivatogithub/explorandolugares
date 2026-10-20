@@ -10,7 +10,7 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
  require_once dirname(__DIR__,2).'/app/AccountSessionSecurity.php';AccountSessionSecurity::clear($_SESSION);session_regenerate_id(true);
  header('Location: /negocios/acceso/?cuenta=cerrada',true,303);exit;
  }if(($_POST['action']??'')!=='save_residence')throw new RuntimeException('Acción no válida.');$values=AccountResidence::capture($_POST);AccountResidence::save(db(),(int)$account['id'],$values);header('Location: /negocios/portal/?tab=personal&ubicacion=guardada',true,303);exit;}
- catch(Throwable $e){http_response_code(400);$residenceError=$e instanceof PDOException?'No se pudo guardar tu residencia.':$e->getMessage();}
+ catch(Throwable $e){PortalIncidents::technical($e,'account_profile');http_response_code(400);$residenceError=$e instanceof PDOException?'No se pudo guardar tu residencia.':$e->getMessage();}
 }
 require_once __DIR__.'/../_account-page.php';account_page(false);
 ?><!doctype html>

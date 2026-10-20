@@ -24,7 +24,7 @@ final class AccountReactivationDelivery
  public static function existingRegistration(PDO $pdo,array $config,string $email):bool {
   $q=$pdo->prepare('SELECT id,status FROM accounts WHERE email=?');$q->execute([strtolower(trim($email))]);$row=$q->fetch(PDO::FETCH_ASSOC);if(!$row)return false;
   if(throttle('account_registration_existing',3,900,strtolower(trim($email)))&&($row['status']!=='disabled'||(AccountLifecycle::state($pdo,(int)$row['id'])['event_type']??'')==='closed')){
-   try{self::send($pdo,$config,(int)$row['id']);}catch(Throwable $e){error_log('No se pudo confirmar el envío de reactivación.');}
+   try{self::send($pdo,$config,(int)$row['id']);}catch(Throwable $e){if(class_exists('PortalIncidents',false))PortalIncidents::capture($e,'reactivation_delivery');error_log('No se pudo confirmar el envío de reactivación.');}
   }
   return true;
  }

@@ -14,4 +14,4 @@ try{
     $static=__DIR__.'/sitemap.xml';
     $xml=(new PublicSitemap($db))->xml($config['public_base_url']??'https://explorandolugares.com',is_file($static)?file_get_contents($static):'');
     if(($_SERVER['REQUEST_METHOD']??'GET')!=='HEAD')echo $xml;
-}catch(Throwable $e){http_response_code(503);echo '<?xml version="1.0" encoding="UTF-8"?><error>Sitemap temporalmente no disponible.</error>';}
+}catch(Throwable $e){if(class_exists('PortalIncidents',false))PortalIncidents::technical($e,'sitemap_live');http_response_code(503);echo '<?xml version="1.0" encoding="UTF-8"?><error>Sitemap temporalmente no disponible.</error>';}

@@ -29,7 +29,7 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
    elseif($action==='cancel'){$service->cancel($id);$notice='Campaña cancelada en el panel. Su borrador en Brevo, si existe, se conserva sin enviarse.';}
    else throw new RuntimeException('Revisa la acción y las confirmaciones del formulario.');
   }
- }catch(Throwable $e){http_response_code(400);$error=$e instanceof PDOException?'No se completó la operación. Revisa Base de datos.':$e->getMessage();if($action==='prepare'&&($_SERVER['HTTP_ACCEPT']??'')==='application/json')json_response(['message'=>$error],400);}
+ }catch(Throwable $e){if(class_exists('PortalIncidents',false))PortalIncidents::technical($e,'campanas');http_response_code(400);$error=$e instanceof PDOException?'No se completó la operación. Revisa Base de datos.':$e->getMessage();if($action==='prepare'&&($_SERVER['HTTP_ACCEPT']??'')==='application/json')json_response(['message'=>$error],400);}
 }
 // Preserve non-secret fields after validation failure; never echo API credentials.
 $settingsForm=$settings;if($_SERVER['REQUEST_METHOD']==='POST'&&($action??'')==='settings'&&$error!==''){foreach(['sender_name','sender_email','reply_to','sender_address'] as $field)$settingsForm[$field]=is_string($_POST[$field]??null)?substr($_POST[$field],0,1000):'';$settingsForm['enabled']=($_POST['enabled']??'')==='1';$tab='conexion';$error.=' Los demás datos siguen en el formulario; por seguridad, vuelve a pegar la clave API si la habías escrito.';}
