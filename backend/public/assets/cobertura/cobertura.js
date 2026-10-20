@@ -10,7 +10,7 @@
   async function geometry(file){if(!maps.has(file))maps.set(file,json(new URL('assets/cobertura/'+file,root)).catch(e=>{maps.delete(file);throw e;}));return maps.get(file);}
   const displayName=name=>name===name.toLocaleUpperCase('es')?name.toLocaleLowerCase('es').replace(/\p{L}+/gu,(word,offset)=>offset>0&&['de','del','la','las','los','y','el'].includes(word)?word:word[0].toLocaleUpperCase('es')+word.slice(1)):name;
   const option=(value,text)=>{const o=el('option',text);o.value=value;return o;};
-  function updateUrl(){const url=new URL(location.href);if(data){url.search='';if(department)url.searchParams.set('departamento',department);}url.hash=activeTab;history.replaceState(null,'',url);}
+  function updateUrl(){const url=new URL(location.href);if(data){url.search='';if(department)url.searchParams.set('departamento',department);if(activeSector)url.searchParams.set('sector',activeSector);}url.hash=activeTab;history.replaceState(null,'',url);}
   function setDepartment(code){if(code==='11')code='25';if(code&&!data.departments.some(d=>d.code===code&&d.counts.published>0))return;audienceDestination='';visibleLimit=12;department=data.departments.some(d=>d.code===code)?code:'';updateUrl();renderDetail();renderMap();}
   function renderDetail(){
     const d=current(),capitalRegion=false;$('country-button').hidden=!d;$('map-title').textContent=capitalRegion?'Cundinamarca y Bogotá D. C.':d?d.name:'Colombia';$('map-kicker').textContent=capitalRegion?'DATOS DE '+d.name.toLocaleUpperCase('es-CO'):d?'DEPARTAMENTO SELECCIONADO':'ELIGE POR DÓNDE EMPEZAR';
@@ -35,12 +35,14 @@
     });
   }
   function featureState(code){const dep=data.departments.find(x=>x.code===code);if(!dep||!dep.municipality_total)return 'outside_scope';return dep.counts.published>0?'published':'pending';}
-  let savedMapView=null;
+  let savedMapView=null,activeSector='';
+  const sectors={caribe:['08','13','20','23','44','47','70'],occidente:['05','17','63','66'],oriente:['11','25','15','54','68','41','73'],pacifico:['27','76','19','52'],orinoquia:['81','85','50','99'],amazonia:['91','18','94','95','86','97'],insular:['88']};
+
   async function renderMap(){
-    const version=++mapVersion,d=current();$('map').setAttribute('aria-busy','true');$('map').replaceChildren(el('p','Cargando mapa…'));
-    $('map-hint').textContent=d?'Departamento seleccionado: '+d.name+'. El borde naranja delimita todo el departamento; los colores interiores corresponden a sus municipios.':'Selecciona cualquier zona de un departamento con lugares publicados. Los colores interiores corresponden a municipios.';
+    const version=++mapVersion,d=current();if(!d&&activeSector)$('map-title').textContent=document.querySelector('[data-map-sector="'+activeSector+'"]').textContent;$('map').setAttribute('aria-busy','true');$('map').replaceChildren(el('p','Cargando mapa…'));
+    $('map-hint').textContent=d?'Departamento seleccionado: '+d.name+'. El borde naranja delimita todo el departamento; los colores interiores corresponden a sus municipios.':activeSector?'Sector completo: selecciona un departamento con lugares publicados. Los colores representan municipios.':'Elige un sector para ver sus municipios con más detalle, sin recortar el mapa.';
     try{
-      const geo=structuredClone(await geometry('departamentos.geojson'));
+      const geo=structuredClone(await geometry('departamentos.geojson'));if(activeSector)geo.features=geo.features.filter(f=>sectors[activeSector].includes(f.properties.code));
       const units=await Promise.all(data.departments.flatMap(dep=>(dep.code==='25'?['25','11']:[dep.code]).map(code=>geometry('municipios-'+code+'.geojson'))));
       if(version!==mapVersion)return;
       const capital=geo.features.find(f=>f.properties.code==='11'),region=geo.features.find(f=>f.properties.code==='25');
@@ -49,8 +51,8 @@
       const ns='http://www.w3.org/2000/svg',svg=document.createElementNS(ns,'svg');svg.setAttribute('role','group');svg.setAttribute('aria-label','Meta turística de Colombia por municipio; navegación por departamento');
       const commands=f=>polygons(f).flatMap(p=>p.map(r=>r.map((v,i)=>(i?'L':'M')+v[0]+' '+(-v[1])).join(' ')+'Z')).join(' ');
       const points=[];function walk(c){if(typeof c[0]==='number')points.push(c);else c.forEach(walk);}geo.features.forEach(f=>walk(f.geometry.coordinates));
-      const xs=points.map(p=>p[0]),ys=points.map(p=>-p[1]),minX=Math.min(...xs),maxX=Math.max(...xs),minY=Math.min(...ys),maxY=Math.max(...ys),w=maxX-minX,h=maxY-minY,pad=Math.max(w,h)*.09;
-      svg.setAttribute('viewBox',`${minX-pad} ${minY-pad} ${w+pad*2} ${h+pad*2}`);svg.dataset.baseView=svg.getAttribute('viewBox');if(savedMapView)svg.setAttribute('viewBox',savedMapView);
+      const xs=points.map(p=>p[0]),ys=points.map(p=>-p[1]),minX=Math.min(...xs),maxX=Math.max(...xs),minY=Math.min(...ys),maxY=Math.max(...ys),w=maxX-minX,h=maxY-minY,pad=Math.max(w,h)*.06;
+      svg.setAttribute('viewBox',`${minX-pad} ${minY-pad} ${w+pad*2} ${h+pad*2}`);svg.dataset.baseView=svg.getAttribute('viewBox');
       const stateByCode=new Map(data.departments.flatMap(dep=>dep.municipalities.map(m=>[m.code,m.status])));
       geo.features.forEach(f=>{
         const code=f.properties.code,dep=data.departments.find(x=>x.code===code);if(!dep)return;
@@ -149,14 +151,11 @@
     });
   });
   window.addEventListener('hashchange',()=>{activateTab(tabFromHash(),false);if(['#como-medimos','#invitar'].includes(location.hash))$(location.hash.slice(1)).scrollIntoView({block:'start'});});
-  document.querySelectorAll('[data-map-view]').forEach(button=>button.addEventListener('click',()=>{
-    const svg=$('map').querySelector('svg');if(!svg)return;
-    const base=svg.dataset.baseView.split(' ').map(Number),v=svg.getAttribute('viewBox').split(' ').map(Number),action=button.dataset.mapView;
-    if(action==='reset'){savedMapView=null;svg.setAttribute('viewBox',base.join(' '));return;}
-    if(action==='in'||action==='out'){
-      const factor=action==='in'?.7:1/.7,newW=Math.max(base[2]/8,Math.min(base[2],v[2]*factor)),newH=newW*base[3]/base[2];v[0]+=(v[2]-newW)/2;v[1]+=(v[3]-newH)/2;v[2]=newW;v[3]=newH;
-    }else if(action==='left')v[0]-=v[2]*.2;else if(action==='right')v[0]+=v[2]*.2;else if(action==='up')v[1]-=v[3]*.2;else if(action==='down')v[1]+=v[3]*.2;
-    v[0]=Math.max(base[0],Math.min(base[0]+base[2]-v[2],v[0]));v[1]=Math.max(base[1],Math.min(base[1]+base[3]-v[3],v[1]));savedMapView=v.join(' ');svg.setAttribute('viewBox',savedMapView);
+  document.querySelectorAll('[data-map-sector]').forEach(button=>button.addEventListener('click',()=>{
+    activeSector=button.dataset.mapSector;savedMapView=null;
+    document.querySelectorAll('[data-map-sector]').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));
+    if(department&&activeSector&&!sectors[activeSector].includes(department)){department='';audienceDestination='';updateUrl();renderDetail();}
+    updateUrl();renderMap();
   }));
   $('more-places').addEventListener('click',()=>{visibleLimit+=12;renderPlaces();});
   async function init(){
@@ -179,9 +178,9 @@
       
       data.departments.filter(d=>d.counts.published>0).slice().sort((a,b)=>a.name.localeCompare(b.name,'es')).forEach(d=>$('audience-department').append(option(d.code,d.name)));
       $('audience-department').addEventListener('change',e=>setDepartment(e.target.value));$('audience-destination').addEventListener('change',e=>{audienceDestination=e.target.value;renderAudience();});
-      $('country-button').addEventListener('click',()=>setDepartment(''));$('search').addEventListener('input',renderPlaces);$('audience-period').addEventListener('change',renderAudience);
+      $('country-button').addEventListener('click',()=>{activeSector='';document.querySelectorAll('[data-map-sector]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mapSector==='')));setDepartment('');});$('search').addEventListener('input',renderPlaces);$('audience-period').addEventListener('change',renderAudience);
       document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{filter=b.dataset.filter;document.querySelectorAll('[data-filter]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));renderPlaces();}));
-      const params=new URL(location.href).searchParams;const start=params.get('departamento')||'';setDepartment(data.departments.some(d=>d.code===(start==='11'?'25':start)&&d.counts.published>0)?start:'');
+      const params=new URL(location.href).searchParams;if(sectors[params.get('sector')]){activeSector=params.get('sector');document.querySelectorAll('[data-map-sector]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mapSector===activeSector)));}const start=params.get('departamento')||'';setDepartment(data.departments.some(d=>d.code===(start==='11'?'25':start)&&d.counts.published>0)?start:'');
     }catch(e){$('notice').hidden=false;$('notice').textContent='No pudimos cargar la cobertura. Vuelve a intentar más tarde; puedes seguir explorando las guías desde Destinos.';$('map').replaceChildren(el('p','Información temporalmente no disponible.','map-error'));$('map').setAttribute('aria-busy','false');$('updated').textContent='Sin actualización disponible.';}
   }
   // Native disclosures retain full content without JS. Apply defaults only on breakpoint changes.
