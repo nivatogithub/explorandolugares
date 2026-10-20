@@ -36,5 +36,15 @@
     "La rama parte de preprod, que contiene trabajo de otros workers: no realizar merge completo a main sin revisar diferencias.",
     "El origen de selección y la popularidad medida son conceptos distintos. No etiquetar fuera del alcance como no turístico."
   ],
-  "preview_url": "http://127.0.0.1:8088/cobertura/colombia/?departamento=05#cobertura"
+  "preview_url": "http://127.0.0.1:8088/cobertura/colombia/?departamento=05#cobertura",
+  "latest_visual_revision": {
+    "reason": "Petición del propietario: mapa por departamentos sin mosaico municipal ni desplegable",
+    "changes": [
+      "Selector de departamento retirado de cobertura",
+      "Mapa directo por departamento restaurado",
+      "Fuera del alcance excluido del catálogo seleccionable",
+      "Nombres en capitalización normal: Coveñas verificado en vista local"
+    ],
+    "status": "validated_local"
+  }
 }
