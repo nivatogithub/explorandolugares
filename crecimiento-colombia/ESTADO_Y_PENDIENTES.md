@@ -1,3 +1,9 @@
+## 19/10/2026 · Menú móvil: alineación compartida corregida en preprod
+
+Causa reproducida en Suscripciones a 390 px CSS: el enlace «Negocios locales» heredaba `margin-left:auto`, equivalente a 135,8 px en la muestra; las demás filas tenían margen cero. La regla anterior ya alineaba texto y justificación, pero no anulaba este margen. La corrección queda en `backend/public/assets/header-controls.css`, dentro del breakpoint móvil/tablet y limitada a los enlaces directos de `#menu-principal`: margen cero, ancho completo y alineación uniforme. No cambia idiomas, cuenta ni navegación de escritorio.
+
+Validación real del menú abierto mediante navegador en las 64 páginas HTML públicas con encabezado del paquete y las cinco guías dinámicas publicadas (69 direcciones): todas las filas con igual posición horizontal/ancho y sin desbordamiento de documento a 390 px. Excluida la página local de estilos `__estilos-cartagena`. Comprobación adicional a 780 px y menú de escritorio a 1280 px; pruebas existentes de encabezado y navegación de idiomas aprobadas. Evidencia privada `.local/preprod/auditoria2/menu-validacion.json` y `menu-movil-corregido.png`. No significa haber probado todos los flujos autenticados ni los estados de administración. Pendiente de aprobación/publicación; solo preprod actualizada.
+
 ## 19/10/2026 · Decisiones del propietario: alcance comercial y siguiente revisión
 
 - Pagos: el propietario cargará los medios reales en administración de producción. Sigue pendiente la configuración; no se declara operativa la recepción de pagos por una prueba de cotización.
