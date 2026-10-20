@@ -376,3 +376,10 @@
 #contenido .map-visible-key .key-outside { background:#E9EBEE; }
 #contenido .map-visible-key .key-available { background:rgba(99,183,124,.14); border-color:#2f7d50; }
 #contenido .map-visible-key .key-selected { background:rgba(99,183,124,.3); border:2px solid #24613e; }
+
+/* Contornos: disponible intermedio; seleccionado más oscuro. */
+#contenido .map g.department-available path.department-outline { stroke:#568565; stroke-width:1.8; }
+#contenido .map g.department-focus path.department-outline { stroke:#174b2c; stroke-width:2.6; }
+#contenido .map g.department-available:focus-visible path.department-outline { stroke:#174b2c; stroke-width:2.6; }
+#contenido .map-visible-key .key-available { border:2px solid #568565; }
+#contenido .map-visible-key .key-selected { border:2px solid #174b2c; }
