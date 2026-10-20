@@ -1,16 +1,13 @@
 {
-  "checked_at": "2026-10-19",
-  "validator": "backend/app/DestinationPackage.php::readZip",
-  "result": "pass",
-  "places": 8,
-  "images": 9,
-  "bytes": 2220935,
-  "sha256": "707519481e54b6f899b0842e75774cce78f201b21f9ee7766db6297ce6766d15",
+  "checked_at": "2026-10-20",
+  "validator": "DestinationPackage::readZip + DestinationAdminService validate-only + editorial",
+  "places": 11,
+  "attractions": 7,
+  "experiences": 4,
+  "images": 12,
+  "sha256": "f672b5f0bb694b20025eff176a01bfdd6e306f1aa7096525c94ab5cb846334ef",
+  "bytes": 2647901,
   "preprod_imported": false,
-  "http_qa": false,
   "human_approved": false,
-  "reasons_locales_nonempty": true,
-  "distinct_headline": true,
-  "admin_validation_only": "pass_without_database",
-  "editorial_criteria_validation": "pass"
+  "reference_adaptation_credits_corrected": true
 }
