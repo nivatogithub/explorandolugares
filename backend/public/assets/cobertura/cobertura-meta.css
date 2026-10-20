@@ -387,3 +387,9 @@
 #contenido .map g.department-focus path.department-overlay { fill:#398a53; fill-opacity:.4; }
 #contenido .map g.department-focus:hover path.department-overlay { fill-opacity:.4; }
 #contenido .map-visible-key .key-selected { background:rgba(57,138,83,.4); }
+
+#contenido #coverage-detail[hidden] { display:none; }
+
+#contenido #detail-description[hidden] { display:none; }
+#contenido #coverage-detail .coverage-number { margin:12px 0; }
+#contenido #coverage-detail .coverage-number strong { font-size:30px; }
