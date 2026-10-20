@@ -36,7 +36,7 @@
   }
   function featureState(code){const dep=data.departments.find(x=>x.code===code);if(!dep||!dep.municipality_total)return 'outside_scope';return dep.counts.published>0?'published':'pending';}
   let savedMapView=null,activeSector='';
-  const sectors={caribe:['08','13','20','23','44','47','70','88'],occidente:['05','17','63','66'],oriente:['11','25','15','54','68','41','73'],pacifico:['27','76','19','52'],orinoquia:['81','85','50','99'],amazonia:['91','18','94','95','86','97']};
+  const sectors={caribe:['08','13','20','23','44','47','70','88'],andina:['05','17','63','66','11','25','15','54','68','41','73'],pacifico:['27','76','19','52','86','18'],oriente:['81','85','50','99','94','95','97','91']};
 
   async function renderMap(){
     const version=++mapVersion,d=current();if(!d&&activeSector)$('map-title').textContent=document.querySelector('[data-map-sector="'+activeSector+'"]').textContent;$('map').setAttribute('aria-busy','true');$('map').replaceChildren(el('p','Cargando mapa…'));
@@ -193,7 +193,7 @@
       $('audience-department').addEventListener('change',e=>setDepartment(e.target.value));$('audience-destination').addEventListener('change',e=>{audienceDestination=e.target.value;renderAudience();});
       $('country-button').addEventListener('click',()=>{activeSector='';document.querySelectorAll('[data-map-sector]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mapSector==='')));setDepartment('');});$('search').addEventListener('input',renderPlaces);$('audience-period').addEventListener('change',renderAudience);
       document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{filter=b.dataset.filter;document.querySelectorAll('[data-filter]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));renderPlaces();}));
-      const params=new URL(location.href).searchParams;const sectorAlias={sur:'amazonia',insular:'caribe'};const requestedSector=sectorAlias[params.get('sector')]||params.get('sector');if(sectors[requestedSector]){activeSector=requestedSector;document.querySelectorAll('[data-map-sector]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mapSector===activeSector)));}const start=params.get('departamento')||'';setDepartment(data.departments.some(d=>d.code===(start==='11'?'25':start)&&d.counts.published>0)?start:'');
+      const params=new URL(location.href).searchParams;const sectorAlias={sur:'oriente',insular:'caribe',occidente:'andina',orinoquia:'oriente',amazonia:'oriente'};const requestedSector=sectorAlias[params.get('sector')]||params.get('sector');if(sectors[requestedSector]){activeSector=requestedSector;document.querySelectorAll('[data-map-sector]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mapSector===activeSector)));}const start=params.get('departamento')||'';setDepartment(data.departments.some(d=>d.code===(start==='11'?'25':start)&&d.counts.published>0)?start:'');
     }catch(e){$('notice').hidden=false;$('notice').textContent='No pudimos cargar la cobertura. Vuelve a intentar más tarde; puedes seguir explorando las guías desde Destinos.';$('map').replaceChildren(el('p','Información temporalmente no disponible.','map-error'));$('map').setAttribute('aria-busy','false');$('updated').textContent='Sin actualización disponible.';}
   }
   // Native disclosures retain full content without JS. Apply defaults only on breakpoint changes.
