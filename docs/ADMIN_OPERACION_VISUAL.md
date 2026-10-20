@@ -1,0 +1,35 @@
+# Reparación visual y operativa de la administración
+
+Fecha: 20 de octubre de 2026. Rama: `feature/admin-operacion-visual`. Base: main `bc5fc07`.
+
+## Alcance implementado
+
+- Solicitudes: selectores de estado nativos, Guardar estado con contexto accesible, avisos reales de guardado/sin cambios, 404 para ID inexistente, protección frente a una modificación entre lectura y escritura, filtros conservados y página ajustada al rango válido. Si una fila sale del filtro, se informa. Guardar no envía correo.
+- Detalle privado de participación o solicitud de cuenta: `/admin/solicitud-detalle.php?tipo=participation|account&id=...`. Solo consulta, validación de tipo/ID, sesión administrativa, 404/405/403, salida escapada. Se muestran datos conservados, referencias/documentos protegidos y plan solicitado; se separan ficha actual, membresía activa y suscripción registrada. No reconstruye evidencia histórica ni verifica titularidad.
+- Listados por tarea sobre los mismos IDs: Catálogo y cobertura, Atención a comercios, Revisión y pendientes. Búsqueda, lugar, categorías, publicación, origen registrado, plan registrado, verificación y cuenta asociada; conteos distintos, paginación, filtros persistentes y limpieza explícita.
+- Atención incluye fichas con solicitudes de cuenta documentadas, y solicitudes pendientes sin ficha. Es una definición explícita y acotada: no inventa vínculos con leads ni relaciones comerciales históricas que no estén registradas en esas solicitudes. Cuenta asociada se filtra aparte.
+- Revisión general incluye borradores de cualquier origen y fichas con solicitudes pendientes, además de solicitudes pendientes sin ficha. Informa el siguiente paso; no afirma elegibilidad completa para publicar. Los validadores existentes mantienen la decisión de cada operación.
+- Las solicitudes sin ficha se incluyen sin filtros que necesitan ficha: publicación, origen, verificación, plan registrado y cuenta asociada. No se confunde la cuenta autora con una membresía sobre una ficha inexistente ni un plan solicitado con uno contratado.
+- El lote existente conserva sus reglas y servicio; pasa a llamarse «Publicar importaciones Gratis sin representante». Se unificó el predicado de listado y selección masiva, incluyendo categorías secundarias y duplicados. La nueva revisión general no amplía la publicación masiva.
+- Recursos CSS compartidos y JavaScript modificado con versiones por contenido. La selección de filas de solicitudes usa un archivo externo compatible con la CSP vigente, sin habilitar scripts inline. Menú compacto desplegable en móvil; conserva navegación completa si JavaScript no está disponible.
+
+## Fuera de alcance
+
+No se modificaron `BusinessAccountPortalService`, `AutomaticBusinessClaim`, `BusinessSubscriptionAdminService`, el registro público ni las reglas de creación, asociación, reclamación, documentos, Gratis y publicación. No se añadieron tablas, migraciones, respuestas por correo ni vínculos nuevos. No se consultó el caso real ni se repararon datos. Producción, configuración privada y estadísticas permanecen sin tocar.
+
+## Validación
+
+- `php backend/tests/admin-business-operations.php`: filtros compartidos (categoría secundaria/duplicados), filas únicas por negocio, pendientes de distintos orígenes, separación cuenta/plan y funciones de presentación sin mutación.
+- `python3 backend/tests/admin-pages.integration.py`: regresión HTTP administrativa completa, cuentas y suscripciones existentes; nuevos detalles protegidos, solicitudes sin ficha, borradores owner_submitted y snapshots de tablas para comprobar que consultar no modifica asociaciones/negocios/suscripciones. SQLite aislada; transporte externo bloqueado.
+- `python3 backend/tests/integration.py`: solicitudes, CSRF, ID ausente, aviso de salida del filtro, página válida, escape de detalle y acceso no autorizado.
+- `php backend/tests/business-crm.php`, `business-account-portal.php`, `business-subscriptions.php`: regresiones existentes sin cambiar servicios de dominio.
+- `python3 backend/tests/admin-theme.py`, sintaxis PHP de páginas administrativas y auxiliares nuevos; sintaxis de selectores y scripts administrativos; `git diff --check`.
+- Paquete completo preparado para hosting en `.local/revision-admin-operativa`. Revisión real en el navegador del paquete local, con datos ficticios: selector nativo, alineación al extremo de tabla, filtros y menú compacto en viewport móvil, restaurando luego el tamaño original. Capturas fuera del código, en `entregables/admin-operacion-visual-2026-10-20` del proyecto local.
+
+## Revisión local
+
+Servidor de revisión aislado en `http://127.0.0.1:8046/admin/index.php`. Es auxiliar; no sustituye preprod. La base se copió de fixtures de la regresión, nunca de producción. Registro público deshabilitado y funciones de transporte externas bloqueadas. Configuración y datos quedan ignorados por Git.
+
+## Pendiente antes de publicar
+
+Integrar el candidato en preprod conforme a AGENTS, reconciliar main, revisar el delta completo del paquete y validar allí Apache/MariaDB. Completar comprobación cruzada Safari/Firefox y tecnologías de asistencia; la revisión de navegador realizada no certifica todos los navegadores. Revisar visualmente con el propietario y obtener aprobación del commit exacto antes del despliegue. Ningún cambio a los flujos de negocio se incluye en este candidato.
