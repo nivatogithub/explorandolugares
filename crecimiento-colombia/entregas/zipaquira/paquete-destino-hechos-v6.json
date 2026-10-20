@@ -1,0 +1,628 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "zipaquira",
+    "department": "Cundinamarca",
+    "country_code": "CO",
+    "destination_type": "municipality",
+    "subregion": "Sabana Centro",
+    "latitude": null,
+    "longitude": null,
+    "translations": {
+      "es": {
+        "display_name": "Zipaquirá",
+        "eyebrow": "Cundinamarca · Colombia",
+        "headline": "Sal, patrimonio y vida de la sabana",
+        "intro": "Una catedral bajo tierra y un centro histórico para caminar.",
+        "meta_description": "Una catedral bajo tierra y un centro histórico para caminar."
+      },
+      "en": {
+        "display_name": "Zipaquirá",
+        "eyebrow": "Cundinamarca · Colombia",
+        "headline": "Salt, heritage and life on the savanna",
+        "intro": "An underground cathedral and a historic centre to explore on foot.",
+        "meta_description": "An underground cathedral and a historic centre to explore on foot."
+      },
+      "pt-BR": {
+        "display_name": "Zipaquirá",
+        "eyebrow": "Cundinamarca · Colombia",
+        "headline": "Sal, patrimônio e vida na savana",
+        "intro": "Uma catedral subterrânea e um centro histórico para percorrer a pé.",
+        "meta_description": "Uma catedral subterrânea e um centro histórico para percorrer a pé."
+      }
+    },
+    "history": {
+      "es": [
+        "La sal fue parte del intercambio muisca antes de la colonización española. La fundación colonial de Zipaquirá data de 1600. Su patrimonio salinero convive con plazas, arquitectura y la memoria escolar de Gabriel García Márquez; la actual Catedral de Sal abrió en 1995."
+      ],
+      "en": [
+        "Salt supported Muisca exchange before Spanish colonisation. Zipaquirá’s colonial foundation dates to 1600. Its salt-making heritage shares the city with historic squares, architecture and memories of Gabriel García Márquez’s school years; the current Salt Cathedral opened in 1995."
+      ],
+      "pt-BR": [
+        "O sal integrou as trocas muiscas antes da colonização espanhola. A fundação colonial de Zipaquirá data de 1600. Seu patrimônio salineiro convive com praças, arquitetura e a memória escolar de Gabriel García Márquez; a atual Catedral de Sal abriu em 1995."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Conocer el patrimonio salinero y recorrer el centro histórico."
+      ],
+      "en": [
+        "Discover salt-making heritage and explore the historic centre."
+      ],
+      "pt-BR": [
+        "Conhecer o patrimônio salineiro e percorrer o centro histórico."
+      ]
+    },
+    "sources": {
+      "es": [
+        {
+          "title": "ProColombia: contexto salinero e historia",
+          "label": "ProColombia",
+          "url": "https://colombia.travel/es/zipaquira",
+          "section_key": "history"
+        },
+        {
+          "title": "ProColombia: Catedral y plaza",
+          "label": "ProColombia",
+          "url": "https://colombia.travel/en/bogota/salt-cathedral-zipaquira",
+          "section_key": "history"
+        },
+        {
+          "title": "Gaceta del Congreso 1696/2023: Colegio de Gabo",
+          "label": "Gaceta del Congreso 1696/2023",
+          "url": "https://sidn.ramajudicial.gov.co/SIDN/PUBLICACIONES%20PERIODICAS/TEXTO%20COMPLETO%20Y%20TABLAS%20DE%20CONTENIDO/GACETA%20DEL%20CONGRESO/GACETA%20DEL%20CONGRESO%202023/GC%201696%20DE%202023.PDF",
+          "section_key": "history"
+        }
+      ],
+      "en": [
+        {
+          "title": "ProColombia: contexto salinero e historia",
+          "label": "ProColombia",
+          "url": "https://colombia.travel/es/zipaquira",
+          "section_key": "history"
+        },
+        {
+          "title": "ProColombia: Catedral y plaza",
+          "label": "ProColombia",
+          "url": "https://colombia.travel/en/bogota/salt-cathedral-zipaquira",
+          "section_key": "history"
+        },
+        {
+          "title": "Gaceta del Congreso 1696/2023: Colegio de Gabo",
+          "label": "Gaceta del Congreso 1696/2023",
+          "url": "https://sidn.ramajudicial.gov.co/SIDN/PUBLICACIONES%20PERIODICAS/TEXTO%20COMPLETO%20Y%20TABLAS%20DE%20CONTENIDO/GACETA%20DEL%20CONGRESO/GACETA%20DEL%20CONGRESO%202023/GC%201696%20DE%202023.PDF",
+          "section_key": "history"
+        }
+      ],
+      "pt-BR": [
+        {
+          "title": "ProColombia: contexto salinero e historia",
+          "label": "ProColombia",
+          "url": "https://colombia.travel/es/zipaquira",
+          "section_key": "history"
+        },
+        {
+          "title": "ProColombia: Catedral y plaza",
+          "label": "ProColombia",
+          "url": "https://colombia.travel/en/bogota/salt-cathedral-zipaquira",
+          "section_key": "history"
+        },
+        {
+          "title": "Gaceta del Congreso 1696/2023: Colegio de Gabo",
+          "label": "Gaceta del Congreso 1696/2023",
+          "url": "https://sidn.ramajudicial.gov.co/SIDN/PUBLICACIONES%20PERIODICAS/TEXTO%20COMPLETO%20Y%20TABLAS%20DE%20CONTENIDO/GACETA%20DEL%20CONGRESO/GACETA%20DEL%20CONGRESO%202023/GC%201696%20DE%202023.PDF",
+          "section_key": "history"
+        }
+      ]
+    }
+  },
+  "hero_image": {
+    "file": "images/portada-fiel-v3.webp",
+    "image_origin": "ai_generated",
+    "image_creator": "Nestor Gonzalez Alonso · adaptación ilustrada con IA",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Sal_Azul_02.jpg",
+    "image_license": "CC BY-SA 4.0",
+    "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "alt": {
+      "es": "Zipaquirá: Catedral de Sal · ilustración editorial",
+      "en": "Zipaquirá: Salt Cathedral · editorial illustration",
+      "pt-BR": "Zipaquirá: Catedral de Sal · ilustração editorial"
+    },
+    "caption": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  "places": [
+    {
+      "slug": "catedral-de-sal",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Catedral de Sal",
+          "description": "Un templo subterráneo tallado en la roca salina.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Salt Cathedral",
+          "description": "An underground sanctuary carved into salt rock.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Catedral de Sal",
+          "description": "Um santuário subterrâneo escavado na rocha salina.",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/catedral-fiel-v2.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Bernard Gagnon · adaptación ilustrada con IA",
+        "image_source_url": "https://commons.wikimedia.org/wiki/File:Catedral_de_Sal_02.jpg",
+        "image_license": "CC BY-SA 4.0",
+        "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "alt": {
+          "es": "Catedral de Sal · ilustración editorial",
+          "en": "Salt Cathedral · editorial illustration",
+          "pt-BR": "Catedral de Sal · ilustração editorial"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "plaza-comuneros",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Plaza de los Comuneros",
+          "description": "El corazón histórico, entre la catedral y edificios patrimoniales.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Plaza de los Comuneros",
+          "description": "The historic heart, framed by the cathedral and heritage buildings.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Praça dos Comuneros",
+          "description": "O coração histórico, entre a catedral e edifícios patrimoniais.",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/plaza-comuneros-fiel-v3.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Rémi Jouan · adaptación ilustrada con IA",
+        "image_source_url": "https://commons.wikimedia.org/wiki/File:Zipaquira_-_Place_(1).JPG",
+        "image_license": "CC BY-SA 3.0",
+        "image_license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "alt": {
+          "es": "Plaza de los Comuneros · ilustración editorial",
+          "en": "Plaza de los Comuneros · editorial illustration",
+          "pt-BR": "Praça dos Comuneros · ilustração editorial"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "catedral-diocesana",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Catedral Diocesana",
+          "description": "El gran templo de piedra frente a la plaza principal.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Diocesan Cathedral",
+          "description": "The landmark stone church facing the main square.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Catedral Diocesana",
+          "description": "O grande templo de pedra diante da praça principal.",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/catedral-diocesana-fiel-v3.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Nbck · adaptación ilustrada con IA",
+        "image_source_url": "https://commons.wikimedia.org/wiki/File:Catedral_Diocesana,_Zipaquir%C3%A1.JPG",
+        "image_license": "CC BY-SA 4.0",
+        "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "alt": {
+          "es": "Catedral Diocesana · ilustración editorial",
+          "en": "Diocesan Cathedral · editorial illustration",
+          "pt-BR": "Catedral Diocesana · ilustração editorial"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "estacion-tren",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Estación del Tren",
+          "description": "Estación patrimonial y llegada del tren turístico desde Bogotá. Consulta las salidas.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Railway Station",
+          "description": "Heritage station and arrival point for the tourist train from Bogotá. Check departures.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Estação Ferroviária",
+          "description": "Estação histórica e chegada do trem turístico de Bogotá. Consulte as saídas.",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/estacion-fiel-v2.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Samuel lizarazo · adaptación ilustrada con IA",
+        "image_source_url": "https://commons.wikimedia.org/wiki/File:Estacion_del_tren_zipaquira.jpg",
+        "image_license": "CC BY-SA 3.0",
+        "image_license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "alt": {
+          "es": "Estación del Tren · ilustración editorial",
+          "en": "Railway Station · editorial illustration",
+          "pt-BR": "Estação Ferroviária · ilustração editorial"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "colegio-gabo",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "El Colegio de Gabo",
+          "description": "La memoria de los años escolares de Gabriel García Márquez.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Gabo’s School",
+          "description": "Discover the memory of Gabriel García Márquez’s school years.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "O Colégio de Gabo",
+          "description": "A memória dos anos escolares de Gabriel García Márquez.",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/colegio-gabo-hechos-v6b.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · ilustración IA desde hechos documentados; revisión pendiente",
+        "image_source_url": "",
+        "image_license": "Propuesta IA aproximada; no se subieron fotografías de terceros como entrada",
+        "image_license_url": "",
+        "alt": {
+          "es": "Patio del antiguo liceo de Zipaquirá · ilustración aproximada basada en rasgos documentados",
+          "en": "Courtyard of the former Zipaquirá school · approximate illustration based on documented features",
+          "pt-BR": "Pátio do antigo liceu de Zipaquirá · ilustração aproximada baseada em características documentadas"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "museo-quevedo",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Casa Museo Quevedo Zornoza",
+          "description": "Una casa para acercarse al patrimonio musical de la ciudad.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Quevedo Zornoza House Museum",
+          "description": "A house devoted to the city’s musical heritage.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Casa Museu Quevedo Zornoza",
+          "description": "Uma casa para conhecer o patrimônio musical da cidade.",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/museo-quevedo-hechos-v6.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · ilustración IA desde hechos documentados; revisión pendiente",
+        "image_source_url": "",
+        "image_license": "Propuesta IA aproximada; no se subieron fotografías de terceros como entrada",
+        "image_license_url": "",
+        "alt": {
+          "es": "Entrada de la Casa Museo Quevedo · ilustración aproximada basada en rasgos documentados",
+          "en": "Entrance to the Quevedo House Museum · approximate illustration based on documented features",
+          "pt-BR": "Entrada da Casa Museu Quevedo · ilustração aproximada baseada em características documentadas"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "museo-arqueologico",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Museo Arqueológico",
+          "description": "Piezas y relatos para conocer el pasado prehispánico.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Archaeological Museum",
+          "description": "Objects and stories that explore the pre-Hispanic past.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Museu Arqueológico",
+          "description": "Peças e relatos para conhecer o passado pré-hispânico.",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/museo-arqueologico-fiel-v3.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "POeeurdjds · adaptación ilustrada con IA",
+        "image_source_url": "https://commons.wikimedia.org/wiki/File:Museo_arqueol%C3%B3gico_de_Zipaquir%C3%A1.jpg",
+        "image_license": "CC BY-SA 4.0",
+        "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "alt": {
+          "es": "Museo Arqueológico · ilustración editorial",
+          "en": "Archaeological Museum · editorial illustration",
+          "pt-BR": "Museu Arqueológico · ilustração editorial"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "ruta-del-minero",
+      "type": "experience",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Experiencia minera",
+          "description": "Pica roca salina en un recorrido guiado. Aplican restricciones de edad y salud.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Mining experience",
+          "description": "Try salt-rock mining on a guided visit. Age and health restrictions apply.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Experiência de mineração",
+          "description": "Experimente a extração de sal em visita guiada. Há restrições de idade e saúde.",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/minera-tematica-v4.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · generación IA",
+        "image_source_url": "",
+        "image_license": "Ilustración temática independiente",
+        "image_license_url": "",
+        "alt": {
+          "es": "Extracción de roca salina · ilustración temática, no vista del recinto",
+          "en": "Salt-rock extraction · thematic illustration, not a view of the venue",
+          "pt-BR": "Extração de rocha salina · ilustração temática, não vista do recinto"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "tren-sabana",
+      "type": "experience",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Paseo en tren turístico",
+          "description": "Viaja desde Bogotá hasta Zipaquirá en un tren patrimonial. Consulta las salidas.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Tourist train ride",
+          "description": "Travel from Bogotá to Zipaquirá on a heritage train. Check departures.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Passeio de trem turístico",
+          "description": "Viaje de Bogotá a Zipaquirá em um trem histórico. Consulte as saídas.",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/tren-patio-original-v5.webp",
+        "image_origin": "external",
+        "image_creator": "Nils Öberg",
+        "image_source_url": "https://commons.wikimedia.org/wiki/File:Zipaquira_station_yard.JPG",
+        "image_license": "CC BY-SA 3.0",
+        "image_license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "alt": {
+          "es": "Fotografía histórica del tren en el patio ferroviario de Zipaquirá",
+          "en": "Historical photograph of the train in the Zipaquirá railway yard",
+          "pt-BR": "Fotografia histórica do trem no pátio ferroviário de Zipaquirá"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "recorrido-historico",
+      "type": "experience",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Tour urbano patrimonial",
+          "description": "Conoce el centro histórico con guía y previa inscripción. Confirma la salida.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Heritage walking tour",
+          "description": "Explore the historic centre with a guide and prior registration. Confirm departure.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Passeio guiado pelo patrimônio",
+          "description": "Conheça o centro histórico com guia e inscrição prévia. Confirme a saída.",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/urbano-centro-fiel-v4.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Rémi Jouan · adaptación ilustrada con IA",
+        "image_source_url": "https://commons.wikimedia.org/wiki/File:Zipaquira_-_Place_(1).JPG",
+        "image_license": "CC BY-SA 3.0",
+        "image_license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "alt": {
+          "es": "Paseo por el centro de Zipaquirá · ilustración basada en una vista identificada",
+          "en": "Walk through central Zipaquirá · illustration based on an identified view",
+          "pt-BR": "Passeio pelo centro de Zipaquirá · ilustração baseada em vista identificada"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "2026-10-19",
+    "positioning": "Patrimonio salinero, centro urbano y cultura local",
+    "competitors": [],
+    "potential_allies": [],
+    "business_prospects": [],
+    "acquisition_strategies": [],
+    "sources": [
+      {
+        "url": "https://colombia.travel/es/zipaquira",
+        "checked_at": "2026-10-19"
+      },
+      {
+        "url": "https://colombia.travel/en/bogota/salt-cathedral-zipaquira",
+        "checked_at": "2026-10-19"
+      },
+      {
+        "url": "https://www.zipaquira.travel/wp-content/uploads/2026/02/Guia-Turistica-ZT.pdf",
+        "checked_at": "2026-10-19"
+      },
+      {
+        "url": "https://eldoradoradio.cundinamarca.gov.co/provincias/sabana-centro/zipaquira/",
+        "checked_at": "2026-10-19"
+      },
+      {
+        "url": "https://www.catedraldesal.gov.co/atracciones/museo-arqueologico/",
+        "checked_at": "2026-10-19"
+      },
+      {
+        "url": "https://www.catedraldesal.gov.co/atracciones/ruta-del-minero/",
+        "checked_at": "2026-10-19"
+      },
+      {
+        "url": "https://turistren.com.co/",
+        "checked_at": "2026-10-19"
+      },
+      {
+        "url": "https://diocesisdezipaquira.org/parroquias/parroquia-la-catedral-diocesana-de-zipaquira/",
+        "checked_at": "2026-10-19"
+      },
+      {
+        "url": "https://sidn.ramajudicial.gov.co/SIDN/PUBLICACIONES%20PERIODICAS/TEXTO%20COMPLETO%20Y%20TABLAS%20DE%20CONTENIDO/GACETA%20DEL%20CONGRESO/GACETA%20DEL%20CONGRESO%202023/GC%201696%20DE%202023.PDF",
+        "checked_at": "2026-10-19"
+      },
+      {
+        "url": "https://www.catedraldesal.gov.co/wp-content/uploads/2025/03/MAPA-MINA_v05-interior-y-exterior.pdf",
+        "checked_at": "2026-10-19"
+      },
+      {
+        "url": "https://www.zipaquira.travel/page/2/",
+        "checked_at": "2026-10-19"
+      }
+    ],
+    "notes": [
+      "Borrador privado. No hay alianzas, disponibilidad ni publicación aprobadas.",
+      "Auditoría 2026-10-20: tren ilustrado desde foto colombiana histórica, sector no geolocalizado; no garantiza locomotora ni paisaje de una salida actual. Experiencias priorizadas por identidad salinera, transporte patrimonial y complemento urbano; sin demanda medida."
+    ]
+  }
+}
