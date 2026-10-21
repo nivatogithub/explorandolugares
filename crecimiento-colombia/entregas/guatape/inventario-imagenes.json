@@ -10,7 +10,7 @@
   {
     "role": "place",
     "slug": "penon-guatape",
-    "brief": "Peñón de Guatapé: conservar posición, proporciones y entorno real de la referencia elegida.",
+    "brief": "Piedra del Peñol/Peñón de Guatapé: monolito y escalera reales. Prioridad1. Conservar geometría de referencia elegida.",
     "status": "espera_referencia_elegida_usuario",
     "output": "WebP 960x640 3:2; portada adicional1200 si se requiere",
     "constraints": "No generar desde ingredientes; sin descargas ni IA en este lote hasta referencia elegida. Conservar original, permiso, prompt, hash y comparación."
@@ -62,5 +62,29 @@
     "status": "espera_referencia_elegida_usuario",
     "output": "WebP 960x640 3:2; portada adicional1200 si se requiere",
     "constraints": "No generar desde ingredientes; sin descargas ni IA en este lote hasta referencia elegida. Conservar original, permiso, prompt, hash y comparación."
+  },
+  {
+    "role": "place",
+    "slug": "calle-sombrillas",
+    "brief": "Corredor de sombrillas indicado por propietario; no confundir Calle del Recuerdo ni duplicar encuadre de Plazoleta. Esperar referencia exacta de escaleras/punto de vista.",
+    "status": "espera_referencia_elegida_usuario",
+    "output": "WebP960x640,3:2",
+    "constraints": "No generar ni descargar fotos;referencia exacta pendiente."
+  },
+  {
+    "role": "experience",
+    "slug": "jet-ski",
+    "brief": "Persona en moto acuática, equipo y postura real; no lancha ni kayak. Embalse dulce y relieve real según referencia elegida.",
+    "status": "espera_referencia_elegida_usuario",
+    "output": "WebP960x640,3:2",
+    "constraints": "No generar ni descargar fotos;referencia exacta pendiente."
+  },
+  {
+    "role": "experience",
+    "slug": "esqui-acuatico",
+    "brief": "Persona sobre esquís de agua remolcada, no tabla wakeboard. Registrar equipo y cuerda en referencia autorizada.",
+    "status": "espera_referencia_elegida_usuario",
+    "output": "WebP960x640,3:2",
+    "constraints": "No generar ni descargar fotos;referencia exacta pendiente."
   }
 ]

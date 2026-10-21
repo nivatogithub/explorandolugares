@@ -53,15 +53,15 @@
       "publication_status": "draft",
       "translations": {
         "es": {
-          "name": "Peñón de Guatapé",
+          "name": "Piedra del Peñol (Peñón de Guatapé)",
           "description": "Asciende la escalinata y contempla los brazos del embalse."
         },
         "en": {
-          "name": "Guatapé Rock",
+          "name": "Piedra del Peñol (Guatapé Rock)",
           "description": "Climb the stairway for views over the reservoir."
         },
         "pt-BR": {
-          "name": "Pedra de Guatapé",
+          "name": "Pedra do Peñol (Pedra de Guatapé)",
           "description": "Suba a escadaria para observar os braços da represa."
         }
       },
@@ -89,9 +89,30 @@
       "image_pending": true
     },
     {
-      "slug": "malecon",
+      "slug": "calle-sombrillas",
       "type": "place",
       "sort_order": 3,
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Calle de las Sombrillas",
+          "description": "Un corredor de sombrillas de colores y fachadas con zócalos."
+        },
+        "en": {
+          "name": "Umbrella Street",
+          "description": "A passage beneath colourful umbrellas and decorated façades."
+        },
+        "pt-BR": {
+          "name": "Rua dos Guarda-Chuvas",
+          "description": "Um corredor de guarda-chuvas coloridos e fachadas com zócalos."
+        }
+      },
+      "image_pending": true
+    },
+    {
+      "slug": "malecon",
+      "type": "place",
+      "sort_order": 4,
       "publication_status": "draft",
       "translations": {
         "es": {
@@ -112,7 +133,7 @@
     {
       "slug": "parque-principal",
       "type": "place",
-      "sort_order": 4,
+      "sort_order": 5,
       "publication_status": "draft",
       "translations": {
         "es": {
@@ -152,9 +173,30 @@
       "image_pending": true
     },
     {
-      "slug": "kayak-guiado",
+      "slug": "jet-ski",
       "type": "experience",
       "sort_order": 2,
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Jet ski en el embalse",
+          "description": "Recorre el agua en moto acuática tras la inducción de manejo."
+        },
+        "en": {
+          "name": "Reservoir jet skiing",
+          "description": "Ride a personal watercraft after a handling briefing."
+        },
+        "pt-BR": {
+          "name": "Jet ski na represa",
+          "description": "Navegue de moto aquática após as orientações de condução."
+        }
+      },
+      "image_pending": true
+    },
+    {
+      "slug": "kayak-guiado",
+      "type": "experience",
+      "sort_order": 3,
       "publication_status": "draft",
       "translations": {
         "es": {
@@ -173,9 +215,30 @@
       "image_pending": true
     },
     {
+      "slug": "esqui-acuatico",
+      "type": "experience",
+      "sort_order": 4,
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Esquí acuático",
+          "description": "Deslízate sobre esquís remolcados por una lancha con instructor."
+        },
+        "en": {
+          "name": "Water skiing",
+          "description": "Glide on skis towed by a boat with an instructor."
+        },
+        "pt-BR": {
+          "name": "Esqui aquático",
+          "description": "Deslize sobre esquis puxados por uma lancha com instrutor."
+        }
+      },
+      "image_pending": true
+    },
+    {
       "slug": "wakeboard",
       "type": "experience",
-      "sort_order": 3,
+      "sort_order": 5,
       "publication_status": "draft",
       "translations": {
         "es": {

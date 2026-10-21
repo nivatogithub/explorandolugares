@@ -11,7 +11,12 @@
       "source_urls": [
         "https://colombia.travel/es/node/4314"
       ],
-      "checked_at": "2026-10-20"
+      "checked_at": "2026-10-20",
+      "public_name": "Piedra del Peñol (Peñón de Guatapé)",
+      "aliases": [
+        "Peñón de Guatapé",
+        "Piedra del Peñol"
+      ]
     },
     {
       "slug": "plazoleta-zocalos",
@@ -28,7 +33,7 @@
       "slug": "malecon",
       "kind": "place",
       "decision": "include",
-      "priority": 3,
+      "priority": 4,
       "priority_type": "editorial_no_ranking_ventas",
       "source_urls": [
         "https://www.municipiodeguatape.gov.co/publicaciones/87/informacion-turistica/"
@@ -39,7 +44,7 @@
       "slug": "parque-principal",
       "kind": "place",
       "decision": "include",
-      "priority": 4,
+      "priority": 5,
       "priority_type": "editorial_no_ranking_ventas",
       "source_urls": [
         "https://www.municipiodeguatape.gov.co/publicaciones/87/informacion-turistica/"
@@ -63,7 +68,7 @@
       "slug": "kayak-guiado",
       "kind": "experience",
       "decision": "include",
-      "priority": 2,
+      "priority": 3,
       "priority_type": "editorial_no_ranking_ventas",
       "source_urls": [
         "https://www.outdoorsguatape.com/en/product/tour-en-kayak/"
@@ -76,7 +81,7 @@
       "slug": "wakeboard",
       "kind": "experience",
       "decision": "include",
-      "priority": 3,
+      "priority": 5,
       "priority_type": "editorial_no_ranking_ventas",
       "source_urls": [
         "https://www.vikingosclubnauticoguatape.com/es/reservaciones"
@@ -84,6 +89,48 @@
       "checked_at": "2026-10-20",
       "operator": "Vikingos Club Náutico",
       "availability": "Oferta documental; fecha, punto de embarque y condiciones se confirman con el oferente."
+    },
+    {
+      "slug": "calle-sombrillas",
+      "kind": "place",
+      "decision": "include",
+      "priority": 3,
+      "priority_type": "editorial_no_ranking_ventas",
+      "source_urls": [
+        "https://toursguatape.com/detalles-del-tour-guatape/",
+        "https://www.somosdetour.com.co/",
+        "https://turismoguatape.com/imperdibles/"
+      ],
+      "checked_at": "2026-10-20",
+      "purpose": "Corredor reconocible solicitado por propietario. No es Calle del Recuerdo; fuentes de operadores enumeran ambas por separado."
+    },
+    {
+      "slug": "jet-ski",
+      "kind": "experience",
+      "decision": "include",
+      "priority": 2,
+      "priority_type": "editorial_no_ranking_ventas",
+      "source_urls": [
+        "https://www.aquarushguatape.com/nosotros",
+        "https://www.aquarushguatape.com/politicas",
+        "https://corpotur.com/vive/jet-ski-1200cc/"
+      ],
+      "checked_at": "2026-10-20",
+      "purpose": "Moto acuática contratada; oferta propia confirma inducción y punto Muelle Timón en Guatapé. No se promete guía de ruta ni condiciones particulares.",
+      "operator": "Aquarush Guatapé; Corpotur como oferta adicional"
+    },
+    {
+      "slug": "esqui-acuatico",
+      "kind": "experience",
+      "decision": "include",
+      "priority": 4,
+      "priority_type": "editorial_no_ranking_ventas",
+      "source_urls": [
+        "https://www.vikingosclubnauticoguatape.com/es/servicios/esqui-acuatico"
+      ],
+      "checked_at": "2026-10-20",
+      "purpose": "Oferta específica de esquí con instructor, diferente de wakeboard. Embalse intermunicipal; punto de salida se confirma.",
+      "operator": "Vikingos Club Náutico"
     }
   ],
   "excluded": [
@@ -101,8 +148,9 @@
     }
   ],
   "limits": [
-    "Cuatro atractivos y tres experiencias; ocho es techo, no cuota.",
     "El embalse es intermunicipal; confirmar puntos de salida con oferente.",
-    "No afirmar disponibilidad ni popularidad por existir la oferta."
+    "No afirmar disponibilidad ni popularidad por existir la oferta.",
+    "Cinco atractivos y cinco experiencias; cantidades derivadas de relevancia/oferta, no cuota.",
+    "Corpotur usa calle/plazoleta como nombres próximos; fuentes de operadores distinguen Sombrillas, Recuerdo y Plazoleta. Referencia visual del propietario fijará tramo exacto sin inventar geolocalización."
   ]
 }
