@@ -27,7 +27,7 @@
  if(figure){const caption=document.createElement('figcaption');caption.className='credit';caption.textContent=copy.image_label;figure.replaceChildren(image('hero-v3','Santa Marta · bahía histórica y Camellón',true),caption);}
  const overview=document.querySelector('#descubre')||document.querySelector('.destination-overview');
  if(overview){overview.classList.add('sm-history');const text=document.createElement('div');const heading=document.createElement('h2');heading.textContent=copy.history_title;const p=document.createElement('p');p.textContent=copy.history;text.append(heading,p);overview.replaceChildren(text);}
- document.querySelectorAll('.destination-hero .eyebrow,.pilot-banner,.destination-business-link').forEach(n=>n.remove());
+ document.querySelectorAll('.destination-hero .eyebrow,.pilot-banner').forEach(n=>n.remove());
  const banner=document.querySelector('.destination-preview-banner');if(banner)banner.textContent=copy.draft;
  const invitation=document.querySelector('.destination-invitation');
  if(invitation){const button=invitation.querySelector('a.pill');if(button){const content=document.createElement('div');const h=document.createElement('h2');h.textContent=copy.business_title;const p=document.createElement('p');p.textContent=copy.business_text;content.append(h,p);invitation.replaceChildren(content,button);}}

@@ -13,7 +13,7 @@
   overview.querySelectorAll('.destination-history-photo,.destination-reasons').forEach(n=>n.remove());
   const story=overview.querySelector(':scope>div');if(story){story.querySelectorAll(':scope>p:not(.credit)').forEach(n=>n.remove());const h=story.querySelector('h2');if(h){h.textContent=copy.history_title;const p=document.createElement('p');p.className='compact-history-text';p.textContent=copy.history;h.after(p);}}
  }
- document.querySelectorAll('.pilot-banner,.destination-business-link,.destination-hero .eyebrow').forEach(n=>n.remove());
+ document.querySelectorAll('.pilot-banner,.destination-hero .eyebrow').forEach(n=>n.remove());
  const banner=document.querySelector('.destination-preview-banner');if(banner){const strong=document.createElement('strong');strong.textContent=copy.draft;banner.replaceChildren(strong);}
  const invitation=document.querySelector('.destination-invitation');if(invitation){const heading=invitation.querySelector('h2');const button=invitation.querySelector('a.pill');if(heading&&button){heading.textContent=copy.business_title;const p=document.createElement('p');p.textContent=copy.business_text;const content=document.createElement('div');content.append(heading,p);invitation.replaceChildren(content,button);}}
  const practical=document.querySelector('.destination-practical details:first-child p');if(practical)practical.textContent=copy.practical;

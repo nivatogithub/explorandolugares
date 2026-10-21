@@ -28,7 +28,9 @@ def private_php(config,options,action="database-snapshot.php"):
     if action=='prepare-destination-migration.php':
         options=dict(options,migration_root=scratch,public_root=api.public_path(config))
         dependencies={'DestinationSnapshotMigration.php':ROOT/'scripts/lib/DestinationSnapshotMigration.php'}
-        for slug in ['jerico','cartagena','bogota','medellin','santa-marta','jardin','covenas','zipaquira','santa-fe-de-antioquia']:
+        slugs=options.get('slugs',['jerico','cartagena','bogota','medellin','santa-marta','jardin','covenas','zipaquira','santa-fe-de-antioquia'])
+        if not slugs or set(slugs)-{'jerico','cartagena','bogota','medellin','santa-marta','jardin','covenas','zipaquira','santa-fe-de-antioquia','guatape','cauca-viejo','cocorna','arboletes'}:raise ValueError('Alcance de lugares inválido.')
+        for slug in slugs:
             dependencies[slug+'.json']=ROOT/'content/destination-migration'/ (slug+'.json')
     if action in {'database-snapshot.php','backup-retention.php'}:
         dependencies['BackupRetention.php']=ROOT/'scripts/php/BackupRetention.php'

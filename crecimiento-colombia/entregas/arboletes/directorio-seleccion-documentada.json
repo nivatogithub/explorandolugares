@@ -1,0 +1,89 @@
+{
+  "destination": "arboletes",
+  "objective": 30,
+  "documented_independent_entities": 6,
+  "published": 0,
+  "businesses": [
+    {
+      "name": "Hotel Boutique El Mirador",
+      "slug": "hotel-boutique-el-mirador",
+      "categories": [
+        "alojamiento",
+        "gastronomia"
+      ],
+      "source_url": "https://www.hotelelmiradordearboletes.com/index.php",
+      "checked_at": "2026-10-21",
+      "state": "documentado_canal_primario",
+      "current_operation": "pending_confirmation",
+      "relationship": "none",
+      "public_contact": null
+    },
+    {
+      "name": "Riviera del Sol Hotel & Spa",
+      "slug": "riviera-del-sol-hotel-&-spa",
+      "categories": [
+        "alojamiento",
+        "gastronomia"
+      ],
+      "source_url": "https://rivieradelsol.co/es/",
+      "checked_at": "2026-10-21",
+      "state": "documentado_canal_primario",
+      "current_operation": "pending_confirmation",
+      "relationship": "none",
+      "public_contact": null
+    },
+    {
+      "name": "Operaciones Turísticas Ligero de Equipaje",
+      "slug": "operaciones-turisticas-ligero-de-equipaje",
+      "categories": [
+        "experiencias"
+      ],
+      "source_url": "https://corporacionturisticaurabadariencaribe.com/empresas/operadora-turistica-ligero-equipaje/",
+      "checked_at": "2026-10-21",
+      "state": "documentado_vitrina_gremial",
+      "current_operation": "pending_confirmation",
+      "relationship": "none",
+      "public_contact": null
+    },
+    {
+      "name": "Rápido Ochoa — Arboletes",
+      "slug": "rapido-ochoa-—-arboletes",
+      "categories": [
+        "transporte"
+      ],
+      "source_url": "https://www.rapidoochoa.com.co/bus-de/monteria-a-arboletes/",
+      "checked_at": "2026-10-21",
+      "state": "documentado_canal_primario",
+      "current_operation": "pending_confirmation",
+      "relationship": "none",
+      "public_contact": null
+    },
+    {
+      "name": "Tienda D1 Arboletes",
+      "slug": "tienda-d1-arboletes",
+      "categories": [
+        "comercios"
+      ],
+      "source_url": "https://d1.com.co/wp-content/uploads/TemporadaMayo_TiendasDisponibles_1.pdf",
+      "checked_at": "2026-10-21",
+      "state": "documentado_canal_primario",
+      "current_operation": "pending_confirmation",
+      "relationship": "none",
+      "public_contact": null
+    },
+    {
+      "name": "Notaría Única de Arboletes",
+      "slug": "notaria-unica-de-arboletes",
+      "categories": [
+        "servicios"
+      ],
+      "source_url": "https://notariaunicaarboletes.com.co/nosotros/",
+      "checked_at": "2026-10-21",
+      "state": "documentado_canal_primario",
+      "current_operation": "pending_confirmation",
+      "relationship": "none",
+      "public_contact": null
+    }
+  ],
+  "deduplication": "Hoteles y sus restaurantes/bares se cuentan una vez; sin IDs importados ni asociaciones comerciales."
+}

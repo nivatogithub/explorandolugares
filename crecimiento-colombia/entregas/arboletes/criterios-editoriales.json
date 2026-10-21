@@ -1,0 +1,85 @@
+{
+  "destination": "arboletes",
+  "checked_at": "2026-10-21",
+  "priority": "editorial, sin ranking de ventas ni popularidad comprobada",
+  "components": [
+    {
+      "slug": "volcan-de-lodo",
+      "decision": "include_place",
+      "sources": [
+        "activa",
+        "obras"
+      ],
+      "access": "Administrado; comunicado 11 agosto2026 confirma acceso habilitado, fase2 al51%; no prometer todas las instalaciones terminadas ni horarios actuales.",
+      "excluded_claims": [
+        "Propiedades medicinales o curativas",
+        "Cráter cónico como Totumo",
+        "Obras fase2 terminadas"
+      ]
+    },
+    {
+      "slug": "playas-urbanas",
+      "decision": "include_place",
+      "sources": [
+        "playas",
+        "erosion"
+      ],
+      "access": "Litoral urbano; condiciones variables por erosión, oleaje y recuperación. No afirmar baño siempre apto ni arena continua.",
+      "visual_rule": "Referencia posterior a obras; conservar construcciones y tramos con poca arena."
+    },
+    {
+      "slug": "desembocadura-rio-hobo",
+      "decision": "include_place",
+      "sources": [
+        "playas",
+        "inventario"
+      ],
+      "access": "Identidad territorial confirmada; ingreso puntual y condiciones por verificar. No anunciar canoas contratables sin oferta vigente."
+    },
+    {
+      "slug": "taller-bullerengue",
+      "decision": "include_experience_draft",
+      "operator": "Operaciones Turísticas Ligero de Equipaje S.A.S., articulación con colectivo Bulla de Mujeres",
+      "offer": "Ficha de la corporación turística ofrece explícitamente talleres de bullerengue y bailes tradicionales.",
+      "sources": [
+        "operador"
+      ],
+      "evidence_strength": "Oferta explícita en vitrina del gremio turístico; no se confirmó canal propio activo ni disponibilidad/precio. Revalidar canal antes de publicación.",
+      "commercial_presence": false
+    }
+  ],
+  "excluded_or_pending": [
+    {
+      "name": "Recorrido en canoa por Río Hobo",
+      "reason": "Referencias antiguas y recomendaciones; no oferta primaria vigente comprobada."
+    },
+    {
+      "name": "Pesca turística",
+      "reason": "No se comprobó operador local con oferta concreta."
+    },
+    {
+      "name": "Taller de galletas de limón",
+      "reason": "Resultado indexado del operador no coincide con apertura real del dominio; pendiente canal válido."
+    },
+    {
+      "name": "Cascadas Las Tinas",
+      "reason": "Inventario documenta existencia, pero acceso vigente y municipio/punto exacto requieren cartografía."
+    },
+    {
+      "name": "Cerro Las Lajas",
+      "reason": "Acceso/punto geográfico no contrastado; no repetir afirmación inverosímil de ver islas de Panamá."
+    },
+    {
+      "name": "Museo Raíces y Casa de la Cultura",
+      "reason": "No comprobados funcionamiento y acceso turístico actuales."
+    },
+    {
+      "name": "Tortuguilla / Damaquiel",
+      "reason": "No presentarlos como atractivos dentro de Arboletes; revisar jurisdicción y oferta de excursión."
+    },
+    {
+      "name": "Pasadía hotelero genérico",
+      "reason": "Existe oferta comercial, pero no se prioriza como experiencia distintiva ni publicidad de hotel."
+    }
+  ]
+}

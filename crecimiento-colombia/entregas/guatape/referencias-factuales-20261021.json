@@ -1,0 +1,226 @@
+{
+  "destination": "guatape",
+  "checked_at": "2026-10-21",
+  "existing_local_assets": [
+    "imagenes/primera-tanda-20261021/portada-propuesta-v1.png es salidaIA existente, no evidencia real"
+  ],
+  "access_limit": "web abrió páginas pero Cache miss en JPG/WebP de referencia; AVIF no soportado. cua.listBrowsers=[] y iab unavailable. No se descargaron imágenes ni se generaron otras.",
+  "items": [
+    {
+      "component": "penon-guatape",
+      "page_url": "https://turismoguatape.com/imperdibles/",
+      "image_url_located": "https://turismoguatape.com/assets/img/imp-piedra.webp",
+      "image_url_observed_pixels": null,
+      "pixels_inspected": false,
+      "fact_basis": "Texto/alt propio de página y oferta, no inspección visual de píxeles",
+      "documented_traits": [
+        "Monolito aislado; fuente textual acredita escalinata por grieta y mirador.",
+        "Texto alternativo identifica vista aérea con brazos del embalse alrededor."
+      ],
+      "camera_and_geometry": "Elevada/aérea según alt; no se confirmó orientación, distancias ni silueta exacta.",
+      "capture_date": null,
+      "checked_at": "2026-10-21",
+      "reuse_permission": "No comprobado. Solo contraste factual; no descargar/subir esta imagen al generador.",
+      "status": "reference_candidate_needs_pixel_review",
+      "uncertainties": [
+        "Fecha de captura no consta.",
+        "Faltan composición exacta y comparación con mapa."
+      ]
+    },
+    {
+      "component": "plazoleta-zocalos",
+      "page_url": "https://turismoguatape.com/imperdibles/",
+      "image_url_located": "https://turismoguatape.com/assets/img/imp-plazoleta.webp",
+      "image_url_observed_pixels": null,
+      "pixels_inspected": false,
+      "fact_basis": "Texto/alt propio de página y oferta, no inspección visual de píxeles",
+      "documented_traits": [
+        "Texto alternativo identifica escaleras pintadas y fachadas coloreadas.",
+        "Fuente distingue esta tarjeta del corredor de sombrillas."
+      ],
+      "camera_and_geometry": "No comprobada en píxeles; no inferir dónde está fuente, escultura ni número de escalones.",
+      "capture_date": null,
+      "checked_at": "2026-10-21",
+      "reuse_permission": "No comprobado. Solo contraste factual; no descargar/subir esta imagen al generador.",
+      "status": "reference_candidate_needs_pixel_review",
+      "uncertainties": [
+        "Fecha de captura no consta.",
+        "Faltan composición exacta y comparación con mapa."
+      ]
+    },
+    {
+      "component": "calle-sombrillas",
+      "page_url": "https://turismoguatape.com/imperdibles/",
+      "image_url_located": "https://turismoguatape.com/assets/img/imp-sombrillas.webp",
+      "image_url_observed_pixels": null,
+      "pixels_inspected": false,
+      "fact_basis": "Texto/alt propio de página y oferta, no inspección visual de píxeles",
+      "documented_traits": [
+        "Texto/alt identifica calle empedrada con sombrillas suspendidas y relieves bajos.",
+        "Tours Guatapé enumera Sombrillas y Recuerdo por separado."
+      ],
+      "camera_and_geometry": "Calle a nivel o ascendente debe confirmarse; el punto de la subida indicada por propietario aún no se geolocaliza.",
+      "capture_date": null,
+      "checked_at": "2026-10-21",
+      "reuse_permission": "No comprobado. Solo contraste factual; no descargar/subir esta imagen al generador.",
+      "status": "reference_candidate_needs_pixel_review",
+      "uncertainties": [
+        "Fecha de captura no consta.",
+        "Faltan composición exacta y comparación con mapa."
+      ]
+    },
+    {
+      "component": "malecon",
+      "page_url": "https://turismoguatape.com/imperdibles/",
+      "image_url_located": "https://turismoguatape.com/assets/img/imp-malecon.webp",
+      "image_url_observed_pixels": null,
+      "pixels_inspected": false,
+      "fact_basis": "Texto/alt propio de página y oferta, no inspección visual de píxeles",
+      "documented_traits": [
+        "Alt describe frente urbano visto desde embalse, Peñón al fondo.",
+        "Página sitúa muelles, comercio y paseo junto al agua."
+      ],
+      "camera_and_geometry": "Desde el agua según alt; posiciones de Peñón, muelles y ciudad no contrastadas en píxeles.",
+      "capture_date": null,
+      "checked_at": "2026-10-21",
+      "reuse_permission": "No comprobado. Solo contraste factual; no descargar/subir esta imagen al generador.",
+      "status": "reference_candidate_needs_pixel_review",
+      "uncertainties": [
+        "Fecha de captura no consta.",
+        "Faltan composición exacta y comparación con mapa."
+      ]
+    },
+    {
+      "component": "parque-principal",
+      "page_url": "https://turismoguatape.com/imperdibles/",
+      "image_url_located": "https://turismoguatape.com/assets/img/imp-iglesia.webp",
+      "image_url_observed_pixels": null,
+      "pixels_inspected": false,
+      "fact_basis": "Texto/alt propio de página y oferta, no inspección visual de píxeles",
+      "documented_traits": [
+        "Fuente identifica iglesia Nuestra Señora del Carmen en parque principal.",
+        "Descripción textual: blanco con molduras rojas."
+      ],
+      "camera_and_geometry": "No comprobada; no inventar cantidad de torres, ventanas, palmeras ni mobiliario.",
+      "capture_date": null,
+      "checked_at": "2026-10-21",
+      "reuse_permission": "No comprobado. Solo contraste factual; no descargar/subir esta imagen al generador.",
+      "status": "reference_candidate_needs_pixel_review",
+      "uncertainties": [
+        "Fecha de captura no consta.",
+        "Faltan composición exacta y comparación con mapa."
+      ]
+    },
+    {
+      "component": "paseo-embalse",
+      "page_url": "https://www.aquarushguatape.com/galeria",
+      "image_url_located": "https://www.aquarushguatape.com/media/planchon-exterior.jpg",
+      "image_url_observed_pixels": null,
+      "pixels_inspected": false,
+      "fact_basis": "Texto/alt propio de página y oferta, no inspección visual de píxeles",
+      "documented_traits": [
+        "Galería propia etiqueta embarcación como Planchón Samuel en el embalse.",
+        "Oferta JJ y Vikingos confirma navegación contratada; no se atribuye fidelidad de un barco a todos."
+      ],
+      "camera_and_geometry": "Encuadre no comprobado; alternativa portal agua-bote.webp; no usar barco de mar ni edificios ficticios.",
+      "capture_date": null,
+      "checked_at": "2026-10-21",
+      "reuse_permission": "No comprobado. Solo contraste factual; no descargar/subir esta imagen al generador.",
+      "status": "reference_candidate_needs_pixel_review",
+      "uncertainties": [
+        "Fecha de captura no consta.",
+        "Faltan composición exacta y comparación con mapa."
+      ]
+    },
+    {
+      "component": "jet-ski",
+      "page_url": "https://www.aquarushguatape.com/galeria",
+      "image_url_located": "https://www.aquarushguatape.com/media/jetski-solo-1.jpg",
+      "image_url_observed_pixels": null,
+      "pixels_inspected": false,
+      "fact_basis": "Texto/alt propio de página y oferta, no inspección visual de píxeles",
+      "documented_traits": [
+        "Galería propia etiqueta jet ski en embalse.",
+        "Operador identifica Muelle Timón frente a Policía de Guatapé; no traslada ese punto a otra actividad."
+      ],
+      "camera_and_geometry": "No comprobada en píxeles; revisar equipo exacto y fondo antes del prompt.",
+      "capture_date": null,
+      "checked_at": "2026-10-21",
+      "reuse_permission": "No comprobado. Solo contraste factual; no descargar/subir esta imagen al generador.",
+      "status": "reference_candidate_needs_pixel_review",
+      "uncertainties": [
+        "Fecha de captura no consta.",
+        "Faltan composición exacta y comparación con mapa."
+      ]
+    },
+    {
+      "component": "kayak-guiado",
+      "page_url": "https://www.outdoorsguatape.com/en/product/tour-en-kayak/",
+      "image_url_located": null,
+      "image_url_observed_pixels": null,
+      "pixels_inspected": false,
+      "fact_basis": "Texto/alt propio de página y oferta, no inspección visual de píxeles",
+      "documented_traits": [
+        "Oferta propia acredita kayak, guía e instructor en embalse.",
+        "Imagen enlazada6 resultó icono SVG, no foto: descartada como referencia visual."
+      ],
+      "camera_and_geometry": "Sin foto específica utilizable; no inventar modelo de kayak ni orilla.",
+      "capture_date": null,
+      "checked_at": "2026-10-21",
+      "reuse_permission": "No comprobado. Solo contraste factual; no descargar/subir esta imagen al generador.",
+      "status": "reference_candidate_needs_pixel_review",
+      "uncertainties": [
+        "Fecha de captura no consta.",
+        "Faltan composición exacta y comparación con mapa."
+      ]
+    },
+    {
+      "component": "esqui-acuatico",
+      "page_url": "https://www.vikingosclubnauticoguatape.com/es/servicios/wakeboard",
+      "image_url_located": "https://cdn.prod.website-files.com/6706b803f7a4fbbd6b639889/68e3df7dfab4d491990aad18_ski.avif",
+      "image_url_observed_pixels": null,
+      "pixels_inspected": false,
+      "fact_basis": "Texto/alt propio de página y oferta, no inspección visual de píxeles",
+      "documented_traits": [
+        "Enlace54 aparece junto al servicio esquí; nombre archivo ski.avif.",
+        "Oferta específica esquí-acuatico confirma lancha e instructor."
+      ],
+      "camera_and_geometry": "AVIF no soportado al abrir. No inferir postura ni equipo de archivo no inspeccionado.",
+      "capture_date": null,
+      "checked_at": "2026-10-21",
+      "reuse_permission": "No comprobado. Solo contraste factual; no descargar/subir esta imagen al generador.",
+      "status": "reference_candidate_needs_pixel_review",
+      "uncertainties": [
+        "Fecha de captura no consta.",
+        "Faltan composición exacta y comparación con mapa."
+      ]
+    },
+    {
+      "component": "wakeboard",
+      "page_url": "https://www.vikingosclubnauticoguatape.com/es/servicios/wakeboard",
+      "image_url_located": "https://cdn.prod.website-files.com/6706b803f7a4fbbd6b639889/68e3df89b21a16d5ac25acea_wake.avif",
+      "image_url_observed_pixels": null,
+      "pixels_inspected": false,
+      "fact_basis": "Texto/alt propio de página y oferta, no inspección visual de píxeles",
+      "documented_traits": [
+        "Enlace19 galería propia del servicio wakeboard; filename wake.avif.",
+        "Oferta confirma tabla única, cuerda/lancha e instrucción; distinto esquí acuático."
+      ],
+      "camera_and_geometry": "AVIF no soportado; no describir relieve, punto de cámara o acrobacia como vistos.",
+      "capture_date": null,
+      "checked_at": "2026-10-21",
+      "reuse_permission": "No comprobado. Solo contraste factual; no descargar/subir esta imagen al generador.",
+      "status": "reference_candidate_needs_pixel_review",
+      "uncertainties": [
+        "Fecha de captura no consta.",
+        "Faltan composición exacta y comparación con mapa."
+      ]
+    }
+  ],
+  "crosscheck_urls": [
+    "https://toursguatape.com/detalles-del-tour-guatape/",
+    "https://www.somosdetour.com.co/",
+    "https://corpotur.com/vive/plazoleta-de-los-zocalos/"
+  ],
+  "warning": "La mayoría de las fichas de internet aproxima nombres Plazoleta/Sombrillas. No intercambiar su composición ni confundir Recuerdo. Esta investigación NO acredita puerta visual pasada."
+}
