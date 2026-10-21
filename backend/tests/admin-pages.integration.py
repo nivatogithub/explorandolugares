@@ -25,7 +25,7 @@ DB.execute('PRAGMA foreign_keys=ON')
 DB.executescript((ROOT / 'backend/database/sqlite.sql').read_text())
 DB.executescript((ROOT / 'backend/database/destinations.sqlite.sql').read_text())
 DB.executescript((ROOT / 'backend/database/migrations/006-poi-experience-links.sqlite.sql').read_text())
-for number in range(8, 49):
+for number in range(8, 50):
     matches = list((ROOT / 'backend/database/migrations').glob(f'{number:03d}-*.sqlite.sql'))
     assert len(matches) == 1, f'Migración SQLite faltante o ambigua: {number:03d}'
     DB.executescript(matches[0].read_text())
@@ -841,10 +841,22 @@ try:
     premium_business=approved['business_id']
     DB.execute("INSERT INTO business_subscriptions(business_id,plan_code,billing_frequency,status,starts_at,ends_at) VALUES(?,'page_premium','monthly','active',datetime('now','-1 day'),datetime('now','+30 days'))",(premium_business,));DB.commit()
     status,profile_page,_=request('/business/dashboard.php?tab=business&business='+str(premium_business),opener=business_flow)
-    check(status==200 and 'Editar tu página Premium' in profile_page,'Premium owner editor missing')
+    check(status==200 and 'Contenido y publicación de mi negocio' in profile_page,'Premium owner editor missing')
     profile_fields={'csrf':re.search(r'name="csrf" value="([^"]+)"',profile_page)[1],'action':'premium_profile','business_id':premium_business,'page_alias':'hotel-publico-prueba','service_sections[es][restaurant]':'Cocina regional','service_sections[en][restaurant]':'Regional cuisine','service_sections[pt-BR][restaurant]':'Cozinha regional'}
     status,_,_=request('/business/dashboard.php?tab=business',profile_fields,business_flow)
-    check(status==303 and DB.execute('SELECT alias FROM business_page_aliases WHERE business_id=? AND is_current=1',(premium_business,)).fetchone()[0]=='hotel-publico-prueba','Public owner update failed')
+    check(status==303 and DB.execute('SELECT alias FROM business_page_aliases WHERE business_id=? AND is_current=1',(premium_business,)).fetchone() is None,'El acceso antiguo debe redirigir al circuito editorial sin cambiar la página pública')
+    editorial_path='/business/editorial.php?business='+str(premium_business)
+    status,premium_editor,_=request(editorial_path,opener=business_flow)
+    check(status==200 and 'URL más personalizada' in premium_editor and '</html>' in premium_editor,'Editor Premium se interrumpió durante el render.')
+    premium_csrf=re.search(r'name="csrf" value="([^"]+)"',premium_editor)[1]
+    premium_version=DB.execute('SELECT id FROM business_editorial_versions WHERE business_id=? ORDER BY id DESC',(premium_business,)).fetchone()
+    status,_,_=request(editorial_path,{'csrf':premium_csrf,'action':'save','version_id':str(premium_version[0] if premium_version else 0),'translations[es][display_name]':'Fixture Premium Privado','category_code':'hospedaje'},business_flow)
+    check(status==303,'No guardó la versión privada Premium.')
+    premium_version=DB.execute('SELECT id FROM business_editorial_versions WHERE business_id=? ORDER BY id DESC',(premium_business,)).fetchone()[0]
+    for language in ['es','en','pt-BR']:
+        status,page_preview,preview_headers=request(editorial_path+'&version='+str(premium_version)+'&preview=page&lang='+language,opener=business_flow)
+        check(status==200 and '</html>' in page_preview and 'Fatal error' not in page_preview and 'Vista previa privada' in page_preview,'Página Premium privada incompleta: '+str(status)+' '+page_preview[-1000:])
+        check('noindex' in preview_headers.get('X-Robots-Tag','') and '&amp;preview=page&amp;lang=' in page_preview,'La prepublicación perdió privacidad o enlaces de idioma privados.')
     before_sections=DB.execute('SELECT * FROM business_service_sections WHERE business_id=?',(premium_business,)).fetchall()
     status,_,_=request('/business/dashboard.php?tab=business',dict(profile_fields,csrf='invalid'),business_flow)
     check(status>=400 and DB.execute('SELECT * FROM business_service_sections WHERE business_id=?',(premium_business,)).fetchall()==before_sections,'Profile update bypasses CSRF')
@@ -964,6 +976,36 @@ try:
     check(DB.execute('SELECT COUNT(*) FROM account_consents WHERE account_id=?',(traveler_row['id'],)).fetchone()[0]==1,'Falta el consentimiento de la cuenta viajera.')
     check(request('/admin/usuarios.php',opener=traveler_user)[0]==403,'La cuenta viajera obtuvo acceso al panel.')
     check('Personal' in request('/business/dashboard.php?tab=personal',opener=traveler_user)[1] and 'Mis negocios' in request('/business/dashboard.php?tab=personal',opener=traveler_user)[1],'Faltan pestañas Personal y Mis negocios.')
+    # Private editorial workflow through the public account UI, not through an administrator acting as owner.
+    DB.execute("INSERT INTO businesses(public_id,destination_id,category_code,slug,information_status,record_origin,publication_status) VALUES('f00d0000-0000-4000-8000-000000000099',?,'hospedaje','editorial-ficticio','VERIFICADO','owner_submitted','published')",(DB.execute('SELECT id FROM destinations ORDER BY id LIMIT 1').fetchone()[0],))
+    editorial_business=DB.execute("SELECT id FROM businesses WHERE slug='editorial-ficticio'").fetchone()[0]
+    for language in ['es','en','pt-BR']:
+        DB.execute("INSERT INTO business_translations(business_id,locale,display_name,summary,description) VALUES(?,?,?,'','')",(editorial_business,language,'Editorial Ficticio'))
+    DB.execute("INSERT INTO business_account_memberships(account_id,business_id,role,status) VALUES(?,?,'owner','active')",(traveler_row['id'],editorial_business))
+    DB.execute("INSERT INTO business_subscriptions(business_id,plan_code,status,starts_at) VALUES(?,'free','active',CURRENT_TIMESTAMP)",(editorial_business,));DB.commit()
+    path='/business/editorial.php?business='+str(editorial_business)
+    code,editorial_html,_=request(path,opener=traveler_user)
+    check(code==200 and 'Contenido de tu suscripción' in editorial_html,'Editor público privado no cargó: '+str(code)+' '+editorial_html[-2500:])
+    check(request(path,opener=BUSINESS_OTHER)[0] in (403,503),'Otra cuenta abrió la revisión.') if 'BUSINESS_OTHER' in globals() else None
+    owner_csrf=re.search(r'name="csrf" value="([^"]+)"',editorial_html)[1]
+    post={'csrf':owner_csrf,'action':'save','version_id':'0','translations[es][display_name]':'Editorial Ficticio Revisado','category_code':'hospedaje'}
+    check(request(path,post,traveler_user)[0]==200,'No guardó borrador privado desde cuenta.')
+    version=DB.execute('SELECT * FROM business_editorial_versions WHERE business_id=? ORDER BY id DESC',(editorial_business,)).fetchone()
+    check(version and version['status']=='draft','No creó versión privada.')
+    check(DB.execute('SELECT display_name FROM business_translations WHERE business_id=? AND locale="es"',(editorial_business,)).fetchone()[0]=='Editorial Ficticio','Guardar cambió el sitio publicado.')
+    preview_path=path+'&version='+str(version['id'])+'&preview=card'
+    code,card,headers=request(preview_path,opener=traveler_user)
+    check(code==200 and 'directory-card-tier-free' in card and 'Editorial Ficticio Revisado' in card and 'noindex' in headers.get('X-Robots-Tag',''),'Vista previa no usó tarjeta real privada: '+str(code)+' '+card[-2000:])
+    _,_,_=request(path,{'csrf':owner_csrf,'action':'submit','version_id':str(version['id']),'payload_hash':version['payload_hash']},traveler_user)
+    admin_path=path+'&admin=1';_,admin_form,_=request(admin_path)
+    admin_csrf=re.search(r'name="csrf" value="([^"]+)"',admin_form)[1]
+    check(request(admin_path,{'csrf':admin_csrf,'action':'prepare','version_id':str(version['id']),'payload_hash':version['payload_hash']})[0]==200,'No dejó preparada la prepublicación.')
+    code,_,_=request(path,{'csrf':owner_csrf,'action':'approve','version_id':str(version['id']),'payload_hash':version['payload_hash']},traveler_user)
+    check(code==200 and DB.execute('SELECT status FROM business_editorial_versions WHERE id=?',(version['id'],)).fetchone()[0]=='owner_approved','No registró aprobación exacta del comerciante.')
+    code,body,_=request(admin_path,{'csrf':admin_csrf,'action':'publish','version_id':str(version['id']),'payload_hash':version['payload_hash']})
+    check(code==200 and DB.execute('SELECT status FROM business_editorial_versions WHERE id=?',(version['id'],)).fetchone()[0]=='published','Publicación final falló: '+body[:100])
+    check(DB.execute('SELECT display_name FROM business_translations WHERE business_id=? AND locale="es"',(editorial_business,)).fetchone()[0]=='Editorial Ficticio Revisado','No aplicó la versión aprobada.')
+    print('OK: flujo editorial HTTP desde cuenta pública, tarjeta real, versión privada, preparación, aprobación exacta y publicación final; sin mensajes externos.')
     print('OK: páginas administrativas autenticadas y bloqueadas para visitantes; registro/inicio/cierre de sesión empresarial, consulta y aprobación, membresía y borrador privado; enlace administrativo de contraseña con almacenamiento hash, expiración y uso único; controles privados; importación transaccional; alta/suscripción/publicación; errores legibles ante migraciones faltantes.')
 finally:
     PROCESS.terminate(); PROCESS.wait(timeout=5); DB.close(); shutil.rmtree(WORK)

@@ -14,7 +14,7 @@ final class PremiumBusinessProfile
   try{$q=$pdo->prepare('SELECT b.public_id FROM business_page_aliases a JOIN businesses b ON b.id=a.business_id WHERE a.alias=? AND EXISTS(SELECT 1 FROM business_subscriptions s WHERE s.business_id=b.id AND s.plan_code="page_premium" AND s.status="active" AND s.starts_at<=CURRENT_TIMESTAMP AND s.ends_at>CURRENT_TIMESTAMP)');$q->execute([$alias]);return $q->fetchColumn()?:null;}catch(PDOException $e){if(($e->errorInfo[1]??0)===1146||str_contains($e->getMessage(),'no such table'))return null;throw $e;}
  }
  public static function save(PDO $pdo,int $account,int $business,array $sections,string $alias):void{
-  $alias=self::alias($alias);BusinessServiceSections::validate($sections);$pdo->beginTransaction();
+  $alias=self::alias($alias);BusinessServiceSections::validate($sections);$ownTransaction=!$pdo->inTransaction();if($ownTransaction)$pdo->beginTransaction();
   try{
    $lock=$pdo->getAttribute(PDO::ATTR_DRIVER_NAME)==='mysql'?' FOR UPDATE':'';
    $q=$pdo->prepare('SELECT id FROM businesses WHERE id=?'.$lock);$q->execute([$business]);if(!$q->fetchColumn())throw new RuntimeException('No puedes editar este negocio.');
@@ -26,7 +26,7 @@ final class PremiumBusinessProfile
     if($owner===false){try{$pdo->prepare('INSERT INTO business_page_aliases(alias,business_id,is_current) VALUES(?,?,1)')->execute([$alias,$business]);}catch(PDOException $e){if(in_array($e->getCode(),['23000','23505'],true))throw new RuntimeException('Esta URL acaba de ser utilizada. Elige otra.');throw $e;}}
     else $pdo->prepare('UPDATE business_page_aliases SET is_current=1 WHERE alias=? AND business_id=?')->execute([$alias,$business]);
    }
-   $pdo->commit();
-  }catch(Throwable $e){if($pdo->inTransaction())$pdo->rollBack();throw $e;}
+   if($ownTransaction)$pdo->commit();
+  }catch(Throwable $e){if($ownTransaction&&$pdo->inTransaction())$pdo->rollBack();throw $e;}
  }
 }

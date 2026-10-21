@@ -100,7 +100,7 @@ final class BusinessSubscriptionAdminService
         }
     }
 
-    private function requirePublicationReady(array|false $business,int $businessId,string $localPublishDate): array
+    private function requirePublicationReady(array|false $business,int $businessId,string $localPublishDate,bool $existingPublication=false): array
     {
             if(!$business)throw new RuntimeException('El negocio no existe.');
             if($business['information_status']==='PUBLICO'&&$business['record_origin']!=='public_import')throw new RuntimeException('Verifica la información y la autorización del negocio antes de publicarlo.');
@@ -115,23 +115,28 @@ final class BusinessSubscriptionAdminService
             if(trim((string)$business['address_text'])===''&&($business['latitude']===null||$business['longitude']===null)&&$sub['plan_code']!=='free')throw new RuntimeException('Completa una dirección o un punto de ubicación antes de publicar.');
             if($sub['plan_code']!=='free'){$q=$this->pdo->prepare('SELECT COUNT(*) FROM business_contacts WHERE business_id=? AND channel IN ("phone","whatsapp") AND contact_value<>""');$q->execute([$businessId]);if((int)$q->fetchColumn()<1)throw new RuntimeException('Registra un celular o WhatsApp de contacto antes de publicar.');}
             if($sub['publish_not_before']!==null&&$localPublishDate<$sub['publish_not_before'])throw new RuntimeException('La fecha elegida todavía no permite publicar este negocio.');
-            if($sub['plan_code']!=='free'&&($sub['status']!=='paid_pending_publication'||$sub['reviewed_at']===null))throw new RuntimeException('Confirma el pago revisado antes de publicar esta suscripción.');
+            if($sub['plan_code']!=='free'&&(!($existingPublication&&$sub['status']==='active')&&($sub['status']!=='paid_pending_publication'||$sub['reviewed_at']===null)))throw new RuntimeException('Confirma el pago revisado antes de publicar esta suscripción.');
             if($sub['plan_code']!=='free'&&$business['information_status']!=='ACTIVO')throw new RuntimeException('Una suscripción paga requiere que el negocio esté reclamado y autorizado como ACTIVO.');
             if($sub['plan_code']==='free'&&!in_array($sub['status'],['pending_publication','active'],true))throw new RuntimeException('La suscripción Gratis no está lista para publicarse.');
         return $sub;
     }
 
     /** Activate the selected tier only when an authorized publication actually goes live. */
-    public function publish(int $businessId,?DateTimeImmutable $publishedAt=null,?callable $precondition=null): void
+    public function publish(int $businessId,?DateTimeImmutable $publishedAt=null,?callable $precondition=null,?int $editorialVersion=null): void
     {
         $publishedAt??=new DateTimeImmutable('now',new DateTimeZone('America/Bogota'));
         $localPublishDate=$publishedAt->setTimezone(new DateTimeZone('America/Bogota'))->format('Y-m-d');
         $stamp=$publishedAt->setTimezone(new DateTimeZone('UTC'))->format('Y-m-d H:i:s');
-        $this->pdo->beginTransaction();
+        $ownTransaction=!$this->pdo->inTransaction();if($ownTransaction)$this->pdo->beginTransaction();
         try{
             $lock=$this->pdo->getAttribute(PDO::ATTR_DRIVER_NAME)==='mysql'?' FOR UPDATE':'';
             $q=$this->pdo->prepare('SELECT id FROM businesses WHERE id=?'.$lock);$q->execute([$businessId]);
             if($precondition!==null)$precondition();
+            // Legacy publication cannot bypass an editorial version already in progress.
+            try{$q=$this->pdo->prepare('SELECT id,status FROM business_editorial_versions WHERE business_id=? ORDER BY id DESC LIMIT 1');$q->execute([$businessId]);$editorial=$q->fetch(PDO::FETCH_ASSOC);}
+            catch(PDOException $error){if(str_contains($error->getMessage(),'no such table')||($error->errorInfo[1]??0)===1146)$editorial=false;else throw $error;}
+            if($editorial&&((int)$editorial['id']!==$editorialVersion||$editorial['status']!=='owner_approved'))throw new RuntimeException('Este negocio tiene una versión editorial: publícala desde su revisión final, después de la aprobación del comerciante.');
+
             $q=$this->pdo->prepare('SELECT id,address_text,latitude,longitude,location_map_url,location_confirmed,information_status,operation_status,record_origin FROM businesses WHERE id=?');$q->execute([$businessId]);$business=$q->fetch(PDO::FETCH_ASSOC);
             $sub=$this->requirePublicationReady($business,$businessId,$localPublishDate);
             $activation=(new SubscriptionChangeService($this->pdo))->activation($sub,$publishedAt);
@@ -140,6 +145,32 @@ final class BusinessSubscriptionAdminService
                 $previous=$this->pdo->prepare('SELECT id FROM business_subscriptions WHERE business_id=? AND id<>? AND plan_code<>"free" AND status IN ("active","expired") AND starts_at IS NOT NULL AND published_at IS NOT NULL AND reviewed_at IS NOT NULL ORDER BY starts_at DESC,id DESC LIMIT 1');
                 $previous->execute([$businessId,$sub['id']]);$renewalOf=$previous->fetchColumn();$renewalOf=$renewalOf===false?null:(int)$renewalOf;
             }
+            $this->validateContent($businessId,$sub['plan_code']);
+            // Preserve the contractual end date of a previous term. It is needed to
+            // distinguish renewals made by the expiry date from later reactivations.
+            $q=$this->pdo->prepare('UPDATE business_subscriptions SET status="expired" WHERE business_id=? AND status="active"');$q->execute([$businessId]);
+            $starts=$stamp;
+            $ends=null;
+            if($sub['plan_code']!=='free')$ends=self::addCalendarMonths($publishedAt,self::FREQUENCIES[$sub['billing_frequency']]??0)->setTimezone(new DateTimeZone('UTC'))->format('Y-m-d H:i:s');
+            if($activation)$ends=$activation['ends_at'];
+            $q=$this->pdo->prepare('UPDATE business_subscriptions SET status="active",starts_at=?,ends_at=?,published_at=?,renewal_of_subscription_id=? WHERE id=?');$q->execute([$starts,$ends,$stamp,$renewalOf,$sub['id']]);
+            $q=$this->pdo->prepare('UPDATE businesses SET publication_status="published",updated_at=CURRENT_TIMESTAMP WHERE id=?');$q->execute([$businessId]);
+            if($ownTransaction)$this->pdo->commit();
+        }catch(Throwable $error){if($ownTransaction&&$this->pdo->inTransaction())$this->pdo->rollBack();throw $error;}
+    }
+
+    public function validateEditorialUpdate(int $businessId):void
+    {
+        $q=$this->pdo->prepare('SELECT * FROM businesses WHERE id=?');$q->execute([$businessId]);
+        $sub=$this->requirePublicationReady($q->fetch(PDO::FETCH_ASSOC),$businessId,(new DateTimeImmutable('now',new DateTimeZone('America/Bogota')))->format('Y-m-d'),true);
+        if($sub['status']!=='active'||($sub['ends_at']!==null&&$sub['ends_at']<=gmdate('Y-m-d H:i:s')))throw new RuntimeException('La suscripción debe estar vigente.');
+        $this->validateContent($businessId,$sub['plan_code']);
+    }
+
+    /** Read-only content check, shared by first publication and editorial updates. */
+    public function validateContent(int $businessId,string $plan):void
+    {
+        $sub=['plan_code'=>$plan];
             $planQuery=$this->pdo->prepare('SELECT max_gallery_photos,max_summary_chars,max_description_chars,max_brand_story_chars,max_featured_services_chars FROM subscription_plans WHERE code=?');$planQuery->execute([$sub['plan_code']]);$limits=$planQuery->fetch(PDO::FETCH_ASSOC);if(!$limits)throw new RuntimeException('No se encontró la suscripción.');$photoLimit=(int)$limits['max_gallery_photos'];
             $mediaQuery=$this->pdo->prepare('SELECT role,COUNT(*) AS amount FROM business_media WHERE business_id=? GROUP BY role');$mediaQuery->execute([$businessId]);$mediaCounts=[];foreach($mediaQuery->fetchAll(PDO::FETCH_ASSOC) as $media)$mediaCounts[$media['role']]=(int)$media['amount'];
             if($sub['plan_code']==='page'||$sub['plan_code']==='page_premium'){
@@ -160,17 +191,6 @@ final class BusinessSubscriptionAdminService
             if($sub['plan_code']==='page_premium')array_push($requiredSpanish,'brand_story','featured_services');
             foreach($requiredSpanish as $field)if(trim((string)($translations['es'][$field]??''))==='')throw new RuntimeException('Completa la información adicional que solicita esta suscripción antes de publicar.');
             foreach(['en','pt-BR'] as $locale){$row=$translations[$locale]??null;if(!$row)throw new RuntimeException('Completa y traduce el contenido a español, inglés y portugués antes de publicar.');foreach($requiredSpanish as $field){$spanish=trim((string)($translations['es'][$field]??''));$translated=trim((string)($row[$field]??''));if($translated===''||($field!=='display_name'&&$translated===$spanish))throw new RuntimeException('Completa y traduce el contenido a español, inglés y portugués antes de publicar.');}}
-            // Preserve the contractual end date of a previous term. It is needed to
-            // distinguish renewals made by the expiry date from later reactivations.
-            $q=$this->pdo->prepare('UPDATE business_subscriptions SET status="expired" WHERE business_id=? AND status="active"');$q->execute([$businessId]);
-            $starts=$stamp;
-            $ends=null;
-            if($sub['plan_code']!=='free')$ends=self::addCalendarMonths($publishedAt,self::FREQUENCIES[$sub['billing_frequency']]??0)->setTimezone(new DateTimeZone('UTC'))->format('Y-m-d H:i:s');
-            if($activation)$ends=$activation['ends_at'];
-            $q=$this->pdo->prepare('UPDATE business_subscriptions SET status="active",starts_at=?,ends_at=?,published_at=?,renewal_of_subscription_id=? WHERE id=?');$q->execute([$starts,$ends,$stamp,$renewalOf,$sub['id']]);
-            $q=$this->pdo->prepare('UPDATE businesses SET publication_status="published",updated_at=CURRENT_TIMESTAMP WHERE id=?');$q->execute([$businessId]);
-            $this->pdo->commit();
-        }catch(Throwable $error){if($this->pdo->inTransaction())$this->pdo->rollBack();throw $error;}
     }
 
     private function dateOnly(string $value):?string
