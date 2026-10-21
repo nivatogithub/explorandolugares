@@ -161,3 +161,9 @@ Instagram pasa a ser exclusivo de Premium, tanto en filtros del servidor como en
 Decisión vigente: no se muestra «Nuestra historia» ni se solicitan narrativas de historia o secciones de servicios en el editor. Los servicios se representan mediante los iconos y etiquetas del catálogo de categorías, exclusivamente en Premium y únicamente cuando tiene más de una categoría distinta. No se crean categorías adicionales ni se infiere que un negocio ofrece algo que no seleccionó.
 
 Premium permite elegir hasta cuatro productos o servicios estrella con foto; es un máximo, no una cantidad obligatoria. Se reemplaza el límite anterior de cinco, con control en guardado, preparación/publicación y presentación. Los textos históricos de historia/servicios se conservan sin exponerse ni bloquear una publicación por su traducción. Cada texto realmente público continúa sujeto a revisión y traducción. La tabla de suscripciones incorpora la nueva capacidad en los tres idiomas.
+
+### Revisión adaptable de las tres modalidades (21 de octubre)
+
+Revisión local de Destacado, Página Comercial y Premium en anchos efectivos de 360, 390 y 1440 px. Se comprobaron desbordamientos del contenido, carga de imágenes, tamaño de botones, distribución de productos y apertura/cierre del menú móvil. Se corrigió el teléfono descentrado y se compactó la cabecera móvil ocultando el prefijo redundante «Página del negocio» para mantener categoría y modalidad en una fila.
+
+El control de viewport del navegador no aplicaba el tamaño solicitado a las pestañas existentes. Se descartaron esas capturas y se utilizó un contenedor local de ancho fijo con la salida del mismo controlador autenticado; se midió su ancho real. No se desactivó la protección de marcos ni la autenticación. Evidencias operativas privadas en `.local/reparacion-admin/responsive/`, con mediciones y seis capturas completas. Alcance: simulación en navegador, no pruebas en dispositivos físicos ni en otros motores.
