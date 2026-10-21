@@ -1,0 +1,79 @@
+{
+  "checked_at": "2026-10-21",
+  "status": "referencias_localizadas_no_inspeccionadas_pixel_a_pixel",
+  "generation_performed": false,
+  "volcano_role": "Usuario indica que puede ser experiencia, nunca portada; imagen existente primera-tanda queda borrador sin aprobar y reclasificable.",
+  "items": [
+    {
+      "component": "portada-ciudad-costa",
+      "page_url": "https://www.revistafontur.com/arboletes-mirador-turistico",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/67d459fcce87b77ccd32b880/d111808b-a537-4cb6-a1e6-0cd7fcdaf74e/DJI_20260512111500_0019_D.jpg",
+      "image_date_evidence": "2026-05-12 en nombre del archivo; fecha captura EXIF no comprobada",
+      "source": "Revista FONTUR",
+      "text_alt_observed": "Vista aérea de playa, muelle de madera, casas con techos coloridos y área recreativa.",
+      "pixels_inspected": false,
+      "spatial_facts_from_page": [
+        "Mirador en zona expansión turística del barrio Prado",
+        "Articulado con muelle La Flor del Paraíso y calle del Bullerengue"
+      ],
+      "limitations": [
+        "Apertura imagen directa:cache miss",
+        "Referencia alt y texto no sustituye comparación visual",
+        "No extrapolar imagen de mayo al estado de todas las playas en octubre2026"
+      ]
+    },
+    {
+      "component": "playas-urbanas",
+      "page_url": "https://fontur.com.co/es/mirador-turistico-arboletes-antioquia",
+      "image_url": "https://fontur.com.co/sites/default/files/2026-05/arboletes-mirador-turistico_28.jpeg",
+      "image_date_evidence": "Carpeta2026-05, no fecha captura comprobada",
+      "source": "FONTUR",
+      "text_alt_observed": "Resultado imagen describe espolones y muelle con frente urbano.",
+      "pixels_inspected": false,
+      "limitations": [
+        "Página502 e imagen cache miss",
+        "No deducir playa continua ni edificios ausentes a partir de descripción"
+      ]
+    },
+    {
+      "component": "portada-ciudad-costa-alternativa",
+      "page_url": "https://www.revistafontur.com/arboletes-mirador-turistico",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/67d459fcce87b77ccd32b880/856fb689-9223-4775-b83d-699b1e0607ed/DJI_20260512112904_0039_D.jpg",
+      "image_date_evidence": "2026-05-12 en nombre archivo",
+      "source": "Revista FONTUR",
+      "text_alt_observed": "Vista aérea de playa y muelle, casas, árboles, zonas verdes y cielo nublado.",
+      "pixels_inspected": false,
+      "limitations": [
+        "Imagen cache miss; no se eligió cámara sin inspección"
+      ]
+    },
+    {
+      "component": "taller-bullerengue",
+      "page_url": "https://www.revistafontur.com/arboletes-mirador-turistico",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/67d459fcce87b77ccd32b880/e9601150-7ee2-4099-afc3-5ef81409b5e3/DSC06196.png",
+      "image_date_evidence": "Sin fecha captura comprobada, artículo sobre nuevo mirador2026",
+      "source": "Revista FONTUR",
+      "text_alt_observed": "Grupo de niños y adultos en entorno exterior con instrumentos tradicionales.",
+      "pixels_inspected": false,
+      "offer_source": "https://corporacionturisticaurabadariencaribe.com/empresas/operadora-turistica-ligero-equipaje/",
+      "limitations": [
+        "Escena cultural no demuestra formato del taller comercial",
+        "No usar rostros específicos ni reproducir menores como personas identificables",
+        "Oferta canal propio aún pendiente; no prometer disponibilidad"
+      ]
+    },
+    {
+      "component": "desembocadura-rio-hobo",
+      "page_url": "https://bolivarianaarboletes.blogspot.com/2018/08/que-lugares-hay-para-visitar-en.html",
+      "image_url": "https://3.bp.blogspot.com/-mu8bdOHoaZk/W3pkmWb126I/AAAAAAAAFOM/ZJXmzI-2QzsQs15GgKt94DWFvUqmefuhACLcBGAs/s1600/cntnt_rio_hobo_fachada.jpg",
+      "image_date_evidence": "Entrada2018",
+      "source": "Blogcabañas",
+      "pixels_inspected": false,
+      "use_for_generation": false,
+      "limitations": [
+        "Referencia rechazada como actual por anterior a erosión y obras2026",
+        "Hace falta fotografía fechada reciente de desembocadura exacta; no generar manglar genérico"
+      ]
+    }
+  ]
+}
