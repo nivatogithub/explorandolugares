@@ -1,0 +1,2424 @@
+{
+  "schema": "destination-public-snapshot-v1",
+  "destination": "guatape",
+  "tables": {
+    "destinations": [
+      {
+        "id": 10001,
+        "slug": "guatape",
+        "destination_type": "municipality",
+        "country_code": "CO",
+        "department": "Antioquia",
+        "subregion": "Oriente",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 101
+      }
+    ],
+    "destination_translations": [
+      {
+        "destination_id": 10001,
+        "locale": "es",
+        "display_name": "Guatapé",
+        "eyebrow": "Antioquia · Colombia",
+        "headline": "Zócalos y agua entre montañas",
+        "intro": "Un pueblo de fachadas coloridas a orillas del embalse Peñol–Guatapé.",
+        "meta_description": "Un pueblo de fachadas coloridas a orillas del embalse Peñol–Guatapé."
+      },
+      {
+        "destination_id": 10001,
+        "locale": "en",
+        "display_name": "Guatapé",
+        "eyebrow": "Antioquia · Colombia",
+        "headline": "Colourful façades and mountain waters",
+        "intro": "A colourful town beside the Peñol–Guatapé reservoir.",
+        "meta_description": "A colourful town beside the Peñol–Guatapé reservoir."
+      },
+      {
+        "destination_id": 10001,
+        "locale": "pt-BR",
+        "display_name": "Guatapé",
+        "eyebrow": "Antioquia · Colombia",
+        "headline": "Fachadas coloridas e águas entre montanhas",
+        "intro": "Um povoado colorido às margens da represa Peñol–Guatapé.",
+        "meta_description": "Um povoado colorido às margens da represa Peñol–Guatapé."
+      }
+    ],
+    "destination_story_blocks": [
+      {
+        "id": 1000101,
+        "destination_id": 10001,
+        "display_order": 1,
+        "section_key": "history"
+      }
+    ],
+    "destination_story_translations": [
+      {
+        "story_block_id": 1000101,
+        "locale": "es",
+        "body": "Los zócalos forman parte de la identidad local desde comienzos del siglo XX. La creación del embalse transformó el paisaje y fortaleció la actividad turística."
+      },
+      {
+        "story_block_id": 1000101,
+        "locale": "en",
+        "body": "Decorative zócalos have shaped local identity since the early twentieth century. The reservoir transformed the landscape and encouraged tourism."
+      },
+      {
+        "story_block_id": 1000101,
+        "locale": "pt-BR",
+        "body": "Os zócalos fazem parte da identidade local desde o início do século XX. A criação da represa transformou a paisagem e fortaleceu o turismo."
+      }
+    ],
+    "destination_reasons": [
+      {
+        "id": 1000101,
+        "destination_id": 10001,
+        "display_order": 1
+      }
+    ],
+    "destination_reason_translations": [
+      {
+        "reason_id": 1000101,
+        "locale": "es",
+        "body": "Relieves de colores, el Peñón y navegación por el embalse."
+      },
+      {
+        "reason_id": 1000101,
+        "locale": "en",
+        "body": "Colourful reliefs, the Rock and reservoir boat trips."
+      },
+      {
+        "reason_id": 1000101,
+        "locale": "pt-BR",
+        "body": "Relevos coloridos, a Pedra e passeios pela represa."
+      }
+    ],
+    "destination_sources": [],
+    "destination_media": [
+      {
+        "destination_id": 10001,
+        "role": "hero",
+        "media_asset_id": -10010,
+        "display_order": 1
+      }
+    ],
+    "points_of_interest": [
+      {
+        "id": 1000101,
+        "destination_id": 10001,
+        "slug": "penon-guatape",
+        "poi_type": "place",
+        "publication_status": "published",
+        "latitude": null,
+        "longitude": null,
+        "display_order": 1
+      },
+      {
+        "id": 1000102,
+        "destination_id": 10001,
+        "slug": "plazoleta-zocalos",
+        "poi_type": "place",
+        "publication_status": "published",
+        "latitude": null,
+        "longitude": null,
+        "display_order": 2
+      },
+      {
+        "id": 1000103,
+        "destination_id": 10001,
+        "slug": "calle-sombrillas",
+        "poi_type": "place",
+        "publication_status": "published",
+        "latitude": null,
+        "longitude": null,
+        "display_order": 3
+      },
+      {
+        "id": 1000104,
+        "destination_id": 10001,
+        "slug": "malecon",
+        "poi_type": "place",
+        "publication_status": "published",
+        "latitude": null,
+        "longitude": null,
+        "display_order": 4
+      },
+      {
+        "id": 1000105,
+        "destination_id": 10001,
+        "slug": "parque-principal",
+        "poi_type": "place",
+        "publication_status": "published",
+        "latitude": null,
+        "longitude": null,
+        "display_order": 5
+      },
+      {
+        "id": 1000106,
+        "destination_id": 10001,
+        "slug": "paseo-embalse",
+        "poi_type": "experience",
+        "publication_status": "published",
+        "latitude": null,
+        "longitude": null,
+        "display_order": 6
+      },
+      {
+        "id": 1000107,
+        "destination_id": 10001,
+        "slug": "jet-ski",
+        "poi_type": "experience",
+        "publication_status": "published",
+        "latitude": null,
+        "longitude": null,
+        "display_order": 7
+      },
+      {
+        "id": 1000108,
+        "destination_id": 10001,
+        "slug": "kayak-guiado",
+        "poi_type": "experience",
+        "publication_status": "published",
+        "latitude": null,
+        "longitude": null,
+        "display_order": 8
+      },
+      {
+        "id": 1000109,
+        "destination_id": 10001,
+        "slug": "esqui-acuatico",
+        "poi_type": "experience",
+        "publication_status": "published",
+        "latitude": null,
+        "longitude": null,
+        "display_order": 9
+      },
+      {
+        "id": 1000110,
+        "destination_id": 10001,
+        "slug": "wakeboard",
+        "poi_type": "experience",
+        "publication_status": "published",
+        "latitude": null,
+        "longitude": null,
+        "display_order": 10
+      }
+    ],
+    "point_of_interest_translations": [
+      {
+        "point_of_interest_id": 1000101,
+        "locale": "es",
+        "name": "Piedra del Peñol (Peñón de Guatapé)",
+        "description": "Asciende la escalinata y contempla los brazos del embalse.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000101,
+        "locale": "en",
+        "name": "Piedra del Peñol (Guatapé Rock)",
+        "description": "Climb the stairway for views over the reservoir.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000101,
+        "locale": "pt-BR",
+        "name": "Pedra do Peñol (Pedra de Guatapé)",
+        "description": "Suba a escadaria para observar os braços da represa.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000102,
+        "locale": "es",
+        "name": "Plazoleta de los Zócalos",
+        "description": "Relieves de colores cuentan historias y oficios del pueblo.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000102,
+        "locale": "en",
+        "name": "Zócalos Square",
+        "description": "Colourful reliefs tell stories of local life and trades.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000102,
+        "locale": "pt-BR",
+        "name": "Praça dos Zócalos",
+        "description": "Relevos coloridos contam histórias e ofícios locais.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000103,
+        "locale": "es",
+        "name": "Calle de las Sombrillas",
+        "description": "Un corredor de sombrillas de colores y fachadas con zócalos.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000103,
+        "locale": "en",
+        "name": "Umbrella Street",
+        "description": "A passage beneath colourful umbrellas and decorated façades.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000103,
+        "locale": "pt-BR",
+        "name": "Rua dos Guarda-Chuvas",
+        "description": "Um corredor de guarda-chuvas coloridos e fachadas com zócalos.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000104,
+        "locale": "es",
+        "name": "Malecón de Guatapé",
+        "description": "Un paseo junto al embalse y los embarcaderos del pueblo.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000104,
+        "locale": "en",
+        "name": "Guatapé Waterfront",
+        "description": "A promenade beside the reservoir and town piers.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000104,
+        "locale": "pt-BR",
+        "name": "Orla de Guatapé",
+        "description": "Um passeio à beira da represa e dos embarcadouros.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000105,
+        "locale": "es",
+        "name": "Parque principal",
+        "description": "La iglesia y las fachadas tradicionales rodean el corazón del pueblo.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000105,
+        "locale": "en",
+        "name": "Main Square",
+        "description": "The church and traditional façades frame the town centre.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000105,
+        "locale": "pt-BR",
+        "name": "Praça principal",
+        "description": "A igreja e as fachadas tradicionais cercam o centro do povoado.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000106,
+        "locale": "es",
+        "name": "Paseo en barco por el embalse",
+        "description": "Navega entre penínsulas e islas del paisaje Peñol–Guatapé.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000106,
+        "locale": "en",
+        "name": "Reservoir boat tour",
+        "description": "Cruise among the peninsulas and islands of Peñol–Guatapé.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000106,
+        "locale": "pt-BR",
+        "name": "Passeio de barco pela represa",
+        "description": "Navegue entre penínsulas e ilhas de Peñol–Guatapé.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000107,
+        "locale": "es",
+        "name": "Jet ski en el embalse",
+        "description": "Recorre el agua en moto acuática tras la inducción de manejo.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000107,
+        "locale": "en",
+        "name": "Reservoir jet skiing",
+        "description": "Ride a personal watercraft after a handling briefing.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000107,
+        "locale": "pt-BR",
+        "name": "Jet ski na represa",
+        "description": "Navegue de moto aquática após as orientações de condução.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000108,
+        "locale": "es",
+        "name": "Tour en kayak",
+        "description": "Recorre las orillas del embalse remando con un guía.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000108,
+        "locale": "en",
+        "name": "Guided kayak tour",
+        "description": "Paddle along the reservoir shores with a guide.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000108,
+        "locale": "pt-BR",
+        "name": "Passeio guiado de caiaque",
+        "description": "Reme pelas margens da represa com um guia.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000109,
+        "locale": "es",
+        "name": "Esquí acuático",
+        "description": "Deslízate sobre esquís remolcados por una lancha con instructor.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000109,
+        "locale": "en",
+        "name": "Water skiing",
+        "description": "Glide on skis towed by a boat with an instructor.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000109,
+        "locale": "pt-BR",
+        "name": "Esqui aquático",
+        "description": "Deslize sobre esquis puxados por uma lancha com instrutor.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000110,
+        "locale": "es",
+        "name": "Wakeboard en el embalse",
+        "description": "Practica equilibrio sobre la tabla con acompañamiento de instructor.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000110,
+        "locale": "en",
+        "name": "Reservoir wakeboarding",
+        "description": "Practise balancing on the board with an instructor.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000110,
+        "locale": "pt-BR",
+        "name": "Wakeboard na represa",
+        "description": "Pratique equilíbrio na prancha com acompanhamento de instrutor.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      }
+    ],
+    "point_of_interest_media": [
+      {
+        "point_of_interest_id": 1000101,
+        "media_asset_id": -10000,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 1000102,
+        "media_asset_id": -10001,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 1000103,
+        "media_asset_id": -10002,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 1000104,
+        "media_asset_id": -10003,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 1000105,
+        "media_asset_id": -10004,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 1000106,
+        "media_asset_id": -10005,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 1000107,
+        "media_asset_id": -10006,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 1000108,
+        "media_asset_id": -10007,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 1000109,
+        "media_asset_id": -10008,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 1000110,
+        "media_asset_id": -10009,
+        "role": "gallery",
+        "display_order": 1
+      }
+    ],
+    "media_assets": [
+      {
+        "id": -10000,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/34/3448bdaa0c557d4a39869d170979f82cbac5b36c95af7849d3e509736ad9a92e.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"guatape--penon-guatape\", \"master_sha256\": \"8bd3c035970fee1a72fb4a79042373d3480b4bb787a33931843c34321c3a436c\", \"web_sha256\": \"3448bdaa0c557d4a39869d170979f82cbac5b36c95af7849d3e509736ad9a92e\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/guatape\"}"
+      },
+      {
+        "id": -10001,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/b7/b7270e68ba7c7ffabda536d1861e73a8733bd0b70cf3fdd044713b65758b4547.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"guatape--plazoleta-zocalos\", \"master_sha256\": \"adab7a64c44d77679e48c70c059890a36120be15c6f0d151aaae0c30175ff053\", \"web_sha256\": \"b7270e68ba7c7ffabda536d1861e73a8733bd0b70cf3fdd044713b65758b4547\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/guatape\"}"
+      },
+      {
+        "id": -10002,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/a9/a95e3c4a0f163bfc3a215d346ba9679ce19435fc3a34f8fd69bb673d04186490.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"guatape--calle-sombrillas\", \"master_sha256\": \"63f93827209033df2964d511a92433edb012bad56b149e028346fe47d15484e8\", \"web_sha256\": \"a95e3c4a0f163bfc3a215d346ba9679ce19435fc3a34f8fd69bb673d04186490\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/guatape\"}"
+      },
+      {
+        "id": -10003,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/20/20b88ae4e623bf012f9ddff2ebb00fbdb82e496fe7a1b85a54c1129999b3c7d4.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, shoreline, two levels, buildings, sculpture, red playground, boats and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"guatape--malecon-v4\", \"master_sha256\": \"3f66722add674861e4d8941027d23f08edcfbac6dc03319b5e0a375c049def96\", \"web_sha256\": \"20b88ae4e623bf012f9ddff2ebb00fbdb82e496fe7a1b85a54c1129999b3c7d4\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/guatape\"}"
+      },
+      {
+        "id": -10004,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/33/33365a13c1c59798d7710f019407594eee0599f30e7fe6c3c7edc83d12edaa26.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"guatape--parque-principal\", \"master_sha256\": \"c633c45798de8212d51634402202367344b1172260f7a69ba2dd5bf01e44f7b0\", \"web_sha256\": \"33365a13c1c59798d7710f019407594eee0599f30e7fe6c3c7edc83d12edaa26\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/guatape\"}"
+      },
+      {
+        "id": -10005,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/bd/bdb4d6a53a8fa8159320d0f0df4b4b8bb5daaba27427d8e5330a087bbd4257c3.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"guatape--paseo-embalse\", \"master_sha256\": \"ac44b1631756f6388c6a088737a0d0acedbac435fd459cbeba85961da6142716\", \"web_sha256\": \"bdb4d6a53a8fa8159320d0f0df4b4b8bb5daaba27427d8e5330a087bbd4257c3\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/guatape\"}"
+      },
+      {
+        "id": -10006,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/83/833e74a5eff63d04dc1e1c6348e11140c4ca9a51b6449a525a7a7379fa8876d7.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"guatape--jet-ski\", \"master_sha256\": \"7df5803dd963fd5fdb6e2b04af99145acd4868c75ef514878fa44b4c4def23d5\", \"web_sha256\": \"833e74a5eff63d04dc1e1c6348e11140c4ca9a51b6449a525a7a7379fa8876d7\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/guatape\"}"
+      },
+      {
+        "id": -10007,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/d0/d062624108649a5f35817d67f38a3e39940e8b5451f3adba541c926f1307a7a8.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"guatape--kayak-guiado\", \"master_sha256\": \"415343574a5c7211f12ae68d85f2cd127a6537c6104dc9b83157d496b3617ee3\", \"web_sha256\": \"d062624108649a5f35817d67f38a3e39940e8b5451f3adba541c926f1307a7a8\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/guatape\"}"
+      },
+      {
+        "id": -10008,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/ca/ca149a1bd08b69bb3915e470e68fec59e9498c4daaa7fd11f930c73e29f4c192.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"guatape--esqui-acuatico\", \"master_sha256\": \"9762157981eb548351f5316589db45c62826a5175e313495d0272507492cee81\", \"web_sha256\": \"ca149a1bd08b69bb3915e470e68fec59e9498c4daaa7fd11f930c73e29f4c192\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/guatape\"}"
+      },
+      {
+        "id": -10009,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/38/3860555ab128a9e801111046900e0f5a67c1e61d7d3d5fd726a2f77af8cc1a23.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"guatape--wakeboard\", \"master_sha256\": \"fb2c04cc96393ec56a68ee03ecef76fa0a49b53d8f0f6c2ab478369d70b838dc\", \"web_sha256\": \"3860555ab128a9e801111046900e0f5a67c1e61d7d3d5fd726a2f77af8cc1a23\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/guatape\"}"
+      },
+      {
+        "id": -10010,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/87/87c7849acefc191da5c84e3942083c4549b98bae5c976599a586861438d420df.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, landforms, buildings, water, vegetation and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"master_sha256\": \"b3e2ae8ca0ee3316b8775f760c5ec2f99d7fbc310f81f73b3f58affb5da9dd24\", \"human_approval\": \"Publicación de los cuatro lugares autorizada por propietario 2026-10-21\"}"
+      }
+    ],
+    "media_asset_translations": [
+      {
+        "media_asset_id": -10000,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Piedra del Peñol (Peñón de Guatapé)",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10000,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Piedra del Peñol (Peñón de Guatapé)",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10000,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Piedra del Peñol (Peñón de Guatapé)",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10001,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Plazoleta de los Zócalos",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10001,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Plazoleta de los Zócalos",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10001,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Plazoleta de los Zócalos",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10002,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Calle de las Sombrillas",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10002,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Calle de las Sombrillas",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10002,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Calle de las Sombrillas",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10003,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Malecón de Guatapé",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10003,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Malecón de Guatapé",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10003,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Malecón de Guatapé",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10004,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Parque principal",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10004,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Parque principal",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10004,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Parque principal",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10005,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Paseo en barco por el embalse",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10005,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Paseo en barco por el embalse",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10005,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Paseo en barco por el embalse",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10006,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Jet ski en el embalse",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10006,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Jet ski en el embalse",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10006,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Jet ski en el embalse",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10007,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Tour en kayak",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10007,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Tour en kayak",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10007,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Tour en kayak",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10008,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Esquí acuático",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10008,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Esquí acuático",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10008,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Esquí acuático",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10009,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Wakeboard en el embalse",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10009,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Wakeboard en el embalse",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10009,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Wakeboard en el embalse",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10010,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Guatapé",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10010,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Guatapé",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10010,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Guatapé",
+        "caption": ""
+      }
+    ],
+    "businesses": [
+      {
+        "id": 100010000,
+        "public_id": "7ea5f64a-0f50-52ec-b35d-eb7c608d2ba4",
+        "destination_id": 10001,
+        "category_code": "hospedaje",
+        "slug": "hotel-los-recuerdos",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010001,
+        "public_id": "cffc6a90-2d87-536a-b8eb-221fad65d137",
+        "destination_id": 10001,
+        "category_code": "hospedaje",
+        "slug": "hotel-guatatur",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 1,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010002,
+        "public_id": "3ba37d08-fb4b-57a4-bdb6-ee8ac18ffa05",
+        "destination_id": 10001,
+        "category_code": "hospedaje",
+        "slug": "hotel-avenida",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 2,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010003,
+        "public_id": "e5dd6492-3a97-53f4-8f15-49fbbc245370",
+        "destination_id": 10001,
+        "category_code": "hospedaje",
+        "slug": "hotel-brisas-de-guatape",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 3,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010004,
+        "public_id": "578eff5f-cb54-5fd1-ac93-e0ad8348f5ed",
+        "destination_id": 10001,
+        "category_code": "hospedaje",
+        "slug": "hotel-real",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 4,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010005,
+        "public_id": "100a196c-b767-588b-96ef-23645f50b60e",
+        "destination_id": 10001,
+        "category_code": "hospedaje",
+        "slug": "hotel-san-juan",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 5,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010006,
+        "public_id": "fe805b0c-ee84-5ea9-90b5-f8bff882c5d6",
+        "destination_id": 10001,
+        "category_code": "hospedaje",
+        "slug": "hotel-zocalo-real",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 6,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010007,
+        "public_id": "a74ea525-1fb5-50dd-b3ac-15a0dfbd92e2",
+        "destination_id": 10001,
+        "category_code": "hospedaje",
+        "slug": "hotel-el-descanso-del-arriero",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 7,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010008,
+        "public_id": "baf91020-57e3-5186-bebe-5ebc08d5042c",
+        "destination_id": 10001,
+        "category_code": "alimentacion",
+        "slug": "del-porto",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 8,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010009,
+        "public_id": "9c8e09a3-acd5-5c33-9d7d-b0d07ba3e0ff",
+        "destination_id": 10001,
+        "category_code": "alimentacion",
+        "slug": "dulces-de-guatape",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 9,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010010,
+        "public_id": "07515a41-60c5-5842-b3af-e54ebd7c564b",
+        "destination_id": 10001,
+        "category_code": "alimentacion",
+        "slug": "guatape-es-dulce",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 10,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010011,
+        "public_id": "ae905f6c-f666-53ce-8898-8f49d7ebf12c",
+        "destination_id": 10001,
+        "category_code": "alimentacion",
+        "slug": "el-balcon-paisa",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 11,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010012,
+        "public_id": "82eeb45d-56b0-512c-81ee-4f51622f42dd",
+        "destination_id": 10001,
+        "category_code": "alimentacion",
+        "slug": "el-candil",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 12,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010013,
+        "public_id": "8437f3f0-6427-57b9-8249-44d63d1750b8",
+        "destination_id": 10001,
+        "category_code": "alimentacion",
+        "slug": "la-cumparsita-parrilleros-argentinos",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 13,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010014,
+        "public_id": "48c3d5df-82e9-5390-95f3-a535a91abd2e",
+        "destination_id": 10001,
+        "category_code": "alimentacion",
+        "slug": "la-fogata",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 14,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010015,
+        "public_id": "ab28f8aa-c496-5c3b-80a6-701c21d27f45",
+        "destination_id": 10001,
+        "category_code": "alimentacion",
+        "slug": "restaurante-stone",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 15,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010016,
+        "public_id": "056b9cef-a57a-54f3-a081-119d398a2ef3",
+        "destination_id": 10001,
+        "category_code": "comercio",
+        "slug": "moda-giveriana",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 16,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010017,
+        "public_id": "1c2f948d-ad64-5e2a-9c54-9246dd7c9dd9",
+        "destination_id": 10001,
+        "category_code": "comercio",
+        "slug": "arte-a-mano",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 17,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010018,
+        "public_id": "2444f43b-2510-5742-8582-1f78d4cea54b",
+        "destination_id": 10001,
+        "category_code": "comercio",
+        "slug": "el-churro",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 18,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010019,
+        "public_id": "7c133576-976c-53e9-9946-a4590c571a5f",
+        "destination_id": 10001,
+        "category_code": "comercio",
+        "slug": "mega-tienda",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 19,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010020,
+        "public_id": "7d7a394e-782b-58a3-9757-ecedabecb2ea",
+        "destination_id": 10001,
+        "category_code": "comercio",
+        "slug": "papeleria-mundial",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 20,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010021,
+        "public_id": "84414a45-7778-5102-81bf-b52beab2ae06",
+        "destination_id": 10001,
+        "category_code": "salud",
+        "slug": "drogueria-cuatro-esquinas-guatape",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 21,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010022,
+        "public_id": "638b67e5-8145-5cc2-8d6b-feb5461f471c",
+        "destination_id": 10001,
+        "category_code": "vida-nocturna",
+        "slug": "macondo",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 22,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010023,
+        "public_id": "c9ac2a38-41f3-5295-b84b-542786e38f95",
+        "destination_id": 10001,
+        "category_code": "experiencias",
+        "slug": "outdoors-guatape",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 23,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010024,
+        "public_id": "b3be0e5b-10f1-528e-a761-668e7f0a3b87",
+        "destination_id": 10001,
+        "category_code": "experiencias",
+        "slug": "vikingos-club-nautico",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 24,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010025,
+        "public_id": "73e917f4-7db1-5496-962b-ba89bfba73b8",
+        "destination_id": 10001,
+        "category_code": "transporte",
+        "slug": "sotrasanvicente-guatape-la-piedra",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 25,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010026,
+        "public_id": "bfb83458-d84f-504c-a384-5d8624ef3a18",
+        "destination_id": 10001,
+        "category_code": "servicios",
+        "slug": "arkit-s-a-s",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 26,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010027,
+        "public_id": "6b97fd7b-3be6-503d-8d6d-86e63be19e82",
+        "destination_id": 10001,
+        "category_code": "servicios",
+        "slug": "sertel",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 27,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010028,
+        "public_id": "97c72159-afae-50b1-80fe-5e4ee5069d19",
+        "destination_id": 10001,
+        "category_code": "servicios",
+        "slug": "inmobiliaria-buen-vivir",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 28,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010029,
+        "public_id": "da91b1dd-d9aa-53f1-b807-2c085609375e",
+        "destination_id": 10001,
+        "category_code": "servicios",
+        "slug": "inmobiliaria-othelonix",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 29,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010030,
+        "public_id": "ab2dad3e-3b57-5dd6-94f6-c617021270d0",
+        "destination_id": 10001,
+        "category_code": "hospedaje",
+        "slug": "hotel-verony-guatape",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 30,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010031,
+        "public_id": "5042ee6b-f1f5-5314-b641-0ec108d04093",
+        "destination_id": 10001,
+        "category_code": "hospedaje",
+        "slug": "hotel-zocalo-campestre",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 31,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010032,
+        "public_id": "789cef9c-3fa0-5dc4-b687-32e0a3eaf729",
+        "destination_id": 10001,
+        "category_code": "licores",
+        "slug": "licorera-cienfuegos",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 32,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010033,
+        "public_id": "51b61b05-4de9-5cc2-89fe-c29dc3666757",
+        "destination_id": 10001,
+        "category_code": "cultura",
+        "slug": "museo-del-zocalo",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 33,
+        "record_origin": "public_import"
+      }
+    ],
+    "business_translations": [
+      {
+        "business_id": 100010000,
+        "locale": "es",
+        "display_name": "Hotel Los Recuerdos",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010000,
+        "locale": "en",
+        "display_name": "Hotel Los Recuerdos",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010000,
+        "locale": "pt-BR",
+        "display_name": "Hotel Los Recuerdos",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010001,
+        "locale": "es",
+        "display_name": "Hotel Guatatur",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010001,
+        "locale": "en",
+        "display_name": "Hotel Guatatur",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010001,
+        "locale": "pt-BR",
+        "display_name": "Hotel Guatatur",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010002,
+        "locale": "es",
+        "display_name": "Hotel Avenida",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010002,
+        "locale": "en",
+        "display_name": "Hotel Avenida",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010002,
+        "locale": "pt-BR",
+        "display_name": "Hotel Avenida",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010003,
+        "locale": "es",
+        "display_name": "Hotel Brisas de Guatapé",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010003,
+        "locale": "en",
+        "display_name": "Hotel Brisas de Guatapé",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010003,
+        "locale": "pt-BR",
+        "display_name": "Hotel Brisas de Guatapé",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010004,
+        "locale": "es",
+        "display_name": "Hotel Real",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010004,
+        "locale": "en",
+        "display_name": "Hotel Real",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010004,
+        "locale": "pt-BR",
+        "display_name": "Hotel Real",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010005,
+        "locale": "es",
+        "display_name": "Hotel San Juan",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010005,
+        "locale": "en",
+        "display_name": "Hotel San Juan",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010005,
+        "locale": "pt-BR",
+        "display_name": "Hotel San Juan",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010006,
+        "locale": "es",
+        "display_name": "Hotel Zócalo Real",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010006,
+        "locale": "en",
+        "display_name": "Hotel Zócalo Real",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010006,
+        "locale": "pt-BR",
+        "display_name": "Hotel Zócalo Real",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010007,
+        "locale": "es",
+        "display_name": "Hotel El Descanso del Arriero",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010007,
+        "locale": "en",
+        "display_name": "Hotel El Descanso del Arriero",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010007,
+        "locale": "pt-BR",
+        "display_name": "Hotel El Descanso del Arriero",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010008,
+        "locale": "es",
+        "display_name": "Del Porto",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010008,
+        "locale": "en",
+        "display_name": "Del Porto",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010008,
+        "locale": "pt-BR",
+        "display_name": "Del Porto",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010009,
+        "locale": "es",
+        "display_name": "Dulces de Guatapé",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010009,
+        "locale": "en",
+        "display_name": "Dulces de Guatapé",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010009,
+        "locale": "pt-BR",
+        "display_name": "Dulces de Guatapé",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010010,
+        "locale": "es",
+        "display_name": "Guatapé es dulce",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010010,
+        "locale": "en",
+        "display_name": "Guatapé es dulce",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010010,
+        "locale": "pt-BR",
+        "display_name": "Guatapé es dulce",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010011,
+        "locale": "es",
+        "display_name": "El Balcón Paisa",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010011,
+        "locale": "en",
+        "display_name": "El Balcón Paisa",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010011,
+        "locale": "pt-BR",
+        "display_name": "El Balcón Paisa",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010012,
+        "locale": "es",
+        "display_name": "El Candil",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010012,
+        "locale": "en",
+        "display_name": "El Candil",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010012,
+        "locale": "pt-BR",
+        "display_name": "El Candil",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010013,
+        "locale": "es",
+        "display_name": "La Cumparsita Parrilleros Argentinos",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010013,
+        "locale": "en",
+        "display_name": "La Cumparsita Parrilleros Argentinos",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010013,
+        "locale": "pt-BR",
+        "display_name": "La Cumparsita Parrilleros Argentinos",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010014,
+        "locale": "es",
+        "display_name": "La Fogata",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010014,
+        "locale": "en",
+        "display_name": "La Fogata",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010014,
+        "locale": "pt-BR",
+        "display_name": "La Fogata",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010015,
+        "locale": "es",
+        "display_name": "Restaurante Stone",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010015,
+        "locale": "en",
+        "display_name": "Restaurante Stone",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010015,
+        "locale": "pt-BR",
+        "display_name": "Restaurante Stone",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010016,
+        "locale": "es",
+        "display_name": "Moda Giveriana",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010016,
+        "locale": "en",
+        "display_name": "Moda Giveriana",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010016,
+        "locale": "pt-BR",
+        "display_name": "Moda Giveriana",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010017,
+        "locale": "es",
+        "display_name": "Arte a Mano",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010017,
+        "locale": "en",
+        "display_name": "Arte a Mano",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010017,
+        "locale": "pt-BR",
+        "display_name": "Arte a Mano",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010018,
+        "locale": "es",
+        "display_name": "El Churro",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010018,
+        "locale": "en",
+        "display_name": "El Churro",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010018,
+        "locale": "pt-BR",
+        "display_name": "El Churro",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010019,
+        "locale": "es",
+        "display_name": "Mega Tienda",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010019,
+        "locale": "en",
+        "display_name": "Mega Tienda",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010019,
+        "locale": "pt-BR",
+        "display_name": "Mega Tienda",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010020,
+        "locale": "es",
+        "display_name": "Papelería Mundial",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010020,
+        "locale": "en",
+        "display_name": "Papelería Mundial",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010020,
+        "locale": "pt-BR",
+        "display_name": "Papelería Mundial",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010021,
+        "locale": "es",
+        "display_name": "Droguería Cuatro Esquinas Guatapé",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010021,
+        "locale": "en",
+        "display_name": "Droguería Cuatro Esquinas Guatapé",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010021,
+        "locale": "pt-BR",
+        "display_name": "Droguería Cuatro Esquinas Guatapé",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010022,
+        "locale": "es",
+        "display_name": "Macondo",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010022,
+        "locale": "en",
+        "display_name": "Macondo",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010022,
+        "locale": "pt-BR",
+        "display_name": "Macondo",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010023,
+        "locale": "es",
+        "display_name": "Outdoors Guatapé",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010023,
+        "locale": "en",
+        "display_name": "Outdoors Guatapé",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010023,
+        "locale": "pt-BR",
+        "display_name": "Outdoors Guatapé",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010024,
+        "locale": "es",
+        "display_name": "Vikingos Club Náutico",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010024,
+        "locale": "en",
+        "display_name": "Vikingos Club Náutico",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010024,
+        "locale": "pt-BR",
+        "display_name": "Vikingos Club Náutico",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010025,
+        "locale": "es",
+        "display_name": "Sotrasanvicente & Guatapé La Piedra",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010025,
+        "locale": "en",
+        "display_name": "Sotrasanvicente & Guatapé La Piedra",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010025,
+        "locale": "pt-BR",
+        "display_name": "Sotrasanvicente & Guatapé La Piedra",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010026,
+        "locale": "es",
+        "display_name": "Arkit S.A.S.",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010026,
+        "locale": "en",
+        "display_name": "Arkit S.A.S.",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010026,
+        "locale": "pt-BR",
+        "display_name": "Arkit S.A.S.",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010027,
+        "locale": "es",
+        "display_name": "SERTEL",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010027,
+        "locale": "en",
+        "display_name": "SERTEL",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010027,
+        "locale": "pt-BR",
+        "display_name": "SERTEL",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010028,
+        "locale": "es",
+        "display_name": "Inmobiliaria Buen Vivir",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010028,
+        "locale": "en",
+        "display_name": "Inmobiliaria Buen Vivir",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010028,
+        "locale": "pt-BR",
+        "display_name": "Inmobiliaria Buen Vivir",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010029,
+        "locale": "es",
+        "display_name": "Inmobiliaria Othelonix",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010029,
+        "locale": "en",
+        "display_name": "Inmobiliaria Othelonix",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010029,
+        "locale": "pt-BR",
+        "display_name": "Inmobiliaria Othelonix",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010030,
+        "locale": "es",
+        "display_name": "Hotel Verony Guatapé",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010030,
+        "locale": "en",
+        "display_name": "Hotel Verony Guatapé",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010030,
+        "locale": "pt-BR",
+        "display_name": "Hotel Verony Guatapé",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010031,
+        "locale": "es",
+        "display_name": "Hotel Zócalo Campestre",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010031,
+        "locale": "en",
+        "display_name": "Hotel Zócalo Campestre",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010031,
+        "locale": "pt-BR",
+        "display_name": "Hotel Zócalo Campestre",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010032,
+        "locale": "es",
+        "display_name": "Licorera Cienfuegos",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010032,
+        "locale": "en",
+        "display_name": "Licorera Cienfuegos",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010032,
+        "locale": "pt-BR",
+        "display_name": "Licorera Cienfuegos",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010033,
+        "locale": "es",
+        "display_name": "Museo del Zócalo",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010033,
+        "locale": "en",
+        "display_name": "Museo del Zócalo",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010033,
+        "locale": "pt-BR",
+        "display_name": "Museo del Zócalo",
+        "summary": "",
+        "description": ""
+      }
+    ],
+    "business_categories": [],
+    "business_sources": [
+      {
+        "business_id": 100010000,
+        "source_url": "https://hotellosrecuerdos.com/",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010001,
+        "source_url": "https://guataturhotel.com/",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010002,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010002,
+        "source_url": "https://www.google.com.co/travel/hotels/entity/ChoI2b2Lwq3Wn8nXARoNL2cvMTFxbmQ2N3J3MRAB",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010003,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010003,
+        "source_url": "https://www.google.com/travel/hotels/entity/ChoIlaTL0piQjM-MARoNL2cvMTFnOGJ3cHhtOBAB",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010004,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010004,
+        "source_url": "https://www.municipiodeguatape.gov.co/publicaciones/264/hoteles/",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010005,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010005,
+        "source_url": "https://ccoa.org.co/wp-content/uploads/2020/10/Boletin_Marzo-2019.pdf",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010006,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010006,
+        "source_url": "https://www.airbnb.com/rooms/1293803401070952074",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010007,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010007,
+        "source_url": "https://www.airbnb.com.gt/rooms/1347792134858839825",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010008,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010008,
+        "source_url": "https://www.municipiodeguatape.gov.co/publicaciones/262/restaurantes/",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010009,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010009,
+        "source_url": "https://www.icbf.gov.co/sites/default/files/censo_plantas_alimentos_y_beneficio_animal_-_antioquia_2018.pdf",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010010,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010010,
+        "source_url": "https://evendo.com/locations/colombia/guatape/shop/guatape-es-dulce",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010011,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010011,
+        "source_url": "https://www.municipiodeguatape.gov.co/publicaciones/262/restaurantes/",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010012,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010012,
+        "source_url": "https://www.airbnb.com.gt/rooms/1347792134858839825",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010013,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010013,
+        "source_url": "https://sites.google.com/a/antioquia.in/guatape/restaurantes/la-cumparsita-parrilleros-argentinos",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010014,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010014,
+        "source_url": "https://www.guatapecolombia.net/portfolio/la-fogata/",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010015,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010015,
+        "source_url": "https://www.municipiodeguatape.gov.co/publicaciones/262/restaurantes/",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010016,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010016,
+        "source_url": "https://leonxiii.coop/gran-clausura-del-mes-del-creceahorro-2025/",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010017,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010017,
+        "source_url": "https://corpotur.com/vive/arte-a-mano/",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010018,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010018,
+        "source_url": "https://cornare.gov.co/documentos/tiendas-para-reclamar-tu-bolsa.pdf",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010019,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010019,
+        "source_url": "https://es.cybo.com/CO-biz/mega-tienda-la-avenida",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010020,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010020,
+        "source_url": "https://ccoa.org.co/wp-content/uploads/2026/02/NoticiaMercantilEnero2026.pdf",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010021,
+        "source_url": "https://dssa.gov.co/images/vigilanciaSanitaria2025/CENSO%20ESTABLECIMIENTOS%20FARMAC%C3%89UTICOS_%20ANTIOQUIA%20CORTE%2031-01-2025.pdf",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010022,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010022,
+        "source_url": "https://guatape.antioquia.in/entretenimiento/bares-y-discotecas/macondo",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010023,
+        "source_url": "https://www.outdoorsguatape.com/en/product/tour-en-kayak/",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010024,
+        "source_url": "https://www.vikingosclubnauticoguatape.com/es/reservaciones",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010025,
+        "source_url": "https://www.sotrasanvicente.com/en/",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010026,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010026,
+        "source_url": "https://sites.google.com/a/antioquia.in/guatape/servicios/construccion/arkit-s-a-s",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010027,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010027,
+        "source_url": "https://www.uniamazonia.edu.co/documentos/docs/Oficina%20Asesora%20de%20Planeacion/JEA/2024/RJPuntosDePagoCiclo42024.pdf",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010028,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010028,
+        "source_url": "https://guatape.antioquia.in/servicios/inmobiliarias/inmobiliaria-buen-vivir",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010029,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010029,
+        "source_url": "https://www.bienesonline.co/inmobiliaria/24604/inmobiliaria-othelonix",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010030,
+        "source_url": "https://www.hotelveronyguatape.com/",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010031,
+        "source_url": "https://hotelzocalocampestre.com/contacto/",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010032,
+        "source_url": "https://corpotur.com/vive/licorera-cienfuegos/",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010033,
+        "source_url": "https://museodelzocalo.com/",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      }
+    ],
+    "business_media": []
+  },
+  "media_files": {
+    "-10000": {
+      "sha256": "3448bdaa0c557d4a39869d170979f82cbac5b36c95af7849d3e509736ad9a92e"
+    },
+    "-10001": {
+      "sha256": "b7270e68ba7c7ffabda536d1861e73a8733bd0b70cf3fdd044713b65758b4547"
+    },
+    "-10002": {
+      "sha256": "a95e3c4a0f163bfc3a215d346ba9679ce19435fc3a34f8fd69bb673d04186490"
+    },
+    "-10003": {
+      "sha256": "20b88ae4e623bf012f9ddff2ebb00fbdb82e496fe7a1b85a54c1129999b3c7d4"
+    },
+    "-10004": {
+      "sha256": "33365a13c1c59798d7710f019407594eee0599f30e7fe6c3c7edc83d12edaa26"
+    },
+    "-10005": {
+      "sha256": "bdb4d6a53a8fa8159320d0f0df4b4b8bb5daaba27427d8e5330a087bbd4257c3"
+    },
+    "-10006": {
+      "sha256": "833e74a5eff63d04dc1e1c6348e11140c4ca9a51b6449a525a7a7379fa8876d7"
+    },
+    "-10007": {
+      "sha256": "d062624108649a5f35817d67f38a3e39940e8b5451f3adba541c926f1307a7a8"
+    },
+    "-10008": {
+      "sha256": "ca149a1bd08b69bb3915e470e68fec59e9498c4daaa7fd11f930c73e29f4c192"
+    },
+    "-10009": {
+      "sha256": "3860555ab128a9e801111046900e0f5a67c1e61d7d3d5fd726a2f77af8cc1a23"
+    },
+    "-10010": {
+      "sha256": "87c7849acefc191da5c84e3942083c4549b98bae5c976599a586861438d420df"
+    }
+  }
+}
