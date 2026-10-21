@@ -200,9 +200,10 @@ try:
         ('/admin/usuarios.php', 'Cuentas'),
         ('/admin/incidencias.php', 'Errores de ejecución'),
         ('/admin/reportes.php', 'Reportes'),
+        ('/admin/solicitudes-publicas.php', 'Solicitudes de usuarios'),
         ('/admin/suscripciones.php', 'Suscripciones'),
         ('/admin/inversionistas.php', 'Inteligencia de negocio e inversión'),
-        ('/admin/contactos-negocios.php', 'Canales y responsable'),
+        ('/admin/contactos-negocios.php', 'Gestión comercial'),
         ('/admin/campanas.php', 'Campañas por correo'),
         ('/admin/campanas.php?tab=conexion', 'Remitente y conexión'),
         ('/admin/campanas.php?tab=correos', 'Negocios destinatarios'),
@@ -240,6 +241,7 @@ try:
                     '/admin/base-datos.php': 'Base de datos',
                     '/admin/destinos.php': 'Lugares',
                     '/admin/reportes.php': 'Reportes',
+                    '/admin/solicitudes-publicas.php': 'Solicitudes de usuarios',
                     '/admin/negocios.php': 'Negocios',
                     '/admin/trasladar-negocios.php': 'Negocios',
                     '/admin/importar-negocios.php': 'Negocios',
@@ -248,12 +250,12 @@ try:
                     '/admin/usuarios.php': 'Cuentas',
                     '/admin/suscripciones.php': 'Suscripciones',
                     '/admin/inversionistas.php': 'Inteligencia e inversión',
-                    '/admin/contactos-negocios.php': 'Canales y responsable',
+                    '/admin/contactos-negocios.php': 'Gestión comercial',
                     '/admin/campanas.php': 'Conexión con Brevo' if 'tab=conexion' in path else 'Campañas por correo',
                 }.get(route)
                 if expected_sidebar:
                     check(active_label == expected_sidebar, f'La sección activa debe ser {expected_sidebar} en {path}; mostró {active_label}')
-            if path == '/admin/reportes.php':
+            if path in ('/admin/reportes.php','/admin/solicitudes-publicas.php'):
                 check(re.search(r'<main\b[^>]*class="[^"]*admin-page[^\"]*"[^>]*>.*?<aside\b',body,re.S) is not None,'Reports must contain the sidebar inside the page layout to reserve its width.')
             if path == '/admin/contactos-negocios.php':
                 check('<meta name="robots" content="noindex,nofollow">' in body and 'Solo administración' in body, 'La pantalla de contactos privados debe quedar autenticada y fuera de indexación.')
@@ -668,6 +670,10 @@ try:
     check(status==200 and 'Listado de negocios' in legacy_pending and 'value="draft" selected' in legacy_pending and 'Catálogo y cobertura' not in legacy_pending and '?tab=pendientes"' not in legacy_pending,'Legacy pending links must use the unified list with the publication filter.')
     _,imported_segment,_=request('/admin/negocios.php?tab=lista&segment=imported&q=Cafeter%C3%ADa')
     check('Cafetería de cuenta HTTP' not in imported_segment,'Person registration leaked into imported businesses.')
+    crm_account_marker='data-crm-business-id="'+str(approved['business_id'])+'"'
+    _,crm_prospects,_=request('/admin/contactos-negocios.php?subscription=all&account=without')
+    _,crm_customers,_=request('/admin/contactos-negocios.php?subscription=all&account=with')
+    check(crm_account_marker not in crm_prospects and crm_account_marker in crm_customers,'Business with active account was not isolated from unassociated CRM prospects.')
     check(approved and approved['status']=='approved' and approved['publication_status']=='draft' and approved['claim_status']=='RECLAMADO' and approved['account_id']==account_row['id'], 'La aprobación no creó el borrador privado y la membresía esperados.')
     check(DB.execute('SELECT address_text FROM businesses WHERE id=?',(approved['business_id'],)).fetchone()[0]=='Dirección de prueba privada','Se perdieron los datos de ubicación al aprobar.')
     check(DB.execute('SELECT description FROM business_translations WHERE business_id=? AND locale="es"',(approved['business_id'],)).fetchone()[0]=='Descripción privada de prueba','Se perdió la descripción enviada.')
