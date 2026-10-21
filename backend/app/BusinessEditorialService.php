@@ -71,7 +71,7 @@ final class BusinessEditorialService
    if(is_array($uploads)&&!array_filter((array)($uploads['error']??[]),static fn($error)=>(int)$error!==UPLOAD_ERR_NO_FILE))$uploads=null;
    $remove=$input['remove_reference_ids']??[];if(!is_array($remove)||count($remove)>20)throw new RuntimeException('Revisa las referencias que quieres retirar.');
    foreach($remove as $reference){$q=$this->pdo->prepare('SELECT storage_name FROM business_editorial_images WHERE id=? AND version_id=?');$q->execute([(int)$reference,(int)($latest['id']??0)]);$name=$q->fetchColumn();if(!$name)throw new RuntimeException('Esa referencia no pertenece a la versión anterior.');$this->pdo->prepare('DELETE FROM business_editorial_images WHERE version_id=? AND storage_name=?')->execute([$id,$name]);}
-   if($uploads!==null){if(!$imageConsent&&!$editor)throw new RuntimeException('Autoriza la preparación editorial de tus imágenes antes de cargarlas.');$this->admin()->storeEditorialReferences($id,$uploads,$storedFiles,match($plan){'featured'=>1,'page'=>2,'page_premium'=>7,default=>0});}
+   if($uploads!==null){if(!$imageConsent&&!$editor)throw new RuntimeException('Autoriza la preparación editorial de tus imágenes antes de cargarlas.');$this->admin()->storeEditorialReferences($id,$uploads,$storedFiles,match($plan){'featured'=>1,'page'=>2,'page_premium'=>9,default=>0});}
    $this->event($id,$editor?'admin:'.$actor:'account:'.$account,'saved');$this->pdo->commit();return $id;
   }catch(Throwable $e){if($this->pdo->inTransaction())$this->pdo->rollBack();foreach($storedFiles as $file)if(is_file($file))@unlink($file);throw $e;}
  }

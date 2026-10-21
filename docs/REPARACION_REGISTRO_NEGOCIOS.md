@@ -137,3 +137,7 @@ Limitaciones explícitas de esta entrega: el material editorial se prepara media
 En el circuito actual de Colombia, el comerciante entrega y aprueba su contenido en español. Sus formularios solo aceptan español y sus previsualizaciones privadas no ofrecen otros idiomas; cambiar `lang` manualmente tampoco da acceso a las traducciones de esa prepublicación. El equipo editorial conserva las tres vistas para revisar.
 
 Antes de enviar una prepublicación, el portal exige revisión explícita de traducciones, fidelidad/permisos/estilo/calidad de imágenes y presentación/enlaces/móvil. Se registra el administrador y la versión exacta revisada. Publicar exige esa revisión además de la aprobación del comerciante y de los controles de contenido/pago; una nueva versión requiere otra revisión. Los controles automáticos de integridad y completitud no sustituyen la revisión humana de calidad semántica y visual. No hay API de traducción o generación de imágenes conectada automáticamente.
+
+### Ajuste posterior: portada fija y cinco productos
+
+La decisión vigente reemplaza el carrusel principal: Página Comercial y Premium muestran una portada fija, rectangular y redondeada. Premium permite hasta cinco productos o servicios con imagen (no tres). Se retira el JavaScript y el CSS del carrusel; el límite se verifica en el servidor y el editor presenta cinco posiciones. Las referencias privadas Premium admiten hasta nueve imágenes para cubrir portada, material del negocio y productos, conservando los límites de tamaño por archivo y por guardado.
