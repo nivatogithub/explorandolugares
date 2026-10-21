@@ -151,3 +151,7 @@ La historia y el texto narrativo general de servicios dejan de ser obligatorios 
 ### Tarjeta Destacada simplificada
 
 Título con fondo de panel y acento de marca, nombre truncado a una línea para mantener tarjetas uniformes, resumen inmediatamente debajo. Sin etiqueta «Información pública» ni desplegable «Más información». Ubicación, teléfono y WhatsApp comparten la fila inferior de contacto con controles visibles. La modalidad Gratis conserva la exclusión de ubicación y contactos. El mismo componente se usa en el directorio y la previsualización privada.
+
+### Contactos y datos prácticos: decisión vigente
+
+Instagram pasa a ser exclusivo de Premium, tanto en filtros del servidor como en formularios, tarjetas, páginas y tabla comercial (ES/EN/PT). Página Comercial muestra teléfono, WhatsApp, correo y ubicación. Se retiran rango de precios y capacidad del editor público y de la presentación de las páginas; los datos históricos no se borran ni se modifican. Horarios y enlace de menú permanecen disponibles.

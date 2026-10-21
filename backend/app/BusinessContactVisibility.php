@@ -8,7 +8,7 @@ final class BusinessContactVisibility
     {
         return match ($plan) {
             'featured' => ['phone', 'phone_fixed', 'whatsapp'],
-            'page' => ['phone', 'phone_fixed', 'whatsapp', 'email', 'instagram'],
+            'page' => ['phone', 'phone_fixed', 'whatsapp', 'email'],
             'page_premium' => ['phone', 'phone_fixed', 'whatsapp', 'email', 'instagram', 'website', 'facebook', 'linkedin'],
             default => [],
         };

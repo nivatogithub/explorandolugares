@@ -5,7 +5,7 @@ function visibility_check(bool $ok,string $message):void{if(!$ok)throw new Runti
 $contacts=[];
 foreach(['phone'=>'+573001234567','phone_fixed'=>'6041234567','whatsapp'=>'+573001234568','email'=>'public@example.test','instagram'=>'https://instagram.com/example','website'=>'https://example.test','facebook'=>'https://facebook.com/example','linkedin'=>'https://linkedin.com/company/example'] as $channel=>$value)$contacts[]=['channel'=>$channel,'contact_value'=>$value,'is_public'=>1];
 $contacts[]=['channel'=>'phone','contact_value'=>'+573009999999','is_public'=>0];
-$expected=['free'=>[],'featured'=>['phone','phone_fixed','whatsapp'],'page'=>['phone','phone_fixed','whatsapp','email','instagram'],'page_premium'=>['phone','phone_fixed','whatsapp','email','instagram','website','facebook','linkedin']];
+$expected=['free'=>[],'featured'=>['phone','phone_fixed','whatsapp'],'page'=>['phone','phone_fixed','whatsapp','email'],'page_premium'=>['phone','phone_fixed','whatsapp','email','instagram','website','facebook','linkedin']];
 foreach($expected as $plan=>$allowed){
  $filtered=BusinessContactVisibility::filter($plan,$contacts);
  visibility_check(array_column($filtered,'channel')===$allowed,$plan.' channel policy mismatch');
