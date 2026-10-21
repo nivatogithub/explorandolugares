@@ -199,6 +199,7 @@ try:
         ('/admin/solicitudes-cuenta.php', 'Solicitudes de cuenta de negocio'),
         ('/admin/usuarios.php', 'Cuentas'),
         ('/admin/incidencias.php', 'Errores de ejecución'),
+        ('/admin/reportes.php', 'Reportes'),
         ('/admin/suscripciones.php', 'Suscripciones'),
         ('/admin/inversionistas.php', 'Inteligencia de negocio e inversión'),
         ('/admin/contactos-negocios.php', 'Canales y responsable'),
@@ -238,6 +239,7 @@ try:
                     '/admin/index.php': 'Estado del sistema' if 'tab=sistema' in path else 'Solicitudes de participación',
                     '/admin/base-datos.php': 'Base de datos',
                     '/admin/destinos.php': 'Lugares',
+                    '/admin/reportes.php': 'Reportes',
                     '/admin/negocios.php': 'Negocios',
                     '/admin/trasladar-negocios.php': 'Negocios',
                     '/admin/importar-negocios.php': 'Negocios',
@@ -251,6 +253,8 @@ try:
                 }.get(route)
                 if expected_sidebar:
                     check(active_label == expected_sidebar, f'La sección activa debe ser {expected_sidebar} en {path}; mostró {active_label}')
+            if path == '/admin/reportes.php':
+                check(re.search(r'<main\b[^>]*class="[^"]*admin-page[^\"]*"[^>]*>.*?<aside\b',body,re.S) is not None,'Reports must contain the sidebar inside the page layout to reserve its width.')
             if path == '/admin/contactos-negocios.php':
                 check('<meta name="robots" content="noindex,nofollow">' in body and 'Solo administración' in body, 'La pantalla de contactos privados debe quedar autenticada y fuera de indexación.')
             if path == '/admin/negocios.php?tab=importar':

@@ -63,3 +63,5 @@ Integrar el candidato en preprod conforme a AGENTS, reconciliar main, revisar el
 - Cuentas: eliminada la asignación manual de negocios y bloqueado el POST de vinculación con 403. Se conserva consulta de asociaciones existentes y herramientas de acceso. No cambia el servicio de registro/reclamación ni sus validaciones o asociaciones automáticas. Regresión comprueba que intentar vincular desde el panel no modifica membresías.
 
 - Suscripciones muestra solo planes de pago, ordenados por vencimiento, con días restantes y filtros de renovación a 7/30 días o vencidas. Gratis se conserva en Negocios. Preparar recordatorio lleva a la composición de campaña filtrada por negocio: no envía ni programa correos y depende de los canales habilitados existentes. Automatización y conexión con correo del representante siguen pendientes. Sin cambios de planes, pagos o vigencias.
+
+- Reportes: nombre simplificado en título y menú. Corregida la estructura del contenedor: la navegación queda dentro de admin-page para reservar su ancho y evitar que tape títulos y tablas; mantiene el comportamiento móvil común. Sin cambios en consultas o métricas.
