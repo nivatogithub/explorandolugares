@@ -261,7 +261,7 @@ try:
                 selected_tabs = re.findall(r'<a\b[^>]*aria-current="page"[^>]*>(.*?)</a>', workflow.group(0), re.S)
                 check(len(selected_tabs) == 1, f'Negocios debe marcar una sola pestaña activa en {path}; encontró {len(selected_tabs)}')
                 selected_label = re.sub(r'<[^>]+>', '', selected_tabs[0]).strip()
-                expected_tab = {'tab=crear': 'Crear negocio', 'tab=importar': 'Importación masiva', 'tab=revisar': 'Publicar importaciones Gratis sin representante'}.get(next((part for part in path.split('?')[1:] if part.startswith('tab=')), ''), 'Listado de negocios')
+                expected_tab = {'tab=importar': 'Importación masiva', 'tab=revisar': 'Publicar importaciones Gratis sin representante'}.get(next((part for part in path.split('?')[1:] if part.startswith('tab=')), ''), 'Listado de negocios')
                 check(selected_label == expected_tab, f'La pestaña activa debe ser {expected_tab} en {path}; mostró {selected_label}')
     health_csrf = re.search(r'name="csrf" value="([^"]+)"', request('/admin/campanas.php?tab=conexion')[1]).group(1)
     check(request('/admin/campanas.php?tab=conexion', {'action': 'check_connection', 'csrf': 'invalid'})[0] == 403, 'Diagnóstico sin CSRF')
@@ -471,15 +471,22 @@ try:
         subprocess.run(['/Users/nivato/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node', str(ROOT / 'backend/tests/free-business-editor.browser.cjs')], input=json.dumps({'base': BASE, 'password': password, 'businessId': imported_id}), text=True, check=True)
         check(DB.execute('SELECT COUNT(*) FROM business_categories WHERE business_id=? AND category_code=?', (imported_id, 'alimentacion')).fetchone()[0] == 1, 'El editor no guardó la categoría adicional en el mismo negocio.')
 
-    # Create a business through the real admin HTTP handler. It must remain a private draft.
-    failed_create = {'csrf': csrf, 'action': 'save', 'id': '', 'destination_id': str(destination_id), 'category_code': 'categoria_invalida', 'translations[es][display_name]': 'Prueba que debe conservarse', 'plan_code': 'free', 'billing_frequency': 'monthly', 'address_text': 'Parque principal, Jericó', 'map_workflow': '1', 'location_confirmed': '1', 'image_assistance_requested': '0'}
-    failed_status, failed_body, _ = request('/admin/negocios.php', failed_create)
-    check(failed_status == 400 and 'Crear negocio' in failed_body and 'No se guardó el negocio' in failed_body and 'Prueba que debe conservarse' in failed_body, 'Al fallar el alta, el formulario debe permanecer abierto, explicar el error y conservar los campos escritos.')
-    missing_location = {'csrf': csrf, 'action': 'save', 'id': '', 'destination_id': str(destination_id), 'category_code': 'hospedaje', 'translations[es][display_name]': 'Prueba sin punto de mapa', 'plan_code': 'featured', 'billing_frequency': 'monthly', 'address_text': 'Parque principal, Jericó', 'map_workflow': '1', 'location_confirmed': '0', 'image_assistance_requested': '0'}
+    # Manual creation is blocked even through a direct authenticated POST.
+    before_manual_count=DB.execute('SELECT COUNT(*) FROM businesses').fetchone()[0]
+    failed_status,failed_body,_=request('/admin/negocios.php',{'csrf':csrf,'action':'save','id':'','translations[es][display_name]':'Forbidden manual business'})
+    check(failed_status==403 and 'creación manual está deshabilitada' in failed_body,'Manual creation must be blocked server-side.')
+    check(DB.execute('SELECT COUNT(*) FROM businesses').fetchone()[0]==before_manual_count,'Blocked creation inserted a business.')
+    check('id="business-form"' not in request('/admin/negocios.php?tab=crear')[1],'Direct create link exposed a creation form.')
+    # Seed a historical business and verify editing remains available.
+    DB.execute("INSERT INTO businesses(public_id,destination_id,category_code,record_origin,slug,information_status,claim_status,operation_status,publication_status) VALUES('historical-edit-fixture',?,'hospedaje','admin_created','hostal-creado-por-prueba','PENDIENTE_REVISION','NO_RECLAMADO','DESCONOCIDO','draft')",(destination_id,))
+    edit_fixture_id=DB.execute('SELECT last_insert_rowid()').fetchone()[0]
+    DB.execute("INSERT INTO business_translations(business_id,locale,display_name,description) VALUES(?,'es','Hostal creado por prueba','')",(edit_fixture_id,))
+    DB.commit()
+    missing_location = {'csrf': csrf, 'action': 'save', 'id': str(edit_fixture_id), 'destination_id': str(destination_id), 'category_code': 'hospedaje', 'translations[es][display_name]': 'Prueba sin punto de mapa', 'plan_code': 'featured', 'billing_frequency': 'monthly', 'address_text': 'Parque principal, Jericó', 'map_workflow': '1', 'location_confirmed': '0', 'image_assistance_requested': '0'}
     location_status, location_body, _ = request('/admin/negocios.php', missing_location)
     check(location_status == 400 and 'Selecciona el punto exacto en el mapa' in location_body and 'Prueba sin punto de mapa' in location_body, 'El alta sin punto confirmado debe explicar que faltó el mapa y conservar lo escrito.')
     fields = [
-        ('csrf', csrf), ('action', 'save'), ('id', ''), ('map_workflow', '1'),
+        ('csrf', csrf), ('action', 'save'), ('id', str(edit_fixture_id)), ('map_workflow', '1'),
         ('location_confirmed', '0'), ('location_confirmed', '1'),
         ('destination_id', str(destination_id)), ('category_code', 'hospedaje'),
         ('translations[es][display_name]', 'Hostal creado por prueba'), ('plan_code', 'free'),

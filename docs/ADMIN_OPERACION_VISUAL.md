@@ -44,3 +44,5 @@ Integrar el candidato en preprod conforme a AGENTS, reconciliar main, revisar el
 - Regresión administrativa HTTP aprobada, incluida vista de tarjeta Gratis, acceso privado y 404. No se accedió al navegador bloqueado ni a producción.
 
 - Se elimina la pestaña duplicada Pendientes de revisión y el título Catálogo y cobertura. El listado único permite filtrar la publicación; los enlaces antiguos de pendientes abren ese listado filtrado. Las solicitudes sin ficha permanecen en Solicitudes y seguimiento.
+
+- Se retira Crear negocio y se bloquean las altas manuales por POST en administración. El enlace anterior informa la regla y abre el listado; editar fichas existentes continúa disponible. No se alteran el registro empresarial ni las importaciones del módulo de destinos; quedan separados de esta corrección.
