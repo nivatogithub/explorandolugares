@@ -200,3 +200,8 @@ Comprobación móvil adicional con la página real incrustada a 360 px: el panel
 Los ejemplos de las dos modalidades con página abren primero su tarjeta real de directorio dentro del panel. Los controles «Tarjeta en el directorio» y «Página del negocio» permiten alternar sin salir de la tabla. El título y «Ver página del negocio» de la tarjeta navegan a la página del mismo ejemplo dentro del panel, conservando la modalidad y el modo incrustado; el control activo se sincroniza al cargar. Gratis y Destacado conservan una sola vista de tarjeta. La estrella aparece únicamente en la tarjeta Premium.
 
 Validación: recorrido visual tarjeta → página → tarjeta para Premium y Comercial, misma URL principal, cierre sin navegación exterior; regresión HTTP ampliada para ambas tarjetas, enlaces incrustados y distintivo. Sin cambios de datos ni producción.
+
+
+### Canales inertes en demostraciones
+
+Solo `business/demo.php` elimina los destinos de los iconos de contacto y ubicación de sus tarjetas, páginas y pie. Conserva su apariencia y etiquetas, con `aria-disabled` y sin foco de teclado. Los enlaces internos tarjeta → página y los controles del panel siguen disponibles. No se cambian los datos del modelo ni los contactos de fichas reales/prepublicaciones privadas. Verificado por HTTP y mediante clic en el panel: sin navegación, sin vínculos activos en los seis iconos Premium y con apertura de página funcional.
