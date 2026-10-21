@@ -47,7 +47,7 @@ $activeAdminItem = match (true) {
     </section>
     <section><h2>Contenido</h2>
       <a href="destinos.php" <?= $activeAdminItem === 'destinations' ? 'aria-current="page"' : '' ?>>Lugares</a>
-      <a href="reportes.php" <?= $activeAdminItem === 'reports' ? 'aria-current="page"' : '' ?>>Reportes de operación</a>
+      <a href="reportes.php" <?= $activeAdminItem === 'reports' ? 'aria-current="page"' : '' ?>>Reportes</a>
     </section>
 
   </nav>
