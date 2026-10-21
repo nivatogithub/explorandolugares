@@ -52,11 +52,91 @@
     {
       "componente": "cabellera de venus, la chorrera y san vicente",
       "razon": "Identidad institucional, pero acceso y relevancia comparada pendientes. No completar ocho por cuota."
+    },
+    {
+      "componente": "rio-cocorna",
+      "razon": "Río identificable, pero falta tramo concreto visitable; evitar tarjeta genérica. Conservado en investigación, fuera del paquete."
     }
   ],
   "avisos": [
     "No afirmar río más cristalino de Colombia o Suramérica: superlativo sin comparación documentada.",
     "Melcocho se conserva como excursión; no duplicarlo como atractivo.",
     "Oferta documental no garantiza disponibilidad actual, alianza ni recomendación."
+  ],
+  "destination": "cocorna",
+  "items": [
+    {
+      "slug": "cascada-las-perlas",
+      "kind": "place",
+      "decision": "include",
+      "purpose": "Una caída de agua entre las montañas de Cocorná.",
+      "source_urls": [
+        "https://provincia-abt.gov.co/bosques/cocorna/"
+      ],
+      "checked_at": "2026-10-20",
+      "priority_basis": "Orden editorial por identidad y diferenciación; no ventas."
+    },
+    {
+      "slug": "parque-principal",
+      "kind": "place",
+      "decision": "include",
+      "purpose": "El centro del pueblo, alrededor de su iglesia y calles comerciales.",
+      "source_urls": [
+        "https://provincia-abt.gov.co/bosques/cocorna/"
+      ],
+      "checked_at": "2026-10-20",
+      "priority_basis": "Orden editorial por identidad y diferenciación; no ventas."
+    },
+    {
+      "slug": "parapente",
+      "kind": "experience",
+      "decision": "include",
+      "purpose": "Un vuelo acompañado entre montañas y cascadas.",
+      "source_urls": [
+        "https://aventuracocorna.com/"
+      ],
+      "checked_at": "2026-10-20",
+      "priority_basis": "Orden editorial por identidad y diferenciación; no ventas.",
+      "offer_verified": true,
+      "operator": {
+        "name": "Aventura Cocorná",
+        "offer_url": "https://aventuracocorna.com/",
+        "source_url": "https://aventuracocorna.com/"
+      }
+    },
+    {
+      "slug": "rafting-calderas",
+      "kind": "experience",
+      "decision": "include",
+      "purpose": "Recorre los rápidos con un equipo de guías.",
+      "source_urls": [
+        "https://www.expeditioncolombia.com/es/experiencias-de-aventura/calderas-rafting"
+      ],
+      "checked_at": "2026-10-20",
+      "priority_basis": "Orden editorial por identidad y diferenciación; no ventas.",
+      "offer_verified": true,
+      "operator": {
+        "name": "Expedition Colombia",
+        "offer_url": "https://www.expeditioncolombia.com/es/experiencias-de-aventura/calderas-rafting",
+        "source_url": "https://www.expeditioncolombia.com/es/experiencias-de-aventura/calderas-rafting"
+      }
+    },
+    {
+      "slug": "excursion-melcocho",
+      "kind": "experience",
+      "decision": "include",
+      "purpose": "Senderos y pozos de agua en una salida guiada.",
+      "source_urls": [
+        "https://atodopulmon.co/paquetes/viaje-rio-melcocho/"
+      ],
+      "checked_at": "2026-10-20",
+      "priority_basis": "Orden editorial por identidad y diferenciación; no ventas.",
+      "offer_verified": true,
+      "operator": {
+        "name": "A Todo Pulmón",
+        "offer_url": "https://atodopulmon.co/paquetes/viaje-rio-melcocho/",
+        "source_url": "https://atodopulmon.co/paquetes/viaje-rio-melcocho/"
+      }
+    }
   ]
 }
