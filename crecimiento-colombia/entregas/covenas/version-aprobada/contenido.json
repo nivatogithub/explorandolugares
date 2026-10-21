@@ -1,0 +1,1138 @@
+{
+  "destination": {
+    "id": 26,
+    "slug": "covenas",
+    "destination_type": "municipality",
+    "country_code": "CO",
+    "department": "Sucre",
+    "subregion": "Golfo de Morrosquillo",
+    "latitude": null,
+    "longitude": null,
+    "publication_status": "published",
+    "display_order": 103,
+    "created_at": "2026-10-19 09:47:08",
+    "updated_at": "2026-10-19 20:13:51",
+    "translations": {
+      "en": {
+        "destination_id": 26,
+        "locale": "en",
+        "display_name": "Coveñas",
+        "eyebrow": "Sucre · Colombia",
+        "headline": "Beaches and mangroves",
+        "intro": "Beaches, mangroves and naval history on the Gulf of Morrosquillo.",
+        "meta_description": "Beaches, mangroves and naval history on the Gulf of Morrosquillo."
+      },
+      "es": {
+        "destination_id": 26,
+        "locale": "es",
+        "display_name": "Coveñas",
+        "eyebrow": "Sucre · Colombia",
+        "headline": "Playas y manglares",
+        "intro": "Playas, manglares e historia naval en el golfo de Morrosquillo.",
+        "meta_description": "Playas, manglares e historia naval en el golfo de Morrosquillo."
+      },
+      "pt-BR": {
+        "destination_id": 26,
+        "locale": "pt-BR",
+        "display_name": "Coveñas",
+        "eyebrow": "Sucre · Colombia",
+        "headline": "Praias e manguezais",
+        "intro": "Praias, manguezais e história naval no golfo de Morrosquillo.",
+        "meta_description": "Praias, manguezais e história naval no golfo de Morrosquillo."
+      }
+    },
+    "history": {
+      "es": [
+        "Coveñas reúne tradición costera, actividad portuaria e historia naval. Se constituyó como municipio en 2002; sus ensenadas y los manglares de La Caimanera forman parte de su identidad."
+      ],
+      "en": [
+        "Coveñas combines coastal traditions, port activity and naval history. It became a municipality in 2002; its bays and La Caimanera’s mangroves shape its identity."
+      ],
+      "pt-BR": [
+        "Coveñas reúne tradições costeiras, atividade portuária e história naval. Tornou-se município em 2002; suas enseadas e os manguezais de La Caimanera fazem parte de sua identidade."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Combina las playas del golfo con manglares y memoria naval."
+      ],
+      "en": [
+        "Combines Gulf beaches with mangroves and naval history."
+      ],
+      "pt-BR": [
+        "Combina as praias do golfo com manguezais e memória naval."
+      ]
+    },
+    "places": [
+      {
+        "id": 179,
+        "slug": "primera-ensenada",
+        "type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": 334,
+        "translations": {
+          "en": {
+            "id": 179,
+            "slug": "primera-ensenada",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 1,
+            "locale": "en",
+            "name": "Primera Ensenada",
+            "description": "Beaches and services in one of Coveñas’ best-known areas.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Primera%20Ensenada%20Cove%C3%B1as%20Sucre%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 334
+          },
+          "es": {
+            "id": 179,
+            "slug": "primera-ensenada",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 1,
+            "locale": "es",
+            "name": "Primera Ensenada",
+            "description": "Playas y servicios en uno de los sectores más conocidos de Coveñas.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Primera%20Ensenada%20Cove%C3%B1as%20Sucre%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 334
+          },
+          "pt-BR": {
+            "id": 179,
+            "slug": "primera-ensenada",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 1,
+            "locale": "pt-BR",
+            "name": "Primera Ensenada",
+            "description": "Praias e serviços em uma das áreas mais conhecidas de Coveñas.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Primera%20Ensenada%20Cove%C3%B1as%20Sucre%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 334
+          }
+        }
+      },
+      {
+        "id": 180,
+        "slug": "segunda-ensenada",
+        "type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": 335,
+        "translations": {
+          "en": {
+            "id": 180,
+            "slug": "segunda-ensenada",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 2,
+            "locale": "en",
+            "name": "Segunda Ensenada and waterfront",
+            "description": "A coastal stretch for beach visits and walks by the sea.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Segunda%20Ensenada%20y%20malec%C3%B3n%20Cove%C3%B1as%20Sucre%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 335
+          },
+          "es": {
+            "id": 180,
+            "slug": "segunda-ensenada",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 2,
+            "locale": "es",
+            "name": "Segunda Ensenada y malecón",
+            "description": "Un corredor costero para disfrutar la playa y caminar junto al mar.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Segunda%20Ensenada%20y%20malec%C3%B3n%20Cove%C3%B1as%20Sucre%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 335
+          },
+          "pt-BR": {
+            "id": 180,
+            "slug": "segunda-ensenada",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 2,
+            "locale": "pt-BR",
+            "name": "Segunda Ensenada e orla",
+            "description": "Um trecho costeiro para aproveitar a praia e caminhar à beira-mar.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Segunda%20Ensenada%20y%20malec%C3%B3n%20Cove%C3%B1as%20Sucre%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 335
+          }
+        }
+      },
+      {
+        "id": 181,
+        "slug": "cienaga-la-caimanera",
+        "type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": 204,
+        "translations": {
+          "en": {
+            "id": 181,
+            "slug": "cienaga-la-caimanera",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 3,
+            "locale": "en",
+            "name": "La Caimanera wetland",
+            "description": "Mangroves and waterways: an ecosystem to explore with a local guide.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Ci%C3%A9naga%20La%20Caimanera%20Cove%C3%B1as%20Sucre%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 204
+          },
+          "es": {
+            "id": 181,
+            "slug": "cienaga-la-caimanera",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 3,
+            "locale": "es",
+            "name": "Ciénaga La Caimanera",
+            "description": "Manglares y canales: un ecosistema para conocer con guía local.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Ci%C3%A9naga%20La%20Caimanera%20Cove%C3%B1as%20Sucre%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 204
+          },
+          "pt-BR": {
+            "id": 181,
+            "slug": "cienaga-la-caimanera",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 3,
+            "locale": "pt-BR",
+            "name": "Ciénaga La Caimanera",
+            "description": "Manguezais e canais: um ecossistema para conhecer com guia local.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Ci%C3%A9naga%20La%20Caimanera%20Cove%C3%B1as%20Sucre%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 204
+          }
+        }
+      },
+      {
+        "id": 182,
+        "slug": "museo-infanteria-marina",
+        "type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": 205,
+        "translations": {
+          "en": {
+            "id": 182,
+            "slug": "museo-infanteria-marina",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 4,
+            "locale": "en",
+            "name": "Marine Corps Museum",
+            "description": "Naval history inside a military site; confirm access before visiting.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20de%20Infanter%C3%ADa%20de%20Marina%20Cove%C3%B1as%20Sucre%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 205
+          },
+          "es": {
+            "id": 182,
+            "slug": "museo-infanteria-marina",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 4,
+            "locale": "es",
+            "name": "Museo de Infantería de Marina",
+            "description": "Historia naval en un recinto militar; confirma el acceso antes de ir.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20de%20Infanter%C3%ADa%20de%20Marina%20Cove%C3%B1as%20Sucre%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 205
+          },
+          "pt-BR": {
+            "id": 182,
+            "slug": "museo-infanteria-marina",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 4,
+            "locale": "pt-BR",
+            "name": "Museu de Infantaria da Marinha",
+            "description": "História naval em uma área militar; confirme o acesso antes da visita.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20de%20Infanter%C3%ADa%20de%20Marina%20Cove%C3%B1as%20Sucre%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 205
+          }
+        }
+      },
+      {
+        "id": 184,
+        "slug": "la-coquerita",
+        "type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": 338,
+        "translations": {
+          "en": {
+            "id": 184,
+            "slug": "la-coquerita",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 5,
+            "locale": "en",
+            "name": "La Coquerita",
+            "description": "A coastal area listed among the municipality’s beaches.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=La%20Coquerita%20Cove%C3%B1as%20Sucre%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 338
+          },
+          "es": {
+            "id": 184,
+            "slug": "la-coquerita",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 5,
+            "locale": "es",
+            "name": "La Coquerita",
+            "description": "Un sector costero mencionado entre las playas del municipio.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=La%20Coquerita%20Cove%C3%B1as%20Sucre%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 338
+          },
+          "pt-BR": {
+            "id": 184,
+            "slug": "la-coquerita",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 5,
+            "locale": "pt-BR",
+            "name": "La Coquerita",
+            "description": "Uma área costeira citada entre as praias do município.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=La%20Coquerita%20Cove%C3%B1as%20Sucre%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 338
+          }
+        }
+      },
+      {
+        "id": 187,
+        "slug": "recorrido-manglar",
+        "type": "experience",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": 210,
+        "translations": {
+          "en": {
+            "id": 187,
+            "slug": "recorrido-manglar",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 6,
+            "locale": "en",
+            "name": "Mangrove tour",
+            "description": "Travel through the waterways and discover the mangrove ecosystem.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Mangrove%20tour%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 210
+          },
+          "es": {
+            "id": 187,
+            "slug": "recorrido-manglar",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 6,
+            "locale": "es",
+            "name": "Recorrido por manglares",
+            "description": "Navega por los canales y descubre el ecosistema del manglar.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Recorrido%20por%20manglares%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 210
+          },
+          "pt-BR": {
+            "id": 187,
+            "slug": "recorrido-manglar",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 6,
+            "locale": "pt-BR",
+            "name": "Passeio pelo manguezal",
+            "description": "Navegue pelos canais e conheça o ecossistema do manguezal.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Passeio%20pelo%20manguezal%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 210
+          }
+        }
+      },
+      {
+        "id": 203,
+        "slug": "buceo",
+        "type": "experience",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": 329,
+        "translations": {
+          "en": {
+            "id": 203,
+            "slug": "buceo",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 7,
+            "locale": "en",
+            "name": "Scuba diving",
+            "description": "Explore the underwater environment on a guided dive.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Scuba%20diving%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 329
+          },
+          "es": {
+            "id": 203,
+            "slug": "buceo",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 7,
+            "locale": "es",
+            "name": "Buceo",
+            "description": "Explora el entorno submarino en una salida guiada.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Buceo%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 329
+          },
+          "pt-BR": {
+            "id": 203,
+            "slug": "buceo",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 7,
+            "locale": "pt-BR",
+            "name": "Mergulho",
+            "description": "Explore o ambiente submarino em um mergulho guiado.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Mergulho%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 329
+          }
+        }
+      },
+      {
+        "id": 204,
+        "slug": "paddleboarding",
+        "type": "experience",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": 330,
+        "translations": {
+          "en": {
+            "id": 204,
+            "slug": "paddleboarding",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 8,
+            "locale": "en",
+            "name": "Paddleboarding",
+            "description": "Learn to paddle standing up and explore the coast by board.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Paddleboarding%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 330
+          },
+          "es": {
+            "id": 204,
+            "slug": "paddleboarding",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 8,
+            "locale": "es",
+            "name": "Paddleboarding",
+            "description": "Aprende a remar de pie y recorre la costa en tabla.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Paddleboarding%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 330
+          },
+          "pt-BR": {
+            "id": 204,
+            "slug": "paddleboarding",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 8,
+            "locale": "pt-BR",
+            "name": "Stand up paddle",
+            "description": "Aprenda a remar em pé e explore a costa de prancha.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Stand%20up%20paddle%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 330
+          }
+        }
+      },
+      {
+        "id": 205,
+        "slug": "excursion-san-bernardo",
+        "type": "experience",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": 331,
+        "translations": {
+          "en": {
+            "id": 205,
+            "slug": "excursion-san-bernardo",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 9,
+            "locale": "en",
+            "name": "San Bernardo Islands excursion",
+            "description": "A regional excursion to discover the islands from Coveñas.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=San%20Bernardo%20Islands%20excursion%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 331
+          },
+          "es": {
+            "id": 205,
+            "slug": "excursion-san-bernardo",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 9,
+            "locale": "es",
+            "name": "Excursión a las islas de San Bernardo",
+            "description": "Una excursión regional para conocer las islas desde Coveñas.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Excursi%C3%B3n%20a%20las%20islas%20de%20San%20Bernardo%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 331
+          },
+          "pt-BR": {
+            "id": 205,
+            "slug": "excursion-san-bernardo",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 9,
+            "locale": "pt-BR",
+            "name": "Passeio às ilhas de San Bernardo",
+            "description": "Uma excursão regional para conhecer as ilhas a partir de Coveñas.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Passeio%20%C3%A0s%20ilhas%20de%20San%20Bernardo%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 331
+          }
+        }
+      },
+      {
+        "id": 206,
+        "slug": "excursion-cispata",
+        "type": "experience",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": 332,
+        "translations": {
+          "en": {
+            "id": 206,
+            "slug": "excursion-cispata",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 10,
+            "locale": "en",
+            "name": "Cispatá excursion",
+            "description": "Travel from Coveñas to discover Cispatá’s mangroves in San Antero.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Cispat%C3%A1%20excursion%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 332
+          },
+          "es": {
+            "id": 206,
+            "slug": "excursion-cispata",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 10,
+            "locale": "es",
+            "name": "Excursión a Cispatá",
+            "description": "Desde Coveñas, conoce los manglares de Cispatá, en San Antero.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Excursi%C3%B3n%20a%20Cispat%C3%A1%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 332
+          },
+          "pt-BR": {
+            "id": 206,
+            "slug": "excursion-cispata",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 10,
+            "locale": "pt-BR",
+            "name": "Passeio a Cispatá",
+            "description": "Saia de Coveñas para conhecer os manguezais de Cispatá, em San Antero.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Passeio%20a%20Cispat%C3%A1%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 332
+          }
+        }
+      }
+    ],
+    "sources": {
+      "es": [
+        {
+          "locale": "es",
+          "section_key": "history",
+          "source_url": "https://concejodecovenas.gov.co/wp-content/uploads/2023/03/MANUAL-DE-CONTRATACION-2022-ACTUALIZADO.pdf",
+          "source_label": "Historia municipal"
+        },
+        {
+          "locale": "es",
+          "section_key": "places",
+          "source_url": "https://www.golfodemorrosquillo.com/sitios/covenas/playas-de-la-primera-ensenada",
+          "source_label": "Información del lugar"
+        },
+        {
+          "locale": "es",
+          "section_key": "places",
+          "source_url": "https://www.dnp.gov.co/Prensa_/Noticias/Paginas/dnp-y-enterritorio-entregan-malecon-turistico-de-covenas.aspx",
+          "source_label": "Información del lugar"
+        },
+        {
+          "locale": "es",
+          "section_key": "places",
+          "source_url": "https://www.golfodemorrosquillo.com/sitios/covenas/cienaga-de-la-caimanera",
+          "source_label": "Información del lugar"
+        },
+        {
+          "locale": "es",
+          "section_key": "places",
+          "source_url": "https://www.armada.mil.co/es/content/11-anos-reviviendo-gesta-heroica-los-infantes-marina",
+          "source_label": "Información del lugar"
+        },
+        {
+          "locale": "es",
+          "section_key": "places",
+          "source_url": "https://www.golfodemorrosquillo.com/sitios/covenas/playas-de-la-coquerita",
+          "source_label": "Información del lugar"
+        }
+      ],
+      "en": [
+        {
+          "locale": "en",
+          "section_key": "history",
+          "source_url": "https://concejodecovenas.gov.co/wp-content/uploads/2023/03/MANUAL-DE-CONTRATACION-2022-ACTUALIZADO.pdf",
+          "source_label": "Historia municipal"
+        },
+        {
+          "locale": "en",
+          "section_key": "places",
+          "source_url": "https://www.golfodemorrosquillo.com/sitios/covenas/playas-de-la-primera-ensenada",
+          "source_label": "Place information"
+        },
+        {
+          "locale": "en",
+          "section_key": "places",
+          "source_url": "https://www.dnp.gov.co/Prensa_/Noticias/Paginas/dnp-y-enterritorio-entregan-malecon-turistico-de-covenas.aspx",
+          "source_label": "Place information"
+        },
+        {
+          "locale": "en",
+          "section_key": "places",
+          "source_url": "https://www.golfodemorrosquillo.com/sitios/covenas/cienaga-de-la-caimanera",
+          "source_label": "Place information"
+        },
+        {
+          "locale": "en",
+          "section_key": "places",
+          "source_url": "https://www.armada.mil.co/es/content/11-anos-reviviendo-gesta-heroica-los-infantes-marina",
+          "source_label": "Place information"
+        },
+        {
+          "locale": "en",
+          "section_key": "places",
+          "source_url": "https://www.golfodemorrosquillo.com/sitios/covenas/playas-de-la-coquerita",
+          "source_label": "Place information"
+        }
+      ],
+      "pt-BR": [
+        {
+          "locale": "pt-BR",
+          "section_key": "history",
+          "source_url": "https://concejodecovenas.gov.co/wp-content/uploads/2023/03/MANUAL-DE-CONTRATACION-2022-ACTUALIZADO.pdf",
+          "source_label": "Historia municipal"
+        },
+        {
+          "locale": "pt-BR",
+          "section_key": "places",
+          "source_url": "https://www.golfodemorrosquillo.com/sitios/covenas/playas-de-la-primera-ensenada",
+          "source_label": "Informações do lugar"
+        },
+        {
+          "locale": "pt-BR",
+          "section_key": "places",
+          "source_url": "https://www.dnp.gov.co/Prensa_/Noticias/Paginas/dnp-y-enterritorio-entregan-malecon-turistico-de-covenas.aspx",
+          "source_label": "Informações do lugar"
+        },
+        {
+          "locale": "pt-BR",
+          "section_key": "places",
+          "source_url": "https://www.golfodemorrosquillo.com/sitios/covenas/cienaga-de-la-caimanera",
+          "source_label": "Informações do lugar"
+        },
+        {
+          "locale": "pt-BR",
+          "section_key": "places",
+          "source_url": "https://www.armada.mil.co/es/content/11-anos-reviviendo-gesta-heroica-los-infantes-marina",
+          "source_label": "Informações do lugar"
+        },
+        {
+          "locale": "pt-BR",
+          "section_key": "places",
+          "source_url": "https://www.golfodemorrosquillo.com/sitios/covenas/playas-de-la-coquerita",
+          "source_label": "Informações do lugar"
+        }
+      ]
+    },
+    "destination_media": {
+      "hero": {
+        "role": "hero",
+        "media_asset_id": 333,
+        "asset_path": "assets/destinos/covenas/e423b3b87f355c27e6532165476cb072eaa61b89df362f9458d0af2847a0fd6d.webp"
+      }
+    }
+  },
+  "media": [
+    {
+      "id": 329,
+      "origin": "ai_generated",
+      "asset_path": "assets/destinos/covenas/9689bc16e455cb82de723eddb7f6e053791125c35a27a478d37db3ca7eaa8aa2.webp",
+      "creator": "OpenAI · ilustración editorial independiente IA",
+      "source_url": "",
+      "license_name": "Generada con IA; borrador para revisión humana",
+      "license_url": "",
+      "provenance_json": "{\"sha256\":\"9689bc16e455cb82de723eddb7f6e053791125c35a27a478d37db3ca7eaa8aa2\",\"source_package\":\"covenas\",\"editorial_approved\":false,\"local_preview_only\":true}",
+      "width": 960,
+      "height": 640,
+      "sha256": "9689bc16e455cb82de723eddb7f6e053791125c35a27a478d37db3ca7eaa8aa2",
+      "local_file": "media/9689bc16e455cb82de723eddb7f6e053791125c35a27a478d37db3ca7eaa8aa2.webp"
+    },
+    {
+      "id": 330,
+      "origin": "ai_generated",
+      "asset_path": "assets/destinos/covenas/8d87b845184101abb99dada6a8162fc520e6d602fba2c8c3fa2094b0ea6b0b0a.webp",
+      "creator": "OpenAI · ilustración editorial independiente IA",
+      "source_url": "",
+      "license_name": "Generada con IA; borrador para revisión humana",
+      "license_url": "",
+      "provenance_json": "{\"sha256\":\"8d87b845184101abb99dada6a8162fc520e6d602fba2c8c3fa2094b0ea6b0b0a\",\"source_package\":\"covenas\",\"editorial_approved\":false,\"local_preview_only\":true}",
+      "width": 960,
+      "height": 640,
+      "sha256": "8d87b845184101abb99dada6a8162fc520e6d602fba2c8c3fa2094b0ea6b0b0a",
+      "local_file": "media/8d87b845184101abb99dada6a8162fc520e6d602fba2c8c3fa2094b0ea6b0b0a.webp"
+    },
+    {
+      "id": 331,
+      "origin": "ai_generated",
+      "asset_path": "assets/destinos/covenas/7ed4d384701a633be32e0efd4acfdeb3d6d415c7766c7eb21c03340f63ff1b8d.webp",
+      "creator": "OpenAI · ilustración editorial independiente IA",
+      "source_url": "",
+      "license_name": "Generada con IA; borrador para revisión humana",
+      "license_url": "",
+      "provenance_json": "{\"sha256\":\"7ed4d384701a633be32e0efd4acfdeb3d6d415c7766c7eb21c03340f63ff1b8d\",\"source_package\":\"covenas\",\"editorial_approved\":false,\"local_preview_only\":true}",
+      "width": 960,
+      "height": 640,
+      "sha256": "7ed4d384701a633be32e0efd4acfdeb3d6d415c7766c7eb21c03340f63ff1b8d",
+      "local_file": "media/7ed4d384701a633be32e0efd4acfdeb3d6d415c7766c7eb21c03340f63ff1b8d.webp"
+    },
+    {
+      "id": 204,
+      "origin": "ai_generated",
+      "asset_path": "assets/destinos/covenas/72d7c8bfcc776ae7085c288557c263b3fc89623dfe1e0308af6a63facd7cdb62.webp",
+      "creator": "OpenAI · ilustración editorial independiente IA",
+      "source_url": "",
+      "license_name": "Generada con IA; borrador para revisión humana",
+      "license_url": "",
+      "provenance_json": "{\"sha256\":\"72d7c8bfcc776ae7085c288557c263b3fc89623dfe1e0308af6a63facd7cdb62\",\"source_package\":\"covenas\",\"editorial_approved\":false,\"local_preview_only\":true}",
+      "width": 1200,
+      "height": 800,
+      "sha256": "72d7c8bfcc776ae7085c288557c263b3fc89623dfe1e0308af6a63facd7cdb62",
+      "local_file": "media/72d7c8bfcc776ae7085c288557c263b3fc89623dfe1e0308af6a63facd7cdb62.webp"
+    },
+    {
+      "id": 333,
+      "origin": "ai_generated",
+      "asset_path": "assets/destinos/covenas/e423b3b87f355c27e6532165476cb072eaa61b89df362f9458d0af2847a0fd6d.webp",
+      "creator": "OpenAI · ilustración editorial independiente IA",
+      "source_url": "",
+      "license_name": "Generada con IA; borrador para revisión humana",
+      "license_url": "",
+      "provenance_json": "{\"sha256\":\"e423b3b87f355c27e6532165476cb072eaa61b89df362f9458d0af2847a0fd6d\",\"source_package\":\"covenas\",\"editorial_approved\":false,\"local_preview_only\":true}",
+      "width": 1200,
+      "height": 800,
+      "sha256": "e423b3b87f355c27e6532165476cb072eaa61b89df362f9458d0af2847a0fd6d",
+      "local_file": "media/e423b3b87f355c27e6532165476cb072eaa61b89df362f9458d0af2847a0fd6d.webp"
+    },
+    {
+      "id": 205,
+      "origin": "ai_generated",
+      "asset_path": "assets/destinos/covenas/43fa03b1b0c7299da2f6744dbfbcd8e51c3d79441aec52a00991538f9010520e.webp",
+      "creator": "OpenAI · ilustración editorial independiente IA",
+      "source_url": "",
+      "license_name": "Generada con IA; borrador para revisión humana",
+      "license_url": "",
+      "provenance_json": "{\"sha256\":\"43fa03b1b0c7299da2f6744dbfbcd8e51c3d79441aec52a00991538f9010520e\",\"source_package\":\"covenas\",\"editorial_approved\":false,\"local_preview_only\":true}",
+      "width": 1200,
+      "height": 800,
+      "sha256": "43fa03b1b0c7299da2f6744dbfbcd8e51c3d79441aec52a00991538f9010520e",
+      "local_file": "media/43fa03b1b0c7299da2f6744dbfbcd8e51c3d79441aec52a00991538f9010520e.webp"
+    },
+    {
+      "id": 334,
+      "origin": "ai_generated",
+      "asset_path": "assets/destinos/covenas/d590841c242d32cb2a5a29d16f5046972352e895d0939aa8ce71c10546edac9c.webp",
+      "creator": "OpenAI · ilustración editorial independiente IA",
+      "source_url": "",
+      "license_name": "Generada con IA; borrador para revisión humana",
+      "license_url": "",
+      "provenance_json": "{\"sha256\":\"d590841c242d32cb2a5a29d16f5046972352e895d0939aa8ce71c10546edac9c\",\"source_package\":\"covenas\",\"editorial_approved\":false,\"local_preview_only\":true}",
+      "width": 960,
+      "height": 640,
+      "sha256": "d590841c242d32cb2a5a29d16f5046972352e895d0939aa8ce71c10546edac9c",
+      "local_file": "media/d590841c242d32cb2a5a29d16f5046972352e895d0939aa8ce71c10546edac9c.webp"
+    },
+    {
+      "id": 335,
+      "origin": "ai_generated",
+      "asset_path": "assets/destinos/covenas/ca73d20126100f5d2b8ea66a9f3a16fb3b3f244be2c3231ebaf518d46adfb789.webp",
+      "creator": "OpenAI · ilustración editorial independiente IA",
+      "source_url": "",
+      "license_name": "Generada con IA; borrador para revisión humana",
+      "license_url": "",
+      "provenance_json": "{\"sha256\":\"ca73d20126100f5d2b8ea66a9f3a16fb3b3f244be2c3231ebaf518d46adfb789\",\"source_package\":\"covenas\",\"editorial_approved\":false,\"local_preview_only\":true}",
+      "width": 960,
+      "height": 640,
+      "sha256": "ca73d20126100f5d2b8ea66a9f3a16fb3b3f244be2c3231ebaf518d46adfb789",
+      "local_file": "media/ca73d20126100f5d2b8ea66a9f3a16fb3b3f244be2c3231ebaf518d46adfb789.webp"
+    },
+    {
+      "id": 332,
+      "origin": "ai_generated",
+      "asset_path": "assets/destinos/covenas/fc0d6083b3fef51b45307f688a31acec1a790fbe474343400ad11b463bffcf7f.webp",
+      "creator": "OpenAI · ilustración editorial independiente IA",
+      "source_url": "",
+      "license_name": "Generada con IA; borrador para revisión humana",
+      "license_url": "",
+      "provenance_json": "{\"sha256\":\"fc0d6083b3fef51b45307f688a31acec1a790fbe474343400ad11b463bffcf7f\",\"source_package\":\"covenas\",\"editorial_approved\":false,\"local_preview_only\":true}",
+      "width": 960,
+      "height": 640,
+      "sha256": "fc0d6083b3fef51b45307f688a31acec1a790fbe474343400ad11b463bffcf7f",
+      "local_file": "media/fc0d6083b3fef51b45307f688a31acec1a790fbe474343400ad11b463bffcf7f.webp"
+    },
+    {
+      "id": 338,
+      "origin": "ai_generated",
+      "asset_path": "assets/destinos/covenas/1fd0ba0df9d4289aea21ba962c19a79cbc80e95f57d43ba79ff524ffa7c35cde.webp",
+      "creator": "OpenAI · ilustración editorial independiente IA",
+      "source_url": "",
+      "license_name": "Generada con IA; borrador para revisión humana",
+      "license_url": "",
+      "provenance_json": "{\"sha256\":\"1fd0ba0df9d4289aea21ba962c19a79cbc80e95f57d43ba79ff524ffa7c35cde\",\"source_package\":\"covenas\",\"editorial_approved\":false,\"local_preview_only\":true}",
+      "width": 960,
+      "height": 640,
+      "sha256": "1fd0ba0df9d4289aea21ba962c19a79cbc80e95f57d43ba79ff524ffa7c35cde",
+      "local_file": "media/1fd0ba0df9d4289aea21ba962c19a79cbc80e95f57d43ba79ff524ffa7c35cde.webp"
+    },
+    {
+      "id": 210,
+      "origin": "ai_generated",
+      "asset_path": "assets/destinos/covenas/642c12fdfa4a7e8bc65a6196d0ed42037f3a01072bca360987a8618e062ffcc5.webp",
+      "creator": "OpenAI · ilustración editorial independiente IA",
+      "source_url": "",
+      "license_name": "Generada con IA; borrador para revisión humana",
+      "license_url": "",
+      "provenance_json": "{\"sha256\":\"642c12fdfa4a7e8bc65a6196d0ed42037f3a01072bca360987a8618e062ffcc5\",\"source_package\":\"covenas\",\"editorial_approved\":false,\"local_preview_only\":true}",
+      "width": 1200,
+      "height": 800,
+      "sha256": "642c12fdfa4a7e8bc65a6196d0ed42037f3a01072bca360987a8618e062ffcc5",
+      "local_file": "media/642c12fdfa4a7e8bc65a6196d0ed42037f3a01072bca360987a8618e062ffcc5.webp"
+    }
+  ],
+  "media_translations": [
+    {
+      "media_asset_id": 204,
+      "locale": "en",
+      "alt_text": "La Caimanera wetland",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 204,
+      "locale": "es",
+      "alt_text": "Ciénaga La Caimanera",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 204,
+      "locale": "pt-BR",
+      "alt_text": "Ciénaga La Caimanera",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 205,
+      "locale": "en",
+      "alt_text": "Thematic illustration, not a record of the venue: Marine Corps Museum",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 205,
+      "locale": "es",
+      "alt_text": "Ilustración temática, no registro del recinto: Museo de Infantería de Marina",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 205,
+      "locale": "pt-BR",
+      "alt_text": "Ilustração temática, não registro do recinto: Museu de Infantaria da Marinha",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 210,
+      "locale": "en",
+      "alt_text": "Mangrove tour",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 210,
+      "locale": "es",
+      "alt_text": "Recorrido por manglares",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 210,
+      "locale": "pt-BR",
+      "alt_text": "Passeio pelo manguezal",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 329,
+      "locale": "en",
+      "alt_text": "Thematic illustration: Scuba diving",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 329,
+      "locale": "es",
+      "alt_text": "Ilustración temática: Buceo",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 329,
+      "locale": "pt-BR",
+      "alt_text": "Ilustração temática: Mergulho",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 330,
+      "locale": "en",
+      "alt_text": "Thematic illustration: Paddleboarding",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 330,
+      "locale": "es",
+      "alt_text": "Ilustración temática: Paddleboarding",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 330,
+      "locale": "pt-BR",
+      "alt_text": "Ilustração temática: Stand up paddle",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 331,
+      "locale": "en",
+      "alt_text": "Thematic illustration: San Bernardo Islands excursion",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 331,
+      "locale": "es",
+      "alt_text": "Ilustración temática: Excursión a las islas de San Bernardo",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 331,
+      "locale": "pt-BR",
+      "alt_text": "Ilustração temática: Passeio às ilhas de San Bernardo",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 332,
+      "locale": "en",
+      "alt_text": "Thematic illustration: Cispatá excursion",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 332,
+      "locale": "es",
+      "alt_text": "Ilustración temática: Excursión a Cispatá",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 332,
+      "locale": "pt-BR",
+      "alt_text": "Ilustração temática: Passeio a Cispatá",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 333,
+      "locale": "en",
+      "alt_text": "Illustration of Coveñas",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 333,
+      "locale": "es",
+      "alt_text": "Ilustración de Coveñas",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 333,
+      "locale": "pt-BR",
+      "alt_text": "Ilustração de Coveñas",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 334,
+      "locale": "en",
+      "alt_text": "Primera Ensenada",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 334,
+      "locale": "es",
+      "alt_text": "Primera Ensenada",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 334,
+      "locale": "pt-BR",
+      "alt_text": "Primera Ensenada",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 335,
+      "locale": "en",
+      "alt_text": "Segunda Ensenada and waterfront",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 335,
+      "locale": "es",
+      "alt_text": "Segunda Ensenada y malecón",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 335,
+      "locale": "pt-BR",
+      "alt_text": "Segunda Ensenada e orla",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 338,
+      "locale": "en",
+      "alt_text": "La Coquerita",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 338,
+      "locale": "es",
+      "alt_text": "La Coquerita",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 338,
+      "locale": "pt-BR",
+      "alt_text": "La Coquerita",
+      "caption": ""
+    }
+  ]
+}
