@@ -1,0 +1,618 @@
+{
+    "schema_version": 2,
+    "destination": {
+        "slug": "santa-fe-de-antioquia",
+        "destination_type": "municipality",
+        "country_code": "CO",
+        "department": "Antioquia",
+        "subregion": "Occidente",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 101,
+        "translations": {
+            "en": {
+                "display_name": "Santa Fe de Antioquia",
+                "eyebrow": "",
+                "headline": "Heritage and filigree",
+                "intro": "Historic streets, filigree jewellery and the Puente de Occidente in the Cauca valley.",
+                "meta_description": "Historic streets, filigree jewellery and the Puente de Occidente in the Cauca valley."
+            },
+            "es": {
+                "display_name": "Santa Fe de Antioquia",
+                "eyebrow": "",
+                "headline": "Patrimonio y filigrana",
+                "intro": "Calles históricas, filigrana y el Puente de Occidente en el valle del Cauca.",
+                "meta_description": "Calles históricas, filigrana y el Puente de Occidente en el valle del Cauca."
+            },
+            "pt-BR": {
+                "display_name": "Santa Fe de Antioquia",
+                "eyebrow": "",
+                "headline": "Patrimônio e filigrana",
+                "intro": "Ruas históricas, filigrana e a Puente de Occidente no vale do Cauca.",
+                "meta_description": "Ruas históricas, filigrana e a Puente de Occidente no vale do Cauca."
+            }
+        },
+        "history": {
+            "es": [
+                "La ciudad actual reúne la historia de dos poblaciones del siglo XVI y fue capital provincial hasta 1826. Su patrimonio colonial y republicano conserva huellas del poder político, la vida religiosa y los oficios locales."
+            ],
+            "en": [
+                "Today’s town brings together the history of two sixteenth-century settlements and served as provincial capital until 1826. Its colonial and republican heritage preserves traces of political power, religious life and local crafts."
+            ],
+            "pt-BR": [
+                "A cidade atual reúne a história de dois povoados do século XVI e foi capital provincial até 1826. Seu patrimônio colonial e republicano conserva marcas do poder político, da vida religiosa e dos ofícios locais."
+            ]
+        },
+        "reasons": {
+            "es": [
+                "Patrimonio histórico, filigrana y el paisaje del Cauca."
+            ],
+            "en": [
+                "Historic heritage, filigree jewellery and the Cauca landscape."
+            ],
+            "pt-BR": [
+                "Patrimônio histórico, filigrana e a paisagem do Cauca."
+            ]
+        }
+    },
+    "hero_image": {
+        "file": "images/9a661e252005d27e29917085b025241a86b31370e1b5f30f412f4a6da879d9f2.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Ilustración editorial generada con IA para Explorando Lugares",
+        "image_source_url": "",
+        "image_license": "Composición independiente generada con IA; borrador pendiente de revisión editorial humana; proceden",
+        "image_license_url": "",
+        "alt": {
+            "en": "Illustration of Santa Fe de Antioquia",
+            "es": "Ilustración de Santa Fe de Antioquia",
+            "pt-BR": "Ilustração de Santa Fe de Antioquia"
+        },
+        "caption": {
+            "en": "",
+            "es": "",
+            "pt-BR": ""
+        }
+    },
+    "places": [
+        {
+            "slug": "puente-de-occidente",
+            "type": "place",
+            "latitude": null,
+            "longitude": null,
+            "display_order": 1,
+            "publication_status": "draft",
+            "translations": {
+                "en": {
+                    "name": "Puente de Occidente",
+                    "description": "The suspension bridge over the Cauca links Santa Fe de Antioquia and Olaya.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Puente%20de%20Occidente%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "es": {
+                    "name": "Puente de Occidente",
+                    "description": "El puente colgante sobre el Cauca une Santa Fe de Antioquia y Olaya.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Puente%20de%20Occidente%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "pt-BR": {
+                    "name": "Puente de Occidente",
+                    "description": "A ponte suspensa sobre o Cauca liga Santa Fe de Antioquia a Olaya.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Puente%20de%20Occidente%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                }
+            },
+            "image": {
+                "file": "images/1e3e90f8e77ce8a97df5d9d4b6fee2f85e6b071d609c39fba999b530d00445e3.webp",
+                "image_origin": "ai_generated",
+                "image_creator": "Ilustración editorial generada con IA para Explorando Lugares",
+                "image_source_url": "",
+                "image_license": "Composición independiente generada con IA; borrador pendiente de revisión editorial humana; proceden",
+                "image_license_url": "",
+                "alt": {
+                    "en": "Editorial illustration: Puente de Occidente",
+                    "es": "Ilustración editorial: Puente de Occidente",
+                    "pt-BR": "Ilustração editorial: Puente de Occidente"
+                },
+                "caption": {
+                    "en": "Swedish Colombian · CC BY 2.0 · Adaptación ilustrada IA",
+                    "es": "Swedish Colombian · CC BY 2.0 · Adaptación ilustrada IA",
+                    "pt-BR": "Swedish Colombian · CC BY 2.0 · Adaptación ilustrada IA"
+                }
+            }
+        },
+        {
+            "slug": "plaza-mayor-simon-bolivar",
+            "type": "place",
+            "latitude": null,
+            "longitude": null,
+            "display_order": 2,
+            "publication_status": "draft",
+            "translations": {
+                "en": {
+                    "name": "Plaza Mayor Simón Bolívar",
+                    "description": "The main square brings together local life and historic architecture.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Plaza%20Mayor%20Sim%C3%B3n%20Bol%C3%ADvar%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "es": {
+                    "name": "Plaza Mayor Simón Bolívar",
+                    "description": "El parque principal reúne vida local y arquitectura del centro histórico.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Plaza%20Mayor%20Sim%C3%B3n%20Bol%C3%ADvar%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "pt-BR": {
+                    "name": "Plaza Mayor Simón Bolívar",
+                    "description": "A praça principal reúne a vida local e a arquitetura histórica.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Plaza%20Mayor%20Sim%C3%B3n%20Bol%C3%ADvar%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                }
+            },
+            "image": {
+                "file": "images/76329fe624e14d3731fc745a8fa145e18c062dd2506b955b7d295de487f5645f.webp",
+                "image_origin": "ai_generated",
+                "image_creator": "Ilustración editorial generada con IA para Explorando Lugares",
+                "image_source_url": "",
+                "image_license": "Composición independiente generada con IA; borrador pendiente de revisión editorial humana; proceden",
+                "image_license_url": "",
+                "alt": {
+                    "en": "Editorial illustration: Plaza Mayor Simón Bolívar",
+                    "es": "Ilustración editorial: Plaza Mayor Simón Bolívar",
+                    "pt-BR": "Ilustração editorial: Plaza Mayor Simón Bolívar"
+                },
+                "caption": {
+                    "en": "",
+                    "es": "",
+                    "pt-BR": ""
+                }
+            }
+        },
+        {
+            "slug": "catedral-de-la-inmaculada-concepcion",
+            "type": "place",
+            "latitude": null,
+            "longitude": null,
+            "display_order": 3,
+            "publication_status": "draft",
+            "translations": {
+                "en": {
+                    "name": "Catedral de la Inmaculada Concepción",
+                    "description": "Discover the cathedral façade and naves beside the main square.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Catedral%20de%20la%20Inmaculada%20Concepci%C3%B3n%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "es": {
+                    "name": "Catedral de la Inmaculada Concepción",
+                    "description": "Conoce la fachada y las naves de la catedral junto al parque principal.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Catedral%20de%20la%20Inmaculada%20Concepci%C3%B3n%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "pt-BR": {
+                    "name": "Catedral de la Inmaculada Concepción",
+                    "description": "Conheça a fachada e as naves da catedral junto à praça principal.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Catedral%20de%20la%20Inmaculada%20Concepci%C3%B3n%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                }
+            },
+            "image": {
+                "file": "images/1a96481600ead83e11e8b4d6b459181494d964b802df6d45e463f5bea709e271.webp",
+                "image_origin": "ai_generated",
+                "image_creator": "Ilustración editorial generada con IA para Explorando Lugares",
+                "image_source_url": "",
+                "image_license": "Composición independiente generada con IA; borrador pendiente de revisión editorial humana; proceden",
+                "image_license_url": "",
+                "alt": {
+                    "en": "Editorial illustration: Catedral de la Inmaculada Concepción",
+                    "es": "Ilustración editorial: Catedral de la Inmaculada Concepción",
+                    "pt-BR": "Ilustração editorial: Catedral de la Inmaculada Concepción"
+                },
+                "caption": {
+                    "en": "",
+                    "es": "",
+                    "pt-BR": ""
+                }
+            }
+        },
+        {
+            "slug": "museo-juan-del-corral",
+            "type": "place",
+            "latitude": null,
+            "longitude": null,
+            "display_order": 4,
+            "publication_status": "draft",
+            "translations": {
+                "en": {
+                    "name": "Museo Juan del Corral",
+                    "description": "Objects and documents introduce the region’s history.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20Juan%20del%20Corral%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "es": {
+                    "name": "Museo Juan del Corral",
+                    "description": "Objetos y documentos permiten acercarse a la historia regional.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20Juan%20del%20Corral%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "pt-BR": {
+                    "name": "Museo Juan del Corral",
+                    "description": "Objetos e documentos apresentam a história regional.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20Juan%20del%20Corral%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                }
+            },
+            "image": {
+                "file": "images/781d3fbf0d18deb2bc7d158fa8e14416f0ab927dd8f98f091b7a197d8b9944f0.webp",
+                "image_origin": "ai_generated",
+                "image_creator": "Adaptación ilustrada IA de fotografía de XalD",
+                "image_source_url": "https://commons.wikimedia.org/wiki/File:Casa_Museo_Juan_del_Corral_-_02.jpg",
+                "image_license": "CC BY-SA 4.0; fotografía transformada a ilustración IA",
+                "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+                "alt": {
+                    "en": "Illustration based on a real display case at Museo Juan del Corral.",
+                    "es": "Ilustración basada en una vitrina real del Museo Juan del Corral.",
+                    "pt-BR": "Ilustração baseada em uma vitrine real do Museo Juan del Corral."
+                },
+                "caption": {
+                    "en": "XalD · CC BY-SA 4.0 · Adaptación ilustrada IA",
+                    "es": "XalD · CC BY-SA 4.0 · Adaptación ilustrada IA",
+                    "pt-BR": "XalD · CC BY-SA 4.0 · Adaptación ilustrada IA"
+                }
+            }
+        },
+        {
+            "slug": "iglesia-de-santa-barbara",
+            "type": "place",
+            "latitude": null,
+            "longitude": null,
+            "display_order": 5,
+            "publication_status": "draft",
+            "translations": {
+                "en": {
+                    "name": "Iglesia de Santa Bárbara",
+                    "description": "Its façade and surroundings form a distinctive heritage scene.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Iglesia%20de%20Santa%20B%C3%A1rbara%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "es": {
+                    "name": "Iglesia de Santa Bárbara",
+                    "description": "Su fachada y entorno conservan una de las estampas patrimoniales del pueblo.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Iglesia%20de%20Santa%20B%C3%A1rbara%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "pt-BR": {
+                    "name": "Iglesia de Santa Bárbara",
+                    "description": "Sua fachada e seus arredores formam uma paisagem patrimonial característica.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Iglesia%20de%20Santa%20B%C3%A1rbara%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                }
+            },
+            "image": {
+                "file": "images/1553c6b366bbc29a7406ccb53a45bf88bd48aefdecd0e5b1dc6a992dd6fd27c0.webp",
+                "image_origin": "ai_generated",
+                "image_creator": "Ilustración editorial generada con IA para Explorando Lugares",
+                "image_source_url": "",
+                "image_license": "Composición independiente generada con IA; borrador pendiente de revisión editorial humana; proceden",
+                "image_license_url": "",
+                "alt": {
+                    "en": "Editorial illustration: Iglesia de Santa Bárbara",
+                    "es": "Ilustración editorial: Iglesia de Santa Bárbara",
+                    "pt-BR": "Ilustração editorial: Iglesia de Santa Bárbara"
+                },
+                "caption": {
+                    "en": "Magi and Helen · CC BY 2.0 · Adaptación ilustrada IA",
+                    "es": "Magi and Helen · CC BY 2.0 · Adaptación ilustrada IA",
+                    "pt-BR": "Magi and Helen · CC BY 2.0 · Adaptación ilustrada IA"
+                }
+            }
+        },
+        {
+            "slug": "museo-de-arte-religioso-francisco-cristobal-toro",
+            "type": "place",
+            "latitude": null,
+            "longitude": null,
+            "display_order": 6,
+            "publication_status": "draft",
+            "translations": {
+                "en": {
+                    "name": "Museo de Arte Religioso Francisco Cristóbal Toro",
+                    "description": "Explore religious art preserved in a historic house.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20de%20Arte%20Religioso%20Francisco%20Crist%C3%B3bal%20Toro%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "es": {
+                    "name": "Museo de Arte Religioso Francisco Cristóbal Toro",
+                    "description": "Explora el arte religioso conservado en una casa histórica.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20de%20Arte%20Religioso%20Francisco%20Crist%C3%B3bal%20Toro%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "pt-BR": {
+                    "name": "Museo de Arte Religioso Francisco Cristóbal Toro",
+                    "description": "Explore a arte religiosa preservada em uma casa histórica.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20de%20Arte%20Religioso%20Francisco%20Crist%C3%B3bal%20Toro%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                }
+            },
+            "image": {
+                "file": "images/01244a929a1860c649cacf48e423ad1e1e7bb84c38ef45193f781ce17c8bd696.webp",
+                "image_origin": "ai_generated",
+                "image_creator": "Adaptación ilustrada IA de fotografía de SajoR",
+                "image_source_url": "https://commons.wikimedia.org/wiki/File:Museo_Arte_Religioso-Santa_Fe_de_Antioquia.jpg",
+                "image_license": "CC BY-SA 2.5; fotografía transformada a ilustración IA",
+                "image_license_url": "https://creativecommons.org/licenses/by-sa/2.5/",
+                "alt": {
+                    "en": "Illustration of the real façade of Museo de Arte Religioso Francisco Cristóbal Toro.",
+                    "es": "Ilustración de la fachada real del Museo de Arte Religioso Francisco Cristóbal Toro.",
+                    "pt-BR": "Ilustração da fachada real do Museo de Arte Religioso Francisco Cristóbal Toro."
+                },
+                "caption": {
+                    "en": "SajoR · CC BY-SA 2.5 · Adaptación ilustrada IA",
+                    "es": "SajoR · CC BY-SA 2.5 · Adaptación ilustrada IA",
+                    "pt-BR": "SajoR · CC BY-SA 2.5 · Adaptación ilustrada IA"
+                }
+            }
+        },
+        {
+            "slug": "plazuela-e-iglesia-de-la-chinca",
+            "type": "place",
+            "latitude": null,
+            "longitude": null,
+            "display_order": 7,
+            "publication_status": "draft",
+            "translations": {
+                "en": {
+                    "name": "La Chinca Church",
+                    "description": "Church of Our Lady of Chiquinquirá and its small square.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=La%20Chinca%20Church%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "es": {
+                    "name": "Iglesia de La Chinca",
+                    "description": "Templo de Nuestra Señora de Chiquinquirá y su plazuela.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Iglesia%20de%20La%20Chinca%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "pt-BR": {
+                    "name": "Igreja de La Chinca",
+                    "description": "Templo de Nossa Senhora de Chiquinquirá e sua pequena praça.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Igreja%20de%20La%20Chinca%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                }
+            },
+            "image": {
+                "file": "images/f632e6a1f5ede2608c4babb6c51f5e6815cb91e21f329ba7b6abb75ec20cc11d.webp",
+                "image_origin": "ai_generated",
+                "image_creator": "Ilustración editorial generada con IA para Explorando Lugares",
+                "image_source_url": "",
+                "image_license": "Composición independiente generada con IA; borrador pendiente de revisión editorial humana; proceden",
+                "image_license_url": "",
+                "alt": {
+                    "en": "Editorial illustration: Plazuela e iglesia de La Chinca",
+                    "es": "Ilustración editorial: Plazuela e iglesia de La Chinca",
+                    "pt-BR": "Ilustração editorial: Plazuela e iglesia de La Chinca"
+                },
+                "caption": {
+                    "en": "",
+                    "es": "",
+                    "pt-BR": ""
+                }
+            }
+        },
+        {
+            "slug": "conocer-la-filigrana",
+            "type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "display_order": 8,
+            "publication_status": "draft",
+            "translations": {
+                "en": {
+                    "name": "Filigree workshop",
+                    "description": "Discover filigree jewellery and take part in a craft workshop.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Filigree%20workshop%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "es": {
+                    "name": "Taller de filigrana",
+                    "description": "Conoce la filigrana y participa en un taller artesanal.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Taller%20de%20filigrana%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "pt-BR": {
+                    "name": "Oficina de filigrana",
+                    "description": "Conheça a filigrana e participe de uma oficina artesanal.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Oficina%20de%20filigrana%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                }
+            },
+            "image": {
+                "file": "images/fd2bacb4b24eda91593fcb3fcc1b5c798559653d7d6752052d2c550666ab02dc.webp",
+                "image_origin": "ai_generated",
+                "image_creator": "Ilustración editorial generada con IA para Explorando Lugares",
+                "image_source_url": "",
+                "image_license": "Composición independiente generada con IA; borrador pendiente de revisión editorial humana; proceden",
+                "image_license_url": "",
+                "alt": {
+                    "en": "Thematic illustration: Filigree workshop",
+                    "es": "Ilustración temática: Taller de filigrana",
+                    "pt-BR": "Ilustração temática: Oficina de filigrana"
+                },
+                "caption": {
+                    "en": "",
+                    "es": "",
+                    "pt-BR": ""
+                }
+            }
+        },
+        {
+            "slug": "recorrido-de-memoria-regional",
+            "type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "display_order": 11,
+            "publication_status": "draft",
+            "translations": {
+                "en": {
+                    "name": "Guided heritage walk",
+                    "description": "Explore the historic centre with a guide and discover its heritage.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Guided%20heritage%20walk%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "es": {
+                    "name": "Tour urbano patrimonial",
+                    "description": "Recorre el centro histórico con guía y conoce su patrimonio.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Tour%20urbano%20patrimonial%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "pt-BR": {
+                    "name": "Passeio urbano patrimonial",
+                    "description": "Percorra o centro histórico com guia e conheça seu patrimônio.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Passeio%20urbano%20patrimonial%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                }
+            },
+            "image": {
+                "file": "images/88fc2738324807a23ddabc026f4abb77da36c3de5f9876e5d05335854f9fa12e.webp",
+                "image_origin": "ai_generated",
+                "image_creator": "Ilustración editorial generada con IA para Explorando Lugares",
+                "image_source_url": "",
+                "image_license": "Composición independiente generada con IA; borrador pendiente de revisión editorial humana; proceden",
+                "image_license_url": "",
+                "alt": {
+                    "en": "Illustration of a guided town walk.",
+                    "es": "Ilustración de un recorrido urbano con guía.",
+                    "pt-BR": "Ilustração de um passeio urbano com guia."
+                },
+                "caption": {
+                    "en": "",
+                    "es": "",
+                    "pt-BR": ""
+                }
+            }
+        },
+        {
+            "slug": "tour-gastronomico",
+            "type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "display_order": 10,
+            "publication_status": "draft",
+            "translations": {
+                "en": {
+                    "name": "Food tour",
+                    "description": "Discover traditional flavours on a guided food walk.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Food%20tour%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "es": {
+                    "name": "Tour gastronómico",
+                    "description": "Conoce sabores tradicionales en un recorrido guiado.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Tour%20gastron%C3%B3mico%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "pt-BR": {
+                    "name": "Passeio gastronômico",
+                    "description": "Conheça sabores tradicionais em um passeio guiado.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Passeio%20gastron%C3%B4mico%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                }
+            },
+            "image": {
+                "file": "images/7f2b0ab30e20f94d42d769019a4bd93306d860ba0439c1ac6a5b6d35095bcfb3.webp",
+                "image_origin": "ai_generated",
+                "image_creator": "Ilustración editorial generada con IA para Explorando Lugares",
+                "image_source_url": "",
+                "image_license": "Composición independiente generada con IA; borrador pendiente de revisión editorial humana; proceden",
+                "image_license_url": "",
+                "alt": {
+                    "en": "Thematic illustration of a guided local food tasting.",
+                    "es": "Ilustración temática de una degustación guiada de sabores locales.",
+                    "pt-BR": "Ilustração temática de uma degustação guiada de sabores locais."
+                },
+                "caption": {
+                    "en": "",
+                    "es": "",
+                    "pt-BR": ""
+                }
+            }
+        },
+        {
+            "slug": "cabalgata-rural",
+            "type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "display_order": 9,
+            "publication_status": "draft",
+            "translations": {
+                "en": {
+                    "name": "Guided countryside horse ride",
+                    "description": "Explore country paths on horseback with a guide.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Guided%20countryside%20horse%20ride%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "es": {
+                    "name": "Cabalgata rural",
+                    "description": "Recorre caminos rurales a caballo con guía.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Cabalgata%20rural%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "pt-BR": {
+                    "name": "Cavalgada rural",
+                    "description": "Percorra caminhos rurais a cavalo com guia.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Cavalgada%20rural%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                }
+            },
+            "image": {
+                "file": "images/7373a0581858553df3c99d612d850d3ade25b40e8b4b0a4e7190b8489f60c096.webp",
+                "image_origin": "ai_generated",
+                "image_creator": "Ilustración editorial generada con IA para Explorando Lugares",
+                "image_source_url": "",
+                "image_license": "Composición temática independiente de la actividad; no representa al oferente ni un recinto exacto. ",
+                "image_license_url": "",
+                "alt": {
+                    "en": "Thematic illustration: Guided countryside horse ride",
+                    "es": "Ilustración temática: Cabalgata rural",
+                    "pt-BR": "Ilustração temática: Cavalgada rural"
+                },
+                "caption": {
+                    "en": "",
+                    "es": "",
+                    "pt-BR": ""
+                }
+            }
+        }
+    ]
+}
