@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "status": "borrador_textual_sin_imagenes_no_publicable",
+  "destination": {
+    "slug": "arboletes",
+    "country": "CO",
+    "department": "antioquia",
+    "state": "draft",
+    "hero_image": null,
+    "translations": {
+      "es": {
+        "name": "Arboletes",
+        "tagline": "Mar Caribe, volcán de lodo y cultura del Urabá antioqueño.",
+        "intro": "Conoce el volcán de lodo y el litoral de este municipio costero de Antioquia.",
+        "history": "La ganadería, la agricultura y el mar forman parte de la vida de Arboletes. Su volcán de lodo y las tradiciones del Caribe dan identidad a este rincón del Urabá.",
+        "seo_title": "Arboletes: volcán de lodo y lugares para conocer | Explorando Lugares",
+        "meta_description": "Descubre el volcán de lodo, las playas urbanas y Río Hobo en Arboletes, Antioquia. Prepara tu visita al Caribe del Urabá.",
+        "reasons": [
+          "Un volcán de lodo junto al Caribe",
+          "Paisaje costero del Urabá",
+          "Tradiciones del Caribe antioqueño"
+        ]
+      },
+      "en": {
+        "name": "Arboletes",
+        "tagline": "Caribbean coast, mud volcano and the culture of Urabá.",
+        "intro": "Discover the mud volcano and coastline of this seaside municipality in Antioquia.",
+        "history": "Cattle farming, agriculture and the sea are part of daily life in Arboletes. Its mud volcano and Caribbean traditions shape the identity of this corner of Urabá.",
+        "seo_title": "Arboletes: mud volcano and places to visit | Explorando Lugares",
+        "meta_description": "Discover the mud volcano, urban beaches and Hobo River in Arboletes, Antioquia. Plan a visit to the Caribbean coast of Urabá.",
+        "reasons": [
+          "A mud volcano by the Caribbean",
+          "The coastline of Urabá",
+          "Caribbean traditions in Antioquia"
+        ]
+      },
+      "pt": {
+        "name": "Arboletes",
+        "tagline": "Mar do Caribe, vulcão de lama e cultura do Urabá antioquenho.",
+        "intro": "Conheça o vulcão de lama e o litoral deste município costeiro de Antioquia.",
+        "history": "A pecuária, a agricultura e o mar fazem parte da vida de Arboletes. Seu vulcão de lama e as tradições caribenhas dão identidade a este canto do Urabá.",
+        "seo_title": "Arboletes: vulcão de lama e lugares para conhecer | Explorando Lugares",
+        "meta_description": "Descubra o vulcão de lama, as praias urbanas e o rio Hobo em Arboletes, Antioquia. Planeje sua visita ao Caribe do Urabá.",
+        "reasons": [
+          "Um vulcão de lama junto ao Caribe",
+          "Paisagem costeira do Urabá",
+          "Tradições do Caribe antioquenho"
+        ]
+      }
+    }
+  },
+  "places": [
+    {
+      "slug": "volcan-de-lodo",
+      "type": "place",
+      "display_order": 1,
+      "state": "draft",
+      "image": null,
+      "translations": {
+        "es": {
+          "title": "Volcán de Lodo",
+          "description": "Un fenómeno geológico junto al Caribe, con acceso administrado."
+        },
+        "en": {
+          "title": "Mud Volcano",
+          "description": "A geological formation beside the Caribbean, with managed access."
+        },
+        "pt": {
+          "title": "Vulcão de Lama",
+          "description": "Uma formação geológica junto ao Caribe, com acesso administrado."
+        }
+      }
+    },
+    {
+      "slug": "playas-urbanas",
+      "type": "place",
+      "display_order": 2,
+      "state": "draft",
+      "image": null,
+      "translations": {
+        "es": {
+          "title": "Playas urbanas",
+          "description": "El litoral junto al pueblo, entre sectores de playa y frentes construidos."
+        },
+        "en": {
+          "title": "Urban beaches",
+          "description": "The town coastline, combining beach sections with built-up waterfronts."
+        },
+        "pt": {
+          "title": "Praias urbanas",
+          "description": "O litoral junto à cidade, entre trechos de praia e áreas construídas."
+        }
+      }
+    },
+    {
+      "slug": "desembocadura-rio-hobo",
+      "type": "place",
+      "display_order": 3,
+      "state": "draft",
+      "image": null,
+      "translations": {
+        "es": {
+          "title": "Desembocadura del río Hobo",
+          "description": "El encuentro del río con el Caribe y su paisaje ribereño."
+        },
+        "en": {
+          "title": "Hobo River mouth",
+          "description": "Where the river meets the Caribbean and its riverside landscape."
+        },
+        "pt": {
+          "title": "Foz do rio Hobo",
+          "description": "O encontro do rio com o Caribe e sua paisagem ribeirinha."
+        }
+      }
+    },
+    {
+      "slug": "taller-bullerengue",
+      "type": "experience",
+      "display_order": 1,
+      "state": "draft",
+      "image": null,
+      "translations": {
+        "es": {
+          "title": "Taller de bullerengue",
+          "description": "Acércate al ritmo y al baile de esta tradición del Caribe."
+        },
+        "en": {
+          "title": "Bullerengue workshop",
+          "description": "Discover the rhythm and dance of this Caribbean tradition."
+        },
+        "pt": {
+          "title": "Oficina de bullerengue",
+          "description": "Conheça o ritmo e a dança desta tradição caribenha."
+        }
+      }
+    }
+  ],
+  "seo": {
+    "public_path_proposed": "/lugares/arboletes/",
+    "preview_noindex": true,
+    "metadata_draft": true,
+    "http_sitemap_hreflang_social_checks": "pending_integration",
+    "image_pending": true
+  }
+}

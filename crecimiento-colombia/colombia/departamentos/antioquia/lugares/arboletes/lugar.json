@@ -2,16 +2,19 @@
   "schema_version": 1,
   "place_id": "CO-05-arboletes",
   "department_id": "CO-05",
-  "state": "planned",
-  "owner": null,
+  "state": "in_progress",
+  "owner": "worker_nuevo_arboletes",
   "reviewer": null,
   "branch": "lugar/CO/antioquia/arboletes",
   "pr_url": null,
-  "base_commit": null,
+  "base_commit": "3c1feab1",
   "blockers": [
-    "Asignar responsable y auditar fuentes, permisos y estado real"
+    "Imágenes y comparación geográfica pendientes",
+    "Directorio6/30 y tres categorías vacías",
+    "Canal propio de oferta cultural pendiente",
+    "SEO HTTP e integración pendientes"
   ],
-  "next_action": "Completar PROCESO.md y evidencia específica del lugar",
+  "next_action": "Revisar borrador textual y referencias visuales; completar directorio y confirmar canal de experiencia",
   "gates": {
     "identidad": {
       "passed": false,
@@ -70,5 +73,12 @@
   },
   "approval": null,
   "publication": null,
-  "worker_deliveries": []
+  "worker_deliveries": [
+    {
+      "date": "2026-10-21",
+      "path": "crecimiento-colombia/entregas/arboletes",
+      "status": "borrador_para_revision_sin_imagenes",
+      "approved": false
+    }
+  ]
 }

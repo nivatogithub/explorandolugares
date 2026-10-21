@@ -1,0 +1,93 @@
+{
+  "checked_at": "2026-10-21",
+  "generated_images": 0,
+  "references_pending": 5,
+  "items": [
+    {
+      "component": "portada",
+      "status": "pending_reference_review",
+      "image": null,
+      "ratio": "3:2",
+      "sources": [
+        "obras",
+        "activa"
+      ],
+      "required": "Foto actual volcán y relación con costa, verificar cámara y obras reales.",
+      "prohibited": [
+        "Playa virgen genérica",
+        "Obras proyectadas dibujadas como terminadas",
+        "Geografía inventada"
+      ],
+      "generation_authorized_in_this_delivery": false
+    },
+    {
+      "component": "volcan-de-lodo",
+      "status": "pending_reference_review",
+      "image": null,
+      "ratio": "3:2",
+      "sources": [
+        "obras",
+        "activa"
+      ],
+      "required": "Cráter y senderos actuales en encuadre distinto de portada.",
+      "prohibited": [
+        "Playa virgen genérica",
+        "Obras proyectadas dibujadas como terminadas",
+        "Geografía inventada"
+      ],
+      "generation_authorized_in_this_delivery": false
+    },
+    {
+      "component": "playas-urbanas",
+      "status": "pending_reference_review",
+      "image": null,
+      "ratio": "3:2",
+      "sources": [
+        "playas",
+        "erosion"
+      ],
+      "required": "Tramo identificado Mi Remanso o Muelle con fecha posterior a recuperación, arena real y construcciones.",
+      "prohibited": [
+        "Playa virgen genérica",
+        "Obras proyectadas dibujadas como terminadas",
+        "Geografía inventada"
+      ],
+      "generation_authorized_in_this_delivery": false
+    },
+    {
+      "component": "desembocadura-rio-hobo",
+      "status": "pending_reference_review",
+      "image": null,
+      "ratio": "3:2",
+      "sources": [
+        "playas",
+        "erosion"
+      ],
+      "required": "Desembocadura identificada y dirección río-mar, vegetación y acceso reales.",
+      "prohibited": [
+        "Playa virgen genérica",
+        "Obras proyectadas dibujadas como terminadas",
+        "Geografía inventada"
+      ],
+      "generation_authorized_in_this_delivery": false
+    },
+    {
+      "component": "taller-bullerengue",
+      "status": "pending_reference_review",
+      "image": null,
+      "ratio": "3:2",
+      "sources": [
+        "operador"
+      ],
+      "required": "Taller participativo identificado en Arboletes, no espectáculo de otro municipio.",
+      "prohibited": [
+        "Playa virgen genérica",
+        "Obras proyectadas dibujadas como terminadas",
+        "Geografía inventada"
+      ],
+      "generation_authorized_in_this_delivery": false
+    }
+  ],
+  "candidate_reference_url": "https://activa.com.co/wp-content/uploads/2026/05/DJI_20260521153214_0494_D-1024x576.jpg",
+  "candidate_pixel_review": "Web devolvió cache miss, imagen no inspeccionada; no declarar fiel antes de verla."
+}
