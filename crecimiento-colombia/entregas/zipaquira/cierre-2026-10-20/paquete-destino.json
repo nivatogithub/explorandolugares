@@ -1,0 +1,569 @@
+{
+    "schema_version": 2,
+    "destination": {
+        "slug": "zipaquira",
+        "destination_type": "municipality",
+        "country_code": "CO",
+        "department": "Cundinamarca",
+        "subregion": "Sabana Centro",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 100,
+        "translations": {
+            "en": {
+                "display_name": "Zipaquirá",
+                "eyebrow": "Cundinamarca · Colombia",
+                "headline": "Salt, heritage and life on the savanna",
+                "intro": "An underground cathedral and a historic centre to explore on foot.",
+                "meta_description": "An underground cathedral and a historic centre to explore on foot."
+            },
+            "es": {
+                "display_name": "Zipaquirá",
+                "eyebrow": "Cundinamarca · Colombia",
+                "headline": "Sal, patrimonio y vida de la sabana",
+                "intro": "Una catedral bajo tierra y un centro histórico para caminar.",
+                "meta_description": "Una catedral bajo tierra y un centro histórico para caminar."
+            },
+            "pt-BR": {
+                "display_name": "Zipaquirá",
+                "eyebrow": "Cundinamarca · Colombia",
+                "headline": "Sal, patrimônio e vida na savana",
+                "intro": "Uma catedral subterrânea e um centro histórico para percorrer a pé.",
+                "meta_description": "Uma catedral subterrânea e um centro histórico para percorrer a pé."
+            }
+        },
+        "history": {
+            "es": [
+                "La sal fue parte del intercambio muisca antes de la colonización española. La fundación colonial de Zipaquirá data de 1600. Su patrimonio salinero convive con plazas, arquitectura y la memoria escolar de Gabriel García Márquez; la actual Catedral de Sal abrió en 1995."
+            ],
+            "en": [
+                "Salt supported Muisca exchange before Spanish colonisation. Zipaquirá’s colonial foundation dates to 1600. Its salt-making heritage shares the city with historic squares, architecture and memories of Gabriel García Márquez’s school years; the current Salt Cathedral opened in 1995."
+            ],
+            "pt-BR": [
+                "O sal integrou as trocas muiscas antes da colonização espanhola. A fundação colonial de Zipaquirá data de 1600. Seu patrimônio salineiro convive com praças, arquitetura e a memória escolar de Gabriel García Márquez; a atual Catedral de Sal abriu em 1995."
+            ]
+        },
+        "reasons": {
+            "es": [
+                "Conocer el patrimonio salinero y recorrer el centro histórico."
+            ],
+            "en": [
+                "Discover salt-making heritage and explore the historic centre."
+            ],
+            "pt-BR": [
+                "Conhecer o patrimônio salineiro e percorrer o centro histórico."
+            ]
+        }
+    },
+    "hero_image": {
+        "file": "images/c2badfad9bda4389dc63d84ce26a38cb544a37dfdfd9751e5d6f44b0eb48c4c5.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Ilustración independiente generada con herramienta integrada imagegen; revisión humana pendiente",
+        "image_source_url": "",
+        "image_license": "Adaptación ilustrada desde referencia abierta; atribución y licencia en manifiesto de corrección.",
+        "image_license_url": "",
+        "alt": {
+            "en": "Zipaquirá: Salt Cathedral · editorial illustration",
+            "es": "Zipaquirá: Catedral de Sal · ilustración editorial",
+            "pt-BR": "Zipaquirá: Catedral de Sal · ilustração editorial"
+        },
+        "caption": {
+            "en": "",
+            "es": "",
+            "pt-BR": ""
+        }
+    },
+    "places": [
+        {
+            "slug": "catedral-de-sal",
+            "type": "place",
+            "latitude": null,
+            "longitude": null,
+            "display_order": 1,
+            "publication_status": "draft",
+            "translations": {
+                "en": {
+                    "name": "Salt Cathedral",
+                    "description": "An underground sanctuary carved into salt rock.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Salt%20Cathedral%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "es": {
+                    "name": "Catedral de Sal",
+                    "description": "Un templo subterráneo tallado en la roca salina.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Catedral%20de%20Sal%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "pt-BR": {
+                    "name": "Catedral de Sal",
+                    "description": "Um santuário subterrâneo escavado na rocha salina.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Catedral%20de%20Sal%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                }
+            },
+            "image": {
+                "file": "images/be034a026989068701777078bb0d218912941d32b0d4776804d6edaec6dc0c34.webp",
+                "image_origin": "ai_generated",
+                "image_creator": "Ilustración independiente generada con herramienta integrada imagegen; revisión humana pendiente",
+                "image_source_url": "",
+                "image_license": "Adaptación ilustrada desde referencia abierta; atribución y licencia en manifiesto de corrección.",
+                "image_license_url": "",
+                "alt": {
+                    "en": "Salt Cathedral · editorial illustration",
+                    "es": "Catedral de Sal · ilustración editorial",
+                    "pt-BR": "Catedral de Sal · ilustração editorial"
+                },
+                "caption": {
+                    "en": "",
+                    "es": "",
+                    "pt-BR": ""
+                }
+            }
+        },
+        {
+            "slug": "plaza-comuneros",
+            "type": "place",
+            "latitude": null,
+            "longitude": null,
+            "display_order": 2,
+            "publication_status": "draft",
+            "translations": {
+                "en": {
+                    "name": "Plaza de los Comuneros",
+                    "description": "The historic heart, framed by the cathedral and heritage buildings.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Plaza%20de%20los%20Comuneros%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "es": {
+                    "name": "Plaza de los Comuneros",
+                    "description": "El corazón histórico, entre la catedral y edificios patrimoniales.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Plaza%20de%20los%20Comuneros%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "pt-BR": {
+                    "name": "Praça dos Comuneros",
+                    "description": "O coração histórico, entre a catedral e edifícios patrimoniais.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20dos%20Comuneros%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                }
+            },
+            "image": {
+                "file": "images/47d7c0bba510661928bc1edd7d88f911faecb10a2194b3a5d025230d0f5af8cf.webp",
+                "image_origin": "ai_generated",
+                "image_creator": "Ilustración independiente generada con herramienta integrada imagegen; revisión humana pendiente",
+                "image_source_url": "",
+                "image_license": "Adaptación ilustrada desde referencia abierta; atribución y licencia en manifiesto de corrección.",
+                "image_license_url": "",
+                "alt": {
+                    "en": "Plaza de los Comuneros · editorial illustration",
+                    "es": "Plaza de los Comuneros · ilustración editorial",
+                    "pt-BR": "Praça dos Comuneros · ilustração editorial"
+                },
+                "caption": {
+                    "en": "",
+                    "es": "",
+                    "pt-BR": ""
+                }
+            }
+        },
+        {
+            "slug": "catedral-diocesana",
+            "type": "place",
+            "latitude": null,
+            "longitude": null,
+            "display_order": 3,
+            "publication_status": "draft",
+            "translations": {
+                "en": {
+                    "name": "Diocesan Cathedral",
+                    "description": "The landmark stone church facing the main square.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Diocesan%20Cathedral%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "es": {
+                    "name": "Catedral Diocesana",
+                    "description": "El gran templo de piedra frente a la plaza principal.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Catedral%20Diocesana%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "pt-BR": {
+                    "name": "Catedral Diocesana",
+                    "description": "O grande templo de pedra diante da praça principal.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Catedral%20Diocesana%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                }
+            },
+            "image": {
+                "file": "images/457b21566651f559dd5f32210cb572a4f4b116f68ecde5582b7d9356144a12f5.webp",
+                "image_origin": "ai_generated",
+                "image_creator": "Ilustración independiente generada con herramienta integrada imagegen; revisión humana pendiente",
+                "image_source_url": "",
+                "image_license": "Adaptación ilustrada desde referencia abierta; atribución y licencia en manifiesto de corrección.",
+                "image_license_url": "",
+                "alt": {
+                    "en": "Diocesan Cathedral · editorial illustration",
+                    "es": "Catedral Diocesana · ilustración editorial",
+                    "pt-BR": "Catedral Diocesana · ilustração editorial"
+                },
+                "caption": {
+                    "en": "",
+                    "es": "",
+                    "pt-BR": ""
+                }
+            }
+        },
+        {
+            "slug": "estacion-tren",
+            "type": "place",
+            "latitude": null,
+            "longitude": null,
+            "display_order": 4,
+            "publication_status": "draft",
+            "translations": {
+                "en": {
+                    "name": "Railway Station",
+                    "description": "Arrival station for the tourist train from Bogotá. Explore the building and its railway experience.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Railway%20Station%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "es": {
+                    "name": "Estación del Tren",
+                    "description": "Aquí llega el tren turístico desde Bogotá. Conoce el edificio y consulta la experiencia ferroviaria.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Estaci%C3%B3n%20del%20Tren%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "pt-BR": {
+                    "name": "Estação Ferroviária",
+                    "description": "Aqui chega o trem turístico de Bogotá. Conheça o edifício e a experiência ferroviária.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Esta%C3%A7%C3%A3o%20Ferrovi%C3%A1ria%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                }
+            },
+            "image": {
+                "file": "images/083d877ebe942e25d81a90a47a05c8579de094a922b0135aff3eadee687e4d8c.webp",
+                "image_origin": "ai_generated",
+                "image_creator": "Explorando Lugares · ilustración IA desde referencia aportada por el propietario",
+                "image_source_url": "",
+                "image_license": "Propuesta ilustrada desde referencia del propietario; procedencia conservada; autoría y permiso de p",
+                "image_license_url": "",
+                "alt": {
+                    "en": "Railway Station · editorial illustration",
+                    "es": "Estación del Tren · ilustración editorial",
+                    "pt-BR": "Estação Ferroviária · ilustração editorial"
+                },
+                "caption": {
+                    "en": "",
+                    "es": "",
+                    "pt-BR": ""
+                }
+            }
+        },
+        {
+            "slug": "colegio-gabo",
+            "type": "place",
+            "latitude": null,
+            "longitude": null,
+            "display_order": 5,
+            "publication_status": "draft",
+            "translations": {
+                "en": {
+                    "name": "Gabo’s School",
+                    "description": "Discover the memory of Gabriel García Márquez’s school years.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Gabo%E2%80%99s%20School%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "es": {
+                    "name": "El Colegio de Gabo",
+                    "description": "La memoria de los años escolares de Gabriel García Márquez.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=El%20Colegio%20de%20Gabo%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "pt-BR": {
+                    "name": "O Colégio de Gabo",
+                    "description": "A memória dos anos escolares de Gabriel García Márquez.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=O%20Col%C3%A9gio%20de%20Gabo%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                }
+            },
+            "image": {
+                "file": "images/438213f64269a4ba3f709a0db4862a0c7c7d6b78dd9df23c67f0c253917298aa.webp",
+                "image_origin": "ai_generated",
+                "image_creator": "Explorando Lugares · ilustración IA desde referencia aportada por el propietario",
+                "image_source_url": "",
+                "image_license": "Propuesta ilustrada desde referencia del propietario; procedencia conservada; autoría y permiso de p",
+                "image_license_url": "",
+                "alt": {
+                    "en": "Courtyard of the former Zipaquirá school · approximate illustration based on documented features",
+                    "es": "Patio del antiguo liceo de Zipaquirá · ilustración aproximada basada en rasgos documentados",
+                    "pt-BR": "Pátio do antigo liceu de Zipaquirá · ilustração aproximada baseada em características documentadas"
+                },
+                "caption": {
+                    "en": "",
+                    "es": "",
+                    "pt-BR": ""
+                }
+            }
+        },
+        {
+            "slug": "museo-quevedo",
+            "type": "place",
+            "latitude": null,
+            "longitude": null,
+            "display_order": 6,
+            "publication_status": "draft",
+            "translations": {
+                "en": {
+                    "name": "Quevedo Zornoza House Museum",
+                    "description": "A house devoted to the city’s musical heritage.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Quevedo%20Zornoza%20House%20Museum%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "es": {
+                    "name": "Casa Museo Quevedo Zornoza",
+                    "description": "Una casa para acercarse al patrimonio musical de la ciudad.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Casa%20Museo%20Quevedo%20Zornoza%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "pt-BR": {
+                    "name": "Casa Museu Quevedo Zornoza",
+                    "description": "Uma casa para conhecer o patrimônio musical da cidade.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Casa%20Museu%20Quevedo%20Zornoza%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                }
+            },
+            "image": {
+                "file": "images/50a54d0ed6ab360c63c596891027ac3f1973bdd38840cc5314437fe4609212c1.webp",
+                "image_origin": "ai_generated",
+                "image_creator": "Explorando Lugares · ilustración IA desde referencia aportada por el propietario",
+                "image_source_url": "",
+                "image_license": "Propuesta ilustrada desde referencia del propietario; procedencia conservada; autoría y permiso de p",
+                "image_license_url": "",
+                "alt": {
+                    "en": "Entrance to the Quevedo House Museum · approximate illustration based on documented features",
+                    "es": "Entrada de la Casa Museo Quevedo · ilustración aproximada basada en rasgos documentados",
+                    "pt-BR": "Entrada da Casa Museu Quevedo · ilustração aproximada baseada em características documentadas"
+                },
+                "caption": {
+                    "en": "",
+                    "es": "",
+                    "pt-BR": ""
+                }
+            }
+        },
+        {
+            "slug": "museo-arqueologico",
+            "type": "place",
+            "latitude": null,
+            "longitude": null,
+            "display_order": 7,
+            "publication_status": "draft",
+            "translations": {
+                "en": {
+                    "name": "Archaeological Museum",
+                    "description": "Objects and stories that explore the pre-Hispanic past.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Archaeological%20Museum%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "es": {
+                    "name": "Museo Arqueológico",
+                    "description": "Piezas y relatos para conocer el pasado prehispánico.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20Arqueol%C3%B3gico%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "pt-BR": {
+                    "name": "Museu Arqueológico",
+                    "description": "Peças e relatos para conhecer o passado pré-hispânico.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Museu%20Arqueol%C3%B3gico%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                }
+            },
+            "image": {
+                "file": "images/b9bf6e4293e304f653dd091b21749efbad5b3fe5ae61ffaea46d387255468729.webp",
+                "image_origin": "ai_generated",
+                "image_creator": "Explorando Lugares · ilustración IA desde referencia aportada por el propietario",
+                "image_source_url": "",
+                "image_license": "Propuesta ilustrada desde referencia del propietario; procedencia conservada; autoría y permiso de p",
+                "image_license_url": "",
+                "alt": {
+                    "en": "Archaeological Museum · editorial illustration",
+                    "es": "Museo Arqueológico · ilustración editorial",
+                    "pt-BR": "Museu Arqueológico · ilustração editorial"
+                },
+                "caption": {
+                    "en": "",
+                    "es": "",
+                    "pt-BR": ""
+                }
+            }
+        },
+        {
+            "slug": "ruta-del-minero",
+            "type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "display_order": 8,
+            "publication_status": "draft",
+            "translations": {
+                "en": {
+                    "name": "Mining experience",
+                    "description": "Try salt-rock mining on a guided visit. Age and health restrictions apply.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Mining%20experience%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "es": {
+                    "name": "Experiencia minera",
+                    "description": "Pica roca salina en un recorrido guiado. Aplican restricciones de edad y salud.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Experiencia%20minera%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "pt-BR": {
+                    "name": "Experiência de mineração",
+                    "description": "Experimente a extração de sal em visita guiada. Há restrições de idade e saúde.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Experi%C3%AAncia%20de%20minera%C3%A7%C3%A3o%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                }
+            },
+            "image": {
+                "file": "images/e294f327be12a0e37e75bbd361c66fb7c72ee7999740836fe4c530f9dc553b0e.webp",
+                "image_origin": "ai_generated",
+                "image_creator": "Ilustración IA desde referencia aportada por propietario",
+                "image_source_url": "",
+                "image_license": "Referencia de propietario; autor, fecha y permiso de publicación pendientes de documentar",
+                "image_license_url": "",
+                "alt": {
+                    "en": "Visitor tunnel with reflecting water, illustrated from the supplied reference; not salt extraction.",
+                    "es": "Túnel de visita con espejo de agua, ilustrado desde la referencia aportada; no muestra extracción de sal.",
+                    "pt-BR": "Túnel de visita com espelho de água, ilustrado a partir da referência fornecida; não mostra extração de sal."
+                },
+                "caption": {
+                    "en": "",
+                    "es": "",
+                    "pt-BR": ""
+                }
+            }
+        },
+        {
+            "slug": "tren-sabana",
+            "type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "display_order": 9,
+            "publication_status": "draft",
+            "translations": {
+                "en": {
+                    "name": "Tourist train ride",
+                    "description": "Travel from Bogotá to Zipaquirá station on a heritage train. Check departures and conditions.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Tourist%20train%20ride%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "es": {
+                    "name": "Paseo en tren turístico",
+                    "description": "Viaja desde Bogotá y llega a la estación de Zipaquirá. Consulta salidas y condiciones.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Paseo%20en%20tren%20tur%C3%ADstico%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "pt-BR": {
+                    "name": "Passeio de trem turístico",
+                    "description": "Viaje de Bogotá até a estação de Zipaquirá em trem histórico. Consulte saídas e condições.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Passeio%20de%20trem%20tur%C3%ADstico%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                }
+            },
+            "image": {
+                "file": "images/9f088d4847c0a853b2e794e6a503d7786d292cfec91b44b0a4757ce4aca6ff5a.webp",
+                "image_origin": "ai_generated",
+                "image_creator": "Explorando Lugares · ilustración IA desde referencia aportada por el propietario",
+                "image_source_url": "",
+                "image_license": "Propuesta ilustrada desde referencia del propietario; procedencia conservada; autoría y permiso de p",
+                "image_license_url": "",
+                "alt": {
+                    "en": "Historical photograph of the train in the Zipaquirá railway yard",
+                    "es": "Fotografía histórica del tren en el patio ferroviario de Zipaquirá",
+                    "pt-BR": "Fotografia histórica do trem no pátio ferroviário de Zipaquirá"
+                },
+                "caption": {
+                    "en": "",
+                    "es": "",
+                    "pt-BR": ""
+                }
+            }
+        },
+        {
+            "slug": "recorrido-historico",
+            "type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "display_order": 10,
+            "publication_status": "draft",
+            "translations": {
+                "en": {
+                    "name": "Heritage walking tour",
+                    "description": "Explore the historic centre with a guide and prior registration. Confirm departure.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Heritage%20walking%20tour%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "es": {
+                    "name": "Tour urbano patrimonial",
+                    "description": "Conoce el centro histórico con guía y previa inscripción. Confirma la salida.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Tour%20urbano%20patrimonial%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "pt-BR": {
+                    "name": "Passeio guiado pelo patrimônio",
+                    "description": "Conheça o centro histórico com guia e inscrição prévia. Confirme a saída.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Passeio%20guiado%20pelo%20patrim%C3%B4nio%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                }
+            },
+            "image": {
+                "file": "images/b1e3f041372ef13952c2f7e944e06acd08e1c4ffa9610c04f1b423c548eb367d.webp",
+                "image_origin": "ai_generated",
+                "image_creator": "Rémi Jouan · adaptación ilustrada con IA",
+                "image_source_url": "https://commons.wikimedia.org/wiki/File:Zipaquira_-_Place_(1).JPG",
+                "image_license": "CC BY-SA 3.0",
+                "image_license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+                "alt": {
+                    "en": "Walk through central Zipaquirá · illustration based on an identified view",
+                    "es": "Paseo por el centro de Zipaquirá · ilustración basada en una vista identificada",
+                    "pt-BR": "Passeio pelo centro de Zipaquirá · ilustração baseada em vista identificada"
+                },
+                "caption": {
+                    "en": "",
+                    "es": "",
+                    "pt-BR": ""
+                }
+            }
+        }
+    ]
+}
