@@ -15,7 +15,12 @@ for page in root.rglob('*.html'):
  if rel in ['index.html','en/index.html','pt-br/index.html']:
   prefix='' if lang=='es' else '/'+lang
   s=re.sub(r'(<section id="destinos" class="section">).*?</section>',lambda m:'<section id="destinos" class="section"><div class="sectionhead"><div><p class="eyebrow">'+c['title']+'</p><h2>'+c['heading']+'</h2></div><p>'+c['intro']+'</p></div><div class="home-attractions" data-home-attractions><p>'+c['fallback']+'</p></div><p><a class="text-link" href="'+prefix+'/destinos/">'+c['all']+'</a></p></section>',s,flags=re.S)
-  s=s.replace('Un país de muchos lugares para <em>volver.</em>','Colombia, un país con muchos lugares para <em>volver.</em>')
+  hero_titles={
+   'es':('Un país de muchos lugares para <em>volver.</em>','Colombia, un país con muchos lugares para <em>volver.</em>'),
+   'en':('A country with countless places to <em>return to.</em>','Colombia, a country with many places to <em>return to.</em>'),
+   'pt-br':('Um país com muitos lugares para <em>voltar.</em>','Colômbia, um país com muitos lugares para <em>voltar.</em>')}
+  old_title,new_title=hero_titles[lang]
+  s=s.replace('<h1>'+old_title+'</h1>','<h1>'+new_title+'</h1>')
   if 'portada-atracciones.css' not in s:s=s.replace('</head>','<link rel="stylesheet" href="/assets/portada-atracciones.css"></head>')
  if 'negocios-locales/planes/' in rel:
   if 'subscription-comparison.css' not in s:s=s.replace('</head>','<link rel="stylesheet" href="/assets/subscription-comparison.css"></head>')
