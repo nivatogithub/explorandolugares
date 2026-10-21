@@ -1,0 +1,1104 @@
+{
+  "destination": {
+    "id": 1,
+    "slug": "jerico",
+    "destination_type": "municipality",
+    "country_code": "CO",
+    "department": "Antioquia",
+    "subregion": "Suroeste",
+    "latitude": null,
+    "longitude": null,
+    "publication_status": "published",
+    "display_order": 1,
+    "created_at": "2026-10-16 19:56:33",
+    "updated_at": "2026-10-16 19:56:33",
+    "translations": {
+      "en": {
+        "destination_id": 1,
+        "locale": "en",
+        "display_name": "Jericó",
+        "eyebrow": "Southwestern Antioquia · Colombia",
+        "headline": "Find your pace.",
+        "intro": "Streets to wander, coffee to share and crafts that tell stories. A destination among the mountains to experience your way.",
+        "meta_description": "Discover Jericó, Antioquia: culture, leathercraft traditions and coffee landscapes. Prepare your visit and connect with local life."
+      },
+      "es": {
+        "destination_id": 1,
+        "locale": "es",
+        "display_name": "Jericó",
+        "eyebrow": "Suroeste antioqueño · Colombia",
+        "headline": "Encuentra tu ritmo.",
+        "intro": "Calles para recorrer, café para compartir y oficios que cuentan historias. Un destino entre montañas para vivir a tu manera.",
+        "meta_description": "Descubre Jericó, Antioquia: cultura, tradición del carriel y paisaje cafetero. Prepara tu visita y conecta con su vida local."
+      },
+      "pt-BR": {
+        "destination_id": 1,
+        "locale": "pt-BR",
+        "display_name": "Jericó",
+        "eyebrow": "Sudoeste de Antioquia · Colômbia",
+        "headline": "Encontre o seu ritmo.",
+        "intro": "Ruas para explorar, café para partilhar e comércios que contam histórias. Um destino entre montanhas para viver do seu jeito.",
+        "meta_description": "Descubra Jericó, Antioquia: cultura, tradição carriel e paisagem cafeeira. Prepare a sua visita e conecte-se com a vida local."
+      }
+    },
+    "history": {
+      "es": [
+        "Fundado en 1850, Jericó creció alrededor del comercio, el café y los caminos de los arrieros. Su centro histórico conserva calles, casas y balcones que cuentan parte de esa historia y fue reconocido como patrimonio cultural nacional en 2018.",
+        "Jericó también es el lugar donde nació Laura Montoya, conocida como la Santa Madre Laura y primera santa colombiana. Su historia como educadora y misionera forma parte de la identidad del pueblo; su casa natal es uno de los lugares para acercarse a ese legado."
+      ],
+      "en": [
+        "Founded in 1850, Jericó grew around trade, coffee and muleteers’ routes. Its historic centre preserves streets, houses and balconies that tell part of that story and was recognised as national cultural heritage in 2018.",
+        "Jericó is also the birthplace of Laura Montoya, known as Mother Laura and Colombia’s first saint. Her work as a teacher and missionary is part of the town’s identity; her birthplace offers a way to discover that legacy."
+      ],
+      "pt-BR": [
+        "Fundada em 1850, Jericó cresceu em torno do comércio, do café e das estradas dos tropeiros. O seu centro histórico preserva ruas, casas e varandas que contam parte dessa história e foi reconhecido como património cultural nacional em 2018.",
+        "Jericó é também o lugar onde nasceu Laura Montoya, conhecida como Santa Madre Laura e a primeira santa colombiana. Sua história como educadora e missionária faz parte da identidade da cidade; Sua cidade natal é um dos lugares para se aproximar desse legado."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Por sus calles, balcones y arquitectura tradicional.",
+        "Por la tradición del carriel y su cultura cafetera.",
+        "Por sus miradores y espacios para acercarse a la naturaleza."
+      ],
+      "en": [
+        "For its streets, balconies and traditional architecture.",
+        "For its carriel leathercraft tradition and coffee culture.",
+        "For its viewpoints and places to connect with nature."
+      ],
+      "pt-BR": [
+        "Pelas suas ruas, varandas e arquitetura tradicional.",
+        "Pela tradição carriel e sua cultura cafeeira.",
+        "Pelos seus mirantes e espaços para se aproximar da natureza."
+      ]
+    },
+    "places": [
+      {
+        "id": 1,
+        "slug": "centro-historico",
+        "type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": 10,
+        "translations": {
+          "en": {
+            "id": 1,
+            "slug": "centro-historico",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 1,
+            "locale": "en",
+            "name": "Historic centre",
+            "description": "Explore the main square and nearby streets to discover the town’s architecture and everyday life.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Parque+principal+Jeric%C3%B3+Antioquia+Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 10
+          },
+          "es": {
+            "id": 1,
+            "slug": "centro-historico",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 1,
+            "locale": "es",
+            "name": "Centro histórico",
+            "description": "Recorre el parque principal y las calles cercanas para conocer la arquitectura y la vida cotidiana del pueblo.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Parque+principal+Jeric%C3%B3+Antioquia+Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 10
+          },
+          "pt-BR": {
+            "id": 1,
+            "slug": "centro-historico",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 1,
+            "locale": "pt-BR",
+            "name": "centro histórico",
+            "description": "Caminhe pelo parque principal e pelas ruas próximas para conhecer a arquitetura e o cotidiano da cidade.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Parque+principal+Jeric%C3%B3+Antioquia+Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 10
+          }
+        }
+      },
+      {
+        "id": 2,
+        "slug": "cerro-el-salvador",
+        "type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": 4,
+        "translations": {
+          "en": {
+            "id": 2,
+            "slug": "cerro-el-salvador",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 2,
+            "locale": "en",
+            "name": "Cerro El Salvador",
+            "description": "A viewpoint overlooking the town and the surrounding mountains.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Cerro+El+Salvador+Jeric%C3%B3+Antioquia+Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 4
+          },
+          "es": {
+            "id": 2,
+            "slug": "cerro-el-salvador",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 2,
+            "locale": "es",
+            "name": "Cerro El Salvador",
+            "description": "Un mirador para contemplar el pueblo y las montañas que lo rodean.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Cerro+El+Salvador+Jeric%C3%B3+Antioquia+Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 4
+          },
+          "pt-BR": {
+            "id": 2,
+            "slug": "cerro-el-salvador",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 2,
+            "locale": "pt-BR",
+            "name": "Colina de El Salvador",
+            "description": "Um miradouro para contemplar a vila e as montanhas que a rodeiam.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Cerro+El+Salvador+Jeric%C3%B3+Antioquia+Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 4
+          }
+        }
+      },
+      {
+        "id": 3,
+        "slug": "santuario-de-santa-laura",
+        "type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": 11,
+        "translations": {
+          "en": {
+            "id": 3,
+            "slug": "santuario-de-santa-laura",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 3,
+            "locale": "en",
+            "name": "Saint Laura Sanctuary",
+            "description": "The pink church is one of the striking facades you can discover while walking through Jericó and exploring its religious heritage.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Santuario%20Santa%20Laura%20Jeric%C3%B3%20Antioquia%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 11
+          },
+          "es": {
+            "id": 3,
+            "slug": "santuario-de-santa-laura",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 3,
+            "locale": "es",
+            "name": "Santuario de Santa Laura",
+            "description": "La iglesia rosada es una de las fachadas que llaman la atención al recorrer Jericó y conocer su patrimonio religioso.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Santuario%20Santa%20Laura%20Jeric%C3%B3%20Antioquia%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 11
+          },
+          "pt-BR": {
+            "id": 3,
+            "slug": "santuario-de-santa-laura",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 3,
+            "locale": "pt-BR",
+            "name": "Santuário de Santa Laura",
+            "description": "A igreja rosa é uma das fachadas que chamam a atenção quando se percorre Jericó e se conhece o seu património religioso.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Santuario%20Santa%20Laura%20Jeric%C3%B3%20Antioquia%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 11
+          }
+        }
+      },
+      {
+        "id": 4,
+        "slug": "casa-natal-de-santa-laura",
+        "type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": 1,
+        "translations": {
+          "en": {
+            "id": 4,
+            "slug": "casa-natal-de-santa-laura",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 4,
+            "locale": "en",
+            "name": "Birthplace of Saint Laura",
+            "description": "Discover a place connected to Laura Montoya’s history and Jericó’s religious heritage.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Casa+natal+Santa+Laura+Jeric%C3%B3+Antioquia+Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 1
+          },
+          "es": {
+            "id": 4,
+            "slug": "casa-natal-de-santa-laura",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 4,
+            "locale": "es",
+            "name": "Casa natal de Santa Laura",
+            "description": "Conoce un lugar vinculado a la historia de Laura Montoya y a la tradición religiosa de Jericó.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Casa+natal+Santa+Laura+Jeric%C3%B3+Antioquia+Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 1
+          },
+          "pt-BR": {
+            "id": 4,
+            "slug": "casa-natal-de-santa-laura",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 4,
+            "locale": "pt-BR",
+            "name": "Local de nascimento de Santa Laura",
+            "description": "Conheça um lugar ligado à história de Laura Montoya e à tradição religiosa de Jericó.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Casa+natal+Santa+Laura+Jeric%C3%B3+Antioquia+Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 1
+          }
+        }
+      },
+      {
+        "id": 5,
+        "slug": "jardin-botanico-los-balsos",
+        "type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": 7,
+        "translations": {
+          "en": {
+            "id": 5,
+            "slug": "jardin-botanico-los-balsos",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 5,
+            "locale": "en",
+            "name": "Los Balsos Botanical Garden",
+            "description": "A garden near town with paths, a pond and abundant vegetation for a quiet walk and birdwatching.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Jard%C3%ADn+Bot%C3%A1nico+Los+Balsos+Jeric%C3%B3+Antioquia+Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 7
+          },
+          "es": {
+            "id": 5,
+            "slug": "jardin-botanico-los-balsos",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 5,
+            "locale": "es",
+            "name": "Jardín Botánico Los Balsos",
+            "description": "Un jardín de senderos, estanque y vegetación para caminar y observar aves, cerca del casco urbano.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Jard%C3%ADn+Bot%C3%A1nico+Los+Balsos+Jeric%C3%B3+Antioquia+Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 7
+          },
+          "pt-BR": {
+            "id": 5,
+            "slug": "jardin-botanico-los-balsos",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 5,
+            "locale": "pt-BR",
+            "name": "Jardim Botânico Los Balsos",
+            "description": "Um jardim com trilhas, lago e vegetação para caminhar e observar aves, perto da área urbana.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Jard%C3%ADn+Bot%C3%A1nico+Los+Balsos+Jeric%C3%B3+Antioquia+Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 7
+          }
+        }
+      },
+      {
+        "id": 6,
+        "slug": "subida-al-cerro-de-las-nubes",
+        "type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": 2,
+        "translations": {
+          "en": {
+            "id": 6,
+            "slug": "subida-al-cerro-de-las-nubes",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 6,
+            "locale": "en",
+            "name": "Cerro de las Nubes hike",
+            "description": "A mountain climb with viewpoints across southwestern Antioquia. Check trail access and local conditions before setting out.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Cerro+de+las+Nubes+Jeric%C3%B3+Antioquia+Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 2
+          },
+          "es": {
+            "id": 6,
+            "slug": "subida-al-cerro-de-las-nubes",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 6,
+            "locale": "es",
+            "name": "Subida al Cerro de las Nubes",
+            "description": "Un recorrido de montaña con miradores hacia el Suroeste antioqueño. Consulta el acceso al sendero y las condiciones locales antes de subir.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Cerro+de+las+Nubes+Jeric%C3%B3+Antioquia+Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 2
+          },
+          "pt-BR": {
+            "id": 6,
+            "slug": "subida-al-cerro-de-las-nubes",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 6,
+            "locale": "pt-BR",
+            "name": "Subida ao Cerro de las Nubes",
+            "description": "Um percurso de montanha com mirantes para o Sudoeste de Antioquia. Consulte o acesso à trilha e as condições locais antes de subir.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Cerro+de+las+Nubes+Jeric%C3%B3+Antioquia+Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 2
+          }
+        }
+      },
+      {
+        "id": 7,
+        "slug": "chorros-de-quebradona",
+        "type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": 3,
+        "translations": {
+          "en": {
+            "id": 7,
+            "slug": "chorros-de-quebradona",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 7,
+            "locale": "en",
+            "name": "Chorros de Quebradona",
+            "description": "A rural natural attraction in Jericó, known as Chorros de Quebradona. Check with local sources for the trailhead and current access conditions.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Chorros+de+Quebradona+Jeric%C3%B3+Antioquia+Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 3
+          },
+          "es": {
+            "id": 7,
+            "slug": "chorros-de-quebradona",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 7,
+            "locale": "es",
+            "name": "Chorros de Quebradona",
+            "description": "Atractivo natural rural de Jericó, mencionado como Chorros de Quebradona. Confirma con fuentes locales dónde inicia el recorrido y las condiciones actuales de acceso.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Chorros+de+Quebradona+Jeric%C3%B3+Antioquia+Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 3
+          },
+          "pt-BR": {
+            "id": 7,
+            "slug": "chorros-de-quebradona",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 7,
+            "locale": "pt-BR",
+            "name": "Chorros de Quebradona",
+            "description": "Atrativo natural rural de Jericó, conhecido como Chorros de Quebradona. Confirme com fontes locais onde começa o percurso e as condições atuais de acesso.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Chorros+de+Quebradona+Jeric%C3%B3+Antioquia+Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 3
+          }
+        }
+      },
+      {
+        "id": 8,
+        "slug": "helicoptero-medellin-jerico",
+        "type": "experience",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": 6,
+        "translations": {
+          "en": {
+            "id": 8,
+            "slug": "helicoptero-medellin-jerico",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 8,
+            "locale": "en",
+            "name": "Private helicopter flight Medellín–Jericó",
+            "description": "An aerial journey between Medellín and Jericó to discover the mountain scenery of southwestern Antioquia from another perspective. Confirm the route, departure and arrival points and flight conditions with the service provider.",
+            "map_url": "",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 6
+          },
+          "es": {
+            "id": 8,
+            "slug": "helicoptero-medellin-jerico",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 8,
+            "locale": "es",
+            "name": "Vuelo privado en helicóptero Medellín–Jericó",
+            "description": "Un recorrido aéreo entre Medellín y Jericó para descubrir el paisaje montañoso del Suroeste antioqueño desde otra perspectiva. Confirma con quien preste el servicio la ruta, los puntos de salida y llegada y las condiciones del vuelo.",
+            "map_url": "",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 6
+          },
+          "pt-BR": {
+            "id": 8,
+            "slug": "helicoptero-medellin-jerico",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 8,
+            "locale": "pt-BR",
+            "name": "Voo privativo de helicóptero Medellín–Jericó",
+            "description": "Um percurso aéreo entre Medellín e Jericó para conhecer as paisagens montanhosas do sudoeste de Antioquia de outra perspectiva. Confirme a rota, os pontos de partida e chegada e as condições do voo com o prestador do serviço.",
+            "map_url": "",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 6
+          }
+        }
+      },
+      {
+        "id": 9,
+        "slug": "parapente-puerto-arturo",
+        "type": "experience",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": 9,
+        "translations": {
+          "en": {
+            "id": 9,
+            "slug": "parapente-puerto-arturo",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 9,
+            "locale": "en",
+            "name": "Tandem paragliding in Jericó",
+            "description": "A tandem paragliding experience above the landscapes of southwestern Antioquia. Confirm launch and landing locations, duration and whether the flight can take place with the provider; these depend on weather conditions.",
+            "map_url": "",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 9
+          },
+          "es": {
+            "id": 9,
+            "slug": "parapente-puerto-arturo",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 9,
+            "locale": "es",
+            "name": "Parapente biplaza en Jericó",
+            "description": "Una experiencia de vuelo biplaza sobre el paisaje del Suroeste antioqueño. El despegue, el aterrizaje, la duración y la realización del vuelo deben confirmarse con el prestador y dependen de las condiciones meteorológicas.",
+            "map_url": "",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 9
+          },
+          "pt-BR": {
+            "id": 9,
+            "slug": "parapente-puerto-arturo",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 9,
+            "locale": "pt-BR",
+            "name": "Voo duplo de parapente em Jericó",
+            "description": "Uma experiência de voo duplo de parapente sobre as paisagens do sudoeste de Antioquia. Confirme com o prestador os locais de decolagem e pouso, a duração e a realização do voo, que dependem das condições meteorológicas.",
+            "map_url": "",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 9
+          }
+        }
+      },
+      {
+        "id": 10,
+        "slug": "experiencia-finca-cafetera",
+        "type": "experience",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": 5,
+        "translations": {
+          "en": {
+            "id": 10,
+            "slug": "experiencia-finca-cafetera",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 10,
+            "locale": "en",
+            "name": "Coffee farm experience",
+            "description": "Learn about coffee growing and processing during a visit to a farm in Jericó. A tour may include coffee plants, preparation methods and tasting. Confirm the farm, the activities included and availability before planning your visit.",
+            "map_url": "",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 5
+          },
+          "es": {
+            "id": 10,
+            "slug": "experiencia-finca-cafetera",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 10,
+            "locale": "es",
+            "name": "Experiencia en finca cafetera",
+            "description": "Conoce el cultivo y el proceso del café mediante una visita a una finca de Jericó. El recorrido puede acercarte a los cafetales, las formas de preparación y la degustación. Confirma la finca, los contenidos de la visita y la disponibilidad antes de organizarla.",
+            "map_url": "",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 5
+          },
+          "pt-BR": {
+            "id": 10,
+            "slug": "experiencia-finca-cafetera",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 10,
+            "locale": "pt-BR",
+            "name": "Experiência em fazenda de café",
+            "description": "Conheça o cultivo e o processamento do café em uma fazenda de Jericó. A visita pode incluir cafezais, métodos de preparo e degustação. Confirme a fazenda, as atividades incluídas e a disponibilidade antes de organizar o passeio.",
+            "map_url": "",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 5
+          }
+        }
+      }
+    ],
+    "sources": {
+      "es": [
+        {
+          "locale": "es",
+          "section_key": "history",
+          "source_url": "https://normograma.mincultura.gov.co/compilacion/docs/resolucion_mincultura_0663_2018.htm",
+          "source_label": "Historia y patrimonio de Jericó ↗"
+        },
+        {
+          "locale": "es",
+          "section_key": "places",
+          "source_url": "https://www.antioquia.gov.co/images/img/turismo/2025/los-imperdibles-de-suroeste-28-30-junio.pdf",
+          "source_label": "Atractivos de Jericó · Gobernación de Antioquia ↗"
+        },
+        {
+          "locale": "es",
+          "section_key": "places",
+          "source_url": "https://colombia.travel/es/jerico",
+          "source_label": "Más información del destino en Colombia Travel ↗"
+        }
+      ],
+      "en": [
+        {
+          "locale": "en",
+          "section_key": "history",
+          "source_url": "https://normograma.mincultura.gov.co/compilacion/docs/resolucion_mincultura_0663_2018.htm",
+          "source_label": "Jericó’s history and heritage ↗"
+        },
+        {
+          "locale": "en",
+          "section_key": "places",
+          "source_url": "https://www.antioquia.gov.co/images/img/turismo/2025/los-imperdibles-de-suroeste-28-30-junio.pdf",
+          "source_label": "Jericó attractions · Government of Antioquia ↗"
+        },
+        {
+          "locale": "en",
+          "section_key": "places",
+          "source_url": "https://colombia.travel/es/jerico",
+          "source_label": "More destination information at Colombia Travel ↗"
+        }
+      ],
+      "pt-BR": [
+        {
+          "locale": "pt-BR",
+          "section_key": "history",
+          "source_url": "https://normograma.mincultura.gov.co/compilacion/docs/resolucion_mincultura_0663_2018.htm",
+          "source_label": "História e patrimônio de Jericó ↗"
+        },
+        {
+          "locale": "pt-BR",
+          "section_key": "places",
+          "source_url": "https://www.antioquia.gov.co/images/img/turismo/2025/los-imperdibles-de-suroeste-28-30-junio.pdf",
+          "source_label": "Atrações de Jericó · Governo de Antioquia ↗"
+        },
+        {
+          "locale": "pt-BR",
+          "section_key": "places",
+          "source_url": "https://www.antioquia.gov.co/images/img/turismo/2025/los-imperdibles-de-suroeste-28-30-junio.pdf",
+          "source_label": "Atrativos de Jericó · Governo de Antioquia ↗"
+        },
+        {
+          "locale": "pt-BR",
+          "section_key": "places",
+          "source_url": "https://colombia.travel/es/jerico",
+          "source_label": "Mais informações sobre o destino na Colômbia Travel ↗"
+        }
+      ]
+    },
+    "destination_media": {
+      "history": {
+        "role": "history",
+        "media_asset_id": 8,
+        "asset_path": "assets/destinos/1/monumento-santa-laura-ilustrado-v2.webp"
+      },
+      "hero": {
+        "role": "hero",
+        "media_asset_id": 10,
+        "asset_path": "assets/destinos/1/parque-principal-ilustrado.webp"
+      }
+    }
+  },
+  "media": [
+    {
+      "id": 1,
+      "origin": "ai_generated",
+      "asset_path": "assets/destinos/1/casa-santa-laura-ilustrada-v2.webp",
+      "creator": "Explorando Lugares",
+      "source_url": "",
+      "license_name": "Ilustración editorial generada con IA",
+      "license_url": "",
+      "provenance_json": "{\"tool\":\"OpenAI ImageGen integrated tool\",\"model\":null,\"prompt_record_path\":\"content/imagenes-ia-jerico-candidatas.json\",\"kind\":\"reference_photo\",\"reference_asset_path\":\"assets/jerico/casa-santa-laura.webp\",\"reference_source_url\":\"https://commons.wikimedia.org/wiki/File:Casa_de_la_beata_Laura.jpg\",\"reference_creator\":\"Xemenendura\",\"reference_license_name\":\"CC BY-SA 4.0\",\"reference_license_url\":\"https://creativecommons.org/licenses/by-sa/4.0/\",\"notes\":\"Ilustración editorial en tinta y gouache basada en la fotografía de referencia.\"}",
+      "width": 1100,
+      "height": 825,
+      "sha256": "114e147b72bbf89ca8659cae6d5bfe063837fa85bd2f4a7849a10663a97e110b",
+      "local_file": "media/114e147b72bbf89ca8659cae6d5bfe063837fa85bd2f4a7849a10663a97e110b.webp"
+    },
+    {
+      "id": 2,
+      "origin": "ai_generated",
+      "asset_path": "assets/destinos/1/cerro-de-las-nubes-sendero-ilustrado-v2.webp",
+      "creator": "Explorando Lugares",
+      "source_url": "",
+      "license_name": "Ilustración editorial generada con IA",
+      "license_url": "",
+      "provenance_json": "{\"reference_source_url\":\"https://es.wikiloc.com/rutas-senderismo/cerro-las-nubes-jerico-antioquia-130350353\",\"factual_basis_url\":\"https://es.wikiloc.com/rutas-senderismo/cerro-las-nubes-jerico-antioquia-130350353\",\"reference_type\":\"Textual description only; no source photograph was used as image input.\",\"used_reference_images\":false,\"generated_asset_id\":\"cerro-de-las-nubes-candidata-v2\",\"human_approval\":\"Owner approved the Cerro de las Nubes illustration for the destination card in chat on 2026-10-15.\"}",
+      "width": 1100,
+      "height": 825,
+      "sha256": "81a063f7ffd3a9170a4682796df7e9e6b1bb7bc82f8453ba5bad97923a8b5e85",
+      "local_file": "media/81a063f7ffd3a9170a4682796df7e9e6b1bb7bc82f8453ba5bad97923a8b5e85.webp"
+    },
+    {
+      "id": 3,
+      "origin": "ai_generated",
+      "asset_path": "assets/destinos/1/chorros-quebradona-ilustrado-v2.webp",
+      "creator": "Explorando Lugares",
+      "source_url": "",
+      "license_name": "Ilustración editorial generada con IA",
+      "license_url": "",
+      "provenance_json": "{\"reference_source_url\":\"https://es.wikiloc.com/rutas-senderismo/chorros-de-quebradona-jerico-155370461\",\"factual_basis_url\":\"https://www.corantioquia.gov.co/corantioquia-invita-a-descubrir-y-proteger-los-tesoros-naturales-de-su-jurisdiccion/\",\"reference_type\":\"Textual descriptions and route context only; no source photograph was used as image input.\",\"used_reference_images\":false,\"generated_asset_id\":\"chorros-quebradona-candidata-v2\",\"human_approval\":\"Owner approved the Chorros de Quebradona illustration for the destination card in chat on 2026-10-15.\"}",
+      "width": 1100,
+      "height": 825,
+      "sha256": "594b79860d72ed208f099c2acc581e0791880d9e1da1c6b494e502ad761b272e",
+      "local_file": "media/594b79860d72ed208f099c2acc581e0791880d9e1da1c6b494e502ad761b272e.webp"
+    },
+    {
+      "id": 4,
+      "origin": "ai_generated",
+      "asset_path": "assets/destinos/1/cristo-cerro-el-salvador-ilustrado-v2.webp",
+      "creator": "Explorando Lugares",
+      "source_url": "",
+      "license_name": "Ilustración editorial generada con IA",
+      "license_url": "",
+      "provenance_json": "{\"tool\":\"OpenAI ImageGen integrated tool\",\"model\":null,\"prompt_record_path\":\"content/imagenes-ia-jerico-candidatas.json\",\"kind\":\"reference_photo\",\"reference_asset_path\":\"assets/jerico/cristo-salvador-directo.webp\",\"reference_source_url\":\"https://commons.wikimedia.org/wiki/File:Cristo_en_Jeric%C3%B3.jpg\",\"reference_creator\":\"Xemenendura\",\"reference_license_name\":\"CC BY-SA 4.0\",\"reference_license_url\":\"https://creativecommons.org/licenses/by-sa/4.0/\",\"notes\":\"Ilustración editorial derivada visualmente de la fotografía de referencia; no se publica la foto fuente.\"}",
+      "width": 1100,
+      "height": 825,
+      "sha256": "48eb033623cf08e40420aadd2aa31168a35dd3ec871d413886c114e7b6f416a1",
+      "local_file": "media/48eb033623cf08e40420aadd2aa31168a35dd3ec871d413886c114e7b6f416a1.webp"
+    },
+    {
+      "id": 5,
+      "origin": "ai_generated",
+      "asset_path": "assets/destinos/1/experiencia-finca-cafetera-ilustracion.webp",
+      "creator": "Explorando Lugares",
+      "source_url": "",
+      "license_name": "Ilustración editorial generada con IA",
+      "license_url": "",
+      "provenance_json": "{\"tool\":\"OpenAI ImageGen integrated tool\",\"model\":null,\"prompt_record_path\":\"content/imagenes-ia-jerico-candidatas.json\",\"kind\":\"generic_illustrative_concept\",\"reference_asset_path\":null,\"reference_source_url\":null,\"reference_creator\":null,\"reference_license_name\":null,\"reference_license_url\":null,\"factual_basis_url\":\"https://turismojerico.com/producto/experiencia-mundo-cafe/\",\"notes\":\"Concepto ilustrativo general de experiencia cafetera; la fuente respalda la actividad, no representa una finca identificada.\"}",
+      "width": 1100,
+      "height": 825,
+      "sha256": "4edda5bc28d2fce14025066869bc667d852b19c6efc2d6aae5f48aa37cdff771",
+      "local_file": "media/4edda5bc28d2fce14025066869bc667d852b19c6efc2d6aae5f48aa37cdff771.webp"
+    },
+    {
+      "id": 6,
+      "origin": "ai_generated",
+      "asset_path": "assets/destinos/1/helicoptero-medellin-jerico-ilustracion.webp",
+      "creator": "Explorando Lugares",
+      "source_url": "",
+      "license_name": "Ilustración editorial generada con IA",
+      "license_url": "",
+      "provenance_json": "{\"tool\":\"OpenAI ImageGen integrated tool\",\"model\":null,\"prompt_record_path\":\"content/imagenes-ia-jerico-candidatas.json\",\"kind\":\"generic_illustrative_concept\",\"reference_asset_path\":null,\"reference_source_url\":null,\"reference_creator\":null,\"reference_license_name\":null,\"reference_license_url\":null,\"factual_basis_url\":\"https://turismojerico.com/producto/cafe-patrimonio-helicoptero/\",\"notes\":\"Concepto ilustrativo general de una actividad; la fuente respalda la existencia de la oferta, no el contenido visual, una ruta o un operador confirmado.\"}",
+      "width": 1100,
+      "height": 825,
+      "sha256": "8faa6051127517360d868b7df9e193a5aabbc2ce8581b28c9fa1f738a2a1b6e5",
+      "local_file": "media/8faa6051127517360d868b7df9e193a5aabbc2ce8581b28c9fa1f738a2a1b6e5.webp"
+    },
+    {
+      "id": 7,
+      "origin": "ai_generated",
+      "asset_path": "assets/destinos/1/jardin-botanico-los-balsos-ilustrado.webp",
+      "creator": "Explorando Lugares",
+      "source_url": "",
+      "license_name": "Ilustración editorial generada con IA",
+      "license_url": "",
+      "provenance_json": "{\"tool\":\"OpenAI ImageGen integrated tool\",\"model\":null,\"prompt_record_path\":\"content/imagenes-ia-jerico-candidatas.json\",\"kind\":\"documented_visual_concept\",\"reference_asset_path\":null,\"reference_source_url\":null,\"reference_creator\":null,\"reference_license_name\":null,\"reference_license_url\":null,\"notes\":\"La ficha aprobada documenta estanque, puente de madera, vegetación y senderos. No se registró una fotografía específica como referencia visual.\"}",
+      "width": 1100,
+      "height": 825,
+      "sha256": "076b27a838cecd7821da61fdb2d1425731851aa1172ecea2a9560df2245d8c9b",
+      "local_file": "media/076b27a838cecd7821da61fdb2d1425731851aa1172ecea2a9560df2245d8c9b.webp"
+    },
+    {
+      "id": 8,
+      "origin": "ai_generated",
+      "asset_path": "assets/destinos/1/monumento-santa-laura-ilustrado-v2.webp",
+      "creator": "Explorando Lugares",
+      "source_url": "",
+      "license_name": "Ilustración editorial generada con IA",
+      "license_url": "",
+      "provenance_json": "{\"tool\":\"OpenAI ImageGen integrated tool\",\"model\":null,\"prompt_record_path\":\"content/imagenes-ia-jerico-candidatas.json\",\"kind\":\"reference_photo\",\"reference_asset_path\":\"assets/jerico/monumento-santa-laura.webp\",\"reference_source_url\":\"https://commons.wikimedia.org/wiki/File:Santa_Laura_Montoya_Upegui%2C_Jeric%C3%B3_Antioquia.jpg\",\"reference_creator\":\"Raomir Ramirez Morales\",\"reference_license_name\":\"CC BY-SA 3.0\",\"reference_license_url\":\"https://creativecommons.org/licenses/by-sa/3.0/\",\"notes\":\"Ilustración editorial de tinta y gouache basada en la fotografía del monumento.\"}",
+      "width": 900,
+      "height": 1200,
+      "sha256": "052df594e0fa7a5cca3e8fcbb641f7919622cf5be8fbabc39c41013951d4b6f8",
+      "local_file": "media/052df594e0fa7a5cca3e8fcbb641f7919622cf5be8fbabc39c41013951d4b6f8.webp"
+    },
+    {
+      "id": 9,
+      "origin": "ai_generated",
+      "asset_path": "assets/destinos/1/parapente-puerto-arturo-ilustracion.webp",
+      "creator": "Explorando Lugares",
+      "source_url": "",
+      "license_name": "Ilustración editorial generada con IA",
+      "license_url": "",
+      "provenance_json": "{\"tool\":\"OpenAI ImageGen integrated tool\",\"model\":null,\"prompt_record_path\":\"content/imagenes-ia-jerico-candidatas.json\",\"kind\":\"generic_illustrative_concept\",\"reference_asset_path\":null,\"reference_source_url\":null,\"reference_creator\":null,\"reference_license_name\":null,\"reference_license_url\":null,\"factual_basis_url\":\"https://turismojerico.com/producto/aventura-altura/\",\"notes\":\"Concepto ilustrativo general de una actividad; la fuente respalda la existencia de la oferta, no el contenido visual, el punto de vuelo o un operador confirmado.\"}",
+      "width": 1100,
+      "height": 825,
+      "sha256": "bc7423ab79bdef71e8f8aaaf64b0da7047682d0194e2639fa33aba6f5fe0b792",
+      "local_file": "media/bc7423ab79bdef71e8f8aaaf64b0da7047682d0194e2639fa33aba6f5fe0b792.webp"
+    },
+    {
+      "id": 10,
+      "origin": "ai_generated",
+      "asset_path": "assets/destinos/1/parque-principal-ilustrado.webp",
+      "creator": "Explorando Lugares",
+      "source_url": "",
+      "license_name": "Ilustración editorial generada con IA",
+      "license_url": "",
+      "provenance_json": "{\"tool\":\"OpenAI ImageGen integrated tool\",\"model\":null,\"prompt_record_path\":\"content/imagenes-ia-jerico-candidatas.json\",\"kind\":\"reference_photo\",\"reference_asset_path\":\"assets/jerico.webp\",\"reference_source_url\":\"https://commons.wikimedia.org/wiki/File:El_parque_Jeric%C3%B3.jpg\",\"reference_creator\":\"Xemenendura\",\"reference_license_name\":\"CC BY-SA 4.0\",\"reference_license_url\":\"https://creativecommons.org/licenses/by-sa/4.0/\",\"notes\":\"Ilustración editorial derivada visualmente de la fotografía de referencia; no se publica la foto fuente.\"}",
+      "width": 1100,
+      "height": 825,
+      "sha256": "5b1eb668d1b2ced2d8bdd3b3950439624c1d43c742ca18902e665fc73310a717",
+      "local_file": "media/5b1eb668d1b2ced2d8bdd3b3950439624c1d43c742ca18902e665fc73310a717.webp"
+    },
+    {
+      "id": 11,
+      "origin": "ai_generated",
+      "asset_path": "assets/destinos/1/santuario-santa-laura-ilustrado-v2.webp",
+      "creator": "Explorando Lugares",
+      "source_url": "",
+      "license_name": "Ilustración editorial generada con IA",
+      "license_url": "",
+      "provenance_json": "{\"tool\":\"OpenAI ImageGen integrated tool\",\"model\":null,\"prompt_record_path\":\"content/imagenes-ia-jerico-candidatas.json\",\"kind\":\"reference_photo\",\"reference_asset_path\":\"assets/jerico/iglesia-rosada.webp\",\"reference_source_url\":\"https://commons.wikimedia.org/wiki/File:Jeric%C3%B3,_santuario_Madre_Laura.jpg\",\"reference_creator\":\"Angel OLMEDO\",\"reference_license_name\":\"Public domain\",\"reference_license_url\":\"https://creativecommons.org/publicdomain/mark/1.0/\",\"notes\":\"Ilustración editorial basada en la fotografía de referencia del santuario completo.\"}",
+      "width": 1100,
+      "height": 825,
+      "sha256": "7ccde1479de4546713f2712a1b433668db2252b1063d47d0360bc716a73b0fe2",
+      "local_file": "media/7ccde1479de4546713f2712a1b433668db2252b1063d47d0360bc716a73b0fe2.webp"
+    }
+  ],
+  "media_translations": [
+    {
+      "media_asset_id": 1,
+      "locale": "en",
+      "alt_text": "Façade of Saint Laura's birthplace in Jericó, reinterpreted in ink and gouache from a reference photograph.",
+      "caption": "Façade of Saint Laura's birthplace in Jericó, reinterpreted in ink and gouache from a reference photograph."
+    },
+    {
+      "media_asset_id": 1,
+      "locale": "es",
+      "alt_text": "Fachada de la casa natal de Santa Laura en Jericó, reinterpretada en tinta y gouache a partir de una fotografía de referencia.",
+      "caption": "Fachada de la casa natal de Santa Laura en Jericó, reinterpretada en tinta y gouache a partir de una fotografía de referencia."
+    },
+    {
+      "media_asset_id": 1,
+      "locale": "pt-BR",
+      "alt_text": "Fachada da casa natal de Santa Laura em Jericó, reinterpretada em tinta e guache a partir de uma fotografia de referência.",
+      "caption": "Fachada da casa natal de Santa Laura em Jericó, reinterpretada em tinta e guache a partir de uma fotografia de referência."
+    },
+    {
+      "media_asset_id": 2,
+      "locale": "en",
+      "alt_text": "Editorial illustration of a stone trail climbing through vegetation on Cerro de las Nubes.",
+      "caption": "Editorial illustration of a stone trail climbing through vegetation on Cerro de las Nubes."
+    },
+    {
+      "media_asset_id": 2,
+      "locale": "es",
+      "alt_text": "Ilustración editorial del sendero de piedra que asciende entre vegetación en el Cerro de las Nubes.",
+      "caption": "Ilustración editorial del sendero de piedra que asciende entre vegetación en el Cerro de las Nubes."
+    },
+    {
+      "media_asset_id": 2,
+      "locale": "pt-BR",
+      "alt_text": "Ilustração editorial da trilha de pedra que sobe entre a vegetação no Cerro de las Nubes.",
+      "caption": "Ilustração editorial da trilha de pedra que sobe entre a vegetação no Cerro de las Nubes."
+    },
+    {
+      "media_asset_id": 3,
+      "locale": "en",
+      "alt_text": "Editorial illustration of a modest waterfall among rocks and vegetation at Chorros de Quebradona.",
+      "caption": "Editorial illustration of a modest waterfall among rocks and vegetation at Chorros de Quebradona."
+    },
+    {
+      "media_asset_id": 3,
+      "locale": "es",
+      "alt_text": "Ilustración editorial de una cascada modesta entre roca y vegetación en Chorros de Quebradona.",
+      "caption": "Ilustración editorial de una cascada modesta entre roca y vegetación en Chorros de Quebradona."
+    },
+    {
+      "media_asset_id": 3,
+      "locale": "pt-BR",
+      "alt_text": "Ilustração editorial de uma pequena cachoeira entre pedras e vegetação em Chorros de Quebradona.",
+      "caption": "Ilustração editorial de uma pequena cachoeira entre pedras e vegetação em Chorros de Quebradona."
+    },
+    {
+      "media_asset_id": 4,
+      "locale": "en",
+      "alt_text": "Christ statue on El Salvador Hill seen closer above Jericó, in an editorial illustration based on a reference photograph.",
+      "caption": "Christ statue on El Salvador Hill seen closer above Jericó, in an editorial illustration based on a reference photograph."
+    },
+    {
+      "media_asset_id": 4,
+      "locale": "es",
+      "alt_text": "Cristo del Cerro El Salvador visto de cerca sobre Jericó, en ilustración editorial basada en una fotografía de referencia.",
+      "caption": "Cristo del Cerro El Salvador visto de cerca sobre Jericó, en ilustración editorial basada en una fotografía de referencia."
+    },
+    {
+      "media_asset_id": 4,
+      "locale": "pt-BR",
+      "alt_text": "Cristo do Cerro El Salvador visto de perto sobre Jericó, em ilustração editorial baseada em uma fotografia de referência.",
+      "caption": "Cristo do Cerro El Salvador visto de perto sobre Jericó, em ilustração editorial baseada em uma fotografia de referência."
+    },
+    {
+      "media_asset_id": 5,
+      "locale": "en",
+      "alt_text": "Editorial illustration of coffee plants with ripe cherries on a mountain slope, representing a coffee experience in general.",
+      "caption": "Editorial illustration of coffee plants with ripe cherries on a mountain slope, representing a coffee experience in general."
+    },
+    {
+      "media_asset_id": 5,
+      "locale": "es",
+      "alt_text": "Ilustración editorial de cafetos con frutos maduros en una ladera de montaña; representa una experiencia cafetera de forma general.",
+      "caption": "Ilustración editorial de cafetos con frutos maduros en una ladera de montaña; representa una experiencia cafetera de forma general."
+    },
+    {
+      "media_asset_id": 5,
+      "locale": "pt-BR",
+      "alt_text": "Ilustração editorial de cafezais com frutos maduros em uma encosta; representa uma experiência cafeeira de forma geral.",
+      "caption": "Ilustração editorial de cafezais com frutos maduros em uma encosta; representa uma experiência cafeeira de forma geral."
+    },
+    {
+      "media_asset_id": 6,
+      "locale": "en",
+      "alt_text": "Editorial illustration of a helicopter flight over green mountains, representing the activity in general.",
+      "caption": "Editorial illustration of a helicopter flight over green mountains, representing the activity in general."
+    },
+    {
+      "media_asset_id": 6,
+      "locale": "es",
+      "alt_text": "Ilustración editorial de un vuelo en helicóptero sobre montañas verdes; representa la actividad de forma general.",
+      "caption": "Ilustración editorial de un vuelo en helicóptero sobre montañas verdes; representa la actividad de forma general."
+    },
+    {
+      "media_asset_id": 6,
+      "locale": "pt-BR",
+      "alt_text": "Ilustração editorial de um voo de helicóptero sobre montanhas verdes; representa a atividade de forma geral.",
+      "caption": "Ilustração editorial de um voo de helicóptero sobre montanhas verdes; representa a atividade de forma geral."
+    },
+    {
+      "media_asset_id": 7,
+      "locale": "en",
+      "alt_text": "Pond, wooden bridge and vegetation at Los Balsos Botanical Garden, in an editorial illustration based on its documented features.",
+      "caption": "Pond, wooden bridge and vegetation at Los Balsos Botanical Garden, in an editorial illustration based on its documented features."
+    },
+    {
+      "media_asset_id": 7,
+      "locale": "es",
+      "alt_text": "Estanque, puente de madera y vegetación del Jardín Botánico Los Balsos, en una ilustración editorial basada en sus elementos documentados.",
+      "caption": "Estanque, puente de madera y vegetación del Jardín Botánico Los Balsos, en una ilustración editorial basada en sus elementos documentados."
+    },
+    {
+      "media_asset_id": 7,
+      "locale": "pt-BR",
+      "alt_text": "Lago, ponte de madeira e vegetação do Jardim Botânico Los Balsos, em uma ilustração editorial baseada em elementos documentados.",
+      "caption": "Lago, ponte de madeira e vegetação do Jardim Botânico Los Balsos, em uma ilustração editorial baseada em elementos documentados."
+    },
+    {
+      "media_asset_id": 8,
+      "locale": "en",
+      "alt_text": "Bronze monument to Saint Mother Laura and a child, in an editorial ink-and-gouache illustration based on a photograph.",
+      "caption": "Bronze monument to Saint Mother Laura and a child, in an editorial ink-and-gouache illustration based on a photograph."
+    },
+    {
+      "media_asset_id": 8,
+      "locale": "es",
+      "alt_text": "Monumento de bronce a Santa Madre Laura y una niña, en una ilustración editorial de tinta y gouache basada en una fotografía.",
+      "caption": "Monumento de bronce a Santa Madre Laura y una niña, en una ilustración editorial de tinta y gouache basada en una fotografía."
+    },
+    {
+      "media_asset_id": 8,
+      "locale": "pt-BR",
+      "alt_text": "Monumento de bronze à Santa Madre Laura e uma menina, em ilustração editorial de tinta e guache baseada em uma fotografia.",
+      "caption": "Monumento de bronze à Santa Madre Laura e uma menina, em ilustração editorial de tinta e guache baseada em uma fotografia."
+    },
+    {
+      "media_asset_id": 9,
+      "locale": "en",
+      "alt_text": "Editorial illustration of a tandem paraglider over mountains; it does not depict a specific launch or landing site.",
+      "caption": "Editorial illustration of a tandem paraglider over mountains; it does not depict a specific launch or landing site."
+    },
+    {
+      "media_asset_id": 9,
+      "locale": "es",
+      "alt_text": "Ilustración editorial de un vuelo biplaza en parapente sobre montañas; no representa un punto específico de despegue o aterrizaje.",
+      "caption": "Ilustración editorial de un vuelo biplaza en parapente sobre montañas; no representa un punto específico de despegue o aterrizaje."
+    },
+    {
+      "media_asset_id": 9,
+      "locale": "pt-BR",
+      "alt_text": "Ilustração editorial de um voo duplo de parapente sobre montanhas; não representa um ponto específico de decolagem ou pouso.",
+      "caption": "Ilustração editorial de um voo duplo de parapente sobre montanhas; não representa um ponto específico de decolagem ou pouso."
+    },
+    {
+      "media_asset_id": 10,
+      "locale": "en",
+      "alt_text": "Jericó main square and historic façade, in an editorial illustration based on a reference photograph.",
+      "caption": "Jericó main square and historic façade, in an editorial illustration based on a reference photograph."
+    },
+    {
+      "media_asset_id": 10,
+      "locale": "es",
+      "alt_text": "Parque principal y fachada del centro de Jericó, en ilustración editorial basada en una fotografía de referencia.",
+      "caption": "Parque principal y fachada del centro de Jericó, en ilustración editorial basada en una fotografía de referencia."
+    },
+    {
+      "media_asset_id": 10,
+      "locale": "pt-BR",
+      "alt_text": "Parque principal e fachada do centro de Jericó, em ilustração editorial baseada em uma fotografia de referência.",
+      "caption": "Parque principal e fachada do centro de Jericó, em ilustração editorial baseada em uma fotografia de referência."
+    },
+    {
+      "media_asset_id": 11,
+      "locale": "en",
+      "alt_text": "Sanctuary of Saint Laura in Jericó, with its pink façade and palms visible at the entrance, in an editorial illustration based on a reference photograph.",
+      "caption": "Sanctuary of Saint Laura in Jericó, with its pink façade and palms visible at the entrance, in an editorial illustration based on a reference photograph."
+    },
+    {
+      "media_asset_id": 11,
+      "locale": "es",
+      "alt_text": "Santuario de Santa Laura en Jericó, con su fachada rosada y palmas visibles en la entrada, en ilustración editorial basada en una fotografía de referencia.",
+      "caption": "Santuario de Santa Laura en Jericó, con su fachada rosada y palmas visibles en la entrada, en ilustración editorial basada en una fotografía de referencia."
+    },
+    {
+      "media_asset_id": 11,
+      "locale": "pt-BR",
+      "alt_text": "Santuário de Santa Laura em Jericó, com fachada rosa e palmeiras visíveis na entrada, em ilustração editorial baseada em uma fotografia de referência.",
+      "caption": "Santuário de Santa Laura em Jericó, com fachada rosa e palmeiras visíveis na entrada, em ilustração editorial baseada em uma fotografia de referência."
+    }
+  ]
+}
