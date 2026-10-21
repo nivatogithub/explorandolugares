@@ -33,3 +33,12 @@ Servidor de revisión aislado en `http://127.0.0.1:8046/admin/index.php`. Es aux
 ## Pendiente antes de publicar
 
 Integrar el candidato en preprod conforme a AGENTS, reconciliar main, revisar el delta completo del paquete y validar allí Apache/MariaDB. Completar comprobación cruzada Safari/Firefox y tecnologías de asistencia; la revisión de navegador realizada no certifica todos los navegadores. Revisar visualmente con el propietario y obtener aprobación del commit exacto antes del despliegue. Ningún cambio a los flujos de negocio se incluye en este candidato.
+
+## Ajustes del 21 de octubre de 2026
+
+- Gratis es la modalidad por defecto en presentación y filtros aunque no haya una fila histórica explícita de suscripción. No se crean ni migran filas desde estas pantallas; garantizar la fila física en altas pertenece al flujo de negocio, fuera de este worker.
+- Se muestra Pendiente de publicación para `draft`. `archived` conserva Retirado: no se transforma en Rechazado sin una decisión editorial registrada. El rechazo editorial de negocio con motivo obligatorio queda pendiente del soporte de flujo correspondiente. El detalle sí muestra la nota registrada cuando una solicitud de cuenta está rechazada; no confundir ese rechazo con el del negocio.
+- Una ficha `public_import` sin membresía se describe como importada por el portal sin responsable. Una creación administrativa se identifica como tal. Una solicitud aprobada o una ficha `owner_submitted` sin cuenta activa se marca para revisar la asociación; no se inventa que provino de una importación.
+- Una sola entrada Negocios en el menú. Dentro: Todos, Solicitudes y seguimiento, Pendientes de revisión y las herramientas existentes de crear/importar/publicar importaciones.
+- Ver tarjeta abre una vista privada del negocio real, utilizando el mismo componente y permisos de contacto del directorio. No modifica el plan ni publica. Editar datos y Gestionar plan y publicación describen los destinos administrativos de los otros botones. La vista previa privada de la página completa sigue pendiente y se informa en pantalla; no se presenta contenido ficticio como si fuera el negocio real.
+- Regresión administrativa HTTP aprobada, incluida vista de tarjeta Gratis, acceso privado y 404. No se accedió al navegador bloqueado ni a producción.
