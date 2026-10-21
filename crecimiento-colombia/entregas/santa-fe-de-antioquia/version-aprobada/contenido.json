@@ -1,0 +1,993 @@
+{
+  "destination": {
+    "id": 4,
+    "slug": "santa-fe-de-antioquia",
+    "destination_type": "municipality",
+    "country_code": "CO",
+    "department": "Antioquia",
+    "subregion": "Occidente",
+    "latitude": null,
+    "longitude": null,
+    "publication_status": "published",
+    "display_order": 101,
+    "created_at": "2026-10-16 19:56:33",
+    "updated_at": "2026-10-20 07:06:47",
+    "translations": {
+      "en": {
+        "destination_id": 4,
+        "locale": "en",
+        "display_name": "Santa Fe de Antioquia",
+        "eyebrow": "",
+        "headline": "Heritage and filigree",
+        "intro": "Historic streets, filigree jewellery and the Puente de Occidente in the Cauca valley.",
+        "meta_description": "Historic streets, filigree jewellery and the Puente de Occidente in the Cauca valley."
+      },
+      "es": {
+        "destination_id": 4,
+        "locale": "es",
+        "display_name": "Santa Fe de Antioquia",
+        "eyebrow": "",
+        "headline": "Patrimonio y filigrana",
+        "intro": "Calles históricas, filigrana y el Puente de Occidente en el valle del Cauca.",
+        "meta_description": "Calles históricas, filigrana y el Puente de Occidente en el valle del Cauca."
+      },
+      "pt-BR": {
+        "destination_id": 4,
+        "locale": "pt-BR",
+        "display_name": "Santa Fe de Antioquia",
+        "eyebrow": "",
+        "headline": "Patrimônio e filigrana",
+        "intro": "Ruas históricas, filigrana e a Puente de Occidente no vale do Cauca.",
+        "meta_description": "Ruas históricas, filigrana e a Puente de Occidente no vale do Cauca."
+      }
+    },
+    "history": {
+      "es": [
+        "La ciudad actual reúne la historia de dos poblaciones del siglo XVI y fue capital provincial hasta 1826. Su patrimonio colonial y republicano conserva huellas del poder político, la vida religiosa y los oficios locales."
+      ],
+      "en": [
+        "Today’s town brings together the history of two sixteenth-century settlements and served as provincial capital until 1826. Its colonial and republican heritage preserves traces of political power, religious life and local crafts."
+      ],
+      "pt-BR": [
+        "A cidade atual reúne a história de dois povoados do século XVI e foi capital provincial até 1826. Seu patrimônio colonial e republicano conserva marcas do poder político, da vida religiosa e dos ofícios locais."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Patrimonio histórico, filigrana y el paisaje del Cauca."
+      ],
+      "en": [
+        "Historic heritage, filigree jewellery and the Cauca landscape."
+      ],
+      "pt-BR": [
+        "Patrimônio histórico, filigrana e a paisagem do Cauca."
+      ]
+    },
+    "places": [
+      {
+        "id": 19,
+        "slug": "puente-de-occidente",
+        "type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": 366,
+        "translations": {
+          "en": {
+            "id": 19,
+            "slug": "puente-de-occidente",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 1,
+            "locale": "en",
+            "name": "Puente de Occidente",
+            "description": "The suspension bridge over the Cauca links Santa Fe de Antioquia and Olaya.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Puente%20de%20Occidente%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 366
+          },
+          "es": {
+            "id": 19,
+            "slug": "puente-de-occidente",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 1,
+            "locale": "es",
+            "name": "Puente de Occidente",
+            "description": "El puente colgante sobre el Cauca une Santa Fe de Antioquia y Olaya.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Puente%20de%20Occidente%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 366
+          },
+          "pt-BR": {
+            "id": 19,
+            "slug": "puente-de-occidente",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 1,
+            "locale": "pt-BR",
+            "name": "Puente de Occidente",
+            "description": "A ponte suspensa sobre o Cauca liga Santa Fe de Antioquia a Olaya.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Puente%20de%20Occidente%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 366
+          }
+        }
+      },
+      {
+        "id": 168,
+        "slug": "plaza-mayor-simon-bolivar",
+        "type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": 190,
+        "translations": {
+          "en": {
+            "id": 168,
+            "slug": "plaza-mayor-simon-bolivar",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 2,
+            "locale": "en",
+            "name": "Plaza Mayor Simón Bolívar",
+            "description": "The main square brings together local life and historic architecture.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Plaza%20Mayor%20Sim%C3%B3n%20Bol%C3%ADvar%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 190
+          },
+          "es": {
+            "id": 168,
+            "slug": "plaza-mayor-simon-bolivar",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 2,
+            "locale": "es",
+            "name": "Plaza Mayor Simón Bolívar",
+            "description": "El parque principal reúne vida local y arquitectura del centro histórico.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Plaza%20Mayor%20Sim%C3%B3n%20Bol%C3%ADvar%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 190
+          },
+          "pt-BR": {
+            "id": 168,
+            "slug": "plaza-mayor-simon-bolivar",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 2,
+            "locale": "pt-BR",
+            "name": "Plaza Mayor Simón Bolívar",
+            "description": "A praça principal reúne a vida local e a arquitetura histórica.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Plaza%20Mayor%20Sim%C3%B3n%20Bol%C3%ADvar%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 190
+          }
+        }
+      },
+      {
+        "id": 169,
+        "slug": "catedral-de-la-inmaculada-concepcion",
+        "type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": 191,
+        "translations": {
+          "en": {
+            "id": 169,
+            "slug": "catedral-de-la-inmaculada-concepcion",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 3,
+            "locale": "en",
+            "name": "Catedral de la Inmaculada Concepción",
+            "description": "Discover the cathedral façade and naves beside the main square.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Catedral%20de%20la%20Inmaculada%20Concepci%C3%B3n%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 191
+          },
+          "es": {
+            "id": 169,
+            "slug": "catedral-de-la-inmaculada-concepcion",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 3,
+            "locale": "es",
+            "name": "Catedral de la Inmaculada Concepción",
+            "description": "Conoce la fachada y las naves de la catedral junto al parque principal.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Catedral%20de%20la%20Inmaculada%20Concepci%C3%B3n%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 191
+          },
+          "pt-BR": {
+            "id": 169,
+            "slug": "catedral-de-la-inmaculada-concepcion",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 3,
+            "locale": "pt-BR",
+            "name": "Catedral de la Inmaculada Concepción",
+            "description": "Conheça a fachada e as naves da catedral junto à praça principal.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Catedral%20de%20la%20Inmaculada%20Concepci%C3%B3n%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 191
+          }
+        }
+      },
+      {
+        "id": 170,
+        "slug": "museo-juan-del-corral",
+        "type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": 379,
+        "translations": {
+          "en": {
+            "id": 170,
+            "slug": "museo-juan-del-corral",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 4,
+            "locale": "en",
+            "name": "Museo Juan del Corral",
+            "description": "Objects and documents introduce the region’s history.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20Juan%20del%20Corral%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 379
+          },
+          "es": {
+            "id": 170,
+            "slug": "museo-juan-del-corral",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 4,
+            "locale": "es",
+            "name": "Museo Juan del Corral",
+            "description": "Objetos y documentos permiten acercarse a la historia regional.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20Juan%20del%20Corral%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 379
+          },
+          "pt-BR": {
+            "id": 170,
+            "slug": "museo-juan-del-corral",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 4,
+            "locale": "pt-BR",
+            "name": "Museo Juan del Corral",
+            "description": "Objetos e documentos apresentam a história regional.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20Juan%20del%20Corral%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 379
+          }
+        }
+      },
+      {
+        "id": 171,
+        "slug": "iglesia-de-santa-barbara",
+        "type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": 370,
+        "translations": {
+          "en": {
+            "id": 171,
+            "slug": "iglesia-de-santa-barbara",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 5,
+            "locale": "en",
+            "name": "Iglesia de Santa Bárbara",
+            "description": "Its façade and surroundings form a distinctive heritage scene.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Iglesia%20de%20Santa%20B%C3%A1rbara%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 370
+          },
+          "es": {
+            "id": 171,
+            "slug": "iglesia-de-santa-barbara",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 5,
+            "locale": "es",
+            "name": "Iglesia de Santa Bárbara",
+            "description": "Su fachada y entorno conservan una de las estampas patrimoniales del pueblo.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Iglesia%20de%20Santa%20B%C3%A1rbara%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 370
+          },
+          "pt-BR": {
+            "id": 171,
+            "slug": "iglesia-de-santa-barbara",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 5,
+            "locale": "pt-BR",
+            "name": "Iglesia de Santa Bárbara",
+            "description": "Sua fachada e seus arredores formam uma paisagem patrimonial característica.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Iglesia%20de%20Santa%20B%C3%A1rbara%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 370
+          }
+        }
+      },
+      {
+        "id": 172,
+        "slug": "museo-de-arte-religioso-francisco-cristobal-toro",
+        "type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": 381,
+        "translations": {
+          "en": {
+            "id": 172,
+            "slug": "museo-de-arte-religioso-francisco-cristobal-toro",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 6,
+            "locale": "en",
+            "name": "Museo de Arte Religioso Francisco Cristóbal Toro",
+            "description": "Explore religious art preserved in a historic house.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20de%20Arte%20Religioso%20Francisco%20Crist%C3%B3bal%20Toro%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 381
+          },
+          "es": {
+            "id": 172,
+            "slug": "museo-de-arte-religioso-francisco-cristobal-toro",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 6,
+            "locale": "es",
+            "name": "Museo de Arte Religioso Francisco Cristóbal Toro",
+            "description": "Explora el arte religioso conservado en una casa histórica.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20de%20Arte%20Religioso%20Francisco%20Crist%C3%B3bal%20Toro%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 381
+          },
+          "pt-BR": {
+            "id": 172,
+            "slug": "museo-de-arte-religioso-francisco-cristobal-toro",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 6,
+            "locale": "pt-BR",
+            "name": "Museo de Arte Religioso Francisco Cristóbal Toro",
+            "description": "Explore a arte religiosa preservada em uma casa histórica.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20de%20Arte%20Religioso%20Francisco%20Crist%C3%B3bal%20Toro%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 381
+          }
+        }
+      },
+      {
+        "id": 173,
+        "slug": "plazuela-e-iglesia-de-la-chinca",
+        "type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": 195,
+        "translations": {
+          "en": {
+            "id": 173,
+            "slug": "plazuela-e-iglesia-de-la-chinca",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 7,
+            "locale": "en",
+            "name": "La Chinca Church",
+            "description": "Church of Our Lady of Chiquinquirá and its small square.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=La%20Chinca%20Church%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 195
+          },
+          "es": {
+            "id": 173,
+            "slug": "plazuela-e-iglesia-de-la-chinca",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 7,
+            "locale": "es",
+            "name": "Iglesia de La Chinca",
+            "description": "Templo de Nuestra Señora de Chiquinquirá y su plazuela.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Iglesia%20de%20La%20Chinca%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 195
+          },
+          "pt-BR": {
+            "id": 173,
+            "slug": "plazuela-e-iglesia-de-la-chinca",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 7,
+            "locale": "pt-BR",
+            "name": "Igreja de La Chinca",
+            "description": "Templo de Nossa Senhora de Chiquinquirá e sua pequena praça.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Igreja%20de%20La%20Chinca%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 195
+          }
+        }
+      },
+      {
+        "id": 176,
+        "slug": "conocer-la-filigrana",
+        "type": "experience",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": 198,
+        "translations": {
+          "en": {
+            "id": 176,
+            "slug": "conocer-la-filigrana",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 8,
+            "locale": "en",
+            "name": "Filigree workshop",
+            "description": "Discover filigree jewellery and take part in a craft workshop.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Filigree%20workshop%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 198
+          },
+          "es": {
+            "id": 176,
+            "slug": "conocer-la-filigrana",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 8,
+            "locale": "es",
+            "name": "Taller de filigrana",
+            "description": "Conoce la filigrana y participa en un taller artesanal.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Taller%20de%20filigrana%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 198
+          },
+          "pt-BR": {
+            "id": 176,
+            "slug": "conocer-la-filigrana",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 8,
+            "locale": "pt-BR",
+            "name": "Oficina de filigrana",
+            "description": "Conheça a filigrana e participe de uma oficina artesanal.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Oficina%20de%20filigrana%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 198
+          }
+        }
+      },
+      {
+        "id": 208,
+        "slug": "cabalgata-rural",
+        "type": "experience",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": 384,
+        "translations": {
+          "en": {
+            "id": 208,
+            "slug": "cabalgata-rural",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 9,
+            "locale": "en",
+            "name": "Guided countryside horse ride",
+            "description": "Explore country paths on horseback with a guide.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Guided%20countryside%20horse%20ride%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 384
+          },
+          "es": {
+            "id": 208,
+            "slug": "cabalgata-rural",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 9,
+            "locale": "es",
+            "name": "Cabalgata rural",
+            "description": "Recorre caminos rurales a caballo con guía.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Cabalgata%20rural%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 384
+          },
+          "pt-BR": {
+            "id": 208,
+            "slug": "cabalgata-rural",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 9,
+            "locale": "pt-BR",
+            "name": "Cavalgada rural",
+            "description": "Percorra caminhos rurais a cavalo com guia.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Cavalgada%20rural%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 384
+          }
+        }
+      }
+    ],
+    "sources": {
+      "es": [
+        {
+          "locale": "es",
+          "section_key": "history",
+          "source_url": "https://colombia.travel/es/santa-fe-de-antioquia",
+          "source_label": "procolombia"
+        },
+        {
+          "locale": "es",
+          "section_key": "history",
+          "source_url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Paginas/Presentacion.aspx",
+          "source_label": "alcaldia"
+        },
+        {
+          "locale": "es",
+          "section_key": "history",
+          "source_url": "https://www.museonacional.gov.co/Publicaciones/Documents/Diagnostico%20Museos.pdf",
+          "source_label": "museo"
+        }
+      ],
+      "en": [
+        {
+          "locale": "en",
+          "section_key": "history",
+          "source_url": "https://colombia.travel/es/santa-fe-de-antioquia",
+          "source_label": "procolombia"
+        },
+        {
+          "locale": "en",
+          "section_key": "history",
+          "source_url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Paginas/Presentacion.aspx",
+          "source_label": "alcaldia"
+        },
+        {
+          "locale": "en",
+          "section_key": "history",
+          "source_url": "https://www.museonacional.gov.co/Publicaciones/Documents/Diagnostico%20Museos.pdf",
+          "source_label": "museo"
+        }
+      ],
+      "pt-BR": [
+        {
+          "locale": "pt-BR",
+          "section_key": "history",
+          "source_url": "https://colombia.travel/es/santa-fe-de-antioquia",
+          "source_label": "procolombia"
+        },
+        {
+          "locale": "pt-BR",
+          "section_key": "history",
+          "source_url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Paginas/Presentacion.aspx",
+          "source_label": "alcaldia"
+        },
+        {
+          "locale": "pt-BR",
+          "section_key": "history",
+          "source_url": "https://www.museonacional.gov.co/Publicaciones/Documents/Diagnostico%20Museos.pdf",
+          "source_label": "museo"
+        }
+      ]
+    },
+    "destination_media": {
+      "hero": {
+        "role": "hero",
+        "media_asset_id": 188,
+        "asset_path": "assets/destinos/santa-fe-de-antioquia/9a661e252005d27e29917085b025241a86b31370e1b5f30f412f4a6da879d9f2.webp"
+      }
+    }
+  },
+  "media": [
+    {
+      "id": 384,
+      "origin": "ai_generated",
+      "asset_path": "assets/destinos/santa-fe-de-antioquia/7373a0581858553df3c99d612d850d3ade25b40e8b4b0a4e7190b8489f60c096.webp",
+      "creator": "Ilustración editorial generada con IA para Explorando Lugares",
+      "source_url": "",
+      "license_name": "Composición temática independiente de la actividad; no representa al oferente ni un recinto exacto. ",
+      "license_url": "",
+      "provenance_json": "{\"sha256\":\"7373a0581858553df3c99d612d850d3ade25b40e8b4b0a4e7190b8489f60c096\",\"source_package\":\"santa-fe-de-antioquia\",\"editorial_approved\":false,\"local_preview_only\":true}",
+      "width": 1200,
+      "height": 800,
+      "sha256": "7373a0581858553df3c99d612d850d3ade25b40e8b4b0a4e7190b8489f60c096",
+      "local_file": "media/7373a0581858553df3c99d612d850d3ade25b40e8b4b0a4e7190b8489f60c096.webp"
+    },
+    {
+      "id": 195,
+      "origin": "ai_generated",
+      "asset_path": "assets/destinos/santa-fe-de-antioquia/f632e6a1f5ede2608c4babb6c51f5e6815cb91e21f329ba7b6abb75ec20cc11d.webp",
+      "creator": "Ilustración editorial generada con IA para Explorando Lugares",
+      "source_url": "",
+      "license_name": "Composición independiente generada con IA; borrador pendiente de revisión editorial humana; proceden",
+      "license_url": "",
+      "provenance_json": "{\"sha256\":\"f632e6a1f5ede2608c4babb6c51f5e6815cb91e21f329ba7b6abb75ec20cc11d\",\"source_package\":\"santa-fe-de-antioquia\",\"editorial_approved\":false,\"local_preview_only\":true}",
+      "width": 1200,
+      "height": 800,
+      "sha256": "f632e6a1f5ede2608c4babb6c51f5e6815cb91e21f329ba7b6abb75ec20cc11d",
+      "local_file": "media/f632e6a1f5ede2608c4babb6c51f5e6815cb91e21f329ba7b6abb75ec20cc11d.webp"
+    },
+    {
+      "id": 198,
+      "origin": "ai_generated",
+      "asset_path": "assets/destinos/santa-fe-de-antioquia/fd2bacb4b24eda91593fcb3fcc1b5c798559653d7d6752052d2c550666ab02dc.webp",
+      "creator": "Ilustración editorial generada con IA para Explorando Lugares",
+      "source_url": "",
+      "license_name": "Composición independiente generada con IA; borrador pendiente de revisión editorial humana; proceden",
+      "license_url": "",
+      "provenance_json": "{\"sha256\":\"fd2bacb4b24eda91593fcb3fcc1b5c798559653d7d6752052d2c550666ab02dc\",\"source_package\":\"santa-fe-de-antioquia\",\"editorial_approved\":false,\"local_preview_only\":true}",
+      "width": 1200,
+      "height": 800,
+      "sha256": "fd2bacb4b24eda91593fcb3fcc1b5c798559653d7d6752052d2c550666ab02dc",
+      "local_file": "media/fd2bacb4b24eda91593fcb3fcc1b5c798559653d7d6752052d2c550666ab02dc.webp"
+    },
+    {
+      "id": 366,
+      "origin": "ai_generated",
+      "asset_path": "assets/destinos/santa-fe-de-antioquia/1e3e90f8e77ce8a97df5d9d4b6fee2f85e6b071d609c39fba999b530d00445e3.webp",
+      "creator": "Ilustración editorial generada con IA para Explorando Lugares",
+      "source_url": "",
+      "license_name": "Composición independiente generada con IA; borrador pendiente de revisión editorial humana; proceden",
+      "license_url": "",
+      "provenance_json": "{\"sha256\":\"1e3e90f8e77ce8a97df5d9d4b6fee2f85e6b071d609c39fba999b530d00445e3\",\"source_package\":\"santa-fe-de-antioquia\",\"editorial_approved\":false,\"local_preview_only\":true}",
+      "width": 960,
+      "height": 640,
+      "sha256": "1e3e90f8e77ce8a97df5d9d4b6fee2f85e6b071d609c39fba999b530d00445e3",
+      "local_file": "media/1e3e90f8e77ce8a97df5d9d4b6fee2f85e6b071d609c39fba999b530d00445e3.webp"
+    },
+    {
+      "id": 370,
+      "origin": "ai_generated",
+      "asset_path": "assets/destinos/santa-fe-de-antioquia/1553c6b366bbc29a7406ccb53a45bf88bd48aefdecd0e5b1dc6a992dd6fd27c0.webp",
+      "creator": "Ilustración editorial generada con IA para Explorando Lugares",
+      "source_url": "",
+      "license_name": "Composición independiente generada con IA; borrador pendiente de revisión editorial humana; proceden",
+      "license_url": "",
+      "provenance_json": "{\"sha256\":\"1553c6b366bbc29a7406ccb53a45bf88bd48aefdecd0e5b1dc6a992dd6fd27c0\",\"source_package\":\"santa-fe-de-antioquia\",\"editorial_approved\":false,\"local_preview_only\":true}",
+      "width": 960,
+      "height": 640,
+      "sha256": "1553c6b366bbc29a7406ccb53a45bf88bd48aefdecd0e5b1dc6a992dd6fd27c0",
+      "local_file": "media/1553c6b366bbc29a7406ccb53a45bf88bd48aefdecd0e5b1dc6a992dd6fd27c0.webp"
+    },
+    {
+      "id": 379,
+      "origin": "ai_generated",
+      "asset_path": "assets/destinos/santa-fe-de-antioquia/781d3fbf0d18deb2bc7d158fa8e14416f0ab927dd8f98f091b7a197d8b9944f0.webp",
+      "creator": "Adaptación ilustrada IA de fotografía de XalD",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Casa_Museo_Juan_del_Corral_-_02.jpg",
+      "license_name": "CC BY-SA 4.0; fotografía transformada a ilustración IA",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "provenance_json": "{\"sha256\":\"781d3fbf0d18deb2bc7d158fa8e14416f0ab927dd8f98f091b7a197d8b9944f0\",\"source_package\":\"santa-fe-de-antioquia\",\"editorial_approved\":false,\"local_preview_only\":true}",
+      "width": 1200,
+      "height": 800,
+      "sha256": "781d3fbf0d18deb2bc7d158fa8e14416f0ab927dd8f98f091b7a197d8b9944f0",
+      "local_file": "media/781d3fbf0d18deb2bc7d158fa8e14416f0ab927dd8f98f091b7a197d8b9944f0.webp"
+    },
+    {
+      "id": 188,
+      "origin": "ai_generated",
+      "asset_path": "assets/destinos/santa-fe-de-antioquia/9a661e252005d27e29917085b025241a86b31370e1b5f30f412f4a6da879d9f2.webp",
+      "creator": "Ilustración editorial generada con IA para Explorando Lugares",
+      "source_url": "",
+      "license_name": "Composición independiente generada con IA; borrador pendiente de revisión editorial humana; proceden",
+      "license_url": "",
+      "provenance_json": "{\"sha256\":\"9a661e252005d27e29917085b025241a86b31370e1b5f30f412f4a6da879d9f2\",\"source_package\":\"santa-fe-de-antioquia\",\"editorial_approved\":false,\"local_preview_only\":true}",
+      "width": 1200,
+      "height": 800,
+      "sha256": "9a661e252005d27e29917085b025241a86b31370e1b5f30f412f4a6da879d9f2",
+      "local_file": "media/9a661e252005d27e29917085b025241a86b31370e1b5f30f412f4a6da879d9f2.webp"
+    },
+    {
+      "id": 381,
+      "origin": "ai_generated",
+      "asset_path": "assets/destinos/santa-fe-de-antioquia/01244a929a1860c649cacf48e423ad1e1e7bb84c38ef45193f781ce17c8bd696.webp",
+      "creator": "Adaptación ilustrada IA de fotografía de SajoR",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Museo_Arte_Religioso-Santa_Fe_de_Antioquia.jpg",
+      "license_name": "CC BY-SA 2.5; fotografía transformada a ilustración IA",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.5/",
+      "provenance_json": "{\"sha256\":\"01244a929a1860c649cacf48e423ad1e1e7bb84c38ef45193f781ce17c8bd696\",\"source_package\":\"santa-fe-de-antioquia\",\"editorial_approved\":false,\"local_preview_only\":true}",
+      "width": 1200,
+      "height": 800,
+      "sha256": "01244a929a1860c649cacf48e423ad1e1e7bb84c38ef45193f781ce17c8bd696",
+      "local_file": "media/01244a929a1860c649cacf48e423ad1e1e7bb84c38ef45193f781ce17c8bd696.webp"
+    },
+    {
+      "id": 190,
+      "origin": "ai_generated",
+      "asset_path": "assets/destinos/santa-fe-de-antioquia/76329fe624e14d3731fc745a8fa145e18c062dd2506b955b7d295de487f5645f.webp",
+      "creator": "Ilustración editorial generada con IA para Explorando Lugares",
+      "source_url": "",
+      "license_name": "Composición independiente generada con IA; borrador pendiente de revisión editorial humana; proceden",
+      "license_url": "",
+      "provenance_json": "{\"sha256\":\"76329fe624e14d3731fc745a8fa145e18c062dd2506b955b7d295de487f5645f\",\"source_package\":\"santa-fe-de-antioquia\",\"editorial_approved\":false,\"local_preview_only\":true}",
+      "width": 1200,
+      "height": 800,
+      "sha256": "76329fe624e14d3731fc745a8fa145e18c062dd2506b955b7d295de487f5645f",
+      "local_file": "media/76329fe624e14d3731fc745a8fa145e18c062dd2506b955b7d295de487f5645f.webp"
+    },
+    {
+      "id": 191,
+      "origin": "ai_generated",
+      "asset_path": "assets/destinos/santa-fe-de-antioquia/1a96481600ead83e11e8b4d6b459181494d964b802df6d45e463f5bea709e271.webp",
+      "creator": "Ilustración editorial generada con IA para Explorando Lugares",
+      "source_url": "",
+      "license_name": "Composición independiente generada con IA; borrador pendiente de revisión editorial humana; proceden",
+      "license_url": "",
+      "provenance_json": "{\"sha256\":\"1a96481600ead83e11e8b4d6b459181494d964b802df6d45e463f5bea709e271\",\"source_package\":\"santa-fe-de-antioquia\",\"editorial_approved\":false,\"local_preview_only\":true}",
+      "width": 1200,
+      "height": 800,
+      "sha256": "1a96481600ead83e11e8b4d6b459181494d964b802df6d45e463f5bea709e271",
+      "local_file": "media/1a96481600ead83e11e8b4d6b459181494d964b802df6d45e463f5bea709e271.webp"
+    }
+  ],
+  "media_translations": [
+    {
+      "media_asset_id": 188,
+      "locale": "en",
+      "alt_text": "Illustration of Santa Fe de Antioquia",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 188,
+      "locale": "es",
+      "alt_text": "Ilustración de Santa Fe de Antioquia",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 188,
+      "locale": "pt-BR",
+      "alt_text": "Ilustração de Santa Fe de Antioquia",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 190,
+      "locale": "en",
+      "alt_text": "Editorial illustration: Plaza Mayor Simón Bolívar",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 190,
+      "locale": "es",
+      "alt_text": "Ilustración editorial: Plaza Mayor Simón Bolívar",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 190,
+      "locale": "pt-BR",
+      "alt_text": "Ilustração editorial: Plaza Mayor Simón Bolívar",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 191,
+      "locale": "en",
+      "alt_text": "Editorial illustration: Catedral de la Inmaculada Concepción",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 191,
+      "locale": "es",
+      "alt_text": "Ilustración editorial: Catedral de la Inmaculada Concepción",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 191,
+      "locale": "pt-BR",
+      "alt_text": "Ilustração editorial: Catedral de la Inmaculada Concepción",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 195,
+      "locale": "en",
+      "alt_text": "Editorial illustration: Plazuela e iglesia de La Chinca",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 195,
+      "locale": "es",
+      "alt_text": "Ilustración editorial: Plazuela e iglesia de La Chinca",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 195,
+      "locale": "pt-BR",
+      "alt_text": "Ilustração editorial: Plazuela e iglesia de La Chinca",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 198,
+      "locale": "en",
+      "alt_text": "Thematic illustration: Filigree workshop",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 198,
+      "locale": "es",
+      "alt_text": "Ilustración temática: Taller de filigrana",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 198,
+      "locale": "pt-BR",
+      "alt_text": "Ilustração temática: Oficina de filigrana",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 366,
+      "locale": "en",
+      "alt_text": "Editorial illustration: Puente de Occidente",
+      "caption": "Swedish Colombian · CC BY 2.0 · Adaptación ilustrada IA"
+    },
+    {
+      "media_asset_id": 366,
+      "locale": "es",
+      "alt_text": "Ilustración editorial: Puente de Occidente",
+      "caption": "Swedish Colombian · CC BY 2.0 · Adaptación ilustrada IA"
+    },
+    {
+      "media_asset_id": 366,
+      "locale": "pt-BR",
+      "alt_text": "Ilustração editorial: Puente de Occidente",
+      "caption": "Swedish Colombian · CC BY 2.0 · Adaptación ilustrada IA"
+    },
+    {
+      "media_asset_id": 370,
+      "locale": "en",
+      "alt_text": "Editorial illustration: Iglesia de Santa Bárbara",
+      "caption": "Magi and Helen · CC BY 2.0 · Adaptación ilustrada IA"
+    },
+    {
+      "media_asset_id": 370,
+      "locale": "es",
+      "alt_text": "Ilustración editorial: Iglesia de Santa Bárbara",
+      "caption": "Magi and Helen · CC BY 2.0 · Adaptación ilustrada IA"
+    },
+    {
+      "media_asset_id": 370,
+      "locale": "pt-BR",
+      "alt_text": "Ilustração editorial: Iglesia de Santa Bárbara",
+      "caption": "Magi and Helen · CC BY 2.0 · Adaptación ilustrada IA"
+    },
+    {
+      "media_asset_id": 379,
+      "locale": "en",
+      "alt_text": "Illustration based on a real display case at Museo Juan del Corral.",
+      "caption": "XalD · CC BY-SA 4.0 · Adaptación ilustrada IA"
+    },
+    {
+      "media_asset_id": 379,
+      "locale": "es",
+      "alt_text": "Ilustración basada en una vitrina real del Museo Juan del Corral.",
+      "caption": "XalD · CC BY-SA 4.0 · Adaptación ilustrada IA"
+    },
+    {
+      "media_asset_id": 379,
+      "locale": "pt-BR",
+      "alt_text": "Ilustração baseada em uma vitrine real do Museo Juan del Corral.",
+      "caption": "XalD · CC BY-SA 4.0 · Adaptación ilustrada IA"
+    },
+    {
+      "media_asset_id": 381,
+      "locale": "en",
+      "alt_text": "Illustration of the real façade of Museo de Arte Religioso Francisco Cristóbal Toro.",
+      "caption": "SajoR · CC BY-SA 2.5 · Adaptación ilustrada IA"
+    },
+    {
+      "media_asset_id": 381,
+      "locale": "es",
+      "alt_text": "Ilustración de la fachada real del Museo de Arte Religioso Francisco Cristóbal Toro.",
+      "caption": "SajoR · CC BY-SA 2.5 · Adaptación ilustrada IA"
+    },
+    {
+      "media_asset_id": 381,
+      "locale": "pt-BR",
+      "alt_text": "Ilustração da fachada real do Museo de Arte Religioso Francisco Cristóbal Toro.",
+      "caption": "SajoR · CC BY-SA 2.5 · Adaptación ilustrada IA"
+    },
+    {
+      "media_asset_id": 384,
+      "locale": "en",
+      "alt_text": "Thematic illustration: Guided countryside horse ride",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 384,
+      "locale": "es",
+      "alt_text": "Ilustración temática: Cabalgata rural",
+      "caption": ""
+    },
+    {
+      "media_asset_id": 384,
+      "locale": "pt-BR",
+      "alt_text": "Ilustração temática: Cavalgada rural",
+      "caption": ""
+    }
+  ]
+}
