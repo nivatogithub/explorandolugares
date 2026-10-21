@@ -241,7 +241,7 @@ try:
                     '/admin/negocios.php': 'Negocios',
                     '/admin/trasladar-negocios.php': 'Negocios',
                     '/admin/importar-negocios.php': 'Negocios',
-                    '/admin/reclamaciones.php': 'Reclamos de negocio',
+                    '/admin/reclamaciones.php': 'Solicitudes de cuenta',
                     '/admin/solicitudes-cuenta.php': 'Solicitudes de cuenta',
                     '/admin/usuarios.php': 'Cuentas',
                     '/admin/suscripciones.php': 'Suscripciones',
