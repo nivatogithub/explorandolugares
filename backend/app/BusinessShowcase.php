@@ -8,7 +8,7 @@ final class BusinessShowcase
   catch(PDOException $e){if(str_contains($e->getMessage(),'no such table')||($e->errorInfo[1]??0)===1146)return [];throw $e;}
  }
  public static function clean(PDO $pdo,int $business,array $input,array $previous,bool $editor):array{
-  $out=['products'=>[],'experience_ids'=>[]];$products=$input['products']??[];if(!is_array($products)||count($products)>3)throw new RuntimeException('Premium admite hasta tres productos o servicios con imagen.');
+  $out=['products'=>[],'experience_ids'=>[]];$products=$input['products']??[];if(!is_array($products)||count($products)>5)throw new RuntimeException('Premium admite hasta cinco productos o servicios con imagen.');
   foreach($products as $i=>$product){if(!is_array($product))throw new RuntimeException('Revisa los productos.');$row=['translations'=>[],'asset_id'=>$editor?(int)($product['asset_id']??0):(int)($previous['products'][$i]['asset_id']??0)];
    foreach($editor?['es','en','pt-BR']:['es'] as $locale)foreach(['name'=>100,'description'=>400] as $field=>$limit){$value=trim((string)($product['translations'][$locale][$field]??$previous['products'][$i]['translations'][$locale][$field]??''));if(preg_match_all('/./us',$value)>$limit)throw new RuntimeException('El nombre del producto admite 100 caracteres y su descripción 400.');$row['translations'][$locale][$field]=$value;}
    foreach(['en','pt-BR'] as $locale)if(!isset($row['translations'][$locale]))$row['translations'][$locale]=$previous['products'][$i]['translations'][$locale]??['name'=>'','description'=>''];

@@ -38,8 +38,9 @@ $products=['products'=>[['translations'=>['es'=>['name'=>'Producto de prueba','d
 $clean=BusinessShowcase::clean($p,1,$products,[],true);fails(fn()=>BusinessShowcase::validate($clean),'missing product translations accepted');
 foreach(['en','pt-BR'] as $locale)$products['products'][0]['translations'][$locale]=['name'=>'Test product','description'=>'Private description'];
 $clean=BusinessShowcase::clean($p,1,$products,[],true);BusinessShowcase::validate($clean);check(count(BusinessShowcase::renderData($p,1,$clean,'es')['products'])===1,'product image not rendered');
+$five=BusinessShowcase::clean($p,1,['products'=>array_fill(0,5,$products['products'][0])],[],true);check(count($five['products'])===5,'five products rejected');
 $forged=$products;$forged['products'][0]['asset_id']=99999;$owner=BusinessShowcase::clean($p,1,$forged,$clean,false);check($owner['products'][0]['asset_id']===1,'owner can substitute unreviewed image');
-fails(fn()=>BusinessShowcase::clean($p,1,['products'=>array_fill(0,4,$products['products'][0])],[],true),'four products accepted');
+fails(fn()=>BusinessShowcase::clean($p,1,['products'=>array_fill(0,6,$products['products'][0])],[],true),'six products accepted');
 fails(fn()=>BusinessShowcase::clean($p,1,['experience_ids'=>[99999]],[],true),'foreign or unpublished experience accepted');
 check(BusinessShowcase::published($p,1)===[],'private showcase leaked to publication');
 $p->exec('ALTER TABLE points_of_interest ADD COLUMN poi_type TEXT NOT NULL DEFAULT "place";INSERT INTO points_of_interest(id,destination_id,slug,poi_type,publication_status) VALUES(1,1,"experiencia-prueba","experience","published");INSERT INTO point_of_interest_translations(point_of_interest_id,locale,name,description) VALUES(1,"es","Experiencia de prueba","Texto revisado");INSERT INTO point_of_interest_media(point_of_interest_id,media_asset_id) VALUES(1,1)');
