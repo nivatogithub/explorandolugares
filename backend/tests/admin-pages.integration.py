@@ -204,7 +204,7 @@ try:
         ('/admin/contactos-negocios.php', 'Canales y responsable'),
         ('/admin/campanas.php', 'Campañas por correo'),
         ('/admin/campanas.php?tab=conexion', 'Remitente y conexión'),
-        ('/admin/campanas.php?tab=correos', 'Correos de negocios'),
+        ('/admin/campanas.php?tab=correos', 'Negocios destinatarios'),
     ]
     # The login is public; all operational pages require an authenticated session.
     for path, _ in paths:
@@ -341,6 +341,15 @@ try:
     status, body, _ = request('/admin/campanas.php', {'csrf': campaign_csrf, 'action': 'create', 'name': 'Prueba local', 'subject': 'Asunto local', 'body': '<script>alert(1)</script>', 'channels[]': str(channel_id)})
     check(status == 200 and '&lt;script&gt;' in body and 'Aprobar esta versión' in body, 'El borrador debe abrir para revisión con contenido escapado.')
     campaign_row = DB.execute('SELECT id,content_hash FROM business_email_campaigns').fetchone()
+    _,reuse_html,_=request('/admin/campanas.php?reuse='+str(campaign_row[0]))
+    check('value="Asunto local"' in reuse_html and '&lt;script&gt;' in reuse_html and 'name="channels[]"' in reuse_html and 'name="channels[]" checked' not in reuse_html,'Reusing a message must escape content and require a fresh recipient selection.')
+    _,filtered_html,_=request('/admin/campanas.php?tab=correos&q=nonexistent-business')
+    check('hotel@example.invalid' not in filtered_html,'Recipient search did not filter businesses.')
+    _,templates_html,_=request('/admin/campanas.php?tab=plantillas')
+    check('Usar como base' in templates_html and 'Prueba local' in templates_html,'Saved messages are not available to reuse.')
+    campaign_tabs=re.search(r'<nav class="admin-workflow-tabs".*?</nav>',templates_html,re.S).group(0)
+    check('tab=conexion' not in campaign_tabs,'Connection settings must stay out of campaign tabs.')
+
     status, body, _ = request('/admin/campanas.php', {'csrf': campaign_csrf, 'action': 'approve', 'id': str(campaign_row[0]), 'hash': campaign_row[1], 'reviewed': '1'})
     check(status == 400 and 'Completa y habilita' in body, 'La conexión no configurada debe bloquear aprobación y envío.')
 

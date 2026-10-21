@@ -54,3 +54,5 @@ Integrar el candidato en preprod conforme a AGENTS, reconciliar main, revisar el
 - Confirmado y sincronizado el menú lateral local: Revisión y pendientes no aparece como acceso principal. La revisión/publicación de importaciones queda únicamente dentro de Negocios.
 
 - Exportar / actualizar pasa a Actualización masiva de datos. La explicación distingue exportación, edición externa, comparación y confirmación. Selector JSON con el componente existente en español, espaciado, foco visible y nombre del archivo. Sin cambios en la actualización de datos.
+
+- Campañas: acceso Negocios destinatarios, filtros por lugar, negocio/correo y disponibilidad, selección explícita al crear. Brevo se configura desde Sistema, sin pestaña duplicada de campañas. Selectores nativos. Plantillas y mensajes explica el formato fijo actual y permite reutilizar el contenido de una campaña, sin copiar destinatarios ni aprobaciones. Biblioteca/editor de HTML personalizado pendiente, sin cambios en envíos ni permisos.
