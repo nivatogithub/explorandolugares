@@ -887,7 +887,9 @@ try:
         code,example,headers=request('/business/demo.php?view='+demo_view,opener=urllib.request.build_opener())
         check(code==200 and 'noindex' in headers.get('X-Robots-Tag','') and 'data-el-measurement' not in example,'Ejemplo público falla o mide visitas: '+demo_view)
         check((demo_view=='page_premium')==('Nube De Cacao' in example),'Diferencia de productos no corresponde a modalidad')
-        check((demo_view!='free')==('tel:+573234870366' in example),'Contacto del ejemplo no corresponde a modalidad')
+        check((demo_view!='free')==('aria-disabled="true"' in example),'Iconos de simulación no corresponden a modalidad')
+        for icon_tag in re.findall(r'<a\b[^>]*class="[^"]*(?:directory-contact-link|business-channel|footer-contact-link)[^"]*"[^>]*>',example):
+            check('href=' not in icon_tag and 'target=' not in icon_tag and 'aria-disabled="true"' in icon_tag,'Un canal del ejemplo conserva navegación')
         code,embedded,embedded_headers=request('/business/demo.php?view='+demo_view+'&embedded=1',opener=urllib.request.build_opener())
         check(code==200 and embedded_headers.get('X-Frame-Options')=='SAMEORIGIN' and "frame-ancestors 'self'" in embedded_headers.get('Content-Security-Policy',''),'El ejemplo no admite el panel del mismo origen')
         check('Volver a suscripciones' not in embedded and 'Horario de atención' not in embedded and 'business-profile-back' not in embedded,'El panel conserva navegación de salida u horarios')
