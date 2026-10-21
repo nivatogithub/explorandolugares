@@ -1,0 +1,119 @@
+{
+  "destination": "medellin",
+  "build_exit": 0,
+  "approved_media_count": 15,
+  "approved_media_bad": 0,
+  "build_media_matching": 0,
+  "missing_translation_fields": [],
+  "runtime_uses_DB": true,
+  "runtime_reads_approved_artifact": false,
+  "runtime_override_map_present": false,
+  "runtime_complete": "FAIL: build does not import approved data into database, approved media may be absent; no DB-configured end-to-end check",
+  "media": [
+    {
+      "path": "assets/medellin-semirrealista/web/pueblito-paisa-800.webp",
+      "approved_hash": "866567e69eecb183185d923cc2d8dabf674862a1265df5dd0eca65833feef143",
+      "approved_bytes_valid": true,
+      "build_hash": null,
+      "build_matches": false
+    },
+    {
+      "path": "assets/medellin-semirrealista/web/city-comuna13-800.webp",
+      "approved_hash": "6c48c2524308cf690dc74feac53199dc3237808d5d7e5df27ff08930a070dd41",
+      "approved_bytes_valid": true,
+      "build_hash": null,
+      "build_matches": false
+    },
+    {
+      "path": "assets/medellin-semirrealista/web/parque-explora-800.webp",
+      "approved_hash": "01c6dfde7221158ad1bda001ab2ac561938566b896a8f05da063583aa10343a4",
+      "approved_bytes_valid": true,
+      "build_hash": null,
+      "build_matches": false
+    },
+    {
+      "path": "assets/medellin-semirrealista/web/portada-v3-1200.webp",
+      "approved_hash": "090b31337d6df5bbb8b7497520283ed84ad55d88d8a7aa0af3b4d3a7f5cb5ad2",
+      "approved_bytes_valid": true,
+      "build_hash": null,
+      "build_matches": false
+    },
+    {
+      "path": "assets/destinos/medellin/d4b2eccc5f67de0840518e8914860830e9aa798e452e6c186f79f9deab76c554.webp",
+      "approved_hash": "d4b2eccc5f67de0840518e8914860830e9aa798e452e6c186f79f9deab76c554",
+      "approved_bytes_valid": true,
+      "build_hash": null,
+      "build_matches": false
+    },
+    {
+      "path": "assets/medellin-semirrealista/web/pies-descalzos-800.webp",
+      "approved_hash": "857e8f25049951866df24bde4f88fec01981c2a6f227430fa5ed750934f6e636",
+      "approved_bytes_valid": true,
+      "build_hash": null,
+      "build_matches": false
+    },
+    {
+      "path": "assets/medellin-semirrealista/web/catedral-metropolitana-800.webp",
+      "approved_hash": "f87f14d8c93479f0c990e34795de1d9354b8254efb42b2d09931d7b4b6633ce9",
+      "approved_bytes_valid": true,
+      "build_hash": null,
+      "build_matches": false
+    },
+    {
+      "path": "assets/medellin-semirrealista/web/arvi-800.webp",
+      "approved_hash": "2fa2dc8c35754bcbde957ccc11d0c245bd64a9cada9cc435c15b19e0f5ee9ae8",
+      "approved_bytes_valid": true,
+      "build_hash": null,
+      "build_matches": false
+    },
+    {
+      "path": "assets/destinos/medellin/d7ad048ea39667345e2345f7cfbe729472d4f61c994163b77faba099d1183590.webp",
+      "approved_hash": "d7ad048ea39667345e2345f7cfbe729472d4f61c994163b77faba099d1183590",
+      "approved_bytes_valid": true,
+      "build_hash": null,
+      "build_matches": false
+    },
+    {
+      "path": "assets/medellin-semirrealista/web/museo-antioquia-800.webp",
+      "approved_hash": "f626cd23f29da52068353cb67503d97d331a8d49f14b54fa072641214ec79213",
+      "approved_bytes_valid": true,
+      "build_hash": null,
+      "build_matches": false
+    },
+    {
+      "path": "assets/destinos/medellin/33f7cc46feb9d20e1b14704027864c2a61a03eb9273a94289bad6025c8c37898.webp",
+      "approved_hash": "33f7cc46feb9d20e1b14704027864c2a61a03eb9273a94289bad6025c8c37898",
+      "approved_bytes_valid": true,
+      "build_hash": null,
+      "build_matches": false
+    },
+    {
+      "path": "assets/medellin-semirrealista/web/comuna13-800.webp",
+      "approved_hash": "8a9bd812bab71ceb4828aef5033dd1ce66a202c92dadfd292b3a3fe899085aa3",
+      "approved_bytes_valid": true,
+      "build_hash": null,
+      "build_matches": false
+    },
+    {
+      "path": "assets/destinos/medellin/7ab2b44b2689ef78f487d2be4185aae22517132e3d8d168772b85850c4449d4f.webp",
+      "approved_hash": "7ab2b44b2689ef78f487d2be4185aae22517132e3d8d168772b85850c4449d4f",
+      "approved_bytes_valid": true,
+      "build_hash": null,
+      "build_matches": false
+    },
+    {
+      "path": "assets/medellin-semirrealista/web/jardin-botanico-800.webp",
+      "approved_hash": "f84f56a562d7480782dcd41e4b87ac6e5d0953ddc74cf9a856964ee877ab6a81",
+      "approved_bytes_valid": true,
+      "build_hash": null,
+      "build_matches": false
+    },
+    {
+      "path": "assets/destinos/medellin/341dd3a5f4199de3f1ce8f3dca887012bad1c38c9aee152869498619c11656fa.webp",
+      "approved_hash": "341dd3a5f4199de3f1ce8f3dca887012bad1c38c9aee152869498619c11656fa",
+      "approved_bytes_valid": true,
+      "build_hash": null,
+      "build_matches": false
+    }
+  ]
+}

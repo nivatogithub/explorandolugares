@@ -1,0 +1,123 @@
+{
+  "slug": "zipaquira",
+  "build_exit": 0,
+  "build_log": "/tmp/builds-cuatro-destinos-20261020/zipaquira/build.log",
+  "source_status_unchanged": true,
+  "snapshot_translations": {
+    "es": true,
+    "en": true,
+    "pt-BR": true
+  },
+  "snapshot_places": 10,
+  "snapshot_media": 11,
+  "built_images": [
+    {
+      "path": "assets/destinos/zipaquira/c2badfad9bda4389dc63d84ce26a38cb544a37dfdfd9751e5d6f44b0eb48c4c5.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    },
+    {
+      "path": "assets/destinos/zipaquira/e294f327be12a0e37e75bbd361c66fb7c72ee7999740836fe4c530f9dc553b0e.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    },
+    {
+      "path": "assets/destinos/zipaquira/be034a026989068701777078bb0d218912941d32b0d4776804d6edaec6dc0c34.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    },
+    {
+      "path": "assets/destinos/zipaquira/47d7c0bba510661928bc1edd7d88f911faecb10a2194b3a5d025230d0f5af8cf.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    },
+    {
+      "path": "assets/destinos/zipaquira/457b21566651f559dd5f32210cb572a4f4b116f68ecde5582b7d9356144a12f5.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    },
+    {
+      "path": "assets/destinos/zipaquira/b1e3f041372ef13952c2f7e944e06acd08e1c4ffa9610c04f1b423c548eb367d.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    },
+    {
+      "path": "assets/destinos/zipaquira/083d877ebe942e25d81a90a47a05c8579de094a922b0135aff3eadee687e4d8c.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    },
+    {
+      "path": "assets/destinos/zipaquira/438213f64269a4ba3f709a0db4862a0c7c7d6b78dd9df23c67f0c253917298aa.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    },
+    {
+      "path": "assets/destinos/zipaquira/50a54d0ed6ab360c63c596891027ac3f1973bdd38840cc5314437fe4609212c1.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    },
+    {
+      "path": "assets/destinos/zipaquira/b9bf6e4293e304f653dd091b21749efbad5b3fe5ae61ffaea46d387255468729.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    },
+    {
+      "path": "assets/destinos/zipaquira/9f088d4847c0a853b2e794e6a503d7786d292cfec91b44b0a4757ce4aca6ff5a.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    }
+  ],
+  "snapshot_copied_into_build": [],
+  "snapshot_referenced_by_packager": false,
+  "database_migration_in_release": [],
+  "packaged_seed_slugs": [
+    "jerico",
+    "jardin",
+    "guatape",
+    "santa-fe-de-antioquia",
+    "el-penol",
+    "tamesis",
+    "san-jeronimo",
+    "sopetran",
+    "san-rafael",
+    "cocorna",
+    "venecia",
+    "el-retiro",
+    "san-carlos",
+    "el-carmen-de-viboral",
+    "rionegro",
+    "medellin",
+    "necocli",
+    "arboletes",
+    "puerto-triunfo",
+    "san-pedro-de-los-milagros",
+    "santa-rosa-de-osos"
+  ],
+  "destination_present_in_packaged_seed": false,
+  "source_snapshot_languages_complete": true,
+  "snapshot_reference_hashes_valid": true,
+  "source_snapshot_place_names": [
+    "Catedral de Sal",
+    "Plaza de los Comuneros",
+    "Catedral Diocesana",
+    "Estación del Tren",
+    "El Colegio de Gabo",
+    "Casa Museo Quevedo Zornoza",
+    "Museo Arqueológico",
+    "Experiencia minera",
+    "Paseo en tren turístico",
+    "Tour urbano patrimonial"
+  ],
+  "conclusion": "BUILD_INCOMPLETO: no incorpora contenido aprobado ni imágenes. Semilla histórica no contiene destino."
+}

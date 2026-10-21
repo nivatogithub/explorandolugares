@@ -30,3 +30,32 @@
 - Para pruebas, preparación y publicación, aplicar `docs/REGLAS_OPERATIVAS_DESPLIEGUE.md`: una autorización por tarea concreta cubre los pasos rutinarios de esa tarea; detenerse solo ante los límites de riesgo allí definidos o un bloqueo técnico que exija aprobación.
 
 - Para crear o modificar destinos, leer `crecimiento-colombia/GUIA_GENERACION_DESTINOS.md` y `docs/POLITICA_EXPERIENCIAS_DE_OPERADORES.md`: hasta ocho atractivos sin cuota mínima; experiencias con evidencia interna y texto público neutral. Los oferentes solo aparecen mediante presencia comercial pagada y aprobada. Aplicar también al revisar pendientes y publicados.
+
+## Regla obligatoria de cierre de destinos (20/10/2026)
+
+- No declarar un destino listo por verlo en la base local: el paquete reconstruido desde Git debe incluir el mismo contenido y todas sus imágenes aprobadas, verificadas por SHA-256.
+- Una única versión vigente por destino; no mantener selecciones contradictorias en JSON, DB y JavaScript. Cambios compartidos de estilos se integran una sola vez al portal.
+- Cada cambio de imagen actualiza procedencia, referencia y manifiesto en la misma entrega. La construcción falla si falta un archivo o no coincide su hash.
+- Limpiar medios obsoletos solo tras comprobar referencias de páginas, código, DB activa y borradores; conservar maestros/procedencia fuera del público e historial en Git. No limpiar por omisión ni tocar uploads ajenos o datos vivos.
+
+
+### Conservación de identidad y analítica al actualizar destinos
+
+- Actualizar registros por identidad estable; conservar IDs y public_id existentes. Nunca recrear destinos, lugares o negocios para actualizar contenido.
+- Resolver negocios por public_id, destino y slug; usar nombre normalizado como comprobación adicional. Ante identidad ambigua, detener esa migración sin insertar duplicados.
+- No importar IDs locales ni reemplazar la base de producción. No borrar, reiniciar ni sobrescribir visitas, eventos, sesiones, trazas, cuentas o registros usados en reportes.
+- Antes del despliegue, validar la migración dos veces en una copia aislada y comprobar que la segunda ejecución no añade registros, y que las tablas protegidas conservan su contenido.
+- Comparar analítica antes y después de producción considerando tráfico concurrente: los eventos nuevos son válidos; no exigir igualdad de contadores mientras hay visitas. Conservar evidencias y relaciones históricas.
+
+
+## SEO obligatorio para cada lugar nuevo o actualizado
+
+- Ningún lugar puede declararse listo para publicar sin completar y validar el SEO de sus páginas públicas en español, inglés y portugués. Esta regla aplica a nuevos lugares y modificaciones de los existentes.
+- Título y descripción específicos por lugar e idioma, basados en información verificable y contenido real de la página. No redactarlos interpretando imágenes ni acumular palabras clave de relleno.
+- Una URL pública canónica, enlaces internos coherentes, alternates hreflang recíprocos y x-default. Al cambiar una ruta, preparar redirección permanente a la nueva URL, conservar parámetros pertinentes y evitar cadenas o bucles; las redirecciones temporales solo se permiten durante pruebas locales.
+- Sitemap actualizado con páginas publicadas, indexables y que respondan 200. Robots y directivas de indexación coherentes; borradores, previews y páginas privadas no se incluyen ni se vuelven indexables.
+- HTML accesible al rastreador con encabezados descriptivos, imágenes con texto alternativo fiel y recursos sin enlaces rotos. Si existen datos estructurados, deben corresponder al contenido real; nunca inventar valoraciones, precios o servicios.
+- Completar además las vistas previas sociales Open Graph y Twitter: título, descripción, URL absoluta e imagen apropiada con texto alternativo. En un lugar usar su portada aprobada; en páginas generales una imagen de marca pertinente. Las imágenes no son fuente para redactar el contenido SEO.
+- Validar el paquete reconstruido y las respuestas HTTP: canonical, idiomas, sitemap, indexación, redirecciones y disponibilidad de imágenes. Distinguir validación de metadatos de una vista previa realmente comprobada en una plataforma externa.
+- Conservar IDs e historial de analítica al cambiar URLs; comprobar continuidad de los reportes sin borrar ni reiniciar métricas. Registrar evidencia antes de declarar el cierre.
+- Los controles automatizados pertinentes deben pasar antes de publicar. Una comprobación pendiente impide declarar SEO completo; no prometer posiciones ni indexación inmediata en Google.
