@@ -1,0 +1,205 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "cauca-viejo",
+    "country_code": "CO",
+    "destination_type": "other",
+    "department": "Antioquia",
+    "subregion": "Suroeste",
+    "translations": {
+      "es": {
+        "display_name": "Cauca Viejo",
+        "eyebrow": "Jericó · Antioquia · Colombia",
+        "headline": "Balcones y descanso junto al Cauca",
+        "intro": "Pueblo privado junto al río Cauca, dentro de Jericó. El ingreso requiere reserva y coordinación previa.",
+        "meta_description": "Pueblo privado junto al río Cauca, dentro de Jericó. El ingreso requiere reserva y coordinación previa."
+      },
+      "en": {
+        "display_name": "Cauca Viejo",
+        "eyebrow": "Jericó · Antioquia · Colombia",
+        "headline": "Balconies and quiet by the Cauca",
+        "intro": "A private village beside the Cauca River, within Jericó. Entry requires a reservation and advance arrangements.",
+        "meta_description": "A private village beside the Cauca River, within Jericó. Entry requires a reservation and advance arrangements."
+      },
+      "pt-BR": {
+        "display_name": "Cauca Viejo",
+        "eyebrow": "Jericó · Antioquia · Colombia",
+        "headline": "Varandas e descanso junto ao Cauca",
+        "intro": "Povoado privado às margens do rio Cauca, em Jericó. A entrada exige reserva e organização prévia.",
+        "meta_description": "Povoado privado às margens do rio Cauca, em Jericó. A entrada exige reserva e organização prévia."
+      }
+    },
+    "history": {
+      "es": [
+        "Cauca Viejo nació en 1998 como un proyecto residencial y turístico en Jericó. Su arquitectura recrea tradiciones del suroeste antioqueño; no es un pueblo colonial antiguo."
+      ],
+      "en": [
+        "Cauca Viejo began in 1998 as a residential and tourism development in Jericó. Its buildings reinterpret southwestern Antioquia traditions; it is not an old colonial town."
+      ],
+      "pt-BR": [
+        "Cauca Viejo surgiu em 1998 como um empreendimento residencial e turístico em Jericó. Sua arquitetura recria tradições do sudoeste de Antioquia; não é um antigo povoado colonial."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Pueblo privado junto al río Cauca, dentro de Jericó. El ingreso requiere reserva y coordinación previa."
+      ],
+      "en": [
+        "A private village beside the Cauca River, within Jericó. Entry requires a reservation and advance arrangements."
+      ],
+      "pt-BR": [
+        "Povoado privado às margens do rio Cauca, em Jericó. A entrada exige reserva e organização prévia."
+      ]
+    },
+    "sources": {
+      "es": [
+        {
+          "section": "destination",
+          "label": "Ubicación y acceso / Location and access",
+          "url": "https://caucaviejo.com/pueblo-cauca-viejo/"
+        }
+      ],
+      "en": [
+        {
+          "section": "destination",
+          "label": "Ubicación y acceso / Location and access",
+          "url": "https://caucaviejo.com/pueblo-cauca-viejo/"
+        }
+      ],
+      "pt-BR": [
+        {
+          "section": "destination",
+          "label": "Ubicación y acceso / Location and access",
+          "url": "https://caucaviejo.com/pueblo-cauca-viejo/"
+        }
+      ]
+    }
+  },
+  "hero_image": {
+    "file": "images/portada.webp",
+    "image_origin": "ai_generated",
+    "alt": {
+      "es": "Ilustración de Cauca Viejo junto al río",
+      "en": "Illustration of Cauca Viejo beside the river",
+      "pt-BR": "Ilustração de Cauca Viejo junto ao rio"
+    }
+  },
+  "places": [
+    {
+      "slug": "plaza-principal",
+      "type": "place",
+      "publication_status": "draft",
+      "sort_order": 1,
+      "translations": {
+        "es": {
+          "name": "Plaza principal",
+          "description": "Fuente de piedra y balcones en el centro del pueblo privado."
+        },
+        "en": {
+          "name": "Main square",
+          "description": "A stone fountain and balconies at the heart of the private village."
+        },
+        "pt-BR": {
+          "name": "Praça principal",
+          "description": "Fonte de pedra e varandas no centro do povoado privado."
+        }
+      },
+      "image": {
+        "file": "images/plaza-principal.webp",
+        "image_origin": "ai_generated",
+        "alt": {
+          "es": "Ilustración de Plaza principal",
+          "en": "Illustration of Main square",
+          "pt-BR": "Ilustração de Praça principal"
+        }
+      }
+    },
+    {
+      "slug": "capilla",
+      "type": "place",
+      "publication_status": "draft",
+      "sort_order": 2,
+      "translations": {
+        "es": {
+          "name": "Capilla de Cauca Viejo",
+          "description": "La capilla acompaña la plaza y la arquitectura tradicional del conjunto."
+        },
+        "en": {
+          "name": "Cauca Viejo chapel",
+          "description": "The chapel stands beside the square and the development’s traditional architecture."
+        },
+        "pt-BR": {
+          "name": "Capela de Cauca Viejo",
+          "description": "A capela acompanha a praça e a arquitetura tradicional do conjunto."
+        }
+      },
+      "image": {
+        "file": "images/capilla.webp",
+        "image_origin": "ai_generated",
+        "alt": {
+          "es": "Ilustración de Capilla de Cauca Viejo",
+          "en": "Illustration of Cauca Viejo chapel",
+          "pt-BR": "Ilustração de Capela de Cauca Viejo"
+        }
+      }
+    },
+    {
+      "slug": "paseo-rio-cauca",
+      "type": "experience",
+      "publication_status": "draft",
+      "sort_order": 3,
+      "translations": {
+        "es": {
+          "name": "Paseo por el río Cauca",
+          "description": "Recorre el río con guía y conoce el paisaje ribereño del suroeste."
+        },
+        "en": {
+          "name": "Cauca River boat tour",
+          "description": "Explore the river with a guide and discover the southwestern riverside landscape."
+        },
+        "pt-BR": {
+          "name": "Passeio pelo rio Cauca",
+          "description": "Percorra o rio com guia e conheça a paisagem ribeirinha do sudoeste."
+        }
+      },
+      "image": {
+        "file": "images/paseo-rio-cauca.webp",
+        "image_origin": "ai_generated",
+        "alt": {
+          "es": "Ilustración de Paseo por el río Cauca",
+          "en": "Illustration of Cauca River boat tour",
+          "pt-BR": "Ilustração de Passeio pelo rio Cauca"
+        }
+      }
+    },
+    {
+      "slug": "cabalgata",
+      "type": "experience",
+      "publication_status": "draft",
+      "sort_order": 4,
+      "translations": {
+        "es": {
+          "name": "Cabalgata (alrededores)",
+          "description": "Recorre a caballo los paisajes cercanos a Cauca Viejo."
+        },
+        "en": {
+          "name": "Horseback riding (surroundings)",
+          "description": "Explore the landscapes around Cauca Viejo on horseback."
+        },
+        "pt-BR": {
+          "name": "Cavalgada (arredores)",
+          "description": "Conheça a cavalo as paisagens próximas a Cauca Viejo."
+        }
+      },
+      "image": {
+        "file": "images/cabalgata.webp",
+        "image_origin": "ai_generated",
+        "alt": {
+          "es": "Ilustración de Cabalgata (alrededores)",
+          "en": "Illustration of Horseback riding (surroundings)",
+          "pt-BR": "Ilustração de Cavalgada (arredores)"
+        }
+      }
+    }
+  ]
+}

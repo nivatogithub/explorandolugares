@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-20",
+  "manifest_validation": "passed DestinationPackage::validateManifest",
+  "locales": [
+    "es",
+    "en",
+    "pt-BR"
+  ],
+  "places": 2,
+  "experiences": 2,
+  "missing_images": 5,
+  "zip_reader": "not run: missing real images",
+  "DB_writes": false,
+  "preprod_changes": false,
+  "ready_to_review_live": false
+}
