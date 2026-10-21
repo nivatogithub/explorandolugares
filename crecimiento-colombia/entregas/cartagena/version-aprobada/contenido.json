@@ -1,0 +1,1732 @@
+{
+  "destination": {
+    "id": 22,
+    "slug": "cartagena",
+    "destination_type": "municipality",
+    "country_code": "CO",
+    "department": "Bolívar",
+    "subregion": "Caribe",
+    "latitude": null,
+    "longitude": null,
+    "publication_status": "published",
+    "display_order": 33,
+    "created_at": "2026-10-16 20:10:41",
+    "updated_at": "2026-10-17 20:03:27",
+    "translations": {
+      "en": {
+        "destination_id": 22,
+        "locale": "en",
+        "display_name": "Cartagena de Indias",
+        "eyebrow": "Bolívar · Colombia",
+        "headline": "City walls, neighbourhoods and memory by the Caribbean",
+        "intro": "Cartagena combines urban heritage with Caribbean life. Explore the historic centre, discover its fortifications and make time for Getsemaní, its streets and local economy. Look beyond the façades to understand the city’s history.",
+        "meta_description": "Explore Cartagena’s historic centre, San Felipe de Barajas Castle, Getsemaní, history and local businesses to plan your visit."
+      },
+      "es": {
+        "destination_id": 22,
+        "locale": "es",
+        "display_name": "Cartagena de Indias",
+        "eyebrow": "Bolívar · Colombia",
+        "headline": "Murallas, barrios y memoria junto al Caribe",
+        "intro": "Cartagena reúne patrimonio urbano y vida caribeña. Recorre el centro histórico, reconoce las fortificaciones y reserva tiempo para Getsemaní, sus calles y la economía local. La visita también invita a mirar la historia de la ciudad más allá de sus fachadas.",
+        "meta_description": "Descubre Cartagena: centro histórico, Castillo de San Felipe de Barajas, Getsemaní, historia y opciones locales para preparar tu visita."
+      },
+      "pt-BR": {
+        "destination_id": 22,
+        "locale": "pt-BR",
+        "display_name": "Cartagena de Indias",
+        "eyebrow": "Bolívar · Colombia",
+        "headline": "Muralhas, bairros e memória à beira do Caribe",
+        "intro": "Cartagena reúne patrimônio urbano e vida caribenha. Explore o centro histórico, conheça as fortificações e reserve tempo para Getsemaní, suas ruas e a economia local. A visita também convida a compreender a história da cidade além das fachadas.",
+        "meta_description": "Conheça Cartagena: centro histórico, Castelo de San Felipe de Barajas, Getsemaní, história e opções locais para planejar sua visita."
+      }
+    },
+    "history": {
+      "es": [
+        "La fundación colonial de Cartagena de Indias se fecha el 1 de junio de 1533. Su posición en una bahía caribeña la convirtió en un puerto estratégico del sistema colonial español. Esa historia incluye a poblaciones indígenas y africanas esclavizadas, y no se reduce a arquitectura y comercio.",
+        "Las defensas se construyeron y ampliaron durante varios siglos. Murallas y fuertes permiten leer la relación entre la ciudad, la bahía y las disputas por las rutas marítimas. El 11 de noviembre de 1811 Cartagena proclamó su independencia absoluta de España.",
+        "En 1984 la UNESCO inscribió el puerto, las fortalezas y el conjunto monumental. El reconocimiento comprende un patrimonio vivo: Centro, San Diego y Getsemaní conservan usos residenciales, culturales y comerciales."
+      ],
+      "en": [
+        "Cartagena’s colonial founding dates to 1 June 1533. Its Caribbean bay made it a strategic port within the Spanish colonial system. This history includes Indigenous people and enslaved Africans, and extends beyond architecture and trade.",
+        "Defences were built and expanded over several centuries. Walls and forts reveal the relationship between the city, its bay and struggles over maritime routes. On 11 November 1811 Cartagena proclaimed its absolute independence from Spain.",
+        "In 1984 UNESCO inscribed the port, fortresses and group of monuments. This is living heritage: Centro, San Diego and Getsemaní retain residential, cultural and commercial uses."
+      ],
+      "pt-BR": [
+        "A fundação colonial de Cartagena de Indias data de 1º de junho de 1533. Sua posição em uma baía caribenha fez dela um porto estratégico do sistema colonial espanhol. Essa história inclui povos indígenas e africanos escravizados e vai além da arquitetura e do comércio.",
+        "As defesas foram construídas e ampliadas ao longo de vários séculos. Muralhas e fortes revelam a relação entre a cidade, a baía e as disputas pelas rotas marítimas. Em 11 de novembro de 1811 Cartagena proclamou sua independência absoluta da Espanha.",
+        "Em 1984 a UNESCO inscreveu o porto, as fortalezas e o conjunto monumental. Trata-se de um patrimônio vivo: Centro, San Diego e Getsemaní mantêm usos residenciais, culturais e comerciais."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Caminar entre murallas, plazas y balcones del centro histórico.",
+        "Descubrir Getsemaní, su vida de barrio y sus expresiones culturales.",
+        "Conocer la historia caribeña a través de fortalezas y museos.",
+        "Combinar ciudad y mar con una excursión a Barú o las Islas del Rosario."
+      ],
+      "en": [
+        "Walk among the historic centre’s walls, squares and balconies.",
+        "Discover Getsemaní, its neighbourhood life and cultural expressions.",
+        "Explore Caribbean history through fortresses and museums.",
+        "Combine city and sea with a trip to Barú or the Rosario Islands."
+      ],
+      "pt-BR": [
+        "Caminhar entre muralhas, praças e varandas do centro histórico.",
+        "Conhecer Getsemaní, sua vida de bairro e suas expressões culturais.",
+        "Descobrir a história caribenha em fortalezas e museus.",
+        "Combinar cidade e mar com um passeio a Barú ou às Ilhas do Rosário."
+      ]
+    },
+    "places": [
+      {
+        "id": 71,
+        "slug": "centro-historico",
+        "type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": -16,
+        "translations": {
+          "en": {
+            "id": 71,
+            "slug": "centro-historico",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 1,
+            "locale": "en",
+            "name": "Historic centre and city walls",
+            "description": "Walls, squares and balconies in Centro and San Diego.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Historic%20centre%20and%20city%20walls%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+            "external_url": "https://colombia.travel/es/cartagena-de-indias",
+            "external_label": "Fuente / Source / Fonte",
+            "media_asset_id": 67
+          },
+          "es": {
+            "id": 71,
+            "slug": "centro-historico",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 1,
+            "locale": "es",
+            "name": "Centro histórico y murallas",
+            "description": "Murallas, plazas y balcones entre Centro y San Diego.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20y%20murallas%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+            "external_url": "https://colombia.travel/es/cartagena-de-indias",
+            "external_label": "Fuente / Source / Fonte",
+            "media_asset_id": 67
+          },
+          "pt-BR": {
+            "id": 71,
+            "slug": "centro-historico",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 1,
+            "locale": "pt-BR",
+            "name": "Centro histórico e muralhas",
+            "description": "Muralhas, praças e varandas em Centro e San Diego.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20e%20muralhas%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+            "external_url": "https://colombia.travel/es/cartagena-de-indias",
+            "external_label": "Fuente / Source / Fonte",
+            "media_asset_id": 67
+          }
+        }
+      },
+      {
+        "id": 209,
+        "slug": "excursion-islas-rosario",
+        "type": "experience",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": -17,
+        "translations": {
+          "en": {
+            "id": 209,
+            "slug": "excursion-islas-rosario",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 1,
+            "locale": "en",
+            "name": "Rosario Islands excursion",
+            "description": "Sail to the islands for a day by the sea and on the beach.",
+            "map_url": "",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 454
+          },
+          "es": {
+            "id": 209,
+            "slug": "excursion-islas-rosario",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 1,
+            "locale": "es",
+            "name": "Excursión a las Islas del Rosario",
+            "description": "Navega hacia las islas y disfruta una jornada de mar y playa.",
+            "map_url": "",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 454
+          },
+          "pt-BR": {
+            "id": 209,
+            "slug": "excursion-islas-rosario",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 1,
+            "locale": "pt-BR",
+            "name": "Excursão às Ilhas do Rosário",
+            "description": "Navegue até as ilhas e aproveite um dia de mar e praia.",
+            "map_url": "",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 454
+          }
+        }
+      },
+      {
+        "id": 72,
+        "slug": "san-felipe",
+        "type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": -18,
+        "translations": {
+          "en": {
+            "id": 72,
+            "slug": "san-felipe",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 2,
+            "locale": "en",
+            "name": "San Felipe de Barajas Castle",
+            "description": "San Lázaro hill fortress, with ramps and tunnels.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=San%20Felipe%20de%20Barajas%20Castle%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+            "external_url": "https://colombia.travel/es/cartagena-de-indias",
+            "external_label": "Fuente / Source / Fonte",
+            "media_asset_id": 68
+          },
+          "es": {
+            "id": 72,
+            "slug": "san-felipe",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 2,
+            "locale": "es",
+            "name": "Castillo de San Felipe de Barajas",
+            "description": "Fortaleza del cerro de San Lázaro, con rampas y túneles.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Castillo%20de%20San%20Felipe%20de%20Barajas%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+            "external_url": "https://colombia.travel/es/cartagena-de-indias",
+            "external_label": "Fuente / Source / Fonte",
+            "media_asset_id": 68
+          },
+          "pt-BR": {
+            "id": 72,
+            "slug": "san-felipe",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 2,
+            "locale": "pt-BR",
+            "name": "Castelo de San Felipe de Barajas",
+            "description": "Fortaleza no cerro de San Lázaro, com rampas e túneis.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Castelo%20de%20San%20Felipe%20de%20Barajas%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+            "external_url": "https://colombia.travel/es/cartagena-de-indias",
+            "external_label": "Fuente / Source / Fonte",
+            "media_asset_id": 68
+          }
+        }
+      },
+      {
+        "id": 73,
+        "slug": "getsemani",
+        "type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": -19,
+        "translations": {
+          "en": {
+            "id": 73,
+            "slug": "getsemani",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 3,
+            "locale": "en",
+            "name": "Getsemaní",
+            "description": "Colourful streets, urban art and neighbourhood life.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Getseman%C3%AD%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+            "external_url": "https://colombia.travel/es/cartagena-de-indias",
+            "external_label": "Fuente / Source / Fonte",
+            "media_asset_id": 69
+          },
+          "es": {
+            "id": 73,
+            "slug": "getsemani",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 3,
+            "locale": "es",
+            "name": "Getsemaní",
+            "description": "Calles coloridas, arte urbano y vida de barrio.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Getseman%C3%AD%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+            "external_url": "https://colombia.travel/es/cartagena-de-indias",
+            "external_label": "Fuente / Source / Fonte",
+            "media_asset_id": 69
+          },
+          "pt-BR": {
+            "id": 73,
+            "slug": "getsemani",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 3,
+            "locale": "pt-BR",
+            "name": "Getsemaní",
+            "description": "Ruas coloridas, arte urbana e vida de bairro.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Getseman%C3%AD%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+            "external_url": "https://colombia.travel/es/cartagena-de-indias",
+            "external_label": "Fuente / Source / Fonte",
+            "media_asset_id": 69
+          }
+        }
+      },
+      {
+        "id": 75,
+        "slug": "playa-blanca-baru",
+        "type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": -20,
+        "translations": {
+          "en": {
+            "id": 75,
+            "slug": "playa-blanca-baru",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 5,
+            "locale": "en",
+            "name": "Playa Blanca · Barú",
+            "description": "Pale sand and turquoise waters in Barú.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Playa%20Blanca%20%C2%B7%20Bar%C3%BA%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+            "external_url": "https://colombia.travel/es/cartagena/conoce-la-playa-de-baru",
+            "external_label": "Fuente / Source / Fonte",
+            "media_asset_id": 71
+          },
+          "es": {
+            "id": 75,
+            "slug": "playa-blanca-baru",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 5,
+            "locale": "es",
+            "name": "Playa Blanca · Barú",
+            "description": "Playa de arena clara y aguas turquesas en Barú.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Playa%20Blanca%20%C2%B7%20Bar%C3%BA%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+            "external_url": "https://colombia.travel/es/cartagena/conoce-la-playa-de-baru",
+            "external_label": "Fuente / Source / Fonte",
+            "media_asset_id": 71
+          },
+          "pt-BR": {
+            "id": 75,
+            "slug": "playa-blanca-baru",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 5,
+            "locale": "pt-BR",
+            "name": "Playa Blanca · Barú",
+            "description": "Praia de areia clara e águas turquesa em Barú.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Playa%20Blanca%20%C2%B7%20Bar%C3%BA%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+            "external_url": "https://colombia.travel/es/cartagena/conoce-la-playa-de-baru",
+            "external_label": "Fuente / Source / Fonte",
+            "media_asset_id": 71
+          }
+        }
+      },
+      {
+        "id": 76,
+        "slug": "cerro-popa",
+        "type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": -21,
+        "translations": {
+          "en": {
+            "id": 76,
+            "slug": "cerro-popa",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 6,
+            "locale": "en",
+            "name": "La Popa hill and convent",
+            "description": "Historic convent, cloister and views over Cartagena.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=La%20Popa%20hill%20and%20convent%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+            "external_url": "https://colombia.travel/en/cartagena-de-indias/la-popa-hill",
+            "external_label": "Fuente / Source / Fonte",
+            "media_asset_id": 72
+          },
+          "es": {
+            "id": 76,
+            "slug": "cerro-popa",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 6,
+            "locale": "es",
+            "name": "Cerro y convento de La Popa",
+            "description": "Convento histórico, claustro y vistas de Cartagena.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Cerro%20y%20convento%20de%20La%20Popa%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+            "external_url": "https://colombia.travel/en/cartagena-de-indias/la-popa-hill",
+            "external_label": "Fuente / Source / Fonte",
+            "media_asset_id": 72
+          },
+          "pt-BR": {
+            "id": 76,
+            "slug": "cerro-popa",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 6,
+            "locale": "pt-BR",
+            "name": "Colina e convento de La Popa",
+            "description": "Convento histórico, claustro e vistas de Cartagena.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Colina%20e%20convento%20de%20La%20Popa%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+            "external_url": "https://colombia.travel/en/cartagena-de-indias/la-popa-hill",
+            "external_label": "Fuente / Source / Fonte",
+            "media_asset_id": 72
+          }
+        }
+      },
+      {
+        "id": 104,
+        "slug": "san-pedro-claver",
+        "type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": -22,
+        "translations": {
+          "en": {
+            "id": 104,
+            "slug": "san-pedro-claver",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 7,
+            "locale": "en",
+            "name": "San Pedro Claver sanctuary and museum",
+            "description": "Church and museum dedicated to Pedro Claver.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=San%20Pedro%20Claver%20sanctuary%20and%20museum%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+            "external_url": "https://colombia.travel/es/cartagena/iglesia-y-monasterio-de-san-pedro-claver",
+            "external_label": "Fuente / Source / Fonte",
+            "media_asset_id": null
+          },
+          "es": {
+            "id": 104,
+            "slug": "san-pedro-claver",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 7,
+            "locale": "es",
+            "name": "Santuario y Museo San Pedro Claver",
+            "description": "Iglesia y museo dedicados a la memoria de Pedro Claver.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Santuario%20y%20Museo%20San%20Pedro%20Claver%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+            "external_url": "https://colombia.travel/es/cartagena/iglesia-y-monasterio-de-san-pedro-claver",
+            "external_label": "Fuente / Source / Fonte",
+            "media_asset_id": null
+          },
+          "pt-BR": {
+            "id": 104,
+            "slug": "san-pedro-claver",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 7,
+            "locale": "pt-BR",
+            "name": "Santuário e Museu San Pedro Claver",
+            "description": "Igreja e museu dedicados à memória de Pedro Claver.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Santu%C3%A1rio%20e%20Museu%20San%20Pedro%20Claver%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+            "external_url": "https://colombia.travel/es/cartagena/iglesia-y-monasterio-de-san-pedro-claver",
+            "external_label": "Fuente / Source / Fonte",
+            "media_asset_id": null
+          }
+        }
+      },
+      {
+        "id": 105,
+        "slug": "bocagrande",
+        "type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": -23,
+        "translations": {
+          "en": {
+            "id": 105,
+            "slug": "bocagrande",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 8,
+            "locale": "en",
+            "name": "Bocagrande",
+            "description": "Urban beaches and a seafront lined with modern buildings.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Bocagrande%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+            "external_url": "https://colombia.travel/es/cartagena",
+            "external_label": "Explore the destination",
+            "media_asset_id": null
+          },
+          "es": {
+            "id": 105,
+            "slug": "bocagrande",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 8,
+            "locale": "es",
+            "name": "Bocagrande",
+            "description": "Playas urbanas y paseo costero entre edificios modernos.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Bocagrande%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+            "external_url": "https://colombia.travel/es/cartagena",
+            "external_label": "Conoce el destino",
+            "media_asset_id": null
+          },
+          "pt-BR": {
+            "id": 105,
+            "slug": "bocagrande",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 8,
+            "locale": "pt-BR",
+            "name": "Bocagrande",
+            "description": "Praias urbanas e passeio à beira-mar entre edifícios modernos.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Bocagrande%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+            "external_url": "https://colombia.travel/es/cartagena",
+            "external_label": "Conheça o destino",
+            "media_asset_id": null
+          }
+        }
+      },
+      {
+        "id": 107,
+        "slug": "visita-muhca",
+        "type": "experience",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": -24,
+        "translations": {
+          "en": {
+            "id": 107,
+            "slug": "visita-muhca",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 10,
+            "locale": "en",
+            "name": "Visit the History Museum",
+            "description": "Discover Cartagena’s history in the former Inquisition Palace.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Visit%20the%20History%20Museum%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+            "external_url": "https://www.muhca.gov.co/",
+            "external_label": "Check the source",
+            "media_asset_id": 453
+          },
+          "es": {
+            "id": 107,
+            "slug": "visita-muhca",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 10,
+            "locale": "es",
+            "name": "Visitar el Museo Histórico",
+            "description": "Descubre la historia de Cartagena en el antiguo Palacio de la Inquisición.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Visitar%20el%20Museo%20Hist%C3%B3rico%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+            "external_url": "https://www.muhca.gov.co/",
+            "external_label": "Consultar la fuente",
+            "media_asset_id": 453
+          },
+          "pt-BR": {
+            "id": 107,
+            "slug": "visita-muhca",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 10,
+            "locale": "pt-BR",
+            "name": "Visitar o Museu Histórico",
+            "description": "Descubra a história de Cartagena no antigo Palácio da Inquisição.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Visitar%20o%20Museu%20Hist%C3%B3rico%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+            "external_url": "https://www.muhca.gov.co/",
+            "external_label": "Consultar a fonte",
+            "media_asset_id": 453
+          }
+        }
+      },
+      {
+        "id": 108,
+        "slug": "bus-panoramico",
+        "type": "experience",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": -25,
+        "translations": {
+          "en": {
+            "id": 108,
+            "slug": "bus-panoramico",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 11,
+            "locale": "en",
+            "name": "Explore the city by sightseeing bus",
+            "description": "See the city by sightseeing bus; check stops and route.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Explore%20the%20city%20by%20sightseeing%20bus%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+            "external_url": "https://citysightseeing.com.co/es/bus-turistico-cartagena/",
+            "external_label": "Check the source",
+            "media_asset_id": 462
+          },
+          "es": {
+            "id": 108,
+            "slug": "bus-panoramico",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 11,
+            "locale": "es",
+            "name": "Recorrer la ciudad en bus turístico",
+            "description": "Recorre la ciudad en bus turístico; consulta paradas e itinerario.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Recorrer%20la%20ciudad%20en%20bus%20tur%C3%ADstico%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+            "external_url": "https://citysightseeing.com.co/es/bus-turistico-cartagena/",
+            "external_label": "Consultar la fuente",
+            "media_asset_id": 462
+          },
+          "pt-BR": {
+            "id": 108,
+            "slug": "bus-panoramico",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 11,
+            "locale": "pt-BR",
+            "name": "Explorar a cidade em ônibus turístico",
+            "description": "Conheça a cidade em ônibus turístico; consulte paradas e roteiro.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Explorar%20a%20cidade%20em%20%C3%B4nibus%20tur%C3%ADstico%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+            "external_url": "https://citysightseeing.com.co/es/bus-turistico-cartagena/",
+            "external_label": "Consultar a fonte",
+            "media_asset_id": 462
+          }
+        }
+      },
+      {
+        "id": 109,
+        "slug": "buceo-rosario",
+        "type": "experience",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": -26,
+        "translations": {
+          "en": {
+            "id": 109,
+            "slug": "buceo-rosario",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 12,
+            "locale": "en",
+            "name": "Scuba dive in the Rosario Islands",
+            "description": "Explore underwater with an operator and suitable equipment.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Scuba%20dive%20in%20the%20Rosario%20Islands%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+            "external_url": "https://divingplanet.org/",
+            "external_label": "Check the source",
+            "media_asset_id": null
+          },
+          "es": {
+            "id": 109,
+            "slug": "buceo-rosario",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 12,
+            "locale": "es",
+            "name": "Bucear en las Islas del Rosario",
+            "description": "Explora el entorno submarino con un operador y equipo adecuado.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Bucear%20en%20las%20Islas%20del%20Rosario%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+            "external_url": "https://divingplanet.org/",
+            "external_label": "Consultar la fuente",
+            "media_asset_id": null
+          },
+          "pt-BR": {
+            "id": 109,
+            "slug": "buceo-rosario",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 12,
+            "locale": "pt-BR",
+            "name": "Mergulhar nas Ilhas do Rosário",
+            "description": "Explore o ambiente submarino com operador e equipamento adequado.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Mergulhar%20nas%20Ilhas%20do%20Ros%C3%A1rio%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+            "external_url": "https://divingplanet.org/",
+            "external_label": "Consultar a fonte",
+            "media_asset_id": null
+          }
+        }
+      },
+      {
+        "id": 111,
+        "slug": "catamaran-cartagena",
+        "type": "experience",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": -27,
+        "translations": {
+          "en": {
+            "id": 111,
+            "slug": "catamaran-cartagena",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 13,
+            "locale": "en",
+            "name": "Sail on a catamaran",
+            "description": "Sail from Cartagena; confirm route and conditions.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Sail%20on%20a%20catamaran%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+            "external_url": "https://www.bonavidacatamaranes.com/",
+            "external_label": "Check the source",
+            "media_asset_id": null
+          },
+          "es": {
+            "id": 111,
+            "slug": "catamaran-cartagena",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 13,
+            "locale": "es",
+            "name": "Navegar en catamarán",
+            "description": "Navega desde Cartagena; confirma recorrido y condiciones.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Navegar%20en%20catamar%C3%A1n%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+            "external_url": "https://www.bonavidacatamaranes.com/",
+            "external_label": "Consultar la fuente",
+            "media_asset_id": null
+          },
+          "pt-BR": {
+            "id": 111,
+            "slug": "catamaran-cartagena",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 13,
+            "locale": "pt-BR",
+            "name": "Navegar de catamarã",
+            "description": "Navegue a partir de Cartagena; confirme roteiro e condições.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Navegar%20de%20catamar%C3%A3%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+            "external_url": "https://www.bonavidacatamaranes.com/",
+            "external_label": "Consultar a fonte",
+            "media_asset_id": null
+          }
+        }
+      },
+      {
+        "id": 112,
+        "slug": "pesca-boquilla",
+        "type": "experience",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": -28,
+        "translations": {
+          "en": {
+            "id": 112,
+            "slug": "pesca-boquilla",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 14,
+            "locale": "en",
+            "name": "Discover mangroves and traditional fishing in La Boquilla",
+            "description": "Discover mangroves by canoe and traditional fishing.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Discover%20mangroves%20and%20traditional%20fishing%20in%20La%20Boquilla%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+            "external_url": "https://cartagenadeindias.travel/naturaleza-y-comunitario/boquilla-2/",
+            "external_label": "Check the source",
+            "media_asset_id": null
+          },
+          "es": {
+            "id": 112,
+            "slug": "pesca-boquilla",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 14,
+            "locale": "es",
+            "name": "Conocer manglares y pesca tradicional en La Boquilla",
+            "description": "Conoce los manglares en canoa y la pesca tradicional.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Conocer%20manglares%20y%20pesca%20tradicional%20en%20La%20Boquilla%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+            "external_url": "https://cartagenadeindias.travel/naturaleza-y-comunitario/boquilla-2/",
+            "external_label": "Consultar la fuente",
+            "media_asset_id": null
+          },
+          "pt-BR": {
+            "id": 112,
+            "slug": "pesca-boquilla",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 14,
+            "locale": "pt-BR",
+            "name": "Conhecer manguezais e pesca tradicional em La Boquilla",
+            "description": "Conheça os manguezais em canoa e a pesca tradicional.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Conhecer%20manguezais%20e%20pesca%20tradicional%20em%20La%20Boquilla%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+            "external_url": "https://cartagenadeindias.travel/naturaleza-y-comunitario/boquilla-2/",
+            "external_label": "Consultar a fonte",
+            "media_asset_id": null
+          }
+        }
+      }
+    ],
+    "sources": {
+      "es": [
+        {
+          "locale": "es",
+          "section_key": "history",
+          "source_url": "https://whc.unesco.org/en/list/285/",
+          "source_label": "UNESCO"
+        },
+        {
+          "locale": "es",
+          "section_key": "history",
+          "source_url": "https://colombia.travel/es/cartagena-de-indias",
+          "source_label": "ProColombia"
+        },
+        {
+          "locale": "es",
+          "section_key": "history",
+          "source_url": "https://www.cartagena.gov.co/noticias/eucaristia-solemne-cartagena-inicio-celebracion-sus-492-anos-historia",
+          "source_label": "Alcaldía de Cartagena"
+        },
+        {
+          "locale": "es",
+          "section_key": "history",
+          "source_url": "https://www.muhca.gov.co/cartapedia_escudo-republicano-1811-6",
+          "source_label": "MUHCA"
+        },
+        {
+          "locale": "es",
+          "section_key": "history",
+          "source_url": "https://www.fortificacionescartagena.com/",
+          "source_label": "Escuela Taller / Fortificaciones Cartagena"
+        },
+        {
+          "locale": "es",
+          "section_key": "history",
+          "source_url": "https://www.muhca.gov.co/",
+          "source_label": "Museo Histórico de Cartagena"
+        },
+        {
+          "locale": "es",
+          "section_key": "history",
+          "source_url": "https://celelerestaurante.com/",
+          "source_label": "Celele"
+        },
+        {
+          "locale": "es",
+          "section_key": "history",
+          "source_url": "https://hotelcasasanagustin.com/",
+          "source_label": "Hotel Casa San Agustín"
+        },
+        {
+          "locale": "es",
+          "section_key": "history",
+          "source_url": "https://www.hotelcharlestonsantateresa.com/",
+          "source_label": "Charleston Santa Teresa"
+        },
+        {
+          "locale": "es",
+          "section_key": "history",
+          "source_url": "https://www.sofitellegendsantaclara.com/restaurants-bars/",
+          "source_label": "Sofitel Legend Santa Clara"
+        },
+        {
+          "locale": "es",
+          "section_key": "history",
+          "source_url": "https://colombia.travel/es/cartagena/recorrido-por-el-centro-historico-de-cartagena",
+          "source_label": "ProColombia"
+        },
+        {
+          "locale": "es",
+          "section_key": "history",
+          "source_url": "https://www.banrep.gov.co/es/sucursales/cartagena-museo-del-oro",
+          "source_label": "Banco de la República"
+        },
+        {
+          "locale": "es",
+          "section_key": "history",
+          "source_url": "https://colombia.travel/en/cartagena-de-indias/la-popa-hill",
+          "source_label": "ProColombia"
+        },
+        {
+          "locale": "es",
+          "section_key": "history",
+          "source_url": "https://www.cartagena.gov.co/noticias/teatro-adolfo-mejia-presenta-su-temporada-2026-una-agenda-diversa-abierta-nuevos-publicos",
+          "source_label": "Alcaldía de Cartagena"
+        },
+        {
+          "locale": "es",
+          "section_key": "history",
+          "source_url": "https://colombia.travel/es/blog/revista-colombia/la-boquilla",
+          "source_label": "ProColombia"
+        },
+        {
+          "locale": "es",
+          "section_key": "history",
+          "source_url": "https://colombia.travel/es/mapa-turismo/pesca-con-locales-en-la-boquilla",
+          "source_label": "ProColombia / mapa turismo comunitario"
+        },
+        {
+          "locale": "es",
+          "section_key": "history",
+          "source_url": "https://divingplanet.org/",
+          "source_label": "Diving Planet"
+        },
+        {
+          "locale": "es",
+          "section_key": "history",
+          "source_url": "https://citysightseeing.com.co/es/bus-turistico-cartagena/",
+          "source_label": "City Sightseeing Cartagena"
+        },
+        {
+          "locale": "es",
+          "section_key": "history",
+          "source_url": "https://www.bonavidacatamaranes.com/",
+          "source_label": "Bona Vida Catamaranes"
+        },
+        {
+          "locale": "es",
+          "section_key": "history",
+          "source_url": "https://sibarita.com.co/en/paseos",
+          "source_label": "Sibarita del Mar"
+        },
+        {
+          "locale": "es",
+          "section_key": "history",
+          "source_url": "https://colombia.travel/es/cartagena/playas-e-islas-del-rosario",
+          "source_label": "ProColombia"
+        },
+        {
+          "locale": "es",
+          "section_key": "history",
+          "source_url": "https://colombia.travel/es/cartagena/conoce-la-playa-de-baru",
+          "source_label": "ProColombia"
+        },
+        {
+          "locale": "es",
+          "section_key": "history",
+          "source_url": "https://www.parquesnacionales.gov.co/nuestros-parques/pnn-corales-del-rosario-y-de-san-bernardo/",
+          "source_label": "Parques Nacionales Naturales"
+        }
+      ],
+      "en": [
+        {
+          "locale": "en",
+          "section_key": "history",
+          "source_url": "https://whc.unesco.org/en/list/285/",
+          "source_label": "UNESCO"
+        },
+        {
+          "locale": "en",
+          "section_key": "history",
+          "source_url": "https://colombia.travel/es/cartagena-de-indias",
+          "source_label": "ProColombia"
+        },
+        {
+          "locale": "en",
+          "section_key": "history",
+          "source_url": "https://www.cartagena.gov.co/noticias/eucaristia-solemne-cartagena-inicio-celebracion-sus-492-anos-historia",
+          "source_label": "Alcaldía de Cartagena"
+        },
+        {
+          "locale": "en",
+          "section_key": "history",
+          "source_url": "https://www.muhca.gov.co/cartapedia_escudo-republicano-1811-6",
+          "source_label": "MUHCA"
+        },
+        {
+          "locale": "en",
+          "section_key": "history",
+          "source_url": "https://www.fortificacionescartagena.com/",
+          "source_label": "Escuela Taller / Fortificaciones Cartagena"
+        },
+        {
+          "locale": "en",
+          "section_key": "history",
+          "source_url": "https://www.muhca.gov.co/",
+          "source_label": "Museo Histórico de Cartagena"
+        },
+        {
+          "locale": "en",
+          "section_key": "history",
+          "source_url": "https://celelerestaurante.com/",
+          "source_label": "Celele"
+        },
+        {
+          "locale": "en",
+          "section_key": "history",
+          "source_url": "https://hotelcasasanagustin.com/",
+          "source_label": "Hotel Casa San Agustín"
+        },
+        {
+          "locale": "en",
+          "section_key": "history",
+          "source_url": "https://www.hotelcharlestonsantateresa.com/",
+          "source_label": "Charleston Santa Teresa"
+        },
+        {
+          "locale": "en",
+          "section_key": "history",
+          "source_url": "https://www.sofitellegendsantaclara.com/restaurants-bars/",
+          "source_label": "Sofitel Legend Santa Clara"
+        },
+        {
+          "locale": "en",
+          "section_key": "history",
+          "source_url": "https://colombia.travel/es/cartagena/recorrido-por-el-centro-historico-de-cartagena",
+          "source_label": "ProColombia"
+        },
+        {
+          "locale": "en",
+          "section_key": "history",
+          "source_url": "https://www.banrep.gov.co/es/sucursales/cartagena-museo-del-oro",
+          "source_label": "Banco de la República"
+        },
+        {
+          "locale": "en",
+          "section_key": "history",
+          "source_url": "https://colombia.travel/en/cartagena-de-indias/la-popa-hill",
+          "source_label": "ProColombia"
+        },
+        {
+          "locale": "en",
+          "section_key": "history",
+          "source_url": "https://www.cartagena.gov.co/noticias/teatro-adolfo-mejia-presenta-su-temporada-2026-una-agenda-diversa-abierta-nuevos-publicos",
+          "source_label": "Alcaldía de Cartagena"
+        },
+        {
+          "locale": "en",
+          "section_key": "history",
+          "source_url": "https://colombia.travel/es/blog/revista-colombia/la-boquilla",
+          "source_label": "ProColombia"
+        },
+        {
+          "locale": "en",
+          "section_key": "history",
+          "source_url": "https://colombia.travel/es/mapa-turismo/pesca-con-locales-en-la-boquilla",
+          "source_label": "ProColombia / mapa turismo comunitario"
+        },
+        {
+          "locale": "en",
+          "section_key": "history",
+          "source_url": "https://divingplanet.org/",
+          "source_label": "Diving Planet"
+        },
+        {
+          "locale": "en",
+          "section_key": "history",
+          "source_url": "https://citysightseeing.com.co/es/bus-turistico-cartagena/",
+          "source_label": "City Sightseeing Cartagena"
+        },
+        {
+          "locale": "en",
+          "section_key": "history",
+          "source_url": "https://www.bonavidacatamaranes.com/",
+          "source_label": "Bona Vida Catamaranes"
+        },
+        {
+          "locale": "en",
+          "section_key": "history",
+          "source_url": "https://sibarita.com.co/en/paseos",
+          "source_label": "Sibarita del Mar"
+        },
+        {
+          "locale": "en",
+          "section_key": "history",
+          "source_url": "https://colombia.travel/es/cartagena/playas-e-islas-del-rosario",
+          "source_label": "ProColombia"
+        },
+        {
+          "locale": "en",
+          "section_key": "history",
+          "source_url": "https://colombia.travel/es/cartagena/conoce-la-playa-de-baru",
+          "source_label": "ProColombia"
+        },
+        {
+          "locale": "en",
+          "section_key": "history",
+          "source_url": "https://www.parquesnacionales.gov.co/nuestros-parques/pnn-corales-del-rosario-y-de-san-bernardo/",
+          "source_label": "Parques Nacionales Naturales"
+        }
+      ],
+      "pt-BR": [
+        {
+          "locale": "pt-BR",
+          "section_key": "history",
+          "source_url": "https://whc.unesco.org/en/list/285/",
+          "source_label": "UNESCO"
+        },
+        {
+          "locale": "pt-BR",
+          "section_key": "history",
+          "source_url": "https://colombia.travel/es/cartagena-de-indias",
+          "source_label": "ProColombia"
+        },
+        {
+          "locale": "pt-BR",
+          "section_key": "history",
+          "source_url": "https://www.cartagena.gov.co/noticias/eucaristia-solemne-cartagena-inicio-celebracion-sus-492-anos-historia",
+          "source_label": "Alcaldía de Cartagena"
+        },
+        {
+          "locale": "pt-BR",
+          "section_key": "history",
+          "source_url": "https://www.muhca.gov.co/cartapedia_escudo-republicano-1811-6",
+          "source_label": "MUHCA"
+        },
+        {
+          "locale": "pt-BR",
+          "section_key": "history",
+          "source_url": "https://www.fortificacionescartagena.com/",
+          "source_label": "Escuela Taller / Fortificaciones Cartagena"
+        },
+        {
+          "locale": "pt-BR",
+          "section_key": "history",
+          "source_url": "https://www.muhca.gov.co/",
+          "source_label": "Museo Histórico de Cartagena"
+        },
+        {
+          "locale": "pt-BR",
+          "section_key": "history",
+          "source_url": "https://celelerestaurante.com/",
+          "source_label": "Celele"
+        },
+        {
+          "locale": "pt-BR",
+          "section_key": "history",
+          "source_url": "https://hotelcasasanagustin.com/",
+          "source_label": "Hotel Casa San Agustín"
+        },
+        {
+          "locale": "pt-BR",
+          "section_key": "history",
+          "source_url": "https://www.hotelcharlestonsantateresa.com/",
+          "source_label": "Charleston Santa Teresa"
+        },
+        {
+          "locale": "pt-BR",
+          "section_key": "history",
+          "source_url": "https://www.sofitellegendsantaclara.com/restaurants-bars/",
+          "source_label": "Sofitel Legend Santa Clara"
+        },
+        {
+          "locale": "pt-BR",
+          "section_key": "history",
+          "source_url": "https://colombia.travel/es/cartagena/recorrido-por-el-centro-historico-de-cartagena",
+          "source_label": "ProColombia"
+        },
+        {
+          "locale": "pt-BR",
+          "section_key": "history",
+          "source_url": "https://www.banrep.gov.co/es/sucursales/cartagena-museo-del-oro",
+          "source_label": "Banco de la República"
+        },
+        {
+          "locale": "pt-BR",
+          "section_key": "history",
+          "source_url": "https://colombia.travel/en/cartagena-de-indias/la-popa-hill",
+          "source_label": "ProColombia"
+        },
+        {
+          "locale": "pt-BR",
+          "section_key": "history",
+          "source_url": "https://www.cartagena.gov.co/noticias/teatro-adolfo-mejia-presenta-su-temporada-2026-una-agenda-diversa-abierta-nuevos-publicos",
+          "source_label": "Alcaldía de Cartagena"
+        },
+        {
+          "locale": "pt-BR",
+          "section_key": "history",
+          "source_url": "https://colombia.travel/es/blog/revista-colombia/la-boquilla",
+          "source_label": "ProColombia"
+        },
+        {
+          "locale": "pt-BR",
+          "section_key": "history",
+          "source_url": "https://colombia.travel/es/mapa-turismo/pesca-con-locales-en-la-boquilla",
+          "source_label": "ProColombia / mapa turismo comunitario"
+        },
+        {
+          "locale": "pt-BR",
+          "section_key": "history",
+          "source_url": "https://divingplanet.org/",
+          "source_label": "Diving Planet"
+        },
+        {
+          "locale": "pt-BR",
+          "section_key": "history",
+          "source_url": "https://citysightseeing.com.co/es/bus-turistico-cartagena/",
+          "source_label": "City Sightseeing Cartagena"
+        },
+        {
+          "locale": "pt-BR",
+          "section_key": "history",
+          "source_url": "https://www.bonavidacatamaranes.com/",
+          "source_label": "Bona Vida Catamaranes"
+        },
+        {
+          "locale": "pt-BR",
+          "section_key": "history",
+          "source_url": "https://sibarita.com.co/en/paseos",
+          "source_label": "Sibarita del Mar"
+        },
+        {
+          "locale": "pt-BR",
+          "section_key": "history",
+          "source_url": "https://colombia.travel/es/cartagena/playas-e-islas-del-rosario",
+          "source_label": "ProColombia"
+        },
+        {
+          "locale": "pt-BR",
+          "section_key": "history",
+          "source_url": "https://colombia.travel/es/cartagena/conoce-la-playa-de-baru",
+          "source_label": "ProColombia"
+        },
+        {
+          "locale": "pt-BR",
+          "section_key": "history",
+          "source_url": "https://www.parquesnacionales.gov.co/nuestros-parques/pnn-corales-del-rosario-y-de-san-bernardo/",
+          "source_label": "Parques Nacionales Naturales"
+        }
+      ]
+    },
+    "destination_media": {
+      "hero": {
+        "role": "hero",
+        "media_asset_id": -15,
+        "asset_path": "assets/cartagena-piloto/portada-ciudad-amurallada-v4-1200.webp"
+      }
+    }
+  },
+  "media": [
+    {
+      "id": -28,
+      "asset_path": "assets/cartagena-piloto/pesca-boquilla-800.webp",
+      "origin": "ai_generated",
+      "creator": "Explorando Lugares · ilustración IA",
+      "source_url": "",
+      "license_name": "Procedencia conservada en entrega del destino",
+      "license_url": "",
+      "width": 800,
+      "height": 533,
+      "provenance_json": "{\"sha256\": \"b7f4a77411ea8bc69016775b177dc634782003a5a6b3acf58e30087e0f2ad203\", \"destination\": \"cartagena\", \"selection\": \"current reviewed preprod\"}",
+      "sha256": "b7f4a77411ea8bc69016775b177dc634782003a5a6b3acf58e30087e0f2ad203",
+      "local_file": "media/b7f4a77411ea8bc69016775b177dc634782003a5a6b3acf58e30087e0f2ad203.webp"
+    },
+    {
+      "id": -27,
+      "asset_path": "assets/cartagena-piloto/catamaran-cartagena-800.webp",
+      "origin": "ai_generated",
+      "creator": "Explorando Lugares · ilustración IA",
+      "source_url": "",
+      "license_name": "Procedencia conservada en entrega del destino",
+      "license_url": "",
+      "width": 800,
+      "height": 533,
+      "provenance_json": "{\"sha256\": \"0a00cd74ab4da218a9b19400e01d0c71ab7d2d6fa386fb3c679d830f198c1189\", \"destination\": \"cartagena\", \"selection\": \"current reviewed preprod\"}",
+      "sha256": "0a00cd74ab4da218a9b19400e01d0c71ab7d2d6fa386fb3c679d830f198c1189",
+      "local_file": "media/0a00cd74ab4da218a9b19400e01d0c71ab7d2d6fa386fb3c679d830f198c1189.webp"
+    },
+    {
+      "id": -26,
+      "asset_path": "assets/cartagena-piloto/buceo-rosario-800.webp",
+      "origin": "ai_generated",
+      "creator": "Explorando Lugares · ilustración IA",
+      "source_url": "",
+      "license_name": "Procedencia conservada en entrega del destino",
+      "license_url": "",
+      "width": 800,
+      "height": 533,
+      "provenance_json": "{\"sha256\": \"7445fcb8e7361db5a5572f1e2c1565a549a2b22877a00a83aa9635ec844cc666\", \"destination\": \"cartagena\", \"selection\": \"current reviewed preprod\"}",
+      "sha256": "7445fcb8e7361db5a5572f1e2c1565a549a2b22877a00a83aa9635ec844cc666",
+      "local_file": "media/7445fcb8e7361db5a5572f1e2c1565a549a2b22877a00a83aa9635ec844cc666.webp"
+    },
+    {
+      "id": -25,
+      "asset_path": "assets/cartagena-piloto/bus-panoramico-800.webp",
+      "origin": "ai_generated",
+      "creator": "Explorando Lugares · ilustración IA",
+      "source_url": "",
+      "license_name": "Procedencia conservada en entrega del destino",
+      "license_url": "",
+      "width": 960,
+      "height": 640,
+      "provenance_json": "{\"sha256\": \"6ba2d8d9d50efa12c68d362787f02e47d02955ee20df28a6d73b522768f2388c\", \"destination\": \"cartagena\", \"selection\": \"current reviewed preprod\"}",
+      "sha256": "6ba2d8d9d50efa12c68d362787f02e47d02955ee20df28a6d73b522768f2388c",
+      "local_file": "media/6ba2d8d9d50efa12c68d362787f02e47d02955ee20df28a6d73b522768f2388c.webp"
+    },
+    {
+      "id": -24,
+      "asset_path": "assets/cartagena-piloto/visita-muhca-800.webp",
+      "origin": "ai_generated",
+      "creator": "Explorando Lugares · ilustración IA",
+      "source_url": "",
+      "license_name": "Procedencia conservada en entrega del destino",
+      "license_url": "",
+      "width": 960,
+      "height": 640,
+      "provenance_json": "{\"sha256\": \"4dff4ac8b77a1421454bb18f41861a34d12fb1709e08e735b7e72680672ae13b\", \"destination\": \"cartagena\", \"selection\": \"current reviewed preprod\"}",
+      "sha256": "4dff4ac8b77a1421454bb18f41861a34d12fb1709e08e735b7e72680672ae13b",
+      "local_file": "media/4dff4ac8b77a1421454bb18f41861a34d12fb1709e08e735b7e72680672ae13b.webp"
+    },
+    {
+      "id": -23,
+      "asset_path": "assets/cartagena-piloto/bocagrande-800.webp",
+      "origin": "ai_generated",
+      "creator": "Explorando Lugares · ilustración IA",
+      "source_url": "",
+      "license_name": "Procedencia conservada en entrega del destino",
+      "license_url": "",
+      "width": 800,
+      "height": 533,
+      "provenance_json": "{\"sha256\": \"bfc8aa4466b45a029b067986dbf797b571376efe2cff823b47fa5b9383f5eb4f\", \"destination\": \"cartagena\", \"selection\": \"current reviewed preprod\"}",
+      "sha256": "bfc8aa4466b45a029b067986dbf797b571376efe2cff823b47fa5b9383f5eb4f",
+      "local_file": "media/bfc8aa4466b45a029b067986dbf797b571376efe2cff823b47fa5b9383f5eb4f.webp"
+    },
+    {
+      "id": -22,
+      "asset_path": "assets/cartagena-piloto/san-pedro-claver-800.webp",
+      "origin": "ai_generated",
+      "creator": "Explorando Lugares · ilustración IA",
+      "source_url": "",
+      "license_name": "Procedencia conservada en entrega del destino",
+      "license_url": "",
+      "width": 800,
+      "height": 533,
+      "provenance_json": "{\"sha256\": \"b7876c822c787115c77f256f2bd2baf8f38641a9212b462a043054d856a2bf77\", \"destination\": \"cartagena\", \"selection\": \"current reviewed preprod\"}",
+      "sha256": "b7876c822c787115c77f256f2bd2baf8f38641a9212b462a043054d856a2bf77",
+      "local_file": "media/b7876c822c787115c77f256f2bd2baf8f38641a9212b462a043054d856a2bf77.webp"
+    },
+    {
+      "id": -21,
+      "asset_path": "assets/cartagena-piloto/cerro-popa-800.webp",
+      "origin": "ai_generated",
+      "creator": "Explorando Lugares · ilustración IA",
+      "source_url": "",
+      "license_name": "Procedencia conservada en entrega del destino",
+      "license_url": "",
+      "width": 800,
+      "height": 533,
+      "provenance_json": "{\"sha256\": \"7a0dd03fefc1f8d48db31b1f1b1b89a26dfb60f0e4d4e80a8423cd8490e5ea71\", \"destination\": \"cartagena\", \"selection\": \"current reviewed preprod\"}",
+      "sha256": "7a0dd03fefc1f8d48db31b1f1b1b89a26dfb60f0e4d4e80a8423cd8490e5ea71",
+      "local_file": "media/7a0dd03fefc1f8d48db31b1f1b1b89a26dfb60f0e4d4e80a8423cd8490e5ea71.webp"
+    },
+    {
+      "id": -20,
+      "asset_path": "assets/cartagena-piloto/playa-blanca-baru-800.webp",
+      "origin": "ai_generated",
+      "creator": "Explorando Lugares · ilustración IA",
+      "source_url": "",
+      "license_name": "Procedencia conservada en entrega del destino",
+      "license_url": "",
+      "width": 800,
+      "height": 533,
+      "provenance_json": "{\"sha256\": \"f91ccc8e9a262afe750c6122f9aa2bdfedc3699642bf68f8ce2cb5fdb2dc8de8\", \"destination\": \"cartagena\", \"selection\": \"current reviewed preprod\"}",
+      "sha256": "f91ccc8e9a262afe750c6122f9aa2bdfedc3699642bf68f8ce2cb5fdb2dc8de8",
+      "local_file": "media/f91ccc8e9a262afe750c6122f9aa2bdfedc3699642bf68f8ce2cb5fdb2dc8de8.webp"
+    },
+    {
+      "id": -19,
+      "asset_path": "assets/cartagena-piloto/getsemani-800.webp",
+      "origin": "ai_generated",
+      "creator": "Explorando Lugares · ilustración IA",
+      "source_url": "",
+      "license_name": "Procedencia conservada en entrega del destino",
+      "license_url": "",
+      "width": 800,
+      "height": 533,
+      "provenance_json": "{\"sha256\": \"fd600e4c43c1d63f31d069982fe98e0ba3507af2375455553ff2a49e69364764\", \"destination\": \"cartagena\", \"selection\": \"current reviewed preprod\"}",
+      "sha256": "fd600e4c43c1d63f31d069982fe98e0ba3507af2375455553ff2a49e69364764",
+      "local_file": "media/fd600e4c43c1d63f31d069982fe98e0ba3507af2375455553ff2a49e69364764.webp"
+    },
+    {
+      "id": -18,
+      "asset_path": "assets/cartagena-piloto/san-felipe-800.webp",
+      "origin": "ai_generated",
+      "creator": "Explorando Lugares · ilustración IA",
+      "source_url": "",
+      "license_name": "Procedencia conservada en entrega del destino",
+      "license_url": "",
+      "width": 800,
+      "height": 533,
+      "provenance_json": "{\"sha256\": \"25d795d0cad345e8992f52ad8ca28f38a480dffe8e1d28b70ff6f0c5025f89d8\", \"destination\": \"cartagena\", \"selection\": \"current reviewed preprod\"}",
+      "sha256": "25d795d0cad345e8992f52ad8ca28f38a480dffe8e1d28b70ff6f0c5025f89d8",
+      "local_file": "media/25d795d0cad345e8992f52ad8ca28f38a480dffe8e1d28b70ff6f0c5025f89d8.webp"
+    },
+    {
+      "id": -17,
+      "asset_path": "assets/destinos/cartagena/d2cdf637ee60953f2cdc7448034c8ac4fcb19ade2be490cddf2f3f2b39e21b43.webp",
+      "origin": "ai_generated",
+      "creator": "Explorando Lugares · ilustración IA",
+      "source_url": "",
+      "license_name": "Procedencia conservada en entrega del destino",
+      "license_url": "",
+      "width": 960,
+      "height": 640,
+      "provenance_json": "{\"sha256\": \"d2cdf637ee60953f2cdc7448034c8ac4fcb19ade2be490cddf2f3f2b39e21b43\", \"destination\": \"cartagena\", \"selection\": \"current reviewed preprod\"}",
+      "sha256": "d2cdf637ee60953f2cdc7448034c8ac4fcb19ade2be490cddf2f3f2b39e21b43",
+      "local_file": "media/d2cdf637ee60953f2cdc7448034c8ac4fcb19ade2be490cddf2f3f2b39e21b43.webp"
+    },
+    {
+      "id": -16,
+      "asset_path": "assets/cartagena-piloto/centro-historico-800.webp",
+      "origin": "ai_generated",
+      "creator": "Explorando Lugares · ilustración IA",
+      "source_url": "",
+      "license_name": "Procedencia conservada en entrega del destino",
+      "license_url": "",
+      "width": 800,
+      "height": 533,
+      "provenance_json": "{\"sha256\": \"b52c981b3df4cfb45d99822c6c7aae8ab53970e2c90b90e5d914d52a5d83c8ca\", \"destination\": \"cartagena\", \"selection\": \"current reviewed preprod\"}",
+      "sha256": "b52c981b3df4cfb45d99822c6c7aae8ab53970e2c90b90e5d914d52a5d83c8ca",
+      "local_file": "media/b52c981b3df4cfb45d99822c6c7aae8ab53970e2c90b90e5d914d52a5d83c8ca.webp"
+    },
+    {
+      "id": -15,
+      "asset_path": "assets/cartagena-piloto/portada-ciudad-amurallada-v4-1200.webp",
+      "origin": "ai_generated",
+      "creator": "Explorando Lugares · ilustración IA",
+      "source_url": "",
+      "license_name": "Procedencia conservada en entrega del destino",
+      "license_url": "",
+      "width": 1200,
+      "height": 800,
+      "provenance_json": "{\"sha256\": \"713b501891b527ea56c55f514eeafb57731fd35afe2c300fa218401f9e287370\", \"destination\": \"cartagena\", \"selection\": \"current reviewed preprod\"}",
+      "sha256": "713b501891b527ea56c55f514eeafb57731fd35afe2c300fa218401f9e287370",
+      "local_file": "media/713b501891b527ea56c55f514eeafb57731fd35afe2c300fa218401f9e287370.webp"
+    }
+  ],
+  "media_translations": [
+    {
+      "media_asset_id": -15,
+      "locale": "es",
+      "alt_text": "Ilustración editorial: cartagena",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -15,
+      "locale": "en",
+      "alt_text": "Ilustración editorial: cartagena",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -15,
+      "locale": "pt-BR",
+      "alt_text": "Ilustración editorial: cartagena",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -16,
+      "locale": "es",
+      "alt_text": "Ilustración editorial: Centro histórico y murallas",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -16,
+      "locale": "en",
+      "alt_text": "Ilustración editorial: Centro histórico y murallas",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -16,
+      "locale": "pt-BR",
+      "alt_text": "Ilustración editorial: Centro histórico y murallas",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -17,
+      "locale": "es",
+      "alt_text": "Ilustración editorial: Excursión a las Islas del Rosario",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -17,
+      "locale": "en",
+      "alt_text": "Ilustración editorial: Excursión a las Islas del Rosario",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -17,
+      "locale": "pt-BR",
+      "alt_text": "Ilustración editorial: Excursión a las Islas del Rosario",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -18,
+      "locale": "es",
+      "alt_text": "Ilustración editorial: Castillo de San Felipe de Barajas",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -18,
+      "locale": "en",
+      "alt_text": "Ilustración editorial: Castillo de San Felipe de Barajas",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -18,
+      "locale": "pt-BR",
+      "alt_text": "Ilustración editorial: Castillo de San Felipe de Barajas",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -19,
+      "locale": "es",
+      "alt_text": "Ilustración editorial: Getsemaní",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -19,
+      "locale": "en",
+      "alt_text": "Ilustración editorial: Getsemaní",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -19,
+      "locale": "pt-BR",
+      "alt_text": "Ilustración editorial: Getsemaní",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -20,
+      "locale": "es",
+      "alt_text": "Ilustración editorial: Playa Blanca · Barú",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -20,
+      "locale": "en",
+      "alt_text": "Ilustración editorial: Playa Blanca · Barú",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -20,
+      "locale": "pt-BR",
+      "alt_text": "Ilustración editorial: Playa Blanca · Barú",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -21,
+      "locale": "es",
+      "alt_text": "Ilustración editorial: Cerro y convento de La Popa",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -21,
+      "locale": "en",
+      "alt_text": "Ilustración editorial: Cerro y convento de La Popa",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -21,
+      "locale": "pt-BR",
+      "alt_text": "Ilustración editorial: Cerro y convento de La Popa",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -22,
+      "locale": "es",
+      "alt_text": "Ilustración editorial: Santuario y Museo San Pedro Claver",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -22,
+      "locale": "en",
+      "alt_text": "Ilustración editorial: Santuario y Museo San Pedro Claver",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -22,
+      "locale": "pt-BR",
+      "alt_text": "Ilustración editorial: Santuario y Museo San Pedro Claver",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -23,
+      "locale": "es",
+      "alt_text": "Ilustración editorial: Bocagrande",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -23,
+      "locale": "en",
+      "alt_text": "Ilustración editorial: Bocagrande",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -23,
+      "locale": "pt-BR",
+      "alt_text": "Ilustración editorial: Bocagrande",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -24,
+      "locale": "es",
+      "alt_text": "Ilustración editorial: Visitar el Museo Histórico",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -24,
+      "locale": "en",
+      "alt_text": "Ilustración editorial: Visitar el Museo Histórico",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -24,
+      "locale": "pt-BR",
+      "alt_text": "Ilustración editorial: Visitar el Museo Histórico",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -25,
+      "locale": "es",
+      "alt_text": "Ilustración editorial: Recorrer la ciudad en bus turístico",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -25,
+      "locale": "en",
+      "alt_text": "Ilustración editorial: Recorrer la ciudad en bus turístico",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -25,
+      "locale": "pt-BR",
+      "alt_text": "Ilustración editorial: Recorrer la ciudad en bus turístico",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -26,
+      "locale": "es",
+      "alt_text": "Ilustración editorial: Bucear en las Islas del Rosario",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -26,
+      "locale": "en",
+      "alt_text": "Ilustración editorial: Bucear en las Islas del Rosario",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -26,
+      "locale": "pt-BR",
+      "alt_text": "Ilustración editorial: Bucear en las Islas del Rosario",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -27,
+      "locale": "es",
+      "alt_text": "Ilustración editorial: Navegar en catamarán",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -27,
+      "locale": "en",
+      "alt_text": "Ilustración editorial: Navegar en catamarán",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -27,
+      "locale": "pt-BR",
+      "alt_text": "Ilustración editorial: Navegar en catamarán",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -28,
+      "locale": "es",
+      "alt_text": "Ilustración editorial: Conocer manglares y pesca tradicional en La Boquilla",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -28,
+      "locale": "en",
+      "alt_text": "Ilustración editorial: Conocer manglares y pesca tradicional en La Boquilla",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -28,
+      "locale": "pt-BR",
+      "alt_text": "Ilustración editorial: Conocer manglares y pesca tradicional en La Boquilla",
+      "caption": ""
+    }
+  ]
+}
