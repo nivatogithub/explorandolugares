@@ -597,9 +597,10 @@ try:
     check(status==200 and 'Cafetería de cuenta HTTP' in detail and 'Enviado por la persona' in detail and 'No hay una asociación activa' in detail,'Administrative request detail did not distinguish submission and active association.')
     check(request('/admin/solicitud-detalle.php?tipo=account&id=999999')[0]==404,'Missing request must return 404.')
     check(request(detail_url,{'action':'approve'})[0]==405,'Detail must not accept writes.')
-    for view in ('atencion',):
-        status,view_body,_=request('/admin/negocios.php?tab='+view)
-        check(status==200 and 'Cafetería de cuenta HTTP' in view_body and 'solicitudes pendientes sin ficha' in view_body,'Operational view must include pending requests without a business.')
+    status,view_body,_=request('/admin/negocios.php?tab=atencion')
+    check(status==200 and 'Listado de negocios' in view_body and 'Cafetería de cuenta HTTP' not in view_body and 'Solicitudes y seguimiento' not in view_body and 'tab=atencion' not in view_body,'Removed attention view must open the unified business list without duplicating requests.')
+    status,requests_body,_=request('/admin/solicitudes-cuenta.php')
+    check(status==200 and 'Cafetería de cuenta HTTP' in requests_body,'Requests without a business must remain available in account requests.')
     check(view_snapshot()==before_admin_view,'Viewing administrative details must not mutate businesses, requests, memberships or subscriptions.')
     holder = json.loads(DB.execute('SELECT business_details_json FROM business_account_applications WHERE id=?',(application_row['id'],)).fetchone()[0])['holder_identity']
     check(holder['document_type']=='CC' and holder['number']=='123456789' and not holder['officially_verified'] and not holder['ownership_verified'], 'Debe conservar el documento privado sin afirmar verificación oficial.')
