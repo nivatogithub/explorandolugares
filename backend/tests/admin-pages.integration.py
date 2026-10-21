@@ -892,6 +892,12 @@ try:
         check(code==200 and embedded_headers.get('X-Frame-Options')=='SAMEORIGIN' and "frame-ancestors 'self'" in embedded_headers.get('Content-Security-Policy',''),'El ejemplo no admite el panel del mismo origen')
         check('Volver a suscripciones' not in embedded and 'Horario de atención' not in embedded and 'business-profile-back' not in embedded,'El panel conserva navegación de salida u horarios')
         if demo_view in ['free','featured']:check('data-directory-layout="editorial-v2"' in embedded,'La tarjeta no está protegida de transformaciones antiguas')
+        if demo_view in ['page','page_premium']:
+            code,card_example,_=request('/business/demo.php?view='+demo_view+'&embedded=1&presentation=card',opener=urllib.request.build_opener())
+            check(code==200 and 'directory-card-tier-'+demo_view in card_example and 'directory-business-page-link' in card_example,'Falta tarjeta enlazada de '+demo_view)
+            check('embedded=1&amp;presentation=page' in card_example and 'target="_blank"' not in re.search(r'<a class="text-link directory-business-page-link".*?</a>',card_example,re.S)[0],'La tarjeta no abre su página dentro del ejemplo')
+            check((demo_view=='page_premium')==('directory-premium-star' in card_example),'Distintivo Premium incorrecto')
+
 
     for language in ['es','en','pt-BR']:
         status,page_preview,preview_headers=request(editorial_path+'&version='+str(premium_version)+'&preview=page&lang='+language,opener=business_flow)

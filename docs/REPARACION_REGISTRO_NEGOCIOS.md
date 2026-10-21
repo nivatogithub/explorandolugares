@@ -193,3 +193,10 @@ Causa verificada de la regresión de Destacado: la construcción inyectaba `tarj
 Validación visual: diálogo de las cuatro modalidades, contactos de Destacado, ausencia de horarios y navegación de salida en ambas páginas, cierre por botón/Escape y conservación de Premium trimestral ($299.750) al volver a la tabla. Las pruebas HTTP validan la política de incrustación y privacidad. Sin cambios de base de datos ni producción.
 
 Comprobación móvil adicional con la página real incrustada a 360 px: el panel mide 336 px y queda dentro del ancho disponible, permite cerrar y conserva Premium seleccionado. Los nombres de los selectores móviles se extraen del título de cada modalidad para no incorporar el texto de «Ver ejemplo». No se presenta esta revisión como una prueba en un teléfono físico.
+
+
+### Ejemplos Comercial/Premium con tarjeta y página
+
+Los ejemplos de las dos modalidades con página abren primero su tarjeta real de directorio dentro del panel. Los controles «Tarjeta en el directorio» y «Página del negocio» permiten alternar sin salir de la tabla. El título y «Ver página del negocio» de la tarjeta navegan a la página del mismo ejemplo dentro del panel, conservando la modalidad y el modo incrustado; el control activo se sincroniza al cargar. Gratis y Destacado conservan una sola vista de tarjeta. La estrella aparece únicamente en la tarjeta Premium.
+
+Validación: recorrido visual tarjeta → página → tarjeta para Premium y Comercial, misma URL principal, cierre sin navegación exterior; regresión HTTP ampliada para ambas tarjetas, enlaces incrustados y distintivo. Sin cambios de datos ni producción.
