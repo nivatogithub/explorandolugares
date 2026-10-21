@@ -10,7 +10,8 @@
 .directory-tier .directory-description{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;line-height:1.5;height:4.5em;margin:0 0 16px}
 .directory-tier .directory-business-mark{width:64px;height:64px;flex-shrink:0;margin-bottom:16px}
 .directory-tier .directory-business-page-link{margin-top:auto;padding-top:14px}
-.directory-tier .directory-premium-star{position:absolute;right:16px;top:12px;font-size:26px;line-height:1;color:var(--el-action,#c94720);z-index:1}
+.directory-card{position:relative}
+.directory-card .directory-premium-star{position:absolute;right:16px;top:12px;font-size:26px;line-height:1;color:var(--el-action,#c94720);z-index:1}
 .directory-tier .directory-card-tier-page_premium.is-featured{border-width:1px!important;box-shadow:none;background:inherit}
 .directory-tier .directory-card-tier-page .directory-card-body,.directory-tier .directory-card-tier-page_premium .directory-card-body{min-height:365px;padding-top:24px}
 .directory-tier[data-directory-tier="free"] .directory-grid{grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));gap:12px}

@@ -802,9 +802,9 @@ html,body{overflow-x:hidden}
 .business-profile-page{padding-top:20px;padding-bottom:70px}
 .business-profile-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,.85fr);gap:44px;align-items:center;padding:22px 0 38px}
 .business-profile-hero h1{font-size:clamp(42px,6vw,76px);line-height:1.02;letter-spacing:-.045em;overflow-wrap:anywhere}
-.business-profile-image{margin:0;padding:10px;border-radius:32% 68% 56% 44% / 48% 38% 62% 52%;background:var(--el-panel);border:1px solid var(--el-border)}
-.business-profile-image img{display:block;width:100%;aspect-ratio:1.12;object-fit:cover;border-radius:inherit}
-.business-profile-initials{display:grid;place-items:center;min-height:330px;border-radius:32% 68% 56% 44% / 48% 38% 62% 52%;background:var(--el-panel);color:var(--el-text);font-size:clamp(64px,10vw,130px);font-weight:800}
+.business-profile-image{margin:0;padding:10px;border-radius:20px;background:var(--el-panel);border:1px solid var(--el-border)}
+.business-profile-image img{display:block;width:100%;height:auto;aspect-ratio:4/3;max-height:420px;object-fit:cover;border-radius:inherit}
+.business-profile-initials{display:grid;place-items:center;min-height:330px;border-radius:20px;background:var(--el-panel);color:var(--el-text);font-size:clamp(64px,10vw,130px);font-weight:800}
 .business-profile-contact{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
 .business-profile-status{color:#68766d}
 .business-profile-plan-badge{display:inline-flex;padding:6px 11px;border-radius:999px;background:#d84e27;color:var(--el-card);font-size:12px;font-weight:750}
@@ -904,3 +904,9 @@ footer .wrap{align-items:center}
  header.menu-open>.wrap:first-child nav[aria-label] .language-switch{position:static!important;justify-content:flex-start!important;flex-wrap:wrap;margin:4px 0!important;padding:8px 12px!important;border-left:0!important;gap:8px}
  header.menu-open .portal-account-inline .portal-account-strip-inner{flex-wrap:wrap;justify-content:flex-start}
 }
+
+/* Business media and contacts share one presentation in the directory and profile. */
+.business-contact-icon{width:22px;height:22px;display:block;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.directory-contact-links{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}
+.directory-contact-links .directory-contact-link,.business-profile-contact .pill{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;padding:10px;border:1px solid var(--el-border);border-radius:12px;text-decoration:none}
+.business-carousel{position:relative;min-width:0}.business-carousel-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;border-radius:20px}.business-carousel-slide{flex:0 0 100%;scroll-snap-align:start;margin:0}.business-carousel-slide img{width:100%;height:auto;aspect-ratio:4/3;max-height:420px;object-fit:cover;display:block;border-radius:20px}.business-carousel-controls{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:10px}.business-carousel-controls button{min-width:44px;min-height:44px;border:1px solid var(--el-border);border-radius:12px;background:var(--el-card);color:var(--el-text);cursor:pointer}.business-products-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.business-product{overflow:hidden;border:1px solid var(--el-border);border-radius:16px;background:var(--el-card)}.business-product img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;display:block}.business-product-copy{padding:16px}.business-product-copy h3{margin-top:0}.business-product-copy p{overflow-wrap:anywhere}@media(max-width:650px){.business-products-grid{grid-template-columns:1fr}.business-profile-hero h1{font-size:38px}.business-profile-image img,.business-carousel-slide img{max-height:300px}}

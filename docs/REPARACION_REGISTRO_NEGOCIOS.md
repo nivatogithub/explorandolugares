@@ -121,3 +121,13 @@ Pruebas reproducibles: `php backend/tests/business-editorial.php` y `python3 scr
 La coordinación con `docs/ENTREGA_ADMIN_A_PORTAL_2026-10-21.md` del worker administrativo se hace por contratos, sin integrar su rama: separar cuenta verificada/asociación/documentación/pago/publicación, conservar Gratis y procedencia, no asignar propietarios manualmente, no mezclar CRM con permisos públicos y mantener la conciliación excepcional de disputas. Sus pantallas administrativas y recordatorios de renovación no se duplican ni se consideran una automatización ya implementada aquí.
 
 Limitaciones explícitas de esta entrega: el material editorial se prepara mediante el proceso humano/herramientas existente, no mediante una API de generación/traducción conectada al portal; los correos productivos de prepublicación aún necesitan una prueba real autorizada de entrega. Los navegadores externos y equipos móviles físicos no se dan por validados por una captura de escritorio del navegador integrado. No se integra automáticamente el candidato del worker administrativo.
+
+### Presentación y capacidad Premium (21 de octubre)
+
+- Portadas con proporción 4:3 y esquinas redondeadas, sin máscaras ovaladas. Premium presenta portada y galería mediante carrusel manual, navegable con botones y desplazamiento; Página Comercial conserva portada única.
+- Canales públicos según la escalera vigente de suscripciones, con SVG fijos, nombre accesible y tooltip; nunca se exponen canales privados o canales no incluidos.
+- Premium admite tres productos o servicios opcionales, con nombre (100 caracteres), descripción (400), traducciones y una imagen final revisada por producto. Las referencias se cargan en el circuito privado; la preparación elige medios con procedencia ya registrada. Hasta siete referencias privadas Premium, con límites de tamaño existentes.
+- Los productos se conservan en las versiones editoriales inmutables (049). El público lee exclusivamente el último snapshot publicado. Guardar, preparar o aprobar no modifica su contenido público. No hace falta otra tabla ni migración para estos datos.
+- Un operador Premium puede referenciar experiencias publicadas del mismo lugar en su página. Se reutilizan título, texto e imagen del catálogo; una experiencia retirada deja de renderizar. Esto no agrega al negocio como operador anunciado en el lugar: ese espacio conserva los requisitos del complemento pagado.
+- Menú: enlace HTTP(S) de menú/catálogo ya persistido, presentado para consultar o descargar. La descarga efectiva depende del recurso externo (PDF u otro formato); no se implementó almacenamiento de archivos PDF nuevos.
+- Se mantiene la preparación editorial de imágenes y traducciones; no se afirma generación automática conectada por API.

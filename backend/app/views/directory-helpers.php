@@ -29,7 +29,7 @@ function directoryPlanContacts(array $business,array $contacts,string $locale): 
         $href=contactHref($contact);if(!$href)continue;
         $seen[$channel]=true;
         $label=BusinessContactVisibility::label($channel,$locale);
-        $out[]='<a class="text-link directory-contact-link directory-contact-'.e($channel).'" href="'.e($href).'"'.(str_starts_with($href,'http')?' target="_blank" rel="noopener noreferrer"':'').'>'.e($label).'</a>';
+        $out[]='<a class="text-link directory-contact-link directory-contact-'.e($channel).'" href="'.e($href).'"'.(str_starts_with($href,'http')?' target="_blank" rel="noopener noreferrer"':'').' aria-label="'.e($label).'" title="'.e($label).'">'.BusinessContactVisibility::icon($channel).'</a>';
     }
     return $out?'<nav class="directory-contact-links" aria-label="'.e($locale==='en'?'Business contact':($locale==='pt-BR'?'Contato do negócio':'Contacto del negocio')).'">'.implode(' ',$out).'</nav>':'';
 }
