@@ -1,0 +1,108 @@
+{
+  "destination": "guatape",
+  "checked_at": "2026-10-20",
+  "items": [
+    {
+      "slug": "penon-guatape",
+      "kind": "place",
+      "decision": "include",
+      "priority": 1,
+      "priority_type": "editorial_no_ranking_ventas",
+      "source_urls": [
+        "https://colombia.travel/es/node/4314"
+      ],
+      "checked_at": "2026-10-20"
+    },
+    {
+      "slug": "plazoleta-zocalos",
+      "kind": "place",
+      "decision": "include",
+      "priority": 2,
+      "priority_type": "editorial_no_ranking_ventas",
+      "source_urls": [
+        "https://colombia.travel/es/medellin/mira-los-zocalos-de-guatape"
+      ],
+      "checked_at": "2026-10-20"
+    },
+    {
+      "slug": "malecon",
+      "kind": "place",
+      "decision": "include",
+      "priority": 3,
+      "priority_type": "editorial_no_ranking_ventas",
+      "source_urls": [
+        "https://www.municipiodeguatape.gov.co/publicaciones/87/informacion-turistica/"
+      ],
+      "checked_at": "2026-10-20"
+    },
+    {
+      "slug": "parque-principal",
+      "kind": "place",
+      "decision": "include",
+      "priority": 4,
+      "priority_type": "editorial_no_ranking_ventas",
+      "source_urls": [
+        "https://www.municipiodeguatape.gov.co/publicaciones/87/informacion-turistica/"
+      ],
+      "checked_at": "2026-10-20"
+    },
+    {
+      "slug": "paseo-embalse",
+      "kind": "experience",
+      "decision": "include",
+      "priority": 1,
+      "priority_type": "editorial_no_ranking_ventas",
+      "source_urls": [
+        "https://jjexperiences.co/actividades"
+      ],
+      "checked_at": "2026-10-20",
+      "operator": "JJ Experiences",
+      "availability": "Oferta documental; fecha, punto de embarque y condiciones se confirman con el oferente."
+    },
+    {
+      "slug": "kayak-guiado",
+      "kind": "experience",
+      "decision": "include",
+      "priority": 2,
+      "priority_type": "editorial_no_ranking_ventas",
+      "source_urls": [
+        "https://www.outdoorsguatape.com/en/product/tour-en-kayak/"
+      ],
+      "checked_at": "2026-10-20",
+      "operator": "Outdoors Guatapé",
+      "availability": "Oferta documental; fecha, punto de embarque y condiciones se confirman con el oferente."
+    },
+    {
+      "slug": "wakeboard",
+      "kind": "experience",
+      "decision": "include",
+      "priority": 3,
+      "priority_type": "editorial_no_ranking_ventas",
+      "source_urls": [
+        "https://www.vikingosclubnauticoguatape.com/es/reservaciones"
+      ],
+      "checked_at": "2026-10-20",
+      "operator": "Vikingos Club Náutico",
+      "availability": "Oferta documental; fecha, punto de embarque y condiciones se confirman con el oferente."
+    }
+  ],
+  "excluded": [
+    {
+      "name": "Réplica del Viejo Peñol",
+      "reason": "Se encuentra en El Peñol; no mezclar municipios para completar cupos."
+    },
+    {
+      "name": "Embalse como atractivo independiente",
+      "reason": "Se representa mediante malecón y experiencias náuticas; evitar duplicación."
+    },
+    {
+      "name": "Tour urbano genérico, comida libre, museos sin identidad",
+      "reason": "No incluir por relleno; sin oferta prioritaria comprobada."
+    }
+  ],
+  "limits": [
+    "Cuatro atractivos y tres experiencias; ocho es techo, no cuota.",
+    "El embalse es intermunicipal; confirmar puntos de salida con oferente.",
+    "No afirmar disponibilidad ni popularidad por existir la oferta."
+  ]
+}
