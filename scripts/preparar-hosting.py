@@ -110,6 +110,8 @@ for item in approved_media['media']:
         raise RuntimeError('El paquete alteró un medio aprobado: '+str(relative))
 subprocess.run([sys.executable,str(root/'scripts/aplicar-rutas-lugares.py'),'--release',str(release)],check=True)
 subprocess.run([sys.executable,str(root/'scripts/agregar-metadatos-sociales.py'),'--public',str(public)],check=True)
+# Retired controller stays inventoried for a separate, explicit cleanup; no template loads it.
+shutil.copyfile(root/'backend/public/assets/place-sections.js',public/'assets/place-sections.js')
 subprocess.run([sys.executable,str(root/'scripts/versiones-presentacion.py'),'--public',str(public)],check=True)
 print(f'Entrega de revisión: {release}\nRaíz pública: {public}\nConfigurar private/config.php fuera de public/. No hay publicación automática.')
 

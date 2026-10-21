@@ -36,3 +36,16 @@ main :is(#atractivos-destino,.destination-experience-list)>article>a.text-link,m
 main :is(#atractivos-destino,.destination-experience-list)>article:not(:has(a.text-link))::after{content:'';display:block;height:24px;flex:0 0 24px;margin-top:12px}
 @media(max-width:1000px){main :is(#atractivos-destino,.destination-experience-list){grid-template-columns:repeat(2,minmax(0,1fr))!important}}
 @media(max-width:650px){main :is(#atractivos-destino,.destination-experience-list){grid-template-columns:1fr!important}}
+
+/* Destination rhythm belongs to the shared template, including legacy city data. */
+main.destination-page .destination-meta-row>.breadcrumbs{padding:0!important}
+main.destination-page .destination-hero{align-items:start;padding-top:0!important;padding-bottom:0!important}
+main.destination-page .destination-hero h1{margin:0 0 12px}
+main.destination-page .destination-hero .intro{margin:0}
+main.destination-page .destination-action-row{padding:0}
+main.destination-page .destination-hero-links .text-link{margin:0}
+main.destination-page :is(.destination-overview,.destination-highlights,.destination-experiences,#lugares){padding-top:16px!important;padding-bottom:16px!important}
+main.destination-page .destination-overview{gap:16px}
+main.destination-page .destination-reasons{padding:18px}
+main.destination-page .destination-overview>div>:last-child{margin-bottom:0}
+main.destination-page .destination-reasons>:last-child{margin-bottom:0}
