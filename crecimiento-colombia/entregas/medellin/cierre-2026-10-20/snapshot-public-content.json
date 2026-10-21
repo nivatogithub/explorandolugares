@@ -1,0 +1,4037 @@
+{
+    "schema": "destination-public-snapshot-v1",
+    "destination": "medellin",
+    "tables": {
+        "destinations": [
+            {
+                "id": 16,
+                "slug": "medellin",
+                "destination_type": "city",
+                "country_code": "CO",
+                "department": "Antioquia",
+                "subregion": "Valle de Aburrá",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "published",
+                "display_order": 43
+            }
+        ],
+        "destination_translations": [
+            {
+                "destination_id": 16,
+                "locale": "en",
+                "display_name": "Medellín",
+                "eyebrow": "Antioquia · Colombia",
+                "headline": "Culture among mountains",
+                "intro": "Medellín brings together art, science and urban life in the Aburrá Valley.",
+                "meta_description": "Medellín offers places to explore art, science and daily life in the Aburrá Valley. Museo de Antioquia, the Botanical Garden, Parque Explora and MAMM"
+            },
+            {
+                "destination_id": 16,
+                "locale": "es",
+                "display_name": "Medellín",
+                "eyebrow": "Antioquia · Colombia",
+                "headline": "Cultura entre montañas",
+                "intro": "Medellín combina arte, ciencia y vida urbana en el valle de Aburrá.",
+                "meta_description": "Medellín reúne espacios para acercarse al arte, la ciencia y la vida de una ciudad del valle de Aburrá. El Museo de Antioquia, el Jardín Botánico, Par"
+            },
+            {
+                "destination_id": 16,
+                "locale": "pt-BR",
+                "display_name": "Medellín",
+                "eyebrow": "Antioquia · Colombia",
+                "headline": "Cultura entre montanhas",
+                "intro": "Medellín reúne arte, ciência e vida urbana no vale do Aburrá.",
+                "meta_description": "Medellín reúne espaços para conhecer a arte, a ciência e o cotidiano de uma cidade do vale do Aburrá. O Museo de Antioquia, o Jardim Botânico, o Parqu"
+            }
+        ],
+        "destination_story_blocks": [
+            {
+                "id": 17,
+                "destination_id": 16,
+                "section_key": "history",
+                "display_order": 1
+            }
+        ],
+        "destination_reasons": [
+            {
+                "id": 46,
+                "destination_id": 16,
+                "display_order": 1
+            },
+            {
+                "id": 47,
+                "destination_id": 16,
+                "display_order": 2
+            },
+            {
+                "id": 48,
+                "destination_id": 16,
+                "display_order": 3
+            }
+        ],
+        "destination_sources": [
+            {
+                "id": 1781,
+                "destination_id": 16,
+                "locale": "es",
+                "section_key": "destination",
+                "source_url": "https://www.medellin.gov.co/es/historia-y-simbolos-de-medellin/",
+                "source_label": "Alcaldía de Medellín",
+                "display_order": 1
+            },
+            {
+                "id": 1782,
+                "destination_id": 16,
+                "locale": "es",
+                "section_key": "destination",
+                "source_url": "https://www.medellin.travel/",
+                "source_label": "Guía oficial de turismo",
+                "display_order": 2
+            },
+            {
+                "id": 1783,
+                "destination_id": 16,
+                "locale": "es",
+                "section_key": "destination",
+                "source_url": "https://www.botanicomedellin.org/",
+                "source_label": "Jardín Botánico",
+                "display_order": 3
+            },
+            {
+                "id": 1784,
+                "destination_id": 16,
+                "locale": "es",
+                "section_key": "destination",
+                "source_url": "https://museodeantioquia.co/",
+                "source_label": "Museo de Antioquia",
+                "display_order": 4
+            },
+            {
+                "id": 1785,
+                "destination_id": 16,
+                "locale": "es",
+                "section_key": "destination",
+                "source_url": "https://www.parqueexplora.org/en",
+                "source_label": "Parque Explora",
+                "display_order": 5
+            },
+            {
+                "id": 1786,
+                "destination_id": 16,
+                "locale": "es",
+                "section_key": "destination",
+                "source_url": "https://www.elmamm.org/",
+                "source_label": "MAMM",
+                "display_order": 6
+            },
+            {
+                "id": 1787,
+                "destination_id": 16,
+                "locale": "es",
+                "section_key": "destination",
+                "source_url": "https://www.metrodemedellin.gov.co/",
+                "source_label": "Metro de Medellín",
+                "display_order": 7
+            },
+            {
+                "id": 1788,
+                "destination_id": 16,
+                "locale": "es",
+                "section_key": "destination",
+                "source_url": "https://www.danncarlton.com/",
+                "source_label": "Dann Carlton Medellín",
+                "display_order": 8
+            },
+            {
+                "id": 1789,
+                "destination_id": 16,
+                "locale": "es",
+                "section_key": "destination",
+                "source_url": "https://www.elcielohotel.com/",
+                "source_label": "Elcielo Hotel",
+                "display_order": 9
+            },
+            {
+                "id": 1790,
+                "destination_id": 16,
+                "locale": "es",
+                "section_key": "destination",
+                "source_url": "https://www.hotelsanfernandoplaza.com/",
+                "source_label": "Hotel San Fernando Plaza",
+                "display_order": 10
+            },
+            {
+                "id": 1791,
+                "destination_id": 16,
+                "locale": "es",
+                "section_key": "destination",
+                "source_url": "https://www.medellin.travel/edificio-coltejer/",
+                "source_label": "Alcaldía / Medellín Travel",
+                "display_order": 11
+            },
+            {
+                "id": 1792,
+                "destination_id": 16,
+                "locale": "es",
+                "section_key": "destination",
+                "source_url": "https://www.medellin.travel/pueblito-paisa-cerro-nutibara/",
+                "source_label": "Alcaldía / Medellín Travel",
+                "display_order": 12
+            },
+            {
+                "id": 1793,
+                "destination_id": 16,
+                "locale": "es",
+                "section_key": "destination",
+                "source_url": "https://www.epm.com.co/institucional/sala-de-prensa/noticias-y-novedades/epm-de-puertas-abiertas-para-la-comunidad/",
+                "source_label": "EPM",
+                "display_order": 13
+            },
+            {
+                "id": 1794,
+                "destination_id": 16,
+                "locale": "es",
+                "section_key": "destination",
+                "source_url": "https://www.medellin.travel/via-jardin/",
+                "source_label": "Alcaldía / Medellín Travel",
+                "display_order": 14
+            },
+            {
+                "id": 1795,
+                "destination_id": 16,
+                "locale": "es",
+                "section_key": "destination",
+                "source_url": "https://www.medellin.travel/parque-lleras/",
+                "source_label": "Alcaldía / Medellín Travel",
+                "display_order": 15
+            },
+            {
+                "id": 1796,
+                "destination_id": 16,
+                "locale": "es",
+                "section_key": "destination",
+                "source_url": "https://www.medellin.gov.co/es/secretaria-de-comunicaciones/puntos-de-conexion-wifi/",
+                "source_label": "Alcaldía / Medellín Travel",
+                "display_order": 16
+            },
+            {
+                "id": 1797,
+                "destination_id": 16,
+                "locale": "es",
+                "section_key": "destination",
+                "source_url": "https://arqmedellin.co/parroquias/la-catedral/",
+                "source_label": "Arquidiócesis",
+                "display_order": 17
+            },
+            {
+                "id": 1798,
+                "destination_id": 16,
+                "locale": "es",
+                "section_key": "destination",
+                "source_url": "https://www.medellin.gov.co/es/sala-de-prensa/noticias/medellin-348-anos-de-historia-que-inicio-en-nuestro-centro-consentido-el-corazon-de-la-candelaria/",
+                "source_label": "Alcaldía / Medellín Travel",
+                "display_order": 18
+            },
+            {
+                "id": 1799,
+                "destination_id": 16,
+                "locale": "es",
+                "section_key": "destination",
+                "source_url": "https://www.medellin.travel/docs/MapatursticodeMedelln.pdf",
+                "source_label": "Alcaldía / Medellín Travel",
+                "display_order": 19
+            },
+            {
+                "id": 1800,
+                "destination_id": 16,
+                "locale": "es",
+                "section_key": "destination",
+                "source_url": "https://www.medellin.travel/turismo-social-en-medellin/",
+                "source_label": "Alcaldía / Medellín Travel",
+                "display_order": 20
+            },
+            {
+                "id": 1801,
+                "destination_id": 16,
+                "locale": "es",
+                "section_key": "destination",
+                "source_url": "https://www.medellin.travel/wp-content/uploads/2021/11/Quick-guide-to-Medellin.pdf",
+                "source_label": "Alcaldía / Medellín Travel",
+                "display_order": 21
+            },
+            {
+                "id": 1802,
+                "destination_id": 16,
+                "locale": "es",
+                "section_key": "destination",
+                "source_url": "https://www.medellin.travel/que-hacer-en-medellin-en-48-horas/?lang=en",
+                "source_label": "Alcaldía / Medellín Travel",
+                "display_order": 22
+            },
+            {
+                "id": 1803,
+                "destination_id": 16,
+                "locale": "es",
+                "section_key": "destination",
+                "source_url": "https://www.medellin.travel/fashion-and-shopping/?lang=en",
+                "source_label": "Alcaldía / Medellín Travel",
+                "display_order": 23
+            },
+            {
+                "id": 1804,
+                "destination_id": 16,
+                "locale": "es",
+                "section_key": "destination",
+                "source_url": "https://medellinturistica.com/servicios/city-tour-comuna-13/",
+                "source_label": "Medellín Turística (operador)",
+                "display_order": 24
+            },
+            {
+                "id": 1805,
+                "destination_id": 16,
+                "locale": "es",
+                "section_key": "destination",
+                "source_url": "https://parquearvi.org/",
+                "source_label": "Corporación Parque Arví",
+                "display_order": 25
+            },
+            {
+                "id": 1806,
+                "destination_id": 16,
+                "locale": "en",
+                "section_key": "destination",
+                "source_url": "https://www.medellin.gov.co/es/historia-y-simbolos-de-medellin/",
+                "source_label": "Alcaldía de Medellín",
+                "display_order": 1
+            },
+            {
+                "id": 1807,
+                "destination_id": 16,
+                "locale": "en",
+                "section_key": "destination",
+                "source_url": "https://www.medellin.travel/",
+                "source_label": "Guía oficial de turismo",
+                "display_order": 2
+            },
+            {
+                "id": 1808,
+                "destination_id": 16,
+                "locale": "en",
+                "section_key": "destination",
+                "source_url": "https://www.botanicomedellin.org/",
+                "source_label": "Jardín Botánico",
+                "display_order": 3
+            },
+            {
+                "id": 1809,
+                "destination_id": 16,
+                "locale": "en",
+                "section_key": "destination",
+                "source_url": "https://museodeantioquia.co/",
+                "source_label": "Museo de Antioquia",
+                "display_order": 4
+            },
+            {
+                "id": 1810,
+                "destination_id": 16,
+                "locale": "en",
+                "section_key": "destination",
+                "source_url": "https://www.parqueexplora.org/en",
+                "source_label": "Parque Explora",
+                "display_order": 5
+            },
+            {
+                "id": 1811,
+                "destination_id": 16,
+                "locale": "en",
+                "section_key": "destination",
+                "source_url": "https://www.elmamm.org/",
+                "source_label": "MAMM",
+                "display_order": 6
+            },
+            {
+                "id": 1812,
+                "destination_id": 16,
+                "locale": "en",
+                "section_key": "destination",
+                "source_url": "https://www.metrodemedellin.gov.co/",
+                "source_label": "Metro de Medellín",
+                "display_order": 7
+            },
+            {
+                "id": 1813,
+                "destination_id": 16,
+                "locale": "en",
+                "section_key": "destination",
+                "source_url": "https://www.danncarlton.com/",
+                "source_label": "Dann Carlton Medellín",
+                "display_order": 8
+            },
+            {
+                "id": 1814,
+                "destination_id": 16,
+                "locale": "en",
+                "section_key": "destination",
+                "source_url": "https://www.elcielohotel.com/",
+                "source_label": "Elcielo Hotel",
+                "display_order": 9
+            },
+            {
+                "id": 1815,
+                "destination_id": 16,
+                "locale": "en",
+                "section_key": "destination",
+                "source_url": "https://www.hotelsanfernandoplaza.com/",
+                "source_label": "Hotel San Fernando Plaza",
+                "display_order": 10
+            },
+            {
+                "id": 1816,
+                "destination_id": 16,
+                "locale": "en",
+                "section_key": "destination",
+                "source_url": "https://www.medellin.travel/edificio-coltejer/",
+                "source_label": "Alcaldía / Medellín Travel",
+                "display_order": 11
+            },
+            {
+                "id": 1817,
+                "destination_id": 16,
+                "locale": "en",
+                "section_key": "destination",
+                "source_url": "https://www.medellin.travel/pueblito-paisa-cerro-nutibara/",
+                "source_label": "Alcaldía / Medellín Travel",
+                "display_order": 12
+            },
+            {
+                "id": 1818,
+                "destination_id": 16,
+                "locale": "en",
+                "section_key": "destination",
+                "source_url": "https://www.epm.com.co/institucional/sala-de-prensa/noticias-y-novedades/epm-de-puertas-abiertas-para-la-comunidad/",
+                "source_label": "EPM",
+                "display_order": 13
+            },
+            {
+                "id": 1819,
+                "destination_id": 16,
+                "locale": "en",
+                "section_key": "destination",
+                "source_url": "https://www.medellin.travel/via-jardin/",
+                "source_label": "Alcaldía / Medellín Travel",
+                "display_order": 14
+            },
+            {
+                "id": 1820,
+                "destination_id": 16,
+                "locale": "en",
+                "section_key": "destination",
+                "source_url": "https://www.medellin.travel/parque-lleras/",
+                "source_label": "Alcaldía / Medellín Travel",
+                "display_order": 15
+            },
+            {
+                "id": 1821,
+                "destination_id": 16,
+                "locale": "en",
+                "section_key": "destination",
+                "source_url": "https://www.medellin.gov.co/es/secretaria-de-comunicaciones/puntos-de-conexion-wifi/",
+                "source_label": "Alcaldía / Medellín Travel",
+                "display_order": 16
+            },
+            {
+                "id": 1822,
+                "destination_id": 16,
+                "locale": "en",
+                "section_key": "destination",
+                "source_url": "https://arqmedellin.co/parroquias/la-catedral/",
+                "source_label": "Arquidiócesis",
+                "display_order": 17
+            },
+            {
+                "id": 1823,
+                "destination_id": 16,
+                "locale": "en",
+                "section_key": "destination",
+                "source_url": "https://www.medellin.gov.co/es/sala-de-prensa/noticias/medellin-348-anos-de-historia-que-inicio-en-nuestro-centro-consentido-el-corazon-de-la-candelaria/",
+                "source_label": "Alcaldía / Medellín Travel",
+                "display_order": 18
+            },
+            {
+                "id": 1824,
+                "destination_id": 16,
+                "locale": "en",
+                "section_key": "destination",
+                "source_url": "https://www.medellin.travel/docs/MapatursticodeMedelln.pdf",
+                "source_label": "Alcaldía / Medellín Travel",
+                "display_order": 19
+            },
+            {
+                "id": 1825,
+                "destination_id": 16,
+                "locale": "en",
+                "section_key": "destination",
+                "source_url": "https://www.medellin.travel/turismo-social-en-medellin/",
+                "source_label": "Alcaldía / Medellín Travel",
+                "display_order": 20
+            },
+            {
+                "id": 1826,
+                "destination_id": 16,
+                "locale": "en",
+                "section_key": "destination",
+                "source_url": "https://www.medellin.travel/wp-content/uploads/2021/11/Quick-guide-to-Medellin.pdf",
+                "source_label": "Alcaldía / Medellín Travel",
+                "display_order": 21
+            },
+            {
+                "id": 1827,
+                "destination_id": 16,
+                "locale": "en",
+                "section_key": "destination",
+                "source_url": "https://www.medellin.travel/que-hacer-en-medellin-en-48-horas/?lang=en",
+                "source_label": "Alcaldía / Medellín Travel",
+                "display_order": 22
+            },
+            {
+                "id": 1828,
+                "destination_id": 16,
+                "locale": "en",
+                "section_key": "destination",
+                "source_url": "https://www.medellin.travel/fashion-and-shopping/?lang=en",
+                "source_label": "Alcaldía / Medellín Travel",
+                "display_order": 23
+            },
+            {
+                "id": 1829,
+                "destination_id": 16,
+                "locale": "en",
+                "section_key": "destination",
+                "source_url": "https://medellinturistica.com/servicios/city-tour-comuna-13/",
+                "source_label": "Medellín Turística (operador)",
+                "display_order": 24
+            },
+            {
+                "id": 1830,
+                "destination_id": 16,
+                "locale": "en",
+                "section_key": "destination",
+                "source_url": "https://parquearvi.org/",
+                "source_label": "Corporación Parque Arví",
+                "display_order": 25
+            },
+            {
+                "id": 1831,
+                "destination_id": 16,
+                "locale": "pt-BR",
+                "section_key": "destination",
+                "source_url": "https://www.medellin.gov.co/es/historia-y-simbolos-de-medellin/",
+                "source_label": "Alcaldía de Medellín",
+                "display_order": 1
+            },
+            {
+                "id": 1832,
+                "destination_id": 16,
+                "locale": "pt-BR",
+                "section_key": "destination",
+                "source_url": "https://www.medellin.travel/",
+                "source_label": "Guía oficial de turismo",
+                "display_order": 2
+            },
+            {
+                "id": 1833,
+                "destination_id": 16,
+                "locale": "pt-BR",
+                "section_key": "destination",
+                "source_url": "https://www.botanicomedellin.org/",
+                "source_label": "Jardín Botánico",
+                "display_order": 3
+            },
+            {
+                "id": 1834,
+                "destination_id": 16,
+                "locale": "pt-BR",
+                "section_key": "destination",
+                "source_url": "https://museodeantioquia.co/",
+                "source_label": "Museo de Antioquia",
+                "display_order": 4
+            },
+            {
+                "id": 1835,
+                "destination_id": 16,
+                "locale": "pt-BR",
+                "section_key": "destination",
+                "source_url": "https://www.parqueexplora.org/en",
+                "source_label": "Parque Explora",
+                "display_order": 5
+            },
+            {
+                "id": 1836,
+                "destination_id": 16,
+                "locale": "pt-BR",
+                "section_key": "destination",
+                "source_url": "https://www.elmamm.org/",
+                "source_label": "MAMM",
+                "display_order": 6
+            },
+            {
+                "id": 1837,
+                "destination_id": 16,
+                "locale": "pt-BR",
+                "section_key": "destination",
+                "source_url": "https://www.metrodemedellin.gov.co/",
+                "source_label": "Metro de Medellín",
+                "display_order": 7
+            },
+            {
+                "id": 1838,
+                "destination_id": 16,
+                "locale": "pt-BR",
+                "section_key": "destination",
+                "source_url": "https://www.danncarlton.com/",
+                "source_label": "Dann Carlton Medellín",
+                "display_order": 8
+            },
+            {
+                "id": 1839,
+                "destination_id": 16,
+                "locale": "pt-BR",
+                "section_key": "destination",
+                "source_url": "https://www.elcielohotel.com/",
+                "source_label": "Elcielo Hotel",
+                "display_order": 9
+            },
+            {
+                "id": 1840,
+                "destination_id": 16,
+                "locale": "pt-BR",
+                "section_key": "destination",
+                "source_url": "https://www.hotelsanfernandoplaza.com/",
+                "source_label": "Hotel San Fernando Plaza",
+                "display_order": 10
+            },
+            {
+                "id": 1841,
+                "destination_id": 16,
+                "locale": "pt-BR",
+                "section_key": "destination",
+                "source_url": "https://www.medellin.travel/edificio-coltejer/",
+                "source_label": "Alcaldía / Medellín Travel",
+                "display_order": 11
+            },
+            {
+                "id": 1842,
+                "destination_id": 16,
+                "locale": "pt-BR",
+                "section_key": "destination",
+                "source_url": "https://www.medellin.travel/pueblito-paisa-cerro-nutibara/",
+                "source_label": "Alcaldía / Medellín Travel",
+                "display_order": 12
+            },
+            {
+                "id": 1843,
+                "destination_id": 16,
+                "locale": "pt-BR",
+                "section_key": "destination",
+                "source_url": "https://www.epm.com.co/institucional/sala-de-prensa/noticias-y-novedades/epm-de-puertas-abiertas-para-la-comunidad/",
+                "source_label": "EPM",
+                "display_order": 13
+            },
+            {
+                "id": 1844,
+                "destination_id": 16,
+                "locale": "pt-BR",
+                "section_key": "destination",
+                "source_url": "https://www.medellin.travel/via-jardin/",
+                "source_label": "Alcaldía / Medellín Travel",
+                "display_order": 14
+            },
+            {
+                "id": 1845,
+                "destination_id": 16,
+                "locale": "pt-BR",
+                "section_key": "destination",
+                "source_url": "https://www.medellin.travel/parque-lleras/",
+                "source_label": "Alcaldía / Medellín Travel",
+                "display_order": 15
+            },
+            {
+                "id": 1846,
+                "destination_id": 16,
+                "locale": "pt-BR",
+                "section_key": "destination",
+                "source_url": "https://www.medellin.gov.co/es/secretaria-de-comunicaciones/puntos-de-conexion-wifi/",
+                "source_label": "Alcaldía / Medellín Travel",
+                "display_order": 16
+            },
+            {
+                "id": 1847,
+                "destination_id": 16,
+                "locale": "pt-BR",
+                "section_key": "destination",
+                "source_url": "https://arqmedellin.co/parroquias/la-catedral/",
+                "source_label": "Arquidiócesis",
+                "display_order": 17
+            },
+            {
+                "id": 1848,
+                "destination_id": 16,
+                "locale": "pt-BR",
+                "section_key": "destination",
+                "source_url": "https://www.medellin.gov.co/es/sala-de-prensa/noticias/medellin-348-anos-de-historia-que-inicio-en-nuestro-centro-consentido-el-corazon-de-la-candelaria/",
+                "source_label": "Alcaldía / Medellín Travel",
+                "display_order": 18
+            },
+            {
+                "id": 1849,
+                "destination_id": 16,
+                "locale": "pt-BR",
+                "section_key": "destination",
+                "source_url": "https://www.medellin.travel/docs/MapatursticodeMedelln.pdf",
+                "source_label": "Alcaldía / Medellín Travel",
+                "display_order": 19
+            },
+            {
+                "id": 1850,
+                "destination_id": 16,
+                "locale": "pt-BR",
+                "section_key": "destination",
+                "source_url": "https://www.medellin.travel/turismo-social-en-medellin/",
+                "source_label": "Alcaldía / Medellín Travel",
+                "display_order": 20
+            },
+            {
+                "id": 1851,
+                "destination_id": 16,
+                "locale": "pt-BR",
+                "section_key": "destination",
+                "source_url": "https://www.medellin.travel/wp-content/uploads/2021/11/Quick-guide-to-Medellin.pdf",
+                "source_label": "Alcaldía / Medellín Travel",
+                "display_order": 21
+            },
+            {
+                "id": 1852,
+                "destination_id": 16,
+                "locale": "pt-BR",
+                "section_key": "destination",
+                "source_url": "https://www.medellin.travel/que-hacer-en-medellin-en-48-horas/?lang=en",
+                "source_label": "Alcaldía / Medellín Travel",
+                "display_order": 22
+            },
+            {
+                "id": 1853,
+                "destination_id": 16,
+                "locale": "pt-BR",
+                "section_key": "destination",
+                "source_url": "https://www.medellin.travel/fashion-and-shopping/?lang=en",
+                "source_label": "Alcaldía / Medellín Travel",
+                "display_order": 23
+            },
+            {
+                "id": 1854,
+                "destination_id": 16,
+                "locale": "pt-BR",
+                "section_key": "destination",
+                "source_url": "https://medellinturistica.com/servicios/city-tour-comuna-13/",
+                "source_label": "Medellín Turística (operador)",
+                "display_order": 24
+            },
+            {
+                "id": 1855,
+                "destination_id": 16,
+                "locale": "pt-BR",
+                "section_key": "destination",
+                "source_url": "https://parquearvi.org/",
+                "source_label": "Corporación Parque Arví",
+                "display_order": 25
+            }
+        ],
+        "destination_media": [
+            {
+                "destination_id": 16,
+                "media_asset_id": 134,
+                "role": "hero",
+                "display_order": 0
+            },
+            {
+                "destination_id": 16,
+                "media_asset_id": 135,
+                "role": "history",
+                "display_order": 0
+            }
+        ],
+        "points_of_interest": [
+            {
+                "id": 53,
+                "destination_id": 16,
+                "slug": "plaza-botero",
+                "poi_type": "place",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "archived",
+                "display_order": 18
+            },
+            {
+                "id": 54,
+                "destination_id": 16,
+                "slug": "jardin-botanico",
+                "poi_type": "place",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "published",
+                "display_order": 3
+            },
+            {
+                "id": 55,
+                "destination_id": 16,
+                "slug": "el-poblado",
+                "poi_type": "place",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "archived",
+                "display_order": 20
+            },
+            {
+                "id": 82,
+                "destination_id": 16,
+                "slug": "coltejer",
+                "poi_type": "place",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "archived",
+                "display_order": 19
+            },
+            {
+                "id": 97,
+                "destination_id": 16,
+                "slug": "parque-explora",
+                "poi_type": "place",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "published",
+                "display_order": 1
+            },
+            {
+                "id": 98,
+                "destination_id": 16,
+                "slug": "pueblito-paisa",
+                "poi_type": "place",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "published",
+                "display_order": 2
+            },
+            {
+                "id": 99,
+                "destination_id": 16,
+                "slug": "comuna13",
+                "poi_type": "place",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "published",
+                "display_order": 4
+            },
+            {
+                "id": 100,
+                "destination_id": 16,
+                "slug": "museo-antioquia",
+                "poi_type": "place",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "published",
+                "display_order": 5
+            },
+            {
+                "id": 101,
+                "destination_id": 16,
+                "slug": "arvi",
+                "poi_type": "place",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "published",
+                "display_order": 6
+            },
+            {
+                "id": 102,
+                "destination_id": 16,
+                "slug": "catedral-metropolitana",
+                "poi_type": "place",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "published",
+                "display_order": 7
+            },
+            {
+                "id": 103,
+                "destination_id": 16,
+                "slug": "pies-descalzos",
+                "poi_type": "place",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "published",
+                "display_order": 8
+            },
+            {
+                "id": 146,
+                "destination_id": 16,
+                "slug": "museo-antioquia-visita",
+                "poi_type": "experience",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "draft",
+                "display_order": 9
+            },
+            {
+                "id": 147,
+                "destination_id": 16,
+                "slug": "jardin-botanico-visita",
+                "poi_type": "experience",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "draft",
+                "display_order": 10
+            },
+            {
+                "id": 148,
+                "destination_id": 16,
+                "slug": "parque-explora-visita",
+                "poi_type": "experience",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "draft",
+                "display_order": 11
+            },
+            {
+                "id": 149,
+                "destination_id": 16,
+                "slug": "mamm-visita",
+                "poi_type": "experience",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "draft",
+                "display_order": 8
+            },
+            {
+                "id": 150,
+                "destination_id": 16,
+                "slug": "paseo-centro",
+                "poi_type": "experience",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "draft",
+                "display_order": 13
+            },
+            {
+                "id": 151,
+                "destination_id": 16,
+                "slug": "laureles-cafes",
+                "poi_type": "experience",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "draft",
+                "display_order": 14
+            },
+            {
+                "id": 152,
+                "destination_id": 16,
+                "slug": "epm-visita",
+                "poi_type": "experience",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "draft",
+                "display_order": 15
+            },
+            {
+                "id": 153,
+                "destination_id": 16,
+                "slug": "city-comuna13",
+                "poi_type": "experience",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "published",
+                "display_order": 1
+            },
+            {
+                "id": 154,
+                "destination_id": 16,
+                "slug": "metro-metrocable-recorrido",
+                "poi_type": "experience",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "draft",
+                "display_order": 17
+            },
+            {
+                "id": 210,
+                "destination_id": 16,
+                "slug": "city-bus",
+                "poi_type": "experience",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "published",
+                "display_order": 2
+            },
+            {
+                "id": 211,
+                "destination_id": 16,
+                "slug": "silleteros",
+                "poi_type": "experience",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "published",
+                "display_order": 3
+            },
+            {
+                "id": 212,
+                "destination_id": 16,
+                "slug": "tour-cafetero",
+                "poi_type": "experience",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "draft",
+                "display_order": 4
+            },
+            {
+                "id": 213,
+                "destination_id": 16,
+                "slug": "chiva-rumbera",
+                "poi_type": "experience",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "published",
+                "display_order": 4
+            },
+            {
+                "id": 214,
+                "destination_id": 16,
+                "slug": "bus-nocturno",
+                "poi_type": "experience",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "draft",
+                "display_order": 6
+            },
+            {
+                "id": 215,
+                "destination_id": 16,
+                "slug": "parapente",
+                "poi_type": "experience",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "published",
+                "display_order": 5
+            },
+            {
+                "id": 216,
+                "destination_id": 16,
+                "slug": "planetario-medellin",
+                "poi_type": "place",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "published",
+                "display_order": 9
+            }
+        ],
+        "businesses": [
+            {
+                "id": 268,
+                "public_id": "8102ad40-a758-4ef8-8c25-7e1663ae4322",
+                "destination_id": 16,
+                "category_code": "hospedaje",
+                "slug": "dann-carlton-medellin",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 269,
+                "public_id": "ba2fb4a5-9344-4212-ae29-0c7c8e89280c",
+                "destination_id": 16,
+                "category_code": "hospedaje",
+                "slug": "elcielo-hotel",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 270,
+                "public_id": "74a4e1dc-deee-4645-8064-3590fc1d0498",
+                "destination_id": 16,
+                "category_code": "hospedaje",
+                "slug": "hotel-san-fernando-plaza",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 271,
+                "public_id": "91993166-2022-484f-b7cd-2a8cfcdd8178",
+                "destination_id": 16,
+                "category_code": "alimentacion",
+                "slug": "elcielo-restaurant-medellin",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 272,
+                "public_id": "8185bdfe-2210-4fc1-812d-b20042cea0eb",
+                "destination_id": 16,
+                "category_code": "alimentacion",
+                "slug": "el-bistro-by-juanma",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 273,
+                "public_id": "17f882e2-f21a-406c-9923-7e974f10c2c1",
+                "destination_id": 16,
+                "category_code": "alimentacion",
+                "slug": "la-sere-by-juanma",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 274,
+                "public_id": "1c8ff75b-203f-42d7-8570-086aaab63f74",
+                "destination_id": 16,
+                "category_code": "cultura",
+                "slug": "museo-de-antioquia",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 275,
+                "public_id": "4f0bc13a-266d-41c4-942b-aa18b4bea7d3",
+                "destination_id": 16,
+                "category_code": "cultura",
+                "slug": "jardin-botanico-joaquin-antonio-uribe",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 276,
+                "public_id": "c32bf6f0-5930-4a6b-9a56-aa236fb22760",
+                "destination_id": 16,
+                "category_code": "cultura",
+                "slug": "parque-explora",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 277,
+                "public_id": "04457b91-0b04-49ae-a0a4-a002c26336ea",
+                "destination_id": 16,
+                "category_code": "cultura",
+                "slug": "museo-de-arte-moderno-de-medellin",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 309,
+                "public_id": "1afd1e2f-b6b4-4e76-afda-b7f54387af9b",
+                "destination_id": 16,
+                "category_code": "hospedaje",
+                "slug": "medellin-marriott-hotel",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 310,
+                "public_id": "0f8433eb-eb1d-4604-bda0-7e96375efffa",
+                "destination_id": 16,
+                "category_code": "hospedaje",
+                "slug": "four-points-by-sheraton-medellin",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 311,
+                "public_id": "31b0f433-b533-4c71-83a4-709275f1c919",
+                "destination_id": 16,
+                "category_code": "hospedaje",
+                "slug": "city-express-plus-by-marriott-medellin",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 312,
+                "public_id": "39bcfb4c-9183-4952-ba78-0c66a1770048",
+                "destination_id": 16,
+                "category_code": "hospedaje",
+                "slug": "ibis-medellin",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 313,
+                "public_id": "f31cfd9a-ca19-48b0-bbd4-70ec6922ae18",
+                "destination_id": 16,
+                "category_code": "hospedaje",
+                "slug": "novotel-medellin-el-tesoro",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 314,
+                "public_id": "19fbdd8d-2f61-44a6-963a-1415e189bbb3",
+                "destination_id": 16,
+                "category_code": "alimentacion",
+                "slug": "hatoviejo",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 315,
+                "public_id": "81830472-bb2a-43e8-9ee9-1f2f86f9e43a",
+                "destination_id": 16,
+                "category_code": "alimentacion",
+                "slug": "restaurante-in-situ",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 316,
+                "public_id": "20c9a978-b5c2-4929-a8a9-6fe76a541a66",
+                "destination_id": 16,
+                "category_code": "alimentacion",
+                "slug": "cafe-del-bosque-jardin-botanico",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 317,
+                "public_id": "3d235bfe-dda3-4184-9342-ebdc0e167718",
+                "destination_id": 16,
+                "category_code": "alimentacion",
+                "slug": "el-vagon-jardin-botanico",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 318,
+                "public_id": "561ff3a0-af84-403a-8545-d1cfd2d7aba1",
+                "destination_id": 16,
+                "category_code": "alimentacion",
+                "slug": "tres-08-el-tesoro",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 319,
+                "public_id": "05a1e097-acfe-4fd3-aebd-5d99382ad56f",
+                "destination_id": 16,
+                "category_code": "comercio",
+                "slug": "el-tesoro-parque-comercial",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 320,
+                "public_id": "7f6cba41-fe7c-4ff3-b307-0c7f9d78a79c",
+                "destination_id": 16,
+                "category_code": "comercio",
+                "slug": "centro-comercial-santafe-medellin",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 321,
+                "public_id": "122aae26-c584-41c5-a4ef-496d7e023fc9",
+                "destination_id": 16,
+                "category_code": "comercio",
+                "slug": "centro-comercial-oviedo",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 322,
+                "public_id": "e86dc514-421e-44a7-82e6-f14de4c8b4b4",
+                "destination_id": 16,
+                "category_code": "comercio",
+                "slug": "monterrey-centro-comercial",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 323,
+                "public_id": "96cd7edc-f797-42a2-bc8b-f22699111d08",
+                "destination_id": 16,
+                "category_code": "cultura",
+                "slug": "museo-casa-de-la-memoria",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 324,
+                "public_id": "eebb7f5b-e92e-463b-8a6a-5c8ef4a34745",
+                "destination_id": 16,
+                "category_code": "cultura",
+                "slug": "teatro-metropolitano-jose-gutierrez-gomez",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 325,
+                "public_id": "02b98fb4-127b-49bd-8871-56db377b4b2c",
+                "destination_id": 16,
+                "category_code": "cultura",
+                "slug": "planetario-de-medellin",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 326,
+                "public_id": "360259d3-92ed-4cea-b88d-b7a0eb4bd47f",
+                "destination_id": 16,
+                "category_code": "cultura",
+                "slug": "casa-museo-gardeliana",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 327,
+                "public_id": "d12ff9e9-1dda-45f7-91b7-a19ca49d42d7",
+                "destination_id": 16,
+                "category_code": "transporte",
+                "slug": "metro-de-medellin",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 328,
+                "public_id": "3277d891-9a77-46bf-8cff-c11c557def69",
+                "destination_id": 16,
+                "category_code": "cultura",
+                "slug": "museo-el-castillo",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            }
+        ],
+        "destination_story_translations": [
+            {
+                "story_block_id": 17,
+                "locale": "en",
+                "body": "The Villa of Nuestra Señora de la Candelaria de Medellín was established on 2 November 1675. Trade and industrial development shaped its later history."
+            },
+            {
+                "story_block_id": 17,
+                "locale": "es",
+                "body": "El 2 de noviembre de 1675 se estableció la Villa de Nuestra Señora de la Candelaria de Medellín. Su historia posterior estuvo ligada al comercio y al desarrollo industrial."
+            },
+            {
+                "story_block_id": 17,
+                "locale": "pt-BR",
+                "body": "Em 2 de novembro de 1675 foi estabelecida a Vila de Nuestra Señora de la Candelaria de Medellín. O comércio e o desenvolvimento industrial marcaram sua história posterior."
+            }
+        ],
+        "destination_reason_translations": [
+            {
+                "reason_id": 46,
+                "locale": "en",
+                "body": "Art in museums and public spaces"
+            },
+            {
+                "reason_id": 46,
+                "locale": "es",
+                "body": "Arte en museos y espacio público"
+            },
+            {
+                "reason_id": 46,
+                "locale": "pt-BR",
+                "body": "Arte em museus e espaços públicos"
+            },
+            {
+                "reason_id": 47,
+                "locale": "en",
+                "body": "Science and environmental education"
+            },
+            {
+                "reason_id": 47,
+                "locale": "es",
+                "body": "Ciencia y educación ambiental"
+            },
+            {
+                "reason_id": 47,
+                "locale": "pt-BR",
+                "body": "Ciência e educação ambiental"
+            },
+            {
+                "reason_id": 48,
+                "locale": "en",
+                "body": "Food and accommodation with direct official channels"
+            },
+            {
+                "reason_id": 48,
+                "locale": "es",
+                "body": "Gastronomía y alojamientos con canales directos"
+            },
+            {
+                "reason_id": 48,
+                "locale": "pt-BR",
+                "body": "Gastronomia e hospedagem com canais oficiais diretos"
+            }
+        ],
+        "point_of_interest_translations": [
+            {
+                "point_of_interest_id": 53,
+                "locale": "en",
+                "name": "Botero Square",
+                "description": "Sculptures and heritage in central Medellín.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Plaza+Botero+Medell%C3%ADn+Antioquia+Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 53,
+                "locale": "es",
+                "name": "Plaza Botero",
+                "description": "Esculturas y patrimonio en el centro de Medellín.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Plaza+Botero+Medell%C3%ADn+Antioquia+Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 53,
+                "locale": "pt-BR",
+                "name": "Praça Botero",
+                "description": "Esculturas e patrimônio no centro de Medellín.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Plaza+Botero+Medell%C3%ADn+Antioquia+Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 54,
+                "locale": "en",
+                "name": "Jardín Botánico Joaquín Antonio Uribe",
+                "description": "Plant collections and the architecture of the Orquideorama.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Jard%C3%ADn%20Bot%C3%A1nico%20Joaqu%C3%ADn%20Antonio%20Uribe%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "https://www.botanicomedellin.org/",
+                "external_label": "Official website"
+            },
+            {
+                "point_of_interest_id": 54,
+                "locale": "es",
+                "name": "Jardín Botánico Joaquín Antonio Uribe",
+                "description": "Colecciones vegetales y arquitectura del Orquideorama.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Jard%C3%ADn%20Bot%C3%A1nico%20Joaqu%C3%ADn%20Antonio%20Uribe%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "https://www.botanicomedellin.org/",
+                "external_label": "Sitio oficial"
+            },
+            {
+                "point_of_interest_id": 54,
+                "locale": "pt-BR",
+                "name": "Jardín Botánico Joaquín Antonio Uribe",
+                "description": "Coleções vegetais e arquitetura do Orquideorama.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Jard%C3%ADn%20Bot%C3%A1nico%20Joaqu%C3%ADn%20Antonio%20Uribe%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "https://www.botanicomedellin.org/",
+                "external_label": "Site oficial"
+            },
+            {
+                "point_of_interest_id": 55,
+                "locale": "en",
+                "name": "El Poblado",
+                "description": "Explore an area with restaurants, shops and nightlife.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=El+Poblado+Medell%C3%ADn+Antioquia+Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 55,
+                "locale": "es",
+                "name": "El Poblado",
+                "description": "Recorre un sector con restaurantes, comercio y vida nocturna.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=El+Poblado+Medell%C3%ADn+Antioquia+Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 55,
+                "locale": "pt-BR",
+                "name": "A vila",
+                "description": "Passeie por uma zona com restaurantes, comércio e vida noturna.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=El+Poblado+Medell%C3%ADn+Antioquia+Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 82,
+                "locale": "en",
+                "name": "Edificio Coltejer",
+                "description": "Textile-industry landmark; an exterior viewing proposal, without promising interior access.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Edificio%20Coltejer%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "https://www.medellin.travel/edificio-coltejer/",
+                "external_label": "Fuente oficial"
+            },
+            {
+                "point_of_interest_id": 82,
+                "locale": "es",
+                "name": "Edificio Coltejer",
+                "description": "Hito de la industria textil; propuesta de observación exterior, sin prometer acceso interior.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Edificio%20Coltejer%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "https://www.medellin.travel/edificio-coltejer/",
+                "external_label": "Fuente oficial"
+            },
+            {
+                "point_of_interest_id": 82,
+                "locale": "pt-BR",
+                "name": "Edificio Coltejer",
+                "description": "Marco da indústria têxtil; proposta de observação externa, sem prometer acesso interno.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Edificio%20Coltejer%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "https://www.medellin.travel/edificio-coltejer/",
+                "external_label": "Fuente oficial"
+            },
+            {
+                "point_of_interest_id": 97,
+                "locale": "en",
+                "name": "Parque Explora",
+                "description": "Interactive science and an aquarium.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Parque%20Explora%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "https://www.parqueexplora.org/en",
+                "external_label": "Official website"
+            },
+            {
+                "point_of_interest_id": 97,
+                "locale": "es",
+                "name": "Parque Explora",
+                "description": "Ciencia interactiva y acuario.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Parque%20Explora%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "https://www.parqueexplora.org/en",
+                "external_label": "Sitio oficial"
+            },
+            {
+                "point_of_interest_id": 97,
+                "locale": "pt-BR",
+                "name": "Parque Explora",
+                "description": "Ciência interativa e aquário.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Parque%20Explora%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "https://www.parqueexplora.org/en",
+                "external_label": "Site oficial"
+            },
+            {
+                "point_of_interest_id": 98,
+                "locale": "en",
+                "name": "Pueblito Paisa / Cerro Nutibara",
+                "description": "A recreated traditional village and views over the city.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Pueblito%20Paisa%20%2F%20Cerro%20Nutibara%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "https://www.medellin.travel/pueblito-paisa-cerro-nutibara/",
+                "external_label": "Official website"
+            },
+            {
+                "point_of_interest_id": 98,
+                "locale": "es",
+                "name": "Pueblito Paisa / Cerro Nutibara",
+                "description": "Pueblo tradicional recreado y mirador sobre la ciudad.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Pueblito%20Paisa%20%2F%20Cerro%20Nutibara%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "https://www.medellin.travel/pueblito-paisa-cerro-nutibara/",
+                "external_label": "Sitio oficial"
+            },
+            {
+                "point_of_interest_id": 98,
+                "locale": "pt-BR",
+                "name": "Pueblito Paisa / Cerro Nutibara",
+                "description": "Vila tradicional recriada e mirante sobre a cidade.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Pueblito%20Paisa%20%2F%20Cerro%20Nutibara%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "https://www.medellin.travel/pueblito-paisa-cerro-nutibara/",
+                "external_label": "Site oficial"
+            },
+            {
+                "point_of_interest_id": 99,
+                "locale": "en",
+                "name": "Comuna 13 / San Javier",
+                "description": "Street art, memory and neighbourhood life in San Javier.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Comuna%2013%20%2F%20San%20Javier%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "https://www.medellin.travel/turismo-social-en-medellin/",
+                "external_label": "Official website"
+            },
+            {
+                "point_of_interest_id": 99,
+                "locale": "es",
+                "name": "Comuna 13 / San Javier",
+                "description": "Arte urbano, memoria y vida de barrio en San Javier.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Comuna%2013%20%2F%20San%20Javier%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "https://www.medellin.travel/turismo-social-en-medellin/",
+                "external_label": "Sitio oficial"
+            },
+            {
+                "point_of_interest_id": 99,
+                "locale": "pt-BR",
+                "name": "Comuna 13 / San Javier",
+                "description": "Arte urbana, memória e vida de bairro em San Javier.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Comuna%2013%20%2F%20San%20Javier%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "https://www.medellin.travel/turismo-social-en-medellin/",
+                "external_label": "Site oficial"
+            },
+            {
+                "point_of_interest_id": 100,
+                "locale": "en",
+                "name": "Museo de Antioquia",
+                "description": "Regional art and Botero collections in the city centre.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20de%20Antioquia%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "https://museodeantioquia.co/",
+                "external_label": "Official website"
+            },
+            {
+                "point_of_interest_id": 100,
+                "locale": "es",
+                "name": "Museo de Antioquia",
+                "description": "Arte regional y colecciones de Botero en el centro.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20de%20Antioquia%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "https://museodeantioquia.co/",
+                "external_label": "Sitio oficial"
+            },
+            {
+                "point_of_interest_id": 100,
+                "locale": "pt-BR",
+                "name": "Museo de Antioquia",
+                "description": "Arte regional e coleções de Botero no centro.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20de%20Antioquia%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "https://museodeantioquia.co/",
+                "external_label": "Site oficial"
+            },
+            {
+                "point_of_interest_id": 101,
+                "locale": "en",
+                "name": "Parque Arví",
+                "description": "Forests and nature walks in Santa Elena.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Parque%20Arv%C3%AD%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "https://parquearvi.org/",
+                "external_label": "Official website"
+            },
+            {
+                "point_of_interest_id": 101,
+                "locale": "es",
+                "name": "Parque Arví",
+                "description": "Bosques y recorridos de naturaleza en Santa Elena.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Parque%20Arv%C3%AD%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "https://parquearvi.org/",
+                "external_label": "Sitio oficial"
+            },
+            {
+                "point_of_interest_id": 101,
+                "locale": "pt-BR",
+                "name": "Parque Arví",
+                "description": "Bosques e passeios na natureza em Santa Elena.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Parque%20Arv%C3%AD%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "https://parquearvi.org/",
+                "external_label": "Site oficial"
+            },
+            {
+                "point_of_interest_id": 102,
+                "locale": "en",
+                "name": "Catedral Basílica Metropolitana",
+                "description": "Brick architecture beside Parque Bolívar.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Catedral%20Bas%C3%ADlica%20Metropolitana%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "https://arqmedellin.co/parroquias/la-catedral/",
+                "external_label": "Official website"
+            },
+            {
+                "point_of_interest_id": 102,
+                "locale": "es",
+                "name": "Catedral Basílica Metropolitana",
+                "description": "Arquitectura de ladrillo junto al Parque Bolívar.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Catedral%20Bas%C3%ADlica%20Metropolitana%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "https://arqmedellin.co/parroquias/la-catedral/",
+                "external_label": "Sitio oficial"
+            },
+            {
+                "point_of_interest_id": 102,
+                "locale": "pt-BR",
+                "name": "Catedral Basílica Metropolitana",
+                "description": "Arquitetura de tijolos junto ao Parque Bolívar.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Catedral%20Bas%C3%ADlica%20Metropolitana%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "https://arqmedellin.co/parroquias/la-catedral/",
+                "external_label": "Site oficial"
+            },
+            {
+                "point_of_interest_id": 103,
+                "locale": "en",
+                "name": "Parque de los Pies Descalzos",
+                "description": "Paths, water and places to relax near EPM.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Parque%20de%20los%20Pies%20Descalzos%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "https://www.medellin.travel/wp-content/uploads/2021/11/Quick-guide-to-Medellin.pdf",
+                "external_label": "Official website"
+            },
+            {
+                "point_of_interest_id": 103,
+                "locale": "es",
+                "name": "Parque de los Pies Descalzos",
+                "description": "Senderos, agua y espacios de descanso cerca de EPM.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Parque%20de%20los%20Pies%20Descalzos%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "https://www.medellin.travel/wp-content/uploads/2021/11/Quick-guide-to-Medellin.pdf",
+                "external_label": "Sitio oficial"
+            },
+            {
+                "point_of_interest_id": 103,
+                "locale": "pt-BR",
+                "name": "Parque de los Pies Descalzos",
+                "description": "Caminhos, água e espaços de descanso perto da EPM.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Parque%20de%20los%20Pies%20Descalzos%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "https://www.medellin.travel/wp-content/uploads/2021/11/Quick-guide-to-Medellin.pdf",
+                "external_label": "Site oficial"
+            },
+            {
+                "point_of_interest_id": 146,
+                "locale": "en",
+                "name": "Visit to Museo de Antioquia",
+                "description": "Explore regional art and history; check the museum exhibitions.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Visit%20to%20Museo%20de%20Antioquia%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "https://museodeantioquia.co/",
+                "external_label": "Check the visit"
+            },
+            {
+                "point_of_interest_id": 146,
+                "locale": "es",
+                "name": "Visita al Museo de Antioquia",
+                "description": "Explora arte e historia regional; consulta las exposiciones del museo.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Visita%20al%20Museo%20de%20Antioquia%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "https://museodeantioquia.co/",
+                "external_label": "Consultar recorrido"
+            },
+            {
+                "point_of_interest_id": 146,
+                "locale": "pt-BR",
+                "name": "Visita ao Museo de Antioquia",
+                "description": "Explore arte e história regional; consulte as exposições do museu.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Visita%20ao%20Museo%20de%20Antioquia%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "https://museodeantioquia.co/",
+                "external_label": "Consultar o passeio"
+            },
+            {
+                "point_of_interest_id": 147,
+                "locale": "en",
+                "name": "Walk through the Botanical Garden",
+                "description": "Explore living collections and check the environmental programme.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Walk%20through%20the%20Botanical%20Garden%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "https://www.botanicomedellin.org/",
+                "external_label": "Check the visit"
+            },
+            {
+                "point_of_interest_id": 147,
+                "locale": "es",
+                "name": "Recorrido por el Jardín Botánico",
+                "description": "Recorre las colecciones vivas y consulta su programación ambiental.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Recorrido%20por%20el%20Jard%C3%ADn%20Bot%C3%A1nico%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "https://www.botanicomedellin.org/",
+                "external_label": "Consultar recorrido"
+            },
+            {
+                "point_of_interest_id": 147,
+                "locale": "pt-BR",
+                "name": "Passeio pelo Jardim Botânico",
+                "description": "Percorra as coleções vivas e consulte a programação ambiental.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Passeio%20pelo%20Jardim%20Bot%C3%A2nico%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "https://www.botanicomedellin.org/",
+                "external_label": "Consultar o passeio"
+            },
+            {
+                "point_of_interest_id": 148,
+                "locale": "en",
+                "name": "Explore science at Parque Explora",
+                "description": "Try interactive science and visit the aquarium; check admission.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Explore%20science%20at%20Parque%20Explora%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "https://www.parqueexplora.org/en",
+                "external_label": "Check the visit"
+            },
+            {
+                "point_of_interest_id": 148,
+                "locale": "es",
+                "name": "Explorar la ciencia en Parque Explora",
+                "description": "Experimenta con ciencia y conoce el acuario; consulta entradas.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Explorar%20la%20ciencia%20en%20Parque%20Explora%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "https://www.parqueexplora.org/en",
+                "external_label": "Consultar recorrido"
+            },
+            {
+                "point_of_interest_id": 148,
+                "locale": "pt-BR",
+                "name": "Explorar a ciência no Parque Explora",
+                "description": "Experimente ciência interativa e conheça o aquário; consulte os ingressos.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Explorar%20a%20ci%C3%AAncia%20no%20Parque%20Explora%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "https://www.parqueexplora.org/en",
+                "external_label": "Consultar o passeio"
+            },
+            {
+                "point_of_interest_id": 149,
+                "locale": "en",
+                "name": "Visit the MAMM",
+                "description": "Discover modern and contemporary art in Ciudad del Río.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Visit%20to%20MAMM%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "https://www.elmamm.org/",
+                "external_label": "Check the visit"
+            },
+            {
+                "point_of_interest_id": 149,
+                "locale": "es",
+                "name": "Visita al MAMM",
+                "description": "Descubre arte moderno y contemporáneo en Ciudad del Río.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Visita%20al%20MAMM%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "https://www.elmamm.org/",
+                "external_label": "Consultar recorrido"
+            },
+            {
+                "point_of_interest_id": 149,
+                "locale": "pt-BR",
+                "name": "Visita ao MAMM",
+                "description": "Descubra arte moderna e contemporânea em Ciudad del Río.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Visita%20ao%20MAMM%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "https://www.elmamm.org/",
+                "external_label": "Consultar o passeio"
+            },
+            {
+                "point_of_interest_id": 150,
+                "locale": "en",
+                "name": "Downtown architecture and heritage",
+                "description": "Walk downtown among heritage buildings, shops and public spaces.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Downtown%20architecture%20and%20heritage%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": "Check the visit"
+            },
+            {
+                "point_of_interest_id": 150,
+                "locale": "es",
+                "name": "Arquitectura y patrimonio del centro",
+                "description": "Camina por el centro entre patrimonio, comercio y espacios públicos.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Arquitectura%20y%20patrimonio%20del%20centro%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": "Consultar recorrido"
+            },
+            {
+                "point_of_interest_id": 150,
+                "locale": "pt-BR",
+                "name": "Arquitetura e patrimônio do centro",
+                "description": "Caminhe pelo centro entre patrimônio, comércio e espaços públicos.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Arquitetura%20e%20patrim%C3%B4nio%20do%20centro%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": "Consultar o passeio"
+            },
+            {
+                "point_of_interest_id": 151,
+                "locale": "en",
+                "name": "Walk along Avenida Jardín",
+                "description": "Stroll through Laureles and discover local cafés.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Walk%20along%20Avenida%20Jard%C3%ADn%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": "Check the visit"
+            },
+            {
+                "point_of_interest_id": 151,
+                "locale": "es",
+                "name": "Paseo por Avenida Jardín",
+                "description": "Pasea por Laureles y descubre cafés con atención directa.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Paseo%20por%20Avenida%20Jard%C3%ADn%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": "Consultar recorrido"
+            },
+            {
+                "point_of_interest_id": 151,
+                "locale": "pt-BR",
+                "name": "Passeio pela Avenida Jardín",
+                "description": "Passeie por Laureles e descubra cafés locais.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Passeio%20pela%20Avenida%20Jard%C3%ADn%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": "Consultar o passeio"
+            },
+            {
+                "point_of_interest_id": 152,
+                "locale": "en",
+                "name": "Guided visit to the EPM building",
+                "description": "Check visit schedules and arrangements directly with EPM.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Guided%20visit%20to%20the%20EPM%20building%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": "Check the visit"
+            },
+            {
+                "point_of_interest_id": 152,
+                "locale": "es",
+                "name": "Visita guiada al Edificio EPM",
+                "description": "Consulta con EPM la programación y condiciones de sus visitas.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Visita%20guiada%20al%20Edificio%20EPM%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": "Consultar recorrido"
+            },
+            {
+                "point_of_interest_id": 152,
+                "locale": "pt-BR",
+                "name": "Visita guiada ao Edifício EPM",
+                "description": "Consulte a programação e as condições das visitas diretamente com a EPM.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Visita%20guiada%20ao%20Edif%C3%ADcio%20EPM%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": "Consultar o passeio"
+            },
+            {
+                "point_of_interest_id": 153,
+                "locale": "en",
+                "name": "Comuna 13 graffiti and memory tour",
+                "description": "Discover murals and neighborhood stories with a local guide.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=City%20and%20Comuna%2013%20tour%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": "Check the visit"
+            },
+            {
+                "point_of_interest_id": 153,
+                "locale": "es",
+                "name": "Tour de grafiti y memoria de la Comuna 13",
+                "description": "Descubre murales e historias del barrio con un guía local.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Recorrido%20por%20la%20ciudad%20y%20Comuna%2013%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": "Consultar recorrido"
+            },
+            {
+                "point_of_interest_id": 153,
+                "locale": "pt-BR",
+                "name": "Tour de grafite e memória da Comuna 13",
+                "description": "Descubra murais e histórias do bairro com um guia local.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Passeio%20pela%20cidade%20e%20Comuna%2013%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": "Consultar o passeio"
+            },
+            {
+                "point_of_interest_id": 154,
+                "locale": "en",
+                "name": "Medellín Metro and Metrocable",
+                "description": "Connect neighbourhoods by Metro and Metrocable; check routes and service.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Medell%C3%ADn%20Metro%20and%20Metrocable%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": "Check the visit"
+            },
+            {
+                "point_of_interest_id": 154,
+                "locale": "es",
+                "name": "Metro y Metrocable de Medellín",
+                "description": "Conecta barrios en Metro y Metrocable; consulta rutas y servicio.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Metro%20y%20Metrocable%20de%20Medell%C3%ADn%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": "Consultar recorrido"
+            },
+            {
+                "point_of_interest_id": 154,
+                "locale": "pt-BR",
+                "name": "Metrô e Metrocable de Medellín",
+                "description": "Conecte bairros de Metro e Metrocable; consulte rotas e serviço.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Metr%C3%B4%20e%20Metrocable%20de%20Medell%C3%ADn%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": "Consultar o passeio"
+            },
+            {
+                "point_of_interest_id": 210,
+                "locale": "en",
+                "name": "Medellín city bus tour",
+                "description": "Discover the city’s main sights on a guided bus tour.",
+                "map_url": "",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 210,
+                "locale": "es",
+                "name": "Tour de Medellín en bus",
+                "description": "Conoce los principales lugares de la ciudad en un recorrido guiado.",
+                "map_url": "",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 210,
+                "locale": "pt-BR",
+                "name": "Tour de Medellín de ônibus",
+                "description": "Conheça os principais pontos da cidade em um passeio guiado.",
+                "map_url": "",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 211,
+                "locale": "en",
+                "name": "Silletero experience in Santa Elena",
+                "description": "Discover the silleta flower tradition and its craft at a farm.",
+                "map_url": "",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 211,
+                "locale": "es",
+                "name": "Experiencia silletera en Santa Elena",
+                "description": "Conoce la tradición de las silletas y su elaboración en una finca.",
+                "map_url": "",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 211,
+                "locale": "pt-BR",
+                "name": "Experiência silletera em Santa Elena",
+                "description": "Conheça a tradição das silletas e sua elaboração em uma propriedade rural.",
+                "map_url": "",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 212,
+                "locale": "en",
+                "name": "Coffee farm tour",
+                "description": "Discover coffee growing and preparation on a guided farm visit.",
+                "map_url": "",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 212,
+                "locale": "es",
+                "name": "Tour cafetero",
+                "description": "Descubre el cultivo y la preparación del café en una visita guiada.",
+                "map_url": "",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 212,
+                "locale": "pt-BR",
+                "name": "Tour de café",
+                "description": "Descubra o cultivo e o preparo do café em uma visita guiada.",
+                "map_url": "",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 213,
+                "locale": "en",
+                "name": "Chiva party bus",
+                "description": "Tour Medellín and its surroundings with music and a festive atmosphere.",
+                "map_url": "",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 213,
+                "locale": "es",
+                "name": "Chiva rumbera",
+                "description": "Recorre Medellín y sus alrededores entre música y ambiente de fiesta.",
+                "map_url": "",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 213,
+                "locale": "pt-BR",
+                "name": "Chiva festiva",
+                "description": "Percorra Medellín e seus arredores com música e clima de festa.",
+                "map_url": "",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 214,
+                "locale": "en",
+                "name": "Night sightseeing bus tour",
+                "description": "Discover the illuminated city and areas of the Aburrá Valley.",
+                "map_url": "",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 214,
+                "locale": "es",
+                "name": "Tour nocturno en bus",
+                "description": "Descubre la ciudad iluminada y sectores del Valle de Aburrá.",
+                "map_url": "",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 214,
+                "locale": "pt-BR",
+                "name": "Tour noturno de ônibus",
+                "description": "Descubra a cidade iluminada e regiões do Vale de Aburrá.",
+                "map_url": "",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 215,
+                "locale": "en",
+                "name": "Paragliding in San Félix (nearby)",
+                "description": "Fly with an instructor above the slopes of the Aburrá Valley.",
+                "map_url": "",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 215,
+                "locale": "es",
+                "name": "Parapente en San Félix (alrededores)",
+                "description": "Vuela acompañado de un instructor sobre las laderas del Valle de Aburrá.",
+                "map_url": "",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 215,
+                "locale": "pt-BR",
+                "name": "Parapente em San Félix (arredores)",
+                "description": "Voe com um instrutor sobre as encostas do Vale de Aburrá.",
+                "map_url": "",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 216,
+                "locale": "en",
+                "name": "Medellín Planetarium",
+                "description": "Astronomy and immersive projections beside Parque de los Deseos.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Planetario+de+Medellin",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 216,
+                "locale": "es",
+                "name": "Planetario de Medellín",
+                "description": "Astronomía y proyecciones inmersivas junto al Parque de los Deseos.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Planetario+de+Medellin",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 216,
+                "locale": "pt-BR",
+                "name": "Planetário de Medellín",
+                "description": "Astronomia e projeções imersivas junto ao Parque de los Deseos.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Planetario+de+Medellin",
+                "external_url": "",
+                "external_label": ""
+            }
+        ],
+        "point_of_interest_media": [
+            {
+                "point_of_interest_id": 53,
+                "media_asset_id": 33,
+                "role": "gallery",
+                "display_order": 1
+            },
+            {
+                "point_of_interest_id": 54,
+                "media_asset_id": 81,
+                "role": "gallery",
+                "display_order": 1
+            },
+            {
+                "point_of_interest_id": 55,
+                "media_asset_id": 35,
+                "role": "gallery",
+                "display_order": 1
+            },
+            {
+                "point_of_interest_id": 82,
+                "media_asset_id": 80,
+                "role": "gallery",
+                "display_order": 1
+            },
+            {
+                "point_of_interest_id": 97,
+                "media_asset_id": 136,
+                "role": "gallery",
+                "display_order": 1
+            },
+            {
+                "point_of_interest_id": 98,
+                "media_asset_id": 137,
+                "role": "gallery",
+                "display_order": 1
+            },
+            {
+                "point_of_interest_id": 99,
+                "media_asset_id": 139,
+                "role": "gallery",
+                "display_order": 1
+            },
+            {
+                "point_of_interest_id": 100,
+                "media_asset_id": 140,
+                "role": "gallery",
+                "display_order": 1
+            },
+            {
+                "point_of_interest_id": 101,
+                "media_asset_id": 141,
+                "role": "gallery",
+                "display_order": 1
+            },
+            {
+                "point_of_interest_id": 102,
+                "media_asset_id": 142,
+                "role": "gallery",
+                "display_order": 1
+            },
+            {
+                "point_of_interest_id": 103,
+                "media_asset_id": 143,
+                "role": "gallery",
+                "display_order": 1
+            },
+            {
+                "point_of_interest_id": 210,
+                "media_asset_id": 461,
+                "role": "gallery",
+                "display_order": 1
+            },
+            {
+                "point_of_interest_id": 211,
+                "media_asset_id": 456,
+                "role": "gallery",
+                "display_order": 1
+            },
+            {
+                "point_of_interest_id": 212,
+                "media_asset_id": 457,
+                "role": "gallery",
+                "display_order": 1
+            },
+            {
+                "point_of_interest_id": 213,
+                "media_asset_id": 458,
+                "role": "gallery",
+                "display_order": 1
+            },
+            {
+                "point_of_interest_id": 214,
+                "media_asset_id": 459,
+                "role": "gallery",
+                "display_order": 1
+            },
+            {
+                "point_of_interest_id": 215,
+                "media_asset_id": 460,
+                "role": "gallery",
+                "display_order": 1
+            },
+            {
+                "point_of_interest_id": 216,
+                "media_asset_id": 463,
+                "role": "gallery",
+                "display_order": 1
+            }
+        ],
+        "business_translations": [
+            {
+                "business_id": 268,
+                "locale": "en",
+                "display_name": "Dann Carlton Medellín",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 268,
+                "locale": "es",
+                "display_name": "Dann Carlton Medellín",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 268,
+                "locale": "pt-BR",
+                "display_name": "Dann Carlton Medellín",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 269,
+                "locale": "en",
+                "display_name": "Elcielo Hotel",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 269,
+                "locale": "es",
+                "display_name": "Elcielo Hotel",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 269,
+                "locale": "pt-BR",
+                "display_name": "Elcielo Hotel",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 270,
+                "locale": "en",
+                "display_name": "Hotel San Fernando Plaza",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 270,
+                "locale": "es",
+                "display_name": "Hotel San Fernando Plaza",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 270,
+                "locale": "pt-BR",
+                "display_name": "Hotel San Fernando Plaza",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 271,
+                "locale": "en",
+                "display_name": "Elcielo Restaurant Medellín",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 271,
+                "locale": "es",
+                "display_name": "Elcielo Restaurant Medellín",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 271,
+                "locale": "pt-BR",
+                "display_name": "Elcielo Restaurant Medellín",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 272,
+                "locale": "en",
+                "display_name": "El Bistró by Juanma",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 272,
+                "locale": "es",
+                "display_name": "El Bistró by Juanma",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 272,
+                "locale": "pt-BR",
+                "display_name": "El Bistró by Juanma",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 273,
+                "locale": "en",
+                "display_name": "La Sere by Juanma",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 273,
+                "locale": "es",
+                "display_name": "La Sere by Juanma",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 273,
+                "locale": "pt-BR",
+                "display_name": "La Sere by Juanma",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 274,
+                "locale": "en",
+                "display_name": "Museo de Antioquia",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 274,
+                "locale": "es",
+                "display_name": "Museo de Antioquia",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 274,
+                "locale": "pt-BR",
+                "display_name": "Museo de Antioquia",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 275,
+                "locale": "en",
+                "display_name": "Jardín Botánico Joaquín Antonio Uribe",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 275,
+                "locale": "es",
+                "display_name": "Jardín Botánico Joaquín Antonio Uribe",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 275,
+                "locale": "pt-BR",
+                "display_name": "Jardín Botánico Joaquín Antonio Uribe",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 276,
+                "locale": "en",
+                "display_name": "Parque Explora",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 276,
+                "locale": "es",
+                "display_name": "Parque Explora",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 276,
+                "locale": "pt-BR",
+                "display_name": "Parque Explora",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 277,
+                "locale": "en",
+                "display_name": "Museo de Arte Moderno de Medellín",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 277,
+                "locale": "es",
+                "display_name": "Museo de Arte Moderno de Medellín",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 277,
+                "locale": "pt-BR",
+                "display_name": "Museo de Arte Moderno de Medellín",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 309,
+                "locale": "en",
+                "display_name": "Medellín Marriott Hotel",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 309,
+                "locale": "es",
+                "display_name": "Medellín Marriott Hotel",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 309,
+                "locale": "pt-BR",
+                "display_name": "Medellín Marriott Hotel",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 310,
+                "locale": "en",
+                "display_name": "Four Points by Sheraton Medellín",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 310,
+                "locale": "es",
+                "display_name": "Four Points by Sheraton Medellín",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 310,
+                "locale": "pt-BR",
+                "display_name": "Four Points by Sheraton Medellín",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 311,
+                "locale": "en",
+                "display_name": "City Express Plus by Marriott Medellín",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 311,
+                "locale": "es",
+                "display_name": "City Express Plus by Marriott Medellín",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 311,
+                "locale": "pt-BR",
+                "display_name": "City Express Plus by Marriott Medellín",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 312,
+                "locale": "en",
+                "display_name": "ibis Medellín",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 312,
+                "locale": "es",
+                "display_name": "ibis Medellín",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 312,
+                "locale": "pt-BR",
+                "display_name": "ibis Medellín",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 313,
+                "locale": "en",
+                "display_name": "Novotel Medellín El Tesoro",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 313,
+                "locale": "es",
+                "display_name": "Novotel Medellín El Tesoro",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 313,
+                "locale": "pt-BR",
+                "display_name": "Novotel Medellín El Tesoro",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 314,
+                "locale": "en",
+                "display_name": "Hatoviejo",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 314,
+                "locale": "es",
+                "display_name": "Hatoviejo",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 314,
+                "locale": "pt-BR",
+                "display_name": "Hatoviejo",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 315,
+                "locale": "en",
+                "display_name": "Restaurante In Situ",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 315,
+                "locale": "es",
+                "display_name": "Restaurante In Situ",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 315,
+                "locale": "pt-BR",
+                "display_name": "Restaurante In Situ",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 316,
+                "locale": "en",
+                "display_name": "Café del Bosque — Jardín Botánico",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 316,
+                "locale": "es",
+                "display_name": "Café del Bosque — Jardín Botánico",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 316,
+                "locale": "pt-BR",
+                "display_name": "Café del Bosque — Jardín Botánico",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 317,
+                "locale": "en",
+                "display_name": "El Vagón — Jardín Botánico",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 317,
+                "locale": "es",
+                "display_name": "El Vagón — Jardín Botánico",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 317,
+                "locale": "pt-BR",
+                "display_name": "El Vagón — Jardín Botánico",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 318,
+                "locale": "en",
+                "display_name": "Tres’08 — El Tesoro",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 318,
+                "locale": "es",
+                "display_name": "Tres’08 — El Tesoro",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 318,
+                "locale": "pt-BR",
+                "display_name": "Tres’08 — El Tesoro",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 319,
+                "locale": "en",
+                "display_name": "El Tesoro Parque Comercial",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 319,
+                "locale": "es",
+                "display_name": "El Tesoro Parque Comercial",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 319,
+                "locale": "pt-BR",
+                "display_name": "El Tesoro Parque Comercial",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 320,
+                "locale": "en",
+                "display_name": "Centro Comercial Santafé Medellín",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 320,
+                "locale": "es",
+                "display_name": "Centro Comercial Santafé Medellín",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 320,
+                "locale": "pt-BR",
+                "display_name": "Centro Comercial Santafé Medellín",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 321,
+                "locale": "en",
+                "display_name": "Centro Comercial Oviedo",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 321,
+                "locale": "es",
+                "display_name": "Centro Comercial Oviedo",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 321,
+                "locale": "pt-BR",
+                "display_name": "Centro Comercial Oviedo",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 322,
+                "locale": "en",
+                "display_name": "Monterrey Centro Comercial",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 322,
+                "locale": "es",
+                "display_name": "Monterrey Centro Comercial",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 322,
+                "locale": "pt-BR",
+                "display_name": "Monterrey Centro Comercial",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 323,
+                "locale": "en",
+                "display_name": "Museo Casa de la Memoria",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 323,
+                "locale": "es",
+                "display_name": "Museo Casa de la Memoria",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 323,
+                "locale": "pt-BR",
+                "display_name": "Museo Casa de la Memoria",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 324,
+                "locale": "en",
+                "display_name": "Teatro Metropolitano José Gutiérrez Gómez",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 324,
+                "locale": "es",
+                "display_name": "Teatro Metropolitano José Gutiérrez Gómez",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 324,
+                "locale": "pt-BR",
+                "display_name": "Teatro Metropolitano José Gutiérrez Gómez",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 325,
+                "locale": "en",
+                "display_name": "Planetario de Medellín",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 325,
+                "locale": "es",
+                "display_name": "Planetario de Medellín",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 325,
+                "locale": "pt-BR",
+                "display_name": "Planetario de Medellín",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 326,
+                "locale": "en",
+                "display_name": "Casa Museo Gardeliana",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 326,
+                "locale": "es",
+                "display_name": "Casa Museo Gardeliana",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 326,
+                "locale": "pt-BR",
+                "display_name": "Casa Museo Gardeliana",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 327,
+                "locale": "en",
+                "display_name": "Metro de Medellín",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 327,
+                "locale": "es",
+                "display_name": "Metro de Medellín",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 327,
+                "locale": "pt-BR",
+                "display_name": "Metro de Medellín",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 328,
+                "locale": "en",
+                "display_name": "Museo El Castillo",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 328,
+                "locale": "es",
+                "display_name": "Museo El Castillo",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 328,
+                "locale": "pt-BR",
+                "display_name": "Museo El Castillo",
+                "summary": "",
+                "description": ""
+            }
+        ],
+        "business_sources": [
+            {
+                "id": 314,
+                "business_id": 268,
+                "source_url": "https://www.danncarlton.com/",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 315,
+                "business_id": 269,
+                "source_url": "https://www.elcielohotel.com/",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 316,
+                "business_id": 270,
+                "source_url": "https://www.hotelsanfernandoplaza.com/",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 317,
+                "business_id": 271,
+                "source_url": "https://elcielo.com.co/medellin/",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 318,
+                "business_id": 272,
+                "source_url": "https://elcielo.com.co/medellin/elcielo-bistro/",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 319,
+                "business_id": 273,
+                "source_url": "https://lasere.co/",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 320,
+                "business_id": 274,
+                "source_url": "https://museodeantioquia.co/",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 321,
+                "business_id": 275,
+                "source_url": "https://www.botanicomedellin.org/",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 322,
+                "business_id": 276,
+                "source_url": "https://www.parqueexplora.org/en",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 323,
+                "business_id": 277,
+                "source_url": "https://www.elmamm.org/",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 355,
+                "business_id": 309,
+                "source_url": "https://www.marriott.com/es/hotel-sitemap/colombia-hotel-sitemap",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 356,
+                "business_id": 310,
+                "source_url": "https://www.marriott.com/es/hotel-sitemap/colombia-hotel-sitemap",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 357,
+                "business_id": 311,
+                "source_url": "https://www.marriott.com/es/hotel-sitemap/colombia-hotel-sitemap",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 358,
+                "business_id": 312,
+                "source_url": "https://all.accor.com/a/en/destination/city/hotels-medellin-v6563.html",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 359,
+                "business_id": 313,
+                "source_url": "https://all.accor.com/hotel/B465/index.es.shtml",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 360,
+                "business_id": 314,
+                "source_url": "https://hatoviejo.com/",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 361,
+                "business_id": 315,
+                "source_url": "https://www.botanicomedellin.org/vivenos/alimentos-y-bebidas/restaurante-in-situ/",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 362,
+                "business_id": 316,
+                "source_url": "https://www.medellin.travel/wp-content/uploads/2024/09/Jardin-Botanico.pdf",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 363,
+                "business_id": 317,
+                "source_url": "https://www.medellin.travel/wp-content/uploads/2024/09/Jardin-Botanico.pdf",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 364,
+                "business_id": 318,
+                "source_url": "https://eltesoro.com.co/tres08-cafe-restaurante-y-bar-en-el-tesoro-parque-comercial/",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 365,
+                "business_id": 319,
+                "source_url": "https://eltesoro.com.co/",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 366,
+                "business_id": 320,
+                "source_url": "https://www.santafemedellin.com/",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 367,
+                "business_id": 321,
+                "source_url": "https://www.medellin.travel/wp-content/uploads/2026/03/guia-vive-el-poblado-v1.pdf",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 368,
+                "business_id": 322,
+                "source_url": "https://monterrey.com.co/",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 369,
+                "business_id": 323,
+                "source_url": "https://www.museocasadelamemoria.gov.co/",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 370,
+                "business_id": 324,
+                "source_url": "https://www.medellin.travel/cultura-y-patrimonio/?lang=en",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 371,
+                "business_id": 325,
+                "source_url": "https://www.planetariomedellin.org/",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 372,
+                "business_id": 326,
+                "source_url": "https://www.medellin.gov.co/es/?p=540803",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 373,
+                "business_id": 327,
+                "source_url": "https://www.metrodemedellin.gov.co/",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 374,
+                "business_id": 328,
+                "source_url": "https://www.museoelcastillo.org/",
+                "checked_at": "2026-10-17 00:00:00"
+            }
+        ],
+        "business_media": [],
+        "business_categories": [],
+        "media_assets": [
+            {
+                "id": 33,
+                "asset_path": "assets/destinos/medellin-2.webp",
+                "origin": "external",
+                "creator": "No machine-readable author provided. Scabredon~commonswiki assumed (based on copyright claims).",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Pano_Plazo_Botero.jpg",
+                "license_name": "Public domain",
+                "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+                "width": 1280,
+                "height": 529
+            },
+            {
+                "id": 35,
+                "asset_path": "assets/destinos/medellin-4.webp",
+                "origin": "external",
+                "creator": "User: (WT-shared) CONOCER at  wts wikivoyage",
+                "source_url": "https://commons.wikimedia.org/wiki/File:El_Poblado_neighborhood.jpg",
+                "license_name": "Public domain",
+                "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+                "width": 1280,
+                "height": 960
+            },
+            {
+                "id": 80,
+                "asset_path": "assets/destinos/preprod-medellin/bde71f8a5896f6c0dad232e62b25232322ab55066b9585c452290cfbf2321de6.webp",
+                "origin": "external",
+                "creator": "Ephren23",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Edificio_Coltejer_Medellin.jpg",
+                "license_name": "CC BY-SA 4.0",
+                "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+                "width": 1000,
+                "height": 667
+            },
+            {
+                "id": 81,
+                "asset_path": "assets/destinos/preprod-medellin/61fcf784da4738105b0ad673775fb22f60c1cc8b3fe1e73a25e2d0902787a410.webp",
+                "origin": "external",
+                "creator": "Jorge Láscar",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Orchidiarium_-_Medellin_Botanical_Gardens.jpg",
+                "license_name": "CC BY-SA 3.0",
+                "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+                "width": 800,
+                "height": 531
+            },
+            {
+                "id": 134,
+                "asset_path": "assets/destinos/preprod-medellin/f415408fdea9826e3c13a9f1a1731f86933ad376461dbbc2b81ae8260f8dcc62.webp",
+                "origin": "external",
+                "creator": "Fabioj (Wikipedia:User:fabioj), según ficha original",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Medellin_panorama.jpg",
+                "license_name": "CC BY-SA 3.0",
+                "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+                "width": 960,
+                "height": 202
+            },
+            {
+                "id": 135,
+                "asset_path": "assets/destinos/preprod-medellin/61058006e55d99b4fa4b6e888a17c65451732a1c775ed56257d66ddfb085af64.webp",
+                "origin": "external",
+                "creator": "Luis90f",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Panor%C3%A1mica_de_Medell%C3%ADn_desde_el_Cerro_El_Picacho.jpg",
+                "license_name": "CC BY-SA 4.0",
+                "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+                "width": 1600,
+                "height": 900
+            },
+            {
+                "id": 136,
+                "asset_path": "assets/destinos/preprod-medellin/43d21960ec7041a80144f688ec21ca4d0e9f6f942511ec142a333bf31bf2083e.webp",
+                "origin": "external",
+                "creator": "Eseoso",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Parque_Explora.jpg",
+                "license_name": "CC BY-SA 3.0",
+                "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+                "width": 800,
+                "height": 533
+            },
+            {
+                "id": 137,
+                "asset_path": "assets/destinos/preprod-medellin/54fef763ac87ba615fa8d43f01a078620e35a9ffed994c71b5e5422e50947ce3.webp",
+                "origin": "external",
+                "creator": "Paco Godoy",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Pueblito_Paisa,_Medell%C3%ADn.JPG",
+                "license_name": "CC BY-SA 3.0",
+                "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+                "width": 800,
+                "height": 600
+            },
+            {
+                "id": 139,
+                "asset_path": "assets/destinos/preprod-medellin/e0e1c4ddcd22a0001ab8a9470e9a1a838222b51ade55ffcdbe933e1af5db503a.webp",
+                "origin": "external",
+                "creator": "Alecprofit",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Comuna_13.png",
+                "license_name": "CC BY-SA 4.0",
+                "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+                "width": 662,
+                "height": 800
+            },
+            {
+                "id": 140,
+                "asset_path": "assets/destinos/preprod-medellin/71e85ee4c7ff4529962da2a4e30bc76eb170f7252265f26665508be283061d83.webp",
+                "origin": "external",
+                "creator": "Bernard Gagnon",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Museo_de_Antioquia,_Medell%C3%ADn.jpg",
+                "license_name": "CC BY-SA 4.0",
+                "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+                "width": 800,
+                "height": 800
+            },
+            {
+                "id": 141,
+                "asset_path": "assets/destinos/preprod-medellin/f87de9210e11088764a463f4fd839e147d9e22c438c2d959c5d3fe5b65c6e985.webp",
+                "origin": "external",
+                "creator": "Paco Godoy",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Bosque_Parque_Arv%C3%AD.JPG",
+                "license_name": "CC BY-SA 3.0",
+                "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+                "width": 800,
+                "height": 600
+            },
+            {
+                "id": 142,
+                "asset_path": "assets/destinos/preprod-medellin/8d1284ee93f70fdaacb5aa9a278a19b1fa9af549f960baee4dd3e66d91a03d9b.webp",
+                "origin": "external",
+                "creator": "Kamilokardona",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Catedral_Metropolitana_de_Medell%C3%ADn._Vista_frontal._Medellin,_Colombia..JPG",
+                "license_name": "CC BY-SA 3.0",
+                "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+                "width": 800,
+                "height": 600
+            },
+            {
+                "id": 143,
+                "asset_path": "assets/destinos/preprod-medellin/04f50125f287a07d57fafa006d9b9cf9a95a289facc31a3e6dc32d9f05ba6beb.webp",
+                "origin": "external",
+                "creator": "Scabredon~commonswiki (atribución inferida en ficha Commons)",
+                "source_url": "https://commons.wikimedia.org/wiki/File:ParquePiesDescalzos.jpg",
+                "license_name": "Public domain (PD-self)",
+                "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+                "width": 800,
+                "height": 600
+            },
+            {
+                "id": 456,
+                "asset_path": "assets/destinos/preprod-medellin/7ab2b44b2689ef78f487d2be4185aae22517132e3d8d168772b85850c4449d4f.webp",
+                "origin": "ai_generated",
+                "creator": "OpenAI · ilustración editorial IA",
+                "source_url": "",
+                "license_name": "Ilustración IA para revisión local",
+                "license_url": "",
+                "width": 960,
+                "height": 640
+            },
+            {
+                "id": 457,
+                "asset_path": "assets/destinos/preprod-medellin/bd7c5ad84af107822f7e56367e5518b025f1eeabb9f34151b128728c055b99aa.webp",
+                "origin": "ai_generated",
+                "creator": "OpenAI · ilustración editorial IA",
+                "source_url": "",
+                "license_name": "Ilustración IA para revisión local",
+                "license_url": "",
+                "width": 960,
+                "height": 640
+            },
+            {
+                "id": 458,
+                "asset_path": "assets/destinos/preprod-medellin/33f7cc46feb9d20e1b14704027864c2a61a03eb9273a94289bad6025c8c37898.webp",
+                "origin": "ai_generated",
+                "creator": "OpenAI · ilustración editorial IA",
+                "source_url": "",
+                "license_name": "Ilustración IA para revisión local",
+                "license_url": "",
+                "width": 960,
+                "height": 640
+            },
+            {
+                "id": 459,
+                "asset_path": "assets/destinos/preprod-medellin/cfd028e4eb4c790117c7ef01b4bfb5a6606b8fba35b134a81c44a644f64ccb7c.webp",
+                "origin": "ai_generated",
+                "creator": "OpenAI · ilustración editorial IA",
+                "source_url": "",
+                "license_name": "Ilustración IA para revisión local",
+                "license_url": "",
+                "width": 960,
+                "height": 640
+            },
+            {
+                "id": 460,
+                "asset_path": "assets/destinos/preprod-medellin/d7ad048ea39667345e2345f7cfbe729472d4f61c994163b77faba099d1183590.webp",
+                "origin": "ai_generated",
+                "creator": "OpenAI · ilustración editorial IA",
+                "source_url": "",
+                "license_name": "Ilustración IA para revisión local",
+                "license_url": "",
+                "width": 960,
+                "height": 640
+            },
+            {
+                "id": 461,
+                "asset_path": "assets/destinos/preprod-medellin/341dd3a5f4199de3f1ce8f3dca887012bad1c38c9aee152869498619c11656fa.webp",
+                "origin": "ai_generated",
+                "creator": "OpenAI · ilustración editorial IA",
+                "source_url": "",
+                "license_name": "Referencia aportada por propietario; procedencia pendiente",
+                "license_url": "",
+                "width": 960,
+                "height": 640
+            },
+            {
+                "id": 463,
+                "asset_path": "assets/destinos/preprod-medellin/d4b2eccc5f67de0840518e8914860830e9aa798e452e6c186f79f9deab76c554.webp",
+                "origin": "ai_generated",
+                "creator": "OpenAI · ilustración editorial IA",
+                "source_url": "",
+                "license_name": "Referencia aportada por propietario; procedencia pendiente",
+                "license_url": "",
+                "width": 960,
+                "height": 640
+            }
+        ],
+        "media_asset_translations": [
+            {
+                "media_asset_id": 33,
+                "locale": "en",
+                "alt_text": "Plaza Botero in Medellín",
+                "caption": "Plaza Botero in Medellín"
+            },
+            {
+                "media_asset_id": 33,
+                "locale": "es",
+                "alt_text": "Plaza Botero en Medellín",
+                "caption": "Plaza Botero en Medellín"
+            },
+            {
+                "media_asset_id": 33,
+                "locale": "pt-BR",
+                "alt_text": "Praça Botero em Medellín",
+                "caption": "Praça Botero em Medellín"
+            },
+            {
+                "media_asset_id": 35,
+                "locale": "en",
+                "alt_text": "Buildings in El Poblado, Medellín",
+                "caption": "Buildings in El Poblado, Medellín"
+            },
+            {
+                "media_asset_id": 35,
+                "locale": "es",
+                "alt_text": "Edificios del sector El Poblado en Medellín",
+                "caption": "Edificios del sector El Poblado en Medellín"
+            },
+            {
+                "media_asset_id": 35,
+                "locale": "pt-BR",
+                "alt_text": "Edifícios do setor El Poblado em Medellín",
+                "caption": "Edifícios do setor El Poblado em Medellín"
+            },
+            {
+                "media_asset_id": 80,
+                "locale": "en",
+                "alt_text": "Coltejer building seen from the street",
+                "caption": "Coltejer building seen from the street"
+            },
+            {
+                "media_asset_id": 80,
+                "locale": "es",
+                "alt_text": "Edificio Coltejer visto desde la calle",
+                "caption": "Edificio Coltejer visto desde la calle"
+            },
+            {
+                "media_asset_id": 80,
+                "locale": "pt-BR",
+                "alt_text": "Edifício Coltejer visto da rua",
+                "caption": "Edifício Coltejer visto da rua"
+            },
+            {
+                "media_asset_id": 81,
+                "locale": "en",
+                "alt_text": "Orquideorama in Medellín Botanical Garden",
+                "caption": "Orquideorama in Medellín Botanical Garden"
+            },
+            {
+                "media_asset_id": 81,
+                "locale": "es",
+                "alt_text": "Orquideorama del Jardín Botánico de Medellín",
+                "caption": "Orquideorama del Jardín Botánico de Medellín"
+            },
+            {
+                "media_asset_id": 81,
+                "locale": "pt-BR",
+                "alt_text": "Orquideorama do Jardim Botânico de Medellín",
+                "caption": "Orquideorama do Jardim Botânico de Medellín"
+            },
+            {
+                "media_asset_id": 134,
+                "locale": "en",
+                "alt_text": "Distant view of downtown Medellín with Coltejer and the city",
+                "caption": "Distant view of downtown Medellín with Coltejer and the city"
+            },
+            {
+                "media_asset_id": 134,
+                "locale": "es",
+                "alt_text": "Vista distante del centro de Medellín con Coltejer y ciudad",
+                "caption": "Vista distante del centro de Medellín con Coltejer y ciudad"
+            },
+            {
+                "media_asset_id": 134,
+                "locale": "pt-BR",
+                "alt_text": "Vista distante do centro de Medellín com Coltejer e a cidade",
+                "caption": "Vista distante do centro de Medellín com Coltejer e a cidade"
+            },
+            {
+                "media_asset_id": 135,
+                "locale": "en",
+                "alt_text": "Medellín from El Picacho hill",
+                "caption": "Medellín from Cerro El Picacho,2016: an urban landscape following commercial and industrial development, not a depiction of1675."
+            },
+            {
+                "media_asset_id": 135,
+                "locale": "es",
+                "alt_text": "Medellín desde el Cerro El Picacho",
+                "caption": "Medellín desde Cerro El Picacho,2016: paisaje urbano posterior al desarrollo comercial e industrial; no representación de1675."
+            },
+            {
+                "media_asset_id": 135,
+                "locale": "pt-BR",
+                "alt_text": "Medellín do Cerro El Picacho",
+                "caption": "Medellín vista do Cerro El Picacho,2016: paisagem urbana posterior ao desenvolvimento comercial e industrial, não uma representação de1675."
+            },
+            {
+                "media_asset_id": 136,
+                "locale": "en",
+                "alt_text": "Parque Explora in Medellín",
+                "caption": "Parque Explora in Medellín"
+            },
+            {
+                "media_asset_id": 136,
+                "locale": "es",
+                "alt_text": "Parque Explora en Medellín",
+                "caption": "Parque Explora en Medellín"
+            },
+            {
+                "media_asset_id": 136,
+                "locale": "pt-BR",
+                "alt_text": "Parque Explora em Medellín",
+                "caption": "Parque Explora em Medellín"
+            },
+            {
+                "media_asset_id": 137,
+                "locale": "en",
+                "alt_text": "Square and buildings of Pueblito Paisa",
+                "caption": "Square and buildings of Pueblito Paisa"
+            },
+            {
+                "media_asset_id": 137,
+                "locale": "es",
+                "alt_text": "Plaza y construcciones del Pueblito Paisa",
+                "caption": "Plaza y construcciones del Pueblito Paisa"
+            },
+            {
+                "media_asset_id": 137,
+                "locale": "pt-BR",
+                "alt_text": "Praça e construções do Pueblito Paisa",
+                "caption": "Praça e construções do Pueblito Paisa"
+            },
+            {
+                "media_asset_id": 139,
+                "locale": "en",
+                "alt_text": "View of the Comuna 13 neighbourhood in Medellín",
+                "caption": "View of the Comuna 13 neighbourhood in Medellín"
+            },
+            {
+                "media_asset_id": 139,
+                "locale": "es",
+                "alt_text": "Vista del barrio Comuna 13 en Medellín",
+                "caption": "Vista del barrio Comuna 13 en Medellín"
+            },
+            {
+                "media_asset_id": 139,
+                "locale": "pt-BR",
+                "alt_text": "Vista do bairro Comuna 13 em Medellín",
+                "caption": "Vista do bairro Comuna 13 em Medellín"
+            },
+            {
+                "media_asset_id": 140,
+                "locale": "en",
+                "alt_text": "Façade of Museo de Antioquia",
+                "caption": "Façade of Museo de Antioquia"
+            },
+            {
+                "media_asset_id": 140,
+                "locale": "es",
+                "alt_text": "Fachada del Museo de Antioquia",
+                "caption": "Fachada del Museo de Antioquia"
+            },
+            {
+                "media_asset_id": 140,
+                "locale": "pt-BR",
+                "alt_text": "Fachada do Museo de Antioquia",
+                "caption": "Fachada do Museo de Antioquia"
+            },
+            {
+                "media_asset_id": 141,
+                "locale": "en",
+                "alt_text": "Woodland in Parque Arví",
+                "caption": "Woodland in Parque Arví"
+            },
+            {
+                "media_asset_id": 141,
+                "locale": "es",
+                "alt_text": "Bosque del Parque Arví",
+                "caption": "Bosque del Parque Arví"
+            },
+            {
+                "media_asset_id": 141,
+                "locale": "pt-BR",
+                "alt_text": "Bosque do Parque Arví",
+                "caption": "Bosque do Parque Arví"
+            },
+            {
+                "media_asset_id": 142,
+                "locale": "en",
+                "alt_text": "Façade of Medellín Metropolitan Cathedral",
+                "caption": "Façade of Medellín Metropolitan Cathedral"
+            },
+            {
+                "media_asset_id": 142,
+                "locale": "es",
+                "alt_text": "Fachada de la Catedral Metropolitana de Medellín",
+                "caption": "Fachada de la Catedral Metropolitana de Medellín"
+            },
+            {
+                "media_asset_id": 142,
+                "locale": "pt-BR",
+                "alt_text": "Fachada da Catedral Metropolitana de Medellín",
+                "caption": "Fachada da Catedral Metropolitana de Medellín"
+            },
+            {
+                "media_asset_id": 143,
+                "locale": "en",
+                "alt_text": "Public space in Parque de los Pies Descalzos",
+                "caption": "Public space in Parque de los Pies Descalzos"
+            },
+            {
+                "media_asset_id": 143,
+                "locale": "es",
+                "alt_text": "Espacio del Parque de los Pies Descalzos",
+                "caption": "Espacio del Parque de los Pies Descalzos"
+            },
+            {
+                "media_asset_id": 143,
+                "locale": "pt-BR",
+                "alt_text": "Espaço do Parque de los Pies Descalzos",
+                "caption": "Espaço do Parque de los Pies Descalzos"
+            },
+            {
+                "media_asset_id": 456,
+                "locale": "en",
+                "alt_text": "Ilustración: Silletero experience in Santa Elena",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 456,
+                "locale": "es",
+                "alt_text": "Ilustración: Experiencia silletera en Santa Elena",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 456,
+                "locale": "pt-BR",
+                "alt_text": "Ilustración: Experiência silletera em Santa Elena",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 457,
+                "locale": "en",
+                "alt_text": "Ilustración: Coffee farm tour",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 457,
+                "locale": "es",
+                "alt_text": "Ilustración: Tour cafetero",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 457,
+                "locale": "pt-BR",
+                "alt_text": "Ilustración: Tour de café",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 458,
+                "locale": "en",
+                "alt_text": "Ilustración: Chiva party bus",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 458,
+                "locale": "es",
+                "alt_text": "Ilustración: Chiva rumbera",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 458,
+                "locale": "pt-BR",
+                "alt_text": "Ilustración: Chiva festiva",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 459,
+                "locale": "en",
+                "alt_text": "Ilustración: Night sightseeing bus tour",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 459,
+                "locale": "es",
+                "alt_text": "Ilustración: Tour nocturno en bus",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 459,
+                "locale": "pt-BR",
+                "alt_text": "Ilustración: Tour noturno de ônibus",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 460,
+                "locale": "en",
+                "alt_text": "Ilustración: Paragliding in San Félix · nearby",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 460,
+                "locale": "es",
+                "alt_text": "Ilustración: Parapente en San Félix · alrededores",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 460,
+                "locale": "pt-BR",
+                "alt_text": "Ilustración: Parapente em San Félix · arredores",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 461,
+                "locale": "en",
+                "alt_text": "Illustration of the yellow and blue sightseeing bus in Medellín",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 461,
+                "locale": "es",
+                "alt_text": "Ilustración del bus turístico amarillo y azul de Medellín",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 461,
+                "locale": "pt-BR",
+                "alt_text": "Ilustração do ônibus turístico amarelo e azul de Medellín",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 463,
+                "locale": "en",
+                "alt_text": "Illustration of Medellín Planetarium",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 463,
+                "locale": "es",
+                "alt_text": "Ilustración del Planetario de Medellín",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 463,
+                "locale": "pt-BR",
+                "alt_text": "Ilustração do Planetário de Medellín",
+                "caption": ""
+            }
+        ]
+    },
+    "media_files": {
+        "33": {
+            "export_file": "media/995c62fc9d7debc01d73f248eda352b1b88b56ad720180f5cf1a5bc573467dce.webp",
+            "sha256": "995c62fc9d7debc01d73f248eda352b1b88b56ad720180f5cf1a5bc573467dce",
+            "source_asset_path": "assets/destinos/medellin-2.webp",
+            "bytes": 139776
+        },
+        "35": {
+            "export_file": "media/e04e22c161bd49375c84379f3381a55a2ad8a0a371f230769dbb038e87cf17df.webp",
+            "sha256": "e04e22c161bd49375c84379f3381a55a2ad8a0a371f230769dbb038e87cf17df",
+            "source_asset_path": "assets/destinos/medellin-4.webp",
+            "bytes": 104380
+        },
+        "80": {
+            "export_file": "media/bde71f8a5896f6c0dad232e62b25232322ab55066b9585c452290cfbf2321de6.webp",
+            "sha256": "bde71f8a5896f6c0dad232e62b25232322ab55066b9585c452290cfbf2321de6",
+            "source_asset_path": "assets/destinos/preprod-medellin/bde71f8a5896f6c0dad232e62b25232322ab55066b9585c452290cfbf2321de6.webp",
+            "bytes": 77174
+        },
+        "81": {
+            "export_file": "media/61fcf784da4738105b0ad673775fb22f60c1cc8b3fe1e73a25e2d0902787a410.webp",
+            "sha256": "61fcf784da4738105b0ad673775fb22f60c1cc8b3fe1e73a25e2d0902787a410",
+            "source_asset_path": "assets/destinos/preprod-medellin/61fcf784da4738105b0ad673775fb22f60c1cc8b3fe1e73a25e2d0902787a410.webp",
+            "bytes": 109348
+        },
+        "134": {
+            "export_file": "media/f415408fdea9826e3c13a9f1a1731f86933ad376461dbbc2b81ae8260f8dcc62.webp",
+            "sha256": "f415408fdea9826e3c13a9f1a1731f86933ad376461dbbc2b81ae8260f8dcc62",
+            "source_asset_path": "assets/destinos/preprod-medellin/f415408fdea9826e3c13a9f1a1731f86933ad376461dbbc2b81ae8260f8dcc62.webp",
+            "bytes": 48280
+        },
+        "135": {
+            "export_file": "media/61058006e55d99b4fa4b6e888a17c65451732a1c775ed56257d66ddfb085af64.webp",
+            "sha256": "61058006e55d99b4fa4b6e888a17c65451732a1c775ed56257d66ddfb085af64",
+            "source_asset_path": "assets/destinos/preprod-medellin/61058006e55d99b4fa4b6e888a17c65451732a1c775ed56257d66ddfb085af64.webp",
+            "bytes": 159816
+        },
+        "136": {
+            "export_file": "media/43d21960ec7041a80144f688ec21ca4d0e9f6f942511ec142a333bf31bf2083e.webp",
+            "sha256": "43d21960ec7041a80144f688ec21ca4d0e9f6f942511ec142a333bf31bf2083e",
+            "source_asset_path": "assets/destinos/preprod-medellin/43d21960ec7041a80144f688ec21ca4d0e9f6f942511ec142a333bf31bf2083e.webp",
+            "bytes": 39554
+        },
+        "137": {
+            "export_file": "media/54fef763ac87ba615fa8d43f01a078620e35a9ffed994c71b5e5422e50947ce3.webp",
+            "sha256": "54fef763ac87ba615fa8d43f01a078620e35a9ffed994c71b5e5422e50947ce3",
+            "source_asset_path": "assets/destinos/preprod-medellin/54fef763ac87ba615fa8d43f01a078620e35a9ffed994c71b5e5422e50947ce3.webp",
+            "bytes": 67278
+        },
+        "139": {
+            "export_file": "media/e0e1c4ddcd22a0001ab8a9470e9a1a838222b51ade55ffcdbe933e1af5db503a.webp",
+            "sha256": "e0e1c4ddcd22a0001ab8a9470e9a1a838222b51ade55ffcdbe933e1af5db503a",
+            "source_asset_path": "assets/destinos/preprod-medellin/e0e1c4ddcd22a0001ab8a9470e9a1a838222b51ade55ffcdbe933e1af5db503a.webp",
+            "bytes": 114574
+        },
+        "140": {
+            "export_file": "media/71e85ee4c7ff4529962da2a4e30bc76eb170f7252265f26665508be283061d83.webp",
+            "sha256": "71e85ee4c7ff4529962da2a4e30bc76eb170f7252265f26665508be283061d83",
+            "source_asset_path": "assets/destinos/preprod-medellin/71e85ee4c7ff4529962da2a4e30bc76eb170f7252265f26665508be283061d83.webp",
+            "bytes": 108250
+        },
+        "141": {
+            "export_file": "media/f87de9210e11088764a463f4fd839e147d9e22c438c2d959c5d3fe5b65c6e985.webp",
+            "sha256": "f87de9210e11088764a463f4fd839e147d9e22c438c2d959c5d3fe5b65c6e985",
+            "source_asset_path": "assets/destinos/preprod-medellin/f87de9210e11088764a463f4fd839e147d9e22c438c2d959c5d3fe5b65c6e985.webp",
+            "bytes": 117318
+        },
+        "142": {
+            "export_file": "media/8d1284ee93f70fdaacb5aa9a278a19b1fa9af549f960baee4dd3e66d91a03d9b.webp",
+            "sha256": "8d1284ee93f70fdaacb5aa9a278a19b1fa9af549f960baee4dd3e66d91a03d9b",
+            "source_asset_path": "assets/destinos/preprod-medellin/8d1284ee93f70fdaacb5aa9a278a19b1fa9af549f960baee4dd3e66d91a03d9b.webp",
+            "bytes": 112828
+        },
+        "143": {
+            "export_file": "media/04f50125f287a07d57fafa006d9b9cf9a95a289facc31a3e6dc32d9f05ba6beb.webp",
+            "sha256": "04f50125f287a07d57fafa006d9b9cf9a95a289facc31a3e6dc32d9f05ba6beb",
+            "source_asset_path": "assets/destinos/preprod-medellin/04f50125f287a07d57fafa006d9b9cf9a95a289facc31a3e6dc32d9f05ba6beb.webp",
+            "bytes": 114504
+        },
+        "456": {
+            "export_file": "media/7ab2b44b2689ef78f487d2be4185aae22517132e3d8d168772b85850c4449d4f.webp",
+            "sha256": "7ab2b44b2689ef78f487d2be4185aae22517132e3d8d168772b85850c4449d4f",
+            "source_asset_path": "assets/destinos/preprod-medellin/7ab2b44b2689ef78f487d2be4185aae22517132e3d8d168772b85850c4449d4f.webp",
+            "bytes": 188660
+        },
+        "457": {
+            "export_file": "media/bd7c5ad84af107822f7e56367e5518b025f1eeabb9f34151b128728c055b99aa.webp",
+            "sha256": "bd7c5ad84af107822f7e56367e5518b025f1eeabb9f34151b128728c055b99aa",
+            "source_asset_path": "assets/destinos/preprod-medellin/bd7c5ad84af107822f7e56367e5518b025f1eeabb9f34151b128728c055b99aa.webp",
+            "bytes": 195042
+        },
+        "458": {
+            "export_file": "media/33f7cc46feb9d20e1b14704027864c2a61a03eb9273a94289bad6025c8c37898.webp",
+            "sha256": "33f7cc46feb9d20e1b14704027864c2a61a03eb9273a94289bad6025c8c37898",
+            "source_asset_path": "assets/destinos/preprod-medellin/33f7cc46feb9d20e1b14704027864c2a61a03eb9273a94289bad6025c8c37898.webp",
+            "bytes": 177602
+        },
+        "459": {
+            "export_file": "media/cfd028e4eb4c790117c7ef01b4bfb5a6606b8fba35b134a81c44a644f64ccb7c.webp",
+            "sha256": "cfd028e4eb4c790117c7ef01b4bfb5a6606b8fba35b134a81c44a644f64ccb7c",
+            "source_asset_path": "assets/destinos/preprod-medellin/cfd028e4eb4c790117c7ef01b4bfb5a6606b8fba35b134a81c44a644f64ccb7c.webp",
+            "bytes": 151598
+        },
+        "460": {
+            "export_file": "media/d7ad048ea39667345e2345f7cfbe729472d4f61c994163b77faba099d1183590.webp",
+            "sha256": "d7ad048ea39667345e2345f7cfbe729472d4f61c994163b77faba099d1183590",
+            "source_asset_path": "assets/destinos/preprod-medellin/d7ad048ea39667345e2345f7cfbe729472d4f61c994163b77faba099d1183590.webp",
+            "bytes": 192796
+        },
+        "461": {
+            "export_file": "media/341dd3a5f4199de3f1ce8f3dca887012bad1c38c9aee152869498619c11656fa.webp",
+            "sha256": "341dd3a5f4199de3f1ce8f3dca887012bad1c38c9aee152869498619c11656fa",
+            "source_asset_path": "assets/destinos/preprod-medellin/341dd3a5f4199de3f1ce8f3dca887012bad1c38c9aee152869498619c11656fa.webp",
+            "bytes": 228396
+        },
+        "463": {
+            "export_file": "media/d4b2eccc5f67de0840518e8914860830e9aa798e452e6c186f79f9deab76c554.webp",
+            "sha256": "d4b2eccc5f67de0840518e8914860830e9aa798e452e6c186f79f9deab76c554",
+            "source_asset_path": "assets/destinos/preprod-medellin/d4b2eccc5f67de0840518e8914860830e9aa798e452e6c186f79f9deab76c554.webp",
+            "bytes": 164352
+        }
+    },
+    "excluded": "Accounts, private contacts, subscriptions, payments, analytics, internal_research_json and arbitrary provenance_json omitted. IDs retained for explicit migration mapping, not blind restore."
+}
