@@ -22,6 +22,15 @@ function contactHref(array $contact): ?string {
 function directoryPlanContacts(array $business,array $contacts,string $locale): string {
     $plan=$business['plan_code']??'free';
     $out=[];
+    if($plan!=='free'){
+        $map=trim((string)($business['location_map_url']??''));
+        if($map===''&&isset($business['latitude'],$business['longitude']))$map='https://www.google.com/maps/search/?api=1&query='.rawurlencode($business['latitude'].','.$business['longitude']);
+        if($map===''&&trim((string)($business['address_text']??''))!=='')$map='https://www.google.com/maps/search/?api=1&query='.rawurlencode($business['address_text'].' '.($business['location_reference']??''));
+        if($map!==''&&filter_var($map,FILTER_VALIDATE_URL)&&in_array(parse_url($map,PHP_URL_SCHEME),['https','http'],true)){
+            $label=$locale==='en'?'Directions':($locale==='pt-BR'?'Como chegar':'Cómo llegar');
+            $out[]='<a class="directory-contact-link directory-contact-location" href="'.e($map).'" target="_blank" rel="noopener noreferrer" aria-label="'.e($label).'" title="'.e($label).'">'.BusinessContactVisibility::icon('location').'</a>';
+        }
+    }
     $seen=[];
     foreach(BusinessContactVisibility::filter($plan,$contacts) as $contact){
         $channel=(string)$contact['channel'];
@@ -29,7 +38,7 @@ function directoryPlanContacts(array $business,array $contacts,string $locale): 
         $href=contactHref($contact);if(!$href)continue;
         $seen[$channel]=true;
         $label=BusinessContactVisibility::label($channel,$locale);
-        $out[]='<a class="text-link directory-contact-link directory-contact-'.e($channel).'" href="'.e($href).'"'.(str_starts_with($href,'http')?' target="_blank" rel="noopener noreferrer"':'').' aria-label="'.e($label).'" title="'.e($label).'">'.BusinessContactVisibility::icon($channel).'</a>';
+        $out[]='<a class="directory-contact-link directory-contact-'.e($channel).'" href="'.e($href).'"'.(str_starts_with($href,'http')?' target="_blank" rel="noopener noreferrer"':'').' aria-label="'.e($label).'" title="'.e($label).'">'.BusinessContactVisibility::icon($channel).'</a>';
     }
     return $out?'<nav class="directory-contact-links" aria-label="'.e($locale==='en'?'Business contact':($locale==='pt-BR'?'Contato do negócio':'Contacto del negocio')).'">'.implode(' ',$out).'</nav>':'';
 }
