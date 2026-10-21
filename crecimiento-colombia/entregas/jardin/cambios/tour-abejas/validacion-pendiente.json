@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-20",
+  "status": "prepared-except-selected-reference-and-image",
+  "manifest_structural_validation": "PASS-DestinationPackage.validateManifest",
+  "missing_files": [
+    "images/tour-de-abejas.webp"
+  ],
+  "replacement_count": 1,
+  "new_images_generated": 0,
+  "photos_downloaded": 0,
+  "ready_to_import": false,
+  "new_zip_built": false,
+  "integration_performed": false,
+  "qa_served": false,
+  "approval": "pending",
+  "base_zip_sha256_unchanged": "9ac8321855690db0b53fdcc0b0829de61dc5de3847906e2355814fbee7b0aa13",
+  "editorial_validation": "PASS-validar-criterios-editoriales",
+  "only_changed_component": "paseo-patrimonial → tour-de-abejas",
+  "approval_file_sha256_unchanged": "9ff00e46ac0f23dcacbff5400c120c2a4d8c496b6d9db8592672a81bc1a166eb"
+}

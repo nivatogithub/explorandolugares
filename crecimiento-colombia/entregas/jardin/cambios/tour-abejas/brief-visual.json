@@ -1,0 +1,37 @@
+{
+  "asset_id": "jardin-tour-de-abejas-v1",
+  "destination": "jardin",
+  "role": "experience_card",
+  "replaces": "paseo-patrimonial",
+  "expected_file": "images/tour-de-abejas.webp",
+  "status": "awaiting_user_selected_reference",
+  "reference": {
+    "url": null,
+    "local_file": null,
+    "selected_by_user": false,
+    "permission_for_generation": "not_checked",
+    "downloaded": false
+  },
+  "facts": {
+    "setting": "Finca apícola rural de Jardín, Antioquia; no un apiario de Jericó ni una localización exacta inferida.",
+    "action": "Apicultor mostrando las colmenas a visitantes; actividad guiada de aprendizaje.",
+    "protection": "Para representar apiario Apis: overol, velo o careta, guantes y calzado cerrado en apicultor y visitantes. No personas con cara descubierta junto a una colmena abierta.",
+    "elements": "Cajones de colmena y manejo acompañado, vegetación rural; ahumador solo si la referencia elegida lo muestra. No confundir abejas sin aguijón con Apis ni inventar colección de especies."
+  },
+  "style": "Editorial semirrealista, tinta y gouache visibles, personas expresivas y proporcionadas; colores naturales sin dominante amarilla, no foto ni geometría infantil.",
+  "composition": "Tarjeta3:2 con colmena, manos protegidas y rostros/velos legibles en móvil; no montañas/iglesias/hitos inventados.",
+  "avoid": [
+    "Reutilizar imagen urbana del tour patrimonial",
+    "Copiar fotos de oferentes sin permiso para la transformación",
+    "Logos, nombres de empresa, tarifas, textos, agua o marcas",
+    "Generar antes de recibir la referencia elegida del propietario",
+    "Presentar vestuario como garantía de seguridad o permiso para manipular abejas"
+  ],
+  "next_steps": [
+    "Recibir referencia elegida y verificar identidad/uso permitido",
+    "Generar mediante skill existente y conservar maestro/prompt/hash",
+    "Inspeccionar protección/anatomía/pertinencia y pedir revisión de resultado",
+    "Optimizar derivados y completarZIP con todos los activos",
+    "Coordinador integra secuencialmente y verifica página servida; revisión humana pendiente"
+  ]
+}

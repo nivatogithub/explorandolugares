@@ -1,0 +1,35 @@
+{
+  "replaces": "paseo-patrimonial",
+  "requested_by": "propietario",
+  "status": "oferta_verificada_pendiente_referencia_visual",
+  "title": {
+    "es": "Tour de abejas",
+    "en": "Beekeeping tour",
+    "pt-BR": "Passeio de apicultura"
+  },
+  "description": {
+    "es": "Conoce las colmenas con un apicultor y descubre cómo se produce la miel.",
+    "en": "Visit beehives with a beekeeper and discover how honey is produced.",
+    "pt-BR": "Conheça as colmeias com um apicultor e descubra como o mel é produzido."
+  },
+  "sources": [
+    "https://www.mieldeljardin.com/",
+    "https://www.jardinecotours.com/tour-de-abejas/",
+    "https://jardindeaventura.com/tour/tour-de-las-abejas/"
+  ],
+  "checked_at": "2026-10-20",
+  "public_operator_brand": false,
+  "image_pending": true,
+  "production_changed": false,
+  "slug": "tour-de-abejas",
+  "pending_manifest": "cambios/tour-abejas/paquete-destino-pendiente.json",
+  "pending_criteria": "cambios/tour-abejas/criterios-editoriales-pendiente.json",
+  "image_brief": "cambios/tour-abejas/brief-visual.json",
+  "base_manifest_sha256": "2c29bb005fae00d8331293f220d37b5792c38f37d8a29fe3e29fcfce2c9f3e09",
+  "base_zip_sha256": "9ac8321855690db0b53fdcc0b0829de61dc5de3847906e2355814fbee7b0aa13",
+  "previous_approval_file": "aprobacion.json",
+  "integration_performed": false,
+  "qa_served": false,
+  "new_change_approval": "pending",
+  "generation_performed": false
+}

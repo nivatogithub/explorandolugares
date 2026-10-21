@@ -79,5 +79,19 @@
   "editorial_approved": true,
   "approved_package_sha256": "9ac8321855690db0b53fdcc0b0829de61dc5de3847906e2355814fbee7b0aa13",
   "human_approval": "approved",
-  "production_published": false
+  "production_published": false,
+  "pending_changes": [
+    {
+      "id": "tour-de-abejas-reemplaza-paseo-patrimonial",
+      "date": "2026-10-20",
+      "text_es_en_pt": "prepared",
+      "offer_evidence": "checked-own-pages",
+      "image": "awaiting-user-selected-reference",
+      "package": "candidate-manifest-only-not-import-ready",
+      "integration": "not-performed",
+      "qa_served": "not-performed",
+      "approval": "pending",
+      "previous_approval_preserved": true
+    }
+  ]
 }
