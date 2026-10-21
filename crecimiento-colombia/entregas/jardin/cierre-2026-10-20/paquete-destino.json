@@ -1,0 +1,716 @@
+{
+    "schema_version": 2,
+    "destination": {
+        "slug": "jardin",
+        "destination_type": "municipality",
+        "country_code": "CO",
+        "department": "Antioquia",
+        "subregion": "Suroeste antioqueño",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 102,
+        "translations": {
+            "en": {
+                "display_name": "Jardín",
+                "eyebrow": "Antioquia · Colombia",
+                "headline": "Coffee, heritage and mountains",
+                "intro": "Square-side cafés, stone architecture and Andean nature.",
+                "meta_description": "Square-side cafés, stone architecture and Andean nature."
+            },
+            "es": {
+                "display_name": "Jardín",
+                "eyebrow": "Antioquia · Colombia",
+                "headline": "Café, patrimonio y montañas",
+                "intro": "Cafés de plaza, arquitectura de piedra y naturaleza andina.",
+                "meta_description": "Cafés de plaza, arquitectura de piedra y naturaleza andina."
+            },
+            "pt-BR": {
+                "display_name": "Jardín",
+                "eyebrow": "Antioquia · Colombia",
+                "headline": "Café, patrimônio e montanhas",
+                "intro": "Cafés na praça, arquitetura de pedra e natureza andina.",
+                "meta_description": "Cafés na praça, arquitetura de pedra e natureza andina."
+            }
+        },
+        "history": {
+            "es": [
+                "Jardín creció entre caminos de montaña y la cultura cafetera del suroeste antioqueño. Su plaza, sus casas tradicionales y la basílica conservan la memoria del pueblo."
+            ],
+            "en": [
+                "Jardín grew among mountain paths and the coffee culture of southwestern Antioquia. Its square, traditional houses and basilica preserve the town’s memory."
+            ],
+            "pt-BR": [
+                "Jardín cresceu entre caminhos de montanha e a cultura cafeeira do sudoeste de Antioquia. Sua praça, suas casas tradicionais e a basílica preservam a memória do povoado."
+            ]
+        },
+        "reasons": {
+            "es": [
+                "Disfruta del patrimonio urbano y la naturaleza andina."
+            ],
+            "en": [
+                "Explore urban heritage and Andean nature."
+            ],
+            "pt-BR": [
+                "Conheça o patrimônio urbano e a natureza andina."
+            ]
+        }
+    },
+    "hero_image": {
+        "file": "images/f56935fc6c7bfcc87d5b794f03536e072a91742fa46f08016500956bc698df88.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "OpenAI · composición independiente IA · borrador",
+        "image_source_url": "",
+        "image_license": "Generada con IA; revisión pendiente",
+        "image_license_url": "",
+        "alt": {
+            "en": "Illustration of Jardín square and basilica",
+            "es": "Ilustración de Parque y basílica de Jardín",
+            "pt-BR": "Ilustração de Praça e basílica de Jardín"
+        },
+        "caption": {
+            "en": "",
+            "es": "",
+            "pt-BR": ""
+        }
+    },
+    "places": [
+        {
+            "slug": "parque-el-libertador",
+            "type": "place",
+            "latitude": null,
+            "longitude": null,
+            "display_order": 1,
+            "publication_status": "draft",
+            "translations": {
+                "en": {
+                    "name": "El Libertador Square",
+                    "description": "The town’s heart: gardens, cafés and traditional façades.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=El%20Libertador%20Square%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "es": {
+                    "name": "Parque El Libertador",
+                    "description": "El corazón del pueblo: jardines, cafés y fachadas tradicionales.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Parque%20El%20Libertador%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "pt-BR": {
+                    "name": "Praça El Libertador",
+                    "description": "O coração do povoado: jardins, cafés e fachadas tradicionais.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20El%20Libertador%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                }
+            },
+            "image": {
+                "file": "images/b9f6d71dee75f8037d0259bd5e263b1561206fd23b2777cf94f362c332768386.webp",
+                "image_origin": "ai_generated",
+                "image_creator": "OpenAI · composición independiente ilustrada",
+                "image_source_url": "",
+                "image_license": "Borrador IA; revisión editorial humana pendiente",
+                "image_license_url": "",
+                "alt": {
+                    "en": "Illustration of El Libertador Square",
+                    "es": "Ilustración de Parque El Libertador",
+                    "pt-BR": "Ilustração de Praça El Libertador"
+                },
+                "caption": {
+                    "en": "",
+                    "es": "",
+                    "pt-BR": ""
+                }
+            }
+        },
+        {
+            "slug": "camino-de-la-herrera",
+            "type": "place",
+            "latitude": null,
+            "longitude": null,
+            "display_order": 6,
+            "publication_status": "draft",
+            "translations": {
+                "en": {
+                    "name": "La Herrera Path",
+                    "description": "A cobbled path from town towards La Herrera. Check its condition.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=La%20Herrera%20Path%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "es": {
+                    "name": "Camino de la Herrera",
+                    "description": "Camino empedrado entre el pueblo y La Herrera. Consulta su estado.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Camino%20de%20la%20Herrera%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "pt-BR": {
+                    "name": "Caminho de La Herrera",
+                    "description": "Caminho de pedras entre o povoado e La Herrera. Consulte seu estado.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Caminho%20de%20La%20Herrera%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                }
+            },
+            "image": {
+                "file": "images/54e0070fdc4dc845a38123b09373916945a29c4c298fb8fff82ec5a3c1bde142.webp",
+                "image_origin": "ai_generated",
+                "image_creator": "OpenAI · composición independiente ilustrada",
+                "image_source_url": "",
+                "image_license": "Borrador IA; revisión editorial humana pendiente",
+                "image_license_url": "",
+                "alt": {
+                    "en": "Illustration of La Herrera Path",
+                    "es": "Ilustración de Camino de la Herrera",
+                    "pt-BR": "Ilustração de Caminho de La Herrera"
+                },
+                "caption": {
+                    "en": "",
+                    "es": "",
+                    "pt-BR": ""
+                }
+            }
+        },
+        {
+            "slug": "basilica-inmaculada-concepcion",
+            "type": "place",
+            "latitude": null,
+            "longitude": null,
+            "display_order": 2,
+            "publication_status": "draft",
+            "translations": {
+                "en": {
+                    "name": "Basilica of the Immaculate Conception",
+                    "description": "Hand-cut stone and Gothic towers facing the main square.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Basilica%20of%20the%20Immaculate%20Conception%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "es": {
+                    "name": "Basílica de la Inmaculada Concepción",
+                    "description": "Piedra labrada y torres neogóticas frente al parque principal.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Bas%C3%ADlica%20de%20la%20Inmaculada%20Concepci%C3%B3n%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "pt-BR": {
+                    "name": "Basílica da Imaculada Conceição",
+                    "description": "Pedra talhada e torres neogóticas diante da praça principal.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Bas%C3%ADlica%20da%20Imaculada%20Concei%C3%A7%C3%A3o%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                }
+            },
+            "image": {
+                "file": "images/58d4a74dbbb87d6ef870a16653e2773abdaec4cbcdc5bd041e3a677cbb471aa1.webp",
+                "image_origin": "ai_generated",
+                "image_creator": "OpenAI · composición independiente ilustrada",
+                "image_source_url": "",
+                "image_license": "Borrador IA; revisión editorial humana pendiente",
+                "image_license_url": "",
+                "alt": {
+                    "en": "Illustration of Basilica of the Immaculate Conception",
+                    "es": "Ilustración de Basílica de la Inmaculada Concepción",
+                    "pt-BR": "Ilustração de Basílica da Imaculada Conceição"
+                },
+                "caption": {
+                    "en": "",
+                    "es": "",
+                    "pt-BR": ""
+                }
+            }
+        },
+        {
+            "slug": "cueva-del-esplendor",
+            "type": "place",
+            "latitude": null,
+            "longitude": null,
+            "display_order": 3,
+            "publication_status": "draft",
+            "translations": {
+                "en": {
+                    "name": "Cueva del Esplendor",
+                    "description": "A waterfall drops through an opening in a mountain cave.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Cueva%20del%20Esplendor%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "es": {
+                    "name": "Cueva del Esplendor",
+                    "description": "Una cascada cae por la abertura de una cueva de montaña.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Cueva%20del%20Esplendor%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "pt-BR": {
+                    "name": "Cueva del Esplendor",
+                    "description": "Uma cachoeira cai pela abertura de uma caverna na montanha.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Cueva%20del%20Esplendor%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                }
+            },
+            "image": {
+                "file": "images/c79cb57e1d75f7f546e7180f01a527b5961d78225dc02b528ab738577f109d88.webp",
+                "image_origin": "ai_generated",
+                "image_creator": "OpenAI · composición independiente ilustrada",
+                "image_source_url": "",
+                "image_license": "Borrador IA; revisión editorial humana pendiente",
+                "image_license_url": "",
+                "alt": {
+                    "en": "Illustration of Cueva del Esplendor",
+                    "es": "Ilustración de Cueva del Esplendor",
+                    "pt-BR": "Ilustração de Cueva del Esplendor"
+                },
+                "caption": {
+                    "en": "",
+                    "es": "",
+                    "pt-BR": ""
+                }
+            }
+        },
+        {
+            "slug": "reserva-jardin-de-rocas",
+            "type": "place",
+            "latitude": null,
+            "longitude": null,
+            "display_order": 4,
+            "publication_status": "draft",
+            "translations": {
+                "en": {
+                    "name": "Jardín de Rocas Reserve",
+                    "description": "In Serranías, near town. Check admission; guiding is not included.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Jard%C3%ADn%20de%20Rocas%20Reserve%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "es": {
+                    "name": "Reserva Jardín de Rocas",
+                    "description": "En Serranías, cerca del centro. Consulta el ingreso; no incluye guía.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Reserva%20Jard%C3%ADn%20de%20Rocas%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "pt-BR": {
+                    "name": "Reserva Jardín de Rocas",
+                    "description": "Em Serranías, perto do centro. Consulte a entrada; não inclui guia.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Reserva%20Jard%C3%ADn%20de%20Rocas%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                }
+            },
+            "image": {
+                "file": "images/bae062e72778580e59ff2b9795b29afb6fa5b0d6890424186334c6369361e9d8.webp",
+                "image_origin": "ai_generated",
+                "image_creator": "OpenAI · composición independiente ilustrada",
+                "image_source_url": "",
+                "image_license": "Borrador IA; revisión editorial humana pendiente",
+                "image_license_url": "",
+                "alt": {
+                    "en": "Illustration of Jardín de Rocas Reserve",
+                    "es": "Ilustración de Reserva Jardín de Rocas",
+                    "pt-BR": "Ilustração de Reserva Jardín de Rocas"
+                },
+                "caption": {
+                    "en": "",
+                    "es": "",
+                    "pt-BR": ""
+                }
+            }
+        },
+        {
+            "slug": "la-garrucha",
+            "type": "place",
+            "latitude": null,
+            "longitude": null,
+            "display_order": 5,
+            "publication_status": "draft",
+            "translations": {
+                "en": {
+                    "name": "La Garrucha",
+                    "description": "A traditional aerial cable connects the town’s hillsides.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=La%20Garrucha%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "es": {
+                    "name": "La Garrucha",
+                    "description": "Un cable tradicional conecta las laderas del pueblo.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=La%20Garrucha%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "pt-BR": {
+                    "name": "La Garrucha",
+                    "description": "Um cabo aéreo tradicional liga as encostas do povoado.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=La%20Garrucha%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                }
+            },
+            "image": {
+                "file": "images/41e4155621e2511e5eaadf906c51ac0ee766fef8922d342386e7bc13fd520f6f.webp",
+                "image_origin": "ai_generated",
+                "image_creator": "OpenAI · composición independiente ilustrada",
+                "image_source_url": "",
+                "image_license": "Borrador IA; revisión editorial humana pendiente",
+                "image_license_url": "",
+                "alt": {
+                    "en": "Illustration of La Garrucha",
+                    "es": "Ilustración de La Garrucha",
+                    "pt-BR": "Ilustração de La Garrucha"
+                },
+                "caption": {
+                    "en": "",
+                    "es": "",
+                    "pt-BR": ""
+                }
+            }
+        },
+        {
+            "slug": "casa-museo-clara-rojas",
+            "type": "place",
+            "latitude": null,
+            "longitude": null,
+            "display_order": 7,
+            "publication_status": "draft",
+            "translations": {
+                "en": {
+                    "name": "Clara Rojas Peláez House Museum",
+                    "description": "Traditional domestic architecture and local memory beside the main square.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Clara%20Rojas%20Pel%C3%A1ez%20House%20Museum%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "es": {
+                    "name": "Casa Museo Clara Rojas Peláez",
+                    "description": "Arquitectura doméstica y memoria local junto al parque principal.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Casa%20Museo%20Clara%20Rojas%20Pel%C3%A1ez%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "pt-BR": {
+                    "name": "Casa Museu Clara Rojas Peláez",
+                    "description": "Arquitetura residencial e memória local junto à praça principal.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Casa%20Museu%20Clara%20Rojas%20Pel%C3%A1ez%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                }
+            },
+            "image": {
+                "file": "images/724bdcc3c38d76501577bf80adf144065e79f4ca13699f538d88bc4bc6662688.webp",
+                "image_origin": "ai_generated",
+                "image_creator": "OpenAI · composición independiente ilustrada",
+                "image_source_url": "",
+                "image_license": "Borrador IA; revisión editorial humana pendiente",
+                "image_license_url": "",
+                "alt": {
+                    "en": "Illustration of Clara Rojas Peláez House Museum",
+                    "es": "Ilustración de Casa Museo Clara Rojas Peláez",
+                    "pt-BR": "Ilustração de Casa Museu Clara Rojas Peláez"
+                },
+                "caption": {
+                    "en": "",
+                    "es": "",
+                    "pt-BR": ""
+                }
+            }
+        },
+        {
+            "slug": "reserva-loro-orejiamarillo",
+            "type": "place",
+            "latitude": null,
+            "longitude": null,
+            "display_order": 8,
+            "publication_status": "draft",
+            "translations": {
+                "en": {
+                    "name": "ProAves Yellow-eared Parrot Reserve",
+                    "description": "High-Andean forest in Ventanas. Check reservations and access with ProAves.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=ProAves%20Yellow-eared%20Parrot%20Reserve%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "es": {
+                    "name": "Reserva ProAves Loro Orejiamarillo",
+                    "description": "Bosque altoandino en Ventanas. Consulta reserva y acceso con ProAves.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Reserva%20ProAves%20Loro%20Orejiamarillo%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "pt-BR": {
+                    "name": "Reserva ProAves Loro Orejiamarillo",
+                    "description": "Floresta altoandina em Ventanas. Consulte reserva e acesso com a ProAves.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Reserva%20ProAves%20Loro%20Orejiamarillo%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                }
+            },
+            "image": {
+                "file": "images/66d7d4d5b0194ccc388abb04adf57e7958629a953b93c3d2c91a53258bc469e5.webp",
+                "image_origin": "ai_generated",
+                "image_creator": "OpenAI · composición independiente ilustrada",
+                "image_source_url": "",
+                "image_license": "Borrador IA; revisión editorial humana pendiente",
+                "image_license_url": "",
+                "alt": {
+                    "en": "Illustration of ProAves Yellow-eared Parrot Reserve",
+                    "es": "Ilustración de Reserva ProAves Loro Orejiamarillo",
+                    "pt-BR": "Ilustração de Reserva ProAves Loro Orejiamarillo"
+                },
+                "caption": {
+                    "en": "",
+                    "es": "",
+                    "pt-BR": ""
+                }
+            }
+        },
+        {
+            "slug": "cafe-en-finca",
+            "type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "display_order": 9,
+            "publication_status": "draft",
+            "translations": {
+                "en": {
+                    "name": "Coffee tour",
+                    "description": "Learn about coffee growing, processing and preparation.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Coffee%20tour%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "es": {
+                    "name": "Tour cafetero",
+                    "description": "Conoce el cultivo, el proceso y la preparación del café.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Tour%20cafetero%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "pt-BR": {
+                    "name": "Tour de café",
+                    "description": "Conheça o cultivo, o processamento e o preparo do café.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Tour%20de%20caf%C3%A9%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                }
+            },
+            "image": {
+                "file": "images/109367597283990cf71cbc56eb0f8eabd3ac0bf74fd0edb5c6245c31bfbe2a74.webp",
+                "image_origin": "ai_generated",
+                "image_creator": "OpenAI · composición independiente ilustrada",
+                "image_source_url": "",
+                "image_license": "Borrador IA; revisión editorial humana pendiente",
+                "image_license_url": "",
+                "alt": {
+                    "en": "Illustration of Coffee tour",
+                    "es": "Ilustración de Tour cafetero",
+                    "pt-BR": "Ilustração de Tour de café"
+                },
+                "caption": {
+                    "en": "",
+                    "es": "",
+                    "pt-BR": ""
+                }
+            }
+        },
+        {
+            "slug": "observacion-aves",
+            "type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "display_order": 10,
+            "publication_status": "draft",
+            "translations": {
+                "en": {
+                    "name": "Birdwatching",
+                    "description": "Observe local birds and discover their natural habitat.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Birdwatching%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "es": {
+                    "name": "Avistamiento de aves",
+                    "description": "Observa aves de la región y conoce su entorno natural.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Avistamiento%20de%20aves%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "pt-BR": {
+                    "name": "Observação de aves",
+                    "description": "Observe as aves da região e conheça seu ambiente natural.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Observa%C3%A7%C3%A3o%20de%20aves%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                }
+            },
+            "image": {
+                "file": "images/13c23874cad5dfa780eda3f76b97300520b7be3db9d03dfcadb2edf186be5073.webp",
+                "image_origin": "ai_generated",
+                "image_creator": "OpenAI · composición independiente ilustrada",
+                "image_source_url": "",
+                "image_license": "Borrador IA; revisión editorial humana pendiente",
+                "image_license_url": "",
+                "alt": {
+                    "en": "Illustration of Birdwatching",
+                    "es": "Ilustración de Avistamiento de aves",
+                    "pt-BR": "Ilustração de Observação de aves"
+                },
+                "caption": {
+                    "en": "",
+                    "es": "",
+                    "pt-BR": ""
+                }
+            }
+        },
+        {
+            "slug": "caminata-cueva",
+            "type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "display_order": 11,
+            "publication_status": "draft",
+            "translations": {
+                "en": {
+                    "name": "Cueva del Esplendor",
+                    "description": "Walk to the cave and discover its waterfall.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Cueva%20del%20Esplendor%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "es": {
+                    "name": "Cueva del Esplendor",
+                    "description": "Camina hasta la cueva y descubre su caída de agua.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Cueva%20del%20Esplendor%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "pt-BR": {
+                    "name": "Cueva del Esplendor",
+                    "description": "Caminhe até a caverna e descubra sua queda de água.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Cueva%20del%20Esplendor%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                }
+            },
+            "image": {
+                "file": "images/7f0b706842461996c82a56e4d329dc82ae07012045080aa803033e0c8d6c6224.webp",
+                "image_origin": "ai_generated",
+                "image_creator": "OpenAI · composición independiente ilustrada",
+                "image_source_url": "",
+                "image_license": "Borrador IA; revisión editorial humana pendiente",
+                "image_license_url": "",
+                "alt": {
+                    "en": "Illustration of Cueva del Esplendor",
+                    "es": "Ilustración de Cueva del Esplendor",
+                    "pt-BR": "Ilustração de Cueva del Esplendor"
+                },
+                "caption": {
+                    "en": "",
+                    "es": "",
+                    "pt-BR": ""
+                }
+            }
+        },
+        {
+            "slug": "paseo-patrimonial",
+            "type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "display_order": 12,
+            "publication_status": "draft",
+            "translations": {
+                "en": {
+                    "name": "Urban heritage tour",
+                    "description": "Walk through town and discover its history and architecture.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Urban%20heritage%20tour%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "es": {
+                    "name": "Tour urbano patrimonial",
+                    "description": "Recorre las calles y conoce la historia y arquitectura del pueblo.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Tour%20urbano%20patrimonial%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "pt-BR": {
+                    "name": "Tour urbano pelo patrimônio",
+                    "description": "Percorra as ruas e conheça a história e a arquitetura do povoado.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Tour%20urbano%20pelo%20patrim%C3%B4nio%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                }
+            },
+            "image": {
+                "file": "images/cc83948ba2402359db1690ca11ed60ca83abb9dadfd1bf4f09703dadc01274d6.webp",
+                "image_origin": "ai_generated",
+                "image_creator": "OpenAI · composición independiente ilustrada",
+                "image_source_url": "",
+                "image_license": "Borrador IA; revisión editorial humana pendiente",
+                "image_license_url": "",
+                "alt": {
+                    "en": "Illustration of Urban heritage tour",
+                    "es": "Ilustración de Tour urbano patrimonial",
+                    "pt-BR": "Ilustração de Tour urbano pelo patrimônio"
+                },
+                "caption": {
+                    "en": "",
+                    "es": "",
+                    "pt-BR": ""
+                }
+            }
+        },
+        {
+            "slug": "tour-de-abejas",
+            "type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "display_order": 4,
+            "publication_status": "draft",
+            "translations": {
+                "en": {
+                    "name": "Beekeeping tour",
+                    "description": "Visit beehives with a beekeeper and discover how honey is produced.",
+                    "map_url": "",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "es": {
+                    "name": "Tour de abejas",
+                    "description": "Conoce las colmenas con un apicultor y descubre cómo se produce la miel.",
+                    "map_url": "",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "pt-BR": {
+                    "name": "Passeio de apicultura",
+                    "description": "Conheça as colmeias com um apicultor e descubra como o mel é produzido.",
+                    "map_url": "",
+                    "external_url": "",
+                    "external_label": ""
+                }
+            },
+            "image": {
+                "file": "images/0c5124ff9d3ad5fbc202bdb9851990a37dcf9a5b73ae02453d6f9927e94b7e2f.webp",
+                "image_origin": "ai_generated",
+                "image_creator": "OpenAI · ilustración editorial IA",
+                "image_source_url": "",
+                "image_license": "Referencia aportada por propietario; procedencia pendiente",
+                "image_license_url": "",
+                "alt": {
+                    "en": "Illustration of a guided beekeeping visit in Jardín",
+                    "es": "Ilustración de una visita guiada a colmenas con equipo protector en Jardín",
+                    "pt-BR": "Ilustração de visita guiada às colmeias em Jardín"
+                },
+                "caption": {
+                    "en": "",
+                    "es": "",
+                    "pt-BR": ""
+                }
+            }
+        }
+    ]
+}
