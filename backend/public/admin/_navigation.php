@@ -10,6 +10,7 @@ $activeAdminItem = match (true) {
     $adminPath === 'importar-negocios.php' => 'businesses',
     $adminPath === 'contactos-negocios.php' => 'business-research',
     $adminPath === 'actualizar-negocios.php' => 'business-bulk-edit',
+    $adminPath === 'correos.php' => 'email-workspace',
     $adminPath === 'campanas.php' && $adminTab === 'conexion' => 'brevo-connection',
     $adminPath === 'campanas.php' => 'campaigns',
     $adminPath === 'reclamaciones.php' => 'account-applications',
@@ -40,6 +41,7 @@ $activeAdminItem = match (true) {
       <a href="negocios.php" <?= $activeAdminItem === 'businesses' ? 'aria-current="page"' : '' ?>>Negocios</a>
       <a href="contactos-negocios.php" <?= $activeAdminItem === 'business-research' ? 'aria-current="page"' : '' ?>>Gestión comercial</a>
       <a href="actualizar-negocios.php" <?= $activeAdminItem === 'business-bulk-edit' ? 'aria-current="page"' : '' ?>>Actualización masiva de datos</a>
+      <a href="correos.php" <?= $activeAdminItem === 'email-workspace' ? 'aria-current="page"' : '' ?>>Plantillas y correos</a>
       <a href="campanas.php" <?= $activeAdminItem === 'campaigns' ? 'aria-current="page"' : '' ?>>Campañas por correo</a>
       <a href="solicitudes-cuenta.php" <?= $activeAdminItem === 'account-applications' ? 'aria-current="page"' : '' ?>>Revisión de negocios</a>
       <a href="usuarios.php" <?= $activeAdminItem === 'accounts' ? 'aria-current="page"' : '' ?>>Cuentas</a>
