@@ -480,6 +480,12 @@ try:
         subprocess.run(['/Users/nivato/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node', str(ROOT / 'backend/tests/free-business-editor.browser.cjs')], input=json.dumps({'base': BASE, 'password': password, 'businessId': imported_id}), text=True, check=True)
         check(DB.execute('SELECT COUNT(*) FROM business_categories WHERE business_id=? AND category_code=?', (imported_id, 'alimentacion')).fetchone()[0] == 1, 'El editor no guardó la categoría adicional en el mismo negocio.')
 
+    before_manual_link=[tuple(row) for row in DB.execute('SELECT * FROM business_account_memberships ORDER BY id')]
+    status,account_list,_=request('/admin/usuarios.php')
+    check(status==200 and 'name="action" value="link"' not in account_list and 'Asignar un negocio' not in account_list,'Accounts must not offer manual business assignment.')
+    status,blocked_link,_=request('/admin/usuarios.php',{'csrf':csrf,'action':'link','account_id':'1','business_id':str(imported_id),'membership_role':'owner'})
+    check(status==403 and 'asociación manual' in blocked_link,'Direct manual assignment must be blocked server-side.')
+    check([tuple(row) for row in DB.execute('SELECT * FROM business_account_memberships ORDER BY id')]==before_manual_link,'Blocked manual assignment changed memberships.')
     # Manual creation is blocked even through a direct authenticated POST.
     before_manual_count=DB.execute('SELECT COUNT(*) FROM businesses').fetchone()[0]
     failed_status,failed_body,_=request('/admin/negocios.php',{'csrf':csrf,'action':'save','id':'','translations[es][display_name]':'Forbidden manual business'})
