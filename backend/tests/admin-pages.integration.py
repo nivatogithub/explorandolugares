@@ -839,7 +839,12 @@ try:
 
     # Public owner edits Premium without entering administration; all external services remain mocked.
     premium_business=approved['business_id']
-    DB.execute("INSERT INTO business_subscriptions(business_id,plan_code,billing_frequency,status,starts_at,ends_at) VALUES(?,'page_premium','monthly','active',datetime('now','-1 day'),datetime('now','+30 days'))",(premium_business,));DB.commit()
+    _,checkout_body,_=request('/business/dashboard.php?tab=business&business='+str(premium_business),opener=business_flow)
+    checkout_csrf=re.search(r'name="csrf" value="([^"]+)"',checkout_body)[1]
+    checkout_fields={'csrf':checkout_csrf,'business_id':premium_business,'plan_code':'page_premium','billing_frequency':'monthly','payment_reference':'TX-EDITORIAL-PREMIUM','transaction_date':date.today().isoformat(),'paid_amount':'119900','payment_method':'qr','source_bank':'BANCO FICTICIO'}
+    check(multipart('/business/dashboard.php?tab=business',checkout_fields,[('payment_proof','premium.png','image/png',sample_png)],business_flow)[0]==303,'No pudo enviar pago Premium previo al contenido')
+    premium_evidence=DB.execute('SELECT id FROM business_subscription_payment_evidence WHERE account_id=? ORDER BY id DESC LIMIT 1',(account_row['id'],)).fetchone()[0]
+    check(request('/admin/suscripciones.php',{'csrf':csrf,'action':'review_payment','evidence_id':premium_evidence,'decision':'approved','admin_note':''},ADMIN)[0]==200,'No confirmó pago Premium')
     status,profile_page,_=request('/business/dashboard.php?tab=business&business='+str(premium_business),opener=business_flow)
     check(status==200 and 'Contenido y publicación de mi negocio' in profile_page,'Premium owner editor missing')
     profile_fields={'csrf':re.search(r'name="csrf" value="([^"]+)"',profile_page)[1],'action':'premium_profile','business_id':premium_business,'page_alias':'hotel-publico-prueba','service_sections[es][restaurant]':'Cocina regional','service_sections[en][restaurant]':'Regional cuisine','service_sections[pt-BR][restaurant]':'Cozinha regional'}
@@ -853,10 +858,74 @@ try:
     status,_,_=request(editorial_path,{'csrf':premium_csrf,'action':'save','version_id':str(premium_version[0] if premium_version else 0),'translations[es][display_name]':'Fixture Premium Privado','category_code':'hospedaje'},business_flow)
     check(status==303,'No guardó la versión privada Premium.')
     premium_version=DB.execute('SELECT id FROM business_editorial_versions WHERE business_id=? ORDER BY id DESC',(premium_business,)).fetchone()[0]
+    # Upload independent private source images to their exact slots (same filename deliberately).
+    status,premium_editor,_=request(editorial_path,opener=business_flow)
+    source_fields={'csrf':premium_csrf,'action':'save','version_id':str(premium_version),'translations[es][display_name]':'Fixture Premium Privado','showcase[products][2][translations][es][name]':'Producto Estrella Tres'}
+    status,upload_body,_=multipart(editorial_path,source_fields,[('reference_images[cover]','misma.png','image/png',reference_png),('reference_images[product_2]','misma.png','image/png',reference_png)],business_flow)
+    check(status==400,'Subida sin consentimiento aceptada')
+    source_fields['image_consent']='1'
+    status,upload_body,_=multipart(editorial_path,source_fields,[('reference_images[cover]','misma.png','image/png',reference_png),('reference_images[product_2]','misma.png','image/png',reference_png)],business_flow)
+    check(status==303,'Fotos por posición no guardadas: '+str(status)+' '+upload_body[-1800:])
+    photo_version=DB.execute('SELECT * FROM business_editorial_versions WHERE business_id=? ORDER BY id DESC',(premium_business,)).fetchone()
+    photo_payload=json.loads(photo_version['payload_json']);premium_version=photo_version['id']
+    check(photo_payload['source_images']['cover']!=photo_payload['source_images']['product_2'],'Fotos con igual nombre se asociaron a la misma posición')
+    refs=DB.execute('SELECT id FROM business_editorial_images WHERE version_id=?',(premium_version,)).fetchall()
+    for ref in refs:
+        with business_flow.open(BASE+'/business/editorial-image.php?id='+str(ref['id'])) as image_response:
+            check(image_response.status==200 and image_response.read()==reference_png,'Foto original no visible a su responsable')
+        check(request('/business/editorial-image.php?id='+str(ref['id']),opener=urllib.request.build_opener())[0]==404,'Foto original accesible anónimamente')
+    status,source_preview,_=request(editorial_path+'&version='+str(premium_version)+'&preview=page',opener=business_flow)
+    check(status==200 and source_preview.count('business/editorial-image.php?id=')>=2 and 'Producto Estrella Tres' in source_preview,'Borrador no presenta originales de portada/producto')
+    # Replace cover without accumulating sources in the latest version; historic version remains intact.
+    source_fields['version_id']=str(premium_version)
+    check(multipart(editorial_path,source_fields,[('reference_images[cover]','nueva.png','image/png',reference_png)],business_flow)[0]==303,'No reemplazó portada')
+    replaced_version=DB.execute('SELECT id FROM business_editorial_versions WHERE business_id=? ORDER BY id DESC',(premium_business,)).fetchone()[0]
+    check(DB.execute('SELECT COUNT(*) FROM business_editorial_images WHERE version_id=?',(replaced_version,)).fetchone()[0]==len(refs),'Reemplazo acumuló fuentes innecesarias')
+    check(DB.execute('SELECT COUNT(*) FROM business_editorial_images WHERE version_id=?',(premium_version,)).fetchone()[0]==len(refs),'Reemplazo destruyó historial')
+    premium_version=replaced_version
+    for demo_view in ['free','featured','page','page_premium']:
+        code,example,headers=request('/business/demo.php?view='+demo_view,opener=urllib.request.build_opener())
+        check(code==200 and 'noindex' in headers.get('X-Robots-Tag','') and 'data-el-measurement' not in example,'Ejemplo público falla o mide visitas: '+demo_view)
+        check((demo_view=='page_premium')==('Nube De Cacao' in example),'Diferencia de productos no corresponde a modalidad')
+        check((demo_view!='free')==('tel:+573234870366' in example),'Contacto del ejemplo no corresponde a modalidad')
     for language in ['es','en','pt-BR']:
         status,page_preview,preview_headers=request(editorial_path+'&version='+str(premium_version)+'&preview=page&lang='+language,opener=business_flow)
         check(status==200 and '</html>' in page_preview and 'Fatal error' not in page_preview and 'Vista previa privada' in page_preview,'Página Premium privada incompleta: '+str(status)+' '+page_preview[-1000:])
         check('noindex' in preview_headers.get('X-Robots-Tag','') and 'header-language-options' not in page_preview and 'lang=en' not in page_preview and 'lang=pt-BR' not in page_preview,'La prepublicación perdió privacidad o enlaces de idioma privados.')
+    # Complete the private photo -> editorial replacement -> correction -> exact approval cycle.
+    version=DB.execute('SELECT * FROM business_editorial_versions WHERE id=?',(premium_version,)).fetchone()
+    check(request(editorial_path,{'csrf':premium_csrf,'action':'submit','version_id':str(premium_version),'payload_hash':version['payload_hash']},business_flow)[0]==303,'No envió contenido a preparación')
+    admin_editorial=editorial_path+'&admin=1'
+    _,admin_editor_form,_=request(admin_editorial)
+    editorial_admin_csrf=re.search(r'name="csrf" value="([^"]+)"',admin_editor_form)[1]
+    (WORK/'public/assets/editorial-final.png').write_bytes(reference_png)
+    DB.execute("INSERT INTO media_assets(asset_path,origin,creator,source_url,license_name,license_url) VALUES('assets/editorial-final.png','own','Fixture','https://example.invalid','Prueba','https://example.invalid')");DB.commit()
+    final_asset=DB.execute('SELECT id FROM media_assets ORDER BY id LIMIT 1').fetchone()[0]
+    editorial_fields={'csrf':editorial_admin_csrf,'action':'save','version_id':str(premium_version),'media[cover]':str(final_asset),'location_confirmed':'1','location_map_url':'https://www.google.com/maps/search/?api=1&query=Medellin','contacts[phone]':'+573001234567','showcase[products][2][asset_id]':str(final_asset)}
+    for locale in ['es','en','pt-BR']:
+        editorial_fields['translations['+locale+'][display_name]']='Fixture Premium Preparado'
+        editorial_fields['translations['+locale+'][summary]']='Resumen preparado '+locale
+        editorial_fields['translations['+locale+'][description]']='Presentación preparada '+locale
+        editorial_fields['showcase[products][2][translations]['+locale+'][name]']='Producto Estrella Tres'
+    check(request(admin_editorial,editorial_fields)[0]==200,'No guardó reemplazos y traducciones finales')
+    prepared=DB.execute('SELECT * FROM business_editorial_versions WHERE business_id=? ORDER BY id DESC',(premium_business,)).fetchone()
+    quality={'csrf':editorial_admin_csrf,'action':'prepare','version_id':str(prepared['id']),'payload_hash':prepared['payload_hash'],'quality[translations]':'1','quality[images]':'1','quality[layout]':'1'}
+    code,prepared_body,_=request(admin_editorial,quality)
+    check(code==200 and DB.execute('SELECT status FROM business_editorial_versions WHERE id=?',(prepared['id'],)).fetchone()[0]=='awaiting_owner','No preparó prepublicación: '+prepared_body[-1000:])
+    check(DB.execute("SELECT COUNT(*) FROM business_editorial_events WHERE version_id=? AND action='mail_simulated'",(prepared['id'],)).fetchone()[0]==1,'Preparar no envió aviso automático simulado')
+    _,final_preview,_=request(editorial_path+'&version='+str(prepared['id'])+'&preview=page',opener=business_flow)
+    check('business/editorial-image.php?id=' not in final_preview,'La versión final sigue usando fotos originales')
+    owner_action={'csrf':premium_csrf,'action':'request_changes','version_id':str(prepared['id']),'payload_hash':prepared['payload_hash'],'note':'Corregir la presentación del producto'}
+    check(request(editorial_path,owner_action,business_flow)[0]==303,'No pudo solicitar correcciones')
+    editorial_fields['version_id']=str(prepared['id'])
+    check(request(admin_editorial,editorial_fields)[0]==200,'No guardó corrección editorial')
+    corrected=DB.execute('SELECT * FROM business_editorial_versions WHERE business_id=? ORDER BY id DESC',(premium_business,)).fetchone()
+    quality.update(version_id=str(corrected['id']),payload_hash=corrected['payload_hash'])
+    check(request(admin_editorial,quality)[0]==200,'No preparó versión corregida')
+    owner_action.update(action='approve',version_id=str(corrected['id']),payload_hash=corrected['payload_hash'])
+    check(request(editorial_path,owner_action,business_flow)[0]==303,'No aprobó versión corregida')
+    code,published_body,_=request(admin_editorial,{'csrf':editorial_admin_csrf,'action':'publish','version_id':str(corrected['id']),'payload_hash':corrected['payload_hash']})
+    check(code==200 and DB.execute('SELECT status FROM business_editorial_versions WHERE id=?',(corrected['id'],)).fetchone()[0]=='published','No publicó versión corregida: '+published_body[-1500:])
     before_sections=DB.execute('SELECT * FROM business_service_sections WHERE business_id=?',(premium_business,)).fetchall()
     status,_,_=request('/business/dashboard.php?tab=business',dict(profile_fields,csrf='invalid'),business_flow)
     check(status>=400 and DB.execute('SELECT * FROM business_service_sections WHERE business_id=?',(premium_business,)).fetchall()==before_sections,'Profile update bypasses CSRF')

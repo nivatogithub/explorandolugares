@@ -47,5 +47,14 @@ $p->exec('ALTER TABLE points_of_interest ADD COLUMN poi_type TEXT NOT NULL DEFAU
 $experience=BusinessShowcase::clean($p,1,['experience_ids'=>[1],'category_codes'=>['experiencias']],[],true);$rendered=BusinessShowcase::renderData($p,1,$experience,'es');check($rendered['experiences'][0]['description']==='Texto revisado'&&$rendered['experiences'][0]['asset_path']==='assets/fixture.webp','experience reuses published place data');
 $p->exec('UPDATE points_of_interest SET publication_status="draft" WHERE id=1');check(BusinessShowcase::renderData($p,1,$experience,'es')['experiences']===[],'draft experience leaked');fails(fn()=>BusinessShowcase::clean($p,1,['experience_ids'=>[1],'category_codes'=>['experiencias']],[],true),'withdrawn experience accepted');
 
+// Stable source associations cannot cross versions/businesses and cannot leak into final media.
+$latest=$s->latest(1);$p->prepare('INSERT INTO business_editorial_images(version_id,storage_name,original_name,mime_type,file_size,width,height) VALUES(?,?,?,?,?,?,?)')->execute([$latest['id'],str_repeat('a',40).'.png','portada.png','image/png',1000,640,480]);
+$source=str_repeat('a',40).'.png';$sourceVersion=$s->save(1,1,(int)$latest['id'],['source_images'=>['cover'=>$source]],true);$sv=$s->version($sourceVersion);$model=BusinessEditorialPreview::build($p,$sv,'es');check(str_contains($model['cover']['asset_path'],'editorial-image.php?id='),'merchant original missing from private draft');
+check(empty($s->live(1)['source_images']),'private sources entered public data');
+$finalVersion=$sv;$finalVersion['status']='awaiting_owner';check(BusinessEditorialPreview::build($p,$finalVersion,'es')['cover']===null,'original source leaked into final approval');
+fails(fn()=>$s->save(1,1,$sourceVersion,['source_images'=>['cover'=>str_repeat('b',40).'.png']]),'foreign photo assignment accepted');
+$persistent=$s->save(1,1,$sourceVersion,[]);check($s->payload($s->version($persistent),1)['source_images']['cover']===$source,'source association lost across versions');
+$sparse=BusinessShowcase::clean($p,1,['products'=>[2=>$products['products'][0]]],[],true);check(isset($sparse['products'][2])&&!isset($sparse['products'][0]),'product positions moved away from their source images');
+require_once dirname(__DIR__).'/app/BusinessDemo.php';foreach(['free','featured','page','page_premium'] as $tier){$demo=businessDemo($p,$tier);check(count($demo['showcase']['products'])===($tier==='page_premium'?4:0),'examples do not match product entitlements');check($tier!=='free'||$demo['contacts']===[],'free example exposes contact');}
 if(is_dir($storage))rmdir($storage);
 echo "OK: private versions, exact approvals, ownership, optimistic conflicts, rejection reasons, publication preservation, no term changes, tier limits, private templates and idempotent simulated notification.\n";

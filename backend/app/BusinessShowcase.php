@@ -9,12 +9,12 @@ final class BusinessShowcase
  }
  public static function clean(PDO $pdo,int $business,array $input,array $previous,bool $editor):array{
   $out=['products'=>[],'experience_ids'=>[]];$products=$input['products']??[];if(!is_array($products)||count($products)>4)throw new RuntimeException('Premium admite hasta cuatro productos o servicios con imagen.');
-  foreach($products as $i=>$product){if(!is_array($product))throw new RuntimeException('Revisa los productos.');$row=['translations'=>[],'asset_id'=>$editor?(int)($product['asset_id']??0):(int)($previous['products'][$i]['asset_id']??0)];
+  foreach($products as $i=>$product){if(!ctype_digit((string)$i)||(int)$i>3)throw new RuntimeException('Revisa la posición del producto.');if(!is_array($product))throw new RuntimeException('Revisa los productos.');if(($product['remove']??'')==='1')continue;$row=['translations'=>[],'asset_id'=>$editor?(int)($product['asset_id']??0):(int)($previous['products'][$i]['asset_id']??0)];
    foreach($editor?['es','en','pt-BR']:['es'] as $locale)foreach(['name'=>100,'description'=>400] as $field=>$limit){$value=trim((string)($product['translations'][$locale][$field]??$previous['products'][$i]['translations'][$locale][$field]??''));if(preg_match_all('/./us',$value)>$limit)throw new RuntimeException('El nombre del producto admite 100 caracteres y su descripción 400.');$row['translations'][$locale][$field]=$value;}
    foreach(['en','pt-BR'] as $locale)if(!isset($row['translations'][$locale]))$row['translations'][$locale]=$previous['products'][$i]['translations'][$locale]??['name'=>'','description'=>''];
    if($row['translations']['es']['name']===''&&$row['translations']['es']['description']===''&&!$row['asset_id'])continue;
    if($row['translations']['es']['name']==='')throw new RuntimeException('Indica el nombre del producto.');
-   if($row['asset_id']){$q=$pdo->prepare('SELECT 1 FROM media_assets WHERE id=?');$q->execute([$row['asset_id']]);if(!$q->fetchColumn())throw new RuntimeException('La imagen del producto no existe.');}$out['products'][]=$row;
+   if($row['asset_id']){$q=$pdo->prepare('SELECT 1 FROM media_assets WHERE id=?');$q->execute([$row['asset_id']]);if(!$q->fetchColumn())throw new RuntimeException('La imagen del producto no existe.');}$out['products'][$i]=$row;
   }
   $ids=$input['experience_ids']??[];if(!is_array($ids)||count($ids)>20)throw new RuntimeException('Revisa las experiencias.');
   if(array_filter(array_map('intval',$ids))){$q=$pdo->prepare('SELECT 1 FROM businesses b WHERE b.id=? AND (b.category_code="experiencias" OR EXISTS(SELECT 1 FROM business_categories bc WHERE bc.business_id=b.id AND bc.category_code="experiencias"))');$q->execute([$business]);if(array_key_exists('category_codes',$input)?!in_array('experiencias',$input['category_codes'],true):!$q->fetchColumn())throw new RuntimeException('Solo los operadores de experiencias pueden referenciarlas.');}
