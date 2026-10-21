@@ -114,7 +114,7 @@ final class BusinessAdminService
         // URL, orden, verificación, reclamación, operación, plan y publicación no son datos de alta.
         $slug=$existing['slug']??$this->availableSlug($destinationId,$this->slug($translations['es']['display_name']),0);
         if($existing&&(int)$existing['destination_id']!==$destinationId)$slug=$this->availableSlug($destinationId,$this->slug($translations['es']['display_name']),0);
-        $this->pdo->beginTransaction();$storedFiles=[];
+        $ownTransaction=!$this->pdo->inTransaction();if($ownTransaction)$this->pdo->beginTransaction();$storedFiles=[];
         try{
             $imageHelp=$input['image_assistance_requested']??($existing['image_assistance_requested']??'0');if(!in_array((string)$imageHelp,['0','1','2'],true))throw new RuntimeException('Indica si el negocio necesita apoyo con sus imágenes.');$imageHelp=(int)$imageHelp;
             if($id){$q=$this->pdo->prepare('UPDATE businesses SET destination_id=?,category_code=?,address_text=?,location_reference=?,latitude=?,longitude=?,location_source=?,location_map_url=?,location_confirmed=?,opening_hours=?,price_range=?,capacity_count=?,menu_url=?,reservations_url=?,image_assistance_requested=?,publication_status="draft",updated_at=CURRENT_TIMESTAMP WHERE id=?');$q->execute([$destinationId,$category,...array_values($location),$imageHelp,$id]);}
@@ -127,8 +127,8 @@ final class BusinessAdminService
             if(!$current||$current['plan_code']!==$planCode||($current['billing_frequency']??'')!==($planCode==='free'?'':$frequency)){
                 (new BusinessSubscriptionAdminService($this->pdo))->save(['business_id'=>$id,'plan_code'=>$planCode,'billing_frequency'=>$frequency,'publish_not_before'=>(string)($input['publish_not_before']??''),'payment_reviewed'=>'0']);
             }
-            $this->pdo->commit();return $id;
-        }catch(Throwable $error){if($this->pdo->inTransaction())$this->pdo->rollBack();foreach($storedFiles as $file)if(is_file($file))@unlink($file);throw $error;}
+            if($ownTransaction)$this->pdo->commit();return $id;
+        }catch(Throwable $error){if($ownTransaction&&$this->pdo->inTransaction())$this->pdo->rollBack();foreach($storedFiles as $file)if(is_file($file))@unlink($file);throw $error;}
     }
 
     private function syncTranslations(int $id,array $translations):void
@@ -249,6 +249,12 @@ final class BusinessAdminService
         $extensions=['image/jpeg'=>'jpg','image/png'=>'png','image/webp'=>'webp'];
         $insert=$this->pdo->prepare('INSERT INTO '.$table.'('.$owner.',storage_name,original_name,mime_type,file_size,width,height) VALUES(?,?,?,?,?,?,?)');
         foreach($pending as $image){$name=bin2hex(random_bytes(20)).'.'.$extensions[$image['mime']];$path=$this->referenceStorage.'/'.$name;if(!move_uploaded_file($image['tmp'],$path))throw new RuntimeException('No se pudo guardar una foto de referencia en el almacenamiento privado.');@chmod($path,0600);$storedFiles[]=$path;$insert->execute([$businessId,$name,substr($image['name'],0,255),$image['mime'],$image['bytes'],$image['width'],$image['height']]);}
+    }
+
+    /** Private revision references; caller controls the transaction. */
+    public function storeEditorialReferences(int $version,mixed $uploads,array &$storedFiles,int $limit):void
+    {
+        $this->storeImageReferences($version,$uploads,$storedFiles,$limit,'business_editorial_images','version_id');
     }
 
     private function referenceLimit(string $plan):int{return match($plan){'featured'=>1,'page'=>2,'page_premium'=>4,default=>0};}

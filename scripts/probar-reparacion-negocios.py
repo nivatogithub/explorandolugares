@@ -7,7 +7,7 @@ parser=argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--mariadb',action='store_true',help='Also use disposable databases in explorando-preprod via its root Unix socket')
 args=parser.parse_args()
 output=ROOT/'.local/reparacion-admin';output.mkdir(parents=True,exist_ok=True)
-tests=['lead-admin','admin-repair','lead-replies','business-self-onboarding','business-account-portal','disputed-business-claims','account-email-verification','account-mail-local','account-mail-template','account-session-security','account-profile','business-onboarding-limits','business-subscription-choice','business-subscriptions','subscription-changes','business-crm','business-deletion','business-email-campaigns','database-maintenance','database-change-package']
+tests=['business-editorial','lead-admin','admin-repair','lead-replies','business-self-onboarding','business-account-portal','disputed-business-claims','account-email-verification','account-mail-local','account-mail-template','account-session-security','account-profile','business-onboarding-limits','business-subscription-choice','business-subscriptions','subscription-changes','business-crm','business-deletion','business-email-campaigns','database-maintenance','database-change-package']
 results=[]
 def run(name,command,**kwargs):
     started=time.monotonic()

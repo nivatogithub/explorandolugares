@@ -1,0 +1,5 @@
+.editorial-actions{display:flex;flex-wrap:wrap;gap:14px;margin:22px 0;align-items:center}.registration-form.editorial-actions{display:grid;justify-items:start}.account-portal .registration-form details{margin:18px 0}.account-portal .registration-form details>summary{cursor:pointer;padding:12px 0;font-weight:650}.account-portal .registration-form fieldset label{margin:10px 0}.account-portal{overflow-wrap:anywhere}.account-portal :is(input,select,textarea){min-width:0;max-width:100%}@media(max-width:650px){.editorial-actions .pill{width:100%;text-align:center}.account-portal .destination-form-grid{grid-template-columns:minmax(0,1fr)}}
+
+.portal-account-page .business-editorial h1,.business-editorial h1{font-size:clamp(26px,4vw,36px);line-height:1.15;margin:18px 0}.business-editorial .account-portal-card{background:var(--el-card)}
+
+.portal-account-page main.business-editorial{padding:12px 22px 28px}.portal-account-page .business-editorial .registration-form{gap:16px}.portal-account-page .business-editorial .registration-form fieldset{padding:18px}.portal-account-page .business-editorial .registration-form fieldset label{margin:4px 0}
