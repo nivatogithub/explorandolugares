@@ -188,7 +188,9 @@ final class BusinessSubscriptionAdminService
             $requiredSpanish=['display_name'];
             if(in_array($sub['plan_code'],['basic','featured','page','page_premium'],true))$requiredSpanish[]='summary';
             if(in_array($sub['plan_code'],['featured','page','page_premium'],true))$requiredSpanish[]='description';
-            if($sub['plan_code']==='page_premium')array_push($requiredSpanish,'brand_story','featured_services');
+            // History and the general services text are optional, but must be translated when supplied.
+            $optionalSpanish=$sub['plan_code']==='page_premium'?['brand_story','featured_services']:[];
+            foreach($optionalSpanish as $field)if(trim((string)($translations['es'][$field]??''))!=='')$requiredSpanish[]=$field;
             foreach($requiredSpanish as $field)if(trim((string)($translations['es'][$field]??''))==='')throw new RuntimeException('Completa la información adicional que solicita esta suscripción antes de publicar.');
             foreach(['en','pt-BR'] as $locale){$row=$translations[$locale]??null;if(!$row)throw new RuntimeException('Completa y traduce el contenido a español, inglés y portugués antes de publicar.');foreach($requiredSpanish as $field){$spanish=trim((string)($translations['es'][$field]??''));$translated=trim((string)($row[$field]??''));if($translated===''||($field!=='display_name'&&$translated===$spanish))throw new RuntimeException('Completa y traduce el contenido a español, inglés y portugués antes de publicar.');}}
     }

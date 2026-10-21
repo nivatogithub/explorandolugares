@@ -80,8 +80,11 @@ subscription_check($contactRejected,'Paid direct-contact tiers require a publicl
 $pdo->exec("UPDATE business_contacts SET is_public=1 WHERE business_id=1");
 $pdo->exec("UPDATE subscription_plan_prices SET amount=240000 WHERE plan_code='page_premium' AND billing_frequency='quarterly'");
 $pdo->exec("UPDATE business_subscriptions SET plan_code='page_premium',billing_frequency='quarterly',status='paid_pending_publication',quoted_amount=240000,publish_not_before=NULL WHERE id=".(int)$id);
-$premiumRejected=false;try{$service->publish(1,$testDate(2));}catch(RuntimeException $error){$premiumRejected=str_contains($error->getMessage(),'información adicional');}
-subscription_check($premiumRejected,'Premium publication requires its two additional content sections.');
+$service->validateContent(1,'page_premium');
+subscription_check(true,'Premium accepts a page without an optional history or general services narrative.');
+$pdo->exec("UPDATE business_translations SET brand_story='Historia opcional' WHERE business_id=1 AND locale='es'");
+$untranslatedStory=false;try{$service->validateContent(1,'page_premium');}catch(RuntimeException $error){$untranslatedStory=str_contains($error->getMessage(),'traduce');}
+subscription_check($untranslatedStory,'An optional history still requires translations when supplied.');
 $pdo->exec("UPDATE business_translations SET brand_story=CASE locale WHEN 'es' THEN 'Historia del café' WHEN 'en' THEN 'The cafe story' ELSE 'História do café' END,featured_services=CASE locale WHEN 'es' THEN 'Café de origen' WHEN 'en' THEN 'Origin coffee' ELSE 'Café de origem' END WHERE business_id=1");
 $service->publish(1,$testDate(2));
 $q->execute([$id]);$sub=$q->fetch(PDO::FETCH_ASSOC);
