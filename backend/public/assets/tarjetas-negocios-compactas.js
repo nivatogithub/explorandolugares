@@ -25,7 +25,7 @@
  const lang=document.documentElement.lang.toLowerCase();const labels=lang.startsWith('en')?{map:'Find on map',whatsapp:'WhatsApp',instagram:'Instagram',email:'Email',page:'Open business page'}:lang.startsWith('pt')?{map:'Ver localização',whatsapp:'WhatsApp',instagram:'Instagram',email:'E-mail',page:'Abrir página do negócio'}:{map:'Ver ubicación',whatsapp:'WhatsApp',instagram:'Instagram',email:'Correo',page:'Ver página del negocio'};
  function improve(){
   for(const card of document.querySelectorAll('.directory-card')){
-   if(card.dataset.iconLayout==='1')continue;card.dataset.iconLayout='1';
+   if(card.dataset.directoryLayout==='editorial-v2'||card.dataset.iconLayout==='1')continue;card.dataset.iconLayout='1';
    const premium=card.classList.contains('directory-card-tier-page_premium');
    const compactFeatured=card.classList.contains('directory-card-tier-featured');
    if(compactFeatured)card.querySelectorAll('.directory-business-mark,.directory-contact-links').forEach(n=>n.remove());

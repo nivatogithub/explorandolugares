@@ -91,6 +91,11 @@ input,select,textarea{background:var(--el-field);border-color:var(--el-control-b
 '''.replace('VARIABLES',variables)
  density_path=ROOT/'backend/public/assets/densidad-global.css'
  if density_path.is_file():css+='\n'+density_path.read_text()
+ # Legacy compaction must never reshape the approved server-rendered editorial cards.
+ css=re.sub(r'\.directory-card(?![\w-])', '.directory-card:not([data-directory-layout="editorial-v2"])', css)
+ css=re.sub(r'\.directory-card-tier-(featured|free)(?![\w-])', r'.directory-card-tier-\1:not([data-directory-layout="editorial-v2"])', css)
+ css=css.replace('.directory-contact-links', '.directory-card:not([data-directory-layout="editorial-v2"]) .directory-contact-links')
+ css=css.replace('[data-directory-tier="featured"] .directory-grid', '[data-directory-tier="featured"] .directory-grid:not(:has(> [data-directory-layout="editorial-v2"]))')
  (assets/'identidad-neutral.css').write_text(css)
  shutil.copy2(ROOT/'backend/public/assets/identidad-neutral.js',assets/'identidad-neutral.js') if assets.resolve()!=(ROOT/'backend/public/assets').resolve() else None
  shutil.copy2(ROOT/'backend/public/assets/tarjetas-negocios-compactas.js',assets/'tarjetas-negocios-compactas.js') if assets.resolve()!=(ROOT/'backend/public/assets').resolve() else None
@@ -103,7 +108,7 @@ input,select,textarea{background:var(--el-field);border-color:var(--el-control-b
   if p.name in {'leaflet.css','identidad-neutral.css'}:continue
   s=p.read_text();new=re.sub('|'.join(palette),lambda m:palette[m[0].lower()],s,flags=re.I)
   if new!=s:p.write_text(new);css_count+=1
- hook='<script defer src="/assets/nomenclatura-lugares.js?v=2"></script><link rel="stylesheet" href="/assets/identidad-neutral.css?v=5"><script defer src="/assets/identidad-neutral.js?v=4"></script>'
+ hook='<script defer src="/assets/nomenclatura-lugares.js?v=2"></script><link rel="stylesheet" href="/assets/identidad-neutral.css?v=6"><script defer src="/assets/identidad-neutral.js?v=4"></script>'
  count=0
  for p in public.rglob('*'):
   if p.suffix not in {'.html','.php'}:continue
@@ -113,14 +118,15 @@ input,select,textarea{background:var(--el-field);border-color:var(--el-control-b
   s=re.sub(r'<!-- etapas-piloto -->.*?<!-- /etapas-piloto -->','',s,flags=re.S)
   s=re.sub(r'<aside\b[^>]*class="pilot-banner"[^>]*>.*?</aside>','',s,flags=re.S)
   for old,new in {'Comenzamos por Jericó.':'Destinos para descubrir.','La primera guía ya está disponible. Abriremos otros destinos cuando revisemos su información y sus imágenes.':'Explora las guías disponibles.','Começamos por Jericó.':'Destinos para descobrir.','We start with Jericó.':'Destinations to discover.','Starting with Jericó.':'Destinations to discover.'}.items():s=s.replace(old,new)
-  s=s.replace('identidad-neutral.css?v=4','identidad-neutral.css?v=5')
-  s=s.replace('identidad-neutral.css?v=3','identidad-neutral.css?v=5')
+  s=s.replace('identidad-neutral.css?v=4','identidad-neutral.css?v=6')
+  s=s.replace('identidad-neutral.css?v=3','identidad-neutral.css?v=6')
   s=s.replace('identidad-neutral.js?v=3','identidad-neutral.js?v=4')
-  s=s.replace('identidad-neutral.js?v=2','identidad-neutral.js?v=4').replace('identidad-neutral.css?v=2','identidad-neutral.css?v=5')
-  s=s.replace('tarjetas-negocios-compactas.js?v=1','tarjetas-negocios-compactas.js?v=4')
-  s=s.replace('tarjetas-negocios-compactas.js?v=2','tarjetas-negocios-compactas.js?v=4')
-  s=s.replace('tarjetas-negocios-compactas.js?v=3','tarjetas-negocios-compactas.js?v=4')
-  if 'tarjetas-negocios-compactas.js' not in s:s=s.replace('</head>','<script defer src="/assets/tarjetas-negocios-compactas.js?v=4"></script></head>',1)
+  s=s.replace('identidad-neutral.js?v=2','identidad-neutral.js?v=4').replace('identidad-neutral.css?v=2','identidad-neutral.css?v=6')
+  s=s.replace('tarjetas-negocios-compactas.js?v=1','tarjetas-negocios-compactas.js?v=5')
+  s=s.replace('tarjetas-negocios-compactas.js?v=2','tarjetas-negocios-compactas.js?v=5')
+  s=s.replace('tarjetas-negocios-compactas.js?v=3','tarjetas-negocios-compactas.js?v=5')
+  s=s.replace('tarjetas-negocios-compactas.js?v=4','tarjetas-negocios-compactas.js?v=5').replace('identidad-neutral.css?v=5','identidad-neutral.css?v=6')
+  if 'tarjetas-negocios-compactas.js' not in s:s=s.replace('</head>','<script defer src="/assets/tarjetas-negocios-compactas.js?v=5"></script></head>',1)
   if 'cargar-mas-tarjetas.js' not in s:s=s.replace('</head>','<script defer src="/assets/cargar-mas-tarjetas.js?v=1"></script></head>',1)
   s=re.sub(r'<a\b[^>]*class="text-link"[^>]*href="[^"]*jerico[^"]*"[^>]*>.*?</a>','',s) if 'home-editorial-actions' in s else s
   if 'identidad-neutral.css' not in s:s=s.replace('</head>',hook+'</head>',1)

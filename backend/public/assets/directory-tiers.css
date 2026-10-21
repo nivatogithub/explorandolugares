@@ -45,3 +45,9 @@
 .directory-contact-links .directory-contact-link:focus-visible{outline:2px solid var(--el-action);outline-offset:3px}
 .directory-tier .directory-card-tier-featured .directory-business-title{height:calc(1.3em + 20px)}
 .directory-tier .directory-card-tier-featured .directory-business-title>span{-webkit-line-clamp:1}
+
+/* Free entries have a compact, vertically centred title instead of a reserved two-line box. */
+.directory-tier[data-directory-tier="free"] .directory-card-body{justify-content:center;min-height:106px;box-sizing:border-box}
+.directory-tier[data-directory-tier="free"] .directory-card-body{position:relative}
+.directory-tier[data-directory-tier="free"] .directory-card .eyebrow{position:absolute;top:10px;left:18px;right:18px;height:auto;min-height:0;margin:0}
+.directory-tier[data-directory-tier="free"] .directory-business-title{height:auto;min-height:0;margin:0;line-height:1.3}
