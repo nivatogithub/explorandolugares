@@ -888,6 +888,11 @@ try:
         check(code==200 and 'noindex' in headers.get('X-Robots-Tag','') and 'data-el-measurement' not in example,'Ejemplo público falla o mide visitas: '+demo_view)
         check((demo_view=='page_premium')==('Nube De Cacao' in example),'Diferencia de productos no corresponde a modalidad')
         check((demo_view!='free')==('tel:+573234870366' in example),'Contacto del ejemplo no corresponde a modalidad')
+        code,embedded,embedded_headers=request('/business/demo.php?view='+demo_view+'&embedded=1',opener=urllib.request.build_opener())
+        check(code==200 and embedded_headers.get('X-Frame-Options')=='SAMEORIGIN' and "frame-ancestors 'self'" in embedded_headers.get('Content-Security-Policy',''),'El ejemplo no admite el panel del mismo origen')
+        check('Volver a suscripciones' not in embedded and 'Horario de atención' not in embedded and 'business-profile-back' not in embedded,'El panel conserva navegación de salida u horarios')
+        if demo_view in ['free','featured']:check('data-directory-layout="editorial-v2"' in embedded,'La tarjeta no está protegida de transformaciones antiguas')
+
     for language in ['es','en','pt-BR']:
         status,page_preview,preview_headers=request(editorial_path+'&version='+str(premium_version)+'&preview=page&lang='+language,opener=business_flow)
         check(status==200 and '</html>' in page_preview and 'Fatal error' not in page_preview and 'Vista previa privada' in page_preview,'Página Premium privada incompleta: '+str(status)+' '+page_preview[-1000:])

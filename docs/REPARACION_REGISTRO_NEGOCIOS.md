@@ -180,3 +180,16 @@ El control de viewport del navegador no aplicaba el tamaño solicitado a las pes
 - La vista final usa activos editoriales, no las fotografías originales privadas. Se retiraron controles de galería y campos históricos (historia, precio/capacidad y reservas) del registro que ya no corresponden al diseño. El generador dejó de inyectar la antigua oferta de secciones narrativas Premium. No se borraron datos históricos.
 - Regresión ampliada: archivos reales por HTTP con igual nombre en posiciones diferentes, consentimiento, autorización de lectura, sustitución sin acumulación en la nueva versión, conservación del historial, fotos heredadas del registro, ejemplos de cuatro modalidades, pago Premium y revisión, preparación con activos finales, aviso simulado, corrección, aprobación y publicación exactas. Todo en bases desechables, sin producción ni correo real.
 - Pendiente externo antes de declarar entrega de correo comprobada: una prueba real de la notificación de prepublicación. La generación/selección de imágenes finales requiere operación editorial humana con material real.
+
+
+### Revisión de ejemplos sobrepuestos y protección del diseño aprobado · 21 octubre 2026
+
+Los enlaces «Ver ejemplo» abren ahora un diálogo modal nativo sobre la tabla o el selector de registro. El fondo queda inerte, se bloquea su desplazamiento y al cerrar o pulsar Escape se restaura el foco sin perder suscripción ni frecuencia. Los ejemplos se incrustan únicamente desde el mismo origen; el permiso SAMEORIGIN se limita a `business/demo.php`. El resto de rutas mantiene sus restricciones. Las páginas incrustadas omiten cabecera, pie y navegación de regreso; el diálogo tiene su propio cierre.
+
+Se eliminan los horarios del ejemplo, del formulario de captura y del renderizador de páginas de negocio. Los datos históricos permanecen almacenados. El nombre de Gratis se centra verticalmente, manteniendo la categoría arriba.
+
+Causa verificada de la regresión de Destacado: la construcción inyectaba `tarjetas-negocios-compactas.js`, que retiraba `.directory-contact-links`, y CSS de compactación que forzaba el título a 14 px y reorganizaba la tarjeta. Las plantillas aprobadas ahora llevan `data-directory-layout="editorial-v2"`; el script las respeta y los estilos antiguos quedan limitados a tarjetas históricas. Se conserva una única plantilla del servidor para ejemplos, prepublicación y directorio. La regresión de JavaScript comprueba que las cuatro modalidades aprobadas no sean transformadas ni pierdan sus acciones.
+
+Validación visual: diálogo de las cuatro modalidades, contactos de Destacado, ausencia de horarios y navegación de salida en ambas páginas, cierre por botón/Escape y conservación de Premium trimestral ($299.750) al volver a la tabla. Las pruebas HTTP validan la política de incrustación y privacidad. Sin cambios de base de datos ni producción.
+
+Comprobación móvil adicional con la página real incrustada a 360 px: el panel mide 336 px y queda dentro del ancho disponible, permite cerrar y conserva Premium seleccionado. Los nombres de los selectores móviles se extraen del título de cada modalidad para no incorporar el texto de «Ver ejemplo». No se presenta esta revisión como una prueba en un teléfono físico.

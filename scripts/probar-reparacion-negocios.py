@@ -20,6 +20,7 @@ def run(name,command,**kwargs):
     results.append(item);print(('PASS ' if item['passed'] else 'FAIL ')+name,flush=True)
     return item['passed']
 for name in tests:run(name,['php',str(ROOT/'backend/tests'/f'{name}.php')],text=True,timeout=90)
+run('directory-editorial-layout',['node',str(ROOT/'backend/tests/directory-editorial-layout.cjs')],text=True,timeout=30)
 run('admin-http',[sys.executable,str(ROOT/'backend/tests/admin-pages.integration.py')],text=True,timeout=300)
 if args.mariadb:
     archive=io.BytesIO()

@@ -19,7 +19,7 @@ for page in root.rglob('*.html'):
   if 'portada-atracciones.css' not in s:s=s.replace('</head>','<link rel="stylesheet" href="/assets/portada-atracciones.css"></head>')
  if 'negocios-locales/planes/' in rel:
   if 'subscription-comparison.css' not in s:s=s.replace('</head>','<link rel="stylesheet" href="/assets/subscription-comparison.css"></head>')
-  if 'subscription-comparison.js' not in s:s=s.replace('</body>','<script src="/assets/subscription-comparison.js" defer></script></body>')
+  if 'subscription-comparison.js' not in s:s=s.replace('</body>','<script src="/assets/subscription-comparison.js?v=2" defer></script></body>')
   s=re.sub(r'<tr data-premium-service-row>.*?</tr>','',s,flags=re.S)
   notes={'es':'Tarifas de lanzamiento. Conservas el precio contratado durante el período pagado. Cualquier actualización se informará antes de la renovación.','en':'Launch rates. Your contracted price is maintained throughout the paid period. Any change will be communicated before renewal.','pt-br':'Tarifas de lançamento. O preço contratado é mantido durante o período pago. Qualquer atualização será informada antes da renovação.'}
   s=s.replace('Este complemento ofrece visibilidad como operador; no incluye reservas ni garantiza ventas o visitantes.','Este complemento añade presencia dentro de la experiencia, además de tu aparición en el directorio.')
