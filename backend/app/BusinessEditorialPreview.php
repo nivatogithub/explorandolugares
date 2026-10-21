@@ -1,5 +1,6 @@
 <?php
 declare(strict_types=1);
+require_once __DIR__.'/BusinessShowcase.php';
 require_once __DIR__.'/BusinessContactVisibility.php';
 /** Build the view model from a private version, using the production templates. */
 final class BusinessEditorialPreview
@@ -16,6 +17,7 @@ final class BusinessEditorialPreview
   if(!in_array($b['plan_code'],['page','page_premium'],true)){$b['cover']=null;$b['gallery']=[];}
   $b['image_path']=$b['logo']['asset_path']??null;$b['width']=$b['logo']['width']??null;$b['height']=$b['logo']['height']??null;
   $b['demo_page_url']='/business/editorial.php?business='.$id.'&version='.$version['id'].'&preview=page&lang='.rawurlencode($locale);
+  $b['showcase']=$b['plan_code']==='page_premium'?BusinessShowcase::renderData($pdo,$id,$p['showcase']??[],$locale):['products'=>[],'experiences'=>[]];
   return $b;
  }
 }

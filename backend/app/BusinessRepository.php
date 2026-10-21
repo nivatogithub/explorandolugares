@@ -1,5 +1,6 @@
 <?php
 declare(strict_types=1);
+require_once __DIR__.'/BusinessShowcase.php';
 
 require_once __DIR__.'/BusinessCategories.php';
 require_once __DIR__.'/BusinessServiceSections.php';
@@ -70,6 +71,7 @@ final class BusinessRepository
         $business['contacts']=BusinessContactVisibility::filter((string)$business['plan_code'],$this->contacts($business['id']));
         $business['page_alias']=$business['plan_code']==='page_premium'?PremiumBusinessProfile::currentAlias($this->pdo,$business['id']):'';
         $business['service_sections']=$business['plan_code']==='page_premium'?(BusinessServiceSections::read($this->pdo,$business['id'])[$locale]??[]):[];
+        $business['showcase']=$business['plan_code']==='page_premium'?BusinessShowcase::renderData($this->pdo,$business['id'],BusinessShowcase::published($this->pdo,$business['id']),$locale):['products'=>[],'experiences'=>[]];
         return $business;
     }
 

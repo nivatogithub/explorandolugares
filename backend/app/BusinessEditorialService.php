@@ -4,6 +4,7 @@ require_once __DIR__.'/BusinessAdminService.php';
 require_once __DIR__.'/BusinessSubscriptionAdminService.php';
 require_once __DIR__.'/BusinessContactVisibility.php';
 require_once __DIR__.'/PremiumBusinessProfile.php';
+require_once __DIR__.'/BusinessShowcase.php';
 /** Immutable payloads and explicit approval of the exact version. Never sends mail or generates images on save. */
 final class BusinessEditorialService
 {
@@ -17,7 +18,8 @@ final class BusinessEditorialService
  public function version(int $id):array{$q=$this->pdo->prepare('SELECT * FROM business_editorial_versions WHERE id=?'.($this->pdo->inTransaction()&&$this->pdo->getAttribute(PDO::ATTR_DRIVER_NAME)==='mysql'?' FOR UPDATE':''));$q->execute([$id]);return $q->fetch(PDO::FETCH_ASSOC)?:throw new RuntimeException('La versión no existe.');}
  public function live(int $business):array{
   $r=$this->admin()->find($business)??throw new RuntimeException('El negocio no existe.');
-  return array_intersect_key($r,array_flip(['id','destination_id','category_code','category_codes','address_text','location_reference','latitude','longitude','location_source','location_map_url','location_confirmed','opening_hours','price_range','capacity_count','menu_url','reservations_url','image_assistance_requested','translations','contacts','service_sections','media']));
+  $r['showcase']=BusinessShowcase::published($this->pdo,$business);
+  return array_intersect_key($r,array_flip(['id','destination_id','category_code','category_codes','address_text','location_reference','latitude','longitude','location_source','location_map_url','location_confirmed','opening_hours','price_range','capacity_count','menu_url','reservations_url','image_assistance_requested','translations','contacts','service_sections','media','showcase']));
  }
  public static function hash(array $payload):string{$sort=function(array $value)use(&$sort):array{foreach($value as &$item)if(is_array($item))$item=$sort($item);unset($item);if(!array_is_list($value))ksort($value);return $value;};return hash('sha256',json_encode($sort($payload),JSON_THROW_ON_ERROR|JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES));}
  public function options(int $business):array{
@@ -55,6 +57,7 @@ final class BusinessEditorialService
    foreach(array_filter([$media['logo'],$media['cover'],...$media['gallery']]) as $id){$q=$this->pdo->prepare('SELECT 1 FROM media_assets WHERE id=?');$q->execute([$id]);if(!$q->fetchColumn())throw new RuntimeException('La imagen preparada no existe.');}
    $ids=array_values(array_filter([$media['logo'],$media['cover'],...$media['gallery']]));if(count($ids)!==count(array_unique($ids)))throw new RuntimeException('Usa una imagen distinta para cada posición.');$p['media']=$media;
   }
+  if($code==='page_premium'&&isset($input['showcase'])){$data=$input['showcase'];$data['category_codes']=[$p['category_code'],...$p['category_codes']];$p['showcase']=BusinessShowcase::clean($this->pdo,$business,$data,$p['showcase']??[],$editor);}
   return $p;
  }
  private function contactValid(string $channel,string $value):bool{if(strlen($value)>500)return false;return match($channel){'email'=>(bool)filter_var($value,FILTER_VALIDATE_EMAIL),'phone','phone_fixed','whatsapp'=>preg_match('/^\+?[0-9() .-]{7,24}$/D',$value)===1,default=>(bool)filter_var($value,FILTER_VALIDATE_URL)&&in_array(parse_url($value,PHP_URL_SCHEME),['http','https'],true)};}
@@ -68,7 +71,7 @@ final class BusinessEditorialService
    if(is_array($uploads)&&!array_filter((array)($uploads['error']??[]),static fn($error)=>(int)$error!==UPLOAD_ERR_NO_FILE))$uploads=null;
    $remove=$input['remove_reference_ids']??[];if(!is_array($remove)||count($remove)>20)throw new RuntimeException('Revisa las referencias que quieres retirar.');
    foreach($remove as $reference){$q=$this->pdo->prepare('SELECT storage_name FROM business_editorial_images WHERE id=? AND version_id=?');$q->execute([(int)$reference,(int)($latest['id']??0)]);$name=$q->fetchColumn();if(!$name)throw new RuntimeException('Esa referencia no pertenece a la versión anterior.');$this->pdo->prepare('DELETE FROM business_editorial_images WHERE version_id=? AND storage_name=?')->execute([$id,$name]);}
-   if($uploads!==null){if(!$imageConsent&&!$editor)throw new RuntimeException('Autoriza la preparación editorial de tus imágenes antes de cargarlas.');$this->admin()->storeEditorialReferences($id,$uploads,$storedFiles,match($plan){'featured'=>1,'page'=>2,'page_premium'=>4,default=>0});}
+   if($uploads!==null){if(!$imageConsent&&!$editor)throw new RuntimeException('Autoriza la preparación editorial de tus imágenes antes de cargarlas.');$this->admin()->storeEditorialReferences($id,$uploads,$storedFiles,match($plan){'featured'=>1,'page'=>2,'page_premium'=>7,default=>0});}
    $this->event($id,$editor?'admin:'.$actor:'account:'.$account,'saved');$this->pdo->commit();return $id;
   }catch(Throwable $e){if($this->pdo->inTransaction())$this->pdo->rollBack();foreach($storedFiles as $file)if(is_file($file))@unlink($file);throw $e;}
  }
@@ -93,6 +96,7 @@ $adminInput=$payload;
  private function validatePrepared(array $v):void{
   $business=(int)$v['business_id'];if($this->options($business)['code']!==$v['plan_code'])throw new RuntimeException('La suscripción cambió; prepara otra versión.');
   $p=$this->payload($v,$business);
+  if($v['plan_code']==='page_premium'){BusinessShowcase::validate($p['showcase']??[]);BusinessShowcase::clean($this->pdo,$business,array_merge($p['showcase']??[],['category_codes'=>[$p['category_code'],...($p['category_codes']??[])]]),$p['showcase']??[],true);}
   if($v['plan_code']!=='free'&&(empty($p['location_confirmed'])||trim((string)($p['location_map_url']??''))===''))throw new RuntimeException('Completa y confirma la ubicación antes de preparar la versión final.');
   // Validate production rules in a rollback-only savepoint. No public change is committed.
   $this->pdo->exec('SAVEPOINT editorial_validation');
@@ -105,7 +109,7 @@ $adminInput=$payload;
    if($this->options($business)['code']!==$v['plan_code'])throw new RuntimeException('La suscripción cambió; prepara otra versión.');
    $q=$this->pdo->prepare('SELECT publication_status FROM businesses WHERE id=?');$q->execute([$business]);$wasPublished=$q->fetchColumn()==='published';
    $this->authorize((int)$v['account_id'],$business);
-   $payload=$this->payload($v,$business);$this->applyPayload($business,$payload);
+   $payload=$this->payload($v,$business);if($v['plan_code']==='page_premium'){BusinessShowcase::validate($payload['showcase']??[]);BusinessShowcase::clean($this->pdo,$business,array_merge($payload['showcase']??[],['category_codes'=>[$payload['category_code'],...($payload['category_codes']??[])]]),$payload['showcase']??[],true);}$this->applyPayload($business,$payload);
    $publisher=new BusinessSubscriptionAdminService($this->pdo);
    if($wasPublished){$q=$this->pdo->prepare('SELECT status,ends_at FROM business_subscriptions WHERE business_id=? ORDER BY id DESC LIMIT 1');$q->execute([$business]);$sub=$q->fetch(PDO::FETCH_ASSOC);if($sub['status']!=='active'||($sub['ends_at']!==null&&$sub['ends_at']<=gmdate('Y-m-d H:i:s')))throw new RuntimeException('La suscripción debe estar vigente.');$publisher->validateEditorialUpdate($business);$this->pdo->prepare('UPDATE businesses SET publication_status="published" WHERE id=?')->execute([$business]);}
    else $publisher->publish($business,null,null,$id);
