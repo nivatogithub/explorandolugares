@@ -1,0 +1,772 @@
+{
+  "schema": "destination-public-snapshot-v1",
+  "destination": "cocorna",
+  "tables": {
+    "destinations": [
+      {
+        "id": 10003,
+        "slug": "cocorna",
+        "destination_type": "municipality",
+        "country_code": "CO",
+        "department": "Antioquia",
+        "subregion": "Oriente",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 103
+      }
+    ],
+    "destination_translations": [
+      {
+        "destination_id": 10003,
+        "locale": "es",
+        "display_name": "Cocorná",
+        "eyebrow": "Antioquia · Oriente",
+        "headline": "Montañas, cascadas y aventura en el Oriente antioqueño.",
+        "intro": "Montañas, cascadas y aventura en el Oriente antioqueño.",
+        "meta_description": "Montañas, cascadas y aventura en el Oriente antioqueño."
+      },
+      {
+        "destination_id": 10003,
+        "locale": "en",
+        "display_name": "Cocorná",
+        "eyebrow": "Antioquia · Oriente",
+        "headline": "Mountains, waterfalls and adventure in eastern Antioquia.",
+        "intro": "Mountains, waterfalls and adventure in eastern Antioquia.",
+        "meta_description": "Mountains, waterfalls and adventure in eastern Antioquia."
+      },
+      {
+        "destination_id": 10003,
+        "locale": "pt-BR",
+        "display_name": "Cocorná",
+        "eyebrow": "Antioquia · Oriente",
+        "headline": "Montanhas, cachoeiras e aventura no leste de Antioquia.",
+        "intro": "Montanhas, cachoeiras e aventura no leste de Antioquia.",
+        "meta_description": "Montanhas, cachoeiras e aventura no leste de Antioquia."
+      }
+    ],
+    "destination_story_blocks": [
+      {
+        "id": 1000301,
+        "destination_id": 10003,
+        "display_order": 1,
+        "section_key": "history"
+      }
+    ],
+    "destination_story_translations": [
+      {
+        "story_block_id": 1000301,
+        "locale": "es",
+        "body": "Los caminos arrieros y la agricultura marcaron el crecimiento de Cocorná. Hoy sus ríos y montañas también sostienen una vocación de turismo de naturaleza."
+      },
+      {
+        "story_block_id": 1000301,
+        "locale": "en",
+        "body": "Mule trails and farming shaped the growth of Cocorná. Its rivers and mountains now also support nature tourism."
+      },
+      {
+        "story_block_id": 1000301,
+        "locale": "pt-BR",
+        "body": "Os caminhos dos tropeiros e a agricultura marcaram o crescimento de Cocorná. Hoje seus rios e montanhas também sustentam o turismo de natureza."
+      }
+    ],
+    "destination_reasons": [
+      {
+        "id": 1000301,
+        "destination_id": 10003,
+        "display_order": 1
+      }
+    ],
+    "destination_reason_translations": [
+      {
+        "reason_id": 1000301,
+        "locale": "es",
+        "body": "Montañas, cascadas y aventura en el Oriente antioqueño."
+      },
+      {
+        "reason_id": 1000301,
+        "locale": "en",
+        "body": "Mountains, waterfalls and adventure in eastern Antioquia."
+      },
+      {
+        "reason_id": 1000301,
+        "locale": "pt-BR",
+        "body": "Montanhas, cachoeiras e aventura no leste de Antioquia."
+      }
+    ],
+    "destination_sources": [
+      {
+        "destination_id": 10003,
+        "locale": "es",
+        "section_key": "destination",
+        "source_url": "https://provincia-abt.gov.co/bosques/cocorna/",
+        "source_label": "Provincia ABT — Cocorná",
+        "display_order": 1
+      },
+      {
+        "destination_id": 10003,
+        "locale": "en",
+        "section_key": "destination",
+        "source_url": "https://provincia-abt.gov.co/bosques/cocorna/",
+        "source_label": "Provincia ABT — Cocorná",
+        "display_order": 1
+      },
+      {
+        "destination_id": 10003,
+        "locale": "pt-BR",
+        "section_key": "destination",
+        "source_url": "https://provincia-abt.gov.co/bosques/cocorna/",
+        "source_label": "Provincia ABT — Cocorná",
+        "display_order": 1
+      }
+    ],
+    "destination_media": [
+      {
+        "destination_id": 10003,
+        "role": "hero",
+        "media_asset_id": -10017,
+        "display_order": 1
+      }
+    ],
+    "points_of_interest": [
+      {
+        "id": 1000301,
+        "destination_id": 10003,
+        "slug": "cascada-las-perlas",
+        "poi_type": "place",
+        "publication_status": "published",
+        "latitude": null,
+        "longitude": null,
+        "display_order": 1
+      },
+      {
+        "id": 1000302,
+        "destination_id": 10003,
+        "slug": "parque-principal",
+        "poi_type": "place",
+        "publication_status": "published",
+        "latitude": null,
+        "longitude": null,
+        "display_order": 2
+      },
+      {
+        "id": 1000303,
+        "destination_id": 10003,
+        "slug": "parapente",
+        "poi_type": "experience",
+        "publication_status": "published",
+        "latitude": null,
+        "longitude": null,
+        "display_order": 3
+      },
+      {
+        "id": 1000304,
+        "destination_id": 10003,
+        "slug": "rafting-calderas",
+        "poi_type": "experience",
+        "publication_status": "published",
+        "latitude": null,
+        "longitude": null,
+        "display_order": 4
+      },
+      {
+        "id": 1000305,
+        "destination_id": 10003,
+        "slug": "excursion-melcocho",
+        "poi_type": "experience",
+        "publication_status": "published",
+        "latitude": null,
+        "longitude": null,
+        "display_order": 5
+      }
+    ],
+    "point_of_interest_translations": [
+      {
+        "point_of_interest_id": 1000301,
+        "locale": "es",
+        "name": "Cascada Las Perlas",
+        "description": "Una caída de agua entre las montañas de Cocorná.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000301,
+        "locale": "en",
+        "name": "Las Perlas Waterfall",
+        "description": "A waterfall among the mountains of Cocorná.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000301,
+        "locale": "pt-BR",
+        "name": "Cachoeira Las Perlas",
+        "description": "Uma queda d’água entre as montanhas de Cocorná.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000302,
+        "locale": "es",
+        "name": "Parque principal",
+        "description": "El centro del pueblo, alrededor de su iglesia y calles comerciales.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000302,
+        "locale": "en",
+        "name": "Main square",
+        "description": "The town centre, around its church and shopping streets.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000302,
+        "locale": "pt-BR",
+        "name": "Praça principal",
+        "description": "O centro da cidade, ao redor da igreja e das ruas comerciais.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000303,
+        "locale": "es",
+        "name": "Parapente en Cocorná",
+        "description": "Un vuelo acompañado entre montañas y cascadas.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000303,
+        "locale": "en",
+        "name": "Paragliding in Cocorná",
+        "description": "A tandem flight among mountains and waterfalls.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000303,
+        "locale": "pt-BR",
+        "name": "Parapente em Cocorná",
+        "description": "Um voo acompanhado entre montanhas e cachoeiras.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000304,
+        "locale": "es",
+        "name": "Rafting en el río Calderas",
+        "description": "Recorre los rápidos con un equipo de guías.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000304,
+        "locale": "en",
+        "name": "Rafting on the Calderas River",
+        "description": "Navigate the rapids with a team of guides.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000304,
+        "locale": "pt-BR",
+        "name": "Rafting no rio Calderas",
+        "description": "Percorra as corredeiras com uma equipe de guias.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000305,
+        "locale": "es",
+        "name": "Excursión al río Melcocho",
+        "description": "Senderos y pozos de agua en una salida guiada.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000305,
+        "locale": "en",
+        "name": "Melcocho River excursion",
+        "description": "Trails and river pools on a guided outing.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000305,
+        "locale": "pt-BR",
+        "name": "Excursão ao rio Melcocho",
+        "description": "Trilhas e poços de água em um passeio guiado.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      }
+    ],
+    "point_of_interest_media": [
+      {
+        "point_of_interest_id": 1000301,
+        "media_asset_id": -10016,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 1000302,
+        "media_asset_id": -10017,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 1000303,
+        "media_asset_id": -10018,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 1000304,
+        "media_asset_id": -10019,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 1000305,
+        "media_asset_id": -10020,
+        "role": "gallery",
+        "display_order": 1
+      }
+    ],
+    "media_assets": [
+      {
+        "id": -10016,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/4f/4fd5e9ae123e206d402afd84f025da47fa5617c5c46b605878a7a1769ebb4486.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"cocorna--cascada-las-perlas-v2\", \"master_sha256\": \"d121657822304e307a3f98fd6a9b8c7eca57bb8ab1fb1fe8100e42063df8c526\", \"web_sha256\": \"4fd5e9ae123e206d402afd84f025da47fa5617c5c46b605878a7a1769ebb4486\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/cocorna\"}"
+      },
+      {
+        "id": -10017,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/8f/8f9bc8e23c2a74079a0965498cfe7d030d8c48fd550815b2c99f07c8740393e4.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"cocorna--parque-principal-v2\", \"master_sha256\": \"eb93229b158da938c7a8c75094a9291b543635d625c09c894cc343065bbe49ce\", \"web_sha256\": \"8f9bc8e23c2a74079a0965498cfe7d030d8c48fd550815b2c99f07c8740393e4\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/cocorna\"}"
+      },
+      {
+        "id": -10018,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/5e/5efedc1530c6adaa0d553f2c01489ea0dc93358e88bd43e59673294b20df7482.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"cocorna--parapente\", \"master_sha256\": \"ec73110c07c4d3ef74393b1afa5fd9e534799e4f88dc3a0771a8602f2269979c\", \"web_sha256\": \"5efedc1530c6adaa0d553f2c01489ea0dc93358e88bd43e59673294b20df7482\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/cocorna\"}"
+      },
+      {
+        "id": -10019,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/d7/d738b697b10e41cafb7d0a3a4e167e0e8e453e33ac0db34b708cc3eb02a7c0f9.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"cocorna--rafting-calderas\", \"master_sha256\": \"38001f4d0c50b276873dc0a6bb9ed5c28a975b98dcb6b8728d205ec75d6b921f\", \"web_sha256\": \"d738b697b10e41cafb7d0a3a4e167e0e8e453e33ac0db34b708cc3eb02a7c0f9\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/cocorna\"}"
+      },
+      {
+        "id": -10020,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/b9/b9e4cd4a75f5cffbc337c499de1d5e7bcce4b1b31c3f5e04dac5fa1129728c1e.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"cocorna--excursion-melcocho-v2\", \"master_sha256\": \"13c80d529035b8f39adcd53dd8462a83b2b06607c57f9dd8068c3edd1c5e1cc0\", \"web_sha256\": \"b9e4cd4a75f5cffbc337c499de1d5e7bcce4b1b31c3f5e04dac5fa1129728c1e\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/cocorna\"}"
+      }
+    ],
+    "media_asset_translations": [
+      {
+        "media_asset_id": -10016,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Cascada Las Perlas",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10016,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Cascada Las Perlas",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10016,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Cascada Las Perlas",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10017,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Parque principal",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10017,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Parque principal",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10017,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Parque principal",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10018,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Parapente en Cocorná",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10018,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Parapente en Cocorná",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10018,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Parapente en Cocorná",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10019,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Rafting en el río Calderas",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10019,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Rafting en el río Calderas",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10019,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Rafting en el río Calderas",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10020,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Excursión al río Melcocho",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10020,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Excursión al río Melcocho",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10020,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Excursión al río Melcocho",
+        "caption": ""
+      }
+    ],
+    "businesses": [
+      {
+        "id": 100030000,
+        "public_id": "681fe1f9-2557-56ad-8184-3ab7030dd4c3",
+        "destination_id": 10003,
+        "category_code": "hospedaje",
+        "slug": "tierra-de-agua",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100030001,
+        "public_id": "d1b41c88-4160-5ad9-b8c7-8f0008efa351",
+        "destination_id": 10003,
+        "category_code": "hospedaje",
+        "slug": "cascadia-cocorna",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 1,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100030002,
+        "public_id": "99c099e7-4ff5-5513-a669-bba253414408",
+        "destination_id": 10003,
+        "category_code": "experiencias",
+        "slug": "aventura-cocorna",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 2,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100030003,
+        "public_id": "57f1f2d0-c8ed-5611-aa30-61152be5578f",
+        "destination_id": 10003,
+        "category_code": "hospedaje",
+        "slug": "hotel-plaza-centro-cocorna",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 3,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100030004,
+        "public_id": "c52732eb-719e-5c00-ab4e-d0f18f6cd014",
+        "destination_id": 10003,
+        "category_code": "hospedaje",
+        "slug": "hotel-aguatur-cocorna",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 4,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100030005,
+        "public_id": "05dcbed9-af18-532f-9e8b-3d94f1053bf6",
+        "destination_id": 10003,
+        "category_code": "transporte",
+        "slug": "flota-granada-servicio-cocorna",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 5,
+        "record_origin": "public_import"
+      }
+    ],
+    "business_translations": [
+      {
+        "business_id": 100030000,
+        "locale": "es",
+        "display_name": "Tierra de Agua",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100030000,
+        "locale": "en",
+        "display_name": "Tierra de Agua",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100030000,
+        "locale": "pt-BR",
+        "display_name": "Tierra de Agua",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100030001,
+        "locale": "es",
+        "display_name": "Cascadia Cocorná",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100030001,
+        "locale": "en",
+        "display_name": "Cascadia Cocorná",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100030001,
+        "locale": "pt-BR",
+        "display_name": "Cascadia Cocorná",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100030002,
+        "locale": "es",
+        "display_name": "Aventura Cocorná",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100030002,
+        "locale": "en",
+        "display_name": "Aventura Cocorná",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100030002,
+        "locale": "pt-BR",
+        "display_name": "Aventura Cocorná",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100030003,
+        "locale": "es",
+        "display_name": "Hotel Plaza Centro Cocorná",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100030003,
+        "locale": "en",
+        "display_name": "Hotel Plaza Centro Cocorná",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100030003,
+        "locale": "pt-BR",
+        "display_name": "Hotel Plaza Centro Cocorná",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100030004,
+        "locale": "es",
+        "display_name": "Hotel Aguatur — Cocorná",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100030004,
+        "locale": "en",
+        "display_name": "Hotel Aguatur — Cocorná",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100030004,
+        "locale": "pt-BR",
+        "display_name": "Hotel Aguatur — Cocorná",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100030005,
+        "locale": "es",
+        "display_name": "Flota Granada — servicio Cocorná",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100030005,
+        "locale": "en",
+        "display_name": "Flota Granada — servicio Cocorná",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100030005,
+        "locale": "pt-BR",
+        "display_name": "Flota Granada — servicio Cocorná",
+        "summary": "",
+        "description": ""
+      }
+    ],
+    "business_categories": [],
+    "business_sources": [
+      {
+        "business_id": 100030000,
+        "source_url": "https://tierradeagua.org/",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100030001,
+        "source_url": "https://www.cascadiacocorna.com/",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100030002,
+        "source_url": "https://aventuracocorna.com/",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100030003,
+        "source_url": "https://www.hotelplazacentro.net/",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100030004,
+        "source_url": "https://www.aguatur.co/",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100030005,
+        "source_url": "https://www.flotagranadasas.com/destinos/cocorna/",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      }
+    ],
+    "business_media": []
+  },
+  "media_files": {
+    "-10016": {
+      "sha256": "4fd5e9ae123e206d402afd84f025da47fa5617c5c46b605878a7a1769ebb4486"
+    },
+    "-10017": {
+      "sha256": "8f9bc8e23c2a74079a0965498cfe7d030d8c48fd550815b2c99f07c8740393e4"
+    },
+    "-10018": {
+      "sha256": "5efedc1530c6adaa0d553f2c01489ea0dc93358e88bd43e59673294b20df7482"
+    },
+    "-10019": {
+      "sha256": "d738b697b10e41cafb7d0a3a4e167e0e8e453e33ac0db34b708cc3eb02a7c0f9"
+    },
+    "-10020": {
+      "sha256": "b9e4cd4a75f5cffbc337c499de1d5e7bcce4b1b31c3f5e04dac5fa1129728c1e"
+    }
+  }
+}
