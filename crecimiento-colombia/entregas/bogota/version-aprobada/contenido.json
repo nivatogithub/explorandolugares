@@ -1,0 +1,1528 @@
+{
+  "destination": {
+    "id": 23,
+    "slug": "bogota",
+    "destination_type": "city",
+    "country_code": "CO",
+    "department": "Bogotá D.C.",
+    "subregion": "Distrito Capital",
+    "latitude": null,
+    "longitude": null,
+    "publication_status": "published",
+    "display_order": 47,
+    "created_at": "2026-10-16 20:11:42",
+    "updated_at": "2026-10-17 20:03:27",
+    "translations": {
+      "en": {
+        "destination_id": 23,
+        "locale": "en",
+        "display_name": "Bogotá",
+        "eyebrow": "Bogotá D. C. · Colombia",
+        "headline": "Culture among the hills",
+        "intro": "Explore La Candelaria, discover its museums and see Bogotá from the hills.",
+        "meta_description": "Explore La Candelaria, discover its museums and see Bogotá from the hills."
+      },
+      "es": {
+        "destination_id": 23,
+        "locale": "es",
+        "display_name": "Bogotá",
+        "eyebrow": "Bogotá D. C. · Colombia",
+        "headline": "Cultura entre los cerros",
+        "intro": "Recorre La Candelaria, descubre sus museos y contempla Bogotá desde los cerros.",
+        "meta_description": "Recorre La Candelaria, descubre sus museos y contempla Bogotá desde los cerros."
+      },
+      "pt-BR": {
+        "destination_id": 23,
+        "locale": "pt-BR",
+        "display_name": "Bogotá",
+        "eyebrow": "Bogotá D. C. · Colombia",
+        "headline": "Cultura entre os morros",
+        "intro": "Explore La Candelaria, conheça seus museus e contemple Bogotá dos morros.",
+        "meta_description": "Explore La Candelaria, conheça seus museus e contemple Bogotá dos morros."
+      }
+    },
+    "history": {
+      "es": [
+        "El territorio de Bogotá fue habitado por los muiscas antes de la fundación española de 1538. La ciudad creció alrededor de su centro histórico y se convirtió en capital de Colombia, reuniendo instituciones, universidades y una amplia vida cultural."
+      ],
+      "en": [
+        "The Bogotá region was inhabited by the Muisca before the Spanish foundation in 1538. The city grew around its historic centre and became Colombia’s capital, bringing together institutions, universities and a broad cultural life."
+      ],
+      "pt-BR": [
+        "O território de Bogotá era habitado pelos muiscas antes da fundação espanhola de 1538. A cidade cresceu ao redor do centro histórico e tornou-se capital da Colômbia, reunindo instituições, universidades e uma ampla vida cultural."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Recorrer el centro histórico y la vida cultural de La Candelaria.",
+        "Conocer colecciones de arte y arqueología.",
+        "Descubrir Usaquén, sus calles y su gastronomía.",
+        "Combinar miradores, parques y diversidad vegetal."
+      ],
+      "en": [
+        "Explore the historic centre and La Candelaria’s cultural life.",
+        "Discover collections of art and archaeology.",
+        "Enjoy Usaquén’s streets and food scene.",
+        "Combine viewpoints, parks and plant diversity."
+      ],
+      "pt-BR": [
+        "Explorar o centro histórico e a vida cultural de La Candelaria.",
+        "Conhecer coleções de arte e arqueologia.",
+        "Descobrir as ruas e a gastronomia de Usaquén.",
+        "Combinar mirantes, parques e diversidade vegetal."
+      ]
+    },
+    "places": [
+      {
+        "id": 80,
+        "slug": "plaza",
+        "type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": -2,
+        "translations": {
+          "en": {
+            "id": 80,
+            "slug": "plaza",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 1,
+            "locale": "en",
+            "name": "Bolívar Square",
+            "description": "Bogotá’s civic heart, surrounded by historic buildings.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Plaza%20de%20Bol%C3%ADvar%2C%20Bogot%C3%A1%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 77
+          },
+          "es": {
+            "id": 80,
+            "slug": "plaza",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 1,
+            "locale": "es",
+            "name": "Plaza de Bolívar",
+            "description": "El corazón cívico de Bogotá, rodeado de edificios históricos.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Plaza%20de%20Bol%C3%ADvar%2C%20Bogot%C3%A1%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 77
+          },
+          "pt-BR": {
+            "id": 80,
+            "slug": "plaza",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 1,
+            "locale": "pt-BR",
+            "name": "Praça de Bolívar",
+            "description": "O coração cívico de Bogotá, cercado por edifícios históricos.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Plaza%20de%20Bol%C3%ADvar%2C%20Bogot%C3%A1%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 77
+          }
+        }
+      },
+      {
+        "id": 220,
+        "slug": "tour-bus-bogota",
+        "type": "experience",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": -3,
+        "translations": {
+          "en": {
+            "id": 220,
+            "slug": "tour-bus-bogota",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 1,
+            "locale": "en",
+            "name": "Bogotá sightseeing bus tour",
+            "description": "Discover Bogotá’s main sights on a sightseeing bus tour.",
+            "map_url": "",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 467
+          },
+          "es": {
+            "id": 220,
+            "slug": "tour-bus-bogota",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 1,
+            "locale": "es",
+            "name": "Tour de Bogotá en bus",
+            "description": "Conoce los principales lugares de Bogotá en un recorrido turístico en bus.",
+            "map_url": "",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 467
+          },
+          "pt-BR": {
+            "id": 220,
+            "slug": "tour-bus-bogota",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 1,
+            "locale": "pt-BR",
+            "name": "Tour de Bogotá de ônibus",
+            "description": "Conheça os principais pontos de Bogotá em um passeio turístico de ônibus.",
+            "map_url": "",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 467
+          }
+        }
+      },
+      {
+        "id": 86,
+        "slug": "candelaria",
+        "type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": -4,
+        "translations": {
+          "en": {
+            "id": 86,
+            "slug": "candelaria",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 2,
+            "locale": "en",
+            "name": "La Candelaria and Chorro de Quevedo",
+            "description": "Colonial streets, squares and cultural spaces in the historic centre.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=La%20Candelaria%20y%20Chorro%20de%20Quevedo%2C%20Bogot%C3%A1%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 107
+          },
+          "es": {
+            "id": 86,
+            "slug": "candelaria",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 2,
+            "locale": "es",
+            "name": "La Candelaria y Chorro de Quevedo",
+            "description": "Calles coloniales, plazas y espacios culturales del centro histórico.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=La%20Candelaria%20y%20Chorro%20de%20Quevedo%2C%20Bogot%C3%A1%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 107
+          },
+          "pt-BR": {
+            "id": 86,
+            "slug": "candelaria",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 2,
+            "locale": "pt-BR",
+            "name": "La Candelaria e Chorro de Quevedo",
+            "description": "Ruas coloniais, praças e espaços culturais no centro histórico.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=La%20Candelaria%20y%20Chorro%20de%20Quevedo%2C%20Bogot%C3%A1%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 107
+          }
+        }
+      },
+      {
+        "id": 87,
+        "slug": "museo-oro",
+        "type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": -5,
+        "translations": {
+          "en": {
+            "id": 87,
+            "slug": "museo-oro",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 3,
+            "locale": "en",
+            "name": "Gold Museum",
+            "description": "Goldwork and stories from Colombia’s Indigenous societies.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20del%20Oro%2C%20Bogot%C3%A1%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 108
+          },
+          "es": {
+            "id": 87,
+            "slug": "museo-oro",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 3,
+            "locale": "es",
+            "name": "Museo del Oro",
+            "description": "Orfebrería y relatos de las sociedades indígenas de Colombia.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20del%20Oro%2C%20Bogot%C3%A1%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 108
+          },
+          "pt-BR": {
+            "id": 87,
+            "slug": "museo-oro",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 3,
+            "locale": "pt-BR",
+            "name": "Museu do Ouro",
+            "description": "Ourivesaria e histórias das sociedades indígenas da Colômbia.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20del%20Oro%2C%20Bogot%C3%A1%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 108
+          }
+        }
+      },
+      {
+        "id": 219,
+        "slug": "tren-sabana",
+        "type": "experience",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": -6,
+        "translations": {
+          "en": {
+            "id": 219,
+            "slug": "tren-sabana",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 3,
+            "locale": "en",
+            "name": "Sabana tourist train (nearby)",
+            "description": "Travel from Bogotá to Zipaquirá through the landscapes of the Sabana.",
+            "map_url": "",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 440
+          },
+          "es": {
+            "id": 219,
+            "slug": "tren-sabana",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 3,
+            "locale": "es",
+            "name": "Tren Turístico de la Sabana (alrededores)",
+            "description": "Viaja desde Bogotá hasta Zipaquirá por los paisajes de la Sabana.",
+            "map_url": "",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 440
+          },
+          "pt-BR": {
+            "id": 219,
+            "slug": "tren-sabana",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 3,
+            "locale": "pt-BR",
+            "name": "Trem Turístico da Sabana (arredores)",
+            "description": "Viaje de Bogotá a Zipaquirá pelas paisagens da Sabana.",
+            "map_url": "",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 440
+          }
+        }
+      },
+      {
+        "id": 79,
+        "slug": "monserrate",
+        "type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": -7,
+        "translations": {
+          "en": {
+            "id": 79,
+            "slug": "monserrate",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 4,
+            "locale": "en",
+            "name": "Monserrate Hill",
+            "description": "A hilltop sanctuary and viewpoints over the city.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Cerro%20de%20Monserrate%2C%20Bogot%C3%A1%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 109
+          },
+          "es": {
+            "id": 79,
+            "slug": "monserrate",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 4,
+            "locale": "es",
+            "name": "Cerro de Monserrate",
+            "description": "Santuario y miradores sobre la ciudad y los cerros.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Cerro%20de%20Monserrate%2C%20Bogot%C3%A1%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 109
+          },
+          "pt-BR": {
+            "id": 79,
+            "slug": "monserrate",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 4,
+            "locale": "pt-BR",
+            "name": "Cerro de Monserrate",
+            "description": "Santuário e mirantes sobre a cidade e os morros.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Cerro%20de%20Monserrate%2C%20Bogot%C3%A1%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 109
+          }
+        }
+      },
+      {
+        "id": 218,
+        "slug": "tour-grafiti-candelaria",
+        "type": "experience",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": -8,
+        "translations": {
+          "en": {
+            "id": 218,
+            "slug": "tour-grafiti-candelaria",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 4,
+            "locale": "en",
+            "name": "La Candelaria graffiti tour",
+            "description": "Discover murals and their stories on a tour with a local guide.",
+            "map_url": "",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 466
+          },
+          "es": {
+            "id": 218,
+            "slug": "tour-grafiti-candelaria",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 4,
+            "locale": "es",
+            "name": "Tour de grafiti en La Candelaria",
+            "description": "Descubre los murales y sus historias en un recorrido con guía local.",
+            "map_url": "",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 466
+          },
+          "pt-BR": {
+            "id": 218,
+            "slug": "tour-grafiti-candelaria",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 4,
+            "locale": "pt-BR",
+            "name": "Tour de grafite em La Candelaria",
+            "description": "Descubra murais e suas histórias em um passeio com guia local.",
+            "map_url": "",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 466
+          }
+        }
+      },
+      {
+        "id": 88,
+        "slug": "botero",
+        "type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": -9,
+        "translations": {
+          "en": {
+            "id": 88,
+            "slug": "botero",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 5,
+            "locale": "en",
+            "name": "Botero Museum",
+            "description": "Colombian and international art in a colonial house.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20Botero%2C%20Bogot%C3%A1%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 110
+          },
+          "es": {
+            "id": 88,
+            "slug": "botero",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 5,
+            "locale": "es",
+            "name": "Museo Botero",
+            "description": "Arte colombiano e internacional en una casa colonial.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20Botero%2C%20Bogot%C3%A1%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 110
+          },
+          "pt-BR": {
+            "id": 88,
+            "slug": "botero",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 5,
+            "locale": "pt-BR",
+            "name": "Museu Botero",
+            "description": "Arte colombiana e internacional em uma casa colonial.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20Botero%2C%20Bogot%C3%A1%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 110
+          }
+        }
+      },
+      {
+        "id": 89,
+        "slug": "usaquen",
+        "type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": -10,
+        "translations": {
+          "en": {
+            "id": 89,
+            "slug": "usaquen",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 6,
+            "locale": "en",
+            "name": "Usaquén: square, streets and market",
+            "description": "A former village centre with a square, cafés and craft market.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Usaqu%C3%A9n%3A%20plaza%2C%20calles%20y%20mercado%2C%20Bogot%C3%A1%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 111
+          },
+          "es": {
+            "id": 89,
+            "slug": "usaquen",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 6,
+            "locale": "es",
+            "name": "Usaquén: plaza, calles y mercado",
+            "description": "Un antiguo núcleo de pueblo con plaza, cafés y mercado de oficios.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Usaqu%C3%A9n%3A%20plaza%2C%20calles%20y%20mercado%2C%20Bogot%C3%A1%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 111
+          },
+          "pt-BR": {
+            "id": 89,
+            "slug": "usaquen",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 6,
+            "locale": "pt-BR",
+            "name": "Usaquén: praça, ruas e mercado",
+            "description": "Um antigo núcleo de povoado com praça, cafés e mercado de artesanato.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Usaqu%C3%A9n%3A%20plaza%2C%20calles%20y%20mercado%2C%20Bogot%C3%A1%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 111
+          }
+        }
+      },
+      {
+        "id": 81,
+        "slug": "jardin",
+        "type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": -11,
+        "translations": {
+          "en": {
+            "id": 81,
+            "slug": "jardin",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 7,
+            "locale": "en",
+            "name": "Bogotá Botanical Garden",
+            "description": "Plant collections and Colombian ecosystems in the Tropicarium.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Jard%C3%ADn%20Bot%C3%A1nico%20de%20Bogot%C3%A1%2C%20Bogot%C3%A1%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 172
+          },
+          "es": {
+            "id": 81,
+            "slug": "jardin",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 7,
+            "locale": "es",
+            "name": "Jardín Botánico de Bogotá",
+            "description": "Colecciones vegetales y ecosistemas colombianos en el Tropicario.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Jard%C3%ADn%20Bot%C3%A1nico%20de%20Bogot%C3%A1%2C%20Bogot%C3%A1%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 172
+          },
+          "pt-BR": {
+            "id": 81,
+            "slug": "jardin",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 7,
+            "locale": "pt-BR",
+            "name": "Jardim Botânico de Bogotá",
+            "description": "Coleções vegetais e ecossistemas colombianos no Tropicário.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Jard%C3%ADn%20Bot%C3%A1nico%20de%20Bogot%C3%A1%2C%20Bogot%C3%A1%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 172
+          }
+        }
+      },
+      {
+        "id": 90,
+        "slug": "simon",
+        "type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": -12,
+        "translations": {
+          "en": {
+            "id": 90,
+            "slug": "simon",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 8,
+            "locale": "en",
+            "name": "Simón Bolívar Metropolitan Park",
+            "description": "A lake, paths and green spaces for an easy stroll.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Parque%20Metropolitano%20Sim%C3%B3n%20Bol%C3%ADvar%2C%20Bogot%C3%A1%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 113
+          },
+          "es": {
+            "id": 90,
+            "slug": "simon",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 8,
+            "locale": "es",
+            "name": "Parque Metropolitano Simón Bolívar",
+            "description": "Lago, senderos y zonas verdes para recorrer con calma.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Parque%20Metropolitano%20Sim%C3%B3n%20Bol%C3%ADvar%2C%20Bogot%C3%A1%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 113
+          },
+          "pt-BR": {
+            "id": 90,
+            "slug": "simon",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 8,
+            "locale": "pt-BR",
+            "name": "Parque Metropolitano Simón Bolívar",
+            "description": "Lago, caminhos e áreas verdes para passear com calma.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Parque%20Metropolitano%20Sim%C3%B3n%20Bol%C3%ADvar%2C%20Bogot%C3%A1%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 113
+          }
+        }
+      },
+      {
+        "id": 118,
+        "slug": "cielo",
+        "type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": -13,
+        "translations": {
+          "en": {
+            "id": 118,
+            "slug": "cielo",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 9,
+            "locale": "en",
+            "name": "Bogotá Planetarium",
+            "description": "Astronomy, exhibitions and dome projections.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Planetario+de+Bogota",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 464
+          },
+          "es": {
+            "id": 118,
+            "slug": "cielo",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 9,
+            "locale": "es",
+            "name": "Planetario de Bogotá",
+            "description": "Astronomía, exposiciones y proyecciones en el domo.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Planetario+de+Bogota",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 464
+          },
+          "pt-BR": {
+            "id": 118,
+            "slug": "cielo",
+            "poi_type": "place",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 9,
+            "locale": "pt-BR",
+            "name": "Planetário de Bogotá",
+            "description": "Astronomia, exposições e projeções no domo.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Planetario+de+Bogota",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": 464
+          }
+        }
+      },
+      {
+        "id": 117,
+        "slug": "ciencia",
+        "type": "experience",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "media_asset_id": -14,
+        "translations": {
+          "en": {
+            "id": 117,
+            "slug": "ciencia",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 13,
+            "locale": "en",
+            "name": "Interactive science at Maloka",
+            "description": "Discover interactive science experiences at Maloka.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Interactive%20science%20at%20Maloka%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": null
+          },
+          "es": {
+            "id": 117,
+            "slug": "ciencia",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 13,
+            "locale": "es",
+            "name": "Ciencia interactiva en Maloka",
+            "description": "Descubre experiencias interactivas de ciencia en Maloka.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Ciencia%20interactiva%20en%20Maloka%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": null
+          },
+          "pt-BR": {
+            "id": 117,
+            "slug": "ciencia",
+            "poi_type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "display_order": 13,
+            "locale": "pt-BR",
+            "name": "Ciência interativa na Maloka",
+            "description": "Descubra experiências interativas de ciência no Maloka.",
+            "map_url": "https://www.google.com/maps/search/?api=1&query=Ci%C3%AAncia%20interativa%20na%20Maloka%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+            "external_url": "",
+            "external_label": "",
+            "media_asset_id": null
+          }
+        }
+      }
+    ],
+    "sources": {
+      "es": [
+        {
+          "locale": "es",
+          "section_key": "history",
+          "source_url": "https://culturarecreacionydeporte.gov.co/es/bogotanitos/bogodatos/sobre-bogota-y-su-historia",
+          "source_label": "Secretaría de Cultura: historia"
+        },
+        {
+          "locale": "es",
+          "section_key": "history",
+          "source_url": "https://colecciones.banrepcultural.org/es/document/numismtica/63a069155d96b8790f342e96",
+          "source_label": "Banco de la República: estatua de Bolívar y plaza"
+        },
+        {
+          "locale": "es",
+          "section_key": "history",
+          "source_url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/plaza-de-bolivar",
+          "source_label": "Visit Bogotá: Plaza de Bolívar"
+        },
+        {
+          "locale": "es",
+          "section_key": "places",
+          "source_url": "https://www.banrepcultural.org/bogota/museo-del-oro/visita",
+          "source_label": "Banco de la República: visita Museo del Oro"
+        },
+        {
+          "locale": "es",
+          "section_key": "places",
+          "source_url": "https://monserrate.co/en/",
+          "source_label": "Cerro de Monserrate operador"
+        },
+        {
+          "locale": "es",
+          "section_key": "places",
+          "source_url": "https://jbb.gov.co/",
+          "source_label": "Jardín Botánico José Celestino Mutis"
+        },
+        {
+          "locale": "es",
+          "section_key": "places",
+          "source_url": "https://www.mercadopulgasusaquen.com/contactanos/",
+          "source_label": "Asociación Mercado Pulgas Usaquén"
+        },
+        {
+          "locale": "es",
+          "section_key": "places",
+          "source_url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/plazoleta-del-chorro-de-quevedo",
+          "source_label": "Visit Bogotá: Chorro de Quevedo"
+        },
+        {
+          "locale": "es",
+          "section_key": "places",
+          "source_url": "https://visitbogota.co/es/que-hacer-en-bogota/naturaleza/parque-simon-bolivar",
+          "source_label": "Visit Bogotá: Parque Simón Bolívar"
+        },
+        {
+          "locale": "es",
+          "section_key": "places",
+          "source_url": "https://visitbogota.co/es/que-hacer-en-bogota/gastronomia/zona-gastronomica-usaquen",
+          "source_label": "Visit Bogotá: Usaquén"
+        },
+        {
+          "locale": "es",
+          "section_key": "places",
+          "source_url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/museo-botero-en-bogota",
+          "source_label": "Visit Bogotá: Museo Botero"
+        },
+        {
+          "locale": "es",
+          "section_key": "places",
+          "source_url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/torre-colpatria",
+          "source_label": "Visit Bogotá: Torre Colpatria"
+        }
+      ],
+      "en": [
+        {
+          "locale": "en",
+          "section_key": "history",
+          "source_url": "https://culturarecreacionydeporte.gov.co/es/bogotanitos/bogodatos/sobre-bogota-y-su-historia",
+          "source_label": "Secretaría de Cultura: historia"
+        },
+        {
+          "locale": "en",
+          "section_key": "history",
+          "source_url": "https://colecciones.banrepcultural.org/es/document/numismtica/63a069155d96b8790f342e96",
+          "source_label": "Banco de la República: estatua de Bolívar y plaza"
+        },
+        {
+          "locale": "en",
+          "section_key": "history",
+          "source_url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/plaza-de-bolivar",
+          "source_label": "Visit Bogotá: Plaza de Bolívar"
+        },
+        {
+          "locale": "en",
+          "section_key": "places",
+          "source_url": "https://www.banrepcultural.org/bogota/museo-del-oro/visita",
+          "source_label": "Banco de la República: visita Museo del Oro"
+        },
+        {
+          "locale": "en",
+          "section_key": "places",
+          "source_url": "https://monserrate.co/en/",
+          "source_label": "Cerro de Monserrate operador"
+        },
+        {
+          "locale": "en",
+          "section_key": "places",
+          "source_url": "https://jbb.gov.co/",
+          "source_label": "Jardín Botánico José Celestino Mutis"
+        },
+        {
+          "locale": "en",
+          "section_key": "places",
+          "source_url": "https://www.mercadopulgasusaquen.com/contactanos/",
+          "source_label": "Asociación Mercado Pulgas Usaquén"
+        },
+        {
+          "locale": "en",
+          "section_key": "places",
+          "source_url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/plazoleta-del-chorro-de-quevedo",
+          "source_label": "Visit Bogotá: Chorro de Quevedo"
+        },
+        {
+          "locale": "en",
+          "section_key": "places",
+          "source_url": "https://visitbogota.co/es/que-hacer-en-bogota/naturaleza/parque-simon-bolivar",
+          "source_label": "Visit Bogotá: Parque Simón Bolívar"
+        },
+        {
+          "locale": "en",
+          "section_key": "places",
+          "source_url": "https://visitbogota.co/es/que-hacer-en-bogota/gastronomia/zona-gastronomica-usaquen",
+          "source_label": "Visit Bogotá: Usaquén"
+        },
+        {
+          "locale": "en",
+          "section_key": "places",
+          "source_url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/museo-botero-en-bogota",
+          "source_label": "Visit Bogotá: Museo Botero"
+        },
+        {
+          "locale": "en",
+          "section_key": "places",
+          "source_url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/torre-colpatria",
+          "source_label": "Visit Bogotá: Torre Colpatria"
+        }
+      ],
+      "pt-BR": [
+        {
+          "locale": "pt-BR",
+          "section_key": "history",
+          "source_url": "https://culturarecreacionydeporte.gov.co/es/bogotanitos/bogodatos/sobre-bogota-y-su-historia",
+          "source_label": "Secretaría de Cultura: historia"
+        },
+        {
+          "locale": "pt-BR",
+          "section_key": "history",
+          "source_url": "https://colecciones.banrepcultural.org/es/document/numismtica/63a069155d96b8790f342e96",
+          "source_label": "Banco de la República: estatua de Bolívar y plaza"
+        },
+        {
+          "locale": "pt-BR",
+          "section_key": "history",
+          "source_url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/plaza-de-bolivar",
+          "source_label": "Visit Bogotá: Plaza de Bolívar"
+        },
+        {
+          "locale": "pt-BR",
+          "section_key": "places",
+          "source_url": "https://www.banrepcultural.org/bogota/museo-del-oro/visita",
+          "source_label": "Banco de la República: visita Museo del Oro"
+        },
+        {
+          "locale": "pt-BR",
+          "section_key": "places",
+          "source_url": "https://monserrate.co/en/",
+          "source_label": "Cerro de Monserrate operador"
+        },
+        {
+          "locale": "pt-BR",
+          "section_key": "places",
+          "source_url": "https://jbb.gov.co/",
+          "source_label": "Jardín Botánico José Celestino Mutis"
+        },
+        {
+          "locale": "pt-BR",
+          "section_key": "places",
+          "source_url": "https://www.mercadopulgasusaquen.com/contactanos/",
+          "source_label": "Asociación Mercado Pulgas Usaquén"
+        },
+        {
+          "locale": "pt-BR",
+          "section_key": "places",
+          "source_url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/plazoleta-del-chorro-de-quevedo",
+          "source_label": "Visit Bogotá: Chorro de Quevedo"
+        },
+        {
+          "locale": "pt-BR",
+          "section_key": "places",
+          "source_url": "https://visitbogota.co/es/que-hacer-en-bogota/naturaleza/parque-simon-bolivar",
+          "source_label": "Visit Bogotá: Parque Simón Bolívar"
+        },
+        {
+          "locale": "pt-BR",
+          "section_key": "places",
+          "source_url": "https://visitbogota.co/es/que-hacer-en-bogota/gastronomia/zona-gastronomica-usaquen",
+          "source_label": "Visit Bogotá: Usaquén"
+        },
+        {
+          "locale": "pt-BR",
+          "section_key": "places",
+          "source_url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/museo-botero-en-bogota",
+          "source_label": "Visit Bogotá: Museo Botero"
+        },
+        {
+          "locale": "pt-BR",
+          "section_key": "places",
+          "source_url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/torre-colpatria",
+          "source_label": "Visit Bogotá: Torre Colpatria"
+        }
+      ]
+    },
+    "destination_media": {
+      "hero": {
+        "role": "hero",
+        "media_asset_id": -1,
+        "asset_path": "assets/bogota-semirrealista/portada-v4-1200.webp"
+      }
+    }
+  },
+  "media": [
+    {
+      "id": -14,
+      "asset_path": "assets/bogota-semirrealista/ciencia-800.webp",
+      "origin": "ai_generated",
+      "creator": "Explorando Lugares · ilustración IA",
+      "source_url": "",
+      "license_name": "Procedencia conservada en entrega del destino",
+      "license_url": "",
+      "width": 800,
+      "height": 533,
+      "provenance_json": "{\"sha256\": \"73799576843e8e5866041c69c7378d28a1b278760e7c8821db8e4975b7c08c10\", \"destination\": \"bogota\", \"selection\": \"current reviewed preprod\"}",
+      "sha256": "73799576843e8e5866041c69c7378d28a1b278760e7c8821db8e4975b7c08c10",
+      "local_file": "media/73799576843e8e5866041c69c7378d28a1b278760e7c8821db8e4975b7c08c10.webp"
+    },
+    {
+      "id": -13,
+      "asset_path": "assets/bogota-semirrealista/cielo-800.webp",
+      "origin": "ai_generated",
+      "creator": "Explorando Lugares · ilustración IA",
+      "source_url": "",
+      "license_name": "Procedencia conservada en entrega del destino",
+      "license_url": "",
+      "width": 960,
+      "height": 640,
+      "provenance_json": "{\"sha256\": \"5d92496a92b3be15d18db8e091afb1cce3980ec22391be7098cccd80a4098e82\", \"destination\": \"bogota\", \"selection\": \"current reviewed preprod\"}",
+      "sha256": "5d92496a92b3be15d18db8e091afb1cce3980ec22391be7098cccd80a4098e82",
+      "local_file": "media/5d92496a92b3be15d18db8e091afb1cce3980ec22391be7098cccd80a4098e82.webp"
+    },
+    {
+      "id": -12,
+      "asset_path": "assets/bogota-semirrealista/bogota-simon-800.webp",
+      "origin": "ai_generated",
+      "creator": "Explorando Lugares · ilustración IA",
+      "source_url": "",
+      "license_name": "Procedencia conservada en entrega del destino",
+      "license_url": "",
+      "width": 800,
+      "height": 533,
+      "provenance_json": "{\"sha256\": \"b2e71dacb697fc4b2abd3fec58d6113b0c50387bc3e66ca0461282dfd9bafe37\", \"destination\": \"bogota\", \"selection\": \"current reviewed preprod\"}",
+      "sha256": "b2e71dacb697fc4b2abd3fec58d6113b0c50387bc3e66ca0461282dfd9bafe37",
+      "local_file": "media/b2e71dacb697fc4b2abd3fec58d6113b0c50387bc3e66ca0461282dfd9bafe37.webp"
+    },
+    {
+      "id": -11,
+      "asset_path": "assets/bogota-semirrealista/bogota-jardin-aprobado.webp",
+      "origin": "ai_generated",
+      "creator": "Explorando Lugares · ilustración IA",
+      "source_url": "",
+      "license_name": "Procedencia conservada en entrega del destino",
+      "license_url": "",
+      "width": 1200,
+      "height": 800,
+      "provenance_json": "{\"sha256\": \"dc722438cc464cbccf05e5717455f2e35a557301683162038ef254ccb87d66bf\", \"destination\": \"bogota\", \"selection\": \"current reviewed preprod\"}",
+      "sha256": "dc722438cc464cbccf05e5717455f2e35a557301683162038ef254ccb87d66bf",
+      "local_file": "media/dc722438cc464cbccf05e5717455f2e35a557301683162038ef254ccb87d66bf.webp"
+    },
+    {
+      "id": -10,
+      "asset_path": "assets/bogota-semirrealista/bogota-usaquen-800.webp",
+      "origin": "ai_generated",
+      "creator": "Explorando Lugares · ilustración IA",
+      "source_url": "",
+      "license_name": "Procedencia conservada en entrega del destino",
+      "license_url": "",
+      "width": 800,
+      "height": 533,
+      "provenance_json": "{\"sha256\": \"527132204afe1004951c05fd9c12e6b1afccf5eff40749e668622ea8fcee7c8d\", \"destination\": \"bogota\", \"selection\": \"current reviewed preprod\"}",
+      "sha256": "527132204afe1004951c05fd9c12e6b1afccf5eff40749e668622ea8fcee7c8d",
+      "local_file": "media/527132204afe1004951c05fd9c12e6b1afccf5eff40749e668622ea8fcee7c8d.webp"
+    },
+    {
+      "id": -9,
+      "asset_path": "assets/bogota-semirrealista/bogota-botero-800.webp",
+      "origin": "ai_generated",
+      "creator": "Explorando Lugares · ilustración IA",
+      "source_url": "",
+      "license_name": "Procedencia conservada en entrega del destino",
+      "license_url": "",
+      "width": 800,
+      "height": 533,
+      "provenance_json": "{\"sha256\": \"1da46f73d3401339c45523f67d5e5f0d817e89b07c6f5695cdb8c199930a8246\", \"destination\": \"bogota\", \"selection\": \"current reviewed preprod\"}",
+      "sha256": "1da46f73d3401339c45523f67d5e5f0d817e89b07c6f5695cdb8c199930a8246",
+      "local_file": "media/1da46f73d3401339c45523f67d5e5f0d817e89b07c6f5695cdb8c199930a8246.webp"
+    },
+    {
+      "id": -8,
+      "asset_path": "assets/destinos/bogota/86a4c443fc4c4adf08debc2050a112d12877fd62611286f5cd4de65f4d884749.webp",
+      "origin": "ai_generated",
+      "creator": "Explorando Lugares · ilustración IA",
+      "source_url": "",
+      "license_name": "Procedencia conservada en entrega del destino",
+      "license_url": "",
+      "width": 960,
+      "height": 640,
+      "provenance_json": "{\"sha256\": \"86a4c443fc4c4adf08debc2050a112d12877fd62611286f5cd4de65f4d884749\", \"destination\": \"bogota\", \"selection\": \"current reviewed preprod\"}",
+      "sha256": "86a4c443fc4c4adf08debc2050a112d12877fd62611286f5cd4de65f4d884749",
+      "local_file": "media/86a4c443fc4c4adf08debc2050a112d12877fd62611286f5cd4de65f4d884749.webp"
+    },
+    {
+      "id": -7,
+      "asset_path": "assets/bogota-semirrealista/bogota-monserrate-800.webp",
+      "origin": "ai_generated",
+      "creator": "Explorando Lugares · ilustración IA",
+      "source_url": "",
+      "license_name": "Procedencia conservada en entrega del destino",
+      "license_url": "",
+      "width": 800,
+      "height": 533,
+      "provenance_json": "{\"sha256\": \"da89caf723cc4dc4fec2625880285e05ed4ec2df704b1762a01966787811c6ce\", \"destination\": \"bogota\", \"selection\": \"current reviewed preprod\"}",
+      "sha256": "da89caf723cc4dc4fec2625880285e05ed4ec2df704b1762a01966787811c6ce",
+      "local_file": "media/da89caf723cc4dc4fec2625880285e05ed4ec2df704b1762a01966787811c6ce.webp"
+    },
+    {
+      "id": -6,
+      "asset_path": "assets/destinos/zipaquira/9f088d4847c0a853b2e794e6a503d7786d292cfec91b44b0a4757ce4aca6ff5a.webp",
+      "origin": "ai_generated",
+      "creator": "Explorando Lugares · ilustración IA",
+      "source_url": "",
+      "license_name": "Procedencia conservada en entrega del destino",
+      "license_url": "",
+      "width": 960,
+      "height": 640,
+      "provenance_json": "{\"sha256\": \"9f088d4847c0a853b2e794e6a503d7786d292cfec91b44b0a4757ce4aca6ff5a\", \"destination\": \"bogota\", \"selection\": \"current reviewed preprod\"}",
+      "sha256": "9f088d4847c0a853b2e794e6a503d7786d292cfec91b44b0a4757ce4aca6ff5a",
+      "local_file": "media/9f088d4847c0a853b2e794e6a503d7786d292cfec91b44b0a4757ce4aca6ff5a.webp"
+    },
+    {
+      "id": -5,
+      "asset_path": "assets/bogota-semirrealista/bogota-museo-oro-800.webp",
+      "origin": "ai_generated",
+      "creator": "Explorando Lugares · ilustración IA",
+      "source_url": "",
+      "license_name": "Procedencia conservada en entrega del destino",
+      "license_url": "",
+      "width": 800,
+      "height": 533,
+      "provenance_json": "{\"sha256\": \"a724437585751871c4b908ae556bec58dcf715e003bcdd89e86e2845fa930d54\", \"destination\": \"bogota\", \"selection\": \"current reviewed preprod\"}",
+      "sha256": "a724437585751871c4b908ae556bec58dcf715e003bcdd89e86e2845fa930d54",
+      "local_file": "media/a724437585751871c4b908ae556bec58dcf715e003bcdd89e86e2845fa930d54.webp"
+    },
+    {
+      "id": -4,
+      "asset_path": "assets/bogota-semirrealista/bogota-candelaria-800.webp",
+      "origin": "ai_generated",
+      "creator": "Explorando Lugares · ilustración IA",
+      "source_url": "",
+      "license_name": "Procedencia conservada en entrega del destino",
+      "license_url": "",
+      "width": 800,
+      "height": 533,
+      "provenance_json": "{\"sha256\": \"bfeb63029c99538283ead0ae17e55ca65ac62e7182b4552914e7c4dbfb711450\", \"destination\": \"bogota\", \"selection\": \"current reviewed preprod\"}",
+      "sha256": "bfeb63029c99538283ead0ae17e55ca65ac62e7182b4552914e7c4dbfb711450",
+      "local_file": "media/bfeb63029c99538283ead0ae17e55ca65ac62e7182b4552914e7c4dbfb711450.webp"
+    },
+    {
+      "id": -3,
+      "asset_path": "assets/destinos/bogota/922b0a55a3fa97144bd9a03ec7c46dcf8de9281ac03654c09212446a0f8f5e07.webp",
+      "origin": "ai_generated",
+      "creator": "Explorando Lugares · ilustración IA",
+      "source_url": "",
+      "license_name": "Procedencia conservada en entrega del destino",
+      "license_url": "",
+      "width": 960,
+      "height": 640,
+      "provenance_json": "{\"sha256\": \"922b0a55a3fa97144bd9a03ec7c46dcf8de9281ac03654c09212446a0f8f5e07\", \"destination\": \"bogota\", \"selection\": \"current reviewed preprod\"}",
+      "sha256": "922b0a55a3fa97144bd9a03ec7c46dcf8de9281ac03654c09212446a0f8f5e07",
+      "local_file": "media/922b0a55a3fa97144bd9a03ec7c46dcf8de9281ac03654c09212446a0f8f5e07.webp"
+    },
+    {
+      "id": -1,
+      "asset_path": "assets/bogota-semirrealista/portada-v4-1200.webp",
+      "origin": "ai_generated",
+      "creator": "Explorando Lugares · ilustración IA",
+      "source_url": "",
+      "license_name": "Procedencia conservada en entrega del destino",
+      "license_url": "",
+      "width": 1200,
+      "height": 800,
+      "provenance_json": "{\"sha256\": \"ce3694ebfe583500db04ac97e1bfa0d021bc60f4e2ea5dea417703453cc08236\", \"destination\": \"bogota\", \"selection\": \"current reviewed preprod\"}",
+      "sha256": "ce3694ebfe583500db04ac97e1bfa0d021bc60f4e2ea5dea417703453cc08236",
+      "local_file": "media/ce3694ebfe583500db04ac97e1bfa0d021bc60f4e2ea5dea417703453cc08236.webp"
+    },
+    {
+      "id": -2,
+      "asset_path": "assets/bogota-semirrealista/bogota-plaza-800.webp",
+      "origin": "ai_generated",
+      "creator": "Explorando Lugares · ilustración IA",
+      "source_url": "",
+      "license_name": "Procedencia conservada en entrega del destino",
+      "license_url": "",
+      "width": 800,
+      "height": 533,
+      "provenance_json": "{\"sha256\": \"ed017496074a1107518d23369724dbec58203c86c89234de3b5f19a1f7cfa934\", \"destination\": \"bogota\", \"selection\": \"current reviewed preprod\"}",
+      "sha256": "ed017496074a1107518d23369724dbec58203c86c89234de3b5f19a1f7cfa934",
+      "local_file": "media/ed017496074a1107518d23369724dbec58203c86c89234de3b5f19a1f7cfa934.webp"
+    }
+  ],
+  "media_translations": [
+    {
+      "media_asset_id": -1,
+      "locale": "es",
+      "alt_text": "Ilustración editorial: bogota",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -1,
+      "locale": "en",
+      "alt_text": "Ilustración editorial: bogota",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -1,
+      "locale": "pt-BR",
+      "alt_text": "Ilustración editorial: bogota",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -2,
+      "locale": "es",
+      "alt_text": "Ilustración editorial: Plaza de Bolívar",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -2,
+      "locale": "en",
+      "alt_text": "Ilustración editorial: Plaza de Bolívar",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -2,
+      "locale": "pt-BR",
+      "alt_text": "Ilustración editorial: Plaza de Bolívar",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -3,
+      "locale": "es",
+      "alt_text": "Ilustración editorial: Tour de Bogotá en bus",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -3,
+      "locale": "en",
+      "alt_text": "Ilustración editorial: Tour de Bogotá en bus",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -3,
+      "locale": "pt-BR",
+      "alt_text": "Ilustración editorial: Tour de Bogotá en bus",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -4,
+      "locale": "es",
+      "alt_text": "Ilustración editorial: La Candelaria y Chorro de Quevedo",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -4,
+      "locale": "en",
+      "alt_text": "Ilustración editorial: La Candelaria y Chorro de Quevedo",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -4,
+      "locale": "pt-BR",
+      "alt_text": "Ilustración editorial: La Candelaria y Chorro de Quevedo",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -5,
+      "locale": "es",
+      "alt_text": "Ilustración editorial: Museo del Oro",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -5,
+      "locale": "en",
+      "alt_text": "Ilustración editorial: Museo del Oro",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -5,
+      "locale": "pt-BR",
+      "alt_text": "Ilustración editorial: Museo del Oro",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -6,
+      "locale": "es",
+      "alt_text": "Ilustración editorial: Tren Turístico de la Sabana (alrededores)",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -6,
+      "locale": "en",
+      "alt_text": "Ilustración editorial: Tren Turístico de la Sabana (alrededores)",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -6,
+      "locale": "pt-BR",
+      "alt_text": "Ilustración editorial: Tren Turístico de la Sabana (alrededores)",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -7,
+      "locale": "es",
+      "alt_text": "Ilustración editorial: Cerro de Monserrate",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -7,
+      "locale": "en",
+      "alt_text": "Ilustración editorial: Cerro de Monserrate",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -7,
+      "locale": "pt-BR",
+      "alt_text": "Ilustración editorial: Cerro de Monserrate",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -8,
+      "locale": "es",
+      "alt_text": "Ilustración editorial: Tour de grafiti en La Candelaria",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -8,
+      "locale": "en",
+      "alt_text": "Ilustración editorial: Tour de grafiti en La Candelaria",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -8,
+      "locale": "pt-BR",
+      "alt_text": "Ilustración editorial: Tour de grafiti en La Candelaria",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -9,
+      "locale": "es",
+      "alt_text": "Ilustración editorial: Museo Botero",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -9,
+      "locale": "en",
+      "alt_text": "Ilustración editorial: Museo Botero",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -9,
+      "locale": "pt-BR",
+      "alt_text": "Ilustración editorial: Museo Botero",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -10,
+      "locale": "es",
+      "alt_text": "Ilustración editorial: Usaquén: plaza, calles y mercado",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -10,
+      "locale": "en",
+      "alt_text": "Ilustración editorial: Usaquén: plaza, calles y mercado",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -10,
+      "locale": "pt-BR",
+      "alt_text": "Ilustración editorial: Usaquén: plaza, calles y mercado",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -11,
+      "locale": "es",
+      "alt_text": "Ilustración editorial: Jardín Botánico de Bogotá",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -11,
+      "locale": "en",
+      "alt_text": "Ilustración editorial: Jardín Botánico de Bogotá",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -11,
+      "locale": "pt-BR",
+      "alt_text": "Ilustración editorial: Jardín Botánico de Bogotá",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -12,
+      "locale": "es",
+      "alt_text": "Ilustración editorial: Parque Metropolitano Simón Bolívar",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -12,
+      "locale": "en",
+      "alt_text": "Ilustración editorial: Parque Metropolitano Simón Bolívar",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -12,
+      "locale": "pt-BR",
+      "alt_text": "Ilustración editorial: Parque Metropolitano Simón Bolívar",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -13,
+      "locale": "es",
+      "alt_text": "Ilustración editorial: Planetario de Bogotá",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -13,
+      "locale": "en",
+      "alt_text": "Ilustración editorial: Planetario de Bogotá",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -13,
+      "locale": "pt-BR",
+      "alt_text": "Ilustración editorial: Planetario de Bogotá",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -14,
+      "locale": "es",
+      "alt_text": "Ilustración editorial: Ciencia interactiva en Maloka",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -14,
+      "locale": "en",
+      "alt_text": "Ilustración editorial: Ciencia interactiva en Maloka",
+      "caption": ""
+    },
+    {
+      "media_asset_id": -14,
+      "locale": "pt-BR",
+      "alt_text": "Ilustración editorial: Ciencia interactiva en Maloka",
+      "caption": ""
+    }
+  ]
+}
