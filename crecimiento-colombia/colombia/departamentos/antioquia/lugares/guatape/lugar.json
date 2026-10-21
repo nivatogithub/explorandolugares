@@ -2,16 +2,17 @@
   "schema_version": 1,
   "place_id": "CO-05-guatape",
   "department_id": "CO-05",
-  "state": "planned",
-  "owner": null,
+  "state": "in_progress",
+  "owner": "/root/nuevo_guatape",
   "reviewer": null,
   "branch": "lugar/CO/antioquia/guatape",
   "pr_url": null,
-  "base_commit": null,
+  "base_commit": "be96d8a",
   "blockers": [
-    "Asignar responsable y auditar fuentes, permisos y estado real"
+    "Ocho referencias visuales pendientes de elección; no generar imágenes genéricas",
+    "Directorio categorías licores/cultura sin evidencia aún;24 negocios con vigencia pendiente"
   ],
-  "next_action": "Completar PROCESO.md y evidencia específica del lugar",
+  "next_action": "Elegir referencias por componente; después generar, empaquetar y coordinar integración secuencial.",
   "gates": {
     "identidad": {
       "passed": false,
