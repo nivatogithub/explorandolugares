@@ -18,6 +18,13 @@ final class BusinessEditorialPreview
   $b['image_path']=$b['logo']['asset_path']??null;$b['width']=$b['logo']['width']??null;$b['height']=$b['logo']['height']??null;
   $b['demo_page_url']='/business/editorial.php?business='.$id.'&version='.$version['id'].'&preview=page&lang='.rawurlencode($locale);
   $b['showcase']=$b['plan_code']==='page_premium'?BusinessShowcase::renderData($pdo,$id,$p['showcase']??[],$locale):['products'=>[],'experiences'=>[]];
+  // Original merchant photos are visible only in authenticated private draft previews.
+  if(in_array($version['status'],['draft','in_editorial','changes_requested','rejected'],true)){
+   foreach($p['source_images']??[] as $slot=>$name){$q=$pdo->prepare('SELECT id,width,height FROM business_editorial_images WHERE version_id=? AND storage_name=?');$q->execute([$version['id'],$name]);if(!$ref=$q->fetch(PDO::FETCH_ASSOC))continue;$media=['asset_path'=>'business/editorial-image.php?id='.$ref['id'],'width'=>$ref['width'],'height'=>$ref['height'],'alt_text'=>'Fotografía original del negocio · pendiente de preparación editorial'];
+    if($slot==='cover'&&in_array($b['plan_code'],['page','page_premium'],true))$b['cover']=$media;
+   }
+   if($b['plan_code']==='page_premium'){$b['showcase']['products']=[];foreach($p['showcase']['products']??[] as $i=>$row){$path=null;$source=$p['source_images']['product_'.$i]??'';if($source){$q=$pdo->prepare('SELECT id FROM business_editorial_images WHERE version_id=? AND storage_name=?');$q->execute([$version['id'],$source]);if($ref=$q->fetchColumn())$path='business/editorial-image.php?id='.$ref;}if(!$path&&!empty($row['asset_id'])){$q=$pdo->prepare('SELECT asset_path FROM media_assets WHERE id=?');$q->execute([$row['asset_id']]);$path=$q->fetchColumn();}if($path)$b['showcase']['products'][]=array_merge($row['translations'][$locale]??$row['translations']['es'],['asset_path'=>$path]);}}
+  }
   return $b;
  }
 }
