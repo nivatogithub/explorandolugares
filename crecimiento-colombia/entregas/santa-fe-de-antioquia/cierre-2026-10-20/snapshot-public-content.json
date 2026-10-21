@@ -1,0 +1,2885 @@
+{
+    "schema": "destination-public-snapshot-v1",
+    "destination": "santa-fe-de-antioquia",
+    "tables": {
+        "destinations": [
+            {
+                "id": 4,
+                "slug": "santa-fe-de-antioquia",
+                "destination_type": "municipality",
+                "country_code": "CO",
+                "department": "Antioquia",
+                "subregion": "Occidente",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "published",
+                "display_order": 101
+            }
+        ],
+        "destination_translations": [
+            {
+                "destination_id": 4,
+                "locale": "en",
+                "display_name": "Santa Fe de Antioquia",
+                "eyebrow": "",
+                "headline": "Heritage and filigree",
+                "intro": "Historic streets, filigree jewellery and the Puente de Occidente in the Cauca valley.",
+                "meta_description": "Historic streets, filigree jewellery and the Puente de Occidente in the Cauca valley."
+            },
+            {
+                "destination_id": 4,
+                "locale": "es",
+                "display_name": "Santa Fe de Antioquia",
+                "eyebrow": "",
+                "headline": "Patrimonio y filigrana",
+                "intro": "Calles históricas, filigrana y el Puente de Occidente en el valle del Cauca.",
+                "meta_description": "Calles históricas, filigrana y el Puente de Occidente en el valle del Cauca."
+            },
+            {
+                "destination_id": 4,
+                "locale": "pt-BR",
+                "display_name": "Santa Fe de Antioquia",
+                "eyebrow": "",
+                "headline": "Patrimônio e filigrana",
+                "intro": "Ruas históricas, filigrana e a Puente de Occidente no vale do Cauca.",
+                "meta_description": "Ruas históricas, filigrana e a Puente de Occidente no vale do Cauca."
+            }
+        ],
+        "destination_story_blocks": [
+            {
+                "id": 5,
+                "destination_id": 4,
+                "section_key": "history",
+                "display_order": 1
+            }
+        ],
+        "destination_reasons": [
+            {
+                "id": 10,
+                "destination_id": 4,
+                "display_order": 1
+            }
+        ],
+        "destination_sources": [
+            {
+                "id": 2537,
+                "destination_id": 4,
+                "locale": "es",
+                "section_key": "history",
+                "source_url": "https://colombia.travel/es/santa-fe-de-antioquia",
+                "source_label": "procolombia",
+                "display_order": 1
+            },
+            {
+                "id": 2538,
+                "destination_id": 4,
+                "locale": "es",
+                "section_key": "history",
+                "source_url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Paginas/Presentacion.aspx",
+                "source_label": "alcaldia",
+                "display_order": 2
+            },
+            {
+                "id": 2539,
+                "destination_id": 4,
+                "locale": "es",
+                "section_key": "history",
+                "source_url": "https://www.museonacional.gov.co/Publicaciones/Documents/Diagnostico%20Museos.pdf",
+                "source_label": "museo",
+                "display_order": 3
+            },
+            {
+                "id": 2540,
+                "destination_id": 4,
+                "locale": "en",
+                "section_key": "history",
+                "source_url": "https://colombia.travel/es/santa-fe-de-antioquia",
+                "source_label": "procolombia",
+                "display_order": 1
+            },
+            {
+                "id": 2541,
+                "destination_id": 4,
+                "locale": "en",
+                "section_key": "history",
+                "source_url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Paginas/Presentacion.aspx",
+                "source_label": "alcaldia",
+                "display_order": 2
+            },
+            {
+                "id": 2542,
+                "destination_id": 4,
+                "locale": "en",
+                "section_key": "history",
+                "source_url": "https://www.museonacional.gov.co/Publicaciones/Documents/Diagnostico%20Museos.pdf",
+                "source_label": "museo",
+                "display_order": 3
+            },
+            {
+                "id": 2543,
+                "destination_id": 4,
+                "locale": "pt-BR",
+                "section_key": "history",
+                "source_url": "https://colombia.travel/es/santa-fe-de-antioquia",
+                "source_label": "procolombia",
+                "display_order": 1
+            },
+            {
+                "id": 2544,
+                "destination_id": 4,
+                "locale": "pt-BR",
+                "section_key": "history",
+                "source_url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Paginas/Presentacion.aspx",
+                "source_label": "alcaldia",
+                "display_order": 2
+            },
+            {
+                "id": 2545,
+                "destination_id": 4,
+                "locale": "pt-BR",
+                "section_key": "history",
+                "source_url": "https://www.museonacional.gov.co/Publicaciones/Documents/Diagnostico%20Museos.pdf",
+                "source_label": "museo",
+                "display_order": 3
+            }
+        ],
+        "destination_media": [
+            {
+                "destination_id": 4,
+                "media_asset_id": 188,
+                "role": "hero",
+                "display_order": 0
+            }
+        ],
+        "points_of_interest": [
+            {
+                "id": 17,
+                "destination_id": 4,
+                "slug": "centro-historico",
+                "poi_type": "place",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "archived",
+                "display_order": 1
+            },
+            {
+                "id": 18,
+                "destination_id": 4,
+                "slug": "iglesia-de-la-chinca",
+                "poi_type": "place",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "archived",
+                "display_order": 2
+            },
+            {
+                "id": 19,
+                "destination_id": 4,
+                "slug": "puente-de-occidente",
+                "poi_type": "place",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "published",
+                "display_order": 1
+            },
+            {
+                "id": 168,
+                "destination_id": 4,
+                "slug": "plaza-mayor-simon-bolivar",
+                "poi_type": "place",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "published",
+                "display_order": 2
+            },
+            {
+                "id": 169,
+                "destination_id": 4,
+                "slug": "catedral-de-la-inmaculada-concepcion",
+                "poi_type": "place",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "published",
+                "display_order": 3
+            },
+            {
+                "id": 170,
+                "destination_id": 4,
+                "slug": "museo-juan-del-corral",
+                "poi_type": "place",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "published",
+                "display_order": 4
+            },
+            {
+                "id": 171,
+                "destination_id": 4,
+                "slug": "iglesia-de-santa-barbara",
+                "poi_type": "place",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "published",
+                "display_order": 5
+            },
+            {
+                "id": 172,
+                "destination_id": 4,
+                "slug": "museo-de-arte-religioso-francisco-cristobal-toro",
+                "poi_type": "place",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "published",
+                "display_order": 6
+            },
+            {
+                "id": 173,
+                "destination_id": 4,
+                "slug": "plazuela-e-iglesia-de-la-chinca",
+                "poi_type": "place",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "published",
+                "display_order": 7
+            },
+            {
+                "id": 174,
+                "destination_id": 4,
+                "slug": "templo-de-jesus-nazareno",
+                "poi_type": "place",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "archived",
+                "display_order": 8
+            },
+            {
+                "id": 175,
+                "destination_id": 4,
+                "slug": "paseo-por-calles-y-patios",
+                "poi_type": "experience",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "archived",
+                "display_order": 9
+            },
+            {
+                "id": 176,
+                "destination_id": 4,
+                "slug": "conocer-la-filigrana",
+                "poi_type": "experience",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "published",
+                "display_order": 8
+            },
+            {
+                "id": 177,
+                "destination_id": 4,
+                "slug": "sabores-de-tamarindo",
+                "poi_type": "experience",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "archived",
+                "display_order": 11
+            },
+            {
+                "id": 178,
+                "destination_id": 4,
+                "slug": "recorrido-de-memoria-regional",
+                "poi_type": "experience",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "draft",
+                "display_order": 11
+            },
+            {
+                "id": 207,
+                "destination_id": 4,
+                "slug": "tour-gastronomico",
+                "poi_type": "experience",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "draft",
+                "display_order": 10
+            },
+            {
+                "id": 208,
+                "destination_id": 4,
+                "slug": "cabalgata-rural",
+                "poi_type": "experience",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "published",
+                "display_order": 9
+            }
+        ],
+        "businesses": [
+            {
+                "id": 390,
+                "public_id": "e1f34f5e-9dfa-4796-aedf-ce3b71e7582c",
+                "destination_id": 4,
+                "category_code": "hospedaje",
+                "slug": "hotel-casa-de-verano",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 391,
+                "public_id": "46ba1db6-dbbf-451c-bb92-17f88f5b74bd",
+                "destination_id": 4,
+                "category_code": "hospedaje",
+                "slug": "hotel-casa-morales",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 392,
+                "public_id": "c1843739-f834-4ea6-924e-c136e38b2a8f",
+                "destination_id": 4,
+                "category_code": "hospedaje",
+                "slug": "hotel-boutique-casa-inca",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 393,
+                "public_id": "c6b4bee3-4128-4c2c-8e1e-62faf55fea8b",
+                "destination_id": 4,
+                "category_code": "hospedaje",
+                "slug": "hotel-nueva-granada",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 394,
+                "public_id": "5f3d69bc-7d3e-4ecd-9137-00acdb90b1a9",
+                "destination_id": 4,
+                "category_code": "hospedaje",
+                "slug": "hotel-casa-blanca",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 395,
+                "public_id": "a75af6ec-5c5e-4c83-8ef1-e6dab076498a",
+                "destination_id": 4,
+                "category_code": "hospedaje",
+                "slug": "hotel-santa-barbara-colonial",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 396,
+                "public_id": "99efcfaf-fdfa-4b81-960d-9f86fb8dda7e",
+                "destination_id": 4,
+                "category_code": "hospedaje",
+                "slug": "hotel-boutique-al-alma",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 397,
+                "public_id": "cbe0da1a-4ba3-441e-a00f-d5256c6e7365",
+                "destination_id": 4,
+                "category_code": "hospedaje",
+                "slug": "hotel-guaracu",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 398,
+                "public_id": "a84ed910-5d67-4ab7-bcab-ac3cd4e81d80",
+                "destination_id": 4,
+                "category_code": "hospedaje",
+                "slug": "hotel-las-palmeras-colonial",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 399,
+                "public_id": "8a794f4d-f99e-41cf-ac4e-737d75c00dd9",
+                "destination_id": 4,
+                "category_code": "hospedaje",
+                "slug": "hotel-caseron-del-parque",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 400,
+                "public_id": "e9e49324-5415-4446-b9df-c86a0122305e",
+                "destination_id": 4,
+                "category_code": "hospedaje",
+                "slug": "hotel-villa-occidente",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 401,
+                "public_id": "703fa03f-0953-411f-b47c-a7a018335747",
+                "destination_id": 4,
+                "category_code": "hospedaje",
+                "slug": "hotel-pueblito-viejo",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 402,
+                "public_id": "6d0a4658-9313-4e60-98ed-d06f4e428c2a",
+                "destination_id": 4,
+                "category_code": "hospedaje",
+                "slug": "hotel-los-geranios",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 403,
+                "public_id": "a95c1aa8-ba82-4383-85e0-59804afa25ef",
+                "destination_id": 4,
+                "category_code": "hospedaje",
+                "slug": "hotel-mariscal-robledo",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 404,
+                "public_id": "216dc569-7b6b-46d5-b80e-ec3988ff6361",
+                "destination_id": 4,
+                "category_code": "hospedaje",
+                "slug": "hosteria-de-la-plaza-menor",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 405,
+                "public_id": "b5cddba6-454d-49d6-8e98-9bd87be1ddff",
+                "destination_id": 4,
+                "category_code": "comercio",
+                "slug": "joyeria-jimmy",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 406,
+                "public_id": "4a9b57cc-f54f-4baa-a4b3-4caf46f3390c",
+                "destination_id": 4,
+                "category_code": "comercio",
+                "slug": "joyeria-colonial",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 407,
+                "public_id": "332c0b1d-6a93-4855-9993-c12ba9837442",
+                "destination_id": 4,
+                "category_code": "comercio",
+                "slug": "joyeria-benitez",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 408,
+                "public_id": "4e2cf263-bf1a-459c-b944-ea3aa43974b6",
+                "destination_id": 4,
+                "category_code": "hospedaje",
+                "slug": "hotel-spa-santa-fe-colonial",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 409,
+                "public_id": "20091624-055e-4b4d-a518-b4b942fbd21b",
+                "destination_id": 4,
+                "category_code": "comercio",
+                "slug": "aurum-filigrana",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 410,
+                "public_id": "0eedbe09-9208-4dfb-8a86-8aa1c64fb5cf",
+                "destination_id": 4,
+                "category_code": "comercio",
+                "slug": "orfoa",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 411,
+                "public_id": "5057887a-8273-4cc2-a669-57c1eb2385fb",
+                "destination_id": 4,
+                "category_code": "comercio",
+                "slug": "asociacion-de-filigrana",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 412,
+                "public_id": "1d5d8157-f6b9-4b7b-bb32-7944582fc692",
+                "destination_id": 4,
+                "category_code": "comercio",
+                "slug": "hugo-borja-filigrana",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 413,
+                "public_id": "76320801-7155-4a72-826a-95ce2db78e29",
+                "destination_id": 4,
+                "category_code": "comercio",
+                "slug": "joyeria-leydi",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 414,
+                "public_id": "5c725d93-9fa2-489f-9176-533bf3be9e81",
+                "destination_id": 4,
+                "category_code": "transporte",
+                "slug": "gomez-hernandez",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 415,
+                "public_id": "58932ba4-ce99-4655-9fa7-2a5272ee26c7",
+                "destination_id": 4,
+                "category_code": "transporte",
+                "slug": "sotrauraba",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 416,
+                "public_id": "b3ceae56-5fc5-4c41-a310-6342cba07e6f",
+                "destination_id": 4,
+                "category_code": "transporte",
+                "slug": "cootransuroccidente",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 417,
+                "public_id": "39bac9ab-751d-41cd-89b0-fcc4415548cc",
+                "destination_id": 4,
+                "category_code": "transporte",
+                "slug": "transmercedes",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 418,
+                "public_id": "7b31549a-9aa7-4e4a-8757-1a9d50c0d48c",
+                "destination_id": 4,
+                "category_code": "transporte",
+                "slug": "coonservicios",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 419,
+                "public_id": "4288bc18-502c-4e4e-8079-0b999661decb",
+                "destination_id": 4,
+                "category_code": "transporte",
+                "slug": "asosantafe",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            }
+        ],
+        "destination_story_translations": [
+            {
+                "story_block_id": 5,
+                "locale": "en",
+                "body": "Today’s town brings together the history of two sixteenth-century settlements and served as provincial capital until 1826. Its colonial and republican heritage preserves traces of political power, religious life and local crafts."
+            },
+            {
+                "story_block_id": 5,
+                "locale": "es",
+                "body": "La ciudad actual reúne la historia de dos poblaciones del siglo XVI y fue capital provincial hasta 1826. Su patrimonio colonial y republicano conserva huellas del poder político, la vida religiosa y los oficios locales."
+            },
+            {
+                "story_block_id": 5,
+                "locale": "pt-BR",
+                "body": "A cidade atual reúne a história de dois povoados do século XVI e foi capital provincial até 1826. Seu patrimônio colonial e republicano conserva marcas do poder político, da vida religiosa e dos ofícios locais."
+            }
+        ],
+        "destination_reason_translations": [
+            {
+                "reason_id": 10,
+                "locale": "en",
+                "body": "Historic heritage, filigree jewellery and the Cauca landscape."
+            },
+            {
+                "reason_id": 10,
+                "locale": "es",
+                "body": "Patrimonio histórico, filigrana y el paisaje del Cauca."
+            },
+            {
+                "reason_id": 10,
+                "locale": "pt-BR",
+                "body": "Patrimônio histórico, filigrana e a paisagem do Cauca."
+            }
+        ],
+        "point_of_interest_translations": [
+            {
+                "point_of_interest_id": 17,
+                "locale": "en",
+                "name": "Historic centre",
+                "description": "Walk through its streets, squares and traditional facades.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Centro+hist%C3%B3rico+Santa+Fe+de+Antioquia+Antioquia+Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 17,
+                "locale": "es",
+                "name": "Centro histórico",
+                "description": "Recorre sus calles, plazas y fachadas tradicionales.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Centro+hist%C3%B3rico+Santa+Fe+de+Antioquia+Antioquia+Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 17,
+                "locale": "pt-BR",
+                "name": "centro histórico",
+                "description": "Caminhe pelas suas ruas, praças e fachadas tradicionais.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Centro+hist%C3%B3rico+Santa+Fe+de+Antioquia+Antioquia+Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 18,
+                "locale": "en",
+                "name": "La Chinca Church",
+                "description": "A stop to discover the centre’s religious heritage.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Iglesia+de+La+Chinca+Santa+Fe+de+Antioquia+Antioquia+Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 18,
+                "locale": "es",
+                "name": "Iglesia de La Chinca",
+                "description": "Una parada para conocer el patrimonio religioso del centro.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Iglesia+de+La+Chinca+Santa+Fe+de+Antioquia+Antioquia+Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 18,
+                "locale": "pt-BR",
+                "name": "Igreja de La Chinca",
+                "description": "Uma parada para conhecer o patrimônio religioso do centro.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Iglesia+de+La+Chinca+Santa+Fe+de+Antioquia+Antioquia+Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 19,
+                "locale": "en",
+                "name": "Puente de Occidente",
+                "description": "The suspension bridge over the Cauca links Santa Fe de Antioquia and Olaya.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Puente%20de%20Occidente%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 19,
+                "locale": "es",
+                "name": "Puente de Occidente",
+                "description": "El puente colgante sobre el Cauca une Santa Fe de Antioquia y Olaya.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Puente%20de%20Occidente%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 19,
+                "locale": "pt-BR",
+                "name": "Puente de Occidente",
+                "description": "A ponte suspensa sobre o Cauca liga Santa Fe de Antioquia a Olaya.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Puente%20de%20Occidente%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 168,
+                "locale": "en",
+                "name": "Plaza Mayor Simón Bolívar",
+                "description": "The main square brings together local life and historic architecture.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Plaza%20Mayor%20Sim%C3%B3n%20Bol%C3%ADvar%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 168,
+                "locale": "es",
+                "name": "Plaza Mayor Simón Bolívar",
+                "description": "El parque principal reúne vida local y arquitectura del centro histórico.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Plaza%20Mayor%20Sim%C3%B3n%20Bol%C3%ADvar%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 168,
+                "locale": "pt-BR",
+                "name": "Plaza Mayor Simón Bolívar",
+                "description": "A praça principal reúne a vida local e a arquitetura histórica.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Plaza%20Mayor%20Sim%C3%B3n%20Bol%C3%ADvar%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 169,
+                "locale": "en",
+                "name": "Catedral de la Inmaculada Concepción",
+                "description": "Discover the cathedral façade and naves beside the main square.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Catedral%20de%20la%20Inmaculada%20Concepci%C3%B3n%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 169,
+                "locale": "es",
+                "name": "Catedral de la Inmaculada Concepción",
+                "description": "Conoce la fachada y las naves de la catedral junto al parque principal.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Catedral%20de%20la%20Inmaculada%20Concepci%C3%B3n%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 169,
+                "locale": "pt-BR",
+                "name": "Catedral de la Inmaculada Concepción",
+                "description": "Conheça a fachada e as naves da catedral junto à praça principal.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Catedral%20de%20la%20Inmaculada%20Concepci%C3%B3n%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 170,
+                "locale": "en",
+                "name": "Museo Juan del Corral",
+                "description": "Objects and documents introduce the region’s history.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20Juan%20del%20Corral%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 170,
+                "locale": "es",
+                "name": "Museo Juan del Corral",
+                "description": "Objetos y documentos permiten acercarse a la historia regional.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20Juan%20del%20Corral%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 170,
+                "locale": "pt-BR",
+                "name": "Museo Juan del Corral",
+                "description": "Objetos e documentos apresentam a história regional.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20Juan%20del%20Corral%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 171,
+                "locale": "en",
+                "name": "Iglesia de Santa Bárbara",
+                "description": "Its façade and surroundings form a distinctive heritage scene.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Iglesia%20de%20Santa%20B%C3%A1rbara%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 171,
+                "locale": "es",
+                "name": "Iglesia de Santa Bárbara",
+                "description": "Su fachada y entorno conservan una de las estampas patrimoniales del pueblo.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Iglesia%20de%20Santa%20B%C3%A1rbara%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 171,
+                "locale": "pt-BR",
+                "name": "Iglesia de Santa Bárbara",
+                "description": "Sua fachada e seus arredores formam uma paisagem patrimonial característica.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Iglesia%20de%20Santa%20B%C3%A1rbara%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 172,
+                "locale": "en",
+                "name": "Museo de Arte Religioso Francisco Cristóbal Toro",
+                "description": "Explore religious art preserved in a historic house.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20de%20Arte%20Religioso%20Francisco%20Crist%C3%B3bal%20Toro%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 172,
+                "locale": "es",
+                "name": "Museo de Arte Religioso Francisco Cristóbal Toro",
+                "description": "Explora el arte religioso conservado en una casa histórica.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20de%20Arte%20Religioso%20Francisco%20Crist%C3%B3bal%20Toro%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 172,
+                "locale": "pt-BR",
+                "name": "Museo de Arte Religioso Francisco Cristóbal Toro",
+                "description": "Explore a arte religiosa preservada em uma casa histórica.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20de%20Arte%20Religioso%20Francisco%20Crist%C3%B3bal%20Toro%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 173,
+                "locale": "en",
+                "name": "La Chinca Church",
+                "description": "Church of Our Lady of Chiquinquirá and its small square.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=La%20Chinca%20Church%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 173,
+                "locale": "es",
+                "name": "Iglesia de La Chinca",
+                "description": "Templo de Nuestra Señora de Chiquinquirá y su plazuela.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Iglesia%20de%20La%20Chinca%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 173,
+                "locale": "pt-BR",
+                "name": "Igreja de La Chinca",
+                "description": "Templo de Nossa Senhora de Chiquinquirá e sua pequena praça.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Igreja%20de%20La%20Chinca%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 174,
+                "locale": "en",
+                "name": "Templo de Jesús Nazareno",
+                "description": "Complete the heritage walk at this church in the town centre.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Templo%20de%20Jes%C3%BAs%20Nazareno%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                "external_url": "https://www.google.com/maps/search/?api=1&query=Templo%20de%20Jes%C3%BAs%20Nazareno%20Santa%20Fe%20de%20Antioquia%20Colombia",
+                "external_label": "View location"
+            },
+            {
+                "point_of_interest_id": 174,
+                "locale": "es",
+                "name": "Templo de Jesús Nazareno",
+                "description": "Completa el recorrido patrimonial con este templo del centro.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Templo%20de%20Jes%C3%BAs%20Nazareno%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                "external_url": "https://www.google.com/maps/search/?api=1&query=Templo%20de%20Jes%C3%BAs%20Nazareno%20Santa%20Fe%20de%20Antioquia%20Colombia",
+                "external_label": "Ver ubicación"
+            },
+            {
+                "point_of_interest_id": 174,
+                "locale": "pt-BR",
+                "name": "Templo de Jesús Nazareno",
+                "description": "Complete o passeio patrimonial neste templo do centro.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Templo%20de%20Jes%C3%BAs%20Nazareno%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                "external_url": "https://www.google.com/maps/search/?api=1&query=Templo%20de%20Jes%C3%BAs%20Nazareno%20Santa%20Fe%20de%20Antioquia%20Colombia",
+                "external_label": "Ver localização"
+            },
+            {
+                "point_of_interest_id": 175,
+                "locale": "en",
+                "name": "Walk through streets and courtyards",
+                "description": "Walk through the centre and observe its façades and wooden doors.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Walk%20through%20streets%20and%20courtyards%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 175,
+                "locale": "es",
+                "name": "Paseo por calles y patios",
+                "description": "Camina por el centro y observa sus fachadas y puertas de madera.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Paseo%20por%20calles%20y%20patios%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 175,
+                "locale": "pt-BR",
+                "name": "Passeio por ruas e pátios",
+                "description": "Caminhe pelo centro e observe suas fachadas e portas de madeira.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Passeio%20por%20ruas%20e%20p%C3%A1tios%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 176,
+                "locale": "en",
+                "name": "Filigree workshop",
+                "description": "Discover filigree jewellery and take part in a craft workshop.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Filigree%20workshop%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 176,
+                "locale": "es",
+                "name": "Taller de filigrana",
+                "description": "Conoce la filigrana y participa en un taller artesanal.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Taller%20de%20filigrana%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 176,
+                "locale": "pt-BR",
+                "name": "Oficina de filigrana",
+                "description": "Conheça a filigrana e participe de uma oficina artesanal.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Oficina%20de%20filigrana%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 177,
+                "locale": "en",
+                "name": "Tamarind flavours",
+                "description": "Try local tamarind preparations at town businesses.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Tamarind%20flavours%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 177,
+                "locale": "es",
+                "name": "Sabores de tamarindo",
+                "description": "Prueba preparaciones locales de tamarindo en comercios del pueblo.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Sabores%20de%20tamarindo%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 177,
+                "locale": "pt-BR",
+                "name": "Sabores de tamarindo",
+                "description": "Prove preparações locais de tamarindo nos comércios da cidade.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Sabores%20de%20tamarindo%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 178,
+                "locale": "en",
+                "name": "Guided heritage walk",
+                "description": "Explore the historic centre with a guide and discover its heritage.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Guided%20heritage%20walk%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 178,
+                "locale": "es",
+                "name": "Tour urbano patrimonial",
+                "description": "Recorre el centro histórico con guía y conoce su patrimonio.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Tour%20urbano%20patrimonial%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 178,
+                "locale": "pt-BR",
+                "name": "Passeio urbano patrimonial",
+                "description": "Percorra o centro histórico com guia e conheça seu patrimônio.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Passeio%20urbano%20patrimonial%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 207,
+                "locale": "en",
+                "name": "Food tour",
+                "description": "Discover traditional flavours on a guided food walk.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Food%20tour%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 207,
+                "locale": "es",
+                "name": "Tour gastronómico",
+                "description": "Conoce sabores tradicionales en un recorrido guiado.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Tour%20gastron%C3%B3mico%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 207,
+                "locale": "pt-BR",
+                "name": "Passeio gastronômico",
+                "description": "Conheça sabores tradicionais em um passeio guiado.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Passeio%20gastron%C3%B4mico%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 208,
+                "locale": "en",
+                "name": "Guided countryside horse ride",
+                "description": "Explore country paths on horseback with a guide.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Guided%20countryside%20horse%20ride%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 208,
+                "locale": "es",
+                "name": "Cabalgata rural",
+                "description": "Recorre caminos rurales a caballo con guía.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Cabalgata%20rural%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 208,
+                "locale": "pt-BR",
+                "name": "Cavalgada rural",
+                "description": "Percorra caminhos rurais a cavalo com guia.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Cavalgada%20rural%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            }
+        ],
+        "point_of_interest_media": [
+            {
+                "point_of_interest_id": 17,
+                "media_asset_id": 53,
+                "role": "gallery",
+                "display_order": 1
+            },
+            {
+                "point_of_interest_id": 18,
+                "media_asset_id": 54,
+                "role": "gallery",
+                "display_order": 1
+            },
+            {
+                "point_of_interest_id": 19,
+                "media_asset_id": 366,
+                "role": "gallery",
+                "display_order": 1
+            },
+            {
+                "point_of_interest_id": 168,
+                "media_asset_id": 190,
+                "role": "gallery",
+                "display_order": 1
+            },
+            {
+                "point_of_interest_id": 169,
+                "media_asset_id": 191,
+                "role": "gallery",
+                "display_order": 1
+            },
+            {
+                "point_of_interest_id": 170,
+                "media_asset_id": 379,
+                "role": "gallery",
+                "display_order": 1
+            },
+            {
+                "point_of_interest_id": 171,
+                "media_asset_id": 370,
+                "role": "gallery",
+                "display_order": 1
+            },
+            {
+                "point_of_interest_id": 172,
+                "media_asset_id": 381,
+                "role": "gallery",
+                "display_order": 1
+            },
+            {
+                "point_of_interest_id": 173,
+                "media_asset_id": 195,
+                "role": "gallery",
+                "display_order": 1
+            },
+            {
+                "point_of_interest_id": 174,
+                "media_asset_id": 196,
+                "role": "gallery",
+                "display_order": 1
+            },
+            {
+                "point_of_interest_id": 175,
+                "media_asset_id": 197,
+                "role": "gallery",
+                "display_order": 1
+            },
+            {
+                "point_of_interest_id": 176,
+                "media_asset_id": 198,
+                "role": "gallery",
+                "display_order": 1
+            },
+            {
+                "point_of_interest_id": 177,
+                "media_asset_id": 199,
+                "role": "gallery",
+                "display_order": 1
+            },
+            {
+                "point_of_interest_id": 178,
+                "media_asset_id": 200,
+                "role": "gallery",
+                "display_order": 1
+            },
+            {
+                "point_of_interest_id": 207,
+                "media_asset_id": 353,
+                "role": "gallery",
+                "display_order": 1
+            },
+            {
+                "point_of_interest_id": 208,
+                "media_asset_id": 384,
+                "role": "gallery",
+                "display_order": 1
+            }
+        ],
+        "business_translations": [
+            {
+                "business_id": 390,
+                "locale": "en",
+                "display_name": "Hotel Casa de Verano",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 390,
+                "locale": "es",
+                "display_name": "Hotel Casa de Verano",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 390,
+                "locale": "pt-BR",
+                "display_name": "Hotel Casa de Verano",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 391,
+                "locale": "en",
+                "display_name": "Hotel Casa Morales",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 391,
+                "locale": "es",
+                "display_name": "Hotel Casa Morales",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 391,
+                "locale": "pt-BR",
+                "display_name": "Hotel Casa Morales",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 392,
+                "locale": "en",
+                "display_name": "Hotel Boutique Casa Inca",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 392,
+                "locale": "es",
+                "display_name": "Hotel Boutique Casa Inca",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 392,
+                "locale": "pt-BR",
+                "display_name": "Hotel Boutique Casa Inca",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 393,
+                "locale": "en",
+                "display_name": "Hotel Nueva Granada",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 393,
+                "locale": "es",
+                "display_name": "Hotel Nueva Granada",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 393,
+                "locale": "pt-BR",
+                "display_name": "Hotel Nueva Granada",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 394,
+                "locale": "en",
+                "display_name": "Hotel Casa Blanca",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 394,
+                "locale": "es",
+                "display_name": "Hotel Casa Blanca",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 394,
+                "locale": "pt-BR",
+                "display_name": "Hotel Casa Blanca",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 395,
+                "locale": "en",
+                "display_name": "Hotel Santa Bárbara Colonial",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 395,
+                "locale": "es",
+                "display_name": "Hotel Santa Bárbara Colonial",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 395,
+                "locale": "pt-BR",
+                "display_name": "Hotel Santa Bárbara Colonial",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 396,
+                "locale": "en",
+                "display_name": "Hotel Boutique Al Alma",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 396,
+                "locale": "es",
+                "display_name": "Hotel Boutique Al Alma",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 396,
+                "locale": "pt-BR",
+                "display_name": "Hotel Boutique Al Alma",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 397,
+                "locale": "en",
+                "display_name": "Hotel Guaracú",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 397,
+                "locale": "es",
+                "display_name": "Hotel Guaracú",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 397,
+                "locale": "pt-BR",
+                "display_name": "Hotel Guaracú",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 398,
+                "locale": "en",
+                "display_name": "Hotel Las Palmeras Colonial",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 398,
+                "locale": "es",
+                "display_name": "Hotel Las Palmeras Colonial",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 398,
+                "locale": "pt-BR",
+                "display_name": "Hotel Las Palmeras Colonial",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 399,
+                "locale": "en",
+                "display_name": "Hotel Caserón del Parque",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 399,
+                "locale": "es",
+                "display_name": "Hotel Caserón del Parque",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 399,
+                "locale": "pt-BR",
+                "display_name": "Hotel Caserón del Parque",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 400,
+                "locale": "en",
+                "display_name": "Hotel Villa Occidente",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 400,
+                "locale": "es",
+                "display_name": "Hotel Villa Occidente",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 400,
+                "locale": "pt-BR",
+                "display_name": "Hotel Villa Occidente",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 401,
+                "locale": "en",
+                "display_name": "Hotel Pueblito Viejo",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 401,
+                "locale": "es",
+                "display_name": "Hotel Pueblito Viejo",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 401,
+                "locale": "pt-BR",
+                "display_name": "Hotel Pueblito Viejo",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 402,
+                "locale": "en",
+                "display_name": "Hotel Los Geranios",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 402,
+                "locale": "es",
+                "display_name": "Hotel Los Geranios",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 402,
+                "locale": "pt-BR",
+                "display_name": "Hotel Los Geranios",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 403,
+                "locale": "en",
+                "display_name": "Hotel Mariscal Robledo",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 403,
+                "locale": "es",
+                "display_name": "Hotel Mariscal Robledo",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 403,
+                "locale": "pt-BR",
+                "display_name": "Hotel Mariscal Robledo",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 404,
+                "locale": "en",
+                "display_name": "Hostería de la Plaza Menor",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 404,
+                "locale": "es",
+                "display_name": "Hostería de la Plaza Menor",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 404,
+                "locale": "pt-BR",
+                "display_name": "Hostería de la Plaza Menor",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 405,
+                "locale": "en",
+                "display_name": "Joyería Jimmy",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 405,
+                "locale": "es",
+                "display_name": "Joyería Jimmy",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 405,
+                "locale": "pt-BR",
+                "display_name": "Joyería Jimmy",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 406,
+                "locale": "en",
+                "display_name": "Joyería Colonial",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 406,
+                "locale": "es",
+                "display_name": "Joyería Colonial",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 406,
+                "locale": "pt-BR",
+                "display_name": "Joyería Colonial",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 407,
+                "locale": "en",
+                "display_name": "Joyería Benítez",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 407,
+                "locale": "es",
+                "display_name": "Joyería Benítez",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 407,
+                "locale": "pt-BR",
+                "display_name": "Joyería Benítez",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 408,
+                "locale": "en",
+                "display_name": "Hotel & Spa Santa Fe Colonial",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 408,
+                "locale": "es",
+                "display_name": "Hotel & Spa Santa Fe Colonial",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 408,
+                "locale": "pt-BR",
+                "display_name": "Hotel & Spa Santa Fe Colonial",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 409,
+                "locale": "en",
+                "display_name": "Aurum Filigrana",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 409,
+                "locale": "es",
+                "display_name": "Aurum Filigrana",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 409,
+                "locale": "pt-BR",
+                "display_name": "Aurum Filigrana",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 410,
+                "locale": "en",
+                "display_name": "ORFOA",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 410,
+                "locale": "es",
+                "display_name": "ORFOA",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 410,
+                "locale": "pt-BR",
+                "display_name": "ORFOA",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 411,
+                "locale": "en",
+                "display_name": "Asociación de Filigrana",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 411,
+                "locale": "es",
+                "display_name": "Asociación de Filigrana",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 411,
+                "locale": "pt-BR",
+                "display_name": "Asociación de Filigrana",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 412,
+                "locale": "en",
+                "display_name": "Hugo Borja Filigrana",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 412,
+                "locale": "es",
+                "display_name": "Hugo Borja Filigrana",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 412,
+                "locale": "pt-BR",
+                "display_name": "Hugo Borja Filigrana",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 413,
+                "locale": "en",
+                "display_name": "Joyería Leydi",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 413,
+                "locale": "es",
+                "display_name": "Joyería Leydi",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 413,
+                "locale": "pt-BR",
+                "display_name": "Joyería Leydi",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 414,
+                "locale": "en",
+                "display_name": "Gómez Hernández",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 414,
+                "locale": "es",
+                "display_name": "Gómez Hernández",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 414,
+                "locale": "pt-BR",
+                "display_name": "Gómez Hernández",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 415,
+                "locale": "en",
+                "display_name": "Sotraurabá",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 415,
+                "locale": "es",
+                "display_name": "Sotraurabá",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 415,
+                "locale": "pt-BR",
+                "display_name": "Sotraurabá",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 416,
+                "locale": "en",
+                "display_name": "Cootransuroccidente",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 416,
+                "locale": "es",
+                "display_name": "Cootransuroccidente",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 416,
+                "locale": "pt-BR",
+                "display_name": "Cootransuroccidente",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 417,
+                "locale": "en",
+                "display_name": "Transmercedes",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 417,
+                "locale": "es",
+                "display_name": "Transmercedes",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 417,
+                "locale": "pt-BR",
+                "display_name": "Transmercedes",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 418,
+                "locale": "en",
+                "display_name": "Coonservicios",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 418,
+                "locale": "es",
+                "display_name": "Coonservicios",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 418,
+                "locale": "pt-BR",
+                "display_name": "Coonservicios",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 419,
+                "locale": "en",
+                "display_name": "Asosantafé",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 419,
+                "locale": "es",
+                "display_name": "Asosantafé",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 419,
+                "locale": "pt-BR",
+                "display_name": "Asosantafé",
+                "summary": "",
+                "description": ""
+            }
+        ],
+        "business_sources": [
+            {
+                "id": 424,
+                "business_id": 390,
+                "source_url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+                "checked_at": "2026-10-19 00:00:00"
+            },
+            {
+                "id": 425,
+                "business_id": 390,
+                "source_url": "https://casadeverano.com.co/",
+                "checked_at": "2026-10-19 00:00:00"
+            },
+            {
+                "id": 426,
+                "business_id": 391,
+                "source_url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+                "checked_at": "2026-10-19 00:00:00"
+            },
+            {
+                "id": 427,
+                "business_id": 392,
+                "source_url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+                "checked_at": "2026-10-19 00:00:00"
+            },
+            {
+                "id": 428,
+                "business_id": 393,
+                "source_url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+                "checked_at": "2026-10-19 00:00:00"
+            },
+            {
+                "id": 429,
+                "business_id": 394,
+                "source_url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+                "checked_at": "2026-10-19 00:00:00"
+            },
+            {
+                "id": 430,
+                "business_id": 395,
+                "source_url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+                "checked_at": "2026-10-19 00:00:00"
+            },
+            {
+                "id": 431,
+                "business_id": 396,
+                "source_url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+                "checked_at": "2026-10-19 00:00:00"
+            },
+            {
+                "id": 432,
+                "business_id": 397,
+                "source_url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+                "checked_at": "2026-10-19 00:00:00"
+            },
+            {
+                "id": 433,
+                "business_id": 398,
+                "source_url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+                "checked_at": "2026-10-19 00:00:00"
+            },
+            {
+                "id": 434,
+                "business_id": 399,
+                "source_url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+                "checked_at": "2026-10-19 00:00:00"
+            },
+            {
+                "id": 435,
+                "business_id": 400,
+                "source_url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+                "checked_at": "2026-10-19 00:00:00"
+            },
+            {
+                "id": 436,
+                "business_id": 401,
+                "source_url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+                "checked_at": "2026-10-19 00:00:00"
+            },
+            {
+                "id": 437,
+                "business_id": 402,
+                "source_url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+                "checked_at": "2026-10-19 00:00:00"
+            },
+            {
+                "id": 438,
+                "business_id": 403,
+                "source_url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+                "checked_at": "2026-10-19 00:00:00"
+            },
+            {
+                "id": 439,
+                "business_id": 403,
+                "source_url": "https://www.hotelmariscalrobledo.com/es/index.html",
+                "checked_at": "2026-10-19 00:00:00"
+            },
+            {
+                "id": 440,
+                "business_id": 404,
+                "source_url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+                "checked_at": "2026-10-19 00:00:00"
+            },
+            {
+                "id": 441,
+                "business_id": 405,
+                "source_url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+                "checked_at": "2026-10-19 00:00:00"
+            },
+            {
+                "id": 442,
+                "business_id": 406,
+                "source_url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+                "checked_at": "2026-10-19 00:00:00"
+            },
+            {
+                "id": 443,
+                "business_id": 407,
+                "source_url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+                "checked_at": "2026-10-19 00:00:00"
+            },
+            {
+                "id": 444,
+                "business_id": 408,
+                "source_url": "https://hotelspasantafecolonial.com/guia-completa/",
+                "checked_at": "2026-10-19 00:00:00"
+            },
+            {
+                "id": 445,
+                "business_id": 409,
+                "source_url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+                "checked_at": "2026-10-19 00:00:00"
+            },
+            {
+                "id": 446,
+                "business_id": 410,
+                "source_url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+                "checked_at": "2026-10-19 00:00:00"
+            },
+            {
+                "id": 447,
+                "business_id": 411,
+                "source_url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+                "checked_at": "2026-10-19 00:00:00"
+            },
+            {
+                "id": 448,
+                "business_id": 412,
+                "source_url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+                "checked_at": "2026-10-19 00:00:00"
+            },
+            {
+                "id": 449,
+                "business_id": 413,
+                "source_url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+                "checked_at": "2026-10-19 00:00:00"
+            },
+            {
+                "id": 450,
+                "business_id": 414,
+                "source_url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+                "checked_at": "2026-10-19 00:00:00"
+            },
+            {
+                "id": 451,
+                "business_id": 415,
+                "source_url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+                "checked_at": "2026-10-19 00:00:00"
+            },
+            {
+                "id": 452,
+                "business_id": 416,
+                "source_url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+                "checked_at": "2026-10-19 00:00:00"
+            },
+            {
+                "id": 453,
+                "business_id": 417,
+                "source_url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+                "checked_at": "2026-10-19 00:00:00"
+            },
+            {
+                "id": 454,
+                "business_id": 418,
+                "source_url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+                "checked_at": "2026-10-19 00:00:00"
+            },
+            {
+                "id": 455,
+                "business_id": 419,
+                "source_url": "https://www.santafedeantioquia-antioquia.gov.co/MiMunicipio/Documents/guiaturistica.pdf",
+                "checked_at": "2026-10-19 00:00:00"
+            }
+        ],
+        "business_media": [],
+        "business_categories": [],
+        "media_assets": [
+            {
+                "id": 53,
+                "asset_path": "assets/destinos/santa-fe-de-antioquia-1.webp",
+                "origin": "external",
+                "creator": "laloking97",
+                "source_url": "https://commons.wikimedia.org/wiki/File:SANTA_FE_DE_ANTIOQUIA-4.jpg",
+                "license_name": "CC BY-SA 2.0",
+                "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+                "width": 1280,
+                "height": 960
+            },
+            {
+                "id": 54,
+                "asset_path": "assets/destinos/santa-fe-de-antioquia-2.webp",
+                "origin": "external",
+                "creator": "Amdalex20",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Iglesia_de_La_Chinca.jpg",
+                "license_name": "CC BY-SA 3.0",
+                "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+                "width": 478,
+                "height": 690
+            },
+            {
+                "id": 188,
+                "asset_path": "assets/destinos/preprod-santa-fe-de-antioquia/9a661e252005d27e29917085b025241a86b31370e1b5f30f412f4a6da879d9f2.webp",
+                "origin": "ai_generated",
+                "creator": "Ilustración editorial generada con IA para Explorando Lugares",
+                "source_url": "",
+                "license_name": "Composición independiente generada con IA; borrador pendiente de revisión editorial humana; proceden",
+                "license_url": "",
+                "width": 1200,
+                "height": 800
+            },
+            {
+                "id": 190,
+                "asset_path": "assets/destinos/preprod-santa-fe-de-antioquia/76329fe624e14d3731fc745a8fa145e18c062dd2506b955b7d295de487f5645f.webp",
+                "origin": "ai_generated",
+                "creator": "Ilustración editorial generada con IA para Explorando Lugares",
+                "source_url": "",
+                "license_name": "Composición independiente generada con IA; borrador pendiente de revisión editorial humana; proceden",
+                "license_url": "",
+                "width": 1200,
+                "height": 800
+            },
+            {
+                "id": 191,
+                "asset_path": "assets/destinos/preprod-santa-fe-de-antioquia/1a96481600ead83e11e8b4d6b459181494d964b802df6d45e463f5bea709e271.webp",
+                "origin": "ai_generated",
+                "creator": "Ilustración editorial generada con IA para Explorando Lugares",
+                "source_url": "",
+                "license_name": "Composición independiente generada con IA; borrador pendiente de revisión editorial humana; proceden",
+                "license_url": "",
+                "width": 1200,
+                "height": 800
+            },
+            {
+                "id": 195,
+                "asset_path": "assets/destinos/preprod-santa-fe-de-antioquia/f632e6a1f5ede2608c4babb6c51f5e6815cb91e21f329ba7b6abb75ec20cc11d.webp",
+                "origin": "ai_generated",
+                "creator": "Ilustración editorial generada con IA para Explorando Lugares",
+                "source_url": "",
+                "license_name": "Composición independiente generada con IA; borrador pendiente de revisión editorial humana; proceden",
+                "license_url": "",
+                "width": 1200,
+                "height": 800
+            },
+            {
+                "id": 196,
+                "asset_path": "assets/destinos/preprod-santa-fe-de-antioquia/cf5e1a5a63a0fb3fd4968729690c6af4531780034fee1cb1faca053c8256362f.webp",
+                "origin": "ai_generated",
+                "creator": "Ilustración editorial generada con IA para Explorando Lugares",
+                "source_url": "",
+                "license_name": "Composición independiente generada con IA; borrador pendiente de revisión editorial humana; proceden",
+                "license_url": "",
+                "width": 1200,
+                "height": 800
+            },
+            {
+                "id": 197,
+                "asset_path": "assets/destinos/preprod-santa-fe-de-antioquia/88b37fd25f887b990ea03a6b5257045800eedcc814999bd05511911591a228be.webp",
+                "origin": "ai_generated",
+                "creator": "Ilustración editorial generada con IA para Explorando Lugares",
+                "source_url": "",
+                "license_name": "Composición independiente generada con IA; borrador pendiente de revisión editorial humana; proceden",
+                "license_url": "",
+                "width": 1200,
+                "height": 800
+            },
+            {
+                "id": 198,
+                "asset_path": "assets/destinos/preprod-santa-fe-de-antioquia/fd2bacb4b24eda91593fcb3fcc1b5c798559653d7d6752052d2c550666ab02dc.webp",
+                "origin": "ai_generated",
+                "creator": "Ilustración editorial generada con IA para Explorando Lugares",
+                "source_url": "",
+                "license_name": "Composición independiente generada con IA; borrador pendiente de revisión editorial humana; proceden",
+                "license_url": "",
+                "width": 1200,
+                "height": 800
+            },
+            {
+                "id": 199,
+                "asset_path": "assets/destinos/preprod-santa-fe-de-antioquia/aa988c77860728709822c058c3b6cb46fe652c69fe4f9c31617724781a6cc5a0.webp",
+                "origin": "ai_generated",
+                "creator": "Ilustración editorial generada con IA para Explorando Lugares",
+                "source_url": "",
+                "license_name": "Composición independiente generada con IA; borrador pendiente de revisión editorial humana; proceden",
+                "license_url": "",
+                "width": 1200,
+                "height": 800
+            },
+            {
+                "id": 200,
+                "asset_path": "assets/destinos/preprod-santa-fe-de-antioquia/88fc2738324807a23ddabc026f4abb77da36c3de5f9876e5d05335854f9fa12e.webp",
+                "origin": "ai_generated",
+                "creator": "Ilustración editorial generada con IA para Explorando Lugares",
+                "source_url": "",
+                "license_name": "Composición independiente generada con IA; borrador pendiente de revisión editorial humana; proceden",
+                "license_url": "",
+                "width": 1200,
+                "height": 800
+            },
+            {
+                "id": 353,
+                "asset_path": "assets/destinos/preprod-santa-fe-de-antioquia/7f2b0ab30e20f94d42d769019a4bd93306d860ba0439c1ac6a5b6d35095bcfb3.webp",
+                "origin": "ai_generated",
+                "creator": "Ilustración editorial generada con IA para Explorando Lugares",
+                "source_url": "",
+                "license_name": "Composición independiente generada con IA; borrador pendiente de revisión editorial humana; proceden",
+                "license_url": "",
+                "width": 960,
+                "height": 640
+            },
+            {
+                "id": 366,
+                "asset_path": "assets/destinos/preprod-santa-fe-de-antioquia/1e3e90f8e77ce8a97df5d9d4b6fee2f85e6b071d609c39fba999b530d00445e3.webp",
+                "origin": "ai_generated",
+                "creator": "Ilustración editorial generada con IA para Explorando Lugares",
+                "source_url": "",
+                "license_name": "Composición independiente generada con IA; borrador pendiente de revisión editorial humana; proceden",
+                "license_url": "",
+                "width": 960,
+                "height": 640
+            },
+            {
+                "id": 370,
+                "asset_path": "assets/destinos/preprod-santa-fe-de-antioquia/1553c6b366bbc29a7406ccb53a45bf88bd48aefdecd0e5b1dc6a992dd6fd27c0.webp",
+                "origin": "ai_generated",
+                "creator": "Ilustración editorial generada con IA para Explorando Lugares",
+                "source_url": "",
+                "license_name": "Composición independiente generada con IA; borrador pendiente de revisión editorial humana; proceden",
+                "license_url": "",
+                "width": 960,
+                "height": 640
+            },
+            {
+                "id": 379,
+                "asset_path": "assets/destinos/preprod-santa-fe-de-antioquia/781d3fbf0d18deb2bc7d158fa8e14416f0ab927dd8f98f091b7a197d8b9944f0.webp",
+                "origin": "ai_generated",
+                "creator": "Adaptación ilustrada IA de fotografía de XalD",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Casa_Museo_Juan_del_Corral_-_02.jpg",
+                "license_name": "CC BY-SA 4.0; fotografía transformada a ilustración IA",
+                "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+                "width": 1200,
+                "height": 800
+            },
+            {
+                "id": 381,
+                "asset_path": "assets/destinos/preprod-santa-fe-de-antioquia/01244a929a1860c649cacf48e423ad1e1e7bb84c38ef45193f781ce17c8bd696.webp",
+                "origin": "ai_generated",
+                "creator": "Adaptación ilustrada IA de fotografía de SajoR",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Museo_Arte_Religioso-Santa_Fe_de_Antioquia.jpg",
+                "license_name": "CC BY-SA 2.5; fotografía transformada a ilustración IA",
+                "license_url": "https://creativecommons.org/licenses/by-sa/2.5/",
+                "width": 1200,
+                "height": 800
+            },
+            {
+                "id": 384,
+                "asset_path": "assets/destinos/preprod-santa-fe-de-antioquia/7373a0581858553df3c99d612d850d3ade25b40e8b4b0a4e7190b8489f60c096.webp",
+                "origin": "ai_generated",
+                "creator": "Ilustración editorial generada con IA para Explorando Lugares",
+                "source_url": "",
+                "license_name": "Composición temática independiente de la actividad; no representa al oferente ni un recinto exacto. ",
+                "license_url": "",
+                "width": 1200,
+                "height": 800
+            }
+        ],
+        "media_asset_translations": [
+            {
+                "media_asset_id": 53,
+                "locale": "en",
+                "alt_text": "Streets in central Santa Fe de Antioquia",
+                "caption": "Streets in central Santa Fe de Antioquia"
+            },
+            {
+                "media_asset_id": 53,
+                "locale": "es",
+                "alt_text": "Calles del centro de Santa Fe de Antioquia",
+                "caption": "Calles del centro de Santa Fe de Antioquia"
+            },
+            {
+                "media_asset_id": 53,
+                "locale": "pt-BR",
+                "alt_text": "Ruas do centro de Santa Fé de Antioquia",
+                "caption": "Ruas do centro de Santa Fé de Antioquia"
+            },
+            {
+                "media_asset_id": 54,
+                "locale": "en",
+                "alt_text": "La Chinca Church",
+                "caption": "La Chinca Church"
+            },
+            {
+                "media_asset_id": 54,
+                "locale": "es",
+                "alt_text": "Iglesia de La Chinca",
+                "caption": "Iglesia de La Chinca"
+            },
+            {
+                "media_asset_id": 54,
+                "locale": "pt-BR",
+                "alt_text": "Igreja de La Chinca",
+                "caption": "Igreja de La Chinca"
+            },
+            {
+                "media_asset_id": 188,
+                "locale": "en",
+                "alt_text": "Illustration of Santa Fe de Antioquia",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 188,
+                "locale": "es",
+                "alt_text": "Ilustración de Santa Fe de Antioquia",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 188,
+                "locale": "pt-BR",
+                "alt_text": "Ilustração de Santa Fe de Antioquia",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 190,
+                "locale": "en",
+                "alt_text": "Editorial illustration: Plaza Mayor Simón Bolívar",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 190,
+                "locale": "es",
+                "alt_text": "Ilustración editorial: Plaza Mayor Simón Bolívar",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 190,
+                "locale": "pt-BR",
+                "alt_text": "Ilustração editorial: Plaza Mayor Simón Bolívar",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 191,
+                "locale": "en",
+                "alt_text": "Editorial illustration: Catedral de la Inmaculada Concepción",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 191,
+                "locale": "es",
+                "alt_text": "Ilustración editorial: Catedral de la Inmaculada Concepción",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 191,
+                "locale": "pt-BR",
+                "alt_text": "Ilustração editorial: Catedral de la Inmaculada Concepción",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 195,
+                "locale": "en",
+                "alt_text": "Editorial illustration: Plazuela e iglesia de La Chinca",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 195,
+                "locale": "es",
+                "alt_text": "Ilustración editorial: Plazuela e iglesia de La Chinca",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 195,
+                "locale": "pt-BR",
+                "alt_text": "Ilustração editorial: Plazuela e iglesia de La Chinca",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 196,
+                "locale": "en",
+                "alt_text": "Editorial illustration: Templo de Jesús Nazareno",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 196,
+                "locale": "es",
+                "alt_text": "Ilustración editorial: Templo de Jesús Nazareno",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 196,
+                "locale": "pt-BR",
+                "alt_text": "Ilustração editorial: Templo de Jesús Nazareno",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 197,
+                "locale": "en",
+                "alt_text": "Editorial illustration: Walk through streets and courtyards",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 197,
+                "locale": "es",
+                "alt_text": "Ilustración editorial: Paseo por calles y patios",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 197,
+                "locale": "pt-BR",
+                "alt_text": "Ilustração editorial: Passeio por ruas e pátios",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 198,
+                "locale": "en",
+                "alt_text": "Thematic illustration: Filigree workshop",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 198,
+                "locale": "es",
+                "alt_text": "Ilustración temática: Taller de filigrana",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 198,
+                "locale": "pt-BR",
+                "alt_text": "Ilustração temática: Oficina de filigrana",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 199,
+                "locale": "en",
+                "alt_text": "Editorial illustration: Tamarind flavours",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 199,
+                "locale": "es",
+                "alt_text": "Ilustración editorial: Sabores de tamarindo",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 199,
+                "locale": "pt-BR",
+                "alt_text": "Ilustração editorial: Sabores de tamarindo",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 200,
+                "locale": "en",
+                "alt_text": "Illustration of a guided town walk.",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 200,
+                "locale": "es",
+                "alt_text": "Ilustración de un recorrido urbano con guía.",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 200,
+                "locale": "pt-BR",
+                "alt_text": "Ilustração de um passeio urbano com guia.",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 353,
+                "locale": "en",
+                "alt_text": "Thematic illustration of a guided local food tasting.",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 353,
+                "locale": "es",
+                "alt_text": "Ilustración temática de una degustación guiada de sabores locales.",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 353,
+                "locale": "pt-BR",
+                "alt_text": "Ilustração temática de uma degustação guiada de sabores locais.",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 366,
+                "locale": "en",
+                "alt_text": "Editorial illustration: Puente de Occidente",
+                "caption": "Swedish Colombian · CC BY 2.0 · Adaptación ilustrada IA"
+            },
+            {
+                "media_asset_id": 366,
+                "locale": "es",
+                "alt_text": "Ilustración editorial: Puente de Occidente",
+                "caption": "Swedish Colombian · CC BY 2.0 · Adaptación ilustrada IA"
+            },
+            {
+                "media_asset_id": 366,
+                "locale": "pt-BR",
+                "alt_text": "Ilustração editorial: Puente de Occidente",
+                "caption": "Swedish Colombian · CC BY 2.0 · Adaptación ilustrada IA"
+            },
+            {
+                "media_asset_id": 370,
+                "locale": "en",
+                "alt_text": "Editorial illustration: Iglesia de Santa Bárbara",
+                "caption": "Magi and Helen · CC BY 2.0 · Adaptación ilustrada IA"
+            },
+            {
+                "media_asset_id": 370,
+                "locale": "es",
+                "alt_text": "Ilustración editorial: Iglesia de Santa Bárbara",
+                "caption": "Magi and Helen · CC BY 2.0 · Adaptación ilustrada IA"
+            },
+            {
+                "media_asset_id": 370,
+                "locale": "pt-BR",
+                "alt_text": "Ilustração editorial: Iglesia de Santa Bárbara",
+                "caption": "Magi and Helen · CC BY 2.0 · Adaptación ilustrada IA"
+            },
+            {
+                "media_asset_id": 379,
+                "locale": "en",
+                "alt_text": "Illustration based on a real display case at Museo Juan del Corral.",
+                "caption": "XalD · CC BY-SA 4.0 · Adaptación ilustrada IA"
+            },
+            {
+                "media_asset_id": 379,
+                "locale": "es",
+                "alt_text": "Ilustración basada en una vitrina real del Museo Juan del Corral.",
+                "caption": "XalD · CC BY-SA 4.0 · Adaptación ilustrada IA"
+            },
+            {
+                "media_asset_id": 379,
+                "locale": "pt-BR",
+                "alt_text": "Ilustração baseada em uma vitrine real do Museo Juan del Corral.",
+                "caption": "XalD · CC BY-SA 4.0 · Adaptación ilustrada IA"
+            },
+            {
+                "media_asset_id": 381,
+                "locale": "en",
+                "alt_text": "Illustration of the real façade of Museo de Arte Religioso Francisco Cristóbal Toro.",
+                "caption": "SajoR · CC BY-SA 2.5 · Adaptación ilustrada IA"
+            },
+            {
+                "media_asset_id": 381,
+                "locale": "es",
+                "alt_text": "Ilustración de la fachada real del Museo de Arte Religioso Francisco Cristóbal Toro.",
+                "caption": "SajoR · CC BY-SA 2.5 · Adaptación ilustrada IA"
+            },
+            {
+                "media_asset_id": 381,
+                "locale": "pt-BR",
+                "alt_text": "Ilustração da fachada real do Museo de Arte Religioso Francisco Cristóbal Toro.",
+                "caption": "SajoR · CC BY-SA 2.5 · Adaptación ilustrada IA"
+            },
+            {
+                "media_asset_id": 384,
+                "locale": "en",
+                "alt_text": "Thematic illustration: Guided countryside horse ride",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 384,
+                "locale": "es",
+                "alt_text": "Ilustración temática: Cabalgata rural",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 384,
+                "locale": "pt-BR",
+                "alt_text": "Ilustração temática: Cavalgada rural",
+                "caption": ""
+            }
+        ]
+    },
+    "media_files": {
+        "53": {
+            "export_file": "media/2d2adf8c3b2401a40a15d0da2c676a6993d0d66ba90684a1993166169a5db4d9.webp",
+            "sha256": "2d2adf8c3b2401a40a15d0da2c676a6993d0d66ba90684a1993166169a5db4d9",
+            "source_asset_path": "assets/destinos/santa-fe-de-antioquia-1.webp",
+            "bytes": 152934
+        },
+        "54": {
+            "export_file": "media/99c527608820e1e0e1b5656b2fcb5e2a2b516532ce5e4e7cc09fee3f96af9d68.webp",
+            "sha256": "99c527608820e1e0e1b5656b2fcb5e2a2b516532ce5e4e7cc09fee3f96af9d68",
+            "source_asset_path": "assets/destinos/santa-fe-de-antioquia-2.webp",
+            "bytes": 38876
+        },
+        "188": {
+            "export_file": "media/9a661e252005d27e29917085b025241a86b31370e1b5f30f412f4a6da879d9f2.webp",
+            "sha256": "9a661e252005d27e29917085b025241a86b31370e1b5f30f412f4a6da879d9f2",
+            "source_asset_path": "assets/destinos/preprod-santa-fe-de-antioquia/9a661e252005d27e29917085b025241a86b31370e1b5f30f412f4a6da879d9f2.webp",
+            "bytes": 256110
+        },
+        "190": {
+            "export_file": "media/76329fe624e14d3731fc745a8fa145e18c062dd2506b955b7d295de487f5645f.webp",
+            "sha256": "76329fe624e14d3731fc745a8fa145e18c062dd2506b955b7d295de487f5645f",
+            "source_asset_path": "assets/destinos/preprod-santa-fe-de-antioquia/76329fe624e14d3731fc745a8fa145e18c062dd2506b955b7d295de487f5645f.webp",
+            "bytes": 301398
+        },
+        "191": {
+            "export_file": "media/1a96481600ead83e11e8b4d6b459181494d964b802df6d45e463f5bea709e271.webp",
+            "sha256": "1a96481600ead83e11e8b4d6b459181494d964b802df6d45e463f5bea709e271",
+            "source_asset_path": "assets/destinos/preprod-santa-fe-de-antioquia/1a96481600ead83e11e8b4d6b459181494d964b802df6d45e463f5bea709e271.webp",
+            "bytes": 214884
+        },
+        "195": {
+            "export_file": "media/f632e6a1f5ede2608c4babb6c51f5e6815cb91e21f329ba7b6abb75ec20cc11d.webp",
+            "sha256": "f632e6a1f5ede2608c4babb6c51f5e6815cb91e21f329ba7b6abb75ec20cc11d",
+            "source_asset_path": "assets/destinos/preprod-santa-fe-de-antioquia/f632e6a1f5ede2608c4babb6c51f5e6815cb91e21f329ba7b6abb75ec20cc11d.webp",
+            "bytes": 283208
+        },
+        "196": {
+            "export_file": "media/cf5e1a5a63a0fb3fd4968729690c6af4531780034fee1cb1faca053c8256362f.webp",
+            "sha256": "cf5e1a5a63a0fb3fd4968729690c6af4531780034fee1cb1faca053c8256362f",
+            "source_asset_path": "assets/destinos/preprod-santa-fe-de-antioquia/cf5e1a5a63a0fb3fd4968729690c6af4531780034fee1cb1faca053c8256362f.webp",
+            "bytes": 165768
+        },
+        "197": {
+            "export_file": "media/88b37fd25f887b990ea03a6b5257045800eedcc814999bd05511911591a228be.webp",
+            "sha256": "88b37fd25f887b990ea03a6b5257045800eedcc814999bd05511911591a228be",
+            "source_asset_path": "assets/destinos/preprod-santa-fe-de-antioquia/88b37fd25f887b990ea03a6b5257045800eedcc814999bd05511911591a228be.webp",
+            "bytes": 264904
+        },
+        "198": {
+            "export_file": "media/fd2bacb4b24eda91593fcb3fcc1b5c798559653d7d6752052d2c550666ab02dc.webp",
+            "sha256": "fd2bacb4b24eda91593fcb3fcc1b5c798559653d7d6752052d2c550666ab02dc",
+            "source_asset_path": "assets/destinos/preprod-santa-fe-de-antioquia/fd2bacb4b24eda91593fcb3fcc1b5c798559653d7d6752052d2c550666ab02dc.webp",
+            "bytes": 143982
+        },
+        "199": {
+            "export_file": "media/aa988c77860728709822c058c3b6cb46fe652c69fe4f9c31617724781a6cc5a0.webp",
+            "sha256": "aa988c77860728709822c058c3b6cb46fe652c69fe4f9c31617724781a6cc5a0",
+            "source_asset_path": "assets/destinos/preprod-santa-fe-de-antioquia/aa988c77860728709822c058c3b6cb46fe652c69fe4f9c31617724781a6cc5a0.webp",
+            "bytes": 184418
+        },
+        "200": {
+            "export_file": "media/88fc2738324807a23ddabc026f4abb77da36c3de5f9876e5d05335854f9fa12e.webp",
+            "sha256": "88fc2738324807a23ddabc026f4abb77da36c3de5f9876e5d05335854f9fa12e",
+            "source_asset_path": "assets/destinos/preprod-santa-fe-de-antioquia/88fc2738324807a23ddabc026f4abb77da36c3de5f9876e5d05335854f9fa12e.webp",
+            "bytes": 173720
+        },
+        "353": {
+            "export_file": "media/7f2b0ab30e20f94d42d769019a4bd93306d860ba0439c1ac6a5b6d35095bcfb3.webp",
+            "sha256": "7f2b0ab30e20f94d42d769019a4bd93306d860ba0439c1ac6a5b6d35095bcfb3",
+            "source_asset_path": "assets/destinos/preprod-santa-fe-de-antioquia/7f2b0ab30e20f94d42d769019a4bd93306d860ba0439c1ac6a5b6d35095bcfb3.webp",
+            "bytes": 99248
+        },
+        "366": {
+            "export_file": "media/1e3e90f8e77ce8a97df5d9d4b6fee2f85e6b071d609c39fba999b530d00445e3.webp",
+            "sha256": "1e3e90f8e77ce8a97df5d9d4b6fee2f85e6b071d609c39fba999b530d00445e3",
+            "source_asset_path": "assets/destinos/preprod-santa-fe-de-antioquia/1e3e90f8e77ce8a97df5d9d4b6fee2f85e6b071d609c39fba999b530d00445e3.webp",
+            "bytes": 232346
+        },
+        "370": {
+            "export_file": "media/1553c6b366bbc29a7406ccb53a45bf88bd48aefdecd0e5b1dc6a992dd6fd27c0.webp",
+            "sha256": "1553c6b366bbc29a7406ccb53a45bf88bd48aefdecd0e5b1dc6a992dd6fd27c0",
+            "source_asset_path": "assets/destinos/preprod-santa-fe-de-antioquia/1553c6b366bbc29a7406ccb53a45bf88bd48aefdecd0e5b1dc6a992dd6fd27c0.webp",
+            "bytes": 235132
+        },
+        "379": {
+            "export_file": "media/781d3fbf0d18deb2bc7d158fa8e14416f0ab927dd8f98f091b7a197d8b9944f0.webp",
+            "sha256": "781d3fbf0d18deb2bc7d158fa8e14416f0ab927dd8f98f091b7a197d8b9944f0",
+            "source_asset_path": "assets/destinos/preprod-santa-fe-de-antioquia/781d3fbf0d18deb2bc7d158fa8e14416f0ab927dd8f98f091b7a197d8b9944f0.webp",
+            "bytes": 139960
+        },
+        "381": {
+            "export_file": "media/01244a929a1860c649cacf48e423ad1e1e7bb84c38ef45193f781ce17c8bd696.webp",
+            "sha256": "01244a929a1860c649cacf48e423ad1e1e7bb84c38ef45193f781ce17c8bd696",
+            "source_asset_path": "assets/destinos/preprod-santa-fe-de-antioquia/01244a929a1860c649cacf48e423ad1e1e7bb84c38ef45193f781ce17c8bd696.webp",
+            "bytes": 284182
+        },
+        "384": {
+            "export_file": "media/7373a0581858553df3c99d612d850d3ade25b40e8b4b0a4e7190b8489f60c096.webp",
+            "sha256": "7373a0581858553df3c99d612d850d3ade25b40e8b4b0a4e7190b8489f60c096",
+            "source_asset_path": "assets/destinos/preprod-santa-fe-de-antioquia/7373a0581858553df3c99d612d850d3ade25b40e8b4b0a4e7190b8489f60c096.webp",
+            "bytes": 277158
+        }
+    },
+    "excluded": "Accounts, private contacts, subscriptions, payments, analytics, internal_research_json and arbitrary provenance_json omitted. IDs retained for explicit migration mapping, not blind restore."
+}
