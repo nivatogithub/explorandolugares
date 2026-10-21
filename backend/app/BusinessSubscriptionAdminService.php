@@ -184,13 +184,9 @@ final class BusinessSubscriptionAdminService
             }
             $q=$this->pdo->prepare('SELECT locale,display_name,summary,description,brand_story,featured_services FROM business_translations WHERE business_id=?');$q->execute([$businessId]);$translations=[];foreach($q->fetchAll(PDO::FETCH_ASSOC) as $row)$translations[$row['locale']]=$row;
             foreach($translations as $locale=>$translation)foreach(['summary','description','brand_story','featured_services'] as $field){$limit=(int)$limits['max_'.$field.'_chars'];if($limit>0&&preg_match_all('/./us',(string)($translation[$field]??''))>$limit)throw new RuntimeException('El campo '.$field.' en '.$locale.' supera el límite de '.$limit.' caracteres de esta suscripción.');}
-            if($sub['plan_code']==='page_premium')BusinessServiceSections::publication($this->pdo,$businessId);
             $requiredSpanish=['display_name'];
             if(in_array($sub['plan_code'],['basic','featured','page','page_premium'],true))$requiredSpanish[]='summary';
             if(in_array($sub['plan_code'],['featured','page','page_premium'],true))$requiredSpanish[]='description';
-            // History and the general services text are optional, but must be translated when supplied.
-            $optionalSpanish=$sub['plan_code']==='page_premium'?['brand_story','featured_services']:[];
-            foreach($optionalSpanish as $field)if(trim((string)($translations['es'][$field]??''))!=='')$requiredSpanish[]=$field;
             foreach($requiredSpanish as $field)if(trim((string)($translations['es'][$field]??''))==='')throw new RuntimeException('Completa la información adicional que solicita esta suscripción antes de publicar.');
             foreach(['en','pt-BR'] as $locale){$row=$translations[$locale]??null;if(!$row)throw new RuntimeException('Completa y traduce el contenido a español, inglés y portugués antes de publicar.');foreach($requiredSpanish as $field){$spanish=trim((string)($translations['es'][$field]??''));$translated=trim((string)($row[$field]??''));if($translated===''||($field!=='display_name'&&$translated===$spanish))throw new RuntimeException('Completa y traduce el contenido a español, inglés y portugués antes de publicar.');}}
     }

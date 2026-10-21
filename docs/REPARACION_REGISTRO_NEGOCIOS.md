@@ -155,3 +155,9 @@ Título con fondo de panel y acento de marca, nombre truncado a una línea para 
 ### Contactos y datos prácticos: decisión vigente
 
 Instagram pasa a ser exclusivo de Premium, tanto en filtros del servidor como en formularios, tarjetas, páginas y tabla comercial (ES/EN/PT). Página Comercial muestra teléfono, WhatsApp, correo y ubicación. Se retiran rango de precios y capacidad del editor público y de la presentación de las páginas; los datos históricos no se borran ni se modifican. Horarios y enlace de menú permanecen disponibles.
+
+### Premium: servicios por iconos y cuatro destacados
+
+Decisión vigente: no se muestra «Nuestra historia» ni se solicitan narrativas de historia o secciones de servicios en el editor. Los servicios se representan mediante los iconos y etiquetas del catálogo de categorías, exclusivamente en Premium y únicamente cuando tiene más de una categoría distinta. No se crean categorías adicionales ni se infiere que un negocio ofrece algo que no seleccionó.
+
+Premium permite elegir hasta cuatro productos o servicios estrella con foto; es un máximo, no una cantidad obligatoria. Se reemplaza el límite anterior de cinco, con control en guardado, preparación/publicación y presentación. Los textos históricos de historia/servicios se conservan sin exponerse ni bloquear una publicación por su traducción. Cada texto realmente público continúa sujeto a revisión y traducción. La tabla de suscripciones incorpora la nueva capacidad en los tres idiomas.

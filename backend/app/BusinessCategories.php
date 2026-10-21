@@ -4,6 +4,23 @@ declare(strict_types=1);
 /** Primary category remains canonical; extra categories never create another business. */
 final class BusinessCategories
 {
+    /** Same pictograms as business registration, with visible category labels. */
+    public static function icon(string $code): string
+    {
+        $path=match($code){
+          'hospedaje'=>'M3 19V7h18v12M3 14h18M7 10h3m4 0h3',
+          'alimentacion'=>'M5 3v7m3-7v7m-5-4h7M6 10v11M17 3v18m0-18c5 3 5 8 0 8',
+          'comercio'=>'M4 8h16v13H4V8m3 0V6a5 5 0 0 1 10 0v2',
+          'experiencias'=>'m2 20 7-14 5 9 3-5 5 10H2m4-8 3 2 3-2',
+          'transporte'=>'M4 16V7h16v9H4m3 0v4m10-4v4M4 12h16',
+          'cultura'=>'m3 9 9-6 9 6H3m2 2v8m7-8v8m7-8v8M3 21h18',
+          'salud'=>'M9 3h6v6h6v6h-6v6H9v-6H3V9h6V3',
+          'licores'=>'M8 3h8v8a4 4 0 0 1-8 0V3m4 12v6m-4 0h8',
+          'vida-nocturna'=>'M16 3a9 9 0 1 0 5 14A8 8 0 0 1 16 3',
+          default=>'M4 4h6v6H4V4m10 0h6v6h-6V4M4 14h6v6H4v-6m10 0h6v6h-6v-6'};
+        return '<svg class="business-service-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="'.$path.'"/></svg>';
+    }
+
     public static function ready(PDO $pdo): bool
     {
         try{$pdo->query('SELECT business_id,category_code FROM business_categories LIMIT 0');return true;}
