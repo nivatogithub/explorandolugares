@@ -144,10 +144,39 @@
       }
     },
     {
+      "slug": "ribera-rio-cauca",
+      "type": "place",
+      "publication_status": "draft",
+      "sort_order": 3,
+      "translations": {
+        "es": {
+          "name": "Ribera del río Cauca",
+          "description": "Contempla el río desde los espacios del conjunto habilitados para visitantes."
+        },
+        "en": {
+          "name": "Cauca River banks",
+          "description": "See the river from areas of the development designated for visitors."
+        },
+        "pt-BR": {
+          "name": "Margens do rio Cauca",
+          "description": "Observe o rio nos espaços do conjunto autorizados para visitantes."
+        }
+      },
+      "image": {
+        "file": "images/ribera-rio-cauca.webp",
+        "image_origin": "ai_generated",
+        "alt": {
+          "es": "Ilustración de la ribera del río Cauca en Cauca Viejo",
+          "en": "Illustration of the Cauca River banks in Cauca Viejo",
+          "pt-BR": "Ilustração das margens do rio Cauca em Cauca Viejo"
+        }
+      }
+    },
+    {
       "slug": "paseo-rio-cauca",
       "type": "experience",
       "publication_status": "draft",
-      "sort_order": 3,
+      "sort_order": 4,
       "translations": {
         "es": {
           "name": "Paseo por el río Cauca",
@@ -176,7 +205,7 @@
       "slug": "cabalgata",
       "type": "experience",
       "publication_status": "draft",
-      "sort_order": 4,
+      "sort_order": 5,
       "translations": {
         "es": {
           "name": "Cabalgata (alrededores)",

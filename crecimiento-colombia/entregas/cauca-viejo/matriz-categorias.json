@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-20",
+  "scope": "Solo16candidatos(14históricos+2restaurantes), noinventariocompletoDB ni padróndetodaeconomía",
+  "independent_primary_candidates": 7,
+  "branches_not_added_to_count": 2,
+  "unresolved_candidates": 7,
+  "sum_category_memberships": 8,
+  "warning": "Uncomercio puede contarenvariascategorías: suma8asignacionesnoequivale8negocios. No16operativos ni30confirmados.",
+  "rows": [
+    {
+      "category": "Hospedaje",
+      "count_primary_independent": 5,
+      "names": [
+        "Fundadores",
+        "Mamá Rosita",
+        "Jacaranda",
+        "Linaje",
+        "Cedrela"
+      ],
+      "status": "Documentado con fuente propia; disponibilidad no certificada"
+    },
+    {
+      "category": "Comida",
+      "count_primary_independent": 2,
+      "names": [
+        "El Mango",
+        "Fonda Estación del Río"
+      ],
+      "status": "Documentado con fuente propia; disponibilidad no certificada"
+    },
+    {
+      "category": "Licores",
+      "count_primary_independent": 0,
+      "names": [],
+      "status": "Sin comercio confirmado en lote revisado"
+    },
+    {
+      "category": "Vida nocturna",
+      "count_primary_independent": 1,
+      "names": [
+        "Fonda Estación del Río"
+      ],
+      "status": "Documentado con fuente propia; disponibilidad no certificada"
+    },
+    {
+      "category": "Compras",
+      "count_primary_independent": 0,
+      "names": [],
+      "status": "Sin comercio confirmado en lote revisado"
+    },
+    {
+      "category": "Salud",
+      "count_primary_independent": 0,
+      "names": [],
+      "status": "Sin comercio confirmado en lote revisado"
+    },
+    {
+      "category": "Actividades",
+      "count_primary_independent": 0,
+      "names": [],
+      "status": "Sin comercio confirmado en lote revisado"
+    },
+    {
+      "category": "Cultura",
+      "count_primary_independent": 0,
+      "names": [],
+      "status": "Sin comercio confirmado en lote revisado"
+    },
+    {
+      "category": "Transporte",
+      "count_primary_independent": 0,
+      "names": [],
+      "status": "Sin comercio confirmado en lote revisado"
+    },
+    {
+      "category": "Servicios",
+      "count_primary_independent": 0,
+      "names": [],
+      "status": "Sin comercio confirmado en lote revisado"
+    }
+  ],
+  "activity_note": "Fundadoresofrece experiencias, pero no se crea otro negocio deoperador como si fueraindependiente. Asignaciónsecundaria Actividades al mismoIDpendientecotejoDB; no suma establecimientonuevo.",
+  "services_note": "Periódico comunitario trae directorio de contratistas; no se importaron personas/telefonos sin comprobar actividadempresarialactual y condiciones. No relleno."
+}

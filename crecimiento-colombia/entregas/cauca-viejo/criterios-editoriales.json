@@ -58,6 +58,12 @@
       "offer_url": "https://caucaviejo.com/experiencias/",
       "evidence": "Oferta propia con enlace para solicitar; no acredita cupo, itinerario vigente ni ventas.",
       "public_operator_advertising": false
+    },
+    {
+      "slug": "ribera-rio-cauca",
+      "decision": "incluir lugar, imagen pendiente",
+      "source_url": "https://caucaviejo.com/pueblo-cauca-viejo/",
+      "purpose": "Contemplar paisaje ribereño desde espacioshabilitados; no prometer malecón/accesolibre"
     }
   ],
   "excluded": [
@@ -76,6 +82,10 @@
     {
       "candidate": "Senderos y puente colgante",
       "reason": "Mapa del anfitrión confirma existencia; acceso/recorrido exacto y referencias visuales no contrastados. No añadir cupos por obligación."
+    },
+    {
+      "candidate": "Molienda en La Mielera",
+      "reason": "Existencia documentada y evento comunitario, sinofertaregularactualconfirmada. Véase trapiche-ribera-investigacion.json."
     }
   ],
   "uncertainties": [
