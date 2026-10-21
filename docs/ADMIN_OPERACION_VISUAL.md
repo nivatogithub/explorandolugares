@@ -65,3 +65,5 @@ Integrar el candidato en preprod conforme a AGENTS, reconciliar main, revisar el
 - Suscripciones muestra solo planes de pago, ordenados por vencimiento, con días restantes y filtros de renovación a 7/30 días o vencidas. Gratis se conserva en Negocios. Preparar recordatorio lleva a la composición de campaña filtrada por negocio: no envía ni programa correos y depende de los canales habilitados existentes. Automatización y conexión con correo del representante siguen pendientes. Sin cambios de planes, pagos o vigencias.
 
 - Reportes: nombre simplificado en título y menú. Corregida la estructura del contenedor: la navegación queda dentro de admin-page para reservar su ancho y evitar que tape títulos y tablas; mantiene el comportamiento móvil común. Sin cambios en consultas o métricas.
+
+- Revisión de negocios sustituye Solicitudes de cuenta en encabezado y menú. Persona responsable se distingue de negocio; aprobación documental/asociación no se presenta como aprobación de cuenta, pago o publicación. Filtros radio por estado con conteos independientes y aplicación al seleccionar. Servicios y requisitos de dominio permanecen iguales.

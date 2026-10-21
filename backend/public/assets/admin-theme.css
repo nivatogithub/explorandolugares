@@ -85,3 +85,5 @@ body.portal-admin{--ink:var(--el-text);--muted:var(--el-muted);--ember:var(--el-
 .portal-admin .account-file-picker:focus-within{outline:3px solid var(--el-action);outline-offset:3px}
 .portal-admin .account-file-picker:has(input:disabled){opacity:.55}
 .portal-admin .account-file-picker input:disabled{cursor:not-allowed}
+
+.portal-admin .admin-review-status-filter fieldset{display:flex;flex-wrap:wrap;gap:12px 20px;border:1px solid var(--el-border);border-radius:8px;padding:16px;margin:20px 0}.portal-admin .admin-review-status-filter label{display:flex;align-items:center;gap:8px;min-height:44px;cursor:pointer}.portal-admin .admin-review-status-filter input{width:auto;margin:0;accent-color:var(--el-action)}

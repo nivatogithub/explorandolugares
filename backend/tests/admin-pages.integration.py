@@ -196,7 +196,7 @@ try:
         ('/admin/importar-negocios.php', 'Importar varios negocios'),
         ('/admin/importar-negocios.php?plantilla=1', 'schema_version'),
         ('/admin/reclamaciones.php', 'Solicitudes anteriores de representación'),
-        ('/admin/solicitudes-cuenta.php', 'Solicitudes de cuenta de negocio'),
+        ('/admin/solicitudes-cuenta.php', 'Revisión de negocios'),
         ('/admin/usuarios.php', 'Cuentas'),
         ('/admin/incidencias.php', 'Errores de ejecución'),
         ('/admin/reportes.php', 'Reportes'),
@@ -243,8 +243,8 @@ try:
                     '/admin/negocios.php': 'Negocios',
                     '/admin/trasladar-negocios.php': 'Negocios',
                     '/admin/importar-negocios.php': 'Negocios',
-                    '/admin/reclamaciones.php': 'Solicitudes de cuenta',
-                    '/admin/solicitudes-cuenta.php': 'Solicitudes de cuenta',
+                    '/admin/reclamaciones.php': 'Revisión de negocios',
+                    '/admin/solicitudes-cuenta.php': 'Revisión de negocios',
                     '/admin/usuarios.php': 'Cuentas',
                     '/admin/suscripciones.php': 'Suscripciones',
                     '/admin/inversionistas.php': 'Inteligencia e inversión',
@@ -624,6 +624,10 @@ try:
     check(status==200 and 'Listado de negocios' in view_body and 'Cafetería de cuenta HTTP' not in view_body and 'Solicitudes y seguimiento' not in view_body and 'tab=atencion' not in view_body,'Removed attention view must open the unified business list without duplicating requests.')
     status,requests_body,_=request('/admin/solicitudes-cuenta.php')
     check(status==200 and 'Cafetería de cuenta HTTP' in requests_body,'Requests without a business must remain available in account requests.')
+    _,approved_only,_=request('/admin/solicitudes-cuenta.php?estado=approved')
+    check('Cafetería de cuenta HTTP' not in approved_only,'Pending request leaked into approved review filter.')
+    _,pending_only,_=request('/admin/solicitudes-cuenta.php?estado=pending')
+    check('Cafetería de cuenta HTTP' in pending_only,'Pending request missing from review filter.')
     check(view_snapshot()==before_admin_view,'Viewing administrative details must not mutate businesses, requests, memberships or subscriptions.')
     holder = json.loads(DB.execute('SELECT business_details_json FROM business_account_applications WHERE id=?',(application_row['id'],)).fetchone()[0])['holder_identity']
     check(holder['document_type']=='CC' and holder['number']=='123456789' and not holder['officially_verified'] and not holder['ownership_verified'], 'Debe conservar el documento privado sin afirmar verificación oficial.')
