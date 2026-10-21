@@ -1,0 +1,529 @@
+{
+  "schema": "destination-public-snapshot-v1",
+  "destination": "cauca-viejo",
+  "tables": {
+    "destinations": [
+      {
+        "id": 10002,
+        "slug": "cauca-viejo",
+        "destination_type": "other",
+        "country_code": "CO",
+        "department": "Antioquia",
+        "subregion": "Suroeste",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 102
+      }
+    ],
+    "destination_translations": [
+      {
+        "destination_id": 10002,
+        "locale": "es",
+        "display_name": "Cauca Viejo",
+        "eyebrow": "Jericó · Antioquia · Colombia",
+        "headline": "Balcones y descanso junto al Cauca",
+        "intro": "Pueblo privado junto al río Cauca, dentro de Jericó. El ingreso requiere reserva y coordinación previa.",
+        "meta_description": "Pueblo privado junto al río Cauca, dentro de Jericó. El ingreso requiere reserva y coordinación previa."
+      },
+      {
+        "destination_id": 10002,
+        "locale": "en",
+        "display_name": "Cauca Viejo",
+        "eyebrow": "Jericó · Antioquia · Colombia",
+        "headline": "Balconies and quiet by the Cauca",
+        "intro": "A private village beside the Cauca River, within Jericó. Entry requires a reservation and advance arrangements.",
+        "meta_description": "A private village beside the Cauca River, within Jericó. Entry requires a reservation and advance arrangements."
+      },
+      {
+        "destination_id": 10002,
+        "locale": "pt-BR",
+        "display_name": "Cauca Viejo",
+        "eyebrow": "Jericó · Antioquia · Colombia",
+        "headline": "Varandas e descanso junto ao Cauca",
+        "intro": "Povoado privado às margens do rio Cauca, em Jericó. A entrada exige reserva e organização prévia.",
+        "meta_description": "Povoado privado às margens do rio Cauca, em Jericó. A entrada exige reserva e organização prévia."
+      }
+    ],
+    "destination_story_blocks": [
+      {
+        "id": 1000201,
+        "destination_id": 10002,
+        "display_order": 1,
+        "section_key": "history"
+      }
+    ],
+    "destination_story_translations": [
+      {
+        "story_block_id": 1000201,
+        "locale": "es",
+        "body": "Cauca Viejo nació en 1998 como un proyecto residencial y turístico en Jericó. Su arquitectura recrea tradiciones del suroeste antioqueño; no es un pueblo colonial antiguo."
+      },
+      {
+        "story_block_id": 1000201,
+        "locale": "en",
+        "body": "Cauca Viejo began in 1998 as a residential and tourism development in Jericó. Its buildings reinterpret southwestern Antioquia traditions; it is not an old colonial town."
+      },
+      {
+        "story_block_id": 1000201,
+        "locale": "pt-BR",
+        "body": "Cauca Viejo surgiu em 1998 como um empreendimento residencial e turístico em Jericó. Sua arquitetura recria tradições do sudoeste de Antioquia; não é um antigo povoado colonial."
+      }
+    ],
+    "destination_reasons": [
+      {
+        "id": 1000201,
+        "destination_id": 10002,
+        "display_order": 1
+      }
+    ],
+    "destination_reason_translations": [
+      {
+        "reason_id": 1000201,
+        "locale": "es",
+        "body": "Pueblo privado junto al río Cauca, dentro de Jericó. El ingreso requiere reserva y coordinación previa."
+      },
+      {
+        "reason_id": 1000201,
+        "locale": "en",
+        "body": "A private village beside the Cauca River, within Jericó. Entry requires a reservation and advance arrangements."
+      },
+      {
+        "reason_id": 1000201,
+        "locale": "pt-BR",
+        "body": "Povoado privado às margens do rio Cauca, em Jericó. A entrada exige reserva e organização prévia."
+      }
+    ],
+    "destination_sources": [
+      {
+        "destination_id": 10002,
+        "locale": "es",
+        "section_key": "destination",
+        "source_url": "https://caucaviejo.com/pueblo-cauca-viejo/",
+        "source_label": "Ubicación y acceso / Location and access",
+        "display_order": 1
+      },
+      {
+        "destination_id": 10002,
+        "locale": "en",
+        "section_key": "destination",
+        "source_url": "https://caucaviejo.com/pueblo-cauca-viejo/",
+        "source_label": "Ubicación y acceso / Location and access",
+        "display_order": 1
+      },
+      {
+        "destination_id": 10002,
+        "locale": "pt-BR",
+        "section_key": "destination",
+        "source_url": "https://caucaviejo.com/pueblo-cauca-viejo/",
+        "source_label": "Ubicación y acceso / Location and access",
+        "display_order": 1
+      }
+    ],
+    "destination_media": [
+      {
+        "destination_id": 10002,
+        "role": "hero",
+        "media_asset_id": -10011,
+        "display_order": 1
+      }
+    ],
+    "points_of_interest": [
+      {
+        "id": 1000201,
+        "destination_id": 10002,
+        "slug": "plaza-principal",
+        "poi_type": "place",
+        "publication_status": "published",
+        "latitude": null,
+        "longitude": null,
+        "display_order": 1
+      },
+      {
+        "id": 1000202,
+        "destination_id": 10002,
+        "slug": "capilla",
+        "poi_type": "place",
+        "publication_status": "published",
+        "latitude": null,
+        "longitude": null,
+        "display_order": 2
+      },
+      {
+        "id": 1000203,
+        "destination_id": 10002,
+        "slug": "ribera-rio-cauca",
+        "poi_type": "place",
+        "publication_status": "published",
+        "latitude": null,
+        "longitude": null,
+        "display_order": 3
+      },
+      {
+        "id": 1000204,
+        "destination_id": 10002,
+        "slug": "paseo-rio-cauca",
+        "poi_type": "experience",
+        "publication_status": "published",
+        "latitude": null,
+        "longitude": null,
+        "display_order": 4
+      },
+      {
+        "id": 1000205,
+        "destination_id": 10002,
+        "slug": "cabalgata",
+        "poi_type": "experience",
+        "publication_status": "published",
+        "latitude": null,
+        "longitude": null,
+        "display_order": 5
+      }
+    ],
+    "point_of_interest_translations": [
+      {
+        "point_of_interest_id": 1000201,
+        "locale": "es",
+        "name": "Plaza principal",
+        "description": "Fuente de piedra y balcones en el centro del pueblo privado.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000201,
+        "locale": "en",
+        "name": "Main square",
+        "description": "A stone fountain and balconies at the heart of the private village.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000201,
+        "locale": "pt-BR",
+        "name": "Praça principal",
+        "description": "Fonte de pedra e varandas no centro do povoado privado.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000202,
+        "locale": "es",
+        "name": "Capilla de Cauca Viejo",
+        "description": "La capilla acompaña la plaza y la arquitectura tradicional del conjunto.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000202,
+        "locale": "en",
+        "name": "Cauca Viejo chapel",
+        "description": "The chapel stands beside the square and the development’s traditional architecture.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000202,
+        "locale": "pt-BR",
+        "name": "Capela de Cauca Viejo",
+        "description": "A capela acompanha a praça e a arquitetura tradicional do conjunto.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000203,
+        "locale": "es",
+        "name": "Ribera del río Cauca",
+        "description": "Contempla el río desde los espacios del conjunto habilitados para visitantes.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000203,
+        "locale": "en",
+        "name": "Cauca River banks",
+        "description": "See the river from areas of the development designated for visitors.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000203,
+        "locale": "pt-BR",
+        "name": "Margens do rio Cauca",
+        "description": "Observe o rio nos espaços do conjunto autorizados para visitantes.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000204,
+        "locale": "es",
+        "name": "Paseo por el río Cauca",
+        "description": "Recorre el río con guía y conoce el paisaje ribereño del suroeste.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000204,
+        "locale": "en",
+        "name": "Cauca River boat tour",
+        "description": "Explore the river with a guide and discover the southwestern riverside landscape.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000204,
+        "locale": "pt-BR",
+        "name": "Passeio pelo rio Cauca",
+        "description": "Percorra o rio com guia e conheça a paisagem ribeirinha do sudoeste.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000205,
+        "locale": "es",
+        "name": "Cabalgata (alrededores)",
+        "description": "Recorre a caballo los paisajes cercanos a Cauca Viejo.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000205,
+        "locale": "en",
+        "name": "Horseback riding (surroundings)",
+        "description": "Explore the landscapes around Cauca Viejo on horseback.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000205,
+        "locale": "pt-BR",
+        "name": "Cavalgada (arredores)",
+        "description": "Conheça a cavalo as paisagens próximas a Cauca Viejo.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      }
+    ],
+    "point_of_interest_media": [
+      {
+        "point_of_interest_id": 1000201,
+        "media_asset_id": -10011,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 1000202,
+        "media_asset_id": -10012,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 1000203,
+        "media_asset_id": -10013,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 1000204,
+        "media_asset_id": -10014,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 1000205,
+        "media_asset_id": -10015,
+        "role": "gallery",
+        "display_order": 1
+      }
+    ],
+    "media_assets": [
+      {
+        "id": -10011,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/5e/5e4b8f6ef13701fee1d4336beec8e80f10b91ec828c6ac7da7f484e9ec699019.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"cauca-viejo--plaza-principal\", \"master_sha256\": \"fcc97e1832e365d0e495b1a3e8adb40076c79249f767a0b4aee4f86a3c8be453\", \"web_sha256\": \"5e4b8f6ef13701fee1d4336beec8e80f10b91ec828c6ac7da7f484e9ec699019\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/cauca-viejo\"}"
+      },
+      {
+        "id": -10012,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/d4/d4c39418c7acc95e30cc18ccb2a3307f5e86263f3c98f37712df3ccecf0d9830.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"cauca-viejo--capilla\", \"master_sha256\": \"92ebf24f19bb0367a023ab174643d6a4dfe13fed9ca0ba8180f84d34bd9a28ac\", \"web_sha256\": \"d4c39418c7acc95e30cc18ccb2a3307f5e86263f3c98f37712df3ccecf0d9830\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/cauca-viejo\"}"
+      },
+      {
+        "id": -10013,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/45/457e5c6bbdc239fc9b3d70d35512bf6f4e46e8f807c385d73844217a5c8b28e6.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"cauca-viejo--ribera-rio-cauca\", \"master_sha256\": \"2bc6c7d0104311dac54c09e06aeeffa36a85df964b4e185c06d9760d046da4e9\", \"web_sha256\": \"457e5c6bbdc239fc9b3d70d35512bf6f4e46e8f807c385d73844217a5c8b28e6\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/cauca-viejo\"}"
+      },
+      {
+        "id": -10014,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/ad/adfe8071c8080fb0d390a204552d4c71f6ec42c1aabb9b3496daa2ac1d8ff785.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"cauca-viejo--paseo-rio-cauca\", \"master_sha256\": \"4fb7f66b3514033b9ee973fd0c5e619ab5c642078ef4ccbc32d44855c7433cbd\", \"web_sha256\": \"adfe8071c8080fb0d390a204552d4c71f6ec42c1aabb9b3496daa2ac1d8ff785\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/cauca-viejo\"}"
+      },
+      {
+        "id": -10015,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/5b/5bfe2b1b6acd42ce330043ea51765172c2ab660e2d3823208071a9b43046b2e7.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"cauca-viejo--cabalgata\", \"master_sha256\": \"424fed2b7053d0ce0f0a0c2d984f82275e954b93606dbc8e6c102095e4e24c79\", \"web_sha256\": \"5bfe2b1b6acd42ce330043ea51765172c2ab660e2d3823208071a9b43046b2e7\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/cauca-viejo\"}"
+      }
+    ],
+    "media_asset_translations": [
+      {
+        "media_asset_id": -10011,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Plaza principal",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10011,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Plaza principal",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10011,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Plaza principal",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10012,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Capilla de Cauca Viejo",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10012,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Capilla de Cauca Viejo",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10012,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Capilla de Cauca Viejo",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10013,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Ribera del río Cauca",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10013,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Ribera del río Cauca",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10013,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Ribera del río Cauca",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10014,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Paseo por el río Cauca",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10014,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Paseo por el río Cauca",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10014,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Paseo por el río Cauca",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10015,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Cabalgata (alrededores)",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10015,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Cabalgata (alrededores)",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10015,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Cabalgata (alrededores)",
+        "caption": ""
+      }
+    ],
+    "businesses": [],
+    "business_translations": [],
+    "business_categories": [],
+    "business_sources": [],
+    "business_media": []
+  },
+  "media_files": {
+    "-10011": {
+      "sha256": "5e4b8f6ef13701fee1d4336beec8e80f10b91ec828c6ac7da7f484e9ec699019"
+    },
+    "-10012": {
+      "sha256": "d4c39418c7acc95e30cc18ccb2a3307f5e86263f3c98f37712df3ccecf0d9830"
+    },
+    "-10013": {
+      "sha256": "457e5c6bbdc239fc9b3d70d35512bf6f4e46e8f807c385d73844217a5c8b28e6"
+    },
+    "-10014": {
+      "sha256": "adfe8071c8080fb0d390a204552d4c71f6ec42c1aabb9b3496daa2ac1d8ff785"
+    },
+    "-10015": {
+      "sha256": "5bfe2b1b6acd42ce330043ea51765172c2ab660e2d3823208071a9b43046b2e7"
+    }
+  }
+}
