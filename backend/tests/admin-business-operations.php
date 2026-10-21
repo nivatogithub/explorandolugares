@@ -17,3 +17,8 @@ operationCheck(AdminBusinessOperations::matches($row,['plan'=>'free','category'=
 operationCheck(!AdminBusinessOperations::matches($row,['account'=>'yes']),'Account filter must not infer a membership');
 operationCheck($row['record_origin']==='public_import'&&$row['publication_status']==='draft','Pure presentation helpers must not mutate input');
 echo "OK: shared secondary-category/duplicate filters, distinct business rows, all-origin review, account/plan separation and read-only presentation.\n";
+
+operationCheck(AdminBusinessOperations::matches($row,['segment'=>'imported']),'Imported business must remain in imported segment');
+operationCheck(!AdminBusinessOperations::matches([...$row,'account_email'=>'owner@example.invalid'],['segment'=>'registered']),'Associated account must not reclassify imported origin');
+operationCheck(AdminBusinessOperations::matches([...$row,'record_origin'=>'owner_submitted'],['segment'=>'registered']),'Person-created business must be isolated in registered segment');
+operationCheck(!AdminBusinessOperations::matches([...$row,'record_origin'=>'admin_created'],['segment'=>'imported']),'Historical manual records must not be presented as imports');

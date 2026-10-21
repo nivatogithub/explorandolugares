@@ -510,6 +510,9 @@ try:
     check(status == 200 and 'Hostal creado por prueba' in body and 'Pendiente de publicación' in body, 'El negocio recién creado no aparece filtrando el listado por categoría y alta administrativa.')
     check('name="categoria"' in body and 'name="representacion"' not in body, 'La lista administrativa no ofrece categoría como filtro principal.')
 
+    _,registered_segment,_=request('/admin/negocios.php?tab=lista')
+    _,historical_segment,_=request('/admin/negocios.php?tab=lista&segment=historical')
+    check('Hostal creado por prueba' not in registered_segment and 'Hostal creado por prueba' in historical_segment,'Historical administrative businesses leaked into person registrations.')
     preview_path='/admin/negocio-vista-previa.php?id='+str(created['id'])
     check(request(preview_path,opener=GUEST)[0]==403,'Business card preview must remain private.')
     status,card_preview,_=request(preview_path)
@@ -635,6 +638,8 @@ try:
     check(status==200 and 'Cafetería de cuenta HTTP' in all_pending and 'Editar datos' in all_pending,'Filtered business list must include owner_submitted drafts.')
     status,legacy_pending,_=request('/admin/negocios.php?tab=pendientes&q=Cafeter%C3%ADa')
     check(status==200 and 'Listado de negocios' in legacy_pending and 'value="draft" selected' in legacy_pending and 'Catálogo y cobertura' not in legacy_pending and '?tab=pendientes"' not in legacy_pending,'Legacy pending links must use the unified list with the publication filter.')
+    _,imported_segment,_=request('/admin/negocios.php?tab=lista&segment=imported&q=Cafeter%C3%ADa')
+    check('Cafetería de cuenta HTTP' not in imported_segment,'Person registration leaked into imported businesses.')
     check(approved and approved['status']=='approved' and approved['publication_status']=='draft' and approved['claim_status']=='RECLAMADO' and approved['account_id']==account_row['id'], 'La aprobación no creó el borrador privado y la membresía esperados.')
     check(DB.execute('SELECT address_text FROM businesses WHERE id=?',(approved['business_id'],)).fetchone()[0]=='Dirección de prueba privada','Se perdieron los datos de ubicación al aprobar.')
     check(DB.execute('SELECT description FROM business_translations WHERE business_id=? AND locale="es"',(approved['business_id'],)).fetchone()[0]=='Descripción privada de prueba','Se perdió la descripción enviada.')
