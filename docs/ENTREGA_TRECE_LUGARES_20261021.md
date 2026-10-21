@@ -2,7 +2,7 @@
 
 Alcance autorizado: publicar Guatapé, Cauca Viejo, Cocorná y Arboletes; reemplazar las seis imágenes aprobadas de Cartagena; aplicar la plantilla común revisada a los trece lugares.
 
-- Datos públicos de negocios nuevos: Guatapé 34, Cocorná 6, Arboletes 6. Cauca Viejo conserva los negocios existentes; no traslada candidatos históricos ni inventa categorías para llenar el directorio.
+- Datos públicos de negocios nuevos: Guatapé 34, Cocorná 6, Arboletes 6. Cauca Viejo recibe 14 fichas existentes trasladadas desde Jericó tras autorización expresa y comprobación de nombre y RNT; mantiene sus IDs, suscripciones e historial. No inventa categorías para llenar el directorio.
 - Actualización por slug y public_id, sin importar IDs locales sobre identidades remotas. Los negocios existentes mantienen sus datos comerciales y suscripciones.
 - Las tarjetas antiguas de la semilla de los cuatro lugares quedan en borrador; conservan sus IDs e historial, sin mostrarse junto a la nueva selección.
 - No se modifican tablas de cuentas, pagos, suscripciones ni analítica. Sin borrados de producción.
