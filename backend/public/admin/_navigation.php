@@ -5,6 +5,8 @@ $adminTab = (string)($_GET['tab'] ?? '');
 $activeAdminItem = match (true) {
     $adminPath === 'index.php' && $adminTab === 'sistema' => 'system',
     $adminPath === 'index.php' => 'requests',
+    $adminPath === 'responder-solicitud.php' => 'requests',
+    $adminPath === 'solicitud-detalle.php' => ($_GET['type']??'')==='account'?'account-applications':'requests',
     $adminPath === 'atencion-comercios.php' => ($_GET['view']??'') === 'review' ? 'business-review' : 'business-attention',
     $adminPath === 'negocios.php' => 'businesses',
     $adminPath === 'trasladar-negocios.php' => 'businesses',
@@ -29,11 +31,11 @@ $activeAdminItem = match (true) {
     default => '',
 };
 ?>
-<link rel="stylesheet" href="../assets/admin-navigation.css?v=20261018-2">
+<?php require_once __DIR__.'/_asset.php'; ?><link rel="stylesheet" href="<?=esc(admin_asset('admin-navigation.css'))?>">
 <?php require __DIR__.'/../_account-header.php'; ?>
 <aside class="admin-sidebar admin-sidebar-with-system" aria-label="Navegación de administración">
   <a class="admin-sidebar-brand" href="index.php"><img src="/assets/brand/explorando-lugares-logo-v2-transparent.png" width="76" height="76" alt=""><span>Explorando <strong>Lugares</strong><small>Administración</small></span></a>
-  <nav>
+  <details class="admin-nav-disclosure" data-admin-navigation open><summary>Menú de administración</summary><nav>
     <section><h2>Operación</h2>
       <a href="atencion-comercios.php" <?= $activeAdminItem === 'business-attention' ? 'aria-current="page"' : '' ?>>Atención a comercios</a>
       <a href="atencion-comercios.php?view=review" <?= $activeAdminItem === 'business-review' ? 'aria-current="page"' : '' ?>>Revisión y publicación</a>
@@ -69,5 +71,6 @@ $activeAdminItem = match (true) {
       <a href="incidencias.php" <?= $activeAdminItem === 'incidents' ? 'aria-current="page"' : '' ?>>Errores de ejecución</a>
       <a href="base-datos.php" <?= $activeAdminItem === 'database' ? 'aria-current="page"' : '' ?>>Base de datos</a>
     </section>
-  </nav>
+  </nav></details>
 </aside>
+<script src="<?=esc(admin_asset('admin-navigation.js'))?>" defer></script>

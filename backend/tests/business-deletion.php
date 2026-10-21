@@ -4,7 +4,7 @@ require dirname(__DIR__).'/app/BusinessAdminService.php';
 $pdo=new PDO('sqlite::memory:',null,null,[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION]);
 $pdo->exec(file_get_contents(dirname(__DIR__).'/database/sqlite.sql'));
 $pdo->exec(file_get_contents(dirname(__DIR__).'/database/destinations.sqlite.sql'));
-for($n=8;$n<=29;$n++){foreach(glob(dirname(__DIR__).'/database/migrations/'.sprintf('%03d',$n).'-*.sqlite.sql') as $file)$pdo->exec(file_get_contents($file));}
+for($n=8;$n<=48;$n++){foreach(glob(dirname(__DIR__).'/database/migrations/'.sprintf('%03d',$n).'-*.sqlite.sql') as $file)$pdo->exec(file_get_contents($file));}
 $storage=sys_get_temp_dir().'/el-delete-'.bin2hex(random_bytes(6));
 $service=new BusinessAdminService($pdo,$storage);
 function assertDelete(bool $ok,string $message):void{if(!$ok)throw new RuntimeException($message);}
@@ -28,6 +28,11 @@ assertDelete((int)$pdo->query('SELECT COUNT(*) FROM businesses WHERE id=1')->fet
 assertDelete((int)$pdo->query('SELECT COUNT(*) FROM business_contacts WHERE business_id=1')->fetchColumn()===0,'Its channels cascade');
 assertDelete((int)$pdo->query('SELECT COUNT(*) FROM accounts WHERE id=1')->fetchColumn()===1,'Responsible account survives');
 assertDelete((int)$pdo->query('SELECT COUNT(*) FROM businesses')->fetchColumn()===5,'Other businesses survive');
+$sharedName=str_repeat('a',40).'.png';file_put_contents($storage.'/'.$sharedName,'synthetic');
+$pdo->prepare('INSERT INTO business_account_applications(account_id,application_type,business_id,destination_id,category_code,business_name,relationship_code,consent_version) VALUES(1,"claim_existing",6,1,?,"Negocio 6","owner","test")')->execute([$category]);$application=(int)$pdo->lastInsertId();
+$pdo->prepare('INSERT INTO business_application_images(application_id,storage_name,original_name,mime_type,file_size,width,height) VALUES(?,?,"ficticio.png","image/png",9,1,1)')->execute([$application,$sharedName]);
+$pdo->prepare('INSERT INTO business_image_references(business_id,storage_name,original_name,mime_type,file_size,width,height) VALUES(6,?,"ficticio.png","image/png",9,1,1)')->execute([$sharedName]);
 $service->delete(6,true);
+assertDelete(is_file($storage.'/'.$sharedName),'Historical application image survives business deletion');unlink($storage.'/'.$sharedName);
 rmdir($storage);
 echo "OK: confirmed Free deletion, cascade isolation, responsible account preservation, historical paid tiers and payment evidence protection.\n";

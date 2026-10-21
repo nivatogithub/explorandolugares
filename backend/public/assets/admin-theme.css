@@ -80,3 +80,23 @@ body.portal-admin{--ink:var(--el-text);--muted:var(--el-muted);--ember:var(--el-
 .portal-admin .admin-status-form--row {display:flex;flex-wrap:wrap;align-items:center;gap:.65rem;min-width:13rem}
 .portal-admin .admin-status-form--row select[data-native-select] {width:auto;flex:1 1 8rem;min-height:2.75rem;padding:.5rem .7rem;border:1px solid var(--portal-border,#b8c8c4);border-radius:.6rem;background:#fff;color:var(--portal-ink,#173f3a)}
 .portal-admin .admin-status-form--row button {margin:0;white-space:normal}
+
+.portal-admin .admin-request-snapshot {display:grid;grid-template-columns:minmax(8rem,1fr) minmax(0,3fr);gap:.6rem 1rem;overflow-wrap:anywhere}
+.portal-admin .admin-request-snapshot dt {font-weight:700}
+.portal-admin .admin-request-snapshot dd {margin:0;white-space:normal}
+@media(max-width:600px){.portal-admin .admin-request-snapshot{grid-template-columns:minmax(0,1fr)}.portal-admin .admin-request-snapshot dd{margin-bottom:.7rem}}
+
+@media(max-width:1100px){
+ .portal-admin .admin-inbox-table{overflow:visible}
+ .portal-admin .admin-inbox-table table{min-width:0!important;width:100%}
+ .portal-admin .admin-inbox-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+ .portal-admin .admin-inbox-table tbody,.portal-admin .admin-inbox-table tr{display:block}
+ .portal-admin .admin-inbox-table tr{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem;padding:1rem 0;border-bottom:1px solid var(--el-border,#e9b75f)}
+ .portal-admin .admin-inbox-table td{display:block;min-width:0;padding:0!important;white-space:normal;overflow-wrap:anywhere;border:0}
+ .portal-admin .admin-inbox-table td::before{content:attr(data-label);display:block;font-weight:700;margin-bottom:.3rem}
+ .portal-admin .admin-inbox-table td:first-child,.portal-admin .admin-inbox-table td:last-child{grid-column:1/-1}
+ .portal-admin .admin-inbox-table .admin-status-form--row{min-width:0;width:100%}
+}
+@media(max-width:480px){.portal-admin .admin-inbox-table tr{grid-template-columns:minmax(0,1fr)}}
+
+.portal-admin .admin-reply-preview{width:100%;height:36rem;border:1px solid var(--el-border,#e9b75f);border-radius:12px}.portal-admin .admin-reply-text{white-space:pre-wrap;overflow-wrap:anywhere}

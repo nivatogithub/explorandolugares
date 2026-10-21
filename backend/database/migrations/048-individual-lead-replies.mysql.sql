@@ -1,0 +1,37 @@
+CREATE TABLE IF NOT EXISTS lead_reply_operations (
+ id CHAR(32) CHARACTER SET ascii COLLATE ascii_bin PRIMARY KEY,
+ lead_id BIGINT UNSIGNED NOT NULL,
+ status VARCHAR(16) NOT NULL DEFAULT 'draft',
+ recipient VARCHAR(254) NOT NULL,
+ sender_email VARCHAR(254) NOT NULL,
+ sender_name VARCHAR(180) NOT NULL,
+ reply_to VARCHAR(254) NOT NULL,
+ subject VARCHAR(200) NOT NULL,
+ message_text TEXT NOT NULL,
+ html_body MEDIUMTEXT NOT NULL,
+ text_body MEDIUMTEXT NOT NULL,
+ template_version VARCHAR(60) NOT NULL,
+ content_hash CHAR(64) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+ created_by VARCHAR(190) NOT NULL,
+ confirmed_by VARCHAR(190) NULL,
+ created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ claimed_at DATETIME NULL,
+ completed_at DATETIME NULL,
+ provider_message_id VARCHAR(500) NULL,
+ result_code VARCHAR(40) NULL,
+ reconciled_at DATETIME NULL,
+ reconciled_by VARCHAR(190) NULL,
+ reconciliation_note TEXT NULL,
+ INDEX lead_reply_operations_lead (lead_id,created_at),
+ FOREIGN KEY (lead_id) REFERENCES leads(id) ON DELETE RESTRICT,
+ CHECK(status IN ('draft','sending','accepted','failed','uncertain'))
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+CREATE TABLE IF NOT EXISTS lead_reply_attempts (
+ operation_id CHAR(32) CHARACTER SET ascii COLLATE ascii_bin PRIMARY KEY,
+ started_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ completed_at DATETIME NULL,
+ outcome VARCHAR(16) NOT NULL DEFAULT 'sending',
+ http_status INTEGER NULL,
+ FOREIGN KEY (operation_id) REFERENCES lead_reply_operations(id) ON DELETE RESTRICT
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

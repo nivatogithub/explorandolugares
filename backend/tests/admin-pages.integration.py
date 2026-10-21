@@ -25,7 +25,7 @@ DB.execute('PRAGMA foreign_keys=ON')
 DB.executescript((ROOT / 'backend/database/sqlite.sql').read_text())
 DB.executescript((ROOT / 'backend/database/destinations.sqlite.sql').read_text())
 DB.executescript((ROOT / 'backend/database/migrations/006-poi-experience-links.sqlite.sql').read_text())
-for number in range(8, 48):
+for number in range(8, 49):
     matches = list((ROOT / 'backend/database/migrations').glob(f'{number:03d}-*.sqlite.sql'))
     assert len(matches) == 1, f'Migración SQLite faltante o ambigua: {number:03d}'
     DB.executescript(matches[0].read_text())
@@ -66,6 +66,7 @@ DB.execute("INSERT INTO businesses(public_id,destination_id,category_code,record
 no_subscription_business_id = DB.execute('SELECT last_insert_rowid()').fetchone()[0]
 DB.execute("INSERT INTO business_translations(business_id,locale,display_name,summary,description) VALUES(?,'es','Negocio sin suscripción','', '')", (no_subscription_business_id,))
 DB.execute("INSERT INTO leads(request_key,name,business,municipality,category,has_brand,description,interest,consent_version,created_at) VALUES('admin-repair','Persona ficticia','Consulta <script>alert(1)</script>','Jericó','hospedaje','no','Mensaje sintético','negocio','test','2026-10-20 00:00:00')")
+DB.execute("UPDATE leads SET email='consulta@example.invalid',wants_contact=1 WHERE request_key='admin-repair'")
 DB.commit()
 expected_prices = {'basic': {'monthly': 19900, 'annual': 199000}, 'featured': {'monthly': 49900, 'annual': 499000}, 'page': {'monthly': 69900, 'annual': 699000}, 'page_premium': {'monthly': 119900, 'annual': 1199000}}
 for plan, frequencies in expected_prices.items():
@@ -143,6 +144,19 @@ def verify_account_mail(email, client):
     status,body,_=request('/business/verify-email.php?'+link.query,opener=client)
     check(status==200 and 'Correo verificado' in body,'No activó por enlace de correo.')
     check(request('/business/verify-email.php?'+link.query,opener=client)[0]==400,'Token reutilizable.')
+
+if os.environ.get('EL_ADMIN_REPAIR_PREVIEW')=='1':
+    config['registration_enabled']=True;config['business_accounts_enabled']=True;save_config()
+    DB.execute('UPDATE accounts SET status="active",email_verified_at=CURRENT_TIMESTAMP,password_hash=? WHERE id=?',(password_hash,account_id));DB.commit()
+    preview=ROOT/'.local/admin-repair-preview.json'
+    preview.write_text(json.dumps({'url':BASE,'username':'admin-local','password':password,'business_email':'cuenta@example.invalid','fixture':str(WORK),'pid':PROCESS.pid}))
+    preview.chmod(0o600)
+    print('Vista aislada: '+BASE,flush=True)
+    try:
+        while preview.exists():time.sleep(1)
+    finally:
+        PROCESS.terminate();PROCESS.wait(timeout=5);DB.close();shutil.rmtree(WORK)
+    raise SystemExit(0)
 
 try:
     for _ in range(100):
@@ -244,6 +258,26 @@ try:
     check('dejó de aparecer' in body and 'Página 1' in body,'Estado conserva contexto y ajusta página.')
     body=request('/admin/index.php',{'csrf':status_csrf,'action':'status','id':'9999','status':'nuevo'})[1]
     check('ya no existe' in body,'ID ausente no anuncia éxito.')
+
+    # Individual reply preview is private and local delivery is always simulated.
+    reply_url='/admin/responder-solicitud.php?lead=1'
+    check(request(reply_url,opener=GUEST)[0]==403,'Respuesta individual requiere administrador.')
+    reply_page=request(reply_url)[1]
+    reply_csrf=re.search(r'name="csrf" value="([^"]+)"',reply_page).group(1)
+    before_state=DB.execute('SELECT status FROM leads WHERE id=1').fetchone()[0]
+    prepared=request(reply_url,{'csrf':reply_csrf,'action':'prepare','subject':'Respuesta sintética','message':'Mensaje <script>bad()</script>','recipient':'consulta@example.invalid'})
+    check(prepared[0]==200 and 'Vista previa' in prepared[1],'Previsualización de respuesta.')
+    reply=DB.execute('SELECT * FROM lead_reply_operations WHERE lead_id=1').fetchone()
+    check(reply and reply['status']=='draft' and DB.execute('SELECT COUNT(*) FROM lead_reply_attempts').fetchone()[0]==0,'Borrador no contacta proveedor.')
+    preview_url='/admin/respuesta-vista-previa.php?lead=1&operation='+reply['id']
+    check(request(preview_url,opener=GUEST)[0]==403,'La vista previa del correo debe ser privada.')
+    preview_status,preview_html,preview_headers=request(preview_url)
+    check(preview_status==200 and '&lt;script&gt;' in preview_html and 'sandbox' in preview_headers.get('Content-Security-Policy',''),'Vista previa escapada y aislada.')
+    fields={'csrf':reply_csrf,'action':'send','operation':reply['id'],'content_hash':reply['content_hash'],'confirm':'1'}
+    check(request(reply_url,dict(fields,content_hash='bad'))[0]==400,'Hash de confirmación inválido rechazado.')
+    for attempt in range(2):check(request(reply_url,fields)[0]==200,'Simulación confirmada idempotente.')
+    check(DB.execute('SELECT COUNT(*) FROM lead_reply_attempts').fetchone()[0]==1,'Doble POST genera un solo intento.')
+    check(DB.execute('SELECT status FROM leads WHERE id=1').fetchone()[0]==before_state,'Respuesta no cambia estado manual.')
 
     for path, expected in paths:
         status, body, _ = request(path)
@@ -575,7 +609,7 @@ try:
         'category_code': 'hospedaje', 'display_name': 'Responsable HTTP',
         'email': 'responsable-http@example.invalid', 'phone': '3230000000',
         'relationship_code': 'owner', 'message': 'Adjuntaré matrícula y RUT para validar el negocio.',
-        'password': 'ClaveFuerteDePrueba123', 'password_confirm': 'ClaveFuerteDePrueba123', 'consent': '1',
+        'responsibility_declared':'1','password': 'ClaveFuerteDePrueba123', 'password_confirm': 'ClaveFuerteDePrueba123', 'consent': '1',
     }
     import struct,zlib
     def png_chunk(tag,payload):return struct.pack('!I',len(payload))+tag+payload+struct.pack('!I',zlib.crc32(tag+payload)&0xffffffff)
@@ -586,7 +620,7 @@ try:
     check(status == 400 and 'Selecciona cómo se identifica' in body, 'El registro debe exigir identificación privada del titular.')
     incomplete_fields = dict(registration_fields, email='sin-documentos-http@example.invalid')
     status, body, _ = request('/business/register.php', incomplete_fields, business_flow)
-    check(status == 400 and 'Adjunta los documentos obligatorios' in body and DB.execute("SELECT COUNT(*) FROM accounts WHERE email='sin-documentos-http@example.invalid'").fetchone()[0] == 0, 'El registro aceptó una cuenta sin documentos de identidad y del negocio.')
+    check(status == 400 and 'Adjunta el documento privado' in body and DB.execute("SELECT COUNT(*) FROM accounts WHERE email='sin-documentos-http@example.invalid'").fetchone()[0] == 0, 'El registro aceptó una cuenta sin documentos de identidad y del negocio.')
     status, _, headers = multipart('/business/register.php', registration_fields, [('identity_document', 'identidad.png', 'image/png', registration_png), ('business_registration', 'registro.png', 'image/png', registration_png),('reference_images[]','foto.png','image/png',reference_png)], business_flow)
     check(status == 303, f'El registro web no creó la cuenta y redirigió al tablero: {status}')
     verify_account_mail('responsable-http@example.invalid', business_user)
@@ -598,14 +632,14 @@ try:
     account_row = DB.execute("SELECT id,account_type,status,password_hash FROM accounts WHERE email='responsable-http@example.invalid'").fetchone()
     application_row = DB.execute("SELECT id,application_type,status,business_id FROM business_account_applications WHERE account_id=?", (account_row['id'],)).fetchone()
     check(account_row and account_row['account_type']=='traveler' and account_row['status']=='active' and account_row['password_hash'], 'El registro no creó una cuenta personal activada con contraseña protegida.')
-    check(application_row and tuple(application_row)[1:] == ('request_new','pending',None), 'El alta inicial creó una ficha demasiado pronto o no dejó la solicitud pendiente.')
+    check(application_row and application_row['application_type']=='request_new' and application_row['status']=='approved' and application_row['business_id'] is not None, 'El alta inicial creó una ficha demasiado pronto o no dejó la solicitud pendiente.')
     holder = json.loads(DB.execute('SELECT business_details_json FROM business_account_applications WHERE id=?',(application_row['id'],)).fetchone()[0])['holder_identity']
     check(holder['document_type']=='CC' and holder['number']=='123456789' and not holder['officially_verified'] and not holder['ownership_verified'], 'Debe conservar el documento privado sin afirmar verificación oficial.')
     check('123456789' not in body, 'Mi cuenta no debe exponer el documento del titular en el listado de solicitudes.')
     representation_rows = DB.execute('SELECT id,evidence_type,storage_name FROM business_account_application_evidence WHERE application_id=? ORDER BY evidence_type', (application_row['id'],)).fetchall()
-    check([row['evidence_type'] for row in representation_rows] == ['business_registration','identity_document'], 'La solicitud debe adjuntar evidencia del negocio y de identidad.')
+    check([row['evidence_type'] for row in representation_rows] == ['business_registration'], 'La solicitud debe adjuntar evidencia del negocio y de identidad.')
     check(all(row['storage_name'] not in [item.name for item in (WORK / 'public').rglob('*') if item.is_file()] for row in representation_rows), 'Los documentos de representación deben quedar fuera del directorio público.')
-    check(DB.execute("SELECT COUNT(*) FROM businesses WHERE slug='cafeteria-de-cuenta-http'").fetchone()[0] == 0, 'La solicitud nueva se insertó antes de la aprobación administrativa.')
+    check(DB.execute('SELECT publication_status FROM businesses WHERE id=?',(application_row['business_id'],)).fetchone()[0]=='draft','La asociación automática no debe publicar.')
     anonymous = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
     check(request('/business/register.php', opener=anonymous)[0] == 200, 'El registro habilitado debe admitir visitantes sin claves de prueba.')
     dashboard_csrf = __import__('re').search(r'name="csrf" value="([^"]+)"', body).group(1)
@@ -618,18 +652,12 @@ try:
     status, _, _ = request('/business/login.php', {'csrf': login_csrf, 'email': 'responsable-http@example.invalid', 'password': 'ClaveFuerteDePrueba123'}, business_flow)
     check(status == 303, 'El acceso empresarial válido no redirigió al tablero.')
     status, body, _ = request('/business/dashboard.php?tab=business', opener=business_user)
-    check(status == 200 and 'Solicitudes asociadas a tu cuenta' in body and 'Pendiente de revisión' in body, 'La persona no pudo volver a entrar y consultar el estado de su solicitud.')
+    check(status == 200 and 'Solicitudes asociadas a tu cuenta' in body and 'Negocio asociado' in body, 'La persona no pudo volver a entrar y consultar el estado de su solicitud.')
     csrf = __import__('re').search(r'name="csrf" value="([^"]+)"', request('/admin/index.php')[1]).group(1)
-    status, body, _ = request('/admin/solicitudes-cuenta.php', {'csrf': csrf, 'action': 'review', 'application_id': application_row['id'], 'status': 'approved', 'admin_note': 'RUT y matrícula mercantil revisados para la prueba'}, ADMIN)
-    check(status == 400 and 'Marca como revisados' in body, 'La administración no debe aprobar una representación sin marcar como revisados sus documentos.')
     check(request('/admin/representacion-evidencia.php?id=' + str(representation_rows[0]['id']), opener=GUEST)[0] == 403, 'Un visitante pudo abrir documentos privados de representación.')
     with ADMIN.open(BASE + '/admin/representacion-evidencia.php?id=' + str(representation_rows[0]['id']), timeout=10) as evidence_response:
         check(evidence_response.status == 200 and evidence_response.read() == registration_png, 'El administrador no pudo abrir un documento de representación privado.')
-    status, body, _ = request('/admin/solicitudes-cuenta.php', opener=ADMIN)
-    doc_ids = [row['id'] for row in representation_rows]
-    review_fields = {'csrf': csrf, 'action': 'review', 'application_id': application_row['id'], 'status': 'approved', 'admin_note': 'Identidad y registro del negocio verificados manualmente.' , 'verified_evidence[]': doc_ids}
-    status, body, _ = request('/admin/solicitudes-cuenta.php', review_fields, ADMIN)
-    check(status == 200 and 'Se actualizó el estado de la solicitud' in body, 'La administración no pudo aprobar la solicitud web real.')
+    # Ordinary first association is now automatic; documents are not marked as ownership verified.
     approved = DB.execute('SELECT r.status,r.business_id,b.publication_status,b.claim_status,m.account_id FROM business_account_applications r JOIN businesses b ON b.id=r.business_id JOIN business_account_memberships m ON m.business_id=b.id WHERE r.id=?', (application_row['id'],)).fetchone()
     check(DB.execute('SELECT COUNT(*) FROM business_image_references WHERE business_id=?',(approved['business_id'],)).fetchone()[0]==1,'Las fotos privadas de la solicitud no se conservaron al aprobar.')
     check(approved and approved['status']=='approved' and approved['publication_status']=='draft' and approved['claim_status']=='RECLAMADO' and approved['account_id']==account_row['id'], 'La aprobación no creó el borrador privado y la membresía esperados.')
@@ -638,6 +666,20 @@ try:
     check(tuple(DB.execute('SELECT contact_value,is_public FROM business_contacts WHERE business_id=?',(approved['business_id'],)).fetchone())==('negocio@example.invalid',0),'El canal debe conservarse privado.')
     status, body, _ = request('/business/dashboard.php?tab=business', opener=business_user)
     check(status == 200 and 'Cafetería de cuenta HTTP' in body and 'Borrador' in body, 'El tablero no reflejó el negocio asociado después de la aprobación.')
+    check('Retomar la suscripción que elegí' in body and 'plan=featured' in body,'La elección paga debe conservar un acceso para continuar con el pago.')
+    free_form=request('/business/register.php?tipo=business',opener=business_user)[1]
+    free_csrf=re.search(r'name="csrf" value="([^"]+)"',free_form).group(1)
+    free_fields={'csrf':free_csrf,'application_type':'new_business','business_name':'Fonda Sintética 401','destination_id':destination_id,'category_code':'hospedaje','plan_code':'free','billing_frequency':'monthly','relationship_code':'owner','responsibility_declared':'1','consent':'1'}
+    free_response=multipart('/business/register.php',free_fields,[('business_registration','negocio.png','image/png',registration_png)],business_flow)
+    check(free_response[0]==303,'Gratis debe completarse sin NIT, dirección, texto ni identidad adicionales: '+str(free_response[0]))
+    free_app=DB.execute('SELECT r.id,r.business_id,r.status,b.publication_status FROM business_account_applications r JOIN businesses b ON b.id=r.business_id WHERE r.business_name=?',('Fonda Sintética 401',)).fetchone()
+    check(free_app and free_app['status']=='approved' and free_app['publication_status']=='draft','Gratis creado y asociado, privado hasta publicación separada.')
+    check(DB.execute('SELECT plan_code FROM business_subscriptions WHERE business_id=?',(free_app['business_id'],)).fetchone()[0]=='free','Gratis asignado sin intervención administrativa.')
+    before_free=DB.execute('SELECT COUNT(*) FROM businesses').fetchone()[0]
+    free_fields['csrf']=re.search(r'name="csrf" value="([^"]+)"',request('/business/register.php?tipo=business',opener=business_user)[1]).group(1)
+    repeated=multipart('/business/register.php',free_fields,[('business_registration','negocio.png','image/png',registration_png)],business_flow)
+    check(repeated[0]==303 and DB.execute('SELECT COUNT(*) FROM businesses').fetchone()[0]==before_free,'Repetir alta no duplica fichas: '+str(repeated[0])+' '+(' · '.join(re.findall(r'<p class="notice" role="alert">(.*?)</p>',repeated[1],re.S))))
+
     own_public_id = DB.execute('SELECT public_id FROM businesses WHERE id=?', (approved['business_id'],)).fetchone()[0]
     status, audience_json, _ = request('/api/audiencia-entidad.php?type=business&key='+own_public_id, opener=business_user)
     check(status == 200 and audience_json.startswith('{'), 'Respuesta de estadísticas inesperada: '+str(status)+' '+audience_json[:240])

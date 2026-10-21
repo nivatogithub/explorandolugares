@@ -5,6 +5,7 @@ require_once __DIR__.'/AccountResidence.php';
 require_once __DIR__.'/AccountAuthorization.php';
 require_once __DIR__.'/BusinessOnboardingDetails.php';
 require_once __DIR__.'/BusinessExistenceVerification.php';
+require_once __DIR__.'/BusinessSelfOnboarding.php';
 
 final class BusinessAccountPortalService
 {
@@ -38,8 +39,11 @@ final class BusinessAccountPortalService
     public function searchRegistrationBusinesses(int $destinationId,string $category,string $term): array
     {
         $term=trim($term);if($destinationId<1||$category===''||strlen($term)<2)return [];
-        $query=$this->pdo->prepare('SELECT b.id,t.display_name,b.claim_status,b.information_status,EXISTS(SELECT 1 FROM business_account_memberships bm WHERE bm.business_id=b.id AND bm.status="active") AS has_responsible FROM businesses b JOIN business_translations t ON t.business_id=b.id AND t.locale="es" JOIN destinations d ON d.id=b.destination_id WHERE b.destination_id=? AND (b.category_code=? OR EXISTS(SELECT 1 FROM business_categories bc WHERE bc.business_id=b.id AND bc.category_code=?)) AND d.publication_status="published" AND b.operation_status<>"CERRADO_DEFINITIVO" AND t.display_name LIKE ? ORDER BY t.display_name LIMIT 20');
-        $query->execute([$destinationId,$category,$category,'%'.str_replace(['%','_'],'',$term).'%']);return array_map(static function(array $row):array{$row['can_request']=true;$row['requires_review']=(bool)$row['has_responsible'];$row['review_message']=$row['requires_review']?'Puedes solicitar la revisión de tu relación con este negocio. No cambiaremos su responsable actual.':'';unset($row['claim_status'],$row['information_status'],$row['has_responsible']);return $row;},$query->fetchAll(PDO::FETCH_ASSOC));
+        $sql='SELECT b.id,t.display_name,b.claim_status,b.information_status,EXISTS(SELECT 1 FROM business_account_memberships bm WHERE bm.business_id=b.id AND bm.status="active") AS has_responsible FROM businesses b JOIN business_translations t ON t.business_id=b.id AND t.locale="es" JOIN destinations d ON d.id=b.destination_id WHERE b.destination_id=? AND (b.category_code=? OR EXISTS(SELECT 1 FROM business_categories bc WHERE bc.business_id=b.id AND bc.category_code=?)) AND d.publication_status="published" AND b.operation_status<>"CERRADO_DEFINITIVO"';
+        $query=$this->pdo->prepare($sql.' AND t.display_name LIKE ? ORDER BY t.display_name LIMIT 20');
+        $query->execute([$destinationId,$category,$category,'%'.str_replace(['%','_'],'',$term).'%']);$found=$query->fetchAll(PDO::FETCH_ASSOC);
+        if(!$found&&mb_strlen($term)>=9){$query=$this->pdo->prepare($sql.' ORDER BY t.display_name');$query->execute([$destinationId,$category,$category]);foreach($query->fetchAll(PDO::FETCH_ASSOC) as $candidate)if(BusinessBulkPublicationService::looksLikeDuplicate($term,$candidate['display_name'])){$found[]=$candidate;if(count($found)>=20)break;}}
+        return array_map(static function(array $row):array{$row['can_request']=true;$row['requires_review']=(bool)$row['has_responsible'];$row['review_message']=$row['requires_review']?'Puedes solicitar la revisión de tu relación con este negocio. No cambiaremos su responsable actual.':'';unset($row['claim_status'],$row['information_status'],$row['has_responsible']);return $row;},$found);
     }
 
     public function register(string $name, string $email, string $password, array $application, array $evidenceUploads=[], ?string $evidenceStorage=null,mixed $referenceUploads=null,?string $referenceStorage=null,?int $existingAccountId=null): int
@@ -66,14 +70,17 @@ final class BusinessAccountPortalService
         $categoryQuery=$this->pdo->prepare('SELECT COUNT(*) FROM service_categories c WHERE c.code=? AND c.is_active=1 AND EXISTS(SELECT 1 FROM destinations d WHERE d.id=? AND d.publication_status="published")');
         $categoryQuery->execute([$category,$destinationId]);if(!(int)$categoryQuery->fetchColumn())throw new RuntimeException('La categoría no está disponible para este destino.');
 
-        $requiredEvidence=$this->requiredEvidence($relationship);
+        $selfOnboarding=($application['self_onboarding_policy']??'')===BusinessSelfOnboarding::POLICY;
+        if($selfOnboarding&&($application['responsibility_declared']??'')!=='1')throw new RuntimeException('Confirma que tienes autorización para administrar el negocio.');
+        $requiredEvidence=$selfOnboarding?['business_registration']:$this->requiredEvidence($relationship);
+        if($selfOnboarding&&($evidenceUploads['business_registration']['error']??UPLOAD_ERR_NO_FILE)!==UPLOAD_ERR_OK)throw new RuntimeException('Adjunta un documento del negocio: RUT, matrícula o certificado equivalente.');
         $uploadsPresent=false;foreach($requiredEvidence as $evidenceType){if(($evidenceUploads[$evidenceType]['error']??UPLOAD_ERR_NO_FILE)!==UPLOAD_ERR_NO_FILE)$uploadsPresent=true;}
         if($uploadsPresent){
             if(!$evidenceStorage)throw new RuntimeException('No está configurado el almacenamiento privado de documentos.');
             foreach($requiredEvidence as $evidenceType){$this->validateEvidenceUpload($evidenceUploads[$evidenceType]??[]);}
             if(!is_dir($evidenceStorage)&&!mkdir($evidenceStorage,0700,true)&&!is_dir($evidenceStorage))throw new RuntimeException('No se pudo preparar el almacenamiento privado de documentos.');
         }
-        if($type==='new_business'){
+        if($type==='new_business'&&!$selfOnboarding){
             $duplicate=$this->pdo->prepare('SELECT b.id FROM businesses b JOIN business_translations t ON t.business_id=b.id AND t.locale="es" WHERE b.destination_id=? AND LOWER(TRIM(t.display_name))=LOWER(?) LIMIT 1');$duplicate->execute([$destinationId,$businessName]);
             if($duplicate->fetchColumn())throw new RuntimeException('Ese negocio ya está registrado en este lugar. Búscalo y solicita asociarlo a tu cuenta.');
         }
@@ -87,6 +94,7 @@ final class BusinessAccountPortalService
         $this->pdo->beginTransaction();
         try{
             if($existingAccountId){$locked=$this->pdo->prepare('SELECT id FROM accounts WHERE id=? AND status="active"'.($this->pdo->getAttribute(PDO::ATTR_DRIVER_NAME)==='mysql'?' FOR UPDATE':''));$locked->execute([$existingAccountId]);if(!$locked->fetchColumn())throw new RuntimeException('La cuenta ya no está disponible.');}
+            if($selfOnboarding&&$type==='new_business'){$place=$this->pdo->prepare('SELECT id FROM destinations WHERE id=?'.($this->pdo->getAttribute(PDO::ATTR_DRIVER_NAME)==='mysql'?' FOR UPDATE':''));$place->execute([$destinationId]);$matches=BusinessSelfOnboarding::duplicates($this->pdo,$destinationId,$businessName);if($matches){if($existingAccountId&&count($matches)===1){$owned=$this->pdo->prepare('SELECT 1 FROM business_account_memberships WHERE business_id=? AND account_id=? AND status="active"');$owned->execute([$matches[0]['id'],$existingAccountId]);if($owned->fetchColumn()&&mb_strtolower(trim($matches[0]['display_name']))===mb_strtolower($businessName)){$this->pdo->commit();return $existingAccountId;}}if(!BusinessSelfOnboarding::distinctLocationAllowed($this->pdo,$matches,$application['business_details']??[]))throw new RuntimeException('Encontramos un negocio igual o similar en este lugar. Selecciona la ficha correcta o declara que es otro establecimiento e indica una dirección diferente.');}}
             $duplicateRequest=$this->pdo->prepare('SELECT id FROM business_account_applications WHERE account_id=? AND destination_id=? AND LOWER(business_name)=LOWER(?) AND status IN ("pending","in_review") LIMIT 1');$duplicateRequest->execute([$existingAccountId??0,$destinationId,$businessName]);if($duplicateRequest->fetchColumn())throw new RuntimeException('Ya tienes una solicitud pendiente para este negocio. Consúltala en Mis negocios.');
             if($type==='existing_business'){
                 $lock=$this->pdo->getAttribute(PDO::ATTR_DRIVER_NAME)==='mysql'?' FOR UPDATE':'';
@@ -94,7 +102,7 @@ final class BusinessAccountPortalService
                 if(!$business)throw new RuntimeException('El negocio elegido ya no está disponible. Vuelve a buscarlo.');
                 if($business['operation_status']==='CERRADO_DEFINITIVO')throw new RuntimeException('Este negocio aparece como cerrado y no admite solicitudes.');
                 $ownerQuery=$this->pdo->prepare('SELECT account_id FROM business_account_memberships WHERE business_id=? AND status="active"');$ownerQuery->execute([$businessId]);$owners=array_map('intval',$ownerQuery->fetchAll(PDO::FETCH_COLUMN));
-                if($existingAccountId&&in_array($existingAccountId,$owners,true))throw new RuntimeException('Este negocio ya está asociado a tu cuenta. Consúltalo en Mis negocios.');
+                if($existingAccountId&&in_array($existingAccountId,$owners,true)){if($selfOnboarding){$this->pdo->commit();return $existingAccountId;}throw new RuntimeException('Este negocio ya está asociado a tu cuenta. Consúltalo en Mis negocios.');}
                 $disputedClaim=count($owners)>0;
                 $duplicateClaim=$this->pdo->prepare('SELECT id FROM business_account_applications WHERE account_id=? AND business_id=? AND status IN ("pending","in_review") LIMIT 1');$duplicateClaim->execute([$existingAccountId??0,$businessId]);
                 if($duplicateClaim->fetchColumn())throw new RuntimeException('Ya tienes una solicitud pendiente para este negocio. Consúltala en Mis negocios.');
@@ -111,6 +119,7 @@ final class BusinessAccountPortalService
             $applicationId=(int)$this->pdo->lastInsertId();
             if($referenceUploads&&$referenceStorage)(new BusinessAdminService($this->pdo,$referenceStorage))->storeApplicationReferences($applicationId,$referenceUploads,$storedFiles);
             $details=$application['business_details']??[];unset($details['claim_review_kind'],$details['auto_claim_on_activation']);
+            if($selfOnboarding){$details['onboarding_policy']=BusinessSelfOnboarding::POLICY;$details['responsibility_declared']=true;$details['document_policy']='business-document-8mb-v1';}
             $details['existence_assessment']=$type==='existing_business'?BusinessExistenceVerification::assessExisting($this->pdo,$businessId):$existenceAssessment;
             if($disputedClaim)$details['claim_review_kind']='disputed_existing';
             elseif($type==='existing_business'&&!$existingAccountId)$details['auto_claim_on_activation']=true;
@@ -126,7 +135,8 @@ final class BusinessAccountPortalService
                     $this->pdo->prepare('INSERT INTO business_account_application_evidence(application_id,evidence_type,storage_name,original_name,mime_type,file_size) VALUES(?,?,?,?,?,?)')->execute([$applicationId,$evidenceType,$storedName,$originalName,$mime,$bytes]);
                 }
             }
-            if($type==='existing_business'&&!$disputedClaim&&$existingAccountId){
+            if($selfOnboarding){BusinessSelfOnboarding::complete($this->pdo,$applicationId);}
+            elseif($type==='existing_business'&&!$disputedClaim&&$existingAccountId){
                 $this->assignMembership($accountId,$businessId,$relationship==='owner'?'owner':'manager');
                 $this->pdo->prepare('UPDATE businesses SET information_status="ACTIVO",claim_status="RECLAMADO",updated_at=CURRENT_TIMESTAMP WHERE id=?')->execute([$businessId]);
                 $this->pdo->prepare('UPDATE business_account_applications SET status="approved",reviewed_at=CURRENT_TIMESTAMP,admin_note=? WHERE id=?')->execute(['Asignación automática: no había responsable asociado. No verifica existencia, no publica ni activa suscripciones.',$applicationId]);
@@ -178,11 +188,15 @@ final class BusinessAccountPortalService
 
     public function applications(int $accountId): array
     {
-        $stmt=$this->pdo->prepare('SELECT r.application_type,r.business_name,r.status,r.created_at,r.business_details_json,t.label AS category_label,dt.display_name AS destination_name FROM business_account_applications r JOIN service_category_translations t ON t.category_code=r.category_code AND t.locale="es" JOIN destination_translations dt ON dt.destination_id=r.destination_id AND dt.locale="es" WHERE r.account_id=? ORDER BY r.created_at DESC');
+        $stmt=$this->pdo->prepare('SELECT r.id,r.business_id,r.application_type,r.business_name,r.status,r.created_at,r.business_details_json,t.label AS category_label,dt.display_name AS destination_name FROM business_account_applications r JOIN service_category_translations t ON t.category_code=r.category_code AND t.locale="es" JOIN destination_translations dt ON dt.destination_id=r.destination_id AND dt.locale="es" WHERE r.account_id=? ORDER BY r.created_at DESC');
         $stmt->execute([$accountId]);return array_map(static function(array $row):array{
             $details=json_decode($row['business_details_json']??'{}',true)??[];
             $row['review_kind']=$details['claim_review_kind']??'standard';
             $row['review_message']=$row['review_kind']==='disputed_existing'?'Recibimos tu reclamación para revisión. El negocio conserva su responsable actual; esta solicitud no te concede acceso para administrarlo.':'';
+            if($row['status']==='needs_selection')$row['review_message']='Encontramos una ficha igual o similar. Vuelve a Registrar o reclamar un negocio y selecciona la ficha correcta; tu cuenta ya puede usarse.';
+            if(($details['onboarding_policy']??'')===BusinessSelfOnboarding::POLICY&&$row['status']==='pending')$row['review_message']='Verifica tu correo para completar la asociación declarada del negocio.';
+            $choice=$details['requested_subscription']??[];$row['subscription_next_url']=null;
+            if($row['status']==='approved'&&!empty($row['business_id'])&&in_array($choice['plan_code']??'',['featured','page','page_premium'],true))$row['subscription_next_url']='/suscripciones/continuar/?'.http_build_query(['plan'=>$choice['plan_code'],'period'=>$choice['billing_frequency']??'monthly','business'=>$row['business_id'],'experience'=>(int)($choice['operator_addon']['experience_id']??0)]);
             unset($row['business_details_json']);return $row;
         },$stmt->fetchAll(PDO::FETCH_ASSOC));
     }
@@ -282,10 +296,12 @@ final class BusinessAccountPortalService
     private function validateEvidenceUpload(array $upload):array
     {
         $extensions=['application/pdf'=>'pdf','image/jpeg'=>'jpg','image/png'=>'png','image/webp'=>'webp'];
-        if(($upload['error']??UPLOAD_ERR_NO_FILE)!==UPLOAD_ERR_OK)throw new RuntimeException('Adjunta todos los documentos obligatorios: identidad, registro del negocio y, si eres administrador autorizado, carta de autorización.');
+        if(($upload['error']??UPLOAD_ERR_NO_FILE)!==UPLOAD_ERR_OK)throw new RuntimeException('Adjunta el documento del negocio en un formato admitido.');
         $tmp=(string)($upload['tmp_name']??'');$size=(int)($upload['size']??0);
         if(!is_uploaded_file($tmp)||$size<1||$size>8*1024*1024)throw new RuntimeException('Cada documento debe ser un PDF o imagen JPG, PNG o WebP de máximo 8 MB.');
         $mime=(new finfo(FILEINFO_MIME_TYPE))->file($tmp);if(!is_string($mime)||!isset($extensions[$mime]))throw new RuntimeException('El documento debe ser PDF, JPG, PNG o WebP.');
+        if($mime==='application/pdf'&&file_get_contents($tmp,false,null,0,5)!=='%PDF-')throw new RuntimeException('El archivo no es un PDF válido.');
+        if($mime!=='application/pdf'&&@getimagesize($tmp)===false)throw new RuntimeException('La imagen del documento no es válida.');
         return [bin2hex(random_bytes(24)).'.'.$extensions[$mime],substr(basename((string)($upload['name']??'documento.'.$extensions[$mime])),0,255),$mime,$size];
     }
 
