@@ -1,0 +1,126 @@
+{
+  "slug": "santa-fe-de-antioquia",
+  "build_exit": 0,
+  "build_log": "/tmp/builds-cuatro-destinos-20261020/santa-fe-de-antioquia/build.log",
+  "source_status_unchanged": true,
+  "snapshot_translations": {
+    "es": true,
+    "en": true,
+    "pt-BR": true
+  },
+  "snapshot_places": 9,
+  "snapshot_media": 10,
+  "built_images": [
+    {
+      "path": "assets/destinos/santa-fe-de-antioquia/7373a0581858553df3c99d612d850d3ade25b40e8b4b0a4e7190b8489f60c096.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    },
+    {
+      "path": "assets/destinos/santa-fe-de-antioquia/f632e6a1f5ede2608c4babb6c51f5e6815cb91e21f329ba7b6abb75ec20cc11d.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    },
+    {
+      "path": "assets/destinos/santa-fe-de-antioquia/fd2bacb4b24eda91593fcb3fcc1b5c798559653d7d6752052d2c550666ab02dc.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    },
+    {
+      "path": "assets/destinos/santa-fe-de-antioquia/1e3e90f8e77ce8a97df5d9d4b6fee2f85e6b071d609c39fba999b530d00445e3.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    },
+    {
+      "path": "assets/destinos/santa-fe-de-antioquia/1553c6b366bbc29a7406ccb53a45bf88bd48aefdecd0e5b1dc6a992dd6fd27c0.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    },
+    {
+      "path": "assets/destinos/santa-fe-de-antioquia/781d3fbf0d18deb2bc7d158fa8e14416f0ab927dd8f98f091b7a197d8b9944f0.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    },
+    {
+      "path": "assets/destinos/santa-fe-de-antioquia/9a661e252005d27e29917085b025241a86b31370e1b5f30f412f4a6da879d9f2.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    },
+    {
+      "path": "assets/destinos/santa-fe-de-antioquia/01244a929a1860c649cacf48e423ad1e1e7bb84c38ef45193f781ce17c8bd696.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    },
+    {
+      "path": "assets/destinos/santa-fe-de-antioquia/76329fe624e14d3731fc745a8fa145e18c062dd2506b955b7d295de487f5645f.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    },
+    {
+      "path": "assets/destinos/santa-fe-de-antioquia/1a96481600ead83e11e8b4d6b459181494d964b802df6d45e463f5bea709e271.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    }
+  ],
+  "snapshot_copied_into_build": [],
+  "snapshot_referenced_by_packager": false,
+  "database_migration_in_release": [],
+  "packaged_seed_slugs": [
+    "jerico",
+    "jardin",
+    "guatape",
+    "santa-fe-de-antioquia",
+    "el-penol",
+    "tamesis",
+    "san-jeronimo",
+    "sopetran",
+    "san-rafael",
+    "cocorna",
+    "venecia",
+    "el-retiro",
+    "san-carlos",
+    "el-carmen-de-viboral",
+    "rionegro",
+    "medellin",
+    "necocli",
+    "arboletes",
+    "puerto-triunfo",
+    "san-pedro-de-los-milagros",
+    "santa-rosa-de-osos"
+  ],
+  "destination_present_in_packaged_seed": true,
+  "source_snapshot_languages_complete": true,
+  "snapshot_reference_hashes_valid": true,
+  "source_snapshot_place_names": [
+    "Puente de Occidente",
+    "Plaza Mayor Simón Bolívar",
+    "Catedral de la Inmaculada Concepción",
+    "Museo Juan del Corral",
+    "Iglesia de Santa Bárbara",
+    "Museo de Arte Religioso Francisco Cristóbal Toro",
+    "Iglesia de La Chinca",
+    "Taller de filigrana",
+    "Cabalgata rural"
+  ],
+  "conclusion": "BUILD_INCOMPLETO: incorpora semilla antigua en draft, sin snapshot aprobado ni medios nuevos.",
+  "packaged_old_seed": {
+    "publication_status": "draft",
+    "headline_es": "Camina entre historias.",
+    "hero_path": "assets/destinos/santa-fe-de-antioquia-1.webp",
+    "places_es": [
+      "Centro histórico",
+      "Iglesia de La Chinca",
+      "Puente de Occidente"
+    ]
+  }
+}

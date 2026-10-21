@@ -289,3 +289,10 @@
 
 #contenido .dashboard-advanced{margin-top:28px;border-top:1px solid var(--el-border);padding-top:20px}
 #contenido .dashboard-advanced>summary{cursor:pointer;font-size:20px;font-weight:700;margin-bottom:20px}
+
+#contenido .dashboard-trend-svg .trend-grid{stroke:var(--el-border);stroke-width:.5;opacity:.6;pointer-events:none}
+#contenido .dashboard-trend-svg .trend-point{fill:transparent;stroke:none;pointer-events:all;cursor:help}
+#contenido .dashboard-trend-svg .trend-point:hover,#contenido .dashboard-trend-svg .trend-point:focus{fill:transparent;stroke:none;outline:none}
+
+#contenido .dashboard-trend-svg .trend-tooltip rect{fill:#fff;stroke:var(--el-border);stroke-width:1}
+#contenido .dashboard-trend-svg .trend-tooltip text{fill:#000;font-size:12px;font-weight:600}

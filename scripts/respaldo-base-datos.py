@@ -14,7 +14,7 @@ def private_php(config,options,action="database-snapshot.php"):
     token=secrets.token_hex(32);nonce=secrets.token_hex(12);client=api.SFTP(config)
     remote=config['remote_base']+'/private/.snapshot-'+nonce+'.php'
     endpoint=api.public_path(config)+'/api/snapshot-'+nonce+'.php'
-    if action not in {'database-snapshot.php','prepare-account-migration.php','backup-retention.php'}:raise ValueError('Operación no permitida.')
+    if action not in {'database-snapshot.php','prepare-account-migration.php','backup-retention.php','prepare-destination-migration.php'}:raise ValueError('Operación no permitida.')
     source=(ROOT/'scripts/php'/action).read_text()
     scratch=config['remote_base']+'/private/.migration-'+nonce
     dependencies={}
@@ -25,6 +25,11 @@ def private_php(config,options,action="database-snapshot.php"):
         if not isinstance(migrations,list) or not migrations or len(set(migrations))!=len(migrations) or set(migrations)-{'043-account-lifecycle','044-subscription-changes','045-business-service-sections','046-premium-page-aliases'}:raise ValueError('Selección de migraciones no permitida.')
         for migration in migrations:
             relative='database/migrations/'+migration+'.mysql.sql';dependencies[relative]=ROOT/'backend'/relative
+    if action=='prepare-destination-migration.php':
+        options=dict(options,migration_root=scratch,public_root=api.public_path(config))
+        dependencies={'DestinationSnapshotMigration.php':ROOT/'scripts/lib/DestinationSnapshotMigration.php'}
+        for slug in ['jerico','cartagena','bogota','medellin','santa-marta','jardin','covenas','zipaquira','santa-fe-de-antioquia']:
+            dependencies[slug+'.json']=ROOT/'content/destination-migration'/ (slug+'.json')
     if action in {'database-snapshot.php','backup-retention.php'}:
         dependencies['BackupRetention.php']=ROOT/'scripts/php/BackupRetention.php'
         options=dict(options,retention_class=scratch+'/BackupRetention.php')

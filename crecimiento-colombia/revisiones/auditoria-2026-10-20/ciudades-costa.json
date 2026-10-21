@@ -1,0 +1,1372 @@
+{
+  "date": "2026-10-20",
+  "scope": "auditoría documental costa; no publicación, no cambios paquetes ni aprobaciones",
+  "limits": [
+    "HTML servido proporcionado por coordinador, auditado desde disco el2026-10-20; no consulta a producción remota",
+    "No inspección píxel por píxel de todas las imágenes: falta de referencia no demuestra falsedad",
+    "Aprobaciones humanas previas se conservan; estados históricos no las revocan"
+  ],
+  "destinations": [
+    {
+      "slug": "cartagena",
+      "images": [
+        {
+          "component": "centro-historico",
+          "route": "independent_from_text_not_exact_comparison",
+          "evidence": "trabajo/preprod/crecimiento-colombia/entregas/cartagena/ATRACCIONES_SEMIRREALISTAS_MANIFIESTO.json",
+          "sources": [
+            "https://colombia.travel/es/cartagena/cartagena-colonial",
+            "https://colombia.travel/en/cartagena/visit-gate-and-clock-tower"
+          ],
+          "files": [
+            {
+              "path": "backend/public/assets/cartagena-piloto/centro-historico-480.webp",
+              "bytes": 39784,
+              "width": 480,
+              "height": 320,
+              "sha256": "6183dc86680fb32008cd1c7922a32089bfe6c7dc5f985f741a5e4a140cee1dca"
+            },
+            {
+              "path": "backend/public/assets/cartagena-piloto/centro-historico-800.webp",
+              "bytes": 100634,
+              "width": 800,
+              "height": 533,
+              "sha256": "b52c981b3df4cfb45d99822c6c7aae8ab53970e2c90b90e5d914d52a5d83c8ca"
+            }
+          ],
+          "status": "comparison_current_identity_pending_not_proven_false",
+          "requested_reference": "foto identificada del mismo lugar/sector anunciado; conservar perspectiva y geometría",
+          "priority": "high",
+          "served_current": true
+        },
+        {
+          "component": "san-felipe",
+          "route": "direct_authorized_reference",
+          "evidence": "trabajo/preprod/crecimiento-colombia/entregas/cartagena/ATRACCIONES_SEMIRREALISTAS_MANIFIESTO.json",
+          "sources": [
+            "https://fortificacionescartagena.com.co/es/historia/castillo-san-felipe-de-barajas/"
+          ],
+          "files": [
+            {
+              "path": "backend/public/assets/cartagena-piloto/san-felipe-480.webp",
+              "bytes": 33850,
+              "width": 480,
+              "height": 320,
+              "sha256": "f782bc99b97df6169f18dc4cca3046a26216995bf4e82cefe8c1654233b98ed2"
+            },
+            {
+              "path": "backend/public/assets/cartagena-piloto/san-felipe-800.webp",
+              "bytes": 89270,
+              "width": 800,
+              "height": 533,
+              "sha256": "25d795d0cad345e8992f52ad8ca28f38a480dffe8e1d28b70ff6f0c5025f89d8"
+            }
+          ],
+          "status": "comparison_current_identity_pending_not_proven_false",
+          "requested_reference": "foto del mismo encuadre San Felipe; comparar salida; original2011 no prueba estado2026",
+          "priority": "normal",
+          "served_current": true
+        },
+        {
+          "component": "getsemani",
+          "route": "independent_from_text_not_exact_comparison",
+          "evidence": "trabajo/preprod/crecimiento-colombia/entregas/cartagena/ATRACCIONES_SEMIRREALISTAS_MANIFIESTO.json",
+          "sources": [
+            "https://cartagenacomisionfilmica.com/es/locaciones"
+          ],
+          "files": [
+            {
+              "path": "backend/public/assets/cartagena-piloto/getsemani-480.webp",
+              "bytes": 47404,
+              "width": 480,
+              "height": 320,
+              "sha256": "55d3e2e6c93ea3e4b525c437f088d7fadfa6b923fabefe461e837766d45816fc"
+            },
+            {
+              "path": "backend/public/assets/cartagena-piloto/getsemani-800.webp",
+              "bytes": 112702,
+              "width": 800,
+              "height": 533,
+              "sha256": "fd600e4c43c1d63f31d069982fe98e0ba3507af2375455553ff2a49e69364764"
+            }
+          ],
+          "status": "comparison_current_identity_pending_not_proven_false",
+          "requested_reference": "foto identificada del mismo lugar/sector anunciado; conservar perspectiva y geometría",
+          "priority": "normal",
+          "served_current": true
+        },
+        {
+          "component": "islas-rosario",
+          "route": "independent_from_text_not_exact_comparison",
+          "evidence": "trabajo/preprod/crecimiento-colombia/entregas/cartagena/ATRACCIONES_SEMIRREALISTAS_MANIFIESTO.json",
+          "sources": [
+            "https://colombia.travel/es/cartagena/islas-del-rosario-y-de-san-bernardo"
+          ],
+          "files": [
+            {
+              "path": "backend/public/assets/cartagena-piloto/islas-rosario-480.webp",
+              "bytes": 34048,
+              "width": 480,
+              "height": 320,
+              "sha256": "2a006e4e6272da81a9a6ddc80c59b28852600195cfa3f8f667a33939913f5b48"
+            },
+            {
+              "path": "backend/public/assets/cartagena-piloto/islas-rosario-800.webp",
+              "bytes": 86504,
+              "width": 800,
+              "height": 533,
+              "sha256": "f67c2fd07a367a7730f273415274bfbf3eb434b1cefe376de143ac8dbdec3cf0"
+            }
+          ],
+          "status": "comparison_current_identity_pending_not_proven_false",
+          "requested_reference": "foto identificada del mismo lugar/sector anunciado; conservar perspectiva y geometría",
+          "priority": "high",
+          "served_current": true
+        },
+        {
+          "component": "playa-blanca-baru",
+          "route": "independent_from_text_not_exact_comparison",
+          "evidence": "trabajo/preprod/crecimiento-colombia/entregas/cartagena/ATRACCIONES_SEMIRREALISTAS_MANIFIESTO.json",
+          "sources": [
+            "https://colombia.travel/es/cartagena/playas-e-islas-del-rosario"
+          ],
+          "files": [
+            {
+              "path": "backend/public/assets/cartagena-piloto/playa-blanca-baru-480.webp",
+              "bytes": 35954,
+              "width": 480,
+              "height": 320,
+              "sha256": "a4e60e35e7e76059b990f8305eb78901049ad44fbdf93c03b16c49a8f22543ed"
+            },
+            {
+              "path": "backend/public/assets/cartagena-piloto/playa-blanca-baru-800.webp",
+              "bytes": 92056,
+              "width": 800,
+              "height": 533,
+              "sha256": "f91ccc8e9a262afe750c6122f9aa2bdfedc3699642bf68f8ce2cb5fdb2dc8de8"
+            }
+          ],
+          "status": "comparison_current_identity_pending_not_proven_false",
+          "requested_reference": "foto identificada del mismo lugar/sector anunciado; conservar perspectiva y geometría",
+          "priority": "high",
+          "served_current": true
+        },
+        {
+          "component": "cerro-popa",
+          "route": "independent_from_text_not_exact_comparison",
+          "evidence": "trabajo/preprod/crecimiento-colombia/entregas/cartagena/ATRACCIONES_SEMIRREALISTAS_MANIFIESTO.json",
+          "sources": [
+            "https://colombia.travel/es/cartagena/el-cerro-de-la-popa"
+          ],
+          "files": [
+            {
+              "path": "backend/public/assets/cartagena-piloto/cerro-popa-480.webp",
+              "bytes": 38716,
+              "width": 480,
+              "height": 320,
+              "sha256": "815344ed976864b77a41e6795e81ed3eb5939648773b266ab9fe268a4f7c04b5"
+            },
+            {
+              "path": "backend/public/assets/cartagena-piloto/cerro-popa-800.webp",
+              "bytes": 94434,
+              "width": 800,
+              "height": 533,
+              "sha256": "7a0dd03fefc1f8d48db31b1f1b1b89a26dfb60f0e4d4e80a8423cd8490e5ea71"
+            }
+          ],
+          "status": "comparison_current_identity_pending_not_proven_false",
+          "requested_reference": "foto identificada del mismo lugar/sector anunciado; conservar perspectiva y geometría",
+          "priority": "normal",
+          "served_current": true
+        },
+        {
+          "component": "san-pedro-claver",
+          "route": "independent_from_text_not_exact_comparison",
+          "evidence": "trabajo/preprod/crecimiento-colombia/entregas/cartagena/ATRACCIONES_SEMIRREALISTAS_MANIFIESTO.json",
+          "sources": [
+            "https://colombia.travel/es/cartagena/iglesia-y-monasterio-de-san-pedro-claver"
+          ],
+          "files": [
+            {
+              "path": "backend/public/assets/cartagena-piloto/san-pedro-claver-480.webp",
+              "bytes": 42328,
+              "width": 480,
+              "height": 320,
+              "sha256": "961fd2a274f4cc602b9369cce37904b0b266ed62137a3f1f5d56e35265bd5c9f"
+            },
+            {
+              "path": "backend/public/assets/cartagena-piloto/san-pedro-claver-800.webp",
+              "bytes": 111028,
+              "width": 800,
+              "height": 533,
+              "sha256": "b7876c822c787115c77f256f2bd2baf8f38641a9212b462a043054d856a2bf77"
+            }
+          ],
+          "status": "comparison_current_identity_pending_not_proven_false",
+          "requested_reference": "foto identificada del mismo lugar/sector anunciado; conservar perspectiva y geometría",
+          "priority": "normal",
+          "served_current": true
+        },
+        {
+          "component": "bocagrande",
+          "route": "independent_from_text_not_exact_comparison",
+          "evidence": "trabajo/preprod/crecimiento-colombia/entregas/cartagena/ATRACCIONES_SEMIRREALISTAS_MANIFIESTO.json",
+          "sources": [
+            "https://colombia.travel/es/cartagena/playas-e-islas-del-rosario"
+          ],
+          "files": [
+            {
+              "path": "backend/public/assets/cartagena-piloto/bocagrande-480.webp",
+              "bytes": 48742,
+              "width": 480,
+              "height": 320,
+              "sha256": "b5ac70fc73ba8a4d7c8c8ed7c6991dd0144028403a9cad6e3d27600faafa5f76"
+            },
+            {
+              "path": "backend/public/assets/cartagena-piloto/bocagrande-800.webp",
+              "bytes": 123310,
+              "width": 800,
+              "height": 533,
+              "sha256": "bfc8aa4466b45a029b067986dbf797b571376efe2cff823b47fa5b9383f5eb4f"
+            }
+          ],
+          "status": "comparison_current_identity_pending_not_proven_false",
+          "requested_reference": "foto identificada del mismo lugar/sector anunciado; conservar perspectiva y geometría",
+          "priority": "normal",
+          "served_current": true
+        }
+      ],
+      "experiences_documented": [
+        {
+          "id": "caminhada-patrimonial",
+          "name": "Caminar por Centro y San Diego",
+          "operator_internal": null,
+          "source": "https://colombia.travel/es/cartagena",
+          "source_checked_historical": "2026-10-17",
+          "status_historical": "draft",
+          "evidence_status": "actividad_editorial_sin_contratacion",
+          "visibility_current": "served_in_html"
+        },
+        {
+          "id": "visita-muhca",
+          "name": "Visitar el Museo Histórico",
+          "operator_internal": "MUHCA",
+          "source": "https://www.muhca.gov.co/",
+          "source_checked_historical": "2026-10-17",
+          "status_historical": "draft",
+          "evidence_status": "actividad_editorial_sin_contratacion",
+          "visibility_current": "served_in_html"
+        },
+        {
+          "id": "bus-panoramico",
+          "name": "Recorrer la ciudad en bus turístico",
+          "operator_internal": "City Sightseeing Cartagena",
+          "source": "https://citysightseeing.com.co/es/bus-turistico-cartagena/",
+          "source_checked_historical": "2026-10-17",
+          "status_historical": "draft",
+          "evidence_status": "oferta_publica_operador_consultada",
+          "visibility_current": "served_in_html"
+        },
+        {
+          "id": "buceo-rosario",
+          "name": "Bucear en las Islas del Rosario",
+          "operator_internal": "Diving Planet",
+          "source": "https://divingplanet.org/",
+          "source_checked_historical": "2026-10-17",
+          "status_historical": "draft",
+          "evidence_status": "oferta_publica_operador_consultada",
+          "visibility_current": "served_in_html"
+        },
+        {
+          "id": "snorkel-rosario",
+          "name": "Hacer snorkel en Rosario",
+          "operator_internal": "Diving Planet",
+          "source": "https://divingplanet.org/",
+          "source_checked_historical": "2026-10-17",
+          "status_historical": "archived",
+          "evidence_status": "oferta_publica_operador_consultada",
+          "visibility_current": "historical_not_served"
+        },
+        {
+          "id": "catamaran-cartagena",
+          "name": "Navegar en catamarán",
+          "operator_internal": "Bona Vida Catamaranes",
+          "source": "https://www.bonavidacatamaranes.com/",
+          "source_checked_historical": "2026-10-17",
+          "status_historical": "draft",
+          "evidence_status": "oferta_publica_operador_consultada",
+          "visibility_current": "served_in_html"
+        },
+        {
+          "id": "pesca-boquilla",
+          "name": "Conocer manglares y pesca tradicional en La Boquilla",
+          "operator_internal": null,
+          "source": "https://cartagenadeindias.travel/naturaleza-y-comunitario/boquilla-2/",
+          "source_checked_historical": "2026-10-17",
+          "status_historical": "draft",
+          "evidence_status": "oferta_institucional_operador_por_reconfirmar",
+          "visibility_current": "served_in_html"
+        },
+        {
+          "id": "atardecer-sibarita",
+          "name": null,
+          "operator_internal": "Sibarita del Mar",
+          "source": "https://sibarita.com.co/en/paseos",
+          "source_checked_historical": null,
+          "status_historical": "draft",
+          "evidence_status": "candidato_oculto",
+          "visibility_current": "historical_not_served"
+        },
+        {
+          "id": "kayak-bahia-candidato",
+          "name": null,
+          "operator_internal": null,
+          "source": "",
+          "source_checked_historical": null,
+          "status_historical": "draft",
+          "evidence_status": "candidato_oculto_sin_operador_verificado",
+          "visibility_current": "historical_not_served"
+        }
+      ],
+      "places_selected": [
+        {
+          "id": "centro-historico",
+          "name": "Centro histórico y murallas",
+          "order": 1
+        },
+        {
+          "id": "san-felipe",
+          "name": "Castillo de San Felipe de Barajas",
+          "order": 2
+        },
+        {
+          "id": "getsemani",
+          "name": "Getsemaní",
+          "order": 3
+        },
+        {
+          "id": "cerro-popa",
+          "name": "Cerro y convento de La Popa",
+          "order": 6
+        },
+        {
+          "id": "san-pedro-claver",
+          "name": "Santuario y Museo San Pedro Claver",
+          "order": 7
+        },
+        {
+          "id": "islas-rosario",
+          "name": "Islas del Rosario",
+          "order": 4
+        },
+        {
+          "id": "playa-blanca-baru",
+          "name": "Playa Blanca · Barú",
+          "order": 5
+        },
+        {
+          "id": "bocagrande",
+          "name": "Bocagrande",
+          "order": 8
+        }
+      ],
+      "served_html": {
+        "file": "trabajo/preprod/crecimiento-colombia/revisiones/auditoria-2026-10-20/cartagena-servido.html",
+        "sha256": "1efd03540e289fe3af43de3774b72b76fc052b415a98bb3b53300ae5e39ebc80",
+        "image_count": 15,
+        "images": [
+          {
+            "src": "/assets/cartagena-piloto/portada-ciudad-amurallada-v4-1200.webp",
+            "alt": "Ilustración editorial: Cartagena · ciudad amurallada",
+            "role": "hero"
+          },
+          {
+            "src": "/assets/cartagena-piloto/centro-historico-800.webp",
+            "alt": "Ilustración editorial: Centro histórico y Torre del Reloj",
+            "role": "attraction"
+          },
+          {
+            "src": "/assets/cartagena-piloto/san-felipe-800.webp",
+            "alt": "Ilustración editorial: Castillo de San Felipe",
+            "role": "attraction"
+          },
+          {
+            "src": "/assets/cartagena-piloto/getsemani-800.webp",
+            "alt": "Ilustración editorial: Getsemaní",
+            "role": "attraction"
+          },
+          {
+            "src": "/assets/cartagena-piloto/islas-rosario-800.webp",
+            "alt": "Ilustración editorial: Islas del Rosario",
+            "role": "attraction"
+          },
+          {
+            "src": "/assets/cartagena-piloto/playa-blanca-baru-800.webp",
+            "alt": "Ilustración editorial: Playa Blanca, Barú",
+            "role": "attraction"
+          },
+          {
+            "src": "/assets/cartagena-piloto/cerro-popa-800.webp",
+            "alt": "Ilustración editorial: Convento de La Popa",
+            "role": "attraction"
+          },
+          {
+            "src": "/assets/cartagena-piloto/san-pedro-claver-800.webp",
+            "alt": "Ilustración editorial: San Pedro Claver",
+            "role": "attraction"
+          },
+          {
+            "src": "/assets/cartagena-piloto/bocagrande-800.webp",
+            "alt": "Ilustración editorial: Bocagrande",
+            "role": "attraction"
+          },
+          {
+            "src": "/assets/cartagena-piloto/caminhada-patrimonial-800.webp",
+            "alt": "Ilustración editorial: Caminata patrimonial",
+            "role": "experience"
+          },
+          {
+            "src": "/assets/cartagena-piloto/visita-muhca-800.webp",
+            "alt": "Ilustración editorial: Visita al Museo Histórico",
+            "role": "experience"
+          },
+          {
+            "src": "/assets/cartagena-piloto/bus-panoramico-800.webp",
+            "alt": "Ilustración editorial: Bus turístico",
+            "role": "experience"
+          },
+          {
+            "src": "/assets/cartagena-piloto/buceo-rosario-800.webp",
+            "alt": "Ilustración editorial: Buceo",
+            "role": "experience"
+          },
+          {
+            "src": "/assets/cartagena-piloto/catamaran-cartagena-800.webp",
+            "alt": "Ilustración editorial: Catamarán",
+            "role": "experience"
+          },
+          {
+            "src": "/assets/cartagena-piloto/pesca-boquilla-800.webp",
+            "alt": "Ilustración editorial: Manglares y pesca tradicional",
+            "role": "experience"
+          }
+        ],
+        "attractions": 8,
+        "experiences": 6
+      }
+    },
+    {
+      "slug": "santa-marta",
+      "images": [
+        {
+          "component": "hero",
+          "route": "independent_from_text_not_exact_comparison",
+          "evidence": "trabajo/preprod/crecimiento-colombia/entregas/santa-marta/semirrealista-v1/MANIFIESTO.json",
+          "sources": [
+            {
+              "url": "https://colombia.travel/es/santa-marta",
+              "checked_at": "2026-10-17",
+              "facts_verified": "Rasgos geográficos/actividad según expediente textual previo; no exactitud topográfica del resultado."
+            }
+          ],
+          "files": [
+            {
+              "path": "backend/public/assets/santa-marta-semirrealista/hero-640.webp",
+              "width": 640,
+              "height": 427,
+              "bytes": 93276,
+              "sha256": "9ed35c8da7d5e67c2be0d5cf8dc486a5e60fac842d9c5d92e269ea03efa910b7"
+            },
+            {
+              "path": "backend/public/assets/santa-marta-semirrealista/hero-1200.webp",
+              "width": 1200,
+              "height": 800,
+              "bytes": 289850,
+              "sha256": "ef5439b358efcd7c7b80e1fcb58f54e9fc0e5ae252fd9031c4c247baa6f6b9af"
+            }
+          ],
+          "status": "comparison_current_identity_pending_not_proven_false",
+          "requested_reference": "foto identificada del mismo lugar/sector anunciado; conservar perspectiva y geometría",
+          "priority": "high",
+          "served_current": false
+        },
+        {
+          "component": "tayrona",
+          "route": "independent_from_text_not_exact_comparison",
+          "evidence": "trabajo/preprod/crecimiento-colombia/entregas/santa-marta/semirrealista-v1/MANIFIESTO.json",
+          "sources": [
+            {
+              "url": "https://www.parquesnacionales.gov.co/nuestros-parques/pnn-tayrona/",
+              "checked_at": "2026-10-17",
+              "facts_verified": "Rasgos geográficos/actividad según expediente textual previo; no exactitud topográfica del resultado."
+            }
+          ],
+          "files": [
+            {
+              "path": "backend/public/assets/santa-marta-semirrealista/tayrona-480.webp",
+              "width": 480,
+              "height": 320,
+              "bytes": 56680,
+              "sha256": "0b5e18a0696356597ad6df6fb76da948a97b6a8eadab3b784666ee24d761ea8c"
+            },
+            {
+              "path": "backend/public/assets/santa-marta-semirrealista/tayrona-800.webp",
+              "width": 800,
+              "height": 533,
+              "bytes": 152182,
+              "sha256": "ead4789513c728eac63f08778faf98989bfc26ce75918f1cb7ded45a1eaca473"
+            }
+          ],
+          "status": "comparison_current_identity_pending_not_proven_false",
+          "requested_reference": "foto identificada del mismo lugar/sector anunciado; conservar perspectiva y geometría",
+          "priority": "high",
+          "served_current": true
+        },
+        {
+          "component": "ciudad-perdida",
+          "route": "independent_from_text_not_exact_comparison",
+          "evidence": "trabajo/preprod/crecimiento-colombia/entregas/santa-marta/semirrealista-v1/MANIFIESTO.json",
+          "sources": [
+            {
+              "url": "https://www.icanh.gov.co/parques-icanh/parque-arqueologico-teyuna/guia-turistica",
+              "checked_at": "2026-10-17",
+              "facts_verified": "Rasgos geográficos/actividad según expediente textual previo; no exactitud topográfica del resultado."
+            }
+          ],
+          "files": [
+            {
+              "path": "backend/public/assets/santa-marta-semirrealista/ciudad-perdida-480.webp",
+              "width": 480,
+              "height": 320,
+              "bytes": 62080,
+              "sha256": "5506ea7ffd6f96ef4680612075edc997cb5cf74d2c1f80371ad103964d6a5a19"
+            },
+            {
+              "path": "backend/public/assets/santa-marta-semirrealista/ciudad-perdida-800.webp",
+              "width": 800,
+              "height": 533,
+              "bytes": 167106,
+              "sha256": "d84f77c9a7d956c5279fba8a0fb9862da87c2c5a1b0b145e230fb75229fefc76"
+            }
+          ],
+          "status": "comparison_current_identity_pending_not_proven_false",
+          "requested_reference": "foto identificada del mismo lugar/sector anunciado; conservar perspectiva y geometría",
+          "priority": "high",
+          "served_current": true
+        },
+        {
+          "component": "minca",
+          "route": "independent_from_text_not_exact_comparison",
+          "evidence": "trabajo/preprod/crecimiento-colombia/entregas/santa-marta/semirrealista-v1/MANIFIESTO.json",
+          "sources": [
+            {
+              "url": "https://colombia.travel/es/santa-marta/descanso-en-minca",
+              "checked_at": "2026-10-17",
+              "facts_verified": "Rasgos geográficos/actividad según expediente textual previo; no exactitud topográfica del resultado."
+            }
+          ],
+          "files": [
+            {
+              "path": "backend/public/assets/santa-marta-semirrealista/minca-480.webp",
+              "width": 480,
+              "height": 320,
+              "bytes": 64678,
+              "sha256": "868d4198ecc3d0a6a3d259a43adbcec920501855c61547c07a2a26d2f8a6a78b"
+            },
+            {
+              "path": "backend/public/assets/santa-marta-semirrealista/minca-800.webp",
+              "width": 800,
+              "height": 533,
+              "bytes": 164640,
+              "sha256": "7a30f1d53a405506e6bed1ee917632266b630097a42de410494e7924d17f14ed"
+            }
+          ],
+          "status": "comparison_current_identity_pending_not_proven_false",
+          "requested_reference": "foto identificada del mismo lugar/sector anunciado; conservar perspectiva y geometría",
+          "priority": "normal",
+          "served_current": true
+        },
+        {
+          "component": "rodadero",
+          "route": "independent_from_text_not_exact_comparison",
+          "evidence": "trabajo/preprod/crecimiento-colombia/entregas/santa-marta/semirrealista-v1/MANIFIESTO.json",
+          "sources": [
+            {
+              "url": "https://colombia.travel/es/santa-marta",
+              "checked_at": "2026-10-17",
+              "facts_verified": "Rasgos geográficos/actividad según expediente textual previo; no exactitud topográfica del resultado."
+            }
+          ],
+          "files": [
+            {
+              "path": "backend/public/assets/santa-marta-semirrealista/rodadero-480.webp",
+              "width": 480,
+              "height": 320,
+              "bytes": 57278,
+              "sha256": "17a90c3545a6946f0ef61cd0ca68dbf6131d50431b6d53fb49978b70820b4927"
+            },
+            {
+              "path": "backend/public/assets/santa-marta-semirrealista/rodadero-800.webp",
+              "width": 800,
+              "height": 533,
+              "bytes": 149136,
+              "sha256": "3a46ae0e0d6ac9c93a30c255d803442c3fdab65fcf3a1489466109db16ba685b"
+            }
+          ],
+          "status": "comparison_current_identity_pending_not_proven_false",
+          "requested_reference": "foto identificada del mismo lugar/sector anunciado; conservar perspectiva y geometría",
+          "priority": "normal",
+          "served_current": true
+        },
+        {
+          "component": "quinta",
+          "route": "independent_from_text_not_exact_comparison",
+          "evidence": "trabajo/preprod/crecimiento-colombia/entregas/santa-marta/semirrealista-v1/MANIFIESTO.json",
+          "sources": [
+            {
+              "url": "https://www.museobolivariano.org.co/laquinta/",
+              "checked_at": "2026-10-17",
+              "facts_verified": "Rasgos geográficos/actividad según expediente textual previo; no exactitud topográfica del resultado."
+            }
+          ],
+          "files": [
+            {
+              "path": "backend/public/assets/santa-marta-semirrealista/quinta-480.webp",
+              "width": 480,
+              "height": 320,
+              "bytes": 65120,
+              "sha256": "d1cd125f7fc42e435a7ad01ad2c62e930f4574e4397fcb6705258470c81bad9e"
+            },
+            {
+              "path": "backend/public/assets/santa-marta-semirrealista/quinta-800.webp",
+              "width": 800,
+              "height": 533,
+              "bytes": 169942,
+              "sha256": "13617f265400e395bec29b12351c410e69a91b74daa0e271dd0b8da87990550e"
+            }
+          ],
+          "status": "comparison_current_identity_pending_not_proven_false",
+          "requested_reference": "foto identificada del mismo lugar/sector anunciado; conservar perspectiva y geometría",
+          "priority": "normal",
+          "served_current": true
+        },
+        {
+          "component": "taganga",
+          "route": "independent_from_text_not_exact_comparison",
+          "evidence": "trabajo/preprod/crecimiento-colombia/entregas/santa-marta/semirrealista-v1/MANIFIESTO.json",
+          "sources": [
+            {
+              "url": "https://colombia.travel/es/santa-marta/taganga",
+              "checked_at": "2026-10-17",
+              "facts_verified": "Rasgos geográficos/actividad según expediente textual previo; no exactitud topográfica del resultado."
+            }
+          ],
+          "files": [
+            {
+              "path": "backend/public/assets/santa-marta-semirrealista/taganga-480.webp",
+              "width": 480,
+              "height": 320,
+              "bytes": 50872,
+              "sha256": "d5014eed84c97e79fda899ccfa373c69ab38eabea59ee3cc5825e797308ae897"
+            },
+            {
+              "path": "backend/public/assets/santa-marta-semirrealista/taganga-800.webp",
+              "width": 800,
+              "height": 533,
+              "bytes": 137184,
+              "sha256": "159d7c8f64baeeec93e114613f181d770c3a991a8c470ebd1bfebf08d30f12db"
+            }
+          ],
+          "status": "comparison_current_identity_pending_not_proven_false",
+          "requested_reference": "foto identificada del mismo lugar/sector anunciado; conservar perspectiva y geometría",
+          "priority": "normal",
+          "served_current": true
+        },
+        {
+          "component": "centro-historico",
+          "route": "independent_from_text_not_exact_comparison",
+          "evidence": "trabajo/preprod/crecimiento-colombia/entregas/santa-marta/semirrealista-v1/MANIFIESTO.json",
+          "sources": [
+            {
+              "url": "https://colombia.travel/es/santa-marta",
+              "checked_at": "2026-10-17",
+              "facts_verified": "Rasgos geográficos/actividad según expediente textual previo; no exactitud topográfica del resultado."
+            }
+          ],
+          "files": [
+            {
+              "path": "backend/public/assets/santa-marta-semirrealista/centro-historico-480.webp",
+              "width": 480,
+              "height": 320,
+              "bytes": 51630,
+              "sha256": "ec0e100045287b28f62cfc31b6bf1252f44151da34b5c4ea4021a66b2324b614"
+            },
+            {
+              "path": "backend/public/assets/santa-marta-semirrealista/centro-historico-800.webp",
+              "width": 800,
+              "height": 533,
+              "bytes": 132634,
+              "sha256": "13c13fffb10dcbc9a40b81622c0df8433b3d24c494c78873f489e95a8e4ac41f"
+            }
+          ],
+          "status": "comparison_current_identity_pending_not_proven_false",
+          "requested_reference": "foto identificada del mismo lugar/sector anunciado; conservar perspectiva y geometría",
+          "priority": "high",
+          "served_current": true
+        },
+        {
+          "component": "playa-blanca",
+          "route": "independent_from_text_not_exact_comparison",
+          "evidence": "trabajo/preprod/crecimiento-colombia/entregas/santa-marta/semirrealista-v1/MANIFIESTO.json",
+          "sources": [
+            {
+              "url": "https://indetur.gov.co/playa-blanca/",
+              "checked_at": "2026-10-17",
+              "facts_verified": "Rasgos geográficos/actividad según expediente textual previo; no exactitud topográfica del resultado."
+            }
+          ],
+          "files": [
+            {
+              "path": "backend/public/assets/santa-marta-semirrealista/playa-blanca-480.webp",
+              "width": 480,
+              "height": 320,
+              "bytes": 53538,
+              "sha256": "78078d1e6da1ac5e68a1511443e4538ede4eaf27833819c768d71a62769be6ac"
+            },
+            {
+              "path": "backend/public/assets/santa-marta-semirrealista/playa-blanca-800.webp",
+              "width": 800,
+              "height": 533,
+              "bytes": 148218,
+              "sha256": "05daa3693b73ff3a366c22fa53147e5812f164ffab60d3c79eece492ddcdcf72"
+            }
+          ],
+          "status": "comparison_current_identity_pending_not_proven_false",
+          "requested_reference": "foto identificada del mismo lugar/sector anunciado; conservar perspectiva y geometría",
+          "priority": "normal",
+          "served_current": true
+        },
+        {
+          "component": "exp-buceo-taganga",
+          "route": "independent_from_text_not_exact_comparison",
+          "evidence": "trabajo/preprod/crecimiento-colombia/entregas/santa-marta/semirrealista-v1/MANIFIESTO.json",
+          "sources": [
+            {
+              "url": "https://www.barracudataganga.com/cursos-de-buceo/",
+              "checked_at": "2026-10-17",
+              "facts_verified": "Rasgos geográficos/actividad según expediente textual previo; no exactitud topográfica del resultado."
+            }
+          ],
+          "files": [
+            {
+              "path": "backend/public/assets/santa-marta-semirrealista/exp-buceo-taganga-480.webp",
+              "width": 480,
+              "height": 320,
+              "bytes": 51876,
+              "sha256": "267e843b269f86a61e9e570dee8469fa9130f90e7714c009ef7a99058fdfaa4d"
+            },
+            {
+              "path": "backend/public/assets/santa-marta-semirrealista/exp-buceo-taganga-800.webp",
+              "width": 800,
+              "height": 533,
+              "bytes": 125168,
+              "sha256": "42745f911d47f9bc743243875efa25a6b2486a9e7f858cfefa51bff14fbbdbec"
+            }
+          ],
+          "status": "comparison_current_identity_pending_not_proven_false",
+          "requested_reference": "foto identificada del mismo lugar/sector anunciado; conservar perspectiva y geometría",
+          "priority": "normal",
+          "served_current": true
+        },
+        {
+          "component": "exp-caminata-tayrona",
+          "route": "independent_from_text_not_exact_comparison",
+          "evidence": "trabajo/preprod/crecimiento-colombia/entregas/santa-marta/semirrealista-v1/MANIFIESTO.json",
+          "sources": [
+            {
+              "url": "https://expotur-eco.com/tours/tour-al-parque-tayrona/",
+              "checked_at": "2026-10-17",
+              "facts_verified": "Rasgos geográficos/actividad según expediente textual previo; no exactitud topográfica del resultado."
+            }
+          ],
+          "files": [
+            {
+              "path": "backend/public/assets/santa-marta-semirrealista/exp-caminata-tayrona-480.webp",
+              "width": 480,
+              "height": 320,
+              "bytes": 65168,
+              "sha256": "a686a08b2c0dc5e19a2ca563ead87e7be9e6ac02246501c7c5a6505c82eea959"
+            },
+            {
+              "path": "backend/public/assets/santa-marta-semirrealista/exp-caminata-tayrona-800.webp",
+              "width": 800,
+              "height": 533,
+              "bytes": 162402,
+              "sha256": "0659dac3807b4d1af3127e8443820ab596c84caca9ab62b7903590d9e04d9442"
+            }
+          ],
+          "status": "comparison_current_identity_pending_not_proven_false",
+          "requested_reference": "foto identificada del mismo lugar/sector anunciado; conservar perspectiva y geometría",
+          "priority": "normal",
+          "served_current": true
+        },
+        {
+          "component": "exp-minca-cafe",
+          "route": "independent_from_text_not_exact_comparison",
+          "evidence": "trabajo/preprod/crecimiento-colombia/entregas/santa-marta/semirrealista-v1/MANIFIESTO.json",
+          "sources": [
+            {
+              "url": "https://expotur-eco.com/tours/tour-a-minca-santa-marta/",
+              "checked_at": "2026-10-17",
+              "facts_verified": "Rasgos geográficos/actividad según expediente textual previo; no exactitud topográfica del resultado."
+            }
+          ],
+          "files": [
+            {
+              "path": "backend/public/assets/santa-marta-semirrealista/exp-minca-cafe-480.webp",
+              "width": 480,
+              "height": 320,
+              "bytes": 56222,
+              "sha256": "810b86e600e5890b4136e2d8f3e0ca08cad0d8cf1708bc95f65902611991d792"
+            },
+            {
+              "path": "backend/public/assets/santa-marta-semirrealista/exp-minca-cafe-800.webp",
+              "width": 800,
+              "height": 533,
+              "bytes": 124160,
+              "sha256": "cdf9e39be6ac69fe0fea31a45ad60b427fa787bcb8babc0883b1567e921c9b29"
+            }
+          ],
+          "status": "comparison_current_identity_pending_not_proven_false",
+          "requested_reference": "foto identificada del mismo lugar/sector anunciado; conservar perspectiva y geometría",
+          "priority": "normal",
+          "served_current": true
+        },
+        {
+          "component": "exp-recorrido-centro",
+          "route": "independent_from_text_not_exact_comparison",
+          "evidence": "trabajo/preprod/crecimiento-colombia/entregas/santa-marta/semirrealista-v1/MANIFIESTO.json",
+          "sources": [
+            {
+              "url": "https://visitsantamarta.com/en/experiences/free-walking-tour-santa-marta/13",
+              "checked_at": "2026-10-17",
+              "facts_verified": "Rasgos geográficos/actividad según expediente textual previo; no exactitud topográfica del resultado."
+            }
+          ],
+          "files": [
+            {
+              "path": "backend/public/assets/santa-marta-semirrealista/exp-recorrido-centro-480.webp",
+              "width": 480,
+              "height": 320,
+              "bytes": 50868,
+              "sha256": "3a69d2581e04e01b3af0ca8e97b647ac842be586cb62903ca6634501e94d1d42"
+            },
+            {
+              "path": "backend/public/assets/santa-marta-semirrealista/exp-recorrido-centro-800.webp",
+              "width": 800,
+              "height": 533,
+              "bytes": 117898,
+              "sha256": "53da41e3eaf5c72632dd6c99d6ff6564f27a45d0754ec084e20effd099419040"
+            }
+          ],
+          "status": "comparison_current_identity_pending_not_proven_false",
+          "requested_reference": "foto identificada del mismo lugar/sector anunciado; conservar perspectiva y geometría",
+          "priority": "normal",
+          "served_current": true
+        },
+        {
+          "component": "exp-ciudad-perdida",
+          "route": "independent_from_text_not_exact_comparison",
+          "evidence": "trabajo/preprod/crecimiento-colombia/entregas/santa-marta/semirrealista-v1/MANIFIESTO.json",
+          "sources": [
+            {
+              "url": "https://lostcitytours.com/en/tours/lost-city-4-days/",
+              "checked_at": "2026-10-17",
+              "facts_verified": "Rasgos geográficos/actividad según expediente textual previo; no exactitud topográfica del resultado."
+            }
+          ],
+          "files": [
+            {
+              "path": "backend/public/assets/santa-marta-semirrealista/exp-ciudad-perdida-480.webp",
+              "width": 480,
+              "height": 320,
+              "bytes": 67996,
+              "sha256": "18fd35b86e512fcf6535eb533fc25a21b1b2aa1f5eae0d7262cc3a8879e98e90"
+            },
+            {
+              "path": "backend/public/assets/santa-marta-semirrealista/exp-ciudad-perdida-800.webp",
+              "width": 800,
+              "height": 533,
+              "bytes": 172250,
+              "sha256": "d976bc44e911f8d48dc1691fac7fd7cf7592fb33dce5d63f46c57cf66d5bd354"
+            }
+          ],
+          "status": "comparison_current_identity_pending_not_proven_false",
+          "requested_reference": "foto identificada del mismo lugar/sector anunciado; conservar perspectiva y geometría",
+          "priority": "normal",
+          "served_current": true
+        },
+        {
+          "component": "exp-velero-caribe",
+          "route": "independent_from_text_not_exact_comparison",
+          "evidence": "trabajo/preprod/crecimiento-colombia/entregas/santa-marta/semirrealista-v1/MANIFIESTO.json",
+          "sources": [
+            {
+              "url": "https://www.velerosantamarta.com/index-en.html",
+              "checked_at": "2026-10-17",
+              "facts_verified": "Rasgos geográficos/actividad según expediente textual previo; no exactitud topográfica del resultado."
+            }
+          ],
+          "files": [
+            {
+              "path": "backend/public/assets/santa-marta-semirrealista/exp-velero-caribe-480.webp",
+              "width": 480,
+              "height": 320,
+              "bytes": 42422,
+              "sha256": "1324c3ad44fa404ed74ed23493f326d14b6ee54958e0d41a27714d2501f74760"
+            },
+            {
+              "path": "backend/public/assets/santa-marta-semirrealista/exp-velero-caribe-800.webp",
+              "width": 800,
+              "height": 533,
+              "bytes": 102376,
+              "sha256": "60aa22f9eba20892b07726d14be989be7c915b7c14b7a0e65c913c283b7f54b3"
+            }
+          ],
+          "status": "comparison_current_identity_pending_not_proven_false",
+          "requested_reference": "foto identificada del mismo lugar/sector anunciado; conservar perspectiva y geometría",
+          "priority": "normal",
+          "served_current": true
+        },
+        {
+          "component": "exp-visita-acuario",
+          "route": "independent_from_text_not_exact_comparison",
+          "evidence": "trabajo/preprod/crecimiento-colombia/entregas/santa-marta/semirrealista-v1/MANIFIESTO.json",
+          "sources": [
+            {
+              "url": "https://centrodevidamarina.com/",
+              "checked_at": "2026-10-17",
+              "facts_verified": "Rasgos geográficos/actividad según expediente textual previo; no exactitud topográfica del resultado."
+            }
+          ],
+          "files": [
+            {
+              "path": "backend/public/assets/santa-marta-semirrealista/exp-visita-acuario-480.webp",
+              "width": 480,
+              "height": 320,
+              "bytes": 46802,
+              "sha256": "f71b36df27f88272e87fc41b9e5f2c818cea83af04bb6e4bf69726195212cfa6"
+            },
+            {
+              "path": "backend/public/assets/santa-marta-semirrealista/exp-visita-acuario-800.webp",
+              "width": 800,
+              "height": 533,
+              "bytes": 113456,
+              "sha256": "d321a0acf1c9531baf0cdd6ae998ae84f72fa211d6c5d47a73cd59f4c0f732d2"
+            }
+          ],
+          "status": "comparison_current_identity_pending_not_proven_false",
+          "requested_reference": "foto identificada del mismo lugar/sector anunciado; conservar perspectiva y geometría",
+          "priority": "normal",
+          "served_current": true
+        },
+        {
+          "component": "exp-excursion-playa-blanca",
+          "route": "independent_from_text_not_exact_comparison",
+          "evidence": "trabajo/preprod/crecimiento-colombia/entregas/santa-marta/semirrealista-v1/MANIFIESTO.json",
+          "sources": [
+            {
+              "url": "https://colombia.travel/es/santa-marta/playa-blanca",
+              "checked_at": "2026-10-17",
+              "facts_verified": "Rasgos geográficos/actividad según expediente textual previo; no exactitud topográfica del resultado."
+            }
+          ],
+          "files": [
+            {
+              "path": "backend/public/assets/santa-marta-semirrealista/exp-excursion-playa-blanca-480.webp",
+              "width": 480,
+              "height": 320,
+              "bytes": 59366,
+              "sha256": "7bcfb1c9c461c32d76c2188117e97d8eed263defdeba468a7b945349d3bf594e"
+            },
+            {
+              "path": "backend/public/assets/santa-marta-semirrealista/exp-excursion-playa-blanca-800.webp",
+              "width": 800,
+              "height": 533,
+              "bytes": 159382,
+              "sha256": "003386e6c437a532c7ddddb21c43750270875e5b1313eb33af9f379c799ed5d9"
+            }
+          ],
+          "status": "comparison_current_identity_pending_not_proven_false",
+          "requested_reference": "foto identificada del mismo lugar/sector anunciado; conservar perspectiva y geometría",
+          "priority": "normal",
+          "served_current": true
+        },
+        {
+          "component": "exp-moto-acuatica",
+          "route": "independent_from_text_not_exact_comparison",
+          "evidence": "trabajo/preprod/crecimiento-colombia/entregas/santa-marta/semirrealista-v1/MANIFIESTO.json",
+          "sources": [
+            {
+              "url": "https://www.discoversantamarta.travel/wp-content/uploads/2024/03/07032024-GUIA-GENERAL-DIGITAL-ESP.pdf",
+              "checked_at": "2026-10-17",
+              "facts_verified": "Rasgos geográficos/actividad según expediente textual previo; no exactitud topográfica del resultado."
+            }
+          ],
+          "files": [
+            {
+              "path": "backend/public/assets/santa-marta-semirrealista/exp-moto-acuatica-480.webp",
+              "width": 480,
+              "height": 320,
+              "bytes": 47176,
+              "sha256": "62f891d202ec75acbe5821a465ebf478bfada29e6d797565feec4cc3d03d0bb2"
+            },
+            {
+              "path": "backend/public/assets/santa-marta-semirrealista/exp-moto-acuatica-800.webp",
+              "width": 800,
+              "height": 533,
+              "bytes": 115108,
+              "sha256": "d4ae93596017fb615a41a00333c86d1d0b548fe71139f3a759f552efaeb7cfd3"
+            }
+          ],
+          "status": "comparison_current_identity_pending_not_proven_false",
+          "requested_reference": "foto identificada del mismo lugar/sector anunciado; conservar perspectiva y geometría",
+          "priority": "normal",
+          "served_current": true
+        }
+      ],
+      "experiences_documented": [
+        {
+          "id": "buceo-taganga",
+          "name": "Buceo desde Taganga",
+          "operator_internal": "Barracuda Dive Center",
+          "source": "https://www.barracudataganga.com/cursos-de-buceo/",
+          "source_checked_historical": "2026-10-17",
+          "status_historical": "draft",
+          "evidence_status": "fuente_publica_sin_validacion_contractual",
+          "visibility_current": "served_in_html"
+        },
+        {
+          "id": "caminata-tayrona",
+          "name": "Caminata por el Tayrona",
+          "operator_internal": "Expotur",
+          "source": "https://expotur-eco.com/tours/tour-al-parque-tayrona/",
+          "source_checked_historical": "2026-10-17",
+          "status_historical": "draft",
+          "evidence_status": "fuente_publica_sin_validacion_contractual",
+          "visibility_current": "served_in_html"
+        },
+        {
+          "id": "minca-cafe",
+          "name": "Naturaleza y café en Minca",
+          "operator_internal": "Expotur",
+          "source": "https://expotur-eco.com/tours/tour-a-minca-santa-marta/",
+          "source_checked_historical": "2026-10-17",
+          "status_historical": "draft",
+          "evidence_status": "fuente_publica_sin_validacion_contractual",
+          "visibility_current": "served_in_html"
+        },
+        {
+          "id": "recorrido-centro",
+          "name": "Paseo guiado por el centro",
+          "operator_internal": "Visit Santa Marta",
+          "source": "https://visitsantamarta.com/en/experiences/free-walking-tour-santa-marta/13",
+          "source_checked_historical": "2026-10-17",
+          "status_historical": "draft",
+          "evidence_status": "fuente_publica_sin_validacion_contractual",
+          "visibility_current": "served_in_html"
+        },
+        {
+          "id": "caminata-ciudad-perdida",
+          "name": "Caminata a Ciudad Perdida",
+          "operator_internal": "Magic Tour Colombia",
+          "source": "https://lostcitytours.com/en/tours/lost-city-4-days/",
+          "source_checked_historical": "2026-10-17",
+          "status_historical": "draft",
+          "evidence_status": "fuente_publica_sin_validacion_contractual",
+          "visibility_current": "historical_not_served"
+        },
+        {
+          "id": "velero-caribe",
+          "name": "Navegación por el Caribe",
+          "operator_internal": "Velero Santa Marta",
+          "source": "https://www.velerosantamarta.com/index-en.html",
+          "source_checked_historical": "2026-10-17",
+          "status_historical": "draft",
+          "evidence_status": "fuente_publica_sin_validacion_contractual",
+          "visibility_current": "served_in_html"
+        },
+        {
+          "id": "visita-acuario",
+          "name": "Visita al Centro de Vida Marina",
+          "operator_internal": "Centro de Vida Marina (antes Acuario Rodadero)",
+          "source": "https://centrodevidamarina.com/",
+          "source_checked_historical": "2026-10-17",
+          "status_historical": "draft",
+          "evidence_status": "fuente_publica_sin_validacion_contractual",
+          "visibility_current": "served_in_html"
+        },
+        {
+          "id": "excursion-playa-blanca",
+          "name": "Salida a Playa Blanca",
+          "operator_internal": null,
+          "source": "https://colombia.travel/es/santa-marta/playa-blanca",
+          "source_checked_historical": "2026-10-17",
+          "status_historical": "draft",
+          "evidence_status": "fuente_publica_sin_validacion_contractual",
+          "visibility_current": "served_in_html"
+        },
+        {
+          "id": "moto-acuatica",
+          "name": "Moto acuática",
+          "operator_internal": null,
+          "source": "https://www.discoversantamarta.travel/wp-content/uploads/2024/03/07032024-GUIA-GENERAL-DIGITAL-ESP.pdf",
+          "source_checked_historical": "2026-10-17",
+          "status_historical": "draft",
+          "evidence_status": "informativa_no_oferta_vigente_confirmada",
+          "visibility_current": "served_in_html"
+        }
+      ],
+      "places_selected": [
+        {
+          "id": "tayrona",
+          "name": "Parque Tayrona",
+          "order": 1
+        },
+        {
+          "id": "ciudad-perdida",
+          "name": "Teyuna · Ciudad Perdida",
+          "order": 2
+        },
+        {
+          "id": "minca",
+          "name": "Minca",
+          "order": 3
+        },
+        {
+          "id": "rodadero",
+          "name": "El Rodadero",
+          "order": 4
+        },
+        {
+          "id": "quinta",
+          "name": "Quinta de San Pedro Alejandrino",
+          "order": 5
+        },
+        {
+          "id": "taganga",
+          "name": "Taganga",
+          "order": 6
+        },
+        {
+          "id": "centro-historico",
+          "name": "Centro histórico",
+          "order": 7
+        },
+        {
+          "id": "playa-blanca",
+          "name": "Playa Blanca",
+          "order": 8
+        }
+      ],
+      "served_html": {
+        "file": "trabajo/preprod/crecimiento-colombia/revisiones/auditoria-2026-10-20/santa-marta-servido.html",
+        "sha256": "d5a97bea26ba9f9b5ceb38a9ace4485b9dc7e3de1a9d64cf0f8797b3eb9d4add",
+        "image_count": 18,
+        "images": [
+          {
+            "src": "/assets/santa-marta-semirrealista/hero-v3-1200.webp",
+            "alt": "Ilustración editorial: Santa Marta · bahía histórica y Camellón",
+            "role": "hero"
+          },
+          {
+            "src": "/assets/santa-marta-semirrealista/tayrona-800.webp",
+            "alt": "Ilustración editorial: Parque Tayrona",
+            "role": "attraction"
+          },
+          {
+            "src": "/assets/santa-marta-semirrealista/ciudad-perdida-800.webp",
+            "alt": "Ilustración editorial: Teyuna · Ciudad Perdida",
+            "role": "attraction"
+          },
+          {
+            "src": "/assets/santa-marta-semirrealista/minca-800.webp",
+            "alt": "Ilustración editorial: Minca",
+            "role": "attraction"
+          },
+          {
+            "src": "/assets/santa-marta-semirrealista/rodadero-800.webp",
+            "alt": "Ilustración editorial: El Rodadero",
+            "role": "attraction"
+          },
+          {
+            "src": "/assets/santa-marta-semirrealista/quinta-800.webp",
+            "alt": "Ilustración editorial: Quinta de San Pedro Alejandrino",
+            "role": "attraction"
+          },
+          {
+            "src": "/assets/santa-marta-semirrealista/taganga-800.webp",
+            "alt": "Ilustración editorial: Taganga",
+            "role": "attraction"
+          },
+          {
+            "src": "/assets/santa-marta-semirrealista/centro-historico-800.webp",
+            "alt": "Ilustración editorial: Centro histórico",
+            "role": "attraction"
+          },
+          {
+            "src": "/assets/santa-marta-semirrealista/playa-blanca-800.webp",
+            "alt": "Ilustración editorial: Playa Blanca",
+            "role": "attraction"
+          },
+          {
+            "src": "/assets/santa-marta-semirrealista/exp-buceo-taganga-800.webp",
+            "alt": "Ilustración editorial: Buceo desde Taganga",
+            "role": "experience"
+          },
+          {
+            "src": "/assets/santa-marta-semirrealista/exp-caminata-tayrona-800.webp",
+            "alt": "Ilustración editorial: Caminata por el Tayrona",
+            "role": "experience"
+          },
+          {
+            "src": "/assets/santa-marta-semirrealista/exp-minca-cafe-800.webp",
+            "alt": "Ilustración editorial: Naturaleza y café en Minca",
+            "role": "experience"
+          },
+          {
+            "src": "/assets/santa-marta-semirrealista/exp-recorrido-centro-800.webp",
+            "alt": "Ilustración editorial: Paseo guiado por el centro",
+            "role": "experience"
+          },
+          {
+            "src": "/assets/santa-marta-semirrealista/exp-ciudad-perdida-800.webp",
+            "alt": "Ilustración editorial: Caminata a Ciudad Perdida",
+            "role": "experience"
+          },
+          {
+            "src": "/assets/santa-marta-semirrealista/exp-velero-caribe-800.webp",
+            "alt": "Ilustración editorial: Navegación por el Caribe",
+            "role": "experience"
+          },
+          {
+            "src": "/assets/santa-marta-semirrealista/exp-visita-acuario-800.webp",
+            "alt": "Ilustración editorial: Visita al Centro de Vida Marina",
+            "role": "experience"
+          },
+          {
+            "src": "/assets/santa-marta-semirrealista/exp-excursion-playa-blanca-800.webp",
+            "alt": "Ilustración editorial: Salida a Playa Blanca",
+            "role": "experience"
+          },
+          {
+            "src": "/assets/santa-marta-semirrealista/exp-moto-acuatica-800.webp",
+            "alt": "Ilustración editorial: Moto acuática",
+            "role": "experience"
+          }
+        ],
+        "attractions": 8,
+        "experiences": 9
+      }
+    }
+  ],
+  "rechecked_primary_sources": [
+    {
+      "url": "https://citysightseeing.com.co/es/bus-turistico-cartagena/",
+      "checked_at": "2026-10-20",
+      "finding": "Oferta propia y paradas concretas; bus existente"
+    },
+    {
+      "url": "https://divingplanet.org/",
+      "checked_at": "2026-10-20",
+      "finding": "Oferta buceo principiantes/certificados en Rosario; snorkel existe pero propietario lo retiró, no reintroducir"
+    },
+    {
+      "url": "https://www.bonavidacatamaranes.com/",
+      "checked_at": "2026-10-20",
+      "finding": "Reserva excursiones Islas Rosario y sunset; oferta marítima real"
+    },
+    {
+      "url": "https://expotur-eco.com/tours/tour-a-minca-santa-marta/",
+      "checked_at": "2026-10-20",
+      "finding": "Tour Minca con precio publicado; existe producto organizado"
+    },
+    {
+      "url": "https://lostcitytours.com/en/tours/lost-city-4-days/",
+      "checked_at": "2026-10-20",
+      "finding": "Travesía multiday comercial desdeSantaMarta, reservas yprecio; reseñas propias no verificadas independientemente"
+    },
+    {
+      "url": "https://www.barracudataganga.com/cursos-de-buceo/",
+      "checked_at": "2026-10-20",
+      "finding": "Cursos y salidas con precios ydirecciónTaganga; producto real"
+    },
+    {
+      "url": "https://visitsantamarta.com/en/experiences/free-walking-tour-santa-marta/13",
+      "checked_at": "2026-10-20",
+      "finding": "Recorrido guiado90min; propinas, no tarifa fija obligatoria"
+    },
+    {
+      "url": "https://centrodevidamarina.com/",
+      "checked_at": "2026-10-20",
+      "finding": "AcuarioRodadero se transforma en CentroVidaMarina; ventaentradas/exhibiciones; identidad acreditada no fidelidad deescenaIA"
+    }
+  ],
+  "recommended_actions": [
+    {
+      "component": "santa-marta:moto-acuatica",
+      "action": "retirar deexperiencias si realmentevisible hasta ofertaexacta; conservar investigación",
+      "reason": "expediente explicita noofertaconfirmada"
+    },
+    {
+      "component": "santa-marta:excursion-playa-blanca",
+      "action": "confirmar proveedor/producto; evitar fusionarBarúconRodadero",
+      "reason": "portal nacional acredita lugar no ofertaoperada"
+    },
+    {
+      "component": "cartagena:caminhada-patrimonial",
+      "action": "si visible mover a sugerenciaautónoma o sustituir por tourguiado acreditado",
+      "reason": "operatornull ytexto a tu ritmo no ofertaorganizada"
+    },
+    {
+      "component": "cartagena:visita-muhca",
+      "action": "no vender visitaautónoma como tour; mantener atractivo físico o acreditar actividadguiada",
+      "reason": "acceso museo no equivale a tour"
+    },
+    {
+      "component": "ambos:priority",
+      "action": "orden editorial por singularidad, claridadlogística yofertaconcreta; nunca rankingpopularidad inventado",
+      "reason": "no hay métricasdemanda comparables"
+    }
+  ],
+  "current_findings": [
+    {
+      "destination": "cartagena",
+      "component": "caminhada-patrimonial",
+      "severity": "high",
+      "evidence": "Primera experiencia servida: Camina a tu ritmo por plazas y murallas; bloque declara actividades ofrecidas por operadores",
+      "action": "Reclasificar como paseo autónomo fuera de experiencias operadas o acreditar tour guiado real. No priorizar por defecto."
+    },
+    {
+      "destination": "cartagena",
+      "component": "visita-muhca",
+      "severity": "medium",
+      "evidence": "Segunda experiencia: visitar museo sin modalidad guiada comprobada",
+      "action": "Acreditar experiencia organizada o integrar en atractivo museo; evitar duplicar acceso como tour."
+    },
+    {
+      "destination": "santa-marta",
+      "component": "moto-acuatica",
+      "severity": "high",
+      "evidence": "Novena tarjeta afirma aún no hay una oferta confirmada dentro de sección de operadores",
+      "action": "Retirar de experiencias ofrecidas hasta acreditar producto concreto, sin eliminar investigación."
+    },
+    {
+      "destination": "santa-marta",
+      "component": "caminata-ciudad-perdida",
+      "severity": "medium",
+      "evidence": "Quinta tarjeta, detrás del paseo centro; operador propio ofrece travesía multidía distintiva",
+      "action": "Prioridad editorial por singularidad/tiempo/esfuerzo; no afirmar top ventas. Separar varios días de excursiones cortas."
+    }
+  ]
+}

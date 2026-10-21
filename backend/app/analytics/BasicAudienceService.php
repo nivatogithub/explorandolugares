@@ -31,11 +31,11 @@ final class BasicAudienceService {
     private function scope(string $path):array|null {
         if(strlen($path)>400||!preg_match('~^/[a-zA-Z0-9/_-]*(?:\.html)?$~D',$path))return null;
         if(preg_match('~/(admin|api|business|negocios/(portal|registro|acceso|salir|cambiar-clave))(?:/|$)~',$path))return null;
-        if(preg_match('~^/(?:en/|pt-br/)?destinos/([a-z0-9-]+)(?:/|$)~',$path,$match)) {
+        if(preg_match('~^/(?:en/|pt-br/)?(?:destinos|lugares)/([a-z0-9-]+)(?:/|$)~',$path,$match)) {
             $q=$this->pdo->prepare("SELECT slug FROM destinations WHERE slug=? AND publication_status='published' LIMIT 1");$q->execute([$match[1]]);
             if(!$q->fetchColumn())return null;
             // Only existing static subpages or the destination's public root.
-            $root=preg_match('~^/(?:en/|pt-br/)?destinos/[a-z0-9-]+/(?:index\.html)?$~',$path);
+            $root=preg_match('~^/(?:en/|pt-br/)?(?:destinos|lugares)/[a-z0-9-]+/(?:index\.html)?$~',$path);
             if(!$root&&!$this->staticPage($path))return null;
             return array_filter(['CO',$this->department($match[1])]);
         }
@@ -68,7 +68,7 @@ final class BasicAudienceService {
         $this->pdo->prepare($sql)->execute([$day,$type,$key,$destination,$metric,$placement]);
     }
     private function countEntityPage(string $path,string $day):void {
-        if(preg_match('~^/(?:en/|pt-br/)?destinos/([a-z0-9-]+)(?:/|$)~',$path,$match))$this->addEntity($day,'destination',$match[1],$match[1],'page_view','destination');
+        if(preg_match('~^/(?:en/|pt-br/)?(?:destinos|lugares)/([a-z0-9-]+)(?:/|$)~',$path,$match))$this->addEntity($day,'destination',$match[1],$match[1],'page_view','destination');
         elseif(preg_match('~^/(?:en/|pt-br/)?negocios/([a-fA-F0-9-]{16,64})/?$~D',$path,$match)) {
             $b=(new PublicAudienceTargets($this->pdo))->business($match[1]);
             if(!$b||!$b['has_page'])throw new RuntimeException('El negocio dejó de tener página pública');
@@ -78,7 +78,7 @@ final class BasicAudienceService {
     }
     private function countCountry(string $path,array $scopes,string $day,string $country):void {
         if(!preg_match('/^[A-Z]{2}$/D',$country))$country='ZZ';
-        $slug='';if(preg_match('~^/(?:en/|pt-br/)?destinos/([a-z0-9-]+)(?:/|$)~',$path,$m))$slug=$m[1];
+        $slug='';if(preg_match('~^/(?:en/|pt-br/)?(?:destinos|lugares)/([a-z0-9-]+)(?:/|$)~',$path,$m))$slug=$m[1];
         elseif(preg_match('~^/(?:en/|pt-br/)?negocios/([a-f0-9-]{16,64})/?$~iD',$path,$m))$slug=(new PublicAudienceTargets($this->pdo))->business($m[1])['destination_slug']??'';
         $mysql=$this->pdo->getAttribute(PDO::ATTR_DRIVER_NAME)==='mysql';
         $sql=$mysql?'INSERT INTO el_basic_country_daily VALUES(?,?,?,?,1) ON DUPLICATE KEY UPDATE page_views=page_views+1':'INSERT INTO el_basic_country_daily VALUES(?,?,?,?,1) ON CONFLICT(page_day,scope_code,destination_slug,country_code) DO UPDATE SET page_views=page_views+1';
@@ -88,7 +88,7 @@ final class BasicAudienceService {
         if(!$this->ready()||!in_array($channel,['phone','email','whatsapp','website'],true)||!$this->scope($path))return false;
         $b=(new PublicAudienceTargets($this->pdo))->business($publicId);if(!$b||!isset($b['features'][$channel==='website'?'business_page':'direct_contact']))return false;
         $q=$this->pdo->prepare('SELECT COUNT(*) FROM business_contacts WHERE business_id=? AND channel=? AND is_public=1 AND contact_value<>""');$q->execute([$b['id'],$channel]);if(!(int)$q->fetchColumn())return false;
-        $guide=preg_match('~^/(?:en/|pt-br/)?destinos/([a-z0-9-]+)(?:/|$)~',$path,$m)&&$m[1]===$b['destination_slug'];
+        $guide=preg_match('~^/(?:en/|pt-br/)?(?:destinos|lugares)/([a-z0-9-]+)(?:/|$)~',$path,$m)&&$m[1]===$b['destination_slug'];
         $profile=preg_match('~^/(?:en/|pt-br/)?negocios/([a-f0-9-]{16,64})/?$~iD',$path,$m)&&strtolower($m[1])===strtolower($publicId)&&$b['has_page'];
         if(!$guide&&!$profile)return false;
         $now??=gmdate('Y-m-d H:i:s');$this->maintain($now);$day=(new DateTimeImmutable($now,new DateTimeZone('UTC')))->setTimezone(new DateTimeZone('America/Bogota'))->format('Y-m-d');
@@ -105,7 +105,7 @@ final class BasicAudienceService {
     }
     public function countCard(string $path,string $publicId,string $metric,?string $now=null):bool {
         if(!$this->ready()||!in_array($metric,['card_impression','profile_click'],true))return false;
-        if(!preg_match('~^/(?:en/|pt-br/)?destinos/([a-z0-9-]+)(?:/|$)~',$path,$match)||!$this->scope($path))return false;
+        if(!preg_match('~^/(?:en/|pt-br/)?(?:destinos|lugares)/([a-z0-9-]+)(?:/|$)~',$path,$match)||!$this->scope($path))return false;
         $b=(new PublicAudienceTargets($this->pdo))->business($publicId);
         if(!$b||$b['destination_slug']!==$match[1]||($metric==='profile_click'&&!$b['has_page']))return false;
         $now??=gmdate('Y-m-d H:i:s');$this->maintain($now);
