@@ -1,0 +1,62 @@
+{
+  "fecha": "2026-10-20",
+  "destino": "cocorna",
+  "orden": "editorial provisional; experiencias por identidad y oferta, sin ranking de ventas",
+  "fuentes": [
+    {
+      "componente": "territorio",
+      "url": "https://provincia-abt.gov.co/bosques/cocorna/",
+      "respalda": "Fuente institucional: parque e iglesia, río Cocorná y Las Perlas. No prueba acceso actual ni disponibilidad de recorridos.",
+      "consulta": "2026-10-20"
+    },
+    {
+      "componente": "parapente",
+      "url": "https://www.cascadiacocorna.com/adventures/paragliding",
+      "respalda": "Oferta propia de vuelo acompañado; descripción del entorno de montañas y cascadas.",
+      "consulta": "2026-10-20"
+    },
+    {
+      "componente": "parapente-respaldo",
+      "url": "https://aventuracocorna.com/",
+      "respalda": "Oferta comercial explícita de parapente; otros servicios enumerados aún sin itinerario específico.",
+      "consulta": "2026-10-20"
+    },
+    {
+      "componente": "rafting-calderas",
+      "url": "https://www.expeditioncolombia.com/es/experiencias-de-aventura/calderas-rafting",
+      "respalda": "Oferta propia de rafting con base operativa en Cocorná. No atribuir todo el recorrido a límites municipales sin mapa.",
+      "consulta": "2026-10-20"
+    },
+    {
+      "componente": "excursion-melcocho",
+      "url": "https://atodopulmon.co/paquetes/viaje-rio-melcocho/",
+      "respalda": "Oferta guiada con fechas octubre-diciembre 2026. Inconsistencias internas en dificultad y horario: no trasladar esos datos al portal.",
+      "consulta": "2026-10-20"
+    },
+    {
+      "componente": "hidrografia",
+      "url": "https://dssa.gov.co/asis/documentos2024/asis2024/ORIENTE/Cocorn%C3%A1%202024.pdf",
+      "respalda": "Documento institucional: río Cocorná, Guayabal y cascadas; antecedente 2024, no evidencia de acceso actual.",
+      "consulta": "2026-10-20"
+    }
+  ],
+  "excluidos": [
+    {
+      "componente": "paseo urbano y comida",
+      "razon": "No crear tours genéricos sin servicio concreto."
+    },
+    {
+      "componente": "cabalgata, cuatrimotos y torrentismo",
+      "razon": "El operador los enumera, falta oferta específica, lugar e itinerario para priorizar."
+    },
+    {
+      "componente": "cabellera de venus, la chorrera y san vicente",
+      "razon": "Identidad institucional, pero acceso y relevancia comparada pendientes. No completar ocho por cuota."
+    }
+  ],
+  "avisos": [
+    "No afirmar río más cristalino de Colombia o Suramérica: superlativo sin comparación documentada.",
+    "Melcocho se conserva como excursión; no duplicarlo como atractivo.",
+    "Oferta documental no garantiza disponibilidad actual, alianza ni recomendación."
+  ]
+}

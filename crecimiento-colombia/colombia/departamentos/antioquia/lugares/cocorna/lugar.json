@@ -2,16 +2,16 @@
   "schema_version": 1,
   "place_id": "CO-05-cocorna",
   "department_id": "CO-05",
-  "state": "planned",
-  "owner": null,
+  "state": "researching",
+  "owner": "/root/nuevo_cocorna",
   "reviewer": null,
   "branch": "lugar/CO/antioquia/cocorna",
   "pr_url": null,
-  "base_commit": null,
+  "base_commit": "be96d8a",
   "blockers": [
-    "Asignar responsable y auditar fuentes, permisos y estado real"
+    "Referencias visuales pendientes; continuar investigación textual y directorio."
   ],
-  "next_action": "Completar PROCESO.md y evidencia específica del lugar",
+  "next_action": "Contrastar geografía/accesos y completar vigencia/categorías del directorio antes de empaquetar.",
   "gates": {
     "identidad": {
       "passed": false,
