@@ -205,6 +205,7 @@ try:
         ('/admin/inversionistas.php', 'Inteligencia de negocio e inversión'),
         ('/admin/contactos-negocios.php', 'Gestión comercial'),
         ('/admin/campanas.php', 'Campañas por correo'),
+        ('/admin/correos.php', 'Plantillas y correos'),
         ('/admin/campanas.php?tab=conexion', 'Remitente y conexión'),
         ('/admin/campanas.php?tab=correos', 'Negocios destinatarios'),
     ]
@@ -251,6 +252,7 @@ try:
                     '/admin/suscripciones.php': 'Suscripciones',
                     '/admin/inversionistas.php': 'Inteligencia e inversión',
                     '/admin/contactos-negocios.php': 'Gestión comercial',
+                    '/admin/correos.php': 'Plantillas y correos',
                     '/admin/campanas.php': 'Conexión con Brevo' if 'tab=conexion' in path else 'Campañas por correo',
                 }.get(route)
                 if expected_sidebar:
@@ -350,6 +352,20 @@ try:
     check(status == 200, 'La revisión explícita del correo no se guardó.')
     status, body, _ = request('/admin/campanas.php', {'csrf': campaign_csrf, 'action': 'create', 'name': 'Prueba local', 'subject': 'Asunto local', 'body': '<script>alert(1)</script>', 'channels[]': str(channel_id)})
     check(status == 200 and '&lt;script&gt;' in body and 'Aprobar esta versión' in body, 'El borrador debe abrir para revisión con contenido escapado.')
+    email_status,email_template_form,_=request('/admin/correos.php?tab=templates')
+    email_csrf=re.search(r'name="csrf" value="([^"]+)"',email_template_form).group(1)
+    check(request('/admin/correos.php',{'csrf':'invalid','action':'save_template'})[0]==403,'Email templates must require CSRF.')
+    email_status,email_saved,_=request('/admin/correos.php?tab=templates',{'csrf':email_csrf,'action':'save_template','name':'Respuesta HTTP','subject':'Respuesta para {{business_name}}','html':'<p>Hola {{business_name}}</p><script>evil()</script>'})
+    check(email_status==200 and 'Plantilla guardada' in email_saved,'HTML template was not saved.')
+    template_id=re.search(r'name="template_id" value="([a-f0-9]{32})"',email_saved).group(1)
+    _,email_composer,_=request('/admin/correos.php?template='+template_id+'&business_id='+str(business_id))
+    recipient_key=re.search(r'<option value="([a-f0-9]{64})"',email_composer).group(1)
+    email_status,email_preview,_=request('/admin/correos.php',{'csrf':email_csrf,'action':'preview','template_id':template_id,'recipient':recipient_key,'requested_reply':'1'})
+    check(email_status==200 and 'Vista previa del correo' in email_preview and 'Hotel de prueba' in email_preview and 'sandbox=""' in email_preview and 'evil()' not in email_preview,'Individual email did not render safe actual business data.')
+    email_status,email_history,_=request('/admin/correos.php?tab=history&business_id='+str(business_id))
+    check(email_status==200 and 'Respuesta para Hotel de prueba' in email_history and 'Borrador revisable' in email_history,'Individual mail draft missing from business history.')
+    preview_id=re.search(r'message=([a-f0-9]{32})',email_history).group(1)
+    check(request('/admin/correos.php',{'csrf':email_csrf,'action':'send','message_id':preview_id,'confirm_send':'1'})[0]==400,'Local individual email must never send live mail.')
     campaign_row = DB.execute('SELECT id,content_hash FROM business_email_campaigns').fetchone()
     _,reuse_html,_=request('/admin/campanas.php?reuse='+str(campaign_row[0]))
     check('value="Asunto local"' in reuse_html and '&lt;script&gt;' in reuse_html and 'name="channels[]"' in reuse_html and 'name="channels[]" checked' not in reuse_html,'Reusing a message must escape content and require a fresh recipient selection.')
