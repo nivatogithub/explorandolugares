@@ -5,8 +5,6 @@ $adminTab = (string)($_GET['tab'] ?? '');
 $activeAdminItem = match (true) {
     $adminPath === 'index.php' && $adminTab === 'sistema' => 'system',
     $adminPath === 'index.php' || ($adminPath === 'solicitud-detalle.php' && ($_GET['tipo']??'')==='participation') => 'requests',
-    $adminPath === 'negocios.php' && $adminTab === 'atencion' => 'business-attention',
-    $adminPath === 'negocios.php' && $adminTab === 'pendientes' => 'business-review',
     $adminPath === 'negocios.php' => 'businesses',
     $adminPath === 'trasladar-negocios.php' => 'businesses',
     $adminPath === 'importar-negocios.php' => 'businesses',
@@ -40,8 +38,6 @@ $activeAdminItem = match (true) {
       <a href="solicitudes-publicas.php" <?= $activeAdminItem === 'public-requests' ? 'aria-current="page"' : '' ?>>Solicitudes de usuarios</a>
       <a href="index.php?tab=solicitudes" <?= $activeAdminItem === 'requests' ? 'aria-current="page"' : '' ?>>Solicitudes de participación</a>
       <a href="negocios.php" <?= $activeAdminItem === 'businesses' ? 'aria-current="page"' : '' ?>>Negocios</a>
-      <a href="negocios.php?tab=atencion" <?= $activeAdminItem === 'business-attention' ? 'aria-current="page"' : '' ?>>Atención a comercios</a>
-      <a href="negocios.php?tab=pendientes" <?= $activeAdminItem === 'business-review' ? 'aria-current="page"' : '' ?>>Revisión y pendientes</a>
       <a href="contactos-negocios.php" <?= $activeAdminItem === 'business-research' ? 'aria-current="page"' : '' ?>>Canales y responsable</a>
       <a href="actualizar-negocios.php" <?= $activeAdminItem === 'business-bulk-edit' ? 'aria-current="page"' : '' ?>>Exportar / actualizar</a>
       <a href="campanas.php" <?= $activeAdminItem === 'campaigns' ? 'aria-current="page"' : '' ?>>Campañas por correo</a>

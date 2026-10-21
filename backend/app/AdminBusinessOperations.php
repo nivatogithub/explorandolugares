@@ -26,8 +26,15 @@ final class AdminBusinessOperations
         if(($filters['query']??'')!==''&&mb_stripos($row['display_name'].' '.$row['destination_name'],$filters['query'])===false)return false;
         if(($filters['account']??'')==='yes'&&$row['account_email']==='')return false;
         if(($filters['account']??'')==='no'&&$row['account_email']!=='')return false;
-        $plan=$row['subscription_status']==='sin suscripción'?'none':$row['plan_code'];
+        $plan=$row['plan_code']?:'free';
         return ($filters['plan']??'')===''||$filters['plan']===$plan;
+    }
+    public static function accountLabel(array $row):string
+    {
+        if($row['account_email']!=='')return $row['account_email'];
+        $approved=array_filter($row['applications']??[],static fn($item)=>$item['status']==='approved');
+        if($row['record_origin']==='owner_submitted'||$approved)return 'Revisar asociación: falta la cuenta responsable';
+        return $row['record_origin']==='public_import'?'Importado por el portal · sin responsable':($row['record_origin']==='admin_created'?'Creado en administración · sin responsable':'Origen pendiente de clasificar · sin responsable');
     }
     public static function informationLabel(string $status):string
     {
@@ -35,14 +42,14 @@ final class AdminBusinessOperations
     }
     public static function subscriptionLabel(string $status):string
     {
-        return ['sin suscripción'=>'Sin suscripción','pending_publication'=>'Pendiente de publicación','paid_pending_publication'=>'Pago confirmado; pendiente de publicación','active'=>'Activa','expired'=>'Vencida','cancelled'=>'Cancelada','pending_payment'=>'Pago pendiente'][$status]??$status;
+        return ['sin suscripción'=>'Gratis por defecto','pending_publication'=>'Pendiente de publicación','paid_pending_publication'=>'Pago confirmado; pendiente de publicación','active'=>'Activa','expired'=>'Vencida','cancelled'=>'Cancelada','pending_payment'=>'Pago pendiente'][$status]??$status;
     }
     public static function nextStep(array $row):string
     {
         if($row['pending_applications']>0)return 'Solicitud pendiente: abrir lo enviado y revisar su estado.';
         if($row['publication_status']==='archived')return 'Retirado del sitio; consultar el registro.';
         if($row['publication_status']==='published')return 'Publicado; consultar ficha y suscripción.';
-        if($row['subscription_status']==='sin suscripción')return 'No hay suscripción registrada. Consultar la ficha antes de publicar.';
+        if($row['subscription_status']==='sin suscripción')return 'Gratis por defecto · pendiente de publicación.';
         if($row['operation_status']==='CERRADO_DEFINITIVO')return 'Operación cerrada: revisar la ficha antes de publicar.';
         return 'Publicación pendiente. La revisión individual comprueba los requisitos completos.';
     }
