@@ -19,8 +19,18 @@ final class AdminBusinessOperations
         }unset($row);
         return $rows;
     }
+    public static function segment(array $row):string
+    {
+        return match($row['record_origin']??''){
+            'owner_submitted'=>'registered',
+            'public_import'=>'imported',
+            'admin_created'=>'historical',
+            default=>'unknown',
+        };
+    }
     public static function matches(array $row,array $filters):bool
     {
+        if(($filters['segment']??'')!==''&&self::segment($row)!==$filters['segment'])return false;
         foreach(['destination'=>'destination_id','status'=>'publication_status','origin'=>'record_origin','verification'=>'information_status'] as $filter=>$field)if(($filters[$filter]??'')!==''&&(string)$filters[$filter]!==(string)$row[$field])return false;
         if(($filters['category']??'')!==''&&!in_array($filters['category'],$row['category_codes']??[$row['category_code']],true))return false;
         if(($filters['query']??'')!==''&&mb_stripos($row['display_name'].' '.$row['destination_name'],$filters['query'])===false)return false;
