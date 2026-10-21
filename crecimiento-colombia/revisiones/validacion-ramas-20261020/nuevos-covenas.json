@@ -1,0 +1,123 @@
+{
+  "slug": "covenas",
+  "build_exit": 0,
+  "build_log": "/tmp/builds-cuatro-destinos-20261020/covenas/build.log",
+  "source_status_unchanged": true,
+  "snapshot_translations": {
+    "es": true,
+    "en": true,
+    "pt-BR": true
+  },
+  "snapshot_places": 10,
+  "snapshot_media": 11,
+  "built_images": [
+    {
+      "path": "assets/destinos/covenas/9689bc16e455cb82de723eddb7f6e053791125c35a27a478d37db3ca7eaa8aa2.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    },
+    {
+      "path": "assets/destinos/covenas/8d87b845184101abb99dada6a8162fc520e6d602fba2c8c3fa2094b0ea6b0b0a.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    },
+    {
+      "path": "assets/destinos/covenas/7ed4d384701a633be32e0efd4acfdeb3d6d415c7766c7eb21c03340f63ff1b8d.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    },
+    {
+      "path": "assets/destinos/covenas/72d7c8bfcc776ae7085c288557c263b3fc89623dfe1e0308af6a63facd7cdb62.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    },
+    {
+      "path": "assets/destinos/covenas/e423b3b87f355c27e6532165476cb072eaa61b89df362f9458d0af2847a0fd6d.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    },
+    {
+      "path": "assets/destinos/covenas/43fa03b1b0c7299da2f6744dbfbcd8e51c3d79441aec52a00991538f9010520e.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    },
+    {
+      "path": "assets/destinos/covenas/d590841c242d32cb2a5a29d16f5046972352e895d0939aa8ce71c10546edac9c.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    },
+    {
+      "path": "assets/destinos/covenas/ca73d20126100f5d2b8ea66a9f3a16fb3b3f244be2c3231ebaf518d46adfb789.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    },
+    {
+      "path": "assets/destinos/covenas/fc0d6083b3fef51b45307f688a31acec1a790fbe474343400ad11b463bffcf7f.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    },
+    {
+      "path": "assets/destinos/covenas/1fd0ba0df9d4289aea21ba962c19a79cbc80e95f57d43ba79ff524ffa7c35cde.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    },
+    {
+      "path": "assets/destinos/covenas/642c12fdfa4a7e8bc65a6196d0ed42037f3a01072bca360987a8618e062ffcc5.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    }
+  ],
+  "snapshot_copied_into_build": [],
+  "snapshot_referenced_by_packager": false,
+  "database_migration_in_release": [],
+  "packaged_seed_slugs": [
+    "jerico",
+    "jardin",
+    "guatape",
+    "santa-fe-de-antioquia",
+    "el-penol",
+    "tamesis",
+    "san-jeronimo",
+    "sopetran",
+    "san-rafael",
+    "cocorna",
+    "venecia",
+    "el-retiro",
+    "san-carlos",
+    "el-carmen-de-viboral",
+    "rionegro",
+    "medellin",
+    "necocli",
+    "arboletes",
+    "puerto-triunfo",
+    "san-pedro-de-los-milagros",
+    "santa-rosa-de-osos"
+  ],
+  "destination_present_in_packaged_seed": false,
+  "source_snapshot_languages_complete": true,
+  "snapshot_reference_hashes_valid": true,
+  "source_snapshot_place_names": [
+    "Primera Ensenada",
+    "Segunda Ensenada y malecón",
+    "Ciénaga La Caimanera",
+    "Museo de Infantería de Marina",
+    "La Coquerita",
+    "Recorrido por manglares",
+    "Buceo",
+    "Paddleboarding",
+    "Excursión a las islas de San Bernardo",
+    "Excursión a Cispatá"
+  ],
+  "conclusion": "BUILD_INCOMPLETO: no incorpora contenido aprobado ni imágenes. Semilla histórica no contiene destino."
+}

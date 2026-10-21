@@ -1,0 +1,9 @@
+{
+  "environment": "isolated local database copy",
+  "destinations": 9,
+  "applications": 2,
+  "second_application_without_duplicates": true,
+  "protected_tables_unchanged": 31,
+  "production_modified": false,
+  "limitation": "Pending validation against current production data and final deployment candidate."
+}

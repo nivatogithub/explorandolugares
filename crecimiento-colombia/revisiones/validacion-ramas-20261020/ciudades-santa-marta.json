@@ -1,0 +1,140 @@
+{
+  "destination": "santa-marta",
+  "build_exit": 0,
+  "approved_media_count": 18,
+  "approved_media_bad": 0,
+  "build_media_matching": 0,
+  "missing_translation_fields": [],
+  "runtime_uses_DB": true,
+  "runtime_reads_approved_artifact": false,
+  "runtime_override_map_present": false,
+  "runtime_complete": "FAIL: build does not import approved data into database, approved media may be absent; no DB-configured end-to-end check",
+  "media": [
+    {
+      "path": "assets/santa-marta-semirrealista/exp-moto-acuatica-800.webp",
+      "approved_hash": "d4ae93596017fb615a41a00333c86d1d0b548fe71139f3a759f552efaeb7cfd3",
+      "approved_bytes_valid": true,
+      "build_hash": null,
+      "build_matches": false
+    },
+    {
+      "path": "assets/santa-marta-semirrealista/exp-excursion-playa-blanca-800.webp",
+      "approved_hash": "003386e6c437a532c7ddddb21c43750270875e5b1313eb33af9f379c799ed5d9",
+      "approved_bytes_valid": true,
+      "build_hash": null,
+      "build_matches": false
+    },
+    {
+      "path": "assets/santa-marta-semirrealista/exp-visita-acuario-800.webp",
+      "approved_hash": "d321a0acf1c9531baf0cdd6ae998ae84f72fa211d6c5d47a73cd59f4c0f732d2",
+      "approved_bytes_valid": true,
+      "build_hash": null,
+      "build_matches": false
+    },
+    {
+      "path": "assets/santa-marta-semirrealista/exp-velero-caribe-800.webp",
+      "approved_hash": "60aa22f9eba20892b07726d14be989be7c915b7c14b7a0e65c913c283b7f54b3",
+      "approved_bytes_valid": true,
+      "build_hash": null,
+      "build_matches": false
+    },
+    {
+      "path": "assets/santa-marta-semirrealista/exp-ciudad-perdida-800.webp",
+      "approved_hash": "d976bc44e911f8d48dc1691fac7fd7cf7592fb33dce5d63f46c57cf66d5bd354",
+      "approved_bytes_valid": true,
+      "build_hash": null,
+      "build_matches": false
+    },
+    {
+      "path": "assets/santa-marta-semirrealista/exp-recorrido-centro-800.webp",
+      "approved_hash": "53da41e3eaf5c72632dd6c99d6ff6564f27a45d0754ec084e20effd099419040",
+      "approved_bytes_valid": true,
+      "build_hash": null,
+      "build_matches": false
+    },
+    {
+      "path": "assets/santa-marta-semirrealista/exp-minca-cafe-800.webp",
+      "approved_hash": "cdf9e39be6ac69fe0fea31a45ad60b427fa787bcb8babc0883b1567e921c9b29",
+      "approved_bytes_valid": true,
+      "build_hash": null,
+      "build_matches": false
+    },
+    {
+      "path": "assets/santa-marta-semirrealista/exp-caminata-tayrona-800.webp",
+      "approved_hash": "0659dac3807b4d1af3127e8443820ab596c84caca9ab62b7903590d9e04d9442",
+      "approved_bytes_valid": true,
+      "build_hash": null,
+      "build_matches": false
+    },
+    {
+      "path": "assets/santa-marta-semirrealista/exp-buceo-taganga-800.webp",
+      "approved_hash": "42745f911d47f9bc743243875efa25a6b2486a9e7f858cfefa51bff14fbbdbec",
+      "approved_bytes_valid": true,
+      "build_hash": null,
+      "build_matches": false
+    },
+    {
+      "path": "assets/santa-marta-semirrealista/playa-blanca-800.webp",
+      "approved_hash": "05daa3693b73ff3a366c22fa53147e5812f164ffab60d3c79eece492ddcdcf72",
+      "approved_bytes_valid": true,
+      "build_hash": null,
+      "build_matches": false
+    },
+    {
+      "path": "assets/santa-marta-semirrealista/centro-historico-800.webp",
+      "approved_hash": "13c13fffb10dcbc9a40b81622c0df8433b3d24c494c78873f489e95a8e4ac41f",
+      "approved_bytes_valid": true,
+      "build_hash": null,
+      "build_matches": false
+    },
+    {
+      "path": "assets/santa-marta-semirrealista/taganga-800.webp",
+      "approved_hash": "159d7c8f64baeeec93e114613f181d770c3a991a8c470ebd1bfebf08d30f12db",
+      "approved_bytes_valid": true,
+      "build_hash": null,
+      "build_matches": false
+    },
+    {
+      "path": "assets/santa-marta-semirrealista/quinta-800.webp",
+      "approved_hash": "13617f265400e395bec29b12351c410e69a91b74daa0e271dd0b8da87990550e",
+      "approved_bytes_valid": true,
+      "build_hash": null,
+      "build_matches": false
+    },
+    {
+      "path": "assets/santa-marta-semirrealista/rodadero-800.webp",
+      "approved_hash": "3a46ae0e0d6ac9c93a30c255d803442c3fdab65fcf3a1489466109db16ba685b",
+      "approved_bytes_valid": true,
+      "build_hash": null,
+      "build_matches": false
+    },
+    {
+      "path": "assets/santa-marta-semirrealista/minca-800.webp",
+      "approved_hash": "7a30f1d53a405506e6bed1ee917632266b630097a42de410494e7924d17f14ed",
+      "approved_bytes_valid": true,
+      "build_hash": null,
+      "build_matches": false
+    },
+    {
+      "path": "assets/santa-marta-semirrealista/ciudad-perdida-800.webp",
+      "approved_hash": "d84f77c9a7d956c5279fba8a0fb9862da87c2c5a1b0b145e230fb75229fefc76",
+      "approved_bytes_valid": true,
+      "build_hash": null,
+      "build_matches": false
+    },
+    {
+      "path": "assets/santa-marta-semirrealista/tayrona-800.webp",
+      "approved_hash": "ead4789513c728eac63f08778faf98989bfc26ce75918f1cb7ded45a1eaca473",
+      "approved_bytes_valid": true,
+      "build_hash": null,
+      "build_matches": false
+    },
+    {
+      "path": "assets/santa-marta-semirrealista/hero-v3-1200.webp",
+      "approved_hash": "4f8c7aab98b7e71e12fc26b2ca6850d124acc06efb426cec99d27f7aaca3a369",
+      "approved_bytes_valid": true,
+      "build_hash": null,
+      "build_matches": false
+    }
+  ]
+}

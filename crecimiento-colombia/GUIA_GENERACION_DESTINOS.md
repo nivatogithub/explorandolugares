@@ -95,3 +95,10 @@ En Jardín, Los Correa identifica la familia/oferta cafetera y La Herrera el rec
 Regla obligatoria de creación y auditoría retroactiva: consultar `docs/REGLAS_FIDELIDAD_VISUAL_DESTINOS.md`. No generar un lugar específico desde ingredientes genéricos ni integrar una salida sin comparación de composición con referencia identificada.
 
 Antes de generar imágenes de sitios específicos, comprobar cartografía/geografía, relieve y Street View o fotografías identificadas, y fijar cámara y relaciones espaciales según `docs/REGLAS_FIDELIDAD_VISUAL_DESTINOS.md`. Aplicar también al auditar destinos publicados.
+
+Regla operativa obligatoria: aplicar `docs/CIERRE_OPERATIVO_DESTINOS.md` (identidad comprobada, fuentes públicas frente a permiso de entrada, límites de iteración, integración y cierre verificable).
+
+
+### Cierre SEO obligatorio
+
+Antes de entregar o publicar cualquier lugar nuevo o actualizado, cumplir la sección «SEO obligatorio para cada lugar nuevo o actualizado» de `AGENTS.md`: contenido y metadatos por idioma, URLs/canonical/hreflang, sitemap/robots, redirecciones, recursos, vistas previas sociales y continuidad de analítica. Adjuntar comprobaciones del paquete y HTTP; no declarar listo con validaciones pendientes.

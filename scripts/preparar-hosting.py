@@ -93,6 +93,22 @@ subprocess.run([sys.executable,str(root/'scripts/ajustar-auditoria-publica.py'),
 subprocess.run([sys.executable,str(root/'scripts/versiones-medicion.py'),'--public',str(public)],check=True)
 subprocess.run([sys.executable,str(root/'scripts/normalizar-ruta-suscripciones.py'),'--public',str(public)],check=True)
 subprocess.run([sys.executable,str(root/'scripts/generar-sitemap-entrega.py'),'--public',str(public)],check=True)
+# Approved destination media are data-bound: copy them AFTER legacy pruning/overlays.
+# A successful build must reproduce the exact reviewed bytes, never an old alias.
+approved_media=json.loads((root/'backend/app/content/release-media-manifest.json').read_text())
+for item in approved_media['media']:
+    relative=Path(item['path'])
+    if relative.is_absolute() or '..' in relative.parts or relative.parts[0]!='assets':
+        raise RuntimeError('Ruta de medio aprobado inválida')
+    source=root/'backend/public'/relative
+    if not source.is_file() or hashlib.sha256(source.read_bytes()).hexdigest()!=item['sha256']:
+        raise RuntimeError('Medio aprobado ausente o cambiado: '+str(relative))
+    target=public/relative;target.parent.mkdir(parents=True,exist_ok=True)
+    shutil.copyfile(source,target)
+    if hashlib.sha256(target.read_bytes()).hexdigest()!=item['sha256']:
+        raise RuntimeError('El paquete alteró un medio aprobado: '+str(relative))
+subprocess.run([sys.executable,str(root/'scripts/aplicar-rutas-lugares.py'),'--release',str(release)],check=True)
+subprocess.run([sys.executable,str(root/'scripts/agregar-metadatos-sociales.py'),'--public',str(public)],check=True)
 print(f'Entrega de revisión: {release}\nRaíz pública: {public}\nConfigurar private/config.php fuera de public/. No hay publicación automática.')
 
 # Fail the package if retired identity assets or palette reappear.

@@ -1,0 +1,112 @@
+{
+  "destination": "bogota",
+  "build_exit": 0,
+  "approved_media_count": 14,
+  "approved_media_bad": 0,
+  "build_media_matching": 9,
+  "missing_translation_fields": [],
+  "runtime_uses_DB": true,
+  "runtime_reads_approved_artifact": false,
+  "runtime_override_map_present": false,
+  "runtime_complete": "FAIL: build does not import approved data into database, approved media may be absent; no DB-configured end-to-end check",
+  "media": [
+    {
+      "path": "assets/bogota-semirrealista/ciencia-800.webp",
+      "approved_hash": "73799576843e8e5866041c69c7378d28a1b278760e7c8821db8e4975b7c08c10",
+      "approved_bytes_valid": true,
+      "build_hash": "73799576843e8e5866041c69c7378d28a1b278760e7c8821db8e4975b7c08c10",
+      "build_matches": true
+    },
+    {
+      "path": "assets/bogota-semirrealista/cielo-800.webp",
+      "approved_hash": "5d92496a92b3be15d18db8e091afb1cce3980ec22391be7098cccd80a4098e82",
+      "approved_bytes_valid": true,
+      "build_hash": "c9bf746babb4b15042999ad07dd699bc0f88c05961231c7931fffe3699a3a357",
+      "build_matches": false
+    },
+    {
+      "path": "assets/bogota-semirrealista/bogota-simon-800.webp",
+      "approved_hash": "b2e71dacb697fc4b2abd3fec58d6113b0c50387bc3e66ca0461282dfd9bafe37",
+      "approved_bytes_valid": true,
+      "build_hash": "b2e71dacb697fc4b2abd3fec58d6113b0c50387bc3e66ca0461282dfd9bafe37",
+      "build_matches": true
+    },
+    {
+      "path": "assets/bogota-semirrealista/bogota-jardin-aprobado.webp",
+      "approved_hash": "dc722438cc464cbccf05e5717455f2e35a557301683162038ef254ccb87d66bf",
+      "approved_bytes_valid": true,
+      "build_hash": "dc722438cc464cbccf05e5717455f2e35a557301683162038ef254ccb87d66bf",
+      "build_matches": true
+    },
+    {
+      "path": "assets/bogota-semirrealista/bogota-usaquen-800.webp",
+      "approved_hash": "527132204afe1004951c05fd9c12e6b1afccf5eff40749e668622ea8fcee7c8d",
+      "approved_bytes_valid": true,
+      "build_hash": "527132204afe1004951c05fd9c12e6b1afccf5eff40749e668622ea8fcee7c8d",
+      "build_matches": true
+    },
+    {
+      "path": "assets/bogota-semirrealista/bogota-botero-800.webp",
+      "approved_hash": "1da46f73d3401339c45523f67d5e5f0d817e89b07c6f5695cdb8c199930a8246",
+      "approved_bytes_valid": true,
+      "build_hash": "1da46f73d3401339c45523f67d5e5f0d817e89b07c6f5695cdb8c199930a8246",
+      "build_matches": true
+    },
+    {
+      "path": "assets/destinos/bogota/86a4c443fc4c4adf08debc2050a112d12877fd62611286f5cd4de65f4d884749.webp",
+      "approved_hash": "86a4c443fc4c4adf08debc2050a112d12877fd62611286f5cd4de65f4d884749",
+      "approved_bytes_valid": true,
+      "build_hash": null,
+      "build_matches": false
+    },
+    {
+      "path": "assets/bogota-semirrealista/bogota-monserrate-800.webp",
+      "approved_hash": "da89caf723cc4dc4fec2625880285e05ed4ec2df704b1762a01966787811c6ce",
+      "approved_bytes_valid": true,
+      "build_hash": "da89caf723cc4dc4fec2625880285e05ed4ec2df704b1762a01966787811c6ce",
+      "build_matches": true
+    },
+    {
+      "path": "assets/destinos/zipaquira/9f088d4847c0a853b2e794e6a503d7786d292cfec91b44b0a4757ce4aca6ff5a.webp",
+      "approved_hash": "9f088d4847c0a853b2e794e6a503d7786d292cfec91b44b0a4757ce4aca6ff5a",
+      "approved_bytes_valid": true,
+      "build_hash": null,
+      "build_matches": false
+    },
+    {
+      "path": "assets/bogota-semirrealista/bogota-museo-oro-800.webp",
+      "approved_hash": "a724437585751871c4b908ae556bec58dcf715e003bcdd89e86e2845fa930d54",
+      "approved_bytes_valid": true,
+      "build_hash": "a724437585751871c4b908ae556bec58dcf715e003bcdd89e86e2845fa930d54",
+      "build_matches": true
+    },
+    {
+      "path": "assets/bogota-semirrealista/bogota-candelaria-800.webp",
+      "approved_hash": "bfeb63029c99538283ead0ae17e55ca65ac62e7182b4552914e7c4dbfb711450",
+      "approved_bytes_valid": true,
+      "build_hash": "bfeb63029c99538283ead0ae17e55ca65ac62e7182b4552914e7c4dbfb711450",
+      "build_matches": true
+    },
+    {
+      "path": "assets/destinos/bogota/922b0a55a3fa97144bd9a03ec7c46dcf8de9281ac03654c09212446a0f8f5e07.webp",
+      "approved_hash": "922b0a55a3fa97144bd9a03ec7c46dcf8de9281ac03654c09212446a0f8f5e07",
+      "approved_bytes_valid": true,
+      "build_hash": null,
+      "build_matches": false
+    },
+    {
+      "path": "assets/bogota-semirrealista/portada-v4-1200.webp",
+      "approved_hash": "ce3694ebfe583500db04ac97e1bfa0d021bc60f4e2ea5dea417703453cc08236",
+      "approved_bytes_valid": true,
+      "build_hash": null,
+      "build_matches": false
+    },
+    {
+      "path": "assets/bogota-semirrealista/bogota-plaza-800.webp",
+      "approved_hash": "ed017496074a1107518d23369724dbec58203c86c89234de3b5f19a1f7cfa934",
+      "approved_bytes_valid": true,
+      "build_hash": "ed017496074a1107518d23369724dbec58203c86c89234de3b5f19a1f7cfa934",
+      "build_matches": true
+    }
+  ]
+}

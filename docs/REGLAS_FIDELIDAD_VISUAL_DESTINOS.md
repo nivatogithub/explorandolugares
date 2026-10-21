@@ -7,7 +7,7 @@ Aplica a portadas, atractivos y experiencias de destinos nuevos, borradores y pu
 - Registrar municipio, sector, atractivo y rol exacto. Confirmar identidad mediante fuente local/institucional y fotografía identificable. No asignar una foto titulada solo «Coveñas» a una ensenada concreta sin evidencia adicional.
 - Comprobar homónimos y municipio: La Coquerita de Capurganá no acredita La Coquerita de Coveñas.
 - Guardar URL de la ficha original, autor, fecha de captura cuando conste, fecha de consulta y permiso/licencia de uso como entrada. Una referencia antigua no prueba estado actual. No rellenar coordenadas o fechas desconocidas.
-- Si falta identidad del sector o derecho de uso de la foto como entrada: estado bloqueado. No sustituirla con una descripción general ni reutilizar una imagen rechazada como referencia factual.
+- Si falta identidad del sector: generación bloqueada. Si falta permiso de la foto como entrada: solo esa reutilización queda bloqueada; continuar la comprobación de identidad mediante observaciones públicas y ficha de invariantes según CIERRE_OPERATIVO_DESTINOS.md. No sustituir evidencia con una descripción general ni reutilizar una imagen rechazada como referencia factual.
 
 ## 2. Preparar la ficha de invariantes
 
