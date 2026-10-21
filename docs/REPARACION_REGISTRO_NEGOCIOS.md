@@ -141,3 +141,9 @@ Antes de enviar una prepublicación, el portal exige revisión explícita de tra
 ### Ajuste posterior: portada fija y cinco productos
 
 La decisión vigente reemplaza el carrusel principal: Página Comercial y Premium muestran una portada fija, rectangular y redondeada. Premium permite hasta cinco productos o servicios con imagen (no tres). Se retira el JavaScript y el CSS del carrusel; el límite se verifica en el servidor y el editor presenta cinco posiciones. Las referencias privadas Premium admiten hasta nueve imágenes para cubrir portada, material del negocio y productos, conservando los límites de tamaño por archivo y por guardado.
+
+### Página comercial compacta
+
+Cabecera con categoría principal y modalidad en la misma fila, retorno alineado a la derecha sobre la portada. Una sola presentación del negocio, usando la descripción ampliada (el resumen se conserva para el directorio), sin repetir el nombre en una sección «Acerca de». La ubicación se presenta junto a los canales, con iconos de color propio sobre fondo neutro. Horarios, rango de precios, capacidad y menú aparecen de forma compacta cuando existen; no se repite una sección de ubicación.
+
+La historia y el texto narrativo general de servicios dejan de ser obligatorios para Premium. Una historia suministrada sigue requiriendo traducciones y se presenta contraída. Secciones de servicios y productos con foto permanecen exclusivas de Premium. Se actualizó la prueba que anteriormente exigía historia obligatoria, conservando la comprobación de traducciones de contenido opcional.
