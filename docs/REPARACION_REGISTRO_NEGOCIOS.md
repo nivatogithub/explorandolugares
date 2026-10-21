@@ -147,3 +147,7 @@ La decisión vigente reemplaza el carrusel principal: Página Comercial y Premiu
 Cabecera con categoría principal y modalidad en la misma fila, retorno alineado a la derecha sobre la portada. Una sola presentación del negocio, usando la descripción ampliada (el resumen se conserva para el directorio), sin repetir el nombre en una sección «Acerca de». La ubicación se presenta junto a los canales, con iconos de color propio sobre fondo neutro. Horarios, rango de precios, capacidad y menú aparecen de forma compacta cuando existen; no se repite una sección de ubicación.
 
 La historia y el texto narrativo general de servicios dejan de ser obligatorios para Premium. Una historia suministrada sigue requiriendo traducciones y se presenta contraída. Secciones de servicios y productos con foto permanecen exclusivas de Premium. Se actualizó la prueba que anteriormente exigía historia obligatoria, conservando la comprobación de traducciones de contenido opcional.
+
+### Tarjeta Destacada simplificada
+
+Título con fondo de panel y acento de marca, nombre truncado a una línea para mantener tarjetas uniformes, resumen inmediatamente debajo. Sin etiqueta «Información pública» ni desplegable «Más información». Ubicación, teléfono y WhatsApp comparten la fila inferior de contacto con controles visibles. La modalidad Gratis conserva la exclusión de ubicación y contactos. El mismo componente se usa en el directorio y la previsualización privada.

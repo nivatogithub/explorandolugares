@@ -30,3 +30,18 @@
 .directory-tier>.place-disclosure{padding:8px 0}
 .destination-experiences:has(>.place-disclosure){margin:24px 0}
 @media(max-width:650px){.place-disclosure-summary .sectionhead,.place-disclosure-summary .destination-experiences-heading{display:block}.place-disclosure-summary p{margin-bottom:0}}
+
+/* Featured cards: one concise presentation and one clearly visible contact row. */
+.directory-tier .directory-card-tier-featured .eyebrow{height:auto;min-height:1.4em;margin-bottom:10px}
+.directory-tier .directory-card-tier-featured .directory-business-title{width:100%;box-sizing:border-box;height:auto;min-height:0;margin:0 0 12px;padding:10px 12px;border-radius:10px;border-left:3px solid var(--el-action);background:var(--el-panel);color:var(--el-text);font-size:22px;line-height:1.3}
+.directory-tier .directory-card-tier-featured .directory-description{margin:0 0 16px;height:4.5em}
+.directory-contact-links{width:100%;margin:14px 0 0;padding-top:14px;border-top:1px solid var(--el-border)}
+.directory-tier .directory-card-tier-featured .directory-contact-links{margin-top:auto}
+.directory-contact-links .directory-contact-link{background:var(--el-card);border:1px solid var(--el-border);color:var(--el-text);box-shadow:0 1px 3px #0001}
+.directory-contact-links .directory-contact-location,.directory-contact-links .directory-contact-phone,.directory-contact-links .directory-contact-phone_fixed{color:#1769aa}
+.directory-contact-links .directory-contact-whatsapp{color:#138b42}
+.directory-contact-links .directory-contact-instagram{color:#c13584}
+.directory-contact-links .directory-contact-link:hover{border-color:currentColor}
+.directory-contact-links .directory-contact-link:focus-visible{outline:2px solid var(--el-action);outline-offset:3px}
+.directory-tier .directory-card-tier-featured .directory-business-title{height:calc(1.3em + 20px)}
+.directory-tier .directory-card-tier-featured .directory-business-title>span{-webkit-line-clamp:1}
