@@ -1,0 +1,3423 @@
+{
+    "schema": "destination-public-snapshot-v1",
+    "destination": "bogota",
+    "tables": {
+        "destinations": [
+            {
+                "id": 23,
+                "slug": "bogota",
+                "destination_type": "city",
+                "country_code": "CO",
+                "department": "Bogotá D.C.",
+                "subregion": "Distrito Capital",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "published",
+                "display_order": 47
+            }
+        ],
+        "destination_translations": [
+            {
+                "destination_id": 23,
+                "locale": "en",
+                "display_name": "Bogotá",
+                "eyebrow": "Bogotá D. C. · Colombia",
+                "headline": "Culture among the hills",
+                "intro": "Explore La Candelaria, discover its museums and see Bogotá from the hills.",
+                "meta_description": "Explore La Candelaria, discover its museums and see Bogotá from the hills."
+            },
+            {
+                "destination_id": 23,
+                "locale": "es",
+                "display_name": "Bogotá",
+                "eyebrow": "Bogotá D. C. · Colombia",
+                "headline": "Cultura entre los cerros",
+                "intro": "Recorre La Candelaria, descubre sus museos y contempla Bogotá desde los cerros.",
+                "meta_description": "Recorre La Candelaria, descubre sus museos y contempla Bogotá desde los cerros."
+            },
+            {
+                "destination_id": 23,
+                "locale": "pt-BR",
+                "display_name": "Bogotá",
+                "eyebrow": "Bogotá D. C. · Colombia",
+                "headline": "Cultura entre os morros",
+                "intro": "Explore La Candelaria, conheça seus museus e contemple Bogotá dos morros.",
+                "meta_description": "Explore La Candelaria, conheça seus museus e contemple Bogotá dos morros."
+            }
+        ],
+        "destination_story_blocks": [
+            {
+                "id": 26,
+                "destination_id": 23,
+                "section_key": "history",
+                "display_order": 1
+            }
+        ],
+        "destination_reasons": [
+            {
+                "id": 72,
+                "destination_id": 23,
+                "display_order": 1
+            },
+            {
+                "id": 73,
+                "destination_id": 23,
+                "display_order": 2
+            },
+            {
+                "id": 74,
+                "destination_id": 23,
+                "display_order": 3
+            },
+            {
+                "id": 78,
+                "destination_id": 23,
+                "display_order": 4
+            }
+        ],
+        "destination_sources": [
+            {
+                "id": 1562,
+                "destination_id": 23,
+                "locale": "es",
+                "section_key": "history",
+                "source_url": "https://culturarecreacionydeporte.gov.co/es/bogotanitos/bogodatos/sobre-bogota-y-su-historia",
+                "source_label": "Secretaría de Cultura: historia",
+                "display_order": 1
+            },
+            {
+                "id": 1563,
+                "destination_id": 23,
+                "locale": "es",
+                "section_key": "history",
+                "source_url": "https://colecciones.banrepcultural.org/es/document/numismtica/63a069155d96b8790f342e96",
+                "source_label": "Banco de la República: estatua de Bolívar y plaza",
+                "display_order": 2
+            },
+            {
+                "id": 1564,
+                "destination_id": 23,
+                "locale": "es",
+                "section_key": "history",
+                "source_url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/plaza-de-bolivar",
+                "source_label": "Visit Bogotá: Plaza de Bolívar",
+                "display_order": 3
+            },
+            {
+                "id": 1565,
+                "destination_id": 23,
+                "locale": "es",
+                "section_key": "places",
+                "source_url": "https://www.banrepcultural.org/bogota/museo-del-oro/visita",
+                "source_label": "Banco de la República: visita Museo del Oro",
+                "display_order": 4
+            },
+            {
+                "id": 1566,
+                "destination_id": 23,
+                "locale": "es",
+                "section_key": "places",
+                "source_url": "https://monserrate.co/en/",
+                "source_label": "Cerro de Monserrate operador",
+                "display_order": 5
+            },
+            {
+                "id": 1567,
+                "destination_id": 23,
+                "locale": "es",
+                "section_key": "places",
+                "source_url": "https://jbb.gov.co/",
+                "source_label": "Jardín Botánico José Celestino Mutis",
+                "display_order": 6
+            },
+            {
+                "id": 1568,
+                "destination_id": 23,
+                "locale": "es",
+                "section_key": "places",
+                "source_url": "https://www.mercadopulgasusaquen.com/contactanos/",
+                "source_label": "Asociación Mercado Pulgas Usaquén",
+                "display_order": 7
+            },
+            {
+                "id": 1569,
+                "destination_id": 23,
+                "locale": "es",
+                "section_key": "places",
+                "source_url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/plazoleta-del-chorro-de-quevedo",
+                "source_label": "Visit Bogotá: Chorro de Quevedo",
+                "display_order": 8
+            },
+            {
+                "id": 1570,
+                "destination_id": 23,
+                "locale": "es",
+                "section_key": "places",
+                "source_url": "https://visitbogota.co/es/que-hacer-en-bogota/naturaleza/parque-simon-bolivar",
+                "source_label": "Visit Bogotá: Parque Simón Bolívar",
+                "display_order": 9
+            },
+            {
+                "id": 1571,
+                "destination_id": 23,
+                "locale": "es",
+                "section_key": "places",
+                "source_url": "https://visitbogota.co/es/que-hacer-en-bogota/gastronomia/zona-gastronomica-usaquen",
+                "source_label": "Visit Bogotá: Usaquén",
+                "display_order": 10
+            },
+            {
+                "id": 1572,
+                "destination_id": 23,
+                "locale": "es",
+                "section_key": "places",
+                "source_url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/museo-botero-en-bogota",
+                "source_label": "Visit Bogotá: Museo Botero",
+                "display_order": 11
+            },
+            {
+                "id": 1573,
+                "destination_id": 23,
+                "locale": "es",
+                "section_key": "places",
+                "source_url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/torre-colpatria",
+                "source_label": "Visit Bogotá: Torre Colpatria",
+                "display_order": 12
+            },
+            {
+                "id": 1574,
+                "destination_id": 23,
+                "locale": "en",
+                "section_key": "history",
+                "source_url": "https://culturarecreacionydeporte.gov.co/es/bogotanitos/bogodatos/sobre-bogota-y-su-historia",
+                "source_label": "Secretaría de Cultura: historia",
+                "display_order": 1
+            },
+            {
+                "id": 1575,
+                "destination_id": 23,
+                "locale": "en",
+                "section_key": "history",
+                "source_url": "https://colecciones.banrepcultural.org/es/document/numismtica/63a069155d96b8790f342e96",
+                "source_label": "Banco de la República: estatua de Bolívar y plaza",
+                "display_order": 2
+            },
+            {
+                "id": 1576,
+                "destination_id": 23,
+                "locale": "en",
+                "section_key": "history",
+                "source_url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/plaza-de-bolivar",
+                "source_label": "Visit Bogotá: Plaza de Bolívar",
+                "display_order": 3
+            },
+            {
+                "id": 1577,
+                "destination_id": 23,
+                "locale": "en",
+                "section_key": "places",
+                "source_url": "https://www.banrepcultural.org/bogota/museo-del-oro/visita",
+                "source_label": "Banco de la República: visita Museo del Oro",
+                "display_order": 4
+            },
+            {
+                "id": 1578,
+                "destination_id": 23,
+                "locale": "en",
+                "section_key": "places",
+                "source_url": "https://monserrate.co/en/",
+                "source_label": "Cerro de Monserrate operador",
+                "display_order": 5
+            },
+            {
+                "id": 1579,
+                "destination_id": 23,
+                "locale": "en",
+                "section_key": "places",
+                "source_url": "https://jbb.gov.co/",
+                "source_label": "Jardín Botánico José Celestino Mutis",
+                "display_order": 6
+            },
+            {
+                "id": 1580,
+                "destination_id": 23,
+                "locale": "en",
+                "section_key": "places",
+                "source_url": "https://www.mercadopulgasusaquen.com/contactanos/",
+                "source_label": "Asociación Mercado Pulgas Usaquén",
+                "display_order": 7
+            },
+            {
+                "id": 1581,
+                "destination_id": 23,
+                "locale": "en",
+                "section_key": "places",
+                "source_url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/plazoleta-del-chorro-de-quevedo",
+                "source_label": "Visit Bogotá: Chorro de Quevedo",
+                "display_order": 8
+            },
+            {
+                "id": 1582,
+                "destination_id": 23,
+                "locale": "en",
+                "section_key": "places",
+                "source_url": "https://visitbogota.co/es/que-hacer-en-bogota/naturaleza/parque-simon-bolivar",
+                "source_label": "Visit Bogotá: Parque Simón Bolívar",
+                "display_order": 9
+            },
+            {
+                "id": 1583,
+                "destination_id": 23,
+                "locale": "en",
+                "section_key": "places",
+                "source_url": "https://visitbogota.co/es/que-hacer-en-bogota/gastronomia/zona-gastronomica-usaquen",
+                "source_label": "Visit Bogotá: Usaquén",
+                "display_order": 10
+            },
+            {
+                "id": 1584,
+                "destination_id": 23,
+                "locale": "en",
+                "section_key": "places",
+                "source_url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/museo-botero-en-bogota",
+                "source_label": "Visit Bogotá: Museo Botero",
+                "display_order": 11
+            },
+            {
+                "id": 1585,
+                "destination_id": 23,
+                "locale": "en",
+                "section_key": "places",
+                "source_url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/torre-colpatria",
+                "source_label": "Visit Bogotá: Torre Colpatria",
+                "display_order": 12
+            },
+            {
+                "id": 1586,
+                "destination_id": 23,
+                "locale": "pt-BR",
+                "section_key": "history",
+                "source_url": "https://culturarecreacionydeporte.gov.co/es/bogotanitos/bogodatos/sobre-bogota-y-su-historia",
+                "source_label": "Secretaría de Cultura: historia",
+                "display_order": 1
+            },
+            {
+                "id": 1587,
+                "destination_id": 23,
+                "locale": "pt-BR",
+                "section_key": "history",
+                "source_url": "https://colecciones.banrepcultural.org/es/document/numismtica/63a069155d96b8790f342e96",
+                "source_label": "Banco de la República: estatua de Bolívar y plaza",
+                "display_order": 2
+            },
+            {
+                "id": 1588,
+                "destination_id": 23,
+                "locale": "pt-BR",
+                "section_key": "history",
+                "source_url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/plaza-de-bolivar",
+                "source_label": "Visit Bogotá: Plaza de Bolívar",
+                "display_order": 3
+            },
+            {
+                "id": 1589,
+                "destination_id": 23,
+                "locale": "pt-BR",
+                "section_key": "places",
+                "source_url": "https://www.banrepcultural.org/bogota/museo-del-oro/visita",
+                "source_label": "Banco de la República: visita Museo del Oro",
+                "display_order": 4
+            },
+            {
+                "id": 1590,
+                "destination_id": 23,
+                "locale": "pt-BR",
+                "section_key": "places",
+                "source_url": "https://monserrate.co/en/",
+                "source_label": "Cerro de Monserrate operador",
+                "display_order": 5
+            },
+            {
+                "id": 1591,
+                "destination_id": 23,
+                "locale": "pt-BR",
+                "section_key": "places",
+                "source_url": "https://jbb.gov.co/",
+                "source_label": "Jardín Botánico José Celestino Mutis",
+                "display_order": 6
+            },
+            {
+                "id": 1592,
+                "destination_id": 23,
+                "locale": "pt-BR",
+                "section_key": "places",
+                "source_url": "https://www.mercadopulgasusaquen.com/contactanos/",
+                "source_label": "Asociación Mercado Pulgas Usaquén",
+                "display_order": 7
+            },
+            {
+                "id": 1593,
+                "destination_id": 23,
+                "locale": "pt-BR",
+                "section_key": "places",
+                "source_url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/plazoleta-del-chorro-de-quevedo",
+                "source_label": "Visit Bogotá: Chorro de Quevedo",
+                "display_order": 8
+            },
+            {
+                "id": 1594,
+                "destination_id": 23,
+                "locale": "pt-BR",
+                "section_key": "places",
+                "source_url": "https://visitbogota.co/es/que-hacer-en-bogota/naturaleza/parque-simon-bolivar",
+                "source_label": "Visit Bogotá: Parque Simón Bolívar",
+                "display_order": 9
+            },
+            {
+                "id": 1595,
+                "destination_id": 23,
+                "locale": "pt-BR",
+                "section_key": "places",
+                "source_url": "https://visitbogota.co/es/que-hacer-en-bogota/gastronomia/zona-gastronomica-usaquen",
+                "source_label": "Visit Bogotá: Usaquén",
+                "display_order": 10
+            },
+            {
+                "id": 1596,
+                "destination_id": 23,
+                "locale": "pt-BR",
+                "section_key": "places",
+                "source_url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/museo-botero-en-bogota",
+                "source_label": "Visit Bogotá: Museo Botero",
+                "display_order": 11
+            },
+            {
+                "id": 1597,
+                "destination_id": 23,
+                "locale": "pt-BR",
+                "section_key": "places",
+                "source_url": "https://visitbogota.co/es/que-hacer-en-bogota/cultura/torre-colpatria",
+                "source_label": "Visit Bogotá: Torre Colpatria",
+                "display_order": 12
+            }
+        ],
+        "destination_media": [
+            {
+                "destination_id": 23,
+                "media_asset_id": 104,
+                "role": "hero",
+                "display_order": 0
+            },
+            {
+                "destination_id": 23,
+                "media_asset_id": 105,
+                "role": "history",
+                "display_order": 0
+            }
+        ],
+        "points_of_interest": [
+            {
+                "id": 79,
+                "destination_id": 23,
+                "slug": "monserrate",
+                "poi_type": "place",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "published",
+                "display_order": 4
+            },
+            {
+                "id": 80,
+                "destination_id": 23,
+                "slug": "plaza",
+                "poi_type": "place",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "published",
+                "display_order": 1
+            },
+            {
+                "id": 81,
+                "destination_id": 23,
+                "slug": "jardin",
+                "poi_type": "place",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "published",
+                "display_order": 7
+            },
+            {
+                "id": 86,
+                "destination_id": 23,
+                "slug": "candelaria",
+                "poi_type": "place",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "published",
+                "display_order": 2
+            },
+            {
+                "id": 87,
+                "destination_id": 23,
+                "slug": "museo-oro",
+                "poi_type": "place",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "published",
+                "display_order": 3
+            },
+            {
+                "id": 88,
+                "destination_id": 23,
+                "slug": "botero",
+                "poi_type": "place",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "published",
+                "display_order": 5
+            },
+            {
+                "id": 89,
+                "destination_id": 23,
+                "slug": "usaquen",
+                "poi_type": "place",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "published",
+                "display_order": 6
+            },
+            {
+                "id": 90,
+                "destination_id": 23,
+                "slug": "simon",
+                "poi_type": "place",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "published",
+                "display_order": 8
+            },
+            {
+                "id": 113,
+                "destination_id": 23,
+                "slug": "visita-oro",
+                "poi_type": "experience",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "draft",
+                "display_order": 9
+            },
+            {
+                "id": 114,
+                "destination_id": 23,
+                "slug": "mirador",
+                "poi_type": "experience",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "draft",
+                "display_order": 10
+            },
+            {
+                "id": 115,
+                "destination_id": 23,
+                "slug": "ambiente",
+                "poi_type": "experience",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "draft",
+                "display_order": 11
+            },
+            {
+                "id": 116,
+                "destination_id": 23,
+                "slug": "arte",
+                "poi_type": "experience",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "draft",
+                "display_order": 12
+            },
+            {
+                "id": 117,
+                "destination_id": 23,
+                "slug": "ciencia",
+                "poi_type": "experience",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "published",
+                "display_order": 13
+            },
+            {
+                "id": 118,
+                "destination_id": 23,
+                "slug": "cielo",
+                "poi_type": "place",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "published",
+                "display_order": 9
+            },
+            {
+                "id": 119,
+                "destination_id": 23,
+                "slug": "gastronomia",
+                "poi_type": "experience",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "draft",
+                "display_order": 15
+            },
+            {
+                "id": 120,
+                "destination_id": 23,
+                "slug": "mercado",
+                "poi_type": "experience",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "draft",
+                "display_order": 16
+            },
+            {
+                "id": 121,
+                "destination_id": 23,
+                "slug": "ciclovia",
+                "poi_type": "experience",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "draft",
+                "display_order": 17
+            },
+            {
+                "id": 122,
+                "destination_id": 23,
+                "slug": "bike-tour",
+                "poi_type": "experience",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "draft",
+                "display_order": 18
+            },
+            {
+                "id": 123,
+                "destination_id": 23,
+                "slug": "graffiti-bike",
+                "poi_type": "experience",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "draft",
+                "display_order": 19
+            },
+            {
+                "id": 124,
+                "destination_id": 23,
+                "slug": "cooking",
+                "poi_type": "experience",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "draft",
+                "display_order": 20
+            },
+            {
+                "id": 125,
+                "destination_id": 23,
+                "slug": "cine",
+                "poi_type": "experience",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "draft",
+                "display_order": 21
+            },
+            {
+                "id": 126,
+                "destination_id": 23,
+                "slug": "arte-urbano",
+                "poi_type": "experience",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "draft",
+                "display_order": 22
+            },
+            {
+                "id": 127,
+                "destination_id": 23,
+                "slug": "artes-escenicas",
+                "poi_type": "experience",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "draft",
+                "display_order": 23
+            },
+            {
+                "id": 218,
+                "destination_id": 23,
+                "slug": "tour-grafiti-candelaria",
+                "poi_type": "experience",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "published",
+                "display_order": 4
+            },
+            {
+                "id": 219,
+                "destination_id": 23,
+                "slug": "tren-sabana",
+                "poi_type": "experience",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "published",
+                "display_order": 3
+            },
+            {
+                "id": 220,
+                "destination_id": 23,
+                "slug": "tour-bus-bogota",
+                "poi_type": "experience",
+                "latitude": null,
+                "longitude": null,
+                "publication_status": "published",
+                "display_order": 1
+            }
+        ],
+        "businesses": [
+            {
+                "id": 258,
+                "public_id": "cb99e9ec-73d8-4a34-b2fc-60bdda757675",
+                "destination_id": 23,
+                "category_code": "hospedaje",
+                "slug": "hotel-de-la-opera",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 259,
+                "public_id": "c860addb-e2fd-4021-9f9c-c02971665c04",
+                "destination_id": 23,
+                "category_code": "hospedaje",
+                "slug": "tequendama-suites-bogota",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 260,
+                "public_id": "aea082af-bb75-4292-a0a2-5d57435f5c90",
+                "destination_id": 23,
+                "category_code": "hospedaje",
+                "slug": "sofitel-bogota-victoria-regia",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 261,
+                "public_id": "2a9312fe-83d4-42bf-97bf-da1a43d980c0",
+                "destination_id": 23,
+                "category_code": "alimentacion",
+                "slug": "el-chato",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 262,
+                "public_id": "44218316-15c1-4998-9360-f0b6840c4bf9",
+                "destination_id": 23,
+                "category_code": "alimentacion",
+                "slug": "leo",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 263,
+                "public_id": "4a43094f-11dc-4c5d-8514-c0cea0e4b6b0",
+                "destination_id": 23,
+                "category_code": "alimentacion",
+                "slug": "azahar-parque-93",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 264,
+                "public_id": "1a2d4275-03a1-4220-91e2-5108f3631134",
+                "destination_id": 23,
+                "category_code": "alimentacion",
+                "slug": "azahar-nogal",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 265,
+                "public_id": "74703416-7f11-428c-8744-6113557abc9f",
+                "destination_id": 23,
+                "category_code": "alimentacion",
+                "slug": "azahar-aeropuerto-el-dorado",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 266,
+                "public_id": "c404936f-974a-42e8-9603-ec096d757d42",
+                "destination_id": 23,
+                "category_code": "cultura",
+                "slug": "museo-de-arte-moderno-de-bogota-mambo",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 267,
+                "public_id": "49debd41-67ed-44f1-927f-201d2dfaf591",
+                "destination_id": 23,
+                "category_code": "cultura",
+                "slug": "centro-nacional-de-las-artes-delia-zapata-olivella",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 289,
+                "public_id": "ab350741-99bf-4951-8600-6a6d483870c1",
+                "destination_id": 23,
+                "category_code": "hospedaje",
+                "slug": "jw-marriott-hotel-bogota",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 290,
+                "public_id": "a7fb1e21-da66-4b33-8034-e3eeedd3d2c5",
+                "destination_id": 23,
+                "category_code": "hospedaje",
+                "slug": "w-bogota",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 291,
+                "public_id": "d1e576bb-c0a7-4073-8656-7059440c54cc",
+                "destination_id": 23,
+                "category_code": "hospedaje",
+                "slug": "bogota-marriott-hotel",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 292,
+                "public_id": "9ec1564e-0089-4954-bfd5-68adcdecd40a",
+                "destination_id": 23,
+                "category_code": "hospedaje",
+                "slug": "ac-hotel-bogota-zona-t",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 293,
+                "public_id": "c680bddd-5a00-42a3-bbd3-d43faf5e3c78",
+                "destination_id": 23,
+                "category_code": "hospedaje",
+                "slug": "courtyard-by-marriott-bogota-airport",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 294,
+                "public_id": "ce5073c9-7511-46c9-973c-b347f90e5dea",
+                "destination_id": 23,
+                "category_code": "hospedaje",
+                "slug": "four-points-by-sheraton-bogota",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 295,
+                "public_id": "3861c274-79a4-44ae-8733-64a06d537691",
+                "destination_id": 23,
+                "category_code": "hospedaje",
+                "slug": "sheraton-bogota-hotel",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 296,
+                "public_id": "45c41e4f-adfc-4d4b-9875-41e5927c66cc",
+                "destination_id": 23,
+                "category_code": "hospedaje",
+                "slug": "residence-inn-by-marriott-bogota",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 297,
+                "public_id": "ad389a18-a014-465a-8768-412ae3962b02",
+                "destination_id": 23,
+                "category_code": "alimentacion",
+                "slug": "80-sillas",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 298,
+                "public_id": "ac73d0ba-e264-4aa8-a309-5c1af9db7d54",
+                "destination_id": 23,
+                "category_code": "alimentacion",
+                "slug": "seratta-gourmand-market",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 299,
+                "public_id": "68543dda-aea7-4289-9c9a-c08a759a3202",
+                "destination_id": 23,
+                "category_code": "alimentacion",
+                "slug": "yakimeshi-roll",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 300,
+                "public_id": "10e071ff-fd8b-4f55-9200-3257658e3c6f",
+                "destination_id": 23,
+                "category_code": "alimentacion",
+                "slug": "italia-artesana",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 301,
+                "public_id": "3929b179-a2a3-4e24-9e4f-47110aedf1ae",
+                "destination_id": 23,
+                "category_code": "alimentacion",
+                "slug": "autocar-al-pastor",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 302,
+                "public_id": "2ed69cd5-7065-4437-bf9b-645c52d2b6b3",
+                "destination_id": 23,
+                "category_code": "alimentacion",
+                "slug": "pizzardi-artigianale",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 303,
+                "public_id": "7507a413-15c0-4113-8799-4343ae835bee",
+                "destination_id": 23,
+                "category_code": "alimentacion",
+                "slug": "la-puerta-falsa",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 304,
+                "public_id": "e84426c9-47f2-430e-acec-0e823d7e0d07",
+                "destination_id": 23,
+                "category_code": "comercio",
+                "slug": "centro-comercial-gran-estacion",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 305,
+                "public_id": "3fb21e4b-ca92-4b16-b010-cf3ca59cbb70",
+                "destination_id": 23,
+                "category_code": "comercio",
+                "slug": "centro-comercial-salitre-plaza",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 306,
+                "public_id": "5b618424-addd-4d56-9736-93e1eda23b14",
+                "destination_id": 23,
+                "category_code": "comercio",
+                "slug": "centro-comercial-multiplaza-bogota",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 307,
+                "public_id": "ec75680f-53a6-43eb-b976-ef4a9a80ec7b",
+                "destination_id": 23,
+                "category_code": "comercio",
+                "slug": "centro-comercial-el-eden",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            },
+            {
+                "id": 308,
+                "public_id": "3a49e6c1-08db-4318-9e5d-f122e0ec6e5a",
+                "destination_id": 23,
+                "category_code": "cultura",
+                "slug": "maloka",
+                "information_status": "PUBLICO",
+                "operation_status": "DESCONOCIDO",
+                "publication_status": "published",
+                "display_order": 0,
+                "record_origin": "public_import",
+                "address_text": "",
+                "latitude": null,
+                "longitude": null,
+                "location_map_url": "",
+                "location_reference": "",
+                "opening_hours": null,
+                "price_range": ""
+            }
+        ],
+        "destination_story_translations": [
+            {
+                "story_block_id": 26,
+                "locale": "en",
+                "body": "The Bogotá region was inhabited by the Muisca before the Spanish foundation in 1538. The city grew around its historic centre and became Colombia’s capital, bringing together institutions, universities and a broad cultural life."
+            },
+            {
+                "story_block_id": 26,
+                "locale": "es",
+                "body": "El territorio de Bogotá fue habitado por los muiscas antes de la fundación española de 1538. La ciudad creció alrededor de su centro histórico y se convirtió en capital de Colombia, reuniendo instituciones, universidades y una amplia vida cultural."
+            },
+            {
+                "story_block_id": 26,
+                "locale": "pt-BR",
+                "body": "O território de Bogotá era habitado pelos muiscas antes da fundação espanhola de 1538. A cidade cresceu ao redor do centro histórico e tornou-se capital da Colômbia, reunindo instituições, universidades e uma ampla vida cultural."
+            }
+        ],
+        "destination_reason_translations": [
+            {
+                "reason_id": 72,
+                "locale": "en",
+                "body": "Explore the historic centre and La Candelaria’s cultural life."
+            },
+            {
+                "reason_id": 72,
+                "locale": "es",
+                "body": "Recorrer el centro histórico y la vida cultural de La Candelaria."
+            },
+            {
+                "reason_id": 72,
+                "locale": "pt-BR",
+                "body": "Explorar o centro histórico e a vida cultural de La Candelaria."
+            },
+            {
+                "reason_id": 73,
+                "locale": "en",
+                "body": "Discover collections of art and archaeology."
+            },
+            {
+                "reason_id": 73,
+                "locale": "es",
+                "body": "Conocer colecciones de arte y arqueología."
+            },
+            {
+                "reason_id": 73,
+                "locale": "pt-BR",
+                "body": "Conhecer coleções de arte e arqueologia."
+            },
+            {
+                "reason_id": 74,
+                "locale": "en",
+                "body": "Enjoy Usaquén’s streets and food scene."
+            },
+            {
+                "reason_id": 74,
+                "locale": "es",
+                "body": "Descubrir Usaquén, sus calles y su gastronomía."
+            },
+            {
+                "reason_id": 74,
+                "locale": "pt-BR",
+                "body": "Descobrir as ruas e a gastronomia de Usaquén."
+            },
+            {
+                "reason_id": 78,
+                "locale": "en",
+                "body": "Combine viewpoints, parks and plant diversity."
+            },
+            {
+                "reason_id": 78,
+                "locale": "es",
+                "body": "Combinar miradores, parques y diversidad vegetal."
+            },
+            {
+                "reason_id": 78,
+                "locale": "pt-BR",
+                "body": "Combinar mirantes, parques e diversidade vegetal."
+            }
+        ],
+        "point_of_interest_translations": [
+            {
+                "point_of_interest_id": 79,
+                "locale": "en",
+                "name": "Monserrate Hill",
+                "description": "A hilltop sanctuary and viewpoints over the city.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Cerro%20de%20Monserrate%2C%20Bogot%C3%A1%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 79,
+                "locale": "es",
+                "name": "Cerro de Monserrate",
+                "description": "Santuario y miradores sobre la ciudad y los cerros.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Cerro%20de%20Monserrate%2C%20Bogot%C3%A1%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 79,
+                "locale": "pt-BR",
+                "name": "Cerro de Monserrate",
+                "description": "Santuário e mirantes sobre a cidade e os morros.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Cerro%20de%20Monserrate%2C%20Bogot%C3%A1%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 80,
+                "locale": "en",
+                "name": "Bolívar Square",
+                "description": "Bogotá’s civic heart, surrounded by historic buildings.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Plaza%20de%20Bol%C3%ADvar%2C%20Bogot%C3%A1%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 80,
+                "locale": "es",
+                "name": "Plaza de Bolívar",
+                "description": "El corazón cívico de Bogotá, rodeado de edificios históricos.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Plaza%20de%20Bol%C3%ADvar%2C%20Bogot%C3%A1%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 80,
+                "locale": "pt-BR",
+                "name": "Praça de Bolívar",
+                "description": "O coração cívico de Bogotá, cercado por edifícios históricos.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Plaza%20de%20Bol%C3%ADvar%2C%20Bogot%C3%A1%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 81,
+                "locale": "en",
+                "name": "Bogotá Botanical Garden",
+                "description": "Plant collections and Colombian ecosystems in the Tropicarium.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Jard%C3%ADn%20Bot%C3%A1nico%20de%20Bogot%C3%A1%2C%20Bogot%C3%A1%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 81,
+                "locale": "es",
+                "name": "Jardín Botánico de Bogotá",
+                "description": "Colecciones vegetales y ecosistemas colombianos en el Tropicario.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Jard%C3%ADn%20Bot%C3%A1nico%20de%20Bogot%C3%A1%2C%20Bogot%C3%A1%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 81,
+                "locale": "pt-BR",
+                "name": "Jardim Botânico de Bogotá",
+                "description": "Coleções vegetais e ecossistemas colombianos no Tropicário.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Jard%C3%ADn%20Bot%C3%A1nico%20de%20Bogot%C3%A1%2C%20Bogot%C3%A1%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 86,
+                "locale": "en",
+                "name": "La Candelaria and Chorro de Quevedo",
+                "description": "Colonial streets, squares and cultural spaces in the historic centre.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=La%20Candelaria%20y%20Chorro%20de%20Quevedo%2C%20Bogot%C3%A1%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 86,
+                "locale": "es",
+                "name": "La Candelaria y Chorro de Quevedo",
+                "description": "Calles coloniales, plazas y espacios culturales del centro histórico.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=La%20Candelaria%20y%20Chorro%20de%20Quevedo%2C%20Bogot%C3%A1%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 86,
+                "locale": "pt-BR",
+                "name": "La Candelaria e Chorro de Quevedo",
+                "description": "Ruas coloniais, praças e espaços culturais no centro histórico.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=La%20Candelaria%20y%20Chorro%20de%20Quevedo%2C%20Bogot%C3%A1%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 87,
+                "locale": "en",
+                "name": "Gold Museum",
+                "description": "Goldwork and stories from Colombia’s Indigenous societies.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20del%20Oro%2C%20Bogot%C3%A1%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 87,
+                "locale": "es",
+                "name": "Museo del Oro",
+                "description": "Orfebrería y relatos de las sociedades indígenas de Colombia.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20del%20Oro%2C%20Bogot%C3%A1%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 87,
+                "locale": "pt-BR",
+                "name": "Museu do Ouro",
+                "description": "Ourivesaria e histórias das sociedades indígenas da Colômbia.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20del%20Oro%2C%20Bogot%C3%A1%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 88,
+                "locale": "en",
+                "name": "Botero Museum",
+                "description": "Colombian and international art in a colonial house.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20Botero%2C%20Bogot%C3%A1%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 88,
+                "locale": "es",
+                "name": "Museo Botero",
+                "description": "Arte colombiano e internacional en una casa colonial.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20Botero%2C%20Bogot%C3%A1%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 88,
+                "locale": "pt-BR",
+                "name": "Museu Botero",
+                "description": "Arte colombiana e internacional em uma casa colonial.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20Botero%2C%20Bogot%C3%A1%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 89,
+                "locale": "en",
+                "name": "Usaquén: square, streets and market",
+                "description": "A former village centre with a square, cafés and craft market.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Usaqu%C3%A9n%3A%20plaza%2C%20calles%20y%20mercado%2C%20Bogot%C3%A1%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 89,
+                "locale": "es",
+                "name": "Usaquén: plaza, calles y mercado",
+                "description": "Un antiguo núcleo de pueblo con plaza, cafés y mercado de oficios.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Usaqu%C3%A9n%3A%20plaza%2C%20calles%20y%20mercado%2C%20Bogot%C3%A1%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 89,
+                "locale": "pt-BR",
+                "name": "Usaquén: praça, ruas e mercado",
+                "description": "Um antigo núcleo de povoado com praça, cafés e mercado de artesanato.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Usaqu%C3%A9n%3A%20plaza%2C%20calles%20y%20mercado%2C%20Bogot%C3%A1%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 90,
+                "locale": "en",
+                "name": "Simón Bolívar Metropolitan Park",
+                "description": "A lake, paths and green spaces for an easy stroll.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Parque%20Metropolitano%20Sim%C3%B3n%20Bol%C3%ADvar%2C%20Bogot%C3%A1%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 90,
+                "locale": "es",
+                "name": "Parque Metropolitano Simón Bolívar",
+                "description": "Lago, senderos y zonas verdes para recorrer con calma.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Parque%20Metropolitano%20Sim%C3%B3n%20Bol%C3%ADvar%2C%20Bogot%C3%A1%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 90,
+                "locale": "pt-BR",
+                "name": "Parque Metropolitano Simón Bolívar",
+                "description": "Lago, caminhos e áreas verdes para passear com calma.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Parque%20Metropolitano%20Sim%C3%B3n%20Bol%C3%ADvar%2C%20Bogot%C3%A1%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 113,
+                "locale": "en",
+                "name": "Gold Museum visit",
+                "description": "Explore the Gold Museum’s goldwork collections.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Gold%20Museum%20visit%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 113,
+                "locale": "es",
+                "name": "Recorrido Museo del Oro",
+                "description": "Explora las colecciones de orfebrería del Museo del Oro.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Recorrido%20Museo%20del%20Oro%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 113,
+                "locale": "pt-BR",
+                "name": "Visita ao Museu do Ouro",
+                "description": "Explore as coleções de ourivesaria do Museu do Ouro.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Visita%20ao%20Museu%20do%20Ouro%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 114,
+                "locale": "en",
+                "name": "Monserrate viewpoint",
+                "description": "Go up Monserrate for views across the city.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Monserrate%20viewpoint%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 114,
+                "locale": "es",
+                "name": "Mirador de Monserrate",
+                "description": "Sube a Monserrate y contempla la ciudad.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Mirador%20de%20Monserrate%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 114,
+                "locale": "pt-BR",
+                "name": "Mirante de Monserrate",
+                "description": "Suba Monserrate e contemple a cidade.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Mirante%20de%20Monserrate%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 115,
+                "locale": "en",
+                "name": "Botanical Garden discovery",
+                "description": "Walk the gardens and discover plants from different ecosystems.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Botanical%20Garden%20discovery%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 115,
+                "locale": "es",
+                "name": "Exploración Jardín Botánico",
+                "description": "Recorre jardines y descubre plantas de distintos ecosistemas.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Exploraci%C3%B3n%20Jard%C3%ADn%20Bot%C3%A1nico%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 115,
+                "locale": "pt-BR",
+                "name": "Exploração Jardim Botânico",
+                "description": "Percorra os jardins e descubra plantas de diferentes ecossistemas.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Explora%C3%A7%C3%A3o%20Jardim%20Bot%C3%A2nico%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 116,
+                "locale": "en",
+                "name": "Art in the Cultural Block",
+                "description": "Explore the art spaces of the Cultural Block.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Art%20in%20the%20Cultural%20Block%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 116,
+                "locale": "es",
+                "name": "Arte en la Manzana Cultural",
+                "description": "Recorre los espacios de arte de la Manzana Cultural.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Arte%20en%20la%20Manzana%20Cultural%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 116,
+                "locale": "pt-BR",
+                "name": "Arte na Manzana Cultural",
+                "description": "Explore os espaços de arte da Manzana Cultural.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Arte%20na%20Manzana%20Cultural%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 117,
+                "locale": "en",
+                "name": "Interactive science at Maloka",
+                "description": "Discover interactive science experiences at Maloka.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Interactive%20science%20at%20Maloka%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 117,
+                "locale": "es",
+                "name": "Ciencia interactiva en Maloka",
+                "description": "Descubre experiencias interactivas de ciencia en Maloka.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Ciencia%20interactiva%20en%20Maloka%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 117,
+                "locale": "pt-BR",
+                "name": "Ciência interativa na Maloka",
+                "description": "Descubra experiências interativas de ciência no Maloka.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Ci%C3%AAncia%20interativa%20na%20Maloka%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 118,
+                "locale": "en",
+                "name": "Bogotá Planetarium",
+                "description": "Astronomy, exhibitions and dome projections.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Planetario+de+Bogota",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 118,
+                "locale": "es",
+                "name": "Planetario de Bogotá",
+                "description": "Astronomía, exposiciones y proyecciones en el domo.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Planetario+de+Bogota",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 118,
+                "locale": "pt-BR",
+                "name": "Planetário de Bogotá",
+                "description": "Astronomia, exposições e projeções no domo.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Planetario+de+Bogota",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 119,
+                "locale": "en",
+                "name": "La Perseverancia food stalls",
+                "description": "Try traditional cooking at La Perseverancia market.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=La%20Perseverancia%20food%20stalls%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 119,
+                "locale": "es",
+                "name": "Cocinas de La Perseverancia",
+                "description": "Prueba cocinas tradicionales en la plaza La Perseverancia.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Cocinas%20de%20La%20Perseverancia%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 119,
+                "locale": "pt-BR",
+                "name": "Cozinhas de La Perseverancia",
+                "description": "Prove a cozinha tradicional na praça La Perseverancia.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Cozinhas%20de%20La%20Perseverancia%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 120,
+                "locale": "en",
+                "name": "Crafts and market in Usaquén",
+                "description": "Discover crafts and local trades at Usaquén market.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Crafts%20and%20market%20in%20Usaqu%C3%A9n%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 120,
+                "locale": "es",
+                "name": "Oficios y mercado en Usaquén",
+                "description": "Conoce artesanías y oficios en el mercado de Usaquén.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Oficios%20y%20mercado%20en%20Usaqu%C3%A9n%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 120,
+                "locale": "pt-BR",
+                "name": "Artesanato e mercado em Usaquén",
+                "description": "Conheça artesanato e ofícios no mercado de Usaquén.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Artesanato%20e%20mercado%20em%20Usaqu%C3%A9n%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 121,
+                "locale": "en",
+                "name": "Recreational Ciclovía",
+                "description": "Cycle or walk along the Ciclovía routes.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Recreational%20Ciclov%C3%ADa%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 121,
+                "locale": "es",
+                "name": "Ciclovía recreativa",
+                "description": "Pedalea o camina por las vías de la Ciclovía.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Ciclov%C3%ADa%20recreativa%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 121,
+                "locale": "pt-BR",
+                "name": "Ciclovía recreativa",
+                "description": "Pedale ou caminhe pelas vias da Ciclovía.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Ciclov%C3%ADa%20recreativa%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 122,
+                "locale": "en",
+                "name": "Bicycle tour: Bogotá Bike Tours",
+                "description": "Explore Bogotá by bicycle; check routes and conditions.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Bicycle%20tour%3A%20Bogot%C3%A1%20Bike%20Tours%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+                "external_url": "https://www.bogotabiketours.com/service-page/bike-tour-english-or-spanish",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 122,
+                "locale": "es",
+                "name": "Recorrido en bicicleta: Bogotá Bike Tours",
+                "description": "Explora Bogotá en bicicleta; consulta rutas y condiciones.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Recorrido%20en%20bicicleta%3A%20Bogot%C3%A1%20Bike%20Tours%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+                "external_url": "https://www.bogotabiketours.com/service-page/bike-tour-english-or-spanish",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 122,
+                "locale": "pt-BR",
+                "name": "Passeio de bicicleta: Bogotá Bike Tours",
+                "description": "Explore Bogotá de bicicleta; consulte rotas e condições.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Passeio%20de%20bicicleta%3A%20Bogot%C3%A1%20Bike%20Tours%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+                "external_url": "https://www.bogotabiketours.com/service-page/bike-tour-english-or-spanish",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 123,
+                "locale": "en",
+                "name": "Graffiti Bike Tour: Bogotá Bike Tours",
+                "description": "Discover street art on a bicycle tour.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Graffiti%20Bike%20Tour%3A%20Bogot%C3%A1%20Bike%20Tours%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+                "external_url": "https://www.bogotabiketours.com/",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 123,
+                "locale": "es",
+                "name": "Graffiti Bike Tour: Bogotá Bike Tours",
+                "description": "Descubre arte urbano en un recorrido en bicicleta.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Graffiti%20Bike%20Tour%3A%20Bogot%C3%A1%20Bike%20Tours%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+                "external_url": "https://www.bogotabiketours.com/",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 123,
+                "locale": "pt-BR",
+                "name": "Graffiti Bike Tour: Bogotá Bike Tours",
+                "description": "Descubra arte urbana em um passeio de bicicleta.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Graffiti%20Bike%20Tour%3A%20Bogot%C3%A1%20Bike%20Tours%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+                "external_url": "https://www.bogotabiketours.com/",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 124,
+                "locale": "en",
+                "name": "Cooking class: Bogotá Bike Tours",
+                "description": "Discover ingredients and techniques from local cooking.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Cooking%20class%3A%20Bogot%C3%A1%20Bike%20Tours%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+                "external_url": "https://www.bogotabiketours.com/",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 124,
+                "locale": "es",
+                "name": "Clase de cocina: Bogotá Bike Tours",
+                "description": "Conoce ingredientes y técnicas de la cocina local.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Clase%20de%20cocina%3A%20Bogot%C3%A1%20Bike%20Tours%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+                "external_url": "https://www.bogotabiketours.com/",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 124,
+                "locale": "pt-BR",
+                "name": "Aula de cozinha: Bogotá Bike Tours",
+                "description": "Conheça ingredientes e técnicas da cozinha local.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Aula%20de%20cozinha%3A%20Bogot%C3%A1%20Bike%20Tours%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+                "external_url": "https://www.bogotabiketours.com/",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 125,
+                "locale": "en",
+                "name": "A film screening",
+                "description": "Check the programme at Bogotá’s Cinematheque.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=A%20film%20screening%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 125,
+                "locale": "es",
+                "name": "Una función de cine",
+                "description": "Consulta la programación de la Cinemateca de Bogotá.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Una%20funci%C3%B3n%20de%20cine%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 125,
+                "locale": "pt-BR",
+                "name": "Uma sessão de cinema",
+                "description": "Consulte a programação da Cinemateca de Bogotá.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Uma%20sess%C3%A3o%20de%20cinema%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 126,
+                "locale": "en",
+                "name": "Urban art walk",
+                "description": "Explore murals and street art.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Urban%20art%20walk%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 126,
+                "locale": "es",
+                "name": "Paseo de arte urbano",
+                "description": "Recorre murales y expresiones de arte urbano.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Paseo%20de%20arte%20urbano%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 126,
+                "locale": "pt-BR",
+                "name": "Passeio de arte urbana",
+                "description": "Explore murais e expressões de arte urbana.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Passeio%20de%20arte%20urbana%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 127,
+                "locale": "en",
+                "name": "A performing arts event",
+                "description": "Choose a theatre, music or dance performance.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=A%20performing%20arts%20event%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 127,
+                "locale": "es",
+                "name": "Una función de artes escénicas",
+                "description": "Elige una función de teatro, música o danza.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Una%20funci%C3%B3n%20de%20artes%20esc%C3%A9nicas%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 127,
+                "locale": "pt-BR",
+                "name": "Uma apresentação de artes cênicas",
+                "description": "Escolha uma apresentação de teatro, música ou dança.",
+                "map_url": "https://www.google.com/maps/search/?api=1&query=Uma%20apresenta%C3%A7%C3%A3o%20de%20artes%20c%C3%AAnicas%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 218,
+                "locale": "en",
+                "name": "La Candelaria graffiti tour",
+                "description": "Discover murals and their stories on a tour with a local guide.",
+                "map_url": "",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 218,
+                "locale": "es",
+                "name": "Tour de grafiti en La Candelaria",
+                "description": "Descubre los murales y sus historias en un recorrido con guía local.",
+                "map_url": "",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 218,
+                "locale": "pt-BR",
+                "name": "Tour de grafite em La Candelaria",
+                "description": "Descubra murais e suas histórias em um passeio com guia local.",
+                "map_url": "",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 219,
+                "locale": "en",
+                "name": "Sabana tourist train (nearby)",
+                "description": "Travel from Bogotá to Zipaquirá through the landscapes of the Sabana.",
+                "map_url": "",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 219,
+                "locale": "es",
+                "name": "Tren Turístico de la Sabana (alrededores)",
+                "description": "Viaja desde Bogotá hasta Zipaquirá por los paisajes de la Sabana.",
+                "map_url": "",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 219,
+                "locale": "pt-BR",
+                "name": "Trem Turístico da Sabana (arredores)",
+                "description": "Viaje de Bogotá a Zipaquirá pelas paisagens da Sabana.",
+                "map_url": "",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 220,
+                "locale": "en",
+                "name": "Bogotá sightseeing bus tour",
+                "description": "Discover Bogotá’s main sights on a sightseeing bus tour.",
+                "map_url": "",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 220,
+                "locale": "es",
+                "name": "Tour de Bogotá en bus",
+                "description": "Conoce los principales lugares de Bogotá en un recorrido turístico en bus.",
+                "map_url": "",
+                "external_url": "",
+                "external_label": ""
+            },
+            {
+                "point_of_interest_id": 220,
+                "locale": "pt-BR",
+                "name": "Tour de Bogotá de ônibus",
+                "description": "Conheça os principais pontos de Bogotá em um passeio turístico de ônibus.",
+                "map_url": "",
+                "external_url": "",
+                "external_label": ""
+            }
+        ],
+        "point_of_interest_media": [
+            {
+                "point_of_interest_id": 79,
+                "media_asset_id": 109,
+                "role": "gallery",
+                "display_order": 1
+            },
+            {
+                "point_of_interest_id": 80,
+                "media_asset_id": 77,
+                "role": "gallery",
+                "display_order": 1
+            },
+            {
+                "point_of_interest_id": 81,
+                "media_asset_id": 172,
+                "role": "gallery",
+                "display_order": 1
+            },
+            {
+                "point_of_interest_id": 86,
+                "media_asset_id": 107,
+                "role": "gallery",
+                "display_order": 1
+            },
+            {
+                "point_of_interest_id": 87,
+                "media_asset_id": 108,
+                "role": "gallery",
+                "display_order": 1
+            },
+            {
+                "point_of_interest_id": 88,
+                "media_asset_id": 110,
+                "role": "gallery",
+                "display_order": 1
+            },
+            {
+                "point_of_interest_id": 89,
+                "media_asset_id": 111,
+                "role": "gallery",
+                "display_order": 1
+            },
+            {
+                "point_of_interest_id": 90,
+                "media_asset_id": 113,
+                "role": "gallery",
+                "display_order": 1
+            },
+            {
+                "point_of_interest_id": 118,
+                "media_asset_id": 464,
+                "role": "gallery",
+                "display_order": 1
+            },
+            {
+                "point_of_interest_id": 218,
+                "media_asset_id": 466,
+                "role": "gallery",
+                "display_order": 1
+            },
+            {
+                "point_of_interest_id": 219,
+                "media_asset_id": 440,
+                "role": "gallery",
+                "display_order": 1
+            },
+            {
+                "point_of_interest_id": 220,
+                "media_asset_id": 467,
+                "role": "gallery",
+                "display_order": 1
+            }
+        ],
+        "business_translations": [
+            {
+                "business_id": 258,
+                "locale": "en",
+                "display_name": "Hotel de la Ópera",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 258,
+                "locale": "es",
+                "display_name": "Hotel de la Ópera",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 258,
+                "locale": "pt-BR",
+                "display_name": "Hotel de la Ópera",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 259,
+                "locale": "en",
+                "display_name": "Tequendama Suites Bogotá",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 259,
+                "locale": "es",
+                "display_name": "Tequendama Suites Bogotá",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 259,
+                "locale": "pt-BR",
+                "display_name": "Tequendama Suites Bogotá",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 260,
+                "locale": "en",
+                "display_name": "Sofitel Bogotá Victoria Regia",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 260,
+                "locale": "es",
+                "display_name": "Sofitel Bogotá Victoria Regia",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 260,
+                "locale": "pt-BR",
+                "display_name": "Sofitel Bogotá Victoria Regia",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 261,
+                "locale": "en",
+                "display_name": "El Chato",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 261,
+                "locale": "es",
+                "display_name": "El Chato",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 261,
+                "locale": "pt-BR",
+                "display_name": "El Chato",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 262,
+                "locale": "en",
+                "display_name": "LEO",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 262,
+                "locale": "es",
+                "display_name": "LEO",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 262,
+                "locale": "pt-BR",
+                "display_name": "LEO",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 263,
+                "locale": "en",
+                "display_name": "Azahar Parque 93",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 263,
+                "locale": "es",
+                "display_name": "Azahar Parque 93",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 263,
+                "locale": "pt-BR",
+                "display_name": "Azahar Parque 93",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 264,
+                "locale": "en",
+                "display_name": "Azahar Nogal",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 264,
+                "locale": "es",
+                "display_name": "Azahar Nogal",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 264,
+                "locale": "pt-BR",
+                "display_name": "Azahar Nogal",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 265,
+                "locale": "en",
+                "display_name": "Azahar Aeropuerto El Dorado",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 265,
+                "locale": "es",
+                "display_name": "Azahar Aeropuerto El Dorado",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 265,
+                "locale": "pt-BR",
+                "display_name": "Azahar Aeropuerto El Dorado",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 266,
+                "locale": "en",
+                "display_name": "Museo de Arte Moderno de Bogotá — MAMBO",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 266,
+                "locale": "es",
+                "display_name": "Museo de Arte Moderno de Bogotá — MAMBO",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 266,
+                "locale": "pt-BR",
+                "display_name": "Museo de Arte Moderno de Bogotá — MAMBO",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 267,
+                "locale": "en",
+                "display_name": "Centro Nacional de las Artes Delia Zapata Olivella",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 267,
+                "locale": "es",
+                "display_name": "Centro Nacional de las Artes Delia Zapata Olivella",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 267,
+                "locale": "pt-BR",
+                "display_name": "Centro Nacional de las Artes Delia Zapata Olivella",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 289,
+                "locale": "en",
+                "display_name": "JW Marriott Hotel Bogotá",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 289,
+                "locale": "es",
+                "display_name": "JW Marriott Hotel Bogotá",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 289,
+                "locale": "pt-BR",
+                "display_name": "JW Marriott Hotel Bogotá",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 290,
+                "locale": "en",
+                "display_name": "W Bogotá",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 290,
+                "locale": "es",
+                "display_name": "W Bogotá",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 290,
+                "locale": "pt-BR",
+                "display_name": "W Bogotá",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 291,
+                "locale": "en",
+                "display_name": "Bogotá Marriott Hotel",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 291,
+                "locale": "es",
+                "display_name": "Bogotá Marriott Hotel",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 291,
+                "locale": "pt-BR",
+                "display_name": "Bogotá Marriott Hotel",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 292,
+                "locale": "en",
+                "display_name": "AC Hotel Bogotá Zona T",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 292,
+                "locale": "es",
+                "display_name": "AC Hotel Bogotá Zona T",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 292,
+                "locale": "pt-BR",
+                "display_name": "AC Hotel Bogotá Zona T",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 293,
+                "locale": "en",
+                "display_name": "Courtyard by Marriott Bogotá Airport",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 293,
+                "locale": "es",
+                "display_name": "Courtyard by Marriott Bogotá Airport",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 293,
+                "locale": "pt-BR",
+                "display_name": "Courtyard by Marriott Bogotá Airport",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 294,
+                "locale": "en",
+                "display_name": "Four Points by Sheraton Bogotá",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 294,
+                "locale": "es",
+                "display_name": "Four Points by Sheraton Bogotá",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 294,
+                "locale": "pt-BR",
+                "display_name": "Four Points by Sheraton Bogotá",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 295,
+                "locale": "en",
+                "display_name": "Sheraton Bogotá Hotel",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 295,
+                "locale": "es",
+                "display_name": "Sheraton Bogotá Hotel",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 295,
+                "locale": "pt-BR",
+                "display_name": "Sheraton Bogotá Hotel",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 296,
+                "locale": "en",
+                "display_name": "Residence Inn by Marriott Bogotá",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 296,
+                "locale": "es",
+                "display_name": "Residence Inn by Marriott Bogotá",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 296,
+                "locale": "pt-BR",
+                "display_name": "Residence Inn by Marriott Bogotá",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 297,
+                "locale": "en",
+                "display_name": "80 Sillas",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 297,
+                "locale": "es",
+                "display_name": "80 Sillas",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 297,
+                "locale": "pt-BR",
+                "display_name": "80 Sillas",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 298,
+                "locale": "en",
+                "display_name": "Seratta Gourmand Market",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 298,
+                "locale": "es",
+                "display_name": "Seratta Gourmand Market",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 298,
+                "locale": "pt-BR",
+                "display_name": "Seratta Gourmand Market",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 299,
+                "locale": "en",
+                "display_name": "Yakimeshi Roll",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 299,
+                "locale": "es",
+                "display_name": "Yakimeshi Roll",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 299,
+                "locale": "pt-BR",
+                "display_name": "Yakimeshi Roll",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 300,
+                "locale": "en",
+                "display_name": "Italia Artesana",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 300,
+                "locale": "es",
+                "display_name": "Italia Artesana",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 300,
+                "locale": "pt-BR",
+                "display_name": "Italia Artesana",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 301,
+                "locale": "en",
+                "display_name": "Autocar al Pastor",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 301,
+                "locale": "es",
+                "display_name": "Autocar al Pastor",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 301,
+                "locale": "pt-BR",
+                "display_name": "Autocar al Pastor",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 302,
+                "locale": "en",
+                "display_name": "Pizzardi Artigianale",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 302,
+                "locale": "es",
+                "display_name": "Pizzardi Artigianale",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 302,
+                "locale": "pt-BR",
+                "display_name": "Pizzardi Artigianale",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 303,
+                "locale": "en",
+                "display_name": "La Puerta Falsa",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 303,
+                "locale": "es",
+                "display_name": "La Puerta Falsa",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 303,
+                "locale": "pt-BR",
+                "display_name": "La Puerta Falsa",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 304,
+                "locale": "en",
+                "display_name": "Centro Comercial Gran Estación",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 304,
+                "locale": "es",
+                "display_name": "Centro Comercial Gran Estación",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 304,
+                "locale": "pt-BR",
+                "display_name": "Centro Comercial Gran Estación",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 305,
+                "locale": "en",
+                "display_name": "Centro Comercial Salitre Plaza",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 305,
+                "locale": "es",
+                "display_name": "Centro Comercial Salitre Plaza",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 305,
+                "locale": "pt-BR",
+                "display_name": "Centro Comercial Salitre Plaza",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 306,
+                "locale": "en",
+                "display_name": "Centro Comercial Multiplaza Bogotá",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 306,
+                "locale": "es",
+                "display_name": "Centro Comercial Multiplaza Bogotá",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 306,
+                "locale": "pt-BR",
+                "display_name": "Centro Comercial Multiplaza Bogotá",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 307,
+                "locale": "en",
+                "display_name": "Centro Comercial El Edén",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 307,
+                "locale": "es",
+                "display_name": "Centro Comercial El Edén",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 307,
+                "locale": "pt-BR",
+                "display_name": "Centro Comercial El Edén",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 308,
+                "locale": "en",
+                "display_name": "Maloka",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 308,
+                "locale": "es",
+                "display_name": "Maloka",
+                "summary": "",
+                "description": ""
+            },
+            {
+                "business_id": 308,
+                "locale": "pt-BR",
+                "display_name": "Maloka",
+                "summary": "",
+                "description": ""
+            }
+        ],
+        "business_sources": [
+            {
+                "id": 304,
+                "business_id": 258,
+                "source_url": "https://www.hotelopera.com.co/en/",
+                "checked_at": "2026-10-16 00:00:00"
+            },
+            {
+                "id": 305,
+                "business_id": 259,
+                "source_url": "https://www.hotelestequendama.com.co/tequendama-suites-bogota.html",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 306,
+                "business_id": 260,
+                "source_url": "https://sofitelvictoriaregia.com/",
+                "checked_at": "2026-10-16 00:00:00"
+            },
+            {
+                "id": 307,
+                "business_id": 261,
+                "source_url": "https://www.elchato.co/",
+                "checked_at": "2026-10-16 00:00:00"
+            },
+            {
+                "id": 308,
+                "business_id": 262,
+                "source_url": "https://restauranteleo.com/",
+                "checked_at": "2026-10-16 00:00:00"
+            },
+            {
+                "id": 309,
+                "business_id": 263,
+                "source_url": "https://azaharcoffee.com/tiendas/",
+                "checked_at": "2026-10-16 00:00:00"
+            },
+            {
+                "id": 310,
+                "business_id": 264,
+                "source_url": "https://azaharcoffee.com/tiendas/",
+                "checked_at": "2026-10-16 00:00:00"
+            },
+            {
+                "id": 311,
+                "business_id": 265,
+                "source_url": "https://azaharcoffee.com/tiendas/",
+                "checked_at": "2026-10-16 00:00:00"
+            },
+            {
+                "id": 312,
+                "business_id": 266,
+                "source_url": "https://www.mambogota.com/visitanos/",
+                "checked_at": "2026-10-16 00:00:00"
+            },
+            {
+                "id": 313,
+                "business_id": 267,
+                "source_url": "https://www.eneldelia.gov.co/",
+                "checked_at": "2026-10-16 00:00:00"
+            },
+            {
+                "id": 335,
+                "business_id": 289,
+                "source_url": "https://www.marriott.com/es/hotel-sitemap/colombia-hotel-sitemap",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 336,
+                "business_id": 290,
+                "source_url": "https://www.marriott.com/es/hotel-sitemap/colombia-hotel-sitemap",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 337,
+                "business_id": 291,
+                "source_url": "https://www.marriott.com/es/hotel-sitemap/colombia-hotel-sitemap",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 338,
+                "business_id": 292,
+                "source_url": "https://www.marriott.com/es/hotel-sitemap/colombia-hotel-sitemap",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 339,
+                "business_id": 293,
+                "source_url": "https://www.marriott.com/es/hotel-sitemap/colombia-hotel-sitemap",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 340,
+                "business_id": 294,
+                "source_url": "https://www.marriott.com/es/hotel-sitemap/colombia-hotel-sitemap",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 341,
+                "business_id": 295,
+                "source_url": "https://www.marriott.com/es/hotel-sitemap/colombia-hotel-sitemap",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 342,
+                "business_id": 296,
+                "source_url": "https://www.marriott.com/es/hotel-sitemap/colombia-hotel-sitemap",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 343,
+                "business_id": 297,
+                "source_url": "https://visitbogota.co/es/donde-comer",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 344,
+                "business_id": 298,
+                "source_url": "https://visitbogota.co/es/donde-comer",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 345,
+                "business_id": 299,
+                "source_url": "https://visitbogota.co/es/donde-comer",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 346,
+                "business_id": 300,
+                "source_url": "https://visitbogota.co/es/donde-comer",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 347,
+                "business_id": 301,
+                "source_url": "https://visitbogota.co/es/donde-comer",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 348,
+                "business_id": 302,
+                "source_url": "https://visitbogota.co/es/donde-comer",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 349,
+                "business_id": 303,
+                "source_url": "https://visitbogota.co/es/donde-comer",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 350,
+                "business_id": 304,
+                "source_url": "https://visitbogota.co/en/node/2400",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 351,
+                "business_id": 305,
+                "source_url": "https://visitbogota.co/en/node/2400",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 352,
+                "business_id": 306,
+                "source_url": "https://visitbogota.co/en/node/2400",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 353,
+                "business_id": 307,
+                "source_url": "https://visitbogota.co/en/node/2400",
+                "checked_at": "2026-10-17 00:00:00"
+            },
+            {
+                "id": 354,
+                "business_id": 308,
+                "source_url": "https://maloka.org/",
+                "checked_at": "2026-10-17 00:00:00"
+            }
+        ],
+        "business_media": [],
+        "business_categories": [],
+        "media_assets": [
+            {
+                "id": 77,
+                "asset_path": "assets/destinos/preprod-bogota/0422c316b05c8da6db0a4ce88c95245df744e2b53024e3beb54d677ebd454f0e.webp",
+                "origin": "external",
+                "creator": "Dante O.P",
+                "source_url": "https://commons.wikimedia.org/w/index.php?title=File:Vista_del_centro_historico_de_Bogot%C3%A1.jpg&oldid=1210456023",
+                "license_name": "CC0 1.0",
+                "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+                "width": 1044,
+                "height": 661
+            },
+            {
+                "id": 104,
+                "asset_path": "assets/destinos/preprod-bogota/5709cfce96003975a47cbc7a3dee9e81b35dd71ca7780ea5248b048636ed702a.webp",
+                "origin": "external",
+                "creator": "Tijs Zwinkels",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Skyline_downtown_Bogota.jpg",
+                "license_name": "CC BY-SA 2.0",
+                "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+                "width": 1200,
+                "height": 799
+            },
+            {
+                "id": 105,
+                "asset_path": "assets/destinos/preprod-bogota/424fddb39669d5341cbdfb23fc94a6e240f94e8aef7f1cfc919a6a30f4d37321.webp",
+                "origin": "external",
+                "creator": "Felipe Restrepo Acosta",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Estatua_de_Bol%C3%ADvar_Bogot%C3%A1.JPG",
+                "license_name": "CC BY-SA 3.0",
+                "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+                "width": 900,
+                "height": 1200
+            },
+            {
+                "id": 107,
+                "asset_path": "assets/destinos/preprod-bogota/de3bdbfee3ec2de5f865e84563af1d9044e9602c50ef929f129a291cd1d496d1.webp",
+                "origin": "external",
+                "creator": "Remi Jouan",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Bogota_-_Plazza_del_Chorro_de_Quevedo_%281%29.JPG",
+                "license_name": "CC BY-SA 3.0 elegida entre licencias múltiples",
+                "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+                "width": 1200,
+                "height": 800
+            },
+            {
+                "id": 108,
+                "asset_path": "assets/destinos/preprod-bogota/e0a092c51db8a37cb08ea24e6f83549db91aa10023506a4876be8d1c8e1d7593.webp",
+                "origin": "external",
+                "creator": "Felipe Restrepo Acosta",
+                "source_url": "https://commons.wikimedia.org/wiki/File:BOG_Museo_del_Oro.JPG",
+                "license_name": "CC BY-SA 3.0 elegida entre licencias múltiples",
+                "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+                "width": 1200,
+                "height": 900
+            },
+            {
+                "id": 109,
+                "asset_path": "assets/destinos/preprod-bogota/0c10b973fc307ab3775e553e6bc8653802efb7145a92080112245a79c814e9c5.webp",
+                "origin": "external",
+                "creator": "Ricardo Perez",
+                "source_url": "https://www.pexels.com/video/cerro-de-monserrate-01-18092718/",
+                "license_name": "Pexels License",
+                "license_url": "https://www.pexels.com/license/",
+                "width": 1200,
+                "height": 675
+            },
+            {
+                "id": 110,
+                "asset_path": "assets/destinos/preprod-bogota/f06387096e4f8009d65ed6f80329d0a0ef740437a8bbd3bd2c2150741fce0dc3.webp",
+                "origin": "external",
+                "creator": "Felipe Restrepo Acosta",
+                "source_url": "https://commons.wikimedia.org/wiki/File:2019_Bogot%C3%A1_-_Entrada_del_Museo_Botero.jpg",
+                "license_name": "CC BY-SA 4.0",
+                "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+                "width": 960,
+                "height": 720
+            },
+            {
+                "id": 111,
+                "asset_path": "assets/destinos/preprod-bogota/646305bfad3aaefdf666f66c0303cf543a546f513cffd3f9eda1c64d1268fb0a.webp",
+                "origin": "external",
+                "creator": "Edgar Zuniga Jr.",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Mercado_de_Pulgas%2C_Usaqu%C3%A9n%2C_Bogot%C3%A1%2C_Colombia.jpg",
+                "license_name": "CC BY 2.0",
+                "license_url": "https://creativecommons.org/licenses/by/2.0/",
+                "width": 900,
+                "height": 1200
+            },
+            {
+                "id": 113,
+                "asset_path": "assets/destinos/preprod-bogota/8ff5aefbbb57fb417f77c6cce8f2be64d2e35624e3d7b255ab9a8b42be9de6b0.webp",
+                "origin": "external",
+                "creator": "Carlosfpardo",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Bogota-_Parque_Sim%C3%B3n_Bolivar.jpg",
+                "license_name": "CC BY 2.0",
+                "license_url": "https://creativecommons.org/licenses/by/2.0/",
+                "width": 330,
+                "height": 247
+            },
+            {
+                "id": 172,
+                "asset_path": "assets/destinos/preprod-bogota/dc722438cc464cbccf05e5717455f2e35a557301683162038ef254ccb87d66bf.webp",
+                "origin": "ai_generated",
+                "creator": "Explorando Lugares · OpenAI image_gen",
+                "source_url": "",
+                "license_name": "Ilustración IA; referencia fotográfica CC0, condiciones de salida según proveedor",
+                "license_url": "",
+                "width": 1200,
+                "height": 800
+            },
+            {
+                "id": 440,
+                "asset_path": "assets/destinos/preprod-zipaquira/9f088d4847c0a853b2e794e6a503d7786d292cfec91b44b0a4757ce4aca6ff5a.webp",
+                "origin": "ai_generated",
+                "creator": "Explorando Lugares · ilustración IA desde referencia aportada por el propietario",
+                "source_url": "",
+                "license_name": "Propuesta ilustrada desde referencia del propietario; procedencia conservada; autoría y permiso de p",
+                "license_url": "",
+                "width": 960,
+                "height": 640
+            },
+            {
+                "id": 464,
+                "asset_path": "assets/destinos/preprod-bogota/5d92496a92b3be15d18db8e091afb1cce3980ec22391be7098cccd80a4098e82.webp",
+                "origin": "ai_generated",
+                "creator": "OpenAI · ilustración editorial IA",
+                "source_url": "",
+                "license_name": "Referencia aportada por propietario; procedencia pendiente",
+                "license_url": "",
+                "width": 960,
+                "height": 640
+            },
+            {
+                "id": 466,
+                "asset_path": "assets/destinos/preprod-bogota/86a4c443fc4c4adf08debc2050a112d12877fd62611286f5cd4de65f4d884749.webp",
+                "origin": "ai_generated",
+                "creator": "OpenAI · ilustración editorial IA",
+                "source_url": "",
+                "license_name": "Referencia aportada por propietario; procedencia pendiente",
+                "license_url": "",
+                "width": 960,
+                "height": 640
+            },
+            {
+                "id": 467,
+                "asset_path": "assets/destinos/preprod-bogota/922b0a55a3fa97144bd9a03ec7c46dcf8de9281ac03654c09212446a0f8f5e07.webp",
+                "origin": "ai_generated",
+                "creator": "OpenAI · ilustración editorial IA",
+                "source_url": "",
+                "license_name": "Referencia aportada por propietario; procedencia pendiente",
+                "license_url": "",
+                "width": 960,
+                "height": 640
+            }
+        ],
+        "media_asset_translations": [
+            {
+                "media_asset_id": 77,
+                "locale": "en",
+                "alt_text": "Elevated view of Bolívar Square with Cathedral towers in the foreground.",
+                "caption": "Elevated view of Bolívar Square with Cathedral towers in the foreground. · Dante O.P · CC0 1.0"
+            },
+            {
+                "media_asset_id": 77,
+                "locale": "es",
+                "alt_text": "Vista elevada de la Plaza de Bolívar con torres de la Catedral en primer plano.",
+                "caption": "Vista elevada de la Plaza de Bolívar con torres de la Catedral en primer plano. · Dante O.P · CC0 1.0"
+            },
+            {
+                "media_asset_id": 77,
+                "locale": "pt-BR",
+                "alt_text": "Vista elevada da Praça Bolívar com torres da Catedral em primeiro plano.",
+                "caption": "Vista elevada da Praça Bolívar com torres da Catedral em primeiro plano. · Dante O.P · CC0 1.0"
+            },
+            {
+                "media_asset_id": 104,
+                "locale": "en",
+                "alt_text": "Urban view of central Bogotá with Colpatria Tower, photographed in 2009.",
+                "caption": "Urban view of central Bogotá with Colpatria Tower, photographed in 2009. · Tijs Zwinkels · CC BY-SA 2.0 · Unapproved provisional reference; technical thumbnail without cropping."
+            },
+            {
+                "media_asset_id": 104,
+                "locale": "es",
+                "alt_text": "Vista urbana del centro de Bogotá con Torre Colpatria, fotografía de 2009.",
+                "caption": "Vista urbana del centro de Bogotá con Torre Colpatria, fotografía de 2009. · Tijs Zwinkels · CC BY-SA 2.0 · Referencia provisional no aprobada; miniatura técnica sin recorte."
+            },
+            {
+                "media_asset_id": 104,
+                "locale": "pt-BR",
+                "alt_text": "Vista urbana do centro de Bogotá com Torre Colpatria, fotografia de 2009.",
+                "caption": "Vista urbana do centro de Bogotá com Torre Colpatria, fotografia de 2009. · Tijs Zwinkels · CC BY-SA 2.0 · Referência provisória não aprovada; miniatura técnica sem recorte."
+            },
+            {
+                "media_asset_id": 105,
+                "locale": "en",
+                "alt_text": "Simón Bolívar statue and pedestal in Bolívar Square, Bogotá.",
+                "caption": "Simón Bolívar statue and pedestal in Bolívar Square, Bogotá. · Felipe Restrepo Acosta · CC BY-SA 3.0 · Unapproved provisional reference; technical thumbnail without cropping."
+            },
+            {
+                "media_asset_id": 105,
+                "locale": "es",
+                "alt_text": "Estatua de Simón Bolívar y pedestal en Plaza de Bolívar, Bogotá.",
+                "caption": "Estatua de Simón Bolívar y pedestal en Plaza de Bolívar, Bogotá. · Felipe Restrepo Acosta · CC BY-SA 3.0 · Referencia provisional no aprobada; miniatura técnica sin recorte."
+            },
+            {
+                "media_asset_id": 105,
+                "locale": "pt-BR",
+                "alt_text": "Estátua de Simón Bolívar e pedestal na Praça Bolívar, Bogotá.",
+                "caption": "Estátua de Simón Bolívar e pedestal na Praça Bolívar, Bogotá. · Felipe Restrepo Acosta · CC BY-SA 3.0 · Referência provisória não aprovada; miniatura técnica sem recorte."
+            },
+            {
+                "media_asset_id": 107,
+                "locale": "en",
+                "alt_text": "Chorro de Quevedo square and façades in La Candelaria, photographed in 2010.",
+                "caption": "Chorro de Quevedo square and façades in La Candelaria, photographed in 2010. · Remi Jouan · CC BY-SA 3.0 elegida entre licencias múltiples · Unapproved provisional reference; technical thumbnail without cropping."
+            },
+            {
+                "media_asset_id": 107,
+                "locale": "es",
+                "alt_text": "Plazoleta del Chorro de Quevedo y fachadas de La Candelaria, fotografía de 2010.",
+                "caption": "Plazoleta del Chorro de Quevedo y fachadas de La Candelaria, fotografía de 2010. · Remi Jouan · CC BY-SA 3.0 elegida entre licencias múltiples · Referencia provisional no aprobada; miniatura técnica sin recorte."
+            },
+            {
+                "media_asset_id": 107,
+                "locale": "pt-BR",
+                "alt_text": "Praça Chorro de Quevedo e fachadas de La Candelaria, fotografia de 2010.",
+                "caption": "Praça Chorro de Quevedo e fachadas de La Candelaria, fotografia de 2010. · Remi Jouan · CC BY-SA 3.0 elegida entre licencias múltiples · Referência provisória não aprovada; miniatura técnica sem recorte."
+            },
+            {
+                "media_asset_id": 108,
+                "locale": "en",
+                "alt_text": "Gold Museum entrance and façade beside Santander Park, 2010 photo.",
+                "caption": "Gold Museum entrance and façade beside Santander Park, 2010 photo. · Felipe Restrepo Acosta · CC BY-SA 3.0 elegida entre licencias múltiples · Unapproved provisional reference; technical thumbnail without cropping."
+            },
+            {
+                "media_asset_id": 108,
+                "locale": "es",
+                "alt_text": "Entrada y fachada del Museo del Oro junto al Parque Santander, foto de 2010.",
+                "caption": "Entrada y fachada del Museo del Oro junto al Parque Santander, foto de 2010. · Felipe Restrepo Acosta · CC BY-SA 3.0 elegida entre licencias múltiples · Referencia provisional no aprobada; miniatura técnica sin recorte."
+            },
+            {
+                "media_asset_id": 108,
+                "locale": "pt-BR",
+                "alt_text": "Entrada e fachada do Museu do Ouro junto ao Parque Santander, foto de 2010.",
+                "caption": "Entrada e fachada do Museu do Ouro junto ao Parque Santander, foto de 2010. · Felipe Restrepo Acosta · CC BY-SA 3.0 elegida entre licencias múltiples · Referência provisória não aprovada; miniatura técnica sem recorte."
+            },
+            {
+                "media_asset_id": 109,
+                "locale": "en",
+                "alt_text": "Frontal aerial view of Monserrate sanctuary and stairs: frame from Ricardo Perez’s video published in 2023.",
+                "caption": "Frontal aerial view of Monserrate sanctuary and stairs: frame from Ricardo Perez’s video published in 2023. · Ricardo Perez · Pexels License · Unapproved provisional reference; technical thumbnail without cropping."
+            },
+            {
+                "media_asset_id": 109,
+                "locale": "es",
+                "alt_text": "Vista aérea frontal del santuario de Monserrate y escalinatas: fotograma del video de Ricardo Perez publicado en 2023.",
+                "caption": "Vista aérea frontal del santuario de Monserrate y escalinatas: fotograma del video de Ricardo Perez publicado en 2023. · Ricardo Perez · Pexels License · Referencia provisional no aprobada; miniatura técnica sin recorte."
+            },
+            {
+                "media_asset_id": 109,
+                "locale": "pt-BR",
+                "alt_text": "Vista aérea frontal do santuário de Monserrate e escadarias: quadro do vídeo de Ricardo Perez publicado em 2023.",
+                "caption": "Vista aérea frontal do santuário de Monserrate e escadarias: quadro do vídeo de Ricardo Perez publicado em 2023. · Ricardo Perez · Pexels License · Referência provisória não aprovada; miniatura técnica sem recorte."
+            },
+            {
+                "media_asset_id": 110,
+                "locale": "en",
+                "alt_text": "Façade and entrance of Museo Botero, Bogotá, photographed in 2019.",
+                "caption": "Façade and entrance of Museo Botero, Bogotá, photographed in 2019. · Felipe Restrepo Acosta · CC BY-SA 4.0 · Unapproved provisional reference; technical thumbnail without cropping."
+            },
+            {
+                "media_asset_id": 110,
+                "locale": "es",
+                "alt_text": "Fachada y entrada del Museo Botero, Bogotá, fotografía de 2019.",
+                "caption": "Fachada y entrada del Museo Botero, Bogotá, fotografía de 2019. · Felipe Restrepo Acosta · CC BY-SA 4.0 · Referencia provisional no aprobada; miniatura técnica sin recorte."
+            },
+            {
+                "media_asset_id": 110,
+                "locale": "pt-BR",
+                "alt_text": "Fachada e entrada do Museu Botero, Bogotá, fotografia de 2019.",
+                "caption": "Fachada e entrada do Museu Botero, Bogotá, fotografia de 2019. · Felipe Restrepo Acosta · CC BY-SA 4.0 · Referência provisória não aprovada; miniatura técnica sem recorte."
+            },
+            {
+                "media_asset_id": 111,
+                "locale": "en",
+                "alt_text": "Craft stalls at Usaquén flea market, photographed in 2015.",
+                "caption": "Craft stalls at Usaquén flea market, photographed in 2015. · Edgar Zuniga Jr. · CC BY 2.0 · Unapproved provisional reference; technical thumbnail without cropping."
+            },
+            {
+                "media_asset_id": 111,
+                "locale": "es",
+                "alt_text": "Puestos de artesanías del Mercado de Pulgas de Usaquén, fotografía de 2015.",
+                "caption": "Puestos de artesanías del Mercado de Pulgas de Usaquén, fotografía de 2015. · Edgar Zuniga Jr. · CC BY 2.0 · Referencia provisional no aprobada; miniatura técnica sin recorte."
+            },
+            {
+                "media_asset_id": 111,
+                "locale": "pt-BR",
+                "alt_text": "Bancas de artesanato no Mercado de Pulgas de Usaquén, fotografia de 2015.",
+                "caption": "Bancas de artesanato no Mercado de Pulgas de Usaquén, fotografia de 2015. · Edgar Zuniga Jr. · CC BY 2.0 · Referência provisória não aprovada; miniatura técnica sem recorte."
+            },
+            {
+                "media_asset_id": 113,
+                "locale": "en",
+                "alt_text": "Path, trees and resting area in Bogotá’s Simón Bolívar Park, historical photograph from 2006.",
+                "caption": "Path, trees and resting area in Bogotá’s Simón Bolívar Park, historical photograph from 2006. · Carlosfpardo · CC BY 2.0"
+            },
+            {
+                "media_asset_id": 113,
+                "locale": "es",
+                "alt_text": "Sendero, arbolado y zona de descanso del Parque Simón Bolívar de Bogotá, fotografía histórica de 2006.",
+                "caption": "Sendero, arbolado y zona de descanso del Parque Simón Bolívar de Bogotá, fotografía histórica de 2006. · Carlosfpardo · CC BY 2.0"
+            },
+            {
+                "media_asset_id": 113,
+                "locale": "pt-BR",
+                "alt_text": "Caminho, árvores e área de descanso do Parque Simón Bolívar de Bogotá, fotografia histórica de 2006.",
+                "caption": "Caminho, árvores e área de descanso do Parque Simón Bolívar de Bogotá, fotografia histórica de 2006. · Carlosfpardo · CC BY 2.0"
+            },
+            {
+                "media_asset_id": 172,
+                "locale": "en",
+                "alt_text": "Illustration of the glass greenhouse complex at Bogotá Botanical Garden’s Tropicario.",
+                "caption": "AI-generated illustration approved for this card. Based on a CC0 photograph by Camiloskyyy; not a photograph or evidence of current conditions."
+            },
+            {
+                "media_asset_id": 172,
+                "locale": "es",
+                "alt_text": "Ilustración del conjunto de invernaderos de vidrio del Tropicario del Jardín Botánico de Bogotá.",
+                "caption": "Ilustración generada con IA, aprobada para esta tarjeta. Basada en fotografía CC0 de Camiloskyyy; no es fotografía ni prueba de estado actual."
+            },
+            {
+                "media_asset_id": 172,
+                "locale": "pt-BR",
+                "alt_text": "Ilustração do conjunto de estufas de vidro do Tropicario do Jardim Botânico de Bogotá.",
+                "caption": "Ilustração gerada com IA, aprovada para este cartão. Baseada em fotografia CC0 de Camiloskyyy; não é fotografia nem comprovação do estado atual."
+            },
+            {
+                "media_asset_id": 440,
+                "locale": "en",
+                "alt_text": "Historical photograph of the train in the Zipaquirá railway yard",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 440,
+                "locale": "es",
+                "alt_text": "Fotografía histórica del tren en el patio ferroviario de Zipaquirá",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 440,
+                "locale": "pt-BR",
+                "alt_text": "Fotografia histórica do trem no pátio ferroviário de Zipaquirá",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 464,
+                "locale": "en",
+                "alt_text": "Illustration of Bogotá Planetarium",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 464,
+                "locale": "es",
+                "alt_text": "Ilustración del Planetario de Bogotá",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 464,
+                "locale": "pt-BR",
+                "alt_text": "Ilustração do Planetário de Bogotá",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 466,
+                "locale": "en",
+                "alt_text": "Illustration of La Candelaria street art",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 466,
+                "locale": "es",
+                "alt_text": "Ilustración del arte urbano y las sombrillas de La Candelaria",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 466,
+                "locale": "pt-BR",
+                "alt_text": "Ilustração da arte urbana de La Candelaria",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 467,
+                "locale": "en",
+                "alt_text": "Illustration of Bogotá green sightseeing bus",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 467,
+                "locale": "es",
+                "alt_text": "Ilustración del bus turístico verde de Bogotá",
+                "caption": ""
+            },
+            {
+                "media_asset_id": 467,
+                "locale": "pt-BR",
+                "alt_text": "Ilustração do ônibus turístico verde de Bogotá",
+                "caption": ""
+            }
+        ]
+    },
+    "media_files": {
+        "77": {
+            "export_file": "media/0422c316b05c8da6db0a4ce88c95245df744e2b53024e3beb54d677ebd454f0e.webp",
+            "sha256": "0422c316b05c8da6db0a4ce88c95245df744e2b53024e3beb54d677ebd454f0e",
+            "source_asset_path": "assets/destinos/preprod-bogota/0422c316b05c8da6db0a4ce88c95245df744e2b53024e3beb54d677ebd454f0e.webp",
+            "bytes": 194050
+        },
+        "104": {
+            "export_file": "media/5709cfce96003975a47cbc7a3dee9e81b35dd71ca7780ea5248b048636ed702a.webp",
+            "sha256": "5709cfce96003975a47cbc7a3dee9e81b35dd71ca7780ea5248b048636ed702a",
+            "source_asset_path": "assets/destinos/preprod-bogota/5709cfce96003975a47cbc7a3dee9e81b35dd71ca7780ea5248b048636ed702a.webp",
+            "bytes": 148228
+        },
+        "105": {
+            "export_file": "media/424fddb39669d5341cbdfb23fc94a6e240f94e8aef7f1cfc919a6a30f4d37321.webp",
+            "sha256": "424fddb39669d5341cbdfb23fc94a6e240f94e8aef7f1cfc919a6a30f4d37321",
+            "source_asset_path": "assets/destinos/preprod-bogota/424fddb39669d5341cbdfb23fc94a6e240f94e8aef7f1cfc919a6a30f4d37321.webp",
+            "bytes": 50906
+        },
+        "107": {
+            "export_file": "media/de3bdbfee3ec2de5f865e84563af1d9044e9602c50ef929f129a291cd1d496d1.webp",
+            "sha256": "de3bdbfee3ec2de5f865e84563af1d9044e9602c50ef929f129a291cd1d496d1",
+            "source_asset_path": "assets/destinos/preprod-bogota/de3bdbfee3ec2de5f865e84563af1d9044e9602c50ef929f129a291cd1d496d1.webp",
+            "bytes": 108936
+        },
+        "108": {
+            "export_file": "media/e0a092c51db8a37cb08ea24e6f83549db91aa10023506a4876be8d1c8e1d7593.webp",
+            "sha256": "e0a092c51db8a37cb08ea24e6f83549db91aa10023506a4876be8d1c8e1d7593",
+            "source_asset_path": "assets/destinos/preprod-bogota/e0a092c51db8a37cb08ea24e6f83549db91aa10023506a4876be8d1c8e1d7593.webp",
+            "bytes": 117732
+        },
+        "109": {
+            "export_file": "media/0c10b973fc307ab3775e553e6bc8653802efb7145a92080112245a79c814e9c5.webp",
+            "sha256": "0c10b973fc307ab3775e553e6bc8653802efb7145a92080112245a79c814e9c5",
+            "source_asset_path": "assets/destinos/preprod-bogota/0c10b973fc307ab3775e553e6bc8653802efb7145a92080112245a79c814e9c5.webp",
+            "bytes": 86090
+        },
+        "110": {
+            "export_file": "media/f06387096e4f8009d65ed6f80329d0a0ef740437a8bbd3bd2c2150741fce0dc3.webp",
+            "sha256": "f06387096e4f8009d65ed6f80329d0a0ef740437a8bbd3bd2c2150741fce0dc3",
+            "source_asset_path": "assets/destinos/preprod-bogota/f06387096e4f8009d65ed6f80329d0a0ef740437a8bbd3bd2c2150741fce0dc3.webp",
+            "bytes": 94930
+        },
+        "111": {
+            "export_file": "media/646305bfad3aaefdf666f66c0303cf543a546f513cffd3f9eda1c64d1268fb0a.webp",
+            "sha256": "646305bfad3aaefdf666f66c0303cf543a546f513cffd3f9eda1c64d1268fb0a",
+            "source_asset_path": "assets/destinos/preprod-bogota/646305bfad3aaefdf666f66c0303cf543a546f513cffd3f9eda1c64d1268fb0a.webp",
+            "bytes": 287404
+        },
+        "113": {
+            "export_file": "media/8ff5aefbbb57fb417f77c6cce8f2be64d2e35624e3d7b255ab9a8b42be9de6b0.webp",
+            "sha256": "8ff5aefbbb57fb417f77c6cce8f2be64d2e35624e3d7b255ab9a8b42be9de6b0",
+            "source_asset_path": "assets/destinos/preprod-bogota/8ff5aefbbb57fb417f77c6cce8f2be64d2e35624e3d7b255ab9a8b42be9de6b0.webp",
+            "bytes": 37338
+        },
+        "172": {
+            "export_file": "media/dc722438cc464cbccf05e5717455f2e35a557301683162038ef254ccb87d66bf.webp",
+            "sha256": "dc722438cc464cbccf05e5717455f2e35a557301683162038ef254ccb87d66bf",
+            "source_asset_path": "assets/destinos/preprod-bogota/dc722438cc464cbccf05e5717455f2e35a557301683162038ef254ccb87d66bf.webp",
+            "bytes": 358534
+        },
+        "440": {
+            "export_file": "media/9f088d4847c0a853b2e794e6a503d7786d292cfec91b44b0a4757ce4aca6ff5a.webp",
+            "sha256": "9f088d4847c0a853b2e794e6a503d7786d292cfec91b44b0a4757ce4aca6ff5a",
+            "source_asset_path": "assets/destinos/preprod-zipaquira/9f088d4847c0a853b2e794e6a503d7786d292cfec91b44b0a4757ce4aca6ff5a.webp",
+            "bytes": 241362
+        },
+        "464": {
+            "export_file": "media/5d92496a92b3be15d18db8e091afb1cce3980ec22391be7098cccd80a4098e82.webp",
+            "sha256": "5d92496a92b3be15d18db8e091afb1cce3980ec22391be7098cccd80a4098e82",
+            "source_asset_path": "assets/destinos/preprod-bogota/5d92496a92b3be15d18db8e091afb1cce3980ec22391be7098cccd80a4098e82.webp",
+            "bytes": 163198
+        },
+        "466": {
+            "export_file": "media/86a4c443fc4c4adf08debc2050a112d12877fd62611286f5cd4de65f4d884749.webp",
+            "sha256": "86a4c443fc4c4adf08debc2050a112d12877fd62611286f5cd4de65f4d884749",
+            "source_asset_path": "assets/destinos/preprod-bogota/86a4c443fc4c4adf08debc2050a112d12877fd62611286f5cd4de65f4d884749.webp",
+            "bytes": 227550
+        },
+        "467": {
+            "export_file": "media/922b0a55a3fa97144bd9a03ec7c46dcf8de9281ac03654c09212446a0f8f5e07.webp",
+            "sha256": "922b0a55a3fa97144bd9a03ec7c46dcf8de9281ac03654c09212446a0f8f5e07",
+            "source_asset_path": "assets/destinos/preprod-bogota/922b0a55a3fa97144bd9a03ec7c46dcf8de9281ac03654c09212446a0f8f5e07.webp",
+            "bytes": 185834
+        }
+    },
+    "excluded": "Accounts, private contacts, subscriptions, payments, analytics, internal_research_json and arbitrary provenance_json omitted. IDs retained for explicit migration mapping, not blind restore."
+}
