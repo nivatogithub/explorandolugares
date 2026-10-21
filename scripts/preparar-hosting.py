@@ -78,6 +78,7 @@ for asset in ['account-access.css','account-registration.css','account-entry.css
 # Older published pages can keep a cached identity sheet; the shared controls
 # carry the same authoritative shell tokens, generated from their single source.
 import json
+import re
 shell_tokens=json.loads((root/'design/portal/tokens.json').read_text())['colors']
 controls=public/'assets/header-controls.css'
 controls.write_text(controls.read_text()+'\nhtml:root{--el-shell:'+shell_tokens['shell']+';--el-shell-border:'+shell_tokens['shell-border']+'}\n')
@@ -109,6 +110,7 @@ for item in approved_media['media']:
         raise RuntimeError('El paquete alteró un medio aprobado: '+str(relative))
 subprocess.run([sys.executable,str(root/'scripts/aplicar-rutas-lugares.py'),'--release',str(release)],check=True)
 subprocess.run([sys.executable,str(root/'scripts/agregar-metadatos-sociales.py'),'--public',str(public)],check=True)
+subprocess.run([sys.executable,str(root/'scripts/versiones-presentacion.py'),'--public',str(public)],check=True)
 print(f'Entrega de revisión: {release}\nRaíz pública: {public}\nConfigurar private/config.php fuera de public/. No hay publicación automática.')
 
 # Fail the package if retired identity assets or palette reappear.

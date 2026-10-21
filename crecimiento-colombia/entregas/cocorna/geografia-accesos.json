@@ -1,0 +1,77 @@
+{
+  "fecha": "2026-10-20",
+  "limite": "Comprobación documental/cartográfica textual; no inspección de fotos ni Street View en esta tarea. No se completó muestreo visual5–8.",
+  "componentes": [
+    {
+      "slug": "cascada-las-perlas",
+      "identidad": "Institución Provincia ABT; ubicación occidental respecto de cabecera contrastada con OSM/Mapcarta.",
+      "lat": 6.06546,
+      "lon": -75.21576,
+      "fuentes": [
+        "https://provincia-abt.gov.co/bosques/cocorna/",
+        "https://mapcarta.com/es/N7431852685",
+        "https://www.openstreetmap.org/node/7431852685"
+      ],
+      "acceso": "La evidencia documental reconoce la cascada, pero no verifica hoy sendero abierto, permiso, precio ni horario. No prometer baño ni acceso libre.",
+      "invariantes": "Entorno montañoso; cascada al oeste de cabecera. Faltan forma visible y cámara de referencia elegida."
+    },
+    {
+      "slug": "parque-principal",
+      "identidad": "Parque e iglesia principal reconocidos institucionalmente. Nodo iglesia sirve de ancla, no centroide ni límite de plaza.",
+      "ancla_iglesia": {
+        "lat": 6.05736,
+        "lon": -75.18505
+      },
+      "fuentes": [
+        "https://provincia-abt.gov.co/bosques/cocorna/",
+        "https://mapcarta.com/es/N4327588747"
+      ],
+      "acceso": "Espacio del centro urbano; no fijar horarios del templo ni afirmar acceso interior.",
+      "invariantes": "Plaza e iglesia juntas; cámara, arquitectura y distribución pendientes de referencia."
+    },
+    {
+      "slug": "rio-cocorna",
+      "decision": "no_incluir_por_ahora",
+      "fuentes": [
+        "https://dssa.gov.co/asis/documentos2024/asis2024/ORIENTE/Cocorn%C3%A1%202024.pdf"
+      ],
+      "razon": "Cuenca acreditada; no se verificó un tramo/balneario específico para una tarjeta."
+    },
+    {
+      "slug": "rafting-calderas",
+      "fuentes": [
+        "https://www.expeditioncolombia.com/es/experiencias-de-aventura/calderas-rafting"
+      ],
+      "acceso": "Oferta propia con base Cocorná y traslado al río. No poner coordenadas del punto de encuentro como si fueran el tramo de rafting.",
+      "limite": "No reconstruida cartográficamente toda la ruta ni garantizada pertenencia íntegra a Cocorná."
+    },
+    {
+      "slug": "parapente",
+      "fuentes": [
+        "https://aventuracocorna.com/",
+        "https://www.cascadiacocorna.com/adventures/paragliding"
+      ],
+      "acceso": "Reserva con oferente, sujeto a condiciones; coordenadas del despegue no verificadas.",
+      "limite": "No asignar San Félix ni incluir un despegue imaginado."
+    },
+    {
+      "slug": "excursion-melcocho",
+      "fuentes": [
+        "https://atodopulmon.co/paquetes/viaje-rio-melcocho/",
+        "https://www.cornare.gov.co/noticias-corporativas/caica-la-estrategia-de-empoderamiento-comunitario-para-proteger-las-areas-protegidas-de-nuestro-territorio/"
+      ],
+      "acceso": "Oferta guiada con fechas2026 y acceso descrito por El Retiro. Cornare documenta regulación comunitaria; no acceso libre.",
+      "limite": "Área protegida intermunicipal. No asignar todo río a Cocorná ni publicar cupos/horarios históricos."
+    }
+  ],
+  "advertencias_limites": [
+    {
+      "url": "https://www.cornare.gov.co/notificaciones-por-avisos/RE-03007-2024.pdf",
+      "hecho": "Predio El Retiro–Melcocho corregido de Cocorná a El Carmen de Viboral en2024; no usar El Retiro como prueba automática de jurisdicción."
+    },
+    {
+      "url": "https://www.cornare.gov.co/boletin_oficial/2024/mayo/res/RE-01447-2024.pdf",
+      "hecho": "Mirador identificado como establecimiento privado hotel/restaurante/piscinas, no mirador público separado probado."
+    }
+  ]
+}

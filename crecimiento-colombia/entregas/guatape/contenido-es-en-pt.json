@@ -1,0 +1,260 @@
+{
+  "status": "texto_preparado_no_importable_sin_imagenes",
+  "destination": {
+    "slug": "guatape",
+    "country_code": "CO",
+    "department": "Antioquia",
+    "destination_type": "municipality",
+    "translations": {
+      "es": {
+        "display_name": "Guatapé",
+        "headline": "Zócalos y agua entre montañas",
+        "intro": "Un pueblo de fachadas coloridas a orillas del embalse Peñol–Guatapé."
+      },
+      "en": {
+        "display_name": "Guatapé",
+        "headline": "Colourful façades and mountain waters",
+        "intro": "A colourful town beside the Peñol–Guatapé reservoir."
+      },
+      "pt-BR": {
+        "display_name": "Guatapé",
+        "headline": "Fachadas coloridas e águas entre montanhas",
+        "intro": "Um povoado colorido às margens da represa Peñol–Guatapé."
+      }
+    },
+    "history": {
+      "es": [
+        "Los zócalos forman parte de la identidad local desde comienzos del siglo XX. La creación del embalse transformó el paisaje y fortaleció la actividad turística."
+      ],
+      "en": [
+        "Decorative zócalos have shaped local identity since the early twentieth century. The reservoir transformed the landscape and encouraged tourism."
+      ],
+      "pt-BR": [
+        "Os zócalos fazem parte da identidade local desde o início do século XX. A criação da represa transformou a paisagem e fortaleceu o turismo."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Relieves de colores, el Peñón y navegación por el embalse."
+      ],
+      "en": [
+        "Colourful reliefs, the Rock and reservoir boat trips."
+      ],
+      "pt-BR": [
+        "Relevos coloridos, a Pedra e passeios pela represa."
+      ]
+    }
+  },
+  "places": [
+    {
+      "slug": "penon-guatape",
+      "type": "place",
+      "sort_order": 1,
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Piedra del Peñol (Peñón de Guatapé)",
+          "description": "Asciende la escalinata y contempla los brazos del embalse."
+        },
+        "en": {
+          "name": "Piedra del Peñol (Guatapé Rock)",
+          "description": "Climb the stairway for views over the reservoir."
+        },
+        "pt-BR": {
+          "name": "Pedra do Peñol (Pedra de Guatapé)",
+          "description": "Suba a escadaria para observar os braços da represa."
+        }
+      },
+      "image_pending": true
+    },
+    {
+      "slug": "plazoleta-zocalos",
+      "type": "place",
+      "sort_order": 2,
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Plazoleta de los Zócalos",
+          "description": "Relieves de colores cuentan historias y oficios del pueblo."
+        },
+        "en": {
+          "name": "Zócalos Square",
+          "description": "Colourful reliefs tell stories of local life and trades."
+        },
+        "pt-BR": {
+          "name": "Praça dos Zócalos",
+          "description": "Relevos coloridos contam histórias e ofícios locais."
+        }
+      },
+      "image_pending": true
+    },
+    {
+      "slug": "calle-sombrillas",
+      "type": "place",
+      "sort_order": 3,
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Calle de las Sombrillas",
+          "description": "Un corredor de sombrillas de colores y fachadas con zócalos."
+        },
+        "en": {
+          "name": "Umbrella Street",
+          "description": "A passage beneath colourful umbrellas and decorated façades."
+        },
+        "pt-BR": {
+          "name": "Rua dos Guarda-Chuvas",
+          "description": "Um corredor de guarda-chuvas coloridos e fachadas com zócalos."
+        }
+      },
+      "image_pending": true
+    },
+    {
+      "slug": "malecon",
+      "type": "place",
+      "sort_order": 4,
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Malecón de Guatapé",
+          "description": "Un paseo junto al embalse y los embarcaderos del pueblo."
+        },
+        "en": {
+          "name": "Guatapé Waterfront",
+          "description": "A promenade beside the reservoir and town piers."
+        },
+        "pt-BR": {
+          "name": "Orla de Guatapé",
+          "description": "Um passeio à beira da represa e dos embarcadouros."
+        }
+      },
+      "image_pending": true
+    },
+    {
+      "slug": "parque-principal",
+      "type": "place",
+      "sort_order": 5,
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Parque principal",
+          "description": "La iglesia y las fachadas tradicionales rodean el corazón del pueblo."
+        },
+        "en": {
+          "name": "Main Square",
+          "description": "The church and traditional façades frame the town centre."
+        },
+        "pt-BR": {
+          "name": "Praça principal",
+          "description": "A igreja e as fachadas tradicionais cercam o centro do povoado."
+        }
+      },
+      "image_pending": true
+    },
+    {
+      "slug": "paseo-embalse",
+      "type": "experience",
+      "sort_order": 1,
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Paseo en barco por el embalse",
+          "description": "Navega entre penínsulas e islas del paisaje Peñol–Guatapé."
+        },
+        "en": {
+          "name": "Reservoir boat tour",
+          "description": "Cruise among the peninsulas and islands of Peñol–Guatapé."
+        },
+        "pt-BR": {
+          "name": "Passeio de barco pela represa",
+          "description": "Navegue entre penínsulas e ilhas de Peñol–Guatapé."
+        }
+      },
+      "image_pending": true
+    },
+    {
+      "slug": "jet-ski",
+      "type": "experience",
+      "sort_order": 2,
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Jet ski en el embalse",
+          "description": "Recorre el agua en moto acuática tras la inducción de manejo."
+        },
+        "en": {
+          "name": "Reservoir jet skiing",
+          "description": "Ride a personal watercraft after a handling briefing."
+        },
+        "pt-BR": {
+          "name": "Jet ski na represa",
+          "description": "Navegue de moto aquática após as orientações de condução."
+        }
+      },
+      "image_pending": true
+    },
+    {
+      "slug": "kayak-guiado",
+      "type": "experience",
+      "sort_order": 3,
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Tour en kayak",
+          "description": "Recorre las orillas del embalse remando con un guía."
+        },
+        "en": {
+          "name": "Guided kayak tour",
+          "description": "Paddle along the reservoir shores with a guide."
+        },
+        "pt-BR": {
+          "name": "Passeio guiado de caiaque",
+          "description": "Reme pelas margens da represa com um guia."
+        }
+      },
+      "image_pending": true
+    },
+    {
+      "slug": "esqui-acuatico",
+      "type": "experience",
+      "sort_order": 4,
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Esquí acuático",
+          "description": "Deslízate sobre esquís remolcados por una lancha con instructor."
+        },
+        "en": {
+          "name": "Water skiing",
+          "description": "Glide on skis towed by a boat with an instructor."
+        },
+        "pt-BR": {
+          "name": "Esqui aquático",
+          "description": "Deslize sobre esquis puxados por uma lancha com instrutor."
+        }
+      },
+      "image_pending": true
+    },
+    {
+      "slug": "wakeboard",
+      "type": "experience",
+      "sort_order": 5,
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Wakeboard en el embalse",
+          "description": "Practica equilibrio sobre la tabla con acompañamiento de instructor."
+        },
+        "en": {
+          "name": "Reservoir wakeboarding",
+          "description": "Practise balancing on the board with an instructor."
+        },
+        "pt-BR": {
+          "name": "Wakeboard na represa",
+          "description": "Pratique equilíbrio na prancha com acompanhamento de instrutor."
+        }
+      },
+      "image_pending": true
+    }
+  ]
+}

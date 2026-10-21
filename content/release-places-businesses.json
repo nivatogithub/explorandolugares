@@ -9,7 +9,11 @@
     "jardin",
     "covenas",
     "zipaquira",
-    "santa-fe-de-antioquia"
+    "santa-fe-de-antioquia",
+    "guatape",
+    "cauca-viejo",
+    "cocorna",
+    "arboletes"
   ],
   "public_places": [
     "bogota",
@@ -20,7 +24,11 @@
     "medellin",
     "santa-fe-de-antioquia",
     "santa-marta",
-    "zipaquira"
+    "zipaquira",
+    "guatape",
+    "cauca-viejo",
+    "cocorna",
+    "arboletes"
   ],
   "editorial": {
     "bogota": {
@@ -1243,7 +1251,7 @@
           "latitude": null,
           "longitude": null,
           "publication_status": "published",
-          "media_asset_id": -17,
+          "media_asset_id": -10027,
           "translations": {
             "en": {
               "id": 209,
@@ -1656,7 +1664,7 @@
           "latitude": null,
           "longitude": null,
           "publication_status": "published",
-          "media_asset_id": -24,
+          "media_asset_id": -10031,
           "translations": {
             "en": {
               "id": 107,
@@ -1715,7 +1723,7 @@
           "latitude": null,
           "longitude": null,
           "publication_status": "published",
-          "media_asset_id": -25,
+          "media_asset_id": -10032,
           "translations": {
             "en": {
               "id": 108,
@@ -1774,7 +1782,7 @@
           "latitude": null,
           "longitude": null,
           "publication_status": "published",
-          "media_asset_id": -26,
+          "media_asset_id": -10028,
           "translations": {
             "en": {
               "id": 109,
@@ -1833,7 +1841,7 @@
           "latitude": null,
           "longitude": null,
           "publication_status": "published",
-          "media_asset_id": -27,
+          "media_asset_id": -10029,
           "translations": {
             "en": {
               "id": 111,
@@ -1892,7 +1900,7 @@
           "latitude": null,
           "longitude": null,
           "publication_status": "published",
-          "media_asset_id": -28,
+          "media_asset_id": -10030,
           "translations": {
             "en": {
               "id": 112,
@@ -8917,6 +8925,1178 @@
           "role": "hero",
           "media_asset_id": 354,
           "asset_path": "assets/media/c2/c2badfad9bda4389dc63d84ce26a38cb544a37dfdfd9751e5d6f44b0eb48c4c5.webp"
+        }
+      }
+    },
+    "guatape": {
+      "id": 10001,
+      "slug": "guatape",
+      "destination_type": "municipality",
+      "country_code": "CO",
+      "department": "Antioquia",
+      "subregion": "Oriente",
+      "latitude": null,
+      "longitude": null,
+      "publication_status": "published",
+      "display_order": 101,
+      "translations": {
+        "es": {
+          "destination_id": 10001,
+          "locale": "es",
+          "display_name": "Guatapé",
+          "eyebrow": "Antioquia · Colombia",
+          "headline": "Zócalos y agua entre montañas",
+          "intro": "Un pueblo de fachadas coloridas a orillas del embalse Peñol–Guatapé.",
+          "meta_description": "Un pueblo de fachadas coloridas a orillas del embalse Peñol–Guatapé."
+        },
+        "en": {
+          "destination_id": 10001,
+          "locale": "en",
+          "display_name": "Guatapé",
+          "eyebrow": "Antioquia · Colombia",
+          "headline": "Colourful façades and mountain waters",
+          "intro": "A colourful town beside the Peñol–Guatapé reservoir.",
+          "meta_description": "A colourful town beside the Peñol–Guatapé reservoir."
+        },
+        "pt-BR": {
+          "destination_id": 10001,
+          "locale": "pt-BR",
+          "display_name": "Guatapé",
+          "eyebrow": "Antioquia · Colombia",
+          "headline": "Fachadas coloridas e águas entre montanhas",
+          "intro": "Um povoado colorido às margens da represa Peñol–Guatapé.",
+          "meta_description": "Um povoado colorido às margens da represa Peñol–Guatapé."
+        }
+      },
+      "history": {
+        "es": [
+          "Los zócalos forman parte de la identidad local desde comienzos del siglo XX. La creación del embalse transformó el paisaje y fortaleció la actividad turística."
+        ],
+        "en": [
+          "Decorative zócalos have shaped local identity since the early twentieth century. The reservoir transformed the landscape and encouraged tourism."
+        ],
+        "pt-BR": [
+          "Os zócalos fazem parte da identidade local desde o início do século XX. A criação da represa transformou a paisagem e fortaleceu o turismo."
+        ]
+      },
+      "reasons": {
+        "es": [
+          "Relieves de colores, el Peñón y navegación por el embalse."
+        ],
+        "en": [
+          "Colourful reliefs, the Rock and reservoir boat trips."
+        ],
+        "pt-BR": [
+          "Relevos coloridos, a Pedra e passeios pela represa."
+        ]
+      },
+      "sources": {
+        "es": [],
+        "en": [],
+        "pt-BR": []
+      },
+      "places": [
+        {
+          "id": 1000101,
+          "slug": "penon-guatape",
+          "type": "place",
+          "publication_status": "published",
+          "latitude": null,
+          "longitude": null,
+          "display_order": 1,
+          "media_asset_id": -10000,
+          "translations": {
+            "es": {
+              "name": "Piedra del Peñol (Peñón de Guatapé)",
+              "description": "Asciende la escalinata y contempla los brazos del embalse.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Piedra del Peñol (Guatapé Rock)",
+              "description": "Climb the stairway for views over the reservoir.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Pedra do Peñol (Pedra de Guatapé)",
+              "description": "Suba a escadaria para observar os braços da represa.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          }
+        },
+        {
+          "id": 1000102,
+          "slug": "plazoleta-zocalos",
+          "type": "place",
+          "publication_status": "published",
+          "latitude": null,
+          "longitude": null,
+          "display_order": 2,
+          "media_asset_id": -10001,
+          "translations": {
+            "es": {
+              "name": "Plazoleta de los Zócalos",
+              "description": "Relieves de colores cuentan historias y oficios del pueblo.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Zócalos Square",
+              "description": "Colourful reliefs tell stories of local life and trades.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Praça dos Zócalos",
+              "description": "Relevos coloridos contam histórias e ofícios locais.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          }
+        },
+        {
+          "id": 1000103,
+          "slug": "calle-sombrillas",
+          "type": "place",
+          "publication_status": "published",
+          "latitude": null,
+          "longitude": null,
+          "display_order": 3,
+          "media_asset_id": -10002,
+          "translations": {
+            "es": {
+              "name": "Calle de las Sombrillas",
+              "description": "Un corredor de sombrillas de colores y fachadas con zócalos.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Umbrella Street",
+              "description": "A passage beneath colourful umbrellas and decorated façades.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Rua dos Guarda-Chuvas",
+              "description": "Um corredor de guarda-chuvas coloridos e fachadas com zócalos.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          }
+        },
+        {
+          "id": 1000104,
+          "slug": "malecon",
+          "type": "place",
+          "publication_status": "published",
+          "latitude": null,
+          "longitude": null,
+          "display_order": 4,
+          "media_asset_id": -10003,
+          "translations": {
+            "es": {
+              "name": "Malecón de Guatapé",
+              "description": "Un paseo junto al embalse y los embarcaderos del pueblo.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Guatapé Waterfront",
+              "description": "A promenade beside the reservoir and town piers.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Orla de Guatapé",
+              "description": "Um passeio à beira da represa e dos embarcadouros.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          }
+        },
+        {
+          "id": 1000105,
+          "slug": "parque-principal",
+          "type": "place",
+          "publication_status": "published",
+          "latitude": null,
+          "longitude": null,
+          "display_order": 5,
+          "media_asset_id": -10004,
+          "translations": {
+            "es": {
+              "name": "Parque principal",
+              "description": "La iglesia y las fachadas tradicionales rodean el corazón del pueblo.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Main Square",
+              "description": "The church and traditional façades frame the town centre.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Praça principal",
+              "description": "A igreja e as fachadas tradicionais cercam o centro do povoado.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          }
+        },
+        {
+          "id": 1000106,
+          "slug": "paseo-embalse",
+          "type": "experience",
+          "publication_status": "published",
+          "latitude": null,
+          "longitude": null,
+          "display_order": 6,
+          "media_asset_id": -10005,
+          "translations": {
+            "es": {
+              "name": "Paseo en barco por el embalse",
+              "description": "Navega entre penínsulas e islas del paisaje Peñol–Guatapé.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Reservoir boat tour",
+              "description": "Cruise among the peninsulas and islands of Peñol–Guatapé.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Passeio de barco pela represa",
+              "description": "Navegue entre penínsulas e ilhas de Peñol–Guatapé.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          }
+        },
+        {
+          "id": 1000107,
+          "slug": "jet-ski",
+          "type": "experience",
+          "publication_status": "published",
+          "latitude": null,
+          "longitude": null,
+          "display_order": 7,
+          "media_asset_id": -10006,
+          "translations": {
+            "es": {
+              "name": "Jet ski en el embalse",
+              "description": "Recorre el agua en moto acuática tras la inducción de manejo.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Reservoir jet skiing",
+              "description": "Ride a personal watercraft after a handling briefing.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Jet ski na represa",
+              "description": "Navegue de moto aquática após as orientações de condução.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          }
+        },
+        {
+          "id": 1000108,
+          "slug": "kayak-guiado",
+          "type": "experience",
+          "publication_status": "published",
+          "latitude": null,
+          "longitude": null,
+          "display_order": 8,
+          "media_asset_id": -10007,
+          "translations": {
+            "es": {
+              "name": "Tour en kayak",
+              "description": "Recorre las orillas del embalse remando con un guía.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Guided kayak tour",
+              "description": "Paddle along the reservoir shores with a guide.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Passeio guiado de caiaque",
+              "description": "Reme pelas margens da represa com um guia.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          }
+        },
+        {
+          "id": 1000109,
+          "slug": "esqui-acuatico",
+          "type": "experience",
+          "publication_status": "published",
+          "latitude": null,
+          "longitude": null,
+          "display_order": 9,
+          "media_asset_id": -10008,
+          "translations": {
+            "es": {
+              "name": "Esquí acuático",
+              "description": "Deslízate sobre esquís remolcados por una lancha con instructor.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Water skiing",
+              "description": "Glide on skis towed by a boat with an instructor.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Esqui aquático",
+              "description": "Deslize sobre esquis puxados por uma lancha com instrutor.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          }
+        },
+        {
+          "id": 1000110,
+          "slug": "wakeboard",
+          "type": "experience",
+          "publication_status": "published",
+          "latitude": null,
+          "longitude": null,
+          "display_order": 10,
+          "media_asset_id": -10009,
+          "translations": {
+            "es": {
+              "name": "Wakeboard en el embalse",
+              "description": "Practica equilibrio sobre la tabla con acompañamiento de instructor.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Reservoir wakeboarding",
+              "description": "Practise balancing on the board with an instructor.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Wakeboard na represa",
+              "description": "Pratique equilíbrio na prancha com acompanhamento de instrutor.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          }
+        }
+      ],
+      "destination_media": {
+        "hero": {
+          "role": "hero",
+          "media_asset_id": -10010,
+          "asset_path": "assets/media/87/87c7849acefc191da5c84e3942083c4549b98bae5c976599a586861438d420df.webp"
+        }
+      }
+    },
+    "cauca-viejo": {
+      "id": 10002,
+      "slug": "cauca-viejo",
+      "destination_type": "other",
+      "country_code": "CO",
+      "department": "Antioquia",
+      "subregion": "Suroeste",
+      "latitude": null,
+      "longitude": null,
+      "publication_status": "published",
+      "display_order": 102,
+      "translations": {
+        "es": {
+          "destination_id": 10002,
+          "locale": "es",
+          "display_name": "Cauca Viejo",
+          "eyebrow": "Jericó · Antioquia · Colombia",
+          "headline": "Balcones y descanso junto al Cauca",
+          "intro": "Pueblo privado junto al río Cauca, dentro de Jericó. El ingreso requiere reserva y coordinación previa.",
+          "meta_description": "Pueblo privado junto al río Cauca, dentro de Jericó. El ingreso requiere reserva y coordinación previa."
+        },
+        "en": {
+          "destination_id": 10002,
+          "locale": "en",
+          "display_name": "Cauca Viejo",
+          "eyebrow": "Jericó · Antioquia · Colombia",
+          "headline": "Balconies and quiet by the Cauca",
+          "intro": "A private village beside the Cauca River, within Jericó. Entry requires a reservation and advance arrangements.",
+          "meta_description": "A private village beside the Cauca River, within Jericó. Entry requires a reservation and advance arrangements."
+        },
+        "pt-BR": {
+          "destination_id": 10002,
+          "locale": "pt-BR",
+          "display_name": "Cauca Viejo",
+          "eyebrow": "Jericó · Antioquia · Colombia",
+          "headline": "Varandas e descanso junto ao Cauca",
+          "intro": "Povoado privado às margens do rio Cauca, em Jericó. A entrada exige reserva e organização prévia.",
+          "meta_description": "Povoado privado às margens do rio Cauca, em Jericó. A entrada exige reserva e organização prévia."
+        }
+      },
+      "history": {
+        "es": [
+          "Cauca Viejo nació en 1998 como un proyecto residencial y turístico en Jericó. Su arquitectura recrea tradiciones del suroeste antioqueño; no es un pueblo colonial antiguo."
+        ],
+        "en": [
+          "Cauca Viejo began in 1998 as a residential and tourism development in Jericó. Its buildings reinterpret southwestern Antioquia traditions; it is not an old colonial town."
+        ],
+        "pt-BR": [
+          "Cauca Viejo surgiu em 1998 como um empreendimento residencial e turístico em Jericó. Sua arquitetura recria tradições do sudoeste de Antioquia; não é um antigo povoado colonial."
+        ]
+      },
+      "reasons": {
+        "es": [
+          "Pueblo privado junto al río Cauca, dentro de Jericó. El ingreso requiere reserva y coordinación previa."
+        ],
+        "en": [
+          "A private village beside the Cauca River, within Jericó. Entry requires a reservation and advance arrangements."
+        ],
+        "pt-BR": [
+          "Povoado privado às margens do rio Cauca, em Jericó. A entrada exige reserva e organização prévia."
+        ]
+      },
+      "sources": {
+        "es": [
+          {
+            "section": "destination",
+            "label": "Ubicación y acceso / Location and access",
+            "url": "https://caucaviejo.com/pueblo-cauca-viejo/"
+          }
+        ],
+        "en": [
+          {
+            "section": "destination",
+            "label": "Ubicación y acceso / Location and access",
+            "url": "https://caucaviejo.com/pueblo-cauca-viejo/"
+          }
+        ],
+        "pt-BR": [
+          {
+            "section": "destination",
+            "label": "Ubicación y acceso / Location and access",
+            "url": "https://caucaviejo.com/pueblo-cauca-viejo/"
+          }
+        ]
+      },
+      "places": [
+        {
+          "id": 1000201,
+          "slug": "plaza-principal",
+          "type": "place",
+          "publication_status": "published",
+          "latitude": null,
+          "longitude": null,
+          "display_order": 1,
+          "media_asset_id": -10011,
+          "translations": {
+            "es": {
+              "name": "Plaza principal",
+              "description": "Fuente de piedra y balcones en el centro del pueblo privado.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Main square",
+              "description": "A stone fountain and balconies at the heart of the private village.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Praça principal",
+              "description": "Fonte de pedra e varandas no centro do povoado privado.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          }
+        },
+        {
+          "id": 1000202,
+          "slug": "capilla",
+          "type": "place",
+          "publication_status": "published",
+          "latitude": null,
+          "longitude": null,
+          "display_order": 2,
+          "media_asset_id": -10012,
+          "translations": {
+            "es": {
+              "name": "Capilla de Cauca Viejo",
+              "description": "La capilla acompaña la plaza y la arquitectura tradicional del conjunto.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Cauca Viejo chapel",
+              "description": "The chapel stands beside the square and the development’s traditional architecture.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Capela de Cauca Viejo",
+              "description": "A capela acompanha a praça e a arquitetura tradicional do conjunto.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          }
+        },
+        {
+          "id": 1000203,
+          "slug": "ribera-rio-cauca",
+          "type": "place",
+          "publication_status": "published",
+          "latitude": null,
+          "longitude": null,
+          "display_order": 3,
+          "media_asset_id": -10013,
+          "translations": {
+            "es": {
+              "name": "Ribera del río Cauca",
+              "description": "Contempla el río desde los espacios del conjunto habilitados para visitantes.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Cauca River banks",
+              "description": "See the river from areas of the development designated for visitors.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Margens do rio Cauca",
+              "description": "Observe o rio nos espaços do conjunto autorizados para visitantes.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          }
+        },
+        {
+          "id": 1000204,
+          "slug": "paseo-rio-cauca",
+          "type": "experience",
+          "publication_status": "published",
+          "latitude": null,
+          "longitude": null,
+          "display_order": 4,
+          "media_asset_id": -10014,
+          "translations": {
+            "es": {
+              "name": "Paseo por el río Cauca",
+              "description": "Recorre el río con guía y conoce el paisaje ribereño del suroeste.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Cauca River boat tour",
+              "description": "Explore the river with a guide and discover the southwestern riverside landscape.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Passeio pelo rio Cauca",
+              "description": "Percorra o rio com guia e conheça a paisagem ribeirinha do sudoeste.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          }
+        },
+        {
+          "id": 1000205,
+          "slug": "cabalgata",
+          "type": "experience",
+          "publication_status": "published",
+          "latitude": null,
+          "longitude": null,
+          "display_order": 5,
+          "media_asset_id": -10015,
+          "translations": {
+            "es": {
+              "name": "Cabalgata (alrededores)",
+              "description": "Recorre a caballo los paisajes cercanos a Cauca Viejo.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Horseback riding (surroundings)",
+              "description": "Explore the landscapes around Cauca Viejo on horseback.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Cavalgada (arredores)",
+              "description": "Conheça a cavalo as paisagens próximas a Cauca Viejo.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          }
+        }
+      ],
+      "destination_media": {
+        "hero": {
+          "role": "hero",
+          "media_asset_id": -10011,
+          "asset_path": "assets/media/5e/5e4b8f6ef13701fee1d4336beec8e80f10b91ec828c6ac7da7f484e9ec699019.webp"
+        }
+      }
+    },
+    "cocorna": {
+      "id": 10003,
+      "slug": "cocorna",
+      "destination_type": "municipality",
+      "country_code": "CO",
+      "department": "Antioquia",
+      "subregion": "Oriente",
+      "latitude": null,
+      "longitude": null,
+      "publication_status": "published",
+      "display_order": 103,
+      "translations": {
+        "es": {
+          "destination_id": 10003,
+          "locale": "es",
+          "display_name": "Cocorná",
+          "eyebrow": "Antioquia · Oriente",
+          "headline": "Montañas, cascadas y aventura en el Oriente antioqueño.",
+          "intro": "Montañas, cascadas y aventura en el Oriente antioqueño.",
+          "meta_description": "Montañas, cascadas y aventura en el Oriente antioqueño."
+        },
+        "en": {
+          "destination_id": 10003,
+          "locale": "en",
+          "display_name": "Cocorná",
+          "eyebrow": "Antioquia · Oriente",
+          "headline": "Mountains, waterfalls and adventure in eastern Antioquia.",
+          "intro": "Mountains, waterfalls and adventure in eastern Antioquia.",
+          "meta_description": "Mountains, waterfalls and adventure in eastern Antioquia."
+        },
+        "pt-BR": {
+          "destination_id": 10003,
+          "locale": "pt-BR",
+          "display_name": "Cocorná",
+          "eyebrow": "Antioquia · Oriente",
+          "headline": "Montanhas, cachoeiras e aventura no leste de Antioquia.",
+          "intro": "Montanhas, cachoeiras e aventura no leste de Antioquia.",
+          "meta_description": "Montanhas, cachoeiras e aventura no leste de Antioquia."
+        }
+      },
+      "history": {
+        "es": [
+          "Los caminos arrieros y la agricultura marcaron el crecimiento de Cocorná. Hoy sus ríos y montañas también sostienen una vocación de turismo de naturaleza."
+        ],
+        "en": [
+          "Mule trails and farming shaped the growth of Cocorná. Its rivers and mountains now also support nature tourism."
+        ],
+        "pt-BR": [
+          "Os caminhos dos tropeiros e a agricultura marcaram o crescimento de Cocorná. Hoje seus rios e montanhas também sustentam o turismo de natureza."
+        ]
+      },
+      "reasons": {
+        "es": [
+          "Montañas, cascadas y aventura en el Oriente antioqueño."
+        ],
+        "en": [
+          "Mountains, waterfalls and adventure in eastern Antioquia."
+        ],
+        "pt-BR": [
+          "Montanhas, cachoeiras e aventura no leste de Antioquia."
+        ]
+      },
+      "sources": {
+        "es": [
+          {
+            "label": "Provincia ABT — Cocorná",
+            "url": "https://provincia-abt.gov.co/bosques/cocorna/"
+          }
+        ],
+        "en": [
+          {
+            "label": "Provincia ABT — Cocorná",
+            "url": "https://provincia-abt.gov.co/bosques/cocorna/"
+          }
+        ],
+        "pt-BR": [
+          {
+            "label": "Provincia ABT — Cocorná",
+            "url": "https://provincia-abt.gov.co/bosques/cocorna/"
+          }
+        ]
+      },
+      "places": [
+        {
+          "id": 1000301,
+          "slug": "cascada-las-perlas",
+          "type": "place",
+          "publication_status": "published",
+          "latitude": null,
+          "longitude": null,
+          "display_order": 1,
+          "media_asset_id": -10016,
+          "translations": {
+            "es": {
+              "name": "Cascada Las Perlas",
+              "description": "Una caída de agua entre las montañas de Cocorná.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Las Perlas Waterfall",
+              "description": "A waterfall among the mountains of Cocorná.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Cachoeira Las Perlas",
+              "description": "Uma queda d’água entre as montanhas de Cocorná.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          }
+        },
+        {
+          "id": 1000302,
+          "slug": "parque-principal",
+          "type": "place",
+          "publication_status": "published",
+          "latitude": null,
+          "longitude": null,
+          "display_order": 2,
+          "media_asset_id": -10017,
+          "translations": {
+            "es": {
+              "name": "Parque principal",
+              "description": "El centro del pueblo, alrededor de su iglesia y calles comerciales.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Main square",
+              "description": "The town centre, around its church and shopping streets.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Praça principal",
+              "description": "O centro da cidade, ao redor da igreja e das ruas comerciais.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          }
+        },
+        {
+          "id": 1000303,
+          "slug": "parapente",
+          "type": "experience",
+          "publication_status": "published",
+          "latitude": null,
+          "longitude": null,
+          "display_order": 3,
+          "media_asset_id": -10018,
+          "translations": {
+            "es": {
+              "name": "Parapente en Cocorná",
+              "description": "Un vuelo acompañado entre montañas y cascadas.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Paragliding in Cocorná",
+              "description": "A tandem flight among mountains and waterfalls.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Parapente em Cocorná",
+              "description": "Um voo acompanhado entre montanhas e cachoeiras.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          }
+        },
+        {
+          "id": 1000304,
+          "slug": "rafting-calderas",
+          "type": "experience",
+          "publication_status": "published",
+          "latitude": null,
+          "longitude": null,
+          "display_order": 4,
+          "media_asset_id": -10019,
+          "translations": {
+            "es": {
+              "name": "Rafting en el río Calderas",
+              "description": "Recorre los rápidos con un equipo de guías.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Rafting on the Calderas River",
+              "description": "Navigate the rapids with a team of guides.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Rafting no rio Calderas",
+              "description": "Percorra as corredeiras com uma equipe de guias.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          }
+        },
+        {
+          "id": 1000305,
+          "slug": "excursion-melcocho",
+          "type": "experience",
+          "publication_status": "published",
+          "latitude": null,
+          "longitude": null,
+          "display_order": 5,
+          "media_asset_id": -10020,
+          "translations": {
+            "es": {
+              "name": "Excursión al río Melcocho",
+              "description": "Senderos y pozos de agua en una salida guiada.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Melcocho River excursion",
+              "description": "Trails and river pools on a guided outing.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Excursão ao rio Melcocho",
+              "description": "Trilhas e poços de água em um passeio guiado.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          }
+        }
+      ],
+      "destination_media": {
+        "hero": {
+          "role": "hero",
+          "media_asset_id": -10017,
+          "asset_path": "assets/media/8f/8f9bc8e23c2a74079a0965498cfe7d030d8c48fd550815b2c99f07c8740393e4.webp"
+        }
+      }
+    },
+    "arboletes": {
+      "id": 10004,
+      "slug": "arboletes",
+      "destination_type": "municipality",
+      "country_code": "CO",
+      "department": "Antioquia",
+      "subregion": "Urabá",
+      "latitude": null,
+      "longitude": null,
+      "publication_status": "published",
+      "display_order": 104,
+      "translations": {
+        "es": {
+          "destination_id": 10004,
+          "locale": "es",
+          "display_name": "Arboletes",
+          "eyebrow": "Antioquia · Colombia",
+          "headline": "Mar Caribe, volcán de lodo y cultura del Urabá antioqueño.",
+          "intro": "Conoce el volcán de lodo y el litoral de este municipio costero de Antioquia.",
+          "meta_description": "Descubre el volcán de lodo, las playas urbanas y Río Hobo en Arboletes, Antioquia. Prepara tu visita al Caribe del Urabá."
+        },
+        "en": {
+          "destination_id": 10004,
+          "locale": "en",
+          "display_name": "Arboletes",
+          "eyebrow": "Antioquia · Colombia",
+          "headline": "Caribbean coast, mud volcano and the culture of Urabá.",
+          "intro": "Discover the mud volcano and coastline of this seaside municipality in Antioquia.",
+          "meta_description": "Discover the mud volcano, urban beaches and Hobo River in Arboletes, Antioquia. Plan a visit to the Caribbean coast of Urabá."
+        },
+        "pt-BR": {
+          "destination_id": 10004,
+          "locale": "pt-BR",
+          "display_name": "Arboletes",
+          "eyebrow": "Antioquia · Colombia",
+          "headline": "Mar do Caribe, vulcão de lama e cultura do Urabá antioquenho.",
+          "intro": "Conheça o vulcão de lama e o litoral deste município costeiro de Antioquia.",
+          "meta_description": "Descubra o vulcão de lama, as praias urbanas e o rio Hobo em Arboletes, Antioquia. Planeje sua visita ao Caribe do Urabá."
+        }
+      },
+      "history": {
+        "es": [
+          "La ganadería, la agricultura y el mar forman parte de la vida de Arboletes. Su volcán de lodo y las tradiciones del Caribe dan identidad a este rincón del Urabá."
+        ],
+        "en": [
+          "Cattle farming, agriculture and the sea are part of daily life in Arboletes. Its mud volcano and Caribbean traditions shape the identity of this corner of Urabá."
+        ],
+        "pt-BR": [
+          "A pecuária, a agricultura e o mar fazem parte da vida de Arboletes. Seu vulcão de lama e as tradições caribenhas dão identidade a este canto do Urabá."
+        ]
+      },
+      "reasons": {
+        "es": [
+          "Un volcán de lodo junto al Caribe",
+          "Paisaje costero del Urabá",
+          "Tradiciones del Caribe antioqueño"
+        ],
+        "en": [
+          "A mud volcano by the Caribbean",
+          "The coastline of Urabá",
+          "Caribbean traditions in Antioquia"
+        ],
+        "pt-BR": [
+          "Um vulcão de lama junto ao Caribe",
+          "Paisagem costeira do Urabá",
+          "Tradições do Caribe antioquenho"
+        ]
+      },
+      "sources": {
+        "es": [],
+        "en": [],
+        "pt-BR": []
+      },
+      "places": [
+        {
+          "id": 1000401,
+          "slug": "volcan-de-lodo",
+          "type": "experience",
+          "publication_status": "published",
+          "latitude": null,
+          "longitude": null,
+          "display_order": 1,
+          "media_asset_id": -10021,
+          "translations": {
+            "es": {
+              "name": "Volcán de Lodo",
+              "description": "Un fenómeno geológico junto al Caribe, con acceso administrado.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Mud Volcano",
+              "description": "A geological formation beside the Caribbean, with managed access.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Vulcão de Lama",
+              "description": "Uma formação geológica junto ao Caribe, com acesso administrado.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          }
+        },
+        {
+          "id": 1000402,
+          "slug": "playas-urbanas",
+          "type": "place",
+          "publication_status": "published",
+          "latitude": null,
+          "longitude": null,
+          "display_order": 2,
+          "media_asset_id": -10022,
+          "translations": {
+            "es": {
+              "name": "Playas urbanas",
+              "description": "El litoral junto al pueblo, entre sectores de playa y frentes construidos.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Urban beaches",
+              "description": "The town coastline, combining beach sections with built-up waterfronts.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Praias urbanas",
+              "description": "O litoral junto à cidade, entre trechos de praia e áreas construídas.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          }
+        },
+        {
+          "id": 1000403,
+          "slug": "desembocadura-rio-hobo",
+          "type": "place",
+          "publication_status": "published",
+          "latitude": null,
+          "longitude": null,
+          "display_order": 3,
+          "media_asset_id": -10023,
+          "translations": {
+            "es": {
+              "name": "Desembocadura del río Hobo",
+              "description": "El encuentro del río con el Caribe y su paisaje ribereño.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Hobo River mouth",
+              "description": "Where the river meets the Caribbean and its riverside landscape.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Foz do rio Hobo",
+              "description": "O encontro do rio com o Caribe e sua paisagem ribeirinha.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          }
+        },
+        {
+          "id": 1000404,
+          "slug": "taller-bullerengue",
+          "type": "experience",
+          "publication_status": "published",
+          "latitude": null,
+          "longitude": null,
+          "display_order": 4,
+          "media_asset_id": -10024,
+          "translations": {
+            "es": {
+              "name": "Taller de bullerengue",
+              "description": "Acércate al ritmo y al baile de esta tradición del Caribe.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Bullerengue workshop",
+              "description": "Discover the rhythm and dance of this Caribbean tradition.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Oficina de bullerengue",
+              "description": "Conheça o ritmo e a dança desta tradição caribenha.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          }
+        },
+        {
+          "id": 1000405,
+          "slug": "hotel-riviera-del-sol",
+          "type": "place",
+          "publication_status": "published",
+          "latitude": null,
+          "longitude": null,
+          "display_order": 5,
+          "media_asset_id": -10025,
+          "translations": {
+            "es": {
+              "name": "Hotel Riviera del Sol Spa",
+              "description": "Hotel temático de Arboletes con arquitectura de castillo, piscinas y toboganes, conocido popularmente como el «Disney colombiano». Es un establecimiento privado: consulta directamente sus condiciones de ingreso y reserva.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Riviera del Sol Spa Hotel",
+              "description": "A private themed hotel in Arboletes with castle architecture, swimming pools and slides. Contact the property directly for admission and booking conditions.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Hotel Riviera del Sol Spa",
+              "description": "Hotel temático privado em Arboletes, com arquitetura de castelo, piscinas e escorregadores. Consulte diretamente as condições de entrada e reserva.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          }
+        }
+      ],
+      "destination_media": {
+        "hero": {
+          "role": "hero",
+          "media_asset_id": -10026,
+          "asset_path": "assets/media/98/98d759d25a91891ef0142ecd3ef7ed51baed6573c92191782695c484f0fffd45.webp"
         }
       }
     }
@@ -20822,6 +22002,604 @@
         "display_order": 0,
         "created_at": "2026-10-19 09:48:24",
         "updated_at": "2026-10-19 09:48:24"
+      },
+      {
+        "id": 100010000,
+        "public_id": "7ea5f64a-0f50-52ec-b35d-eb7c608d2ba4",
+        "destination_id": 10001,
+        "category_code": "hospedaje",
+        "slug": "hotel-los-recuerdos",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010001,
+        "public_id": "cffc6a90-2d87-536a-b8eb-221fad65d137",
+        "destination_id": 10001,
+        "category_code": "hospedaje",
+        "slug": "hotel-guatatur",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 1,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010002,
+        "public_id": "3ba37d08-fb4b-57a4-bdb6-ee8ac18ffa05",
+        "destination_id": 10001,
+        "category_code": "hospedaje",
+        "slug": "hotel-avenida",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 2,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010003,
+        "public_id": "e5dd6492-3a97-53f4-8f15-49fbbc245370",
+        "destination_id": 10001,
+        "category_code": "hospedaje",
+        "slug": "hotel-brisas-de-guatape",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 3,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010004,
+        "public_id": "578eff5f-cb54-5fd1-ac93-e0ad8348f5ed",
+        "destination_id": 10001,
+        "category_code": "hospedaje",
+        "slug": "hotel-real",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 4,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010005,
+        "public_id": "100a196c-b767-588b-96ef-23645f50b60e",
+        "destination_id": 10001,
+        "category_code": "hospedaje",
+        "slug": "hotel-san-juan",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 5,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010006,
+        "public_id": "fe805b0c-ee84-5ea9-90b5-f8bff882c5d6",
+        "destination_id": 10001,
+        "category_code": "hospedaje",
+        "slug": "hotel-zocalo-real",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 6,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010007,
+        "public_id": "a74ea525-1fb5-50dd-b3ac-15a0dfbd92e2",
+        "destination_id": 10001,
+        "category_code": "hospedaje",
+        "slug": "hotel-el-descanso-del-arriero",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 7,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010008,
+        "public_id": "baf91020-57e3-5186-bebe-5ebc08d5042c",
+        "destination_id": 10001,
+        "category_code": "alimentacion",
+        "slug": "del-porto",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 8,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010009,
+        "public_id": "9c8e09a3-acd5-5c33-9d7d-b0d07ba3e0ff",
+        "destination_id": 10001,
+        "category_code": "alimentacion",
+        "slug": "dulces-de-guatape",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 9,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010010,
+        "public_id": "07515a41-60c5-5842-b3af-e54ebd7c564b",
+        "destination_id": 10001,
+        "category_code": "alimentacion",
+        "slug": "guatape-es-dulce",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 10,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010011,
+        "public_id": "ae905f6c-f666-53ce-8898-8f49d7ebf12c",
+        "destination_id": 10001,
+        "category_code": "alimentacion",
+        "slug": "el-balcon-paisa",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 11,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010012,
+        "public_id": "82eeb45d-56b0-512c-81ee-4f51622f42dd",
+        "destination_id": 10001,
+        "category_code": "alimentacion",
+        "slug": "el-candil",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 12,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010013,
+        "public_id": "8437f3f0-6427-57b9-8249-44d63d1750b8",
+        "destination_id": 10001,
+        "category_code": "alimentacion",
+        "slug": "la-cumparsita-parrilleros-argentinos",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 13,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010014,
+        "public_id": "48c3d5df-82e9-5390-95f3-a535a91abd2e",
+        "destination_id": 10001,
+        "category_code": "alimentacion",
+        "slug": "la-fogata",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 14,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010015,
+        "public_id": "ab28f8aa-c496-5c3b-80a6-701c21d27f45",
+        "destination_id": 10001,
+        "category_code": "alimentacion",
+        "slug": "restaurante-stone",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 15,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010016,
+        "public_id": "056b9cef-a57a-54f3-a081-119d398a2ef3",
+        "destination_id": 10001,
+        "category_code": "comercio",
+        "slug": "moda-giveriana",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 16,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010017,
+        "public_id": "1c2f948d-ad64-5e2a-9c54-9246dd7c9dd9",
+        "destination_id": 10001,
+        "category_code": "comercio",
+        "slug": "arte-a-mano",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 17,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010018,
+        "public_id": "2444f43b-2510-5742-8582-1f78d4cea54b",
+        "destination_id": 10001,
+        "category_code": "comercio",
+        "slug": "el-churro",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 18,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010019,
+        "public_id": "7c133576-976c-53e9-9946-a4590c571a5f",
+        "destination_id": 10001,
+        "category_code": "comercio",
+        "slug": "mega-tienda",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 19,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010020,
+        "public_id": "7d7a394e-782b-58a3-9757-ecedabecb2ea",
+        "destination_id": 10001,
+        "category_code": "comercio",
+        "slug": "papeleria-mundial",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 20,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010021,
+        "public_id": "84414a45-7778-5102-81bf-b52beab2ae06",
+        "destination_id": 10001,
+        "category_code": "salud",
+        "slug": "drogueria-cuatro-esquinas-guatape",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 21,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010022,
+        "public_id": "638b67e5-8145-5cc2-8d6b-feb5461f471c",
+        "destination_id": 10001,
+        "category_code": "vida-nocturna",
+        "slug": "macondo",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 22,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010023,
+        "public_id": "c9ac2a38-41f3-5295-b84b-542786e38f95",
+        "destination_id": 10001,
+        "category_code": "experiencias",
+        "slug": "outdoors-guatape",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 23,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010024,
+        "public_id": "b3be0e5b-10f1-528e-a761-668e7f0a3b87",
+        "destination_id": 10001,
+        "category_code": "experiencias",
+        "slug": "vikingos-club-nautico",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 24,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010025,
+        "public_id": "73e917f4-7db1-5496-962b-ba89bfba73b8",
+        "destination_id": 10001,
+        "category_code": "transporte",
+        "slug": "sotrasanvicente-guatape-la-piedra",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 25,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010026,
+        "public_id": "bfb83458-d84f-504c-a384-5d8624ef3a18",
+        "destination_id": 10001,
+        "category_code": "servicios",
+        "slug": "arkit-s-a-s",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 26,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010027,
+        "public_id": "6b97fd7b-3be6-503d-8d6d-86e63be19e82",
+        "destination_id": 10001,
+        "category_code": "servicios",
+        "slug": "sertel",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 27,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010028,
+        "public_id": "97c72159-afae-50b1-80fe-5e4ee5069d19",
+        "destination_id": 10001,
+        "category_code": "servicios",
+        "slug": "inmobiliaria-buen-vivir",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 28,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010029,
+        "public_id": "da91b1dd-d9aa-53f1-b807-2c085609375e",
+        "destination_id": 10001,
+        "category_code": "servicios",
+        "slug": "inmobiliaria-othelonix",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 29,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010030,
+        "public_id": "ab2dad3e-3b57-5dd6-94f6-c617021270d0",
+        "destination_id": 10001,
+        "category_code": "hospedaje",
+        "slug": "hotel-verony-guatape",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 30,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010031,
+        "public_id": "5042ee6b-f1f5-5314-b641-0ec108d04093",
+        "destination_id": 10001,
+        "category_code": "hospedaje",
+        "slug": "hotel-zocalo-campestre",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 31,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010032,
+        "public_id": "789cef9c-3fa0-5dc4-b687-32e0a3eaf729",
+        "destination_id": 10001,
+        "category_code": "licores",
+        "slug": "licorera-cienfuegos",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 32,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100010033,
+        "public_id": "51b61b05-4de9-5cc2-89fe-c29dc3666757",
+        "destination_id": 10001,
+        "category_code": "cultura",
+        "slug": "museo-del-zocalo",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 33,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100030000,
+        "public_id": "681fe1f9-2557-56ad-8184-3ab7030dd4c3",
+        "destination_id": 10003,
+        "category_code": "hospedaje",
+        "slug": "tierra-de-agua",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100030001,
+        "public_id": "d1b41c88-4160-5ad9-b8c7-8f0008efa351",
+        "destination_id": 10003,
+        "category_code": "hospedaje",
+        "slug": "cascadia-cocorna",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 1,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100030002,
+        "public_id": "99c099e7-4ff5-5513-a669-bba253414408",
+        "destination_id": 10003,
+        "category_code": "experiencias",
+        "slug": "aventura-cocorna",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 2,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100030003,
+        "public_id": "57f1f2d0-c8ed-5611-aa30-61152be5578f",
+        "destination_id": 10003,
+        "category_code": "hospedaje",
+        "slug": "hotel-plaza-centro-cocorna",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 3,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100030004,
+        "public_id": "c52732eb-719e-5c00-ab4e-d0f18f6cd014",
+        "destination_id": 10003,
+        "category_code": "hospedaje",
+        "slug": "hotel-aguatur-cocorna",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 4,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100030005,
+        "public_id": "05dcbed9-af18-532f-9e8b-3d94f1053bf6",
+        "destination_id": 10003,
+        "category_code": "transporte",
+        "slug": "flota-granada-servicio-cocorna",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 5,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100040000,
+        "public_id": "375bd635-f8a7-56e0-bade-c2a322a2268f",
+        "destination_id": 10004,
+        "category_code": "hospedaje",
+        "slug": "hotel-boutique-el-mirador",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100040001,
+        "public_id": "d32bb98e-fa7c-5498-8a15-c8bb37cebd15",
+        "destination_id": 10004,
+        "category_code": "hospedaje",
+        "slug": "riviera-del-sol-hotel-spa",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 1,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100040002,
+        "public_id": "0368ef5f-9895-5627-b4ce-be148eb7c18b",
+        "destination_id": 10004,
+        "category_code": "experiencias",
+        "slug": "operaciones-turisticas-ligero-de-equipaje",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 2,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100040003,
+        "public_id": "e79128e0-2e57-57b8-bfeb-aa433f80ce5e",
+        "destination_id": 10004,
+        "category_code": "transporte",
+        "slug": "rapido-ochoa-arboletes",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 3,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100040004,
+        "public_id": "d5909bc4-21f5-5272-9f9e-ca2b8951284a",
+        "destination_id": 10004,
+        "category_code": "comercio",
+        "slug": "tienda-d1-arboletes",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 4,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100040005,
+        "public_id": "57d2c341-a1d6-5169-8738-129ed0786b46",
+        "destination_id": 10004,
+        "category_code": "servicios",
+        "slug": "notaria-unica-de-arboletes",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 5,
+        "record_origin": "public_import"
       }
     ],
     "business_translations": [
@@ -32299,6 +34077,972 @@
         "description": "",
         "brand_story": null,
         "featured_services": null
+      },
+      {
+        "business_id": 100010000,
+        "locale": "es",
+        "display_name": "Hotel Los Recuerdos",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010000,
+        "locale": "en",
+        "display_name": "Hotel Los Recuerdos",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010000,
+        "locale": "pt-BR",
+        "display_name": "Hotel Los Recuerdos",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010001,
+        "locale": "es",
+        "display_name": "Hotel Guatatur",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010001,
+        "locale": "en",
+        "display_name": "Hotel Guatatur",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010001,
+        "locale": "pt-BR",
+        "display_name": "Hotel Guatatur",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010002,
+        "locale": "es",
+        "display_name": "Hotel Avenida",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010002,
+        "locale": "en",
+        "display_name": "Hotel Avenida",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010002,
+        "locale": "pt-BR",
+        "display_name": "Hotel Avenida",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010003,
+        "locale": "es",
+        "display_name": "Hotel Brisas de Guatapé",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010003,
+        "locale": "en",
+        "display_name": "Hotel Brisas de Guatapé",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010003,
+        "locale": "pt-BR",
+        "display_name": "Hotel Brisas de Guatapé",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010004,
+        "locale": "es",
+        "display_name": "Hotel Real",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010004,
+        "locale": "en",
+        "display_name": "Hotel Real",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010004,
+        "locale": "pt-BR",
+        "display_name": "Hotel Real",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010005,
+        "locale": "es",
+        "display_name": "Hotel San Juan",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010005,
+        "locale": "en",
+        "display_name": "Hotel San Juan",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010005,
+        "locale": "pt-BR",
+        "display_name": "Hotel San Juan",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010006,
+        "locale": "es",
+        "display_name": "Hotel Zócalo Real",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010006,
+        "locale": "en",
+        "display_name": "Hotel Zócalo Real",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010006,
+        "locale": "pt-BR",
+        "display_name": "Hotel Zócalo Real",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010007,
+        "locale": "es",
+        "display_name": "Hotel El Descanso del Arriero",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010007,
+        "locale": "en",
+        "display_name": "Hotel El Descanso del Arriero",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010007,
+        "locale": "pt-BR",
+        "display_name": "Hotel El Descanso del Arriero",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010008,
+        "locale": "es",
+        "display_name": "Del Porto",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010008,
+        "locale": "en",
+        "display_name": "Del Porto",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010008,
+        "locale": "pt-BR",
+        "display_name": "Del Porto",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010009,
+        "locale": "es",
+        "display_name": "Dulces de Guatapé",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010009,
+        "locale": "en",
+        "display_name": "Dulces de Guatapé",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010009,
+        "locale": "pt-BR",
+        "display_name": "Dulces de Guatapé",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010010,
+        "locale": "es",
+        "display_name": "Guatapé es dulce",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010010,
+        "locale": "en",
+        "display_name": "Guatapé es dulce",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010010,
+        "locale": "pt-BR",
+        "display_name": "Guatapé es dulce",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010011,
+        "locale": "es",
+        "display_name": "El Balcón Paisa",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010011,
+        "locale": "en",
+        "display_name": "El Balcón Paisa",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010011,
+        "locale": "pt-BR",
+        "display_name": "El Balcón Paisa",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010012,
+        "locale": "es",
+        "display_name": "El Candil",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010012,
+        "locale": "en",
+        "display_name": "El Candil",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010012,
+        "locale": "pt-BR",
+        "display_name": "El Candil",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010013,
+        "locale": "es",
+        "display_name": "La Cumparsita Parrilleros Argentinos",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010013,
+        "locale": "en",
+        "display_name": "La Cumparsita Parrilleros Argentinos",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010013,
+        "locale": "pt-BR",
+        "display_name": "La Cumparsita Parrilleros Argentinos",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010014,
+        "locale": "es",
+        "display_name": "La Fogata",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010014,
+        "locale": "en",
+        "display_name": "La Fogata",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010014,
+        "locale": "pt-BR",
+        "display_name": "La Fogata",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010015,
+        "locale": "es",
+        "display_name": "Restaurante Stone",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010015,
+        "locale": "en",
+        "display_name": "Restaurante Stone",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010015,
+        "locale": "pt-BR",
+        "display_name": "Restaurante Stone",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010016,
+        "locale": "es",
+        "display_name": "Moda Giveriana",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010016,
+        "locale": "en",
+        "display_name": "Moda Giveriana",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010016,
+        "locale": "pt-BR",
+        "display_name": "Moda Giveriana",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010017,
+        "locale": "es",
+        "display_name": "Arte a Mano",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010017,
+        "locale": "en",
+        "display_name": "Arte a Mano",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010017,
+        "locale": "pt-BR",
+        "display_name": "Arte a Mano",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010018,
+        "locale": "es",
+        "display_name": "El Churro",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010018,
+        "locale": "en",
+        "display_name": "El Churro",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010018,
+        "locale": "pt-BR",
+        "display_name": "El Churro",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010019,
+        "locale": "es",
+        "display_name": "Mega Tienda",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010019,
+        "locale": "en",
+        "display_name": "Mega Tienda",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010019,
+        "locale": "pt-BR",
+        "display_name": "Mega Tienda",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010020,
+        "locale": "es",
+        "display_name": "Papelería Mundial",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010020,
+        "locale": "en",
+        "display_name": "Papelería Mundial",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010020,
+        "locale": "pt-BR",
+        "display_name": "Papelería Mundial",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010021,
+        "locale": "es",
+        "display_name": "Droguería Cuatro Esquinas Guatapé",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010021,
+        "locale": "en",
+        "display_name": "Droguería Cuatro Esquinas Guatapé",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010021,
+        "locale": "pt-BR",
+        "display_name": "Droguería Cuatro Esquinas Guatapé",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010022,
+        "locale": "es",
+        "display_name": "Macondo",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010022,
+        "locale": "en",
+        "display_name": "Macondo",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010022,
+        "locale": "pt-BR",
+        "display_name": "Macondo",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010023,
+        "locale": "es",
+        "display_name": "Outdoors Guatapé",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010023,
+        "locale": "en",
+        "display_name": "Outdoors Guatapé",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010023,
+        "locale": "pt-BR",
+        "display_name": "Outdoors Guatapé",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010024,
+        "locale": "es",
+        "display_name": "Vikingos Club Náutico",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010024,
+        "locale": "en",
+        "display_name": "Vikingos Club Náutico",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010024,
+        "locale": "pt-BR",
+        "display_name": "Vikingos Club Náutico",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010025,
+        "locale": "es",
+        "display_name": "Sotrasanvicente & Guatapé La Piedra",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010025,
+        "locale": "en",
+        "display_name": "Sotrasanvicente & Guatapé La Piedra",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010025,
+        "locale": "pt-BR",
+        "display_name": "Sotrasanvicente & Guatapé La Piedra",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010026,
+        "locale": "es",
+        "display_name": "Arkit S.A.S.",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010026,
+        "locale": "en",
+        "display_name": "Arkit S.A.S.",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010026,
+        "locale": "pt-BR",
+        "display_name": "Arkit S.A.S.",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010027,
+        "locale": "es",
+        "display_name": "SERTEL",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010027,
+        "locale": "en",
+        "display_name": "SERTEL",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010027,
+        "locale": "pt-BR",
+        "display_name": "SERTEL",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010028,
+        "locale": "es",
+        "display_name": "Inmobiliaria Buen Vivir",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010028,
+        "locale": "en",
+        "display_name": "Inmobiliaria Buen Vivir",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010028,
+        "locale": "pt-BR",
+        "display_name": "Inmobiliaria Buen Vivir",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010029,
+        "locale": "es",
+        "display_name": "Inmobiliaria Othelonix",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010029,
+        "locale": "en",
+        "display_name": "Inmobiliaria Othelonix",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010029,
+        "locale": "pt-BR",
+        "display_name": "Inmobiliaria Othelonix",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010030,
+        "locale": "es",
+        "display_name": "Hotel Verony Guatapé",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010030,
+        "locale": "en",
+        "display_name": "Hotel Verony Guatapé",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010030,
+        "locale": "pt-BR",
+        "display_name": "Hotel Verony Guatapé",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010031,
+        "locale": "es",
+        "display_name": "Hotel Zócalo Campestre",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010031,
+        "locale": "en",
+        "display_name": "Hotel Zócalo Campestre",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010031,
+        "locale": "pt-BR",
+        "display_name": "Hotel Zócalo Campestre",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010032,
+        "locale": "es",
+        "display_name": "Licorera Cienfuegos",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010032,
+        "locale": "en",
+        "display_name": "Licorera Cienfuegos",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010032,
+        "locale": "pt-BR",
+        "display_name": "Licorera Cienfuegos",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010033,
+        "locale": "es",
+        "display_name": "Museo del Zócalo",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010033,
+        "locale": "en",
+        "display_name": "Museo del Zócalo",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100010033,
+        "locale": "pt-BR",
+        "display_name": "Museo del Zócalo",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100030000,
+        "locale": "es",
+        "display_name": "Tierra de Agua",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100030000,
+        "locale": "en",
+        "display_name": "Tierra de Agua",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100030000,
+        "locale": "pt-BR",
+        "display_name": "Tierra de Agua",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100030001,
+        "locale": "es",
+        "display_name": "Cascadia Cocorná",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100030001,
+        "locale": "en",
+        "display_name": "Cascadia Cocorná",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100030001,
+        "locale": "pt-BR",
+        "display_name": "Cascadia Cocorná",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100030002,
+        "locale": "es",
+        "display_name": "Aventura Cocorná",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100030002,
+        "locale": "en",
+        "display_name": "Aventura Cocorná",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100030002,
+        "locale": "pt-BR",
+        "display_name": "Aventura Cocorná",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100030003,
+        "locale": "es",
+        "display_name": "Hotel Plaza Centro Cocorná",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100030003,
+        "locale": "en",
+        "display_name": "Hotel Plaza Centro Cocorná",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100030003,
+        "locale": "pt-BR",
+        "display_name": "Hotel Plaza Centro Cocorná",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100030004,
+        "locale": "es",
+        "display_name": "Hotel Aguatur — Cocorná",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100030004,
+        "locale": "en",
+        "display_name": "Hotel Aguatur — Cocorná",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100030004,
+        "locale": "pt-BR",
+        "display_name": "Hotel Aguatur — Cocorná",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100030005,
+        "locale": "es",
+        "display_name": "Flota Granada — servicio Cocorná",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100030005,
+        "locale": "en",
+        "display_name": "Flota Granada — servicio Cocorná",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100030005,
+        "locale": "pt-BR",
+        "display_name": "Flota Granada — servicio Cocorná",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100040000,
+        "locale": "es",
+        "display_name": "Hotel Boutique El Mirador",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100040000,
+        "locale": "en",
+        "display_name": "Hotel Boutique El Mirador",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100040000,
+        "locale": "pt-BR",
+        "display_name": "Hotel Boutique El Mirador",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100040001,
+        "locale": "es",
+        "display_name": "Riviera del Sol Hotel & Spa",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100040001,
+        "locale": "en",
+        "display_name": "Riviera del Sol Hotel & Spa",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100040001,
+        "locale": "pt-BR",
+        "display_name": "Riviera del Sol Hotel & Spa",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100040002,
+        "locale": "es",
+        "display_name": "Operaciones Turísticas Ligero de Equipaje",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100040002,
+        "locale": "en",
+        "display_name": "Operaciones Turísticas Ligero de Equipaje",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100040002,
+        "locale": "pt-BR",
+        "display_name": "Operaciones Turísticas Ligero de Equipaje",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100040003,
+        "locale": "es",
+        "display_name": "Rápido Ochoa — Arboletes",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100040003,
+        "locale": "en",
+        "display_name": "Rápido Ochoa — Arboletes",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100040003,
+        "locale": "pt-BR",
+        "display_name": "Rápido Ochoa — Arboletes",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100040004,
+        "locale": "es",
+        "display_name": "Tienda D1 Arboletes",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100040004,
+        "locale": "en",
+        "display_name": "Tienda D1 Arboletes",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100040004,
+        "locale": "pt-BR",
+        "display_name": "Tienda D1 Arboletes",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100040005,
+        "locale": "es",
+        "display_name": "Notaría Única de Arboletes",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100040005,
+        "locale": "en",
+        "display_name": "Notaría Única de Arboletes",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100040005,
+        "locale": "pt-BR",
+        "display_name": "Notaría Única de Arboletes",
+        "summary": "",
+        "description": ""
       }
     ],
     "business_categories": [],
@@ -35914,6 +38658,426 @@
         "source_url": "https://colombia.travel/es/el-jardin",
         "checked_at": "2026-10-19 00:00:00",
         "note": "Nombre listado públicamente en Jardín; operación, contactos y representación pendientes de verificar. No aliado confirmado."
+      },
+      {
+        "business_id": 100010000,
+        "source_url": "https://hotellosrecuerdos.com/",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010001,
+        "source_url": "https://guataturhotel.com/",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010002,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010002,
+        "source_url": "https://www.google.com.co/travel/hotels/entity/ChoI2b2Lwq3Wn8nXARoNL2cvMTFxbmQ2N3J3MRAB",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010003,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010003,
+        "source_url": "https://www.google.com/travel/hotels/entity/ChoIlaTL0piQjM-MARoNL2cvMTFnOGJ3cHhtOBAB",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010004,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010004,
+        "source_url": "https://www.municipiodeguatape.gov.co/publicaciones/264/hoteles/",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010005,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010005,
+        "source_url": "https://ccoa.org.co/wp-content/uploads/2020/10/Boletin_Marzo-2019.pdf",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010006,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010006,
+        "source_url": "https://www.airbnb.com/rooms/1293803401070952074",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010007,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010007,
+        "source_url": "https://www.airbnb.com.gt/rooms/1347792134858839825",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010008,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010008,
+        "source_url": "https://www.municipiodeguatape.gov.co/publicaciones/262/restaurantes/",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010009,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010009,
+        "source_url": "https://www.icbf.gov.co/sites/default/files/censo_plantas_alimentos_y_beneficio_animal_-_antioquia_2018.pdf",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010010,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010010,
+        "source_url": "https://evendo.com/locations/colombia/guatape/shop/guatape-es-dulce",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010011,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010011,
+        "source_url": "https://www.municipiodeguatape.gov.co/publicaciones/262/restaurantes/",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010012,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010012,
+        "source_url": "https://www.airbnb.com.gt/rooms/1347792134858839825",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010013,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010013,
+        "source_url": "https://sites.google.com/a/antioquia.in/guatape/restaurantes/la-cumparsita-parrilleros-argentinos",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010014,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010014,
+        "source_url": "https://www.guatapecolombia.net/portfolio/la-fogata/",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010015,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010015,
+        "source_url": "https://www.municipiodeguatape.gov.co/publicaciones/262/restaurantes/",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010016,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010016,
+        "source_url": "https://leonxiii.coop/gran-clausura-del-mes-del-creceahorro-2025/",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010017,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010017,
+        "source_url": "https://corpotur.com/vive/arte-a-mano/",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010018,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010018,
+        "source_url": "https://cornare.gov.co/documentos/tiendas-para-reclamar-tu-bolsa.pdf",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010019,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010019,
+        "source_url": "https://es.cybo.com/CO-biz/mega-tienda-la-avenida",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010020,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010020,
+        "source_url": "https://ccoa.org.co/wp-content/uploads/2026/02/NoticiaMercantilEnero2026.pdf",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010021,
+        "source_url": "https://dssa.gov.co/images/vigilanciaSanitaria2025/CENSO%20ESTABLECIMIENTOS%20FARMAC%C3%89UTICOS_%20ANTIOQUIA%20CORTE%2031-01-2025.pdf",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010022,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010022,
+        "source_url": "https://guatape.antioquia.in/entretenimiento/bares-y-discotecas/macondo",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010023,
+        "source_url": "https://www.outdoorsguatape.com/en/product/tour-en-kayak/",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010024,
+        "source_url": "https://www.vikingosclubnauticoguatape.com/es/reservaciones",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010025,
+        "source_url": "https://www.sotrasanvicente.com/en/",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010026,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010026,
+        "source_url": "https://sites.google.com/a/antioquia.in/guatape/servicios/construccion/arkit-s-a-s",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010027,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010027,
+        "source_url": "https://www.uniamazonia.edu.co/documentos/docs/Oficina%20Asesora%20de%20Planeacion/JEA/2024/RJPuntosDePagoCiclo42024.pdf",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010028,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010028,
+        "source_url": "https://guatape.antioquia.in/servicios/inmobiliarias/inmobiliaria-buen-vivir",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010029,
+        "source_url": "https://guatape.antioquia.in/comercio",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010029,
+        "source_url": "https://www.bienesonline.co/inmobiliaria/24604/inmobiliaria-othelonix",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010030,
+        "source_url": "https://www.hotelveronyguatape.com/",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010031,
+        "source_url": "https://hotelzocalocampestre.com/contacto/",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010032,
+        "source_url": "https://corpotur.com/vive/licorera-cienfuegos/",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100010033,
+        "source_url": "https://museodelzocalo.com/",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100030000,
+        "source_url": "https://tierradeagua.org/",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100030001,
+        "source_url": "https://www.cascadiacocorna.com/",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100030002,
+        "source_url": "https://aventuracocorna.com/",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100030003,
+        "source_url": "https://www.hotelplazacentro.net/",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100030004,
+        "source_url": "https://www.aguatur.co/",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100030005,
+        "source_url": "https://www.flotagranadasas.com/destinos/cocorna/",
+        "checked_at": "2026-10-20",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100040000,
+        "source_url": "https://www.hotelelmiradordearboletes.com/index.php",
+        "checked_at": "2026-10-21",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100040001,
+        "source_url": "https://rivieradelsol.co/es/",
+        "checked_at": "2026-10-21",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100040002,
+        "source_url": "https://corporacionturisticaurabadariencaribe.com/empresas/operadora-turistica-ligero-equipaje/",
+        "checked_at": "2026-10-21",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100040003,
+        "source_url": "https://www.rapidoochoa.com.co/bus-de/monteria-a-arboletes/",
+        "checked_at": "2026-10-21",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100040004,
+        "source_url": "https://d1.com.co/wp-content/uploads/TemporadaMayo_TiendasDisponibles_1.pdf",
+        "checked_at": "2026-10-21",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100040005,
+        "source_url": "https://notariaunicaarboletes.com.co/nosotros/",
+        "checked_at": "2026-10-21",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
       }
     ],
     "business_contacts": [],
@@ -37322,6 +40486,402 @@
         "width": 800,
         "height": 533,
         "provenance_json": "{\"sha256\": \"d4ae93596017fb615a41a00333c86d1d0b548fe71139f3a759f552efaeb7cfd3\", \"destination\": \"santa-marta\", \"selection\": \"current reviewed preprod\"}"
+      },
+      {
+        "id": -10000,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/34/3448bdaa0c557d4a39869d170979f82cbac5b36c95af7849d3e509736ad9a92e.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"guatape--penon-guatape\", \"master_sha256\": \"8bd3c035970fee1a72fb4a79042373d3480b4bb787a33931843c34321c3a436c\", \"web_sha256\": \"3448bdaa0c557d4a39869d170979f82cbac5b36c95af7849d3e509736ad9a92e\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/guatape\"}"
+      },
+      {
+        "id": -10001,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/b7/b7270e68ba7c7ffabda536d1861e73a8733bd0b70cf3fdd044713b65758b4547.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"guatape--plazoleta-zocalos\", \"master_sha256\": \"adab7a64c44d77679e48c70c059890a36120be15c6f0d151aaae0c30175ff053\", \"web_sha256\": \"b7270e68ba7c7ffabda536d1861e73a8733bd0b70cf3fdd044713b65758b4547\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/guatape\"}"
+      },
+      {
+        "id": -10002,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/a9/a95e3c4a0f163bfc3a215d346ba9679ce19435fc3a34f8fd69bb673d04186490.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"guatape--calle-sombrillas\", \"master_sha256\": \"63f93827209033df2964d511a92433edb012bad56b149e028346fe47d15484e8\", \"web_sha256\": \"a95e3c4a0f163bfc3a215d346ba9679ce19435fc3a34f8fd69bb673d04186490\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/guatape\"}"
+      },
+      {
+        "id": -10003,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/20/20b88ae4e623bf012f9ddff2ebb00fbdb82e496fe7a1b85a54c1129999b3c7d4.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, shoreline, two levels, buildings, sculpture, red playground, boats and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"guatape--malecon-v4\", \"master_sha256\": \"3f66722add674861e4d8941027d23f08edcfbac6dc03319b5e0a375c049def96\", \"web_sha256\": \"20b88ae4e623bf012f9ddff2ebb00fbdb82e496fe7a1b85a54c1129999b3c7d4\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/guatape\"}"
+      },
+      {
+        "id": -10004,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/33/33365a13c1c59798d7710f019407594eee0599f30e7fe6c3c7edc83d12edaa26.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"guatape--parque-principal\", \"master_sha256\": \"c633c45798de8212d51634402202367344b1172260f7a69ba2dd5bf01e44f7b0\", \"web_sha256\": \"33365a13c1c59798d7710f019407594eee0599f30e7fe6c3c7edc83d12edaa26\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/guatape\"}"
+      },
+      {
+        "id": -10005,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/bd/bdb4d6a53a8fa8159320d0f0df4b4b8bb5daaba27427d8e5330a087bbd4257c3.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"guatape--paseo-embalse\", \"master_sha256\": \"ac44b1631756f6388c6a088737a0d0acedbac435fd459cbeba85961da6142716\", \"web_sha256\": \"bdb4d6a53a8fa8159320d0f0df4b4b8bb5daaba27427d8e5330a087bbd4257c3\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/guatape\"}"
+      },
+      {
+        "id": -10006,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/83/833e74a5eff63d04dc1e1c6348e11140c4ca9a51b6449a525a7a7379fa8876d7.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"guatape--jet-ski\", \"master_sha256\": \"7df5803dd963fd5fdb6e2b04af99145acd4868c75ef514878fa44b4c4def23d5\", \"web_sha256\": \"833e74a5eff63d04dc1e1c6348e11140c4ca9a51b6449a525a7a7379fa8876d7\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/guatape\"}"
+      },
+      {
+        "id": -10007,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/d0/d062624108649a5f35817d67f38a3e39940e8b5451f3adba541c926f1307a7a8.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"guatape--kayak-guiado\", \"master_sha256\": \"415343574a5c7211f12ae68d85f2cd127a6537c6104dc9b83157d496b3617ee3\", \"web_sha256\": \"d062624108649a5f35817d67f38a3e39940e8b5451f3adba541c926f1307a7a8\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/guatape\"}"
+      },
+      {
+        "id": -10008,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/ca/ca149a1bd08b69bb3915e470e68fec59e9498c4daaa7fd11f930c73e29f4c192.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"guatape--esqui-acuatico\", \"master_sha256\": \"9762157981eb548351f5316589db45c62826a5175e313495d0272507492cee81\", \"web_sha256\": \"ca149a1bd08b69bb3915e470e68fec59e9498c4daaa7fd11f930c73e29f4c192\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/guatape\"}"
+      },
+      {
+        "id": -10009,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/38/3860555ab128a9e801111046900e0f5a67c1e61d7d3d5fd726a2f77af8cc1a23.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"guatape--wakeboard\", \"master_sha256\": \"fb2c04cc96393ec56a68ee03ecef76fa0a49b53d8f0f6c2ab478369d70b838dc\", \"web_sha256\": \"3860555ab128a9e801111046900e0f5a67c1e61d7d3d5fd726a2f77af8cc1a23\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/guatape\"}"
+      },
+      {
+        "id": -10010,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/87/87c7849acefc191da5c84e3942083c4549b98bae5c976599a586861438d420df.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, landforms, buildings, water, vegetation and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"master_sha256\": \"b3e2ae8ca0ee3316b8775f760c5ec2f99d7fbc310f81f73b3f58affb5da9dd24\", \"human_approval\": \"Publicación de los cuatro lugares autorizada por propietario 2026-10-21\"}"
+      },
+      {
+        "id": -10011,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/5e/5e4b8f6ef13701fee1d4336beec8e80f10b91ec828c6ac7da7f484e9ec699019.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"cauca-viejo--plaza-principal\", \"master_sha256\": \"fcc97e1832e365d0e495b1a3e8adb40076c79249f767a0b4aee4f86a3c8be453\", \"web_sha256\": \"5e4b8f6ef13701fee1d4336beec8e80f10b91ec828c6ac7da7f484e9ec699019\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/cauca-viejo\"}"
+      },
+      {
+        "id": -10012,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/d4/d4c39418c7acc95e30cc18ccb2a3307f5e86263f3c98f37712df3ccecf0d9830.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"cauca-viejo--capilla\", \"master_sha256\": \"92ebf24f19bb0367a023ab174643d6a4dfe13fed9ca0ba8180f84d34bd9a28ac\", \"web_sha256\": \"d4c39418c7acc95e30cc18ccb2a3307f5e86263f3c98f37712df3ccecf0d9830\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/cauca-viejo\"}"
+      },
+      {
+        "id": -10013,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/45/457e5c6bbdc239fc9b3d70d35512bf6f4e46e8f807c385d73844217a5c8b28e6.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"cauca-viejo--ribera-rio-cauca\", \"master_sha256\": \"2bc6c7d0104311dac54c09e06aeeffa36a85df964b4e185c06d9760d046da4e9\", \"web_sha256\": \"457e5c6bbdc239fc9b3d70d35512bf6f4e46e8f807c385d73844217a5c8b28e6\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/cauca-viejo\"}"
+      },
+      {
+        "id": -10014,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/ad/adfe8071c8080fb0d390a204552d4c71f6ec42c1aabb9b3496daa2ac1d8ff785.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"cauca-viejo--paseo-rio-cauca\", \"master_sha256\": \"4fb7f66b3514033b9ee973fd0c5e619ab5c642078ef4ccbc32d44855c7433cbd\", \"web_sha256\": \"adfe8071c8080fb0d390a204552d4c71f6ec42c1aabb9b3496daa2ac1d8ff785\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/cauca-viejo\"}"
+      },
+      {
+        "id": -10015,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/5b/5bfe2b1b6acd42ce330043ea51765172c2ab660e2d3823208071a9b43046b2e7.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"cauca-viejo--cabalgata\", \"master_sha256\": \"424fed2b7053d0ce0f0a0c2d984f82275e954b93606dbc8e6c102095e4e24c79\", \"web_sha256\": \"5bfe2b1b6acd42ce330043ea51765172c2ab660e2d3823208071a9b43046b2e7\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/cauca-viejo\"}"
+      },
+      {
+        "id": -10016,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/4f/4fd5e9ae123e206d402afd84f025da47fa5617c5c46b605878a7a1769ebb4486.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"cocorna--cascada-las-perlas-v2\", \"master_sha256\": \"d121657822304e307a3f98fd6a9b8c7eca57bb8ab1fb1fe8100e42063df8c526\", \"web_sha256\": \"4fd5e9ae123e206d402afd84f025da47fa5617c5c46b605878a7a1769ebb4486\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/cocorna\"}"
+      },
+      {
+        "id": -10017,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/8f/8f9bc8e23c2a74079a0965498cfe7d030d8c48fd550815b2c99f07c8740393e4.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"cocorna--parque-principal-v2\", \"master_sha256\": \"eb93229b158da938c7a8c75094a9291b543635d625c09c894cc343065bbe49ce\", \"web_sha256\": \"8f9bc8e23c2a74079a0965498cfe7d030d8c48fd550815b2c99f07c8740393e4\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/cocorna\"}"
+      },
+      {
+        "id": -10018,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/5e/5efedc1530c6adaa0d553f2c01489ea0dc93358e88bd43e59673294b20df7482.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"cocorna--parapente\", \"master_sha256\": \"ec73110c07c4d3ef74393b1afa5fd9e534799e4f88dc3a0771a8602f2269979c\", \"web_sha256\": \"5efedc1530c6adaa0d553f2c01489ea0dc93358e88bd43e59673294b20df7482\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/cocorna\"}"
+      },
+      {
+        "id": -10019,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/d7/d738b697b10e41cafb7d0a3a4e167e0e8e453e33ac0db34b708cc3eb02a7c0f9.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"cocorna--rafting-calderas\", \"master_sha256\": \"38001f4d0c50b276873dc0a6bb9ed5c28a975b98dcb6b8728d205ec75d6b921f\", \"web_sha256\": \"d738b697b10e41cafb7d0a3a4e167e0e8e453e33ac0db34b708cc3eb02a7c0f9\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/cocorna\"}"
+      },
+      {
+        "id": -10020,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/b9/b9e4cd4a75f5cffbc337c499de1d5e7bcce4b1b31c3f5e04dac5fa1129728c1e.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"cocorna--excursion-melcocho-v2\", \"master_sha256\": \"13c80d529035b8f39adcd53dd8462a83b2b06607c57f9dd8068c3edd1c5e1cc0\", \"web_sha256\": \"b9e4cd4a75f5cffbc337c499de1d5e7bcce4b1b31c3f5e04dac5fa1129728c1e\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/cocorna\"}"
+      },
+      {
+        "id": -10021,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/b5/b548dd01cac9d19f42ef9556fdcb70284b2ce6f7236f1cb6aa2307de34b0add3.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"arboletes--volcan-de-lodo-experiencia-v2\", \"master_sha256\": \"c3258d2ee278d64a5bb283329a2713b6723788d4f05c165c7e33b3f686893b3b\", \"web_sha256\": \"b548dd01cac9d19f42ef9556fdcb70284b2ce6f7236f1cb6aa2307de34b0add3\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/arboletes\"}"
+      },
+      {
+        "id": -10022,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/58/5884ad76f087f8db433efa4ef6aba25cd7f7c9dab0a5dcaf1d068348d6947e65.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"arboletes--playas-urbanas-v2\", \"master_sha256\": \"5358e8db324bdaf43e9655797b74a800ba473b35c07c98efbf9c72e67d347db3\", \"web_sha256\": \"5884ad76f087f8db433efa4ef6aba25cd7f7c9dab0a5dcaf1d068348d6947e65\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/arboletes\"}"
+      },
+      {
+        "id": -10023,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/7e/7e452095d084ff7fff361e3228062ef137ef226c58c05797417659511424628c.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, landforms, buildings, water, vegetation and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"arboletes--desembocadura-rio-hobo\", \"master_sha256\": \"537f124a09f62e146ddbb9e0e4f49108ae0ba73c70b389552576c3fa6e1c950a\", \"web_sha256\": \"7e452095d084ff7fff361e3228062ef137ef226c58c05797417659511424628c\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/arboletes\"}"
+      },
+      {
+        "id": -10024,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/cf/cf6aef692d0ba601ba103a4f54c9ba8a92944fe787bcd1973c047af28c874d59.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"arboletes--taller-bullerengue\", \"master_sha256\": \"b3bedddf36e38825104a1b78bc396b329a1c40174d77eca512a24bda1994a817\", \"web_sha256\": \"cf6aef692d0ba601ba103a4f54c9ba8a92944fe787bcd1973c047af28c874d59\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/arboletes\"}"
+      },
+      {
+        "id": -10025,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/06/062d026ac71ad0b650f89c0c66c961e52492577ef5659e3943720af73123a2a2.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"arboletes--hotel-riviera-del-sol-v1\", \"master_sha256\": \"cef89b6c48fef402b4e0abe4cb7047017b81645e3eef3c45de2d30502688f7f4\", \"web_sha256\": \"062d026ac71ad0b650f89c0c66c961e52492577ef5659e3943720af73123a2a2\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/arboletes\"}"
+      },
+      {
+        "id": -10026,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/98/98d759d25a91891ef0142ecd3ef7ed51baed6573c92191782695c484f0fffd45.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"master_sha256\": \"a390bde55425d5d16ca8fd0e6556726f00cea9a7042cc4941a21190e2ca7036a\", \"human_approval\": \"Publicación de los cuatro lugares autorizada por propietario 2026-10-21\"}"
+      },
+      {
+        "id": -10027,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/a8/a8a81d24c669e43106e00065c50937705a3ddfb8876ebb23631bc420a41a2489.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"name\": \"rosario\", \"prompt\": \"Use case: style-transfer. Edit target: the supplied existing AI-generated portal illustration of Islas del Rosario, Cartagena. Create a distinctly hand-drawn editorial realistic caricature in visible ink and opaque gouache on subtly textured paper, landscape 3:2 card. Keep the reference camera, exact island outlines, positions, proportions, reef shapes, dark channel, docks and existing buildings unchanged. Change ONLY rendering: simplify fine texture into confident broad painted shapes, visible brush strokes, restrained ink contours, illustrated trees and roofs. Clearly illustration at small card size, never a photographic filter, not photorealism. Preserve natural turquoise/deep blue palette; do not add boats, people, islands, beaches, buildings, mountains, text, logos or watermarks. This is a draft style correction, not a claim of current geography.\", \"source_hash\": \"d2cdf637ee60953f2cdc7448034c8ac4fcb19ade2be490cddf2f3f2b39e21b43\", \"generated_path\": \"/Users/nivato/.codex/generated_images/01a14649-b4c8-7041-84c2-8da92c394f9a/exec-ecbafb62-605e-43bc-a271-5f5cec3ff55d.png\", \"status\": \"aprobada-por-propietario-pendiente-integracion\", \"tool\": \"image_gen built-in\", \"factual_review\": \"Pendiente: corrección de acabado sobre activo publicado; no constituye nueva validación territorial ni de permisos.\", \"master\": \"/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/revision-tres-lugares/cartagena-correcciones-20261021/rosario-tinta-gouache-v1.png\", \"master_sha256\": \"d120b0932ed9342c78b012351422908b4e0a1e1cbcf0aeb5ec6ddfe30f3f0211\", \"web_sha256\": \"a8a81d24c669e43106e00065c50937705a3ddfb8876ebb23631bc420a41a2489\", \"dimensions\": [960, 640], \"visual_review\": \"Acabado ilustrado visible; comparación territorial y aprobación humana pendientes.\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"aprobadas todas\", \"scope\": \"Las seis propuestas mostradas en /__revision-nuevos/auditoria-imagenes/cartagena-correcciones/\", \"master_sha256\": \"d120b0932ed9342c78b012351422908b4e0a1e1cbcf0aeb5ec6ddfe30f3f0211\", \"web_sha256\": \"a8a81d24c669e43106e00065c50937705a3ddfb8876ebb23631bc420a41a2489\", \"deployment_authorized\": false}}"
+      },
+      {
+        "id": -10028,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/cc/cc54e60f9c982d36125698860a699d2d4c2cfde6ba0d0be8057773c7251dd9de.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"name\": \"buceo\", \"prompt\": \"Use case: style-transfer. Edit the supplied existing portal asset ONLY to a distinctly hand-drawn editorial realistic caricature in visible ink and opaque gouache. Landscape 3:2 card. Keep two divers, anatomy, masks, regulators, tanks, hoses, their exact positions and coral arrangement; simplify faces, coral and water into illustrated shapes. Do not add wildlife or coral. Preserve composition and spatial relationships. Render all surfaces, people and objects using simplified painted shapes, confident ink contours and visible broad gouache brushstrokes on subtle paper texture. It must clearly read as an illustration at thumbnail size, never a photo or photo filter. Natural restrained colors, no new text, no logos, no watermarks. This is a local draft, factual and human review pending.\", \"source_hash\": \"7445fcb8e7361db5a5572f1e2c1565a549a2b22877a00a83aa9635ec844cc666\", \"generated_path\": \"/Users/nivato/.codex/generated_images/01a14649-b4c8-7041-84c2-8da92c394f9a/exec-82afd990-434f-4eda-92c9-afe44765e33a.png\", \"status\": \"aprobada-por-propietario-pendiente-integracion\", \"tool\": \"image_gen built-in\", \"factual_review\": \"Pendiente: corrección de acabado sobre activo publicado; no constituye nueva validación territorial ni de permisos.\", \"master\": \"/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/revision-tres-lugares/cartagena-correcciones-20261021/buceo-tinta-gouache-v1.png\", \"master_sha256\": \"f8ce9580e8235e2863cf1b642700b38fe1fb045eff7b752077b19459ee45bd7c\", \"web_sha256\": \"cc54e60f9c982d36125698860a699d2d4c2cfde6ba0d0be8057773c7251dd9de\", \"dimensions\": [960, 640], \"visual_review\": \"Acabado ilustrado visible; comparación territorial y aprobación humana pendientes.\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"aprobadas todas\", \"scope\": \"Las seis propuestas mostradas en /__revision-nuevos/auditoria-imagenes/cartagena-correcciones/\", \"master_sha256\": \"f8ce9580e8235e2863cf1b642700b38fe1fb045eff7b752077b19459ee45bd7c\", \"web_sha256\": \"cc54e60f9c982d36125698860a699d2d4c2cfde6ba0d0be8057773c7251dd9de\", \"deployment_authorized\": false}}"
+      },
+      {
+        "id": -10029,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/22/22f346a658e967f6c46f6ef6039497d91831fac748b7335875ba850fc2af24a2.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"name\": \"catamaran\", \"prompt\": \"Use case: style-transfer. Edit the supplied existing portal asset ONLY to a distinctly hand-drawn editorial realistic caricature in visible ink and opaque gouache. Landscape 3:2 card. Keep the exact catamaran hulls, sails, rigging, people positions, horizon and distant coastline. Preserve plausible anatomy and vessel structure. Do not add skyline or boats. Preserve composition and spatial relationships. Render all surfaces, people and objects using simplified painted shapes, confident ink contours and visible broad gouache brushstrokes on subtle paper texture. It must clearly read as an illustration at thumbnail size, never a photo or photo filter. Natural restrained colors, no new text, no logos, no watermarks. This is a local draft, factual and human review pending.\", \"source_hash\": \"0a00cd74ab4da218a9b19400e01d0c71ab7d2d6fa386fb3c679d830f198c1189\", \"generated_path\": \"/Users/nivato/.codex/generated_images/01a14649-b4c8-7041-84c2-8da92c394f9a/exec-ab5a745d-41bd-4a08-9e28-6d5d8d688500.png\", \"status\": \"aprobada-por-propietario-pendiente-integracion\", \"tool\": \"image_gen built-in\", \"factual_review\": \"Pendiente: corrección de acabado sobre activo publicado; no constituye nueva validación territorial ni de permisos.\", \"master\": \"/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/revision-tres-lugares/cartagena-correcciones-20261021/catamaran-tinta-gouache-v1.png\", \"master_sha256\": \"833921d9f22fd9c77b392b4fb9205e0a032ea27987c16a14509c921c8426cbf4\", \"web_sha256\": \"22f346a658e967f6c46f6ef6039497d91831fac748b7335875ba850fc2af24a2\", \"dimensions\": [960, 640], \"visual_review\": \"Acabado ilustrado visible; comparación territorial y aprobación humana pendientes.\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"aprobadas todas\", \"scope\": \"Las seis propuestas mostradas en /__revision-nuevos/auditoria-imagenes/cartagena-correcciones/\", \"master_sha256\": \"833921d9f22fd9c77b392b4fb9205e0a032ea27987c16a14509c921c8426cbf4\", \"web_sha256\": \"22f346a658e967f6c46f6ef6039497d91831fac748b7335875ba850fc2af24a2\", \"deployment_authorized\": false}}"
+      },
+      {
+        "id": -10030,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/9f/9f4fdf4c5f13b220858d65282be41af6858334b61b2194581af8d7008ba4a29a.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"name\": \"boquilla\", \"prompt\": \"Use case: style-transfer. Edit the supplied existing portal asset ONLY to a distinctly hand-drawn editorial realistic caricature in visible ink and opaque gouache. Landscape 3:2 card. Keep the three people, wooden canoe, paddle, net, mangrove roots, channel and camera positions. Preserve plausible anatomy and equipment. Do not add wildlife or buildings. Preserve composition and spatial relationships. Render all surfaces, people and objects using simplified painted shapes, confident ink contours and visible broad gouache brushstrokes on subtle paper texture. It must clearly read as an illustration at thumbnail size, never a photo or photo filter. Natural restrained colors, no new text, no logos, no watermarks. This is a local draft, factual and human review pending.\", \"source_hash\": \"b7f4a77411ea8bc69016775b177dc634782003a5a6b3acf58e30087e0f2ad203\", \"generated_path\": \"/Users/nivato/.codex/generated_images/01a14649-b4c8-7041-84c2-8da92c394f9a/exec-6079d8b6-39de-451e-8edf-a3f791fd7c7a.png\", \"status\": \"aprobada-por-propietario-pendiente-integracion\", \"tool\": \"image_gen built-in\", \"factual_review\": \"Pendiente: corrección de acabado sobre activo publicado; no constituye nueva validación territorial ni de permisos.\", \"master\": \"/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/revision-tres-lugares/cartagena-correcciones-20261021/boquilla-tinta-gouache-v1.png\", \"master_sha256\": \"f64f888c4eda93400d836fd270e498723ddce6b33e10d99e6798dd43ecd50d05\", \"web_sha256\": \"9f4fdf4c5f13b220858d65282be41af6858334b61b2194581af8d7008ba4a29a\", \"dimensions\": [960, 640], \"visual_review\": \"Acabado ilustrado visible; comparación territorial y aprobación humana pendientes.\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"aprobadas todas\", \"scope\": \"Las seis propuestas mostradas en /__revision-nuevos/auditoria-imagenes/cartagena-correcciones/\", \"master_sha256\": \"f64f888c4eda93400d836fd270e498723ddce6b33e10d99e6798dd43ecd50d05\", \"web_sha256\": \"9f4fdf4c5f13b220858d65282be41af6858334b61b2194581af8d7008ba4a29a\", \"deployment_authorized\": false}}"
+      },
+      {
+        "id": -10031,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/bf/bfbcfa27d24561b77f441bb1d98dc78eec5e17ca8cc547f40d0a877a357cea12.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"name\": \"museo\", \"prompt\": \"Use case: style-transfer. Edit the supplied existing portal asset ONLY to a distinctly hand-drawn editorial realistic caricature in visible ink and opaque gouache. Landscape 3:2 card. Keep exact facade geometry, stone portal ornament, white walls, wooden balconies and barred windows, camera and perspective. Simplify surface details only. No architectural additions. Preserve composition and spatial relationships. Render all surfaces, people and objects using simplified painted shapes, confident ink contours and visible broad gouache brushstrokes on subtle paper texture. It must clearly read as an illustration at thumbnail size, never a photo or photo filter. Natural restrained colors, no new text, no logos, no watermarks. This is a local draft, factual and human review pending.\", \"source_hash\": \"4dff4ac8b77a1421454bb18f41861a34d12fb1709e08e735b7e72680672ae13b\", \"generated_path\": \"/Users/nivato/.codex/generated_images/01a14649-b4c8-7041-84c2-8da92c394f9a/exec-3411fdcb-55be-4e01-b219-798592f1d0c8.png\", \"status\": \"aprobada-por-propietario-pendiente-integracion\", \"tool\": \"image_gen built-in\", \"factual_review\": \"Pendiente: corrección de acabado sobre activo publicado; no constituye nueva validación territorial ni de permisos.\", \"master\": \"/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/revision-tres-lugares/cartagena-correcciones-20261021/museo-tinta-gouache-v1.png\", \"master_sha256\": \"a3ebff6f4024a9990337681e77e51fd1f20b1b8fd29b565b590c4d2b0d8cb9ce\", \"web_sha256\": \"bfbcfa27d24561b77f441bb1d98dc78eec5e17ca8cc547f40d0a877a357cea12\", \"dimensions\": [960, 640], \"visual_review\": \"Acabado ilustrado visible; comparación territorial y aprobación humana pendientes.\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"aprobadas todas\", \"scope\": \"Las seis propuestas mostradas en /__revision-nuevos/auditoria-imagenes/cartagena-correcciones/\", \"master_sha256\": \"a3ebff6f4024a9990337681e77e51fd1f20b1b8fd29b565b590c4d2b0d8cb9ce\", \"web_sha256\": \"bfbcfa27d24561b77f441bb1d98dc78eec5e17ca8cc547f40d0a877a357cea12\", \"deployment_authorized\": false}}"
+      },
+      {
+        "id": -10032,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/9c/9c24eedef46066d7b2742541d0ac667dcaf3e3bbee3c9d1e236fcbb613be77e2.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"name\": \"bus\", \"prompt\": \"Use case: style-transfer. Edit the supplied existing portal asset ONLY to a distinctly hand-drawn editorial realistic caricature in visible ink and opaque gouache. Landscape 3:2 card. Keep exact Cartagena red double decker bus, its yellow and tropical decorations, orientation, clock tower silhouette, buildings, walls and camera perspective. Do not substitute a generic foreign bus or change architecture. Preserve composition and spatial relationships. Render all surfaces, people and objects using simplified painted shapes, confident ink contours and visible broad gouache brushstrokes on subtle paper texture. It must clearly read as an illustration at thumbnail size, never a photo or photo filter. Natural restrained colors, no new text, no logos, no watermarks. This is a local draft, factual and human review pending.\", \"source_hash\": \"6ba2d8d9d50efa12c68d362787f02e47d02955ee20df28a6d73b522768f2388c\", \"generated_path\": \"/Users/nivato/.codex/generated_images/01a14649-b4c8-7041-84c2-8da92c394f9a/exec-52052f05-7f29-4f50-9d3e-f54cbb3e538d.png\", \"status\": \"aprobada-por-propietario-pendiente-integracion\", \"tool\": \"image_gen built-in\", \"factual_review\": \"Pendiente: corrección de acabado sobre activo publicado; no constituye nueva validación territorial ni de permisos.\", \"master\": \"/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/revision-tres-lugares/cartagena-correcciones-20261021/bus-tinta-gouache-v1.png\", \"master_sha256\": \"905e269d167ab90b2c32d1bd10f20e7e3e734a91e18788ac7ad169aecbc835fd\", \"web_sha256\": \"9c24eedef46066d7b2742541d0ac667dcaf3e3bbee3c9d1e236fcbb613be77e2\", \"dimensions\": [960, 640], \"visual_review\": \"Acabado ilustrado visible; comparación territorial y aprobación humana pendientes.\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"aprobadas todas\", \"scope\": \"Las seis propuestas mostradas en /__revision-nuevos/auditoria-imagenes/cartagena-correcciones/\", \"master_sha256\": \"905e269d167ab90b2c32d1bd10f20e7e3e734a91e18788ac7ad169aecbc835fd\", \"web_sha256\": \"9c24eedef46066d7b2742541d0ac667dcaf3e3bbee3c9d1e236fcbb613be77e2\", \"deployment_authorized\": false}}"
       }
     ],
     "media_asset_translations": [
@@ -39430,6 +42990,600 @@
         "locale": "pt-BR",
         "alt_text": "Ilustración editorial: Moto acuática",
         "caption": ""
+      },
+      {
+        "media_asset_id": -10000,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Piedra del Peñol (Peñón de Guatapé)",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10000,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Piedra del Peñol (Peñón de Guatapé)",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10000,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Piedra del Peñol (Peñón de Guatapé)",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10001,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Plazoleta de los Zócalos",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10001,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Plazoleta de los Zócalos",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10001,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Plazoleta de los Zócalos",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10002,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Calle de las Sombrillas",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10002,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Calle de las Sombrillas",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10002,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Calle de las Sombrillas",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10003,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Malecón de Guatapé",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10003,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Malecón de Guatapé",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10003,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Malecón de Guatapé",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10004,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Parque principal",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10004,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Parque principal",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10004,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Parque principal",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10005,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Paseo en barco por el embalse",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10005,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Paseo en barco por el embalse",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10005,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Paseo en barco por el embalse",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10006,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Jet ski en el embalse",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10006,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Jet ski en el embalse",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10006,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Jet ski en el embalse",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10007,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Tour en kayak",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10007,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Tour en kayak",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10007,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Tour en kayak",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10008,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Esquí acuático",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10008,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Esquí acuático",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10008,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Esquí acuático",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10009,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Wakeboard en el embalse",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10009,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Wakeboard en el embalse",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10009,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Wakeboard en el embalse",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10010,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Guatapé",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10010,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Guatapé",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10010,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Guatapé",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10011,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Plaza principal",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10011,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Plaza principal",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10011,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Plaza principal",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10012,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Capilla de Cauca Viejo",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10012,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Capilla de Cauca Viejo",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10012,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Capilla de Cauca Viejo",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10013,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Ribera del río Cauca",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10013,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Ribera del río Cauca",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10013,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Ribera del río Cauca",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10014,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Paseo por el río Cauca",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10014,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Paseo por el río Cauca",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10014,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Paseo por el río Cauca",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10015,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Cabalgata (alrededores)",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10015,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Cabalgata (alrededores)",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10015,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Cabalgata (alrededores)",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10016,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Cascada Las Perlas",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10016,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Cascada Las Perlas",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10016,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Cascada Las Perlas",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10017,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Parque principal",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10017,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Parque principal",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10017,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Parque principal",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10018,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Parapente en Cocorná",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10018,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Parapente en Cocorná",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10018,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Parapente en Cocorná",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10019,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Rafting en el río Calderas",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10019,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Rafting en el río Calderas",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10019,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Rafting en el río Calderas",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10020,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Excursión al río Melcocho",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10020,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Excursión al río Melcocho",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10020,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Excursión al río Melcocho",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10021,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Volcán de Lodo",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10021,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Volcán de Lodo",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10021,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Volcán de Lodo",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10022,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Playas urbanas",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10022,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Playas urbanas",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10022,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Playas urbanas",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10023,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Desembocadura del río Hobo",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10023,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Desembocadura del río Hobo",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10023,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Desembocadura del río Hobo",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10024,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Taller de bullerengue",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10024,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Taller de bullerengue",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10024,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Taller de bullerengue",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10025,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Hotel Riviera del Sol Spa",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10025,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Hotel Riviera del Sol Spa",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10025,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Hotel Riviera del Sol Spa",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10026,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Arboletes",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10026,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Arboletes",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10026,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Arboletes",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10027,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Excursión a las Islas del Rosario",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10027,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Excursión a las Islas del Rosario",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10027,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Excursión a las Islas del Rosario",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10028,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Buceo en las Islas del Rosario",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10028,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Buceo en las Islas del Rosario",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10028,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Buceo en las Islas del Rosario",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10029,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Catamarán",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10029,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Catamarán",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10029,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Catamarán",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10030,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: La Boquilla",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10030,
+        "locale": "en",
+        "alt_text": "Editorial illustration: La Boquilla",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10030,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: La Boquilla",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10031,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Museo Histórico de Cartagena",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10031,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Museo Histórico de Cartagena",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10031,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Museo Histórico de Cartagena",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10032,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Bus turístico de Cartagena",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10032,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Bus turístico de Cartagena",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10032,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Bus turístico de Cartagena",
+        "caption": ""
       }
     ],
     "service_categories": [
@@ -39666,6 +43820,10 @@
     "16": "medellin",
     "4": "santa-fe-de-antioquia",
     "24": "santa-marta",
-    "25": "zipaquira"
+    "25": "zipaquira",
+    "10001": "guatape",
+    "10002": "cauca-viejo",
+    "10003": "cocorna",
+    "10004": "arboletes"
   }
 }

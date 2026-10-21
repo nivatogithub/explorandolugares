@@ -50,6 +50,11 @@ class FullReleaseCoverageTests(unittest.TestCase):
                 (ref/'public/.htaccess').write_text('RewriteEngine On\n')
                 subprocess.run([sys.executable,str(ROOT/'scripts/aplicar-rutas-lugares.py'),'--release',str(ref)],check=True)
                 subprocess.run([sys.executable,str(ROOT/'scripts/agregar-metadatos-sociales.py'),'--public',str(ref/'public')],check=True)
+                # Apply the same content-hashed presentation URLs, keeping complete overlay comparison.
+                for name in ['style.css','identidad-neutral.css','identidad-neutral.js','bogota-compacta.js','cartagena-compacta.js','medellin-compacta.js','santa-marta-compacta.js','destinos-semirrealistas.js']:
+                    built=Path(folder)/'public/assets'/name
+                    if built.exists():shutil.copyfile(built,ref/'public/assets'/name)
+                subprocess.run([sys.executable,str(ROOT/'scripts/versiones-presentacion.py'),'--public',str(ref/'public')],check=True)
                 for relative in paths:
                     expected=(ref/relative).read_bytes()
                     # Only the approved subscription URL changes in the coverage CTA;
