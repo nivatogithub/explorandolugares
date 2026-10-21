@@ -5,14 +5,15 @@ require_once __DIR__.'/AccountMailConfiguration.php';
 /** Transactional transport; real local delivery requires the private test recipient. */
 final class AccountVerificationDelivery
 {
-    public static function send(PDO $pdo,array $config,int $id):void
+    public static function send(PDO $pdo,array $config,int $id,bool $allowActiveUnverified=false):void
     {
-        $q=$pdo->prepare('SELECT email FROM accounts WHERE id=? AND status="pending_activation"');$q->execute([$id]);$email=$q->fetchColumn();if(!$email)return;
+        $eligible=$allowActiveUnverified?'(status="pending_activation" OR (status="active" AND email_verified_at IS NULL))':'status="pending_activation"';
+        $q=$pdo->prepare('SELECT email FROM accounts WHERE id=? AND '.$eligible);$q->execute([$id]);$email=$q->fetchColumn();if(!$email)return;
         $host=strtolower((string)($_SERVER['HTTP_HOST']??''));
         $local=getenv('EL_PREPROD_LOCAL')==='1'&&!empty($config['local_test'])&&preg_match('/^(127\.0\.0\.1|localhost|\[::1\])(?::[0-9]+)?$/D',$host);
         $mail=AccountMailConfiguration::resolve($config,(string)$email);$local=$mail['mailbox'];$delivery=$mail['delivery'];
         if(!$local&&!$delivery->ready()){if(class_exists('PortalIncidents',false))PortalIncidents::capture(new RuntimeException(),'verification_configuration');throw new RuntimeException('Tu cuenta está guardada, pero no pudimos enviar el correo de activación. Solicita un nuevo enlace más tarde.');}
-        $service=new AccountEmailVerificationService($pdo);$token=$service->issue($id);
+        $service=new AccountEmailVerificationService($pdo);$token=$service->issue($id,$allowActiveUnverified);
         try{
             if($local){
                 $path=dirname(__DIR__).'/private/mailbox.json';$f=fopen($path,'c+');if(!$f)throw new RuntimeException('Buzón local no disponible.');

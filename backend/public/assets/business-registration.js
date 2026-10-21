@@ -24,9 +24,10 @@
     type.value = mode;
     businessId.value = id;
     const isNew = mode === 'new_business';
-    for(const name of ['identity_document','business_registration']){const field=form.querySelector(`[name="${name}"]`);if(field)field.required=isNew;}
+    for(const name of ['business_registration']){const field=form.querySelector(`[name="${name}"]`);if(field)field.required=!!mode;}
     if(authorityInput)authorityInput.required=isNew&&relationship?.value==='authorized_administrator';
     const details=document.querySelector('#registration-new-details');if(details){details.hidden=!isNew;details.disabled=!isNew;}
+    if(isNew&&!newName.value.trim())newName.value=search.value.trim();
     newNameWrap.hidden = !isNew;
     newName.required = isNew;
     const continuation=document.querySelector('#registration-continuation');if(continuation){continuation.hidden=!mode;continuation.disabled=!mode;}
@@ -37,8 +38,13 @@
     });
   }
 
+  function syncFree(){const free=form.querySelector('[name="plan_code"]:checked')?.value==='free';const period=form.querySelector('.subscription-choice-period');if(period){period.hidden=free;for(const control of period.querySelectorAll('select'))control.disabled=free;}const distinct=document.querySelector('#registration-distinct-business');if(distinct){distinct.hidden=!free||type.value!=='new_business';distinct.disabled=!free||type.value!=='new_business';}const holder=form.querySelector('[data-holder-identity]');if(holder){holder.hidden=free;holder.disabled=free;}const details=document.querySelector('#registration-new-details');if(details){details.hidden=free||type.value!=='new_business';details.disabled=free||type.value!=='new_business';}}
+  form.addEventListener('change',event=>{if(event.target.name==='plan_code')syncFree();});
+  form.addEventListener('operator-eligibility-change',syncFree);syncFree();
+
   relationship?.addEventListener('change', () => {
     const needsAuthority = type.value==='new_business'&&relationship.value === 'authorized_administrator';
+    if(!authorityWrap||!authorityInput)return;
     authorityWrap.hidden = !needsAuthority;
     authorityInput.required = needsAuthority;
     if (!needsAuthority) authorityInput.value = '';
@@ -47,7 +53,7 @@
   function renderBusinesses(items) {
     results.replaceChildren();
     if (!items.length) {
-      results.innerHTML = '<p>No encontramos coincidencias con ese nombre. Si confirmas que no aparece, solicita una revisión para agregarlo.</p>';
+      results.innerHTML = '<p>No encontramos coincidencias. Puedes crear el negocio con su nombre, categoría y documento de respaldo.</p>';
       missing.disabled = false;
       choose('', '');
       return;

@@ -1,9 +1,13 @@
 <?php
 declare(strict_types=1);
+require_once __DIR__.'/BusinessSelfOnboarding.php';
 /** Called only inside the account verification transaction; never reserves a business for an unverified email. */
 final class AutomaticBusinessClaim
 {
  public static function afterActivation(PDO $pdo,int $account):void{
+  try{
+  $new=$pdo->prepare('SELECT id,business_details_json FROM business_account_applications WHERE account_id=? AND status IN ("pending","in_review")');$new->execute([$account]);foreach($new->fetchAll(PDO::FETCH_ASSOC) as $candidate){$d=json_decode($candidate['business_details_json']??'{}',true);if(($d['onboarding_policy']??'')===BusinessSelfOnboarding::POLICY)BusinessSelfOnboarding::complete($pdo,(int)$candidate['id']);}
+  }catch(PDOException $e){if(($e->errorInfo[1]??0)===1146||str_contains($e->getMessage(),'no such table'))return;throw $e;}
   $lock=$pdo->getAttribute(PDO::ATTR_DRIVER_NAME)==='mysql'?' FOR UPDATE':'';
   try{$q=$pdo->prepare('SELECT id,business_id,business_details_json,relationship_code FROM business_account_applications WHERE account_id=? AND application_type="claim_existing" AND status="pending"'.$lock);$q->execute([$account]);}
   catch(PDOException $e){if(($e->errorInfo[1]??0)===1146||str_contains($e->getMessage(),'no such table'))return;throw $e;}

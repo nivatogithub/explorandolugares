@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 $dir=sys_get_temp_dir().'/el-mail-'.bin2hex(random_bytes(8));mkdir($dir.'/app',0700,true);mkdir($dir.'/private/brevo',0700,true);
-foreach(['AccountMailConfiguration.php','AccountRecoveryDelivery.php','AccountMailTemplate.php','BrevoSettings.php'] as $file)copy(__DIR__.'/../app/'.$file,$dir.'/app/'.$file);
+foreach(['AccountMailConfiguration.php','AccountRecoveryDelivery.php','BrevoTransactionalClient.php','AccountMailTemplate.php','BrevoSettings.php'] as $file)copy(__DIR__.'/../app/'.$file,$dir.'/app/'.$file);
 require $dir.'/app/AccountMailConfiguration.php';
 function checkMail($ok,$message){if(!$ok)throw new RuntimeException($message);}
 try{

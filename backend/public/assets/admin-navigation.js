@@ -1,0 +1,1 @@
+(()=>{'use strict';const menu=document.querySelector('[data-admin-navigation]');if(!menu)return;const small=matchMedia('(max-width:760px)');const apply=()=>{menu.open=!small.matches;};apply();small.addEventListener('change',apply);})();

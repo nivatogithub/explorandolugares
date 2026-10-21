@@ -27,7 +27,7 @@ final class BusinessAdminService
             // Lock historical subscriptions too: current Free status is insufficient.
             $q=$this->pdo->prepare('SELECT id FROM business_subscriptions WHERE business_id=?'.$lock);$q->execute([$id]);$q->fetchAll();
             if(!$this->canDelete($id))throw new RuntimeException('No se puede eliminar: el negocio tiene historial de suscripción paga o comprobantes de pago, aunque actualmente sea Gratis.');
-            $q=$this->pdo->prepare('SELECT storage_name FROM business_image_references WHERE business_id=?');$q->execute([$id]);$files=$q->fetchAll(PDO::FETCH_COLUMN);
+            $q=$this->pdo->prepare('SELECT r.storage_name FROM business_image_references r WHERE r.business_id=? AND NOT EXISTS (SELECT 1 FROM business_application_images a WHERE a.storage_name=r.storage_name)');$q->execute([$id]);$files=$q->fetchAll(PDO::FETCH_COLUMN);
             $q=$this->pdo->prepare('DELETE FROM businesses WHERE id=?');$q->execute([$id]);
             $this->pdo->commit();
             foreach($files as $name){if(preg_match('/^[a-f0-9]{40}\.(jpg|png|webp)$/D',(string)$name)){ $path=$this->referenceStorage.'/'.$name;if(is_file($path)&&!@unlink($path))error_log('Explorando Lugares: quedó pendiente retirar una imagen privada de un negocio eliminado.'); }}

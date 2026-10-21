@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 require dirname(__DIR__,2).'/app/bootstrap.php';
+if(isset($_SESSION['admin'])&&time()-(int)($_SESSION['last_seen']??0)>1800)unset($_SESSION['admin']);
+header('X-Robots-Tag: noindex, nofollow');header('X-Content-Type-Options: nosniff');header("Content-Security-Policy: sandbox");
 if(empty($_SESSION['admin'])){http_response_code(403);exit('Inicia sesión desde el panel de administración.');}
 $id=filter_var($_GET['id']??null,FILTER_VALIDATE_INT);if(!$id){http_response_code(404);exit('Documento no encontrado.');}
 $query=db()->prepare('SELECT storage_name,mime_type,file_size FROM business_account_application_evidence WHERE id=?');$query->execute([$id]);$row=$query->fetch(PDO::FETCH_ASSOC);
