@@ -19,3 +19,9 @@ Orden editorial por identidad acuática y variedad, no ranking de ventas. No se 
 ## Antes de ilustrar
 
 Pendientes de evidencia visual elegida: cámara, fachadas/relieve, nivel relativo del agua, huellas reales de vías, escaleras del Peñón, muelles y embarcaciones. No se realizó muestreo de5–8StreetViews ni se afirma cartografía inspeccionada. Completar esos puntos con referencias escogidas y registrar fecha/tipo de captura cuando llegue el material. Una descripción atractiva no sustituye la geometría del sitio.
+
+## Corrección del propietario: Sombrillas y actividades náuticas
+
+La Piedra del Peñol (Peñón de Guatapé) sigue primera. Calle de las Sombrillas se incorpora como corredor distinto de Calle del Recuerdo: Tours Guatapé enumera ambas separadas, DeTour distingue calle y plazoleta, y el portal turístico local también. Corpotur aproxima el nombre Sombrillas a Plazoleta; no convertir esa denominación informal en identidad de dos fotos intercambiables. El punto exacto de la escalera señalada por el propietario queda pendiente de su referencia.
+
+Jet ski queda segundo entre experiencias; kayak tercero, esquí acuático cuarto y wakeboard quinto, después de barco. Aquarush confirma oferta propia en Muelle Timón y Corpotur comercializa un producto jetski. Vikingos tiene oferta específica de esquí con lancha/instructor: no confundir dos esquís con una tabla wakeboard. No se copian tarifas, límites de edad, duración ni promesas de seguridad a la tarjeta.

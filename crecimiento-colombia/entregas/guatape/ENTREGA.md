@@ -12,3 +12,7 @@ Rama exclusiva `lugar/CO/antioquia/guatape`.
 Ocho referencias elegidas por el propietario: portada, Peñón, Plazoleta, malecón, parque principal, barco, kayak y wakeboard. No se buscaron ni descargaron fotos nuevas. Falta generar/comparar imágenes, ZIPdestino, importación secuencial y QAvisual. La consulta municipal devuelve403: no afirmar inspección StreetView ni muestreo de mapas no realizado.
 
 No se tocó preprod ni producción. No hay URL nueva todavía.
+
+## Actualización solicitada
+
+Ahora son **5 atractivos y 5 experiencias**. Piedra del Peñol primera; añadida Calle de las Sombrillas sin confundir con Recuerdo. Experiencias: barco, jet ski, kayak guiado, esquí acuático y wakeboard. **11 referencias visuales pendientes** en total. No hay cambios visibles todavía: sin imágenes ni importación.
