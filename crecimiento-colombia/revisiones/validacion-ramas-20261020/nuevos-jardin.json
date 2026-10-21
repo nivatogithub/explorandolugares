@@ -1,0 +1,147 @@
+{
+  "slug": "jardin",
+  "build_exit": 0,
+  "build_log": "/tmp/builds-cuatro-destinos-20261020/jardin/build.log",
+  "source_status_unchanged": true,
+  "snapshot_translations": {
+    "es": true,
+    "en": true,
+    "pt-BR": true
+  },
+  "snapshot_places": 12,
+  "snapshot_media": 13,
+  "built_images": [
+    {
+      "path": "assets/destinos/jardin/13c23874cad5dfa780eda3f76b97300520b7be3db9d03dfcadb2edf186be5073.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    },
+    {
+      "path": "assets/destinos/jardin/7f0b706842461996c82a56e4d329dc82ae07012045080aa803033e0c8d6c6224.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    },
+    {
+      "path": "assets/destinos/jardin/0c5124ff9d3ad5fbc202bdb9851990a37dcf9a5b73ae02453d6f9927e94b7e2f.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    },
+    {
+      "path": "assets/destinos/jardin/f56935fc6c7bfcc87d5b794f03536e072a91742fa46f08016500956bc698df88.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    },
+    {
+      "path": "assets/destinos/jardin/b9f6d71dee75f8037d0259bd5e263b1561206fd23b2777cf94f362c332768386.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    },
+    {
+      "path": "assets/destinos/jardin/58d4a74dbbb87d6ef870a16653e2773abdaec4cbcdc5bd041e3a677cbb471aa1.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    },
+    {
+      "path": "assets/destinos/jardin/c79cb57e1d75f7f546e7180f01a527b5961d78225dc02b528ab738577f109d88.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    },
+    {
+      "path": "assets/destinos/jardin/bae062e72778580e59ff2b9795b29afb6fa5b0d6890424186334c6369361e9d8.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    },
+    {
+      "path": "assets/destinos/jardin/41e4155621e2511e5eaadf906c51ac0ee766fef8922d342386e7bc13fd520f6f.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    },
+    {
+      "path": "assets/destinos/jardin/54e0070fdc4dc845a38123b09373916945a29c4c298fb8fff82ec5a3c1bde142.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    },
+    {
+      "path": "assets/destinos/jardin/724bdcc3c38d76501577bf80adf144065e79f4ca13699f538d88bc4bc6662688.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    },
+    {
+      "path": "assets/destinos/jardin/66d7d4d5b0194ccc388abb04adf57e7958629a953b93c3d2c91a53258bc469e5.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    },
+    {
+      "path": "assets/destinos/jardin/109367597283990cf71cbc56eb0f8eabd3ac0bf74fd0edb5c6245c31bfbe2a74.webp",
+      "built_exists": false,
+      "expected_exists": true,
+      "hash_match": false
+    }
+  ],
+  "snapshot_copied_into_build": [],
+  "snapshot_referenced_by_packager": false,
+  "database_migration_in_release": [],
+  "packaged_seed_slugs": [
+    "jerico",
+    "jardin",
+    "guatape",
+    "santa-fe-de-antioquia",
+    "el-penol",
+    "tamesis",
+    "san-jeronimo",
+    "sopetran",
+    "san-rafael",
+    "cocorna",
+    "venecia",
+    "el-retiro",
+    "san-carlos",
+    "el-carmen-de-viboral",
+    "rionegro",
+    "medellin",
+    "necocli",
+    "arboletes",
+    "puerto-triunfo",
+    "san-pedro-de-los-milagros",
+    "santa-rosa-de-osos"
+  ],
+  "destination_present_in_packaged_seed": true,
+  "source_snapshot_languages_complete": true,
+  "snapshot_reference_hashes_valid": true,
+  "source_snapshot_place_names": [
+    "Parque El Libertador",
+    "Basílica de la Inmaculada Concepción",
+    "Cueva del Esplendor",
+    "Reserva Jardín de Rocas",
+    "Tour de abejas",
+    "La Garrucha",
+    "Camino de la Herrera",
+    "Casa Museo Clara Rojas Peláez",
+    "Reserva ProAves Loro Orejiamarillo",
+    "Tour cafetero",
+    "Avistamiento de aves",
+    "Cueva del Esplendor"
+  ],
+  "conclusion": "BUILD_INCOMPLETO: incorpora semilla antigua en draft, sin snapshot aprobado ni medios nuevos.",
+  "packaged_old_seed": {
+    "publication_status": "draft",
+    "headline_es": "Color, café y caminos.",
+    "hero_path": "assets/destinos/jardin-1.webp",
+    "places_es": [
+      "Basílica de la Inmaculada Concepción",
+      "Parque El Libertador",
+      "Camino de la Herrera"
+    ]
+  }
+}

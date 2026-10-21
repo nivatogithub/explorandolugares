@@ -48,7 +48,7 @@ class PublicLinkTests(unittest.TestCase):
                     broken.append(f'{page.relative_to(self.public)}: {tag}[{attribute}] escapes public root: {value}')
                 elif not target.exists():
                     relative=target.relative_to(self.public.resolve()).as_posix()
-                    route=__import__('re').fullmatch(r'(?:en/|pt-br/)?destinos/([a-z0-9-]+)(?:/index\.html)?/?',relative)
+                    route=__import__('re').fullmatch(r'(?:en/|pt-br/)?(?:destinos|lugares)/([a-z0-9-]+)(?:/index\.html)?/?',relative)
                     claim_route=relative.rstrip('/')=='reclamar-negocio' and (self.public/'reclamar-negocio.php').is_file()
                     business_routes={'negocios/registro':'register.php','negocios/acceso':'login.php','negocios/portal':'dashboard.php','negocios/salir':'logout.php'}
                     business_route=relative.rstrip('/') in business_routes and (self.public/'business'/business_routes[relative.rstrip('/')]).is_file()

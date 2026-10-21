@@ -47,6 +47,9 @@ class FullReleaseCoverageTests(unittest.TestCase):
                 subprocess.run(['php',str(ROOT/'scripts/aplicar-nomenclatura-lugares.php'),str(ref)],check=True)
                 subprocess.run([sys.executable,str(ROOT/'scripts/ajustar-auditoria-publica.py'),'--public',str(ref/'public')],check=True)
                 subprocess.run([sys.executable,str(ROOT/'scripts/versiones-medicion.py'),'--public',str(ref/'public')],check=True)
+                (ref/'public/.htaccess').write_text('RewriteEngine On\n')
+                subprocess.run([sys.executable,str(ROOT/'scripts/aplicar-rutas-lugares.py'),'--release',str(ref)],check=True)
+                subprocess.run([sys.executable,str(ROOT/'scripts/agregar-metadatos-sociales.py'),'--public',str(ref/'public')],check=True)
                 for relative in paths:
                     expected=(ref/relative).read_bytes()
                     # Only the approved subscription URL changes in the coverage CTA;

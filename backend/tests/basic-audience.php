@@ -54,5 +54,11 @@ try {
  $all=$s->report('all',null,'2026-10-16 20:00:00');basic_check($all['page_views']===138&&$all['period_mode']==='all'&&$all['comparison_available']===false&&$all['previous_views']===null,'all includes old daily totals and disables prior-period comparison');basic_check($all['period_start']==='2020-01-01','all labels retained history from earliest date');
  basic_check($s->interestReport('all')['foreign_views']===7,'all includes old country aggregates');
  $s->install();basic_check($pdo->query("SELECT setting_value FROM el_basic_settings WHERE setting_key='retention_days'")->fetchColumn()==='0','installation metadata no longer advertises expiration');
+ // Both URL families must add to the same historical entity, without rewriting history.
+ $beforeEntity=(int)$pdo->query("SELECT COALESCE(SUM(metric_count),0) FROM el_basic_entity_daily WHERE entity_type='destination' AND entity_key='jerico' AND metric='page_view' AND placement='destination'")->fetchColumn();
+ foreach(['/destinos/jerico/','/lugares/jerico/','/en/lugares/jerico/','/pt-br/lugares/jerico/'] as $path)basic_check($s->countPage($path,'2026-10-16 19:00:00'),'legacy and new routes measured');
+ $afterEntity=(int)$pdo->query("SELECT COALESCE(SUM(metric_count),0) FROM el_basic_entity_daily WHERE entity_type='destination' AND entity_key='jerico' AND metric='page_view' AND placement='destination'")->fetchColumn();
+ basic_check($afterEntity===$beforeEntity+4,'same historical destination receives both route families');
+ basic_check(!$s->countPage('/lugares/draft/','2026-10-16 19:00:00'),'new route does not expose unpublished analytics');
  echo "Basic audience: OK — aggregate-only schema, refresh, scopes, private route boundaries, activation, Bogotá and full-period comparisons\n";
 } finally {unlink($root.'/index.html');rmdir($root);}
