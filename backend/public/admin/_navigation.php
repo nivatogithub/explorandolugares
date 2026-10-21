@@ -39,7 +39,7 @@ $activeAdminItem = match (true) {
       <a href="index.php?tab=solicitudes" <?= $activeAdminItem === 'requests' ? 'aria-current="page"' : '' ?>>Solicitudes de participación</a>
       <a href="negocios.php" <?= $activeAdminItem === 'businesses' ? 'aria-current="page"' : '' ?>>Negocios</a>
       <a href="contactos-negocios.php" <?= $activeAdminItem === 'business-research' ? 'aria-current="page"' : '' ?>>Canales y responsable</a>
-      <a href="actualizar-negocios.php" <?= $activeAdminItem === 'business-bulk-edit' ? 'aria-current="page"' : '' ?>>Exportar / actualizar</a>
+      <a href="actualizar-negocios.php" <?= $activeAdminItem === 'business-bulk-edit' ? 'aria-current="page"' : '' ?>>Actualización masiva de datos</a>
       <a href="campanas.php" <?= $activeAdminItem === 'campaigns' ? 'aria-current="page"' : '' ?>>Campañas por correo</a>
       <a href="reclamaciones.php" <?= $activeAdminItem === 'claims' ? 'aria-current="page"' : '' ?>>Reclamos de negocio</a>
       <a href="solicitudes-cuenta.php" <?= $activeAdminItem === 'account-applications' ? 'aria-current="page"' : '' ?>>Solicitudes de cuenta</a>

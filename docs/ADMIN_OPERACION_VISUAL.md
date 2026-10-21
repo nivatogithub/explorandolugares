@@ -52,3 +52,5 @@ Integrar el candidato en preprod conforme a AGENTS, reconciliar main, revisar el
 - Se elimina la vista duplicada Atención / Solicitudes y seguimiento. Los enlaces antiguos abren el listado único, conservando la segmentación por origen. Las solicitudes sin ficha se consultan exclusivamente en Solicitudes de cuenta, enlazada desde Negocios. Se retira la tabla combinada de negocios y solicitudes; no cambia ningún proceso de aprobación. Este ajuste sustituye las referencias anteriores a una vista de seguimiento separada.
 
 - Confirmado y sincronizado el menú lateral local: Revisión y pendientes no aparece como acceso principal. La revisión/publicación de importaciones queda únicamente dentro de Negocios.
+
+- Exportar / actualizar pasa a Actualización masiva de datos. La explicación distingue exportación, edición externa, comparación y confirmación. Selector JSON con el componente existente en español, espaciado, foco visible y nombre del archivo. Sin cambios en la actualización de datos.
