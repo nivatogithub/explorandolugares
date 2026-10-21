@@ -131,3 +131,9 @@ Limitaciones explícitas de esta entrega: el material editorial se prepara media
 - Un operador Premium puede referenciar experiencias publicadas del mismo lugar en su página. Se reutilizan título, texto e imagen del catálogo; una experiencia retirada deja de renderizar. Esto no agrega al negocio como operador anunciado en el lugar: ese espacio conserva los requisitos del complemento pagado.
 - Menú: enlace HTTP(S) de menú/catálogo ya persistido, presentado para consultar o descargar. La descarga efectiva depende del recurso externo (PDF u otro formato); no se implementó almacenamiento de archivos PDF nuevos.
 - Se mantiene la preparación editorial de imágenes y traducciones; no se afirma generación automática conectada por API.
+
+### Idioma y responsabilidad editorial
+
+En el circuito actual de Colombia, el comerciante entrega y aprueba su contenido en español. Sus formularios solo aceptan español y sus previsualizaciones privadas no ofrecen otros idiomas; cambiar `lang` manualmente tampoco da acceso a las traducciones de esa prepublicación. El equipo editorial conserva las tres vistas para revisar.
+
+Antes de enviar una prepublicación, el portal exige revisión explícita de traducciones, fidelidad/permisos/estilo/calidad de imágenes y presentación/enlaces/móvil. Se registra el administrador y la versión exacta revisada. Publicar exige esa revisión además de la aprobación del comerciante y de los controles de contenido/pago; una nueva versión requiere otra revisión. Los controles automáticos de integridad y completitud no sustituyen la revisión humana de calidad semántica y visual. No hay API de traducción o generación de imágenes conectada automáticamente.
