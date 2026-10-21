@@ -1,13 +1,14 @@
-# Guatapé — preparación real
+# Guatapé — avance preparado, no destino terminado
 
-Rama exclusiva `lugar/CO/antioquia/guatape`. Cuatro atractivos y tres experiencias priorizados editorialmente, textos ES/EN/PT y treinta fichas gratuitas. No se genera un destino ZIP incompleto ni imágenes de relleno.
+Rama exclusiva `lugar/CO/antioquia/guatape`.
 
-## Pendientes concretos
-- Elegir ocho referencias: portada; Peñón; Plazoleta de los Zócalos; malecón; parque principal; paseo en barco; kayak guiado; wakeboard.
-- Comprobar composición/cartografía por referencia antes de generar. No se afirma realizado muestreo Street View ni comparación visual.
-- Completar categorías licores/cultura con negocios reales si se encuentran; 24 fichas actuales solo tienen directorio secundario y su operación vigente sigue pendiente.
-- Validar manifiesto destino, generar/optimizar activos, empaquetar y entregar al coordinador para importación secuencial y QA en preprod.
+- Cuatro atractivos: Peñón, Plazoleta de los Zócalos, malecón y parque principal.
+- Tres experiencias con oferta comprobada: barco, kayak guiado y wakeboard. El embalse es intermunicipal: no se presenta toda navegación como situada únicamente dentro de Guatapé.
+- Textos cortos ES/EN/PT preparados.
+- Directorio ampliado de30a34fichas, con las diez categorías representadas. Licorera Cienfuegos y Museo del Zócalo cubren las dos vacías; Verony y Zócalo Campestre tienen sitios propios.
+- Se contrastaron nombres y homónimos de las24fichas originalmente secundarias. Ver `auditoria-directorio-v2.json`: fuente propia/institucional no equivale a apertura actual. Cinco negocios aún solo tienen ficha autogestionada; no se inventan teléfono, horario o representación.
 
-La fuente municipal devuelve403 al abrir; su resumen indexado identifica Peñón y malecón. La síntesis del parque debe cruzarse con referencia seleccionada antes de ilustrar. Las páginas comerciales acreditan servicio publicado, no disponibilidad ni popularidad. No se copian sus historias promocionales sobre fincas ni afirmaciones históricas dudosas.
+## Pendientes
+Ocho referencias elegidas por el propietario: portada, Peñón, Plazoleta, malecón, parque principal, barco, kayak y wakeboard. No se buscaron ni descargaron fotos nuevas. Falta generar/comparar imágenes, ZIPdestino, importación secuencial y QAvisual. La consulta municipal devuelve403: no afirmar inspección StreetView ni muestreo de mapas no realizado.
 
-No se tocó preprod, no hay URL nueva ni publicación.
+No se tocó preprod ni producción. No hay URL nueva todavía.

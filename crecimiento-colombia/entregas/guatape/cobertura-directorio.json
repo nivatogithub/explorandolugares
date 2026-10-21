@@ -1,22 +1,34 @@
 {
-  "total": 30,
+  "total": 34,
   "categories": {
-    "hospedaje": 8,
+    "hospedaje": 10,
     "alimentacion": 8,
     "comercio": 5,
     "salud": 1,
     "vida-nocturna": 1,
     "experiencias": 2,
     "transporte": 1,
-    "servicios": 4
+    "servicios": 4,
+    "licores": 1,
+    "cultura": 1
   },
-  "missing": [
-    "licores",
-    "cultura"
-  ],
-  "verification": {
-    "primary_or_institutional": 6,
-    "secondary_directory_pending_current_operation": 24
+  "missing": [],
+  "evidence_classes": {
+    "primary_offer": 8,
+    "platform_recent": 2,
+    "municipal_historical2018": 4,
+    "institutional_dated2019": 1,
+    "direct_host": 3,
+    "institutional_dated2018": 1,
+    "secondary_correlated": 2,
+    "secondary_only": 4,
+    "sector_specific": 3,
+    "institutional_dated2025": 2,
+    "institutional_undated": 1,
+    "institutional_dated2026": 1,
+    "institutional_dated2024": 1,
+    "self_managed_listing": 1
   },
-  "note": "No se inventan negocios para llenar categorías. Fuentes documentales no son verificación presencial ni de operación actual."
+  "checked_at": "2026-10-20",
+  "note": "Diez categorías documentadas. La fecha de consulta no prueba vigencia de operación; documentación institucional antigua se declara por su año real."
 }
