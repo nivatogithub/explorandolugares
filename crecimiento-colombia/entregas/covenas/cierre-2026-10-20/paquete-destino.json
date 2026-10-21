@@ -1,0 +1,569 @@
+{
+    "schema_version": 2,
+    "destination": {
+        "slug": "covenas",
+        "destination_type": "municipality",
+        "country_code": "CO",
+        "department": "Sucre",
+        "subregion": "Golfo de Morrosquillo",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 103,
+        "translations": {
+            "en": {
+                "display_name": "Coveñas",
+                "eyebrow": "Sucre · Colombia",
+                "headline": "Beaches and mangroves",
+                "intro": "Beaches, mangroves and naval history on the Gulf of Morrosquillo.",
+                "meta_description": "Beaches, mangroves and naval history on the Gulf of Morrosquillo."
+            },
+            "es": {
+                "display_name": "Coveñas",
+                "eyebrow": "Sucre · Colombia",
+                "headline": "Playas y manglares",
+                "intro": "Playas, manglares e historia naval en el golfo de Morrosquillo.",
+                "meta_description": "Playas, manglares e historia naval en el golfo de Morrosquillo."
+            },
+            "pt-BR": {
+                "display_name": "Coveñas",
+                "eyebrow": "Sucre · Colombia",
+                "headline": "Praias e manguezais",
+                "intro": "Praias, manguezais e história naval no golfo de Morrosquillo.",
+                "meta_description": "Praias, manguezais e história naval no golfo de Morrosquillo."
+            }
+        },
+        "history": {
+            "es": [
+                "Coveñas reúne tradición costera, actividad portuaria e historia naval. Se constituyó como municipio en 2002; sus ensenadas y los manglares de La Caimanera forman parte de su identidad."
+            ],
+            "en": [
+                "Coveñas combines coastal traditions, port activity and naval history. It became a municipality in 2002; its bays and La Caimanera’s mangroves shape its identity."
+            ],
+            "pt-BR": [
+                "Coveñas reúne tradições costeiras, atividade portuária e história naval. Tornou-se município em 2002; suas enseadas e os manguezais de La Caimanera fazem parte de sua identidade."
+            ]
+        },
+        "reasons": {
+            "es": [
+                "Combina las playas del golfo con manglares y memoria naval."
+            ],
+            "en": [
+                "Combines Gulf beaches with mangroves and naval history."
+            ],
+            "pt-BR": [
+                "Combina as praias do golfo com manguezais e memória naval."
+            ]
+        }
+    },
+    "hero_image": {
+        "file": "images/e423b3b87f355c27e6532165476cb072eaa61b89df362f9458d0af2847a0fd6d.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "OpenAI · ilustración editorial independiente IA",
+        "image_source_url": "",
+        "image_license": "Generada con IA; borrador para revisión humana",
+        "image_license_url": "",
+        "alt": {
+            "en": "Illustration of Coveñas",
+            "es": "Ilustración de Coveñas",
+            "pt-BR": "Ilustração de Coveñas"
+        },
+        "caption": {
+            "en": "",
+            "es": "",
+            "pt-BR": ""
+        }
+    },
+    "places": [
+        {
+            "slug": "primera-ensenada",
+            "type": "place",
+            "latitude": null,
+            "longitude": null,
+            "display_order": 1,
+            "publication_status": "draft",
+            "translations": {
+                "en": {
+                    "name": "Primera Ensenada",
+                    "description": "Beaches and services in one of Coveñas’ best-known areas.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Primera%20Ensenada%20Cove%C3%B1as%20Sucre%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "es": {
+                    "name": "Primera Ensenada",
+                    "description": "Playas y servicios en uno de los sectores más conocidos de Coveñas.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Primera%20Ensenada%20Cove%C3%B1as%20Sucre%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "pt-BR": {
+                    "name": "Primera Ensenada",
+                    "description": "Praias e serviços em uma das áreas mais conhecidas de Coveñas.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Primera%20Ensenada%20Cove%C3%B1as%20Sucre%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                }
+            },
+            "image": {
+                "file": "images/d590841c242d32cb2a5a29d16f5046972352e895d0939aa8ce71c10546edac9c.webp",
+                "image_origin": "ai_generated",
+                "image_creator": "OpenAI · ilustración editorial independiente IA",
+                "image_source_url": "",
+                "image_license": "Generada con IA; borrador para revisión humana",
+                "image_license_url": "",
+                "alt": {
+                    "en": "Primera Ensenada",
+                    "es": "Primera Ensenada",
+                    "pt-BR": "Primera Ensenada"
+                },
+                "caption": {
+                    "en": "",
+                    "es": "",
+                    "pt-BR": ""
+                }
+            }
+        },
+        {
+            "slug": "segunda-ensenada",
+            "type": "place",
+            "latitude": null,
+            "longitude": null,
+            "display_order": 2,
+            "publication_status": "draft",
+            "translations": {
+                "en": {
+                    "name": "Segunda Ensenada and waterfront",
+                    "description": "A coastal stretch for beach visits and walks by the sea.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Segunda%20Ensenada%20y%20malec%C3%B3n%20Cove%C3%B1as%20Sucre%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "es": {
+                    "name": "Segunda Ensenada y malecón",
+                    "description": "Un corredor costero para disfrutar la playa y caminar junto al mar.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Segunda%20Ensenada%20y%20malec%C3%B3n%20Cove%C3%B1as%20Sucre%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "pt-BR": {
+                    "name": "Segunda Ensenada e orla",
+                    "description": "Um trecho costeiro para aproveitar a praia e caminhar à beira-mar.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Segunda%20Ensenada%20y%20malec%C3%B3n%20Cove%C3%B1as%20Sucre%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                }
+            },
+            "image": {
+                "file": "images/ca73d20126100f5d2b8ea66a9f3a16fb3b3f244be2c3231ebaf518d46adfb789.webp",
+                "image_origin": "ai_generated",
+                "image_creator": "OpenAI · ilustración editorial independiente IA",
+                "image_source_url": "",
+                "image_license": "Generada con IA; borrador para revisión humana",
+                "image_license_url": "",
+                "alt": {
+                    "en": "Segunda Ensenada and waterfront",
+                    "es": "Segunda Ensenada y malecón",
+                    "pt-BR": "Segunda Ensenada e orla"
+                },
+                "caption": {
+                    "en": "",
+                    "es": "",
+                    "pt-BR": ""
+                }
+            }
+        },
+        {
+            "slug": "cienaga-la-caimanera",
+            "type": "place",
+            "latitude": null,
+            "longitude": null,
+            "display_order": 3,
+            "publication_status": "draft",
+            "translations": {
+                "en": {
+                    "name": "La Caimanera wetland",
+                    "description": "Mangroves and waterways: an ecosystem to explore with a local guide.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Ci%C3%A9naga%20La%20Caimanera%20Cove%C3%B1as%20Sucre%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "es": {
+                    "name": "Ciénaga La Caimanera",
+                    "description": "Manglares y canales: un ecosistema para conocer con guía local.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Ci%C3%A9naga%20La%20Caimanera%20Cove%C3%B1as%20Sucre%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "pt-BR": {
+                    "name": "Ciénaga La Caimanera",
+                    "description": "Manguezais e canais: um ecossistema para conhecer com guia local.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Ci%C3%A9naga%20La%20Caimanera%20Cove%C3%B1as%20Sucre%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                }
+            },
+            "image": {
+                "file": "images/72d7c8bfcc776ae7085c288557c263b3fc89623dfe1e0308af6a63facd7cdb62.webp",
+                "image_origin": "ai_generated",
+                "image_creator": "OpenAI · ilustración editorial independiente IA",
+                "image_source_url": "",
+                "image_license": "Generada con IA; borrador para revisión humana",
+                "image_license_url": "",
+                "alt": {
+                    "en": "La Caimanera wetland",
+                    "es": "Ciénaga La Caimanera",
+                    "pt-BR": "Ciénaga La Caimanera"
+                },
+                "caption": {
+                    "en": "",
+                    "es": "",
+                    "pt-BR": ""
+                }
+            }
+        },
+        {
+            "slug": "museo-infanteria-marina",
+            "type": "place",
+            "latitude": null,
+            "longitude": null,
+            "display_order": 4,
+            "publication_status": "draft",
+            "translations": {
+                "en": {
+                    "name": "Marine Corps Museum",
+                    "description": "Naval history inside a military site; confirm access before visiting.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20de%20Infanter%C3%ADa%20de%20Marina%20Cove%C3%B1as%20Sucre%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "es": {
+                    "name": "Museo de Infantería de Marina",
+                    "description": "Historia naval en un recinto militar; confirma el acceso antes de ir.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20de%20Infanter%C3%ADa%20de%20Marina%20Cove%C3%B1as%20Sucre%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "pt-BR": {
+                    "name": "Museu de Infantaria da Marinha",
+                    "description": "História naval em uma área militar; confirme o acesso antes da visita.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20de%20Infanter%C3%ADa%20de%20Marina%20Cove%C3%B1as%20Sucre%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                }
+            },
+            "image": {
+                "file": "images/43fa03b1b0c7299da2f6744dbfbcd8e51c3d79441aec52a00991538f9010520e.webp",
+                "image_origin": "ai_generated",
+                "image_creator": "OpenAI · ilustración editorial independiente IA",
+                "image_source_url": "",
+                "image_license": "Generada con IA; borrador para revisión humana",
+                "image_license_url": "",
+                "alt": {
+                    "en": "Thematic illustration, not a record of the venue: Marine Corps Museum",
+                    "es": "Ilustración temática, no registro del recinto: Museo de Infantería de Marina",
+                    "pt-BR": "Ilustração temática, não registro do recinto: Museu de Infantaria da Marinha"
+                },
+                "caption": {
+                    "en": "",
+                    "es": "",
+                    "pt-BR": ""
+                }
+            }
+        },
+        {
+            "slug": "la-coquerita",
+            "type": "place",
+            "latitude": null,
+            "longitude": null,
+            "display_order": 5,
+            "publication_status": "draft",
+            "translations": {
+                "en": {
+                    "name": "La Coquerita",
+                    "description": "A coastal area listed among the municipality’s beaches.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=La%20Coquerita%20Cove%C3%B1as%20Sucre%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "es": {
+                    "name": "La Coquerita",
+                    "description": "Un sector costero mencionado entre las playas del municipio.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=La%20Coquerita%20Cove%C3%B1as%20Sucre%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "pt-BR": {
+                    "name": "La Coquerita",
+                    "description": "Uma área costeira citada entre as praias do município.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=La%20Coquerita%20Cove%C3%B1as%20Sucre%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                }
+            },
+            "image": {
+                "file": "images/1fd0ba0df9d4289aea21ba962c19a79cbc80e95f57d43ba79ff524ffa7c35cde.webp",
+                "image_origin": "ai_generated",
+                "image_creator": "OpenAI · ilustración editorial independiente IA",
+                "image_source_url": "",
+                "image_license": "Generada con IA; borrador para revisión humana",
+                "image_license_url": "",
+                "alt": {
+                    "en": "La Coquerita",
+                    "es": "La Coquerita",
+                    "pt-BR": "La Coquerita"
+                },
+                "caption": {
+                    "en": "",
+                    "es": "",
+                    "pt-BR": ""
+                }
+            }
+        },
+        {
+            "slug": "recorrido-manglar",
+            "type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "display_order": 6,
+            "publication_status": "draft",
+            "translations": {
+                "en": {
+                    "name": "Mangrove tour",
+                    "description": "Travel through the waterways and discover the mangrove ecosystem.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Mangrove%20tour%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "es": {
+                    "name": "Recorrido por manglares",
+                    "description": "Navega por los canales y descubre el ecosistema del manglar.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Recorrido%20por%20manglares%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "pt-BR": {
+                    "name": "Passeio pelo manguezal",
+                    "description": "Navegue pelos canais e conheça o ecossistema do manguezal.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Passeio%20pelo%20manguezal%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                }
+            },
+            "image": {
+                "file": "images/642c12fdfa4a7e8bc65a6196d0ed42037f3a01072bca360987a8618e062ffcc5.webp",
+                "image_origin": "ai_generated",
+                "image_creator": "OpenAI · ilustración editorial independiente IA",
+                "image_source_url": "",
+                "image_license": "Generada con IA; borrador para revisión humana",
+                "image_license_url": "",
+                "alt": {
+                    "en": "Mangrove tour",
+                    "es": "Recorrido por manglares",
+                    "pt-BR": "Passeio pelo manguezal"
+                },
+                "caption": {
+                    "en": "",
+                    "es": "",
+                    "pt-BR": ""
+                }
+            }
+        },
+        {
+            "slug": "buceo",
+            "type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "display_order": 7,
+            "publication_status": "draft",
+            "translations": {
+                "en": {
+                    "name": "Scuba diving",
+                    "description": "Explore the underwater environment on a guided dive.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Scuba%20diving%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "es": {
+                    "name": "Buceo",
+                    "description": "Explora el entorno submarino en una salida guiada.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Buceo%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "pt-BR": {
+                    "name": "Mergulho",
+                    "description": "Explore o ambiente submarino em um mergulho guiado.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Mergulho%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                }
+            },
+            "image": {
+                "file": "images/9689bc16e455cb82de723eddb7f6e053791125c35a27a478d37db3ca7eaa8aa2.webp",
+                "image_origin": "ai_generated",
+                "image_creator": "OpenAI · ilustración editorial independiente IA",
+                "image_source_url": "",
+                "image_license": "Generada con IA; borrador para revisión humana",
+                "image_license_url": "",
+                "alt": {
+                    "en": "Thematic illustration: Scuba diving",
+                    "es": "Ilustración temática: Buceo",
+                    "pt-BR": "Ilustração temática: Mergulho"
+                },
+                "caption": {
+                    "en": "",
+                    "es": "",
+                    "pt-BR": ""
+                }
+            }
+        },
+        {
+            "slug": "paddleboarding",
+            "type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "display_order": 8,
+            "publication_status": "draft",
+            "translations": {
+                "en": {
+                    "name": "Paddleboarding",
+                    "description": "Learn to paddle standing up and explore the coast by board.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Paddleboarding%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "es": {
+                    "name": "Paddleboarding",
+                    "description": "Aprende a remar de pie y recorre la costa en tabla.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Paddleboarding%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "pt-BR": {
+                    "name": "Stand up paddle",
+                    "description": "Aprenda a remar em pé e explore a costa de prancha.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Stand%20up%20paddle%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                }
+            },
+            "image": {
+                "file": "images/8d87b845184101abb99dada6a8162fc520e6d602fba2c8c3fa2094b0ea6b0b0a.webp",
+                "image_origin": "ai_generated",
+                "image_creator": "OpenAI · ilustración editorial independiente IA",
+                "image_source_url": "",
+                "image_license": "Generada con IA; borrador para revisión humana",
+                "image_license_url": "",
+                "alt": {
+                    "en": "Thematic illustration: Paddleboarding",
+                    "es": "Ilustración temática: Paddleboarding",
+                    "pt-BR": "Ilustração temática: Stand up paddle"
+                },
+                "caption": {
+                    "en": "",
+                    "es": "",
+                    "pt-BR": ""
+                }
+            }
+        },
+        {
+            "slug": "excursion-san-bernardo",
+            "type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "display_order": 9,
+            "publication_status": "draft",
+            "translations": {
+                "en": {
+                    "name": "San Bernardo Islands excursion",
+                    "description": "A regional excursion to discover the islands from Coveñas.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=San%20Bernardo%20Islands%20excursion%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "es": {
+                    "name": "Excursión a las islas de San Bernardo",
+                    "description": "Una excursión regional para conocer las islas desde Coveñas.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Excursi%C3%B3n%20a%20las%20islas%20de%20San%20Bernardo%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "pt-BR": {
+                    "name": "Passeio às ilhas de San Bernardo",
+                    "description": "Uma excursão regional para conhecer as ilhas a partir de Coveñas.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Passeio%20%C3%A0s%20ilhas%20de%20San%20Bernardo%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                }
+            },
+            "image": {
+                "file": "images/7ed4d384701a633be32e0efd4acfdeb3d6d415c7766c7eb21c03340f63ff1b8d.webp",
+                "image_origin": "ai_generated",
+                "image_creator": "OpenAI · ilustración editorial independiente IA",
+                "image_source_url": "",
+                "image_license": "Generada con IA; borrador para revisión humana",
+                "image_license_url": "",
+                "alt": {
+                    "en": "Thematic illustration: San Bernardo Islands excursion",
+                    "es": "Ilustración temática: Excursión a las islas de San Bernardo",
+                    "pt-BR": "Ilustração temática: Passeio às ilhas de San Bernardo"
+                },
+                "caption": {
+                    "en": "",
+                    "es": "",
+                    "pt-BR": ""
+                }
+            }
+        },
+        {
+            "slug": "excursion-cispata",
+            "type": "experience",
+            "latitude": null,
+            "longitude": null,
+            "display_order": 10,
+            "publication_status": "draft",
+            "translations": {
+                "en": {
+                    "name": "Cispatá excursion",
+                    "description": "Travel from Coveñas to discover Cispatá’s mangroves in San Antero.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Cispat%C3%A1%20excursion%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "es": {
+                    "name": "Excursión a Cispatá",
+                    "description": "Desde Coveñas, conoce los manglares de Cispatá, en San Antero.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Excursi%C3%B3n%20a%20Cispat%C3%A1%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                },
+                "pt-BR": {
+                    "name": "Passeio a Cispatá",
+                    "description": "Saia de Coveñas para conhecer os manguezais de Cispatá, em San Antero.",
+                    "map_url": "https://www.google.com/maps/search/?api=1&query=Passeio%20a%20Cispat%C3%A1%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia",
+                    "external_url": "",
+                    "external_label": ""
+                }
+            },
+            "image": {
+                "file": "images/fc0d6083b3fef51b45307f688a31acec1a790fbe474343400ad11b463bffcf7f.webp",
+                "image_origin": "ai_generated",
+                "image_creator": "OpenAI · ilustración editorial independiente IA",
+                "image_source_url": "",
+                "image_license": "Generada con IA; borrador para revisión humana",
+                "image_license_url": "",
+                "alt": {
+                    "en": "Thematic illustration: Cispatá excursion",
+                    "es": "Ilustración temática: Excursión a Cispatá",
+                    "pt-BR": "Ilustração temática: Passeio a Cispatá"
+                },
+                "caption": {
+                    "en": "",
+                    "es": "",
+                    "pt-BR": ""
+                }
+            }
+        }
+    ]
+}
