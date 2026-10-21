@@ -1,0 +1,879 @@
+{
+  "schema_version": 1,
+  "audit_date": "2026-10-20",
+  "scope": [
+    "zipaquira",
+    "jardin",
+    "covenas"
+  ],
+  "read_only": true,
+  "site_or_package_mutated": false,
+  "images_generated": false,
+  "approval_policy": "Aprobaciones finales por hash preservadas; hallazgo no equivale a rechazo. Cualquier retirada es solo propuesta.",
+  "snapshots": {
+    "zipaquira": {
+      "stage_zip": "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/preprod/.local/preprod/worker-review/lote-20261019/zipaquira.zip",
+      "stage_sha256": "c3757be91f393e398e46cf4fab2cf85dccf027235aae740835b18fa87d586be6",
+      "receipt_path": "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/preprod/.local/preprod/worker-review/lote-20261019/loaded-zipaquira.json",
+      "approval_path": "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-zipaquira/crecimiento-colombia/entregas/zipaquira/aprobacion-destino.json",
+      "approval_sha_matches": true,
+      "approval": {
+        "destination": "zipaquira",
+        "date": "2026-10-20",
+        "status": "approved_in_preprod",
+        "package_sha256": "c3757be91f393e398e46cf4fab2cf85dccf027235aae740835b18fa87d586be6",
+        "user_statement": "super aprobado",
+        "review_url": "http://127.0.0.1:8088/destinos/zipaquira/?revision=9#experiencias-locales",
+        "production_authorized": false,
+        "scope": "Versión completa revisada en preproducción. Se conservan fuentes, límites y procedencias; aprobación visual no prueba exactitud histórica ni licencia de referencias."
+      },
+      "local_url": "http://127.0.0.1:8088/destinos/zipaquira/",
+      "local_anonymous_http": "success; HTML downloaded without administration-session message",
+      "production_status": "Not verified remotely; approval records do not authorize production",
+      "counts": {
+        "attractions": 7,
+        "experiences": 3,
+        "images": 11,
+        "businesses": 30
+      },
+      "assets": [
+        {
+          "component": "hero",
+          "kind": "hero",
+          "file": "images/portada-fiel-v3.webp",
+          "sha256": "c2badfad9bda4389dc63d84ce26a38cb544a37dfdfd9751e5d6f44b0eb48c4c5",
+          "origin": "ai_generated",
+          "method": "direct_licensed_photo",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Sal_Azul_02.jpg",
+          "alt_es": "Zipaquirá: Catedral de Sal · ilustración editorial",
+          "human_approval": "approved_in_final_matching_package",
+          "reference_identity_documented": true,
+          "photographic_identity_verified": false,
+          "identity_limit": "Foto identificada no equivale a estado físico actual"
+        },
+        {
+          "component": "catedral-de-sal",
+          "kind": "place",
+          "file": "images/catedral-fiel-v2.webp",
+          "sha256": "be034a026989068701777078bb0d218912941d32b0d4776804d6edaec6dc0c34",
+          "origin": "ai_generated",
+          "method": "direct_licensed_photo",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Catedral_de_Sal_02.jpg",
+          "alt_es": "Catedral de Sal · ilustración editorial",
+          "human_approval": "approved_in_final_matching_package",
+          "reference_identity_documented": true,
+          "photographic_identity_verified": false,
+          "identity_limit": "Foto identificada no equivale a estado físico actual"
+        },
+        {
+          "component": "plaza-comuneros",
+          "kind": "place",
+          "file": "images/plaza-comuneros-fiel-v3.webp",
+          "sha256": "47d7c0bba510661928bc1edd7d88f911faecb10a2194b3a5d025230d0f5af8cf",
+          "origin": "ai_generated",
+          "method": "direct_licensed_photo",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Zipaquira_-_Place_(1).JPG",
+          "alt_es": "Plaza de los Comuneros · ilustración editorial",
+          "human_approval": "approved_in_final_matching_package",
+          "reference_identity_documented": true,
+          "photographic_identity_verified": false,
+          "identity_limit": "Foto identificada no equivale a estado físico actual"
+        },
+        {
+          "component": "catedral-diocesana",
+          "kind": "place",
+          "file": "images/catedral-diocesana-fiel-v3.webp",
+          "sha256": "457b21566651f559dd5f32210cb572a4f4b116f68ecde5582b7d9356144a12f5",
+          "origin": "ai_generated",
+          "method": "direct_licensed_photo",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Catedral_Diocesana,_Zipaquir%C3%A1.JPG",
+          "alt_es": "Catedral Diocesana · ilustración editorial",
+          "human_approval": "approved_in_final_matching_package",
+          "reference_identity_documented": true,
+          "photographic_identity_verified": false,
+          "identity_limit": "Foto identificada no equivale a estado físico actual"
+        },
+        {
+          "component": "estacion-tren",
+          "kind": "place",
+          "file": "images/estacion-referencia-usuario-v8.webp",
+          "sha256": "083d877ebe942e25d81a90a47a05c8579de094a922b0135aff3eadee687e4d8c",
+          "origin": "ai_generated",
+          "method": "direct_user_reference_original_identity_incomplete",
+          "source_url": "",
+          "alt_es": "Estación del Tren · ilustración editorial",
+          "human_approval": "approved_in_final_matching_package",
+          "reference_identity_documented": false,
+          "photographic_identity_verified": false,
+          "identity_limit": "No certificada fotográficamente por esta auditoría; aprobación humana preservada"
+        },
+        {
+          "component": "colegio-gabo",
+          "kind": "place",
+          "file": "images/colegio-referencia-usuario-v8.webp",
+          "sha256": "438213f64269a4ba3f709a0db4862a0c7c7d6b78dd9df23c67f0c253917298aa",
+          "origin": "ai_generated",
+          "method": "direct_user_reference_original_identity_incomplete",
+          "source_url": "",
+          "alt_es": "Patio del antiguo liceo de Zipaquirá · ilustración aproximada basada en rasgos documentados",
+          "human_approval": "approved_in_final_matching_package",
+          "reference_identity_documented": false,
+          "photographic_identity_verified": false,
+          "identity_limit": "No certificada fotográficamente por esta auditoría; aprobación humana preservada"
+        },
+        {
+          "component": "museo-quevedo",
+          "kind": "place",
+          "file": "images/quevedo-referencia-usuario-v8.webp",
+          "sha256": "50a54d0ed6ab360c63c596891027ac3f1973bdd38840cc5314437fe4609212c1",
+          "origin": "ai_generated",
+          "method": "direct_user_reference_original_identity_incomplete",
+          "source_url": "",
+          "alt_es": "Entrada de la Casa Museo Quevedo · ilustración aproximada basada en rasgos documentados",
+          "human_approval": "approved_in_final_matching_package",
+          "reference_identity_documented": false,
+          "photographic_identity_verified": false,
+          "identity_limit": "No certificada fotográficamente por esta auditoría; aprobación humana preservada"
+        },
+        {
+          "component": "museo-arqueologico",
+          "kind": "place",
+          "file": "images/arqueologico-referencia-usuario-v8.webp",
+          "sha256": "b9bf6e4293e304f653dd091b21749efbad5b3fe5ae61ffaea46d387255468729",
+          "origin": "ai_generated",
+          "method": "direct_user_reference_original_identity_incomplete",
+          "source_url": "",
+          "alt_es": "Museo Arqueológico · ilustración editorial",
+          "human_approval": "approved_in_final_matching_package",
+          "reference_identity_documented": false,
+          "photographic_identity_verified": false,
+          "identity_limit": "No certificada fotográficamente por esta auditoría; aprobación humana preservada"
+        },
+        {
+          "component": "ruta-del-minero",
+          "kind": "experience",
+          "file": "images/mina-referencia-usuario-v9.webp",
+          "sha256": "e294f327be12a0e37e75bbd361c66fb7c72ee7999740836fe4c530f9dc553b0e",
+          "origin": "ai_generated",
+          "method": "direct_user_reference_original_identity_incomplete",
+          "source_url": "",
+          "alt_es": "Túnel de visita con espejo de agua, ilustrado desde la referencia aportada; no muestra extracción de sal.",
+          "human_approval": "approved_in_final_matching_package",
+          "reference_identity_documented": false,
+          "photographic_identity_verified": false,
+          "identity_limit": "No certificada fotográficamente por esta auditoría; aprobación humana preservada"
+        },
+        {
+          "component": "tren-sabana",
+          "kind": "experience",
+          "file": "images/tren-referencia-usuario-v8.webp",
+          "sha256": "9f088d4847c0a853b2e794e6a503d7786d292cfec91b44b0a4757ce4aca6ff5a",
+          "origin": "ai_generated",
+          "method": "direct_user_reference_original_identity_incomplete",
+          "source_url": "",
+          "alt_es": "Fotografía histórica del tren en el patio ferroviario de Zipaquirá",
+          "human_approval": "approved_in_final_matching_package",
+          "reference_identity_documented": false,
+          "photographic_identity_verified": false,
+          "identity_limit": "No certificada fotográficamente por esta auditoría; aprobación humana preservada"
+        },
+        {
+          "component": "recorrido-historico",
+          "kind": "experience",
+          "file": "images/urbano-centro-fiel-v4.webp",
+          "sha256": "b1e3f041372ef13952c2f7e944e06acd08e1c4ffa9610c04f1b423c548eb367d",
+          "origin": "ai_generated",
+          "method": "direct_licensed_photo",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Zipaquira_-_Place_(1).JPG",
+          "alt_es": "Paseo por el centro de Zipaquirá · ilustración basada en una vista identificada",
+          "human_approval": "approved_in_final_matching_package",
+          "reference_identity_documented": true,
+          "photographic_identity_verified": false,
+          "identity_limit": "Foto identificada no equivale a estado físico actual"
+        }
+      ]
+    },
+    "jardin": {
+      "stage_zip": "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/preprod/.local/preprod/worker-review/lote-20261019/jardin.zip",
+      "stage_sha256": "9ac8321855690db0b53fdcc0b0829de61dc5de3847906e2355814fbee7b0aa13",
+      "receipt_path": "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/preprod/.local/preprod/worker-review/lote-20261019/loaded-jardin.json",
+      "approval_path": "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-jardin/crecimiento-colombia/entregas/jardin/aprobacion.json",
+      "approval_sha_matches": true,
+      "approval": {
+        "schema_version": 1,
+        "destination": "jardin",
+        "decision": "approved",
+        "approval_source": "Mensaje directo del propietario: si queda aprobado jardin",
+        "approved_package_sha256": "9ac8321855690db0b53fdcc0b0829de61dc5de3847906e2355814fbee7b0aa13",
+        "approved_content_commit": "2400c45",
+        "recorded_at": "2026-10-19",
+        "scope": "Contenido, imágenes y diseño revisados en preproducción",
+        "production_deployed": false,
+        "changes_after_approval_require_review": true
+      },
+      "local_url": "http://127.0.0.1:8088/destinos/jardin/",
+      "local_anonymous_http": "success; HTML downloaded without administration-session message",
+      "production_status": "Not verified remotely; approval records do not authorize production",
+      "counts": {
+        "attractions": 8,
+        "experiences": 4,
+        "images": 13,
+        "businesses": 30
+      },
+      "assets": [
+        {
+          "component": "hero",
+          "kind": "hero",
+          "file": "images/jardin-portada-v1.webp",
+          "sha256": "f56935fc6c7bfcc87d5b794f03536e072a91742fa46f08016500956bc698df88",
+          "origin": "ai_generated",
+          "method": "facts_only_independent_approximation",
+          "source_url": "",
+          "alt_es": "Ilustración de Parque y basílica de Jardín",
+          "human_approval": "approved_in_final_matching_package",
+          "reference_identity_documented": false,
+          "photographic_identity_verified": false,
+          "identity_limit": "No certificada fotográficamente por esta auditoría; aprobación humana preservada"
+        },
+        {
+          "component": "parque-el-libertador",
+          "kind": "place",
+          "file": "images/parque-el-libertador.webp",
+          "sha256": "b9f6d71dee75f8037d0259bd5e263b1561206fd23b2777cf94f362c332768386",
+          "origin": "ai_generated",
+          "method": "facts_only_independent_approximation",
+          "source_url": "",
+          "alt_es": "Ilustración de Parque El Libertador",
+          "human_approval": "approved_in_final_matching_package",
+          "reference_identity_documented": false,
+          "photographic_identity_verified": false,
+          "identity_limit": "No certificada fotográficamente por esta auditoría; aprobación humana preservada"
+        },
+        {
+          "component": "basilica-inmaculada-concepcion",
+          "kind": "place",
+          "file": "images/basilica-inmaculada-concepcion.webp",
+          "sha256": "58d4a74dbbb87d6ef870a16653e2773abdaec4cbcdc5bd041e3a677cbb471aa1",
+          "origin": "ai_generated",
+          "method": "facts_only_independent_approximation",
+          "source_url": "",
+          "alt_es": "Ilustración de Basílica de la Inmaculada Concepción",
+          "human_approval": "approved_in_final_matching_package",
+          "reference_identity_documented": false,
+          "photographic_identity_verified": false,
+          "identity_limit": "No certificada fotográficamente por esta auditoría; aprobación humana preservada"
+        },
+        {
+          "component": "cueva-del-esplendor",
+          "kind": "place",
+          "file": "images/cueva-del-esplendor.webp",
+          "sha256": "c79cb57e1d75f7f546e7180f01a527b5961d78225dc02b528ab738577f109d88",
+          "origin": "ai_generated",
+          "method": "facts_only_independent_approximation",
+          "source_url": "",
+          "alt_es": "Ilustración de Cueva del Esplendor",
+          "human_approval": "approved_in_final_matching_package",
+          "reference_identity_documented": false,
+          "photographic_identity_verified": false,
+          "identity_limit": "No certificada fotográficamente por esta auditoría; aprobación humana preservada"
+        },
+        {
+          "component": "reserva-jardin-de-rocas",
+          "kind": "place",
+          "file": "images/reserva-jardin-de-rocas.webp",
+          "sha256": "bae062e72778580e59ff2b9795b29afb6fa5b0d6890424186334c6369361e9d8",
+          "origin": "ai_generated",
+          "method": "facts_only_independent_approximation",
+          "source_url": "",
+          "alt_es": "Ilustración de Reserva Jardín de Rocas",
+          "human_approval": "approved_in_final_matching_package",
+          "reference_identity_documented": false,
+          "photographic_identity_verified": false,
+          "identity_limit": "No certificada fotográficamente por esta auditoría; aprobación humana preservada"
+        },
+        {
+          "component": "la-garrucha",
+          "kind": "place",
+          "file": "images/la-garrucha.webp",
+          "sha256": "41e4155621e2511e5eaadf906c51ac0ee766fef8922d342386e7bc13fd520f6f",
+          "origin": "ai_generated",
+          "method": "facts_only_independent_approximation",
+          "source_url": "",
+          "alt_es": "Ilustración de La Garrucha",
+          "human_approval": "approved_in_final_matching_package",
+          "reference_identity_documented": false,
+          "photographic_identity_verified": false,
+          "identity_limit": "No certificada fotográficamente por esta auditoría; aprobación humana preservada"
+        },
+        {
+          "component": "camino-de-la-herrera",
+          "kind": "place",
+          "file": "images/camino-de-la-herrera.webp",
+          "sha256": "54e0070fdc4dc845a38123b09373916945a29c4c298fb8fff82ec5a3c1bde142",
+          "origin": "ai_generated",
+          "method": "facts_only_independent_approximation",
+          "source_url": "",
+          "alt_es": "Ilustración de Camino de la Herrera",
+          "human_approval": "approved_in_final_matching_package",
+          "reference_identity_documented": false,
+          "photographic_identity_verified": false,
+          "identity_limit": "No certificada fotográficamente por esta auditoría; aprobación humana preservada"
+        },
+        {
+          "component": "casa-museo-clara-rojas",
+          "kind": "place",
+          "file": "images/casa-museo-clara-rojas.webp",
+          "sha256": "724bdcc3c38d76501577bf80adf144065e79f4ca13699f538d88bc4bc6662688",
+          "origin": "ai_generated",
+          "method": "facts_only_independent_approximation",
+          "source_url": "",
+          "alt_es": "Ilustración de Casa Museo Clara Rojas Peláez",
+          "human_approval": "approved_in_final_matching_package",
+          "reference_identity_documented": false,
+          "photographic_identity_verified": false,
+          "identity_limit": "No certificada fotográficamente por esta auditoría; aprobación humana preservada"
+        },
+        {
+          "component": "reserva-loro-orejiamarillo",
+          "kind": "place",
+          "file": "images/reserva-loro-orejiamarillo.webp",
+          "sha256": "66d7d4d5b0194ccc388abb04adf57e7958629a953b93c3d2c91a53258bc469e5",
+          "origin": "ai_generated",
+          "method": "facts_only_independent_approximation",
+          "source_url": "",
+          "alt_es": "Ilustración de Reserva ProAves Loro Orejiamarillo",
+          "human_approval": "approved_in_final_matching_package",
+          "reference_identity_documented": false,
+          "photographic_identity_verified": false,
+          "identity_limit": "No certificada fotográficamente por esta auditoría; aprobación humana preservada"
+        },
+        {
+          "component": "cafe-en-finca",
+          "kind": "experience",
+          "file": "images/cafe-en-finca.webp",
+          "sha256": "109367597283990cf71cbc56eb0f8eabd3ac0bf74fd0edb5c6245c31bfbe2a74",
+          "origin": "ai_generated",
+          "method": "facts_only_independent_approximation",
+          "source_url": "",
+          "alt_es": "Ilustración de Tour cafetero",
+          "human_approval": "approved_in_final_matching_package",
+          "reference_identity_documented": false,
+          "photographic_identity_verified": false,
+          "identity_limit": "No certificada fotográficamente por esta auditoría; aprobación humana preservada"
+        },
+        {
+          "component": "observacion-aves",
+          "kind": "experience",
+          "file": "images/observacion-aves.webp",
+          "sha256": "13c23874cad5dfa780eda3f76b97300520b7be3db9d03dfcadb2edf186be5073",
+          "origin": "ai_generated",
+          "method": "facts_only_independent_approximation",
+          "source_url": "",
+          "alt_es": "Ilustración de Avistamiento de aves",
+          "human_approval": "approved_in_final_matching_package",
+          "reference_identity_documented": false,
+          "photographic_identity_verified": false,
+          "identity_limit": "No certificada fotográficamente por esta auditoría; aprobación humana preservada"
+        },
+        {
+          "component": "caminata-cueva",
+          "kind": "experience",
+          "file": "images/caminata-cueva.webp",
+          "sha256": "7f0b706842461996c82a56e4d329dc82ae07012045080aa803033e0c8d6c6224",
+          "origin": "ai_generated",
+          "method": "facts_only_independent_approximation",
+          "source_url": "",
+          "alt_es": "Ilustración de Cueva del Esplendor",
+          "human_approval": "approved_in_final_matching_package",
+          "reference_identity_documented": false,
+          "photographic_identity_verified": false,
+          "identity_limit": "No certificada fotográficamente por esta auditoría; aprobación humana preservada"
+        },
+        {
+          "component": "paseo-patrimonial",
+          "kind": "experience",
+          "file": "images/paseo-patrimonial.webp",
+          "sha256": "cc83948ba2402359db1690ca11ed60ca83abb9dadfd1bf4f09703dadc01274d6",
+          "origin": "ai_generated",
+          "method": "facts_only_independent_approximation",
+          "source_url": "",
+          "alt_es": "Ilustración de Tour urbano patrimonial",
+          "human_approval": "approved_in_final_matching_package",
+          "reference_identity_documented": false,
+          "photographic_identity_verified": false,
+          "identity_limit": "No certificada fotográficamente por esta auditoría; aprobación humana preservada"
+        }
+      ]
+    },
+    "covenas": {
+      "stage_zip": "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/preprod/.local/preprod/worker-review/lote-20261019/covenas.zip",
+      "stage_sha256": "c120c45da5123b9942e3762beadf4fee18a524f536d6f72ff858626dbb354a0d",
+      "receipt_path": "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/preprod/.local/preprod/worker-review/lote-20261019/loaded-covenas.json",
+      "approval_path": "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-covenas/crecimiento-colombia/entregas/covenas/aprobacion-destino.json",
+      "approval_sha_matches": true,
+      "approval": {
+        "destination": "covenas",
+        "status": "approved_in_preprod",
+        "package_sha256": "c120c45da5123b9942e3762beadf4fee18a524f536d6f72ff858626dbb354a0d",
+        "user_statement": "Usuario: aprovado coveñas, cual sigue?",
+        "production_authorized": false
+      },
+      "local_url": "http://127.0.0.1:8088/destinos/covenas/",
+      "local_anonymous_http": "success; HTML downloaded without administration-session message",
+      "production_status": "Not verified remotely; approval records do not authorize production",
+      "counts": {
+        "attractions": 5,
+        "experiences": 5,
+        "images": 11,
+        "businesses": 30
+      },
+      "assets": [
+        {
+          "component": "hero",
+          "kind": "hero",
+          "file": "images/covenas-portada-aprobada-v4.webp",
+          "sha256": "e423b3b87f355c27e6532165476cb072eaa61b89df362f9458d0af2847a0fd6d",
+          "origin": "ai_generated",
+          "method": "hero_original_input_not_located",
+          "source_url": "",
+          "alt_es": "Ilustración de Coveñas",
+          "human_approval": "approved_in_final_matching_package",
+          "reference_identity_documented": false,
+          "photographic_identity_verified": false,
+          "identity_limit": "No certificada fotográficamente por esta auditoría; aprobación humana preservada"
+        },
+        {
+          "component": "primera-ensenada",
+          "kind": "place",
+          "file": "images/primera-aprobada-v1.webp",
+          "sha256": "d590841c242d32cb2a5a29d16f5046972352e895d0939aa8ce71c10546edac9c",
+          "origin": "ai_generated",
+          "method": "direct_user_reference",
+          "source_url": "",
+          "alt_es": "Primera Ensenada",
+          "human_approval": "approved_in_final_matching_package",
+          "reference_identity_documented": false,
+          "photographic_identity_verified": false,
+          "identity_limit": "No certificada fotográficamente por esta auditoría; aprobación humana preservada"
+        },
+        {
+          "component": "segunda-ensenada",
+          "kind": "place",
+          "file": "images/segunda-aprobada-v1.webp",
+          "sha256": "ca73d20126100f5d2b8ea66a9f3a16fb3b3f244be2c3231ebaf518d46adfb789",
+          "origin": "ai_generated",
+          "method": "direct_user_reference",
+          "source_url": "",
+          "alt_es": "Segunda Ensenada y malecón",
+          "human_approval": "approved_in_final_matching_package",
+          "reference_identity_documented": false,
+          "photographic_identity_verified": false,
+          "identity_limit": "No certificada fotográficamente por esta auditoría; aprobación humana preservada"
+        },
+        {
+          "component": "cienaga-la-caimanera",
+          "kind": "place",
+          "file": "images/cienaga-la-caimanera.webp",
+          "sha256": "72d7c8bfcc776ae7085c288557c263b3fc89623dfe1e0308af6a63facd7cdb62",
+          "origin": "ai_generated",
+          "method": "independent_thematic_or_ecological_scene",
+          "source_url": "",
+          "alt_es": "Ciénaga La Caimanera",
+          "human_approval": "approved_in_final_matching_package",
+          "reference_identity_documented": false,
+          "photographic_identity_verified": false,
+          "identity_limit": "No certificada fotográficamente por esta auditoría; aprobación humana preservada"
+        },
+        {
+          "component": "museo-infanteria-marina",
+          "kind": "place",
+          "file": "images/museo-infanteria-marina.webp",
+          "sha256": "43fa03b1b0c7299da2f6744dbfbcd8e51c3d79441aec52a00991538f9010520e",
+          "origin": "ai_generated",
+          "method": "independent_thematic_or_ecological_scene",
+          "source_url": "",
+          "alt_es": "Ilustración temática, no registro del recinto: Museo de Infantería de Marina",
+          "human_approval": "approved_in_final_matching_package",
+          "reference_identity_documented": false,
+          "photographic_identity_verified": false,
+          "identity_limit": "No certificada fotográficamente por esta auditoría; aprobación humana preservada"
+        },
+        {
+          "component": "la-coquerita",
+          "kind": "place",
+          "file": "images/coquerita-aprobada-v1.webp",
+          "sha256": "1fd0ba0df9d4289aea21ba962c19a79cbc80e95f57d43ba79ff524ffa7c35cde",
+          "origin": "ai_generated",
+          "method": "direct_user_reference",
+          "source_url": "",
+          "alt_es": "La Coquerita",
+          "human_approval": "approved_in_final_matching_package",
+          "reference_identity_documented": false,
+          "photographic_identity_verified": false,
+          "identity_limit": "No certificada fotográficamente por esta auditoría; aprobación humana preservada"
+        },
+        {
+          "component": "recorrido-manglar",
+          "kind": "experience",
+          "file": "images/recorrido-manglar.webp",
+          "sha256": "642c12fdfa4a7e8bc65a6196d0ed42037f3a01072bca360987a8618e062ffcc5",
+          "origin": "ai_generated",
+          "method": "independent_thematic_or_ecological_scene",
+          "source_url": "",
+          "alt_es": "Recorrido por manglares",
+          "human_approval": "approved_in_final_matching_package",
+          "reference_identity_documented": false,
+          "photographic_identity_verified": false,
+          "identity_limit": "No certificada fotográficamente por esta auditoría; aprobación humana preservada"
+        },
+        {
+          "component": "buceo",
+          "kind": "experience",
+          "file": "images/buceo-v1.webp",
+          "sha256": "9689bc16e455cb82de723eddb7f6e053791125c35a27a478d37db3ca7eaa8aa2",
+          "origin": "ai_generated",
+          "method": "independent_thematic_or_ecological_scene",
+          "source_url": "",
+          "alt_es": "Ilustración temática: Buceo",
+          "human_approval": "approved_in_final_matching_package",
+          "reference_identity_documented": false,
+          "photographic_identity_verified": false,
+          "identity_limit": "No certificada fotográficamente por esta auditoría; aprobación humana preservada"
+        },
+        {
+          "component": "paddleboarding",
+          "kind": "experience",
+          "file": "images/paddleboarding-v1.webp",
+          "sha256": "8d87b845184101abb99dada6a8162fc520e6d602fba2c8c3fa2094b0ea6b0b0a",
+          "origin": "ai_generated",
+          "method": "independent_thematic_or_ecological_scene",
+          "source_url": "",
+          "alt_es": "Ilustración temática: Paddleboarding",
+          "human_approval": "approved_in_final_matching_package",
+          "reference_identity_documented": false,
+          "photographic_identity_verified": false,
+          "identity_limit": "No certificada fotográficamente por esta auditoría; aprobación humana preservada"
+        },
+        {
+          "component": "excursion-san-bernardo",
+          "kind": "experience",
+          "file": "images/excursion-san-bernardo-v1.webp",
+          "sha256": "7ed4d384701a633be32e0efd4acfdeb3d6d415c7766c7eb21c03340f63ff1b8d",
+          "origin": "ai_generated",
+          "method": "independent_thematic_or_ecological_scene",
+          "source_url": "",
+          "alt_es": "Ilustración temática: Excursión a las islas de San Bernardo",
+          "human_approval": "approved_in_final_matching_package",
+          "reference_identity_documented": false,
+          "photographic_identity_verified": false,
+          "identity_limit": "No certificada fotográficamente por esta auditoría; aprobación humana preservada"
+        },
+        {
+          "component": "excursion-cispata",
+          "kind": "experience",
+          "file": "images/excursion-cispata-v1.webp",
+          "sha256": "fc0d6083b3fef51b45307f688a31acec1a790fbe474343400ad11b463bffcf7f",
+          "origin": "ai_generated",
+          "method": "independent_thematic_or_ecological_scene",
+          "source_url": "",
+          "alt_es": "Ilustración temática: Excursión a Cispatá",
+          "human_approval": "approved_in_final_matching_package",
+          "reference_identity_documented": false,
+          "photographic_identity_verified": false,
+          "identity_limit": "No certificada fotográficamente por esta auditoría; aprobación humana preservada"
+        }
+      ]
+    }
+  },
+  "findings": [
+    {
+      "id": "ZIP-01",
+      "destination": "zipaquira",
+      "severity": "P1",
+      "title": "La imagen minera no representa la actividad que describe la tarjeta",
+      "evidence": "El ZIP aprobado y HTML local conservan descripción de picar roca salina, pero alt y activo mina-referencia-usuario-v9 muestran un túnel con espejo de agua; el alt declara que no muestra extracción. La oferta del operador sí acredita extracción, no identifica esta foto como esa actividad.",
+      "evidence_paths": [
+        "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-zipaquira/crecimiento-colombia/entregas/zipaquira/paquete-destino-referencia-mina-v9.zip",
+        "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-zipaquira/crecimiento-colombia/entregas/zipaquira/aprobacion-destino.json",
+        "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-zipaquira/crecimiento-colombia/entregas/zipaquira/criterios-editoriales.json"
+      ],
+      "source_urls": [
+        "https://www.catedraldesal.gov.co/atracciones/ruta-del-minero/"
+      ],
+      "proposed_only": "Proponer una decisión editorial: conservar la imagen como visita subterránea con texto correspondiente, o conservar la experiencia minera con referencia de esa acción. No aplicar ni retirar la aprobación vigente.",
+      "photo_to_request": "Si se conserva extracción: foto de visitantes realizando la actividad operada, con casco/equipo y socavón identificados, URL/fecha y permiso. No otro túnel escénico.",
+      "removal_proposed_only": "Solo propuesta: desacoplar esa imagen de la tarjeta de extracción si el propietario decide que no corresponde; conservar actividad y referencia en expediente.",
+      "approval_revoked": false,
+      "applied": false
+    },
+    {
+      "id": "ZIP-02",
+      "destination": "zipaquira",
+      "severity": "P1",
+      "title": "El alt del tren llama fotografía a una ilustración IA actual",
+      "evidence": "El activo servido es tren-referencia-usuario-v8.webp con origen ai_generated; alt ES/EN/PT heredado de V5 dice fotografía histórica del patio de Zipaquirá. El manifiesto V8 dice referencia aportada sin ubicación exacta/fecha documentadas.",
+      "evidence_paths": [
+        "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-zipaquira/crecimiento-colombia/entregas/zipaquira/TREN_REFERENCIA_USUARIO_V8.json",
+        "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-zipaquira/crecimiento-colombia/entregas/zipaquira/paquete-destino-referencia-mina-v9.zip"
+      ],
+      "source_urls": [],
+      "proposed_only": "Proponer corregir únicamente alt/metadatos a ilustración del recorrido ferroviario desde Bogotá, sin atribuir punto exacto ni fecha. No cambiar la imagen aprobada.",
+      "photo_to_request": "No hace falta otra imagen para corregir el alt; para geolocalización, URL original y localización del puente/tramo de la referencia ya elegida.",
+      "removal_proposed_only": null,
+      "approval_revoked": false,
+      "applied": false
+    },
+    {
+      "id": "ZIP-03",
+      "destination": "zipaquira",
+      "severity": "P2",
+      "title": "Seis referencias del propietario carecen de ficha original completa",
+      "evidence": "Estación, colegio, Quevedo, arqueológico, tren y mina actuales derivan referencias suministradas por el propietario. La aprobación final coincide con SHA actual. Metadatos mantienen autor/URL/fecha/permiso pendientes; los manifiestos V8 apuntan a rutas temporales de capturas. No se localizó copia original permanente identificada por hash en la entrega.",
+      "evidence_paths": [
+        "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-zipaquira/crecimiento-colombia/entregas/zipaquira/ESTACION_REFERENCIA_USUARIO_V8.json",
+        "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-zipaquira/crecimiento-colombia/entregas/zipaquira/COLEGIO_REFERENCIA_USUARIO_V8.json",
+        "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-zipaquira/crecimiento-colombia/entregas/zipaquira/QUEVEDO_REFERENCIA_USUARIO_V8.json",
+        "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-zipaquira/crecimiento-colombia/entregas/zipaquira/ARQUEOLOGICO_REFERENCIA_USUARIO_V8.json",
+        "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-zipaquira/crecimiento-colombia/entregas/zipaquira/TREN_REFERENCIA_USUARIO_V8.json",
+        "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-zipaquira/crecimiento-colombia/entregas/zipaquira/INTEGRACION_REFERENCIAS_USUARIO_V8.json",
+        "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-zipaquira/crecimiento-colombia/entregas/zipaquira/aprobacion-destino.json"
+      ],
+      "source_urls": [],
+      "proposed_only": "Proponer completar procedencia de las referencias existentes, conservar original durable y hash; registrar por separado aprobación visual e identificación documental. No es un nuevo rechazo ni una conclusión jurídica sobre la captura.",
+      "photo_to_request": "Solicitar las URLs/ficheros originales de esas seis imágenes ya elegidas, autor o fuente y fecha/punto cuando se conozcan; no pedir repetir selección.",
+      "removal_proposed_only": null,
+      "approval_revoked": false,
+      "applied": false
+    },
+    {
+      "id": "JAR-01",
+      "destination": "jardin",
+      "severity": "P2",
+      "title": "Las trece ilustraciones están aprobadas como composición, no contrastadas contra una foto exacta",
+      "evidence": "Procedencia declara generación independiente desde descripciones, sin fotografía de entrada, para portada y doce tarjetas. Casa Museo Clara Rojas tiene patio/fuente documentados pero disposición interpretada; La Garrucha interpreta cabina y cañón. No hay evidencia para llamarlas reproducciones exactas ni para afirmar que sean falsas.",
+      "evidence_paths": [
+        "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-jardin/crecimiento-colombia/entregas/jardin/procedencia-imagenes.json",
+        "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-jardin/crecimiento-colombia/entregas/jardin/procedencia-portada-v1.json",
+        "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-jardin/crecimiento-colombia/entregas/jardin/aprobacion.json"
+      ],
+      "source_urls": [
+        "https://mcrpjardin.blogspot.com/p/historia-de-la-casa-museo-clara-rojas.html",
+        "https://jardin.antioquia.in/Sitios-Turisticos/la-garrucha"
+      ],
+      "proposed_only": "Conservar aprobación vigente. Proponer distinguir aproximación documentada de geometría fotográfica verificada. Solo si se exige exactitud adicional, comparar los componentes arquitectónicos primero.",
+      "photo_to_request": "Opcional, no requisito para volver a aprobar: patio actual de Casa Museo Clara Rojas mostrando fuente/corredores, y cabina/andén real de La Garrucha en un encuadre identificado.",
+      "removal_proposed_only": null,
+      "approval_revoked": false,
+      "applied": false
+    },
+    {
+      "id": "JAR-02",
+      "destination": "jardin",
+      "severity": "P2",
+      "title": "La oferta de aves tiene evidencia propia pero tarifas publicadas vencidas",
+      "evidence": "Página propia de Montañeros describe guía en La Herrera y reserva, pero marca tarifas válidas hasta31-01-2026. No demuestra cierre ni disponibilidad actual. El expediente ya reconoce ese límite; el sitio no copia esas tarifas.",
+      "evidence_paths": [
+        "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-jardin/crecimiento-colombia/entregas/jardin/criterios-editoriales.json"
+      ],
+      "source_urls": [
+        "https://montaneros.co/tours-en-jardin-antioquia/avistamiento-de-aves-la-herrera/"
+      ],
+      "proposed_only": "Proponer marcar vigencia comercial por confirmar en registro interno antes de prometer una salida concreta. Conservar la experiencia documentada; no inferir inexistencia.",
+      "photo_to_request": null,
+      "removal_proposed_only": null,
+      "approval_revoked": false,
+      "applied": false
+    },
+    {
+      "id": "COV-01",
+      "destination": "covenas",
+      "severity": "P2",
+      "title": "El museo naval usa una colección temática no acreditada como su colección real",
+      "evidence": "Prompt y activo actuales muestran ancla, maqueta naval y objetos en sala inventada como evocación; alt sí la califica temática y no registro del recinto. Fuente Armada acredita referencia histórica al museo, no estas piezas/sala; hoy respondió502. Aprobación de destino permanece vigente.",
+      "evidence_paths": [
+        "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-covenas/crecimiento-colombia/entregas/covenas/procedencia-imagenes.json",
+        "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-covenas/crecimiento-colombia/entregas/covenas/aprobacion-destino.json",
+        "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-covenas/crecimiento-colombia/entregas/covenas/criterios-editoriales.json"
+      ],
+      "source_urls": [
+        "https://www.armada.mil.co/es/content/11-anos-reviviendo-gesta-heroica-los-infantes-marina"
+      ],
+      "proposed_only": "Proponer contraste de identidad del museo si se quiere representar un lugar real en vez de evocación. El texto ya advierte confirmar acceso. No convertir una caída HTTP en cierre del museo.",
+      "photo_to_request": "Exterior identificable del museo o sala/pieza con rótulo verificable, fuente/fecha y condición de acceso; evitar ancla o barco genéricos.",
+      "removal_proposed_only": "Solo propuesta, previa decisión: sustituir imagen evocativa por imagen identificada o ficha sin imagen. No retirar el museo ni la aprobación automáticamente.",
+      "approval_revoked": false,
+      "applied": false
+    },
+    {
+      "id": "COV-02",
+      "destination": "covenas",
+      "severity": "P2",
+      "title": "Referencias aprobadas de playas no conservan identificación original suficiente del tramo",
+      "evidence": "Primera, Segunda y Coquerita actuales corresponden a referencias directas del propietario y hashes aprobados. Manifiesto declara autor/URL/fecha/permiso no documentados. La portada aprobada tiene maestro/hash pero no se localizó un registro que enlace ese maestro con referencia original; las fotos CC de SajoR constan como pruebas previas y no acreditan por sí mismas el activo actual.",
+      "evidence_paths": [
+        "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-covenas/crecimiento-colombia/entregas/covenas/referencias-directas-manifiesto.json",
+        "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-covenas/crecimiento-colombia/entregas/covenas/aprobacion-imagenes-2026-10-19.json",
+        "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-covenas/crecimiento-colombia/entregas/covenas/referencias-v4/ATRIBUCIONES.md",
+        "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-covenas/crecimiento-colombia/entregas/covenas/aprobacion-destino.json"
+      ],
+      "source_urls": [],
+      "proposed_only": "Conservar aprobación. Proponer vincular originales y sector/punto de vista a cada hash aprobado, sin reutilizar el rechazo de versiones V2/V3 para las actuales.",
+      "photo_to_request": "URLs originales de las tres playas y portada ya escogidas, con sector/punto de vista y fecha si existe. No pedir cuatro fotografías nuevas ni reabrir su elección.",
+      "removal_proposed_only": null,
+      "approval_revoked": false,
+      "applied": false
+    },
+    {
+      "id": "COV-03",
+      "destination": "covenas",
+      "severity": "P3",
+      "title": "La exclusión de kayak está desactualizada respecto de una oferta propia encontrada",
+      "evidence": "Criterios excluyen kayak por no haberse comprobado oferente. Web propia de Suplovers hoy enumera alquileres de kayak, junto a rutas de Coveñas. Esto abre un candidato verificable; no demuestra prioridad superior ni obliga a sumar tarjetas.",
+      "evidence_paths": [
+        "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-covenas/crecimiento-colombia/entregas/covenas/criterios-editoriales.json",
+        "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-covenas/crecimiento-colombia/entregas/covenas/prioridades.json"
+      ],
+      "source_urls": [
+        "https://suplovers.co/"
+      ],
+      "proposed_only": "Proponer actualizar únicamente motivo/evidencia del candidato en futura edición y evaluar si añade finalidad distinta; no incorporarlo para llenar una cuota.",
+      "photo_to_request": null,
+      "removal_proposed_only": null,
+      "approval_revoked": false,
+      "applied": false
+    },
+    {
+      "id": "COM-01",
+      "destination": "zipaquira",
+      "severity": "P2",
+      "title": "Estados históricos contradicen la aprobación final actual",
+      "evidence": "Recibos de importación editorial_approved:false y manifiestos por activo pendientes/no integrados sobreviven a aprobación-destino.json cuyo SHA coincide exactamente con stage actual. Lo mismo ocurre en Jardín y Coveñas; criterios de Coveñas conservan rechazos de versiones anteriores.",
+      "evidence_paths": [
+        "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-zipaquira/crecimiento-colombia/entregas/zipaquira/aprobacion-destino.json",
+        "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-zipaquira/crecimiento-colombia/entregas/zipaquira/INTEGRACION_REFERENCIAS_USUARIO_V8.json",
+        "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-zipaquira/crecimiento-colombia/entregas/zipaquira/checklist.json"
+      ],
+      "source_urls": [],
+      "proposed_only": "Proponer resolver estado por hash y cronología; archivar notas históricas como tales sin borrarlas. La auditoría toma las tres aprobaciones finales como vigentes, no como pendientes.",
+      "photo_to_request": null,
+      "removal_proposed_only": null,
+      "approval_revoked": false,
+      "applied": false
+    },
+    {
+      "id": "COM-02",
+      "destination": "covenas",
+      "severity": "P3",
+      "title": "No hay evidencia estadística para llamar el orden una clasificación objetiva de popularidad",
+      "evidence": "Coveñas declara ranking_validated:false; Jardín y Zipaquirá registran selección editorial con motivos y exclusiones. Hay finalidad turística, pero no conteos comparativos. Ninguna cantidad por sí misma demuestra relleno:7/8/5 atractivos y3/4/5 experiencias con ofertas trazadas.",
+      "evidence_paths": [
+        "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-covenas/crecimiento-colombia/entregas/covenas/prioridades.json",
+        "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-covenas/crecimiento-colombia/entregas/covenas/criterios-editoriales.json"
+      ],
+      "source_urls": [],
+      "proposed_only": "Conservar selección aprobada y distinguir prioridad editorial de demanda medida. No reordenar ni eliminar lugares por inferir popularidad sin datos.",
+      "photo_to_request": null,
+      "removal_proposed_only": null,
+      "approval_revoked": false,
+      "applied": false
+    }
+  ],
+  "positive_checks": [
+    "Los tres SHA de stage coinciden con sus aprobaciones finales.",
+    "Experiencias con oferta propia: Zipaquirá3, Jardín4, Coveñas5. Existencia documental no promete cupos ni vigencia para fecha concreta.",
+    "Jardín tiene8atractivos con motivos/exclusiones; Coveñas5 conserva excluidos por solapamiento/acceso, Zipaquirá7. No se demuestra relleno por cuotas.",
+    "Cispatá se presenta en San Antero y San Bernardo como excursión regional. Suplovers confirma traslado desde Coveñas a San Antero; agencia de islas diferencia salidas Coveñas/Tolú.",
+    "Tour cafetero, caminata Cueva y urbano de Jardín siguen documentados en fuentes propias consultadas; no se sustituyen por consumo autónomo."
+  ],
+  "uncertainties": [
+    "No se inspeccionó DOM ejecutado móvil/desktop: solo HTML servido y activos de ZIP.",
+    "No se consultó producción remota ni se verificó si un despliegue posterior contiene esos SHA.",
+    "No se verificaron cupos, operación real de hoy, acceso militar ni identidad del ejecutor aliado de Montañeros.",
+    "Fotografías históricas, referencias del usuario y aprobación visual no certifican fecha/punto exacto, inventario museístico o geometría completa.",
+    "Caída502 de fuente Armada no prueba cierre; precios vencidos de aves no prueban cese."
+  ],
+  "source_checks": [
+    {
+      "url": "https://hotelmacaojardin.com/tour-cafe-jardin-antioquia/",
+      "checked_at": "2026-10-20"
+    },
+    {
+      "url": "https://montaneros.co/tours-en-jardin-antioquia/avistamiento-de-aves-la-herrera/",
+      "checked_at": "2026-10-20"
+    },
+    {
+      "url": "https://montaneros.co/tours-en-jardin-antioquia/cueva-del-esplendor-tour-corto/",
+      "checked_at": "2026-10-20"
+    },
+    {
+      "url": "https://montaneros.co/tours-en-jardin-antioquia/tour-urbano-patrimonial-jardin/",
+      "checked_at": "2026-10-20"
+    },
+    {
+      "url": "https://www.jardinderocas.org/",
+      "checked_at": "2026-10-20"
+    },
+    {
+      "url": "https://proaves.org/reserva-proaves-loro-orejiamarillo/",
+      "checked_at": "2026-10-20"
+    },
+    {
+      "url": "https://viajespluscovenas.com/",
+      "checked_at": "2026-10-20"
+    },
+    {
+      "url": "https://covenasdiving.com/",
+      "checked_at": "2026-10-20"
+    },
+    {
+      "url": "https://suplovers.co/clases/",
+      "checked_at": "2026-10-20"
+    },
+    {
+      "url": "https://suplovers.co/",
+      "checked_at": "2026-10-20"
+    },
+    {
+      "url": "https://agenciacovenastours.com/447642660",
+      "checked_at": "2026-10-20"
+    },
+    {
+      "url": "https://suplovers.co/tours-en-covenas/cispata/",
+      "checked_at": "2026-10-20"
+    },
+    {
+      "url": "https://www.catedraldesal.gov.co/atracciones/ruta-del-minero/",
+      "checked_at": "2026-10-20"
+    },
+    {
+      "url": "https://turistren.com.co/planifica-tu-viaje/",
+      "checked_at": "2026-10-20"
+    },
+    {
+      "url": "https://www.zipaquira.travel/citytour/",
+      "checked_at": "2026-10-20"
+    }
+  ],
+  "source_file_hashes_before": {
+    "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/preprod/.local/preprod/worker-review/lote-20261019/zipaquira.zip": "c3757be91f393e398e46cf4fab2cf85dccf027235aae740835b18fa87d586be6",
+    "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-zipaquira/crecimiento-colombia/entregas/zipaquira/criterios-editoriales.json": "ae92ff6f26092e0dcccea59938c86c1a0d000a5a4c3b005856b8be2b8373c465",
+    "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-zipaquira/crecimiento-colombia/entregas/zipaquira/aprobacion-destino.json": "707830726bd7d1286441cf49ba1b84c2fc4e015c1590037fe0aa9eaad643ca4c",
+    "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/preprod/.local/preprod/worker-review/lote-20261019/jardin.zip": "9ac8321855690db0b53fdcc0b0829de61dc5de3847906e2355814fbee7b0aa13",
+    "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-jardin/crecimiento-colombia/entregas/jardin/criterios-editoriales.json": "1238fab966d121818028226d33f32c2db1151e73156b7e59a5c4bf4072cd13e7",
+    "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-jardin/crecimiento-colombia/entregas/jardin/aprobacion.json": "9ff00e46ac0f23dcacbff5400c120c2a4d8c496b6d9db8592672a81bc1a166eb",
+    "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/preprod/.local/preprod/worker-review/lote-20261019/covenas.zip": "c120c45da5123b9942e3762beadf4fee18a524f536d6f72ff858626dbb354a0d",
+    "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-covenas/crecimiento-colombia/entregas/covenas/criterios-editoriales.json": "cefaecf6d4b0ecccd701203106aeb05d7ad1a4c804d6b309b55504a4d1958130",
+    "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-covenas/crecimiento-colombia/entregas/covenas/aprobacion-destino.json": "276cae0992fc4110d503d4b7c535c7304b19502c92582f21909f4f9f35522f61"
+  },
+  "source_file_hashes_after": {
+    "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/preprod/.local/preprod/worker-review/lote-20261019/zipaquira.zip": "c3757be91f393e398e46cf4fab2cf85dccf027235aae740835b18fa87d586be6",
+    "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-zipaquira/crecimiento-colombia/entregas/zipaquira/criterios-editoriales.json": "ae92ff6f26092e0dcccea59938c86c1a0d000a5a4c3b005856b8be2b8373c465",
+    "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-zipaquira/crecimiento-colombia/entregas/zipaquira/aprobacion-destino.json": "707830726bd7d1286441cf49ba1b84c2fc4e015c1590037fe0aa9eaad643ca4c",
+    "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/preprod/.local/preprod/worker-review/lote-20261019/jardin.zip": "9ac8321855690db0b53fdcc0b0829de61dc5de3847906e2355814fbee7b0aa13",
+    "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-jardin/crecimiento-colombia/entregas/jardin/criterios-editoriales.json": "1238fab966d121818028226d33f32c2db1151e73156b7e59a5c4bf4072cd13e7",
+    "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-jardin/crecimiento-colombia/entregas/jardin/aprobacion.json": "9ff00e46ac0f23dcacbff5400c120c2a4d8c496b6d9db8592672a81bc1a166eb",
+    "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/preprod/.local/preprod/worker-review/lote-20261019/covenas.zip": "c120c45da5123b9942e3762beadf4fee18a524f536d6f72ff858626dbb354a0d",
+    "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-covenas/crecimiento-colombia/entregas/covenas/criterios-editoriales.json": "cefaecf6d4b0ecccd701203106aeb05d7ad1a4c804d6b309b55504a4d1958130",
+    "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-covenas/crecimiento-colombia/entregas/covenas/aprobacion-destino.json": "276cae0992fc4110d503d4b7c535c7304b19502c92582f21909f4f9f35522f61"
+  }
+}
