@@ -19,6 +19,11 @@ final class BusinessCrmRepository
     {
         $research=$this->researchReady();$where=' WHERE 1=1';$params=[];
         $destination=trim((string)($filters['destination']??''));$plan=(string)($filters['subscription']??'free');$contact=(string)($filters['contact']??'');$query=trim((string)($filters['query']??''));
+        $accountScope=(string)($filters['account']??'');
+        if($accountScope!==''){
+            if(!in_array($accountScope,['with','without'],true))throw new RuntimeException('Grupo de cuentas no válido.');
+            $where.=' AND '.($accountScope==='without'?'NOT ':'').'EXISTS(SELECT 1 FROM business_account_memberships am WHERE am.business_id=crm.id AND am.status="active")';
+        }
         if($destination!==''){$where.=' AND crm.destination_slug=?';$params[]=$destination;}
         if($plan==='free')$where.=' AND crm.current_plan="free"';elseif($plan==='paid')$where.=' AND crm.current_plan<>"free"';elseif($plan!=='all')throw new RuntimeException('Filtro de suscripción no válido.');
         if($contact==='with')$contactWhere=' AND (crm.research_contact_count+crm.profile_contact_count)>0';elseif($contact==='without')$contactWhere=' AND (crm.research_contact_count+crm.profile_contact_count)=0';elseif($contact==='')$contactWhere='';else throw new RuntimeException('Filtro de contacto no válido.');
