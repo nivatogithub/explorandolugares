@@ -83,8 +83,8 @@ $pdo->exec("UPDATE business_subscriptions SET plan_code='page_premium',billing_f
 $service->validateContent(1,'page_premium');
 subscription_check(true,'Premium accepts a page without an optional history or general services narrative.');
 $pdo->exec("UPDATE business_translations SET brand_story='Historia opcional' WHERE business_id=1 AND locale='es'");
-$untranslatedStory=false;try{$service->validateContent(1,'page_premium');}catch(RuntimeException $error){$untranslatedStory=str_contains($error->getMessage(),'traduce');}
-subscription_check($untranslatedStory,'An optional history still requires translations when supplied.');
+$service->validateContent(1,'page_premium');
+subscription_check(true,'Legacy history is not public content and does not block publication.');
 $pdo->exec("UPDATE business_translations SET brand_story=CASE locale WHEN 'es' THEN 'Historia del café' WHEN 'en' THEN 'The cafe story' ELSE 'História do café' END,featured_services=CASE locale WHEN 'es' THEN 'Café de origen' WHEN 'en' THEN 'Origin coffee' ELSE 'Café de origem' END WHERE business_id=1");
 $service->publish(1,$testDate(2));
 $q->execute([$id]);$sub=$q->fetch(PDO::FETCH_ASSOC);
