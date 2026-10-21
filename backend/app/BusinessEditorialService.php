@@ -75,15 +75,15 @@ final class BusinessEditorialService
    $this->event($id,$editor?'admin:'.$actor:'account:'.$account,'saved');$this->pdo->commit();return $id;
   }catch(Throwable $e){if($this->pdo->inTransaction())$this->pdo->rollBack();foreach($storedFiles as $file)if(is_file($file))@unlink($file);throw $e;}
  }
- public function transition(int $id,string $action,int $account=0,string $actor='',string $note='',string $expectedHash=''):void{
+ public function transition(int $id,string $action,int $account=0,string $actor='',string $note='',string $expectedHash='',array $quality=[]):void{
   $initial=$this->version($id);$this->pdo->beginTransaction();try{$this->lock((int)$initial['business_id']);$v=$this->version($id);if((int)$this->latest((int)$v['business_id'])['id']!==$id)throw new RuntimeException('Esta versión fue reemplazada.');
    if($expectedHash===''||!hash_equals($v['payload_hash'],$expectedHash))throw new RuntimeException('La versión revisada cambió. Recarga.');
    $admin=$actor!=='';if(!$admin)$this->authorize($account,(int)$v['business_id']);
    $status=match($action){'reject'=>$admin&&in_array($v['status'],['in_editorial','owner_approved','awaiting_owner'],true)?'rejected':null,'submit'=>!$admin&&in_array($v['status'],['draft','changes_requested','rejected'],true)?'in_editorial':null,'prepare'=>$admin&&$v['status']==='in_editorial'?'awaiting_owner':null,'approve'=>!$admin&&$v['status']==='awaiting_owner'?'owner_approved':null,'request_changes'=>!$admin&&$v['status']==='awaiting_owner'?'changes_requested':null,default=>null};
    if(!$status)throw new RuntimeException('Esta acción no corresponde al estado de la versión.');
-   if($action==='prepare'){$this->validatePrepared($v);$p=$this->payload($v,(int)$v['business_id']);foreach(['es','en','pt-BR'] as $locale)if(trim($p['translations'][$locale]['display_name']??'')==='')throw new RuntimeException('Completa los tres idiomas antes de enviar la prepublicación.');if(in_array($v['plan_code'],['page','page_premium'],true)&&empty($p['media']['cover']))throw new RuntimeException('Prepara la portada antes de enviar la vista final.');}
+   if($action==='prepare'){foreach(['translations','images','layout'] as $check)if(($quality[$check]??'')!=='1')throw new RuntimeException('El portal debe revisar las traducciones, las imágenes y la presentación antes de enviar la prepublicación.');$this->validatePrepared($v);$p=$this->payload($v,(int)$v['business_id']);foreach(['es','en','pt-BR'] as $locale)if(trim($p['translations'][$locale]['display_name']??'')==='')throw new RuntimeException('Completa los tres idiomas antes de enviar la prepublicación.');if(in_array($v['plan_code'],['page','page_premium'],true)&&empty($p['media']['cover']))throw new RuntimeException('Prepara la portada antes de enviar la vista final.');}
    if(in_array($action,['request_changes','reject'],true)&&strlen(trim($note))<5)throw new RuntimeException('Indica qué quieres corregir.');if(strlen($note)>2000)throw new RuntimeException('La nota es demasiado larga.');
-   $q=$this->pdo->prepare('UPDATE business_editorial_versions SET status=?,note=?,owner_approved_at=?,updated_at=CURRENT_TIMESTAMP WHERE id=?');$q->execute([$status,trim($note),$status==='owner_approved'?gmdate('Y-m-d H:i:s'):null,$id]);$this->event($id,$admin?'admin:'.$actor:'account:'.$account,$action);$this->pdo->commit();
+   $q=$this->pdo->prepare('UPDATE business_editorial_versions SET status=?,note=?,owner_approved_at=?,updated_at=CURRENT_TIMESTAMP WHERE id=?');$q->execute([$status,trim($note),$status==='owner_approved'?gmdate('Y-m-d H:i:s'):null,$id]);if($action==='prepare')$this->event($id,'admin:'.$actor,'quality_checked');$this->event($id,$admin?'admin:'.$actor:'account:'.$account,$action);$this->pdo->commit();
   }catch(Throwable $e){if($this->pdo->inTransaction())$this->pdo->rollBack();throw $e;}
  }
  private function event(int $id,string $actor,string $action):void{$this->pdo->prepare('INSERT INTO business_editorial_events(version_id,actor,action) VALUES(?,?,?)')->execute([$id,$actor,$action]);}
@@ -105,6 +105,7 @@ $adminInput=$payload;
  }
  public function publish(int $id,string $actor,string $hash):void{
   if(trim($actor)==='')throw new RuntimeException('La publicación requiere un administrador.');$initial=$this->version($id);$this->pdo->beginTransaction();try{$business=(int)$initial['business_id'];$this->lock($business);$v=$this->version($id);if((int)$this->latest($business)['id']!==$id||$v['status']!=='owner_approved'||!hash_equals($v['payload_hash'],$hash))throw new RuntimeException('Publica únicamente la última versión aprobada por el comerciante.');
+   $review=$this->pdo->prepare('SELECT 1 FROM business_editorial_events WHERE version_id=? AND action="quality_checked" AND actor LIKE "admin:%"');$review->execute([$id]);if(!$review->fetchColumn())throw new RuntimeException('Falta la revisión editorial del portal para esta versión.');
    if(!hash_equals($v['base_hash'],self::hash($this->live($business))))throw new RuntimeException('La ficha cambió desde que se preparó esta versión. Revisa antes de publicar.');
    if($this->options($business)['code']!==$v['plan_code'])throw new RuntimeException('La suscripción cambió; prepara otra versión.');
    $q=$this->pdo->prepare('SELECT publication_status FROM businesses WHERE id=?');$q->execute([$business]);$wasPublished=$q->fetchColumn()==='published';

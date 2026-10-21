@@ -31,7 +31,7 @@ try{
  $revision=$editorial->save($account,$business,0,['translations'=>['es'=>['display_name'=>'Comercio Ficticio Editorial']]]);$version=$editorial->version($revision);check($editorial->live($business)===$original,'MariaDB private save changed live data');
  $editorial->transition($revision,'submit',$account,'','',$version['payload_hash']);
  $revision=$editorial->save(0,$business,$revision,['translations'=>['en'=>['display_name'=>'Fictitious Editorial Business'],'pt-BR'=>['display_name'=>'Negócio Editorial Fictício']]],false,true,'administrador-ficticio');$version=$editorial->version($revision);
- $editorial->transition($revision,'prepare',0,'administrador-ficticio','',$version['payload_hash']);check($editorial->live($business)===$original,'MariaDB prepare savepoint committed changes');
+ $editorial->transition($revision,'prepare',0,'administrador-ficticio','',$version['payload_hash'],['translations'=>'1','images'=>'1','layout'=>'1']);check($editorial->live($business)===$original,'MariaDB prepare savepoint committed changes');
  $editorial->transition($revision,'approve',$account,'','',$version['payload_hash']);
  $p->prepare('UPDATE businesses SET information_status="VERIFICADO" WHERE id=?')->execute([$business]);$editorial->publish($revision,'administrador-ficticio',$version['payload_hash']);
  check($editorial->latest($business)['status']==='published','MariaDB exact version did not publish');check($editorial->live($business)['translations']['es']['display_name']==='Comercio Ficticio Editorial','MariaDB revision not applied');

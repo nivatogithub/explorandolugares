@@ -856,7 +856,7 @@ try:
     for language in ['es','en','pt-BR']:
         status,page_preview,preview_headers=request(editorial_path+'&version='+str(premium_version)+'&preview=page&lang='+language,opener=business_flow)
         check(status==200 and '</html>' in page_preview and 'Fatal error' not in page_preview and 'Vista previa privada' in page_preview,'Página Premium privada incompleta: '+str(status)+' '+page_preview[-1000:])
-        check('noindex' in preview_headers.get('X-Robots-Tag','') and '&amp;preview=page&amp;lang=' in page_preview,'La prepublicación perdió privacidad o enlaces de idioma privados.')
+        check('noindex' in preview_headers.get('X-Robots-Tag','') and 'header-language-options' not in page_preview and 'lang=en' not in page_preview and 'lang=pt-BR' not in page_preview,'La prepublicación perdió privacidad o enlaces de idioma privados.')
     before_sections=DB.execute('SELECT * FROM business_service_sections WHERE business_id=?',(premium_business,)).fetchall()
     status,_,_=request('/business/dashboard.php?tab=business',dict(profile_fields,csrf='invalid'),business_flow)
     check(status>=400 and DB.execute('SELECT * FROM business_service_sections WHERE business_id=?',(premium_business,)).fetchall()==before_sections,'Profile update bypasses CSRF')
@@ -999,7 +999,7 @@ try:
     _,_,_=request(path,{'csrf':owner_csrf,'action':'submit','version_id':str(version['id']),'payload_hash':version['payload_hash']},traveler_user)
     admin_path=path+'&admin=1';_,admin_form,_=request(admin_path)
     admin_csrf=re.search(r'name="csrf" value="([^"]+)"',admin_form)[1]
-    check(request(admin_path,{'csrf':admin_csrf,'action':'prepare','version_id':str(version['id']),'payload_hash':version['payload_hash']})[0]==200,'No dejó preparada la prepublicación.')
+    check(request(admin_path,{'csrf':admin_csrf,'action':'prepare','quality[translations]':'1','quality[images]':'1','quality[layout]':'1','version_id':str(version['id']),'payload_hash':version['payload_hash']})[0]==200,'No dejó preparada la prepublicación.')
     code,_,_=request(path,{'csrf':owner_csrf,'action':'approve','version_id':str(version['id']),'payload_hash':version['payload_hash']},traveler_user)
     check(code==200 and DB.execute('SELECT status FROM business_editorial_versions WHERE id=?',(version['id'],)).fetchone()[0]=='owner_approved','No registró aprobación exacta del comerciante.')
     code,body,_=request(admin_path,{'csrf':admin_csrf,'action':'publish','version_id':str(version['id']),'payload_hash':version['payload_hash']})
