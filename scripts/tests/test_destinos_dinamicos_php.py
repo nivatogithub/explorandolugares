@@ -104,12 +104,12 @@ class DynamicDestinationRenderTests(unittest.TestCase):
         self.assertIn("<h3>Chorros de Quebradona</h3>", page)
         self.assertIn("Atractivo natural rural de Jericó", page)
         self.assertIn("Confirma con fuentes locales dónde inicia el recorrido", page)
-        self.assertIn("jardin-botanico-los-balsos-ilustrado.webp", page)
-        self.assertIn("cerro-de-las-nubes-sendero-ilustrado-v2.webp", page)
-        self.assertIn("chorros-quebradona-ilustrado-v2.webp", page)
-        self.assertIn("cristo-cerro-el-salvador-ilustrado-v2.webp", page)
+        self.assertIn("assets/media/f9/f90e190b25dcb814fb7de3b8dfeb82b5bdd18bd2f83f45cbdbd55348abbd8002.webp", page)
+        self.assertIn("assets/media/f5/f586d56f85857ad97949b590a5d6e1b8345d77a6502c5e101811aac4a77f148e.webp", page)
+        self.assertIn("assets/media/ea/ea90c95561d3bfc5510b0e0ae025f9367ae6d27959d3532000fcaaca5894eab7.webp", page)
+        self.assertIn("assets/media/67/6764283c1080d47009e72f38414375884bc8c7fd7ae2152d9baeacad69a7a194.webp", page)
         self.assertIn("santuario-santa-laura-ilustrado-v2.webp", page)
-        self.assertIn("casa-santa-laura-ilustrada-v2.webp", page)
+        self.assertIn("assets/media/e0/e052c8de8be4987472650f728616da88917953d2542f54a314fa0bee590aab1b.webp", page)
         for locale, labels in {
             "es": ("Jardín Botánico Los Balsos", "Subida al Cerro de las Nubes", "Chorros de Quebradona"),
             "en": ("Los Balsos Botanical Garden", "Cerro de las Nubes hike", "Check with local sources for the trailhead"),
@@ -119,9 +119,9 @@ class DynamicDestinationRenderTests(unittest.TestCase):
             with self.subTest(locale=locale):
                 for label in labels:
                     self.assertIn(label, localized)
-                self.assertIn("jardin-botanico-los-balsos-ilustrado.webp", localized)
-                self.assertIn("cerro-de-las-nubes-sendero-ilustrado-v2.webp", localized)
-                self.assertIn("chorros-quebradona-ilustrado-v2.webp", localized)
+                self.assertIn("assets/media/f9/f90e190b25dcb814fb7de3b8dfeb82b5bdd18bd2f83f45cbdbd55348abbd8002.webp", localized)
+                self.assertIn("assets/media/f5/f586d56f85857ad97949b590a5d6e1b8345d77a6502c5e101811aac4a77f148e.webp", localized)
+                self.assertIn("assets/media/ea/ea90c95561d3bfc5510b0e0ae025f9367ae6d27959d3532000fcaaca5894eab7.webp", localized)
         self.assertIn("Vuelo privado en helicóptero Medellín–Jericó", page)
         self.assertIn("Parapente biplaza en Jericó", page)
         self.assertIn("Experiencia en finca cafetera", page)
