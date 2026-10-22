@@ -56,6 +56,7 @@ def apply(public):
   path.write_text(text)
  for path in public.rglob('*.php'):
   if path.name.startswith('_'):continue
+  if path.relative_to(public).parts[0]=='admin':continue
   text=path.read_text()
   if not SHELL.search(text):continue
   depth=len(path.relative_to(public).parts)-1

@@ -31,7 +31,7 @@ final class HomeAttractions
     {
         $e=[PortalPresentation::class,'escape'];$html='';
         foreach($items as $item){
-            $html.='<article class="home-attraction"><a href="'.$e($item['url']).'"><img src="'.$e($item['image']).'" alt="'.$e($item['alt_text']?:$item['name']).'" loading="lazy" width="640" height="420"><h3>'.$e($item['name']).'</h3><p>'.$e($item['destination']).'</p></a>';
+            $html.='<article class="home-attraction"><a href="'.$e($item['url']).'"><img draggable="false" src="'.$e($item['image']).'" alt="'.$e($item['alt_text']?:$item['name']).'" loading="lazy" width="640" height="420"><h3>'.$e($item['name']).'</h3><p>'.$e($item['destination']).'</p></a>';
             $credit=$e($item['creator']==='Explorando Lugares'?$item['creator']:implode(' · ',array_filter([$item['creator'],$item['license_name']])));
             foreach([['source_url',$locale==='en'?'Source':($locale==='pt-BR'?'Fonte':'Fuente')],['license_url',$locale==='en'?'License':($locale==='pt-BR'?'Licença':'Licencia')]] as [$key,$label])if(preg_match('~^https?://~i',$item[$key]??''))$credit.=' · <a href="'.$e($item[$key]).'" target="_blank" rel="noopener noreferrer">'.$label.'</a>';
             if($credit!=='')$html.='<small>'.$credit.'</small>';

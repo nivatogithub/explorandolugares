@@ -47,5 +47,14 @@
       "cargar-mas-tarjetas.js",
       "place-relations.js"
     ]
+  },
+  "admin": {
+    "css": [
+      "cobertura/portal-tokens.css",
+      "style.css",
+      "identidad-neutral.css",
+      "admin-theme.css"
+    ],
+    "js": []
   }
 }

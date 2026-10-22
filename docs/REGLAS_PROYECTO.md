@@ -74,3 +74,7 @@
 - Las decisiones editoriales de texto, estructura y medios se resuelven en datos/plantillas antes de entregar HTML. JavaScript se limita a interacciones, estado de cuenta y medición autorizada; no debe corregir una versión anterior de contenido.
 - Declarar recursos y dependencias de forma explícita, versionarlos por los bytes finales y construir en salida nueva sin mutar fuentes. Conservar inventario de procedencia por ruta y retiradas propuestas.
 - Antes de promover, comparar móvil/escritorio, idiomas, teclado, sesión y permisos; medir rendimiento en condiciones equivalentes. Las candidatas de medios necesitan aprobación exacta y no entran a preprod por una refactorización.
+
+## Decisión posterior: administración independiente (21/10/2026)
+
+Por instrucción explícita del propietario, la administración usa layout privado y navegación administrativa propios, sin incrustar header, footer ni menú público. Conserva permisos, sesión, CSRF, cierre de sesión y un enlace para volver al portal. Puede compartir configuración de marca y tokens. La fuente transversal pública continúa siendo única para el portal. Esta excepción sustituye únicamente la exigencia anterior de incluir el shell público en administración; el registro histórico se conserva para trazabilidad.

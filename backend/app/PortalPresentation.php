@@ -10,6 +10,7 @@ final class PortalPresentation
         static $config;
         return $config ??= json_decode(file_get_contents(__DIR__.'/presentation/shell.json'),true,32,JSON_THROW_ON_ERROR);
     }
+    public static function brandLogo():string {return self::config()['logo'];}
     public static function escape(string $value): string {return htmlspecialchars($value,ENT_QUOTES|ENT_SUBSTITUTE,'UTF-8');}
     public static function context(array $context=[]): array
     {
@@ -48,13 +49,13 @@ final class PortalPresentation
         $result=[];foreach(self::context($context)['languages'] as $locale=>$path)$result[$locale]=self::config()['origin'].'/'.ltrim($path,'/');
         return $result;
     }
-    public static function assets(bool $account=true): string
+    public static function assets(bool $account=true,string $context='public'): string
     {
         $manifestPath=(self::$publicRoot??dirname(__DIR__).'/public').'/asset-manifest.json';
         $versions=is_file($manifestPath)?json_decode(file_get_contents($manifestPath),true,64,JSON_THROW_ON_ERROR):[];
         $modules=json_decode(file_get_contents(__DIR__.'/presentation/resources.json'),true,32,JSON_THROW_ON_ERROR);
-        $resources=array_merge($modules['common']['css'],$modules['common']['js']);
-        if($account)$resources=array_merge($resources,$modules['account']['css'],$modules['account']['js']);
+        $resources=$context==='admin'?array_merge($modules['admin']['css'],$modules['admin']['js']):array_merge($modules['common']['css'],$modules['common']['js']);
+        if($account&&$context!=='admin')$resources=array_merge($resources,$modules['account']['css'],$modules['account']['js']);
         $html='';
         foreach($resources as $name){
             $path='/assets/'.$name;$url=$path.(isset($versions[$path])?'?v='.$versions[$path]:'');

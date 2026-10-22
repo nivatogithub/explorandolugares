@@ -17,14 +17,14 @@ Base: `f26842de`. Trabajo aislado en `refactor/presentacion-rendimiento-20261021
 ## Conflictos detectados y límites
 
 1. PROYECTO_INDEPENDIENTE conserva frases de etapa inicial: «No están definidos precios», «No hay acceso confirmado al cPanel», «No hay ... catálogo real». Son incompatibles con implementación posterior. No se borran ni se usan para retirar funcionalidades; la matriz los conserva como antecedentes, pendientes de corregir con trazabilidad.
-2. La auditoría sugería layouts administrativos separados; la decisión posterior del propietario exige componentes transversales únicos con herramientas por contexto/permisos. Se aplica la decisión posterior sin eliminar autorización, sesión o CSRF.
+2. Secuencia de decisiones: la auditoría sugería layout administrativo separado; después se pidió shell transversal universal; finalmente el propietario ordenó administración independiente sin header/footer públicos. Prevalece esta última decisión explícita(21/10/2026). Solo el portal conserva shell público único; administración comparte marca/tokens y conserva autorización, sesión, CSRF, cierre de sesión y retorno al portal.
 3. La construcción histórica muta fuentes. El nuevo punto de entrada ejecuta esos generadores en una instantánea efímera y una salida vacía. Eso elimina contaminación, pero no equivale a haber eliminado todas las transformaciones históricas internas: se migran y documentan por separado.
 4. No hay informe Lighthouse original ni lista de imágenes afectadas. Los valores aportados son hipótesis, no ahorros verificados. No se inventarán resultados ni se promoverán derivados por puntuación automática.
 
 ## Controles de no recurrencia del candidato
 
 - Construcción a directorio nuevo/vacío, sin editar el checkout; manifiesto SHA-256 y comparación de dos entregas.
-- Una fuente de shell, navegación y traducciones. El código de página aporta contexto, no HTML alternativo de marca.
+- Una fuente pública de shell, navegación y traducciones. La administración es una excepción explícita con layout privado propio y marca/tokens compartidos, sin navegación pública incrustada.
 - No correctores editoriales en navegador; mover contenido/medios a datos y renderizadores antes de retirar cada corrector.
 - Recursos declarados, sin cargadores en cascada, versionados sobre bytes finales.
 - Medios actuales conservados. Candidatas privadas requieren comparativa y aprobación exacta antes de preprod.
