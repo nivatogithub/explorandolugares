@@ -49,3 +49,9 @@ main.destination-page .destination-overview{gap:16px}
 main.destination-page .destination-reasons{padding:18px}
 main.destination-page .destination-overview>div>:last-child{margin-bottom:0}
 main.destination-page .destination-reasons>:last-child{margin-bottom:0}
+
+/* Keep the directory title and its map action on one compact heading row. */
+main #lugares>.sectionhead{display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:space-between!important;flex-wrap:nowrap!important}
+main #lugares>.sectionhead>div{min-width:0}
+main #lugares>.sectionhead>.directory-map{flex:0 0 auto;margin:0!important;padding:0!important;text-align:right}
+main #lugares>.sectionhead>.directory-map a{white-space:nowrap;font-size:13px}
