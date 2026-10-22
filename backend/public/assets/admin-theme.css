@@ -151,3 +151,13 @@ body.portal-admin .floating-select.is-open .floating-select-arrow{transform:rota
 .portal-admin .admin-payment-settings label.registration-consent{display:grid!important;grid-template-columns:18px minmax(0,1fr)!important;align-items:center!important;column-gap:10px!important;row-gap:0!important;width:100%;padding:0!important}
 .portal-admin .admin-payment-settings label.registration-consent>input[type=checkbox]{grid-column:1;grid-row:1;align-self:center;margin:0!important;padding:0!important;position:static!important}
 .portal-admin .admin-payment-settings label.registration-consent>span{grid-column:2;grid-row:1;display:block;margin:0!important;padding:0!important;line-height:1.4;text-align:left}
+
+/* Privacy settings use the panel width with readable labels and separate language fields. */
+.portal-admin .admin-privacy-settings{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:20px!important;width:100%!important;max-width:none!important;margin:24px 0!important;text-align:left}
+.portal-admin .admin-privacy-settings .destination-form-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:20px 24px!important;width:100%}
+.portal-admin .admin-privacy-settings label{display:flex!important;flex-direction:column!important;gap:8px!important;margin:0!important;min-width:0;width:100%;text-align:left}
+.portal-admin .admin-privacy-settings :is(input,textarea){box-sizing:border-box;width:100%!important;min-height:44px;padding:10px 12px;border:1px solid var(--el-control-border);border-radius:6px;background:var(--el-field);font:inherit}
+.portal-admin .admin-privacy-settings textarea{min-height:110px;resize:vertical}
+.portal-admin .admin-privacy-settings small{display:block;line-height:1.4;color:var(--el-muted)}
+.portal-admin .admin-privacy-settings>button{justify-self:start}
+@media(max-width:650px){.portal-admin .admin-privacy-settings .destination-form-grid{grid-template-columns:1fr!important}}
