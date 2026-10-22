@@ -932,3 +932,8 @@ footer .wrap{align-items:center}
 @media(min-width:761px){.destination-hero-links{flex-wrap:nowrap;gap:10px}.destination-hero-links>a{font-size:12px;white-space:nowrap}.destination-hero-links>.pill{padding:12px}.destination-action-row>.destination-business-link{font-size:12px}.destination-business-link a{white-space:nowrap}}
 .destination-action-row>.destination-business-link{margin:0;text-align:right}
 @media(max-width:650px){.destination-meta-row{align-items:flex-start;gap:8px}.destination-meta-row>.breadcrumbs{font-size:11px;flex-wrap:wrap}.destination-action-row{flex-wrap:wrap;gap:8px}.destination-action-row>.destination-business-link{margin-left:auto}.destination-hero-links{gap:10px}}
+
+/* Hidden pagination is never a visible empty action; images are not draggable controls. */
+.destination-load-more[hidden],.row-load-more[hidden]{display:none!important}
+img{-webkit-user-drag:none}
+.destination-experiences{margin-top:32px}

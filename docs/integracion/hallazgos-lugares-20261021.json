@@ -1,0 +1,98 @@
+{
+  "fecha": "2026-10-21",
+  "proyecto": "Explorando Lugares",
+  "estado": "Revisado en candidata local integrada; no desplegado. Comprobación visual completa pendiente.",
+  "alcance": "Páginas de lugares y directorio; revisar la plantilla compartida cuando corresponda.",
+  "pendientes": [
+    {
+      "numero": 1,
+      "tema": "Retirar botón de Historia",
+      "detalle": "Eliminar el botón o enlace de Historia de las páginas de lugares porque el contenido está inmediatamente debajo.",
+      "estado": "implementado/conservado; validación visual pendiente",
+      "revalidacion": "Retirado en plantilla y normalizador; contenido histórico conservado."
+    },
+    {
+      "numero": 2,
+      "tema": "Cargar más sin tarjetas pendientes en Jericó",
+      "detalle": "El botón Cargar más aparece aunque no hay más tarjetas. Al pulsarlo solo acerca el título de Experiencias. Mostrar el botón únicamente cuando existan tarjetas adicionales y comprobar su comportamiento.",
+      "estado": "implementado/conservado; validación visual pendiente",
+      "revalidacion": "Ocultación explícita de botones hidden y retirada del paginador anterior; falta recorrido visual."
+    },
+    {
+      "numero": 3,
+      "tema": "Ubicar en mapa debe abrir el sitio concreto",
+      "detalle": "En los sitios de Qué conocer, el enlace abre una búsqueda por nombre en Google Maps en lugar de dirigirse directamente al punto específico como antes. Recuperar el destino preciso del enlace.",
+      "estado": "aplazado por el propietario",
+      "revalidacion": "El propietario confirma conservar por ahora los enlaces actuales. Pendiente investigar y verificar coordenadas exactas de todos los atractivos; no inventar ni usar el centro municipal como ubicación del atractivo."
+    },
+    {
+      "numero": 4,
+      "tema": "Centrado vertical del nombre en tarjetas gratuitas",
+      "detalle": "Los nombres de las tarjetas gratuitas del directorio aparecen demasiado arriba. Deben quedar centrados verticalmente.",
+      "estado": "implementado/conservado; validación visual pendiente",
+      "revalidacion": "Ya corregido en la rama de flujo: título centrado y sin reserva de dos líneas. Conservado al integrar."
+    },
+    {
+      "numero": 5,
+      "tema": "Conservar página del listado al regresar",
+      "detalle": "Al abrir un lugar desde la segunda página del listado y volver, se regresa a la primera. Restaurar la página desde la que se abrió el lugar.",
+      "estado": "implementado/conservado; validación visual pendiente",
+      "revalidacion": "Estado del listado conservado en URL y sesión de pestaña; prueba de regreso con paginación y filtros pasada."
+    },
+    {
+      "numero": 6,
+      "tema": "Retirar ambas variantes del enlace de Historia",
+      "detalle": "Algunas páginas muestran Historia y otras Historia y motivos para visitarlo ↓. Retirar ambas variantes. Es el mismo cambio del punto 1, con variantes que deben cubrirse. No se solicita eliminar el contenido histórico.",
+      "relacionado_con": 1,
+      "estado": "implementado/conservado; validación visual pendiente",
+      "revalidacion": "Mismo arreglo que 1; ambas variantes retiradas."
+    },
+    {
+      "numero": 7,
+      "tema": "Revisar transición Qué conocer → Experiencias en Jericó",
+      "detalle": "El usuario observa que Qué conocer continúa directamente con Experiencias después del problema de Cargar más. Conservar esta observación y revisar la separación y secuencia de ambas secciones junto al punto 2. No se especificó todavía qué cambio adicional se desea.",
+      "relacionado_con": 2,
+      "estado": "implementado/conservado; validación visual pendiente",
+      "revalidacion": "Secciones independientes preservadas y separación entre bloques; requiere revisión visual de aceptación."
+    },
+    {
+      "numero": 8,
+      "tema": "Sección Por qué visitar y enlaces redundantes",
+      "detalle": "Guatapé muestra Por qué visitar Guatapé mientras otros lugares no tienen esa sección. Revisar y unificar su presencia en la plantilla. Retirar el enlace Encuentra qué te gustaría conocer ↓, pues Qué conocer está inmediatamente después, igual que los enlaces redundantes de Historia. No se ha decidido retirar el contenido de Por qué visitar.",
+      "relacionado_con": [
+        1,
+        6,
+        7
+      ],
+      "estado": "implementado/conservado; validación visual pendiente",
+      "revalidacion": "Enlace redundante retirado. Motivos para visitar conservados y normalizados desde la plantilla común; no se inventaron contenidos ausentes."
+    },
+    {
+      "numero": 9,
+      "tema": "Desactivar arrastre nativo de imágenes",
+      "detalle": "En todo el sitio o casi todas las imágenes, mantener presionado el mouse y moverlo arrastra una copia visual que vuelve al soltar. Evitar ese arrastre nativo de imágenes en el portal.",
+      "alcance": "Todo el sitio",
+      "estado": "implementado/conservado; validación visual pendiente",
+      "revalidacion": "Arrastre nativo impedido desde interacción común y CSS; imágenes del contenido con draggable=false. Falta recorrido visual."
+    },
+    {
+      "numero": 10,
+      "tema": "Bloque de invitación a negocios en Jericó",
+      "detalle": "La captura de Jericó muestra un bloque compacto: título ¿Tienes un negocio en Jericó?, texto Déjanos tus datos para participar en el directorio y botón Solicitar información a la derecha. Registrar esta variante para compararla con el punto 11 y unificar la plantilla; el usuario aún no ha escogido el diseño definitivo.",
+      "referencia": "entregables/referencias-pendientes-lugares-2026-10-21/10-bloque-negocios-jerico.png",
+      "relacionado_con": 11,
+      "estado": "implementado/conservado; validación visual pendiente",
+      "revalidacion": "Elección del propietario: variante amplia de Santa Fe, dos columnas. Normalizador ya no la convierte a compacta."
+    },
+    {
+      "numero": 11,
+      "tema": "Variante extensa del bloque de invitación a negocios",
+      "detalle": "La segunda captura muestra Santa Fe de Antioquia: bloque de dos columnas con Haz parte de Explorando Lugares, ¿Tienes un negocio en Santa Fe de Antioquia?, No te quedes por fuera, explicación de tipos de negocio, separador vertical y mensaje Queremos que los visitantes conozcan lo que ofreces junto al botón Solicitar información. El usuario la compara con Jericó como diferencia entre páginas. Unificar el componente; no se ha elegido todavía cuál versión conservar.",
+      "lugar_identificado_en_captura": "santa-fe-de-antioquia",
+      "referencia": "entregables/referencias-pendientes-lugares-2026-10-21/11-bloque-negocios-santa-fe.png",
+      "relacionado_con": 10,
+      "estado": "implementado/conservado; validación visual pendiente",
+      "revalidacion": "Mismo componente y decisión que 10."
+    }
+  ]
+}

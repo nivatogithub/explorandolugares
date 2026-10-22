@@ -20,3 +20,6 @@
  document.addEventListener('click',event=>{if(!header.contains(event.target))close();});
  matchMedia('(min-width:1191px)').addEventListener('change',()=>close());
 })();
+
+// Prevent the native ghost-image drag without blocking links, taps or scrolling.
+document.addEventListener('dragstart',event=>{if(event.target.closest?.('img,picture'))event.preventDefault();});

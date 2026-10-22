@@ -5,6 +5,7 @@
  const controllers=[];
  function create(grid,index){
   if(grid.dataset.rowPager)return;grid.dataset.rowPager='1';
+  if(grid.id==='atractivos-destino')document.getElementById('cargar-mas-atractivos')?.remove();
   let cards=[...grid.children].filter(n=>n.matches('article,.directory-card,.destination-experience-card'));
   if(!cards.length)return;
   const directory=grid.classList.contains('directory-grid');

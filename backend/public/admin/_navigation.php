@@ -10,6 +10,7 @@ $activeAdminItem = match (true) {
     $adminPath === 'responder-solicitud.php' => 'requests',
     $adminPath === 'solicitud-detalle.php' => ($_GET['type']??$_GET['tipo']??'')==='account'?'account-applications':'requests',
     $adminPath === 'atencion-comercios.php' => ($_GET['view']??'') === 'review' ? 'business-review' : 'business-attention',
+    $adminPath === 'editorial-negocios.php' || $adminPath === 'editorial.php' => 'editorial',
     $adminPath === 'negocios.php' => 'businesses',
     $adminPath === 'trasladar-negocios.php' => 'businesses',
     $adminPath === 'importar-negocios.php' => 'businesses',
@@ -54,6 +55,7 @@ $activeAdminItem = match (true) {
       <a href="suscripciones.php" <?= $activeAdminItem === 'subscriptions' ? 'aria-current="page"' : '' ?>>Suscripciones</a>
     </section>
     <section><h2>Contenido</h2>
+      <a href="/admin/editorial-negocios.php" <?= $activeAdminItem === 'editorial' ? 'aria-current="page"' : '' ?>>Preparación editorial de negocios</a>
       <a href="destinos.php" <?= $activeAdminItem === 'destinations' ? 'aria-current="page"' : '' ?>>Lugares</a>
       <a href="reportes.php" <?= $activeAdminItem === 'reports' ? 'aria-current="page"' : '' ?>>Reportes</a>
     </section>

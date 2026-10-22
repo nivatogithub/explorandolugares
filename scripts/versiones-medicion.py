@@ -8,13 +8,17 @@ ACCOUNT_COMPONENTS=['account-page.css','account-registration.css','account-acces
                     'business-holder.js','business-registration.js',
                     'business-subscriptions.js','select-flotante.js']
 
+import sys
+sys.path.insert(0,str(Path(__file__).resolve().parent))
+from resource_markup import stamp_url
+
 def digest(path):return hashlib.sha256(path.read_bytes()).hexdigest()[:12]
 
 
 def stamp(text,name,version):
     # Match an asset URL, not a selector or a bare filename in program logic.
     pattern=r'((?:[./]*assets/)(?:cobertura/)?'+re.escape(name)+r')(?:\?v=[A-Za-z0-9-]+)?'
-    return re.sub(pattern,lambda m:m[1]+'?v='+version,text)
+    return stamp_url(text,pattern,lambda m:m[1]+'?v='+version)
 
 
 def versions(measurement,menu):

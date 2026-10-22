@@ -11,11 +11,19 @@ import urllib.error, urllib.parse, urllib.request
 ROOT = Path(__file__).resolve().parents[2]
 WORK = ROOT / '.local' / ('admin-test-' + secrets.token_hex(6))
 WORK.mkdir(parents=True)
-shutil.copytree(ROOT / 'backend/app', WORK / 'app')
-shutil.copytree(ROOT / 'backend/public', WORK / 'public')
-for renderer in ('destino.php', 'negocio.php'):
-    shutil.copy2(ROOT / 'backend/integration-medicion/public' / renderer, WORK / 'public' / renderer)
-shutil.copytree(ROOT / 'ensayos/v1/assets', WORK / 'public/assets', dirs_exist_ok=True)
+package_value=os.environ.get('EL_TEST_PACKAGE')
+if package_value:
+    package=Path(package_value).resolve()
+    if not package.is_relative_to(ROOT/'.local') or not (package/'build-manifest.json').is_file():
+        raise ValueError('Use only a built local test package')
+    shutil.copytree(package/'app',WORK/'app')
+    shutil.copytree(package/'public',WORK/'public')
+else:
+    shutil.copytree(ROOT / 'backend/app', WORK / 'app')
+    shutil.copytree(ROOT / 'backend/public', WORK / 'public')
+    for renderer in ('destino.php', 'negocio.php'):
+        shutil.copy2(ROOT / 'backend/integration-medicion/public' / renderer, WORK / 'public' / renderer)
+    shutil.copytree(ROOT / 'ensayos/v1/assets', WORK / 'public/assets', dirs_exist_ok=True)
 (WORK / 'app/content').mkdir(parents=True, exist_ok=True)
 shutil.copy2(ROOT / 'content/plantilla-importar-negocios.json', WORK / 'app/content/plantilla-importar-negocios.json')
 (WORK / 'private').mkdir()
@@ -1160,6 +1168,7 @@ try:
     check(code==200 and 'directory-card-tier-free' in card and 'Editorial Ficticio Revisado' in card and 'noindex' in headers.get('X-Robots-Tag',''),'Vista previa no usó tarjeta real privada: '+str(code)+' '+card[-2000:])
     _,_,_=request(path,{'csrf':owner_csrf,'action':'submit','version_id':str(version['id']),'payload_hash':version['payload_hash']},traveler_user)
     admin_path=path+'&admin=1';_,admin_form,_=request(admin_path)
+    check('class="portal-admin"' in admin_form and 'admin-sidebar' in admin_form and 'data-portal-shell="1"' not in admin_form and 'href="/admin/negocios.php"' in admin_form,'Editorial admin must use private navigation, absolute admin links and no public shell.')
     admin_csrf=re.search(r'name="csrf" value="([^"]+)"',admin_form)[1]
     check(request(admin_path,{'csrf':admin_csrf,'action':'prepare','quality[translations]':'1','quality[images]':'1','quality[layout]':'1','version_id':str(version['id']),'payload_hash':version['payload_hash']})[0]==200,'No dejó preparada la prepublicación.')
     code,_,_=request(path,{'csrf':owner_csrf,'action':'approve','version_id':str(version['id']),'payload_hash':version['payload_hash']},traveler_user)
