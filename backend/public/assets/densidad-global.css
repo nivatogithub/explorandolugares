@@ -59,3 +59,9 @@ main #lugares>.sectionhead>.directory-map a{white-space:nowrap;font-size:13px}
 /* Compact directory category filters, without changing their selection behavior. */
 main #catalogo-local .directory-tabs{gap:4px!important;padding-bottom:10px!important;margin-bottom:8px!important}
 main #catalogo-local .directory-tabs button{font-size:12px!important;line-height:18px!important;padding:5px 10px!important;min-height:30px!important;height:auto!important;border-radius:16px!important;white-space:nowrap}
+
+.directory-pagination{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:6px;margin:14px 0 0}
+.directory-pagination[hidden]{display:none!important}
+.directory-pagination button{font:inherit;font-size:13px;min-width:32px;min-height:32px;padding:5px 9px;border:1px solid var(--el-border);border-radius:8px;background:var(--el-card);color:var(--el-text);cursor:pointer}
+.directory-pagination button[aria-current="page"]{background:var(--el-action)!important;color:var(--el-on-action)!important;border-color:var(--el-action)!important}
+.directory-pagination button:disabled{opacity:.45;cursor:default}
