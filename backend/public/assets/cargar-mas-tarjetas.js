@@ -35,12 +35,13 @@
   const id=grid.id||'directory-grid-'+index;grid.id=id;
   const key='directory-page:'+location.pathname+':'+index;
   let page=1;try{page=Math.max(1,Number(sessionStorage.getItem(key))||1);}catch{}
-  const size=8;
+  const pageSize=()=>{const columns=getComputedStyle(grid).gridTemplateColumns;return 8*(columns&&columns!=='none'?Math.max(1,columns.trim().split(/\s+/).length):1);};
   const nav=document.createElement('nav');nav.className='directory-pagination';nav.setAttribute('aria-label',words[2]);grid.after(nav);
   function update(reset=false){
    if(reset)page=1;
    const category=document.querySelector('.directory-tabs [aria-selected="true"]')?.dataset.category||'';
    const eligible=cards.filter(c=>!category||(c.dataset.categories||c.dataset.category||'').split(/\s+/).includes(category));
+   const size=pageSize();
    const pages=Math.max(1,Math.ceil(eligible.length/size));page=Math.min(page,pages);
    const visible=new Set(eligible.slice((page-1)*size,page*size));cards.forEach(c=>c.hidden=!visible.has(c));
    nav.replaceChildren();nav.hidden=pages===1;
