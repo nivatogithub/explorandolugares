@@ -1,0 +1,100 @@
+# Reparación visual y operativa de la administración
+
+Fecha: 20 de octubre de 2026. Rama: `feature/admin-operacion-visual`. Base: main `bc5fc07`.
+
+## Alcance implementado
+
+- Solicitudes: selectores de estado nativos, Guardar estado con contexto accesible, avisos reales de guardado/sin cambios, 404 para ID inexistente, protección frente a una modificación entre lectura y escritura, filtros conservados y página ajustada al rango válido. Si una fila sale del filtro, se informa. Guardar no envía correo.
+- Detalle privado de participación o solicitud de cuenta: `/admin/solicitud-detalle.php?tipo=participation|account&id=...`. Solo consulta, validación de tipo/ID, sesión administrativa, 404/405/403, salida escapada. Se muestran datos conservados, referencias/documentos protegidos y plan solicitado; se separan ficha actual, membresía activa y suscripción registrada. No reconstruye evidencia histórica ni verifica titularidad.
+- Un único listado de Negocios, separado por origen: registrados por personas, importados, antiguas altas administrativas y origen por revisar. Filtros independientes, paginación y conteos por grupo. No existen las antiguas vistas duplicadas Catálogo/Atención/Revisión.
+- Revisión de negocios concentra solicitudes y documentos, con filtros radio por estado y conteos. La persona responsable no se confunde con la aprobación documental, el pago o la publicación. Las antiguas reclamaciones se consultan desde esa sección, sin entrada principal duplicada.
+- Gestión comercial separa prospectos sin cuenta y negocios con cuenta asociada. Cuenta y canales conservan sus IDs, procedencia e historial; no se crean copias ni permisos de campaña al cambiar de grupo. La vista abre por defecto en prospectos Gratis sin cuenta.
+- El lote existente conserva sus reglas y servicio; pasa a llamarse «Publicar importaciones Gratis sin representante». Se unificó el predicado de listado y selección masiva, incluyendo categorías secundarias y duplicados. Ningún grupo de registros personales amplía la publicación masiva.
+- Recursos CSS compartidos y JavaScript modificado con versiones por contenido. La selección de filas de solicitudes usa un archivo externo compatible con la CSP vigente, sin habilitar scripts inline. Menú compacto desplegable en móvil; conserva navegación completa si JavaScript no está disponible.
+
+## Fuera de alcance
+
+No se modificaron `BusinessAccountPortalService`, `AutomaticBusinessClaim`, `BusinessSubscriptionAdminService`, el registro público ni las reglas de creación, asociación, reclamación, documentos, Gratis y publicación. No se añadieron tablas, migraciones, respuestas por correo ni vínculos nuevos. No se consultó el caso real ni se repararon datos. Producción, configuración privada y estadísticas permanecen sin tocar.
+
+## Validación
+
+- `php backend/tests/admin-business-operations.php`: filtros compartidos (categoría secundaria/duplicados), filas únicas por negocio, pendientes de distintos orígenes, separación cuenta/plan y funciones de presentación sin mutación.
+- `python3 backend/tests/admin-pages.integration.py`: regresión HTTP administrativa completa, cuentas y suscripciones existentes; nuevos detalles protegidos, solicitudes sin ficha, borradores owner_submitted y snapshots de tablas para comprobar que consultar no modifica asociaciones/negocios/suscripciones. SQLite aislada; transporte externo bloqueado.
+- `python3 backend/tests/integration.py`: solicitudes, CSRF, ID ausente, aviso de salida del filtro, página válida, escape de detalle y acceso no autorizado.
+- `php backend/tests/business-crm.php`, `business-account-portal.php`, `business-subscriptions.php`: regresiones existentes sin cambiar servicios de dominio.
+- `python3 backend/tests/admin-theme.py`, sintaxis PHP de páginas administrativas y auxiliares nuevos; sintaxis de selectores y scripts administrativos; `git diff --check`.
+- Paquete completo preparado para hosting en `.local/revision-admin-operativa`. Revisión real en el navegador del paquete local, con datos ficticios: selector nativo, alineación al extremo de tabla, filtros y menú compacto en viewport móvil, restaurando luego el tamaño original. Capturas fuera del código, en `entregables/admin-operacion-visual-2026-10-20` del proyecto local.
+
+## Revisión local
+
+Servidor de revisión aislado en `http://127.0.0.1:8046/admin/index.php`. Es auxiliar; no sustituye preprod. La base se copió de fixtures de la regresión, nunca de producción. Registro público deshabilitado y funciones de transporte externas bloqueadas. Configuración y datos quedan ignorados por Git.
+
+## Pendiente antes de publicar
+
+Integrar el candidato en preprod conforme a AGENTS, reconciliar main, revisar el delta completo del paquete y validar allí Apache/MariaDB. Completar comprobación cruzada Safari/Firefox y tecnologías de asistencia; la revisión de navegador realizada no certifica todos los navegadores. Revisar visualmente con el propietario y obtener aprobación del commit exacto antes del despliegue. Ningún cambio a los flujos de negocio se incluye en este candidato.
+
+## Ajustes del 21 de octubre de 2026
+
+- Gratis es la modalidad por defecto en presentación y filtros aunque no haya una fila histórica explícita de suscripción. No se crean ni migran filas desde estas pantallas; garantizar la fila física en altas pertenece al flujo de negocio, fuera de este worker.
+- Se muestra Pendiente de publicación para `draft`. `archived` conserva Retirado: no se transforma en Rechazado sin una decisión editorial registrada. El rechazo editorial de negocio con motivo obligatorio queda pendiente del soporte de flujo correspondiente. El detalle sí muestra la nota registrada cuando una solicitud de cuenta está rechazada; no confundir ese rechazo con el del negocio.
+- Una ficha `public_import` sin membresía se describe como importada por el portal sin responsable. Una creación administrativa se identifica como tal. Una solicitud aprobada o una ficha `owner_submitted` sin cuenta activa se marca para revisar la asociación; no se inventa que provino de una importación.
+- Una sola entrada Negocios en el menú. Dentro: Listado de negocios, Solicitudes y seguimiento y las herramientas existentes de crear/importar/publicar importaciones.
+- Ver tarjeta abre una vista privada del negocio real, utilizando el mismo componente y permisos de contacto del directorio. No modifica el plan ni publica. Editar datos y Gestionar plan y publicación describen los destinos administrativos de los otros botones. La vista previa privada de la página completa sigue pendiente y se informa en pantalla; no se presenta contenido ficticio como si fuera el negocio real.
+- Regresión administrativa HTTP aprobada, incluida vista de tarjeta Gratis, acceso privado y 404. No se accedió al navegador bloqueado ni a producción.
+
+- Se elimina la pestaña duplicada Pendientes de revisión y el título Catálogo y cobertura. El listado único permite filtrar la publicación; los enlaces antiguos de pendientes abren ese listado filtrado. Las solicitudes sin ficha permanecen en Solicitudes y seguimiento.
+
+- Se retira Crear negocio y se bloquean las altas manuales por POST en administración. El enlace anterior informa la regla y abre el listado; editar fichas existentes continúa disponible. No se alteran el registro empresarial ni las importaciones del módulo de destinos; quedan separados de esta corrección.
+
+- Segmentación obligatoria por origen en listado y seguimiento: registrados por personas, importados del portal, altas administrativas anteriores y origen por revisar. No hay una opción que mezcle los grupos; filtros, limpieza y paginación conservan el grupo. Tener cuenta no cambia el origen de una ficha importada. Las solicitudes sin ficha se muestran en el grupo de registros por personas. La importación y publicación masiva siguen restringidas a fuentes públicas, sin ampliar su alcance a registros personales. Sin migración ni reclasificación de datos.
+
+- Se elimina la vista duplicada Atención / Solicitudes y seguimiento. Los enlaces antiguos abren el listado único, conservando la segmentación por origen. Las solicitudes sin ficha se consultan exclusivamente en Solicitudes de cuenta, enlazada desde Negocios. Se retira la tabla combinada de negocios y solicitudes; no cambia ningún proceso de aprobación. Este ajuste sustituye las referencias anteriores a una vista de seguimiento separada.
+
+- Confirmado y sincronizado el menú lateral local: Revisión y pendientes no aparece como acceso principal. La revisión/publicación de importaciones queda únicamente dentro de Negocios.
+
+- Exportar / actualizar pasa a Actualización masiva de datos. La explicación distingue exportación, edición externa, comparación y confirmación. Selector JSON con el componente existente en español, espaciado, foco visible y nombre del archivo. Sin cambios en la actualización de datos.
+
+- Campañas: acceso Negocios destinatarios, filtros por lugar, negocio/correo y disponibilidad, selección explícita al crear. Brevo se configura desde Sistema, sin pestaña duplicada de campañas. Selectores nativos. Plantillas y mensajes explica el formato fijo actual y permite reutilizar el contenido de una campaña, sin copiar destinatarios ni aprobaciones. Biblioteca/editor de HTML personalizado pendiente, sin cambios en envíos ni permisos.
+
+- Reclamos de negocio se retira del menú principal. La bandeja antigua queda enlazada desde Solicitudes de cuenta, sin borrar solicitudes ni alterar decisiones. Ambas rutas marcan la misma sección del menú.
+- Requisito del propietario para el worker del registro: proceso único de reclamar/registrar, elegir Gratis o una de las suscripciones vigentes, aportar documentación y continuar con pago cuando corresponda. Sin justificación escrita adicional. Pendiente de implementar en el flujo público y sus validaciones; esta corrección administrativa no elimina requisitos del servicio actual ni cambia asociaciones, documentos o pagos. Mantener diferenciadas las disputas sobre un negocio con responsable existente, según el criterio previo del propietario de resolver esos casos manualmente.
+
+- Cuentas: eliminada la asignación manual de negocios y bloqueado el POST de vinculación con 403. Se conserva consulta de asociaciones existentes y herramientas de acceso. No cambia el servicio de registro/reclamación ni sus validaciones o asociaciones automáticas. Regresión comprueba que intentar vincular desde el panel no modifica membresías.
+
+- Suscripciones muestra solo planes de pago, ordenados por vencimiento, con días restantes y filtros de renovación a 7/30 días o vencidas. Gratis se conserva en Negocios. Preparar recordatorio lleva a la composición de campaña filtrada por negocio: no envía ni programa correos y depende de los canales habilitados existentes. Automatización y conexión con correo del representante siguen pendientes. Sin cambios de planes, pagos o vigencias.
+
+- Reportes: nombre simplificado en título y menú. Corregida la estructura del contenedor: la navegación queda dentro de admin-page para reservar su ancho y evitar que tape títulos y tablas; mantiene el comportamiento móvil común. Sin cambios en consultas o métricas.
+
+- Revisión de negocios sustituye Solicitudes de cuenta en encabezado y menú. Persona responsable se distingue de negocio; aprobación documental/asociación no se presenta como aprobación de cuenta, pago o publicación. Filtros radio por estado con conteos independientes y aplicación al seleccionar. Servicios y requisitos de dominio permanecen iguales.
+
+- Gestión comercial sustituye Canales y responsable: segmentación por membresía activa mediante consultas existentes, sin migración ni escrituras. Filtros, resúmenes y paginación conservan el grupo. Acceso a Campañas visible. La consulta directa de una ficha conserva sus referencias e información de responsable para no ocultar el historial; no convierte el dato en autorización comercial.
+
+- Inspección transversal de estructura: Solicitudes de usuarios también tenía la navegación fuera de admin-page; corregido y añadido al recorrido HTTP, con selector de estado nativo. Regresiones de administración, CRM, campañas, actualización masiva, filtros y tema aprobadas en entorno aislado.
+
+## Plantillas HTML y correo individual — implementación del 21 de octubre
+
+- Nueva sección Plantillas y correos (/admin/correos.php): crear/editar plantillas, seleccionar negocio y correo registrado, completar variables reales, vista previa HTML aislada y versión texto, confirmación de envío e historial por negocio.
+- Variables admitidas: business_name, recipient_name, recipient_email, destination_name, subscription_name, expiration_date. Ausencias se muestran vacías; no se inventan nombres. El dato de suscripción corresponde al último registro, que puede estar vencido; no certifica pago ni beneficio vigente.
+- Cuenta responsable: solo se ofrecen correos verificados de cuentas activas con membresía activa. También canales del negocio y comerciales no suprimidos. Es una respuesta solicitada o comunicación de servicio confirmada por el operador; las promociones siguen en Campañas con sus permisos existentes. No se registran autorizaciones comerciales nuevas por enviar una respuesta.
+- HTML básico validado mediante DOM, sin scripts, estilos, atributos activos ni recursos remotos. Variables escapadas y enlaces limitados a HTTPS/mailto. No es un editor visual avanzado ni admite HTML arbitrario de proveedores.
+- Archivo privado en private/admin-email (permisos de directorio 0700, archivos 0600), IDs internos y nombres de campos en inglés; no se modifican tablas ni se crea otro registro de contactos. Incluir este directorio en respaldos privados y conservarlo en despliegues. No copiarlo al directorio público ni a Git.
+- Cada borrador conserva plantilla/revisión, destinatario, remitente, datos aplicados, HTML/texto y actor. Cambiar la plantilla no cambia el borrador ya revisado. Preparar otro destinatario crea otro borrador que debe confirmarse.
+- Integración SMTP de Brevo para un solo destinatario por mensaje con la conexión existente. Reserva de envío persistida antes de llamar a la API, bloqueo exclusivo, sin reintentos sobre sending/accepted/rejected/uncertain. Timeout/5xx/respuesta no concluyente queda incierto. Accepted significa solicitud aceptada, no entrega. Se conserva referencia del proveedor cuando existe. No hay seguimiento de apertura/clic individual implementado.
+- En la instancia local el envío real está bloqueado aunque se intente un POST manual. Tests usan transporte simulado. No se enviaron correos reales. La validación real del proveedor y MariaDB/hosting queda para preprod aprobada.
+- Campañas enlaza al editor HTML y al correo individual; las campañas grupales todavía conservan su formato fijo, sin aplicar estas plantillas por destinatario. Es una limitación explícita, no un flujo grupal completo.
+- Gestión comercial incluye Preparar correo e Historial de correos. Preparar recordatorio en Suscripciones abre el compositor individual filtrado por negocio; reemplaza el antiguo enlace a búsqueda de campañas. No hay envío ni programación automáticos.
+- Validación: admin-email-workspace.php (limpieza HTML, variables, snapshot, remitente, timeout, duplicados, ID y cabecera); regresión HTTP administrativa (sesión/CSRF, guardar, completar datos, preview sandbox, historial, bloqueo local); campañas y tema administrativo. La vista local tiene dos plantillas de demostración editables, sin datos privados ni precios inventados.
+
+- El compositor admite ajustar asunto y HTML solo para un correo, sin alterar la plantilla. Los cambios generan la vista previa que se confirma y conserva en el historial.
+
+- Perfil del portal, cambio explícito solicitado por el propietario: pestaña Viajero en lugar de Personal. Mis negocios se muestra únicamente con al menos una membresía activa; no depende del tipo de cuenta ni de solicitudes pendientes. Sin negocios se ofrece el enlace opcional Registrar o reclamar un negocio. Se conservan las rutas tab=personal para compatibilidad y las reglas de registro/autorización. Pruebas cubren ausencia, asociación y revocación.
+
+- Cierre de sesión visible junto a Mi cuenta en la franja superior; retirado del menú desplegable del nombre para evitar duplicidad. Se conserva POST con CSRF, sin cambiar el servicio de cierre. Botón con foco y tamaño accesibles y recurso CSS versionado por contenido.
+
+- Corregido el render dinámico de account-entry.js: reconstruía la cabecera y ocultaba otra vez Cerrar sesión dentro del nombre. Ahora conserva un formulario POST visible junto a Mi cuenta, también tras refrescar la sesión; cierre nativo con redirección del servidor. JavaScript versionado por contenido. Regresión DOM prueba el comportamiento con/sin header PHP y con/sin idiomas.
+
+- Ajuste solicitado de sesión: escritorio conserva nombre, Mi cuenta / Cerrar sesión como texto sin botón destacado. En móvil conserva nombre y Mi cuenta arriba; Cerrar sesión aparece dentro del perfil (Viajero y Mis negocios), con POST/CSRF y área táctil de 44 px. Se reutiliza una acción compartida; ninguna regla de autenticación cambia.
+
+- Cerrar sesión del perfil móvil se alinea en la misma fila de Mi cuenta, arriba a la derecha, sin fila adicional debajo de las pestañas. Cabecera sin ancho máximo ni elipsis para el nombre; permite ajuste de línea en pantallas estrechas.
+
+- Retirado Contacto y ayuda del menú de nombre: había quedado aislado al mover el cierre de sesión. El nombre se muestra como texto sin desplegable; los accesos generales de contacto del portal no se alteran.

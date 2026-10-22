@@ -2,6 +2,7 @@
 """HTTP regression checks for authenticated admin pages using a disposable SQLite DB."""
 from pathlib import Path
 import re, os
+from html import unescape
 import base64, json, secrets, shutil, socket, sqlite3, subprocess, time
 from datetime import date, timedelta
 import http.cookiejar
@@ -98,7 +99,7 @@ with socket.socket() as sock:
 TEST_ROUTER=WORK/'router.php'
 TEST_ROUTER.write_text("<?php $path=parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH);if($path==='/cuenta/verificar-correo/'||$path==='/cuenta/verificar-correo'){require __DIR__.'/public/business/verify-email.php';return true;}return require "+repr(str(ROOT/'scripts/php-destinations-router.php'))+";")
 (WORK / 'public/api/fault-probe.php').write_text("<?php require dirname(__DIR__,2).'/app/bootstrap.php'; throw new RuntimeException('secret@example.invalid password=DO_NOT_EXPOSE');")
-PROCESS = subprocess.Popen(['php', '-d', 'opcache.enable=0', '-d', 'disable_functions=mail,curl_exec,fsockopen,pfsockopen,stream_socket_client', '-S', f'127.0.0.1:{PORT}', '-t', str(WORK / 'public'), str(TEST_ROUTER)], env=os.environ | {'EL_DESTINATIONS_DSN': 'sqlite:' + str(DB_PATH), 'EL_PREPROD_LOCAL':'1'}, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+PROCESS = subprocess.Popen(['php', '-d', 'opcache.enable=0', '-d', 'disable_functions=mail,curl_exec,fsockopen,pfsockopen,stream_socket_client', '-S', f'127.0.0.1:{PORT}', '-t', str(WORK / 'public'), str(TEST_ROUTER)], env=os.environ | {'EL_DESTINATIONS_DSN': 'sqlite:' + str(DB_PATH), 'EL_PREPROD_LOCAL':'1'}, stdout=subprocess.DEVNULL, stderr=(WORK/'server.log').open('w'))
 BASE = f'http://127.0.0.1:{PORT}'
 ADMIN = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
 GUEST = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
@@ -207,21 +208,24 @@ try:
         ('/admin/negocios.php', 'Negocios'),
         ('/admin/negocios.php?tab=crear', 'Negocios'),
         ('/admin/negocios.php?tab=importar', 'Negocios'),
-        ('/admin/negocios.php?tab=revisar', 'Revisar negocios importados'),
+        ('/admin/negocios.php?tab=revisar', 'Publicar importaciones Gratis sin representante'),
         ('/admin/importar-negocios.php', 'Importar varios negocios'),
         ('/admin/importar-negocios.php?plantilla=1', 'schema_version'),
         ('/admin/reclamaciones.php', 'Solicitudes anteriores de representación'),
-        ('/admin/solicitudes-cuenta.php', 'Solicitudes de cuenta de negocio'),
+        ('/admin/solicitudes-cuenta.php', 'Revisión de negocios'),
         ('/admin/usuarios.php', 'Cuentas'),
         ('/admin/atencion-comercios.php', 'Atención a comercios'),
         ('/admin/atencion-comercios.php?view=review', 'Revisión y publicación'),
         ('/admin/incidencias.php', 'Errores de ejecución'),
+        ('/admin/reportes.php', 'Reportes'),
+        ('/admin/solicitudes-publicas.php', 'Solicitudes de usuarios'),
         ('/admin/suscripciones.php', 'Suscripciones'),
         ('/admin/inversionistas.php', 'Inteligencia de negocio e inversión'),
-        ('/admin/contactos-negocios.php', 'Canales y responsable'),
+        ('/admin/contactos-negocios.php', 'Gestión comercial'),
         ('/admin/campanas.php', 'Campañas por correo'),
+        ('/admin/correos.php', 'Plantillas y correos'),
         ('/admin/campanas.php?tab=conexion', 'Remitente y conexión'),
-        ('/admin/campanas.php?tab=correos', 'Correos de negocios'),
+        ('/admin/campanas.php?tab=correos', 'Negocios destinatarios'),
     ]
     # The login is public; all operational pages require an authenticated session.
     for path, _ in paths:
@@ -300,16 +304,19 @@ try:
                     '/admin/negocios.php': 'Catálogo y cobertura',
                     '/admin/trasladar-negocios.php': 'Catálogo y cobertura',
                     '/admin/importar-negocios.php': 'Catálogo y cobertura',
-                    '/admin/reclamaciones.php': 'Reclamos de negocio',
-                    '/admin/solicitudes-cuenta.php': 'Solicitudes de cuenta',
+                    '/admin/reclamaciones.php': 'Revisión de negocios',
+                    '/admin/solicitudes-cuenta.php': 'Revisión de negocios',
                     '/admin/usuarios.php': 'Cuentas',
                     '/admin/suscripciones.php': 'Suscripciones',
                     '/admin/inversionistas.php': 'Inteligencia e inversión',
                     '/admin/contactos-negocios.php': 'Canales y responsable',
+                    '/admin/correos.php': 'Plantillas y correos',
                     '/admin/campanas.php': 'Conexión con Brevo' if 'tab=conexion' in path else 'Campañas por correo',
                 }.get(route)
                 if expected_sidebar:
                     check(active_label == expected_sidebar, f'La sección activa debe ser {expected_sidebar} en {path}; mostró {active_label}')
+            if path in ('/admin/reportes.php','/admin/solicitudes-publicas.php'):
+                check(re.search(r'<main\b[^>]*class="[^"]*admin-page[^\"]*"[^>]*>.*?<aside\b',body,re.S) is not None,'Reports must contain the sidebar inside the page layout to reserve its width.')
             if path == '/admin/contactos-negocios.php':
                 check('<meta name="robots" content="noindex,nofollow">' in body and 'Solo administración' in body, 'La pantalla de contactos privados debe quedar autenticada y fuera de indexación.')
             if path == '/admin/negocios.php?tab=importar':
@@ -320,8 +327,12 @@ try:
                 selected_tabs = re.findall(r'<a\b[^>]*aria-current="page"[^>]*>(.*?)</a>', workflow.group(0), re.S)
                 check(len(selected_tabs) == 1, f'Negocios debe marcar una sola pestaña activa en {path}; encontró {len(selected_tabs)}')
                 selected_label = re.sub(r'<[^>]+>', '', selected_tabs[0]).strip()
-                expected_tab = {'tab=crear': 'Crear negocio', 'tab=importar': 'Importación masiva', 'tab=revisar': 'Publicar importaciones Gratis sin representante'}.get(next((part for part in path.split('?')[1:] if part.startswith('tab=')), ''), 'Todos los negocios')
+                expected_tab = {'tab=crear': 'Listado de negocios', 'tab=importar': 'Importación masiva', 'tab=revisar': 'Publicar importaciones Gratis sin representante'}.get(next((part for part in path.split('?')[1:] if part.startswith('tab=')), ''), 'Listado de negocios')
                 check(selected_label == expected_tab, f'La pestaña activa debe ser {expected_tab} en {path}; mostró {selected_label}')
+    _,upcoming_subs,_=request('/admin/suscripciones.php?renovacion=7&q=Hotel+de+prueba')
+    check('Preparar recordatorio' in upcoming_subs and 'Vence en ' in upcoming_subs,'Paid renewal due within 7 days was not shown with a reminder action.')
+    _,expired_subs,_=request('/admin/suscripciones.php?renovacion=expired&q=Hotel+de+prueba')
+    check('Preparar recordatorio' not in expired_subs,'Active subscription with future expiry leaked into expired filter.')
     health_csrf = re.search(r'name="csrf" value="([^"]+)"', request('/admin/campanas.php?tab=conexion')[1]).group(1)
     check(request('/admin/campanas.php?tab=conexion', {'action': 'check_connection', 'csrf': 'invalid'})[0] == 403, 'Diagnóstico sin CSRF')
     status, health_body, _ = request('/admin/campanas.php?tab=conexion', {'action': 'check_connection', 'csrf': health_csrf, 'return_to': 'system'})
@@ -399,7 +410,30 @@ try:
     check(status == 200, 'La revisión explícita del correo no se guardó.')
     status, body, _ = request('/admin/campanas.php', {'csrf': campaign_csrf, 'action': 'create', 'name': 'Prueba local', 'subject': 'Asunto local', 'body': '<script>alert(1)</script>', 'channels[]': str(channel_id)})
     check(status == 200 and '&lt;script&gt;' in body and 'Aprobar esta versión' in body, 'El borrador debe abrir para revisión con contenido escapado.')
+    email_status,email_template_form,_=request('/admin/correos.php?tab=templates')
+    email_csrf=re.search(r'name="csrf" value="([^"]+)"',email_template_form).group(1)
+    check(request('/admin/correos.php',{'csrf':'invalid','action':'save_template'})[0]==403,'Email templates must require CSRF.')
+    email_status,email_saved,_=request('/admin/correos.php?tab=templates',{'csrf':email_csrf,'action':'save_template','name':'Respuesta HTTP','subject':'Respuesta para {{business_name}}','html':'<p>Hola {{business_name}}</p><script>evil()</script>'})
+    check(email_status==200 and 'Plantilla guardada' in email_saved,'HTML template was not saved.')
+    template_id=re.search(r'name="template_id" value="([a-f0-9]{32})"',email_saved).group(1)
+    _,email_composer,_=request('/admin/correos.php?template='+template_id+'&business_id='+str(business_id))
+    recipient_key=re.search(r'<option value="([a-f0-9]{64})"',email_composer).group(1)
+    email_status,email_preview,_=request('/admin/correos.php',{'csrf':email_csrf,'action':'preview','template_id':template_id,'recipient':recipient_key,'requested_reply':'1'})
+    check(email_status==200 and 'Vista previa del correo' in email_preview and 'Hotel de prueba' in email_preview and 'sandbox=""' in email_preview and 'evil()' not in email_preview,'Individual email did not render safe actual business data.')
+    email_status,email_history,_=request('/admin/correos.php?tab=history&business_id='+str(business_id))
+    check(email_status==200 and 'Respuesta para Hotel de prueba' in email_history and 'Borrador revisable' in email_history,'Individual mail draft missing from business history.')
+    preview_id=re.search(r'message=([a-f0-9]{32})',email_history).group(1)
+    check(request('/admin/correos.php',{'csrf':email_csrf,'action':'send','message_id':preview_id,'confirm_send':'1'})[0]==400,'Local individual email must never send live mail.')
     campaign_row = DB.execute('SELECT id,content_hash FROM business_email_campaigns').fetchone()
+    _,reuse_html,_=request('/admin/campanas.php?reuse='+str(campaign_row[0]))
+    check('value="Asunto local"' in reuse_html and '&lt;script&gt;' in reuse_html and 'name="channels[]"' in reuse_html and 'name="channels[]" checked' not in reuse_html,'Reusing a message must escape content and require a fresh recipient selection.')
+    _,filtered_html,_=request('/admin/campanas.php?tab=correos&q=nonexistent-business')
+    check('hotel@example.invalid' not in filtered_html,'Recipient search did not filter businesses.')
+    _,templates_html,_=request('/admin/campanas.php?tab=plantillas')
+    check('Usar como base' in templates_html and 'Prueba local' in templates_html,'Saved messages are not available to reuse.')
+    campaign_tabs=re.search(r'<nav class="admin-workflow-tabs".*?</nav>',templates_html,re.S).group(0)
+    check('tab=conexion' not in campaign_tabs,'Connection settings must stay out of campaign tabs.')
+
     status, body, _ = request('/admin/campanas.php', {'csrf': campaign_csrf, 'action': 'approve', 'id': str(campaign_row[0]), 'hash': campaign_row[1], 'reviewed': '1'})
     check(status == 400 and 'Completa y habilita' in body, 'La conexión no configurada debe bloquear aprobación y envío.')
 
@@ -531,15 +565,28 @@ try:
         subprocess.run(['/Users/nivato/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node', str(ROOT / 'backend/tests/free-business-editor.browser.cjs')], input=json.dumps({'base': BASE, 'password': password, 'businessId': imported_id}), text=True, check=True)
         check(DB.execute('SELECT COUNT(*) FROM business_categories WHERE business_id=? AND category_code=?', (imported_id, 'alimentacion')).fetchone()[0] == 1, 'El editor no guardó la categoría adicional en el mismo negocio.')
 
-    # Create a business through the real admin HTTP handler. It must remain a private draft.
-    failed_create = {'csrf': csrf, 'action': 'save', 'id': '', 'destination_id': str(destination_id), 'category_code': 'categoria_invalida', 'translations[es][display_name]': 'Prueba que debe conservarse', 'plan_code': 'free', 'billing_frequency': 'monthly', 'address_text': 'Parque principal, Jericó', 'map_workflow': '1', 'location_confirmed': '1', 'image_assistance_requested': '0'}
-    failed_status, failed_body, _ = request('/admin/negocios.php', failed_create)
-    check(failed_status == 400 and 'Crear negocio' in failed_body and 'No se guardó el negocio' in failed_body and 'Prueba que debe conservarse' in failed_body, 'Al fallar el alta, el formulario debe permanecer abierto, explicar el error y conservar los campos escritos.')
-    missing_location = {'csrf': csrf, 'action': 'save', 'id': '', 'destination_id': str(destination_id), 'category_code': 'hospedaje', 'translations[es][display_name]': 'Prueba sin punto de mapa', 'plan_code': 'featured', 'billing_frequency': 'monthly', 'address_text': 'Parque principal, Jericó', 'map_workflow': '1', 'location_confirmed': '0', 'image_assistance_requested': '0'}
+    before_manual_link=[tuple(row) for row in DB.execute('SELECT * FROM business_account_memberships ORDER BY id')]
+    status,account_list,_=request('/admin/usuarios.php')
+    check(status==200 and 'name="action" value="link"' not in account_list and 'Asignar un negocio' not in account_list,'Accounts must not offer manual business assignment.')
+    status,blocked_link,_=request('/admin/usuarios.php',{'csrf':csrf,'action':'link','account_id':'1','business_id':str(imported_id),'membership_role':'owner'})
+    check(status==403 and 'asociación manual' in blocked_link,'Direct manual assignment must be blocked server-side.')
+    check([tuple(row) for row in DB.execute('SELECT * FROM business_account_memberships ORDER BY id')]==before_manual_link,'Blocked manual assignment changed memberships.')
+    # Manual creation is blocked even through a direct authenticated POST.
+    before_manual_count=DB.execute('SELECT COUNT(*) FROM businesses').fetchone()[0]
+    failed_status,failed_body,_=request('/admin/negocios.php',{'csrf':csrf,'action':'save','id':'','translations[es][display_name]':'Forbidden manual business'})
+    check(failed_status==403 and 'creación manual está deshabilitada' in failed_body,'Manual creation must be blocked server-side.')
+    check(DB.execute('SELECT COUNT(*) FROM businesses').fetchone()[0]==before_manual_count,'Blocked creation inserted a business.')
+    check('id="business-form"' not in request('/admin/negocios.php?tab=crear')[1],'Direct create link exposed a creation form.')
+    # Seed a historical business and verify editing remains available.
+    DB.execute("INSERT INTO businesses(public_id,destination_id,category_code,record_origin,slug,information_status,claim_status,operation_status,publication_status) VALUES('historical-edit-fixture',?,'hospedaje','admin_created','hostal-creado-por-prueba','PENDIENTE_REVISION','NO_RECLAMADO','DESCONOCIDO','draft')",(destination_id,))
+    edit_fixture_id=DB.execute('SELECT last_insert_rowid()').fetchone()[0]
+    DB.execute("INSERT INTO business_translations(business_id,locale,display_name,description) VALUES(?,'es','Hostal creado por prueba','')",(edit_fixture_id,))
+    DB.commit()
+    missing_location = {'csrf': csrf, 'action': 'save', 'id': str(edit_fixture_id), 'destination_id': str(destination_id), 'category_code': 'hospedaje', 'translations[es][display_name]': 'Prueba sin punto de mapa', 'plan_code': 'featured', 'billing_frequency': 'monthly', 'address_text': 'Parque principal, Jericó', 'map_workflow': '1', 'location_confirmed': '0', 'image_assistance_requested': '0'}
     location_status, location_body, _ = request('/admin/negocios.php', missing_location)
     check(location_status == 400 and 'Selecciona el punto exacto en el mapa' in location_body and 'Prueba sin punto de mapa' in location_body, 'El alta sin punto confirmado debe explicar que faltó el mapa y conservar lo escrito.')
     fields = [
-        ('csrf', csrf), ('action', 'save'), ('id', ''), ('map_workflow', '1'),
+        ('csrf', csrf), ('action', 'save'), ('id', str(edit_fixture_id)), ('map_workflow', '1'),
         ('location_confirmed', '0'), ('location_confirmed', '1'),
         ('destination_id', str(destination_id)), ('category_code', 'hospedaje'),
         ('translations[es][display_name]', 'Hostal creado por prueba'), ('plan_code', 'free'),
@@ -560,11 +607,19 @@ try:
     check(created is not None and tuple(created)[1:] == ('draft', 'PENDIENTE_REVISION', 'NO_RECLAMADO', 'admin_created', 1, 5.791, -75.786), 'El negocio no quedó en borrador privado con ubicación y estados esperados.')
     check(DB.execute('SELECT COUNT(*) FROM business_subscriptions WHERE business_id=? AND plan_code="free"', (created['id'],)).fetchone()[0] == 1, 'La creación no registró la suscripción Gratis pendiente.')
     status, body, _ = request('/admin/negocios.php?tab=lista&origen=admin_created&categoria=hospedaje&q=Hostal+creado+por+prueba')
-    check(status == 200 and 'Hostal creado por prueba' in body and 'No publicado' in body, 'El negocio recién creado no aparece filtrando el listado por categoría y alta administrativa.')
+    check(status == 200 and 'Hostal creado por prueba' in body and 'Pendiente de publicación' in body, 'El negocio recién creado no aparece filtrando el listado por categoría y alta administrativa.')
     check('name="categoria"' in body and 'name="representacion"' not in body, 'La lista administrativa no ofrece categoría como filtro principal.')
 
-    status, subscription_list, _ = request('/admin/suscripciones.php?estado=free')
-    check(status == 200 and 'Negocio sin suscripción' in subscription_list and 'Gratis' in subscription_list and 'Elegir suscripción' in subscription_list, 'Un negocio sin fila explícita de suscripción debe aparecer en el nivel Gratis, con opción de configurar su suscripción.')
+    _,registered_segment,_=request('/admin/negocios.php?tab=lista')
+    _,historical_segment,_=request('/admin/negocios.php?tab=lista&segment=historical')
+    check('Hostal creado por prueba' not in registered_segment and 'Hostal creado por prueba' in historical_segment,'Historical administrative businesses leaked into person registrations.')
+    preview_path='/admin/negocio-vista-previa.php?id='+str(created['id'])
+    check(request(preview_path,opener=GUEST)[0]==403,'Business card preview must remain private.')
+    status,card_preview,_=request(preview_path)
+    check(status==200 and 'Hostal creado por prueba' in card_preview and 'directory-card-tier-free' in card_preview and 'Pendiente de publicación' in card_preview,'Free business preview must render its actual data with the shared public card.')
+    check(request('/admin/negocio-vista-previa.php?id=999999')[0]==404,'Unknown business preview must return 404.')
+    status, subscription_list, _ = request('/admin/suscripciones.php')
+    check(status == 200 and 'Negocio sin suscripción</' not in subscription_list and 'Suscripciones de pago y renovaciones' in subscription_list, 'La bandeja de suscripciones debe centrarse en planes de pago.')
 
     future_date = (date.today() + timedelta(days=7)).isoformat()
     status, body, _ = request('/admin/suscripciones.php', {'csrf': csrf, 'action': 'save', 'business_id': created['id'], 'plan_code': 'free', 'billing_frequency': 'monthly', 'publish_not_before': future_date})
@@ -661,6 +716,16 @@ try:
     # Ordinary first association is now automatic; documents are not marked as ownership verified.
     approved = DB.execute('SELECT r.status,r.business_id,b.publication_status,b.claim_status,m.account_id FROM business_account_applications r JOIN businesses b ON b.id=r.business_id JOIN business_account_memberships m ON m.business_id=b.id WHERE r.id=?', (application_row['id'],)).fetchone()
     check(DB.execute('SELECT COUNT(*) FROM business_image_references WHERE business_id=?',(approved['business_id'],)).fetchone()[0]==1,'Las fotos privadas de la solicitud no se conservaron al aprobar.')
+    status,all_pending,_=request('/admin/negocios.php?'+urllib.parse.urlencode({'tab':'lista','estado':'draft','q':'Cafetería de cuenta HTTP'}))
+    check(status==200 and 'Cafetería de cuenta HTTP' in all_pending and 'Editar datos' in all_pending,'Filtered business list must include owner_submitted drafts.')
+    status,legacy_pending,_=request('/admin/negocios.php?tab=pendientes&q=Cafeter%C3%ADa')
+    check(status==200 and 'Listado de negocios' in legacy_pending and 'value="draft" selected' in legacy_pending and '?tab=pendientes"' not in legacy_pending,'Legacy pending links must use the unified list with the publication filter.')
+    _,imported_segment,_=request('/admin/negocios.php?tab=lista&segment=imported&q=Cafeter%C3%ADa')
+    check('Cafetería de cuenta HTTP' not in imported_segment,'Person registration leaked into imported businesses.')
+    crm_account_marker='data-crm-business-id="'+str(approved['business_id'])+'"'
+    _,crm_prospects,_=request('/admin/contactos-negocios.php?subscription=all&account=without')
+    _,crm_customers,_=request('/admin/contactos-negocios.php?subscription=all&account=with')
+    check(crm_account_marker not in crm_prospects and crm_account_marker in crm_customers,'Business with active account was not isolated from unassociated CRM prospects.')
     check(approved and approved['status']=='approved' and approved['publication_status']=='draft' and approved['claim_status']=='RECLAMADO' and approved['account_id']==account_row['id'], 'La aprobación no creó el borrador privado y la membresía esperados.')
     normalized_contacts=dict(DB.execute("SELECT channel,contact_value FROM business_contacts WHERE business_id=? AND channel IN ('phone','whatsapp')",(approved['business_id'],)).fetchall())
     check(normalized_contacts=={'phone':'+573001234567','whatsapp':'+573001234567'},'El registro no guardó teléfono y WhatsApp compartido en formato internacional.')
@@ -754,8 +819,9 @@ try:
     DB.execute("UPDATE business_subscriptions SET status='active',starts_at=datetime('now','-1 day'),ends_at=datetime('now','+29 days') WHERE id=(SELECT subscription_id FROM business_subscription_payment_evidence WHERE id=?)",(payment_row['id'],));DB.commit()
     try:
         rendered_status,rendered,_=request('/destino.php?destino=jerico',opener=GUEST)
+        (WORK/'operator-render.html').write_text(rendered)
         operators=re.findall(r'<ul class="experience-paid-operators".*?</ul>',rendered,re.S)
-        check(rendered_status==200 and any('Cafetería de cuenta HTTP' in item for item in operators),'El operador vigente no aparece dentro de la experiencia pública.')
+        check(rendered_status==200 and any('Cafetería de cuenta HTTP' in unescape(item) for item in operators),'El operador vigente no aparece dentro de la experiencia pública: '+str(rendered_status)+' '+rendered[-600:])
         quote_url='/business/dashboard.php?tab=business&business='+str(business_id)+'&subscription_quote=1&plan_code=page_premium&billing_frequency=monthly&operator_experience_id='+str(addon_experience)
         quote_status, quote_body, quote_headers=request(quote_url,opener=business_flow)
         quote_data=json.loads(quote_body)
@@ -1104,4 +1170,6 @@ try:
     print('OK: flujo editorial HTTP desde cuenta pública, tarjeta real, versión privada, preparación, aprobación exacta y publicación final; sin mensajes externos.')
     print('OK: páginas administrativas autenticadas y bloqueadas para visitantes; registro/inicio/cierre de sesión empresarial, consulta y aprobación, membresía y borrador privado; enlace administrativo de contraseña con almacenamiento hash, expiración y uso único; controles privados; importación transaccional; alta/suscripción/publicación; errores legibles ante migraciones faltantes.')
 finally:
-    PROCESS.terminate(); PROCESS.wait(timeout=5); DB.close(); shutil.rmtree(WORK)
+    PROCESS.terminate(); PROCESS.wait(timeout=5); DB.close()
+    if os.environ.get('EL_KEEP_TEST_FIXTURE')!='1': shutil.rmtree(WORK)
+    else: print('Fixture local conservada:',WORK)
