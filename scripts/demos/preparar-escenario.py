@@ -10,6 +10,12 @@ run.mkdir(parents=True)
 for folder in ('app','public'):
     shutil.copytree(source/folder,run/folder,ignore=shutil.ignore_patterns('assets') if folder=='public' else None)
 shutil.copytree(source/'public/assets',run/'public/assets',copy_function=os.link)
+# Integrar el código actual del circuito sin reconstruir ni modificar el paquete fuente.
+shutil.copytree(root/'backend/app',run/'app',dirs_exist_ok=True)
+for relative in ['business/dashboard.php','business/traveler.php','business/editorial.php','business/new-business-fields.php','business/phone-fields.php','assets/business-phone.js','assets/account-registration.css','assets/directory-tiers.css']:
+    target=run/'public'/relative
+    if target.exists():target.unlink()
+    shutil.copyfile(root/'backend/public'/relative,target)
 (run/'private').mkdir()
 src=sqlite3.connect(base/'editorial-preview/test.sqlite');db=sqlite3.connect(run/'private/demo.sqlite');src.backup(db);src.close();db.close()
 password='DemoLocal2026!Segura'

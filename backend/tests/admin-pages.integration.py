@@ -606,6 +606,7 @@ try:
         'plan_code':'featured','billing_frequency':'monthly','csrf': registration_csrf, 'application_type': 'new_business', 'business_id': '',
         'business_name': 'Cafetería de cuenta HTTP', 'destination_id': destination_id,
         'address_text':'Dirección de prueba privada','latitude':'5.79','longitude':'-75.78','summary':'Presentación enviada por el negocio','description':'Descripción privada de prueba','channels[email]':'negocio@example.invalid', 'category_codes[]':'hospedaje',
+        'business_phone[type]':'mobile','business_phone[number]':'3001234567','business_phone[same_whatsapp]':'1',
         'category_code': 'hospedaje', 'display_name': 'Responsable HTTP',
         'email': 'responsable-http@example.invalid', 'phone': '3230000000',
         'relationship_code': 'owner', 'message': 'Adjuntaré matrícula y RUT para validar el negocio.',
@@ -661,9 +662,11 @@ try:
     approved = DB.execute('SELECT r.status,r.business_id,b.publication_status,b.claim_status,m.account_id FROM business_account_applications r JOIN businesses b ON b.id=r.business_id JOIN business_account_memberships m ON m.business_id=b.id WHERE r.id=?', (application_row['id'],)).fetchone()
     check(DB.execute('SELECT COUNT(*) FROM business_image_references WHERE business_id=?',(approved['business_id'],)).fetchone()[0]==1,'Las fotos privadas de la solicitud no se conservaron al aprobar.')
     check(approved and approved['status']=='approved' and approved['publication_status']=='draft' and approved['claim_status']=='RECLAMADO' and approved['account_id']==account_row['id'], 'La aprobación no creó el borrador privado y la membresía esperados.')
+    normalized_contacts=dict(DB.execute("SELECT channel,contact_value FROM business_contacts WHERE business_id=? AND channel IN ('phone','whatsapp')",(approved['business_id'],)).fetchall())
+    check(normalized_contacts=={'phone':'+573001234567','whatsapp':'+573001234567'},'El registro no guardó teléfono y WhatsApp compartido en formato internacional.')
     check(DB.execute('SELECT address_text FROM businesses WHERE id=?',(approved['business_id'],)).fetchone()[0]=='Dirección de prueba privada','Se perdieron los datos de ubicación al aprobar.')
     check(DB.execute('SELECT description FROM business_translations WHERE business_id=? AND locale="es"',(approved['business_id'],)).fetchone()[0]=='Descripción privada de prueba','Se perdió la descripción enviada.')
-    check(tuple(DB.execute('SELECT contact_value,is_public FROM business_contacts WHERE business_id=?',(approved['business_id'],)).fetchone())==('negocio@example.invalid',0),'El canal debe conservarse privado.')
+    check(tuple(DB.execute('SELECT contact_value,is_public FROM business_contacts WHERE business_id=? AND channel="email"',(approved['business_id'],)).fetchone())==('negocio@example.invalid',0),'El canal debe conservarse privado.')
     status, body, _ = request('/business/dashboard.php?tab=business', opener=business_user)
     check(status == 200 and 'Cafetería de cuenta HTTP' in body and 'Borrador' in body, 'El tablero no reflejó el negocio asociado después de la aprobación.')
     check('Retomar la suscripción que elegí' in body and 'plan=featured' in body,'La elección paga debe conservar un acceso para continuar con el pago.')
@@ -926,6 +929,8 @@ try:
     code,prepared_body,_=request(admin_editorial,quality)
     check(code==200 and DB.execute('SELECT status FROM business_editorial_versions WHERE id=?',(prepared['id'],)).fetchone()[0]=='awaiting_owner','No preparó prepublicación: '+prepared_body[-1000:])
     check(DB.execute("SELECT COUNT(*) FROM business_editorial_events WHERE version_id=? AND action='mail_simulated'",(prepared['id'],)).fetchone()[0]==1,'Preparar no envió aviso automático simulado')
+    editorial_mail=next(m for m in reversed(json.loads((WORK/'private/mailbox.json').read_text())) if m.get('kind')=='editorial' and m.get('version_id')==prepared['id'])
+    check(urllib.parse.urlsplit(editorial_mail['url']).netloc==f'127.0.0.1:{PORT}' and 'version='+str(prepared['id']) in editorial_mail['url'],'El aviso editorial no apunta al ambiente y versión correctos.')
     _,final_preview,_=request(editorial_path+'&version='+str(prepared['id'])+'&preview=page',opener=business_flow)
     check('business/editorial-image.php?id=' not in final_preview,'La versión final sigue usando fotos originales')
     owner_action={'csrf':premium_csrf,'action':'request_changes','version_id':str(prepared['id']),'payload_hash':prepared['payload_hash'],'note':'Corregir la presentación del producto'}
