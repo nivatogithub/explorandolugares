@@ -31,3 +31,15 @@ El registro exige soporte de titularidad y, para una página Comercial/Premium n
 El vídeo centra los campos antes de escribir/cargar archivos y comprueba los límites visibles del mapa y sus botones. Conserva capturas específicas del documento, la fotografía y el mapa completo. Se rechaza el resultado si el navegador grabado visita administración.
 
 Próximo despliegue: aplicar 050 (Página Comercial: 79.900/199.750/415.480/799.000 COP para mensual/trimestral/semestral/anual) y 051 (auditoría de retiro de documentos) antes de habilitar el código nuevo. 050 cambia únicamente el catálogo mediante una sentencia atómica; no modifica suscripciones ni pagos existentes. Este trabajo no se ha desplegado a producción.
+
+## Teléfonos, suscripción y ubicación · segunda revisión del 22 de octubre
+
+El componente de teléfono de la persona permite celular/fijo e indicativos; los formularios de interés e impulsor ya componían +57 y el prefijo regional a partir del municipio. El teléfono del negocio comparte componente entre registro, edición editorial y administración: WhatsApp igual se copia, se deshabilita y ocupa el mismo ancho. El número personal guardado se reutiliza al registrar otro negocio.
+
+La selección inicial ya crea una solicitud de la modalidad y frecuencia elegidas, sin pasar por Gratis. El pago conserva esa elección; asociar en otro municipio sigue permitido sin vincular el negocio a la residencia del usuario. Se comprobó una persona con negocios en dos municipios y repetición del alta sin duplicar suscripciones.
+
+El mapa usa las geometrías municipales locales también en el servidor. Un punto fuera del polígono se rechaza. Si el geocodificador encuentra la dirección, se conserva el límite de 1 km frente al pin. Si no encuentra nomenclatura rural, se exige kilómetro y vía/vereda/referencia de acceso; esto comprueba formato y pertenencia municipal, no existencia oficial ni exactitud de una edificación. Una consulta tardía no sustituye la selección manual.
+
+Demo: persona Lucía Restrepo, negocio Nébula del Arrayán. Dirección real de referencia para simulación: Carrera 5 # 7-50, publicada por https://www.jerico-antioquia.gov.co/. El negocio de prueba no opera allí. La respuesta externa del geocodificador se simula de forma explícita con un punto de referencia dentro de Jericó; no se presenta como comprobación de la edificación. El límite municipal sigue usando la geometría local real. La copia incluye Medellín además de Jericó; no modifica lugares, cuentas ni estadísticas productivas.
+
+La elección de suscripción está antes de los datos del establecimiento. Sin intención previa no hay una modalidad preseleccionada y el servidor exige elegirla. La demo elige Página Comercial desde ese primer paso; después del registro centra únicamente la sección de pago, evitando repetir el panel completo.

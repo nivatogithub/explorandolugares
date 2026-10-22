@@ -4,6 +4,8 @@ declare(strict_types=1);
 require_once __DIR__.'/BusinessCategories.php';
 require_once __DIR__.'/BusinessServiceSections.php';
 
+require_once __DIR__.'/BusinessMunicipality.php';
+require_once __DIR__.'/BusinessPhone.php';
 final class BusinessAdminService
 {
     private const LOCALES=['es','en','pt-BR'];
@@ -109,6 +111,7 @@ final class BusinessAdminService
             foreach($plan['text_limits'] as $field=>$limit){$limit=(int)$limit;if($limit>0&&self::characterLength($translations[$locale][$field])>$limit)throw new RuntimeException('El campo '.self::textFieldLabel($field).' en '.strtoupper($locale).' supera el límite de '.$limit.' caracteres de esta suscripción.');}
         }
         foreach($translations as $locale=>&$translation){$prior=$existing['translations'][$locale]??[];if(!in_array('expanded_details',$features,true))$translation['summary']=(string)($prior['summary']??'');if(!in_array('extended_description',$features,true))$translation['description']=(string)($prior['description']??'');if(!in_array('brand_presentation',$features,true))foreach(['brand_story','featured_services'] as $key)$translation[$key]=(string)($prior[$key]??'');}unset($translation);
+        if(isset($input['business_phone'])){$normalizedPhones=BusinessPhone::capture($input,[]);foreach(['phone','phone_fixed','whatsapp'] as $channel)$input['contacts'][$channel]['value']=$normalizedPhones[$channel]??'';}
         $location=$this->locationFields($input,$existing,$features,$planCode!=='free');
         $frequency=(string)($input['billing_frequency']??$input['subscription']['billing_frequency']??$existing['subscription']['billing_frequency']??'');if($planCode!=='free'&&$frequency==='')$frequency='monthly';
         // URL, orden, verificación, reclamación, operación, plan y publicación no son datos de alta.
@@ -151,7 +154,7 @@ final class BusinessAdminService
     private function syncContacts(int $id,array $input,array $features,array $existing=[]):void
     {
         $allowed=['email','phone','phone_fixed','whatsapp','website','instagram','facebook','linkedin'];$clean=[];
-        foreach($allowed as $channel){$enabled=in_array(in_array($channel,['email','phone','whatsapp'],true)?'direct_contact':'business_page',$features,true);$row=is_array($input[$channel]??null)?$input[$channel]:[];$previous=$existing[$channel]??[];$value=trim((string)($enabled?($row['value']??''):($previous['contact_value']??'')));if($value==='')continue;
+        foreach($allowed as $channel){$enabled=in_array(in_array($channel,['email','phone','phone_fixed','whatsapp'],true)?'direct_contact':'business_page',$features,true);$row=is_array($input[$channel]??null)?$input[$channel]:[];$previous=$existing[$channel]??[];$value=trim((string)($enabled?($row['value']??''):($previous['contact_value']??'')));if($value==='')continue;
             $ok=match($channel){'email'=>(bool)filter_var($value,FILTER_VALIDATE_EMAIL),'website','instagram','facebook','linkedin'=>(bool)filter_var($value,FILTER_VALIDATE_URL)&&in_array(parse_url($value,PHP_URL_SCHEME),['https','http'],true),default=>(bool)preg_match('/^\+?[0-9() .-]{7,24}$/D',$value)};
             if(!$ok)throw new RuntimeException('Revisa el dato de contacto de '.strtoupper($channel).'.');$isPublic=$enabled&&!empty($row['public'])?1:($enabled?0:0);$clean[]=[$channel,$value,$isPublic];
         }
@@ -181,7 +184,7 @@ final class BusinessAdminService
         if(($latText!==''&&$lat===false)||($lonText!==''&&$lon===false))throw new RuntimeException('La latitud y longitud deben ser números válidos.');
         if(($lat===null)!==($lon===null))throw new RuntimeException('Ingresa latitud y longitud juntas.');
         if($lat!==null&&($lat < -90||$lat>90||$lon < -180||$lon>180))throw new RuntimeException('Las coordenadas están fuera de rango.');
-        $source=$lat!==null?'map':'';
+        $isRural=array_key_exists('location_address_kind',$input)?$input['location_address_kind']==='rural':($input['location_source']??$existing['location_source']??'')==='map_rural';$source=$lat!==null?($isRural?'map_rural':'map'):'';
         $hasBusinessPage=in_array('business_page',$features,true);
         $hours=$hasBusinessPage?$this->structuredHours($input['hours']??($input['opening_hours']??null),$existing['opening_hours']??''):(string)($existing['opening_hours']??'');
         $price=$hasBusinessPage?trim((string)($input['price_range']??($existing['price_range']??''))):(string)($existing['price_range']??'');$price=['Económico'=>'$','Moderado'=>'$$','Medio'=>'$$$','Alto'=>'$$$$','Especial'=>'$$$$$'][$price]??$price;
@@ -191,6 +194,7 @@ final class BusinessAdminService
         $menu=$this->optionalUrl((string)($hasBusinessPage?($input['menu_url']??$existing['menu_url']??''):($existing['menu_url']??'')),'menú');$reservations=$this->optionalUrl((string)($hasBusinessPage?($input['reservations_url']??$existing['reservations_url']??''):($existing['reservations_url']??'')),'reservas');
         if($hasMapField&&$address==='')throw new RuntimeException('Completa la dirección junto con el punto del mapa.');
         if($hasMapField&&$lat!==null&&$lon!==null)$mapUrl='https://www.openstreetmap.org/?mlat='.rawurlencode((string)$lat).'&mlon='.rawurlencode((string)$lon).'#map=18/'.rawurlencode((string)$lat).'/'.rawurlencode((string)$lon);
+        $location=['latitude'=>$lat===false?null:$lat,'longitude'=>$lon===false?null:$lon,'address_text'=>$address];BusinessMunicipality::validate($this->pdo,array_replace($input,['location_source'=>$source]),$location);
         return ['address_text'=>$address,'location_reference'=>$reference,'latitude'=>$lat===false?null:$lat,'longitude'=>$lon===false?null:$lon,'location_source'=>$source?:null,'location_map_url'=>$mapUrl,'location_confirmed'=>$confirmed,'opening_hours'=>$hours,'price_range'=>$price,'capacity_count'=>$capacity===false?null:$capacity,'menu_url'=>$menu,'reservations_url'=>$reservations];
     }
 

@@ -31,11 +31,16 @@ pdf=b'%PDF-1.4\n1 0 obj<</Type/Catalog/Pages 2 0 R>>endobj\n2 0 obj<</Type/Pages
 db=sqlite3.connect(run/'private/demo.sqlite')
 for migration in sorted((root/'backend/database/migrations').glob('*.sqlite.sql')):
  if int(migration.name.split('-')[0])>=50:db.executescript(migration.read_text())
+# Include another approved municipality so the demo does not suggest that an account belongs to Jericó.
+if not db.execute("SELECT id FROM destinations WHERE slug='medellin'").fetchone():
+ catalog=json.loads((root/'content/destinos-dinamicos.json').read_text());place=next(d for d in catalog['destinations'] if d['slug']=='medellin')
+ result=db.execute("INSERT INTO destinations(slug,destination_type,country_code,department,latitude,longitude,publication_status) VALUES('medellin','municipality','CO',?,6.2442,-75.5812,'published')",(place['department'],));place_id=result.lastrowid
+ for locale,text in place['translations'].items():db.execute('INSERT INTO destination_translations(destination_id,locale,display_name,headline,intro) VALUES(?,?,?,?,?)',(place_id,locale,text['name'],text.get('headline',''),text.get('intro','')))
 db.execute("INSERT OR REPLACE INTO payment_instructions(id,enabled,test_mode,holder,bank,account_number,account_type,breb_key,notes,qr_file,updated_at,updated_by) VALUES(1,1,1,'Demostración local — SIN TRANSFERENCIA','Banco de prueba','0000000000','savings','DEMO-NO-PAGAR','Datos sintéticos. No transferir dinero.','',datetime('now'),0)")
 for asset_id,asset_path in db.execute('SELECT id,asset_path FROM media_assets').fetchall():
  if not (run/'public'/asset_path).is_file():raise ValueError('Falta un recurso de la base demo: '+asset_path)
 db.commit();db.close()
 
-info={'run':str(run),'admin':'admin-demo','password':password,'source':str(source),'source_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip(),'production':False}
+info={'run':str(run),'admin':'admin-demo','password':password,'source':str(source),'source_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip(),'production':False,'geocoder_mock':True}
 (run/'entorno.json').write_text(json.dumps(info,indent=2));(run/'entorno.json').chmod(0o600)
 print(run)

@@ -18,6 +18,7 @@ CREATE TABLE business_translations(business_id INTEGER,locale TEXT,display_name 
 CREATE TABLE business_contacts(business_id INTEGER,channel TEXT,contact_value TEXT,is_public INTEGER);
 CREATE TABLE accounts(id INTEGER PRIMARY KEY,account_type TEXT,status TEXT);
 CREATE TABLE business_account_memberships(account_id INTEGER,business_id INTEGER,role TEXT,status TEXT);
+CREATE TABLE business_account_applications(id INTEGER PRIMARY KEY,account_id INTEGER,business_id INTEGER,status TEXT,business_details_json TEXT);
 CREATE TABLE business_subscription_payment_evidence(id INTEGER PRIMARY KEY AUTOINCREMENT,subscription_id INTEGER,account_id INTEGER,storage_name TEXT,original_name TEXT,mime_type TEXT,file_size INTEGER,payment_reference TEXT,status TEXT,admin_note TEXT,customer_message TEXT,reviewed_by TEXT,reviewed_at TEXT,submitted_at TEXT DEFAULT CURRENT_TIMESTAMP);');
 $pdo->exec(file_get_contents(__DIR__.'/../database/migrations/044-subscription-changes.sqlite.sql'));
 $pdo->exec(file_get_contents(__DIR__.'/../database/migrations/040-payment-transaction-details.sqlite.sql'));

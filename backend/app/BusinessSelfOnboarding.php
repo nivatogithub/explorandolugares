@@ -2,6 +2,8 @@
 declare(strict_types=1);
 require_once __DIR__.'/BusinessBulkPublicationService.php';
 require_once __DIR__.'/BusinessOnboardingDetails.php';
+require_once __DIR__.'/BusinessSubscriptionChoice.php';
+require_once __DIR__.'/ExperienceOperatorAddon.php';
 /** Runs inside the caller transaction. Initial responsibility is declared, never certified. */
 final class BusinessSelfOnboarding
 {
@@ -42,7 +44,11 @@ final class BusinessSelfOnboarding
             else $pdo->prepare('INSERT INTO business_account_memberships(account_id,business_id,role,status) VALUES(?,?,?,"active")')->execute([$row['account_id'],$businessId,$row['relationship_code']==='owner'?'owner':'manager']);
         }
         $q=$pdo->prepare('SELECT id FROM business_subscriptions WHERE business_id=? LIMIT 1'.$lock);$q->execute([$businessId]);
-        if(!$q->fetchColumn())$pdo->prepare('INSERT INTO business_subscriptions(business_id,plan_code,billing_frequency,status,quoted_amount,currency) VALUES(?,"free","monthly","pending_publication",0,"COP")')->execute([$businessId]);
+        if(!$q->fetchColumn()){
+            $choice=$details['requested_subscription']??[];$plan=(string)($choice['plan_code']??'free');$period=(string)($choice['billing_frequency']??'monthly');$quote=(new BusinessSubscriptionChoice($pdo))->quote($plan,$period);$addonService=new ExperienceOperatorAddon($pdo);$addon=$addonService->quote($plan,$period,(int)$row['destination_id'],(int)($choice['operator_addon']['experience_id']??0));
+            $amount=$quote['quoted_amount']===null?null:(float)$quote['quoted_amount']+(float)($addon['amount']??0);
+            $pdo->prepare('INSERT INTO business_subscriptions(business_id,plan_code,billing_frequency,status,quoted_amount,currency) VALUES(?,?,?,?,?,?)')->execute([$businessId,$plan,$plan==='free'?'monthly':$period,$plan==='free'?'pending_publication':'pending',$amount,$quote['currency']]);$addonService->attach((int)$pdo->lastInsertId(),$addon);
+        }
         $details['responsibility_association']=['basis'=>'declared_with_business_document','ownership_verified'=>false];unset($details['auto_claim_on_activation']);
         $pdo->prepare('UPDATE businesses SET claim_status="RECLAMADO",information_status="ACTIVO",updated_at=CURRENT_TIMESTAMP WHERE id=?')->execute([$businessId]);
         $pdo->prepare('UPDATE business_account_applications SET status="approved",business_details_json=?,admin_note=?,reviewed_at=CURRENT_TIMESTAMP,updated_at=CURRENT_TIMESTAMP WHERE id=?')->execute([json_encode($details,JSON_THROW_ON_ERROR),'Asociación declarada con respaldo documental. No certifica titularidad. Publicación separada.',$applicationId]);

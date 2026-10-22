@@ -30,6 +30,7 @@
     if(isNew&&!newName.value.trim())newName.value=search.value.trim();
     newNameWrap.hidden = !isNew;
     newName.required = isNew;
+    const stage=document.querySelector('#registration-plan-choice');if(stage){stage.hidden=!mode;stage.disabled=!mode;}
     const continuation=document.querySelector('#registration-continuation');if(continuation){continuation.hidden=!mode;continuation.disabled=!mode;}
     submit.disabled = !mode;
     form.dispatchEvent(new Event('operator-eligibility-change'));
@@ -38,7 +39,7 @@
     });
   }
 
-  function syncFree(){const free=form.querySelector('[name="plan_code"]:checked')?.value==='free';const period=form.querySelector('.subscription-choice-period');if(period){period.hidden=free;for(const control of period.querySelectorAll('select'))control.disabled=free;}const distinct=document.querySelector('#registration-distinct-business');if(distinct){distinct.hidden=!free||type.value!=='new_business';distinct.disabled=!free||type.value!=='new_business';}const holder=form.querySelector('[data-holder-identity]');if(holder){holder.hidden=free;holder.disabled=free;}const details=document.querySelector('#registration-new-details');if(details){details.hidden=free||type.value!=='new_business';details.disabled=free||type.value!=='new_business';}}
+  function syncFree(){const chosen=form.querySelector('[name="plan_code"]:checked')?.value;const free=chosen==='free';const continuation=document.querySelector('#registration-continuation');if(continuation){continuation.hidden=!type.value||!chosen;continuation.disabled=!type.value||!chosen;}submit.disabled=!type.value||!chosen;const period=form.querySelector('.subscription-choice-period');if(period){period.hidden=free||!chosen;for(const control of period.querySelectorAll('select'))control.disabled=free||!chosen;}const distinct=document.querySelector('#registration-distinct-business');if(distinct){distinct.hidden=!free||type.value!=='new_business';distinct.disabled=!free||type.value!=='new_business';}const holder=form.querySelector('[data-holder-identity]');if(holder){holder.hidden=free||!chosen;holder.disabled=free||!chosen;}const details=document.querySelector('#registration-new-details');if(details){details.hidden=free||!chosen||type.value!=='new_business';details.disabled=free||!chosen||type.value!=='new_business';}}
   form.addEventListener('change',event=>{if(event.target.name==='plan_code')syncFree();});
   form.addEventListener('operator-eligibility-change',syncFree);syncFree();
 
