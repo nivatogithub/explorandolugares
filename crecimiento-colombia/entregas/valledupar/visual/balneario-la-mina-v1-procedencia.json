@@ -1,0 +1,52 @@
+{
+  "id": "balneario-la-mina-v1",
+  "destination": "valledupar",
+  "role": "place_card",
+  "status": "draft_pending_human_approval",
+  "generated_date": "2026-10-22",
+  "tool": "built-in image_gen",
+  "master": ".local/valledupar/balneario-la-mina-v1.png",
+  "web": "crecimiento-colombia/entregas/valledupar/visual/balneario-la-mina-v1.webp",
+  "prompt": "crecimiento-colombia/entregas/valledupar/visual/balneario-la-mina-v1-prompt.txt",
+  "input": {
+    "url": "https://commons.wikimedia.org/wiki/File:Río_Badillo.jpg",
+    "path": "crecimiento-colombia/entregas/valledupar/visual/referencias/badillo-emercab-2013.jpg",
+    "author": "Emercab",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "capture_date": "2013-03-14",
+    "sha256": "27505fa02fbb9ea4f15739da81abe032dc261d2a72c18f67ed6c2481a445eeb6",
+    "license_evidence": "crecimiento-colombia/entregas/valledupar/visual/referencias/badillo-commons-metadata.json"
+  },
+  "public_attribution_required": true,
+  "derivative_license": "CC BY-SA 3.0",
+  "public_attribution": "Adaptación ilustrada con IA de Río Badillo.jpg, Emercab, CC BY-SA 3.0. Cambios: tinta/gouache y encuadre.",
+  "attribution_integration_status": "pending_before_promotion",
+  "sha256": {
+    "master": "bb93b50e37ff315e3131dfbe1d7a521c641769aadc229b3ee9ee0b8a9e282530",
+    "web": "b338a3f38cc3a4f431b7e84fcde455bf38ac45ddd0415b786a7340825306efca"
+  },
+  "dimensions": {
+    "master": [
+      1536,
+      1024
+    ],
+    "web": [
+      1200,
+      800
+    ]
+  },
+  "web_bytes": 314386,
+  "review": {
+    "style": "pass visible gouache and ink",
+    "geography": "pass approximate: central long angular white block with natural steps, narrow left dark channel, right foamy channel and concave rock walls retained",
+    "reference_identity": "Commons metadata explicitly La Mina, río Badillo, not uncertain generic Guatapuri image",
+    "current_flow": "not certified, illustration does not promise safe bathing",
+    "human": "pending"
+  },
+  "alt": {
+    "es": "Ilustración de las rocas claras modeladas por el río Badillo en el balneario La Mina.",
+    "en": "Illustration of pale rocks shaped by the Badillo River at La Mina.",
+    "pt-BR": "Ilustração das rochas claras esculpidas pelo rio Badillo no balneário La Mina."
+  }
+}

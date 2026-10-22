@@ -1,0 +1,314 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "valledupar",
+    "destination_type": "city",
+    "country_code": "CO",
+    "department": "Cesar",
+    "subregion": null,
+    "latitude": null,
+    "longitude": null,
+    "translations": {
+      "es": {
+        "display_name": "Valledupar",
+        "eyebrow": "Cesar · Colombia",
+        "headline": "Vallenato a orillas del Guatapurí",
+        "intro": "Conoce la ciudad a través de su música, el centro histórico y los paisajes de los ríos Guatapurí y Badillo.",
+        "meta_description": "Conoce el Guatapurí, la plaza Alfonso López, el Museo del Acordeón y La Mina. Descubre recorridos culturales y parrandas vallenatas en Valledupar."
+      },
+      "en": {
+        "display_name": "Valledupar",
+        "eyebrow": "Cesar · Colombia",
+        "headline": "Vallenato on the banks of the Guatapurí",
+        "intro": "Discover the city through its music, historic centre and the landscapes of the Guatapurí and Badillo rivers.",
+        "meta_description": "Explore the Guatapurí, Alfonso López Square, the Accordion Museum and La Mina. Discover cultural tours and live vallenato gatherings in Valledupar."
+      },
+      "pt-BR": {
+        "display_name": "Valledupar",
+        "eyebrow": "Cesar · Colombia",
+        "headline": "Vallenato às margens do Guatapurí",
+        "intro": "Conheça a cidade por sua música, pelo centro histórico e pelas paisagens dos rios Guatapurí e Badillo.",
+        "meta_description": "Conheça o Guatapurí, a praça Alfonso López, o Museu do Acordeão e La Mina. Descubra passeios culturais e parrandas vallenatas em Valledupar."
+      }
+    },
+    "history": {
+      "es": [
+        "La vida cultural de Valledupar está ligada a los cantos y relatos del vallenato. El acordeón, la caja y la guacharaca acompañan una tradición que se escucha en parrandas, encuentros y celebraciones.",
+        "La plaza Alfonso López, los museos y el Guatapurí permiten recorrer distintas facetas de la ciudad. En 2019 Valledupar ingresó en la Red de Ciudades Creativas de la UNESCO en la categoría de Música."
+      ],
+      "en": [
+        "Valledupar’s cultural life is closely tied to the songs and stories of vallenato. Accordion, caja drum and guacharaca accompany a tradition heard at musical gatherings and celebrations.",
+        "Alfonso López Square, the museums and the Guatapurí reveal different sides of the city. In 2019 Valledupar joined the UNESCO Creative Cities Network in the field of Music."
+      ],
+      "pt-BR": [
+        "A vida cultural de Valledupar está ligada aos cantos e às histórias do vallenato. Acordeão, caja e guacharaca acompanham uma tradição presente em encontros musicais e celebrações.",
+        "A praça Alfonso López, os museus e o Guatapurí mostram diferentes facetas da cidade. Em 2019 Valledupar entrou na Rede de Cidades Criativas da UNESCO na categoria Música."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Conocer el patrimonio del vallenato",
+        "Recorrer el centro histórico",
+        "Descubrir los paisajes del Guatapurí y el Badillo"
+      ],
+      "en": [
+        "Discover vallenato heritage",
+        "Explore the historic centre",
+        "See the landscapes of the Guatapurí and Badillo"
+      ],
+      "pt-BR": [
+        "Conhecer o patrimônio do vallenato",
+        "Percorrer o centro histórico",
+        "Descobrir as paisagens do Guatapurí e do Badillo"
+      ]
+    },
+    "sources": {
+      "es": [],
+      "en": [],
+      "pt-BR": []
+    }
+  },
+  "hero_image": null,
+  "places": [
+    {
+      "slug": "rio-guatapuri-hurtado",
+      "type": "place",
+      "display_order": 1,
+      "publication_status": "draft",
+      "image": null,
+      "latitude": null,
+      "longitude": null,
+      "map_url": "",
+      "translations": {
+        "es": {
+          "name": "Río Guatapurí y balneario Hurtado",
+          "description": "Paisaje de río y grandes rocas junto a la ciudad. Consulta las condiciones de acceso tras las intervenciones del sector Hurtado.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Guatapurí River and Hurtado",
+          "description": "River scenery and large rocks beside the city. Check access conditions following interventions in the Hurtado area.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Rio Guatapurí e balneário Hurtado",
+          "description": "Paisagem de rio e grandes pedras junto à cidade. Consulte as condições de acesso após as intervenções no setor Hurtado.",
+          "external_url": "",
+          "external_label": ""
+        }
+      }
+    },
+    {
+      "slug": "plaza-alfonso-lopez",
+      "type": "place",
+      "display_order": 2,
+      "publication_status": "draft",
+      "image": null,
+      "latitude": null,
+      "longitude": null,
+      "map_url": "",
+      "translations": {
+        "es": {
+          "name": "Plaza Alfonso López y centro histórico",
+          "description": "Árboles, calles tradicionales y edificios históricos en uno de los espacios centrales de la memoria vallenata.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Alfonso López Square and historic centre",
+          "description": "Trees, traditional streets and historic buildings in one of the central settings of vallenato heritage.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Praça Alfonso López e centro histórico",
+          "description": "Árvores, ruas tradicionais e construções históricas em um dos espaços centrais da memória vallenata.",
+          "external_url": "",
+          "external_label": ""
+        }
+      }
+    },
+    {
+      "slug": "museo-acordeon",
+      "type": "place",
+      "display_order": 3,
+      "publication_status": "draft",
+      "image": null,
+      "latitude": 10.47868,
+      "longitude": -73.25966,
+      "map_url": "https://maps.google.com/?q=10.47868,-73.25966",
+      "translations": {
+        "es": {
+          "name": "Museo del Acordeón",
+          "description": "Una colección dedicada al instrumento y a la historia del vallenato, con visitas coordinadas por el museo.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Accordion Museum",
+          "description": "A collection devoted to the instrument and the history of vallenato, with visits arranged through the museum.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Museu do Acordeão",
+          "description": "Uma coleção dedicada ao instrumento e à história do vallenato, com visitas organizadas pelo museu.",
+          "external_url": "",
+          "external_label": ""
+        }
+      }
+    },
+    {
+      "slug": "parque-provincia",
+      "type": "place",
+      "display_order": 4,
+      "publication_status": "draft",
+      "image": null,
+      "latitude": null,
+      "longitude": null,
+      "map_url": "",
+      "translations": {
+        "es": {
+          "name": "Parque de la Provincia",
+          "description": "Un espacio junto al Guatapurí con esculturas dedicadas a figuras de la música vallenata y zonas para pasear.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Parque de la Provincia",
+          "description": "A park beside the Guatapurí with sculptures honouring vallenato musicians and spaces for a stroll.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Parque de la Provincia",
+          "description": "Um parque junto ao Guatapurí com esculturas em homenagem a figuras da música vallenata e áreas para passear.",
+          "external_url": "",
+          "external_label": ""
+        }
+      }
+    },
+    {
+      "slug": "balneario-la-mina",
+      "type": "place",
+      "display_order": 5,
+      "publication_status": "draft",
+      "image": null,
+      "latitude": null,
+      "longitude": null,
+      "map_url": "",
+      "translations": {
+        "es": {
+          "name": "Balneario La Mina (alrededores)",
+          "description": "En el entorno rural de Valledupar, el río Badillo forma un paisaje de grandes rocas y pozas naturales.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "La Mina river pools (surrounding area)",
+          "description": "In Valledupar’s rural surroundings, the Badillo River flows among large rocks and natural pools.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Balneário La Mina (arredores)",
+          "description": "Na área rural de Valledupar, o rio Badillo forma uma paisagem de grandes pedras e piscinas naturais.",
+          "external_url": "",
+          "external_label": ""
+        }
+      }
+    },
+    {
+      "slug": "recorrido-cultural-vallenato",
+      "type": "experience",
+      "display_order": 6,
+      "publication_status": "draft",
+      "image": null,
+      "latitude": null,
+      "longitude": null,
+      "map_url": "",
+      "translations": {
+        "es": {
+          "name": "Recorrido cultural vallenato",
+          "description": "Un recorrido guiado por la ciudad para conocer los relatos, monumentos y escenarios vinculados con el vallenato.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Vallenato cultural tour",
+          "description": "A guided city tour exploring the stories, monuments and settings connected with vallenato.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Passeio cultural vallenato",
+          "description": "Um passeio guiado pela cidade para conhecer histórias, monumentos e locais ligados ao vallenato.",
+          "external_url": "",
+          "external_label": ""
+        }
+      }
+    },
+    {
+      "slug": "parranda-vallenata",
+      "type": "experience",
+      "display_order": 7,
+      "publication_status": "draft",
+      "image": null,
+      "latitude": null,
+      "longitude": null,
+      "map_url": "",
+      "translations": {
+        "es": {
+          "name": "Parranda vallenata",
+          "description": "Un encuentro musical organizado para escuchar de cerca el acordeón, la caja y la guacharaca y conocer esta tradición.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Live vallenato gathering",
+          "description": "An organised musical gathering to hear accordion, caja drum and guacharaca up close and learn about the tradition.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Parranda vallenata",
+          "description": "Um encontro musical organizado para ouvir de perto acordeão, caja e guacharaca e conhecer essa tradição.",
+          "external_url": "",
+          "external_label": ""
+        }
+      }
+    },
+    {
+      "slug": "aves-los-besotes",
+      "type": "experience",
+      "display_order": 8,
+      "publication_status": "draft",
+      "image": null,
+      "latitude": null,
+      "longitude": null,
+      "map_url": "",
+      "translations": {
+        "es": {
+          "name": "Naturaleza en Los Besotes (alrededores)",
+          "description": "Una salida organizada a la reserva para recorrer su bosque y conocer la naturaleza de las estribaciones de la Sierra Nevada.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Nature at Los Besotes (surrounding area)",
+          "description": "An organised visit to the reserve to explore its woodland and the natural setting of the Sierra Nevada foothills.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Natureza em Los Besotes (arredores)",
+          "description": "Uma saída organizada à reserva para percorrer sua mata e conhecer a natureza ao pé da Sierra Nevada.",
+          "external_url": "",
+          "external_label": ""
+        }
+      }
+    }
+  ]
+}
