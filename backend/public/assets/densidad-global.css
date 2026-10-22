@@ -55,3 +55,7 @@ main #lugares>.sectionhead{display:flex!important;flex-direction:row!important;a
 main #lugares>.sectionhead>div{min-width:0}
 main #lugares>.sectionhead>.directory-map{flex:0 0 auto;margin:0!important;padding:0!important;text-align:right}
 main #lugares>.sectionhead>.directory-map a{white-space:nowrap;font-size:13px}
+
+/* Compact directory category filters, without changing their selection behavior. */
+main #catalogo-local .directory-tabs{gap:4px!important;padding-bottom:10px!important;margin-bottom:8px!important}
+main #catalogo-local .directory-tabs button{font-size:12px!important;line-height:18px!important;padding:5px 10px!important;min-height:30px!important;height:auto!important;border-radius:16px!important;white-space:nowrap}
