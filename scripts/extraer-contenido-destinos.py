@@ -33,7 +33,7 @@ JERICO_GENERATED_MEDIA = {
             "pt-BR": "Parque principal e fachada do centro de Jericó, em ilustração editorial baseada em uma fotografia de referência."
         },
     },
-    "assets/destinos/1/cristo-cerro-el-salvador-ilustrado-v2.webp": {
+    "assets/media/67/6764283c1080d47009e72f38414375884bc8c7fd7ae2152d9baeacad69a7a194.webp": {
         "source": ".local/jerico-image-review/generated/cristo-rey-acercamiento-candidato.png",
         "width": 1100, "height": 825,
         "alt": {
@@ -51,7 +51,7 @@ JERICO_GENERATED_MEDIA = {
             "pt-BR": "Santuário de Santa Laura em Jericó, com fachada rosa e palmeiras visíveis na entrada, em ilustração editorial baseada em uma fotografia de referência."
         },
     },
-    "assets/destinos/1/casa-santa-laura-ilustrada-v2.webp": {
+    "assets/media/e0/e052c8de8be4987472650f728616da88917953d2542f54a314fa0bee590aab1b.webp": {
         "source": ".local/jerico-image-review/generated/casa-santa-laura-ilustracion-v2.png",
         "width": 1100, "height": 825,
         "alt": {
@@ -60,7 +60,7 @@ JERICO_GENERATED_MEDIA = {
             "pt-BR": "Fachada da casa natal de Santa Laura em Jericó, reinterpretada em tinta e guache a partir de uma fotografia de referência."
         },
     },
-    "assets/destinos/1/jardin-botanico-los-balsos-ilustrado.webp": {
+    "assets/media/f9/f90e190b25dcb814fb7de3b8dfeb82b5bdd18bd2f83f45cbdbd55348abbd8002.webp": {
         "source": ".local/jerico-image-review/generated/jardin-botanico-los-balsos-ilustracion-v1.png",
         "width": 1100, "height": 825,
         "alt": {
@@ -69,7 +69,7 @@ JERICO_GENERATED_MEDIA = {
             "pt-BR": "Lago, ponte de madeira e vegetação do Jardim Botânico Los Balsos, em uma ilustração editorial baseada em elementos documentados."
         },
     },
-    "assets/destinos/1/cerro-de-las-nubes-sendero-ilustrado-v2.webp": {
+    "assets/media/f5/f586d56f85857ad97949b590a5d6e1b8345d77a6502c5e101811aac4a77f148e.webp": {
         "source": ".local/jerico-image-review/generated/cerro-de-las-nubes-candidata-v2.png",
         "width": 1100, "height": 825,
         "alt": {
@@ -86,7 +86,7 @@ JERICO_GENERATED_MEDIA = {
             "human_approval": "Owner approved the Cerro de las Nubes illustration for the destination card in chat on 2026-10-15."
         },
     },
-    "assets/destinos/1/chorros-quebradona-ilustrado-v2.webp": {
+    "assets/media/ea/ea90c95561d3bfc5510b0e0ae025f9367ae6d27959d3532000fcaaca5894eab7.webp": {
         "source": ".local/jerico-image-review/generated/chorros-quebradona-candidata-v2.png",
         "width": 1100, "height": 825,
         "alt": {
@@ -121,7 +121,7 @@ JERICO_GENERATED_MEDIA = {
             "pt-BR": "Ilustração editorial de um voo duplo de parapente sobre montanhas; não representa um ponto específico de decolagem ou pouso."
         },
     },
-    "assets/destinos/1/experiencia-finca-cafetera-ilustracion.webp": {
+    "assets/media/31/3133950127030215e746cd12377562203cd41e17e2870a4cdafa94065509d66a.webp": {
         "source": ".local/jerico-experience-candidates/experiencia-finca-cafetera.png",
         "width": 1100, "height": 825,
         "alt": {
@@ -152,7 +152,7 @@ JERICO_EXPERIENCES = {
     },
     "experiencia-finca-cafetera": {
         "url": "",
-        "media": "assets/destinos/1/experiencia-finca-cafetera-ilustracion.webp",
+        "media": "assets/media/31/3133950127030215e746cd12377562203cd41e17e2870a4cdafa94065509d66a.webp",
         "translations": {
             "es": ("Experiencia en finca cafetera", "Conoce el cultivo y el proceso del café mediante una visita a una finca de Jericó. El recorrido puede acercarte a los cafetales, las formas de preparación y la degustación. Confirma la finca, los contenidos de la visita y la disponibilidad antes de organizarla.", ""),
             "en": ("Coffee farm experience", "Learn about coffee growing and processing during a visit to a farm in Jericó. A tour may include coffee plants, preparation methods and tasting. Confirm the farm, the activities included and availability before planning your visit.", ""),
@@ -162,7 +162,7 @@ JERICO_EXPERIENCES = {
 }
 JERICO_WATERFALL = {
     "slug": "chorros-de-quebradona",
-    "media": "assets/destinos/1/chorros-quebradona-ilustrado-v2.webp",
+    "media": "assets/media/ea/ea90c95561d3bfc5510b0e0ae025f9367ae6d27959d3532000fcaaca5894eab7.webp",
     "map_url": "https://www.google.com/maps/search/?api=1&query=Chorros+de+Quebradona+Jeric%C3%B3+Antioquia+Colombia",
 }
 
@@ -432,22 +432,22 @@ def main():
         for target, path in [(tr["hero_media"], "assets/destinos/1/parque-principal-ilustrado.webp"),
                              (tr["history_media"], "assets/destinos/1/monumento-santa-laura-ilustrado-v2.webp"),
                              (tr["places"][0]["media"], "assets/destinos/1/parque-principal-ilustrado.webp"),
-                             (tr["places"][1]["media"], "assets/destinos/1/cristo-cerro-el-salvador-ilustrado-v2.webp"),
+                             (tr["places"][1]["media"], "assets/media/67/6764283c1080d47009e72f38414375884bc8c7fd7ae2152d9baeacad69a7a194.webp"),
                              (tr["places"][2]["media"], "assets/destinos/1/santuario-santa-laura-ilustrado-v2.webp"),
-                             (tr["places"][3]["media"], "assets/destinos/1/casa-santa-laura-ilustrada-v2.webp")]:
+                             (tr["places"][3]["media"], "assets/media/e0/e052c8de8be4987472650f728616da88917953d2542f54a314fa0bee590aab1b.webp")]:
             target["path"] = path
             target["width"] = JERICO_GENERATED_MEDIA[path]["width"]
             target["height"] = JERICO_GENERATED_MEDIA[path]["height"]
             target["alt"] = JERICO_GENERATED_MEDIA[path]["alt"][locale]
             target["caption"] = target["alt"]
         garden = tr["places"][4]
-        garden_media_path = "assets/destinos/1/jardin-botanico-los-balsos-ilustrado.webp"
+        garden_media_path = "assets/media/f9/f90e190b25dcb814fb7de3b8dfeb82b5bdd18bd2f83f45cbdbd55348abbd8002.webp"
         garden_info = JERICO_GENERATED_MEDIA[garden_media_path]
         garden["media"] = {"path": garden_media_path, "width": garden_info["width"],
                            "height": garden_info["height"], "alt": garden_info["alt"][locale],
                            "caption": garden_info["alt"][locale]}
         las_nubes = tr["places"][5]
-        nubes_path = "assets/destinos/1/cerro-de-las-nubes-sendero-ilustrado-v2.webp"
+        nubes_path = "assets/media/f5/f586d56f85857ad97949b590a5d6e1b8345d77a6502c5e101811aac4a77f148e.webp"
         nubes_info = JERICO_GENERATED_MEDIA[nubes_path]
         las_nubes["media"] = {"path": nubes_path, "width": nubes_info["width"],
                                "height": nubes_info["height"], "alt": nubes_info["alt"][locale],
