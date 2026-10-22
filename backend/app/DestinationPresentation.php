@@ -98,7 +98,8 @@ final class DestinationPresentation
             }
         }
         $this->remove('//*['.self::cls('destination-experience-copy').']/*['.self::cls('story-number').']');
-        $this->remove('//*[@id="lugares"]//*['.self::cls('directory-description').' or '.self::cls('directory-card-details').']');
+        // Legacy cleanup must not remove the paid content promised by editorial-v2 cards.
+        $this->remove('//*[@id="lugares"]//*[('.self::cls('directory-description').' or '.self::cls('directory-card-details').') and not(ancestor::*[@data-directory-layout="editorial-v2"])]');
         $categoryIcons=json_decode(file_get_contents(__DIR__.'/presentation/directory-icons.json'),true)['categoryIcons'];
         foreach($this->nodes('//*[@id="lugares"]//*['.self::cls('directory-card').']') as $card){
             $label=$this->first('.//*['.self::cls('eyebrow').']',$card);
