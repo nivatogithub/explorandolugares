@@ -60,7 +60,8 @@ $t['business_page']=$locale==='en'?'Visit business page':($locale==='pt-BR'?'Ver
 $t['featured']=$locale==='en'?'Featured':($locale==='pt-BR'?'Em destaque':'Destacado');
 $t['premium']=$locale==='en'?'Premium':($locale==='pt-BR'?'Premium':'Premium');
 $t['contact_business']=$locale==='en'?'Contact business':($locale==='pt-BR'?'Entrar em contato':'Contactar negocio');
-$map='https://www.google.com/maps/search/?api=1&query='.rawurlencode($name.', '.$d['department'].', Colombia');
+require_once dirname($repositoryPath).'/ReviewedMapLinks.php';
+$map=ReviewedMapLinks::catalog()['general'][$slug]??('https://www.google.com/maps/search/?api=1&query='.rawurlencode($name.', '.$d['department'].', Colombia'));
 $localePrefix=$locale==='es'?'':($locale==='pt-BR'?'pt-br/':'en/');
 $interest=u('/'.$localePrefix.'negocios-locales/interes/index.html').'?municipio='.rawurlencode($name).'#contacto';
 $localizedRoot=u('/'.$localePrefix);
