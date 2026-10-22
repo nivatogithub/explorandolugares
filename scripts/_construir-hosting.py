@@ -29,6 +29,8 @@ public=release/'public'
 public.mkdir(parents=True,exist_ok=True)
 from public_inputs import collect
 collect(root,public)
+from retained_legacy import capture, restore
+retained_legacy=capture(root,public)
 subprocess.run([sys.executable,str(root/'scripts/localizar-cobertura.py'),'--public',str(public)],check=True)
 # El hosting conserva CSS durante varios días. Versionar la URL en cada entrega
 # evita que una página HTML nueva use una hoja de estilos anterior desde caché.
@@ -99,3 +101,6 @@ print(f'Entrega de revisión: {release}\nRaíz pública: {public}\nConfigurar pr
 
 # Fail the package if retired identity assets or palette reappear.
 subprocess.run([sys.executable,str(root/'preprod/probar-identidad-vigente.py'),str(public)],check=True)
+
+# Keep already-published bytes unused until the separately approved cleanup.
+restore(public,retained_legacy)

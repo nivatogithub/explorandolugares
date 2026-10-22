@@ -3,9 +3,17 @@ declare(strict_types=1);
 if((PHP_SAPI!=='cli'&&!(defined('EL_PRIVATE_SNAPSHOT')&&EL_PRIVATE_SNAPSHOT))||!isset($options))exit(1);
 try{
  $selected=$options['migrations']??['043-account-lifecycle'];
- if(!is_array($selected)||!$selected||array_diff($selected,['043-account-lifecycle','044-subscription-changes','045-business-service-sections','046-premium-page-aliases'])||count(array_unique($selected))!==count($selected))throw new RuntimeException('Migraciones no permitidas.');
+ if(!is_array($selected)||!$selected||array_diff($selected,['043-account-lifecycle','044-subscription-changes','045-business-service-sections','046-premium-page-aliases','047-lead-business-links','048-individual-lead-replies','049-business-editorial','050-commercial-page-price','051-business-evidence-retirement'])||count(array_unique($selected))!==count($selected))throw new RuntimeException('Migraciones no permitidas.');
  $c=require $options['config'];$db=new PDO($c['dsn'],$c['db_user'],$c['db_password'],[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC]);
  require $options['app_root'].'/DatabaseMaintenance.php';
+ $tables=$db->query('SHOW TABLES')->fetchAll(PDO::FETCH_COLUMN);
+ $fingerprints=static function()use($db,$tables):array{
+  $out=[];foreach(['accounts','leads','businesses','business_translations','business_contacts','business_account_memberships','business_subscriptions','business_subscription_payment_evidence'] as $table){
+   if(!in_array($table,$tables,true))continue;$rows=$db->query('SELECT * FROM `'.$table.'`')->fetchAll();$hashes=[];foreach($rows as $row)$hashes[]=hash('sha256',json_encode($row,JSON_THROW_ON_ERROR));sort($hashes);$out[$table]=['rows'=>count($rows),'sha256'=>hash('sha256',implode('', $hashes))];
+  }return $out;
+ };
+ $protectedBefore=$fingerprints();
+ $tableCounts=[];foreach($tables as $table){if(preg_match('/^[a-zA-Z0-9_]+$/D',$table))$tableCounts[$table]=(int)$db->query('SELECT COUNT(*) FROM `'.$table.'`')->fetchColumn();}
  $before=$db->query('SELECT id,status FROM accounts ORDER BY id')->fetchAll();
  $out=['accounts_before'=>count($before),'status_counts'=>[],'statistics_modified'=>false,'account_rows_updated'=>false,'migration'=>'043-account-lifecycle','selected_migrations'=>$selected];foreach($before as $a)$out['status_counts'][$a['status']]=($out['status_counts'][$a['status']]??0)+1;
  if(array_intersect($selected,['045-business-service-sections','046-premium-page-aliases'])){
@@ -20,5 +28,8 @@ try{
  $maintenance=new DatabaseMaintenance($db,$options['app_root'],$options['public_root']);$inspection=$maintenance->inspect();
  $out['migration_states']=array_intersect_key($inspection['migrations'],array_flip($selected));
  $out['subscription_rows']=(int)$db->query('SELECT COUNT(*) FROM business_subscriptions')->fetchColumn();
+ $out['protected_tables_before']=$protectedBefore;$out['protected_tables_after']=$fingerprints();$out['protected_tables_unchanged']=$out['protected_tables_before']===$out['protected_tables_after'];$out['table_counts']=$tableCounts;
+ $out['storage_parent_writable']=is_writable(dirname($options['config']));
+ if(!$out['protected_tables_unchanged'])throw new RuntimeException('Cambió una tabla protegida durante la operación; revisar concurrencia antes de publicar.');
  echo json_encode($out,JSON_THROW_ON_ERROR);
 }catch(Throwable $e){http_response_code(503);echo json_encode(['error'=>'No se completó la preparación de cuentas; revisar antes de continuar.','code'=>(string)$e->getCode()]);exit(1);}
