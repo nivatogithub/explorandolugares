@@ -1,0 +1,27 @@
+/* Shared private administration components. Page-specific layout may arrange these
+   components, but fields, selectors, grids and actions keep one visual contract. */
+body.portal-admin .admin-page{min-width:0}
+body.portal-admin .admin-page :is(.registration-form,.campaign-form,.cost-form,.claim-review-form,.destination-form-grid,.business-filter-bar,.crm-filter-bar){box-sizing:border-box;width:100%;max-width:none;min-width:0;text-align:left}
+body.portal-admin .admin-page :is(.registration-form,.campaign-form,.cost-form,.claim-review-form){display:grid;grid-template-columns:minmax(0,1fr);gap:16px;align-items:start;justify-items:stretch}
+body.portal-admin .admin-page :is(.destination-form-grid,.business-filter-bar,.crm-filter-bar){display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 20px;align-items:start}
+body.portal-admin .admin-page :is(.registration-form,.campaign-form,.cost-form,.claim-review-form,.destination-form-grid,.business-filter-bar,.crm-filter-bar) label{display:flex;flex-direction:column;gap:7px;min-width:0;margin:0;line-height:1.4}
+body.portal-admin .admin-page :is(input:not([type=hidden]):not([type=checkbox]):not([type=radio]):not([type=file]):not([type=color]):not([type=range]),textarea,select){width:100%;min-width:0;box-sizing:border-box}
+body.portal-admin .admin-page :is(.registration-form,.campaign-form,.cost-form,.claim-review-form)>button{justify-self:start;margin:0}
+body.portal-admin .admin-page label:has(>input:is([type=checkbox],[type=radio])){display:flex;flex-direction:row;align-items:center;gap:9px;line-height:1.4;text-align:left}
+body.portal-admin .admin-page input:is([type=checkbox],[type=radio]){width:18px;height:18px;min-height:0;flex:0 0 18px;padding:0;margin:0;align-self:center}
+body.portal-admin .admin-page .cost-wide{grid-column:1/-1}
+body.portal-admin .admin-page :is(.destination-admin-table,.health-table,.admin-incidents-grid){width:100%;max-width:100%;min-width:0;overflow-x:auto;border:1px solid var(--el-border);border-radius:8px;scrollbar-width:thin}
+body.portal-admin .admin-page :is(.destination-admin-table,.health-table,.admin-incidents-grid) table{width:100%;border-collapse:collapse;font:400 13px/1.45 var(--el-font-ui);text-align:left}
+body.portal-admin .admin-page :is(.destination-admin-table,.health-table,.admin-incidents-grid) :is(td,th){padding:11px 12px;vertical-align:top;border-bottom:1px solid var(--el-border);text-align:left}
+body.portal-admin .admin-page :is(.destination-admin-table,.health-table,.admin-incidents-grid) th{background:var(--el-panel);font-weight:700}
+body.portal-admin .admin-page :is(.destination-admin-table,.health-table,.admin-incidents-grid) tbody tr:nth-child(even){background:var(--el-panel)}
+body.portal-admin .admin-row-detail{min-width:220px;max-width:420px}
+body.portal-admin .admin-row-detail[open]{padding:10px;background:var(--el-field);border:1px solid var(--el-border);border-radius:6px}
+body.portal-admin .admin-row-detail form{margin:12px 0 0}
+body.portal-admin .admin-grid-tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:12px 0;font-size:13px}
+body.portal-admin .admin-grid-tools label{display:flex;align-items:center;gap:8px}
+body.portal-admin .admin-grid-tools input{max-width:300px}
+body.portal-admin .admin-page button.admin-grid-sort{display:inline-flex;justify-content:flex-start;gap:6px;width:100%;min-height:30px;padding:0;background:transparent!important;border:0!important;border-radius:0!important;color:var(--el-text)!important;box-shadow:none!important;font:inherit;font-weight:700;text-align:left}
+body.portal-admin .admin-grid-sort::after{content:'↕';font-weight:400;color:var(--el-muted)}
+body.portal-admin .admin-page .admin-system:has(>.admin-privacy-settings){width:100%;box-sizing:border-box}
+@media(max-width:650px){body.portal-admin .admin-page :is(.destination-form-grid,.business-filter-bar,.crm-filter-bar){grid-template-columns:minmax(0,1fr)}body.portal-admin .admin-grid-tools label{width:100%;flex-wrap:wrap}body.portal-admin .admin-grid-tools input{max-width:none}}

@@ -54,10 +54,12 @@
       "style.css",
       "admin.css",
       "identidad-neutral.css",
-      "admin-theme.css"
+      "admin-theme.css",
+      "admin-ui.css"
     ],
     "js": [
-      "select-flotante.js"
+      "select-flotante.js",
+      "admin-tables.js"
     ]
   }
 }
