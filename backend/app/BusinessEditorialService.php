@@ -44,6 +44,7 @@ final class BusinessEditorialService
    foreach(['latitude'=>90,'longitude'=>180] as $key=>$max){$v=$input[$key]??$p[$key]??null;if($v==='')$v=null;if($v!==null&&(!is_numeric($v)||abs((float)$v)>$max))throw new RuntimeException('Revisa las coordenadas.');$p[$key]=$v===null?null:(float)$v;}
    if(($p['latitude']===null)!==($p['longitude']===null))throw new RuntimeException('Completa ambas coordenadas.');
    $p['location_confirmed']=array_key_exists('location_confirmed',$input)?(!empty($input['location_confirmed'])?1:0):(int)($p['location_confirmed']??0);
+   require_once __DIR__.'/BusinessPhone.php';$input['contacts']=BusinessPhone::capture($input,(array)($input['contacts']??[]));
    foreach(BusinessContactVisibility::channels($code) as $channel){if(!array_key_exists($channel,$input['contacts']??[]))continue;$value=trim((string)$input['contacts'][$channel]);if($value!==''&&!$this->contactValid($channel,$value))throw new RuntimeException('Revisa el canal '.$channel.'.');$p['contacts'][$channel]=['channel'=>$channel,'contact_value'=>$value,'is_public'=>1];}
   }
   if(in_array($code,['page','page_premium'],true)&&isset($input['hours'])){$location=$this->admin()->submittedLocation(array_replace($p,['hours'=>$input['hours']]));$p['opening_hours']=$location['opening_hours'];}

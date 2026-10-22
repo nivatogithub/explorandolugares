@@ -58,3 +58,6 @@ $sparse=BusinessShowcase::clean($p,1,['products'=>[2=>$products['products'][0]]]
 require_once dirname(__DIR__).'/app/BusinessDemo.php';foreach(['free','featured','page','page_premium'] as $tier){$demo=businessDemo($p,$tier);check(count($demo['showcase']['products'])===($tier==='page_premium'?4:0),'examples do not match product entitlements');check($tier!=='free'||$demo['contacts']===[],'free example exposes contact');}
 if(is_dir($storage))rmdir($storage);
 echo "OK: private versions, exact approvals, ownership, optimistic conflicts, rejection reasons, publication preservation, no term changes, tier limits, private templates and idempotent simulated notification.\n";
+
+// El responsable no puede introducir traducciones aunque manipule la petición.
+$latest=$s->latest(1);$before=$s->payload($latest,1);$id=$s->save(1,1,(int)$latest['id'],['translations'=>['es'=>['summary'=>'Solo español'],'en'=>['summary'=>'Injected language']]]);$after=$s->payload($s->version($id),1);check(($after['translations']['en']['summary']??'')===($before['translations']['en']['summary']??''),'owner changed portal translations');

@@ -7,3 +7,5 @@
 
 .account-portal .registration-form label.registration-consent{flex-direction:row;align-items:flex-start;gap:10px}.account-portal .registration-form label.registration-consent input[type=checkbox]{flex:0 0 18px;width:18px;height:18px;margin:2px 0 0}.account-portal .registration-form label.registration-consent span{min-width:0;overflow-wrap:anywhere}
 .account-portal .registration-form label{align-content:start}
+
+.business-phone-types{display:flex;gap:24px;flex-wrap:wrap;margin:12px 0}.business-phone-types label{display:flex!important;flex-direction:row!important;align-items:center;gap:8px}.business-phone-types input{width:18px!important;min-height:18px!important;height:18px!important}.business-phone-control{display:flex;align-items:center;gap:10px}.business-phone-control>span{flex:none}.business-phone-control input{min-width:0;flex:1}.business-phone-fields [hidden]{display:none!important}.business-phone-fields input:disabled{opacity:.75;background:var(--el-panel,#f4f4f0)}

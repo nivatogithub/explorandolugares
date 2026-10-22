@@ -205,3 +205,15 @@ Validación: recorrido visual tarjeta → página → tarjeta para Premium y Com
 ### Canales inertes en demostraciones
 
 Solo `business/demo.php` elimina los destinos de los iconos de contacto y ubicación de sus tarjetas, páginas y pie. Conserva su apariencia y etiquetas, con `aria-disabled` y sin foco de teclado. Los enlaces internos tarjeta → página y los controles del panel siguen disponibles. No se cambian los datos del modelo ni los contactos de fichas reales/prepublicaciones privadas. Verificado por HTTP y mediante clic en el panel: sin navegación, sin vínculos activos en los seis iconos Premium y con apertura de página funcional.
+
+### Correcciones posteriores al primer video completo · 21 octubre 2026
+
+El primer video mezclaba visualmente los roles y repetía la escritura del comerciante. El editor ya restringía su captura a español (también en servidor); ahora identifica explícitamente Responsable/Administrador. El guion conserva los textos heredados del registro, comprueba que existan y no muestra ni vuelve a escribir traducciones al comerciante. El administrador confirma el pago y prepara traducciones/medios; la persona solo revisa y aprueba la versión final. No hay cambios en permisos ni aprobación automática.
+
+Teléfono/WhatsApp comparten un componente de captura en registro y editor. Para los negocios colombianos actuales se selecciona celular o fijo; se construye el formato internacional +57, con celular de diez números o indicativo fijo 60X y siete números. Fuente técnica: CRC, «Desde el 1 de septiembre cambia la forma de hacer llamadas en Colombia». La opción de WhatsApp compartido copia/deshabilita el segundo campo en pantalla y se reconstruye en servidor sin depender del campo deshabilitado. Se admiten WhatsApp distinto y teléfono vacío; no certifica propiedad/existencia del número. Se usan canales existentes phone/phone_fixed/whatsapp y no se necesitan migraciones. Los registros históricos no se reescriben en lote.
+
+Comercial/Premium adoptan el título y contactos de la tarjeta destacada, mantienen el enlace a página y estrella Premium. Se retira la reserva de 365px y el monograma vacío cuando no existe logo. Sin cambios en el plan ni en su precio.
+
+La simulación de aviso editorial guarda ahora el mensaje/enlace real generado en el buzón privado local, con el host/puerto del entorno comprobado. El guion consume ese enlace en lugar de construir otro. Brevo y producción conservan su configuración. El video siguiente recorre verticalmente cada pantalla y la prepublicación/página final, con rótulos y clics rojos exclusivos del navegador de ensayo.
+
+Verificación: regresión HTTP completa, guardado normalizado y aviso editorial al origen/versión correctos; prueba de intento del responsable de modificar inglés (ignorado); pruebas de teléfono móvil/fijo, valores inválidos, WhatsApp compartido; comprobación UI de radio/copia/desbloqueo y tarjeta comercial. Nueva grabación completa pendiente tras estos cambios; el video anterior no valida este candidato.
