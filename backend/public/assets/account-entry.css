@@ -8,4 +8,15 @@
 @media(max-width:760px){.portal-account-inline{margin-right:6px;padding-right:6px}.portal-account-inline .portal-account-strip-inner{gap:5px}.portal-account-inline .account-name{max-width:100px}.language-switch-with-account{flex-wrap:wrap}.portal-account-fallback>.portal-account-strip-inner{padding-inline:14px;gap:8px}}
 .account-login-logo{display:block;width:80px;height:80px;object-fit:contain;margin:0 auto 18px}
 
-.portal-account-strip .account-logout-button{box-sizing:border-box;min-height:44px;padding:8px 14px;border:1px solid var(--el-border);border-radius:8px;background:var(--el-field);color:var(--el-action-hover);white-space:nowrap}.portal-account-strip .account-logout-button:hover{background:var(--el-hover)}
+/* Session actions use the same text treatment as the account link. */
+.portal-account-strip .account-logout-form::before{content:"/";align-self:center;color:var(--el-muted);margin-right:8px}
+.portal-account-strip .account-logout-button{box-sizing:border-box;min-height:44px;padding:4px 6px;border:0;border-radius:0;background:transparent;color:var(--el-action-hover);font:600 14px/1.4 system-ui,sans-serif;white-space:nowrap;box-shadow:none}
+.portal-account-strip .account-logout-button:hover{text-decoration:underline;background:transparent}
+.account-portal .account-profile-logout{display:none}
+@media(max-width:760px){
+ .portal-account-strip .account-logout-form{display:none}
+ .account-portal .account-profile-logout{display:flex;justify-content:flex-end;margin:0 0 18px}
+ .account-portal .account-profile-logout button{display:inline-flex;align-items:center;min-height:44px;padding:4px 6px;border:0;border-radius:0;background:transparent;color:var(--el-action-hover);font:600 14px/1.4 system-ui,sans-serif;box-shadow:none;cursor:pointer}
+ .account-portal .account-profile-logout button:hover{text-decoration:underline}
+ .account-portal .account-profile-logout button:focus-visible{outline:3px solid var(--el-action-hover);outline-offset:2px}
+}
