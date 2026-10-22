@@ -30,6 +30,7 @@ $activeAdminItem = match (true) {
     $adminPath === 'base-datos.php' => 'database',
     $adminPath === 'inversionistas.php' => 'investor-intelligence',
     $adminPath === 'costos.php' => 'costs',
+    $adminPath === 'cancelaciones.php' => 'cancellations',
     $adminPath === 'incidencias.php' => 'incidents',
     default => '',
 };
@@ -64,8 +65,8 @@ $activeAdminItem = match (true) {
   <nav id="admin-system-nav" class="admin-system-shortcuts" aria-label="Diagnóstico del sistema">
         <section><h2>Dirección</h2>
       <a href="inversionistas.php" <?= $activeAdminItem === 'investor-intelligence' ? 'aria-current="page"' : '' ?>>Inteligencia e inversión</a>
-      <a href="costos.php" <?= $activeAdminItem === 'costs' ? 'aria-current="page"' : '' ?>>Costos y cancelaciones</a>
-      <a href="costos.php#cancelaciones">Solicitudes de cancelación</a>
+      <a href="costos.php" <?= $activeAdminItem === 'costs' ? 'aria-current="page"' : '' ?>>Costos</a>
+      <a href="cancelaciones.php" <?= $activeAdminItem === 'cancellations' ? 'aria-current="page"' : '' ?>>Solicitudes de cancelación</a>
     </section>
     <section><h2>Sistema</h2>
       <a href="suscripciones.php#comprobantes">Validación de pagos</a>
