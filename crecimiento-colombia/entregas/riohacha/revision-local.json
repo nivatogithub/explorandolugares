@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-22",
+  "main_integrated": "139537ba",
+  "languages": [
+    "es",
+    "en",
+    "pt-BR"
+  ],
+  "canonical_paths": "/lugares/<slug>/ with /en and /pt-br",
+  "seo": [
+    "unique title and description per language",
+    "canonical",
+    "hreflang and x-default",
+    "OpenGraph and Twitter",
+    "TouristDestination and BreadcrumbList JSON-LD",
+    "draft noindex and robots Disallow"
+  ],
+  "directory": {
+    "documented_candidates": 30,
+    "nonempty_categories": 8,
+    "live_operation_and_representation_verified": false
+  },
+  "maps": "Only documented points; no invented precise access or generic name search",
+  "deployment": false,
+  "review": "Human review of final images and pages remains required"
+}
