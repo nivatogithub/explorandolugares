@@ -96,3 +96,5 @@ Integrar el candidato en preprod conforme a AGENTS, reconciliar main, revisar el
 - Ajuste solicitado de sesión: escritorio conserva nombre, Mi cuenta / Cerrar sesión como texto sin botón destacado. En móvil conserva nombre y Mi cuenta arriba; Cerrar sesión aparece dentro del perfil (Viajero y Mis negocios), con POST/CSRF y área táctil de 44 px. Se reutiliza una acción compartida; ninguna regla de autenticación cambia.
 
 - Cerrar sesión del perfil móvil se alinea en la misma fila de Mi cuenta, arriba a la derecha, sin fila adicional debajo de las pestañas. Cabecera sin ancho máximo ni elipsis para el nombre; permite ajuste de línea en pantallas estrechas.
+
+- Retirado Contacto y ayuda del menú de nombre: había quedado aislado al mover el cierre de sesión. El nombre se muestra como texto sin desplegable; los accesos generales de contacto del portal no se alteran.
