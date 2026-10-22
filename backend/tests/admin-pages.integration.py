@@ -981,6 +981,11 @@ try:
     check(request('/admin/usuarios.php',opener=traveler_user)[0]==403,'La cuenta viajera obtuvo acceso al panel.')
     _,traveler_profile,_=request('/business/dashboard.php?tab=personal',opener=traveler_user)
     traveler_tabs=re.search(r'<nav class="account-tabs".*?</nav>',traveler_profile,re.S).group(0)
+    logout_form=re.search(r'<form class="account-logout-form".*?</form>',traveler_profile,re.S)
+    check(logout_form is not None and 'action="/negocios/salir/"' in logout_form.group(0) and 'method="post"' in logout_form.group(0) and 'name="csrf"' in logout_form.group(0),'Visible logout must use the protected POST action.')
+    name_menu=re.search(r'<details class="account-user-menu".*?</details>',traveler_profile,re.S).group(0)
+    check('Cerrar sesión' not in name_menu,'Logout must be visible outside the collapsed name menu.')
+
     check('>Viajero</a>' in traveler_tabs and 'Mis negocios' not in traveler_tabs and 'Registrar o reclamar un negocio' in traveler_profile,'Traveler without businesses must only see Viajero and an optional registration link.')
     nav_business_id=DB.execute("INSERT INTO businesses(public_id,destination_id,category_code,slug) VALUES('traveler-nav-fixture',?,'hospedaje','traveler-nav-fixture')",(destination_id,)).lastrowid
     DB.execute("INSERT INTO business_account_memberships(account_id,business_id,role,status) VALUES(?,?,'editor','active')",(traveler_row['id'],nav_business_id));DB.commit()

@@ -88,3 +88,5 @@ Integrar el candidato en preprod conforme a AGENTS, reconciliar main, revisar el
 - El compositor admite ajustar asunto y HTML solo para un correo, sin alterar la plantilla. Los cambios generan la vista previa que se confirma y conserva en el historial.
 
 - Perfil del portal, cambio explícito solicitado por el propietario: pestaña Viajero en lugar de Personal. Mis negocios se muestra únicamente con al menos una membresía activa; no depende del tipo de cuenta ni de solicitudes pendientes. Sin negocios se ofrece el enlace opcional Registrar o reclamar un negocio. Se conservan las rutas tab=personal para compatibilidad y las reglas de registro/autorización. Pruebas cubren ausencia, asociación y revocación.
+
+- Cierre de sesión visible junto a Mi cuenta en la franja superior; retirado del menú desplegable del nombre para evitar duplicidad. Se conserva POST con CSRF, sin cambiar el servicio de cierre. Botón con foco y tamaño accesibles y recurso CSS versionado por contenido.
