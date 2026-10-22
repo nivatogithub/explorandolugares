@@ -2,7 +2,7 @@
 declare(strict_types=1);
 // Local review only; no arbitrary path, deployment, DB connection or network proxy.
 $host=explode(':',$_SERVER['HTTP_HOST']??'')[0];
-$packages=['baseline.localhost'=>'baseline','candidate.localhost'=>'delivery-structural'];
+$packages=['baseline.localhost'=>'baseline','candidate.localhost'=>'delivery-review-final'];
 if(!in_array($_SERVER['REMOTE_ADDR']??'',['127.0.0.1','::1'],true)||!isset($packages[$host])){http_response_code(404);exit;}
 $public=dirname(__DIR__).'/.local/unificacion/'.$packages[$host].'/public';
 $_SERVER['DOCUMENT_ROOT']=$public;

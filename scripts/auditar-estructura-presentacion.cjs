@@ -8,10 +8,10 @@ const fs=require('node:fs/promises'),path=require('node:path');
  for(const role of ['anonymous','traveler','administrator'])for(const label of ['baseline','candidate']){
   const context=await browser.newContext({viewport:{width:1440,height:900}});const origin=`http://${label}.localhost:8196`;
   await context.route('**/*',r=>{const u=new URL(r.request().url());return u.origin===origin?r.continue():r.abort()});
-  const page=await context.newPage();const checked=new Map();let errors=[],failures=[],requests=[];page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{requests.push({url:r.url(),status:r.status()});if(r.status()>=400)failures.push({url:r.url(),status:r.status()})});page.on('requestfailed',r=>failures.push({url:r.url(),failure:r.failure()?.errorText}));
+  const page=await context.newPage();const checked=new Map();let errors=[],failures=[],requests=[];page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{requests.push({url:r.url(),status:r.status()});if(r.status()>=400)failures.push({url:r.url(),status:r.status()})});page.on('requestfailed',r=>failures.push({url:r.url(),failure:r.failure()?.errorText,state:new URL(r.url()).origin===origin?'local-request-failed':'external-not-consulted'}));
   if(role!=='anonymous'){
    const fixture=label==='baseline'?'baseline':args['--candidate'];const creds=JSON.parse(await fs.readFile(path.join(root,'.local/unificacion',fixture,'private/review-credentials.json'),'utf8'));
-   await page.goto(origin+'/negocios/acceso/');await page.locator('input[name=email]').first().fill(creds[role==='administrator'?'administrator':'traveler']);await page.locator('input[name=password]').first().fill(creds.password);await page.locator('button[type=submit]').first().click();await page.waitForTimeout(200);
+   await page.goto(origin+'/negocios/acceso/');await page.locator('input[name=email]:visible').first().fill(creds[role==='administrator'?'administrator':'traveler']);await page.locator('input[name=password]:visible').first().fill(creds.password);await page.locator('button[type=submit]:visible').first().click();await page.waitForFunction(async expected=>{try{const r=await fetch('/api/account-session.php',{cache:'no-store'});const s=await r.json();return s.authenticated&&s.administrator===expected}catch{return false}},role==='administrator',{timeout:15000});
   }
   const queue=routes.filter(r=>r.roles.includes(role));
   for(const item of queue){errors=[];failures=[];requests=[];const route=item.route;console.log(label,role,route);let record={label,role,route,family:item.family,source:item.source};
@@ -28,7 +28,7 @@ const fs=require('node:fs/promises'),path=require('node:path');
       const key=u.pathname+u.search;
       if(!checked.has(key)){
         try{let dest=origin+key,status=0,body='',redirects=[];
-          for(let i=0;i<6;i++){const r=await context.request.get(dest,{maxRedirects:0,timeout:10000});status=r.status();if(status>=300&&status<400&&r.headers().location){const next=new URL(r.headers().location,dest);redirects.push(next.pathname+next.search);dest=origin+next.pathname+next.search;continue}if((r.headers()['content-type']||'').includes('text/html'))body=await r.text();break}
+          for(let i=0;i<6;i++){const r=await context.request.get(dest,{maxRedirects:0,timeout:10000});status=r.status();if(status>=300&&status<400&&r.headers().location){const next=new URL(r.headers().location,dest);if(![`${label}.localhost`,'explorandolugares.com','www.explorandolugares.com'].includes(next.hostname)){redirects.push({state:'external-redirect-not-consulted',url:next.href});break}redirects.push(next.pathname+next.search);dest=origin+next.pathname+next.search;if(i===5)redirects.push({state:'redirect-limit-or-loop'});continue}if((r.headers()['content-type']||'').includes('text/html'))body=await r.text();break}
           checked.set(key,{status,redirects,body});
         }catch(error){checked.set(key,{error:String(error.message)})}
       }

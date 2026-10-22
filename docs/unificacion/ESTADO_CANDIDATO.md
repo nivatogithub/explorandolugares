@@ -6,7 +6,7 @@
 
 ## Implementado
 
-- Componentes comunes PHP/JSON de encabezado, pie, menú, idiomas, contactos y recursos. Generación estática y PHP usan las mismas fuentes. Contexto por ruta/idioma; administración conserva su navegación privada y el cierre de sesión legado firmado. No se anuncian equivalentes de idioma inexistentes para administración/cobertura.
+- Componentes públicos comunes PHP/JSON de encabezado, pie, menú, idiomas, contactos y recursos. Generación estática y PHP usan las mismas fuentes. Decisión posterior del propietario: administración usa layout privado independiente, sin header/footer públicos, con retorno al portal y cierre de sesión firmado. Se comparten marca/tokens. No se inventan equivalencias de idioma de cobertura: accesos alternativos llevan la etiqueta visible de inicio del portal.
 - Cuentas ya no extraen encabezado/pie/estilos del HTML de portada. Traducciones de autenticación y contacto se resuelven antes de entregar HTML; menú/registro/modal mantienen sus interacciones.
 - El menú no construye navegación ni carga otros recursos. Se retiraron sus dos fuentes históricas y se conserva un controlador canónico accesible, con Escape/foco y alternativa sin JavaScript.
 - Los correctores de ciudades/Jericó se trasladaron a datos y composición del servidor. No se descargan imágenes anteriores para reemplazarlas después con JS. La autoridad de publicación sigue siendo la salida del repositorio: los JSON históricos no pueden agregar tarjetas ausentes. Se conservan identidad, enlaces de operadores y créditos vigentes.
@@ -47,3 +47,17 @@ En `.local/unificacion/`: inventario de base, `comparison.json` y capturas inter
 - Nombre de cuenta con ajuste de línea, sin recorte silencioso ni ocultar enlaces de cuenta/administración.
 - El router de revisión reproduce también `/negocios/recuperar-clave/`. El404 anterior era del entorno de revisión; no se aceptó como revisión satisfactoria. En la fixture el envío está desactivado: la pantalla lo comunica; no se ha probado correo real ni se pretende.
 - Nuevo paquete privado `delivery-reviewed/`; paquete y capturas originales se mantienen para comparar. La primera reparación de escritorio no resolvía la superposición del nombre móvil: se corrigieron las columnas y el ajuste de línea de la celda de cuenta. Pasan12vistas específicas a1440,390y320px con nombre normal/largo y dropdown sin superposición con el logo, sin desborde de documento ni menú fuera de pantalla. La comprobación adicional de tableta queda registrada aparte.
+
+## Cierre local posterior: enlaces, administración y arrastre
+
+- Commit de correcciones iniciales `bd169a4d`; paquete final posterior `delivery-review-final`. No integrado ni desplegado.
+- Se identificaron24enlaces de ubicación perdidos(8tarjetas de SantaMarta×3idiomas). El editor ya no reconstruye tarjetas: conserva sus acciones/atributos/identidad y actualiza contenido en el nodo existente. Comparación inicial de39páginas:0acciones no multimedia perdidas frente al HTML inicial de la base. Esto NO compara el DOM después de los correctoresJS de la base.
+- Se muestran enlaces de ubicación/referencia ya existentes para experiencias y sitios; URL vacía de una traducción puede reutilizar la URL registrada en español. Sin inventar coordenadas ni enlaces. Pruebas de retención de href/target/rel/texto/aria/ids/data/botones/formularios en3idiomas, y fallback en SQLite aislado.
+- Administración independiente: menú propio, identidad, «Volver al portal», «Mi cuenta» cuando corresponde y cierre de sesión CSRF por los mismos handlers existentes. No carga el runtime público. Prueba local de layout/sesión personal y legado; permisos HTTP/visual nuevos NO medidos.
+- `draggable=false` en HTML de imágenes de lugares/experiencias y portada. No se cambian archivos de imagen ni interacción Leaflet. La base ya desactivaba apertura de archivos/lightbox desde identidad-neutral.js; no se inventa una galería nueva. Drag/scroll/clic reales quedan pendientes de navegador.
+- Cobertura no tenía traducciones equivalentesEN/PT: sus botones anteriores iban a las portadas. Ahora el mapa central distingue página equivalente de inicio del portal, rotuladoEN·Home/PT-BR·Início, sin canonical/hreflang falsos. Pruebas PHP pasan; aspecto visual nuevo pendiente.
+- Guion de inventario estructural preparado para189rutas×3roles×base/candidato, con snapshots inicial/DOM, formularios/acciones/imágenes y comprobación local de enlaces. La solicitud técnica de Chromium fue RECHAZADA; NO arrancó.0páginas DOM medidas por ese guion,0Lighthouse. No se reintentó ni eludió con otra herramienta. Los enlaces externos NO se consultaron.
+- Inventario estático:235HTMLcompilados analizados como texto/DOMPHP, no como navegador ni HTTP. Contiene elementos por página; no acredita ejecución deJS ni permisos.
+- Dos construcciones finales con manifiestos idénticos;397rutas raster conservan bytes exactos. Balance de archivos públicos en `.local/unificacion/estructura/final-balance.json`; no equivale a transferencia de red ni tiempo de carga.
+
+Pendientes antes de integrar: permiso y ejecución del inventarioDOM completo, comprobaciones internasHTTP/roles/activos, revisión visual del nuevo admin y selector, arrastre/clic/scroll reales, Lighthouse comparable y entorno Apache equivalente. Ninguna captura de la pasada anterior aprueba este candidato nuevo.
