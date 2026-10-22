@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 require dirname(__DIR__,2).'/app/bootstrap.php';
+require_once dirname(__DIR__,2).'/app/ContactPhone.php';
 require dirname(__DIR__,2).'/app/BusinessChannelImporter.php';
 require dirname(__DIR__,2).'/app/BusinessCrmRepository.php';
 if(isset($_SESSION['admin'])&&time()-(int)($_SESSION['last_seen']??0)>1800)unset($_SESSION['admin']);
@@ -20,7 +21,7 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
             $accountResult='Destinatario del canal guardado. No se creó ninguna cuenta.';
         }elseif($action==='save_responsible_phone'){
             if(!$accountProfileReady)throw new RuntimeException('Falta habilitar el teléfono de la cuenta en Base de datos.');
-            $accountService->savePhoneForBusiness((int)($_POST['business_id']??0),$_POST['contact_phone']??'');
+            $accountService->savePhoneForBusiness((int)($_POST['business_id']??0),ContactPhone::capture($_POST,'contact_phone'));
             $accountResult='Teléfono del responsable guardado en su cuenta.';
         }elseif(in_array($action,['import_private_contacts','import_business_channels'],true)){
         if(!$ready)throw new RuntimeException($error);

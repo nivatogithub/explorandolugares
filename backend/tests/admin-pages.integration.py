@@ -680,6 +680,8 @@ try:
     def png_chunk(tag,payload):return struct.pack('!I',len(payload))+tag+payload+struct.pack('!I',zlib.crc32(tag+payload)&0xffffffff)
     reference_png=b'\x89PNG\r\n\x1a\n'+png_chunk(b'IHDR',struct.pack('!2I5B',240,160,8,2,0,0,0))+png_chunk(b'IDAT',zlib.compress((b'\x00'+b'\xa0\x80\x60'*240)*160))+png_chunk(b'IEND',b'')
     registration_png = base64.b64decode('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aZ1sAAAAASUVORK5CYII=')
+    status,body,_=request('/business/register.php',dict(registration_fields,plan_code=''),business_flow)
+    check(status==400 and 'Elige la suscripción' in body,'El registro eligió Gratis silenciosamente sin selección explícita')
     missing_holder = dict(registration_fields, holder_kind='')
     status, body, _ = request('/business/register.php', missing_holder, business_flow)
     check(status == 400 and 'Selecciona cómo se identifica' in body, 'El registro debe exigir identificación privada del titular.')

@@ -43,7 +43,8 @@ final class BusinessEditorialService
    foreach(['address_text'=>300,'location_reference'=>500,'location_map_url'=>1000,'opening_hours'=>2000,'price_range'=>200,'menu_url'=>1000,'reservations_url'=>1000] as $key=>$max){$v=trim((string)($input[$key]??$p[$key]??''));if(strlen($v)>$max)throw new RuntimeException('Revisa '.$key.'.');if(str_ends_with($key,'url')&&$v!==''&&(!filter_var($v,FILTER_VALIDATE_URL)||!in_array(parse_url($v,PHP_URL_SCHEME),['http','https'],true)))throw new RuntimeException('Usa un enlace http o https válido.');$p[$key]=$v;}
    foreach(['latitude'=>90,'longitude'=>180] as $key=>$max){$v=$input[$key]??$p[$key]??null;if($v==='')$v=null;if($v!==null&&(!is_numeric($v)||abs((float)$v)>$max))throw new RuntimeException('Revisa las coordenadas.');$p[$key]=$v===null?null:(float)$v;}
    if(($p['latitude']===null)!==($p['longitude']===null))throw new RuntimeException('Completa ambas coordenadas.');
-   $p['location_confirmed']=array_key_exists('location_confirmed',$input)?(!empty($input['location_confirmed'])?1:0):(int)($p['location_confirmed']??0);
+   if(isset($input['location_address_kind']))$p['location_source']=$input['location_address_kind']==='rural'?'map_rural':'map';
+  $p['location_confirmed']=array_key_exists('location_confirmed',$input)?(!empty($input['location_confirmed'])?1:0):(int)($p['location_confirmed']??0);
    require_once __DIR__.'/BusinessPhone.php';$input['contacts']=BusinessPhone::capture($input,(array)($input['contacts']??[]));
    foreach(BusinessContactVisibility::channels($code) as $channel){if(!array_key_exists($channel,$input['contacts']??[]))continue;$value=trim((string)$input['contacts'][$channel]);if($value!==''&&!$this->contactValid($channel,$value))throw new RuntimeException('Revisa el canal '.$channel.'.');$p['contacts'][$channel]=['channel'=>$channel,'contact_value'=>$value,'is_public'=>1];}
   }

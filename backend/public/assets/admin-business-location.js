@@ -23,6 +23,8 @@
   let map = null;
   let marker = null;
   let draft = null;
+  let userSelectionRevision=0;
+  let addressSearchPending=false;
   let lastReverseLookup = 0;
   let mapLayer = null;
   let mapReady = false;
@@ -122,6 +124,7 @@
     const results = await response.json();
     const result = results[0];
     if (!result) return null;
+    if(Number(result.place_rank||result.address_rank||0)<26&&!['house','road','pedestrian','building'].includes(result.addresstype||result.type))return null;
     const point = [Number(result.lat), Number(result.lon)];
     if (!point.every(Number.isFinite)) return null;
     return { point, label: result.display_name || '' };
@@ -146,6 +149,7 @@
     const parts = result.address || {};
     const street = [parts.house_number, parts.road || parts.pedestrian || parts.footway || parts.path].filter(Boolean).join(' ');
     return {
+      hasStreet:!!(parts.road||parts.pedestrian||parts.house_number),
       label: street || parts.neighbourhood || parts.suburb || parts.village || parts.town || parts.city || '',
       localities: [parts.municipality, parts.town, parts.city, parts.village].filter(Boolean),
     };
@@ -168,7 +172,7 @@
     const department = option?.dataset.department || '';
     const countryCode = option?.dataset.country || 'CO';
     const country = countryCode === 'CO' ? 'Colombia' : countryCode;
-    const cacheKey = `el-destination-center:v2:${name.toLocaleLowerCase('es')}:${department}:${countryCode}:${option?.dataset.type || ''}`;
+    const cacheKey = `el-destination-center:v3:${name.toLocaleLowerCase('es')}:${department}:${countryCode}:${option?.dataset.type || ''}`;
     try {
       const cached = JSON.parse(sessionStorage.getItem(cacheKey) || 'null');
       if (cached?.point?.length === 2 && cached.point.every(Number.isFinite)) {
@@ -178,6 +182,12 @@
       }
     } catch { /* Storage can be disabled; geocoding can still continue. */ }
 
+    if(countryCode==='CO'){
+      const response=await fetch('/api/business-municipality.php?destination='+encodeURIComponent(destination.value),{headers:{Accept:'application/json'},signal:AbortSignal.timeout(7000)});
+      if(!response.ok)throw new Error('No se pudo cargar el límite municipal de este lugar.');
+      const territory=await response.json();destinationGeometry=territory.geometry;const positions=(destinationGeometry.type==='Polygon'?[destinationGeometry.coordinates]:destinationGeometry.coordinates).flat(2);const lons=positions.map(p=>p[0]),lats=positions.map(p=>p[1]);
+      const bounds={south:Math.min(...lats),north:Math.max(...lats),west:Math.min(...lons),east:Math.max(...lons)};destinationBounds=bounds;const point=selectedDestination()||(territory.center||[]).map(Number);const resolved={point,bounds,geometry:destinationGeometry};try{sessionStorage.setItem(cacheKey,JSON.stringify(resolved));}catch{}return resolved;
+    }
     const params = new URLSearchParams({
       countrycodes: countryCode.toLowerCase(),
       format: 'jsonv2',
@@ -241,12 +251,12 @@
     if (geometryResult !== null) return geometryResult;
     const withinGeocoderBounds = pointWithinBounds(point);
     if (withinGeocoderBounds === false) return false;
-    if (resolvedAddress) return reverseMatchesSelectedDestination(resolvedAddress) ?? withinGeocoderBounds;
+    if (resolvedAddress) return reverseMatchesSelectedDestination(resolvedAddress);
     try {
       const result = await reverseAddress(point);
-      return reverseMatchesSelectedDestination(result) ?? withinGeocoderBounds;
+      return reverseMatchesSelectedDestination(result);
     } catch {
-      return withinGeocoderBounds;
+      return null;
     }
   };
 
@@ -271,7 +281,7 @@
     }
   };
 
-  const updateDraft = (point) => {
+  const updateDraft = (point, automatic = false) => {
     if (destinationCenterPending) {
       selection.textContent = 'Espera a que el mapa centre el destino seleccionado antes de marcar el negocio.';
       return;
@@ -281,9 +291,11 @@
       return;
     }
     if (pointWithinBounds(point) === false || pointInGeometry(point, destinationGeometry) === false) {
+      if(marker&&draft)marker.setLatLng(draft);draft=null;use.disabled=true;
       selection.textContent = `Ese punto queda fuera del área aproximada de ${selectedDestinationName()}. Vuelve al destino y elige un punto dentro de él.`;
       return;
     }
+    if(!automatic)userSelectionRevision++;
     draft = point;
     const [lat, lon] = point;
     selection.textContent = `Punto seleccionado: ${lat.toFixed(6)}, ${lon.toFixed(6)}.`;
@@ -325,8 +337,8 @@
       mapLayer.on('tileload', () => {
         mapReady = true;
         window.clearTimeout(mapLoadTimer);
-        if (pendingAddressPoint) { const point = pendingAddressPoint; pendingAddressPoint = null; updateDraft(point); }
-        else if (draft) updateDraft(draft);
+        if (pendingAddressPoint) { const point = pendingAddressPoint; pendingAddressPoint = null; updateDraft(point,true); }
+        else if (draft) updateDraft(draft,true);
         else if (!destinationCenterPending) selection.textContent = mapMode === 'pan'
           ? 'Arrastra para mover el mapa. Un clic selecciona el punto del negocio.'
           : 'Modo marcar punto: toca o haz clic en la ubicación exacta del negocio.';
@@ -340,7 +352,7 @@
       if (!mapReady) mapLayer?.redraw();
     }
     draft = existing;
-    if (draft && mapReady) updateDraft(draft);
+    if (draft && mapReady) updateDraft(draft,true);
     else {
       if (marker) { map.removeLayer(marker); marker = null; }
       use.disabled = true;
@@ -352,7 +364,7 @@
     }
     window.setTimeout(() => map.invalidateSize(), 120);
     setMapMode(mapMode);
-    if (!existing || !destinationBounds) centerOnDestination(!existing);
+
     return true;
   };
 
@@ -430,24 +442,28 @@
   panMode?.addEventListener('click', () => setMapMode('pan'));
   markMode?.addEventListener('click', () => setMapMode('mark'));
 
-  open.addEventListener('click', () => {
+  open.addEventListener('click', async () => {
     if (!destination.value) { status.textContent = 'Selecciona primero el destino.'; destination.focus(); return; }
+    dialog.querySelector('[data-rural-address]')?.closest('label')?.remove();dialog.querySelector('[data-use-map-address]')?.remove();
     dialog.showModal();
     ensureMap();
+    if(!parseExisting()||!destinationBounds)await centerOnDestination(!parseExisting());
     if (!parseExisting() && address.value.trim()) {
       selection.textContent = 'Buscando la dirección para centrar el mapa…';
+      const revision=userSelectionRevision,lookupAddress=address.value,lookupDestination=destination.value;addressSearchPending=true;
       geocodeAddress().then(async (result) => {
-        if (!result || !map) return;
+        if (!result || !map||address.value!==lookupAddress||destination.value!==lookupDestination||!dialog.open) return;
         if (pointWithinBounds(result.point) === false || await isInSelectedDestination(result.point) === false) {
           selection.textContent = `La dirección parece estar fuera de ${selectedDestinationName()}. El mapa permanece en el destino; revisa la dirección.`;
           return;
         }
         addressLookupPoint = result.point;
+        if(revision!==userSelectionRevision)return;
         pendingAddressPoint = result.point;
         destinationCenterPending = false;
         setMapCenter(result.point, 18);
-        if (mapReady) { pendingAddressPoint = null; updateDraft(result.point); }
-      }).catch(() => { selection.textContent = 'No se ubicó la dirección automáticamente. Puedes encontrarla en el mapa y marcar el punto.'; });
+        if (mapReady) { pendingAddressPoint = null; updateDraft(result.point,true); }
+      }).catch(() => { selection.textContent = 'No se ubicó la dirección automáticamente. Puedes encontrarla en el mapa y marcar el punto.'; }).finally(()=>{addressSearchPending=false;});
     }
   });
   close.addEventListener('click', () => dialog.close());
@@ -468,6 +484,7 @@
       use.disabled = true;
       destinationBounds = null;
       destinationGeometry = null;
+      addressLookupPoint=null;pendingAddressPoint=null;dialog.querySelector('[data-rural-address]')?.closest('label')?.remove();dialog.querySelector('[data-use-map-address]')?.remove();
       applyDestinationBounds(null);
       centerOnDestination();
     }
@@ -480,6 +497,7 @@
 
   use.addEventListener('click', async () => {
     if (!draft) return;
+    if(addressSearchPending){selection.textContent='Espera a que termine la consulta de la dirección antes de confirmar.';return;}
     const [lat, lon] = draft;
     const selectedPoint = [lat, lon];
     if (addressLookupPoint && distanceMeters(addressLookupPoint, selectedPoint) > 1000) {
@@ -497,9 +515,8 @@
     try {
       resolvedAddress = await reverseAddress(selectedPoint);
     } catch {
-      selection.textContent = 'No se pudo verificar el punto con el mapa. Comprueba tu conexión e inténtalo de nuevo.';
-      use.disabled = false;
-      return;
+      if(pointInGeometry(selectedPoint,destinationGeometry)===true&&/\b(?:km|kil[oó]metros?)\s*\d+(?:[.,]\d+)?\b/iu.test(address.value)&&/\b(?:v[ií]a|vereda|sector|carretera|casco\s+urbano|finca)\b/iu.test(address.value))resolvedAddress={label:'',hasStreet:false,localities:[]};
+      else{selection.textContent='No se pudo consultar la nomenclatura. Reintenta; si es una ubicación rural, escribe el kilómetro y la vía o vereda de acceso.';use.disabled=false;return;}
     }
     const inside = await isInSelectedDestination(selectedPoint, resolvedAddress);
     if (inside !== true) {
@@ -509,6 +526,10 @@
       use.disabled = false;
       return;
     }
+    if(!addressLookupPoint&&resolvedAddress.hasStreet&&address.value.trim()&&address.value.trim()!==resolvedAddress.label){selection.textContent='No encontramos la dirección escrita con precisión. El mapa indica: '+resolvedAddress.label+'. Corrige la dirección o utiliza la sugerida antes de confirmar.';let accept=dialog.querySelector('[data-use-map-address]');if(!accept){accept=document.createElement('button');accept.type='button';accept.className='pill light';accept.dataset.useMapAddress='';accept.textContent='Usar dirección sugerida por el mapa';selection.after(accept);}accept.onclick=()=>{address.value=resolvedAddress.label;addressLookupPoint=selectedPoint;accept.remove();selection.textContent='Dirección actualizada. Confirma con Usar esta ubicación.';};use.disabled=false;return;}
+    const isRural=!resolvedAddress.hasStreet;const ruralPattern=/\b(?:km|kil[oó]metros?)\s*\d+(?:[.,]\d+)?\b/iu;const ruralContext=/\b(?:v[ií]a|vereda|sector|carretera|casco\s+urbano|salida|finca)\b/iu;
+    if(isRural&&(!ruralPattern.test(address.value)||!ruralContext.test(address.value))){selection.textContent='Ubicación rural sin nomenclatura. Escribe una referencia como «Km 3, vía a la vereda…, desde el casco urbano» antes de confirmar.';let field=dialog.querySelector('[data-rural-address]');if(!field){const label=document.createElement('label');label.textContent='Dirección rural';field=document.createElement('input');field.dataset.ruralAddress='';field.maxLength=300;field.value=address.value;field.addEventListener('input',()=>{address.value=field.value;});label.append(field);selection.after(label);}field.focus();use.disabled=false;return;}
+    let kind=document.querySelector('[name="location_address_kind"]');if(!kind){kind=document.createElement('input');kind.type='hidden';kind.name='location_address_kind';address.after(kind);}kind.value=isRural?'rural':'urban';
     latInput.value = lat.toFixed(7);
     lonInput.value = lon.toFixed(7);
     mapUrl.value = `https://www.openstreetmap.org/?mlat=${encodeURIComponent(lat.toFixed(7))}&mlon=${encodeURIComponent(lon.toFixed(7))}#map=18/${encodeURIComponent(lat.toFixed(7))}/${encodeURIComponent(lon.toFixed(7))}`;
@@ -517,8 +538,8 @@
     const saveButton = document.querySelector('#business-form button[type="submit"]');
     if (saveButton) saveButton.disabled = document.getElementById('business-plan')?.value !== 'free';
     dialog.close();
-    if (resolvedAddress.label) {
-        address.value = resolvedAddress.label.slice(0, 300);
+    if (resolvedAddress.label && !isRural) {
+        if(!address.value.trim())address.value = resolvedAddress.label.slice(0, 300);
         confirmed.value = '1';
         addressLookupPoint = selectedPoint;
         status.textContent = `Ubicación lista. Dirección sugerida por el mapa: ${resolvedAddress.label}. El destino y estas coordenadas quedarán guardados juntos.`;

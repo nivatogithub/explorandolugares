@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+require_once __DIR__.'/ContactPhone.php';
 final class BusinessClaimService
 {
     public function __construct(private PDO $pdo) {}
@@ -49,7 +50,7 @@ final class BusinessClaimService
         $businessId=filter_var($input['business_id']??null,FILTER_VALIDATE_INT);
         $name=(string)$account['display_name'];
         $email=(string)$account['email'];
-        $phone=trim((string)($input['phone']??''));
+        $phone=ContactPhone::capture($input);
         $relationship=(string)($input['relationship_code']??'');
         $message=trim((string)($input['message']??''));
         if(!$businessId||$name===''||strlen($name)>180)throw new RuntimeException('Completa tu nombre para continuar.');
