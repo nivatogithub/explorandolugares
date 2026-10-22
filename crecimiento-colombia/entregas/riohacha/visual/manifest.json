@@ -1,0 +1,266 @@
+{
+  "destination": "Riohacha",
+  "date": "2026-10-22",
+  "status": "local_review_only",
+  "assets": [
+    {
+      "asset_id": "riohacha-portada-v1",
+      "destination": "Riohacha",
+      "role": "cover",
+      "status": "draft_pending_human_approval",
+      "generated_with": "image_gen built-in",
+      "generated_on": "2026-10-22",
+      "input_images": [],
+      "method": "original composition from verified geographic invariants; approximate",
+      "master": ".local/riohacha/portada-v1.png",
+      "master_sha256": "bd842ac5710affc3b9d931bfa59275550d08082ec4d4551fa609cf029902ab7b",
+      "web": "riohacha-portada-v1.webp",
+      "web_sha256": "2f8299468cca8256200cdbdd21f96187fdf44f59b5cece25df07f213e16c6658",
+      "width": 1200,
+      "height": 800,
+      "bytes": 231430,
+      "prompt_file": "portada-prompt-v1.txt",
+      "sources": [
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:Muelle_de_Riohacha-20240826.jpg",
+          "autor": "Jdvillalobos",
+          "fecha_captura": "2024-08-24",
+          "licencia": "CC BY-SA 4.0",
+          "uso": "consulta factual; NO entregada al generador"
+        },
+        {
+          "url": "https://riohacha-laguajira.gov.co/MiMunicipio/Paginas/Sitios-de-Interes.aspx",
+          "uso": "identidad turística municipal"
+        },
+        {
+          "url": "https://colombia.travel/es/riohacha",
+          "uso": "muelle y paseo marítimo"
+        },
+        {
+          "url": "https://comisionfilmicacolombia.com/locacion/malecon-riohacha/",
+          "uso": "identidad avenida La Marina y articulación playa–muelle"
+        },
+        {
+          "url": "https://www.openstreetmap.org/#map=16/11.552500/-72.906600",
+          "uso": "mapa observado: costa al N-NO, Calle1 paralela, muelle perpendicular y delta Ranchería al este"
+        }
+      ],
+      "alt_draft_es": "Ilustración del muelle turístico de Riohacha mirando hacia la playa urbana.",
+      "review": {
+        "style": "pass: visibly painted gouache and ink, not photo",
+        "wooden_pier": "pass: wooden deck and black railings",
+        "urban_relationship": "pass: pier offshore, beach then urban fringe",
+        "flat_relief": "pass: no invented mountains or cliffs",
+        "architecture": "approximate: buildings not certified individually; must not be described as exact reconstruction",
+        "lamps": "approximate: rectangular straight black lamps retained, slight simplification",
+        "geography": "OSM relationship checked, new camera approximate",
+        "streetview": "0 points inspected; limitation explicit",
+        "human": "pending"
+      },
+      "limitations": [
+        "Does not document October2026 current conditions or access",
+        "Illustrated city silhouettes approximate, not exact copied skyline",
+        "Not suitable for preproduction until review gates complete"
+      ],
+      "slug": "riohacha"
+    },
+    {
+      "asset_id": "riohacha-marina-muelle-v1",
+      "destination": "Riohacha",
+      "role": "poi-paseo-marina-muelle",
+      "status": "draft_pending_human_approval",
+      "generated_with": "image_gen built-in",
+      "generated_on": "2026-10-22",
+      "input_images": [],
+      "method": "original composition from verified geographic invariants; approximate",
+      "master": ".local/riohacha/marina-muelle-v1.png",
+      "master_sha256": "345f0930c43958a8387af142cfc5572364e6f5bdf5bcc2e818372dc0d562f340",
+      "web": "riohacha-marina-muelle-v1.webp",
+      "web_sha256": "32a18ba55cebc103443b16881f477e2a4699ebc240fd967874acd06383b0ea0c",
+      "width": 1200,
+      "height": 800,
+      "bytes": 257838,
+      "prompt_file": "marina-muelle-prompt-v1.txt",
+      "sources": [
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:Muelle_de_Riohacha-20240826.jpg",
+          "autor": "Jdvillalobos",
+          "fecha_captura": "2024-08-24",
+          "licencia": "CC BY-SA 4.0",
+          "uso": "consulta factual; NO entregada al generador"
+        },
+        {
+          "url": "https://riohacha-laguajira.gov.co/MiMunicipio/Paginas/Sitios-de-Interes.aspx",
+          "uso": "identidad turística municipal"
+        },
+        {
+          "url": "https://colombia.travel/es/riohacha",
+          "uso": "muelle y paseo marítimo"
+        },
+        {
+          "url": "https://comisionfilmicacolombia.com/locacion/malecon-riohacha/",
+          "uso": "identidad avenida La Marina y articulación playa–muelle"
+        },
+        {
+          "url": "https://www.openstreetmap.org/#map=16/11.552500/-72.906600",
+          "uso": "mapa observado: costa al N-NO, Calle1 paralela, muelle perpendicular y delta Ranchería al este"
+        }
+      ],
+      "alt_draft_es": "Ilustración del muelle turístico de Riohacha desde la playa urbana.",
+      "review": {
+        "style": "pass: gouache and ink visible",
+        "geographic_layout": "pass approximate: shore foreground, long narrow pier perpendicular out to flat sea",
+        "wood_black_rails_lamps": "pass on identity features",
+        "details": "support braces simplified, exact number and spacing not certified",
+        "human": "pending"
+      },
+      "limitations": [
+        "Does not document October2026 current conditions or access",
+        "Illustrated city silhouettes approximate, not exact copied skyline",
+        "Not suitable for preproduction until review gates complete"
+      ],
+      "slug": "paseo-marina-muelle"
+    },
+    {
+      "asset_id": "riohacha-flamencos-v1",
+      "destination": "Riohacha",
+      "role": "experience-birdwatching",
+      "status": "draft_pending_human_approval",
+      "tool": "image_gen built-in",
+      "date": "2026-10-22",
+      "input_images": [],
+      "method": "original approximate thematic scene from verified habitat/species, no photograph uploaded",
+      "master": ".local/riohacha/flamencos-v1.png",
+      "web": "riohacha-flamencos-v1.webp",
+      "width": 1200,
+      "height": 800,
+      "sources": [
+        {
+          "url": "https://www.parquesnacionales.gov.co/nuestros-parques/sff-los-flamencos/",
+          "proof": "location municipalityRiohacha, lagoons, mangrove/dryforest, species, birdwatching"
+        },
+        {
+          "url": "https://www.parquesnacionales.gov.co/wp-content/uploads/2023/06/Flamencos-Nianza-del-Carmen-Angulo-Jefe-de-SFF-FLAMENCOS.jpeg",
+          "author": "Nianza del Carmen Angulo (as filename/page)",
+          "capture_date": null,
+          "use": "observed officialimage for habitat/species; not uploaded or adapted"
+        },
+        {
+          "url": "https://colombia.travel/en/riohacha/los-flamencos-fauna-and-flora-sanctuary",
+          "proof": "birdwatching identity"
+        }
+      ],
+      "prompt_file": "flamencos-prompt-v1.txt",
+      "alt_draft_es": "Ilustración de flamencos rosados en una laguna costera de Camarones.",
+      "review": {
+        "style": "pass: visibly gouache/ink",
+        "species": "pass: pinkflamingos longlegs andneck, curvedblacktippedbeak; simplifiednotdiagnostic",
+        "habitat": "pass: shallowgrey-greenlagoon, lowmangrove,flatshore",
+        "activity": "nohumansfeeding/touching, sightingnotguaranteed",
+        "location": "thematicapproximation, notidentifiedexactlagooncamerapoint",
+        "human": "pending"
+      },
+      "master_sha256": "02255fb5b1f929eb23c1b04fb52d30d422d53b96bdccfbb7455baf6d738f2d8b",
+      "web_sha256": "a8e466bf13baa0ae56a16c00ce3b8d03009df670fc67c7721524e0de82f22fa2",
+      "bytes": 289712,
+      "slug": "avistamiento-flamencos-camarones"
+    },
+    {
+      "asset_id": "riohacha-wayuu-v1",
+      "role": "experience-wayuu-cultural-encounter",
+      "master": ".local/riohacha/wayuu-v1.png",
+      "web": "riohacha-wayuu-v1.webp",
+      "width": 1200,
+      "height": 800,
+      "method": "new thematic non-documentary illustration, no named rancheria/people/operator",
+      "input_images": [],
+      "prompt_file": "wayuu-prompt-v1.txt",
+      "source_urls": [
+        "https://colombia.travel/en/riohacha/wayuu-settlements",
+        "https://comfaguajira.co/turismo/",
+        "https://conectaregioncaribe.mintic.gov.co/producto/expedicion-vive-un-dia-como-wayuu/"
+      ],
+      "alt_draft_es": "Ilustración temática de un encuentro de conversación y artesanía con anfitriones wayuu.",
+      "review": {
+        "style": "pass: gouacheandinkvisible",
+        "content": "adults inconversation; bag/hammock/no sacredsymbolclaims",
+        "identity": "thematic, no namedrancheria orportrait",
+        "anatomy": "checked visiblehands/faces; naturallysimplified",
+        "human": "pending"
+      },
+      "destination": "Riohacha",
+      "tool": "image_gen built-in",
+      "date": "2026-10-22",
+      "status": "draft_pending_human_approval",
+      "master_sha256": "4622553cb2b47b3f5191bab6a61a10db694b4e55ea934456bff72eaf6fe572e2",
+      "web_sha256": "97077af0e981779f078a658c20d9523be780740cd09d8e93f48c03c93abf247f",
+      "bytes": 273864,
+      "slug": "encuentro-cultural-wayuu"
+    },
+    {
+      "asset_id": "riohacha-alta-guajira-taroa-v1",
+      "slug": "excursion-alta-guajira",
+      "destination": "Riohacha",
+      "represented_municipality": "Uribia",
+      "role": "excursion-alta-guajira-surroundings",
+      "master": ".local/riohacha/taroa-v1.png",
+      "web": "riohacha-alta-guajira-taroa-v1.webp",
+      "width": 1200,
+      "height": 800,
+      "method": "licensedphoto styletransformation preserving coastalcomposition",
+      "input_images": [
+        ".local/riohacha/referencias/taroa-oscarcostero-20230630.jpg"
+      ],
+      "tool": "image_gen built-in",
+      "date": "2026-10-22",
+      "status": "draft_pending_human_approval",
+      "licence": "CC BY-SA 4.0",
+      "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attribution_required": true,
+      "public_credit": "Ilustración adaptada mediante IA de «Taroa Dunes in Alta Guajira 2023», Oscar Costero, CC BY-SA 4.0. Cambios: transformación a tinta/gouache y retiro de figura humana distante.",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Taroa_Dunes_in_Alta_Guajira_2023.jpg",
+      "author": "Oscar Costero",
+      "source_capture_date": "2023-06-30",
+      "factual_sources": [
+        "https://colombia.travel/es/riohacha/conoce-las-dunas-de-taroa",
+        "https://www.igac.gov.co/sites/default/files/2025-11/BFrag_17La%20Guajira_DIGInd.pdf"
+      ],
+      "prompt_file": "taroa-prompt-v1.txt",
+      "alt_draft_es": "Ilustración de las dunas de Taroa junto al Caribe, en Punta Gallinas, Uribia.",
+      "review": {
+        "style": "pass visiblepaintandink",
+        "composition": "pass duneright, sealeft,shorelinediagonal androckoutcropretained",
+        "relief": "pass preservedcoastforms,noadditionalmountains/palms/buildings",
+        "identity": "photoidentifiedTaroa, excursionoutsideRiohacha municipality",
+        "camera": "same asphoto, cameracoordinatesnotpublished becauseunverified",
+        "access": "notdepicted, noguaranteesofbathing/access",
+        "human": "pending"
+      },
+      "master_sha256": "fa4cc473e0429d3f89f328e60a023d8f670d594261d41bf6fdfa522450f2907f",
+      "web_sha256": "7728c278926a64dbecb8f5ec4081b640e38915c2513d27deba005219c7fbd8bd",
+      "input_sha256": [
+        "6479ad642ac885346d9b5790362d6330b44bbe490bf628cb7eefc0f88944cc47"
+      ],
+      "bytes": 168076
+    }
+  ],
+  "standalone_proposals": [
+    "catedral-cc-v3.procedencia.json"
+  ],
+  "missing_images": [
+    {
+      "slug": "plaza-almirante-padilla",
+      "reason": "No horizontalauthorizedplazareference inspected; cathedralportraitnotsuitableforcard3:2"
+    },
+    {
+      "slug": "valle-de-los-cangrejos",
+      "reason": "No precise visualreference inspected; notgeneratinggenericbeach"
+    }
+  ],
+  "publication_gate": "Allassets pending exacthumanapproval andintegrationreview; no preprod/prod changes",
+  "protected_sources_uploaded": false,
+  "licensed_inputs_uploaded": [
+    "Catedral:MartinduqueaCC-BY-SA3.0",
+    "Taroa:OscarCosteroCC-BY-SA4.0"
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "destination": "riohacha",
+  "checked_at": "2026-10-22",
+  "state": "borrador para revisión; no aprobado ni publicable",
+  "components": [
+    {
+      "slug": "paseo-marina-muelle",
+      "decision": "include_place",
+      "sources": [
+        "rio-sitios"
+      ],
+      "map_status": "pending_exact_point_no_name_search",
+      "public_provider_links": false,
+      "editorial_order": "selección editorial, no ranking de ventas"
+    },
+    {
+      "slug": "plaza-almirante-padilla",
+      "decision": "include_place",
+      "sources": [
+        "rio-sitios"
+      ],
+      "map_status": "pending_exact_point_no_name_search",
+      "public_provider_links": false,
+      "editorial_order": "selección editorial, no ranking de ventas"
+    },
+    {
+      "slug": "valle-cangrejos",
+      "decision": "include_place",
+      "sources": [
+        "rio-sitios"
+      ],
+      "map_status": "pending_exact_point_no_name_search",
+      "public_provider_links": false,
+      "editorial_order": "selección editorial, no ranking de ventas"
+    },
+    {
+      "slug": "avistamiento-flamencos",
+      "decision": "include_experience",
+      "sources": [
+        "pnn-flamencos",
+        "dama-guajira"
+      ],
+      "map_status": "pending_exact_point_no_name_search",
+      "public_provider_links": false,
+      "editorial_order": "selección editorial, no ranking de ventas",
+      "operator_evidence": {
+        "name": "Viajes La Guajira",
+        "offer_url": "https://viajeslaguajira.com/",
+        "offer_title": "Pasadía Santuario de los Flamencos",
+        "checked_at": "2026-10-22",
+        "commercial_relationship": false,
+        "availability_confirmed": false,
+        "evidence_scope": "Oferta documental pública; no disponibilidad, convenio ni recomendación."
+      }
+    },
+    {
+      "slug": "encuentro-cultural-wayuu",
+      "decision": "include_experience",
+      "sources": [
+        "dama-guajira",
+        "viajes-guajira"
+      ],
+      "map_status": "pending_exact_point_no_name_search",
+      "public_provider_links": false,
+      "editorial_order": "selección editorial, no ranking de ventas",
+      "operator_evidence": {
+        "name": "Guajira Mundo",
+        "offer_url": "https://guajiramundo.com/tours/",
+        "offer_title": "Mágica tarde de ranchería",
+        "checked_at": "2026-10-22",
+        "commercial_relationship": false,
+        "availability_confirmed": false,
+        "evidence_scope": "Oferta documental pública; no disponibilidad, convenio ni recomendación."
+      }
+    },
+    {
+      "slug": "excursion-alta-guajira",
+      "decision": "include_experience",
+      "sources": [
+        "punta-tours"
+      ],
+      "map_status": "pending_exact_point_no_name_search",
+      "public_provider_links": false,
+      "editorial_order": "selección editorial, no ranking de ventas",
+      "operator_evidence": {
+        "name": "Punta Gallinas Tours / Expotur Eco",
+        "offer_url": "https://puntagallinastours.com/tours",
+        "offer_title": "Cabo de la Vela / Punta Gallinas, salidas Riohacha",
+        "checked_at": "2026-10-22",
+        "commercial_relationship": false,
+        "availability_confirmed": false,
+        "evidence_scope": "Oferta documental pública; no disponibilidad, convenio ni recomendación."
+      }
+    }
+  ],
+  "excluded": [
+    "Duplicar sitios como experiencias sin actividad organizada distinta",
+    "Enlaces públicos a oferentes o fuentes",
+    "Fechas, precios y disponibilidad no comprobados",
+    "Malecón futuro del Guatapurí como obra concluida"
+  ]
+}

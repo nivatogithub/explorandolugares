@@ -1,0 +1,57 @@
+{
+  "asset_id": "riohacha-marina-muelle-v1",
+  "destination": "Riohacha",
+  "role": "poi-paseo-marina-muelle",
+  "status": "draft_pending_human_approval",
+  "generated_with": "image_gen built-in",
+  "generated_on": "2026-10-22",
+  "input_images": [],
+  "method": "original composition from verified geographic invariants; approximate",
+  "master": ".local/riohacha/marina-muelle-v1.png",
+  "master_sha256": "345f0930c43958a8387af142cfc5572364e6f5bdf5bcc2e818372dc0d562f340",
+  "web": "riohacha-marina-muelle-v1.webp",
+  "web_sha256": "32a18ba55cebc103443b16881f477e2a4699ebc240fd967874acd06383b0ea0c",
+  "width": 1200,
+  "height": 800,
+  "bytes": 257838,
+  "prompt_file": "marina-muelle-prompt-v1.txt",
+  "sources": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/File:Muelle_de_Riohacha-20240826.jpg",
+      "autor": "Jdvillalobos",
+      "fecha_captura": "2024-08-24",
+      "licencia": "CC BY-SA 4.0",
+      "uso": "consulta factual; NO entregada al generador"
+    },
+    {
+      "url": "https://riohacha-laguajira.gov.co/MiMunicipio/Paginas/Sitios-de-Interes.aspx",
+      "uso": "identidad turística municipal"
+    },
+    {
+      "url": "https://colombia.travel/es/riohacha",
+      "uso": "muelle y paseo marítimo"
+    },
+    {
+      "url": "https://comisionfilmicacolombia.com/locacion/malecon-riohacha/",
+      "uso": "identidad avenida La Marina y articulación playa–muelle"
+    },
+    {
+      "url": "https://www.openstreetmap.org/#map=16/11.552500/-72.906600",
+      "uso": "mapa observado: costa al N-NO, Calle1 paralela, muelle perpendicular y delta Ranchería al este"
+    }
+  ],
+  "alt_draft_es": "Ilustración del muelle turístico de Riohacha desde la playa urbana.",
+  "review": {
+    "style": "pass: gouache and ink visible",
+    "geographic_layout": "pass approximate: shore foreground, long narrow pier perpendicular out to flat sea",
+    "wood_black_rails_lamps": "pass on identity features",
+    "details": "support braces simplified, exact number and spacing not certified",
+    "human": "pending"
+  },
+  "limitations": [
+    "Does not document October2026 current conditions or access",
+    "Illustrated city silhouettes approximate, not exact copied skyline",
+    "Not suitable for preproduction until review gates complete"
+  ],
+  "slug": "paseo-marina-muelle"
+}

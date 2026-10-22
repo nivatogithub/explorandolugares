@@ -1,0 +1,63 @@
+{
+  "destino": "Riohacha",
+  "fecha_consulta": "2026-10-22",
+  "estado": "investigacion_para_borrador",
+  "encuadre": "Desde muelle turístico hacia costa urbana; composición nueva oblicua aproximada, no copia de foto.",
+  "invariantes": [
+    "Muelle lineal con tablero de madera y baranda metálica negra",
+    "Farolas negras utilitarias rectas de cabeza horizontal",
+    "Agua verde grisácea y costa urbana de arena",
+    "Relieve costero plano; no montañas, acantilados ni islas en encuadre",
+    "Ciudad detrás de playa con vegetación de palmas y bloques bajos/medianos"
+  ],
+  "fuentes": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/File:Muelle_de_Riohacha-20240826.jpg",
+      "autor": "Jdvillalobos",
+      "fecha_captura": "2024-08-24",
+      "licencia": "CC BY-SA 4.0",
+      "uso": "consulta factual; NO entregada al generador"
+    },
+    {
+      "url": "https://riohacha-laguajira.gov.co/MiMunicipio/Paginas/Sitios-de-Interes.aspx",
+      "uso": "identidad turística municipal"
+    },
+    {
+      "url": "https://colombia.travel/es/riohacha",
+      "uso": "muelle y paseo marítimo"
+    },
+    {
+      "url": "https://comisionfilmicacolombia.com/locacion/malecon-riohacha/",
+      "uso": "identidad avenida La Marina y articulación playa–muelle"
+    },
+    {
+      "url": "https://www.openstreetmap.org/#map=16/11.552500/-72.906600",
+      "uso": "mapa observado: costa al N-NO, Calle1 paralela, muelle perpendicular y delta Ranchería al este"
+    }
+  ],
+  "cartografia": {
+    "inspeccionada": true,
+    "fuente": "OpenStreetMap, observación visual en IAB",
+    "relaciones": "Muelle perpendicular a costa; Calle1 detrás de playa; desembocadura Ranchería al este, no incorporarla junto a muelle para no comprimir espacio."
+  },
+  "street_view": {
+    "puntos_inspeccionados": 0,
+    "limite": "No afirmar captura de Street View; mapa y foto identificada sí revisados."
+  },
+  "cambios_actuales": {
+    "fuente": "https://www.dimar.mil.co/sites/default/files/informes/PDFA-Fijacion-27-de-abril-2026-Aviso-No-001-Revitalizacion-del-muelle-turistico-de-Riohacha-se-desfija-el-16-de-mayo-2026.pdf",
+    "limite": "Solicitud de modificación/concesión para faseII; NO acredita obra finalizada ni aspecto actual."
+  },
+  "prohibidos": [
+    "montañas",
+    "playa virgen",
+    "marina de lujo",
+    "proyecto de marina futura terminado",
+    "arquitectura monumental inventada"
+  ],
+  "pendientes": [
+    "comparar generación con invariantes y referencias",
+    "aprobación humana de hash exacto",
+    "5–8 puntos visuales si existe cobertura accesible"
+  ]
+}

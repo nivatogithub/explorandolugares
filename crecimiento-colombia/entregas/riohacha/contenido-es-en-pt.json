@@ -1,0 +1,254 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "riohacha",
+    "destination_type": "city",
+    "country_code": "CO",
+    "department": "La Guajira",
+    "subregion": null,
+    "latitude": null,
+    "longitude": null,
+    "translations": {
+      "es": {
+        "display_name": "Riohacha",
+        "eyebrow": "La Guajira · Colombia",
+        "headline": "El Caribe y la cultura wayuu",
+        "intro": "Pasea junto al mar, conoce el centro de la capital guajira y descubre sus manglares y encuentros culturales.",
+        "meta_description": "Descubre el muelle de Riohacha, la plaza de Padilla y el Valle de los Cangrejos. Conoce experiencias en Camarones y excursiones por La Guajira."
+      },
+      "en": {
+        "display_name": "Riohacha",
+        "eyebrow": "La Guajira · Colombia",
+        "headline": "The Caribbean and Wayuu culture",
+        "intro": "Walk along the waterfront, explore La Guajira’s capital and discover its mangroves and cultural encounters.",
+        "meta_description": "Discover Riohacha’s pier, Padilla Square and Valle de los Cangrejos. Explore experiences in Camarones and excursions through La Guajira."
+      },
+      "pt-BR": {
+        "display_name": "Riohacha",
+        "eyebrow": "La Guajira · Colombia",
+        "headline": "O Caribe e a cultura wayuu",
+        "intro": "Passeie à beira-mar, conheça o centro da capital de La Guajira e descubra seus manguezais e encontros culturais.",
+        "meta_description": "Descubra o píer de Riohacha, a praça de Padilla e o Valle de los Cangrejos. Conheça experiências em Camarones e excursões por La Guajira."
+      }
+    },
+    "history": {
+      "es": [
+        "Riohacha creció como ciudad portuaria frente al Caribe, cerca de la desembocadura del Ranchería. Su centro conserva la plaza de Padilla y la catedral de Nuestra Señora de los Remedios.",
+        "La presencia wayuu y las comunidades del litoral forman parte de su identidad. El frente costero y los ambientes de Camarones conectan la vida urbana con los paisajes de La Guajira."
+      ],
+      "en": [
+        "Riohacha developed as a port city on the Caribbean, near the mouth of the Ranchería. Its centre retains Padilla Square and Nuestra Señora de los Remedios Cathedral.",
+        "Wayuu culture and coastal communities are part of its identity. The waterfront and the natural surroundings of Camarones link city life with the landscapes of La Guajira."
+      ],
+      "pt-BR": [
+        "Riohacha cresceu como cidade portuária diante do Caribe, perto da foz do Ranchería. Seu centro conserva a praça de Padilla e a Catedral de Nuestra Señora de los Remedios.",
+        "A presença wayuu e as comunidades do litoral fazem parte de sua identidade. A orla e os ambientes de Camarones ligam a vida urbana às paisagens de La Guajira."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Caminar junto al Caribe",
+        "Conocer la cultura wayuu con anfitriones",
+        "Explorar manglares y lagunas"
+      ],
+      "en": [
+        "Walk beside the Caribbean",
+        "Learn about Wayuu culture with local hosts",
+        "Explore mangroves and lagoons"
+      ],
+      "pt-BR": [
+        "Caminhar junto ao Caribe",
+        "Conhecer a cultura wayuu com anfitriões",
+        "Explorar manguezais e lagoas"
+      ]
+    },
+    "sources": {
+      "es": [],
+      "en": [],
+      "pt-BR": []
+    }
+  },
+  "hero_image": null,
+  "places": [
+    {
+      "slug": "paseo-marina-muelle",
+      "type": "place",
+      "display_order": 1,
+      "publication_status": "draft",
+      "image": null,
+      "latitude": null,
+      "longitude": null,
+      "map_url": "",
+      "translations": {
+        "es": {
+          "name": "Paseo de la Marina y muelle",
+          "description": "El frente costero de Riohacha reúne paseo peatonal, playa urbana y el muelle que se adentra en el Caribe.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Paseo de la Marina and pier",
+          "description": "Riohacha’s waterfront brings together a seaside promenade, an urban beach and a pier extending into the Caribbean.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Paseo de la Marina e píer",
+          "description": "A orla de Riohacha reúne um passeio à beira-mar, praia urbana e um píer que avança pelo Caribe.",
+          "external_url": "",
+          "external_label": ""
+        }
+      }
+    },
+    {
+      "slug": "plaza-almirante-padilla",
+      "type": "place",
+      "display_order": 2,
+      "publication_status": "draft",
+      "image": null,
+      "latitude": null,
+      "longitude": null,
+      "map_url": "",
+      "translations": {
+        "es": {
+          "name": "Plaza Almirante Padilla",
+          "description": "La plaza del centro histórico reúne el monumento al almirante y la catedral de Nuestra Señora de los Remedios.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Almirante Padilla Square",
+          "description": "The historic centre’s main square brings together the admiral’s monument and Nuestra Señora de los Remedios Cathedral.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Praça Almirante Padilla",
+          "description": "A praça do centro histórico reúne o monumento ao almirante e a Catedral de Nuestra Señora de los Remedios.",
+          "external_url": "",
+          "external_label": ""
+        }
+      }
+    },
+    {
+      "slug": "valle-cangrejos",
+      "type": "place",
+      "display_order": 3,
+      "publication_status": "draft",
+      "image": null,
+      "latitude": null,
+      "longitude": null,
+      "map_url": "",
+      "translations": {
+        "es": {
+          "name": "Valle de los Cangrejos",
+          "description": "Manglares y costa se encuentran en este sector del delta del Ranchería, al noreste de la ciudad.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Valle de los Cangrejos",
+          "description": "Mangroves meet the coast in this part of the Ranchería delta, northeast of the city.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Valle de los Cangrejos",
+          "description": "Manguezais e litoral se encontram neste setor do delta do Ranchería, a nordeste da cidade.",
+          "external_url": "",
+          "external_label": ""
+        }
+      }
+    },
+    {
+      "slug": "avistamiento-flamencos",
+      "type": "experience",
+      "display_order": 4,
+      "publication_status": "draft",
+      "image": null,
+      "latitude": null,
+      "longitude": null,
+      "map_url": "",
+      "translations": {
+        "es": {
+          "name": "Avistamiento de flamencos en Camarones",
+          "description": "Recorrido acompañado por el entorno lagunar del santuario Los Flamencos para observar aves sin alterar su hábitat.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Flamingo watching in Camarones",
+          "description": "Explore the lagoon surroundings of Los Flamencos sanctuary with a guide, observing birds without disturbing their habitat.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Observação de flamingos em Camarones",
+          "description": "Percorra o ambiente lagunar do santuário Los Flamencos com acompanhamento, observando aves sem perturbar seu habitat.",
+          "external_url": "",
+          "external_label": ""
+        }
+      }
+    },
+    {
+      "slug": "encuentro-cultural-wayuu",
+      "type": "experience",
+      "display_order": 5,
+      "publication_status": "draft",
+      "image": null,
+      "latitude": null,
+      "longitude": null,
+      "map_url": "",
+      "translations": {
+        "es": {
+          "name": "Encuentro cultural wayuu",
+          "description": "Una visita organizada y acordada con anfitriones para acercarse a las artesanías y tradiciones del pueblo wayuu.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Wayuu cultural encounter",
+          "description": "An organised visit arranged with local hosts to learn about Wayuu crafts and traditions.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Encontro cultural wayuu",
+          "description": "Uma visita organizada e combinada com anfitriões para conhecer o artesanato e as tradições do povo wayuu.",
+          "external_url": "",
+          "external_label": ""
+        }
+      }
+    },
+    {
+      "slug": "excursion-alta-guajira",
+      "type": "experience",
+      "display_order": 6,
+      "publication_status": "draft",
+      "image": null,
+      "latitude": null,
+      "longitude": null,
+      "map_url": "",
+      "translations": {
+        "es": {
+          "name": "Excursión a la Alta Guajira (alrededores)",
+          "description": "Desde Riohacha salen recorridos de varios días hacia el Cabo de la Vela y Punta Gallinas, en el municipio de Uribia.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Alta Guajira excursion (surrounding region)",
+          "description": "Multi-day trips depart from Riohacha for Cabo de la Vela and Punta Gallinas, in the municipality of Uribia.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Excursão à Alta Guajira (arredores)",
+          "description": "De Riohacha saem roteiros de vários dias para Cabo de la Vela e Punta Gallinas, no município de Uribia.",
+          "external_url": "",
+          "external_label": ""
+        }
+      }
+    }
+  ]
+}
