@@ -1,0 +1,61 @@
+{
+  "asset_id": "riohacha-portada-v1",
+  "destination": "Riohacha",
+  "role": "cover",
+  "status": "draft_pending_human_approval",
+  "generated_with": "image_gen built-in",
+  "generated_on": "2026-10-22",
+  "input_images": [],
+  "method": "original composition from verified geographic invariants; approximate",
+  "master": ".local/riohacha/portada-v1.png",
+  "master_sha256": "bd842ac5710affc3b9d931bfa59275550d08082ec4d4551fa609cf029902ab7b",
+  "web": "riohacha-portada-v1.webp",
+  "web_sha256": "2f8299468cca8256200cdbdd21f96187fdf44f59b5cece25df07f213e16c6658",
+  "width": 1200,
+  "height": 800,
+  "bytes": 231430,
+  "prompt_file": "portada-prompt-v1.txt",
+  "sources": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/File:Muelle_de_Riohacha-20240826.jpg",
+      "autor": "Jdvillalobos",
+      "fecha_captura": "2024-08-24",
+      "licencia": "CC BY-SA 4.0",
+      "uso": "consulta factual; NO entregada al generador"
+    },
+    {
+      "url": "https://riohacha-laguajira.gov.co/MiMunicipio/Paginas/Sitios-de-Interes.aspx",
+      "uso": "identidad turística municipal"
+    },
+    {
+      "url": "https://colombia.travel/es/riohacha",
+      "uso": "muelle y paseo marítimo"
+    },
+    {
+      "url": "https://comisionfilmicacolombia.com/locacion/malecon-riohacha/",
+      "uso": "identidad avenida La Marina y articulación playa–muelle"
+    },
+    {
+      "url": "https://www.openstreetmap.org/#map=16/11.552500/-72.906600",
+      "uso": "mapa observado: costa al N-NO, Calle1 paralela, muelle perpendicular y delta Ranchería al este"
+    }
+  ],
+  "alt_draft_es": "Ilustración del muelle turístico de Riohacha mirando hacia la playa urbana.",
+  "review": {
+    "style": "pass: visibly painted gouache and ink, not photo",
+    "wooden_pier": "pass: wooden deck and black railings",
+    "urban_relationship": "pass: pier offshore, beach then urban fringe",
+    "flat_relief": "pass: no invented mountains or cliffs",
+    "architecture": "approximate: buildings not certified individually; must not be described as exact reconstruction",
+    "lamps": "approximate: rectangular straight black lamps retained, slight simplification",
+    "geography": "OSM relationship checked, new camera approximate",
+    "streetview": "0 points inspected; limitation explicit",
+    "human": "pending"
+  },
+  "limitations": [
+    "Does not document October2026 current conditions or access",
+    "Illustrated city silhouettes approximate, not exact copied skyline",
+    "Not suitable for preproduction until review gates complete"
+  ],
+  "slug": "riohacha"
+}

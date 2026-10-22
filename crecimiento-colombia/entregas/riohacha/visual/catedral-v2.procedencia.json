@@ -1,0 +1,51 @@
+{
+  "asset_id": "riohacha-catedral-v2",
+  "destination": "Riohacha",
+  "role": "poi-plaza-padilla-catedral",
+  "status": "rejected_identity_superseded_by_cc_v3",
+  "tool": "image_gen built-in",
+  "date": "2026-10-22",
+  "input_images": [
+    "own rejected generated draft only"
+  ],
+  "method": "original approximate composition from architecture facts; correction of own generateddraft",
+  "master": ".local/riohacha/catedral-v2.png",
+  "web": ".local/riohacha/catedral-v2.webp",
+  "width": 1200,
+  "height": 800,
+  "sources": [
+    {
+      "url": "https://www.diocesisriohacha.org/riohacha-parroquias/",
+      "proof": "institution and address"
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/File:Catedral_Nuestra_Se%C3%B1ora_de_Los_Remedios.jpg",
+      "author": "Martinduquea",
+      "date": "2012-09-22",
+      "licence": "CC BY-SA 3.0",
+      "use": "factual observation only; not input to generator"
+    },
+    {
+      "url": "https://www.openstreetmap.org/#map=17/11.55169/-72.90944",
+      "proof": "map context cathedral near plaza; marker coordinate must be checked separately before navigation"
+    }
+  ],
+  "prompt_files": [
+    "catedral-prompt-v1.txt",
+    "catedral-correccion-prompt-v2.txt"
+  ],
+  "alt_draft_es": "Ilustración de la fachada central de la Catedral Nuestra Señora de los Remedios en Riohacha.",
+  "review": {
+    "style": "pass: paintedgouache",
+    "niches_fanlight": "corrected: restored archedniches anddoorfanlight",
+    "pediment": "partial: nowstepped andpeakedbut silhouette/proportion approximate; notexact measuredidentity",
+    "statues": "approximate: details simplified; originalVirginseatedwheregeneratedstanding, needsreview",
+    "scope": "onlycentralfacade; doesnotdepictplaza itself",
+    "human": "pending",
+    "preproduction": "blocked pending factual and human review"
+  },
+  "limitation": "No additionalgenerationrounds; ifstatue/proportionmismatchnotacceptable, usecardwithoutimage or awaitauthorizedreferenceuser.",
+  "master_sha256": "4f0393c39e669ce402698573141931785889bde767f30bb7168def269d3c00eb",
+  "web_sha256": "507b006274783dab3c3e0303400073234aa1363cf2e387020ad7bb81a3c82dcf",
+  "bytes": 170454
+}

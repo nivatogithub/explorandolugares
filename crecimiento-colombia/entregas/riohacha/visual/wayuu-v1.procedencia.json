@@ -1,0 +1,32 @@
+{
+  "asset_id": "riohacha-wayuu-v1",
+  "role": "experience-wayuu-cultural-encounter",
+  "master": ".local/riohacha/wayuu-v1.png",
+  "web": "riohacha-wayuu-v1.webp",
+  "width": 1200,
+  "height": 800,
+  "method": "new thematic non-documentary illustration, no named rancheria/people/operator",
+  "input_images": [],
+  "prompt_file": "wayuu-prompt-v1.txt",
+  "source_urls": [
+    "https://colombia.travel/en/riohacha/wayuu-settlements",
+    "https://comfaguajira.co/turismo/",
+    "https://conectaregioncaribe.mintic.gov.co/producto/expedicion-vive-un-dia-como-wayuu/"
+  ],
+  "alt_draft_es": "Ilustración temática de un encuentro de conversación y artesanía con anfitriones wayuu.",
+  "review": {
+    "style": "pass: gouacheandinkvisible",
+    "content": "adults inconversation; bag/hammock/no sacredsymbolclaims",
+    "identity": "thematic, no namedrancheria orportrait",
+    "anatomy": "checked visiblehands/faces; naturallysimplified",
+    "human": "pending"
+  },
+  "destination": "Riohacha",
+  "tool": "image_gen built-in",
+  "date": "2026-10-22",
+  "status": "draft_pending_human_approval",
+  "master_sha256": "4622553cb2b47b3f5191bab6a61a10db694b4e55ea934456bff72eaf6fe572e2",
+  "web_sha256": "97077af0e981779f078a658c20d9523be780740cd09d8e93f48c03c93abf247f",
+  "bytes": 273864,
+  "slug": "encuentro-cultural-wayuu"
+}
