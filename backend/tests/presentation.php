@@ -8,8 +8,8 @@ foreach(['es','en','pt-BR'] as $locale){
  $header=PortalPresentation::header($context);$footer=PortalPresentation::footer($context);
  check(substr_count($header,'id="menu-principal"')===1,'One main menu');
  check(substr_count($header,'class="menu-toggle"')===1,'One toggle');
- check(str_contains($header,'href="/en/destinos/bogota/"'),'Equivalent place language');
- check(str_contains($header,'href="/pt-br/destinos/bogota/"'),'Equivalent Portuguese place');
+ check(str_contains($header,'href="/en/lugares/bogota/"'),'Equivalent place language');
+ check(str_contains($header,'href="/pt-br/lugares/bogota/"'),'Equivalent Portuguese place');
  check(str_contains($footer,'/contacto.php'),'Help preserved');
  check(!str_contains($footer,'creditos-fotograficos'),'Do not recreate a retired credits route');
  check(!str_contains($header,'<script'),'No header loader');
@@ -42,3 +42,17 @@ check($coverage['language_navigation']['en']['href']==='/en/cobertura/colombia/'
 $coverageHeader=PortalPresentation::header(['path'=>'/cobertura/colombia/','languages'=>$coverageLanguages]);
 check(!str_contains($coverageHeader,'EN · Home')&&!str_contains($coverageHeader,'PT-BR · Início'),'Coverage must not replace page translations with home links');
 check(str_contains($coverageHeader,'hreflang="en"')&&str_contains($coverageHeader,'/pt-br/cobertura/colombia/'),'Coverage language links present');
+
+foreach(['es','en','pt-BR'] as $locale){
+ foreach(['cartagena','bogota','medellin','santa-marta','jerico','jardin','guatape','cauca-viejo','cocorna','arboletes','covenas','zipaquira','santa-fe-de-antioquia'] as $slug){
+  foreach(['/lugares/','/destinos/'] as $route){
+   $header=PortalPresentation::header(['locale'=>$locale,'path'=>$route.$slug.'/']);
+   preg_match('~<nav id="menu-principal"[^>]*>(.*?)</nav>~s',$header,$menu);
+   preg_match_all('~<a[^>]*href="([^"]+)"[^>]*aria-current="page"[^>]*>~',$menu[1],$active);
+   $prefix=$locale==='en'?'/en':($locale==='pt-BR'?'/pt-br':'');
+   check($active[1]===[$prefix.'/lugares/'],'Exactly Places is active for '.$locale.' '.$route.$slug);
+   check(!str_contains($menu[1],'class="pill light"'),'Business entry must not look permanently selected');
+  }
+ }
+}
+echo "OK: thirteen places in three languages select Places only, including legacy route contexts.\n";
