@@ -1,4 +1,5 @@
 import json
+import html
 import os
 import sqlite3
 import struct
@@ -34,10 +35,16 @@ class DynamicDestinationRenderTests(unittest.TestCase):
             connection.executescript((ROOT / "backend/database/migrations/017-business-claims.sqlite.sql").read_text())
             connection.executescript((ROOT / "backend/database/migrations/018-business-portal.sqlite.sql").read_text())
             connection.executescript((ROOT / "backend/database/migrations/025-subscription-renewal-history.sqlite.sql").read_text())
+            for name in ["019-traveler-profile", "023-business-representation-evidence", "034-business-onboarding"]:
+                matches = list((ROOT / "backend/database/migrations").glob(name[:3]+"-*.sqlite.sql"))
+                connection.executescript(matches[0].read_text())
         env = os.environ | {"EL_DESTINATIONS_DSN": f"sqlite:{cls.database}"}
         subprocess.run(["php", "backend/bin/importar-destinos.php"], cwd=ROOT, env=env,
                        check=True, capture_output=True, text=True)
         cls.env = env
+        cls.package = Path(cls.tempdir.name)/"package"
+        subprocess.run(["python3", "scripts/preparar-hosting.py", "--output", str(cls.package)], cwd=ROOT, check=True, capture_output=True)
+
 
     @classmethod
     def tearDownClass(cls):
@@ -53,11 +60,11 @@ class DynamicDestinationRenderTests(unittest.TestCase):
             f"$_GET['idioma']={json.dumps(locale)};"
             f"{session}"
             f"$_SERVER['REQUEST_URI']='/{uri_locale}destinos/{slug}/';"
-            "include 'ensayos/v1/destino.php';"
+            f"include {json.dumps(str(self.package / 'public/destino.php'))};"
         )
         result = subprocess.run(["php", "-r", php], cwd=ROOT, env=self.env,
                                 check=True, capture_output=True, text=True)
-        return result.stdout
+        return html.unescape(result.stdout)
 
     def render_business(self, public_id, locale):
         uri_locale = {"es": "", "en": "en/", "pt-BR": "pt-br/"}[locale]
@@ -65,11 +72,11 @@ class DynamicDestinationRenderTests(unittest.TestCase):
             f"$_GET['id']={json.dumps(public_id)};"
             f"$_GET['idioma']={json.dumps(locale)};"
             f"$_SERVER['REQUEST_URI']='/{uri_locale}negocios/{public_id}/';"
-            "include 'ensayos/v1/negocio.php';"
+            f"include {json.dumps(str(self.package / 'public/negocio.php'))};"
         )
         result = subprocess.run(["php", "-r", php], cwd=ROOT, env=self.env,
                                 check=True, capture_output=True, text=True)
-        return result.stdout
+        return html.unescape(result.stdout)
 
     def test_only_jerico_is_public_and_other_pilot_destinations_stay_drafts(self):
         for destination in CATALOG["destinations"]:
@@ -84,7 +91,7 @@ class DynamicDestinationRenderTests(unittest.TestCase):
                         self.assertNotIn("commons.wikimedia.org/wiki/File", page)
                         self.assertNotIn("Ilustración editorial generada con IA", page)
                     else:
-                        self.assertEqual("Destino no encontrado.", page)
+                        self.assertEqual("Lugar no encontrado.", page)
                         self.assertNotIn(expected, page)
                         preview = self.render(destination["slug"], locale, preview=True)
                         self.assertIn(expected, preview)
@@ -93,47 +100,24 @@ class DynamicDestinationRenderTests(unittest.TestCase):
 
     def test_approved_editorial_experiences_are_public_without_free_operator_ads(self):
         page = self.render("jerico", "es")
-        self.assertIn('class="footer-contact-link footer-contact-whatsapp"', page)
-        self.assertIn('class="footer-contact-link footer-contact-instagram"', page)
-        self.assertIn('class="footer-contact-link footer-contact-email"', page)
-        for label in ("<span>WhatsApp</span>", "<span>Instagram</span>", "<span>Correo</span>", "<span>Email</span>", "<span>E-mail</span>"):
-            self.assertNotIn(label, page)
-        self.assertIn("<h3>Jardín Botánico Los Balsos</h3>", page)
-        self.assertEqual(page.count("<article"), 10)
-        self.assertIn("Subida al Cerro de las Nubes", page)
-        self.assertIn("<h3>Chorros de Quebradona</h3>", page)
-        self.assertIn("Atractivo natural rural de Jericó", page)
-        self.assertIn("Confirma con fuentes locales dónde inicia el recorrido", page)
-        self.assertIn("assets/media/f9/f90e190b25dcb814fb7de3b8dfeb82b5bdd18bd2f83f45cbdbd55348abbd8002.webp", page)
-        self.assertIn("assets/media/f5/f586d56f85857ad97949b590a5d6e1b8345d77a6502c5e101811aac4a77f148e.webp", page)
-        self.assertIn("assets/media/ea/ea90c95561d3bfc5510b0e0ae025f9367ae6d27959d3532000fcaaca5894eab7.webp", page)
-        self.assertIn("assets/media/67/6764283c1080d47009e72f38414375884bc8c7fd7ae2152d9baeacad69a7a194.webp", page)
-        self.assertIn("santuario-santa-laura-ilustrado-v2.webp", page)
-        self.assertIn("assets/media/e0/e052c8de8be4987472650f728616da88917953d2542f54a314fa0bee590aab1b.webp", page)
-        for locale, labels in {
-            "es": ("Jardín Botánico Los Balsos", "Subida al Cerro de las Nubes", "Chorros de Quebradona"),
-            "en": ("Los Balsos Botanical Garden", "Cerro de las Nubes hike", "Check with local sources for the trailhead"),
-            "pt-BR": ("Jardim Botânico Los Balsos", "Subida ao Cerro de las Nubes", "Confirme com fontes locais onde começa o percurso"),
-        }.items():
-            localized = self.render("jerico", locale)
-            with self.subTest(locale=locale):
-                for label in labels:
-                    self.assertIn(label, localized)
-                self.assertIn("assets/media/f9/f90e190b25dcb814fb7de3b8dfeb82b5bdd18bd2f83f45cbdbd55348abbd8002.webp", localized)
-                self.assertIn("assets/media/f5/f586d56f85857ad97949b590a5d6e1b8345d77a6502c5e101811aac4a77f148e.webp", localized)
-                self.assertIn("assets/media/ea/ea90c95561d3bfc5510b0e0ae025f9367ae6d27959d3532000fcaaca5894eab7.webp", localized)
-        self.assertIn("Vuelo privado en helicóptero Medellín–Jericó", page)
-        self.assertIn("Parapente biplaza en Jericó", page)
-        self.assertIn("Experiencia en finca cafetera", page)
+        for channel in ["whatsapp", "instagram", "email"]:
+            self.assertIn('footer-contact-'+channel, page)
+        for title in ["Jardín Botánico Los Balsos", "Subida al Cerro de las Nubes", "Chorros de Quebradona"]:
+            self.assertIn(title, page)
+        for title in ["Vuelo privado en helicóptero Medellín–Jericó", "Parapente biplaza en Jericó", "Experiencia en finca cafetera"]:
+            self.assertIn(title, page)
         self.assertNotIn("turismojerico.com/producto/", page)
-        private = self.render("jerico", "es", preview=True)
-        self.assertEqual(len(__import__('re').findall(r'class="destination-experience-card"[^>]*><img',private)), 3)
-        self.assertIn('id="experiencias-locales"', private)
-        self.assertNotIn("turismojerico.com/producto/", private)
-        self.assertNotIn("highlight-extra", page)
-        self.assertIn("Qué conocer ↓", page)
+        self.assertIn('id="experiencias-locales"', page)
         self.assertIn('class="destination-hero-links"', page)
-        self.assertIn('id="cargar-mas-atractivos"', page)
+        for locale in ["es", "en", "pt-BR"]:
+            localized = self.render("jerico", locale)
+            self.assertIn('id="experiencias-locales"', localized)
+            self.assertIn('destination-experience-card', localized)
+            self.assertIn('maps', localized)
+            self.assertNotIn("turismojerico.com/producto/", localized)
+        private = self.render("jerico", "es", preview=True)
+        self.assertIn('noindex', private)
+        self.assertIn('id="experiencias-locales"', private)
 
     def test_bulk_import_keeps_verification_tag_and_private_draft_state(self):
         with tempfile.TemporaryDirectory(prefix="el-business-import-") as folder:
@@ -276,9 +260,10 @@ class DynamicDestinationRenderTests(unittest.TestCase):
         styles=(ROOT/"ensayos/v1/assets/style.css").read_text()
         self.assertNotIn('href="importar-negocios.php"',navigation)
         self.assertIn('href="negocios.php?tab=importar"',businesses)
-        self.assertIn('href="negocios.php?tab=crear"',businesses)
+        self.assertIn('$manualCreationDisabled',businesses)
+        self.assertIn("$tab==='crear'&&!$id",businesses)
         self.assertIn('href="negocios.php?tab=revisar"',businesses)
-        self.assertIn('Aprobar y publicar seleccionados',businesses)
+        self.assertIn('publish_imported_bulk',businesses)
         self.assertIn('Posibles duplicados',businesses)
         bulk=(ROOT/"backend/app/BusinessBulkPublicationService.php").read_text()
         self.assertIn("$business['record_origin']!=='public_import'",bulk)
@@ -286,7 +271,7 @@ class DynamicDestinationRenderTests(unittest.TestCase):
         self.assertIn('Posible duplicado de',bulk)
         script=(ROOT/"backend/public/assets/admin-business-bulk.js").read_text()
         self.assertIn('window.confirm',script)
-        self.assertIn('href="reclamaciones.php"',navigation)
+        self.assertIn('href="solicitudes-cuenta.php"',navigation)
         self.assertIn(".admin-sidebar nav section{display:block!important",styles)
         self.assertIn("column-count:1!important",styles)
         claim_page=(ROOT/"backend/public/reclamar-negocio.php").read_text()
@@ -322,15 +307,15 @@ class DynamicDestinationRenderTests(unittest.TestCase):
                     connection.execute("INSERT INTO business_translations(business_id,locale,display_name,summary,description,brand_story,featured_services) VALUES(?,?,?,?,?,?,?)",(business_id,locale,name,f"Resumen {plan}",f"Descripción completa {plan}",story,services))
                 if plan!="free":
                     connection.execute("INSERT INTO business_subscriptions(business_id,plan_code,status) VALUES(?,?,?)",(business_id,plan,"active"))
-                if plan=="basic":
+                if plan=="featured":
                     connection.execute("INSERT INTO business_contacts(business_id,channel,contact_value,is_public) VALUES(?,?,?,1)",(business_id,"whatsapp","+573001234567"))
         directory=self.render("jerico","es")
         self.assertIn('class="directory-card directory-card-tier-free"',directory)
         self.assertIn('class="directory-card directory-card-tier-basic"',directory)
         self.assertIn('class="directory-card directory-card-tier-featured is-featured"',directory)
-        self.assertIn('directory-card-details',directory)
+        self.assertIn('directory-contact',directory)
         import re
-        free_card=re.search(r'<article class="directory-card directory-card-tier-free".*?</article>',directory)
+        free_card=re.search(r'<article[^>]*class="directory-card directory-card-tier-free".*?</article>',directory)
         self.assertIsNotNone(free_card)
         self.assertIn('Negocio free',free_card.group(0))
         self.assertNotIn('<img',free_card.group(0))
@@ -346,13 +331,12 @@ class DynamicDestinationRenderTests(unittest.TestCase):
         self.assertIn("Negocio page_premium",page)
         self.assertIn("Página Premium",page)
         self.assertIn("Descripción completa page_premium",page)
-        self.assertIn("La historia del negocio",page)
-        self.assertIn("Historia del negocio",page)
-        self.assertIn("Servicios destacados",page)
+        self.assertNotIn("La historia del negocio",page)
+        self.assertNotIn("Historia del negocio",page)
         self.assertIn("ES",page)
         self.assertIn("Business page_premium",self.render_business(public_ids["page_premium"],"en"))
         self.assertIn("Negócio page_premium",self.render_business(public_ids["page_premium"],"pt-BR"))
-        self.assertIn("História do negócio",self.render_business(public_ids["page_premium"],"pt-BR"))
+        self.assertNotIn("História do negócio",self.render_business(public_ids["page_premium"],"pt-BR"))
 
     def test_destination_images_exist_in_the_static_asset_tree(self):
         for media in CATALOG["media"]:

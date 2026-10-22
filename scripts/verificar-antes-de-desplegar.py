@@ -4,6 +4,7 @@ from pathlib import Path
 import ast
 import subprocess
 import sys
+import tempfile
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -38,8 +39,15 @@ def main():
     run('Diseño del portal', [sys.executable, 'backend/tests/test_portal_design.py'])
     run('Coherencia de oferta comercial y condiciones', [sys.executable, 'backend/tests/test_business_offer_copy.py'])
     run('Paquete incremental de cobertura', [sys.executable, 'backend/tests/test_coverage_package.py'])
-    for path in sorted((ROOT / 'backend/tests').glob('*.php')):
-        run(f'PHP {path.name}', ['php', str(path)])
+    with tempfile.TemporaryDirectory(prefix='el-release-gate-') as folder:
+        package = Path(folder)/'package'
+        run('Paquete completo de pruebas', [sys.executable, 'scripts/preparar-hosting.py', '--output', str(package)])
+        for path in sorted((ROOT / 'backend/tests').glob('*.php')):
+            if path.name.endswith('.mariadb.php'):
+                continue  # Executed below in the disposable MariaDB container.
+            arguments = [str(package)] if path.name == 'presentation-package.php' else []
+            run(f'PHP {path.name}', ['php', str(path), *arguments])
+    run('MariaDB aislada, concurrencia y recuperación', [sys.executable, 'scripts/probar-reparacion-negocios.py', '--mariadb'])
     run('Navegación, enlaces y despliegue', [sys.executable, '-m', 'unittest', 'discover', '-s', 'scripts/tests', '-p', 'test*.py'])
     if shutil_which('node'):
         run('Visibilidad y clics de tarjetas', ['node', 'backend/tests/basic-cards.cjs'])
