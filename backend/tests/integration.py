@@ -8,6 +8,12 @@ shutil.copytree(root/'backend/app',work/'app');shutil.copytree(root/'backend/pub
 for locale,source in [('es','negocios-locales'),('en','en/negocios-locales'),('pt-br','pt-br/negocios-locales')]:
  target=work/'public'/source;target.parent.mkdir(parents=True,exist_ok=True);shutil.copytree(root/'ensayos/v1'/source,target)
 db=sqlite3.connect(work/'private/test.sqlite');db.executescript((root/'backend/database/sqlite.sql').read_text())
+# Detail and linking share the current business schema; never test with an orphan leads-only DB.
+db.executescript((root/'backend/database/destinations.sqlite.sql').read_text())
+db.executescript((root/'backend/database/migrations/006-poi-experience-links.sqlite.sql').read_text())
+for migration in sorted((root/'backend/database/migrations').glob('*.sqlite.sql')):
+ if int(migration.name[:3])>=8:db.executescript(migration.read_text())
+
 password=secrets.token_urlsafe(24)
 hash_value=subprocess.check_output(['php','-r','echo password_hash(trim(stream_get_contents(STDIN)), PASSWORD_DEFAULT);'],input=password.encode()).decode()
 config={'dsn':'sqlite:'+str(work/'private/test.sqlite'),'app_key':secrets.token_hex(32),'admin_user':'local-test','admin_password_hash':hash_value,'local_test':True,'registration_enabled':False,'privacy':{'operator':'Operador ficticio de prueba','contact':'privacidad@example.invalid','retention':'Solo durante esta prueba'}}
@@ -127,11 +133,13 @@ try:
  assert call('/admin/index.php',{'action':'status','csrf':csrf,'id':1,'status':'contactado'})[0]==200
  assert db.execute('SELECT status FROM leads').fetchone()[0]=='contactado'
  status,body,_=call('/admin/index.php',{'action':'status','csrf':csrf,'id':1,'status':'archivado','return_status':'contactado','return_q':'','return_page':99})
- assert status==200 and 'La solicitud salió del filtro' in body and 'Página 1' in body
- assert 'data-native-select name="status"' in body
- assert call('/admin/index.php',{'action':'status','csrf':csrf,'id':999999,'status':'contactado'})[0]==404
+ assert status==200 and 'ya no coincide con el filtro de estado' in body and 'Página 1' in body
+ assert 'name="status"' in body and 'admin-ui.css' in body
+ status,missing,_=call('/admin/index.php',{'action':'status','csrf':csrf,'id':999999,'status':'contactado'})
+ assert status==200 and 'No se guardó: la solicitud ya no existe.' in missing
+ assert db.execute('SELECT status FROM leads WHERE id=1').fetchone()[0]=='archivado'
  status,detail,_=call('/admin/solicitud-detalle.php?tipo=participation&id=1')
- assert status==200 and 'Enviado por la persona' in detail and '<script>alert(1)</script>' not in detail
+ assert status==200 and 'Enviado por la persona' in detail and '<script>alert(1)</script>' not in detail,(status,detail[-700:])
  guest=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
  assert call('/admin/solicitud-detalle.php?tipo=participation&id=1',agent=guest)[0]==403
  assert call('/admin/solicitud-detalle.php?tipo=participation&id=999999')[0]==404
