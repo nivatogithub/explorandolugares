@@ -96,7 +96,7 @@ function destinationPointActions(array $place,array $copy,string $locale):string
         $seen[$url]=true;
         $label=$key==='map_url'?($copy['map']??'Ver ubicación'):($place['external_label']??'');
         if(trim((string)$label)==='')$label=match($locale){'en'=>'More information','pt-BR'=>'Mais informações',default=>'Más información'};
-        $html.='<a class="text-link" href="'.e($url).'" target="_blank" rel="noopener noreferrer">'.e((string)$label).'</a>';
+        $html.='<a class="text-link destination-map-link" href="'.e($url).'" target="_blank" rel="noopener noreferrer">'.e((string)$label).'</a>';
     }
     return $html;
 }
