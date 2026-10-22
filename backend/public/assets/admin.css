@@ -277,3 +277,11 @@
 body.portal-admin select[data-native-select]{appearance:auto!important;-webkit-appearance:auto!important;background-image:none!important;padding-right:28px}.admin-operations-table{overscroll-behavior-x:contain}.admin-operations-table .admin-row-actions{min-width:190px}@media(min-width:1200px){.portal-admin .business-filter-bar{grid-template-columns:repeat(4,minmax(0,1fr))}}
 
 .admin-mobile-nav-toggle{display:none!important}@media(max-width:850px){.admin-mobile-nav-toggle:not([hidden]){display:inline-flex!important;margin:12px 0}.admin-sidebar[data-nav-collapsed="true"]>nav{display:none!important}}
+
+/* Keep the complete location picker, including confirmation, inside the viewport. */
+.business-map-dialog{box-sizing:border-box;max-height:calc(100dvh - 24px);overflow:auto}
+.business-map-dialog[open]{display:flex;flex-direction:column;gap:8px}
+.business-map-dialog #business-location-map{height:min(42dvh,440px);min-height:180px;flex-shrink:0}
+.business-map-dialog #business-map-selection{margin:0;min-height:20px}
+.business-map-dialog .business-map-dialog__actions{flex-shrink:0;margin-top:0}
+.business-map-dialog .business-map-toolbar{margin:0}

@@ -74,6 +74,7 @@ final class BusinessAccountPortalService
         if($selfOnboarding&&($application['responsibility_declared']??'')!=='1')throw new RuntimeException('Confirma que tienes autorización para administrar el negocio.');
         $requiredEvidence=$selfOnboarding?['business_registration']:$this->requiredEvidence($relationship);
         if($selfOnboarding&&($evidenceUploads['business_registration']['error']??UPLOAD_ERR_NO_FILE)!==UPLOAD_ERR_OK)throw new RuntimeException('Adjunta un documento del negocio: RUT, matrícula o certificado equivalente.');
+        if($selfOnboarding&&$type==='new_business'&&in_array((string)($application['business_details']['requested_subscription']['plan_code']??''),['page','page_premium'],true)&&!in_array(UPLOAD_ERR_OK,(array)($referenceUploads['error']??[]),true))throw new RuntimeException('Adjunta al menos una fotografía del negocio para preparar la portada de tu página.');
         $uploadsPresent=false;foreach($requiredEvidence as $evidenceType){if(($evidenceUploads[$evidenceType]['error']??UPLOAD_ERR_NO_FILE)!==UPLOAD_ERR_NO_FILE)$uploadsPresent=true;}
         if($uploadsPresent){
             if(!$evidenceStorage)throw new RuntimeException('No está configurado el almacenamiento privado de documentos.');
@@ -119,7 +120,7 @@ final class BusinessAccountPortalService
             $applicationId=(int)$this->pdo->lastInsertId();
             if($referenceUploads&&$referenceStorage)(new BusinessAdminService($this->pdo,$referenceStorage))->storeApplicationReferences($applicationId,$referenceUploads,$storedFiles);
             $details=$application['business_details']??[];unset($details['claim_review_kind'],$details['auto_claim_on_activation']);
-            if($selfOnboarding){$details['onboarding_policy']=BusinessSelfOnboarding::POLICY;$details['responsibility_declared']=true;$details['document_policy']='business-document-8mb-v1';}
+            if($selfOnboarding){$details['onboarding_policy']=BusinessSelfOnboarding::POLICY;$details['responsibility_declared']=true;$details['document_policy']='business-document-8mb-v1';$details['document_retention_policy']='delete-after-verification-v1';}
             $details['existence_assessment']=$type==='existing_business'?BusinessExistenceVerification::assessExisting($this->pdo,$businessId):$existenceAssessment;
             if($disputedClaim)$details['claim_review_kind']='disputed_existing';
             elseif($type==='existing_business'&&!$existingAccountId)$details['auto_claim_on_activation']=true;

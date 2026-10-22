@@ -34,7 +34,7 @@ DB.execute('PRAGMA foreign_keys=ON')
 DB.executescript((ROOT / 'backend/database/sqlite.sql').read_text())
 DB.executescript((ROOT / 'backend/database/destinations.sqlite.sql').read_text())
 DB.executescript((ROOT / 'backend/database/migrations/006-poi-experience-links.sqlite.sql').read_text())
-for number in range(8, 50):
+for number in range(8, 52):
     matches = list((ROOT / 'backend/database/migrations').glob(f'{number:03d}-*.sqlite.sql'))
     assert len(matches) == 1, f'Migración SQLite faltante o ambigua: {number:03d}'
     DB.executescript(matches[0].read_text())
@@ -77,7 +77,7 @@ DB.execute("INSERT INTO business_translations(business_id,locale,display_name,su
 DB.execute("INSERT INTO leads(request_key,name,business,municipality,category,has_brand,description,interest,consent_version,created_at) VALUES('admin-repair','Persona ficticia','Consulta <script>alert(1)</script>','Jericó','hospedaje','no','Mensaje sintético','negocio','test','2026-10-20 00:00:00')")
 DB.execute("UPDATE leads SET email='consulta@example.invalid',wants_contact=1 WHERE request_key='admin-repair'")
 DB.commit()
-expected_prices = {'basic': {'monthly': 19900, 'annual': 199000}, 'featured': {'monthly': 49900, 'annual': 499000}, 'page': {'monthly': 69900, 'annual': 699000}, 'page_premium': {'monthly': 119900, 'annual': 1199000}}
+expected_prices = {'basic': {'monthly': 19900, 'annual': 199000}, 'featured': {'monthly': 49900, 'annual': 499000}, 'page': {'monthly': 79900, 'annual': 799000}, 'page_premium': {'monthly': 119900, 'annual': 1199000}}
 for plan, frequencies in expected_prices.items():
     for frequency, amount in frequencies.items():
         actual = DB.execute('SELECT amount,currency FROM subscription_plan_prices WHERE plan_code=? AND billing_frequency=?', (plan, frequency)).fetchone()
@@ -795,7 +795,7 @@ try:
     status, _, _ = request('/business/login.php', {'csrf': login_csrf, 'email': 'responsable-http@example.invalid', 'password': 'NuevaClaveHTTP123'}, business_flow)
     check(status == 303, 'La nueva contraseña no permitió iniciar sesión.')
     status, body, _ = request('/business/dashboard.php?tab=business', opener=business_flow)
-    check(status == 200 and 'Elegir suscripción y enviar soporte de pago' in body and 'Cafetería de cuenta HTTP' in body and '69900' in body, 'El panel de negocio no mostró la tarifa acordada para la suscripción Página.')
+    check(status == 200 and 'Elegir suscripción y enviar soporte de pago' in body and 'Cafetería de cuenta HTTP' in body and '79900' in body, 'El panel de negocio no mostró la tarifa acordada para la suscripción Página.')
     account_payment_csrf = __import__('re').search(r'name="csrf" value="([^"]+)"', body).group(1)
     business_id = DB.execute("SELECT b.id FROM businesses b JOIN business_translations t ON t.business_id=b.id WHERE t.locale='es' AND t.display_name='Cafetería de cuenta HTTP'").fetchone()[0]
     check('name="operator_experience_id"' not in body, 'Un negocio sin categoría de experiencias ve el complemento.')
@@ -806,11 +806,11 @@ try:
     addon_destination = DB.execute('SELECT destination_id FROM businesses WHERE id=?',(business_id,)).fetchone()[0]
     addon_experience = DB.execute("INSERT INTO points_of_interest(destination_id,slug,poi_type,publication_status) VALUES(?,'experiencia-operador-prueba','experience','published')",(addon_destination,)).lastrowid
     DB.execute("INSERT INTO point_of_interest_translations(point_of_interest_id,locale,name,description) VALUES(?,'es','Experiencia de prueba operador','Sintética')",(addon_experience,)); DB.commit()
-    status, body, _ = multipart('/business/dashboard.php?tab=business', {'csrf': account_payment_csrf, 'business_id': business_id, 'plan_code': 'page', 'billing_frequency': 'monthly', 'payment_reference': 'TRX-LOCAL-2026', 'operator_experience_id':addon_experience, 'transaction_date':date.today().isoformat(), 'paid_amount':'99800', 'payment_method':'breb', 'source_bank':'BANCO FICTICIO'}, [('payment_proof', 'soporte.png', 'image/png', sample_png)], business_flow)
+    status, body, _ = multipart('/business/dashboard.php?tab=business', {'csrf': account_payment_csrf, 'business_id': business_id, 'plan_code': 'page', 'billing_frequency': 'monthly', 'payment_reference': 'TRX-LOCAL-2026', 'operator_experience_id':addon_experience, 'transaction_date':date.today().isoformat(), 'paid_amount':'109800', 'payment_method':'breb', 'source_bank':'BANCO FICTICIO'}, [('payment_proof', 'soporte.png', 'image/png', sample_png)], business_flow)
     check(status == 303, f'El representante no pudo enviar el comprobante: HTTP {status} {body[:300]}')
     payment_row = DB.execute('SELECT e.checkout_reference,e.transaction_date,e.paid_amount,e.payment_method,e.source_bank,e.id,e.storage_name,e.account_id,e.status,s.status AS subscription_status,s.quoted_amount FROM business_subscription_payment_evidence e JOIN business_subscriptions s ON s.id=e.subscription_id WHERE e.account_id=? ORDER BY e.id DESC LIMIT 1', (account_row['id'],)).fetchone()
-    check(payment_row and payment_row['status']=='pending' and payment_row['subscription_status']=='pending' and payment_row['quoted_amount']==99800 and payment_row['storage_name'] not in [item.name for item in (WORK / 'public').rglob('*') if item.is_file()], 'El comprobante no quedó privado o alteró antes de revisión el pago/la publicación.')
-    check(payment_row['paid_amount']==99800 and payment_row['source_bank']=='BANCO FICTICIO' and re.fullmatch(r'EL-[A-F0-9]{24}',payment_row['checkout_reference']), 'Se perdieron los datos de transacción.')
+    check(payment_row and payment_row['status']=='pending' and payment_row['subscription_status']=='pending' and payment_row['quoted_amount']==109800 and payment_row['storage_name'] not in [item.name for item in (WORK / 'public').rglob('*') if item.is_file()], 'El comprobante no quedó privado o alteró antes de revisión el pago/la publicación.')
+    check(payment_row['paid_amount']==109800 and payment_row['source_bank']=='BANCO FICTICIO' and re.fullmatch(r'EL-[A-F0-9]{24}',payment_row['checkout_reference']), 'Se perdieron los datos de transacción.')
     status, subscriptions_with_evidence, _ = request('/admin/suscripciones.php?q=Cafeter%C3%ADa')
     check('Experiencia de prueba operador' in subscriptions_with_evidence, 'No muestra el complemento al revisar el pago.')
     check('BANCO FICTICIO' in subscriptions_with_evidence and payment_row['checkout_reference'] in subscriptions_with_evidence and 'TRX-LOCAL-2026' in subscriptions_with_evidence, 'El revisor no ve los datos de la transacción.')
@@ -864,7 +864,7 @@ try:
     check(status == 400 and 'pago confirmado pendiente' in blocked_body, 'Permitió reemplazar una solicitud con dinero ya confirmado.')
     # This isolated fixture now represents an elapsed, previously published term.
     DB.execute("UPDATE business_subscriptions SET status='expired',starts_at=datetime('now','-31 days'),ends_at=datetime('now','-1 day'),published_at=datetime('now','-31 days') WHERE id=(SELECT subscription_id FROM business_subscription_payment_evidence WHERE id=?)",(payment_row['id'],)); DB.commit()
-    status, _, _ = multipart('/business/dashboard.php?tab=business', {'csrf': account_payment_csrf, 'business_id': business_id, 'plan_code': 'page', 'billing_frequency': 'monthly', 'payment_reference': 'TRX-RECHAZO-LOCAL', 'transaction_date':date.today().isoformat(), 'paid_amount':'69901', 'payment_method':'qr', 'source_bank':'BANCO FICTICIO'}, [('payment_proof', 'soporte-segundo.png', 'image/png', sample_png)], business_flow)
+    status, _, _ = multipart('/business/dashboard.php?tab=business', {'csrf': account_payment_csrf, 'business_id': business_id, 'plan_code': 'page', 'billing_frequency': 'monthly', 'payment_reference': 'TRX-RECHAZO-LOCAL', 'transaction_date':date.today().isoformat(), 'paid_amount':'79901', 'payment_method':'qr', 'source_bank':'BANCO FICTICIO'}, [('payment_proof', 'soporte-segundo.png', 'image/png', sample_png)], business_flow)
     check(status == 303, 'La cuenta no pudo enviar un soporte de reemplazo para probar el flujo de rechazo.')
     check('Difiere del importe esperado' in request('/admin/suscripciones.php',opener=ADMIN)[1], 'No advirtió la diferencia entre importe declarado y cotizado.')
     rejected_evidence = DB.execute('SELECT id FROM business_subscription_payment_evidence WHERE account_id=? ORDER BY id DESC LIMIT 1', (account_row['id'],)).fetchone()[0]
@@ -1001,6 +1001,15 @@ try:
     check(request(admin_editorial,editorial_fields)[0]==200,'No guardó reemplazos y traducciones finales')
     prepared=DB.execute('SELECT * FROM business_editorial_versions WHERE business_id=? ORDER BY id DESC',(premium_business,)).fetchone()
     quality={'csrf':editorial_admin_csrf,'action':'prepare','version_id':str(prepared['id']),'payload_hash':prepared['payload_hash'],'quality[translations]':'1','quality[images]':'1','quality[layout]':'1'}
+    blocked_code,blocked_body,_=request(admin_editorial,quality)
+    check(blocked_code==400 and 'documento de titularidad' in blocked_body,'Preparó prepublicación sin validar titularidad')
+    ownership_docs=DB.execute('SELECT e.id,e.storage_name FROM business_account_application_evidence e JOIN business_account_applications a ON a.id=e.application_id WHERE a.business_id=?',(premium_business,)).fetchall()
+    check(ownership_docs,'Falta evidencia de titularidad de la solicitud')
+    for proof in ownership_docs:
+        code,review_body,_=request(admin_editorial,{'csrf':editorial_admin_csrf,'action':'verify_document','version_id':str(prepared['id']),'evidence_id':str(proof['id'])})
+        check(code==200 and DB.execute('SELECT deleted_at FROM business_evidence_retirement WHERE evidence_id=?',(proof['id'],)).fetchone()[0] is not None,'No registró eliminación del documento')
+        check(not list((WORK/'private').rglob(proof['storage_name'])),'El archivo sigue almacenado tras validar titularidad')
+        check(request('/admin/representacion-evidencia.php?id='+str(proof['id']))[0]==410,'El documento eliminado sigue accesible')
     code,prepared_body,_=request(admin_editorial,quality)
     check(code==200 and DB.execute('SELECT status FROM business_editorial_versions WHERE id=?',(prepared['id'],)).fetchone()[0]=='awaiting_owner','No preparó prepublicación: '+prepared_body[-1000:])
     check(DB.execute("SELECT COUNT(*) FROM business_editorial_events WHERE version_id=? AND action='mail_simulated'",(prepared['id'],)).fetchone()[0]==1,'Preparar no envió aviso automático simulado')
@@ -1017,8 +1026,7 @@ try:
     check(request(admin_editorial,quality)[0]==200,'No preparó versión corregida')
     owner_action.update(action='approve',version_id=str(corrected['id']),payload_hash=corrected['payload_hash'])
     check(request(editorial_path,owner_action,business_flow)[0]==303,'No aprobó versión corregida')
-    code,published_body,_=request(admin_editorial,{'csrf':editorial_admin_csrf,'action':'publish','version_id':str(corrected['id']),'payload_hash':corrected['payload_hash']})
-    check(code==200 and DB.execute('SELECT status FROM business_editorial_versions WHERE id=?',(corrected['id'],)).fetchone()[0]=='published','No publicó versión corregida: '+published_body[-1500:])
+    check(DB.execute('SELECT status FROM business_editorial_versions WHERE id=?',(corrected['id'],)).fetchone()[0]=='published','La aprobación del comerciante no publicó automáticamente')
     before_sections=DB.execute('SELECT * FROM business_service_sections WHERE business_id=?',(premium_business,)).fetchall()
     status,_,_=request('/business/dashboard.php?tab=business',dict(profile_fields,csrf='invalid'),business_flow)
     check(status>=400 and DB.execute('SELECT * FROM business_service_sections WHERE business_id=?',(premium_business,)).fetchall()==before_sections,'Profile update bypasses CSRF')
@@ -1173,9 +1181,7 @@ try:
     admin_csrf=re.search(r'name="csrf" value="([^"]+)"',admin_form)[1]
     check(request(admin_path,{'csrf':admin_csrf,'action':'prepare','quality[translations]':'1','quality[images]':'1','quality[layout]':'1','version_id':str(version['id']),'payload_hash':version['payload_hash']})[0]==200,'No dejó preparada la prepublicación.')
     code,_,_=request(path,{'csrf':owner_csrf,'action':'approve','version_id':str(version['id']),'payload_hash':version['payload_hash']},traveler_user)
-    check(code==200 and DB.execute('SELECT status FROM business_editorial_versions WHERE id=?',(version['id'],)).fetchone()[0]=='owner_approved','No registró aprobación exacta del comerciante.')
-    code,body,_=request(admin_path,{'csrf':admin_csrf,'action':'publish','version_id':str(version['id']),'payload_hash':version['payload_hash']})
-    check(code==200 and DB.execute('SELECT status FROM business_editorial_versions WHERE id=?',(version['id'],)).fetchone()[0]=='published','Publicación final falló: '+body[:100])
+    check(code==200 and DB.execute('SELECT status FROM business_editorial_versions WHERE id=?',(version['id'],)).fetchone()[0]=='published','La aprobación exacta debe publicar sin otra acción administrativa.')
     check(DB.execute('SELECT display_name FROM business_translations WHERE business_id=? AND locale="es"',(editorial_business,)).fetchone()[0]=='Editorial Ficticio Revisado','No aplicó la versión aprobada.')
     print('OK: flujo editorial HTTP desde cuenta pública, tarjeta real, versión privada, preparación, aprobación exacta y publicación final; sin mensajes externos.')
     print('OK: páginas administrativas autenticadas y bloqueadas para visitantes; registro/inicio/cierre de sesión empresarial, consulta y aprobación, membresía y borrador privado; enlace administrativo de contraseña con almacenamiento hash, expiración y uso único; controles privados; importación transaccional; alta/suscripción/publicación; errores legibles ante migraciones faltantes.')

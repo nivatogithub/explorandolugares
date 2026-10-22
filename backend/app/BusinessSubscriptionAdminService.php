@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 require_once __DIR__.'/BusinessServiceSections.php';
+require_once __DIR__.'/BusinessOwnershipEvidence.php';
 
 require_once __DIR__.'/ExperienceOperatorAddon.php';
 require_once __DIR__.'/SubscriptionChangeService.php';
@@ -103,6 +104,7 @@ final class BusinessSubscriptionAdminService
     private function requirePublicationReady(array|false $business,int $businessId,string $localPublishDate,bool $existingPublication=false): array
     {
             if(!$business)throw new RuntimeException('El negocio no existe.');
+            BusinessOwnershipEvidence::requireVerified($this->pdo,$businessId);
             if($business['information_status']==='PUBLICO'&&$business['record_origin']!=='public_import')throw new RuntimeException('Verifica la información y la autorización del negocio antes de publicarlo.');
             if(!in_array($business['information_status'],['PUBLICO','VERIFICADO','ACTIVO'],true))throw new RuntimeException('Verifica la información y la autorización del negocio antes de publicarlo.');
             if($business['operation_status']==='CERRADO_DEFINITIVO')throw new RuntimeException('Un negocio con cierre definitivo no se puede publicar.');
