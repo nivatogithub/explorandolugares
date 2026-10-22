@@ -29,6 +29,7 @@ public=release/'public'
 public.mkdir(parents=True,exist_ok=True)
 from public_inputs import collect
 collect(root,public)
+subprocess.run([sys.executable,str(root/'scripts/localizar-cobertura.py'),'--public',str(public)],check=True)
 # El hosting conserva CSS durante varios días. Versionar la URL en cada entrega
 # evita que una página HTML nueva use una hoja de estilos anterior desde caché.
 style=public/'assets/style.css'

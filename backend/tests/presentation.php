@@ -35,9 +35,10 @@ check(str_contains($santa,'keep-tayrona')&&str_contains($santa,'keep-ciudad'),'E
 check(!str_contains($santa,'data-place-slug="minca"'),'Presentation JSON cannot expose records absent from repository output');
 check(is_string(DestinationPresentation::media('medellin',null,'en')['alt']),'Media alt resolves before templates render');
 
-$coverage=PortalPresentation::context(['path'=>'/cobertura/colombia/','languages'=>['es'=>'/cobertura/colombia/']]);
-check(count($coverage['languages'])===1,'Coverage has only its real page equivalent');
-check($coverage['language_navigation']['en']['href']==='/en/'&&!$coverage['language_navigation']['en']['equivalent'],'Portal-home access is distinguished from translated coverage');
-$coverageHeader=PortalPresentation::header(['path'=>'/cobertura/colombia/','languages'=>['es'=>'/cobertura/colombia/']]);
-check(str_contains($coverageHeader,'EN · Home')&&str_contains($coverageHeader,'PT-BR · Início'),'Missing page translations are not silently hidden; home links are visibly labelled');
-check(!str_contains($coverageHeader,'hreflang="en"')&&!str_contains($coverageHeader,'/en/cobertura/'),'No false equivalent or invented coverage route');
+$coverageLanguages=['es'=>'/cobertura/colombia/','en'=>'/en/cobertura/colombia/','pt-BR'=>'/pt-br/cobertura/colombia/'];
+$coverage=PortalPresentation::context(['path'=>'/cobertura/colombia/','languages'=>$coverageLanguages]);
+check(count($coverage['languages'])===3,'Coverage has three real equivalents');
+check($coverage['language_navigation']['en']['href']==='/en/cobertura/colombia/'&&$coverage['language_navigation']['en']['equivalent'],'English coverage must remain on the equivalent page');
+$coverageHeader=PortalPresentation::header(['path'=>'/cobertura/colombia/','languages'=>$coverageLanguages]);
+check(!str_contains($coverageHeader,'EN · Home')&&!str_contains($coverageHeader,'PT-BR · Início'),'Coverage must not replace page translations with home links');
+check(str_contains($coverageHeader,'hreflang="en"')&&str_contains($coverageHeader,'/pt-br/cobertura/colombia/'),'Coverage language links present');

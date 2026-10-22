@@ -1,7 +1,8 @@
 (() => {
   'use strict';
+  document.querySelectorAll('a[hreflang]').forEach(link=>{const url=new URL(link.href);if(url.pathname.includes('/cobertura/colombia/')){url.search=location.search;url.hash=location.hash;link.href=url.href;link.addEventListener('click',()=>{const current=new URL(link.href);current.search=location.search;current.hash=location.hash;link.href=current.href;});}});
   const labels={published:'Publicado',in_progress:'En preparación',pending:'Por desarrollar',unknown:'Sin confirmación',untracked:'Fuera del alcance actual',outside_scope:'Fuera del alcance actual'};
-  const $=id=>document.getElementById(id), root=new URL('../../',location.href);
+  const $=id=>document.getElementById(id), root=new URL('/',location.href);
   const el=(tag,text,className)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(className)n.className=className;return n;};
   const normal=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
   let visibleLimit=12;let data=null,department='',filter='all',mapVersion=0,activeTab='cobertura';const maps=new Map();
