@@ -54,6 +54,9 @@ class Destinos(unittest.TestCase):
     if route in dynamic_routes:
      endpoint=ROOT/'backend'/dynamic_routes[route]
      self.assertTrue(endpoint.is_file(),(path,href,endpoint));continue
+    if not target.is_file() and route.startswith('assets/'):
+     # Shared assets are provided by the authoritative backend layer at build time.
+     target=ROOT/'backend/public'/route
     self.assertTrue(target.is_file(),(path,href))
     if u.fragment and target.suffix=='.html':self.assertIn(unquote(u.fragment),Page(target).ids,(path,href))
 if __name__=='__main__':unittest.main()

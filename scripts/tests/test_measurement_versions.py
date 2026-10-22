@@ -34,6 +34,6 @@ class MeasurementVersionTests(unittest.TestCase):
    script.write_text('second');m.stamp_public(public);new=page.read_text();self.assertNotEqual(old,new)
    self.assertIn('<header>Unchanged header/footer</header>',new)
    self.assertIn('menu-principal.js?v='+m.digest(menu),new);self.assertIn('medicion.js?v='+m.digest(script),new)
-   self.assertIn('menu-principal.js?v='+m.digest(menu),php.read_text())
+   self.assertEqual(php.read_text(),"<script src=\"<?=u('/assets/menu-principal.js?v=old')?>\"></script>",'PHP expressions stay untouched; the shared PHP asset helper versions runtime URLs')
    self.assertIn('script[src*="menu-principal.js"]',menu.read_text(),'selectors are not resource URLs')
 if __name__=='__main__':unittest.main()

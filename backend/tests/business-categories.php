@@ -9,7 +9,7 @@ function categories_check(bool $ok,string $message):void{if(!$ok)throw new Runti
 $pdo=new PDO('sqlite::memory:',null,null,[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC]);
 $pdo->exec(file_get_contents(dirname(__DIR__).'/database/destinations.sqlite.sql'));
 $pdo->exec(file_get_contents(dirname(__DIR__).'/database/migrations/006-poi-experience-links.sqlite.sql'));
-for($n=8;$n<=30;$n++)foreach(glob(dirname(__DIR__).'/database/migrations/'.sprintf('%03d',$n).'-*.sqlite.sql') as $file)$pdo->exec(file_get_contents($file));
+for($n=8;$n<=34;$n++)foreach(glob(dirname(__DIR__).'/database/migrations/'.sprintf('%03d',$n).'-*.sqlite.sql') as $file)$pdo->exec(file_get_contents($file));
 $pdo->exec("INSERT INTO destinations(slug,publication_status) VALUES('jerico','published'); INSERT INTO destination_translations(destination_id,locale,display_name,headline,intro) VALUES(1,'es','Destino de prueba','','')");
 foreach(['hospedaje','alimentacion','experiencias','transporte'] as $code){$pdo->prepare('INSERT INTO service_categories(code) VALUES(?)')->execute([$code]);foreach(['es','en','pt-BR'] as $locale)$pdo->prepare('INSERT INTO service_category_translations(category_code,locale,label) VALUES(?,?,?)')->execute([$code,$locale,$code]);}
 $package=['schema_version'=>'business-import-v1','destination_slug'=>'jerico','businesses'=>[['name'=>'Negocio de prueba','category_code'=>'hospedaje','category_codes'=>['alimentacion','experiencias','transporte','transporte'],'sources'=>[['url'=>'https://example.test/business','checked_at'=>'2026-10-16']]]]];
