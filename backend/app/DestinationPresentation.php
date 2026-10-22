@@ -99,6 +99,15 @@ final class DestinationPresentation
         }
         $this->remove('//*['.self::cls('destination-experience-copy').']/*['.self::cls('story-number').']');
         $this->remove('//*[@id="lugares"]//*['.self::cls('directory-description').' or '.self::cls('directory-card-details').']');
+        $categoryIcons=json_decode(file_get_contents(__DIR__.'/presentation/directory-icons.json'),true)['categoryIcons'];
+        foreach($this->nodes('//*[@id="lugares"]//*['.self::cls('directory-card').']') as $card){
+            $label=$this->first('.//*['.self::cls('eyebrow').']',$card);
+            if(!$label||str_contains($label->getAttribute('class'),'directory-category-icon'))continue;
+            $name=trim($label->textContent);$category=$card->getAttribute('data-category');
+            $svg=new DOMDocument();$svg->loadXML('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'.($categoryIcons[$category]??$categoryIcons['otro']).'</svg>');
+            $label->textContent='';$label->appendChild($this->document->importNode($svg->documentElement,true));
+            $label->setAttribute('class','eyebrow directory-category-icon');$label->setAttribute('role','img');$label->setAttribute('aria-label',$name);$label->setAttribute('title',$name);
+        }
         // Images are content, not links to a file or a lightbox. Preserve map/business links.
         foreach($this->nodes('//a[.//img or .//picture]') as $link){
             if(preg_match('~\.(?:avif|webp|png|jpe?g|gif|svg)(?:\?.*)?$~i',$link->getAttribute('href'))){
