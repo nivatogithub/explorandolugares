@@ -2,7 +2,7 @@
 
 21 de octubre de 2026. Base `f26842de`; rama `refactor/presentacion-rendimiento-20261021`.
 
-**No aprobado para integrar ni desplegar.** El permiso para repetir Chromium sobre la versión final fue rechazado por el control del entorno, sin motivo adicional. No se sustituyó esa comprobación por otra herramienta. Las capturas de la etapa anterior no validan los cambios posteriores. Lighthouse quedó instalado localmente, pero no ejecutado.
+**No aprobado para integrar ni desplegar.** El propietario renovó el permiso de navegador después del rechazo inicial. Se ejecutó un recorrido visible de17rutas del candidato fijo y una pasada móvil. Esa revisión encontró y documentó el solape del sidebar administrativo, el recorte del nombre autenticado y una ruta de recuperación ausente en el router local (sí existía en Apache). Se preparó un segundo candidato con esas reparaciones; sus capturas anteriores se conservan. La matriz completa final y Lighthouse siguen siendo puertas separadas; no se sustituyen por renderizados CLI.
 
 ## Implementado
 
@@ -24,13 +24,13 @@
 - Pasan pruebas de importación/consulta/publicación de destinos, versiones de medición, ruta de suscripciones, dominio de publicación, empaquetador SFTP y cobertura del release; pruebas nuevas de aislamiento, sustitución local, separación CSS y trazabilidad de reglas. La prueba de cobertura compara cartografía/datos por bytes y controladores JavaScript ignorando únicamente su versión de URL. Detectó y permitió corregir el podado de recursos solicitados dinámicamente; ahora se conservan desde su productor seleccionado, sin recopiados finales.
 - Dos construcciones nuevas del código final producen manifiestos idénticos (951 archivos antes de la fixture privada). El paquete es un candidato reproducible, no un despliegue.
 - Apache 2.4.67 acepta la sintaxis de las reglas de caché en configuración aislada, sin abrir otro servidor. No prueba el Apache de GoDaddy ni los encabezados HTTP finales de producción.
-- Comparación intermedia: 52 vistas de referencia/candidato, móvil/escritorio. No valida la versión final; no usarla como aprobación. La revisión final de teclado, sesión, administración y diagramación queda pendiente.
+- Comparación intermedia:52vistas de referencia/candidato, móvil/escritorio. Después, recorrido visible17rutas y pasada de formularios móvil sobre candidato fijo. Se conservan capturas de antes/después. Estas revisiones no equivalen a aprobación completa de todos los módulos.
 - Se conserva exactamente el contenido de las 397 rutas raster de la base. Ensayo privado sin pérdida sobre 334 identidades únicas: cero candidatas útiles con el método ensayado. No se generó IA, no hubo compresión con pérdida ni se promovió un medio. No se afirma que se ensayaran todos los codificadores ni que se haya auditado fidelidad geográfica.
 - Se detectaron referencias históricas de imágenes de experiencias que no constaban por hash en el manifiesto de medios seleccionados. Se conservan sus bytes existentes, no se autoaprueban reemplazos. La auditoría retroactiva es un pendiente explícito.
 
 ## Pendiente antes de promover
 
-1. Permitir la repetición de Chromium y ejecutar la matriz final de móvil/escritorio/idiomas, cuenta activa/administración, formularios/filtros, imágenes al desplazarse y navegación sin JS. Revisar en particular disposición del panel administrativo y campos de cuentas.
+1. Completar la matriz final de móvil/escritorio/idiomas, cuenta activa/administración, formularios/filtros, imágenes al desplazarse y navegación sin JS. El recorrido visible inicial fue útil para encontrar regresiones; la pasada específica de reparación no equivale a revisar todas las páginas.
 2. Ejecutar Lighthouse comparable, varias veces, en móvil/escritorio; entregar bytes/bloqueos/LCP/CLS/SEO reales. No hay puntuación ni ahorro temporal final aprobado todavía.
 3. Revisar cobertura completa de traducciones de los campos comerciales heredados y consolidación adicional de CSS ajeno al shell; no confundir el traslado de la traducción existente con una auditoría completa del CRM.
 4. Comprobar DOM/extensiones y encabezados/caché en el entorno Apache/PHP equivalente autorizado antes de publicar. El método usa DOMDocument; no se verificó producción.
@@ -40,3 +40,10 @@
 ## Evidencia privada
 
 En `.local/unificacion/`: inventario de base, `comparison.json` y capturas intermedias; `image-trials-fast/index.json`; manifiestos/retiradas/productores de `delivery-exact/`; `final-cli-result.json`; `server-render-checks.json`; validación de sintaxis Apache. Son fixtures, no datos ni cifras de producción.
+
+## Reparaciones encontradas durante el recorrido
+
+- Sidebar administrativo colocado por debajo de la fila del shell (escritorio/tableta), manteniendo todos sus enlaces y desplazamiento propio. Los controles administrativos ya no estilizan los botones del encabezado público.
+- Nombre de cuenta con ajuste de línea, sin recorte silencioso ni ocultar enlaces de cuenta/administración.
+- El router de revisión reproduce también `/negocios/recuperar-clave/`. El404 anterior era del entorno de revisión; no se aceptó como revisión satisfactoria. En la fixture el envío está desactivado: la pantalla lo comunica; no se ha probado correo real ni se pretende.
+- Nuevo paquete privado `delivery-reviewed/`; paquete y capturas originales se mantienen para comparar. La primera reparación de escritorio no resolvía la superposición del nombre móvil: se corrigieron las columnas y el ajuste de línea de la celda de cuenta. Pasan12vistas específicas a1440,390y320px con nombre normal/largo y dropdown sin superposición con el logo, sin desborde de documento ni menú fuera de pantalla. La comprobación adicional de tableta queda registrada aparte.
