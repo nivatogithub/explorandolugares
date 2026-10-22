@@ -90,13 +90,6 @@ final class DestinationPresentation
             if($figure){$this->remove('./node()',$figure);$figure->appendChild($this->image($this->data['hero'],true));}
         }
         if(isset($this->data['cards']))$this->replaceCards();
-        if(!empty($this->data['credits_url'])){
-            $area=$this->first('//*[@id="que-conocer"]');
-            if($area&&!$this->first('.//*['.self::cls('compact-image-credits').']',$area)){
-                $credit=$this->element('p','',['class'=>'compact-image-credits']);
-                $credit->appendChild($this->element('a',match($this->locale){'en'=>'Image credits','pt-BR'=>'Créditos das imagens',default=>'Créditos de imágenes'},['href'=>$this->data['credits_url'],'target'=>'_blank','rel'=>'noopener']));$area->appendChild($credit);
-            }
-        }
         $this->remove('//*['.self::cls('destination-experience-copy').']/*['.self::cls('story-number').']');
         // Legacy cleanup must not remove the paid content promised by editorial-v2 cards.
         $this->remove('//*[@id="lugares"]//*[('.self::cls('directory-description').' or '.self::cls('directory-card-details').') and not(ancestor::*[@data-directory-layout="editorial-v2"])]');
@@ -133,11 +126,7 @@ final class DestinationPresentation
                 if(!$t)continue;
                 $this->text('.//h3|.//h4',$t['name'],$card);
                 $this->text('./p|./*['.self::cls('destination-experience-copy').']/p',$t['description'],$card);
-                if(!empty($record['source_url'])){
-                    $present=false;foreach($this->nodes('.//a[@href]',$card) as $link)if($link->getAttribute('href')===$record['source_url'])$present=true;
-                    if(!$present){$container=$kind==='experiences'?($this->first('./*['.self::cls('destination-experience-copy').']',$card)??$card):$card;
-                        $container->appendChild($this->element('a',$this->data['copy'][$this->locale]['source_label']??'Fuente',['class'=>'text-link','href'=>$record['source_url'],'target'=>'_blank','rel'=>'noopener noreferrer']));}
-                }
+
             }
         }
     }

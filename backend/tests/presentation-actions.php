@@ -8,7 +8,8 @@ foreach(['es','en','pt-BR'] as $locale){
  $out=DestinationPresentation::normalize($html,'santa-marta',$locale);
  foreach(['id="keep-card"','data-location-id="stable-42"','aria-label="Existing place"','id="map-action"','href="https://maps.example.invalid/exact?x=1&amp;y=2"','target="_blank"','rel="noopener noreferrer"','aria-label="Exact location"','Map label','href="https://official.example.invalid/exact"','aria-describedby="source-note"','Official label','href="#related-experience"','data-action="expand"','action="/local-action"','name="record"','id="unmapped-card"','href="#keep-other-action"','draggable="false"'] as $expected)check(str_contains($out,$expected),$locale.': lost action/identity '.$expected);
  $actions=destinationPointActions(['map_url'=>'https://maps.example.invalid/exact?x=1&y=2','external_url'=>'https://official.example.invalid/exact','external_label'=>'Official source'],['map'=>'Exact map'],$locale);
- check(str_contains($actions,'Exact map')&&str_contains($actions,'Official source'),'Data-backed map and external actions');
+ check(str_contains($actions,'Exact map')&&!str_contains($actions,'Official source')&&!str_contains($actions,'official.example'),'Only approved map action is public');
+ check(!str_contains($out,'Consultar la fuente')&&!str_contains($out,'Check the source')&&!str_contains($out,'Consultar a fonte'),'Editorial sources stay private');
  check(destinationPointActions(['map_url'=>'javascript:alert(1)'],[],$locale)==='','Unsafe schemes rejected');
 }
 echo "OK: all original card actions/attributes/identity survive editorial transforms in three languages; native image dragging disabled; data-backed actions only.\n";

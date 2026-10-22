@@ -90,7 +90,7 @@ function destinationRelationLink(array $relation):string {
 function destinationPointActions(array $place,array $copy,string $locale):string
 {
     $html='';$seen=[];
-    foreach(['map_url','external_url'] as $key){
+    foreach(['map_url'] as $key){
         $url=trim((string)($place[$key]??''));
         if($url===''||isset($seen[$url])||!preg_match('~^https?://~i',$url)||!filter_var($url,FILTER_VALIDATE_URL))continue;
         $seen[$url]=true;
