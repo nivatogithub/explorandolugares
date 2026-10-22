@@ -1,6 +1,6 @@
 from pathlib import Path
 root=Path(__file__).resolve().parents[1]
-pages=[p for p in (root/'public/admin').glob('*.php') if '</head>' in p.read_text() and p.name!='negocio-vista-previa.php']
+pages=[p for p in (root/'public/admin').glob('*.php') if '</head>' in p.read_text() and p.name not in ('negocio-vista-previa.php','_page.php')]
 assert len(pages)>=18
 for page in pages:
  text=page.read_text()

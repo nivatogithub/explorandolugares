@@ -9,7 +9,7 @@ $activeAdminItem = match (true) {
     $adminPath === 'correos.php' => 'email-workspace',
     $adminPath === 'responder-solicitud.php' => 'requests',
     $adminPath === 'solicitud-detalle.php' => ($_GET['type']??$_GET['tipo']??'')==='account'?'account-applications':'requests',
-    $adminPath === 'atencion-comercios.php' => ($_GET['view']??'') === 'review' ? 'business-review' : 'business-attention',
+    $adminPath === 'atencion-comercios.php' => 'business-attention',
     $adminPath === 'editorial-negocios.php' || $adminPath === 'editorial.php' => 'editorial',
     $adminPath === 'negocios.php' => 'businesses',
     $adminPath === 'trasladar-negocios.php' => 'businesses',
@@ -43,7 +43,6 @@ $activeAdminItem = match (true) {
   <details class="admin-nav-disclosure" data-admin-navigation open><summary>Menú de administración</summary><nav>
     <section><h2>Operación</h2>
       <a href="atencion-comercios.php" <?= $activeAdminItem === 'business-attention' ? 'aria-current="page"' : '' ?>>Atención a comercios</a>
-      <a href="atencion-comercios.php?view=review" <?= $activeAdminItem === 'business-review' ? 'aria-current="page"' : '' ?>>Revisión y publicación</a>
       <a href="solicitudes-publicas.php" <?= $activeAdminItem === 'public-requests' ? 'aria-current="page"' : '' ?>>Solicitudes de usuarios</a>
       <a href="index.php?tab=solicitudes" <?= $activeAdminItem === 'requests' ? 'aria-current="page"' : '' ?>>Solicitudes de participación</a>
       <a href="negocios.php" <?= $activeAdminItem === 'businesses' ? 'aria-current="page"' : '' ?>>Catálogo y cobertura</a>
@@ -51,7 +50,7 @@ $activeAdminItem = match (true) {
       <a href="correos.php" <?= $activeAdminItem === 'email-workspace' ? 'aria-current="page"' : '' ?>>Plantillas y correos</a>
       <a href="actualizar-negocios.php" <?= $activeAdminItem === 'business-bulk-edit' ? 'aria-current="page"' : '' ?>>Exportar / actualizar</a>
       <a href="campanas.php" <?= $activeAdminItem === 'campaigns' ? 'aria-current="page"' : '' ?>>Campañas por correo</a>
-      <a href="solicitudes-cuenta.php" <?= $activeAdminItem === 'account-applications' ? 'aria-current="page"' : '' ?>>Revisión de negocios</a>
+      <a href="solicitudes-cuenta.php" <?= $activeAdminItem === 'account-applications' ? 'aria-current="page"' : '' ?>>Registro y reclamaciones</a>
       <a href="usuarios.php" <?= $activeAdminItem === 'accounts' ? 'aria-current="page"' : '' ?>>Cuentas</a>
       <a href="suscripciones.php" <?= $activeAdminItem === 'subscriptions' ? 'aria-current="page"' : '' ?>>Suscripciones</a>
     </section>
@@ -69,7 +68,6 @@ $activeAdminItem = match (true) {
       <a href="cancelaciones.php" <?= $activeAdminItem === 'cancellations' ? 'aria-current="page"' : '' ?>>Solicitudes de cancelación</a>
     </section>
     <section><h2>Sistema</h2>
-      <a href="suscripciones.php#comprobantes">Validación de pagos</a>
       <a href="medios-pago.php" <?= $activeAdminItem === 'payment-settings' ? 'aria-current="page"' : '' ?>>Configuración de pago</a>
       <a href="configuracion.php" <?= $activeAdminItem === 'configuration' ? 'aria-current="page"' : '' ?>>Configuración del portal</a>
       <a href="campanas.php?tab=conexion" <?= $activeAdminItem === 'brevo-connection' ? 'aria-current="page"' : '' ?>>Conexión con Brevo</a>
