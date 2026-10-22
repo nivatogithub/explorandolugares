@@ -65,6 +65,9 @@ final class DestinationPresentation
             $heading=$this->first('./*['.self::cls('sectionhead').']',$section);
             if($heading){$this->remove('.//p',$heading);$this->text('.//h2|.//h3',$titles[$index],$heading);$heading->setAttribute('class',trim($heading->getAttribute('class').' compact-section-heading'));}
         }
+        $directoryHeading=$this->first('//*[@id="lugares"]/*['.self::cls('sectionhead').']');
+        $directoryMap=$this->first('//*[@id="lugares"]/*['.self::cls('directory-map').']');
+        if($directoryHeading&&$directoryMap)$directoryHeading->appendChild($directoryMap);
         $heading=$this->first('//*['.self::cls('destination-experiences-heading').']');if($heading){$this->remove('.//p',$heading);$this->text('.//h2|.//h3',$titles[2],$heading);}
         foreach(array_reverse($this->nodes('//main//details['.self::cls('place-disclosure').']')) as $detail){
             $parent=$detail->parentNode;
