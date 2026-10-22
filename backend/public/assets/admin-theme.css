@@ -161,3 +161,13 @@ body.portal-admin .floating-select.is-open .floating-select-arrow{transform:rota
 .portal-admin .admin-privacy-settings small{display:block;line-height:1.4;color:var(--el-muted)}
 .portal-admin .admin-privacy-settings>button{justify-self:start}
 @media(max-width:650px){.portal-admin .admin-privacy-settings .destination-form-grid{grid-template-columns:1fr!important}}
+
+.portal-admin .admin-incidents-grid{width:100%;overflow-x:auto;border:1px solid var(--el-border);border-radius:8px;margin-top:20px}
+.portal-admin .admin-incidents-grid table{width:100%;border-collapse:collapse;font-size:13px;text-align:left}
+.portal-admin .admin-incidents-grid :is(th,td){padding:12px 14px;border-bottom:1px solid var(--el-border);vertical-align:top;line-height:1.45}
+.portal-admin .admin-incidents-grid th{background:var(--el-panel);white-space:nowrap;font-weight:700}
+.portal-admin .admin-incidents-grid tbody tr:nth-child(even){background:var(--el-panel)}
+.portal-admin .admin-incidents-grid td{min-width:120px;overflow-wrap:anywhere}
+.portal-admin .admin-incidents-grid details{min-width:180px}.portal-admin .admin-incidents-grid summary{cursor:pointer}
+.portal-admin .admin-incidents-grid table{min-width:1200px}
+.portal-admin .admin-incidents-grid td:nth-child(-n+3){white-space:nowrap}
