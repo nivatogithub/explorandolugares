@@ -127,3 +127,8 @@ body.portal-admin{--ink:var(--el-text);--muted:var(--el-muted);--ember:var(--el-
 /* Dropdown arrows belong to form fields, never primary circular actions. */
 body.portal-admin .admin-page .floating-select button.floating-select-toggle{width:36px;min-width:36px;padding:0!important;box-shadow:none!important;display:flex;align-items:center;justify-content:center}
 body.portal-admin .admin-page select{box-sizing:border-box;min-height:40px;padding:8px 32px 8px 10px;border:1px solid var(--el-control-border);border-radius:6px;background-color:var(--el-field);color:var(--el-text);font:inherit;max-width:100%}
+
+/* Center a small neutral chevron inside the field, without a separate divided button. */
+body.portal-admin .admin-page .floating-select button.floating-select-toggle{top:50%!important;bottom:auto!important;right:6px!important;transform:translateY(-50%);width:30px!important;min-width:30px!important;height:30px!important;min-height:30px!important;border:0!important;border-radius:4px!important;margin:0!important;color:var(--el-muted)!important}
+body.portal-admin .floating-select-toggle .floating-select-arrow{display:block!important;position:static!important;width:7px;height:7px;margin:-4px 0 0!important;padding:0!important;font-size:0!important;line-height:0;border-right:1.5px solid var(--el-muted);border-bottom:1.5px solid var(--el-muted);transform:rotate(45deg)!important;color:transparent!important}
+body.portal-admin .floating-select.is-open .floating-select-arrow{transform:rotate(225deg)!important;margin:4px 0 0!important}
