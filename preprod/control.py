@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Entorno fijo de revisión: Apache/PHP/MariaDB, aislado de producción."""
-import argparse,json,os,secrets,shutil,subprocess,sys,time,urllib.request
+import argparse,json,os,secrets,shutil,subprocess,sys,time,urllib.request,tempfile
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 STATE=ROOT/'.local/preprod'; NAME='explorando-preprod'; IMAGE='localhost/explorando-preprod:local'
@@ -49,6 +49,23 @@ def configure_test_mail_network():
   if subprocess.run(['podman','network','exists',outbound],cwd=ROOT).returncode!=0:podman('network','create',outbound)
   podman('network','connect',outbound,NAME)
  elif not enabled and outbound in attached:podman('network','disconnect',outbound,NAME)
+def prepare_managed_release(release,log):
+ # Build into a fresh directory, preserving the currently served code on failure.
+ if release.is_symlink():raise ValueError('La entrega local no puede ser un enlace simbólico.')
+ if release.exists() and any(release.iterdir()):
+  if not (release/'public/index.html').is_file() or not (release/'app/bootstrap.php').is_file():raise ValueError('No se reconoce la entrega local anterior; no se sustituye.')
+  private=release/'private'
+  if private.exists() and any(private.iterdir()):raise ValueError('Hay datos privados dentro de la entrega; conservarlos en STATE/private antes de reconstruir.')
+ with tempfile.TemporaryDirectory(prefix='prepare-',dir=STATE) as temporary:
+  temporary=Path(temporary);fresh=temporary/'release';old=temporary/'previous'
+  run(sys.executable,'scripts/preparar-hosting.py','--output',str(fresh),stdout=log,stderr=subprocess.STDOUT)
+  if release.exists():release.rename(old)
+  try:fresh.rename(release)
+  except BaseException:
+   if old.exists():old.rename(release)
+   raise
+ # Only generated code was replaced. STATE/private and STATE/media are untouched.
+
 def main():
  operation_started=time.monotonic()
  parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('action',choices=['build','start','up','down','status','logs']);args=parser.parse_args()
@@ -81,7 +98,7 @@ def main():
  release=STATE/'release'
  print('Preparando el código local; no se recompila PHP ni MariaDB.',flush=True)
  with (STATE/'prepare.log').open('w') as log:
-  run(sys.executable,'scripts/preparar-hosting.py','--output',str(release),stdout=log,stderr=subprocess.STDOUT)
+  prepare_managed_release(release,log)
  shutil.copyfile(ROOT/'preprod/infra/runtime.php',release/'public/__preprod-runtime.php')
  shutil.copyfile(ROOT/'preprod/infra/account-status.php',release/'public/__preprod-account.php')
  shutil.copyfile(ROOT/'preprod/infra/mailbox.php',release/'public/admin/buzon-local.php')

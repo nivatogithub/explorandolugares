@@ -126,6 +126,11 @@ def prune_unreferenced_assets(public: Path, catalog: Path, app: Path|None=None) 
     removed=[]
     license_names=('license','licence','copying','notice')
     for asset in (public/'assets').rglob('*'):
+        # Runtime coverage requests construct cartography URLs dynamically.
+        # Previously the builder restored this entire reviewed directory after
+        # pruning; preserve its single selected producer instead of copying twice.
+        if asset.is_relative_to(public/'assets/cobertura'):
+            continue
         if (asset.is_file() and not any(token in asset.name.lower() for token in license_names)
                 and asset.name.lower() not in text):
             removed.append(asset.relative_to(public).as_posix())

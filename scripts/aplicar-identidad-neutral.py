@@ -103,10 +103,10 @@ input,select,textarea{background:var(--el-field);border-color:var(--el-control-b
   if p.name in {'leaflet.css','identidad-neutral.css'}:continue
   s=p.read_text();new=re.sub('|'.join(palette),lambda m:palette[m[0].lower()],s,flags=re.I)
   if new!=s:p.write_text(new);css_count+=1
- hook='<script defer src="/assets/nomenclatura-lugares.js?v=2"></script><link rel="stylesheet" href="/assets/identidad-neutral.css?v=5"><script defer src="/assets/identidad-neutral.js?v=4"></script>'
+ hook='<link rel="stylesheet" href="/assets/identidad-neutral.css?v=5">'
  count=0
  for p in public.rglob('*'):
-  if p.suffix not in {'.html','.php'}:continue
+  if p.suffix not in {'.html','.php'} or p.name.startswith('_'):continue
   s=p.read_text()
   s=s.replace('favicon.svg','brand/explorando-lugares-logo-v2-transparent.png').replace('type="image/svg+xml"','type="image/png"')
   if '</head>' not in s:continue

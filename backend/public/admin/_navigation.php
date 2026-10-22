@@ -29,7 +29,7 @@ $activeAdminItem = match (true) {
 };
 ?>
 <link rel="stylesheet" href="../assets/admin-navigation.css?v=20261018-2">
-<?php require __DIR__.'/../_account-header.php'; ?>
+
 <aside class="admin-sidebar admin-sidebar-with-system" aria-label="Navegación de administración">
   <a class="admin-sidebar-brand" href="index.php"><img src="/assets/brand/explorando-lugares-logo-v2-transparent.png" width="76" height="76" alt=""><span>Explorando <strong>Lugares</strong><small>Administración</small></span></a>
   <nav>

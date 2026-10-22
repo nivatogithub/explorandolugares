@@ -1,0 +1,450 @@
+{
+  "copy": {
+    "es": {
+      "history": "El territorio de Bogotá fue habitado por los muiscas antes de la fundación española de 1538. La ciudad creció alrededor de su centro histórico y se convirtió en capital de Colombia, reuniendo instituciones, universidades y una amplia vida cultural."
+    },
+    "en": {
+      "history": "The Bogotá region was inhabited by the Muisca before the Spanish foundation in 1538. The city grew around its historic centre and became Colombia’s capital, bringing together institutions, universities and a broad cultural life."
+    },
+    "pt-BR": {
+      "history": "O território de Bogotá era habitado pelos muiscas antes da fundação espanhola de 1538. A cidade cresceu ao redor do centro histórico e tornou-se capital da Colômbia, reunindo instituições, universidades e uma ampla vida cultural."
+    }
+  },
+  "descriptions": {
+    "plaza": {
+      "es": "El corazón cívico de Bogotá, rodeado de edificios históricos.",
+      "en": "Bogotá’s civic heart, surrounded by historic buildings.",
+      "pt-BR": "O coração cívico de Bogotá, cercado por edifícios históricos."
+    },
+    "candelaria": {
+      "es": "Calles coloniales, plazas y espacios culturales del centro histórico.",
+      "en": "Colonial streets, squares and cultural spaces in the historic centre.",
+      "pt-BR": "Ruas coloniais, praças e espaços culturais no centro histórico."
+    },
+    "museo-oro": {
+      "es": "Orfebrería y relatos de las sociedades indígenas de Colombia.",
+      "en": "Goldwork and stories from Colombia’s Indigenous societies.",
+      "pt-BR": "Ourivesaria e histórias das sociedades indígenas da Colômbia."
+    },
+    "monserrate": {
+      "es": "Santuario y miradores sobre la ciudad y los cerros.",
+      "en": "A hilltop sanctuary and viewpoints over the city.",
+      "pt-BR": "Santuário e mirantes sobre a cidade e os morros."
+    },
+    "botero": {
+      "es": "Arte colombiano e internacional en una casa colonial.",
+      "en": "Colombian and international art in a colonial house.",
+      "pt-BR": "Arte colombiana e internacional em uma casa colonial."
+    },
+    "usaquen": {
+      "es": "Un antiguo núcleo de pueblo con plaza, cafés y mercado de oficios.",
+      "en": "A former village centre with a square, cafés and craft market.",
+      "pt-BR": "Um antigo núcleo de povoado com praça, cafés e mercado de artesanato."
+    },
+    "jardin": {
+      "es": "Colecciones vegetales y ecosistemas colombianos en el Tropicario.",
+      "en": "Plant collections and Colombian ecosystems in the Tropicarium.",
+      "pt-BR": "Coleções vegetais e ecossistemas colombianos no Tropicário."
+    },
+    "simon": {
+      "es": "Lago, senderos y zonas verdes para recorrer con calma.",
+      "en": "A lake, paths and green spaces for an easy stroll.",
+      "pt-BR": "Lago, caminhos e áreas verdes para passear com calma."
+    },
+    "visita-oro": {
+      "es": "Explora las colecciones de orfebrería del Museo del Oro.",
+      "en": "Explore the Gold Museum’s goldwork collections.",
+      "pt-BR": "Explore as coleções de ourivesaria do Museu do Ouro."
+    },
+    "mirador": {
+      "es": "Sube a Monserrate y contempla la ciudad.",
+      "en": "Go up Monserrate for views across the city.",
+      "pt-BR": "Suba Monserrate e contemple a cidade."
+    },
+    "ambiente": {
+      "es": "Recorre jardines y descubre plantas de distintos ecosistemas.",
+      "en": "Walk the gardens and discover plants from different ecosystems.",
+      "pt-BR": "Percorra os jardins e descubra plantas de diferentes ecossistemas."
+    },
+    "arte": {
+      "es": "Recorre los espacios de arte de la Manzana Cultural.",
+      "en": "Explore the art spaces of the Cultural Block.",
+      "pt-BR": "Explore os espaços de arte da Manzana Cultural."
+    },
+    "ciencia": {
+      "es": "Descubre experiencias interactivas de ciencia en Maloka.",
+      "en": "Discover interactive science experiences at Maloka.",
+      "pt-BR": "Descubra experiências interativas de ciência no Maloka."
+    },
+    "cielo": {
+      "es": "Acércate a la astronomía en el Planetario de Bogotá.",
+      "en": "Explore astronomy at Bogotá’s Planetarium.",
+      "pt-BR": "Conheça a astronomia no Planetário de Bogotá."
+    },
+    "gastronomia": {
+      "es": "Prueba cocinas tradicionales en la plaza La Perseverancia.",
+      "en": "Try traditional cooking at La Perseverancia market.",
+      "pt-BR": "Prove a cozinha tradicional na praça La Perseverancia."
+    },
+    "mercado": {
+      "es": "Conoce artesanías y oficios en el mercado de Usaquén.",
+      "en": "Discover crafts and local trades at Usaquén market.",
+      "pt-BR": "Conheça artesanato e ofícios no mercado de Usaquén."
+    },
+    "ciclovia": {
+      "es": "Pedalea o camina por las vías de la Ciclovía.",
+      "en": "Cycle or walk along the Ciclovía routes.",
+      "pt-BR": "Pedale ou caminhe pelas vias da Ciclovía."
+    },
+    "bike-tour": {
+      "es": "Explora Bogotá en bicicleta; consulta rutas y condiciones.",
+      "en": "Explore Bogotá by bicycle; check routes and conditions.",
+      "pt-BR": "Explore Bogotá de bicicleta; consulte rotas e condições."
+    },
+    "graffiti-bike": {
+      "es": "Descubre arte urbano en un recorrido en bicicleta.",
+      "en": "Discover street art on a bicycle tour.",
+      "pt-BR": "Descubra arte urbana em um passeio de bicicleta."
+    },
+    "cooking": {
+      "es": "Conoce ingredientes y técnicas de la cocina local.",
+      "en": "Discover ingredients and techniques from local cooking.",
+      "pt-BR": "Conheça ingredientes e técnicas da cozinha local."
+    },
+    "cine": {
+      "es": "Consulta la programación de la Cinemateca de Bogotá.",
+      "en": "Check the programme at Bogotá’s Cinematheque.",
+      "pt-BR": "Consulte a programação da Cinemateca de Bogotá."
+    },
+    "arte-urbano": {
+      "es": "Recorre murales y expresiones de arte urbano.",
+      "en": "Explore murals and street art.",
+      "pt-BR": "Explore murais e expressões de arte urbana."
+    },
+    "artes-escenicas": {
+      "es": "Elige una función de teatro, música o danza.",
+      "en": "Choose a theatre, music or dance performance.",
+      "pt-BR": "Escolha uma apresentação de teatro, música ou dança."
+    }
+  },
+  "images": {
+    "plaza": {
+      "path": "assets/media/ed/ed017496074a1107518d23369724dbec58203c86c89234de3b5f19a1f7cfa934.webp",
+      "alt": {
+        "es": "Plaza de Bolívar",
+        "en": "Bolívar Square",
+        "pt-BR": "Praça de Bolívar"
+      },
+      "width": 800,
+      "height": 533,
+      "origin": "ai_generated",
+      "srcset": "/assets/bogota-semirrealista/bogota-plaza-480.webp 480w, /assets/media/ed/ed017496074a1107518d23369724dbec58203c86c89234de3b5f19a1f7cfa934.webp 800w",
+      "sizes": "(max-width:650px) 100vw, (max-width:1050px) 50vw, 33vw"
+    },
+    "candelaria": {
+      "path": "assets/media/bf/bfeb63029c99538283ead0ae17e55ca65ac62e7182b4552914e7c4dbfb711450.webp",
+      "alt": {
+        "es": "La Candelaria y Chorro de Quevedo",
+        "en": "La Candelaria and Chorro de Quevedo",
+        "pt-BR": "La Candelaria e Chorro de Quevedo"
+      },
+      "width": 800,
+      "height": 533,
+      "origin": "ai_generated",
+      "srcset": "/assets/bogota-semirrealista/bogota-candelaria-480.webp 480w, /assets/media/bf/bfeb63029c99538283ead0ae17e55ca65ac62e7182b4552914e7c4dbfb711450.webp 800w",
+      "sizes": "(max-width:650px) 100vw, (max-width:1050px) 50vw, 33vw"
+    },
+    "museo-oro": {
+      "path": "assets/media/a7/a724437585751871c4b908ae556bec58dcf715e003bcdd89e86e2845fa930d54.webp",
+      "alt": {
+        "es": "Museo del Oro",
+        "en": "Gold Museum",
+        "pt-BR": "Museu do Ouro"
+      },
+      "width": 800,
+      "height": 533,
+      "origin": "ai_generated",
+      "srcset": "/assets/bogota-semirrealista/bogota-museo-oro-480.webp 480w, /assets/media/a7/a724437585751871c4b908ae556bec58dcf715e003bcdd89e86e2845fa930d54.webp 800w",
+      "sizes": "(max-width:650px) 100vw, (max-width:1050px) 50vw, 33vw"
+    },
+    "monserrate": {
+      "path": "assets/media/da/da89caf723cc4dc4fec2625880285e05ed4ec2df704b1762a01966787811c6ce.webp",
+      "alt": {
+        "es": "Cerro de Monserrate",
+        "en": "Monserrate Hill",
+        "pt-BR": "Cerro de Monserrate"
+      },
+      "width": 800,
+      "height": 533,
+      "origin": "ai_generated",
+      "srcset": "/assets/bogota-semirrealista/bogota-monserrate-480.webp 480w, /assets/media/da/da89caf723cc4dc4fec2625880285e05ed4ec2df704b1762a01966787811c6ce.webp 800w",
+      "sizes": "(max-width:650px) 100vw, (max-width:1050px) 50vw, 33vw"
+    },
+    "botero": {
+      "path": "assets/media/1d/1da46f73d3401339c45523f67d5e5f0d817e89b07c6f5695cdb8c199930a8246.webp",
+      "alt": {
+        "es": "Museo Botero",
+        "en": "Botero Museum",
+        "pt-BR": "Museu Botero"
+      },
+      "width": 800,
+      "height": 533,
+      "origin": "ai_generated",
+      "srcset": "/assets/bogota-semirrealista/bogota-botero-480.webp 480w, /assets/media/1d/1da46f73d3401339c45523f67d5e5f0d817e89b07c6f5695cdb8c199930a8246.webp 800w",
+      "sizes": "(max-width:650px) 100vw, (max-width:1050px) 50vw, 33vw"
+    },
+    "usaquen": {
+      "path": "assets/media/52/527132204afe1004951c05fd9c12e6b1afccf5eff40749e668622ea8fcee7c8d.webp",
+      "alt": {
+        "es": "Usaquén: plaza, calles y mercado",
+        "en": "Usaquén: square, streets and market",
+        "pt-BR": "Usaquén: praça, ruas e mercado"
+      },
+      "width": 800,
+      "height": 533,
+      "origin": "ai_generated",
+      "srcset": "/assets/bogota-semirrealista/bogota-usaquen-480.webp 480w, /assets/media/52/527132204afe1004951c05fd9c12e6b1afccf5eff40749e668622ea8fcee7c8d.webp 800w",
+      "sizes": "(max-width:650px) 100vw, (max-width:1050px) 50vw, 33vw"
+    },
+    "jardin": {
+      "path": "assets/media/dc/dc722438cc464cbccf05e5717455f2e35a557301683162038ef254ccb87d66bf.webp",
+      "alt": {
+        "es": "Jardín Botánico de Bogotá",
+        "en": "Bogotá Botanical Garden",
+        "pt-BR": "Jardim Botânico de Bogotá"
+      },
+      "width": 800,
+      "height": 533,
+      "origin": "ai_generated",
+      "sizes": "(max-width:650px) 100vw, (max-width:1050px) 50vw, 33vw"
+    },
+    "simon": {
+      "path": "assets/media/b2/b2e71dacb697fc4b2abd3fec58d6113b0c50387bc3e66ca0461282dfd9bafe37.webp",
+      "alt": {
+        "es": "Parque Metropolitano Simón Bolívar",
+        "en": "Simón Bolívar Metropolitan Park",
+        "pt-BR": "Parque Metropolitano Simón Bolívar"
+      },
+      "width": 800,
+      "height": 533,
+      "origin": "ai_generated",
+      "srcset": "/assets/bogota-semirrealista/bogota-simon-480.webp 480w, /assets/media/b2/b2e71dacb697fc4b2abd3fec58d6113b0c50387bc3e66ca0461282dfd9bafe37.webp 800w",
+      "sizes": "(max-width:650px) 100vw, (max-width:1050px) 50vw, 33vw"
+    },
+    "visita-oro": {
+      "path": "assets/bogota-semirrealista/visita-oro-800.webp",
+      "alt": {
+        "es": "Recorrido Museo del Oro",
+        "en": "Gold Museum visit",
+        "pt-BR": "Visita ao Museu do Ouro"
+      },
+      "width": 800,
+      "height": 533,
+      "origin": "ai_generated",
+      "srcset": "/assets/bogota-semirrealista/visita-oro-480.webp 480w, /assets/bogota-semirrealista/visita-oro-800.webp 800w",
+      "sizes": "(max-width:650px) 100vw, (max-width:1050px) 50vw, 33vw"
+    },
+    "mirador": {
+      "path": "assets/bogota-semirrealista/mirador-800.webp",
+      "alt": {
+        "es": "Mirador de Monserrate",
+        "en": "Monserrate viewpoint",
+        "pt-BR": "Mirante de Monserrate"
+      },
+      "width": 800,
+      "height": 533,
+      "origin": "ai_generated",
+      "srcset": "/assets/bogota-semirrealista/mirador-480.webp 480w, /assets/bogota-semirrealista/mirador-800.webp 800w",
+      "sizes": "(max-width:650px) 100vw, (max-width:1050px) 50vw, 33vw"
+    },
+    "ambiente": {
+      "path": "assets/bogota-semirrealista/ambiente-800.webp",
+      "alt": {
+        "es": "Exploración Jardín Botánico",
+        "en": "Botanical Garden discovery",
+        "pt-BR": "Exploração Jardim Botânico"
+      },
+      "width": 800,
+      "height": 533,
+      "origin": "ai_generated",
+      "srcset": "/assets/bogota-semirrealista/ambiente-480.webp 480w, /assets/bogota-semirrealista/ambiente-800.webp 800w",
+      "sizes": "(max-width:650px) 100vw, (max-width:1050px) 50vw, 33vw"
+    },
+    "arte": {
+      "path": "assets/bogota-semirrealista/arte-800.webp",
+      "alt": {
+        "es": "Arte en la Manzana Cultural",
+        "en": "Art in the Cultural Block",
+        "pt-BR": "Arte na Manzana Cultural"
+      },
+      "width": 800,
+      "height": 533,
+      "origin": "ai_generated",
+      "srcset": "/assets/bogota-semirrealista/arte-480.webp 480w, /assets/bogota-semirrealista/arte-800.webp 800w",
+      "sizes": "(max-width:650px) 100vw, (max-width:1050px) 50vw, 33vw"
+    },
+    "ciencia": {
+      "path": "assets/media/73/73799576843e8e5866041c69c7378d28a1b278760e7c8821db8e4975b7c08c10.webp",
+      "alt": {
+        "es": "Ciencia interactiva en Maloka",
+        "en": "Interactive science at Maloka",
+        "pt-BR": "Ciência interativa na Maloka"
+      },
+      "width": 800,
+      "height": 533,
+      "origin": "ai_generated",
+      "srcset": "/assets/bogota-semirrealista/ciencia-480.webp 480w, /assets/media/73/73799576843e8e5866041c69c7378d28a1b278760e7c8821db8e4975b7c08c10.webp 800w",
+      "sizes": "(max-width:650px) 100vw, (max-width:1050px) 50vw, 33vw"
+    },
+    "cielo": {
+      "path": "assets/media/5d/5d92496a92b3be15d18db8e091afb1cce3980ec22391be7098cccd80a4098e82.webp",
+      "alt": {
+        "es": "Astronomía en el Planetario",
+        "en": "Astronomy at the Planetarium",
+        "pt-BR": "Astronomia no Planetário"
+      },
+      "width": 800,
+      "height": 533,
+      "origin": "ai_generated",
+      "srcset": "/assets/bogota-semirrealista/cielo-480.webp 480w, /assets/media/5d/5d92496a92b3be15d18db8e091afb1cce3980ec22391be7098cccd80a4098e82.webp 800w",
+      "sizes": "(max-width:650px) 100vw, (max-width:1050px) 50vw, 33vw"
+    },
+    "gastronomia": {
+      "path": "assets/bogota-semirrealista/gastronomia-800.webp",
+      "alt": {
+        "es": "Cocinas de La Perseverancia",
+        "en": "La Perseverancia food stalls",
+        "pt-BR": "Cozinhas de La Perseverancia"
+      },
+      "width": 800,
+      "height": 533,
+      "origin": "ai_generated",
+      "srcset": "/assets/bogota-semirrealista/gastronomia-480.webp 480w, /assets/bogota-semirrealista/gastronomia-800.webp 800w",
+      "sizes": "(max-width:650px) 100vw, (max-width:1050px) 50vw, 33vw"
+    },
+    "mercado": {
+      "path": "assets/bogota-semirrealista/mercado-800.webp",
+      "alt": {
+        "es": "Oficios y mercado en Usaquén",
+        "en": "Crafts and market in Usaquén",
+        "pt-BR": "Artesanato e mercado em Usaquén"
+      },
+      "width": 800,
+      "height": 533,
+      "origin": "ai_generated",
+      "srcset": "/assets/bogota-semirrealista/mercado-480.webp 480w, /assets/bogota-semirrealista/mercado-800.webp 800w",
+      "sizes": "(max-width:650px) 100vw, (max-width:1050px) 50vw, 33vw"
+    },
+    "ciclovia": {
+      "path": "assets/bogota-semirrealista/ciclovia-800.webp",
+      "alt": {
+        "es": "Ciclovía recreativa",
+        "en": "Recreational Ciclovía",
+        "pt-BR": "Ciclovía recreativa"
+      },
+      "width": 800,
+      "height": 533,
+      "origin": "ai_generated",
+      "srcset": "/assets/bogota-semirrealista/ciclovia-480.webp 480w, /assets/bogota-semirrealista/ciclovia-800.webp 800w",
+      "sizes": "(max-width:650px) 100vw, (max-width:1050px) 50vw, 33vw"
+    },
+    "bike-tour": {
+      "path": "assets/bogota-semirrealista/bike-tour-800.webp",
+      "alt": {
+        "es": "Recorrido en bicicleta: Bogotá Bike Tours",
+        "en": "Bicycle tour: Bogotá Bike Tours",
+        "pt-BR": "Passeio de bicicleta: Bogotá Bike Tours"
+      },
+      "width": 800,
+      "height": 533,
+      "origin": "ai_generated",
+      "srcset": "/assets/bogota-semirrealista/bike-tour-480.webp 480w, /assets/bogota-semirrealista/bike-tour-800.webp 800w",
+      "sizes": "(max-width:650px) 100vw, (max-width:1050px) 50vw, 33vw"
+    },
+    "graffiti-bike": {
+      "path": "assets/bogota-semirrealista/graffiti-bike-800.webp",
+      "alt": {
+        "es": "Graffiti Bike Tour: Bogotá Bike Tours",
+        "en": "Graffiti Bike Tour: Bogotá Bike Tours",
+        "pt-BR": "Graffiti Bike Tour: Bogotá Bike Tours"
+      },
+      "width": 800,
+      "height": 533,
+      "origin": "ai_generated",
+      "srcset": "/assets/bogota-semirrealista/graffiti-bike-480.webp 480w, /assets/bogota-semirrealista/graffiti-bike-800.webp 800w",
+      "sizes": "(max-width:650px) 100vw, (max-width:1050px) 50vw, 33vw"
+    },
+    "cooking": {
+      "path": "assets/bogota-semirrealista/cooking-800.webp",
+      "alt": {
+        "es": "Clase de cocina: Bogotá Bike Tours",
+        "en": "Cooking class: Bogotá Bike Tours",
+        "pt-BR": "Aula de cozinha: Bogotá Bike Tours"
+      },
+      "width": 800,
+      "height": 533,
+      "origin": "ai_generated",
+      "srcset": "/assets/bogota-semirrealista/cooking-480.webp 480w, /assets/bogota-semirrealista/cooking-800.webp 800w",
+      "sizes": "(max-width:650px) 100vw, (max-width:1050px) 50vw, 33vw"
+    },
+    "cine": {
+      "path": "assets/bogota-semirrealista/cine-800.webp",
+      "alt": {
+        "es": "Una función de cine",
+        "en": "A film screening",
+        "pt-BR": "Uma sessão de cinema"
+      },
+      "width": 800,
+      "height": 533,
+      "origin": "ai_generated",
+      "srcset": "/assets/bogota-semirrealista/cine-480.webp 480w, /assets/bogota-semirrealista/cine-800.webp 800w",
+      "sizes": "(max-width:650px) 100vw, (max-width:1050px) 50vw, 33vw"
+    },
+    "arte-urbano": {
+      "path": "assets/bogota-semirrealista/arte-urbano-800.webp",
+      "alt": {
+        "es": "Paseo de arte urbano",
+        "en": "Urban art walk",
+        "pt-BR": "Passeio de arte urbana"
+      },
+      "width": 800,
+      "height": 533,
+      "origin": "ai_generated",
+      "srcset": "/assets/bogota-semirrealista/arte-urbano-480.webp 480w, /assets/bogota-semirrealista/arte-urbano-800.webp 800w",
+      "sizes": "(max-width:650px) 100vw, (max-width:1050px) 50vw, 33vw"
+    },
+    "artes-escenicas": {
+      "path": "assets/bogota-semirrealista/artes-escenicas-800.webp",
+      "alt": {
+        "es": "Una función de artes escénicas",
+        "en": "A performing arts event",
+        "pt-BR": "Uma apresentação de artes cênicas"
+      },
+      "width": 800,
+      "height": 533,
+      "origin": "ai_generated",
+      "srcset": "/assets/bogota-semirrealista/artes-escenicas-480.webp 480w, /assets/bogota-semirrealista/artes-escenicas-800.webp 800w",
+      "sizes": "(max-width:650px) 100vw, (max-width:1050px) 50vw, 33vw"
+    }
+  },
+  "hero": {
+    "path": "assets/media/ce/ce3694ebfe583500db04ac97e1bfa0d021bc60f4e2ea5dea417703453cc08236.webp",
+    "alt": {
+      "es": "Bogotá · Torre Colpatria",
+      "en": "Bogotá · Torre Colpatria",
+      "pt-BR": "Bogotá · Torre Colpatria"
+    },
+    "width": 1200,
+    "height": 800,
+    "origin": "ai_generated",
+    "srcset": "/assets/bogota-semirrealista/portada-v4-640.webp 640w, /assets/media/ce/ce3694ebfe583500db04ac97e1bfa0d021bc60f4e2ea5dea417703453cc08236.webp 1200w",
+    "sizes": "(max-width:760px) 100vw, 55vw"
+  },
+  "provenance": {
+    "migration": "Existing browser transformations moved to initial server HTML; no new content or media authorization",
+    "base": "f26842de",
+    "source_scripts": [
+      "bogota-compacta.js"
+    ]
+  }
+}

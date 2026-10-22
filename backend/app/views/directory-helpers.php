@@ -40,3 +40,39 @@ function businessInitials(string $name): string {
     $initials=implode('', $letters);
     return function_exists('mb_strtoupper')?mb_strtoupper($initials,'UTF-8'):strtoupper($initials);
 }
+
+function directoryIcon(string $kind,bool $category=false):string {
+    static $icons;
+    $icons??=json_decode(file_get_contents(dirname(__DIR__).'/presentation/directory-icons.json'),true,32,JSON_THROW_ON_ERROR);
+    $path=$category?($icons['categoryIcons'][$kind]??$icons['categoryIcons']['otro']):($icons['icons'][$kind]??$icons['icons']['page']);
+    return '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">'.$path.'</svg>';
+}
+function directoryActions(array $business,array $contacts,string $locale,?string $pageUrl=null):string {
+    if($business['plan_code']==='free')return '';
+    $links=[];$seen=[];
+    $map=trim((string)($business['location_map_url']??''));
+    if($map===''&&($business['latitude']??null)!==null&&($business['longitude']??null)!==null)$map='https://www.google.com/maps/search/?api=1&query='.rawurlencode($business['latitude'].','.$business['longitude']);
+    if($map===''&&trim((string)($business['address_text']??''))!=='')$map='https://www.google.com/maps/search/?api=1&query='.rawurlencode($business['address_text'].' '.($business['location_reference']??''));
+    if($map!==''&&!str_starts_with($map,'#')&&(!filter_var($map,FILTER_VALIDATE_URL)||!in_array(parse_url($map,PHP_URL_SCHEME),['http','https'],true)))$map='';
+    if($map!=='')$links[]=['href'=>$map,'kind'=>'map','label'=>$locale==='en'?'Find on map':($locale==='pt-BR'?'Ver localização':'Ver ubicación')];
+    foreach(BusinessContactVisibility::filter($business['plan_code'],$contacts) as $contact){
+        $channel=$contact['channel'];if(isset($seen[$channel]))continue;$url=contactHref($contact);if(!$url)continue;$seen[$channel]=true;
+        $links[]=['href'=>$url,'kind'=>in_array($channel,['phone','phone_fixed'],true)?'phone':$channel,'label'=>BusinessContactVisibility::label($channel,$locale)];
+    }
+    if($pageUrl)$links[]=['href'=>$pageUrl,'kind'=>'page','label'=>$locale==='en'?'Open business page':($locale==='pt-BR'?'Abrir página do negócio':'Ver página del negocio')];
+    $html='';foreach($links as $link)$html.='<a class="directory-icon-action" href="'.e($link['href']).'" aria-label="'.e($link['label']).'" title="'.e($link['label']).'"'.(str_starts_with($link['href'],'http')?' target="_blank" rel="noopener noreferrer"':'').'>'.directoryIcon($link['kind']).'</a>';
+    return $html?'<nav class="directory-icon-actions" aria-label="'.e($locale==='en'?'Business actions':($locale==='pt-BR'?'Ações do negócio':'Acciones del negocio')).'">'.$html.'</nav>':'';
+}
+
+function destinationRelation(string $destination,string $kind,string $slug,string $locale,array $places):array {
+    if($destination!=='zipaquira')return [];
+    $slugs=array_column($places,'slug');if(!in_array('estacion-tren',$slugs,true)||!in_array('tren-sabana',$slugs,true))return [];
+    $labels=match($locale){'en'=>['See the train experience','See the arrival station'],'pt-BR'=>['Ver a experiência de trem','Ver a estação de chegada'],default=>['Ver la experiencia del tren','Ver la estación de llegada']};
+    if($kind==='place'&&$slug==='estacion-tren')return ['id'=>'lugar-estacion-tren','target'=>'experiencia-tren-sabana','label'=>$labels[0]];
+    if($kind==='experience'&&$slug==='tren-sabana')return ['id'=>'experiencia-tren-sabana','target'=>'lugar-estacion-tren','label'=>$labels[1]];
+    return [];
+}
+function destinationRelationLink(array $relation):string {
+    if(!$relation)return '';
+    return '<a class="text-link place-relation-link" data-place-relation href="#'.e($relation['target']).'">'.e($relation['label']).'</a>';
+}
