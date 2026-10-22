@@ -1,0 +1,1580 @@
+{
+  "reviewed_at": "2026-10-22",
+  "general": {
+    "bogota": "https://maps.app.goo.gl/H2Up6io1sgm4YYun8",
+    "cartagena": "https://maps.app.goo.gl/M3an6c6ovfqBZNi86",
+    "covenas": "https://maps.app.goo.gl/bVLisS7tjUNJrzJ67",
+    "jardin": "https://maps.app.goo.gl/UBeNC8ni6eaTjKiE7",
+    "jerico": "https://maps.app.goo.gl/Vq8sMutBhjTtQih2A",
+    "medellin": "https://maps.app.goo.gl/i92W4tRr5rpB7LRy5",
+    "santa-fe-de-antioquia": "https://maps.app.goo.gl/w3UzP9cqPZZ4rpC26",
+    "santa-marta": "https://maps.app.goo.gl/22C3q3Uqm4PR4VFU8",
+    "zipaquira": "https://maps.app.goo.gl/XbNd414z2h33mk9A6",
+    "guatape": "https://maps.app.goo.gl/1bTAJSVxc6nQzZZ47",
+    "cauca-viejo": "https://maps.app.goo.gl/qxTo2uFTUo2HeioX9",
+    "cocorna": "https://maps.app.goo.gl/3rVc3jG7G4LYxeXr8",
+    "arboletes": "https://maps.app.goo.gl/MK7x14FdeQh5foUz6"
+  },
+  "places": [
+    {
+      "destination": "bogota",
+      "slug": "plaza",
+      "type": "place",
+      "name": "Plaza de Bolívar",
+      "url": "https://maps.app.goo.gl/Qfb57uSVFGy1tFi46",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Plaza%20de%20Bol%C3%ADvar%2C%20Bogot%C3%A1%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Plaza%20de%20Bol%C3%ADvar%2C%20Bogot%C3%A1%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Plaza%20de%20Bol%C3%ADvar%2C%20Bogot%C3%A1%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 4.5981898,
+        "longitude": -74.076053
+      },
+      "note": ""
+    },
+    {
+      "destination": "bogota",
+      "slug": "candelaria",
+      "type": "place",
+      "name": "La Candelaria y Chorro de Quevedo",
+      "url": "https://maps.app.goo.gl/7kQYSbNCDwCXq1g37",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=La%20Candelaria%20y%20Chorro%20de%20Quevedo%2C%20Bogot%C3%A1%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=La%20Candelaria%20y%20Chorro%20de%20Quevedo%2C%20Bogot%C3%A1%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=La%20Candelaria%20y%20Chorro%20de%20Quevedo%2C%20Bogot%C3%A1%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 4.5971962,
+        "longitude": -74.0697697
+      },
+      "note": "Referencia de la zona: Plazoleta del Chorro de Quevedo."
+    },
+    {
+      "destination": "bogota",
+      "slug": "museo-oro",
+      "type": "place",
+      "name": "Museo del Oro",
+      "url": "https://maps.app.goo.gl/avJ4iDoAsVebZ3zz5",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Museo%20del%20Oro%2C%20Bogot%C3%A1%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Museo%20del%20Oro%2C%20Bogot%C3%A1%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Museo%20del%20Oro%2C%20Bogot%C3%A1%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 4.6019128,
+        "longitude": -74.0720411
+      },
+      "note": ""
+    },
+    {
+      "destination": "bogota",
+      "slug": "monserrate",
+      "type": "place",
+      "name": "Cerro de Monserrate",
+      "url": "https://maps.app.goo.gl/woGjB9kH6ezDUx2r7",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Cerro%20de%20Monserrate%2C%20Bogot%C3%A1%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Cerro%20de%20Monserrate%2C%20Bogot%C3%A1%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Cerro%20de%20Monserrate%2C%20Bogot%C3%A1%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 4.6029929,
+        "longitude": -74.0610058
+      },
+      "note": "Acceso inferior del funicular y teleférico. Sustituye el punto anterior en la montaña; no es el santuario de la cima."
+    },
+    {
+      "destination": "bogota",
+      "slug": "botero",
+      "type": "place",
+      "name": "Museo Botero",
+      "url": "https://maps.app.goo.gl/XGoazexbcuAGhVo79",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Museo%20Botero%2C%20Bogot%C3%A1%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Museo%20Botero%2C%20Bogot%C3%A1%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Museo%20Botero%2C%20Bogot%C3%A1%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 4.596698,
+        "longitude": -74.0733503
+      },
+      "note": ""
+    },
+    {
+      "destination": "bogota",
+      "slug": "usaquen",
+      "type": "place",
+      "name": "Usaquén: plaza, calles y mercado",
+      "url": "https://maps.app.goo.gl/zfUT8i7bdQj33rh69",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Usaqu%C3%A9n%3A%20plaza%2C%20calles%20y%20mercado%2C%20Bogot%C3%A1%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Usaqu%C3%A9n%3A%20plaza%2C%20calles%20y%20mercado%2C%20Bogot%C3%A1%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Usaqu%C3%A9n%3A%20plaza%2C%20calles%20y%20mercado%2C%20Bogot%C3%A1%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 4.695047,
+        "longitude": -74.0309429
+      },
+      "note": "Referencia de la zona: Parque Fundacional, no centro comercial ni plaza de mercado."
+    },
+    {
+      "destination": "bogota",
+      "slug": "jardin",
+      "type": "place",
+      "name": "Jardín Botánico de Bogotá",
+      "url": "https://maps.app.goo.gl/5n395NJssaWeArsy5",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Jard%C3%ADn%20Bot%C3%A1nico%20de%20Bogot%C3%A1%2C%20Bogot%C3%A1%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Jard%C3%ADn%20Bot%C3%A1nico%20de%20Bogot%C3%A1%2C%20Bogot%C3%A1%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Jard%C3%ADn%20Bot%C3%A1nico%20de%20Bogot%C3%A1%2C%20Bogot%C3%A1%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 4.6684395,
+        "longitude": -74.097356
+      },
+      "note": ""
+    },
+    {
+      "destination": "bogota",
+      "slug": "simon",
+      "type": "place",
+      "name": "Parque Metropolitano Simón Bolívar",
+      "url": "https://maps.app.goo.gl/kNGWC9fK6UtEugzn7",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Parque%20Metropolitano%20Sim%C3%B3n%20Bol%C3%ADvar%2C%20Bogot%C3%A1%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Parque%20Metropolitano%20Sim%C3%B3n%20Bol%C3%ADvar%2C%20Bogot%C3%A1%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Parque%20Metropolitano%20Sim%C3%B3n%20Bol%C3%ADvar%2C%20Bogot%C3%A1%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 4.6590823,
+        "longitude": -74.093314
+      },
+      "note": ""
+    },
+    {
+      "destination": "bogota",
+      "slug": "cielo",
+      "type": "place",
+      "name": "Planetario de Bogotá",
+      "url": "https://maps.app.goo.gl/c8nMtj9yeNo2jNwo9",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Planetario+de+Bogota",
+        "es": "https://www.google.com/maps/search/?api=1&query=Planetario+de+Bogota",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Planetario+de+Bogota"
+      },
+      "coordinates": {
+        "latitude": 4.6121172,
+        "longitude": -74.068918
+      },
+      "note": ""
+    },
+    {
+      "destination": "bogota",
+      "slug": "ciencia",
+      "type": "experience",
+      "name": "Ciencia interactiva en Maloka",
+      "url": "https://maps.app.goo.gl/3i9uPKMKGS2MLGn2A",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Interactive%20science%20at%20Maloka%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Ciencia%20interactiva%20en%20Maloka%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Ci%C3%AAncia%20interativa%20na%20Maloka%2C%20Bogot%C3%A1%2C%20Bogot%C3%A1%20D.C.%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 4.6548818,
+        "longitude": -74.1093989
+      },
+      "note": ""
+    },
+    {
+      "destination": "cartagena",
+      "slug": "centro-historico",
+      "type": "place",
+      "name": "Centro histórico y murallas",
+      "url": "https://maps.app.goo.gl/iuj6W3fPNZNVT3J76",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Historic%20centre%20and%20city%20walls%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20y%20murallas%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20e%20muralhas%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 10.4229787,
+        "longitude": -75.5492183
+      },
+      "note": "Referencia del centro histórico: Torre del Reloj."
+    },
+    {
+      "destination": "cartagena",
+      "slug": "san-felipe",
+      "type": "place",
+      "name": "Castillo de San Felipe de Barajas",
+      "url": "https://maps.app.goo.gl/fJ6rN6YBmdGwpN2g6",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=San%20Felipe%20de%20Barajas%20Castle%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Castillo%20de%20San%20Felipe%20de%20Barajas%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Castelo%20de%20San%20Felipe%20de%20Barajas%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 10.4225232,
+        "longitude": -75.5392887
+      },
+      "note": ""
+    },
+    {
+      "destination": "cartagena",
+      "slug": "getsemani",
+      "type": "place",
+      "name": "Getsemaní",
+      "url": "https://maps.app.goo.gl/zvurVpBEW11YNS9r5",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Getseman%C3%AD%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Getseman%C3%AD%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Getseman%C3%AD%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 10.4199938,
+        "longitude": -75.5458657
+      },
+      "note": ""
+    },
+    {
+      "destination": "cartagena",
+      "slug": "playa-blanca-baru",
+      "type": "place",
+      "name": "Playa Blanca · Barú",
+      "url": "https://maps.app.goo.gl/3ksnSy5B14zUcdKi7",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Playa%20Blanca%20%C2%B7%20Bar%C3%BA%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Playa%20Blanca%20%C2%B7%20Bar%C3%BA%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Playa%20Blanca%20%C2%B7%20Bar%C3%BA%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 10.2173459,
+        "longitude": -75.613352
+      },
+      "note": ""
+    },
+    {
+      "destination": "cartagena",
+      "slug": "cerro-popa",
+      "type": "place",
+      "name": "Cerro y convento de La Popa",
+      "url": "https://maps.app.goo.gl/mn5BZV8DN6kzj9q47",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=La%20Popa%20hill%20and%20convent%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Cerro%20y%20convento%20de%20La%20Popa%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Colina%20e%20convento%20de%20La%20Popa%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 10.4191591,
+        "longitude": -75.5255469
+      },
+      "note": ""
+    },
+    {
+      "destination": "cartagena",
+      "slug": "san-pedro-claver",
+      "type": "place",
+      "name": "Santuario y Museo San Pedro Claver",
+      "url": "https://maps.app.goo.gl/mxn5c8NiMXHBxH1G8",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=San%20Pedro%20Claver%20sanctuary%20and%20museum%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Santuario%20y%20Museo%20San%20Pedro%20Claver%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Santu%C3%A1rio%20e%20Museu%20San%20Pedro%20Claver%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 10.4217511,
+        "longitude": -75.5510213
+      },
+      "note": ""
+    },
+    {
+      "destination": "cartagena",
+      "slug": "bocagrande",
+      "type": "place",
+      "name": "Bocagrande",
+      "url": "https://maps.app.goo.gl/ygFH9JPk9nAQ7ghR9",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Bocagrande%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Bocagrande%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Bocagrande%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 10.4101185,
+        "longitude": -75.5505696
+      },
+      "note": ""
+    },
+    {
+      "destination": "cartagena",
+      "slug": "visita-muhca",
+      "type": "experience",
+      "name": "Visitar el Museo Histórico",
+      "url": "https://maps.app.goo.gl/rywM2k42tpQ9xwDy5",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Visit%20the%20History%20Museum%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Visitar%20el%20Museo%20Hist%C3%B3rico%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Visitar%20o%20Museu%20Hist%C3%B3rico%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 10.4231599,
+        "longitude": -75.5515244
+      },
+      "note": ""
+    },
+    {
+      "destination": "cartagena",
+      "slug": "bus-panoramico",
+      "type": "experience",
+      "name": "Recorrer la ciudad en bus turístico",
+      "url": "",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Explore%20the%20city%20by%20sightseeing%20bus%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Recorrer%20la%20ciudad%20en%20bus%20tur%C3%ADstico%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Explorar%20a%20cidade%20em%20%C3%B4nibus%20tur%C3%ADstico%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia"
+      },
+      "coordinates": null,
+      "note": "Actividad sin lugar fijo. No sustituir por búsquedas ni agencias."
+    },
+    {
+      "destination": "cartagena",
+      "slug": "buceo-rosario",
+      "type": "experience",
+      "name": "Bucear en las Islas del Rosario",
+      "url": "",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Scuba%20dive%20in%20the%20Rosario%20Islands%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Bucear%20en%20las%20Islas%20del%20Rosario%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Mergulhar%20nas%20Ilhas%20do%20Ros%C3%A1rio%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia"
+      },
+      "coordinates": null,
+      "note": "Actividad sin lugar fijo. No sustituir por búsquedas ni agencias."
+    },
+    {
+      "destination": "cartagena",
+      "slug": "catamaran-cartagena",
+      "type": "experience",
+      "name": "Navegar en catamarán",
+      "url": "",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Sail%20on%20a%20catamaran%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Navegar%20en%20catamar%C3%A1n%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Navegar%20de%20catamar%C3%A3%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia"
+      },
+      "coordinates": null,
+      "note": "Actividad sin lugar fijo. No sustituir por búsquedas ni agencias."
+    },
+    {
+      "destination": "cartagena",
+      "slug": "pesca-boquilla",
+      "type": "experience",
+      "name": "Conocer manglares y pesca tradicional en La Boquilla",
+      "url": "",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Discover%20mangroves%20and%20traditional%20fishing%20in%20La%20Boquilla%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Conocer%20manglares%20y%20pesca%20tradicional%20en%20La%20Boquilla%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Conhecer%20manguezais%20e%20pesca%20tradicional%20em%20La%20Boquilla%2C%20Cartagena%20de%20Indias%2C%20Bol%C3%ADvar%2C%20Colombia"
+      },
+      "coordinates": null,
+      "note": "Actividad sin lugar fijo. No sustituir por búsquedas ni agencias."
+    },
+    {
+      "destination": "covenas",
+      "slug": "primera-ensenada",
+      "type": "place",
+      "name": "Primera Ensenada",
+      "url": "https://maps.app.goo.gl/TMaR9EjUAHAisa4t9",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Primera%20Ensenada%20Cove%C3%B1as%20Sucre%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Primera%20Ensenada%20Cove%C3%B1as%20Sucre%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Primera%20Ensenada%20Cove%C3%B1as%20Sucre%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 9.4063663,
+        "longitude": -75.6698155
+      },
+      "note": ""
+    },
+    {
+      "destination": "covenas",
+      "slug": "segunda-ensenada",
+      "type": "place",
+      "name": "Segunda Ensenada y malecón",
+      "url": "https://maps.app.goo.gl/oDyaVqKF79ss7ZoP7",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Segunda%20Ensenada%20y%20malec%C3%B3n%20Cove%C3%B1as%20Sucre%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Segunda%20Ensenada%20y%20malec%C3%B3n%20Cove%C3%B1as%20Sucre%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Segunda%20Ensenada%20y%20malec%C3%B3n%20Cove%C3%B1as%20Sucre%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 9.4243808,
+        "longitude": -75.6401181
+      },
+      "note": ""
+    },
+    {
+      "destination": "covenas",
+      "slug": "cienaga-la-caimanera",
+      "type": "place",
+      "name": "Ciénaga La Caimanera",
+      "url": "https://maps.app.goo.gl/vXcWc18RP4aodqH69",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Ci%C3%A9naga%20La%20Caimanera%20Cove%C3%B1as%20Sucre%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Ci%C3%A9naga%20La%20Caimanera%20Cove%C3%B1as%20Sucre%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Ci%C3%A9naga%20La%20Caimanera%20Cove%C3%B1as%20Sucre%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 9.4356713,
+        "longitude": -75.6285919
+      },
+      "note": ""
+    },
+    {
+      "destination": "covenas",
+      "slug": "museo-infanteria-marina",
+      "type": "place",
+      "name": "Museo de Infantería de Marina",
+      "url": "https://maps.app.goo.gl/bqiRYv2XPaYQ5AE49",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Museo%20de%20Infanter%C3%ADa%20de%20Marina%20Cove%C3%B1as%20Sucre%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Museo%20de%20Infanter%C3%ADa%20de%20Marina%20Cove%C3%B1as%20Sucre%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Museo%20de%20Infanter%C3%ADa%20de%20Marina%20Cove%C3%B1as%20Sucre%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 9.4071569,
+        "longitude": -75.6881582
+      },
+      "note": ""
+    },
+    {
+      "destination": "covenas",
+      "slug": "la-coquerita",
+      "type": "place",
+      "name": "La Coquerita",
+      "url": "https://maps.app.goo.gl/5EGYsy2NuryE4kAa7",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=La%20Coquerita%20Cove%C3%B1as%20Sucre%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=La%20Coquerita%20Cove%C3%B1as%20Sucre%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=La%20Coquerita%20Cove%C3%B1as%20Sucre%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 9.4038977,
+        "longitude": -75.6793451
+      },
+      "note": ""
+    },
+    {
+      "destination": "covenas",
+      "slug": "recorrido-manglar",
+      "type": "experience",
+      "name": "Recorrido por manglares",
+      "url": "",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Mangrove%20tour%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Recorrido%20por%20manglares%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Passeio%20pelo%20manguezal%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia"
+      },
+      "coordinates": null,
+      "note": "Actividad sin lugar fijo. No sustituir por búsquedas ni agencias."
+    },
+    {
+      "destination": "covenas",
+      "slug": "buceo",
+      "type": "experience",
+      "name": "Buceo",
+      "url": "",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Scuba%20diving%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Buceo%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Mergulho%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia"
+      },
+      "coordinates": null,
+      "note": "Actividad sin lugar fijo. No sustituir por búsquedas ni agencias."
+    },
+    {
+      "destination": "covenas",
+      "slug": "paddleboarding",
+      "type": "experience",
+      "name": "Paddleboarding",
+      "url": "",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Paddleboarding%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Paddleboarding%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Stand%20up%20paddle%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia"
+      },
+      "coordinates": null,
+      "note": "Actividad sin lugar fijo. No sustituir por búsquedas ni agencias."
+    },
+    {
+      "destination": "covenas",
+      "slug": "excursion-san-bernardo",
+      "type": "experience",
+      "name": "Excursión a las islas de San Bernardo",
+      "url": "",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=San%20Bernardo%20Islands%20excursion%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Excursi%C3%B3n%20a%20las%20islas%20de%20San%20Bernardo%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Passeio%20%C3%A0s%20ilhas%20de%20San%20Bernardo%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia"
+      },
+      "coordinates": null,
+      "note": "Actividad sin lugar fijo. No sustituir por búsquedas ni agencias."
+    },
+    {
+      "destination": "covenas",
+      "slug": "excursion-cispata",
+      "type": "experience",
+      "name": "Excursión a Cispatá",
+      "url": "",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Cispat%C3%A1%20excursion%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Excursi%C3%B3n%20a%20Cispat%C3%A1%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Passeio%20a%20Cispat%C3%A1%2C%20Cove%C3%B1as%2C%20Sucre%2C%20Colombia"
+      },
+      "coordinates": null,
+      "note": "Actividad sin lugar fijo. No sustituir por búsquedas ni agencias."
+    },
+    {
+      "destination": "jardin",
+      "slug": "parque-el-libertador",
+      "type": "place",
+      "name": "Parque El Libertador",
+      "url": "https://maps.app.goo.gl/DtXSEQZp78kqerdz5",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=El%20Libertador%20Square%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Parque%20El%20Libertador%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20El%20Libertador%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 5.5990787,
+        "longitude": -75.8193688
+      },
+      "note": ""
+    },
+    {
+      "destination": "jardin",
+      "slug": "basilica-inmaculada-concepcion",
+      "type": "place",
+      "name": "Basílica de la Inmaculada Concepción",
+      "url": "https://maps.app.goo.gl/sHTedoBM9zBSwsoA8",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Basilica%20of%20the%20Immaculate%20Conception%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Bas%C3%ADlica%20de%20la%20Inmaculada%20Concepci%C3%B3n%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Bas%C3%ADlica%20da%20Imaculada%20Concei%C3%A7%C3%A3o%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 5.5988621,
+        "longitude": -75.8188086
+      },
+      "note": ""
+    },
+    {
+      "destination": "jardin",
+      "slug": "cueva-del-esplendor",
+      "type": "place",
+      "name": "Cueva del Esplendor",
+      "url": "https://maps.app.goo.gl/HKSUueyKsYyapDn96",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Cueva%20del%20Esplendor%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Cueva%20del%20Esplendor%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Cueva%20del%20Esplendor%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 5.64254,
+        "longitude": -75.8080593
+      },
+      "note": "Ficha del atractivo; no equivale a acceso vehicular hasta la cueva."
+    },
+    {
+      "destination": "jardin",
+      "slug": "reserva-jardin-de-rocas",
+      "type": "place",
+      "name": "Reserva Jardín de Rocas",
+      "url": "https://maps.app.goo.gl/ZTx8jyjfnXRskjxF8",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Jard%C3%ADn%20de%20Rocas%20Reserve%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Reserva%20Jard%C3%ADn%20de%20Rocas%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Reserva%20Jard%C3%ADn%20de%20Rocas%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 5.5963916,
+        "longitude": -75.8213404
+      },
+      "note": ""
+    },
+    {
+      "destination": "jardin",
+      "slug": "la-garrucha",
+      "type": "place",
+      "name": "La Garrucha",
+      "url": "https://maps.app.goo.gl/cHKhCAdHW7qehRSa7",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=La%20Garrucha%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=La%20Garrucha%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=La%20Garrucha%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 5.5940532,
+        "longitude": -75.8189691
+      },
+      "note": ""
+    },
+    {
+      "destination": "jardin",
+      "slug": "camino-de-la-herrera",
+      "type": "place",
+      "name": "Camino de la Herrera",
+      "url": "https://maps.app.goo.gl/9KEUZMAbqP2MNtFo9",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=La%20Herrera%20Path%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Camino%20de%20la%20Herrera%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Caminho%20de%20La%20Herrera%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 5.59663,
+        "longitude": -75.816939
+      },
+      "note": ""
+    },
+    {
+      "destination": "jardin",
+      "slug": "casa-museo-clara-rojas",
+      "type": "place",
+      "name": "Casa Museo Clara Rojas Peláez",
+      "url": "https://maps.app.goo.gl/u6bxxcpALPSFA9ZT6",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Clara%20Rojas%20Pel%C3%A1ez%20House%20Museum%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Casa%20Museo%20Clara%20Rojas%20Pel%C3%A1ez%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Casa%20Museu%20Clara%20Rojas%20Pel%C3%A1ez%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 5.5986193,
+        "longitude": -75.8194956
+      },
+      "note": ""
+    },
+    {
+      "destination": "jardin",
+      "slug": "reserva-loro-orejiamarillo",
+      "type": "place",
+      "name": "Reserva ProAves Loro Orejiamarillo",
+      "url": "https://maps.app.goo.gl/EFPUqjZFLRzyzYvL8",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=ProAves%20Yellow-eared%20Parrot%20Reserve%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Reserva%20ProAves%20Loro%20Orejiamarillo%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Reserva%20ProAves%20Loro%20Orejiamarillo%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 5.5395625,
+        "longitude": -75.8035625
+      },
+      "note": ""
+    },
+    {
+      "destination": "jardin",
+      "slug": "cafe-en-finca",
+      "type": "experience",
+      "name": "Tour cafetero",
+      "url": "",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Coffee%20tour%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Tour%20cafetero%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Tour%20de%20caf%C3%A9%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia"
+      },
+      "coordinates": null,
+      "note": "Actividad sin lugar fijo. No sustituir por búsquedas ni agencias."
+    },
+    {
+      "destination": "jardin",
+      "slug": "observacion-aves",
+      "type": "experience",
+      "name": "Avistamiento de aves",
+      "url": "",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Birdwatching%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Avistamiento%20de%20aves%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Observa%C3%A7%C3%A3o%20de%20aves%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia"
+      },
+      "coordinates": null,
+      "note": "Actividad sin lugar fijo. No sustituir por búsquedas ni agencias."
+    },
+    {
+      "destination": "jardin",
+      "slug": "caminata-cueva",
+      "type": "experience",
+      "name": "Cueva del Esplendor",
+      "url": "https://maps.app.goo.gl/HKSUueyKsYyapDn96",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Cueva%20del%20Esplendor%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Cueva%20del%20Esplendor%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Cueva%20del%20Esplendor%2C%20Jard%C3%ADn%2C%20Antioquia%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 5.64254,
+        "longitude": -75.8080593
+      },
+      "note": "Misma ficha de la Cueva del Esplendor; no equivale a acceso vehicular hasta la cueva."
+    },
+    {
+      "destination": "jerico",
+      "slug": "centro-historico",
+      "type": "place",
+      "name": "Centro histórico",
+      "url": "https://maps.app.goo.gl/SciKatk7pWsipoQ88",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Parque+principal+Jeric%C3%B3+Antioquia+Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Parque+principal+Jeric%C3%B3+Antioquia+Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Parque+principal+Jeric%C3%B3+Antioquia+Colombia"
+      },
+      "coordinates": {
+        "latitude": 5.7914719,
+        "longitude": -75.7862113
+      },
+      "note": ""
+    },
+    {
+      "destination": "jerico",
+      "slug": "cerro-el-salvador",
+      "type": "place",
+      "name": "Cerro El Salvador",
+      "url": "https://maps.app.goo.gl/afqkPSar2cPcuDoH6",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Cerro+El+Salvador+Jeric%C3%B3+Antioquia+Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Cerro+El+Salvador+Jeric%C3%B3+Antioquia+Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Cerro+El+Salvador+Jeric%C3%B3+Antioquia+Colombia"
+      },
+      "coordinates": {
+        "latitude": 5.7940637,
+        "longitude": -75.783975
+      },
+      "note": ""
+    },
+    {
+      "destination": "jerico",
+      "slug": "santuario-de-santa-laura",
+      "type": "place",
+      "name": "Santuario de Santa Laura",
+      "url": "https://maps.app.goo.gl/qChZUBtT33BAsbRs9",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Santuario%20Santa%20Laura%20Jeric%C3%B3%20Antioquia%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Santuario%20Santa%20Laura%20Jeric%C3%B3%20Antioquia%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Santuario%20Santa%20Laura%20Jeric%C3%B3%20Antioquia%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 5.7889201,
+        "longitude": -75.7887775
+      },
+      "note": ""
+    },
+    {
+      "destination": "jerico",
+      "slug": "casa-natal-de-santa-laura",
+      "type": "place",
+      "name": "Casa natal de Santa Laura",
+      "url": "https://maps.app.goo.gl/BdSr9MSEpmoLSjZq6",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Casa+natal+Santa+Laura+Jeric%C3%B3+Antioquia+Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Casa+natal+Santa+Laura+Jeric%C3%B3+Antioquia+Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Casa+natal+Santa+Laura+Jeric%C3%B3+Antioquia+Colombia"
+      },
+      "coordinates": {
+        "latitude": 5.7915359,
+        "longitude": -75.7875863
+      },
+      "note": ""
+    },
+    {
+      "destination": "jerico",
+      "slug": "jardin-botanico-los-balsos",
+      "type": "place",
+      "name": "Jardín Botánico Los Balsos",
+      "url": "https://maps.app.goo.gl/UXJ3LPpZQTuRWk7HA",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Jard%C3%ADn+Bot%C3%A1nico+Los+Balsos+Jeric%C3%B3+Antioquia+Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Jard%C3%ADn+Bot%C3%A1nico+Los+Balsos+Jeric%C3%B3+Antioquia+Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Jard%C3%ADn+Bot%C3%A1nico+Los+Balsos+Jeric%C3%B3+Antioquia+Colombia"
+      },
+      "coordinates": {
+        "latitude": 5.7938982,
+        "longitude": -75.7852377
+      },
+      "note": ""
+    },
+    {
+      "destination": "jerico",
+      "slug": "subida-al-cerro-de-las-nubes",
+      "type": "place",
+      "name": "Subida al Cerro de las Nubes",
+      "url": "https://maps.app.goo.gl/YiCc7R4tksXEc15N7",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Cerro+de+las+Nubes+Jeric%C3%B3+Antioquia+Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Cerro+de+las+Nubes+Jeric%C3%B3+Antioquia+Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Cerro+de+las+Nubes+Jeric%C3%B3+Antioquia+Colombia"
+      },
+      "coordinates": {
+        "latitude": 5.7947455,
+        "longitude": -75.7887648
+      },
+      "note": "Entrada de la Reserva Natural Las Nubes, no la cima del cerro."
+    },
+    {
+      "destination": "jerico",
+      "slug": "chorros-de-quebradona",
+      "type": "place",
+      "name": "Chorros de Quebradona",
+      "url": "https://maps.app.goo.gl/utVxeydrevdxZMSf8",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Chorros+de+Quebradona+Jeric%C3%B3+Antioquia+Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Chorros+de+Quebradona+Jeric%C3%B3+Antioquia+Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Chorros+de+Quebradona+Jeric%C3%B3+Antioquia+Colombia"
+      },
+      "coordinates": {
+        "latitude": 5.7809692,
+        "longitude": -75.7454662
+      },
+      "note": ""
+    },
+    {
+      "destination": "medellin",
+      "slug": "parque-explora",
+      "type": "place",
+      "name": "Parque Explora",
+      "url": "https://maps.app.goo.gl/pFG6na9CSwScXBkSA",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Parque%20Explora%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Parque%20Explora%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Parque%20Explora%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 6.2708025,
+        "longitude": -75.5656966
+      },
+      "note": ""
+    },
+    {
+      "destination": "medellin",
+      "slug": "pueblito-paisa",
+      "type": "place",
+      "name": "Pueblito Paisa / Cerro Nutibara",
+      "url": "https://maps.app.goo.gl/vasHDn6pPcMouQ3Y9",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Pueblito%20Paisa%20%2F%20Cerro%20Nutibara%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Pueblito%20Paisa%20%2F%20Cerro%20Nutibara%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Pueblito%20Paisa%20%2F%20Cerro%20Nutibara%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 6.2361854,
+        "longitude": -75.5802909
+      },
+      "note": ""
+    },
+    {
+      "destination": "medellin",
+      "slug": "jardin-botanico",
+      "type": "place",
+      "name": "Jardín Botánico Joaquín Antonio Uribe",
+      "url": "https://maps.app.goo.gl/bt7RkcP8P6BsTa4n6",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Jard%C3%ADn%20Bot%C3%A1nico%20Joaqu%C3%ADn%20Antonio%20Uribe%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Jard%C3%ADn%20Bot%C3%A1nico%20Joaqu%C3%ADn%20Antonio%20Uribe%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Jard%C3%ADn%20Bot%C3%A1nico%20Joaqu%C3%ADn%20Antonio%20Uribe%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 6.2693605,
+        "longitude": -75.5648496
+      },
+      "note": ""
+    },
+    {
+      "destination": "medellin",
+      "slug": "comuna13",
+      "type": "place",
+      "name": "Comuna 13 / San Javier",
+      "url": "https://maps.app.goo.gl/Q9oSkPqrGh2dV7ta7",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Comuna%2013%20%2F%20San%20Javier%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Comuna%2013%20%2F%20San%20Javier%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Comuna%2013%20%2F%20San%20Javier%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 6.2556509,
+        "longitude": -75.6186265
+      },
+      "note": ""
+    },
+    {
+      "destination": "medellin",
+      "slug": "museo-antioquia",
+      "type": "place",
+      "name": "Museo de Antioquia",
+      "url": "https://maps.app.goo.gl/CCQomiYC8wV3rZKH9",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Museo%20de%20Antioquia%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Museo%20de%20Antioquia%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Museo%20de%20Antioquia%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 6.2523594,
+        "longitude": -75.5688837
+      },
+      "note": ""
+    },
+    {
+      "destination": "medellin",
+      "slug": "arvi",
+      "type": "place",
+      "name": "Parque Arví",
+      "url": "https://maps.app.goo.gl/jGWJdcZ2xWy4LkDK9",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Parque%20Arv%C3%AD%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Parque%20Arv%C3%AD%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Parque%20Arv%C3%AD%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 6.2803712,
+        "longitude": -75.5026504
+      },
+      "note": ""
+    },
+    {
+      "destination": "medellin",
+      "slug": "catedral-metropolitana",
+      "type": "place",
+      "name": "Catedral Basílica Metropolitana",
+      "url": "https://maps.app.goo.gl/VHC5RrrNi4HTCw3D9",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Catedral%20Bas%C3%ADlica%20Metropolitana%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Catedral%20Bas%C3%ADlica%20Metropolitana%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Catedral%20Bas%C3%ADlica%20Metropolitana%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 6.2538508,
+        "longitude": -75.5639283
+      },
+      "note": ""
+    },
+    {
+      "destination": "medellin",
+      "slug": "pies-descalzos",
+      "type": "place",
+      "name": "Parque de los Pies Descalzos",
+      "url": "https://maps.app.goo.gl/CuKhwGMehW1XW66V9",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Parque%20de%20los%20Pies%20Descalzos%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Parque%20de%20los%20Pies%20Descalzos%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Parque%20de%20los%20Pies%20Descalzos%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 6.2446509,
+        "longitude": -75.5772046
+      },
+      "note": ""
+    },
+    {
+      "destination": "medellin",
+      "slug": "planetario-medellin",
+      "type": "place",
+      "name": "Planetario de Medellín",
+      "url": "https://maps.app.goo.gl/knCkKFUNzodVHuZLA",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Planetario+de+Medellin",
+        "es": "https://www.google.com/maps/search/?api=1&query=Planetario+de+Medellin",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Planetario+de+Medellin"
+      },
+      "coordinates": {
+        "latitude": 6.269143,
+        "longitude": -75.5659499
+      },
+      "note": ""
+    },
+    {
+      "destination": "medellin",
+      "slug": "city-comuna13",
+      "type": "experience",
+      "name": "Tour de grafiti y memoria de la Comuna 13",
+      "url": "",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=City%20and%20Comuna%2013%20tour%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Recorrido%20por%20la%20ciudad%20y%20Comuna%2013%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Passeio%20pela%20cidade%20e%20Comuna%2013%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia"
+      },
+      "coordinates": null,
+      "note": "Actividad sin lugar fijo. No sustituir por búsquedas ni agencias."
+    },
+    {
+      "destination": "santa-fe-de-antioquia",
+      "slug": "puente-de-occidente",
+      "type": "place",
+      "name": "Puente de Occidente",
+      "url": "https://maps.app.goo.gl/FEjGrbXJqn9R2dUE8",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Puente%20de%20Occidente%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Puente%20de%20Occidente%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Puente%20de%20Occidente%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 6.5778824,
+        "longitude": -75.7984083
+      },
+      "note": ""
+    },
+    {
+      "destination": "santa-fe-de-antioquia",
+      "slug": "plaza-mayor-simon-bolivar",
+      "type": "place",
+      "name": "Plaza Mayor Simón Bolívar",
+      "url": "https://maps.app.goo.gl/YN7VimhYoKGrtTu6A",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Plaza%20Mayor%20Sim%C3%B3n%20Bol%C3%ADvar%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Plaza%20Mayor%20Sim%C3%B3n%20Bol%C3%ADvar%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Plaza%20Mayor%20Sim%C3%B3n%20Bol%C3%ADvar%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 6.5564099,
+        "longitude": -75.82796
+      },
+      "note": ""
+    },
+    {
+      "destination": "santa-fe-de-antioquia",
+      "slug": "catedral-de-la-inmaculada-concepcion",
+      "type": "place",
+      "name": "Catedral de la Inmaculada Concepción",
+      "url": "https://maps.app.goo.gl/2b1iJ6JT7UoCvhuP7",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Catedral%20de%20la%20Inmaculada%20Concepci%C3%B3n%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Catedral%20de%20la%20Inmaculada%20Concepci%C3%B3n%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Catedral%20de%20la%20Inmaculada%20Concepci%C3%B3n%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 6.5569862,
+        "longitude": -75.8274309
+      },
+      "note": ""
+    },
+    {
+      "destination": "santa-fe-de-antioquia",
+      "slug": "museo-juan-del-corral",
+      "type": "place",
+      "name": "Museo Juan del Corral",
+      "url": "https://maps.app.goo.gl/GcccJzGBsgZJtKiv6",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Museo%20Juan%20del%20Corral%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Museo%20Juan%20del%20Corral%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Museo%20Juan%20del%20Corral%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 6.5578327,
+        "longitude": -75.8276182
+      },
+      "note": ""
+    },
+    {
+      "destination": "santa-fe-de-antioquia",
+      "slug": "iglesia-de-santa-barbara",
+      "type": "place",
+      "name": "Iglesia de Santa Bárbara",
+      "url": "https://maps.app.goo.gl/zMgsmVo8pA4xGJ1A6",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Iglesia%20de%20Santa%20B%C3%A1rbara%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Iglesia%20de%20Santa%20B%C3%A1rbara%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Iglesia%20de%20Santa%20B%C3%A1rbara%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 6.5570506,
+        "longitude": -75.8257501
+      },
+      "note": ""
+    },
+    {
+      "destination": "santa-fe-de-antioquia",
+      "slug": "museo-de-arte-religioso-francisco-cristobal-toro",
+      "type": "place",
+      "name": "Museo de Arte Religioso Francisco Cristóbal Toro",
+      "url": "https://maps.app.goo.gl/ZRGRKtcaLK5WcuGL7",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Museo%20de%20Arte%20Religioso%20Francisco%20Crist%C3%B3bal%20Toro%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Museo%20de%20Arte%20Religioso%20Francisco%20Crist%C3%B3bal%20Toro%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Museo%20de%20Arte%20Religioso%20Francisco%20Crist%C3%B3bal%20Toro%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 6.5571117,
+        "longitude": -75.8260918
+      },
+      "note": ""
+    },
+    {
+      "destination": "santa-fe-de-antioquia",
+      "slug": "plazuela-e-iglesia-de-la-chinca",
+      "type": "place",
+      "name": "Iglesia de La Chinca",
+      "url": "https://maps.app.goo.gl/9sUT9kfj65QUWvpL9",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=La%20Chinca%20Church%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Iglesia%20de%20La%20Chinca%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Igreja%20de%20La%20Chinca%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 6.5584247,
+        "longitude": -75.8299441
+      },
+      "note": ""
+    },
+    {
+      "destination": "santa-fe-de-antioquia",
+      "slug": "conocer-la-filigrana",
+      "type": "experience",
+      "name": "Taller de filigrana",
+      "url": "",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Filigree%20workshop%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Taller%20de%20filigrana%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Oficina%20de%20filigrana%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia"
+      },
+      "coordinates": null,
+      "note": "Actividad sin lugar fijo. No sustituir por búsquedas ni agencias."
+    },
+    {
+      "destination": "santa-fe-de-antioquia",
+      "slug": "cabalgata-rural",
+      "type": "experience",
+      "name": "Cabalgata rural",
+      "url": "",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Guided%20countryside%20horse%20ride%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Cabalgata%20rural%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Cavalgada%20rural%2C%20Santa%20Fe%20de%20Antioquia%2C%20Antioquia%2C%20Colombia"
+      },
+      "coordinates": null,
+      "note": "Actividad sin lugar fijo. No sustituir por búsquedas ni agencias."
+    },
+    {
+      "destination": "santa-marta",
+      "slug": "tayrona",
+      "type": "place",
+      "name": "Parque Tayrona",
+      "url": "https://maps.app.goo.gl/2d5T3CMgVEV6fqDs7",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Tayrona%20National%20Park%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Parque%20Tayrona%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Parque%20Tayrona%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 11.281225,
+        "longitude": -73.914753
+      },
+      "note": "Acceso propuesto: taquilla El Zaino. No representa todos los accesos al parque."
+    },
+    {
+      "destination": "santa-marta",
+      "slug": "ciudad-perdida",
+      "type": "place",
+      "name": "Teyuna · Ciudad Perdida",
+      "url": "https://maps.app.goo.gl/qJBfp6kzrWWrxoJc7",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Teyuna%20%C2%B7%20Lost%20City%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Teyuna%20%C2%B7%20Ciudad%20Perdida%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Teyuna%20%C2%B7%20Cidade%20Perdida%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 11.0381377,
+        "longitude": -73.9252019
+      },
+      "note": "Ficha del sitio arqueológico, no del inicio de la caminata ni de una agencia."
+    },
+    {
+      "destination": "santa-marta",
+      "slug": "minca",
+      "type": "place",
+      "name": "Minca",
+      "url": "https://maps.app.goo.gl/4CWvgv6xABVmeasLA",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Minca%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Minca%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Minca%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 11.142812,
+        "longitude": -74.116677
+      },
+      "note": ""
+    },
+    {
+      "destination": "santa-marta",
+      "slug": "rodadero",
+      "type": "place",
+      "name": "El Rodadero",
+      "url": "https://maps.app.goo.gl/YMusMbB3u6x1xRU78",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=El%20Rodadero%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=El%20Rodadero%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=El%20Rodadero%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 11.2036394,
+        "longitude": -74.2276856
+      },
+      "note": ""
+    },
+    {
+      "destination": "santa-marta",
+      "slug": "quinta",
+      "type": "place",
+      "name": "Quinta de San Pedro Alejandrino",
+      "url": "https://maps.app.goo.gl/UdSVbisZYkBUFbSw7",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Quinta%20de%20San%20Pedro%20Alejandrino%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Quinta%20de%20San%20Pedro%20Alejandrino%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Quinta%20de%20San%20Pedro%20Alejandrino%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 11.228254,
+        "longitude": -74.1774034
+      },
+      "note": ""
+    },
+    {
+      "destination": "santa-marta",
+      "slug": "taganga",
+      "type": "place",
+      "name": "Taganga",
+      "url": "https://maps.app.goo.gl/SrwvL5FGEMM8e2tFA",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Taganga%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Taganga%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Taganga%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 11.26848,
+        "longitude": -74.1895755
+      },
+      "note": ""
+    },
+    {
+      "destination": "santa-marta",
+      "slug": "centro-historico",
+      "type": "place",
+      "name": "Centro histórico",
+      "url": "https://maps.app.goo.gl/Y7iLnZpZX8duXitJ9",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Historic%20centre%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 11.2449887,
+        "longitude": -74.2137717
+      },
+      "note": "Referencia del centro histórico: Plaza de Bolívar."
+    },
+    {
+      "destination": "santa-marta",
+      "slug": "playa-blanca",
+      "type": "place",
+      "name": "Playa Blanca",
+      "url": "https://maps.app.goo.gl/djaZ2yJu2NfNX5Yt8",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Playa%20Blanca%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Playa%20Blanca%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Playa%20Blanca%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 11.2187127,
+        "longitude": -74.2382051
+      },
+      "note": "Playa Blanca de Santa Marta, al norte de El Rodadero; distinta de Playa Grande, Taganga. Ficha geográfica de la playa, no de un operador."
+    },
+    {
+      "destination": "santa-marta",
+      "slug": "buceo-taganga",
+      "type": "experience",
+      "name": "Buceo desde Taganga",
+      "url": "",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Diving%20from%20Taganga%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Buceo%20desde%20Taganga%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Mergulho%20saindo%20de%20Taganga%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia"
+      },
+      "coordinates": null,
+      "note": "Actividad sin lugar fijo. No sustituir por búsquedas ni agencias."
+    },
+    {
+      "destination": "santa-marta",
+      "slug": "caminata-tayrona",
+      "type": "experience",
+      "name": "Caminata por el Tayrona",
+      "url": "https://maps.app.goo.gl/2d5T3CMgVEV6fqDs7",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Hiking%20in%20Tayrona%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Caminata%20por%20el%20Tayrona%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Caminhada%20no%20Tayrona%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 11.281225,
+        "longitude": -73.914753
+      },
+      "note": "Acceso propuesto: taquilla El Zaino; no es un punto de llegada en el interior del parque."
+    },
+    {
+      "destination": "santa-marta",
+      "slug": "minca-cafe",
+      "type": "experience",
+      "name": "Naturaleza y café en Minca",
+      "url": "",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Nature%20and%20coffee%20in%20Minca%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Naturaleza%20y%20caf%C3%A9%20en%20Minca%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Natureza%20e%20caf%C3%A9%20em%20Minca%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia"
+      },
+      "coordinates": null,
+      "note": "Actividad sin lugar fijo. No sustituir por búsquedas ni agencias."
+    },
+    {
+      "destination": "santa-marta",
+      "slug": "recorrido-centro",
+      "type": "experience",
+      "name": "Paseo guiado por el centro",
+      "url": "",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Guided%20historic-centre%20walk%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Paseo%20guiado%20por%20el%20centro%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Passeio%20guiado%20pelo%20centro%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia"
+      },
+      "coordinates": null,
+      "note": "Actividad sin lugar fijo. No sustituir por búsquedas ni agencias."
+    },
+    {
+      "destination": "santa-marta",
+      "slug": "caminata-ciudad-perdida",
+      "type": "experience",
+      "name": "Caminata a Ciudad Perdida",
+      "url": "",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Trek%20to%20Lost%20City%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Caminata%20a%20Ciudad%20Perdida%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Caminhada%20%C3%A0%20Cidade%20Perdida%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia"
+      },
+      "coordinates": null,
+      "note": "Es la experiencia de caminata al mismo sitio Teyuna / Ciudad Perdida. Mantener el mapa solo en la atracción; retirar este enlace duplicado, como en el tren turístico de Zipaquirá."
+    },
+    {
+      "destination": "santa-marta",
+      "slug": "velero-caribe",
+      "type": "experience",
+      "name": "Navegación por el Caribe",
+      "url": "",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Caribbean%20sailing%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Navegaci%C3%B3n%20por%20el%20Caribe%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Navega%C3%A7%C3%A3o%20pelo%20Caribe%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia"
+      },
+      "coordinates": null,
+      "note": "Actividad sin lugar fijo. No sustituir por búsquedas ni agencias."
+    },
+    {
+      "destination": "santa-marta",
+      "slug": "visita-acuario",
+      "type": "experience",
+      "name": "Visita al Centro de Vida Marina",
+      "url": "https://maps.app.goo.gl/H1qE6UHJ8m7gUWGg8",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Visit%20the%20Marine%20Life%20Centre%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Visita%20al%20Centro%20de%20Vida%20Marina%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Visita%20ao%20Centro%20de%20Vida%20Marina%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 11.2173849,
+        "longitude": -74.236958
+      },
+      "note": "Ficha del centro marino. El traslado requiere confirmar acceso por embarcación."
+    },
+    {
+      "destination": "santa-marta",
+      "slug": "excursion-playa-blanca",
+      "type": "experience",
+      "name": "Salida a Playa Blanca",
+      "url": "",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Playa%20Blanca%20outing%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Salida%20a%20Playa%20Blanca%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Passeio%20a%20Playa%20Blanca%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia"
+      },
+      "coordinates": null,
+      "note": "Retirar Cómo llegar de la actividad Salida a Playa Blanca. No enlazar operadores, agencias ni puntos comerciales. La playa como atracción se revisa por separado."
+    },
+    {
+      "destination": "santa-marta",
+      "slug": "moto-acuatica",
+      "type": "experience",
+      "name": "Moto acuática",
+      "url": "",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Personal%20watercraft%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Moto%20acu%C3%A1tica%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Moto%20aqu%C3%A1tica%2C%20Santa%20Marta%2C%20Magdalena%2C%20Colombia"
+      },
+      "coordinates": null,
+      "note": "Actividad sin lugar fijo. No sustituir por búsquedas ni agencias."
+    },
+    {
+      "destination": "zipaquira",
+      "slug": "catedral-de-sal",
+      "type": "place",
+      "name": "Catedral de Sal",
+      "url": "https://maps.app.goo.gl/rQpgLgaaBd7kKa1x7",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Salt%20Cathedral%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Catedral%20de%20Sal%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Catedral%20de%20Sal%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 5.0187,
+        "longitude": -74.0099171
+      },
+      "note": "Ficha del recinto; llegada al acceso peatonal por confirmar."
+    },
+    {
+      "destination": "zipaquira",
+      "slug": "plaza-comuneros",
+      "type": "place",
+      "name": "Plaza de los Comuneros",
+      "url": "https://maps.app.goo.gl/xY92SapHL7BBR7CBA",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Plaza%20de%20los%20Comuneros%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Plaza%20de%20los%20Comuneros%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20dos%20Comuneros%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 5.0233993,
+        "longitude": -74.0039988
+      },
+      "note": ""
+    },
+    {
+      "destination": "zipaquira",
+      "slug": "catedral-diocesana",
+      "type": "place",
+      "name": "Catedral Diocesana",
+      "url": "https://maps.app.goo.gl/DRQ8ZCJmHLbTJ86t5",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Diocesan%20Cathedral%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Catedral%20Diocesana%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Catedral%20Diocesana%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 5.0238464,
+        "longitude": -74.003698
+      },
+      "note": "Se corrigió el enlace aportado 3Aa2F3yVJTx6uVJW7: señalaba otra ficha a aproximadamente 1,4 km. Propuesta: Catedral Diocesana de Zipaquirá, Cl. 5 #7-51, en el centro histórico."
+    },
+    {
+      "destination": "zipaquira",
+      "slug": "estacion-tren",
+      "type": "place",
+      "name": "Estación del Tren",
+      "url": "https://maps.app.goo.gl/Tfw3p7m5bM1h1PA4A",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Railway%20Station%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Estaci%C3%B3n%20del%20Tren%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Esta%C3%A7%C3%A3o%20Ferrovi%C3%A1ria%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 5.0215909,
+        "longitude": -74.0012922
+      },
+      "note": ""
+    },
+    {
+      "destination": "zipaquira",
+      "slug": "colegio-gabo",
+      "type": "place",
+      "name": "El Colegio de Gabo",
+      "url": "https://maps.app.goo.gl/NCphM999k5WJJRKT7",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Gabo%E2%80%99s%20School%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=El%20Colegio%20de%20Gabo%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=O%20Col%C3%A9gio%20de%20Gabo%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 5.0248177,
+        "longitude": -74.0025085
+      },
+      "note": ""
+    },
+    {
+      "destination": "zipaquira",
+      "slug": "museo-quevedo",
+      "type": "place",
+      "name": "Casa Museo Quevedo Zornoza",
+      "url": "https://maps.app.goo.gl/dwadUKnNsBTBvmwF9",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Quevedo%20Zornoza%20House%20Museum%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Casa%20Museo%20Quevedo%20Zornoza%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Casa%20Museu%20Quevedo%20Zornoza%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 5.0223234,
+        "longitude": -74.0044226
+      },
+      "note": "Museo Casa Quevedo Zornoza; no el colegio de nombre parecido."
+    },
+    {
+      "destination": "zipaquira",
+      "slug": "museo-arqueologico",
+      "type": "place",
+      "name": "Museo Arqueológico",
+      "url": "https://maps.app.goo.gl/EjvQ9Y1ZhXrL2kYg6",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Archaeological%20Museum%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Museo%20Arqueol%C3%B3gico%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Museu%20Arqueol%C3%B3gico%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia"
+      },
+      "coordinates": {
+        "latitude": 5.0211196,
+        "longitude": -74.0066972
+      },
+      "note": ""
+    },
+    {
+      "destination": "zipaquira",
+      "slug": "ruta-del-minero",
+      "type": "experience",
+      "name": "Experiencia minera",
+      "url": "",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Mining%20experience%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Experiencia%20minera%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Experi%C3%AAncia%20de%20minera%C3%A7%C3%A3o%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia"
+      },
+      "coordinates": null,
+      "note": "Actividad sin lugar fijo. No sustituir por búsquedas ni agencias."
+    },
+    {
+      "destination": "zipaquira",
+      "slug": "tren-sabana",
+      "type": "experience",
+      "name": "Paseo en tren turístico",
+      "url": "",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Tourist%20train%20ride%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Paseo%20en%20tren%20tur%C3%ADstico%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Passeio%20de%20trem%20tur%C3%ADstico%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia"
+      },
+      "coordinates": null,
+      "note": "Actividad sin lugar fijo. No sustituir por búsquedas ni agencias."
+    },
+    {
+      "destination": "zipaquira",
+      "slug": "recorrido-historico",
+      "type": "experience",
+      "name": "Tour urbano patrimonial",
+      "url": "",
+      "before": {
+        "en": "https://www.google.com/maps/search/?api=1&query=Heritage%20walking%20tour%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+        "es": "https://www.google.com/maps/search/?api=1&query=Tour%20urbano%20patrimonial%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia",
+        "pt-BR": "https://www.google.com/maps/search/?api=1&query=Passeio%20guiado%20pelo%20patrim%C3%B4nio%2C%20Zipaquir%C3%A1%2C%20Cundinamarca%2C%20Colombia"
+      },
+      "coordinates": null,
+      "note": "Actividad sin lugar fijo. No sustituir por búsquedas ni agencias."
+    }
+  ]
+}

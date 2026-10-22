@@ -197,7 +197,7 @@ final class DestinationAdminService
                 if ($clean['translations'][$locale]['external_url']!==''&&$clean['translations'][$locale]['external_label']==='') throw new RuntimeException("Completa el texto del enlace externo en {$locale}.");
             }
                 foreach (self::LOCALES as $locale) {
-                    if ($clean['translations'][$locale]['map_url']==='') {
+                    if ($clean['translations'][$locale]['map_url']==='' && $clean['id']===0 && $poiType==='place') {
                         $query=implode(', ',array_filter([
                             $clean['translations'][$locale]['name'],
                             trim((string)($tr[$locale]['display_name']??$tr['es']['display_name']??'')),
