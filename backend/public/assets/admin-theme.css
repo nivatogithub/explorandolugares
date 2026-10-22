@@ -147,3 +147,7 @@ body.portal-admin .floating-select.is-open .floating-select-arrow{transform:rota
 .portal-admin .admin-payment-settings input[type=checkbox]{width:18px;height:18px;min-height:0;flex:none;margin:0}
 .portal-admin .admin-payment-settings>button{justify-self:start}
 @media(max-width:650px){.portal-admin .admin-payment-settings .destination-form-grid{grid-template-columns:1fr;gap:16px}}
+
+.portal-admin .admin-payment-settings label.registration-consent{display:grid!important;grid-template-columns:18px minmax(0,1fr)!important;align-items:center!important;column-gap:10px!important;row-gap:0!important;width:100%;padding:0!important}
+.portal-admin .admin-payment-settings label.registration-consent>input[type=checkbox]{grid-column:1;grid-row:1;align-self:center;margin:0!important;padding:0!important;position:static!important}
+.portal-admin .admin-payment-settings label.registration-consent>span{grid-column:2;grid-row:1;display:block;margin:0!important;padding:0!important;line-height:1.4;text-align:left}
