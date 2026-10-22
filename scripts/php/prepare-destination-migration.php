@@ -6,7 +6,8 @@ try{
  require $options['migration_root'].'/DestinationSnapshotMigration.php';
  $p=new PDO($config['dsn'],$config['db_user'],$config['db_password'],[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION]);
  $before=[];foreach($p->query('SHOW TABLES')->fetchAll(PDO::FETCH_COLUMN) as $table)if(preg_match('/account|measurement|statistic|payment|subscription|contact|analytics|visit|event|trace|session|tracking|report/',$table))$before[$table]=(int)$p->query('SELECT COUNT(*) FROM `'.$table.'`')->fetchColumn();
- $snapshots=[];foreach(DestinationSnapshotMigration::SLUGS as $slug){$s=json_decode(file_get_contents($options['migration_root'].'/'.$slug.'.json'),true,512,JSON_THROW_ON_ERROR);foreach($s['tables']['business_translations'] as $tr)if(str_contains(mb_strtolower($tr['display_name']),'ficticio'))throw new RuntimeException('Ficha de prueba rechazada');$snapshots[]=$s;}
+ $slugs=$options['slugs']??DestinationSnapshotMigration::SLUGS;if(!$slugs||array_diff($slugs,DestinationSnapshotMigration::SLUGS)||count($slugs)!==count(array_unique($slugs)))throw new RuntimeException('Alcance inválido');
+ $snapshots=[];foreach($slugs as $slug){$s=json_decode(file_get_contents($options['migration_root'].'/'.$slug.'.json'),true,512,JSON_THROW_ON_ERROR);foreach($s['tables']['business_translations'] as $tr)if(str_contains(mb_strtolower($tr['display_name']),'ficticio'))throw new RuntimeException('Ficha de prueba rechazada');$snapshots[]=$s;}
  // Preflight every destination in rollback mode before committing any of them.
  foreach($snapshots as $s)(new DestinationSnapshotMigration($p))->run($s,$options['public_root'],false);
  $reports=[];if(!empty($options['apply']))foreach($snapshots as $s)$reports[]=(new DestinationSnapshotMigration($p))->run($s,$options['public_root'],true);

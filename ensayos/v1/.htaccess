@@ -55,7 +55,14 @@ RewriteRule ^pt-br/destinos/([a-z0-9-]+)(?:/index\.html)?/?$ destino.php?destino
 
 # HTML must revalidate after a deployment; preserve caching for images/assets.
 <IfModule mod_headers.c>
-  <FilesMatch "\.(?:html?|php)$">
+  <FilesMatch "\.html?$">
     Header always set Cache-Control "no-cache, max-age=0, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+# Long caching is limited to explicitly content-versioned public resources.
+<IfModule mod_headers.c>
+  <FilesMatch "\.(?:css|js|json|svg|png|webp|avif|jpe?g|woff2?)$">
+    Header set Cache-Control "public, max-age=31536000, immutable" "expr=%{QUERY_STRING} =~ m#(?:^|&)v=[0-9a-f]{12}(?:&|$)#"
   </FilesMatch>
 </IfModule>

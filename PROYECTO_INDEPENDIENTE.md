@@ -2,6 +2,8 @@
 
 Este documento permite comenzar un proyecto o conversación nueva sin depender del historial de Paradigma Solutions. Es la referencia vigente para la intención de producto y las preferencias del propietario.
 
+> Contexto fundacional: identidad, independencia y alcance siguen vigentes. Las afirmaciones de estado del lanzamiento (precios aún no definidos, ausencia de catálogo/acceso al hosting) son antecedentes, no describen el producto actual. Para decisiones posteriores y reglas vigentes consultar `docs/CONTEXTO_PRODUCTO_Y_HOJA_DE_RUTA.md`, `docs/REGLAS_PROYECTO.md` y el código/paquete verificado; este documento no autoriza retirar funcionalidades implementadas.
+
 ## Identidad y separación
 
 - Negocio y marca: **Explorando Lugares**.

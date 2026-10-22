@@ -1,5 +1,6 @@
 <?php
 declare(strict_types=1);
+header('Cache-Control: no-cache, max-age=0, must-revalidate');
 
 // The package keeps app/ and private/ as siblings of public/, on every host.
 $repositoryCandidates=[dirname(__DIR__).'/app/BusinessRepository.php',dirname(__DIR__,2).'/app/BusinessRepository.php',dirname(__DIR__,2).'/backend/app/BusinessRepository.php',dirname(__DIR__,2).'/explorandolugares/app/BusinessRepository.php'];

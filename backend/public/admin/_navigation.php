@@ -1,5 +1,6 @@
 <?php
 declare(strict_types=1);
+require_once __DIR__.'/_admin-layout.php';
 $adminPath = basename((string)(parse_url($_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH) ?: 'index.php'));
 $adminTab = (string)($_GET['tab'] ?? '');
 $activeAdminItem = match (true) {
@@ -32,9 +33,10 @@ $activeAdminItem = match (true) {
 };
 ?>
 <?php require_once __DIR__.'/_asset.php'; ?><link rel="stylesheet" href="<?=esc(admin_asset('admin-navigation.css'))?>">
-<?php require __DIR__.'/../_account-header.php'; ?>
+
 <aside class="admin-sidebar admin-sidebar-with-system" aria-label="Navegación de administración">
-  <a class="admin-sidebar-brand" href="index.php"><img src="/assets/brand/explorando-lugares-logo-v2-transparent.png" width="76" height="76" alt=""><span>Explorando <strong>Lugares</strong><small>Administración</small></span></a>
+  <a class="admin-sidebar-brand" href="index.php"><img src="<?=esc(PortalPresentation::brandLogo())?>" width="76" height="76" alt=""><span>Explorando <strong>Lugares</strong><small>Administración</small></span></a>
+  <?php admin_layout_account(); ?>
   <details class="admin-nav-disclosure" data-admin-navigation open><summary>Menú de administración</summary><nav>
     <section><h2>Operación</h2>
       <a href="atencion-comercios.php" <?= $activeAdminItem === 'business-attention' ? 'aria-current="page"' : '' ?>>Atención a comercios</a>

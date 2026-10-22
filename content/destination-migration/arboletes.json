@@ -1,0 +1,820 @@
+{
+  "schema": "destination-public-snapshot-v1",
+  "destination": "arboletes",
+  "tables": {
+    "destinations": [
+      {
+        "id": 10004,
+        "slug": "arboletes",
+        "destination_type": "municipality",
+        "country_code": "CO",
+        "department": "Antioquia",
+        "subregion": "Urabá",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 104
+      }
+    ],
+    "destination_translations": [
+      {
+        "destination_id": 10004,
+        "locale": "es",
+        "display_name": "Arboletes",
+        "eyebrow": "Antioquia · Colombia",
+        "headline": "Mar Caribe, volcán de lodo y cultura del Urabá antioqueño.",
+        "intro": "Conoce el volcán de lodo y el litoral de este municipio costero de Antioquia.",
+        "meta_description": "Descubre el volcán de lodo, las playas urbanas y Río Hobo en Arboletes, Antioquia. Prepara tu visita al Caribe del Urabá."
+      },
+      {
+        "destination_id": 10004,
+        "locale": "en",
+        "display_name": "Arboletes",
+        "eyebrow": "Antioquia · Colombia",
+        "headline": "Caribbean coast, mud volcano and the culture of Urabá.",
+        "intro": "Discover the mud volcano and coastline of this seaside municipality in Antioquia.",
+        "meta_description": "Discover the mud volcano, urban beaches and Hobo River in Arboletes, Antioquia. Plan a visit to the Caribbean coast of Urabá."
+      },
+      {
+        "destination_id": 10004,
+        "locale": "pt-BR",
+        "display_name": "Arboletes",
+        "eyebrow": "Antioquia · Colombia",
+        "headline": "Mar do Caribe, vulcão de lama e cultura do Urabá antioquenho.",
+        "intro": "Conheça o vulcão de lama e o litoral deste município costeiro de Antioquia.",
+        "meta_description": "Descubra o vulcão de lama, as praias urbanas e o rio Hobo em Arboletes, Antioquia. Planeje sua visita ao Caribe do Urabá."
+      }
+    ],
+    "destination_story_blocks": [
+      {
+        "id": 1000401,
+        "destination_id": 10004,
+        "display_order": 1,
+        "section_key": "history"
+      }
+    ],
+    "destination_story_translations": [
+      {
+        "story_block_id": 1000401,
+        "locale": "es",
+        "body": "La ganadería, la agricultura y el mar forman parte de la vida de Arboletes. Su volcán de lodo y las tradiciones del Caribe dan identidad a este rincón del Urabá."
+      },
+      {
+        "story_block_id": 1000401,
+        "locale": "en",
+        "body": "Cattle farming, agriculture and the sea are part of daily life in Arboletes. Its mud volcano and Caribbean traditions shape the identity of this corner of Urabá."
+      },
+      {
+        "story_block_id": 1000401,
+        "locale": "pt-BR",
+        "body": "A pecuária, a agricultura e o mar fazem parte da vida de Arboletes. Seu vulcão de lama e as tradições caribenhas dão identidade a este canto do Urabá."
+      }
+    ],
+    "destination_reasons": [
+      {
+        "id": 1000401,
+        "destination_id": 10004,
+        "display_order": 1
+      },
+      {
+        "id": 1000402,
+        "destination_id": 10004,
+        "display_order": 2
+      },
+      {
+        "id": 1000403,
+        "destination_id": 10004,
+        "display_order": 3
+      }
+    ],
+    "destination_reason_translations": [
+      {
+        "reason_id": 1000401,
+        "locale": "es",
+        "body": "Un volcán de lodo junto al Caribe"
+      },
+      {
+        "reason_id": 1000401,
+        "locale": "en",
+        "body": "A mud volcano by the Caribbean"
+      },
+      {
+        "reason_id": 1000401,
+        "locale": "pt-BR",
+        "body": "Um vulcão de lama junto ao Caribe"
+      },
+      {
+        "reason_id": 1000402,
+        "locale": "es",
+        "body": "Paisaje costero del Urabá"
+      },
+      {
+        "reason_id": 1000402,
+        "locale": "en",
+        "body": "The coastline of Urabá"
+      },
+      {
+        "reason_id": 1000402,
+        "locale": "pt-BR",
+        "body": "Paisagem costeira do Urabá"
+      },
+      {
+        "reason_id": 1000403,
+        "locale": "es",
+        "body": "Tradiciones del Caribe antioqueño"
+      },
+      {
+        "reason_id": 1000403,
+        "locale": "en",
+        "body": "Caribbean traditions in Antioquia"
+      },
+      {
+        "reason_id": 1000403,
+        "locale": "pt-BR",
+        "body": "Tradições do Caribe antioquenho"
+      }
+    ],
+    "destination_sources": [],
+    "destination_media": [
+      {
+        "destination_id": 10004,
+        "role": "hero",
+        "media_asset_id": -10026,
+        "display_order": 1
+      }
+    ],
+    "points_of_interest": [
+      {
+        "id": 1000401,
+        "destination_id": 10004,
+        "slug": "volcan-de-lodo",
+        "poi_type": "experience",
+        "publication_status": "published",
+        "latitude": null,
+        "longitude": null,
+        "display_order": 1
+      },
+      {
+        "id": 1000402,
+        "destination_id": 10004,
+        "slug": "playas-urbanas",
+        "poi_type": "place",
+        "publication_status": "published",
+        "latitude": null,
+        "longitude": null,
+        "display_order": 2
+      },
+      {
+        "id": 1000403,
+        "destination_id": 10004,
+        "slug": "desembocadura-rio-hobo",
+        "poi_type": "place",
+        "publication_status": "published",
+        "latitude": null,
+        "longitude": null,
+        "display_order": 3
+      },
+      {
+        "id": 1000404,
+        "destination_id": 10004,
+        "slug": "taller-bullerengue",
+        "poi_type": "experience",
+        "publication_status": "published",
+        "latitude": null,
+        "longitude": null,
+        "display_order": 4
+      },
+      {
+        "id": 1000405,
+        "destination_id": 10004,
+        "slug": "hotel-riviera-del-sol",
+        "poi_type": "place",
+        "publication_status": "published",
+        "latitude": null,
+        "longitude": null,
+        "display_order": 5
+      }
+    ],
+    "point_of_interest_translations": [
+      {
+        "point_of_interest_id": 1000401,
+        "locale": "es",
+        "name": "Volcán de Lodo",
+        "description": "Un fenómeno geológico junto al Caribe, con acceso administrado.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000401,
+        "locale": "en",
+        "name": "Mud Volcano",
+        "description": "A geological formation beside the Caribbean, with managed access.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000401,
+        "locale": "pt-BR",
+        "name": "Vulcão de Lama",
+        "description": "Uma formação geológica junto ao Caribe, com acesso administrado.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000402,
+        "locale": "es",
+        "name": "Playas urbanas",
+        "description": "El litoral junto al pueblo, entre sectores de playa y frentes construidos.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000402,
+        "locale": "en",
+        "name": "Urban beaches",
+        "description": "The town coastline, combining beach sections with built-up waterfronts.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000402,
+        "locale": "pt-BR",
+        "name": "Praias urbanas",
+        "description": "O litoral junto à cidade, entre trechos de praia e áreas construídas.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000403,
+        "locale": "es",
+        "name": "Desembocadura del río Hobo",
+        "description": "El encuentro del río con el Caribe y su paisaje ribereño.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000403,
+        "locale": "en",
+        "name": "Hobo River mouth",
+        "description": "Where the river meets the Caribbean and its riverside landscape.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000403,
+        "locale": "pt-BR",
+        "name": "Foz do rio Hobo",
+        "description": "O encontro do rio com o Caribe e sua paisagem ribeirinha.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000404,
+        "locale": "es",
+        "name": "Taller de bullerengue",
+        "description": "Acércate al ritmo y al baile de esta tradición del Caribe.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000404,
+        "locale": "en",
+        "name": "Bullerengue workshop",
+        "description": "Discover the rhythm and dance of this Caribbean tradition.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000404,
+        "locale": "pt-BR",
+        "name": "Oficina de bullerengue",
+        "description": "Conheça o ritmo e a dança desta tradição caribenha.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000405,
+        "locale": "es",
+        "name": "Hotel Riviera del Sol Spa",
+        "description": "Hotel temático de Arboletes con arquitectura de castillo, piscinas y toboganes, conocido popularmente como el «Disney colombiano». Es un establecimiento privado: consulta directamente sus condiciones de ingreso y reserva.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000405,
+        "locale": "en",
+        "name": "Riviera del Sol Spa Hotel",
+        "description": "A private themed hotel in Arboletes with castle architecture, swimming pools and slides. Contact the property directly for admission and booking conditions.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000405,
+        "locale": "pt-BR",
+        "name": "Hotel Riviera del Sol Spa",
+        "description": "Hotel temático privado em Arboletes, com arquitetura de castelo, piscinas e escorregadores. Consulte diretamente as condições de entrada e reserva.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      }
+    ],
+    "point_of_interest_media": [
+      {
+        "point_of_interest_id": 1000401,
+        "media_asset_id": -10021,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 1000402,
+        "media_asset_id": -10022,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 1000403,
+        "media_asset_id": -10023,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 1000404,
+        "media_asset_id": -10024,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 1000405,
+        "media_asset_id": -10025,
+        "role": "gallery",
+        "display_order": 1
+      }
+    ],
+    "media_assets": [
+      {
+        "id": -10021,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/b5/b548dd01cac9d19f42ef9556fdcb70284b2ce6f7236f1cb6aa2307de34b0add3.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"arboletes--volcan-de-lodo-experiencia-v2\", \"master_sha256\": \"c3258d2ee278d64a5bb283329a2713b6723788d4f05c165c7e33b3f686893b3b\", \"web_sha256\": \"b548dd01cac9d19f42ef9556fdcb70284b2ce6f7236f1cb6aa2307de34b0add3\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/arboletes\"}"
+      },
+      {
+        "id": -10022,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/58/5884ad76f087f8db433efa4ef6aba25cd7f7c9dab0a5dcaf1d068348d6947e65.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"arboletes--playas-urbanas-v2\", \"master_sha256\": \"5358e8db324bdaf43e9655797b74a800ba473b35c07c98efbf9c72e67d347db3\", \"web_sha256\": \"5884ad76f087f8db433efa4ef6aba25cd7f7c9dab0a5dcaf1d068348d6947e65\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/arboletes\"}"
+      },
+      {
+        "id": -10023,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/7e/7e452095d084ff7fff361e3228062ef137ef226c58c05797417659511424628c.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, landforms, buildings, water, vegetation and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"arboletes--desembocadura-rio-hobo\", \"master_sha256\": \"537f124a09f62e146ddbb9e0e4f49108ae0ba73c70b389552576c3fa6e1c950a\", \"web_sha256\": \"7e452095d084ff7fff361e3228062ef137ef226c58c05797417659511424628c\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/arboletes\"}"
+      },
+      {
+        "id": -10024,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/cf/cf6aef692d0ba601ba103a4f54c9ba8a92944fe787bcd1973c047af28c874d59.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"arboletes--taller-bullerengue\", \"master_sha256\": \"b3bedddf36e38825104a1b78bc396b329a1c40174d77eca512a24bda1994a817\", \"web_sha256\": \"cf6aef692d0ba601ba103a4f54c9ba8a92944fe787bcd1973c047af28c874d59\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/arboletes\"}"
+      },
+      {
+        "id": -10025,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/06/062d026ac71ad0b650f89c0c66c961e52492577ef5659e3943720af73123a2a2.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"tool\": \"image_gen\", \"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"source_asset\": \"arboletes--hotel-riviera-del-sol-v1\", \"master_sha256\": \"cef89b6c48fef402b4e0abe4cb7047017b81645e3eef3c45de2d30502688f7f4\", \"web_sha256\": \"062d026ac71ad0b650f89c0c66c961e52492577ef5659e3943720af73123a2a2\", \"human_approval\": {\"date\": \"2026-10-21\", \"statement\": \"podemos desplegar los 4 lugares nuevos y actualizar esas imagenes, sigue todo el proceso hasta produccion\"}, \"source_records\": \"crecimiento-colombia/entregas/arboletes\"}"
+      },
+      {
+        "id": -10026,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/98/98d759d25a91891ef0142ecd3ef7ed51baed6573c92191782695c484f0fffd45.webp",
+        "creator": "Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada con IA",
+        "license_url": "",
+        "width": 960,
+        "height": 640,
+        "provenance_json": "{\"prompt\": \"Change ONLY the visual medium of this existing generated tourism asset to Explorando Lugares house style: clearly hand-drawn realistic editorial caricature, visible confident dark ink contours, broad opaque gouache brush strokes, simplified painted shapes and restrained natural colors on subtle paper grain. Must read unmistakably as an ILLUSTRATION at thumbnail size, never a retouched photograph, no photorealistic texture or camera effects. Preserve exact camera, subject, architecture, terrain, water, vegetation and activity and all spatial proportions. No new objects, no changed architecture or landscape, no text. Full bleed horizontal3:2. Style transformation only.\", \"master_sha256\": \"a390bde55425d5d16ca8fd0e6556726f00cea9a7042cc4941a21190e2ca7036a\", \"human_approval\": \"Publicación de los cuatro lugares autorizada por propietario 2026-10-21\"}"
+      }
+    ],
+    "media_asset_translations": [
+      {
+        "media_asset_id": -10021,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Volcán de Lodo",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10021,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Volcán de Lodo",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10021,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Volcán de Lodo",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10022,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Playas urbanas",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10022,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Playas urbanas",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10022,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Playas urbanas",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10023,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Desembocadura del río Hobo",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10023,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Desembocadura del río Hobo",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10023,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Desembocadura del río Hobo",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10024,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Taller de bullerengue",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10024,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Taller de bullerengue",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10024,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Taller de bullerengue",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10025,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Hotel Riviera del Sol Spa",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10025,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Hotel Riviera del Sol Spa",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10025,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Hotel Riviera del Sol Spa",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10026,
+        "locale": "es",
+        "alt_text": "Ilustración editorial: Arboletes",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10026,
+        "locale": "en",
+        "alt_text": "Editorial illustration: Arboletes",
+        "caption": ""
+      },
+      {
+        "media_asset_id": -10026,
+        "locale": "pt-BR",
+        "alt_text": "Ilustração editorial: Arboletes",
+        "caption": ""
+      }
+    ],
+    "businesses": [
+      {
+        "id": 100040000,
+        "public_id": "375bd635-f8a7-56e0-bade-c2a322a2268f",
+        "destination_id": 10004,
+        "category_code": "hospedaje",
+        "slug": "hotel-boutique-el-mirador",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100040001,
+        "public_id": "d32bb98e-fa7c-5498-8a15-c8bb37cebd15",
+        "destination_id": 10004,
+        "category_code": "hospedaje",
+        "slug": "riviera-del-sol-hotel-spa",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 1,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100040002,
+        "public_id": "0368ef5f-9895-5627-b4ce-be148eb7c18b",
+        "destination_id": 10004,
+        "category_code": "experiencias",
+        "slug": "operaciones-turisticas-ligero-de-equipaje",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 2,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100040003,
+        "public_id": "e79128e0-2e57-57b8-bfeb-aa433f80ce5e",
+        "destination_id": 10004,
+        "category_code": "transporte",
+        "slug": "rapido-ochoa-arboletes",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 3,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100040004,
+        "public_id": "d5909bc4-21f5-5272-9f9e-ca2b8951284a",
+        "destination_id": 10004,
+        "category_code": "comercio",
+        "slug": "tienda-d1-arboletes",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 4,
+        "record_origin": "public_import"
+      },
+      {
+        "id": 100040005,
+        "public_id": "57d2c341-a1d6-5169-8738-129ed0786b46",
+        "destination_id": 10004,
+        "category_code": "servicios",
+        "slug": "notaria-unica-de-arboletes",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 5,
+        "record_origin": "public_import"
+      }
+    ],
+    "business_translations": [
+      {
+        "business_id": 100040000,
+        "locale": "es",
+        "display_name": "Hotel Boutique El Mirador",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100040000,
+        "locale": "en",
+        "display_name": "Hotel Boutique El Mirador",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100040000,
+        "locale": "pt-BR",
+        "display_name": "Hotel Boutique El Mirador",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100040001,
+        "locale": "es",
+        "display_name": "Riviera del Sol Hotel & Spa",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100040001,
+        "locale": "en",
+        "display_name": "Riviera del Sol Hotel & Spa",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100040001,
+        "locale": "pt-BR",
+        "display_name": "Riviera del Sol Hotel & Spa",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100040002,
+        "locale": "es",
+        "display_name": "Operaciones Turísticas Ligero de Equipaje",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100040002,
+        "locale": "en",
+        "display_name": "Operaciones Turísticas Ligero de Equipaje",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100040002,
+        "locale": "pt-BR",
+        "display_name": "Operaciones Turísticas Ligero de Equipaje",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100040003,
+        "locale": "es",
+        "display_name": "Rápido Ochoa — Arboletes",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100040003,
+        "locale": "en",
+        "display_name": "Rápido Ochoa — Arboletes",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100040003,
+        "locale": "pt-BR",
+        "display_name": "Rápido Ochoa — Arboletes",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100040004,
+        "locale": "es",
+        "display_name": "Tienda D1 Arboletes",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100040004,
+        "locale": "en",
+        "display_name": "Tienda D1 Arboletes",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100040004,
+        "locale": "pt-BR",
+        "display_name": "Tienda D1 Arboletes",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100040005,
+        "locale": "es",
+        "display_name": "Notaría Única de Arboletes",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100040005,
+        "locale": "en",
+        "display_name": "Notaría Única de Arboletes",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 100040005,
+        "locale": "pt-BR",
+        "display_name": "Notaría Única de Arboletes",
+        "summary": "",
+        "description": ""
+      }
+    ],
+    "business_categories": [],
+    "business_sources": [
+      {
+        "business_id": 100040000,
+        "source_url": "https://www.hotelelmiradordearboletes.com/index.php",
+        "checked_at": "2026-10-21",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100040001,
+        "source_url": "https://rivieradelsol.co/es/",
+        "checked_at": "2026-10-21",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100040002,
+        "source_url": "https://corporacionturisticaurabadariencaribe.com/empresas/operadora-turistica-ligero-equipaje/",
+        "checked_at": "2026-10-21",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100040003,
+        "source_url": "https://www.rapidoochoa.com.co/bus-de/monteria-a-arboletes/",
+        "checked_at": "2026-10-21",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100040004,
+        "source_url": "https://d1.com.co/wp-content/uploads/TemporadaMayo_TiendasDisponibles_1.pdf",
+        "checked_at": "2026-10-21",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      },
+      {
+        "business_id": 100040005,
+        "source_url": "https://notariaunicaarboletes.com.co/nosotros/",
+        "checked_at": "2026-10-21",
+        "note": "Identidad documental pública; no acredita alianza ni operación actual confirmada."
+      }
+    ],
+    "business_media": []
+  },
+  "media_files": {
+    "-10021": {
+      "sha256": "b548dd01cac9d19f42ef9556fdcb70284b2ce6f7236f1cb6aa2307de34b0add3"
+    },
+    "-10022": {
+      "sha256": "5884ad76f087f8db433efa4ef6aba25cd7f7c9dab0a5dcaf1d068348d6947e65"
+    },
+    "-10023": {
+      "sha256": "7e452095d084ff7fff361e3228062ef137ef226c58c05797417659511424628c"
+    },
+    "-10024": {
+      "sha256": "cf6aef692d0ba601ba103a4f54c9ba8a92944fe787bcd1973c047af28c874d59"
+    },
+    "-10025": {
+      "sha256": "062d026ac71ad0b650f89c0c66c961e52492577ef5659e3943720af73123a2a2"
+    },
+    "-10026": {
+      "sha256": "98d759d25a91891ef0142ecd3ef7ed51baed6573c92191782695c484f0fffd45"
+    }
+  }
+}

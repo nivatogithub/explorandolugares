@@ -18,6 +18,9 @@ final class BasicAudienceService {
         $this->pdo->exec("CREATE TABLE IF NOT EXISTS el_basic_page_daily(page_day VARCHAR(10) NOT NULL,scope_code VARCHAR(2) NOT NULL,page_views BIGINT NOT NULL DEFAULT 0,PRIMARY KEY(page_day,scope_code))$suffix");
         $this->pdo->exec("CREATE TABLE IF NOT EXISTS el_basic_entity_daily(page_day VARCHAR(10) NOT NULL,entity_type VARCHAR(16) NOT NULL,entity_key VARCHAR(160) NOT NULL,destination_slug VARCHAR(160) NOT NULL,metric VARCHAR(24) NOT NULL,placement VARCHAR(24) NOT NULL,metric_count BIGINT NOT NULL DEFAULT 0,PRIMARY KEY(page_day,entity_type,entity_key,destination_slug,metric,placement))$suffix");
         $this->pdo->exec("CREATE TABLE IF NOT EXISTS el_basic_country_daily(page_day VARCHAR(10) NOT NULL,scope_code VARCHAR(2) NOT NULL,destination_slug VARCHAR(160) NOT NULL,country_code VARCHAR(2) NOT NULL,page_views BIGINT NOT NULL DEFAULT 0,PRIMARY KEY(page_day,scope_code,destination_slug,country_code))$suffix");
+        // A delivery key is random per page load, never a browser identifier. It
+        // exists briefly only so a retry after navigation cannot inflate a view.
+        $this->pdo->exec("CREATE TABLE IF NOT EXISTS el_basic_delivery_keys(delivery_key VARCHAR(64) PRIMARY KEY,received_at VARCHAR(19) NOT NULL)$suffix");
         if($mysql){$q=$this->pdo->query("SELECT COUNT(*) FROM information_schema.statistics WHERE table_schema=DATABASE() AND table_name='el_basic_entity_daily' AND index_name='el_basic_entity_target'");if(!(int)$q->fetchColumn())$this->pdo->exec('CREATE INDEX el_basic_entity_target ON el_basic_entity_daily(entity_type,entity_key,page_day)');}
         else $this->pdo->exec('CREATE INDEX IF NOT EXISTS el_basic_entity_target ON el_basic_entity_daily(entity_type,entity_key,page_day)');
         $this->pdo->exec("UPDATE el_basic_settings SET setting_value='0' WHERE setting_key='retention_days'");
@@ -31,11 +34,11 @@ final class BasicAudienceService {
     private function scope(string $path):array|null {
         if(strlen($path)>400||!preg_match('~^/[a-zA-Z0-9/_-]*(?:\.html)?$~D',$path))return null;
         if(preg_match('~/(admin|api|business|negocios/(portal|registro|acceso|salir|cambiar-clave))(?:/|$)~',$path))return null;
-        if(preg_match('~^/(?:en/|pt-br/)?(?:destinos|lugares)/([a-z0-9-]+)(?:/|$)~',$path,$match)) {
+        if(preg_match('~^/(?:en/|pt-br/)?lugares/([a-z0-9-]+)(?:/|$)~',$path,$match)) {
             $q=$this->pdo->prepare("SELECT slug FROM destinations WHERE slug=? AND publication_status='published' LIMIT 1");$q->execute([$match[1]]);
             if(!$q->fetchColumn())return null;
             // Only existing static subpages or the destination's public root.
-            $root=preg_match('~^/(?:en/|pt-br/)?(?:destinos|lugares)/[a-z0-9-]+/(?:index\.html)?$~',$path);
+            $root=preg_match('~^/(?:en/|pt-br/)?lugares/[a-z0-9-]+/(?:index\.html)?$~',$path);
             if(!$root&&!$this->staticPage($path))return null;
             return array_filter(['CO',$this->department($match[1])]);
         }
@@ -50,16 +53,25 @@ final class BasicAudienceService {
         if(is_dir($file))$file=rtrim($file,'/').'/index.html';
         return str_ends_with($file,'.html')&&is_file($file);
     }
-    public function countPage(string $path,?string $now=null,?string $country=null):bool {
+    public function countPage(string $path,?string $now=null,?string $country=null,?string $deliveryKey=null):bool {
         if(!$this->ready())return false;
         $scopes=$this->scope($path);if(!$scopes)return false;
+        if($deliveryKey!==null&&!preg_match('/^[a-f0-9-]{32,64}$/D',$deliveryKey))return false;
         $now??=gmdate('Y-m-d H:i:s');
         $this->maintain($now);
         $day=(new DateTimeImmutable($now,new DateTimeZone('UTC')))->setTimezone(new DateTimeZone('America/Bogota'))->format('Y-m-d');
         $mysql=$this->pdo->getAttribute(PDO::ATTR_DRIVER_NAME)==='mysql';
         $sql=$mysql?'INSERT INTO el_basic_page_daily(page_day,scope_code,page_views) VALUES(?,?,1) ON DUPLICATE KEY UPDATE page_views=page_views+1':'INSERT INTO el_basic_page_daily(page_day,scope_code,page_views) VALUES(?,?,1) ON CONFLICT(page_day,scope_code) DO UPDATE SET page_views=page_views+1';
         $this->pdo->beginTransaction();
-        try{$q=$this->pdo->prepare($sql);foreach(array_unique($scopes) as $scope)$q->execute([$day,$scope]);$this->countEntityPage($path,$day);if($country!==null)$this->countCountry($path,$scopes,$day,$country);$this->pdo->commit();}catch(Throwable $e){$this->pdo->rollBack();throw $e;}
+        try{
+            if($deliveryKey!==null){
+                $insert=$mysql?'INSERT IGNORE':'INSERT OR IGNORE';$key=$this->pdo->prepare("$insert INTO el_basic_delivery_keys(delivery_key,received_at) VALUES(?,?)");$key->execute([$deliveryKey,$now]);
+                // The first request already counted it. Treat its retry as a
+                // successful delivery without writing the aggregates again.
+                if($key->rowCount()===0){$this->pdo->commit();return true;}
+            }
+            $q=$this->pdo->prepare($sql);foreach(array_unique($scopes) as $scope)$q->execute([$day,$scope]);$this->countEntityPage($path,$day);if($country!==null)$this->countCountry($path,$scopes,$day,$country);$this->pdo->commit();
+        }catch(Throwable $e){$this->pdo->rollBack();throw $e;}
         return true;
     }
     private function addEntity(string $day,string $type,string $key,string $destination,string $metric,string $placement):void {
@@ -68,7 +80,7 @@ final class BasicAudienceService {
         $this->pdo->prepare($sql)->execute([$day,$type,$key,$destination,$metric,$placement]);
     }
     private function countEntityPage(string $path,string $day):void {
-        if(preg_match('~^/(?:en/|pt-br/)?(?:destinos|lugares)/([a-z0-9-]+)(?:/|$)~',$path,$match))$this->addEntity($day,'destination',$match[1],$match[1],'page_view','destination');
+        if(preg_match('~^/(?:en/|pt-br/)?lugares/([a-z0-9-]+)(?:/|$)~',$path,$match))$this->addEntity($day,'destination',$match[1],$match[1],'page_view','destination');
         elseif(preg_match('~^/(?:en/|pt-br/)?negocios/([a-fA-F0-9-]{16,64})/?$~D',$path,$match)) {
             $b=(new PublicAudienceTargets($this->pdo))->business($match[1]);
             if(!$b||!$b['has_page'])throw new RuntimeException('El negocio dejó de tener página pública');
@@ -78,7 +90,7 @@ final class BasicAudienceService {
     }
     private function countCountry(string $path,array $scopes,string $day,string $country):void {
         if(!preg_match('/^[A-Z]{2}$/D',$country))$country='ZZ';
-        $slug='';if(preg_match('~^/(?:en/|pt-br/)?(?:destinos|lugares)/([a-z0-9-]+)(?:/|$)~',$path,$m))$slug=$m[1];
+        $slug='';if(preg_match('~^/(?:en/|pt-br/)?lugares/([a-z0-9-]+)(?:/|$)~',$path,$m))$slug=$m[1];
         elseif(preg_match('~^/(?:en/|pt-br/)?negocios/([a-f0-9-]{16,64})/?$~iD',$path,$m))$slug=(new PublicAudienceTargets($this->pdo))->business($m[1])['destination_slug']??'';
         $mysql=$this->pdo->getAttribute(PDO::ATTR_DRIVER_NAME)==='mysql';
         $sql=$mysql?'INSERT INTO el_basic_country_daily VALUES(?,?,?,?,1) ON DUPLICATE KEY UPDATE page_views=page_views+1':'INSERT INTO el_basic_country_daily VALUES(?,?,?,?,1) ON CONFLICT(page_day,scope_code,destination_slug,country_code) DO UPDATE SET page_views=page_views+1';
@@ -88,7 +100,7 @@ final class BasicAudienceService {
         if(!$this->ready()||!in_array($channel,['phone','email','whatsapp','website'],true)||!$this->scope($path))return false;
         $b=(new PublicAudienceTargets($this->pdo))->business($publicId);if(!$b||!isset($b['features'][$channel==='website'?'business_page':'direct_contact']))return false;
         $q=$this->pdo->prepare('SELECT COUNT(*) FROM business_contacts WHERE business_id=? AND channel=? AND is_public=1 AND contact_value<>""');$q->execute([$b['id'],$channel]);if(!(int)$q->fetchColumn())return false;
-        $guide=preg_match('~^/(?:en/|pt-br/)?(?:destinos|lugares)/([a-z0-9-]+)(?:/|$)~',$path,$m)&&$m[1]===$b['destination_slug'];
+        $guide=preg_match('~^/(?:en/|pt-br/)?lugares/([a-z0-9-]+)(?:/|$)~',$path,$m)&&$m[1]===$b['destination_slug'];
         $profile=preg_match('~^/(?:en/|pt-br/)?negocios/([a-f0-9-]{16,64})/?$~iD',$path,$m)&&strtolower($m[1])===strtolower($publicId)&&$b['has_page'];
         if(!$guide&&!$profile)return false;
         $now??=gmdate('Y-m-d H:i:s');$this->maintain($now);$day=(new DateTimeImmutable($now,new DateTimeZone('UTC')))->setTimezone(new DateTimeZone('America/Bogota'))->format('Y-m-d');
@@ -105,7 +117,7 @@ final class BasicAudienceService {
     }
     public function countCard(string $path,string $publicId,string $metric,?string $now=null):bool {
         if(!$this->ready()||!in_array($metric,['card_impression','profile_click'],true))return false;
-        if(!preg_match('~^/(?:en/|pt-br/)?(?:destinos|lugares)/([a-z0-9-]+)(?:/|$)~',$path,$match)||!$this->scope($path))return false;
+        if(!preg_match('~^/(?:en/|pt-br/)?lugares/([a-z0-9-]+)(?:/|$)~',$path,$match)||!$this->scope($path))return false;
         $b=(new PublicAudienceTargets($this->pdo))->business($publicId);
         if(!$b||$b['destination_slug']!==$match[1]||($metric==='profile_click'&&!$b['has_page']))return false;
         $now??=gmdate('Y-m-d H:i:s');$this->maintain($now);
@@ -153,6 +165,10 @@ final class BasicAudienceService {
         }catch(Throwable){return $empty;}
     }
     // Aggregates are retained as history. Only MeasurementResetService may clear them explicitly.
-    private function maintain(string $now):void {}
+    private function maintain(string $now):void {
+        // Delivery keys are operational de-duplication only, not history. Two
+        // days covers delayed keepalive requests without retaining a trail.
+        try{$cutoff=gmdate('Y-m-d H:i:s',strtotime($now.' UTC')-172800);$this->pdo->prepare('DELETE FROM el_basic_delivery_keys WHERE received_at<?')->execute([$cutoff]);}catch(Throwable){}
+    }
     public function purge():void {} // Compatibility with existing scheduled callers; never age-delete aggregates.
 }

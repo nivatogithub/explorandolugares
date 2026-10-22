@@ -1,0 +1,97 @@
+{
+  "checked_at": "2026-10-20",
+  "ranking": "editorial, no ventas ni popularidad acreditadas",
+  "access": "Pueblo privado en Jericó; reserva y confirmación previa con anfitrión. No anunciar entrada libre ni cobrar acceso por cuenta del portal.",
+  "sources": [
+    {
+      "url": "https://caucaviejo.com/pueblo-cauca-viejo/",
+      "claims": [
+        "municipio Jericó",
+        "fundación1998",
+        "plaza y capilla",
+        "entrada con reserva"
+      ]
+    },
+    {
+      "url": "https://caucaviejo.com/experiencias/",
+      "claims": [
+        "oferta concreta paseo fluvial",
+        "cabalgata",
+        "tour histórico",
+        "picnic preparado"
+      ]
+    },
+    {
+      "url": "https://hotelesmemorables.com/es/casa-linaje/ubicacion/",
+      "claims": [
+        "Cauca Viejo en Jericó",
+        "plaza",
+        "Casa Linaje contigua Cedrela"
+      ]
+    }
+  ],
+  "components": [
+    {
+      "slug": "plaza-principal",
+      "decision": "incluir, imagen pendiente",
+      "source_url": "https://caucaviejo.com/pueblo-cauca-viejo/"
+    },
+    {
+      "slug": "capilla",
+      "decision": "incluir, imagen pendiente",
+      "source_url": "https://caucaviejo.com/pueblo-cauca-viejo/"
+    },
+    {
+      "slug": "paseo-rio-cauca",
+      "decision": "incluir, imagen pendiente",
+      "source_url": "https://caucaviejo.com/experiencias/",
+      "operator": "Hotel Boutique Fundadores / Cauca Viejo Turístico",
+      "offer_url": "https://caucaviejo.com/experiencias/",
+      "evidence": "Oferta propia con enlace para solicitar; no acredita cupo, itinerario vigente ni ventas.",
+      "public_operator_advertising": false
+    },
+    {
+      "slug": "cabalgata",
+      "decision": "incluir, imagen pendiente",
+      "source_url": "https://caucaviejo.com/experiencias/",
+      "operator": "Hotel Boutique Fundadores / Cauca Viejo Turístico",
+      "offer_url": "https://caucaviejo.com/experiencias/",
+      "evidence": "Oferta propia con enlace para solicitar; no acredita cupo, itinerario vigente ni ventas.",
+      "public_operator_advertising": false
+    },
+    {
+      "slug": "ribera-rio-cauca",
+      "decision": "incluir lugar, imagen pendiente",
+      "source_url": "https://caucaviejo.com/pueblo-cauca-viejo/",
+      "purpose": "Contemplar paisaje ribereño desde espacioshabilitados; no prometer malecón/accesolibre"
+    }
+  ],
+  "excluded": [
+    {
+      "candidate": "Tour histórico",
+      "reason": "Oferta real pero baja diferenciación frente a plaza/capilla; no rellenar con paseo urbano. Conservar como candidato, no declarar inexistente."
+    },
+    {
+      "candidate": "Picnic",
+      "reason": "Oferta real preparada, pero priorizar río y cabalgata según criterio reciente del propietario; no rellenar con comer."
+    },
+    {
+      "candidate": "Birdwatching",
+      "reason": "Referencia general de servicios personalizados, sin ruta/servicio específico suficientemente identificado."
+    },
+    {
+      "candidate": "Senderos y puente colgante",
+      "reason": "Mapa del anfitrión confirma existencia; acceso/recorrido exacto y referencias visuales no contrastados. No añadir cupos por obligación."
+    },
+    {
+      "candidate": "Molienda en La Mielera",
+      "reason": "Existencia documentada y evento comunitario, sinofertaregularactualconfirmada. Véase trapiche-ribera-investigacion.json."
+    }
+  ],
+  "uncertainties": [
+    "No afirmar único pueblo privado de Colombia.",
+    "Blog oficial historia contiene distancias a Medellín/Bogotá contradictorias; no trasladarlas.",
+    "No confundir estación/fonda con ferrocarril turístico operativo.",
+    "Origen turístico1998 no equivale antigüedad colonial."
+  ]
+}

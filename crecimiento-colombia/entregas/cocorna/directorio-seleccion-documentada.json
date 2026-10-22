@@ -1,0 +1,116 @@
+{
+  "fecha": "2026-10-20",
+  "estado": "borrador_no_importado",
+  "objetivo": 30,
+  "documentados_canal_propio": 6,
+  "faltantes_objetivo": 24,
+  "notas": [
+    "Los descartes son falta de evidencia, no declaraciones de cierre.",
+    "No duplicar sucursales, cabañas o actividades de un solo negocio para completar30.",
+    "Flota Granada presta servicio al destino; punto comercial local aún por confirmar."
+  ],
+  "negocios": [
+    {
+      "nombre": "Tierra de Agua",
+      "categoria_propuesta": "Hospedaje",
+      "fuente": "https://tierradeagua.org/",
+      "consulta": "2026-10-20",
+      "tipo_evidencia": "sitio_propio",
+      "estado": "oferta_documental_confirmada",
+      "pendiente": "Completar referencia cartográfica y revisión humana; no contactar.",
+      "revision_operativa": "2026-10-20",
+      "verificacion": {
+        "consulta": "\"Cocorná\" \"Tierra de Agua\"",
+        "estado": "oferta_documental_confirmada",
+        "decision": "apto_borrador_gratuito",
+        "notas": "La búsqueda no aportó fuente primaria operativa adicional. No equivale a cerrado; conservar candidato.",
+        "url": "https://tierradeagua.org/",
+        "evidencia": "Canal propio con reserva y ubicación vereda Los Potreros."
+      }
+    },
+    {
+      "nombre": "Cascadia Cocorná",
+      "categoria_propuesta": "Hospedaje",
+      "fuente": "https://www.cascadiacocorna.com/",
+      "consulta": "2026-10-20",
+      "tipo_evidencia": "sitio_propio",
+      "estado": "oferta_documental_confirmada",
+      "pendiente": "Completar referencia cartográfica y revisión humana; no contactar.",
+      "revision_operativa": "2026-10-20",
+      "verificacion": {
+        "consulta": "\"Cocorná\" \"Cascadia Cocorná\"",
+        "estado": "oferta_documental_confirmada",
+        "decision": "apto_borrador_gratuito",
+        "notas": "La búsqueda no aportó fuente primaria operativa adicional. No equivale a cerrado; conservar candidato.",
+        "url": "https://www.cascadiacocorna.com/",
+        "evidencia": "Canal propio con cabañas reservables; La Piñuela, Cocorná."
+      }
+    },
+    {
+      "nombre": "Aventura Cocorná",
+      "categoria_propuesta": "Actividades",
+      "fuente": "https://aventuracocorna.com/",
+      "consulta": "2026-10-20",
+      "tipo_evidencia": "sitio_propio",
+      "estado": "oferta_documental_confirmada",
+      "pendiente": "Completar referencia cartográfica y revisión humana; no contactar.",
+      "revision_operativa": "2026-10-20",
+      "verificacion": {
+        "consulta": "\"Cocorná\" \"Aventura Cocorná\"",
+        "estado": "oferta_documental_confirmada",
+        "decision": "apto_borrador_gratuito",
+        "notas": "La búsqueda no aportó fuente primaria operativa adicional. No equivale a cerrado; conservar candidato.",
+        "url": "https://aventuracocorna.com/",
+        "evidencia": "Canal propio con actividad, reserva y contacto. No garantiza disponibilidad de fecha."
+      }
+    },
+    {
+      "nombre": "Hotel Plaza Centro Cocorná",
+      "categoria_propuesta": "Hospedaje",
+      "fuente": "https://www.hotelplazacentro.net/",
+      "consulta": "2026-10-20",
+      "tipo_evidencia": "sitio_propio",
+      "estado": "oferta_documental_confirmada",
+      "verificacion": {
+        "estado": "oferta_documental_confirmada",
+        "decision": "apto_borrador_gratuito",
+        "url": "https://www.hotelplazacentro.net/",
+        "evidencia": "Carrera20#19-56; sitio propio publica alojamiento y reserva."
+      },
+      "vigencia": "Oferta pública consultada, no disponibilidad ni verificación presencial.",
+      "pendiente": "Revisión humana y campos mínimos; no contactar."
+    },
+    {
+      "nombre": "Hotel Aguatur — Cocorná",
+      "categoria_propuesta": "Hospedaje",
+      "fuente": "https://www.aguatur.co/",
+      "consulta": "2026-10-20",
+      "tipo_evidencia": "sitio_propio",
+      "estado": "oferta_documental_confirmada",
+      "verificacion": {
+        "estado": "oferta_documental_confirmada",
+        "decision": "apto_borrador_gratuito",
+        "url": "https://www.aguatur.co/",
+        "evidencia": "Calle21#26-66 Cocorná; escoger sede Cocorná, no West San Jerónimo."
+      },
+      "vigencia": "Oferta pública consultada, no disponibilidad ni verificación presencial.",
+      "pendiente": "Revisión humana y campos mínimos; no contactar."
+    },
+    {
+      "nombre": "Flota Granada — servicio Cocorná",
+      "categoria_propuesta": "Transporte",
+      "fuente": "https://www.flotagranadasas.com/destinos/cocorna/",
+      "consulta": "2026-10-20",
+      "tipo_evidencia": "sitio_propio",
+      "estado": "oferta_documental_confirmada",
+      "verificacion": {
+        "estado": "oferta_documental_confirmada",
+        "decision": "apto_borrador_gratuito",
+        "url": "https://www.flotagranadasas.com/destinos/cocorna/",
+        "evidencia": "Fuente propia acredita servicio al municipio; sede comercial local precisa pendiente, no asignar terminal Medellín como dirección Cocorná."
+      },
+      "vigencia": "Oferta pública consultada, no disponibilidad ni verificación presencial.",
+      "pendiente": "Revisión humana y campos mínimos; no contactar."
+    }
+  ]
+}
