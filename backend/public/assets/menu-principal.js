@@ -23,3 +23,22 @@
 
 // Prevent the native ghost-image drag without blocking links, taps or scrolling.
 document.addEventListener('dragstart',event=>{if(event.target.closest?.('img,picture'))event.preventDefault();});
+
+// Keep the reading position when opening the equivalent page in another language.
+(()=>{
+ const key='el-language-scroll';
+ document.addEventListener('click',event=>{
+  const link=event.target.closest?.('.header-language-options a[data-language-target="equivalent-page"]');
+  if(!link||event.defaultPrevented||event.button!==0||event.ctrlKey||event.metaKey||event.shiftKey||event.altKey)return;
+  const target=new URL(link.href,location.href);if(target.origin!==location.origin)return;
+  try{sessionStorage.setItem(key,JSON.stringify({path:target.pathname,x:window.scrollX,y:window.scrollY,time:Date.now()}));}catch{}
+ });
+ let saved;try{saved=JSON.parse(sessionStorage.getItem(key)||'null');sessionStorage.removeItem(key);}catch{}
+ if(!saved||saved.path!==location.pathname||Date.now()-saved.time>30000)return;
+ const restore=()=>{
+  const root=document.documentElement,behavior=root.style.scrollBehavior;root.style.scrollBehavior='auto';
+  window.scrollTo({left:saved.x,top:saved.y,behavior:'instant'});root.style.scrollBehavior=behavior;
+ };
+ if(document.readyState==='complete')requestAnimationFrame(restore);
+ else window.addEventListener('load',()=>requestAnimationFrame(()=>requestAnimationFrame(restore)),{once:true});
+})();
