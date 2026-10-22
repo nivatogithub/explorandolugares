@@ -7,9 +7,10 @@ $assembled=$documentRoot && is_file($documentRoot.'/sitemap-live.php');
 $path=parse_url($_SERVER['REQUEST_URI']??'/',PHP_URL_PATH) ?: '/';
 if($assembled && $path==='/sitemap.xml'){require $documentRoot.'/sitemap-live.php';return true;}
 // Match hosting canonical redirects, preserving unrelated query parameters.
+if($assembled && is_file($documentRoot.'/asset-manifest.json') && preg_match('~^/((?:en/|pt-br/)?)destinos(/.*)?$~',$path,$legacy)){header('Location: /'.$legacy[1].'lugares'.($legacy[2]??'/').(($query=parse_url($_SERVER['REQUEST_URI'],PHP_URL_QUERY))!==null?'?'.$query:''),true,301);return true;}
 $query=parse_url($_SERVER['REQUEST_URI']??'/',PHP_URL_QUERY);
 if(str_ends_with($path,'/index.html')){header('Location: '.substr($path,0,-10).($query!==null?'?'.$query:''),true,301);return true;}
-if(preg_match('~^/(?:en/|pt-br/)?destinos/[a-z0-9-]+$~i',$path)){header('Location: '.$path.'/'.($query!==null?'?'.$query:''),true,301);return true;}
+if(preg_match('~^/(?:en/|pt-br/)?(?:destinos|lugares)/[a-z0-9-]+$~i',$path)){header('Location: '.$path.'/'.($query!==null?'?'.$query:''),true,301);return true;}
 if($path==='/negocios/cambiar-clave/' || $path==='/negocios/cambiar-clave'){require ($assembled?$documentRoot:dirname(__DIR__).'/backend/public').'/business/password.php';return true;}
 if (preg_match('~^/(en/|pt-br/)?negocios-locales/?$~',$path,$hub)) {
     $_GET['lang']=match(trim($hub[1]??'','/')) {'en'=>'en','pt-br'=>'pt-br',default=>'es'};
@@ -53,7 +54,7 @@ if (preg_match('~^/(?:((?:en|pt-br)/))?negocios/([a-f0-9-]{16,64})/?$~i',$path,$
     require ($assembled?$documentRoot:dirname(__DIR__).'/ensayos/v1').'/negocio.php';
     return true;
 }
-if (preg_match('~^/(?:((?:en|pt-br)/))?destinos/([a-z0-9-]+)(?:/index\.html)?/?$~',$path,$match)) {
+if (preg_match('~^/(?:((?:en|pt-br)/))?(?:destinos|lugares)/([a-z0-9-]+)(?:/index\.html)?/?$~',$path,$match)) {
     $_GET['idioma']=match (trim($match[1]??'','/')) {'en'=>'en','pt-br'=>'pt-BR',default=>'es'};
     $_GET['destino']=$match[2];
     require ($assembled?$documentRoot:dirname(__DIR__).'/ensayos/v1').'/destino.php';

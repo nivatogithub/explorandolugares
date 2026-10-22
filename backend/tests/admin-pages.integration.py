@@ -167,6 +167,7 @@ if os.environ.get('EL_ADMIN_REPAIR_PREVIEW')=='1':
         PROCESS.terminate();PROCESS.wait(timeout=5);DB.close();shutil.rmtree(WORK)
     raise SystemExit(0)
 
+place_prefix='/lugares/' if package_value else '/destinos/'
 try:
     for _ in range(100):
         try:
@@ -176,14 +177,14 @@ try:
             time.sleep(.05)
 
     status, body, _ = request('/destinos/jerico/', opener=GUEST)
-    check(status == 200 and 'https://explorandolugares.com/destinos/jerico/' in body and '"/v1/' not in body, 'Guía local debe usar rutas de producción sin prefijos.')
+    check(status == 200 and ('https://explorandolugares.com'+place_prefix+'jerico/') in body and '"/v1/' not in body, 'Guía local debe usar rutas de producción sin prefijos.')
     status, body, _ = request('/negocios/00000000-0000-4000-8000-000000000001/', opener=GUEST)
     check(status == 200 and '"/v1/' not in body, 'Página propia debe usar rutas raíz.')
     class NoRedirect(urllib.request.HTTPRedirectHandler):
         def redirect_request(self, req, fp, code, msg, headers, newurl):
             return None
     direct = urllib.request.build_opener(NoRedirect())
-    for source, target in [('/destino.php?destino=jerico&idioma=es', '/destinos/jerico/'), ('/negocio.php?id=00000000-0000-4000-8000-000000000001', '/negocios/00000000-0000-4000-8000-000000000001/')]:
+    for source, target in [('/destino.php?destino=jerico&idioma=es', place_prefix+'jerico/'), ('/negocio.php?id=00000000-0000-4000-8000-000000000001', '/negocios/00000000-0000-4000-8000-000000000001/')]:
         status, _, headers = request(source, opener=direct)
         check(status == 301 and headers.get('Location') == target, 'Plantilla debe redirigir a ruta limpia idéntica en local y producción.')
     check(request('/v1/destinos/jerico/', opener=GUEST)[0] == 404, 'El prefijo retirado no debe seguir como alias de pruebas.')
@@ -193,12 +194,12 @@ try:
 
     # Sitemap is public read-only: no bootstrap session or private robots header.
     status, body, headers = request('/sitemap-live.php', opener=GUEST)
-    check(status == 200 and '/destinos/jerico/' in body, 'Sitemap debe leer publicaciones de la base.')
+    check(status == 200 and (place_prefix+'jerico/') in body, 'Sitemap debe leer publicaciones de la base.')
     check('/negocios/00000000-0000-4000-8000-000000000001/' in body, 'Sitemap debe incluir página propia vigente.')
     check('Set-Cookie' not in headers and 'noindex' not in headers.get('X-Robots-Tag', ''), 'Sitemap no debe crear sesión ni bloquear indexación.')
     DB.execute("UPDATE destinations SET publication_status='draft' WHERE id=?", (destination_id,)); DB.commit()
     status, body, _ = request('/sitemap-live.php', opener=GUEST)
-    check(status == 200 and '/destinos/jerico/' not in body and '/negocios/' not in body, 'Despublicar debe retirar URL sin reconstrucción.')
+    check(status == 200 and (place_prefix+'jerico/') not in body and '/negocios/' not in body, 'Despublicar debe retirar URL sin reconstrucción.')
     DB.execute("UPDATE destinations SET publication_status='published' WHERE id=?", (destination_id,)); DB.commit()
 
     fault_status,fault_body,_=request('/api/fault-probe.php',opener=GUEST)
@@ -211,7 +212,7 @@ try:
         ('/admin/index.php', 'Solicitudes de participación'),
         ('/admin/index.php?tab=sistema', 'Solicitudes de participación'),
         ('/admin/base-datos.php', 'Base de datos'),
-        ('/admin/destinos.php', 'Administrar destinos'),
+        ('/admin/destinos.php', 'Administrar lugares' if package_value else 'Administrar destinos'),
         ('/admin/trasladar-negocios.php', 'Trasladar negocios a Cauca Viejo'),
         ('/admin/negocios.php', 'Negocios'),
         ('/admin/negocios.php?tab=crear', 'Negocios'),
@@ -548,7 +549,7 @@ try:
     check(DB.execute('SELECT COUNT(*) FROM businesses').fetchone()[0] == business_count_before_import, 'La importación inválida dejó registros parciales.')
     valid_package = json.dumps({'schema_version':'business-import-v1','destination_slug':'jerico','businesses':[{'name':'Comercio importado de prueba','summary':'','description':'','category_code':'hospedaje','information_status':'PUBLICO','sources':[{'url':'https://example.invalid/fuente','note':'Prueba automatizada'}]}]}).encode()
     status, body, _ = multipart('/admin/importar-negocios.php', {'csrf': csrf, 'action': 'import'}, [('package', 'valid.json', 'application/json', valid_package)])
-    check(status == 200 and 'Se importaron 1 negocios' in body and 'Importar varios negocios' in body and 'Revisar el directorio privado del destino' in body, f'La importación válida no terminó, no ofreció previsualizar el directorio o no regresó a su pestaña: {status} {body[-500:]}')
+    check(status == 200 and 'Se importaron 1 negocios' in body and 'Importar varios negocios' in body and ('Revisar el directorio privado del lugar' if package_value else 'Revisar el directorio privado del destino') in body, f'La importación válida no terminó, no ofreció previsualizar el directorio o no regresó a su pestaña: {status} {body[-500:]}')
     imported = DB.execute("SELECT b.publication_status,b.claim_status,b.information_status,b.record_origin,s.plan_code,s.status FROM businesses b JOIN business_translations t ON t.business_id=b.id AND t.locale='es' JOIN business_subscriptions s ON s.business_id=b.id WHERE t.display_name='Comercio importado de prueba'").fetchone()
     check(tuple(imported) == ('draft','NO_RECLAMADO','PUBLICO','public_import','free','pending_publication'), 'La ficha importada no quedó como Gratis, privada y sin reclamar.')
     imported_locales = DB.execute("SELECT locale,display_name FROM business_translations WHERE business_id=(SELECT business_id FROM business_translations WHERE display_name='Comercio importado de prueba' AND locale='es')").fetchall()
@@ -1054,7 +1055,7 @@ try:
     for _ in range(2):
         status, body, _ = request('/admin/destinos.php', {'csrf':starter_csrf,'action':'create_starter','starter_slug':'cauca-viejo'}, ADMIN)
         starter_alerts = __import__('re').findall(r'role="alert">(.*?)<', body)
-        check(status == 200 and 'Destino disponible para asociar negocios' in body, f'No se creó o reutilizó el destino preparado: HTTP {status}, {starter_alerts}')
+        check(status == 200 and ('Lugar disponible para asociar negocios' if package_value else 'Destino disponible para asociar negocios') in body, f'No se creó o reutilizó el destino preparado: HTTP {status}, {starter_alerts}')
     starter = DB.execute("SELECT id,publication_status,destination_type FROM destinations WHERE slug='cauca-viejo'").fetchone()
     check(starter['publication_status'] == 'draft' and starter['destination_type'] == 'other' and DB.execute("SELECT COUNT(*) FROM destinations WHERE slug='cauca-viejo'").fetchone()[0] == 1, 'El destino preparado se publicó o duplicó.')
     status, body, _ = request('/admin/negocios.php?id='+str(imported_id), opener=ADMIN)
