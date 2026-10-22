@@ -983,8 +983,7 @@ try:
     traveler_tabs=re.search(r'<nav class="account-tabs".*?</nav>',traveler_profile,re.S).group(0)
     logout_form=re.search(r'<form class="account-logout-form".*?</form>',traveler_profile,re.S)
     check(logout_form is not None and 'action="/negocios/salir/"' in logout_form.group(0) and 'method="post"' in logout_form.group(0) and 'name="csrf"' in logout_form.group(0),'Visible logout must use the protected POST action.')
-    name_menu=re.search(r'<details class="account-user-menu".*?</details>',traveler_profile,re.S).group(0)
-    check('Cerrar sesión' not in name_menu,'Logout must be visible outside the collapsed name menu.')
+    check('Contacto y ayuda' not in traveler_profile,'Account header must not add an orphan help dropdown.')
 
     check('>Viajero</a>' in traveler_tabs and 'Mis negocios' not in traveler_tabs and 'Registrar o reclamar un negocio' in traveler_profile,'Traveler without businesses must only see Viajero and an optional registration link.')
     nav_business_id=DB.execute("INSERT INTO businesses(public_id,destination_id,category_code,slug) VALUES('traveler-nav-fixture',?,'hospedaje','traveler-nav-fixture')",(destination_id,)).lastrowid
