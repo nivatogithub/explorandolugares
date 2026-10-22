@@ -10,7 +10,7 @@ def prepare(package):
  path=private/'presentation.sqlite'
  if path.exists() or (private/'config.php').exists():raise ValueError('Fixture/config existentes; no se sustituyen datos.')
  db=sqlite3.connect(path);db.executescript((ROOT/'backend/database/sqlite.sql').read_text());db.executescript((ROOT/'backend/database/destinations.sqlite.sql').read_text());db.executescript((ROOT/'backend/database/migrations/006-poi-experience-links.sqlite.sql').read_text())
- for number in range(8,47):
+ for number in range(8,50):
   scripts=list((ROOT/'backend/database/migrations').glob(f'{number:03d}-*.sqlite.sql'))
   if len(scripts)!=1:raise ValueError(f'Migración ambigua {number}')
   db.executescript(scripts[0].read_text())

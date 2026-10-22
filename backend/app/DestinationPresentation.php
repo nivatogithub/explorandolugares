@@ -48,7 +48,7 @@ final class DestinationPresentation
         // Existing data/identity stay unchanged; only the initial representation changes.
         $story=$this->first('//*[@id="descubre"]');
         if($story){
-            $this->remove('.//figure|.//aside|.//*['.self::cls('eyebrow').' or '.self::cls('destination-history-photo').']',$story);
+            $this->remove('.//figure|.//*['.self::cls('eyebrow').' or '.self::cls('destination-history-photo').']',$story);
             if(!in_array($slug,['jerico','cartagena'],true))$this->remove('.//*['.self::cls('credit').']',$story);
             $this->text('.//h2',$titles[0],$story);
             if(isset($copy['history'])){
@@ -58,7 +58,7 @@ final class DestinationPresentation
                 foreach($paragraphs as $extra)$extra->parentNode?->removeChild($extra);
             }
         }
-        foreach($this->nodes('//a[@href="#descubre"]') as $link)$link->textContent=$titles[4];
+        $this->remove('//a[@href="#descubre"]|//*['.self::cls('destination-reasons').']//a[@href="#que-conocer"]');
         foreach(['que-conocer'=>1,'lugares'=>3] as $id=>$index){
             $section=$this->first('//*[@id="'.$id.'"]');if(!$section)continue;
             $heading=$this->first('./*['.self::cls('sectionhead').']',$section);
@@ -86,18 +86,6 @@ final class DestinationPresentation
             if($figure){$this->remove('./node()',$figure);$figure->appendChild($this->image($this->data['hero'],true));}
         }
         if(isset($this->data['cards']))$this->replaceCards();
-        $invitation=$this->first('//*['.self::cls('destination-invitation').']');
-        if($invitation&&!empty($this->data['copy'])){
-            $button=$this->first('.//a['.self::cls('pill').']',$invitation);
-            if($button){
-                $names=['jerico'=>'Jericó','bogota'=>'Bogotá','cartagena'=>'Cartagena','medellin'=>'Medellín','santa-marta'=>'Santa Marta'];
-                $name=$names[$slug]??$slug;
-                $title=$copy['business_title']??match($this->locale){'en'=>'Have a business in '.$name.'?','pt-BR'=>'Tem um negócio em '.$name.'?',default=>'¿Tienes un negocio en '.$name.'?'};
-                $text=$copy['business_text']??match($this->locale){'en'=>'Leave your details to join the directory.','pt-BR'=>'Deixe seus dados para participar do diretório.',default=>'Déjanos tus datos para participar en el directorio.'};
-                $copyNode=$this->element('div');$copyNode->appendChild($this->element('h2',$title));$copyNode->appendChild($this->element('p',$text));
-                $button=$button->cloneNode(true);$this->remove('./node()',$invitation);$invitation->appendChild($copyNode);$invitation->appendChild($button);
-            }
-        }
         if(!empty($this->data['credits_url'])){
             $area=$this->first('//*[@id="que-conocer"]');
             if($area&&!$this->first('.//*['.self::cls('compact-image-credits').']',$area)){
@@ -156,7 +144,6 @@ final class DestinationPresentation
     {
         $file=__DIR__.'/presentation/destinations/'.$slug.'.json';
         if(!is_file($file)){
-            if(!in_array($slug,['zipaquira','santa-fe-de-antioquia','jardin','covenas'],true))return $html;
             $data=['copy'=>[]];
         }else $data=self::data($slug);
         $data['slug']=$slug;

@@ -6,7 +6,15 @@ URL=re.compile(r'(?P<path>/assets/[A-Za-z0-9_./-]+\.(?:css|js|json|svg|png|webp|
 def apply(public):
  public=Path(public);assets={'/'+p.relative_to(public).as_posix():p for p in (public/'assets').rglob('*') if p.is_file()};versions={};visiting=set()
  def update(text):
-  return URL.sub(lambda m:m['path']+'?v='+version(m['path']) if m['path'] in assets else m[0],text)
+  def replace(match):
+   # A dynamic PHP version follows this literal URL; leave its runtime hash intact.
+   if text[match.end():].startswith('?v='):return match[0]
+   return match['path']+'?v='+version(match['path']) if match['path'] in assets else match[0]
+  return URL.sub(replace,text)
+ def update_markup(text):
+  # Filesystem paths inside PHP are not browser resource URLs.
+  parts=re.split(r'(<\?(?:php|=).*?\?>)',text,flags=re.S)
+  return ''.join(part if part.startswith('<?') else update(part) for part in parts)
  def version(name):
   if name in versions:return versions[name]
   if name in visiting:raise ValueError('Dependencia cíclica de recursos: '+name)
@@ -18,7 +26,7 @@ def apply(public):
  for name in sorted(assets):version(name)
  for path in public.rglob('*'):
   if path.suffix not in {'.html','.php'} or not path.is_file():continue
-  original=path.read_text();text=update(original)
+  original=path.read_text();text=update_markup(original)
   if text!=original:path.write_text(text)
  (public/'asset-manifest.json').write_text(json.dumps(versions,ensure_ascii=False,indent=2,sort_keys=True)+'\n')
  return versions
