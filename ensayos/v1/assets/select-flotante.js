@@ -1,5 +1,7 @@
 (() => {
   'use strict';
+  if(document.documentElement.dataset.floatingSelectController)return;
+  document.documentElement.dataset.floatingSelectController='ready';
   const openMenus=new Set();let sequence=0;
   const locale=document.documentElement.lang.startsWith('en')?'en':document.documentElement.lang.startsWith('pt')?'pt':'es';
   const copy={es:['Mostrar opciones','No hay coincidencias.','Selecciona','Elige una opción de la lista.'],en:['Show options','No matches.','Select','Choose an option from the list.'],pt:['Mostrar opções','Nenhum resultado.','Selecione','Escolha uma opção da lista.']}[locale];
@@ -64,5 +66,5 @@
   function scan(root=document){root.querySelectorAll?.('select').forEach(enhance);}
   document.addEventListener('pointerdown',event=>{if(![...openMenus].some(control=>event.target.closest('.floating-select')===control.wrapper))closeAll();});
   new MutationObserver(records=>records.forEach(record=>record.addedNodes.forEach(node=>{if(node.nodeType===1)scan(node);}))).observe(document.documentElement,{childList:true,subtree:true});
-  document.addEventListener('DOMContentLoaded',()=>scan());
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>scan(),{once:true});else scan();
 })();
