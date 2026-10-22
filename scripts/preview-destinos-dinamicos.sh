@@ -37,6 +37,5 @@ php -r '$pdo=new PDO(getenv("EL_DESTINATIONS_DSN"),null,null,[PDO::ATTR_ERRMODE=
 # Bring the disposable/local preview schema up to the current public renderer.
 php -r '$pdo=new PDO(getenv("EL_DESTINATIONS_DSN"),null,null,[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION]);foreach([26=>"business_research_contacts",27=>"business_bulk_update_audit",29=>"business_email_permissions",30=>"business_categories"] as $number=>$table){if($number===29){$columns=$pdo->query("PRAGMA table_info(accounts)")->fetchAll(PDO::FETCH_COLUMN,1);if(!in_array("contact_phone",$columns,true))$pdo->exec(file_get_contents("backend/database/migrations/028-accounts-business-channels.sqlite.sql"));}$q=$pdo->prepare("SELECT COUNT(*) FROM sqlite_master WHERE type=? AND name=?");$q->execute(["table",$table]);if(!$q->fetchColumn()){$files=glob(sprintf("backend/database/migrations/%03d-*.sqlite.sql",$number));$pdo->exec(file_get_contents($files[0]));}}'
 PORT=${PORT:-8011}
-python3 scripts/preparar-hosting.py --output .local/preview-portal
 export EL_COVERAGE_TEST_CONFIG="$EL_LOCAL_CONFIG_PATH"
-exec php -S "127.0.0.1:$PORT" -t .local/preview-portal/public scripts/php-destinations-router.php
+exec python3 scripts/preview-paquete-limpio.py --port "$PORT"

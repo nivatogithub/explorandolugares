@@ -1,0 +1,312 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "cocorna",
+    "department": "Antioquia",
+    "subregion": "Oriente",
+    "latitude": null,
+    "longitude": null,
+    "country_code": "CO",
+    "destination_type": "municipality",
+    "translations": {
+      "es": {
+        "display_name": "Cocorná",
+        "eyebrow": "Antioquia · Oriente",
+        "headline": "Montañas, cascadas y aventura en el Oriente antioqueño.",
+        "intro": "Montañas, cascadas y aventura en el Oriente antioqueño.",
+        "meta_description": "Montañas, cascadas y aventura en el Oriente antioqueño."
+      },
+      "en": {
+        "display_name": "Cocorná",
+        "eyebrow": "Antioquia · Oriente",
+        "headline": "Mountains, waterfalls and adventure in eastern Antioquia.",
+        "intro": "Mountains, waterfalls and adventure in eastern Antioquia.",
+        "meta_description": "Mountains, waterfalls and adventure in eastern Antioquia."
+      },
+      "pt-BR": {
+        "display_name": "Cocorná",
+        "eyebrow": "Antioquia · Oriente",
+        "headline": "Montanhas, cachoeiras e aventura no leste de Antioquia.",
+        "intro": "Montanhas, cachoeiras e aventura no leste de Antioquia.",
+        "meta_description": "Montanhas, cachoeiras e aventura no leste de Antioquia."
+      }
+    },
+    "history": {
+      "es": [
+        "Los caminos arrieros y la agricultura marcaron el crecimiento de Cocorná. Hoy sus ríos y montañas también sostienen una vocación de turismo de naturaleza."
+      ],
+      "en": [
+        "Mule trails and farming shaped the growth of Cocorná. Its rivers and mountains now also support nature tourism."
+      ],
+      "pt-BR": [
+        "Os caminhos dos tropeiros e a agricultura marcaram o crescimento de Cocorná. Hoje seus rios e montanhas também sustentam o turismo de natureza."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Montañas, cascadas y aventura en el Oriente antioqueño."
+      ],
+      "en": [
+        "Mountains, waterfalls and adventure in eastern Antioquia."
+      ],
+      "pt-BR": [
+        "Montanhas, cachoeiras e aventura no leste de Antioquia."
+      ]
+    },
+    "sources": {
+      "es": [
+        {
+          "label": "Provincia ABT — Cocorná",
+          "url": "https://provincia-abt.gov.co/bosques/cocorna/"
+        }
+      ],
+      "en": [
+        {
+          "label": "Provincia ABT — Cocorná",
+          "url": "https://provincia-abt.gov.co/bosques/cocorna/"
+        }
+      ],
+      "pt-BR": [
+        {
+          "label": "Provincia ABT — Cocorná",
+          "url": "https://provincia-abt.gov.co/bosques/cocorna/"
+        }
+      ]
+    }
+  },
+  "places": [
+    {
+      "slug": "cascada-las-perlas",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Cascada Las Perlas",
+          "description": "Una caída de agua entre las montañas de Cocorná.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Las Perlas Waterfall",
+          "description": "A waterfall among the mountains of Cocorná.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Cachoeira Las Perlas",
+          "description": "Uma queda d’água entre as montanhas de Cocorná.",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/cascada-las-perlas.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Plan de ilustración editorial; activo todavía no generado.",
+        "image_source_url": "",
+        "image_license": "Pendiente de referencia y generación; no publicar.",
+        "image_license_url": "",
+        "alt": {
+          "es": "Cascada Las Perlas",
+          "en": "Las Perlas Waterfall",
+          "pt-BR": "Cachoeira Las Perlas"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "parque-principal",
+      "type": "place",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Parque principal",
+          "description": "El centro del pueblo, alrededor de su iglesia y calles comerciales.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Main square",
+          "description": "The town centre, around its church and shopping streets.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Praça principal",
+          "description": "O centro da cidade, ao redor da igreja e das ruas comerciais.",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/parque-principal.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Plan de ilustración editorial; activo todavía no generado.",
+        "image_source_url": "",
+        "image_license": "Pendiente de referencia y generación; no publicar.",
+        "image_license_url": "",
+        "alt": {
+          "es": "Parque principal",
+          "en": "Main square",
+          "pt-BR": "Praça principal"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "parapente",
+      "type": "experience",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Parapente en Cocorná",
+          "description": "Un vuelo acompañado entre montañas y cascadas.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Paragliding in Cocorná",
+          "description": "A tandem flight among mountains and waterfalls.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Parapente em Cocorná",
+          "description": "Um voo acompanhado entre montanhas e cachoeiras.",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/parapente.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Plan de ilustración editorial; activo todavía no generado.",
+        "image_source_url": "",
+        "image_license": "Pendiente de referencia y generación; no publicar.",
+        "image_license_url": "",
+        "alt": {
+          "es": "Parapente en Cocorná",
+          "en": "Paragliding in Cocorná",
+          "pt-BR": "Parapente em Cocorná"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "rafting-calderas",
+      "type": "experience",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Rafting en el río Calderas",
+          "description": "Recorre los rápidos con un equipo de guías.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Rafting on the Calderas River",
+          "description": "Navigate the rapids with a team of guides.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Rafting no rio Calderas",
+          "description": "Percorra as corredeiras com uma equipe de guias.",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/rafting-calderas.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Plan de ilustración editorial; activo todavía no generado.",
+        "image_source_url": "",
+        "image_license": "Pendiente de referencia y generación; no publicar.",
+        "image_license_url": "",
+        "alt": {
+          "es": "Rafting en el río Calderas",
+          "en": "Rafting on the Calderas River",
+          "pt-BR": "Rafting no rio Calderas"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "excursion-melcocho",
+      "type": "experience",
+      "publication_status": "draft",
+      "translations": {
+        "es": {
+          "name": "Excursión al río Melcocho",
+          "description": "Senderos y pozos de agua en una salida guiada.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Melcocho River excursion",
+          "description": "Trails and river pools on a guided outing.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Excursão ao rio Melcocho",
+          "description": "Trilhas e poços de água em um passeio guiado.",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/excursion-melcocho.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Plan de ilustración editorial; activo todavía no generado.",
+        "image_source_url": "",
+        "image_license": "Pendiente de referencia y generación; no publicar.",
+        "image_license_url": "",
+        "alt": {
+          "es": "Excursión al río Melcocho",
+          "en": "Melcocho River excursion",
+          "pt-BR": "Excursão ao rio Melcocho"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    }
+  ],
+  "hero_image": {
+    "file": "images/cocorna-portada.webp",
+    "image_origin": "ai_generated",
+    "image_creator": "Plan de ilustración editorial; activo todavía no generado.",
+    "image_source_url": "",
+    "image_license": "Pendiente de referencia y generación; no publicar.",
+    "image_license_url": "",
+    "alt": {
+      "es": "Cocorná",
+      "en": "Cocorná",
+      "pt-BR": "Cocorná"
+    },
+    "caption": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  }
+}

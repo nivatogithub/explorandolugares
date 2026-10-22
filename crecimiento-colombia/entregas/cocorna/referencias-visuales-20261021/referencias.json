@@ -1,0 +1,112 @@
+{
+  "fecha_consulta": "2026-10-21",
+  "sin_generaciones": true,
+  "sin_descarga_de_fotos_protegidas": true,
+  "regla": "Identificación documental y observación visual son estados distintos. No se declara lista una referencia no vista.",
+  "referencias": [
+    {
+      "rol": "cascada-las-perlas",
+      "estado": "imagen_identificada_por_ficha_no_inspeccionada",
+      "pagina": "https://orienteantioqueno.com/turismo-en-cocorna/cascada-de-las-perlas-cocorna/",
+      "imagen": "https://orienteantioqueno.com/wp-content/uploads/2020/05/cascada-las-perlas-cocorna-oriente-antioque%C3%B1o.jpg",
+      "autor": "Juan Carlos Morales",
+      "publicacion": "2020-05-26",
+      "captura": null,
+      "licencia": "No confirmada; consulta factual, no usar como entrada sin autorización.",
+      "observado_realmente": [
+        "Ficha HTML y crédito del fotógrafo.",
+        "URL de imagen principal extraída del HTML con nombre explícito de Las Perlas."
+      ],
+      "no_observado": [
+        "Píxeles de la foto: web imagen devolvió Cache miss; IAB no disponible.",
+        "Estado2026, geometría precisa de la caída y cámara."
+      ],
+      "geografia": {
+        "ancla_cartografica": [
+          6.06546,
+          -75.21576
+        ],
+        "fuente": "https://mapcarta.com/es/N7431852685",
+        "limite": "Ancla de mapa, no cámara fotográfica."
+      },
+      "invariantes_documentales": [
+        "Cascada identificada como Las Perlas; no sustituir por Cabellera de Venus.",
+        "Marco montañoso y quebrada La Chorrera acreditados; no inferir piscina o acceso libre."
+      ],
+      "pendiente": "Inspeccionar foto en herramienta visual disponible y extraer rasgos antes de generar."
+    },
+    {
+      "rol": "excursion-melcocho",
+      "estado": "imagen_identificada_por_oferta_no_inspeccionada",
+      "pagina": "https://atodopulmon.co/paquetes/viaje-rio-melcocho/",
+      "imagen": "https://atodopulmon.co/wp-content/uploads/2025/01/Imagen-2025-15.png",
+      "autor": null,
+      "captura": null,
+      "fecha_archivo_indicada_por_url": "2025/01 no acredita fecha de captura",
+      "licencia": "No confirmada; no subir al generador como referencia sin autorización.",
+      "observado_realmente": [
+        "Oferta del operador con foto portada vinculada a excursión Melcocho.",
+        "URL exacta de su imagen10 obtenida de la página."
+      ],
+      "no_observado": [
+        "Píxeles: fetch de imagen terminó en timeout.",
+        "Tramo/cámara exactos y municipio del punto fotografiado."
+      ],
+      "geografia": {
+        "limite": "Melcocho y área protegida intermunicipales; acceso por El Retiro no implica que toda poza pertenezca a Cocorná.",
+        "fuente": "https://www.cornare.gov.co/noticias-corporativas/proyecto-caica-otra-apuesta-de-cornare-por-el-desarrollo-sostenible-de-la-region/"
+      },
+      "invariantes_documentales": [
+        "Excursión guiada con senderos y pozos, no paseo urbano.",
+        "No inventar playa caribeña, fiordo ni lago; no atribuir un tramo no identificado a Cocorná."
+      ],
+      "pendiente": "Inspeccionar foto y confirmar si es foto individual o composición; conservar carácter intermunicipal."
+    },
+    {
+      "rol": "parapente",
+      "estado": "referencia_actividad_tematica_documentada",
+      "pagina": "https://www.cascadiacocorna.com/adventures/paragliding",
+      "imagen": "https://framerusercontent.com/images/q9EI87y26QQmlZxoddzyxzJJ658.png?height=1426&width=1080",
+      "observado_realmente": [
+        "Página propia identifica Parapente Cocorná y vuelo junto a montañas/cascadas."
+      ],
+      "no_observado": [
+        "Píxeles de la foto y despegue exacto."
+      ],
+      "brief": "Ilustración temática de vuelo tándem sobre relieve verde montañoso de Cocorná; no inventar posición de cascada particular ni San Félix.",
+      "licencia": "No confirmada; no copiar foto de operador como entrada."
+    },
+    {
+      "rol": "rafting-calderas",
+      "estado": "referencia_actividad_tematica_documentada",
+      "pagina": "https://www.expeditioncolombia.com/es/experiencias-de-aventura/calderas-rafting",
+      "imagen": "https://expedition-colombia.s3.us-east-2.amazonaws.com/public/media-files/Rafting_Calderas_Banner_e45fee4b-3ad0-4004-bd22-2563abbe0f42.webp",
+      "observado_realmente": [
+        "Página propia acredita rafting en Calderas, base Cocorná, rápidos y entorno de selva."
+      ],
+      "no_observado": [
+        "Píxeles de la foto y coordenadas del tramo."
+      ],
+      "brief": "Ilustración temática de balsa con guía, remos y equipo sobre rápidos en cauce rocoso rodeado de vegetación tropical; no paisajes alpinos ni navegación en lago.",
+      "licencia": "No confirmada; no subir banner de operador como entrada."
+    },
+    {
+      "rol": "parque-principal",
+      "estado": "foto_historica_abierta_inspeccionada",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Cocorn%C3%A1_parque.jpg",
+      "imagen": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Cocorn%C3%A1_parque.jpg",
+      "autor": "Moterocolombia",
+      "captura": "2015-11-23 20:15:39 según metadataCommons",
+      "licencia": "CC BY-SA 4.0",
+      "licencia_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "observado_realmente": [
+        "Escalones rojizos y baranda al primer plano mirando a plaza.",
+        "Árboles grandes a izquierda; fachadas comerciales contiguas de dos y tres niveles al frente.",
+        "Ladera de montaña con nube baja detrás de casas.",
+        "No hay fuente dominante; iglesia no visible en este encuadre."
+      ],
+      "camara": "Desde borde elevado/escalera de plaza hacia fachadas opuestas; cardinal no verificado.",
+      "limite": "Histórica: no usar como prueba de colores, avisos o tránsito2026."
+    }
+  ]
+}

@@ -67,7 +67,7 @@ $filterState=['q'=>$query,'destination'=>$crmFilters['destination'],'subscriptio
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
 <title>Canales y responsable | Administración</title>
-<link rel="stylesheet" href="../assets/style.css"><link rel="stylesheet" href="../assets/admin.css?v=20261015-channel-dialog">
+<link rel="stylesheet" href="../assets/admin.css?v=20261015-channel-dialog">
 <script src="../assets/admin-contact-file.js" defer></script>
 <script src="../assets/admin-business-channels.js" defer></script>
 <?php require __DIR__.'/_theme.php'; ?></head>

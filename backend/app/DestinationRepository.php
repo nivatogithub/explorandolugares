@@ -28,9 +28,10 @@ final class DestinationRepository
         $destination['history_media']=$this->mediaForDestination($id,$locale,'history');
         $stmt=$this->pdo->prepare('SELECT section_key,source_url,source_label,display_order FROM destination_sources WHERE destination_id=? AND locale=? ORDER BY section_key,display_order');
         $stmt->execute([$id,$locale]); $destination['sources']=$stmt->fetchAll(PDO::FETCH_ASSOC);
-        $stmt=$this->pdo->prepare('SELECT p.id,p.slug,p.poi_type,tr.name,tr.description,tr.map_url,tr.external_url,tr.external_label,p.display_order,
+        $stmt=$this->pdo->prepare('SELECT p.id,p.slug,p.poi_type,tr.name,tr.description,COALESCE(NULLIF(tr.map_url,""),fallback.map_url) AS map_url,COALESCE(NULLIF(tr.external_url,""),fallback.external_url) AS external_url,COALESCE(NULLIF(tr.external_label,""),fallback.external_label) AS external_label,p.display_order,
                     m.asset_path,m.origin,m.creator,m.source_url,m.license_name,m.license_url,mt.alt_text,mt.caption,m.width,m.height
                 FROM points_of_interest p JOIN point_of_interest_translations tr ON tr.point_of_interest_id=p.id AND tr.locale=?
+                LEFT JOIN point_of_interest_translations fallback ON fallback.point_of_interest_id=p.id AND fallback.locale="es"
                 LEFT JOIN point_of_interest_media pm ON pm.point_of_interest_id=p.id
                 LEFT JOIN media_assets m ON m.id=pm.media_asset_id
                 LEFT JOIN media_asset_translations mt ON mt.media_asset_id=m.id AND mt.locale=?

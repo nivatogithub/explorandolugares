@@ -1,5 +1,11 @@
 # Producción de imágenes ilustradas con IA
 
+## Puerta obligatoria anterior a preproducción
+
+Desde el 21/10/2026, ningún activo nuevo o modificado se promueve a preproducción mientras incumpla estas reglas, las de fidelidad visual o la revisión humana de su versión exacta. Verificar estilo de tinta/gouache, identidad territorial, arquitectura, encuadre en el componente, procedencia y permisos, manifiesto y hashes. Registrar el resultado por activo. Un punto pendiente bloquea su promoción; no se compensa con la aprobación de otro activo o del contenido del lugar.
+
+Las propuestas no conformes o pendientes solo se muestran en revisión local aislada y rotulada; quedan excluidas del paquete desplegable de preproducción. También aplica a reemplazos de imágenes ya publicadas. No confundir una vista local con una entrega validada a preproducción.
+
 Guía para preparar imágenes de destinos de Explorando Lugares que sean atractivas, reconocibles y honestas con el lugar representado. Aplica a este repositorio y a cualquier herramienta o proveedor de IA.
 
 ## Principio editorial

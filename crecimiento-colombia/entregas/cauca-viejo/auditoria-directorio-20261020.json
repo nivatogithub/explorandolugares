@@ -1,0 +1,232 @@
+{
+  "date": "2026-10-20",
+  "scope": "14candidatoshistóricos+2restaurantes; sin escrituraDB",
+  "rows": [
+    {
+      "name": "Hotel Boutique Fundadores Cauca Viejo",
+      "source_url": "https://caucaviejo.com/alojamiento/",
+      "checked_at": "2026-10-20",
+      "note": "Sitio del hotel: alojamiento dentro de Cauca Viejo.",
+      "rnt": "54247",
+      "preserve_existing_record": true,
+      "automatic_move": false,
+      "source_url_current": "https://caucaviejo.com/alojamiento/",
+      "evidence_type": "oferta propia",
+      "status": "primaria_oferta",
+      "review_note": "Conservar establecimiento principal; no confundir sociedadoperadora con otro hotel."
+    },
+    {
+      "name": "Hotel Fundadores Casa El Sacatin",
+      "source_url": "https://caucaviejo.com/alojamiento/",
+      "checked_at": "2026-10-20",
+      "note": "Sitio del hotel: sede Sacatín en Cauca Viejo.",
+      "rnt": "149502",
+      "preserve_existing_record": true,
+      "automatic_move": false,
+      "source_url_current": "https://caucaviejo.com/alojamiento/",
+      "evidence_type": "sede del mismo hotel",
+      "status": "primaria_sede",
+      "review_note": "Sede Sacatín corroborada en FAQpropia; conservar IDexistente, no crear duplicado del hotel."
+    },
+    {
+      "name": "Hotel Casa Las Acacias",
+      "source_url": "https://www.caucaviejo.com/sedes",
+      "checked_at": "2026-10-20",
+      "note": "Sitio del hotel: sede Casa Acacias en Cauca Viejo; página histórica, no acredita vigencia de operación.",
+      "rnt": "149504",
+      "preserve_existing_record": true,
+      "automatic_move": false,
+      "source_url_current": "https://caucaviejo.com/",
+      "evidence_type": "sede del mismo hotel",
+      "status": "primaria_sede",
+      "review_note": "Mapa propio identifica sede Las Acacias; preservar ficha existente, no contarcomo operadorindependiente."
+    },
+    {
+      "name": "Cauca Viejo Turistico",
+      "source_url": "https://www.hayfestival.com/jerico/hoteles",
+      "checked_at": "2026-10-20",
+      "note": "Directorio del organizador: ubicación Cauca Viejo; no acredita vigencia de operación.",
+      "rnt": "17046",
+      "preserve_existing_record": true,
+      "automatic_move": false,
+      "status": "revisar_identidad_duplicada",
+      "review_note": "La sociedad Cauca Viejo Turístico figura comooperadora del Hotel Fundadores. RNT17046histórico no demuestra establecimientoindependiente actual. No eliminar ni fusionar sin cotejar DB."
+    },
+    {
+      "name": "Casa Mama Rosita",
+      "source_url": "https://www.airbnb.com.pe/rooms/1260332108655357967",
+      "checked_at": "2026-10-20",
+      "note": "Descripción del anfitrión: parcelación Cauca Viejo; RNT 221062 coincide con inventario.",
+      "rnt": "221062",
+      "preserve_existing_record": true,
+      "automatic_move": false,
+      "source_url_current": "https://www.airbnb.com/rooms/1260332108655357967",
+      "evidence_type": "oferta del anfitrión",
+      "status": "primaria_oferta",
+      "review_note": "Ubicación y RNT221062 corroborados por anuncio del anfitrión; no garantiza disponibilidad."
+    },
+    {
+      "name": "Casa San Cipriano",
+      "source_url": "https://www.colombia.com/turismo/prestadores-de-servicios-turisticos/i58467/casa-san-cipriano",
+      "checked_at": "2026-10-20",
+      "note": "Dirección publicada: Pueblo Cauca Viejo, lote 6. El municipio del directorio es inconsistente; contraste con RNT importado de Jericó.",
+      "rnt": "58467",
+      "preserve_existing_record": true,
+      "automatic_move": false,
+      "status": "pendiente_contraste_territorial",
+      "review_note": "Directoriosecundario mezcla municipioMedellín con direcciónCaucaViejo. No actualizarcontacto/ubicaciónhasta identificar inequívocamente."
+    },
+    {
+      "name": "Casa Jacaranda Hotel Boutique",
+      "source_url": "https://eehoteles.com/wp-content/uploads/2023/01/Comunicado-IVA-para-huespedes-EE-Hotel-es-y-Hoteles-Memorables-de-Colombia.pdf",
+      "checked_at": "2026-10-20",
+      "note": "Documento del operador: Casa Jacaranda en Cauca Viejo; ubicación, no vigencia comercial actual.",
+      "rnt": "108285",
+      "preserve_existing_record": true,
+      "automatic_move": false,
+      "source_url_current": "https://hotelesmemorables.com/es/hotel-casa-jacaranda/ubicacion/",
+      "evidence_type": "oferta propia",
+      "status": "primaria_oferta",
+      "review_note": "Actualiza enlace antiguoPDF; sitioactual operador confirma ubicación yRNT108285."
+    },
+    {
+      "name": "Casa Linaje Hotel Boutique",
+      "source_url": "https://hotelesmemorables.com/es/casa-linaje/ubicacion/",
+      "checked_at": "2026-10-20",
+      "note": "Sitio del operador: plaza principal de Cauca Viejo.",
+      "rnt": "214499",
+      "preserve_existing_record": true,
+      "automatic_move": false,
+      "source_url_current": "https://hotelesmemorables.com/es/casa-linaje/ubicacion/",
+      "evidence_type": "oferta propia",
+      "status": "primaria_oferta",
+      "review_note": "Ubicación plaza y vínculo Cedrela corroborados; no fusionar hoteles distintos delmismo grupo."
+    },
+    {
+      "name": "Casa Cedrela Hotel Boutique",
+      "source_url": "https://hotelesmemorables.com/es/casa-linaje/ubicacion/",
+      "checked_at": "2026-10-20",
+      "note": "Sitio del operador: Casa Cedrela contigua a Casa Linaje en Cauca Viejo.",
+      "rnt": "187441",
+      "preserve_existing_record": true,
+      "automatic_move": false,
+      "source_url_current": "https://hotelesmemorables.com/es/casa-cedrela/",
+      "evidence_type": "oferta propia",
+      "status": "primaria_oferta",
+      "review_note": "Hotel individual en plaza; RNT187441. Restaurante NOabierto al público segúnFAQoperador."
+    },
+    {
+      "name": "La Caponera Cauca Viejo",
+      "source_url": "https://heladossanjeronimocajica.com/donde-estamos/",
+      "checked_at": "2026-10-20",
+      "note": "Directorio del proveedor: La Caponera, condominio Cauca Vieja en Jericó; coincidencia con denominación RNT.",
+      "rnt": "285129",
+      "preserve_existing_record": true,
+      "automatic_move": false,
+      "status": "ubicacion_corrobora_proveedor_categoria_pendiente",
+      "review_note": "ProveedorHeladosSanJerónimo lista LaCaponera en manzanaZdelcondominio. Eso no demuestra que la fichaalojamientoRNT285129 sea elmismopuntodeventa ni que debacambiarse acategoríaComida."
+    },
+    {
+      "name": "Casa Blanca Cauca Viejo",
+      "source_url": "https://hichee.com/listings/3661160",
+      "checked_at": "2026-10-20",
+      "note": "Ficha de alojamiento: villa Casa Blanca dentro de la parcelación Cauca Viejo.",
+      "rnt": "285224",
+      "preserve_existing_record": true,
+      "automatic_move": false,
+      "status": "solo_fuente_secundaria",
+      "review_note": "HiChee agrega anuncio casaBlanca en CaucaViejo; falta fichaoriginal oanfitrión actual antesde ampliarficha."
+    },
+    {
+      "name": "Finca Agua Dulce Parcelación Cauca Viejo",
+      "source_url": "https://fliphtml5.com/iamla/dtpn/Periodico_Cauca_Viejo-bajo_peso/",
+      "checked_at": "2026-10-20",
+      "note": "Publicación de la comunidad: Casa Aguadulce, contrastada con denominación completa RNT.",
+      "rnt": "75598",
+      "preserve_existing_record": true,
+      "automatic_move": false,
+      "status": "residencia_no_oferta",
+      "review_note": "Periódico comunitario2025 cita CasaAguadulce comoresidencia/consejero: prueba identidadlocal, NOalquileractual. No convertirproprietarioen contactoempresarial."
+    },
+    {
+      "name": "Casa El Encanto De Cauca Viejo",
+      "source_url": "https://es.scribd.com/document/414192874/Documento-Compraventa",
+      "checked_at": "2026-10-20",
+      "note": "Listado histórico agrupa Casa El Encanto en Cauca Viejo; denominación explícita en RNT importado. No acredita apertura actual.",
+      "rnt": "52117",
+      "preserve_existing_record": true,
+      "automatic_move": false,
+      "status": "historico_sin_oferta_actual",
+      "review_note": "ListadoantiguoScribd y RNTimportado, sinofertapropiaactual localizada. Conservar existente y marcarvigenciapendiente; noexpandir."
+    },
+    {
+      "name": "Casa Paraiso Cauca Viejo",
+      "source_url": "https://es.scribd.com/document/414192874/Documento-Compraventa",
+      "checked_at": "2026-10-20",
+      "note": "Listado histórico agrupa Casa Paraíso en Cauca Viejo; denominación explícita en RNT importado. No acredita apertura actual.",
+      "rnt": "57698",
+      "preserve_existing_record": true,
+      "automatic_move": false,
+      "status": "solo_fuente_secundaria",
+      "review_note": "DirectorioColombia.comRNT57698 conserva nombre/municipioJericó, pero no prueba operaciónactual. Actualizarfuenteinterna, noprometerreserva."
+    },
+    {
+      "name": "Restaurante El Mango",
+      "category": "Comida",
+      "source_url": "https://caucaviejo.com/restaurantes/",
+      "checked_at": "2026-10-20",
+      "status": "primaria_oferta",
+      "review_note": "Página de restaurantes del propio operador identifica local; cotejar nombre/IDantesdealta. No usar contactodelhotel como canaldirectoindividual sin confirmación.",
+      "create_only_after_DB_dedup": true
+    },
+    {
+      "name": "Fonda Estación del Río",
+      "categories": [
+        "Comida",
+        "Vida nocturna"
+      ],
+      "source_url": "https://caucaviejo.com/restaurantes/",
+      "checked_at": "2026-10-20",
+      "status": "primaria_oferta",
+      "review_note": "Página de restaurantes del propio operador identifica local; cotejar nombre/IDantesdealta. No usar contactodelhotel como canaldirectoindividual sin confirmación.",
+      "create_only_after_DB_dedup": true
+    }
+  ],
+  "independent_primary_candidates": 7,
+  "primary_existing_branches_not_new": 2,
+  "other_pending": 7,
+  "categories_supported": [
+    "Hospedaje",
+    "Comida",
+    "Vida nocturna (Fonda Estación del Río)"
+  ],
+  "categories_unconfirmed": [
+    "Licores como ventaindependiente",
+    "Compras",
+    "Salud",
+    "Actividades como negocioseparado delhotel",
+    "Cultura como comercio",
+    "Transporte",
+    "Servicios"
+  ],
+  "restrictions": [
+    "No 30comercios confirmados; no completar cupos con cabeceraJericó.",
+    "Las categorías reflejan serviciosverificados, no rellenar contenedoresvacíos.",
+    "No volver a importar negocios existentes; cotejarIDs,RNT,fuentes y canales.",
+    "No trasladar contactos privados de residentes ni teléfonosviejos a fichaspúblicas."
+  ],
+  "sources": [
+    {
+      "url": "https://hotelesmemorables.com/es/preguntas-frecuentes-hoteles-memorables/",
+      "claim": "RestaurantesJacaranda/Cedrela noabiertosalpúblico; excepcionesporreservaautorizada"
+    },
+    {
+      "url": "https://heladossanjeronimocajica.com/donde-estamos/",
+      "claim": "LaCaponera,puntopublicadoproveedor; nocorroboranegocioRNTespecífico"
+    },
+    {
+      "url": "https://www.colombia.com/turismo/prestadores-de-servicios-turisticos/i57698/casa-paraiso-cauca-viejo",
+      "claim": "Registrosecundario,categoríaalojamiento; vigenciaindeterminada"
+    }
+  ]
+}
