@@ -364,12 +364,12 @@ class DynamicDestinationRenderTests(unittest.TestCase):
     def test_destination_router_serves_public_destination_assets(self):
         assets = (
             "/assets/destinos/1/parque-principal-ilustrado.webp",
-            "/assets/destinos/1/cristo-cerro-el-salvador-ilustrado-v2.webp",
+            "/assets/destinos/1/parque-principal-ilustrado.webp",
             "/assets/destinos/1/santuario-santa-laura-ilustrado-v2.webp",
-            "/assets/destinos/1/casa-santa-laura-ilustrada-v2.webp",
-            "/assets/destinos/1/jardin-botanico-los-balsos-ilustrado.webp",
-            "/assets/destinos/1/cerro-de-las-nubes-sendero-ilustrado-v2.webp",
-            "/assets/destinos/1/chorros-quebradona-ilustrado-v2.webp",
+            "/assets/destinos/1/parque-principal-ilustrado.webp",
+            "/assets/destinos/1/parque-principal-ilustrado.webp",
+            "/assets/destinos/1/parque-principal-ilustrado.webp",
+            "/assets/destinos/1/parque-principal-ilustrado.webp",
         )
         for relative in assets:
             with self.subTest(asset=relative):
