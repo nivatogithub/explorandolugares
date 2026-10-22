@@ -979,7 +979,16 @@ try:
     check(DB.execute('SELECT COUNT(*) FROM business_account_applications WHERE account_id=?',(traveler_row['id'],)).fetchone()[0]==0,'Un viajero no debe generar solicitudes de negocio.')
     check(DB.execute('SELECT COUNT(*) FROM account_consents WHERE account_id=?',(traveler_row['id'],)).fetchone()[0]==1,'Falta el consentimiento de la cuenta viajera.')
     check(request('/admin/usuarios.php',opener=traveler_user)[0]==403,'La cuenta viajera obtuvo acceso al panel.')
-    check('Personal' in request('/business/dashboard.php?tab=personal',opener=traveler_user)[1] and 'Mis negocios' in request('/business/dashboard.php?tab=personal',opener=traveler_user)[1],'Faltan pestañas Personal y Mis negocios.')
+    _,traveler_profile,_=request('/business/dashboard.php?tab=personal',opener=traveler_user)
+    traveler_tabs=re.search(r'<nav class="account-tabs".*?</nav>',traveler_profile,re.S).group(0)
+    check('>Viajero</a>' in traveler_tabs and 'Mis negocios' not in traveler_tabs and 'Registrar o reclamar un negocio' in traveler_profile,'Traveler without businesses must only see Viajero and an optional registration link.')
+    nav_business_id=DB.execute("INSERT INTO businesses(public_id,destination_id,category_code,slug) VALUES('traveler-nav-fixture',?,'hospedaje','traveler-nav-fixture')",(destination_id,)).lastrowid
+    DB.execute("INSERT INTO business_account_memberships(account_id,business_id,role,status) VALUES(?,?,'editor','active')",(traveler_row['id'],nav_business_id));DB.commit()
+    _,owner_profile,_=request('/business/dashboard.php?tab=personal',opener=traveler_user)
+    check('Mis negocios</a>' in re.search(r'<nav class="account-tabs".*?</nav>',owner_profile,re.S).group(0),'Mis negocios must appear once the account has a business, regardless of account type.')
+    DB.execute("UPDATE business_account_memberships SET status='revoked' WHERE account_id=?",(traveler_row['id'],));DB.commit()
+    _,former_profile,_=request('/business/dashboard.php?tab=personal',opener=traveler_user)
+    check('Mis negocios' not in re.search(r'<nav class="account-tabs".*?</nav>',former_profile,re.S).group(0),'Revoked memberships must not keep the business menu visible.')
     print('OK: páginas administrativas autenticadas y bloqueadas para visitantes; registro/inicio/cierre de sesión empresarial, consulta y aprobación, membresía y borrador privado; enlace administrativo de contraseña con almacenamiento hash, expiración y uso único; controles privados; importación transaccional; alta/suscripción/publicación; errores legibles ante migraciones faltantes.')
 finally:
     PROCESS.terminate(); PROCESS.wait(timeout=5); DB.close(); shutil.rmtree(WORK)
