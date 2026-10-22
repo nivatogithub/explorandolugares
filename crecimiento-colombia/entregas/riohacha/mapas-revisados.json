@@ -1,0 +1,127 @@
+[
+  {
+    "destination": "riohacha",
+    "slug": "paseo-marina-muelle",
+    "status": "verified_cartographic_point",
+    "latitude": 11.5528902,
+    "longitude": -72.9087658,
+    "map_url": "https://maps.google.com/?q=11.5528902,-72.9087658",
+    "point_kind": "Punto del muelle peatonal identificado en Calle 1, en el frente costero; no extremo marítimo del muelle.",
+    "confidence_limits": "El nodo tiene dirección Calle 1; no está etiquetado como puerta ni estacionamiento. Publicar como ubicación, no como acceso vehicular certificado.",
+    "sources": [
+      {
+        "url": "https://www.openstreetmap.org/api/0.6/node/6133919001.json",
+        "evidence": "Respuesta directa OSM node6133919001: nombre Muelle peatonal; addr:street Calle1; addr:city Riohacha, LaGuajira; lat11.5528902 lon-72.9087658."
+      },
+      {
+        "url": "https://mapcarta.com/es/N6133919001",
+        "evidence": "Ficha del mismo nodo y dirección Calle1."
+      },
+      {
+        "url": "https://riohacha-laguajira.gov.co/MiMunicipio/Paginas/Sitios-de-Interes.aspx",
+        "evidence": "Alcaldía identifica muelle turístico y Paseo deLaPlaya en avenidaMarina/Calle1. No trasladar longitud promocional de la ficha como medición propia."
+      }
+    ]
+  },
+  {
+    "destination": "riohacha",
+    "slug": "plaza-almirante-padilla",
+    "status": "verified_cartographic_point",
+    "latitude": 11.55139,
+    "longitude": -72.90965,
+    "map_url": "https://maps.google.com/?q=11.55139,-72.90965",
+    "point_kind": "Centro representativo del polígono de la plaza; no puerta de la catedral.",
+    "confidence_limits": "La Alcaldía anunció renovación urbanística en agosto2026; el punto no prueba estado actual de obras ni acceso libre.",
+    "sources": [
+      {
+        "url": "https://mapcarta.com/es/W156986471",
+        "evidence": "OSMway156986471; ParqueAlmirantePadilla11.55139,-72.90965, junto a alcaldía y CatedralNuestraSeñoraDeLosRemedios."
+      },
+      {
+        "url": "https://riohacha-laguajira.gov.co/MiMunicipio/Paginas/Sitios-de-Interes.aspx",
+        "evidence": "Identidad institucional de Plaza dePadilla y monumento al almirante."
+      },
+      {
+        "url": "https://riohacha-laguajira.gov.co/NuestraAlcaldia/SaladePrensa/Paginas/Alcald%C3%ADa-de-Riohacha-prepara-la-renovaci%C3%B3n-urban%C3%ADstica-de-la-Plaza-Almirante-Padilla-y-su-entorno.aspx",
+        "evidence": "Comunicado19/08/2026 sobre planeación de renovación; no certifica terminación."
+      }
+    ]
+  },
+  {
+    "destination": "riohacha",
+    "slug": "valle-cangrejos",
+    "status": "pending_precise_public_pin",
+    "latitude": null,
+    "longitude": null,
+    "map_url": "",
+    "point_kind": "Sector natural del brazo Calancala; falta punto público preciso diferenciado de proyecto antiguo y acceso.",
+    "confidence_limits": "La resolución ambiental georreferencia un proyecto de2011, no una entrada actual. Wikipedia sitúa la desembocadura unos500m al este de ese proyecto. No fusionar ambos ni usar Riíto/LaBoca como sustituto.",
+    "reference_coordinates_not_for_publication": [
+      {
+        "latitude": 11.561667,
+        "longitude": -72.895278,
+        "meaning": "Proyecto Adecuación dePlayas, coordenadas N11°33′42″ W72°53′43″ de resolución2011; no acceso acreditado."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://corpoguajira.gov.co/web/attachments_Joom/article/433/01066%20DE%202011.pdf",
+        "evidence": "Fuente ambiental primaria del proyecto y coordenadas citadas; actualidad del acceso no acreditada."
+      },
+      {
+        "url": "https://www.invemar.org.co/redcostera1/invemar/docs/9312ORDENAMIENTO_MANGLARES_GUAJIRA_LIBRO.pdf",
+        "evidence": "Identifica Valle deLosCangrejos con bocaCalancala, noreste deVillaFátima; coordenadas redondeadas insuficientes para puerta."
+      },
+      {
+        "url": "https://riohacha-laguajira.gov.co/MiMunicipio/Paginas/Sitios-de-Interes.aspx",
+        "evidence": "Alcaldía identifica deltaRanchería y brazoCalancala."
+      }
+    ]
+  },
+  {
+    "destination": "riohacha",
+    "slug": "avistamiento-flamencos",
+    "status": "pending_precise_access_pin",
+    "latitude": null,
+    "longitude": null,
+    "map_url": "",
+    "point_kind": "Acceso documentado: CentroAdministrativo CabañaGuanebucane, Camarones. Coordenada puntual no acreditada.",
+    "confidence_limits": "El iframe institucional centra el santuario11.373341,-73.131973, no la cabaña; no usarlo para Cómo llegar. Guías son obligatorios según fichaPNN actual. No certificar ruta desde un punto de avistamiento comercial.",
+    "sources": [
+      {
+        "url": "https://www.parquesnacionales.gov.co/nuestros-parques/sff-los-flamencos/",
+        "evidence": "PNN: acceso por Camarones y vía al mar hacia CabañaGuanebucane. Prohibido ingreso sin intérprete o guía local. HTML consultado confirma iframe de santuario entero, no acceso."
+      },
+      {
+        "url": "https://old.parquesnacionales.gov.co/portal/wp-content/uploads/2013/12/PNN_FLAMENCOS.pdf",
+        "evidence": "Cartografía institucional sitúa sedeGuanebucane junto aBocaDeCamarones; no aporta coordenada puntual legible suficientemente precisa para pin."
+      },
+      {
+        "url": "https://old.parquesnacionales.gov.co/portal/es/ecoturismo/parques/region-caribe/santuario-de-fauna-y-flora-los-flamencos/como-llegar/",
+        "evidence": "Descripción institucional distingue BocaDeCamarones y cabaña; cruce de laguna puede variar con lluvias. No convertir descripción antigua en garantía actual."
+      }
+    ]
+  },
+  {
+    "destination": "riohacha",
+    "slug": "encuentro-cultural-wayuu",
+    "status": "not_applicable_variable_host",
+    "latitude": null,
+    "longitude": null,
+    "map_url": "",
+    "point_kind": "Experiencia con anfitrión y lugar acordados, sin punto único.",
+    "confidence_limits": "No escoger ranchería ni oficina comercial por cuenta del portal. Punto de encuentro corresponde a reserva concreta.",
+    "sources": []
+  },
+  {
+    "destination": "riohacha",
+    "slug": "excursion-alta-guajira",
+    "status": "not_applicable_variable_departure",
+    "latitude": null,
+    "longitude": null,
+    "map_url": "",
+    "point_kind": "Recorrido multidestino enUribia con salida acordada enRiohacha.",
+    "confidence_limits": "No usar una oficina de operador como si fuese el atractivo ni seleccionar un único pin para CaboDeLaVela/PuntaGallinas.",
+    "sources": []
+  }
+]

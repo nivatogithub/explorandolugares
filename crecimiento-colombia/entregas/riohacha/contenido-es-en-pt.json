@@ -66,6 +66,13 @@
       "es": [],
       "en": [],
       "pt-BR": []
+    },
+    "hero_image": {
+      "path": "visual/riohacha-portada-estilizada-v4.webp",
+      "sha256": "9deaa488d80b93184d88adea378823b950f6bd7d1862400e46f5afe1809cb049",
+      "width": 1200,
+      "height": 800,
+      "status": "approved"
     }
   },
   "hero_image": null,
@@ -75,10 +82,16 @@
       "type": "place",
       "display_order": 1,
       "publication_status": "draft",
-      "image": null,
-      "latitude": null,
-      "longitude": null,
-      "map_url": "",
+      "image": {
+        "path": "visual/riohacha-marina-muelle-v1.webp",
+        "sha256": "32a18ba55cebc103443b16881f477e2a4699ebc240fd967874acd06383b0ea0c",
+        "width": 1200,
+        "height": 800,
+        "status": "pending_human_review"
+      },
+      "latitude": 11.5528902,
+      "longitude": -72.9087658,
+      "map_url": "https://maps.google.com/?q=11.5528902,-72.9087658",
       "translations": {
         "es": {
           "name": "Paseo de la Marina y muelle",
@@ -98,17 +111,24 @@
           "external_url": "",
           "external_label": ""
         }
-      }
+      },
+      "map_status": "verified_cartographic_point"
     },
     {
       "slug": "plaza-almirante-padilla",
       "type": "place",
       "display_order": 2,
       "publication_status": "draft",
-      "image": null,
-      "latitude": null,
-      "longitude": null,
-      "map_url": "",
+      "image": {
+        "path": "visual/plaza-almirante-padilla-propuesta-v1.webp",
+        "sha256": "9789043729dfa8996551725c1a6df74aef1ea09cc58094bb0b988f6b8cb9b110",
+        "width": 1200,
+        "height": 800,
+        "status": "pending_human_review"
+      },
+      "latitude": 11.55139,
+      "longitude": -72.90965,
+      "map_url": "https://maps.google.com/?q=11.55139,-72.90965",
       "translations": {
         "es": {
           "name": "Plaza Almirante Padilla",
@@ -128,14 +148,21 @@
           "external_url": "",
           "external_label": ""
         }
-      }
+      },
+      "map_status": "verified_cartographic_point"
     },
     {
       "slug": "valle-cangrejos",
       "type": "place",
       "display_order": 3,
       "publication_status": "draft",
-      "image": null,
+      "image": {
+        "path": "visual/riohacha-valle-cangrejos-v1.webp",
+        "sha256": "580c3faf8283dee80afdb936761deabd796db82a4e4d28558df5233f535fb132",
+        "width": 1200,
+        "height": 800,
+        "status": "pending_human_review"
+      },
       "latitude": null,
       "longitude": null,
       "map_url": "",
@@ -158,14 +185,21 @@
           "external_url": "",
           "external_label": ""
         }
-      }
+      },
+      "map_status": "pending_precise_public_pin"
     },
     {
       "slug": "avistamiento-flamencos",
       "type": "experience",
       "display_order": 4,
       "publication_status": "draft",
-      "image": null,
+      "image": {
+        "path": "visual/riohacha-flamencos-v1.webp",
+        "sha256": "a8e466bf13baa0ae56a16c00ce3b8d03009df670fc67c7721524e0de82f22fa2",
+        "width": 1200,
+        "height": 800,
+        "status": "pending_human_review"
+      },
       "latitude": null,
       "longitude": null,
       "map_url": "",
@@ -188,14 +222,21 @@
           "external_url": "",
           "external_label": ""
         }
-      }
+      },
+      "map_status": "pending_precise_access_pin"
     },
     {
       "slug": "encuentro-cultural-wayuu",
       "type": "experience",
       "display_order": 5,
       "publication_status": "draft",
-      "image": null,
+      "image": {
+        "path": "visual/riohacha-wayuu-v1.webp",
+        "sha256": "97077af0e981779f078a658c20d9523be780740cd09d8e93f48c03c93abf247f",
+        "width": 1200,
+        "height": 800,
+        "status": "pending_human_review"
+      },
       "latitude": null,
       "longitude": null,
       "map_url": "",
@@ -218,14 +259,21 @@
           "external_url": "",
           "external_label": ""
         }
-      }
+      },
+      "map_status": "not_applicable_variable_host"
     },
     {
       "slug": "excursion-alta-guajira",
       "type": "experience",
       "display_order": 6,
       "publication_status": "draft",
-      "image": null,
+      "image": {
+        "path": "visual/riohacha-alta-guajira-taroa-v1.webp",
+        "sha256": "7728c278926a64dbecb8f5ec4081b640e38915c2513d27deba005219c7fbd8bd",
+        "width": 1200,
+        "height": 800,
+        "status": "pending_human_review"
+      },
       "latitude": null,
       "longitude": null,
       "map_url": "",
@@ -248,7 +296,8 @@
           "external_url": "",
           "external_label": ""
         }
-      }
+      },
+      "map_status": "not_applicable_variable_departure"
     }
   ]
 }
