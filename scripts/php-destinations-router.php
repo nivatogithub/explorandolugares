@@ -20,7 +20,7 @@ if ($path==='/negocios/registro/' || $path==='/negocios/registro') { require ($a
 if ($path==='/negocios/acceso/' || $path==='/negocios/acceso') { require ($assembled?$documentRoot:dirname(__DIR__).'/backend/public').'/business/login.php'; return true; }
 if ($path==='/negocios/portal/' || $path==='/negocios/portal') { require ($assembled?$documentRoot:dirname(__DIR__).'/backend/public').'/business/dashboard.php'; return true; }
 if ($path==='/negocios/salir/' || $path==='/negocios/salir') { require ($assembled?$documentRoot:dirname(__DIR__).'/backend/public').'/business/logout.php'; return true; }
-if (preg_match('~^/admin/(index|base-datos|destinos|negocios|suscripciones|usuarios|importar-negocios|reclamaciones|solicitudes-cuenta|paquete-destino|paquete-destino-imagen|imagen-referencia-negocio)\.php$~',$path,$admin)) {
+if (preg_match('~^/admin/(index|base-datos|destinos|negocios|suscripciones|usuarios|importar-negocios|reclamaciones|solicitudes-cuenta|solicitud-detalle|negocio-vista-previa|paquete-destino|paquete-destino-imagen|imagen-referencia-negocio)\.php$~',$path,$admin)) {
     require ($assembled?$documentRoot:dirname(__DIR__).'/backend/public').'/admin/'.$admin[1].'.php';
     return true;
 }

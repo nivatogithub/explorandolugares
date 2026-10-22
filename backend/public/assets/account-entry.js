@@ -74,12 +74,10 @@
     const account = await response.json();
     if(account.enabled===false){if(!existing)strip.remove();return;}
     if (!account.authenticated) {if(!existing?.hasAttribute('data-admin-legacy'))signIn();return;}
-    const menu=document.createElement('details');menu.className='account-user-menu';
-    const name=document.createElement('summary');name.className='account-name';name.textContent=account.name;
-    name.setAttribute('aria-label',copy[3]+': '+account.name);menu.append(name);
-    const menuPanel=document.createElement('div');menuPanel.className='account-user-menu-panel';
-    menu.append(menuPanel);
+    const name=document.createElement('span');name.className='account-name';name.textContent=account.name;
+    name.setAttribute('aria-label',copy[3]+': '+account.name);
     const form = document.createElement('form');
+    form.className='account-logout-form';
     form.method = 'post';
     form.action = '/negocios/salir/';
     const csrf = document.createElement('input');
@@ -87,14 +85,14 @@
     csrf.name = 'csrf';
     csrf.value = account.csrf;
     const logout = document.createElement('button');
+    logout.className='account-logout-button';
     logout.type = 'submit';
     logout.textContent = copy[1];
-    form.addEventListener('submit', async e => {e.preventDefault();logout.disabled=true;try{const result=await fetch(form.action,{method:'POST',credentials:'same-origin',body:new URLSearchParams(new FormData(form))});if(result.ok){await refreshAccount();if(document.body.classList.contains('portal-account-page')||location.pathname.startsWith('/admin'))location.assign('/');}}finally{logout.disabled=false;}});
     form.append(csrf, logout);
     const myAccount=document.createElement('a');myAccount.href='/negocios/portal/';myAccount.textContent=copy[2];
-    const actions=[menu,myAccount];
+    const actions=[name,myAccount,form];
     if(account.administrator){const admin=document.createElement('a');admin.href='/admin/index.php';admin.textContent=locale==='en'?'Administration':locale==='pt-br'?'Administração':'Administración';actions.push(admin);}
-    const help=document.createElement('a');help.href='/contacto.php';help.textContent=locale==='en'?'Contact and help':locale==='pt-br'?'Contato e ajuda':'Contacto y ayuda';menuPanel.append(help,form);bar.replaceChildren(...actions);
+    bar.replaceChildren(...actions);
   } catch { signIn(); }
   }
   await refreshAccount();

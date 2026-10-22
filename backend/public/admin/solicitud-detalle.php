@@ -8,7 +8,7 @@ header('X-Robots-Tag: noindex, nofollow');
 header('Cache-Control: private, no-store');
 if(empty($_SESSION['admin'])){http_response_code(403);exit('Inicia sesión desde el portal.');}
 $_SESSION['last_seen']=time();
-$type=is_string($_GET['type']??null)?$_GET['type']:'';
+$typeValue=$_GET['type']??$_GET['tipo']??'';$type=is_string($typeValue)?$typeValue:'';if($type==='participation')$type='lead';
 $id=filter_var($_GET['id']??null,FILTER_VALIDATE_INT);
 if(!$id||$id<1||!in_array($type,['lead','account'],true)){http_response_code(404);exit('Solicitud no encontrada.');}
 $table=$type==='lead'?'leads':'business_account_applications';

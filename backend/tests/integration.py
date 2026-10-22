@@ -126,6 +126,16 @@ try:
  assert call('/admin/index.php',{'action':'status','csrf':'incorrecto','id':1,'status':'contactado'})[0]==403
  assert call('/admin/index.php',{'action':'status','csrf':csrf,'id':1,'status':'contactado'})[0]==200
  assert db.execute('SELECT status FROM leads').fetchone()[0]=='contactado'
+ status,body,_=call('/admin/index.php',{'action':'status','csrf':csrf,'id':1,'status':'archivado','return_status':'contactado','return_q':'','return_page':99})
+ assert status==200 and 'La solicitud salió del filtro' in body and 'Página 1' in body
+ assert 'data-native-select name="status"' in body
+ assert call('/admin/index.php',{'action':'status','csrf':csrf,'id':999999,'status':'contactado'})[0]==404
+ status,detail,_=call('/admin/solicitud-detalle.php?tipo=participation&id=1')
+ assert status==200 and 'Enviado por la persona' in detail and '<script>alert(1)</script>' not in detail
+ guest=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
+ assert call('/admin/solicitud-detalle.php?tipo=participation&id=1',agent=guest)[0]==403
+ assert call('/admin/solicitud-detalle.php?tipo=participation&id=999999')[0]==404
+
  assert call('/admin/index.php',{'action':'delete','csrf':'incorrecto','ids[]':['1','2']})[0]==403
  assert call('/admin/index.php',{'action':'delete','csrf':csrf,'ids[]':['1','2']})[0]==200
  assert db.execute('SELECT COUNT(*) FROM leads').fetchone()[0]==3

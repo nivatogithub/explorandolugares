@@ -24,14 +24,17 @@ def context(path,public):
  for lang,prefix in [('es',''),('en','en/'),('pt-BR','pt-br/')]:
   if (public/prefix/rel).is_file():languages[lang]='/'+prefix+rel.removesuffix('index.html')
  return {'locale':locale,'path':route,'languages':languages}
-def resources(text):
+def resources(text, private_preview=False):
  text=re.sub(r'<link\b[^>]*href="[^"]*assets/header-controls\.css(?:\?[^"]*)?"[^>]*>','',text)
  css=[];scripts=[]
  for kind,name in RESOURCES:
   text=re.sub(r'<(?:script|link)\b[^>]*(?:src|href)=["\x27][^"\x27]*assets/'+re.escape(name)+r'(?:\?[^"\x27]*)?["\x27][^>]*>(?:</script>)?','',text)
   url='/assets/'+name
   if kind=='css':css.append(f'<link rel="stylesheet" href="{url}">')
-  else:scripts.append(f'<script defer src="{url}"'+(' data-el-measurement="1"' if name.endswith('medicion.js') else '')+'></script>')
+  else:
+   tag=f'<script defer src="{url}"'+(' data-el-measurement="1"' if name.endswith('medicion.js') else '')+'></script>'
+   if private_preview and name.endswith('medicion.js'):tag="<?php if(!isset($elBusinessDemoPlan)&&!isset($elEditorialPreviewBusiness)):?>"+tag+"<?php endif ?>"
+   scripts.append(tag)
  first=re.search(r'<link\b[^>]*rel="stylesheet"',text)
  position=first.start() if first else text.find('</head>')
  if position>=0:text=text[:position]+''.join(css)+text[position:]
@@ -65,7 +68,7 @@ def apply(public):
   if path.name=='destino.php':ctx="['locale'=>$locale,'path'=>'/destinos/'.$slug.'/','languages'=>['es'=>$langEsUrl,'en'=>$langEnUrl,'pt-BR'=>$langPtUrl]]"
   text=SHELL.sub(lambda m:f'<?php require_once {require}; echo PortalPresentation::header({ctx}); ?>',text,count=1)
   text=FOOTER.sub(lambda m:f'<?=PortalPresentation::footer({ctx})?>',text,count=1)
-  text=resources(text);path.write_text(text)
+  text=resources(text,private_preview=path.name=='negocio.php');path.write_text(text)
  for path in public.rglob('*'):
   if not path.is_file() or path.suffix not in {'.html','.php'}:continue
   text=path.read_text()
