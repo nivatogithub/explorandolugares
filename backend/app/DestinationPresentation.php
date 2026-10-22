@@ -43,7 +43,8 @@ final class DestinationPresentation
         if(isset($copy['intro']))$this->text('//*['.self::cls('destination-hero').']//*['.self::cls('intro').']',$copy['intro']);
         if(isset($copy['headline']))$this->text('//*['.self::cls('destination-hero').']//h1/em',$copy['headline']);
         $titles=match($this->locale){'en'=>['A brief history','Places to visit','Experiences','Directory','History'],'pt-BR'=>['História em breve','O que conhecer','Experiências','Diretório','História'],default=>['Historia en breve','Qué conocer','Experiencias','Directorio','Historia']};
-        $this->remove('//*['.self::cls('pilot-banner').' or '.self::cls('destination-business-link').']');
+        $this->remove('//*['.self::cls('pilot-banner').']');
+        foreach($this->nodes('//*['.self::cls('destination-business-link').']//a') as $link)$link->setAttribute('href','/negocios/registro/?tipo=business');
         $this->remove('//*['.self::cls('destination-hero').']//*['.self::cls('eyebrow').']');
         // Existing data/identity stay unchanged; only the initial representation changes.
         $story=$this->first('//*[@id="descubre"]');
