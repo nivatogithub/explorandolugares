@@ -18,7 +18,8 @@ else:page.write_text(expected)
 
 # A fresh HTML/PHP page must not reload a stale shared loader or measurement file.
 spec=importlib.util.spec_from_file_location('measurement_versions',ROOT/'scripts/versiones-medicion.py');versioner=importlib.util.module_from_spec(spec);spec.loader.exec_module(versioner)
-menu=ROOT/'backend/integration-medicion/public/assets/menu-principal.js'
+# The shared loader moved into the canonical public assets during template unification.
+menu=ROOT/'backend/public/assets/menu-principal.js'
 measurement_version,menu_text,menu_version=versioner.versions(ROOT/'backend/public/assets/cobertura/medicion.js',menu)
 updates={menu:menu_text}
 for path in [page,*list((ROOT/'backend/integration-medicion/public').rglob('*'))]:
