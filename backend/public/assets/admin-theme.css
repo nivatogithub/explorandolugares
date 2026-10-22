@@ -137,3 +137,13 @@ body.portal-admin .floating-select.is-open .floating-select-arrow{transform:rota
 .portal-admin .account-admin-actions form{display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin:8px 0 16px;min-width:210px;max-width:320px}
 .portal-admin .account-admin-actions label{display:flex;flex-direction:column;gap:6px;width:100%;font-size:13px}
 .portal-admin .account-admin-actions input[name=reason]{box-sizing:border-box;width:100%;min-height:40px;padding:8px 10px;border:1px solid var(--el-control-border);border-radius:6px;background:var(--el-field);font:inherit}
+
+/* One payment configuration, laid out as readable fields across the available width. */
+.portal-admin .admin-payment-settings{display:grid;gap:20px;width:100%;max-width:100%;margin:24px 0}
+.portal-admin .admin-payment-settings .destination-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 24px;width:100%;align-items:start}
+.portal-admin .admin-payment-settings label{display:flex;flex-direction:column;gap:8px;margin:0;min-width:0}
+.portal-admin .admin-payment-settings :is(input:not([type=checkbox]),select,textarea){box-sizing:border-box;width:100%;min-height:44px;padding:10px 12px;border:1px solid var(--el-control-border);border-radius:6px;background:var(--el-field);font:inherit}
+.portal-admin .admin-payment-settings .registration-consent{flex-direction:row;align-items:center;gap:10px}
+.portal-admin .admin-payment-settings input[type=checkbox]{width:18px;height:18px;min-height:0;flex:none;margin:0}
+.portal-admin .admin-payment-settings>button{justify-self:start}
+@media(max-width:650px){.portal-admin .admin-payment-settings .destination-form-grid{grid-template-columns:1fr;gap:16px}}
