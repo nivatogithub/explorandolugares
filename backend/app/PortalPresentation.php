@@ -21,6 +21,7 @@ final class PortalPresentation
         $path=preg_replace('~^/(?:en|pt-br)(?=/)~','',$path);
         $path=preg_replace('~/index\.html$~','/',$path);
         if($path==='')$path='/';
+        $path=preg_replace('~^/destinos(?=/|$)~','/lugares',$path);
         $prefix=$locale==='es'?'':($locale==='en'?'/en':'/pt-br');
         $private=str_ends_with($path,'.php') || preg_match('~^/(?:admin|business|negocios/(?:acceso|registro|portal|recuperar-clave|cambiar-clave))\b~',$path)===1;
         $languages=$context['languages']??[];

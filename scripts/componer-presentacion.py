@@ -65,7 +65,7 @@ def apply(public):
   depth=len(path.relative_to(public).parts)-1
   require="__DIR__.'/_portal-shell.php'" if depth==0 else f"dirname(__DIR__,{depth}).'/_portal-shell.php'"
   ctx="['locale'=>($locale??$_GET['lang']??'es')]"
-  if path.name=='destino.php':ctx="['locale'=>$locale,'path'=>'/destinos/'.$slug.'/','languages'=>['es'=>$langEsUrl,'en'=>$langEnUrl,'pt-BR'=>$langPtUrl]]"
+  if path.name=='destino.php':ctx="['locale'=>$locale,'path'=>'/lugares/'.$slug.'/','languages'=>['es'=>$langEsUrl,'en'=>$langEnUrl,'pt-BR'=>$langPtUrl]]"
   text=SHELL.sub(lambda m:f'<?php require_once {require}; echo PortalPresentation::header({ctx}); ?>',text,count=1)
   text=FOOTER.sub(lambda m:f'<?=PortalPresentation::footer({ctx})?>',text,count=1)
   text=resources(text,private_preview=path.name=='negocio.php');path.write_text(text)
