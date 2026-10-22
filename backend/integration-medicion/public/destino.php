@@ -1,5 +1,6 @@
 <?php
 declare(strict_types=1);
+header('Cache-Control: no-cache, max-age=0, must-revalidate');
 
 $repositoryCandidates=[
     dirname(__DIR__,2).'/app/DestinationRepository.php',
@@ -21,7 +22,7 @@ require_once dirname($repositoryPath).'/views/destination-copy.php';
 $slug=(string)($_GET['destino']??'');$locale=(string)($_GET['idioma']??'es');
 if (!preg_match('/^[a-z0-9]+(?:-[a-z0-9]+)*$/D',$slug)) { http_response_code(404); exit('Destino no encontrado.'); }
 $preview=($_GET['preview']??'')==='1';
-if($preview){session_name('el_session');$secure=($_SERVER['HTTPS']??'')==='on';session_set_cookie_params(['httponly'=>true,'secure'=>$secure,'samesite'=>'Lax','path'=>'/']);ini_set('session.use_strict_mode','1');session_start();if(empty($_SESSION['admin'])||time()-(int)($_SESSION['last_seen']??0)>1800){http_response_code(403);exit('La vista previa requiere una sesión activa de administración.');}$_SESSION['last_seen']=time();header('X-Robots-Tag: noindex, nofollow');}
+if($preview){header('Cache-Control: no-store');session_name('el_session');$secure=($_SERVER['HTTPS']??'')==='on';session_set_cookie_params(['httponly'=>true,'secure'=>$secure,'samesite'=>'Lax','path'=>'/']);ini_set('session.use_strict_mode','1');session_start();if(empty($_SESSION['admin'])||time()-(int)($_SESSION['last_seen']??0)>1800){http_response_code(403);exit('La vista previa requiere una sesión activa de administración.');}$_SESSION['last_seen']=time();header('X-Robots-Tag: noindex, nofollow');}
 $dbPath=getenv('EL_DESTINATIONS_DSN') ?: '';$dbUser=getenv('EL_DESTINATIONS_DB_USER')?:null;$dbPassword=getenv('EL_DESTINATIONS_DB_PASSWORD')?:null;
 if ($dbPath==='') {
     $configPath=dirname(__DIR__).'/private/config.php';
@@ -38,17 +39,11 @@ if (!$d) { http_response_code(404); exit('Destino no encontrado.'); }
 $locale=$d['locale'];$t=langCopy($locale);$name=$d['display_name'];
 // Release approved by the owner: presentation does not require local_test or preview.
 $publishedPresentation=in_array($slug,['cartagena','bogota','medellin','santa-marta'],true);
-// Private illustration proposals replace old media before HTML rendering, avoiding duplicate photo downloads.
-if(($preview || $localShowcase || $publishedPresentation) && in_array($slug,['bogota','medellin','santa-marta','cartagena'],true)){
- $visualPath=__DIR__.'/assets/destinos-semirrealistas.json';
- if(is_file($visualPath)){
-  $visual=json_decode(file_get_contents($visualPath),true,32,JSON_THROW_ON_ERROR)[$slug]??null;
-  if($visual){$d['hero']=$visual['hero'];$d['history_media']=null;
-   foreach($d['places'] as &$entry)if(isset($visual['places'][$entry['slug']]))$entry['media']=[$visual['places'][$entry['slug']]];
-   unset($entry);
-  }
- }
-}
+// The renderer and home selection use the same current presentation data.
+require_once dirname($repositoryPath).'/DestinationPresentation.php';
+if($hero=DestinationPresentation::media($slug,null,$locale)){$d['hero']=$hero;$d['history_media']=null;}
+foreach($d['places'] as &$entry)if($image=DestinationPresentation::media($slug,$entry['slug'],$locale))$entry['media']=[$image];
+unset($entry);
 
 $places=array_values(array_filter($d['places'],static fn($place)=>($place['type']??'place')!=='experience'));
 $experiences=array_values(array_filter($d['places'],static fn($place)=>($place['type']??'place')==='experience'));
@@ -81,8 +76,12 @@ if(!$preview && preg_match('~/destino\.php$~',$requestPath)){
 }
 $historySources=array_values(array_filter($d['sources'],static fn($source)=>$source['section_key']==='history'));
 $placeSources=array_values(array_filter($d['sources'],static fn($source)=>$source['section_key']==='places'));
-$alternateUrls=['es'=>$publicOrigin.'/destinos/'.$slug.'/','en'=>$publicOrigin.'/en/destinos/'.$slug.'/','pt-BR'=>$publicOrigin.'/pt-br/destinos/'.$slug.'/'];
+require_once dirname($repositoryPath).'/PortalPresentation.php';
+$presentationContext=['locale'=>$locale,'path'=>'/destinos/'.$slug.'/'];
+$alternateUrls=PortalPresentation::alternates($presentationContext);
 $title=$name.', '.$d['department'].' | Explorando Lugares';
+require_once dirname($repositoryPath).'/DestinationPresentation.php';
+ob_start(static fn(string $html):string=>DestinationPresentation::normalize($html,$slug,$locale));
 ?><!doctype html><html lang="<?=e($locale)?>"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="<?=e($d['meta_description'])?>"><meta name="robots" content="<?=$preview?'noindex,nofollow':'index,follow'?>"><?php if(!$preview):?><link rel="canonical" href="<?=e($canonicalUrl)?>"><link rel="alternate" hreflang="es" href="<?=e($alternateUrls['es'])?>"><link rel="alternate" hreflang="en" href="<?=e($alternateUrls['en'])?>"><link rel="alternate" hreflang="pt-BR" href="<?=e($alternateUrls['pt-BR'])?>"><link rel="alternate" hreflang="x-default" href="<?=e($alternateUrls['es'])?>"><?php endif ?><?php if(!$preview): ?>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Explorando Lugares">

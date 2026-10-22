@@ -67,11 +67,11 @@ $filterState=['q'=>$query,'destination'=>$crmFilters['destination'],'subscriptio
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
 <title>Canales y responsable | Administración</title>
-<link rel="stylesheet" href="../assets/style.css"><link rel="stylesheet" href="../assets/admin.css?v=20261015-channel-dialog">
+<link rel="stylesheet" href="../assets/admin.css?v=20261015-channel-dialog">
 <script src="../assets/admin-contact-file.js" defer></script>
 <script src="../assets/admin-business-channels.js" defer></script>
 <?php require __DIR__.'/_theme.php'; ?></head>
-<body class="portal-admin"><main class="wrap admin-page destination-admin crm-page">
+<body class="portal-admin"><?php require_once dirname(__DIR__).'/_portal-shell.php'; echo PortalPresentation::header(portal_page_context(['locale'=>'es'])); ?><main class="wrap admin-page destination-admin crm-page">
 <?php require __DIR__.'/_navigation.php'; ?>
 <div class="crm-heading"><div><p class="crm-eyebrow">Seguimiento comercial</p><h1>Canales y responsable</h1><p>Consulta los canales generales del negocio y los datos de su cuenta responsable. Puedes cargar canales encontrados en directorios públicos.</p></div><span class="crm-private-badge">Solo administración</span></div>
 <nav class="admin-workflow-tabs" aria-label="Tareas de canales y responsable">
@@ -138,4 +138,4 @@ $filterState=['q'=>$query,'destination'=>$crmFilters['destination'],'subscriptio
 <?php endif ?>
 <div class="crm-footer-note"><p>Son los mismos negocios del directorio. Los canales generales y los datos de la cuenta responsable se gestionan por separado; la información de investigación permanece privada.</p><a href="negocios.php?tab=revisar">Revisar y publicar fichas importadas →</a></div>
 <?php endif ?>
-</main></body></html>
+</main><?=PortalPresentation::footer(['locale'=>'es'])?></body></html>

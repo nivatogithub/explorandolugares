@@ -1,0 +1,51 @@
+{
+  "common": {
+    "css": [
+      "cobertura/portal-tokens.css",
+      "style.css",
+      "identidad-neutral.css",
+      "portal-shell.css",
+      "account-entry.css",
+      "account-page.css",
+      "cobertura/medicion.css"
+    ],
+    "js": [
+      "menu-principal.js",
+      "account-entry.js",
+      "cobertura/medicion.js"
+    ]
+  },
+  "account": {
+    "css": [
+      "account-header.css"
+    ],
+    "js": [
+      "account-residence.js",
+      "select-flotante.js"
+    ]
+  },
+  "home": {
+    "css": [
+      "portada-atracciones.css"
+    ],
+    "js": []
+  },
+  "subscriptions": {
+    "css": [
+      "subscription-comparison.css"
+    ],
+    "js": [
+      "subscription-comparison.js"
+    ]
+  },
+  "directory": {
+    "css": [
+      "directory-tiers.css"
+    ],
+    "js": [
+      "tarjetas-negocios-compactas.js",
+      "cargar-mas-tarjetas.js",
+      "place-relations.js"
+    ]
+  }
+}
