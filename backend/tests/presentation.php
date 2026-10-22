@@ -34,3 +34,10 @@ $santa=DestinationPresentation::normalize($santa,'santa-marta','es');
 check(str_contains($santa,'keep-tayrona')&&str_contains($santa,'keep-ciudad'),'Existing card attributes survive multiple records');
 check(!str_contains($santa,'data-place-slug="minca"'),'Presentation JSON cannot expose records absent from repository output');
 check(is_string(DestinationPresentation::media('medellin',null,'en')['alt']),'Media alt resolves before templates render');
+
+$coverage=PortalPresentation::context(['path'=>'/cobertura/colombia/','languages'=>['es'=>'/cobertura/colombia/']]);
+check(count($coverage['languages'])===1,'Coverage has only its real page equivalent');
+check($coverage['language_navigation']['en']['href']==='/en/'&&!$coverage['language_navigation']['en']['equivalent'],'Portal-home access is distinguished from translated coverage');
+$coverageHeader=PortalPresentation::header(['path'=>'/cobertura/colombia/','languages'=>['es'=>'/cobertura/colombia/']]);
+check(str_contains($coverageHeader,'EN · Home')&&str_contains($coverageHeader,'PT-BR · Início'),'Missing page translations are not silently hidden; home links are visibly labelled');
+check(!str_contains($coverageHeader,'hreflang="en"')&&!str_contains($coverageHeader,'/en/cobertura/'),'No false equivalent or invented coverage route');

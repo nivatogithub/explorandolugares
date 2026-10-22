@@ -13,7 +13,7 @@
 .portal-shell #menu-principal>a:hover::after,.portal-shell #menu-principal>a[aria-current=page]::after{transform:scaleX(1)}
 .portal-shell #menu-principal>a[aria-current=page]{font-weight:750}
 .portal-shell .header-language-bar{position:absolute;top:22px;right:34px;z-index:8;display:flex;flex-direction:column;align-items:flex-end;gap:7px;margin:0;flex-shrink:0}
-.portal-shell .header-language-options{position:static;display:flex;flex-direction:row;align-items:center;justify-content:flex-start;gap:3px;width:auto;max-height:none;margin:0;padding:0;border:0;background:transparent;box-shadow:none;overflow:visible}
+.portal-shell .header-language-options{position:static;display:flex;flex-wrap:wrap;flex-direction:row;align-items:center;justify-content:flex-start;gap:3px;width:auto;max-height:none;margin:0;padding:0;border:0;background:transparent;box-shadow:none;overflow:visible}
 .portal-shell .header-language-options>a{display:inline-flex;align-items:center;justify-content:center;gap:4px;min-height:32px;padding:3px 7px;border:1px solid transparent;border-radius:6px;background:transparent;color:var(--el-text);font-size:12px;font-weight:650;line-height:1.2;text-decoration:none}
 .portal-shell .header-language-options>a[aria-current=page]{background:#ffffff9c;border-color:var(--el-shell-border)}
 .portal-shell .header-language-options>a:hover{background:var(--el-card)}

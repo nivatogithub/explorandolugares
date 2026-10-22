@@ -29,7 +29,14 @@ final class PortalPresentation
             $languagePrefix=$language==='es'?'':($language==='en'?'/en':'/pt-br');
             $languages[$language]=$private?$path.($language==='es'?'':'?lang='.strtolower($language)):$languagePrefix.$path;
         }
-        return ['locale'=>$locale,'path'=>$path,'prefix'=>$prefix,'languages'=>$languages,'copy'=>self::config()['copy'][$locale],'legacy_admin'=>!empty($context['legacy_admin']),'csrf'=>(string)($context['csrf']??'')];
+        $navigation=[];
+        $portalLabels=['es'=>'ES · Inicio','en'=>'EN · Home','pt-BR'=>'PT-BR · Início'];
+        $portalDescriptions=['es'=>'Inicio del portal en español; esta página no tiene traducción a ese idioma','en'=>'English portal home; this page is not available in English','pt-BR'=>'Início do portal em português; esta página não está disponível em português'];
+        foreach(['es'=>'/','en'=>'/en/','pt-BR'=>'/pt-br/'] as $language=>$home){
+            $equivalent=isset($languages[$language]);
+            $navigation[$language]=['href'=>$equivalent?$languages[$language]:$home,'equivalent'=>$equivalent,'label'=>$equivalent?null:$portalLabels[$language],'description'=>$equivalent?null:$portalDescriptions[$language]];
+        }
+        return ['locale'=>$locale,'path'=>$path,'prefix'=>$prefix,'languages'=>$languages,'language_navigation'=>$navigation,'copy'=>self::config()['copy'][$locale],'legacy_admin'=>!empty($context['legacy_admin']),'csrf'=>(string)($context['csrf']??'')];
     }
     public static function translateAccount(string $html,string $locale): string
     {
