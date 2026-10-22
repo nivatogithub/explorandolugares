@@ -33,7 +33,7 @@ try{
  $revision=$editorial->save(0,$business,$revision,['translations'=>['en'=>['display_name'=>'Fictitious Editorial Business'],'pt-BR'=>['display_name'=>'Negócio Editorial Fictício']]],false,true,'administrador-ficticio');$version=$editorial->version($revision);
  $editorial->transition($revision,'prepare',0,'administrador-ficticio','',$version['payload_hash'],['translations'=>'1','images'=>'1','layout'=>'1']);check($editorial->live($business)===$original,'MariaDB prepare savepoint committed changes');
  $editorial->transition($revision,'approve',$account,'','',$version['payload_hash']);
- $p->prepare('UPDATE businesses SET information_status="VERIFICADO" WHERE id=?')->execute([$business]);$editorial->publish($revision,'administrador-ficticio',$version['payload_hash']);
+
  check($editorial->latest($business)['status']==='published','MariaDB exact version did not publish');check($editorial->live($business)['translations']['es']['display_name']==='Comercio Ficticio Editorial','MariaDB revision not applied');
  if(is_dir(dirname(__DIR__).'/editorial-references'))rmdir(dirname(__DIR__).'/editorial-references');
  $settings=['enabled'=>true,'api_key'=>'mock','sender_email'=>'sender@example.invalid','sender_name'=>'Pruebas','reply_to'=>'reply@example.invalid'];
