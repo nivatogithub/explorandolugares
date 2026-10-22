@@ -1,0 +1,29 @@
+{
+  "updated": "2026-10-22",
+  "ready_drafts": [
+    "portada-v1",
+    "plaza-alfonso-lopez-v1",
+    "parranda-vallenata-v2",
+    "rio-guatapuri-hurtado-v1",
+    "balneario-la-mina-v1",
+    "aves-los-besotes-v1",
+    "parque-provincia-v1",
+    "recorrido-cultural-vallenato-v1"
+  ],
+  "pending": {
+    "museo-acordeon": {
+      "status": "approximate_draft_created_technical_identity_review",
+      "sources": [
+        "https://www.museodelacordeonvalledupar.com/",
+        "https://www.radionacional.co/cultura/tradiciones/museo-del-acordeon-valledupar-2024-casa-beto-murgas"
+      ],
+      "confirmed": "Private house museum with accordion collection, Carrera17 9A18, no generic fictional museum interior",
+      "draft": "museo-acordeon-v2.webp",
+      "reason": "Two fact-derived trials, exact red emblem still mismatch; do not promote as verified depiction"
+    }
+  },
+  "resolved_notes": {
+    "rio-guatapuri-hurtado": "New Jdvillalobos2012 reference includes yellow bridge and Sirena, unlike uncertain prior canyon images. Draft generated and compared.",
+    "balneario-la-mina": "Emercab2013 Commons with explicit Badillo/LaMina identity and CC BY-SA3.0. Generated adaptation compared."
+  }
+}

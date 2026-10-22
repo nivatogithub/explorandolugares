@@ -1,0 +1,50 @@
+{
+  "id": "aves-los-besotes-v1",
+  "destination": "valledupar",
+  "role": "experience_card",
+  "status": "draft_pending_human_approval",
+  "generated_date": "2026-10-22",
+  "tool": "built-in image_gen",
+  "input_images": [],
+  "master": ".local/valledupar/aves-los-besotes-v1.png",
+  "web": "crecimiento-colombia/entregas/valledupar/visual/aves-los-besotes-v1.webp",
+  "prompt": "crecimiento-colombia/entregas/valledupar/visual/aves-los-besotes-v1-prompt.txt",
+  "sha256": {
+    "master": "2a6b8c3f69e869c7dcf744cd2d189a85236a4427dff8b4c522f0a91efba7150f",
+    "web": "880fc26a1daaed9df03cdc0580279eaa5e216f61827a68ac6b2ecab46c562c0d"
+  },
+  "dimensions": {
+    "master": [
+      1536,
+      1024
+    ],
+    "web": [
+      1200,
+      800
+    ]
+  },
+  "web_bytes": 286392,
+  "depiction": "Thematic anonymous birder using binoculars. Dry forest context, NOT exact LosBesotes trail/location reconstruction. No invented species.",
+  "factual_sources": [
+    {
+      "url": "https://www.audubon.org/es/conservacion/turismo-ecologico-en-colombia",
+      "supports": "LosBesotes eastern dry side of SierraNevada and drytropicalforest"
+    },
+    {
+      "url": "https://www.corpocesar.gov.co/files/Estudio%20santuario%20los%20besotes.pdf",
+      "supports": "Sanctuary forest and birdlife documented"
+    }
+  ],
+  "review": {
+    "style": "pass gouache and ink",
+    "anatomy": "pass anonymous person rearview with two hands and binoculars",
+    "habitat": "generic dry forest matches habitat type, not claim of exact geography",
+    "species": "none depicted to avoid unverified birds",
+    "human": "pending"
+  },
+  "alt": {
+    "es": "Ilustración temática de una persona observando aves con binoculares en un bosque seco.",
+    "en": "Thematic illustration of a person birdwatching with binoculars in dry forest.",
+    "pt-BR": "Ilustração temática de uma pessoa observando aves com binóculos em floresta seca."
+  }
+}

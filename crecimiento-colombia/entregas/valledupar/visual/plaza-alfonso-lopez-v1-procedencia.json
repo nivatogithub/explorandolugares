@@ -1,0 +1,51 @@
+{
+  "id": "plaza-alfonso-lopez-v1",
+  "destination": "valledupar",
+  "status": "draft_pending_human_approval",
+  "generated_date": "2026-10-22",
+  "tool": "built-in image_gen",
+  "model": "not_exposed_by_tool",
+  "master": ".local/valledupar/plaza-alfonso-lopez-v1.png",
+  "web": "crecimiento-colombia/entregas/valledupar/visual/plaza-alfonso-lopez-v1.webp",
+  "prompt": "crecimiento-colombia/entregas/valledupar/visual/plaza-alfonso-lopez-v1-prompt.txt",
+  "sha256": {
+    "master": "12ad4c3294b0d0571c4cf727368dbb3ca827a4ab155241ac6063353e911b689c",
+    "web": "12532f0af2b08fa363ac753d1f70794a9f7e91a3713e9ec6a18b3e977c098c2d"
+  },
+  "dimensions": {
+    "master": [
+      1536,
+      1024
+    ],
+    "web": [
+      1200,
+      800
+    ]
+  },
+  "bytes": 307734,
+  "promotion": "blocked_until_exact_version_human_approval",
+  "input": {
+    "path": "crecimiento-colombia/entregas/valledupar/visual/referencias/plaza-petruss-2013.jpg",
+    "url": "https://commons.wikimedia.org/wiki/File:Plaza_Alfonso_Lopez_Valledupar.JPG",
+    "author": "Petruss",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "capture_date": "2013-02-04",
+    "sha256": "14aa5e727014136f1c7cd32620a7b7b58496272649be0ea49b918096e18a9452"
+  },
+  "public_attribution_required": true,
+  "derivative_license": "CC BY-SA 3.0",
+  "public_attribution": "Adaptación ilustrada con IA de Plaza Alfonso Lopez Valledupar.JPG, Petruss, CC BY-SA 3.0. Cambios: tinta/gouache, encuadre, omisión de personas y letras.",
+  "attribution_integration_status": "pending_before_promotion",
+  "review": {
+    "style": "pass: clearly painted gouache and ink",
+    "architecture": "pass approximate: four levels, horizontal windows, left tree, wide brick steps, right bust and flagpoles retained",
+    "details": "Illustrated paving and foliage simplified; no current-condition claim",
+    "human": "pending"
+  },
+  "alt": {
+    "es": "Ilustración de un costado de la plaza Alfonso López con árboles y el edificio público frente a su escalinata.",
+    "en": "Illustration of one side of Alfonso López Square, with trees and a public building behind wide steps.",
+    "pt-BR": "Ilustração de um lado da praça Alfonso López, com árvores e um edifício público diante de uma ampla escadaria."
+  }
+}
