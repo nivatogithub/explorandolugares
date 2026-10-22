@@ -204,3 +204,12 @@ $upgrade->exec(file_get_contents(dirname(__DIR__).'/database/migrations/007-medi
 $columns=$upgrade->query('PRAGMA table_info(media_assets)')->fetchAll(PDO::FETCH_COLUMN,1);
 check(in_array('provenance_json',$columns,true),'Migration 007 adds a private provenance field to existing catalogs');
 echo "OK: destination import, locale queries, source metadata, publication filtering, and repeat-import protection.\n";
+
+// Location/reference belongs to a stable POI, not to completion of each translation.
+$pdo->beginTransaction();
+$point=(int)$pdo->query('SELECT p.id FROM points_of_interest p JOIN destinations d ON d.id=p.destination_id WHERE d.slug="jerico" AND p.publication_status="published" LIMIT 1')->fetchColumn();
+$pdo->prepare('UPDATE point_of_interest_translations SET map_url=?,external_url=?,external_label=? WHERE point_of_interest_id=? AND locale="es"')->execute(['https://maps.example.invalid/exact-location','https://official.example.invalid/exact-reference','Fuente verificada',$point]);
+$pdo->prepare('UPDATE point_of_interest_translations SET map_url="",external_url="",external_label="" WHERE point_of_interest_id=? AND locale="en"')->execute([$point]);
+$translated=$repo->findPublished('jerico','en');$matched=array_values(array_filter($translated['places'],static fn($p)=>$p['id']===$point))[0];
+check($matched['map_url']==='https://maps.example.invalid/exact-location'&&$matched['external_url']==='https://official.example.invalid/exact-reference','Existing Spanish location/reference survives a missing translation URL without inventing coordinates');
+$pdo->rollBack();

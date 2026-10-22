@@ -30,7 +30,7 @@ final class DestinationPresentation
     private function image(array $media,bool $hero=false):DOMElement
     {
         $alt=$media['alt']??'';if(is_array($alt))$alt=$alt[$this->locale]??$alt['es']??'';
-        $attributes=['src'=>'/'.$media['path'],'alt'=>$alt,'width'=>$media['width'],'height'=>$media['height'],'decoding'=>'async'];
+        $attributes=['src'=>'/'.$media['path'],'alt'=>$alt,'width'=>$media['width'],'height'=>$media['height'],'decoding'=>'async','draggable'=>'false'];
         if($hero)$attributes['fetchpriority']='high';else $attributes['loading']='lazy';
         foreach(['srcset','sizes'] as $key)if(isset($media[$key]))$attributes[$key]=$media[$key];
         return $this->element('img','',$attributes);
@@ -114,6 +114,7 @@ final class DestinationPresentation
                 $link->setAttribute('data-static-image','true');
             }
         }
+        foreach($this->nodes('//main//img') as $image)$image->setAttribute('draggable','false');
         return $this->document->saveHTML();
     }
     private function replaceCards():void
@@ -121,21 +122,20 @@ final class DestinationPresentation
         foreach(['places'=>['//*[@id="atractivos-destino"]','data-place-slug'],'experiences'=>['//*['.self::cls('destination-experience-list').']','data-experience-slug']] as $kind=>[$query,$attribute]){
             $grid=$this->first($query);if(!$grid)continue;
             $existing=[];foreach($this->nodes('./article',$grid) as $card)$existing[$card->getAttribute($attribute)]=$card;
-            $this->remove('./node()',$grid);
             foreach($this->data['cards'][$kind] as $record){
-                $id=$record['id'];if(!isset($existing[$id]))continue; // Published repository output is the authority, never a historical JSON flag.
-                $t=$record['translations'][$this->locale];
-                $card=$this->element('article','',[$attribute=>$id,'data-location-id'=>$record['location_id']??'']);
-                foreach($existing[$id]->attributes as $existingAttribute)$card->setAttribute($existingAttribute->name,$existingAttribute->value);
-                if($kind==='experiences')$card->setAttribute('class','destination-experience-card');
-                $image=$this->image($this->data['images'][$id]);
-                if($kind==='places'){$frame=$this->element('div','',['class'=>'highlight-photo']);$frame->appendChild($image);$card->appendChild($frame);$container=$card;}
-                else{$card->appendChild($image);$container=$this->element('div','',['class'=>'destination-experience-copy']);$card->appendChild($container);}
-                $container->appendChild($this->element($kind==='places'?'h3':'h4',$t['name']));$container->appendChild($this->element('p',$t['description']));
-                if(!empty($record['source_url']))$container->appendChild($this->element('a',$this->data['copy'][$this->locale]['source_label']??'Fuente',['class'=>'text-link','href'=>$record['source_url'],'target'=>'_blank','rel'=>'noopener noreferrer']));
-                // Preserve paid operator links, even when the old browser replacement discarded them.
-                if(isset($existing[$id]))foreach($this->nodes('.//*['.self::cls('experience-paid-operators').']',$existing[$id]) as $operators)$container->appendChild($operators);
-                $grid->appendChild($card);
+                $id=$record['id'];if(!isset($existing[$id]))continue;
+                // Refresh editorial content in place. Never reconstruct a card:
+                // repository actions, attributes, accessibility, relations and
+                // operator links remain attached to their stable identity.
+                $card=$existing[$id];$t=$record['translations'][$this->locale]??null;
+                if(!$t)continue;
+                $this->text('.//h3|.//h4',$t['name'],$card);
+                $this->text('./p|./*['.self::cls('destination-experience-copy').']/p',$t['description'],$card);
+                if(!empty($record['source_url'])){
+                    $present=false;foreach($this->nodes('.//a[@href]',$card) as $link)if($link->getAttribute('href')===$record['source_url'])$present=true;
+                    if(!$present){$container=$kind==='experiences'?($this->first('./*['.self::cls('destination-experience-copy').']',$card)??$card):$card;
+                        $container->appendChild($this->element('a',$this->data['copy'][$this->locale]['source_label']??'Fuente',['class'=>'text-link','href'=>$record['source_url'],'target'=>'_blank','rel'=>'noopener noreferrer']));}
+                }
             }
         }
     }

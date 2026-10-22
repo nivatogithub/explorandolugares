@@ -76,3 +76,18 @@ function destinationRelationLink(array $relation):string {
     if(!$relation)return '';
     return '<a class="text-link place-relation-link" data-place-relation href="#'.e($relation['target']).'">'.e($relation['label']).'</a>';
 }
+
+/** Exact data-backed links; location is independent of translated descriptions. */
+function destinationPointActions(array $place,array $copy,string $locale):string
+{
+    $html='';$seen=[];
+    foreach(['map_url','external_url'] as $key){
+        $url=trim((string)($place[$key]??''));
+        if($url===''||isset($seen[$url])||!preg_match('~^https?://~i',$url)||!filter_var($url,FILTER_VALIDATE_URL))continue;
+        $seen[$url]=true;
+        $label=$key==='map_url'?($copy['map']??'Ver ubicación'):($place['external_label']??'');
+        if(trim((string)$label)==='')$label=match($locale){'en'=>'More information','pt-BR'=>'Mais informações',default=>'Más información'};
+        $html.='<a class="text-link" href="'.e($url).'" target="_blank" rel="noopener noreferrer">'.e((string)$label).'</a>';
+    }
+    return $html;
+}
