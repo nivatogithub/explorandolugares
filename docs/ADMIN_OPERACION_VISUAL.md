@@ -94,3 +94,5 @@ Integrar el candidato en preprod conforme a AGENTS, reconciliar main, revisar el
 - Corregido el render dinámico de account-entry.js: reconstruía la cabecera y ocultaba otra vez Cerrar sesión dentro del nombre. Ahora conserva un formulario POST visible junto a Mi cuenta, también tras refrescar la sesión; cierre nativo con redirección del servidor. JavaScript versionado por contenido. Regresión DOM prueba el comportamiento con/sin header PHP y con/sin idiomas.
 
 - Ajuste solicitado de sesión: escritorio conserva nombre, Mi cuenta / Cerrar sesión como texto sin botón destacado. En móvil conserva nombre y Mi cuenta arriba; Cerrar sesión aparece dentro del perfil (Viajero y Mis negocios), con POST/CSRF y área táctil de 44 px. Se reutiliza una acción compartida; ninguna regla de autenticación cambia.
+
+- Cerrar sesión del perfil móvil se alinea en la misma fila de Mi cuenta, arriba a la derecha, sin fila adicional debajo de las pestañas. Cabecera sin ancho máximo ni elipsis para el nombre; permite ajuste de línea en pantallas estrechas.
