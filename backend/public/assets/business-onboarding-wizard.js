@@ -13,6 +13,9 @@
     const type = document.querySelector('#registration-application-type');
     const csrf = form.querySelector('[name="csrf"]')?.value || '';
     const plan = () => form.querySelector('[name="plan_code"]:checked')?.value || '';
+    // The applicant should not have to guess what an administrator needs.
+    // Review requests carry a specific reason back to the owner instead.
+    form.querySelector('[name="message"]')?.closest('label')?.remove();
 
     document.querySelectorAll('.subscription-choice-description').forEach((copy) => {
       copy.textContent = copy.textContent.replace('hasta cuatro productos o servicios', 'hasta cinco productos o servicios');
