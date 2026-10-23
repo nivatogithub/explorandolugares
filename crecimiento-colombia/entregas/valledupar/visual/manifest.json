@@ -132,15 +132,30 @@
         "pt-BR": "Interpretação ilustrada do rio Guatapurí em Hurtado, com margem de pedras e a ponte ao fundo."
       },
       "technical_block": false
+    },
+    {
+      "id": "parque-leyenda-vallenata-v2",
+      "web": "crecimiento-colombia/entregas/valledupar/visual/parque-leyenda-vallenata-v2.webp",
+      "sha256": "26cf35952c49e9d54fb915a2291ebec1089d3d135bf64f8f2008c87400e30782",
+      "provenance": "crecimiento-colombia/entregas/valledupar/visual/parque-leyenda-vallenata-v2-procedencia.json",
+      "status": "draft_approximate_pending_human_approval",
+      "public_attribution_required": false,
+      "derivative_license": null,
+      "alt": {
+        "es": "Interpretación ilustrada aproximada del escenario del Parque de la Leyenda Vallenata, bajo su gran cubierta metálica blanca.",
+        "en": "Approximate illustrated interpretation of the performance stage at Parque de la Leyenda Vallenata beneath its large white steel canopy.",
+        "pt-BR": "Interpretação ilustrada aproximada do palco do Parque de la Leyenda Vallenata sob sua grande cobertura metálica branca."
+      },
+      "technical_block": false
     }
   ],
-  "ready_for_human_review": 8,
+  "ready_for_human_review": 9,
   "technical_review_required": 1,
   "human_approved": 0,
   "promoted_to_preprod": 0,
-  "built_in_calls": 11,
+  "built_in_calls": 13,
   "notes": [
-    "9 WebP candidates, 8 ready for human review, Museo v2 remains technical identity review due emblem mismatch",
+    "10 WebP candidates: 9 for human review, Museo v2 still technical identity review. Callejones added but no image pending real reference.",
     "All WebP 1200x800, masters1536x1024 in local directory; references/prompt/provenance associated",
     "No DB/public templates/branch commit/deployment touched by visual worker",
     "CC obligations must be fulfilled by local/public credits before promotion",

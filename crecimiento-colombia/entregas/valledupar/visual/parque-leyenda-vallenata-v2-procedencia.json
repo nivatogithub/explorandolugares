@@ -1,0 +1,65 @@
+{
+  "id": "parque-leyenda-vallenata-v2",
+  "destination": "valledupar",
+  "role": "place_card",
+  "status": "draft_approximate_pending_human_approval",
+  "generated_date": "2026-10-22",
+  "tool": "built-in image_gen",
+  "input_images": [],
+  "method": "Approximate illustration from architectural invariant sheet, no protected photography sent as generation input. Corrected first trial invented rear wall.",
+  "master": ".local/valledupar/parque-leyenda-vallenata-v2.png",
+  "web": "crecimiento-colombia/entregas/valledupar/visual/parque-leyenda-vallenata-v2.webp",
+  "prompt": "crecimiento-colombia/entregas/valledupar/visual/parque-leyenda-vallenata-v2-prompt.txt",
+  "sha256": {
+    "master": "39a021e4539fc07c3976fb447e6f55a3c765dba31207616e77a14df5d14095df",
+    "web": "26cf35952c49e9d54fb915a2291ebec1089d3d135bf64f8f2008c87400e30782"
+  },
+  "dimensions": {
+    "master": [
+      1536,
+      1024
+    ],
+    "web": [
+      1200,
+      800
+    ]
+  },
+  "web_bytes": 277384,
+  "observational_sources": [
+    {
+      "url": "https://www.elpaisvallenato.com/2021/07/29/en-manos-del-municipio-seguira-el-parque-de-la-leyenda-vallenata/",
+      "image": "https://www.elpaisvallenato.com/wp-content/uploads/2021/07/parque-1.jpg",
+      "date": "2021",
+      "permission_as_input": "not established; observed only",
+      "supports": "White elliptical steel-truss canopy, left white ochre churchlike stage facade, right beige glazed functional block, open stage and red rails"
+    },
+    {
+      "url": "https://festivalvallenato.com/paque-consuelo/",
+      "supports": "Identity and historical masterplan; future-tense structures not assumed existing",
+      "limitation": "Linked photo DSC3330 returned404, historical plan not evidence of completion"
+    },
+    {
+      "url": "https://cesar.gov.co/d/filesmain/ofiturismo/plegable_valledupar_2018.pdf",
+      "supports": "Municipal attraction identity"
+    }
+  ],
+  "review": {
+    "style": "pass ink/gouache",
+    "identity": "recognizable approximate white oval stage canopy and white ochre scenic church facade, NOT PlazaAlfonsoLopez stage",
+    "v1_rejected": "invented continuous beige rear wall",
+    "v2_corrected": "rear wall removed, open wooded background",
+    "remaining_limits": [
+      "Steel truss arrangement and concrete pillar positions are simplified",
+      "Right service block windows and stairs are approximate rather than exact",
+      "Stage facade proportions not measurement-grade"
+    ],
+    "access": "not claimed",
+    "future_areas": "not depicted",
+    "human": "pending"
+  },
+  "alt": {
+    "es": "Interpretación ilustrada aproximada del escenario del Parque de la Leyenda Vallenata, bajo su gran cubierta metálica blanca.",
+    "en": "Approximate illustrated interpretation of the performance stage at Parque de la Leyenda Vallenata beneath its large white steel canopy.",
+    "pt-BR": "Interpretação ilustrada aproximada do palco do Parque de la Leyenda Vallenata sob sua grande cobertura metálica branca."
+  }
+}
