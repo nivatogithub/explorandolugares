@@ -14,6 +14,9 @@ $personalPhone=(string)($_POST['phone']??'');if($currentAccount&&!array_key_exis
 
 $registrationType=(string)($_POST['account_type']??$_GET['tipo']??($_SERVER['REQUEST_METHOD']==='POST'?'business':''));
 if($registrationType!=='business'){require __DIR__.'/registration-choice.php';exit;}
+// La cuenta es previa a la solicitud. No mezclamos la creación de credenciales
+// con el registro de un negocio: la asociación siempre parte de una sesión.
+if(!$currentAccount){require __DIR__.'/business-account-gate.php';exit;}
 header("Content-Security-Policy: default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https://tile.openstreetmap.org; connect-src 'self' https://nominatim.openstreetmap.org https://ipwho.is; form-action 'self'; frame-ancestors 'none'; base-uri 'self'");
 $destinationId=max(0,(int)($_POST['destination_id']??$_GET['destination_id']??$registrationPurchase['destination_id']??0));
 if(($_GET['search']??'')==='1'){
@@ -36,7 +39,7 @@ try{
  if(!$currentAccount&&AccountReactivationDelivery::existingRegistration(db(),$config,(string)($_POST['email']??''))){header('Location: /negocios/recuperar-clave/?solicitado=1',true,303);exit;}
  if(!throttle('business_account_register_form',12,900))throw new RuntimeException('Demasiados intentos. Inténtalo más tarde.');
   if(!$currentAccount&&($_POST['password']??'')!==($_POST['password_confirm']??''))throw new RuntimeException('Las contraseñas no coinciden.');
-  $application=['application_type'=>(string)($_POST['application_type']??''),'business_id'=>(string)($_POST['business_id']??''),'business_name'=>(string)($_POST['business_name']??''),'destination_id'=>(string)($_POST['destination_id']??''),'category_code'=>(string)($_POST['category_code']??''),'relationship_code'=>(string)($_POST['relationship_code']??''),'phone'=>ContactPhone::capture($_POST),'message'=>(string)($_POST['message']??''),'consent'=>(string)($_POST['consent']??'')];
+  $application=['application_type'=>(string)($_POST['application_type']??''),'business_id'=>(string)($_POST['business_id']??''),'business_name'=>(string)($_POST['business_name']??''),'destination_id'=>(string)($_POST['destination_id']??''),'category_code'=>(string)($_POST['category_code']??''),'relationship_code'=>(string)($_POST['relationship_code']??''),'phone'=>$personalPhone,'message'=>(string)($_POST['message']??''),'consent'=>(string)($_POST['consent']??'')];
   $application['temporary_uploads']=$_POST['temporary_uploads']??[];$application['onboarding_draft']=(string)($_SESSION['business_onboarding_draft']??'');
   $isFree=($_POST['plan_code']??'free')==='free';$application['self_onboarding_policy']=BusinessSelfOnboarding::POLICY;$application['responsibility_declared']=(string)($_POST['responsibility_declared']??'');
   $existenceInputs=BusinessExistenceVerification::capture(['business_rnt'=>$_POST['business_rnt']??'','business_nit'=>$_POST['business_nit']??'']);

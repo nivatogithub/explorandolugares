@@ -8,4 +8,6 @@
 #registration-continuation .contact-phone-row>label{width:100%}
 #registration-continuation .contact-phone-prefix input{width:100%!important}
 #registration-continuation .small-note{margin:0;padding:12px 14px;border-radius:10px;background:var(--el-panel)}
+.registration-account-identity{display:grid;gap:5px;padding:14px 16px;border:1px solid var(--el-line,#d8ddd9);border-radius:12px;background:var(--el-panel,#f4f4f0)}
+.registration-account-identity p{margin:0;overflow-wrap:anywhere}
 @media(max-width:650px){#registration-continuation .destination-form-grid>.contact-phone-fields{grid-column:1/-1}}
