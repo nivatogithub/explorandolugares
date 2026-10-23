@@ -45,7 +45,7 @@
 </fieldset>
 <aside id="registration-live-preview" class="application-live-preview" hidden aria-live="polite"><p class="eyebrow">Vista previa</p><h2 data-preview-name>Tu negocio</h2><p data-preview-summary>Tu presentación aparecerá aquí.</p><p data-preview-description hidden></p><p data-preview-address></p></aside>
 <script src="/assets/business-text-counters.js?v=1" defer></script>
-<script>
+<script type="application/json" data-legacy-inline-script>
 document.addEventListener('DOMContentLoaded',()=>{
   const form=document.querySelector('#business-registration-form');if(!form)return;
   document.querySelectorAll('.subscription-choice-description').forEach(copy=>{copy.textContent=copy.textContent.replace('hasta cuatro productos o servicios','hasta tres productos o servicios');});
@@ -76,3 +76,4 @@ document.addEventListener('DOMContentLoaded',()=>{
   if(finder&&planStage&&continuation){const controls=document.createElement('nav');controls.className='editorial-actions registration-wizard-actions';const next=document.createElement('button');next.type='button';next.className='pill';next.textContent='Continuar con la información';const back=document.createElement('button');back.type='button';back.className='pill light';back.textContent='← Volver a búsqueda y plan';const warning=document.createElement('p');warning.className='notice';warning.hidden=true;planStage.after(controls);controls.append(warning,next);continuation.before(back);const renderStep=()=>{const first=step===1;const chosen=!!form.querySelector('#registration-application-type')?.value;form.dataset.registrationWizardStep=String(step);finder.hidden=!first;planStage.hidden=!first||!chosen;controls.hidden=!first;back.hidden=first;for(const node of stepTwo)node.hidden=first;if(!first)form.dispatchEvent(new Event('operator-eligibility-change'));window.scrollTo({top:form.getBoundingClientRect().top+window.scrollY-16,behavior:'smooth'});};form.addEventListener('operator-eligibility-change',()=>{if(step===1)renderStep();});form.addEventListener('change',event=>{if(step===1&&event.target.name==='plan_code')renderStep();});next.addEventListener('click',()=>{const selected=form.querySelector('[name="plan_code"]:checked');if(!form.querySelector('#registration-application-type')?.value||!selected){warning.textContent='Primero selecciona el negocio y la suscripción.';warning.hidden=false;return;}step=2;renderStep();});back.addEventListener('click',()=>{step=1;renderStep();});renderStep();}
 });
 </script>
+<script src="/assets/business-onboarding-wizard.js?v=1" defer></script>
