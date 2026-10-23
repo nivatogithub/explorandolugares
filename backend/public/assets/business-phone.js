@@ -33,8 +33,8 @@
         : 'Ingresa los diez números del celular. El +57 se agrega automáticamente.';
       let value = digits(number.value);
       if (fixed && value.length === 7) value = area.value + value;
-      root.querySelector('[data-phone-inline-area]').textContent = fixed ? area.value : '';
-      root.querySelector('[data-wa-inline-area]').textContent = sameWhatsapp.checked && fixed ? area.value : '';
+      root.querySelector('[data-phone-prefix]').value = fixed ? `+57 ${area.value}` : '+57';
+      root.querySelector('[data-wa-prefix]').value = sameWhatsapp.checked && fixed ? `+57 ${area.value}` : '+57';
       if (sameWhatsapp.checked) whatsapp.value = value ? format(fixed ? value.slice(3) : value) : '';
       whatsapp.disabled = sameWhatsapp.checked;
       root.querySelector('[data-phone-preview]').textContent = value ? `Se guardará: +57 ${format(value)}` : '';

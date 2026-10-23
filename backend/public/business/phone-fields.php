@@ -29,7 +29,7 @@ if(!isset(BusinessPhone::AREAS[$area]))$area='604';
         <label><input type="radio" name="business_phone[type]" value="mobile" <?=($phoneForm['type']??'mobile')==='mobile'?'checked':''?>> Celular</label>
         <label><input type="radio" name="business_phone[type]" value="fixed" <?=($phoneForm['type']??'')==='fixed'?'checked':''?>> Teléfono fijo</label>
       </div>
-      <span class="business-phone-control"><span>+57 <span data-phone-inline-area></span></span><input type="tel" name="business_phone[number]" inputmode="tel" maxlength="24" autocomplete="tel-national" value="<?=esc($phoneForm['number']??'')?>" aria-label="Número de teléfono" aria-describedby="business-phone-help"></span>
+      <span class="business-phone-control"><input class="business-phone-prefix" type="text" value="+57" disabled aria-label="Prefijo automático" data-phone-prefix><input type="tel" name="business_phone[number]" inputmode="tel" maxlength="24" autocomplete="tel-national" value="<?=esc($phoneForm['number']??'')?>" aria-label="Número de teléfono" aria-describedby="business-phone-help"></span>
     </div>
     <small id="business-phone-help" data-phone-help></small>
   </section>
@@ -37,7 +37,7 @@ if(!isset(BusinessPhone::AREAS[$area]))$area='604';
     <span class="business-phone-label">WhatsApp</span>
     <div class="business-phone-entry">
       <label class="registration-consent"><input type="checkbox" name="business_phone[same_whatsapp]" value="1" <?=($phoneForm['same_whatsapp']??'')==='1'?'checked':''?>><span>Usa el mismo número</span></label>
-      <span class="business-phone-control"><span>+57 <span data-wa-inline-area></span></span><input type="tel" name="business_phone[whatsapp]" inputmode="tel" maxlength="24" value="<?=esc($phoneForm['whatsapp']??'')?>" aria-label="Número de WhatsApp"></span>
+      <span class="business-phone-control"><input class="business-phone-prefix" type="text" value="+57" disabled aria-label="Prefijo automático" data-wa-prefix><input type="tel" name="business_phone[whatsapp]" inputmode="tel" maxlength="24" value="<?=esc($phoneForm['whatsapp']??'')?>" aria-label="Número de WhatsApp"></span>
     </div>
   </section>
   <p data-phone-preview aria-live="polite"></p>
