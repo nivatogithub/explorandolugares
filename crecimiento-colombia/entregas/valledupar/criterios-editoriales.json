@@ -1,0 +1,125 @@
+{
+  "destination": "valledupar",
+  "checked_at": "2026-10-22",
+  "state": "borrador para revisión; no aprobado ni publicable",
+  "components": [
+    {
+      "slug": "rio-guatapuri-hurtado",
+      "decision": "include_place",
+      "sources": [
+        "col-valledupar",
+        "siva"
+      ],
+      "map_status": "pending_exact_point_no_name_search",
+      "public_provider_links": false,
+      "editorial_order": "selección editorial, no ranking de ventas",
+      "access_status": "Intervención2026 documentada. No se ha verificado reapertura oficial ni condiciones para baño.",
+      "current_source": "https://www.radioguatapuri.com/noticias/limpieza-balneario-hurtado-valledupar"
+    },
+    {
+      "slug": "plaza-alfonso-lopez",
+      "decision": "include_place",
+      "sources": [
+        "col-valledupar",
+        "siva"
+      ],
+      "map_status": "pending_exact_point_no_name_search",
+      "public_provider_links": false,
+      "editorial_order": "selección editorial, no ranking de ventas"
+    },
+    {
+      "slug": "museo-acordeon",
+      "decision": "include_place",
+      "sources": [
+        "museo-acordeon"
+      ],
+      "map_status": "pending_exact_point_no_name_search",
+      "public_provider_links": false,
+      "editorial_order": "selección editorial, no ranking de ventas"
+    },
+    {
+      "slug": "parque-provincia",
+      "decision": "include_place",
+      "sources": [
+        "siva",
+        "alcaldia-provincia"
+      ],
+      "map_status": "pending_exact_point_no_name_search",
+      "public_provider_links": false,
+      "editorial_order": "selección editorial, no ranking de ventas"
+    },
+    {
+      "slug": "balneario-la-mina",
+      "decision": "include_place",
+      "sources": [
+        "col-mina"
+      ],
+      "map_status": "pending_exact_point_no_name_search",
+      "public_provider_links": false,
+      "editorial_order": "selección editorial, no ranking de ventas"
+    },
+    {
+      "slug": "recorrido-cultural-vallenato",
+      "decision": "include_experience",
+      "sources": [
+        "paseo-tours"
+      ],
+      "map_status": "pending_exact_point_no_name_search",
+      "public_provider_links": false,
+      "editorial_order": "selección editorial, no ranking de ventas",
+      "operator_evidence": {
+        "name": "PaseoVallenato Tour",
+        "offer_url": "https://paseovallenato.com/tours/",
+        "offer_title": "Recorrido Histórico y Cultural en la Ciudad (City Tour)",
+        "checked_at": "2026-10-22",
+        "commercial_relationship": false,
+        "availability_confirmed": false,
+        "evidence_scope": "Oferta documental pública; no disponibilidad, convenio ni recomendación."
+      }
+    },
+    {
+      "slug": "parranda-vallenata",
+      "decision": "include_experience",
+      "sources": [
+        "paseo-tours"
+      ],
+      "map_status": "pending_exact_point_no_name_search",
+      "public_provider_links": false,
+      "editorial_order": "selección editorial, no ranking de ventas",
+      "operator_evidence": {
+        "name": "PaseoVallenato Tour",
+        "offer_url": "https://paseovallenato.com/tours/",
+        "offer_title": "Parranda Vallenata",
+        "checked_at": "2026-10-22",
+        "commercial_relationship": false,
+        "availability_confirmed": false,
+        "evidence_scope": "Oferta documental pública; no disponibilidad, convenio ni recomendación."
+      }
+    },
+    {
+      "slug": "aves-los-besotes",
+      "decision": "include_experience",
+      "sources": [
+        "paseo-tours"
+      ],
+      "map_status": "pending_exact_point_no_name_search",
+      "public_provider_links": false,
+      "editorial_order": "selección editorial, no ranking de ventas",
+      "operator_evidence": {
+        "name": "PaseoVallenato Tour",
+        "offer_url": "https://paseovallenato.com/tours/",
+        "offer_title": "Reserva Natural Ecoparque los Besotes (Pasadía)",
+        "checked_at": "2026-10-22",
+        "commercial_relationship": false,
+        "availability_confirmed": false,
+        "evidence_scope": "Oferta documental pública; no disponibilidad, convenio ni recomendación."
+      }
+    }
+  ],
+  "excluded": [
+    "Duplicar sitios como experiencias sin actividad organizada distinta",
+    "Enlaces públicos a oferentes o fuentes",
+    "Fechas, precios y disponibilidad no comprobados",
+    "Malecón futuro del Guatapurí como obra concluida"
+  ]
+}

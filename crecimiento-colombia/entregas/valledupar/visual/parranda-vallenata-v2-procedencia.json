@@ -1,0 +1,44 @@
+{
+  "id": "parranda-vallenata-v2",
+  "destination": "valledupar",
+  "status": "draft_pending_human_approval",
+  "generated_date": "2026-10-22",
+  "tool": "built-in image_gen",
+  "model": "not_exposed_by_tool",
+  "master": ".local/valledupar/parranda-vallenata-v2.png",
+  "web": "crecimiento-colombia/entregas/valledupar/visual/parranda-vallenata-v2.webp",
+  "prompt": "crecimiento-colombia/entregas/valledupar/visual/parranda-vallenata-v2-prompt.txt",
+  "sha256": {
+    "master": "8fbd35310dd0eb76ab55f56cd732385995398f00dfdc7e46130794ba33d96b5f",
+    "web": "673f0d5b928f189598649192d39160ec5640c7445f12cec94cae27ef97887328"
+  },
+  "dimensions": {
+    "master": [
+      1536,
+      1024
+    ],
+    "web": [
+      1200,
+      800
+    ]
+  },
+  "bytes": 255574,
+  "promotion": "blocked_until_exact_version_human_approval",
+  "input": null,
+  "third_party_photo_used": false,
+  "depiction": "Thematic illustration of anonymous vallenato musicians, no specific venue or operator",
+  "review": {
+    "first_variant": "rejected: metallic güira instead of traditional guacharaca",
+    "v2": "corrected to wooden brown grooved guacharaca with metal scraper; accordion, caja and three pairs of hands visible",
+    "style": "pass: ink and gouache",
+    "human": "pending"
+  },
+  "factual_sources": [
+    "https://www.mincultura.gov.co/direcciones/patrimonio-y-memoria/Paginas/servicios-informacion/LRPCI/La-musica-vallenata-tradicional-del-caribe-colombiano.aspx"
+  ],
+  "alt": {
+    "es": "Ilustración de músicos anónimos tocando acordeón, caja y guacharaca en una parranda vallenata.",
+    "en": "Illustration of anonymous musicians playing accordion, caja drum and guacharaca at a vallenato gathering.",
+    "pt-BR": "Ilustração de músicos anônimos tocando acordeão, caja e guacharaca em uma parranda vallenata."
+  }
+}
