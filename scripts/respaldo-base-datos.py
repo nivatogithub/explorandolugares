@@ -22,14 +22,14 @@ def private_php(config,options,action="database-snapshot.php"):
         options=dict(options,app_root=scratch,public_root=api.public_path(config))
         dependencies={'DatabaseMaintenance.php':ROOT/'backend/app/DatabaseMaintenance.php'}
         migrations=options.get('migrations',['043-account-lifecycle'])
-        if not isinstance(migrations,list) or not migrations or len(set(migrations))!=len(migrations) or set(migrations)-{'043-account-lifecycle','044-subscription-changes','045-business-service-sections','046-premium-page-aliases','047-lead-business-links','048-individual-lead-replies','049-business-editorial','050-commercial-page-price','051-business-evidence-retirement'}:raise ValueError('Selección de migraciones no permitida.')
+        if not isinstance(migrations,list) or not migrations or len(set(migrations))!=len(migrations) or set(migrations)-{'043-account-lifecycle','044-subscription-changes','045-business-service-sections','046-premium-page-aliases','047-lead-business-links','048-individual-lead-replies','049-business-editorial','050-commercial-page-price','051-business-evidence-retirement','052-business-onboarding-uploads'}:raise ValueError('Selección de migraciones no permitida.')
         for migration in migrations:
             relative='database/migrations/'+migration+'.mysql.sql';dependencies[relative]=ROOT/'backend'/relative
     if action=='prepare-destination-migration.php':
         options=dict(options,migration_root=scratch,public_root=api.public_path(config))
         dependencies={'DestinationSnapshotMigration.php':ROOT/'scripts/lib/DestinationSnapshotMigration.php'}
         slugs=options.get('slugs',['jerico','cartagena','bogota','medellin','santa-marta','jardin','covenas','zipaquira','santa-fe-de-antioquia'])
-        if not slugs or set(slugs)-{'jerico','cartagena','bogota','medellin','santa-marta','jardin','covenas','zipaquira','santa-fe-de-antioquia','guatape','cauca-viejo','cocorna','arboletes'}:raise ValueError('Alcance de lugares inválido.')
+        if not slugs or set(slugs)-{'jerico','cartagena','bogota','medellin','santa-marta','jardin','covenas','zipaquira','santa-fe-de-antioquia','guatape','cauca-viejo','cocorna','arboletes','riohacha','valledupar'}:raise ValueError('Alcance de lugares inválido.')
         for slug in slugs:
             dependencies[slug+'.json']=ROOT/'content/destination-migration'/ (slug+'.json')
     if action in {'database-snapshot.php','backup-retention.php'}:

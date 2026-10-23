@@ -1,0 +1,2618 @@
+{
+  "schema": "destination-public-snapshot-v1",
+  "destination": "riohacha",
+  "tables": {
+    "destinations": [
+      {
+        "id": 10005,
+        "slug": "riohacha",
+        "destination_type": "city",
+        "country_code": "CO",
+        "department": "La Guajira",
+        "subregion": "",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 20
+      }
+    ],
+    "destination_translations": [
+      {
+        "display_name": "Riohacha",
+        "eyebrow": "La Guajira · Colombia",
+        "headline": "El Caribe y la cultura wayuu",
+        "intro": "Pasea junto al mar, conoce el centro de la capital guajira y descubre sus manglares y encuentros culturales.",
+        "meta_description": "Descubre el muelle de Riohacha, la plaza de Padilla y el Valle de los Cangrejos. Conoce experiencias en Camarones y excursiones por La Guajira.",
+        "destination_id": 10005,
+        "locale": "es"
+      },
+      {
+        "display_name": "Riohacha",
+        "eyebrow": "La Guajira · Colombia",
+        "headline": "The Caribbean and Wayuu culture",
+        "intro": "Walk along the waterfront, explore La Guajira’s capital and discover its mangroves and cultural encounters.",
+        "meta_description": "Discover Riohacha’s pier, Padilla Square and Valle de los Cangrejos. Explore experiences in Camarones and excursions through La Guajira.",
+        "destination_id": 10005,
+        "locale": "en"
+      },
+      {
+        "display_name": "Riohacha",
+        "eyebrow": "La Guajira · Colombia",
+        "headline": "O Caribe e a cultura wayuu",
+        "intro": "Passeie à beira-mar, conheça o centro da capital de La Guajira e descubra seus manguezais e encontros culturais.",
+        "meta_description": "Descubra o píer de Riohacha, a praça de Padilla e o Valle de los Cangrejos. Conheça experiências em Camarones e excursões por La Guajira.",
+        "destination_id": 10005,
+        "locale": "pt-BR"
+      }
+    ],
+    "destination_story_blocks": [
+      {
+        "id": 1,
+        "destination_id": 10005,
+        "display_order": 1,
+        "section_key": "history"
+      },
+      {
+        "id": 2,
+        "destination_id": 10005,
+        "display_order": 2,
+        "section_key": "history"
+      }
+    ],
+    "destination_story_translations": [
+      {
+        "story_block_id": 1,
+        "locale": "es",
+        "body": "Riohacha creció como ciudad portuaria frente al Caribe, cerca de la desembocadura del Ranchería. Su centro conserva la plaza de Padilla y la catedral de Nuestra Señora de los Remedios."
+      },
+      {
+        "story_block_id": 1,
+        "locale": "en",
+        "body": "Riohacha developed as a port city on the Caribbean, near the mouth of the Ranchería. Its centre retains Padilla Square and Nuestra Señora de los Remedios Cathedral."
+      },
+      {
+        "story_block_id": 1,
+        "locale": "pt-BR",
+        "body": "Riohacha cresceu como cidade portuária diante do Caribe, perto da foz do Ranchería. Seu centro conserva a praça de Padilla e a Catedral de Nuestra Señora de los Remedios."
+      },
+      {
+        "story_block_id": 2,
+        "locale": "es",
+        "body": "La presencia wayuu y las comunidades del litoral forman parte de su identidad. El frente costero y los ambientes de Camarones conectan la vida urbana con los paisajes de La Guajira."
+      },
+      {
+        "story_block_id": 2,
+        "locale": "en",
+        "body": "Wayuu culture and coastal communities are part of its identity. The waterfront and the natural surroundings of Camarones link city life with the landscapes of La Guajira."
+      },
+      {
+        "story_block_id": 2,
+        "locale": "pt-BR",
+        "body": "A presença wayuu e as comunidades do litoral fazem parte de sua identidade. A orla e os ambientes de Camarones ligam a vida urbana às paisagens de La Guajira."
+      }
+    ],
+    "destination_reasons": [
+      {
+        "id": 1,
+        "destination_id": 10005,
+        "display_order": 1
+      },
+      {
+        "id": 2,
+        "destination_id": 10005,
+        "display_order": 2
+      },
+      {
+        "id": 3,
+        "destination_id": 10005,
+        "display_order": 3
+      }
+    ],
+    "destination_reason_translations": [
+      {
+        "reason_id": 1,
+        "locale": "es",
+        "body": "Caminar junto al Caribe"
+      },
+      {
+        "reason_id": 1,
+        "locale": "en",
+        "body": "Walk beside the Caribbean"
+      },
+      {
+        "reason_id": 1,
+        "locale": "pt-BR",
+        "body": "Caminhar junto ao Caribe"
+      },
+      {
+        "reason_id": 2,
+        "locale": "es",
+        "body": "Conocer la cultura wayuu con anfitriones"
+      },
+      {
+        "reason_id": 2,
+        "locale": "en",
+        "body": "Learn about Wayuu culture with local hosts"
+      },
+      {
+        "reason_id": 2,
+        "locale": "pt-BR",
+        "body": "Conhecer a cultura wayuu com anfitriões"
+      },
+      {
+        "reason_id": 3,
+        "locale": "es",
+        "body": "Explorar manglares y lagunas"
+      },
+      {
+        "reason_id": 3,
+        "locale": "en",
+        "body": "Explore mangroves and lagoons"
+      },
+      {
+        "reason_id": 3,
+        "locale": "pt-BR",
+        "body": "Explorar manguezais e lagoas"
+      }
+    ],
+    "destination_sources": [],
+    "destination_media": [
+      {
+        "destination_id": 10005,
+        "role": "hero",
+        "media_asset_id": -10033,
+        "display_order": 1
+      }
+    ],
+    "points_of_interest": [
+      {
+        "id": 1000406,
+        "slug": "malecon-riohacha",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 1,
+        "destination_id": 10005,
+        "poi_type": "place"
+      },
+      {
+        "id": 1000407,
+        "slug": "paseo-marina-muelle",
+        "latitude": 11.5528902,
+        "longitude": -72.9087658,
+        "publication_status": "published",
+        "display_order": 2,
+        "destination_id": 10005,
+        "poi_type": "place"
+      },
+      {
+        "id": 1000408,
+        "slug": "plaza-almirante-padilla",
+        "latitude": 11.55139,
+        "longitude": -72.90965,
+        "publication_status": "published",
+        "display_order": 3,
+        "destination_id": 10005,
+        "poi_type": "place"
+      },
+      {
+        "id": 1000409,
+        "slug": "valle-cangrejos",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 4,
+        "destination_id": 10005,
+        "poi_type": "place"
+      },
+      {
+        "id": 1000410,
+        "slug": "catedral-remedios",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 5,
+        "destination_id": 10005,
+        "poi_type": "place"
+      },
+      {
+        "id": 1000411,
+        "slug": "parque-nicolas-federman",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 6,
+        "destination_id": 10005,
+        "poi_type": "place"
+      },
+      {
+        "id": 1000412,
+        "slug": "santuario-flamencos",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 7,
+        "destination_id": 10005,
+        "poi_type": "place"
+      },
+      {
+        "id": 1000413,
+        "slug": "playas-mayapo",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 8,
+        "destination_id": 10005,
+        "poi_type": "place"
+      },
+      {
+        "id": 1000414,
+        "slug": "avistamiento-flamencos",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 9,
+        "destination_id": 10005,
+        "poi_type": "experience"
+      },
+      {
+        "id": 1000415,
+        "slug": "encuentro-cultural-wayuu",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 10,
+        "destination_id": 10005,
+        "poi_type": "experience"
+      },
+      {
+        "id": 1000416,
+        "slug": "excursion-alta-guajira",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 11,
+        "destination_id": 10005,
+        "poi_type": "experience"
+      }
+    ],
+    "point_of_interest_translations": [
+      {
+        "point_of_interest_id": 1000406,
+        "locale": "es",
+        "name": "Malecón de Riohacha",
+        "description": "El Paseo de la Marina recorre la playa urbana junto a la avenida Primera. Una caminata por el frente costero, distinta de la visita al muelle.",
+        "map_url": "https://maps.app.goo.gl/hdxQxK6Ngg35fiUE8",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000406,
+        "locale": "en",
+        "name": "Riohacha waterfront promenade",
+        "description": "Paseo de la Marina follows the urban beach beside Avenida Primera. A coastal walk, separate from visiting the pier.",
+        "map_url": "https://maps.app.goo.gl/hdxQxK6Ngg35fiUE8",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000406,
+        "locale": "pt-BR",
+        "name": "Malecón de Riohacha",
+        "description": "O Paseo de la Marina acompanha a praia urbana junto à avenida Primera. Um passeio pela orla, distinto da visita ao píer.",
+        "map_url": "https://maps.app.goo.gl/hdxQxK6Ngg35fiUE8",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000407,
+        "locale": "es",
+        "name": "Muelle turístico de Riohacha",
+        "description": "El muelle peatonal se adentra en el Caribe y ofrece una vista del frente costero de Riohacha.",
+        "map_url": "https://maps.app.goo.gl/d9WjRGySXWZ7SC197",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000407,
+        "locale": "en",
+        "name": "Riohacha tourist pier",
+        "description": "The pedestrian pier extends into the Caribbean and offers a view of Riohacha’s waterfront.",
+        "map_url": "https://maps.app.goo.gl/d9WjRGySXWZ7SC197",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000407,
+        "locale": "pt-BR",
+        "name": "Píer turístico de Riohacha",
+        "description": "O píer de pedestres avança pelo Caribe e oferece uma vista da orla de Riohacha.",
+        "map_url": "https://maps.app.goo.gl/d9WjRGySXWZ7SC197",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000408,
+        "locale": "es",
+        "name": "Plaza Almirante Padilla",
+        "description": "La plaza del centro histórico reúne el monumento al almirante y la catedral de Nuestra Señora de los Remedios.",
+        "map_url": "https://maps.app.goo.gl/z7FtthcKLaZrDYgF6",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000408,
+        "locale": "en",
+        "name": "Almirante Padilla Square",
+        "description": "The historic centre’s main square brings together the admiral’s monument and Nuestra Señora de los Remedios Cathedral.",
+        "map_url": "https://maps.app.goo.gl/z7FtthcKLaZrDYgF6",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000408,
+        "locale": "pt-BR",
+        "name": "Praça Almirante Padilla",
+        "description": "A praça do centro histórico reúne o monumento ao almirante e a Catedral de Nuestra Señora de los Remedios.",
+        "map_url": "https://maps.app.goo.gl/z7FtthcKLaZrDYgF6",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000409,
+        "locale": "es",
+        "name": "Valle de los Cangrejos",
+        "description": "Manglares y costa se encuentran en este sector del delta del Ranchería, al noreste de la ciudad.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000409,
+        "locale": "en",
+        "name": "Valle de los Cangrejos",
+        "description": "Mangroves meet the coast in this part of the Ranchería delta, northeast of the city.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000409,
+        "locale": "pt-BR",
+        "name": "Valle de los Cangrejos",
+        "description": "Manguezais e litoral se encontram neste setor do delta do Ranchería, a nordeste da cidade.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000410,
+        "locale": "es",
+        "name": "Catedral Nuestra Señora de los Remedios",
+        "description": "El templo que enmarca la Plaza Padilla es uno de los referentes patrimoniales de Riohacha. Una visita distinta al monumento de la plaza, respetando las celebraciones religiosas.",
+        "map_url": "https://maps.app.goo.gl/VefTnX9ZGVzPHvr89",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000410,
+        "locale": "en",
+        "name": "Our Lady of Remedies Cathedral",
+        "description": "The cathedral overlooking Plaza Padilla is a heritage landmark of Riohacha. Visit the church separately from the square’s monument, respecting religious services.",
+        "map_url": "https://maps.app.goo.gl/VefTnX9ZGVzPHvr89",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000410,
+        "locale": "pt-BR",
+        "name": "Catedral Nossa Senhora dos Remédios",
+        "description": "O templo junto à Praça Padilla é uma referência patrimonial de Riohacha. A visita à igreja é distinta do monumento da praça e deve respeitar as celebrações religiosas.",
+        "map_url": "https://maps.app.goo.gl/VefTnX9ZGVzPHvr89",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000411,
+        "locale": "es",
+        "name": "Parque Nicolás de Federman",
+        "description": "Una plaza del frente costero vinculada a la memoria de la ciudad, con el monumento a Federman y las mariposas amarillas. Complementa el paseo por la avenida de la Marina.",
+        "map_url": "https://maps.app.goo.gl/YJwDfZA8SKZk5PudA",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000411,
+        "locale": "en",
+        "name": "Nicolás de Federman Park",
+        "description": "A waterfront square linked to the city’s history, with the Federman monument and yellow butterflies sculpture. It complements a walk along Avenida de la Marina.",
+        "map_url": "https://maps.app.goo.gl/YJwDfZA8SKZk5PudA",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000411,
+        "locale": "pt-BR",
+        "name": "Parque Nicolás de Federman",
+        "description": "Uma praça da orla ligada à memória da cidade, com o monumento a Federman e a escultura das borboletas amarelas. Complementa o passeio pela avenida da Marina.",
+        "map_url": "https://maps.app.goo.gl/YJwDfZA8SKZk5PudA",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000412,
+        "locale": "es",
+        "name": "Santuario de Flora y Fauna Los Flamencos",
+        "description": "En Camarones, dentro del municipio de Riohacha, este santuario protege lagunas costeras y hábitats de aves. La entrada se coordina con intérprete o guía local; el recorrido de avistamiento aparece en experiencias.",
+        "map_url": "https://maps.app.goo.gl/dffxgcJzT2jzxeu98",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000412,
+        "locale": "en",
+        "name": "Los Flamencos Flora and Fauna Sanctuary",
+        "description": "In Camarones, within Riohacha municipality, this sanctuary protects coastal lagoons and bird habitats. Entry requires coordination with a local guide or interpreter; the guided birdwatching outing appears under experiences.",
+        "map_url": "https://maps.app.goo.gl/dffxgcJzT2jzxeu98",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000412,
+        "locale": "pt-BR",
+        "name": "Santuário de Flora e Fauna Los Flamencos",
+        "description": "Em Camarones, no município de Riohacha, o santuário protege lagoas costeiras e habitats de aves. A entrada deve ser coordenada com guia ou intérprete local; o passeio de observação está em experiências.",
+        "map_url": "https://maps.app.goo.gl/dffxgcJzT2jzxeu98",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000413,
+        "locale": "es",
+        "name": "Playas de Mayapo (alrededores)",
+        "description": "Playas del municipio vecino de Manaure, para conocer desde Riohacha. Arena clara y paisaje costero guajiro; confirma el acceso al sector que elijas y las condiciones del mar.",
+        "map_url": "https://maps.app.goo.gl/Fjhxyrwsg8nQUC7y5",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000413,
+        "locale": "en",
+        "name": "Mayapo beaches (nearby)",
+        "description": "Beaches in neighbouring Manaure municipality, reachable from Riohacha. Pale sand and La Guajira coastal scenery; check access to your chosen beach sector and sea conditions.",
+        "map_url": "https://maps.app.goo.gl/Fjhxyrwsg8nQUC7y5",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000413,
+        "locale": "pt-BR",
+        "name": "Praias de Mayapo (arredores)",
+        "description": "Praias do município vizinho de Manaure, para conhecer a partir de Riohacha. Areia clara e paisagem costeira guajira; confirme o acesso ao trecho escolhido e as condições do mar.",
+        "map_url": "https://maps.app.goo.gl/Fjhxyrwsg8nQUC7y5",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000414,
+        "locale": "es",
+        "name": "Avistamiento de flamencos en Camarones",
+        "description": "Recorrido acompañado por el entorno lagunar del santuario Los Flamencos para observar aves sin alterar su hábitat.",
+        "map_url": "https://maps.app.goo.gl/dffxgcJzT2jzxeu98",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000414,
+        "locale": "en",
+        "name": "Flamingo watching in Camarones",
+        "description": "Explore the lagoon surroundings of Los Flamencos sanctuary with a guide, observing birds without disturbing their habitat.",
+        "map_url": "https://maps.app.goo.gl/dffxgcJzT2jzxeu98",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000414,
+        "locale": "pt-BR",
+        "name": "Observação de flamingos em Camarones",
+        "description": "Percorra o ambiente lagunar do santuário Los Flamencos com acompanhamento, observando aves sem perturbar seu habitat.",
+        "map_url": "https://maps.app.goo.gl/dffxgcJzT2jzxeu98",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000415,
+        "locale": "es",
+        "name": "Encuentro cultural wayuu",
+        "description": "Una visita organizada y acordada con anfitriones para acercarse a las artesanías y tradiciones del pueblo wayuu.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000415,
+        "locale": "en",
+        "name": "Wayuu cultural encounter",
+        "description": "An organised visit arranged with local hosts to learn about Wayuu crafts and traditions.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000415,
+        "locale": "pt-BR",
+        "name": "Encontro cultural wayuu",
+        "description": "Uma visita organizada e combinada com anfitriões para conhecer o artesanato e as tradições do povo wayuu.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000416,
+        "locale": "es",
+        "name": "Excursión a la Alta Guajira (alrededores)",
+        "description": "Desde Riohacha salen recorridos de varios días hacia el Cabo de la Vela y Punta Gallinas, en el municipio de Uribia.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000416,
+        "locale": "en",
+        "name": "Alta Guajira excursion (surrounding region)",
+        "description": "Multi-day trips depart from Riohacha for Cabo de la Vela and Punta Gallinas, in the municipality of Uribia.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 1000416,
+        "locale": "pt-BR",
+        "name": "Excursão à Alta Guajira (arredores)",
+        "description": "De Riohacha saem roteiros de vários dias para Cabo de la Vela e Punta Gallinas, no município de Uribia.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      }
+    ],
+    "point_of_interest_media": [
+      {
+        "point_of_interest_id": 1000406,
+        "media_asset_id": -10034,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 1000407,
+        "media_asset_id": -10035,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 1000408,
+        "media_asset_id": -10036,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 1000409,
+        "media_asset_id": -10037,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 1000410,
+        "media_asset_id": -10038,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 1000411,
+        "media_asset_id": -10039,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 1000412,
+        "media_asset_id": -10040,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 1000413,
+        "media_asset_id": -10041,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 1000414,
+        "media_asset_id": -10042,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 1000415,
+        "media_asset_id": -10043,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 1000416,
+        "media_asset_id": -10044,
+        "role": "gallery",
+        "display_order": 1
+      }
+    ],
+    "businesses": [
+      {
+        "id": 500000014,
+        "public_id": "a5e87002-3939-5f0c-9d6d-7c5a98700bbc",
+        "destination_id": 10005,
+        "category_code": "hospedaje",
+        "slug": "bona-vida-hostel-la-quinta-ii",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 1,
+        "record_origin": "public_import",
+        "address_text": "",
+        "location_reference": "",
+        "latitude": null,
+        "longitude": null,
+        "location_source": null,
+        "location_map_url": "",
+        "location_confirmed": 0,
+        "price_range": "",
+        "menu_url": "",
+        "reservations_url": "",
+        "image_assistance_requested": 0
+      },
+      {
+        "id": 500000015,
+        "public_id": "c81b088e-9bb2-5f85-87da-ece024e3cc35",
+        "destination_id": 10005,
+        "category_code": "hospedaje",
+        "slug": "hotel-la-vieja-sara",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 2,
+        "record_origin": "public_import",
+        "address_text": "",
+        "location_reference": "",
+        "latitude": null,
+        "longitude": null,
+        "location_source": null,
+        "location_map_url": "",
+        "location_confirmed": 0,
+        "price_range": "",
+        "menu_url": "",
+        "reservations_url": "",
+        "image_assistance_requested": 0
+      },
+      {
+        "id": 500000016,
+        "public_id": "ed7ce754-4616-58ea-af8a-18e9a91d13c6",
+        "destination_id": 10005,
+        "category_code": "hospedaje",
+        "slug": "guajira-casa-del-mar-hotel-boutique",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 3,
+        "record_origin": "public_import",
+        "address_text": "",
+        "location_reference": "",
+        "latitude": null,
+        "longitude": null,
+        "location_source": null,
+        "location_map_url": "",
+        "location_confirmed": 0,
+        "price_range": "",
+        "menu_url": "",
+        "reservations_url": "",
+        "image_assistance_requested": 0
+      },
+      {
+        "id": 500000017,
+        "public_id": "f0ca3cdc-4790-57de-8d99-c321ec29ce74",
+        "destination_id": 10005,
+        "category_code": "hospedaje",
+        "slug": "balcones-de-la-quinta",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 4,
+        "record_origin": "public_import",
+        "address_text": "",
+        "location_reference": "",
+        "latitude": null,
+        "longitude": null,
+        "location_source": null,
+        "location_map_url": "",
+        "location_confirmed": 0,
+        "price_range": "",
+        "menu_url": "",
+        "reservations_url": "",
+        "image_assistance_requested": 0
+      },
+      {
+        "id": 500000018,
+        "public_id": "ef7a62f9-5fbc-554a-bad5-eff517794c2c",
+        "destination_id": 10005,
+        "category_code": "hospedaje",
+        "slug": "casa-marina-hotel-boutique",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 5,
+        "record_origin": "public_import",
+        "address_text": "",
+        "location_reference": "",
+        "latitude": null,
+        "longitude": null,
+        "location_source": null,
+        "location_map_url": "",
+        "location_confirmed": 0,
+        "price_range": "",
+        "menu_url": "",
+        "reservations_url": "",
+        "image_assistance_requested": 0
+      },
+      {
+        "id": 500000019,
+        "public_id": "f29cc02e-a9e7-544c-a7f2-61283056ca5f",
+        "destination_id": 10005,
+        "category_code": "hospedaje",
+        "slug": "hotel-la-guajira",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 6,
+        "record_origin": "public_import",
+        "address_text": "",
+        "location_reference": "",
+        "latitude": null,
+        "longitude": null,
+        "location_source": null,
+        "location_map_url": "",
+        "location_confirmed": 0,
+        "price_range": "",
+        "menu_url": "",
+        "reservations_url": "",
+        "image_assistance_requested": 0
+      },
+      {
+        "id": 500000020,
+        "public_id": "257dc991-53ff-5668-9349-8fd5f63ee908",
+        "destination_id": 10005,
+        "category_code": "hospedaje",
+        "slug": "sashii-hostel-boutique",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 7,
+        "record_origin": "public_import",
+        "address_text": "",
+        "location_reference": "",
+        "latitude": null,
+        "longitude": null,
+        "location_source": null,
+        "location_map_url": "",
+        "location_confirmed": 0,
+        "price_range": "",
+        "menu_url": "",
+        "reservations_url": "",
+        "image_assistance_requested": 0
+      },
+      {
+        "id": 500000021,
+        "public_id": "c327e5a4-77db-5b82-a242-02b8d05a6961",
+        "destination_id": 10005,
+        "category_code": "hospedaje",
+        "slug": "hotel-taroa",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 8,
+        "record_origin": "public_import",
+        "address_text": "",
+        "location_reference": "",
+        "latitude": null,
+        "longitude": null,
+        "location_source": null,
+        "location_map_url": "",
+        "location_confirmed": 0,
+        "price_range": "",
+        "menu_url": "",
+        "reservations_url": "",
+        "image_assistance_requested": 0
+      },
+      {
+        "id": 500000022,
+        "public_id": "9e9fa007-e93f-5bd7-89ca-570912e6fd2d",
+        "destination_id": 10005,
+        "category_code": "alimentacion",
+        "slug": "restaurante-la-casa-del-marisco",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 9,
+        "record_origin": "public_import",
+        "address_text": "",
+        "location_reference": "",
+        "latitude": null,
+        "longitude": null,
+        "location_source": null,
+        "location_map_url": "",
+        "location_confirmed": 0,
+        "price_range": "",
+        "menu_url": "",
+        "reservations_url": "",
+        "image_assistance_requested": 0
+      },
+      {
+        "id": 500000023,
+        "public_id": "da144e77-c979-579a-a283-33cc8bf6bfa8",
+        "destination_id": 10005,
+        "category_code": "alimentacion",
+        "slug": "restaurante-yotojoro",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 10,
+        "record_origin": "public_import",
+        "address_text": "",
+        "location_reference": "",
+        "latitude": null,
+        "longitude": null,
+        "location_source": null,
+        "location_map_url": "",
+        "location_confirmed": 0,
+        "price_range": "",
+        "menu_url": "",
+        "reservations_url": "",
+        "image_assistance_requested": 0
+      },
+      {
+        "id": 500000024,
+        "public_id": "73dfd9c9-fb01-53bc-b894-bd559a01e894",
+        "destination_id": 10005,
+        "category_code": "alimentacion",
+        "slug": "al-arz-delicias-arabes",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 11,
+        "record_origin": "public_import",
+        "address_text": "",
+        "location_reference": "",
+        "latitude": null,
+        "longitude": null,
+        "location_source": null,
+        "location_map_url": "",
+        "location_confirmed": 0,
+        "price_range": "",
+        "menu_url": "",
+        "reservations_url": "",
+        "image_assistance_requested": 0
+      },
+      {
+        "id": 500000025,
+        "public_id": "8376834f-9be2-5fdf-9088-f049e566003e",
+        "destination_id": 10005,
+        "category_code": "alimentacion",
+        "slug": "lima",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 12,
+        "record_origin": "public_import",
+        "address_text": "",
+        "location_reference": "",
+        "latitude": null,
+        "longitude": null,
+        "location_source": null,
+        "location_map_url": "",
+        "location_confirmed": 0,
+        "price_range": "",
+        "menu_url": "",
+        "reservations_url": "",
+        "image_assistance_requested": 0
+      },
+      {
+        "id": 500000026,
+        "public_id": "e1ac2c59-9810-58f0-b973-dcc931a68274",
+        "destination_id": 10005,
+        "category_code": "alimentacion",
+        "slug": "la-fermata-pizza-bistro",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 13,
+        "record_origin": "public_import",
+        "address_text": "",
+        "location_reference": "",
+        "latitude": null,
+        "longitude": null,
+        "location_source": null,
+        "location_map_url": "",
+        "location_confirmed": 0,
+        "price_range": "",
+        "menu_url": "",
+        "reservations_url": "",
+        "image_assistance_requested": 0
+      },
+      {
+        "id": 500000027,
+        "public_id": "71fb2739-9864-5fc4-a795-a71e00c6b866",
+        "destination_id": 10005,
+        "category_code": "alimentacion",
+        "slug": "quile-parrilla",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 14,
+        "record_origin": "public_import",
+        "address_text": "",
+        "location_reference": "",
+        "latitude": null,
+        "longitude": null,
+        "location_source": null,
+        "location_map_url": "",
+        "location_confirmed": 0,
+        "price_range": "",
+        "menu_url": "",
+        "reservations_url": "",
+        "image_assistance_requested": 0
+      },
+      {
+        "id": 500000028,
+        "public_id": "bac06858-2fdb-521b-adb4-5ed6590ea7d6",
+        "destination_id": 10005,
+        "category_code": "alimentacion",
+        "slug": "restaurante-mantequilla",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 15,
+        "record_origin": "public_import",
+        "address_text": "",
+        "location_reference": "",
+        "latitude": null,
+        "longitude": null,
+        "location_source": null,
+        "location_map_url": "",
+        "location_confirmed": 0,
+        "price_range": "",
+        "menu_url": "",
+        "reservations_url": "",
+        "image_assistance_requested": 0
+      },
+      {
+        "id": 500000029,
+        "public_id": "1e0b81a4-fbc6-5701-ad87-3f75100fce7a",
+        "destination_id": 10005,
+        "category_code": "alimentacion",
+        "slug": "la-tinaja",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 16,
+        "record_origin": "public_import",
+        "address_text": "",
+        "location_reference": "",
+        "latitude": null,
+        "longitude": null,
+        "location_source": null,
+        "location_map_url": "",
+        "location_confirmed": 0,
+        "price_range": "",
+        "menu_url": "",
+        "reservations_url": "",
+        "image_assistance_requested": 0
+      },
+      {
+        "id": 500000030,
+        "public_id": "eb5340ab-0d31-5928-a6db-37d46a557949",
+        "destination_id": 10005,
+        "category_code": "alimentacion",
+        "slug": "sazon-internacional",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 17,
+        "record_origin": "public_import",
+        "address_text": "",
+        "location_reference": "",
+        "latitude": null,
+        "longitude": null,
+        "location_source": null,
+        "location_map_url": "",
+        "location_confirmed": 0,
+        "price_range": "",
+        "menu_url": "",
+        "reservations_url": "",
+        "image_assistance_requested": 0
+      },
+      {
+        "id": 500000031,
+        "public_id": "1182809f-bbb2-5ccb-b023-35506707c167",
+        "destination_id": 10005,
+        "category_code": "alimentacion",
+        "slug": "hope-burgers",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 18,
+        "record_origin": "public_import",
+        "address_text": "",
+        "location_reference": "",
+        "latitude": null,
+        "longitude": null,
+        "location_source": null,
+        "location_map_url": "",
+        "location_confirmed": 0,
+        "price_range": "",
+        "menu_url": "",
+        "reservations_url": "",
+        "image_assistance_requested": 0
+      },
+      {
+        "id": 500000032,
+        "public_id": "68bae6ad-9ce5-50a5-aaee-240687aeaf08",
+        "destination_id": 10005,
+        "category_code": "vida-nocturna",
+        "slug": "maradentro-cafe-bar",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 19,
+        "record_origin": "public_import",
+        "address_text": "",
+        "location_reference": "",
+        "latitude": null,
+        "longitude": null,
+        "location_source": null,
+        "location_map_url": "",
+        "location_confirmed": 0,
+        "price_range": "",
+        "menu_url": "",
+        "reservations_url": "",
+        "image_assistance_requested": 0
+      },
+      {
+        "id": 500000033,
+        "public_id": "32165f54-fd4d-55d1-b8b3-41453015f7f2",
+        "destination_id": 10005,
+        "category_code": "experiencias",
+        "slug": "guajira-mundo",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 20,
+        "record_origin": "public_import",
+        "address_text": "",
+        "location_reference": "",
+        "latitude": null,
+        "longitude": null,
+        "location_source": null,
+        "location_map_url": "",
+        "location_confirmed": 0,
+        "price_range": "",
+        "menu_url": "",
+        "reservations_url": "",
+        "image_assistance_requested": 0
+      },
+      {
+        "id": 500000034,
+        "public_id": "abb1ab36-7ddc-57fb-8d5f-44e3ecd06272",
+        "destination_id": 10005,
+        "category_code": "experiencias",
+        "slug": "viajes-la-guajira",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 21,
+        "record_origin": "public_import",
+        "address_text": "",
+        "location_reference": "",
+        "latitude": null,
+        "longitude": null,
+        "location_source": null,
+        "location_map_url": "",
+        "location_confirmed": 0,
+        "price_range": "",
+        "menu_url": "",
+        "reservations_url": "",
+        "image_assistance_requested": 0
+      },
+      {
+        "id": 500000035,
+        "public_id": "29a270f2-4496-5c8d-a89a-4553154cf3eb",
+        "destination_id": 10005,
+        "category_code": "experiencias",
+        "slug": "punta-gallinas-tours-expotur-eco",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 22,
+        "record_origin": "public_import",
+        "address_text": "",
+        "location_reference": "",
+        "latitude": null,
+        "longitude": null,
+        "location_source": null,
+        "location_map_url": "",
+        "location_confirmed": 0,
+        "price_range": "",
+        "menu_url": "",
+        "reservations_url": "",
+        "image_assistance_requested": 0
+      },
+      {
+        "id": 500000036,
+        "public_id": "60e8a736-24e4-5763-93e9-cb0c263bbafd",
+        "destination_id": 10005,
+        "category_code": "cultura",
+        "slug": "centro-cultural-del-banco-de-la-republica-de-riohacha",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 23,
+        "record_origin": "public_import",
+        "address_text": "",
+        "location_reference": "",
+        "latitude": null,
+        "longitude": null,
+        "location_source": null,
+        "location_map_url": "",
+        "location_confirmed": 0,
+        "price_range": "",
+        "menu_url": "",
+        "reservations_url": "",
+        "image_assistance_requested": 0
+      },
+      {
+        "id": 500000037,
+        "public_id": "f53c0b2c-a166-5f30-910a-49277a1b96bf",
+        "destination_id": 10005,
+        "category_code": "transporte",
+        "slug": "terminal-de-transportes-de-riohacha",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 24,
+        "record_origin": "public_import",
+        "address_text": "",
+        "location_reference": "",
+        "latitude": null,
+        "longitude": null,
+        "location_source": null,
+        "location_map_url": "",
+        "location_confirmed": 0,
+        "price_range": "",
+        "menu_url": "",
+        "reservations_url": "",
+        "image_assistance_requested": 0
+      },
+      {
+        "id": 500000038,
+        "public_id": "f064efd2-63f3-5732-acac-51ad19457716",
+        "destination_id": 10005,
+        "category_code": "transporte",
+        "slug": "expreso-brasilia-riohacha",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 25,
+        "record_origin": "public_import",
+        "address_text": "",
+        "location_reference": "",
+        "latitude": null,
+        "longitude": null,
+        "location_source": null,
+        "location_map_url": "",
+        "location_confirmed": 0,
+        "price_range": "",
+        "menu_url": "",
+        "reservations_url": "",
+        "image_assistance_requested": 0
+      },
+      {
+        "id": 500000039,
+        "public_id": "4d890083-851b-5cda-afbe-0b0e39e55513",
+        "destination_id": 10005,
+        "category_code": "transporte",
+        "slug": "copetran-riohacha",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 26,
+        "record_origin": "public_import",
+        "address_text": "",
+        "location_reference": "",
+        "latitude": null,
+        "longitude": null,
+        "location_source": null,
+        "location_map_url": "",
+        "location_confirmed": 0,
+        "price_range": "",
+        "menu_url": "",
+        "reservations_url": "",
+        "image_assistance_requested": 0
+      },
+      {
+        "id": 500000040,
+        "public_id": "e2ff922c-1ea0-5e21-bfde-84ed626da8eb",
+        "destination_id": 10005,
+        "category_code": "comercio",
+        "slug": "supertienda-olimpica-riohacha",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 27,
+        "record_origin": "public_import",
+        "address_text": "",
+        "location_reference": "",
+        "latitude": null,
+        "longitude": null,
+        "location_source": null,
+        "location_map_url": "",
+        "location_confirmed": 0,
+        "price_range": "",
+        "menu_url": "",
+        "reservations_url": "",
+        "image_assistance_requested": 0
+      },
+      {
+        "id": 500000041,
+        "public_id": "e9ddfc6d-d63c-5a54-82a0-ecff82a63838",
+        "destination_id": 10005,
+        "category_code": "comercio",
+        "slug": "almacenes-exito-riohacha",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 28,
+        "record_origin": "public_import",
+        "address_text": "",
+        "location_reference": "",
+        "latitude": null,
+        "longitude": null,
+        "location_source": null,
+        "location_map_url": "",
+        "location_confirmed": 0,
+        "price_range": "",
+        "menu_url": "",
+        "reservations_url": "",
+        "image_assistance_requested": 0
+      },
+      {
+        "id": 500000042,
+        "public_id": "0be29758-cbde-5eca-8238-ab9c6488a975",
+        "destination_id": 10005,
+        "category_code": "salud",
+        "slug": "clinica-cedes",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 29,
+        "record_origin": "public_import",
+        "address_text": "",
+        "location_reference": "",
+        "latitude": null,
+        "longitude": null,
+        "location_source": null,
+        "location_map_url": "",
+        "location_confirmed": 0,
+        "price_range": "",
+        "menu_url": "",
+        "reservations_url": "",
+        "image_assistance_requested": 0
+      },
+      {
+        "id": 500000043,
+        "public_id": "2d164926-1a77-5cbe-a414-8ea5537ac88a",
+        "destination_id": 10005,
+        "category_code": "salud",
+        "slug": "hospital-nuestra-senora-de-los-remedios",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 30,
+        "record_origin": "public_import",
+        "address_text": "",
+        "location_reference": "",
+        "latitude": null,
+        "longitude": null,
+        "location_source": null,
+        "location_map_url": "",
+        "location_confirmed": 0,
+        "price_range": "",
+        "menu_url": "",
+        "reservations_url": "",
+        "image_assistance_requested": 0
+      }
+    ],
+    "business_translations": [
+      {
+        "business_id": 500000014,
+        "locale": "es",
+        "display_name": "Bona Vida Hostel La Quinta II",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000014,
+        "locale": "en",
+        "display_name": "Bona Vida Hostel La Quinta II",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000014,
+        "locale": "pt-BR",
+        "display_name": "Bona Vida Hostel La Quinta II",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000015,
+        "locale": "es",
+        "display_name": "Hotel La Vieja Sara",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000015,
+        "locale": "en",
+        "display_name": "Hotel La Vieja Sara",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000015,
+        "locale": "pt-BR",
+        "display_name": "Hotel La Vieja Sara",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000016,
+        "locale": "es",
+        "display_name": "Guajira Casa del Mar Hotel Boutique",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000016,
+        "locale": "en",
+        "display_name": "Guajira Casa del Mar Hotel Boutique",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000016,
+        "locale": "pt-BR",
+        "display_name": "Guajira Casa del Mar Hotel Boutique",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000017,
+        "locale": "es",
+        "display_name": "Balcones de la Quinta",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000017,
+        "locale": "en",
+        "display_name": "Balcones de la Quinta",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000017,
+        "locale": "pt-BR",
+        "display_name": "Balcones de la Quinta",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000018,
+        "locale": "es",
+        "display_name": "Casa Marina Hotel Boutique",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000018,
+        "locale": "en",
+        "display_name": "Casa Marina Hotel Boutique",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000018,
+        "locale": "pt-BR",
+        "display_name": "Casa Marina Hotel Boutique",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000019,
+        "locale": "es",
+        "display_name": "Hotel La Guajira",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000019,
+        "locale": "en",
+        "display_name": "Hotel La Guajira",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000019,
+        "locale": "pt-BR",
+        "display_name": "Hotel La Guajira",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000020,
+        "locale": "es",
+        "display_name": "Sashii Hostel & Boutique",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000020,
+        "locale": "en",
+        "display_name": "Sashii Hostel & Boutique",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000020,
+        "locale": "pt-BR",
+        "display_name": "Sashii Hostel & Boutique",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000021,
+        "locale": "es",
+        "display_name": "Hotel Taroa",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000021,
+        "locale": "en",
+        "display_name": "Hotel Taroa",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000021,
+        "locale": "pt-BR",
+        "display_name": "Hotel Taroa",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000022,
+        "locale": "es",
+        "display_name": "Restaurante La Casa del Marisco",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000022,
+        "locale": "en",
+        "display_name": "Restaurante La Casa del Marisco",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000022,
+        "locale": "pt-BR",
+        "display_name": "Restaurante La Casa del Marisco",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000023,
+        "locale": "es",
+        "display_name": "Restaurante Yotojoro",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000023,
+        "locale": "en",
+        "display_name": "Restaurante Yotojoro",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000023,
+        "locale": "pt-BR",
+        "display_name": "Restaurante Yotojoro",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000024,
+        "locale": "es",
+        "display_name": "Al Arz Delicias Árabes",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000024,
+        "locale": "en",
+        "display_name": "Al Arz Delicias Árabes",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000024,
+        "locale": "pt-BR",
+        "display_name": "Al Arz Delicias Árabes",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000025,
+        "locale": "es",
+        "display_name": "Lima",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000025,
+        "locale": "en",
+        "display_name": "Lima",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000025,
+        "locale": "pt-BR",
+        "display_name": "Lima",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000026,
+        "locale": "es",
+        "display_name": "La Fermata Pizza Bistro",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000026,
+        "locale": "en",
+        "display_name": "La Fermata Pizza Bistro",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000026,
+        "locale": "pt-BR",
+        "display_name": "La Fermata Pizza Bistro",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000027,
+        "locale": "es",
+        "display_name": "Quile Parrilla",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000027,
+        "locale": "en",
+        "display_name": "Quile Parrilla",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000027,
+        "locale": "pt-BR",
+        "display_name": "Quile Parrilla",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000028,
+        "locale": "es",
+        "display_name": "Restaurante Mantequilla",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000028,
+        "locale": "en",
+        "display_name": "Restaurante Mantequilla",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000028,
+        "locale": "pt-BR",
+        "display_name": "Restaurante Mantequilla",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000029,
+        "locale": "es",
+        "display_name": "La Tinaja",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000029,
+        "locale": "en",
+        "display_name": "La Tinaja",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000029,
+        "locale": "pt-BR",
+        "display_name": "La Tinaja",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000030,
+        "locale": "es",
+        "display_name": "Sazón Internacional",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000030,
+        "locale": "en",
+        "display_name": "Sazón Internacional",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000030,
+        "locale": "pt-BR",
+        "display_name": "Sazón Internacional",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000031,
+        "locale": "es",
+        "display_name": "Hope Burgers",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000031,
+        "locale": "en",
+        "display_name": "Hope Burgers",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000031,
+        "locale": "pt-BR",
+        "display_name": "Hope Burgers",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000032,
+        "locale": "es",
+        "display_name": "Maradentro Café-Bar",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000032,
+        "locale": "en",
+        "display_name": "Maradentro Café-Bar",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000032,
+        "locale": "pt-BR",
+        "display_name": "Maradentro Café-Bar",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000033,
+        "locale": "es",
+        "display_name": "Guajira Mundo",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000033,
+        "locale": "en",
+        "display_name": "Guajira Mundo",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000033,
+        "locale": "pt-BR",
+        "display_name": "Guajira Mundo",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000034,
+        "locale": "es",
+        "display_name": "Viajes La Guajira",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000034,
+        "locale": "en",
+        "display_name": "Viajes La Guajira",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000034,
+        "locale": "pt-BR",
+        "display_name": "Viajes La Guajira",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000035,
+        "locale": "es",
+        "display_name": "Punta Gallinas Tours / Expotur Eco",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000035,
+        "locale": "en",
+        "display_name": "Punta Gallinas Tours / Expotur Eco",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000035,
+        "locale": "pt-BR",
+        "display_name": "Punta Gallinas Tours / Expotur Eco",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000036,
+        "locale": "es",
+        "display_name": "Centro Cultural del Banco de la República de Riohacha",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000036,
+        "locale": "en",
+        "display_name": "Centro Cultural del Banco de la República de Riohacha",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000036,
+        "locale": "pt-BR",
+        "display_name": "Centro Cultural del Banco de la República de Riohacha",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000037,
+        "locale": "es",
+        "display_name": "Terminal de Transportes de Riohacha",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000037,
+        "locale": "en",
+        "display_name": "Terminal de Transportes de Riohacha",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000037,
+        "locale": "pt-BR",
+        "display_name": "Terminal de Transportes de Riohacha",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000038,
+        "locale": "es",
+        "display_name": "Expreso Brasilia — Riohacha",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000038,
+        "locale": "en",
+        "display_name": "Expreso Brasilia — Riohacha",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000038,
+        "locale": "pt-BR",
+        "display_name": "Expreso Brasilia — Riohacha",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000039,
+        "locale": "es",
+        "display_name": "Copetran — Riohacha",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000039,
+        "locale": "en",
+        "display_name": "Copetran — Riohacha",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000039,
+        "locale": "pt-BR",
+        "display_name": "Copetran — Riohacha",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000040,
+        "locale": "es",
+        "display_name": "Supertienda Olímpica — Riohacha",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000040,
+        "locale": "en",
+        "display_name": "Supertienda Olímpica — Riohacha",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000040,
+        "locale": "pt-BR",
+        "display_name": "Supertienda Olímpica — Riohacha",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000041,
+        "locale": "es",
+        "display_name": "Almacenes Éxito — Riohacha",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000041,
+        "locale": "en",
+        "display_name": "Almacenes Éxito — Riohacha",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000041,
+        "locale": "pt-BR",
+        "display_name": "Almacenes Éxito — Riohacha",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000042,
+        "locale": "es",
+        "display_name": "Clínica Cedes",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000042,
+        "locale": "en",
+        "display_name": "Clínica Cedes",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000042,
+        "locale": "pt-BR",
+        "display_name": "Clínica Cedes",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000043,
+        "locale": "es",
+        "display_name": "Hospital Nuestra Señora de los Remedios",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000043,
+        "locale": "en",
+        "display_name": "Hospital Nuestra Señora de los Remedios",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000043,
+        "locale": "pt-BR",
+        "display_name": "Hospital Nuestra Señora de los Remedios",
+        "summary": "",
+        "description": ""
+      }
+    ],
+    "business_categories": [],
+    "business_sources": [
+      {
+        "id": 517,
+        "business_id": 500000014,
+        "source_url": "https://www.tripadvisor.es/Hotels-g676527-Riohacha_La_Guajira_Department-Hotels.html",
+        "checked_at": "2026-10-22 00:00:00",
+        "note": "Identidad documental del establecimiento; no confirma operación, representación, afiliación ni condiciones de servicio."
+      },
+      {
+        "id": 518,
+        "business_id": 500000015,
+        "source_url": "https://www.tripadvisor.es/Hotels-g676527-Riohacha_La_Guajira_Department-Hotels.html",
+        "checked_at": "2026-10-22 00:00:00",
+        "note": "Identidad documental del establecimiento; no confirma operación, representación, afiliación ni condiciones de servicio."
+      },
+      {
+        "id": 519,
+        "business_id": 500000016,
+        "source_url": "https://www.tripadvisor.es/Hotels-g676527-Riohacha_La_Guajira_Department-Hotels.html",
+        "checked_at": "2026-10-22 00:00:00",
+        "note": "Identidad documental del establecimiento; no confirma operación, representación, afiliación ni condiciones de servicio."
+      },
+      {
+        "id": 520,
+        "business_id": 500000017,
+        "source_url": "https://www.tripadvisor.es/Hotels-g676527-Riohacha_La_Guajira_Department-Hotels.html",
+        "checked_at": "2026-10-22 00:00:00",
+        "note": "Identidad documental del establecimiento; no confirma operación, representación, afiliación ni condiciones de servicio."
+      },
+      {
+        "id": 521,
+        "business_id": 500000018,
+        "source_url": "https://www.tripadvisor.es/Hotels-g676527-Riohacha_La_Guajira_Department-Hotels.html",
+        "checked_at": "2026-10-22 00:00:00",
+        "note": "Identidad documental del establecimiento; no confirma operación, representación, afiliación ni condiciones de servicio."
+      },
+      {
+        "id": 522,
+        "business_id": 500000019,
+        "source_url": "https://www.tripadvisor.es/Hotels-g676527-Riohacha_La_Guajira_Department-Hotels.html",
+        "checked_at": "2026-10-22 00:00:00",
+        "note": "Identidad documental del establecimiento; no confirma operación, representación, afiliación ni condiciones de servicio."
+      },
+      {
+        "id": 523,
+        "business_id": 500000020,
+        "source_url": "https://www.tripadvisor.es/Hotels-g676527-Riohacha_La_Guajira_Department-Hotels.html",
+        "checked_at": "2026-10-22 00:00:00",
+        "note": "Identidad documental del establecimiento; no confirma operación, representación, afiliación ni condiciones de servicio."
+      },
+      {
+        "id": 524,
+        "business_id": 500000021,
+        "source_url": "https://www.tripadvisor.es/Hotels-g676527-Riohacha_La_Guajira_Department-Hotels.html",
+        "checked_at": "2026-10-22 00:00:00",
+        "note": "Identidad documental del establecimiento; no confirma operación, representación, afiliación ni condiciones de servicio."
+      },
+      {
+        "id": 525,
+        "business_id": 500000022,
+        "source_url": "https://www.tripadvisor.es/Restaurants-g676527-Riohacha_La_Guajira_Department.html",
+        "checked_at": "2026-10-22 00:00:00",
+        "note": "Identidad documental del establecimiento; no confirma operación, representación, afiliación ni condiciones de servicio."
+      },
+      {
+        "id": 526,
+        "business_id": 500000023,
+        "source_url": "https://www.tripadvisor.es/Restaurants-g676527-Riohacha_La_Guajira_Department.html",
+        "checked_at": "2026-10-22 00:00:00",
+        "note": "Identidad documental del establecimiento; no confirma operación, representación, afiliación ni condiciones de servicio."
+      },
+      {
+        "id": 527,
+        "business_id": 500000024,
+        "source_url": "https://www.tripadvisor.es/Restaurants-g676527-Riohacha_La_Guajira_Department.html",
+        "checked_at": "2026-10-22 00:00:00",
+        "note": "Identidad documental del establecimiento; no confirma operación, representación, afiliación ni condiciones de servicio."
+      },
+      {
+        "id": 528,
+        "business_id": 500000025,
+        "source_url": "https://www.tripadvisor.es/Restaurants-g676527-Riohacha_La_Guajira_Department.html",
+        "checked_at": "2026-10-22 00:00:00",
+        "note": "Identidad documental del establecimiento; no confirma operación, representación, afiliación ni condiciones de servicio."
+      },
+      {
+        "id": 529,
+        "business_id": 500000026,
+        "source_url": "https://www.tripadvisor.es/Restaurants-g676527-Riohacha_La_Guajira_Department.html",
+        "checked_at": "2026-10-22 00:00:00",
+        "note": "Identidad documental del establecimiento; no confirma operación, representación, afiliación ni condiciones de servicio."
+      },
+      {
+        "id": 530,
+        "business_id": 500000027,
+        "source_url": "https://www.tripadvisor.es/Restaurants-g676527-Riohacha_La_Guajira_Department.html",
+        "checked_at": "2026-10-22 00:00:00",
+        "note": "Identidad documental del establecimiento; no confirma operación, representación, afiliación ni condiciones de servicio."
+      },
+      {
+        "id": 531,
+        "business_id": 500000028,
+        "source_url": "https://www.tripadvisor.es/Restaurants-g676527-Riohacha_La_Guajira_Department.html",
+        "checked_at": "2026-10-22 00:00:00",
+        "note": "Identidad documental del establecimiento; no confirma operación, representación, afiliación ni condiciones de servicio."
+      },
+      {
+        "id": 532,
+        "business_id": 500000029,
+        "source_url": "https://www.tripadvisor.es/Restaurants-g676527-Riohacha_La_Guajira_Department.html",
+        "checked_at": "2026-10-22 00:00:00",
+        "note": "Identidad documental del establecimiento; no confirma operación, representación, afiliación ni condiciones de servicio."
+      },
+      {
+        "id": 533,
+        "business_id": 500000030,
+        "source_url": "https://www.tripadvisor.es/Restaurants-g676527-Riohacha_La_Guajira_Department.html",
+        "checked_at": "2026-10-22 00:00:00",
+        "note": "Identidad documental del establecimiento; no confirma operación, representación, afiliación ni condiciones de servicio."
+      },
+      {
+        "id": 534,
+        "business_id": 500000031,
+        "source_url": "https://www.tripadvisor.es/Restaurants-g676527-Riohacha_La_Guajira_Department.html",
+        "checked_at": "2026-10-22 00:00:00",
+        "note": "Identidad documental del establecimiento; no confirma operación, representación, afiliación ni condiciones de servicio."
+      },
+      {
+        "id": 535,
+        "business_id": 500000032,
+        "source_url": "https://www.tripadvisor.es/Restaurants-g676527-Riohacha_La_Guajira_Department.html",
+        "checked_at": "2026-10-22 00:00:00",
+        "note": "Identidad documental del establecimiento; no confirma operación, representación, afiliación ni condiciones de servicio."
+      },
+      {
+        "id": 536,
+        "business_id": 500000033,
+        "source_url": "https://guajiramundo.com/tours/",
+        "checked_at": "2026-10-22 00:00:00",
+        "note": "Identidad documental del establecimiento; no confirma operación, representación, afiliación ni condiciones de servicio."
+      },
+      {
+        "id": 537,
+        "business_id": 500000034,
+        "source_url": "https://viajeslaguajira.com/",
+        "checked_at": "2026-10-22 00:00:00",
+        "note": "Identidad documental del establecimiento; no confirma operación, representación, afiliación ni condiciones de servicio."
+      },
+      {
+        "id": 538,
+        "business_id": 500000035,
+        "source_url": "https://puntagallinastours.com/tours",
+        "checked_at": "2026-10-22 00:00:00",
+        "note": "Identidad documental del establecimiento; no confirma operación, representación, afiliación ni condiciones de servicio."
+      },
+      {
+        "id": 539,
+        "business_id": 500000036,
+        "source_url": "https://www.banrep.gov.co/es/sucursales/riohacha-centro-cultural",
+        "checked_at": "2026-10-22 00:00:00",
+        "note": "Identidad documental del establecimiento; no confirma operación, representación, afiliación ni condiciones de servicio."
+      },
+      {
+        "id": 540,
+        "business_id": 500000037,
+        "source_url": "https://buscobus.com.co/terminal-de-transporte/terminal-de-transporte-riohacha/",
+        "checked_at": "2026-10-22 00:00:00",
+        "note": "Identidad documental del establecimiento; no confirma operación, representación, afiliación ni condiciones de servicio."
+      },
+      {
+        "id": 541,
+        "business_id": 500000038,
+        "source_url": "https://buscobus.com.co/terminal-de-transporte/terminal-de-transporte-riohacha/",
+        "checked_at": "2026-10-22 00:00:00",
+        "note": "Identidad documental del establecimiento; no confirma operación, representación, afiliación ni condiciones de servicio."
+      },
+      {
+        "id": 542,
+        "business_id": 500000039,
+        "source_url": "https://buscobus.com.co/terminal-de-transporte/terminal-de-transporte-riohacha/",
+        "checked_at": "2026-10-22 00:00:00",
+        "note": "Identidad documental del establecimiento; no confirma operación, representación, afiliación ni condiciones de servicio."
+      },
+      {
+        "id": 543,
+        "business_id": 500000040,
+        "source_url": "https://www.lugarlatino.com/colombia/riohacha/domicilios-supermercado/",
+        "checked_at": "2026-10-22 00:00:00",
+        "note": "Identidad documental del establecimiento; no confirma operación, representación, afiliación ni condiciones de servicio."
+      },
+      {
+        "id": 544,
+        "business_id": 500000041,
+        "source_url": "https://www.lugarlatino.com/colombia/riohacha/domicilios-supermercado/",
+        "checked_at": "2026-10-22 00:00:00",
+        "note": "Identidad documental del establecimiento; no confirma operación, representación, afiliación ni condiciones de servicio."
+      },
+      {
+        "id": 545,
+        "business_id": 500000042,
+        "source_url": "https://clinicacedes.com/nosotros/",
+        "checked_at": "2026-10-22 00:00:00",
+        "note": "Identidad documental del establecimiento; no confirma operación, representación, afiliación ni condiciones de servicio."
+      },
+      {
+        "id": 546,
+        "business_id": 500000043,
+        "source_url": "https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/VS/directorio-urgencias-riohacha.pdf",
+        "checked_at": "2026-10-22 00:00:00",
+        "note": "Identidad documental del establecimiento; no confirma operación, representación, afiliación ni condiciones de servicio."
+      }
+    ],
+    "business_contacts": [],
+    "business_media": [],
+    "media_assets": [
+      {
+        "creator": "Oscar Costero",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Taroa_Dunes_in_Alta_Guajira_2023.jpg",
+        "license_name": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "id": -10044,
+        "origin": "ai_generated",
+        "asset_path": "assets/revision-caribe/riohacha/riohacha-alta-guajira-taroa-v1.webp",
+        "width": 1200,
+        "height": 800,
+        "provenance_json": "{\"asset_id\": \"riohacha-alta-guajira-taroa-v1\", \"slug\": \"excursion-alta-guajira\", \"destination\": \"Riohacha\", \"represented_municipality\": \"Uribia\", \"role\": \"excursion-alta-guajira-surroundings\", \"master\": \".local/riohacha/taroa-v1.png\", \"web\": \"riohacha-alta-guajira-taroa-v1.webp\", \"width\": 1200, \"height\": 800, \"method\": \"licensedphoto styletransformation preserving coastalcomposition\", \"input_images\": [\".local/riohacha/referencias/taroa-oscarcostero-20230630.jpg\"], \"tool\": \"image_gen built-in\", \"date\": \"2026-10-22\", \"status\": \"draft_pending_human_approval\", \"licence\": \"CC BY-SA 4.0\", \"licence_url\": \"https://creativecommons.org/licenses/by-sa/4.0/\", \"attribution_required\": true, \"public_credit\": \"Ilustración adaptada mediante IA de «Taroa Dunes in Alta Guajira 2023», Oscar Costero, CC BY-SA 4.0. Cambios: transformación a tinta/gouache y retiro de figura humana distante.\", \"source_url\": \"https://commons.wikimedia.org/wiki/File:Taroa_Dunes_in_Alta_Guajira_2023.jpg\", \"author\": \"Oscar Costero\", \"source_capture_date\": \"2023-06-30\", \"factual_sources\": [\"https://colombia.travel/es/riohacha/conoce-las-dunas-de-taroa\", \"https://www.igac.gov.co/sites/default/files/2025-11/BFrag_17La%20Guajira_DIGInd.pdf\"], \"prompt_file\": \"taroa-prompt-v1.txt\", \"alt_draft_es\": \"Ilustración de las dunas de Taroa junto al Caribe, en Punta Gallinas, Uribia.\", \"review\": {\"style\": \"pass visiblepaintandink\", \"composition\": \"pass duneright, sealeft,shorelinediagonal androckoutcropretained\", \"relief\": \"pass preservedcoastforms,noadditionalmountains/palms/buildings\", \"identity\": \"photoidentifiedTaroa, excursionoutsideRiohacha municipality\", \"camera\": \"same asphoto, cameracoordinatesnotpublished becauseunverified\", \"access\": \"notdepicted, noguaranteesofbathing/access\", \"human\": \"pending\"}, \"master_sha256\": \"fa4cc473e0429d3f89f328e60a023d8f670d594261d41bf6fdfa522450f2907f\", \"web_sha256\": \"7728c278926a64dbecb8f5ec4081b640e38915c2513d27deba005219c7fbd8bd\", \"input_sha256\": [\"6479ad642ac885346d9b5790362d6330b44bbe490bf628cb7eefc0f88944cc47\"], \"bytes\": 168076, \"active_file\": \"riohacha-alta-guajira-taroa-v1.webp\", \"active_sha256\": \"7728c278926a64dbecb8f5ec4081b640e38915c2513d27deba005219c7fbd8bd\", \"active_dimensions\": [1200, 800], \"sidecar_source\": \"trabajo/lugar-riohacha/crecimiento-colombia/entregas/riohacha/visual/alta-guajira-taroa-v1.procedencia.json\", \"historical_sidecar_metadata\": true, \"sha256\": \"7728c278926a64dbecb8f5ec4081b640e38915c2513d27deba005219c7fbd8bd\", \"approved_by_owner\": true, \"approval_scope\": \"Riohacha and Valledupar local reviewed content\"}"
+      },
+      {
+        "creator": "Explorando Lugares (ilustración con IA)",
+        "source_url": "",
+        "license_name": "Ilustración original generada con IA; no se atribuye licencia CC",
+        "license_url": "",
+        "id": -10043,
+        "origin": "ai_generated",
+        "asset_path": "assets/revision-caribe/riohacha/riohacha-wayuu-v1.webp",
+        "width": 1200,
+        "height": 800,
+        "provenance_json": "{\"asset_id\": \"riohacha-wayuu-v1\", \"role\": \"experience-wayuu-cultural-encounter\", \"master\": \".local/riohacha/wayuu-v1.png\", \"web\": \"riohacha-wayuu-v1.webp\", \"width\": 1200, \"height\": 800, \"method\": \"new thematic non-documentary illustration, no named rancheria/people/operator\", \"input_images\": [], \"prompt_file\": \"wayuu-prompt-v1.txt\", \"source_urls\": [\"https://colombia.travel/en/riohacha/wayuu-settlements\", \"https://comfaguajira.co/turismo/\", \"https://conectaregioncaribe.mintic.gov.co/producto/expedicion-vive-un-dia-como-wayuu/\"], \"alt_draft_es\": \"Ilustración temática de un encuentro de conversación y artesanía con anfitriones wayuu.\", \"review\": {\"style\": \"pass: gouacheandinkvisible\", \"content\": \"adults inconversation; bag/hammock/no sacredsymbolclaims\", \"identity\": \"thematic, no namedrancheria orportrait\", \"anatomy\": \"checked visiblehands/faces; naturallysimplified\", \"human\": \"pending\"}, \"destination\": \"Riohacha\", \"tool\": \"image_gen built-in\", \"date\": \"2026-10-22\", \"status\": \"draft_pending_human_approval\", \"master_sha256\": \"4622553cb2b47b3f5191bab6a61a10db694b4e55ea934456bff72eaf6fe572e2\", \"web_sha256\": \"97077af0e981779f078a658c20d9523be780740cd09d8e93f48c03c93abf247f\", \"bytes\": 273864, \"slug\": \"encuentro-cultural-wayuu\", \"active_file\": \"riohacha-wayuu-v1.webp\", \"active_sha256\": \"97077af0e981779f078a658c20d9523be780740cd09d8e93f48c03c93abf247f\", \"active_dimensions\": [1200, 800], \"sidecar_source\": \"trabajo/lugar-riohacha/crecimiento-colombia/entregas/riohacha/visual/wayuu-v1.procedencia.json\", \"historical_sidecar_metadata\": true, \"sha256\": \"97077af0e981779f078a658c20d9523be780740cd09d8e93f48c03c93abf247f\", \"approved_by_owner\": true, \"approval_scope\": \"Riohacha and Valledupar local reviewed content\"}"
+      },
+      {
+        "creator": "Explorando Lugares (ilustración con IA)",
+        "source_url": "",
+        "license_name": "Ilustración original generada con IA; no se atribuye licencia CC",
+        "license_url": "",
+        "id": -10042,
+        "origin": "ai_generated",
+        "asset_path": "assets/revision-caribe/riohacha/riohacha-flamencos-v1.webp",
+        "width": 1200,
+        "height": 800,
+        "provenance_json": "{\"asset_id\": \"riohacha-flamencos-v1\", \"destination\": \"Riohacha\", \"role\": \"experience-birdwatching\", \"status\": \"draft_pending_human_approval\", \"tool\": \"image_gen built-in\", \"date\": \"2026-10-22\", \"input_images\": [], \"method\": \"original approximate thematic scene from verified habitat/species, no photograph uploaded\", \"master\": \".local/riohacha/flamencos-v1.png\", \"web\": \"riohacha-flamencos-v1.webp\", \"width\": 1200, \"height\": 800, \"sources\": [{\"url\": \"https://www.parquesnacionales.gov.co/nuestros-parques/sff-los-flamencos/\", \"proof\": \"location municipalityRiohacha, lagoons, mangrove/dryforest, species, birdwatching\"}, {\"url\": \"https://www.parquesnacionales.gov.co/wp-content/uploads/2023/06/Flamencos-Nianza-del-Carmen-Angulo-Jefe-de-SFF-FLAMENCOS.jpeg\", \"author\": \"Nianza del Carmen Angulo (as filename/page)\", \"capture_date\": null, \"use\": \"observed officialimage for habitat/species; not uploaded or adapted\"}, {\"url\": \"https://colombia.travel/en/riohacha/los-flamencos-fauna-and-flora-sanctuary\", \"proof\": \"birdwatching identity\"}], \"prompt_file\": \"flamencos-prompt-v1.txt\", \"alt_draft_es\": \"Ilustración de flamencos rosados en una laguna costera de Camarones.\", \"review\": {\"style\": \"pass: visibly gouache/ink\", \"species\": \"pass: pinkflamingos longlegs andneck, curvedblacktippedbeak; simplifiednotdiagnostic\", \"habitat\": \"pass: shallowgrey-greenlagoon, lowmangrove,flatshore\", \"activity\": \"nohumansfeeding/touching, sightingnotguaranteed\", \"location\": \"thematicapproximation, notidentifiedexactlagooncamerapoint\", \"human\": \"pending\"}, \"master_sha256\": \"02255fb5b1f929eb23c1b04fb52d30d422d53b96bdccfbb7455baf6d738f2d8b\", \"web_sha256\": \"a8e466bf13baa0ae56a16c00ce3b8d03009df670fc67c7721524e0de82f22fa2\", \"bytes\": 289712, \"slug\": \"avistamiento-flamencos-camarones\", \"active_file\": \"riohacha-flamencos-v1.webp\", \"active_sha256\": \"a8e466bf13baa0ae56a16c00ce3b8d03009df670fc67c7721524e0de82f22fa2\", \"active_dimensions\": [1200, 800], \"sidecar_source\": \"trabajo/lugar-riohacha/crecimiento-colombia/entregas/riohacha/visual/flamencos-v1.procedencia.json\", \"historical_sidecar_metadata\": true, \"sha256\": \"a8e466bf13baa0ae56a16c00ce3b8d03009df670fc67c7721524e0de82f22fa2\", \"approved_by_owner\": true, \"approval_scope\": \"Riohacha and Valledupar local reviewed content\"}"
+      },
+      {
+        "creator": "Saavedranatalia",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Playa_Mayapo,_La_Guajira._._Horizontal.jpg",
+        "license_name": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "id": -10041,
+        "origin": "ai_generated",
+        "asset_path": "assets/revision-caribe/riohacha/riohacha-mayapo-v1.webp",
+        "width": 1200,
+        "height": 800,
+        "provenance_json": "{\"asset_id\": \"riohacha-mayapo-v1\", \"slug\": \"playas-mayapo\", \"represented_municipality\": \"Manaure, La Guajira; alrededores de Riohacha\", \"master\": \".local/riohacha/mayapo-v1.png\", \"web\": \"riohacha-mayapo-v1.webp\", \"width\": 1200, \"height\": 800, \"prompt_file\": \"mayapo-prompt-v1.txt\", \"source\": \"https://commons.wikimedia.org/wiki/File:Playa_Mayapo,_La_Guajira._._Horizontal.jpg\", \"author\": \"Saavedranatalia\", \"capture_date\": \"2016-06-28\", \"reference_file\": \".local/riohacha/referencias/mayapo-saavedranatalia-20160628.jpg\", \"licence\": \"CC BY-SA 4.0\", \"licence_url\": \"https://creativecommons.org/licenses/by-sa/4.0/\", \"public_credit\": \"Ilustración adaptada mediante IA de «Playa Mayapo, La Guajira. . Horizontal», Saavedranatalia, CC BY-SA4.0. Cambio a tinta/gouache y recorte central.\", \"factual_sources\": [\"https://www.manaureguajira.gov.co/MiMunicipio/Paginas/Territorios.aspx\", \"https://colombia.travel/es/disfruta-tus-vacaciones-de-verano-en-destinos-de-sol-y-playa-en\"], \"review\": {\"composition\": \"Retainscentralhut,walkway,lowshadeshelterright,flatseaandpalethicksand; derivedcentralcrop\", \"style\": \"Visibleinkandgouache\", \"geography\": \"Noaddedpalms/mountains/resorts; municipalityManaureconfirmed\", \"date\": \"2016datedreference;services/currentinfrastructurenotcertified\"}, \"alt_es\": \"Ilustración de un sector de las playas de Mayapo, en Manaure, con arena clara y enramadas costeras.\", \"destination\": \"Riohacha\", \"role\": \"poi\", \"status\": \"draft_pending_human_approval\", \"tool\": \"image_gen built-in\", \"date\": \"2026-10-22\", \"method\": \"licensed photograph style transformation\", \"attribution_required\": true, \"master_sha256\": \"447faf6789a68b05e7f8c9d9faa9a2ed171bd88ed9489a638a7bf4915faea050\", \"web_sha256\": \"1f53dc17a2d825ed848ba0f2c2f1a2eb8ca9519e75374648f289cd2b21e3d854\", \"reference_sha256\": \"d521051fc6c0932a97f460af2094f76e4a92cd79cece8e6f225ae3ae4cc99d5a\", \"bytes\": 239250, \"active_file\": \"riohacha-mayapo-v1.webp\", \"active_sha256\": \"1f53dc17a2d825ed848ba0f2c2f1a2eb8ca9519e75374648f289cd2b21e3d854\", \"active_dimensions\": [1200, 800], \"sidecar_source\": \"trabajo/lugar-riohacha/crecimiento-colombia/entregas/riohacha/visual/mayapo-v1.procedencia.json\", \"historical_sidecar_metadata\": true, \"sha256\": \"1f53dc17a2d825ed848ba0f2c2f1a2eb8ca9519e75374648f289cd2b21e3d854\", \"approved_by_owner\": true, \"approval_scope\": \"Riohacha and Valledupar local reviewed content\"}"
+      },
+      {
+        "creator": "diego_cue",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Laguna_de_los_flamencos_-_panoramio.jpg",
+        "license_name": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "id": -10040,
+        "origin": "ai_generated",
+        "asset_path": "assets/revision-caribe/riohacha/riohacha-santuario-flamencos-v1.webp",
+        "width": 1200,
+        "height": 800,
+        "provenance_json": "{\"asset_id\": \"riohacha-santuario-flamencos-v1\", \"slug\": \"santuario-flamencos\", \"destination\": \"Riohacha\", \"role\": \"poi-physical-sanctuary\", \"status\": \"draft_pending_human_approval\", \"master\": \".local/riohacha/santuario-v1.png\", \"web\": \"riohacha-santuario-flamencos-v1.webp\", \"width\": 1200, \"height\": 800, \"prompt_file\": \"santuario-prompt-v1.txt\", \"tool\": \"image_gen built-in\", \"date\": \"2026-10-22\", \"method\": \"licensed photograph style transformation\", \"reference_file\": \".local/riohacha/referencias/laguna-diegocue-20150111.jpg\", \"source\": \"https://commons.wikimedia.org/wiki/File:Laguna_de_los_flamencos_-_panoramio.jpg\", \"author\": \"diego_cue\", \"capture_date\": \"2015-01-11\", \"licence\": \"CC BY-SA 3.0\", \"licence_url\": \"https://creativecommons.org/licenses/by-sa/3.0/\", \"attribution_required\": true, \"public_credit\": \"Ilustración adaptada mediante IA de «Laguna de los flamencos - panoramio», diego_cue, CC BY-SA3.0. Cambio a tinta/gouache.\", \"factual_sources\": [\"https://www.parquesnacionales.gov.co/nuestros-parques/sff-los-flamencos/\"], \"alt_es\": \"Ilustración de una laguna del Santuario de Fauna y Flora Los Flamencos, con manglar y aves al atardecer.\", \"review\": {\"style\": \"Visibleinkgouache;nonphotographic\", \"geometry\": \"Preserveswideflatlagoon,lowmangrovesilhouette,goldensky,smallbirdpositionsapproximate\", \"difference_experience\": \"Landscapecard physicalsanctuary; noforegroundpinkflamingoflock orboat\", \"identity_limit\": \"Exactlagoonname/camerapointnotprovidedbysource; donotassignNavioQuebradowithoutverification\", \"date\": \"2015reference,notcurrentwater/accessguarantee\"}, \"approval\": null, \"master_sha256\": \"1bfd7e12a1ebc72e34bb94d5fc2788f5e95165dd3bd388b13074c46a0124fafc\", \"web_sha256\": \"d7ad6a91fa42fc95c2f9cf0aee6f667e7f91652d01ff5b8d58ef0479c477b87d\", \"reference_sha256\": \"ce37e03ddbdc97d9ec000a1258c4cc8453e494d81ec42e6c0793ea9ed56ac461\", \"bytes\": 224284, \"active_file\": \"riohacha-santuario-flamencos-v1.webp\", \"active_sha256\": \"d7ad6a91fa42fc95c2f9cf0aee6f667e7f91652d01ff5b8d58ef0479c477b87d\", \"active_dimensions\": [1200, 800], \"sidecar_source\": \"trabajo/lugar-riohacha/crecimiento-colombia/entregas/riohacha/visual/santuario-flamencos-v1.procedencia.json\", \"historical_sidecar_metadata\": true, \"sha256\": \"d7ad6a91fa42fc95c2f9cf0aee6f667e7f91652d01ff5b8d58ef0479c477b87d\", \"approved_by_owner\": true, \"approval_scope\": \"Riohacha and Valledupar local reviewed content\"}"
+      },
+      {
+        "creator": "Jdvillalobos",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Estatua_Nicol%C3%A1s_de_Federmann_Riohacha_Colombia-20240901.jpg",
+        "license_name": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "id": -10039,
+        "origin": "ai_generated",
+        "asset_path": "assets/revision-caribe/riohacha/riohacha-federmann-v2.webp",
+        "width": 1200,
+        "height": 800,
+        "provenance_json": "{\"asset_id\": \"riohacha-federmann-v2\", \"slug\": \"parque-nicolas-federmann\", \"master\": \".local/riohacha/federmann-v1.png\", \"web\": \"riohacha-federmann-v2.webp\", \"width\": 1067, \"height\": 800, \"prompt_file\": \"federmann-prompt-v1.txt\", \"source\": \"https://commons.wikimedia.org/wiki/File:Estatua_Nicol%C3%A1s_de_Federmann_Riohacha_Colombia-20240901.jpg\", \"author\": \"Jdvillalobos\", \"capture_date\": \"2024-08-24\", \"reference_file\": \".local/riohacha/referencias/federmann-jdvillalobos-20240824.jpg\", \"licence\": \"CC BY-SA 4.0\", \"licence_url\": \"https://creativecommons.org/licenses/by-sa/4.0/\", \"public_credit\": \"Ilustración adaptada mediante IA de «Estatua Nicolás de Federmann Riohacha Colombia-20240901», Jdvillalobos, CC BY-SA4.0. Cambio a tinta/gouache.\", \"review\": {\"composition\": \"Retained statueleft cylindricalpedestal,conventandchapelbehind,curvedyellowwall\", \"style\": \"Visibleinkandgouache\", \"crop\": \"4:3 usecontain in3:2 card; do notcutstatuehead/pedestal\", \"date\": \"2024reference,notevidenceofcurrentpaintcondition\"}, \"alt_es\": \"Ilustración del monumento a Nicolás de Federmann y la Capilla Divina Pastora en Riohacha.\", \"destination\": \"Riohacha\", \"role\": \"poi\", \"status\": \"draft_pending_human_review\", \"tool\": \"built-in image_gen\", \"date\": \"2026-10-22\", \"method\": \"licensed photograph style transformation\", \"attribution_required\": true, \"master_sha256\": \"a3f22230bfc368c498172eb19f92991136c8782a37acc819254fcdb21dfb377b\", \"web_sha256\": \"3f2e6b5ea9713978339209d7866e8b92ce7f6286d29759937a82935cefd93f67\", \"reference_sha256\": \"7aa9ac7d50deabb64f3d04a23b1b0ec23da7313c6dd51939a12fc8cb15bf3260\", \"bytes\": 264622, \"changes_v2\": \"Reencuadre horizontal, mayor protagonismo de escultura, perspectiva rectilínea; entorno reinterpretado desde ilustración anterior\", \"parent\": \"riohacha-federmann-v1.webp\", \"active_file\": \"riohacha-federmann-v2.webp\", \"active_sha256\": \"b50a92e9ad1f98c2170f49e8c9853a660acb6a3a934afc33e8704651c8b5fc92\", \"active_dimensions\": [1200, 800], \"sidecar_source\": \"trabajo/lugar-riohacha/crecimiento-colombia/entregas/riohacha/visual/federmann-v2.procedencia.json\", \"historical_sidecar_metadata\": true, \"sha256\": \"b50a92e9ad1f98c2170f49e8c9853a660acb6a3a934afc33e8704651c8b5fc92\", \"approved_by_owner\": true, \"approval_scope\": \"Riohacha and Valledupar local reviewed content\"}"
+      },
+      {
+        "creator": "Martinduquea",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Catedral_Nuestra_Se%C3%B1ora_de_Los_Remedios.jpg",
+        "license_name": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "id": -10038,
+        "origin": "ai_generated",
+        "asset_path": "assets/revision-caribe/riohacha/riohacha-catedral-horizontal-v4.webp",
+        "width": 1200,
+        "height": 800,
+        "provenance_json": "{\"asset_id\": \"riohacha-catedral-horizontal-v4\", \"role\": \"poi-plaza-padilla-catedral\", \"master\": \".local/riohacha/catedral-cc-v3.png\", \"web\": \"riohacha-catedral-horizontal-v4.webp\", \"width\": 1200, \"height\": 800, \"method\": \"licensed reference style transformation preserving composition\", \"input_images\": [\".local/riohacha/referencias/catedral-martinduquea-20120922.jpg\"], \"licence\": \"CC BY-SA 3.0\", \"licence_url\": \"https://creativecommons.org/licenses/by-sa/3.0/\", \"attribution_required\": true, \"public_credit\": \"Ilustración adaptada mediante IA de «Catedral Nuestra Señora de Los Remedios», Martinduquea, CC BY-SA 3.0. Cambios: transformación a tinta/gouache y retiro de fecha impresa.\", \"source_url\": \"https://commons.wikimedia.org/wiki/File:Catedral_Nuestra_Se%C3%B1ora_de_Los_Remedios.jpg\", \"author\": \"Martinduquea\", \"source_capture_date\": \"2012-09-22\", \"prompt_file\": \"catedral-cc-prompt-v3.txt\", \"alt_draft_es\": \"Ilustración de la fachada central de la Catedral Nuestra Señora de los Remedios, en Riohacha.\", \"review\": {\"style\": \"pass: inkedgesandgouachevisible\", \"composition\": \"pass: retained asymmetrical lowanglephotocamera andoriginalframe\", \"identity\": \"pass visiblecentralpediment,sittingVirgin,rose,niches,fanlight retained\", \"exactdetail\": \"paint simplificationofsculpturedetails; notsurvey\", \"crop\": \"portrait fullimage; do notforcecentralcovercropremovingdoororcross\", \"human\": \"pending\"}, \"destination\": \"Riohacha\", \"tool\": \"image_gen built-in\", \"date\": \"2026-10-22\", \"status\": \"draft_pending_human_review\", \"master_sha256\": \"676a0649629ded43e50a2c46d4471fc9dde5eb01cf0f85416e9605c88786cb60\", \"web_sha256\": \"9a5ee841beb05a497ab1d051024f6042a44f64b9bfc82548c284504b345aad61\", \"input_sha256\": [\"2ece37b5c122c79c425d5f22e7e90e2ab433a7eaaf7e4555af336b87f736e0db\"], \"bytes\": 227518, \"slug\": \"catedral-propuesta-detalle\", \"card_3_2_suitability\": \"not_ready: portraitcropcanlosepediment/door anddoesnotshowPlazaPadilla; standaloneproposalonly\", \"changes_horizontal\": \"Reencuadre horizontal generado desde ilustraciónCCv3; laterales reinterpretados. Revisión visual pendiente, no registro fotográfico.\", \"parent_asset\": \"riohacha-catedral-cc-v3.webp\", \"active_file\": \"riohacha-catedral-horizontal-v4.webp\", \"active_sha256\": \"1241dd4f72e79feaca0e88405fac0737c9b1e4c642fe3968b85f702d82e22bf0\", \"active_dimensions\": [1200, 800], \"sidecar_source\": \"trabajo/lugar-riohacha/crecimiento-colombia/entregas/riohacha/visual/catedral-horizontal-v4.procedencia.json\", \"historical_sidecar_metadata\": true, \"sha256\": \"1241dd4f72e79feaca0e88405fac0737c9b1e4c642fe3968b85f702d82e22bf0\", \"approved_by_owner\": true, \"approval_scope\": \"Riohacha and Valledupar local reviewed content\"}"
+      },
+      {
+        "creator": "Explorando Lugares (ilustración con IA)",
+        "source_url": "",
+        "license_name": "Ilustración original generada con IA; no se atribuye licencia CC",
+        "license_url": "",
+        "id": -10037,
+        "origin": "ai_generated",
+        "asset_path": "assets/revision-caribe/riohacha/riohacha-valle-cangrejos-v1.webp",
+        "width": 1200,
+        "height": 800,
+        "provenance_json": "{\"asset_id\": \"riohacha-valle-cangrejos-v1\", \"slug\": \"valle-de-los-cangrejos\", \"destination\": \"Riohacha\", \"represented_sector\": \"Humedal del brazo Calancala / Valle de los Cangrejos; no Riíto\", \"role\": \"poi\", \"status\": \"draft_pending_human_approval\", \"date\": \"2026-10-22\", \"tool\": \"image_gen built-in\", \"method\": \"Original thematic ecological illustration from documented habitat facts. Approximate, NOT exact viewpoint or reconstruction.\", \"input_images\": [], \"master\": \".local/riohacha/valle-cangrejos-v1.png\", \"web\": \"riohacha-valle-cangrejos-v1.webp\", \"width\": 1200, \"height\": 800, \"prompt_file\": \"valle-cangrejos-prompt-v1.txt\", \"alt_draft_es\": \"Ilustración temática de manglar, agua salobre y cangrejos del ecosistema del Valle de los Cangrejos.\", \"sources\": [{\"url\": \"https://www.invemar.org.co/redcostera1/invemar/docs/9312ORDENAMIENTO_MANGLARES_GUAJIRA_LIBRO.pdf\", \"title\": \"Ordenamiento ambiental de manglares de La Guajira, sección2.4\", \"proof\": \"BocaCalancala/ValleCangrejos al NEVillaFatima, manglar, diferenciadodeRiíto\", \"consulted\": \"2026-10-22\"}, {\"url\": \"https://indetur.gov.co/wp-content/uploads/2023/09/Inventario-Atractivos-Guajira.pdf\", \"title\": \"Inventario de atractivos turísticos de La Guajira\", \"proof\": \"Humedal en desembocaduraCalancala, aguadulce/salada,manglar/crustáceos\", \"consulted\": \"2026-10-22\"}, {\"url\": \"https://riohacha-laguajira.gov.co/MiMunicipio/Paginas/Sitios-de-Interes.aspx\", \"proof\": \"IdentidadmunicipalValleCangrejos/brazoCalancala\", \"consulted\": \"2026-10-22\"}, {\"url\": \"https://www.flickr.com/photos/128508597@N05/albums/72157656885455513\", \"title\": \"INVEMAR MIZC Guajira - Riohacha norte valle de los cangrejos\", \"use\": \"Albumidentitylocated; individualimagesnotaccessible,licensenotverified,NOTinput/copied\", \"consulted\": \"2026-10-22\"}], \"invariants\": [\"lowflatcoastalmangrovewetland\", \"shallowbrackishpool\", \"sandy-muddyseasonallyfloodedground\", \"smalllandcrabs\"], \"review\": {\"style\": \"pass: visible ink/gouache and paper grain\", \"habitat\": \"pass: shallowwater,mangroveroots,mud/sand\", \"infrastructure\": \"pass: none invented\", \"relief\": \"pass: no mountains/beachresort/promenade\", \"animals\": \"illustrated crabs, ordinary small-scale relative roots/leaves; not documentary species identification\", \"identity\": \"thematic ecology only, no exact-view claim; not inferred from Riíto urbanphoto\", \"human\": \"pending\"}, \"limitations\": [\"No licensed or inspectable precise sector photograph was available. Must be shown as thematic illustration.\", \"Does not document October2026 water level, accessibility, navigation or species sightings.\", \"No geographical coordinates or access pin invented.\"], \"approval\": null, \"master_sha256\": \"baeeb37255c1ab311133bb1c894cf51ccf929a744db4141a958f614e829e0b4a\", \"web_sha256\": \"580c3faf8283dee80afdb936761deabd796db82a4e4d28558df5233f535fb132\", \"bytes\": 363136, \"active_file\": \"riohacha-valle-cangrejos-v1.webp\", \"active_sha256\": \"580c3faf8283dee80afdb936761deabd796db82a4e4d28558df5233f535fb132\", \"active_dimensions\": [1200, 800], \"sidecar_source\": \"trabajo/lugar-riohacha/crecimiento-colombia/entregas/riohacha/visual/valle-cangrejos-v1.procedencia.json\", \"historical_sidecar_metadata\": true, \"sha256\": \"580c3faf8283dee80afdb936761deabd796db82a4e4d28558df5233f535fb132\", \"approved_by_owner\": true, \"approval_scope\": \"Riohacha and Valledupar local reviewed content\"}"
+      },
+      {
+        "creator": "Explorando Lugares (ilustración con IA); autor de referencia no verificado",
+        "source_url": "",
+        "license_name": "Referencia aportada por usuario: licencia no verificada",
+        "license_url": "",
+        "id": -10036,
+        "origin": "ai_generated",
+        "asset_path": "assets/revision-caribe/riohacha/plaza-almirante-padilla-propuesta-v1.webp",
+        "width": 1200,
+        "height": 800,
+        "provenance_json": "{\"status\": \"draft_human_review_pending\", \"tool\": \"built-in image_gen\", \"source\": \"Captura Tripadvisor aportada por usuario; autor/licencia no verificados\", \"input_photo_uploaded\": true, \"changes\": \"Estilo tinta/gouache, luz equilibrada, obra y cableado retirados; follaje de fondo añadido como simplificación editorial.\", \"prompt_summary\": \"Preservar estatua, pedestal, cadenas y palmeras. Vista horizontal3:2 sin texto.\", \"deployed\": false, \"active_file\": \"plaza-almirante-padilla-propuesta-v1.webp\", \"active_sha256\": \"9789043729dfa8996551725c1a6df74aef1ea09cc58094bb0b988f6b8cb9b110\", \"active_dimensions\": [1200, 800], \"sidecar_source\": \"trabajo/lugar-riohacha/crecimiento-colombia/entregas/riohacha/visual/plaza-almirante-padilla-propuesta-v1.procedencia.json\", \"historical_sidecar_metadata\": true, \"sha256\": \"9789043729dfa8996551725c1a6df74aef1ea09cc58094bb0b988f6b8cb9b110\", \"approved_by_owner\": true, \"approval_scope\": \"Riohacha and Valledupar local reviewed content\"}"
+      },
+      {
+        "creator": "Explorando Lugares (ilustración con IA)",
+        "source_url": "",
+        "license_name": "Ilustración original generada con IA; no se atribuye licencia CC",
+        "license_url": "",
+        "id": -10035,
+        "origin": "ai_generated",
+        "asset_path": "assets/revision-caribe/riohacha/riohacha-marina-muelle-v1.webp",
+        "width": 1200,
+        "height": 800,
+        "provenance_json": "{\"asset_id\": \"riohacha-marina-muelle-v1\", \"destination\": \"Riohacha\", \"role\": \"poi-paseo-marina-muelle\", \"status\": \"draft_pending_human_approval\", \"generated_with\": \"image_gen built-in\", \"generated_on\": \"2026-10-22\", \"input_images\": [], \"method\": \"original composition from verified geographic invariants; approximate\", \"master\": \".local/riohacha/marina-muelle-v1.png\", \"master_sha256\": \"345f0930c43958a8387af142cfc5572364e6f5bdf5bcc2e818372dc0d562f340\", \"web\": \"riohacha-marina-muelle-v1.webp\", \"web_sha256\": \"32a18ba55cebc103443b16881f477e2a4699ebc240fd967874acd06383b0ea0c\", \"width\": 1200, \"height\": 800, \"bytes\": 257838, \"prompt_file\": \"marina-muelle-prompt-v1.txt\", \"sources\": [{\"url\": \"https://commons.wikimedia.org/wiki/File:Muelle_de_Riohacha-20240826.jpg\", \"autor\": \"Jdvillalobos\", \"fecha_captura\": \"2024-08-24\", \"licencia\": \"CC BY-SA 4.0\", \"uso\": \"consulta factual; NO entregada al generador\"}, {\"url\": \"https://riohacha-laguajira.gov.co/MiMunicipio/Paginas/Sitios-de-Interes.aspx\", \"uso\": \"identidad turística municipal\"}, {\"url\": \"https://colombia.travel/es/riohacha\", \"uso\": \"muelle y paseo marítimo\"}, {\"url\": \"https://comisionfilmicacolombia.com/locacion/malecon-riohacha/\", \"uso\": \"identidad avenida La Marina y articulación playa–muelle\"}, {\"url\": \"https://www.openstreetmap.org/#map=16/11.552500/-72.906600\", \"uso\": \"mapa observado: costa al N-NO, Calle1 paralela, muelle perpendicular y delta Ranchería al este\"}], \"alt_draft_es\": \"Ilustración del muelle turístico de Riohacha desde la playa urbana.\", \"review\": {\"style\": \"pass: gouache and ink visible\", \"geographic_layout\": \"pass approximate: shore foreground, long narrow pier perpendicular out to flat sea\", \"wood_black_rails_lamps\": \"pass on identity features\", \"details\": \"support braces simplified, exact number and spacing not certified\", \"human\": \"pending\"}, \"limitations\": [\"Does not document October2026 current conditions or access\", \"Illustrated city silhouettes approximate, not exact copied skyline\", \"Not suitable for preproduction until review gates complete\"], \"slug\": \"paseo-marina-muelle\", \"active_file\": \"riohacha-marina-muelle-v1.webp\", \"active_sha256\": \"32a18ba55cebc103443b16881f477e2a4699ebc240fd967874acd06383b0ea0c\", \"active_dimensions\": [1200, 800], \"sidecar_source\": \"trabajo/lugar-riohacha/crecimiento-colombia/entregas/riohacha/visual/marina-muelle-v1.procedencia.json\", \"historical_sidecar_metadata\": true, \"sha256\": \"32a18ba55cebc103443b16881f477e2a4699ebc240fd967874acd06383b0ea0c\", \"approved_by_owner\": true, \"approval_scope\": \"Riohacha and Valledupar local reviewed content\"}"
+      },
+      {
+        "creator": "TSolange",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Riohacha,_2026_01.jpg",
+        "license_name": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "id": -10034,
+        "origin": "ai_generated",
+        "asset_path": "assets/revision-caribe/riohacha/malecon-riohacha-v1.webp",
+        "width": 1200,
+        "height": 800,
+        "provenance_json": "{\"asset_id\": \"malecon-riohacha-v1\", \"slug\": \"malecon-riohacha\", \"destination\": \"Riohacha\", \"role\": \"poi\", \"status\": \"draft_pending_human_approval\", \"master\": \".local/riohacha/malecon-v1.png\", \"web\": \"malecon-riohacha-v1.webp\", \"width\": 1200, \"height\": 800, \"prompt_file\": \"malecon-prompt-v1.txt\", \"tool\": \"image_gen built-in\", \"date\": \"2026-10-22\", \"method\": \"licensed photograph style transformation\", \"reference_file\": \".local/riohacha/referencias/riohacha2026-01.jpg\", \"source\": \"https://commons.wikimedia.org/wiki/File:Riohacha,_2026_01.jpg\", \"author\": \"TSolange\", \"capture_date\": \"2026-06-12\", \"licence\": \"CC BY-SA 4.0\", \"licence_url\": \"https://creativecommons.org/licenses/by-sa/4.0/\", \"attribution_required\": true, \"public_credit\": \"Ilustración adaptada mediante IA de «Riohacha, 2026 01», TSolange, CC BY-SA4.0. Cambio a tinta/gouache.\", \"factual_sources\": [\"https://comisionfilmicacolombia.com/locacion/malecon-riohacha/\", \"https://riohacha-laguajira.gov.co/MiMunicipio/Paginas/Sitios-de-Interes.aspx\"], \"alt_es\": \"Ilustración del Paseo de la Marina de Riohacha, con pabellones, palmas y el Caribe al fondo.\", \"review\": {\"style\": \"Visibleinkgouache;nonphotographic\", \"geometry\": \"Preserves2pavilions,terracottaroofs,mainpalms,road-walk-beach-seasequence\", \"subject\": \"Coastalpromenadepavilionsandpalms; notmuelle\", \"context\": \"Transientcarsandpeoplepaintedsimplified,noadvertising\", \"limitation\": \"PhotoJune2026;noclaimOctober2026unchangedcondition\"}, \"approval\": null, \"master_sha256\": \"bebae5afb02ab164d172292edecc5c9dc3ff10230162866ef5981bc3efedfabf\", \"web_sha256\": \"1bbc9ee7dca171e0943e8e07f905adf2edd474bc69ddfe2a38da5ef0ea982d55\", \"reference_sha256\": \"4dcd3c9d01227fc647d324725bccf4d5db333cc0fe1598b375feb770b4ed4454\", \"bytes\": 310884, \"active_file\": \"malecon-riohacha-v1.webp\", \"active_sha256\": \"1bbc9ee7dca171e0943e8e07f905adf2edd474bc69ddfe2a38da5ef0ea982d55\", \"active_dimensions\": [1200, 800], \"sidecar_source\": \"trabajo/lugar-riohacha/crecimiento-colombia/entregas/riohacha/visual/malecon-riohacha-v1.procedencia.json\", \"historical_sidecar_metadata\": true, \"sha256\": \"1bbc9ee7dca171e0943e8e07f905adf2edd474bc69ddfe2a38da5ef0ea982d55\", \"approved_by_owner\": true, \"approval_scope\": \"Riohacha and Valledupar local reviewed content\"}"
+      },
+      {
+        "creator": "Explorando Lugares (ilustración con IA); autor de referencia no verificado",
+        "source_url": "",
+        "license_name": "Referencia aportada por usuario: licencia no verificada",
+        "license_url": "",
+        "id": -10033,
+        "origin": "ai_generated",
+        "asset_path": "assets/revision-caribe/riohacha/riohacha-portada-estilizada-v4.webp",
+        "width": 1200,
+        "height": 800,
+        "provenance_json": "{\"status\": \"draft_human_review_pending\", \"tool\": \"built-in image_gen\", \"input_photo_uploaded\": true, \"source\": \"Captura de Google Maps aportada por usuario; autor y licencia no verificados\", \"user_direction\": \"Transformar directamente la referencia conservando ciudad y estilo del portal\", \"prompt_summary\": \"Transferencia a tinta/gouache conservando edificio blanco, avenida curva, desembocadura, palmeras y monumento amarillo; sustituir buses por coches pequeños.\", \"deployed\": false, \"active_file\": \"riohacha-portada-estilizada-v4.webp\", \"active_sha256\": \"9deaa488d80b93184d88adea378823b950f6bd7d1862400e46f5afe1809cb049\", \"active_dimensions\": [1200, 800], \"sidecar_source\": \"trabajo/lugar-riohacha/crecimiento-colombia/entregas/riohacha/visual/portada-estilizada-v4.procedencia.json\", \"historical_sidecar_metadata\": true, \"sha256\": \"9deaa488d80b93184d88adea378823b950f6bd7d1862400e46f5afe1809cb049\", \"approved_by_owner\": true, \"approval_scope\": \"Riohacha and Valledupar local reviewed content\"}"
+      }
+    ],
+    "media_asset_translations": [
+      {
+        "media_asset_id": -10033,
+        "locale": "es",
+        "alt_text": "Riohacha",
+        "caption": "Ilustración con IA a partir de referencia aportada por el usuario. Autor y licencia de la referencia no verificados."
+      },
+      {
+        "media_asset_id": -10033,
+        "locale": "en",
+        "alt_text": "Riohacha",
+        "caption": "Ilustración con IA a partir de referencia aportada por el usuario. Autor y licencia de la referencia no verificados."
+      },
+      {
+        "media_asset_id": -10033,
+        "locale": "pt-BR",
+        "alt_text": "Riohacha",
+        "caption": "Ilustración con IA a partir de referencia aportada por el usuario. Autor y licencia de la referencia no verificados."
+      },
+      {
+        "media_asset_id": -10034,
+        "locale": "es",
+        "alt_text": "Malecón de Riohacha",
+        "caption": "Ilustración adaptada mediante IA de «Riohacha, 2026 01», TSolange, CC BY-SA4.0. Cambio a tinta/gouache."
+      },
+      {
+        "media_asset_id": -10034,
+        "locale": "en",
+        "alt_text": "Riohacha waterfront promenade",
+        "caption": "Ilustración adaptada mediante IA de «Riohacha, 2026 01», TSolange, CC BY-SA4.0. Cambio a tinta/gouache."
+      },
+      {
+        "media_asset_id": -10034,
+        "locale": "pt-BR",
+        "alt_text": "Malecón de Riohacha",
+        "caption": "Ilustración adaptada mediante IA de «Riohacha, 2026 01», TSolange, CC BY-SA4.0. Cambio a tinta/gouache."
+      },
+      {
+        "media_asset_id": -10035,
+        "locale": "es",
+        "alt_text": "Muelle turístico de Riohacha",
+        "caption": "Ilustración con IA de Explorando Lugares. Interpretación aproximada; no es un registro fotográfico."
+      },
+      {
+        "media_asset_id": -10035,
+        "locale": "en",
+        "alt_text": "Riohacha tourist pier",
+        "caption": "Ilustración con IA de Explorando Lugares. Interpretación aproximada; no es un registro fotográfico."
+      },
+      {
+        "media_asset_id": -10035,
+        "locale": "pt-BR",
+        "alt_text": "Píer turístico de Riohacha",
+        "caption": "Ilustración con IA de Explorando Lugares. Interpretación aproximada; no es un registro fotográfico."
+      },
+      {
+        "media_asset_id": -10036,
+        "locale": "es",
+        "alt_text": "Plaza Almirante Padilla",
+        "caption": "Ilustración con IA a partir de referencia aportada por el usuario. Autor y licencia de la referencia no verificados."
+      },
+      {
+        "media_asset_id": -10036,
+        "locale": "en",
+        "alt_text": "Almirante Padilla Square",
+        "caption": "Ilustración con IA a partir de referencia aportada por el usuario. Autor y licencia de la referencia no verificados."
+      },
+      {
+        "media_asset_id": -10036,
+        "locale": "pt-BR",
+        "alt_text": "Praça Almirante Padilla",
+        "caption": "Ilustración con IA a partir de referencia aportada por el usuario. Autor y licencia de la referencia no verificados."
+      },
+      {
+        "media_asset_id": -10037,
+        "locale": "es",
+        "alt_text": "Valle de los Cangrejos",
+        "caption": "Ilustración con IA de Explorando Lugares. Interpretación aproximada; no es un registro fotográfico."
+      },
+      {
+        "media_asset_id": -10037,
+        "locale": "en",
+        "alt_text": "Valle de los Cangrejos",
+        "caption": "Ilustración con IA de Explorando Lugares. Interpretación aproximada; no es un registro fotográfico."
+      },
+      {
+        "media_asset_id": -10037,
+        "locale": "pt-BR",
+        "alt_text": "Valle de los Cangrejos",
+        "caption": "Ilustración con IA de Explorando Lugares. Interpretación aproximada; no es un registro fotográfico."
+      },
+      {
+        "media_asset_id": -10038,
+        "locale": "es",
+        "alt_text": "Catedral Nuestra Señora de los Remedios",
+        "caption": "Ilustración adaptada mediante IA de «Catedral Nuestra Señora de Los Remedios», Martinduquea, CC BY-SA 3.0. Cambios: transformación a tinta/gouache y retiro de fecha impresa."
+      },
+      {
+        "media_asset_id": -10038,
+        "locale": "en",
+        "alt_text": "Our Lady of Remedies Cathedral",
+        "caption": "Ilustración adaptada mediante IA de «Catedral Nuestra Señora de Los Remedios», Martinduquea, CC BY-SA 3.0. Cambios: transformación a tinta/gouache y retiro de fecha impresa."
+      },
+      {
+        "media_asset_id": -10038,
+        "locale": "pt-BR",
+        "alt_text": "Catedral Nossa Senhora dos Remédios",
+        "caption": "Ilustración adaptada mediante IA de «Catedral Nuestra Señora de Los Remedios», Martinduquea, CC BY-SA 3.0. Cambios: transformación a tinta/gouache y retiro de fecha impresa."
+      },
+      {
+        "media_asset_id": -10039,
+        "locale": "es",
+        "alt_text": "Parque Nicolás de Federman",
+        "caption": "Ilustración adaptada mediante IA de «Estatua Nicolás de Federmann Riohacha Colombia-20240901», Jdvillalobos, CC BY-SA4.0. Cambio a tinta/gouache."
+      },
+      {
+        "media_asset_id": -10039,
+        "locale": "en",
+        "alt_text": "Nicolás de Federman Park",
+        "caption": "Ilustración adaptada mediante IA de «Estatua Nicolás de Federmann Riohacha Colombia-20240901», Jdvillalobos, CC BY-SA4.0. Cambio a tinta/gouache."
+      },
+      {
+        "media_asset_id": -10039,
+        "locale": "pt-BR",
+        "alt_text": "Parque Nicolás de Federman",
+        "caption": "Ilustración adaptada mediante IA de «Estatua Nicolás de Federmann Riohacha Colombia-20240901», Jdvillalobos, CC BY-SA4.0. Cambio a tinta/gouache."
+      },
+      {
+        "media_asset_id": -10040,
+        "locale": "es",
+        "alt_text": "Santuario de Flora y Fauna Los Flamencos",
+        "caption": "Ilustración adaptada mediante IA de «Laguna de los flamencos - panoramio», diego_cue, CC BY-SA3.0. Cambio a tinta/gouache."
+      },
+      {
+        "media_asset_id": -10040,
+        "locale": "en",
+        "alt_text": "Los Flamencos Flora and Fauna Sanctuary",
+        "caption": "Ilustración adaptada mediante IA de «Laguna de los flamencos - panoramio», diego_cue, CC BY-SA3.0. Cambio a tinta/gouache."
+      },
+      {
+        "media_asset_id": -10040,
+        "locale": "pt-BR",
+        "alt_text": "Santuário de Flora e Fauna Los Flamencos",
+        "caption": "Ilustración adaptada mediante IA de «Laguna de los flamencos - panoramio», diego_cue, CC BY-SA3.0. Cambio a tinta/gouache."
+      },
+      {
+        "media_asset_id": -10041,
+        "locale": "es",
+        "alt_text": "Playas de Mayapo (alrededores)",
+        "caption": "Ilustración adaptada mediante IA de «Playa Mayapo, La Guajira. . Horizontal», Saavedranatalia, CC BY-SA4.0. Cambio a tinta/gouache y recorte central."
+      },
+      {
+        "media_asset_id": -10041,
+        "locale": "en",
+        "alt_text": "Mayapo beaches (nearby)",
+        "caption": "Ilustración adaptada mediante IA de «Playa Mayapo, La Guajira. . Horizontal», Saavedranatalia, CC BY-SA4.0. Cambio a tinta/gouache y recorte central."
+      },
+      {
+        "media_asset_id": -10041,
+        "locale": "pt-BR",
+        "alt_text": "Praias de Mayapo (arredores)",
+        "caption": "Ilustración adaptada mediante IA de «Playa Mayapo, La Guajira. . Horizontal», Saavedranatalia, CC BY-SA4.0. Cambio a tinta/gouache y recorte central."
+      },
+      {
+        "media_asset_id": -10042,
+        "locale": "es",
+        "alt_text": "Avistamiento de flamencos en Camarones",
+        "caption": "Ilustración con IA de Explorando Lugares. Interpretación aproximada; no es un registro fotográfico."
+      },
+      {
+        "media_asset_id": -10042,
+        "locale": "en",
+        "alt_text": "Flamingo watching in Camarones",
+        "caption": "Ilustración con IA de Explorando Lugares. Interpretación aproximada; no es un registro fotográfico."
+      },
+      {
+        "media_asset_id": -10042,
+        "locale": "pt-BR",
+        "alt_text": "Observação de flamingos em Camarones",
+        "caption": "Ilustración con IA de Explorando Lugares. Interpretación aproximada; no es un registro fotográfico."
+      },
+      {
+        "media_asset_id": -10043,
+        "locale": "es",
+        "alt_text": "Encuentro cultural wayuu",
+        "caption": "Ilustración con IA de Explorando Lugares. Interpretación aproximada; no es un registro fotográfico."
+      },
+      {
+        "media_asset_id": -10043,
+        "locale": "en",
+        "alt_text": "Wayuu cultural encounter",
+        "caption": "Ilustración con IA de Explorando Lugares. Interpretación aproximada; no es un registro fotográfico."
+      },
+      {
+        "media_asset_id": -10043,
+        "locale": "pt-BR",
+        "alt_text": "Encontro cultural wayuu",
+        "caption": "Ilustración con IA de Explorando Lugares. Interpretación aproximada; no es un registro fotográfico."
+      },
+      {
+        "media_asset_id": -10044,
+        "locale": "es",
+        "alt_text": "Excursión a la Alta Guajira (alrededores)",
+        "caption": "Ilustración adaptada mediante IA de «Taroa Dunes in Alta Guajira 2023», Oscar Costero, CC BY-SA 4.0. Cambios: transformación a tinta/gouache y retiro de figura humana distante."
+      },
+      {
+        "media_asset_id": -10044,
+        "locale": "en",
+        "alt_text": "Alta Guajira excursion (surrounding region)",
+        "caption": "Ilustración adaptada mediante IA de «Taroa Dunes in Alta Guajira 2023», Oscar Costero, CC BY-SA 4.0. Cambios: transformación a tinta/gouache y retiro de figura humana distante."
+      },
+      {
+        "media_asset_id": -10044,
+        "locale": "pt-BR",
+        "alt_text": "Excursão à Alta Guajira (arredores)",
+        "caption": "Ilustración adaptada mediante IA de «Taroa Dunes in Alta Guajira 2023», Oscar Costero, CC BY-SA 4.0. Cambios: transformación a tinta/gouache y retiro de figura humana distante."
+      }
+    ]
+  },
+  "media_files": {
+    "-10044": {
+      "sha256": "7728c278926a64dbecb8f5ec4081b640e38915c2513d27deba005219c7fbd8bd"
+    },
+    "-10043": {
+      "sha256": "97077af0e981779f078a658c20d9523be780740cd09d8e93f48c03c93abf247f"
+    },
+    "-10042": {
+      "sha256": "a8e466bf13baa0ae56a16c00ce3b8d03009df670fc67c7721524e0de82f22fa2"
+    },
+    "-10041": {
+      "sha256": "1f53dc17a2d825ed848ba0f2c2f1a2eb8ca9519e75374648f289cd2b21e3d854"
+    },
+    "-10040": {
+      "sha256": "d7ad6a91fa42fc95c2f9cf0aee6f667e7f91652d01ff5b8d58ef0479c477b87d"
+    },
+    "-10039": {
+      "sha256": "b50a92e9ad1f98c2170f49e8c9853a660acb6a3a934afc33e8704651c8b5fc92"
+    },
+    "-10038": {
+      "sha256": "1241dd4f72e79feaca0e88405fac0737c9b1e4c642fe3968b85f702d82e22bf0"
+    },
+    "-10037": {
+      "sha256": "580c3faf8283dee80afdb936761deabd796db82a4e4d28558df5233f535fb132"
+    },
+    "-10036": {
+      "sha256": "9789043729dfa8996551725c1a6df74aef1ea09cc58094bb0b988f6b8cb9b110"
+    },
+    "-10035": {
+      "sha256": "32a18ba55cebc103443b16881f477e2a4699ebc240fd967874acd06383b0ea0c"
+    },
+    "-10034": {
+      "sha256": "1bbc9ee7dca171e0943e8e07f905adf2edd474bc69ddfe2a38da5ef0ea982d55"
+    },
+    "-10033": {
+      "sha256": "9deaa488d80b93184d88adea378823b950f6bd7d1862400e46f5afe1809cb049"
+    }
+  }
+}
