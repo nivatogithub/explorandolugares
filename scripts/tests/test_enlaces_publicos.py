@@ -37,7 +37,7 @@ class PublicLinkTests(unittest.TestCase):
     def tearDownClass(cls): cls.temp.cleanup()
     def test_all_internal_navigation_and_resources_resolve(self):
         broken=[]
-        dynamic_slugs={item['slug'] for item in __import__('json').loads((ROOT/'content/destinos-dinamicos.json').read_text())['destinations']} | set(__import__('json').loads((ROOT/'content/lugares-publicados.json').read_text())['slugs'])
+        dynamic_slugs=set(__import__('json').loads((ROOT/'content/release-places-businesses.json').read_text())['public_places']) | set(__import__('json').loads((ROOT/'content/lugares-publicados.json').read_text())['slugs'])
         for page in self.public.rglob('*.html'):
             parser=References(); parser.feed(page.read_text())
             for tag,attribute,value in parser.references:
