@@ -50,6 +50,7 @@
       const premium = choice === 'page_premium';
       setPlanField('[data-plan-field="summary"]', editorial, editorial);
       setPlanField('[data-plan-field="description"]', premium, premium);
+      setPlanField('[data-plan-field="hours"]', ['page', 'page_premium'].includes(choice));
       setPlanField('[data-plan-field="location"]', ['featured', 'page_premium'].includes(choice), choice === 'featured');
       setPlanField('[data-plan-field="contact-options"]', editorial);
       setPlanField('[data-plan-field="phone"]', editorial);
