@@ -6,7 +6,7 @@
     if (!form) return;
 
     const details = document.querySelector('#registration-new-details');
-    const preview = document.querySelector('#registration-live-preview');
+    const preview = document.querySelector('[data-registration-preview]');
     const continuation = document.querySelector('#registration-continuation');
     const planStage = document.querySelector('#registration-plan-choice');
     const submit = document.querySelector('#registration-submit');
@@ -30,18 +30,14 @@
       });
     };
 
-    const fieldText = (selector) => form.querySelector(selector)?.value.trim() || '';
     const renderPreview = () => {
       if (!preview) return;
-      const selected = form.querySelector('.business-registration-option input:checked');
-      const title = fieldText('#registration-new-name') || selected?.closest('label')?.innerText.split('\n')[0] || 'Tu negocio';
-      preview.querySelector('[data-preview-name]').textContent = title;
-      preview.querySelector('[data-preview-summary]').textContent = fieldText('[data-preview-field="summary"]') || 'Tu presentación aparecerá aquí.';
-      const description = preview.querySelector('[data-preview-description]');
-      const longText = fieldText('[data-preview-field="description"]');
-      description.textContent = longText;
-      description.hidden = !longText;
-      preview.querySelector('[data-preview-address]').textContent = fieldText('[data-preview-field="address"]');
+      const choice = plan();
+      const link = preview.querySelector('[data-subscription-example]');
+      preview.hidden = !['free', 'featured', 'page', 'page_premium'].includes(choice);
+      if (!link) return;
+      link.href = `/business/demo.php?view=${encodeURIComponent(choice)}`;
+      link.textContent = ['page', 'page_premium'].includes(choice) ? 'Ver tarjeta y página de ejemplo' : 'Ver tarjeta de ejemplo';
     };
 
     const syncPlan = () => {
@@ -66,7 +62,6 @@
         const visible = channel === 'email' ? ['page', 'page_premium'].includes(choice) : choice === 'page_premium';
         if (control) { control.closest('label').hidden = !visible; control.disabled = !visible; }
       });
-      if (preview) preview.hidden = !editorial || !!details?.hidden;
       renderPreview();
     };
 
