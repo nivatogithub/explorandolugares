@@ -25,3 +25,10 @@ Las rutas locales y públicas deben coincidir desde `/`: no introducir prefijos 
 - Las tarjetas editoriales no exponen sitios web, fuentes, WhatsApp ni enlaces de operadores como publicidad gratuita. Las URL de investigación se guardan en los sidecars internos. Mantener las condiciones del módulo comercial pagado y aprobado; una fuente documental no es un anunciante.
 - Conservar procedencia y licencias de imágenes. No interpretar el retiro de enlaces comerciales como permiso para ocultar atribuciones legalmente exigidas: resolver el soporte de crédito antes de integrar el activo, o elegir un recurso que no imponga esa condición.
 - Validar el destino real de cada enlace, no solo HTTP200, y comprobar mapas y ausencia de publicidad heredada en ES/EN/PT-BR. Registrar pruebas; no dar por corregidos los pendientes del portal solo por integrar main.
+
+## Ambientes únicos y puertos obligatorios — 22/10/2026
+
+- Solo dos dev: dev1 `127.0.0.1:8086` y dev2 `127.0.0.1:8087`; un preprod `127.0.0.1:8088`; y producción. Ningún ambiente adicional del portal ni puertos alternativos. Reutilizar los contenedores OCI administrados (Docker compatible; Podman en este equipo).
+- Reservar un dev libre con el controlador `dev/ambientes.py` y un identificador de tarea. Si ambos están ocupados, esperar; nunca reemplazar la reserva de otro worker ni crear un servidor auxiliar. Mantener reserva durante revisión humana y liberarla explícitamente al terminar.
+- Compartir un único registro de reservas por equipo entre todas las ramas/worktrees. Datos, volúmenes y privados separados por ambiente. Nunca copiar datos vivos ni credenciales de producción a dev.
+- Preprod no se usa como tercer dev. No borrar ni recrear sus datos durante limpiezas. La limpieza afecta solo ambientes sobrantes de Explorando Lugares, no otros proyectos ni archivos fuente.
