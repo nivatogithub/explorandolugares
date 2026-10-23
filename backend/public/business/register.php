@@ -40,7 +40,7 @@ try{
   $application['temporary_uploads']=$_POST['temporary_uploads']??[];$application['onboarding_draft']=(string)($_SESSION['business_onboarding_draft']??'');
   $isFree=($_POST['plan_code']??'free')==='free';$application['self_onboarding_policy']=BusinessSelfOnboarding::POLICY;$application['responsibility_declared']=(string)($_POST['responsibility_declared']??'');
   $existenceInputs=BusinessExistenceVerification::capture(['business_rnt'=>$_POST['business_rnt']??'','business_nit'=>$_POST['business_nit']??'']);
-  if($isFree&&$existenceInputs['rnt']===''&&$existenceInputs['nit']==='')throw new RuntimeException('Para la ficha Gratis indica el NIT o el RNT del negocio.');
+  if(in_array((string)($_POST['plan_code']??''),['free','featured'],true)&&$existenceInputs['rnt']===''&&$existenceInputs['nit']==='')throw new RuntimeException('Para Gratis o Destacado indica el NIT o el RNT del negocio.');
   $application['business_details']=BusinessOnboardingDetails::capture($pdo,$isFree?array_merge(['plan_code'=>'free'],($_POST['distinct_business']??'')==='1'?['address_text'=>(string)($_POST['distinct_address']??'')]:[]):$_POST,$application['category_code'],private_storage_path('business-image-references'));$application['business_details']['existence_inputs']=$existenceInputs;
   if($isFree&&($_POST['distinct_business']??'')==='1')$application['business_details']['distinct_business_declared']=true;
   $application['business_details']['requested_subscription']=$subscriptionChoice->quote((string)($_POST['plan_code']??'free'),(string)($_POST['billing_frequency']??'monthly'));

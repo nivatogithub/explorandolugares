@@ -2,6 +2,7 @@
 declare(strict_types=1);
 require_once __DIR__.'/BusinessAdminService.php';
 require_once __DIR__.'/BusinessServiceSections.php';
+require_once __DIR__.'/BusinessContactVisibility.php';
 final class BusinessOnboardingDetails
 {
     public static function capture(PDO $pdo,array $input,string $primary,string $storage):array
@@ -14,7 +15,12 @@ final class BusinessOnboardingDetails
         $limits=['summary'=>in_array($plan,['featured','page','page_premium'],true)?450:0,'description'=>$plan==='page_premium'?1200:0,'brand_story'=>0,'featured_services'=>0];
         foreach($limits as $key=>$limit){$text=trim((string)($input[$key]??''));if(mb_strlen($text)>$limit)throw new RuntimeException($limit===0?'Este campo no corresponde a la suscripción elegida.':'El campo supera el límite de '.$limit.' caracteres.');$result['text'][$key]=$text;}
         require_once __DIR__.'/BusinessPhone.php';$input['channels']=BusinessPhone::capture($input,(array)($input['channels']??[]));
-        foreach(['email','phone','phone_fixed','whatsapp','website','instagram','facebook','linkedin'] as $channel){$value=trim((string)($input['channels'][$channel]??''));if($value==='')continue;if(strlen($value)>500)throw new RuntimeException('El canal es demasiado largo.');$valid=match($channel){'email'=>(bool)filter_var($value,FILTER_VALIDATE_EMAIL),'phone','phone_fixed','whatsapp'=>(bool)preg_match('/^\+?[0-9() .-]{7,24}$/D',$value),default=>(bool)filter_var($value,FILTER_VALIDATE_URL)&&in_array(parse_url($value,PHP_URL_SCHEME),['http','https'],true)};if(!$valid)throw new RuntimeException('Revisa el canal '.$channel.'.');$result['channels'][$channel]=$value;}
+        foreach(BusinessContactVisibility::channels($plan) as $channel){$value=trim((string)($input['channels'][$channel]??''));if($value==='')continue;if(strlen($value)>500)throw new RuntimeException('El canal es demasiado largo.');$valid=match($channel){'email'=>(bool)filter_var($value,FILTER_VALIDATE_EMAIL),'phone','phone_fixed','whatsapp'=>(bool)preg_match('/^\+?[0-9() .-]{7,24}$/D',$value),default=>(bool)filter_var($value,FILTER_VALIDATE_URL)&&in_array(parse_url($value,PHP_URL_SCHEME),['http','https'],true)};if(!$valid)throw new RuntimeException('Revisa el canal '.$channel.'.');$result['channels'][$channel]=$value;}
+        if($plan==='featured'){
+            if($result['text']['summary']==='')throw new RuntimeException('Destacado requiere una descripción corta.');
+            if(trim((string)($result['location']['address_text']??''))==='')throw new RuntimeException('Destacado requiere la dirección del negocio.');
+            if(empty($result['channels']['phone'])&&empty($result['channels']['phone_fixed']))throw new RuntimeException('Destacado requiere un teléfono de contacto.');
+        }
         $products=[];foreach((array)($input['products']??[]) as $product){if(!is_array($product))continue;$title=trim((string)($product['title']??''));$summary=trim((string)($product['summary']??''));if($title===''&&$summary==='')continue;if($plan!=='page_premium')throw new RuntimeException('Los productos solo están disponibles para Premium.');if(mb_strlen($title)<2||mb_strlen($title)>100||mb_strlen($summary)>180)throw new RuntimeException('Cada producto debe tener un título y una descripción de máximo 180 caracteres.');$products[]=['title'=>$title,'summary'=>$summary];}
         if(count($products)>3)throw new RuntimeException('Premium permite hasta tres productos o servicios.');$result['products']=$products;
         return $result;
