@@ -50,7 +50,7 @@
       const premium = choice === 'page_premium';
       setPlanField('[data-plan-field="summary"]', editorial, editorial);
       setPlanField('[data-plan-field="description"]', premium, premium);
-      setPlanField('[data-plan-field="location"]', editorial, choice === 'featured');
+      setPlanField('[data-plan-field="location"]', ['featured', 'page_premium'].includes(choice), choice === 'featured');
       setPlanField('[data-plan-field="contact-options"]', editorial);
       setPlanField('[data-plan-field="phone"]', editorial);
       const contacts = form.querySelector('[data-plan-field="contact-options"]');
@@ -59,14 +59,14 @@
         const summary = contacts.querySelector('summary');
         if (summary) summary.textContent = choice === 'featured' ? 'Teléfono de contacto' : 'Canales de contacto';
       }
-      setPlanField('[data-plan-field="cover"]', ['page', 'page_premium'].includes(choice), false);
+      setPlanField('[data-plan-field="cover"]', ['page', 'page_premium'].includes(choice), ['page', 'page_premium'].includes(choice));
       setPlanField('[data-plan-field="products"]', premium, false);
       const phone = form.querySelector('[name="business_phone[number]"]');
       if (phone) phone.required = choice === 'featured';
       const extendedContacts = ['email', 'website', 'instagram', 'facebook', 'linkedin'];
       extendedContacts.forEach((channel) => {
         const control = form.querySelector(`[name="channels[${channel}]"]`);
-        const visible = ['page', 'page_premium'].includes(choice);
+        const visible = channel === 'email' ? ['page', 'page_premium'].includes(choice) : choice === 'page_premium';
         if (control) { control.closest('label').hidden = !visible; control.disabled = !visible; }
       });
       if (preview) preview.hidden = !editorial || !!details?.hidden;
