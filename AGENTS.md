@@ -14,3 +14,10 @@ Leer antes de trabajar. Las instrucciones posteriores del propietario prevalecen
 8. **Autorización y operación.** [Reglas operativas](docs/REGLAS_OPERATIVAS_DESPLIEGUE.md), [preproducción](docs/PREPRODUCCION.md), [arranque local](preprod/README.md), [paridad](docs/PARIDAD_PRODUCCION.md) y [gobierno de agentes](docs/GOBERNANZA_AGENTES.md) son los procedimientos canónicos. Una tarea concreta cubre pasos rutinarios; revisión/preparación no autoriza producción, contactos ni publicación. Detener solo la parte que exige una nueva decisión material o permiso técnico y avanzar lo independiente.
 
 Las rutas locales y públicas deben coincidir desde `/`: no introducir prefijos de carpetas internas. Probar el paquete construido según [entorno local](docs/ENTORNO_LOCAL.md). No modificar configuración privada ni divulgar secretos/datos personales.
+
+## Ambientes únicos y puertos obligatorios — 22/10/2026
+
+- Solo dos dev: dev1 `127.0.0.1:8086` y dev2 `127.0.0.1:8087`; un preprod `127.0.0.1:8088`; y producción. Ningún ambiente adicional del portal ni puertos alternativos. Reutilizar los contenedores OCI administrados (Docker compatible; Podman en este equipo).
+- Reservar un dev libre con el controlador `dev/ambientes.py` y un identificador de tarea. Si ambos están ocupados, esperar; nunca reemplazar la reserva de otro worker ni crear un servidor auxiliar. Mantener reserva durante revisión humana y liberarla explícitamente al terminar.
+- Compartir un único registro de reservas por equipo entre todas las ramas/worktrees. Datos, volúmenes y privados separados por ambiente. Nunca copiar datos vivos ni credenciales de producción a dev.
+- Preprod no se usa como tercer dev. No borrar ni recrear sus datos durante limpiezas. La limpieza afecta solo ambientes sobrantes de Explorando Lugares, no otros proyectos ni archivos fuente.
