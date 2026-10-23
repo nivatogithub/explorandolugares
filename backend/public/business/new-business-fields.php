@@ -11,6 +11,10 @@
       <input name="business_rnt" inputmode="numeric" maxlength="12" value="<?=esc($_POST['business_rnt']??'')?>">
       <small data-free-identifier-help>Solo números. Para Gratis debes indicar NIT o RNT.</small>
     </label>
+    <label class="wide" data-plan-field="cover" hidden>Foto de portada
+      <input type="file" name="reference_images[]" accept="image/jpeg,image/png,image/webp" data-image-slot="cover">
+      <small>Una foto JPG, PNG o WebP, máximo 8 MB. Queda privada mientras se revisa.</small>
+    </label>
     <label class="wide" data-plan-field="summary">Presentación breve · máximo 450 caracteres
       <textarea name="summary" maxlength="450" rows="4" data-preview-field="summary"><?=esc($_POST['summary']??'')?></textarea>
       <small>Un párrafo corto, claro y útil para quien visita el lugar.</small>
@@ -27,10 +31,6 @@
     </label>
     <div class="wide business-map-actions" data-plan-field="location"><button id="business-map-open" type="button" class="pill light">Elegir punto en el mapa</button><p id="location-capture-status" role="status">Elige el punto exacto. El enlace público abrirá Google Maps.</p></div>
     <?php foreach(['latitude','longitude','map_url','location_confirmed','location_changed'] as $field):$name=['map_url'=>'location_map_url','location_changed'=>'location_map_changed'][$field]??$field;?><input type="hidden" id="business-<?=str_replace('_','-',$field)?>" name="<?=esc($name)?>" value="<?=esc($_POST[$name]??'')?>"><?php endforeach ?>
-    <label class="wide" data-plan-field="cover" hidden>Foto de portada
-      <input type="file" name="reference_images[]" accept="image/jpeg,image/png,image/webp" data-image-slot="cover">
-      <small>Una foto JPG, PNG o WebP, máximo 8 MB. Queda privada mientras se revisa.</small>
-    </label>
   </div>
   <section data-plan-field="products" hidden aria-labelledby="products-title">
     <h3 id="products-title">Hasta cinco productos o servicios</h3>
