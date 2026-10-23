@@ -1,4 +1,5 @@
 <?php if(!(isset($service))){http_response_code(404);exit;} ?>
+<link rel="stylesheet" href="/assets/business-registration-final-step.css?v=1">
 <fieldset id="registration-new-details" hidden disabled>
   <legend>Información de la ficha</legend>
   <p>Completa únicamente los espacios que se verán en la tarjeta o página elegida. La información se envía una vez para revisión.</p>
@@ -80,4 +81,4 @@ document.addEventListener('DOMContentLoaded',()=>{
   if(finder&&planStage&&continuation){const controls=document.createElement('nav');controls.className='editorial-actions registration-wizard-actions';const next=document.createElement('button');next.type='button';next.className='pill';next.textContent='Continuar con la información';const back=document.createElement('button');back.type='button';back.className='pill light';back.textContent='← Volver a búsqueda y plan';const warning=document.createElement('p');warning.className='notice';warning.hidden=true;planStage.after(controls);controls.append(warning,next);continuation.before(back);const renderStep=()=>{const first=step===1;const chosen=!!form.querySelector('#registration-application-type')?.value;form.dataset.registrationWizardStep=String(step);finder.hidden=!first;planStage.hidden=!first||!chosen;controls.hidden=!first;back.hidden=first;for(const node of stepTwo)node.hidden=first;if(!first)form.dispatchEvent(new Event('operator-eligibility-change'));window.scrollTo({top:form.getBoundingClientRect().top+window.scrollY-16,behavior:'smooth'});};form.addEventListener('operator-eligibility-change',()=>{if(step===1)renderStep();});form.addEventListener('change',event=>{if(step===1&&event.target.name==='plan_code')renderStep();});next.addEventListener('click',()=>{const selected=form.querySelector('[name="plan_code"]:checked');if(!form.querySelector('#registration-application-type')?.value||!selected){warning.textContent='Primero selecciona el negocio y la suscripción.';warning.hidden=false;return;}step=2;renderStep();});back.addEventListener('click',()=>{step=1;renderStep();});renderStep();}
 });
 </script>
-<script src="/assets/business-onboarding-wizard.js?v=4" defer></script>
+<script src="/assets/business-onboarding-wizard.js?v=5" defer></script>
