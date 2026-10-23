@@ -193,7 +193,10 @@ final class BusinessAdminService
         if(strlen($hours)>4000||($capacityText!==''&&($capacity===false||$capacity<0||$capacity>65535)))throw new RuntimeException('Revisa el horario semanal o la capacidad.');
         $menu=$this->optionalUrl((string)($hasBusinessPage?($input['menu_url']??$existing['menu_url']??''):($existing['menu_url']??'')),'menú');$reservations=$this->optionalUrl((string)($hasBusinessPage?($input['reservations_url']??$existing['reservations_url']??''):($existing['reservations_url']??'')),'reservas');
         if($hasMapField&&$address==='')throw new RuntimeException('Completa la dirección junto con el punto del mapa.');
-        if($hasMapField&&$lat!==null&&$lon!==null)$mapUrl='https://www.openstreetmap.org/?mlat='.rawurlencode((string)$lat).'&mlon='.rawurlencode((string)$lon).'#map=18/'.rawurlencode((string)$lat).'/'.rawurlencode((string)$lon);
+        // Leaflet/OpenStreetMap is only the coordinate picker.  Persist one
+        // canonical public destination so every published card opens Google
+        // Maps at the exact point selected by the person.
+        if($hasMapField&&$lat!==null&&$lon!==null)$mapUrl='https://www.google.com/maps/search/?api=1&query='.rawurlencode((string)$lat.','.(string)$lon);
         $location=['latitude'=>$lat===false?null:$lat,'longitude'=>$lon===false?null:$lon,'address_text'=>$address];BusinessMunicipality::validate($this->pdo,array_replace($input,['location_source'=>$source]),$location);
         return ['address_text'=>$address,'location_reference'=>$reference,'latitude'=>$lat===false?null:$lat,'longitude'=>$lon===false?null:$lon,'location_source'=>$source?:null,'location_map_url'=>$mapUrl,'location_confirmed'=>$confirmed,'opening_hours'=>$hours,'price_range'=>$price,'capacity_count'=>$capacity===false?null:$capacity,'menu_url'=>$menu,'reservations_url'=>$reservations];
     }
