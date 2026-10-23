@@ -21,6 +21,8 @@ final class BusinessPaymentEvidenceService
         $membership=$this->pdo->prepare('SELECT b.id FROM business_account_memberships m JOIN businesses b ON b.id=m.business_id JOIN accounts a ON a.id=m.account_id WHERE m.account_id=? AND m.business_id=? AND m.status="active" AND m.role IN ("owner","manager") AND a.status="active"');$membership->execute([$accountId,$businessId]);if(!$membership->fetchColumn())throw new RuntimeException('No tienes permiso para gestionar este negocio.');
         if(!in_array($planCode,['free','featured','page','page_premium'],true))throw new RuntimeException('Selecciona una suscripción vigente.');
         $planQuery=$this->pdo->prepare('SELECT code FROM subscription_plans WHERE code=? AND is_active=1');$planQuery->execute([$planCode]);if(!$planQuery->fetchColumn())throw new RuntimeException('Selecciona una suscripción vigente.');
+        $pendingEvidence=$this->pdo->prepare('SELECT 1 FROM business_subscription_payment_evidence e JOIN business_subscriptions s ON s.id=e.subscription_id WHERE e.account_id=? AND s.business_id=? AND e.status="pending" LIMIT 1');$pendingEvidence->execute([$accountId,$businessId]);
+        if($pendingEvidence->fetchColumn())throw new RuntimeException('Ya enviaste un comprobante para este negocio. Espera su revisión antes de enviar otro.');
         $addon=null;$addonService=new ExperienceOperatorAddon($this->pdo);$experienceId=(int)($transaction['operator_experience_id']??0);if($planCode==='free'&&$experienceId)throw new RuntimeException('El complemento requiere una suscripción paga.');
         $amount=null;$currency='COP';$status='pending_publication';$frequency=$planCode==='free'?'':$frequency;
         if($planCode!=='free'){
