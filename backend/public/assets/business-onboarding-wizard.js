@@ -17,7 +17,7 @@
     document.querySelectorAll('.subscription-choice-description').forEach((copy) => {
       copy.textContent = copy.textContent.replace('hasta cuatro productos o servicios', 'hasta tres productos o servicios');
     });
-    if (continuation?.querySelector('legend')) continuation.querySelector('legend').textContent = '2. Relación, soportes y envío';
+    if (continuation?.querySelector('legend')) continuation.querySelector('legend').textContent = 'Información para enviar la solicitud';
     if (submit) submit.textContent = 'Enviar para revisión';
 
     const setPlanField = (selector, visible, required = false) => {
@@ -54,6 +54,17 @@
       setPlanField('[data-plan-field="products"]', premium, false);
       if (preview) preview.hidden = !editorial || !!details?.hidden;
       renderPreview();
+    };
+
+    const syncFreeIdentifier = () => {
+      const free = plan() === 'free';
+      const nit = form.querySelector('[name="business_nit"]');
+      const rnt = form.querySelector('[name="business_rnt"]');
+      const provided = Boolean(nit?.value.trim() || rnt?.value.trim());
+      [nit, rnt].forEach((field) => field?.setCustomValidity(free && !provided ? 'Para la ficha Gratis indica el NIT o el RNT del negocio.' : ''));
+      form.querySelectorAll('[data-free-identifier-note]').forEach((node) => { node.textContent = free ? '(NIT o RNT obligatorio)' : '(opcional)'; });
+      const help = form.querySelector('[data-free-identifier-help]');
+      if (help) help.textContent = free ? 'Solo números. Para Gratis indica NIT o RNT.' : 'Solo números. Si no aplica, déjalo vacío.';
     };
 
     const uploadFile = async (input, kind, slot) => {
@@ -131,10 +142,12 @@
       const selected = !!type?.value;
       form.dataset.registrationWizardStep = String(step);
       finder.hidden = !first;
-      planStage.hidden = !first || !selected;
+      finder.disabled = !first;
+      planStage.hidden = first || !selected;
+      planStage.disabled = first || !selected;
       controls.hidden = !first;
       back.hidden = first;
-      stepTwo.forEach((node) => { node.hidden = first; });
+      stepTwo.forEach((node) => { node.hidden = first; node.disabled = first; });
       if (!first) form.dispatchEvent(new Event('operator-eligibility-change'));
       syncPlan();
       window.scrollTo({top: form.getBoundingClientRect().top + window.scrollY - 16, behavior: 'smooth'});
@@ -151,17 +164,17 @@
       const next = document.createElement('button');
       next.type = 'button';
       next.className = 'pill';
-      next.textContent = 'Continuar con la información';
+      next.textContent = 'Continuar a planes';
       back = document.createElement('button');
       back.type = 'button';
       back.className = 'pill light';
-      back.textContent = '← Volver a búsqueda y plan';
+      back.textContent = '← Volver a búsqueda';
       planStage.after(controls);
       controls.append(warning, next);
       continuation.before(back);
       next.addEventListener('click', () => {
-        if (!type?.value || !plan()) {
-          warning.textContent = 'Primero selecciona el negocio y la suscripción.';
+        if (!type?.value) {
+          warning.textContent = 'Primero busca el negocio y elige si lo vas a reclamar o crear.';
           warning.hidden = false;
           return;
         }
@@ -173,20 +186,21 @@
         renderStep();
       });
       form.addEventListener('operator-eligibility-change', () => { if (step === 1) renderStep(); });
-      form.addEventListener('change', (event) => { if (step === 1 && event.target.name === 'plan_code') renderStep(); });
+      form.addEventListener('change', (event) => { if (step === 2 && event.target.name === 'plan_code') { syncFreeIdentifier(); renderStep(); } });
     }
 
     form.addEventListener('change', (event) => {
-      if (event.target.name === 'plan_code') syncPlan();
+      if (event.target.name === 'plan_code') { syncPlan(); syncFreeIdentifier(); }
       renderPreview();
     });
-    form.addEventListener('input', renderPreview);
+    form.addEventListener('input', (event) => { renderPreview(); if (event.target.name === 'business_nit' || event.target.name === 'business_rnt') syncFreeIdentifier(); });
     form.addEventListener('submit', () => {
       if (!submit || submit.disabled) return;
       submit.disabled = true;
       submit.textContent = 'Procesando solicitud…';
     });
     syncPlan();
+    syncFreeIdentifier();
     if (controls) renderStep();
   });
 })();
