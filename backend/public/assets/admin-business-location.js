@@ -532,9 +532,7 @@
     let kind=document.querySelector('[name="location_address_kind"]');if(!kind){kind=document.createElement('input');kind.type='hidden';kind.name='location_address_kind';address.after(kind);}kind.value=isRural?'rural':'urban';
     latInput.value = lat.toFixed(7);
     lonInput.value = lon.toFixed(7);
-    // The picker uses OpenStreetMap, but visitors must receive a Google Maps
-    // link.  The server recomputes this value as the authoritative version.
-    mapUrl.value = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${lat.toFixed(7)},${lon.toFixed(7)}`)}`;
+    mapUrl.value = `https://www.openstreetmap.org/?mlat=${encodeURIComponent(lat.toFixed(7))}&mlon=${encodeURIComponent(lon.toFixed(7))}#map=18/${encodeURIComponent(lat.toFixed(7))}/${encodeURIComponent(lon.toFixed(7))}`;
     mapChanged.value = '1';
     confirmed.value = '0';
     const saveButton = document.querySelector('#business-form button[type="submit"]');

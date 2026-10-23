@@ -7,10 +7,7 @@ require_once __DIR__.'/ExperienceOperatorAddon.php';
 /** Runs inside the caller transaction. Initial responsibility is declared, never certified. */
 final class BusinessSelfOnboarding
 {
-    // v2 is intentionally not auto-completed by AutomaticBusinessClaim. A
-    // declaration and a private business document create a review request;
-    // only an administrator can associate the account or create the record.
-    public const POLICY='document-review-v2';
+    public const POLICY='declared-document-v1';
     public static function complete(PDO $pdo,int $applicationId):void
     {
         $lock=$pdo->getAttribute(PDO::ATTR_DRIVER_NAME)==='mysql'?' FOR UPDATE':'';

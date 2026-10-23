@@ -665,10 +665,11 @@ try:
             return None
     business_flow = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(business_cookies), NoBusinessRedirect())
     registration_fields = {
+        'holder_kind':'natural_document','holder_name':'Responsable HTTP','holder_document_type':'CC','holder_number':'123456789',
         'residence_country_code':'CO','residence_region_code':'05','residence_city_code':'05368',
         'plan_code':'featured','billing_frequency':'monthly','csrf': registration_csrf, 'application_type': 'new_business', 'business_id': '',
         'business_name': 'Cafetería de cuenta HTTP', 'destination_id': destination_id,
-        'address_text':'Dirección de prueba privada','latitude':'5.79','longitude':'-75.78','summary':'Presentación enviada por el negocio','description':'','channels[email]':'negocio@example.invalid', 'category_codes[]':'hospedaje',
+        'address_text':'Dirección de prueba privada','latitude':'5.79','longitude':'-75.78','summary':'Presentación enviada por el negocio','description':'Descripción privada de prueba','channels[email]':'negocio@example.invalid', 'category_codes[]':'hospedaje',
         'business_phone[type]':'mobile','business_phone[number]':'3001234567','business_phone[same_whatsapp]':'1',
         'category_code': 'hospedaje', 'display_name': 'Responsable HTTP',
         'email': 'responsable-http@example.invalid', 'phone': '3230000000',
@@ -681,12 +682,13 @@ try:
     registration_png = base64.b64decode('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aZ1sAAAAASUVORK5CYII=')
     status,body,_=request('/business/register.php',dict(registration_fields,plan_code=''),business_flow)
     check(status==400 and 'Elige la suscripción' in body,'El registro eligió Gratis silenciosamente sin selección explícita')
-    check('name="holder_kind"' not in body and 'name="holder_number"' not in body,
-          'El registro no debe volver a solicitar identificación personal retirada del flujo.')
+    missing_holder = dict(registration_fields, holder_kind='')
+    status, body, _ = request('/business/register.php', missing_holder, business_flow)
+    check(status == 400 and 'Selecciona cómo se identifica' in body, 'El registro debe exigir identificación privada del titular.')
     incomplete_fields = dict(registration_fields, email='sin-documentos-http@example.invalid')
     status, body, _ = request('/business/register.php', incomplete_fields, business_flow)
-    check(status == 400 and 'Adjunta el documento privado' in body and DB.execute("SELECT COUNT(*) FROM accounts WHERE email='sin-documentos-http@example.invalid'").fetchone()[0] == 0, 'El registro aceptó una cuenta sin el documento privado del negocio.')
-    status, _, headers = multipart('/business/register.php', registration_fields, [('business_registration', 'registro.png', 'image/png', registration_png),('reference_images[]','foto.png','image/png',reference_png)], business_flow)
+    check(status == 400 and 'Adjunta el documento privado' in body and DB.execute("SELECT COUNT(*) FROM accounts WHERE email='sin-documentos-http@example.invalid'").fetchone()[0] == 0, 'El registro aceptó una cuenta sin documentos de identidad y del negocio.')
+    status, _, headers = multipart('/business/register.php', registration_fields, [('identity_document', 'identidad.png', 'image/png', registration_png), ('business_registration', 'registro.png', 'image/png', registration_png),('reference_images[]','foto.png','image/png',reference_png)], business_flow)
     check(status == 303, f'El registro web no creó la cuenta y redirigió al tablero: {status}')
     verify_account_mail('responsable-http@example.invalid', business_user)
     _,login_page,_=request('/business/login.php',opener=business_user)
@@ -698,10 +700,9 @@ try:
     application_row = DB.execute("SELECT id,application_type,status,business_id FROM business_account_applications WHERE account_id=?", (account_row['id'],)).fetchone()
     check(account_row and account_row['account_type']=='traveler' and account_row['status']=='active' and account_row['password_hash'], 'El registro no creó una cuenta personal activada con contraseña protegida.')
     check(application_row and application_row['application_type']=='request_new' and application_row['status']=='approved' and application_row['business_id'] is not None, 'El alta inicial creó una ficha demasiado pronto o no dejó la solicitud pendiente.')
-    details = json.loads(DB.execute('SELECT business_details_json FROM business_account_applications WHERE id=?',(application_row['id'],)).fetchone()[0])
-    check('holder_identity' not in details, 'El registro no debe almacenar identificación personal retirada del flujo.')
-    evidence_types = [row[0] for row in DB.execute('SELECT evidence_type FROM business_account_application_evidence WHERE application_id=?', (application_row['id'],))]
-    check('business_registration' in evidence_types and 'identity_document' not in evidence_types, 'Debe exigir el soporte del negocio sin solicitar documento de identidad personal.')
+    holder = json.loads(DB.execute('SELECT business_details_json FROM business_account_applications WHERE id=?',(application_row['id'],)).fetchone()[0])['holder_identity']
+    check(holder['document_type']=='CC' and holder['number']=='123456789' and not holder['officially_verified'] and not holder['ownership_verified'], 'Debe conservar el documento privado sin afirmar verificación oficial.')
+    check('123456789' not in body, 'Mi cuenta no debe exponer el documento del titular en el listado de solicitudes.')
     representation_rows = DB.execute('SELECT id,evidence_type,storage_name FROM business_account_application_evidence WHERE application_id=? ORDER BY evidence_type', (application_row['id'],)).fetchall()
     check([row['evidence_type'] for row in representation_rows] == ['business_registration'], 'La solicitud debe adjuntar evidencia del negocio y de identidad.')
     check(all(row['storage_name'] not in [item.name for item in (WORK / 'public').rglob('*') if item.is_file()] for row in representation_rows), 'Los documentos de representación deben quedar fuera del directorio público.')
