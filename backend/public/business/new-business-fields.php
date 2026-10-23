@@ -3,13 +3,13 @@
   <legend>Información de la ficha</legend>
   <p>Completa únicamente los espacios que se verán en la tarjeta o página elegida. La información se envía una vez para revisión.</p>
   <div class="destination-form-grid">
-    <label>Identificador tributario del negocio · NIT (opcional)
+    <label>Identificador tributario del negocio · NIT <span data-free-identifier-note>(opcional)</span>
       <input name="business_nit" inputmode="numeric" maxlength="25" value="<?=esc($_POST['business_nit']??'')?>">
       <small>Sirve para identificar el establecimiento; no es un documento personal.</small>
     </label>
-    <label>Registro Nacional de Turismo · RNT (si aplica)
+    <label>Registro Nacional de Turismo · RNT <span data-free-identifier-note>(si aplica)</span>
       <input name="business_rnt" inputmode="numeric" maxlength="12" value="<?=esc($_POST['business_rnt']??'')?>">
-      <small>Solo números. Si no aplica, déjalo vacío.</small>
+      <small data-free-identifier-help>Solo números. Para Gratis debes indicar NIT o RNT.</small>
     </label>
     <label class="wide" data-plan-field="summary">Presentación breve · máximo 450 caracteres
       <textarea name="summary" maxlength="450" rows="4" data-preview-field="summary"><?=esc($_POST['summary']??'')?></textarea>
@@ -76,4 +76,4 @@ document.addEventListener('DOMContentLoaded',()=>{
   if(finder&&planStage&&continuation){const controls=document.createElement('nav');controls.className='editorial-actions registration-wizard-actions';const next=document.createElement('button');next.type='button';next.className='pill';next.textContent='Continuar con la información';const back=document.createElement('button');back.type='button';back.className='pill light';back.textContent='← Volver a búsqueda y plan';const warning=document.createElement('p');warning.className='notice';warning.hidden=true;planStage.after(controls);controls.append(warning,next);continuation.before(back);const renderStep=()=>{const first=step===1;const chosen=!!form.querySelector('#registration-application-type')?.value;form.dataset.registrationWizardStep=String(step);finder.hidden=!first;planStage.hidden=!first||!chosen;controls.hidden=!first;back.hidden=first;for(const node of stepTwo)node.hidden=first;if(!first)form.dispatchEvent(new Event('operator-eligibility-change'));window.scrollTo({top:form.getBoundingClientRect().top+window.scrollY-16,behavior:'smooth'});};form.addEventListener('operator-eligibility-change',()=>{if(step===1)renderStep();});form.addEventListener('change',event=>{if(step===1&&event.target.name==='plan_code')renderStep();});next.addEventListener('click',()=>{const selected=form.querySelector('[name="plan_code"]:checked');if(!form.querySelector('#registration-application-type')?.value||!selected){warning.textContent='Primero selecciona el negocio y la suscripción.';warning.hidden=false;return;}step=2;renderStep();});back.addEventListener('click',()=>{step=1;renderStep();});renderStep();}
 });
 </script>
-<script src="/assets/business-onboarding-wizard.js?v=1" defer></script>
+<script src="/assets/business-onboarding-wizard.js?v=2" defer></script>

@@ -26,20 +26,20 @@
     const isNew = mode === 'new_business';
     for(const name of ['business_registration']){const field=form.querySelector(`[name="${name}"]`);if(field)field.required=!!mode;}
     if(authorityInput)authorityInput.required=isNew&&relationship?.value==='authorized_administrator';
-    const details=document.querySelector('#registration-new-details');if(details){details.hidden=!mode;details.disabled=!mode;}
+    const details=document.querySelector('#registration-new-details');if(details){details.hidden=true;details.disabled=true;}
     if(isNew&&!newName.value.trim())newName.value=search.value.trim();
     newNameWrap.hidden = !isNew;
     newName.required = isNew;
-    const stage=document.querySelector('#registration-plan-choice');if(stage){stage.hidden=!mode;stage.disabled=!mode;}
-    const continuation=document.querySelector('#registration-continuation');if(continuation){continuation.hidden=!mode;continuation.disabled=!mode;}
-    submit.disabled = !mode;
+    const stage=document.querySelector('#registration-plan-choice');if(stage){stage.hidden=true;stage.disabled=true;}
+    const continuation=document.querySelector('#registration-continuation');if(continuation){continuation.hidden=true;continuation.disabled=true;}
+    submit.disabled = true;
     form.dispatchEvent(new Event('operator-eligibility-change'));
     form.querySelectorAll('.business-registration-option input').forEach((radio) => {
       radio.checked = mode === 'existing_business' && radio.value === id;
     });
   }
 
-  function syncFree(){const chosen=form.querySelector('[name="plan_code"]:checked')?.value;const free=chosen==='free';const continuation=document.querySelector('#registration-continuation');if(continuation){continuation.hidden=!type.value||!chosen;continuation.disabled=!type.value||!chosen;}submit.disabled=!type.value||!chosen;const period=form.querySelector('.subscription-choice-period');if(period){period.hidden=free||!chosen;for(const control of period.querySelectorAll('select'))control.disabled=free||!chosen;}const distinct=document.querySelector('#registration-distinct-business');if(distinct){distinct.hidden=!free||type.value!=='new_business';distinct.disabled=!free||type.value!=='new_business';}const details=document.querySelector('#registration-new-details');if(details){details.hidden=!chosen||!type.value;details.disabled=!chosen||!type.value;}}
+  function syncFree(){const chosen=form.querySelector('[name="plan_code"]:checked')?.value;const free=chosen==='free';const inPlanStep=form.dataset.registrationWizardStep==='2';const continuation=document.querySelector('#registration-continuation');if(continuation){continuation.hidden=!inPlanStep||!type.value||!chosen;continuation.disabled=!inPlanStep||!type.value||!chosen;}submit.disabled=!inPlanStep||!type.value||!chosen;const period=form.querySelector('.subscription-choice-period');if(period){period.hidden=free||!chosen;for(const control of period.querySelectorAll('select'))control.disabled=free||!chosen;}const distinct=document.querySelector('#registration-distinct-business');if(distinct){distinct.hidden=!inPlanStep||!free||type.value!=='new_business';distinct.disabled=!inPlanStep||!free||type.value!=='new_business';}const details=document.querySelector('#registration-new-details');if(details){details.hidden=!inPlanStep||!chosen||!type.value;details.disabled=!inPlanStep||!chosen||!type.value;}}
   form.addEventListener('change',event=>{if(event.target.name==='plan_code')syncFree();});
   form.addEventListener('operator-eligibility-change',syncFree);syncFree();
 
