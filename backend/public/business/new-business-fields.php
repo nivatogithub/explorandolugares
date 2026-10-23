@@ -19,11 +19,6 @@
       <textarea name="description" maxlength="1200" rows="7" data-preview-field="description"><?=esc($_POST['description']??'')?></textarea>
       <small>Disponible solo para Premium. Procura no superar diez líneas de lectura.</small>
     </label>
-    <details class="wide registration-optional" data-plan-field="hours" hidden>
-      <summary>Horario de atención (opcional)</summary>
-      <p>Indica el horario habitual. Si cambia por temporada o festivos, el visitante debe confirmarlo directamente con el negocio.</p>
-      <?php $hours=is_array($_POST['hours']??null)?$_POST['hours']:[];$days=['mon'=>'Lunes','tue'=>'Martes','wed'=>'Miércoles','thu'=>'Jueves','fri'=>'Viernes','sat'=>'Sábado','sun'=>'Domingo'];foreach($days as $day=>$label):$dayHours=is_array($hours[$day]??null)?$hours[$day]:[];?><div class="registration-hours"><strong><?=esc($label)?></strong><label>Apertura<input type="time" name="hours[<?=esc($day)?>][open]" value="<?=esc($dayHours['open']??'')?>"></label><label>Cierre<input type="time" name="hours[<?=esc($day)?>][close]" value="<?=esc($dayHours['close']??'')?>"></label><label class="registration-consent"><input type="checkbox" name="hours[<?=esc($day)?>][closed]" value="1" <?=!empty($dayHours['closed'])?'checked':''?>><span>Cerrado</span></label></div><?php endforeach ?>
-    </details>
     <label class="wide" data-plan-field="location">Dirección o referencia para llegar
       <input id="business-address" name="address_text" maxlength="300" value="<?=esc($_POST['address_text']??'')?>" data-preview-field="address">
     </label>
@@ -63,7 +58,6 @@ document.addEventListener('DOMContentLoaded',()=>{
     const value=plan(), editorial=['featured','page','page_premium'].includes(value), premium=value==='page_premium';
     set('[data-plan-field="summary"]',editorial,editorial);
     set('[data-plan-field="description"]',premium,premium);
-    set('[data-plan-field="hours"]',['page','page_premium'].includes(value));
     set('[data-plan-field="cover"]',['page','page_premium'].includes(value),['page','page_premium'].includes(value));
     set('[data-plan-field="products"]',premium,false);
     if(preview)preview.hidden=!editorial||details.hidden;
