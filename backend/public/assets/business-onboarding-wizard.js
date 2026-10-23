@@ -232,6 +232,13 @@
       detailsStep.forEach((node) => { node.hidden = !showDetails; });
       contactStep.forEach((node) => { node.hidden = !showContacts; });
       submissionStep.forEach((node) => { node.hidden = !showSubmission; node.disabled = !showSubmission; });
+      tabs?.querySelectorAll('[data-wizard-step]').forEach((tab) => {
+        const tabStep = Number(tab.dataset.wizardStep);
+        tab.disabled = tabStep > step;
+        tab.setAttribute('aria-current', tabStep === step ? 'step' : 'false');
+        tab.classList.toggle('is-current', tabStep === step);
+        tab.classList.toggle('is-complete', tabStep < step);
+      });
       if (showDetails || showContacts || showSubmission) form.dispatchEvent(new Event('operator-eligibility-change'));
       if (step === 2) {
         const planLabel = {free: 'Gratis', featured: 'Destacado', page: 'Página Comercial', page_premium: 'Premium'}[selectedPlan];
@@ -248,7 +255,26 @@
     let controls;
     let back;
     let next;
+    let tabs;
     if (finder && planStage && continuation) {
+      tabs = document.createElement('nav');
+      tabs.className = 'registration-wizard-tabs';
+      tabs.setAttribute('aria-label', 'Progreso del registro del negocio');
+      ['Negocio', 'Suscripción', 'Información', 'Canales', 'Autorización'].forEach((label, index) => {
+        const tab = document.createElement('button');
+        tab.type = 'button';
+        tab.className = 'registration-wizard-tab';
+        tab.dataset.wizardStep = String(index + 1);
+        tab.textContent = `${index + 1}. ${label}`;
+        tab.addEventListener('click', () => {
+          const target = Number(tab.dataset.wizardStep);
+          if (target > step) return;
+          step = target;
+          renderStep();
+        });
+        tabs.append(tab);
+      });
+      finder.before(tabs);
       controls = document.createElement('nav');
       controls.className = 'editorial-actions registration-wizard-actions';
       const warning = document.createElement('p');

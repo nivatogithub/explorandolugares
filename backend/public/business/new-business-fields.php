@@ -1,5 +1,5 @@
 <?php if(!(isset($service))){http_response_code(404);exit;} ?>
-<link rel="stylesheet" href="/assets/business-registration-final-step.css?v=1">
+<link rel="stylesheet" href="/assets/business-registration-final-step.css?v=2">
 <link rel="stylesheet" href="/assets/business-registration-selects.css?v=1">
 <?php foreach(($_POST['temporary_uploads']??[]) as $uploadKind=>$uploads):foreach(is_array($uploads)?$uploads:[] as $uploadSlot=>$uploadId):?>
   <input type="hidden" name="temporary_uploads[<?=esc((string)$uploadKind)?>][<?=esc((string)$uploadSlot)?>]" value="<?=esc((string)$uploadId)?>" data-temp-upload="<?=esc((string)$uploadKind.'-'.(string)$uploadSlot)?>">
@@ -85,5 +85,5 @@ document.addEventListener('DOMContentLoaded',()=>{
   if(finder&&planStage&&continuation){const controls=document.createElement('nav');controls.className='editorial-actions registration-wizard-actions';const next=document.createElement('button');next.type='button';next.className='pill';next.textContent='Continuar con la información';const back=document.createElement('button');back.type='button';back.className='pill light';back.textContent='← Volver a búsqueda y plan';const warning=document.createElement('p');warning.className='notice';warning.hidden=true;planStage.after(controls);controls.append(warning,next);continuation.before(back);const renderStep=()=>{const first=step===1;const chosen=!!form.querySelector('#registration-application-type')?.value;form.dataset.registrationWizardStep=String(step);finder.hidden=!first;planStage.hidden=!first||!chosen;controls.hidden=!first;back.hidden=first;for(const node of stepTwo)node.hidden=first;if(!first)form.dispatchEvent(new Event('operator-eligibility-change'));window.scrollTo({top:form.getBoundingClientRect().top+window.scrollY-16,behavior:'smooth'});};form.addEventListener('operator-eligibility-change',()=>{if(step===1)renderStep();});form.addEventListener('change',event=>{if(step===1&&event.target.name==='plan_code')renderStep();});next.addEventListener('click',()=>{const selected=form.querySelector('[name="plan_code"]:checked');if(!form.querySelector('#registration-application-type')?.value||!selected){warning.textContent='Primero selecciona el negocio y la suscripción.';warning.hidden=false;return;}step=2;renderStep();});back.addEventListener('click',()=>{step=1;renderStep();});renderStep();}
 });
 </script>
-<script src="/assets/business-onboarding-wizard.js?v=7" defer></script>
+<script src="/assets/business-onboarding-wizard.js?v=8" defer></script>
 <script src="/assets/business-phone.js?v=2" defer></script>
