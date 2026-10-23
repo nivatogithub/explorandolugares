@@ -86,3 +86,4 @@ document.addEventListener('DOMContentLoaded',()=>{
 });
 </script>
 <script src="/assets/business-onboarding-wizard.js?v=7" defer></script>
+<script src="/assets/business-phone.js?v=2" defer></script>

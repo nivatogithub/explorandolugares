@@ -44,6 +44,28 @@
     // Review requests carry a specific reason back to the owner instead.
     form.querySelector('[name="message"]')?.closest('label')?.remove();
 
+    // La cuenta se crea o inicia antes de este wizard. En la solicitud solo
+    // mostramos la identidad que se asociará; no se puede editar aquí.
+    const identityFields = ['display_name', 'email'].map((name) => form.querySelector(`[name="${name}"]`)).filter(Boolean);
+    if (identityFields.length === 2) {
+      const identity = document.createElement('section');
+      identity.className = 'registration-account-identity wide';
+      const title = document.createElement('strong');
+      title.textContent = 'Cuenta que se asociará al negocio';
+      const values = document.createElement('p');
+      values.textContent = `${identityFields[0].value} · ${identityFields[1].value}`;
+      identity.append(title, values);
+      identityFields[0].closest('label')?.before(identity);
+      identityFields.forEach((field) => {
+        field.required = false;
+        field.disabled = true;
+        field.closest('label')?.remove();
+      });
+    }
+    // El teléfono personal pertenece al perfil de la cuenta, no al soporte de
+    // una solicitud. Los canales públicos se capturan en su propio paso.
+    form.querySelector('#registration-continuation .contact-phone-fields')?.remove();
+
     document.querySelectorAll('.subscription-choice-description').forEach((copy) => {
       copy.textContent = copy.textContent.replace('hasta cuatro productos o servicios', 'hasta cinco productos o servicios');
     });
