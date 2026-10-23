@@ -122,8 +122,6 @@
     if (evidence) evidence.addEventListener('change', () => uploadFile(evidence, 'evidence', 'business_registration'));
 
     const finder = Array.from(form.querySelectorAll(':scope > fieldset')).find((fieldset) => fieldset.querySelector('legend')?.textContent.trim() === '1. Busca el negocio');
-    const residence = form.querySelector('.account-residence');
-    if (residence && continuation) continuation.prepend(residence);
     const stepTwo = [details, document.querySelector('#registration-distinct-business'), continuation].filter(Boolean);
     let step = 1;
 
