@@ -41,13 +41,13 @@
       <label>Foto del producto<input type="file" name="reference_images[]" accept="image/jpeg,image/png,image/webp" data-image-slot="product-<?=$i?>"></label>
     </div><?php endfor ?>
   </section>
+  <p class="registration-preview-action" data-registration-preview hidden><a class="pill light subscription-example" data-subscription-example href="/business/demo.php?view=free">Ver vista previa de este plan</a></p>
 </fieldset>
 <fieldset id="registration-contact-details" data-plan-field="contact-options" hidden disabled>
   <legend>Canales de contacto</legend>
   <p>Incluye solo los canales que quieres mostrar a las personas que visiten tu negocio.</p>
   <div class="destination-form-grid"><?php $phoneValues=$_POST['channels']??[];require __DIR__.'/phone-fields.php';foreach(['email'=>'Correo del negocio','website'=>'Sitio web','instagram'=>'Instagram','facebook'=>'Facebook','linkedin'=>'LinkedIn'] as $channel=>$label):?><label><?=esc($label)?><input name="channels[<?=esc($channel)?>]" type="<?= $channel==='email'?'email':'url' ?>" maxlength="500" value="<?=esc($_POST['channels'][$channel]??'')?>"></label><?php endforeach ?></div>
 </fieldset>
-<aside id="registration-live-preview" class="application-live-preview" hidden aria-live="polite"><p class="eyebrow">Vista previa</p><h2 data-preview-name>Tu negocio</h2><p data-preview-summary>Tu presentación aparecerá aquí.</p><p data-preview-description hidden></p><p data-preview-address></p></aside>
 <script src="/assets/business-text-counters.js?v=1" defer></script>
 <script type="application/json" data-legacy-inline-script>
 document.addEventListener('DOMContentLoaded',()=>{
@@ -80,4 +80,4 @@ document.addEventListener('DOMContentLoaded',()=>{
   if(finder&&planStage&&continuation){const controls=document.createElement('nav');controls.className='editorial-actions registration-wizard-actions';const next=document.createElement('button');next.type='button';next.className='pill';next.textContent='Continuar con la información';const back=document.createElement('button');back.type='button';back.className='pill light';back.textContent='← Volver a búsqueda y plan';const warning=document.createElement('p');warning.className='notice';warning.hidden=true;planStage.after(controls);controls.append(warning,next);continuation.before(back);const renderStep=()=>{const first=step===1;const chosen=!!form.querySelector('#registration-application-type')?.value;form.dataset.registrationWizardStep=String(step);finder.hidden=!first;planStage.hidden=!first||!chosen;controls.hidden=!first;back.hidden=first;for(const node of stepTwo)node.hidden=first;if(!first)form.dispatchEvent(new Event('operator-eligibility-change'));window.scrollTo({top:form.getBoundingClientRect().top+window.scrollY-16,behavior:'smooth'});};form.addEventListener('operator-eligibility-change',()=>{if(step===1)renderStep();});form.addEventListener('change',event=>{if(step===1&&event.target.name==='plan_code')renderStep();});next.addEventListener('click',()=>{const selected=form.querySelector('[name="plan_code"]:checked');if(!form.querySelector('#registration-application-type')?.value||!selected){warning.textContent='Primero selecciona el negocio y la suscripción.';warning.hidden=false;return;}step=2;renderStep();});back.addEventListener('click',()=>{step=1;renderStep();});renderStep();}
 });
 </script>
-<script src="/assets/business-onboarding-wizard.js?v=3" defer></script>
+<script src="/assets/business-onboarding-wizard.js?v=4" defer></script>
