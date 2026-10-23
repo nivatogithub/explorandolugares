@@ -6,7 +6,6 @@ require_once __DIR__.'/AccountAuthorization.php';
 require_once __DIR__.'/BusinessOnboardingDetails.php';
 require_once __DIR__.'/BusinessExistenceVerification.php';
 require_once __DIR__.'/BusinessSelfOnboarding.php';
-require_once __DIR__.'/BusinessOnboardingUploadService.php';
 
 final class BusinessAccountPortalService
 {
@@ -72,16 +71,14 @@ final class BusinessAccountPortalService
         $categoryQuery->execute([$category,$destinationId]);if(!(int)$categoryQuery->fetchColumn())throw new RuntimeException('La categoría no está disponible para este destino.');
 
         $selfOnboarding=($application['self_onboarding_policy']??'')===BusinessSelfOnboarding::POLICY;
-        $temporary=(array)($application['temporary_uploads']??[]);$draft=(string)($application['onboarding_draft']??'');$temporaryEvidence=(string)($temporary['evidence']['business_registration']??'');$temporaryImages=array_filter((array)($temporary['editorial']??[]),static fn($id)=>is_string($id)&&preg_match('/^[a-f0-9]{48}$/D',$id));
         if($selfOnboarding&&($application['responsibility_declared']??'')!=='1')throw new RuntimeException('Confirma que tienes autorización para administrar el negocio.');
         $requiredEvidence=$selfOnboarding?['business_registration']:$this->requiredEvidence($relationship);
-        if($selfOnboarding&&$temporaryEvidence===''&&($evidenceUploads['business_registration']['error']??UPLOAD_ERR_NO_FILE)!==UPLOAD_ERR_OK)throw new RuntimeException('Adjunta un documento del negocio: RUT, matrícula o certificado equivalente.');
-        if($selfOnboarding&&in_array((string)($application['business_details']['requested_subscription']['plan_code']??''),['page','page_premium'],true)&&!$temporaryImages&&!in_array(UPLOAD_ERR_OK,(array)($referenceUploads['error']??[]),true))throw new RuntimeException('Adjunta una fotografía de portada para preparar la página del negocio.');
-        $imageLimit=match((string)($application['business_details']['requested_subscription']['plan_code']??'free')){'page'=>1,'page_premium'=>4,default=>0};if(count($temporaryImages)>$imageLimit)throw new RuntimeException('La suscripción elegida no permite esa cantidad de imágenes.');
-        $uploadsPresent=$temporaryEvidence!=='';foreach($requiredEvidence as $evidenceType){if(($evidenceUploads[$evidenceType]['error']??UPLOAD_ERR_NO_FILE)!==UPLOAD_ERR_NO_FILE)$uploadsPresent=true;}
+        if($selfOnboarding&&($evidenceUploads['business_registration']['error']??UPLOAD_ERR_NO_FILE)!==UPLOAD_ERR_OK)throw new RuntimeException('Adjunta un documento del negocio: RUT, matrícula o certificado equivalente.');
+        if($selfOnboarding&&$type==='new_business'&&in_array((string)($application['business_details']['requested_subscription']['plan_code']??''),['page','page_premium'],true)&&!in_array(UPLOAD_ERR_OK,(array)($referenceUploads['error']??[]),true))throw new RuntimeException('Adjunta al menos una fotografía del negocio para preparar la portada de tu página.');
+        $uploadsPresent=false;foreach($requiredEvidence as $evidenceType){if(($evidenceUploads[$evidenceType]['error']??UPLOAD_ERR_NO_FILE)!==UPLOAD_ERR_NO_FILE)$uploadsPresent=true;}
         if($uploadsPresent){
             if(!$evidenceStorage)throw new RuntimeException('No está configurado el almacenamiento privado de documentos.');
-            foreach($requiredEvidence as $evidenceType)if(!($evidenceType==='business_registration'&&$temporaryEvidence!==''))$this->validateEvidenceUpload($evidenceUploads[$evidenceType]??[]);
+            foreach($requiredEvidence as $evidenceType){$this->validateEvidenceUpload($evidenceUploads[$evidenceType]??[]);}
             if(!is_dir($evidenceStorage)&&!mkdir($evidenceStorage,0700,true)&&!is_dir($evidenceStorage))throw new RuntimeException('No se pudo preparar el almacenamiento privado de documentos.');
         }
         if($type==='new_business'&&!$selfOnboarding){
@@ -121,8 +118,7 @@ final class BusinessAccountPortalService
             $insert=$this->pdo->prepare('INSERT INTO business_account_applications(account_id,application_type,business_id,destination_id,category_code,business_name,relationship_code,contact_phone,message,consent_version,status) VALUES(?,?,?,?,?,?,?,?,?,?,?)');
             $insert->execute([$accountId,$type==='existing_business'?'claim_existing':'request_new',$type==='existing_business'?$businessId:null,$destinationId,$category,$businessName,$relationship,$phone,$disputedClaim?'RECLAMACIÓN EN REVISIÓN: el negocio ya tiene responsable o una solicitud previa. No cambia su asociación actual. '.substr($message,0,850):$message,'business-account-onboarding-v1',$disputedClaim?'in_review':'pending']);
             $applicationId=(int)$this->pdo->lastInsertId();
-            if($temporaryImages&&$referenceStorage){$tempService=new BusinessOnboardingUploadService($this->pdo,private_storage_path('business-onboarding-uploads'));$imageInsert=$this->pdo->prepare('INSERT INTO business_application_images(application_id,storage_name,original_name,mime_type,file_size,width,height) VALUES(?,?,?,?,?,?,?)');foreach($temporaryImages as $uploadId){$image=$tempService->consume($draft,$uploadId,$referenceStorage,20);$storedFiles[]=$image['path'];$imageInsert->execute([$applicationId,$image['storage_name'],$image['original_name'],$image['mime_type'],$image['file_size'],$image['width'],$image['height']]);}}
-            elseif($referenceUploads&&$referenceStorage)(new BusinessAdminService($this->pdo,$referenceStorage))->storeApplicationReferences($applicationId,$referenceUploads,$storedFiles);
+            if($referenceUploads&&$referenceStorage)(new BusinessAdminService($this->pdo,$referenceStorage))->storeApplicationReferences($applicationId,$referenceUploads,$storedFiles);
             $details=$application['business_details']??[];unset($details['claim_review_kind'],$details['auto_claim_on_activation']);
             if($selfOnboarding){$details['onboarding_policy']=BusinessSelfOnboarding::POLICY;$details['responsibility_declared']=true;$details['document_policy']='business-document-8mb-v1';$details['document_retention_policy']='delete-after-verification-v1';}
             $details['existence_assessment']=$type==='existing_business'?BusinessExistenceVerification::assessExisting($this->pdo,$businessId):$existenceAssessment;
@@ -133,7 +129,6 @@ final class BusinessAccountPortalService
             if($profile->ready())$profile->initializePhone($accountId,$phone);
             if($uploadsPresent){
                 foreach($requiredEvidence as $evidenceType){
-                    if($evidenceType==='business_registration'&&$temporaryEvidence!==''){$tempService??=new BusinessOnboardingUploadService($this->pdo,private_storage_path('business-onboarding-uploads'));$document=$tempService->consume($draft,$temporaryEvidence,(string)$evidenceStorage,24);$storedFiles[]=$document['path'];$this->pdo->prepare('INSERT INTO business_account_application_evidence(application_id,evidence_type,storage_name,original_name,mime_type,file_size) VALUES(?,?,?,?,?,?)')->execute([$applicationId,$evidenceType,$document['storage_name'],$document['original_name'],$document['mime_type'],$document['file_size']]);continue;}
                     [$storedName,$originalName,$mime,$bytes]=$this->validateEvidenceUpload($evidenceUploads[$evidenceType]);
                     $path=$evidenceStorage.'/'.$storedName;
                     if(!move_uploaded_file((string)$evidenceUploads[$evidenceType]['tmp_name'],$path))throw new RuntimeException('No se pudo guardar de forma privada el documento de verificación.');
@@ -141,9 +136,8 @@ final class BusinessAccountPortalService
                     $this->pdo->prepare('INSERT INTO business_account_application_evidence(application_id,evidence_type,storage_name,original_name,mime_type,file_size) VALUES(?,?,?,?,?,?)')->execute([$applicationId,$evidenceType,$storedName,$originalName,$mime,$bytes]);
                 }
             }
-            // A submitted request remains pending. The account receives no
-            // business access and no record is published until manual review.
-            if(!$selfOnboarding&&$type==='existing_business'&&!$disputedClaim&&$existingAccountId){
+            if($selfOnboarding){BusinessSelfOnboarding::complete($this->pdo,$applicationId);}
+            elseif($type==='existing_business'&&!$disputedClaim&&$existingAccountId){
                 $this->assignMembership($accountId,$businessId,$relationship==='owner'?'owner':'manager');
                 $this->pdo->prepare('UPDATE businesses SET information_status="ACTIVO",claim_status="RECLAMADO",updated_at=CURRENT_TIMESTAMP WHERE id=?')->execute([$businessId]);
                 $this->pdo->prepare('UPDATE business_account_applications SET status="approved",reviewed_at=CURRENT_TIMESTAMP,admin_note=? WHERE id=?')->execute(['Asignación automática: no había responsable asociado. No verifica existencia, no publica ni activa suscripciones.',$applicationId]);
@@ -201,7 +195,7 @@ final class BusinessAccountPortalService
             $row['review_kind']=$details['claim_review_kind']??'standard';
             $row['review_message']=$row['review_kind']==='disputed_existing'?'Recibimos tu reclamación para revisión. El negocio conserva su responsable actual; esta solicitud no te concede acceso para administrarlo.':'';
             if($row['status']==='needs_selection')$row['review_message']='Encontramos una ficha igual o similar. Vuelve a Registrar o reclamar un negocio y selecciona la ficha correcta; tu cuenta ya puede usarse.';
-            if(($details['onboarding_policy']??'')===BusinessSelfOnboarding::POLICY&&$row['status']==='pending')$row['review_message']='Recibimos tu solicitud y el soporte privado del negocio. Está pendiente de revisión; aún no puedes administrar ni publicar esta ficha.';
+            if(($details['onboarding_policy']??'')===BusinessSelfOnboarding::POLICY&&$row['status']==='pending')$row['review_message']='Verifica tu correo para completar la asociación declarada del negocio.';
             $choice=$details['requested_subscription']??[];$row['subscription_next_url']=null;
             if($row['status']==='approved'&&!empty($row['business_id'])&&in_array($choice['plan_code']??'',['featured','page','page_premium'],true))$row['subscription_next_url']='/suscripciones/continuar/?'.http_build_query(['plan'=>$choice['plan_code'],'period'=>$choice['billing_frequency']??'monthly','business'=>$row['business_id'],'experience'=>(int)($choice['operator_addon']['experience_id']??0)]);
             unset($row['business_details_json']);return $row;
@@ -242,7 +236,7 @@ final class BusinessAccountPortalService
             if($status==='approved'){
                 if(!$isDisputed){
                 $evidenceQuery=$this->pdo->prepare('SELECT id,evidence_type FROM business_account_application_evidence WHERE application_id=?');$evidenceQuery->execute([$id]);$evidence=$evidenceQuery->fetchAll(PDO::FETCH_ASSOC);
-                $required=(($details['onboarding_policy']??'')===BusinessSelfOnboarding::POLICY)?['business_registration']:$this->requiredEvidence((string)$row['relationship_code']);$ids=array_map('intval',$verifiedEvidenceIds);$byType=[];foreach($evidence as $item)$byType[$item['evidence_type']]=$item;
+                $required=$this->requiredEvidence((string)$row['relationship_code']);$ids=array_map('intval',$verifiedEvidenceIds);$byType=[];foreach($evidence as $item)$byType[$item['evidence_type']]=$item;
                 foreach($required as $evidenceType){if(!isset($byType[$evidenceType]))throw new RuntimeException('No se puede aprobar: falta el documento obligatorio de '.$this->evidenceLabel($evidenceType).'.');if(!in_array((int)$byType[$evidenceType]['id'],$ids,true))throw new RuntimeException('Marca como revisados todos los documentos requeridos antes de aprobar.');}
                 if(strlen($note)<12)throw new RuntimeException('Para aprobar, deja una nota interna con qué documentos revisaste y cómo comprobaste la representación.');
                 $mark=$this->pdo->prepare('UPDATE business_account_application_evidence SET verified_by=?,verified_at=CURRENT_TIMESTAMP WHERE id=? AND application_id=?');

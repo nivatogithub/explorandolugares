@@ -1,4 +1,13 @@
-<?php
-declare(strict_types=1);
-// Kept as an empty compatibility include while older templates are retired.
-// The business wizard must never ask for, or persist, a document number.
+<?php if(!function_exists('db')){http_response_code(404);exit;} require_once dirname(__DIR__,2).'/app/AccountResidence.php'; ?>
+<fieldset data-holder-identity><legend>Identificación privada del titular</legend>
+<p>Selecciona quién opera el negocio. Los datos de identificación son privados y un titular puede operar varios establecimientos.</p>
+<div class="destination-form-grid">
+<label class="wide">Tipo de titular<select name="holder_kind" required><option value="">Selecciona el tipo de titular</option><?php foreach(['legal_entity'=>'Persona jurídica en Colombia','natural_rut'=>'Persona natural con RUT','natural_document'=>'Persona natural sin RUT','foreign'=>'Persona o empresa extranjera'] as $value=>$label):?><option value="<?=$value?>" <?=($_POST['holder_kind']??'')===$value?'selected':''?>><?=esc($label)?></option><?php endforeach ?></select></label>
+<label data-holder-detail hidden><span data-holder-name-label>Nombre del titular</span><input name="holder_name" maxlength="180" disabled value="<?=esc($_POST['holder_name']??'')?>"></label>
+<label data-holder-foreign hidden>El titular extranjero es<select name="holder_foreign_kind" disabled><option value="">Selecciona</option><?php foreach(['person'=>'Persona','company'=>'Empresa'] as $value=>$label):?><option value="<?=$value?>" <?=($_POST['holder_foreign_kind']??'')===$value?'selected':''?>><?=$label?></option><?php endforeach ?></select></label>
+<label data-holder-foreign hidden>País de identificación<select name="holder_country_code" disabled><option value="">Selecciona el país</option><?php foreach(AccountResidence::catalog()['countries'] as $value=>$label):?><option value="<?=esc($value)?>" <?=($_POST['holder_country_code']??'')===$value?'selected':''?>><?=esc($label)?></option><?php endforeach ?></select></label>
+<label data-holder-document hidden>Tipo de documento<select name="holder_document_type" disabled><option value="">Selecciona el documento</option><?php foreach(['CC'=>'Cédula de ciudadanía','CE'=>'Cédula de extranjería','PPT'=>'Permiso por protección temporal','PASSPORT'=>'Pasaporte','FOREIGN_TAX'=>'Identificación tributaria extranjera','NIT'=>'NIT colombiano · tengo RUT'] as $value=>$label):?><option value="<?=$value?>" <?=($_POST['holder_document_type']??'')===$value?'selected':''?>><?=esc($label)?></option><?php endforeach ?></select></label>
+<label data-holder-detail hidden><span data-holder-number-label>Número de identificación</span><input name="holder_number" maxlength="30" disabled value="<?=esc($_POST['holder_number']??'')?>" aria-describedby="holder-number-help"></label>
+<small id="holder-number-help" class="holder-number-help wide" hidden></small>
+</div><p>Validar el formato no certifica que el documento exista ni que tengas autorización sobre el negocio.</p></fieldset>
+<script src="/assets/business-holder.js" defer></script>

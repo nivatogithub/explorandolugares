@@ -59,7 +59,7 @@ const assert = require('assert/strict');
     await page.locator('#business-map-use').click();
     await page.waitForFunction(()=>!document.querySelector('#business-map-dialog').open);
     assert.equal(await page.locator('#business-location-confirmed').inputValue(),'1');
-    assert.match(await page.locator('#business-map-url').inputValue(),/^https:\/\/www\.google\.com\/maps\/search\/\?api=1&query=/);
+    assert.match(await page.locator('#business-map-url').inputValue(),/^https:\/\/www.openstreetmap.org\//);
     // Discard the map draft, then exercise minimal Free saving independently.
     await page.reload();
     await plan.selectOption('free');
