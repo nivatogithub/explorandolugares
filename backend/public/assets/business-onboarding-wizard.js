@@ -80,8 +80,9 @@
       setPlanField('[data-plan-field="summary"]', editorial, editorial);
       setPlanField('[data-plan-field="description"]', premium, premium);
       setPlanField('[data-plan-field="location"]', ['featured', 'page_premium'].includes(choice), choice === 'featured');
-      setPlanField('[data-plan-field="contact-options"]', editorial);
-      setPlanField('[data-plan-field="phone"]', editorial);
+      // Los canales son un paso independiente del wizard. Su visibilidad y
+      // habilitación dependen exclusivamente del paso 4, administrado por
+      // business-registration.js; no los abras al escoger una suscripción.
       setPlanField('[data-plan-field="cover"]', ['page', 'page_premium'].includes(choice), ['page', 'page_premium'].includes(choice));
       setPlanField('[data-plan-field="products"]', premium, false);
       const phone = form.querySelector('[name="business_phone[number]"]');

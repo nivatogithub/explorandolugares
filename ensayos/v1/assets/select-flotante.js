@@ -63,7 +63,13 @@
     wrapper.addEventListener('focusout',event=>{if(!wrapper.contains(event.relatedTarget))control.close();});
     new MutationObserver(()=>{editing=false;query='';refresh();}).observe(select,{childList:true,subtree:true,attributes:true});refresh();
   }
-  function scan(root=document){root.querySelectorAll?.('select').forEach(enhance);}
+  function scan(root=document){root.querySelectorAll?.('select').forEach(select=>{
+    // El wizard del portal de negocios usa controles nativos con una
+    // distribución compacta propia. Convertirlos a selectores flotantes
+    // rompe la alineación y duplica el espacio vertical de los teléfonos.
+    if(select.closest('.account-portal'))return;
+    enhance(select);
+  });}
   document.addEventListener('pointerdown',event=>{if(![...openMenus].some(control=>event.target.closest('.floating-select')===control.wrapper))closeAll();});
   new MutationObserver(records=>records.forEach(record=>record.addedNodes.forEach(node=>{if(node.nodeType===1)scan(node);}))).observe(document.documentElement,{childList:true,subtree:true});
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>scan(),{once:true});else scan();
