@@ -41,7 +41,11 @@
       <label>Foto del producto<input type="file" name="reference_images[]" accept="image/jpeg,image/png,image/webp" data-image-slot="product-<?=$i?>"></label>
     </div><?php endfor ?>
   </section>
-  <details class="registration-optional" data-plan-field="contact-options"><summary>Canales de contacto</summary><div class="destination-form-grid"><?php $phoneValues=$_POST['channels']??[];require __DIR__.'/phone-fields.php';foreach(['email'=>'Correo del negocio','website'=>'Sitio web','instagram'=>'Instagram','facebook'=>'Facebook','linkedin'=>'LinkedIn'] as $channel=>$label):?><label><?=esc($label)?><input name="channels[<?=esc($channel)?>]" type="<?= $channel==='email'?'email':'url' ?>" maxlength="500" value="<?=esc($_POST['channels'][$channel]??'')?>"></label><?php endforeach ?></div></details>
+</fieldset>
+<fieldset id="registration-contact-details" data-plan-field="contact-options" hidden disabled>
+  <legend>Canales de contacto</legend>
+  <p>Incluye solo los canales que quieres mostrar a las personas que visiten tu negocio.</p>
+  <div class="destination-form-grid"><?php $phoneValues=$_POST['channels']??[];require __DIR__.'/phone-fields.php';foreach(['email'=>'Correo del negocio','website'=>'Sitio web','instagram'=>'Instagram','facebook'=>'Facebook','linkedin'=>'LinkedIn'] as $channel=>$label):?><label><?=esc($label)?><input name="channels[<?=esc($channel)?>]" type="<?= $channel==='email'?'email':'url' ?>" maxlength="500" value="<?=esc($_POST['channels'][$channel]??'')?>"></label><?php endforeach ?></div>
 </fieldset>
 <aside id="registration-live-preview" class="application-live-preview" hidden aria-live="polite"><p class="eyebrow">Vista previa</p><h2 data-preview-name>Tu negocio</h2><p data-preview-summary>Tu presentación aparecerá aquí.</p><p data-preview-description hidden></p><p data-preview-address></p></aside>
 <script src="/assets/business-text-counters.js?v=1" defer></script>

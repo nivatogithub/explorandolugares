@@ -56,12 +56,6 @@
       setPlanField('[data-plan-field="location"]', ['featured', 'page_premium'].includes(choice), choice === 'featured');
       setPlanField('[data-plan-field="contact-options"]', editorial);
       setPlanField('[data-plan-field="phone"]', editorial);
-      const contacts = form.querySelector('[data-plan-field="contact-options"]');
-      if (contacts) {
-        contacts.open = choice === 'featured';
-        const summary = contacts.querySelector('summary');
-        if (summary) summary.textContent = choice === 'featured' ? 'Teléfono de contacto' : 'Canales de contacto';
-      }
       setPlanField('[data-plan-field="cover"]', ['page', 'page_premium'].includes(choice), ['page', 'page_premium'].includes(choice));
       setPlanField('[data-plan-field="products"]', premium, false);
       const phone = form.querySelector('[name="business_phone[number]"]');
@@ -163,7 +157,7 @@
     if (evidence) evidence.addEventListener('change', () => uploadFile(evidence, 'evidence', 'business_registration'));
 
     const finder = Array.from(form.querySelectorAll(':scope > fieldset')).find((fieldset) => fieldset.querySelector('legend')?.textContent.trim() === '1. Busca el negocio');
-    const stepTwo = [details, document.querySelector('#registration-distinct-business'), continuation].filter(Boolean);
+    const stepTwo = [details, document.querySelector('#registration-contact-details'), document.querySelector('#registration-distinct-business'), continuation].filter(Boolean);
     let step = 1;
 
     const renderStep = () => {
