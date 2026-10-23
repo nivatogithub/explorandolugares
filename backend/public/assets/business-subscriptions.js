@@ -54,4 +54,8 @@ document.querySelectorAll('a[href*="/business/editorial.php"]').forEach(link=>{
  const copy=link.parentElement?.querySelector('p');
  if(copy)copy.textContent='Revisa la tarjeta privada construida con los datos y fotografías que enviaste. Aún no es pública ni permite editar la solicitud desde esta etapa.';
 });
+// The owner-facing workflow stops at private preview and payment. Editorial
+// preparation happens later by the portal, so this legacy call to edit a draft
+// must never appear as an available owner action.
+document.querySelector('.account-next-steps')?.remove();
 })();
