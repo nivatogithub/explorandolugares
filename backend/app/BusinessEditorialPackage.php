@@ -10,10 +10,50 @@ final class BusinessEditorialPackage
 {
     public function __construct(private PDO $pdo,private string $referenceStorage) {}
 
-    public function exportSource(int $businessId):string
+    /**
+     * Private administrative checkpoint before editorial material can leave the
+     * application.  The returned identifiers are only for administrator links;
+     * none of this evidence is ever copied into an editorial ZIP.
+     */
+    public function readiness(int $businessId):array
+    {
+        $business=$this->business($businessId);
+        $application=$this->pdo->prepare('SELECT id,status,relationship_code,reviewed_at FROM business_account_applications WHERE business_id=? ORDER BY CASE status WHEN "approved" THEN 0 ELSE 1 END,reviewed_at DESC,id DESC LIMIT 1');
+        $application->execute([$businessId]);$application=$application->fetch(PDO::FETCH_ASSOC)?:null;
+        $documents=[];$titleDocument=null;
+        if($application){
+            $evidence=$this->pdo->prepare('SELECT id,evidence_type,original_name,verified_at FROM business_account_application_evidence WHERE application_id=? ORDER BY id');
+            $evidence->execute([(int)$application['id']]);$documents=$evidence->fetchAll(PDO::FETCH_ASSOC);
+            foreach($documents as $document)if($document['evidence_type']==='business_registration'){$titleDocument=$document;break;}
+        }
+        $subscription=$this->pdo->prepare('SELECT id,plan_code,status,reviewed_at FROM business_subscriptions WHERE business_id=? ORDER BY id DESC LIMIT 1');
+        $subscription->execute([$businessId]);$subscription=$subscription->fetch(PDO::FETCH_ASSOC)?:null;
+        $payment=null;
+        if($subscription){
+            $proof=$this->pdo->prepare('SELECT id,status,original_name,reviewed_at FROM business_subscription_payment_evidence WHERE subscription_id=? ORDER BY id DESC LIMIT 1');
+            $proof->execute([(int)$subscription['id']]);$payment=$proof->fetch(PDO::FETCH_ASSOC)?:null;
+        }
+        $titleReady=$application!==null&&$application['status']==='approved'&&$titleDocument!==null&&!empty($titleDocument['verified_at']);
+        $paidPlan=$subscription!==null&&$subscription['plan_code']!=='free';
+        $paymentReady=$paidPlan?$subscription['status']==='paid_pending_publication'&&$payment!==null&&$payment['status']==='approved':$subscription!==null&&in_array($subscription['status'],['pending_publication','active'],true);
+        $blockers=[];
+        if(!$titleReady)$blockers[]='Falta validar el documento que respalda la titularidad o representación del negocio.';
+        if(!$subscription)$blockers[]='Falta seleccionar una suscripción.';
+        elseif(!$paymentReady)$blockers[]=$paidPlan?'Falta confirmar el pago con su comprobante.':'La suscripción Gratis todavía no está lista para revisión.';
+        return ['business'=>$business,'application'=>$application,'documents'=>$documents,'title_document'=>$titleDocument,'subscription'=>$subscription,'payment'=>$payment,'title_ready'=>$titleReady,'payment_ready'=>$paymentReady,'ready'=>$titleReady&&$paymentReady,'blockers'=>$blockers];
+    }
+
+    public function requireReady(int $businessId):array
+    {
+        $readiness=$this->readiness($businessId);
+        if(!$readiness['ready'])throw new RuntimeException(implode(' ', $readiness['blockers']));
+        return $readiness;
+    }
+
+    public function exportSource(int $businessId,string $actor=''):string
     {
         if(!class_exists(ZipArchive::class))throw new RuntimeException('El servidor no tiene disponible la extensión ZIP.');
-        $business=$this->business($businessId);
+        $business=$this->requireReady($businessId)['business'];
         $temp=tempnam(sys_get_temp_dir(),'explorando-editorial-');
         if($temp===false)throw new RuntimeException('No se pudo preparar el paquete editorial.');
         $zipPath=$temp.'.zip';@unlink($temp);
@@ -47,7 +87,12 @@ final class BusinessEditorialPackage
                 "Incluye `images.logo` cuando exista un logotipo aprobado y `images.cover` para Página y Premium. Para Premium puedes añadir hasta cinco productos. Para planes sin página no incluyas imágenes ni productos. El objeto `provenance` es obligatorio por imagen y se conserva privado: registra la vía de creación, prompt, herramienta/modelo, fecha, responsable, fundamento factual, referencias visuales y revisión editorial. La IA no convierte una imagen en libre de derechos ni la deja publicada automáticamente.";
             if(!$zip->addFromString('README.md',$readme))throw new RuntimeException('No se pudo escribir la guía del paquete editorial.');
         }catch(Throwable $error){$zip->close();@unlink($zipPath);throw $error;}
-        $zip->close();return $zipPath;
+        $zip->close();
+        if($actor!=='')try{
+            require_once __DIR__.'/BusinessEditorialService.php';
+            (new BusinessEditorialService($this->pdo,$this->referenceStorage))->beginEditorial($businessId,$actor);
+        }catch(Throwable $error){@unlink($zipPath);throw $error;}
+        return $zipPath;
     }
 
     /** Import a prepared public-facing proposal; legal and account files are never accepted here. */
@@ -55,6 +100,7 @@ final class BusinessEditorialPackage
     {
         require_once __DIR__.'/BusinessEditorialService.php';
         if(trim($actor)==='')throw new RuntimeException('La importación requiere un administrador.');
+        $this->requireReady($businessId);
         if(($upload['error']??UPLOAD_ERR_NO_FILE)!==UPLOAD_ERR_OK||!is_uploaded_file((string)($upload['tmp_name']??''))||(int)($upload['size']??0)<1||(int)($upload['size']??0)>32*1024*1024)throw new RuntimeException('Sube un ZIP editorial de máximo 32 MB.');
         if(!class_exists(ZipArchive::class))throw new RuntimeException('El servidor no tiene disponible la extensión ZIP.');
         $zip=new ZipArchive();if($zip->open((string)$upload['tmp_name'])!==true)throw new RuntimeException('El archivo no es un ZIP editorial válido.');

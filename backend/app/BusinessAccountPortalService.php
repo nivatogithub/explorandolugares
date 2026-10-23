@@ -219,6 +219,25 @@ final class BusinessAccountPortalService
         $query->execute([$applicationId]);return $query->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    /** The automatic account/business association is not a document review. */
+    public function verifyApprovedBusinessRegistration(int $applicationId,array $verifiedEvidenceIds,string $note,string $reviewer):void
+    {
+        $note=trim($note);if(strlen($note)<12)throw new RuntimeException('Deja una nota interna indicando cómo validaste el soporte de titularidad.');
+        $this->pdo->beginTransaction();
+        try{
+            $lock=$this->pdo->getAttribute(PDO::ATTR_DRIVER_NAME)==='mysql'?' FOR UPDATE':'';
+            $application=$this->pdo->prepare('SELECT id,business_id,status FROM business_account_applications WHERE id=?'.$lock);$application->execute([$applicationId]);$row=$application->fetch(PDO::FETCH_ASSOC);
+            if(!$row||$row['status']!=='approved'||(int)$row['business_id']<1)throw new RuntimeException('La solicitud no está disponible para validar su soporte.');
+            $documents=$this->pdo->prepare('SELECT id,verified_at FROM business_account_application_evidence WHERE application_id=? AND evidence_type="business_registration"'.$lock);$documents->execute([$applicationId]);$documents=$documents->fetchAll(PDO::FETCH_ASSOC);
+            if(!$documents)throw new RuntimeException('La solicitud no tiene documento de registro del negocio.');
+            $selected=array_map('intval',$verifiedEvidenceIds);foreach($documents as $document)if(empty($document['verified_at'])&&!in_array((int)$document['id'],$selected,true))throw new RuntimeException('Marca el documento de registro que revisaste antes de validarlo.');
+            $mark=$this->pdo->prepare('UPDATE business_account_application_evidence SET verified_by=?,verified_at=CURRENT_TIMESTAMP WHERE id=? AND application_id=? AND evidence_type="business_registration"');
+            foreach($documents as $document)if(empty($document['verified_at']))$mark->execute([substr($reviewer?:'admin',0,120),(int)$document['id'],$applicationId]);
+            $this->pdo->prepare('UPDATE business_account_applications SET admin_note=?,reviewed_at=CURRENT_TIMESTAMP,updated_at=CURRENT_TIMESTAMP WHERE id=?')->execute([substr($note,0,1000),$applicationId]);
+            $this->pdo->commit();
+        }catch(Throwable $error){if($this->pdo->inTransaction())$this->pdo->rollBack();throw $error;}
+    }
+
     private function assignMembership(int $account,int $business,string $role):void
     {
         $q=$this->pdo->prepare('SELECT status FROM business_account_memberships WHERE account_id=? AND business_id=?');$q->execute([$account,$business]);
