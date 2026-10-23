@@ -146,6 +146,16 @@
     };
 
     form.querySelectorAll('[data-image-slot]').forEach((input) => input.addEventListener('change', () => uploadFile(input, 'editorial', input.dataset.imageSlot || 'cover')));
+    form.querySelectorAll('[data-product-card]').forEach((card, index) => {
+      const panel = document.createElement('details');
+      panel.className = 'registration-optional product-panel';
+      panel.open = index === 0;
+      const title = document.createElement('summary');
+      title.textContent = `Producto o servicio ${index + 1}`;
+      card.before(panel);
+      panel.append(title, card);
+    });
+
     const evidence = form.querySelector('[name="business_registration"]');
     if (evidence) evidence.addEventListener('change', () => uploadFile(evidence, 'evidence', 'business_registration'));
 
@@ -158,31 +168,36 @@
       const first = step === 1;
       const planStep = step === 2;
       const selected = !!type?.value;
-      const premiumChoice = plan() === 'page_premium';
-      const showDetails = (planStep && !premiumChoice) || step === 3;
+      const selectedPlan = plan();
+      const showDetails = step === 3;
       form.dataset.registrationWizardStep = String(step);
-      form.dataset.registrationPremiumDetails = planStep && premiumChoice ? '1' : '0';
+      form.dataset.registrationPremiumDetails = '0';
       finder.hidden = !first;
       finder.disabled = !first;
       planStage.hidden = !planStep || !selected;
-      planStage.disabled = !planStep || !selected;
-      controls.hidden = !(first || (planStep && premiumChoice));
+      planStage.disabled = first || !selected;
+      controls.hidden = !(first || (planStep && selectedPlan));
       back.hidden = first;
       stepTwo.forEach((node) => { node.hidden = !showDetails; node.disabled = !showDetails; });
       if (showDetails) form.dispatchEvent(new Event('operator-eligibility-change'));
+      if (step === 2) {
+        const planLabel = {free: 'Gratis', featured: 'Destacado', page: 'Página Comercial', page_premium: 'Premium'}[selectedPlan];
+        next.textContent = planLabel ? `Continuar con ${planLabel}` : 'Elige un plan para continuar';
+      }
       syncPlan();
       window.scrollTo({top: form.getBoundingClientRect().top + window.scrollY - 16, behavior: 'smooth'});
     };
 
     let controls;
     let back;
+    let next;
     if (finder && planStage && continuation) {
       controls = document.createElement('nav');
       controls.className = 'editorial-actions registration-wizard-actions';
       const warning = document.createElement('p');
       warning.className = 'notice';
       warning.hidden = true;
-      const next = document.createElement('button');
+      next = document.createElement('button');
       next.type = 'button';
       next.className = 'pill';
       next.textContent = 'Continuar a planes';
@@ -199,15 +214,16 @@
           warning.hidden = false;
           return;
         }
-        if (step === 2 && !premiumChoice) return;
-        if (step === 2 && premiumChoice) step = 3;
-        else step = 2;
-        next.textContent = step === 3 ? 'Continuar a planes' : 'Continuar con información Premium';
+        if (step === 2 && !plan()) {
+          warning.textContent = 'Elige una suscripción antes de continuar.';
+          warning.hidden = false;
+          return;
+        }
+        step = step === 2 ? 3 : 2;
         renderStep();
       });
       back.addEventListener('click', () => {
         step = step === 3 ? 2 : 1;
-        next.textContent = step === 1 ? 'Continuar a planes' : 'Continuar con información Premium';
         renderStep();
       });
       form.addEventListener('operator-eligibility-change', () => { if (step === 1) renderStep(); });
