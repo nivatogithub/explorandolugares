@@ -68,9 +68,20 @@ function private_storage_path(string $area): string {
     if (!preg_match('/^[a-z0-9-]+$/D', $area)) throw new InvalidArgumentException('Área de almacenamiento inválida.');
     return dirname(__DIR__).'/private/'.$area;
 }
+/** Redirect normal form submissions to sign-in when their session is gone.
+ * APIs still receive JSON so clients can handle the expired session safely. */
+function session_expired(): never {
+    $accept=(string)($_SERVER['HTTP_ACCEPT']??'');
+    if(str_contains($accept,'application/json'))json_response(['message'=>'La sesión expiró. Inicia sesión nuevamente.'],401);
+    $uri=(string)($_SERVER['REQUEST_URI']??'');
+    $parts=parse_url($uri);$path=(string)($parts['path']??'');$query=isset($parts['query'])?'?'.$parts['query']:'';
+    if($path!==''&&str_starts_with($path,'/')&&!str_starts_with($path,'//')&&!str_starts_with($path,'/negocios/acceso'))$_SESSION['session_return']=$path.$query;
+    header('Location: '.site_path('/negocios/acceso/?sesion=expirada'),true,303);
+    exit;
+}
 function csrf(): void {
     if (!is_string($_POST['csrf'] ?? null) || !hash_equals($_SESSION['csrf'], $_POST['csrf'])) {
-        http_response_code(403); exit(response_text('La sesión expiró. Recarga la página.'));
+        session_expired();
     }
 }
 function throttle(string $kind, int $limit, int $seconds, string $extra = ''): bool {
