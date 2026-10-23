@@ -58,4 +58,6 @@ document.querySelectorAll('a[href*="/business/editorial.php"]').forEach(link=>{
 // preparation happens later by the portal, so this legacy call to edit a draft
 // must never appear as an available owner action.
 document.querySelector('.account-next-steps')?.remove();
+const paymentHistorySection=Array.from(document.querySelectorAll('.destination-admin-list')).find(section=>section.querySelector(':scope > h2')?.textContent.trim()==='Estado de tus pagos');
+if(paymentHistorySection&&(/Pendiente de revisión|Pago confirmado/.test(paymentHistorySection.textContent||'')))document.querySelector('#pagos')?.remove();
 })();
