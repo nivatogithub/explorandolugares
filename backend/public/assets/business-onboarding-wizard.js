@@ -15,7 +15,7 @@
     const plan = () => form.querySelector('[name="plan_code"]:checked')?.value || '';
 
     document.querySelectorAll('.subscription-choice-description').forEach((copy) => {
-      copy.textContent = copy.textContent.replace('hasta cuatro productos o servicios', 'hasta tres productos o servicios');
+      copy.textContent = copy.textContent.replace('hasta cuatro productos o servicios', 'hasta cinco productos o servicios');
     });
     if (continuation?.querySelector('legend')) continuation.querySelector('legend').textContent = 'Información para enviar la solicitud';
     if (submit) submit.textContent = 'Enviar para revisión';

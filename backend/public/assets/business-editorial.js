@@ -4,7 +4,7 @@
   if (!editor) return;
   const showcase = Array.from(editor.querySelectorAll('fieldset')).find(fieldset => fieldset.querySelector('legend')?.textContent.includes('Productos o servicios estrella'));
   if (showcase) {
-    showcase.querySelector('p').textContent = 'Elige hasta tres productos o servicios estrella. Cada uno lleva una foto y una descripción corta.';
+    showcase.querySelector('p').textContent = 'Elige hasta cinco productos o servicios estrella. Cada uno lleva una foto y una descripción corta.';
     Array.from(showcase.querySelectorAll(':scope > details')).slice(3).forEach(slot => slot.remove());
     showcase.querySelectorAll('textarea[maxlength="400"]').forEach(field => { field.maxLength = 180; field.rows = 2; });
   }
