@@ -1,0 +1,67 @@
+{
+  "asset_id": "riohacha-valle-cangrejos-v1",
+  "slug": "valle-de-los-cangrejos",
+  "destination": "Riohacha",
+  "represented_sector": "Humedal del brazo Calancala / Valle de los Cangrejos; no Riíto",
+  "role": "poi",
+  "status": "draft_pending_human_approval",
+  "date": "2026-10-22",
+  "tool": "image_gen built-in",
+  "method": "Original thematic ecological illustration from documented habitat facts. Approximate, NOT exact viewpoint or reconstruction.",
+  "input_images": [],
+  "master": ".local/riohacha/valle-cangrejos-v1.png",
+  "web": "riohacha-valle-cangrejos-v1.webp",
+  "width": 1200,
+  "height": 800,
+  "prompt_file": "valle-cangrejos-prompt-v1.txt",
+  "alt_draft_es": "Ilustración temática de manglar, agua salobre y cangrejos del ecosistema del Valle de los Cangrejos.",
+  "sources": [
+    {
+      "url": "https://www.invemar.org.co/redcostera1/invemar/docs/9312ORDENAMIENTO_MANGLARES_GUAJIRA_LIBRO.pdf",
+      "title": "Ordenamiento ambiental de manglares de La Guajira, sección2.4",
+      "proof": "BocaCalancala/ValleCangrejos al NEVillaFatima, manglar, diferenciadodeRiíto",
+      "consulted": "2026-10-22"
+    },
+    {
+      "url": "https://indetur.gov.co/wp-content/uploads/2023/09/Inventario-Atractivos-Guajira.pdf",
+      "title": "Inventario de atractivos turísticos de La Guajira",
+      "proof": "Humedal en desembocaduraCalancala, aguadulce/salada,manglar/crustáceos",
+      "consulted": "2026-10-22"
+    },
+    {
+      "url": "https://riohacha-laguajira.gov.co/MiMunicipio/Paginas/Sitios-de-Interes.aspx",
+      "proof": "IdentidadmunicipalValleCangrejos/brazoCalancala",
+      "consulted": "2026-10-22"
+    },
+    {
+      "url": "https://www.flickr.com/photos/128508597@N05/albums/72157656885455513",
+      "title": "INVEMAR MIZC Guajira - Riohacha norte valle de los cangrejos",
+      "use": "Albumidentitylocated; individualimagesnotaccessible,licensenotverified,NOTinput/copied",
+      "consulted": "2026-10-22"
+    }
+  ],
+  "invariants": [
+    "lowflatcoastalmangrovewetland",
+    "shallowbrackishpool",
+    "sandy-muddyseasonallyfloodedground",
+    "smalllandcrabs"
+  ],
+  "review": {
+    "style": "pass: visible ink/gouache and paper grain",
+    "habitat": "pass: shallowwater,mangroveroots,mud/sand",
+    "infrastructure": "pass: none invented",
+    "relief": "pass: no mountains/beachresort/promenade",
+    "animals": "illustrated crabs, ordinary small-scale relative roots/leaves; not documentary species identification",
+    "identity": "thematic ecology only, no exact-view claim; not inferred from Riíto urbanphoto",
+    "human": "pending"
+  },
+  "limitations": [
+    "No licensed or inspectable precise sector photograph was available. Must be shown as thematic illustration.",
+    "Does not document October2026 water level, accessibility, navigation or species sightings.",
+    "No geographical coordinates or access pin invented."
+  ],
+  "approval": null,
+  "master_sha256": "baeeb37255c1ab311133bb1c894cf51ccf929a744db4141a958f614e829e0b4a",
+  "web_sha256": "580c3faf8283dee80afdb936761deabd796db82a4e4d28558df5233f535fb132",
+  "bytes": 363136
+}
