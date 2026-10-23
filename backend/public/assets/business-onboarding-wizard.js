@@ -158,7 +158,9 @@
 
     const finder = Array.from(form.querySelectorAll(':scope > fieldset')).find((fieldset) => fieldset.querySelector('legend')?.textContent.trim() === '1. Busca el negocio');
     const detailsStep = [details, document.querySelector('#registration-distinct-business')].filter(Boolean);
-    const contactStep = [document.querySelector('#registration-contact-details'), continuation].filter(Boolean);
+    const contacts = document.querySelector('#registration-contact-details');
+    const contactStep = [contacts].filter(Boolean);
+    const submissionStep = [continuation].filter(Boolean);
     let step = 1;
 
     const renderStep = () => {
@@ -169,23 +171,27 @@
       const selectedPlan = plan();
       const showDetails = step === 3;
       const showContacts = step === 4;
+      const showSubmission = step === 5;
       form.dataset.registrationWizardStep = String(step);
       form.dataset.registrationPremiumDetails = '0';
       finder.hidden = !first;
-      finder.disabled = !first;
+      finder.disabled = false;
       planStage.hidden = !planStep || !selected;
-      planStage.disabled = first || !selected;
-      controls.hidden = !(first || (planStep && selectedPlan) || showDetails);
-      next.hidden = showContacts;
+      planStage.disabled = !selected;
+      controls.hidden = !(first || (planStep && selectedPlan) || showDetails || showContacts);
+      next.hidden = showSubmission;
       back.hidden = first;
-      detailsStep.forEach((node) => { node.hidden = !showDetails; node.disabled = !showDetails; });
-      contactStep.forEach((node) => { node.hidden = !showContacts; node.disabled = !showContacts; });
-      if (showDetails || showContacts) form.dispatchEvent(new Event('operator-eligibility-change'));
+      detailsStep.forEach((node) => { node.hidden = !showDetails; });
+      contactStep.forEach((node) => { node.hidden = !showContacts; });
+      submissionStep.forEach((node) => { node.hidden = !showSubmission; node.disabled = !showSubmission; });
+      if (showDetails || showContacts || showSubmission) form.dispatchEvent(new Event('operator-eligibility-change'));
       if (step === 2) {
         const planLabel = {free: 'Gratis', featured: 'Destacado', page: 'Página Comercial', page_premium: 'Premium'}[selectedPlan];
         next.textContent = planLabel ? `Continuar con ${planLabel}` : 'Elige un plan para continuar';
       } else if (showDetails) {
         next.textContent = 'Continuar a canales de contacto';
+      } else if (showContacts) {
+        next.textContent = 'Continuar para enviar solicitud';
       }
       syncPlan();
       window.scrollTo({top: form.getBoundingClientRect().top + window.scrollY - 16, behavior: 'smooth'});
@@ -208,7 +214,7 @@
       back.type = 'button';
       back.className = 'pill light';
       back.textContent = '← Volver a búsqueda';
-      details.after(controls);
+      contacts.after(controls);
       controls.append(warning, next);
       continuation.before(back);
       next.addEventListener('click', () => {
@@ -222,11 +228,11 @@
           warning.hidden = false;
           return;
         }
-        step = step === 1 ? 2 : step === 2 ? 3 : 4;
+        step = step === 1 ? 2 : step === 2 ? 3 : step === 3 ? 4 : 5;
         renderStep();
       });
       back.addEventListener('click', () => {
-        step = step === 4 ? 3 : step === 3 ? 2 : 1;
+        step = step === 5 ? 4 : step === 4 ? 3 : step === 3 ? 2 : 1;
         renderStep();
       });
       form.addEventListener('operator-eligibility-change', () => { if (step === 1) renderStep(); });
