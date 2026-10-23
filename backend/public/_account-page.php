@@ -7,7 +7,10 @@ function account_page(bool $floating=false):void
     $locale=(string)($_GET['lang']??$_SESSION['account_locale']??'es');
     if(!in_array($locale,['es','en','pt-br'],true))$locale='es';
     $_SESSION['account_locale']=$locale;
-    $context=['locale'=>$locale];
+    $accountAdmin=!empty($_SESSION['admin'])
+        && !empty($_SESSION['admin_account_id'])
+        && (int)$_SESSION['admin_account_id']===(int)($_SESSION['business_account_id']??0);
+    $context=['locale'=>$locale,'legacy_admin'=>$accountAdmin,'csrf'=>(string)($_SESSION['csrf']??'')];
     $prefix=$locale==='es'?'':$locale.'/';
     $backdrop='';
     // Only the background content is a generated home fragment; shell/assets are explicit components.
