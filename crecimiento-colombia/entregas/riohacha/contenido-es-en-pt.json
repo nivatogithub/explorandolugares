@@ -91,8 +91,8 @@
       },
       "latitude": null,
       "longitude": null,
-      "map_url": "",
-      "map_status": "pending_documented_point",
+      "map_url": "https://maps.app.goo.gl/hdxQxK6Ngg35fiUE8",
+      "map_status": "verified_named_google_maps_share",
       "translations": {
         "es": {
           "name": "Malecón de Riohacha",
@@ -112,7 +112,8 @@
           "external_url": "",
           "external_label": ""
         }
-      }
+      },
+      "map_verified_name": "Malecón Playa"
     },
     {
       "slug": "paseo-marina-muelle",
@@ -128,7 +129,7 @@
       },
       "latitude": 11.5528902,
       "longitude": -72.9087658,
-      "map_url": "https://maps.google.com/?q=11.5528902,-72.9087658",
+      "map_url": "https://maps.app.goo.gl/d9WjRGySXWZ7SC197",
       "translations": {
         "es": {
           "name": "Muelle turístico de Riohacha",
@@ -149,7 +150,8 @@
           "external_label": ""
         }
       },
-      "map_status": "verified_cartographic_point"
+      "map_status": "verified_named_google_maps_share",
+      "map_verified_name": "Muelle Turístico"
     },
     {
       "slug": "plaza-almirante-padilla",
@@ -165,7 +167,7 @@
       },
       "latitude": 11.55139,
       "longitude": -72.90965,
-      "map_url": "https://maps.google.com/?q=11.55139,-72.90965",
+      "map_url": "https://maps.app.goo.gl/z7FtthcKLaZrDYgF6",
       "translations": {
         "es": {
           "name": "Plaza Almirante Padilla",
@@ -186,7 +188,8 @@
           "external_label": ""
         }
       },
-      "map_status": "verified_cartographic_point"
+      "map_status": "verified_named_google_maps_share",
+      "map_verified_name": "Plaza José Prudencio Padilla"
     },
     {
       "slug": "valle-cangrejos",
@@ -223,7 +226,7 @@
           "external_label": ""
         }
       },
-      "map_status": "pending_precise_public_pin"
+      "map_status": "pending_named_google_maps_share"
     },
     {
       "slug": "catedral-remedios",
@@ -239,8 +242,8 @@
       },
       "latitude": null,
       "longitude": null,
-      "map_url": "",
-      "map_status": "pending_documented_point",
+      "map_url": "https://maps.app.goo.gl/VefTnX9ZGVzPHvr89",
+      "map_status": "verified_named_google_maps_share",
       "translations": {
         "es": {
           "name": "Catedral Nuestra Señora de los Remedios",
@@ -260,7 +263,8 @@
           "external_url": "",
           "external_label": ""
         }
-      }
+      },
+      "map_verified_name": "Catedral Nuestra Señora de los Remedios"
     },
     {
       "slug": "parque-nicolas-federman",
@@ -276,8 +280,8 @@
       },
       "latitude": null,
       "longitude": null,
-      "map_url": "",
-      "map_status": "pending_documented_point",
+      "map_url": "https://maps.app.goo.gl/YJwDfZA8SKZk5PudA",
+      "map_status": "verified_named_google_maps_share",
       "translations": {
         "es": {
           "name": "Parque Nicolás de Federman",
@@ -297,7 +301,8 @@
           "external_url": "",
           "external_label": ""
         }
-      }
+      },
+      "map_verified_name": "Parque Nicolás de Federman (parque de los cañones)"
     },
     {
       "slug": "santuario-flamencos",
@@ -313,8 +318,8 @@
       },
       "latitude": null,
       "longitude": null,
-      "map_url": "",
-      "map_status": "pending_documented_point",
+      "map_url": "https://maps.app.goo.gl/dffxgcJzT2jzxeu98",
+      "map_status": "verified_named_google_maps_share",
       "translations": {
         "es": {
           "name": "Santuario de Flora y Fauna Los Flamencos",
@@ -334,7 +339,8 @@
           "external_url": "",
           "external_label": ""
         }
-      }
+      },
+      "map_verified_name": "Santuario de Fauna y Flora Los Flamencos"
     },
     {
       "slug": "playas-mayapo",
@@ -350,8 +356,8 @@
       },
       "latitude": null,
       "longitude": null,
-      "map_url": "",
-      "map_status": "pending_documented_point",
+      "map_url": "https://maps.app.goo.gl/Fjhxyrwsg8nQUC7y5",
+      "map_status": "verified_named_google_maps_share",
       "translations": {
         "es": {
           "name": "Playas de Mayapo (alrededores)",
@@ -371,7 +377,8 @@
           "external_url": "",
           "external_label": ""
         }
-      }
+      },
+      "map_verified_name": "Playas de Mayapo"
     },
     {
       "slug": "avistamiento-flamencos",
@@ -387,7 +394,7 @@
       },
       "latitude": null,
       "longitude": null,
-      "map_url": "",
+      "map_url": "https://maps.app.goo.gl/dffxgcJzT2jzxeu98",
       "translations": {
         "es": {
           "name": "Avistamiento de flamencos en Camarones",
@@ -408,7 +415,8 @@
           "external_label": ""
         }
       },
-      "map_status": "pending_precise_access_pin"
+      "map_status": "verified_named_google_maps_share",
+      "map_verified_name": "Santuario de Fauna y Flora Los Flamencos"
     },
     {
       "slug": "encuentro-cultural-wayuu",
@@ -445,7 +453,7 @@
           "external_label": ""
         }
       },
-      "map_status": "not_applicable_variable_host"
+      "map_status": "variable_meeting_point_no_fixed_map"
     },
     {
       "slug": "excursion-alta-guajira",
@@ -482,7 +490,7 @@
           "external_label": ""
         }
       },
-      "map_status": "not_applicable_variable_departure"
+      "map_status": "variable_meeting_point_no_fixed_map"
     }
   ]
 }
