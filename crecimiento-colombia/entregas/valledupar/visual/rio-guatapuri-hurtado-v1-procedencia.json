@@ -1,0 +1,63 @@
+{
+  "id": "rio-guatapuri-hurtado-v1",
+  "destination": "valledupar",
+  "role": "place_card",
+  "status": "draft_pending_human_approval",
+  "generated_date": "2026-10-22",
+  "tool": "built-in image_gen",
+  "model": "not_exposed_by_tool",
+  "master": ".local/valledupar/rio-guatapuri-hurtado-v1.png",
+  "web": "crecimiento-colombia/entregas/valledupar/visual/rio-guatapuri-hurtado-v1.webp",
+  "prompt": "crecimiento-colombia/entregas/valledupar/visual/rio-guatapuri-hurtado-v1-prompt.txt",
+  "input": {
+    "path": "crecimiento-colombia/entregas/valledupar/visual/referencias/guatapuri-jdvillalobos-2012.jpg",
+    "url": "https://commons.wikimedia.org/wiki/File:Río_Guatapurí,_Valledupar.JPG",
+    "author": "Jdvillalobos",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "capture_date": "2012-04-14",
+    "sha256": "7c5bab445ebbb53b5a15db95d23b2e21e9d3f8be5de817048514eb1477867f4f"
+  },
+  "public_attribution_required": true,
+  "derivative_license": "CC BY-SA 3.0",
+  "public_attribution": "Adaptación ilustrada con IA de Río Guatapurí, Valledupar.JPG, Jdvillalobos, CC BY-SA 3.0. Cambios: tinta/gouache, encuadre, omisión de bañistas y carpas temporales.",
+  "attribution_integration_status": "pending_before_promotion",
+  "sha256": {
+    "master": "ee34e1ab64fc6cae51e9b9fc0c631f780114e0c643508fbe1057ca5cc4bb6278",
+    "web": "b077d072bdd76e20a257f76dbc9beda41df4c4e27974000e4e49bda88aaf538c"
+  },
+  "dimensions": {
+    "master": [
+      1536,
+      1024
+    ],
+    "web": [
+      1200,
+      800
+    ]
+  },
+  "web_bytes": 333102,
+  "review": {
+    "style": "pass clearly gouache and ink",
+    "geography": "pass approximate: wide river foreground, white cobble shore left, wooded right shore, yellow bridge far left retained",
+    "statue": "Only distant small gold shape; NOT suitable for card specifically about Sirena statue anatomy",
+    "current_condition": "not certified: source2012, no access/bathing promise",
+    "future_malecon": "absent",
+    "human": "pending"
+  },
+  "sources": [
+    {
+      "url": "https://www.uparmonumental.com/la-sirena-vallenata-de-hurtado/",
+      "supports": "Sirena at Hurtado left bank Guatapurí, identity contrast for small statue in reference"
+    },
+    {
+      "url": "https://www.radioguatapuri.com/noticias/limpieza-balneario-hurtado-valledupar",
+      "supports": "2026 removal of temporary infrastructure; not evidence of swimming clearance"
+    }
+  ],
+  "alt": {
+    "es": "Interpretación ilustrada del río Guatapurí en Hurtado, con su ribera de piedras y el puente al fondo.",
+    "en": "Illustrated interpretation of the Guatapurí River at Hurtado, with a stony shore and the bridge in the background.",
+    "pt-BR": "Interpretação ilustrada do rio Guatapurí em Hurtado, com margem de pedras e a ponte ao fundo."
+  }
+}

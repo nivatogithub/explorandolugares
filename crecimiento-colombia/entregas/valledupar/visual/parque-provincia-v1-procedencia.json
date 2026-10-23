@@ -1,0 +1,59 @@
+{
+  "id": "parque-provincia-v1",
+  "destination": "valledupar",
+  "role": "place_card",
+  "status": "draft_approximate_pending_human_approval",
+  "generated_date": "2026-10-22",
+  "tool": "built-in image_gen",
+  "input_images": [],
+  "method": "Original approximate illustration from factual invariants; copyrighted photos observed for structure but never sent as input",
+  "master": ".local/valledupar/parque-provincia-v1.png",
+  "web": "crecimiento-colombia/entregas/valledupar/visual/parque-provincia-v1.webp",
+  "prompt": "crecimiento-colombia/entregas/valledupar/visual/parque-provincia-v1-prompt.txt",
+  "sha256": {
+    "master": "6821bdd84e6cff26fa8807083017f1fb17b87e981224aba9d127f10f0a76f993",
+    "web": "0bbcea9a3af8b12895afc5fe927749aaa10b0d8fb84807d33db58ea0968d9afd"
+  },
+  "dimensions": {
+    "master": [
+      1536,
+      1024
+    ],
+    "web": [
+      1200,
+      800
+    ]
+  },
+  "web_bytes": 377580,
+  "observational_sources": [
+    {
+      "url": "https://roperoaventuras.com/2019/10/16/el-nuevo-parque-de-la-provincia/",
+      "author": "JoseLuisRopero2019",
+      "image": "https://roperoaventuras.com/wp-content/uploads/2019/10/parque-de-la-provincia-19.jpg",
+      "proves": "Blue-white four-engine propeller plane nose right on gravel beneath mature trees",
+      "permission_as_input": "not established, NOT used"
+    },
+    {
+      "url": "https://ruudleeuw.com/off-airport-lam.htm",
+      "proves": "DC6 C118A N44916 preserved at park",
+      "permission_as_input": "not established, NOT used"
+    }
+  ],
+  "review": {
+    "style": "pass visible gouache/ink",
+    "aircraft_identity": "approximate: legacy propliner DC6 silhouette, nearwing two3bladepropellers, gear down, white/blue nose",
+    "spatial_identity": "approximate same aircraft-in-trees context, NOT exact camera or full park plan",
+    "differences": [
+      "Advertising livery omitted, not same exact markings",
+      "Some wing/airframe edge cropped left",
+      "Tree arrangement simplified, generic exact positions not certified"
+    ],
+    "current_condition": "not certified; latest2026 maintenance issues prevent any assertion of restored operation",
+    "human": "pending"
+  },
+  "alt": {
+    "es": "Interpretación ilustrada aproximada del avión preservado entre árboles en el parque La Provincia.",
+    "en": "Approximate illustrated interpretation of the preserved aircraft among trees in La Provincia Park.",
+    "pt-BR": "Interpretação ilustrada aproximada do avião preservado entre árvores no parque La Provincia."
+  }
+}

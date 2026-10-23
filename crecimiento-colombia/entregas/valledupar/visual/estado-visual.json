@@ -1,0 +1,41 @@
+{
+  "updated": "2026-10-22",
+  "ready_drafts": [
+    "portada-v1",
+    "plaza-alfonso-lopez-v1",
+    "parranda-vallenata-v2",
+    "rio-guatapuri-hurtado-v1",
+    "balneario-la-mina-v1",
+    "aves-los-besotes-v1",
+    "parque-provincia-v1",
+    "recorrido-cultural-vallenato-v1",
+    "parque-leyenda-vallenata-v2"
+  ],
+  "pending": {
+    "museo-acordeon": {
+      "status": "approximate_draft_created_technical_identity_review",
+      "sources": [
+        "https://www.museodelacordeonvalledupar.com/",
+        "https://www.radionacional.co/cultura/tradiciones/museo-del-acordeon-valledupar-2024-casa-beto-murgas"
+      ],
+      "confirmed": "Private house museum with accordion collection, Carrera17 9A18, no generic fictional museum interior",
+      "draft": "museo-acordeon-v2.webp",
+      "reason": "Two fact-derived trials, exact red emblem still mismatch; do not promote as verified depiction"
+    },
+    "callejones-purrututu-mahoma": {
+      "status": "visual_identity_input_pending",
+      "sources": [
+        "https://cesar.gov.co/d/filesmain/ofiturismo/plegable_valledupar_2018.pdf",
+        "https://www.radionacional.co/noticias-colombia/con-muralismo-valledupar-quiere-ser-la-capital-colorida-del-caribe",
+        "https://www.hotelboutiquevalledupar.com/ubicacion-valledupar-centro"
+      ],
+      "confirmed": "Purrututu contains documented murals and paved lane; Mahoma has distinct brick/stucco architecture. They must not be fused into fictional street.",
+      "blocker": "No adaptation-permitted photo identified; exact architectural scene and murals require an authorized reference or more complete separately contrasted invariant sheet. Generic painted alley would not identify real place.",
+      "generation": "not attempted, no invented architecture or mural as filler"
+    }
+  },
+  "resolved_notes": {
+    "rio-guatapuri-hurtado": "New Jdvillalobos2012 reference includes yellow bridge and Sirena, unlike uncertain prior canyon images. Draft generated and compared.",
+    "balneario-la-mina": "Emercab2013 Commons with explicit Badillo/LaMina identity and CC BY-SA3.0. Generated adaptation compared."
+  }
+}

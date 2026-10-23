@@ -1,0 +1,148 @@
+[
+  {
+    "destination": "valledupar",
+    "slug": "rio-guatapuri-hurtado",
+    "status": "verified_cartographic_point",
+    "latitude": 10.50133,
+    "longitude": -73.2708,
+    "map_url": "https://maps.google.com/?q=10.50133,-73.2708",
+    "point_kind": "Punto cartográfico BalnearioHurtado-SalidaAPatillal junto aPuenteHurtado; no punto enLaMina/ríoBadillo.",
+    "confidence_limits": "No certifica habilitación de baño, ruta de conducción ni accesibilidad tras intervenciones. Conservar aviso editorial de consultar condiciones.",
+    "sources": [
+      {
+        "url": "https://mapcarta.com/es/N4362623490",
+        "evidence": "OSMnode4362623490 BalnearioHurtado-SalidaAPatillal10.50133,-73.2708; PuenteHurtado y ParqueJuglares cercanos."
+      },
+      {
+        "url": "https://www.valledupar-cesar.gov.co/MiMunicipio/Documents/Postulacion%20Valledupar%20_MONUMENTOS%20MUSICALES_.pdf",
+        "evidence": "Inventario municipal sitúa glorietaHurtado a orillas delGuatapurí. No traslado sus monumentos como coordenadas del balneario."
+      }
+    ]
+  },
+  {
+    "destination": "valledupar",
+    "slug": "plaza-alfonso-lopez",
+    "status": "verified_cartographic_point",
+    "latitude": 10.47754,
+    "longitude": -73.24444,
+    "map_url": "https://maps.google.com/?q=10.47754,-73.24444",
+    "point_kind": "Centro del polígono de plaza, no estacionamiento ni puerta deAlcaldía.",
+    "confidence_limits": "La URL ubica la plaza concreta; no acredita acceso de automóviles a zona peatonal.",
+    "sources": [
+      {
+        "url": "https://mapcarta.com/es/W163759683",
+        "evidence": "OSMway163759683 PlazaAlfonsoLópezDeValledupar10.47754,-73.24444."
+      },
+      {
+        "url": "https://valledupar-cesar.gov.co/MiMunicipio/Documents/Postulacion%20Valledupar%20_ESCENARIOS%20MUSICALES_.pdf",
+        "evidence": "Inventario municipal confirma plazaMayor/AlfonsoLópez y tarimaFranciscoElHombre."
+      },
+      {
+        "url": "https://www.valledupar-cesar.gov.co/Transparencia/Paginas/Plan-Anual-de-Adquisiciones.aspx",
+        "evidence": "Dirección institucional Carrera5#15-69, PlazaAlfonsoLópez; contraste de identidad urbana."
+      }
+    ]
+  },
+  {
+    "destination": "valledupar",
+    "slug": "museo-acordeon",
+    "status": "previously_verified_point_retained",
+    "latitude": 10.47868,
+    "longitude": -73.25966,
+    "map_url": "https://maps.google.com/?q=10.47868,-73.25966",
+    "point_kind": "Museo delAcordeón, Carrera17#9A-18, dato ya verificado por coordinador.",
+    "confidence_limits": "Se conserva el dato existente sin afirmar nueva comprobación de apertura o reservas.",
+    "sources": [
+      {
+        "url": "https://mapcarta.com/es/N6443678722",
+        "evidence": "Coordenadas y dirección comprobadas previamente por coordinador."
+      },
+      {
+        "url": "https://www.museodelacordeonvalledupar.com/",
+        "evidence": "Sitio propio usado previamente para contraste de dirección; solo auditoría interna."
+      }
+    ]
+  },
+  {
+    "destination": "valledupar",
+    "slug": "parque-provincia",
+    "status": "verified_cartographic_point",
+    "latitude": 10.499,
+    "longitude": -73.2668,
+    "map_url": "https://maps.google.com/?q=10.499,-73.2668",
+    "point_kind": "Punto representativo del polígono delParqueProvincia a orillas delGuatapurí, no puerta específica.",
+    "confidence_limits": "OSM clasifica el polígono natural=wood; el nombre y entorno se contrastan con ficha deComisiónFílmica. No se certifica ruta de conducción al centro del polígono.",
+    "sources": [
+      {
+        "url": "https://mapcarta.com/es/W903161233",
+        "evidence": "OSMway903161233 ParqueDeLaProvincia10.499,-73.2668, enValledupar, junto aParqueLinealHurtado."
+      },
+      {
+        "url": "https://comisionfilmicacolombia.com/locacion/parque-de-la-provincia/",
+        "evidence": "Ficha institucional de locaciones confirma parque urbano junto alGuatapurí. Solo identidad y entorno: no se copian fotos ni texto promocional."
+      }
+    ]
+  },
+  {
+    "destination": "valledupar",
+    "slug": "balneario-la-mina",
+    "status": "verified_geosite_point",
+    "latitude": 10.705278,
+    "longitude": -73.284167,
+    "map_url": "https://maps.google.com/?q=10.705278,-73.284167",
+    "point_kind": "Punto del geositio BalnearioLaMina enríoBadillo; no centro del corregimiento, puerta ni parqueadero.",
+    "confidence_limits": "Coordenada de inventario geológico2020 (precisión original1segundo, redondeada6decimales por conversión). No certifica acceso actual, baño ni conducción hasta poza.",
+    "sources": [
+      {
+        "url": "https://repository.eafit.edu.co/bitstreams/6688f1f9-59cb-4e8f-94f4-aa427d9e0015/download",
+        "evidence": "Trabajo de grado EAFIT2020 CuantificaciónDeLaGeodiversidad; PDFp38/códigoBd_01, nombreBalnearioLaMina, coordenadas10°42′19″N73°17′03″W. Dato atribuido aGoogleEarth en inventario, no coordenada de cámara."
+      },
+      {
+        "url": "https://mapcarta.com/es/19702444",
+        "evidence": "Centro de pueblo LaMina10.70325,-73.29141: sirve para distinguirlo del balneario; NO usado como ubicación del atractivo."
+      }
+    ]
+  },
+  {
+    "destination": "valledupar",
+    "slug": "recorrido-cultural-vallenato",
+    "status": "not_applicable_variable_departure",
+    "latitude": null,
+    "longitude": null,
+    "map_url": "",
+    "point_kind": "Experiencia guiada con punto de encuentro acordado.",
+    "confidence_limits": "No sustituir recorrido por oficina deoperador ni duplicar pin de plaza como punto de salida garantizado.",
+    "sources": []
+  },
+  {
+    "destination": "valledupar",
+    "slug": "parranda-vallenata",
+    "status": "not_applicable_variable_venue",
+    "latitude": null,
+    "longitude": null,
+    "map_url": "",
+    "point_kind": "Encuentro musical organizado de sede variable.",
+    "confidence_limits": "No atribuir sede fija, dirección de empresa o negocio a experiencia genérica.",
+    "sources": []
+  },
+  {
+    "destination": "valledupar",
+    "slug": "aves-los-besotes",
+    "status": "pending_precise_access_pin",
+    "latitude": null,
+    "longitude": null,
+    "map_url": "",
+    "point_kind": "Reserva/parque regional con acceso concreto aún no contrastado.",
+    "confidence_limits": "RUNAP acredita polígono de área protegida, no puerta. Dataset biológico acredita área de muestreo, no acceso. Se rechaza usar coordenada comercial10.5740523,-73.2721644 sin contraste, centro de polígono, predioLosBezotes ajeno o comienzo de sendero particular como entrada garantizada.",
+    "sources": [
+      {
+        "url": "https://runapadmin.parquesnacionales.gov.co/default/general/descargardocumento?did=926",
+        "evidence": "Acuerdo050/2013 homologación ParqueNaturalRegionalLosBesotes; polígono enLosCorazones/RíoSeco, no acceso puntual."
+      },
+      {
+        "url": "https://ipt.biodiversidad.co/sib/resource?r=abejas_besotes",
+        "evidence": "UniversidadNacional/SIB: cobertura biológica delPNRLosBesotes, no punto de ingreso turístico."
+      }
+    ]
+  }
+]

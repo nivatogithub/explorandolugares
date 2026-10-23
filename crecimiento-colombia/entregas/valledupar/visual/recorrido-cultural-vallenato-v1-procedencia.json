@@ -1,0 +1,82 @@
+{
+  "id": "recorrido-cultural-vallenato-v1",
+  "destination": "valledupar",
+  "role": "experience_card",
+  "status": "draft_pending_human_approval",
+  "generated_date": "2026-10-22",
+  "tool": "built-in image_gen",
+  "model": "not_exposed_by_tool",
+  "master": ".local/valledupar/recorrido-cultural-vallenato-v1.png",
+  "web": "crecimiento-colombia/entregas/valledupar/visual/recorrido-cultural-vallenato-v1.webp",
+  "prompt": "crecimiento-colombia/entregas/valledupar/visual/recorrido-cultural-vallenato-v1-prompt.txt",
+  "input": {
+    "path": "crecimiento-colombia/entregas/valledupar/visual/referencias/plaza-jdvillalobos-2007.jpg",
+    "url": "https://commons.wikimedia.org/wiki/File:Valledupar_-_Plaza_Alfonso_López.jpg",
+    "author": "Jdvillalobos",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0/",
+    "capture_date_catalog": "2007-05-01",
+    "exif_date": "2007-04-30",
+    "date_uncertainty": "Catalogue and EXIF differ one day; do not claim precise capture date",
+    "sha256": "7f09c6ce4046cd2ab179513724143fd8d44f03fdd5a029a187e994ec259ce625"
+  },
+  "public_attribution_required": true,
+  "public_attribution": "Ilustración temática con IA sobre entorno de «Valledupar - Plaza Alfonso López», Jdvillalobos, CC BY 3.0. Cambios: tinta/gouache, encuadre y adición de guía y visitantes anónimos.",
+  "attribution_integration_status": "pending_before_promotion",
+  "sha256": {
+    "master": "9794206304a0b4dc78aee30210e54148a8fd29f540efa166438c259e6510743b",
+    "web": "967a3c82adf9ecc8cd2a3763815d00cf6ce181dd977dd65a38892982507e395c"
+  },
+  "dimensions": {
+    "master": [
+      1536,
+      1024
+    ],
+    "web": [
+      1200,
+      800
+    ]
+  },
+  "web_bytes": 283068,
+  "invariants_review": [
+    {
+      "feature": "White church single tower left / broad mango right",
+      "result": "pass approximate reference geometry"
+    },
+    {
+      "feature": "Clearly painted ink/gouache",
+      "result": "pass"
+    },
+    {
+      "feature": "Guide/2visitors anonymous with natural anatomy",
+      "result": "pass"
+    },
+    {
+      "feature": "Exact itinerary and current conditions",
+      "result": "not claimed"
+    }
+  ],
+  "alt": {
+    "es": "Ilustración temática de una visita guiada en la plaza Alfonso López de Valledupar.",
+    "en": "Thematic illustration of a guided visit in Alfonso López Square, Valledupar.",
+    "pt-BR": "Ilustração temática de uma visita guiada na praça Alfonso López de Valledupar."
+  },
+  "factual_sources": [
+    {
+      "url": "https://cesar.gov.co/d/filesmain/ofiturismo/plan_sectorial_turistico.pdf",
+      "supports": "Large mango at centre of Alfonso López square is symbol of plaza identity",
+      "consulted": "2026-10-22"
+    },
+    {
+      "url": "https://colombia.travel/es/valledupar?language=es",
+      "supports": "City and central Plaza Alfonso López identity",
+      "consulted": "2026-10-22"
+    }
+  ],
+  "limitations": [
+    "Not a photograph or current-condition record",
+    "No preproduction/public promotion without exact-version human approval and public CC attribution",
+    "No future Guatapurí promenade depicted"
+  ],
+  "depiction": "Thematic anonymous guide and two travellers in verified plaza setting; not photograph or promise of an exact provider itinerary"
+}

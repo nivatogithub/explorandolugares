@@ -1,0 +1,59 @@
+{
+  "id": "museo-acordeon-v2",
+  "destination": "valledupar",
+  "status": "draft_approximate_identity_review_required",
+  "promotion": "blocked_technical_review_and_human_approval",
+  "tool": "built-in image_gen",
+  "generated_date": "2026-10-22",
+  "master": ".local/valledupar/museo-acordeon-v2.png",
+  "web": "crecimiento-colombia/entregas/valledupar/visual/museo-acordeon-v2.webp",
+  "prompt": "crecimiento-colombia/entregas/valledupar/visual/museo-acordeon-v2-prompt.txt",
+  "input_images": [],
+  "method": "No protected photo submitted to generator. Approximate composition from documented architectural invariants. Photographs viewed only for factual research.",
+  "observational_sources": [
+    {
+      "url": "https://www.museodelacordeonvalledupar.com/galeria",
+      "photo_url": "https://static.wixstatic.com/media/8ba524_a95c88e93ce14cfa8aaa429c94a0a497.jpg",
+      "author": "Museum site; individual photographer unspecified",
+      "adaptation_permission": "not established; NOT used as generation input"
+    },
+    {
+      "url": "https://roperoaventuras.com/2020/05/12/ensenanzas-y-anecdotas-del-maestro-beto-murgas/",
+      "author": "Jose Luis Ropero, 2019 photograph",
+      "adaptation_permission": "not established; NOT used as generation input"
+    }
+  ],
+  "invariants": {
+    "pass": [
+      "Single-storey white stucco facade and curved terracotta roof",
+      "Left dark doorway, wide black barred window centre, black courtyard gate right",
+      "Red accordion emblem on slender concrete pedestal right of window"
+    ],
+    "approximate": [
+      "Window bars count and scale",
+      "Floor perspective and threshold",
+      "Wall plaster details"
+    ],
+    "fail": [
+      "Emblem still does not reproduce verified fan shape/orientation accurately; structural identity review needed"
+    ],
+    "v1_rejected": "Invented exposed wooden roof brackets and conventional symmetrical accordion; corrected in v2",
+    "v2_result": "Closer facade but emblem mismatch remains; no claim of exact identity"
+  },
+  "sha256": {
+    "master": "39f69d92fd242888bc99aec174f57b72a5eec794a49352f5172643cc5d557904",
+    "web": "1e37b0ae7a886511f81165fb2ad8079f2f85e31385221c18ed6a4928c6a2bceb"
+  },
+  "dimensions": {
+    "master": [
+      1536,
+      1024
+    ],
+    "web": [
+      1200,
+      800
+    ]
+  },
+  "web_bytes": 192870,
+  "required_next_step": "Use authorized exact facade reference as image input, or owner accepts explicitly approximate rendition after technical review; no automatic promotion."
+}

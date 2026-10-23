@@ -1,0 +1,21 @@
+{
+  "destination": "valledupar",
+  "count": 30,
+  "unique_names": 30,
+  "nonempty_categories": {
+    "hospedaje": 8,
+    "alimentacion": 10,
+    "vida-nocturna": 1,
+    "experiencias": 1,
+    "cultura": 1,
+    "transporte": 3,
+    "comercio": 3,
+    "salud": 3
+  },
+  "policy": "Mostrar solo categorías con datos; no añadir relleno ni afirmar verificación por cumplir 30. Códigos reutilizados del portal; filtros cortos traducidos.",
+  "still_pending": [
+    "Contraste directo de fichas secundarias",
+    "Ubicación municipal exacta y deduplicación con catálogo existente antes de importar",
+    "Validación de operación y representación; no contactar sin autorización"
+  ]
+}
