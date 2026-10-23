@@ -26,7 +26,7 @@
     const isNew = mode === 'new_business';
     for(const name of ['business_registration']){const field=form.querySelector(`[name="${name}"]`);if(field)field.required=!!mode;}
     if(authorityInput)authorityInput.required=isNew&&relationship?.value==='authorized_administrator';
-    const details=document.querySelector('#registration-new-details');if(details){details.hidden=true;details.disabled=true;}
+    const details=document.querySelector('#registration-new-details');if(details){details.hidden=true;details.disabled=true;}const contacts=document.querySelector('#registration-contact-details');if(contacts){contacts.hidden=true;contacts.disabled=true;}
     if(isNew&&!newName.value.trim())newName.value=search.value.trim();
     newNameWrap.hidden = !isNew;
     newName.required = isNew;
@@ -39,7 +39,7 @@
     });
   }
 
-  function syncFree(){const chosen=form.querySelector('[name="plan_code"]:checked')?.value;const free=chosen==='free';const showDetails=form.dataset.registrationWizardStep==='3';const continuation=document.querySelector('#registration-continuation');if(continuation){continuation.hidden=!showDetails||!type.value||!chosen;continuation.disabled=!showDetails||!type.value||!chosen;}submit.disabled=!showDetails||!type.value||!chosen;const period=form.querySelector('.subscription-choice-period');if(period){period.hidden=free||!chosen;for(const control of period.querySelectorAll('select'))control.disabled=free||!chosen;}const distinct=document.querySelector('#registration-distinct-business');if(distinct){distinct.hidden=!showDetails||!free||type.value!=='new_business';distinct.disabled=!showDetails||!free||type.value!=='new_business';}const details=document.querySelector('#registration-new-details');if(details){details.hidden=!showDetails||!chosen||!type.value;details.disabled=!showDetails||!chosen||!type.value;}}
+  function syncFree(){const chosen=form.querySelector('[name="plan_code"]:checked')?.value;const free=chosen==='free';const showDetails=form.dataset.registrationWizardStep==='3';const continuation=document.querySelector('#registration-continuation');if(continuation){continuation.hidden=!showDetails||!type.value||!chosen;continuation.disabled=!showDetails||!type.value||!chosen;}submit.disabled=!showDetails||!type.value||!chosen;const period=form.querySelector('.subscription-choice-period');if(period){period.hidden=free||!chosen;for(const control of period.querySelectorAll('select'))control.disabled=free||!chosen;}const distinct=document.querySelector('#registration-distinct-business');if(distinct){distinct.hidden=!showDetails||!free||type.value!=='new_business';distinct.disabled=!showDetails||!free||type.value!=='new_business';}const details=document.querySelector('#registration-new-details');if(details){details.hidden=!showDetails||!chosen||!type.value;details.disabled=!showDetails||!chosen||!type.value;}const contacts=document.querySelector('#registration-contact-details');if(contacts){const visible=showDetails&&!!type.value&&['featured','page','page_premium'].includes(chosen);contacts.hidden=!visible;contacts.disabled=!visible;}}
   form.addEventListener('change',event=>{if(event.target.name==='plan_code')syncFree();});
   form.addEventListener('operator-eligibility-change',syncFree);syncFree();
 
