@@ -18,7 +18,7 @@
       copy.textContent = copy.textContent.replace('hasta cuatro productos o servicios', 'hasta cinco productos o servicios');
     });
     if (continuation?.querySelector('legend')) continuation.querySelector('legend').textContent = 'Información para enviar la solicitud';
-    if (submit) submit.textContent = 'Enviar para revisión';
+    if (submit) submit.textContent = 'Guardar solicitud';
 
     const setPlanField = (selector, visible, required = false) => {
       form.querySelectorAll(selector).forEach((node) => {
@@ -48,6 +48,9 @@
       const choice = plan();
       const editorial = ['featured', 'page', 'page_premium'].includes(choice);
       const premium = choice === 'page_premium';
+      if (submit) submit.textContent = choice && choice !== 'free'
+        ? 'Guardar y continuar al pago'
+        : 'Guardar solicitud para revisión';
       setPlanField('[data-plan-field="summary"]', editorial, editorial);
       setPlanField('[data-plan-field="description"]', premium, premium);
       setPlanField('[data-plan-field="hours"]', ['page', 'page_premium'].includes(choice));
