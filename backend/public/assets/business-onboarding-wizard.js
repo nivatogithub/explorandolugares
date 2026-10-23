@@ -156,16 +156,20 @@
     const renderStep = () => {
       if (!finder || !planStage || !continuation) return;
       const first = step === 1;
+      const planStep = step === 2;
       const selected = !!type?.value;
+      const premiumChoice = plan() === 'page_premium';
+      const showDetails = (planStep && !premiumChoice) || step === 3;
       form.dataset.registrationWizardStep = String(step);
+      form.dataset.registrationPremiumDetails = planStep && premiumChoice ? '1' : '0';
       finder.hidden = !first;
       finder.disabled = !first;
-      planStage.hidden = first || !selected;
-      planStage.disabled = first || !selected;
-      controls.hidden = !first;
+      planStage.hidden = !planStep || !selected;
+      planStage.disabled = !planStep || !selected;
+      controls.hidden = !(first || (planStep && premiumChoice));
       back.hidden = first;
-      stepTwo.forEach((node) => { node.hidden = first; node.disabled = first; });
-      if (!first) form.dispatchEvent(new Event('operator-eligibility-change'));
+      stepTwo.forEach((node) => { node.hidden = !showDetails; node.disabled = !showDetails; });
+      if (showDetails) form.dispatchEvent(new Event('operator-eligibility-change'));
       syncPlan();
       window.scrollTo({top: form.getBoundingClientRect().top + window.scrollY - 16, behavior: 'smooth'});
     };
@@ -190,16 +194,20 @@
       controls.append(warning, next);
       continuation.before(back);
       next.addEventListener('click', () => {
-        if (!type?.value) {
+        if (step === 1 && !type?.value) {
           warning.textContent = 'Primero busca el negocio y elige si lo vas a reclamar o crear.';
           warning.hidden = false;
           return;
         }
-        step = 2;
+        if (step === 2 && !premiumChoice) return;
+        if (step === 2 && premiumChoice) step = 3;
+        else step = 2;
+        next.textContent = step === 3 ? 'Continuar a planes' : 'Continuar con información Premium';
         renderStep();
       });
       back.addEventListener('click', () => {
-        step = 1;
+        step = step === 3 ? 2 : 1;
+        next.textContent = step === 1 ? 'Continuar a planes' : 'Continuar con información Premium';
         renderStep();
       });
       form.addEventListener('operator-eligibility-change', () => { if (step === 1) renderStep(); });
