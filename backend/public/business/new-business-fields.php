@@ -1,5 +1,6 @@
 <?php if(!(isset($service))){http_response_code(404);exit;} ?>
 <link rel="stylesheet" href="/assets/business-registration-final-step.css?v=1">
+<link rel="stylesheet" href="/assets/business-registration-selects.css?v=1">
 <?php foreach(($_POST['temporary_uploads']??[]) as $uploadKind=>$uploads):foreach(is_array($uploads)?$uploads:[] as $uploadSlot=>$uploadId):?>
   <input type="hidden" name="temporary_uploads[<?=esc((string)$uploadKind)?>][<?=esc((string)$uploadSlot)?>]" value="<?=esc((string)$uploadId)?>" data-temp-upload="<?=esc((string)$uploadKind.'-'.(string)$uploadSlot)?>">
 <?php endforeach;endforeach ?>
