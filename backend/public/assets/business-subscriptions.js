@@ -49,7 +49,7 @@ document.querySelectorAll('.destination-admin-list').forEach(section=>{
 document.querySelectorAll('a[href*="/business/editorial.php"]').forEach(link=>{
  if(!link.textContent.includes('Editar y revisar'))return;
  const url=new URL(link.href,location.origin);url.searchParams.set('preview','card');
- link.href=url.toString();link.target='_blank';link.rel='noopener';
+ link.href=url.toString();link.removeAttribute('target');link.removeAttribute('rel');
  link.textContent='Ver mi tarjeta con los datos enviados';
  const copy=link.parentElement?.querySelector('p');
  if(copy)copy.textContent='Revisa la tarjeta privada construida con los datos y fotografías que enviaste. Aún no es pública ni permite editar la solicitud desde esta etapa.';
