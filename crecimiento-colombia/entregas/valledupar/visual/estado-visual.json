@@ -8,7 +8,8 @@
     "balneario-la-mina-v1",
     "aves-los-besotes-v1",
     "parque-provincia-v1",
-    "recorrido-cultural-vallenato-v1"
+    "recorrido-cultural-vallenato-v1",
+    "parque-leyenda-vallenata-v2"
   ],
   "pending": {
     "museo-acordeon": {
@@ -20,6 +21,17 @@
       "confirmed": "Private house museum with accordion collection, Carrera17 9A18, no generic fictional museum interior",
       "draft": "museo-acordeon-v2.webp",
       "reason": "Two fact-derived trials, exact red emblem still mismatch; do not promote as verified depiction"
+    },
+    "callejones-purrututu-mahoma": {
+      "status": "visual_identity_input_pending",
+      "sources": [
+        "https://cesar.gov.co/d/filesmain/ofiturismo/plegable_valledupar_2018.pdf",
+        "https://www.radionacional.co/noticias-colombia/con-muralismo-valledupar-quiere-ser-la-capital-colorida-del-caribe",
+        "https://www.hotelboutiquevalledupar.com/ubicacion-valledupar-centro"
+      ],
+      "confirmed": "Purrututu contains documented murals and paved lane; Mahoma has distinct brick/stucco architecture. They must not be fused into fictional street.",
+      "blocker": "No adaptation-permitted photo identified; exact architectural scene and murals require an authorized reference or more complete separately contrasted invariant sheet. Generic painted alley would not identify real place.",
+      "generation": "not attempted, no invented architecture or mural as filler"
     }
   },
   "resolved_notes": {

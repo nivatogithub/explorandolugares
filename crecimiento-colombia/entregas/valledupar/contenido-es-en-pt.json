@@ -68,8 +68,8 @@
       "pt-BR": []
     },
     "hero_image": {
-      "path": "visual/portada-v1.webp",
-      "sha256": "62017a7abf840b72365caa447552a02d9cc403e700c115aa4a63cf3313835f62",
+      "path": "visual/portada-revolucion-v2.webp",
+      "sha256": "7ea65e2394c23eaea4cf5f3a1f9ebf00cf124aa340e3567341aa2a5d818f725e",
       "width": 1200,
       "height": 800,
       "status": "pending_human_review"
@@ -263,9 +263,83 @@
       "map_status": "verified_geosite_point"
     },
     {
+      "slug": "parque-leyenda-vallenata",
+      "type": "place",
+      "display_order": 6,
+      "publication_status": "draft",
+      "image": {
+        "path": "visual/parque-leyenda-vallenata-v2.webp",
+        "sha256": "26cf35952c49e9d54fb915a2291ebec1089d3d135bf64f8f2008c87400e30782",
+        "width": 1200,
+        "height": 800,
+        "status": "pending_human_review"
+      },
+      "latitude": null,
+      "longitude": null,
+      "map_url": "",
+      "map_status": "pending_documented_point",
+      "translations": {
+        "es": {
+          "name": "Parque de la Leyenda Vallenata",
+          "description": "El escenario Consuelo Araujonoguera es uno de los referentes del Festival de la Leyenda Vallenata. Revisa la programación y las condiciones de ingreso: no se presenta como un parque de acceso libre permanente.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Parque de la Leyenda Vallenata",
+          "description": "The Consuelo Araujonoguera venue is a landmark of the Festival de la Leyenda Vallenata. Check its programme and entry conditions; it is not presented as a park with unrestricted year-round access.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Parque de la Leyenda Vallenata",
+          "description": "O espaço Consuelo Araujonoguera é uma referência do Festival de la Leyenda Vallenata. Consulte a programação e as condições de entrada; não se trata de um parque com acesso livre permanente.",
+          "external_url": "",
+          "external_label": ""
+        }
+      }
+    },
+    {
+      "slug": "callejones-purrututu-mahoma",
+      "type": "place",
+      "display_order": 7,
+      "publication_status": "draft",
+      "image": {
+        "path": "visual/callejones-purrututu-mahoma-v1.webp",
+        "sha256": "306bbdeace208ebfb3eea73eda8cd2cae7d29bb582f3461a32e83daf7d3e9a00",
+        "width": 1200,
+        "height": 800,
+        "status": "pending_human_review"
+      },
+      "latitude": null,
+      "longitude": null,
+      "map_url": "",
+      "map_status": "pending_documented_point",
+      "translations": {
+        "es": {
+          "name": "Callejones de la Purrututú y Mahoma",
+          "description": "Dos callejones del centro histórico que conservan parte de la memoria del Viejo Valledupar. Se reúnen en una sola visita para caminar entre trazados y construcciones tradicionales.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Purrututú and Mahoma alleys",
+          "description": "Two historic-centre alleys preserving part of old Valledupar’s memory. They form one walking visit through traditional streets and buildings.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Vielas da Purrututú e Mahoma",
+          "description": "Duas vielas do centro histórico que preservam parte da memória da antiga Valledupar. Reúnem-se em uma visita a pé por traçados e construções tradicionais.",
+          "external_url": "",
+          "external_label": ""
+        }
+      }
+    },
+    {
       "slug": "recorrido-cultural-vallenato",
       "type": "experience",
-      "display_order": 6,
+      "display_order": 8,
       "publication_status": "draft",
       "image": {
         "path": "visual/recorrido-cultural-vallenato-v1.webp",
@@ -302,7 +376,7 @@
     {
       "slug": "parranda-vallenata",
       "type": "experience",
-      "display_order": 7,
+      "display_order": 9,
       "publication_status": "draft",
       "image": {
         "path": "visual/parranda-vallenata-v2.webp",
@@ -339,7 +413,7 @@
     {
       "slug": "aves-los-besotes",
       "type": "experience",
-      "display_order": 8,
+      "display_order": 10,
       "publication_status": "draft",
       "image": {
         "path": "visual/aves-los-besotes-v1.webp",
