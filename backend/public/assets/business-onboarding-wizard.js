@@ -50,21 +50,38 @@
       const premium = choice === 'page_premium';
       setPlanField('[data-plan-field="summary"]', editorial, editorial);
       setPlanField('[data-plan-field="description"]', premium, premium);
+      setPlanField('[data-plan-field="location"]', editorial, choice === 'featured');
+      setPlanField('[data-plan-field="contact-options"]', editorial);
+      setPlanField('[data-plan-field="phone"]', editorial);
+      const contacts = form.querySelector('[data-plan-field="contact-options"]');
+      if (contacts) {
+        contacts.open = choice === 'featured';
+        const summary = contacts.querySelector('summary');
+        if (summary) summary.textContent = choice === 'featured' ? 'Teléfono de contacto' : 'Canales de contacto';
+      }
       setPlanField('[data-plan-field="cover"]', ['page', 'page_premium'].includes(choice), false);
       setPlanField('[data-plan-field="products"]', premium, false);
+      const phone = form.querySelector('[name="business_phone[number]"]');
+      if (phone) phone.required = choice === 'featured';
+      const extendedContacts = ['email', 'website', 'instagram', 'facebook', 'linkedin'];
+      extendedContacts.forEach((channel) => {
+        const control = form.querySelector(`[name="channels[${channel}]"]`);
+        const visible = ['page', 'page_premium'].includes(choice);
+        if (control) { control.closest('label').hidden = !visible; control.disabled = !visible; }
+      });
       if (preview) preview.hidden = !editorial || !!details?.hidden;
       renderPreview();
     };
 
     const syncFreeIdentifier = () => {
-      const free = plan() === 'free';
+      const requiresIdentifier = ['free', 'featured'].includes(plan());
       const nit = form.querySelector('[name="business_nit"]');
       const rnt = form.querySelector('[name="business_rnt"]');
       const provided = Boolean(nit?.value.trim() || rnt?.value.trim());
-      [nit, rnt].forEach((field) => field?.setCustomValidity(free && !provided ? 'Para la ficha Gratis indica el NIT o el RNT del negocio.' : ''));
-      form.querySelectorAll('[data-free-identifier-note]').forEach((node) => { node.textContent = free ? '(NIT o RNT obligatorio)' : '(opcional)'; });
+      [nit, rnt].forEach((field) => field?.setCustomValidity(requiresIdentifier && !provided ? 'Para Gratis o Destacado indica el NIT o el RNT del negocio.' : ''));
+      form.querySelectorAll('[data-free-identifier-note]').forEach((node) => { node.textContent = requiresIdentifier ? '(NIT o RNT obligatorio)' : '(opcional)'; });
       const help = form.querySelector('[data-free-identifier-help]');
-      if (help) help.textContent = free ? 'Solo números. Para Gratis indica NIT o RNT.' : 'Solo números. Si no aplica, déjalo vacío.';
+      if (help) help.textContent = requiresIdentifier ? 'Solo números. Para Gratis o Destacado indica NIT o RNT.' : 'Solo números. Si no aplica, déjalo vacío.';
     };
 
     const uploadFile = async (input, kind, slot) => {

@@ -19,13 +19,13 @@
       <textarea name="description" maxlength="1200" rows="7" data-preview-field="description"><?=esc($_POST['description']??'')?></textarea>
       <small>Disponible solo para Premium. Procura no superar diez líneas de lectura.</small>
     </label>
-    <label class="wide">Dirección o referencia para llegar
+    <label class="wide" data-plan-field="location">Dirección o referencia para llegar
       <input id="business-address" name="address_text" maxlength="300" value="<?=esc($_POST['address_text']??'')?>" data-preview-field="address">
     </label>
-    <label class="wide">Referencia adicional (opcional)
+    <label class="wide" data-plan-field="location">Referencia adicional (opcional)
       <input id="business-location-reference" name="location_reference" maxlength="500" value="<?=esc($_POST['location_reference']??'')?>">
     </label>
-    <div class="wide business-map-actions"><button id="business-map-open" type="button" class="pill light">Elegir punto en el mapa</button><p id="location-capture-status" role="status">Elige el punto exacto. El enlace público abrirá Google Maps.</p></div>
+    <div class="wide business-map-actions" data-plan-field="location"><button id="business-map-open" type="button" class="pill light">Elegir punto en el mapa</button><p id="location-capture-status" role="status">Elige el punto exacto. El enlace público abrirá Google Maps.</p></div>
     <?php foreach(['latitude','longitude','map_url','location_confirmed','location_changed'] as $field):$name=['map_url'=>'location_map_url','location_changed'=>'location_map_changed'][$field]??$field;?><input type="hidden" id="business-<?=str_replace('_','-',$field)?>" name="<?=esc($name)?>" value="<?=esc($_POST[$name]??'')?>"><?php endforeach ?>
     <label class="wide" data-plan-field="cover" hidden>Foto de portada
       <input type="file" name="reference_images[]" accept="image/jpeg,image/png,image/webp" data-image-slot="cover">
@@ -41,7 +41,7 @@
       <label>Foto del producto<input type="file" name="reference_images[]" accept="image/jpeg,image/png,image/webp" data-image-slot="product-<?=$i?>"></label>
     </div><?php endfor ?>
   </section>
-  <details class="registration-optional"><summary>Canales de contacto opcionales</summary><div class="destination-form-grid"><?php $phoneValues=$_POST['channels']??[];require __DIR__.'/phone-fields.php';foreach(['email'=>'Correo del negocio','website'=>'Sitio web','instagram'=>'Instagram','facebook'=>'Facebook','linkedin'=>'LinkedIn'] as $channel=>$label):?><label><?=esc($label)?><input name="channels[<?=esc($channel)?>]" type="<?= $channel==='email'?'email':'url' ?>" maxlength="500" value="<?=esc($_POST['channels'][$channel]??'')?>"></label><?php endforeach ?></div></details>
+  <details class="registration-optional" data-plan-field="contact-options"><summary>Canales de contacto</summary><div class="destination-form-grid"><?php $phoneValues=$_POST['channels']??[];require __DIR__.'/phone-fields.php';foreach(['email'=>'Correo del negocio','website'=>'Sitio web','instagram'=>'Instagram','facebook'=>'Facebook','linkedin'=>'LinkedIn'] as $channel=>$label):?><label><?=esc($label)?><input name="channels[<?=esc($channel)?>]" type="<?= $channel==='email'?'email':'url' ?>" maxlength="500" value="<?=esc($_POST['channels'][$channel]??'')?>"></label><?php endforeach ?></div></details>
 </fieldset>
 <aside id="registration-live-preview" class="application-live-preview" hidden aria-live="polite"><p class="eyebrow">Vista previa</p><h2 data-preview-name>Tu negocio</h2><p data-preview-summary>Tu presentación aparecerá aquí.</p><p data-preview-description hidden></p><p data-preview-address></p></aside>
 <script src="/assets/business-text-counters.js?v=1" defer></script>
