@@ -1,0 +1,40 @@
+{
+  "asset_id": "malecon-riohacha-v1",
+  "slug": "malecon-riohacha",
+  "destination": "Riohacha",
+  "role": "poi",
+  "status": "draft_pending_human_approval",
+  "master": ".local/riohacha/malecon-v1.png",
+  "web": "malecon-riohacha-v1.webp",
+  "width": 1200,
+  "height": 800,
+  "prompt_file": "malecon-prompt-v1.txt",
+  "tool": "image_gen built-in",
+  "date": "2026-10-22",
+  "method": "licensed photograph style transformation",
+  "reference_file": ".local/riohacha/referencias/riohacha2026-01.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Riohacha,_2026_01.jpg",
+  "author": "TSolange",
+  "capture_date": "2026-06-12",
+  "licence": "CC BY-SA 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "attribution_required": true,
+  "public_credit": "Ilustración adaptada mediante IA de «Riohacha, 2026 01», TSolange, CC BY-SA4.0. Cambio a tinta/gouache.",
+  "factual_sources": [
+    "https://comisionfilmicacolombia.com/locacion/malecon-riohacha/",
+    "https://riohacha-laguajira.gov.co/MiMunicipio/Paginas/Sitios-de-Interes.aspx"
+  ],
+  "alt_es": "Ilustración del Paseo de la Marina de Riohacha, con pabellones, palmas y el Caribe al fondo.",
+  "review": {
+    "style": "Visibleinkgouache;nonphotographic",
+    "geometry": "Preserves2pavilions,terracottaroofs,mainpalms,road-walk-beach-seasequence",
+    "subject": "Coastalpromenadepavilionsandpalms; notmuelle",
+    "context": "Transientcarsandpeoplepaintedsimplified,noadvertising",
+    "limitation": "PhotoJune2026;noclaimOctober2026unchangedcondition"
+  },
+  "approval": null,
+  "master_sha256": "bebae5afb02ab164d172292edecc5c9dc3ff10230162866ef5981bc3efedfabf",
+  "web_sha256": "1bbc9ee7dca171e0943e8e07f905adf2edd474bc69ddfe2a38da5ef0ea982d55",
+  "reference_sha256": "4dcd3c9d01227fc647d324725bccf4d5db333cc0fe1598b375feb770b4ed4454",
+  "bytes": 310884
+}

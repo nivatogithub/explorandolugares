@@ -1,0 +1,39 @@
+{
+  "asset_id": "riohacha-santuario-flamencos-v1",
+  "slug": "santuario-flamencos",
+  "destination": "Riohacha",
+  "role": "poi-physical-sanctuary",
+  "status": "draft_pending_human_approval",
+  "master": ".local/riohacha/santuario-v1.png",
+  "web": "riohacha-santuario-flamencos-v1.webp",
+  "width": 1200,
+  "height": 800,
+  "prompt_file": "santuario-prompt-v1.txt",
+  "tool": "image_gen built-in",
+  "date": "2026-10-22",
+  "method": "licensed photograph style transformation",
+  "reference_file": ".local/riohacha/referencias/laguna-diegocue-20150111.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Laguna_de_los_flamencos_-_panoramio.jpg",
+  "author": "diego_cue",
+  "capture_date": "2015-01-11",
+  "licence": "CC BY-SA 3.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "attribution_required": true,
+  "public_credit": "Ilustración adaptada mediante IA de «Laguna de los flamencos - panoramio», diego_cue, CC BY-SA3.0. Cambio a tinta/gouache.",
+  "factual_sources": [
+    "https://www.parquesnacionales.gov.co/nuestros-parques/sff-los-flamencos/"
+  ],
+  "alt_es": "Ilustración de una laguna del Santuario de Fauna y Flora Los Flamencos, con manglar y aves al atardecer.",
+  "review": {
+    "style": "Visibleinkgouache;nonphotographic",
+    "geometry": "Preserveswideflatlagoon,lowmangrovesilhouette,goldensky,smallbirdpositionsapproximate",
+    "difference_experience": "Landscapecard physicalsanctuary; noforegroundpinkflamingoflock orboat",
+    "identity_limit": "Exactlagoonname/camerapointnotprovidedbysource; donotassignNavioQuebradowithoutverification",
+    "date": "2015reference,notcurrentwater/accessguarantee"
+  },
+  "approval": null,
+  "master_sha256": "1bfd7e12a1ebc72e34bb94d5fc2788f5e95165dd3bd388b13074c46a0124fafc",
+  "web_sha256": "d7ad6a91fa42fc95c2f9cf0aee6f667e7f91652d01ff5b8d58ef0479c477b87d",
+  "reference_sha256": "ce37e03ddbdc97d9ec000a1258c4cc8453e494d81ec42e6c0793ea9ed56ac461",
+  "bytes": 224284
+}

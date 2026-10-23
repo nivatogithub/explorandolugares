@@ -10,6 +10,16 @@
     }
   },
   {
+    "component": "malecon-riohacha",
+    "image": {
+      "path": "visual/malecon-riohacha-v1.webp",
+      "sha256": "1bbc9ee7dca171e0943e8e07f905adf2edd474bc69ddfe2a38da5ef0ea982d55",
+      "width": 1200,
+      "height": 800,
+      "status": "pending_human_review"
+    }
+  },
+  {
     "component": "paseo-marina-muelle",
     "image": {
       "path": "visual/riohacha-marina-muelle-v1.webp",
@@ -34,6 +44,46 @@
     "image": {
       "path": "visual/riohacha-valle-cangrejos-v1.webp",
       "sha256": "580c3faf8283dee80afdb936761deabd796db82a4e4d28558df5233f535fb132",
+      "width": 1200,
+      "height": 800,
+      "status": "pending_human_review"
+    }
+  },
+  {
+    "component": "catedral-remedios",
+    "image": {
+      "path": "visual/riohacha-catedral-cc-v3.webp",
+      "sha256": "9a5ee841beb05a497ab1d051024f6042a44f64b9bfc82548c284504b345aad61",
+      "width": 1200,
+      "height": 800,
+      "status": "pending_human_review"
+    }
+  },
+  {
+    "component": "parque-nicolas-federman",
+    "image": {
+      "path": "visual/riohacha-federmann-v1.webp",
+      "sha256": "3f2e6b5ea9713978339209d7866e8b92ce7f6286d29759937a82935cefd93f67",
+      "width": 1200,
+      "height": 800,
+      "status": "pending_human_review"
+    }
+  },
+  {
+    "component": "santuario-flamencos",
+    "image": {
+      "path": "visual/riohacha-santuario-flamencos-v1.webp",
+      "sha256": "d7ad6a91fa42fc95c2f9cf0aee6f667e7f91652d01ff5b8d58ef0479c477b87d",
+      "width": 1200,
+      "height": 800,
+      "status": "pending_human_review"
+    }
+  },
+  {
+    "component": "playas-mayapo",
+    "image": {
+      "path": "visual/riohacha-mayapo-v1.webp",
+      "sha256": "1f53dc17a2d825ed848ba0f2c2f1a2eb8ca9519e75374648f289cd2b21e3d854",
       "width": 1200,
       "height": 800,
       "status": "pending_human_review"
