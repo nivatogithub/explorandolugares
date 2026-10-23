@@ -91,7 +91,7 @@
       },
       "latitude": 10.50133,
       "longitude": -73.2708,
-      "map_url": "https://maps.google.com/?q=10.50133,-73.2708",
+      "map_url": "https://maps.app.goo.gl/6zzvnE5QXmQ3fCgo9",
       "translations": {
         "es": {
           "name": "Río Guatapurí y balneario Hurtado",
@@ -112,7 +112,8 @@
           "external_label": ""
         }
       },
-      "map_status": "verified_cartographic_point"
+      "map_status": "verified_named_google_maps_share",
+      "map_verified_name": "Balneario Hurtado Valledupar"
     },
     {
       "slug": "plaza-alfonso-lopez",
@@ -128,7 +129,7 @@
       },
       "latitude": 10.47754,
       "longitude": -73.24444,
-      "map_url": "https://maps.google.com/?q=10.47754,-73.24444",
+      "map_url": "https://maps.app.goo.gl/ZXLFocjQ9Hv5sM4S8",
       "translations": {
         "es": {
           "name": "Plaza Alfonso López y centro histórico",
@@ -149,7 +150,8 @@
           "external_label": ""
         }
       },
-      "map_status": "verified_cartographic_point"
+      "map_status": "verified_named_google_maps_share",
+      "map_verified_name": "Plaza Alfonso López de Valledupar"
     },
     {
       "slug": "museo-acordeon",
@@ -165,7 +167,7 @@
       },
       "latitude": 10.47868,
       "longitude": -73.25966,
-      "map_url": "https://maps.google.com/?q=10.47868,-73.25966",
+      "map_url": "https://maps.app.goo.gl/tRN15NcgJGNPx7xZ7",
       "translations": {
         "es": {
           "name": "Museo del Acordeón",
@@ -186,7 +188,8 @@
           "external_label": ""
         }
       },
-      "map_status": "previously_verified_point_retained"
+      "map_status": "verified_named_google_maps_share",
+      "map_verified_name": "Museo del Acordeón"
     },
     {
       "slug": "parque-provincia",
@@ -202,7 +205,7 @@
       },
       "latitude": 10.499,
       "longitude": -73.2668,
-      "map_url": "https://maps.google.com/?q=10.499,-73.2668",
+      "map_url": "https://maps.app.goo.gl/bPk6wp7QxD9WG1fUA",
       "translations": {
         "es": {
           "name": "Parque de la Provincia",
@@ -223,7 +226,8 @@
           "external_label": ""
         }
       },
-      "map_status": "verified_cartographic_point"
+      "map_status": "verified_named_google_maps_share",
+      "map_verified_name": "Parque De La Provincia"
     },
     {
       "slug": "balneario-la-mina",
@@ -239,7 +243,7 @@
       },
       "latitude": 10.705278,
       "longitude": -73.284167,
-      "map_url": "https://maps.google.com/?q=10.705278,-73.284167",
+      "map_url": "https://maps.app.goo.gl/8FnQZDhBHAULamvX8",
       "translations": {
         "es": {
           "name": "Balneario La Mina (alrededores)",
@@ -260,7 +264,8 @@
           "external_label": ""
         }
       },
-      "map_status": "verified_geosite_point"
+      "map_status": "verified_named_google_maps_share",
+      "map_verified_name": "Balneario La Mina"
     },
     {
       "slug": "parque-leyenda-vallenata",
@@ -276,8 +281,8 @@
       },
       "latitude": null,
       "longitude": null,
-      "map_url": "",
-      "map_status": "pending_documented_point",
+      "map_url": "https://maps.app.goo.gl/kGu6K1S2As9dUZNf6",
+      "map_status": "verified_named_google_maps_share",
       "translations": {
         "es": {
           "name": "Parque de la Leyenda Vallenata",
@@ -297,7 +302,8 @@
           "external_url": "",
           "external_label": ""
         }
-      }
+      },
+      "map_verified_name": "Parque de la Leyenda"
     },
     {
       "slug": "callejones-purrututu-mahoma",
@@ -313,8 +319,8 @@
       },
       "latitude": null,
       "longitude": null,
-      "map_url": "",
-      "map_status": "pending_documented_point",
+      "map_url": "https://maps.app.goo.gl/4wDc4bJwkKB56ndq6",
+      "map_status": "verified_named_google_maps_share",
       "translations": {
         "es": {
           "name": "Callejones de la Purrututú y Mahoma",
@@ -334,7 +340,8 @@
           "external_url": "",
           "external_label": ""
         }
-      }
+      },
+      "map_verified_name": "Callejón La Purrututú"
     },
     {
       "slug": "recorrido-cultural-vallenato",
@@ -371,7 +378,7 @@
           "external_label": ""
         }
       },
-      "map_status": "not_applicable_variable_departure"
+      "map_status": "variable_meeting_point_no_fixed_map"
     },
     {
       "slug": "parranda-vallenata",
@@ -408,7 +415,7 @@
           "external_label": ""
         }
       },
-      "map_status": "not_applicable_variable_venue"
+      "map_status": "variable_meeting_point_no_fixed_map"
     },
     {
       "slug": "aves-los-besotes",
@@ -424,7 +431,7 @@
       },
       "latitude": null,
       "longitude": null,
-      "map_url": "",
+      "map_url": "https://maps.app.goo.gl/zK1z13Mkt2RWAEtr7",
       "translations": {
         "es": {
           "name": "Naturaleza en Los Besotes (alrededores)",
@@ -445,7 +452,8 @@
           "external_label": ""
         }
       },
-      "map_status": "pending_precise_access_pin"
+      "map_status": "verified_named_google_maps_share",
+      "map_verified_name": "Eco-parque Los Besotes"
     }
   ]
 }
