@@ -38,7 +38,7 @@ $products=['products'=>[['translations'=>['es'=>['name'=>'Producto de prueba','d
 $clean=BusinessShowcase::clean($p,1,$products,[],true);fails(fn()=>BusinessShowcase::validate($clean),'missing product translations accepted');
 foreach(['en','pt-BR'] as $locale)$products['products'][0]['translations'][$locale]=['name'=>'Test product','description'=>'Private description'];
 $clean=BusinessShowcase::clean($p,1,$products,[],true);BusinessShowcase::validate($clean);check(count(BusinessShowcase::renderData($p,1,$clean,'es')['products'])===1,'product image not rendered');
-$three=BusinessShowcase::clean($p,1,['products'=>array_fill(0,3,$products['products'][0])],[],true);check(count($three['products'])===3,'three products rejected');fails(fn()=>BusinessShowcase::clean($p,1,['products'=>array_fill(0,4,$products['products'][0])],[],true),'four products accepted');
+$five=BusinessShowcase::clean($p,1,['products'=>array_fill(0,5,$products['products'][0])],[],true);check(count($five['products'])===5,'five products rejected');fails(fn()=>BusinessShowcase::clean($p,1,['products'=>array_fill(0,6,$products['products'][0])],[],true),'six products accepted');
 $forged=$products;$forged['products'][0]['asset_id']=99999;$owner=BusinessShowcase::clean($p,1,$forged,$clean,false);check($owner['products'][0]['asset_id']===1,'owner can substitute unreviewed image');
 fails(fn()=>BusinessShowcase::clean($p,1,['experience_ids'=>[99999]],[],true),'foreign or unpublished experience accepted');
 check(BusinessShowcase::published($p,1)===[],'private showcase leaked to publication');
@@ -54,7 +54,7 @@ $finalVersion=$sv;$finalVersion['status']='awaiting_owner';check(BusinessEditori
 fails(fn()=>$s->save(1,1,$sourceVersion,['source_images'=>['cover'=>str_repeat('b',40).'.png']]),'foreign photo assignment accepted');
 $persistent=$s->save(1,1,$sourceVersion,[]);check($s->payload($s->version($persistent),1)['source_images']['cover']===$source,'source association lost across versions');
 $sparse=BusinessShowcase::clean($p,1,['products'=>[2=>$products['products'][0]]],[],true);check(isset($sparse['products'][2])&&!isset($sparse['products'][0]),'product positions moved away from their source images');
-require_once dirname(__DIR__).'/app/BusinessDemo.php';foreach(['free','featured','page','page_premium'] as $tier){$demo=businessDemo($p,$tier);check(count($demo['showcase']['products'])===($tier==='page_premium'?3:0),'examples do not match product entitlements');check($tier!=='free'||$demo['contacts']===[],'free example exposes contact');}
+require_once dirname(__DIR__).'/app/BusinessDemo.php';foreach(['free','featured','page','page_premium'] as $tier){$demo=businessDemo($p,$tier);check(count($demo['showcase']['products'])===($tier==='page_premium'?5:0),'examples do not match product entitlements');check($tier!=='free'||$demo['contacts']===[],'free example exposes contact');}
 if(is_dir($storage))rmdir($storage);
 echo "OK: private versions, exact approvals, ownership, optimistic conflicts, rejection reasons, publication preservation, no term changes, tier limits, private templates and idempotent simulated notification.\n";
 

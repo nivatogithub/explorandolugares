@@ -22,7 +22,7 @@ final class BusinessOnboardingDetails
             if(empty($result['channels']['phone'])&&empty($result['channels']['phone_fixed']))throw new RuntimeException('Destacado requiere un teléfono de contacto.');
         }
         $products=[];foreach((array)($input['products']??[]) as $product){if(!is_array($product))continue;$title=trim((string)($product['title']??''));$summary=trim((string)($product['summary']??''));if($title===''&&$summary==='')continue;if($plan!=='page_premium')throw new RuntimeException('Los productos solo están disponibles para Premium.');if(mb_strlen($title)<2||mb_strlen($title)>100||mb_strlen($summary)>180)throw new RuntimeException('Cada producto debe tener un título y una descripción de máximo 180 caracteres.');$products[]=['title'=>$title,'summary'=>$summary];}
-        if(count($products)>3)throw new RuntimeException('Premium permite hasta tres productos o servicios.');$result['products']=$products;
+        if(count($products)>5)throw new RuntimeException('Premium permite hasta cinco productos o servicios.');$result['products']=$products;
         return $result;
     }
     public static function apply(PDO $pdo,int $id,string $primary,array $details):void

@@ -33,9 +33,9 @@
     </label>
   </div>
   <section data-plan-field="products" hidden aria-labelledby="products-title">
-    <h3 id="products-title">Hasta tres productos o servicios</h3>
+    <h3 id="products-title">Hasta cinco productos o servicios</h3>
     <p>Cada uno tiene título, descripción corta y una sola foto. No es una galería.</p>
-    <?php for($i=0;$i<3;$i++):?><div class="destination-form-grid product-card" data-product-card>
+    <?php for($i=0;$i<5;$i++):?><div class="destination-form-grid product-card" data-product-card>
       <label>Nombre<input name="products[<?=$i?>][title]" maxlength="100" data-preview-product-title></label>
       <label>Descripción corta · máximo 180 caracteres<textarea name="products[<?=$i?>][summary]" maxlength="180" rows="2" data-preview-product-summary></textarea></label>
       <label>Foto del producto<input type="file" name="reference_images[]" accept="image/jpeg,image/png,image/webp" data-image-slot="product-<?=$i?>"></label>
