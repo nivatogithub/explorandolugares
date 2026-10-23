@@ -1,0 +1,41 @@
+{
+  "asset_id": "riohacha-catedral-cc-v3",
+  "role": "poi-plaza-padilla-catedral",
+  "master": ".local/riohacha/catedral-cc-v3.png",
+  "web": "riohacha-catedral-cc-v3.webp",
+  "width": 750,
+  "height": 1000,
+  "method": "licensed reference style transformation preserving composition",
+  "input_images": [
+    ".local/riohacha/referencias/catedral-martinduquea-20120922.jpg"
+  ],
+  "licence": "CC BY-SA 3.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "attribution_required": true,
+  "public_credit": "Ilustración adaptada mediante IA de «Catedral Nuestra Señora de Los Remedios», Martinduquea, CC BY-SA 3.0. Cambios: transformación a tinta/gouache y retiro de fecha impresa.",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Catedral_Nuestra_Se%C3%B1ora_de_Los_Remedios.jpg",
+  "author": "Martinduquea",
+  "source_capture_date": "2012-09-22",
+  "prompt_file": "catedral-cc-prompt-v3.txt",
+  "alt_draft_es": "Ilustración de la fachada central de la Catedral Nuestra Señora de los Remedios, en Riohacha.",
+  "review": {
+    "style": "pass: inkedgesandgouachevisible",
+    "composition": "pass: retained asymmetrical lowanglephotocamera andoriginalframe",
+    "identity": "pass visiblecentralpediment,sittingVirgin,rose,niches,fanlight retained",
+    "exactdetail": "paint simplificationofsculpturedetails; notsurvey",
+    "crop": "portrait fullimage; do notforcecentralcovercropremovingdoororcross",
+    "human": "pending"
+  },
+  "destination": "Riohacha",
+  "tool": "image_gen built-in",
+  "date": "2026-10-22",
+  "status": "standalone_proposal_pending_crop_review",
+  "master_sha256": "676a0649629ded43e50a2c46d4471fc9dde5eb01cf0f85416e9605c88786cb60",
+  "web_sha256": "9a5ee841beb05a497ab1d051024f6042a44f64b9bfc82548c284504b345aad61",
+  "input_sha256": [
+    "2ece37b5c122c79c425d5f22e7e90e2ab433a7eaaf7e4555af336b87f736e0db"
+  ],
+  "bytes": 227518,
+  "slug": "catedral-propuesta-detalle",
+  "card_3_2_suitability": "not_ready: portraitcropcanlosepediment/door anddoesnotshowPlazaPadilla; standaloneproposalonly"
+}

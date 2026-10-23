@@ -1,0 +1,46 @@
+{
+  "asset_id": "riohacha-alta-guajira-taroa-v1",
+  "slug": "excursion-alta-guajira",
+  "destination": "Riohacha",
+  "represented_municipality": "Uribia",
+  "role": "excursion-alta-guajira-surroundings",
+  "master": ".local/riohacha/taroa-v1.png",
+  "web": "riohacha-alta-guajira-taroa-v1.webp",
+  "width": 1200,
+  "height": 800,
+  "method": "licensedphoto styletransformation preserving coastalcomposition",
+  "input_images": [
+    ".local/riohacha/referencias/taroa-oscarcostero-20230630.jpg"
+  ],
+  "tool": "image_gen built-in",
+  "date": "2026-10-22",
+  "status": "draft_pending_human_approval",
+  "licence": "CC BY-SA 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "attribution_required": true,
+  "public_credit": "Ilustración adaptada mediante IA de «Taroa Dunes in Alta Guajira 2023», Oscar Costero, CC BY-SA 4.0. Cambios: transformación a tinta/gouache y retiro de figura humana distante.",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Taroa_Dunes_in_Alta_Guajira_2023.jpg",
+  "author": "Oscar Costero",
+  "source_capture_date": "2023-06-30",
+  "factual_sources": [
+    "https://colombia.travel/es/riohacha/conoce-las-dunas-de-taroa",
+    "https://www.igac.gov.co/sites/default/files/2025-11/BFrag_17La%20Guajira_DIGInd.pdf"
+  ],
+  "prompt_file": "taroa-prompt-v1.txt",
+  "alt_draft_es": "Ilustración de las dunas de Taroa junto al Caribe, en Punta Gallinas, Uribia.",
+  "review": {
+    "style": "pass visiblepaintandink",
+    "composition": "pass duneright, sealeft,shorelinediagonal androckoutcropretained",
+    "relief": "pass preservedcoastforms,noadditionalmountains/palms/buildings",
+    "identity": "photoidentifiedTaroa, excursionoutsideRiohacha municipality",
+    "camera": "same asphoto, cameracoordinatesnotpublished becauseunverified",
+    "access": "notdepicted, noguaranteesofbathing/access",
+    "human": "pending"
+  },
+  "master_sha256": "fa4cc473e0429d3f89f328e60a023d8f670d594261d41bf6fdfa522450f2907f",
+  "web_sha256": "7728c278926a64dbecb8f5ec4081b640e38915c2513d27deba005219c7fbd8bd",
+  "input_sha256": [
+    "6479ad642ac885346d9b5790362d6330b44bbe490bf628cb7eefc0f88944cc47"
+  ],
+  "bytes": 168076
+}

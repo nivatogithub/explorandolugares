@@ -1,0 +1,69 @@
+{
+  "destination": "riohacha",
+  "checked_at": "2026-10-22",
+  "visibility": "internal_research_only",
+  "sources": [
+    {
+      "id": "rio-sitios",
+      "url": "https://riohacha-laguajira.gov.co/MiMunicipio/Paginas/Sitios-de-Interes.aspx",
+      "publisher": "Alcaldía Distrital de Riohacha",
+      "supports": "Muelle, malecón, plaza, catedral y delta Calancala. No se reproducen medidas contradictorias del muelle.",
+      "retrieval": "opened",
+      "checked_at": "2026-10-22"
+    },
+    {
+      "id": "rio-historia",
+      "url": "https://riohacha-laguajira.gov.co/MiMunicipio/Paginas/Pasado-Presente-y-Futuro.aspx",
+      "publisher": "Alcaldía Distrital de Riohacha",
+      "supports": "Contexto histórico de ciudad portuaria y poblamiento.",
+      "retrieval": "opened",
+      "checked_at": "2026-10-22"
+    },
+    {
+      "id": "pnn-flamencos",
+      "url": "https://www.parquesnacionales.gov.co/nuestros-parques/sff-los-flamencos/",
+      "publisher": "Parques Nacionales Naturales",
+      "supports": "Santuario en Camarones, municipio de Riohacha; entorno lagunar, ecoturismo y acceso.",
+      "retrieval": "indexed_own_domain_content_not_separate_open",
+      "checked_at": "2026-10-22"
+    },
+    {
+      "id": "viajes-guajira",
+      "url": "https://viajeslaguajira.com/",
+      "publisher": "Viajes La Guajira",
+      "supports": "Catálogo público: pasadía Ranchería y Santuario de los Flamencos con canoa y guía.",
+      "retrieval": "indexed_own_page_open_timeout",
+      "checked_at": "2026-10-22"
+    },
+    {
+      "id": "guajira-mundo",
+      "url": "https://guajiramundo.com/tours/",
+      "publisher": "Guajira Mundo",
+      "supports": "Ofertas nominadas Mágica tarde de ranchería y Santuario de los Flamencos.",
+      "retrieval": "indexed_own_page_bot_challenge",
+      "checked_at": "2026-10-22"
+    },
+    {
+      "id": "dama-guajira",
+      "url": "https://damaguajiratours.com/",
+      "publisher": "Dama Guajira Tours",
+      "supports": "Candidatos ranchería y flamencos; contraste, no fuente única de inclusión.",
+      "retrieval": "indexed_own_page_open_timeout",
+      "checked_at": "2026-10-22"
+    },
+    {
+      "id": "punta-tours",
+      "url": "https://puntagallinastours.com/tours",
+      "publisher": "Punta Gallinas Tours / Expotur Eco",
+      "supports": "Ofertas de Cabo de la Vela y Punta Gallinas con salida Riohacha; no publicidad ni tarifas al texto público.",
+      "retrieval": "opened",
+      "checked_at": "2026-10-22"
+    }
+  ],
+  "excluded_sources": [
+    {
+      "url": "https://www.riohacha.travel/",
+      "reason": "Redirección observada a dominio ajeno con contenido no turístico el 22/10/2026. No usar como fuente vigente."
+    }
+  ]
+}

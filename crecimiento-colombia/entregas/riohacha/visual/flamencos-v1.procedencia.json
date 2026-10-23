@@ -1,0 +1,44 @@
+{
+  "asset_id": "riohacha-flamencos-v1",
+  "destination": "Riohacha",
+  "role": "experience-birdwatching",
+  "status": "draft_pending_human_approval",
+  "tool": "image_gen built-in",
+  "date": "2026-10-22",
+  "input_images": [],
+  "method": "original approximate thematic scene from verified habitat/species, no photograph uploaded",
+  "master": ".local/riohacha/flamencos-v1.png",
+  "web": "riohacha-flamencos-v1.webp",
+  "width": 1200,
+  "height": 800,
+  "sources": [
+    {
+      "url": "https://www.parquesnacionales.gov.co/nuestros-parques/sff-los-flamencos/",
+      "proof": "location municipalityRiohacha, lagoons, mangrove/dryforest, species, birdwatching"
+    },
+    {
+      "url": "https://www.parquesnacionales.gov.co/wp-content/uploads/2023/06/Flamencos-Nianza-del-Carmen-Angulo-Jefe-de-SFF-FLAMENCOS.jpeg",
+      "author": "Nianza del Carmen Angulo (as filename/page)",
+      "capture_date": null,
+      "use": "observed officialimage for habitat/species; not uploaded or adapted"
+    },
+    {
+      "url": "https://colombia.travel/en/riohacha/los-flamencos-fauna-and-flora-sanctuary",
+      "proof": "birdwatching identity"
+    }
+  ],
+  "prompt_file": "flamencos-prompt-v1.txt",
+  "alt_draft_es": "Ilustración de flamencos rosados en una laguna costera de Camarones.",
+  "review": {
+    "style": "pass: visibly gouache/ink",
+    "species": "pass: pinkflamingos longlegs andneck, curvedblacktippedbeak; simplifiednotdiagnostic",
+    "habitat": "pass: shallowgrey-greenlagoon, lowmangrove,flatshore",
+    "activity": "nohumansfeeding/touching, sightingnotguaranteed",
+    "location": "thematicapproximation, notidentifiedexactlagooncamerapoint",
+    "human": "pending"
+  },
+  "master_sha256": "02255fb5b1f929eb23c1b04fb52d30d422d53b96bdccfbb7455baf6d738f2d8b",
+  "web_sha256": "a8e466bf13baa0ae56a16c00ce3b8d03009df670fc67c7721524e0de82f22fa2",
+  "bytes": 289712,
+  "slug": "avistamiento-flamencos-camarones"
+}

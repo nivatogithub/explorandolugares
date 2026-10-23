@@ -1,0 +1,496 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "riohacha",
+    "destination_type": "city",
+    "country_code": "CO",
+    "department": "La Guajira",
+    "subregion": null,
+    "latitude": null,
+    "longitude": null,
+    "translations": {
+      "es": {
+        "display_name": "Riohacha",
+        "eyebrow": "La Guajira · Colombia",
+        "headline": "El Caribe y la cultura wayuu",
+        "intro": "Pasea junto al mar, conoce el centro de la capital guajira y descubre sus manglares y encuentros culturales.",
+        "meta_description": "Descubre el muelle de Riohacha, la plaza de Padilla y el Valle de los Cangrejos. Conoce experiencias en Camarones y excursiones por La Guajira."
+      },
+      "en": {
+        "display_name": "Riohacha",
+        "eyebrow": "La Guajira · Colombia",
+        "headline": "The Caribbean and Wayuu culture",
+        "intro": "Walk along the waterfront, explore La Guajira’s capital and discover its mangroves and cultural encounters.",
+        "meta_description": "Discover Riohacha’s pier, Padilla Square and Valle de los Cangrejos. Explore experiences in Camarones and excursions through La Guajira."
+      },
+      "pt-BR": {
+        "display_name": "Riohacha",
+        "eyebrow": "La Guajira · Colombia",
+        "headline": "O Caribe e a cultura wayuu",
+        "intro": "Passeie à beira-mar, conheça o centro da capital de La Guajira e descubra seus manguezais e encontros culturais.",
+        "meta_description": "Descubra o píer de Riohacha, a praça de Padilla e o Valle de los Cangrejos. Conheça experiências em Camarones e excursões por La Guajira."
+      }
+    },
+    "history": {
+      "es": [
+        "Riohacha creció como ciudad portuaria frente al Caribe, cerca de la desembocadura del Ranchería. Su centro conserva la plaza de Padilla y la catedral de Nuestra Señora de los Remedios.",
+        "La presencia wayuu y las comunidades del litoral forman parte de su identidad. El frente costero y los ambientes de Camarones conectan la vida urbana con los paisajes de La Guajira."
+      ],
+      "en": [
+        "Riohacha developed as a port city on the Caribbean, near the mouth of the Ranchería. Its centre retains Padilla Square and Nuestra Señora de los Remedios Cathedral.",
+        "Wayuu culture and coastal communities are part of its identity. The waterfront and the natural surroundings of Camarones link city life with the landscapes of La Guajira."
+      ],
+      "pt-BR": [
+        "Riohacha cresceu como cidade portuária diante do Caribe, perto da foz do Ranchería. Seu centro conserva a praça de Padilla e a Catedral de Nuestra Señora de los Remedios.",
+        "A presença wayuu e as comunidades do litoral fazem parte de sua identidade. A orla e os ambientes de Camarones ligam a vida urbana às paisagens de La Guajira."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Caminar junto al Caribe",
+        "Conocer la cultura wayuu con anfitriones",
+        "Explorar manglares y lagunas"
+      ],
+      "en": [
+        "Walk beside the Caribbean",
+        "Learn about Wayuu culture with local hosts",
+        "Explore mangroves and lagoons"
+      ],
+      "pt-BR": [
+        "Caminhar junto ao Caribe",
+        "Conhecer a cultura wayuu com anfitriões",
+        "Explorar manguezais e lagoas"
+      ]
+    },
+    "sources": {
+      "es": [],
+      "en": [],
+      "pt-BR": []
+    },
+    "hero_image": {
+      "path": "visual/riohacha-portada-estilizada-v4.webp",
+      "sha256": "9deaa488d80b93184d88adea378823b950f6bd7d1862400e46f5afe1809cb049",
+      "width": 1200,
+      "height": 800,
+      "status": "approved"
+    }
+  },
+  "hero_image": null,
+  "places": [
+    {
+      "slug": "malecon-riohacha",
+      "type": "place",
+      "display_order": 1,
+      "publication_status": "draft",
+      "image": {
+        "path": "visual/malecon-riohacha-v1.webp",
+        "sha256": "1bbc9ee7dca171e0943e8e07f905adf2edd474bc69ddfe2a38da5ef0ea982d55",
+        "width": 1200,
+        "height": 800,
+        "status": "pending_human_review"
+      },
+      "latitude": null,
+      "longitude": null,
+      "map_url": "https://maps.app.goo.gl/hdxQxK6Ngg35fiUE8",
+      "map_status": "verified_named_google_maps_share",
+      "translations": {
+        "es": {
+          "name": "Malecón de Riohacha",
+          "description": "El Paseo de la Marina recorre la playa urbana junto a la avenida Primera. Una caminata por el frente costero, distinta de la visita al muelle.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Riohacha waterfront promenade",
+          "description": "Paseo de la Marina follows the urban beach beside Avenida Primera. A coastal walk, separate from visiting the pier.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Malecón de Riohacha",
+          "description": "O Paseo de la Marina acompanha a praia urbana junto à avenida Primera. Um passeio pela orla, distinto da visita ao píer.",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "map_verified_name": "Malecón Playa"
+    },
+    {
+      "slug": "paseo-marina-muelle",
+      "type": "place",
+      "display_order": 2,
+      "publication_status": "draft",
+      "image": {
+        "path": "visual/riohacha-marina-muelle-v1.webp",
+        "sha256": "32a18ba55cebc103443b16881f477e2a4699ebc240fd967874acd06383b0ea0c",
+        "width": 1200,
+        "height": 800,
+        "status": "pending_human_review"
+      },
+      "latitude": 11.5528902,
+      "longitude": -72.9087658,
+      "map_url": "https://maps.app.goo.gl/d9WjRGySXWZ7SC197",
+      "translations": {
+        "es": {
+          "name": "Muelle turístico de Riohacha",
+          "description": "El muelle peatonal se adentra en el Caribe y ofrece una vista del frente costero de Riohacha.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Riohacha tourist pier",
+          "description": "The pedestrian pier extends into the Caribbean and offers a view of Riohacha’s waterfront.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Píer turístico de Riohacha",
+          "description": "O píer de pedestres avança pelo Caribe e oferece uma vista da orla de Riohacha.",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "map_status": "verified_named_google_maps_share",
+      "map_verified_name": "Muelle Turístico"
+    },
+    {
+      "slug": "plaza-almirante-padilla",
+      "type": "place",
+      "display_order": 3,
+      "publication_status": "draft",
+      "image": {
+        "path": "visual/plaza-almirante-padilla-propuesta-v1.webp",
+        "sha256": "9789043729dfa8996551725c1a6df74aef1ea09cc58094bb0b988f6b8cb9b110",
+        "width": 1200,
+        "height": 800,
+        "status": "pending_human_review"
+      },
+      "latitude": 11.55139,
+      "longitude": -72.90965,
+      "map_url": "https://maps.app.goo.gl/z7FtthcKLaZrDYgF6",
+      "translations": {
+        "es": {
+          "name": "Plaza Almirante Padilla",
+          "description": "La plaza del centro histórico reúne el monumento al almirante y la catedral de Nuestra Señora de los Remedios.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Almirante Padilla Square",
+          "description": "The historic centre’s main square brings together the admiral’s monument and Nuestra Señora de los Remedios Cathedral.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Praça Almirante Padilla",
+          "description": "A praça do centro histórico reúne o monumento ao almirante e a Catedral de Nuestra Señora de los Remedios.",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "map_status": "verified_named_google_maps_share",
+      "map_verified_name": "Plaza José Prudencio Padilla"
+    },
+    {
+      "slug": "valle-cangrejos",
+      "type": "place",
+      "display_order": 4,
+      "publication_status": "draft",
+      "image": {
+        "path": "visual/riohacha-valle-cangrejos-v1.webp",
+        "sha256": "580c3faf8283dee80afdb936761deabd796db82a4e4d28558df5233f535fb132",
+        "width": 1200,
+        "height": 800,
+        "status": "pending_human_review"
+      },
+      "latitude": null,
+      "longitude": null,
+      "map_url": "",
+      "translations": {
+        "es": {
+          "name": "Valle de los Cangrejos",
+          "description": "Manglares y costa se encuentran en este sector del delta del Ranchería, al noreste de la ciudad.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Valle de los Cangrejos",
+          "description": "Mangroves meet the coast in this part of the Ranchería delta, northeast of the city.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Valle de los Cangrejos",
+          "description": "Manguezais e litoral se encontram neste setor do delta do Ranchería, a nordeste da cidade.",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "map_status": "pending_named_google_maps_share"
+    },
+    {
+      "slug": "catedral-remedios",
+      "type": "place",
+      "display_order": 5,
+      "publication_status": "draft",
+      "image": {
+        "path": "visual/riohacha-catedral-cc-v3.webp",
+        "sha256": "9a5ee841beb05a497ab1d051024f6042a44f64b9bfc82548c284504b345aad61",
+        "width": 1200,
+        "height": 800,
+        "status": "pending_human_review"
+      },
+      "latitude": null,
+      "longitude": null,
+      "map_url": "https://maps.app.goo.gl/VefTnX9ZGVzPHvr89",
+      "map_status": "verified_named_google_maps_share",
+      "translations": {
+        "es": {
+          "name": "Catedral Nuestra Señora de los Remedios",
+          "description": "El templo que enmarca la Plaza Padilla es uno de los referentes patrimoniales de Riohacha. Una visita distinta al monumento de la plaza, respetando las celebraciones religiosas.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Our Lady of Remedies Cathedral",
+          "description": "The cathedral overlooking Plaza Padilla is a heritage landmark of Riohacha. Visit the church separately from the square’s monument, respecting religious services.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Catedral Nossa Senhora dos Remédios",
+          "description": "O templo junto à Praça Padilla é uma referência patrimonial de Riohacha. A visita à igreja é distinta do monumento da praça e deve respeitar as celebrações religiosas.",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "map_verified_name": "Catedral Nuestra Señora de los Remedios"
+    },
+    {
+      "slug": "parque-nicolas-federman",
+      "type": "place",
+      "display_order": 6,
+      "publication_status": "draft",
+      "image": {
+        "path": "visual/riohacha-federmann-v1.webp",
+        "sha256": "3f2e6b5ea9713978339209d7866e8b92ce7f6286d29759937a82935cefd93f67",
+        "width": 1200,
+        "height": 800,
+        "status": "pending_human_review"
+      },
+      "latitude": null,
+      "longitude": null,
+      "map_url": "https://maps.app.goo.gl/YJwDfZA8SKZk5PudA",
+      "map_status": "verified_named_google_maps_share",
+      "translations": {
+        "es": {
+          "name": "Parque Nicolás de Federman",
+          "description": "Una plaza del frente costero vinculada a la memoria de la ciudad, con el monumento a Federman y las mariposas amarillas. Complementa el paseo por la avenida de la Marina.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Nicolás de Federman Park",
+          "description": "A waterfront square linked to the city’s history, with the Federman monument and yellow butterflies sculpture. It complements a walk along Avenida de la Marina.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Parque Nicolás de Federman",
+          "description": "Uma praça da orla ligada à memória da cidade, com o monumento a Federman e a escultura das borboletas amarelas. Complementa o passeio pela avenida da Marina.",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "map_verified_name": "Parque Nicolás de Federman (parque de los cañones)"
+    },
+    {
+      "slug": "santuario-flamencos",
+      "type": "place",
+      "display_order": 7,
+      "publication_status": "draft",
+      "image": {
+        "path": "visual/riohacha-santuario-flamencos-v1.webp",
+        "sha256": "d7ad6a91fa42fc95c2f9cf0aee6f667e7f91652d01ff5b8d58ef0479c477b87d",
+        "width": 1200,
+        "height": 800,
+        "status": "pending_human_review"
+      },
+      "latitude": null,
+      "longitude": null,
+      "map_url": "https://maps.app.goo.gl/dffxgcJzT2jzxeu98",
+      "map_status": "verified_named_google_maps_share",
+      "translations": {
+        "es": {
+          "name": "Santuario de Flora y Fauna Los Flamencos",
+          "description": "En Camarones, dentro del municipio de Riohacha, este santuario protege lagunas costeras y hábitats de aves. La entrada se coordina con intérprete o guía local; el recorrido de avistamiento aparece en experiencias.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Los Flamencos Flora and Fauna Sanctuary",
+          "description": "In Camarones, within Riohacha municipality, this sanctuary protects coastal lagoons and bird habitats. Entry requires coordination with a local guide or interpreter; the guided birdwatching outing appears under experiences.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Santuário de Flora e Fauna Los Flamencos",
+          "description": "Em Camarones, no município de Riohacha, o santuário protege lagoas costeiras e habitats de aves. A entrada deve ser coordenada com guia ou intérprete local; o passeio de observação está em experiências.",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "map_verified_name": "Santuario de Fauna y Flora Los Flamencos"
+    },
+    {
+      "slug": "playas-mayapo",
+      "type": "place",
+      "display_order": 8,
+      "publication_status": "draft",
+      "image": {
+        "path": "visual/riohacha-mayapo-v1.webp",
+        "sha256": "1f53dc17a2d825ed848ba0f2c2f1a2eb8ca9519e75374648f289cd2b21e3d854",
+        "width": 1200,
+        "height": 800,
+        "status": "pending_human_review"
+      },
+      "latitude": null,
+      "longitude": null,
+      "map_url": "https://maps.app.goo.gl/Fjhxyrwsg8nQUC7y5",
+      "map_status": "verified_named_google_maps_share",
+      "translations": {
+        "es": {
+          "name": "Playas de Mayapo (alrededores)",
+          "description": "Playas del municipio vecino de Manaure, para conocer desde Riohacha. Arena clara y paisaje costero guajiro; confirma el acceso al sector que elijas y las condiciones del mar.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Mayapo beaches (nearby)",
+          "description": "Beaches in neighbouring Manaure municipality, reachable from Riohacha. Pale sand and La Guajira coastal scenery; check access to your chosen beach sector and sea conditions.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Praias de Mayapo (arredores)",
+          "description": "Praias do município vizinho de Manaure, para conhecer a partir de Riohacha. Areia clara e paisagem costeira guajira; confirme o acesso ao trecho escolhido e as condições do mar.",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "map_verified_name": "Playas de Mayapo"
+    },
+    {
+      "slug": "avistamiento-flamencos",
+      "type": "experience",
+      "display_order": 9,
+      "publication_status": "draft",
+      "image": {
+        "path": "visual/riohacha-flamencos-v1.webp",
+        "sha256": "a8e466bf13baa0ae56a16c00ce3b8d03009df670fc67c7721524e0de82f22fa2",
+        "width": 1200,
+        "height": 800,
+        "status": "pending_human_review"
+      },
+      "latitude": null,
+      "longitude": null,
+      "map_url": "https://maps.app.goo.gl/dffxgcJzT2jzxeu98",
+      "translations": {
+        "es": {
+          "name": "Avistamiento de flamencos en Camarones",
+          "description": "Recorrido acompañado por el entorno lagunar del santuario Los Flamencos para observar aves sin alterar su hábitat.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Flamingo watching in Camarones",
+          "description": "Explore the lagoon surroundings of Los Flamencos sanctuary with a guide, observing birds without disturbing their habitat.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Observação de flamingos em Camarones",
+          "description": "Percorra o ambiente lagunar do santuário Los Flamencos com acompanhamento, observando aves sem perturbar seu habitat.",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "map_status": "verified_named_google_maps_share",
+      "map_verified_name": "Santuario de Fauna y Flora Los Flamencos"
+    },
+    {
+      "slug": "encuentro-cultural-wayuu",
+      "type": "experience",
+      "display_order": 10,
+      "publication_status": "draft",
+      "image": {
+        "path": "visual/riohacha-wayuu-v1.webp",
+        "sha256": "97077af0e981779f078a658c20d9523be780740cd09d8e93f48c03c93abf247f",
+        "width": 1200,
+        "height": 800,
+        "status": "pending_human_review"
+      },
+      "latitude": null,
+      "longitude": null,
+      "map_url": "",
+      "translations": {
+        "es": {
+          "name": "Encuentro cultural wayuu",
+          "description": "Una visita organizada y acordada con anfitriones para acercarse a las artesanías y tradiciones del pueblo wayuu.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Wayuu cultural encounter",
+          "description": "An organised visit arranged with local hosts to learn about Wayuu crafts and traditions.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Encontro cultural wayuu",
+          "description": "Uma visita organizada e combinada com anfitriões para conhecer o artesanato e as tradições do povo wayuu.",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "map_status": "variable_meeting_point_no_fixed_map"
+    },
+    {
+      "slug": "excursion-alta-guajira",
+      "type": "experience",
+      "display_order": 11,
+      "publication_status": "draft",
+      "image": {
+        "path": "visual/riohacha-alta-guajira-taroa-v1.webp",
+        "sha256": "7728c278926a64dbecb8f5ec4081b640e38915c2513d27deba005219c7fbd8bd",
+        "width": 1200,
+        "height": 800,
+        "status": "pending_human_review"
+      },
+      "latitude": null,
+      "longitude": null,
+      "map_url": "",
+      "translations": {
+        "es": {
+          "name": "Excursión a la Alta Guajira (alrededores)",
+          "description": "Desde Riohacha salen recorridos de varios días hacia el Cabo de la Vela y Punta Gallinas, en el municipio de Uribia.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Alta Guajira excursion (surrounding region)",
+          "description": "Multi-day trips depart from Riohacha for Cabo de la Vela and Punta Gallinas, in the municipality of Uribia.",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Excursão à Alta Guajira (arredores)",
+          "description": "De Riohacha saem roteiros de vários dias para Cabo de la Vela e Punta Gallinas, no município de Uribia.",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "map_status": "variable_meeting_point_no_fixed_map"
+    }
+  ]
+}

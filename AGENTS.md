@@ -15,6 +15,17 @@ Leer antes de trabajar. Las instrucciones posteriores del propietario prevalecen
 
 Las rutas locales y públicas deben coincidir desde `/`: no introducir prefijos de carpetas internas. Probar el paquete construido según [entorno local](docs/ENTORNO_LOCAL.md). No modificar configuración privada ni divulgar secretos/datos personales.
 
+
+## Regla de enlaces y sincronización de nuevos lugares — 22/10/2026
+
+- Crear y conservar cada lugar en su rama propia. Antes de integrar o desplegar, obtener el main vigente de producción e integrarlo en la rama del lugar; resolver por función, revisar el delta y repetir las comprobaciones. No usar versiones antiguas de la plantilla ni copiar HTML previo del lugar. Esta integración no autoriza desplegar.
+- Reutilizar la plantilla y las acciones compartidas vigentes del portal. El hotfix de origen `e7ebaed1` limita las tarjetas a acciones de mapa y retira enlaces públicos de fuentes heredadas; conservar ese comportamiento y cualquier corrección posterior aprobada.
+- Las URL públicas de lugares son cortas y canónicas: `/lugares/<slug>/`, con prefijos `/en/` y `/pt-br/` para idiomas. Mantener slugs estables y no introducir rutas de revisión en enlaces de publicación.
+- Cómo llegar abre el sitio concreto o su acceso verificado: ficha nombrada con Place ID verificado o enlace corto real de Maps comprobado. No construir búsquedas por nombre genérico ni atribuir coordenadas aproximadas a una entrada. Nunca inventar un enlace acortado; comprobar que el enlace corto resuelve al punto correcto. Si falta precisión, dejar el mapa pendiente en vez de sustituirlo por una búsqueda.
+- Las tarjetas editoriales no exponen sitios web, fuentes, WhatsApp ni enlaces de operadores como publicidad gratuita. Las URL de investigación se guardan en los sidecars internos. Mantener las condiciones del módulo comercial pagado y aprobado; una fuente documental no es un anunciante.
+- Conservar procedencia y licencias de imágenes. No interpretar el retiro de enlaces comerciales como permiso para ocultar atribuciones legalmente exigidas: resolver el soporte de crédito antes de integrar el activo, o elegir un recurso que no imponga esa condición.
+- Validar el destino real de cada enlace, no solo HTTP200, y comprobar mapas y ausencia de publicidad heredada en ES/EN/PT-BR. Registrar pruebas; no dar por corregidos los pendientes del portal solo por integrar main.
+
 ## Ambientes únicos y puertos obligatorios — 22/10/2026
 
 - Solo dos dev: dev1 `127.0.0.1:8086` y dev2 `127.0.0.1:8087`; un preprod `127.0.0.1:8088`; y producción. Ningún ambiente adicional del portal ni puertos alternativos. Reutilizar los contenedores OCI administrados (Docker compatible; Podman en este equipo).

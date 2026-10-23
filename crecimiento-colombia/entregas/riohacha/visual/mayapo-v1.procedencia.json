@@ -1,0 +1,39 @@
+{
+  "asset_id": "riohacha-mayapo-v1",
+  "slug": "playas-mayapo",
+  "represented_municipality": "Manaure, La Guajira; alrededores de Riohacha",
+  "master": ".local/riohacha/mayapo-v1.png",
+  "web": "riohacha-mayapo-v1.webp",
+  "width": 1200,
+  "height": 800,
+  "prompt_file": "mayapo-prompt-v1.txt",
+  "source": "https://commons.wikimedia.org/wiki/File:Playa_Mayapo,_La_Guajira._._Horizontal.jpg",
+  "author": "Saavedranatalia",
+  "capture_date": "2016-06-28",
+  "reference_file": ".local/riohacha/referencias/mayapo-saavedranatalia-20160628.jpg",
+  "licence": "CC BY-SA 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "public_credit": "Ilustración adaptada mediante IA de «Playa Mayapo, La Guajira. . Horizontal», Saavedranatalia, CC BY-SA4.0. Cambio a tinta/gouache y recorte central.",
+  "factual_sources": [
+    "https://www.manaureguajira.gov.co/MiMunicipio/Paginas/Territorios.aspx",
+    "https://colombia.travel/es/disfruta-tus-vacaciones-de-verano-en-destinos-de-sol-y-playa-en"
+  ],
+  "review": {
+    "composition": "Retainscentralhut,walkway,lowshadeshelterright,flatseaandpalethicksand; derivedcentralcrop",
+    "style": "Visibleinkandgouache",
+    "geography": "Noaddedpalms/mountains/resorts; municipalityManaureconfirmed",
+    "date": "2016datedreference;services/currentinfrastructurenotcertified"
+  },
+  "alt_es": "Ilustración de un sector de las playas de Mayapo, en Manaure, con arena clara y enramadas costeras.",
+  "destination": "Riohacha",
+  "role": "poi",
+  "status": "draft_pending_human_approval",
+  "tool": "image_gen built-in",
+  "date": "2026-10-22",
+  "method": "licensed photograph style transformation",
+  "attribution_required": true,
+  "master_sha256": "447faf6789a68b05e7f8c9d9faa9a2ed171bd88ed9489a638a7bf4915faea050",
+  "web_sha256": "1f53dc17a2d825ed848ba0f2c2f1a2eb8ca9519e75374648f289cd2b21e3d854",
+  "reference_sha256": "d521051fc6c0932a97f460af2094f76e4a92cd79cece8e6f225ae3ae4cc99d5a",
+  "bytes": 239250
+}

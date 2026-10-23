@@ -1,0 +1,75 @@
+{
+  "fecha_consulta": "2026-10-22",
+  "catedral": {
+    "identity": "Calle2 #7-13; frente a plazaAlmirantePadilla",
+    "sources": [
+      {
+        "url": "https://www.diocesisriohacha.org/riohacha-parroquias/",
+        "proof": "institution and address"
+      },
+      {
+        "url": "https://commons.wikimedia.org/wiki/File:Catedral_Nuestra_Se%C3%B1ora_de_Los_Remedios.jpg",
+        "author": "Martinduquea",
+        "date": "2012-09-22",
+        "licence": "CC BY-SA 3.0",
+        "use": "factual observation only; not input to generator"
+      },
+      {
+        "url": "https://www.openstreetmap.org/#map=17/11.55169/-72.90944",
+        "proof": "map context cathedral near plaza; marker coordinate must be checked separately before navigation"
+      }
+    ],
+    "invariants": [
+      "beige paleochre facade with white mouldings",
+      "semicircular centraldoor",
+      "rosewindow above low triangular pediment and Virgin figure",
+      "high shaped stepped pediment with singlecross",
+      "low lateralwing balustrade"
+    ],
+    "camera": "new close centralfrontal architecturalcrop to avoid inventing plaza/monument/towers",
+    "not_certified": [
+      "precise2026 paintcondition",
+      "hidden facade parts",
+      "entireplaza geometry"
+    ]
+  },
+  "flamencos": {
+    "sources": [
+      {
+        "url": "https://www.parquesnacionales.gov.co/nuestros-parques/sff-los-flamencos/",
+        "proof": "location municipalityRiohacha, lagoons, mangrove/dryforest, species, birdwatching"
+      },
+      {
+        "url": "https://www.parquesnacionales.gov.co/wp-content/uploads/2023/06/Flamencos-Nianza-del-Carmen-Angulo-Jefe-de-SFF-FLAMENCOS.jpeg",
+        "author": "Nianza del Carmen Angulo (as filename/page)",
+        "capture_date": null,
+        "use": "observed officialimage for habitat/species; not uploaded or adapted"
+      },
+      {
+        "url": "https://colombia.travel/en/riohacha/los-flamencos-fauna-and-flora-sanctuary",
+        "proof": "birdwatching identity"
+      }
+    ],
+    "invariants": [
+      "shallow grey-green lagoon",
+      "pink American flamingos with blacktippedbeaks",
+      "low mangrove shore",
+      "flat coastal ecosystem, no mountains"
+    ],
+    "camera": "new lowshore viewpoint, thematic approximate lagoon, exact locationnotasserted",
+    "map_link_official": "https://www.parquesnacionales.gov.co/nuestros-parques/sff-los-flamencos/ iframe Google map; principal mayextract verifiednavigationpin",
+    "sightings": "not guaranteed",
+    "access_name": "Centro Administrativo Cabaña Guanebucane (PNN officialhowtoreach)",
+    "streetview_points": 0
+  },
+  "valle_cangrejos": {
+    "state": "research_pending_precise_visual_reference",
+    "sources": [
+      "https://riohacha-laguajira.gov.co/MiMunicipio/Paginas/Sitios-de-Interes.aspx",
+      "https://www.invemar.org.co/redcostera1/invemar/docs/9312ORDENAMIENTO_MANGLARES_GUAJIRA_LIBRO.pdf"
+    ],
+    "identity": "DeltaRanchería, brazoCalancala, northeastVillaFatima; mangroveandcoast",
+    "do_not_use": "genericvirginbeach",
+    "navigation": "noverifiedaccesspin; broadsitecoordinatewouldnotconstituteaccess"
+  }
+}
