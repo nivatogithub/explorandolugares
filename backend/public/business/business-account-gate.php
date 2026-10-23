@@ -9,5 +9,5 @@ if (!isset($error)) $error = '';
 <?php if($error): ?><p class="notice" role="alert"><?=esc($error)?></p><?php endif ?>
 <p><a class="pill" href="<?=esc(site_path('/negocios/registro/?tipo=traveler'))?>">Crear mi cuenta</a></p>
 <p>¿Ya tienes una cuenta? <a class="pill light" href="<?=esc(site_path('/negocios/acceso/'))?>">Iniciar sesión</a></p>
-<p class="small-note">Después de verificar el correo e iniciar sesión, vuelve a “Registrar o reclamar un negocio”.</p>
+<p class="small-note">Después de verificar el correo e iniciar sesión, te llevaremos directamente al wizard para registrar o reclamar el negocio.</p>
 </section></main></body></html>

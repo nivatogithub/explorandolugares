@@ -13,7 +13,9 @@ try{
   // always take precedence, and disputed claims never appear in this query.
   $paymentBusiness=0;
   try{$pendingPayment=db()->prepare('SELECT m.business_id FROM business_account_memberships m JOIN business_subscriptions s ON s.business_id=m.business_id LEFT JOIN business_subscription_payment_evidence e ON e.subscription_id=s.id WHERE m.account_id=? AND m.status="active" AND m.role IN ("owner","manager") AND s.plan_code<>"free" AND s.status="pending" GROUP BY m.business_id,s.id HAVING COUNT(e.id)=0 ORDER BY s.id DESC LIMIT 1');$pendingPayment->execute([(int)$account['id']]);$paymentBusiness=(int)$pendingPayment->fetchColumn();}catch(PDOException){$paymentBusiness=0;}
-  $target=is_array($return)&&(int)($return['business']??0)>0?'/business/editorial.php?business='.(int)$return['business'].'&version='.(int)($return['version']??0):($paymentBusiness?'/negocios/portal/?tab=business&business='.$paymentBusiness.'&solicitud=guardada#pagos':'/negocios/portal/');header('Location: '.site_path($target),true,303);exit;
+  $businessReturn=$_SESSION['business_registration_return']??null;
+  unset($_SESSION['business_registration_return']);
+  $target=is_array($return)&&(int)($return['business']??0)>0?'/business/editorial.php?business='.(int)$return['business'].'&version='.(int)($return['version']??0):($businessReturn==='/negocios/registro/?tipo=business'?$businessReturn:($paymentBusiness?'/negocios/portal/?tab=business&business='.$paymentBusiness.'&solicitud=guardada#pagos':'/negocios/portal/'));header('Location: '.site_path($target),true,303);exit;
  }
 }catch(Throwable $e){PortalIncidents::technical($e,'account_login');$error=$e->getMessage();http_response_code(400);}
 require_once __DIR__.'/../_account-page.php';account_page(true);
