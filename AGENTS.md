@@ -32,3 +32,9 @@ Las rutas locales y públicas deben coincidir desde `/`: no introducir prefijos 
 - Reservar un dev libre con el controlador `dev/ambientes.py` y un identificador de tarea. Si ambos están ocupados, esperar; nunca reemplazar la reserva de otro worker ni crear un servidor auxiliar. Mantener reserva durante revisión humana y liberarla explícitamente al terminar.
 - Compartir un único registro de reservas por equipo entre todas las ramas/worktrees. Datos, volúmenes y privados separados por ambiente. Nunca copiar datos vivos ni credenciales de producción a dev.
 - Preprod no se usa como tercer dev. No borrar ni recrear sus datos durante limpiezas. La limpieza afecta solo ambientes sobrantes de Explorando Lugares, no otros proyectos ni archivos fuente.
+
+## Maps: ficha nombrada, nunca pin numérico — corrección 22/10/2026
+
+- Enlaces públicos de ubicación abren la ficha nombrada del sitio en Google Maps, preferentemente su enlace Compartir real `maps.app.goo.gl`. Verificar nombre, municipio y destino efectivo. No inventar códigos cortos.
+- No usar `q=lat,lon`, `query=lat,lon`, pines numéricos ni búsquedas genéricas por nombre como sustituto. Las coordenadas se conservan como datos internos independientes; no son el enlace público. Un PlaceID/FID verificado puede identificar una ficha nombrada.
+- La ausencia de ficha verificada deja el enlace pendiente; las experiencias sin sede fija no reciben un pin inventado. Conservar el comportamiento de `ReviewedMapLinks` vigente en main; validarlo en ES/EN/PT-BR.
