@@ -26,13 +26,18 @@
     const isNew = mode === 'new_business';
     for(const name of ['business_registration']){const field=form.querySelector(`[name="${name}"]`);if(field)field.required=!!mode;}
     if(authorityInput)authorityInput.required=isNew&&relationship?.value==='authorized_administrator';
-    const details=document.querySelector('#registration-new-details');if(details){details.hidden=true;details.disabled=true;}const contacts=document.querySelector('#registration-contact-details');if(contacts){contacts.hidden=true;contacts.disabled=true;}
+    // On a server-side validation error the form is rendered again with the
+    // selected business and plan. Do not reset that recovered wizard state
+    // while the category list finishes loading in the background.
+    const restoringSubmission = form.dataset.registrationWizardStep !== '1'
+      && !!document.querySelector('.account-registration-card [role="alert"]');
+    const details=document.querySelector('#registration-new-details');if(details&&!restoringSubmission){details.hidden=true;details.disabled=true;}const contacts=document.querySelector('#registration-contact-details');if(contacts&&!restoringSubmission){contacts.hidden=true;contacts.disabled=true;}
     if(isNew&&!newName.value.trim())newName.value=search.value.trim();
     newNameWrap.hidden = !isNew;
     newName.required = isNew;
-    const stage=document.querySelector('#registration-plan-choice');if(stage){stage.hidden=true;stage.disabled=true;}
-    const continuation=document.querySelector('#registration-continuation');if(continuation){continuation.hidden=true;continuation.disabled=true;}
-    submit.disabled = true;
+    const stage=document.querySelector('#registration-plan-choice');if(stage&&!restoringSubmission){stage.hidden=true;stage.disabled=true;}
+    const continuation=document.querySelector('#registration-continuation');if(continuation&&!restoringSubmission){continuation.hidden=true;continuation.disabled=true;}
+    if(!restoringSubmission)submit.disabled = true;
     form.dispatchEvent(new Event('operator-eligibility-change'));
     form.querySelectorAll('.business-registration-option input').forEach((radio) => {
       radio.checked = mode === 'existing_business' && radio.value === id;

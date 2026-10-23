@@ -7,7 +7,12 @@ final class BusinessExistenceVerification
     public static function capture(array $input):array
     {
         $rnt=trim((string)($input['business_rnt']??''));$nit=trim((string)($input['business_nit']??''));
-        if(strlen($rnt)>12||($rnt!==''&&!ctype_digit($rnt)))throw new RuntimeException('El RNT debe contener solo números, hasta 12 dígitos.');
+        // People frequently paste the label and visual separators from their
+        // certificate. Store the identifier as digits, without rejecting an
+        // otherwise valid application because of its presentation.
+        $rnt=preg_replace('/^RNT\b[^0-9]*/iu','',$rnt)??$rnt;
+        $rnt=preg_replace('/[.\s-]+/u','',$rnt)??$rnt;
+        if(strlen($rnt)>12||($rnt!==''&&!ctype_digit($rnt)))throw new RuntimeException('Revisa el RNT indicado en el documento del negocio.');
         if(strlen($nit)>25||($nit!==''&&!preg_match('/^[0-9. ]+(?:-[0-9])?$/D',$nit)))throw new RuntimeException('Revisa el NIT del negocio; puedes incluir su dígito después de un guion.');
         return ['rnt'=>$rnt,'nit'=>$nit];
     }

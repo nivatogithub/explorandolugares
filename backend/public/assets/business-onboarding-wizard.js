@@ -13,6 +13,33 @@
     const type = document.querySelector('#registration-application-type');
     const csrf = form.querySelector('[name="csrf"]')?.value || '';
     const plan = () => form.querySelector('[name="plan_code"]:checked')?.value || '';
+    const serverError = document.querySelector('.account-registration-card [role="alert"]');
+    const recoveryKey = 'explorando-lugares:business-registration-recovery';
+    const excludedFromRecovery = new Set(['csrf', 'display_name', 'email', 'phone', 'password', 'password_confirm', 'business_registration', 'identity_document', 'authority_document', 'reference_images[]']);
+    const recoverable = () => Array.from(form.elements).filter((field) => field.name && !excludedFromRecovery.has(field.name) && field.type !== 'file' && field.type !== 'password');
+    const restoreAfterValidationError = () => {
+      if (!serverError) { sessionStorage.removeItem(recoveryKey); return; }
+      try {
+        const saved = JSON.parse(sessionStorage.getItem(recoveryKey) || '{}');
+        for (const field of recoverable()) {
+          const value = saved[field.name];
+          if (value === undefined) continue;
+          if (field.type === 'checkbox' || field.type === 'radio') field.checked = Array.isArray(value) ? value.includes(field.value) : value === field.value;
+          else field.value = String(value);
+        }
+      } catch { /* A malformed browser draft must never block the form. */ }
+    };
+    restoreAfterValidationError();
+    form.addEventListener('submit', () => {
+      const values = {};
+      for (const field of recoverable()) {
+        if (field.type === 'checkbox' || field.type === 'radio') {
+          if (!field.checked) continue;
+          (values[field.name] ||= []).push(field.value);
+        } else values[field.name] = field.value;
+      }
+      try { sessionStorage.setItem(recoveryKey, JSON.stringify(values)); } catch { /* Storage can be unavailable in private browsing. */ }
+    });
     // The applicant should not have to guess what an administrator needs.
     // Review requests carry a specific reason back to the owner instead.
     form.querySelector('[name="message"]')?.closest('label')?.remove();
@@ -76,7 +103,7 @@
       [nit, rnt].forEach((field) => field?.setCustomValidity(requiresIdentifier && !provided ? 'Para Gratis o Destacado indica el NIT o el RNT del negocio.' : ''));
       form.querySelectorAll('[data-free-identifier-note]').forEach((node) => { node.textContent = requiresIdentifier ? '(NIT o RNT obligatorio)' : '(opcional)'; });
       const help = form.querySelector('[data-free-identifier-help]');
-      if (help) help.textContent = requiresIdentifier ? 'Solo números. Para Gratis o Destacado indica NIT o RNT.' : 'Solo números. Si no aplica, déjalo vacío.';
+      if (help) help.textContent = requiresIdentifier ? 'Puedes copiarlo tal como aparece en el documento. Para Gratis o Destacado indica NIT o RNT.' : 'Si no aplica, déjalo vacío.';
     };
 
     const uploadFile = async (input, kind, slot) => {
@@ -159,7 +186,7 @@
     const contacts = document.querySelector('#registration-contact-details');
     const contactStep = [contacts].filter(Boolean);
     const submissionStep = [continuation].filter(Boolean);
-    let step = 1;
+    let step = type?.value && plan() && serverError ? 3 : 1;
 
     const renderStep = () => {
       if (!finder || !planStage || !continuation) return;
