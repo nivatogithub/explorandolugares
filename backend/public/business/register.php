@@ -56,10 +56,15 @@ try{
   if(!$currentAccount){require_once dirname(__DIR__,2).'/app/AccountVerificationDelivery.php';AccountVerificationDelivery::send($pdo,$config,$accountId);header('Location: /cuenta/verificar-correo/?enviado=1',true,303);exit;}
   if(empty($currentAccount['email_verified_at'])){require_once dirname(__DIR__,2).'/app/AccountVerificationDelivery.php';AccountVerificationDelivery::send($pdo,$config,$accountId,true);header('Location: /cuenta/verificar-correo/?enviado=1',true,303);exit;}
   require_once dirname(__DIR__,2).'/app/AccountSessionSecurity.php';AccountSessionSecurity::bind(db(),$_SESSION,$accountId);session_regenerate_id(true);$_SESSION['business_account_id']=$accountId;$_SESSION['account_space']='business';$_SESSION['business_last_seen']=time();$_SESSION['csrf']=bin2hex(random_bytes(32));
+  // A verified account can continue directly to payment. This creates only a
+  // private draft and a pending subscription; it never publishes the business.
+  require_once dirname(__DIR__,2).'/app/BusinessSelfOnboarding.php';
+  $pendingApplication=$pdo->prepare('SELECT id FROM business_account_applications WHERE account_id=? AND destination_id=? AND status IN ("pending","in_review") ORDER BY id DESC LIMIT 1');$pendingApplication->execute([$accountId,$destinationId]);$pendingApplicationId=(int)$pendingApplication->fetchColumn();
+  if($pendingApplicationId){$pdo->beginTransaction();try{BusinessSelfOnboarding::complete($pdo,$pendingApplicationId);$pdo->commit();}catch(Throwable $completionError){if($pdo->inTransaction())$pdo->rollBack();throw $completionError;}}
   $nextBusiness=(int)($application['business_id']??0);
   if($application['application_type']==='new_business'){$next=$pdo->prepare('SELECT b.id FROM businesses b JOIN business_translations t ON t.business_id=b.id AND t.locale="es" JOIN business_account_memberships m ON m.business_id=b.id WHERE m.account_id=? AND m.status="active" AND b.destination_id=? AND LOWER(t.display_name)=LOWER(?) ORDER BY b.id DESC LIMIT 1');$next->execute([$accountId,$destinationId,$application['business_name']]);$nextBusiness=(int)$next->fetchColumn();}
   $hasAccess=$pdo->prepare('SELECT 1 FROM business_account_memberships WHERE account_id=? AND business_id=? AND status="active"');$hasAccess->execute([$accountId,$nextBusiness]);
-  $nextUrl=$nextBusiness&&$hasAccess->fetchColumn()?'/negocios/portal/?tab=business&business='.$nextBusiness.'&solicitud=recibida'.($isFree?'':'#pagos'):'/negocios/portal/?espacio=business&solicitud=recibida';
+  $nextUrl=$nextBusiness&&$hasAccess->fetchColumn()?'/negocios/portal/?tab=business&business='.$nextBusiness.'&solicitud=guardada'.($isFree?'':'#pagos'):'/negocios/portal/?espacio=business&solicitud=guardada';
   header('Location: '.site_path($nextUrl),true,303);exit;
  }
 }catch(Throwable $e){$incident=PortalIncidents::technical($e,'business_registration');$error=$e instanceof PDOException?'Ya existe una cuenta con ese correo o no fue posible guardar la solicitud.':$e->getMessage();if($incident)$error='No pudimos completar el registro. Referencia: '.$incident;http_response_code($incident?503:400);}
