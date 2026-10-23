@@ -16,7 +16,11 @@ $registrationType=(string)($_POST['account_type']??$_GET['tipo']??($_SERVER['REQ
 if($registrationType!=='business'){require __DIR__.'/registration-choice.php';exit;}
 // La cuenta es previa a la solicitud. No mezclamos la creación de credenciales
 // con el registro de un negocio: la asociación siempre parte de una sesión.
-if(!$currentAccount){require __DIR__.'/business-account-gate.php';exit;}
+if(!$currentAccount){
+    $_SESSION['business_registration_return']='/negocios/registro/?tipo=business';
+    require __DIR__.'/business-account-gate.php';
+    exit;
+}
 header("Content-Security-Policy: default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https://tile.openstreetmap.org; connect-src 'self' https://nominatim.openstreetmap.org https://ipwho.is; form-action 'self'; frame-ancestors 'none'; base-uri 'self'");
 $destinationId=max(0,(int)($_POST['destination_id']??$_GET['destination_id']??$registrationPurchase['destination_id']??0));
 if(($_GET['search']??'')==='1'){
