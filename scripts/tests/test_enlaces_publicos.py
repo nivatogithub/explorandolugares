@@ -81,7 +81,12 @@ class PublicLinkTests(unittest.TestCase):
         directory=(self.public/'destinos/index.html').read_text()
         self.assertEqual(directory.count('class="destination-card"'),len(__import__('json').loads((ROOT/'content/lugares-publicados.json').read_text())['slugs']))
         seed=__import__('json').loads((ROOT/'content/destinos-dinamicos.json').read_text())
-        drafts=[item for item in seed['destinations'] if item['slug']!='jerico']
+        release=__import__('json').loads((ROOT/'content/releases/cinco-destinos-20261024.json').read_text())
+        approved_seed={'jerico'} | set(release['public_places'])
+        self.assertEqual({item['slug'] for item in seed['destinations'] if item['publication_status']=='published'}, approved_seed)
+        public_slugs=set(__import__('json').loads((ROOT/'content/lugares-publicados.json').read_text())['slugs'])
+        self.assertTrue(approved_seed <= public_slugs)
+        drafts=[item for item in seed['destinations'] if item['slug'] not in public_slugs]
         self.assertTrue(all(item['publication_status']=='draft' for item in drafts))
         self.assertTrue(all(not (self.public/f'{locale}destinos/{item["slug"]}/index.html').exists()
                             for locale in ('','en/','pt-br/') for item in drafts))
