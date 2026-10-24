@@ -101,7 +101,7 @@
         : 'Guardar solicitud para revisión';
       setPlanField('[data-plan-field="summary"]', editorial, editorial);
       setPlanField('[data-plan-field="description"]', premium, premium);
-      setPlanField('[data-plan-field="location"]', ['featured', 'page_premium'].includes(choice), choice === 'featured');
+      setPlanField('[data-plan-field="location"]', ['featured', 'page', 'page_premium'].includes(choice), choice !== 'free');
       // Los canales son un paso independiente del wizard. Su visibilidad y
       // habilitación dependen exclusivamente del paso 4, administrado por
       // business-registration.js; no los abras al escoger una suscripción.

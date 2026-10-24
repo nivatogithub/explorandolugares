@@ -55,6 +55,11 @@ final class BusinessSelfOnboarding
         $details['responsibility_association']=['basis'=>'declared_with_business_document','ownership_verified'=>false];unset($details['auto_claim_on_activation']);
         $pdo->prepare('UPDATE businesses SET claim_status="RECLAMADO",information_status="ACTIVO",updated_at=CURRENT_TIMESTAMP WHERE id=?')->execute([$businessId]);
         $pdo->prepare('UPDATE business_account_applications SET status="approved",business_details_json=?,admin_note=?,reviewed_at=CURRENT_TIMESTAMP,updated_at=CURRENT_TIMESTAMP WHERE id=?')->execute([json_encode($details,JSON_THROW_ON_ERROR),'Asociación declarada con respaldo documental. No certifica titularidad. Publicación separada.',$applicationId]);
+        // Submitted content, positions and products must exist privately before payment.
+        $pdo->prepare('INSERT INTO business_image_references(business_id,storage_name,original_name,mime_type,file_size,width,height) SELECT ?,i.storage_name,i.original_name,i.mime_type,i.file_size,i.width,i.height FROM business_application_images i WHERE i.application_id=? AND NOT EXISTS(SELECT 1 FROM business_image_references r WHERE r.business_id=? AND r.storage_name=i.storage_name)')->execute([$businessId,$applicationId,$businessId]);
+        require_once __DIR__.'/BusinessEditorialService.php';
+        $editorial=new BusinessEditorialService($pdo,function_exists('private_storage_path')?private_storage_path('business-image-references'):sys_get_temp_dir());
+        if(!$editorial->latest($businessId))$editorial->save((int)$row['account_id'],$businessId,0,[],!empty($details['image_consent']));
     }
     /** Explicit homonym declaration needs a distinct address; it is not verified automatically. */
     public static function distinctLocationAllowed(PDO $pdo,array $duplicates,array $details):bool

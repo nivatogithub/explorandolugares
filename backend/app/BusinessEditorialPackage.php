@@ -35,7 +35,7 @@ final class BusinessEditorialPackage
         }
         $titleReady=$application!==null&&$application['status']==='approved'&&$titleDocument!==null&&!empty($titleDocument['verified_at']);
         $paidPlan=$subscription!==null&&$subscription['plan_code']!=='free';
-        $paymentReady=$paidPlan?$subscription['status']==='paid_pending_publication'&&$payment!==null&&$payment['status']==='approved':$subscription!==null&&in_array($subscription['status'],['pending_publication','active'],true);
+        $paymentReady=$paidPlan?in_array($subscription['status'],['paid_pending_publication','active'],true)&&$payment!==null&&$payment['status']==='approved':$subscription!==null&&in_array($subscription['status'],['pending_publication','active'],true);
         $blockers=[];
         if(!$titleReady)$blockers[]='Falta validar el documento que respalda la titularidad o representación del negocio.';
         if(!$subscription)$blockers[]='Falta seleccionar una suscripción.';
@@ -60,16 +60,24 @@ final class BusinessEditorialPackage
         $zip=new ZipArchive();
         if($zip->open($zipPath,ZipArchive::CREATE|ZipArchive::OVERWRITE)!==true){@unlink($zipPath);throw new RuntimeException('No se pudo crear el paquete editorial.');}
         try{
-            $sources=[];$q=$this->pdo->prepare('SELECT storage_name,original_name,mime_type,file_size,width,height FROM business_image_references WHERE business_id=? ORDER BY id');$q->execute([$businessId]);
+            $revision=$this->pdo->prepare('SELECT id,payload_json FROM business_editorial_versions WHERE business_id=? ORDER BY id DESC LIMIT 1');$revision->execute([$businessId]);$latest=$revision->fetch(PDO::FETCH_ASSOC)?:null;
+            $payload=$latest?json_decode($latest['payload_json'],true,32,JSON_THROW_ON_ERROR):[];
+            $sources=[];$q=$this->pdo->prepare($latest?'SELECT storage_name,original_name,mime_type,file_size,width,height FROM business_editorial_images WHERE version_id=? ORDER BY id':'SELECT storage_name,original_name,mime_type,file_size,width,height FROM business_image_references WHERE business_id=? ORDER BY id');$q->execute([$latest['id']??$businessId]);
             foreach($q->fetchAll(PDO::FETCH_ASSOC) as $index=>$image){
                 $extension=match($image['mime_type']){'image/jpeg'=>'jpg','image/png'=>'png','image/webp'=>'webp',default=>null};
                 if($extension===null||!preg_match('/^[a-f0-9]{40}\.(jpg|png|webp)$/D',(string)$image['storage_name']))continue;
-                $path=$this->referenceStorage.'/'.$image['storage_name'];if(!is_file($path)||(int)filesize($path)!==(int)$image['file_size'])continue;
+                $path=$this->referenceStorage.'/'.$image['storage_name'];if(is_link($path)||!is_file($path)||(int)filesize($path)!==(int)$image['file_size'])throw new RuntimeException('Falta una fotografía original; revisa los archivos antes de exportar.');
                 $entry='source-images/'.str_pad((string)($index+1),2,'0',STR_PAD_LEFT).'.'.$extension;
                 if(!$zip->addFile($path,$entry))throw new RuntimeException('No se pudo añadir una fotografía al paquete editorial.');
-                $sources[]=['file'=>$entry,'original_name'=>$image['original_name'],'mime_type'=>$image['mime_type'],'width'=>(int)$image['width'],'height'=>(int)$image['height']];
+                $slots=array_keys($payload['source_images']??[],$image['storage_name'],true);
+                $sources[]=['file'=>$entry,'slots'=>$slots,'original_name'=>$image['original_name'],'mime_type'=>$image['mime_type'],'width'=>(int)$image['width'],'height'=>(int)$image['height']];
             }
             $brief=['schema'=>'explorandolugares-editorial-source-v1','business'=>['name'=>$business['name'],'destination'=>$business['destination'],'category'=>$business['category'],'plan'=>$business['plan']],'content'=>['summary'=>$business['summary'],'description'=>$business['description']],'source_images'=>$sources,'rules'=>['required_locales'=>['es','en','pt-BR'],'never_include'=>['identity documents','business registration documents','account data','payment evidence','private contact data'],'result_contract'=>'Return a separate editorial ZIP with only final images and public-facing ES, EN and PT-BR texts.']];
+            $brief['content']=['summary'=>$payload['translations']['es']['summary']??$business['summary'],'description'=>$payload['translations']['es']['description']??$business['description']];
+            $brief['translations']=$payload['translations']??['es'=>['display_name'=>$business['name'],...$brief['content']]];
+            $brief['products']=[];
+            if($business['plan']==='page_premium')foreach($payload['showcase']['products']??[] as $index=>$product){$files=[];foreach($sources as $source)if(in_array('product_'.$index,$source['slots'],true))$files[]=$source['file'];$brief['products'][]=['slot'=>'product_'.$index,'translations'=>$product['translations']??[],'source_images'=>$files];}
+            $brief['image_slots']=[];foreach($sources as $source)foreach($source['slots'] as $slot)$brief['image_slots'][$slot]=$source['file'];
             if(!$zip->addFromString('brief.json',json_encode($brief,JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES|JSON_THROW_ON_ERROR)))throw new RuntimeException('No se pudo escribir la ficha editorial.');
             $imageProvenanceExample=['creation_route'=>'independent_composition','tool_model'=>'','created_on'=>'YYYY-MM-DD','responsible'=>'','prompt'=>'','factual_basis'=>[''],'reference_assets'=>[''],'reviewed_by'=>'','review_note'=>''];
             $resultExample=['schema'=>'explorandolugares-editorial-result-v1','translations'=>['es'=>['display_name'=>'','summary'=>'','description'=>''],'en'=>['display_name'=>'','summary'=>'','description'=>''],'pt-BR'=>['display_name'=>'','summary'=>'','description'=>'']],'images'=>['logo'=>['file'=>'images/logo.webp','alt'=>['es'=>'','en'=>'','pt-BR'=>''],'caption'=>['es'=>'','en'=>'','pt-BR'=>''],'provenance'=>$imageProvenanceExample],'cover'=>['file'=>'images/cover.webp','alt'=>['es'=>'','en'=>'','pt-BR'=>''],'caption'=>['es'=>'','en'=>'','pt-BR'=>''],'provenance'=>$imageProvenanceExample]],'products'=>[['translations'=>['es'=>['name'=>'','description'=>''],'en'=>['name'=>'','description'=>''],'pt-BR'=>['name'=>'','description'=>'']],'image'=>['file'=>'images/product-1.webp','alt'=>['es'=>'','en'=>'','pt-BR'=>''],'caption'=>['es'=>'','en'=>'','pt-BR'=>''],'provenance'=>$imageProvenanceExample]]]];
@@ -81,7 +89,8 @@ final class BusinessEditorialPackage
                 "3. No inventes personas, señalización, arquitectura, premios, servicios, productos, vistas, rutas ni condiciones actuales. No incluyas texto, marcas de agua, logotipos no autorizados, monumentos adicionales ni el estilo de un artista vivo. No copies exactamente la composición de una fotografía.\n".
                 "4. Revisa cada salida a tamaño de tarjeta y de portada: el negocio debe reconocerse sin el título, sin deformaciones ni elementos falsos. Si no hay evidencia suficiente, no rellenes el espacio con una escena genérica.\n".
                 "5. Mejora los textos públicos y completa español (`es`), inglés (`en`) y portugués de Brasil (`pt-BR`). Respeta: nombre hasta 180 caracteres, presentación hasta 450; la descripción ampliada solo se permite para Premium y tiene máximo 1.200.\n".
-                "6. Devuelve un ZIP nuevo con `editorial.json` y las imágenes finales dentro de `images/`. No incluyas este ZIP original ni archivos adicionales. El primer resultado se puede importar aunque la ficha privada siga en borrador. Si el administrador ya envió una prepublicación al propietario, no generes otro ZIP hasta que este solicite correcciones.\n\n".
+                "6. Conserva TODOS los productos de brief.json y usa image_slots para identificar portada y productos (product_0 a product_4); no adivines la posición por el nombre del archivo. Cada descripción de producto admite 180 caracteres y cada título 100. No elimines un producto ni inventes uno nuevo. Completa sus tres idiomas.\n".
+                "7. Devuelve un ZIP nuevo con `editorial.json` y las imágenes finales dentro de `images/`. No incluyas este ZIP original ni archivos adicionales. El primer resultado se puede importar aunque la ficha privada siga en borrador. Si el administrador ya envió una prepublicación al propietario, no generes otro ZIP hasta que este solicite correcciones.\n\n".
                 "## Formato de editorial.json\n\n```json\n".
                 json_encode($resultExample,JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES)."\n```\n\n".
                 "Incluye `images.logo` cuando exista un logotipo aprobado y `images.cover` para Página y Premium. Para Premium puedes añadir hasta cinco productos. Para planes sin página no incluyas imágenes ni productos. El objeto `provenance` es obligatorio por imagen y se conserva privado: registra la vía de creación, prompt, herramienta/modelo, fecha, responsable, fundamento factual, referencias visuales y revisión editorial. La IA no convierte una imagen en libre de derechos ni la deja publicada automáticamente.";

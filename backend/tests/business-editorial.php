@@ -60,3 +60,6 @@ echo "OK: private versions, exact approvals, ownership, optimistic conflicts, re
 
 // El responsable no puede introducir traducciones aunque manipule la petición.
 $latest=$s->latest(1);$before=$s->payload($latest,1);$id=$s->save(1,1,(int)$latest['id'],['translations'=>['es'=>['summary'=>'Solo español'],'en'=>['summary'=>'Injected language']]]);$after=$s->payload($s->version($id),1);check(($after['translations']['en']['summary']??'')===($before['translations']['en']['summary']??''),'owner changed portal translations');
+
+// A ZIP owns its transaction: saving a version must not nest/commit it.
+$latest=$s->latest(1);$p->beginTransaction();$nested=$s->save(1,1,(int)$latest['id'],['showcase'=>['products'=>[4=>$products['products'][0]]],'source_images'=>['product_4'=>$source]],true);check($p->inTransaction(),'nested save committed the ZIP transaction');check(($s->payload($s->version($nested),1)['source_images']['product_4']??'')===$source,'fifth product source rejected');$p->rollBack();check((int)$s->latest(1)['id']===(int)$latest['id'],'failed ZIP cannot roll back its revision');

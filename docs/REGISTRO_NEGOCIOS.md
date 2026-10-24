@@ -1,5 +1,7 @@
 # Registro de negocios — 11 de octubre de 2026
 
+> Histórico. El contrato vigente y los pendientes comprobados están en [Cierre del circuito de negocios, 24 de octubre](CIERRE_CIRCUITO_NEGOCIOS_2026-10-24.md). Las instrucciones posteriores del propietario prevalecen sobre los alcances antiguos de este archivo.
+
 El propietario indicó que le gusta la aproximación visual con descripción a la izquierda y escena ilustrada a la derecha. Se conserva como base visual; no implica despliegue. Nueva ampliación: visitantes navegan sin cuenta; negocios/marcas presentan una solicitud privada.
 
 Implementado: selección de perfil, formulario de tipo de negocio, municipio, persona, correo y/o teléfono, marca, descripción, interés de participación/pauta/información, solicitud opcional de contacto y autorización obligatoria de tratamiento. Sin contratación, pagos, contacto automático ni publicación en catálogo.
