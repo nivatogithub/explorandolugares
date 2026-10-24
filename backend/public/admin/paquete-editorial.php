@@ -40,7 +40,7 @@ try{
 <?php if($error):?><p class="notice" role="alert"><?=esc($error)?></p><?php endif ?>
 <?php if($notice):?><p class="notice" role="status"><?=esc($notice)?></p><?php endif ?>
 <form method="get" class="registration-form"><label>Negocio<select name="business" required><option value="">Selecciona un negocio</option><?php foreach($businessOptions as $option):?><option value="<?=esc((string)$option['id'])?>" <?=((int)$business===(int)$option['id'])?'selected':''?>><?=esc($option['display_name'])?> · <?=esc($option['destination_name'])?></option><?php endforeach ?></select></label><button class="pill">Abrir ficha administrativa</button></form>
-<?php if($business&&$readiness):?><section class="account-portal-card"><h2><?=esc($readiness['business']['name'])?> <small>#<?=esc((string)$business)?></small></h2>
+<?php if($business&&$readiness):?><section class="account-portal-card"><h2><?=esc($readiness['business']['name'])?></h2>
 <p>Revisa primero los soportes privados. Nunca se incluyen en el paquete editorial.</p>
 <dl>
 <dt>Soporte de titularidad o representación</dt><dd><?php if($readiness['title_document']):?><a href="representacion-evidencia.php?id=<?=esc((string)$readiness['title_document']['id'])?>" target="_blank" rel="noopener">Ver <?=esc($readiness['title_document']['original_name'])?> ↗</a> · <?=!empty($readiness['title_document']['verified_at'])?'Validado':'Pendiente de validación'?><?php if(empty($readiness['title_document']['verified_at'])&&$readiness['application']):?> · <a href="validar-titularidad.php?application=<?=esc((string)$readiness['application']['id'])?>">Validar soporte</a><?php endif ?><?php else:?>No se encontró un documento de registro del negocio.<?php endif ?></dd>
