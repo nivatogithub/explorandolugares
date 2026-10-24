@@ -34,9 +34,9 @@ try{
 <?php require __DIR__.'/_theme.php';?>
 <body class="portal-admin"><main class="wrap admin-page">
 <?php require __DIR__.'/_navigation.php';?>
-<a href="editorial-negocios.php">← Preparación editorial</a>
-<h1>Paquete editorial</h1>
-<p>El ZIP editorial contiene solo imágenes y contenido público. Los documentos de titularidad y pagos se revisan abajo, de forma privada, y nunca entran al ZIP.</p>
+<a href="atencion-comercios.php">← Negocios locales</a>
+<h1>Gestionar negocio</h1>
+<p>Este es el proceso único de publicación: valida titularidad y pago, prepara o importa el paquete editorial y abre la revisión para enviar la prepublicación.</p>
 <?php if($error):?><p class="notice" role="alert"><?=esc($error)?></p><?php endif ?>
 <?php if($notice):?><p class="notice" role="status"><?=esc($notice)?></p><?php endif ?>
 <form method="get" class="registration-form"><label>Negocio<select name="business" required><option value="">Selecciona un negocio</option><?php foreach($businessOptions as $option):?><option value="<?=esc((string)$option['id'])?>" <?=((int)$business===(int)$option['id'])?'selected':''?>><?=esc($option['display_name'])?> · <?=esc($option['destination_name'])?></option><?php endforeach ?></select></label><button class="pill">Abrir ficha administrativa</button></form>
