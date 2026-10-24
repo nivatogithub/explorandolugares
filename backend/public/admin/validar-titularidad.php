@@ -2,7 +2,7 @@
 declare(strict_types=1);
 require dirname(__DIR__,2).'/app/bootstrap.php';
 require_once dirname(__DIR__,2).'/app/BusinessAccountPortalService.php';
-if(empty($_SESSION['admin'])||time()-(int)($_SESSION['last_seen']??0)>1800){http_response_code(403);exit('Inicia sesión desde administración.');}
+if(empty($_SESSION['admin'])||time()-(int)($_SESSION['last_seen']??0)>1800){unset($_SESSION['admin'],$_SESSION['last_seen']);header('Location: /admin/index.php',true,303);exit;}
 $_SESSION['last_seen']=time();$id=filter_var($_REQUEST['application']??null,FILTER_VALIDATE_INT);if(!$id){http_response_code(404);exit('Solicitud no encontrada.');}
 $service=new BusinessAccountPortalService(db());$error='';
 try{

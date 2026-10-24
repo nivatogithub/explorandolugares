@@ -3,7 +3,7 @@ declare(strict_types=1);
 require dirname(__DIR__,2).'/app/bootstrap.php';
 require_once dirname(__DIR__,2).'/app/BusinessEditorialPackage.php';
 require_once dirname(__DIR__,2).'/app/BusinessPaymentEvidenceService.php';
-if(empty($_SESSION['admin'])||time()-(int)($_SESSION['last_seen']??0)>1800){http_response_code(403);exit('Inicia sesión desde administración.');}
+if(empty($_SESSION['admin'])||time()-(int)($_SESSION['last_seen']??0)>1800){unset($_SESSION['admin'],$_SESSION['last_seen']);header('Location: /admin/index.php',true,303);exit;}
 $_SESSION['last_seen']=time();$business=filter_var($_REQUEST['business']??null,FILTER_VALIDATE_INT);$error='';$notice='';$readiness=null;$businessOptions=[];$editorialVersion=null;
 try{
     $packages=new BusinessEditorialPackage(db(),private_storage_path('business-image-references'));
