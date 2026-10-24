@@ -1,4 +1,5 @@
 import json
+import hashlib
 import html
 import os
 import sqlite3
@@ -78,13 +79,16 @@ class DynamicDestinationRenderTests(unittest.TestCase):
                                 check=True, capture_output=True, text=True)
         return html.unescape(result.stdout)
 
-    def test_only_jerico_is_public_and_other_pilot_destinations_stay_drafts(self):
+    def test_approved_seed_destinations_are_public_and_remaining_pilots_stay_private(self):
+        approved = {"jerico"}
+        approved.update(json.loads((ROOT / "content/releases/cinco-destinos-20261024.json").read_text())["public_places"])
+        self.assertEqual({d["slug"] for d in CATALOG["destinations"] if d["publication_status"] == "published"}, approved)
         for destination in CATALOG["destinations"]:
             for locale in CATALOG["locales"]:
                 with self.subTest(destination=destination["slug"], locale=locale):
                     page = self.render(destination["slug"], locale)
                     expected = destination["translations"][locale]["name"]
-                    if destination["slug"] == "jerico":
+                    if destination["slug"] in approved:
                         self.assertIn(expected, page)
                         self.assertIn('rel="canonical"', page)
                         self.assertNotIn("Destino temporalmente no disponible", page)
@@ -341,9 +345,15 @@ class DynamicDestinationRenderTests(unittest.TestCase):
     def test_destination_images_exist_in_the_static_asset_tree(self):
         for media in CATALOG["media"]:
             with self.subTest(path=media["path"]):
-                self.assertTrue((ROOT / "ensayos/v1" / media["path"]).is_file())
+                # The shipping tree composes legacy static and backend-owned media.
+                asset = self.package / "public" / media["path"]
+                self.assertTrue(asset.is_file())
+                sources = [ROOT / "backend/public" / media["path"], ROOT / "ensayos/v1" / media["path"]]
+                source = next((path for path in sources if path.is_file()), None)
+                self.assertIsNotNone(source, "Packaged media must have a repository source")
+                self.assertEqual(hashlib.sha256(asset.read_bytes()).hexdigest(), hashlib.sha256(source.read_bytes()).hexdigest())
                 if media["path"].startswith("assets/destinos/1/"):
-                    self.assertLess((ROOT / "ensayos/v1" / media["path"]).stat().st_size, 350_000)
+                    self.assertLess(asset.stat().st_size, 350_000)
 
     def test_destination_router_serves_public_destination_assets(self):
         assets = (
