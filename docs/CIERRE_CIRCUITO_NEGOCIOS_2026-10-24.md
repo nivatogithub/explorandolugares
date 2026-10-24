@@ -56,3 +56,86 @@ Fecha: 24 de octubre de 2026. Sustituye las decisiones contradictorias de docume
 - business-onboarding-limits.php, business-account-portal.php, business-subscriptions.php, subscription-changes.php: límites, rollback de solicitud, planes/periodos/saldos.
 
 Estos cambios están en la rama de trabajo. No equivalen a revisión visual ni a despliegue productivo. Los archivos modificados previamente de ensayos/v1 se preservan fuera del cambio auditado.
+
+## Plan completo de implementación por bloques
+
+Solicitado el 24 de octubre de 2026. Las tres áreas son cliente, administración y arquitectura/estabilidad. Reutilizar los servicios actuales; no reconstruir funciones existentes por una reorganización visual. La lista de pendientes anterior es el diagnóstico; los bloques siguientes son el orden de ejecución y sus condiciones de cierre.
+
+### Control del trabajo
+
+- Estados permitidos por bloque: pendiente, en ejecución, implementado, probado en entorno aislado, verificado en Dev2, aceptado por el propietario. Un estado no implica los posteriores.
+- Registrar commit, origen/puerto, paquete, casos ejecutados, resultado y pendientes. Una corrección posterior invalida únicamente las verificaciones que afecta.
+- Cada fallo encontrado se asigna al bloque correspondiente. Si impide continuar, resolver la dependencia y volver al mismo bloque; no cambiar el proceso comercial por conveniencia técnica.
+- Probar la causa original, el caso satisfactorio, el error y el reintento. Actualizar pruebas antiguas contra el contrato vigente; no conservar expectativas contradictorias.
+- Revisar con navegador integrado. No lanzar Chrome externo por defecto. Una prueba visual no realizada permanece pendiente, aunque sintaxis y servicios pasen.
+- Construir siempre con scripts/preparar-hosting.py en una salida nueva. No llamar directamente al constructor interno ni mezclar paquetes. Datos/configuración/archivos de usuarios son propios del ambiente; el paquete de código se promueve sin variantes funcionales por ambiente.
+- No borrar ni restablecer cuentas, estadísticas, solicitudes, pagos o contenido vivo para lograr que un caso pase.
+
+### Área A — Cliente: registro y seguimiento
+
+**A1. Cuenta, búsqueda y wizard.** Cuenta y correo verificados antes del negocio; identidad de la cuenta solo lectura; crear/reclamar en cualquier lugar publicado; detección de duplicados y disputa sin apropiación automática; plan y periodicidad en su paso; contenido y canales por beneficios del plan. Reutilizar teléfono/dirección/selectores; enlaces Google Maps; sin horarios ni campos futuros activos. Contadores según límites del contrato. Idiomas y productos mediante pestañas, sin bloques verticales repetidos.
+
+Cierre: completar Gratis, Destacado, Página y Premium; nuevo y reclamado; comprobar dos lugares distintos, duplicado, negocio con otro responsable y entrada de otra cuenta. En Premium probar 0, 2, 4 y 5 productos, quitar uno intermedio, agregar otro y conservar la relación foto/producto. Un sexto no se admite en navegador ni servidor.
+
+**A2. Archivos, vista previa y recuperación.** Subir portada/productos/documento progresivamente con estado visible; conservar referencias privadas; permitir retirar/reemplazar sin acumular referencias activas. Vista previa real con datos capturados, tarjeta y página según plan, sobre la pantalla y con regreso claro. Preservar datos ante validación, reintento y sesión vencida, sin recuperar credenciales/documentos personales desde almacenamiento inseguro del navegador. Unificar respuesta de sesión y manejo de 401 en interacciones.
+
+Cierre: cambiar pestañas/pasos no pierde valores; error RNT/NIT devuelve al paso pertinente; sesión vencida lleva a acceso y permite retomar lo recuperable. Subida fallida no se presenta como completada. Guardar dos veces no duplica negocio, solicitud, membresía ni archivos vinculados.
+
+**A3. Guardado, pago y seguimiento.** Guardar muestra confirmación, mantiene borrador privado y asociación correcta; pago aparte con plan elegido, periodicidad, valor e instrucciones reales del ambiente. Retomar pago después; al enviar soporte mostrar revisión y ocultar la acción de pago ya realizada. Mostrar aclaraciones/rechazos y permitir entregar lo solicitado. El propietario no exporta ni importa ZIP ni edita la propuesta mientras está enviada a revisión.
+
+Cierre: Gratis no solicita pago; tres planes pagos conservan selección e importe; comprobante queda asociado al negocio/cuenta; volver a entrar conserva el estado; pago pendiente/aprobado no publica. No mostrar métricas vacías de un negocio recién creado.
+
+### Área B — Administración: revisión, publicación y operación
+
+**B1. Ficha central y editor.** Negocios locales con filtros y grid de negocio, lugar, estado, cuenta y suscripción; estado consultable, sin edición arbitraria. Cuenta abre detalle superpuesto con cantidad de negocios; acciones por icono accesible. Dentro de la ficha: requisitos, edición, paquete, previsualización e historial. Editor por Imágenes, Textos (idioma seleccionable), Canales y Datos adicionales Beta deshabilitados. Productos agregados a demanda. IDs internos estables no expuestos como campos que el operador deba inventar. Sin menús independientes redundantes para editorial/exportar/importar/catálogo.
+
+Cierre: llegar desde el grid a cada operación y regresar conservando filtros; editar solo campos del plan; guardar una versión privada sin cambiar la pública; imágenes, textos y canales conservados; Beta no escribe datos.
+
+**B2. Titularidad y pago.** Ver/descargar ambos soportes privadamente, separados del ZIP editorial. Verificaciones independientes con responsable/fecha; aclaración y rechazo con motivo visible para la cuenta. Unificar las dos vías documentales: conservar soporte hasta publicar, borrarlo después y conservar constancia; si falla el retiro, registrar/reintentar sin perder validación ni repetir publicación.
+
+Cierre: bloquear prepublicación sin los requisitos aplicables; Gratis omite pago; un soporte de otro negocio/cuenta no se acepta; revisar pago no publica ni cambia contenido; aclarar/rechazar no borra historia. Verificar secuencia documental antes/después de publicar y recuperación ante fallo del retiro.
+
+**B3. Paquetes e idiomas.** Exportar JSON de última versión, originales por posición y README con contrato/formato/reglas de imágenes. Excluir documentos de identidad, titularidad, comprobante, cuenta y datos privados de contacto. Importar textos ES/EN/PT-BR e imágenes preparadas con procedencia; validar límites/estructura/archivo/tamaño/idiomas antes de confirmar. Reimportación permitida en preparación/correcciones, con historial y aprobación ligada a la versión exacta.
+
+Cierre: ida y vuelta completa desde captura real, con logo cuando exista, portada y 2/4/5 productos; confirmar textos/fotos por posición en la vista previa. ZIP incompleto, idioma faltante, producto inválido o fallo de escritura no deja contenido parcial ni altera la página pública. La generación/traducción la realiza la IA fuera del portal con el paquete; no se promete una API automática inexistente.
+
+**B4. Prepublicación, correo y publicación del propietario.** Revisión administrativa de contenido, presentación, traducciones y requisitos; envío del enlace a la versión exacta. Enlace exige la cuenta responsable. Propietario revisa, solicita correcciones con comentario o aprueba y publica. Conservar la última versión pública durante correcciones. Historial visible de correo y resultado; reintento seguro según aceptación/fallo/incertidumbre. Aviso de publicación con URL pública.
+
+Cierre: circuito completo sin usar al administrador como propietario; impedir acceso ajeno, enlace/versiones antiguos y publicación sin requisitos. Doble clic/reintento no duplica publicación ni avisos. Correo simulado en Dev2; entrega externa solo se certifica con prueba real autorizada.
+
+**B5. Suscripciones y renovaciones.** Listado por negocio, filtros/orden por plan, vigencia y proximidad de vencimiento; distinguir vigente y solicitud pendiente. Renovación desde la cuenta: periodicidad, pago y comprobante; administración valida el pago y programa/aplica el periodo correspondiente sin nueva publicación editorial. Vencimiento conserva negocio/historial y aplica los beneficios efectivos. Upgrade conserva reglas de saldo/fecha existentes.
+
+Cierre: renovación antes y después de vencer, pago rechazado/aclarado, doble aprobación, cambio de periodicidad y vencimiento; no perder periodo pagado, activar sin pago ni exigir republicar el mismo contenido. Consulta administrativa no renueva ni cobra.
+
+**B6. Cuentas, solicitudes y comunicación.** Cuentas con negocios asociados, suspender/reactivar sin borrar y enviar recuperación al correo registrado. Bandeja única para interés de comercio, información, feedback y participación local. Plantillas: listado, edición, vista real y envío de prueba. CRM: selección de negocio(s), plantilla o mensaje individual, campañas agrupadas e historial de envío. Distinguir comunicaciones de servicio y campañas con sus permisos actuales.
+
+Cierre: suspensión invalida acceso; recuperación funciona con expiración/uso único y destinatario correcto. Todas las fuentes llegan a la bandeja correspondiente sin duplicar registros. Elegir plantilla/destinatarios o ver preview no envía. No duplicar envíos por refrescar. No enviar correo real sin autorización.
+
+### Área C — Arquitectura, errores y entrega
+
+**C1. Línea base y pruebas coherentes.** Identificar fuentes/commit de trabajo y paquete servido por Dev2; inventariar cambios ajenos/generados sin descartarlos. Reconciliar pruebas con el contrato de esta página y asignar cada criterio a una comprobación. No llamar cerrado a un bloque por encontrar un nombre de función en un archivo.
+
+Cierre: requisitos con caso/prueba/estado, paquete identificable y separación explícita entre pruebas de servicios, HTTP, interfaz y entrega de correo. Ningún bloque queda marcado verificado en Dev2 por una prueba SQLite aislada.
+
+**C2. Fuente única y componentes compartidos.** Un productor por recurso público; lugares solo desde PHP y datos publicados. Retirar implementaciones sustituidas, generadores estáticos territoriales, recursos sin uso comprobado y correcciones de contenido por JavaScript. Reusar teléfono, selectores, pestañas, grillas, sesión y layout; una regla comercial común por plan para formulario/guardado/paquete/renderizado. Revisar consumidores antes de retirar y preservar archivos de usuario.
+
+Cierre: construcción aislada sin modificar fuentes ni reintroducir páginas territoriales estáticas; comparación de rutas/recursos; cuatro modalidades coherentes en captura, exportación/importación y publicación. Limpieza focalizada sobre los módulos del circuito; no abrir una reescritura general del portal.
+
+**C3. Errores y exportación para IA.** Registro técnico privado de fallos PHP/base/archivos con referencia, componente y ubicación; distinguir validaciones normales. Acceso visible desde Sistema y enlace contextual cuando falle una operación administrativa. ZIP con incidencias y guía de diagnóstico, sin secretos, documentos ni formularios. Resultado comprensible y recuperación sin perder datos.
+
+Cierre: provocar fallos controlados de archivo, importación y base en un entorno descartable; localizar su referencia, exportar y comprobar exclusión de datos privados. Exportación vacía debe indicarlo; no interpretar falta de registros como ausencia de errores.
+
+**C4. Paquete único y cierre en ambientes.** Reconciliar cambios ya preparados, construir paquete completo reproducible y desplegar Dev2 según autorización vigente. Configuración/BD/medios quedan por ambiente. Verificar mismo paquete sobre Apache/MariaDB, recursos, rutas y flujo completo. Promover a preprod y producción por el circuito aprobado del repositorio y autorización del candidato exacto.
+
+Cierre: paquete y commit identificados; ningún secreto/dato de Dev2 en el código; migraciones pertinentes ensayadas e idempotentes; cuentas, medios y métricas conservados. Preprod/producción no se consideran autorizados por este plan. Revisión final móvil/escritorio mediante navegador integrado y aceptación del propietario.
+
+### Orden operativo y puntos de revisión
+
+1. C1 acotado: fijar línea base y criterios, sin refactorizar.
+2. A1 → A2 → A3: cerrar cliente y verificarlo en Dev2 con los servicios administrativos actuales.
+3. B1 → B2 → B3 → B4: cerrar ficha administrativa y circuito de publicación. Si A necesita una dependencia de B, implementar esa dependencia sin abrir otras reorganizaciones.
+4. B5 → B6: cerrar renovaciones y operación diaria.
+5. C2 → C3: resolver deuda transversal pendiente y diagnóstico; los cambios indispensables de sesión/componentes ya se hacen dentro del bloque que los necesita.
+6. C4: comprobación conjunta y entrega. Las pruebas de bloques anteriores se ejecutan cuando sus dependencias cambian; no rehacer indiscriminadamente toda la revisión por cada cambio visual.
+
+Estado al escribir este plan: plan fijado; C1 iniciado con historial y árbol de trabajo consultados. Hay implementaciones/pruebas parciales de A/B/C descritas arriba, pero ningún bloque completo se declara aceptado ni verificado integralmente en Dev2. Primer bloque funcional: A1. No pedir al propietario que repita los requisitos ya registrados.
