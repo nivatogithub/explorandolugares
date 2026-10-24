@@ -9,10 +9,9 @@ require_once dirname((new ReflectionFunction('db'))->getFileName()).'/OperatingF
 $finance=new OperatingFinanceService(db());
 require_once dirname(__DIR__,2).'/app/PaymentInstructions.php';$paymentInstructions=PaymentInstructions::load(db(),private_storage_path('payment-instructions'),!empty($config['local_test']));
 require dirname(__DIR__,2).'/app/analytics/BasicAudienceService.php';
-if(isset($_SESSION['business_account_id'])&&time()-(int)($_SESSION['business_last_seen']??0)>1800)unset($_SESSION['business_account_id']);
-$account=empty($_SESSION['business_account_id'])?null:(new BusinessAccountPortalService(db()))->current((int)$_SESSION['business_account_id']);
-if(!$account){unset($_SESSION['business_account_id'],$_SESSION['business_last_seen']);header('Location: '.site_path('/negocios/acceso/'),true,303);exit;}
-$_SESSION['business_last_seen']=time();
+require_business_session();
+$account=(new BusinessAccountPortalService(db()))->current((int)$_SESSION['business_account_id']);
+if(!$account){unset($_SESSION['business_account_id']);require_business_session();}
 require_once dirname(__DIR__,2).'/app/AccountAuthorization.php';
 $isAdministrator=AccountAuthorization::isAdmin(db(),(int)$account['id']);
 require_once dirname(__DIR__,2).'/app/SubscriptionPurchaseIntent.php';$purchaseIntent=SubscriptionPurchaseIntent::current();if($purchaseIntent&&empty($_SESSION['subscription_purchase_selected'])&&$_SERVER['REQUEST_METHOD']==='GET'){header('Location: /suscripciones/continuar/',true,303);exit;}

@@ -72,10 +72,27 @@ function private_storage_path(string $area): string {
  * APIs still receive JSON so clients can handle the expired session safely. */
 function session_expired(): never {
     $accept=(string)($_SERVER['HTTP_ACCEPT']??'');
-    if(str_contains($accept,'application/json'))json_response(['message'=>'La sesión expiró. Inicia sesión nuevamente.'],401);
+    if(str_contains($accept,'application/json'))json_response(['error'=>'authentication_required','login_url'=>site_path('/negocios/acceso/')],401);
     $uri=(string)($_SERVER['REQUEST_URI']??'');
     $parts=parse_url($uri);$path=(string)($parts['path']??'');$query=isset($parts['query'])?'?'.$parts['query']:'';
     if($path!==''&&str_starts_with($path,'/')&&!str_starts_with($path,'//')&&!str_starts_with($path,'/negocios/acceso'))$_SESSION['session_return']=$path.$query;
+    header('Location: '.site_path('/negocios/acceso/?sesion=expirada'),true,303);
+    exit;
+}
+/**
+ * One boundary for every private account action. Browser pages return to the
+ * sign-in screen; fetch/XHR callers receive a predictable response instead
+ * of an HTML page or a bare 403.
+ */
+function require_business_session(bool $expectsJson=false): void {
+    $active=!empty($_SESSION['business_account_id']) && time()-(int)($_SESSION['business_last_seen']??0)<=1800;
+    if($active){$_SESSION['business_last_seen']=time();return;}
+    require_once __DIR__.'/AccountSessionSecurity.php';
+    AccountSessionSecurity::clear($_SESSION);
+    $uri=(string)($_SERVER['REQUEST_URI']??'');$parts=parse_url($uri);$path=(string)($parts['path']??'');$query=isset($parts['query'])?'?'.$parts['query']:'';
+    if($path!==''&&str_starts_with($path,'/')&&!str_starts_with($path,'//')&&!str_starts_with($path,'/negocios/acceso'))$_SESSION['session_return']=$path.$query;
+    $accept=(string)($_SERVER['HTTP_ACCEPT']??'');
+    if($expectsJson||str_contains($accept,'application/json'))json_response(['error'=>'authentication_required','login_url'=>site_path('/negocios/acceso/')],401);
     header('Location: '.site_path('/negocios/acceso/?sesion=expirada'),true,303);
     exit;
 }
