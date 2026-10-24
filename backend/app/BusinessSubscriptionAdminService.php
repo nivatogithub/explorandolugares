@@ -188,7 +188,7 @@ final class BusinessSubscriptionAdminService
             foreach($translations as $locale=>$translation)foreach(['summary','description','brand_story','featured_services'] as $field){$limit=(int)$limits['max_'.$field.'_chars'];if($limit>0&&preg_match_all('/./us',(string)($translation[$field]??''))>$limit)throw new RuntimeException('El campo '.$field.' en '.$locale.' supera el límite de '.$limit.' caracteres de esta suscripción.');}
             $requiredSpanish=['display_name'];
             if(in_array($sub['plan_code'],['basic','featured','page','page_premium'],true))$requiredSpanish[]='summary';
-            if(in_array($sub['plan_code'],['featured','page','page_premium'],true))$requiredSpanish[]='description';
+            if((int)$limits['max_description_chars']>0)$requiredSpanish[]='description';
             foreach($requiredSpanish as $field)if(trim((string)($translations['es'][$field]??''))==='')throw new RuntimeException('Completa la información adicional que solicita esta suscripción antes de publicar.');
             foreach(['en','pt-BR'] as $locale){$row=$translations[$locale]??null;if(!$row)throw new RuntimeException('Completa y traduce el contenido a español, inglés y portugués antes de publicar.');foreach($requiredSpanish as $field){$spanish=trim((string)($translations['es'][$field]??''));$translated=trim((string)($row[$field]??''));if($translated===''||($field!=='display_name'&&$translated===$spanish))throw new RuntimeException('Completa y traduce el contenido a español, inglés y portugués antes de publicar.');}}
     }

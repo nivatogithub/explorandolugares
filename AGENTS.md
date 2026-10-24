@@ -2,6 +2,8 @@
 
 Leer antes de trabajar. Las instrucciones posteriores del propietario prevalecen; una autorización no elimina los controles técnicos del entorno.
 
+Para registro, editorial, pagos, publicación y suscripciones de negocios, consultar primero [el contrato vigente y auditoría de cierre del 24 de octubre](docs/CIERRE_CIRCUITO_NEGOCIOS_2026-10-24.md). Conserva las últimas decisiones del propietario y distingue los pendientes de las pruebas realizadas; no reintroducir reglas históricas contradictorias.
+
 ## Reglas obligatorias
 
 1. **Aislamiento e identidad.** Trabajar solo en Explorando Lugares, conservar cambios ajenos y no usar materiales de Paradigma. Leer [contexto fundacional](PROYECTO_INDEPENDIENTE.md) y [producto/prioridades](docs/CONTEXTO_PRODUCTO_Y_HOJA_DE_RUTA.md), distinguiendo antecedentes de lo implementado. `sources/` es solo lectura. `public/`, ZIP y exploraciones históricas no son la versión vigente.
