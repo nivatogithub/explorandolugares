@@ -3,6 +3,9 @@
   const updates = new WeakMap();
   const bind = field => {
     if (!(field instanceof HTMLInputElement || field instanceof HTMLTextAreaElement)) return;
+    // maxlength is a validation constraint, not a request to display a counter.
+    // Only editorial fields explicitly marked by their template get one.
+    if (field.dataset.textCounter === undefined) return;
     if (updates.has(field)) { updates.get(field)(); return; }
     if (field.maxLength < 1 || ['hidden', 'password', 'file', 'checkbox', 'radio'].includes(field.type)) return;
     const label = field.closest('label') || field.parentElement;
@@ -16,7 +19,10 @@
       label.append(counter);
     }
     const update = () => {
-      const text = `${count(field.value)} / ${field.maxLength} caracteres`;
+      const length = count(field.value);
+      const hint = length > field.maxLength ? ' · Superas el límite; resume el texto o elige otro plan.'
+        : length === field.maxLength ? ' · Límite alcanzado; resume el texto si necesitas añadir más.' : '';
+      const text = `${length} / ${field.maxLength} caracteres${hint}`;
       if (counter.textContent !== text) counter.textContent = text;
       // The containing step/tab already hides its descendants. Do not freeze
       // a counter as hidden just because its field was initialized off-screen.
@@ -28,7 +34,7 @@
     updates.set(field, update);
     update();
   };
-  const bindAll = root => root.querySelectorAll?.('input[maxlength],textarea[maxlength]').forEach(bind);
+  const bindAll = root => root.querySelectorAll?.('[data-text-counter][maxlength]').forEach(bind);
   const start = () => {
     bindAll(document);
     new MutationObserver(records => {

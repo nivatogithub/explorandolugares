@@ -56,6 +56,8 @@ try:
     assert 'name="password"' not in body and 'name="display_name"' not in body and 'name="message"' not in body
     assert 'registro@example.invalid' in body
     assert 'name="description"' not in body and body.count('name="summary"')==1
+    assert len(re.findall(r'<textarea[^>]*\bdata-text-counter\b',body))==6,'Counter only on business and five product descriptions'
+    assert not re.search(r'<input[^>]*\bdata-text-counter\b',body),'Do not attach counters to names, IDs or contact fields'
     assert body.index('</fieldset>\n<fieldset id="registration-product-details"') > body.index('id="registration-new-details"')
     rules=json.loads(html.unescape(re.search(r'data-plan-rules="([^"]+)"',body)[1]))
     assert [rules[plan]['description_limit'] for plan in ['free','featured','page','page_premium']]==[0,300,450,1200]
