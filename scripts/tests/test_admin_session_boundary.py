@@ -16,5 +16,15 @@ class AdminSessionBoundaryTests(unittest.TestCase):
         self.assertIn('require_admin_session();',source)
         self.assertNotIn('Inicia sesión en administración.',source)
 
+    def test_business_private_entries_share_the_account_guard(self):
+        for name in ['dashboard.php','checkout.php','editorial.php','editorial-image.php']:
+            source=(ROOT/'backend/public/business'/name).read_text()
+            self.assertIn('require_business_session()',source,name)
+
+    def test_expired_account_api_response_has_a_login_target(self):
+        source=(ROOT/'backend/app/bootstrap.php').read_text()
+        self.assertIn("'error'=>'authentication_required'",source)
+        self.assertIn("'login_url'=>site_path('/negocios/acceso/')",source)
+
 if __name__=='__main__':
     unittest.main()
