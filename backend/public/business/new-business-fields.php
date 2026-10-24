@@ -37,14 +37,15 @@
     <div class="wide business-map-actions" data-plan-field="location"><button id="business-map-open" type="button" class="pill light">Elegir punto en el mapa</button><p id="location-capture-status" role="status">Elige el punto exacto. El enlace público abrirá Google Maps.</p></div>
     <?php foreach(['latitude','longitude','map_url','location_confirmed','location_changed'] as $field):$name=['map_url'=>'location_map_url','location_changed'=>'location_map_changed'][$field]??$field;?><input type="hidden" id="business-<?=str_replace('_','-',$field)?>" name="<?=esc($name)?>" value="<?=esc($_POST[$name]??'')?>"><?php endforeach ?>
   </div>
-  <section data-plan-field="products" hidden aria-labelledby="products-title">
+  <section data-plan-field="products" data-editor-panels data-product-editor hidden aria-labelledby="products-title">
     <h3 id="products-title">Hasta cinco productos o servicios</h3>
     <p>Cada uno tiene título, descripción corta y una sola foto. No es una galería.</p>
-    <?php for($i=0;$i<5;$i++):?><div class="destination-form-grid product-card" data-product-card>
+    <div data-editor-tabs aria-label="Productos del negocio"></div><p data-products-empty>Agrega los productos que quieras presentar.</p><button class="pill light" type="button" data-add-product>Agregar producto</button>
+    <?php for($i=0;$i<5;$i++):$configured=!empty($_POST['products'][$i]['title'])||!empty($_POST['products'][$i]['summary'])||!empty($_POST['temporary_uploads']['editorial']['product-'.$i]);?><fieldset data-editor-panel data-product-slot="<?=$i?>" data-panel-label="Producto <?=$i+1?>" data-configured="<?=$configured?'1':'0'?>" <?=$configured?'':'hidden disabled'?>><legend>Producto o servicio <?=$i+1?></legend><div class="destination-form-grid product-card" data-product-card>
       <label>Nombre<input name="products[<?=$i?>][title]" maxlength="100" value="<?=esc($_POST['products'][$i]['title']??'')?>" data-preview-product-title></label>
       <label>Descripción corta · máximo 180 caracteres<textarea name="products[<?=$i?>][summary]" maxlength="180" rows="2" data-preview-product-summary><?=esc($_POST['products'][$i]['summary']??'')?></textarea></label>
       <label>Foto del producto<input type="file" name="reference_images[]" accept="image/jpeg,image/png,image/webp" data-image-slot="product-<?=$i?>"></label>
-    </div><?php endfor ?>
+    </div><button type="button" class="text-link" data-remove-product>Quitar este producto</button></fieldset><?php endfor ?>
   </section>
   <p class="registration-preview-action" data-registration-preview hidden><a class="pill light subscription-example" data-subscription-example href="/business/demo.php?view=free">Ver vista previa de este plan</a></p>
 </fieldset>
@@ -56,3 +57,5 @@
 <script src="/assets/business-text-counters.js?v=1" defer></script>
 <script src="/assets/business-onboarding-wizard.js?v=8" defer></script>
 <script src="/assets/business-phone.js?v=2" defer></script>
+<link rel="stylesheet" href="/assets/business-editor-panels.css">
+<script src="/assets/business-editor-panels.js" defer></script>

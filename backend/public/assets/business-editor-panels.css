@@ -1,0 +1,8 @@
+[data-editor-panels]{min-width:0}
+[data-editor-panels]>[data-editor-tabs]{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 18px}
+[data-editor-tabs]>button{min-height:44px;padding:8px 16px;border:1px solid var(--el-border);border-radius:12px;background:var(--el-field,var(--el-card));color:var(--el-text);font:inherit;cursor:pointer}
+[data-editor-tabs]>button[aria-selected="true"]{background:var(--el-action,var(--el-accent));color:var(--el-on-action,#fff);border-color:var(--el-action,var(--el-accent))}
+[data-editor-tabs]>button:focus-visible{outline:2px solid var(--el-accent);outline-offset:3px}
+[data-editor-panels]>[data-editor-panel][hidden],[data-editor-tabs]>button[hidden]{display:none}
+[data-product-editor]>fieldset[data-editor-panel]{min-width:0;margin:0 0 16px}
+[data-remove-product]{margin-top:14px}
