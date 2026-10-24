@@ -79,6 +79,26 @@ function session_expired(): never {
     header('Location: '.site_path('/negocios/acceso/?sesion=expirada'),true,303);
     exit;
 }
+/** Every private administration page uses this guard; it never renders a 403 login message. */
+function require_admin_session(): void {
+    $active=!empty($_SESSION['admin']) && time()-(int)($_SESSION['last_seen']??0)<=1800;
+    if($active){$_SESSION['last_seen']=time();return;}
+    unset($_SESSION['admin'],$_SESSION['admin_account_id'],$_SESSION['admin_user'],$_SESSION['last_seen']);
+    $uri=(string)($_SERVER['REQUEST_URI']??'');$parts=parse_url($uri);$path=(string)($parts['path']??'');$query=isset($parts['query'])?'?'.$parts['query']:'';
+    if($path!==''&&str_starts_with($path,'/')&&!str_starts_with($path,'//'))$_SESSION['session_return']=$path.$query;
+    header('Location: '.site_path('/negocios/acceso/'),true,303);
+    exit;
+}
+/** The administrative namespace is protected once, before any page is allowed to render. */
+function enforce_administration_session(): void {
+    if(PHP_SAPI==='cli')return;
+    $path=(string)(parse_url((string)($_SERVER['REQUEST_URI']??'/'),PHP_URL_PATH)?:'/');
+    if(!str_starts_with($path,'/admin/'))return;
+    // index.php owns the sign-in entry point; every other admin endpoint is private.
+    if($path==='/admin/'||$path==='/admin/index.php')return;
+    require_admin_session();
+}
+enforce_administration_session();
 function csrf(): void {
     if (!is_string($_POST['csrf'] ?? null) || !hash_equals($_SESSION['csrf'], $_POST['csrf'])) {
         session_expired();

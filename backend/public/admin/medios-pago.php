@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 require dirname(__DIR__,2).'/app/bootstrap.php';
-if(empty($_SESSION['admin'])||time()-(int)($_SESSION['last_seen']??0)>1800){http_response_code(403);exit('Inicia sesión en administración.');}$_SESSION['last_seen']=time();
+require_admin_session();
 require_once dirname(__DIR__,2).'/app/PaymentInstructions.php';
 $localTest=!empty($config['local_test']);$directory=private_storage_path('payment-instructions');$settings=PaymentInstructions::load(db(),$directory,$localTest);$error='';
 if($_SERVER['REQUEST_METHOD']==='POST'){

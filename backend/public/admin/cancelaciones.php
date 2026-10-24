@@ -1,8 +1,7 @@
 <?php
 declare(strict_types=1);
 require dirname(__DIR__,2).'/app/bootstrap.php';
-if(isset($_SESSION['admin'])&&time()-(int)($_SESSION['last_seen']??0)>1800)unset($_SESSION['admin']);
-if(empty($_SESSION['admin'])){http_response_code(403);exit('Inicia sesión.');}$_SESSION['last_seen']=time();
+require_admin_session();
 $appRoot=dirname((new ReflectionFunction('db'))->getFileName());require_once $appRoot.'/OperatingFinanceService.php';
 $finance=new OperatingFinanceService(db());$available=$finance->ready();$error='';
 if($_SERVER['REQUEST_METHOD']==='POST'){try{csrf();if(!$available)throw new RuntimeException('Falta aplicar la migración 031 en Base de datos.');if(($_POST['action']??'')!=='review')throw new RuntimeException('Acción no permitida.');$finance->reviewCancellation((int)($_POST['id']??0),(string)($_POST['note']??''));header('Location: cancelaciones.php?guardado=1',true,303);exit;}catch(Throwable $e){PortalIncidents::technical($e,'cancelaciones');$error=$e instanceof PDOException?'No se pudo guardar. Revisa la estructura de Base de datos.':$e->getMessage();http_response_code(400);}}
