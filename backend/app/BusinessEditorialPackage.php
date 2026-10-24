@@ -148,7 +148,8 @@ final class BusinessEditorialPackage
 
     private function translations(mixed $translations,string $plan):array
     {
-        if(!is_array($translations))throw new RuntimeException('Faltan las traducciones del paquete.');$limits=['display_name'=>180,'summary'=>450,'description'=>$plan==='page_premium'?1200:0];$out=[];
+        require_once __DIR__.'/BusinessRegistrationPlan.php';
+        if(!is_array($translations))throw new RuntimeException('Faltan las traducciones del paquete.');$limits=['display_name'=>180,'summary'=>BusinessRegistrationPlan::editorialCapacity($plan,450),'description'=>$plan==='page_premium'?1200:0];$out=[];
         foreach(['es','en','pt-BR'] as $locale){$row=$translations[$locale]??null;if(!is_array($row))throw new RuntimeException('Falta la traducción '.strtoupper($locale).'.');foreach($limits as $field=>$limit){$value=trim((string)($row[$field]??''));if($field==='display_name'&&$value==='')throw new RuntimeException('Falta el nombre en '.strtoupper($locale).'.');if($limit===0&&$value!=='')throw new RuntimeException('La descripción ampliada solo corresponde a Premium.');if($limit>0&&mb_strlen($value)>$limit)throw new RuntimeException('Un texto del paquete supera el límite permitido.');$out[$locale][$field]=$value;}}
         return $out;
     }

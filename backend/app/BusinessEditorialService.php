@@ -5,6 +5,7 @@ require_once __DIR__.'/BusinessSubscriptionAdminService.php';
 require_once __DIR__.'/BusinessContactVisibility.php';
 require_once __DIR__.'/PremiumBusinessProfile.php';
 require_once __DIR__.'/BusinessShowcase.php';
+require_once __DIR__.'/BusinessRegistrationPlan.php';
 /** Immutable payloads and explicit approval of the exact version. Never sends mail or generates images on save. */
 final class BusinessEditorialService
 {
@@ -28,6 +29,9 @@ final class BusinessEditorialService
  public static function hash(array $payload):string{$sort=function(array $value)use(&$sort):array{foreach($value as &$item)if(is_array($item))$item=$sort($item);unset($item);if(!array_is_list($value))ksort($value);return $value;};return hash('sha256',json_encode($sort($payload),JSON_THROW_ON_ERROR|JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES));}
  public function options(int $business):array{
   $q=$this->pdo->prepare('SELECT p.* FROM subscription_plans p JOIN business_subscriptions s ON s.plan_code=p.code WHERE s.business_id=? ORDER BY s.id DESC LIMIT 1');$q->execute([$business]);$p=$q->fetch(PDO::FETCH_ASSOC);if(!$p)throw new RuntimeException('Primero selecciona una suscripción.');
+  // A newly captured description must survive the handoff without truncation.
+  // Keep wider legacy editorial allowances for existing versions.
+  $p['max_summary_chars']=BusinessRegistrationPlan::editorialCapacity((string)$p['code'],(int)$p['max_summary_chars']);
   return $p;
  }
  public function payload(?array $v,int $business):array{return $v?json_decode($v['payload_json'],true,32,JSON_THROW_ON_ERROR):$this->live($business);}

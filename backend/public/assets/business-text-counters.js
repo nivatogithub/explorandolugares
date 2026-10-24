@@ -1,7 +1,10 @@
 (() => {
   const count = value => Array.from(value || '').length;
+  const updates = new WeakMap();
   const bind = field => {
-    if (!(field instanceof HTMLInputElement || field instanceof HTMLTextAreaElement) || field.dataset.textCounterBound === '1' || field.maxLength < 1 || ['hidden', 'password', 'file', 'checkbox', 'radio'].includes(field.type)) return;
+    if (!(field instanceof HTMLInputElement || field instanceof HTMLTextAreaElement)) return;
+    if (updates.has(field)) { updates.get(field)(); return; }
+    if (field.maxLength < 1 || ['hidden', 'password', 'file', 'checkbox', 'radio'].includes(field.type)) return;
     const label = field.closest('label') || field.parentElement;
     if (!label) return;
     let counter = label.querySelector('[data-business-text-counter]');
@@ -13,14 +16,16 @@
       label.append(counter);
     }
     const update = () => {
-      counter.textContent = `${count(field.value)} / ${field.maxLength} caracteres`;
+      const text = `${count(field.value)} / ${field.maxLength} caracteres`;
+      if (counter.textContent !== text) counter.textContent = text;
       // The containing step/tab already hides its descendants. Do not freeze
       // a counter as hidden just because its field was initialized off-screen.
-      counter.hidden = field.hidden;
+      if (counter.hidden !== field.hidden) counter.hidden = field.hidden;
     };
     field.addEventListener('input', update);
     field.addEventListener('change', update);
     field.dataset.textCounterBound = '1';
+    updates.set(field, update);
     update();
   };
   const bindAll = root => root.querySelectorAll?.('input[maxlength],textarea[maxlength]').forEach(bind);
