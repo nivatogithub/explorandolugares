@@ -1,6 +1,13 @@
 (() => {
   'use strict';
   const editor = document.querySelector('form:has(input[name="action"][value="save"])');
+  const ownerApproval = document.querySelector('button[name="action"][value="approve"]');
+  if (ownerApproval) {
+    ownerApproval.textContent = 'Aprobar y publicar mi negocio';
+    const revision = document.querySelector('#revision');
+    if (revision) revision.textContent = 'Comprueba tu tarjeta y página en las vistas previas. Al aprobarla, autorizas la publicación de esta versión exacta.';
+  }
+  document.querySelector('button[name="action"][value="publish"]')?.remove();
   if (!editor) return;
   const showcase = Array.from(editor.querySelectorAll('fieldset')).find(fieldset => fieldset.querySelector('legend')?.textContent.includes('Productos o servicios estrella'));
   if (showcase) {
