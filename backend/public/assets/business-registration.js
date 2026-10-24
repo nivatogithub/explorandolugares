@@ -1,6 +1,12 @@
 (() => {
   const form = document.querySelector('#business-registration-form');
   if (!form) return;
+  // Keep the search and claim selector independently testable.  In the
+  // browser this is equivalent to form.querySelector; the fallback matters
+  // only when the selector is embedded without the whole wizard.
+  const formQuery = (selector) => typeof form.querySelector === 'function'
+    ? form.querySelector(selector)
+    : document.querySelector(selector);
   const destination = document.querySelector('#registration-destination');
   const category = document.querySelector('#registration-category');
   const search = document.querySelector('#registration-search');
@@ -24,7 +30,7 @@
     type.value = mode;
     businessId.value = id;
     const isNew = mode === 'new_business';
-    for(const name of ['business_registration']){const field=form.querySelector(`[name="${name}"]`);if(field)field.required=!!mode;}
+    for(const name of ['business_registration']){const field=formQuery(`[name="${name}"]`);if(field)field.required=!!mode;}
     if(authorityInput)authorityInput.required=isNew&&relationship?.value==='authorized_administrator';
     // On a server-side validation error the form is rendered again with the
     // selected business and plan. Do not reset that recovered wizard state
@@ -44,7 +50,7 @@
     });
   }
 
-  function syncFree(){const chosen=form.querySelector('[name="plan_code"]:checked')?.value;const free=chosen==='free';const showDetails=form.dataset.registrationWizardStep==='3';const showContacts=form.dataset.registrationWizardStep==='4';const showSubmission=form.dataset.registrationWizardStep==='5';const continuation=document.querySelector('#registration-continuation');if(continuation){continuation.hidden=!showSubmission||!type.value||!chosen;continuation.disabled=!showSubmission||!type.value||!chosen;}submit.disabled=!showSubmission||!type.value||!chosen;const period=form.querySelector('.subscription-choice-period');if(period){period.hidden=free||!chosen;for(const control of period.querySelectorAll('select'))control.disabled=free||!chosen;}const distinct=document.querySelector('#registration-distinct-business');if(distinct){const applies=free&&type.value==='new_business';distinct.hidden=!showDetails||!applies;distinct.disabled=!applies;}const details=document.querySelector('#registration-new-details');if(details){details.hidden=!showDetails||!chosen||!type.value;details.disabled=!chosen||!type.value;}const contacts=document.querySelector('#registration-contact-details');if(contacts){const applies=!!type.value&&['featured','page','page_premium'].includes(chosen);contacts.hidden=!showContacts||!applies;contacts.disabled=!applies;}}
+  function syncFree(){const chosen=formQuery('[name="plan_code"]:checked')?.value;const free=chosen==='free';const showDetails=form.dataset.registrationWizardStep==='3';const showContacts=form.dataset.registrationWizardStep==='4';const showSubmission=form.dataset.registrationWizardStep==='5';const continuation=document.querySelector('#registration-continuation');if(continuation){continuation.hidden=!showSubmission||!type.value||!chosen;continuation.disabled=!showSubmission||!type.value||!chosen;}submit.disabled=!showSubmission||!type.value||!chosen;const period=formQuery('.subscription-choice-period');if(period){period.hidden=free||!chosen;for(const control of period.querySelectorAll('select'))control.disabled=free||!chosen;}const distinct=document.querySelector('#registration-distinct-business');if(distinct){const applies=free&&type.value==='new_business';distinct.hidden=!showDetails||!applies;distinct.disabled=!applies;}const details=document.querySelector('#registration-new-details');if(details){details.hidden=!showDetails||!chosen||!type.value;details.disabled=!chosen||!type.value;}const contacts=document.querySelector('#registration-contact-details');if(contacts){const applies=!!type.value&&['featured','page','page_premium'].includes(chosen);contacts.hidden=!showContacts||!applies;contacts.disabled=!applies;}}
   form.addEventListener('change',event=>{if(event.target.name==='plan_code')syncFree();});
   form.addEventListener('operator-eligibility-change',syncFree);syncFree();
 
