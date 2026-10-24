@@ -81,7 +81,7 @@ final class BusinessEditorialPackage
                 "3. No inventes personas, señalización, arquitectura, premios, servicios, productos, vistas, rutas ni condiciones actuales. No incluyas texto, marcas de agua, logotipos no autorizados, monumentos adicionales ni el estilo de un artista vivo. No copies exactamente la composición de una fotografía.\n".
                 "4. Revisa cada salida a tamaño de tarjeta y de portada: el negocio debe reconocerse sin el título, sin deformaciones ni elementos falsos. Si no hay evidencia suficiente, no rellenes el espacio con una escena genérica.\n".
                 "5. Mejora los textos públicos y completa español (`es`), inglés (`en`) y portugués de Brasil (`pt-BR`). Respeta: nombre hasta 180 caracteres, presentación hasta 450; la descripción ampliada solo se permite para Premium y tiene máximo 1.200.\n".
-                "6. Devuelve un ZIP nuevo con `editorial.json` y las imágenes finales dentro de `images/`. No incluyas este ZIP original ni archivos adicionales.\n\n".
+                "6. Devuelve un ZIP nuevo con `editorial.json` y las imágenes finales dentro de `images/`. No incluyas este ZIP original ni archivos adicionales. El primer resultado se puede importar aunque la ficha privada siga en borrador. Si el administrador ya envió una prepublicación al propietario, no generes otro ZIP hasta que este solicite correcciones.\n\n".
                 "## Formato de editorial.json\n\n```json\n".
                 json_encode($resultExample,JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES)."\n```\n\n".
                 "Incluye `images.logo` cuando exista un logotipo aprobado y `images.cover` para Página y Premium. Para Premium puedes añadir hasta cinco productos. Para planes sin página no incluyas imágenes ni productos. El objeto `provenance` es obligatorio por imagen y se conserva privado: registra la vía de creación, prompt, herramienta/modelo, fecha, responsable, fundamento factual, referencias visuales y revisión editorial. La IA no convierte una imagen en libre de derechos ni la deja publicada automáticamente.";
@@ -109,7 +109,7 @@ final class BusinessEditorialPackage
             if($zip->numFiles<1||$zip->numFiles>12)throw new RuntimeException('El paquete editorial contiene demasiados archivos.');
             $manifest=$this->manifest($zip);
             $service=new BusinessEditorialService($this->pdo,$this->referenceStorage);if(!$service->ready())throw new RuntimeException('Instala primero el circuito editorial.');
-            $latest=$service->latest($businessId);if($latest&&!in_array($latest['status'],['in_editorial','changes_requested'],true))throw new RuntimeException('La última versión no admite una nueva importación editorial.');
+            $latest=$service->latest($businessId);if($latest&&!in_array($latest['status'],['draft','in_editorial','changes_requested'],true))throw new RuntimeException('La última versión ya está en aprobación o publicada; espera una solicitud de correcciones antes de importar otra propuesta.');
             $plan=$service->options($businessId)['code'];$translations=$this->translations($manifest['translations']??[],$plan);
             $images=is_array($manifest['images']??null)?$manifest['images']:[];
             $input=['translations'=>$translations,'media'=>['logo'=>0,'cover'=>0,'gallery'=>[]]];
