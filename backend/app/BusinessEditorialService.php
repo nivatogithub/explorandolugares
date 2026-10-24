@@ -128,6 +128,13 @@ $adminInput=$payload;
  public function publish(int $id,string $actor,string $hash):void{
   if(trim($actor)==='')throw new RuntimeException('La publicación requiere un administrador.');$this->publishApproved($id,'admin:'.$actor,$hash);
  }
+ /** The proprietor's approval is the final publication consent for this exact reviewed version. */
+ public function publishByOwner(int $id,int $account,string $hash):void{
+  if($account<1)throw new RuntimeException('Inicia sesión para aprobar y publicar tu negocio.');
+  $version=$this->version($id);
+  $this->authorize($account,(int)$version['business_id']);
+  $this->publishApproved($id,'account:'.$account,$hash);
+ }
  private function publishApproved(int $id,string $actor,string $hash):void{
   $initial=$this->version($id);$ownTransaction=!$this->pdo->inTransaction();if($ownTransaction)$this->pdo->beginTransaction();try{$business=(int)$initial['business_id'];$this->lock($business);$v=$this->version($id);if((int)$this->latest($business)['id']!==$id||$v['status']!=='owner_approved'||!hash_equals($v['payload_hash'],$hash))throw new RuntimeException('Publica únicamente la última versión aprobada por el comerciante.');
    $review=$this->pdo->prepare('SELECT 1 FROM business_editorial_events WHERE version_id=? AND action="quality_checked" AND actor LIKE "admin:%"');$review->execute([$id]);if(!$review->fetchColumn())throw new RuntimeException('Falta la revisión editorial del portal para esta versión.');
