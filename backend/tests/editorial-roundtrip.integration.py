@@ -20,7 +20,7 @@ with tempfile.TemporaryDirectory(prefix='el-editorial-roundtrip-') as work:
         provenance = dict(creation_route='independent_composition',tool_model='synthetic-test',created_on='2026-10-24',responsible='fixture',prompt='Synthetic test pattern',factual_basis=['Synthetic fixture'],reference_assets=['Synthetic pattern'],reviewed_by='fixture',review_note='Test only')
         def image(name):
             return dict(file='images/'+name+'.png',alt={lang:'Patrón de prueba' for lang in ['es','en','pt-BR']},provenance=provenance)
-        manifest = dict(schema='explorandolugares-editorial-result-v1',translations={lang:dict(display_name='Fixture',summary='á'*(1200-len(lang))+lang,description='Descripción '+lang) for lang in ['es','en','pt-BR']},images=dict(cover=image('cover')),products=[dict(translations={lang:dict(name=f'Producto {i}',description='Breve '+lang) for lang in ['es','en','pt-BR']},image=image('product-'+str(i))) for i in range(5)])
+        manifest = dict(schema='explorandolugares-editorial-result-v1',translations={lang:dict(display_name='Fixture',summary='á'*(1200-len(lang))+lang,description='') for lang in ['es','en','pt-BR']},images=dict(cover=image('cover')),products=[dict(translations={lang:dict(name=f'Producto {i}',description='Breve '+lang) for lang in ['es','en','pt-BR']},image=image('product-'+str(i))) for i in range(5)])
         buffer=io.BytesIO()
         with zipfile.ZipFile(buffer,'w',zipfile.ZIP_DEFLATED) as archive:
             archive.writestr('editorial.json',json.dumps(manifest))

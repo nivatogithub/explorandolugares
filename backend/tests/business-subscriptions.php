@@ -35,11 +35,11 @@ INSERT INTO business_translations VALUES(1,'es','Café de Prueba','Café local',
 INSERT INTO business_contacts VALUES(1,'whatsapp','+573001112233',1);");
 $service=new BusinessSubscriptionAdminService($pdo);$plans=array_column($service->options(),null,'code');
 subscription_check($plans['page']['max_gallery_photos']===0&&$plans['page_premium']['max_gallery_photos']===2,'Page includes one cover, while Premium allows up to three total public photos.');
-subscription_check($plans['featured']['text_limits']['description']===1000&&$plans['page']['text_limits']['summary']===750&&$plans['page_premium']['text_limits']['brand_story']===1500,'Text character quotas grow by subscription tier and are returned to the editor.');
+subscription_check($plans['featured']['text_limits']===['summary'=>300,'description'=>0,'brand_story'=>0,'featured_services'=>0]&&$plans['page']['text_limits']['summary']===450&&$plans['page_premium']['text_limits']===['summary'=>1200,'description'=>0,'brand_story'=>0,'featured_services'=>0],'One description grows 300/450/1200, without legacy allowances or extra text sections.');
 subscription_check(!isset($plans['basic'])&&count($plans)===4&&in_array('extended_description',$plans['featured']['features'],true),'New choices offer Free, Featured, Page and Premium; legacy Basic is preserved only in storage.');
-subscription_check(str_contains(implode(' ',$plans['free']['requirements']),'Solo requiere nombre, categoría y destino'),'Free exposes only the minimum public listing.');
-subscription_check(str_contains(implode(' ',$plans['page']['requirements']),'dos referencias privadas')&&str_contains(implode(' ',$plans['page']['requirements']),'una imagen para preparar la portada')&&str_contains(implode(' ',$plans['page']['requirements']),'no se publican directamente'),'Page asks for a logo and one visual reference while keeping the published image review separate.');
-subscription_check(str_contains(implode(' ',$plans['page_premium']['requirements']),'hasta 2 fotos adicionales')&&str_contains(implode(' ',$plans['page_premium']['requirements']),'historia o propuesta')&&str_contains(implode(' ',$plans['page_premium']['requirements']),'referencias son privadas'),'Premium lists up to three public photos total, private references and dedicated story content.');
+subscription_check(str_contains(implode(' ',$plans['free']['requirements']),'NIT o RNT'),'Free retains the identification and private support requirement.');
+subscription_check(str_contains(implode(' ',$plans['page']['requirements']),'portada, página propia y correo')&&!str_contains(implode(' ',$plans['page']['requirements']),'horarios'),'Page adds cover, page and email without retired operational fields.');
+subscription_check(str_contains(implode(' ',$plans['page_premium']['requirements']),'hasta cinco productos')&&!str_contains(implode(' ',$plans['page_premium']['requirements']),'historia o propuesta'),'Premium adds five products, not mandatory extra story blocks.');
 $pdo->exec("UPDATE subscription_plan_prices SET currency='CO' WHERE plan_code='page' AND billing_frequency='quarterly'");
 $invalidCatalog=$service->options();$invalidCatalogPrices=array_column($invalidCatalog,null,'code');
 subscription_check($invalidCatalogPrices['page']['prices']['quarterly']['amount']===null,'A malformed currency makes a catalog price unavailable to the form.');
@@ -64,11 +64,11 @@ $pdo->exec("INSERT INTO business_media VALUES(1,11,2,'gallery'),(1,12,3,'gallery
 $quotaRejected=false;try{$service->publish(1,$testDate(0));}catch(RuntimeException $error){$quotaRejected=str_contains($error->getMessage(),'galería supera el máximo');}
 subscription_check($quotaRejected,'A page cannot publish more gallery images than its purchased tier includes.');
 $pdo->exec("DELETE FROM business_media WHERE business_id=1 AND role='gallery' AND media_asset_id BETWEEN 11 AND 15");
-$summaryUpdate=$pdo->prepare('UPDATE business_translations SET summary=? WHERE business_id=1 AND locale="es"');$summaryUpdate->execute([str_repeat('á',751)]);
-$limitRejected=false;try{$service->publish(1,$testDate(0));}catch(RuntimeException $error){$limitRejected=str_contains($error->getMessage(),'750 caracteres');}
+$summaryUpdate=$pdo->prepare('UPDATE business_translations SET summary=? WHERE business_id=1 AND locale="es"');$summaryUpdate->execute([str_repeat('á',451)]);
+$limitRejected=false;try{$service->publish(1,$testDate(0));}catch(RuntimeException $error){$limitRejected=str_contains($error->getMessage(),'450 caracteres');}
 subscription_check($limitRejected,'Publication must enforce the advertised character limit, including content imported before review.');
 subscription_check($pdo->query('SELECT starts_at FROM business_subscriptions WHERE id='.(int)$id)->fetchColumn()===null,'A failed content review must not start the paid term.');
-$summaryUpdate->execute([str_repeat('á',750)]);
+$summaryUpdate->execute([str_repeat('á',450)]);
 $service->publish(1,$testDate(0));
 $q->execute([$id]);$sub=$q->fetch(PDO::FETCH_ASSOC);
 subscription_check($sub['status']==='active'&&$sub['published_at']===$testDate(0)->setTimezone(new DateTimeZone('UTC'))->format('Y-m-d H:i:s')&&$sub['starts_at']===$sub['published_at']&&$sub['ends_at']===$testDate(0)->modify('+3 months')->setTimezone(new DateTimeZone('UTC'))->format('Y-m-d H:i:s'),'A quarterly subscription expires three calendar months after its actual publication date.');
