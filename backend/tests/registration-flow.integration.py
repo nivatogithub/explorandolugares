@@ -55,6 +55,8 @@ try:
     assert 'Medellín' in body and 'No publicado' not in body
     assert 'name="password"' not in body and 'name="display_name"' not in body and 'name="message"' not in body
     assert 'registro@example.invalid' in body
+    assert 'name="description"' not in body and body.count('name="summary"')==1
+    assert body.index('</fieldset>\n<fieldset id="registration-product-details"') > body.index('id="registration-new-details"')
     token=csrf(body)
     _,found,_=request('/negocios/registro/?tipo=business&search=1&destination_id=1&category=hospedaje&q=Hotel')
     found=json.loads(found)['results'];assert len(found)==2 and any(row['requires_review'] for row in found)
@@ -62,7 +64,7 @@ try:
     pdf=b'%PDF-1.4\n1 0 obj<</Type /Catalog>>endobj\n%%EOF'
     for plan in ['free','featured','page','page_premium']:
         _,body,_=request('/negocios/registro/?tipo=business');token=csrf(body)
-        fields=dict(csrf=token,account_type='business',application_type='new_business',business_name='Fixture '+plan,destination_id='2',category_code='hospedaje',relationship_code='owner',responsibility_declared='1',consent='1',plan_code=plan,billing_frequency='annual',business_nit='900123456',summary='' if plan=='free' else 'Presentación de prueba',description='Descripción Premium' if plan=='page_premium' else '',address_text='' if plan=='free' else 'Calle de prueba 10',latitude='' if plan=='free' else '6.2442',longitude='' if plan=='free' else '-75.5812',location_confirmed='0' if plan=='free' else '1',location_map_url='' if plan=='free' else 'https://www.google.com/maps/search/?api=1&query=6.2442,-75.5812',display_name='Identidad falsa',email='intruso@example.invalid')
+        fields=dict(csrf=token,account_type='business',application_type='new_business',business_name='Fixture '+plan,destination_id='2',category_code='hospedaje',relationship_code='owner',responsibility_declared='1',consent='1',plan_code=plan,billing_frequency='annual',business_nit='900123456',summary='' if plan=='free' else 'Presentación de prueba',address_text='' if plan=='free' else 'Calle de prueba 10',latitude='' if plan=='free' else '6.2442',longitude='' if plan=='free' else '-75.5812',location_confirmed='0' if plan=='free' else '1',location_map_url='' if plan=='free' else 'https://www.google.com/maps/search/?api=1&query=6.2442,-75.5812',display_name='Identidad falsa',email='intruso@example.invalid')
         fields.update({'business_phone[type]':'mobile','business_phone[number]':'3001234567','business_phone[area]':'604'})
         files=[('business_registration','fixture.pdf','application/pdf',pdf)]
         if plan in ['page','page_premium']:

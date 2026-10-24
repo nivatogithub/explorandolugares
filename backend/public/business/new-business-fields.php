@@ -20,13 +20,9 @@
       <input type="file" name="reference_images[]" accept="image/jpeg,image/png,image/webp" data-image-slot="cover" required>
       <small>Una foto JPG, PNG o WebP, máximo 8 MB. Queda privada mientras se revisa.</small>
     </label>
-    <label class="wide" data-plan-field="summary">Presentación breve · máximo 450 caracteres
+    <label class="wide" data-plan-field="summary">Descripción del negocio · máximo 450 caracteres
       <textarea name="summary" maxlength="450" rows="4" data-preview-field="summary"><?=esc($_POST['summary']??'')?></textarea>
       <small>Un párrafo corto, claro y útil para quien visita el lugar.</small>
-    </label>
-    <label class="wide" data-plan-field="description" hidden>Descripción ampliada · máximo 1.200 caracteres
-      <textarea name="description" maxlength="1200" rows="7" data-preview-field="description"><?=esc($_POST['description']??'')?></textarea>
-      <small>Disponible solo para Premium. Procura no superar diez líneas de lectura.</small>
     </label>
     <label class="wide" data-plan-field="location">Dirección o referencia para llegar
       <input id="business-address" name="address_text" maxlength="300" value="<?=esc($_POST['address_text']??'')?>" data-preview-field="address">
@@ -37,7 +33,11 @@
     <div class="wide business-map-actions" data-plan-field="location"><button id="business-map-open" type="button" class="pill light">Elegir punto en el mapa</button><p id="location-capture-status" role="status">Elige el punto exacto. El enlace público abrirá Google Maps.</p></div>
     <?php foreach(['latitude','longitude','map_url','location_confirmed','location_changed'] as $field):$name=['map_url'=>'location_map_url','location_changed'=>'location_map_changed'][$field]??$field;?><input type="hidden" id="business-<?=str_replace('_','-',$field)?>" name="<?=esc($name)?>" value="<?=esc($_POST[$name]??'')?>"><?php endforeach ?>
   </div>
-  <section data-plan-field="products" data-editor-panels data-product-editor hidden aria-labelledby="products-title">
+  <p class="registration-preview-action" data-registration-preview hidden><a class="pill light subscription-example" data-subscription-example href="/business/demo.php?view=free">Ver vista previa de este plan</a></p>
+</fieldset>
+<fieldset id="registration-product-details" data-plan-field="products" hidden disabled>
+  <legend>Productos y servicios · Premium</legend>
+  <section data-editor-panels data-product-editor aria-labelledby="products-title">
     <h3 id="products-title">Hasta cinco productos o servicios</h3>
     <p>Cada uno tiene título, descripción corta y una sola foto. No es una galería.</p>
     <div data-editor-tabs aria-label="Productos del negocio"></div><p data-products-empty>Agrega los productos que quieras presentar.</p><button class="pill light" type="button" data-add-product>Agregar producto</button>
@@ -47,7 +47,6 @@
       <label>Foto del producto<input type="file" name="reference_images[]" accept="image/jpeg,image/png,image/webp" data-image-slot="product-<?=$i?>" required></label>
     </div><button type="button" class="text-link" data-remove-product>Quitar este producto</button></fieldset><?php endfor ?>
   </section>
-  <p class="registration-preview-action" data-registration-preview hidden><a class="pill light subscription-example" data-subscription-example href="/business/demo.php?view=free">Ver vista previa de este plan</a></p>
 </fieldset>
 <fieldset id="registration-contact-details" data-plan-field="contact-options" hidden disabled>
   <legend>Canales de contacto</legend>
