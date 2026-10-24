@@ -25,19 +25,19 @@ def assert_dynamic_destination_boundary(public: Path, catalog: Path) -> None:
            if isinstance(item, dict) and item.get('slug')]
     duplicates=[]
     for locale in ('', 'en/', 'pt-br/'):
-        for slug in slugs:
-            page=public/f'{locale}destinos/{slug}/index.html'
-            if page.is_file():
-                duplicates.append(page.relative_to(public).as_posix())
+        directory=public/f'{locale}destinos'
+        if directory.exists():
+            duplicates.extend(page.relative_to(public).as_posix() for page in directory.rglob('*.html'))
     if duplicates:
-        raise RuntimeError('La entrega contiene páginas estáticas duplicadas de destinos dinámicos: '
+        raise RuntimeError('La entrega contiene páginas estáticas de destinos: '
                            + ', '.join(duplicates))
+    if not (public/'destinos.php').is_file():
+        raise RuntimeError('Falta el directorio PHP de destinos.')
 
 parser=argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--output',type=Path,default=root/'.local/hosting')
 args=parser.parse_args()
 subprocess.run([sys.executable,str(root/'scripts/generar-opciones-contacto.py')],check=True)
-subprocess.run([sys.executable,str(root/'scripts/generar-fichas.py')],check=True)
 subprocess.run([sys.executable,str(root/'scripts/generar-aviso-etapas.py')],check=True)
 subprocess.run([sys.executable,str(root/'scripts/generar-ingles.py')],check=True)
 subprocess.run([sys.executable,str(root/'scripts/generar-creditos.py')],check=True)
@@ -52,8 +52,6 @@ public=release/'public'
 public.mkdir(parents=True,exist_ok=True)
 from public_inputs import collect
 collect(root,public)
-from retained_legacy import capture, restore
-retained_legacy=capture(root,public)
 subprocess.run([sys.executable,str(root/'scripts/localizar-cobertura.py'),'--public',str(public)],check=True)
 # El hosting conserva CSS durante varios días. Versionar la URL en cada entrega
 # evita que una página HTML nueva use una hoja de estilos anterior desde caché.
@@ -125,6 +123,4 @@ print(f'Entrega de revisión: {release}\nRaíz pública: {public}\nConfigurar pr
 # Fail the package if retired identity assets or palette reappear.
 subprocess.run([sys.executable,str(root/'preprod/probar-identidad-vigente.py'),str(public)],check=True)
 
-# Keep already-published bytes unused until the separately approved cleanup.
-restore(public,retained_legacy)
 assert_dynamic_destination_boundary(public,private_content/'destinos-dinamicos.json')
