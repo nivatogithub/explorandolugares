@@ -2,6 +2,7 @@
 declare(strict_types=1);
 require_once __DIR__.'/BusinessServiceSections.php';
 require_once __DIR__.'/BusinessOwnershipEvidence.php';
+require_once __DIR__.'/BusinessRegistrationPlan.php';
 
 require_once __DIR__.'/ExperienceOperatorAddon.php';
 require_once __DIR__.'/SubscriptionChangeService.php';
@@ -15,6 +16,7 @@ final class BusinessSubscriptionAdminService
     {
         $plans=$this->pdo->query('SELECT p.code,p.max_gallery_photos,p.max_summary_chars,p.max_description_chars,p.max_brand_story_chars,p.max_featured_services_chars,t.name,t.summary FROM subscription_plans p JOIN subscription_plan_translations t ON t.plan_code=p.code AND t.locale="es" WHERE p.is_active=1 AND p.code IN ("free","featured","page","page_premium") ORDER BY p.display_order')->fetchAll(PDO::FETCH_ASSOC);
         foreach($plans as &$plan){
+            $plan['max_summary_chars']=BusinessRegistrationPlan::editorialCapacity((string)$plan['code'],(int)$plan['max_summary_chars']);
             $plan['max_gallery_photos']=(int)$plan['max_gallery_photos'];
             $plan['text_limits']=['summary'=>(int)$plan['max_summary_chars'],'description'=>(int)$plan['max_description_chars'],'brand_story'=>(int)$plan['max_brand_story_chars'],'featured_services'=>(int)$plan['max_featured_services_chars']];
             $q=$this->pdo->prepare('SELECT billing_frequency,amount,currency FROM subscription_plan_prices WHERE plan_code=?');$q->execute([$plan['code']]);
@@ -174,6 +176,7 @@ final class BusinessSubscriptionAdminService
     {
         $sub=['plan_code'=>$plan];
             $planQuery=$this->pdo->prepare('SELECT max_gallery_photos,max_summary_chars,max_description_chars,max_brand_story_chars,max_featured_services_chars FROM subscription_plans WHERE code=?');$planQuery->execute([$sub['plan_code']]);$limits=$planQuery->fetch(PDO::FETCH_ASSOC);if(!$limits)throw new RuntimeException('No se encontró la suscripción.');$photoLimit=(int)$limits['max_gallery_photos'];
+            $limits['max_summary_chars']=BusinessRegistrationPlan::editorialCapacity($plan,(int)$limits['max_summary_chars']);
             $mediaQuery=$this->pdo->prepare('SELECT role,COUNT(*) AS amount FROM business_media WHERE business_id=? GROUP BY role');$mediaQuery->execute([$businessId]);$mediaCounts=[];foreach($mediaQuery->fetchAll(PDO::FETCH_ASSOC) as $media)$mediaCounts[$media['role']]=(int)$media['amount'];
             if($sub['plan_code']==='page'||$sub['plan_code']==='page_premium'){
                 if(($mediaCounts['cover']??0)<1)throw new RuntimeException('Las suscripciones Página requieren una portada aprobada.');

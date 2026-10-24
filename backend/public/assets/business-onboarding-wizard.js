@@ -13,6 +13,8 @@
     const type = document.querySelector('#registration-application-type');
     const csrf = form.querySelector('[name="csrf"]')?.value || '';
     const plan = () => form.querySelector('[name="plan_code"]:checked')?.value || '';
+    const planRules = JSON.parse(details?.dataset.planRules || '{}');
+    const rules = () => planRules[plan()] || {};
     const serverError = document.querySelector('.account-registration-card [role="alert"]');
     const recoveryKey = 'explorando-lugares:business-registration-recovery';
     const excludedFromRecovery = new Set(['csrf', 'display_name', 'email', 'phone', 'password', 'password_confirm', 'business_registration', 'identity_document', 'authority_document', 'reference_images[]']);
@@ -44,7 +46,8 @@
       form.querySelectorAll(selector).forEach((node) => {
         node.hidden = !visible;
         node.querySelectorAll('input, textarea, select').forEach((control) => {
-          control.disabled = !visible;
+          const uploaded = control.type === 'file' && control.dataset.imageSlot && form.querySelector(`[data-temp-upload="editorial-${control.dataset.imageSlot}"]`);
+          control.disabled = !visible || !!uploaded;
           if (required && control.type !== 'file') control.required = visible;
         });
       });
@@ -62,39 +65,51 @@
 
     const syncPlan = () => {
       const choice = plan();
-      const editorial = ['featured', 'page', 'page_premium'].includes(choice);
-      const premium = choice === 'page_premium';
+      const selectedRules = rules();
+      const editorial = selectedRules.description_limit > 0;
+      const premium = selectedRules.products > 0;
       if (submit) submit.textContent = choice && choice !== 'free'
         ? 'Guardar y continuar al pago'
         : 'Guardar solicitud para revisión';
       setPlanField('[data-plan-field="summary"]', editorial, editorial);
-      setPlanField('[data-plan-field="location"]', ['featured', 'page', 'page_premium'].includes(choice));
-      const address=form.querySelector('[name="address_text"]');if(address)address.required=choice!==''&&choice!=='free';
+      const summary = form.querySelector('[name="summary"]');
+      const limit = selectedRules.description_limit || 0;
+      if (summary) {
+        // Never truncate a Premium description when selecting a lower plan.
+        // Keep it editable and require the person to shorten it before moving on.
+        if (limit > 0 && summary.maxLength !== limit) summary.maxLength = limit;
+        summary.rows = choice === 'page_premium' ? 7 : 4;
+        summary.setCustomValidity(editorial && Array.from(summary.value).length > limit ? `La descripción supera los ${limit} caracteres de este plan. Acórtala o elige un plan con más espacio.` : '');
+      }
+      const descriptionLabel = form.querySelector('[data-description-label]');
+      if (descriptionLabel) descriptionLabel.textContent = `Descripción del negocio · máximo ${limit} caracteres`;
+      setPlanField('[data-plan-field="location"]', !!selectedRules.location);
+      const address=form.querySelector('[name="address_text"]');if(address)address.required=!!selectedRules.location;
       // Canales y productos tienen pasos propios; renderStep controla sus
       // contenedores sin reactivar productos todavía no configurados.
-      setPlanField('[data-plan-field="cover"]', ['page', 'page_premium'].includes(choice), ['page', 'page_premium'].includes(choice));
+      setPlanField('[data-plan-field="cover"]', !!selectedRules.cover, !!selectedRules.cover);
       const products = form.querySelector('#registration-product-details');
       if (products) products.disabled = !premium;
       const phone = form.querySelector('[name="business_phone[number]"]');
-      if (phone) phone.required = choice === 'featured';
+      if (phone) phone.required = !!selectedRules.location;
       const extendedContacts = ['email', 'website', 'instagram', 'facebook', 'linkedin'];
       extendedContacts.forEach((channel) => {
         const control = form.querySelector(`[name="channels[${channel}]"]`);
-        const visible = channel === 'email' ? ['page', 'page_premium'].includes(choice) : choice === 'page_premium';
+        const visible = selectedRules.channels?.includes(channel) || false;
         if (control) { control.closest('label').hidden = !visible; control.disabled = !visible; }
       });
       renderPreview();
     };
 
     const syncFreeIdentifier = () => {
-      const requiresIdentifier = ['free', 'featured'].includes(plan());
+      const requiresIdentifier = !!rules().identifier_required;
       const nit = form.querySelector('[name="business_nit"]');
       const rnt = form.querySelector('[name="business_rnt"]');
       const provided = Boolean(nit?.value.trim() || rnt?.value.trim());
-      [nit, rnt].forEach((field) => field?.setCustomValidity(requiresIdentifier && !provided ? 'Para Gratis o Destacado indica el NIT o el RNT del negocio.' : ''));
+      [nit, rnt].forEach((field) => field?.setCustomValidity(requiresIdentifier && !provided ? 'Indica el NIT o el RNT del negocio, según el documento de soporte.' : ''));
       form.querySelectorAll('[data-free-identifier-note]').forEach((node) => { node.textContent = requiresIdentifier ? '(NIT o RNT obligatorio)' : '(opcional)'; });
       const help = form.querySelector('[data-free-identifier-help]');
-      if (help) help.textContent = requiresIdentifier ? 'Puedes copiarlo tal como aparece en el documento. Para Gratis o Destacado indica NIT o RNT.' : 'Si no aplica, déjalo vacío.';
+      if (help) help.textContent = 'Indica NIT o RNT según el documento del negocio. No necesitas ambos.';
     };
 
     const uploadFile = async (input, kind, slot) => {
@@ -170,7 +185,7 @@
     const productStep = [products].filter(Boolean);
     const contactStep = [contacts].filter(Boolean);
     const submissionStep = [continuation].filter(Boolean);
-    const activeSteps = () => [1, 2, 3, ...(plan() === 'page_premium' ? [4] : []), ...(plan() && plan() !== 'free' ? [5] : []), 6];
+    const activeSteps = () => [1, 2, 3, ...(rules().products ? [4] : []), ...(rules().channels?.length ? [5] : []), 6];
     let step = type?.value && plan() && serverError ? 3 : 1;
 
     const renderStep = () => {
@@ -186,7 +201,7 @@
       const period = form.querySelector('.subscription-choice-period');
       if(period){period.hidden = !selectedPlan || selectedPlan === 'free';period.querySelector('select').disabled = !selectedPlan || selectedPlan === 'free';}
       const distinct=document.querySelector('#registration-distinct-business');if(distinct){distinct.hidden=!(showDetails&&selectedPlan==='free'&&type.value==='new_business');distinct.disabled=selectedPlan!=='free'||type.value!=='new_business';}
-      const applicableContacts=['featured','page','page_premium'].includes(selectedPlan);
+      const applicableContacts=!!rules().channels?.length;
       if(contacts)contacts.disabled=!applicableContacts;
       if(details)details.disabled=!selectedPlan||!type.value;
       if(submit)submit.disabled=!showSubmission||!selectedPlan||!type.value;
@@ -305,7 +320,7 @@
       if (event.target.name === 'plan_code') { syncPlan(); syncFreeIdentifier(); }
       renderPreview();
     });
-    form.addEventListener('input', (event) => { renderPreview(); if (event.target.name === 'business_nit' || event.target.name === 'business_rnt') syncFreeIdentifier(); });
+    form.addEventListener('input', (event) => { renderPreview(); if(event.target.name==='summary')syncPlan(); if (event.target.name === 'business_nit' || event.target.name === 'business_rnt') syncFreeIdentifier(); });
     form.addEventListener('submit', () => {
       if (!submit || submit.disabled) return;
       submit.disabled = true;

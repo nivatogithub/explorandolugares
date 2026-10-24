@@ -1,27 +1,28 @@
 <?php if(!(isset($service))){http_response_code(404);exit;} ?>
+<?php require_once dirname(__DIR__,2).'/app/BusinessRegistrationPlan.php';$registrationPlanRules=BusinessRegistrationPlan::all();$registrationPlanCode=is_string($_POST['plan_code']??null)?$_POST['plan_code']:'featured';$registrationDescriptionLimit=$registrationPlanRules[$registrationPlanCode]['description_limit']??300; ?>
 <link rel="stylesheet" href="/assets/business-registration-final-step.css?v=2">
 <link rel="stylesheet" href="/assets/business-registration-selects.css?v=1">
 <?php foreach(($_POST['temporary_uploads']??[]) as $uploadKind=>$uploads):foreach(is_array($uploads)?$uploads:[] as $uploadSlot=>$uploadId):?>
   <input type="hidden" name="temporary_uploads[<?=esc((string)$uploadKind)?>][<?=esc((string)$uploadSlot)?>]" value="<?=esc((string)$uploadId)?>" data-temp-upload="<?=esc((string)$uploadKind.'-'.(string)$uploadSlot)?>">
 <?php endforeach;endforeach ?>
-<fieldset id="registration-new-details" hidden disabled>
+<fieldset id="registration-new-details" data-plan-rules="<?=esc(json_encode($registrationPlanRules))?>" hidden disabled>
   <legend>Información de la ficha</legend>
   <p>Completa únicamente los espacios que se verán en la tarjeta o página elegida. La información se envía una vez para revisión.</p>
   <div class="destination-form-grid">
-    <label>Identificador tributario del negocio · NIT <span data-free-identifier-note>(opcional)</span>
+    <label>Identificador tributario del negocio · NIT <span data-free-identifier-note>(NIT o RNT obligatorio)</span>
       <input name="business_nit" inputmode="numeric" maxlength="25" value="<?=esc($_POST['business_nit']??'')?>">
       <small>Sirve para identificar el establecimiento; no es un documento personal.</small>
     </label>
     <label>Registro Nacional de Turismo · RNT <span data-free-identifier-note>(si aplica)</span>
       <input name="business_rnt" maxlength="20" value="<?=esc($_POST['business_rnt']??'')?>">
-      <small data-free-identifier-help>Puedes copiarlo tal como aparece en el documento. Para Gratis debes indicar NIT o RNT.</small>
+      <small data-free-identifier-help>Indica NIT o RNT según el documento del negocio. No necesitas ambos.</small>
     </label>
     <label class="wide" data-plan-field="cover" hidden>Foto de portada
       <input type="file" name="reference_images[]" accept="image/jpeg,image/png,image/webp" data-image-slot="cover" required>
       <small>Una foto JPG, PNG o WebP, máximo 8 MB. Queda privada mientras se revisa.</small>
     </label>
-    <label class="wide" data-plan-field="summary">Descripción del negocio · máximo 450 caracteres
-      <textarea name="summary" maxlength="450" rows="4" data-preview-field="summary"><?=esc($_POST['summary']??'')?></textarea>
+    <label class="wide" data-plan-field="summary"><span data-description-label>Descripción del negocio · máximo <?=$registrationDescriptionLimit?> caracteres</span>
+      <textarea name="summary" maxlength="<?=$registrationDescriptionLimit?>" rows="4" data-preview-field="summary"><?=esc($_POST['summary']??'')?></textarea>
       <small>Un párrafo corto, claro y útil para quien visita el lugar.</small>
     </label>
     <label class="wide" data-plan-field="location">Dirección o referencia para llegar

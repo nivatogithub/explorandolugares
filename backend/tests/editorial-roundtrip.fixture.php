@@ -20,6 +20,7 @@ try{
     if($first===$second||$p->inTransaction())throw new RuntimeException('Reimport did not finish its own transaction.');
     $v=$service->version($second);$payload=$service->payload($v,1);
     if(count($payload['showcase']['products'])!==5)throw new RuntimeException('Lost Premium products.');
+    foreach(['es','en','pt-BR'] as $locale)if(($payload['translations'][$locale]['summary']??'')!==str_repeat('á',1200-mb_strlen($locale)).$locale)throw new RuntimeException('Lost the 1200-character registration description.');
     $service->transition($second,'prepare',0,'fixture-admin','',$v['payload_hash'],['translations'=>'1','images'=>'1','layout'=>'1']);
     $mail=(new BusinessEditorialMail($p,['public_origin'=>'http://127.0.0.1'],null,true))->send($second,'fixture-admin');
     $service->transition($second,'approve',1,'','',$v['payload_hash']);$service->publishByOwner($second,1,$v['payload_hash']);

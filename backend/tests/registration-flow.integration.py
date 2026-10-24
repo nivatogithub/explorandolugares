@@ -1,6 +1,6 @@
 """Client registration through real HTTP endpoints on a built disposable package."""
 from pathlib import Path
-import argparse, http.cookiejar, json, os, re, secrets, socket, sqlite3, subprocess, time, urllib.request, urllib.parse, urllib.error
+import argparse, html, http.cookiejar, json, os, re, secrets, socket, sqlite3, subprocess, time, urllib.request, urllib.parse, urllib.error
 
 ROOT=Path(__file__).resolve().parents[2]
 parser=argparse.ArgumentParser();parser.add_argument('--package',type=Path,required=True);parser.add_argument('--serve',action='store_true');args=parser.parse_args()
@@ -57,6 +57,9 @@ try:
     assert 'registro@example.invalid' in body
     assert 'name="description"' not in body and body.count('name="summary"')==1
     assert body.index('</fieldset>\n<fieldset id="registration-product-details"') > body.index('id="registration-new-details"')
+    rules=json.loads(html.unescape(re.search(r'data-plan-rules="([^"]+)"',body)[1]))
+    assert [rules[plan]['description_limit'] for plan in ['free','featured','page','page_premium']]==[0,300,450,1200]
+    assert all(rule['identifier_required'] for rule in rules.values())
     token=csrf(body)
     _,found,_=request('/negocios/registro/?tipo=business&search=1&destination_id=1&category=hospedaje&q=Hotel')
     found=json.loads(found)['results'];assert len(found)==2 and any(row['requires_review'] for row in found)
@@ -66,6 +69,9 @@ try:
         _,body,_=request('/negocios/registro/?tipo=business');token=csrf(body)
         fields=dict(csrf=token,account_type='business',application_type='new_business',business_name='Fixture '+plan,destination_id='2',category_code='hospedaje',relationship_code='owner',responsibility_declared='1',consent='1',plan_code=plan,billing_frequency='annual',business_nit='900123456',summary='' if plan=='free' else 'Presentación de prueba',address_text='' if plan=='free' else 'Calle de prueba 10',latitude='' if plan=='free' else '6.2442',longitude='' if plan=='free' else '-75.5812',location_confirmed='0' if plan=='free' else '1',location_map_url='' if plan=='free' else 'https://www.google.com/maps/search/?api=1&query=6.2442,-75.5812',display_name='Identidad falsa',email='intruso@example.invalid')
         fields.update({'business_phone[type]':'mobile','business_phone[number]':'3001234567','business_phone[area]':'604'})
+        limit=rules[plan]['description_limit'];fields['summary']='á'*limit
+        for channel in ['email','website','instagram','facebook','linkedin']:
+            fields['channels['+channel+']']='fixture@example.invalid' if channel=='email' else 'https://example.invalid/'+channel
         files=[('business_registration','fixture.pdf','application/pdf',pdf)]
         if plan in ['page','page_premium']:
             import struct,zlib
@@ -73,12 +79,26 @@ try:
             png=b'\x89PNG\r\n\x1a\n'+chunk(b'IHDR',struct.pack('>IIBBBBB',640,480,8,2,0,0,0))+chunk(b'IDAT',zlib.compress((b'\0'+b'\x40\x70\x90'*640)*480))+chunk(b'IEND',b'')
             code,uploaded,_=request('/business/onboarding-upload.php',dict(csrf=token,action='upload',kind='editorial',slot='cover'),[('file','cover.png','image/png',png)]);assert code==200,uploaded
             fields['temporary_uploads[editorial][cover]']=json.loads(uploaded)['upload']['id']
+        before=db.execute('SELECT COUNT(*) FROM business_account_applications').fetchone()[0]
+        code,result,_=request('/negocios/registro/?tipo=business',dict(fields,business_nit='',business_rnt=''),files)
+        assert code==400 and 'Indica el NIT o el RNT' in result,(plan,code)
+        if limit:
+            code,result,_=request('/negocios/registro/?tipo=business',dict(fields,summary='á'*(limit+1)),files)
+            assert code==400 and 'límite de '+str(limit) in result,(plan,code)
+        assert db.execute('SELECT COUNT(*) FROM business_account_applications').fetchone()[0]==before
         code,result,headers=request('/negocios/registro/?tipo=business',fields,files)
         assert code==303,(plan,code,re.findall(r'role="alert">(.*?)</p>',result,re.S))
         row=db.execute('SELECT r.business_id,r.account_id,b.publication_status,s.plan_code FROM business_account_applications r JOIN businesses b ON b.id=r.business_id JOIN business_subscriptions s ON s.business_id=b.id WHERE r.business_name=?',('Fixture '+plan,)).fetchone()
         assert row and row['account_id']==1 and row['plan_code']==plan and row['publication_status']=='draft',dict(row) if row else result
         assert db.execute('SELECT COUNT(*) FROM accounts').fetchone()[0]==2
-    print('OK: actual client endpoints, verified login, two published places, claim/dispute search, immutable account identity, four plans saved privately and cover upload.',flush=True)
+        details=json.loads(db.execute('SELECT business_details_json FROM business_account_applications WHERE business_id=?',(row['business_id'],)).fetchone()[0])
+        assert details['text']['summary']=='á'*limit and not details['text']['description']
+        assert set(details['channels']).issubset(set(rules[plan]['channels']))
+        assert ('email' in details['channels'])==(plan in ['page','page_premium'])
+        assert ('instagram' in details['channels'])==(plan=='page_premium')
+        payload=json.loads(db.execute('SELECT payload_json FROM business_editorial_versions WHERE business_id=? ORDER BY id DESC LIMIT 1',(row['business_id'],)).fetchone()[0])
+        assert payload['translations']['es']['summary']=='á'*limit,'Description lost at editorial handoff'
+    print('OK: verified account, places/claim/dispute, four private plans, shared limits 0/300/450/1200, identifier required in all plans, over-limit rejection without writes, cumulative contacts, cover upload and complete description retained in editorial handoff.',flush=True)
     if args.serve:
         print('UI fixture: '+base+' — registro@example.invalid / '+password,flush=True)
         while True:time.sleep(1)
