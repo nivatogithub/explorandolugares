@@ -1,0 +1,2419 @@
+{
+  "schema": "destination-public-snapshot-v1",
+  "destination": "san-bernardo-del-viento",
+  "tables": {
+    "destinations": [
+      {
+        "id": 27,
+        "slug": "san-bernardo-del-viento",
+        "destination_type": "municipality",
+        "country_code": "CO",
+        "department": "Córdoba",
+        "subregion": "",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 28,
+        "created_at": "2026-10-23 20:13:06",
+        "updated_at": "2026-10-23 20:48:09"
+      }
+    ],
+    "destination_translations": [
+      {
+        "destination_id": 27,
+        "locale": "en",
+        "display_name": "San Bernardo del Viento",
+        "eyebrow": "Córdoba · Colombia",
+        "headline": "Where the Sinú meets the Caribbean",
+        "intro": "Between the Caribbean and the mouth of the Sinú River, San Bernardo del Viento combines grey-sand beaches and mangrove landscapes. Explore the coast and arrange water-based outings with local knowledge of the routes.",
+        "meta_description": "Explore San Bernardo del Viento, Córdoba: grey-sand beaches and the landscapes where the Sinú meets the sea."
+      },
+      {
+        "destination_id": 27,
+        "locale": "es",
+        "display_name": "San Bernardo del Viento",
+        "eyebrow": "Córdoba · Colombia",
+        "headline": "Donde el Sinú encuentra el Caribe",
+        "intro": "Entre el Caribe y la desembocadura del Sinú, San Bernardo del Viento reúne playas de arena gris y paisajes de manglar. Un destino para recorrer la costa y organizar experiencias acuáticas con conocimiento local de los trayectos.",
+        "meta_description": "Conoce San Bernardo del Viento, Córdoba: playas de arena gris y paisajes de la desembocadura del Sinú."
+      },
+      {
+        "destination_id": 27,
+        "locale": "pt-BR",
+        "display_name": "San Bernardo del Viento",
+        "eyebrow": "Córdoba · Colombia",
+        "headline": "Onde o Sinú encontra o Caribe",
+        "intro": "Entre o Caribe e a foz do rio Sinú, San Bernardo del Viento reúne praias de areia cinza e paisagens de manguezal. Um destino para percorrer o litoral e organizar passeios pela água com conhecimento local dos trajetos.",
+        "meta_description": "Conheça San Bernardo del Viento, Córdoba: praias de areia cinza e paisagens da foz do rio Sinú."
+      }
+    ],
+    "destination_story_blocks": [
+      {
+        "id": 34,
+        "destination_id": 27,
+        "section_key": "history",
+        "display_order": 1
+      }
+    ],
+    "destination_reasons": [
+      {
+        "id": 77,
+        "destination_id": 27,
+        "display_order": 1
+      },
+      {
+        "id": 78,
+        "destination_id": 27,
+        "display_order": 2
+      }
+    ],
+    "destination_sources": [],
+    "destination_media": [
+      {
+        "destination_id": 27,
+        "media_asset_id": 186,
+        "role": "hero",
+        "display_order": 0
+      }
+    ],
+    "destination_story_translations": [
+      {
+        "story_block_id": 34,
+        "locale": "en",
+        "body": "The Sinú River and the Caribbean help explain the municipality’s identity. Nearby, the delta and mangroves form a landscape shared with other communities in Córdoba. A visit combines the town with coastal areas and water-based outings that need local planning."
+      },
+      {
+        "story_block_id": 34,
+        "locale": "es",
+        "body": "La relación con el Sinú y el Caribe explica buena parte de la identidad del municipio. En sus alrededores, el delta y los manglares forman parte de un paisaje compartido con otras poblaciones de Córdoba. La visita combina el casco urbano con sectores costeros y recorridos acuáticos que requieren planificación local."
+      },
+      {
+        "story_block_id": 34,
+        "locale": "pt-BR",
+        "body": "A relação com o rio Sinú e o Caribe ajuda a explicar a identidade do município. Nos arredores, o delta e os manguezais formam uma paisagem compartilhada com outras comunidades de Córdoba. A visita combina o centro urbano com trechos do litoral e passeios pela água que exigem planejamento local."
+      }
+    ],
+    "destination_reason_translations": [
+      {
+        "reason_id": 77,
+        "locale": "en",
+        "body": "An open-coast beach with grey sand and coastal vegetation. Walk along the shore and enjoy the view; sea conditions vary and should be checked locally."
+      },
+      {
+        "reason_id": 77,
+        "locale": "es",
+        "body": "Un sector de costa abierta con arena gris y vegetación costera. Es un lugar para caminar y mirar el mar; las condiciones de oleaje cambian y deben consultarse localmente."
+      },
+      {
+        "reason_id": 77,
+        "locale": "pt-BR",
+        "body": "Um trecho de mar aberto com areia cinza e vegetação costeira. É um lugar para caminhar e contemplar o mar; as condições das ondas variam e devem ser consultadas localmente."
+      },
+      {
+        "reason_id": 78,
+        "locale": "en",
+        "body": "At the mouth of the Sinú River, mangroves and sediment mark the meeting of river and sea. Arrange the outing with local knowledge of the route."
+      },
+      {
+        "reason_id": 78,
+        "locale": "es",
+        "body": "La desembocadura del río Sinú ofrece un paisaje de manglar, sedimentos y encuentro entre aguas fluviales y marinas. Conviene organizar el recorrido con conocimiento local del trayecto."
+      },
+      {
+        "reason_id": 78,
+        "locale": "pt-BR",
+        "body": "Na foz do rio Sinú, manguezais e sedimentos marcam o encontro entre o rio e o mar. Organize o passeio com conhecimento local do trajeto."
+      }
+    ],
+    "points_of_interest": [
+      {
+        "id": 115,
+        "destination_id": 27,
+        "slug": "playas-del-viento",
+        "poi_type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 1
+      },
+      {
+        "id": 116,
+        "destination_id": 27,
+        "slug": "punta-piedra",
+        "poi_type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 2
+      },
+      {
+        "id": 117,
+        "destination_id": 27,
+        "slug": "boca-tinajones",
+        "poi_type": "experience",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 3
+      },
+      {
+        "id": 118,
+        "destination_id": 27,
+        "slug": "cano-la-balsa",
+        "poi_type": "experience",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 4
+      }
+    ],
+    "point_of_interest_translations": [
+      {
+        "point_of_interest_id": 115,
+        "locale": "en",
+        "name": "Playa del Viento",
+        "description": "An open-coast beach with grey sand and coastal vegetation. Walk along the shore and enjoy the view; sea conditions vary and should be checked locally.",
+        "map_url": "https://www.google.com/maps?cid=3447784618713614518",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 115,
+        "locale": "es",
+        "name": "Playa del Viento",
+        "description": "Un sector de costa abierta con arena gris y vegetación costera. Es un lugar para caminar y mirar el mar; las condiciones de oleaje cambian y deben consultarse localmente.",
+        "map_url": "https://www.google.com/maps?cid=3447784618713614518",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 115,
+        "locale": "pt-BR",
+        "name": "Playa del Viento",
+        "description": "Um trecho de mar aberto com areia cinza e vegetação costeira. É um lugar para caminhar e contemplar o mar; as condições das ondas variam e devem ser consultadas localmente.",
+        "map_url": "https://www.google.com/maps?cid=3447784618713614518",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 116,
+        "locale": "en",
+        "name": "Punta Piedra",
+        "description": "Rocks and the curve of the beach distinguish this stretch of coastline. Vegetation frames a landscape different from the pier area.",
+        "map_url": "https://www.google.com/maps?cid=1705935528237496969",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 116,
+        "locale": "es",
+        "name": "Punta Piedra",
+        "description": "Las rocas y la curvatura de la playa distinguen este tramo del litoral. La vegetación acompaña un paisaje diferente al del muelle.",
+        "map_url": "https://www.google.com/maps?cid=1705935528237496969",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 116,
+        "locale": "pt-BR",
+        "name": "Punta Piedra",
+        "description": "As rochas e a curvatura da praia distinguem este trecho do litoral. A vegetação acompanha uma paisagem diferente da área do píer.",
+        "map_url": "https://www.google.com/maps?cid=1705935528237496969",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 117,
+        "locale": "en",
+        "name": "Boat outing to Boca de Tinajones",
+        "description": "At the mouth of the Sinú River, mangroves and sediment mark the meeting of river and sea. Arrange the outing with local knowledge of the route.",
+        "map_url": "https://www.google.com/maps?cid=14105959700647786970",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 117,
+        "locale": "es",
+        "name": "Recorrido por Boca de Tinajones",
+        "description": "La desembocadura del río Sinú ofrece un paisaje de manglar, sedimentos y encuentro entre aguas fluviales y marinas. Conviene organizar el recorrido con conocimiento local del trayecto.",
+        "map_url": "https://www.google.com/maps?cid=14105959700647786970",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 117,
+        "locale": "pt-BR",
+        "name": "Passeio pela Boca de Tinajones",
+        "description": "Na foz do rio Sinú, manguezais e sedimentos marcam o encontro entre o rio e o mar. Organize o passeio com conhecimento local do trajeto.",
+        "map_url": "https://www.google.com/maps?cid=14105959700647786970",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 118,
+        "locale": "en",
+        "name": "Caño La Balsa excursion",
+        "description": "Explore mangrove channels and vegetation from the water. Confirm the type of excursion, departure point and conditions directly with the provider.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 118,
+        "locale": "es",
+        "name": "Recorrido por Caño La Balsa",
+        "description": "Una experiencia para conocer los canales y la vegetación del manglar desde el agua. La modalidad, el punto de salida y las condiciones del recorrido se confirman con quien lo opera.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 118,
+        "locale": "pt-BR",
+        "name": "Passeio pelo Caño La Balsa",
+        "description": "Uma experiência para conhecer os canais e a vegetação do manguezal pela água. Confirme a modalidade, o ponto de saída e as condições com o responsável pelo passeio.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      }
+    ],
+    "point_of_interest_media": [
+      {
+        "point_of_interest_id": 115,
+        "media_asset_id": 187,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 116,
+        "media_asset_id": 248,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 117,
+        "media_asset_id": 188,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 118,
+        "media_asset_id": 189,
+        "role": "gallery",
+        "display_order": 1
+      }
+    ],
+    "businesses": [
+      {
+        "id": 819,
+        "public_id": "c0b632a3-b441-484e-80cc-80173a79b972",
+        "destination_id": 27,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "restaurante-la-fogata-sinuana",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0
+      },
+      {
+        "id": 820,
+        "public_id": "5964bf61-1991-4ef5-ae51-7bfbec2d7127",
+        "destination_id": 27,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "restaurante-el-humito",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0
+      },
+      {
+        "id": 821,
+        "public_id": "d2afb31c-066e-4b84-b14f-6da286534e8b",
+        "destination_id": 27,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "sazon-de-maridiz",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0
+      },
+      {
+        "id": 822,
+        "public_id": "a6a97044-9c86-432f-8e98-f243a71692dd",
+        "destination_id": 27,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "mi-lugar-favorito-restaurante-el-gabrio",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0
+      },
+      {
+        "id": 807,
+        "public_id": "440b47af-5606-43d8-85a4-c43d08071c32",
+        "destination_id": 27,
+        "category_code": "experiencias",
+        "record_origin": "public_import",
+        "slug": "caribetourssinu",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0
+      },
+      {
+        "id": 812,
+        "public_id": "7ebc95df-1103-4e70-ac6b-f5914405f1f9",
+        "destination_id": 27,
+        "category_code": "experiencias",
+        "record_origin": "public_import",
+        "slug": "servicios-especiales-mixtura-s-a-s",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0
+      },
+      {
+        "id": 816,
+        "public_id": "1d98fdaf-ef88-4c3f-9668-296d4866e2f0",
+        "destination_id": 27,
+        "category_code": "experiencias",
+        "record_origin": "public_import",
+        "slug": "caribe-surf-school",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0
+      },
+      {
+        "id": 781,
+        "public_id": "b2bd192b-62cc-493a-97c1-6daf3da7edd2",
+        "destination_id": 27,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "cabanas-santa-maria-de-los-vientos",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0
+      },
+      {
+        "id": 782,
+        "public_id": "0ff4fbd0-0a6d-4926-9298-4969cfd1980f",
+        "destination_id": 27,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "hospedaje-y-restaurante-kosta-luna",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0
+      },
+      {
+        "id": 783,
+        "public_id": "72126a63-7cf8-46d9-beb4-79951f86efed",
+        "destination_id": 27,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "cabanas-rincon-del-mar",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0
+      },
+      {
+        "id": 784,
+        "public_id": "ce5ec0aa-32d3-4558-b850-4fc704988e6a",
+        "destination_id": 27,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "tadu-playa-hotel",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0
+      },
+      {
+        "id": 785,
+        "public_id": "6250ef2c-2c47-4509-9626-1aae08ea9c52",
+        "destination_id": 27,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "cabanas-kosta-azul",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0
+      },
+      {
+        "id": 786,
+        "public_id": "a16666ee-32e8-4b88-99d2-d9be770a11e8",
+        "destination_id": 27,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "ecohotel-kocoluu",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0
+      },
+      {
+        "id": 787,
+        "public_id": "98bf2ed4-0656-4919-a21b-ce29810f640f",
+        "destination_id": 27,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "gran-muelle-hotel",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0
+      },
+      {
+        "id": 788,
+        "public_id": "94a7d4e8-493e-4212-a9d4-5283c6983f21",
+        "destination_id": 27,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "hospedaje-carmencita-mc",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0
+      },
+      {
+        "id": 789,
+        "public_id": "aacc0082-18f7-4278-8f22-b3df0640798d",
+        "destination_id": 27,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "paraiso-natural-ecohotel",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0
+      },
+      {
+        "id": 790,
+        "public_id": "80239357-aa36-4706-9d71-062f1201a28d",
+        "destination_id": 27,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "zefiro-hostal",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0
+      },
+      {
+        "id": 791,
+        "public_id": "69f696cf-a5d7-48a3-ac64-2232dc759536",
+        "destination_id": 27,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "casa-origen-hotel-boutique",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0
+      },
+      {
+        "id": 792,
+        "public_id": "cf9eb1b4-19f1-410c-8201-8386516f8c47",
+        "destination_id": 27,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "hotel-y-restaurante-los-tambos-del-caribe-beach",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0
+      },
+      {
+        "id": 793,
+        "public_id": "cb075da6-9e35-4405-b9d7-1b4edf8a7c3e",
+        "destination_id": 27,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "rainbow-hostel",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0
+      },
+      {
+        "id": 794,
+        "public_id": "1b611c9c-db23-4b8f-ad34-78db15f94b04",
+        "destination_id": 27,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "alanacasadeplaya",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0
+      },
+      {
+        "id": 795,
+        "public_id": "4aae113d-2eff-4bde-8ac8-c030e1deaaf7",
+        "destination_id": 27,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "cabanas-los-venaos",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0
+      },
+      {
+        "id": 796,
+        "public_id": "27a1344b-6a2d-469e-a9e4-25df5a783cbe",
+        "destination_id": 27,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "glampings-aqua-breeze",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0
+      },
+      {
+        "id": 797,
+        "public_id": "623f7b6e-ea82-47ce-9ce1-df3253d2b971",
+        "destination_id": 27,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "isla-ancon-playa",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0
+      },
+      {
+        "id": 798,
+        "public_id": "332fcbbd-90a9-4e92-bc32-bb945fe86bfb",
+        "destination_id": 27,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "hosteria-y-cabanas-el-gordo",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0
+      },
+      {
+        "id": 799,
+        "public_id": "df77969a-fcfe-4285-9320-9815aff78dad",
+        "destination_id": 27,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "hotel-dona-edita",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0
+      },
+      {
+        "id": 800,
+        "public_id": "8858bbb6-533b-44bb-bbc8-3c9bd71b3486",
+        "destination_id": 27,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "alojamiento-capilla-del-mar-restaurante-y-bar",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0
+      },
+      {
+        "id": 801,
+        "public_id": "3de3e879-d68c-4da4-8fef-d245de13917f",
+        "destination_id": 27,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "residencia-bar-y-restaurante-bombay",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0
+      },
+      {
+        "id": 802,
+        "public_id": "b3dc0306-8b3b-49c9-ae1f-13d5c9dab627",
+        "destination_id": 27,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "hotel-brisas-del-caribe",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0
+      },
+      {
+        "id": 803,
+        "public_id": "515f9ddc-3b5b-4416-bc46-e9f2db81fceb",
+        "destination_id": 27,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "saka-nibue",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0
+      },
+      {
+        "id": 804,
+        "public_id": "4a2cd884-6f15-437e-a35b-d15544d37133",
+        "destination_id": 27,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "residencia-nueva-gardenia",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0
+      },
+      {
+        "id": 805,
+        "public_id": "65199e80-2fbb-4567-8df5-de0c267682a7",
+        "destination_id": 27,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "hospedaje-las-gaviotas",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0
+      },
+      {
+        "id": 806,
+        "public_id": "c92b34e8-eb6e-4b1a-919a-1e43c24ee25f",
+        "destination_id": 27,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "cabanas-jardin-del-mar",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0
+      },
+      {
+        "id": 808,
+        "public_id": "c7017be2-9a65-4925-8f77-e3f6995312e9",
+        "destination_id": 27,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "cosamui-beach-house",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0
+      },
+      {
+        "id": 809,
+        "public_id": "e99bc769-d20b-4e01-8be4-6f9dd799b867",
+        "destination_id": 27,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "cabana-olas-del-mar",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0
+      },
+      {
+        "id": 810,
+        "public_id": "e8f2243d-8570-48c4-9c69-c484d7fdcf10",
+        "destination_id": 27,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "la-villa-de-guadalupe",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0
+      },
+      {
+        "id": 811,
+        "public_id": "96650f63-86ca-4b30-84fa-72ee84c106a2",
+        "destination_id": 27,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "playas-el-paraiso",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0
+      },
+      {
+        "id": 813,
+        "public_id": "698abc36-cff2-41be-9fe7-64f5b12a3b59",
+        "destination_id": 27,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "el-viento-beach",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0
+      },
+      {
+        "id": 814,
+        "public_id": "2969f834-7552-4721-b075-f2c3f05a406e",
+        "destination_id": 27,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "pasito-al-mar-beach",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0
+      },
+      {
+        "id": 815,
+        "public_id": "88e0d8e1-f36b-4a22-a63c-3250dc9e8899",
+        "destination_id": 27,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "residencia-bar-y-restaurante-los-marinos",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0
+      },
+      {
+        "id": 817,
+        "public_id": "5fc8bec2-0568-42b7-a50a-6615a465df45",
+        "destination_id": 27,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "hostal-mar-azul",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0
+      },
+      {
+        "id": 818,
+        "public_id": "ee4de20b-18eb-4334-abde-17dc928aaab2",
+        "destination_id": 27,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "hotel-mar-del-viento",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0
+      }
+    ],
+    "business_translations": [
+      {
+        "business_id": 781,
+        "locale": "en",
+        "display_name": "CABAÑAS SANTA MARIA DE LOS VIENTOS",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 781,
+        "locale": "es",
+        "display_name": "CABAÑAS SANTA MARIA DE LOS VIENTOS",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 781,
+        "locale": "pt-BR",
+        "display_name": "CABAÑAS SANTA MARIA DE LOS VIENTOS",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 782,
+        "locale": "en",
+        "display_name": "HOSPEDAJE Y RESTAURANTE KOSTA LUNA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 782,
+        "locale": "es",
+        "display_name": "HOSPEDAJE Y RESTAURANTE KOSTA LUNA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 782,
+        "locale": "pt-BR",
+        "display_name": "HOSPEDAJE Y RESTAURANTE KOSTA LUNA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 783,
+        "locale": "en",
+        "display_name": "CABAÑAS RINCON DEL MAR",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 783,
+        "locale": "es",
+        "display_name": "CABAÑAS RINCON DEL MAR",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 783,
+        "locale": "pt-BR",
+        "display_name": "CABAÑAS RINCON DEL MAR",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 784,
+        "locale": "en",
+        "display_name": "TADU PLAYA HOTEL",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 784,
+        "locale": "es",
+        "display_name": "TADU PLAYA HOTEL",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 784,
+        "locale": "pt-BR",
+        "display_name": "TADU PLAYA HOTEL",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 785,
+        "locale": "en",
+        "display_name": "CABAÑAS KOSTA AZUL",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 785,
+        "locale": "es",
+        "display_name": "CABAÑAS KOSTA AZUL",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 785,
+        "locale": "pt-BR",
+        "display_name": "CABAÑAS KOSTA AZUL",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 786,
+        "locale": "en",
+        "display_name": "ECOHOTEL KOCOLUU",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 786,
+        "locale": "es",
+        "display_name": "ECOHOTEL KOCOLUU",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 786,
+        "locale": "pt-BR",
+        "display_name": "ECOHOTEL KOCOLUU",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 787,
+        "locale": "en",
+        "display_name": "GRAN MUELLE HOTEL",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 787,
+        "locale": "es",
+        "display_name": "GRAN MUELLE HOTEL",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 787,
+        "locale": "pt-BR",
+        "display_name": "GRAN MUELLE HOTEL",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 788,
+        "locale": "en",
+        "display_name": "HOSPEDAJE CARMENCITA MC.",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 788,
+        "locale": "es",
+        "display_name": "HOSPEDAJE CARMENCITA MC.",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 788,
+        "locale": "pt-BR",
+        "display_name": "HOSPEDAJE CARMENCITA MC.",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 789,
+        "locale": "en",
+        "display_name": "PARAÍSO NATURAL ECOHOTEL",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 789,
+        "locale": "es",
+        "display_name": "PARAÍSO NATURAL ECOHOTEL",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 789,
+        "locale": "pt-BR",
+        "display_name": "PARAÍSO NATURAL ECOHOTEL",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 790,
+        "locale": "en",
+        "display_name": "ZÉFIRO HOSTAL",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 790,
+        "locale": "es",
+        "display_name": "ZÉFIRO HOSTAL",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 790,
+        "locale": "pt-BR",
+        "display_name": "ZÉFIRO HOSTAL",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 791,
+        "locale": "en",
+        "display_name": "CASA ORIGEN HOTEL BOUTIQUE",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 791,
+        "locale": "es",
+        "display_name": "CASA ORIGEN HOTEL BOUTIQUE",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 791,
+        "locale": "pt-BR",
+        "display_name": "CASA ORIGEN HOTEL BOUTIQUE",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 792,
+        "locale": "en",
+        "display_name": "HOTEL Y RESTAURANTE LOS TAMBOS DEL CARIBE BEACH",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 792,
+        "locale": "es",
+        "display_name": "HOTEL Y RESTAURANTE LOS TAMBOS DEL CARIBE BEACH",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 792,
+        "locale": "pt-BR",
+        "display_name": "HOTEL Y RESTAURANTE LOS TAMBOS DEL CARIBE BEACH",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 793,
+        "locale": "en",
+        "display_name": "RAINBOW HOSTEL",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 793,
+        "locale": "es",
+        "display_name": "RAINBOW HOSTEL",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 793,
+        "locale": "pt-BR",
+        "display_name": "RAINBOW HOSTEL",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 794,
+        "locale": "en",
+        "display_name": "ALANACASADEPLAYA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 794,
+        "locale": "es",
+        "display_name": "ALANACASADEPLAYA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 794,
+        "locale": "pt-BR",
+        "display_name": "ALANACASADEPLAYA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 795,
+        "locale": "en",
+        "display_name": "CABAÑAS LOS VENAOS.",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 795,
+        "locale": "es",
+        "display_name": "CABAÑAS LOS VENAOS.",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 795,
+        "locale": "pt-BR",
+        "display_name": "CABAÑAS LOS VENAOS.",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 796,
+        "locale": "en",
+        "display_name": "GLAMPINGS AQUA BREEZE",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 796,
+        "locale": "es",
+        "display_name": "GLAMPINGS AQUA BREEZE",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 796,
+        "locale": "pt-BR",
+        "display_name": "GLAMPINGS AQUA BREEZE",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 797,
+        "locale": "en",
+        "display_name": "ISLA ANCON PLAYA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 797,
+        "locale": "es",
+        "display_name": "ISLA ANCON PLAYA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 797,
+        "locale": "pt-BR",
+        "display_name": "ISLA ANCON PLAYA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 798,
+        "locale": "en",
+        "display_name": "HOSTERÍA Y CABAÑAS EL GORDO",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 798,
+        "locale": "es",
+        "display_name": "HOSTERÍA Y CABAÑAS EL GORDO",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 798,
+        "locale": "pt-BR",
+        "display_name": "HOSTERÍA Y CABAÑAS EL GORDO",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 799,
+        "locale": "en",
+        "display_name": "HOTEL DOÑA EDITA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 799,
+        "locale": "es",
+        "display_name": "HOTEL DOÑA EDITA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 799,
+        "locale": "pt-BR",
+        "display_name": "HOTEL DOÑA EDITA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 800,
+        "locale": "en",
+        "display_name": "ALOJAMIENTO CAPILLA DEL MAR RESTAURANTE Y BAR",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 800,
+        "locale": "es",
+        "display_name": "ALOJAMIENTO CAPILLA DEL MAR RESTAURANTE Y BAR",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 800,
+        "locale": "pt-BR",
+        "display_name": "ALOJAMIENTO CAPILLA DEL MAR RESTAURANTE Y BAR",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 801,
+        "locale": "en",
+        "display_name": "RESIDENCIA BAR Y RESTAURANTE BOMBAY",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 801,
+        "locale": "es",
+        "display_name": "RESIDENCIA BAR Y RESTAURANTE BOMBAY",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 801,
+        "locale": "pt-BR",
+        "display_name": "RESIDENCIA BAR Y RESTAURANTE BOMBAY",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 802,
+        "locale": "en",
+        "display_name": "HOTEL BRISAS DEL CARIBE",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 802,
+        "locale": "es",
+        "display_name": "HOTEL BRISAS DEL CARIBE",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 802,
+        "locale": "pt-BR",
+        "display_name": "HOTEL BRISAS DEL CARIBE",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 803,
+        "locale": "en",
+        "display_name": "SAKA NIBUE",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 803,
+        "locale": "es",
+        "display_name": "SAKA NIBUE",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 803,
+        "locale": "pt-BR",
+        "display_name": "SAKA NIBUE",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 804,
+        "locale": "en",
+        "display_name": "RESIDENCIA NUEVA GARDENIA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 804,
+        "locale": "es",
+        "display_name": "RESIDENCIA NUEVA GARDENIA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 804,
+        "locale": "pt-BR",
+        "display_name": "RESIDENCIA NUEVA GARDENIA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 805,
+        "locale": "en",
+        "display_name": "HOSPEDAJE LAS GAVIOTAS",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 805,
+        "locale": "es",
+        "display_name": "HOSPEDAJE LAS GAVIOTAS",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 805,
+        "locale": "pt-BR",
+        "display_name": "HOSPEDAJE LAS GAVIOTAS",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 806,
+        "locale": "en",
+        "display_name": "CABAÑAS JARDIN DEL MAR",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 806,
+        "locale": "es",
+        "display_name": "CABAÑAS JARDIN DEL MAR",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 806,
+        "locale": "pt-BR",
+        "display_name": "CABAÑAS JARDIN DEL MAR",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 807,
+        "locale": "en",
+        "display_name": "CARIBETOURSSINÚ",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 807,
+        "locale": "es",
+        "display_name": "CARIBETOURSSINÚ",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 807,
+        "locale": "pt-BR",
+        "display_name": "CARIBETOURSSINÚ",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 808,
+        "locale": "en",
+        "display_name": "COSAMUI BEACH HOUSE",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 808,
+        "locale": "es",
+        "display_name": "COSAMUI BEACH HOUSE",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 808,
+        "locale": "pt-BR",
+        "display_name": "COSAMUI BEACH HOUSE",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 809,
+        "locale": "en",
+        "display_name": "CABAÑA OLAS DEL MAR",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 809,
+        "locale": "es",
+        "display_name": "CABAÑA OLAS DEL MAR",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 809,
+        "locale": "pt-BR",
+        "display_name": "CABAÑA OLAS DEL MAR",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 810,
+        "locale": "en",
+        "display_name": "LA VILLA DE GUADALUPE",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 810,
+        "locale": "es",
+        "display_name": "LA VILLA DE GUADALUPE",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 810,
+        "locale": "pt-BR",
+        "display_name": "LA VILLA DE GUADALUPE",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 811,
+        "locale": "en",
+        "display_name": "PLAYAS EL PARAISO",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 811,
+        "locale": "es",
+        "display_name": "PLAYAS EL PARAISO",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 811,
+        "locale": "pt-BR",
+        "display_name": "PLAYAS EL PARAISO",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 812,
+        "locale": "en",
+        "display_name": "SERVICIOS ESPECIALES MIXTURA S.A.S.",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 812,
+        "locale": "es",
+        "display_name": "SERVICIOS ESPECIALES MIXTURA S.A.S.",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 812,
+        "locale": "pt-BR",
+        "display_name": "SERVICIOS ESPECIALES MIXTURA S.A.S.",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 813,
+        "locale": "en",
+        "display_name": "EL VIENTO BEACH",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 813,
+        "locale": "es",
+        "display_name": "EL VIENTO BEACH",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 813,
+        "locale": "pt-BR",
+        "display_name": "EL VIENTO BEACH",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 814,
+        "locale": "en",
+        "display_name": "PASITO AL MAR BEACH",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 814,
+        "locale": "es",
+        "display_name": "PASITO AL MAR BEACH",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 814,
+        "locale": "pt-BR",
+        "display_name": "PASITO AL MAR BEACH",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 815,
+        "locale": "en",
+        "display_name": "RESIDENCIA BAR Y RESTAURANTE LOS MARINOS",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 815,
+        "locale": "es",
+        "display_name": "RESIDENCIA BAR Y RESTAURANTE LOS MARINOS",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 815,
+        "locale": "pt-BR",
+        "display_name": "RESIDENCIA BAR Y RESTAURANTE LOS MARINOS",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 816,
+        "locale": "en",
+        "display_name": "CARIBE SURF SCHOOL",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 816,
+        "locale": "es",
+        "display_name": "CARIBE SURF SCHOOL",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 816,
+        "locale": "pt-BR",
+        "display_name": "CARIBE SURF SCHOOL",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 817,
+        "locale": "en",
+        "display_name": "HOSTAL MAR AZUL",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 817,
+        "locale": "es",
+        "display_name": "HOSTAL MAR AZUL",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 817,
+        "locale": "pt-BR",
+        "display_name": "HOSTAL MAR AZUL",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 818,
+        "locale": "en",
+        "display_name": "HOTEL MAR DEL VIENTO",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 818,
+        "locale": "es",
+        "display_name": "HOTEL MAR DEL VIENTO",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 818,
+        "locale": "pt-BR",
+        "display_name": "HOTEL MAR DEL VIENTO",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 819,
+        "locale": "en",
+        "display_name": "Restaurante La Fogata Sinuana",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 819,
+        "locale": "es",
+        "display_name": "Restaurante La Fogata Sinuana",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 819,
+        "locale": "pt-BR",
+        "display_name": "Restaurante La Fogata Sinuana",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 820,
+        "locale": "en",
+        "display_name": "Restaurante El Humito",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 820,
+        "locale": "es",
+        "display_name": "Restaurante El Humito",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 820,
+        "locale": "pt-BR",
+        "display_name": "Restaurante El Humito",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 821,
+        "locale": "en",
+        "display_name": "Sazón de Maridiz",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 821,
+        "locale": "es",
+        "display_name": "Sazón de Maridiz",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 821,
+        "locale": "pt-BR",
+        "display_name": "Sazón de Maridiz",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 822,
+        "locale": "en",
+        "display_name": "Mi Lugar Favorito - Restaurante El Gabrio",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 822,
+        "locale": "es",
+        "display_name": "Mi Lugar Favorito - Restaurante El Gabrio",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 822,
+        "locale": "pt-BR",
+        "display_name": "Mi Lugar Favorito - Restaurante El Gabrio",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      }
+    ],
+    "business_categories": [],
+    "business_sources": [
+      {
+        "id": 1,
+        "business_id": 781,
+        "source_url": "https://www.datos.gov.co/resource/thwd-ivmp.json?codigo_rnt=14964",
+        "checked_at": "2026-10-24 00:00:00",
+        "note": "MinCIT RNT 14964; ACTIVO reportado AGOSTO2026; municipio23675 San Bernardo del Viento; HOTEL. Dirección: KM 11 VIA SAN BERNARDO - MONITOS. No prueba disponibilidad ni operación actual."
+      },
+      {
+        "id": 2,
+        "business_id": 782,
+        "source_url": "https://www.datos.gov.co/resource/thwd-ivmp.json?codigo_rnt=36558",
+        "checked_at": "2026-10-24 00:00:00",
+        "note": "MinCIT RNT 36558; ACTIVO reportado AGOSTO2026; municipio23675 San Bernardo del Viento; HOTEL. Dirección: CRA 1 NRO 1 - 17 LOS BAUTISTAS. No prueba disponibilidad ni operación actual."
+      },
+      {
+        "id": 3,
+        "business_id": 783,
+        "source_url": "https://www.datos.gov.co/resource/thwd-ivmp.json?codigo_rnt=36564",
+        "checked_at": "2026-10-24 00:00:00",
+        "note": "MinCIT RNT 36564; ACTIVO reportado AGOSTO2026; municipio23675 San Bernardo del Viento; HOTEL. Dirección: CALLE 2 NRO 3 - 12 CTO PLAYAS DEL VIENTO CALLE CENTRAL. No prueba disponibilidad ni operación actual."
+      },
+      {
+        "id": 4,
+        "business_id": 784,
+        "source_url": "https://www.datos.gov.co/resource/thwd-ivmp.json?codigo_rnt=37355",
+        "checked_at": "2026-10-24 00:00:00",
+        "note": "MinCIT RNT 37355; ACTIVO reportado AGOSTO2026; municipio23675 San Bernardo del Viento; HOTEL. Dirección: CARRERA 1NRO 1-83 ENTRADA TADU. No prueba disponibilidad ni operación actual."
+      },
+      {
+        "id": 5,
+        "business_id": 785,
+        "source_url": "https://www.datos.gov.co/resource/thwd-ivmp.json?codigo_rnt=41364",
+        "checked_at": "2026-10-24 00:00:00",
+        "note": "MinCIT RNT 41364; ACTIVO reportado AGOSTO2026; municipio23675 San Bernardo del Viento; HOTEL. Dirección: PLAYAS DE SAN BERNARDO DEL VIENTO. No prueba disponibilidad ni operación actual."
+      },
+      {
+        "id": 6,
+        "business_id": 786,
+        "source_url": "https://www.datos.gov.co/resource/thwd-ivmp.json?codigo_rnt=43349",
+        "checked_at": "2026-10-24 00:00:00",
+        "note": "MinCIT RNT 43349; ACTIVO reportado AGOSTO2026; municipio23675 San Bernardo del Viento; FINCA TURISTICA (ALOJAMIENTO RURAL). Dirección: KM 7 SECTOR LA YE PLAYAS DEL VIENTO. No prueba disponibilidad ni operación actual."
+      },
+      {
+        "id": 7,
+        "business_id": 787,
+        "source_url": "https://www.datos.gov.co/resource/thwd-ivmp.json?codigo_rnt=44675",
+        "checked_at": "2026-10-24 00:00:00",
+        "note": "MinCIT RNT 44675; ACTIVO reportado AGOSTO2026; municipio23675 San Bernardo del Viento; HOTEL. Dirección: CARRERA 9 NRO 3-18. No prueba disponibilidad ni operación actual."
+      },
+      {
+        "id": 8,
+        "business_id": 788,
+        "source_url": "https://www.datos.gov.co/resource/thwd-ivmp.json?codigo_rnt=62391",
+        "checked_at": "2026-10-24 00:00:00",
+        "note": "MinCIT RNT 62391; ACTIVO reportado AGOSTO2026; municipio23675 San Bernardo del Viento; HOTEL. Dirección: CLL 9 N 8 37 BRR LA CRUZ. No prueba disponibilidad ni operación actual."
+      },
+      {
+        "id": 9,
+        "business_id": 789,
+        "source_url": "https://www.datos.gov.co/resource/thwd-ivmp.json?codigo_rnt=89508",
+        "checked_at": "2026-10-24 00:00:00",
+        "note": "MinCIT RNT 89508; ACTIVO reportado AGOSTO2026; municipio23675 San Bernardo del Viento; HOTEL. Dirección: VEREDA PUNTA PIEDRA SAN BERNARDO DEL VIENTO. No prueba disponibilidad ni operación actual."
+      },
+      {
+        "id": 10,
+        "business_id": 790,
+        "source_url": "https://www.datos.gov.co/resource/thwd-ivmp.json?codigo_rnt=101425",
+        "checked_at": "2026-10-24 00:00:00",
+        "note": "MinCIT RNT 101425; ACTIVO reportado AGOSTO2026; municipio23675 San Bernardo del Viento; HOSTAL. Dirección: VDA BRISAS DEL MAR ZONA POMPEYA. No prueba disponibilidad ni operación actual."
+      },
+      {
+        "id": 11,
+        "business_id": 791,
+        "source_url": "https://www.datos.gov.co/resource/thwd-ivmp.json?codigo_rnt=110291",
+        "checked_at": "2026-10-24 00:00:00",
+        "note": "MinCIT RNT 110291; ACTIVO reportado AGOSTO2026; municipio23675 San Bernardo del Viento; HOTEL. Dirección: CALLE 2 NRO 1 11 PLAYAS DEL VIENTO. No prueba disponibilidad ni operación actual."
+      },
+      {
+        "id": 12,
+        "business_id": 792,
+        "source_url": "https://www.datos.gov.co/resource/thwd-ivmp.json?codigo_rnt=121250",
+        "checked_at": "2026-10-24 00:00:00",
+        "note": "MinCIT RNT 121250; ACTIVO reportado AGOSTO2026; municipio23675 San Bernardo del Viento; HOTEL. Dirección: KM 8 SAN BERNARDO. No prueba disponibilidad ni operación actual."
+      },
+      {
+        "id": 13,
+        "business_id": 793,
+        "source_url": "https://www.datos.gov.co/resource/thwd-ivmp.json?codigo_rnt=129317",
+        "checked_at": "2026-10-24 00:00:00",
+        "note": "MinCIT RNT 129317; ACTIVO reportado AGOSTO2026; municipio23675 San Bernardo del Viento; HOSTAL. Dirección: PD PLAYA DEL VIENTO SECTOR POMPEYA. No prueba disponibilidad ni operación actual."
+      },
+      {
+        "id": 14,
+        "business_id": 794,
+        "source_url": "https://www.datos.gov.co/resource/thwd-ivmp.json?codigo_rnt=134174",
+        "checked_at": "2026-10-24 00:00:00",
+        "note": "MinCIT RNT 134174; ACTIVO reportado AGOSTO2026; municipio23675 San Bernardo del Viento; HOSTAL. Dirección: KILOMETRO 8 VIA MOÑITOS CR 1 N 1-10. No prueba disponibilidad ni operación actual."
+      },
+      {
+        "id": 15,
+        "business_id": 795,
+        "source_url": "https://www.datos.gov.co/resource/thwd-ivmp.json?codigo_rnt=141530",
+        "checked_at": "2026-10-24 00:00:00",
+        "note": "MinCIT RNT 141530; ACTIVO reportado AGOSTO2026; municipio23675 San Bernardo del Viento; HOSTAL. Dirección: KM 5 VIA SAN BERNARDO DEL VIENTO - MOÑITOS. No prueba disponibilidad ni operación actual."
+      },
+      {
+        "id": 16,
+        "business_id": 796,
+        "source_url": "https://www.datos.gov.co/resource/thwd-ivmp.json?codigo_rnt=144232",
+        "checked_at": "2026-10-24 00:00:00",
+        "note": "MinCIT RNT 144232; ACTIVO reportado AGOSTO2026; municipio23675 San Bernardo del Viento; GLAMPING. Dirección: PLAYA  DEL VIENTO. No prueba disponibilidad ni operación actual."
+      },
+      {
+        "id": 17,
+        "business_id": 797,
+        "source_url": "https://www.datos.gov.co/resource/thwd-ivmp.json?codigo_rnt=159269",
+        "checked_at": "2026-10-24 00:00:00",
+        "note": "MinCIT RNT 159269; ACTIVO reportado AGOSTO2026; municipio23675 San Bernardo del Viento; HOTEL. Dirección: CALLE 1 1-04 ISLA ANCON PLAYA PUNTA DE PIEDRA. No prueba disponibilidad ni operación actual."
+      },
+      {
+        "id": 18,
+        "business_id": 798,
+        "source_url": "https://www.datos.gov.co/resource/thwd-ivmp.json?codigo_rnt=160538",
+        "checked_at": "2026-10-24 00:00:00",
+        "note": "MinCIT RNT 160538; ACTIVO reportado AGOSTO2026; municipio23675 San Bernardo del Viento; HOTEL. Dirección: CR 3NRO 9-15 LA YE. No prueba disponibilidad ni operación actual."
+      },
+      {
+        "id": 19,
+        "business_id": 799,
+        "source_url": "https://www.datos.gov.co/resource/thwd-ivmp.json?codigo_rnt=167245",
+        "checked_at": "2026-10-24 00:00:00",
+        "note": "MinCIT RNT 167245; ACTIVO reportado AGOSTO2026; municipio23675 San Bernardo del Viento; HOTEL. Dirección: CR 2A NRO 10-10 CORR DE PASO NUEVO. No prueba disponibilidad ni operación actual."
+      },
+      {
+        "id": 20,
+        "business_id": 800,
+        "source_url": "https://www.datos.gov.co/resource/thwd-ivmp.json?codigo_rnt=169449",
+        "checked_at": "2026-10-24 00:00:00",
+        "note": "MinCIT RNT 169449; ACTIVO reportado AGOSTO2026; municipio23675 San Bernardo del Viento; HOSTAL. Dirección: PLAYAS DEL VIENTO. No prueba disponibilidad ni operación actual."
+      },
+      {
+        "id": 21,
+        "business_id": 801,
+        "source_url": "https://www.datos.gov.co/resource/thwd-ivmp.json?codigo_rnt=170318",
+        "checked_at": "2026-10-24 00:00:00",
+        "note": "MinCIT RNT 170318; ACTIVO reportado AGOSTO2026; municipio23675 San Bernardo del Viento; HOSTAL. Dirección: VDA LA YE. No prueba disponibilidad ni operación actual."
+      },
+      {
+        "id": 22,
+        "business_id": 802,
+        "source_url": "https://www.datos.gov.co/resource/thwd-ivmp.json?codigo_rnt=171011",
+        "checked_at": "2026-10-24 00:00:00",
+        "note": "MinCIT RNT 171011; ACTIVO reportado AGOSTO2026; municipio23675 San Bernardo del Viento; HOTEL. Dirección: CRA 11 NRO 9-58. No prueba disponibilidad ni operación actual."
+      },
+      {
+        "id": 23,
+        "business_id": 803,
+        "source_url": "https://www.datos.gov.co/resource/thwd-ivmp.json?codigo_rnt=172199",
+        "checked_at": "2026-10-24 00:00:00",
+        "note": "MinCIT RNT 172199; ACTIVO reportado AGOSTO2026; municipio23675 San Bernardo del Viento; HOSTAL. Dirección: SECTOR LA Y 600 MTS DEL MUELLE TURISTICO. No prueba disponibilidad ni operación actual."
+      },
+      {
+        "id": 24,
+        "business_id": 804,
+        "source_url": "https://www.datos.gov.co/resource/thwd-ivmp.json?codigo_rnt=179418",
+        "checked_at": "2026-10-24 00:00:00",
+        "note": "MinCIT RNT 179418; ACTIVO reportado AGOSTO2026; municipio23675 San Bernardo del Viento; HOSTAL. Dirección: CL 8 13  132. No prueba disponibilidad ni operación actual."
+      },
+      {
+        "id": 25,
+        "business_id": 805,
+        "source_url": "https://www.datos.gov.co/resource/thwd-ivmp.json?codigo_rnt=190508",
+        "checked_at": "2026-10-24 00:00:00",
+        "note": "MinCIT RNT 190508; ACTIVO reportado AGOSTO2026; municipio23675 San Bernardo del Viento; HOSTAL. Dirección: CRA 7 N 14A-39 BRR GUAYABAL. No prueba disponibilidad ni operación actual."
+      },
+      {
+        "id": 26,
+        "business_id": 806,
+        "source_url": "https://www.datos.gov.co/resource/thwd-ivmp.json?codigo_rnt=208333",
+        "checked_at": "2026-10-24 00:00:00",
+        "note": "MinCIT RNT 208333; ACTIVO reportado AGOSTO2026; municipio23675 San Bernardo del Viento; APARTAHOTEL. Dirección: KM 9 SAN BERNARDO MOÑITOS. No prueba disponibilidad ni operación actual."
+      },
+      {
+        "id": 27,
+        "business_id": 807,
+        "source_url": "https://www.datos.gov.co/resource/thwd-ivmp.json?codigo_rnt=214560",
+        "checked_at": "2026-10-24 00:00:00",
+        "note": "MinCIT RNT 214560; ACTIVO reportado AGOSTO2026; municipio23675 San Bernardo del Viento; AGENCIA DE VIAJES Y DE TURISMO. Dirección: BARRIO JORGE ELIECER. No prueba disponibilidad ni operación actual."
+      },
+      {
+        "id": 28,
+        "business_id": 808,
+        "source_url": "https://www.datos.gov.co/resource/thwd-ivmp.json?codigo_rnt=215314",
+        "checked_at": "2026-10-24 00:00:00",
+        "note": "MinCIT RNT 215314; ACTIVO reportado AGOSTO2026; municipio23675 San Bernardo del Viento; HOTEL. Dirección: SAN BERNARDO DEL VIENTO ENTRADA L BAUTISTA. No prueba disponibilidad ni operación actual."
+      },
+      {
+        "id": 29,
+        "business_id": 809,
+        "source_url": "https://www.datos.gov.co/resource/thwd-ivmp.json?codigo_rnt=222497",
+        "checked_at": "2026-10-24 00:00:00",
+        "note": "MinCIT RNT 222497; ACTIVO reportado AGOSTO2026; municipio23675 San Bernardo del Viento; HOSTAL. Dirección: VRD POMPEYA. No prueba disponibilidad ni operación actual."
+      },
+      {
+        "id": 30,
+        "business_id": 810,
+        "source_url": "https://www.datos.gov.co/resource/thwd-ivmp.json?codigo_rnt=238797",
+        "checked_at": "2026-10-24 00:00:00",
+        "note": "MinCIT RNT 238797; ACTIVO reportado AGOSTO2026; municipio23675 San Bernardo del Viento; APARTAHOTEL. Dirección: PLAYA LOS BAUTISTAS SECTOR LOS CANGREJOS. No prueba disponibilidad ni operación actual."
+      },
+      {
+        "id": 31,
+        "business_id": 811,
+        "source_url": "https://www.datos.gov.co/resource/thwd-ivmp.json?codigo_rnt=239812",
+        "checked_at": "2026-10-24 00:00:00",
+        "note": "MinCIT RNT 239812; ACTIVO reportado AGOSTO2026; municipio23675 San Bernardo del Viento; HOTEL. Dirección: VDA PLAYAS LA YE. No prueba disponibilidad ni operación actual."
+      },
+      {
+        "id": 32,
+        "business_id": 812,
+        "source_url": "https://www.datos.gov.co/resource/thwd-ivmp.json?codigo_rnt=243406",
+        "checked_at": "2026-10-24 00:00:00",
+        "note": "MinCIT RNT 243406; ACTIVO reportado AGOSTO2026; municipio23675 San Bernardo del Viento; AGENCIA DE VIAJES OPERADORAS. Dirección: CL 10 CR 1-70. No prueba disponibilidad ni operación actual."
+      },
+      {
+        "id": 33,
+        "business_id": 813,
+        "source_url": "https://www.datos.gov.co/resource/thwd-ivmp.json?codigo_rnt=264352",
+        "checked_at": "2026-10-24 00:00:00",
+        "note": "MinCIT RNT 264352; ACTIVO reportado AGOSTO2026; municipio23675 San Bernardo del Viento; HOTEL. Dirección: CL 1 CR 1 63 POMPEYA SAN BERNARDO DEL VIENTO. No prueba disponibilidad ni operación actual."
+      },
+      {
+        "id": 34,
+        "business_id": 814,
+        "source_url": "https://www.datos.gov.co/resource/thwd-ivmp.json?codigo_rnt=280970",
+        "checked_at": "2026-10-24 00:00:00",
+        "note": "MinCIT RNT 280970; ACTIVO reportado AGOSTO2026; municipio23675 San Bernardo del Viento; CENTRO VACACIONAL. Dirección: CORREGIMIENTO BRISAS DEL MAR. No prueba disponibilidad ni operación actual."
+      },
+      {
+        "id": 35,
+        "business_id": 815,
+        "source_url": "https://www.datos.gov.co/resource/thwd-ivmp.json?codigo_rnt=282190",
+        "checked_at": "2026-10-24 00:00:00",
+        "note": "MinCIT RNT 282190; ACTIVO reportado AGOSTO2026; municipio23675 San Bernardo del Viento; HOSTAL. Dirección: VEREDA LA Y. No prueba disponibilidad ni operación actual."
+      },
+      {
+        "id": 36,
+        "business_id": 816,
+        "source_url": "https://www.datos.gov.co/resource/thwd-ivmp.json?codigo_rnt=284617",
+        "checked_at": "2026-10-24 00:00:00",
+        "note": "MinCIT RNT 284617; ACTIVO reportado AGOSTO2026; municipio23675 San Bernardo del Viento; AGENCIA DE VIAJES OPERADORAS. Dirección: KM 12 VIA SAN BERNARDO - MOÑITOS SECTOR POMPEYA. No prueba disponibilidad ni operación actual."
+      },
+      {
+        "id": 37,
+        "business_id": 817,
+        "source_url": "https://www.datos.gov.co/resource/thwd-ivmp.json?codigo_rnt=294432",
+        "checked_at": "2026-10-24 00:00:00",
+        "note": "MinCIT RNT 294432; ACTIVO reportado AGOSTO2026; municipio23675 San Bernardo del Viento; HOTEL. Dirección: CL 92 B 49 CRR PASO NUEVO. No prueba disponibilidad ni operación actual."
+      },
+      {
+        "id": 38,
+        "business_id": 818,
+        "source_url": "https://www.datos.gov.co/resource/thwd-ivmp.json?codigo_rnt=299264",
+        "checked_at": "2026-10-24 00:00:00",
+        "note": "MinCIT RNT 299264; ACTIVO reportado AGOSTO2026; municipio23675 San Bernardo del Viento; HOTEL. Dirección: VEREDA EL VENADO PLAYAS DEL VIENTO. No prueba disponibilidad ni operación actual."
+      },
+      {
+        "id": 39,
+        "business_id": 819,
+        "source_url": "https://www.waze.com/live-map/directions/co/cordoba/san-bernardo-del-viento/restaurante-la-fogata-sinuana?to=place.ChIJh4CPRYe7WY4RKVIHG8mKOGk",
+        "checked_at": "2026-10-24 00:00:00",
+        "note": "Listado secundario individual identifica municipio San Bernardo del Viento, nombre, ubicación y teléfono comercial. No es validación directa del negocio ni certificado de operación vigente."
+      },
+      {
+        "id": 40,
+        "business_id": 820,
+        "source_url": "https://es.restaurantguru.com/amp/Restaurante-El-Humito-San-Bernardo-del-Viento",
+        "checked_at": "2026-10-24 00:00:00",
+        "note": "Listado secundario individual identifica municipio San Bernardo del Viento, nombre, ubicación y teléfono comercial. No es validación directa del negocio ni certificado de operación vigente."
+      },
+      {
+        "id": 41,
+        "business_id": 821,
+        "source_url": "https://restaurantguru.com/ALMUERZOS-Y-DESAYUNOS-EL-PARQUE-San-Bernardo-del-Viento",
+        "checked_at": "2026-10-24 00:00:00",
+        "note": "Listado secundario individual identifica municipio San Bernardo del Viento, nombre, ubicación y teléfono comercial. No es validación directa del negocio ni certificado de operación vigente."
+      },
+      {
+        "id": 42,
+        "business_id": 822,
+        "source_url": "https://es.restaurantguru.com/Mi-Lugar-Favorito-Restaurante-El-Gabrio-San-Bernardo-del-Viento-2",
+        "checked_at": "2026-10-24 00:00:00",
+        "note": "Listado secundario individual identifica municipio San Bernardo del Viento, nombre, ubicación y teléfono comercial. No es validación directa del negocio ni certificado de operación vigente."
+      }
+    ],
+    "business_contacts": [],
+    "business_media": [],
+    "media_assets": [
+      {
+        "id": 186,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/46/46d1eb40c66dc27f75fd763d66a91a20b72faceac6a4bcd5e699a370d00a5358.webp",
+        "creator": "Ilustración IA · borrador local",
+        "source_url": "",
+        "license_name": "Localdraft; source attribution/rights pending",
+        "license_url": "",
+        "provenance_json": "{\"draft\": true, \"sha256\": \"46d1eb40c66dc27f75fd763d66a91a20b72faceac6a4bcd5e699a370d00a5358\", \"metadata\": {\"creator\": \"Ilustración IA · borrador local\", \"source_url\": \"\", \"license_name\": \"Localdraft; source attribution/rights pending\", \"path\": \"assets/revision-cobertura/san-bernardo-del-viento/portada-v2.webp\", \"sha256\": \"46d1eb40c66dc27f75fd763d66a91a20b72faceac6a4bcd5e699a370d00a5358\", \"width\": 1536, \"height\": 1024, \"status\": \"draft_local_review\"}, \"publication_authorized\": true, \"approval_scope\": \"Owner PUBLICAR five current DEV1 destinations 2026-10-24\", \"source_active_path\": \"assets/revision-cobertura/san-bernardo-del-viento/portada-v2.webp\"}",
+        "width": 1536,
+        "height": 1024
+      },
+      {
+        "id": 187,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/02/02b224f91dd4975055a4ad7a7650d2bc2e5904e1cb3f1eacd9ea390ffb5b221b.webp",
+        "creator": "Ilustración IA · borrador local",
+        "source_url": "",
+        "license_name": "Localdraft; source attribution/rights pending",
+        "license_url": "",
+        "provenance_json": "{\"draft\": true, \"sha256\": \"02b224f91dd4975055a4ad7a7650d2bc2e5904e1cb3f1eacd9ea390ffb5b221b\", \"metadata\": {\"creator\": \"Ilustración IA · borrador local\", \"source_url\": \"\", \"license_name\": \"Localdraft; source attribution/rights pending\", \"path\": \"assets/revision-cobertura/san-bernardo-del-viento/playas-del-viento-v1.webp\", \"sha256\": \"02b224f91dd4975055a4ad7a7650d2bc2e5904e1cb3f1eacd9ea390ffb5b221b\", \"width\": 1536, \"height\": 1024, \"status\": \"draft_local_review\"}, \"publication_authorized\": true, \"approval_scope\": \"Owner PUBLICAR five current DEV1 destinations 2026-10-24\", \"source_active_path\": \"assets/revision-cobertura/san-bernardo-del-viento/playas-del-viento-v1.webp\"}",
+        "width": 1536,
+        "height": 1024
+      },
+      {
+        "id": 188,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/60/602d728a8f9d05090b5639a4439e27620c859380b41530ffa0b1a59483ed492a.webp",
+        "creator": "Ilustración IA · borrador local",
+        "source_url": "",
+        "license_name": "Localdraft; source attribution/rights pending",
+        "license_url": "",
+        "provenance_json": "{\"draft\": true, \"sha256\": \"602d728a8f9d05090b5639a4439e27620c859380b41530ffa0b1a59483ed492a\", \"metadata\": {\"creator\": \"Ilustración IA · borrador local\", \"source_url\": \"\", \"license_name\": \"Localdraft; source attribution/rights pending\", \"path\": \"assets/revision-cobertura/san-bernardo-del-viento/boca-tinajones-v2.webp\", \"sha256\": \"602d728a8f9d05090b5639a4439e27620c859380b41530ffa0b1a59483ed492a\", \"width\": 1536, \"height\": 1024, \"status\": \"draft_local_review\"}, \"publication_authorized\": true, \"approval_scope\": \"Owner PUBLICAR five current DEV1 destinations 2026-10-24\", \"source_active_path\": \"assets/revision-cobertura/san-bernardo-del-viento/boca-tinajones-v2.webp\"}",
+        "width": 1536,
+        "height": 1024
+      },
+      {
+        "id": 189,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/2c/2c10361af4cbb5046772c8d82e2b95f11014cae116bdd3736f68c13d129462f4.webp",
+        "creator": "Ilustración IA · borrador local",
+        "source_url": "",
+        "license_name": "Localdraft; source attribution/rights pending",
+        "license_url": "",
+        "provenance_json": "{\"draft\": true, \"sha256\": \"2c10361af4cbb5046772c8d82e2b95f11014cae116bdd3736f68c13d129462f4\", \"metadata\": {\"creator\": \"Ilustración IA · borrador local\", \"source_url\": \"\", \"license_name\": \"Localdraft; source attribution/rights pending\", \"path\": \"assets/revision-cobertura/san-bernardo-del-viento/cano-la-balsa-v1.webp\", \"sha256\": \"2c10361af4cbb5046772c8d82e2b95f11014cae116bdd3736f68c13d129462f4\", \"width\": 1536, \"height\": 1024, \"status\": \"draft_local_review\"}, \"publication_authorized\": true, \"approval_scope\": \"Owner PUBLICAR five current DEV1 destinations 2026-10-24\", \"source_active_path\": \"assets/revision-cobertura/san-bernardo-del-viento/cano-la-balsa-v1.webp\"}",
+        "width": 1536,
+        "height": 1024
+      },
+      {
+        "id": 248,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/33/33f309e8f1cc6b0b6c75e85d4ffd09fa7199298c30bc9017a0b775f5f0a2ef8b.webp",
+        "creator": "Ilustración IA · borrador local",
+        "source_url": "",
+        "license_name": "Localdraft; source attribution/rights pending",
+        "license_url": "",
+        "provenance_json": "{\"draft\": true, \"sha256\": \"33f309e8f1cc6b0b6c75e85d4ffd09fa7199298c30bc9017a0b775f5f0a2ef8b\", \"metadata\": {\"creator\": \"Ilustración IA · borrador local\", \"source_url\": \"\", \"license_name\": \"Localdraft; source attribution/rights pending\", \"path\": \"assets/revision-cobertura/san-bernardo-del-viento/punta-piedra-v2.webp\", \"sha256\": \"33f309e8f1cc6b0b6c75e85d4ffd09fa7199298c30bc9017a0b775f5f0a2ef8b\", \"width\": 1600, \"height\": 648, \"status\": \"draft_local_review\"}, \"publication_authorized\": true, \"approval_scope\": \"Owner PUBLICAR five current DEV1 destinations 2026-10-24\", \"source_active_path\": \"assets/revision-cobertura/san-bernardo-del-viento/punta-piedra-v2.webp\"}",
+        "width": 1600,
+        "height": 648
+      }
+    ],
+    "media_asset_translations": [
+      {
+        "media_asset_id": 186,
+        "locale": "en",
+        "alt_text": "San Bernardo del Viento",
+        "caption": "Editorial illustration: San Bernardo del Viento."
+      },
+      {
+        "media_asset_id": 186,
+        "locale": "es",
+        "alt_text": "San Bernardo del Viento",
+        "caption": "Ilustración editorial: San Bernardo del Viento."
+      },
+      {
+        "media_asset_id": 186,
+        "locale": "pt-BR",
+        "alt_text": "San Bernardo del Viento",
+        "caption": "Ilustração editorial: San Bernardo del Viento."
+      },
+      {
+        "media_asset_id": 187,
+        "locale": "en",
+        "alt_text": "Playa del Viento",
+        "caption": "Editorial illustration: Playa del Viento."
+      },
+      {
+        "media_asset_id": 187,
+        "locale": "es",
+        "alt_text": "Playa del Viento",
+        "caption": "Ilustración editorial: Playa del Viento."
+      },
+      {
+        "media_asset_id": 187,
+        "locale": "pt-BR",
+        "alt_text": "Playa del Viento",
+        "caption": "Ilustração editorial: Playa del Viento."
+      },
+      {
+        "media_asset_id": 188,
+        "locale": "en",
+        "alt_text": "Boat outing to Boca de Tinajones",
+        "caption": "Editorial illustration: Boat outing to Boca de Tinajones."
+      },
+      {
+        "media_asset_id": 188,
+        "locale": "es",
+        "alt_text": "Recorrido por Boca de Tinajones",
+        "caption": "Ilustración editorial: Recorrido por Boca de Tinajones."
+      },
+      {
+        "media_asset_id": 188,
+        "locale": "pt-BR",
+        "alt_text": "Passeio pela Boca de Tinajones",
+        "caption": "Ilustração editorial: Passeio pela Boca de Tinajones."
+      },
+      {
+        "media_asset_id": 189,
+        "locale": "en",
+        "alt_text": "Caño La Balsa excursion",
+        "caption": "Editorial illustration: Caño La Balsa excursion."
+      },
+      {
+        "media_asset_id": 189,
+        "locale": "es",
+        "alt_text": "Recorrido por Caño La Balsa",
+        "caption": "Ilustración editorial: Recorrido por Caño La Balsa."
+      },
+      {
+        "media_asset_id": 189,
+        "locale": "pt-BR",
+        "alt_text": "Passeio pelo Caño La Balsa",
+        "caption": "Ilustração editorial: Passeio pelo Caño La Balsa."
+      },
+      {
+        "media_asset_id": 248,
+        "locale": "en",
+        "alt_text": "Punta Piedra",
+        "caption": "Editorial illustration: Punta Piedra."
+      },
+      {
+        "media_asset_id": 248,
+        "locale": "es",
+        "alt_text": "Punta Piedra",
+        "caption": "Ilustración editorial: Punta Piedra."
+      },
+      {
+        "media_asset_id": 248,
+        "locale": "pt-BR",
+        "alt_text": "Punta Piedra",
+        "caption": "Ilustração editorial: Punta Piedra."
+      }
+    ]
+  },
+  "media_files": {
+    "186": {
+      "sha256": "46d1eb40c66dc27f75fd763d66a91a20b72faceac6a4bcd5e699a370d00a5358"
+    },
+    "187": {
+      "sha256": "02b224f91dd4975055a4ad7a7650d2bc2e5904e1cb3f1eacd9ea390ffb5b221b"
+    },
+    "188": {
+      "sha256": "602d728a8f9d05090b5639a4439e27620c859380b41530ffa0b1a59483ed492a"
+    },
+    "189": {
+      "sha256": "2c10361af4cbb5046772c8d82e2b95f11014cae116bdd3736f68c13d129462f4"
+    },
+    "248": {
+      "sha256": "33f309e8f1cc6b0b6c75e85d4ffd09fa7199298c30bc9017a0b775f5f0a2ef8b"
+    }
+  }
+}

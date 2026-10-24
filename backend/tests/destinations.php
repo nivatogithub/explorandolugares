@@ -31,9 +31,9 @@ $root=dirname(__DIR__,2);
 $catalog=json_decode(file_get_contents($root.'/content/destinos-dinamicos.json'),true,512,JSON_THROW_ON_ERROR);
 $options=json_decode(file_get_contents(dirname(__DIR__).'/app/contact-options.json'),true,512,JSON_THROW_ON_ERROR);
 $counts=DestinationImporter::import($pdo,$catalog,$options);
-check($counts['destinations']===21,'Expected 21 destinations');
-check($counts['translations']===63,'Expected 3 destination translations each');
-check($counts['points_of_interest']===70,'Expected 70 points of interest, including Jericó attractions and activities');
+check($counts['destinations']===26,'Expected 21 pilot seeds plus five approved destinations');
+check($counts['translations']===78,'Expected 3 destination translations each');
+check($counts['points_of_interest']===107,'Expected 70 prior points plus 37 approved attractions and experiences');
 check((int)$pdo->query('SELECT COUNT(*) FROM businesses')->fetchColumn()===0,'Importer must not create businesses');
 $repo=new DestinationRepository($pdo);
 $jerico=$repo->findPublished('jerico','es');
@@ -80,7 +80,7 @@ check($repo->findPublished('destino-borrador','es')===null,'An unpublished desti
 $privateDraft=$repo->findPublished('destino-borrador','es',true);check($privateDraft!==null&&$privateDraft['publication_status']==='draft'&&count($privateDraft['places'])===1,'Private preview can render draft destination and child attractions');
 foreach ($catalog['destinations'] as $record) foreach ($catalog['locales'] as $locale) {
     $page=$repo->findPublished($record['slug'],$locale);
-    if($record['slug']==='jerico')check($page!==null && $page['slug']===$record['slug'] && $page['locale']===$locale,'Jericó is public in every locale');
+    if($record['publication_status']==='published')check($page!==null && $page['slug']===$record['slug'] && $page['locale']===$locale,'Approved destination is public in every locale: '.$record['slug']);
     else check($page===null,'Draft is hidden in every locale: '.$record['slug'].' / '.$locale);
 }
 $businessInsert=$pdo->prepare('INSERT INTO businesses(public_id,destination_id,category_code,slug,information_status,claim_status,operation_status,publication_status) VALUES(?,?,?,?,?,?,?,?)');
@@ -199,7 +199,7 @@ try{BusinessPublicImporter::import($pdo,['schema_version'=>'business-import-v1',
 check($batchRejected&&(int)$pdo->query('SELECT COUNT(*) FROM businesses')->fetchColumn()===$beforeImportCount,'Invalid JSON batches roll back all inserts');
 $failed=false;try{DestinationImporter::import($pdo,$catalog,$options);}catch(RuntimeException $error){$failed=true;}
 check($failed,'Repeat import into non-empty catalog must be refused');
-check((int)$pdo->query('SELECT COUNT(*) FROM destinations')->fetchColumn()===22,'Refused repeat import leaves data intact, including the private-preview fixture');
+check((int)$pdo->query('SELECT COUNT(*) FROM destinations')->fetchColumn()===27,'Refused repeat import leaves data intact, including the private-preview fixture');
 $upgrade=new PDO('sqlite::memory:',null,null,[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION]);
 $upgrade->exec('CREATE TABLE media_assets (id INTEGER PRIMARY KEY, asset_path TEXT NOT NULL)');
 $upgrade->exec(file_get_contents(dirname(__DIR__).'/database/migrations/007-media-provenance.sqlite.sql'));

@@ -29,7 +29,7 @@ def private_php(config,options,action="database-snapshot.php"):
         options=dict(options,migration_root=scratch,public_root=api.public_path(config))
         dependencies={'DestinationSnapshotMigration.php':ROOT/'scripts/lib/DestinationSnapshotMigration.php'}
         slugs=options.get('slugs',['jerico','cartagena','bogota','medellin','santa-marta','jardin','covenas','zipaquira','santa-fe-de-antioquia'])
-        if not slugs or set(slugs)-{'jerico','cartagena','bogota','medellin','santa-marta','jardin','covenas','zipaquira','santa-fe-de-antioquia','guatape','cauca-viejo','cocorna','arboletes','riohacha','valledupar'}:raise ValueError('Alcance de lugares inválido.')
+        if not slugs or set(slugs)-{'jerico','cartagena','bogota','medellin','santa-marta','jardin','covenas','zipaquira','santa-fe-de-antioquia','guatape','cauca-viejo','cocorna','arboletes','riohacha','valledupar','barranquilla','manizales','pereira','san-bernardo-del-viento','villavieja'}:raise ValueError('Alcance de lugares inválido.')
         for slug in slugs:
             dependencies[slug+'.json']=ROOT/'content/destination-migration'/ (slug+'.json')
     if action in {'database-snapshot.php','backup-retention.php'}:

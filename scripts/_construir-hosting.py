@@ -88,6 +88,7 @@ for item in approved_media['media']:
         raise RuntimeError('El paquete alteró un medio aprobado: '+str(relative))
 subprocess.run([sys.executable,str(root/'scripts/aplicar-rutas-lugares.py'),'--release',str(release)],check=True)
 subprocess.run([sys.executable,str(root/'scripts/agregar-metadatos-sociales.py'),'--public',str(public)],check=True)
+subprocess.run([sys.executable,str(root/'scripts/componer-indice-publicado.py'),'--release',str(release)],check=True)
 # Retired controller stays inventoried for a separate, explicit cleanup; no template loads it.
 # Explicit retirement is verified after composition; no legacy controller is restored.
 subprocess.run([sys.executable,str(root/'scripts/consolidar-shell-css.py'),'--public',str(public)],check=True)

@@ -1,0 +1,27 @@
+{
+  "release_id": "cinco-destinos-20261024",
+  "base_commit": "bc4d1aa6e63bddf2276aa061e58abe6783d157dc",
+  "authorization": "Owner PUBLICAR current five reviewed DEV1 destinations, 2026-10-24",
+  "scope": [
+    "barranquilla",
+    "manizales",
+    "pereira",
+    "san-bernardo-del-viento",
+    "villavieja"
+  ],
+  "businesses": 162,
+  "media": 42,
+  "media_approval": "All current served versions authorized for publication; no new visual variants",
+  "excluded": [
+    "Isla Fuerte proposed addition",
+    "business registration development branches",
+    "private configuration",
+    "accounts",
+    "subscriptions",
+    "payments",
+    "analytics",
+    "local DB"
+  ],
+  "migration": "DestinationSnapshotMigration: identity upsert by slug/public_id, existing businesses preserved; no reset/delete",
+  "source_ids": "Dataset reference keys only; migration resolves remote IDs by stable identities"
+}

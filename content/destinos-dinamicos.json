@@ -5392,6 +5392,2359 @@
           ]
         }
       }
+    },
+    {
+      "slug": "barranquilla",
+      "destination_type": "city",
+      "country_code": "CO",
+      "department": "Atlántico",
+      "subregion": "",
+      "publication_status": "published",
+      "display_order": 25,
+      "translations": {
+        "en": {
+          "name": "Barranquilla",
+          "title": "Barranquilla | Explorando Lugares",
+          "meta_description": "Explore Barranquilla: the Gran Malecón waterfront, Carnival culture, Mallorquín mangroves, Puerto Mocho Beach and places to visit in Atlántico.",
+          "eyebrow": "ATLÁNTICO / COLOMBIA",
+          "headline": "River, Carnival and Caribbean life",
+          "intro": "Discover Barranquilla between the Magdalena River, Carnival neighbourhoods and Mallorquín mangroves. Explore its waterfront, cultural spaces and Caribbean streets in a city connected to both river and sea.",
+          "history": [
+            "The Magdalena River is central to Barranquilla’s history. Trade and port activity drove its growth, connecting the city to inland Colombia and international routes.",
+            "Migration, local trades and Caribbean traditions shaped its neighbourhoods and cultural life. Carnival brings together music, dance and knowledge that remain alive beyond the festival, particularly in Barrio Abajo and the Carnival Museum.",
+            "The Gran Malecón and Mallorquín offer different connections with water: an urban promenade beside the Magdalena and trails through a mangrove ecosystem. These distinct settings should not be confused with open beaches."
+          ],
+          "reasons": [
+            "Walk beside the Magdalena and enjoy the river landscape.",
+            "Explore Carnival culture beyond the festival dates.",
+            "Combine city streets, mangroves and beach within the district."
+          ],
+          "hero_media": {
+            "path": "assets/media/82/82fca713296939b47c8056507c7e14e2a17d8375b6aa2e47fe149ca95690f082.webp",
+            "alt": "Barranquilla",
+            "caption": "Editorial illustration: Barranquilla.",
+            "width": 1600,
+            "height": 900
+          },
+          "history_media": null,
+          "places": [
+            {
+              "slug": "gran-malecon",
+              "type": "place",
+              "name": "Gran Malecón del Río",
+              "description": "A promenade beside the Magdalena with paths, green spaces and places to gather. The waterfront has several sections: choose a stretch to explore at your own pace, remembering this is a riverfront rather than a seafront.",
+              "map_url": "https://www.google.com/maps?cid=3874035168352582696",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/a3/a33b28fc1684841ed69fa6f66eee325c39c70816924879f3109c4c8edd00c594.webp",
+                "alt": "Gran Malecón del Río",
+                "caption": "Editorial illustration: Gran Malecón del Río.",
+                "width": 1600,
+                "height": 900
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "ecoparque-mallorquin",
+              "type": "place",
+              "name": "Mallorquín Wetland Ecopark",
+              "description": "Raised boardwalks bring visitors close to mangroves and the wetland landscape. This is a nature visit within the district; check admission conditions and respect designated trails and wildlife.",
+              "map_url": "https://www.google.com/maps?cid=5398400715304868423",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/a1/a15c3256b906cb5ab917f3f521865eab30a9da051456f53d0944d391c26b585d.webp",
+                "alt": "Mallorquín Wetland Ecopark",
+                "caption": "Editorial illustration: Mallorquín Wetland Ecopark.",
+                "width": 1536,
+                "height": 1024
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "museo-carnaval",
+              "type": "place",
+              "name": "Carnival Museum",
+              "description": "In Barrio Abajo, this museum explores the festival’s music, dance, costumes and history. Its colourful facade distinguishes it from the neighbouring Casa del Carnaval. Check visiting arrangements before going.",
+              "map_url": "https://www.google.com/maps?cid=6050086234033065190",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/f8/f85c213285799b61cf75e92b72bb1d195dd204891c1db965184a81d126bc9243.webp",
+                "alt": "Carnival Museum",
+                "caption": "Editorial illustration: Carnival Museum.",
+                "width": 1536,
+                "height": 1024
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "barrio-abajo",
+              "type": "place",
+              "name": "Barrio Abajo: an open-air museum",
+              "description": "A neighbourhood shaped by popular memory and Carnival, where murals invite a slower look at the streets. This is a living residential area: respect its residents and remember that artworks may change.",
+              "map_url": "https://www.google.com/maps?cid=3592785704674598244",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/1c/1c2ca85b90e1ffc17147f36b44c4c48f07e1d7dcaf3fcf9c4f66916a5568188a.webp",
+                "alt": "Barrio Abajo: an open-air museum",
+                "caption": "Editorial illustration: Barrio Abajo: an open-air museum.",
+                "width": 1536,
+                "height": 1024
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "ventana-al-mundo",
+              "type": "place",
+              "name": "Ventana al Mundo",
+              "description": "Coloured panels and a large opening make this monument one of Barranquilla’s recognisable silhouettes. It stands at the Circunvalar roundabout near Vía 40, separate from the Gran Malecón; plan the journey between them.",
+              "map_url": "https://www.google.com/maps?cid=5941940625410126476",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/ca/ca50a176868403c911966ba8898c4ed2e3aa446ca47b51a72953eae3257d12e5.webp",
+                "alt": "Ventana al Mundo",
+                "caption": "Editorial illustration: Ventana al Mundo.",
+                "width": 1536,
+                "height": 1024
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "puerto-mocho",
+              "type": "place",
+              "name": "Puerto Mocho Beach",
+              "description": "The district’s beach reveals another side of Barranquilla, with sand and a coastal setting distinct from the Magdalena promenade. Check access, services and official advice; this guide does not certify swimming conditions.",
+              "map_url": "https://www.google.com/maps?cid=16704380173082916524",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/a2/a2604ffda70fff09ac86cd8ada98194d101618f650f2c28defe4e78fba171fa8.webp",
+                "alt": "Puerto Mocho Beach",
+                "caption": "Editorial illustration: Puerto Mocho Beach.",
+                "width": 1536,
+                "height": 1024
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "plaza-paz-catedral",
+              "type": "place",
+              "name": "Plaza de la Paz and María Reina Cathedral",
+              "description": "The square and cathedral form a civic and religious ensemble of modern architecture. The church is distinguished by its angular facade. Enjoy the exterior and confirm access if you wish to visit inside.",
+              "map_url": "https://www.google.com/maps?cid=11320290559120295166",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/90/90650f8f9e4f1573d7379ccf88bf9a606c3d22cc0b3a874466af954476b33e5f.webp",
+                "alt": "Plaza de la Paz and María Reina Cathedral",
+                "caption": "Editorial illustration: Plaza de la Paz and María Reina Cathedral.",
+                "width": 1536,
+                "height": 1024
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "bus-panoramico",
+              "type": "experience",
+              "name": "Panoramic bus tour",
+              "description": "Explore city landmarks on a guided sightseeing bus. Check the itinerary and departures before visiting.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/52/52ec07af784bf6da249313cfae2e7f7fbefe7b124c7818ea194be252bc761ab3.webp",
+                "alt": "Panoramic bus tour",
+                "caption": "Editorial illustration: Panoramic bus tour.",
+                "width": 1536,
+                "height": 1024
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "navegacion-magdalena",
+              "type": "experience",
+              "name": "Boat trip on the Magdalena River",
+              "description": "See the river landscape and city from a boat departing from the Puerta de Oro sector. Check available routes and departures.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/d5/d5515dd1d12c0b15668a3d243cd15d32813cbfeba7f345aea59077706390cd55.webp",
+                "alt": "Boat trip on the Magdalena River",
+                "caption": "Editorial illustration: Boat trip on the Magdalena River.",
+                "width": 1536,
+                "height": 1024
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "tren-las-flores",
+              "type": "experience",
+              "name": "Tourist train to Puerto Mocho",
+              "description": "Travel from Las Flores to Puerto Mocho beach on the tourist train. Check service and tickets for your visit.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/a2/a2ce064e589218f83c7a6d0b711e484d160d9602ed8cee534c2b3d43a263a438.webp",
+                "alt": "Tourist train to Puerto Mocho",
+                "caption": "Editorial illustration: Tourist train to Puerto Mocho.",
+                "width": 1536,
+                "height": 1024
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "luna-del-rio",
+              "type": "experience",
+              "name": "Panoramic views from Luna del Río",
+              "description": "Ride the observation wheel at the Gran Malecón for another perspective on the Magdalena River and Barranquilla.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/ea/ead91fcc9191ac85b01c2294a84b8c88d8b529b86cb48df8c169d75a28f49eca.webp",
+                "alt": "Panoramic views from Luna del Río",
+                "caption": "Editorial illustration: Panoramic views from Luna del Río.",
+                "width": 1536,
+                "height": 1024
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "carnaval-barranquilla",
+              "type": "experience",
+              "name": "Experience Barranquilla Carnival",
+              "description": "Music, dance, costumes and parades fill the streets during Carnival. This is a seasonal celebration: check the programme and conditions for each event.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/ae/ae522f3565855829a23246d71876f317eeaa3869e2b70427edce0b4e75c47ac9.webp",
+                "alt": "Experience Barranquilla Carnival",
+                "caption": "Editorial illustration: Experience Barranquilla Carnival.",
+                "width": 1536,
+                "height": 1024
+              },
+              "publication_status": "published"
+            }
+          ],
+          "sources": []
+        },
+        "es": {
+          "name": "Barranquilla",
+          "title": "Barranquilla | Explorando Lugares",
+          "meta_description": "Descubre Barranquilla: Gran Malecón, cultura del Carnaval, manglares de Mallorquín, Puerto Mocho y lugares para conocer en la capital del Atlántico.",
+          "eyebrow": "ATLÁNTICO / COLOMBIA",
+          "headline": "Río, Carnaval y Caribe",
+          "intro": "Barranquilla se descubre entre el Magdalena, los barrios del Carnaval y los manglares de Mallorquín. Recorre su paseo fluvial, visita espacios culturales y conoce una ciudad caribeña que mira al río y al mar.",
+          "history": [
+            "El río Magdalena explica buena parte de la historia de Barranquilla. El comercio y la actividad portuaria impulsaron su crecimiento y la conectaron con el interior colombiano y con rutas internacionales.",
+            "Migraciones, oficios y tradiciones caribeñas dieron forma a sus barrios y a su vida cultural. El Carnaval reúne músicas, danzas y saberes que siguen vivos fuera de los días de fiesta, especialmente en espacios como Barrio Abajo y el Museo del Carnaval.",
+            "El Gran Malecón y la recuperación de espacios de Mallorquín ofrecen maneras distintas de acercarse al agua: un paseo urbano frente al Magdalena y recorridos por un ecosistema de manglar. Son paisajes diferentes que conviene conocer sin confundirlos con playas abiertas."
+          ],
+          "reasons": [
+            "Caminar por el borde del Magdalena y observar el paisaje fluvial.",
+            "Acercarte a la cultura del Carnaval durante todo el año.",
+            "Combinar ciudad, manglar y playa sin salir del distrito."
+          ],
+          "hero_media": {
+            "path": "assets/media/82/82fca713296939b47c8056507c7e14e2a17d8375b6aa2e47fe149ca95690f082.webp",
+            "alt": "Barranquilla",
+            "caption": "Ilustración editorial: Barranquilla.",
+            "width": 1600,
+            "height": 900
+          },
+          "history_media": null,
+          "places": [
+            {
+              "slug": "gran-malecon",
+              "type": "place",
+              "name": "Gran Malecón del Río",
+              "description": "Un paseo para acercarte al Magdalena entre senderos, zonas verdes y espacios de encuentro. El corredor reúne varios sectores: elige un tramo y recórrelo a tu ritmo, sin confundir el río con el mar.",
+              "map_url": "https://www.google.com/maps?cid=3874035168352582696",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/a3/a33b28fc1684841ed69fa6f66eee325c39c70816924879f3109c4c8edd00c594.webp",
+                "alt": "Gran Malecón del Río",
+                "caption": "Ilustración editorial: Gran Malecón del Río.",
+                "width": 1600,
+                "height": 900
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "ecoparque-mallorquin",
+              "type": "place",
+              "name": "Ecoparque Ciénaga de Mallorquín",
+              "description": "Las pasarelas permiten acercarse al manglar y al paisaje de la ciénaga. Es una visita de naturaleza dentro del distrito; consulta las condiciones de ingreso y respeta los senderos habilitados y la fauna.",
+              "map_url": "https://www.google.com/maps?cid=5398400715304868423",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/a1/a15c3256b906cb5ab917f3f521865eab30a9da051456f53d0944d391c26b585d.webp",
+                "alt": "Ecoparque Ciénaga de Mallorquín",
+                "caption": "Ilustración editorial: Ecoparque Ciénaga de Mallorquín.",
+                "width": 1536,
+                "height": 1024
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "museo-carnaval",
+              "type": "place",
+              "name": "Museo del Carnaval",
+              "description": "En Barrio Abajo, este museo propone un acercamiento a las músicas, danzas, vestuarios e historia de la fiesta. Su fachada multicolor lo distingue de la vecina Casa del Carnaval. Consulta la programación de visitas antes de ir.",
+              "map_url": "https://www.google.com/maps?cid=6050086234033065190",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/f8/f85c213285799b61cf75e92b72bb1d195dd204891c1db965184a81d126bc9243.webp",
+                "alt": "Museo del Carnaval",
+                "caption": "Ilustración editorial: Museo del Carnaval.",
+                "width": 1536,
+                "height": 1024
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "barrio-abajo",
+              "type": "place",
+              "name": "Barrio Abajo: museo a cielo abierto",
+              "description": "Un barrio ligado a la memoria popular y al Carnaval, donde los murales invitan a mirar las calles con calma. La ruta atraviesa un barrio vivo: respeta a sus habitantes y ten presente que las intervenciones artísticas pueden cambiar.",
+              "map_url": "https://www.google.com/maps?cid=3592785704674598244",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/1c/1c2ca85b90e1ffc17147f36b44c4c48f07e1d7dcaf3fcf9c4f66916a5568188a.webp",
+                "alt": "Barrio Abajo: museo a cielo abierto",
+                "caption": "Ilustración editorial: Barrio Abajo: museo a cielo abierto.",
+                "width": 1536,
+                "height": 1024
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "ventana-al-mundo",
+              "type": "place",
+              "name": "Ventana al Mundo",
+              "description": "Los paneles de colores y la abertura de este monumento lo convierten en una silueta reconocible de Barranquilla. Está en la rotonda de la Circunvalar, cerca de Vía 40, separado del Gran Malecón; planifica el traslado entre ambos.",
+              "map_url": "https://www.google.com/maps?cid=5941940625410126476",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/ca/ca50a176868403c911966ba8898c4ed2e3aa446ca47b51a72953eae3257d12e5.webp",
+                "alt": "Ventana al Mundo",
+                "caption": "Ilustración editorial: Ventana al Mundo.",
+                "width": 1536,
+                "height": 1024
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "puerto-mocho",
+              "type": "place",
+              "name": "Playa de Puerto Mocho",
+              "description": "La playa del distrito muestra otra cara de Barranquilla, con arena y un entorno costero diferente del paseo del Magdalena. Comprueba accesos, servicios y recomendaciones de las autoridades; esta guía no certifica condiciones de baño.",
+              "map_url": "https://www.google.com/maps?cid=16704380173082916524",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/a2/a2604ffda70fff09ac86cd8ada98194d101618f650f2c28defe4e78fba171fa8.webp",
+                "alt": "Playa de Puerto Mocho",
+                "caption": "Ilustración editorial: Playa de Puerto Mocho.",
+                "width": 1536,
+                "height": 1024
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "plaza-paz-catedral",
+              "type": "place",
+              "name": "Plaza de la Paz y Catedral María Reina",
+              "description": "La plaza y la catedral forman un conjunto cívico y religioso de arquitectura moderna. Las formas angulares de la fachada distinguen el templo. Disfruta la vista exterior y confirma el acceso si quieres conocer el interior.",
+              "map_url": "https://www.google.com/maps?cid=11320290559120295166",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/90/90650f8f9e4f1573d7379ccf88bf9a606c3d22cc0b3a874466af954476b33e5f.webp",
+                "alt": "Plaza de la Paz y Catedral María Reina",
+                "caption": "Ilustración editorial: Plaza de la Paz y Catedral María Reina.",
+                "width": 1536,
+                "height": 1024
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "bus-panoramico",
+              "type": "experience",
+              "name": "Bus panorámico por Barranquilla",
+              "description": "Recorre distintos puntos de la ciudad a bordo de un bus turístico con acompañamiento. Confirma el itinerario y las salidas antes de la visita.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/52/52ec07af784bf6da249313cfae2e7f7fbefe7b124c7818ea194be252bc761ab3.webp",
+                "alt": "Bus panorámico por Barranquilla",
+                "caption": "Ilustración editorial: Bus panorámico por Barranquilla.",
+                "width": 1536,
+                "height": 1024
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "navegacion-magdalena",
+              "type": "experience",
+              "name": "Navegación por el río Magdalena",
+              "description": "Conoce el paisaje fluvial y la ciudad desde una embarcación que sale del sector Puerta de Oro. Consulta los recorridos y zarpes disponibles.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/d5/d5515dd1d12c0b15668a3d243cd15d32813cbfeba7f345aea59077706390cd55.webp",
+                "alt": "Navegación por el río Magdalena",
+                "caption": "Ilustración editorial: Navegación por el río Magdalena.",
+                "width": 1536,
+                "height": 1024
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "tren-las-flores",
+              "type": "experience",
+              "name": "Tren turístico hacia Puerto Mocho",
+              "description": "Viaja desde Las Flores hacia la playa de Puerto Mocho en el tren turístico. Confirma la operación y los tiquetes para tu visita.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/a2/a2ce064e589218f83c7a6d0b711e484d160d9602ed8cee534c2b3d43a263a438.webp",
+                "alt": "Tren turístico hacia Puerto Mocho",
+                "caption": "Ilustración editorial: Tren turístico hacia Puerto Mocho.",
+                "width": 1536,
+                "height": 1024
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "luna-del-rio",
+              "type": "experience",
+              "name": "Vista panorámica desde la Luna del Río",
+              "description": "Sube a la rueda panorámica del Gran Malecón para observar el río Magdalena y Barranquilla desde otra perspectiva.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/ea/ead91fcc9191ac85b01c2294a84b8c88d8b529b86cb48df8c169d75a28f49eca.webp",
+                "alt": "Vista panorámica desde la Luna del Río",
+                "caption": "Ilustración editorial: Vista panorámica desde la Luna del Río.",
+                "width": 1536,
+                "height": 1024
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "carnaval-barranquilla",
+              "type": "experience",
+              "name": "Vivir el Carnaval de Barranquilla",
+              "description": "Música, danzas, disfraces y desfiles toman las calles durante el Carnaval. Es una celebración de temporada: revisa la programación y las condiciones de cada evento.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/ae/ae522f3565855829a23246d71876f317eeaa3869e2b70427edce0b4e75c47ac9.webp",
+                "alt": "Vivir el Carnaval de Barranquilla",
+                "caption": "Ilustración editorial: Vivir el Carnaval de Barranquilla.",
+                "width": 1536,
+                "height": 1024
+              },
+              "publication_status": "published"
+            }
+          ],
+          "sources": []
+        },
+        "pt-BR": {
+          "name": "Barranquilla",
+          "title": "Barranquilla | Explorando Lugares",
+          "meta_description": "Conheça Barranquilla: Gran Malecón, cultura do Carnaval, manguezais de Mallorquín, praia de Puerto Mocho e atrações na capital do Atlántico.",
+          "eyebrow": "ATLÁNTICO / COLOMBIA",
+          "headline": "Rio, Carnaval e Caribe",
+          "intro": "Conheça Barranquilla entre o rio Magdalena, os bairros do Carnaval e os manguezais de Mallorquín. Explore a orla fluvial, os espaços culturais e as ruas caribenhas de uma cidade ligada ao rio e ao mar.",
+          "history": [
+            "O rio Magdalena ajuda a explicar a história de Barranquilla. O comércio e a atividade portuária impulsionaram seu crescimento e conectaram a cidade ao interior colombiano e a rotas internacionais.",
+            "Migrações, ofícios e tradições caribenhas moldaram seus bairros e sua vida cultural. O Carnaval reúne músicas, danças e saberes que permanecem vivos fora da festa, especialmente em Barrio Abajo e no Museu do Carnaval.",
+            "O Gran Malecón e Mallorquín oferecem relações diferentes com a água: um passeio urbano às margens do Magdalena e trilhas num ecossistema de manguezal. São paisagens distintas, que não devem ser confundidas com praias abertas."
+          ],
+          "reasons": [
+            "Caminhar às margens do Magdalena e apreciar a paisagem fluvial.",
+            "Conhecer a cultura do Carnaval além das datas da festa.",
+            "Combinar cidade, manguezal e praia no mesmo distrito."
+          ],
+          "hero_media": {
+            "path": "assets/media/82/82fca713296939b47c8056507c7e14e2a17d8375b6aa2e47fe149ca95690f082.webp",
+            "alt": "Barranquilla",
+            "caption": "Ilustração editorial: Barranquilla.",
+            "width": 1600,
+            "height": 900
+          },
+          "history_media": null,
+          "places": [
+            {
+              "slug": "gran-malecon",
+              "type": "place",
+              "name": "Gran Malecón del Río",
+              "description": "Um passeio às margens do Magdalena com caminhos, áreas verdes e espaços de convivência. O corredor tem vários setores: escolha um trecho para conhecer no seu ritmo, lembrando que esta é uma orla fluvial.",
+              "map_url": "https://www.google.com/maps?cid=3874035168352582696",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/a3/a33b28fc1684841ed69fa6f66eee325c39c70816924879f3109c4c8edd00c594.webp",
+                "alt": "Gran Malecón del Río",
+                "caption": "Ilustração editorial: Gran Malecón del Río.",
+                "width": 1600,
+                "height": 900
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "ecoparque-mallorquin",
+              "type": "place",
+              "name": "Ecoparque Ciénaga de Mallorquín",
+              "description": "As passarelas aproximam os visitantes dos manguezais e da paisagem da lagoa. É um passeio de natureza dentro do distrito; consulte as condições de entrada e respeite as trilhas abertas e a fauna.",
+              "map_url": "https://www.google.com/maps?cid=5398400715304868423",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/a1/a15c3256b906cb5ab917f3f521865eab30a9da051456f53d0944d391c26b585d.webp",
+                "alt": "Ecoparque Ciénaga de Mallorquín",
+                "caption": "Ilustração editorial: Ecoparque Ciénaga de Mallorquín.",
+                "width": 1536,
+                "height": 1024
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "museo-carnaval",
+              "type": "place",
+              "name": "Museu do Carnaval",
+              "description": "Em Barrio Abajo, o museu apresenta músicas, danças, trajes e a história da festa. Sua fachada multicolorida o diferencia da vizinha Casa del Carnaval. Consulte as condições de visita antes de ir.",
+              "map_url": "https://www.google.com/maps?cid=6050086234033065190",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/f8/f85c213285799b61cf75e92b72bb1d195dd204891c1db965184a81d126bc9243.webp",
+                "alt": "Museu do Carnaval",
+                "caption": "Ilustração editorial: Museu do Carnaval.",
+                "width": 1536,
+                "height": 1024
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "barrio-abajo",
+              "type": "place",
+              "name": "Barrio Abajo: museu a céu aberto",
+              "description": "Um bairro ligado à memória popular e ao Carnaval, onde os murais convidam a observar as ruas com calma. É um bairro vivo: respeite os moradores e lembre que as intervenções artísticas podem mudar.",
+              "map_url": "https://www.google.com/maps?cid=3592785704674598244",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/1c/1c2ca85b90e1ffc17147f36b44c4c48f07e1d7dcaf3fcf9c4f66916a5568188a.webp",
+                "alt": "Barrio Abajo: museu a céu aberto",
+                "caption": "Ilustração editorial: Barrio Abajo: museu a céu aberto.",
+                "width": 1536,
+                "height": 1024
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "ventana-al-mundo",
+              "type": "place",
+              "name": "Ventana al Mundo",
+              "description": "Os painéis coloridos e a grande abertura tornam o monumento uma silhueta reconhecível de Barranquilla. Fica na rotatória da Circunvalar, perto da Vía 40, separado do Gran Malecón; planeje o deslocamento entre os dois.",
+              "map_url": "https://www.google.com/maps?cid=5941940625410126476",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/ca/ca50a176868403c911966ba8898c4ed2e3aa446ca47b51a72953eae3257d12e5.webp",
+                "alt": "Ventana al Mundo",
+                "caption": "Ilustração editorial: Ventana al Mundo.",
+                "width": 1536,
+                "height": 1024
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "puerto-mocho",
+              "type": "place",
+              "name": "Praia de Puerto Mocho",
+              "description": "A praia do distrito revela outra face de Barranquilla, com areia e um ambiente costeiro diferente do passeio do Magdalena. Confira os acessos, serviços e orientações oficiais; este guia não certifica condições para banho.",
+              "map_url": "https://www.google.com/maps?cid=16704380173082916524",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/a2/a2604ffda70fff09ac86cd8ada98194d101618f650f2c28defe4e78fba171fa8.webp",
+                "alt": "Praia de Puerto Mocho",
+                "caption": "Ilustração editorial: Praia de Puerto Mocho.",
+                "width": 1536,
+                "height": 1024
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "plaza-paz-catedral",
+              "type": "place",
+              "name": "Plaza de la Paz e Catedral María Reina",
+              "description": "A praça e a catedral formam um conjunto cívico e religioso de arquitetura moderna. As formas angulares da fachada distinguem o templo. Aprecie o exterior e confirme o acesso se quiser conhecer o interior.",
+              "map_url": "https://www.google.com/maps?cid=11320290559120295166",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/90/90650f8f9e4f1573d7379ccf88bf9a606c3d22cc0b3a874466af954476b33e5f.webp",
+                "alt": "Plaza de la Paz e Catedral María Reina",
+                "caption": "Ilustração editorial: Plaza de la Paz e Catedral María Reina.",
+                "width": 1536,
+                "height": 1024
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "bus-panoramico",
+              "type": "experience",
+              "name": "Passeio de ônibus panorâmico",
+              "description": "Conheça pontos da cidade em um ônibus turístico com acompanhamento. Confirme o itinerário e as saídas antes da visita.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/52/52ec07af784bf6da249313cfae2e7f7fbefe7b124c7818ea194be252bc761ab3.webp",
+                "alt": "Passeio de ônibus panorâmico",
+                "caption": "Ilustração editorial: Passeio de ônibus panorâmico.",
+                "width": 1536,
+                "height": 1024
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "navegacion-magdalena",
+              "type": "experience",
+              "name": "Passeio pelo rio Magdalena",
+              "description": "Conheça a paisagem fluvial e a cidade em uma embarcação que parte do setor Puerta de Oro. Consulte os trajetos e as saídas disponíveis.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/d5/d5515dd1d12c0b15668a3d243cd15d32813cbfeba7f345aea59077706390cd55.webp",
+                "alt": "Passeio pelo rio Magdalena",
+                "caption": "Ilustração editorial: Passeio pelo rio Magdalena.",
+                "width": 1536,
+                "height": 1024
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "tren-las-flores",
+              "type": "experience",
+              "name": "Trem turístico até Puerto Mocho",
+              "description": "Viaje de Las Flores até a praia de Puerto Mocho no trem turístico. Confirme o funcionamento e os ingressos para a visita.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/a2/a2ce064e589218f83c7a6d0b711e484d160d9602ed8cee534c2b3d43a263a438.webp",
+                "alt": "Trem turístico até Puerto Mocho",
+                "caption": "Ilustração editorial: Trem turístico até Puerto Mocho.",
+                "width": 1536,
+                "height": 1024
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "luna-del-rio",
+              "type": "experience",
+              "name": "Vista panorâmica da Luna del Río",
+              "description": "Suba na roda panorâmica do Gran Malecón para observar o rio Magdalena e Barranquilla de outra perspectiva.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/ea/ead91fcc9191ac85b01c2294a84b8c88d8b529b86cb48df8c169d75a28f49eca.webp",
+                "alt": "Vista panorâmica da Luna del Río",
+                "caption": "Ilustração editorial: Vista panorâmica da Luna del Río.",
+                "width": 1536,
+                "height": 1024
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "carnaval-barranquilla",
+              "type": "experience",
+              "name": "Vivencie o Carnaval de Barranquilla",
+              "description": "Música, danças, fantasias e desfiles tomam as ruas durante o Carnaval. É uma celebração de temporada: consulte a programação e as condições de cada evento.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/ae/ae522f3565855829a23246d71876f317eeaa3869e2b70427edce0b4e75c47ac9.webp",
+                "alt": "Vivencie o Carnaval de Barranquilla",
+                "caption": "Ilustração editorial: Vivencie o Carnaval de Barranquilla.",
+                "width": 1536,
+                "height": 1024
+              },
+              "publication_status": "published"
+            }
+          ],
+          "sources": []
+        }
+      }
+    },
+    {
+      "slug": "manizales",
+      "destination_type": "city",
+      "country_code": "CO",
+      "department": "Caldas",
+      "subregion": "Centro Sur",
+      "publication_status": "published",
+      "display_order": 26,
+      "translations": {
+        "en": {
+          "name": "Manizales",
+          "title": "Manizales | Explorando Lugares",
+          "meta_description": "Explore Manizales: its cathedral, Chipre, Herveo Tower and Andean forest reserves. A guide to the capital of Caldas.",
+          "eyebrow": "Caldas / Colombia",
+          "headline": "A city among the mountains",
+          "intro": "Viewpoints, architecture and cloud forests meet in this Colombian Coffee Region city, built across the slopes of the Central Andes.",
+          "history": [
+            "Founded in 1849 during the settlement of the region by migrants from Antioquia, Manizales grew around mountain routes and coffee farming. Trade and the former cableway to Mariquita connected its hillsides with other regions.",
+            "Its centre preserves buildings erected after the fires of the early twentieth century. The cathedral, cultural institutions and university life are part of a city shaped by steep slopes and Andean forests."
+          ],
+          "reasons": [
+            "Look out over the city and mountains from Chipre.",
+            "Explore architectural heritage and the history of the former cableway.",
+            "Discover cloud forest through managed nature visits."
+          ],
+          "hero_media": {
+            "path": "assets/media/cd/cd494f5bb4db54d05d876d5e7f47c4616042d8361cb8f03bb83bf3d358946a20.webp",
+            "alt": "Manizales",
+            "caption": "Editorial illustration: Manizales.",
+            "width": 1200,
+            "height": 800
+          },
+          "history_media": null,
+          "places": [
+            {
+              "slug": "catedral-rosario",
+              "type": "place",
+              "name": "Cathedral Basilica of Our Lady of the Rosary",
+              "description": "Its towers and neo-Gothic architecture define central Manizales, opposite Plaza de Bolívar.",
+              "map_url": "https://maps.app.goo.gl/i6THavJBDZfrb8fc6",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/ca/cad248812f56a3e45ed5b9a3d4c8764815e297fc1cbca9b620b692d07dca35bf.webp",
+                "alt": "Cathedral Basilica of Our Lady of the Rosary",
+                "caption": "Editorial illustration: Cathedral Basilica of Our Lady of the Rosary.",
+                "width": 1200,
+                "height": 800
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "chipre-colonizadores",
+              "type": "place",
+              "name": "Chipre and the Colonizers Monument",
+              "description": "A hillside viewpoint district whose sculptural ensemble recalls the journeys and efforts of the region’s early settlers.",
+              "map_url": "https://maps.app.goo.gl/Pm7tGrwtzT2mhFyu8",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/c1/c1eb2051530d348fad98835b07cfd07d682cead0fea755fc40f00d622888bbcd.webp",
+                "alt": "Chipre and the Colonizers Monument",
+                "caption": "Editorial illustration: Chipre and the Colonizers Monument.",
+                "width": 1200,
+                "height": 800
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "torre-herveo",
+              "type": "place",
+              "name": "Herveo Tower and El Cable",
+              "description": "This timber lattice tower preserves the history of the cableway that once connected Manizales with Mariquita.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/f8/f85b260e3efd0659affa0a128a7ef2977d468e84763082c62643bb881bd8af4c.webp",
+                "alt": "Herveo Tower and El Cable",
+                "caption": "Editorial illustration: Herveo Tower and El Cable.",
+                "width": 1200,
+                "height": 800
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "recinto-pensamiento",
+              "type": "place",
+              "name": "Recinto del Pensamiento",
+              "description": "Gardens and Andean woodland surround this nature and environmental education venue. Visits depend on its programme and admission conditions.",
+              "map_url": "https://maps.app.goo.gl/JW8aSrJxEN2Rt9iRA",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/86/86788bf7ff4da08208733466455dd9a918171d47e77b2028a868fa79c572596d.webp",
+                "alt": "Recinto del Pensamiento",
+                "caption": "Editorial illustration: Recinto del Pensamiento.",
+                "width": 1200,
+                "height": 675
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "reserva-rio-blanco",
+              "type": "place",
+              "name": "Río Blanco Reserve",
+              "description": "Cloud forest protecting water and wildlife near the city. Managed visits require advance booking.",
+              "map_url": "https://maps.app.goo.gl/ZieqnyiKGWLeFubT9",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/87/873c1606e6953e6016ff8b4e9069d46b71f5e98c0702eaa5c9a36c60365eb2b4.webp",
+                "alt": "Río Blanco Reserve",
+                "caption": "Editorial illustration: Río Blanco Reserve.",
+                "width": 1200,
+                "height": 800
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "ecoparque-yarumos",
+              "type": "place",
+              "name": "Los Yarumos Ecopark",
+              "description": "An urban forest with trails and environmental education spaces in northeastern Manizales.",
+              "map_url": "https://maps.app.goo.gl/4p1NbkBLmh9DopXM7",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/df/dfa37283a704d01f48957cdb3962f6be68eb9eeb46451e930273c8387d994985.webp",
+                "alt": "Los Yarumos Ecopark",
+                "caption": "Editorial illustration: Los Yarumos Ecopark.",
+                "width": 1200,
+                "height": 800
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "excursion-nevado-ruiz",
+              "type": "experience",
+              "name": "Nevado del Ruiz excursion",
+              "description": "Explore the volcanic landscapes of the Brisas–Valle de las Tumbas sector on a guided outing from Manizales. Access depends on park opening and conditions; the excursion does not include a summit ascent.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/c5/c592279106026903f0f42d3917909c2744f781e1b9392849f84fa9eac27cb8c3.webp",
+                "alt": "Nevado del Ruiz excursion",
+                "caption": "Editorial illustration: Nevado del Ruiz excursion.",
+                "width": 1200,
+                "height": 800
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "aguas-termales-alrededores",
+              "type": "experience",
+              "name": "Hot springs near Manizales",
+              "description": "Spend a day enjoying hot springs in neighbouring Villamaría, surrounded by mountains and Andean vegetation. Several establishments offer different ways to visit; check services and entry conditions before choosing.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/df/dfba55b2e8cd9b339af81e4d547f48b7581ea006000d8af6522f27e9b4b8cb01.webp",
+                "alt": "Hot springs near Manizales",
+                "caption": "Editorial illustration: Hot springs near Manizales.",
+                "width": 1200,
+                "height": 800
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "recorrido-centro-historico",
+              "type": "experience",
+              "name": "Guided historic centre walk",
+              "description": "Walk through the squares, streets and Republican-era buildings of Manizales with a guide who explains their history and changes over time. The experience usually takes two to three hours; agree on the itinerary and meeting point when booking.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/c5/c5f2f2be9818adbe3804d5ee09145de7ca893327168ac7e83b3dd1cda823f48b.webp",
+                "alt": "Guided historic centre walk",
+                "caption": "Editorial illustration: Guided historic centre walk.",
+                "width": 1200,
+                "height": 800
+              },
+              "publication_status": "published"
+            }
+          ],
+          "sources": []
+        },
+        "es": {
+          "name": "Manizales",
+          "title": "Manizales | Explorando Lugares",
+          "meta_description": "Descubre Manizales: su catedral, Chipre, la Torre de Herveo y reservas de bosque andino. Una guía para conocer la capital de Caldas.",
+          "eyebrow": "Caldas / Colombia",
+          "headline": "Una ciudad entre montañas",
+          "intro": "Miradores, arquitectura y bosques de niebla se encuentran en esta ciudad del Eje Cafetero, construida sobre las laderas de la cordillera Central.",
+          "history": [
+            "Fundada en 1849 durante la colonización antioqueña, Manizales creció entre caminos de montaña y cultivos de café. El comercio y el antiguo cable hacia Mariquita conectaron sus laderas con otras regiones.",
+            "Su centro conserva edificios levantados después de los incendios de comienzos del siglo XX. La catedral, las instituciones culturales y la vida universitaria forman parte de una ciudad que convive con pendientes pronunciadas y bosques andinos."
+          ],
+          "reasons": [
+            "Contemplar la ciudad y las montañas desde Chipre.",
+            "Reconocer su patrimonio arquitectónico y la historia del antiguo cable.",
+            "Acercarse al bosque de niebla en visitas de naturaleza administradas."
+          ],
+          "hero_media": {
+            "path": "assets/media/cd/cd494f5bb4db54d05d876d5e7f47c4616042d8361cb8f03bb83bf3d358946a20.webp",
+            "alt": "Manizales",
+            "caption": "Ilustración editorial: Manizales.",
+            "width": 1200,
+            "height": 800
+          },
+          "history_media": null,
+          "places": [
+            {
+              "slug": "catedral-rosario",
+              "type": "place",
+              "name": "Catedral Basílica de Nuestra Señora del Rosario",
+              "description": "Sus torres y su arquitectura neogótica marcan el centro de Manizales, frente a la Plaza de Bolívar.",
+              "map_url": "https://maps.app.goo.gl/i6THavJBDZfrb8fc6",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/ca/cad248812f56a3e45ed5b9a3d4c8764815e297fc1cbca9b620b692d07dca35bf.webp",
+                "alt": "Catedral Basílica de Nuestra Señora del Rosario",
+                "caption": "Ilustración editorial: Catedral Basílica de Nuestra Señora del Rosario.",
+                "width": 1200,
+                "height": 800
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "chipre-colonizadores",
+              "type": "place",
+              "name": "Chipre y Monumento a los Colonizadores",
+              "description": "Un sector de miradores donde el conjunto escultórico recuerda los viajes y esfuerzos de quienes poblaron estas montañas.",
+              "map_url": "https://maps.app.goo.gl/Pm7tGrwtzT2mhFyu8",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/c1/c1eb2051530d348fad98835b07cfd07d682cead0fea755fc40f00d622888bbcd.webp",
+                "alt": "Chipre y Monumento a los Colonizadores",
+                "caption": "Ilustración editorial: Chipre y Monumento a los Colonizadores.",
+                "width": 1200,
+                "height": 800
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "torre-herveo",
+              "type": "place",
+              "name": "Torre de Herveo y El Cable",
+              "description": "El entramado de madera de esta torre conserva la memoria del transporte por cable que conectó Manizales con Mariquita.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/f8/f85b260e3efd0659affa0a128a7ef2977d468e84763082c62643bb881bd8af4c.webp",
+                "alt": "Torre de Herveo y El Cable",
+                "caption": "Ilustración editorial: Torre de Herveo y El Cable.",
+                "width": 1200,
+                "height": 800
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "recinto-pensamiento",
+              "type": "place",
+              "name": "Recinto del Pensamiento",
+              "description": "Jardines y bosque andino rodean este espacio de naturaleza y educación ambiental. La visita depende de su programación y condiciones de ingreso.",
+              "map_url": "https://maps.app.goo.gl/JW8aSrJxEN2Rt9iRA",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/86/86788bf7ff4da08208733466455dd9a918171d47e77b2028a868fa79c572596d.webp",
+                "alt": "Recinto del Pensamiento",
+                "caption": "Ilustración editorial: Recinto del Pensamiento.",
+                "width": 1200,
+                "height": 675
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "reserva-rio-blanco",
+              "type": "place",
+              "name": "Reserva Río Blanco",
+              "description": "Bosque de niebla que protege agua y biodiversidad cerca de la ciudad. Sus visitas administradas requieren reserva previa.",
+              "map_url": "https://maps.app.goo.gl/ZieqnyiKGWLeFubT9",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/87/873c1606e6953e6016ff8b4e9069d46b71f5e98c0702eaa5c9a36c60365eb2b4.webp",
+                "alt": "Reserva Río Blanco",
+                "caption": "Ilustración editorial: Reserva Río Blanco.",
+                "width": 1200,
+                "height": 800
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "ecoparque-yarumos",
+              "type": "place",
+              "name": "Ecoparque Los Yarumos",
+              "description": "Un bosque urbano con senderos y espacios de educación ambiental en el nororiente de Manizales.",
+              "map_url": "https://maps.app.goo.gl/4p1NbkBLmh9DopXM7",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/df/dfa37283a704d01f48957cdb3962f6be68eb9eeb46451e930273c8387d994985.webp",
+                "alt": "Ecoparque Los Yarumos",
+                "caption": "Ilustración editorial: Ecoparque Los Yarumos.",
+                "width": 1200,
+                "height": 800
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "excursion-nevado-ruiz",
+              "type": "experience",
+              "name": "Excursión al Nevado del Ruiz",
+              "description": "Explora el paisaje volcánico del sector Brisas–Valle de las Tumbas en una salida guiada desde Manizales. El recorrido depende de la apertura y las condiciones del parque; no incluye ascenso a la cumbre.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/c5/c592279106026903f0f42d3917909c2744f781e1b9392849f84fa9eac27cb8c3.webp",
+                "alt": "Excursión al Nevado del Ruiz",
+                "caption": "Ilustración editorial: Excursión al Nevado del Ruiz.",
+                "width": 1200,
+                "height": 800
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "aguas-termales-alrededores",
+              "type": "experience",
+              "name": "Aguas termales en los alrededores",
+              "description": "Dedica una jornada a los baños termales en el vecino municipio de Villamaría, entre montañas y vegetación andina. Hay diferentes establecimientos y modalidades de visita; confirma los servicios y las condiciones de ingreso antes de elegir.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/df/dfba55b2e8cd9b339af81e4d547f48b7581ea006000d8af6522f27e9b4b8cb01.webp",
+                "alt": "Aguas termales en los alrededores",
+                "caption": "Ilustración editorial: Aguas termales en los alrededores.",
+                "width": 1200,
+                "height": 800
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "recorrido-centro-historico",
+              "type": "experience",
+              "name": "Recorrido guiado por el centro histórico",
+              "description": "Recorre a pie las plazas, calles y edificios republicanos de Manizales con un guía que explique su historia y sus transformaciones. La experiencia suele durar entre dos y tres horas; acuerda el itinerario y el punto de encuentro al reservar.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/c5/c5f2f2be9818adbe3804d5ee09145de7ca893327168ac7e83b3dd1cda823f48b.webp",
+                "alt": "Recorrido guiado por el centro histórico",
+                "caption": "Ilustración editorial: Recorrido guiado por el centro histórico.",
+                "width": 1200,
+                "height": 800
+              },
+              "publication_status": "published"
+            }
+          ],
+          "sources": []
+        },
+        "pt-BR": {
+          "name": "Manizales",
+          "title": "Manizales | Explorando Lugares",
+          "meta_description": "Conheça Manizales: sua catedral, Chipre, a Torre de Herveo e reservas de floresta andina. Um guia pela capital de Caldas.",
+          "eyebrow": "Caldas / Colômbia",
+          "headline": "Uma cidade entre montanhas",
+          "intro": "Mirantes, arquitetura e florestas de neblina se encontram nesta cidade do Eixo Cafeeiro colombiano, construída nas encostas da cordilheira Central.",
+          "history": [
+            "Fundada em 1849 durante a colonização antioquenha, Manizales cresceu entre caminhos de montanha e plantações de café. O comércio e o antigo transporte por cabo até Mariquita conectaram suas encostas a outras regiões.",
+            "Seu centro preserva edifícios construídos após os incêndios do início do século XX. A catedral, as instituições culturais e a vida universitária fazem parte de uma cidade marcada por encostas íngremes e florestas andinas."
+          ],
+          "reasons": [
+            "Contemplar a cidade e as montanhas a partir de Chipre.",
+            "Conhecer o patrimônio arquitetônico e a história do antigo transporte por cabo.",
+            "Explorar a floresta de neblina em visitas de natureza administradas."
+          ],
+          "hero_media": {
+            "path": "assets/media/cd/cd494f5bb4db54d05d876d5e7f47c4616042d8361cb8f03bb83bf3d358946a20.webp",
+            "alt": "Manizales",
+            "caption": "Ilustração editorial: Manizales.",
+            "width": 1200,
+            "height": 800
+          },
+          "history_media": null,
+          "places": [
+            {
+              "slug": "catedral-rosario",
+              "type": "place",
+              "name": "Catedral Basílica de Nossa Senhora do Rosário",
+              "description": "Suas torres e a arquitetura neogótica marcam o centro de Manizales, diante da Plaza de Bolívar.",
+              "map_url": "https://maps.app.goo.gl/i6THavJBDZfrb8fc6",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/ca/cad248812f56a3e45ed5b9a3d4c8764815e297fc1cbca9b620b692d07dca35bf.webp",
+                "alt": "Catedral Basílica de Nossa Senhora do Rosário",
+                "caption": "Ilustração editorial: Catedral Basílica de Nossa Senhora do Rosário.",
+                "width": 1200,
+                "height": 800
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "chipre-colonizadores",
+              "type": "place",
+              "name": "Chipre e Monumento aos Colonizadores",
+              "description": "Uma região de mirantes onde o conjunto de esculturas recorda as viagens e os esforços de quem povoou estas montanhas.",
+              "map_url": "https://maps.app.goo.gl/Pm7tGrwtzT2mhFyu8",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/c1/c1eb2051530d348fad98835b07cfd07d682cead0fea755fc40f00d622888bbcd.webp",
+                "alt": "Chipre e Monumento aos Colonizadores",
+                "caption": "Ilustração editorial: Chipre e Monumento aos Colonizadores.",
+                "width": 1200,
+                "height": 800
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "torre-herveo",
+              "type": "place",
+              "name": "Torre de Herveo e El Cable",
+              "description": "A estrutura de madeira desta torre preserva a memória do transporte por cabo que ligava Manizales a Mariquita.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/f8/f85b260e3efd0659affa0a128a7ef2977d468e84763082c62643bb881bd8af4c.webp",
+                "alt": "Torre de Herveo e El Cable",
+                "caption": "Ilustração editorial: Torre de Herveo e El Cable.",
+                "width": 1200,
+                "height": 800
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "recinto-pensamiento",
+              "type": "place",
+              "name": "Recinto del Pensamiento",
+              "description": "Jardins e floresta andina cercam este espaço de natureza e educação ambiental. A visita depende da programação e das condições de entrada.",
+              "map_url": "https://maps.app.goo.gl/JW8aSrJxEN2Rt9iRA",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/86/86788bf7ff4da08208733466455dd9a918171d47e77b2028a868fa79c572596d.webp",
+                "alt": "Recinto del Pensamiento",
+                "caption": "Ilustração editorial: Recinto del Pensamiento.",
+                "width": 1200,
+                "height": 675
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "reserva-rio-blanco",
+              "type": "place",
+              "name": "Reserva Río Blanco",
+              "description": "Floresta de neblina que protege a água e a biodiversidade perto da cidade. As visitas administradas exigem reserva antecipada.",
+              "map_url": "https://maps.app.goo.gl/ZieqnyiKGWLeFubT9",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/87/873c1606e6953e6016ff8b4e9069d46b71f5e98c0702eaa5c9a36c60365eb2b4.webp",
+                "alt": "Reserva Río Blanco",
+                "caption": "Ilustração editorial: Reserva Río Blanco.",
+                "width": 1200,
+                "height": 800
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "ecoparque-yarumos",
+              "type": "place",
+              "name": "Ecoparque Los Yarumos",
+              "description": "Uma floresta urbana com trilhas e espaços de educação ambiental no nordeste de Manizales.",
+              "map_url": "https://maps.app.goo.gl/4p1NbkBLmh9DopXM7",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/df/dfa37283a704d01f48957cdb3962f6be68eb9eeb46451e930273c8387d994985.webp",
+                "alt": "Ecoparque Los Yarumos",
+                "caption": "Ilustração editorial: Ecoparque Los Yarumos.",
+                "width": 1200,
+                "height": 800
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "excursion-nevado-ruiz",
+              "type": "experience",
+              "name": "Passeio ao Nevado del Ruiz",
+              "description": "Explore a paisagem vulcânica do setor Brisas–Valle de las Tumbas em um passeio guiado saindo de Manizales. O percurso depende da abertura e das condições do parque; não inclui subida ao cume.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/c5/c592279106026903f0f42d3917909c2744f781e1b9392849f84fa9eac27cb8c3.webp",
+                "alt": "Passeio ao Nevado del Ruiz",
+                "caption": "Ilustração editorial: Passeio ao Nevado del Ruiz.",
+                "width": 1200,
+                "height": 800
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "aguas-termales-alrededores",
+              "type": "experience",
+              "name": "Águas termais nos arredores",
+              "description": "Dedique um dia aos banhos termais no município vizinho de Villamaría, entre montanhas e vegetação andina. Há diferentes estabelecimentos e modalidades de visita; confirme os serviços e as condições de entrada antes de escolher.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/df/dfba55b2e8cd9b339af81e4d547f48b7581ea006000d8af6522f27e9b4b8cb01.webp",
+                "alt": "Águas termais nos arredores",
+                "caption": "Ilustração editorial: Águas termais nos arredores.",
+                "width": 1200,
+                "height": 800
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "recorrido-centro-historico",
+              "type": "experience",
+              "name": "Passeio guiado pelo centro histórico",
+              "description": "Caminhe pelas praças, ruas e edifícios da época republicana de Manizales com um guia que conte sua história e suas transformações. A experiência costuma durar de duas a três horas; combine o roteiro e o ponto de encontro ao reservar.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/c5/c5f2f2be9818adbe3804d5ee09145de7ca893327168ac7e83b3dd1cda823f48b.webp",
+                "alt": "Passeio guiado pelo centro histórico",
+                "caption": "Ilustração editorial: Passeio guiado pelo centro histórico.",
+                "width": 1200,
+                "height": 800
+              },
+              "publication_status": "published"
+            }
+          ],
+          "sources": []
+        }
+      }
+    },
+    {
+      "slug": "pereira",
+      "destination_type": "city",
+      "country_code": "CO",
+      "department": "Risaralda",
+      "subregion": "Centro Occidente",
+      "publication_status": "published",
+      "display_order": 27,
+      "translations": {
+        "en": {
+          "name": "Pereira",
+          "title": "Pereira | Explorando Lugares",
+          "meta_description": "Explore Pereira: Bioparque Ukumarí, Megacable, the cathedral and the forests of Otún Quimbaya and Ucumarí. Ideas for discovering Risaralda.",
+          "eyebrow": "Risaralda / Colombia",
+          "headline": "Coffee-region city life and the forests of the Otún",
+          "intro": "Pereira combines the energy of a regional capital with easy access to Andean forest. Explore the centre, see the city from the Megacable and allow time to discover the Otún watershed.",
+          "history": [
+            "Pereira marks its founding on 30 August 1863. The settlement grew on the site of old Cartago and became a meeting point for the region’s roads, markets and communities.",
+            "Trade and coffee help explain the city today: the capital of Risaralda connects urban life with rural districts and protected areas in Colombia’s Central Andes."
+          ],
+          "reasons": [
+            "Combine central architecture, a ride on the urban cable system and nature visits while keeping the places distinct: Bioparque Ukumarí is a managed park; Otún Quimbaya and Ucumarí Regional Natural Park are separate protected areas."
+          ],
+          "hero_media": {
+            "path": "assets/media/54/542673cbe687f0458a9800b28448ec5f403277dea2936f07c57ab8c12bef9cb5.webp",
+            "alt": "Pereira",
+            "caption": "Editorial illustration: Pereira.",
+            "width": 1353,
+            "height": 1162
+          },
+          "history_media": null,
+          "places": [
+            {
+              "slug": "bioparque-ukumari",
+              "type": "place",
+              "name": "Bioparque Ukumarí",
+              "description": "In the Cerritos area, this managed biopark offers routes through environments including Andean Forests and African Savannah. Check admission conditions before visiting.",
+              "map_url": "https://maps.app.goo.gl/CF1fgbxVFjvWehzj8",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/d7/d72b8d0c1c3858e3ebcd54485bbc1fe9613b087086048093404aae68d292380d.webp",
+                "alt": "Bioparque Ukumarí",
+                "caption": "Editorial illustration: Bioparque Ukumarí.",
+                "width": 1100,
+                "height": 825
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "otun-quimbaya",
+              "type": "place",
+              "name": "Otún Quimbaya Flora and Fauna Sanctuary",
+              "description": "In La Suiza, humid sub-Andean forest protects the upper Otún watershed. Its trails introduce visitors to this ecosystem; check availability, registration and required accompaniment with the administration.",
+              "map_url": "https://maps.app.goo.gl/MimC1rYzRLpmweio6",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/ec/ecf1feeef41d9a65d2206f84fee5301bde6e83d690f3be4b47580cda8c6be438.webp",
+                "alt": "Otún Quimbaya Flora and Fauna Sanctuary",
+                "caption": "Editorial illustration: Otún Quimbaya Flora and Fauna Sanctuary.",
+                "width": 1100,
+                "height": 733
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "megacable",
+              "type": "place",
+              "name": "Megacable",
+              "description": "Pereira’s urban cable system links city neighbourhoods and provides a different view of the surrounding slopes. Parque Olaya station is a starting point for seeing the city from above.",
+              "map_url": "https://maps.app.goo.gl/kaWY4eW7YfNZHUYc9",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/83/83536cd6ec828356350c7dffcbc667203fb39daf262533aba40f288929c13e8c.webp",
+                "alt": "Megacable",
+                "caption": "Editorial illustration: Megacable.",
+                "width": 1100,
+                "height": 825
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "catedral-pobreza",
+              "type": "place",
+              "name": "Cathedral of Our Lady of Poverty",
+              "description": "Opposite Bolívar Square, Pereira’s cathedral is a landmark on a walk through the centre. Look at its façade and towers; respect available access and religious services when visiting the interior.",
+              "map_url": "https://maps.app.goo.gl/3J7qJcVkrsEw61Fc7",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/8b/8ba3b3c2c6c1c9fb55ffb3fd4666346f585f414a48407c7621438f7a5792b815.webp",
+                "alt": "Cathedral of Our Lady of Poverty",
+                "caption": "Editorial illustration: Cathedral of Our Lady of Poverty.",
+                "width": 1050,
+                "height": 1400
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "ucumari-la-pastora",
+              "type": "place",
+              "name": "Ucumarí – La Pastora",
+              "description": "The path towards La Pastora enters an Andean landscape from El Cedral. The regional park extends across Pereira and Santa Rosa de Cabal. The map marks La Pastora; the final stretch is reached on foot, not by car.",
+              "map_url": "https://maps.app.goo.gl/EnbDShNe6ffZPqhX9",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/88/8892b7b4dc5f14a35590af1a205297e31f36c82ecdaa277d7f526493cd56d2e1.webp",
+                "alt": "Ucumarí – La Pastora",
+                "caption": "Editorial illustration: Ucumarí – La Pastora.",
+                "width": 1100,
+                "height": 824
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "tour-cafetero",
+              "type": "experience",
+              "name": "Coffee tour and coffee preparation",
+              "description": "A tour focused on coffee and its preparation in rural Pereira. Check the format, booking requirements and conditions before planning a visit.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/7f/7fcefadc75ffe2872d24a61a2e3f9b6233b1d051a943d35793e9ca6018fb65fb.webp",
+                "alt": "Coffee tour and coffee preparation",
+                "caption": "Editorial illustration: Coffee tour and coffee preparation.",
+                "width": 1200,
+                "height": 800
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "senderismo-los-frailes",
+              "type": "experience",
+              "name": "Hiking to Los Frailes waterfall",
+              "description": "An accompanied walk towards Los Frailes waterfall. Confirm reservations, authorised access and trail conditions before setting out.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/65/651cdcd15ed361698736d267af3f279c3ab3c49bcb81f5f1fea0baa27d10e249.webp",
+                "alt": "Hiking to Los Frailes waterfall",
+                "caption": "Editorial illustration: Hiking to Los Frailes waterfall.",
+                "width": 1200,
+                "height": 800
+              },
+              "publication_status": "published"
+            }
+          ],
+          "sources": []
+        },
+        "es": {
+          "name": "Pereira",
+          "title": "Pereira | Explorando Lugares",
+          "meta_description": "Descubre Pereira: Bioparque Ukumarí, Megacable, la catedral y los bosques de Otún Quimbaya y Ucumarí. Ideas para conocer Risaralda.",
+          "eyebrow": "Risaralda / Colombia",
+          "headline": "Ciudad cafetera, vida urbana y bosques del Otún",
+          "intro": "Pereira reúne el movimiento de una capital regional con la cercanía del bosque andino. Recorre su centro, mira la ciudad desde el Megacable y reserva tiempo para conocer la cuenca del Otún.",
+          "history": [
+            "Pereira celebra su fundación el 30 de agosto de 1863. El asentamiento creció sobre el territorio de la antigua Cartago y se convirtió en un punto de encuentro entre caminos, mercados y poblaciones de la región.",
+            "Su desarrollo comercial y su relación con el café ayudan a entender la ciudad de hoy: una capital de Risaralda que conecta la vida urbana con corregimientos rurales y áreas protegidas de la cordillera Central."
+          ],
+          "reasons": [
+            "Puedes combinar arquitectura del centro, un recorrido en transporte por cable y visitas de naturaleza sin confundir los lugares: el Bioparque Ukumarí es un recinto administrado; Otún Quimbaya y el Parque Regional Natural Ucumarí son áreas protegidas distintas."
+          ],
+          "hero_media": {
+            "path": "assets/media/54/542673cbe687f0458a9800b28448ec5f403277dea2936f07c57ab8c12bef9cb5.webp",
+            "alt": "Pereira",
+            "caption": "Ilustración editorial: Pereira.",
+            "width": 1353,
+            "height": 1162
+          },
+          "history_media": null,
+          "places": [
+            {
+              "slug": "bioparque-ukumari",
+              "type": "place",
+              "name": "Bioparque Ukumarí",
+              "description": "En el sector de Cerritos, este bioparque organiza sus recorridos por ambientes que incluyen Bosques Andinos y Sabana Africana. Es una visita administrada: consulta las condiciones de ingreso antes de ir.",
+              "map_url": "https://maps.app.goo.gl/CF1fgbxVFjvWehzj8",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/d7/d72b8d0c1c3858e3ebcd54485bbc1fe9613b087086048093404aae68d292380d.webp",
+                "alt": "Bioparque Ukumarí",
+                "caption": "Ilustración editorial: Bioparque Ukumarí.",
+                "width": 1100,
+                "height": 825
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "otun-quimbaya",
+              "type": "place",
+              "name": "Santuario de Fauna y Flora Otún Quimbaya",
+              "description": "En la vereda La Suiza, el bosque húmedo subandino protege la cuenca alta del Otún. Sus senderos permiten acercarse a este ecosistema; confirma cupos, registro y acompañamiento requerido con la administración.",
+              "map_url": "https://maps.app.goo.gl/MimC1rYzRLpmweio6",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/ec/ecf1feeef41d9a65d2206f84fee5301bde6e83d690f3be4b47580cda8c6be438.webp",
+                "alt": "Santuario de Fauna y Flora Otún Quimbaya",
+                "caption": "Ilustración editorial: Santuario de Fauna y Flora Otún Quimbaya.",
+                "width": 1100,
+                "height": 733
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "megacable",
+              "type": "place",
+              "name": "Megacable",
+              "description": "El sistema de transporte por cable conecta sectores de Pereira y ofrece otra perspectiva de sus laderas urbanas. La estación Parque Olaya es un punto de partida para conocer la ciudad desde arriba.",
+              "map_url": "https://maps.app.goo.gl/kaWY4eW7YfNZHUYc9",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/83/83536cd6ec828356350c7dffcbc667203fb39daf262533aba40f288929c13e8c.webp",
+                "alt": "Megacable",
+                "caption": "Ilustración editorial: Megacable.",
+                "width": 1100,
+                "height": 825
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "catedral-pobreza",
+              "type": "place",
+              "name": "Catedral Nuestra Señora de la Pobreza",
+              "description": "Frente a la Plaza de Bolívar, la catedral forma parte del recorrido por el centro de Pereira. Observa su fachada y sus torres; para conocer el interior, respeta el acceso disponible y las celebraciones religiosas.",
+              "map_url": "https://maps.app.goo.gl/3J7qJcVkrsEw61Fc7",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/8b/8ba3b3c2c6c1c9fb55ffb3fd4666346f585f414a48407c7621438f7a5792b815.webp",
+                "alt": "Catedral Nuestra Señora de la Pobreza",
+                "caption": "Ilustración editorial: Catedral Nuestra Señora de la Pobreza.",
+                "width": 1050,
+                "height": 1400
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "ucumari-la-pastora",
+              "type": "place",
+              "name": "Ucumarí – La Pastora",
+              "description": "El camino hacia La Pastora se interna en el paisaje andino desde el sector de El Cedral. El parque regional tiene jurisdicción en Pereira y Santa Rosa de Cabal. El mapa señala La Pastora: el tramo final se realiza a pie, no en automóvil.",
+              "map_url": "https://maps.app.goo.gl/EnbDShNe6ffZPqhX9",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/88/8892b7b4dc5f14a35590af1a205297e31f36c82ecdaa277d7f526493cd56d2e1.webp",
+                "alt": "Ucumarí – La Pastora",
+                "caption": "Ilustración editorial: Ucumarí – La Pastora.",
+                "width": 1100,
+                "height": 824
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "tour-cafetero",
+              "type": "experience",
+              "name": "Tour cafetero y preparación del café",
+              "description": "Un recorrido dedicado al café y su preparación en el entorno rural de Pereira. Consulta la modalidad, reserva y condiciones de la actividad antes de organizar la visita.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/7f/7fcefadc75ffe2872d24a61a2e3f9b6233b1d051a943d35793e9ca6018fb65fb.webp",
+                "alt": "Tour cafetero y preparación del café",
+                "caption": "Ilustración editorial: Tour cafetero y preparación del café.",
+                "width": 1200,
+                "height": 800
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "senderismo-los-frailes",
+              "type": "experience",
+              "name": "Senderismo a la cascada Los Frailes",
+              "description": "Caminata acompañada hacia la cascada Los Frailes. Confirma la reserva, el acceso autorizado y las condiciones del recorrido antes de salir.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/65/651cdcd15ed361698736d267af3f279c3ab3c49bcb81f5f1fea0baa27d10e249.webp",
+                "alt": "Senderismo a la cascada Los Frailes",
+                "caption": "Ilustración editorial: Senderismo a la cascada Los Frailes.",
+                "width": 1200,
+                "height": 800
+              },
+              "publication_status": "published"
+            }
+          ],
+          "sources": []
+        },
+        "pt-BR": {
+          "name": "Pereira",
+          "title": "Pereira | Explorando Lugares",
+          "meta_description": "Conheça Pereira: Bioparque Ukumarí, Megacable, a catedral e as florestas de Otún Quimbaya e Ucumarí. Ideias para explorar Risaralda.",
+          "eyebrow": "Risaralda / Colômbia",
+          "headline": "Vida urbana na região cafeeira e florestas do Otún",
+          "intro": "Pereira combina o movimento de uma capital regional com a proximidade da floresta andina. Conheça o centro, veja a cidade do Megacable e reserve tempo para explorar a bacia do Otún.",
+          "history": [
+            "Pereira celebra sua fundação em 30 de agosto de 1863. O povoado cresceu no território da antiga Cartago e se tornou um ponto de encontro entre caminhos, mercados e comunidades da região.",
+            "O comércio e a relação com o café ajudam a entender a cidade atual: a capital de Risaralda conecta a vida urbana com distritos rurais e áreas protegidas da cordilheira Central da Colômbia."
+          ],
+          "reasons": [
+            "Combine a arquitetura do centro, um passeio no transporte por cabo e visitas à natureza sem confundir os lugares: o Bioparque Ukumarí é um parque administrado; Otún Quimbaya e o Parque Natural Regional Ucumarí são áreas protegidas diferentes."
+          ],
+          "hero_media": {
+            "path": "assets/media/54/542673cbe687f0458a9800b28448ec5f403277dea2936f07c57ab8c12bef9cb5.webp",
+            "alt": "Pereira",
+            "caption": "Ilustração editorial: Pereira.",
+            "width": 1353,
+            "height": 1162
+          },
+          "history_media": null,
+          "places": [
+            {
+              "slug": "bioparque-ukumari",
+              "type": "place",
+              "name": "Bioparque Ukumarí",
+              "description": "No setor de Cerritos, o bioparque organiza seus percursos por ambientes que incluem Florestas Andinas e Savana Africana. A visita tem acesso controlado: consulte as condições de entrada antes de ir.",
+              "map_url": "https://maps.app.goo.gl/CF1fgbxVFjvWehzj8",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/d7/d72b8d0c1c3858e3ebcd54485bbc1fe9613b087086048093404aae68d292380d.webp",
+                "alt": "Bioparque Ukumarí",
+                "caption": "Ilustração editorial: Bioparque Ukumarí.",
+                "width": 1100,
+                "height": 825
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "otun-quimbaya",
+              "type": "place",
+              "name": "Santuário de Fauna e Flora Otún Quimbaya",
+              "description": "Na localidade de La Suiza, a floresta úmida subandina protege a bacia do alto Otún. As trilhas apresentam esse ecossistema; confirme vagas, registro e acompanhamento exigido com a administração.",
+              "map_url": "https://maps.app.goo.gl/MimC1rYzRLpmweio6",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/ec/ecf1feeef41d9a65d2206f84fee5301bde6e83d690f3be4b47580cda8c6be438.webp",
+                "alt": "Santuário de Fauna e Flora Otún Quimbaya",
+                "caption": "Ilustração editorial: Santuário de Fauna e Flora Otún Quimbaya.",
+                "width": 1100,
+                "height": 733
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "megacable",
+              "type": "place",
+              "name": "Megacable",
+              "description": "O sistema de transporte por cabo conecta setores de Pereira e oferece outra perspectiva das encostas urbanas. A estação Parque Olaya é um ponto de partida para conhecer a cidade do alto.",
+              "map_url": "https://maps.app.goo.gl/kaWY4eW7YfNZHUYc9",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/83/83536cd6ec828356350c7dffcbc667203fb39daf262533aba40f288929c13e8c.webp",
+                "alt": "Megacable",
+                "caption": "Ilustração editorial: Megacable.",
+                "width": 1100,
+                "height": 825
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "catedral-pobreza",
+              "type": "place",
+              "name": "Catedral Nossa Senhora da Pobreza",
+              "description": "Em frente à Praça Bolívar, a catedral faz parte do percurso pelo centro de Pereira. Observe a fachada e as torres; para conhecer o interior, respeite o acesso disponível e as celebrações religiosas.",
+              "map_url": "https://maps.app.goo.gl/3J7qJcVkrsEw61Fc7",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/8b/8ba3b3c2c6c1c9fb55ffb3fd4666346f585f414a48407c7621438f7a5792b815.webp",
+                "alt": "Catedral Nossa Senhora da Pobreza",
+                "caption": "Ilustração editorial: Catedral Nossa Senhora da Pobreza.",
+                "width": 1050,
+                "height": 1400
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "ucumari-la-pastora",
+              "type": "place",
+              "name": "Ucumarí – La Pastora",
+              "description": "O caminho para La Pastora entra na paisagem andina a partir do setor de El Cedral. O parque regional abrange Pereira e Santa Rosa de Cabal. O mapa indica La Pastora: o trecho final é feito a pé, não de carro.",
+              "map_url": "https://maps.app.goo.gl/EnbDShNe6ffZPqhX9",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/88/8892b7b4dc5f14a35590af1a205297e31f36c82ecdaa277d7f526493cd56d2e1.webp",
+                "alt": "Ucumarí – La Pastora",
+                "caption": "Ilustração editorial: Ucumarí – La Pastora.",
+                "width": 1100,
+                "height": 824
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "tour-cafetero",
+              "type": "experience",
+              "name": "Passeio do café e preparo da bebida",
+              "description": "Um percurso dedicado ao café e ao seu preparo na zona rural de Pereira. Consulte a modalidade, a reserva e as condições da atividade antes de organizar a visita.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/7f/7fcefadc75ffe2872d24a61a2e3f9b6233b1d051a943d35793e9ca6018fb65fb.webp",
+                "alt": "Passeio do café e preparo da bebida",
+                "caption": "Ilustração editorial: Passeio do café e preparo da bebida.",
+                "width": 1200,
+                "height": 800
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "senderismo-los-frailes",
+              "type": "experience",
+              "name": "Trilha até a cachoeira Los Frailes",
+              "description": "Caminhada acompanhada até a cachoeira Los Frailes. Confirme a reserva, o acesso autorizado e as condições do percurso antes de sair.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/65/651cdcd15ed361698736d267af3f279c3ab3c49bcb81f5f1fea0baa27d10e249.webp",
+                "alt": "Trilha até a cachoeira Los Frailes",
+                "caption": "Ilustração editorial: Trilha até a cachoeira Los Frailes.",
+                "width": 1200,
+                "height": 800
+              },
+              "publication_status": "published"
+            }
+          ],
+          "sources": []
+        }
+      }
+    },
+    {
+      "slug": "san-bernardo-del-viento",
+      "destination_type": "municipality",
+      "country_code": "CO",
+      "department": "Córdoba",
+      "subregion": "",
+      "publication_status": "published",
+      "display_order": 28,
+      "translations": {
+        "en": {
+          "name": "San Bernardo del Viento",
+          "title": "San Bernardo del Viento | Explorando Lugares",
+          "meta_description": "Explore San Bernardo del Viento, Córdoba: grey-sand beaches and the landscapes where the Sinú meets the sea.",
+          "eyebrow": "Córdoba · Colombia",
+          "headline": "Where the Sinú meets the Caribbean",
+          "intro": "Between the Caribbean and the mouth of the Sinú River, San Bernardo del Viento combines grey-sand beaches and mangrove landscapes. Explore the coast and arrange water-based outings with local knowledge of the routes.",
+          "history": [
+            "The Sinú River and the Caribbean help explain the municipality’s identity. Nearby, the delta and mangroves form a landscape shared with other communities in Córdoba. A visit combines the town with coastal areas and water-based outings that need local planning."
+          ],
+          "reasons": [
+            "An open-coast beach with grey sand and coastal vegetation. Walk along the shore and enjoy the view; sea conditions vary and should be checked locally.",
+            "At the mouth of the Sinú River, mangroves and sediment mark the meeting of river and sea. Arrange the outing with local knowledge of the route."
+          ],
+          "hero_media": {
+            "path": "assets/media/46/46d1eb40c66dc27f75fd763d66a91a20b72faceac6a4bcd5e699a370d00a5358.webp",
+            "alt": "San Bernardo del Viento",
+            "caption": "Editorial illustration: San Bernardo del Viento.",
+            "width": 1536,
+            "height": 1024
+          },
+          "history_media": null,
+          "places": [
+            {
+              "slug": "playas-del-viento",
+              "type": "place",
+              "name": "Playa del Viento",
+              "description": "An open-coast beach with grey sand and coastal vegetation. Walk along the shore and enjoy the view; sea conditions vary and should be checked locally.",
+              "map_url": "https://www.google.com/maps?cid=3447784618713614518",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/02/02b224f91dd4975055a4ad7a7650d2bc2e5904e1cb3f1eacd9ea390ffb5b221b.webp",
+                "alt": "Playa del Viento",
+                "caption": "Editorial illustration: Playa del Viento.",
+                "width": 1536,
+                "height": 1024
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "punta-piedra",
+              "type": "place",
+              "name": "Punta Piedra",
+              "description": "Rocks and the curve of the beach distinguish this stretch of coastline. Vegetation frames a landscape different from the pier area.",
+              "map_url": "https://www.google.com/maps?cid=1705935528237496969",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/33/33f309e8f1cc6b0b6c75e85d4ffd09fa7199298c30bc9017a0b775f5f0a2ef8b.webp",
+                "alt": "Punta Piedra",
+                "caption": "Editorial illustration: Punta Piedra.",
+                "width": 1600,
+                "height": 648
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "boca-tinajones",
+              "type": "experience",
+              "name": "Boat outing to Boca de Tinajones",
+              "description": "At the mouth of the Sinú River, mangroves and sediment mark the meeting of river and sea. Arrange the outing with local knowledge of the route.",
+              "map_url": "https://www.google.com/maps?cid=14105959700647786970",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/60/602d728a8f9d05090b5639a4439e27620c859380b41530ffa0b1a59483ed492a.webp",
+                "alt": "Boat outing to Boca de Tinajones",
+                "caption": "Editorial illustration: Boat outing to Boca de Tinajones.",
+                "width": 1536,
+                "height": 1024
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "cano-la-balsa",
+              "type": "experience",
+              "name": "Caño La Balsa excursion",
+              "description": "Explore mangrove channels and vegetation from the water. Confirm the type of excursion, departure point and conditions directly with the provider.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/2c/2c10361af4cbb5046772c8d82e2b95f11014cae116bdd3736f68c13d129462f4.webp",
+                "alt": "Caño La Balsa excursion",
+                "caption": "Editorial illustration: Caño La Balsa excursion.",
+                "width": 1536,
+                "height": 1024
+              },
+              "publication_status": "published"
+            }
+          ],
+          "sources": []
+        },
+        "es": {
+          "name": "San Bernardo del Viento",
+          "title": "San Bernardo del Viento | Explorando Lugares",
+          "meta_description": "Conoce San Bernardo del Viento, Córdoba: playas de arena gris y paisajes de la desembocadura del Sinú.",
+          "eyebrow": "Córdoba · Colombia",
+          "headline": "Donde el Sinú encuentra el Caribe",
+          "intro": "Entre el Caribe y la desembocadura del Sinú, San Bernardo del Viento reúne playas de arena gris y paisajes de manglar. Un destino para recorrer la costa y organizar experiencias acuáticas con conocimiento local de los trayectos.",
+          "history": [
+            "La relación con el Sinú y el Caribe explica buena parte de la identidad del municipio. En sus alrededores, el delta y los manglares forman parte de un paisaje compartido con otras poblaciones de Córdoba. La visita combina el casco urbano con sectores costeros y recorridos acuáticos que requieren planificación local."
+          ],
+          "reasons": [
+            "Un sector de costa abierta con arena gris y vegetación costera. Es un lugar para caminar y mirar el mar; las condiciones de oleaje cambian y deben consultarse localmente.",
+            "La desembocadura del río Sinú ofrece un paisaje de manglar, sedimentos y encuentro entre aguas fluviales y marinas. Conviene organizar el recorrido con conocimiento local del trayecto."
+          ],
+          "hero_media": {
+            "path": "assets/media/46/46d1eb40c66dc27f75fd763d66a91a20b72faceac6a4bcd5e699a370d00a5358.webp",
+            "alt": "San Bernardo del Viento",
+            "caption": "Ilustración editorial: San Bernardo del Viento.",
+            "width": 1536,
+            "height": 1024
+          },
+          "history_media": null,
+          "places": [
+            {
+              "slug": "playas-del-viento",
+              "type": "place",
+              "name": "Playa del Viento",
+              "description": "Un sector de costa abierta con arena gris y vegetación costera. Es un lugar para caminar y mirar el mar; las condiciones de oleaje cambian y deben consultarse localmente.",
+              "map_url": "https://www.google.com/maps?cid=3447784618713614518",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/02/02b224f91dd4975055a4ad7a7650d2bc2e5904e1cb3f1eacd9ea390ffb5b221b.webp",
+                "alt": "Playa del Viento",
+                "caption": "Ilustración editorial: Playa del Viento.",
+                "width": 1536,
+                "height": 1024
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "punta-piedra",
+              "type": "place",
+              "name": "Punta Piedra",
+              "description": "Las rocas y la curvatura de la playa distinguen este tramo del litoral. La vegetación acompaña un paisaje diferente al del muelle.",
+              "map_url": "https://www.google.com/maps?cid=1705935528237496969",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/33/33f309e8f1cc6b0b6c75e85d4ffd09fa7199298c30bc9017a0b775f5f0a2ef8b.webp",
+                "alt": "Punta Piedra",
+                "caption": "Ilustración editorial: Punta Piedra.",
+                "width": 1600,
+                "height": 648
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "boca-tinajones",
+              "type": "experience",
+              "name": "Recorrido por Boca de Tinajones",
+              "description": "La desembocadura del río Sinú ofrece un paisaje de manglar, sedimentos y encuentro entre aguas fluviales y marinas. Conviene organizar el recorrido con conocimiento local del trayecto.",
+              "map_url": "https://www.google.com/maps?cid=14105959700647786970",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/60/602d728a8f9d05090b5639a4439e27620c859380b41530ffa0b1a59483ed492a.webp",
+                "alt": "Recorrido por Boca de Tinajones",
+                "caption": "Ilustración editorial: Recorrido por Boca de Tinajones.",
+                "width": 1536,
+                "height": 1024
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "cano-la-balsa",
+              "type": "experience",
+              "name": "Recorrido por Caño La Balsa",
+              "description": "Una experiencia para conocer los canales y la vegetación del manglar desde el agua. La modalidad, el punto de salida y las condiciones del recorrido se confirman con quien lo opera.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/2c/2c10361af4cbb5046772c8d82e2b95f11014cae116bdd3736f68c13d129462f4.webp",
+                "alt": "Recorrido por Caño La Balsa",
+                "caption": "Ilustración editorial: Recorrido por Caño La Balsa.",
+                "width": 1536,
+                "height": 1024
+              },
+              "publication_status": "published"
+            }
+          ],
+          "sources": []
+        },
+        "pt-BR": {
+          "name": "San Bernardo del Viento",
+          "title": "San Bernardo del Viento | Explorando Lugares",
+          "meta_description": "Conheça San Bernardo del Viento, Córdoba: praias de areia cinza e paisagens da foz do rio Sinú.",
+          "eyebrow": "Córdoba · Colombia",
+          "headline": "Onde o Sinú encontra o Caribe",
+          "intro": "Entre o Caribe e a foz do rio Sinú, San Bernardo del Viento reúne praias de areia cinza e paisagens de manguezal. Um destino para percorrer o litoral e organizar passeios pela água com conhecimento local dos trajetos.",
+          "history": [
+            "A relação com o rio Sinú e o Caribe ajuda a explicar a identidade do município. Nos arredores, o delta e os manguezais formam uma paisagem compartilhada com outras comunidades de Córdoba. A visita combina o centro urbano com trechos do litoral e passeios pela água que exigem planejamento local."
+          ],
+          "reasons": [
+            "Um trecho de mar aberto com areia cinza e vegetação costeira. É um lugar para caminhar e contemplar o mar; as condições das ondas variam e devem ser consultadas localmente.",
+            "Na foz do rio Sinú, manguezais e sedimentos marcam o encontro entre o rio e o mar. Organize o passeio com conhecimento local do trajeto."
+          ],
+          "hero_media": {
+            "path": "assets/media/46/46d1eb40c66dc27f75fd763d66a91a20b72faceac6a4bcd5e699a370d00a5358.webp",
+            "alt": "San Bernardo del Viento",
+            "caption": "Ilustração editorial: San Bernardo del Viento.",
+            "width": 1536,
+            "height": 1024
+          },
+          "history_media": null,
+          "places": [
+            {
+              "slug": "playas-del-viento",
+              "type": "place",
+              "name": "Playa del Viento",
+              "description": "Um trecho de mar aberto com areia cinza e vegetação costeira. É um lugar para caminhar e contemplar o mar; as condições das ondas variam e devem ser consultadas localmente.",
+              "map_url": "https://www.google.com/maps?cid=3447784618713614518",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/02/02b224f91dd4975055a4ad7a7650d2bc2e5904e1cb3f1eacd9ea390ffb5b221b.webp",
+                "alt": "Playa del Viento",
+                "caption": "Ilustração editorial: Playa del Viento.",
+                "width": 1536,
+                "height": 1024
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "punta-piedra",
+              "type": "place",
+              "name": "Punta Piedra",
+              "description": "As rochas e a curvatura da praia distinguem este trecho do litoral. A vegetação acompanha uma paisagem diferente da área do píer.",
+              "map_url": "https://www.google.com/maps?cid=1705935528237496969",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/33/33f309e8f1cc6b0b6c75e85d4ffd09fa7199298c30bc9017a0b775f5f0a2ef8b.webp",
+                "alt": "Punta Piedra",
+                "caption": "Ilustração editorial: Punta Piedra.",
+                "width": 1600,
+                "height": 648
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "boca-tinajones",
+              "type": "experience",
+              "name": "Passeio pela Boca de Tinajones",
+              "description": "Na foz do rio Sinú, manguezais e sedimentos marcam o encontro entre o rio e o mar. Organize o passeio com conhecimento local do trajeto.",
+              "map_url": "https://www.google.com/maps?cid=14105959700647786970",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/60/602d728a8f9d05090b5639a4439e27620c859380b41530ffa0b1a59483ed492a.webp",
+                "alt": "Passeio pela Boca de Tinajones",
+                "caption": "Ilustração editorial: Passeio pela Boca de Tinajones.",
+                "width": 1536,
+                "height": 1024
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "cano-la-balsa",
+              "type": "experience",
+              "name": "Passeio pelo Caño La Balsa",
+              "description": "Uma experiência para conhecer os canais e a vegetação do manguezal pela água. Confirme a modalidade, o ponto de saída e as condições com o responsável pelo passeio.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/2c/2c10361af4cbb5046772c8d82e2b95f11014cae116bdd3736f68c13d129462f4.webp",
+                "alt": "Passeio pelo Caño La Balsa",
+                "caption": "Ilustração editorial: Passeio pelo Caño La Balsa.",
+                "width": 1536,
+                "height": 1024
+              },
+              "publication_status": "published"
+            }
+          ],
+          "sources": []
+        }
+      }
+    },
+    {
+      "slug": "villavieja",
+      "destination_type": "municipality",
+      "country_code": "CO",
+      "department": "Huila",
+      "subregion": "Norte del Huila",
+      "publication_status": "published",
+      "display_order": 29,
+      "translations": {
+        "en": {
+          "name": "Villavieja",
+          "title": "Villavieja | Explorando Lugares",
+          "meta_description": "Explore Villavieja, Huila: La Tatacoa, the Paleontological Museum, Santa Bárbara Chapel and astronomy activities.",
+          "eyebrow": "Huila / Colombia",
+          "headline": "Village life and the landscapes of La Tatacoa",
+          "intro": "A shaded square, fossil heritage and sculpted earth: Villavieja connects everyday life in northern Huila with La Tatacoa and its astronomy activities.",
+          "history": [
+            "Villavieja is part of the settlement history of the upper Magdalena valley. Its centre preserves Santa Bárbara Chapel and the former parish house, home to the Paleontological Museum.",
+            "Fossils from La Tatacoa reveal environments very different from today’s dry landscape and help researchers understand Miocene wildlife. The municipality now brings together heritage, research and nature tourism."
+          ],
+          "reasons": [
+            "Discover the red and pale eroded formations of La Tatacoa.",
+            "Explore the village’s fossil and architectural heritage.",
+            "Join organised astronomy sessions, subject to scheduling and sky conditions."
+          ],
+          "hero_media": {
+            "path": "assets/media/55/55d902d5c204af239dc22757ae7fb2d1feaf931e2665699a72bb8200e4f9deb6.webp",
+            "alt": "Villavieja",
+            "caption": "Editorial illustration: Villavieja.",
+            "width": 1200,
+            "height": 670
+          },
+          "history_media": null,
+          "places": [
+            {
+              "slug": "tatacoa",
+              "type": "place",
+              "name": "La Tatacoa",
+              "description": "This dry landscape combines red gullies around Cuzco with pale formations in Los Hoyos. Follow designated trails and protect its fossil heritage.",
+              "map_url": "https://maps.app.goo.gl/msyFTRArktw39GTF8",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/4b/4b94739df8bef13cb7b53c618a1975659520a0643ab4a6b7df0ac8ea4c7b5eba.webp",
+                "alt": "La Tatacoa",
+                "caption": "Editorial illustration: La Tatacoa.",
+                "width": 1200,
+                "height": 800
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "museo-paleontologico-villavieja",
+              "type": "place",
+              "name": "Villavieja Paleontological Museum",
+              "description": "In the village centre, its fossil collection introduces the region’s Miocene animals and environments.",
+              "map_url": "https://maps.app.goo.gl/xW2EDfFnNABmSpZR6",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/c8/c8fe8120b42549c7cbd5c56c54c8c9f7cffd9941af2921a2c741df20966104d3.webp",
+                "alt": "Villavieja Paleontological Museum",
+                "caption": "Editorial illustration: Villavieja Paleontological Museum.",
+                "width": 1200,
+                "height": 977
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "capilla-santa-barbara",
+              "type": "place",
+              "name": "Santa Bárbara Chapel",
+              "description": "This small heritage chapel preserves a simple white façade and a two-bell gable near Villavieja’s historic centre.",
+              "map_url": "https://maps.app.goo.gl/L3BTy8rPtsDh7Q2Z8",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/ab/abd9606f51e2f0021cfabeb922d0f4e055a16e0ab3ff17c7ec4947a785b26941.webp",
+                "alt": "Santa Bárbara Chapel",
+                "caption": "Editorial illustration: Santa Bárbara Chapel.",
+                "width": 1200,
+                "height": 800
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "observacion-astronomica-tatacoa",
+              "type": "place",
+              "name": "Astronomy in La Tatacoa",
+              "description": "Organised talks and telescope observation sessions. Schedules and visible objects depend on the offering and sky conditions.",
+              "map_url": "https://maps.app.goo.gl/2ggn26AfSg2oGwsK9",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/55/551c8e2df5b30992ac4a9e5fea5fd0eda0c9ca08c4b15896f5a3f43712aa3b14.webp",
+                "alt": "Astronomy in La Tatacoa",
+                "caption": "Editorial illustration: Astronomy in La Tatacoa.",
+                "width": 1200,
+                "height": 713
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "recorrido-guiado-tatacoa",
+              "type": "experience",
+              "name": "Guided tour of La Tatacoa",
+              "description": "An accompanied tour of La Tatacoa’s landscapes and trails. Confirm the booking, itinerary, transport and trail conditions with the provider before setting out.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/fd/fd5f3efd17fc6de4ec46931b450e14c912f77be1ad0d54a08ed6d162e98f3e60.webp",
+                "alt": "Guided tour of La Tatacoa",
+                "caption": "Editorial illustration: Guided tour of La Tatacoa.",
+                "width": 1200,
+                "height": 800
+              },
+              "publication_status": "published"
+            }
+          ],
+          "sources": []
+        },
+        "es": {
+          "name": "Villavieja",
+          "title": "Villavieja | Explorando Lugares",
+          "meta_description": "Descubre Villavieja, Huila: La Tatacoa, el Museo Paleontológico, la Capilla de Santa Bárbara y la observación astronómica.",
+          "eyebrow": "Huila / Colombia",
+          "headline": "Entre el pueblo y La Tatacoa",
+          "intro": "Una plaza de sombra, memoria fósil y paisajes de tierra esculpida: Villavieja conecta la vida del norte del Huila con La Tatacoa y sus noches de observación astronómica.",
+          "history": [
+            "Villavieja forma parte de la historia del poblamiento del valle alto del Magdalena. Su centro conserva la capilla de Santa Bárbara y la antigua casa cural, donde se encuentra el Museo Paleontológico.",
+            "La Tatacoa revela un pasado muy distinto del paisaje seco actual: sus fósiles permiten estudiar la fauna y los ambientes del Mioceno. Hoy el municipio reúne patrimonio, investigación y turismo de naturaleza."
+          ],
+          "reasons": [
+            "Reconocer los relieves rojizos y claros de La Tatacoa.",
+            "Acercarse al patrimonio paleontológico y arquitectónico del pueblo.",
+            "Participar en observaciones astronómicas organizadas, según programación y condiciones del cielo."
+          ],
+          "hero_media": {
+            "path": "assets/media/55/55d902d5c204af239dc22757ae7fb2d1feaf931e2665699a72bb8200e4f9deb6.webp",
+            "alt": "Villavieja",
+            "caption": "Ilustración editorial: Villavieja.",
+            "width": 1200,
+            "height": 670
+          },
+          "history_media": null,
+          "places": [
+            {
+              "slug": "tatacoa",
+              "type": "place",
+              "name": "La Tatacoa",
+              "description": "El paisaje seco de cárcavas y laberintos combina tonos rojizos en Cuzco y formaciones claras en Los Hoyos. Recorre senderos habilitados y protege su patrimonio fósil.",
+              "map_url": "https://maps.app.goo.gl/msyFTRArktw39GTF8",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/4b/4b94739df8bef13cb7b53c618a1975659520a0643ab4a6b7df0ac8ea4c7b5eba.webp",
+                "alt": "La Tatacoa",
+                "caption": "Ilustración editorial: La Tatacoa.",
+                "width": 1200,
+                "height": 800
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "museo-paleontologico-villavieja",
+              "type": "place",
+              "name": "Museo Paleontológico de Villavieja",
+              "description": "En el centro del pueblo, su colección permite conocer animales y ambientes del Mioceno a partir de fósiles hallados en la región.",
+              "map_url": "https://maps.app.goo.gl/xW2EDfFnNABmSpZR6",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/c8/c8fe8120b42549c7cbd5c56c54c8c9f7cffd9941af2921a2c741df20966104d3.webp",
+                "alt": "Museo Paleontológico de Villavieja",
+                "caption": "Ilustración editorial: Museo Paleontológico de Villavieja.",
+                "width": 1200,
+                "height": 977
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "capilla-santa-barbara",
+              "type": "place",
+              "name": "Capilla de Santa Bárbara",
+              "description": "Esta pequeña capilla patrimonial conserva una fachada sobria de muros blancos y espadaña de dos campanas, junto al centro histórico de Villavieja.",
+              "map_url": "https://maps.app.goo.gl/L3BTy8rPtsDh7Q2Z8",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/ab/abd9606f51e2f0021cfabeb922d0f4e055a16e0ab3ff17c7ec4947a785b26941.webp",
+                "alt": "Capilla de Santa Bárbara",
+                "caption": "Ilustración editorial: Capilla de Santa Bárbara.",
+                "width": 1200,
+                "height": 800
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "observacion-astronomica-tatacoa",
+              "type": "place",
+              "name": "Observación astronómica en La Tatacoa",
+              "description": "Sesiones organizadas de divulgación y observación con telescopios. La programación y lo que puede observarse dependen de la oferta y las condiciones del cielo.",
+              "map_url": "https://maps.app.goo.gl/2ggn26AfSg2oGwsK9",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/55/551c8e2df5b30992ac4a9e5fea5fd0eda0c9ca08c4b15896f5a3f43712aa3b14.webp",
+                "alt": "Observación astronómica en La Tatacoa",
+                "caption": "Ilustración editorial: Observación astronómica en La Tatacoa.",
+                "width": 1200,
+                "height": 713
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "recorrido-guiado-tatacoa",
+              "type": "experience",
+              "name": "Recorrido guiado por La Tatacoa",
+              "description": "Un recorrido acompañado para conocer los paisajes y senderos de La Tatacoa. Confirma con el prestador la reserva, el itinerario, el transporte y las condiciones del terreno antes de salir.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/fd/fd5f3efd17fc6de4ec46931b450e14c912f77be1ad0d54a08ed6d162e98f3e60.webp",
+                "alt": "Recorrido guiado por La Tatacoa",
+                "caption": "Ilustración editorial: Recorrido guiado por La Tatacoa.",
+                "width": 1200,
+                "height": 800
+              },
+              "publication_status": "published"
+            }
+          ],
+          "sources": []
+        },
+        "pt-BR": {
+          "name": "Villavieja",
+          "title": "Villavieja | Explorando Lugares",
+          "meta_description": "Conheça Villavieja, Huila: La Tatacoa, o Museu Paleontológico, a Capela de Santa Bárbara e a observação astronômica.",
+          "eyebrow": "Huila / Colômbia",
+          "headline": "Entre a cidade e as paisagens de La Tatacoa",
+          "intro": "Uma praça arborizada, memória fóssil e paisagens de terra esculpida: Villavieja conecta a vida do norte de Huila a La Tatacoa e às atividades de observação astronômica.",
+          "history": [
+            "Villavieja faz parte da história de ocupação do vale superior do Magdalena. Seu centro preserva a Capela de Santa Bárbara e a antiga casa paroquial, onde funciona o Museu Paleontológico.",
+            "Os fósseis de La Tatacoa revelam ambientes muito diferentes da paisagem seca atual e ajudam a compreender a fauna do Mioceno. Hoje o município reúne patrimônio, pesquisa e turismo de natureza."
+          ],
+          "reasons": [
+            "Conhecer as formações avermelhadas e claras de La Tatacoa.",
+            "Explorar o patrimônio paleontológico e arquitetônico da cidade.",
+            "Participar de observações astronômicas organizadas, conforme a programação e as condições do céu."
+          ],
+          "hero_media": {
+            "path": "assets/media/55/55d902d5c204af239dc22757ae7fb2d1feaf931e2665699a72bb8200e4f9deb6.webp",
+            "alt": "Villavieja",
+            "caption": "Ilustração editorial: Villavieja.",
+            "width": 1200,
+            "height": 670
+          },
+          "history_media": null,
+          "places": [
+            {
+              "slug": "tatacoa",
+              "type": "place",
+              "name": "La Tatacoa",
+              "description": "A paisagem seca combina ravinas avermelhadas em Cuzco e formações claras em Los Hoyos. Siga as trilhas autorizadas e proteja o patrimônio fóssil.",
+              "map_url": "https://maps.app.goo.gl/msyFTRArktw39GTF8",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/4b/4b94739df8bef13cb7b53c618a1975659520a0643ab4a6b7df0ac8ea4c7b5eba.webp",
+                "alt": "La Tatacoa",
+                "caption": "Ilustração editorial: La Tatacoa.",
+                "width": 1200,
+                "height": 800
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "museo-paleontologico-villavieja",
+              "type": "place",
+              "name": "Museu Paleontológico de Villavieja",
+              "description": "No centro da cidade, a coleção de fósseis apresenta animais e ambientes do Mioceno encontrados na região.",
+              "map_url": "https://maps.app.goo.gl/xW2EDfFnNABmSpZR6",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/c8/c8fe8120b42549c7cbd5c56c54c8c9f7cffd9941af2921a2c741df20966104d3.webp",
+                "alt": "Museu Paleontológico de Villavieja",
+                "caption": "Ilustração editorial: Museu Paleontológico de Villavieja.",
+                "width": 1200,
+                "height": 977
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "capilla-santa-barbara",
+              "type": "place",
+              "name": "Capela de Santa Bárbara",
+              "description": "Esta pequena capela histórica conserva a fachada branca e a espadaña com dois sinos, junto ao centro histórico de Villavieja.",
+              "map_url": "https://maps.app.goo.gl/L3BTy8rPtsDh7Q2Z8",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/ab/abd9606f51e2f0021cfabeb922d0f4e055a16e0ab3ff17c7ec4947a785b26941.webp",
+                "alt": "Capela de Santa Bárbara",
+                "caption": "Ilustração editorial: Capela de Santa Bárbara.",
+                "width": 1200,
+                "height": 800
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "observacion-astronomica-tatacoa",
+              "type": "place",
+              "name": "Observação astronômica em La Tatacoa",
+              "description": "Sessões organizadas de divulgação e observação com telescópios. A programação e os objetos visíveis dependem da oferta e das condições do céu.",
+              "map_url": "https://maps.app.goo.gl/2ggn26AfSg2oGwsK9",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/55/551c8e2df5b30992ac4a9e5fea5fd0eda0c9ca08c4b15896f5a3f43712aa3b14.webp",
+                "alt": "Observação astronômica em La Tatacoa",
+                "caption": "Ilustração editorial: Observação astronômica em La Tatacoa.",
+                "width": 1200,
+                "height": 713
+              },
+              "publication_status": "published"
+            },
+            {
+              "slug": "recorrido-guiado-tatacoa",
+              "type": "experience",
+              "name": "Passeio guiado por La Tatacoa",
+              "description": "Um passeio acompanhado para conhecer as paisagens e trilhas de La Tatacoa. Confirme com o prestador a reserva, o roteiro, o transporte e as condições do terreno antes de sair.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": "",
+              "media": {
+                "path": "assets/media/fd/fd5f3efd17fc6de4ec46931b450e14c912f77be1ad0d54a08ed6d162e98f3e60.webp",
+                "alt": "Passeio guiado por La Tatacoa",
+                "caption": "Ilustração editorial: Passeio guiado por La Tatacoa.",
+                "width": 1200,
+                "height": 800
+              },
+              "publication_status": "published"
+            }
+          ],
+          "sources": []
+        }
+      }
     }
   ],
   "media": [
@@ -7642,6 +9995,1266 @@
         {
           "destination_slug": "venecia",
           "role": "poi:1"
+        }
+      ]
+    },
+    {
+      "origin": "ai_generated",
+      "creator": "Ilustración IA · revisión local",
+      "source_url": "",
+      "license_name": "Revisión local pendiente",
+      "license_url": "",
+      "width": 1600,
+      "height": 900,
+      "path": "assets/media/82/82fca713296939b47c8056507c7e14e2a17d8375b6aa2e47fe149ca95690f082.webp",
+      "translations": {
+        "es": {
+          "alt": "Barranquilla",
+          "caption": "Ilustración editorial: Barranquilla."
+        },
+        "en": {
+          "alt": "Barranquilla",
+          "caption": "Editorial illustration: Barranquilla."
+        },
+        "pt-BR": {
+          "alt": "Barranquilla",
+          "caption": "Ilustração editorial: Barranquilla."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "barranquilla",
+          "role": "hero"
+        }
+      ]
+    },
+    {
+      "origin": "ai_generated",
+      "creator": "Ilustración IA · revisión local",
+      "source_url": "",
+      "license_name": "Revisión local pendiente",
+      "license_url": "",
+      "width": 1536,
+      "height": 1024,
+      "path": "assets/media/f8/f85c213285799b61cf75e92b72bb1d195dd204891c1db965184a81d126bc9243.webp",
+      "translations": {
+        "es": {
+          "alt": "Museo del Carnaval",
+          "caption": "Ilustración editorial: Museo del Carnaval."
+        },
+        "en": {
+          "alt": "Carnival Museum",
+          "caption": "Editorial illustration: Carnival Museum."
+        },
+        "pt-BR": {
+          "alt": "Museu do Carnaval",
+          "caption": "Ilustração editorial: Museu do Carnaval."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "barranquilla",
+          "role": "poi:3"
+        }
+      ]
+    },
+    {
+      "origin": "ai_generated",
+      "creator": "Ilustración IA · revisión local",
+      "source_url": "",
+      "license_name": "Revisión local pendiente",
+      "license_url": "",
+      "width": 1536,
+      "height": 1024,
+      "path": "assets/media/a2/a2604ffda70fff09ac86cd8ada98194d101618f650f2c28defe4e78fba171fa8.webp",
+      "translations": {
+        "es": {
+          "alt": "Playa de Puerto Mocho",
+          "caption": "Ilustración editorial: Playa de Puerto Mocho."
+        },
+        "en": {
+          "alt": "Puerto Mocho Beach",
+          "caption": "Editorial illustration: Puerto Mocho Beach."
+        },
+        "pt-BR": {
+          "alt": "Praia de Puerto Mocho",
+          "caption": "Ilustração editorial: Praia de Puerto Mocho."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "barranquilla",
+          "role": "poi:6"
+        }
+      ]
+    },
+    {
+      "origin": "ai_generated",
+      "creator": "Ilustración IA · revisión local",
+      "source_url": "",
+      "license_name": "Revisión local pendiente",
+      "license_url": "",
+      "width": 1536,
+      "height": 1024,
+      "path": "assets/media/90/90650f8f9e4f1573d7379ccf88bf9a606c3d22cc0b3a874466af954476b33e5f.webp",
+      "translations": {
+        "es": {
+          "alt": "Plaza de la Paz y Catedral María Reina",
+          "caption": "Ilustración editorial: Plaza de la Paz y Catedral María Reina."
+        },
+        "en": {
+          "alt": "Plaza de la Paz and María Reina Cathedral",
+          "caption": "Editorial illustration: Plaza de la Paz and María Reina Cathedral."
+        },
+        "pt-BR": {
+          "alt": "Plaza de la Paz e Catedral María Reina",
+          "caption": "Ilustração editorial: Plaza de la Paz e Catedral María Reina."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "barranquilla",
+          "role": "poi:7"
+        }
+      ]
+    },
+    {
+      "origin": "ai_generated",
+      "creator": "Ilustración IA · revisión local",
+      "source_url": "",
+      "license_name": "Revisión local pendiente",
+      "license_url": "",
+      "width": 1536,
+      "height": 1024,
+      "path": "assets/media/a1/a15c3256b906cb5ab917f3f521865eab30a9da051456f53d0944d391c26b585d.webp",
+      "translations": {
+        "es": {
+          "alt": "Ecoparque Ciénaga de Mallorquín",
+          "caption": "Ilustración editorial: Ecoparque Ciénaga de Mallorquín."
+        },
+        "en": {
+          "alt": "Mallorquín Wetland Ecopark",
+          "caption": "Editorial illustration: Mallorquín Wetland Ecopark."
+        },
+        "pt-BR": {
+          "alt": "Ecoparque Ciénaga de Mallorquín",
+          "caption": "Ilustração editorial: Ecoparque Ciénaga de Mallorquín."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "barranquilla",
+          "role": "poi:2"
+        }
+      ]
+    },
+    {
+      "origin": "ai_generated",
+      "creator": "Ilustración IA · revisión local",
+      "source_url": "",
+      "license_name": "Revisión local pendiente",
+      "license_url": "",
+      "width": 1536,
+      "height": 1024,
+      "path": "assets/media/1c/1c2ca85b90e1ffc17147f36b44c4c48f07e1d7dcaf3fcf9c4f66916a5568188a.webp",
+      "translations": {
+        "es": {
+          "alt": "Barrio Abajo: museo a cielo abierto",
+          "caption": "Ilustración editorial: Barrio Abajo: museo a cielo abierto."
+        },
+        "en": {
+          "alt": "Barrio Abajo: an open-air museum",
+          "caption": "Editorial illustration: Barrio Abajo: an open-air museum."
+        },
+        "pt-BR": {
+          "alt": "Barrio Abajo: museu a céu aberto",
+          "caption": "Ilustração editorial: Barrio Abajo: museu a céu aberto."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "barranquilla",
+          "role": "poi:4"
+        }
+      ]
+    },
+    {
+      "origin": "ai_generated",
+      "creator": "Ilustración IA · revisión local",
+      "source_url": "",
+      "license_name": "Revisión local pendiente",
+      "license_url": "",
+      "width": 1536,
+      "height": 1024,
+      "path": "assets/media/ca/ca50a176868403c911966ba8898c4ed2e3aa446ca47b51a72953eae3257d12e5.webp",
+      "translations": {
+        "es": {
+          "alt": "Ventana al Mundo",
+          "caption": "Ilustración editorial: Ventana al Mundo."
+        },
+        "en": {
+          "alt": "Ventana al Mundo",
+          "caption": "Editorial illustration: Ventana al Mundo."
+        },
+        "pt-BR": {
+          "alt": "Ventana al Mundo",
+          "caption": "Ilustração editorial: Ventana al Mundo."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "barranquilla",
+          "role": "poi:5"
+        }
+      ]
+    },
+    {
+      "origin": "ai_generated",
+      "creator": "Ilustración IA · borrador",
+      "source_url": "https://barranquilla.gov.co/mi-barranquilla/el-corazon-de-barranquilla-esta-de-fiesta-el-gran-malecon-cumple-8-anos-de-historias-cargadas-de-orgullo",
+      "license_name": "Revisión local; procedencia pendiente",
+      "license_url": "",
+      "width": 1600,
+      "height": 900,
+      "path": "assets/media/a3/a33b28fc1684841ed69fa6f66eee325c39c70816924879f3109c4c8edd00c594.webp",
+      "translations": {
+        "es": {
+          "alt": "Gran Malecón del Río",
+          "caption": "Ilustración editorial: Gran Malecón del Río."
+        },
+        "en": {
+          "alt": "Gran Malecón del Río",
+          "caption": "Editorial illustration: Gran Malecón del Río."
+        },
+        "pt-BR": {
+          "alt": "Gran Malecón del Río",
+          "caption": "Ilustração editorial: Gran Malecón del Río."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "barranquilla",
+          "role": "poi:1"
+        }
+      ]
+    },
+    {
+      "origin": "ai_generated",
+      "creator": "Ilustración IA · revisión local",
+      "source_url": "",
+      "license_name": "User supplied selected reference47; origin/permission retained as unconfirmed",
+      "license_url": "",
+      "width": 1200,
+      "height": 800,
+      "path": "assets/media/cd/cd494f5bb4db54d05d876d5e7f47c4616042d8361cb8f03bb83bf3d358946a20.webp",
+      "translations": {
+        "es": {
+          "alt": "Manizales",
+          "caption": "Ilustración editorial: Manizales."
+        },
+        "en": {
+          "alt": "Manizales",
+          "caption": "Editorial illustration: Manizales."
+        },
+        "pt-BR": {
+          "alt": "Manizales",
+          "caption": "Ilustração editorial: Manizales."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "manizales",
+          "role": "hero"
+        }
+      ]
+    },
+    {
+      "origin": "ai_generated",
+      "creator": "Ilustración IA · revisión local",
+      "source_url": "",
+      "license_name": "Reference owner/permission pending; no third-party photo input",
+      "license_url": "",
+      "width": 1200,
+      "height": 800,
+      "path": "assets/media/ca/cad248812f56a3e45ed5b9a3d4c8764815e297fc1cbca9b620b692d07dca35bf.webp",
+      "translations": {
+        "es": {
+          "alt": "Catedral Basílica de Nuestra Señora del Rosario",
+          "caption": "Ilustración editorial: Catedral Basílica de Nuestra Señora del Rosario."
+        },
+        "en": {
+          "alt": "Cathedral Basilica of Our Lady of the Rosary",
+          "caption": "Editorial illustration: Cathedral Basilica of Our Lady of the Rosary."
+        },
+        "pt-BR": {
+          "alt": "Catedral Basílica de Nossa Senhora do Rosário",
+          "caption": "Ilustração editorial: Catedral Basílica de Nossa Senhora do Rosário."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "manizales",
+          "role": "poi:1"
+        }
+      ]
+    },
+    {
+      "origin": "ai_generated",
+      "creator": "Ilustración IA derivada de fotografía de EnBrazosDeLaFiebre",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Monumento_a_los_Colonizadores,_Chipre,_Manizales.JPG",
+      "license_name": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "width": 1200,
+      "height": 800,
+      "path": "assets/media/c1/c1eb2051530d348fad98835b07cfd07d682cead0fea755fc40f00d622888bbcd.webp",
+      "translations": {
+        "es": {
+          "alt": "Chipre y Monumento a los Colonizadores",
+          "caption": "Ilustración editorial: Chipre y Monumento a los Colonizadores."
+        },
+        "en": {
+          "alt": "Chipre and the Colonizers Monument",
+          "caption": "Editorial illustration: Chipre and the Colonizers Monument."
+        },
+        "pt-BR": {
+          "alt": "Chipre e Monumento aos Colonizadores",
+          "caption": "Ilustração editorial: Chipre e Monumento aos Colonizadores."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "manizales",
+          "role": "poi:2"
+        }
+      ]
+    },
+    {
+      "origin": "ai_generated",
+      "creator": "Ilustración IA derivada de fotografía de Brenda Berrio Aagudelo",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cable_antiguo_aereo.JPG",
+      "license_name": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "width": 1200,
+      "height": 800,
+      "path": "assets/media/f8/f85b260e3efd0659affa0a128a7ef2977d468e84763082c62643bb881bd8af4c.webp",
+      "translations": {
+        "es": {
+          "alt": "Torre de Herveo y El Cable",
+          "caption": "Ilustración editorial: Torre de Herveo y El Cable."
+        },
+        "en": {
+          "alt": "Herveo Tower and El Cable",
+          "caption": "Editorial illustration: Herveo Tower and El Cable."
+        },
+        "pt-BR": {
+          "alt": "Torre de Herveo e El Cable",
+          "caption": "Ilustração editorial: Torre de Herveo e El Cable."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "manizales",
+          "role": "poi:3"
+        }
+      ]
+    },
+    {
+      "origin": "ai_generated",
+      "creator": "Ilustración IA · revisión local",
+      "source_url": "",
+      "license_name": "Source WRadio; individual author/capture/license unconfirmed. Owner explicitly requested correction ",
+      "license_url": "",
+      "width": 1200,
+      "height": 675,
+      "path": "assets/media/86/86788bf7ff4da08208733466455dd9a918171d47e77b2028a868fa79c572596d.webp",
+      "translations": {
+        "es": {
+          "alt": "Recinto del Pensamiento",
+          "caption": "Ilustración editorial: Recinto del Pensamiento."
+        },
+        "en": {
+          "alt": "Recinto del Pensamiento",
+          "caption": "Editorial illustration: Recinto del Pensamiento."
+        },
+        "pt-BR": {
+          "alt": "Recinto del Pensamiento",
+          "caption": "Ilustração editorial: Recinto del Pensamiento."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "manizales",
+          "role": "poi:4"
+        }
+      ]
+    },
+    {
+      "origin": "ai_generated",
+      "creator": "Ilustración IA · revisión local",
+      "source_url": "",
+      "license_name": "Reference owner/permission pending; no third-party photo input",
+      "license_url": "",
+      "width": 1200,
+      "height": 800,
+      "path": "assets/media/87/873c1606e6953e6016ff8b4e9069d46b71f5e98c0702eaa5c9a36c60365eb2b4.webp",
+      "translations": {
+        "es": {
+          "alt": "Reserva Río Blanco",
+          "caption": "Ilustración editorial: Reserva Río Blanco."
+        },
+        "en": {
+          "alt": "Río Blanco Reserve",
+          "caption": "Editorial illustration: Río Blanco Reserve."
+        },
+        "pt-BR": {
+          "alt": "Reserva Río Blanco",
+          "caption": "Ilustração editorial: Reserva Río Blanco."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "manizales",
+          "role": "poi:5"
+        }
+      ]
+    },
+    {
+      "origin": "ai_generated",
+      "creator": "Ilustración IA · revisión local",
+      "source_url": "",
+      "license_name": "Reference owner/permission pending; no third-party photo input",
+      "license_url": "",
+      "width": 1200,
+      "height": 800,
+      "path": "assets/media/df/dfa37283a704d01f48957cdb3962f6be68eb9eeb46451e930273c8387d994985.webp",
+      "translations": {
+        "es": {
+          "alt": "Ecoparque Los Yarumos",
+          "caption": "Ilustración editorial: Ecoparque Los Yarumos."
+        },
+        "en": {
+          "alt": "Los Yarumos Ecopark",
+          "caption": "Editorial illustration: Los Yarumos Ecopark."
+        },
+        "pt-BR": {
+          "alt": "Ecoparque Los Yarumos",
+          "caption": "Ilustração editorial: Ecoparque Los Yarumos."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "manizales",
+          "role": "poi:6"
+        }
+      ]
+    },
+    {
+      "origin": "ai_generated",
+      "creator": "Ilustración IA · adaptación para revisión local",
+      "source_url": "",
+      "license_name": "Selected reference adaptation; rights unconfirmed; DEV1 isolated review only",
+      "license_url": "",
+      "width": 1353,
+      "height": 1162,
+      "path": "assets/media/54/542673cbe687f0458a9800b28448ec5f403277dea2936f07c57ab8c12bef9cb5.webp",
+      "translations": {
+        "es": {
+          "alt": "Pereira",
+          "caption": "Ilustración editorial: Pereira."
+        },
+        "en": {
+          "alt": "Pereira",
+          "caption": "Editorial illustration: Pereira."
+        },
+        "pt-BR": {
+          "alt": "Pereira",
+          "caption": "Ilustração editorial: Pereira."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "pereira",
+          "role": "hero"
+        }
+      ]
+    },
+    {
+      "origin": "ai_generated",
+      "creator": "Ilustración IA · adaptación para revisión local",
+      "source_url": "",
+      "license_name": "Selected reference adaptation; rights unconfirmed; DEV1 isolated review only",
+      "license_url": "",
+      "width": 1100,
+      "height": 825,
+      "path": "assets/media/d7/d72b8d0c1c3858e3ebcd54485bbc1fe9613b087086048093404aae68d292380d.webp",
+      "translations": {
+        "es": {
+          "alt": "Bioparque Ukumarí",
+          "caption": "Ilustración editorial: Bioparque Ukumarí."
+        },
+        "en": {
+          "alt": "Bioparque Ukumarí",
+          "caption": "Editorial illustration: Bioparque Ukumarí."
+        },
+        "pt-BR": {
+          "alt": "Bioparque Ukumarí",
+          "caption": "Ilustração editorial: Bioparque Ukumarí."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "pereira",
+          "role": "poi:1"
+        }
+      ]
+    },
+    {
+      "origin": "ai_generated",
+      "creator": "Ilustración IA · adaptación para revisión local",
+      "source_url": "",
+      "license_name": "Selected reference adaptation; rights unconfirmed; DEV1 isolated review only",
+      "license_url": "",
+      "width": 1100,
+      "height": 733,
+      "path": "assets/media/ec/ecf1feeef41d9a65d2206f84fee5301bde6e83d690f3be4b47580cda8c6be438.webp",
+      "translations": {
+        "es": {
+          "alt": "Santuario de Fauna y Flora Otún Quimbaya",
+          "caption": "Ilustración editorial: Santuario de Fauna y Flora Otún Quimbaya."
+        },
+        "en": {
+          "alt": "Otún Quimbaya Flora and Fauna Sanctuary",
+          "caption": "Editorial illustration: Otún Quimbaya Flora and Fauna Sanctuary."
+        },
+        "pt-BR": {
+          "alt": "Santuário de Fauna e Flora Otún Quimbaya",
+          "caption": "Ilustração editorial: Santuário de Fauna e Flora Otún Quimbaya."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "pereira",
+          "role": "poi:2"
+        }
+      ]
+    },
+    {
+      "origin": "ai_generated",
+      "creator": "Ilustración IA · adaptación para revisión local",
+      "source_url": "",
+      "license_name": "Selected reference adaptation; rights unconfirmed; DEV1 isolated review only",
+      "license_url": "",
+      "width": 1100,
+      "height": 825,
+      "path": "assets/media/83/83536cd6ec828356350c7dffcbc667203fb39daf262533aba40f288929c13e8c.webp",
+      "translations": {
+        "es": {
+          "alt": "Megacable",
+          "caption": "Ilustración editorial: Megacable."
+        },
+        "en": {
+          "alt": "Megacable",
+          "caption": "Editorial illustration: Megacable."
+        },
+        "pt-BR": {
+          "alt": "Megacable",
+          "caption": "Ilustração editorial: Megacable."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "pereira",
+          "role": "poi:3"
+        }
+      ]
+    },
+    {
+      "origin": "ai_generated",
+      "creator": "Ilustración IA derivada de fotografía de SajoR (2022)",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Catedral_de_Pereira_-_Fachada_2.jpg",
+      "license_name": "CC BY-SA 4.0; adaptación ilustrada con IA",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "width": 1050,
+      "height": 1400,
+      "path": "assets/media/8b/8ba3b3c2c6c1c9fb55ffb3fd4666346f585f414a48407c7621438f7a5792b815.webp",
+      "translations": {
+        "es": {
+          "alt": "Catedral Nuestra Señora de la Pobreza",
+          "caption": "Ilustración editorial: Catedral Nuestra Señora de la Pobreza."
+        },
+        "en": {
+          "alt": "Cathedral of Our Lady of Poverty",
+          "caption": "Editorial illustration: Cathedral of Our Lady of Poverty."
+        },
+        "pt-BR": {
+          "alt": "Catedral Nossa Senhora da Pobreza",
+          "caption": "Ilustração editorial: Catedral Nossa Senhora da Pobreza."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "pereira",
+          "role": "poi:4"
+        }
+      ]
+    },
+    {
+      "origin": "ai_generated",
+      "creator": "Ilustración IA · adaptación para revisión local",
+      "source_url": "",
+      "license_name": "Selected reference adaptation; rights unconfirmed; DEV1 isolated review only",
+      "license_url": "",
+      "width": 1100,
+      "height": 824,
+      "path": "assets/media/88/8892b7b4dc5f14a35590af1a205297e31f36c82ecdaa277d7f526493cd56d2e1.webp",
+      "translations": {
+        "es": {
+          "alt": "Ucumarí – La Pastora",
+          "caption": "Ilustración editorial: Ucumarí – La Pastora."
+        },
+        "en": {
+          "alt": "Ucumarí – La Pastora",
+          "caption": "Editorial illustration: Ucumarí – La Pastora."
+        },
+        "pt-BR": {
+          "alt": "Ucumarí – La Pastora",
+          "caption": "Ilustração editorial: Ucumarí – La Pastora."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "pereira",
+          "role": "poi:5"
+        }
+      ]
+    },
+    {
+      "origin": "ai_generated",
+      "creator": "Ilustración IA · borrador local",
+      "source_url": "",
+      "license_name": "Localdraft; source attribution/rights pending",
+      "license_url": "",
+      "width": 1536,
+      "height": 1024,
+      "path": "assets/media/46/46d1eb40c66dc27f75fd763d66a91a20b72faceac6a4bcd5e699a370d00a5358.webp",
+      "translations": {
+        "es": {
+          "alt": "San Bernardo del Viento",
+          "caption": "Ilustración editorial: San Bernardo del Viento."
+        },
+        "en": {
+          "alt": "San Bernardo del Viento",
+          "caption": "Editorial illustration: San Bernardo del Viento."
+        },
+        "pt-BR": {
+          "alt": "San Bernardo del Viento",
+          "caption": "Ilustração editorial: San Bernardo del Viento."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "san-bernardo-del-viento",
+          "role": "hero"
+        }
+      ]
+    },
+    {
+      "origin": "ai_generated",
+      "creator": "Ilustración IA · borrador local",
+      "source_url": "",
+      "license_name": "Localdraft; source attribution/rights pending",
+      "license_url": "",
+      "width": 1536,
+      "height": 1024,
+      "path": "assets/media/02/02b224f91dd4975055a4ad7a7650d2bc2e5904e1cb3f1eacd9ea390ffb5b221b.webp",
+      "translations": {
+        "es": {
+          "alt": "Playa del Viento",
+          "caption": "Ilustración editorial: Playa del Viento."
+        },
+        "en": {
+          "alt": "Playa del Viento",
+          "caption": "Editorial illustration: Playa del Viento."
+        },
+        "pt-BR": {
+          "alt": "Playa del Viento",
+          "caption": "Ilustração editorial: Playa del Viento."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "san-bernardo-del-viento",
+          "role": "poi:1"
+        }
+      ]
+    },
+    {
+      "origin": "ai_generated",
+      "creator": "Ilustración IA · borrador local",
+      "source_url": "",
+      "license_name": "Localdraft; source attribution/rights pending",
+      "license_url": "",
+      "width": 1536,
+      "height": 1024,
+      "path": "assets/media/60/602d728a8f9d05090b5639a4439e27620c859380b41530ffa0b1a59483ed492a.webp",
+      "translations": {
+        "es": {
+          "alt": "Recorrido por Boca de Tinajones",
+          "caption": "Ilustración editorial: Recorrido por Boca de Tinajones."
+        },
+        "en": {
+          "alt": "Boat outing to Boca de Tinajones",
+          "caption": "Editorial illustration: Boat outing to Boca de Tinajones."
+        },
+        "pt-BR": {
+          "alt": "Passeio pela Boca de Tinajones",
+          "caption": "Ilustração editorial: Passeio pela Boca de Tinajones."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "san-bernardo-del-viento",
+          "role": "poi:3"
+        }
+      ]
+    },
+    {
+      "origin": "ai_generated",
+      "creator": "Ilustración IA · borrador local",
+      "source_url": "",
+      "license_name": "Localdraft; source attribution/rights pending",
+      "license_url": "",
+      "width": 1536,
+      "height": 1024,
+      "path": "assets/media/2c/2c10361af4cbb5046772c8d82e2b95f11014cae116bdd3736f68c13d129462f4.webp",
+      "translations": {
+        "es": {
+          "alt": "Recorrido por Caño La Balsa",
+          "caption": "Ilustración editorial: Recorrido por Caño La Balsa."
+        },
+        "en": {
+          "alt": "Caño La Balsa excursion",
+          "caption": "Editorial illustration: Caño La Balsa excursion."
+        },
+        "pt-BR": {
+          "alt": "Passeio pelo Caño La Balsa",
+          "caption": "Ilustração editorial: Passeio pelo Caño La Balsa."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "san-bernardo-del-viento",
+          "role": "poi:4"
+        }
+      ]
+    },
+    {
+      "origin": "ai_generated",
+      "creator": "Ilustración IA · revisión local",
+      "source_url": "",
+      "license_name": "User selected references; legal permission/provenance unconfirmed. DEV isolated review only.",
+      "license_url": "",
+      "width": 1200,
+      "height": 670,
+      "path": "assets/media/55/55d902d5c204af239dc22757ae7fb2d1feaf931e2665699a72bb8200e4f9deb6.webp",
+      "translations": {
+        "es": {
+          "alt": "Villavieja",
+          "caption": "Ilustración editorial: Villavieja."
+        },
+        "en": {
+          "alt": "Villavieja",
+          "caption": "Editorial illustration: Villavieja."
+        },
+        "pt-BR": {
+          "alt": "Villavieja",
+          "caption": "Ilustração editorial: Villavieja."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "villavieja",
+          "role": "hero"
+        }
+      ]
+    },
+    {
+      "origin": "ai_generated",
+      "creator": "Ilustración IA · revisión local",
+      "source_url": "",
+      "license_name": "User selected references; legal permission/provenance unconfirmed. DEV isolated review only.",
+      "license_url": "",
+      "width": 1200,
+      "height": 800,
+      "path": "assets/media/4b/4b94739df8bef13cb7b53c618a1975659520a0643ab4a6b7df0ac8ea4c7b5eba.webp",
+      "translations": {
+        "es": {
+          "alt": "La Tatacoa",
+          "caption": "Ilustración editorial: La Tatacoa."
+        },
+        "en": {
+          "alt": "La Tatacoa",
+          "caption": "Editorial illustration: La Tatacoa."
+        },
+        "pt-BR": {
+          "alt": "La Tatacoa",
+          "caption": "Ilustração editorial: La Tatacoa."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "villavieja",
+          "role": "poi:1"
+        }
+      ]
+    },
+    {
+      "origin": "ai_generated",
+      "creator": "Ilustración IA · revisión local",
+      "source_url": "",
+      "license_name": "User selected references; legal permission/provenance unconfirmed. DEV isolated review only.",
+      "license_url": "",
+      "width": 1200,
+      "height": 977,
+      "path": "assets/media/c8/c8fe8120b42549c7cbd5c56c54c8c9f7cffd9941af2921a2c741df20966104d3.webp",
+      "translations": {
+        "es": {
+          "alt": "Museo Paleontológico de Villavieja",
+          "caption": "Ilustración editorial: Museo Paleontológico de Villavieja."
+        },
+        "en": {
+          "alt": "Villavieja Paleontological Museum",
+          "caption": "Editorial illustration: Villavieja Paleontological Museum."
+        },
+        "pt-BR": {
+          "alt": "Museu Paleontológico de Villavieja",
+          "caption": "Ilustração editorial: Museu Paleontológico de Villavieja."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "villavieja",
+          "role": "poi:2"
+        }
+      ]
+    },
+    {
+      "origin": "ai_generated",
+      "creator": "Ilustración IA · revisión local",
+      "source_url": "",
+      "license_name": "User selected references; legal permission/provenance unconfirmed. DEV isolated review only.",
+      "license_url": "",
+      "width": 1200,
+      "height": 800,
+      "path": "assets/media/ab/abd9606f51e2f0021cfabeb922d0f4e055a16e0ab3ff17c7ec4947a785b26941.webp",
+      "translations": {
+        "es": {
+          "alt": "Capilla de Santa Bárbara",
+          "caption": "Ilustración editorial: Capilla de Santa Bárbara."
+        },
+        "en": {
+          "alt": "Santa Bárbara Chapel",
+          "caption": "Editorial illustration: Santa Bárbara Chapel."
+        },
+        "pt-BR": {
+          "alt": "Capela de Santa Bárbara",
+          "caption": "Ilustração editorial: Capela de Santa Bárbara."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "villavieja",
+          "role": "poi:3"
+        }
+      ]
+    },
+    {
+      "origin": "ai_generated",
+      "creator": "Ilustración IA · revisión local",
+      "source_url": "",
+      "license_name": "User selected references; legal permission/provenance unconfirmed. DEV isolated review only.",
+      "license_url": "",
+      "width": 1200,
+      "height": 713,
+      "path": "assets/media/55/551c8e2df5b30992ac4a9e5fea5fd0eda0c9ca08c4b15896f5a3f43712aa3b14.webp",
+      "translations": {
+        "es": {
+          "alt": "Observación astronómica en La Tatacoa",
+          "caption": "Ilustración editorial: Observación astronómica en La Tatacoa."
+        },
+        "en": {
+          "alt": "Astronomy in La Tatacoa",
+          "caption": "Editorial illustration: Astronomy in La Tatacoa."
+        },
+        "pt-BR": {
+          "alt": "Observação astronômica em La Tatacoa",
+          "caption": "Ilustração editorial: Observação astronômica em La Tatacoa."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "villavieja",
+          "role": "poi:4"
+        }
+      ]
+    },
+    {
+      "origin": "ai_generated",
+      "creator": "Ilustración IA · borrador local",
+      "source_url": "",
+      "license_name": "Localdraft; source attribution/rights pending",
+      "license_url": "",
+      "width": 1600,
+      "height": 648,
+      "path": "assets/media/33/33f309e8f1cc6b0b6c75e85d4ffd09fa7199298c30bc9017a0b775f5f0a2ef8b.webp",
+      "translations": {
+        "es": {
+          "alt": "Punta Piedra",
+          "caption": "Ilustración editorial: Punta Piedra."
+        },
+        "en": {
+          "alt": "Punta Piedra",
+          "caption": "Editorial illustration: Punta Piedra."
+        },
+        "pt-BR": {
+          "alt": "Punta Piedra",
+          "caption": "Ilustração editorial: Punta Piedra."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "san-bernardo-del-viento",
+          "role": "poi:2"
+        }
+      ]
+    },
+    {
+      "origin": "ai_generated",
+      "creator": "Builtin image_gen; exact model not exposed",
+      "source_url": "https://emisoraatlantico.com.co/local/baq-tour-inicia-operacion-en-barranquilla-con-recorridos-gratuitos-para-impulsar-el-turismo/",
+      "license_name": "New factual composition; source photographs observed only, not uploaded",
+      "license_url": "",
+      "width": 1536,
+      "height": 1024,
+      "path": "assets/media/52/52ec07af784bf6da249313cfae2e7f7fbefe7b124c7818ea194be252bc761ab3.webp",
+      "translations": {
+        "es": {
+          "alt": "Bus panorámico por Barranquilla",
+          "caption": "Ilustración editorial: Bus panorámico por Barranquilla."
+        },
+        "en": {
+          "alt": "Panoramic bus tour",
+          "caption": "Editorial illustration: Panoramic bus tour."
+        },
+        "pt-BR": {
+          "alt": "Passeio de ônibus panorâmico",
+          "caption": "Ilustração editorial: Passeio de ônibus panorâmico."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "barranquilla",
+          "role": "poi:8"
+        }
+      ]
+    },
+    {
+      "origin": "ai_generated",
+      "creator": "Builtin image_gen; exact model not exposed",
+      "source_url": "https://www.elheraldo.co/atlantico/2025/11/14/desde-este-sabado-establecen-costo-de-ingreso-para-el-recorrido-del-riobus-karakali/",
+      "license_name": "New factual composition; source photographs observed only, not uploaded",
+      "license_url": "",
+      "width": 1536,
+      "height": 1024,
+      "path": "assets/media/d5/d5515dd1d12c0b15668a3d243cd15d32813cbfeba7f345aea59077706390cd55.webp",
+      "translations": {
+        "es": {
+          "alt": "Navegación por el río Magdalena",
+          "caption": "Ilustración editorial: Navegación por el río Magdalena."
+        },
+        "en": {
+          "alt": "Boat trip on the Magdalena River",
+          "caption": "Editorial illustration: Boat trip on the Magdalena River."
+        },
+        "pt-BR": {
+          "alt": "Passeio pelo rio Magdalena",
+          "caption": "Ilustração editorial: Passeio pelo rio Magdalena."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "barranquilla",
+          "role": "poi:9"
+        }
+      ]
+    },
+    {
+      "origin": "ai_generated",
+      "creator": "Builtin image_gen; exact model not exposed",
+      "source_url": "https://caracol.com.co/2024/10/04/avances-en-el-tren-de-las-flores-barranquilla-se-alista-para-un-nuevo-destino-turistico/",
+      "license_name": "New factual composition; source photographs observed only, not uploaded",
+      "license_url": "",
+      "width": 1536,
+      "height": 1024,
+      "path": "assets/media/a2/a2ce064e589218f83c7a6d0b711e484d160d9602ed8cee534c2b3d43a263a438.webp",
+      "translations": {
+        "es": {
+          "alt": "Tren turístico hacia Puerto Mocho",
+          "caption": "Ilustración editorial: Tren turístico hacia Puerto Mocho."
+        },
+        "en": {
+          "alt": "Tourist train to Puerto Mocho",
+          "caption": "Editorial illustration: Tourist train to Puerto Mocho."
+        },
+        "pt-BR": {
+          "alt": "Trem turístico até Puerto Mocho",
+          "caption": "Ilustração editorial: Trem turístico até Puerto Mocho."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "barranquilla",
+          "role": "poi:10"
+        }
+      ]
+    },
+    {
+      "origin": "ai_generated",
+      "creator": "Builtin image_gen; exact model not exposed",
+      "source_url": "https://www.elheraldo.co/barranquilla/2025/12/19/la-luna-del-rio-el-nuevo-icono-que-transforma-la-experiencia-urbana-y-turistica-de-barranquilla/",
+      "license_name": "New factual composition; source photographs observed only, not uploaded",
+      "license_url": "",
+      "width": 1536,
+      "height": 1024,
+      "path": "assets/media/ea/ead91fcc9191ac85b01c2294a84b8c88d8b529b86cb48df8c169d75a28f49eca.webp",
+      "translations": {
+        "es": {
+          "alt": "Vista panorámica desde la Luna del Río",
+          "caption": "Ilustración editorial: Vista panorámica desde la Luna del Río."
+        },
+        "en": {
+          "alt": "Panoramic views from Luna del Río",
+          "caption": "Editorial illustration: Panoramic views from Luna del Río."
+        },
+        "pt-BR": {
+          "alt": "Vista panorâmica da Luna del Río",
+          "caption": "Ilustração editorial: Vista panorâmica da Luna del Río."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "barranquilla",
+          "role": "poi:11"
+        }
+      ]
+    },
+    {
+      "origin": "ai_generated",
+      "creator": "Builtin image_gen; exact model not exposed",
+      "source_url": "https://elpais.com/america-colombia/2024-02-10/carnaval-de-barranquilla-2024-fechas-desfiles-y-lo-que-hay-que-saber.html",
+      "license_name": "New factual composition; source photographs observed only, not uploaded",
+      "license_url": "",
+      "width": 1536,
+      "height": 1024,
+      "path": "assets/media/ae/ae522f3565855829a23246d71876f317eeaa3869e2b70427edce0b4e75c47ac9.webp",
+      "translations": {
+        "es": {
+          "alt": "Vivir el Carnaval de Barranquilla",
+          "caption": "Ilustración editorial: Vivir el Carnaval de Barranquilla."
+        },
+        "en": {
+          "alt": "Experience Barranquilla Carnival",
+          "caption": "Editorial illustration: Experience Barranquilla Carnival."
+        },
+        "pt-BR": {
+          "alt": "Vivencie o Carnaval de Barranquilla",
+          "caption": "Ilustração editorial: Vivencie o Carnaval de Barranquilla."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "barranquilla",
+          "role": "poi:12"
+        }
+      ]
+    },
+    {
+      "origin": "ai_generated",
+      "creator": "Ilustración IA · Explorando Lugares",
+      "source_url": "",
+      "license_name": "Generada con IA; referencia y aprobación exacta documentadas, procedencia de fotografías conservada",
+      "license_url": "",
+      "width": 1200,
+      "height": 800,
+      "path": "assets/media/7f/7fcefadc75ffe2872d24a61a2e3f9b6233b1d051a943d35793e9ca6018fb65fb.webp",
+      "translations": {
+        "es": {
+          "alt": "Tour cafetero y preparación del café",
+          "caption": "Ilustración editorial: Tour cafetero y preparación del café."
+        },
+        "en": {
+          "alt": "Coffee tour and coffee preparation",
+          "caption": "Editorial illustration: Coffee tour and coffee preparation."
+        },
+        "pt-BR": {
+          "alt": "Passeio do café e preparo da bebida",
+          "caption": "Ilustração editorial: Passeio do café e preparo da bebida."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "pereira",
+          "role": "poi:6"
+        }
+      ]
+    },
+    {
+      "origin": "ai_generated",
+      "creator": "Ilustración IA · Explorando Lugares",
+      "source_url": "",
+      "license_name": "Generada con IA; referencia y aprobación exacta documentadas, procedencia de fotografías conservada",
+      "license_url": "",
+      "width": 1200,
+      "height": 800,
+      "path": "assets/media/65/651cdcd15ed361698736d267af3f279c3ab3c49bcb81f5f1fea0baa27d10e249.webp",
+      "translations": {
+        "es": {
+          "alt": "Senderismo a la cascada Los Frailes",
+          "caption": "Ilustración editorial: Senderismo a la cascada Los Frailes."
+        },
+        "en": {
+          "alt": "Hiking to Los Frailes waterfall",
+          "caption": "Editorial illustration: Hiking to Los Frailes waterfall."
+        },
+        "pt-BR": {
+          "alt": "Trilha até a cachoeira Los Frailes",
+          "caption": "Ilustração editorial: Trilha até a cachoeira Los Frailes."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "pereira",
+          "role": "poi:7"
+        }
+      ]
+    },
+    {
+      "origin": "ai_generated",
+      "creator": "Ilustración IA · Explorando Lugares",
+      "source_url": "",
+      "license_name": "Generada con IA; referencia y aprobación exacta documentadas, procedencia de fotografías conservada",
+      "license_url": "",
+      "width": 1200,
+      "height": 800,
+      "path": "assets/media/fd/fd5f3efd17fc6de4ec46931b450e14c912f77be1ad0d54a08ed6d162e98f3e60.webp",
+      "translations": {
+        "es": {
+          "alt": "Recorrido guiado por La Tatacoa",
+          "caption": "Ilustración editorial: Recorrido guiado por La Tatacoa."
+        },
+        "en": {
+          "alt": "Guided tour of La Tatacoa",
+          "caption": "Editorial illustration: Guided tour of La Tatacoa."
+        },
+        "pt-BR": {
+          "alt": "Passeio guiado por La Tatacoa",
+          "caption": "Ilustração editorial: Passeio guiado por La Tatacoa."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "villavieja",
+          "role": "poi:5"
+        }
+      ]
+    },
+    {
+      "origin": "ai_generated",
+      "creator": "Ilustración editorial IA · revisión DEV1",
+      "source_url": "",
+      "license_name": "AI-generated independent composition; reference rights not asserted",
+      "license_url": "",
+      "width": 1200,
+      "height": 800,
+      "path": "assets/media/c5/c592279106026903f0f42d3917909c2744f781e1b9392849f84fa9eac27cb8c3.webp",
+      "translations": {
+        "es": {
+          "alt": "Excursión al Nevado del Ruiz",
+          "caption": "Ilustración editorial: Excursión al Nevado del Ruiz."
+        },
+        "en": {
+          "alt": "Nevado del Ruiz excursion",
+          "caption": "Editorial illustration: Nevado del Ruiz excursion."
+        },
+        "pt-BR": {
+          "alt": "Passeio ao Nevado del Ruiz",
+          "caption": "Ilustração editorial: Passeio ao Nevado del Ruiz."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "manizales",
+          "role": "poi:7"
+        }
+      ]
+    },
+    {
+      "origin": "ai_generated",
+      "creator": "Ilustración editorial IA · revisión DEV1",
+      "source_url": "",
+      "license_name": "AI-generated independent composition; reference rights not asserted",
+      "license_url": "",
+      "width": 1200,
+      "height": 800,
+      "path": "assets/media/df/dfba55b2e8cd9b339af81e4d547f48b7581ea006000d8af6522f27e9b4b8cb01.webp",
+      "translations": {
+        "es": {
+          "alt": "Aguas termales en los alrededores",
+          "caption": "Ilustración editorial: Aguas termales en los alrededores."
+        },
+        "en": {
+          "alt": "Hot springs near Manizales",
+          "caption": "Editorial illustration: Hot springs near Manizales."
+        },
+        "pt-BR": {
+          "alt": "Águas termais nos arredores",
+          "caption": "Ilustração editorial: Águas termais nos arredores."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "manizales",
+          "role": "poi:8"
+        }
+      ]
+    },
+    {
+      "origin": "ai_generated",
+      "creator": "Ilustración editorial IA · revisión DEV1",
+      "source_url": "",
+      "license_name": "AI-generated independent composition; reference rights not asserted",
+      "license_url": "",
+      "width": 1200,
+      "height": 800,
+      "path": "assets/media/c5/c5f2f2be9818adbe3804d5ee09145de7ca893327168ac7e83b3dd1cda823f48b.webp",
+      "translations": {
+        "es": {
+          "alt": "Recorrido guiado por el centro histórico",
+          "caption": "Ilustración editorial: Recorrido guiado por el centro histórico."
+        },
+        "en": {
+          "alt": "Guided historic centre walk",
+          "caption": "Editorial illustration: Guided historic centre walk."
+        },
+        "pt-BR": {
+          "alt": "Passeio guiado pelo centro histórico",
+          "caption": "Ilustração editorial: Passeio guiado pelo centro histórico."
+        }
+      },
+      "placements": [
+        {
+          "destination_slug": "manizales",
+          "role": "poi:9"
         }
       ]
     }

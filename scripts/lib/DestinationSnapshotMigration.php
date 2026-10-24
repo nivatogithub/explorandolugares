@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 final class DestinationSnapshotMigration {
- const SLUGS=['jerico','cartagena','bogota','medellin','santa-marta','jardin','covenas','zipaquira','santa-fe-de-antioquia','guatape','cauca-viejo','cocorna','arboletes','riohacha','valledupar'];
+ const SLUGS=['jerico','cartagena','bogota','medellin','santa-marta','jardin','covenas','zipaquira','santa-fe-de-antioquia','guatape','cauca-viejo','cocorna','arboletes','riohacha','valledupar','barranquilla','manizales','pereira','san-bernardo-del-viento','villavieja'];
  public function __construct(private PDO $p){}
  private function one(string $t,array $key):?array{$q=$this->p->prepare('SELECT * FROM '.$t.' WHERE '.implode(' AND ',array_map(fn($k)=>$k.'=?',array_keys($key))));$q->execute(array_values($key));$r=$q->fetchAll(PDO::FETCH_ASSOC);if(count($r)>1)throw new RuntimeException('Identidad ambigua:'.$t);return $r[0]??null;}
  private function put(string $t,array $key,array $data):array{$old=$this->one($t,$key);if($old){if($data)$this->p->prepare('UPDATE '.$t.' SET '.implode(',',array_map(fn($k)=>$k.'=?',array_keys($data))).' WHERE '.implode(' AND ',array_map(fn($k)=>$k.'=?',array_keys($key))))->execute([...array_values($data),...array_values($key)]);return array_replace($old,$data);} $row=[...$key,...$data];$this->p->prepare('INSERT INTO '.$t.' ('.implode(',',array_keys($row)).') VALUES('.implode(',',array_fill(0,count($row),'?')).')')->execute(array_values($row));return ['id'=>(int)$this->p->lastInsertId(),...$row];}
