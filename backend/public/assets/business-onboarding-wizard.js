@@ -191,15 +191,6 @@
     };
 
     form.querySelectorAll('[data-image-slot]').forEach((input) => input.addEventListener('change', () => uploadFile(input, 'editorial', input.dataset.imageSlot || 'cover')));
-    form.querySelectorAll('[data-product-card]').forEach((card, index) => {
-      const panel = document.createElement('details');
-      panel.className = 'registration-optional product-panel';
-      panel.open = index === 0;
-      const title = document.createElement('summary');
-      title.textContent = `Producto o servicio ${index + 1}`;
-      card.before(panel);
-      panel.append(title, card);
-    });
 
     const evidence = form.querySelector('[name="business_registration"]');
     if (evidence) evidence.addEventListener('change', () => uploadFile(evidence, 'evidence', 'business_registration'));
