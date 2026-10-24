@@ -10,12 +10,12 @@ Cada guía ofrece historia breve, tres motivos para visitar, tres atractivos con
 
 - `content/destinos-piloto.json`: textos originales ES/EN, subregión, atractivos, búsquedas de mapa, fotografías seleccionadas y fuentes editoriales por municipio. Las fuentes incluyen Colombia Travel, Gobernación, alcaldías e instituciones culturales. Los anuarios de 2014 aportan referencias históricas y geográficas, no disponibilidad actual.
 - `content/destinos-fotografias.json`: autor, archivo de Commons, enlace, licencia, dimensiones y leyenda ES/EN. Fotografías de terceros con licencia abierta, inspeccionadas en una hoja de contacto; las cuatro incorporaciones finales se inspeccionaron individualmente. Algunas imágenes históricas contienen una representación de un edificio; no se presentan como fotografías actuales del atractivo.
-- `content/plantillas/destino.html`: estructura compartida. Jericó se mantiene artesanal.
-- `content/plantillas/indice-destinos.html`: índice de 21 guías, búsqueda sin tildes y filtro por subregión; paginación de nueve tarjetas. Sin JavaScript conserva las 21 tarjetas y todos sus enlaces.
-- `scripts/generar-destinos.py`: valida cobertura del piloto, traducciones, rutas y créditos; genera los otros 20 destinos y el índice.
-- `scripts/preparar-hosting.py`: opciones → destinos → fichas verificadas → inglés → paquete PHP local. No despliega.
+- La presentación compartida vive en el renderer PHP y en sus vistas; Jericó no conserva una plantilla HTML independiente.
+- El índice de destinos se sirve desde el portal y usa el catálogo para búsqueda sin tildes y filtro por subregión; no se genera una copia HTML por municipio.
+- Los destinos se renderizan exclusivamente con PHP y el catálogo/base de datos; no existe un generador ni una reserva de páginas HTML por destino.
+- `scripts/preparar-hosting.py`: opciones → contenido estático general → inglés → paquete PHP local. No despliega.
 
-Editar los datos y plantillas, no las guías generadas. Luego ejecutar `python3 scripts/preparar-hosting.py`. Las páginas inglesas se generan del contenido editorial bilingüe; las fotografías son compartidas y los enlaces preservan el idioma.
+Editar los datos y las vistas PHP, no archivos publicados derivados. Luego ejecutar `python3 scripts/preparar-hosting.py`. Las páginas institucionales multilingües se preparan desde el contenido editorial bilingüe; los destinos conservan la ruta dinámica y las fotografías son compartidas.
 
 ## Criterios editoriales
 
@@ -27,7 +27,7 @@ Las fuentes se enlazan dentro de cada guía. Se comprobaron los enlaces; se reti
 
 ## Directorio y captación
 
-`data-destino` separa el catálogo de cada municipio. El generador de fichas admite los 21 destinos; permite el mismo identificador de negocio en municipios distintos y exige registro confirmado, información verificada, estado publicado, tipo de servicio válido, descripción bilingüe y canal de contacto seguro.
+`data-destino` separa el catálogo de cada municipio. El renderer dinámico admite los 21 destinos; permite el mismo identificador de negocio en municipios distintos y exige registro confirmado, información verificada, estado publicado, tipo de servicio válido, descripción bilingüe y canal de contacto seguro.
 
 Las invitaciones de cada guía llevan al formulario con `?municipio=Nombre#contacto`. Se preselecciona solamente un municipio habilitado; se conserva cualquier selección que la persona ya haya hecho. El formulario y sus validaciones de privacidad y contacto siguen siendo compartidos. La vista estática local no guarda solicitudes; necesita el backend configurado en hosting.
 

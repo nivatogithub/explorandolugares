@@ -84,6 +84,27 @@ final class DestinationRepository
         return $destination;
     }
 
+    /** Public destination directory: always reflects published database rows. */
+    public function listPublished(string $locale): array
+    {
+        $locale=in_array($locale,['es','en','pt-BR'],true)?$locale:'es';
+        $stmt=$this->pdo->prepare('SELECT d.slug,d.department,d.subregion,t.display_name,t.intro,
+            m.asset_path,mt.alt_text
+            FROM destinations d
+            JOIN destination_translations t ON t.destination_id=d.id AND t.locale=?
+            LEFT JOIN destination_media dm ON dm.destination_id=d.id AND dm.role="hero"
+            LEFT JOIN media_assets m ON m.id=dm.media_asset_id
+            LEFT JOIN media_asset_translations mt ON mt.media_asset_id=m.id AND mt.locale=?
+            WHERE d.publication_status="published"
+            ORDER BY t.display_name') ;
+        $stmt->execute([$locale,$locale]);
+        $rows=[];
+        foreach($stmt->fetchAll(PDO::FETCH_ASSOC) as $row){
+            if(!isset($rows[$row['slug']]))$rows[$row['slug']]=$row;
+        }
+        return array_values($rows);
+    }
+
     private function translatedRows(string $sql,int $id,string $locale): array
     { $stmt=$this->pdo->prepare($sql);$stmt->execute([$id,$locale]);return array_map(static fn($r)=>$r['body'],$stmt->fetchAll(PDO::FETCH_ASSOC)); }
 
