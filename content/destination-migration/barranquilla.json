@@ -1,0 +1,2507 @@
+{
+  "schema": "destination-public-snapshot-v1",
+  "destination": "barranquilla",
+  "tables": {
+    "destinations": [
+      {
+        "id": 24,
+        "slug": "barranquilla",
+        "destination_type": "city",
+        "country_code": "CO",
+        "department": "Atlántico",
+        "subregion": "",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 25,
+        "created_at": "2026-10-23 16:19:24",
+        "updated_at": "2026-10-23 20:48:08"
+      }
+    ],
+    "destination_translations": [
+      {
+        "destination_id": 24,
+        "locale": "en",
+        "display_name": "Barranquilla",
+        "eyebrow": "ATLÁNTICO / COLOMBIA",
+        "headline": "River, Carnival and Caribbean life",
+        "intro": "Discover Barranquilla between the Magdalena River, Carnival neighbourhoods and Mallorquín mangroves. Explore its waterfront, cultural spaces and Caribbean streets in a city connected to both river and sea.",
+        "meta_description": "Explore Barranquilla: the Gran Malecón waterfront, Carnival culture, Mallorquín mangroves, Puerto Mocho Beach and places to visit in Atlántico."
+      },
+      {
+        "destination_id": 24,
+        "locale": "es",
+        "display_name": "Barranquilla",
+        "eyebrow": "ATLÁNTICO / COLOMBIA",
+        "headline": "Río, Carnaval y Caribe",
+        "intro": "Barranquilla se descubre entre el Magdalena, los barrios del Carnaval y los manglares de Mallorquín. Recorre su paseo fluvial, visita espacios culturales y conoce una ciudad caribeña que mira al río y al mar.",
+        "meta_description": "Descubre Barranquilla: Gran Malecón, cultura del Carnaval, manglares de Mallorquín, Puerto Mocho y lugares para conocer en la capital del Atlántico."
+      },
+      {
+        "destination_id": 24,
+        "locale": "pt-BR",
+        "display_name": "Barranquilla",
+        "eyebrow": "ATLÁNTICO / COLOMBIA",
+        "headline": "Rio, Carnaval e Caribe",
+        "intro": "Conheça Barranquilla entre o rio Magdalena, os bairros do Carnaval e os manguezais de Mallorquín. Explore a orla fluvial, os espaços culturais e as ruas caribenhas de uma cidade ligada ao rio e ao mar.",
+        "meta_description": "Conheça Barranquilla: Gran Malecón, cultura do Carnaval, manguezais de Mallorquín, praia de Puerto Mocho e atrações na capital do Atlántico."
+      }
+    ],
+    "destination_story_blocks": [
+      {
+        "id": 27,
+        "destination_id": 24,
+        "section_key": "history",
+        "display_order": 1
+      },
+      {
+        "id": 28,
+        "destination_id": 24,
+        "section_key": "history",
+        "display_order": 2
+      },
+      {
+        "id": 29,
+        "destination_id": 24,
+        "section_key": "history",
+        "display_order": 3
+      }
+    ],
+    "destination_reasons": [
+      {
+        "id": 70,
+        "destination_id": 24,
+        "display_order": 1
+      },
+      {
+        "id": 71,
+        "destination_id": 24,
+        "display_order": 2
+      },
+      {
+        "id": 72,
+        "destination_id": 24,
+        "display_order": 3
+      }
+    ],
+    "destination_sources": [],
+    "destination_media": [
+      {
+        "destination_id": 24,
+        "media_asset_id": 124,
+        "role": "hero",
+        "display_order": 0
+      }
+    ],
+    "destination_story_translations": [
+      {
+        "story_block_id": 27,
+        "locale": "en",
+        "body": "The Magdalena River is central to Barranquilla’s history. Trade and port activity drove its growth, connecting the city to inland Colombia and international routes."
+      },
+      {
+        "story_block_id": 27,
+        "locale": "es",
+        "body": "El río Magdalena explica buena parte de la historia de Barranquilla. El comercio y la actividad portuaria impulsaron su crecimiento y la conectaron con el interior colombiano y con rutas internacionales."
+      },
+      {
+        "story_block_id": 27,
+        "locale": "pt-BR",
+        "body": "O rio Magdalena ajuda a explicar a história de Barranquilla. O comércio e a atividade portuária impulsionaram seu crescimento e conectaram a cidade ao interior colombiano e a rotas internacionais."
+      },
+      {
+        "story_block_id": 28,
+        "locale": "en",
+        "body": "Migration, local trades and Caribbean traditions shaped its neighbourhoods and cultural life. Carnival brings together music, dance and knowledge that remain alive beyond the festival, particularly in Barrio Abajo and the Carnival Museum."
+      },
+      {
+        "story_block_id": 28,
+        "locale": "es",
+        "body": "Migraciones, oficios y tradiciones caribeñas dieron forma a sus barrios y a su vida cultural. El Carnaval reúne músicas, danzas y saberes que siguen vivos fuera de los días de fiesta, especialmente en espacios como Barrio Abajo y el Museo del Carnaval."
+      },
+      {
+        "story_block_id": 28,
+        "locale": "pt-BR",
+        "body": "Migrações, ofícios e tradições caribenhas moldaram seus bairros e sua vida cultural. O Carnaval reúne músicas, danças e saberes que permanecem vivos fora da festa, especialmente em Barrio Abajo e no Museu do Carnaval."
+      },
+      {
+        "story_block_id": 29,
+        "locale": "en",
+        "body": "The Gran Malecón and Mallorquín offer different connections with water: an urban promenade beside the Magdalena and trails through a mangrove ecosystem. These distinct settings should not be confused with open beaches."
+      },
+      {
+        "story_block_id": 29,
+        "locale": "es",
+        "body": "El Gran Malecón y la recuperación de espacios de Mallorquín ofrecen maneras distintas de acercarse al agua: un paseo urbano frente al Magdalena y recorridos por un ecosistema de manglar. Son paisajes diferentes que conviene conocer sin confundirlos con playas abiertas."
+      },
+      {
+        "story_block_id": 29,
+        "locale": "pt-BR",
+        "body": "O Gran Malecón e Mallorquín oferecem relações diferentes com a água: um passeio urbano às margens do Magdalena e trilhas num ecossistema de manguezal. São paisagens distintas, que não devem ser confundidas com praias abertas."
+      }
+    ],
+    "destination_reason_translations": [
+      {
+        "reason_id": 70,
+        "locale": "en",
+        "body": "Walk beside the Magdalena and enjoy the river landscape."
+      },
+      {
+        "reason_id": 70,
+        "locale": "es",
+        "body": "Caminar por el borde del Magdalena y observar el paisaje fluvial."
+      },
+      {
+        "reason_id": 70,
+        "locale": "pt-BR",
+        "body": "Caminhar às margens do Magdalena e apreciar a paisagem fluvial."
+      },
+      {
+        "reason_id": 71,
+        "locale": "en",
+        "body": "Explore Carnival culture beyond the festival dates."
+      },
+      {
+        "reason_id": 71,
+        "locale": "es",
+        "body": "Acercarte a la cultura del Carnaval durante todo el año."
+      },
+      {
+        "reason_id": 71,
+        "locale": "pt-BR",
+        "body": "Conhecer a cultura do Carnaval além das datas da festa."
+      },
+      {
+        "reason_id": 72,
+        "locale": "en",
+        "body": "Combine city streets, mangroves and beach within the district."
+      },
+      {
+        "reason_id": 72,
+        "locale": "es",
+        "body": "Combinar ciudad, manglar y playa sin salir del distrito."
+      },
+      {
+        "reason_id": 72,
+        "locale": "pt-BR",
+        "body": "Combinar cidade, manguezal e praia no mesmo distrito."
+      }
+    ],
+    "points_of_interest": [
+      {
+        "id": 92,
+        "destination_id": 24,
+        "slug": "gran-malecon",
+        "poi_type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 1
+      },
+      {
+        "id": 93,
+        "destination_id": 24,
+        "slug": "ecoparque-mallorquin",
+        "poi_type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 2
+      },
+      {
+        "id": 94,
+        "destination_id": 24,
+        "slug": "museo-carnaval",
+        "poi_type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 3
+      },
+      {
+        "id": 95,
+        "destination_id": 24,
+        "slug": "barrio-abajo",
+        "poi_type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 4
+      },
+      {
+        "id": 96,
+        "destination_id": 24,
+        "slug": "ventana-al-mundo",
+        "poi_type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 5
+      },
+      {
+        "id": 97,
+        "destination_id": 24,
+        "slug": "puerto-mocho",
+        "poi_type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 6
+      },
+      {
+        "id": 98,
+        "destination_id": 24,
+        "slug": "plaza-paz-catedral",
+        "poi_type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 7
+      },
+      {
+        "id": 99,
+        "destination_id": 24,
+        "slug": "bus-panoramico",
+        "poi_type": "experience",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 8
+      },
+      {
+        "id": 100,
+        "destination_id": 24,
+        "slug": "navegacion-magdalena",
+        "poi_type": "experience",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 9
+      },
+      {
+        "id": 101,
+        "destination_id": 24,
+        "slug": "tren-las-flores",
+        "poi_type": "experience",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 10
+      },
+      {
+        "id": 102,
+        "destination_id": 24,
+        "slug": "luna-del-rio",
+        "poi_type": "experience",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 11
+      },
+      {
+        "id": 103,
+        "destination_id": 24,
+        "slug": "carnaval-barranquilla",
+        "poi_type": "experience",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 12
+      }
+    ],
+    "point_of_interest_translations": [
+      {
+        "point_of_interest_id": 92,
+        "locale": "en",
+        "name": "Gran Malecón del Río",
+        "description": "A promenade beside the Magdalena with paths, green spaces and places to gather. The waterfront has several sections: choose a stretch to explore at your own pace, remembering this is a riverfront rather than a seafront.",
+        "map_url": "https://www.google.com/maps?cid=3874035168352582696",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 92,
+        "locale": "es",
+        "name": "Gran Malecón del Río",
+        "description": "Un paseo para acercarte al Magdalena entre senderos, zonas verdes y espacios de encuentro. El corredor reúne varios sectores: elige un tramo y recórrelo a tu ritmo, sin confundir el río con el mar.",
+        "map_url": "https://www.google.com/maps?cid=3874035168352582696",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 92,
+        "locale": "pt-BR",
+        "name": "Gran Malecón del Río",
+        "description": "Um passeio às margens do Magdalena com caminhos, áreas verdes e espaços de convivência. O corredor tem vários setores: escolha um trecho para conhecer no seu ritmo, lembrando que esta é uma orla fluvial.",
+        "map_url": "https://www.google.com/maps?cid=3874035168352582696",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 93,
+        "locale": "en",
+        "name": "Mallorquín Wetland Ecopark",
+        "description": "Raised boardwalks bring visitors close to mangroves and the wetland landscape. This is a nature visit within the district; check admission conditions and respect designated trails and wildlife.",
+        "map_url": "https://www.google.com/maps?cid=5398400715304868423",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 93,
+        "locale": "es",
+        "name": "Ecoparque Ciénaga de Mallorquín",
+        "description": "Las pasarelas permiten acercarse al manglar y al paisaje de la ciénaga. Es una visita de naturaleza dentro del distrito; consulta las condiciones de ingreso y respeta los senderos habilitados y la fauna.",
+        "map_url": "https://www.google.com/maps?cid=5398400715304868423",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 93,
+        "locale": "pt-BR",
+        "name": "Ecoparque Ciénaga de Mallorquín",
+        "description": "As passarelas aproximam os visitantes dos manguezais e da paisagem da lagoa. É um passeio de natureza dentro do distrito; consulte as condições de entrada e respeite as trilhas abertas e a fauna.",
+        "map_url": "https://www.google.com/maps?cid=5398400715304868423",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 94,
+        "locale": "en",
+        "name": "Carnival Museum",
+        "description": "In Barrio Abajo, this museum explores the festival’s music, dance, costumes and history. Its colourful facade distinguishes it from the neighbouring Casa del Carnaval. Check visiting arrangements before going.",
+        "map_url": "https://www.google.com/maps?cid=6050086234033065190",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 94,
+        "locale": "es",
+        "name": "Museo del Carnaval",
+        "description": "En Barrio Abajo, este museo propone un acercamiento a las músicas, danzas, vestuarios e historia de la fiesta. Su fachada multicolor lo distingue de la vecina Casa del Carnaval. Consulta la programación de visitas antes de ir.",
+        "map_url": "https://www.google.com/maps?cid=6050086234033065190",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 94,
+        "locale": "pt-BR",
+        "name": "Museu do Carnaval",
+        "description": "Em Barrio Abajo, o museu apresenta músicas, danças, trajes e a história da festa. Sua fachada multicolorida o diferencia da vizinha Casa del Carnaval. Consulte as condições de visita antes de ir.",
+        "map_url": "https://www.google.com/maps?cid=6050086234033065190",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 95,
+        "locale": "en",
+        "name": "Barrio Abajo: an open-air museum",
+        "description": "A neighbourhood shaped by popular memory and Carnival, where murals invite a slower look at the streets. This is a living residential area: respect its residents and remember that artworks may change.",
+        "map_url": "https://www.google.com/maps?cid=3592785704674598244",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 95,
+        "locale": "es",
+        "name": "Barrio Abajo: museo a cielo abierto",
+        "description": "Un barrio ligado a la memoria popular y al Carnaval, donde los murales invitan a mirar las calles con calma. La ruta atraviesa un barrio vivo: respeta a sus habitantes y ten presente que las intervenciones artísticas pueden cambiar.",
+        "map_url": "https://www.google.com/maps?cid=3592785704674598244",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 95,
+        "locale": "pt-BR",
+        "name": "Barrio Abajo: museu a céu aberto",
+        "description": "Um bairro ligado à memória popular e ao Carnaval, onde os murais convidam a observar as ruas com calma. É um bairro vivo: respeite os moradores e lembre que as intervenções artísticas podem mudar.",
+        "map_url": "https://www.google.com/maps?cid=3592785704674598244",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 96,
+        "locale": "en",
+        "name": "Ventana al Mundo",
+        "description": "Coloured panels and a large opening make this monument one of Barranquilla’s recognisable silhouettes. It stands at the Circunvalar roundabout near Vía 40, separate from the Gran Malecón; plan the journey between them.",
+        "map_url": "https://www.google.com/maps?cid=5941940625410126476",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 96,
+        "locale": "es",
+        "name": "Ventana al Mundo",
+        "description": "Los paneles de colores y la abertura de este monumento lo convierten en una silueta reconocible de Barranquilla. Está en la rotonda de la Circunvalar, cerca de Vía 40, separado del Gran Malecón; planifica el traslado entre ambos.",
+        "map_url": "https://www.google.com/maps?cid=5941940625410126476",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 96,
+        "locale": "pt-BR",
+        "name": "Ventana al Mundo",
+        "description": "Os painéis coloridos e a grande abertura tornam o monumento uma silhueta reconhecível de Barranquilla. Fica na rotatória da Circunvalar, perto da Vía 40, separado do Gran Malecón; planeje o deslocamento entre os dois.",
+        "map_url": "https://www.google.com/maps?cid=5941940625410126476",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 97,
+        "locale": "en",
+        "name": "Puerto Mocho Beach",
+        "description": "The district’s beach reveals another side of Barranquilla, with sand and a coastal setting distinct from the Magdalena promenade. Check access, services and official advice; this guide does not certify swimming conditions.",
+        "map_url": "https://www.google.com/maps?cid=16704380173082916524",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 97,
+        "locale": "es",
+        "name": "Playa de Puerto Mocho",
+        "description": "La playa del distrito muestra otra cara de Barranquilla, con arena y un entorno costero diferente del paseo del Magdalena. Comprueba accesos, servicios y recomendaciones de las autoridades; esta guía no certifica condiciones de baño.",
+        "map_url": "https://www.google.com/maps?cid=16704380173082916524",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 97,
+        "locale": "pt-BR",
+        "name": "Praia de Puerto Mocho",
+        "description": "A praia do distrito revela outra face de Barranquilla, com areia e um ambiente costeiro diferente do passeio do Magdalena. Confira os acessos, serviços e orientações oficiais; este guia não certifica condições para banho.",
+        "map_url": "https://www.google.com/maps?cid=16704380173082916524",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 98,
+        "locale": "en",
+        "name": "Plaza de la Paz and María Reina Cathedral",
+        "description": "The square and cathedral form a civic and religious ensemble of modern architecture. The church is distinguished by its angular facade. Enjoy the exterior and confirm access if you wish to visit inside.",
+        "map_url": "https://www.google.com/maps?cid=11320290559120295166",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 98,
+        "locale": "es",
+        "name": "Plaza de la Paz y Catedral María Reina",
+        "description": "La plaza y la catedral forman un conjunto cívico y religioso de arquitectura moderna. Las formas angulares de la fachada distinguen el templo. Disfruta la vista exterior y confirma el acceso si quieres conocer el interior.",
+        "map_url": "https://www.google.com/maps?cid=11320290559120295166",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 98,
+        "locale": "pt-BR",
+        "name": "Plaza de la Paz e Catedral María Reina",
+        "description": "A praça e a catedral formam um conjunto cívico e religioso de arquitetura moderna. As formas angulares da fachada distinguem o templo. Aprecie o exterior e confirme o acesso se quiser conhecer o interior.",
+        "map_url": "https://www.google.com/maps?cid=11320290559120295166",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 99,
+        "locale": "en",
+        "name": "Panoramic bus tour",
+        "description": "Explore city landmarks on a guided sightseeing bus. Check the itinerary and departures before visiting.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 99,
+        "locale": "es",
+        "name": "Bus panorámico por Barranquilla",
+        "description": "Recorre distintos puntos de la ciudad a bordo de un bus turístico con acompañamiento. Confirma el itinerario y las salidas antes de la visita.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 99,
+        "locale": "pt-BR",
+        "name": "Passeio de ônibus panorâmico",
+        "description": "Conheça pontos da cidade em um ônibus turístico com acompanhamento. Confirme o itinerário e as saídas antes da visita.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 100,
+        "locale": "en",
+        "name": "Boat trip on the Magdalena River",
+        "description": "See the river landscape and city from a boat departing from the Puerta de Oro sector. Check available routes and departures.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 100,
+        "locale": "es",
+        "name": "Navegación por el río Magdalena",
+        "description": "Conoce el paisaje fluvial y la ciudad desde una embarcación que sale del sector Puerta de Oro. Consulta los recorridos y zarpes disponibles.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 100,
+        "locale": "pt-BR",
+        "name": "Passeio pelo rio Magdalena",
+        "description": "Conheça a paisagem fluvial e a cidade em uma embarcação que parte do setor Puerta de Oro. Consulte os trajetos e as saídas disponíveis.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 101,
+        "locale": "en",
+        "name": "Tourist train to Puerto Mocho",
+        "description": "Travel from Las Flores to Puerto Mocho beach on the tourist train. Check service and tickets for your visit.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 101,
+        "locale": "es",
+        "name": "Tren turístico hacia Puerto Mocho",
+        "description": "Viaja desde Las Flores hacia la playa de Puerto Mocho en el tren turístico. Confirma la operación y los tiquetes para tu visita.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 101,
+        "locale": "pt-BR",
+        "name": "Trem turístico até Puerto Mocho",
+        "description": "Viaje de Las Flores até a praia de Puerto Mocho no trem turístico. Confirme o funcionamento e os ingressos para a visita.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 102,
+        "locale": "en",
+        "name": "Panoramic views from Luna del Río",
+        "description": "Ride the observation wheel at the Gran Malecón for another perspective on the Magdalena River and Barranquilla.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 102,
+        "locale": "es",
+        "name": "Vista panorámica desde la Luna del Río",
+        "description": "Sube a la rueda panorámica del Gran Malecón para observar el río Magdalena y Barranquilla desde otra perspectiva.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 102,
+        "locale": "pt-BR",
+        "name": "Vista panorâmica da Luna del Río",
+        "description": "Suba na roda panorâmica do Gran Malecón para observar o rio Magdalena e Barranquilla de outra perspectiva.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 103,
+        "locale": "en",
+        "name": "Experience Barranquilla Carnival",
+        "description": "Music, dance, costumes and parades fill the streets during Carnival. This is a seasonal celebration: check the programme and conditions for each event.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 103,
+        "locale": "es",
+        "name": "Vivir el Carnaval de Barranquilla",
+        "description": "Música, danzas, disfraces y desfiles toman las calles durante el Carnaval. Es una celebración de temporada: revisa la programación y las condiciones de cada evento.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 103,
+        "locale": "pt-BR",
+        "name": "Vivencie o Carnaval de Barranquilla",
+        "description": "Música, danças, fantasias e desfiles tomam as ruas durante o Carnaval. É uma celebração de temporada: consulte a programação e as condições de cada evento.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      }
+    ],
+    "point_of_interest_media": [
+      {
+        "point_of_interest_id": 92,
+        "media_asset_id": 164,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 93,
+        "media_asset_id": 150,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 94,
+        "media_asset_id": 127,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 95,
+        "media_asset_id": 152,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 96,
+        "media_asset_id": 153,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 97,
+        "media_asset_id": 130,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 98,
+        "media_asset_id": 131,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 99,
+        "media_asset_id": 318,
+        "role": "gallery",
+        "display_order": 0
+      },
+      {
+        "point_of_interest_id": 100,
+        "media_asset_id": 319,
+        "role": "gallery",
+        "display_order": 0
+      },
+      {
+        "point_of_interest_id": 101,
+        "media_asset_id": 320,
+        "role": "gallery",
+        "display_order": 0
+      },
+      {
+        "point_of_interest_id": 102,
+        "media_asset_id": 321,
+        "role": "gallery",
+        "display_order": 0
+      },
+      {
+        "point_of_interest_id": 103,
+        "media_asset_id": 322,
+        "role": "gallery",
+        "display_order": 0
+      }
+    ],
+    "businesses": [
+      {
+        "id": 133,
+        "public_id": "9e94e204-2cc5-53e9-adf7-7070aedb3823",
+        "destination_id": 24,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "emiliano",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 13
+      },
+      {
+        "id": 134,
+        "public_id": "73379ad7-bc80-560f-866e-79808f12e003",
+        "destination_id": 24,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "manuel-restaurante",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 14
+      },
+      {
+        "id": 135,
+        "public_id": "801ce6e6-29dd-51b8-ab8a-05175bcc3942",
+        "destination_id": 24,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "marfil-steak-house",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 15
+      },
+      {
+        "id": 136,
+        "public_id": "499cf885-0959-5cfe-9d26-3b07f2703bb5",
+        "destination_id": 24,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "enzo-terraza-italiana",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 16
+      },
+      {
+        "id": 137,
+        "public_id": "aa8d41e5-c7e8-5265-8977-ccf7ee03b368",
+        "destination_id": 24,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "kizuna-asian-fusion",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 17
+      },
+      {
+        "id": 138,
+        "public_id": "658ba0c6-9310-530b-b1ea-03217ae93a31",
+        "destination_id": 24,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "amalin",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 18
+      },
+      {
+        "id": 139,
+        "public_id": "3895e69d-7c65-5999-a80a-888c390b1cda",
+        "destination_id": 24,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "mot",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 19
+      },
+      {
+        "id": 140,
+        "public_id": "6df95b82-fb3e-51ab-ad18-ac557ba6087a",
+        "destination_id": 24,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "the-fit-bar-cafe",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 20
+      },
+      {
+        "id": 141,
+        "public_id": "05538cd8-e08a-5c26-b9f7-d245a0ccd5e9",
+        "destination_id": 24,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "mimi",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 21
+      },
+      {
+        "id": 142,
+        "public_id": "1d0f9db9-41fc-5327-b008-3e07b746b5cc",
+        "destination_id": 24,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "la-ganache-cafe-bistro",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 22
+      },
+      {
+        "id": 143,
+        "public_id": "813fe55e-e7c7-5bcc-be28-467d1f638055",
+        "destination_id": 24,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "epoca-espresso-bar",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 23
+      },
+      {
+        "id": 144,
+        "public_id": "5831e829-4085-56c3-ae61-aede217140f8",
+        "destination_id": 24,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "dulcerna",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 24
+      },
+      {
+        "id": 146,
+        "public_id": "65efbb39-5106-571f-aacb-4ac133bf2b08",
+        "destination_id": 24,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "pepe-anca-steakhouse",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 26
+      },
+      {
+        "id": 148,
+        "public_id": "8575b175-bbe9-5637-b046-ef7786a0d30e",
+        "destination_id": 24,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "hot-punto-multiple-del-sabor",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 28
+      },
+      {
+        "id": 150,
+        "public_id": "e646ca41-af24-5caf-af02-800d62b4bf9b",
+        "destination_id": 24,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "fiordi",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 30
+      },
+      {
+        "id": 147,
+        "public_id": "378fc23b-6d54-56db-b33e-c2fdebaab73d",
+        "destination_id": 24,
+        "category_code": "comercio",
+        "record_origin": "public_import",
+        "slug": "silvia-tcherassi-boutique",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 27
+      },
+      {
+        "id": 149,
+        "public_id": "f71899bd-bf82-5727-9c83-3ebe3d5d2620",
+        "destination_id": 24,
+        "category_code": "comercio",
+        "record_origin": "public_import",
+        "slug": "artesanias-del-atlantico-boutique",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 29
+      },
+      {
+        "id": 145,
+        "public_id": "0f3b19d9-28ab-5fc8-b13d-2d95fbd1a98b",
+        "destination_id": 24,
+        "category_code": "experiencias",
+        "record_origin": "public_import",
+        "slug": "leonar-tours",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 25
+      },
+      {
+        "id": 121,
+        "public_id": "2304acb9-1229-50a6-994c-362e1607feda",
+        "destination_id": 24,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "movich-buro-51",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 1
+      },
+      {
+        "id": 122,
+        "public_id": "87a92b92-2d98-53c1-84df-119f911dc5d4",
+        "destination_id": 24,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "hotel-mfm-barahona-72",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 2
+      },
+      {
+        "id": 123,
+        "public_id": "5b02aed2-e709-5d9d-b1ab-6a02d0750570",
+        "destination_id": 24,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "holiday-inn-express",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 3
+      },
+      {
+        "id": 124,
+        "public_id": "26e46950-c244-538f-a535-8e9f18e4b320",
+        "destination_id": 24,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "ghl-hotel",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 4
+      },
+      {
+        "id": 125,
+        "public_id": "0ac529cf-b4f5-502e-8e37-d903690b8dd7",
+        "destination_id": 24,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "hotel-estelar",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 5
+      },
+      {
+        "id": 126,
+        "public_id": "cf40a0a1-1a1d-5f40-bc55-2c253b4d60f8",
+        "destination_id": 24,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "hotel-el-prado",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 6
+      },
+      {
+        "id": 127,
+        "public_id": "382e6147-94e9-5d0d-b430-0f4bea0d7244",
+        "destination_id": 24,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "country-international-hotel",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 7
+      },
+      {
+        "id": 128,
+        "public_id": "33d7c6ea-1169-56ea-b3be-cfb0457c16d8",
+        "destination_id": 24,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "howard-johnson-by-wyndham",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 8
+      },
+      {
+        "id": 129,
+        "public_id": "59025889-ec87-5008-bcb3-3a36ab9253e9",
+        "destination_id": 24,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "nh-collection-barranquilla-smartsuites-royal",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 9
+      },
+      {
+        "id": 130,
+        "public_id": "24604adf-56e5-5e3d-8e2a-45d2fbc4c660",
+        "destination_id": 24,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "hotel-windsor",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 10
+      },
+      {
+        "id": 131,
+        "public_id": "2f8b09e0-21d0-514b-a636-572c33f208d9",
+        "destination_id": 24,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "wyndham-garden",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 11
+      },
+      {
+        "id": 132,
+        "public_id": "88eacaa5-0c3f-5a59-84ca-bee617a12411",
+        "destination_id": 24,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "hilton-garden-inn",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 12
+      }
+    ],
+    "business_translations": [
+      {
+        "business_id": 121,
+        "locale": "en",
+        "display_name": "Movich Buró 51",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 121,
+        "locale": "es",
+        "display_name": "Movich Buró 51",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 121,
+        "locale": "pt-BR",
+        "display_name": "Movich Buró 51",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 122,
+        "locale": "en",
+        "display_name": "Hotel MFM Barahona 72",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 122,
+        "locale": "es",
+        "display_name": "Hotel MFM Barahona 72",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 122,
+        "locale": "pt-BR",
+        "display_name": "Hotel MFM Barahona 72",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 123,
+        "locale": "en",
+        "display_name": "Holiday Inn Express",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 123,
+        "locale": "es",
+        "display_name": "Holiday Inn Express",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 123,
+        "locale": "pt-BR",
+        "display_name": "Holiday Inn Express",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 124,
+        "locale": "en",
+        "display_name": "GHL Hotel",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 124,
+        "locale": "es",
+        "display_name": "GHL Hotel",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 124,
+        "locale": "pt-BR",
+        "display_name": "GHL Hotel",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 125,
+        "locale": "en",
+        "display_name": "Hotel Estelar",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 125,
+        "locale": "es",
+        "display_name": "Hotel Estelar",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 125,
+        "locale": "pt-BR",
+        "display_name": "Hotel Estelar",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 126,
+        "locale": "en",
+        "display_name": "Hotel El Prado",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 126,
+        "locale": "es",
+        "display_name": "Hotel El Prado",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 126,
+        "locale": "pt-BR",
+        "display_name": "Hotel El Prado",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 127,
+        "locale": "en",
+        "display_name": "Country International Hotel",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 127,
+        "locale": "es",
+        "display_name": "Country International Hotel",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 127,
+        "locale": "pt-BR",
+        "display_name": "Country International Hotel",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 128,
+        "locale": "en",
+        "display_name": "Howard Johnson by Wyndham",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 128,
+        "locale": "es",
+        "display_name": "Howard Johnson by Wyndham",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 128,
+        "locale": "pt-BR",
+        "display_name": "Howard Johnson by Wyndham",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 129,
+        "locale": "en",
+        "display_name": "NH Collection Barranquilla SmartSuites Royal",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 129,
+        "locale": "es",
+        "display_name": "NH Collection Barranquilla SmartSuites Royal",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 129,
+        "locale": "pt-BR",
+        "display_name": "NH Collection Barranquilla SmartSuites Royal",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 130,
+        "locale": "en",
+        "display_name": "Hotel Windsor",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 130,
+        "locale": "es",
+        "display_name": "Hotel Windsor",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 130,
+        "locale": "pt-BR",
+        "display_name": "Hotel Windsor",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 131,
+        "locale": "en",
+        "display_name": "Wyndham Garden",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 131,
+        "locale": "es",
+        "display_name": "Wyndham Garden",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 131,
+        "locale": "pt-BR",
+        "display_name": "Wyndham Garden",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 132,
+        "locale": "en",
+        "display_name": "Hilton Garden Inn",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 132,
+        "locale": "es",
+        "display_name": "Hilton Garden Inn",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 132,
+        "locale": "pt-BR",
+        "display_name": "Hilton Garden Inn",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 133,
+        "locale": "en",
+        "display_name": "Emiliano",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 133,
+        "locale": "es",
+        "display_name": "Emiliano",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 133,
+        "locale": "pt-BR",
+        "display_name": "Emiliano",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 134,
+        "locale": "en",
+        "display_name": "Manuel Restaurante",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 134,
+        "locale": "es",
+        "display_name": "Manuel Restaurante",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 134,
+        "locale": "pt-BR",
+        "display_name": "Manuel Restaurante",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 135,
+        "locale": "en",
+        "display_name": "Marfil Steak House",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 135,
+        "locale": "es",
+        "display_name": "Marfil Steak House",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 135,
+        "locale": "pt-BR",
+        "display_name": "Marfil Steak House",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 136,
+        "locale": "en",
+        "display_name": "Enzo Terraza Italiana",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 136,
+        "locale": "es",
+        "display_name": "Enzo Terraza Italiana",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 136,
+        "locale": "pt-BR",
+        "display_name": "Enzo Terraza Italiana",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 137,
+        "locale": "en",
+        "display_name": "Kizuna Asian Fusion",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 137,
+        "locale": "es",
+        "display_name": "Kizuna Asian Fusion",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 137,
+        "locale": "pt-BR",
+        "display_name": "Kizuna Asian Fusion",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 138,
+        "locale": "en",
+        "display_name": "Amalín",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 138,
+        "locale": "es",
+        "display_name": "Amalín",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 138,
+        "locale": "pt-BR",
+        "display_name": "Amalín",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 139,
+        "locale": "en",
+        "display_name": "Mot",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 139,
+        "locale": "es",
+        "display_name": "Mot",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 139,
+        "locale": "pt-BR",
+        "display_name": "Mot",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 140,
+        "locale": "en",
+        "display_name": "The Fit Bar Café",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 140,
+        "locale": "es",
+        "display_name": "The Fit Bar Café",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 140,
+        "locale": "pt-BR",
+        "display_name": "The Fit Bar Café",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 141,
+        "locale": "en",
+        "display_name": "Mimi",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 141,
+        "locale": "es",
+        "display_name": "Mimi",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 141,
+        "locale": "pt-BR",
+        "display_name": "Mimi",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 142,
+        "locale": "en",
+        "display_name": "La Ganache Café Bistró",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 142,
+        "locale": "es",
+        "display_name": "La Ganache Café Bistró",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 142,
+        "locale": "pt-BR",
+        "display_name": "La Ganache Café Bistró",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 143,
+        "locale": "en",
+        "display_name": "Época Espresso Bar",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 143,
+        "locale": "es",
+        "display_name": "Época Espresso Bar",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 143,
+        "locale": "pt-BR",
+        "display_name": "Época Espresso Bar",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 144,
+        "locale": "en",
+        "display_name": "Dulcerna",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 144,
+        "locale": "es",
+        "display_name": "Dulcerna",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 144,
+        "locale": "pt-BR",
+        "display_name": "Dulcerna",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 145,
+        "locale": "en",
+        "display_name": "Leonar Tours",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 145,
+        "locale": "es",
+        "display_name": "Leonar Tours",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 145,
+        "locale": "pt-BR",
+        "display_name": "Leonar Tours",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 146,
+        "locale": "en",
+        "display_name": "Pepe Anca Steakhouse",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 146,
+        "locale": "es",
+        "display_name": "Pepe Anca Steakhouse",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 146,
+        "locale": "pt-BR",
+        "display_name": "Pepe Anca Steakhouse",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 147,
+        "locale": "en",
+        "display_name": "Silvia Tcherassi boutique",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 147,
+        "locale": "es",
+        "display_name": "Silvia Tcherassi boutique",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 147,
+        "locale": "pt-BR",
+        "display_name": "Silvia Tcherassi boutique",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 148,
+        "locale": "en",
+        "display_name": "Hot Punto Múltiple del Sabor",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 148,
+        "locale": "es",
+        "display_name": "Hot Punto Múltiple del Sabor",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 148,
+        "locale": "pt-BR",
+        "display_name": "Hot Punto Múltiple del Sabor",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 149,
+        "locale": "en",
+        "display_name": "Artesanías del Atlántico Boutique",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 149,
+        "locale": "es",
+        "display_name": "Artesanías del Atlántico Boutique",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 149,
+        "locale": "pt-BR",
+        "display_name": "Artesanías del Atlántico Boutique",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 150,
+        "locale": "en",
+        "display_name": "Fiordi",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 150,
+        "locale": "es",
+        "display_name": "Fiordi",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 150,
+        "locale": "pt-BR",
+        "display_name": "Fiordi",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      }
+    ],
+    "business_categories": [],
+    "business_sources": [
+      {
+        "business_id": 133,
+        "source_url": "https://baq.com.co/where-to-eat/emiliano/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 134,
+        "source_url": "https://baq.com.co/where-to-eat/manuel-restaurant-barranquilla/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 135,
+        "source_url": "https://baq.com.co/where-to-eat/marfil-steak-house-barranquilla/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 136,
+        "source_url": "https://baq.com.co/where-to-eat/enzo-terraza-italiana-barranquilla-pizzeria/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 137,
+        "source_url": "https://baq.com.co/where-to-eat/kizuna-asian-fusion-restaurant-barranquilla/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 138,
+        "source_url": "https://baq.com.co/where-to-eat/amalin-barranquilla-restaurant/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 139,
+        "source_url": "https://baq.com.co/where-to-eat/mot-barranquilla-asian-restaurant/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 140,
+        "source_url": "https://baq.com.co/where-to-eat/the-fit-bar-cafe-barranquilla-healthy-food/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 141,
+        "source_url": "https://baq.com.co/where-to-eat/mimi-barranquilla-mediterranean-cuisine/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 142,
+        "source_url": "https://baq.com.co/where-to-eat/la-ganache-cafe-bistro-barranquilla/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 143,
+        "source_url": "https://baq.com.co/where-to-eat/epoca-espresso-bar-a-journey-into-coffee-and-pastry-tradition-in-barranquilla-title-seo-epoca-cafe-barranquilla-colombian-coffee-pastries-gastronomy-in-a-classic-ambiance-description-seo-disco/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 144,
+        "source_url": "https://baq.com.co/where-to-eat/dulcerna-barranquilla-pasteleria-artesanal/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 146,
+        "source_url": "https://baq.com.co/where-to-eat/pepe-anca-steakhouse/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 148,
+        "source_url": "https://baq.com.co/where-to-eat/hot-punto-multiple-del-sabor-barranquilla-restaurant/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 150,
+        "source_url": "https://baq.com.co/where-to-eat/fiordi-barranquilla/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 147,
+        "source_url": "https://baq.com.co/what-to-do/silvia-tcherassi-boutique-luxury-design/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 149,
+        "source_url": "https://baq.com.co/what-to-do/artesanias-del-atlantico-boutique-barranquilla/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 145,
+        "source_url": "https://leonartour.com/portal/?p=243",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 121,
+        "source_url": "https://baq.com.co/where-to-sleep/movich-buro-51-barranquilla-hotel/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 122,
+        "source_url": "https://baq.com.co/where-to-sleep/hotel-mfm-barahona-72-barranquilla-groups-business/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 123,
+        "source_url": "https://baq.com.co/where-to-sleep/holiday-inn-express-barranquilla-hotel/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 124,
+        "source_url": "https://baq.com.co/where-to-sleep/ghl-hotel-barranquilla-lodging/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 125,
+        "source_url": "https://baq.com.co/where-to-sleep/hotel-estelar-barranquilla/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 126,
+        "source_url": "https://baq.com.co/where-to-sleep/hotel-el-prado-barranquilla-historic/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 127,
+        "source_url": "https://baq.com.co/where-to-sleep/country-international-hotel/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 128,
+        "source_url": "https://baq.com.co/where-to-sleep/hotel-howard-johnson-by-wyndham-barranquilla/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 129,
+        "source_url": "https://baq.com.co/where-to-sleep/nh-collection-barranquilla-smartsuites-royal/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 130,
+        "source_url": "https://baq.com.co/where-to-sleep/hotel-windsor-barranquilla-lodging-events/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 131,
+        "source_url": "https://baq.com.co/where-to-sleep/hotel-wyndham-garden-barranquilla/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 132,
+        "source_url": "https://baq.com.co/where-to-sleep/hilton-garden-inn-barranquilla-hotel/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      }
+    ],
+    "business_contacts": [],
+    "business_media": [],
+    "media_assets": [
+      {
+        "id": 124,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/82/82fca713296939b47c8056507c7e14e2a17d8375b6aa2e47fe149ca95690f082.webp",
+        "creator": "Ilustración IA · revisión local",
+        "source_url": "",
+        "license_name": "Revisión local pendiente",
+        "license_url": "",
+        "provenance_json": "{\"draft\": true, \"sha256\": \"82fca713296939b47c8056507c7e14e2a17d8375b6aa2e47fe149ca95690f082\", \"metadata\": {\"path\": \"assets/revision-barranquilla/portada-v1.webp\", \"sha256\": \"82fca713296939b47c8056507c7e14e2a17d8375b6aa2e47fe149ca95690f082\", \"width\": 1600, \"height\": 900, \"status\": \"draft_local_review\"}, \"publication_authorized\": true, \"approval_scope\": \"Owner PUBLICAR five current DEV1 destinations 2026-10-24\", \"source_active_path\": \"assets/revision-barranquilla/portada-v1.webp\"}",
+        "width": 1600,
+        "height": 900
+      },
+      {
+        "id": 127,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/f8/f85c213285799b61cf75e92b72bb1d195dd204891c1db965184a81d126bc9243.webp",
+        "creator": "Ilustración IA · revisión local",
+        "source_url": "",
+        "license_name": "Revisión local pendiente",
+        "license_url": "",
+        "provenance_json": "{\"draft\": true, \"sha256\": \"f85c213285799b61cf75e92b72bb1d195dd204891c1db965184a81d126bc9243\", \"metadata\": {\"path\": \"assets/revision-barranquilla/museo-carnaval-v1.webp\", \"sha256\": \"f85c213285799b61cf75e92b72bb1d195dd204891c1db965184a81d126bc9243\", \"width\": 1536, \"height\": 1024, \"status\": \"draft_local_review\"}, \"publication_authorized\": true, \"approval_scope\": \"Owner PUBLICAR five current DEV1 destinations 2026-10-24\", \"source_active_path\": \"assets/revision-barranquilla/museo-carnaval-v1.webp\"}",
+        "width": 1536,
+        "height": 1024
+      },
+      {
+        "id": 130,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/a2/a2604ffda70fff09ac86cd8ada98194d101618f650f2c28defe4e78fba171fa8.webp",
+        "creator": "Ilustración IA · revisión local",
+        "source_url": "",
+        "license_name": "Revisión local pendiente",
+        "license_url": "",
+        "provenance_json": "{\"draft\": true, \"sha256\": \"a2604ffda70fff09ac86cd8ada98194d101618f650f2c28defe4e78fba171fa8\", \"metadata\": {\"path\": \"assets/revision-barranquilla/puerto-mocho-v1.webp\", \"sha256\": \"a2604ffda70fff09ac86cd8ada98194d101618f650f2c28defe4e78fba171fa8\", \"width\": 1536, \"height\": 1024, \"status\": \"draft_local_review\"}, \"publication_authorized\": true, \"approval_scope\": \"Owner PUBLICAR five current DEV1 destinations 2026-10-24\", \"source_active_path\": \"assets/revision-barranquilla/puerto-mocho-v1.webp\"}",
+        "width": 1536,
+        "height": 1024
+      },
+      {
+        "id": 131,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/90/90650f8f9e4f1573d7379ccf88bf9a606c3d22cc0b3a874466af954476b33e5f.webp",
+        "creator": "Ilustración IA · revisión local",
+        "source_url": "",
+        "license_name": "Revisión local pendiente",
+        "license_url": "",
+        "provenance_json": "{\"draft\": true, \"sha256\": \"90650f8f9e4f1573d7379ccf88bf9a606c3d22cc0b3a874466af954476b33e5f\", \"metadata\": {\"path\": \"assets/revision-barranquilla/plaza-paz-catedral-v1.webp\", \"sha256\": \"90650f8f9e4f1573d7379ccf88bf9a606c3d22cc0b3a874466af954476b33e5f\", \"width\": 1536, \"height\": 1024, \"status\": \"draft_local_review\"}, \"publication_authorized\": true, \"approval_scope\": \"Owner PUBLICAR five current DEV1 destinations 2026-10-24\", \"source_active_path\": \"assets/revision-barranquilla/plaza-paz-catedral-v1.webp\"}",
+        "width": 1536,
+        "height": 1024
+      },
+      {
+        "id": 150,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/a1/a15c3256b906cb5ab917f3f521865eab30a9da051456f53d0944d391c26b585d.webp",
+        "creator": "Ilustración IA · revisión local",
+        "source_url": "",
+        "license_name": "Revisión local pendiente",
+        "license_url": "",
+        "provenance_json": "{\"draft\": true, \"sha256\": \"a15c3256b906cb5ab917f3f521865eab30a9da051456f53d0944d391c26b585d\", \"metadata\": {\"path\": \"assets/revision-barranquilla/ecoparque-mallorquin-v2.webp\", \"sha256\": \"a15c3256b906cb5ab917f3f521865eab30a9da051456f53d0944d391c26b585d\", \"width\": 1536, \"height\": 1024, \"status\": \"draft_local_review\"}, \"publication_authorized\": true, \"approval_scope\": \"Owner PUBLICAR five current DEV1 destinations 2026-10-24\", \"source_active_path\": \"assets/revision-barranquilla/ecoparque-mallorquin-v2.webp\"}",
+        "width": 1536,
+        "height": 1024
+      },
+      {
+        "id": 152,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/1c/1c2ca85b90e1ffc17147f36b44c4c48f07e1d7dcaf3fcf9c4f66916a5568188a.webp",
+        "creator": "Ilustración IA · revisión local",
+        "source_url": "",
+        "license_name": "Revisión local pendiente",
+        "license_url": "",
+        "provenance_json": "{\"draft\": true, \"sha256\": \"1c2ca85b90e1ffc17147f36b44c4c48f07e1d7dcaf3fcf9c4f66916a5568188a\", \"metadata\": {\"path\": \"assets/revision-barranquilla/barrio-abajo-v3.webp\", \"sha256\": \"1c2ca85b90e1ffc17147f36b44c4c48f07e1d7dcaf3fcf9c4f66916a5568188a\", \"width\": 1536, \"height\": 1024, \"status\": \"draft_local_review\"}, \"publication_authorized\": true, \"approval_scope\": \"Owner PUBLICAR five current DEV1 destinations 2026-10-24\", \"source_active_path\": \"assets/revision-barranquilla/barrio-abajo-v3.webp\"}",
+        "width": 1536,
+        "height": 1024
+      },
+      {
+        "id": 153,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/ca/ca50a176868403c911966ba8898c4ed2e3aa446ca47b51a72953eae3257d12e5.webp",
+        "creator": "Ilustración IA · revisión local",
+        "source_url": "",
+        "license_name": "Revisión local pendiente",
+        "license_url": "",
+        "provenance_json": "{\"draft\": true, \"sha256\": \"ca50a176868403c911966ba8898c4ed2e3aa446ca47b51a72953eae3257d12e5\", \"metadata\": {\"path\": \"assets/revision-barranquilla/ventana-al-mundo-v2.webp\", \"sha256\": \"ca50a176868403c911966ba8898c4ed2e3aa446ca47b51a72953eae3257d12e5\", \"width\": 1536, \"height\": 1024, \"status\": \"draft_local_review\"}, \"publication_authorized\": true, \"approval_scope\": \"Owner PUBLICAR five current DEV1 destinations 2026-10-24\", \"source_active_path\": \"assets/revision-barranquilla/ventana-al-mundo-v2.webp\"}",
+        "width": 1536,
+        "height": 1024
+      },
+      {
+        "id": 164,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/a3/a33b28fc1684841ed69fa6f66eee325c39c70816924879f3109c4c8edd00c594.webp",
+        "creator": "Ilustración IA · borrador",
+        "source_url": "https://barranquilla.gov.co/mi-barranquilla/el-corazon-de-barranquilla-esta-de-fiesta-el-gran-malecon-cumple-8-anos-de-historias-cargadas-de-orgullo",
+        "license_name": "Revisión local; procedencia pendiente",
+        "license_url": "",
+        "provenance_json": "{\"draft\": true, \"sha256\": \"a33b28fc1684841ed69fa6f66eee325c39c70816924879f3109c4c8edd00c594\", \"metadata\": {\"path\": \"assets/revision-barranquilla/gran-malecon-v3.webp\", \"sha256\": \"a33b28fc1684841ed69fa6f66eee325c39c70816924879f3109c4c8edd00c594\", \"width\": 1600, \"height\": 900, \"status\": \"draft_local_review\"}, \"publication_authorized\": true, \"approval_scope\": \"Owner PUBLICAR five current DEV1 destinations 2026-10-24\", \"source_active_path\": \"assets/revision-barranquilla/gran-malecon-v3.webp\"}",
+        "width": 1600,
+        "height": 900
+      },
+      {
+        "id": 318,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/52/52ec07af784bf6da249313cfae2e7f7fbefe7b124c7818ea194be252bc761ab3.webp",
+        "creator": "Builtin image_gen; exact model not exposed",
+        "source_url": "https://emisoraatlantico.com.co/local/baq-tour-inicia-operacion-en-barranquilla-con-recorridos-gratuitos-para-impulsar-el-turismo/",
+        "license_name": "New factual composition; source photographs observed only, not uploaded",
+        "license_url": "",
+        "provenance_json": "{\"slug\": \"bus-panoramico\", \"path\": \"assets/revision-barranquilla/bus-panoramico-v1.webp\", \"local_file\": \"/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/entregables/lote-cobertura-colombia-20261023/barranquilla/visual/bus-panoramico-v1.webp\", \"master_file\": \"/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/entregables/lote-cobertura-colombia-20261023/barranquilla/visual/bus-panoramico-v1.png\", \"sha256\": \"52ec07af784bf6da249313cfae2e7f7fbefe7b124c7818ea194be252bc761ab3\", \"master_sha256\": \"09330e75f3b73d64c35e9da8cd16013b73a9ea06e82f05bd7eeb81080710bbd9\", \"width\": 1536, \"height\": 1024, \"origin\": \"ai_generated\", \"creator\": \"Builtin image_gen; exact model not exposed\", \"source_url\": \"https://emisoraatlantico.com.co/local/baq-tour-inicia-operacion-en-barranquilla-con-recorridos-gratuitos-para-impulsar-el-turismo/\", \"license_name\": \"New factual composition; source photographs observed only, not uploaded\", \"license_url\": \"\", \"reference_selected\": true, \"output_human_approval\": false, \"status\": \"draft_local_review\", \"prompt\": \"Use case: stylized-concept. Asset: landscape 3:2 editorial illustration for Explorando Lugares, Barranquilla Colombia experience card. Make a new composition from the documented factual brief, not a replica of any photograph. Clearly hand-painted realistic editorial caricature, visible fine ink drawing and richly textured gouache brushwork on subtle paper, coherent natural Caribbean colours, not photorealistic, not 3D. Accurate undeformed real proportions, no invented skyline, no logos, no text, no watermark. FULL subject wholly inside canvas with at least 12% clear visible margin on all sides, safe for centered 3:2 card crop. Do not zoom in, cut wheels/bow/stern/roof or touch canvas edges. Camera perspective natural, never fisheye. Actual yellow BAQ Tour double-decker, two wheels side, open upper apertures red seats canopy, nose left rear right, entire bus; Gran Malecon Puerta de Oro branching streetlight and partial wheel secondary.\", \"qa\": {\"full_subject\": true, \"no_cut_vehicle\": true, \"style_ink_gouache\": true, \"factual_comparison\": \"Approximate new composition compared to selected reference; no claim of exact reconstruction\", \"limitations\": \"New composition, not exact photograph reconstruction.\"}, \"publication_authorized\": true, \"approval_scope\": \"Owner PUBLICAR five current DEV1 destinations 2026-10-24\", \"source_active_path\": \"assets/revision-barranquilla/bus-panoramico-v1.webp\"}",
+        "width": 1536,
+        "height": 1024
+      },
+      {
+        "id": 319,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/d5/d5515dd1d12c0b15668a3d243cd15d32813cbfeba7f345aea59077706390cd55.webp",
+        "creator": "Builtin image_gen; exact model not exposed",
+        "source_url": "https://www.elheraldo.co/atlantico/2025/11/14/desde-este-sabado-establecen-costo-de-ingreso-para-el-recorrido-del-riobus-karakali/",
+        "license_name": "New factual composition; source photographs observed only, not uploaded",
+        "license_url": "",
+        "provenance_json": "{\"slug\": \"navegacion-magdalena\", \"path\": \"assets/revision-barranquilla/navegacion-magdalena-v2.webp\", \"local_file\": \"/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/entregables/lote-cobertura-colombia-20261023/barranquilla/visual/navegacion-magdalena-v2.webp\", \"master_file\": \"/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/entregables/lote-cobertura-colombia-20261023/barranquilla/visual/navegacion-magdalena-v2.png\", \"sha256\": \"d5515dd1d12c0b15668a3d243cd15d32813cbfeba7f345aea59077706390cd55\", \"master_sha256\": \"525c07b6dd2aa448a182dcc753a27974aae5c4c028720ddd94094771db3bbf7e\", \"width\": 1536, \"height\": 1024, \"origin\": \"ai_generated\", \"creator\": \"Builtin image_gen; exact model not exposed\", \"source_url\": \"https://www.elheraldo.co/atlantico/2025/11/14/desde-este-sabado-establecen-costo-de-ingreso-para-el-recorrido-del-riobus-karakali/\", \"license_name\": \"New factual composition; source photographs observed only, not uploaded\", \"license_url\": \"\", \"reference_selected\": true, \"output_human_approval\": false, \"status\": \"draft_local_review\", \"prompt\": \"Use case: stylized-concept. Asset: landscape 3:2 editorial illustration for Explorando Lugares, Barranquilla Colombia experience card. Make a new composition from the documented factual brief, not a replica of any photograph. Clearly hand-painted realistic editorial caricature, visible fine ink drawing and richly textured gouache brushwork on subtle paper, coherent natural Caribbean colours, not photorealistic, not 3D. Accurate undeformed real proportions, no invented skyline, no logos, no text, no watermark. FULL subject wholly inside canvas with at least 12% clear visible margin on all sides, safe for centered 3:2 card crop. Do not zoom in, cut wheels/bow/stern/roof or touch canvas edges. Camera perspective natural, never fisheye. Actual Karakali squat wide green rectangular ferry, broad square stern near left, bow receding right, black window rectangle, small white wheelhouse right, orange flat liferafts and grey AC roof, Magdalena brown water, opposite flat green bank. V2 correction rejects elongated generic ferry, projected ratio2.3:1 and strong three-quarter view, fullboat margins.\", \"qa\": {\"full_subject\": true, \"no_cut_vehicle\": true, \"style_ink_gouache\": true, \"factual_comparison\": \"Approximate new composition compared to selected reference; no claim of exact reconstruction\", \"limitations\": \"No brand markings; background contextual. Boat v1 rejected for elongation, v2 selected.\"}, \"publication_authorized\": true, \"approval_scope\": \"Owner PUBLICAR five current DEV1 destinations 2026-10-24\", \"source_active_path\": \"assets/revision-barranquilla/navegacion-magdalena-v2.webp\"}",
+        "width": 1536,
+        "height": 1024
+      },
+      {
+        "id": 320,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/a2/a2ce064e589218f83c7a6d0b711e484d160d9602ed8cee534c2b3d43a263a438.webp",
+        "creator": "Builtin image_gen; exact model not exposed",
+        "source_url": "https://caracol.com.co/2024/10/04/avances-en-el-tren-de-las-flores-barranquilla-se-alista-para-un-nuevo-destino-turistico/",
+        "license_name": "New factual composition; source photographs observed only, not uploaded",
+        "license_url": "",
+        "provenance_json": "{\"slug\": \"tren-las-flores\", \"path\": \"assets/revision-barranquilla/tren-las-flores-v1.webp\", \"local_file\": \"/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/entregables/lote-cobertura-colombia-20261023/barranquilla/visual/tren-las-flores-v1.webp\", \"master_file\": \"/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/entregables/lote-cobertura-colombia-20261023/barranquilla/visual/tren-las-flores-v1.png\", \"sha256\": \"a2ce064e589218f83c7a6d0b711e484d160d9602ed8cee534c2b3d43a263a438\", \"master_sha256\": \"c2d36da8615a8df60f2e11088761f19686f4c120a48d967c3fa1747cb5b32ae1\", \"width\": 1536, \"height\": 1024, \"origin\": \"ai_generated\", \"creator\": \"Builtin image_gen; exact model not exposed\", \"source_url\": \"https://caracol.com.co/2024/10/04/avances-en-el-tren-de-las-flores-barranquilla-se-alista-para-un-nuevo-destino-turistico/\", \"license_name\": \"New factual composition; source photographs observed only, not uploaded\", \"license_url\": \"\", \"reference_selected\": true, \"output_human_approval\": false, \"status\": \"draft_local_review\", \"prompt\": \"Use case: stylized-concept. Asset: landscape 3:2 editorial illustration for Explorando Lugares, Barranquilla Colombia experience card. Make a new composition from the documented factual brief, not a replica of any photograph. Clearly hand-painted realistic editorial caricature, visible fine ink drawing and richly textured gouache brushwork on subtle paper, coherent natural Caribbean colours, not photorealistic, not 3D. Accurate undeformed real proportions, no invented skyline, no logos, no text, no watermark. FULL subject wholly inside canvas with at least 12% clear visible margin on all sides, safe for centered 3:2 card crop. Do not zoom in, cut wheels/bow/stern/roof or touch canvas edges. Camera perspective natural, never fisheye. Modern brown open-sided railcar, thin blue-green posts, raised pale taupe clerestory, round front lamps, front right, water foreground and rock bank, mangroves behind linear corridor, slender solar streetlights. No locomotive or invented carriages.\", \"qa\": {\"full_subject\": true, \"no_cut_vehicle\": true, \"style_ink_gouache\": true, \"factual_comparison\": \"Approximate new composition compared to selected reference; no claim of exact reconstruction\", \"limitations\": \"New composition, not exact photograph reconstruction.\"}, \"publication_authorized\": true, \"approval_scope\": \"Owner PUBLICAR five current DEV1 destinations 2026-10-24\", \"source_active_path\": \"assets/revision-barranquilla/tren-las-flores-v1.webp\"}",
+        "width": 1536,
+        "height": 1024
+      },
+      {
+        "id": 321,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/ea/ead91fcc9191ac85b01c2294a84b8c88d8b529b86cb48df8c169d75a28f49eca.webp",
+        "creator": "Builtin image_gen; exact model not exposed",
+        "source_url": "https://www.elheraldo.co/barranquilla/2025/12/19/la-luna-del-rio-el-nuevo-icono-que-transforma-la-experiencia-urbana-y-turistica-de-barranquilla/",
+        "license_name": "New factual composition; source photographs observed only, not uploaded",
+        "license_url": "",
+        "provenance_json": "{\"slug\": \"luna-del-rio\", \"path\": \"assets/revision-barranquilla/luna-del-rio-v1.webp\", \"local_file\": \"/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/entregables/lote-cobertura-colombia-20261023/barranquilla/visual/luna-del-rio-v1.webp\", \"master_file\": \"/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/entregables/lote-cobertura-colombia-20261023/barranquilla/visual/luna-del-rio-v1.png\", \"sha256\": \"ead91fcc9191ac85b01c2294a84b8c88d8b529b86cb48df8c169d75a28f49eca\", \"master_sha256\": \"882e240a2ccc0a13f7ac1dc016878913013abfa8b0a1b64cc0a04e0dac2b7002\", \"width\": 1536, \"height\": 1024, \"origin\": \"ai_generated\", \"creator\": \"Builtin image_gen; exact model not exposed\", \"source_url\": \"https://www.elheraldo.co/barranquilla/2025/12/19/la-luna-del-rio-el-nuevo-icono-que-transforma-la-experiencia-urbana-y-turistica-de-barranquilla/\", \"license_name\": \"New factual composition; source photographs observed only, not uploaded\", \"license_url\": \"\", \"reference_selected\": true, \"output_human_approval\": false, \"status\": \"draft_local_review\", \"prompt\": \"Use case: stylized-concept. Asset: landscape 3:2 editorial illustration for Explorando Lugares, Barranquilla Colombia experience card. Make a new composition from the documented factual brief, not a replica of any photograph. Clearly hand-painted realistic editorial caricature, visible fine ink drawing and richly textured gouache brushwork on subtle paper, coherent natural Caribbean colours, not photorealistic, not 3D. Accurate undeformed real proportions, no invented skyline, no logos, no text, no watermark. FULL subject wholly inside canvas with at least 12% clear visible margin on all sides, safe for centered 3:2 card crop. Do not zoom in, cut wheels/bow/stern/roof or touch canvas edges. Camera perspective natural, never fisheye. Actual white lattice observation wheel obliquely elliptical, enclosed small box cabins, white A-frame legs, red warmwhite lights, whole rim/supports, low service building and flat lit GranMalecon night plaza.\", \"qa\": {\"full_subject\": true, \"no_cut_vehicle\": true, \"style_ink_gouache\": true, \"factual_comparison\": \"Approximate new composition compared to selected reference; no claim of exact reconstruction\", \"limitations\": \"New composition, not exact photograph reconstruction.\"}, \"publication_authorized\": true, \"approval_scope\": \"Owner PUBLICAR five current DEV1 destinations 2026-10-24\", \"source_active_path\": \"assets/revision-barranquilla/luna-del-rio-v1.webp\"}",
+        "width": 1536,
+        "height": 1024
+      },
+      {
+        "id": 322,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/ae/ae522f3565855829a23246d71876f317eeaa3869e2b70427edce0b4e75c47ac9.webp",
+        "creator": "Builtin image_gen; exact model not exposed",
+        "source_url": "https://elpais.com/america-colombia/2024-02-10/carnaval-de-barranquilla-2024-fechas-desfiles-y-lo-que-hay-que-saber.html",
+        "license_name": "New factual composition; source photographs observed only, not uploaded",
+        "license_url": "",
+        "provenance_json": "{\"slug\": \"carnaval-barranquilla\", \"path\": \"assets/revision-barranquilla/carnaval-barranquilla-v1.webp\", \"local_file\": \"/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/entregables/lote-cobertura-colombia-20261023/barranquilla/visual/carnaval-barranquilla-v1.webp\", \"master_file\": \"/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/entregables/lote-cobertura-colombia-20261023/barranquilla/visual/carnaval-barranquilla-v1.png\", \"sha256\": \"ae522f3565855829a23246d71876f317eeaa3869e2b70427edce0b4e75c47ac9\", \"master_sha256\": \"6e47bb82819e0ab975546c0b143be89f6f579e18960e2cabc777a5f1ca2039b4\", \"width\": 1536, \"height\": 1024, \"origin\": \"ai_generated\", \"creator\": \"Builtin image_gen; exact model not exposed\", \"source_url\": \"https://elpais.com/america-colombia/2024-02-10/carnaval-de-barranquilla-2024-fechas-desfiles-y-lo-que-hay-que-saber.html\", \"license_name\": \"New factual composition; source photographs observed only, not uploaded\", \"license_url\": \"\", \"reference_selected\": true, \"output_human_approval\": false, \"status\": \"draft_local_review\", \"prompt\": \"Use case: stylized-concept. Asset: landscape 3:2 editorial illustration for Explorando Lugares, Barranquilla Colombia experience card. Make a new composition from the documented factual brief, not a replica of any photograph. Clearly hand-painted realistic editorial caricature, visible fine ink drawing and richly textured gouache brushwork on subtle paper, coherent natural Caribbean colours, not photorealistic, not 3D. Accurate undeformed real proportions, no invented skyline, no logos, no text, no watermark. FULL subject wholly inside canvas with at least 12% clear visible margin on all sides, safe for centered 3:2 card crop. Do not zoom in, cut wheels/bow/stern/roof or touch canvas edges. Camera perspective natural, never fisheye. Three full-body marimonda dancers, white cloth hoods huge pink ears yellow eyeholes hanging green noses, white sleeves red gloves/shoes, greenpink vest gold trim, loose geometric multicolour trousers, street parade leafy tree low buildings. No identifiable face or superhero badges.\", \"qa\": {\"full_subject\": true, \"no_cut_vehicle\": true, \"style_ink_gouache\": true, \"factual_comparison\": \"Approximate new composition compared to selected reference; no claim of exact reconstruction\", \"limitations\": \"New composition, not exact photograph reconstruction.\"}, \"publication_authorized\": true, \"approval_scope\": \"Owner PUBLICAR five current DEV1 destinations 2026-10-24\", \"source_active_path\": \"assets/revision-barranquilla/carnaval-barranquilla-v1.webp\"}",
+        "width": 1536,
+        "height": 1024
+      }
+    ],
+    "media_asset_translations": [
+      {
+        "media_asset_id": 124,
+        "locale": "en",
+        "alt_text": "Barranquilla",
+        "caption": "Editorial illustration: Barranquilla."
+      },
+      {
+        "media_asset_id": 124,
+        "locale": "es",
+        "alt_text": "Barranquilla",
+        "caption": "Ilustración editorial: Barranquilla."
+      },
+      {
+        "media_asset_id": 124,
+        "locale": "pt-BR",
+        "alt_text": "Barranquilla",
+        "caption": "Ilustração editorial: Barranquilla."
+      },
+      {
+        "media_asset_id": 127,
+        "locale": "en",
+        "alt_text": "Carnival Museum",
+        "caption": "Editorial illustration: Carnival Museum."
+      },
+      {
+        "media_asset_id": 127,
+        "locale": "es",
+        "alt_text": "Museo del Carnaval",
+        "caption": "Ilustración editorial: Museo del Carnaval."
+      },
+      {
+        "media_asset_id": 127,
+        "locale": "pt-BR",
+        "alt_text": "Museu do Carnaval",
+        "caption": "Ilustração editorial: Museu do Carnaval."
+      },
+      {
+        "media_asset_id": 130,
+        "locale": "en",
+        "alt_text": "Puerto Mocho Beach",
+        "caption": "Editorial illustration: Puerto Mocho Beach."
+      },
+      {
+        "media_asset_id": 130,
+        "locale": "es",
+        "alt_text": "Playa de Puerto Mocho",
+        "caption": "Ilustración editorial: Playa de Puerto Mocho."
+      },
+      {
+        "media_asset_id": 130,
+        "locale": "pt-BR",
+        "alt_text": "Praia de Puerto Mocho",
+        "caption": "Ilustração editorial: Praia de Puerto Mocho."
+      },
+      {
+        "media_asset_id": 131,
+        "locale": "en",
+        "alt_text": "Plaza de la Paz and María Reina Cathedral",
+        "caption": "Editorial illustration: Plaza de la Paz and María Reina Cathedral."
+      },
+      {
+        "media_asset_id": 131,
+        "locale": "es",
+        "alt_text": "Plaza de la Paz y Catedral María Reina",
+        "caption": "Ilustración editorial: Plaza de la Paz y Catedral María Reina."
+      },
+      {
+        "media_asset_id": 131,
+        "locale": "pt-BR",
+        "alt_text": "Plaza de la Paz e Catedral María Reina",
+        "caption": "Ilustração editorial: Plaza de la Paz e Catedral María Reina."
+      },
+      {
+        "media_asset_id": 150,
+        "locale": "en",
+        "alt_text": "Mallorquín Wetland Ecopark",
+        "caption": "Editorial illustration: Mallorquín Wetland Ecopark."
+      },
+      {
+        "media_asset_id": 150,
+        "locale": "es",
+        "alt_text": "Ecoparque Ciénaga de Mallorquín",
+        "caption": "Ilustración editorial: Ecoparque Ciénaga de Mallorquín."
+      },
+      {
+        "media_asset_id": 150,
+        "locale": "pt-BR",
+        "alt_text": "Ecoparque Ciénaga de Mallorquín",
+        "caption": "Ilustração editorial: Ecoparque Ciénaga de Mallorquín."
+      },
+      {
+        "media_asset_id": 152,
+        "locale": "en",
+        "alt_text": "Barrio Abajo: an open-air museum",
+        "caption": "Editorial illustration: Barrio Abajo: an open-air museum."
+      },
+      {
+        "media_asset_id": 152,
+        "locale": "es",
+        "alt_text": "Barrio Abajo: museo a cielo abierto",
+        "caption": "Ilustración editorial: Barrio Abajo: museo a cielo abierto."
+      },
+      {
+        "media_asset_id": 152,
+        "locale": "pt-BR",
+        "alt_text": "Barrio Abajo: museu a céu aberto",
+        "caption": "Ilustração editorial: Barrio Abajo: museu a céu aberto."
+      },
+      {
+        "media_asset_id": 153,
+        "locale": "en",
+        "alt_text": "Ventana al Mundo",
+        "caption": "Editorial illustration: Ventana al Mundo."
+      },
+      {
+        "media_asset_id": 153,
+        "locale": "es",
+        "alt_text": "Ventana al Mundo",
+        "caption": "Ilustración editorial: Ventana al Mundo."
+      },
+      {
+        "media_asset_id": 153,
+        "locale": "pt-BR",
+        "alt_text": "Ventana al Mundo",
+        "caption": "Ilustração editorial: Ventana al Mundo."
+      },
+      {
+        "media_asset_id": 164,
+        "locale": "en",
+        "alt_text": "Gran Malecón del Río",
+        "caption": "Editorial illustration: Gran Malecón del Río."
+      },
+      {
+        "media_asset_id": 164,
+        "locale": "es",
+        "alt_text": "Gran Malecón del Río",
+        "caption": "Ilustración editorial: Gran Malecón del Río."
+      },
+      {
+        "media_asset_id": 164,
+        "locale": "pt-BR",
+        "alt_text": "Gran Malecón del Río",
+        "caption": "Ilustração editorial: Gran Malecón del Río."
+      },
+      {
+        "media_asset_id": 318,
+        "locale": "en",
+        "alt_text": "Panoramic bus tour",
+        "caption": "Editorial illustration: Panoramic bus tour."
+      },
+      {
+        "media_asset_id": 318,
+        "locale": "es",
+        "alt_text": "Bus panorámico por Barranquilla",
+        "caption": "Ilustración editorial: Bus panorámico por Barranquilla."
+      },
+      {
+        "media_asset_id": 318,
+        "locale": "pt-BR",
+        "alt_text": "Passeio de ônibus panorâmico",
+        "caption": "Ilustração editorial: Passeio de ônibus panorâmico."
+      },
+      {
+        "media_asset_id": 319,
+        "locale": "en",
+        "alt_text": "Boat trip on the Magdalena River",
+        "caption": "Editorial illustration: Boat trip on the Magdalena River."
+      },
+      {
+        "media_asset_id": 319,
+        "locale": "es",
+        "alt_text": "Navegación por el río Magdalena",
+        "caption": "Ilustración editorial: Navegación por el río Magdalena."
+      },
+      {
+        "media_asset_id": 319,
+        "locale": "pt-BR",
+        "alt_text": "Passeio pelo rio Magdalena",
+        "caption": "Ilustração editorial: Passeio pelo rio Magdalena."
+      },
+      {
+        "media_asset_id": 320,
+        "locale": "en",
+        "alt_text": "Tourist train to Puerto Mocho",
+        "caption": "Editorial illustration: Tourist train to Puerto Mocho."
+      },
+      {
+        "media_asset_id": 320,
+        "locale": "es",
+        "alt_text": "Tren turístico hacia Puerto Mocho",
+        "caption": "Ilustración editorial: Tren turístico hacia Puerto Mocho."
+      },
+      {
+        "media_asset_id": 320,
+        "locale": "pt-BR",
+        "alt_text": "Trem turístico até Puerto Mocho",
+        "caption": "Ilustração editorial: Trem turístico até Puerto Mocho."
+      },
+      {
+        "media_asset_id": 321,
+        "locale": "en",
+        "alt_text": "Panoramic views from Luna del Río",
+        "caption": "Editorial illustration: Panoramic views from Luna del Río."
+      },
+      {
+        "media_asset_id": 321,
+        "locale": "es",
+        "alt_text": "Vista panorámica desde la Luna del Río",
+        "caption": "Ilustración editorial: Vista panorámica desde la Luna del Río."
+      },
+      {
+        "media_asset_id": 321,
+        "locale": "pt-BR",
+        "alt_text": "Vista panorâmica da Luna del Río",
+        "caption": "Ilustração editorial: Vista panorâmica da Luna del Río."
+      },
+      {
+        "media_asset_id": 322,
+        "locale": "en",
+        "alt_text": "Experience Barranquilla Carnival",
+        "caption": "Editorial illustration: Experience Barranquilla Carnival."
+      },
+      {
+        "media_asset_id": 322,
+        "locale": "es",
+        "alt_text": "Vivir el Carnaval de Barranquilla",
+        "caption": "Ilustración editorial: Vivir el Carnaval de Barranquilla."
+      },
+      {
+        "media_asset_id": 322,
+        "locale": "pt-BR",
+        "alt_text": "Vivencie o Carnaval de Barranquilla",
+        "caption": "Ilustração editorial: Vivencie o Carnaval de Barranquilla."
+      }
+    ]
+  },
+  "media_files": {
+    "124": {
+      "sha256": "82fca713296939b47c8056507c7e14e2a17d8375b6aa2e47fe149ca95690f082"
+    },
+    "127": {
+      "sha256": "f85c213285799b61cf75e92b72bb1d195dd204891c1db965184a81d126bc9243"
+    },
+    "130": {
+      "sha256": "a2604ffda70fff09ac86cd8ada98194d101618f650f2c28defe4e78fba171fa8"
+    },
+    "131": {
+      "sha256": "90650f8f9e4f1573d7379ccf88bf9a606c3d22cc0b3a874466af954476b33e5f"
+    },
+    "150": {
+      "sha256": "a15c3256b906cb5ab917f3f521865eab30a9da051456f53d0944d391c26b585d"
+    },
+    "152": {
+      "sha256": "1c2ca85b90e1ffc17147f36b44c4c48f07e1d7dcaf3fcf9c4f66916a5568188a"
+    },
+    "153": {
+      "sha256": "ca50a176868403c911966ba8898c4ed2e3aa446ca47b51a72953eae3257d12e5"
+    },
+    "164": {
+      "sha256": "a33b28fc1684841ed69fa6f66eee325c39c70816924879f3109c4c8edd00c594"
+    },
+    "318": {
+      "sha256": "52ec07af784bf6da249313cfae2e7f7fbefe7b124c7818ea194be252bc761ab3"
+    },
+    "319": {
+      "sha256": "d5515dd1d12c0b15668a3d243cd15d32813cbfeba7f345aea59077706390cd55"
+    },
+    "320": {
+      "sha256": "a2ce064e589218f83c7a6d0b711e484d160d9602ed8cee534c2b3d43a263a438"
+    },
+    "321": {
+      "sha256": "ead91fcc9191ac85b01c2294a84b8c88d8b529b86cb48df8c169d75a28f49eca"
+    },
+    "322": {
+      "sha256": "ae522f3565855829a23246d71876f317eeaa3869e2b70427edce0b4e75c47ac9"
+    }
+  }
+}

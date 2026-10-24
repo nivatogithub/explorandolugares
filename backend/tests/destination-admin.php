@@ -8,7 +8,17 @@ $pdo->exec(file_get_contents(dirname(__DIR__).'/database/destinations.sqlite.sql
 $pdo->exec(file_get_contents(dirname(__DIR__).'/database/migrations/006-poi-experience-links.sqlite.sql'));
 $root=dirname(__DIR__,2);$catalog=json_decode(file_get_contents($root.'/content/destinos-dinamicos.json'),true,512,JSON_THROW_ON_ERROR);$options=json_decode(file_get_contents(dirname(__DIR__).'/app/contact-options.json'),true,512,JSON_THROW_ON_ERROR);
 DestinationImporter::import($pdo,$catalog,$options);$admin=new DestinationAdminService($pdo);
-$all=$admin->all();admin_check(count($all)===21,'Admin lists the imported 21 destinations');
+$expectedSlugs=array_column($catalog['destinations'],'slug');sort($expectedSlugs);
+$all=$admin->all();$actualSlugs=array_column($all,'slug');sort($actualSlugs);
+admin_check($actualSlugs===$expectedSlugs,'Admin lists every imported destination exactly once');
+$importedDestinationCount=count($expectedSlugs);
+foreach(['barranquilla','manizales','pereira','san-bernardo-del-viento','villavieja'] as $slug){
+    $entry=array_values(array_filter($all,static fn($destination)=>$destination['slug']===$slug));
+    admin_check(count($entry)===1,'New release destination is listed once: '.$slug);
+    $detail=$admin->find((int)$entry[0]['id']);
+    admin_check($detail!==null&&count($detail['places'])>0,'New release destination retains its attractions and experiences: '.$slug);
+    foreach(['es','en','pt-BR'] as $locale)admin_check(!empty($detail['translations'][$locale]['display_name']),'New destination translation exists: '.$slug.' / '.$locale);
+}
 $jericoId=(int)$pdo->query("SELECT id FROM destinations WHERE slug='jerico'")->fetchColumn();$jerico=$admin->find($jericoId);
 admin_check($jerico!==null&&count($jerico['places'])===10,'Existing destination loads all attractions and activities');
 $input=['id'=>$jericoId,'slug'=>'jerico','destination_type'=>'municipality','country_code'=>'CO','department'=>'Antioquia','subregion'=>'Suroeste','latitude'=>'5.79','longitude'=>'-75.78','publication_status'=>'published','display_order'=>'1','translations'=>[],'history'=>[],'reasons'=>[],'places'=>[],'sources'=>[],'hero_asset_id'=>'0','history_asset_id'=>'0'];
@@ -18,7 +28,7 @@ foreach($jerico['places'] as $i=>$place){$input['places'][$i]=['id'=>$place['id'
 foreach(['es'=>'BORRADOR LOCAL · imágenes definitivas pendientes','en'=>'LOCAL DRAFT · final images pending','pt-BR'=>'RASCUNHO LOCAL · imagens finais pendentes'] as $locale=>$marker){$bad=$input;$bad['translations'][$locale]['eyebrow']=$marker;$blocked=false;try{$admin->save($bad,[],[],sys_get_temp_dir());}catch(RuntimeException $e){$blocked=str_contains($e->getMessage(),'avisos internos');}admin_check($blocked,'Published destinations reject internal draft labels in every language');}
 $input['translations']['es']['headline']='Jericó editable';$retainedPlaceId=$jerico['places'][1]['id'];$input['places']=array_values(array_slice($input['places'],1));$input['places'][0]['translations']['es']['name']='Centro histórico editado';
 $saved=$admin->save($input,[],[],sys_get_temp_dir());admin_check($saved===$jericoId,'Edit retains the internal destination ID');
-$edited=$admin->find($jericoId);admin_check($edited['translations']['es']['headline']==='Jericó editable','Spanish editorial text is saved');admin_check($edited['places'][0]['translations']['es']['name']==='Centro histórico editado','POI translation is saved');admin_check($edited['places'][0]['id']===$retainedPlaceId,'Reordering and editing a POI keeps its numeric identity');admin_check(count($edited['places'])===10&&$edited['places'][9]['publication_status']==='archived','Omitted places and activities are retained as hidden records, never physically removed');admin_check((int)$pdo->query('SELECT COUNT(*) FROM destinations')->fetchColumn()===21,'Editing does not duplicate the destination');
+$edited=$admin->find($jericoId);admin_check($edited['translations']['es']['headline']==='Jericó editable','Spanish editorial text is saved');admin_check($edited['places'][0]['translations']['es']['name']==='Centro histórico editado','POI translation is saved');admin_check($edited['places'][0]['id']===$retainedPlaceId,'Reordering and editing a POI keeps its numeric identity');admin_check(count($edited['places'])===10&&$edited['places'][9]['publication_status']==='archived','Omitted places and activities are retained as hidden records, never physically removed');admin_check((int)$pdo->query('SELECT COUNT(*) FROM destinations')->fetchColumn()===$importedDestinationCount,'Editing does not duplicate the destination');
 $draft=['slug'=>'','destination_type'=>'municipality','country_code'=>'CO','department'=>'Antioquia','subregion'=>'','publication_status'=>'draft','display_order'=>'0','translations'=>[],'history'=>[],'reasons'=>[],'places'=>[],'sources'=>[],'hero_asset_id'=>'0','history_asset_id'=>'0'];
 foreach(['es','en','pt-BR'] as $locale){$draft['translations'][$locale]=['display_name'=>'','eyebrow'=>'','headline'=>'','intro'=>'','meta_description'=>''];$draft['history'][$locale]='';$draft['reasons'][$locale]='';$draft['sources'][$locale]='';}
 $draft['translations']['es']['display_name']='Prueba de municipio';

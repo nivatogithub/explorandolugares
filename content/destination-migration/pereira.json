@@ -1,0 +1,2066 @@
+{
+  "schema": "destination-public-snapshot-v1",
+  "destination": "pereira",
+  "tables": {
+    "destinations": [
+      {
+        "id": 26,
+        "slug": "pereira",
+        "destination_type": "city",
+        "country_code": "CO",
+        "department": "Risaralda",
+        "subregion": "Centro Occidente",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 27,
+        "created_at": "2026-10-23 20:13:06",
+        "updated_at": "2026-10-23 20:48:08"
+      }
+    ],
+    "destination_translations": [
+      {
+        "destination_id": 26,
+        "locale": "en",
+        "display_name": "Pereira",
+        "eyebrow": "Risaralda / Colombia",
+        "headline": "Coffee-region city life and the forests of the Otún",
+        "intro": "Pereira combines the energy of a regional capital with easy access to Andean forest. Explore the centre, see the city from the Megacable and allow time to discover the Otún watershed.",
+        "meta_description": "Explore Pereira: Bioparque Ukumarí, Megacable, the cathedral and the forests of Otún Quimbaya and Ucumarí. Ideas for discovering Risaralda."
+      },
+      {
+        "destination_id": 26,
+        "locale": "es",
+        "display_name": "Pereira",
+        "eyebrow": "Risaralda / Colombia",
+        "headline": "Ciudad cafetera, vida urbana y bosques del Otún",
+        "intro": "Pereira reúne el movimiento de una capital regional con la cercanía del bosque andino. Recorre su centro, mira la ciudad desde el Megacable y reserva tiempo para conocer la cuenca del Otún.",
+        "meta_description": "Descubre Pereira: Bioparque Ukumarí, Megacable, la catedral y los bosques de Otún Quimbaya y Ucumarí. Ideas para conocer Risaralda."
+      },
+      {
+        "destination_id": 26,
+        "locale": "pt-BR",
+        "display_name": "Pereira",
+        "eyebrow": "Risaralda / Colômbia",
+        "headline": "Vida urbana na região cafeeira e florestas do Otún",
+        "intro": "Pereira combina o movimento de uma capital regional com a proximidade da floresta andina. Conheça o centro, veja a cidade do Megacable e reserve tempo para explorar a bacia do Otún.",
+        "meta_description": "Conheça Pereira: Bioparque Ukumarí, Megacable, a catedral e as florestas de Otún Quimbaya e Ucumarí. Ideias para explorar Risaralda."
+      }
+    ],
+    "destination_story_blocks": [
+      {
+        "id": 32,
+        "destination_id": 26,
+        "section_key": "history",
+        "display_order": 1
+      },
+      {
+        "id": 33,
+        "destination_id": 26,
+        "section_key": "history",
+        "display_order": 2
+      }
+    ],
+    "destination_reasons": [
+      {
+        "id": 76,
+        "destination_id": 26,
+        "display_order": 1
+      }
+    ],
+    "destination_sources": [],
+    "destination_media": [
+      {
+        "destination_id": 26,
+        "media_asset_id": 180,
+        "role": "hero",
+        "display_order": 0
+      }
+    ],
+    "destination_story_translations": [
+      {
+        "story_block_id": 32,
+        "locale": "en",
+        "body": "Pereira marks its founding on 30 August 1863. The settlement grew on the site of old Cartago and became a meeting point for the region’s roads, markets and communities."
+      },
+      {
+        "story_block_id": 32,
+        "locale": "es",
+        "body": "Pereira celebra su fundación el 30 de agosto de 1863. El asentamiento creció sobre el territorio de la antigua Cartago y se convirtió en un punto de encuentro entre caminos, mercados y poblaciones de la región."
+      },
+      {
+        "story_block_id": 32,
+        "locale": "pt-BR",
+        "body": "Pereira celebra sua fundação em 30 de agosto de 1863. O povoado cresceu no território da antiga Cartago e se tornou um ponto de encontro entre caminhos, mercados e comunidades da região."
+      },
+      {
+        "story_block_id": 33,
+        "locale": "en",
+        "body": "Trade and coffee help explain the city today: the capital of Risaralda connects urban life with rural districts and protected areas in Colombia’s Central Andes."
+      },
+      {
+        "story_block_id": 33,
+        "locale": "es",
+        "body": "Su desarrollo comercial y su relación con el café ayudan a entender la ciudad de hoy: una capital de Risaralda que conecta la vida urbana con corregimientos rurales y áreas protegidas de la cordillera Central."
+      },
+      {
+        "story_block_id": 33,
+        "locale": "pt-BR",
+        "body": "O comércio e a relação com o café ajudam a entender a cidade atual: a capital de Risaralda conecta a vida urbana com distritos rurais e áreas protegidas da cordilheira Central da Colômbia."
+      }
+    ],
+    "destination_reason_translations": [
+      {
+        "reason_id": 76,
+        "locale": "en",
+        "body": "Combine central architecture, a ride on the urban cable system and nature visits while keeping the places distinct: Bioparque Ukumarí is a managed park; Otún Quimbaya and Ucumarí Regional Natural Park are separate protected areas."
+      },
+      {
+        "reason_id": 76,
+        "locale": "es",
+        "body": "Puedes combinar arquitectura del centro, un recorrido en transporte por cable y visitas de naturaleza sin confundir los lugares: el Bioparque Ukumarí es un recinto administrado; Otún Quimbaya y el Parque Regional Natural Ucumarí son áreas protegidas distintas."
+      },
+      {
+        "reason_id": 76,
+        "locale": "pt-BR",
+        "body": "Combine a arquitetura do centro, um passeio no transporte por cabo e visitas à natureza sem confundir os lugares: o Bioparque Ukumarí é um parque administrado; Otún Quimbaya e o Parque Natural Regional Ucumarí são áreas protegidas diferentes."
+      }
+    ],
+    "points_of_interest": [
+      {
+        "id": 110,
+        "destination_id": 26,
+        "slug": "bioparque-ukumari",
+        "poi_type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 1
+      },
+      {
+        "id": 111,
+        "destination_id": 26,
+        "slug": "otun-quimbaya",
+        "poi_type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 2
+      },
+      {
+        "id": 112,
+        "destination_id": 26,
+        "slug": "megacable",
+        "poi_type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 3
+      },
+      {
+        "id": 113,
+        "destination_id": 26,
+        "slug": "catedral-pobreza",
+        "poi_type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 4
+      },
+      {
+        "id": 114,
+        "destination_id": 26,
+        "slug": "ucumari-la-pastora",
+        "poi_type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 5
+      },
+      {
+        "id": 123,
+        "destination_id": 26,
+        "slug": "tour-cafetero",
+        "poi_type": "experience",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 6
+      },
+      {
+        "id": 124,
+        "destination_id": 26,
+        "slug": "senderismo-los-frailes",
+        "poi_type": "experience",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 7
+      }
+    ],
+    "point_of_interest_translations": [
+      {
+        "point_of_interest_id": 110,
+        "locale": "en",
+        "name": "Bioparque Ukumarí",
+        "description": "In the Cerritos area, this managed biopark offers routes through environments including Andean Forests and African Savannah. Check admission conditions before visiting.",
+        "map_url": "https://maps.app.goo.gl/CF1fgbxVFjvWehzj8",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 110,
+        "locale": "es",
+        "name": "Bioparque Ukumarí",
+        "description": "En el sector de Cerritos, este bioparque organiza sus recorridos por ambientes que incluyen Bosques Andinos y Sabana Africana. Es una visita administrada: consulta las condiciones de ingreso antes de ir.",
+        "map_url": "https://maps.app.goo.gl/CF1fgbxVFjvWehzj8",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 110,
+        "locale": "pt-BR",
+        "name": "Bioparque Ukumarí",
+        "description": "No setor de Cerritos, o bioparque organiza seus percursos por ambientes que incluem Florestas Andinas e Savana Africana. A visita tem acesso controlado: consulte as condições de entrada antes de ir.",
+        "map_url": "https://maps.app.goo.gl/CF1fgbxVFjvWehzj8",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 111,
+        "locale": "en",
+        "name": "Otún Quimbaya Flora and Fauna Sanctuary",
+        "description": "In La Suiza, humid sub-Andean forest protects the upper Otún watershed. Its trails introduce visitors to this ecosystem; check availability, registration and required accompaniment with the administration.",
+        "map_url": "https://maps.app.goo.gl/MimC1rYzRLpmweio6",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 111,
+        "locale": "es",
+        "name": "Santuario de Fauna y Flora Otún Quimbaya",
+        "description": "En la vereda La Suiza, el bosque húmedo subandino protege la cuenca alta del Otún. Sus senderos permiten acercarse a este ecosistema; confirma cupos, registro y acompañamiento requerido con la administración.",
+        "map_url": "https://maps.app.goo.gl/MimC1rYzRLpmweio6",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 111,
+        "locale": "pt-BR",
+        "name": "Santuário de Fauna e Flora Otún Quimbaya",
+        "description": "Na localidade de La Suiza, a floresta úmida subandina protege a bacia do alto Otún. As trilhas apresentam esse ecossistema; confirme vagas, registro e acompanhamento exigido com a administração.",
+        "map_url": "https://maps.app.goo.gl/MimC1rYzRLpmweio6",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 112,
+        "locale": "en",
+        "name": "Megacable",
+        "description": "Pereira’s urban cable system links city neighbourhoods and provides a different view of the surrounding slopes. Parque Olaya station is a starting point for seeing the city from above.",
+        "map_url": "https://maps.app.goo.gl/kaWY4eW7YfNZHUYc9",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 112,
+        "locale": "es",
+        "name": "Megacable",
+        "description": "El sistema de transporte por cable conecta sectores de Pereira y ofrece otra perspectiva de sus laderas urbanas. La estación Parque Olaya es un punto de partida para conocer la ciudad desde arriba.",
+        "map_url": "https://maps.app.goo.gl/kaWY4eW7YfNZHUYc9",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 112,
+        "locale": "pt-BR",
+        "name": "Megacable",
+        "description": "O sistema de transporte por cabo conecta setores de Pereira e oferece outra perspectiva das encostas urbanas. A estação Parque Olaya é um ponto de partida para conhecer a cidade do alto.",
+        "map_url": "https://maps.app.goo.gl/kaWY4eW7YfNZHUYc9",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 113,
+        "locale": "en",
+        "name": "Cathedral of Our Lady of Poverty",
+        "description": "Opposite Bolívar Square, Pereira’s cathedral is a landmark on a walk through the centre. Look at its façade and towers; respect available access and religious services when visiting the interior.",
+        "map_url": "https://maps.app.goo.gl/3J7qJcVkrsEw61Fc7",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 113,
+        "locale": "es",
+        "name": "Catedral Nuestra Señora de la Pobreza",
+        "description": "Frente a la Plaza de Bolívar, la catedral forma parte del recorrido por el centro de Pereira. Observa su fachada y sus torres; para conocer el interior, respeta el acceso disponible y las celebraciones religiosas.",
+        "map_url": "https://maps.app.goo.gl/3J7qJcVkrsEw61Fc7",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 113,
+        "locale": "pt-BR",
+        "name": "Catedral Nossa Senhora da Pobreza",
+        "description": "Em frente à Praça Bolívar, a catedral faz parte do percurso pelo centro de Pereira. Observe a fachada e as torres; para conhecer o interior, respeite o acesso disponível e as celebrações religiosas.",
+        "map_url": "https://maps.app.goo.gl/3J7qJcVkrsEw61Fc7",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 114,
+        "locale": "en",
+        "name": "Ucumarí – La Pastora",
+        "description": "The path towards La Pastora enters an Andean landscape from El Cedral. The regional park extends across Pereira and Santa Rosa de Cabal. The map marks La Pastora; the final stretch is reached on foot, not by car.",
+        "map_url": "https://maps.app.goo.gl/EnbDShNe6ffZPqhX9",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 114,
+        "locale": "es",
+        "name": "Ucumarí – La Pastora",
+        "description": "El camino hacia La Pastora se interna en el paisaje andino desde el sector de El Cedral. El parque regional tiene jurisdicción en Pereira y Santa Rosa de Cabal. El mapa señala La Pastora: el tramo final se realiza a pie, no en automóvil.",
+        "map_url": "https://maps.app.goo.gl/EnbDShNe6ffZPqhX9",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 114,
+        "locale": "pt-BR",
+        "name": "Ucumarí – La Pastora",
+        "description": "O caminho para La Pastora entra na paisagem andina a partir do setor de El Cedral. O parque regional abrange Pereira e Santa Rosa de Cabal. O mapa indica La Pastora: o trecho final é feito a pé, não de carro.",
+        "map_url": "https://maps.app.goo.gl/EnbDShNe6ffZPqhX9",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 123,
+        "locale": "en",
+        "name": "Coffee tour and coffee preparation",
+        "description": "A tour focused on coffee and its preparation in rural Pereira. Check the format, booking requirements and conditions before planning a visit.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 123,
+        "locale": "es",
+        "name": "Tour cafetero y preparación del café",
+        "description": "Un recorrido dedicado al café y su preparación en el entorno rural de Pereira. Consulta la modalidad, reserva y condiciones de la actividad antes de organizar la visita.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 123,
+        "locale": "pt-BR",
+        "name": "Passeio do café e preparo da bebida",
+        "description": "Um percurso dedicado ao café e ao seu preparo na zona rural de Pereira. Consulte a modalidade, a reserva e as condições da atividade antes de organizar a visita.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 124,
+        "locale": "en",
+        "name": "Hiking to Los Frailes waterfall",
+        "description": "An accompanied walk towards Los Frailes waterfall. Confirm reservations, authorised access and trail conditions before setting out.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 124,
+        "locale": "es",
+        "name": "Senderismo a la cascada Los Frailes",
+        "description": "Caminata acompañada hacia la cascada Los Frailes. Confirma la reserva, el acceso autorizado y las condiciones del recorrido antes de salir.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 124,
+        "locale": "pt-BR",
+        "name": "Trilha até a cachoeira Los Frailes",
+        "description": "Caminhada acompanhada até a cachoeira Los Frailes. Confirme a reserva, o acesso autorizado e as condições do percurso antes de sair.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      }
+    ],
+    "point_of_interest_media": [
+      {
+        "point_of_interest_id": 110,
+        "media_asset_id": 181,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 111,
+        "media_asset_id": 182,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 112,
+        "media_asset_id": 183,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 113,
+        "media_asset_id": 184,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 114,
+        "media_asset_id": 185,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 123,
+        "media_asset_id": 323,
+        "role": "gallery",
+        "display_order": 0
+      },
+      {
+        "point_of_interest_id": 124,
+        "media_asset_id": 324,
+        "role": "gallery",
+        "display_order": 0
+      }
+    ],
+    "businesses": [
+      {
+        "id": 274,
+        "public_id": "22f1dd20-3051-588e-97ad-0e14b3c18b40",
+        "destination_id": 26,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "restaurante-erase-una-vez",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 4
+      },
+      {
+        "id": 275,
+        "public_id": "47535045-8e7c-5b9b-ad5c-401e2d68ff95",
+        "destination_id": 26,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "picnic-la-combi-completa",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 5
+      },
+      {
+        "id": 276,
+        "public_id": "6b533840-201c-5ae3-bb5c-02d72ef7566b",
+        "destination_id": 26,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "arboloco-cafe-restaurante",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 6
+      },
+      {
+        "id": 277,
+        "public_id": "7f57ba7b-7a60-5f6c-8a10-fddbd59f3ab8",
+        "destination_id": 26,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "cafe-lunch-la-colonia",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 7
+      },
+      {
+        "id": 278,
+        "public_id": "95251f2f-b4a6-5f3e-803b-af3b4d5ad1b5",
+        "destination_id": 26,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "la-conserveria-brunch",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 8
+      },
+      {
+        "id": 279,
+        "public_id": "50ffe577-ec10-514b-a46b-919e5e9a495d",
+        "destination_id": 26,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "cafe-monkey",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 9
+      },
+      {
+        "id": 273,
+        "public_id": "444ffbcf-5d91-590c-84ce-f32e94abed0d",
+        "destination_id": 26,
+        "category_code": "cultura",
+        "record_origin": "public_import",
+        "slug": "casa-del-mar-arte-espacial",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 3
+      },
+      {
+        "id": 271,
+        "public_id": "644e4a61-d97d-5eb3-aa9d-606905fb6d57",
+        "destination_id": 26,
+        "category_code": "experiencias",
+        "record_origin": "public_import",
+        "slug": "asociacion-comunitaria-yarumo-blanco",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 1
+      },
+      {
+        "id": 272,
+        "public_id": "678f8648-13a0-5853-8c47-94d99137796a",
+        "destination_id": 26,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "cabana-el-cedral",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 2
+      },
+      {
+        "id": 280,
+        "public_id": "f51f89bd-f24b-5bdb-8eec-77a6a10723bb",
+        "destination_id": 26,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "entre-arboles-ecoglamping",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 10
+      },
+      {
+        "id": 281,
+        "public_id": "99ed9a5e-1766-5119-9e46-c04abb2aaf7d",
+        "destination_id": 26,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "kumanday-casa-hotel",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 11
+      },
+      {
+        "id": 282,
+        "public_id": "bb1aabde-9acd-5593-9caa-1dc9d54d23a9",
+        "destination_id": 26,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "la-calamuchita",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 12
+      },
+      {
+        "id": 283,
+        "public_id": "d170559f-fae2-51b4-a9ff-ffbe0dc4ce2a",
+        "destination_id": 26,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "finca-hotel-yerbabuena",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 13
+      },
+      {
+        "id": 284,
+        "public_id": "fe46e30c-82a1-59cc-84ad-444c1b424387",
+        "destination_id": 26,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "finca-el-rosal-combia",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 14
+      },
+      {
+        "id": 285,
+        "public_id": "9c8965a4-be00-5b73-931a-3dc18afc6f12",
+        "destination_id": 26,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "finca-san-francisco",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 15
+      },
+      {
+        "id": 286,
+        "public_id": "e7b995c2-4a74-5e30-8b2f-61ea45b5c961",
+        "destination_id": 26,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "hotel-casa-tuirak",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 16
+      },
+      {
+        "id": 287,
+        "public_id": "90cf1468-e749-54c1-b18f-879b2c426a79",
+        "destination_id": 26,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "finca-viyei-con-encanto",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 17
+      },
+      {
+        "id": 288,
+        "public_id": "37983541-ee75-5573-9507-4305dd391f12",
+        "destination_id": 26,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "villa-cristina-casa-boutique",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 18
+      },
+      {
+        "id": 289,
+        "public_id": "59e7a7cc-e952-5316-b72d-1ad8ee1a4ebd",
+        "destination_id": 26,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "glamping-pachacue-ancestral",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 19
+      },
+      {
+        "id": 290,
+        "public_id": "6d80e8b3-2fca-513d-8fe4-e2465ed64170",
+        "destination_id": 26,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "la-union-coffe-farm",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 20
+      },
+      {
+        "id": 291,
+        "public_id": "3f72faa0-5cf7-5550-a51d-c50af1a9a2fb",
+        "destination_id": 26,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "portal-la-mariana",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 21
+      },
+      {
+        "id": 292,
+        "public_id": "339e432b-7dc3-5295-9a72-7d7d7dd48b97",
+        "destination_id": 26,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "la-acuarela-posada-de-la-monita",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 22
+      },
+      {
+        "id": 293,
+        "public_id": "f9495150-43e1-53a1-b2a3-bfbbe1ba3d7b",
+        "destination_id": 26,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "monte-jazmin",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 23
+      },
+      {
+        "id": 294,
+        "public_id": "a3cb0082-22b9-5fe6-856b-71aaad033c10",
+        "destination_id": 26,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "7-cueros-encanto-y-cafe",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 24
+      },
+      {
+        "id": 295,
+        "public_id": "46f3933e-ae75-54c2-99a1-712fafef1b98",
+        "destination_id": 26,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "finca-monte-carmelo",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 25
+      },
+      {
+        "id": 296,
+        "public_id": "cd2b52be-7197-5435-a9c0-e33a1ca20203",
+        "destination_id": 26,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "hotel-spa-la-colina",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 26
+      },
+      {
+        "id": 297,
+        "public_id": "f28b9089-33c0-5719-97cb-9741ce268c38",
+        "destination_id": 26,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "hotel-san-carlos-lodge",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 27
+      },
+      {
+        "id": 298,
+        "public_id": "c3d1e0e5-920c-5906-8cc6-9f622d881834",
+        "destination_id": 26,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "finca-flamingo",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 28
+      },
+      {
+        "id": 299,
+        "public_id": "144c22b6-3005-55f3-805c-3af55253fba3",
+        "destination_id": 26,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "finca-mi-tierrita",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 29
+      },
+      {
+        "id": 300,
+        "public_id": "0fa87dae-a84a-51db-b42b-73ea2224672c",
+        "destination_id": 26,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "jardin-de-mis-amores",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 30
+      }
+    ],
+    "business_translations": [
+      {
+        "business_id": 271,
+        "locale": "en",
+        "display_name": "ASOCIACIÓN COMUNITARIA YARUMO BLANCO",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 271,
+        "locale": "es",
+        "display_name": "ASOCIACIÓN COMUNITARIA YARUMO BLANCO",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 271,
+        "locale": "pt-BR",
+        "display_name": "ASOCIACIÓN COMUNITARIA YARUMO BLANCO",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 272,
+        "locale": "en",
+        "display_name": "CABAÑA EL CEDRAL",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 272,
+        "locale": "es",
+        "display_name": "CABAÑA EL CEDRAL",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 272,
+        "locale": "pt-BR",
+        "display_name": "CABAÑA EL CEDRAL",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 273,
+        "locale": "en",
+        "display_name": "CASA DEL MAR - ARTE ESPACIAL",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 273,
+        "locale": "es",
+        "display_name": "CASA DEL MAR - ARTE ESPACIAL",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 273,
+        "locale": "pt-BR",
+        "display_name": "CASA DEL MAR - ARTE ESPACIAL",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 274,
+        "locale": "en",
+        "display_name": "RESTAURANTE ERASE UNA VEZ",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 274,
+        "locale": "es",
+        "display_name": "RESTAURANTE ERASE UNA VEZ",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 274,
+        "locale": "pt-BR",
+        "display_name": "RESTAURANTE ERASE UNA VEZ",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 275,
+        "locale": "en",
+        "display_name": "PICNIC LA COMBI COMPLETA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 275,
+        "locale": "es",
+        "display_name": "PICNIC LA COMBI COMPLETA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 275,
+        "locale": "pt-BR",
+        "display_name": "PICNIC LA COMBI COMPLETA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 276,
+        "locale": "en",
+        "display_name": "ARBOLOCO CAFÉ RESTAURANTE",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 276,
+        "locale": "es",
+        "display_name": "ARBOLOCO CAFÉ RESTAURANTE",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 276,
+        "locale": "pt-BR",
+        "display_name": "ARBOLOCO CAFÉ RESTAURANTE",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 277,
+        "locale": "en",
+        "display_name": "CAFÉ LUNCH LA COLONIA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 277,
+        "locale": "es",
+        "display_name": "CAFÉ LUNCH LA COLONIA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 277,
+        "locale": "pt-BR",
+        "display_name": "CAFÉ LUNCH LA COLONIA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 278,
+        "locale": "en",
+        "display_name": "LA CONSERVERÍA (BRUNCH)",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 278,
+        "locale": "es",
+        "display_name": "LA CONSERVERÍA (BRUNCH)",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 278,
+        "locale": "pt-BR",
+        "display_name": "LA CONSERVERÍA (BRUNCH)",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 279,
+        "locale": "en",
+        "display_name": "CAFÉ MONKEY",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 279,
+        "locale": "es",
+        "display_name": "CAFÉ MONKEY",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 279,
+        "locale": "pt-BR",
+        "display_name": "CAFÉ MONKEY",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 280,
+        "locale": "en",
+        "display_name": "ENTRE ÁRBOLES ECOGLAMPING",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 280,
+        "locale": "es",
+        "display_name": "ENTRE ÁRBOLES ECOGLAMPING",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 280,
+        "locale": "pt-BR",
+        "display_name": "ENTRE ÁRBOLES ECOGLAMPING",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 281,
+        "locale": "en",
+        "display_name": "KUMANDAY CASA HOTEL",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 281,
+        "locale": "es",
+        "display_name": "KUMANDAY CASA HOTEL",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 281,
+        "locale": "pt-BR",
+        "display_name": "KUMANDAY CASA HOTEL",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 282,
+        "locale": "en",
+        "display_name": "LA CALAMUCHITA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 282,
+        "locale": "es",
+        "display_name": "LA CALAMUCHITA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 282,
+        "locale": "pt-BR",
+        "display_name": "LA CALAMUCHITA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 283,
+        "locale": "en",
+        "display_name": "FINCA HOTEL YERBABUENA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 283,
+        "locale": "es",
+        "display_name": "FINCA HOTEL YERBABUENA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 283,
+        "locale": "pt-BR",
+        "display_name": "FINCA HOTEL YERBABUENA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 284,
+        "locale": "en",
+        "display_name": "FINCA EL ROSAL COMBIA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 284,
+        "locale": "es",
+        "display_name": "FINCA EL ROSAL COMBIA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 284,
+        "locale": "pt-BR",
+        "display_name": "FINCA EL ROSAL COMBIA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 285,
+        "locale": "en",
+        "display_name": "FINCA SAN FRANCISCO",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 285,
+        "locale": "es",
+        "display_name": "FINCA SAN FRANCISCO",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 285,
+        "locale": "pt-BR",
+        "display_name": "FINCA SAN FRANCISCO",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 286,
+        "locale": "en",
+        "display_name": "HOTEL CASA TUIRAK",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 286,
+        "locale": "es",
+        "display_name": "HOTEL CASA TUIRAK",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 286,
+        "locale": "pt-BR",
+        "display_name": "HOTEL CASA TUIRAK",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 287,
+        "locale": "en",
+        "display_name": "FINCA VIYEI CON ENCANTO",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 287,
+        "locale": "es",
+        "display_name": "FINCA VIYEI CON ENCANTO",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 287,
+        "locale": "pt-BR",
+        "display_name": "FINCA VIYEI CON ENCANTO",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 288,
+        "locale": "en",
+        "display_name": "VILLA CRISTINA CASA BOUTIQUE",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 288,
+        "locale": "es",
+        "display_name": "VILLA CRISTINA CASA BOUTIQUE",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 288,
+        "locale": "pt-BR",
+        "display_name": "VILLA CRISTINA CASA BOUTIQUE",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 289,
+        "locale": "en",
+        "display_name": "GLAMPING PACHACUÉ ANCESTRAL",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 289,
+        "locale": "es",
+        "display_name": "GLAMPING PACHACUÉ ANCESTRAL",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 289,
+        "locale": "pt-BR",
+        "display_name": "GLAMPING PACHACUÉ ANCESTRAL",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 290,
+        "locale": "en",
+        "display_name": "LA UNIÓN COFFE FARM",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 290,
+        "locale": "es",
+        "display_name": "LA UNIÓN COFFE FARM",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 290,
+        "locale": "pt-BR",
+        "display_name": "LA UNIÓN COFFE FARM",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 291,
+        "locale": "en",
+        "display_name": "PORTAL LA MARIANA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 291,
+        "locale": "es",
+        "display_name": "PORTAL LA MARIANA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 291,
+        "locale": "pt-BR",
+        "display_name": "PORTAL LA MARIANA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 292,
+        "locale": "en",
+        "display_name": "LA ACUARELA POSADA DE LA MONITA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 292,
+        "locale": "es",
+        "display_name": "LA ACUARELA POSADA DE LA MONITA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 292,
+        "locale": "pt-BR",
+        "display_name": "LA ACUARELA POSADA DE LA MONITA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 293,
+        "locale": "en",
+        "display_name": "MONTE JAZMIN",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 293,
+        "locale": "es",
+        "display_name": "MONTE JAZMIN",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 293,
+        "locale": "pt-BR",
+        "display_name": "MONTE JAZMIN",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 294,
+        "locale": "en",
+        "display_name": "7 CUEROS ENCANTO Y CAFÉ",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 294,
+        "locale": "es",
+        "display_name": "7 CUEROS ENCANTO Y CAFÉ",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 294,
+        "locale": "pt-BR",
+        "display_name": "7 CUEROS ENCANTO Y CAFÉ",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 295,
+        "locale": "en",
+        "display_name": "FINCA MONTE CARMELO",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 295,
+        "locale": "es",
+        "display_name": "FINCA MONTE CARMELO",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 295,
+        "locale": "pt-BR",
+        "display_name": "FINCA MONTE CARMELO",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 296,
+        "locale": "en",
+        "display_name": "HOTEL SPA LA COLINA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 296,
+        "locale": "es",
+        "display_name": "HOTEL SPA LA COLINA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 296,
+        "locale": "pt-BR",
+        "display_name": "HOTEL SPA LA COLINA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 297,
+        "locale": "en",
+        "display_name": "HOTEL SAN CARLOS LODGE",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 297,
+        "locale": "es",
+        "display_name": "HOTEL SAN CARLOS LODGE",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 297,
+        "locale": "pt-BR",
+        "display_name": "HOTEL SAN CARLOS LODGE",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 298,
+        "locale": "en",
+        "display_name": "FINCA FLAMINGO",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 298,
+        "locale": "es",
+        "display_name": "FINCA FLAMINGO",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 298,
+        "locale": "pt-BR",
+        "display_name": "FINCA FLAMINGO",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 299,
+        "locale": "en",
+        "display_name": "FINCA MI TIERRITA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 299,
+        "locale": "es",
+        "display_name": "FINCA MI TIERRITA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 299,
+        "locale": "pt-BR",
+        "display_name": "FINCA MI TIERRITA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 300,
+        "locale": "en",
+        "display_name": "JARDIN DE MIS AMORES",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 300,
+        "locale": "es",
+        "display_name": "JARDIN DE MIS AMORES",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 300,
+        "locale": "pt-BR",
+        "display_name": "JARDIN DE MIS AMORES",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      }
+    ],
+    "business_categories": [],
+    "business_sources": [
+      {
+        "business_id": 274,
+        "source_url": "https://pereira.travel/rutas-turisticas-la-florida/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 275,
+        "source_url": "https://pereira.travel/rutas-turisticas-la-florida/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 276,
+        "source_url": "https://pereira.travel/rutas-turisticas-la-florida/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 277,
+        "source_url": "https://pereira.travel/rutas-turisticas-la-florida/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 278,
+        "source_url": "https://pereira.travel/rutas-turisticas-la-florida/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 279,
+        "source_url": "https://pereira.travel/rutas-turisticas-la-florida/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 273,
+        "source_url": "https://pereira.travel/rutas-turisticas-la-florida/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 271,
+        "source_url": "https://pereira.travel/rutas-turisticas-la-florida/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 272,
+        "source_url": "https://pereira.travel/rutas-turisticas-la-florida/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 280,
+        "source_url": "https://pereira.travel/rutas-turisticas-la-florida/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 281,
+        "source_url": "https://pereira.travel/rutas-turisticas-la-florida/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 282,
+        "source_url": "https://pereira.travel/rutas-turisticas-la-florida/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 283,
+        "source_url": "https://pereira.travel/donde-quedarse/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 284,
+        "source_url": "https://pereira.travel/donde-quedarse/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 285,
+        "source_url": "https://pereira.travel/donde-quedarse/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 286,
+        "source_url": "https://pereira.travel/donde-quedarse/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 287,
+        "source_url": "https://pereira.travel/donde-quedarse/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 288,
+        "source_url": "https://pereira.travel/donde-quedarse/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 289,
+        "source_url": "https://pereira.travel/donde-quedarse/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 290,
+        "source_url": "https://pereira.travel/donde-quedarse/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 291,
+        "source_url": "https://pereira.travel/donde-quedarse/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 292,
+        "source_url": "https://pereira.travel/donde-quedarse/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 293,
+        "source_url": "https://pereira.travel/donde-quedarse/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 294,
+        "source_url": "https://pereira.travel/donde-quedarse/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 295,
+        "source_url": "https://pereira.travel/donde-quedarse/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 296,
+        "source_url": "https://pereira.travel/donde-quedarse/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 297,
+        "source_url": "https://pereira.travel/donde-quedarse/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 298,
+        "source_url": "https://pereira.travel/donde-quedarse/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 299,
+        "source_url": "https://pereira.travel/donde-quedarse/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 300,
+        "source_url": "https://pereira.travel/donde-quedarse/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      }
+    ],
+    "business_contacts": [],
+    "business_media": [],
+    "media_assets": [
+      {
+        "id": 180,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/54/542673cbe687f0458a9800b28448ec5f403277dea2936f07c57ab8c12bef9cb5.webp",
+        "creator": "Ilustración IA · adaptación para revisión local",
+        "source_url": "",
+        "license_name": "Selected reference adaptation; rights unconfirmed; DEV1 isolated review only",
+        "license_url": "",
+        "provenance_json": "{\"draft\": true, \"sha256\": \"542673cbe687f0458a9800b28448ec5f403277dea2936f07c57ab8c12bef9cb5\", \"metadata\": {\"path\": \"assets/revision-cobertura/pereira/portada-v2.webp\", \"sha256\": \"542673cbe687f0458a9800b28448ec5f403277dea2936f07c57ab8c12bef9cb5\", \"width\": 1353, \"height\": 1162, \"status\": \"draft_human_approval_pending\", \"origin\": \"ai_generated\", \"creator\": \"Ilustración IA · adaptación para revisión local\", \"source_url\": \"\", \"license_name\": \"Selected reference adaptation; rights unconfirmed; DEV1 isolated review only\", \"license_url\": \"\"}, \"publication_authorized\": true, \"approval_scope\": \"Owner PUBLICAR five current DEV1 destinations 2026-10-24\", \"source_active_path\": \"assets/revision-cobertura/pereira/portada-v2.webp\"}",
+        "width": 1353,
+        "height": 1162
+      },
+      {
+        "id": 181,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/d7/d72b8d0c1c3858e3ebcd54485bbc1fe9613b087086048093404aae68d292380d.webp",
+        "creator": "Ilustración IA · adaptación para revisión local",
+        "source_url": "",
+        "license_name": "Selected reference adaptation; rights unconfirmed; DEV1 isolated review only",
+        "license_url": "",
+        "provenance_json": "{\"draft\": true, \"sha256\": \"d72b8d0c1c3858e3ebcd54485bbc1fe9613b087086048093404aae68d292380d\", \"metadata\": {\"path\": \"assets/revision-cobertura/pereira/bioparque-ukumari-v2.webp\", \"sha256\": \"d72b8d0c1c3858e3ebcd54485bbc1fe9613b087086048093404aae68d292380d\", \"width\": 1100, \"height\": 825, \"status\": \"draft_human_approval_pending\", \"origin\": \"ai_generated\", \"creator\": \"Ilustración IA · adaptación para revisión local\", \"source_url\": \"\", \"license_name\": \"Selected reference adaptation; rights unconfirmed; DEV1 isolated review only\", \"license_url\": \"\"}, \"publication_authorized\": true, \"approval_scope\": \"Owner PUBLICAR five current DEV1 destinations 2026-10-24\", \"source_active_path\": \"assets/revision-cobertura/pereira/bioparque-ukumari-v2.webp\"}",
+        "width": 1100,
+        "height": 825
+      },
+      {
+        "id": 182,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/ec/ecf1feeef41d9a65d2206f84fee5301bde6e83d690f3be4b47580cda8c6be438.webp",
+        "creator": "Ilustración IA · adaptación para revisión local",
+        "source_url": "",
+        "license_name": "Selected reference adaptation; rights unconfirmed; DEV1 isolated review only",
+        "license_url": "",
+        "provenance_json": "{\"draft\": true, \"sha256\": \"ecf1feeef41d9a65d2206f84fee5301bde6e83d690f3be4b47580cda8c6be438\", \"metadata\": {\"path\": \"assets/revision-cobertura/pereira/otun-quimbaya-v2.webp\", \"sha256\": \"ecf1feeef41d9a65d2206f84fee5301bde6e83d690f3be4b47580cda8c6be438\", \"width\": 1100, \"height\": 733, \"status\": \"draft_human_approval_pending\", \"origin\": \"ai_generated\", \"creator\": \"Ilustración IA · adaptación para revisión local\", \"source_url\": \"\", \"license_name\": \"Selected reference adaptation; rights unconfirmed; DEV1 isolated review only\", \"license_url\": \"\"}, \"publication_authorized\": true, \"approval_scope\": \"Owner PUBLICAR five current DEV1 destinations 2026-10-24\", \"source_active_path\": \"assets/revision-cobertura/pereira/otun-quimbaya-v2.webp\"}",
+        "width": 1100,
+        "height": 733
+      },
+      {
+        "id": 183,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/83/83536cd6ec828356350c7dffcbc667203fb39daf262533aba40f288929c13e8c.webp",
+        "creator": "Ilustración IA · adaptación para revisión local",
+        "source_url": "",
+        "license_name": "Selected reference adaptation; rights unconfirmed; DEV1 isolated review only",
+        "license_url": "",
+        "provenance_json": "{\"draft\": true, \"sha256\": \"83536cd6ec828356350c7dffcbc667203fb39daf262533aba40f288929c13e8c\", \"metadata\": {\"path\": \"assets/revision-cobertura/pereira/megacable-v3.webp\", \"sha256\": \"83536cd6ec828356350c7dffcbc667203fb39daf262533aba40f288929c13e8c\", \"width\": 1100, \"height\": 825, \"status\": \"draft_human_approval_pending\", \"origin\": \"ai_generated\", \"creator\": \"Ilustración IA · adaptación para revisión local\", \"source_url\": \"\", \"license_name\": \"Selected reference adaptation; rights unconfirmed; DEV1 isolated review only\", \"license_url\": \"\"}, \"publication_authorized\": true, \"approval_scope\": \"Owner PUBLICAR five current DEV1 destinations 2026-10-24\", \"source_active_path\": \"assets/revision-cobertura/pereira/megacable-v3.webp\"}",
+        "width": 1100,
+        "height": 825
+      },
+      {
+        "id": 184,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/8b/8ba3b3c2c6c1c9fb55ffb3fd4666346f585f414a48407c7621438f7a5792b815.webp",
+        "creator": "Ilustración IA derivada de fotografía de SajoR (2022)",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Catedral_de_Pereira_-_Fachada_2.jpg",
+        "license_name": "CC BY-SA 4.0; adaptación ilustrada con IA",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "provenance_json": "{\"draft\": true, \"sha256\": \"8ba3b3c2c6c1c9fb55ffb3fd4666346f585f414a48407c7621438f7a5792b815\", \"metadata\": {\"path\": \"assets/revision-cobertura/pereira/catedral-pobreza-v2.webp\", \"sha256\": \"8ba3b3c2c6c1c9fb55ffb3fd4666346f585f414a48407c7621438f7a5792b815\", \"width\": 1050, \"height\": 1400, \"status\": \"draft_human_approval_pending\", \"origin\": \"ai_generated\", \"creator\": \"Ilustración IA derivada de fotografía de SajoR (2022)\", \"source_url\": \"https://commons.wikimedia.org/wiki/File:Catedral_de_Pereira_-_Fachada_2.jpg\", \"license_name\": \"CC BY-SA 4.0; adaptación ilustrada con IA\", \"license_url\": \"https://creativecommons.org/licenses/by-sa/4.0/\"}, \"publication_authorized\": true, \"approval_scope\": \"Owner PUBLICAR five current DEV1 destinations 2026-10-24\", \"source_active_path\": \"assets/revision-cobertura/pereira/catedral-pobreza-v2.webp\"}",
+        "width": 1050,
+        "height": 1400
+      },
+      {
+        "id": 185,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/88/8892b7b4dc5f14a35590af1a205297e31f36c82ecdaa277d7f526493cd56d2e1.webp",
+        "creator": "Ilustración IA · adaptación para revisión local",
+        "source_url": "",
+        "license_name": "Selected reference adaptation; rights unconfirmed; DEV1 isolated review only",
+        "license_url": "",
+        "provenance_json": "{\"draft\": true, \"sha256\": \"8892b7b4dc5f14a35590af1a205297e31f36c82ecdaa277d7f526493cd56d2e1\", \"metadata\": {\"path\": \"assets/revision-cobertura/pereira/ucumari-la-pastora-v2.webp\", \"sha256\": \"8892b7b4dc5f14a35590af1a205297e31f36c82ecdaa277d7f526493cd56d2e1\", \"width\": 1100, \"height\": 824, \"status\": \"draft_human_approval_pending\", \"origin\": \"ai_generated\", \"creator\": \"Ilustración IA · adaptación para revisión local\", \"source_url\": \"\", \"license_name\": \"Selected reference adaptation; rights unconfirmed; DEV1 isolated review only\", \"license_url\": \"\"}, \"publication_authorized\": true, \"approval_scope\": \"Owner PUBLICAR five current DEV1 destinations 2026-10-24\", \"source_active_path\": \"assets/revision-cobertura/pereira/ucumari-la-pastora-v2.webp\"}",
+        "width": 1100,
+        "height": 824
+      },
+      {
+        "id": 323,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/7f/7fcefadc75ffe2872d24a61a2e3f9b6233b1d051a943d35793e9ca6018fb65fb.webp",
+        "creator": "Ilustración IA · Explorando Lugares",
+        "source_url": "",
+        "license_name": "Generada con IA; referencia y aprobación exacta documentadas, procedencia de fotografías conservada",
+        "license_url": "",
+        "provenance_json": "{\"destination\": \"pereira\", \"slug\": \"tour-cafetero\", \"source_file\": \"/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/entregables/lote-cobertura-colombia-20261023/pereira/visual/cafe-inset-v2-1200.webp\", \"path\": \"assets/revision-cobertura/pereira/cafe-inset-v2-1200.webp\", \"sha256\": \"7fcefadc75ffe2872d24a61a2e3f9b6233b1d051a943d35793e9ca6018fb65fb\", \"creator\": \"Ilustración IA · Explorando Lugares\", \"source_url\": \"\", \"license_name\": \"Generada con IA; referencia y aprobación exacta documentadas, procedencia de fotografías conservada\", \"width\": 1200, \"height\": 800, \"status\": \"owner_approved_for_dev_review\", \"publication_authorized\": true, \"approval_scope\": \"Owner PUBLICAR five current DEV1 destinations 2026-10-24\", \"source_active_path\": \"assets/revision-cobertura/pereira/cafe-inset-v2-1200.webp\"}",
+        "width": 1200,
+        "height": 800
+      },
+      {
+        "id": 324,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/65/651cdcd15ed361698736d267af3f279c3ab3c49bcb81f5f1fea0baa27d10e249.webp",
+        "creator": "Ilustración IA · Explorando Lugares",
+        "source_url": "",
+        "license_name": "Generada con IA; referencia y aprobación exacta documentadas, procedencia de fotografías conservada",
+        "license_url": "",
+        "provenance_json": "{\"destination\": \"pereira\", \"slug\": \"senderismo-los-frailes\", \"source_file\": \"/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/entregables/lote-cobertura-colombia-20261023/pereira/visual/los-frailes-experiencia-v1-1200.webp\", \"path\": \"assets/revision-cobertura/pereira/los-frailes-experiencia-v1-1200.webp\", \"sha256\": \"651cdcd15ed361698736d267af3f279c3ab3c49bcb81f5f1fea0baa27d10e249\", \"creator\": \"Ilustración IA · Explorando Lugares\", \"source_url\": \"\", \"license_name\": \"Generada con IA; referencia y aprobación exacta documentadas, procedencia de fotografías conservada\", \"width\": 1200, \"height\": 800, \"status\": \"owner_approved_for_dev_review\", \"publication_authorized\": true, \"approval_scope\": \"Owner PUBLICAR five current DEV1 destinations 2026-10-24\", \"source_active_path\": \"assets/revision-cobertura/pereira/los-frailes-experiencia-v1-1200.webp\"}",
+        "width": 1200,
+        "height": 800
+      }
+    ],
+    "media_asset_translations": [
+      {
+        "media_asset_id": 180,
+        "locale": "en",
+        "alt_text": "Pereira",
+        "caption": "Editorial illustration: Pereira."
+      },
+      {
+        "media_asset_id": 180,
+        "locale": "es",
+        "alt_text": "Pereira",
+        "caption": "Ilustración editorial: Pereira."
+      },
+      {
+        "media_asset_id": 180,
+        "locale": "pt-BR",
+        "alt_text": "Pereira",
+        "caption": "Ilustração editorial: Pereira."
+      },
+      {
+        "media_asset_id": 181,
+        "locale": "en",
+        "alt_text": "Bioparque Ukumarí",
+        "caption": "Editorial illustration: Bioparque Ukumarí."
+      },
+      {
+        "media_asset_id": 181,
+        "locale": "es",
+        "alt_text": "Bioparque Ukumarí",
+        "caption": "Ilustración editorial: Bioparque Ukumarí."
+      },
+      {
+        "media_asset_id": 181,
+        "locale": "pt-BR",
+        "alt_text": "Bioparque Ukumarí",
+        "caption": "Ilustração editorial: Bioparque Ukumarí."
+      },
+      {
+        "media_asset_id": 182,
+        "locale": "en",
+        "alt_text": "Otún Quimbaya Flora and Fauna Sanctuary",
+        "caption": "Editorial illustration: Otún Quimbaya Flora and Fauna Sanctuary."
+      },
+      {
+        "media_asset_id": 182,
+        "locale": "es",
+        "alt_text": "Santuario de Fauna y Flora Otún Quimbaya",
+        "caption": "Ilustración editorial: Santuario de Fauna y Flora Otún Quimbaya."
+      },
+      {
+        "media_asset_id": 182,
+        "locale": "pt-BR",
+        "alt_text": "Santuário de Fauna e Flora Otún Quimbaya",
+        "caption": "Ilustração editorial: Santuário de Fauna e Flora Otún Quimbaya."
+      },
+      {
+        "media_asset_id": 183,
+        "locale": "en",
+        "alt_text": "Megacable",
+        "caption": "Editorial illustration: Megacable."
+      },
+      {
+        "media_asset_id": 183,
+        "locale": "es",
+        "alt_text": "Megacable",
+        "caption": "Ilustración editorial: Megacable."
+      },
+      {
+        "media_asset_id": 183,
+        "locale": "pt-BR",
+        "alt_text": "Megacable",
+        "caption": "Ilustração editorial: Megacable."
+      },
+      {
+        "media_asset_id": 184,
+        "locale": "en",
+        "alt_text": "Cathedral of Our Lady of Poverty",
+        "caption": "Editorial illustration: Cathedral of Our Lady of Poverty."
+      },
+      {
+        "media_asset_id": 184,
+        "locale": "es",
+        "alt_text": "Catedral Nuestra Señora de la Pobreza",
+        "caption": "Ilustración editorial: Catedral Nuestra Señora de la Pobreza."
+      },
+      {
+        "media_asset_id": 184,
+        "locale": "pt-BR",
+        "alt_text": "Catedral Nossa Senhora da Pobreza",
+        "caption": "Ilustração editorial: Catedral Nossa Senhora da Pobreza."
+      },
+      {
+        "media_asset_id": 185,
+        "locale": "en",
+        "alt_text": "Ucumarí – La Pastora",
+        "caption": "Editorial illustration: Ucumarí – La Pastora."
+      },
+      {
+        "media_asset_id": 185,
+        "locale": "es",
+        "alt_text": "Ucumarí – La Pastora",
+        "caption": "Ilustración editorial: Ucumarí – La Pastora."
+      },
+      {
+        "media_asset_id": 185,
+        "locale": "pt-BR",
+        "alt_text": "Ucumarí – La Pastora",
+        "caption": "Ilustração editorial: Ucumarí – La Pastora."
+      },
+      {
+        "media_asset_id": 323,
+        "locale": "en",
+        "alt_text": "Coffee tour and coffee preparation",
+        "caption": "Editorial illustration: Coffee tour and coffee preparation."
+      },
+      {
+        "media_asset_id": 323,
+        "locale": "es",
+        "alt_text": "Tour cafetero y preparación del café",
+        "caption": "Ilustración editorial: Tour cafetero y preparación del café."
+      },
+      {
+        "media_asset_id": 323,
+        "locale": "pt-BR",
+        "alt_text": "Passeio do café e preparo da bebida",
+        "caption": "Ilustração editorial: Passeio do café e preparo da bebida."
+      },
+      {
+        "media_asset_id": 324,
+        "locale": "en",
+        "alt_text": "Hiking to Los Frailes waterfall",
+        "caption": "Editorial illustration: Hiking to Los Frailes waterfall."
+      },
+      {
+        "media_asset_id": 324,
+        "locale": "es",
+        "alt_text": "Senderismo a la cascada Los Frailes",
+        "caption": "Ilustración editorial: Senderismo a la cascada Los Frailes."
+      },
+      {
+        "media_asset_id": 324,
+        "locale": "pt-BR",
+        "alt_text": "Trilha até a cachoeira Los Frailes",
+        "caption": "Ilustração editorial: Trilha até a cachoeira Los Frailes."
+      }
+    ]
+  },
+  "media_files": {
+    "180": {
+      "sha256": "542673cbe687f0458a9800b28448ec5f403277dea2936f07c57ab8c12bef9cb5"
+    },
+    "181": {
+      "sha256": "d72b8d0c1c3858e3ebcd54485bbc1fe9613b087086048093404aae68d292380d"
+    },
+    "182": {
+      "sha256": "ecf1feeef41d9a65d2206f84fee5301bde6e83d690f3be4b47580cda8c6be438"
+    },
+    "183": {
+      "sha256": "83536cd6ec828356350c7dffcbc667203fb39daf262533aba40f288929c13e8c"
+    },
+    "184": {
+      "sha256": "8ba3b3c2c6c1c9fb55ffb3fd4666346f585f414a48407c7621438f7a5792b815"
+    },
+    "185": {
+      "sha256": "8892b7b4dc5f14a35590af1a205297e31f36c82ecdaa277d7f526493cd56d2e1"
+    },
+    "323": {
+      "sha256": "7fcefadc75ffe2872d24a61a2e3f9b6233b1d051a943d35793e9ca6018fb65fb"
+    },
+    "324": {
+      "sha256": "651cdcd15ed361698736d267af3f279c3ab3c49bcb81f5f1fea0baa27d10e249"
+    }
+  }
+}

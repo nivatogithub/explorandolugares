@@ -1,0 +1,1954 @@
+{
+  "schema": "destination-public-snapshot-v1",
+  "destination": "villavieja",
+  "tables": {
+    "destinations": [
+      {
+        "id": 28,
+        "slug": "villavieja",
+        "destination_type": "municipality",
+        "country_code": "CO",
+        "department": "Huila",
+        "subregion": "Norte del Huila",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 29,
+        "created_at": "2026-10-23 20:13:06",
+        "updated_at": "2026-10-23 20:48:09"
+      }
+    ],
+    "destination_translations": [
+      {
+        "destination_id": 28,
+        "locale": "en",
+        "display_name": "Villavieja",
+        "eyebrow": "Huila / Colombia",
+        "headline": "Village life and the landscapes of La Tatacoa",
+        "intro": "A shaded square, fossil heritage and sculpted earth: Villavieja connects everyday life in northern Huila with La Tatacoa and its astronomy activities.",
+        "meta_description": "Explore Villavieja, Huila: La Tatacoa, the Paleontological Museum, Santa Bárbara Chapel and astronomy activities."
+      },
+      {
+        "destination_id": 28,
+        "locale": "es",
+        "display_name": "Villavieja",
+        "eyebrow": "Huila / Colombia",
+        "headline": "Entre el pueblo y La Tatacoa",
+        "intro": "Una plaza de sombra, memoria fósil y paisajes de tierra esculpida: Villavieja conecta la vida del norte del Huila con La Tatacoa y sus noches de observación astronómica.",
+        "meta_description": "Descubre Villavieja, Huila: La Tatacoa, el Museo Paleontológico, la Capilla de Santa Bárbara y la observación astronómica."
+      },
+      {
+        "destination_id": 28,
+        "locale": "pt-BR",
+        "display_name": "Villavieja",
+        "eyebrow": "Huila / Colômbia",
+        "headline": "Entre a cidade e as paisagens de La Tatacoa",
+        "intro": "Uma praça arborizada, memória fóssil e paisagens de terra esculpida: Villavieja conecta a vida do norte de Huila a La Tatacoa e às atividades de observação astronômica.",
+        "meta_description": "Conheça Villavieja, Huila: La Tatacoa, o Museu Paleontológico, a Capela de Santa Bárbara e a observação astronômica."
+      }
+    ],
+    "destination_story_blocks": [
+      {
+        "id": 35,
+        "destination_id": 28,
+        "section_key": "history",
+        "display_order": 1
+      },
+      {
+        "id": 36,
+        "destination_id": 28,
+        "section_key": "history",
+        "display_order": 2
+      }
+    ],
+    "destination_reasons": [
+      {
+        "id": 79,
+        "destination_id": 28,
+        "display_order": 1
+      },
+      {
+        "id": 80,
+        "destination_id": 28,
+        "display_order": 2
+      },
+      {
+        "id": 81,
+        "destination_id": 28,
+        "display_order": 3
+      }
+    ],
+    "destination_sources": [],
+    "destination_media": [
+      {
+        "destination_id": 28,
+        "media_asset_id": 190,
+        "role": "hero",
+        "display_order": 0
+      }
+    ],
+    "destination_story_translations": [
+      {
+        "story_block_id": 35,
+        "locale": "en",
+        "body": "Villavieja is part of the settlement history of the upper Magdalena valley. Its centre preserves Santa Bárbara Chapel and the former parish house, home to the Paleontological Museum."
+      },
+      {
+        "story_block_id": 35,
+        "locale": "es",
+        "body": "Villavieja forma parte de la historia del poblamiento del valle alto del Magdalena. Su centro conserva la capilla de Santa Bárbara y la antigua casa cural, donde se encuentra el Museo Paleontológico."
+      },
+      {
+        "story_block_id": 35,
+        "locale": "pt-BR",
+        "body": "Villavieja faz parte da história de ocupação do vale superior do Magdalena. Seu centro preserva a Capela de Santa Bárbara e a antiga casa paroquial, onde funciona o Museu Paleontológico."
+      },
+      {
+        "story_block_id": 36,
+        "locale": "en",
+        "body": "Fossils from La Tatacoa reveal environments very different from today’s dry landscape and help researchers understand Miocene wildlife. The municipality now brings together heritage, research and nature tourism."
+      },
+      {
+        "story_block_id": 36,
+        "locale": "es",
+        "body": "La Tatacoa revela un pasado muy distinto del paisaje seco actual: sus fósiles permiten estudiar la fauna y los ambientes del Mioceno. Hoy el municipio reúne patrimonio, investigación y turismo de naturaleza."
+      },
+      {
+        "story_block_id": 36,
+        "locale": "pt-BR",
+        "body": "Os fósseis de La Tatacoa revelam ambientes muito diferentes da paisagem seca atual e ajudam a compreender a fauna do Mioceno. Hoje o município reúne patrimônio, pesquisa e turismo de natureza."
+      }
+    ],
+    "destination_reason_translations": [
+      {
+        "reason_id": 79,
+        "locale": "en",
+        "body": "Discover the red and pale eroded formations of La Tatacoa."
+      },
+      {
+        "reason_id": 79,
+        "locale": "es",
+        "body": "Reconocer los relieves rojizos y claros de La Tatacoa."
+      },
+      {
+        "reason_id": 79,
+        "locale": "pt-BR",
+        "body": "Conhecer as formações avermelhadas e claras de La Tatacoa."
+      },
+      {
+        "reason_id": 80,
+        "locale": "en",
+        "body": "Explore the village’s fossil and architectural heritage."
+      },
+      {
+        "reason_id": 80,
+        "locale": "es",
+        "body": "Acercarse al patrimonio paleontológico y arquitectónico del pueblo."
+      },
+      {
+        "reason_id": 80,
+        "locale": "pt-BR",
+        "body": "Explorar o patrimônio paleontológico e arquitetônico da cidade."
+      },
+      {
+        "reason_id": 81,
+        "locale": "en",
+        "body": "Join organised astronomy sessions, subject to scheduling and sky conditions."
+      },
+      {
+        "reason_id": 81,
+        "locale": "es",
+        "body": "Participar en observaciones astronómicas organizadas, según programación y condiciones del cielo."
+      },
+      {
+        "reason_id": 81,
+        "locale": "pt-BR",
+        "body": "Participar de observações astronômicas organizadas, conforme a programação e as condições do céu."
+      }
+    ],
+    "points_of_interest": [
+      {
+        "id": 119,
+        "destination_id": 28,
+        "slug": "tatacoa",
+        "poi_type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 1
+      },
+      {
+        "id": 120,
+        "destination_id": 28,
+        "slug": "museo-paleontologico-villavieja",
+        "poi_type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 2
+      },
+      {
+        "id": 121,
+        "destination_id": 28,
+        "slug": "capilla-santa-barbara",
+        "poi_type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 3
+      },
+      {
+        "id": 122,
+        "destination_id": 28,
+        "slug": "observacion-astronomica-tatacoa",
+        "poi_type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 4
+      },
+      {
+        "id": 125,
+        "destination_id": 28,
+        "slug": "recorrido-guiado-tatacoa",
+        "poi_type": "experience",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 5
+      }
+    ],
+    "point_of_interest_translations": [
+      {
+        "point_of_interest_id": 119,
+        "locale": "en",
+        "name": "La Tatacoa",
+        "description": "This dry landscape combines red gullies around Cuzco with pale formations in Los Hoyos. Follow designated trails and protect its fossil heritage.",
+        "map_url": "https://maps.app.goo.gl/msyFTRArktw39GTF8",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 119,
+        "locale": "es",
+        "name": "La Tatacoa",
+        "description": "El paisaje seco de cárcavas y laberintos combina tonos rojizos en Cuzco y formaciones claras en Los Hoyos. Recorre senderos habilitados y protege su patrimonio fósil.",
+        "map_url": "https://maps.app.goo.gl/msyFTRArktw39GTF8",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 119,
+        "locale": "pt-BR",
+        "name": "La Tatacoa",
+        "description": "A paisagem seca combina ravinas avermelhadas em Cuzco e formações claras em Los Hoyos. Siga as trilhas autorizadas e proteja o patrimônio fóssil.",
+        "map_url": "https://maps.app.goo.gl/msyFTRArktw39GTF8",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 120,
+        "locale": "en",
+        "name": "Villavieja Paleontological Museum",
+        "description": "In the village centre, its fossil collection introduces the region’s Miocene animals and environments.",
+        "map_url": "https://maps.app.goo.gl/xW2EDfFnNABmSpZR6",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 120,
+        "locale": "es",
+        "name": "Museo Paleontológico de Villavieja",
+        "description": "En el centro del pueblo, su colección permite conocer animales y ambientes del Mioceno a partir de fósiles hallados en la región.",
+        "map_url": "https://maps.app.goo.gl/xW2EDfFnNABmSpZR6",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 120,
+        "locale": "pt-BR",
+        "name": "Museu Paleontológico de Villavieja",
+        "description": "No centro da cidade, a coleção de fósseis apresenta animais e ambientes do Mioceno encontrados na região.",
+        "map_url": "https://maps.app.goo.gl/xW2EDfFnNABmSpZR6",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 121,
+        "locale": "en",
+        "name": "Santa Bárbara Chapel",
+        "description": "This small heritage chapel preserves a simple white façade and a two-bell gable near Villavieja’s historic centre.",
+        "map_url": "https://maps.app.goo.gl/L3BTy8rPtsDh7Q2Z8",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 121,
+        "locale": "es",
+        "name": "Capilla de Santa Bárbara",
+        "description": "Esta pequeña capilla patrimonial conserva una fachada sobria de muros blancos y espadaña de dos campanas, junto al centro histórico de Villavieja.",
+        "map_url": "https://maps.app.goo.gl/L3BTy8rPtsDh7Q2Z8",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 121,
+        "locale": "pt-BR",
+        "name": "Capela de Santa Bárbara",
+        "description": "Esta pequena capela histórica conserva a fachada branca e a espadaña com dois sinos, junto ao centro histórico de Villavieja.",
+        "map_url": "https://maps.app.goo.gl/L3BTy8rPtsDh7Q2Z8",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 122,
+        "locale": "en",
+        "name": "Astronomy in La Tatacoa",
+        "description": "Organised talks and telescope observation sessions. Schedules and visible objects depend on the offering and sky conditions.",
+        "map_url": "https://maps.app.goo.gl/2ggn26AfSg2oGwsK9",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 122,
+        "locale": "es",
+        "name": "Observación astronómica en La Tatacoa",
+        "description": "Sesiones organizadas de divulgación y observación con telescopios. La programación y lo que puede observarse dependen de la oferta y las condiciones del cielo.",
+        "map_url": "https://maps.app.goo.gl/2ggn26AfSg2oGwsK9",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 122,
+        "locale": "pt-BR",
+        "name": "Observação astronômica em La Tatacoa",
+        "description": "Sessões organizadas de divulgação e observação com telescópios. A programação e os objetos visíveis dependem da oferta e das condições do céu.",
+        "map_url": "https://maps.app.goo.gl/2ggn26AfSg2oGwsK9",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 125,
+        "locale": "en",
+        "name": "Guided tour of La Tatacoa",
+        "description": "An accompanied tour of La Tatacoa’s landscapes and trails. Confirm the booking, itinerary, transport and trail conditions with the provider before setting out.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 125,
+        "locale": "es",
+        "name": "Recorrido guiado por La Tatacoa",
+        "description": "Un recorrido acompañado para conocer los paisajes y senderos de La Tatacoa. Confirma con el prestador la reserva, el itinerario, el transporte y las condiciones del terreno antes de salir.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 125,
+        "locale": "pt-BR",
+        "name": "Passeio guiado por La Tatacoa",
+        "description": "Um passeio acompanhado para conhecer as paisagens e trilhas de La Tatacoa. Confirme com o prestador a reserva, o roteiro, o transporte e as condições do terreno antes de sair.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      }
+    ],
+    "point_of_interest_media": [
+      {
+        "point_of_interest_id": 119,
+        "media_asset_id": 191,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 120,
+        "media_asset_id": 192,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 121,
+        "media_asset_id": 193,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 122,
+        "media_asset_id": 194,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 125,
+        "media_asset_id": 325,
+        "role": "gallery",
+        "display_order": 0
+      }
+    ],
+    "businesses": [
+      {
+        "id": 403,
+        "public_id": "e855905e-62c7-5e85-9ba1-948b6e2ab8a7",
+        "destination_id": 28,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "sol-y-sombra",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 13
+      },
+      {
+        "id": 411,
+        "public_id": "caee3a44-a4e6-5c35-8200-07063349bf36",
+        "destination_id": 28,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "la-venta",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 21
+      },
+      {
+        "id": 413,
+        "public_id": "5d99e4ef-894d-5c0b-b9b3-c87575c9b5e1",
+        "destination_id": 28,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "sal-si-puedes-restaurante",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 23
+      },
+      {
+        "id": 391,
+        "public_id": "15f6e78a-2533-50a2-baf9-222751e8347e",
+        "destination_id": 28,
+        "category_code": "experiencias",
+        "record_origin": "public_import",
+        "slug": "tatacoa-exotica",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 1
+      },
+      {
+        "id": 392,
+        "public_id": "1831cd34-5bc6-553b-8161-20c50827cb1e",
+        "destination_id": 28,
+        "category_code": "experiencias",
+        "record_origin": "public_import",
+        "slug": "tatacoa-travel",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 2
+      },
+      {
+        "id": 393,
+        "public_id": "15918956-19c6-529b-be23-90c9a8e5b8ea",
+        "destination_id": 28,
+        "category_code": "experiencias",
+        "record_origin": "public_import",
+        "slug": "tatacoa-viajes-y-turismo",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 3
+      },
+      {
+        "id": 394,
+        "public_id": "f4d4910a-c877-5949-94d5-bddcea21c38c",
+        "destination_id": 28,
+        "category_code": "experiencias",
+        "record_origin": "public_import",
+        "slug": "villatours-operador-ecoturistico",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 4
+      },
+      {
+        "id": 395,
+        "public_id": "8335a0a0-d172-55fe-8fd9-54411265b12f",
+        "destination_id": 28,
+        "category_code": "experiencias",
+        "record_origin": "public_import",
+        "slug": "astroturismo-villa-tatacoa",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 5
+      },
+      {
+        "id": 396,
+        "public_id": "d22f6c6a-9aa9-5780-b540-321dd7560c48",
+        "destination_id": 28,
+        "category_code": "experiencias",
+        "record_origin": "public_import",
+        "slug": "servitur",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 6
+      },
+      {
+        "id": 397,
+        "public_id": "653a01a4-e4f0-5114-a946-32d293dfd4b4",
+        "destination_id": 28,
+        "category_code": "experiencias",
+        "record_origin": "public_import",
+        "slug": "huilatur-tatacoa-star",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 7
+      },
+      {
+        "id": 398,
+        "public_id": "2a40283c-8040-53d8-b534-05343b2125fc",
+        "destination_id": 28,
+        "category_code": "experiencias",
+        "record_origin": "public_import",
+        "slug": "asociacion-de-operadores-turisticos-la-tatacoa",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 8
+      },
+      {
+        "id": 399,
+        "public_id": "f769ae49-cfb8-53d6-bf7b-80312598b76e",
+        "destination_id": 28,
+        "category_code": "experiencias",
+        "record_origin": "public_import",
+        "slug": "tatacoa-tours-aventura-chopotaxi",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 9
+      },
+      {
+        "id": 400,
+        "public_id": "35c1d37f-30b1-59dc-a571-859a0938998d",
+        "destination_id": 28,
+        "category_code": "experiencias",
+        "record_origin": "public_import",
+        "slug": "agencia-de-viajes-operadora-tatacoa-verde",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 10
+      },
+      {
+        "id": 401,
+        "public_id": "795458f9-d880-53c8-bd67-b560b3a17dfd",
+        "destination_id": 28,
+        "category_code": "experiencias",
+        "record_origin": "public_import",
+        "slug": "bici-emocion",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 11
+      },
+      {
+        "id": 402,
+        "public_id": "85706db9-9184-5ac3-ad0d-bb3cdb894e58",
+        "destination_id": 28,
+        "category_code": "experiencias",
+        "record_origin": "public_import",
+        "slug": "juan-tatacoa",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 12
+      },
+      {
+        "id": 412,
+        "public_id": "f156106d-e981-52c4-9cc6-bd82f2512d91",
+        "destination_id": 28,
+        "category_code": "experiencias",
+        "record_origin": "public_import",
+        "slug": "la-planta-discovery",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 22
+      },
+      {
+        "id": 415,
+        "public_id": "d348bffc-a3a7-5883-ae03-08dc4e7e682a",
+        "destination_id": 28,
+        "category_code": "experiencias",
+        "record_origin": "public_import",
+        "slug": "orion-campamento-interestelar",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 25
+      },
+      {
+        "id": 416,
+        "public_id": "21b04eb0-fc30-5c42-b596-7a226690092a",
+        "destination_id": 28,
+        "category_code": "experiencias",
+        "record_origin": "public_import",
+        "slug": "observatorio-astronomico-astrosur",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 26
+      },
+      {
+        "id": 404,
+        "public_id": "c1d63589-d0d2-53c4-ba96-f09e811787fd",
+        "destination_id": 28,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "villa-del-sol",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 14
+      },
+      {
+        "id": 405,
+        "public_id": "956d2c7e-fc46-59e0-ba99-f5a1676b5bc6",
+        "destination_id": 28,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "estadero-sol-de-verano",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 15
+      },
+      {
+        "id": 406,
+        "public_id": "4c2c5e8f-ba47-5a72-9fe3-7c9a4ea998a8",
+        "destination_id": 28,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "noches-de-saturno",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 16
+      },
+      {
+        "id": 407,
+        "public_id": "e47f41ff-a7c1-553d-8e3e-7edcca76b6b4",
+        "destination_id": 28,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "amanecer-del-desierto",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 17
+      },
+      {
+        "id": 408,
+        "public_id": "d2d53888-799e-5094-a8fd-2d2e47989563",
+        "destination_id": 28,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "vamos-donde-tu-sabes-de",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 18
+      },
+      {
+        "id": 409,
+        "public_id": "d5fb4c46-1ab4-52a3-b155-a554c1eae818",
+        "destination_id": 28,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "villa-rocio",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 19
+      },
+      {
+        "id": 410,
+        "public_id": "124e1415-66d1-548d-a50a-f7e06189c74d",
+        "destination_id": 28,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "penon-de-constantino",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 20
+      },
+      {
+        "id": 414,
+        "public_id": "a893698a-f041-599d-9d02-49ca1dd3d4db",
+        "destination_id": 28,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "hotel-boutique-yararaka",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 24
+      },
+      {
+        "id": 417,
+        "public_id": "e6785853-ea1f-57ac-80ae-d1259df1e5a5",
+        "destination_id": 28,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "payande-tatacoa-alojamiento-rural",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 27
+      },
+      {
+        "id": 418,
+        "public_id": "d90d4b48-a36f-58e7-ab9a-ab5a725c148a",
+        "destination_id": 28,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "casa-de-campo-los-cactus",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 28
+      },
+      {
+        "id": 419,
+        "public_id": "5b26d92e-e51c-5b02-a23c-6a4a46cea26d",
+        "destination_id": 28,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "hotel-infinito-la-casona",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 29
+      },
+      {
+        "id": 420,
+        "public_id": "367f2515-51ea-55cc-815e-fd4286ed83a5",
+        "destination_id": 28,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "aires-del-desierto",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 30
+      }
+    ],
+    "business_translations": [
+      {
+        "business_id": 391,
+        "locale": "en",
+        "display_name": "Tatacoa Exótica",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 391,
+        "locale": "es",
+        "display_name": "Tatacoa Exótica",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 391,
+        "locale": "pt-BR",
+        "display_name": "Tatacoa Exótica",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 392,
+        "locale": "en",
+        "display_name": "Tatacoa Travel",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 392,
+        "locale": "es",
+        "display_name": "Tatacoa Travel",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 392,
+        "locale": "pt-BR",
+        "display_name": "Tatacoa Travel",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 393,
+        "locale": "en",
+        "display_name": "Tatacoa Viajes y Turismo",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 393,
+        "locale": "es",
+        "display_name": "Tatacoa Viajes y Turismo",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 393,
+        "locale": "pt-BR",
+        "display_name": "Tatacoa Viajes y Turismo",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 394,
+        "locale": "en",
+        "display_name": "Villatours Operador Ecoturístico",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 394,
+        "locale": "es",
+        "display_name": "Villatours Operador Ecoturístico",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 394,
+        "locale": "pt-BR",
+        "display_name": "Villatours Operador Ecoturístico",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 395,
+        "locale": "en",
+        "display_name": "Astroturismo Villa Tatacoa",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 395,
+        "locale": "es",
+        "display_name": "Astroturismo Villa Tatacoa",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 395,
+        "locale": "pt-BR",
+        "display_name": "Astroturismo Villa Tatacoa",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 396,
+        "locale": "en",
+        "display_name": "Servitur",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 396,
+        "locale": "es",
+        "display_name": "Servitur",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 396,
+        "locale": "pt-BR",
+        "display_name": "Servitur",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 397,
+        "locale": "en",
+        "display_name": "Huilatur Tatacoa Star",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 397,
+        "locale": "es",
+        "display_name": "Huilatur Tatacoa Star",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 397,
+        "locale": "pt-BR",
+        "display_name": "Huilatur Tatacoa Star",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 398,
+        "locale": "en",
+        "display_name": "Asociación de Operadores Turísticos La Tatacoa",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 398,
+        "locale": "es",
+        "display_name": "Asociación de Operadores Turísticos La Tatacoa",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 398,
+        "locale": "pt-BR",
+        "display_name": "Asociación de Operadores Turísticos La Tatacoa",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 399,
+        "locale": "en",
+        "display_name": "Tatacoa Tours Aventura Chopotaxi",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 399,
+        "locale": "es",
+        "display_name": "Tatacoa Tours Aventura Chopotaxi",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 399,
+        "locale": "pt-BR",
+        "display_name": "Tatacoa Tours Aventura Chopotaxi",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 400,
+        "locale": "en",
+        "display_name": "Agencia de Viajes Operadora Tatacoa Verde",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 400,
+        "locale": "es",
+        "display_name": "Agencia de Viajes Operadora Tatacoa Verde",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 400,
+        "locale": "pt-BR",
+        "display_name": "Agencia de Viajes Operadora Tatacoa Verde",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 401,
+        "locale": "en",
+        "display_name": "Bici Emoción",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 401,
+        "locale": "es",
+        "display_name": "Bici Emoción",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 401,
+        "locale": "pt-BR",
+        "display_name": "Bici Emoción",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 402,
+        "locale": "en",
+        "display_name": "Juan Tatacoa",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 402,
+        "locale": "es",
+        "display_name": "Juan Tatacoa",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 402,
+        "locale": "pt-BR",
+        "display_name": "Juan Tatacoa",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 403,
+        "locale": "en",
+        "display_name": "Sol y Sombra",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 403,
+        "locale": "es",
+        "display_name": "Sol y Sombra",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 403,
+        "locale": "pt-BR",
+        "display_name": "Sol y Sombra",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 404,
+        "locale": "en",
+        "display_name": "Villa del Sol",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 404,
+        "locale": "es",
+        "display_name": "Villa del Sol",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 404,
+        "locale": "pt-BR",
+        "display_name": "Villa del Sol",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 405,
+        "locale": "en",
+        "display_name": "Estadero Sol de Verano",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 405,
+        "locale": "es",
+        "display_name": "Estadero Sol de Verano",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 405,
+        "locale": "pt-BR",
+        "display_name": "Estadero Sol de Verano",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 406,
+        "locale": "en",
+        "display_name": "Noches de Saturno",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 406,
+        "locale": "es",
+        "display_name": "Noches de Saturno",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 406,
+        "locale": "pt-BR",
+        "display_name": "Noches de Saturno",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 407,
+        "locale": "en",
+        "display_name": "Amanecer del Desierto",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 407,
+        "locale": "es",
+        "display_name": "Amanecer del Desierto",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 407,
+        "locale": "pt-BR",
+        "display_name": "Amanecer del Desierto",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 408,
+        "locale": "en",
+        "display_name": "Vamos Donde Tú Sabes De",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 408,
+        "locale": "es",
+        "display_name": "Vamos Donde Tú Sabes De",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 408,
+        "locale": "pt-BR",
+        "display_name": "Vamos Donde Tú Sabes De",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 409,
+        "locale": "en",
+        "display_name": "Villa Rocío",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 409,
+        "locale": "es",
+        "display_name": "Villa Rocío",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 409,
+        "locale": "pt-BR",
+        "display_name": "Villa Rocío",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 410,
+        "locale": "en",
+        "display_name": "Peñón de Constantino",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 410,
+        "locale": "es",
+        "display_name": "Peñón de Constantino",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 410,
+        "locale": "pt-BR",
+        "display_name": "Peñón de Constantino",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 411,
+        "locale": "en",
+        "display_name": "La Venta",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 411,
+        "locale": "es",
+        "display_name": "La Venta",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 411,
+        "locale": "pt-BR",
+        "display_name": "La Venta",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 412,
+        "locale": "en",
+        "display_name": "La Planta Discovery",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 412,
+        "locale": "es",
+        "display_name": "La Planta Discovery",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 412,
+        "locale": "pt-BR",
+        "display_name": "La Planta Discovery",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 413,
+        "locale": "en",
+        "display_name": "Sal Si Puedes Restaurante",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 413,
+        "locale": "es",
+        "display_name": "Sal Si Puedes Restaurante",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 413,
+        "locale": "pt-BR",
+        "display_name": "Sal Si Puedes Restaurante",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 414,
+        "locale": "en",
+        "display_name": "Hotel Boutique Yararaka",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 414,
+        "locale": "es",
+        "display_name": "Hotel Boutique Yararaka",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 414,
+        "locale": "pt-BR",
+        "display_name": "Hotel Boutique Yararaka",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 415,
+        "locale": "en",
+        "display_name": "Orión Campamento Interestelar",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 415,
+        "locale": "es",
+        "display_name": "Orión Campamento Interestelar",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 415,
+        "locale": "pt-BR",
+        "display_name": "Orión Campamento Interestelar",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 416,
+        "locale": "en",
+        "display_name": "Observatorio Astronómico Astrosur",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 416,
+        "locale": "es",
+        "display_name": "Observatorio Astronómico Astrosur",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 416,
+        "locale": "pt-BR",
+        "display_name": "Observatorio Astronómico Astrosur",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 417,
+        "locale": "en",
+        "display_name": "Payande Tatacoa Alojamiento Rural",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 417,
+        "locale": "es",
+        "display_name": "Payande Tatacoa Alojamiento Rural",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 417,
+        "locale": "pt-BR",
+        "display_name": "Payande Tatacoa Alojamiento Rural",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 418,
+        "locale": "en",
+        "display_name": "Casa de Campo Los Cactus",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 418,
+        "locale": "es",
+        "display_name": "Casa de Campo Los Cactus",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 418,
+        "locale": "pt-BR",
+        "display_name": "Casa de Campo Los Cactus",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 419,
+        "locale": "en",
+        "display_name": "Hotel Infinito La Casona",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 419,
+        "locale": "es",
+        "display_name": "Hotel Infinito La Casona",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 419,
+        "locale": "pt-BR",
+        "display_name": "Hotel Infinito La Casona",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 420,
+        "locale": "en",
+        "display_name": "Aires del Desierto",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 420,
+        "locale": "es",
+        "display_name": "Aires del Desierto",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 420,
+        "locale": "pt-BR",
+        "display_name": "Aires del Desierto",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      }
+    ],
+    "business_categories": [],
+    "business_sources": [
+      {
+        "business_id": 403,
+        "source_url": "https://www.dateas.com/es/explore/prestadores-turisticos-villavieja-huila",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 411,
+        "source_url": "https://huila.travel/descubre-el-huila/restaurantes?municipio=isnos",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 413,
+        "source_url": "https://www.tripadvisor.es/Restaurant_Review-g1507128-d13272640-Reviews-Sal_Si_Puedes_Restaurante-Villavieja_Huila_Department.html",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 391,
+        "source_url": "https://huila.travel/explora-el-huila/villavieja",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 392,
+        "source_url": "https://huila.travel/explora-el-huila/villavieja",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 393,
+        "source_url": "https://huila.travel/explora-el-huila/villavieja",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 394,
+        "source_url": "https://huila.travel/explora-el-huila/villavieja",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 395,
+        "source_url": "https://huila.travel/explora-el-huila/villavieja",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 396,
+        "source_url": "https://huila.travel/explora-el-huila/villavieja",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 397,
+        "source_url": "https://huila.travel/explora-el-huila/villavieja",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 398,
+        "source_url": "https://huila.travel/explora-el-huila/villavieja",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 399,
+        "source_url": "https://huila.travel/explora-el-huila/villavieja",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 400,
+        "source_url": "https://huila.travel/explora-el-huila/villavieja",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 401,
+        "source_url": "https://huila.travel/explora-el-huila/villavieja",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 402,
+        "source_url": "https://huila.travel/explora-el-huila/villavieja",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 412,
+        "source_url": "https://huila.travel/descubre-el-huila/restaurantes?municipio=isnos",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 415,
+        "source_url": "https://orioncampamento.com/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 416,
+        "source_url": "https://huila.travel/inventario/417",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 404,
+        "source_url": "https://www.dateas.com/es/explore/prestadores-turisticos-villavieja-huila",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 405,
+        "source_url": "https://www.dateas.com/es/explore/prestadores-turisticos-villavieja-huila",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 406,
+        "source_url": "https://www.dateas.com/es/explore/prestadores-turisticos-villavieja-huila",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 407,
+        "source_url": "https://www.dateas.com/es/explore/prestadores-turisticos-villavieja-huila",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 408,
+        "source_url": "https://www.dateas.com/es/explore/prestadores-turisticos-villavieja-huila",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 409,
+        "source_url": "https://www.dateas.com/es/explore/prestadores-turisticos-villavieja-huila",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 410,
+        "source_url": "https://www.dateas.com/es/explore/prestadores-turisticos-villavieja-huila",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 414,
+        "source_url": "https://tarjeta.huilapptour.com/wp-content/uploads/2024/05/GUIA-DE-TURISMO-2024-HUILAPP.pdf",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 417,
+        "source_url": "https://www.cam.gov.co/media/filer_public/e4/1d/e41d5fd0-fb8b-4218-adbc-bf04bcc738f2/pma_drmi_la_tatacoa_final_31ene2025.pdf#page=146",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 418,
+        "source_url": "https://www.cam.gov.co/media/filer_public/e4/1d/e41d5fd0-fb8b-4218-adbc-bf04bcc738f2/pma_drmi_la_tatacoa_final_31ene2025.pdf#page=146",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 419,
+        "source_url": "https://www.cam.gov.co/media/filer_public/e4/1d/e41d5fd0-fb8b-4218-adbc-bf04bcc738f2/pma_drmi_la_tatacoa_final_31ene2025.pdf#page=146",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 420,
+        "source_url": "https://www.cam.gov.co/media/filer_public/e4/1d/e41d5fd0-fb8b-4218-adbc-bf04bcc738f2/pma_drmi_la_tatacoa_final_31ene2025.pdf#page=146",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      }
+    ],
+    "business_contacts": [],
+    "business_media": [],
+    "media_assets": [
+      {
+        "id": 190,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/55/55d902d5c204af239dc22757ae7fb2d1feaf931e2665699a72bb8200e4f9deb6.webp",
+        "creator": "Ilustración IA · revisión local",
+        "source_url": "",
+        "license_name": "User selected references; legal permission/provenance unconfirmed. DEV isolated review only.",
+        "license_url": "",
+        "provenance_json": "{\"draft\": true, \"sha256\": \"55d902d5c204af239dc22757ae7fb2d1feaf931e2665699a72bb8200e4f9deb6\", \"metadata\": {\"path\": \"assets/revision-cobertura/villavieja/portada-v3-1200.webp\", \"sha256\": \"55d902d5c204af239dc22757ae7fb2d1feaf931e2665699a72bb8200e4f9deb6\", \"width\": 1200, \"height\": 670, \"status\": \"draft_human_approval_pending\", \"origin\": \"ai_generated\", \"creator\": \"Ilustración IA · revisión local\", \"source_url\": \"\", \"license_name\": \"User selected references; legal permission/provenance unconfirmed. DEV isolated review only.\", \"license_url\": \"\"}, \"publication_authorized\": true, \"approval_scope\": \"Owner PUBLICAR five current DEV1 destinations 2026-10-24\", \"source_active_path\": \"assets/revision-cobertura/villavieja/portada-v3-1200.webp\"}",
+        "width": 1200,
+        "height": 670
+      },
+      {
+        "id": 191,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/4b/4b94739df8bef13cb7b53c618a1975659520a0643ab4a6b7df0ac8ea4c7b5eba.webp",
+        "creator": "Ilustración IA · revisión local",
+        "source_url": "",
+        "license_name": "User selected references; legal permission/provenance unconfirmed. DEV isolated review only.",
+        "license_url": "",
+        "provenance_json": "{\"draft\": true, \"sha256\": \"4b94739df8bef13cb7b53c618a1975659520a0643ab4a6b7df0ac8ea4c7b5eba\", \"metadata\": {\"path\": \"assets/revision-cobertura/villavieja/tatacoa-v1-1200.webp\", \"sha256\": \"4b94739df8bef13cb7b53c618a1975659520a0643ab4a6b7df0ac8ea4c7b5eba\", \"width\": 1200, \"height\": 800, \"status\": \"draft_human_approval_pending\", \"origin\": \"ai_generated\", \"creator\": \"Ilustración IA · revisión local\", \"source_url\": \"\", \"license_name\": \"User selected references; legal permission/provenance unconfirmed. DEV isolated review only.\", \"license_url\": \"\"}, \"publication_authorized\": true, \"approval_scope\": \"Owner PUBLICAR five current DEV1 destinations 2026-10-24\", \"source_active_path\": \"assets/revision-cobertura/villavieja/tatacoa-v1-1200.webp\"}",
+        "width": 1200,
+        "height": 800
+      },
+      {
+        "id": 192,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/c8/c8fe8120b42549c7cbd5c56c54c8c9f7cffd9941af2921a2c741df20966104d3.webp",
+        "creator": "Ilustración IA · revisión local",
+        "source_url": "",
+        "license_name": "User selected references; legal permission/provenance unconfirmed. DEV isolated review only.",
+        "license_url": "",
+        "provenance_json": "{\"draft\": true, \"sha256\": \"c8fe8120b42549c7cbd5c56c54c8c9f7cffd9941af2921a2c741df20966104d3\", \"metadata\": {\"path\": \"assets/revision-cobertura/villavieja/museo-v2-1200.webp\", \"sha256\": \"c8fe8120b42549c7cbd5c56c54c8c9f7cffd9941af2921a2c741df20966104d3\", \"width\": 1200, \"height\": 977, \"status\": \"draft_human_approval_pending\", \"origin\": \"ai_generated\", \"creator\": \"Ilustración IA · revisión local\", \"source_url\": \"\", \"license_name\": \"User selected references; legal permission/provenance unconfirmed. DEV isolated review only.\", \"license_url\": \"\"}, \"publication_authorized\": true, \"approval_scope\": \"Owner PUBLICAR five current DEV1 destinations 2026-10-24\", \"source_active_path\": \"assets/revision-cobertura/villavieja/museo-v2-1200.webp\"}",
+        "width": 1200,
+        "height": 977
+      },
+      {
+        "id": 193,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/ab/abd9606f51e2f0021cfabeb922d0f4e055a16e0ab3ff17c7ec4947a785b26941.webp",
+        "creator": "Ilustración IA · revisión local",
+        "source_url": "",
+        "license_name": "User selected references; legal permission/provenance unconfirmed. DEV isolated review only.",
+        "license_url": "",
+        "provenance_json": "{\"draft\": true, \"sha256\": \"abd9606f51e2f0021cfabeb922d0f4e055a16e0ab3ff17c7ec4947a785b26941\", \"metadata\": {\"path\": \"assets/revision-cobertura/villavieja/capilla-v1-1200.webp\", \"sha256\": \"abd9606f51e2f0021cfabeb922d0f4e055a16e0ab3ff17c7ec4947a785b26941\", \"width\": 1200, \"height\": 800, \"status\": \"draft_human_approval_pending\", \"origin\": \"ai_generated\", \"creator\": \"Ilustración IA · revisión local\", \"source_url\": \"\", \"license_name\": \"User selected references; legal permission/provenance unconfirmed. DEV isolated review only.\", \"license_url\": \"\"}, \"publication_authorized\": true, \"approval_scope\": \"Owner PUBLICAR five current DEV1 destinations 2026-10-24\", \"source_active_path\": \"assets/revision-cobertura/villavieja/capilla-v1-1200.webp\"}",
+        "width": 1200,
+        "height": 800
+      },
+      {
+        "id": 194,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/55/551c8e2df5b30992ac4a9e5fea5fd0eda0c9ca08c4b15896f5a3f43712aa3b14.webp",
+        "creator": "Ilustración IA · revisión local",
+        "source_url": "",
+        "license_name": "User selected references; legal permission/provenance unconfirmed. DEV isolated review only.",
+        "license_url": "",
+        "provenance_json": "{\"draft\": true, \"sha256\": \"551c8e2df5b30992ac4a9e5fea5fd0eda0c9ca08c4b15896f5a3f43712aa3b14\", \"metadata\": {\"path\": \"assets/revision-cobertura/villavieja/observatorio-v3-1200.webp\", \"sha256\": \"551c8e2df5b30992ac4a9e5fea5fd0eda0c9ca08c4b15896f5a3f43712aa3b14\", \"width\": 1200, \"height\": 713, \"status\": \"draft_human_approval_pending\", \"origin\": \"ai_generated\", \"creator\": \"Ilustración IA · revisión local\", \"source_url\": \"\", \"license_name\": \"User selected references; legal permission/provenance unconfirmed. DEV isolated review only.\", \"license_url\": \"\"}, \"publication_authorized\": true, \"approval_scope\": \"Owner PUBLICAR five current DEV1 destinations 2026-10-24\", \"source_active_path\": \"assets/revision-cobertura/villavieja/observatorio-v3-1200.webp\"}",
+        "width": 1200,
+        "height": 713
+      },
+      {
+        "id": 325,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/fd/fd5f3efd17fc6de4ec46931b450e14c912f77be1ad0d54a08ed6d162e98f3e60.webp",
+        "creator": "Ilustración IA · Explorando Lugares",
+        "source_url": "",
+        "license_name": "Generada con IA; referencia y aprobación exacta documentadas, procedencia de fotografías conservada",
+        "license_url": "",
+        "provenance_json": "{\"destination\": \"villavieja\", \"slug\": \"recorrido-guiado-tatacoa\", \"source_file\": \"/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/entregables/lote-cobertura-colombia-20261023/villavieja/visual/tatacoa-diptico-v2-1200.webp\", \"path\": \"assets/revision-cobertura/villavieja/tatacoa-diptico-v2-1200.webp\", \"sha256\": \"fd5f3efd17fc6de4ec46931b450e14c912f77be1ad0d54a08ed6d162e98f3e60\", \"creator\": \"Ilustración IA · Explorando Lugares\", \"source_url\": \"\", \"license_name\": \"Generada con IA; referencia y aprobación exacta documentadas, procedencia de fotografías conservada\", \"width\": 1200, \"height\": 800, \"status\": \"owner_approved_for_dev_review\", \"publication_authorized\": true, \"approval_scope\": \"Owner PUBLICAR five current DEV1 destinations 2026-10-24\", \"source_active_path\": \"assets/revision-cobertura/villavieja/tatacoa-diptico-v2-1200.webp\"}",
+        "width": 1200,
+        "height": 800
+      }
+    ],
+    "media_asset_translations": [
+      {
+        "media_asset_id": 190,
+        "locale": "en",
+        "alt_text": "Villavieja",
+        "caption": "Editorial illustration: Villavieja."
+      },
+      {
+        "media_asset_id": 190,
+        "locale": "es",
+        "alt_text": "Villavieja",
+        "caption": "Ilustración editorial: Villavieja."
+      },
+      {
+        "media_asset_id": 190,
+        "locale": "pt-BR",
+        "alt_text": "Villavieja",
+        "caption": "Ilustração editorial: Villavieja."
+      },
+      {
+        "media_asset_id": 191,
+        "locale": "en",
+        "alt_text": "La Tatacoa",
+        "caption": "Editorial illustration: La Tatacoa."
+      },
+      {
+        "media_asset_id": 191,
+        "locale": "es",
+        "alt_text": "La Tatacoa",
+        "caption": "Ilustración editorial: La Tatacoa."
+      },
+      {
+        "media_asset_id": 191,
+        "locale": "pt-BR",
+        "alt_text": "La Tatacoa",
+        "caption": "Ilustração editorial: La Tatacoa."
+      },
+      {
+        "media_asset_id": 192,
+        "locale": "en",
+        "alt_text": "Villavieja Paleontological Museum",
+        "caption": "Editorial illustration: Villavieja Paleontological Museum."
+      },
+      {
+        "media_asset_id": 192,
+        "locale": "es",
+        "alt_text": "Museo Paleontológico de Villavieja",
+        "caption": "Ilustración editorial: Museo Paleontológico de Villavieja."
+      },
+      {
+        "media_asset_id": 192,
+        "locale": "pt-BR",
+        "alt_text": "Museu Paleontológico de Villavieja",
+        "caption": "Ilustração editorial: Museu Paleontológico de Villavieja."
+      },
+      {
+        "media_asset_id": 193,
+        "locale": "en",
+        "alt_text": "Santa Bárbara Chapel",
+        "caption": "Editorial illustration: Santa Bárbara Chapel."
+      },
+      {
+        "media_asset_id": 193,
+        "locale": "es",
+        "alt_text": "Capilla de Santa Bárbara",
+        "caption": "Ilustración editorial: Capilla de Santa Bárbara."
+      },
+      {
+        "media_asset_id": 193,
+        "locale": "pt-BR",
+        "alt_text": "Capela de Santa Bárbara",
+        "caption": "Ilustração editorial: Capela de Santa Bárbara."
+      },
+      {
+        "media_asset_id": 194,
+        "locale": "en",
+        "alt_text": "Astronomy in La Tatacoa",
+        "caption": "Editorial illustration: Astronomy in La Tatacoa."
+      },
+      {
+        "media_asset_id": 194,
+        "locale": "es",
+        "alt_text": "Observación astronómica en La Tatacoa",
+        "caption": "Ilustración editorial: Observación astronómica en La Tatacoa."
+      },
+      {
+        "media_asset_id": 194,
+        "locale": "pt-BR",
+        "alt_text": "Observação astronômica em La Tatacoa",
+        "caption": "Ilustração editorial: Observação astronômica em La Tatacoa."
+      },
+      {
+        "media_asset_id": 325,
+        "locale": "en",
+        "alt_text": "Guided tour of La Tatacoa",
+        "caption": "Editorial illustration: Guided tour of La Tatacoa."
+      },
+      {
+        "media_asset_id": 325,
+        "locale": "es",
+        "alt_text": "Recorrido guiado por La Tatacoa",
+        "caption": "Ilustración editorial: Recorrido guiado por La Tatacoa."
+      },
+      {
+        "media_asset_id": 325,
+        "locale": "pt-BR",
+        "alt_text": "Passeio guiado por La Tatacoa",
+        "caption": "Ilustração editorial: Passeio guiado por La Tatacoa."
+      }
+    ]
+  },
+  "media_files": {
+    "190": {
+      "sha256": "55d902d5c204af239dc22757ae7fb2d1feaf931e2665699a72bb8200e4f9deb6"
+    },
+    "191": {
+      "sha256": "4b94739df8bef13cb7b53c618a1975659520a0643ab4a6b7df0ac8ea4c7b5eba"
+    },
+    "192": {
+      "sha256": "c8fe8120b42549c7cbd5c56c54c8c9f7cffd9941af2921a2c741df20966104d3"
+    },
+    "193": {
+      "sha256": "abd9606f51e2f0021cfabeb922d0f4e055a16e0ab3ff17c7ec4947a785b26941"
+    },
+    "194": {
+      "sha256": "551c8e2df5b30992ac4a9e5fea5fd0eda0c9ca08c4b15896f5a3f43712aa3b14"
+    },
+    "325": {
+      "sha256": "fd5f3efd17fc6de4ec46931b450e14c912f77be1ad0d54a08ed6d162e98f3e60"
+    }
+  }
+}

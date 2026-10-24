@@ -1,0 +1,2258 @@
+{
+  "schema": "destination-public-snapshot-v1",
+  "destination": "manizales",
+  "tables": {
+    "destinations": [
+      {
+        "id": 25,
+        "slug": "manizales",
+        "destination_type": "city",
+        "country_code": "CO",
+        "department": "Caldas",
+        "subregion": "Centro Sur",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 26,
+        "created_at": "2026-10-23 20:13:05",
+        "updated_at": "2026-10-23 20:48:08"
+      }
+    ],
+    "destination_translations": [
+      {
+        "destination_id": 25,
+        "locale": "en",
+        "display_name": "Manizales",
+        "eyebrow": "Caldas / Colombia",
+        "headline": "A city among the mountains",
+        "intro": "Viewpoints, architecture and cloud forests meet in this Colombian Coffee Region city, built across the slopes of the Central Andes.",
+        "meta_description": "Explore Manizales: its cathedral, Chipre, Herveo Tower and Andean forest reserves. A guide to the capital of Caldas."
+      },
+      {
+        "destination_id": 25,
+        "locale": "es",
+        "display_name": "Manizales",
+        "eyebrow": "Caldas / Colombia",
+        "headline": "Una ciudad entre montañas",
+        "intro": "Miradores, arquitectura y bosques de niebla se encuentran en esta ciudad del Eje Cafetero, construida sobre las laderas de la cordillera Central.",
+        "meta_description": "Descubre Manizales: su catedral, Chipre, la Torre de Herveo y reservas de bosque andino. Una guía para conocer la capital de Caldas."
+      },
+      {
+        "destination_id": 25,
+        "locale": "pt-BR",
+        "display_name": "Manizales",
+        "eyebrow": "Caldas / Colômbia",
+        "headline": "Uma cidade entre montanhas",
+        "intro": "Mirantes, arquitetura e florestas de neblina se encontram nesta cidade do Eixo Cafeeiro colombiano, construída nas encostas da cordilheira Central.",
+        "meta_description": "Conheça Manizales: sua catedral, Chipre, a Torre de Herveo e reservas de floresta andina. Um guia pela capital de Caldas."
+      }
+    ],
+    "destination_story_blocks": [
+      {
+        "id": 30,
+        "destination_id": 25,
+        "section_key": "history",
+        "display_order": 1
+      },
+      {
+        "id": 31,
+        "destination_id": 25,
+        "section_key": "history",
+        "display_order": 2
+      }
+    ],
+    "destination_reasons": [
+      {
+        "id": 73,
+        "destination_id": 25,
+        "display_order": 1
+      },
+      {
+        "id": 74,
+        "destination_id": 25,
+        "display_order": 2
+      },
+      {
+        "id": 75,
+        "destination_id": 25,
+        "display_order": 3
+      }
+    ],
+    "destination_sources": [],
+    "destination_media": [
+      {
+        "destination_id": 25,
+        "media_asset_id": 173,
+        "role": "hero",
+        "display_order": 0
+      }
+    ],
+    "destination_story_translations": [
+      {
+        "story_block_id": 30,
+        "locale": "en",
+        "body": "Founded in 1849 during the settlement of the region by migrants from Antioquia, Manizales grew around mountain routes and coffee farming. Trade and the former cableway to Mariquita connected its hillsides with other regions."
+      },
+      {
+        "story_block_id": 30,
+        "locale": "es",
+        "body": "Fundada en 1849 durante la colonización antioqueña, Manizales creció entre caminos de montaña y cultivos de café. El comercio y el antiguo cable hacia Mariquita conectaron sus laderas con otras regiones."
+      },
+      {
+        "story_block_id": 30,
+        "locale": "pt-BR",
+        "body": "Fundada em 1849 durante a colonização antioquenha, Manizales cresceu entre caminhos de montanha e plantações de café. O comércio e o antigo transporte por cabo até Mariquita conectaram suas encostas a outras regiões."
+      },
+      {
+        "story_block_id": 31,
+        "locale": "en",
+        "body": "Its centre preserves buildings erected after the fires of the early twentieth century. The cathedral, cultural institutions and university life are part of a city shaped by steep slopes and Andean forests."
+      },
+      {
+        "story_block_id": 31,
+        "locale": "es",
+        "body": "Su centro conserva edificios levantados después de los incendios de comienzos del siglo XX. La catedral, las instituciones culturales y la vida universitaria forman parte de una ciudad que convive con pendientes pronunciadas y bosques andinos."
+      },
+      {
+        "story_block_id": 31,
+        "locale": "pt-BR",
+        "body": "Seu centro preserva edifícios construídos após os incêndios do início do século XX. A catedral, as instituições culturais e a vida universitária fazem parte de uma cidade marcada por encostas íngremes e florestas andinas."
+      }
+    ],
+    "destination_reason_translations": [
+      {
+        "reason_id": 73,
+        "locale": "en",
+        "body": "Look out over the city and mountains from Chipre."
+      },
+      {
+        "reason_id": 73,
+        "locale": "es",
+        "body": "Contemplar la ciudad y las montañas desde Chipre."
+      },
+      {
+        "reason_id": 73,
+        "locale": "pt-BR",
+        "body": "Contemplar a cidade e as montanhas a partir de Chipre."
+      },
+      {
+        "reason_id": 74,
+        "locale": "en",
+        "body": "Explore architectural heritage and the history of the former cableway."
+      },
+      {
+        "reason_id": 74,
+        "locale": "es",
+        "body": "Reconocer su patrimonio arquitectónico y la historia del antiguo cable."
+      },
+      {
+        "reason_id": 74,
+        "locale": "pt-BR",
+        "body": "Conhecer o patrimônio arquitetônico e a história do antigo transporte por cabo."
+      },
+      {
+        "reason_id": 75,
+        "locale": "en",
+        "body": "Discover cloud forest through managed nature visits."
+      },
+      {
+        "reason_id": 75,
+        "locale": "es",
+        "body": "Acercarse al bosque de niebla en visitas de naturaleza administradas."
+      },
+      {
+        "reason_id": 75,
+        "locale": "pt-BR",
+        "body": "Explorar a floresta de neblina em visitas de natureza administradas."
+      }
+    ],
+    "points_of_interest": [
+      {
+        "id": 104,
+        "destination_id": 25,
+        "slug": "catedral-rosario",
+        "poi_type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 1
+      },
+      {
+        "id": 105,
+        "destination_id": 25,
+        "slug": "chipre-colonizadores",
+        "poi_type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 2
+      },
+      {
+        "id": 106,
+        "destination_id": 25,
+        "slug": "torre-herveo",
+        "poi_type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 3
+      },
+      {
+        "id": 107,
+        "destination_id": 25,
+        "slug": "recinto-pensamiento",
+        "poi_type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 4
+      },
+      {
+        "id": 108,
+        "destination_id": 25,
+        "slug": "reserva-rio-blanco",
+        "poi_type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 5
+      },
+      {
+        "id": 109,
+        "destination_id": 25,
+        "slug": "ecoparque-yarumos",
+        "poi_type": "place",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 6
+      },
+      {
+        "id": 126,
+        "destination_id": 25,
+        "slug": "excursion-nevado-ruiz",
+        "poi_type": "experience",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 100
+      },
+      {
+        "id": 127,
+        "destination_id": 25,
+        "slug": "aguas-termales-alrededores",
+        "poi_type": "experience",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 101
+      },
+      {
+        "id": 128,
+        "destination_id": 25,
+        "slug": "recorrido-centro-historico",
+        "poi_type": "experience",
+        "latitude": null,
+        "longitude": null,
+        "publication_status": "published",
+        "display_order": 102
+      }
+    ],
+    "point_of_interest_translations": [
+      {
+        "point_of_interest_id": 104,
+        "locale": "en",
+        "name": "Cathedral Basilica of Our Lady of the Rosary",
+        "description": "Its towers and neo-Gothic architecture define central Manizales, opposite Plaza de Bolívar.",
+        "map_url": "https://maps.app.goo.gl/i6THavJBDZfrb8fc6",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 104,
+        "locale": "es",
+        "name": "Catedral Basílica de Nuestra Señora del Rosario",
+        "description": "Sus torres y su arquitectura neogótica marcan el centro de Manizales, frente a la Plaza de Bolívar.",
+        "map_url": "https://maps.app.goo.gl/i6THavJBDZfrb8fc6",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 104,
+        "locale": "pt-BR",
+        "name": "Catedral Basílica de Nossa Senhora do Rosário",
+        "description": "Suas torres e a arquitetura neogótica marcam o centro de Manizales, diante da Plaza de Bolívar.",
+        "map_url": "https://maps.app.goo.gl/i6THavJBDZfrb8fc6",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 105,
+        "locale": "en",
+        "name": "Chipre and the Colonizers Monument",
+        "description": "A hillside viewpoint district whose sculptural ensemble recalls the journeys and efforts of the region’s early settlers.",
+        "map_url": "https://maps.app.goo.gl/Pm7tGrwtzT2mhFyu8",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 105,
+        "locale": "es",
+        "name": "Chipre y Monumento a los Colonizadores",
+        "description": "Un sector de miradores donde el conjunto escultórico recuerda los viajes y esfuerzos de quienes poblaron estas montañas.",
+        "map_url": "https://maps.app.goo.gl/Pm7tGrwtzT2mhFyu8",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 105,
+        "locale": "pt-BR",
+        "name": "Chipre e Monumento aos Colonizadores",
+        "description": "Uma região de mirantes onde o conjunto de esculturas recorda as viagens e os esforços de quem povoou estas montanhas.",
+        "map_url": "https://maps.app.goo.gl/Pm7tGrwtzT2mhFyu8",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 106,
+        "locale": "en",
+        "name": "Herveo Tower and El Cable",
+        "description": "This timber lattice tower preserves the history of the cableway that once connected Manizales with Mariquita.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 106,
+        "locale": "es",
+        "name": "Torre de Herveo y El Cable",
+        "description": "El entramado de madera de esta torre conserva la memoria del transporte por cable que conectó Manizales con Mariquita.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 106,
+        "locale": "pt-BR",
+        "name": "Torre de Herveo e El Cable",
+        "description": "A estrutura de madeira desta torre preserva a memória do transporte por cabo que ligava Manizales a Mariquita.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 107,
+        "locale": "en",
+        "name": "Recinto del Pensamiento",
+        "description": "Gardens and Andean woodland surround this nature and environmental education venue. Visits depend on its programme and admission conditions.",
+        "map_url": "https://maps.app.goo.gl/JW8aSrJxEN2Rt9iRA",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 107,
+        "locale": "es",
+        "name": "Recinto del Pensamiento",
+        "description": "Jardines y bosque andino rodean este espacio de naturaleza y educación ambiental. La visita depende de su programación y condiciones de ingreso.",
+        "map_url": "https://maps.app.goo.gl/JW8aSrJxEN2Rt9iRA",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 107,
+        "locale": "pt-BR",
+        "name": "Recinto del Pensamiento",
+        "description": "Jardins e floresta andina cercam este espaço de natureza e educação ambiental. A visita depende da programação e das condições de entrada.",
+        "map_url": "https://maps.app.goo.gl/JW8aSrJxEN2Rt9iRA",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 108,
+        "locale": "en",
+        "name": "Río Blanco Reserve",
+        "description": "Cloud forest protecting water and wildlife near the city. Managed visits require advance booking.",
+        "map_url": "https://maps.app.goo.gl/ZieqnyiKGWLeFubT9",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 108,
+        "locale": "es",
+        "name": "Reserva Río Blanco",
+        "description": "Bosque de niebla que protege agua y biodiversidad cerca de la ciudad. Sus visitas administradas requieren reserva previa.",
+        "map_url": "https://maps.app.goo.gl/ZieqnyiKGWLeFubT9",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 108,
+        "locale": "pt-BR",
+        "name": "Reserva Río Blanco",
+        "description": "Floresta de neblina que protege a água e a biodiversidade perto da cidade. As visitas administradas exigem reserva antecipada.",
+        "map_url": "https://maps.app.goo.gl/ZieqnyiKGWLeFubT9",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 109,
+        "locale": "en",
+        "name": "Los Yarumos Ecopark",
+        "description": "An urban forest with trails and environmental education spaces in northeastern Manizales.",
+        "map_url": "https://maps.app.goo.gl/4p1NbkBLmh9DopXM7",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 109,
+        "locale": "es",
+        "name": "Ecoparque Los Yarumos",
+        "description": "Un bosque urbano con senderos y espacios de educación ambiental en el nororiente de Manizales.",
+        "map_url": "https://maps.app.goo.gl/4p1NbkBLmh9DopXM7",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 109,
+        "locale": "pt-BR",
+        "name": "Ecoparque Los Yarumos",
+        "description": "Uma floresta urbana com trilhas e espaços de educação ambiental no nordeste de Manizales.",
+        "map_url": "https://maps.app.goo.gl/4p1NbkBLmh9DopXM7",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 126,
+        "locale": "en",
+        "name": "Nevado del Ruiz excursion",
+        "description": "Explore the volcanic landscapes of the Brisas–Valle de las Tumbas sector on a guided outing from Manizales. Access depends on park opening and conditions; the excursion does not include a summit ascent.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 126,
+        "locale": "es",
+        "name": "Excursión al Nevado del Ruiz",
+        "description": "Explora el paisaje volcánico del sector Brisas–Valle de las Tumbas en una salida guiada desde Manizales. El recorrido depende de la apertura y las condiciones del parque; no incluye ascenso a la cumbre.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 126,
+        "locale": "pt-BR",
+        "name": "Passeio ao Nevado del Ruiz",
+        "description": "Explore a paisagem vulcânica do setor Brisas–Valle de las Tumbas em um passeio guiado saindo de Manizales. O percurso depende da abertura e das condições do parque; não inclui subida ao cume.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 127,
+        "locale": "en",
+        "name": "Hot springs near Manizales",
+        "description": "Spend a day enjoying hot springs in neighbouring Villamaría, surrounded by mountains and Andean vegetation. Several establishments offer different ways to visit; check services and entry conditions before choosing.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 127,
+        "locale": "es",
+        "name": "Aguas termales en los alrededores",
+        "description": "Dedica una jornada a los baños termales en el vecino municipio de Villamaría, entre montañas y vegetación andina. Hay diferentes establecimientos y modalidades de visita; confirma los servicios y las condiciones de ingreso antes de elegir.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 127,
+        "locale": "pt-BR",
+        "name": "Águas termais nos arredores",
+        "description": "Dedique um dia aos banhos termais no município vizinho de Villamaría, entre montanhas e vegetação andina. Há diferentes estabelecimentos e modalidades de visita; confirme os serviços e as condições de entrada antes de escolher.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 128,
+        "locale": "en",
+        "name": "Guided historic centre walk",
+        "description": "Walk through the squares, streets and Republican-era buildings of Manizales with a guide who explains their history and changes over time. The experience usually takes two to three hours; agree on the itinerary and meeting point when booking.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 128,
+        "locale": "es",
+        "name": "Recorrido guiado por el centro histórico",
+        "description": "Recorre a pie las plazas, calles y edificios republicanos de Manizales con un guía que explique su historia y sus transformaciones. La experiencia suele durar entre dos y tres horas; acuerda el itinerario y el punto de encuentro al reservar.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      },
+      {
+        "point_of_interest_id": 128,
+        "locale": "pt-BR",
+        "name": "Passeio guiado pelo centro histórico",
+        "description": "Caminhe pelas praças, ruas e edifícios da época republicana de Manizales com um guia que conte sua história e suas transformações. A experiência costuma durar de duas a três horas; combine o roteiro e o ponto de encontro ao reservar.",
+        "map_url": "",
+        "external_url": "",
+        "external_label": ""
+      }
+    ],
+    "point_of_interest_media": [
+      {
+        "point_of_interest_id": 104,
+        "media_asset_id": 174,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 105,
+        "media_asset_id": 175,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 106,
+        "media_asset_id": 176,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 107,
+        "media_asset_id": 177,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 108,
+        "media_asset_id": 178,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 109,
+        "media_asset_id": 179,
+        "role": "gallery",
+        "display_order": 1
+      },
+      {
+        "point_of_interest_id": 126,
+        "media_asset_id": 326,
+        "role": "gallery",
+        "display_order": 0
+      },
+      {
+        "point_of_interest_id": 127,
+        "media_asset_id": 327,
+        "role": "gallery",
+        "display_order": 0
+      },
+      {
+        "point_of_interest_id": 128,
+        "media_asset_id": 328,
+        "role": "gallery",
+        "display_order": 0
+      }
+    ],
+    "businesses": [
+      {
+        "id": 241,
+        "public_id": "8d34d14f-7ac9-59af-b91b-9ee2e7cec820",
+        "destination_id": 25,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "almaiz",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 1
+      },
+      {
+        "id": 242,
+        "public_id": "3fcf73e2-b874-5393-8c23-e428b75fefb8",
+        "destination_id": 25,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "entre-fuegos",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 2
+      },
+      {
+        "id": 243,
+        "public_id": "1ab507fa-3714-5f86-adcb-c5293be7092b",
+        "destination_id": 25,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "wafflemania",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 3
+      },
+      {
+        "id": 244,
+        "public_id": "d4b8da1b-de5f-58b8-8210-3f0563c69516",
+        "destination_id": 25,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "platanottes-sabor-artesanal",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 4
+      },
+      {
+        "id": 245,
+        "public_id": "91dec70b-9cfd-5490-a5f1-48a6926ea656",
+        "destination_id": 25,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "la-beautiful-cocina-inusual",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 5
+      },
+      {
+        "id": 246,
+        "public_id": "ad030859-ea6e-541b-971d-d82e78e75758",
+        "destination_id": 25,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "garrudos-ricos-y-carnudos",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 6
+      },
+      {
+        "id": 255,
+        "public_id": "aae8720c-8bca-5360-ad68-e207fbbd71ed",
+        "destination_id": 25,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "tienda-de-cafe-punta-del-cielo",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 15
+      },
+      {
+        "id": 256,
+        "public_id": "1776bb29-b350-5689-a7ce-11c44238c830",
+        "destination_id": 25,
+        "category_code": "experiencias",
+        "record_origin": "public_import",
+        "slug": "caldas-ecotravel-s-a-s",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 16
+      },
+      {
+        "id": 257,
+        "public_id": "231dc480-2924-5e14-9e54-806c3c44fa0a",
+        "destination_id": 25,
+        "category_code": "experiencias",
+        "record_origin": "public_import",
+        "slug": "asdeguias-s-a-s",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 17
+      },
+      {
+        "id": 258,
+        "public_id": "87548e3d-617e-589a-a9b9-a7c0d8d8da04",
+        "destination_id": 25,
+        "category_code": "experiencias",
+        "record_origin": "public_import",
+        "slug": "agencia-de-viajes-norte-y-sur-s-a-s",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 18
+      },
+      {
+        "id": 259,
+        "public_id": "9e07c38f-9641-5426-9734-8c4718767071",
+        "destination_id": 25,
+        "category_code": "experiencias",
+        "record_origin": "public_import",
+        "slug": "kowawa-travel",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 19
+      },
+      {
+        "id": 260,
+        "public_id": "b9bc8c6e-843e-5d80-b17f-ed2faacba7c8",
+        "destination_id": 25,
+        "category_code": "experiencias",
+        "record_origin": "public_import",
+        "slug": "la-ruta-verde-s-a-s",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 20
+      },
+      {
+        "id": 261,
+        "public_id": "938ed839-09c1-573f-bd57-4618a6918c89",
+        "destination_id": 25,
+        "category_code": "experiencias",
+        "record_origin": "public_import",
+        "slug": "duna",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 21
+      },
+      {
+        "id": 262,
+        "public_id": "afae1e1c-504d-5c8c-9f8d-026971694a2f",
+        "destination_id": 25,
+        "category_code": "experiencias",
+        "record_origin": "public_import",
+        "slug": "juva",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 22
+      },
+      {
+        "id": 263,
+        "public_id": "b3405d61-7acc-5d56-a6f0-eaa9fe100784",
+        "destination_id": 25,
+        "category_code": "experiencias",
+        "record_origin": "public_import",
+        "slug": "paseando-con-mario",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 23
+      },
+      {
+        "id": 264,
+        "public_id": "fecaa63a-b70f-5a18-9edc-0d1ddb4f6a78",
+        "destination_id": 25,
+        "category_code": "experiencias",
+        "record_origin": "public_import",
+        "slug": "otros-caminos",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 24
+      },
+      {
+        "id": 265,
+        "public_id": "47e4e3c4-8e0a-53ba-9561-353587475fcf",
+        "destination_id": 25,
+        "category_code": "experiencias",
+        "record_origin": "public_import",
+        "slug": "palmatour",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 25
+      },
+      {
+        "id": 266,
+        "public_id": "374343f9-322a-5cb1-84a2-960477e3da8d",
+        "destination_id": 25,
+        "category_code": "experiencias",
+        "record_origin": "public_import",
+        "slug": "pantagora-experience",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 26
+      },
+      {
+        "id": 267,
+        "public_id": "aa9f502a-53d8-5116-8d5e-0fd16def6642",
+        "destination_id": 25,
+        "category_code": "experiencias",
+        "record_origin": "public_import",
+        "slug": "travelscol-s-a-s",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 27
+      },
+      {
+        "id": 268,
+        "public_id": "a1b08fbe-6fa6-5941-a2da-a1fcaa536208",
+        "destination_id": 25,
+        "category_code": "experiencias",
+        "record_origin": "public_import",
+        "slug": "vive-tu-destino",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 28
+      },
+      {
+        "id": 269,
+        "public_id": "ac43adb8-60db-52c6-afce-e6d607bb8552",
+        "destination_id": 25,
+        "category_code": "experiencias",
+        "record_origin": "public_import",
+        "slug": "travesia-agencia-de-viajes",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 29
+      },
+      {
+        "id": 270,
+        "public_id": "08b1cdb3-592f-5a80-9964-1b808beb9722",
+        "destination_id": 25,
+        "category_code": "experiencias",
+        "record_origin": "public_import",
+        "slug": "viajes-y-turismo-claudia-ramirez",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 30
+      },
+      {
+        "id": 247,
+        "public_id": "9cdf2ecd-d3e0-56da-bdda-88edd55c0ab1",
+        "destination_id": 25,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "hotel-portal-de-milan",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 7
+      },
+      {
+        "id": 248,
+        "public_id": "b538c56b-4778-53e0-90e1-6e65553d59bc",
+        "destination_id": 25,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "hotel-benidorm",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 8
+      },
+      {
+        "id": 249,
+        "public_id": "8abc5a00-edc1-597b-8c5f-4aa1d06185b8",
+        "destination_id": 25,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "hostal-mirador-andino",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 9
+      },
+      {
+        "id": 250,
+        "public_id": "c5ead364-60b5-5ef5-a003-57098adab9a1",
+        "destination_id": 25,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "hotel-lindsay",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 10
+      },
+      {
+        "id": 251,
+        "public_id": "60168d27-9278-5f28-946a-9458a5f325ad",
+        "destination_id": 25,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "golden-frog-mountain-hostel",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 11
+      },
+      {
+        "id": 252,
+        "public_id": "80a59271-3e9d-59e8-bed5-5fa808eb5d71",
+        "destination_id": 25,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "paraiso-verde-manizales",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 12
+      },
+      {
+        "id": 253,
+        "public_id": "d153b9d3-3091-56c9-9b5c-162bae21367f",
+        "destination_id": 25,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "hotel-carretero",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 13
+      },
+      {
+        "id": 254,
+        "public_id": "c2224498-27b8-5d53-8ce2-efb322b8f43d",
+        "destination_id": 25,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "hotel-confort-80-regines",
+        "information_status": "PUBLICO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 14
+      }
+    ],
+    "business_translations": [
+      {
+        "business_id": 241,
+        "locale": "en",
+        "display_name": "Almaiz",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 241,
+        "locale": "es",
+        "display_name": "Almaiz",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 241,
+        "locale": "pt-BR",
+        "display_name": "Almaiz",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 242,
+        "locale": "en",
+        "display_name": "Entre Fuegos",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 242,
+        "locale": "es",
+        "display_name": "Entre Fuegos",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 242,
+        "locale": "pt-BR",
+        "display_name": "Entre Fuegos",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 243,
+        "locale": "en",
+        "display_name": "Wafflemania",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 243,
+        "locale": "es",
+        "display_name": "Wafflemania",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 243,
+        "locale": "pt-BR",
+        "display_name": "Wafflemania",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 244,
+        "locale": "en",
+        "display_name": "Platanottes Sabor Artesanal",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 244,
+        "locale": "es",
+        "display_name": "Platanottes Sabor Artesanal",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 244,
+        "locale": "pt-BR",
+        "display_name": "Platanottes Sabor Artesanal",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 245,
+        "locale": "en",
+        "display_name": "La Beautiful Cocina Inusual",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 245,
+        "locale": "es",
+        "display_name": "La Beautiful Cocina Inusual",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 245,
+        "locale": "pt-BR",
+        "display_name": "La Beautiful Cocina Inusual",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 246,
+        "locale": "en",
+        "display_name": "Garrudos Ricos y Carnudos",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 246,
+        "locale": "es",
+        "display_name": "Garrudos Ricos y Carnudos",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 246,
+        "locale": "pt-BR",
+        "display_name": "Garrudos Ricos y Carnudos",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 247,
+        "locale": "en",
+        "display_name": "Hotel Portal de Milán",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 247,
+        "locale": "es",
+        "display_name": "Hotel Portal de Milán",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 247,
+        "locale": "pt-BR",
+        "display_name": "Hotel Portal de Milán",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 248,
+        "locale": "en",
+        "display_name": "Hotel Benidorm",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 248,
+        "locale": "es",
+        "display_name": "Hotel Benidorm",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 248,
+        "locale": "pt-BR",
+        "display_name": "Hotel Benidorm",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 249,
+        "locale": "en",
+        "display_name": "Hostal Mirador Andino",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 249,
+        "locale": "es",
+        "display_name": "Hostal Mirador Andino",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 249,
+        "locale": "pt-BR",
+        "display_name": "Hostal Mirador Andino",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 250,
+        "locale": "en",
+        "display_name": "Hotel Lindsay",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 250,
+        "locale": "es",
+        "display_name": "Hotel Lindsay",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 250,
+        "locale": "pt-BR",
+        "display_name": "Hotel Lindsay",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 251,
+        "locale": "en",
+        "display_name": "Golden Frog Mountain Hostel",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 251,
+        "locale": "es",
+        "display_name": "Golden Frog Mountain Hostel",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 251,
+        "locale": "pt-BR",
+        "display_name": "Golden Frog Mountain Hostel",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 252,
+        "locale": "en",
+        "display_name": "Paraíso Verde Manizales",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 252,
+        "locale": "es",
+        "display_name": "Paraíso Verde Manizales",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 252,
+        "locale": "pt-BR",
+        "display_name": "Paraíso Verde Manizales",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 253,
+        "locale": "en",
+        "display_name": "Hotel Carretero",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 253,
+        "locale": "es",
+        "display_name": "Hotel Carretero",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 253,
+        "locale": "pt-BR",
+        "display_name": "Hotel Carretero",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 254,
+        "locale": "en",
+        "display_name": "Hotel Confort 80 Regine’s",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 254,
+        "locale": "es",
+        "display_name": "Hotel Confort 80 Regine’s",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 254,
+        "locale": "pt-BR",
+        "display_name": "Hotel Confort 80 Regine’s",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 255,
+        "locale": "en",
+        "display_name": "Tienda de Café Punta del Cielo",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 255,
+        "locale": "es",
+        "display_name": "Tienda de Café Punta del Cielo",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 255,
+        "locale": "pt-BR",
+        "display_name": "Tienda de Café Punta del Cielo",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 256,
+        "locale": "en",
+        "display_name": "Caldas Ecotravel S.A.S.",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 256,
+        "locale": "es",
+        "display_name": "Caldas Ecotravel S.A.S.",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 256,
+        "locale": "pt-BR",
+        "display_name": "Caldas Ecotravel S.A.S.",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 257,
+        "locale": "en",
+        "display_name": "Asdeguias S.A.S.",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 257,
+        "locale": "es",
+        "display_name": "Asdeguias S.A.S.",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 257,
+        "locale": "pt-BR",
+        "display_name": "Asdeguias S.A.S.",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 258,
+        "locale": "en",
+        "display_name": "Agencia de Viajes Norte y Sur S.A.S.",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 258,
+        "locale": "es",
+        "display_name": "Agencia de Viajes Norte y Sur S.A.S.",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 258,
+        "locale": "pt-BR",
+        "display_name": "Agencia de Viajes Norte y Sur S.A.S.",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 259,
+        "locale": "en",
+        "display_name": "Kowawa Travel",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 259,
+        "locale": "es",
+        "display_name": "Kowawa Travel",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 259,
+        "locale": "pt-BR",
+        "display_name": "Kowawa Travel",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 260,
+        "locale": "en",
+        "display_name": "La Ruta Verde S.A.S.",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 260,
+        "locale": "es",
+        "display_name": "La Ruta Verde S.A.S.",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 260,
+        "locale": "pt-BR",
+        "display_name": "La Ruta Verde S.A.S.",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 261,
+        "locale": "en",
+        "display_name": "DUNA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 261,
+        "locale": "es",
+        "display_name": "DUNA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 261,
+        "locale": "pt-BR",
+        "display_name": "DUNA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 262,
+        "locale": "en",
+        "display_name": "JUVA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 262,
+        "locale": "es",
+        "display_name": "JUVA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 262,
+        "locale": "pt-BR",
+        "display_name": "JUVA",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 263,
+        "locale": "en",
+        "display_name": "Paseando con Mario",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 263,
+        "locale": "es",
+        "display_name": "Paseando con Mario",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 263,
+        "locale": "pt-BR",
+        "display_name": "Paseando con Mario",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 264,
+        "locale": "en",
+        "display_name": "Otros Caminos",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 264,
+        "locale": "es",
+        "display_name": "Otros Caminos",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 264,
+        "locale": "pt-BR",
+        "display_name": "Otros Caminos",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 265,
+        "locale": "en",
+        "display_name": "Palmatour",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 265,
+        "locale": "es",
+        "display_name": "Palmatour",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 265,
+        "locale": "pt-BR",
+        "display_name": "Palmatour",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 266,
+        "locale": "en",
+        "display_name": "Pantagora Experience",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 266,
+        "locale": "es",
+        "display_name": "Pantagora Experience",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 266,
+        "locale": "pt-BR",
+        "display_name": "Pantagora Experience",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 267,
+        "locale": "en",
+        "display_name": "Travelscol S.A.S.",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 267,
+        "locale": "es",
+        "display_name": "Travelscol S.A.S.",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 267,
+        "locale": "pt-BR",
+        "display_name": "Travelscol S.A.S.",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 268,
+        "locale": "en",
+        "display_name": "Vive tu Destino",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 268,
+        "locale": "es",
+        "display_name": "Vive tu Destino",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 268,
+        "locale": "pt-BR",
+        "display_name": "Vive tu Destino",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 269,
+        "locale": "en",
+        "display_name": "Travesía Agencia de Viajes",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 269,
+        "locale": "es",
+        "display_name": "Travesía Agencia de Viajes",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 269,
+        "locale": "pt-BR",
+        "display_name": "Travesía Agencia de Viajes",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 270,
+        "locale": "en",
+        "display_name": "Viajes y Turismo Claudia Ramírez",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 270,
+        "locale": "es",
+        "display_name": "Viajes y Turismo Claudia Ramírez",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      },
+      {
+        "business_id": 270,
+        "locale": "pt-BR",
+        "display_name": "Viajes y Turismo Claudia Ramírez",
+        "summary": "",
+        "description": "",
+        "brand_story": null,
+        "featured_services": null
+      }
+    ],
+    "business_categories": [],
+    "business_sources": [
+      {
+        "business_id": 241,
+        "source_url": "https://mzl.travel/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 242,
+        "source_url": "https://mzl.travel/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 243,
+        "source_url": "https://mzl.travel/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 244,
+        "source_url": "https://mzl.travel/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 245,
+        "source_url": "https://mzl.travel/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 246,
+        "source_url": "https://mzl.travel/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 255,
+        "source_url": "https://cafepuntadelcielo.wixsite.com/manizales",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 256,
+        "source_url": "https://centrodeinformacion.manizales.gov.co/wp-content/uploads/2025/10/Directorio-Turistico-VV3-29-09-25-1.pdf",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 257,
+        "source_url": "https://centrodeinformacion.manizales.gov.co/wp-content/uploads/2025/10/Directorio-Turistico-VV3-29-09-25-1.pdf",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 258,
+        "source_url": "https://centrodeinformacion.manizales.gov.co/wp-content/uploads/2025/10/Directorio-Turistico-VV3-29-09-25-1.pdf",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 259,
+        "source_url": "https://centrodeinformacion.manizales.gov.co/wp-content/uploads/2025/10/Directorio-Turistico-VV3-29-09-25-1.pdf",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 260,
+        "source_url": "https://centrodeinformacion.manizales.gov.co/wp-content/uploads/2025/10/Directorio-Turistico-VV3-29-09-25-1.pdf",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 261,
+        "source_url": "https://centrodeinformacion.manizales.gov.co/wp-content/uploads/2025/10/Directorio-Turistico-VV3-29-09-25-1.pdf",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 262,
+        "source_url": "https://centrodeinformacion.manizales.gov.co/wp-content/uploads/2025/10/Directorio-Turistico-VV3-29-09-25-1.pdf",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 263,
+        "source_url": "https://centrodeinformacion.manizales.gov.co/wp-content/uploads/2025/10/Directorio-Turistico-VV3-29-09-25-1.pdf",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 264,
+        "source_url": "https://centrodeinformacion.manizales.gov.co/wp-content/uploads/2025/10/Directorio-Turistico-VV3-29-09-25-1.pdf",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 265,
+        "source_url": "https://centrodeinformacion.manizales.gov.co/wp-content/uploads/2025/10/Directorio-Turistico-VV3-29-09-25-1.pdf",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 266,
+        "source_url": "https://centrodeinformacion.manizales.gov.co/wp-content/uploads/2025/10/Directorio-Turistico-VV3-29-09-25-1.pdf",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 267,
+        "source_url": "https://centrodeinformacion.manizales.gov.co/wp-content/uploads/2025/10/Directorio-Turistico-VV3-29-09-25-1.pdf",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 268,
+        "source_url": "https://centrodeinformacion.manizales.gov.co/wp-content/uploads/2025/10/Directorio-Turistico-VV3-29-09-25-1.pdf",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 269,
+        "source_url": "https://centrodeinformacion.manizales.gov.co/wp-content/uploads/2025/10/Directorio-Turistico-VV3-29-09-25-1.pdf",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 270,
+        "source_url": "https://centrodeinformacion.manizales.gov.co/wp-content/uploads/2025/10/Directorio-Turistico-VV3-29-09-25-1.pdf",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 247,
+        "source_url": "https://caldasesnatural.travel/destinos/centro-sur/manizales/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 248,
+        "source_url": "https://caldasesnatural.travel/destinos/centro-sur/manizales/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 249,
+        "source_url": "https://caldasesnatural.travel/destinos/centro-sur/manizales/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 250,
+        "source_url": "https://caldasesnatural.travel/destinos/centro-sur/manizales/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 251,
+        "source_url": "https://caldasesnatural.travel/destinos/centro-sur/manizales/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 252,
+        "source_url": "https://caldasesnatural.travel/destinos/centro-sur/manizales/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 253,
+        "source_url": "https://visitmanizales.com/hoteleria/hotel-carretero/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      },
+      {
+        "business_id": 254,
+        "source_url": "https://www.regineshotel.com/",
+        "checked_at": "2026-10-23 00:00:00",
+        "note": "Fuente pública documental; no acredita alianza, representación ni disponibilidad actual."
+      }
+    ],
+    "business_contacts": [],
+    "business_media": [],
+    "media_assets": [
+      {
+        "id": 173,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/cd/cd494f5bb4db54d05d876d5e7f47c4616042d8361cb8f03bb83bf3d358946a20.webp",
+        "creator": "Ilustración IA · revisión local",
+        "source_url": "",
+        "license_name": "User supplied selected reference47; origin/permission retained as unconfirmed",
+        "license_url": "",
+        "provenance_json": "{\"draft\": true, \"sha256\": \"cd494f5bb4db54d05d876d5e7f47c4616042d8361cb8f03bb83bf3d358946a20\", \"metadata\": {\"path\": \"assets/revision-cobertura/manizales/portada-v1.webp\", \"sha256\": \"cd494f5bb4db54d05d876d5e7f47c4616042d8361cb8f03bb83bf3d358946a20\", \"width\": 1200, \"height\": 800, \"status\": \"draft_human_approval_pending\", \"origin\": \"ai_generated\", \"creator\": \"Ilustración IA · revisión local\", \"source_url\": \"\", \"license_name\": \"User supplied selected reference47; origin/permission retained as unconfirmed\", \"license_url\": \"\"}, \"publication_authorized\": true, \"approval_scope\": \"Owner PUBLICAR five current DEV1 destinations 2026-10-24\", \"source_active_path\": \"assets/revision-cobertura/manizales/portada-v1.webp\"}",
+        "width": 1200,
+        "height": 800
+      },
+      {
+        "id": 174,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/ca/cad248812f56a3e45ed5b9a3d4c8764815e297fc1cbca9b620b692d07dca35bf.webp",
+        "creator": "Ilustración IA · revisión local",
+        "source_url": "",
+        "license_name": "Reference owner/permission pending; no third-party photo input",
+        "license_url": "",
+        "provenance_json": "{\"draft\": true, \"sha256\": \"cad248812f56a3e45ed5b9a3d4c8764815e297fc1cbca9b620b692d07dca35bf\", \"metadata\": {\"path\": \"assets/revision-cobertura/manizales/catedral-rosario-v3.webp\", \"sha256\": \"cad248812f56a3e45ed5b9a3d4c8764815e297fc1cbca9b620b692d07dca35bf\", \"width\": 1200, \"height\": 800, \"status\": \"draft_human_approval_pending\", \"origin\": \"ai_generated\", \"creator\": \"Ilustración IA · revisión local\", \"source_url\": \"\", \"license_name\": \"Reference owner/permission pending; no third-party photo input\", \"license_url\": \"\"}, \"publication_authorized\": true, \"approval_scope\": \"Owner PUBLICAR five current DEV1 destinations 2026-10-24\", \"source_active_path\": \"assets/revision-cobertura/manizales/catedral-rosario-v3.webp\"}",
+        "width": 1200,
+        "height": 800
+      },
+      {
+        "id": 175,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/c1/c1eb2051530d348fad98835b07cfd07d682cead0fea755fc40f00d622888bbcd.webp",
+        "creator": "Ilustración IA derivada de fotografía de EnBrazosDeLaFiebre",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Monumento_a_los_Colonizadores,_Chipre,_Manizales.JPG",
+        "license_name": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "provenance_json": "{\"draft\": true, \"sha256\": \"c1eb2051530d348fad98835b07cfd07d682cead0fea755fc40f00d622888bbcd\", \"metadata\": {\"path\": \"assets/revision-cobertura/manizales/chipre-colonizadores-v1.webp\", \"sha256\": \"c1eb2051530d348fad98835b07cfd07d682cead0fea755fc40f00d622888bbcd\", \"width\": 1200, \"height\": 800, \"status\": \"draft_human_approval_pending\", \"origin\": \"ai_generated\", \"creator\": \"Ilustración IA derivada de fotografía de EnBrazosDeLaFiebre\", \"source_url\": \"https://commons.wikimedia.org/wiki/File:Monumento_a_los_Colonizadores,_Chipre,_Manizales.JPG\", \"license_name\": \"CC BY-SA 4.0\", \"license_url\": \"https://creativecommons.org/licenses/by-sa/4.0/\"}, \"publication_authorized\": true, \"approval_scope\": \"Owner PUBLICAR five current DEV1 destinations 2026-10-24\", \"source_active_path\": \"assets/revision-cobertura/manizales/chipre-colonizadores-v1.webp\"}",
+        "width": 1200,
+        "height": 800
+      },
+      {
+        "id": 176,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/f8/f85b260e3efd0659affa0a128a7ef2977d468e84763082c62643bb881bd8af4c.webp",
+        "creator": "Ilustración IA derivada de fotografía de Brenda Berrio Aagudelo",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Cable_antiguo_aereo.JPG",
+        "license_name": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "provenance_json": "{\"draft\": true, \"sha256\": \"f85b260e3efd0659affa0a128a7ef2977d468e84763082c62643bb881bd8af4c\", \"metadata\": {\"path\": \"assets/revision-cobertura/manizales/torre-herveo-v1.webp\", \"sha256\": \"f85b260e3efd0659affa0a128a7ef2977d468e84763082c62643bb881bd8af4c\", \"width\": 1200, \"height\": 800, \"status\": \"draft_human_approval_pending\", \"origin\": \"ai_generated\", \"creator\": \"Ilustración IA derivada de fotografía de Brenda Berrio Aagudelo\", \"source_url\": \"https://commons.wikimedia.org/wiki/File:Cable_antiguo_aereo.JPG\", \"license_name\": \"CC BY-SA 3.0\", \"license_url\": \"https://creativecommons.org/licenses/by-sa/3.0/\"}, \"publication_authorized\": true, \"approval_scope\": \"Owner PUBLICAR five current DEV1 destinations 2026-10-24\", \"source_active_path\": \"assets/revision-cobertura/manizales/torre-herveo-v1.webp\"}",
+        "width": 1200,
+        "height": 800
+      },
+      {
+        "id": 177,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/86/86788bf7ff4da08208733466455dd9a918171d47e77b2028a868fa79c572596d.webp",
+        "creator": "Ilustración IA · revisión local",
+        "source_url": "",
+        "license_name": "Source WRadio; individual author/capture/license unconfirmed. Owner explicitly requested correction ",
+        "license_url": "",
+        "provenance_json": "{\"draft\": true, \"sha256\": \"86788bf7ff4da08208733466455dd9a918171d47e77b2028a868fa79c572596d\", \"metadata\": {\"path\": \"assets/revision-cobertura/manizales/recinto-pensamiento-v2.webp\", \"sha256\": \"86788bf7ff4da08208733466455dd9a918171d47e77b2028a868fa79c572596d\", \"width\": 1200, \"height\": 675, \"status\": \"draft_human_approval_pending\", \"origin\": \"ai_generated\", \"creator\": \"Ilustración IA · revisión local\", \"source_url\": \"\", \"license_name\": \"Source WRadio; individual author/capture/license unconfirmed. Owner explicitly requested correction from selected reference; publication clearance remains pending.\", \"license_url\": \"\"}, \"publication_authorized\": true, \"approval_scope\": \"Owner PUBLICAR five current DEV1 destinations 2026-10-24\", \"source_active_path\": \"assets/revision-cobertura/manizales/recinto-pensamiento-v2.webp\"}",
+        "width": 1200,
+        "height": 675
+      },
+      {
+        "id": 178,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/87/873c1606e6953e6016ff8b4e9069d46b71f5e98c0702eaa5c9a36c60365eb2b4.webp",
+        "creator": "Ilustración IA · revisión local",
+        "source_url": "",
+        "license_name": "Reference owner/permission pending; no third-party photo input",
+        "license_url": "",
+        "provenance_json": "{\"draft\": true, \"sha256\": \"873c1606e6953e6016ff8b4e9069d46b71f5e98c0702eaa5c9a36c60365eb2b4\", \"metadata\": {\"path\": \"assets/revision-cobertura/manizales/reserva-rio-blanco-v1.webp\", \"sha256\": \"873c1606e6953e6016ff8b4e9069d46b71f5e98c0702eaa5c9a36c60365eb2b4\", \"width\": 1200, \"height\": 800, \"status\": \"draft_human_approval_pending\", \"origin\": \"ai_generated\", \"creator\": \"Ilustración IA · revisión local\", \"source_url\": \"\", \"license_name\": \"Reference owner/permission pending; no third-party photo input\", \"license_url\": \"\"}, \"publication_authorized\": true, \"approval_scope\": \"Owner PUBLICAR five current DEV1 destinations 2026-10-24\", \"source_active_path\": \"assets/revision-cobertura/manizales/reserva-rio-blanco-v1.webp\"}",
+        "width": 1200,
+        "height": 800
+      },
+      {
+        "id": 179,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/df/dfa37283a704d01f48957cdb3962f6be68eb9eeb46451e930273c8387d994985.webp",
+        "creator": "Ilustración IA · revisión local",
+        "source_url": "",
+        "license_name": "Reference owner/permission pending; no third-party photo input",
+        "license_url": "",
+        "provenance_json": "{\"draft\": true, \"sha256\": \"dfa37283a704d01f48957cdb3962f6be68eb9eeb46451e930273c8387d994985\", \"metadata\": {\"path\": \"assets/revision-cobertura/manizales/ecoparque-yarumos-v2.webp\", \"sha256\": \"dfa37283a704d01f48957cdb3962f6be68eb9eeb46451e930273c8387d994985\", \"width\": 1200, \"height\": 800, \"status\": \"draft_human_approval_pending\", \"origin\": \"ai_generated\", \"creator\": \"Ilustración IA · revisión local\", \"source_url\": \"\", \"license_name\": \"Reference owner/permission pending; no third-party photo input\", \"license_url\": \"\"}, \"publication_authorized\": true, \"approval_scope\": \"Owner PUBLICAR five current DEV1 destinations 2026-10-24\", \"source_active_path\": \"assets/revision-cobertura/manizales/ecoparque-yarumos-v2.webp\"}",
+        "width": 1200,
+        "height": 800
+      },
+      {
+        "id": 326,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/c5/c592279106026903f0f42d3917909c2744f781e1b9392849f84fa9eac27cb8c3.webp",
+        "creator": "Ilustración editorial IA · revisión DEV1",
+        "source_url": "",
+        "license_name": "AI-generated independent composition; reference rights not asserted",
+        "license_url": "",
+        "provenance_json": "{\"destination\": \"manizales\", \"slug\": \"excursion-nevado-ruiz\", \"path\": \"assets/revision-cobertura/manizales/nevado-experiencia-v1-1200.webp\", \"sha256\": \"c592279106026903f0f42d3917909c2744f781e1b9392849f84fa9eac27cb8c3\", \"width\": 1200, \"height\": 800, \"creator\": \"Ilustración editorial IA · revisión DEV1\", \"source_url\": \"\", \"license_name\": \"AI-generated independent composition; reference rights not asserted\", \"origin\": \"ai_generated\", \"reference_url_internal\": \"https://www.paho.org/sites/default/files/volcan-nevadodelruiz-colombia_0.jpg\", \"reference_selection\": \"user approved 2026-10-24\", \"output_status\": \"local_review_only_human_exact_output_pending\", \"third_party_photo_uploaded\": false, \"master_sha256\": \"197504ecaab3909142fd9f87caa25949fd2a20c4b7edc92eb0c98ccf54a93713\", \"publication_authorized\": true, \"approval_scope\": \"Owner PUBLICAR five current DEV1 destinations 2026-10-24\", \"source_active_path\": \"assets/revision-cobertura/manizales/nevado-experiencia-v1-1200.webp\"}",
+        "width": 1200,
+        "height": 800
+      },
+      {
+        "id": 327,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/df/dfba55b2e8cd9b339af81e4d547f48b7581ea006000d8af6522f27e9b4b8cb01.webp",
+        "creator": "Ilustración editorial IA · revisión DEV1",
+        "source_url": "",
+        "license_name": "AI-generated independent composition; reference rights not asserted",
+        "license_url": "",
+        "provenance_json": "{\"destination\": \"manizales\", \"slug\": \"aguas-termales-alrededores\", \"path\": \"assets/revision-cobertura/manizales/termales-experiencia-v1-1200.webp\", \"sha256\": \"dfba55b2e8cd9b339af81e4d547f48b7581ea006000d8af6522f27e9b4b8cb01\", \"width\": 1200, \"height\": 800, \"creator\": \"Ilustración editorial IA · revisión DEV1\", \"source_url\": \"\", \"license_name\": \"AI-generated independent composition; reference rights not asserted\", \"origin\": \"ai_generated\", \"reference_url_internal\": \"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2e/46/e4/cc/caption.jpg?h=1400&s=1&w=1400\", \"reference_selection\": \"user approved 2026-10-24\", \"output_status\": \"local_review_only_human_exact_output_pending\", \"third_party_photo_uploaded\": false, \"master_sha256\": \"5a50a8459835725e748e24093cb83392c25cabb8a97c5225021e03dbc34ab431\", \"publication_authorized\": true, \"approval_scope\": \"Owner PUBLICAR five current DEV1 destinations 2026-10-24\", \"source_active_path\": \"assets/revision-cobertura/manizales/termales-experiencia-v1-1200.webp\"}",
+        "width": 1200,
+        "height": 800
+      },
+      {
+        "id": 328,
+        "origin": "ai_generated",
+        "asset_path": "assets/media/c5/c5f2f2be9818adbe3804d5ee09145de7ca893327168ac7e83b3dd1cda823f48b.webp",
+        "creator": "Ilustración editorial IA · revisión DEV1",
+        "source_url": "",
+        "license_name": "AI-generated independent composition; reference rights not asserted",
+        "license_url": "",
+        "provenance_json": "{\"destination\": \"manizales\", \"slug\": \"recorrido-centro-historico\", \"path\": \"assets/revision-cobertura/manizales/historico-experiencia-v1-1200.webp\", \"sha256\": \"c5f2f2be9818adbe3804d5ee09145de7ca893327168ac7e83b3dd1cda823f48b\", \"width\": 1200, \"height\": 800, \"creator\": \"Ilustración editorial IA · revisión DEV1\", \"source_url\": \"\", \"license_name\": \"AI-generated independent composition; reference rights not asserted\", \"origin\": \"ai_generated\", \"reference_url_internal\": \"https://mzl.travel/wp-content/uploads/2025/12/2Centro-His.jpg\", \"reference_selection\": \"user approved 2026-10-24\", \"output_status\": \"local_review_only_human_exact_output_pending\", \"third_party_photo_uploaded\": false, \"master_sha256\": \"28c855a68ede52f7a5a09073066b1678bd4dfbc563c84c0930db00c6980ad018\", \"publication_authorized\": true, \"approval_scope\": \"Owner PUBLICAR five current DEV1 destinations 2026-10-24\", \"source_active_path\": \"assets/revision-cobertura/manizales/historico-experiencia-v1-1200.webp\"}",
+        "width": 1200,
+        "height": 800
+      }
+    ],
+    "media_asset_translations": [
+      {
+        "media_asset_id": 173,
+        "locale": "en",
+        "alt_text": "Manizales",
+        "caption": "Editorial illustration: Manizales."
+      },
+      {
+        "media_asset_id": 173,
+        "locale": "es",
+        "alt_text": "Manizales",
+        "caption": "Ilustración editorial: Manizales."
+      },
+      {
+        "media_asset_id": 173,
+        "locale": "pt-BR",
+        "alt_text": "Manizales",
+        "caption": "Ilustração editorial: Manizales."
+      },
+      {
+        "media_asset_id": 174,
+        "locale": "en",
+        "alt_text": "Cathedral Basilica of Our Lady of the Rosary",
+        "caption": "Editorial illustration: Cathedral Basilica of Our Lady of the Rosary."
+      },
+      {
+        "media_asset_id": 174,
+        "locale": "es",
+        "alt_text": "Catedral Basílica de Nuestra Señora del Rosario",
+        "caption": "Ilustración editorial: Catedral Basílica de Nuestra Señora del Rosario."
+      },
+      {
+        "media_asset_id": 174,
+        "locale": "pt-BR",
+        "alt_text": "Catedral Basílica de Nossa Senhora do Rosário",
+        "caption": "Ilustração editorial: Catedral Basílica de Nossa Senhora do Rosário."
+      },
+      {
+        "media_asset_id": 175,
+        "locale": "en",
+        "alt_text": "Chipre and the Colonizers Monument",
+        "caption": "Editorial illustration: Chipre and the Colonizers Monument."
+      },
+      {
+        "media_asset_id": 175,
+        "locale": "es",
+        "alt_text": "Chipre y Monumento a los Colonizadores",
+        "caption": "Ilustración editorial: Chipre y Monumento a los Colonizadores."
+      },
+      {
+        "media_asset_id": 175,
+        "locale": "pt-BR",
+        "alt_text": "Chipre e Monumento aos Colonizadores",
+        "caption": "Ilustração editorial: Chipre e Monumento aos Colonizadores."
+      },
+      {
+        "media_asset_id": 176,
+        "locale": "en",
+        "alt_text": "Herveo Tower and El Cable",
+        "caption": "Editorial illustration: Herveo Tower and El Cable."
+      },
+      {
+        "media_asset_id": 176,
+        "locale": "es",
+        "alt_text": "Torre de Herveo y El Cable",
+        "caption": "Ilustración editorial: Torre de Herveo y El Cable."
+      },
+      {
+        "media_asset_id": 176,
+        "locale": "pt-BR",
+        "alt_text": "Torre de Herveo e El Cable",
+        "caption": "Ilustração editorial: Torre de Herveo e El Cable."
+      },
+      {
+        "media_asset_id": 177,
+        "locale": "en",
+        "alt_text": "Recinto del Pensamiento",
+        "caption": "Editorial illustration: Recinto del Pensamiento."
+      },
+      {
+        "media_asset_id": 177,
+        "locale": "es",
+        "alt_text": "Recinto del Pensamiento",
+        "caption": "Ilustración editorial: Recinto del Pensamiento."
+      },
+      {
+        "media_asset_id": 177,
+        "locale": "pt-BR",
+        "alt_text": "Recinto del Pensamiento",
+        "caption": "Ilustração editorial: Recinto del Pensamiento."
+      },
+      {
+        "media_asset_id": 178,
+        "locale": "en",
+        "alt_text": "Río Blanco Reserve",
+        "caption": "Editorial illustration: Río Blanco Reserve."
+      },
+      {
+        "media_asset_id": 178,
+        "locale": "es",
+        "alt_text": "Reserva Río Blanco",
+        "caption": "Ilustración editorial: Reserva Río Blanco."
+      },
+      {
+        "media_asset_id": 178,
+        "locale": "pt-BR",
+        "alt_text": "Reserva Río Blanco",
+        "caption": "Ilustração editorial: Reserva Río Blanco."
+      },
+      {
+        "media_asset_id": 179,
+        "locale": "en",
+        "alt_text": "Los Yarumos Ecopark",
+        "caption": "Editorial illustration: Los Yarumos Ecopark."
+      },
+      {
+        "media_asset_id": 179,
+        "locale": "es",
+        "alt_text": "Ecoparque Los Yarumos",
+        "caption": "Ilustración editorial: Ecoparque Los Yarumos."
+      },
+      {
+        "media_asset_id": 179,
+        "locale": "pt-BR",
+        "alt_text": "Ecoparque Los Yarumos",
+        "caption": "Ilustração editorial: Ecoparque Los Yarumos."
+      },
+      {
+        "media_asset_id": 326,
+        "locale": "en",
+        "alt_text": "Nevado del Ruiz excursion",
+        "caption": "Editorial illustration: Nevado del Ruiz excursion."
+      },
+      {
+        "media_asset_id": 326,
+        "locale": "es",
+        "alt_text": "Excursión al Nevado del Ruiz",
+        "caption": "Ilustración editorial: Excursión al Nevado del Ruiz."
+      },
+      {
+        "media_asset_id": 326,
+        "locale": "pt-BR",
+        "alt_text": "Passeio ao Nevado del Ruiz",
+        "caption": "Ilustração editorial: Passeio ao Nevado del Ruiz."
+      },
+      {
+        "media_asset_id": 327,
+        "locale": "en",
+        "alt_text": "Hot springs near Manizales",
+        "caption": "Editorial illustration: Hot springs near Manizales."
+      },
+      {
+        "media_asset_id": 327,
+        "locale": "es",
+        "alt_text": "Aguas termales en los alrededores",
+        "caption": "Ilustración editorial: Aguas termales en los alrededores."
+      },
+      {
+        "media_asset_id": 327,
+        "locale": "pt-BR",
+        "alt_text": "Águas termais nos arredores",
+        "caption": "Ilustração editorial: Águas termais nos arredores."
+      },
+      {
+        "media_asset_id": 328,
+        "locale": "en",
+        "alt_text": "Guided historic centre walk",
+        "caption": "Editorial illustration: Guided historic centre walk."
+      },
+      {
+        "media_asset_id": 328,
+        "locale": "es",
+        "alt_text": "Recorrido guiado por el centro histórico",
+        "caption": "Ilustración editorial: Recorrido guiado por el centro histórico."
+      },
+      {
+        "media_asset_id": 328,
+        "locale": "pt-BR",
+        "alt_text": "Passeio guiado pelo centro histórico",
+        "caption": "Ilustração editorial: Passeio guiado pelo centro histórico."
+      }
+    ]
+  },
+  "media_files": {
+    "173": {
+      "sha256": "cd494f5bb4db54d05d876d5e7f47c4616042d8361cb8f03bb83bf3d358946a20"
+    },
+    "174": {
+      "sha256": "cad248812f56a3e45ed5b9a3d4c8764815e297fc1cbca9b620b692d07dca35bf"
+    },
+    "175": {
+      "sha256": "c1eb2051530d348fad98835b07cfd07d682cead0fea755fc40f00d622888bbcd"
+    },
+    "176": {
+      "sha256": "f85b260e3efd0659affa0a128a7ef2977d468e84763082c62643bb881bd8af4c"
+    },
+    "177": {
+      "sha256": "86788bf7ff4da08208733466455dd9a918171d47e77b2028a868fa79c572596d"
+    },
+    "178": {
+      "sha256": "873c1606e6953e6016ff8b4e9069d46b71f5e98c0702eaa5c9a36c60365eb2b4"
+    },
+    "179": {
+      "sha256": "dfa37283a704d01f48957cdb3962f6be68eb9eeb46451e930273c8387d994985"
+    },
+    "326": {
+      "sha256": "c592279106026903f0f42d3917909c2744f781e1b9392849f84fa9eac27cb8c3"
+    },
+    "327": {
+      "sha256": "dfba55b2e8cd9b339af81e4d547f48b7581ea006000d8af6522f27e9b4b8cb01"
+    },
+    "328": {
+      "sha256": "c5f2f2be9818adbe3804d5ee09145de7ca893327168ac7e83b3dd1cda823f48b"
+    }
+  }
+}
