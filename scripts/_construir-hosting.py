@@ -9,11 +9,34 @@ import hashlib
 import json
 import re
 root=Path(__file__).resolve().parents[1]
+
+
+def assert_dynamic_destination_boundary(public: Path, catalog: Path) -> None:
+    """A destination has one renderer: public/destino.php.
+
+    Legacy HTML guides must never enter a release, even as an unused fallback.
+    Keeping this check at the last point in the build protects against a later
+    copy, overlay or restoration step reintroducing a second implementation.
+    """
+    if not (public/'destino.php').is_file():
+        raise RuntimeError('Falta el renderizador PHP único de destinos.')
+    data=json.loads(catalog.read_text())
+    slugs=[str(item['slug']) for item in data.get('destinations', [])
+           if isinstance(item, dict) and item.get('slug')]
+    duplicates=[]
+    for locale in ('', 'en/', 'pt-br/'):
+        for slug in slugs:
+            page=public/f'{locale}destinos/{slug}/index.html'
+            if page.is_file():
+                duplicates.append(page.relative_to(public).as_posix())
+    if duplicates:
+        raise RuntimeError('La entrega contiene páginas estáticas duplicadas de destinos dinámicos: '
+                           + ', '.join(duplicates))
+
 parser=argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--output',type=Path,default=root/'.local/hosting')
 args=parser.parse_args()
 subprocess.run([sys.executable,str(root/'scripts/generar-opciones-contacto.py')],check=True)
-subprocess.run([sys.executable,str(root/'scripts/generar-destinos.py')],check=True)
 subprocess.run([sys.executable,str(root/'scripts/generar-fichas.py')],check=True)
 subprocess.run([sys.executable,str(root/'scripts/generar-aviso-etapas.py')],check=True)
 subprocess.run([sys.executable,str(root/'scripts/generar-ingles.py')],check=True)
@@ -104,3 +127,4 @@ subprocess.run([sys.executable,str(root/'preprod/probar-identidad-vigente.py'),s
 
 # Keep already-published bytes unused until the separately approved cleanup.
 restore(public,retained_legacy)
+assert_dynamic_destination_boundary(public,private_content/'destinos-dinamicos.json')
