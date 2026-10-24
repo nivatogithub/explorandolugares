@@ -68,14 +68,13 @@
         ? 'Guardar y continuar al pago'
         : 'Guardar solicitud para revisión';
       setPlanField('[data-plan-field="summary"]', editorial, editorial);
-      setPlanField('[data-plan-field="description"]', premium, premium);
       setPlanField('[data-plan-field="location"]', ['featured', 'page', 'page_premium'].includes(choice));
       const address=form.querySelector('[name="address_text"]');if(address)address.required=choice!==''&&choice!=='free';
-      // Los canales son un paso independiente del wizard. Su visibilidad y
-      // habilitación dependen exclusivamente del paso 4, administrado por
-      // business-registration.js; no los abras al escoger una suscripción.
+      // Canales y productos tienen pasos propios; renderStep controla sus
+      // contenedores sin reactivar productos todavía no configurados.
       setPlanField('[data-plan-field="cover"]', ['page', 'page_premium'].includes(choice), ['page', 'page_premium'].includes(choice));
-      setPlanField('[data-plan-field="products"]', premium, false);
+      const products = form.querySelector('#registration-product-details');
+      if (products) products.disabled = !premium;
       const phone = form.querySelector('[name="business_phone[number]"]');
       if (phone) phone.required = choice === 'featured';
       const extendedContacts = ['email', 'website', 'instagram', 'facebook', 'linkedin'];
@@ -167,8 +166,11 @@
     const finder = Array.from(form.querySelectorAll(':scope > fieldset')).find((fieldset) => fieldset.querySelector('legend')?.textContent.trim() === '1. Busca el negocio');
     const detailsStep = [details, document.querySelector('#registration-distinct-business')].filter(Boolean);
     const contacts = document.querySelector('#registration-contact-details');
+    const products = document.querySelector('#registration-product-details');
+    const productStep = [products].filter(Boolean);
     const contactStep = [contacts].filter(Boolean);
     const submissionStep = [continuation].filter(Boolean);
+    const activeSteps = () => [1, 2, 3, ...(plan() === 'page_premium' ? [4] : []), ...(plan() && plan() !== 'free' ? [5] : []), 6];
     let step = type?.value && plan() && serverError ? 3 : 1;
 
     const renderStep = () => {
@@ -178,8 +180,9 @@
       const selected = !!type?.value;
       const selectedPlan = plan();
       const showDetails = step === 3;
-      const showContacts = step === 4;
-      const showSubmission = step === 5;
+      const showProducts = step === 4 && selectedPlan === 'page_premium';
+      const showContacts = step === 5;
+      const showSubmission = step === 6;
       const period = form.querySelector('.subscription-choice-period');
       if(period){period.hidden = !selectedPlan || selectedPlan === 'free';period.querySelector('select').disabled = !selectedPlan || selectedPlan === 'free';}
       const distinct=document.querySelector('#registration-distinct-business');if(distinct){distinct.hidden=!(showDetails&&selectedPlan==='free'&&type.value==='new_business');distinct.disabled=selectedPlan!=='free'||type.value!=='new_business';}
@@ -197,12 +200,14 @@
       next.hidden = showSubmission;
       back.hidden = first;
       if(details)details.hidden=!showDetails;
+      if(products)products.hidden=!showProducts;
       contactStep.forEach((node) => { node.hidden = !showContacts; });
       submissionStep.forEach((node) => { node.hidden = !showSubmission; node.disabled = !showSubmission; });
       tabs?.querySelectorAll('[data-wizard-step]').forEach((tab) => {
         const tabStep = Number(tab.dataset.wizardStep);
-        tab.hidden = tabStep===4&&selectedPlan==='free';
-        if(tabStep===5)tab.textContent=selectedPlan==='free'?'4. Autorización':'5. Autorización';
+        const position = activeSteps().indexOf(tabStep);
+        tab.hidden = position < 0;
+        tab.textContent = `${position + 1}. ${tab.dataset.stepLabel}`;
         tab.disabled = tabStep > step;
         tab.setAttribute('aria-current', tabStep === step ? 'step' : 'false');
         tab.classList.toggle('is-current', tabStep === step);
@@ -213,7 +218,9 @@
         const planLabel = {free: 'Gratis', featured: 'Destacado', page: 'Página Comercial', page_premium: 'Premium'}[selectedPlan];
         next.textContent = planLabel ? `Continuar con ${planLabel}` : 'Elige un plan para continuar';
       } else if (showDetails) {
-        next.textContent = selectedPlan==='free'?'Continuar a autorización':'Continuar a canales de contacto';
+        next.textContent = selectedPlan==='free'?'Continuar a autorización':selectedPlan==='page_premium'?'Continuar a productos':'Continuar a canales de contacto';
+      } else if (showProducts) {
+        next.textContent = 'Continuar a canales de contacto';
       } else if (showContacts) {
         next.textContent = 'Continuar para enviar solicitud';
       }
@@ -229,11 +236,12 @@
       tabs = document.createElement('nav');
       tabs.className = 'registration-wizard-tabs';
       tabs.setAttribute('aria-label', 'Progreso del registro del negocio');
-      ['Negocio', 'Suscripción', 'Información', 'Canales', 'Autorización'].forEach((label, index) => {
+      ['Negocio', 'Suscripción', 'Información', 'Productos', 'Canales', 'Autorización'].forEach((label, index) => {
         const tab = document.createElement('button');
         tab.type = 'button';
         tab.className = 'registration-wizard-tab';
         tab.dataset.wizardStep = String(index + 1);
+        tab.dataset.stepLabel = label;
         tab.textContent = `${index + 1}. ${label}`;
         tab.addEventListener('click', () => {
           const target = Number(tab.dataset.wizardStep);
@@ -271,22 +279,24 @@
           warning.hidden = false;
           return;
         }
-        const currentPanels=step===1?[finder]:step===2?[planStage]:step===3?detailsStep:contactStep;
+        const currentPanels=step===1?[finder]:step===2?[planStage]:step===3?detailsStep:step===4?productStep:contactStep;
         const invalid=currentPanels.flatMap(panel=>Array.from(panel.querySelectorAll('input,select,textarea'))).find(field=>field.willValidate&&!field.checkValidity());
         if(invalid){invalid.reportValidity();return;}
         warning.hidden=true;
-        step = step === 1 ? 2 : step === 2 ? 3 : step === 3 ? (plan()==='free'?5:4) : 5;
+        const steps = activeSteps();
+        step = steps[steps.indexOf(step) + 1];
         renderStep();
       });
       back.addEventListener('click', () => {
-        step = step === 5 ? (plan()==='free'?3:4) : step === 4 ? 3 : step === 3 ? 2 : 1;
+        const steps = activeSteps();
+        step = steps[Math.max(0, steps.indexOf(step) - 1)];
         renderStep();
       });
       form.addEventListener('operator-eligibility-change', () => { renderStep(); });
       form.addEventListener('change', (event) => { if (step === 2 && event.target.name === 'plan_code') { syncFreeIdentifier(); renderStep(); } });
       form.addEventListener('invalid', event=>{
         const field=event.target;
-        const target=finder.contains(field)?1:planStage.contains(field)?2:detailsStep.some(panel=>panel.contains(field))?3:contactStep.some(panel=>panel.contains(field))?4:5;
+        const target=finder.contains(field)?1:planStage.contains(field)?2:detailsStep.some(panel=>panel.contains(field))?3:productStep.some(panel=>panel.contains(field))?4:contactStep.some(panel=>panel.contains(field))?5:6;
         if(step!==target){step=target;renderStep();}
       },true);
     }
