@@ -40,38 +40,6 @@
       }
       try { sessionStorage.setItem(recoveryKey, JSON.stringify(values)); } catch { /* Storage can be unavailable in private browsing. */ }
     });
-    // The applicant should not have to guess what an administrator needs.
-    // Review requests carry a specific reason back to the owner instead.
-    form.querySelector('[name="message"]')?.closest('label')?.remove();
-
-    // La cuenta se crea o inicia antes de este wizard. En la solicitud solo
-    // mostramos la identidad que se asociará; no se puede editar aquí.
-    const identityFields = ['display_name', 'email'].map((name) => form.querySelector(`[name="${name}"]`)).filter(Boolean);
-    if (identityFields.length === 2) {
-      const identity = document.createElement('section');
-      identity.className = 'registration-account-identity wide';
-      const title = document.createElement('strong');
-      title.textContent = 'Cuenta que se asociará al negocio';
-      const values = document.createElement('p');
-      values.textContent = `${identityFields[0].value} · ${identityFields[1].value}`;
-      identity.append(title, values);
-      identityFields[0].closest('label')?.before(identity);
-      identityFields.forEach((field) => {
-        field.required = false;
-        field.disabled = true;
-        field.closest('label')?.remove();
-      });
-    }
-    // El teléfono personal pertenece al perfil de la cuenta, no al soporte de
-    // una solicitud. Los canales públicos se capturan en su propio paso.
-    form.querySelector('#registration-continuation .contact-phone-fields')?.remove();
-
-    document.querySelectorAll('.subscription-choice-description').forEach((copy) => {
-      copy.textContent = copy.textContent.replace('hasta cuatro productos o servicios', 'hasta cinco productos o servicios');
-    });
-    if (continuation?.querySelector('legend')) continuation.querySelector('legend').textContent = 'Información personal y autorización para solicitar la publicación';
-    if (submit) submit.textContent = 'Guardar solicitud';
-
     const setPlanField = (selector, visible, required = false) => {
       form.querySelectorAll(selector).forEach((node) => {
         node.hidden = !visible;
@@ -101,7 +69,8 @@
         : 'Guardar solicitud para revisión';
       setPlanField('[data-plan-field="summary"]', editorial, editorial);
       setPlanField('[data-plan-field="description"]', premium, premium);
-      setPlanField('[data-plan-field="location"]', ['featured', 'page', 'page_premium'].includes(choice), choice !== 'free');
+      setPlanField('[data-plan-field="location"]', ['featured', 'page', 'page_premium'].includes(choice));
+      const address=form.querySelector('[name="address_text"]');if(address)address.required=choice!==''&&choice!=='free';
       // Los canales son un paso independiente del wizard. Su visibilidad y
       // habilitación dependen exclusivamente del paso 4, administrado por
       // business-registration.js; no los abras al escoger una suscripción.
@@ -211,31 +180,40 @@
       const showDetails = step === 3;
       const showContacts = step === 4;
       const showSubmission = step === 5;
+      const period = form.querySelector('.subscription-choice-period');
+      if(period){period.hidden = !selectedPlan || selectedPlan === 'free';period.querySelector('select').disabled = !selectedPlan || selectedPlan === 'free';}
+      const distinct=document.querySelector('#registration-distinct-business');if(distinct){distinct.hidden=!(showDetails&&selectedPlan==='free'&&type.value==='new_business');distinct.disabled=selectedPlan!=='free'||type.value!=='new_business';}
+      const applicableContacts=['featured','page','page_premium'].includes(selectedPlan);
+      if(contacts)contacts.disabled=!applicableContacts;
+      if(details)details.disabled=!selectedPlan||!type.value;
+      if(submit)submit.disabled=!showSubmission||!selectedPlan||!type.value;
       form.dataset.registrationWizardStep = String(step);
       form.dataset.registrationPremiumDetails = '0';
       finder.hidden = !first;
       finder.disabled = false;
       planStage.hidden = !planStep || !selected;
       planStage.disabled = !selected;
-      controls.hidden = !(first || (planStep && selectedPlan) || showDetails || showContacts);
+      controls.hidden = showSubmission;
       next.hidden = showSubmission;
       back.hidden = first;
-      detailsStep.forEach((node) => { node.hidden = !showDetails; });
+      if(details)details.hidden=!showDetails;
       contactStep.forEach((node) => { node.hidden = !showContacts; });
       submissionStep.forEach((node) => { node.hidden = !showSubmission; node.disabled = !showSubmission; });
       tabs?.querySelectorAll('[data-wizard-step]').forEach((tab) => {
         const tabStep = Number(tab.dataset.wizardStep);
+        tab.hidden = tabStep===4&&selectedPlan==='free';
+        if(tabStep===5)tab.textContent=selectedPlan==='free'?'4. Autorización':'5. Autorización';
         tab.disabled = tabStep > step;
         tab.setAttribute('aria-current', tabStep === step ? 'step' : 'false');
         tab.classList.toggle('is-current', tabStep === step);
         tab.classList.toggle('is-complete', tabStep < step);
       });
-      if (showDetails || showContacts || showSubmission) form.dispatchEvent(new Event('operator-eligibility-change'));
+
       if (step === 2) {
         const planLabel = {free: 'Gratis', featured: 'Destacado', page: 'Página Comercial', page_premium: 'Premium'}[selectedPlan];
         next.textContent = planLabel ? `Continuar con ${planLabel}` : 'Elige un plan para continuar';
       } else if (showDetails) {
-        next.textContent = 'Continuar a canales de contacto';
+        next.textContent = selectedPlan==='free'?'Continuar a autorización':'Continuar a canales de contacto';
       } else if (showContacts) {
         next.textContent = 'Continuar para enviar solicitud';
       }
@@ -293,15 +271,24 @@
           warning.hidden = false;
           return;
         }
-        step = step === 1 ? 2 : step === 2 ? 3 : step === 3 ? 4 : 5;
+        const currentPanels=step===1?[finder]:step===2?[planStage]:step===3?detailsStep:contactStep;
+        const invalid=currentPanels.flatMap(panel=>Array.from(panel.querySelectorAll('input,select,textarea'))).find(field=>field.willValidate&&!field.checkValidity());
+        if(invalid){invalid.reportValidity();return;}
+        warning.hidden=true;
+        step = step === 1 ? 2 : step === 2 ? 3 : step === 3 ? (plan()==='free'?5:4) : 5;
         renderStep();
       });
       back.addEventListener('click', () => {
-        step = step === 5 ? 4 : step === 4 ? 3 : step === 3 ? 2 : 1;
+        step = step === 5 ? (plan()==='free'?3:4) : step === 4 ? 3 : step === 3 ? 2 : 1;
         renderStep();
       });
-      form.addEventListener('operator-eligibility-change', () => { if (step === 1) renderStep(); });
+      form.addEventListener('operator-eligibility-change', () => { renderStep(); });
       form.addEventListener('change', (event) => { if (step === 2 && event.target.name === 'plan_code') { syncFreeIdentifier(); renderStep(); } });
+      form.addEventListener('invalid', event=>{
+        const field=event.target;
+        const target=finder.contains(field)?1:planStage.contains(field)?2:detailsStep.some(panel=>panel.contains(field))?3:contactStep.some(panel=>panel.contains(field))?4:5;
+        if(step!==target){step=target;renderStep();}
+      },true);
     }
 
     form.addEventListener('change', (event) => {

@@ -50,9 +50,6 @@
     });
   }
 
-  function syncFree(){const chosen=formQuery('[name="plan_code"]:checked')?.value;const free=chosen==='free';const showDetails=form.dataset.registrationWizardStep==='3';const showContacts=form.dataset.registrationWizardStep==='4';const showSubmission=form.dataset.registrationWizardStep==='5';const continuation=document.querySelector('#registration-continuation');if(continuation){continuation.hidden=!showSubmission||!type.value||!chosen;continuation.disabled=!showSubmission||!type.value||!chosen;}submit.disabled=!showSubmission||!type.value||!chosen;const period=formQuery('.subscription-choice-period');if(period){period.hidden=free||!chosen;for(const control of period.querySelectorAll('select'))control.disabled=free||!chosen;}const distinct=document.querySelector('#registration-distinct-business');if(distinct){const applies=free&&type.value==='new_business';distinct.hidden=!showDetails||!applies;distinct.disabled=!applies;}const details=document.querySelector('#registration-new-details');if(details){details.hidden=!showDetails||!chosen||!type.value;details.disabled=!chosen||!type.value;}const contacts=document.querySelector('#registration-contact-details');if(contacts){const applies=!!type.value&&['featured','page','page_premium'].includes(chosen);contacts.hidden=!showContacts||!applies;contacts.disabled=!applies;}}
-  form.addEventListener('change',event=>{if(event.target.name==='plan_code')syncFree();});
-  form.addEventListener('operator-eligibility-change',syncFree);syncFree();
 
   relationship?.addEventListener('change', () => {
     const needsAuthority = type.value==='new_business'&&relationship.value === 'authorized_administrator';
@@ -83,7 +80,7 @@
       const name = document.createElement('strong'); name.textContent = item.display_name;
       const state = document.createElement('small'); state.textContent = item.requires_review ? (item.review_message || 'Este negocio ya tiene un responsable o una solicitud. Puedes pedir una revisión; no obtendrás acceso automáticamente.') : item.can_request ? 'Sin responsable · puedes reclamarlo y administrarlo con tu cuenta' : 'No disponible para nuevas solicitudes en este momento';
       copy.append(name, state); label.append(radio, copy); results.append(label);
-      radio.addEventListener('change', () => { choose('existing_business', String(item.id), item.requires_review ? (item.review_message || 'Tu solicitud necesita revisión y no cambia al responsable actual.') : '', !!item.is_experience_operator); missing.disabled = false; });
+      radio.addEventListener('change', () => { newName.value=item.display_name;choose('existing_business', String(item.id), item.requires_review ? (item.review_message || 'Tu solicitud necesita revisión y no cambia al responsable actual.') : '', !!item.is_experience_operator); missing.disabled = false; });
     }
     missing.disabled = false;
     choose('', '');
@@ -135,6 +132,6 @@
   });
   if (destination.value) {
     let initial={};try{initial=JSON.parse(form.dataset.registrationState||'{}');}catch{}
-    loadCategories().then(()=>{if(initial.category&&Array.from(category.options).some(option=>option.value===initial.category)){category.value=initial.category;search.disabled=false;missing.disabled=false;for(const input of document.querySelectorAll('#registration-extra-categories input'))input.checked=Array.isArray(initial.extras)&&initial.extras.includes(input.value);syncExtraCategories();if(initial.type==='new_business')choose('new_business');}});
+    loadCategories().then(()=>{if(initial.category&&Array.from(category.options).some(option=>option.value===initial.category)){category.value=initial.category;search.disabled=false;missing.disabled=false;for(const input of document.querySelectorAll('#registration-extra-categories input'))input.checked=Array.isArray(initial.extras)&&initial.extras.includes(input.value);syncExtraCategories();if(initial.name){newName.value=initial.name;search.value=initial.name;}if(initial.type==='new_business')choose('new_business');else if(initial.type==='existing_business'&&initial.id){choose('existing_business',String(initial.id));selectionNotice.textContent='Negocio seleccionado: '+(initial.name||'Ficha existente');selectionNotice.hidden=false;}}});
   }
 })();
