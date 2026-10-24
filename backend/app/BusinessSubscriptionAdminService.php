@@ -16,7 +16,7 @@ final class BusinessSubscriptionAdminService
     {
         $plans=$this->pdo->query('SELECT p.code,p.max_gallery_photos,p.max_summary_chars,p.max_description_chars,p.max_brand_story_chars,p.max_featured_services_chars,t.name,t.summary FROM subscription_plans p JOIN subscription_plan_translations t ON t.plan_code=p.code AND t.locale="es" WHERE p.is_active=1 AND p.code IN ("free","featured","page","page_premium") ORDER BY p.display_order')->fetchAll(PDO::FETCH_ASSOC);
         foreach($plans as &$plan){
-            $plan['max_summary_chars']=BusinessRegistrationPlan::editorialCapacity((string)$plan['code'],(int)$plan['max_summary_chars']);
+            foreach(BusinessRegistrationPlan::textLimits((string)$plan['code']) as $field=>$limit)$plan['max_'.$field.'_chars']=$limit;
             $plan['max_gallery_photos']=(int)$plan['max_gallery_photos'];
             $plan['text_limits']=['summary'=>(int)$plan['max_summary_chars'],'description'=>(int)$plan['max_description_chars'],'brand_story'=>(int)$plan['max_brand_story_chars'],'featured_services'=>(int)$plan['max_featured_services_chars']];
             $q=$this->pdo->prepare('SELECT billing_frequency,amount,currency FROM subscription_plan_prices WHERE plan_code=?');$q->execute([$plan['code']]);
@@ -30,19 +30,18 @@ final class BusinessSubscriptionAdminService
     private static function contentLimitDescription(array $limits):string
     {
         $parts=[];
-        foreach(['summary'=>'descripción breve','description'=>'descripción ampliada','brand_story'=>'historia del negocio','featured_services'=>'servicios destacados'] as $field=>$label){$limit=(int)($limits[$field]??0);if($limit>0)$parts[]=$label.': hasta '.$limit.' caracteres';}
+        foreach(['summary'=>'descripción del negocio'] as $field=>$label){$limit=(int)($limits[$field]??0);if($limit>0)$parts[]=$label.': hasta '.$limit.' caracteres';}
         return $parts?'Límites de contenido: '.implode('; ',$parts).'.':'Este nivel no admite descripciones públicas.';
     }
 
     private static function requirements(string $plan,int $galleryPhotos):array
     {
-        $base=['Nombre, categoría y destino. Para esta suscripción paga, completa la dirección y confirma su punto en el mapa.'];
+        $base=['Nombre, categoría, lugar, NIT o RNT, relación y soporte privado del negocio.'];
         return match($plan){
-            'free'=>['Solo requiere nombre, categoría y destino. No exige dirección, mapa, teléfono, descripciones, horarios ni imágenes. Los canales de investigación se conservan privados.'],
-            'basic'=>[...$base,'Añade: un resumen corto y al menos un celular/WhatsApp público para contacto directo. No solicita descripción larga, logo, fotos, horarios ni datos operativos.'],
-            'featured'=>[...$base,'Añade: descripción intermedia, contacto público y tarjeta destacada. Puede entregar su logo como referencia privada; si no tiene, la tarjeta usa sus iniciales. No incluye fotografías.'],
-            'page'=>[...$base,'Añade página propia: descripción completa, logo (si no tiene, se muestran sus iniciales), celular/WhatsApp público, horarios y rango de precios. Puede entregar dos referencias privadas: logo y una imagen para preparar la portada. El equipo crea y revisa la imagen final; las referencias no se publican directamente. Menú/catálogo, reservas, redes y capacidad se piden solo cuando aplican.'],
-            'page_premium'=>[...$base,'Incluye todo lo de Página y dos secciones extra obligatorias: historia o propuesta del negocio y servicios destacados, traducidos a los idiomas del portal. Se solicita logo; si no tiene, se usan iniciales. Las referencias son privadas; se prepara una portada y hasta '.$galleryPhotos.' fotos adicionales (tres fotos públicas en total) para revisión. No se publican directamente las referencias. Menú/catálogo, reservas, redes, precios y capacidad se completan cuando aplican.'],
+            'free'=>[...$base,'Sin descripción, canales públicos, imágenes ni página propia.'],
+            'featured'=>[...$base,'Agrega una descripción, dirección/punto en el mapa y teléfono; WhatsApp disponible. Sin fotos ni página propia.'],
+            'page'=>[...$base,'Conserva Destacado y agrega portada, página propia y correo del negocio. Una sola descripción.'],
+            'page_premium'=>[...$base,'Conserva Página y agrega sitio web, Instagram, Facebook y LinkedIn, y hasta cinco productos o servicios con título, descripción corta y foto. Una sola descripción del negocio.'],
             default=>$base,
         };
     }
@@ -176,7 +175,7 @@ final class BusinessSubscriptionAdminService
     {
         $sub=['plan_code'=>$plan];
             $planQuery=$this->pdo->prepare('SELECT max_gallery_photos,max_summary_chars,max_description_chars,max_brand_story_chars,max_featured_services_chars FROM subscription_plans WHERE code=?');$planQuery->execute([$sub['plan_code']]);$limits=$planQuery->fetch(PDO::FETCH_ASSOC);if(!$limits)throw new RuntimeException('No se encontró la suscripción.');$photoLimit=(int)$limits['max_gallery_photos'];
-            $limits['max_summary_chars']=BusinessRegistrationPlan::editorialCapacity($plan,(int)$limits['max_summary_chars']);
+            foreach(BusinessRegistrationPlan::textLimits($plan) as $field=>$limit)$limits['max_'.$field.'_chars']=$limit;
             $mediaQuery=$this->pdo->prepare('SELECT role,COUNT(*) AS amount FROM business_media WHERE business_id=? GROUP BY role');$mediaQuery->execute([$businessId]);$mediaCounts=[];foreach($mediaQuery->fetchAll(PDO::FETCH_ASSOC) as $media)$mediaCounts[$media['role']]=(int)$media['amount'];
             if($sub['plan_code']==='page'||$sub['plan_code']==='page_premium'){
                 if(($mediaCounts['cover']??0)<1)throw new RuntimeException('Las suscripciones Página requieren una portada aprobada.');

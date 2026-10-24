@@ -21,9 +21,9 @@ final class BusinessRegistrationPlan
         return self::all()[$code]??throw new RuntimeException('Selecciona una suscripción vigente.');
     }
 
-    /** Do not reject captured text or invalidate wider historical editorial data. */
-    public static function editorialCapacity(string $code,int $existing):int
+    /** One description in registration, editorial editing, ZIPs and publication. */
+    public static function textLimits(string $code):array
     {
-        return max($existing,self::all()[$code]['description_limit']??0);
+        return ['summary'=>self::get($code)['description_limit'],'description'=>0,'brand_story'=>0,'featured_services'=>0];
     }
 }

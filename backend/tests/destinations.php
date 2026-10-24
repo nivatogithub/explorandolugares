@@ -23,6 +23,7 @@ $pdo->exec(file_get_contents(dirname(__DIR__).'/database/migrations/013-accounts
 $pdo->exec(file_get_contents(dirname(__DIR__).'/database/migrations/014-tiered-business-description.sqlite.sql'));
 $pdo->exec(file_get_contents(dirname(__DIR__).'/database/migrations/015-business-media-quotas.sqlite.sql'));
 $pdo->exec(file_get_contents(dirname(__DIR__).'/database/migrations/016-plan-content-limits.sqlite.sql'));
+$pdo->exec(file_get_contents(dirname(__DIR__).'/database/migrations/053-current-business-text-rules.sqlite.sql'));
 $pdo->exec(file_get_contents(dirname(__DIR__).'/database/migrations/021-business-payment-evidence.sqlite.sql'));
 $pdo->exec(file_get_contents(dirname(__DIR__).'/database/migrations/025-subscription-renewal-history.sqlite.sql'));
 // Publication now checks responsibility evidence; keep this legacy fixture's account tables available.

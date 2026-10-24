@@ -13,7 +13,7 @@ final class BusinessOnboardingDetails
         if(!in_array($plan,['free','featured','page','page_premium'],true))throw new RuntimeException('Selecciona una suscripción vigente.');
         $rules=BusinessRegistrationPlan::get($plan);
         // One description only; its capacity grows with the selected plan.
-        $limits=['summary'=>$rules['description_limit'],'description'=>0,'brand_story'=>0,'featured_services'=>0];
+        $limits=BusinessRegistrationPlan::textLimits($plan);
         foreach($limits as $key=>$limit){$text=trim((string)($input[$key]??''));if(mb_strlen($text)>$limit)throw new RuntimeException($limit===0?'Este campo no corresponde a la suscripción elegida.':'El campo supera el límite de '.$limit.' caracteres.');$result['text'][$key]=$text;}
         require_once __DIR__.'/BusinessPhone.php';$input['channels']=BusinessPhone::capture($input,(array)($input['channels']??[]));
         foreach(BusinessContactVisibility::channels($plan) as $channel){$value=trim((string)($input['channels'][$channel]??''));if($value==='')continue;if(strlen($value)>500)throw new RuntimeException('El canal es demasiado largo.');$valid=match($channel){'email'=>(bool)filter_var($value,FILTER_VALIDATE_EMAIL),'phone','phone_fixed','whatsapp'=>(bool)preg_match('/^\+?[0-9() .-]{7,24}$/D',$value),default=>(bool)filter_var($value,FILTER_VALIDATE_URL)&&in_array(parse_url($value,PHP_URL_SCHEME),['http','https'],true)};if(!$valid)throw new RuntimeException('Revisa el canal '.$channel.'.');$result['channels'][$channel]=$value;}
