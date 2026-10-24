@@ -22,7 +22,7 @@
       <small>Una foto JPG, PNG o WebP, máximo 8 MB. Queda privada mientras se revisa.</small>
     </label>
     <label class="wide" data-plan-field="summary"><span data-description-label>Descripción del negocio · máximo <?=$registrationDescriptionLimit?> caracteres</span>
-      <textarea name="summary" maxlength="<?=$registrationDescriptionLimit?>" rows="4" data-preview-field="summary"><?=esc($_POST['summary']??'')?></textarea>
+      <textarea name="summary" maxlength="<?=$registrationDescriptionLimit?>" rows="4" data-text-counter data-preview-field="summary"><?=esc($_POST['summary']??'')?></textarea>
       <small>Un párrafo corto, claro y útil para quien visita el lugar.</small>
     </label>
     <label class="wide" data-plan-field="location">Dirección o referencia para llegar
@@ -44,7 +44,7 @@
     <div data-editor-tabs aria-label="Productos del negocio"></div><p data-products-empty>Agrega los productos que quieras presentar.</p><button class="pill light" type="button" data-add-product>Agregar producto</button>
     <?php for($i=0;$i<5;$i++):$configured=!empty($_POST['products'][$i]['title'])||!empty($_POST['products'][$i]['summary'])||!empty($_POST['temporary_uploads']['editorial']['product-'.$i]);?><fieldset data-editor-panel data-product-slot="<?=$i?>" data-panel-label="Producto <?=$i+1?>" data-configured="<?=$configured?'1':'0'?>" <?=$configured?'':'hidden disabled'?>><legend>Producto o servicio <?=$i+1?></legend><div class="destination-form-grid product-card" data-product-card>
       <label>Nombre<input name="products[<?=$i?>][title]" maxlength="100" required value="<?=esc($_POST['products'][$i]['title']??'')?>" data-preview-product-title></label>
-      <label>Descripción corta · máximo 180 caracteres<textarea name="products[<?=$i?>][summary]" maxlength="180" rows="2" data-preview-product-summary><?=esc($_POST['products'][$i]['summary']??'')?></textarea></label>
+      <label>Descripción corta · máximo 180 caracteres<textarea name="products[<?=$i?>][summary]" maxlength="180" rows="2" data-text-counter data-preview-product-summary><?=esc($_POST['products'][$i]['summary']??'')?></textarea></label>
       <label>Foto del producto<input type="file" name="reference_images[]" accept="image/jpeg,image/png,image/webp" data-image-slot="product-<?=$i?>" required></label>
     </div><button type="button" class="text-link" data-remove-product>Quitar este producto</button></fieldset><?php endfor ?>
   </section>
