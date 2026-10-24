@@ -14,7 +14,9 @@
     }
     const update = () => {
       counter.textContent = `${count(field.value)} / ${field.maxLength} caracteres`;
-      counter.hidden = field.hidden || field.closest('[hidden]') !== null;
+      // The containing step/tab already hides its descendants. Do not freeze
+      // a counter as hidden just because its field was initialized off-screen.
+      counter.hidden = field.hidden;
     };
     field.addEventListener('input', update);
     field.addEventListener('change', update);

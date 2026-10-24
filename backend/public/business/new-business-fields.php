@@ -17,7 +17,7 @@
       <small data-free-identifier-help>Puedes copiarlo tal como aparece en el documento. Para Gratis debes indicar NIT o RNT.</small>
     </label>
     <label class="wide" data-plan-field="cover" hidden>Foto de portada
-      <input type="file" name="reference_images[]" accept="image/jpeg,image/png,image/webp" data-image-slot="cover">
+      <input type="file" name="reference_images[]" accept="image/jpeg,image/png,image/webp" data-image-slot="cover" required>
       <small>Una foto JPG, PNG o WebP, máximo 8 MB. Queda privada mientras se revisa.</small>
     </label>
     <label class="wide" data-plan-field="summary">Presentación breve · máximo 450 caracteres
@@ -42,9 +42,9 @@
     <p>Cada uno tiene título, descripción corta y una sola foto. No es una galería.</p>
     <div data-editor-tabs aria-label="Productos del negocio"></div><p data-products-empty>Agrega los productos que quieras presentar.</p><button class="pill light" type="button" data-add-product>Agregar producto</button>
     <?php for($i=0;$i<5;$i++):$configured=!empty($_POST['products'][$i]['title'])||!empty($_POST['products'][$i]['summary'])||!empty($_POST['temporary_uploads']['editorial']['product-'.$i]);?><fieldset data-editor-panel data-product-slot="<?=$i?>" data-panel-label="Producto <?=$i+1?>" data-configured="<?=$configured?'1':'0'?>" <?=$configured?'':'hidden disabled'?>><legend>Producto o servicio <?=$i+1?></legend><div class="destination-form-grid product-card" data-product-card>
-      <label>Nombre<input name="products[<?=$i?>][title]" maxlength="100" value="<?=esc($_POST['products'][$i]['title']??'')?>" data-preview-product-title></label>
+      <label>Nombre<input name="products[<?=$i?>][title]" maxlength="100" required value="<?=esc($_POST['products'][$i]['title']??'')?>" data-preview-product-title></label>
       <label>Descripción corta · máximo 180 caracteres<textarea name="products[<?=$i?>][summary]" maxlength="180" rows="2" data-preview-product-summary><?=esc($_POST['products'][$i]['summary']??'')?></textarea></label>
-      <label>Foto del producto<input type="file" name="reference_images[]" accept="image/jpeg,image/png,image/webp" data-image-slot="product-<?=$i?>"></label>
+      <label>Foto del producto<input type="file" name="reference_images[]" accept="image/jpeg,image/png,image/webp" data-image-slot="product-<?=$i?>" required></label>
     </div><button type="button" class="text-link" data-remove-product>Quitar este producto</button></fieldset><?php endfor ?>
   </section>
   <p class="registration-preview-action" data-registration-preview hidden><a class="pill light subscription-example" data-subscription-example href="/business/demo.php?view=free">Ver vista previa de este plan</a></p>
