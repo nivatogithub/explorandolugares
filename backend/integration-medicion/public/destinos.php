@@ -2,7 +2,7 @@
 declare(strict_types=1);
 header('Cache-Control: no-cache, max-age=0, must-revalidate');
 
-$repositoryPath=dirname(__DIR__,2).'/app/DestinationRepository.php';
+$repositoryPath=dirname(__DIR__).'/app/DestinationRepository.php';
 if(!is_file($repositoryPath)){http_response_code(503);exit('Lugares temporalmente no disponibles.');}
 require_once $repositoryPath;
 $locale=(string)($_GET['idioma']??'es');
