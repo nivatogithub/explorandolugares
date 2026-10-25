@@ -20,7 +20,7 @@ $activeAdminItem = match (true) {
     $adminPath === 'reclamaciones.php' => 'account-applications',
     $adminPath === 'solicitudes-cuenta.php' || ($adminPath === 'solicitud-detalle.php' && ($_GET['tipo']??'')==='account') => 'account-applications',
     $adminPath === 'usuarios.php' => 'accounts',
-    $adminPath === 'suscripciones.php' => 'subscriptions',
+    $adminPath === 'suscripciones.php' || $adminPath === 'cupones.php' => 'subscriptions',
     $adminPath === 'destinos.php' || str_starts_with($adminPath, 'paquete-destino') => 'destinations',
     $adminPath === 'reportes.php' => 'reports',
     $adminPath === 'solicitudes-publicas.php' => 'public-requests',

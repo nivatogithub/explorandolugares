@@ -1,7 +1,6 @@
 (() => {
   const $ = (id) => document.getElementById(id);
   const address = $('business-address');
-  const reference = $('business-location-reference');
   const destination = $('business-destination') || $('registration-destination');
   const open = $('business-map-open');
   const dialog = $('business-map-dialog');
@@ -172,7 +171,7 @@
     const department = option?.dataset.department || '';
     const countryCode = option?.dataset.country || 'CO';
     const country = countryCode === 'CO' ? 'Colombia' : countryCode;
-    const cacheKey = `el-destination-center:v3:${name.toLocaleLowerCase('es')}:${department}:${countryCode}:${option?.dataset.type || ''}`;
+    const cacheKey = `el-destination-center:v4:${name.toLocaleLowerCase('es')}:${department}:${countryCode}:${option?.dataset.type || ''}`;
     try {
       const cached = JSON.parse(sessionStorage.getItem(cacheKey) || 'null');
       if (cached?.point?.length === 2 && cached.point.every(Number.isFinite)) {
@@ -188,7 +187,13 @@
         const response=await fetch('/api/business-municipality.php?destination='+encodeURIComponent(destination.value),{headers:{Accept:'application/json'},signal:AbortSignal.timeout(7000)});
         if(!response.ok)throw new Error('No se pudo cargar el límite municipal de este lugar.');
         const territory=await response.json();destinationGeometry=territory.geometry;const positions=(destinationGeometry.type==='Polygon'?[destinationGeometry.coordinates]:destinationGeometry.coordinates).flat(2);const lons=positions.map(p=>p[0]),lats=positions.map(p=>p[1]);
-        const bounds={south:Math.min(...lats),north:Math.max(...lats),west:Math.min(...lons),east:Math.max(...lons)};destinationBounds=bounds;const point=knownPoint||(territory.center||[]).map(Number);const resolved={point,bounds,geometry:destinationGeometry};try{sessionStorage.setItem(cacheKey,JSON.stringify(resolved));}catch{}return resolved;
+        const bounds={south:Math.min(...lats),north:Math.max(...lats),west:Math.min(...lons),east:Math.max(...lons)};
+        destinationBounds=bounds;
+        const supplied=territory.center;
+        const validCenter=Array.isArray(supplied)&&supplied.length===2&&supplied.every(value=>value!==null&&value!==''&&Number.isFinite(Number(value)));
+        const point=knownPoint||(validCenter?supplied.map(Number):null);
+        if(!point)throw new Error('Este lugar no tiene un centro geográfico configurado. Solicita su revisión antes de ubicar el negocio.');
+        const resolved={point,bounds,geometry:destinationGeometry};try{sessionStorage.setItem(cacheKey,JSON.stringify(resolved));}catch{}return resolved;
       } catch (error) {
         // The destination already has its own coordinates.  A temporarily
         // unavailable municipal boundary must not make the picker unusable.

@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 require_once __DIR__.'/BusinessShowcase.php';
+require_once __DIR__.'/DatabaseClock.php';
 
 require_once __DIR__.'/BusinessCategories.php';
 require_once __DIR__.'/BusinessServiceSections.php';
@@ -11,7 +12,7 @@ final class BusinessRepository
 {
     private const LOCALES = ['es','en','pt-BR'];
 
-    public function __construct(private PDO $pdo) {}
+    public function __construct(private PDO $pdo) { DatabaseClock::configure($pdo); }
 
     public function findPublicPage(string $publicId, string $locale): ?array
     {

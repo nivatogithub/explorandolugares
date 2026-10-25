@@ -60,6 +60,8 @@ function db(): PDO {
     if (!$pdo) {
         $pdo = new PDO($config['dsn'], $config['db_user'] ?? null, $config['db_password'] ?? null,
             [PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION, PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC, PDO::ATTR_EMULATE_PREPARES=>false]);
+        require_once __DIR__.'/DatabaseClock.php';
+        DatabaseClock::configure($pdo);
     }
     return $pdo;
 }
@@ -70,12 +72,12 @@ function private_storage_path(string $area): string {
 }
 /** Redirect normal form submissions to sign-in when their session is gone.
  * APIs still receive JSON so clients can handle the expired session safely. */
-function session_expired(): never {
+function session_expired(?string $returnTo=null): never {
     $accept=(string)($_SERVER['HTTP_ACCEPT']??'');
-    if(str_contains($accept,'application/json'))json_response(['error'=>'authentication_required','login_url'=>site_path('/negocios/acceso/')],401);
-    $uri=(string)($_SERVER['REQUEST_URI']??'');
+    $uri=$returnTo??(string)($_SERVER['REQUEST_URI']??'');
     $parts=parse_url($uri);$path=(string)($parts['path']??'');$query=isset($parts['query'])?'?'.$parts['query']:'';
     if($path!==''&&str_starts_with($path,'/')&&!str_starts_with($path,'//')&&!str_starts_with($path,'/negocios/acceso'))$_SESSION['session_return']=$path.$query;
+    if(str_contains($accept,'application/json'))json_response(['error'=>'authentication_required','login_url'=>site_path('/negocios/acceso/')],401);
     header('Location: '.site_path('/negocios/acceso/?sesion=expirada'),true,303);
     exit;
 }
@@ -84,12 +86,12 @@ function session_expired(): never {
  * sign-in screen; fetch/XHR callers receive a predictable response instead
  * of an HTML page or a bare 403.
  */
-function require_business_session(bool $expectsJson=false): void {
+function require_business_session(bool $expectsJson=false,?string $returnTo=null): void {
     $active=!empty($_SESSION['business_account_id']) && time()-(int)($_SESSION['business_last_seen']??0)<=1800;
     if($active){$_SESSION['business_last_seen']=time();return;}
     require_once __DIR__.'/AccountSessionSecurity.php';
     AccountSessionSecurity::clear($_SESSION);
-    $uri=(string)($_SERVER['REQUEST_URI']??'');$parts=parse_url($uri);$path=(string)($parts['path']??'');$query=isset($parts['query'])?'?'.$parts['query']:'';
+    $uri=$returnTo??(string)($_SERVER['REQUEST_URI']??'');$parts=parse_url($uri);$path=(string)($parts['path']??'');$query=isset($parts['query'])?'?'.$parts['query']:'';
     if($path!==''&&str_starts_with($path,'/')&&!str_starts_with($path,'//')&&!str_starts_with($path,'/negocios/acceso'))$_SESSION['session_return']=$path.$query;
     $accept=(string)($_SERVER['HTTP_ACCEPT']??'');
     if($expectsJson||str_contains($accept,'application/json'))json_response(['error'=>'authentication_required','login_url'=>site_path('/negocios/acceso/')],401);
@@ -116,9 +118,9 @@ function enforce_administration_session(): void {
     require_admin_session();
 }
 enforce_administration_session();
-function csrf(): void {
+function csrf(?string $returnTo=null): void {
     if (!is_string($_POST['csrf'] ?? null) || !hash_equals($_SESSION['csrf'], $_POST['csrf'])) {
-        session_expired();
+        session_expired($returnTo);
     }
 }
 function throttle(string $kind, int $limit, int $seconds, string $extra = ''): bool {

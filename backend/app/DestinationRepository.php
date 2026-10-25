@@ -2,12 +2,13 @@
 declare(strict_types=1);
 
 require_once __DIR__.'/BusinessCategories.php';
+require_once __DIR__.'/DatabaseClock.php';
 require_once __DIR__.'/ExperienceOperatorAddon.php';
 require_once __DIR__.'/BusinessContactVisibility.php';
 
 final class DestinationRepository
 {
-    public function __construct(private PDO $pdo) {}
+    public function __construct(private PDO $pdo) { DatabaseClock::configure($pdo); }
 
     public function findPublished(string $slug, string $locale, bool $preview = false): ?array
     {

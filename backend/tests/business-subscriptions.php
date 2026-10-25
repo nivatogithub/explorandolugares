@@ -35,7 +35,7 @@ INSERT INTO business_translations VALUES(1,'es','Café de Prueba','Café local',
 INSERT INTO business_contacts VALUES(1,'whatsapp','+573001112233',1);");
 $service=new BusinessSubscriptionAdminService($pdo);$plans=array_column($service->options(),null,'code');
 subscription_check($plans['page']['max_gallery_photos']===0&&$plans['page_premium']['max_gallery_photos']===2,'Page includes one cover, while Premium allows up to three total public photos.');
-subscription_check($plans['featured']['text_limits']===['summary'=>300,'description'=>0,'brand_story'=>0,'featured_services'=>0]&&$plans['page']['text_limits']['summary']===450&&$plans['page_premium']['text_limits']===['summary'=>1200,'description'=>0,'brand_story'=>0,'featured_services'=>0],'One description grows 300/450/1200, without legacy allowances or extra text sections.');
+subscription_check($plans['featured']['text_limits']===['summary'=>100,'description'=>0,'brand_story'=>0,'featured_services'=>0]&&$plans['page']['text_limits']['summary']===300&&$plans['page_premium']['text_limits']===['summary'=>600,'description'=>0,'brand_story'=>0,'featured_services'=>0],'One description grows 100/300/600, without legacy allowances or extra text sections.');
 subscription_check(!isset($plans['basic'])&&count($plans)===4&&in_array('extended_description',$plans['featured']['features'],true),'New choices offer Free, Featured, Page and Premium; legacy Basic is preserved only in storage.');
 subscription_check(str_contains(implode(' ',$plans['free']['requirements']),'NIT o RNT'),'Free retains the identification and private support requirement.');
 subscription_check(str_contains(implode(' ',$plans['page']['requirements']),'portada, página propia y correo')&&!str_contains(implode(' ',$plans['page']['requirements']),'horarios'),'Page adds cover, page and email without retired operational fields.');
@@ -64,11 +64,11 @@ $pdo->exec("INSERT INTO business_media VALUES(1,11,2,'gallery'),(1,12,3,'gallery
 $quotaRejected=false;try{$service->publish(1,$testDate(0));}catch(RuntimeException $error){$quotaRejected=str_contains($error->getMessage(),'galería supera el máximo');}
 subscription_check($quotaRejected,'A page cannot publish more gallery images than its purchased tier includes.');
 $pdo->exec("DELETE FROM business_media WHERE business_id=1 AND role='gallery' AND media_asset_id BETWEEN 11 AND 15");
-$summaryUpdate=$pdo->prepare('UPDATE business_translations SET summary=? WHERE business_id=1 AND locale="es"');$summaryUpdate->execute([str_repeat('á',451)]);
-$limitRejected=false;try{$service->publish(1,$testDate(0));}catch(RuntimeException $error){$limitRejected=str_contains($error->getMessage(),'450 caracteres');}
+$summaryUpdate=$pdo->prepare('UPDATE business_translations SET summary=? WHERE business_id=1 AND locale="es"');$summaryUpdate->execute([str_repeat('á',301)]);
+$limitRejected=false;try{$service->publish(1,$testDate(0));}catch(RuntimeException $error){$limitRejected=str_contains($error->getMessage(),'300 caracteres');}
 subscription_check($limitRejected,'Publication must enforce the advertised character limit, including content imported before review.');
 subscription_check($pdo->query('SELECT starts_at FROM business_subscriptions WHERE id='.(int)$id)->fetchColumn()===null,'A failed content review must not start the paid term.');
-$summaryUpdate->execute([str_repeat('á',450)]);
+$summaryUpdate->execute([str_repeat('á',300)]);
 $service->publish(1,$testDate(0));
 $q->execute([$id]);$sub=$q->fetch(PDO::FETCH_ASSOC);
 subscription_check($sub['status']==='active'&&$sub['published_at']===$testDate(0)->setTimezone(new DateTimeZone('UTC'))->format('Y-m-d H:i:s')&&$sub['starts_at']===$sub['published_at']&&$sub['ends_at']===$testDate(0)->modify('+3 months')->setTimezone(new DateTimeZone('UTC'))->format('Y-m-d H:i:s'),'A quarterly subscription expires three calendar months after its actual publication date.');
