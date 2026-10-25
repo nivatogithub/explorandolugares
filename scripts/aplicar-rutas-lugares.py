@@ -23,6 +23,9 @@ s=h.read_text()
 s=re.sub(r'# Canonical routes: redirect old public routes, preserve query strings\.\nRewriteCond[^\n]*\nRewriteRule[^\n]*\n', '', s)
 s=s.replace('destinos/', 'lugares/')
 redirect='''# Canonical routes: redirect old public routes, preserve query strings.
+RewriteRule ^((?:en/|pt-br/)?)jerico\\.html$ /$1lugares/jerico/ [R=301,L,NE]
+RewriteRule ^((?:en/|pt-br/)?)(?:destinos|lugares)/jerico/agenda(?:/index\\.html)?/?$ /$1lugares/jerico/ [R=301,L,NE]
+RewriteRule ^((?:en/|pt-br/)?)(?:destinos|lugares)/jerico/(?:alojamiento|bares-y-vida-nocturna|comercios-y-productores|cultura-y-patrimonio|experiencias-y-naturaleza|gastronomia|informacion-practica|servicios|transporte-y-movilidad)(?:/index\\.html)?/?$ /$1lugares/jerico/#catalogo-local [R=301,L,NE]
 RewriteCond %{THE_REQUEST} \\s/+(?:en/|pt-br/)?destinos(?:/|[?\\s]) [NC]
 RewriteRule ^((?:en/|pt-br/)?)destinos(?:/(.*))?$ /$1lugares/$2 [R=301,L,NE]
 '''

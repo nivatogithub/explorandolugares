@@ -120,6 +120,12 @@ function enforce_administration_session(): void {
 enforce_administration_session();
 function csrf(?string $returnTo=null): void {
     if (!is_string($_POST['csrf'] ?? null) || !hash_equals($_SESSION['csrf'], $_POST['csrf'])) {
+        // Anonymous public APIs do not require an account: an expired form token
+        // must stay a JSON validation failure, not send a visitor to sign-in.
+        $apiPath=(string)(parse_url((string)($_SERVER['REQUEST_URI']??''),PHP_URL_PATH)?:'');
+        if(empty($_SESSION['admin'])&&empty($_SESSION['business_account_id'])&&str_starts_with($apiPath,'/api/')){
+            json_response(['error'=>'csrf_invalid','message'=>'Recarga el formulario antes de enviarlo.'],403);
+        }
         session_expired($returnTo);
     }
 }

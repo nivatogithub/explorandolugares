@@ -18,12 +18,14 @@ class OfferTests(unittest.TestCase):
  def test_catalogue_capacities_are_characters_in_all_languages(self):
   db=sqlite3.connect(':memory:');db.executescript("CREATE TABLE subscription_plans(code TEXT PRIMARY KEY);INSERT INTO subscription_plans VALUES('free'),('basic'),('featured'),('page'),('page_premium');")
   db.executescript((ROOT/'backend/database/migrations/016-plan-content-limits.sqlite.sql').read_text())
+  db.executescript((ROOT/'backend/database/migrations/053-current-business-text-rules.sqlite.sql').read_text())
+  db.executescript((ROOT/'backend/database/migrations/054-business-description-budgets.sqlite.sql').read_text())
   # The approved presentation omits history and the old services text; those
   # legacy storage limits are not advertised as visible page sections.
   limits=[set(v for v in db.execute('SELECT max_summary_chars,max_description_chars FROM subscription_plans WHERE code=?',[p]).fetchone() if v) for p in ('featured','page','page_premium')];db.close()
-  for lang,label in [('', 'Capacidad de información'),('en/','Information capacity'),('pt-br/','Capacidade de informação')]:
+  for lang,label in [('', 'Capacidad de información'),('en/','Content capacity'),('pt-br/','Capacidade de conteúdo')]:
    with self.subTest(lang=lang):
-    p=Copy();p.feed((ROOT/'ensayos/v1'/lang/'negocios-locales/planes/index.html').read_text());rows=[r for r in p.rows if len(r)==5 and any(re.search(r'\b500\b',c) for c in r[2:])];self.assertEqual(len(rows),1)
+    p=Copy();p.feed((ROOT/'ensayos/v1'/lang/'negocios-locales/planes/index.html').read_text());rows=[r for r in p.rows if len(r)==5 and r[0]==label];self.assertEqual(len(rows),1)
     for cell,expected in zip(rows[0][2:],limits):
      self.assertRegex(cell,r'caracter|character');self.assertEqual(set(int(re.sub('[.,]','',v)) for v in re.findall(r'\d[\d.,]*',cell)),expected)
  def test_current_offer_and_terms_survive_in_all_languages(self):

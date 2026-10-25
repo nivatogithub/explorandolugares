@@ -2,6 +2,7 @@
 """Local release gate: syntax, PHP/Python tests, deployment tests and HTTP flows."""
 from pathlib import Path
 import ast
+import os
 import subprocess
 import sys
 import tempfile
@@ -9,9 +10,9 @@ import tempfile
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def run(label, command):
+def run(label, command, **options):
     print(f'\n== {label} ==', flush=True)
-    subprocess.run(command, cwd=ROOT, check=True)
+    subprocess.run(command, cwd=ROOT, check=True, **options)
 
 
 def main():
@@ -39,7 +40,8 @@ def main():
     run('Diseño del portal', [sys.executable, 'backend/tests/test_portal_design.py'])
     run('Coherencia de oferta comercial y condiciones', [sys.executable, 'backend/tests/test_business_offer_copy.py'])
     run('Paquete incremental de cobertura', [sys.executable, 'backend/tests/test_coverage_package.py'])
-    with tempfile.TemporaryDirectory(prefix='el-release-gate-') as folder:
+    (ROOT/'.local').mkdir(exist_ok=True)
+    with tempfile.TemporaryDirectory(prefix='el-release-gate-', dir=ROOT/'.local') as folder:
         package = Path(folder)/'package'
         run('Paquete completo de pruebas', [sys.executable, 'scripts/preparar-hosting.py', '--output', str(package)])
         for path in sorted((ROOT / 'backend/tests').glob('*.php')):
@@ -47,12 +49,16 @@ def main():
                 continue  # Database-specific tests and HTTP routers have dedicated runners below.
             arguments = [str(package)] if path.name == 'presentation-package.php' else []
             run(f'PHP {path.name}', ['php', str(path), *arguments])
+        run('Registro HTTP: cuatro planes, borradores, pago y cupones', [sys.executable, 'backend/tests/registration-flow.integration.py', '--package', str(package)])
+        run('ZIP editorial y publicación Premium', [sys.executable, 'backend/tests/editorial-roundtrip.integration.py'])
+        run('ZIP editorial con cupón del 100 %', [sys.executable, 'backend/tests/editorial-roundtrip.integration.py'], env={**os.environ, 'EL_EDITORIAL_PROMOTION':'1'})
     run('MariaDB aislada, concurrencia y recuperación', [sys.executable, 'scripts/probar-reparacion-negocios.py', '--mariadb'])
     run('Registro, cupones y reloj en MariaDB', [sys.executable, 'scripts/probar-registro-mariadb.py'])
     run('Navegación, enlaces y despliegue', [sys.executable, '-m', 'unittest', 'discover', '-s', 'scripts/tests', '-p', 'test*.py'])
     if shutil_which('node'):
         run('Visibilidad y clics de tarjetas', ['node', 'backend/tests/basic-cards.cjs'])
         run('QR de negocios: lectura y descarga PNG', ['node', 'backend/tests/business-qr.cjs'])
+        run('Contadores editoriales por plan', ['node', 'backend/tests/business-text-counters.dom.js'])
         run('Exclusión de estadísticas por navegador', ['node', 'backend/tests/measurement-exclusion.dom.js'])
     run('Integración HTTP de conteo básico sin cookies', [sys.executable, 'backend/tests/basic-audience.integration.py'])
     run('Integración HTTP de participación', [sys.executable, 'backend/tests/integration.py'])

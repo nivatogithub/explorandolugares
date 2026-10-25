@@ -28,11 +28,13 @@ try{
  // Exercise the editorial transaction with MariaDB, not only its migration DDL.
  $winner=$p->query('SELECT account_id,business_id FROM business_account_memberships LIMIT 1')->fetch(PDO::FETCH_ASSOC);$business=(int)$winner['business_id'];$account=(int)$winner['account_id'];
  $editorial=new BusinessEditorialService($p,dirname(__DIR__).'/editorial-references');$original=$editorial->live($business);
- $revision=$editorial->save($account,$business,0,['translations'=>['es'=>['display_name'=>'Comercio Ficticio Editorial']]]);$version=$editorial->version($revision);check($editorial->live($business)===$original,'MariaDB private save changed live data');
+ $latest=$editorial->latest($business);
+ $revision=$editorial->save($account,$business,(int)($latest['id']??0),['translations'=>['es'=>['display_name'=>'Comercio Ficticio Editorial']]]);$version=$editorial->version($revision);check($editorial->live($business)===$original,'MariaDB private save changed live data');
  $editorial->transition($revision,'submit',$account,'','',$version['payload_hash']);
  $revision=$editorial->save(0,$business,$revision,['translations'=>['en'=>['display_name'=>'Fictitious Editorial Business'],'pt-BR'=>['display_name'=>'Negócio Editorial Fictício']]],false,true,'administrador-ficticio');$version=$editorial->version($revision);
  $editorial->transition($revision,'prepare',0,'administrador-ficticio','',$version['payload_hash'],['translations'=>'1','images'=>'1','layout'=>'1']);check($editorial->live($business)===$original,'MariaDB prepare savepoint committed changes');
  $editorial->transition($revision,'approve',$account,'','',$version['payload_hash']);
+ $editorial->publishByOwner($revision,$account,$version['payload_hash']);
 
  check($editorial->latest($business)['status']==='published','MariaDB exact version did not publish');check($editorial->live($business)['translations']['es']['display_name']==='Comercio Ficticio Editorial','MariaDB revision not applied');
  if(is_dir(dirname(__DIR__).'/editorial-references'))rmdir(dirname(__DIR__).'/editorial-references');
