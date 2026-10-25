@@ -116,6 +116,8 @@ class DynamicDestinationRenderTests(unittest.TestCase):
                     self.assertIn('destination-grid', result.stdout)
                     self.assertIn('Jericó', result.stdout)
                     self.assertNotIn('temporalmente no disponibles', result.stdout)
+                    self.assertEqual(result.stdout.count('<header'), 1)
+                    self.assertEqual(result.stdout.count('<footer'), 1)
 
     def test_approved_seed_destinations_are_public_and_remaining_pilots_stay_private(self):
         approved = {"jerico"}
