@@ -128,6 +128,9 @@ try:
     assert code==200 and dashboard.count('data-business-row=')==4,dashboard[:300]
     assert all(term not in dashboard for term in ['Solicitudes asociadas a tu cuenta','Solicitar cancelación','Visibilidad de este negocio','Completar contenido y ver mi borrador'])
     assert 'Historial de pagos' in dashboard and 'data-business-preview' in dashboard
+    assert 'data-business-qr-url=' not in dashboard,'Unpublished paid drafts must not expose a public QR'
+    assert 'id="business-qr-dialog"' in dashboard and 'Descargar PNG' in dashboard
+    assert '/assets/vendor/qrcodegen-v1.8.0.js' in dashboard and '/assets/business-qr.js' in dashboard
     grid=re.search(r'<table class="business-workspace-grid">(.*?)</table>',dashboard,re.S)[1]
     assert 'class="pill' not in grid and '<details' not in grid and 'business-row-message' not in grid,'Actions and state notes must not expand the grid rows'
     assert 'aria-label="Ver tarjeta"' in grid and 'aria-hidden="true"' in grid and 'business-icon-action' in grid
@@ -167,6 +170,8 @@ try:
     code,result,_=request('/negocios/portal/?tab=business',decision)
     assert code==303,result[:500]
     assert db.execute('SELECT publication_status FROM businesses WHERE id=?',(free,)).fetchone()[0]=='published'
+    _,published_grid,_=request('/negocios/portal/?tab=business')
+    assert 'data-business-qr-url=' not in published_grid,'Publishing Free must not enable a page QR'
     assert request('/negocios/portal/?tab=business',decision)[0]==303,'Repeated approval must be idempotent'
     # Expired file uploads return to the saved wizard, not to a POST-only upload endpoint.
     _,body,_=request('/negocios/registro/?tipo=business')

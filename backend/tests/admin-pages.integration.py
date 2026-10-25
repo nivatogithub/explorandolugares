@@ -1029,6 +1029,11 @@ try:
     owner_action.update(action='approve',version_id=str(corrected['id']),payload_hash=corrected['payload_hash'])
     check(request(editorial_path,owner_action,business_flow)[0]==303,'No aprobó versión corregida')
     check(DB.execute('SELECT status FROM business_editorial_versions WHERE id=?',(corrected['id'],)).fetchone()[0]=='published','La aprobación del comerciante no publicó automáticamente')
+    qr_code,qr_page,_=request('/business/dashboard.php?tab=business&business='+str(premium_business),opener=business_flow)
+    qr_public_id=DB.execute('SELECT public_id FROM businesses WHERE id=?',(premium_business,)).fetchone()[0]
+    check(qr_code==200 and 'data-business-qr-url="https://explorandolugares.com/negocios/'+qr_public_id+'/"' in qr_page,'La página Premium publicada no ofrece su QR estable.')
+    check('id="business-qr-dialog"' in qr_page and 'aria-haspopup="dialog"' in qr_page and 'Descargar PNG' in qr_page,'El QR no tiene vista previa modal y descarga.')
+    check('/assets/vendor/qrcodegen-v1.8.0.js' in qr_page and '/assets/business-qr.js' in qr_page,'Faltan las dependencias locales del QR.')
     before_sections=DB.execute('SELECT * FROM business_service_sections WHERE business_id=?',(premium_business,)).fetchall()
     status,_,_=request('/business/dashboard.php?tab=business',dict(profile_fields,csrf='invalid'),business_flow)
     check(status>=400 and DB.execute('SELECT * FROM business_service_sections WHERE business_id=?',(premium_business,)).fetchall()==before_sections,'Profile update bypasses CSRF')
