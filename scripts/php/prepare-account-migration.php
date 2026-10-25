@@ -3,7 +3,7 @@ declare(strict_types=1);
 if((PHP_SAPI!=='cli'&&!(defined('EL_PRIVATE_SNAPSHOT')&&EL_PRIVATE_SNAPSHOT))||!isset($options))exit(1);
 try{
  $selected=$options['migrations']??['043-account-lifecycle'];
- if(!is_array($selected)||!$selected||array_diff($selected,['043-account-lifecycle','044-subscription-changes','045-business-service-sections','046-premium-page-aliases','047-lead-business-links','048-individual-lead-replies','049-business-editorial','050-commercial-page-price','051-business-evidence-retirement'])||count(array_unique($selected))!==count($selected))throw new RuntimeException('Migraciones no permitidas.');
+ if(!is_array($selected)||!$selected||array_diff($selected,['043-account-lifecycle','044-subscription-changes','045-business-service-sections','046-premium-page-aliases','047-lead-business-links','048-individual-lead-replies','049-business-editorial','050-commercial-page-price','051-business-evidence-retirement','052-business-onboarding-uploads','053-current-business-text-rules','054-business-description-budgets','055-business-registration-drafts','056-business-promotions','057-business-promotion-places'])||count(array_unique($selected))!==count($selected))throw new RuntimeException('Migraciones no permitidas.');
  $c=require $options['config'];$db=new PDO($c['dsn'],$c['db_user'],$c['db_password'],[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC]);
  require $options['app_root'].'/DatabaseMaintenance.php';
  $tables=$db->query('SHOW TABLES')->fetchAll(PDO::FETCH_COLUMN);

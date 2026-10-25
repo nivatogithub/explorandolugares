@@ -1,8 +1,7 @@
 <?php
 declare(strict_types=1);
 require dirname(__DIR__,2).'/app/bootstrap.php';
-if(empty($_SESSION['admin'])||time()-(int)($_SESSION['last_seen']??0)>1800){http_response_code(403);exit('Inicia sesión en administración para configurar la medición.');}
-$_SESSION['last_seen']=time();$appRoot=dirname((new ReflectionFunction('db'))->getFileName());require $appRoot.'/analytics/AnalyticsService.php';require $appRoot.'/analytics/BasicAudienceService.php';require $appRoot.'/analytics/MeasurementResetService.php';
+require_admin_session();$appRoot=dirname((new ReflectionFunction('db'))->getFileName());require $appRoot.'/analytics/AnalyticsService.php';require $appRoot.'/analytics/BasicAudienceService.php';require $appRoot.'/analytics/MeasurementResetService.php';
 $error='';$message='';$service=new AnalyticsService(db(),(string)$config['app_key']);
 if($_SERVER['REQUEST_METHOD']==='POST'){
  csrf();try{

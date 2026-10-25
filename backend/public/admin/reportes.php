@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-require dirname(__DIR__,2).'/app/bootstrap.php';if(empty($_SESSION['admin'])||time()-(int)($_SESSION['last_seen']??0)>1800){http_response_code(403);exit('Inicia sesión en administración.');}$_SESSION['last_seen']=time();
+require dirname(__DIR__,2).'/app/bootstrap.php';require_admin_session();
 $reports=[
  'Publicación de negocios'=>db()->query('SELECT publication_status AS estado,COUNT(*) AS cantidad FROM businesses GROUP BY publication_status')->fetchAll(),
  'Suscripciones por nivel y estado'=>db()->query('SELECT plan_code AS suscripcion,status AS estado,COUNT(*) AS cantidad FROM business_subscriptions GROUP BY plan_code,status')->fetchAll(),

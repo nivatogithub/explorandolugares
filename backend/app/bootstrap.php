@@ -60,6 +60,8 @@ function db(): PDO {
     if (!$pdo) {
         $pdo = new PDO($config['dsn'], $config['db_user'] ?? null, $config['db_password'] ?? null,
             [PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION, PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC, PDO::ATTR_EMULATE_PREPARES=>false]);
+        require_once __DIR__.'/DatabaseClock.php';
+        DatabaseClock::configure($pdo);
     }
     return $pdo;
 }
@@ -68,9 +70,57 @@ function private_storage_path(string $area): string {
     if (!preg_match('/^[a-z0-9-]+$/D', $area)) throw new InvalidArgumentException('Área de almacenamiento inválida.');
     return dirname(__DIR__).'/private/'.$area;
 }
-function csrf(): void {
+/** Redirect normal form submissions to sign-in when their session is gone.
+ * APIs still receive JSON so clients can handle the expired session safely. */
+function session_expired(?string $returnTo=null): never {
+    $accept=(string)($_SERVER['HTTP_ACCEPT']??'');
+    $uri=$returnTo??(string)($_SERVER['REQUEST_URI']??'');
+    $parts=parse_url($uri);$path=(string)($parts['path']??'');$query=isset($parts['query'])?'?'.$parts['query']:'';
+    if($path!==''&&str_starts_with($path,'/')&&!str_starts_with($path,'//')&&!str_starts_with($path,'/negocios/acceso'))$_SESSION['session_return']=$path.$query;
+    if(str_contains($accept,'application/json'))json_response(['error'=>'authentication_required','login_url'=>site_path('/negocios/acceso/')],401);
+    header('Location: '.site_path('/negocios/acceso/?sesion=expirada'),true,303);
+    exit;
+}
+/**
+ * One boundary for every private account action. Browser pages return to the
+ * sign-in screen; fetch/XHR callers receive a predictable response instead
+ * of an HTML page or a bare 403.
+ */
+function require_business_session(bool $expectsJson=false,?string $returnTo=null): void {
+    $active=!empty($_SESSION['business_account_id']) && time()-(int)($_SESSION['business_last_seen']??0)<=1800;
+    if($active){$_SESSION['business_last_seen']=time();return;}
+    require_once __DIR__.'/AccountSessionSecurity.php';
+    AccountSessionSecurity::clear($_SESSION);
+    $uri=$returnTo??(string)($_SERVER['REQUEST_URI']??'');$parts=parse_url($uri);$path=(string)($parts['path']??'');$query=isset($parts['query'])?'?'.$parts['query']:'';
+    if($path!==''&&str_starts_with($path,'/')&&!str_starts_with($path,'//')&&!str_starts_with($path,'/negocios/acceso'))$_SESSION['session_return']=$path.$query;
+    $accept=(string)($_SERVER['HTTP_ACCEPT']??'');
+    if($expectsJson||str_contains($accept,'application/json'))json_response(['error'=>'authentication_required','login_url'=>site_path('/negocios/acceso/')],401);
+    header('Location: '.site_path('/negocios/acceso/?sesion=expirada'),true,303);
+    exit;
+}
+/** Every private administration page uses this guard; it never renders a 403 login message. */
+function require_admin_session(): void {
+    $active=!empty($_SESSION['admin']) && time()-(int)($_SESSION['last_seen']??0)<=1800;
+    if($active){$_SESSION['last_seen']=time();return;}
+    unset($_SESSION['admin'],$_SESSION['admin_account_id'],$_SESSION['admin_user'],$_SESSION['last_seen']);
+    $uri=(string)($_SERVER['REQUEST_URI']??'');$parts=parse_url($uri);$path=(string)($parts['path']??'');$query=isset($parts['query'])?'?'.$parts['query']:'';
+    if($path!==''&&str_starts_with($path,'/')&&!str_starts_with($path,'//'))$_SESSION['session_return']=$path.$query;
+    header('Location: '.site_path('/negocios/acceso/'),true,303);
+    exit;
+}
+/** The administrative namespace is protected once, before any page is allowed to render. */
+function enforce_administration_session(): void {
+    if(PHP_SAPI==='cli')return;
+    $path=(string)(parse_url((string)($_SERVER['REQUEST_URI']??'/'),PHP_URL_PATH)?:'/');
+    if(!str_starts_with($path,'/admin/'))return;
+    // index.php owns the sign-in entry point; every other admin endpoint is private.
+    if($path==='/admin/'||$path==='/admin/index.php')return;
+    require_admin_session();
+}
+enforce_administration_session();
+function csrf(?string $returnTo=null): void {
     if (!is_string($_POST['csrf'] ?? null) || !hash_equals($_SESSION['csrf'], $_POST['csrf'])) {
-        http_response_code(403); exit(response_text('La sesión expiró. Recarga la página.'));
+        session_expired($returnTo);
     }
 }
 function throttle(string $kind, int $limit, int $seconds, string $extra = ''): bool {

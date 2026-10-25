@@ -80,7 +80,12 @@
     refresh();
   }
 
-  function scan(root = document) { root.querySelectorAll?.('select').forEach(enhance); }
+  function scan(root = document) { root.querySelectorAll?.('select').forEach(select => {
+    // Account and business-registration forms have their own native-select
+    // layout and validation. They must not inherit this coverage-only widget.
+    if (select.closest('.account-portal')) return;
+    enhance(select);
+  }); }
   document.addEventListener('pointerdown', event => { if (![...openMenus].some(control => event.target.closest('.floating-select') === control.wrapper)) closeAll(); });
   new MutationObserver(records => records.forEach(record => record.addedNodes.forEach(node => { if (node.nodeType === 1) scan(node); }))).observe(document.documentElement, { childList: true, subtree: true });
   document.addEventListener('DOMContentLoaded', () => scan());

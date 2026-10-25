@@ -4,6 +4,14 @@ require_once __DIR__.'/BusinessPhone.php';
 /** Shared person/contact phone capture. Prefixes are composed again on the server. */
 final class ContactPhone {
  public static function capture(array $input,string $name='phone'):string {
+  // Current shared control: one Colombian number field. The country prefix is
+  // not user-editable, and a fixed line can include its automatic 60X prefix.
+  if(array_key_exists($name.'_number',$input)){
+   $number=trim((string)($input[$name.'_number']??''));if($number==='')return '';
+   $digits=preg_replace('/\D/','',$number);
+   return BusinessPhone::normalize($number,str_starts_with($digits,'60')?'fixed':'mobile');
+  }
+  // Compatibility with old saved forms while they are phased out.
   if(!array_key_exists($name.'_national',$input))return trim((string)($input[$name]??''));
   $number=trim((string)($input[$name.'_national']??''));if($number==='')return '';
   $country=trim((string)($input[$name.'_country_code']??''));$type=(string)($input[$name.'_kind']??'');$area=(string)($input[$name.'_area']??'');

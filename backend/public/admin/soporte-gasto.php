@@ -1,8 +1,7 @@
 <?php
 declare(strict_types=1);
 require dirname(__DIR__,2).'/app/bootstrap.php';
-if(isset($_SESSION['admin'])&&time()-(int)($_SESSION['last_seen']??0)>1800)unset($_SESSION['admin']);
-if(empty($_SESSION['admin'])){http_response_code(403);exit('Inicia sesión.');}$_SESSION['last_seen']=time();
+require_admin_session();
 $id=filter_var($_GET['id']??null,FILTER_VALIDATE_INT);if(!$id){http_response_code(404);exit('Soporte no encontrado.');}
 $q=db()->prepare('SELECT storage_name,mime_type,file_size,sha256 FROM operating_cost_evidence WHERE id=?');$q->execute([$id]);$row=$q->fetch(PDO::FETCH_ASSOC);
 $types=['application/pdf'=>'pdf','image/jpeg'=>'jpg','image/png'=>'png','image/webp'=>'webp'];

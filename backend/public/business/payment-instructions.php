@@ -1,5 +1,5 @@
 <?php if(!isset($paymentInstructions)){http_response_code(404);exit;} ?>
-<section class="payment-instructions wide" data-payment-instructions hidden>
+<section class="payment-instructions wide" data-payment-instructions data-payment-configured="<?=!empty($paymentInstructions['enabled'])?'1':'0'?>" data-initial-plan="<?=esc((string)($onboardingChoice['plan_code']??''))?>" data-initial-period="<?=esc((string)($onboardingChoice['billing_frequency']??''))?>" <?=empty($paymentInstructionsVisible)?'hidden':''?>>
 <?php require __DIR__.'/publication-terms.php'; ?>
 <h4>Cómo realizar el pago</h4><p>Referencia para el concepto del pago: <strong><?=esc($checkoutReference)?></strong>. Úsala si tu banco permite agregar una nota.</p>
 <?php if(!empty($paymentInstructions['enabled'])):?>

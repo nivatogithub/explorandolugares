@@ -9,10 +9,10 @@ header('Cache-Control: no-store');$error='';$account=null;$businesses=[];$intent
 try{
     if(isset($_GET['plan'])){$_SESSION['subscription_purchase_intent']=SubscriptionPurchaseIntent::capture(db(),$_GET);unset($_SESSION['subscription_purchase_selected']);}
     $intent=SubscriptionPurchaseIntent::current();if(!$intent)throw new RuntimeException('La selección venció. Regresa al simulador para elegir tu suscripción.');
-    if(time()-(int)($_SESSION['business_last_seen']??0)>1800)unset($_SESSION['business_account_id']);
-    $portal=new BusinessAccountPortalService(db());$account=empty($_SESSION['business_account_id'])?null:$portal->current((int)$_SESSION['business_account_id']);
-    if(!$account){header('Location: /negocios/acceso/',true,303);exit;}
-    $_SESSION['business_last_seen']=time();$businesses=$portal->businesses((int)$account['id']);
+    require_business_session();
+    $portal=new BusinessAccountPortalService(db());$account=$portal->current((int)$_SESSION['business_account_id']);
+    if(!$account){unset($_SESSION['business_account_id']);require_business_session();}
+    $businesses=$portal->businesses((int)$account['id']);
     if(isset($_GET['business'])){
         $chosen=(int)$_GET['business'];$matches=array_filter($businesses,static fn($row)=>(int)$row['id']===$chosen);
         if(!$matches)throw new RuntimeException('Selecciona un negocio asociado a tu cuenta.');

@@ -49,10 +49,11 @@ class PublicLinkTests(unittest.TestCase):
                 elif not target.exists():
                     relative=target.relative_to(self.public.resolve()).as_posix()
                     route=__import__('re').fullmatch(r'(?:en/|pt-br/)?(?:destinos|lugares)/([a-z0-9-]+)(?:/index\.html)?/?',relative)
+                    directory_route=relative.rstrip('/') in {'lugares','en/lugares','pt-br/lugares'} and (self.public/'destinos.php').is_file()
                     claim_route=relative.rstrip('/')=='reclamar-negocio' and (self.public/'reclamar-negocio.php').is_file()
                     business_routes={'negocios/registro':'register.php','negocios/acceso':'login.php','negocios/portal':'dashboard.php','negocios/salir':'logout.php'}
                     business_route=relative.rstrip('/') in business_routes and (self.public/'business'/business_routes[relative.rstrip('/')]).is_file()
-                    if not claim_route and not business_route and (not route or route.group(1) not in dynamic_slugs):
+                    if not claim_route and not business_route and not directory_route and (not route or route.group(1) not in dynamic_slugs):
                         broken.append(f'{page.relative_to(self.public)}: {tag}[{attribute}] missing: {value}')
         self.assertEqual(broken,[], '\n'.join(broken))
     def test_public_forms_have_a_real_local_endpoint(self):
@@ -78,8 +79,9 @@ class PublicLinkTests(unittest.TestCase):
         self.assertEqual(destination_urls, [])
         self.assertTrue((self.public/'sitemap-live.php').is_file())
         self.assertIn('RewriteRule ^sitemap\\.xml$ sitemap-live.php [L]', (self.public/'.htaccess').read_text())
-        directory=(self.public/'destinos/index.html').read_text()
-        self.assertEqual(directory.count('class="destination-card"'),len(__import__('json').loads((ROOT/'content/lugares-publicados.json').read_text())['slugs']))
+        self.assertTrue((self.public/'destinos.php').is_file())
+        self.assertFalse(any((self.public/f'{locale}destinos').exists() for locale in ('','en/','pt-br/')))
+        self.assertFalse(any((self.public/f'{locale}lugares').exists() for locale in ('','en/','pt-br/')))
         seed=__import__('json').loads((ROOT/'content/destinos-dinamicos.json').read_text())
         release=__import__('json').loads((ROOT/'content/releases/cinco-destinos-20261024.json').read_text())
         approved_seed={'jerico'} | set(release['public_places'])
@@ -90,7 +92,7 @@ class PublicLinkTests(unittest.TestCase):
         self.assertTrue(all(item['publication_status']=='draft' for item in drafts))
         self.assertTrue(all(not (self.public/f'{locale}destinos/{item["slug"]}/index.html').exists()
                             for locale in ('','en/','pt-br/') for item in drafts))
-        self.assertTrue((self.public/'.htaccess').is_file())
+        self.assertIn('destinos(?:/(.*))?',(self.public/'.htaccess').read_text())
 
     def test_every_static_sitemap_page_declares_the_same_canonical_url(self):
         sitemap=ElementTree.parse(self.public/'sitemap.xml').getroot()

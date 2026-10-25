@@ -1,7 +1,6 @@
 (() => {
   const $ = (id) => document.getElementById(id);
   const address = $('business-address');
-  const reference = $('business-location-reference');
   const destination = $('business-destination') || $('registration-destination');
   const open = $('business-map-open');
   const dialog = $('business-map-dialog');
@@ -172,7 +171,7 @@
     const department = option?.dataset.department || '';
     const countryCode = option?.dataset.country || 'CO';
     const country = countryCode === 'CO' ? 'Colombia' : countryCode;
-    const cacheKey = `el-destination-center:v3:${name.toLocaleLowerCase('es')}:${department}:${countryCode}:${option?.dataset.type || ''}`;
+    const cacheKey = `el-destination-center:v4:${name.toLocaleLowerCase('es')}:${department}:${countryCode}:${option?.dataset.type || ''}`;
     try {
       const cached = JSON.parse(sessionStorage.getItem(cacheKey) || 'null');
       if (cached?.point?.length === 2 && cached.point.every(Number.isFinite)) {
@@ -183,10 +182,28 @@
     } catch { /* Storage can be disabled; geocoding can still continue. */ }
 
     if(countryCode==='CO'){
-      const response=await fetch('/api/business-municipality.php?destination='+encodeURIComponent(destination.value),{headers:{Accept:'application/json'},signal:AbortSignal.timeout(7000)});
-      if(!response.ok)throw new Error('No se pudo cargar el límite municipal de este lugar.');
-      const territory=await response.json();destinationGeometry=territory.geometry;const positions=(destinationGeometry.type==='Polygon'?[destinationGeometry.coordinates]:destinationGeometry.coordinates).flat(2);const lons=positions.map(p=>p[0]),lats=positions.map(p=>p[1]);
-      const bounds={south:Math.min(...lats),north:Math.max(...lats),west:Math.min(...lons),east:Math.max(...lons)};destinationBounds=bounds;const point=selectedDestination()||(territory.center||[]).map(Number);const resolved={point,bounds,geometry:destinationGeometry};try{sessionStorage.setItem(cacheKey,JSON.stringify(resolved));}catch{}return resolved;
+      const knownPoint = selectedDestination();
+      try {
+        const response=await fetch('/api/business-municipality.php?destination='+encodeURIComponent(destination.value),{headers:{Accept:'application/json'},signal:AbortSignal.timeout(7000)});
+        if(!response.ok)throw new Error('No se pudo cargar el límite municipal de este lugar.');
+        const territory=await response.json();destinationGeometry=territory.geometry;const positions=(destinationGeometry.type==='Polygon'?[destinationGeometry.coordinates]:destinationGeometry.coordinates).flat(2);const lons=positions.map(p=>p[0]),lats=positions.map(p=>p[1]);
+        const bounds={south:Math.min(...lats),north:Math.max(...lats),west:Math.min(...lons),east:Math.max(...lons)};
+        destinationBounds=bounds;
+        const supplied=territory.center;
+        const validCenter=Array.isArray(supplied)&&supplied.length===2&&supplied.every(value=>value!==null&&value!==''&&Number.isFinite(Number(value)));
+        const point=knownPoint||(validCenter?supplied.map(Number):null);
+        if(!point)throw new Error('Este lugar no tiene un centro geográfico configurado. Solicita su revisión antes de ubicar el negocio.');
+        const resolved={point,bounds,geometry:destinationGeometry};try{sessionStorage.setItem(cacheKey,JSON.stringify(resolved));}catch{}return resolved;
+      } catch (error) {
+        // The destination already has its own coordinates.  A temporarily
+        // unavailable municipal boundary must not make the picker unusable.
+        if (knownPoint) {
+          destinationBounds = null;
+          destinationGeometry = null;
+          return { point: knownPoint, bounds: null, geometry: null, boundaryUnavailable: true };
+        }
+        throw error;
+      }
     }
     const params = new URLSearchParams({
       countrycodes: countryCode.toLowerCase(),
@@ -330,6 +347,7 @@
         referrerPolicy: 'strict-origin-when-cross-origin',
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors',
       });
+      let tileErrors = 0;
       mapLayer.on('loading', () => {
         window.clearTimeout(mapLoadTimer);
         if (!mapReady) mapLoadTimer = window.setTimeout(() => showMapFailure(), 10000);
@@ -344,6 +362,10 @@
           : 'Modo marcar punto: toca o haz clic en la ubicación exacta del negocio.';
       });
       mapLayer.on('load', () => { if (!mapReady) showMapFailure(); });
+      mapLayer.on('tileerror', () => {
+        tileErrors += 1;
+        if (!mapReady && tileErrors >= 4) showMapFailure();
+      });
       mapLayer.addTo(map);
       // Leaflet suppresses clicks after dragging, so selecting also works in pan mode.
       map.on('click', (event) => updateDraft(coordinates(event.latlng)));
@@ -512,11 +534,18 @@
     use.disabled = true;
     selection.textContent = 'Comprobando el punto y consultando su dirección…';
     let resolvedAddress;
+    let reverseLookupUnavailable = false;
     try {
       resolvedAddress = await reverseAddress(selectedPoint);
     } catch {
       if(pointInGeometry(selectedPoint,destinationGeometry)===true&&/\b(?:km|kil[oó]metros?)\s*\d+(?:[.,]\d+)?\b/iu.test(address.value)&&/\b(?:v[ií]a|vereda|sector|carretera|casco\s+urbano|finca)\b/iu.test(address.value))resolvedAddress={label:'',hasStreet:false,localities:[]};
-      else{selection.textContent='No se pudo consultar la nomenclatura. Reintenta; si es una ubicación rural, escribe el kilómetro y la vía o vereda de acceso.';use.disabled=false;return;}
+      else if(pointInGeometry(selectedPoint,destinationGeometry)===true&&address.value.trim()){
+        // The polygon has already proved the selected point belongs to the
+        // destination. Do not lose a valid manual address merely because the
+        // third-party reverse geocoder is temporarily unavailable.
+        resolvedAddress={label:'',hasStreet:true,localities:[]};
+        reverseLookupUnavailable=true;
+      } else {selection.textContent='No se pudo consultar la nomenclatura. Reintenta; si es una ubicación rural, escribe el kilómetro y la vía o vereda de acceso.';use.disabled=false;return;}
     }
     const inside = await isInSelectedDestination(selectedPoint, resolvedAddress);
     if (inside !== true) {
@@ -546,7 +575,9 @@
       } else {
         confirmed.value = address.value.trim() ? '1' : '0';
         addressLookupPoint = selectedPoint;
-        status.textContent = address.value.trim() ? 'Ubicación lista. El mapa no encontró nomenclatura en este punto; se guardarán juntos la dirección escrita y el pin seleccionado.' : 'El mapa no encontró una dirección aquí. Escribe una referencia reconocible para poder guardar la ubicación.';
+        status.textContent = address.value.trim()
+          ? (reverseLookupUnavailable ? 'Ubicación lista. Se guardarán juntos la dirección escrita y el pin seleccionado; no fue posible consultar la nomenclatura ahora.' : 'Ubicación lista. El mapa no encontró nomenclatura en este punto; se guardarán juntos la dirección escrita y el pin seleccionado.')
+          : 'El mapa no encontró una dirección aquí. Escribe una referencia reconocible para poder guardar la ubicación.';
       }
     if (saveButton) saveButton.disabled = document.getElementById('business-plan')?.value !== 'free' && confirmed.value !== '1';
   });

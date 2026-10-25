@@ -43,14 +43,16 @@ def main():
         package = Path(folder)/'package'
         run('Paquete completo de pruebas', [sys.executable, 'scripts/preparar-hosting.py', '--output', str(package)])
         for path in sorted((ROOT / 'backend/tests').glob('*.php')):
-            if path.name.endswith('.mariadb.php'):
-                continue  # Executed below in the disposable MariaDB container.
+            if path.name.endswith(('.mariadb.php', '.mysql.php', '.fixture.php')):
+                continue  # Database-specific tests and HTTP routers have dedicated runners below.
             arguments = [str(package)] if path.name == 'presentation-package.php' else []
             run(f'PHP {path.name}', ['php', str(path), *arguments])
     run('MariaDB aislada, concurrencia y recuperación', [sys.executable, 'scripts/probar-reparacion-negocios.py', '--mariadb'])
+    run('Registro, cupones y reloj en MariaDB', [sys.executable, 'scripts/probar-registro-mariadb.py'])
     run('Navegación, enlaces y despliegue', [sys.executable, '-m', 'unittest', 'discover', '-s', 'scripts/tests', '-p', 'test*.py'])
     if shutil_which('node'):
         run('Visibilidad y clics de tarjetas', ['node', 'backend/tests/basic-cards.cjs'])
+        run('QR de negocios: lectura y descarga PNG', ['node', 'backend/tests/business-qr.cjs'])
         run('Exclusión de estadísticas por navegador', ['node', 'backend/tests/measurement-exclusion.dom.js'])
     run('Integración HTTP de conteo básico sin cookies', [sys.executable, 'backend/tests/basic-audience.integration.py'])
     run('Integración HTTP de participación', [sys.executable, 'backend/tests/integration.py'])

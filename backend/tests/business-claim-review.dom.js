@@ -7,6 +7,7 @@ class Element{
  replaceChildren(...nodes){this.children=nodes;}
  setAttribute(key,value){this[key]=value;}
  addEventListener(event,listener){this.listeners[event]=listener;}
+ dispatchEvent(event){this.listeners[event.type]?.(event);}
  querySelectorAll(){return this.children.flatMap(node=>node.tagName==='input'?[node]:node.querySelectorAll());}
  focus(){}
 }
@@ -14,7 +15,7 @@ const ids=['business-registration-form','registration-destination','registration
 const nodes=Object.fromEntries(ids.map(id=>['#'+id,new Element('div')]));
 const form=nodes['#business-registration-form'];form.dataset.searchUrl='/business/register.php';form.querySelectorAll=()=>nodes['#registration-results'].querySelectorAll();
 let message='<script>alert("no")</script> Necesita revisión, sin acceso automático.';
-const context={document:{querySelector:id=>nodes[id]||null,createElement:tag=>new Element(tag)},setTimeout:callback=>callback(),clearTimeout(){},fetch:async()=>({json:async()=>({results:[{id:8,display_name:'Negocio ocupado',can_request:true,requires_review:true,review_message:message}]})}),Option:function(){}};
+const context={document:{querySelector:id=>nodes[id]||null,createElement:tag=>new Element(tag)},Event:function(type){this.type=type;},setTimeout:callback=>callback(),clearTimeout(){},fetch:async()=>({json:async()=>({results:[{id:8,display_name:'Negocio ocupado',can_request:true,requires_review:true,review_message:message}]})}),Option:function(){}};
 vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../public/assets/business-registration.js'),'utf8'),context);
 nodes['#registration-destination'].value='1';nodes['#registration-category'].value='test';nodes['#registration-search'].value='Negocio';nodes['#registration-search'].listeners.input();
 setImmediate(()=>{

@@ -9,12 +9,15 @@ with tempfile.TemporaryDirectory(prefix='el-account-tabs-') as temporary:
     work=Path(temporary)
     shutil.copytree(ROOT/'backend/app',work/'app')
     shutil.copytree(ROOT/'backend/public',work/'public')
+    shutil.copy2(ROOT/'ensayos/v1/assets/style.css',work/'public/assets/style.css')
     (work/'private').mkdir()
     database=sqlite3.connect(work/'private/test.sqlite')
     for source in [ROOT/'backend/database/sqlite.sql',ROOT/'backend/database/destinations.sqlite.sql',ROOT/'backend/database/migrations/006-poi-experience-links.sqlite.sql']:
         database.executescript(source.read_text())
     for number in range(8,39):
         database.executescript(next((ROOT/'backend/database/migrations').glob(f'{number:03d}-*.sqlite.sql')).read_text())
+    for source in sorted((ROOT/'backend/database/migrations').glob('*.sqlite.sql')):
+        if int(source.name.split('-')[0])>=39: database.executescript(source.read_text())
     password='Fixture-only-'+secrets.token_hex(12)
     hashed=subprocess.check_output(['php','-r','echo password_hash(stream_get_contents(STDIN),PASSWORD_DEFAULT);'],input=password.encode()).decode()
     database.execute("INSERT INTO accounts(public_id,account_type,display_name,email,password_hash,status,email_verified_at) VALUES(?,?,?,?,?,'active',CURRENT_TIMESTAMP)",('f00d0000-0000-4000-8000-000000000001','traveler','Persona <Prueba>','persona@example.invalid',hashed))
@@ -38,12 +41,12 @@ with tempfile.TemporaryDirectory(prefix='el-account-tabs-') as temporary:
         return response.status,response.read().decode(),response.headers
     try:
         time.sleep(.3)
-        code,html,headers=request('/business/dashboard.php'); assert code==303 and headers['Location']=='/negocios/acceso/'
+        code,html,headers=request('/business/dashboard.php'); assert code==303 and headers['Location'].startswith('/negocios/acceso/')
         code,html,_=request('/business/login.php'); csrf=re.search('name="csrf" value="([^"]+)"',html)[1]
         code,html,headers=request('/business/login.php',{'csrf':csrf,'email':'persona@example.invalid','password':password})
-        assert code==303 and headers['Location']=='/negocios/portal/'
+        assert code==303 and headers['Location'].startswith(('/negocios/portal/','/business/dashboard.php'))
         code,html,_=request('/business/dashboard.php'); assert code==200 and 'Datos personales' in html and 'Persona &lt;Prueba&gt;' in html
-        assert 'aria-current="page">Personal' in html and '¿Qué quieres hacer ahora' not in html
+        assert 'aria-current="page">Viajero' in html and '¿Qué quieres hacer ahora' not in html
         csrf=re.search('name="csrf" value="([^"]+)"',html)[1]
         residence={'csrf':csrf,'action':'save_residence','residence_country_code':'CO','residence_region_code':'05','residence_city_code':'05368'}
         code,_,_=request('/business/dashboard.php?tab=personal',residence);assert code==303
@@ -51,10 +54,10 @@ with tempfile.TemporaryDirectory(prefix='el-account-tabs-') as temporary:
         bad=dict(residence,residence_region_code='25');code,_,_=request('/business/dashboard.php?tab=personal',bad);assert code==400
         assert database.execute('SELECT region_code FROM account_residences WHERE account_id=1').fetchone()[0]=='05'
         code,html,_=request('/business/dashboard.php',{'csrf':csrf,'business_id':'999999','plan_code':'free'})
-        assert code==400 and 'No tienes permiso' in html
-        code,html,_=request('/business/dashboard.php?tab=business'); assert code==200 and 'Negocios que administras' in html and 'Registrar o reclamar un negocio' in html
-        assert 'esta solicitud no te concede acceso para administrarlo' in html and '&lt;Negocio reclamado&gt;' in html
-        assert 'Estado de tus pagos' in html and 'Visibilidad de tus negocios' in html and 'aria-current="page">Mis negocios' in html
+        assert code==400 and 'Esta acción no está disponible' in html,(code,html[:1000])
+        code,html,_=request('/business/dashboard.php?tab=business'); assert code==200 and 'Tus negocios' in html and 'Registrar o reclamar un negocio' in html
+        assert 'no te concede acceso para administrarlo' in html and '&lt;Negocio reclamado&gt;' in html
+        assert 'Historial de pagos' in html and 'Visibilidad de tus negocios' not in html and 'aria-current="page">Mis negocios' in html
         code,html,_=request('/business/dashboard.php?tab=administrator'); assert code==400
         code,html,_=request('/business/dashboard.php?espacio=explore'); assert code==200 and 'Datos personales' in html
         code,html,headers=request('/business/workspace.php'); assert code==303 and headers['Location']=='/negocios/portal/?tab=personal'

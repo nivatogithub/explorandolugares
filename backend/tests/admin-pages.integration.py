@@ -34,7 +34,7 @@ DB.execute('PRAGMA foreign_keys=ON')
 DB.executescript((ROOT / 'backend/database/sqlite.sql').read_text())
 DB.executescript((ROOT / 'backend/database/destinations.sqlite.sql').read_text())
 DB.executescript((ROOT / 'backend/database/migrations/006-poi-experience-links.sqlite.sql').read_text())
-for number in range(8, 52):
+for number in range(8, 58):
     matches = list((ROOT / 'backend/database/migrations').glob(f'{number:03d}-*.sqlite.sql'))
     assert len(matches) == 1, f'Migración SQLite faltante o ambigua: {number:03d}'
     DB.executescript(matches[0].read_text())
@@ -94,7 +94,7 @@ for frequency, multiplier in [('quarterly', 2.5), ('semiannual', 5.2), ('annual'
 
 password = secrets.token_urlsafe(24)
 password_hash = subprocess.check_output(['php', '-r', 'echo password_hash(trim(stream_get_contents(STDIN)), PASSWORD_DEFAULT);'], input=password.encode()).decode()
-config = {'dsn': 'sqlite:' + str(DB_PATH), 'app_key': secrets.token_hex(32), 'admin_user': 'admin-local', 'admin_password_hash': password_hash, 'local_test': True, 'registration_enabled': False, 'privacy': {'operator': 'Operador de prueba', 'contact': 'test@example.invalid', 'retention': 'Prueba', 'retention_en': 'Test'}}
+config = {'dsn': 'sqlite:' + str(DB_PATH), 'app_key': secrets.token_hex(32), 'admin_user': 'admin-local', 'admin_password_hash': password_hash, 'local_test': True, 'business_accounts_enabled': True, 'registration_enabled': False, 'privacy': {'operator': 'Operador de prueba', 'contact': 'test@example.invalid', 'retention': 'Prueba', 'retention_en': 'Test'}}
 config_file = WORK / 'private/config.php'
 config_file.write_text("<?php return json_decode(base64_decode('" + base64.b64encode(json.dumps(config).encode()).decode() + "'), true);\n")
 
@@ -244,7 +244,7 @@ try:
         if path.startswith('/admin/index.php'):
             check(status == 200 and 'name="password"' in body, f'El visitante debe ver el login en {path}.')
         else:
-            check(status == 403, f'El visitante anónimo obtuvo {status} en {path}, esperaba 403.')
+            check(status == 200 and 'name="password"' in body and 'Inicia sesión' in body, f'El visitante anónimo no fue dirigido al acceso desde {path}: {status}.')
 
     login_csrf = __import__('re').search(r'name="csrf" value="([^"]+)"', request('/admin/index.php', opener=GUEST)[1]).group(1)
     status, body, _ = request('/admin/index.php', {'action': 'login', 'csrf': login_csrf, 'username': 'admin-local', 'password': password}, opener=GUEST)
@@ -254,7 +254,8 @@ try:
 
     # Private detail and informational link must not confer permissions or publish.
     detail='/admin/solicitud-detalle.php?type=lead&id=1'
-    check(request(detail,opener=GUEST)[0]==403,'El detalle debe ser privado.')
+    guest_detail=request(detail,opener=GUEST)
+    check(guest_detail[0]==200 and 'name="password"' in guest_detail[1],'El detalle privado debe redirigir al acceso.')
     check(request('/admin/solicitud-detalle.php?type=lead&id=99999')[0]==404,'ID inexistente debe devolver 404.')
     detail_html=request(detail)[1]
     check('&lt;script&gt;' in detail_html and '<script>alert(1)</script>' not in detail_html,'Escape de solicitud.')
@@ -1033,6 +1034,11 @@ try:
     owner_action.update(action='approve',version_id=str(corrected['id']),payload_hash=corrected['payload_hash'])
     check(request(editorial_path,owner_action,business_flow)[0]==303,'No aprobó versión corregida')
     check(DB.execute('SELECT status FROM business_editorial_versions WHERE id=?',(corrected['id'],)).fetchone()[0]=='published','La aprobación del comerciante no publicó automáticamente')
+    qr_code,qr_page,_=request('/business/dashboard.php?tab=business&business='+str(premium_business),opener=business_flow)
+    qr_public_id=DB.execute('SELECT public_id FROM businesses WHERE id=?',(premium_business,)).fetchone()[0]
+    check(qr_code==200 and 'data-business-qr-url="https://explorandolugares.com/negocios/'+qr_public_id+'/"' in qr_page,'La página Premium publicada no ofrece su QR estable.')
+    check('id="business-qr-dialog"' in qr_page and 'aria-haspopup="dialog"' in qr_page and 'Descargar PNG' in qr_page,'El QR no tiene vista previa modal y descarga.')
+    check('/assets/vendor/qrcodegen-v1.8.0.js' in qr_page and '/assets/business-qr.js' in qr_page,'Faltan las dependencias locales del QR.')
     before_sections=DB.execute('SELECT * FROM business_service_sections WHERE business_id=?',(premium_business,)).fetchall()
     status,_,_=request('/business/dashboard.php?tab=business',dict(profile_fields,csrf='invalid'),business_flow)
     check(status>=400 and DB.execute('SELECT * FROM business_service_sections WHERE business_id=?',(premium_business,)).fetchall()==before_sections,'Profile update bypasses CSRF')
