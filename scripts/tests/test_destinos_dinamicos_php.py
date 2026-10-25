@@ -1,7 +1,9 @@
 import json
 import hashlib
 import html
+import importlib.util
 import os
+import shutil
 import sqlite3
 import struct
 import subprocess
@@ -78,6 +80,42 @@ class DynamicDestinationRenderTests(unittest.TestCase):
         result = subprocess.run(["php", "-r", php], cwd=ROOT, env=self.env,
                                 check=True, capture_output=True, text=True)
         return html.unescape(result.stdout)
+
+    def test_destination_directory_finds_private_configuration_in_split_hosting_layout(self):
+        """Exercise the real hosting split without an environment DSN hiding path errors."""
+        spec = importlib.util.spec_from_file_location('split_hosting_deploy', ROOT / 'scripts/desplegar-sftp.py')
+        deploy = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(deploy)
+        with tempfile.TemporaryDirectory(prefix='el-split-hosting-') as folder:
+            root = Path(folder)
+            public = root / 'public_html/explorandolugares.com'
+            private_site = root / 'private-site'
+            public.mkdir(parents=True)
+            (private_site / 'private').mkdir(parents=True)
+            shutil.copytree(self.package / 'app', private_site / 'app')
+            for name in ['destinos.php', '_portal-shell.php', 'asset-manifest.json']:
+                shutil.copy2(self.package / 'public' / name, public / name)
+            deploy.rewrite_private_app_includes(public, str(private_site))
+            (private_site / 'private/config.php').write_text(
+                '<?php return ["dsn"=>' + json.dumps('sqlite:' + str(self.database)) + ',"db_user"=>null,"db_password"=>null];'
+            )
+            env = {key: value for key, value in os.environ.items() if key not in {
+                'EL_DESTINATIONS_DSN', 'EL_DESTINATIONS_DB_USER', 'EL_DESTINATIONS_DB_PASSWORD'
+            }}
+            for locale, prefix in [('es', ''), ('en', '/en'), ('pt-BR', '/pt-br')]:
+                with self.subTest(locale=locale):
+                    code = (
+                        '$_GET["idioma"]=' + json.dumps(locale) + ';'
+                        '$_SERVER["REQUEST_URI"]=' + json.dumps(prefix + '/lugares/') + ';'
+                        'register_shutdown_function(static function(){fwrite(STDERR,json_encode(["status"=>http_response_code()?:200]));});'
+                        'include ' + json.dumps(str(public / 'destinos.php')) + ';'
+                    )
+                    result = subprocess.run(['php', '-r', code], cwd=ROOT, env=env,
+                                            capture_output=True, text=True, check=True)
+                    self.assertEqual(json.loads(result.stderr)['status'], 200)
+                    self.assertIn('destination-grid', result.stdout)
+                    self.assertIn('Jericó', result.stdout)
+                    self.assertNotIn('temporalmente no disponibles', result.stdout)
 
     def test_approved_seed_destinations_are_public_and_remaining_pilots_stay_private(self):
         approved = {"jerico"}
