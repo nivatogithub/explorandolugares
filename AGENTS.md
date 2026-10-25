@@ -38,3 +38,12 @@ Las rutas locales y públicas deben coincidir desde `/`: no introducir prefijos 
 - Enlaces públicos de ubicación abren la ficha nombrada del sitio en Google Maps, preferentemente su enlace Compartir real `maps.app.goo.gl`. Verificar nombre, municipio y destino efectivo. No inventar códigos cortos.
 - No usar `q=lat,lon`, `query=lat,lon`, pines numéricos ni búsquedas genéricas por nombre como sustituto. Las coordenadas se conservan como datos internos independientes; no son el enlace público. Un PlaceID/FID verificado puede identificar una ficha nombrada.
 - La ausencia de ficha verificada deja el enlace pendiente; las experiencias sin sede fija no reciben un pin inventado. Conservar el comportamiento de `ReviewedMapLinks` vigente en main; validarlo en ES/EN/PT-BR.
+
+## Geolocalización obligatoria y catálogo consolidado — 24/10/2026
+
+- Todo nuevo destino y sitio físico publicado debe tener latitud y longitud del sitio identificado; un nombre o una búsqueda en Maps no sustituye esas coordenadas. Usar parque/plaza o núcleo urbano identificado como referencia central de cada destino, no el centro geométrico del municipio.
+- Conservar enlaces y puntos aprobados por el propietario. Documentar si el punto es acceso, sitio, centro de localidad o referencia de un área; no presentarlos todos como entradas exactas.
+- Experiencias y servicios sin punto fijo tienen excepciones documentadas, nunca puntos de salida inventados. «Paisaje rural» de El Retiro permanece sin coordenadas ni mapa por decisión del propietario.
+- `backend/app/content/geolocation-policy.json` conserva las identidades estables retiradas y las excepciones. Las retiradas son reversibles; no borrar IDs, métricas, cuentas ni relaciones. No republicarlas mediante una importación antigua: reincorporar exige una revisión deliberada y actualizar la política.
+- `content/geolocation/approved-20261024.json` identifica la migración aprobada; `content/release-places-businesses.json`, el catálogo inicial y snapshots territoriales deben conservar sus coordenadas, retiradas y sustitutos. La prueba `test_geolocation_catalog.py` bloquea construcciones que reintroduzcan las fichas retiradas o sitios físicos sin coordenadas.
+- Actualizar siempre repositorio, preproducción y producción por el circuito vigente; comprobar que ninguna categoría previamente poblada quede vacía y conservar como mínimo las dos o tres alternativas aprobadas en las categorías sustituidas. No afirmar imposibilidad absoluta de regresiones: mantener y ejecutar las barreras de publicación y reconstrucción.

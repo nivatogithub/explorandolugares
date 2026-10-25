@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+require_once __DIR__.'/GeolocationPolicy.php';
+
 final class DestinationImporter
 {
     public static function import(PDO $pdo, array $catalog, array $options): array
@@ -22,8 +24,8 @@ final class DestinationImporter
             $mediaIds = self::media($pdo, $catalog, $counts);
 
             $destinationInsert = $pdo->prepare('INSERT INTO destinations
-                (slug,destination_type,country_code,department,subregion,publication_status,display_order,internal_research_json)
-                VALUES (?,?,?,?,?,?,?,?)');
+                (slug,destination_type,country_code,department,subregion,publication_status,display_order,internal_research_json,latitude,longitude)
+                VALUES (?,?,?,?,?,?,?,?,?,?)');
             $translationInsert = $pdo->prepare('INSERT INTO destination_translations
                 (destination_id,locale,display_name,eyebrow,headline,intro,meta_description) VALUES (?,?,?,?,?,?,?)');
             $storyInsert = $pdo->prepare('INSERT INTO destination_story_blocks
@@ -33,7 +35,7 @@ final class DestinationImporter
             $reasonInsert = $pdo->prepare('INSERT INTO destination_reasons (destination_id,display_order) VALUES (?,?)');
             $reasonTranslationInsert = $pdo->prepare('INSERT INTO destination_reason_translations (reason_id,locale,body) VALUES (?,?,?)');
             $poiInsert = $pdo->prepare('INSERT INTO points_of_interest
-                (destination_id,slug,poi_type,publication_status,display_order) VALUES (?,?,?,?,?)');
+                (destination_id,slug,poi_type,publication_status,display_order,latitude,longitude) VALUES (?,?,?,?,?,?,?)');
             $poiTranslationInsert = $pdo->prepare('INSERT INTO point_of_interest_translations
                 (point_of_interest_id,locale,name,description,map_url,external_url,external_label) VALUES (?,?,?,?,?,?,?)');
             $destinationMediaInsert = $pdo->prepare('INSERT INTO destination_media
@@ -46,8 +48,9 @@ final class DestinationImporter
             foreach ($catalog['destinations'] as $destination) {
                 self::requireKeys($destination, ['slug','destination_type','country_code','department','subregion','publication_status','display_order','translations']);
                 self::slug((string)$destination['slug']);
+                if($destination['publication_status']==='published')GeolocationPolicy::requirePoint($destination['latitude']??null,$destination['longitude']??null,'el destino importado');
                 $destinationInsert->execute([$destination['slug'],$destination['destination_type'],$destination['country_code'],
-                    $destination['department'],$destination['subregion'],$destination['publication_status'],$destination['display_order'],'{"schema_version":1}']);
+                    $destination['department'],$destination['subregion'],$destination['publication_status'],$destination['display_order'],'{"schema_version":1}',$destination['latitude']??null,$destination['longitude']??null]);
                 $destinationId = (int)$pdo->lastInsertId();
                 $counts['destinations']++;
 
@@ -96,7 +99,8 @@ final class DestinationImporter
                     // quedan en borrador hasta que administración confirme el acuerdo.
                     $status=(string)($poi['publication_status']??($type==='experience'?'draft':'published'));
                     if(!in_array($status,['draft','published','archived'],true))throw new RuntimeException('Estado de publicación del atractivo inválido.');
-                    $poiInsert->execute([$destinationId,$poi['slug'],$type,$status,$i+1]);
+                    if($destination['publication_status']==='published'&&$status==='published'&&!GeolocationPolicy::placeExempt($destination['slug'],$poi['slug'],$type))GeolocationPolicy::requirePoint($poi['latitude']??null,$poi['longitude']??null,'el atractivo importado '.$poi['slug']);
+                    $poiInsert->execute([$destinationId,$poi['slug'],$type,$status,$i+1,$poi['latitude']??null,$poi['longitude']??null]);
                     $poiIds[$i]=(int)$pdo->lastInsertId(); $counts['points_of_interest']++;
                 }
                 foreach ($catalog['locales'] as $locale) {

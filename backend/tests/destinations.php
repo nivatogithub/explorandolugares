@@ -156,6 +156,8 @@ check($freeEdited['address_text']===''&&$freeEdited['latitude']===null&&$freeEdi
 $preserveId=$adminService->save(['destination_id'=>$destinationId,'category_code'=>'alimentacion','plan_code'=>'free','translations'=>['es'=>['display_name'=>'Gratis con datos privados']],'address_text'=>'Referencia conocida','latitude'=>'5.79','longitude'=>'-75.78','location_confirmed'=>'1','image_assistance_requested'=>'1']);
 $preserveBefore=$adminService->find($preserveId);$adminService->save(['id'=>$preserveId,'destination_id'=>$destinationId,'category_code'=>'alimentacion','plan_code'=>'free','map_workflow'=>'1','translations'=>['es'=>['display_name'=>'Gratis con datos privados']]]);$preserveAfter=$adminService->find($preserveId);
 foreach(['address_text','latitude','longitude','location_source','location_confirmed','image_assistance_requested'] as $field)check($preserveBefore[$field]===$preserveAfter[$field],'Hidden free fields preserve existing private data: '.$field);
+$geoRejected=false;try{$subscriptionService->publish((int)$importedRecord['id']);}catch(RuntimeException $e){$geoRejected=str_contains($e->getMessage(),'latitud y longitud');}check($geoRejected,'A physical Free listing without coordinates cannot be published.');
+$pdo->exec('UPDATE businesses SET latitude=5.7914719,longitude=-75.7862113 WHERE id='.(int)$importedRecord['id']);
 $subscriptionService->publish((int)$importedRecord['id']);
 $publishedImport=$pdo->query('SELECT b.publication_status,s.plan_code,s.status FROM businesses b JOIN business_subscriptions s ON s.business_id=b.id WHERE b.id='.(int)$importedRecord['id'])->fetch();
 check($publishedImport['publication_status']==='published'&&$publishedImport['plan_code']==='free'&&$publishedImport['status']==='active','A reviewed imported Free listing can publish without exposing contact details or requiring an exact street address');
@@ -177,6 +179,7 @@ $bulkStats=$pdo->query("SELECT COUNT(*) AS total,SUM(b.publication_status='draft
 check($bulkCount===200&&(int)$bulkStats['total']===200&&(int)$bulkStats['drafts']===200&&(int)$bulkStats['free_pending']===200,'A batch of 200 Jericó listings imports atomically as private, unclaimed Free drafts');
 $jericoBulkPreview=$repo->findPublished('jerico','es',true);$jericoPublicAfterBulk=$repo->findPublished('jerico','es');
 check(count($jericoBulkPreview['businesses'])===201&&count($jericoPublicAfterBulk['businesses'])===1,'Private preview shows all 200 Free cards while public directory remains unchanged');
+$pdo->exec("UPDATE businesses SET latitude=5.7914719,longitude=-75.7862113 WHERE id IN (SELECT business_id FROM business_translations WHERE display_name LIKE 'Establecimiento de prueba %')");
 $bulkPublish=(new BusinessBulkPublicationService($pdo))->publish(array_column($pdo->query("SELECT b.id FROM businesses b JOIN business_translations t ON t.business_id=b.id AND t.locale='es' WHERE t.display_name LIKE 'Establecimiento de prueba %'")->fetchAll(),'id'));
 check(count($bulkPublish['published'])===200&&count($bulkPublish['skipped'])===0,'Admin can approve and publish 200 eligible imported Free businesses in a single batch');
 $publishedBulk=(int)$pdo->query("SELECT COUNT(*) FROM businesses b JOIN business_translations t ON t.business_id=b.id AND t.locale='es' WHERE t.display_name LIKE 'Establecimiento de prueba %' AND b.publication_status='published'")->fetchColumn();
