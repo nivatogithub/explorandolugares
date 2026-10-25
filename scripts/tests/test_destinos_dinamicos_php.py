@@ -240,6 +240,7 @@ class DynamicDestinationRenderTests(unittest.TestCase):
             cursor=connection.execute("INSERT INTO businesses(public_id,destination_id,category_code,record_origin,slug,information_status,claim_status,operation_status,publication_status,address_text) VALUES(?,?,?,?,?,?,?,?,?,?)",
                 ("public-import-test-"+str(os.getpid()),destination_id,"alimentacion","public_import","public-import-test-"+str(os.getpid()),"PUBLICO","NO_RECLAMADO","DESCONOCIDO","draft","Parque principal, Jericó"))
             business_id=cursor.lastrowid
+            connection.execute("UPDATE businesses SET latitude=5.7914719,longitude=-75.7862113 WHERE id=?",(business_id,))
             connection.execute("INSERT INTO business_translations(business_id,locale,display_name,summary,description) VALUES(?,?,?,?,?)",
                 (business_id,"es","Importado público de prueba","","Prueba"))
             connection.execute("INSERT INTO business_translations(business_id,locale,display_name,summary,description) VALUES(?,?,?,?,?)",

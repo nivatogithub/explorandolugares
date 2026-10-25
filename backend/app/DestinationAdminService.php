@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+require_once __DIR__.'/GeolocationPolicy.php';
+
 final class DestinationAdminService
 {
     private const LOCALES = ['es', 'en', 'pt-BR'];
@@ -210,6 +212,8 @@ final class DestinationAdminService
                 $cleanPlaces[]=$clean;
         }
         if ($status==='published') {
+            GeolocationPolicy::requirePoint($num('latitude',-90,90),$num('longitude',-180,180),'el destino');
+            foreach($cleanPlaces as $p)if($p['status']==='published'&&!GeolocationPolicy::placeExempt($slug,$p['slug'],$p['type']))GeolocationPolicy::requirePoint($p['lat'],$p['lng'],'el atractivo '.$p['translations']['es']['name']);
             foreach (self::LOCALES as $locale) if ($tr[$locale]['display_name']===''||$tr[$locale]['headline']===''||$tr[$locale]['intro']===''||!$history[$locale]||!$reasons[$locale]) throw new RuntimeException("Para publicar completa título, introducción, historia y motivos en los tres idiomas; falta contenido en {$locale}.");
             if (!array_filter($cleanPlaces,static fn($place)=>$place['status']==='published')) throw new RuntimeException('Publicar requiere al menos un atractivo con estado «Publicado».');
         }

@@ -76,6 +76,8 @@ no_subscription_business_id = DB.execute('SELECT last_insert_rowid()').fetchone(
 DB.execute("INSERT INTO business_translations(business_id,locale,display_name,summary,description) VALUES(?,'es','Negocio sin suscripción','', '')", (no_subscription_business_id,))
 DB.execute("INSERT INTO leads(request_key,name,business,municipality,category,has_brand,description,interest,consent_version,created_at) VALUES('admin-repair','Persona ficticia','Consulta <script>alert(1)</script>','Jericó','hospedaje','no','Mensaje sintético','negocio','test','2026-10-20 00:00:00')")
 DB.execute("UPDATE leads SET email='consulta@example.invalid',wants_contact=1 WHERE request_key='admin-repair'")
+# Publishable physical fixtures must satisfy the geolocation policy.
+DB.execute("UPDATE businesses SET latitude=5.7914719,longitude=-75.7862113")
 DB.commit()
 expected_prices = {'basic': {'monthly': 19900, 'annual': 199000}, 'featured': {'monthly': 49900, 'annual': 499000}, 'page': {'monthly': 79900, 'annual': 799000}, 'page_premium': {'monthly': 119900, 'annual': 1199000}}
 for plan, frequencies in expected_prices.items():
@@ -554,6 +556,8 @@ try:
     check(tuple(imported) == ('draft','NO_RECLAMADO','PUBLICO','public_import','free','pending_publication'), 'La ficha importada no quedó como Gratis, privada y sin reclamar.')
     imported_locales = DB.execute("SELECT locale,display_name FROM business_translations WHERE business_id=(SELECT business_id FROM business_translations WHERE display_name='Comercio importado de prueba' AND locale='es')").fetchall()
     check(len(imported_locales) == 3 and len({row['display_name'] for row in imported_locales}) == 1, 'La importación masiva no conservó el nombre propio en los tres idiomas del portal.')
+    DB.execute("UPDATE businesses SET latitude=5.7914719,longitude=-75.7862113 WHERE id=(SELECT business_id FROM business_translations WHERE locale='es' AND display_name='Comercio importado de prueba')")
+    DB.commit()
     fresh_review=request('/admin/negocios.php?tab=revisar')[1]
     status, body, _ = request('/admin/negocios.php?tab=revisar', {'review_token':re.search(r'name="review_token" value="([^"]+)"',fresh_review).group(1),'csrf': csrf, 'action': 'publish_imported_bulk', 'select_all_filtered': '1', 'filter_destination': str(destination_id), 'filter_category': 'hospedaje', 'filter_status': 'draft', 'filter_verification': 'PUBLICO', 'filter_duplicates': 'no'})
     check(status == 200 and 'Lote revisado: 1 publicados' in body, 'La aprobación masiva filtrada no publicó el negocio importado seleccionado.')
@@ -1159,6 +1163,7 @@ try:
     check('Mis negocios' not in re.search(r'<nav class="account-tabs".*?</nav>',former_profile,re.S).group(0),'Revoked memberships must not keep the business menu visible.')
     # Private editorial workflow through the public account UI, not through an administrator acting as owner.
     DB.execute("INSERT INTO businesses(public_id,destination_id,category_code,slug,information_status,record_origin,publication_status) VALUES('f00d0000-0000-4000-8000-000000000099',?,'hospedaje','editorial-ficticio','VERIFICADO','owner_submitted','published')",(DB.execute('SELECT id FROM destinations ORDER BY id LIMIT 1').fetchone()[0],))
+    DB.execute("UPDATE businesses SET latitude=5.7914719,longitude=-75.7862113 WHERE slug='editorial-ficticio'")
     editorial_business=DB.execute("SELECT id FROM businesses WHERE slug='editorial-ficticio'").fetchone()[0]
     for language in ['es','en','pt-BR']:
         DB.execute("INSERT INTO business_translations(business_id,locale,display_name,summary,description) VALUES(?,?,?,'','')",(editorial_business,language,'Editorial Ficticio'))
