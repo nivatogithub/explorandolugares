@@ -28,4 +28,4 @@ if(!isset(captureInput($p,$premium+['products'=>$products])['products'][4]))thro
 if(!onboardingFails($p,$premium+['products'=>[5=>['title'=>'Sexto producto','summary'=>'Breve']]]))throw new RuntimeException('Reject sixth product.');
 foreach(['free','featured','page'] as $code){if(!onboardingFails($p,array_replace($premium,['plan_code'=>$code,'products'=>$products])))throw new RuntimeException('Products are Premium only.');}
 if(!onboardingFails($p,$premium+['brand_story'=>'Campo retirado']))throw new RuntimeException('Do not capture retired fields.');
-echo "OK: one description 0/300/450/1200, cumulative channels and paid requirements, Premium 0/2/4/5 products, sparse positions, sixth and retired fields rejected.\n";
+echo "OK: one description 0/100/300/600, cumulative channels and paid requirements, Premium 0/2/4/5 products, sparse positions, sixth and retired fields rejected.\n";

@@ -54,12 +54,14 @@
         if (removal) removal.disabled = false;
         panel.querySelectorAll('input,textarea,select').forEach(field => {
           field.disabled = false;
+          delete field.dataset.uploadReady;
+          field.setCustomValidity('');
           if (field.matches('[type="checkbox"],[type="radio"]')) field.checked = false;
           else if (field.tagName === 'SELECT') field.selectedIndex = 0;
           else field.value = '';
         });
         form?.querySelector(`[data-temp-upload="editorial-product-${slot}"]`)?.remove();
-        panel.querySelectorAll('[data-upload-status],img').forEach(node => node.remove());
+        panel.querySelectorAll('[data-upload-status],[data-upload-preview],img').forEach(node => node.remove());
         panel.dataset.configured = '0';sync();
         root.dispatchEvent(new Event('change', {bubbles: true}));
         (active ? buttons.get(active) : add)?.focus();

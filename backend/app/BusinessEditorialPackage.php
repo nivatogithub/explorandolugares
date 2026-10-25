@@ -1,5 +1,7 @@
 <?php
 declare(strict_types=1);
+require_once __DIR__.'/BusinessRegistrationPlan.php';
+require_once __DIR__.'/BusinessPromotions.php';
 
 /**
  * Builds the private source package used by the editorial team.  It is
@@ -35,12 +37,14 @@ final class BusinessEditorialPackage
         }
         $titleReady=$application!==null&&$application['status']==='approved'&&$titleDocument!==null&&!empty($titleDocument['verified_at']);
         $paidPlan=$subscription!==null&&$subscription['plan_code']!=='free';
-        $paymentReady=$paidPlan?in_array($subscription['status'],['paid_pending_publication','active'],true)&&$payment!==null&&$payment['status']==='approved':$subscription!==null&&in_array($subscription['status'],['pending_publication','active'],true);
+        $promotions=new BusinessPromotions($this->pdo);$promotion=$subscription?$promotions->forSubscription((int)$subscription['id']):null;
+        $promotionCovered=$subscription&&$promotions->covered((int)$subscription['id']);
+        $paymentReady=$paidPlan?in_array($subscription['status'],['paid_pending_publication','active'],true)&&($promotionCovered||($payment!==null&&$payment['status']==='approved')):$subscription!==null&&in_array($subscription['status'],['pending_publication','active'],true);
         $blockers=[];
         if(!$titleReady)$blockers[]='Falta validar el documento que respalda la titularidad o representación del negocio.';
         if(!$subscription)$blockers[]='Falta seleccionar una suscripción.';
         elseif(!$paymentReady)$blockers[]=$paidPlan?'Falta confirmar el pago con su comprobante.':'La suscripción Gratis todavía no está lista para revisión.';
-        return ['business'=>$business,'application'=>$application,'documents'=>$documents,'title_document'=>$titleDocument,'subscription'=>$subscription,'payment'=>$payment,'title_ready'=>$titleReady,'payment_ready'=>$paymentReady,'ready'=>$titleReady&&$paymentReady,'blockers'=>$blockers];
+        return ['business'=>$business,'application'=>$application,'documents'=>$documents,'title_document'=>$titleDocument,'subscription'=>$subscription,'payment'=>$payment,'promotion'=>$promotion,'promotion_covered'=>(bool)$promotionCovered,'title_ready'=>$titleReady,'payment_ready'=>$paymentReady,'ready'=>$titleReady&&$paymentReady,'blockers'=>$blockers];
     }
 
     public function requireReady(int $businessId):array
@@ -73,6 +77,7 @@ final class BusinessEditorialPackage
                 $sources[]=['file'=>$entry,'slots'=>$slots,'original_name'=>$image['original_name'],'mime_type'=>$image['mime_type'],'width'=>(int)$image['width'],'height'=>(int)$image['height']];
             }
             $brief=['schema'=>'explorandolugares-editorial-source-v1','business'=>['name'=>$business['name'],'destination'=>$business['destination'],'category'=>$business['category'],'plan'=>$business['plan']],'content'=>['summary'=>$business['summary'],'description'=>$business['description']],'source_images'=>$sources,'rules'=>['required_locales'=>['es','en','pt-BR'],'never_include'=>['identity documents','business registration documents','account data','payment evidence','private contact data'],'result_contract'=>'Return a separate editorial ZIP with only final images and public-facing ES, EN and PT-BR texts.']];
+            $brief['rules']['text_limits']=BusinessRegistrationPlan::textLimits($business['plan']);
             $brief['content']=['summary'=>$payload['translations']['es']['summary']??$business['summary'],'description'=>$payload['translations']['es']['description']??$business['description']];
             $brief['translations']=$payload['translations']??['es'=>['display_name'=>$business['name'],...$brief['content']]];
             $brief['products']=[];
@@ -81,6 +86,8 @@ final class BusinessEditorialPackage
             if(!$zip->addFromString('brief.json',json_encode($brief,JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES|JSON_THROW_ON_ERROR)))throw new RuntimeException('No se pudo escribir la ficha editorial.');
             $imageProvenanceExample=['creation_route'=>'independent_composition','tool_model'=>'','created_on'=>'YYYY-MM-DD','responsible'=>'','prompt'=>'','factual_basis'=>[''],'reference_assets'=>[''],'reviewed_by'=>'','review_note'=>''];
             $resultExample=['schema'=>'explorandolugares-editorial-result-v1','translations'=>['es'=>['display_name'=>'','summary'=>'','description'=>''],'en'=>['display_name'=>'','summary'=>'','description'=>''],'pt-BR'=>['display_name'=>'','summary'=>'','description'=>'']],'images'=>['logo'=>['file'=>'images/logo.webp','alt'=>['es'=>'','en'=>'','pt-BR'=>''],'caption'=>['es'=>'','en'=>'','pt-BR'=>''],'provenance'=>$imageProvenanceExample],'cover'=>['file'=>'images/cover.webp','alt'=>['es'=>'','en'=>'','pt-BR'=>''],'caption'=>['es'=>'','en'=>'','pt-BR'=>''],'provenance'=>$imageProvenanceExample]],'products'=>[['translations'=>['es'=>['name'=>'','description'=>''],'en'=>['name'=>'','description'=>''],'pt-BR'=>['name'=>'','description'=>'']],'image'=>['file'=>'images/product-1.webp','alt'=>['es'=>'','en'=>'','pt-BR'=>''],'caption'=>['es'=>'','en'=>'','pt-BR'=>''],'provenance'=>$imageProvenanceExample]]]];
+            $descriptionBudgets=[];foreach(['free'=>'Gratis','featured'=>'Destacado','page'=>'Página','page_premium'=>'Premium'] as $code=>$label)$descriptionBudgets[]=$label.' '.BusinessRegistrationPlan::get($code)['description_limit'];
+            $descriptionBudgets=implode(', ',$descriptionBudgets);
             $readme="# Paquete editorial de {$business['name']}\n\n".
                 "Este ZIP contiene material editorial privado: `brief.json` y las imágenes originales referenciadas allí. No contiene ni debe recibir documentos legales, datos de cuenta, comprobantes de pago, números de identificación personal, correos ni teléfonos.\n\n".
                 "## Trabajo editorial\n\n".
@@ -88,7 +95,7 @@ final class BusinessEditorialPackage
                 "2. Genera una ilustración editorial semirrealista: caricatura realista, con trazos de tinta y pintura tipo gouache claramente visibles, paleta natural y coherente con Explorando Lugares. No debe parecer una fotografía retocada. Conserva los rasgos que identifican el negocio: fachada, distribución, materiales, entorno y ubicación cuando estén confirmados.\n".
                 "3. No inventes personas, señalización, arquitectura, premios, servicios, productos, vistas, rutas ni condiciones actuales. No incluyas texto, marcas de agua, logotipos no autorizados, monumentos adicionales ni el estilo de un artista vivo. No copies exactamente la composición de una fotografía.\n".
                 "4. Revisa cada salida a tamaño de tarjeta y de portada: el negocio debe reconocerse sin el título, sin deformaciones ni elementos falsos. Si no hay evidencia suficiente, no rellenes el espacio con una escena genérica.\n".
-                "5. Mejora los textos públicos y completa español (`es`), inglés (`en`) y portugués de Brasil (`pt-BR`). Nombre: hasta 180 caracteres. Usa una sola descripción en `summary`: Gratis 0, Destacado 300, Página 450, Premium 1200 caracteres por idioma. Deja `description` vacío; no se solicita una segunda descripción ni historia adicional.\n".
+                "5. Mejora los textos públicos y completa español (`es`), inglés (`en`) y portugués de Brasil (`pt-BR`). Nombre: hasta 180 caracteres. Usa una sola descripción en `summary`: {$descriptionBudgets} caracteres por idioma, incluyendo espacios y puntuación. Deja `description` vacío; no se solicita una segunda descripción ni historia adicional.\n".
                 "6. Conserva TODOS los productos de brief.json y usa image_slots para identificar portada y productos (product_0 a product_4); no adivines la posición por el nombre del archivo. Cada descripción de producto admite 180 caracteres y cada título 100. No elimines un producto ni inventes uno nuevo. Completa sus tres idiomas.\n".
                 "7. Devuelve un ZIP nuevo con `editorial.json` y las imágenes finales dentro de `images/`. No incluyas este ZIP original ni archivos adicionales. El primer resultado se puede importar aunque la ficha privada siga en borrador. Si el administrador ya envió una prepublicación al propietario, no generes otro ZIP hasta que este solicite correcciones.\n\n".
                 "## Formato de editorial.json\n\n```json\n".

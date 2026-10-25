@@ -5,6 +5,9 @@ if(PHP_SAPI!=='cli'||getenv('EL_PREPROD_LOCAL')!=='1')throw new RuntimeException
 $sql=getenv('EL_TEXT_RULES_SQL');
 $sql=$sql?base64_decode($sql,true):file_get_contents('/srv/portal/app/database/migrations/053-current-business-text-rules.mysql.sql');
 if(!$sql)throw new RuntimeException('Migration unavailable.');
+$budgetSql=getenv('EL_DESCRIPTION_BUDGETS_SQL');
+$budgetSql=$budgetSql?base64_decode($budgetSql,true):file_get_contents('/srv/portal/app/database/migrations/054-business-description-budgets.mysql.sql');
+if(!$budgetSql)throw new RuntimeException('Description budget migration unavailable.');
 $admin=new PDO('mysql:unix_socket=/run/mysqld/mysqld.sock;charset=utf8mb4','root','',[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION]);
 $name='el_test_text_'.bin2hex(random_bytes(6));
 if(!preg_match('/^el_test_text_[a-f0-9]{12}$/D',$name))throw new RuntimeException('Invalid test database.');
@@ -24,5 +27,8 @@ try{
     $p->exec('ALTER TABLE business_translations MODIFY summary TEXT NOT NULL');$apply();
     $type=$p->query("SHOW COLUMNS FROM business_translations LIKE 'summary'")->fetch(PDO::FETCH_ASSOC)['Type'];
     if(strtolower($type)!=='text')throw new RuntimeException('Must not shrink wider storage.');
-    echo "OK MariaDB: 1000→1200 Unicode capacity, migration twice, content retained, wider TEXT not shrunk.\n";
+    $p->exec($budgetSql);$budgets=$p->query('SELECT code,max_summary_chars FROM subscription_plans ORDER BY code')->fetchAll(PDO::FETCH_KEY_PAIR);$p->exec($budgetSql);
+    if(array_map('intval',$budgets)!==['featured'=>100,'free'=>0,'page'=>300,'page_premium'=>600]||$budgets!==$p->query('SELECT code,max_summary_chars FROM subscription_plans ORDER BY code')->fetchAll(PDO::FETCH_KEY_PAIR))throw new RuntimeException('Description budgets disagree or are not idempotent.');
+    if((int)$p->query('SELECT CHAR_LENGTH(summary) FROM business_translations WHERE id=2')->fetchColumn()!==1200)throw new RuntimeException('New quotas truncated existing content.');
+    echo "OK MariaDB: 1000→1200 Unicode capacity retained, 054 twice sets 0/100/300/600, existing long content retained, wider TEXT not shrunk.\n";
 }finally{$admin->exec('DROP DATABASE `'.$name.'`');}

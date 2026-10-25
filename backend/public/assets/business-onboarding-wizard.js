@@ -16,32 +16,82 @@
     const planRules = JSON.parse(details?.dataset.planRules || '{}');
     const rules = () => planRules[plan()] || {};
     const serverError = document.querySelector('.account-registration-card [role="alert"]');
-    const recoveryKey = 'explorando-lugares:business-registration-recovery';
-    const excludedFromRecovery = new Set(['csrf', 'display_name', 'email', 'phone', 'password', 'password_confirm', 'business_registration', 'identity_document', 'authority_document', 'reference_images[]']);
-    const recoverable = () => Array.from(form.elements).filter((field) => field.name && !excludedFromRecovery.has(field.name) && field.type !== 'file' && field.type !== 'password');
-    const restoreAfterValidationError = () => {
-      if (!serverError) { sessionStorage.removeItem(recoveryKey); return; }
+    const draft = form.querySelector('[data-registration-draft]');
+    const draftStatus = form.querySelector('[data-draft-status]');
+    const revision = form.querySelector('[name="draft_revision"]');
+    const stepField = form.querySelector('[name="wizard_step"]');
+    const promotionInput = form.querySelector('[name="promotion_code"]');
+    const promotionResult = form.querySelector('#promotion-result');
+    const promotionButton = form.querySelector('[data-apply-promotion]');
+    let promotion = null, promotionRequest = 0;
+    const promotionKey = () => [promotionInput?.value.trim().toUpperCase() || '',plan(),form.querySelector('[name="billing_frequency"]')?.value || 'monthly',form.querySelector('[name="destination_id"]')?.value || ''].join('|');
+    const validatePromotion = async () => {
+      if (!promotionInput) return true;
+      const request = ++promotionRequest, key = promotionKey();
+      promotion = null; promotionInput.setCustomValidity('');
+      if (!promotionInput.value.trim()) { promotionResult.textContent = 'Sin cupón: se aplica la tarifa del plan seleccionado.'; syncPlan(); return true; }
+      promotionButton.disabled = true; promotionResult.textContent = 'Validando cupón…';
       try {
-        const saved = JSON.parse(sessionStorage.getItem(recoveryKey) || '{}');
-        for (const field of recoverable()) {
-          const value = saved[field.name];
-          if (value === undefined) continue;
-          if (field.type === 'checkbox' || field.type === 'radio') field.checked = Array.isArray(value) ? value.includes(field.value) : value === field.value;
-          else field.value = String(value);
-        }
-      } catch { /* A malformed browser draft must never block the form. */ }
+        const url = new URL(form.dataset.searchUrl,location.origin);
+        url.searchParams.set('tipo','business');url.searchParams.set('promotion_quote','1');
+        url.searchParams.set('code',promotionInput.value.trim());url.searchParams.set('plan',plan());
+        url.searchParams.set('period',form.querySelector('[name="billing_frequency"]').value);
+        url.searchParams.set('destination_id',form.querySelector('[name="destination_id"]').value);
+        const response=await fetch(url,{credentials:'same-origin',headers:{Accept:'application/json'}});
+        const result=await response.json();
+        if (response.status===401) { location.assign(result.login_url || '/negocios/acceso/'); return false; }
+        if(request!==promotionRequest||key!==promotionKey())return false;
+        if(!response.ok||!result.ok)throw new Error(result.error||'No se pudo validar el cupón.');
+        promotion={...result.offer,key};promotionInput.value=result.offer.code;
+        const money=value=>new Intl.NumberFormat('es-CO',{style:'currency',currency:promotion.currency}).format(value/100);
+        promotionResult.textContent=`Cupón ${promotion.code}: ${promotion.percentage} % de descuento. Precio ${money(promotion.list_cents)}; descuento ${money(promotion.discount_cents)}; saldo ${money(promotion.due_cents)}. ${promotion.due_cents===0?'No tendrás que realizar un pago. ':''}Vigencia desde la publicación, sin renovación automática del descuento.`;
+        syncPlan();return true;
+      } catch(error) {
+        if(request!==promotionRequest||key!==promotionKey())return false;
+        promotionInput.setCustomValidity(error.message);promotionResult.textContent=error.message;syncPlan();return false;
+      } finally { if(request===promotionRequest)promotionButton.disabled=false; }
     };
-    restoreAfterValidationError();
-    form.addEventListener('submit', () => {
-      const values = {};
-      for (const field of recoverable()) {
-        if (field.type === 'checkbox' || field.type === 'radio') {
-          if (!field.checked) continue;
-          (values[field.name] ||= []).push(field.value);
-        } else values[field.name] = field.value;
-      }
-      try { sessionStorage.setItem(recoveryKey, JSON.stringify(values)); } catch { /* Storage can be unavailable in private browsing. */ }
-    });
+    promotionButton?.addEventListener('click',async()=>{if(await validatePromotion())await saveDraft(step);});
+    let pendingUploads = 0, saving = Promise.resolve(true), leaving = false;
+    // Capture lives privately in the account, never in browser storage.
+    try { sessionStorage.removeItem('explorando-lugares:business-registration-recovery'); } catch {}
+    const restored = JSON.parse(draft?.dataset.restoredValues || '{}');
+    const fieldValue = (name) => {
+      const keys = name.replace(/\]/g, '').split('[').filter(Boolean);
+      return keys.reduce((value, key) => value && typeof value === 'object' ? value[key] : undefined, restored);
+    };
+    for (const field of form.elements) {
+      if (!field.name || field.type === 'file' || ['csrf','registration_draft','draft_revision','wizard_step'].includes(field.name)) continue;
+      const value = fieldValue(field.name);
+      if (value === undefined) continue;
+      if (field.type === 'radio' || field.type === 'checkbox') field.checked = Array.isArray(value) ? value.includes(field.value) : String(value) === field.value;
+      else if (typeof value !== 'object') field.value = String(value);
+    }
+    const saveDraft = (target) => {
+      saving = saving.catch(() => false).then(async () => {
+        if (!draft?.value || !type?.value) return false;
+        if (pendingUploads) { draftStatus.textContent = 'Espera a que terminen de subir los archivos antes de continuar.'; return false; }
+        const data = new FormData();
+        for (const field of form.elements) {
+          if (!field.name || ['file','password','submit','button'].includes(field.type) || ['csrf','draft_action','wizard_step','draft_revision'].includes(field.name)) continue;
+          if ((field.type === 'checkbox' || field.type === 'radio') && !field.checked) continue;
+          data.append(field.name, field.value);
+        }
+        data.set('csrf', csrf); data.set('draft_action','save'); data.set('wizard_step',String(target)); data.set('draft_revision',revision.value);
+        draftStatus.textContent = 'Guardando avance en tu cuenta…';
+        try {
+          const response = await fetch(location.href, {method:'POST',body:data,credentials:'same-origin',headers:{Accept:'application/json'}});
+          const result = await response.json();
+          if (response.status === 401) { location.assign(result.login_url || '/negocios/acceso/'); return false; }
+          if (!response.ok || !result.ok) throw new Error(result.error || 'No se pudo guardar el avance.');
+          revision.value = String(result.revision); stepField.value = String(target);
+          const url = new URL(location.href); url.searchParams.set('draft',result.id); history.replaceState(null,'',url);
+          draftStatus.textContent = 'Avance guardado. Puedes continuar después desde Mis negocios.';
+          return true;
+        } catch (error) { draftStatus.textContent = error.message || 'No se pudo guardar. No cierres esta página; vuelve a intentarlo.'; return false; }
+      });
+      return saving;
+    };
     const setPlanField = (selector, visible, required = false) => {
       form.querySelectorAll(selector).forEach((node) => {
         node.hidden = !visible;
@@ -68,7 +118,9 @@
       const selectedRules = rules();
       const editorial = selectedRules.description_limit > 0;
       const premium = selectedRules.products > 0;
-      if (submit) submit.textContent = choice && choice !== 'free'
+      const hasAddon = Number(form.querySelector('[name="operator_experience_id"]')?.value || 0)>0;
+      const covered = promotion && promotion.key===promotionKey() && promotion.due_cents===0 && !hasAddon;
+      if (submit) submit.textContent = choice && choice !== 'free' && !covered
         ? 'Guardar y continuar al pago'
         : 'Guardar solicitud para revisión';
       setPlanField('[data-plan-field="summary"]', editorial, editorial);
@@ -112,9 +164,37 @@
       if (help) help.textContent = 'Indica NIT o RNT según el documento del negocio. No necesitas ambos.';
     };
 
+    const showUpload = (input, kind, slot, upload) => {
+      const holder=input.closest('label')||input.parentElement;
+      holder.querySelectorAll('[data-upload-status],[data-upload-preview]').forEach(node=>node.remove());
+      const status=document.createElement('small');status.dataset.uploadStatus='1';status.textContent='Archivo listo: '+upload.name+' ';
+      const remove=document.createElement('button');remove.type='button';remove.className='business-upload-remove';remove.textContent='×';
+      remove.setAttribute('aria-label',kind==='editorial'?'Quitar foto':'Retirar soporte');remove.title=kind==='editorial'?'Quitar foto':'Retirar soporte';
+      input.disabled=true;input.dataset.uploadReady='1';
+      remove.addEventListener('click',async(event)=>{
+        event.preventDefault();event.stopPropagation();
+        remove.disabled=true;pendingUploads++;const data=new FormData();data.set('csrf',csrf);data.set('action','delete');data.set('upload_id',upload.id);data.set('registration_draft',draft.value);
+        try{const response=await fetch('/business/onboarding-upload.php',{method:'POST',body:data,headers:{Accept:'application/json'}});const result=await response.json();if(response.status===401){location.assign(result.login_url||'/negocios/acceso/');return;}if(!response.ok)throw new Error(result.error||'No se pudo retirar el archivo.');
+          form.querySelector('[data-temp-upload="'+kind+'-'+slot+'"]')?.remove();input.disabled=false;delete input.dataset.uploadReady;input.value='';status.remove();holder.querySelector('[data-upload-preview]')?.remove();input.dispatchEvent(new Event('change',{bubbles:true}));
+        }catch(error){status.textContent=error.message+' ';remove.disabled=false;if(kind!=='editorial')status.append(remove);}
+        finally{pendingUploads--;}
+        await saveDraft(step);
+      });
+      holder.append(status);
+      if(kind==='editorial'){
+        const preview=document.createElement('span');preview.className='business-image-preview';preview.dataset.uploadPreview='1';
+        const image=document.createElement('img');image.dataset.uploadThumbnail='1';image.src='/business/onboarding-upload-preview.php?id='+encodeURIComponent(upload.id)+'&draft='+encodeURIComponent(draft.value);image.alt='Fotografía privada guardada';
+        preview.append(image,remove);holder.append(preview);
+      }else status.append(remove);
+    };
+    for(const upload of JSON.parse(draft?.dataset.savedUploads||'[]')){
+      const input=upload.upload_kind==='evidence'?form.querySelector('[name="business_registration"]'):form.querySelector('[data-image-slot="'+upload.slot_code+'"]');
+      if(input)showUpload(input,upload.upload_kind,upload.slot_code,{id:upload.id,name:upload.original_name});
+    }
     const uploadFile = async (input, kind, slot) => {
       const file = input.files?.[0];
       if (!file) return;
+      input.setCustomValidity('');
       const holder = input.closest('label') || input.parentElement;
       let status = holder.querySelector('[data-upload-status]');
       if (!status) {
@@ -129,9 +209,15 @@
       data.append('kind', kind);
       data.append('slot', slot);
       data.append('file', file);
+      data.append('registration_draft',draft.value);
+      pendingUploads++;
+      input.disabled=true;
+      const removeProduct=input.closest('[data-product-slot]')?.querySelector('[data-remove-product]');
+      if(removeProduct)removeProduct.disabled=true;
       try {
-        const response = await fetch('/business/onboarding-upload.php', {method: 'POST', body: data, credentials: 'same-origin'});
+        const response = await fetch('/business/onboarding-upload.php', {method: 'POST', body: data, credentials: 'same-origin',headers:{Accept:'application/json'}});
         const result = await response.json();
+        if(response.status===401){location.assign(result.login_url||'/negocios/acceso/');return;}
         if (!response.ok || !result.ok) throw new Error(result.error || 'No se pudo subir el archivo.');
         input.disabled = true;
         form.querySelector(`[data-temp-upload="${kind}-${slot}"]`)?.remove();
@@ -141,36 +227,13 @@
         hidden.value = result.upload.id;
         hidden.dataset.tempUpload = `${kind}-${slot}`;
         form.append(hidden);
-        status.textContent = `Archivo listo: ${result.upload.name} `;
-        const remove = document.createElement('button');
-        remove.type = 'button';
-        remove.className = 'text-link';
-        remove.textContent = 'Quitar';
-        remove.addEventListener('click', async () => {
-          const removal = new FormData();
-          removal.append('csrf', csrf);
-          removal.append('action', 'delete');
-          removal.append('upload_id', result.upload.id);
-          await fetch('/business/onboarding-upload.php', {method: 'POST', body: removal, credentials: 'same-origin'});
-          hidden.remove();
-          remove.remove();
-          input.disabled = false;
-          input.value = '';
-          status.textContent = 'Archivo retirado.';
-        });
-        status.append(remove);
-        if (kind === 'editorial') {
-          const image = document.createElement('img');
-          image.src = `/business/onboarding-upload-preview.php?id=${encodeURIComponent(result.upload.id)}`;
-          image.alt = 'Vista previa privada';
-          image.width = 160;
-          image.height = 100;
-          image.loading = 'lazy';
-          holder.append(image);
-        }
+        showUpload(input,kind,slot,result.upload);
       } catch (error) {
         status.textContent = error instanceof Error ? error.message : 'No se pudo subir el archivo.';
-      }
+        input.disabled=false;
+        input.setCustomValidity('No se pudo guardar el archivo. Vuelve a seleccionarlo antes de continuar.');
+      } finally { pendingUploads--;if(removeProduct)removeProduct.disabled=false; }
+      if(input.dataset.uploadReady)await saveDraft(step);
     };
 
     form.querySelectorAll('[data-image-slot]').forEach((input) => input.addEventListener('change', () => uploadFile(input, 'editorial', input.dataset.imageSlot || 'cover')));
@@ -186,7 +249,8 @@
     const contactStep = [contacts].filter(Boolean);
     const submissionStep = [continuation].filter(Boolean);
     const activeSteps = () => [1, 2, 3, ...(rules().products ? [4] : []), ...(rules().channels?.length ? [5] : []), 6];
-    let step = type?.value && plan() && serverError ? 3 : 1;
+    let step = type?.value ? Number(draft?.dataset.resumeStep||1) : 1;
+    if(![1,2,3,4,5,6].includes(step)||!activeSteps().includes(step))step=3;
 
     const renderStep = () => {
       if (!finder || !planStage || !continuation) return;
@@ -258,9 +322,10 @@
         tab.dataset.wizardStep = String(index + 1);
         tab.dataset.stepLabel = label;
         tab.textContent = `${index + 1}. ${label}`;
-        tab.addEventListener('click', () => {
+        tab.addEventListener('click', async () => {
           const target = Number(tab.dataset.wizardStep);
           if (target > step) return;
+          if(!await saveDraft(target))return;
           step = target;
           renderStep();
         });
@@ -283,7 +348,7 @@
       contacts.after(controls);
       controls.append(warning, next);
       continuation.before(back);
-      next.addEventListener('click', () => {
+      next.addEventListener('click', async () => {
         if (step === 1 && !type?.value) {
           warning.textContent = 'Primero busca el negocio y elige si lo vas a reclamar o crear.';
           warning.hidden = false;
@@ -294,17 +359,21 @@
           warning.hidden = false;
           return;
         }
+        if(step===2&&!await validatePromotion()){promotionInput?.reportValidity();return;}
         const currentPanels=step===1?[finder]:step===2?[planStage]:step===3?detailsStep:step===4?productStep:contactStep;
         const invalid=currentPanels.flatMap(panel=>Array.from(panel.querySelectorAll('input,select,textarea'))).find(field=>field.willValidate&&!field.checkValidity());
         if(invalid){invalid.reportValidity();return;}
         warning.hidden=true;
         const steps = activeSteps();
-        step = steps[steps.indexOf(step) + 1];
+        const target=steps[steps.indexOf(step)+1];
+        next.disabled=true;const saved=await saveDraft(target);next.disabled=false;if(!saved)return;
+        step = target;
         renderStep();
       });
-      back.addEventListener('click', () => {
+      back.addEventListener('click', async () => {
         const steps = activeSteps();
-        step = steps[Math.max(0, steps.indexOf(step) - 1)];
+        const target=steps[Math.max(0,steps.indexOf(step)-1)];
+        if(!await saveDraft(target))return;step=target;
         renderStep();
       });
       form.addEventListener('operator-eligibility-change', () => { renderStep(); });
@@ -318,16 +387,27 @@
 
     form.addEventListener('change', (event) => {
       if (event.target.name === 'plan_code') { syncPlan(); syncFreeIdentifier(); }
+      if(['plan_code','billing_frequency','destination_id'].includes(event.target.name)&&promotionInput?.value.trim())validatePromotion();
       renderPreview();
     });
+    promotionInput?.addEventListener('input',()=>{
+      promotionRequest++;promotionButton.disabled=false;promotion=null;promotionInput.setCustomValidity('');
+      promotionResult.textContent='Pulsa Aplicar cupón para validar el descuento.';syncPlan();
+    });
     form.addEventListener('input', (event) => { renderPreview(); if(event.target.name==='summary')syncPlan(); if (event.target.name === 'business_nit' || event.target.name === 'business_rnt') syncFreeIdentifier(); });
-    form.addEventListener('submit', () => {
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();if(leaving)return;
       if (!submit || submit.disabled) return;
+      if(pendingUploads){draftStatus.textContent='Espera a que terminen de subir los archivos.';return;}
+      if(!await validatePromotion()){step=2;renderStep();promotionInput?.reportValidity();return;}
       submit.disabled = true;
       submit.textContent = 'Procesando solicitud…';
+      if(!await saveDraft(6)){submit.disabled=false;syncPlan();return;}
+      leaving=true;form.submit();
     });
     syncPlan();
     syncFreeIdentifier();
     if (controls) renderStep();
+    if(promotionInput?.value.trim())validatePromotion();
   });
 })();

@@ -122,7 +122,7 @@ final class DatabaseMaintenance
             'checks' => [['subscription_plans', ['max_summary_chars','max_description_chars','max_brand_story_chars','max_featured_services_chars']]],
             'value_checks' => [
                 ['subscription_plans','code','basic','max_summary_chars',300],
-                // Current paid-plan values are owned by migration 053.
+                // Current paid-plan values are owned by migrations 053/054.
             ],
             'requires' => ['subscription_plans','business_translations'],
         ],
@@ -223,10 +223,7 @@ final class DatabaseMaintenance
             'idempotent_updates'=>true,
             'capacity_checks'=>[['business_translations','summary',1200]],
             'value_checks'=>[
-                ['subscription_plans','code','free','max_summary_chars',0],
-                ['subscription_plans','code','featured','max_summary_chars',300],
-                ['subscription_plans','code','page','max_summary_chars',450],
-                ['subscription_plans','code','page_premium','max_summary_chars',1200],
+                // Summary quotas are superseded by 054; retain the storage check above.
                 ['subscription_plans','code','free','max_description_chars',0],
                 ['subscription_plans','code','featured','max_description_chars',0],
                 ['subscription_plans','code','page','max_description_chars',0],
@@ -234,6 +231,31 @@ final class DatabaseMaintenance
                 ['subscription_plans','code','page_premium','max_brand_story_chars',0],
                 ['subscription_plans','code','page_premium','max_featured_services_chars',0],
             ],'requires'=>['subscription_plans','business_translations'],
+        ],
+        '056-business-promotions'=>[
+            'file'=>'056-business-promotions.mysql.sql',
+            'checks'=>[['business_promotion_codes',['code','percentage','plans_json','periods_json','enabled','expires_at','max_uses']],['business_promotion_redemptions',['subscription_id','code','business_id','account_id','list_cents','discount_cents','due_cents']],['business_promotion_audit',['code','actor','settings_json']]],
+            'requires'=>['business_subscriptions','businesses','accounts'],
+        ],
+        '057-business-promotion-places'=>[
+            'file'=>'057-business-promotion-places.mysql.sql',
+            'checks'=>[['business_promotion_place_scopes',['code']],['business_promotion_places',['code','destination_id']],['business_promotion_redemption_places',['subscription_id','destination_id']]],
+            'requires'=>['business_promotion_codes','business_promotion_redemptions','businesses','destinations'],
+        ],
+        '055-business-registration-drafts'=>[
+            'file'=>'055-business-registration-drafts.mysql.sql',
+            'checks'=>[['business_registration_drafts',['id','account_id','payload_json','wizard_step','revision','status','business_id','created_at','updated_at']]],
+            'requires'=>['accounts','businesses'],
+        ],
+        '054-business-description-budgets'=>[
+            'file'=>'054-business-description-budgets.mysql.sql','checks'=>[],
+            'idempotent_updates'=>true,
+            'value_checks'=>[
+                ['subscription_plans','code','free','max_summary_chars',0],
+                ['subscription_plans','code','featured','max_summary_chars',100],
+                ['subscription_plans','code','page','max_summary_chars',300],
+                ['subscription_plans','code','page_premium','max_summary_chars',600],
+            ],'requires'=>['subscription_plans'],
         ],
         '045-business-service-sections'=>['file'=>'045-business-service-sections.mysql.sql','checks'=>[['business_service_sections',['business_id','locale','section_code','description']]],'requires'=>['businesses']],
         '044-subscription-changes'=>['file'=>'044-subscription-changes.mysql.sql','checks'=>[['subscription_changes',['subscription_id','source_subscription_id','change_kind','quoted_at','term_starts_at','effective_at','original_ends_at','source_full_cents','target_full_cents','credit_cents','target_remaining_cents','due_cents','currency']]],'requires'=>['business_subscriptions']],

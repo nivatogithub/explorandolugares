@@ -9,6 +9,7 @@ require_once __DIR__.'/BusinessRegistrationPlan.php';
 /** Immutable payloads and explicit approval of the exact version. Never sends mail or generates images on save. */
 final class BusinessEditorialService
 {
+ public const REVIEW_NOTE_LIMIT=200;
  public const LABELS=['draft'=>'Borrador privado','in_editorial'=>'En preparación editorial','awaiting_owner'=>'Pendiente de tu aprobación','changes_requested'=>'Correcciones solicitadas','rejected'=>'No aprobado para publicación','owner_approved'=>'Listo para publicación final','published'=>'Publicado'];
  public function __construct(private PDO $pdo,private string $storage){}
  public function ready():bool{try{$this->pdo->query('SELECT id FROM business_editorial_versions LIMIT 1');return true;}catch(PDOException $e){if(str_contains($e->getMessage(),'no such table')||($e->errorInfo[1]??0)===1146)return false;throw $e;}}
@@ -110,7 +111,11 @@ final class BusinessEditorialService
    $status=match($action){'reject'=>$admin&&in_array($v['status'],['in_editorial','owner_approved','awaiting_owner'],true)?'rejected':null,'submit'=>!$admin&&in_array($v['status'],['draft','changes_requested','rejected'],true)?'in_editorial':null,'prepare'=>$admin&&$v['status']==='in_editorial'?'awaiting_owner':null,'approve'=>!$admin&&$v['status']==='awaiting_owner'?'owner_approved':null,'request_changes'=>!$admin&&$v['status']==='awaiting_owner'?'changes_requested':null,default=>null};
    if(!$status)throw new RuntimeException('Esta acción no corresponde al estado de la versión.');
    if($action==='prepare'){foreach(['translations','images','layout'] as $check)if(($quality[$check]??'')!=='1')throw new RuntimeException('El portal debe revisar las traducciones, las imágenes y la presentación antes de enviar la prepublicación.');$this->validatePrepared($v);$p=$this->payload($v,(int)$v['business_id']);foreach(['es','en','pt-BR'] as $locale)if(trim($p['translations'][$locale]['display_name']??'')==='')throw new RuntimeException('Completa los tres idiomas antes de enviar la prepublicación.');if(in_array($v['plan_code'],['page','page_premium'],true)&&empty($p['media']['cover']))throw new RuntimeException('Prepara la portada antes de enviar la vista final.');}
-   if(in_array($action,['request_changes','reject'],true)&&strlen(trim($note))<5)throw new RuntimeException('Indica qué quieres corregir.');if(strlen($note)>2000)throw new RuntimeException('La nota es demasiado larga.');
+   if(in_array($action,['request_changes','reject'],true)){
+    $note=trim($note);$length=mb_strlen($note,'UTF-8');
+    if($length<5)throw new RuntimeException('Indica el motivo de rechazo o qué debemos corregir.');
+    if($length>self::REVIEW_NOTE_LIMIT)throw new RuntimeException('El motivo admite como máximo '.self::REVIEW_NOTE_LIMIT.' caracteres.');
+   }elseif(strlen($note)>2000)throw new RuntimeException('La nota es demasiado larga.');
    $q=$this->pdo->prepare('UPDATE business_editorial_versions SET status=?,note=?,owner_approved_at=?,updated_at=CURRENT_TIMESTAMP WHERE id=?');$q->execute([$status,trim($note),$status==='owner_approved'?gmdate('Y-m-d H:i:s'):null,$id]);if($action==='prepare')$this->event($id,'admin:'.$actor,'quality_checked');$this->event($id,$admin?'admin:'.$actor:'account:'.$account,$action);$this->pdo->commit();
   }catch(Throwable $e){if($this->pdo->inTransaction())$this->pdo->rollBack();throw $e;}
  }

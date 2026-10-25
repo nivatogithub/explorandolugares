@@ -6,6 +6,7 @@ require_once __DIR__.'/BusinessRegistrationPlan.php';
 
 require_once __DIR__.'/ExperienceOperatorAddon.php';
 require_once __DIR__.'/SubscriptionChangeService.php';
+require_once __DIR__.'/BusinessPromotions.php';
 final class BusinessSubscriptionAdminService
 {
     private const FREQUENCIES=['monthly'=>1,'quarterly'=>3,'semiannual'=>6,'annual'=>12];
@@ -119,6 +120,7 @@ final class BusinessSubscriptionAdminService
             if($sub['plan_code']!=='free'){$q=$this->pdo->prepare('SELECT COUNT(*) FROM business_contacts WHERE business_id=? AND channel IN ("phone","phone_fixed","whatsapp") AND contact_value<>""');$q->execute([$businessId]);if((int)$q->fetchColumn()<1)throw new RuntimeException('Registra un teléfono fijo, celular o WhatsApp de contacto antes de publicar.');}
             if($sub['publish_not_before']!==null&&$localPublishDate<$sub['publish_not_before'])throw new RuntimeException('La fecha elegida todavía no permite publicar este negocio.');
             if($sub['plan_code']!=='free'&&(!($existingPublication&&$sub['status']==='active')&&($sub['status']!=='paid_pending_publication'||$sub['reviewed_at']===null)))throw new RuntimeException('Confirma el pago revisado antes de publicar esta suscripción.');
+            if($sub['plan_code']!=='free'&&$sub['quoted_amount']!==null&&SubscriptionChangeService::cents($sub['quoted_amount'])===0&&!(new BusinessPromotions($this->pdo))->covered((int)$sub['id']))throw new RuntimeException('Un importe cero requiere un cupón de cobertura total registrado.');
             if($sub['plan_code']!=='free'&&$business['information_status']!=='ACTIVO')throw new RuntimeException('Una suscripción paga requiere que el negocio esté reclamado y autorizado como ACTIVO.');
             if($sub['plan_code']==='free'&&!in_array($sub['status'],['pending_publication','active'],true))throw new RuntimeException('La suscripción Gratis no está lista para publicarse.');
         return $sub;

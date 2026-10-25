@@ -5,4 +5,19 @@
 [data-editor-tabs]>button:focus-visible{outline:2px solid var(--el-accent);outline-offset:3px}
 [data-editor-panels]>[data-editor-panel][hidden],[data-editor-tabs]>button[hidden]{display:none}
 [data-product-editor]>fieldset[data-editor-panel]{min-width:0;margin:0 0 16px}
-[data-remove-product]{margin-top:14px}
+.product-card{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:min-content 1fr;grid-template-areas:"title photo" "description photo";gap:14px 24px;align-items:start}
+.product-card>.product-title{grid-area:title}
+.product-card>.product-description{grid-area:description}
+.product-card>.product-photo{grid-area:photo}
+.product-card textarea{min-height:160px;line-height:1.5;white-space:pre-wrap;overflow-wrap:anywhere;resize:vertical;box-sizing:border-box}
+.product-remove-action,.business-upload-remove{display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;width:32px;height:32px;min-height:32px;padding:0;border:1px solid var(--el-control-border,var(--el-border));border-radius:8px;background:var(--el-card);color:var(--el-text);cursor:pointer}
+.product-remove-action{margin-top:14px}
+.product-remove-action svg{pointer-events:none}
+.product-remove-action:disabled{visibility:hidden}
+.business-image-preview{position:relative;display:block;width:100%;max-width:420px;margin-top:10px}
+.business-image-preview img{display:block;width:100%;height:auto;max-height:320px;object-fit:contain;border:1px solid var(--el-border);border-radius:12px;background:var(--el-panel);box-sizing:border-box}
+.business-upload-remove{font-size:24px;font-weight:600;line-height:1}
+.business-image-preview .business-upload-remove{position:absolute;top:6px;right:6px;box-shadow:0 1px 4px #0002}
+.business-upload-remove:focus-visible,.product-remove-action:focus-visible{outline:3px solid var(--el-focus);outline-offset:2px}
+@media(max-width:650px){.product-card{grid-template-columns:minmax(0,1fr);grid-template-areas:"title" "description" "photo"}.business-image-preview{max-width:100%}}
+@media(pointer:coarse){.business-upload-remove,.product-remove-action{width:44px;height:44px;min-height:44px}}

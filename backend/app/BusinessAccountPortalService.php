@@ -148,6 +148,7 @@ final class BusinessAccountPortalService
                 $this->pdo->prepare('UPDATE businesses SET information_status="ACTIVO",claim_status="RECLAMADO",updated_at=CURRENT_TIMESTAMP WHERE id=?')->execute([$businessId]);
                 $this->pdo->prepare('UPDATE business_account_applications SET status="approved",reviewed_at=CURRENT_TIMESTAMP,admin_note=? WHERE id=?')->execute(['Asignación automática: no había responsable asociado. No verifica existencia, no publica ni activa suscripciones.',$applicationId]);
             }
+            if($selfOnboarding&&$existingAccountId&&!$disputedClaim)BusinessSelfOnboarding::complete($this->pdo,$applicationId);
             $this->pdo->commit();return $accountId;
         }catch(Throwable $error){if($this->pdo->inTransaction())$this->pdo->rollBack();foreach($storedFiles as $path)if(is_file($path))@unlink($path);throw $error;}
     }

@@ -1,0 +1,32 @@
+/* One business row and contextual actions; no alternate dashboard implementation. */
+.business-grid-heading{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.business-grid-heading h2{margin:0}
+.business-workspace-grid :is(th,td){white-space:nowrap;vertical-align:middle;padding:8px 12px}
+.business-row-name{display:block;max-width:260px;overflow:hidden;text-overflow:ellipsis}
+.business-row-message{max-width:36ch;margin:8px 0 0;font-size:13px;line-height:1.5;overflow-wrap:anywhere}
+.business-status{display:inline-block;padding:4px 8px;border:1px solid var(--el-border);border-radius:8px;background:var(--el-panel);font-size:13px;line-height:1.4}
+.business-row-actions,.business-owner-decision{display:flex;align-items:center;flex-wrap:nowrap;gap:6px;margin:0;width:max-content}
+.business-workspace-grid .business-icon-action{appearance:none;display:inline-flex;align-items:center;justify-content:center;flex:0 0 32px;box-sizing:border-box;width:32px;height:32px;min-height:32px;padding:0;border:1px solid var(--el-control-border);border-radius:8px;background:var(--el-field);color:var(--el-text);text-decoration:none;cursor:pointer;line-height:1}
+.business-workspace-grid .business-icon-action:hover{background:var(--el-hover);border-color:var(--el-action)}
+.business-workspace-grid .business-icon-action:focus-visible{outline:3px solid var(--el-focus);outline-offset:2px}
+.business-workspace-grid .business-icon-action--primary{background:var(--el-action);color:var(--el-on-action);border-color:var(--el-action)}
+.business-workspace-grid .business-icon-action--primary:hover{background:var(--el-action-hover)}
+.business-icon-action svg{display:block;pointer-events:none}
+.business-action-dialog{width:min(640px,calc(100vw - 32px));max-height:90dvh;overflow:auto;box-sizing:border-box;padding:24px;border:1px solid var(--el-border);border-radius:16px;background:var(--el-page);color:var(--el-text)}
+.business-action-dialog::backdrop{background:#172b4299}
+.business-action-dialog h2{margin-top:0;font-size:22px}
+.business-action-dialog p{white-space:pre-wrap;overflow-wrap:anywhere}
+.business-action-dialog label{display:grid;gap:8px;margin:16px 0}
+.business-action-dialog textarea{box-sizing:border-box;width:100%;font:inherit;line-height:1.5;min-height:160px;padding:10px;background:var(--el-field);border:1px solid var(--el-control-border);border-radius:8px;color:var(--el-text);resize:vertical}
+.business-dialog-actions{display:flex;justify-content:flex-end;flex-wrap:wrap;gap:8px}
+.business-workspace-help{font-size:14px;line-height:1.6}
+.business-grid-scroll-help{display:none;font-size:13px}
+.business-preview-dialog{width:min(1120px,calc(100vw - 24px));height:90dvh;max-width:calc(100vw - 24px);max-height:90dvh;box-sizing:border-box;padding:0;border:1px solid var(--el-border);border-radius:16px;background:var(--el-page)}
+.business-preview-dialog[open]{display:flex;flex-direction:column}
+.business-preview-dialog::backdrop{background:#172b4299}
+.business-preview-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;border-bottom:1px solid var(--el-border)}
+.business-preview-toolbar h2{margin:0;font-size:18px}
+.business-preview-dialog iframe{width:100%;flex:1;border:0;min-height:0}
+.business-preview-open{overflow:hidden}
+@media(max-width:600px){.business-grid-scroll-help{display:block}.business-grid-heading .pill{width:100%}.business-preview-toolbar{padding:10px}.business-preview-toolbar h2{font-size:16px}.business-row-name{max-width:200px}}
+@media(pointer:coarse){.business-workspace-grid .business-icon-action{width:44px;height:44px;min-height:44px;flex-basis:44px}}

@@ -8,7 +8,7 @@ final class BusinessRegistrationPlan
     public static function all():array
     {
         $plans=[];
-        foreach(['free'=>0,'featured'=>300,'page'=>450,'page_premium'=>1200] as $code=>$limit){
+        foreach(['free'=>0,'featured'=>100,'page'=>300,'page_premium'=>600] as $code=>$limit){
             $plans[$code]=['description_limit'=>$limit,'channels'=>BusinessContactVisibility::channels($code),
                 'location'=>$code!=='free','cover'=>in_array($code,['page','page_premium'],true),
                 'products'=>$code==='page_premium'?5:0,'identifier_required'=>true];
