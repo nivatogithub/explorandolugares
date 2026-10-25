@@ -9,7 +9,7 @@ $locale=(string)($_GET['idioma']??'es');
 if(!in_array($locale,['es','en','pt-BR'],true)){$locale='es';}
 $dsn=getenv('EL_DESTINATIONS_DSN')?:'';$user=getenv('EL_DESTINATIONS_DB_USER')?:null;$password=getenv('EL_DESTINATIONS_DB_PASSWORD')?:null;
 if($dsn===''){
-    $configPath=dirname(__DIR__).'/private/config.php';
+    $configPath=dirname($repositoryPath,2).'/private/config.php';
     if(is_file($configPath)){$config=require $configPath;$dsn=(string)($config['dsn']??'');$user=$config['db_user']??null;$password=$config['db_password']??null;}
 }
 if($dsn===''){http_response_code(503);exit('Lugares temporalmente no disponibles.');}
