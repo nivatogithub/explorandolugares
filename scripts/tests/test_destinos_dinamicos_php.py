@@ -276,7 +276,8 @@ class DynamicDestinationRenderTests(unittest.TestCase):
         self.assertIn('Posible duplicado de',bulk)
         script=(ROOT/"backend/public/assets/admin-business-bulk.js").read_text()
         self.assertIn('window.confirm',script)
-        self.assertIn('href="solicitudes-cuenta.php"',navigation)
+        self.assertIn('href="index.php?tab=solicitudes"',navigation)
+        self.assertIn('Solicitudes y mensajes',navigation)
         self.assertIn(".admin-sidebar nav section{display:block!important",styles)
         self.assertIn("column-count:1!important",styles)
         claim_page=(ROOT/"backend/public/reclamar-negocio.php").read_text()
@@ -357,18 +358,13 @@ class DynamicDestinationRenderTests(unittest.TestCase):
                     self.assertLess(asset.stat().st_size, 350_000)
 
     def test_destination_router_serves_public_destination_assets(self):
-        assets = (
-            "/assets/destinos/1/parque-principal-ilustrado.webp",
-            "/assets/destinos/1/parque-principal-ilustrado.webp",
-            "/assets/destinos/1/santuario-santa-laura-ilustrado-v2.webp",
-            "/assets/destinos/1/parque-principal-ilustrado.webp",
-            "/assets/destinos/1/parque-principal-ilustrado.webp",
-            "/assets/destinos/1/parque-principal-ilustrado.webp",
-            "/assets/destinos/1/parque-principal-ilustrado.webp",
-        )
+        # Approved content-addressed media replaced the retired illustrative paths.
+        manifest=json.loads((ROOT/'backend/app/content/release-media-manifest.json').read_text())
+        assets=tuple('/'+item['path'] for item in manifest['media'][:7])
+        self.assertEqual(len(set(assets)),7)
         for relative in assets:
             with self.subTest(asset=relative):
-                php = f"$_SERVER['REQUEST_URI']={json.dumps(relative)};include 'scripts/php-destinations-router.php';"
+                php = f"$_SERVER['DOCUMENT_ROOT']={json.dumps(str(self.package/'public'))};$_SERVER['REQUEST_URI']={json.dumps(relative)};$handled=include 'scripts/php-destinations-router.php';if($handled===false)readfile($_SERVER['DOCUMENT_ROOT'].$_SERVER['REQUEST_URI']);"
                 result = subprocess.run(["php", "-r", php], cwd=ROOT, capture_output=True, check=True)
                 self.assertTrue(result.stdout.startswith(b"RIFF"), f"The public image route must return {relative}")
 

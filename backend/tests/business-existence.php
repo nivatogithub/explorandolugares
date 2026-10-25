@@ -4,6 +4,7 @@ require __DIR__.'/../app/BusinessExistenceVerification.php';
 function verify(bool $ok,string $message):void{if(!$ok)throw new RuntimeException($message);}
 $row=['codigo_rnt'=>'11','nit'=>'800078692','razon_social_establecimiento'=>'BCD TRAVEL OFICINA PRINCIPAL','municipio'=>'BOGOTA D.C.','estado_rnt'=>'ACTIVO','ano'=>'2026','periodo'=>'AGOSTO'];
 $ids=BusinessExistenceVerification::capture(['business_rnt'=>'11','business_nit'=>'800.078.692-4']);
+ $formattedRnt=BusinessExistenceVerification::capture(['business_rnt'=>'RNT N.° 000.000-011']);verify($formattedRnt['rnt']==='000000011','Accept the RNT label and visual separators from its certificate');
 $r=BusinessExistenceVerification::assessNew('BCD TRAVEL OFICINA PRINCIPAL','Bogotá D.C.',$ids,static fn($url)=>[$row]);verify($r['existence']==='official_snapshot_match'&&!$r['ownership_verified']&&$r['review']==='attention','Snapshot should match but retain historical warning');verify(!isset($r['snapshot']['nit']),'Do not copy unnecessary registry fields');
 $r=BusinessExistenceVerification::assessNew('Otro comercio','Bogotá',$ids,static fn($url)=>[$row]);verify($r['existence']==='name_needs_review','No loose name verification');
 $r=BusinessExistenceVerification::assessNew($row['razon_social_establecimiento'],'Bogotá',['rnt'=>'11','nit'=>'123456789'],static fn($url)=>[$row]);verify($r['existence']==='identifier_conflict','Detect conflicting NIT');

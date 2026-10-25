@@ -122,8 +122,7 @@ final class DatabaseMaintenance
             'checks' => [['subscription_plans', ['max_summary_chars','max_description_chars','max_brand_story_chars','max_featured_services_chars']]],
             'value_checks' => [
                 ['subscription_plans','code','basic','max_summary_chars',300],
-                ['subscription_plans','code','featured','max_description_chars',1000],
-                ['subscription_plans','code','page_premium','max_brand_story_chars',1500],
+                // Current paid-plan values are owned by migrations 053/054.
             ],
             'requires' => ['subscription_plans','business_translations'],
         ],
@@ -217,6 +216,47 @@ final class DatabaseMaintenance
         '049-business-editorial'=>['file'=>'049-business-editorial.mysql.sql','checks'=>[['business_editorial_versions',['business_id','account_id','parent_id','status','plan_code','base_hash','payload_json','payload_hash','image_consent','owner_approved_at','published_at']],['business_editorial_events',['version_id','actor','action']],['business_editorial_images',['version_id','storage_name','original_name','mime_type','file_size','width','height']]],'requires'=>['businesses','accounts']],
         '050-commercial-page-price'=>['file'=>'050-commercial-page-price.mysql.sql','value_checks'=>[['subscription_plan_prices','plan_code','page','amount','79900.00'],['subscription_plan_prices','plan_code','page','amount','199750.00'],['subscription_plan_prices','plan_code','page','amount','415480.00'],['subscription_plan_prices','plan_code','page','amount','799000.00']],'requires'=>['subscription_plan_prices']],
         '051-business-evidence-retirement'=>['file'=>'051-business-evidence-retirement.mysql.sql','checks'=>[['business_evidence_retirement',['evidence_id','document_sha256','reviewer','verified_at','deleted_at']]],'requires'=>['business_account_application_evidence']],
+        '052-business-onboarding-uploads'=>['file'=>'052-business-onboarding-uploads.mysql.sql','checks'=>[['business_onboarding_uploads',['id','draft_token','upload_kind','slot_code','storage_name','mime_type','expires_at','consumed_at']]],'requires'=>[]],
+        '053-current-business-text-rules'=>[
+            'file'=>'053-current-business-text-rules.mysql.sql','checks'=>[],
+            // Idempotent configuration updates and guarded column widening.
+            'idempotent_updates'=>true,
+            'capacity_checks'=>[['business_translations','summary',1200]],
+            'value_checks'=>[
+                // Summary quotas are superseded by 054; retain the storage check above.
+                ['subscription_plans','code','free','max_description_chars',0],
+                ['subscription_plans','code','featured','max_description_chars',0],
+                ['subscription_plans','code','page','max_description_chars',0],
+                ['subscription_plans','code','page_premium','max_description_chars',0],
+                ['subscription_plans','code','page_premium','max_brand_story_chars',0],
+                ['subscription_plans','code','page_premium','max_featured_services_chars',0],
+            ],'requires'=>['subscription_plans','business_translations'],
+        ],
+        '056-business-promotions'=>[
+            'file'=>'056-business-promotions.mysql.sql',
+            'checks'=>[['business_promotion_codes',['code','percentage','plans_json','periods_json','enabled','expires_at','max_uses']],['business_promotion_redemptions',['subscription_id','code','business_id','account_id','list_cents','discount_cents','due_cents']],['business_promotion_audit',['code','actor','settings_json']]],
+            'requires'=>['business_subscriptions','businesses','accounts'],
+        ],
+        '057-business-promotion-places'=>[
+            'file'=>'057-business-promotion-places.mysql.sql',
+            'checks'=>[['business_promotion_place_scopes',['code']],['business_promotion_places',['code','destination_id']],['business_promotion_redemption_places',['subscription_id','destination_id']]],
+            'requires'=>['business_promotion_codes','business_promotion_redemptions','businesses','destinations'],
+        ],
+        '055-business-registration-drafts'=>[
+            'file'=>'055-business-registration-drafts.mysql.sql',
+            'checks'=>[['business_registration_drafts',['id','account_id','payload_json','wizard_step','revision','status','business_id','created_at','updated_at']]],
+            'requires'=>['accounts','businesses'],
+        ],
+        '054-business-description-budgets'=>[
+            'file'=>'054-business-description-budgets.mysql.sql','checks'=>[],
+            'idempotent_updates'=>true,
+            'value_checks'=>[
+                ['subscription_plans','code','free','max_summary_chars',0],
+                ['subscription_plans','code','featured','max_summary_chars',100],
+                ['subscription_plans','code','page','max_summary_chars',300],
+                ['subscription_plans','code','page_premium','max_summary_chars',600],
+            ],'requires'=>['subscription_plans'],
+        ],
         '045-business-service-sections'=>['file'=>'045-business-service-sections.mysql.sql','checks'=>[['business_service_sections',['business_id','locale','section_code','description']]],'requires'=>['businesses']],
         '044-subscription-changes'=>['file'=>'044-subscription-changes.mysql.sql','checks'=>[['subscription_changes',['subscription_id','source_subscription_id','change_kind','quoted_at','term_starts_at','effective_at','original_ends_at','source_full_cents','target_full_cents','credit_cents','target_remaining_cents','due_cents','currency']]],'requires'=>['business_subscriptions']],
         '043-account-lifecycle'=>['file'=>'043-account-lifecycle.mysql.sql','checks'=>[['account_access_events',['account_id','event_type','actor_account_id','reason','created_at']],['account_reactivations',['account_id','token_hash','expires_at','used_at']]],'requires'=>['accounts']],
@@ -288,6 +328,7 @@ final class DatabaseMaintenance
             foreach($migration['checks']??[] as [$table,$columns]){if(!in_array($table,$tables,true)){$lines[]='Falta tabla: '.$table;continue;}$missing=array_diff($columns,$this->columns($table));$lines[]=$missing?'Faltan columnas en '.$table.': '.implode(', ',$missing):'Tabla y columnas comprobadas: '.$table;}
             foreach($migration['row_checks']??[] as [$table,$column,$value])$lines[]='Registro requerido en '.$table.': '.$column.' = '.$value;
             foreach($migration['value_checks']??[] as [$table,$key,$value,$column,$expected])$lines[]='Configuración requerida en '.$table.': '.$key.' = '.$value.', '.$column.' = '.$expected;
+            foreach($migration['capacity_checks']??[] as [$table,$column,$minimum])$lines[]='Capacidad mínima de '.$table.'.'.$column.': '.$minimum.' caracteres';
             $result[$id]=$lines;
         }
         return $result;
@@ -355,6 +396,7 @@ final class DatabaseMaintenance
         foreach (self::MIGRATIONS as $id => $migration) {
             if ($selected !== null && !in_array($id, $selected, true)) continue;
             $state = $this->migrationState($migration, $tables);
+            if($state==='partial'&&!empty($migration['idempotent_updates']))$state='pending';
             if ($id==='043-account-lifecycle'&&$state==='partial') {
                 $this->validateLifecyclePartial($tables);
                 $state='pending';
@@ -380,6 +422,7 @@ final class DatabaseMaintenance
             if ($selected !== null && !in_array($id, $selected, true)) continue;
             $tables = $this->tables();
             $state = $this->migrationState($migration, $tables);
+            if($state==='partial'&&!empty($migration['idempotent_updates']))$state='pending';
             if ($id==='043-account-lifecycle'&&$state==='partial') {
                 $this->validateLifecyclePartial($tables);
                 $state='pending';
@@ -489,6 +532,16 @@ final class DatabaseMaintenance
             if (!in_array($table,$tables,true)||!in_array($keyColumn,$this->columns($table),true)||!in_array($valueColumn,$this->columns($table),true)) continue;
             $q=$this->pdo->prepare('SELECT COUNT(*) FROM `'.$table.'` WHERE `'.$keyColumn.'`=? AND `'.$valueColumn.'`=?');$q->execute([$keyValue,$value]);
             if ((int)$q->fetchColumn()>0) $present++;
+        }
+        foreach(($migration['capacity_checks']??[]) as [$table,$column,$minimum]){
+            $total++;
+            if(!in_array($table,$tables,true)||!in_array($column,$this->columns($table),true))continue;
+            if($this->pdo->getAttribute(PDO::ATTR_DRIVER_NAME)==='mysql'){
+                $q=$this->pdo->prepare('SELECT CHARACTER_MAXIMUM_LENGTH FROM information_schema.COLUMNS WHERE TABLE_SCHEMA=DATABASE() AND TABLE_NAME=? AND COLUMN_NAME=?');$q->execute([$table,$column]);
+                if((int)$q->fetchColumn()>=$minimum)$present++;
+            }else{
+                foreach($this->pdo->query('PRAGMA table_info(`'.$table.'`)')->fetchAll(PDO::FETCH_ASSOC) as $info)if($info['name']===$column&&strtoupper($info['type'])==='TEXT'){$present++;break;}
+            }
         }
         if ($total===0) throw new RuntimeException('La migración no define controles de estado.');
         if ($present === $total) return 'applied';

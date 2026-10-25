@@ -5,9 +5,11 @@ require_once __DIR__.'/BusinessSubscriptionAdminService.php';
 require_once __DIR__.'/BusinessContactVisibility.php';
 require_once __DIR__.'/PremiumBusinessProfile.php';
 require_once __DIR__.'/BusinessShowcase.php';
+require_once __DIR__.'/BusinessRegistrationPlan.php';
 /** Immutable payloads and explicit approval of the exact version. Never sends mail or generates images on save. */
 final class BusinessEditorialService
 {
+ public const REVIEW_NOTE_LIMIT=200;
  public const LABELS=['draft'=>'Borrador privado','in_editorial'=>'En preparación editorial','awaiting_owner'=>'Pendiente de tu aprobación','changes_requested'=>'Correcciones solicitadas','rejected'=>'No aprobado para publicación','owner_approved'=>'Listo para publicación final','published'=>'Publicado'];
  public function __construct(private PDO $pdo,private string $storage){}
  public function ready():bool{try{$this->pdo->query('SELECT id FROM business_editorial_versions LIMIT 1');return true;}catch(PDOException $e){if(str_contains($e->getMessage(),'no such table')||($e->errorInfo[1]??0)===1146)return false;throw $e;}}
@@ -15,6 +17,10 @@ final class BusinessEditorialService
  private function lock(int $business):void{$q=$this->pdo->prepare('SELECT id FROM businesses WHERE id=?'.($this->pdo->getAttribute(PDO::ATTR_DRIVER_NAME)==='mysql'?' FOR UPDATE':''));$q->execute([$business]);if(!$q->fetchColumn())throw new RuntimeException('El negocio no existe.');}
  public function authorize(int $account,int $business):void{$q=$this->pdo->prepare('SELECT 1 FROM business_account_memberships m JOIN accounts a ON a.id=m.account_id WHERE m.account_id=? AND m.business_id=? AND m.status="active" AND m.role IN ("owner","manager") AND a.status="active"');$q->execute([$account,$business]);if(!$q->fetchColumn())throw new RuntimeException('Este negocio no está asociado a tu cuenta.');}
  public function latest(int $business):?array{$q=$this->pdo->prepare('SELECT * FROM business_editorial_versions WHERE business_id=? ORDER BY id DESC LIMIT 1'.($this->pdo->inTransaction()&&$this->pdo->getAttribute(PDO::ATTR_DRIVER_NAME)==='mysql'?' FOR UPDATE':''));$q->execute([$business]);$v=$q->fetch(PDO::FETCH_ASSOC);return $v?:null;}
+ /** Starts the internal editorial handoff; the owner never performs this action. */
+ public function beginEditorial(int $business,string $actor):void{
+  if(trim($actor)==='')throw new RuntimeException('La preparación editorial requiere un administrador.');$this->pdo->beginTransaction();try{$this->lock($business);$latest=$this->latest($business);if(!$latest)throw new RuntimeException('Primero debe existir un borrador privado del negocio.');if($latest['status']==='in_editorial'){$this->pdo->commit();return;}if(!in_array($latest['status'],['draft','changes_requested','rejected'],true))throw new RuntimeException('La versión actual no admite una nueva preparación editorial.');$q=$this->pdo->prepare('UPDATE business_editorial_versions SET status="in_editorial",note="",updated_at=CURRENT_TIMESTAMP WHERE id=?');$q->execute([$latest['id']]);$this->event((int)$latest['id'],'admin:'.$actor,'begin_editorial');$this->pdo->commit();}catch(Throwable $error){if($this->pdo->inTransaction())$this->pdo->rollBack();throw $error;}
+ }
  public function version(int $id):array{$q=$this->pdo->prepare('SELECT * FROM business_editorial_versions WHERE id=?'.($this->pdo->inTransaction()&&$this->pdo->getAttribute(PDO::ATTR_DRIVER_NAME)==='mysql'?' FOR UPDATE':''));$q->execute([$id]);return $q->fetch(PDO::FETCH_ASSOC)?:throw new RuntimeException('La versión no existe.');}
  public function live(int $business):array{
   $r=$this->admin()->find($business)??throw new RuntimeException('El negocio no existe.');
@@ -24,6 +30,7 @@ final class BusinessEditorialService
  public static function hash(array $payload):string{$sort=function(array $value)use(&$sort):array{foreach($value as &$item)if(is_array($item))$item=$sort($item);unset($item);if(!array_is_list($value))ksort($value);return $value;};return hash('sha256',json_encode($sort($payload),JSON_THROW_ON_ERROR|JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES));}
  public function options(int $business):array{
   $q=$this->pdo->prepare('SELECT p.* FROM subscription_plans p JOIN business_subscriptions s ON s.plan_code=p.code WHERE s.business_id=? ORDER BY s.id DESC LIMIT 1');$q->execute([$business]);$p=$q->fetch(PDO::FETCH_ASSOC);if(!$p)throw new RuntimeException('Primero selecciona una suscripción.');
+  foreach(BusinessRegistrationPlan::textLimits((string)$p['code']) as $field=>$limit)$p['max_'.$field.'_chars']=$limit;
   return $p;
  }
  public function payload(?array $v,int $business):array{return $v?json_decode($v['payload_json'],true,32,JSON_THROW_ON_ERROR):$this->live($business);}
@@ -65,9 +72,17 @@ final class BusinessEditorialService
  private function contactValid(string $channel,string $value):bool{if(strlen($value)>500)return false;return match($channel){'email'=>(bool)filter_var($value,FILTER_VALIDATE_EMAIL),'phone','phone_fixed','whatsapp'=>preg_match('/^\+?[0-9() .-]{7,24}$/D',$value)===1,default=>(bool)filter_var($value,FILTER_VALIDATE_URL)&&in_array(parse_url($value,PHP_URL_SCHEME),['http','https'],true)};}
  /** Every edit creates a new version; previous approvals cannot approve changed content. */
  public function save(int $account,int $business,int $expected,array $input,bool $imageConsent=false,bool $editor=false,string $actor='',mixed $uploads=null):int{
-  if($editor&&trim($actor)==='')throw new RuntimeException('La preparación editorial requiere un administrador.');$storedFiles=[];$this->pdo->beginTransaction();try{$this->lock($business);if(!$editor)$this->authorize($account,$business);$latest=$this->latest($business);if((int)($latest['id']??0)!==$expected)throw new RuntimeException('Otra persona cambió esta versión. Recarga antes de guardar.');
-   if($editor&&(!$latest||!in_array($latest['status'],['in_editorial','changes_requested'],true)))throw new RuntimeException('Primero debe enviarse el contenido a preparación.');
-   $payload=$this->clean($business,$input,$this->payload($latest,$business),$editor);$plan=$this->options($business)['code'];$status=$editor?'in_editorial':'draft';
+  if($editor&&trim($actor)==='')throw new RuntimeException('La preparación editorial requiere un administrador.');$storedFiles=[];$ownTransaction=!$this->pdo->inTransaction();if($ownTransaction)$this->pdo->beginTransaction();try{$this->lock($business);if(!$editor)$this->authorize($account,$business);$latest=$this->latest($business);if((int)($latest['id']??0)!==$expected)throw new RuntimeException('Otra persona cambió esta versión. Recarga antes de guardar.');
+   // The first editorial ZIP may return while the merchant draft is still private.
+   // Once a prepublication has been sent, corrections must come through the
+   // merchant's explicit request rather than silently replacing that version.
+   if($editor&&$latest&&!in_array($latest['status'],['draft','in_editorial','changes_requested'],true))throw new RuntimeException('La última versión ya está en aprobación o publicada; espera una solicitud de correcciones antes de importar otra propuesta.');
+   $previous=$this->payload($latest,$business);
+   if(!$latest){
+    $application=$this->pdo->prepare('SELECT business_details_json FROM business_account_applications WHERE business_id=? AND account_id=? AND status="approved" ORDER BY id DESC LIMIT 1');$application->execute([$business,$account]);$details=json_decode((string)($application->fetchColumn()?:'{}'),true,32,JSON_THROW_ON_ERROR);
+    if($details){$previous=array_replace($previous,$details['location']??[]);$previous['source_images']=$details['source_images']??[];foreach($details['text']??[] as $key=>$text)$previous['translations']['es'][$key]=$text;foreach($details['channels']??[] as $channel=>$value)$previous['contacts'][$channel]=['channel'=>$channel,'contact_value'=>$value,'is_public'=>1];foreach($details['products']??[] as $index=>$product)$previous['showcase']['products'][$index]=['translations'=>['es'=>['name'=>$product['title'],'description'=>$product['summary']]],'asset_id'=>0];}
+   }
+   $payload=$this->clean($business,$input,$previous,$editor);$plan=$this->options($business)['code'];$status=$editor?'in_editorial':'draft';
    $q=$this->pdo->prepare('INSERT INTO business_editorial_versions(business_id,account_id,parent_id,status,plan_code,base_hash,payload_json,payload_hash,image_consent,note) VALUES(?,?,?,?,?,?,?,?,?,?)');$q->execute([$business,$editor?$latest['account_id']:$account,$latest['id']??null,$status,$plan,$latest&&$latest['status']!=='published'?$latest['base_hash']:self::hash($this->live($business)),json_encode($payload,JSON_THROW_ON_ERROR),self::hash($payload),$editor?(int)$latest['image_consent']:(int)$imageConsent,'']);$id=(int)$this->pdo->lastInsertId();
    if(!$latest)$this->pdo->prepare('INSERT INTO business_editorial_images(version_id,storage_name,original_name,mime_type,file_size,width,height) SELECT ?,storage_name,original_name,mime_type,file_size,width,height FROM business_image_references WHERE business_id=?')->execute([$id,$business]);
    if($latest)$this->pdo->prepare('INSERT INTO business_editorial_images(version_id,storage_name,original_name,mime_type,file_size,width,height) SELECT ?,storage_name,original_name,mime_type,file_size,width,height FROM business_editorial_images WHERE version_id=?')->execute([$id,$latest['id']]);
@@ -75,29 +90,33 @@ final class BusinessEditorialService
    $remove=$input['remove_reference_ids']??[];if(!is_array($remove)||count($remove)>20)throw new RuntimeException('Revisa las referencias que quieres retirar.');
    foreach($remove as $reference){$q=$this->pdo->prepare('SELECT storage_name FROM business_editorial_images WHERE id=? AND version_id=?');$q->execute([(int)$reference,(int)($latest['id']??0)]);$name=$q->fetchColumn();if(!$name)throw new RuntimeException('Esa referencia no pertenece a la versión anterior.');$this->pdo->prepare('DELETE FROM business_editorial_images WHERE version_id=? AND storage_name=?')->execute([$id,$name]);}
    // A replacement retires the previous source only from the new version, keeping history intact.
-   foreach((array)($uploads['error']??[]) as $slot=>$uploadError){if((int)$uploadError!==UPLOAD_ERR_OK||!in_array((string)$slot,['cover','product_0','product_1','product_2','product_3'],true))continue;$old=$payload['source_images'][$slot]??'';if($old&&count(array_keys($payload['source_images'],$old,true))===1)$this->pdo->prepare('DELETE FROM business_editorial_images WHERE version_id=? AND storage_name=?')->execute([$id,$old]);}
+   foreach((array)($uploads['error']??[]) as $slot=>$uploadError){if((int)$uploadError!==UPLOAD_ERR_OK||!in_array((string)$slot,['cover','product_0','product_1','product_2','product_3','product_4'],true))continue;$old=$payload['source_images'][$slot]??'';if($old&&count(array_keys($payload['source_images'],$old,true))===1)$this->pdo->prepare('DELETE FROM business_editorial_images WHERE version_id=? AND storage_name=?')->execute([$id,$old]);}
    if($uploads!==null){if(!$imageConsent&&!$editor)throw new RuntimeException('Autoriza la preparación editorial de tus imágenes antes de cargarlas.');$this->admin()->storeEditorialReferences($id,$uploads,$storedFiles,match($plan){'featured'=>1,'page'=>2,'page_premium'=>9,default=>0});}
    // Stable private storage names survive immutable version copies; never accept another business's reference.
    $sources=$input['source_images']??($payload['source_images']??[]);if(!is_array($sources))throw new RuntimeException('Revisa las fotografías asociadas.');
-   $allowedSlots=in_array($plan,['page','page_premium'],true)?['cover']:[];if($plan==='page_premium')$allowedSlots=[...$allowedSlots,'product_0','product_1','product_2','product_3'];
+   $allowedSlots=in_array($plan,['page','page_premium'],true)?['cover']:[];if($plan==='page_premium')$allowedSlots=[...$allowedSlots,'product_0','product_1','product_2','product_3','product_4'];
    $removedNames=[];foreach($remove as $reference){$q=$this->pdo->prepare('SELECT storage_name FROM business_editorial_images WHERE id=? AND version_id=?');$q->execute([(int)$reference,(int)($latest['id']??0)]);if($removedName=$q->fetchColumn())$removedNames[]=$removedName;}
    $selected=[];foreach($sources as $slot=>$name){if(!in_array($slot,$allowedSlots,true))throw new RuntimeException('La fotografía no corresponde a esta suscripción.');$name=(string)$name;if($name===''||in_array($name,$removedNames,true)||(int)($uploads['error'][$slot]??UPLOAD_ERR_NO_FILE)===UPLOAD_ERR_OK)continue;$q=$this->pdo->prepare('SELECT 1 FROM business_editorial_images WHERE version_id=? AND storage_name=?');$q->execute([$id,$name]);if(!$q->fetchColumn())throw new RuntimeException('La fotografía no pertenece a esta versión.');$selected[$slot]=$name;}
    foreach(array_values(array_filter(array_keys((array)($uploads['name']??[])),static fn($slot)=>(int)($uploads['error'][$slot]??UPLOAD_ERR_NO_FILE)===UPLOAD_ERR_OK)) as $offset=>$slot){if(in_array((string)$slot,$allowedSlots,true)&&isset($storedFiles[$offset]))$selected[$slot]=basename($storedFiles[$offset]);}
    // Empty/deleted products cannot leave an orphaned visible association.
    foreach($selected as $slot=>$name)if(str_starts_with($slot,'product_')&&!isset($payload['showcase']['products'][(int)substr($slot,8)])){if((int)($uploads['error'][$slot]??UPLOAD_ERR_NO_FILE)===UPLOAD_ERR_OK)throw new RuntimeException('Completa el nombre del producto al que pertenece la fotografía.');unset($selected[$slot]);}
    $payload['source_images']=$selected;$this->pdo->prepare('UPDATE business_editorial_versions SET payload_json=?,payload_hash=? WHERE id=?')->execute([json_encode($payload,JSON_THROW_ON_ERROR),self::hash($payload),$id]);
-   $this->event($id,$editor?'admin:'.$actor:'account:'.$account,'saved');$this->pdo->commit();return $id;
-  }catch(Throwable $e){if($this->pdo->inTransaction())$this->pdo->rollBack();foreach($storedFiles as $file)if(is_file($file))@unlink($file);throw $e;}
+   $this->event($id,$editor?'admin:'.$actor:'account:'.$account,'saved');if($ownTransaction)$this->pdo->commit();return $id;
+  }catch(Throwable $e){if($ownTransaction&&$this->pdo->inTransaction())$this->pdo->rollBack();foreach($storedFiles as $file)if(is_file($file))@unlink($file);throw $e;}
  }
  public function transition(int $id,string $action,int $account=0,string $actor='',string $note='',string $expectedHash='',array $quality=[]):void{
   $initial=$this->version($id);$this->pdo->beginTransaction();try{$this->lock((int)$initial['business_id']);$v=$this->version($id);if((int)$this->latest((int)$v['business_id'])['id']!==$id)throw new RuntimeException('Esta versión fue reemplazada.');
    if($expectedHash===''||!hash_equals($v['payload_hash'],$expectedHash))throw new RuntimeException('La versión revisada cambió. Recarga.');
-   $admin=$actor!=='';if(!$admin)$this->authorize($account,(int)$v['business_id']);if($action==='approve'&&!$admin&&$v['status']==='published'&&!empty($v['owner_approved_at'])){$this->pdo->commit();return;}
+   $admin=$actor!=='';if(!$admin)$this->authorize($account,(int)$v['business_id']);if($action==='approve'&&!$admin&&in_array($v['status'],['owner_approved','published'],true)&&!empty($v['owner_approved_at'])){$this->pdo->commit();return;}
    $status=match($action){'reject'=>$admin&&in_array($v['status'],['in_editorial','owner_approved','awaiting_owner'],true)?'rejected':null,'submit'=>!$admin&&in_array($v['status'],['draft','changes_requested','rejected'],true)?'in_editorial':null,'prepare'=>$admin&&$v['status']==='in_editorial'?'awaiting_owner':null,'approve'=>!$admin&&$v['status']==='awaiting_owner'?'owner_approved':null,'request_changes'=>!$admin&&$v['status']==='awaiting_owner'?'changes_requested':null,default=>null};
    if(!$status)throw new RuntimeException('Esta acción no corresponde al estado de la versión.');
    if($action==='prepare'){foreach(['translations','images','layout'] as $check)if(($quality[$check]??'')!=='1')throw new RuntimeException('El portal debe revisar las traducciones, las imágenes y la presentación antes de enviar la prepublicación.');$this->validatePrepared($v);$p=$this->payload($v,(int)$v['business_id']);foreach(['es','en','pt-BR'] as $locale)if(trim($p['translations'][$locale]['display_name']??'')==='')throw new RuntimeException('Completa los tres idiomas antes de enviar la prepublicación.');if(in_array($v['plan_code'],['page','page_premium'],true)&&empty($p['media']['cover']))throw new RuntimeException('Prepara la portada antes de enviar la vista final.');}
-   if(in_array($action,['request_changes','reject'],true)&&strlen(trim($note))<5)throw new RuntimeException('Indica qué quieres corregir.');if(strlen($note)>2000)throw new RuntimeException('La nota es demasiado larga.');
-   $q=$this->pdo->prepare('UPDATE business_editorial_versions SET status=?,note=?,owner_approved_at=?,updated_at=CURRENT_TIMESTAMP WHERE id=?');$q->execute([$status,trim($note),$status==='owner_approved'?gmdate('Y-m-d H:i:s'):null,$id]);if($action==='prepare')$this->event($id,'admin:'.$actor,'quality_checked');$this->event($id,$admin?'admin:'.$actor:'account:'.$account,$action);if($action==='approve')$this->publishApproved($id,'account:'.$account,$expectedHash);$this->pdo->commit();
+   if(in_array($action,['request_changes','reject'],true)){
+    $note=trim($note);$length=mb_strlen($note,'UTF-8');
+    if($length<5)throw new RuntimeException('Indica el motivo de rechazo o qué debemos corregir.');
+    if($length>self::REVIEW_NOTE_LIMIT)throw new RuntimeException('El motivo admite como máximo '.self::REVIEW_NOTE_LIMIT.' caracteres.');
+   }elseif(strlen($note)>2000)throw new RuntimeException('La nota es demasiado larga.');
+   $q=$this->pdo->prepare('UPDATE business_editorial_versions SET status=?,note=?,owner_approved_at=?,updated_at=CURRENT_TIMESTAMP WHERE id=?');$q->execute([$status,trim($note),$status==='owner_approved'?gmdate('Y-m-d H:i:s'):null,$id]);if($action==='prepare')$this->event($id,'admin:'.$actor,'quality_checked');$this->event($id,$admin?'admin:'.$actor:'account:'.$account,$action);$this->pdo->commit();
   }catch(Throwable $e){if($this->pdo->inTransaction())$this->pdo->rollBack();throw $e;}
  }
  private function event(int $id,string $actor,string $action):void{$this->pdo->prepare('INSERT INTO business_editorial_events(version_id,actor,action) VALUES(?,?,?)')->execute([$id,$actor,$action]);}
@@ -120,6 +139,13 @@ $adminInput=$payload;
  }
  public function publish(int $id,string $actor,string $hash):void{
   if(trim($actor)==='')throw new RuntimeException('La publicación requiere un administrador.');$this->publishApproved($id,'admin:'.$actor,$hash);
+ }
+ /** The proprietor's approval is the final publication consent for this exact reviewed version. */
+ public function publishByOwner(int $id,int $account,string $hash):void{
+  if($account<1)throw new RuntimeException('Inicia sesión para aprobar y publicar tu negocio.');
+  $version=$this->version($id);
+  $this->authorize($account,(int)$version['business_id']);
+  $this->publishApproved($id,'account:'.$account,$hash);
  }
  private function publishApproved(int $id,string $actor,string $hash):void{
   $initial=$this->version($id);$ownTransaction=!$this->pdo->inTransaction();if($ownTransaction)$this->pdo->beginTransaction();try{$business=(int)$initial['business_id'];$this->lock($business);$v=$this->version($id);if((int)$this->latest($business)['id']!==$id||$v['status']!=='owner_approved'||!hash_equals($v['payload_hash'],$hash))throw new RuntimeException('Publica únicamente la última versión aprobada por el comerciante.');

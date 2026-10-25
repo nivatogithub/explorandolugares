@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 require dirname(__DIR__,2).'/app/bootstrap.php';
-if(empty($_SESSION['admin'])||time()-(int)($_SESSION['last_seen']??0)>1800){http_response_code(403);exit('Inicia sesión en administración.');}$_SESSION['last_seen']=time();
+require_admin_session();
 $error='';$privacy=$config['privacy']??[];
 if($_SERVER['REQUEST_METHOD']==='POST'){
  csrf();try{PortalSettings::save(dirname($configFile),$_POST,(int)($_SESSION['admin_account_id']??0));header('Location: configuracion.php?guardado=1',true,303);exit;}

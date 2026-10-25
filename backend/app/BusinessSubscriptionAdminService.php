@@ -3,9 +3,11 @@ declare(strict_types=1);
 require_once __DIR__.'/BusinessServiceSections.php';
 require_once __DIR__.'/GeolocationPolicy.php';
 require_once __DIR__.'/BusinessOwnershipEvidence.php';
+require_once __DIR__.'/BusinessRegistrationPlan.php';
 
 require_once __DIR__.'/ExperienceOperatorAddon.php';
 require_once __DIR__.'/SubscriptionChangeService.php';
+require_once __DIR__.'/BusinessPromotions.php';
 final class BusinessSubscriptionAdminService
 {
     private const FREQUENCIES=['monthly'=>1,'quarterly'=>3,'semiannual'=>6,'annual'=>12];
@@ -16,6 +18,7 @@ final class BusinessSubscriptionAdminService
     {
         $plans=$this->pdo->query('SELECT p.code,p.max_gallery_photos,p.max_summary_chars,p.max_description_chars,p.max_brand_story_chars,p.max_featured_services_chars,t.name,t.summary FROM subscription_plans p JOIN subscription_plan_translations t ON t.plan_code=p.code AND t.locale="es" WHERE p.is_active=1 AND p.code IN ("free","featured","page","page_premium") ORDER BY p.display_order')->fetchAll(PDO::FETCH_ASSOC);
         foreach($plans as &$plan){
+            foreach(BusinessRegistrationPlan::textLimits((string)$plan['code']) as $field=>$limit)$plan['max_'.$field.'_chars']=$limit;
             $plan['max_gallery_photos']=(int)$plan['max_gallery_photos'];
             $plan['text_limits']=['summary'=>(int)$plan['max_summary_chars'],'description'=>(int)$plan['max_description_chars'],'brand_story'=>(int)$plan['max_brand_story_chars'],'featured_services'=>(int)$plan['max_featured_services_chars']];
             $q=$this->pdo->prepare('SELECT billing_frequency,amount,currency FROM subscription_plan_prices WHERE plan_code=?');$q->execute([$plan['code']]);
@@ -29,19 +32,18 @@ final class BusinessSubscriptionAdminService
     private static function contentLimitDescription(array $limits):string
     {
         $parts=[];
-        foreach(['summary'=>'descripción breve','description'=>'descripción ampliada','brand_story'=>'historia del negocio','featured_services'=>'servicios destacados'] as $field=>$label){$limit=(int)($limits[$field]??0);if($limit>0)$parts[]=$label.': hasta '.$limit.' caracteres';}
+        foreach(['summary'=>'descripción del negocio'] as $field=>$label){$limit=(int)($limits[$field]??0);if($limit>0)$parts[]=$label.': hasta '.$limit.' caracteres';}
         return $parts?'Límites de contenido: '.implode('; ',$parts).'.':'Este nivel no admite descripciones públicas.';
     }
 
     private static function requirements(string $plan,int $galleryPhotos):array
     {
-        $base=['Nombre, categoría y destino. Para esta suscripción paga, completa la dirección y confirma su punto en el mapa.'];
+        $base=['Nombre, categoría, lugar, NIT o RNT, relación y soporte privado del negocio.'];
         return match($plan){
-            'free'=>['Solo requiere nombre, categoría y destino. No exige dirección, mapa, teléfono, descripciones, horarios ni imágenes. Los canales de investigación se conservan privados.'],
-            'basic'=>[...$base,'Añade: un resumen corto y al menos un celular/WhatsApp público para contacto directo. No solicita descripción larga, logo, fotos, horarios ni datos operativos.'],
-            'featured'=>[...$base,'Añade: descripción intermedia, contacto público y tarjeta destacada. Puede entregar su logo como referencia privada; si no tiene, la tarjeta usa sus iniciales. No incluye fotografías.'],
-            'page'=>[...$base,'Añade página propia: descripción completa, logo (si no tiene, se muestran sus iniciales), celular/WhatsApp público, horarios y rango de precios. Puede entregar dos referencias privadas: logo y una imagen para preparar la portada. El equipo crea y revisa la imagen final; las referencias no se publican directamente. Menú/catálogo, reservas, redes y capacidad se piden solo cuando aplican.'],
-            'page_premium'=>[...$base,'Incluye todo lo de Página y dos secciones extra obligatorias: historia o propuesta del negocio y servicios destacados, traducidos a los idiomas del portal. Se solicita logo; si no tiene, se usan iniciales. Las referencias son privadas; se prepara una portada y hasta '.$galleryPhotos.' fotos adicionales (tres fotos públicas en total) para revisión. No se publican directamente las referencias. Menú/catálogo, reservas, redes, precios y capacidad se completan cuando aplican.'],
+            'free'=>[...$base,'Sin descripción, canales públicos, imágenes ni página propia.'],
+            'featured'=>[...$base,'Agrega una descripción, dirección/punto en el mapa y teléfono; WhatsApp disponible. Sin fotos ni página propia.'],
+            'page'=>[...$base,'Conserva Destacado y agrega portada, página propia y correo del negocio. Una sola descripción.'],
+            'page_premium'=>[...$base,'Conserva Página y agrega sitio web, Instagram, Facebook y LinkedIn, y hasta cinco productos o servicios con título, descripción corta y foto. Una sola descripción del negocio.'],
             default=>$base,
         };
     }
@@ -120,6 +122,7 @@ final class BusinessSubscriptionAdminService
             if($sub['plan_code']!=='free'){$q=$this->pdo->prepare('SELECT COUNT(*) FROM business_contacts WHERE business_id=? AND channel IN ("phone","phone_fixed","whatsapp") AND contact_value<>""');$q->execute([$businessId]);if((int)$q->fetchColumn()<1)throw new RuntimeException('Registra un teléfono fijo, celular o WhatsApp de contacto antes de publicar.');}
             if($sub['publish_not_before']!==null&&$localPublishDate<$sub['publish_not_before'])throw new RuntimeException('La fecha elegida todavía no permite publicar este negocio.');
             if($sub['plan_code']!=='free'&&(!($existingPublication&&$sub['status']==='active')&&($sub['status']!=='paid_pending_publication'||$sub['reviewed_at']===null)))throw new RuntimeException('Confirma el pago revisado antes de publicar esta suscripción.');
+            if($sub['plan_code']!=='free'&&$sub['quoted_amount']!==null&&SubscriptionChangeService::cents($sub['quoted_amount'])===0&&!(new BusinessPromotions($this->pdo))->covered((int)$sub['id']))throw new RuntimeException('Un importe cero requiere un cupón de cobertura total registrado.');
             if($sub['plan_code']!=='free'&&$business['information_status']!=='ACTIVO')throw new RuntimeException('Una suscripción paga requiere que el negocio esté reclamado y autorizado como ACTIVO.');
             if($sub['plan_code']==='free'&&!in_array($sub['status'],['pending_publication','active'],true))throw new RuntimeException('La suscripción Gratis no está lista para publicarse.');
         return $sub;
@@ -176,6 +179,7 @@ final class BusinessSubscriptionAdminService
     {
         $sub=['plan_code'=>$plan];
             $planQuery=$this->pdo->prepare('SELECT max_gallery_photos,max_summary_chars,max_description_chars,max_brand_story_chars,max_featured_services_chars FROM subscription_plans WHERE code=?');$planQuery->execute([$sub['plan_code']]);$limits=$planQuery->fetch(PDO::FETCH_ASSOC);if(!$limits)throw new RuntimeException('No se encontró la suscripción.');$photoLimit=(int)$limits['max_gallery_photos'];
+            foreach(BusinessRegistrationPlan::textLimits($plan) as $field=>$limit)$limits['max_'.$field.'_chars']=$limit;
             $mediaQuery=$this->pdo->prepare('SELECT role,COUNT(*) AS amount FROM business_media WHERE business_id=? GROUP BY role');$mediaQuery->execute([$businessId]);$mediaCounts=[];foreach($mediaQuery->fetchAll(PDO::FETCH_ASSOC) as $media)$mediaCounts[$media['role']]=(int)$media['amount'];
             if($sub['plan_code']==='page'||$sub['plan_code']==='page_premium'){
                 if(($mediaCounts['cover']??0)<1)throw new RuntimeException('Las suscripciones Página requieren una portada aprobada.');
@@ -190,7 +194,7 @@ final class BusinessSubscriptionAdminService
             foreach($translations as $locale=>$translation)foreach(['summary','description','brand_story','featured_services'] as $field){$limit=(int)$limits['max_'.$field.'_chars'];if($limit>0&&preg_match_all('/./us',(string)($translation[$field]??''))>$limit)throw new RuntimeException('El campo '.$field.' en '.$locale.' supera el límite de '.$limit.' caracteres de esta suscripción.');}
             $requiredSpanish=['display_name'];
             if(in_array($sub['plan_code'],['basic','featured','page','page_premium'],true))$requiredSpanish[]='summary';
-            if(in_array($sub['plan_code'],['featured','page','page_premium'],true))$requiredSpanish[]='description';
+            if((int)$limits['max_description_chars']>0)$requiredSpanish[]='description';
             foreach($requiredSpanish as $field)if(trim((string)($translations['es'][$field]??''))==='')throw new RuntimeException('Completa la información adicional que solicita esta suscripción antes de publicar.');
             foreach(['en','pt-BR'] as $locale){$row=$translations[$locale]??null;if(!$row)throw new RuntimeException('Completa y traduce el contenido a español, inglés y portugués antes de publicar.');foreach($requiredSpanish as $field){$spanish=trim((string)($translations['es'][$field]??''));$translated=trim((string)($row[$field]??''));if($translated===''||($field!=='display_name'&&$translated===$spanish))throw new RuntimeException('Completa y traduce el contenido a español, inglés y portugués antes de publicar.');}}
     }

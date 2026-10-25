@@ -4,10 +4,11 @@ require_once __DIR__.'/BusinessBulkPublicationService.php';
 require_once __DIR__.'/BusinessOnboardingDetails.php';
 require_once __DIR__.'/BusinessSubscriptionChoice.php';
 require_once __DIR__.'/ExperienceOperatorAddon.php';
+require_once __DIR__.'/BusinessPromotions.php';
 /** Runs inside the caller transaction. Initial responsibility is declared, never certified. */
 final class BusinessSelfOnboarding
 {
-    public const POLICY='declared-document-v1';
+    public const POLICY='document-review-v2';
     public static function complete(PDO $pdo,int $applicationId):void
     {
         $lock=$pdo->getAttribute(PDO::ATTR_DRIVER_NAME)==='mysql'?' FOR UPDATE':'';
@@ -43,15 +44,26 @@ final class BusinessSelfOnboarding
             if($q->fetchColumn())$pdo->prepare('UPDATE business_account_memberships SET status="active" WHERE account_id=? AND business_id=?')->execute([$row['account_id'],$businessId]);
             else $pdo->prepare('INSERT INTO business_account_memberships(account_id,business_id,role,status) VALUES(?,?,?,"active")')->execute([$row['account_id'],$businessId,$row['relationship_code']==='owner'?'owner':'manager']);
         }
-        $q=$pdo->prepare('SELECT id FROM business_subscriptions WHERE business_id=? LIMIT 1'.$lock);$q->execute([$businessId]);
-        if(!$q->fetchColumn()){
-            $choice=$details['requested_subscription']??[];$plan=(string)($choice['plan_code']??'free');$period=(string)($choice['billing_frequency']??'monthly');$quote=(new BusinessSubscriptionChoice($pdo))->quote($plan,$period);$addonService=new ExperienceOperatorAddon($pdo);$addon=$addonService->quote($plan,$period,(int)$row['destination_id'],(int)($choice['operator_addon']['experience_id']??0));
+        $choice=$details['requested_subscription']??[];$plan=(string)($choice['plan_code']??'free');$period=(string)($choice['billing_frequency']??'monthly');
+        $q=$pdo->prepare('SELECT id,plan_code FROM business_subscriptions WHERE business_id=? ORDER BY id DESC LIMIT 1'.$lock);$q->execute([$businessId]);$previousSubscription=$q->fetch(PDO::FETCH_ASSOC);
+        if(!$previousSubscription||($previousSubscription['plan_code']==='free'&&$plan!=='free')){
+            $quote=(new BusinessSubscriptionChoice($pdo))->quote($plan,$period);$addonService=new ExperienceOperatorAddon($pdo);$addon=$addonService->quote($plan,$period,(int)$row['destination_id'],(int)($choice['operator_addon']['experience_id']??0));
+            $pdo->prepare('UPDATE business_subscriptions SET status="cancelled" WHERE business_id=? AND plan_code="free" AND status="pending_publication"')->execute([$businessId]);
             $amount=$quote['quoted_amount']===null?null:(float)$quote['quoted_amount']+(float)($addon['amount']??0);
-            $pdo->prepare('INSERT INTO business_subscriptions(business_id,plan_code,billing_frequency,status,quoted_amount,currency) VALUES(?,?,?,?,?,?)')->execute([$businessId,$plan,$plan==='free'?'monthly':$period,$plan==='free'?'pending_publication':'pending',$amount,$quote['currency']]);$addonService->attach((int)$pdo->lastInsertId(),$addon);
+            $pdo->prepare('INSERT INTO business_subscriptions(business_id,plan_code,billing_frequency,status,quoted_amount,currency) VALUES(?,?,?,?,?,?)')->execute([$businessId,$plan,$plan==='free'?'monthly':$period,$plan==='free'?'pending_publication':'pending',$amount,$quote['currency']]);$subscriptionId=(int)$pdo->lastInsertId();$addonService->attach($subscriptionId,$addon);
+            if(!empty($choice['promotion']['code']))(new BusinessPromotions($pdo))->redeem($subscriptionId,$businessId,(int)$row['account_id'],(string)$choice['promotion']['code'],SubscriptionChangeService::cents($addon['amount']??0),$choice['promotion']);
+        }elseif(!empty($details['requested_subscription']['promotion']['code'])){
+            // A claim of an already configured business must not silently lose an offer.
+            throw new RuntimeException('El cupón de registro solo aplica a un negocio sin suscripción anterior.');
         }
         $details['responsibility_association']=['basis'=>'declared_with_business_document','ownership_verified'=>false];unset($details['auto_claim_on_activation']);
         $pdo->prepare('UPDATE businesses SET claim_status="RECLAMADO",information_status="ACTIVO",updated_at=CURRENT_TIMESTAMP WHERE id=?')->execute([$businessId]);
         $pdo->prepare('UPDATE business_account_applications SET status="approved",business_details_json=?,admin_note=?,reviewed_at=CURRENT_TIMESTAMP,updated_at=CURRENT_TIMESTAMP WHERE id=?')->execute([json_encode($details,JSON_THROW_ON_ERROR),'Asociación declarada con respaldo documental. No certifica titularidad. Publicación separada.',$applicationId]);
+        // Submitted content, positions and products must exist privately before payment.
+        $pdo->prepare('INSERT INTO business_image_references(business_id,storage_name,original_name,mime_type,file_size,width,height) SELECT ?,i.storage_name,i.original_name,i.mime_type,i.file_size,i.width,i.height FROM business_application_images i WHERE i.application_id=? AND NOT EXISTS(SELECT 1 FROM business_image_references r WHERE r.business_id=? AND r.storage_name=i.storage_name)')->execute([$businessId,$applicationId,$businessId]);
+        require_once __DIR__.'/BusinessEditorialService.php';
+        $editorial=new BusinessEditorialService($pdo,function_exists('private_storage_path')?private_storage_path('business-image-references'):sys_get_temp_dir());
+        if(!$editorial->latest($businessId))$editorial->save((int)$row['account_id'],$businessId,0,[],!empty($details['image_consent']));
     }
     /** Explicit homonym declaration needs a distinct address; it is not verified automatically. */
     public static function distinctLocationAllowed(PDO $pdo,array $duplicates,array $details):bool

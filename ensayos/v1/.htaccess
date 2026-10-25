@@ -15,9 +15,9 @@ RewriteRule ^sitemap\.xml$ sitemap-live.php [L]
 RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.html(?:[?\s]) [NC]
 RewriteRule ^(.*/)?index\.html$ /$1 [R=301,L,NE]
 
-# Normaliza las rutas públicas de destinos con la barra final que declara el sitemap.
-RewriteCond %{THE_REQUEST} \s/+((?:en/|pt-br/)?destinos/[a-z0-9-]+)(?:[?\s]) [NC]
-RewriteRule ^((?:en/|pt-br/)?destinos/[a-z0-9-]+)$ /$1/ [R=301,L,NE]
+# Normaliza las rutas públicas de lugares con la barra final que declara el sitemap.
+RewriteCond %{THE_REQUEST} \s/+((?:en/|pt-br/)?lugares/[a-z0-9-]+)(?:[?\s]) [NC]
+RewriteRule ^((?:en/|pt-br/)?lugares/[a-z0-9-]+)$ /$1/ [R=301,L,NE]
 
 # Panel privado de inteligencia de negocio e inversión.
 # Resolver explícitamente el directorio: algunos hostings no incluyen index.php
@@ -48,10 +48,13 @@ RewriteRule ^negocios/([A-Fa-f0-9-]{16,64})/?$ negocio.php?id=$1&idioma=es [L,QS
 RewriteRule ^en/negocios/([A-Fa-f0-9-]{16,64})/?$ negocio.php?id=$1&idioma=en [L,QSA,NC]
 RewriteRule ^pt-br/negocios/([A-Fa-f0-9-]{16,64})/?$ negocio.php?id=$1&idioma=pt-BR [L,QSA,NC]
 
-# Slugs de destino: la URL pública no revela parámetros ni archivos de plantilla.
-RewriteRule ^destinos/([a-z0-9-]+)(?:/index\.html)?/?$ destino.php?destino=$1&idioma=es [L,QSA,NC]
-RewriteRule ^en/destinos/([a-z0-9-]+)(?:/index\.html)?/?$ destino.php?destino=$1&idioma=en [L,QSA,NC]
-RewriteRule ^pt-br/destinos/([a-z0-9-]+)(?:/index\.html)?/?$ destino.php?destino=$1&idioma=pt-BR [L,QSA,NC]
+# Lugares publicados: la URL pública no revela parámetros ni archivos de plantilla.
+RewriteRule ^lugares/?$ destinos.php?idioma=es [L,QSA]
+RewriteRule ^en/lugares/?$ destinos.php?idioma=en [L,QSA]
+RewriteRule ^pt-br/lugares/?$ destinos.php?idioma=pt-BR [L,QSA]
+RewriteRule ^lugares/([a-z0-9-]+)/?$ destino.php?destino=$1&idioma=es [L,QSA,NC]
+RewriteRule ^en/lugares/([a-z0-9-]+)/?$ destino.php?destino=$1&idioma=en [L,QSA,NC]
+RewriteRule ^pt-br/lugares/([a-z0-9-]+)/?$ destino.php?destino=$1&idioma=pt-BR [L,QSA,NC]
 
 # HTML must revalidate after a deployment; preserve caching for images/assets.
 <IfModule mod_headers.c>

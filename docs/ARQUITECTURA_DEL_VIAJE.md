@@ -4,23 +4,23 @@ El hilo conductor ayuda a conectar las partes del viaje, sin imponer duración n
 
 1. **Portal:** inspira, explica el propósito y conecta con destinos. Selector Pueblo/Ciudad conservado.
 2. **Destino:** Jericó es la primera landing. Presentación, identidad cultural, preparación de la visita, participantes y agenda. Las categorías son agrupaciones dentro del destino y aparecen solo con participantes publicados.
-3. **Participante:** `/destinos/jerico/lugares/{slug}/index.html`. Ficha con descripción, imagen autorizada si existe, servicios, ubicación, horarios y contacto directo. No hay cuentas obligatorias para visitantes o negocios.
+3. **Participante:** ficha pública resuelta por la ruta PHP del portal a partir de su identificador. Incluye descripción, imagen autorizada si existe, servicios, ubicación y contacto directo. No hay archivos HTML por negocio ni cuentas obligatorias para visitantes.
 
-La plantilla está en `content/plantillas/ficha-participante.html`; `scripts/generar-fichas.py` genera únicamente fichas publicadas y verificadas desde `ensayos/v1/assets/catalogo.json`. No se han añadido negocios ficticios. Sin registros, no se generan fichas públicas. Las reseñas, rankings y edición de eventos siguen pendientes; no se muestran valores ni opiniones ficticias.
+Las fichas de negocios se renderizan únicamente con PHP y datos verificados de la base de datos. No se generan archivos HTML de negocios durante el empaquetado. Las reseñas, rankings y edición de eventos siguen pendientes; no se muestran valores ni opiniones ficticias.
 
 Cada registro necesita `destino: jerico`, `slug` único con letras minúsculas/números/guiones, `nombre`, `categoria`, `categoriaEn`, `descripcion`, `descripcionEn`, `contactoUrl` HTTP(S) verificado, `registroConfirmado: true`, `informacionVerificada: true`, `estado: publicado`. Opcionales: `nombreEn`, `imagen` relativa dentro de assets, `servicios` y `serviciosEn` con igual longitud, `direccion`/`direccionEn`, `horarios`/`horariosEn`. Los nombres propios y direcciones pueden conservarse en ambos idiomas. La carga es editorial; el formulario de contacto no publica registros automáticamente.
 
-Al preparar hosting se regeneran fichas y páginas inglesas. Una ficha retirada del catálogo deja de generarse; solo se eliminan archivos con la marca del generador. No se eliminan páginas manuales. El despliegue sigue siendo un paso independiente. SEO de producción, dominio y configuración de contacto deben cerrarse al conectar el hosting; el entorno local conserva noindex.
+El empaquetado conserva las páginas institucionales que son estáticas, pero los destinos y negocios siempre se resuelven con PHP y datos del catálogo/base de datos. El despliegue sigue siendo un paso independiente. SEO de producción, dominio y configuración de contacto deben cerrarse al conectar el hosting; el entorno local conserva noindex.
 
 Se retiraron etiquetas visibles de revisión y anotaciones sobre imágenes conceptuales. Se mantiene la atribución exigida por la licencia de la foto de Jericó, y los estados funcionales honestos de formulario, catálogo y agenda.
 
 Contenido de Jericó basado en [Colombia Travel](https://colombia.travel/es/jerico), consultado el 11 de octubre de 2026: cultura, paisaje cafetero y tradición del carriel. No se anuncian horarios, operadores, tarifas ni actividades reservables sin datos confirmados.
 
-Verificación: enlaces y anclas ES/EN, sintaxis JavaScript y cuatro pruebas de publicación de fichas (escape HTML, exclusión de borradores/no verificados, seguridad de contacto y slugs duplicados). Revisión visual en navegador pendiente.
+Verificación: enlaces y anclas ES/EN, sintaxis JavaScript y pruebas de publicación dinámica de fichas (escape HTML, exclusión de borradores/no verificados, seguridad de contacto y slugs duplicados). Revisión visual en navegador pendiente.
 
 ## Clasificación vigente de servicios
 
-Cada participante usa ahora `tipoServicio` del catálogo global de once categorías. Las etiquetas `categoria` y `categoriaEn` se derivan automáticamente al generar fichas; ya no se ingresan manualmente. Formulario y catálogo comparten la clasificación. Ver `CLASIFICACION_SERVICIOS.md` para alcance de la plantilla común y diferencias editoriales por tipo.
+Cada participante usa ahora `tipoServicio` del catálogo global de once categorías. Las etiquetas `categoria` y `categoriaEn` se derivan al renderizar la ficha; ya no se ingresan manualmente. Formulario y catálogo comparten la clasificación. Ver `CLASIFICACION_SERVICIOS.md` para alcance de la plantilla común y diferencias editoriales por tipo.
 
 ## Directorio con pestañas y tarjetas
 

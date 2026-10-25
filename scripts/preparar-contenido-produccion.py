@@ -4,7 +4,7 @@ from pathlib import Path
 import json,hashlib,shutil,argparse
 R=Path(__file__).resolve().parents[1]
 p=argparse.ArgumentParser();p.add_argument('--input',type=Path,required=True);a=p.parse_args();d=json.loads(a.input.read_text())
-v=json.loads((R/'backend/public/assets/destinos-semirrealistas.json').read_text());integration=json.loads((R/'preprod/lugares/integracion.json').read_text());heads={x['place']:x['commit'] for x in integration['branches']}
+v=json.loads((R/'backend/integration-medicion/public/assets/destinos-semirrealistas.json').read_text());integration=json.loads((R/'preprod/lugares/integracion.json').read_text());heads={x['place']:x['commit'] for x in integration['branches']}
 assets=d['tables']['media_assets'];translations=d['tables']['media_asset_translations'];manifest=[];nextid=-1
 for slug,e in d['editorial'].items():
  for poi in e['places']:

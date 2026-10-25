@@ -1,5 +1,5 @@
 """Materialize canonical /lugares/ routes and legacy 301 redirects in a release."""
-import re,shutil,json,argparse
+import re,json,argparse
 from pathlib import Path
 root=Path(__file__).resolve().parents[1]
 parser=argparse.ArgumentParser();parser.add_argument('--release',required=True);args=parser.parse_args()
@@ -13,13 +13,11 @@ for base in [public,release/'app']:
   text=p.read_text(errors='strict')
   # Public URL paths only; keep image directories and internal identifiers.
   new=re.sub(r'(?<!assets)(/destinos/)', '/lugares/',text)
+  new=re.sub(r'(?<![A-Za-z0-9_-])destinos/index\.html', 'lugares/', new)
+  new=re.sub(r'(?<![A-Za-z0-9_-])lugares/index\.html', 'lugares/', new)
   new=new.replace('?>destinos/', '?>lugares/')
   new=new.replace(')?destinos/', ')?(?:destinos|lugares)/')
   if new!=text:p.write_text(new);changed.append(str(p.relative_to(release)))
-for prefix in ['', 'en/', 'pt-br/']:
- source=public/prefix/'destinos'
- target=public/prefix/'lugares'
- if source.exists():shutil.copytree(source,target,dirs_exist_ok=True)
 h=public/'.htaccess'
 s=h.read_text()
 s=re.sub(r'# Canonical routes: redirect old public routes, preserve query strings\.\nRewriteCond[^\n]*\nRewriteRule[^\n]*\n', '', s)

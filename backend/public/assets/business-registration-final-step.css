@@ -1,0 +1,18 @@
+#registration-continuation{display:grid;gap:20px}
+#registration-continuation>fieldset{margin:0;background:var(--el-card)}
+#registration-continuation>fieldset>.destination-form-grid{gap:18px 22px;align-items:start}
+#registration-continuation .destination-form-grid>.contact-phone-fields{grid-column:auto;margin:0;padding:0;border:0;align-self:start}
+#registration-continuation .contact-phone-fields legend{padding:0;font-size:inherit;font-weight:700}
+#registration-continuation .contact-phone-types{margin:0 0 10px}
+#registration-continuation .contact-phone-row{grid-template-columns:1fr;gap:10px}
+#registration-continuation .contact-phone-row>label{width:100%}
+#registration-continuation .contact-phone-prefix input{width:100%!important}
+#registration-continuation .small-note{margin:0;padding:12px 14px;border-radius:10px;background:var(--el-panel)}
+.registration-account-identity{display:grid;gap:5px;padding:14px 16px;border:1px solid var(--el-line,#d8ddd9);border-radius:12px;background:var(--el-panel,#f4f4f0)}
+.registration-account-identity p{margin:0;overflow-wrap:anywhere}
+.registration-wizard-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px}
+.registration-wizard-tab{appearance:none;border:1px solid var(--el-line,#d8ddd9);border-radius:999px;background:var(--el-card,#fff);padding:8px 12px;color:var(--el-text,#1d2a3c);font:inherit;font-size:14px;font-weight:700;cursor:pointer}
+.registration-wizard-tab.is-current{background:var(--el-accent,#c9471d);border-color:var(--el-accent,#c9471d);color:#fff}
+.registration-wizard-tab.is-complete{border-color:var(--el-accent,#c9471d);color:var(--el-accent,#c9471d)}
+.registration-wizard-tab:disabled{opacity:.48;cursor:not-allowed}
+@media(max-width:650px){#registration-continuation .destination-form-grid>.contact-phone-fields{grid-column:1/-1}}

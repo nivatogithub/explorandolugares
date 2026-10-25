@@ -1,6 +1,12 @@
 (() => {
   const form = document.querySelector('#business-registration-form');
   if (!form) return;
+  // Keep the search and claim selector independently testable.  In the
+  // browser this is equivalent to form.querySelector; the fallback matters
+  // only when the selector is embedded without the whole wizard.
+  const formQuery = (selector) => typeof form.querySelector === 'function'
+    ? form.querySelector(selector)
+    : document.querySelector(selector);
   const destination = document.querySelector('#registration-destination');
   const category = document.querySelector('#registration-category');
   const search = document.querySelector('#registration-search');
@@ -24,24 +30,26 @@
     type.value = mode;
     businessId.value = id;
     const isNew = mode === 'new_business';
-    for(const name of ['business_registration']){const field=form.querySelector(`[name="${name}"]`);if(field)field.required=!!mode;}
+    for(const name of ['business_registration']){const field=formQuery(`[name="${name}"]`);if(field)field.required=!!mode;}
     if(authorityInput)authorityInput.required=isNew&&relationship?.value==='authorized_administrator';
-    const details=document.querySelector('#registration-new-details');if(details){details.hidden=!isNew;details.disabled=!isNew;}
+    // On a server-side validation error the form is rendered again with the
+    // selected business and plan. Do not reset that recovered wizard state
+    // while the category list finishes loading in the background.
+    const restoringSubmission = form.dataset.registrationWizardStep !== '1'
+      && !!document.querySelector('.account-registration-card [role="alert"]');
+    const details=document.querySelector('#registration-new-details');if(details&&!restoringSubmission){details.hidden=true;details.disabled=true;}const contacts=document.querySelector('#registration-contact-details');if(contacts&&!restoringSubmission){contacts.hidden=true;contacts.disabled=true;}
     if(isNew&&!newName.value.trim())newName.value=search.value.trim();
     newNameWrap.hidden = !isNew;
     newName.required = isNew;
-    const stage=document.querySelector('#registration-plan-choice');if(stage){stage.hidden=!mode;stage.disabled=!mode;}
-    const continuation=document.querySelector('#registration-continuation');if(continuation){continuation.hidden=!mode;continuation.disabled=!mode;}
-    submit.disabled = !mode;
+    const stage=document.querySelector('#registration-plan-choice');if(stage&&!restoringSubmission){stage.hidden=true;stage.disabled=true;}
+    const continuation=document.querySelector('#registration-continuation');if(continuation&&!restoringSubmission){continuation.hidden=true;continuation.disabled=true;}
+    if(!restoringSubmission)submit.disabled = true;
     form.dispatchEvent(new Event('operator-eligibility-change'));
     form.querySelectorAll('.business-registration-option input').forEach((radio) => {
       radio.checked = mode === 'existing_business' && radio.value === id;
     });
   }
 
-  function syncFree(){const chosen=form.querySelector('[name="plan_code"]:checked')?.value;const free=chosen==='free';const continuation=document.querySelector('#registration-continuation');if(continuation){continuation.hidden=!type.value||!chosen;continuation.disabled=!type.value||!chosen;}submit.disabled=!type.value||!chosen;const period=form.querySelector('.subscription-choice-period');if(period){period.hidden=free||!chosen;for(const control of period.querySelectorAll('select'))control.disabled=free||!chosen;}const distinct=document.querySelector('#registration-distinct-business');if(distinct){distinct.hidden=!free||type.value!=='new_business';distinct.disabled=!free||type.value!=='new_business';}const holder=form.querySelector('[data-holder-identity]');if(holder){holder.hidden=free||!chosen;holder.disabled=free||!chosen;}const details=document.querySelector('#registration-new-details');if(details){details.hidden=free||!chosen||type.value!=='new_business';details.disabled=free||!chosen||type.value!=='new_business';}}
-  form.addEventListener('change',event=>{if(event.target.name==='plan_code')syncFree();});
-  form.addEventListener('operator-eligibility-change',syncFree);syncFree();
 
   relationship?.addEventListener('change', () => {
     const needsAuthority = type.value==='new_business'&&relationship.value === 'authorized_administrator';
@@ -72,7 +80,7 @@
       const name = document.createElement('strong'); name.textContent = item.display_name;
       const state = document.createElement('small'); state.textContent = item.requires_review ? (item.review_message || 'Este negocio ya tiene un responsable o una solicitud. Puedes pedir una revisión; no obtendrás acceso automáticamente.') : item.can_request ? 'Sin responsable · puedes reclamarlo y administrarlo con tu cuenta' : 'No disponible para nuevas solicitudes en este momento';
       copy.append(name, state); label.append(radio, copy); results.append(label);
-      radio.addEventListener('change', () => { choose('existing_business', String(item.id), item.requires_review ? (item.review_message || 'Tu solicitud necesita revisión y no cambia al responsable actual.') : '', !!item.is_experience_operator); missing.disabled = false; });
+      radio.addEventListener('change', () => { newName.value=item.display_name;choose('existing_business', String(item.id), item.requires_review ? (item.review_message || 'Tu solicitud necesita revisión y no cambia al responsable actual.') : '', !!item.is_experience_operator); missing.disabled = false; });
     }
     missing.disabled = false;
     choose('', '');
@@ -124,6 +132,6 @@
   });
   if (destination.value) {
     let initial={};try{initial=JSON.parse(form.dataset.registrationState||'{}');}catch{}
-    loadCategories().then(()=>{if(initial.category&&Array.from(category.options).some(option=>option.value===initial.category)){category.value=initial.category;search.disabled=false;missing.disabled=false;for(const input of document.querySelectorAll('#registration-extra-categories input'))input.checked=Array.isArray(initial.extras)&&initial.extras.includes(input.value);syncExtraCategories();if(initial.type==='new_business')choose('new_business');}});
+    loadCategories().then(()=>{if(initial.category&&Array.from(category.options).some(option=>option.value===initial.category)){category.value=initial.category;search.disabled=false;missing.disabled=false;for(const input of document.querySelectorAll('#registration-extra-categories input'))input.checked=Array.isArray(initial.extras)&&initial.extras.includes(input.value);syncExtraCategories();if(initial.name){newName.value=initial.name;search.value=initial.name;}if(initial.type==='new_business')choose('new_business');else if(initial.type==='existing_business'&&initial.id){choose('existing_business',String(initial.id));selectionNotice.textContent='Negocio seleccionado: '+(initial.name||'Ficha existente');selectionNotice.hidden=false;}}});
   }
 })();

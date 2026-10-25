@@ -11,7 +11,7 @@ function businessDemo(PDO $pdo,string $plan):array
     $channels=['phone'=>'+573234870366','whatsapp'=>'+573234870366','email'=>'contacto@explorandolugares.com','instagram'=>'https://www.instagram.com/explorandolugaresco/','website'=>'https://explorandolugares.com/'];
     $business['contacts']=BusinessContactVisibility::filter($plan,array_map(static fn($channel,$value)=>['channel'=>$channel,'contact_value'=>$value,'is_public'=>1],array_keys($channels),array_values($channels)));
     $business['showcase']=['products'=>[],'experiences'=>[]];
-    if($plan==='page_premium'){$business['category_codes']=['hospedaje','alimentacion'];$business['category_labels']=['Hospedaje','Restaurante'];foreach(['Nube De Cacao','Mesa Viajera','Nido Zunaria','Amanecer De La Casa'] as $i=>$name)$business['showcase']['products'][]=['name'=>$name,'description'=>'Una propuesta de ejemplo para mostrar el producto o servicio estrella del negocio.','asset_path'=>'assets/'.(['planes-negocio-editorial-v1.webp','proceso-negocio-editorial-v1.webp','valor-negocios-editorial-v1.webp'][$i%3])];}
+    if($plan==='page_premium'){$business['category_codes']=['hospedaje','alimentacion'];$business['category_labels']=['Hospedaje','Restaurante'];foreach(['Nube De Cacao','Mesa Viajera','Nido Zunaria','Fogón de montaña','Ritual de descanso'] as $i=>$name)$business['showcase']['products'][]=['name'=>$name,'description'=>'Una propuesta de ejemplo para mostrar el producto o servicio estrella del negocio.','asset_path'=>'assets/'.(['planes-negocio-editorial-v1.webp','proceso-negocio-editorial-v1.webp','valor-negocios-editorial-v1.webp'][$i%3])];}
     return $business;
 
 }
