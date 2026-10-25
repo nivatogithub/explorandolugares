@@ -1,5 +1,11 @@
 # Despliegue SFTP de Explorando Lugares
 
+## Registro, borradores y cupones — 25/10/2026
+
+`python3 scripts/migrar-cuentas.py --business-registration` inspecciona exclusivamente 052–057 sin aplicar SQL. El mismo alcance con `--apply --approved-preprod COMMIT` exige el candidato limpio y aprobado. Incluye tablas de cargas, borradores y cupones y los límites 0/100/300/600; amplía capacidad cuando falta, sin recortar textos, sustituir datos ni cambiar estadísticas. No crea cupones ni medios de pago de prueba en producción. Antes de aplicar: respaldo reciente, restauración aislada y migraciones repetidas con conservación de tablas protegidas. No mezclar este alcance con el de cuentas o destinos.
+
+La revisión de cobertura queda expresamente separada por decisión del propietario. La comprobación local `python3 preprod/infra/verify.py --exclude-coverage` informa esa exclusión; su resultado no certifica cobertura. No alterar su catálogo, porcentajes ni métricas durante esta entrega.
+
 El despliegue normal es directo e incremental. El script compara SHA-256 del paquete construido con el último manifiesto y transfiere solo archivos nuevos o cambiados. No crea copias completas del sitio ni instalaciones paralelas. Usa temporales privados únicamente para los archivos modificados y reemplazo individual verificable, como se explica en Recuperación incremental.
 
 ## Preparación

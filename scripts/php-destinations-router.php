@@ -6,6 +6,13 @@ $documentRoot=$configuredRoot!==''?realpath($configuredRoot):realpath(dirname(__
 $assembled=$documentRoot && is_file($documentRoot.'/sitemap-live.php');
 $path=parse_url($_SERVER['REQUEST_URI']??'/',PHP_URL_PATH) ?: '/';
 if($assembled && $path==='/sitemap.xml'){require $documentRoot.'/sitemap-live.php';return true;}
+// Retired static Jerico pages keep one-hop permanent canonical redirects.
+if($assembled && preg_match('~^/((?:en/|pt-br/)?)jerico\\.html$~',$path,$retired)){
+    header('Location: /'.$retired[1].'lugares/jerico/'.(($q=parse_url($_SERVER['REQUEST_URI'],PHP_URL_QUERY))!==null?'?'.$q:''),true,301);return true;
+}
+if($assembled && preg_match('~^/((?:en/|pt-br/)?)(?:destinos|lugares)/jerico/(agenda|alojamiento|bares-y-vida-nocturna|comercios-y-productores|cultura-y-patrimonio|experiencias-y-naturaleza|gastronomia|informacion-practica|servicios|transporte-y-movilidad)(?:/index\\.html)?/?$~',$path,$retired)){
+    header('Location: /'.$retired[1].'lugares/jerico/'.(($q=parse_url($_SERVER['REQUEST_URI'],PHP_URL_QUERY))!==null?'?'.$q:'').($retired[2]==='agenda'?'':'#catalogo-local'),true,301);return true;
+}
 // Match hosting canonical redirects, preserving unrelated query parameters.
 if($assembled && is_file($documentRoot.'/asset-manifest.json') && preg_match('~^/((?:en/|pt-br/)?)destinos(/.*)?$~',$path,$legacy)){header('Location: /'.$legacy[1].'lugares'.($legacy[2]??'/').(($query=parse_url($_SERVER['REQUEST_URI'],PHP_URL_QUERY))!==null?'?'.$query:''),true,301);return true;}
 $query=parse_url($_SERVER['REQUEST_URI']??'/',PHP_URL_QUERY);

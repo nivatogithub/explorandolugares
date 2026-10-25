@@ -25,6 +25,10 @@ with socket.socket() as sock:sock.bind(('127.0.0.1',0));port=sock.getsockname()[
 proc=subprocess.Popen(['php','-d','opcache.enable=0','-S',f'127.0.0.1:{port}','-t',str(work/'public')],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
 base=f'http://127.0.0.1:{port}'
 client=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
+class NoRedirect(urllib.request.HTTPRedirectHandler):
+ def redirect_request(self,*args):return None
+client_jar=next(h.cookiejar for h in client.handlers if isinstance(h,urllib.request.HTTPCookieProcessor))
+no_redirect=urllib.request.build_opener(NoRedirect(),urllib.request.HTTPCookieProcessor(client_jar))
 def call(path,data=None,agent=client):
  payload=urllib.parse.urlencode(data,doseq=True).encode() if data is not None else None
  try:
@@ -46,7 +50,9 @@ try:
  config['privacy']['retention_pt']='Somente durante este teste';save()
  portuguese_setup=json.loads(call('/api/participacion.php?lang=pt-br')[1]);assert portuguese_setup['enabled'] and portuguese_setup['privacy']['retention']=='Somente durante este teste' and 'retention_en' not in portuguese_setup['privacy'] and 'retention_pt' not in portuguese_setup['privacy']
  valid={'csrf':setup['csrf'],'request_key':setup['request_key'],'name':'Persona de prueba','business':'<script>alert(1)</script>','municipality':'Jericó','category':'hospedaje','email':'prueba@example.invalid','phone':'','description':'Descripción de prueba','consent':'1','understanding':'1'}
- assert call('/api/participacion.php',{**valid,'csrf':'incorrecto'})[0]==403
+ bad_status,bad_body,_=call('/api/participacion.php',{**valid,'csrf':'incorrecto'})
+ assert bad_status==403 and json.loads(bad_body)['error']=='csrf_invalid'
+ assert db.execute('SELECT COUNT(*) FROM leads').fetchone()[0]==0
  assert call('/api/participacion.php',{**valid,'category':'inventada'})[0]==422
  assert call('/api/participacion.php',{**valid,'municipality':'Municipio inventado'})[0]==422
  assert call('/api/participacion.php',{**valid,'municipality':'Envigado'})[0]==422
@@ -112,7 +118,9 @@ try:
  status,filtered,_=call('/admin/index.php?q=Impulsor+de+prueba&status=nuevo')
  assert status==200 and 'Impulsor de prueba' in filtered and 'Prueba celular' not in filtered
  guest=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
- assert call('/admin/base-datos.php',agent=guest)[0]==403
+ guest_no_redirect=urllib.request.build_opener(NoRedirect(),urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
+ denied=call('/admin/base-datos.php',agent=guest_no_redirect)
+ assert denied[0]==303 and denied[2]['Location']=='/negocios/acceso/'
  status,body,_=call('/admin/base-datos.php')
  assert status==200 and 'Base de datos' in body and 'sqlite' in body
  assert 'Cargar un paquete' in body and config['app_key'] not in body and password not in body
@@ -129,7 +137,8 @@ try:
  csrf=re.search(r'name="csrf" value="([^\"]+)"',body).group(1)
  assert call('/admin/index.php?tab=sistema',{'action':'business_key','operation':'generate','csrf':csrf})[0]==403
  assert call('/business/register.php?prueba=antigua')[0]==404
- assert call('/admin/index.php',{'action':'status','csrf':'incorrecto','id':1,'status':'contactado'})[0]==403
+ denied=call('/admin/index.php',{'action':'status','csrf':'incorrecto','id':1,'status':'contactado'},agent=no_redirect)
+ assert denied[0]==303 and denied[2]['Location'].startswith('/negocios/acceso/')
  assert call('/admin/index.php',{'action':'status','csrf':csrf,'id':1,'status':'contactado'})[0]==200
  assert db.execute('SELECT status FROM leads').fetchone()[0]=='contactado'
  status,body,_=call('/admin/index.php',{'action':'status','csrf':csrf,'id':1,'status':'archivado','return_status':'contactado','return_q':'','return_page':99})
@@ -141,10 +150,12 @@ try:
  status,detail,_=call('/admin/solicitud-detalle.php?tipo=participation&id=1')
  assert status==200 and 'Enviado por la persona' in detail and '<script>alert(1)</script>' not in detail,(status,detail[-700:])
  guest=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
- assert call('/admin/solicitud-detalle.php?tipo=participation&id=1',agent=guest)[0]==403
+ denied=call('/admin/solicitud-detalle.php?tipo=participation&id=1',agent=guest_no_redirect)
+ assert denied[0]==303 and denied[2]['Location']=='/negocios/acceso/'
  assert call('/admin/solicitud-detalle.php?tipo=participation&id=999999')[0]==404
 
- assert call('/admin/index.php',{'action':'delete','csrf':'incorrecto','ids[]':['1','2']})[0]==403
+ denied=call('/admin/index.php',{'action':'delete','csrf':'incorrecto','ids[]':['1','2']},agent=no_redirect)
+ assert denied[0]==303 and denied[2]['Location'].startswith('/negocios/acceso/')
  assert call('/admin/index.php',{'action':'delete','csrf':csrf,'ids[]':['1','2']})[0]==200
  assert db.execute('SELECT COUNT(*) FROM leads').fetchone()[0]==3
  status,body,_=call('/admin/index.php',{'action':'logout','csrf':csrf});assert status==200 and 'name="password"' in body
