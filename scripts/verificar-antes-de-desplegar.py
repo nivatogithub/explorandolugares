@@ -51,6 +51,7 @@ def main():
     run('Navegación, enlaces y despliegue', [sys.executable, '-m', 'unittest', 'discover', '-s', 'scripts/tests', '-p', 'test*.py'])
     if shutil_which('node'):
         run('Visibilidad y clics de tarjetas', ['node', 'backend/tests/basic-cards.cjs'])
+        run('QR de negocios: lectura y descarga PNG', ['node', 'backend/tests/business-qr.cjs'])
         run('Exclusión de estadísticas por navegador', ['node', 'backend/tests/measurement-exclusion.dom.js'])
     run('Integración HTTP de conteo básico sin cookies', [sys.executable, 'backend/tests/basic-audience.integration.py'])
     run('Integración HTTP de participación', [sys.executable, 'backend/tests/integration.py'])
