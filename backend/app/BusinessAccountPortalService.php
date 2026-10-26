@@ -124,7 +124,7 @@ final class BusinessAccountPortalService
             if($temporaryImages&&$referenceStorage){$tempService=new BusinessOnboardingUploadService($this->pdo,private_storage_path('business-onboarding-uploads'));$imageInsert=$this->pdo->prepare('INSERT INTO business_application_images(application_id,storage_name,original_name,mime_type,file_size,width,height) VALUES(?,?,?,?,?,?,?)');foreach($temporaryImages as $slot=>$uploadId){$image=$tempService->consume($draft,$uploadId,$referenceStorage,20);$storedFiles[]=$image['path'];$normalizedSlot=str_replace('-','_',(string)$slot);if(preg_match('/^(cover|product_[0-4])$/D',$normalizedSlot))$application['business_details']['source_images'][$normalizedSlot]=$image['storage_name'];$imageInsert->execute([$applicationId,$image['storage_name'],$image['original_name'],$image['mime_type'],$image['file_size'],$image['width'],$image['height']]);}}
             elseif($referenceUploads&&$referenceStorage)(new BusinessAdminService($this->pdo,$referenceStorage))->storeApplicationReferences($applicationId,$referenceUploads,$storedFiles);
             $details=$application['business_details']??[];unset($details['claim_review_kind'],$details['auto_claim_on_activation']);
-            if($selfOnboarding){$details['onboarding_policy']=BusinessSelfOnboarding::POLICY;$details['responsibility_declared']=true;$details['document_policy']='business-document-8mb-v1';$details['document_retention_policy']='delete-after-verification-v1';}
+            if($selfOnboarding){$details['onboarding_policy']=BusinessSelfOnboarding::POLICY;$details['responsibility_declared']=true;$details['document_policy']='business-document-8mb-v1';$details['document_retention_policy']='delete-after-publication-v2';}
             $details['existence_assessment']=$type==='existing_business'?BusinessExistenceVerification::assessExisting($this->pdo,$businessId):$existenceAssessment;
             if($disputedClaim)$details['claim_review_kind']='disputed_existing';
             elseif($type==='existing_business'&&!$existingAccountId)$details['auto_claim_on_activation']=true;
@@ -224,6 +224,7 @@ final class BusinessAccountPortalService
     public function verifyApprovedBusinessRegistration(int $applicationId,array $verifiedEvidenceIds,string $note,string $reviewer):void
     {
         $note=trim($note);if(strlen($note)<12)throw new RuntimeException('Deja una nota interna indicando cómo validaste el soporte de titularidad.');
+        require_once __DIR__.'/BusinessOwnershipEvidence.php';
         $this->pdo->beginTransaction();
         try{
             $lock=$this->pdo->getAttribute(PDO::ATTR_DRIVER_NAME)==='mysql'?' FOR UPDATE':'';
@@ -232,8 +233,8 @@ final class BusinessAccountPortalService
             $documents=$this->pdo->prepare('SELECT id,verified_at FROM business_account_application_evidence WHERE application_id=? AND evidence_type="business_registration"'.$lock);$documents->execute([$applicationId]);$documents=$documents->fetchAll(PDO::FETCH_ASSOC);
             if(!$documents)throw new RuntimeException('La solicitud no tiene documento de registro del negocio.');
             $selected=array_map('intval',$verifiedEvidenceIds);foreach($documents as $document)if(empty($document['verified_at'])&&!in_array((int)$document['id'],$selected,true))throw new RuntimeException('Marca el documento de registro que revisaste antes de validarlo.');
-            $mark=$this->pdo->prepare('UPDATE business_account_application_evidence SET verified_by=?,verified_at=CURRENT_TIMESTAMP WHERE id=? AND application_id=? AND evidence_type="business_registration"');
-            foreach($documents as $document)if(empty($document['verified_at']))$mark->execute([substr($reviewer?:'admin',0,120),(int)$document['id'],$applicationId]);
+            $ownership=new BusinessOwnershipEvidence($this->pdo,private_storage_path('business-representation-evidence'));
+            foreach($documents as $document)$ownership->verify((int)$row['business_id'],(int)$document['id'],$reviewer);
             $this->pdo->prepare('UPDATE business_account_applications SET admin_note=?,reviewed_at=CURRENT_TIMESTAMP,updated_at=CURRENT_TIMESTAMP WHERE id=?')->execute([substr($note,0,1000),$applicationId]);
             $this->pdo->commit();
         }catch(Throwable $error){if($this->pdo->inTransaction())$this->pdo->rollBack();throw $error;}

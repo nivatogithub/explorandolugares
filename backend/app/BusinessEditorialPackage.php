@@ -20,11 +20,11 @@ final class BusinessEditorialPackage
     public function readiness(int $businessId):array
     {
         $business=$this->business($businessId);
-        $application=$this->pdo->prepare('SELECT id,status,relationship_code,reviewed_at FROM business_account_applications WHERE business_id=? ORDER BY CASE status WHEN "approved" THEN 0 ELSE 1 END,reviewed_at DESC,id DESC LIMIT 1');
+        $application=$this->pdo->prepare('SELECT a.id,a.status,a.relationship_code,a.reviewed_at FROM business_account_applications a WHERE a.business_id=? AND a.status="approved" AND EXISTS(SELECT 1 FROM business_account_memberships m WHERE m.business_id=a.business_id AND m.account_id=a.account_id AND m.status="active") ORDER BY a.id DESC LIMIT 1');
         $application->execute([$businessId]);$application=$application->fetch(PDO::FETCH_ASSOC)?:null;
         $documents=[];$titleDocument=null;
         if($application){
-            $evidence=$this->pdo->prepare('SELECT id,evidence_type,original_name,verified_at FROM business_account_application_evidence WHERE application_id=? ORDER BY id');
+            $evidence=$this->pdo->prepare('SELECT e.id,e.evidence_type,e.original_name,e.verified_at,e.verified_by,r.deleted_at FROM business_account_application_evidence e LEFT JOIN business_evidence_retirement r ON r.evidence_id=e.id WHERE e.application_id=? ORDER BY e.id');
             $evidence->execute([(int)$application['id']]);$documents=$evidence->fetchAll(PDO::FETCH_ASSOC);
             foreach($documents as $document)if($document['evidence_type']==='business_registration'){$titleDocument=$document;break;}
         }
@@ -32,7 +32,7 @@ final class BusinessEditorialPackage
         $subscription->execute([$businessId]);$subscription=$subscription->fetch(PDO::FETCH_ASSOC)?:null;
         $payment=null;
         if($subscription){
-            $proof=$this->pdo->prepare('SELECT id,status,original_name,reviewed_at FROM business_subscription_payment_evidence WHERE subscription_id=? ORDER BY id DESC LIMIT 1');
+            $proof=$this->pdo->prepare('SELECT id,status,original_name,reviewed_at,reviewed_by,customer_message,admin_note FROM business_subscription_payment_evidence WHERE subscription_id=? ORDER BY id DESC LIMIT 1');
             $proof->execute([(int)$subscription['id']]);$payment=$proof->fetch(PDO::FETCH_ASSOC)?:null;
         }
         $titleReady=$application!==null&&$application['status']==='approved'&&$titleDocument!==null&&!empty($titleDocument['verified_at']);

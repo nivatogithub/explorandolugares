@@ -3,7 +3,7 @@
   let sequence = 0;
   const groups = [];
   const init = root => {
-    const repeatable = root.hasAttribute('data-product-editor');
+    const repeatable = root.hasAttribute('data-product-editor') || root.hasAttribute('data-product-image-panels');
     const panels = Array.from(root.children).filter(node => node.matches('[data-editor-panel]'));
     const list = root.querySelector(':scope > [data-editor-tabs]');
     if (!list || !panels.length) return;
@@ -80,11 +80,13 @@
       const removal = root.querySelector(`[data-product-removal="${panel.dataset.productSlot}"]`);
       if (removal) removal.disabled = true;
       sync();select(panel);buttons.get(panel).focus();
+      root.dispatchEvent(new Event('change', {bubbles: true}));
     });
     root.addEventListener('invalid', event => {
       const panel = panels.find(item => item.contains(event.target));
       if (panel && enabled(panel)) select(panel);
     }, true);
+    root.addEventListener('editor-panels-refresh', sync);
     groups.push({root, panels, enabled, select});sync();
   };
   const start = () => {

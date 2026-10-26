@@ -164,6 +164,7 @@ final class BusinessSubscriptionAdminService
             $q=$this->pdo->prepare('UPDATE businesses SET publication_status="published",updated_at=CURRENT_TIMESTAMP WHERE id=?');$q->execute([$businessId]);
             if($ownTransaction)$this->pdo->commit();
         }catch(Throwable $error){if($ownTransaction&&$this->pdo->inTransaction())$this->pdo->rollBack();throw $error;}
+        if($ownTransaction&&function_exists('private_storage_path'))BusinessOwnershipEvidence::afterPublication($this->pdo,$businessId,private_storage_path('business-representation-evidence'));
     }
 
     public function validateEditorialUpdate(int $businessId):void

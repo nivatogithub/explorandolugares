@@ -135,8 +135,12 @@ try:
     assert 'class="pill' not in grid and '<details' not in grid and 'business-row-message' not in grid,'Actions and state notes must not expand the grid rows'
     assert 'aria-label="Ver tarjeta"' in grid and 'aria-hidden="true"' in grid and 'business-icon-action' in grid
     page=db.execute('SELECT b.id FROM businesses b JOIN business_translations t ON t.business_id=b.id WHERE t.display_name="Fixture page"').fetchone()[0]
+    code,blocked_payment,_=request('/business/payment.php?business='+str(page))
+    assert code==200 and 'Pago pendiente de instrucciones' in blocked_payment and 'Tu registro está guardado' in blocked_payment
+    assert 'name="payment_proof"' not in blocked_payment,'Payment collection must not be enabled without real configured instructions'
     db.execute('INSERT INTO payment_instructions(id,enabled,test_mode,holder,bank,account_number,account_type,breb_key,notes,qr_file,updated_at) VALUES(1,1,1,"Fixture Dev2","Banco ficticio","PRUEBA","savings","","Solo simulación","",CURRENT_TIMESTAMP)');db.commit()
     code,checkout,_=request('/business/payment.php?business='+str(page))
+    assert 'Ya pagué · Adjuntar comprobante' in checkout and 'name="payment_proof"' in checkout and 'Enviar comprobante para validación' in checkout
     assert code==200 and 'SIMULACIÓN' in checkout and 'Cómo realizar el pago' in checkout
     assert 'name="plan_code"' not in checkout and 'name="billing_frequency"' not in checkout
     quote=re.search(r'name="quote_token" value="([^"]+)"',checkout)[1]

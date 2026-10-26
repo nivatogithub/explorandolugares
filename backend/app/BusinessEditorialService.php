@@ -19,7 +19,7 @@ final class BusinessEditorialService
  public function latest(int $business):?array{$q=$this->pdo->prepare('SELECT * FROM business_editorial_versions WHERE business_id=? ORDER BY id DESC LIMIT 1'.($this->pdo->inTransaction()&&$this->pdo->getAttribute(PDO::ATTR_DRIVER_NAME)==='mysql'?' FOR UPDATE':''));$q->execute([$business]);$v=$q->fetch(PDO::FETCH_ASSOC);return $v?:null;}
  /** Starts the internal editorial handoff; the owner never performs this action. */
  public function beginEditorial(int $business,string $actor):void{
-  if(trim($actor)==='')throw new RuntimeException('La preparación editorial requiere un administrador.');$this->pdo->beginTransaction();try{$this->lock($business);$latest=$this->latest($business);if(!$latest)throw new RuntimeException('Primero debe existir un borrador privado del negocio.');if($latest['status']==='in_editorial'){$this->pdo->commit();return;}if(!in_array($latest['status'],['draft','changes_requested','rejected'],true))throw new RuntimeException('La versión actual no admite una nueva preparación editorial.');$q=$this->pdo->prepare('UPDATE business_editorial_versions SET status="in_editorial",note="",updated_at=CURRENT_TIMESTAMP WHERE id=?');$q->execute([$latest['id']]);$this->event((int)$latest['id'],'admin:'.$actor,'begin_editorial');$this->pdo->commit();}catch(Throwable $error){if($this->pdo->inTransaction())$this->pdo->rollBack();throw $error;}
+  if(trim($actor)==='')throw new RuntimeException('La preparación editorial requiere un administrador.');$this->pdo->beginTransaction();try{$this->lock($business);$latest=$this->latest($business);if(!$latest)throw new RuntimeException('Primero debe existir un borrador privado del negocio.');if($latest['status']==='in_editorial'){$this->pdo->commit();return;}if($latest['status']==='published'){$id=$this->save(0,$business,(int)$latest['id'],[],false,true,$actor);$this->event($id,'admin:'.$actor,'begin_editorial');$this->pdo->commit();return;}if(!in_array($latest['status'],['draft','changes_requested','rejected'],true))throw new RuntimeException('La versión actual no admite una nueva preparación editorial.');$q=$this->pdo->prepare('UPDATE business_editorial_versions SET status="in_editorial",note="",updated_at=CURRENT_TIMESTAMP WHERE id=?');$q->execute([$latest['id']]);$this->event((int)$latest['id'],'admin:'.$actor,'begin_editorial');$this->pdo->commit();}catch(Throwable $error){if($this->pdo->inTransaction())$this->pdo->rollBack();throw $error;}
  }
  public function version(int $id):array{$q=$this->pdo->prepare('SELECT * FROM business_editorial_versions WHERE id=?'.($this->pdo->inTransaction()&&$this->pdo->getAttribute(PDO::ATTR_DRIVER_NAME)==='mysql'?' FOR UPDATE':''));$q->execute([$id]);return $q->fetch(PDO::FETCH_ASSOC)?:throw new RuntimeException('La versión no existe.');}
  public function live(int $business):array{
@@ -36,6 +36,8 @@ final class BusinessEditorialService
  public function payload(?array $v,int $business):array{return $v?json_decode($v['payload_json'],true,32,JSON_THROW_ON_ERROR):$this->live($business);}
  /** Normalize by the real subscription. Hidden/private CRM channels cannot enter a public revision. */
  private function clean(int $business,array $input,array $previous,bool $editor):array{
+  // Beta is not writable, including crafted POSTs; preserve existing data unchanged.
+  foreach(['hours','opening_hours','price_range','capacity_count','menu_url','reservations_url'] as $beta)unset($input[$beta]);
   $plan=$this->options($business);$code=$plan['code'];$p=$previous;
   $p['id']=$business;$p['plan_code']=$code;
   $p['category_code']=(string)($input['category_code']??$p['category_code']);$category=$this->pdo->prepare('SELECT 1 FROM service_categories WHERE code=? AND is_active=1');$category->execute([$p['category_code']]);if(!$category->fetchColumn())throw new RuntimeException('Selecciona una categoría activa.');
@@ -76,7 +78,7 @@ final class BusinessEditorialService
    // The first editorial ZIP may return while the merchant draft is still private.
    // Once a prepublication has been sent, corrections must come through the
    // merchant's explicit request rather than silently replacing that version.
-   if($editor&&$latest&&!in_array($latest['status'],['draft','in_editorial','changes_requested'],true))throw new RuntimeException('La última versión ya está en aprobación o publicada; espera una solicitud de correcciones antes de importar otra propuesta.');
+   if($editor&&$latest&&!in_array($latest['status'],['draft','in_editorial','changes_requested','published'],true))throw new RuntimeException('La última versión ya está en aprobación; espera la revisión del propietario antes de reemplazarla.');
    $previous=$this->payload($latest,$business);
    if(!$latest){
     $application=$this->pdo->prepare('SELECT business_details_json FROM business_account_applications WHERE business_id=? AND account_id=? AND status="approved" ORDER BY id DESC LIMIT 1');$application->execute([$business,$account]);$details=json_decode((string)($application->fetchColumn()?:'{}'),true,32,JSON_THROW_ON_ERROR);
@@ -161,5 +163,6 @@ $adminInput=$payload;
    if($v['plan_code']==='page_premium')PremiumBusinessProfile::save($this->pdo,(int)$v['account_id'],$business,$payload['service_sections']??[],(string)($payload['page_alias']??PremiumBusinessProfile::currentAlias($this->pdo,$business)));
    $this->pdo->prepare('UPDATE business_editorial_versions SET status="published",published_at=CURRENT_TIMESTAMP,updated_at=CURRENT_TIMESTAMP WHERE id=?')->execute([$id]);$this->event($id,$actor,'published');if($ownTransaction)$this->pdo->commit();
   }catch(Throwable $e){if($ownTransaction&&$this->pdo->inTransaction())$this->pdo->rollBack();throw $e;}
+  if($ownTransaction)BusinessOwnershipEvidence::afterPublication($this->pdo,$business,dirname($this->storage).'/business-representation-evidence');
  }
 }
