@@ -36,6 +36,12 @@ $p->exec('INSERT INTO businesses(id,public_id,destination_id,category_code,slug,
 foreach(['es','en','pt-BR'] as $lang)$p->prepare('INSERT INTO business_translations(business_id,locale,display_name,summary,description) VALUES(?,?,?,?,?)')->execute([2,$lang,'Página Ficticia','Resumen '.$lang,'Descripción '.$lang]);
 $paidBefore=$p->query('SELECT * FROM business_subscriptions WHERE business_id=2')->fetchAll();$paidLive=$s->live(2);
 $id=$s->save(1,2,0,['translations'=>['es'=>['summary'=>'Resumen nuevo']],'location_confirmed'=>1]);$v=$s->version($id);$s->transition($id,'submit',1,'','',$v['payload_hash']);$s->transition($id,'prepare',0,'admin','',$v['payload_hash'],['translations'=>'1','images'=>'1','layout'=>'1']);check($s->live(2)===$paidLive,'preparing paid page changed live data');$s->transition($id,'approve',1,'','',$v['payload_hash']);$s->publish($id,'admin',$v['payload_hash']);check($p->query('SELECT * FROM business_subscriptions WHERE business_id=2')->fetchAll()===$paidBefore,'paid term changed');check($s->live(2)['contacts']['phone_fixed']['contact_value']==='+576044441234','public contact lost');
+// An administrator starts another private proposal without modifying the published version or term.
+$publishedVersion=$id;$publishedSnapshot=$s->live(2);$s->beginEditorial(2,'admin');$next=$s->latest(2);$id=(int)$next['id'];
+check($id!==$publishedVersion&&$next['status']==='in_editorial','admin cannot begin a private correction of a published business');
+check($s->version($publishedVersion)['status']==='published'&&$s->live(2)===$publishedSnapshot,'starting an editorial correction changes the public version');
+check($p->query('SELECT * FROM business_subscriptions WHERE business_id=2')->fetchAll()===$paidBefore,'editorial correction renews the subscription');
+
 // A new paid draft still needs the independent payment review before first publication.
 $p->exec('UPDATE businesses SET publication_status="draft" WHERE id=2;UPDATE business_subscriptions SET status="pending" WHERE business_id=2');$id2=$s->save(1,2,$id,[]);$v=$s->version($id2);$s->transition($id2,'submit',1,'','',$v['payload_hash']);fails(fn()=>$s->transition($id2,'prepare',0,'admin','',$v['payload_hash'],['translations'=>'1','images'=>'1','layout'=>'1']),'prepublication bypassed payment');check($p->query('SELECT publication_status FROM businesses WHERE id=2')->fetchColumn()==='draft','failed publication exposed draft');
 // Premium product previews must be private and bounded, with reviewed media and translations.
@@ -65,6 +71,10 @@ echo "OK: private versions, exact approvals, ownership, optimistic conflicts, re
 
 // El responsable no puede introducir traducciones aunque manipule la petición.
 $latest=$s->latest(1);$before=$s->payload($latest,1);$id=$s->save(1,1,(int)$latest['id'],['translations'=>['es'=>['summary'=>'Solo español'],'en'=>['summary'=>'Injected language']]]);$after=$s->payload($s->version($id),1);check(($after['translations']['en']['summary']??'')===($before['translations']['en']['summary']??''),'owner changed portal translations');
+
+// Beta is never writable, even when a request bypasses disabled HTML controls.
+$latest=$s->latest(1);$before=$s->payload($latest,1);$beta=$s->save(0,1,(int)$latest['id'],['opening_hours'=>'Injected','price_range'=>'$$$$$','capacity_count'=>'999','menu_url'=>'https://example.invalid/menu','reservations_url'=>'https://example.invalid/book','hours'=>['mon'=>['open'=>'08:00','close'=>'18:00']]],false,true,'admin');$after=$s->payload($s->version($beta),1);
+foreach(['opening_hours','price_range','capacity_count','menu_url','reservations_url'] as $field)check(($after[$field]??null)===($before[$field]??null),'Beta changed '.$field);
 
 // A ZIP owns its transaction: saving a version must not nest/commit it.
 $latest=$s->latest(1);$p->beginTransaction();$nested=$s->save(1,1,(int)$latest['id'],['showcase'=>['products'=>[4=>$products['products'][0]]],'source_images'=>['product_4'=>$source]],true);check($p->inTransaction(),'nested save committed the ZIP transaction');check(($s->payload($s->version($nested),1)['source_images']['product_4']??'')===$source,'fifth product source rejected');$p->rollBack();check((int)$s->latest(1)['id']===(int)$latest['id'],'failed ZIP cannot roll back its revision');

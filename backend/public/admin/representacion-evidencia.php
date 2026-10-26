@@ -6,7 +6,7 @@ header('X-Robots-Tag: noindex, nofollow');header('X-Content-Type-Options: nosnif
 if(empty($_SESSION['admin'])){http_response_code(403);exit('Inicia sesión desde el panel de administración.');}
 $id=filter_var($_GET['id']??null,FILTER_VALIDATE_INT);if(!$id){http_response_code(404);exit('Documento no encontrado.');}
 $query=db()->prepare('SELECT storage_name,mime_type,file_size FROM business_account_application_evidence WHERE id=?');$query->execute([$id]);$row=$query->fetch(PDO::FETCH_ASSOC);
-$retired=db()->prepare('SELECT deleted_at FROM business_evidence_retirement WHERE evidence_id=?');$retired->execute([$id]);if($retired->fetchColumn()){http_response_code(410);exit('Documento eliminado tras validar la titularidad. Se conserva la constancia de revisión.');}
+$retired=db()->prepare('SELECT deleted_at FROM business_evidence_retirement WHERE evidence_id=?');$retired->execute([$id]);if($retired->fetchColumn()){http_response_code(410);exit('Documento eliminado después de publicar el negocio. Se conserva la constancia de revisión.');}
 $extensions=['application/pdf'=>'pdf','image/jpeg'=>'jpg','image/png'=>'png','image/webp'=>'webp'];
 if(!$row||!isset($extensions[$row['mime_type']])||!preg_match('/^[a-f0-9]{48}\.'.preg_quote($extensions[$row['mime_type']],'/').'$/D',(string)$row['storage_name'])){http_response_code(404);exit('Documento no encontrado.');}
 $path=private_storage_path('business-representation-evidence').'/'.$row['storage_name'];if(!is_file($path)||(int)filesize($path)!==(int)$row['file_size']){http_response_code(404);exit('Documento no disponible.');}

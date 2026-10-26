@@ -1006,9 +1006,11 @@ try:
     check(ownership_docs,'Falta evidencia de titularidad de la solicitud')
     for proof in ownership_docs:
         code,review_body,_=request(admin_editorial,{'csrf':editorial_admin_csrf,'action':'verify_document','version_id':str(prepared['id']),'evidence_id':str(proof['id'])})
-        check(code==200 and DB.execute('SELECT deleted_at FROM business_evidence_retirement WHERE evidence_id=?',(proof['id'],)).fetchone()[0] is not None,'No registró eliminación del documento')
-        check(not list((WORK/'private').rglob(proof['storage_name'])),'El archivo sigue almacenado tras validar titularidad')
-        check(request('/admin/representacion-evidencia.php?id='+str(proof['id']))[0]==410,'El documento eliminado sigue accesible')
+        check(code==200 and DB.execute('SELECT verified_at FROM business_account_application_evidence WHERE id=?',(proof['id'],)).fetchone()[0] is not None,'No registró validación del documento')
+        check(DB.execute('SELECT deleted_at FROM business_evidence_retirement WHERE evidence_id=?',(proof['id'],)).fetchone()[0] is None,'Eliminó el soporte antes de publicar')
+        check(list((WORK/'private').rglob(proof['storage_name'])),'El soporte no se conservó hasta publicación')
+        with ADMIN.open(BASE+'/admin/representacion-evidencia.php?id='+str(proof['id']),timeout=10) as response:
+            check(response.status==200 and response.read(),'El documento revisado no es accesible antes de publicar')
     code,prepared_body,_=request(admin_editorial,quality)
     check(code==200 and DB.execute('SELECT status FROM business_editorial_versions WHERE id=?',(prepared['id'],)).fetchone()[0]=='awaiting_owner','No preparó prepublicación: '+prepared_body[-1000:])
     check(DB.execute("SELECT COUNT(*) FROM business_editorial_events WHERE version_id=? AND action='mail_simulated'",(prepared['id'],)).fetchone()[0]==1,'Preparar no envió aviso automático simulado')
@@ -1026,6 +1028,10 @@ try:
     owner_action.update(action='approve',version_id=str(corrected['id']),payload_hash=corrected['payload_hash'])
     check(request(editorial_path,owner_action,business_flow)[0]==303,'No aprobó versión corregida')
     check(DB.execute('SELECT status FROM business_editorial_versions WHERE id=?',(corrected['id'],)).fetchone()[0]=='published','La aprobación del comerciante no publicó automáticamente')
+    for proof in ownership_docs:
+        check(DB.execute('SELECT deleted_at FROM business_evidence_retirement WHERE evidence_id=?',(proof['id'],)).fetchone()[0] is not None,'No retiró el documento después de publicar')
+        check(not list((WORK/'private').rglob(proof['storage_name'])),'El archivo sigue almacenado después de publicar')
+        check(request('/admin/representacion-evidencia.php?id='+str(proof['id']))[0]==410,'El documento retirado sigue accesible')
     qr_code,qr_page,_=request('/business/dashboard.php?tab=business&business='+str(premium_business),opener=business_flow)
     qr_public_id=DB.execute('SELECT public_id FROM businesses WHERE id=?',(premium_business,)).fetchone()[0]
     check(qr_code==200 and 'data-business-qr-url="https://explorandolugares.com/negocios/'+qr_public_id+'/"' in qr_page,'La página Premium publicada no ofrece su QR estable.')

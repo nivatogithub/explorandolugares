@@ -8,7 +8,7 @@ require dirname(__DIR__).'/app/BusinessEditorialService.php';
 require_once dirname(__DIR__).'/app/BusinessOwnershipEvidence.php';
 $p=new PDO('sqlite:'.$database,null,null,[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION]);$business=(int)($argv[2]??0);
 $ownership=new BusinessOwnershipEvidence($p,dirname($database).'/business-representation-evidence');
-foreach($ownership->documents($business) as $document)$ownership->verifyAndDelete($business,(int)$document['id'],'fixture-admin');
+foreach($ownership->documents($business) as $document)$ownership->verify($business,(int)$document['id'],'fixture-admin');
 $editorial=new BusinessEditorialService($p,dirname($database).'/business-image-references');$v=$editorial->latest($business);
 if(!$v||$v['plan_code']!=='free')throw new RuntimeException('Only the Free fixture can be prepared.');
 $payload=json_decode($v['payload_json'],true,32,JSON_THROW_ON_ERROR);

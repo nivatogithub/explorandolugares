@@ -61,7 +61,9 @@ require_once dirname(__DIR__).'/_account-page.php';account_page(false);
 <?php if($error):?><p class="notice" role="alert"><?=esc($error)?></p><?php endif?>
 <?php if($quote):?><p class="notice">Importe a pagar: <strong><?=esc(number_format($quote['due_cents']/100,2,',','.').' '.$quote['currency'])?></strong></p><?php endif?>
 <p>Tu información ya está guardada. Puedes salir y retomar este pago desde la fila del negocio.</p>
+<?php if($quote&&!empty($paymentInstructions['enabled'])):?><p><a class="pill" href="#payment-evidence">Ya pagué · Adjuntar comprobante</a></p><?php endif?>
 <?php require __DIR__.'/payment-instructions.php';?>
+<h2 id="payment-evidence">Adjuntar el comprobante y enviar para validación</h2>
 <?php if($quote&&!empty($paymentInstructions['enabled'])):?>
 <form method="post" enctype="multipart/form-data" class="destination-editor account-payment-form">
 <input type="hidden" name="csrf" value="<?=esc($_SESSION['csrf'])?>"><input type="hidden" name="quote_token" value="<?=esc($quoteToken)?>">
@@ -74,6 +76,6 @@ require_once dirname(__DIR__).'/_account-page.php';account_page(false);
 <label class="wide">Comprobante · PDF, JPG, PNG o WebP · máximo 8 MB<input type="file" name="payment_proof" accept="application/pdf,image/jpeg,image/png,image/webp" required></label>
 </div><p>Enviar el comprobante deja el negocio pendiente de validación. No publica ni confirma automáticamente el pago.</p>
 <button class="pill" type="submit">Enviar comprobante para validación</button>
-</form><?php endif?></section></main>
+</form><?php elseif(empty($paymentInstructions['enabled'])):?><p class="notice" role="status"><strong>Pago pendiente de instrucciones.</strong> Tu registro está guardado, pero el portal aún no tiene un medio de pago habilitado. No envíes dinero. Cuando el equipo lo configure, podrás volver desde Mis negocios, adjuntar aquí el comprobante y enviarlo para validación. Todavía no se ha enviado un pago a revisión.</p><p><a href="/negocios/portal/?tab=business">Volver a Mis negocios</a></p><?php else:?><p class="notice" role="alert">No se pudo preparar el importe. No realices el pago todavía; revisa el mensaje anterior y vuelve a intentarlo. Tu registro sigue guardado.</p><?php endif?></section></main>
 <script src="<?=esc(admin_asset('business-subscriptions.js'))?>" defer></script>
 </body></html>
