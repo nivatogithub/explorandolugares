@@ -1,0 +1,5 @@
+.account-file-picker{position:relative;display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:16px;border:1px dashed var(--el-control-border);border-radius:10px;background:var(--el-card);min-height:48px;min-width:0}
+.account-file-button{display:inline-flex;align-items:center;min-height:44px;box-sizing:border-box;padding:10px 14px;border-radius:8px;background:var(--el-panel);color:var(--el-text,#172b42);font-weight:650}
+.account-file-status{flex:1;min-width:130px;overflow-wrap:anywhere;font-size:14px}
+.account-file-picker input[type=file]{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer}
+.account-file-picker:focus-within{outline:3px solid var(--el-action);outline-offset:3px}
