@@ -57,6 +57,7 @@ require_once dirname(__DIR__).'/_account-page.php';account_page(false);
 <nav class="account-tabs" aria-label="Secciones de Mi cuenta"><a href="/negocios/portal/?tab=personal">Viajero</a><a href="/negocios/portal/?tab=business" aria-current="page">Mis negocios</a></nav>
 <?php if($isAdministrator):?><p><a class="pill light" href="/admin/index.php">Abrir administración</a></p><?php endif?>
 <?php if($error):?><p class="notice" role="alert"><?=esc($error)?></p><?php endif?>
+<?php if(($_GET['cupon']??'')==='aplicado'):?><p class="notice" role="status">Cupón aplicado. Tu suscripción quedó cubierta sin pago ni comprobante. La solicitud sigue privada y pendiente de validación; todavía no está publicada.</p><?php endif?>
 <?php if(($_GET['resultado']??'')==='publicado'):?><p class="notice" role="status">Tu negocio quedó publicado.</p><?php elseif(($_GET['resultado']??'')==='correcciones'):?><p class="notice" role="status">Recibimos tus comentarios. El equipo revisará las correcciones antes de enviarte otra propuesta.</p><?php elseif(($_GET['pago']??'')==='enviado'):?><p class="notice" role="status">Comprobante recibido. Consulta el estado actualizado del negocio en esta lista.</p><?php elseif(($_GET['solicitud']??'')==='guardada'):?><p class="notice" role="status">Registro guardado. Puedes seguir su estado en esta lista.</p><?php endif?>
 <section class="destination-admin-list">
 <div class="business-grid-heading"><h2>Tus negocios</h2><a class="pill" href="/negocios/registro/?tipo=business">Registrar o reclamar un negocio</a></div>

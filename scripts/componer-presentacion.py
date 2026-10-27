@@ -33,7 +33,7 @@ def resources(text, private_preview=False):
   if kind=='css':css.append(f'<link rel="stylesheet" href="{url}">')
   else:
    tag=f'<script defer src="{url}"'+(' data-el-measurement="1"' if name.endswith('medicion.js') else '')+'></script>'
-   if private_preview and name.endswith('medicion.js'):tag="<?php if(!isset($elBusinessDemoPlan)&&!isset($elEditorialPreviewBusiness)):?>"+tag+"<?php endif ?>"
+   if private_preview:tag="<?php if(!isset($elBusinessDemoPlan)&&!isset($elEditorialPreviewBusiness)):?>"+tag+"<?php endif ?>"
    scripts.append(tag)
  first=re.search(r'<link\b[^>]*rel="stylesheet"',text)
  position=first.start() if first else text.find('</head>')
@@ -74,7 +74,7 @@ def apply(public):
  for path in public.rglob('*'):
   if not path.is_file() or path.suffix not in {'.html','.php'}:continue
   text=path.read_text()
-  if not any(marker in text for marker in ['destination-main.php','directory-card.php','directory-grid','highlight-grid','destination-experience-list']):
+  if 'data-business-preview-readonly' in text or not any(marker in text for marker in ['destination-main.php','directory-card.php','directory-grid','highlight-grid','destination-experience-list']):
    for name in ['tarjetas-negocios-compactas.js','cargar-mas-tarjetas.js']:text=re.sub(r'<script\b[^>]*src="[^"]*'+re.escape(name)+r'(?:\?[^"]*)?"[^>]*></script>','',text)
   for name in RETIRED:text=re.sub(r'<script\b[^>]*src="[^"]*'+re.escape(name)+r'(?:\?[^"]*)?"[^>]*></script>','',text)
   path.write_text(text)

@@ -4,6 +4,13 @@ Fecha: 24 de octubre de 2026. Sustituye las decisiones contradictorias de docume
 
 **Última decisión de extensión:** Gratis sin descripción; Destacado 100, Página 300 y Premium 600 caracteres, incluyendo espacios y puntuación. Las 2/5/10 líneas son una referencia de diseño, no una garantía para todos los anchos. Esta decisión sustituye los máximos anteriores que se conservan únicamente en la evidencia histórica de este documento. Una descripción, productos solo Premium en su propio paso y sin recorte automático.
 
+## Decisión posterior: cupón exclusivamente en Pago — 26/10/2026
+
+- Sustituye la captura del cupón durante Suscripción descrita en la evidencia histórica inferior. El usuario elige libremente plan y periodicidad, completa y guarda el negocio; solo entonces puede ingresar el código en Pago. No preseleccionar ni cambiar un plan por una promoción.
+- El campo solo se muestra si existe una promoción activa, no vencida ni agotada, compatible con el plan, período y lugar reales del negocio. No se muestran los códigos disponibles. El servidor vuelve a validar el código concreto al canjearlo; el cupón no puede cambiar el plan ni aplicarse dos veces.
+- Un descuento total omite comprobante/pago, no la revisión de titularidad, editorial ni publicación. Los canjes anteriores siguen siendo históricos inmutables. Los códigos sin canjear en borradores antiguos no se aplican automáticamente: se ingresan en Pago.
+- La vuelta a pasos anteriores del mismo wizard, su barra con Pago y el seguimiento posterior son trabajo separado de la entrega urgente del cupón; no introducir otra pantalla de edición del comercio para resolverlo.
+
 ## Recorrido requerido
 
 1. Cuenta personal creada, correo verificado e inicio de sesión antes de crear/reclamar negocios. Nombre y correo se toman de la cuenta; no se vuelven a pedir credenciales ni residencia en el negocio.

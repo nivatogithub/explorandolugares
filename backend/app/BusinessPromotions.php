@@ -52,6 +52,46 @@ final class BusinessPromotions
         }catch(Throwable $e){if($this->pdo->inTransaction())$this->pdo->rollBack();throw $e;}
     }
     private function lock():string{return $this->pdo->getAttribute(PDO::ATTR_DRIVER_NAME)==='mysql'?' FOR UPDATE':'';}
+    /** Only show the code field after selecting an eligible plan; never reveal available codes. */
+    public function hasApplicableOffer(int $business,string $plan,string $period):bool
+    {
+        if(!isset(self::PLANS[$plan])||!isset(BusinessSubscriptionChoice::PERIODS[$period]))return false;
+        $q=$this->pdo->prepare('SELECT c.plans_json,c.periods_json FROM business_promotion_codes c JOIN business_promotion_places p ON p.code=c.code JOIN business_promotion_place_scopes s ON s.code=c.code JOIN businesses b ON b.destination_id=p.destination_id WHERE b.id=? AND c.enabled=1 AND (c.expires_at IS NULL OR c.expires_at>=?) AND (c.max_uses IS NULL OR c.max_uses>(SELECT COUNT(*) FROM business_promotion_redemptions r WHERE r.code=c.code))');
+        $q->execute([$business,gmdate('Y-m-d H:i:s')]);
+        foreach($q->fetchAll(PDO::FETCH_ASSOC) as $offer)if(in_array($plan,json_decode($offer['plans_json'],true,8,JSON_THROW_ON_ERROR),true)&&in_array($period,json_decode($offer['periods_json'],true,8,JSON_THROW_ON_ERROR),true))return true;
+        return false;
+    }
+    /** Shared checkout gate: an initial private registration, before any payment evidence or editorial review. */
+    public function paymentContext(int $account,int $business,bool $locking=false):array
+    {
+        if($locking&&!$this->pdo->inTransaction())throw new LogicException('El canje requiere una transacción.');
+        $q=$this->pdo->prepare('SELECT b.id,b.publication_status FROM businesses b WHERE b.id=?'.($locking?$this->lock():''));$q->execute([$business]);$row=$q->fetch(PDO::FETCH_ASSOC);
+        $q=$this->pdo->prepare('SELECT 1 FROM business_account_memberships m JOIN accounts a ON a.id=m.account_id WHERE m.account_id=? AND m.business_id=? AND m.status="active" AND m.role IN ("owner","manager") AND a.status="active"');$q->execute([$account,$business]);
+        if(!$row||!$q->fetchColumn())throw new RuntimeException('Este negocio no está asociado a tu cuenta.');
+        $q=$this->pdo->prepare('SELECT * FROM business_subscriptions WHERE business_id=? ORDER BY id DESC LIMIT 1'.($locking?$this->lock():''));$q->execute([$business]);$sub=$q->fetch(PDO::FETCH_ASSOC)?:null;
+        $q=$this->pdo->prepare('SELECT status FROM business_editorial_versions WHERE business_id=? ORDER BY id DESC LIMIT 1'.($locking?$this->lock():''));$q->execute([$business]);$version=$q->fetchColumn();
+        $q=$this->pdo->prepare('SELECT e.id FROM business_subscription_payment_evidence e JOIN business_subscriptions s ON s.id=e.subscription_id WHERE s.business_id=? LIMIT 1');$q->execute([$business]);$hasEvidence=(bool)$q->fetchColumn();
+        $q=$this->pdo->prepare('SELECT id FROM business_subscriptions WHERE business_id=? AND id<>? AND plan_code<>"free" LIMIT 1');$q->execute([$business,$sub['id']??0]);$hasPrior=(bool)$q->fetchColumn();
+        return ['subscription'=>$sub,'can_apply'=>$sub&&$row['publication_status']==='draft'&&$sub['status']==='pending'&&$sub['starts_at']===null&&isset(self::PLANS[$sub['plan_code']])&&$version==='draft'&&!$hasEvidence&&!$hasPrior];
+    }
+    public function applyAtPayment(int $account,int $business,int $expectedSubscription,string $code):array
+    {
+        $this->pdo->beginTransaction();
+        try{
+            $context=$this->paymentContext($account,$business,true);$sub=$context['subscription'];
+            if(!$sub||(int)$sub['id']!==$expectedSubscription)throw new RuntimeException('La suscripción cambió. Recarga la pantalla de pago.');
+            $used=$this->forSubscription((int)$sub['id']);
+            if($used){
+                if($used['code']!==self::normalize($code)||(int)$used['account_id']!==$account)throw new RuntimeException('Esta suscripción ya tiene un cupón aplicado; no se puede reemplazar.');
+                $this->pdo->commit();return $used;
+            }
+            if(!$context['can_apply'])throw new RuntimeException('Solo puedes aplicar un cupón al registro inicial, antes de enviar el comprobante y de iniciar la revisión.');
+            $q=$this->pdo->prepare('SELECT quoted_amount FROM business_experience_subscriptions WHERE subscription_id=?');
+            $q->execute([$sub['id']]);$addon=$q->fetchColumn();
+            $offer=$this->redeem((int)$sub['id'],$business,$account,$code,SubscriptionChangeService::cents($addon===false?0:$addon),null,true);
+            $this->pdo->commit();return $offer;
+        }catch(Throwable $e){if($this->pdo->inTransaction())$this->pdo->rollBack();throw $e;}
+    }
     public function quote(string $code,string $plan,string $period,int $destinationId,int $addonCents=0,bool $lock=false):array
     {
         $code=self::normalize($code);
@@ -71,7 +111,7 @@ final class BusinessPromotions
         $discount=intdiv($list*$percent+50,100);
         return ['code'=>$code,'plan_code'=>$plan,'billing_frequency'=>$period,'destination_id'=>$destinationId,'percentage'=>$percent,'list_cents'=>$list,'addon_cents'=>$addonCents,'discount_cents'=>$discount,'due_cents'=>$list-$discount+$addonCents,'currency'=>$price['currency']];
     }
-    public function redeem(int $subscription,int $business,int $account,string $code,int $addonCents=0,?array $expected=null):array
+    public function redeem(int $subscription,int $business,int $account,string $code,int $addonCents=0,?array $expected=null,bool $preserveQuotedAmount=false):array
     {
         if(!$this->pdo->inTransaction())throw new LogicException('El canje requiere una transacción.');
         $q=$this->pdo->prepare('SELECT * FROM business_subscriptions WHERE id=? AND business_id=?'.$this->lock());$q->execute([$subscription,$business]);$sub=$q->fetch(PDO::FETCH_ASSOC);
@@ -84,6 +124,13 @@ final class BusinessPromotions
         if($prior->fetchColumn())throw new RuntimeException('El cupón de registro no se aplica a renovaciones ni cambios de plan.');
         $place=$this->pdo->prepare('SELECT destination_id FROM businesses WHERE id=?'.$this->lock());$place->execute([$business]);
         $offer=$this->quote($code,$sub['plan_code'],$sub['billing_frequency'],(int)$place->fetchColumn(),$addonCents,true);
+        // A coupon entered later must discount the registration's captured price, not increase it to today's tariff.
+        if($preserveQuotedAmount){
+            if($sub['quoted_amount']===null||$sub['currency']!==$offer['currency'])throw new RuntimeException('La tarifa guardada requiere revisión antes de aplicar el cupón.');
+            $list=SubscriptionChangeService::cents($sub['quoted_amount'])-$addonCents;
+            if($list<=0)throw new RuntimeException('La tarifa guardada no permite calcular este descuento.');
+            $offer['list_cents']=$list;$offer['discount_cents']=intdiv($list*$offer['percentage']+50,100);$offer['due_cents']=$list-$offer['discount_cents']+$addonCents;
+        }
         if($expected!==null&&$offer!==$expected)throw new RuntimeException('El cupón o la tarifa cambió. Vuelve al paso Suscripción para revisar el descuento.');
         $used=$this->pdo->prepare('SELECT 1 FROM business_promotion_redemptions WHERE code=? AND business_id=?');$used->execute([$offer['code'],$business]);
         if($used->fetchColumn())throw new RuntimeException('Este negocio ya utilizó el cupón.');

@@ -54,6 +54,7 @@ try:
     code,body,_=request('/negocios/registro/?tipo=business');assert code==200
     assert 'Medellín' in body and 'No publicado' not in body
     assert 'name="password"' not in body and 'name="display_name"' not in body and 'name="message"' not in body
+    assert 'name="promotion_code"' not in body and 'data-apply-promotion' not in body,'Coupons belong only on payment, not plan selection'
     assert 'registro@example.invalid' in body
     assert 'name="description"' not in body and body.count('name="summary"')==1
     assert len(re.findall(r'<textarea[^>]*\bdata-text-counter\b',body))==6,'Counter only on business and five product descriptions'
@@ -123,6 +124,20 @@ try:
         assert ('instagram' in details['channels'])==(plan=='page_premium')
         payload=json.loads(db.execute('SELECT payload_json FROM business_editorial_versions WHERE business_id=? ORDER BY id DESC LIMIT 1',(row['business_id'],)).fetchone()[0])
         assert payload['translations']['es']['summary']=='á'*limit,'Description lost at editorial handoff'
+        # Private previews are available before any payment or editorial approval.
+        versions_before=db.execute('SELECT COUNT(*) FROM business_editorial_versions').fetchone()[0]
+        preview_version=db.execute('SELECT id FROM business_editorial_versions WHERE business_id=? ORDER BY id DESC LIMIT 1',(row['business_id'],)).fetchone()[0]
+        for view in (['card','page'] if plan in ['page','page_premium'] else ['card']):
+            code,preview,preview_headers=request('/business/editorial.php?business='+str(row['business_id'])+'&version='+str(preview_version)+'&preview='+view)
+            assert code==200,(plan,view,code,preview[-800:])
+            assert '<header' not in preview and '<footer' not in preview and 'data-portal-shell=' not in preview
+            assert '<iframe' not in preview and '<form' not in preview and '<script' not in preview,'Preview must not embed another portal or active controls'
+            assert 'noindex' in preview_headers.get('X-Robots-Tag','')
+            assert not re.search(r'<a\b[^>]*\bhref="(?!#)',preview),'Preview links must remain inert'
+            assert ('directory-card-tier-'+plan) in preview if view=='card' else 'business-profile-page' in preview
+            if limit:assert 'á'*limit in preview,'Preview lost the submitted description'
+            if view=='page':assert 'business/editorial-image.php?id=' in preview,'Original photo is available before payment'
+        assert db.execute('SELECT COUNT(*) FROM business_editorial_versions').fetchone()[0]==versions_before,'Preview must not create versions'
     registration_template=fields.copy()
     code,dashboard,_=request('/negocios/portal/?tab=business')
     assert code==200 and dashboard.count('data-business-row=')==4,dashboard[:300]
@@ -138,6 +153,44 @@ try:
     code,blocked_payment,_=request('/business/payment.php?business='+str(page))
     assert code==200 and 'Pago pendiente de instrucciones' in blocked_payment and 'Tu registro está guardado' in blocked_payment
     assert 'name="payment_proof"' not in blocked_payment,'Payment collection must not be enabled without real configured instructions'
+    # Apply coupons on the payment screen, including when no bank method is configured.
+    featured=db.execute('SELECT business_id FROM business_translations WHERE display_name="Fixture featured"').fetchone()[0]
+    for coupon,percent,plan in [('PAGO100',100,'featured'),('PAGO50',50,'page')]:
+        db.execute('INSERT INTO business_promotion_codes(code,percentage,plans_json,periods_json,enabled,created_by) VALUES(?,?,?,?,1,"fixture-admin")',(coupon,percent,json.dumps([plan]),json.dumps(['annual'])))
+        db.execute('INSERT INTO business_promotion_place_scopes(code) VALUES(?)',(coupon,));db.execute('INSERT INTO business_promotion_places(code,destination_id) VALUES(?,2)',(coupon,))
+    db.commit()
+    premium=db.execute('SELECT business_id FROM business_translations WHERE display_name="Fixture page_premium"').fetchone()[0]
+    assert 'name="promotion_code"' not in request('/business/payment.php?business='+str(premium))[1],'No compatible promotion: do not offer the coupon field'
+    for business,coupon in [(featured,'PAGO100'),(page,'PAGO50')]:
+        path='/business/payment.php?business='+str(business)
+        code,checkout,_=request(path)
+        assert code==200 and 'name="promotion_code"' in checkout and 'name="payment_proof"' not in checkout
+        assert 'Editar textos, fotos y canales' not in checkout,'Merchant editing is a separate branch'
+        subscription=db.execute('SELECT id FROM business_subscriptions WHERE business_id=? ORDER BY id DESC LIMIT 1',(business,)).fetchone()[0]
+        promo=dict(csrf=csrf(checkout),action='apply_coupon',subscription_id=str(subscription),promotion_code=coupon,plan_code='page',quoted_amount='0')
+        assert request(path,dict(promo,csrf='invalid'))[0] in (303,401)
+        _,checkout,_=request(path);promo['csrf']=csrf(checkout)
+        code,result,_=request(path,dict(promo,promotion_code='NOEXISTE'))
+        assert code==400 and 'no está disponible' in result
+        if business==page:
+            assert request(path,dict(promo,promotion_code='PAGO100'))[0]==400,'Selected plan cannot be forged'
+        code,result,headers=request(path,promo)
+        assert code==303,(code,result[:500])
+        assert request(path,promo)[0]==303,'Double submit is idempotent'
+        redemption=db.execute('SELECT * FROM business_promotion_redemptions WHERE subscription_id=?',(subscription,)).fetchone()
+        assert redemption and redemption['account_id']==1
+        if business==featured:
+            assert '/negocios/portal/' in headers['Location']
+            sub=db.execute('SELECT * FROM business_subscriptions WHERE id=?',(subscription,)).fetchone()
+            assert sub['status']=='paid_pending_publication' and sub['starts_at'] is None and sub['ends_at'] is None
+            assert db.execute('SELECT publication_status FROM businesses WHERE id=?',(business,)).fetchone()[0]=='draft'
+            assert db.execute('SELECT COUNT(*) FROM business_subscription_payment_evidence').fetchone()[0]==0
+        else:
+            assert headers['Location']==path+'&cupon=aplicado'
+            _,checkout,_=request(path)
+            assert 'name="promotion_code"' not in checkout and 'PAGO50' in checkout
+            assert request(path,dict(promo,promotion_code='PAGO100'))[0]==400
+    print('OK: coupon at payment without configured bank methods; CSRF/plan checks, 100% skips receipt without publishing, partial recalculation and immutable retries.',flush=True)
     db.execute('INSERT INTO payment_instructions(id,enabled,test_mode,holder,bank,account_number,account_type,breb_key,notes,qr_file,updated_at) VALUES(1,1,1,"Fixture Dev2","Banco ficticio","PRUEBA","savings","","Solo simulación","",CURRENT_TIMESTAMP)');db.commit()
     code,checkout,_=request('/business/payment.php?business='+str(page))
     assert 'Ya pagué · Adjuntar comprobante' in checkout and 'name="payment_proof"' in checkout and 'Enviar comprobante para validación' in checkout
@@ -145,6 +198,7 @@ try:
     assert 'name="plan_code"' not in checkout and 'name="billing_frequency"' not in checkout
     quote=re.search(r'name="quote_token" value="([^"]+)"',checkout)[1]
     amount=db.execute('SELECT amount FROM subscription_plan_prices WHERE plan_code="page" AND billing_frequency="annual"').fetchone()[0]
+    amount=db.execute('SELECT quoted_amount FROM business_subscriptions WHERE business_id=? ORDER BY id DESC LIMIT 1',(page,)).fetchone()[0]
     payment_fields=dict(csrf=csrf(checkout),quote_token=quote,payment_reference='DEV2-PAYMENT',transaction_date=time.strftime('%Y-%m-%d'),paid_amount=str(amount),payment_method='transfer',source_bank='Banco ficticio')
     code,result,_=request('/business/payment.php?business='+str(page),payment_fields,[('payment_proof','payment.pdf','application/pdf',pdf)])
     assert code==303,result
@@ -202,24 +256,29 @@ try:
         db.execute('INSERT INTO business_promotion_place_scopes(code) VALUES(?)',(coupon,));db.execute('INSERT INTO business_promotion_places(code,destination_id) VALUES(?,2)',(coupon,));db.commit()
         _,body,_=request('/negocios/registro/?tipo=business');token=csrf(body)
         coupon_draft=re.search(r'name="registration_draft" value="([^"]+)"',body)[1]
-        code,result,_=request('/negocios/registro/?tipo=business&promotion_quote=1&destination_id=2&code='+coupon+'&plan=page_premium&period=monthly',accept_json=True)
-        assert code==400 and 'no aplica' in result
-        code,result,_=request('/negocios/registro/?tipo=business&promotion_quote=1&destination_id=1&code='+coupon+'&plan=page&period=monthly',accept_json=True)
-        assert code==400 and 'no aplica al lugar' in result
-        code,result,_=request('/negocios/registro/?tipo=business&promotion_quote=1&destination_id=2&code='+coupon+'&plan=page&period=monthly',accept_json=True)
-        assert code==200,result
-        offer=json.loads(result)['offer'];assert offer['percentage']==percent
+        assert 'name="promotion_code"' not in body and 'data-apply-promotion' not in body
         promo_fields=dict(registration_template,csrf=token,registration_draft=coupon_draft,draft_revision='0',business_name='Promoción '+coupon,plan_code='page',billing_frequency='monthly',summary='Página comercial ficticia con promoción.',promotion_code=coupon,quoted_amount='0',discount_percentage='100')
         code,uploaded,_=request('/business/onboarding-upload.php',dict(csrf=token,action='upload',kind='editorial',slot='cover'),[('file','cover.png','image/png',png)])
         assert code==200,uploaded
         promo_fields['temporary_uploads[editorial][cover]']=json.loads(uploaded)['upload']['id']
-        code,result,_=request('/negocios/registro/?tipo=business',dict(promo_fields,promotion_code='NOEXISTE'),files)
-        assert code==400 and db.execute('SELECT COUNT(*) FROM business_promotion_redemptions WHERE code=?',(coupon,)).fetchone()[0]==0,(code,result[:500])
+        # Even a forged or stale registration field cannot redeem a coupon or bias the chosen plan.
         code,result,headers=request('/negocios/registro/?tipo=business',promo_fields,files)
         assert code==303,(code,re.findall(r'role="alert">(.*?)</p>',result,re.S))
-        redemption=db.execute('SELECT * FROM business_promotion_redemptions WHERE code=?',(coupon,)).fetchone();assert redemption and redemption['account_id']==2
-        promo_business=redemption['business_id'];promo_subscription=redemption['subscription_id']
-        assert redemption['due_cents']==offer['due_cents']
+        promo_business=db.execute('SELECT business_id FROM business_translations WHERE display_name=?',('Promoción '+coupon,)).fetchone()[0]
+        sub=db.execute('SELECT * FROM business_subscriptions WHERE business_id=? ORDER BY id DESC LIMIT 1',(promo_business,)).fetchone()
+        promo_subscription=sub['id'];assert sub['plan_code']=='page' and sub['billing_frequency']=='monthly' and sub['status']=='pending'
+        assert db.execute('SELECT COUNT(*) FROM business_promotion_redemptions WHERE subscription_id=?',(promo_subscription,)).fetchone()[0]==0
+        path='/business/payment.php?business='+str(promo_business)
+        assert headers['Location']==path,'Every paid registration reaches payment before applying a discount'
+        _,checkout,_=request(path)
+        assert 'name="promotion_code"' in checkout
+        promo=dict(csrf=csrf(checkout),action='apply_coupon',subscription_id=str(promo_subscription),promotion_code=coupon)
+        assert request(path,dict(promo,promotion_code='NOEXISTE'))[0]==400
+        code,result,headers=request(path,promo)
+        assert code==303,(code,result[:500])
+        redemption=db.execute('SELECT * FROM business_promotion_redemptions WHERE subscription_id=?',(promo_subscription,)).fetchone();assert redemption and redemption['account_id']==2
+        offer=dict(redemption)
+        assert offer['percentage']==percent
         if percent==100:
             assert headers['Location'].startswith('/negocios/portal/') and 'payment.php' not in headers['Location']
             assert request('/business/payment.php?business='+str(promo_business))[0]==303,'100% bypasses even direct payment URL'
@@ -227,7 +286,7 @@ try:
             sub=db.execute('SELECT * FROM business_subscriptions WHERE id=?',(promo_subscription,)).fetchone()
             assert sub['status']=='paid_pending_publication' and sub['starts_at'] is None and sub['ends_at'] is None
         else:
-            assert headers['Location']=='/business/payment.php?business='+str(promo_business)
+            assert headers['Location']=='/business/payment.php?business='+str(promo_business)+'&cupon=aplicado'
             for _ in range(2):
                 code,checkout,_=request('/business/payment.php?business='+str(promo_business))
                 assert code==200 and coupon in checkout

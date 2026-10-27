@@ -21,10 +21,17 @@ $onboardingChoice=['plan_code'=>$plan,'billing_frequency'=>$period];
 $paymentInstructionsVisible=true;
 $paymentInstructions=PaymentInstructions::load(db(),private_storage_path('payment-instructions'),!empty($config['local_test']));
 $_SESSION['payment_checkout_references'][$id]??='EL-'.strtoupper(bin2hex(random_bytes(12)));$checkoutReference=$_SESSION['payment_checkout_references'][$id];
-$error='';$quote=null;
+$error='';$quote=null;$promotions=new BusinessPromotions(db());
+$canApplyCoupon=$promotions->paymentContext((int)$account['id'],$id)['can_apply'];
 try{
     if($_SERVER['REQUEST_METHOD']==='POST'){
         csrf();
+        if(($_POST['action']??'')==='apply_coupon'){
+            $offer=$promotions->applyAtPayment((int)$account['id'],$id,(int)($_POST['subscription_id']??0),(string)($_POST['promotion_code']??''));
+            foreach($_SESSION['business_checkout_quotes']??[] as $token=>$storedQuote)if((int)($storedQuote['business_id']??0)===$id)unset($_SESSION['business_checkout_quotes'][$token]);
+            if((int)$offer['due_cents']===0){unset($_SESSION['payment_checkout_references'][$id]);header('Location: /negocios/portal/?tab=business&cupon=aplicado',true,303);exit;}
+            header('Location: /business/payment.php?business='.$id.'&cupon=aplicado',true,303);exit;
+        }
         if(empty($paymentInstructions['enabled']))throw new RuntimeException('Aún no hay medios de pago configurados. No envíes dinero.');
         $entry=$_SESSION['business_checkout_quotes'][(string)($_POST['quote_token']??'')]??null;
         if(!$entry||(int)$entry['business_id']!==$id||$entry['quote']['plan_code']!==$plan||$entry['quote']['billing_frequency']!==$period)throw new RuntimeException('La cotización cambió. Revisa el importe y vuelve a adjuntar el comprobante.');
@@ -51,16 +58,20 @@ require_once dirname(__DIR__).'/_account-page.php';account_page(false);
 <!doctype html><html lang="es"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
 <title>Pago de mi negocio | Explorando Lugares</title>
-<?php foreach(['style.css','account-portal.css','business-workspace.css','payment-instructions.css'] as $asset):?><link rel="stylesheet" href="<?=esc(admin_asset($asset))?>"><?php endforeach?>
+<?php foreach(['style.css','account-portal.css','business-workspace.css','account-files.css','payment-instructions.css'] as $asset):?><link rel="stylesheet" href="<?=esc(admin_asset($asset))?>"><?php endforeach?>
 </head><body><?php require __DIR__.'/../_account-header.php';?>
 <main class="wrap account-portal"><p><a href="/negocios/portal/?tab=business">← Mis negocios</a></p>
 <section class="destination-admin-list"><h1>Pago de <?=esc($row['display_name'])?></h1>
 <p><?=esc(BusinessWorkspace::PLANS[$plan])?> · <?=esc(BusinessWorkspace::PERIODS[$period]??$period)?></p>
 <?php if(!empty($promotion)):?><p>Cupón <strong><?=esc($promotion['code'])?></strong> · <?=esc($promotion['percentage'])?> % · Descuento: <?=esc(number_format((int)$promotion['discount_cents']/100,2,',','.').' '.$promotion['currency'])?>. El importe mostrado ya incluye el descuento.</p><?php endif?>
 <?php if($row['message']):?><p class="notice"><?=esc($row['message'])?></p><?php endif?>
+<?php if(($_GET['cupon']??'')==='aplicado'):?><p class="notice" role="status">Cupón aplicado. Revisa el nuevo saldo antes de pagar.</p><?php endif?>
 <?php if($error):?><p class="notice" role="alert"><?=esc($error)?></p><?php endif?>
 <?php if($quote):?><p class="notice">Importe a pagar: <strong><?=esc(number_format($quote['due_cents']/100,2,',','.').' '.$quote['currency'])?></strong></p><?php endif?>
 <p>Tu información ya está guardada. Puedes salir y retomar este pago desde la fila del negocio.</p>
+<?php if(empty($promotion)&&$canApplyCoupon&&$promotions->hasApplicableOffer($id,$plan,$period)):?><section class="payment-promotion"><h2>¿Tienes un cupón?</h2><p>Debe aplicar al plan, la periodicidad y el lugar de este negocio. Si cubre el total, no tendrás que adjuntar un comprobante. Tu solicitud seguirá pendiente de validación.</p>
+<form method="post" class="payment-promotion-form"><input type="hidden" name="csrf" value="<?=esc($_SESSION['csrf'])?>"><input type="hidden" name="action" value="apply_coupon"><input type="hidden" name="subscription_id" value="<?=(int)$subscription['id']?>">
+<label>Código promocional<input name="promotion_code" maxlength="32" autocomplete="off" autocapitalize="characters" spellcheck="false" required value="<?=esc($_POST['promotion_code']??'')?>"></label><button class="pill" type="submit">Aplicar cupón</button></form></section><?php endif?>
 <?php if($quote&&!empty($paymentInstructions['enabled'])):?><p><a class="pill" href="#payment-evidence">Ya pagué · Adjuntar comprobante</a></p><?php endif?>
 <?php require __DIR__.'/payment-instructions.php';?>
 <h2 id="payment-evidence">Adjuntar el comprobante y enviar para validación</h2>
@@ -78,4 +89,5 @@ require_once dirname(__DIR__).'/_account-page.php';account_page(false);
 <button class="pill" type="submit">Enviar comprobante para validación</button>
 </form><?php elseif(empty($paymentInstructions['enabled'])):?><p class="notice" role="status"><strong>Pago pendiente de instrucciones.</strong> Tu registro está guardado, pero el portal aún no tiene un medio de pago habilitado. No envíes dinero. Cuando el equipo lo configure, podrás volver desde Mis negocios, adjuntar aquí el comprobante y enviarlo para validación. Todavía no se ha enviado un pago a revisión.</p><p><a href="/negocios/portal/?tab=business">Volver a Mis negocios</a></p><?php else:?><p class="notice" role="alert">No se pudo preparar el importe. No realices el pago todavía; revisa el mensaje anterior y vuelve a intentarlo. Tu registro sigue guardado.</p><?php endif?></section></main>
 <script src="<?=esc(admin_asset('business-subscriptions.js'))?>" defer></script>
+<script src="<?=esc(admin_asset('account-files.js'))?>" defer></script>
 </body></html>
