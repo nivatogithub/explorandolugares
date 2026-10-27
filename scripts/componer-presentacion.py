@@ -74,7 +74,7 @@ def apply(public):
  for path in public.rglob('*'):
   if not path.is_file() or path.suffix not in {'.html','.php'}:continue
   text=path.read_text()
-  if not any(marker in text for marker in ['destination-main.php','directory-card.php','directory-grid','highlight-grid','destination-experience-list']):
+  if 'data-business-preview-readonly' in text or not any(marker in text for marker in ['destination-main.php','directory-card.php','directory-grid','highlight-grid','destination-experience-list']):
    for name in ['tarjetas-negocios-compactas.js','cargar-mas-tarjetas.js']:text=re.sub(r'<script\b[^>]*src="[^"]*'+re.escape(name)+r'(?:\?[^"]*)?"[^>]*></script>','',text)
   for name in RETIRED:text=re.sub(r'<script\b[^>]*src="[^"]*'+re.escape(name)+r'(?:\?[^"]*)?"[^>]*></script>','',text)
   path.write_text(text)
