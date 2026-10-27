@@ -52,6 +52,15 @@ final class BusinessPromotions
         }catch(Throwable $e){if($this->pdo->inTransaction())$this->pdo->rollBack();throw $e;}
     }
     private function lock():string{return $this->pdo->getAttribute(PDO::ATTR_DRIVER_NAME)==='mysql'?' FOR UPDATE':'';}
+    /** Only show the code field after selecting an eligible plan; never reveal available codes. */
+    public function hasApplicableOffer(int $business,string $plan,string $period):bool
+    {
+        if(!isset(self::PLANS[$plan])||!isset(BusinessSubscriptionChoice::PERIODS[$period]))return false;
+        $q=$this->pdo->prepare('SELECT c.plans_json,c.periods_json FROM business_promotion_codes c JOIN business_promotion_places p ON p.code=c.code JOIN business_promotion_place_scopes s ON s.code=c.code JOIN businesses b ON b.destination_id=p.destination_id WHERE b.id=? AND c.enabled=1 AND (c.expires_at IS NULL OR c.expires_at>=?) AND (c.max_uses IS NULL OR c.max_uses>(SELECT COUNT(*) FROM business_promotion_redemptions r WHERE r.code=c.code))');
+        $q->execute([$business,gmdate('Y-m-d H:i:s')]);
+        foreach($q->fetchAll(PDO::FETCH_ASSOC) as $offer)if(in_array($plan,json_decode($offer['plans_json'],true,8,JSON_THROW_ON_ERROR),true)&&in_array($period,json_decode($offer['periods_json'],true,8,JSON_THROW_ON_ERROR),true))return true;
+        return false;
+    }
     /** Shared checkout gate: an initial private registration, before any payment evidence or editorial review. */
     public function paymentContext(int $account,int $business,bool $locking=false):array
     {

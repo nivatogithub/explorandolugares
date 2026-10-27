@@ -17,23 +17,13 @@ if($registrationType!=='business'){require __DIR__.'/registration-choice.php';ex
 // La cuenta es previa a la solicitud. No mezclamos la creación de credenciales
 // con el registro de un negocio: la asociación siempre parte de una sesión.
 if(!$currentAccount){
-    if($_SERVER['REQUEST_METHOD']==='POST'||($_GET['search']??'')==='1'||isset($_GET['promotion_quote']))require_business_session();
+    if($_SERVER['REQUEST_METHOD']==='POST'||($_GET['search']??'')==='1')require_business_session();
     $_SESSION['business_registration_return']='/negocios/registro/?tipo=business';
     require_once __DIR__.'/../_account-page.php';account_page(false);
     require __DIR__.'/business-account-gate.php';
     exit;
 }
 if(empty($currentAccount['email_verified_at'])){$_SESSION['business_registration_return']='/negocios/registro/?tipo=business';header('Location: /cuenta/verificar-correo/',true,303);exit;}
-require_once dirname(__DIR__,2).'/app/BusinessPromotions.php';$promotions=new BusinessPromotions($pdo);
-if($_SERVER['REQUEST_METHOD']==='GET'&&isset($_GET['promotion_quote'])){
-    header('Cache-Control: private, no-store');
-    try{
-        if(!throttle('business_promotion_quote',40,300,(string)$currentAccount['id']))throw new RuntimeException('Demasiadas validaciones de cupón. Espera unos minutos e inténtalo de nuevo.');
-        $offer=$promotions->quote((string)($_GET['code']??''),(string)($_GET['plan']??''),(string)($_GET['period']??''),(int)($_GET['destination_id']??0));
-        $_SESSION['business_promotion_preview']=['offer'=>$offer,'expires'=>time()+1800];
-        json_response(['ok'=>true,'offer'=>$offer]);
-    }catch(Throwable $e){json_response(['ok'=>false,'error'=>$e instanceof PDOException?'No se pudo validar el cupón. Inténtalo de nuevo.':$e->getMessage()],400);}
-}
 require_once dirname(__DIR__,2).'/app/BusinessRegistrationDrafts.php';
 $drafts=new BusinessRegistrationDrafts($pdo);$draftRevision=0;$resumeStep=1;$savedDraftUploads=[];
 $draftId=(string)($_POST['registration_draft']??$_GET['draft']??($_SERVER['REQUEST_METHOD']==='POST'?($_SESSION['business_onboarding_draft']??''):''));
@@ -92,15 +82,6 @@ try{
   $application['business_details']['requested_subscription']=$subscriptionChoice->quote((string)($_POST['plan_code']??'free'),(string)($_POST['billing_frequency']??'monthly'));
   if((int)($_POST['operator_experience_id']??0)){if($application['application_type']==='new_business'){if(!ExperienceOperatorAddon::eligibleCategories($application['business_details']['categories']))throw new RuntimeException('El complemento requiere la categoría Experiencias y actividades.');}else{$addonService->requireEligible((int)$application['business_id']);}}
   $addon=$addonService->quote((string)($_POST['plan_code']??'free'),(string)($_POST['billing_frequency']??'monthly'),$destinationId,(int)($_POST['operator_experience_id']??0));if($addon){$requested=&$application['business_details']['requested_subscription'];if($requested['quoted_amount']===null)throw new RuntimeException('La suscripción base requiere una tarifa antes de añadir el complemento.');$requested['base_amount']=$requested['quoted_amount'];$requested['operator_addon']=$addon;$requested['quoted_amount']=number_format((float)$requested['base_amount']+(float)$addon['amount'],2,'.','');unset($requested);}
-  $promotionCode=trim((string)($_POST['promotion_code']??''));
-  if($promotionCode!==''){
-      $preview=$_SESSION['business_promotion_preview']??null;
-      $offer=$promotions->quote($promotionCode,(string)$_POST['plan_code'],(string)($_POST['billing_frequency']??'monthly'),$destinationId);
-      if(!$preview||$preview['expires']<time()||$preview['offer']!==$offer)throw new RuntimeException('Aplica de nuevo el cupón en el paso Suscripción para confirmar el descuento vigente. Tu información se conserva.');
-      $offer['addon_cents']=SubscriptionChangeService::cents($addon['amount']??0);$offer['due_cents']+=$offer['addon_cents'];
-      $application['business_details']['requested_subscription']['promotion']=$offer;
-      $application['business_details']['requested_subscription']['quoted_amount']=SubscriptionChangeService::money($offer['due_cents']);
-  }
   $required=['business_registration'];
   foreach($required as $evidenceType){$temporaryEvidence=(string)($application['temporary_uploads']['evidence'][$evidenceType]??'');$posted=(($_FILES[$evidenceType]['error']??UPLOAD_ERR_NO_FILE)===UPLOAD_ERR_OK);if(!$posted&&!preg_match('/^[a-f0-9]{48}$/D',$temporaryEvidence))throw new RuntimeException('Adjunta el documento privado del negocio. La asociación es declarada y no certifica titularidad.');}
   $accountId=$service->register($currentAccount['display_name'],$currentAccount['email'],'',$application,[
@@ -117,7 +98,7 @@ try{
   $nextBusiness=(int)($application['business_id']??0);
   if($application['application_type']==='new_business'){$next=$pdo->prepare('SELECT b.id FROM businesses b JOIN business_translations t ON t.business_id=b.id AND t.locale="es" JOIN business_account_memberships m ON m.business_id=b.id WHERE m.account_id=? AND m.status="active" AND b.destination_id=? AND LOWER(t.display_name)=LOWER(?) ORDER BY b.id DESC LIMIT 1');$next->execute([$accountId,$destinationId,$application['business_name']]);$nextBusiness=(int)$next->fetchColumn();}
   $hasAccess=$pdo->prepare('SELECT 1 FROM business_account_memberships WHERE account_id=? AND business_id=? AND status="active"');$hasAccess->execute([$accountId,$nextBusiness]);
-  $needsPayment=!$isFree&&(!isset($offer)||$offer['due_cents']>0);
+  $needsPayment=!$isFree;
   $nextUrl=$nextBusiness&&$hasAccess->fetchColumn()?($needsPayment?'/business/payment.php?business='.$nextBusiness:'/negocios/portal/?tab=business&business='.$nextBusiness.'&solicitud=guardada'):'/negocios/portal/?espacio=business&solicitud=guardada';
   if($drafts->ready())$drafts->finish($accountId,$draftId,$nextBusiness?:null);
   header('Location: '.site_path($nextUrl),true,303);exit;
