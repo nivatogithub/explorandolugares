@@ -58,7 +58,7 @@ require_once dirname(__DIR__).'/_account-page.php';account_page(false);
 <!doctype html><html lang="es"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
 <title>Pago de mi negocio | Explorando Lugares</title>
-<?php foreach(['style.css','account-portal.css','business-workspace.css','payment-instructions.css'] as $asset):?><link rel="stylesheet" href="<?=esc(admin_asset($asset))?>"><?php endforeach?>
+<?php foreach(['style.css','account-portal.css','business-workspace.css','account-files.css','payment-instructions.css'] as $asset):?><link rel="stylesheet" href="<?=esc(admin_asset($asset))?>"><?php endforeach?>
 </head><body><?php require __DIR__.'/../_account-header.php';?>
 <main class="wrap account-portal"><p><a href="/negocios/portal/?tab=business">← Mis negocios</a></p>
 <section class="destination-admin-list"><h1>Pago de <?=esc($row['display_name'])?></h1>
@@ -87,4 +87,5 @@ require_once dirname(__DIR__).'/_account-page.php';account_page(false);
 <button class="pill" type="submit">Enviar comprobante para validación</button>
 </form><?php endif?></section></main>
 <script src="<?=esc(admin_asset('business-subscriptions.js'))?>" defer></script>
+<script src="<?=esc(admin_asset('account-files.js'))?>" defer></script>
 </body></html>
