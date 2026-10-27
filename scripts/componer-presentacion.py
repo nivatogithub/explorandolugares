@@ -33,7 +33,7 @@ def resources(text, private_preview=False):
   if kind=='css':css.append(f'<link rel="stylesheet" href="{url}">')
   else:
    tag=f'<script defer src="{url}"'+(' data-el-measurement="1"' if name.endswith('medicion.js') else '')+'></script>'
-   if private_preview and name.endswith('medicion.js'):tag="<?php if(!isset($elBusinessDemoPlan)&&!isset($elEditorialPreviewBusiness)):?>"+tag+"<?php endif ?>"
+   if private_preview:tag="<?php if(!isset($elBusinessDemoPlan)&&!isset($elEditorialPreviewBusiness)):?>"+tag+"<?php endif ?>"
    scripts.append(tag)
  first=re.search(r'<link\b[^>]*rel="stylesheet"',text)
  position=first.start() if first else text.find('</head>')
