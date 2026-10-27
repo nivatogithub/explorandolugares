@@ -42,4 +42,17 @@ foreach(['receipt','review','published','renewal','suspended'] as $state){
     ck(!$p->inTransaction(),'Failure rolls back transaction');
     if($state==='suspended')$p->exec('UPDATE accounts SET status="active" WHERE id=1');
 }
-echo "OK: checkout coupons; captured price, immutable retry, scope, permissions, review/receipt/renewal gates and no publication or fake payments.\n";
+$s->save([...settings('SOLOPREMIUM'),'plans'=>['page_premium'],'destinations'=>[3]],'admin');
+[$premium,$premiumSubscription]=pendingCouponBusiness($p,'page_premium','monthly',3);
+[$page,$pageSubscription]=pendingCouponBusiness($p,'page','monthly',3);
+ck($s->hasApplicableOffer($premium,'page_premium','monthly'),'Compatible Premium offer shows code field');
+ck(!$s->hasApplicableOffer($page,'page','monthly')&&!$s->hasApplicableOffer($premium,'featured','monthly')&&!$s->hasApplicableOffer($premium,'free','monthly'),'Other plans never show that offer');
+ck(!$s->hasApplicableOffer($premium,'page_premium','annual'),'Other period never shows that offer');
+$s->save([...settings('SOLOPREMIUM'),'plans'=>['page_premium'],'destinations'=>[3],'enabled'=>0],'admin');
+ck(!$s->hasApplicableOffer($premium,'page_premium','monthly'),'Inactive offer hidden');
+$s->save([...settings('SOLOPREMIUM'),'plans'=>['page_premium'],'destinations'=>[3],'expires_on'=>'2020-01-01'],'admin');
+ck(!$s->hasApplicableOffer($premium,'page_premium','monthly'),'Expired offer hidden');
+$s->save([...settings('SOLOPREMIUM'),'plans'=>['page_premium'],'destinations'=>[3],'max_uses'=>1],'admin');
+$s->applyAtPayment(1,$premium,$premiumSubscription,'SOLOPREMIUM');
+ck(!$s->hasApplicableOffer($premium,'page_premium','monthly'),'Exhausted offer hidden');
+echo "OK: checkout-only coupons; eligible plan/period/place visibility, immutable retry, scope, permissions, review/receipt/renewal gates and no publication or fake payments.\n";

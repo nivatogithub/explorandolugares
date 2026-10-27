@@ -69,7 +69,7 @@ require_once dirname(__DIR__).'/_account-page.php';account_page(false);
 <?php if($error):?><p class="notice" role="alert"><?=esc($error)?></p><?php endif?>
 <?php if($quote):?><p class="notice">Importe a pagar: <strong><?=esc(number_format($quote['due_cents']/100,2,',','.').' '.$quote['currency'])?></strong></p><?php endif?>
 <p>Tu información ya está guardada. Puedes salir y retomar este pago desde la fila del negocio.</p>
-<?php if(empty($promotion)&&$canApplyCoupon):?><section class="payment-promotion"><h2>¿Tienes un cupón?</h2><p>Debe aplicar al plan, la periodicidad y el lugar de este negocio. Si cubre el total, no tendrás que adjuntar un comprobante. Tu solicitud seguirá pendiente de validación.</p>
+<?php if(empty($promotion)&&$canApplyCoupon&&$promotions->hasApplicableOffer($id,$plan,$period)):?><section class="payment-promotion"><h2>¿Tienes un cupón?</h2><p>Debe aplicar al plan, la periodicidad y el lugar de este negocio. Si cubre el total, no tendrás que adjuntar un comprobante. Tu solicitud seguirá pendiente de validación.</p>
 <form method="post" class="payment-promotion-form"><input type="hidden" name="csrf" value="<?=esc($_SESSION['csrf'])?>"><input type="hidden" name="action" value="apply_coupon"><input type="hidden" name="subscription_id" value="<?=(int)$subscription['id']?>">
 <label>Código promocional<input name="promotion_code" maxlength="32" autocomplete="off" autocapitalize="characters" spellcheck="false" required value="<?=esc($_POST['promotion_code']??'')?>"></label><button class="pill" type="submit">Aplicar cupón</button></form></section><?php endif?>
 <?php require __DIR__.'/payment-instructions.php';?>
