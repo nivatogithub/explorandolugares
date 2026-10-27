@@ -14,3 +14,13 @@ try{
  if(is_file($d.'/instructions.json'))throw new RuntimeException('Still writing JSON');
  echo "PASS: persistence, test-mode isolation, invalid type rollback and upload boundary\n";
 }finally{rmdir($d);}
+function esc(mixed $value):string{return htmlspecialchars((string)$value,ENT_QUOTES|ENT_SUBSTITUTE,'UTF-8');}
+$checkoutReference='LOCAL-QR';$paymentInstructionsVisible=true;$onboardingChoice=['plan_code'=>'page','billing_frequency'=>'monthly'];
+foreach([true,false] as $testMode)foreach([true,false] as $withQr){
+ $paymentInstructions=[...$input,'test_mode'=>$testMode,'qr_file'=>$withQr?'private-qr.png':'','notes'=>'Nota <privada> & segura.'];
+ ob_start();require __DIR__.'/../public/business/payment-instructions.php';$rendered=ob_get_clean();
+ if(substr_count($rendered,'<figure class="payment-qr-block">')!==($withQr?1:0)||substr_count($rendered,'<figcaption><em>')!==($withQr?1:0)||substr_count($rendered,'</em></figcaption></figure>')!==($withQr?1:0))throw new RuntimeException('QR figure or italic caption markup is invalid');
+ if(!str_contains($rendered,'<p class="payment-help"><em>Nota &lt;privada&gt; &amp; segura.</em> Después adjunta el comprobante.'))throw new RuntimeException('Payment notes must remain escaped, italic and in the same compact paragraph as the next instruction');
+ if(str_contains($rendered,'SIMULACIÓN — NO ENVÍES DINERO.')!==$testMode)throw new RuntimeException('Simulation warning changed');
+}
+echo "PASS: responsive QR figure, italic caption, compact escaped notes and unchanged simulation warning\n";

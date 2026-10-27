@@ -5,7 +5,7 @@ declare(strict_types=1);
 final class BusinessRegistrationDrafts
 {
     private const FIELDS=['application_type','business_id','business_name','destination_id','category_code','category_codes',
-        'plan_code','billing_frequency','promotion_code','summary','business_nit','business_rnt','address_text','location_reference',
+        'plan_code','billing_frequency','summary','business_nit','business_rnt','address_text','location_reference',
         'latitude','longitude','location_map_url','location_confirmed','location_map_changed','business_phone','channels',
         'products','temporary_uploads','distinct_business','distinct_address','relationship_code','responsibility_declared',
         'consent','operator_experience_id'];
@@ -27,6 +27,7 @@ final class BusinessRegistrationDrafts
         $q->execute([$id,$account]);$row=$q->fetch(PDO::FETCH_ASSOC);
         if(!$row)throw new RuntimeException('Este borrador no está disponible para tu cuenta.');
         $row['payload']=json_decode($row['payload_json'],true,32,JSON_THROW_ON_ERROR);
+        unset($row['payload']['promotion_code']); // An unredeemed old draft never selects a promotion; checkout owns coupons.
         return $row;
     }
     private function cleanValue(mixed $value,int $depth=0):mixed

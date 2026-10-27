@@ -20,38 +20,6 @@
     const draftStatus = form.querySelector('[data-draft-status]');
     const revision = form.querySelector('[name="draft_revision"]');
     const stepField = form.querySelector('[name="wizard_step"]');
-    const promotionInput = form.querySelector('[name="promotion_code"]');
-    const promotionResult = form.querySelector('#promotion-result');
-    const promotionButton = form.querySelector('[data-apply-promotion]');
-    let promotion = null, promotionRequest = 0;
-    const promotionKey = () => [promotionInput?.value.trim().toUpperCase() || '',plan(),form.querySelector('[name="billing_frequency"]')?.value || 'monthly',form.querySelector('[name="destination_id"]')?.value || ''].join('|');
-    const validatePromotion = async () => {
-      if (!promotionInput) return true;
-      const request = ++promotionRequest, key = promotionKey();
-      promotion = null; promotionInput.setCustomValidity('');
-      if (!promotionInput.value.trim()) { promotionResult.textContent = 'Sin cupón: se aplica la tarifa del plan seleccionado.'; syncPlan(); return true; }
-      promotionButton.disabled = true; promotionResult.textContent = 'Validando cupón…';
-      try {
-        const url = new URL(form.dataset.searchUrl,location.origin);
-        url.searchParams.set('tipo','business');url.searchParams.set('promotion_quote','1');
-        url.searchParams.set('code',promotionInput.value.trim());url.searchParams.set('plan',plan());
-        url.searchParams.set('period',form.querySelector('[name="billing_frequency"]').value);
-        url.searchParams.set('destination_id',form.querySelector('[name="destination_id"]').value);
-        const response=await fetch(url,{credentials:'same-origin',headers:{Accept:'application/json'}});
-        const result=await response.json();
-        if (response.status===401) { location.assign(result.login_url || '/negocios/acceso/'); return false; }
-        if(request!==promotionRequest||key!==promotionKey())return false;
-        if(!response.ok||!result.ok)throw new Error(result.error||'No se pudo validar el cupón.');
-        promotion={...result.offer,key};promotionInput.value=result.offer.code;
-        const money=value=>new Intl.NumberFormat('es-CO',{style:'currency',currency:promotion.currency}).format(value/100);
-        promotionResult.textContent=`Cupón ${promotion.code}: ${promotion.percentage} % de descuento. Precio ${money(promotion.list_cents)}; descuento ${money(promotion.discount_cents)}; saldo ${money(promotion.due_cents)}. ${promotion.due_cents===0?'No tendrás que realizar un pago. ':''}Vigencia desde la publicación, sin renovación automática del descuento.`;
-        syncPlan();return true;
-      } catch(error) {
-        if(request!==promotionRequest||key!==promotionKey())return false;
-        promotionInput.setCustomValidity(error.message);promotionResult.textContent=error.message;syncPlan();return false;
-      } finally { if(request===promotionRequest)promotionButton.disabled=false; }
-    };
-    promotionButton?.addEventListener('click',async()=>{if(await validatePromotion())await saveDraft(step);});
     let pendingUploads = 0, saving = Promise.resolve(true), leaving = false;
     // Capture lives privately in the account, never in browser storage.
     try { sessionStorage.removeItem('explorando-lugares:business-registration-recovery'); } catch {}
@@ -118,9 +86,7 @@
       const selectedRules = rules();
       const editorial = selectedRules.description_limit > 0;
       const premium = selectedRules.products > 0;
-      const hasAddon = Number(form.querySelector('[name="operator_experience_id"]')?.value || 0)>0;
-      const covered = promotion && promotion.key===promotionKey() && promotion.due_cents===0 && !hasAddon;
-      if (submit) submit.textContent = choice && choice !== 'free' && !covered
+      if (submit) submit.textContent = choice && choice !== 'free'
         ? 'Guardar y continuar al pago'
         : 'Guardar solicitud para revisión';
       setPlanField('[data-plan-field="summary"]', editorial, editorial);
@@ -359,7 +325,6 @@
           warning.hidden = false;
           return;
         }
-        if(step===2&&!await validatePromotion()){promotionInput?.reportValidity();return;}
         const currentPanels=step===1?[finder]:step===2?[planStage]:step===3?detailsStep:step===4?productStep:contactStep;
         const invalid=currentPanels.flatMap(panel=>Array.from(panel.querySelectorAll('input,select,textarea'))).find(field=>field.willValidate&&!field.checkValidity());
         if(invalid){invalid.reportValidity();return;}
@@ -387,19 +352,13 @@
 
     form.addEventListener('change', (event) => {
       if (event.target.name === 'plan_code') { syncPlan(); syncFreeIdentifier(); }
-      if(['plan_code','billing_frequency','destination_id'].includes(event.target.name)&&promotionInput?.value.trim())validatePromotion();
       renderPreview();
-    });
-    promotionInput?.addEventListener('input',()=>{
-      promotionRequest++;promotionButton.disabled=false;promotion=null;promotionInput.setCustomValidity('');
-      promotionResult.textContent='Pulsa Aplicar cupón para validar el descuento.';syncPlan();
     });
     form.addEventListener('input', (event) => { renderPreview(); if(event.target.name==='summary')syncPlan(); if (event.target.name === 'business_nit' || event.target.name === 'business_rnt') syncFreeIdentifier(); });
     form.addEventListener('submit', async (event) => {
       event.preventDefault();if(leaving)return;
       if (!submit || submit.disabled) return;
       if(pendingUploads){draftStatus.textContent='Espera a que terminen de subir los archivos.';return;}
-      if(!await validatePromotion()){step=2;renderStep();promotionInput?.reportValidity();return;}
       submit.disabled = true;
       submit.textContent = 'Procesando solicitud…';
       if(!await saveDraft(6)){submit.disabled=false;syncPlan();return;}
@@ -408,6 +367,5 @@
     syncPlan();
     syncFreeIdentifier();
     if (controls) renderStep();
-    if(promotionInput?.value.trim())validatePromotion();
   });
 })();
