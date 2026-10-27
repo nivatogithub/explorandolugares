@@ -63,7 +63,8 @@ final class PortalPresentation
         $versions=is_file($manifestPath)?json_decode(file_get_contents($manifestPath),true,64,JSON_THROW_ON_ERROR):[];
         $modules=json_decode(file_get_contents(__DIR__.'/presentation/resources.json'),true,32,JSON_THROW_ON_ERROR);
         $resources=$context==='admin'?array_merge($modules['admin']['css'],$modules['admin']['js']):array_merge($modules['common']['css'],$modules['common']['js']);
-        if($account&&$context!=='admin')$resources=array_merge($resources,$modules['account']['css'],$modules['account']['js']);
+        if($context==='preview')$resources=$modules['common']['css'];
+        if($account&&!in_array($context,['admin','preview'],true))$resources=array_merge($resources,$modules['account']['css'],$modules['account']['js']);
         $html='';
         foreach($resources as $name){
             $path='/assets/'.$name;$url=$path.(isset($versions[$path])?'?v='.$versions[$path]:'');
