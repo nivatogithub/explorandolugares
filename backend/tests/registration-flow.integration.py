@@ -135,12 +135,49 @@ try:
     assert 'class="pill' not in grid and '<details' not in grid and 'business-row-message' not in grid,'Actions and state notes must not expand the grid rows'
     assert 'aria-label="Ver tarjeta"' in grid and 'aria-hidden="true"' in grid and 'business-icon-action' in grid
     page=db.execute('SELECT b.id FROM businesses b JOIN business_translations t ON t.business_id=b.id WHERE t.display_name="Fixture page"').fetchone()[0]
+    # Apply coupons on the payment screen, including when no bank method is configured.
+    featured=db.execute('SELECT business_id FROM business_translations WHERE display_name="Fixture featured"').fetchone()[0]
+    for coupon,percent,plan in [('PAGO100',100,'featured'),('PAGO50',50,'page')]:
+        db.execute('INSERT INTO business_promotion_codes(code,percentage,plans_json,periods_json,enabled,created_by) VALUES(?,?,?,?,1,"fixture-admin")',(coupon,percent,json.dumps([plan]),json.dumps(['annual'])))
+        db.execute('INSERT INTO business_promotion_place_scopes(code) VALUES(?)',(coupon,));db.execute('INSERT INTO business_promotion_places(code,destination_id) VALUES(?,2)',(coupon,))
+    db.commit()
+    for business,coupon in [(featured,'PAGO100'),(page,'PAGO50')]:
+        path='/business/payment.php?business='+str(business)
+        code,checkout,_=request(path)
+        assert code==200 and 'name="promotion_code"' in checkout and 'name="payment_proof"' not in checkout
+        assert 'Editar textos, fotos y canales' not in checkout,'Merchant editing is a separate branch'
+        subscription=db.execute('SELECT id FROM business_subscriptions WHERE business_id=? ORDER BY id DESC LIMIT 1',(business,)).fetchone()[0]
+        promo=dict(csrf=csrf(checkout),action='apply_coupon',subscription_id=str(subscription),promotion_code=coupon,plan_code='page',quoted_amount='0')
+        assert request(path,dict(promo,csrf='invalid'))[0] in (303,401)
+        _,checkout,_=request(path);promo['csrf']=csrf(checkout)
+        code,result,_=request(path,dict(promo,promotion_code='NOEXISTE'))
+        assert code==400 and 'no está disponible' in result
+        if business==page:
+            assert request(path,dict(promo,promotion_code='PAGO100'))[0]==400,'Selected plan cannot be forged'
+        code,result,headers=request(path,promo)
+        assert code==303,(code,result[:500])
+        assert request(path,promo)[0]==303,'Double submit is idempotent'
+        redemption=db.execute('SELECT * FROM business_promotion_redemptions WHERE subscription_id=?',(subscription,)).fetchone()
+        assert redemption and redemption['account_id']==1
+        if business==featured:
+            assert '/negocios/portal/' in headers['Location']
+            sub=db.execute('SELECT * FROM business_subscriptions WHERE id=?',(subscription,)).fetchone()
+            assert sub['status']=='paid_pending_publication' and sub['starts_at'] is None and sub['ends_at'] is None
+            assert db.execute('SELECT publication_status FROM businesses WHERE id=?',(business,)).fetchone()[0]=='draft'
+            assert db.execute('SELECT COUNT(*) FROM business_subscription_payment_evidence').fetchone()[0]==0
+        else:
+            assert headers['Location']==path+'&cupon=aplicado'
+            _,checkout,_=request(path)
+            assert 'name="promotion_code"' not in checkout and 'PAGO50' in checkout
+            assert request(path,dict(promo,promotion_code='PAGO100'))[0]==400
+    print('OK: coupon at payment without configured bank methods; CSRF/plan checks, 100% skips receipt without publishing, partial recalculation and immutable retries.',flush=True)
     db.execute('INSERT INTO payment_instructions(id,enabled,test_mode,holder,bank,account_number,account_type,breb_key,notes,qr_file,updated_at) VALUES(1,1,1,"Fixture Dev2","Banco ficticio","PRUEBA","savings","","Solo simulación","",CURRENT_TIMESTAMP)');db.commit()
     code,checkout,_=request('/business/payment.php?business='+str(page))
     assert code==200 and 'SIMULACIÓN' in checkout and 'Cómo realizar el pago' in checkout
     assert 'name="plan_code"' not in checkout and 'name="billing_frequency"' not in checkout
     quote=re.search(r'name="quote_token" value="([^"]+)"',checkout)[1]
     amount=db.execute('SELECT amount FROM subscription_plan_prices WHERE plan_code="page" AND billing_frequency="annual"').fetchone()[0]
+    amount=db.execute('SELECT quoted_amount FROM business_subscriptions WHERE business_id=? ORDER BY id DESC LIMIT 1',(page,)).fetchone()[0]
     payment_fields=dict(csrf=csrf(checkout),quote_token=quote,payment_reference='DEV2-PAYMENT',transaction_date=time.strftime('%Y-%m-%d'),paid_amount=str(amount),payment_method='transfer',source_bank='Banco ficticio')
     code,result,_=request('/business/payment.php?business='+str(page),payment_fields,[('payment_proof','payment.pdf','application/pdf',pdf)])
     assert code==303,result

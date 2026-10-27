@@ -38,5 +38,14 @@ try{
     $service->save([...$settings,'destinations'=>[2],'enabled'=>0],'fixture-admin');$applyPlaces();
     if(!$service->covered(1)||(int)$p->query('SELECT destination_id FROM business_promotion_redemption_places WHERE subscription_id=1')->fetchColumn()!==1||(int)$p->query('SELECT COUNT(*) FROM business_promotion_places WHERE code="UNUSO"')->fetchColumn()!==1)throw new RuntimeException('Geographic edits or migration rerun changed historic coverage.');
     $denied=false;try{$p->exec('DELETE FROM business_promotion_codes WHERE code="UNUSO"');}catch(PDOException $e){$denied=$e->getCode()==='23000';}if(!$denied)throw new RuntimeException('Used coupon deleted.');
-    echo "OK MariaDB: 056/057 twice, legacy scope, explicit places, no automatic scope expansion, protected redemption/place history, delete rejected and concurrent quota.\n";
+    // The late-checkout path uses the business lock also used by receipt submission.
+    $p->exec('ALTER TABLE accounts ADD status VARCHAR(32) NOT NULL DEFAULT "active";ALTER TABLE businesses ADD publication_status VARCHAR(32) NOT NULL DEFAULT "draft";ALTER TABLE business_account_memberships ADD role VARCHAR(32) NOT NULL DEFAULT "owner"');
+    $p->exec('CREATE TABLE business_editorial_versions(id BIGINT UNSIGNED PRIMARY KEY,business_id BIGINT UNSIGNED,status VARCHAR(32)) ENGINE=InnoDB;CREATE TABLE business_subscription_payment_evidence(id BIGINT UNSIGNED PRIMARY KEY,subscription_id BIGINT UNSIGNED) ENGINE=InnoDB;CREATE TABLE business_experience_subscriptions(subscription_id BIGINT UNSIGNED PRIMARY KEY,quoted_amount DECIMAL(14,2)) ENGINE=InnoDB');
+    $p->exec('INSERT INTO businesses(id,destination_id) VALUES(4,1),(5,1);INSERT INTO business_account_memberships(business_id,account_id,status) VALUES(4,1,"active"),(5,1,"active");INSERT INTO business_subscriptions VALUES(4,4,"page","monthly","pending",70000,"COP",NULL,NULL),(5,5,"page","monthly","pending",70000,"COP",NULL,NULL);INSERT INTO business_editorial_versions VALUES(4,4,"draft"),(5,5,"draft")');
+    $service->save([...$settings,'code'=>'ENPAGO','max_uses'=>1,'destinations'=>[1]],'fixture-admin');
+    $offer=$service->applyAtPayment(1,4,4,'ENPAGO');
+    if($offer['list_cents']!==7000000||$offer['due_cents']!==0||!$service->covered(4)||$service->applyAtPayment(1,4,4,'ENPAGO')['due_cents']!=0)throw new RuntimeException('Payment coupon captured price, retry or coverage failed.');
+    $denied=false;try{$service->applyAtPayment(1,5,5,'ENPAGO');}catch(RuntimeException $e){if($e instanceof PDOException)throw $e;$denied=str_contains($e->getMessage(),'límite');}
+    if(!$denied||$p->inTransaction()||(int)$p->query('SELECT COUNT(*) FROM business_subscription_payment_evidence')->fetchColumn()!==0||$p->query('SELECT publication_status FROM businesses WHERE id=4')->fetchColumn()!=='draft')throw new RuntimeException('Late checkout quota, rollback or privacy failed.');
+    echo "OK MariaDB: 056/057 twice, legacy scope, explicit places, protected history, concurrent quota and late-checkout captured price/coverage/idempotency without receipt or publication.\n";
 }finally{$other=null;$p=null;$admin->exec('DROP DATABASE `'.$name.'`');}
