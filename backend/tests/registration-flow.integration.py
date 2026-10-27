@@ -123,6 +123,20 @@ try:
         assert ('instagram' in details['channels'])==(plan=='page_premium')
         payload=json.loads(db.execute('SELECT payload_json FROM business_editorial_versions WHERE business_id=? ORDER BY id DESC LIMIT 1',(row['business_id'],)).fetchone()[0])
         assert payload['translations']['es']['summary']=='á'*limit,'Description lost at editorial handoff'
+        # Private previews are available before any payment or editorial approval.
+        versions_before=db.execute('SELECT COUNT(*) FROM business_editorial_versions').fetchone()[0]
+        preview_version=db.execute('SELECT id FROM business_editorial_versions WHERE business_id=? ORDER BY id DESC LIMIT 1',(row['business_id'],)).fetchone()[0]
+        for view in (['card','page'] if plan in ['page','page_premium'] else ['card']):
+            code,preview,preview_headers=request('/business/editorial.php?business='+str(row['business_id'])+'&version='+str(preview_version)+'&preview='+view)
+            assert code==200,(plan,view,code,preview[-800:])
+            assert '<header' not in preview and '<footer' not in preview and 'data-portal-shell=' not in preview
+            assert '<iframe' not in preview and '<form' not in preview and '<script' not in preview,'Preview must not embed another portal or active controls'
+            assert 'noindex' in preview_headers.get('X-Robots-Tag','')
+            assert not re.search(r'<a\b[^>]*\bhref="(?!#)',preview),'Preview links must remain inert'
+            assert ('directory-card-tier-'+plan) in preview if view=='card' else 'business-profile-page' in preview
+            if limit:assert 'á'*limit in preview,'Preview lost the submitted description'
+            if view=='page':assert 'business/editorial-image.php?id=' in preview,'Original photo is available before payment'
+        assert db.execute('SELECT COUNT(*) FROM business_editorial_versions').fetchone()[0]==versions_before,'Preview must not create versions'
     registration_template=fields.copy()
     code,dashboard,_=request('/negocios/portal/?tab=business')
     assert code==200 and dashboard.count('data-business-row=')==4,dashboard[:300]
