@@ -25,13 +25,14 @@ final class BrevoSettings
     {
         if (strlen($appKey)<32) throw new RuntimeException('Falta la llave privada de la aplicación.');
         $current=self::load($directory,$appKey);$data=[];
-        foreach (['sender_email'=>254,'sender_name'=>120,'reply_to'=>254,'sender_address'=>500] as $field=>$limit) {
+        foreach (['sender_email'=>254,'sender_name'=>120,'reply_to'=>254,'sender_address'=>500,'public_origin'=>500] as $field=>$limit) {
             $value=is_string($input[$field]??null)?trim($input[$field]):'';
             if ($field==='sender_address') $value=preg_replace('/[\r\n\t]+/',' ',$value);
             if (strlen($value)>$limit || preg_match('/[\x00-\x1f\x7f]/',$value)) throw new RuntimeException('Revisa los datos del remitente.');
             $data[$field]=$value;
         }
         foreach (['sender_email','reply_to'] as $field) if ($data[$field]!==''&&!filter_var($data[$field],FILTER_VALIDATE_EMAIL)) throw new RuntimeException('Revisa los correos del remitente y de respuesta.');
+        if ($data['public_origin']!==''&&!preg_match('~^https://[a-z0-9.-]+$~iD',$data['public_origin'])) throw new RuntimeException('La dirección del portal debe ser una URL HTTPS, sin rutas ni barras finales.');
         $data['enabled']=($input['enabled']??'')==='1';
         $key=is_string($input['api_key']??null)?trim($input['api_key']):'';
         if ($key==='') $key=(string)($current['api_key']??'');
