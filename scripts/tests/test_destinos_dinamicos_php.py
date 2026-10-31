@@ -69,10 +69,11 @@ class DynamicDestinationRenderTests(unittest.TestCase):
                                 check=True, capture_output=True, text=True)
         return html.unescape(result.stdout)
 
-    def render_business(self, public_id, locale):
+    def render_business(self, public_id, locale, user_agent=''):
         uri_locale = {"es": "", "en": "en/", "pt-BR": "pt-br/"}[locale]
         php = (
             f"$_GET['id']={json.dumps(public_id)};"
+            f"$_SERVER['HTTP_USER_AGENT']={json.dumps(user_agent)};"
             f"$_GET['idioma']={json.dumps(locale)};"
             f"$_SERVER['REQUEST_URI']='/{uri_locale}negocios/{public_id}/';"
             f"include {json.dumps(str(self.package / 'public/negocio.php'))};"
@@ -347,6 +348,8 @@ class DynamicDestinationRenderTests(unittest.TestCase):
                     (public_id,destination_id,"alimentacion",f"negocio-{plan}","VERIFICADO","RECLAMADO","ABIERTO","published"),
                 )
                 business_id=connection.execute("SELECT id FROM businesses WHERE public_id=?",(public_id,)).fetchone()[0]
+                if plan=='page':
+                    connection.execute("UPDATE businesses SET latitude=5.791,longitude=-75.786,location_map_url='https://www.openstreetmap.org/?mlat=1&mlon=2' WHERE id=?",(business_id,))
                 for locale, name in (("es",f"Negocio {plan}"),("en",f"Business {plan}"),("pt-BR",f"Negócio {plan}")):
                     story = {"es":"Historia del negocio", "en":"Business story", "pt-BR":"História do negócio"}[locale] if plan=="page_premium" else None
                     services = {"es":"Servicios destacados", "en":"Featured services", "pt-BR":"Serviços em destaque"}[locale] if plan=="page_premium" else None
@@ -373,6 +376,11 @@ class DynamicDestinationRenderTests(unittest.TestCase):
         self.assertIn('aria-label="Premium"',directory)
         self.assertIn('id="negocio-44444444-4444-4444-8444-444444444444"',directory)
         self.assertIn('href="/negocios/44444444-4444-4444-8444-444444444444/"',directory)
+        for language in ['es','en','pt-BR']:
+            for agent,prefix in [('Android 14','geo:5.791,-75.786?q='),('iPhone OS','https://maps.apple.com/?ll=5.791%2C-75.786'),('Windows NT','https://www.google.com/maps/search/?api=1&query=5.791%2C-75.786')]:
+                rendered=self.render_business(public_ids['page'],language,agent)
+                self.assertIn('href="'+prefix,rendered)
+                self.assertNotIn('href="https://www.openstreetmap.org/',rendered)
         page=self.render_business(public_ids["page_premium"],"es")
         self.assertIn("Negocio page_premium",page)
         self.assertIn("Página Premium",page)

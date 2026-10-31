@@ -1,6 +1,7 @@
 <?php
 require_once dirname(__DIR__).'/BusinessContactVisibility.php';
 require_once dirname(__DIR__).'/BusinessPreviewLinks.php';
+require_once dirname(__DIR__).'/BusinessLocationLink.php';
 function e(mixed $value): string { return htmlspecialchars((string)$value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'); }
 function u(string $path): string { return $path; }
 function mediaPath(?array $media): string { return $media ? u('/'.e($media['path'])) : ''; }
@@ -24,12 +25,10 @@ function directoryPlanContacts(array $business,array $contacts,string $locale): 
     $plan=$business['plan_code']??'free';
     $out=[];
     if($plan!=='free'){
-        $map=trim((string)($business['location_map_url']??''));
-        if($map===''&&isset($business['latitude'],$business['longitude']))$map='https://www.google.com/maps/search/?api=1&query='.rawurlencode($business['latitude'].','.$business['longitude']);
-        if($map===''&&trim((string)($business['address_text']??''))!=='')$map='https://www.google.com/maps/search/?api=1&query='.rawurlencode($business['address_text'].' '.($business['location_reference']??''));
-        if($map!==''&&filter_var($map,FILTER_VALIDATE_URL)&&in_array(parse_url($map,PHP_URL_SCHEME),['https','http'],true)){
+        $map=BusinessLocationLink::forBusiness($business);
+        if($map!==''){
             $label=$locale==='en'?'Directions':($locale==='pt-BR'?'Como chegar':'Cómo llegar');
-            $out[]='<a class="directory-contact-link directory-contact-location" '.BusinessPreviewLinks::attributes($map,!empty($business['preview_only']),true).' aria-label="'.e($label).'" title="'.e($label).'">'.BusinessContactVisibility::icon('location').'</a>';
+            $out[]='<a class="directory-contact-link directory-contact-location" '.BusinessPreviewLinks::attributes($map,!empty($business['preview_only']),str_starts_with($map,'http')).' aria-label="'.e($label).'" title="'.e($label).'">'.BusinessContactVisibility::icon('location').'</a>';
         }
     }
     $seen=[];
@@ -60,10 +59,7 @@ function directoryIcon(string $kind,bool $category=false):string {
 function directoryActions(array $business,array $contacts,string $locale,?string $pageUrl=null):string {
     if($business['plan_code']==='free')return '';
     $links=[];$seen=[];
-    $map=trim((string)($business['location_map_url']??''));
-    if($map===''&&($business['latitude']??null)!==null&&($business['longitude']??null)!==null)$map='https://www.google.com/maps/search/?api=1&query='.rawurlencode($business['latitude'].','.$business['longitude']);
-    if($map===''&&trim((string)($business['address_text']??''))!=='')$map='https://www.google.com/maps/search/?api=1&query='.rawurlencode($business['address_text'].' '.($business['location_reference']??''));
-    if($map!==''&&!str_starts_with($map,'#')&&(!filter_var($map,FILTER_VALIDATE_URL)||!in_array(parse_url($map,PHP_URL_SCHEME),['http','https'],true)))$map='';
+    $map=BusinessLocationLink::forBusiness($business);
     if($map!=='')$links[]=['href'=>$map,'kind'=>'map','label'=>$locale==='en'?'Find on map':($locale==='pt-BR'?'Ver localização':'Ver ubicación')];
     foreach(BusinessContactVisibility::filter($business['plan_code'],$contacts) as $contact){
         $channel=$contact['channel'];if(isset($seen[$channel]))continue;$url=contactHref($contact);if(!$url)continue;$seen[$channel]=true;

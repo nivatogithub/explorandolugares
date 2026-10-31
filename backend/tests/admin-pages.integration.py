@@ -608,8 +608,8 @@ try:
         ('destination_id', str(destination_id)), ('category_code', 'hospedaje'),
         ('translations[es][display_name]', 'Hostal creado por prueba'), ('plan_code', 'free'),
         ('billing_frequency', 'monthly'), ('address_text', 'Parque principal, Jericó'),
-        ('location_map_url', 'https://www.google.com/maps/@5.791,-75.786,18z'),
-        ('latitude', ''), ('longitude', ''), ('location_reference', ''),
+        ('location_map_url', ''),
+        ('latitude', '5.791'), ('longitude', '-75.786'), ('location_reference', ''),
         ('image_assistance_requested', '0'),
     ]
     data = urllib.parse.urlencode(fields).encode()
@@ -622,6 +622,7 @@ try:
     check(status == 200 and 'Hostal creado por prueba' in body and 'Abrir o editar este negocio' in body and 'Ver altas administrativas' in body, f'No se guardó el negocio ni se mostró el acceso directo al registro creado: {status} {body[:300]}')
     created = DB.execute("SELECT id,publication_status,information_status,claim_status,record_origin,location_confirmed,latitude,longitude FROM businesses WHERE slug='hostal-creado-por-prueba'").fetchone()
     check(created is not None and tuple(created)[1:] == ('draft', 'PENDIENTE_REVISION', 'NO_RECLAMADO', 'admin_created', 1, 5.791, -75.786), 'El negocio no quedó en borrador privado con ubicación y estados esperados.')
+    check(DB.execute('SELECT location_map_url FROM businesses WHERE id=?',(created['id'],)).fetchone()[0]=='','Capturar un punto no debe inventar una URL del proveedor de mapas.')
     check(DB.execute('SELECT COUNT(*) FROM business_subscriptions WHERE business_id=? AND plan_code="free"', (created['id'],)).fetchone()[0] == 1, 'La creación no registró la suscripción Gratis pendiente.')
     status, body, _ = request('/admin/negocios.php?tab=lista&origen=admin_created&categoria=hospedaje&q=Hostal+creado+por+prueba')
     check(status == 200 and 'Hostal creado por prueba' in body and 'Pendiente de publicación' in body, 'El negocio recién creado no aparece filtrando el listado por categoría y alta administrativa.')
