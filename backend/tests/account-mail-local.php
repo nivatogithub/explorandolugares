@@ -6,6 +6,13 @@ require $dir.'/app/AccountMailConfiguration.php';
 function checkMail($ok,$message){if(!$ok)throw new RuntimeException($message);}
 try{
  $key=str_repeat('k',64);BrevoSettings::save($dir.'/private/brevo',$key,['enabled'=>'1','sender_email'=>'sender@example.invalid','sender_name'=>'Test','sender_address'=>'Test address','api_key'=>'synthetic-key']);
+ $production=['app_key'=>$key,'account_mail'=>['enabled'=>true,'use_brevo_connection'=>true,'public_origin'=>'https://explorandolugares.com']];
+ $shared=AccountMailConfiguration::transactionalSettings($production);
+ checkMail($shared['public_origin']==='https://explorandolugares.com'&&$shared['api_key']==='synthetic-key','transactional origin must come from the working account configuration, not campaigns');
+ checkMail(!array_key_exists('public_origin',BrevoSettings::load($dir.'/private/brevo',$key)),'test connection must not require an editorial origin');
+ $captured=[];$mock=function($payload)use(&$captured){$captured=$payload;return ['status'=>201,'body'=>['messageId'=>'synthetic']];};
+ (new AccountRecoveryDelivery($shared,$mock))->send('recipient@example.invalid',str_repeat('c',64),true);
+ checkMail(str_contains($captured['textContent'],$shared['public_origin'].'/cuenta/verificar-correo/'),'verification must share the canonical transactional origin');
  file_put_contents($dir.'/private/account-mail-test.json',json_encode(['enabled'=>true,'recipient'=>'recipient@example.invalid']));
  putenv('EL_PREPROD_LOCAL=1');$_SERVER['HTTP_HOST']='127.0.0.1:8088';$config=['local_test'=>true,'app_key'=>$key];
  $mail=AccountMailConfiguration::resolve($config,'recipient@example.invalid');checkMail(!$mail['mailbox']&&$mail['delivery']->ready(),'allowlisted delivery not ready');

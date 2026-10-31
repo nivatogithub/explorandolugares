@@ -1186,6 +1186,14 @@ try:
     check('class="portal-admin"' in admin_form and 'admin-sidebar' in admin_form and 'data-portal-shell="1"' not in admin_form and 'portal-account-fallback' not in admin_form and 'href="/admin/atencion-comercios.php"' in admin_form,'Editorial admin must use private navigation, central business hub and no public shell.')
     admin_csrf=re.search(r'name="csrf" value="([^"]+)"',admin_form)[1]
     check(request(admin_path,{'csrf':admin_csrf,'action':'prepare','quality[translations]':'1','quality[images]':'1','quality[layout]':'1','version_id':str(version['id']),'payload_hash':version['payload_hash']})[0]==200,'No dejó preparada la prepublicación.')
+    # The email opens the exact review again after login, without publishing on GET.
+    resume_user=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
+    code,login_from_mail,_=request(path+'&version='+str(version['id']),opener=resume_user)
+    check(code==200 and 'name="password"' in login_from_mail,'El enlace del correo no pidió acceso al propietario.')
+    resume_csrf=re.search(r'name="csrf" value="([^"]+)"',login_from_mail)[1]
+    code,resumed_review,_=request('/business/login.php',{'csrf':resume_csrf,'email':'viajera-http@example.invalid','password':'ViajeraTestPassword123'},resume_user)
+    check(code==200 and 'Aprobar y publicar mi negocio' in resumed_review and 'name="version_id" value="'+str(version['id'])+'"' in resumed_review,'El acceso desde el correo perdió la revisión exacta o envió al panel general.')
+    check(DB.execute('SELECT status FROM business_editorial_versions WHERE id=?',(version['id'],)).fetchone()[0]=='awaiting_owner','Abrir el enlace publicó sin confirmación del propietario.')
     code,_,_=request(path,{'csrf':owner_csrf,'action':'approve','version_id':str(version['id']),'payload_hash':version['payload_hash']},traveler_user)
     check(code==200 and DB.execute('SELECT status FROM business_editorial_versions WHERE id=?',(version['id'],)).fetchone()[0]=='published','La aprobación exacta debe publicar sin otra acción administrativa.')
     check(DB.execute('SELECT display_name FROM business_translations WHERE business_id=? AND locale="es"',(editorial_business,)).fetchone()[0]=='Editorial Ficticio Revisado','No aplicó la versión aprobada.')
