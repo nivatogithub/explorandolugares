@@ -561,7 +561,8 @@
     let kind=document.querySelector('[name="location_address_kind"]');if(!kind){kind=document.createElement('input');kind.type='hidden';kind.name='location_address_kind';address.after(kind);}kind.value=isRural?'rural':'urban';
     latInput.value = lat.toFixed(7);
     lonInput.value = lon.toFixed(7);
-    mapUrl.value = `https://www.openstreetmap.org/?mlat=${encodeURIComponent(lat.toFixed(7))}&mlon=${encodeURIComponent(lon.toFixed(7))}#map=18/${encodeURIComponent(lat.toFixed(7))}/${encodeURIComponent(lon.toFixed(7))}`;
+    // Persist the selected point, not a link to the capture-map provider.
+    mapUrl.value = '';
     mapChanged.value = '1';
     confirmed.value = '0';
     const saveButton = document.querySelector('#business-form button[type="submit"]');

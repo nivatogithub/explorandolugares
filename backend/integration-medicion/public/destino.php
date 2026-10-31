@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 header('Cache-Control: no-cache, max-age=0, must-revalidate');
+header('Vary: User-Agent');
 
 $repositoryCandidates=[
     dirname(__DIR__,2).'/app/DestinationRepository.php',

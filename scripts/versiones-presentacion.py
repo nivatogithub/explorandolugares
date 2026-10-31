@@ -4,7 +4,7 @@ import argparse,hashlib,re
 import sys
 sys.path.insert(0,str(Path(__file__).resolve().parent))
 from resource_markup import stamp_url
-ASSETS=['style.css','identidad-neutral.css','identidad-neutral.js','bogota-compacta.js','cartagena-compacta.js','medellin-compacta.js','santa-marta-compacta.js','destinos-semirrealistas.js']
+ASSETS=['admin-business-location.js','style.css','identidad-neutral.css','identidad-neutral.js','bogota-compacta.js','cartagena-compacta.js','medellin-compacta.js','santa-marta-compacta.js','destinos-semirrealistas.js']
 def stamp(public):
  versions={name:hashlib.sha256((public/'assets'/name).read_bytes()).hexdigest()[:12] for name in ASSETS if (public/'assets'/name).is_file()}
  for page in [*public.rglob('*.html'),*public.rglob('*.php')]:
