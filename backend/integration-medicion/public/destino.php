@@ -50,8 +50,6 @@ $places=array_values(array_filter($d['places'],static fn($place)=>($place['type'
 $experiences=array_values(array_filter($d['places'],static fn($place)=>($place['type']??'place')==='experience'));
 $requestPath=parse_url($_SERVER['REQUEST_URI']??'/',PHP_URL_PATH)?:'/';
 $t['leave_short']=$locale==='en'?'Share your business details':($locale==='pt-BR'?'Deixe seus dados para participar':'Déjanos tus datos para participar');
-$t['verified']=$locale==='en'?'Information checked':($locale==='pt-BR'?'Informações verificadas':'Información verificada');
-$t['public_data']=$locale==='en'?'Public information · not yet verified':($locale==='pt-BR'?'Informações públicas · ainda não verificadas':'Información pública · aún sin verificar');
 $t['contact_business']=$locale==='en'?'Contact business':($locale==='pt-BR'?'Entrar em contato':'Contactar negocio');
 $t['ideas_heading']=$locale==='en'?'What to see in':($locale==='pt-BR'?'O que conhecer em':'Qué conocer en');
 $t['directory_heading']=$locale==='en'?'Directory for':($locale==='pt-BR'?'Diretório de':'Directorio de');
