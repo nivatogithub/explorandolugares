@@ -21,7 +21,14 @@ fails(fn()=>$s->transition($prepared,'reject',0,'admin',str_repeat('ñ',201),$v[
 check($s->version($prepared)['status']==='in_editorial','oversized rejection changed status');
 fails(fn()=>$s->transition($prepared,'prepare',0,'admin','',$v['payload_hash']),'preparation without portal quality review accepted');
 $s->transition($prepared,'prepare',0,'admin','',$v['payload_hash'],['translations'=>'1','images'=>'1','layout'=>'1']);
-$mail=new BusinessEditorialMail($p,['public_origin'=>'http://127.0.0.1:8093'],null,true);check($mail->send($prepared,'admin')==='mail_simulated','local mail never external');fails(fn()=>$mail->send($prepared,'admin'),'no duplicate notification');
+require_once dirname(__DIR__).'/app/AccountMailConfiguration.php';
+$sharedSettings=AccountMailConfiguration::transactionalSettings(['account_mail'=>['enabled'=>true,'sender_email'=>'sender@example.invalid','sender_name'=>'Test','api_key'=>'synthetic','public_origin'=>'https://example.test']]);
+$capturedMail=[];$mail=new BusinessEditorialMail($p,$sharedSettings,function($payload)use(&$capturedMail){$capturedMail=$payload;return ['status'=>201,'body'=>['messageId'=>'synthetic']];});
+check($mail->send($prepared,'admin')==='mail_accepted','editorial uses working transactional settings without a campaign origin');
+check(str_contains($capturedMail['textContent'],'https://example.test/business/editorial.php?business=1&version='.$prepared.'#revision'),'mail links to the exact owner revision');
+check(str_contains($capturedMail['htmlContent'],'Revisar y publicar mi negocio'),'mail states the owner action');
+check(!isset($capturedMail['listIds'])&&!isset($capturedMail['templateId']),'editorial mail is transactional, not a marketing campaign');
+fails(fn()=>$mail->send($prepared,'admin'),'no duplicate notification');
 fails(fn()=>$s->transition($prepared,'approve',2,'','',$v['payload_hash']),'other account cannot approve');fails(fn()=>$s->transition($prepared,'approve',1,'','','wrong'),'hash bound approval');
 fails(fn()=>$s->transition($prepared,'request_changes',1,'',str_repeat('ñ',201),$v['payload_hash']),'201-character owner reason bypassed server limit');
 check($s->version($prepared)['status']==='awaiting_owner','oversized owner reason changed status');

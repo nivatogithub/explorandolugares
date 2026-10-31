@@ -4,6 +4,7 @@ require dirname(__DIR__,2).'/app/bootstrap.php';
 require_once dirname(__DIR__,2).'/app/BusinessEditorialService.php';
 require_once dirname(__DIR__,2).'/app/BusinessOwnershipEvidence.php';
 require_once dirname(__DIR__,2).'/app/BusinessEditorialPreview.php';
+require_once dirname(__DIR__,2).'/app/AccountMailConfiguration.php';
 require_once dirname(__DIR__,2).'/app/BusinessAccountPortalService.php';
 require_once dirname(__DIR__,2).'/app/ExperienceOperatorAddon.php';
 require_once dirname(__DIR__).'/admin/_asset.php';
@@ -22,14 +23,14 @@ try{
   if($action==='verify_document'&&$admin){(new BusinessOwnershipEvidence(db(),private_storage_path('business-representation-evidence')))->verifyAndDelete($business,(int)($_POST['evidence_id']??0),(string)$_SESSION['admin']);}
   elseif($action==='save'){if(!$admin)throw new RuntimeException('El contenido enviado está en revisión. Solo puedes aprobar la prepublicación o solicitar correcciones cuando la recibas.');$editorial->save((int)($account['id']??0),$business,(int)($_POST['version_id']??0),$_POST,!empty($_POST['image_consent']),true,(string)$_SESSION['admin']??'',$_FILES['reference_images']??null);}
   elseif(!$v)throw new RuntimeException('Primero guarda un borrador.');
-  elseif($action==='notify'&&$admin){require_once dirname(__DIR__,2).'/app/BusinessEditorialMail.php';require_once dirname(__DIR__,2).'/app/BrevoSettings.php';$simulation=!empty($config['local_test']);$settings=$simulation?BusinessEditorialMail::localSettings((string)($_SERVER['HTTP_HOST']??''),dirname(__DIR__,2).'/private/mailbox.json'):BrevoSettings::load(private_storage_path('brevo'),(string)$config['app_key']);$outcome=(new BusinessEditorialMail(db(),$settings,null,$simulation))->send((int)$v['id'],(string)$_SESSION['admin']);$_SESSION['editorial_mail_result']=$outcome;}
+  elseif($action==='notify'&&$admin){require_once dirname(__DIR__,2).'/app/BusinessEditorialMail.php';require_once dirname(__DIR__,2).'/app/BrevoSettings.php';$simulation=!empty($config['local_test']);$settings=$simulation?BusinessEditorialMail::localSettings((string)($_SERVER['HTTP_HOST']??''),dirname(__DIR__,2).'/private/mailbox.json'):AccountMailConfiguration::transactionalSettings($config);$outcome=(new BusinessEditorialMail(db(),$settings,null,$simulation))->send((int)$v['id'],(string)$_SESSION['admin']);$_SESSION['editorial_mail_result']=$outcome;}
   elseif($action==='publish'&&$admin)throw new RuntimeException('La publicación final se autoriza desde el enlace del propietario.');
   elseif(in_array($action,['submit','prepare','approve','request_changes','reject'],true)){
    $editorial->transition((int)$v['id'],$action,(int)($account['id']??0),$admin?(string)$_SESSION['admin']:'',(string)($_POST['note']??''),(string)($_POST['payload_hash']??''),(array)($_POST['quality']??[]));
    if($action==='approve'&&!$admin)$editorial->publishByOwner((int)$v['id'],(int)$account['id'],(string)($_POST['payload_hash']??''));
   }
   else throw new RuntimeException('Acción no válida.');
-  if($action==='prepare'&&$admin){try{require_once dirname(__DIR__,2).'/app/BusinessEditorialMail.php';require_once dirname(__DIR__,2).'/app/BrevoSettings.php';$simulation=!empty($config['local_test']);$settings=$simulation?BusinessEditorialMail::localSettings((string)($_SERVER['HTTP_HOST']??''),dirname(__DIR__,2).'/private/mailbox.json'):BrevoSettings::load(private_storage_path('brevo'),(string)$config['app_key']);$_SESSION['editorial_mail_result']=(new BusinessEditorialMail(db(),$settings,null,$simulation))->send((int)$v['id'],(string)$_SESSION['admin']);}catch(Throwable $notificationError){PortalIncidents::technical($notificationError,'editorial_notification');$_SESSION['editorial_mail_result']='mail_not_sent';}}
+  if($action==='prepare'&&$admin){try{require_once dirname(__DIR__,2).'/app/BusinessEditorialMail.php';require_once dirname(__DIR__,2).'/app/BrevoSettings.php';$simulation=!empty($config['local_test']);$settings=$simulation?BusinessEditorialMail::localSettings((string)($_SERVER['HTTP_HOST']??''),dirname(__DIR__,2).'/private/mailbox.json'):AccountMailConfiguration::transactionalSettings($config);$_SESSION['editorial_mail_result']=(new BusinessEditorialMail(db(),$settings,null,$simulation))->send((int)$v['id'],(string)$_SESSION['admin']);}catch(Throwable $notificationError){PortalIncidents::technical($notificationError,'editorial_notification');$_SESSION['editorial_mail_result']='mail_not_sent';}}
   header('Location: /business/editorial.php?business='.$business.($admin?'&admin=1':'').'&saved=1',true,303);exit;
  }
  if(isset($_GET['version'])&&(int)$_GET['version']>0){$v=$editorial->version((int)$_GET['version']);if((int)$v['business_id']!==$business)throw new RuntimeException('La versión pertenece a otro negocio.');$payload=$editorial->payload($v,$business);}

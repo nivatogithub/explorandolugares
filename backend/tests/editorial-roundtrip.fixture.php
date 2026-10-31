@@ -34,8 +34,9 @@ try{
     if($promotionTest){
         $sub=$p->query('SELECT * FROM business_subscriptions WHERE id=1')->fetch();
         if($sub['quoted_amount']!=0||$sub['status']!=='active'||!$promotions->covered(1)||(int)$p->query('SELECT COUNT(*) FROM business_subscription_payment_evidence')->fetchColumn()!==0)throw new RuntimeException('Promotion publication invented a receipt or lost coverage.');
-        $start=new DateTimeImmutable($sub['starts_at'],new DateTimeZone('UTC'));$next=$start->modify('first day of next month');$expected=$next->setDate((int)$next->format('Y'),(int)$next->format('m'),min((int)$start->format('d'),(int)$next->format('t')));
-        if($expected->format('Y-m-d H:i:s')!==$sub['ends_at'])throw new RuntimeException('Promotion must grant exactly one calendar month from publication.');
+        // Subscription months follow the business calendar in Colombia, then store UTC.
+        $start=(new DateTimeImmutable($sub['starts_at'],new DateTimeZone('UTC')))->setTimezone(new DateTimeZone('America/Bogota'));$next=$start->modify('first day of next month');$expected=$next->setDate((int)$next->format('Y'),(int)$next->format('m'),min((int)$start->format('d'),(int)$next->format('t')));
+        if($expected->setTimezone(new DateTimeZone('UTC'))->format('Y-m-d H:i:s')!==$sub['ends_at'])throw new RuntimeException('Promotion must grant exactly one calendar month from publication.');
     }
     header('Content-Type: application/json');echo json_encode(['ok'=>true,'products'=>count($payload['showcase']['products']??[]),'mail'=>$mail,'status'=>$service->latest(1)['status']]);
 }catch(Throwable $e){http_response_code(500);echo get_class($e).': '.$e->getMessage();}
