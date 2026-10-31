@@ -34,7 +34,7 @@ DB.execute('PRAGMA foreign_keys=ON')
 DB.executescript((ROOT / 'backend/database/sqlite.sql').read_text())
 DB.executescript((ROOT / 'backend/database/destinations.sqlite.sql').read_text())
 DB.executescript((ROOT / 'backend/database/migrations/006-poi-experience-links.sqlite.sql').read_text())
-for number in range(8, 58):
+for number in range(8, 59):
     matches = list((ROOT / 'backend/database/migrations').glob(f'{number:03d}-*.sqlite.sql'))
     assert len(matches) == 1, f'Migración SQLite faltante o ambigua: {number:03d}'
     DB.executescript(matches[0].read_text())
@@ -79,12 +79,12 @@ DB.execute("UPDATE leads SET email='consulta@example.invalid',wants_contact=1 WH
 # Publishable physical fixtures must satisfy the geolocation policy.
 DB.execute("UPDATE businesses SET latitude=5.7914719,longitude=-75.7862113")
 DB.commit()
-expected_prices = {'basic': {'monthly': 19900, 'annual': 199000}, 'featured': {'monthly': 49900, 'annual': 499000}, 'page': {'monthly': 79900, 'annual': 799000}, 'page_premium': {'monthly': 119900, 'annual': 1199000}}
+expected_prices = {'basic': {'monthly': 19900, 'annual': 199000}, 'featured': {'monthly': 25000, 'annual': 240000}, 'page': {'monthly': 40000, 'annual': 384000}, 'page_premium': {'monthly': 60000, 'annual': 576000}}
 for plan, frequencies in expected_prices.items():
     for frequency, amount in frequencies.items():
         actual = DB.execute('SELECT amount,currency FROM subscription_plan_prices WHERE plan_code=? AND billing_frequency=?', (plan, frequency)).fetchone()
         assert actual and actual['amount'] == amount and actual['currency'] == 'COP', f'Tarifa acordada ausente o alterada: {plan}/{frequency}'
-for frequency, multiplier in [('quarterly', 2.5), ('semiannual', 5.2), ('annual', 10)]:
+for frequency, multiplier in [('quarterly', 2.7), ('semiannual', 5.1), ('annual', 9.6)]:
     for plan in ('featured','page','page_premium'):
         monthly=expected_prices[plan]['monthly']
         amount=DB.execute('SELECT amount,currency FROM subscription_plan_prices WHERE plan_code=? AND billing_frequency=?',(plan,frequency)).fetchone()
@@ -827,17 +827,17 @@ try:
     sample_png=base64.b64decode('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aZ1sAAAAASUVORK5CYII=')
     def submit_payment(reference):
         code,payment_form,_=request(payment_path,opener=business_flow)
-        check(code==200 and '49.900' in payment_form and 'SIMULACIÓN' in payment_form,'Debe conservar Destacado mensual y mostrar instrucciones del ambiente.')
+        check(code==200 and '25.000' in payment_form and 'SIMULACIÓN' in payment_form,'Debe conservar Destacado mensual y mostrar instrucciones del ambiente.')
         check('name="plan_code"' not in payment_form and 'name="operator_experience_id"' not in payment_form,'No se cambia plan ni complemento en pago.')
         fields={'csrf':re.search(r'name="csrf" value="([^"]+)"',payment_form)[1],
             'quote_token':re.search(r'name="quote_token" value="([^"]+)"',payment_form)[1],
             'payment_reference':reference,'transaction_date':date.today().isoformat(),
-            'paid_amount':'49900','payment_method':'breb','source_bank':'BANCO FICTICIO'}
+            'paid_amount':'25000','payment_method':'breb','source_bank':'BANCO FICTICIO'}
         return multipart(payment_path,fields,[('payment_proof','soporte.png','image/png',sample_png)],business_flow)
     check(submit_payment('TRX-LOCAL-2026')[0]==303,'No se guardó el comprobante desde la página de pago.')
     payment_row=DB.execute('SELECT e.*,s.status AS subscription_status,s.quoted_amount FROM business_subscription_payment_evidence e JOIN business_subscriptions s ON s.id=e.subscription_id WHERE e.account_id=? ORDER BY e.id DESC LIMIT 1',(account_row['id'],)).fetchone()
-    check(payment_row and payment_row['status']=='pending' and payment_row['subscription_status']=='pending' and payment_row['quoted_amount']==49900,'El pago no conserva la tarifa ni su revisión pendiente.')
-    check(payment_row['paid_amount']==49900 and payment_row['source_bank']=='BANCO FICTICIO' and re.fullmatch(r'EL-[A-F0-9]{24}',payment_row['checkout_reference']),'Se perdieron los datos de transacción.')
+    check(payment_row and payment_row['status']=='pending' and payment_row['subscription_status']=='pending' and payment_row['quoted_amount']==25000,'El pago no conserva la tarifa ni su revisión pendiente.')
+    check(payment_row['paid_amount']==25000 and payment_row['source_bank']=='BANCO FICTICIO' and re.fullmatch(r'EL-[A-F0-9]{24}',payment_row['checkout_reference']),'Se perdieron los datos de transacción.')
     check(not list((WORK/'public').rglob(payment_row['storage_name'])),'Comprobante expuesto en la raíz pública.')
     subscriptions_with_evidence=request('/admin/suscripciones.php?q=Cafeter%C3%ADa')[1]
     check('Ver comprobante' in subscriptions_with_evidence and 'BANCO FICTICIO' in subscriptions_with_evidence and payment_row['checkout_reference'] in subscriptions_with_evidence,'El administrador no puede revisar el comprobante.')
@@ -919,7 +919,7 @@ try:
     premium_payment_fields={'csrf':re.search(r'name="csrf" value="([^"]+)"',premium_form)[1],
         'quote_token':re.search(r'name="quote_token" value="([^"]+)"',premium_form)[1],
         'payment_reference':'TX-EDITORIAL-PREMIUM','transaction_date':date.today().isoformat(),
-        'paid_amount':'119900','payment_method':'qr','source_bank':'BANCO FICTICIO'}
+        'paid_amount':'60000','payment_method':'qr','source_bank':'BANCO FICTICIO'}
     check(multipart(premium_payment,premium_payment_fields,[('payment_proof','premium.png','image/png',sample_png)],business_flow)[0]==303,'No guardó el pago Premium.')
     premium_evidence=DB.execute('SELECT id FROM business_subscription_payment_evidence WHERE account_id=? ORDER BY id DESC LIMIT 1',(account_row['id'],)).fetchone()[0]
     check(request('/admin/suscripciones.php',{'csrf':csrf,'action':'review_payment','evidence_id':premium_evidence,'decision':'approved','admin_note':''},ADMIN)[0]==200,'No confirmó pago Premium')

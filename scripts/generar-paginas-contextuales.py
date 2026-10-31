@@ -6,12 +6,15 @@ import argparse
 def apply(public):
  public=Path(public)
  for prefix,locale in [('', 'es'),('en/','en'),('pt-br/','pt-BR')]:
-  for suffix,kind in [('', 'home'),('privacidad/','privacy')]:
+  for suffix,kind in [('', 'home'),('privacidad/','privacy'),('negocios-locales/suscripciones/','subscriptions'),('negocios-locales/proceso/','business-process')]:
    folder=public/(prefix+suffix)
    if not (folder/'index.html').is_file():continue
    depth=len(folder.relative_to(public).parts)
    root='__DIR__' if depth==0 else f'dirname(__DIR__,{depth})'
    (folder/'index.php').write_text("<?php\ndeclare(strict_types=1);\nrequire_once "+root+".'/_portal-page.php';\nportal_render_page(__DIR__.'/index.html',"+repr(locale)+','+repr(kind)+");\n")
+   if kind in ('subscriptions','business-process'):
+    # Do not depend on the hosting's default index order for catalogue prices.
+    (folder/'.htaccess').write_text('DirectoryIndex index.php index.html\n')
  htaccess=public/'.htaccess';text=htaccess.read_text();text=text.replace('DirectoryIndex index.html','DirectoryIndex index.php index.html')
  if 'DirectoryIndex ' not in text:text='DirectoryIndex index.php index.html\n'+text
  htaccess.write_text(text)

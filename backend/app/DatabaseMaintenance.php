@@ -156,12 +156,10 @@ final class DatabaseMaintenance
             'value_checks' => [
                 ['subscription_plan_prices','plan_code','basic','amount','19900.00'],
                 ['subscription_plan_prices','plan_code','basic','amount','199000.00'],
-                ['subscription_plan_prices','plan_code','featured','amount','49900.00'],
-                ['subscription_plan_prices','plan_code','featured','amount','499000.00'],
-                // The page amounts are superseded by migration 050.
+                // Paid prices are now owned by migration 058, not historical rates.
+                ['subscription_plan_prices','plan_code','featured','currency','COP'],
                 ['subscription_plan_prices','plan_code','page','currency','COP'],
-                ['subscription_plan_prices','plan_code','page_premium','amount','119900.00'],
-                ['subscription_plan_prices','plan_code','page_premium','amount','1199000.00'],
+                ['subscription_plan_prices','plan_code','page_premium','currency','COP'],
             ],
             'requires' => ['subscription_plan_prices'],
         ],
@@ -214,7 +212,7 @@ final class DatabaseMaintenance
         '047-lead-business-links'=>['file'=>'047-lead-business-links.mysql.sql','checks'=>[['lead_business_links',['lead_id','business_id','linked_by','created_at']]],'requires'=>['leads','businesses']],
         '048-individual-lead-replies'=>['file'=>'048-individual-lead-replies.mysql.sql','checks'=>[['lead_reply_operations',['id','lead_id','status','recipient','sender_email','sender_name','reply_to','subject','message_text','html_body','text_body','template_version','content_hash','created_by','confirmed_by','claimed_at','completed_at','provider_message_id','result_code','reconciled_at','reconciled_by','reconciliation_note']],['lead_reply_attempts',['operation_id','outcome','http_status']]],'requires'=>['leads']],
         '049-business-editorial'=>['file'=>'049-business-editorial.mysql.sql','checks'=>[['business_editorial_versions',['business_id','account_id','parent_id','status','plan_code','base_hash','payload_json','payload_hash','image_consent','owner_approved_at','published_at']],['business_editorial_events',['version_id','actor','action']],['business_editorial_images',['version_id','storage_name','original_name','mime_type','file_size','width','height']]],'requires'=>['businesses','accounts']],
-        '050-commercial-page-price'=>['file'=>'050-commercial-page-price.mysql.sql','value_checks'=>[['subscription_plan_prices','plan_code','page','amount','79900.00'],['subscription_plan_prices','plan_code','page','amount','199750.00'],['subscription_plan_prices','plan_code','page','amount','415480.00'],['subscription_plan_prices','plan_code','page','amount','799000.00']],'requires'=>['subscription_plan_prices']],
+        '050-commercial-page-price'=>['file'=>'050-commercial-page-price.mysql.sql','value_checks'=>[['subscription_plan_prices','plan_code','page','currency','COP']],'requires'=>['subscription_plan_prices']],
         '051-business-evidence-retirement'=>['file'=>'051-business-evidence-retirement.mysql.sql','checks'=>[['business_evidence_retirement',['evidence_id','document_sha256','reviewer','verified_at','deleted_at']]],'requires'=>['business_account_application_evidence']],
         '052-business-onboarding-uploads'=>['file'=>'052-business-onboarding-uploads.mysql.sql','checks'=>[['business_onboarding_uploads',['id','draft_token','upload_kind','slot_code','storage_name','mime_type','expires_at','consumed_at']]],'requires'=>[]],
         '053-current-business-text-rules'=>[
@@ -286,6 +284,28 @@ final class DatabaseMaintenance
             'checks'=>[['operating_cost_evidence',['cost_id','storage_name','original_name','mime_type','file_size','sha256','created_by']]],
             'requires'=>['operating_costs'],
         ],
+        '058-rounded-subscription-prices'=>[
+            'file'=>'058-rounded-subscription-prices.mysql.sql','idempotent_updates'=>true,
+            'price_checks'=>[
+                ['featured','monthly',25000],['featured','quarterly',67500],['featured','semiannual',127500],['featured','annual',240000],
+                ['page','monthly',40000],['page','quarterly',108000],['page','semiannual',204000],['page','annual',384000],
+                ['page_premium','monthly',60000],['page_premium','quarterly',162000],['page_premium','semiannual',306000],['page_premium','annual',576000],
+            ],
+            'value_checks'=>[
+                ['subscription_pricing_policy','period_code','monthly','billable_months',1],
+                ['subscription_pricing_policy','period_code','quarterly','billable_months',2.7],
+                ['subscription_pricing_policy','period_code','semiannual','billable_months',5.1],
+                ['subscription_pricing_policy','period_code','annual','billable_months',9.6],
+                ['experience_operator_prices','billing_frequency','monthly','amount',20000],
+                ['experience_operator_prices','billing_frequency','quarterly','amount',54000],
+                ['experience_operator_prices','billing_frequency','semiannual','amount',102000],
+                ['experience_operator_prices','billing_frequency','annual','amount',192000],
+                ['experience_operator_prices','billing_frequency','monthly','currency','COP'],
+                ['experience_operator_prices','billing_frequency','quarterly','currency','COP'],
+                ['experience_operator_prices','billing_frequency','semiannual','currency','COP'],
+                ['experience_operator_prices','billing_frequency','annual','currency','COP'],
+            ],'requires'=>['subscription_plan_prices','subscription_pricing_policy','experience_operator_prices'],
+        ],
     ];
 
     public function __construct(private PDO $pdo, private string $appRoot, private string $publicRoot)
@@ -328,6 +348,7 @@ final class DatabaseMaintenance
             foreach($migration['checks']??[] as [$table,$columns]){if(!in_array($table,$tables,true)){$lines[]='Falta tabla: '.$table;continue;}$missing=array_diff($columns,$this->columns($table));$lines[]=$missing?'Faltan columnas en '.$table.': '.implode(', ',$missing):'Tabla y columnas comprobadas: '.$table;}
             foreach($migration['row_checks']??[] as [$table,$column,$value])$lines[]='Registro requerido en '.$table.': '.$column.' = '.$value;
             foreach($migration['value_checks']??[] as [$table,$key,$value,$column,$expected])$lines[]='Configuración requerida en '.$table.': '.$key.' = '.$value.', '.$column.' = '.$expected;
+            foreach($migration['price_checks']??[] as [$plan,$period,$amount])$lines[]='Tarifa vigente: '.$plan.' · '.$period.' · '.$amount.' COP';
             foreach($migration['capacity_checks']??[] as [$table,$column,$minimum])$lines[]='Capacidad mínima de '.$table.'.'.$column.': '.$minimum.' caracteres';
             $result[$id]=$lines;
         }
@@ -448,6 +469,11 @@ final class DatabaseMaintenance
                 $wait=(int)$this->pdo->query('SELECT @@SESSION.lock_wait_timeout')->fetchColumn();
                 $this->pdo->exec('SET SESSION lock_wait_timeout=5');
                 try{$this->executeSqlFile($file);}finally{$this->pdo->exec('SET SESSION lock_wait_timeout='.$wait);}
+            }elseif($id==='058-rounded-subscription-prices'){
+                // All catalogue/policy amounts change together; no partial tariff.
+                $this->pdo->beginTransaction();
+                try{$this->executeSqlFile($file);if($this->migrationState($migration,$this->tables())!=='applied')throw new RuntimeException('No se confirmó la tabla completa de tarifas.');$this->pdo->commit();}
+                catch(Throwable $error){if($this->pdo->inTransaction())$this->pdo->rollBack();throw $error;}
             }else $this->executeSqlFile($file);
             $after = $this->migrationState($migration, $this->tables());
             if ($after !== 'applied') throw new RuntimeException('La migración '.$id.' no quedó completa. Se detuvo para revisar el esquema.');
@@ -542,6 +568,11 @@ final class DatabaseMaintenance
             }else{
                 foreach($this->pdo->query('PRAGMA table_info(`'.$table.'`)')->fetchAll(PDO::FETCH_ASSOC) as $info)if($info['name']===$column&&strtoupper($info['type'])==='TEXT'){$present++;break;}
             }
+        }
+        foreach($migration['price_checks']??[] as [$plan,$period,$amount]){
+            $total++;if(!in_array('subscription_plan_prices',$tables,true))continue;
+            $q=$this->pdo->prepare('SELECT COUNT(*) FROM subscription_plan_prices WHERE plan_code=? AND billing_frequency=? AND amount=? AND currency=?');$q->execute([$plan,$period,$amount,'COP']);
+            if((int)$q->fetchColumn()===1)$present++;
         }
         if ($total===0) throw new RuntimeException('La migración no define controles de estado.');
         if ($present === $total) return 'applied';

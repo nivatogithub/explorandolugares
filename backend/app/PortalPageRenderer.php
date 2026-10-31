@@ -4,6 +4,7 @@ require_once __DIR__.'/PortalPresentation.php';
 require_once __DIR__.'/HomeAttractions.php';
 require_once __DIR__.'/PortalSettings.php';
 require_once __DIR__.'/DatabaseClock.php';
+require_once __DIR__.'/SubscriptionPricing.php';
 final class PortalPageRenderer
 {
     public static function render(string $template,string $locale,string $type,string $publicRoot):void
@@ -23,6 +24,12 @@ final class PortalPageRenderer
                 DatabaseClock::configure($pdo);
                 $items=HomeAttractions::items($pdo,$locale,$publicRoot);
                 if($items)$html=preg_replace_callback('~(<div\b[^>]*data-home-attractions[^>]*>).*?</div>~s',static fn($match)=>$match[1].HomeAttractions::render($items,$locale).'</div>',$html,1);
+            }elseif($type==='subscriptions'||$type==='business-process'){
+                $pdo=new PDO($config['dsn'],$config['db_user']??null,$config['db_password']??null,[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC]);
+                $pricing=new SubscriptionPricing($pdo);
+                $html=preg_replace_callback('~<div data-subscription-pricing>.*?</div>~s',static fn()=>'<div data-subscription-pricing>'.$pricing->publicTable($locale).'</div>',$html);
+                $operator=htmlspecialchars($pricing->operatorText($locale),ENT_QUOTES|ENT_SUBSTITUTE,'UTF-8');
+                $html=preg_replace_callback('~<p data-operator-pricing>.*?</p>~s',static fn()=>'<p data-operator-pricing>'.$operator.'</p>',$html);
             }elseif($type==='privacy'){
                 $privacy=$config['privacy']??[];$fields=['operator','contact','retention'];$content='';
                 $labels=match($locale){'en'=>['Data controller: ','Privacy contact: ','Retention of submitted personal data: '],'pt-BR'=>['Responsável: ','Contato de privacidade: ','Conservação dos dados pessoais enviados: '],default=>['Responsable: ','Contacto de privacidad: ','Conservación de los datos personales enviados: ']};

@@ -5,6 +5,7 @@ require_business_portal_access();require_business_session();
 require_once dirname(__DIR__,2).'/app/BusinessWorkspace.php';
 require_once dirname(__DIR__,2).'/app/BusinessPaymentEvidenceService.php';
 require_once dirname(__DIR__,2).'/app/PaymentInstructions.php';
+require_once dirname(__DIR__,2).'/app/SubscriptionPricing.php';
 require_once dirname(__DIR__).'/admin/_asset.php';
 $account=(new BusinessAccountPortalService(db()))->current((int)$_SESSION['business_account_id']);
 if(!$account){unset($_SESSION['business_account_id']);require_business_session();}
@@ -47,6 +48,9 @@ try{
     $quote=(new SubscriptionChangeService(db()))->quote($id,$plan,$period,$addon);
     $promotions=new BusinessPromotions(db());$promotion=$promotions->forSubscription((int)$subscription['id']);
     $quote=$promotions->checkout($subscription,$quote);
+    $periodSavings=(new SubscriptionPricing(db()))->savings($plan,$period,$operator!==null);
+    // Never describe an old redeemed tariff or prorated upgrade as today's offer.
+    if($periodSavings&&($quote['kind']==='upgrade'||$periodSavings['total_cents']!==$quote['target_full_cents']))$periodSavings=null;
     $quoteToken=bin2hex(random_bytes(24));
     $_SESSION['business_checkout_quotes']??=[];
     foreach($_SESSION['business_checkout_quotes'] as $token=>$entry)if(strtotime($entry['quote']['quoted_at'].' UTC')<time()-1800)unset($_SESSION['business_checkout_quotes'][$token]);
@@ -68,6 +72,7 @@ require_once dirname(__DIR__).'/_account-page.php';account_page(false);
 <?php if(($_GET['cupon']??'')==='aplicado'):?><p class="notice" role="status">Cupón aplicado. Revisa el nuevo saldo antes de pagar.</p><?php endif?>
 <?php if($error):?><p class="notice" role="alert"><?=esc($error)?></p><?php endif?>
 <?php if($quote):?><p class="notice">Importe a pagar: <strong><?=esc(number_format($quote['due_cents']/100,2,',','.').' '.$quote['currency'])?></strong></p><?php endif?>
+<?php if(!empty($periodSavings)):?><p class="subscription-period-saving">Descuento por período: <strong><?=esc($periodSavings['percentage'])?> %</strong>. Ahorras <strong><?=esc(SubscriptionPricing::money($periodSavings['saving_cents']/100))?></strong> frente a pagar <?=esc($periodSavings['months'])?> meses por separado<?=$operator?' por el plan y el complemento de experiencia':''?>.<?=$promotion?' Este ahorro es anterior al descuento adicional del cupón.':''?></p><?php endif?>
 <p>Tu información ya está guardada. Puedes salir y retomar este pago desde la fila del negocio.</p>
 <?php if(empty($promotion)&&$canApplyCoupon&&$promotions->hasApplicableOffer($id,$plan,$period)):?><section class="payment-promotion"><h2>¿Tienes un cupón?</h2><p>Debe aplicar al plan, la periodicidad y el lugar de este negocio. Si cubre el total, no tendrás que adjuntar un comprobante. Tu solicitud seguirá pendiente de validación.</p>
 <form method="post" class="payment-promotion-form"><input type="hidden" name="csrf" value="<?=esc($_SESSION['csrf'])?>"><input type="hidden" name="action" value="apply_coupon"><input type="hidden" name="subscription_id" value="<?=(int)$subscription['id']?>">

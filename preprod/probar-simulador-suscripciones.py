@@ -10,9 +10,9 @@ def call(c,path,data=None):
  except urllib.error.HTTPError as e:return e.code,e.read().decode(),e.url
 anon=client();status,raw,_=call(anon,'/api/subscription-prices.php');assert status==200
 catalog=json.loads(raw);plans={p['code']:p for p in catalog['plans']};assert set(plans)=={'free','featured','page','page_premium'}
-for code,monthly in [('featured',49900),('page',69900),('page_premium',119900)]:
- for period,factor in [('monthly',1),('quarterly',2.5),('semiannual',5.2),('annual',10)]:assert float(plans[code]['prices'][period]['quoted_amount'])==round(monthly*factor,2)
-for period,amount in [('monthly',29900),('quarterly',74750),('semiannual',155480),('annual',299000)]:assert float(catalog['operator'][period]['amount'])==amount
+for code,monthly in [('featured',25000),('page',40000),('page_premium',60000)]:
+ for period,factor in [('monthly',1),('quarterly',2.7),('semiannual',5.1),('annual',9.6)]:assert float(plans[code]['prices'][period]['quoted_amount'])==round(monthly*factor,2)
+for period,amount in [('monthly',20000),('quarterly',54000),('semiannual',102000),('annual',192000)]:assert float(catalog['operator'][period]['amount'])==amount
 status,body,url=call(anon,'/suscripciones/continuar/?plan=page&period=quarterly');assert status==200 and '/negocios/acceso/' in url
 csrf=re.search(r'name="csrf" value="([^"]+)"',body)[1]
 profile=json.loads((ROOT/'.local/preprod/test-accounts.json').read_text())['profiles']['negocio']
