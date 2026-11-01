@@ -1,0 +1,167 @@
+{
+  "description": "Scoped metadata-only repair; preserve any later editorial changes. No publication state changes.",
+  "changes": [
+    {
+      "slug": "bogota",
+      "locale": "es",
+      "before": "Recorre La Candelaria, descubre sus museos y contempla Bogotá desde los cerros.",
+      "after": "Qué hacer en Bogotá: recorre La Candelaria, descubre sus museos y contempla la ciudad desde los cerros. Lugares y experiencias para preparar tu visita."
+    },
+    {
+      "slug": "bogota",
+      "locale": "en",
+      "before": "Explore La Candelaria, discover its museums and see Bogotá from the hills.",
+      "after": "Things to do in Bogotá: explore La Candelaria, discover its museums and see the city from the hills. Find places and experiences for your visit."
+    },
+    {
+      "slug": "bogota",
+      "locale": "pt-BR",
+      "before": "Explore La Candelaria, conheça seus museus e contemple Bogotá dos morros.",
+      "after": "O que fazer em Bogotá: explore La Candelaria, conheça seus museus e contemple a cidade dos morros. Lugares e experiências para planejar a visita."
+    },
+    {
+      "slug": "medellin",
+      "locale": "es",
+      "before": "Medellín reúne espacios para acercarse al arte, la ciencia y la vida de una ciudad del valle de Aburrá. El Museo de Antioquia, el Jardín Botánico, Par",
+      "after": "Qué hacer en Medellín: conoce el Museo de Antioquia, el Jardín Botánico, Parque Explora y el MAMM. Arte, ciencia y vida urbana en el valle de Aburrá."
+    },
+    {
+      "slug": "medellin",
+      "locale": "en",
+      "before": "Medellín offers places to explore art, science and daily life in the Aburrá Valley. Museo de Antioquia, the Botanical Garden, Parque Explora and MAMM",
+      "after": "Things to do in Medellín: visit Museo de Antioquia, the Botanical Garden, Parque Explora and MAMM. Art, science and city life in the Aburrá Valley."
+    },
+    {
+      "slug": "medellin",
+      "locale": "pt-BR",
+      "before": "Medellín reúne espaços para conhecer a arte, a ciência e o cotidiano de uma cidade do vale do Aburrá. O Museo de Antioquia, o Jardim Botânico, o Parqu",
+      "after": "O que fazer em Medellín: conheça o Museo de Antioquia, o Jardim Botânico, o Parque Explora e o MAMM. Arte e ciência no vale do Aburrá."
+    },
+    {
+      "slug": "covenas",
+      "locale": "es",
+      "before": "Playas, manglares e historia naval en el golfo de Morrosquillo.",
+      "after": "Descubre Coveñas, Sucre: playas, manglares e historia naval en el golfo de Morrosquillo. Explora sus lugares y experiencias para preparar tu visita."
+    },
+    {
+      "slug": "covenas",
+      "locale": "en",
+      "before": "Beaches, mangroves and naval history on the Gulf of Morrosquillo.",
+      "after": "Discover Coveñas, Sucre: beaches, mangroves and naval history on the Gulf of Morrosquillo. Explore places and experiences to plan your visit."
+    },
+    {
+      "slug": "covenas",
+      "locale": "pt-BR",
+      "before": "Praias, manguezais e história naval no golfo de Morrosquillo.",
+      "after": "Descubra Coveñas, Sucre: praias, manguezais e história naval no golfo de Morrosquillo. Conheça lugares e experiências para planejar a visita."
+    },
+    {
+      "slug": "jardin",
+      "locale": "es",
+      "before": "Cafés de plaza, arquitectura de piedra y naturaleza andina.",
+      "after": "Qué hacer en Jardín, Antioquia: cafés de plaza, arquitectura de piedra y naturaleza andina. Descubre lugares y experiencias para preparar tu visita."
+    },
+    {
+      "slug": "jardin",
+      "locale": "en",
+      "before": "Square-side cafés, stone architecture and Andean nature.",
+      "after": "Things to do in Jardín, Antioquia: square-side cafés, stone architecture and Andean nature. Discover places and experiences to plan your visit."
+    },
+    {
+      "slug": "jardin",
+      "locale": "pt-BR",
+      "before": "Cafés na praça, arquitetura de pedra e natureza andina.",
+      "after": "O que fazer em Jardín, Antioquia: cafés na praça, arquitetura de pedra e natureza andina. Conheça lugares e experiências para planejar a visita."
+    },
+    {
+      "slug": "santa-fe-de-antioquia",
+      "locale": "es",
+      "before": "Calles históricas, filigrana y el Puente de Occidente en el valle del Cauca.",
+      "after": "Qué hacer en Santa Fe de Antioquia: calles históricas, filigrana y el Puente de Occidente. Descubre lugares y experiencias en el valle del Cauca."
+    },
+    {
+      "slug": "santa-fe-de-antioquia",
+      "locale": "en",
+      "before": "Historic streets, filigree jewellery and the Puente de Occidente in the Cauca valley.",
+      "after": "Things to do in Santa Fe de Antioquia: historic streets, filigree jewellery and Puente de Occidente. Explore places and experiences in the Cauca valley."
+    },
+    {
+      "slug": "santa-fe-de-antioquia",
+      "locale": "pt-BR",
+      "before": "Ruas históricas, filigrana e a Puente de Occidente no vale do Cauca.",
+      "after": "O que fazer em Santa Fe de Antioquia: ruas históricas, filigrana e a Puente de Occidente. Conheça lugares e experiências no vale do Cauca."
+    },
+    {
+      "slug": "santa-marta",
+      "locale": "es",
+      "before": "Descubre la bahía histórica, las playas y las montañas de Santa Marta.",
+      "after": "Qué hacer en Santa Marta: descubre su bahía histórica, playas y montañas. Explora lugares y experiencias para preparar tu visita al Caribe colombiano."
+    },
+    {
+      "slug": "santa-marta",
+      "locale": "en",
+      "before": "Discover Santa Marta’s historic bay, beaches and mountains.",
+      "after": "Things to do in Santa Marta: discover its historic bay, beaches and mountains. Explore places and experiences for your visit to Colombia's Caribbean."
+    },
+    {
+      "slug": "santa-marta",
+      "locale": "pt-BR",
+      "before": "Descubra a baía histórica, as praias e as montanhas de Santa Marta.",
+      "after": "O que fazer em Santa Marta: descubra sua baía histórica, praias e montanhas. Conheça lugares e experiências para visitar o Caribe colombiano."
+    },
+    {
+      "slug": "zipaquira",
+      "locale": "es",
+      "before": "Una catedral bajo tierra y un centro histórico para caminar.",
+      "after": "Qué hacer en Zipaquirá, Cundinamarca: conoce la Catedral de Sal y recorre su centro histórico. Descubre lugares y experiencias para preparar tu visita."
+    },
+    {
+      "slug": "zipaquira",
+      "locale": "en",
+      "before": "An underground cathedral and a historic centre to explore on foot.",
+      "after": "Things to do in Zipaquirá, Cundinamarca: discover the Salt Cathedral and explore its historic centre. Find places and experiences to plan your visit."
+    },
+    {
+      "slug": "zipaquira",
+      "locale": "pt-BR",
+      "before": "Uma catedral subterrânea e um centro histórico para percorrer a pé.",
+      "after": "O que fazer em Zipaquirá, Cundinamarca: conheça a Catedral de Sal e percorra seu centro histórico. Lugares e experiências para planejar a visita."
+    },
+    {
+      "slug": "guatape",
+      "locale": "es",
+      "before": "Un pueblo de fachadas coloridas a orillas del embalse Peñol–Guatapé.",
+      "after": "Qué hacer en Guatapé, Antioquia: descubre sus fachadas coloridas y el paisaje del embalse Peñol–Guatapé. Lugares y experiencias para preparar tu visita."
+    },
+    {
+      "slug": "guatape",
+      "locale": "en",
+      "before": "A colourful town beside the Peñol–Guatapé reservoir.",
+      "after": "Things to do in Guatapé, Antioquia: discover colourful façades and the Peñol–Guatapé reservoir landscape. Explore places and experiences for your visit."
+    },
+    {
+      "slug": "guatape",
+      "locale": "pt-BR",
+      "before": "Um povoado colorido às margens da represa Peñol–Guatapé.",
+      "after": "O que fazer em Guatapé, Antioquia: conheça suas fachadas coloridas e a paisagem da represa Peñol–Guatapé. Lugares e experiências para planejar a visita."
+    },
+    {
+      "slug": "cocorna",
+      "locale": "es",
+      "before": "Montañas, cascadas y aventura en el Oriente antioqueño.",
+      "after": "Qué hacer en Cocorná, Antioquia: montañas, cascadas y aventura en el Oriente antioqueño. Descubre lugares y experiencias para preparar tu visita."
+    },
+    {
+      "slug": "cocorna",
+      "locale": "en",
+      "before": "Mountains, waterfalls and adventure in eastern Antioquia.",
+      "after": "Things to do in Cocorná, Antioquia: mountains, waterfalls and adventure in eastern Antioquia. Discover places and experiences to plan your visit."
+    },
+    {
+      "slug": "cocorna",
+      "locale": "pt-BR",
+      "before": "Montanhas, cachoeiras e aventura no leste de Antioquia.",
+      "after": "O que fazer em Cocorná, Antioquia: montanhas, cachoeiras e aventura no leste de Antioquia. Conheça lugares e experiências para planejar a visita."
+    }
+  ]
+}

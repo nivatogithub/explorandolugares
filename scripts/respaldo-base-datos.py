@@ -22,10 +22,12 @@ def private_php(config,options,action="database-snapshot.php"):
         options=dict(options,app_root=scratch,public_root=api.public_path(config))
         dependencies={'DatabaseMaintenance.php':ROOT/'backend/app/DatabaseMaintenance.php'}
         migrations=options.get('migrations',['043-account-lifecycle'])
-        allowed={'043-account-lifecycle','044-subscription-changes','045-business-service-sections','046-premium-page-aliases','047-lead-business-links','048-individual-lead-replies','049-business-editorial','050-commercial-page-price','051-business-evidence-retirement','052-business-onboarding-uploads','053-current-business-text-rules','054-business-description-budgets','055-business-registration-drafts','056-business-promotions','057-business-promotion-places','058-rounded-subscription-prices'}
+        allowed={'043-account-lifecycle','044-subscription-changes','045-business-service-sections','046-premium-page-aliases','047-lead-business-links','048-individual-lead-replies','049-business-editorial','050-commercial-page-price','051-business-evidence-retirement','052-business-onboarding-uploads','053-current-business-text-rules','054-business-description-budgets','055-business-registration-drafts','056-business-promotions','057-business-promotion-places','058-rounded-subscription-prices','059-public-seo-descriptions'}
         if not isinstance(migrations,list) or not migrations or len(set(migrations))!=len(migrations) or set(migrations)-allowed:raise ValueError('Selección de migraciones no permitida.')
         for migration in migrations:
             relative='database/migrations/'+migration+'.mysql.sql';dependencies[relative]=ROOT/'backend'/relative
+        if '059-public-seo-descriptions' in migrations:
+            dependencies['content/seo-description-patch.json']=ROOT/'backend/app/content/seo-description-patch.json'
     if action=='prepare-destination-migration.php':
         options=dict(options,migration_root=scratch,public_root=api.public_path(config))
         dependencies={'DestinationSnapshotMigration.php':ROOT/'scripts/lib/DestinationSnapshotMigration.php'}
@@ -47,6 +49,7 @@ $options=json_decode(base64_decode('OPTIONS'),true);require 'SOURCE';
         try:
             if dependencies:
                 commands=['-mkdir '+api.quote(scratch),'chmod 700 '+api.quote(scratch),'-mkdir '+api.quote(scratch+'/database'),'-mkdir '+api.quote(scratch+'/database/migrations')]
+                if any(r.startswith('content/') for r in dependencies):commands+=['-mkdir '+api.quote(scratch+'/content')]
                 for relative,local in dependencies.items():commands+=['put '+api.quote(local)+' '+api.quote(scratch+'/'+relative),'chmod 600 '+api.quote(scratch+'/'+relative)]
                 client.run(commands)
             client.run(['put '+api.quote(helper)+' '+api.quote(remote),'chmod 600 '+api.quote(remote),'put '+api.quote(entry)+' '+api.quote(endpoint)])
@@ -54,7 +57,7 @@ $options=json_decode(base64_decode('OPTIONS'),true);require 'SOURCE';
             with urllib.request.urlopen(request,timeout=240) as response:return json.load(response)
         finally:
             commands=['-rm '+api.quote(endpoint),'-rm '+api.quote(remote)]
-            if dependencies:commands+=['-rm '+api.quote(scratch+'/'+r) for r in dependencies]+['-rmdir '+api.quote(scratch+'/database/migrations'),'-rmdir '+api.quote(scratch+'/database'),'-rmdir '+api.quote(scratch)]
+            if dependencies:commands+=['-rm '+api.quote(scratch+'/'+r) for r in dependencies]+(['-rmdir '+api.quote(scratch+'/content')] if any(r.startswith('content/') for r in dependencies) else [])+['-rmdir '+api.quote(scratch+'/database/migrations'),'-rmdir '+api.quote(scratch+'/database'),'-rmdir '+api.quote(scratch)]
             client.run(commands)
 
 def main():

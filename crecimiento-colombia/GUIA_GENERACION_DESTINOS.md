@@ -101,6 +101,10 @@ Regla operativa obligatoria: aplicar `docs/CIERRE_OPERATIVO_DESTINOS.md` (identi
 
 ### Cierre SEO obligatorio
 
+Leer y ejecutar el [manual obligatorio de SEO y publicación](../docs/SEO_PUBLICACION_LUGARES.md).
+Es parte de la entrega del lugar, no una mejora opcional posterior. El responsable
+reúne evidencia de las páginas PHP finales y los controles de regresión.
+
 Antes de entregar o publicar cualquier lugar nuevo o actualizado, cumplir la sección «SEO obligatorio para cada lugar nuevo o actualizado» de `AGENTS.md`: contenido y metadatos por idioma, URLs/canonical/hreflang, sitemap/robots, redirecciones, recursos, vistas previas sociales y continuidad de analítica. Adjuntar comprobaciones del paquete y HTTP; no declarar listo con validaciones pendientes.
 
 

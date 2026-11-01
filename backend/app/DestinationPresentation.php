@@ -42,7 +42,12 @@ final class DestinationPresentation
         $copy=$this->data['copy'][$this->locale]??[];
         if(isset($copy['intro']))$this->text('//*['.self::cls('destination-hero').']//*['.self::cls('intro').']',$copy['intro']);
         if(isset($copy['headline']))$this->text('//*['.self::cls('destination-hero').']//h1/em',$copy['headline']);
-        $titles=match($this->locale){'en'=>['A brief history','Places to visit','Experiences','Directory','History'],'pt-BR'=>['História em breve','O que conhecer','Experiências','Diretório','História'],default=>['Historia en breve','Qué conocer','Experiencias','Directorio','Historia']};
+        $placeName=trim($this->first('//*['.self::cls('breadcrumbs').']/*[@aria-current="page"]')?->textContent??'');
+        $titles=match($this->locale){'en'=>['A brief history','Places to visit','Experiences','Local businesses','History'],'pt-BR'=>['História em breve','O que conhecer','Experiências','Negócios locais','História'],default=>['Historia en breve','Qué conocer','Experiencias','Negocios locales','Historia']};
+        if($placeName!==''){
+            $join=match($this->locale){'en'=>' in ','pt-BR'=>' em ',default=>' en '};
+            foreach([1,2,3] as $index)$titles[$index].=$join.$placeName;
+        }
         $this->remove('//*['.self::cls('pilot-banner').']');
         foreach($this->nodes('//*['.self::cls('destination-business-link').']//a') as $link)$link->setAttribute('href','/negocios/registro/?tipo=business');
         $this->remove('//*['.self::cls('destination-hero').']//*['.self::cls('eyebrow').']');

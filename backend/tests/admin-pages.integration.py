@@ -172,7 +172,7 @@ if os.environ.get('EL_ADMIN_REPAIR_PREVIEW')=='1':
         PROCESS.terminate();PROCESS.wait(timeout=5);DB.close();shutil.rmtree(WORK)
     raise SystemExit(0)
 
-place_prefix='/lugares/' if package_value else '/destinos/'
+place_prefix='/lugares/'  # Source and packaged renderer share the production canonical.
 try:
     for _ in range(100):
         try:

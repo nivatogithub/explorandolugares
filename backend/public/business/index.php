@@ -16,6 +16,7 @@ if(business_portal_available()){
         'pt-br'=>['Criar conta empresarial','Já tenho uma conta'],
         default=>['Crear cuenta de negocio','Ya tengo cuenta'],
     };
-    $entry='<p class="account-entry-strip"><a href="../negocios/registro/">'.esc($labels[0]).'</a> · <a href="../negocios/acceso/">'.esc($labels[1]).'</a></p>';
+    $language=$locale==='es'?'':'?lang='.rawurlencode($locale);
+    $entry='<p class="account-entry-strip"><a href="/negocios/registro/'.$language.'">'.esc($labels[0]).'</a> · <a href="/negocios/acceso/'.$language.'">'.esc($labels[1]).'</a></p>';
 }
 echo str_replace($marker,$entry,$html);

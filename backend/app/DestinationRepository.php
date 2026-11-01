@@ -21,6 +21,8 @@ final class DestinationRepository
         $stmt=$this->pdo->prepare($sql); $stmt->execute([$slug,$locale]); $destination=$stmt->fetch(PDO::FETCH_ASSOC);
         if (!$destination) return null;
         $id=(int)$destination['id'];
+        $translations=$this->pdo->prepare('SELECT locale FROM destination_translations WHERE destination_id=? AND locale IN ("es","en","pt-BR") AND TRIM(display_name)<>"" ORDER BY locale');
+        $translations->execute([$id]);$destination['available_locales']=$translations->fetchAll(PDO::FETCH_COLUMN);
         $destination['history']=$this->translatedRows(
             'SELECT b.display_order,tr.body FROM destination_story_blocks b JOIN destination_story_translations tr ON tr.story_block_id=b.id WHERE b.destination_id=? AND b.section_key="history" AND tr.locale=? ORDER BY b.display_order', $id,$locale);
         $destination['reasons']=$this->translatedRows(

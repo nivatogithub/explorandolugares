@@ -3,7 +3,7 @@ declare(strict_types=1);
 if((PHP_SAPI!=='cli'&&!(defined('EL_PRIVATE_SNAPSHOT')&&EL_PRIVATE_SNAPSHOT))||!isset($options))exit(1);
 try{
  $selected=$options['migrations']??['043-account-lifecycle'];
- if(!is_array($selected)||!$selected||array_diff($selected,['043-account-lifecycle','044-subscription-changes','045-business-service-sections','046-premium-page-aliases','047-lead-business-links','048-individual-lead-replies','049-business-editorial','050-commercial-page-price','051-business-evidence-retirement','052-business-onboarding-uploads','053-current-business-text-rules','054-business-description-budgets','055-business-registration-drafts','056-business-promotions','057-business-promotion-places','058-rounded-subscription-prices'])||count(array_unique($selected))!==count($selected))throw new RuntimeException('Migraciones no permitidas.');
+ if(!is_array($selected)||!$selected||array_diff($selected,['043-account-lifecycle','044-subscription-changes','045-business-service-sections','046-premium-page-aliases','047-lead-business-links','048-individual-lead-replies','049-business-editorial','050-commercial-page-price','051-business-evidence-retirement','052-business-onboarding-uploads','053-current-business-text-rules','054-business-description-budgets','055-business-registration-drafts','056-business-promotions','057-business-promotion-places','058-rounded-subscription-prices','059-public-seo-descriptions'])||count(array_unique($selected))!==count($selected))throw new RuntimeException('Migraciones no permitidas.');
  $c=require $options['config'];$db=new PDO($c['dsn'],$c['db_user'],$c['db_password'],[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC]);
  require $options['app_root'].'/DatabaseMaintenance.php';
  $tables=$db->query('SHOW TABLES')->fetchAll(PDO::FETCH_COLUMN);
@@ -15,7 +15,7 @@ try{
  $protectedBefore=$fingerprints();
  $tableCounts=[];foreach($tables as $table){if(preg_match('/^[a-zA-Z0-9_]+$/D',$table))$tableCounts[$table]=(int)$db->query('SELECT COUNT(*) FROM `'.$table.'`')->fetchColumn();}
  $before=$db->query('SELECT id,status FROM accounts ORDER BY id')->fetchAll();
- $out=['accounts_before'=>count($before),'status_counts'=>[],'statistics_modified'=>false,'account_rows_updated'=>false,'migration'=>'043-account-lifecycle','selected_migrations'=>$selected];foreach($before as $a)$out['status_counts'][$a['status']]=($out['status_counts'][$a['status']]??0)+1;
+ $out=['accounts_before'=>count($before),'status_counts'=>[],'statistics_modified'=>false,'account_rows_updated'=>false,'migration'=>count($selected)===1?$selected[0]:null,'selected_migrations'=>$selected];foreach($before as $a)$out['status_counts'][$a['status']]=($out['status_counts'][$a['status']]??0)+1;
  if(array_intersect($selected,['045-business-service-sections','046-premium-page-aliases'])){
   $parent=$db->query("SELECT t.ENGINE,c.COLUMN_TYPE FROM information_schema.TABLES t JOIN information_schema.COLUMNS c ON c.TABLE_SCHEMA=t.TABLE_SCHEMA AND c.TABLE_NAME=t.TABLE_NAME AND c.COLUMN_NAME='id' WHERE t.TABLE_SCHEMA=DATABASE() AND t.TABLE_NAME='businesses'")->fetch();
   $out['business_parent_compatible']=$parent&&strtolower((string)$parent['ENGINE'])==='innodb'&&preg_match('/^bigint(?:\([0-9]+\))? unsigned$/i',(string)$parent['COLUMN_TYPE'])===1;

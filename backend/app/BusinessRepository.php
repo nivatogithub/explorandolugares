@@ -19,7 +19,7 @@ final class BusinessRepository
         if (!preg_match('/^[a-f0-9-]{16,64}$/iD', $publicId)) return null;
         $locale = in_array($locale, self::LOCALES, true) ? $locale : 'es';
         $query = $this->pdo->prepare('SELECT b.id,b.public_id,b.slug,b.information_status,b.operation_status,b.address_text,b.location_reference,b.latitude,b.longitude,b.location_map_url,b.opening_hours,b.price_range,b.capacity_count,b.menu_url,b.reservations_url,
-                d.slug AS destination_slug,d.department,d.country_code,
+                d.slug AS destination_slug,d.department,d.country_code,dt.display_name AS destination_name,
                 c.code AS category_code,ct.label AS category_label,
                 COALESCE(NULLIF(bt.display_name,""),bt_es.display_name) AS display_name,
                 COALESCE(NULLIF(bt.summary,""),bt_es.summary) AS summary,
@@ -53,6 +53,7 @@ final class BusinessRepository
             JOIN destinations d ON d.id=b.destination_id AND d.publication_status="published"
             JOIN service_categories c ON c.code=b.category_code
             JOIN service_category_translations ct ON ct.category_code=c.code AND LOWER(ct.locale)=LOWER(?)
+            LEFT JOIN destination_translations dt ON dt.destination_id=d.id AND dt.locale=ct.locale
             LEFT JOIN business_translations bt ON bt.business_id=b.id AND bt.locale=?
             LEFT JOIN business_translations bt_es ON bt_es.business_id=b.id AND bt_es.locale="es"
             WHERE b.public_id=? AND b.publication_status="published"
@@ -66,6 +67,9 @@ final class BusinessRepository
         $business=BusinessCategories::enrich($this->pdo,[$business],$locale)[0];
         $business['features']=$this->features((string)$business['plan_code'],$locale);
         if (!isset($business['features']['business_page'])) return null;
+        $translations=$this->pdo->prepare('SELECT t.locale FROM business_translations t JOIN service_category_translations c ON c.category_code=? AND LOWER(c.locale)=LOWER(t.locale) WHERE t.business_id=? AND t.locale IN ("es","en","pt-BR") AND TRIM(t.display_name)<>"" ORDER BY t.locale');
+        $translations->execute([$business['category_code'],$business['id']]);
+        $business['available_locales']=$translations->fetchAll(PDO::FETCH_COLUMN);
         $business['logo']=$this->asset($business['id'],$locale,'logo');
         $business['cover']=$this->asset($business['id'],$locale,'cover');
         $business['gallery']=$this->gallery($business['id'],$locale,(int)$business['max_gallery_photos']);

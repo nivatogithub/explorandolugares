@@ -7,11 +7,11 @@ final class PublicSitemap {
         $base=rtrim($base,'/');$parts=parse_url($base);
         if(!filter_var($base,FILTER_VALIDATE_URL)||($parts['scheme']??'')!=='https'||isset($parts['user'])||isset($parts['pass'])||isset($parts['query'])||isset($parts['fragment']))throw new InvalidArgumentException('Origen público inválido.');
         $rows=$this->db->query("SELECT d.slug,t.locale FROM destinations d JOIN destination_translations t ON t.destination_id=d.id WHERE d.publication_status='published' AND t.locale IN ('es','en','pt-BR') ORDER BY d.id,t.locale")->fetchAll(PDO::FETCH_ASSOC);
-        $urls=[];$published=[];
+        $urls=[];
         foreach($rows as $row){
             if(!preg_match('/^[a-z0-9]+(?:-[a-z0-9]+)*$/D',$row['slug']))continue;
             $prefix=match($row['locale']){'en'=>'/en','pt-BR'=>'/pt-br',default=>''};
-            $path=$prefix.'/destinos/'.$row['slug'].'/';$published[$path]=true;$urls[$base.$path]=true;
+            $path=$prefix.'/lugares/'.$row['slug'].'/';$urls[$base.$path]=true;
         }
         // Same publication and current plan gates as the public business renderer.
         $businesses=$this->db->query('SELECT b.id,b.public_id,t.locale,sp.code AS plan_code FROM businesses b
@@ -26,7 +26,7 @@ final class PublicSitemap {
             WHERE b.publication_status="published" AND b.information_status<>"PENDIENTE_REVISION"
             AND b.operation_status<>"CERRADO_DEFINITIVO" AND sp.has_business_page=1
             AND EXISTS(SELECT 1 FROM subscription_plan_features f WHERE f.plan_code=sp.code AND f.feature_code="business_page" AND f.included=1)
-            AND t.locale IN ("es","en","pt-BR")')->fetchAll(PDO::FETCH_ASSOC);
+            AND t.locale IN ("es","en","pt-BR") AND TRIM(t.display_name)<>""')->fetchAll(PDO::FETCH_ASSOC);
         foreach($businesses as $row){
             if(!preg_match('/^[a-f0-9-]{16,64}$/iD',$row['public_id']))continue;
             $prefix=match($row['locale']){'en'=>'/en','pt-BR'=>'/pt-br',default=>''};
@@ -44,11 +44,9 @@ final class PublicSitemap {
                 if(str_contains($path,'?')||str_contains($path,'#')||preg_match('~/(admin|api)/~i',$path))continue;
                 // Business URLs always come from current database eligibility.
                 if(preg_match('~^/(?:en/|pt-br/)?(?:negocios|business)/~i',$path))continue;
-                if(preg_match('~^(/(?:en|pt-br))?/destinos/([a-z0-9-]+)/(.*)$~',$path,$match)){
-                    $parent=($match[1]??'').'/destinos/'.$match[2].'/';
-                    // Replace destination entries; keep static descendants only under a published parent.
-                    if($match[3]===''||$match[3]==='index.html'||!isset($published[$parent]))continue;
-                }
+                // Place URLs only come from the live publication query. No stale/static descendants.
+                if(preg_match('~^/(?:en/|pt-br/)?(?:lugares|destinos)/.+~',$path))continue;
+                if(str_ends_with($path,'/index.html'))continue;
                 $urls[$url]=true;
             }
         }

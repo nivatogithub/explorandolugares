@@ -3,6 +3,7 @@
 from pathlib import Path
 import ast
 import os
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -49,6 +50,11 @@ def main():
                 continue  # Database-specific tests and HTTP routers have dedicated runners below.
             arguments = [str(package)] if path.name == 'presentation-package.php' else []
             run(f'PHP {path.name}', ['php', str(path), *arguments])
+        # Separate private fixtures; never replace registration's configuration.
+        seo_package=Path(folder)/'seo-package'
+        shutil.copytree(package,seo_package)
+        run('Fixture editorial desechable', [sys.executable, 'scripts/preparar-fixture-presentacion.py', '--package', str(seo_package)])
+        run('SEO sobre respuestas PHP finales', [sys.executable, 'scripts/probar-seo-paquete.py', '--package', str(seo_package), '--output', str(seo_package/'seo-results.json')])
         run('Registro HTTP: cuatro planes, borradores, pago y cupones', [sys.executable, 'backend/tests/registration-flow.integration.py', '--package', str(package)])
         run('ZIP editorial y publicación Premium', [sys.executable, 'backend/tests/editorial-roundtrip.integration.py'])
         run('ZIP editorial con cupón del 100 %', [sys.executable, 'backend/tests/editorial-roundtrip.integration.py'], env={**os.environ, 'EL_EDITORIAL_PROMOTION':'1'})

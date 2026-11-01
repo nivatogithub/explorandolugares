@@ -306,6 +306,11 @@ final class DatabaseMaintenance
                 ['experience_operator_prices','billing_frequency','annual','currency','COP'],
             ],'requires'=>['subscription_plan_prices','subscription_pricing_policy','experience_operator_prices'],
         ],
+        '059-public-seo-descriptions'=>[
+            'file'=>'059-public-seo-descriptions.mysql.sql','idempotent_updates'=>true,
+            'metadata_patch'=>'content/seo-description-patch.json',
+            'requires'=>['destinations','destination_translations'],
+        ],
     ];
 
     public function __construct(private PDO $pdo, private string $appRoot, private string $publicRoot)
@@ -469,10 +474,10 @@ final class DatabaseMaintenance
                 $wait=(int)$this->pdo->query('SELECT @@SESSION.lock_wait_timeout')->fetchColumn();
                 $this->pdo->exec('SET SESSION lock_wait_timeout=5');
                 try{$this->executeSqlFile($file);}finally{$this->pdo->exec('SET SESSION lock_wait_timeout='.$wait);}
-            }elseif($id==='058-rounded-subscription-prices'){
-                // All catalogue/policy amounts change together; no partial tariff.
+            }elseif(in_array($id,['058-rounded-subscription-prices','059-public-seo-descriptions'],true)){
+                // Apply each data-only repair atomically, with postcondition checks.
                 $this->pdo->beginTransaction();
-                try{$this->executeSqlFile($file);if($this->migrationState($migration,$this->tables())!=='applied')throw new RuntimeException('No se confirmó la tabla completa de tarifas.');$this->pdo->commit();}
+                try{$this->executeSqlFile($file);if($this->migrationState($migration,$this->tables())!=='applied')throw new RuntimeException('No se confirmó la actualización completa de datos.');$this->pdo->commit();}
                 catch(Throwable $error){if($this->pdo->inTransaction())$this->pdo->rollBack();throw $error;}
             }else $this->executeSqlFile($file);
             $after = $this->migrationState($migration, $this->tables());
@@ -541,6 +546,17 @@ final class DatabaseMaintenance
     private function migrationState(array $migration, array $tables): string
     {
         $present = 0; $total = 0;
+        if(isset($migration['metadata_patch'])){
+            // Compare-and-set migration: an absent place or a later custom edit is not overwritten.
+            $changes=json_decode(file_get_contents($this->appRoot.'/'.$migration['metadata_patch']),true,64,JSON_THROW_ON_ERROR)['changes'];
+            foreach($changes as $change){
+                $total++;
+                if(array_diff(['destinations','destination_translations'],$tables))continue;
+                $q=$this->pdo->prepare('SELECT COUNT(*) FROM destination_translations t JOIN destinations d ON d.id=t.destination_id WHERE d.slug=? AND t.locale=? AND HEX(t.meta_description)=HEX(?)');
+                $q->execute([$change['slug'],$change['locale'],$change['before']]);
+                if((int)$q->fetchColumn()===0)$present++;
+            }
+        }
         foreach (($migration['checks']??[]) as [$table, $columns]) {
             $total++;
             if (!in_array($table, $tables, true)) continue;

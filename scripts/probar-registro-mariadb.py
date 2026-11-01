@@ -7,7 +7,7 @@ import subprocess
 import tarfile
 
 ROOT = Path(__file__).resolve().parents[1]
-tests = ['business-drafts', 'business-text-capacity', 'business-promotions', 'database-clock']
+tests = ['business-drafts', 'business-text-capacity', 'business-promotions', 'database-clock', 'seo-metadata']
 temporary = '/tmp/el-registration-tests-' + secrets.token_hex(12)
 archive = io.BytesIO()
 with tarfile.open(fileobj=archive, mode='w') as stream:
@@ -15,6 +15,7 @@ with tarfile.open(fileobj=archive, mode='w') as stream:
         stream.add(ROOT / 'backend' / name, arcname=name)
     for name in tests:
         stream.add(ROOT / 'backend/tests' / (name + '.mysql.php'), arcname=name + '.mysql.php')
+    stream.add(ROOT/'backend/tests/seo-metadata.php',arcname='tests/seo-metadata.php')
 subprocess.run(['podman', 'exec', '-i', 'explorando-preprod', 'sh', '-c',
                 'mkdir ' + temporary + ' && tar -xf - -C ' + temporary],
                input=archive.getvalue(), check=True)
