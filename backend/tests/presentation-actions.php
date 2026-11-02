@@ -13,3 +13,11 @@ foreach(['es','en','pt-BR'] as $locale){
  check(destinationPointActions(['map_url'=>'javascript:alert(1)'],[],$locale)==='','Unsafe schemes rejected');
 }
 echo "OK: all original card actions/attributes/identity survive editorial transforms in three languages; native image dragging disabled; data-backed actions only.\n";
+
+$legacy='<html><body><main><a class="highlight-photo" id="stable-photo" data-place="stable" href="/assets/example.webp" target="_blank" aria-label="Photo"><img src="/assets/example.webp" alt="A real place" width="800" height="600"></a><section><h2>Experiences</h2><div class="destination-experience-copy"><h4 id="stable-experience">Experience</h4></div></section><a href="https://maps.example.invalid/place"><img src="/map-icon.svg" alt="Map"></a></main></body></html>';
+$semantic=DestinationPresentation::normalize($legacy,'jardin','es');
+check(str_contains($semantic,'<span class="highlight-photo" id="stable-photo" data-place="stable" data-static-image="true">'),'Decorative image wrapper is not a fake link; identity and classes preserved');
+check(str_contains($semantic,'<h3 id="stable-experience">Experience</h3>')&&!str_contains($semantic,'<h4'),'No heading level skipped');
+check(str_contains($semantic,'href="https://maps.example.invalid/place"'),'Actual image-bearing map link preserved');
+check(DestinationPresentation::normalize($semantic,'jardin','es')===$semantic,'Semantic normalization is idempotent');
+echo "OK: no false image links, sequential experience headings and exact map/image identity preserved.\n";

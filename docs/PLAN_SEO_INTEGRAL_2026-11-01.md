@@ -1,7 +1,9 @@
 # Entrega integral de SEO — 1 de noviembre de 2026
 
-Estado: candidato implementado, pruebas completas aprobadas y actualizado en Dev1.
-No integrado en preprod/main ni aprobado/desplegado en producción.
+Estado: candidato integrado en preprod, regresión inicial aprobada y revisión
+móvil completada. Se incorporan dos correcciones semánticas detectadas en la
+medición pública antes de repetir la regresión y aprobar el commit definitivo.
+Main y producción permanecen en `d0e188a4` hasta completar la promoción.
 
 ## Alcance y límites
 
@@ -9,7 +11,7 @@ Rama `fix/seo-integral-20261101`, desde el main publicado `d0e188a4`.
 Conservar identidad, URL cortas, renderer PHP único, idiomas, contenido e imágenes
 aprobados, suscripciones y datos vivos. No cambiar qué lugares o negocios están
 publicados. La investigación privada y documentos de comercios nunca son metadatos.
-La aprobación de este trabajo no autoriza el despliegue productivo.
+La promoción productiva requiere la revisión y aprobación del commit exacto.
 
 ## Plan verificable
 
@@ -111,10 +113,39 @@ negocios, métricas ni configuración privada. No restaurar ciegamente una base.
 
 El sondeo concurrente local de HTML de Dev1 tuvo un máximo de 0,203 segundos
 por respuesta, sin descargar/renderizar todos los recursos. Esto NO es LCP,
-INP, CLS, PageSpeed ni Core Web Vitals de producción. No se ha medido en esta
-entrega rendimiento móvil real ni se ha verificado visualmente un viewport móvil.
-Esas comprobaciones y la revisión humana del candidato siguen pendientes antes
-de declarar una auditoría de experiencia móvil completa.
+INP, CLS, PageSpeed ni Core Web Vitals de producción.
+
+### Cierre previo a producción
+
+El candidato inicial `ac58991a` se integró en preprod desde main vigente. Allí
+pasaron la regresión completa, los 28 controles de compatibilidad y el sondeo
+público/administrativo. Cobertura permanece fuera de esta entrega. La revisión
+visual a 390 píxeles CSS efectivos confirmó ausencia de desbordamiento horizontal,
+imágenes visibles y apertura/cierre del menú de Jericó. No se confunde el tamaño
+configurado del navegador con el ancho CSS medido.
+
+PageSpeed Insights examinó la producción anterior, no el candidato, en móvil:
+rendimiento 84, accesibilidad 95, buenas prácticas 100 y SEO 92. Medición de
+laboratorio con Lighthouse 13.6.0, Moto G Power y red 4G lenta: FCP 1,2 s,
+LCP 4,2 s, bloqueo total 0 ms y CLS 0. Sin datos de usuarios reales disponibles.
+[Informe verificable](https://pagespeed.web.dev/analysis/https-explorandolugares-com-lugares-jerico/282fbp3q65?form_factor=mobile).
+
+Dos defectos semánticos reales quedan corregidos en la fuente compartida:
+las envolturas de fotos no navegables son `span`, no enlaces sin destino; y
+los títulos de experiencias son `h3` bajo su sección `h2`, conservando diseño,
+identidad, enlaces reales e imágenes. La normalización no duplica clases al
+repetirse. Las pruebas PHP y el control del HTML final cubren estas condiciones.
+
+LCP de 4,2 s no es óptimo ni cumple el umbral bueno de 2,5 s. El informe señala
+optimización de imágenes, recursos bloqueantes y CSS no utilizado; estos son
+límites medidos, no errores declarados resueltos. No se recodificaron imágenes
+aprobadas ni se introdujeron cambios visuales o una limpieza CSS global dentro
+de esta promoción. No se promete una puntuación posterior sin volver a medir.
+
+Se comprobó el manifiesto remoto contra el local y el estado previo de la
+migración 059: pendiente, con 27 textos antiguos exactos. Se obtuvo respaldo
+privado de las 89 tablas y se ensayó su restauración en una base aislada, incluidas
+las ocho tablas de estadísticas. No se sustituyó ninguna base activa.
 
 ### Dictamen de revisión de código
 

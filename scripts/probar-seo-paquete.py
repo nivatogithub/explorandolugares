@@ -10,16 +10,19 @@ ORIGIN='https://explorandolugares.com'
 
 class Page(HTMLParser):
  def __init__(self):
-  super().__init__();self.canonicals=[];self.alternates={};self.meta={};self.hrefs=[];self.h1=0;self.title='';self.in_title=False;self.json_blocks=[];self.schema=False;self.images=[]
+  super().__init__();self.canonicals=[];self.alternates={};self.meta={};self.hrefs=[];self.h1=0;self.title='';self.in_title=False;self.json_blocks=[];self.schema=False;self.images=[];self.unlinked_anchors=0;self.heading_levels=[]
  def handle_starttag(self,tag,attrs):
   a=dict(attrs)
   if tag=='title':self.in_title=True
   if tag=='h1':self.h1+=1
+  if re.fullmatch(r'h[1-6]',tag):self.heading_levels.append(int(tag[1]))
   if tag=='meta':self.meta.setdefault(a.get('name') or a.get('property'),[]).append(a.get('content',''))
   if tag=='link' and a.get('rel')=='canonical':self.canonicals.append(a.get('href'))
   if tag=='link' and a.get('rel')=='alternate':
    lang=a.get('hreflang');assert lang not in self.alternates,'Duplicate alternate';self.alternates[lang]=a.get('href')
-  if tag=='a':self.hrefs.append(a.get('href',''))
+  if tag=='a':
+   self.hrefs.append(a.get('href',''))
+   if not a.get('href') and a.get('role')!='button':self.unlinked_anchors+=1
   if tag=='img':self.images.append(a)
   if tag=='script' and a.get('type')=='application/ld+json':self.schema=True;self.json_blocks.append('')
  def handle_endtag(self,tag):
@@ -67,6 +70,8 @@ def run(package,output):
   for slug in release['public_places']:
    route=prefix+'/lugares/'+slug+'/';page=check(render(route,'destino.php',{'destino':slug,'idioma':locale}),route,locale)
    assert page.title not in titles,('duplicate title',route);titles.add(page.title)
+   assert page.unlinked_anchors==0,(route,'anchor without a destination')
+   assert all(next_level<=level+1 for level,next_level in zip(page.heading_levels,page.heading_levels[1:])),(route,'skipped heading level',page.heading_levels)
    assert any(i.get('fetchpriority')=='high' and i.get('width') and i.get('height') for i in page.images),(route,'hero dimensions/priority')
    pages[ORIGIN+route]=page;results.append({'route':route,'kind':'place','schema':True})
   route=prefix+'/';page=check(render(route,prefix.lstrip('/')+('/' if prefix else '')+'index.php',{}),route,locale)

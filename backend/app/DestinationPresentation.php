@@ -27,6 +27,13 @@ final class DestinationPresentation
         $node=$this->document->createElement($tag);if($text!=='')$node->appendChild($this->document->createTextNode($text));
         foreach($attributes as $key=>$value)$node->setAttribute($key,(string)$value);return $node;
     }
+    private function retag(DOMElement $node,string $tag,array $omit=[]):DOMElement
+    {
+        $replacement=$this->element($tag);
+        foreach($node->attributes as $attribute)if(!in_array($attribute->name,$omit,true))$replacement->setAttribute($attribute->name,$attribute->value);
+        while($node->firstChild)$replacement->appendChild($node->firstChild);
+        $node->parentNode->replaceChild($replacement,$node);return $replacement;
+    }
     private function image(array $media,bool $hero=false):DOMElement
     {
         $alt=$media['alt']??'';if(is_array($alt))$alt=$alt[$this->locale]??$alt['es']??'';
@@ -38,7 +45,7 @@ final class DestinationPresentation
     private function run():string
     {
         $body=$this->first('//body');$slug=$this->data['slug'];
-        if($body){$body->setAttribute('class',trim($body->getAttribute('class').' destination-direct-reading '.$slug.'-compacta'));}
+        if($body){$classes=preg_split('/\s+/',trim($body->getAttribute('class')), -1, PREG_SPLIT_NO_EMPTY);$body->setAttribute('class',implode(' ',array_unique([...$classes,'destination-direct-reading',$slug.'-compacta'])));}
         $copy=$this->data['copy'][$this->locale]??[];
         if(isset($copy['intro']))$this->text('//*['.self::cls('destination-hero').']//*['.self::cls('intro').']',$copy['intro']);
         if(isset($copy['headline']))$this->text('//*['.self::cls('destination-hero').']//h1/em',$copy['headline']);
@@ -68,7 +75,7 @@ final class DestinationPresentation
         foreach(['que-conocer'=>1,'lugares'=>3] as $id=>$index){
             $section=$this->first('//*[@id="'.$id.'"]');if(!$section)continue;
             $heading=$this->first('./*['.self::cls('sectionhead').']',$section);
-            if($heading){$this->remove('.//p',$heading);$this->text('.//h2|.//h3',$titles[$index],$heading);$heading->setAttribute('class',trim($heading->getAttribute('class').' compact-section-heading'));}
+            if($heading){$this->remove('.//p',$heading);$this->text('.//h2|.//h3',$titles[$index],$heading);$classes=preg_split('/\s+/',trim($heading->getAttribute('class')), -1, PREG_SPLIT_NO_EMPTY);$heading->setAttribute('class',implode(' ',array_unique([...$classes,'compact-section-heading'])));}
         }
         $directoryHeading=$this->first('//*[@id="lugares"]/*['.self::cls('sectionhead').']');
         $directoryMap=$this->first('//*[@id="lugares"]/*['.self::cls('directory-map').']');
@@ -95,6 +102,7 @@ final class DestinationPresentation
             if($figure){$this->remove('./node()',$figure);$figure->appendChild($this->image($this->data['hero'],true));}
         }
         if(isset($this->data['cards']))$this->replaceCards();
+        foreach($this->nodes('//*['.self::cls('destination-experience-copy').']//h4') as $heading)$this->retag($heading,'h3');
         $this->remove('//*['.self::cls('destination-experience-copy').']/*['.self::cls('story-number').']');
         // Legacy cleanup must not remove the paid content promised by editorial-v2 cards.
         $this->remove('//*[@id="lugares"]//*[('.self::cls('directory-description').' or '.self::cls('directory-card-details').') and not(ancestor::*[@data-directory-layout="editorial-v2"])]');
@@ -109,9 +117,9 @@ final class DestinationPresentation
         }
         // Images are content, not links to a file or a lightbox. Preserve map/business links.
         foreach($this->nodes('//a[.//img or .//picture]') as $link){
-            if(preg_match('~\.(?:avif|webp|png|jpe?g|gif|svg)(?:\?.*)?$~i',$link->getAttribute('href'))){
-                foreach(['href','target','download','role','tabindex'] as $attribute)$link->removeAttribute($attribute);
-                $link->setAttribute('data-static-image','true');
+            if($link->hasAttribute('data-static-image')||preg_match('~\.(?:avif|webp|png|jpe?g|gif|svg)(?:\?.*)?$~i',$link->getAttribute('href'))){
+                $static=$this->retag($link,'span',['href','target','download','rel','role','tabindex','aria-label']);
+                $static->setAttribute('data-static-image','true');
             }
         }
         foreach($this->nodes('//main//img') as $image)$image->setAttribute('draggable','false');
