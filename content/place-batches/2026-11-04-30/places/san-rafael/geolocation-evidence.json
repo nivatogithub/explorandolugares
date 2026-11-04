@@ -1,0 +1,32 @@
+{
+  "san-rafael-centre": {
+    "latitude": 6.2954096,
+    "longitude": -75.0275609,
+    "label": "Parroquia San Rafael Arcángel",
+    "point_type": "central_urban_landmark",
+    "source": "https://www.openstreetmap.org/way/1163471693",
+    "evidence": "geography-candidates/san-rafael-templo.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "san-rafael-honda": {
+    "latitude": 6.2704967,
+    "longitude": -75.0436043,
+    "label": "Cascada La Honda",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/node/6549630085",
+    "evidence": "geography-candidates/san-rafael-honda.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "san-rafael-templo": {
+    "latitude": 6.2954096,
+    "longitude": -75.0275609,
+    "label": "Parroquia San Rafael Arcángel",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/way/1163471693",
+    "evidence": "geography-candidates/san-rafael-templo.json",
+    "verified_identity": true,
+    "access_verified": false
+  }
+}

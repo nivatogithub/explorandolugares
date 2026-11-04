@@ -1,0 +1,42 @@
+{
+  "san-pedro-de-los-milagros-centre": {
+    "latitude": 6.4619205,
+    "longitude": -75.5559677,
+    "label": "Parque principal",
+    "point_type": "identified_urban_centre",
+    "source": "https://www.openstreetmap.org/way/769778022",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "san-pedro-de-los-milagros-qc-1": {
+    "latitude": 6.4619837,
+    "longitude": -75.5565716,
+    "label": "Basilica del Señor de los Milagros",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/way/487259860",
+    "evidence": "geography-candidates/san-pedro-de-los-milagros-qc-1.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "san-pedro-de-los-milagros-qc-3": {
+    "latitude": 6.5160089,
+    "longitude": -75.456121,
+    "label": "Embalse Riogrande II",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/relation/7327923",
+    "evidence": "geography-candidates/san-pedro-de-los-milagros-qc-3.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "san-pedro-de-los-milagros-museo": {
+    "latitude": 6.4619837,
+    "longitude": -75.5565716,
+    "label": "Basilica del Señor de los Milagros",
+    "point_type": "containing_building",
+    "source": "https://www.openstreetmap.org/way/487259860",
+    "evidence": "geography-candidates/san-pedro-de-los-milagros-qc-1.json",
+    "verified_identity": true,
+    "access_verified": false,
+    "note": "Museo de arte religioso dentro de la basílica; acceso no inferido."
+  }
+}

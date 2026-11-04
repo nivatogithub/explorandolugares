@@ -1,0 +1,188 @@
+[
+  {
+    "file": "images/rionegro-cover.webp",
+    "sha256": "5b88ba28b4c70e46aa478641fb17cf68bcc53e228b40fdff848978a9d1c8dd80",
+    "bytes": 233476,
+    "source": "trabajo/antioquia-15/ilustraciones/rionegro-portada.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "rionegro-portada",
+      "destino": "rionegro",
+      "nombre_destino": "Rionegro",
+      "tipo": "portada",
+      "atractivo": "Portada · Rionegro",
+      "descripcion": "Propuesta de imagen representativa del destino. Se revisa por separado de sus atractivos.",
+      "sha256": "5b88ba28b4c70e46aa478641fb17cf68bcc53e228b40fdff848978a9d1c8dd80",
+      "referencia": {
+        "archivo": "rionegro/referencias/rionegro-1.webp",
+        "autor": "XalD",
+        "licencia": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Concatedral_de_San_Nicol%C3%A1s_el_Magno_de_Rionegro_-_exterior_3.jpg",
+        "fecha_foto": "No comprobada"
+      },
+      "preview": "ilustraciones/rionegro-portada.webp",
+      "archivo": "ilustraciones/rionegro-portada.webp",
+      "revision_humana": "aprobada",
+      "publicacion_autorizada": false,
+      "prompt": "Ilustración editorial en tinta fina y gouache claramente visibles para Explorando Lugares, colores naturales contenidos, horizontal 3:2. Conservar fielmente todos los rasgos arquitectónicos, volúmenes, ventanas, relación espacial y paisaje reales. No añadir adornos, edificios, personajes, texto superpuesto ni logos. No fotografía retocada ni filtro amarillo. Borrador privado. Concatedral de San Nicolás en Rionegro y plaza. Copia las formas de la referencia sin decorar la fachada: paredes blancas lisas, sin molduras barrocas adicionales ni líneas ornamentales alrededor de puertas y ventanas. Mantén exactamente las aperturas y arcos sencillos, dos cúpulas rojizas, monumento a la izquierda y plaza. Fidelidad antes que embellecimiento.",
+      "herramienta": "image_gen integrada",
+      "referencias_adicionales": [],
+      "lote": "original"
+    }
+  },
+  {
+    "file": "images/rionegro-casa-convencion.webp",
+    "sha256": "95b98c112927fa70438f20d5c2b612bbf8817962e58dca67bfe578fb9efb0e28",
+    "bytes": 358222,
+    "source": "trabajo/antioquia-15/ilustraciones/rionegro-casa-convencion.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "rionegro-casa-convencion",
+      "destino": "rionegro",
+      "nombre_destino": "Rionegro",
+      "tipo": "que-conocer",
+      "atractivo": "Casa de la Convención",
+      "descripcion": "Edificio vinculado a la Convención de Rionegro de 1863.",
+      "sha256": "95b98c112927fa70438f20d5c2b612bbf8817962e58dca67bfe578fb9efb0e28",
+      "referencia": {
+        "archivo": "rionegro/referencias/casa-convencion-referencia-ligera.webp",
+        "autor": "SajoR",
+        "licencia": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Casa_de_la_Convenci%C3%B3n_1-_Sena.jpg",
+        "fecha_foto": "2021-02-25 12:07:12"
+      },
+      "preview": "ilustraciones/rionegro-casa-convencion.webp",
+      "archivo": "ilustraciones/rionegro-casa-convencion.webp",
+      "revision_humana": "aprobada",
+      "publicacion_autorizada": false,
+      "prompt": "Ilustración editorial a color de casa-convencion en rionegro, Antioquia. Usa la referencia adjunta para respetar arquitectura real, número exacto de ventanas, puertas y torres, materiales, silueta y entorno. Tinta fina y gouache claramente visibles, caricatura realista arquitectónica sin deformaciones. Luz natural, colores contenidos pero vivos, sin filtro amarillo ni sepia. Horizontal 3:2, no cortar partes altas de edificios; no inventar construcciones, esculturas ni calles. No texto ni marcas nuevas. Mantén el encuadre factual y evita reconstruir partes que no aparecen.",
+      "herramienta": "image_gen integrada",
+      "referencias_adicionales": [],
+      "lote": "original"
+    }
+  },
+  {
+    "file": "images/rionegro-capiro.webp",
+    "sha256": "338377be5cc35d5f4f4679d445ff0773f92ed4182695269065247329325dcc32",
+    "bytes": 283164,
+    "source": "trabajo/antioquia-15/ilustraciones/la-ceja-capiro.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "rionegro-capiro",
+      "destino": "rionegro",
+      "nombre_destino": "Rionegro",
+      "tipo": "que-conocer",
+      "atractivo": "Cerro El Capiro",
+      "descripcion": "El Capiro es compartido con La Ceja. Esta ficha reutiliza la misma ilustración; no es otra imagen generada ni otro cerro.",
+      "sha256": "338377be5cc35d5f4f4679d445ff0773f92ed4182695269065247329325dcc32",
+      "referencia": {
+        "archivo": "ampliacion-referencias/capiro.jpg",
+        "autor": "Fotógrafo no confirmado; ver fuente",
+        "licencia": "No confirmada; borrador privado",
+        "url": "https://orienteantioqueno.com/turismo-en-la-ceja/cerro-el-capiro/",
+        "fecha_foto": "No comprobada"
+      },
+      "preview": "ilustraciones/la-ceja-capiro.webp",
+      "archivo": "ilustraciones/la-ceja-capiro.webp",
+      "revision_humana": "aprobada",
+      "publicacion_autorizada": false,
+      "prompt": "",
+      "herramienta": "image_gen integrada",
+      "referencias_adicionales": [],
+      "lote": "ampliacion"
+    }
+  },
+  {
+    "file": "images/rionegro-qc-2.webp",
+    "sha256": "16f9c1faa1833ee9d77694314b4aec510029b903d9bf2ad54c875ed8838039dd",
+    "bytes": 241578,
+    "source": "trabajo/antioquia-15/ilustraciones/rionegro-qc-2.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "rionegro-qc-2",
+      "destino": "rionegro",
+      "nombre_destino": "Rionegro",
+      "tipo": "que-conocer",
+      "atractivo": "Monumento a José María Córdova",
+      "descripcion": "",
+      "sha256": "16f9c1faa1833ee9d77694314b4aec510029b903d9bf2ad54c875ed8838039dd",
+      "referencia": {
+        "archivo": "rionegro/referencias/rionegro-2.webp",
+        "autor": "Daniel Henao",
+        "licencia": "CC BY-SA 3.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Cordova_de_Arenas_Betancur.JPG",
+        "fecha_foto": "No comprobada"
+      },
+      "preview": "ilustraciones/rionegro-qc-2.webp",
+      "archivo": "ilustraciones/rionegro-qc-2.webp",
+      "revision_humana": "aprobada",
+      "publicacion_autorizada": false,
+      "prompt": "Transforma esta referencia real de Monumento a José María Córdova, rionegro, Antioquia, en ilustración editorial de viaje, tinta fina y gouache a color natural. Fidelidad estricta a edificios, paisaje, proporciones, ubicación y objetos de referencia. Sin inventar construcciones, sin volver azul agua marrón, sin cambiar el clima. Sin sepia ni amarillo dominante. Mantén composición y detalles reconocibles. No texto añadido. Una imagen horizontal 3:2, no collage.",
+      "herramienta": "image_gen integrada",
+      "referencias_adicionales": [],
+      "lote": "original"
+    }
+  },
+  {
+    "file": "images/rionegro-mar.webp",
+    "sha256": "bb34c5eb9dc5a5d1612b3a343b151fee4a3601c4473aa41104573b88164fe586",
+    "bytes": 208602,
+    "source": "trabajo/antioquia-15/ilustraciones/rionegro-mar.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "rionegro-mar",
+      "destino": "rionegro",
+      "nombre_destino": "Rionegro",
+      "tipo": "que-conocer",
+      "atractivo": "Museo de Arte de Rionegro — MAR",
+      "descripcion": "",
+      "sha256": "bb34c5eb9dc5a5d1612b3a343b151fee4a3601c4473aa41104573b88164fe586",
+      "referencia": {
+        "archivo": "ampliacion-referencias/mar.jpg",
+        "autor": "Vivir en El Poblado; fotógrafo no confirmado",
+        "licencia": "No confirmada; borrador privado",
+        "url": "https://vivirenelpoblado.com/mar-el-espacio-de-arte-en-rionegro/",
+        "fecha_foto": "No comprobada"
+      },
+      "preview": "ilustraciones/rionegro-mar.webp",
+      "archivo": "ilustraciones/rionegro-mar.webp",
+      "revision_humana": "aprobada",
+      "publicacion_autorizada": false,
+      "prompt": "Use case: style-transfer. Borrador editorial privado para Explorando Lugares. Transforma la fotografía de referencia en ilustración a color de caricatura realista con trazos de tinta fina y pintura gouache claramente visibles; no fotografía filtrada. Museo de Arte de Rionegro (MAR). Mantén el patio hundido, planos de cristal con sus reflejos reales, pasarela inclinada a derecha, las dos cúpulas de iglesia en el fondo y su reflejo a izquierda. No cambies el número de edificios ni inventes esculturas o exposiciones. Conserva la perspectiva, proporciones, geometría e identidad del lugar, mismos elementos y encuadre cuadrado de la referencia. Colores naturales contenidos, luminosidad equilibrada, sin sepia, sin filtro amarillo, sin textos añadidos, sin logos ni marcas de agua. No inventes objetos fuera del encuadre.",
+      "herramienta": "image_gen integrada",
+      "referencias_adicionales": [],
+      "lote": "ampliacion"
+    }
+  },
+  {
+    "file": "images/rionegro-san-antonio.webp",
+    "sha256": "b15c582abdab8e6df48e7f2670e16cff0b6ad1708e284be90ca5c0ef29f2017b",
+    "bytes": 460432,
+    "source": "trabajo/antioquia-15/ilustraciones/rionegro-san-antonio.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "rionegro-san-antonio",
+      "destino": "rionegro",
+      "nombre_destino": "Rionegro",
+      "tipo": "que-conocer",
+      "atractivo": "San Antonio de Pereira",
+      "descripcion": "",
+      "sha256": "b15c582abdab8e6df48e7f2670e16cff0b6ad1708e284be90ca5c0ef29f2017b",
+      "referencia": {
+        "archivo": "rionegro/referencias/san-antonio.jpg",
+        "autor": "No confirmado",
+        "licencia": "Permiso no confirmado",
+        "url": "https://gammacarmedellin.com/blog/san-antonio-de-pereira-antioquia/",
+        "fecha_foto": "No comprobada"
+      },
+      "preview": "ilustraciones/rionegro-san-antonio.webp",
+      "archivo": "ilustraciones/rionegro-san-antonio.webp",
+      "revision_humana": "aprobada",
+      "publicacion_autorizada": false,
+      "prompt": "Ilustración editorial de rionegro, sitio san-antonio, basada estrictamente en la fotografía adjunta. Tinta fina y gouache, caricatura realista a color, conservando la arquitectura, formas, proporciones, vegetación y objetos reales visibles. Mantén los colores reales (sin sepia ni filtro amarillo). Sin inventar elementos ni detalles arqueológicos. No collage ni letras nuevas. Encuadre horizontal 3:2 respetando la escena y sin cortar el protagonista.",
+      "herramienta": "image_gen integrada",
+      "referencias_adicionales": [],
+      "lote": "original"
+    }
+  }
+]

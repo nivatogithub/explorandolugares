@@ -1,0 +1,188 @@
+[
+  {
+    "file": "images/tamesis-cover.webp",
+    "sha256": "683a3e2245797630201f4705e7dc2865d56c188f4cf1d58640e3f78c9afaa13c",
+    "bytes": 493970,
+    "source": "trabajo/antioquia-15/ilustraciones/tamesis-portada.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "tamesis-portada",
+      "destino": "tamesis",
+      "nombre_destino": "Támesis",
+      "tipo": "portada",
+      "atractivo": "Portada · Támesis",
+      "descripcion": "Propuesta de imagen representativa del destino. Se revisa por separado de sus atractivos.",
+      "sha256": "683a3e2245797630201f4705e7dc2865d56c188f4cf1d58640e3f78c9afaa13c",
+      "referencia": {
+        "archivo": "tamesis/referencias/tamesis-1.webp",
+        "autor": "VX Audiovisual",
+        "licencia": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:T%C3%A1mesis_%22La_tierra_del_siempre_volver%22.jpg",
+        "fecha_foto": "No comprobada"
+      },
+      "preview": "ilustraciones/tamesis-portada.webp",
+      "archivo": "ilustraciones/tamesis-portada.webp",
+      "revision_humana": "aprobada",
+      "publicacion_autorizada": false,
+      "prompt": "Crea una ilustración editorial de tamesis, Antioquia, basada en la fotografía adjunta: tinta fina visible, pintura gouache, caricatura realista arquitectónica, colores naturales sin sepia ni tinte amarillo. Conserva las siluetas, edificios, torres, tejados, relieve y distribución espacial reales. No añadir ni sustituir edificios. Formato horizontal 3:2. Mantener visible el conjunto representativo del lugar sin cortar torres. No texto nuevo, logos ni marcas. No convertirlo en foto retocada; acabado claramente dibujado y pintado.",
+      "herramienta": "image_gen integrada",
+      "referencias_adicionales": [],
+      "lote": "original"
+    }
+  },
+  {
+    "file": "images/tamesis-cristo-rey.webp",
+    "sha256": "1ae732c86c4b45a5c799472233410cc2f977c1de659e930ef68118b7be65373f",
+    "bytes": 497500,
+    "source": "trabajo/antioquia-15/ilustraciones/tamesis-cristo-rey.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "tamesis-cristo-rey",
+      "destino": "tamesis",
+      "nombre_destino": "Támesis",
+      "tipo": "que-conocer",
+      "atractivo": "Cerro Cristo Rey",
+      "descripcion": "",
+      "sha256": "1ae732c86c4b45a5c799472233410cc2f977c1de659e930ef68118b7be65373f",
+      "referencia": {
+        "archivo": "tamesis/referencias/cristo-rey.jpg",
+        "autor": "No confirmado",
+        "licencia": "Permiso no confirmado",
+        "url": "https://es.wikiloc.com/rutas-senderismo/parque-tamesis-cima-cristo-rey-142593895",
+        "fecha_foto": "No comprobada"
+      },
+      "preview": "ilustraciones/tamesis-cristo-rey.webp",
+      "archivo": "ilustraciones/tamesis-cristo-rey.webp",
+      "revision_humana": "aprobada",
+      "publicacion_autorizada": false,
+      "prompt": "Convierte la fotografía real adjunta de tamesis, tamesis-cristo-rey, en ilustración editorial de tinta fina y gouache, caricatura realista a color natural. Mantén fielmente arquitectura, proporciones, paisaje y elementos reales. No inventes edificios, montañas ni objetos. Imagen horizontal 3:2. Sin filtro amarillo ni sepia, sin texto nuevo.",
+      "herramienta": "image_gen integrada",
+      "referencias_adicionales": [],
+      "lote": "original"
+    }
+  },
+  {
+    "file": "images/tamesis-cartama.webp",
+    "sha256": "60f2d8e89abb2e13a6b1d7358215871a2d99cfde5bb31970f4c74de5e9c5d5b8",
+    "bytes": 357244,
+    "source": "trabajo/antioquia-15/ilustraciones/tamesis-cartama.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "tamesis-cartama",
+      "destino": "tamesis",
+      "nombre_destino": "Támesis",
+      "tipo": "que-conocer",
+      "atractivo": "Museo Arqueológico Cartama",
+      "descripcion": "",
+      "sha256": "60f2d8e89abb2e13a6b1d7358215871a2d99cfde5bb31970f4c74de5e9c5d5b8",
+      "referencia": {
+        "archivo": "ampliacion-referencias/cartama.jpg",
+        "autor": "Fotógrafo no confirmado; ver fuente",
+        "licencia": "No confirmada; borrador privado",
+        "url": "https://periodicoelsuroeste.com/museo-cartama-de-tamesis-reabrio-sus-puertas/",
+        "fecha_foto": "No comprobada"
+      },
+      "preview": "ilustraciones/tamesis-cartama.webp",
+      "archivo": "ilustraciones/tamesis-cartama.webp",
+      "revision_humana": "aprobada",
+      "publicacion_autorizada": false,
+      "prompt": "Use case: style-transfer. Ilustración editorial para Explorando Lugares, caricatura realista con dibujo de tinta fina y gouache claramente visibles, colores naturales contenidos, no foto retocada, no sepia, no filtro amarillo. Usa exclusivamente la referencia para la geometría y distribución del lugar: conserva arquitectura, siluetas, proporciones, relieve y rasgos reconocibles, sin añadir elementos, texto, logos ni servicios. Mantén el encuadre y proporción de la referencia; no expandas la escena fuera de lo visible. Borrador privado para revisión. Entrada al Museo Arqueológico Cartama. Conserva ladrillos, puerta rectangular, vitrinas amarillas y elementos visibles, personas como figuras ilustradas no reconocibles en las mismas posiciones. Mantén solo el letrero real MUSEO ARQUEOLÓGICO CARTAMA. No inventar piezas arqueológicas ni reconstruir lo que tapan visitantes.",
+      "herramienta": "image_gen integrada",
+      "referencias_adicionales": [],
+      "lote": "ampliacion"
+    }
+  },
+  {
+    "file": "images/tamesis-organales.webp",
+    "sha256": "897921ceafe258d1d9b02cc1e7e2c6f8a9b0f8af409fb999788e315f9094ff10",
+    "bytes": 248820,
+    "source": "trabajo/antioquia-15/ilustraciones/tamesis-organales.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "tamesis-organales",
+      "destino": "tamesis",
+      "nombre_destino": "Támesis",
+      "tipo": "que-conocer",
+      "atractivo": "Organales del río San Antonio",
+      "descripcion": "",
+      "sha256": "897921ceafe258d1d9b02cc1e7e2c6f8a9b0f8af409fb999788e315f9094ff10",
+      "referencia": {
+        "archivo": "ampliacion-referencias/organales.jpg",
+        "autor": "Fotógrafo no confirmado; ver fuente",
+        "licencia": "No confirmada; borrador privado",
+        "url": "https://www2.sgc.gov.co/Noticias/Paginas/Esto-debes-saber-sobre-el-rio-subterraneo-mas-largo-del-mundo.aspx",
+        "fecha_foto": "No comprobada"
+      },
+      "preview": "ilustraciones/tamesis-organales.webp",
+      "archivo": "ilustraciones/tamesis-organales.webp",
+      "revision_humana": "aprobada",
+      "publicacion_autorizada": false,
+      "prompt": "Use case: style-transfer. Ilustración editorial para Explorando Lugares, caricatura realista con dibujo de tinta fina y gouache claramente visibles, colores naturales contenidos, no foto retocada, no sepia, no filtro amarillo. Usa exclusivamente la referencia para la geometría y distribución del lugar: conserva arquitectura, siluetas, proporciones, relieve y rasgos reconocibles, sin añadir elementos, texto, logos ni servicios. Mantén el encuadre y proporción de la referencia; no expandas la escena fuera de lo visible. Borrador privado para revisión. Organales de Támesis. Conserva estrecho pasaje entre bloques de roca, cascada corta y oscuridad natural de cavidad. Levanta suavemente luminosidad para distinguir las texturas, sin inventar salida iluminada, estalactitas, luces artificiales ni personas. No hacer gran caverna.",
+      "herramienta": "image_gen integrada",
+      "referencias_adicionales": [],
+      "lote": "ampliacion"
+    }
+  },
+  {
+    "file": "images/tamesis-petroglifos.webp",
+    "sha256": "554f0caf2e5cfe69f12d35511dd4ea8c318b6f65e7f5875777722060836db5d8",
+    "bytes": 477498,
+    "source": "trabajo/antioquia-15/ilustraciones/tamesis-petroglifos.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "tamesis-petroglifos",
+      "destino": "tamesis",
+      "nombre_destino": "Támesis",
+      "tipo": "que-conocer",
+      "atractivo": "Petroglifos de Támesis",
+      "descripcion": "Vestigios de arte rupestre: requieren identificación y acompañamiento local para su visita. La ilustración no es un registro arqueológico. Comparar con especial cuidado cada grabado; no usarla para interpretar símbolos.",
+      "sha256": "554f0caf2e5cfe69f12d35511dd4ea8c318b6f65e7f5875777722060836db5d8",
+      "referencia": {
+        "archivo": "tamesis/referencias/petroglifos.jpg",
+        "autor": "No confirmado",
+        "licencia": "Permiso no confirmado",
+        "url": "https://www.elespectador.com/ambiente/los-grabados-ancestrales-que-revivieron-el-debate-de-la-mineria-en-antioquia/",
+        "fecha_foto": "No comprobada"
+      },
+      "preview": "ilustraciones/tamesis-petroglifos.webp",
+      "archivo": "ilustraciones/tamesis-petroglifos.webp",
+      "revision_humana": "aprobada",
+      "publicacion_autorizada": false,
+      "prompt": "Ilustración editorial en tinta fina y gouache claramente visibles para Explorando Lugares, colores naturales contenidos, horizontal 3:2. Conservar fielmente todos los rasgos arquitectónicos, volúmenes, ventanas, relación espacial y paisaje reales. No añadir adornos, edificios, personajes, texto superpuesto ni logos. No fotografía retocada ni filtro amarillo. Borrador privado. Petroglifo real en Támesis. ESTO ES UN REGISTRO ARQUEOLÓGICO: preserva absolutamente la forma de CADA surco tal como en la fotografía. No interpretar, completar ni transformar los símbolos. El signo superior conserva sus líneas curvas irregulares precisas; el inferior sus surcos tal cual. No crear figuras nuevas. Solo cambia el acabado superficial a tinta/gouache muy sutil, no la geometría ni el trazo de los grabados. Usa el mismo encuadre de la roca, color gris natural.",
+      "herramienta": "image_gen integrada",
+      "referencias_adicionales": [],
+      "lote": "original"
+    }
+  },
+  {
+    "file": "images/tamesis-templo.webp",
+    "sha256": "5e4a1e648b371bf5c6f5cc54547f13557f3f1c91d0386c0fab6769a8a835b618",
+    "bytes": 247368,
+    "source": "trabajo/antioquia-15/ilustraciones/tamesis-templo.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "tamesis-templo",
+      "destino": "tamesis",
+      "nombre_destino": "Támesis",
+      "tipo": "que-conocer",
+      "atractivo": "Templo San Antonio de Padua",
+      "descripcion": "",
+      "sha256": "5e4a1e648b371bf5c6f5cc54547f13557f3f1c91d0386c0fab6769a8a835b618",
+      "referencia": {
+        "archivo": "tamesis/referencias/templo.jpg",
+        "autor": "Elltroll",
+        "licencia": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Iglesia10559842_992297120817283_8489963183866594814_n.jpg",
+        "fecha_foto": "2015-12-26"
+      },
+      "preview": "ilustraciones/tamesis-templo.webp",
+      "archivo": "ilustraciones/tamesis-templo.webp",
+      "revision_humana": "aprobada",
+      "publicacion_autorizada": false,
+      "prompt": "Ilustra la fotografía real adjunta de tamesis-templo con tinta fina y gouache a color natural, estilo editorial de turismo, caricatura realista. Conserva exactamente geometría y detalles identificables de la referencia; no inventes edificios ni símbolos arqueológicos. Sin sepia. Composición horizontal 3:2, sin collages. Corrige la distorsión de ojo de pez a perspectiva rectilínea, conserva las tres puertas y la torre única completa, elimina borde negro del objetivo.",
+      "herramienta": "image_gen integrada",
+      "referencias_adicionales": [],
+      "lote": "original"
+    }
+  }
+]

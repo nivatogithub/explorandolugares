@@ -1,0 +1,40 @@
+{
+  "aguadas-centre": {
+    "latitude": 5.6131397,
+    "longitude": -75.4576028,
+    "label": "Parque de Bolívar",
+    "point_type": "identified_urban_centre",
+    "source": "https://www.openstreetmap.org/way/373992568",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "aguadas-01": {
+    "latitude": 5.6131397,
+    "longitude": -75.4576028,
+    "label": "Parque de Bolívar",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/way/373992568",
+    "evidence": "geography-candidates/aguadas-01-fallback.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "aguadas-02": {
+    "latitude": 5.6123011,
+    "longitude": -75.4590545,
+    "label": "Museo del sombrero y Casa de la cultura",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/node/5886044086",
+    "evidence": "geography-candidates/aguadas-02-fallback.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "aguadas-03": {
+    "latitude": 5.609646,
+    "longitude": -75.451721,
+    "label": "Pueblito Viejo, Aguadas 01.jpg",
+    "point_type": "documented_viewpoint_on_site",
+    "source": "https://commons.wikimedia.org/wiki/File:Pueblito_Viejo,_Aguadas_01.jpg",
+    "verified_identity": true,
+    "access_verified": false
+  }
+}

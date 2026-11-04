@@ -1,0 +1,46 @@
+{
+  "slug": "buga",
+  "lot": "patrimonio-15",
+  "name": "Guadalajara de Buga",
+  "base_commit": "eae3d38b14a41fd26c69047ea4ed980a146d5186",
+  "source": "trabajo/patrimonio-15/buga/contenido-cerrado-es.json",
+  "source_sha256": "1d3e1678a57f8e59380bbf166bb320f7e52ef9be264f7232907ed796660b88b3",
+  "status": "draft_in_dev1",
+  "images": 4,
+  "attractions": 3,
+  "draft_created": true,
+  "dev1_tested": true,
+  "preprod_ready": false,
+  "production_authorized": false,
+  "pending": [
+    {
+      "type": "translations",
+      "locales": [
+        "en",
+        "pt-BR"
+      ],
+      "note": "Traducir la versión vigente; no reutilizar borradores anteriores."
+    },
+    {
+      "type": "geolocation",
+      "count": 4,
+      "note": "Verificar núcleo urbano, sitios físicos y fichas nombradas de Maps; sin centroides ni pines inventados."
+    },
+    {
+      "type": "editorial_review",
+      "note": "Contrastar vigencia, nombres, accesos, experiencias y correspondencia con imágenes."
+    },
+    {
+      "type": "visual_review",
+      "note": "Pendiente revisión humana de las páginas construidas; HTTP e imágenes verificados."
+    }
+  ],
+  "dev1_id": 10052,
+  "dev1_preview": "http://127.0.0.1:8086/lugares/buga/?preview=1",
+  "dev1_public": true,
+  "dev1_url": "http://127.0.0.1:8086/lugares/buga/",
+  "visible_attractions": 3,
+  "pending_geolocation": [],
+  "package_validated": true,
+  "ready_for_preprod": false
+}

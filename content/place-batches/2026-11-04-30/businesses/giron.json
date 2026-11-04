@@ -1,0 +1,32 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "giron",
+  "businesses": [
+    {
+      "name": "Girón Chill Out Hotel Boutique",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "sources": [
+        {
+          "url": "https://gironchillout.com/",
+          "checked_at": "2026-11-04",
+          "note": "Fuente pública consultada para nombre, municipio y categoría. No acredita representación, alianza ni vigencia operativa."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "name": "La Casona Restaurante",
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "sources": [
+        {
+          "url": "https://www.planetacolombia.com/la-casona-restaurante-F120BC30012D043",
+          "checked_at": "2026-11-04",
+          "note": "Fuente pública consultada para nombre, municipio y categoría. No acredita representación, alianza ni vigencia operativa."
+        }
+      ],
+      "image_references": []
+    }
+  ]
+}

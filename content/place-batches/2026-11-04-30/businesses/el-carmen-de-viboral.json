@@ -1,0 +1,71 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "el-carmen-de-viboral",
+  "businesses": [
+    {
+      "name": "Herbario Café",
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "sources": [
+        {
+          "url": "https://www.herbariocafe.com/",
+          "checked_at": "2026-11-04",
+          "note": "Fuente pública consultada para nombre, municipio y categoría. No acredita representación, alianza ni vigencia operativa."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "name": "Alfahar Hotel",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "sources": [
+        {
+          "url": "https://alfaharhotel.com/",
+          "checked_at": "2026-11-04",
+          "note": "Fuente pública consultada para nombre, municipio y categoría. No acredita representación, alianza ni vigencia operativa."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "name": "La Carmela Restaurante",
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "sources": [
+        {
+          "url": "https://turismoelcarmen.gov.co/conoce-el-carmen/",
+          "checked_at": "2026-11-04",
+          "note": "Fuente pública consultada para nombre, municipio y categoría. No acredita representación, alianza ni vigencia operativa."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "name": "Ecoparque Hotel El Cielo",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "sources": [
+        {
+          "url": "https://turismoelcarmen.gov.co/conoce-el-carmen/",
+          "checked_at": "2026-11-04",
+          "note": "Fuente pública consultada para nombre, municipio y categoría. No acredita representación, alianza ni vigencia operativa."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "name": "Provincia Compañía de Café",
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "sources": [
+        {
+          "url": "https://alcompasdeantioquia.com/que-hacer-en-el-carmen/",
+          "checked_at": "2026-11-04",
+          "note": "Fuente pública consultada para nombre, municipio y categoría. No acredita representación, alianza ni vigencia operativa."
+        }
+      ],
+      "image_references": []
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "pore-centre": {
+    "latitude": 5.7265074,
+    "longitude": -71.9970001,
+    "label": "Parque Santander",
+    "point_type": "identified_urban_centre",
+    "source": "https://www.openstreetmap.org/way/1251385744",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "pore-01": {
+    "latitude": 5.7274496,
+    "longitude": -71.9964407,
+    "label": "Interior Ruinas de la Iglesia",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/way/1318223029",
+    "evidence": "geography-candidates/pore-01-fallback.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "pore-02": {
+    "latitude": 5.7265074,
+    "longitude": -71.9970001,
+    "label": "Parque Santander",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/way/1251385744",
+    "evidence": "geography-candidates/pore-02-fallback.json",
+    "verified_identity": true,
+    "access_verified": false
+  }
+}

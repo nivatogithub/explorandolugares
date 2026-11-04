@@ -1,0 +1,48 @@
+{
+  "mompox-centre": {
+    "latitude": 9.2415916,
+    "longitude": -74.4234409,
+    "label": "Plaza de la Concepción",
+    "point_type": "identified_urban_centre",
+    "source": "https://www.openstreetmap.org/relation/4192329",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "mompox-01": {
+    "latitude": 9.242694,
+    "longitude": -74.423806,
+    "label": "Mompox - Indicazione Albarrada del Alba.jpg",
+    "point_type": "documented_viewpoint_on_site",
+    "source": "https://commons.wikimedia.org/wiki/File:Mompox_-_Indicazione_Albarrada_del_Alba.jpg",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "mompox-02": {
+    "latitude": 9.241583,
+    "longitude": -74.423639,
+    "label": "Iglesia Santa Bárbara",
+    "point_type": "documented_viewpoint_on_site",
+    "source": "https://commons.wikimedia.org/wiki/File:Mompox_-_Chiesa_di_Santa_Barbara.jpg",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "mompox-03": {
+    "latitude": 9.2415916,
+    "longitude": -74.4234409,
+    "label": "Plaza de la Concepción",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/relation/4192329",
+    "evidence": "geography-candidates/mompox-03-fallback.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "mompox-04": {
+    "latitude": 9.2433839,
+    "longitude": -74.4254611,
+    "label": "San Francisco",
+    "point_type": "site_reference",
+    "source": "https://www.openstreetmap.org/node/1566547939",
+    "verified_identity": true,
+    "access_verified": false
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "barichara-centre": {
+    "latitude": 6.6357427,
+    "longitude": -73.2234498,
+    "label": "Parque Principal",
+    "point_type": "identified_urban_centre",
+    "source": "https://www.openstreetmap.org/way/24723285",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "barichara-01": {
+    "latitude": 6.6363014,
+    "longitude": -73.2237448,
+    "label": "Catedral de la Inmaculada Concepción",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/way/685546455",
+    "evidence": "geography-candidates/barichara-01-fallback.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "barichara-02": {
+    "latitude": 6.6401904,
+    "longitude": -73.2233208,
+    "label": "Capilla de Santa Bárbara",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/way/407845309",
+    "evidence": "geography-candidates/barichara-02.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "barichara-03": {
+    "latitude": 6.640278,
+    "longitude": -73.223708,
+    "label": "Parque de las Artes Jorge Delgado Sierra, Barichara.jpg",
+    "point_type": "documented_viewpoint_on_site",
+    "source": "https://commons.wikimedia.org/wiki/File:Parque_de_las_Artes_Jorge_Delgado_Sierra,_Barichara.jpg",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "barichara-04": {
+    "latitude": 6.6610553,
+    "longitude": -73.2299253,
+    "label": "Camino real Guane - Barichara",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/way/87161412",
+    "evidence": "geography-candidates/barichara-04.json",
+    "verified_identity": true,
+    "access_verified": false
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "san-carlos-centre": {
+    "latitude": 6.1887211,
+    "longitude": -74.9920262,
+    "label": "Parque Principal",
+    "point_type": "identified_urban_centre",
+    "source": "https://www.openstreetmap.org/way/441864312",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "san-carlos-cielo-escondido": {
+    "latitude": 6.1907,
+    "longitude": -75.0187,
+    "label": "Cañón Cielo Escondido",
+    "point_type": "site_or_area_reference",
+    "source": "https://repository.upb.edu.co/bitstream/handle/20.500.11912/10584/Diagn%C3%B3stico%20tur%C3%ADstico%20del%20Municipio%20de%20San%20Carlos%20Antioquia.pdf?isAllowed=y&sequence=1",
+    "verified_identity": true,
+    "access_verified": false,
+    "note": "Ficha 25, p.54. Georreferenciación documental, no acceso verificado."
+  },
+  "san-carlos-natalia": {
+    "latitude": 6.1942,
+    "longitude": -74.991,
+    "label": "La Natalia, entorno de quebrada La Iraca",
+    "point_type": "area_reference",
+    "source": "https://repository.upb.edu.co/bitstream/handle/20.500.11912/10584/Diagn%C3%B3stico%20tur%C3%ADstico%20del%20Municipio%20de%20San%20Carlos%20Antioquia.pdf?isAllowed=y&sequence=1",
+    "verified_identity": true,
+    "access_verified": false,
+    "note": "Ficha 33 UPB: punto del entorno de la quebrada donde se identifica La Natalia; no entrada ni certificación de baño."
+  },
+  "san-carlos-cajones": {
+    "latitude": 6.189,
+    "longitude": -75.0159,
+    "label": "Charco Los Cajones",
+    "point_type": "site_reference",
+    "source": "https://repository.upb.edu.co/bitstream/handle/20.500.11912/10584/Diagn%C3%B3stico%20tur%C3%ADstico%20del%20Municipio%20de%20San%20Carlos%20Antioquia.pdf?isAllowed=y&sequence=1",
+    "verified_identity": true,
+    "access_verified": false,
+    "note": "Ficha 26, p.55. Longitud occidental: signo omitido en la tabla, interpretado por municipio y coordenadas vecinas."
+  },
+  "san-carlos-pasitos": {
+    "latitude": 6.196,
+    "longitude": -74.9888,
+    "label": "Cascada Pasitos del Niño Dios",
+    "point_type": "site_reference",
+    "source": "https://repository.upb.edu.co/bitstream/handle/20.500.11912/10584/Diagn%C3%B3stico%20tur%C3%ADstico%20del%20Municipio%20de%20San%20Carlos%20Antioquia.pdf?isAllowed=y&sequence=1",
+    "verified_identity": true,
+    "access_verified": false,
+    "note": "Ficha 32, p.63. No confirma acceso o condiciones actuales de baño."
+  },
+  "san-carlos-tabor": {
+    "latitude": 6.2151325,
+    "longitude": -74.994508,
+    "label": "Piedra El Tabor",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/node/11463840851",
+    "evidence": "geography-candidates/san-carlos-tabor.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "san-carlos-sendero": {
+    "latitude": 6.1911,
+    "longitude": -75.0028,
+    "label": "Sendero San Antonio, quebrada La Viejita",
+    "point_type": "area_reference",
+    "source": "https://repository.upb.edu.co/bitstream/handle/20.500.11912/10584/Diagn%C3%B3stico%20tur%C3%ADstico%20del%20Municipio%20de%20San%20Carlos%20Antioquia.pdf?isAllowed=y&sequence=1",
+    "verified_identity": true,
+    "access_verified": false,
+    "note": "Ficha 2 UPB: punto de la quebrada en sector San Antonio; referencia de área del recorrido, no cascada ni entrada exacta."
+  }
+}

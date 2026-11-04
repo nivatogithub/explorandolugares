@@ -1,0 +1,65 @@
+{
+  "nombre": "Santa Rosa de Osos",
+  "estado": "borrador_no_publicable",
+  "presentacion": "Tradición religiosa, poesía y vida de altiplano.",
+  "historia_base": "La minería forma parte del origen de Santa Rosa de Osos. Su memoria también está vinculada al poeta Porfirio Barba Jacob y a un patrimonio religioso que se encuentra en templos y espacios del centro.",
+  "que_conocer": [
+    {
+      "nombre": "Parque principal",
+      "descripcion_base": "Conoce los monumentos y la vida del centro.",
+      "estado": "por_revalidar",
+      "referencia_visual": "referencias/santa-rosa-de-osos-1.webp",
+      "verificacion_imagen": "Asociación heredada; pendiente de cotejo visual",
+      "estado_imagen": "referencia_disponible"
+    },
+    {
+      "nombre": "Basílica de Nuestra Señora de las Misericordias",
+      "descripcion_base": "Acércate al patrimonio religioso del municipio.",
+      "estado": "por_revalidar",
+      "referencia_visual": "referencias/santa-rosa-de-osos-2.webp",
+      "verificacion_imagen": "Asociación heredada; pendiente de cotejo visual",
+      "estado_imagen": "referencia_disponible"
+    },
+    {
+      "nombre": "Monumento a Porfirio Barba Jacob",
+      "descripcion_base": "Una obra de Rodrigo Arenas Betancur dedicada al poeta.",
+      "estado": "por_revalidar",
+      "referencia_visual": "referencias/santa-rosa-de-osos-3.webp",
+      "verificacion_imagen": "Asociación heredada; pendiente de cotejo visual",
+      "estado_imagen": "referencia_disponible"
+    },
+    {
+      "nombre": "Reserva Guanacas y cascada",
+      "tipo": "reserva_bosque",
+      "descripcion_base": "Bosque de niebla y cascada como un conjunto; confirmar condiciones de visita con la reserva.",
+      "estado": "seleccionado_para_ampliacion_editorial",
+      "verificacion": "existencia_documentada; acceso_vigente_por_cerrar",
+      "fuente": "https://www.fundacionguanacas.org/reserva-natural",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica",
+      "publicable": false,
+      "fecha_revision": "2026-11-03",
+      "decision_usuario": "inclusion_aprobada"
+    },
+    {
+      "nombre": "Escuela Museo Porfirio Barba Jacob",
+      "tipo": "museo",
+      "descripcion_base": "Espacio cultural identificado por la Alcaldía; confirmar exposición y atención actual.",
+      "estado": "seleccionado_para_ampliacion_editorial",
+      "verificacion": "existencia_documentada; acceso_vigente_por_cerrar",
+      "fuente": "https://santarosadeosos-antioquia.gov.co/MiMunicipio/Paginas/Presentacion.aspx",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica",
+      "publicable": false,
+      "fecha_revision": "2026-11-03",
+      "decision_usuario": "inclusion_aprobada"
+    }
+  ],
+  "fuentes": [
+    "https://santarosadeosos-antioquia.gov.co/MiMunicipio/Paginas/Pasado-Presente-y-Futuro.aspx",
+    "https://www.santarosadeosos-antioquia.gov.co/MiMunicipio/Paginas/Sitios-de-Interes.aspx",
+    "https://www.fundacionguanacas.org/reserva-natural",
+    "https://santarosadeosos-antioquia.gov.co/MiMunicipio/Paginas/Presentacion.aspx"
+  ],
+  "control_editorial": "Verificar vigencia de accesos y la correspondencia exacta de cada fotografía antes de ilustrar."
+}

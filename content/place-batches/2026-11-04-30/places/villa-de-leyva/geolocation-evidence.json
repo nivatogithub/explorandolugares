@@ -1,0 +1,71 @@
+{
+  "villa-de-leyva-centre": {
+    "latitude": 5.6337655,
+    "longitude": -73.5235903,
+    "label": "Plaza Mayor",
+    "point_type": "identified_urban_centre",
+    "source": "https://www.openstreetmap.org/way/1018307059",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "villa-de-leyva-01": {
+    "latitude": 5.6337655,
+    "longitude": -73.5235903,
+    "label": "Plaza Mayor",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/way/1018307059",
+    "evidence": "geography-candidates/villa-de-leyva-01-fallback.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "villa-de-leyva-02": {
+    "latitude": 5.6320868,
+    "longitude": -73.5249697,
+    "label": "Casa museo Antonio Narino",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/node/5742284521",
+    "evidence": "geography-candidates/villa-de-leyva-02.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "villa-de-leyva-03": {
+    "latitude": 5.6370558,
+    "longitude": -73.5586209,
+    "label": "Museo El Fósil",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/node/334168994",
+    "evidence": "geography-candidates/villa-de-leyva-03.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "villa-de-leyva-04": {
+    "latitude": 5.643522,
+    "longitude": -73.516494,
+    "label": "Museo Paleontológico de la Universidad Nacional",
+    "point_type": "site_reference",
+    "source": "https://situr.boyaca.gov.co/atractivo-turistico/museo-paleontologico/",
+    "corroborating_source": "https://circular.unal.edu.co/museo-detalle/museo-paleontologico",
+    "verified_identity": true,
+    "access_verified": false,
+    "note": "Punto publicado por SITUR Boyacá, corroborado con ubicación UNAL vía Arcabuco. No confundir con Museo El Fósil vía Santa Sofía."
+  },
+  "villa-de-leyva-05": {
+    "latitude": 5.6474,
+    "longitude": -73.55872,
+    "label": "Parque arqueológico de Monquirá",
+    "point_type": "site_or_area_reference",
+    "source": "https://mapcarta.com/es/28866282",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "villa-de-leyva-06": {
+    "latitude": 5.6348049,
+    "longitude": -73.5365249,
+    "label": "Casa Terracota",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/way/463513587",
+    "evidence": "geography-candidates/villa-de-leyva-06.json",
+    "verified_identity": true,
+    "access_verified": false
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "necocli",
+  "businesses": [
+    {
+      "name": "Hotel La Ensenada",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "sources": [
+        {
+          "url": "https://hotelensenadanecocli.com/",
+          "checked_at": "2026-11-04",
+          "note": "Fuente pública consultada para nombre, municipio y categoría. No acredita representación, alianza ni vigencia operativa."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "name": "ApartaHotel Sueños Libres Necoclí",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "sources": [
+        {
+          "url": "https://www.hotelnecocli.com/",
+          "checked_at": "2026-11-04",
+          "note": "Fuente pública consultada para nombre, municipio y categoría. No acredita representación, alianza ni vigencia operativa."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "name": "Kuna's Café",
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "sources": [
+        {
+          "url": "https://tours.portalnecocli.com/restaurantes",
+          "checked_at": "2026-11-04",
+          "note": "Fuente pública consultada para nombre, municipio y categoría. No acredita representación, alianza ni vigencia operativa."
+        }
+      ],
+      "image_references": []
+    }
+  ]
+}

@@ -1,0 +1,320 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "socorro",
+    "department": "Santander",
+    "subregion": "",
+    "country_code": "CO",
+    "destination_type": "municipality",
+    "latitude": 6.4701768,
+    "longitude": -73.261534,
+    "translations": {
+      "es": {
+        "display_name": "El Socorro",
+        "eyebrow": "",
+        "headline": "Historias de libertad",
+        "intro": "El Socorro ofrece una visita centrada en la historia política, la arquitectura y la memoria cultural de Santander. Su valor está en conectar los lugares con los hechos y las personas que recuerdan, no solo en fotografiar sus edificios.",
+        "meta_description": "El Socorro ofrece una visita centrada en la historia política, la arquitectura y la memoria cultural de Santander. Su valor está en conectar los lugares con los"
+      },
+      "en": {
+        "display_name": "El Socorro",
+        "eyebrow": "",
+        "headline": "Stories of freedom",
+        "intro": "El Socorro offers a visit focused on Santander's political history, architecture and cultural memory. Connect its places with the events and people they recall, beyond photographing buildings.",
+        "meta_description": "El Socorro offers a visit focused on Santander's political history, architecture and cultural memory. Connect its places with the events and people they recall, beyond photographing buildings."
+      },
+      "pt-BR": {
+        "display_name": "El Socorro",
+        "eyebrow": "",
+        "headline": "Histórias de liberdade",
+        "intro": "El Socorro oferece uma visita centrada na história política, na arquitetura e na memória cultural de Santander. Relacione os lugares aos acontecimentos e às pessoas que recordam, além de fotografar os edifícios.",
+        "meta_description": "El Socorro oferece uma visita centrada na história política, na arquitetura e na memória cultural de Santander. Relacione os lugares aos acontecimentos e às pessoas que recordam, além de fotografar os edifícios."
+      }
+    },
+    "history": {
+      "es": [
+        "La insurrección de los Comuneros de 1781 es uno de los grandes hilos de su historia. El parque y los espacios culturales permiten acercarse a esa memoria, junto con la de la Independencia. La casa de la cultura añade otra dimensión: la trayectoria del compositor José A. Morales y la vida cultural regional."
+      ],
+      "en": [
+        "The Comuneros uprising of 1781 is a major thread in its history. The park and cultural spaces introduce that memory alongside Independence. The cultural centre adds the legacy of composer José A. Morales and regional cultural life."
+      ],
+      "pt-BR": [
+        "A insurreição dos Comuneros de 1781 é um dos grandes fios de sua história. O parque e os espaços culturais apresentam essa memória junto à da Independência. A casa da cultura acrescenta o legado do compositor José A. Morales e a vida cultural regional."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "El Socorro permite acercarse a la historia de los Comuneros a través de sus plazas, edificios y espacios de memoria. Recorrer el centro con ese contexto hace que la visita vaya más allá de admirar fachadas y ayude a entender su papel en la historia del país."
+      ],
+      "en": [
+        "El Socorro brings the history of the Comuneros into view through its squares, buildings and heritage spaces. That context turns a walk through the centre into more than an appreciation of façades and helps explain its place in national history."
+      ],
+      "pt-BR": [
+        "El Socorro aproxima a história dos Comuneros por suas praças, edifícios e espaços de memória. Esse contexto transforma o passeio pelo centro em algo além da contemplação de fachadas e ajuda a entender seu papel na história do país."
+      ]
+    },
+    "sources": {
+      "es": [
+        {
+          "section": "destination",
+          "label": "www.redturisticadepueblospatrimonio.com.co",
+          "url": "https://www.redturisticadepueblospatrimonio.com.co/es/pueblos/el-socorro"
+        },
+        {
+          "section": "destination",
+          "label": "santander.gov.co",
+          "url": "https://santander.gov.co/publicaciones/252/sitios-historicos-de-santander/"
+        }
+      ],
+      "en": [
+        {
+          "section": "destination",
+          "label": "www.redturisticadepueblospatrimonio.com.co",
+          "url": "https://www.redturisticadepueblospatrimonio.com.co/es/pueblos/el-socorro"
+        },
+        {
+          "section": "destination",
+          "label": "santander.gov.co",
+          "url": "https://santander.gov.co/publicaciones/252/sitios-historicos-de-santander/"
+        }
+      ],
+      "pt-BR": [
+        {
+          "section": "destination",
+          "label": "www.redturisticadepueblospatrimonio.com.co",
+          "url": "https://www.redturisticadepueblospatrimonio.com.co/es/pueblos/el-socorro"
+        },
+        {
+          "section": "destination",
+          "label": "santander.gov.co",
+          "url": "https://santander.gov.co/publicaciones/252/sitios-historicos-de-santander/"
+        }
+      ]
+    }
+  },
+  "hero_image": {
+    "file": "images/socorro-cover.webp",
+    "image_origin": "ai_generated",
+    "image_creator": "Explorando Lugares · ilustración generada con IA",
+    "image_source_url": "",
+    "image_license": "",
+    "image_license_url": "",
+    "alt": {
+      "es": "Ilustración de El Socorro",
+      "en": "Illustration of El Socorro",
+      "pt-BR": "Ilustração de El Socorro"
+    },
+    "caption": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  "places": [
+    {
+      "slug": "socorro-01",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 6.4701768,
+      "longitude": -73.261534,
+      "translations": {
+        "es": {
+          "name": "Parque de la Independencia",
+          "description": "Es el punto de partida para relacionar el espacio urbano con la memoria de José Antonio Galán y Antonia Santos. En lugar de recorrerlo como una plaza más, detente en sus referencias históricas y en los edificios que lo rodean.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "en": {
+          "name": "Parque de la Independencia",
+          "description": "Connect this public space with the memory of José Antonio Galán and Antonia Santos. Notice its historical references and surrounding buildings.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "pt-BR": {
+          "name": "Parque de la Independencia",
+          "description": "Relacione este espaço público à memória de José Antonio Galán e Antonia Santos. Observe suas referências históricas e os edifícios ao redor.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        }
+      },
+      "image": {
+        "file": "images/socorro-01.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · ilustración generada con IA",
+        "image_source_url": "",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Parque de la Independencia",
+          "en": "Illustration of Parque de la Independencia",
+          "pt-BR": "Ilustração de Parque de la Independencia"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "socorro-02",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 6.4698378,
+      "longitude": -73.2608418,
+      "translations": {
+        "es": {
+          "name": "Basílica de Nuestra Señora del Socorro",
+          "description": "La construcción de piedra destaca dentro del conjunto urbano. Su escala y fachada merecen una observación propia; se presenta como patrimonio arquitectónico y religioso, sin confundir una visita turística con acceso asegurado durante celebraciones.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "en": {
+          "name": "Basílica de Nuestra Señora del Socorro",
+          "description": "The stone building stands out within the town. Appreciate its scale and façade as architectural and religious heritage; access during services is not guaranteed.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "pt-BR": {
+          "name": "Basílica de Nuestra Señora del Socorro",
+          "description": "A construção de pedra se destaca no conjunto urbano. Aprecie sua escala e fachada como patrimônio arquitetônico e religioso; não se garante acesso durante celebrações.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        }
+      },
+      "image": {
+        "file": "images/socorro-02.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · ilustración generada con IA",
+        "image_source_url": "",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Basílica de Nuestra Señora del Socorro",
+          "en": "Illustration of Basílica de Nuestra Señora del Socorro",
+          "pt-BR": "Ilustração de Basílica de Nuestra Señora del Socorro"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "socorro-03",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 6.47,
+      "longitude": -73.26055555555556,
+      "translations": {
+        "es": {
+          "name": "Casa de la Cultura Horacio Rodríguez Plata",
+          "description": "Un espacio para profundizar en la historia local y en la memoria de José A. Morales. Aporta contexto al recorrido exterior; la visita a sus colecciones debe ajustarse a las condiciones de atención que confirme la institución.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "en": {
+          "name": "Casa de la Cultura Horacio Rodríguez Plata",
+          "description": "Explore local history and the memory of José A. Morales. The collections add context to the streets outside; confirm visiting arrangements with the institution.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "pt-BR": {
+          "name": "Casa de la Cultura Horacio Rodríguez Plata",
+          "description": "Conheça a história local e a memória de José A. Morales. As coleções dão contexto ao passeio externo; confirme as condições de visita com a instituição.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        }
+      },
+      "image": {
+        "file": "images/socorro-03.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · ilustración generada con IA",
+        "image_source_url": "",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Casa de la Cultura Horacio Rodríguez Plata",
+          "en": "Illustration of Casa de la Cultura Horacio Rodríguez Plata",
+          "pt-BR": "Ilustração de Casa de la Cultura Horacio Rodríguez Plata"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "socorro-04",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 6.472222222222222,
+      "longitude": -73.2625,
+      "translations": {
+        "es": {
+          "name": "Capitolio y arquitectura del centro",
+          "description": "El edificio conocido como Capitolio permite reconocer otro lenguaje monumental en piedra. Se incluye como referencia exterior del paseo; su uso institucional no significa que el viajero pueda ingresar libremente.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "en": {
+          "name": "Capitolio y arquitectura del centro",
+          "description": "The Capitolio offers another example of monumental stone architecture. It is presented as an exterior landmark; institutional use does not imply free access inside.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "pt-BR": {
+          "name": "Capitolio y arquitectura del centro",
+          "description": "O Capitolio apresenta outro exemplo de arquitetura monumental em pedra. É uma referência exterior do passeio; o uso institucional não implica entrada livre.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        }
+      },
+      "image": {
+        "file": "images/socorro-04.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · ilustración generada con IA",
+        "image_source_url": "",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Capitolio y arquitectura del centro",
+          "en": "Illustration of Capitolio y arquitectura del centro",
+          "pt-BR": "Ilustração de Capitolio y arquitectura del centro"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "2026-11-03",
+    "positioning": "",
+    "competitors": [],
+    "potential_allies": [],
+    "business_prospects": [],
+    "acquisition_strategies": [],
+    "sources": [],
+    "notes": [
+      "Preparación para revisión pública exclusivamente en dev1. Las fuentes, referencias y comprobaciones se conservan en el expediente individual. No autoriza producción."
+    ]
+  }
+}

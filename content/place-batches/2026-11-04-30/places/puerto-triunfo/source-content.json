@@ -1,0 +1,69 @@
+{
+  "nombre": "Puerto Triunfo",
+  "estado": "borrador_no_publicable",
+  "presentacion": "Vida junto al Magdalena y naturaleza en el corredor de Doradal.",
+  "historia_base": "El río Magdalena ha sido una vía de comunicación y sustento para Puerto Triunfo. La cabecera y sus corregimientos muestran esa relación con el agua, mientras Doradal conecta con el turismo del entorno.",
+  "que_conocer": [
+    {
+      "nombre": "Cabecera de Puerto Triunfo",
+      "descripcion_base": "Conoce el municipio junto al río Magdalena.",
+      "estado": "por_revalidar",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica"
+    },
+    {
+      "nombre": "Doradal",
+      "descripcion_base": "Un punto para explorar la oferta local del corredor turístico.",
+      "estado": "por_revalidar",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica"
+    },
+    {
+      "nombre": "Entorno del cañón del Río Claro",
+      "descripcion_base": "Un atractivo del corredor cercano; confirma ubicación, acceso y operador.",
+      "estado": "por_revalidar",
+      "referencia_visual": "referencias/puerto-triunfo-1.webp",
+      "verificacion_imagen": "Asociación heredada; pendiente de cotejo visual",
+      "estado_imagen": "referencia_disponible"
+    },
+    {
+      "nombre": "Estación Cocorná: naturaleza ribereña",
+      "tipo": "rio_fauna",
+      "descripcion_base": "Entorno ribereño y conservación comunitaria de tortugas. Identificar recorrido disponible; no prometer liberaciones de fauna.",
+      "estado": "seleccionado_para_ampliacion_editorial",
+      "verificacion": "existencia_documentada; acceso_vigente_por_cerrar",
+      "fuente": "https://oom.elcolombiano.com/entretenimiento/turismo/safari-ribereno-estacion-cocorna-trekking-tortugas-cascada-del-oro-camine-conmigo-HK32383602",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica",
+      "publicable": false,
+      "fecha_revision": "2026-11-03",
+      "decision_usuario": "inclusion_aprobada"
+    },
+    {
+      "nombre": "Parque Temático Hacienda Nápoles",
+      "tipo": "parque_tematico",
+      "descripcion_base": "Parque temático ubicado en Doradal, municipio de Puerto Triunfo, con recorridos de fauna y atracciones recreativas y acuáticas. La entrada se compra mediante pasaportes; revisar qué incluye cada uno y las atracciones disponibles antes de la visita.",
+      "estado": "seleccionado_para_ampliacion_editorial",
+      "decision_usuario": "inclusion_aprobada",
+      "verificacion": "ubicacion_y_operacion_documentadas_en_sitio_oficial",
+      "fuente": "https://haciendanapoles.com/preguntas-frecuentes/",
+      "fuentes": [
+        "https://haciendanapoles.com/",
+        "https://haciendanapoles.com/preguntas-frecuentes/"
+      ],
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica",
+      "publicable": false,
+      "fecha_revision": "2026-11-03",
+      "criterio_editorial": "Una ficha del parque en Qué conocer. Explicar actividades dentro de esa ficha sin contar cada atracción interna como lugar independiente. Sin promoción de hoteles, descuentos, supuestas alianzas ni tarifas no verificadas."
+    }
+  ],
+  "fuentes": [
+    "https://puertotriunfo-antioquia.gov.co/Transparencia/PlaneacionGestionyControl/Plan%20de%20Desarrollo%202024-2027-%20Acuerdo%20Municipal.pdf",
+    "https://www.puertotriunfo-antioquia.gov.co/Ciudadanos/PortaldeNinos/MiMunicipio/Paginas/Nuestros-Simbolos.aspx",
+    "https://oom.elcolombiano.com/entretenimiento/turismo/safari-ribereno-estacion-cocorna-trekking-tortugas-cascada-del-oro-camine-conmigo-HK32383602",
+    "https://haciendanapoles.com/",
+    "https://haciendanapoles.com/preguntas-frecuentes/"
+  ],
+  "control_editorial": "Buscar portada de la cabecera o una vista identificable de Doradal. Verificar los límites municipales del atractivo de Río Claro antes de incluirlo como lugar propio."
+}

@@ -1,0 +1,52 @@
+{
+  "el-carmen-de-viboral-centre": {
+    "latitude": 6.0836021,
+    "longitude": -75.3346529,
+    "label": "Nuestra Señora del Carmen",
+    "point_type": "central_urban_landmark",
+    "source": "https://www.openstreetmap.org/way/371925219",
+    "evidence": "geography-candidates/el-carmen-de-viboral-templo.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "el-carmen-de-viboral-melcocho": {
+    "latitude": 5.9182379,
+    "longitude": -75.164441,
+    "label": "Río Melcocho",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/way/475497538",
+    "evidence": "geography-candidates/el-carmen-de-viboral-melcocho-fallback.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "el-carmen-de-viboral-museo": {
+    "latitude": 6.0816575,
+    "longitude": -75.3338207,
+    "label": "Casa de la Cultura y Museo de la Cerámica Sixto Arango Gallo",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/node/577243468",
+    "evidence": "geography-candidates/el-carmen-de-viboral-museo.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "el-carmen-de-viboral-santo-domingo": {
+    "latitude": 5.9353888,
+    "longitude": -75.2256268,
+    "label": "Río Santo Domingo",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/way/1284277791",
+    "evidence": "geography-candidates/el-carmen-de-viboral-santo-domingo.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "el-carmen-de-viboral-templo": {
+    "latitude": 6.0836021,
+    "longitude": -75.3346529,
+    "label": "Nuestra Señora del Carmen",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/way/371925219",
+    "evidence": "geography-candidates/el-carmen-de-viboral-templo.json",
+    "verified_identity": true,
+    "access_verified": false
+  }
+}

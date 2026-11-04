@@ -1,0 +1,136 @@
+[
+  {
+    "file": "images/buga-cover.webp",
+    "sha256": "2f05fe854afd76b0cdbf46414e36c7ed2a849ee1117b4a1d7e429027b4102070",
+    "bytes": 344376,
+    "source": "trabajo/patrimonio-15/portadas-ilustradas/revision-once/buga.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "buga-cover",
+      "archivo": "portadas-ilustradas/revision-once/buga.webp",
+      "revision_humana": "aprobada",
+      "nota": "Aprobación del lote en el chat; cotejar huella con registro de conversiones."
+    }
+  },
+  {
+    "file": "images/buga-01.webp",
+    "sha256": "fbcde5071f65c39da5a7486567e79b1bda6fbe02eb9059f3d5ce07c8d2f4ce49",
+    "bytes": 349712,
+    "source": "trabajo/patrimonio-15/que-conocer/ilustraciones/buga-01.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "buga-01",
+      "destino": "buga",
+      "atractivo": "Basílica del Señor de los Milagros",
+      "archivo": "ilustraciones/buga-01.webp",
+      "preview": "ilustraciones/buga-01.webp",
+      "tipo": "ilustracion_IA",
+      "herramienta": "image_gen",
+      "prompt": "ilustraciones/buga-01.prompt.txt",
+      "fuentes_factuales": [
+        {
+          "id": "F1",
+          "url": "https://www.bugatravel.gov.co/site/basilica-del-senor-de-los-milagros/",
+          "consulta": "2026-11-02"
+        },
+        {
+          "id": "F5",
+          "url": "https://www.milagrosodebuga.com/horarios-y-programacion/",
+          "consulta": "2026-11-02"
+        }
+      ],
+      "referencia": {
+        "archivo": "referencias/buga-01.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File:Basilica-buga.jpg",
+        "autor": "No confirmado",
+        "licencia": "No confirmado — borrador privado",
+        "fecha_consulta": "2026-11-03",
+        "fecha_publicacion": "No confirmada",
+        "fecha_captura": "No confirmada"
+      },
+      "sha256": "fbcde5071f65c39da5a7486567e79b1bda6fbe02eb9059f3d5ce07c8d2f4ce49",
+      "revision_humana": "aprobada",
+      "publicado": false,
+      "fecha_aprobacion": "2026-11-03"
+    }
+  },
+  {
+    "file": "images/buga-02.webp",
+    "sha256": "31adb13739ffbb99f9a4b4bb5c5bc36ffad8e53e2f76bee47f3fa28c77bc506a",
+    "bytes": 499114,
+    "source": "trabajo/patrimonio-15/que-conocer/ilustraciones/buga-02.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "buga-02",
+      "destino": "buga",
+      "atractivo": "Parque José María Cabal y centro histórico",
+      "archivo": "ilustraciones/buga-02.webp",
+      "preview": "ilustraciones/buga-02.webp",
+      "tipo": "ilustracion_IA",
+      "herramienta": "image_gen",
+      "prompt": "ilustraciones/buga-02.prompt.txt",
+      "fuentes_factuales": [
+        {
+          "id": "F2",
+          "url": "https://www.bugatravel.gov.co/pdf/Buga_Destino_Espiritual.pdf",
+          "consulta": "2026-11-02"
+        }
+      ],
+      "referencia": {
+        "archivo": "referencias/buga-02.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File:Estatua_de_Jos%C3%A9_Mar%C3%ADa_Cabal_en_Buga.jpg",
+        "autor": "Lancero99",
+        "licencia": "CC0",
+        "fecha_consulta": "2026-11-03",
+        "fecha_publicacion": "No confirmada",
+        "fecha_captura": "No confirmada"
+      },
+      "sha256": "31adb13739ffbb99f9a4b4bb5c5bc36ffad8e53e2f76bee47f3fa28c77bc506a",
+      "revision_humana": "aprobada",
+      "publicado": false,
+      "fecha_aprobacion": "2026-11-03"
+    }
+  },
+  {
+    "file": "images/buga-03.webp",
+    "sha256": "37432e5fb6c969af79df25af104be380eb8eca244f19af2ad6b1ab748d638820",
+    "bytes": 415748,
+    "source": "trabajo/patrimonio-15/que-conocer/ilustraciones/buga-03.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "buga-03",
+      "destino": "buga",
+      "atractivo": "Laguna de Sonso y Centro de Educación Ambiental Buitre de Ciénaga",
+      "archivo": "ilustraciones/buga-03.webp",
+      "preview": "ilustraciones/buga-03.webp",
+      "tipo": "ilustracion_IA",
+      "herramienta": "image_gen",
+      "prompt": "ilustraciones/buga-03.prompt.txt",
+      "fuentes_factuales": [
+        {
+          "id": "F3",
+          "url": "https://cvc.gov.co/centros-de-educacion-ambiental/buitre-cienaga",
+          "consulta": "2026-11-02"
+        },
+        {
+          "id": "F4",
+          "url": "https://sidap.cvc.gov.co/es/node/138",
+          "consulta": "2026-11-02"
+        }
+      ],
+      "referencia": {
+        "archivo": "referencias/buga-03.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File:Laguna_de_Sonso_Sept_2017_13.jpg",
+        "autor": "Estefani Sandoval",
+        "licencia": "CC BY-SA 4.0",
+        "fecha_consulta": "2026-11-03",
+        "fecha_publicacion": "No confirmada",
+        "fecha_captura": "No confirmada"
+      },
+      "sha256": "37432e5fb6c969af79df25af104be380eb8eca244f19af2ad6b1ab748d638820",
+      "revision_humana": "aprobada",
+      "publicado": false,
+      "fecha_aprobacion": "2026-11-03"
+    }
+  }
+]

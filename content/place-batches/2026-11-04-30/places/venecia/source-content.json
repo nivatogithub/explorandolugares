@@ -1,0 +1,65 @@
+{
+  "nombre": "Venecia",
+  "estado": "borrador_no_publicable",
+  "presentacion": "Cerro Tusa, cultura cafetera y un pueblo para recorrer.",
+  "historia_base": "Cerro Tusa es un referente natural y cultural de Venecia. Los caminos ancestrales y la vida rural del Suroeste forman parte de un territorio que invita a conocer su paisaje y su memoria.",
+  "que_conocer": [
+    {
+      "nombre": "Cerro Tusa",
+      "descripcion_base": "Consulta las visitas y recorridos con los responsables del parque.",
+      "estado": "por_revalidar",
+      "referencia_visual": "referencias/venecia-4.webp",
+      "verificacion_imagen": "Asociación heredada; pendiente de cotejo visual",
+      "estado_imagen": "referencia_disponible"
+    },
+    {
+      "nombre": "Iglesia de San José",
+      "descripcion_base": "Conoce uno de los referentes arquitectónicos del pueblo.",
+      "estado": "por_revalidar",
+      "referencia_visual": "referencias/venecia-1.webp",
+      "verificacion_imagen": "Asociación heredada; pendiente de cotejo visual",
+      "estado_imagen": "referencia_disponible"
+    },
+    {
+      "nombre": "Parque principal",
+      "descripcion_base": "Recorre el centro y descubre su vida cotidiana.",
+      "estado": "por_revalidar",
+      "referencia_visual": "referencias/venecia-3.webp",
+      "verificacion_imagen": "Asociación heredada; pendiente de cotejo visual",
+      "estado_imagen": "referencia_disponible"
+    },
+    {
+      "nombre": "Cerro Bravo",
+      "tipo": "montana",
+      "descripcion_base": "Montaña incluida en la oferta turística de Venecia; precisar ruta y acceso, diferenciándola de Cerro Tusa.",
+      "estado": "seleccionado_para_ampliacion_editorial",
+      "verificacion": "existencia_documentada; acceso_vigente_por_cerrar",
+      "fuente": "https://www.antioquia.gov.co/images/img/turismo/2025/los-imperdibles-de-suroeste-28-30-junio.pdf",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica",
+      "publicable": false,
+      "fecha_revision": "2026-11-03",
+      "decision_usuario": "inclusion_aprobada"
+    },
+    {
+      "nombre": "Museo Cerro Tusa Zenufaná",
+      "tipo": "museo",
+      "descripcion_base": "Arqueología y memoria de los primeros pobladores del territorio.",
+      "estado": "seleccionado_para_ampliacion_editorial",
+      "verificacion": "existencia_documentada; acceso_vigente_por_cerrar",
+      "fuente": "https://museocerrotusazenufana.wordpress.com/acerca-del-museo/",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica",
+      "publicable": false,
+      "fecha_revision": "2026-11-03",
+      "decision_usuario": "inclusion_aprobada"
+    }
+  ],
+  "fuentes": [
+    "https://www.antioquia.gov.co/index.php/noticias-secretaria-desarrollo-economico/la-gobernacion-de-antioquia-y-comfama-inician-operacion-del-parque-cerro-tusa-un-espacio-para-el-cuidado-de-la-biodiversidad-y-el-turismo-responsable",
+    "https://www.antioquia.gov.co/images/pdf/anuario2014/es-CO/capitulos/turismo/rutas/cp-16-3-3/suroeste/venecia.html",
+    "https://www.antioquia.gov.co/images/img/turismo/2025/los-imperdibles-de-suroeste-28-30-junio.pdf",
+    "https://museocerrotusazenufana.wordpress.com/acerca-del-museo/"
+  ],
+  "control_editorial": "Verificar vigencia de accesos y la correspondencia exacta de cada fotografía antes de ilustrar."
+}

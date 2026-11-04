@@ -1,0 +1,32 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "la-playa-de-belen",
+  "businesses": [
+    {
+      "name": "Papo Art Café y Artesanías",
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "sources": [
+        {
+          "url": "https://asomunicipios.gov.co/municipio-la-playa-de-belen/",
+          "checked_at": "2026-11-04",
+          "note": "Fuente pública consultada para nombre, municipio y categoría. No acredita representación, alianza ni vigencia operativa."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "name": "Orquídeas Plaza Hotel",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "sources": [
+        {
+          "url": "https://asomunicipios.gov.co/municipio-la-playa-de-belen/",
+          "checked_at": "2026-11-04",
+          "note": "Fuente pública consultada para nombre, municipio y categoría. No acredita representación, alianza ni vigencia operativa."
+        }
+      ],
+      "image_references": []
+    }
+  ]
+}

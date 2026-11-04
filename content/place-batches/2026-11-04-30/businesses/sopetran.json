@@ -1,0 +1,19 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "sopetran",
+  "businesses": [
+    {
+      "name": "Casa Candela",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "sources": [
+        {
+          "url": "https://casacandela.co/",
+          "checked_at": "2026-11-04",
+          "note": "Fuente pública consultada para nombre, municipio y categoría. No acredita representación, alianza ni vigencia operativa."
+        }
+      ],
+      "image_references": []
+    }
+  ]
+}

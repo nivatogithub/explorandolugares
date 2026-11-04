@@ -1,0 +1,64 @@
+{
+  "nombre": "El Carmen de Viboral",
+  "estado": "borrador_no_publicable",
+  "presentacion": "Cerámica, cultura y calles para descubrir el trabajo de sus habitantes.",
+  "historia_base": "El oficio ceramista ha marcado la vida de El Carmen de Viboral durante más de un siglo. Sus saberes y la decoración a mano forman parte del patrimonio cultural inmaterial reconocido en Colombia.",
+  "que_conocer": [
+    {
+      "nombre": "Museo de la Cerámica",
+      "descripcion_base": "Descubre piezas y relatos del oficio alfarero local.",
+      "estado": "por_revalidar",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica"
+    },
+    {
+      "nombre": "Parque principal",
+      "descripcion_base": "Un punto para empezar a recorrer el municipio.",
+      "estado": "por_revalidar",
+      "referencia_visual": "referencias/el-carmen-de-viboral-1.webp",
+      "verificacion_imagen": "Asociación heredada; pendiente de cotejo visual",
+      "estado_imagen": "referencia_disponible"
+    },
+    {
+      "nombre": "Templo Nuestra Señora del Carmen",
+      "descripcion_base": "Conoce su arquitectura junto al centro del pueblo.",
+      "estado": "por_revalidar",
+      "referencia_visual": "referencias/el-carmen-de-viboral-2.webp",
+      "verificacion_imagen": "Asociación heredada; pendiente de cotejo visual",
+      "estado_imagen": "referencia_disponible"
+    },
+    {
+      "nombre": "Cañón del río Melcocho",
+      "tipo": "rio_canon",
+      "descripcion_base": "Paisaje de río y caminata; documentar el mecanismo de reserva y el sector exacto del recorrido.",
+      "estado": "seleccionado_para_ampliacion_editorial",
+      "verificacion": "existencia_documentada; acceso_vigente_por_cerrar",
+      "fuente": "https://www.periodicoelparamo.com/reserva-previa-requisito-para-visitar-el-canon-del-rio-el-melcocho-en-el-carmen-de-viboral/",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica",
+      "publicable": false,
+      "fecha_revision": "2026-11-03",
+      "decision_usuario": "inclusion_aprobada"
+    },
+    {
+      "nombre": "Cañón del río Santo Domingo",
+      "tipo": "rio_canon",
+      "descripcion_base": "Cañón dentro de la reserva forestal; delimitar ruta visitable y acceso antes de preparar una recomendación.",
+      "estado": "seleccionado_para_ampliacion_editorial",
+      "verificacion": "existencia_documentada; acceso_vigente_por_cerrar",
+      "fuente": "https://observatorioambiental.cornare.gov.co/wp-content/uploads/2025/07/2.-r112-6982-2017_Canones.pdf",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica",
+      "publicable": false,
+      "fecha_revision": "2026-11-03",
+      "decision_usuario": "inclusion_aprobada"
+    }
+  ],
+  "fuentes": [
+    "https://culturaelcarmen.gov.co/patrimonio/museo-de-la-ceramica/",
+    "https://patrimonio.mincultura.gov.co/legislacion/Paginas/Ceramica-del-Carmen-del-Viboral.aspx",
+    "https://www.periodicoelparamo.com/reserva-previa-requisito-para-visitar-el-canon-del-rio-el-melcocho-en-el-carmen-de-viboral/",
+    "https://observatorioambiental.cornare.gov.co/wp-content/uploads/2025/07/2.-r112-6982-2017_Canones.pdf"
+  ],
+  "control_editorial": "Verificar vigencia de accesos y la correspondencia exacta de cada fotografía antes de ilustrar."
+}

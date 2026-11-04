@@ -1,0 +1,58 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "mompox",
+  "businesses": [
+    {
+      "name": "Hotel San Rafael",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "sources": [
+        {
+          "url": "https://www.sanrafaelmompox.com/",
+          "checked_at": "2026-11-04",
+          "note": "Fuente pública consultada para nombre, municipio y categoría. No acredita representación, alianza ni vigencia operativa."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "name": "Hotel Nieto Mompox",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "sources": [
+        {
+          "url": "https://hotelnietomompox.com/wp-content/uploads/2024/02/brochure-2024.pdf",
+          "checked_at": "2026-11-04",
+          "note": "Fuente pública consultada para nombre, municipio y categoría. No acredita representación, alianza ni vigencia operativa."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "name": "Café 1700",
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "sources": [
+        {
+          "url": "https://www.caf.com/media/4684428/mompox-guia-para-vivir-la-experiencia.pdf",
+          "checked_at": "2026-11-04",
+          "note": "Fuente pública consultada para nombre, municipio y categoría. No acredita representación, alianza ni vigencia operativa."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "name": "Casa Sol de Agua",
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "sources": [
+        {
+          "url": "https://www.caf.com/media/4684428/mompox-guia-para-vivir-la-experiencia.pdf",
+          "checked_at": "2026-11-04",
+          "note": "Fuente pública consultada para nombre, municipio y categoría. No acredita representación, alianza ni vigencia operativa."
+        }
+      ],
+      "image_references": []
+    }
+  ]
+}

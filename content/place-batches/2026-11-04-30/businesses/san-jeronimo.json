@@ -1,0 +1,32 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "san-jeronimo",
+  "businesses": [
+    {
+      "name": "La Gracia Hotel & Spa",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "sources": [
+        {
+          "url": "https://lagracia.co/restaurante-bar/",
+          "checked_at": "2026-11-04",
+          "note": "Fuente pública consultada para nombre, municipio y categoría. No acredita representación, alianza ni vigencia operativa."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "name": "Dharma Hotel Boutique & Spa",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "sources": [
+        {
+          "url": "https://sanjeronimo-antioquia.gov.co/MiMunicipio/SiteAssets/Paginas/Establecimiento-con-registro-nacional-de-turismo/Establecimientos%20Mapa%20turistico%20QR.pdf",
+          "checked_at": "2026-11-04",
+          "note": "Fuente pública consultada para nombre, municipio y categoría. No acredita representación, alianza ni vigencia operativa."
+        }
+      ],
+      "image_references": []
+    }
+  ]
+}

@@ -1,0 +1,368 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "san-rafael",
+    "department": "Antioquia",
+    "subregion": "",
+    "country_code": "CO",
+    "destination_type": "municipality",
+    "latitude": 6.2954096,
+    "longitude": -75.0275609,
+    "translations": {
+      "es": {
+        "display_name": "San Rafael",
+        "eyebrow": "",
+        "headline": "Un encuentro con el agua",
+        "intro": "Ríos y paisajes verdes para acercarte al Oriente antioqueño.",
+        "meta_description": "Ríos y paisajes verdes para acercarte al Oriente antioqueño."
+      },
+      "en": {
+        "display_name": "San Rafael",
+        "eyebrow": "",
+        "headline": "An encounter with water",
+        "intro": "Rivers and green landscapes in eastern Antioquia.",
+        "meta_description": "Rivers and green landscapes in eastern Antioquia."
+      },
+      "pt-BR": {
+        "display_name": "San Rafael",
+        "eyebrow": "",
+        "headline": "Um encontro com as águas",
+        "intro": "Rios e paisagens verdes para conhecer o leste de Antioquia.",
+        "meta_description": "Rios e paisagens verdes para conhecer o leste de Antioquia."
+      }
+    },
+    "history": {
+      "es": [
+        "La minería, la agricultura y el aprovechamiento del agua forman parte de la historia de San Rafael. Los ríos Arenal, Bizcocho y Guatapé conectan el paisaje con la vida de sus comunidades."
+      ],
+      "en": [
+        "Mining, farming and the use of water are part of San Rafael's history. The Arenal, Bizcocho and Guatapé rivers connect the landscape with the life of its communities."
+      ],
+      "pt-BR": [
+        "A mineração, a agricultura e o aproveitamento da água fazem parte da história de San Rafael. Os rios Arenal, Bizcocho e Guatapé conectam a paisagem à vida de suas comunidades."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "La cascada La Honda y el templo de San Rafael Arcángel muestran dos facetas del municipio: sus paisajes de agua y su patrimonio urbano. Permiten elegir entre una salida de naturaleza y una visita cultural, preparando cada recorrido según sus condiciones."
+      ],
+      "en": [
+        "La Honda waterfall and San Rafael Arcángel church reveal two sides of the municipality: water landscapes and urban heritage. Choose a nature outing or a cultural visit, preparing each route according to its conditions."
+      ],
+      "pt-BR": [
+        "A cachoeira La Honda e a igreja de San Rafael Arcángel mostram duas faces do município: paisagens de água e patrimônio urbano. Permitem escolher um passeio de natureza ou uma visita cultural, preparando cada percurso conforme suas condições."
+      ]
+    },
+    "sources": {
+      "es": [
+        {
+          "section": "destination",
+          "label": "www.antioquia.gov.co",
+          "url": "https://www.antioquia.gov.co/images/pdf/anuario2014/es-CO/capitulos/turismo/rutas/cp-16-3-3/oriente/san-rafael.html"
+        },
+        {
+          "section": "destination",
+          "label": "toursanrafael.com",
+          "url": "https://toursanrafael.com/experiencias/"
+        }
+      ],
+      "en": [
+        {
+          "section": "destination",
+          "label": "www.antioquia.gov.co",
+          "url": "https://www.antioquia.gov.co/images/pdf/anuario2014/es-CO/capitulos/turismo/rutas/cp-16-3-3/oriente/san-rafael.html"
+        },
+        {
+          "section": "destination",
+          "label": "toursanrafael.com",
+          "url": "https://toursanrafael.com/experiencias/"
+        }
+      ],
+      "pt-BR": [
+        {
+          "section": "destination",
+          "label": "www.antioquia.gov.co",
+          "url": "https://www.antioquia.gov.co/images/pdf/anuario2014/es-CO/capitulos/turismo/rutas/cp-16-3-3/oriente/san-rafael.html"
+        },
+        {
+          "section": "destination",
+          "label": "toursanrafael.com",
+          "url": "https://toursanrafael.com/experiencias/"
+        }
+      ]
+    }
+  },
+  "hero_image": {
+    "file": "images/san-rafael-cover.webp",
+    "image_origin": "ai_generated",
+    "image_creator": "Explorando Lugares · ilustración generada con IA",
+    "image_source_url": "",
+    "image_license": "",
+    "image_license_url": "",
+    "alt": {
+      "es": "Ilustración de San Rafael",
+      "en": "Illustration of San Rafael",
+      "pt-BR": "Ilustração de San Rafael"
+    },
+    "caption": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  "places": [
+    {
+      "slug": "san-rafael-honda",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 6.2704967,
+      "longitude": -75.0436043,
+      "translations": {
+        "es": {
+          "name": "Cascada La Honda — detalle de la caída",
+          "description": "Recorrido por la cuenca del Arenal hasta la cascada, documentado por la red local de turismo.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "en": {
+          "name": "Cascada La Honda — detalle de la caída",
+          "description": "A route in the Arenal basin leading to the waterfall, documented by the local tourism network. Confirm access and water conditions.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "pt-BR": {
+          "name": "Cascada La Honda — detalle de la caída",
+          "description": "Um percurso na bacia do Arenal até a cachoeira, documentado pela rede local de turismo. Confirme o acesso e as condições da água.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        }
+      },
+      "image": {
+        "file": "images/san-rafael-honda.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · ilustración generada con IA",
+        "image_source_url": "",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Cascada La Honda — detalle de la caída",
+          "en": "Illustration of Cascada La Honda — detalle de la caída",
+          "pt-BR": "Ilustração de Cascada La Honda — detalle de la caída"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "san-rafael-boqueron",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": null,
+      "longitude": null,
+      "translations": {
+        "es": {
+          "name": "Quebrada Boquerón — La Cazuela",
+          "description": "La Cazuela es un atractivo asociado a la quebrada Boquerón. Confirma el sector y el acceso seguro; la imagen no representa también La Isleta.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "en": {
+          "name": "Quebrada Boquerón — La Cazuela",
+          "description": "La Cazuela is a waterside attraction associated with Boquerón stream. Confirm the specific sector and safe access; the image does not also represent La Isleta.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "pt-BR": {
+          "name": "Quebrada Boquerón — La Cazuela",
+          "description": "La Cazuela é um atrativo ligado ao córrego Boquerón. Confirme o setor e o acesso seguro; a imagem não representa também La Isleta.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        }
+      },
+      "image": {
+        "file": "images/san-rafael-boqueron.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · ilustración generada con IA",
+        "image_source_url": "",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Quebrada Boquerón — La Cazuela",
+          "en": "Illustration of Quebrada Boquerón — La Cazuela",
+          "pt-BR": "Ilustração de Quebrada Boquerón — La Cazuela"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "san-rafael-qc-1",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": null,
+      "longitude": null,
+      "translations": {
+        "es": {
+          "name": "Río Arenal",
+          "description": "Consulta con habitantes y guías los sectores y condiciones de visita.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "en": {
+          "name": "Río Arenal",
+          "description": "Ask local residents or guides about the river sectors suitable for a visit and current conditions.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "pt-BR": {
+          "name": "Río Arenal",
+          "description": "Consulte moradores ou guias sobre os setores adequados para visita e as condições atuais do rio.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        }
+      },
+      "image": {
+        "file": "images/san-rafael-qc-1.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · ilustración generada con IA",
+        "image_source_url": "",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Río Arenal",
+          "en": "Illustration of Río Arenal",
+          "pt-BR": "Ilustração de Río Arenal"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "san-rafael-qc-2",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": null,
+      "longitude": null,
+      "translations": {
+        "es": {
+          "name": "Río Guatapé",
+          "description": "Conoce su paso por el municipio y sus paisajes.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "en": {
+          "name": "Río Guatapé",
+          "description": "Discover the river's passage through the municipality and its landscapes. Confirm local access conditions.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "pt-BR": {
+          "name": "Río Guatapé",
+          "description": "Conheça a passagem do rio pelo município e suas paisagens. Confirme as condições locais de acesso.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        }
+      },
+      "image": {
+        "file": "images/san-rafael-qc-2.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · ilustración generada con IA",
+        "image_source_url": "",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Río Guatapé",
+          "en": "Illustration of Río Guatapé",
+          "pt-BR": "Ilustração de Río Guatapé"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "san-rafael-templo",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 6.2954096,
+      "longitude": -75.0275609,
+      "translations": {
+        "es": {
+          "name": "Templo San Rafael Arcángel",
+          "description": "Una parada para conocer el centro y su patrimonio.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "en": {
+          "name": "Templo San Rafael Arcángel",
+          "description": "A stop to explore the town centre and its heritage.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "pt-BR": {
+          "name": "Templo San Rafael Arcángel",
+          "description": "Uma parada para conhecer o centro e seu patrimônio.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        }
+      },
+      "image": {
+        "file": "images/san-rafael-templo.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · ilustración generada con IA",
+        "image_source_url": "",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Templo San Rafael Arcángel",
+          "en": "Illustration of Templo San Rafael Arcángel",
+          "pt-BR": "Ilustração de Templo San Rafael Arcángel"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "2026-11-03",
+    "positioning": "",
+    "competitors": [],
+    "potential_allies": [],
+    "business_prospects": [],
+    "acquisition_strategies": [],
+    "sources": [],
+    "notes": [
+      "Preparación para revisión pública exclusivamente en dev1. Las fuentes, referencias y comprobaciones se conservan en el expediente individual. No autoriza producción."
+    ]
+  }
+}

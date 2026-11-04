@@ -1,0 +1,65 @@
+{
+  "nombre": "El Retiro",
+  "estado": "borrador_no_publicable",
+  "presentacion": "Calles tradicionales, trabajo en madera y naturaleza en el Oriente.",
+  "historia_base": "La memoria de El Retiro está vinculada a Javiera Londoño y a la libertad de personas esclavizadas. Esa historia convive con sus oficios artesanales y la vida alrededor del parque.",
+  "que_conocer": [
+    {
+      "nombre": "Parque principal",
+      "descripcion_base": "Camina entre arquitectura tradicional y espacios de encuentro.",
+      "estado": "por_revalidar",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica"
+    },
+    {
+      "nombre": "Salto de Tequendamita",
+      "descripcion_base": "Una cascada del entorno rural; consulta las condiciones de acceso.",
+      "estado": "por_revalidar",
+      "referencia_visual": "referencias/el-retiro-2.webp",
+      "verificacion_imagen": "Asociación heredada; pendiente de cotejo visual",
+      "estado_imagen": "referencia_disponible"
+    },
+    {
+      "nombre": "Capilla Nuestra Señora de los Dolores y San José",
+      "descripcion_base": "Patrimonio religioso de la cabecera.",
+      "estado": "identidad_contrastada_en_fuente",
+      "referencia_visual": null,
+      "fuente": "https://retiroantioquia.micolombiadigital.gov.co/sites/retiroantioquia/content/files/000064/3183_mapas-el-retiro-turismo-2019-z-urbana.pdf",
+      "estado_imagen": "buscar_referencia_especifica"
+    },
+    {
+      "nombre": "Parque Ecológico Los Salados",
+      "tipo": "parque_natural_recreativo",
+      "descripcion_base": "Parque junto al embalse La Fe para disfrutar del paisaje y actividades recreativas.",
+      "estado": "seleccionado_para_ampliacion_editorial",
+      "verificacion": "existencia_documentada; acceso_vigente_por_cerrar",
+      "fuente": "https://infolocal.comfenalcoantioquia.com/index.php/parque-ecologico-los-salados",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica",
+      "publicable": false,
+      "fecha_revision": "2026-11-03",
+      "decision_usuario": "inclusion_aprobada"
+    },
+    {
+      "nombre": "Casa Museo de El Retiro",
+      "tipo": "museo",
+      "descripcion_base": "Memoria local, vida cotidiana y tradición del mueble en el Centro Cultural Javiera Londoño. Confirmar atención vigente.",
+      "estado": "seleccionado_para_ampliacion_editorial",
+      "verificacion": "existencia_documentada; acceso_vigente_por_cerrar",
+      "fuente": "https://orienteantioqueno.com/turismo-en-el-retiro/centro-cultural-javiera-londono/",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica",
+      "publicable": false,
+      "fecha_revision": "2026-11-03",
+      "decision_usuario": "inclusion_aprobada"
+    }
+  ],
+  "fuentes": [
+    "https://www.radionacional.co/cultura/historia-colombiana/javiera-londono-liberadora-de-esclavos-esclavitud-en-colombia",
+    "https://www.antioquia.gov.co/images/pdf/anuario2014/es-CO/capitulos/turismo/rutas/cp-16-3-3/oriente/el-retiro.html",
+    "https://retiroantioquia.micolombiadigital.gov.co/sites/retiroantioquia/content/files/000064/3183_mapas-el-retiro-turismo-2019-z-urbana.pdf",
+    "https://infolocal.comfenalcoantioquia.com/index.php/parque-ecologico-los-salados",
+    "https://orienteantioqueno.com/turismo-en-el-retiro/centro-cultural-javiera-londono/"
+  ],
+  "control_editorial": "Verificar vigencia de accesos y la correspondencia exacta de cada fotografía antes de ilustrar."
+}

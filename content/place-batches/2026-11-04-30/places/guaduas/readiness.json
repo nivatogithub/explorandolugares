@@ -1,0 +1,48 @@
+{
+  "slug": "guaduas",
+  "lot": "patrimonio-15",
+  "name": "Guaduas",
+  "base_commit": "eae3d38b14a41fd26c69047ea4ed980a146d5186",
+  "source": "trabajo/patrimonio-15/guaduas/contenido-cerrado-es.json",
+  "source_sha256": "a309555446ef0d826658e2d8ff39ac54e799402846b3222a505926cfe7016a2b",
+  "status": "draft_in_dev1",
+  "images": 5,
+  "attractions": 4,
+  "draft_created": true,
+  "dev1_tested": true,
+  "preprod_ready": false,
+  "production_authorized": false,
+  "pending": [
+    {
+      "type": "translations",
+      "locales": [
+        "en",
+        "pt-BR"
+      ],
+      "note": "Traducir la versión vigente; no reutilizar borradores anteriores."
+    },
+    {
+      "type": "geolocation",
+      "count": 5,
+      "note": "Verificar núcleo urbano, sitios físicos y fichas nombradas de Maps; sin centroides ni pines inventados."
+    },
+    {
+      "type": "editorial_review",
+      "note": "Contrastar vigencia, nombres, accesos, experiencias y correspondencia con imágenes."
+    },
+    {
+      "type": "visual_review",
+      "note": "Pendiente revisión humana de las páginas construidas; HTTP e imágenes verificados."
+    }
+  ],
+  "dev1_id": 10058,
+  "dev1_preview": "http://127.0.0.1:8086/lugares/guaduas/?preview=1",
+  "dev1_public": true,
+  "dev1_url": "http://127.0.0.1:8086/lugares/guaduas/",
+  "visible_attractions": 3,
+  "pending_geolocation": [
+    "guaduas-03"
+  ],
+  "package_validated": true,
+  "ready_for_preprod": false
+}

@@ -1,0 +1,63 @@
+{
+  "nombre": "Támesis",
+  "estado": "borrador_no_publicable",
+  "presentacion": "Petroglifos, cafetales y cerros que abren la mirada al Suroeste.",
+  "historia_base": "Los petroglifos conservan huellas de la presencia indígena en el territorio. La vida cafetera y los caminos rurales suman otras historias a Támesis, un municipio donde paisaje y memoria se encuentran.",
+  "que_conocer": [
+    {
+      "nombre": "Petroglifos",
+      "descripcion_base": "Consulta un recorrido acompañado para conocerlos y cuidar este patrimonio.",
+      "estado": "por_revalidar",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica"
+    },
+    {
+      "nombre": "Cerro Cristo Rey",
+      "descripcion_base": "Un referente del paisaje para explorar con orientación local.",
+      "estado": "por_revalidar",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica"
+    },
+    {
+      "nombre": "Iglesia de San Antonio de Padua",
+      "descripcion_base": "Conoce el templo y el entorno del parque principal.",
+      "estado": "por_revalidar",
+      "referencia_visual": "referencias/tamesis-2.webp",
+      "verificacion_imagen": "Asociación heredada; pendiente de cotejo visual",
+      "estado_imagen": "referencia_disponible"
+    },
+    {
+      "nombre": "Organales del río San Antonio",
+      "tipo": "formacion_geologica",
+      "descripcion_base": "Cavidades entre bloques rocosos por donde fluye el río San Antonio. Visita especializada; no describir como el río subterráneo más largo del mundo.",
+      "estado": "seleccionado_para_ampliacion_editorial",
+      "verificacion": "existencia_documentada; acceso_vigente_por_cerrar",
+      "fuente": "https://www2.sgc.gov.co/Noticias/Paginas/Esto-debes-saber-sobre-el-rio-subterraneo-mas-largo-del-mundo.aspx",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica",
+      "publicable": false,
+      "fecha_revision": "2026-11-03",
+      "decision_usuario": "inclusion_aprobada"
+    },
+    {
+      "nombre": "Museo Arqueológico Cartama",
+      "tipo": "museo",
+      "descripcion_base": "Arqueología y memoria local; reapertura documentada tras renovación en 2023.",
+      "estado": "seleccionado_para_ampliacion_editorial",
+      "verificacion": "existencia_documentada; acceso_vigente_por_cerrar",
+      "fuente": "https://periodicoelsuroeste.com/museo-cartama-de-tamesis-reabrio-sus-puertas/",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica",
+      "publicable": false,
+      "fecha_revision": "2026-11-03",
+      "decision_usuario": "inclusion_aprobada"
+    }
+  ],
+  "fuentes": [
+    "https://www.antioquia.gov.co/images/pdf/anuario2014/es-CO/capitulos/turismo/rutas/cp-16-3-3/suroeste/tamesis.html",
+    "https://www.antioquia.gov.co/images/img/turismo/2025/los-imperdibles-de-suroeste-20062025-ajustado.pdf",
+    "https://www2.sgc.gov.co/Noticias/Paginas/Esto-debes-saber-sobre-el-rio-subterraneo-mas-largo-del-mundo.aspx",
+    "https://periodicoelsuroeste.com/museo-cartama-de-tamesis-reabrio-sus-puertas/"
+  ],
+  "control_editorial": "Verificar vigencia de accesos y la correspondencia exacta de cada fotografía antes de ilustrar."
+}

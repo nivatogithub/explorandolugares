@@ -1,0 +1,62 @@
+{
+  "nombre": "San Rafael",
+  "estado": "borrador_no_publicable",
+  "presentacion": "Ríos y paisajes verdes para acercarte al Oriente antioqueño.",
+  "historia_base": "La minería, la agricultura y el aprovechamiento del agua forman parte de la historia de San Rafael. Los ríos Arenal, Bizcocho y Guatapé conectan el paisaje con la vida de sus comunidades.",
+  "que_conocer": [
+    {
+      "nombre": "Río Arenal",
+      "descripcion_base": "Consulta con habitantes y guías los sectores y condiciones de visita.",
+      "estado": "por_revalidar",
+      "referencia_visual": "referencias/san-rafael-2.webp",
+      "verificacion_imagen": "Asociación heredada; pendiente de cotejo visual",
+      "estado_imagen": "referencia_disponible"
+    },
+    {
+      "nombre": "Río Guatapé",
+      "descripcion_base": "Conoce su paso por el municipio y sus paisajes.",
+      "estado": "por_revalidar",
+      "referencia_visual": "referencias/san-rafael-3.webp",
+      "verificacion_imagen": "Asociación heredada; pendiente de cotejo visual",
+      "estado_imagen": "referencia_disponible"
+    },
+    {
+      "nombre": "Templo San Rafael Arcángel",
+      "descripcion_base": "Una parada para conocer el centro y su patrimonio.",
+      "estado": "por_revalidar",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica"
+    },
+    {
+      "nombre": "Cascada La Honda",
+      "tipo": "cascada",
+      "descripcion_base": "Recorrido por la cuenca del Arenal hasta la cascada, documentado por la red local de turismo.",
+      "estado": "seleccionado_para_ampliacion_editorial",
+      "verificacion": "existencia_documentada; acceso_vigente_por_cerrar",
+      "fuente": "https://toursanrafael.com/experiencias/",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica",
+      "publicable": false,
+      "fecha_revision": "2026-11-03",
+      "decision_usuario": "inclusion_aprobada"
+    },
+    {
+      "nombre": "La Cazuela y La Isleta: recorrido de Boquerón",
+      "tipo": "charcos",
+      "descripcion_base": "Recorrido de agua documentado por la red local; comprobar nombres, puntos exactos y acceso antes de separar fichas.",
+      "estado": "seleccionado_para_ampliacion_editorial",
+      "verificacion": "existencia_documentada; acceso_vigente_por_cerrar",
+      "fuente": "https://toursanrafael.com/experiencias/",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica",
+      "publicable": false,
+      "fecha_revision": "2026-11-03",
+      "decision_usuario": "inclusion_aprobada"
+    }
+  ],
+  "fuentes": [
+    "https://www.antioquia.gov.co/images/pdf/anuario2014/es-CO/capitulos/turismo/rutas/cp-16-3-3/oriente/san-rafael.html",
+    "https://toursanrafael.com/experiencias/"
+  ],
+  "control_editorial": "Identificar el punto exacto de cada río: una foto genérica del cauce no identifica un balneario ni confirma condiciones para bañarse."
+}

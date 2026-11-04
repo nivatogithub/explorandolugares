@@ -1,0 +1,287 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "sopetran",
+    "department": "Antioquia",
+    "subregion": "",
+    "country_code": "CO",
+    "destination_type": "municipality",
+    "latitude": 6.5009542,
+    "longitude": -75.7424732,
+    "translations": {
+      "es": {
+        "display_name": "Sopetrán",
+        "eyebrow": "",
+        "headline": "Patrimonio del Occidente",
+        "intro": "Descubre un pueblo del Occidente a través de su parque y sus tradiciones.",
+        "meta_description": "Descubre un pueblo del Occidente a través de su parque y sus tradiciones."
+      },
+      "en": {
+        "display_name": "Sopetrán",
+        "eyebrow": "",
+        "headline": "Heritage of western Antioquia",
+        "intro": "Discover a town in western Antioquia through its square and traditions.",
+        "meta_description": "Discover a town in western Antioquia through its square and traditions."
+      },
+      "pt-BR": {
+        "display_name": "Sopetrán",
+        "eyebrow": "",
+        "headline": "Patrimônio do oeste de Antioquia",
+        "intro": "Conheça um povoado do oeste de Antioquia por sua praça e suas tradições.",
+        "meta_description": "Conheça um povoado do oeste de Antioquia por sua praça e suas tradições."
+      }
+    },
+    "history": {
+      "es": [
+        "La agricultura y la devoción religiosa forman parte de la memoria de Sopetrán. Su historia se encuentra en el centro urbano y en la relación de sus habitantes con las tierras cálidas del Occidente."
+      ],
+      "en": [
+        "Agriculture and religious devotion form part of Sopetrán's memory. Its history can be found in the town centre and in residents' relationship with the warm countryside of western Antioquia."
+      ],
+      "pt-BR": [
+        "A agricultura e a devoção religiosa fazem parte da memória de Sopetrán. Sua história está presente no centro e na relação dos moradores com as terras de clima quente do oeste de Antioquia."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "La basílica de Nuestra Señora de la Asunción es una parada para conocer el patrimonio religioso de Sopetrán. Su arquitectura y el entorno del centro permiten acercarse a la vida de este pueblo del Occidente antioqueño."
+      ],
+      "en": [
+        "Nuestra Señora de la Asunción basilica introduces Sopetrán’s religious heritage. Its architecture and central surroundings offer a glimpse of life in this town in western Antioquia."
+      ],
+      "pt-BR": [
+        "A basílica de Nuestra Señora de la Asunción apresenta o patrimônio religioso de Sopetrán. Sua arquitetura e o entorno do centro permitem conhecer a vida desse povoado do oeste de Antioquia."
+      ]
+    },
+    "sources": {
+      "es": [
+        {
+          "section": "destination",
+          "label": "www.antioquia.gov.co",
+          "url": "https://www.antioquia.gov.co/images/pdf/anuario2014/es-CO/capitulos/turismo/rutas/cp-16-3-3/occidente/sopetran.html"
+        },
+        {
+          "section": "destination",
+          "label": "infolocal.comfenalcoantioquia.com",
+          "url": "https://infolocal.comfenalcoantioquia.com/index.php/agenda/cascada-sopetran"
+        },
+        {
+          "section": "destination",
+          "label": "repositoriocdim.esap.edu.co",
+          "url": "https://repositoriocdim.esap.edu.co/server/api/core/bitstreams/480562ec-6ead-46e1-a333-65a39db0e247/content"
+        }
+      ],
+      "en": [
+        {
+          "section": "destination",
+          "label": "www.antioquia.gov.co",
+          "url": "https://www.antioquia.gov.co/images/pdf/anuario2014/es-CO/capitulos/turismo/rutas/cp-16-3-3/occidente/sopetran.html"
+        },
+        {
+          "section": "destination",
+          "label": "infolocal.comfenalcoantioquia.com",
+          "url": "https://infolocal.comfenalcoantioquia.com/index.php/agenda/cascada-sopetran"
+        },
+        {
+          "section": "destination",
+          "label": "repositoriocdim.esap.edu.co",
+          "url": "https://repositoriocdim.esap.edu.co/server/api/core/bitstreams/480562ec-6ead-46e1-a333-65a39db0e247/content"
+        }
+      ],
+      "pt-BR": [
+        {
+          "section": "destination",
+          "label": "www.antioquia.gov.co",
+          "url": "https://www.antioquia.gov.co/images/pdf/anuario2014/es-CO/capitulos/turismo/rutas/cp-16-3-3/occidente/sopetran.html"
+        },
+        {
+          "section": "destination",
+          "label": "infolocal.comfenalcoantioquia.com",
+          "url": "https://infolocal.comfenalcoantioquia.com/index.php/agenda/cascada-sopetran"
+        },
+        {
+          "section": "destination",
+          "label": "repositoriocdim.esap.edu.co",
+          "url": "https://repositoriocdim.esap.edu.co/server/api/core/bitstreams/480562ec-6ead-46e1-a333-65a39db0e247/content"
+        }
+      ]
+    }
+  },
+  "hero_image": {
+    "file": "images/sopetran-cover.webp",
+    "image_origin": "ai_generated",
+    "image_creator": "Explorando Lugares · ilustración generada con IA",
+    "image_source_url": "",
+    "image_license": "",
+    "image_license_url": "",
+    "alt": {
+      "es": "Ilustración de Sopetrán",
+      "en": "Illustration of Sopetrán",
+      "pt-BR": "Ilustração de Sopetrán"
+    },
+    "caption": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  "places": [
+    {
+      "slug": "sopetran-basilica",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 6.500599,
+      "longitude": -75.742142,
+      "translations": {
+        "es": {
+          "name": "Basílica de Nuestra Señora de la Asunción",
+          "description": "Acércate a la tradición religiosa del municipio.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "en": {
+          "name": "Basílica de Nuestra Señora de la Asunción",
+          "description": "Discover the municipality's religious tradition and the basilica's place in its town centre.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "pt-BR": {
+          "name": "Basílica de Nuestra Señora de la Asunción",
+          "description": "Conheça a tradição religiosa do município e a presença da basílica em seu centro.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        }
+      },
+      "image": {
+        "file": "images/sopetran-basilica.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · ilustración generada con IA",
+        "image_source_url": "",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Basílica de Nuestra Señora de la Asunción",
+          "en": "Illustration of Basílica de Nuestra Señora de la Asunción",
+          "pt-BR": "Ilustração de Basílica de Nuestra Señora de la Asunción"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "sopetran-chagualal",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": null,
+      "longitude": null,
+      "translations": {
+        "es": {
+          "name": "Mirador de Chagualal — Peñitas",
+          "description": "Mirador en la vereda Chagualal, identificado también como Peñitas. Confirma recorrido y condiciones locales de acceso.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "en": {
+          "name": "Mirador de Chagualal — Peñitas",
+          "description": "A viewpoint in the rural community of Chagualal, also identified as Peñitas. Confirm the route and local access conditions.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "pt-BR": {
+          "name": "Mirador de Chagualal — Peñitas",
+          "description": "Um mirante na comunidade rural de Chagualal, também identificado como Peñitas. Confirme o percurso e as condições locais de acesso.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        }
+      },
+      "image": {
+        "file": "images/sopetran-chagualal.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · ilustración generada con IA",
+        "image_source_url": "",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Mirador de Chagualal — Peñitas",
+          "en": "Illustration of Mirador de Chagualal — Peñitas",
+          "pt-BR": "Ilustração de Mirador de Chagualal — Peñitas"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "sopetran-gallinazo",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": null,
+      "longitude": null,
+      "translations": {
+        "es": {
+          "name": "Salto del Gallinazo",
+          "description": "Conjunto de cascadas en Chagualal. Organiza la salida con acceso confirmado y un recorrido identificado localmente.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "en": {
+          "name": "Salto del Gallinazo",
+          "description": "A group of waterfalls in Chagualal. Plan the outing with confirmed access and a locally identified route.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "pt-BR": {
+          "name": "Salto del Gallinazo",
+          "description": "Um conjunto de cachoeiras em Chagualal. Planeje o passeio com acesso confirmado e um percurso identificado localmente.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        }
+      },
+      "image": {
+        "file": "images/sopetran-gallinazo.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · ilustración generada con IA",
+        "image_source_url": "",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Salto del Gallinazo",
+          "en": "Illustration of Salto del Gallinazo",
+          "pt-BR": "Ilustração de Salto del Gallinazo"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "2026-11-03",
+    "positioning": "",
+    "competitors": [],
+    "potential_allies": [],
+    "business_prospects": [],
+    "acquisition_strategies": [],
+    "sources": [],
+    "notes": [
+      "Preparación para revisión pública exclusivamente en dev1. Las fuentes, referencias y comprobaciones se conservan en el expediente individual. No autoriza producción."
+    ]
+  }
+}

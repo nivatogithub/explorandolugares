@@ -1,0 +1,4 @@
+<?php
+$report=[];
+foreach(glob(__DIR__.'/places/*/manifest.draft.json') as $file){$d=json_decode(file_get_contents($file),true);foreach(['es'=>'','en'=>'/en','pt-BR'=>'/pt-br'] as $loc=>$prefix){$c=curl_init('http://127.0.0.1'.$prefix.'/lugares/'.$d['destination']['slug'].'/');curl_setopt_array($c,[CURLOPT_RETURNTRANSFER=>true,CURLOPT_TIMEOUT=>30]);$html=curl_exec($c);$code=curl_getinfo($c,CURLINFO_HTTP_CODE);curl_close($c);$text=html_entity_decode(strip_tags($html?:''),ENT_QUOTES|ENT_HTML5,'UTF-8');$report[]=['slug'=>$d['destination']['slug'],'locale'=>$loc,'http'=>$code,'reason_visible'=>str_contains($text,$d['destination']['reasons'][$loc][0])];}}
+file_put_contents(__DIR__.'/reasons-http-report.json',json_encode($report,JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE));echo json_encode(['checked'=>count($report),'failures'=>array_values(array_filter($report,fn($x)=>$x['http']!==200||!$x['reason_visible']))],JSON_PRETTY_PRINT);

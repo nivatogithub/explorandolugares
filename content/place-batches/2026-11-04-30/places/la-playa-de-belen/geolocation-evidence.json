@@ -1,0 +1,31 @@
+{
+  "la-playa-de-belen-centre": {
+    "latitude": 8.2137112,
+    "longitude": -73.2382012,
+    "label": "Parque Principal",
+    "point_type": "identified_urban_centre",
+    "source": "https://www.openstreetmap.org/way/85529807",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "la-playa-de-belen-01": {
+    "latitude": 8.2137112,
+    "longitude": -73.2382012,
+    "label": "Parque Principal",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/way/85529807",
+    "evidence": "geography-candidates/la-playa-de-belen-01-fallback.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "la-playa-de-belen-02": {
+    "latitude": 8.2323615,
+    "longitude": -73.2460861,
+    "label": "Área Natural Única Los Estoraques",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/relation/11889739",
+    "evidence": "geography-candidates/la-playa-de-belen-02.json",
+    "verified_identity": true,
+    "access_verified": false
+  }
+}

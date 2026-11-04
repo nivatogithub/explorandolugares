@@ -1,0 +1,50 @@
+{
+  "el-retiro-centre": {
+    "latitude": 6.0572064,
+    "longitude": -75.5026158,
+    "label": "Parque Principal El Retiro Antioquia",
+    "point_type": "identified_urban_centre",
+    "source": "https://www.openstreetmap.org/node/4589978189",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "el-retiro-capilla": {
+    "latitude": 6.061529,
+    "longitude": -75.502457,
+    "label": "Capilla de Nuestra Señora de los Dolores y San José",
+    "point_type": "documented_viewpoint_on_site",
+    "source": "https://commons.wikimedia.org/wiki/File:Capilla_de_Nuestra_Señora_de_los_Dolores_y_San_José,_El_Retiro.jpg",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "el-retiro-casa-museo": {
+    "latitude": 6.0601076,
+    "longitude": -75.5027131,
+    "label": "Casa Museo El Retiro",
+    "source": "https://www.waze.com/es/live-map/directions/co/antioquia/retiro/casa-museo-el-retiro?to=place.ChIJLbcmOZWaRo4RQ6__62_Tvws",
+    "point_type": "site_reference",
+    "verified_identity": true,
+    "access_verified": false,
+    "note": "Ficha nombrada: Casa Museo, carrera 20 sector calle 23, corroborada con inventario de museos de Antioquia."
+  },
+  "el-retiro-los-salados": {
+    "latitude": 6.1082941,
+    "longitude": -75.5009918,
+    "label": "Parque Los Salados",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/node/7198125285",
+    "evidence": "geography-candidates/el-retiro-los-salados-fallback.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "el-retiro-qc-2": {
+    "latitude": 6.0821773,
+    "longitude": -75.4759525,
+    "label": "Salto del Tequendamita",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/node/4472941264",
+    "evidence": "geography-candidates/el-retiro-qc-2-fallback.json",
+    "verified_identity": true,
+    "access_verified": false
+  }
+}

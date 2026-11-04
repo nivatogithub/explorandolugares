@@ -1,0 +1,23 @@
+{
+  "canonical_source": "content/place-batches/2026-11-04-30",
+  "branch": "contenido/lote-30-reproducible-20261104",
+  "validated_environment": "dev1",
+  "ready_for_preprod": false,
+  "places": 30,
+  "attractions_published_in_dev1": 100,
+  "attractions_pending": 16,
+  "initial_business_records": 96,
+  "located_business_records": 28,
+  "candidate_business_records": 1070,
+  "reproducibility": {
+    "two_builds_byte_identical": true,
+    "output_files": 33,
+    "contracts_and_media_valid": 30
+  },
+  "remaining": [
+    "Cerrar 16 ubicaciones de atractivos y las fichas comerciales pendientes.",
+    "Revisar discrepancia visual de Rionegro y cobertura departamental.",
+    "Contrastar todos los datos y medios de dev1 con el lote antes de promoción.",
+    "Validar aplicación y reintento del paquete de datos en preprod cuando sea autorizado."
+  ]
+}

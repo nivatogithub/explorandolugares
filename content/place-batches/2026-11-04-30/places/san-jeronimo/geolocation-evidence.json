@@ -1,0 +1,31 @@
+{
+  "san-jeronimo-centre": {
+    "latitude": 6.4427301,
+    "longitude": -75.7278646,
+    "label": "Parque Principal",
+    "point_type": "identified_urban_centre",
+    "source": "https://www.openstreetmap.org/way/1042774997",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "san-jeronimo-tamarindos": {
+    "latitude": 6.41457991691988,
+    "longitude": -75.72814437433013,
+    "label": "Parque Los Tamarindos",
+    "point_type": "site_reference",
+    "source": "https://infolocal.comfenalcoantioquia.com/index.php/parque-los-tamarindos",
+    "verified_identity": true,
+    "access_verified": false,
+    "note": "Punto publicado en el mapa de Comfenalco; no se presenta como entrada exacta."
+  },
+  "san-jeronimo-qc-2": {
+    "latitude": 6.4422825,
+    "longitude": -75.7275987,
+    "label": "Iglesía Nuestra Señora de La Candelaria",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/way/494883248",
+    "evidence": "geography-candidates/san-jeronimo-qc-2.json",
+    "verified_identity": true,
+    "access_verified": false
+  }
+}

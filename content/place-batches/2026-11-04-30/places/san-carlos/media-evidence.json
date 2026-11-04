@@ -1,0 +1,219 @@
+[
+  {
+    "file": "images/san-carlos-cover.webp",
+    "sha256": "d06f91e6a3844d563da19cb272f2e9df7368ab9d80d8f9f3a9f866b8e31626fb",
+    "bytes": 519982,
+    "source": "trabajo/antioquia-15/ilustraciones/san-carlos-portada.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "san-carlos-portada",
+      "destino": "san-carlos",
+      "nombre_destino": "San Carlos",
+      "tipo": "portada",
+      "atractivo": "Portada · San Carlos",
+      "descripcion": "Propuesta de imagen representativa del destino. Se revisa por separado de sus atractivos. La foto contiene una instalación temporal en el parque. No se presenta como elemento permanente ni como fotografía actual.",
+      "sha256": "d06f91e6a3844d563da19cb272f2e9df7368ab9d80d8f9f3a9f866b8e31626fb",
+      "referencia": {
+        "archivo": "san-carlos/referencias/san-carlos-1.webp",
+        "autor": "Motero colombia",
+        "licencia": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:San_Carlos_parque.jpg",
+        "fecha_foto": "No comprobada"
+      },
+      "preview": "ilustraciones/san-carlos-portada.webp",
+      "archivo": "ilustraciones/san-carlos-portada.webp",
+      "revision_humana": "aprobada",
+      "publicacion_autorizada": false,
+      "prompt": "Crea una ilustración editorial de san-carlos, Antioquia, basada en la fotografía adjunta: tinta fina visible, pintura gouache, caricatura realista arquitectónica, colores naturales sin sepia ni tinte amarillo. Conserva las siluetas, edificios, torres, tejados, relieve y distribución espacial reales. No añadir ni sustituir edificios. Formato horizontal 3:2. Mantener visible el conjunto representativo del lugar sin cortar torres. No texto nuevo, logos ni marcas. No convertirlo en foto retocada; acabado claramente dibujado y pintado.",
+      "herramienta": "image_gen integrada",
+      "referencias_adicionales": [],
+      "lote": "original"
+    }
+  },
+  {
+    "file": "images/san-carlos-cielo-escondido.webp",
+    "sha256": "6631f7b110ec075186b866f6b90f26594fa9c1df2feb99e285100489fbd226cc",
+    "bytes": 340408,
+    "source": "trabajo/antioquia-15/ilustraciones/san-carlos-cielo-escondido.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "san-carlos-cielo-escondido",
+      "destino": "san-carlos",
+      "nombre_destino": "San Carlos",
+      "tipo": "que-conocer",
+      "atractivo": "Charco Cielo Escondido",
+      "descripcion": "",
+      "sha256": "6631f7b110ec075186b866f6b90f26594fa9c1df2feb99e285100489fbd226cc",
+      "referencia": {
+        "archivo": "ampliacion-referencias/sc-24-000.jpg",
+        "autor": "Juan Álvarez · San Carlos Sobrenatural, p. 24",
+        "licencia": "No confirmada; borrador privado",
+        "url": "https://www.sancarlos-antioquia.gov.co/NuestraAlcaldia/SaladePrensa/SiteAssets/Paginas/Forms/AllItems/SAN%20CARLOS%20%282%29.pdf",
+        "fecha_foto": "Publicación 2011"
+      },
+      "preview": "ilustraciones/san-carlos-cielo-escondido.webp",
+      "archivo": "ilustraciones/san-carlos-cielo-escondido.webp",
+      "revision_humana": "aprobada",
+      "publicacion_autorizada": false,
+      "prompt": "Use case: style-transfer. Ilustración editorial para Explorando Lugares, caricatura realista con dibujo de tinta fina y gouache claramente visibles, colores naturales contenidos, no foto retocada, no sepia, no filtro amarillo. Usa exclusivamente la referencia para la geometría y distribución del lugar: conserva arquitectura, siluetas, proporciones, relieve y rasgos reconocibles, sin añadir elementos, texto, logos ni servicios. Mantén el encuadre y proporción de la referencia; no expandas la escena fuera de lo visible. Borrador privado para revisión. Charco Cielo Escondido. Conservar poza estrecha verde transparente, gran roca alargada clara en primer plano, pared rocosa estratificada izquierda y rápido al fondo. No añadir cascadas ni modificar forma de rocas.",
+      "herramienta": "image_gen integrada",
+      "referencias_adicionales": [],
+      "lote": "ampliacion"
+    }
+  },
+  {
+    "file": "images/san-carlos-natalia.webp",
+    "sha256": "9818ba8298ef71c1a44d2877154bdcd98d95578aa23fd5575e7df00c5eb11470",
+    "bytes": 338480,
+    "source": "trabajo/antioquia-15/ilustraciones/san-carlos-natalia.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "san-carlos-natalia",
+      "destino": "san-carlos",
+      "nombre_destino": "San Carlos",
+      "tipo": "que-conocer",
+      "atractivo": "La Natalia",
+      "descripcion": "",
+      "sha256": "9818ba8298ef71c1a44d2877154bdcd98d95578aa23fd5575e7df00c5eb11470",
+      "referencia": {
+        "archivo": "ampliacion-referencias/sc-68-000.jpg",
+        "autor": "Juan Álvarez · San Carlos Sobrenatural, p. 68",
+        "licencia": "No confirmada; borrador privado",
+        "url": "https://www.sancarlos-antioquia.gov.co/NuestraAlcaldia/SaladePrensa/SiteAssets/Paginas/Forms/AllItems/SAN%20CARLOS%20%282%29.pdf",
+        "fecha_foto": "Publicación 2011"
+      },
+      "preview": "ilustraciones/san-carlos-natalia.webp",
+      "archivo": "ilustraciones/san-carlos-natalia.webp",
+      "revision_humana": "aprobada",
+      "publicacion_autorizada": false,
+      "prompt": "Use case: style-transfer. Ilustración editorial para Explorando Lugares, caricatura realista con dibujo de tinta fina y gouache claramente visibles, colores naturales contenidos, no foto retocada, no sepia, no filtro amarillo. Usa exclusivamente la referencia para la geometría y distribución del lugar: conserva arquitectura, siluetas, proporciones, relieve y rasgos reconocibles, sin añadir elementos, texto, logos ni servicios. Mantén el encuadre y proporción de la referencia; no expandas la escena fuera de lo visible. Borrador privado para revisión. La Natalia. Mantén esta cascada de escalones sobre roca lisa: dos chorros cortos arriba, caída lateral central a la izquierda y charco bajo, vegetación de selva. Conserva alturas y forma de las plataformas de roca y cada trayectoria de agua. Vertical, no expandir.",
+      "herramienta": "image_gen integrada",
+      "referencias_adicionales": [],
+      "lote": "ampliacion"
+    }
+  },
+  {
+    "file": "images/san-carlos-cajones.webp",
+    "sha256": "c62d72cd61a6349e67d190a0b79814de4bef2c74f63ee658290d686f7b4a1d01",
+    "bytes": 403254,
+    "source": "trabajo/antioquia-15/ilustraciones/san-carlos-cajones.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "san-carlos-cajones",
+      "destino": "san-carlos",
+      "nombre_destino": "San Carlos",
+      "tipo": "que-conocer",
+      "atractivo": "Los Cajones",
+      "descripcion": "",
+      "sha256": "c62d72cd61a6349e67d190a0b79814de4bef2c74f63ee658290d686f7b4a1d01",
+      "referencia": {
+        "archivo": "ampliacion-referencias/sc-45-001.jpg",
+        "autor": "Juan Álvarez · San Carlos Sobrenatural, p. 45",
+        "licencia": "No confirmada; borrador privado",
+        "url": "https://www.sancarlos-antioquia.gov.co/NuestraAlcaldia/SaladePrensa/SiteAssets/Paginas/Forms/AllItems/SAN%20CARLOS%20%282%29.pdf",
+        "fecha_foto": "Publicación 2011"
+      },
+      "preview": "ilustraciones/san-carlos-cajones.webp",
+      "archivo": "ilustraciones/san-carlos-cajones.webp",
+      "revision_humana": "aprobada",
+      "publicacion_autorizada": false,
+      "prompt": "Use case: style-transfer. Ilustración editorial para Explorando Lugares, caricatura realista con dibujo de tinta fina y gouache claramente visibles, colores naturales contenidos, no foto retocada, no sepia, no filtro amarillo. Usa exclusivamente la referencia para la geometría y distribución del lugar: conserva arquitectura, siluetas, proporciones, relieve y rasgos reconocibles, sin añadir elementos, texto, logos ni servicios. Mantén el encuadre y proporción de la referencia; no expandas la escena fuera de lo visible. Borrador privado para revisión. Los Cajones. Vista tranquila del charco y bosque con agua transparente ámbar verdosa, piedras claras en la orilla derecha. Conservar relieve del lecho visible, árboles y reflejos. No inventar puentes, cascadas o bañistas.",
+      "herramienta": "image_gen integrada",
+      "referencias_adicionales": [],
+      "lote": "ampliacion"
+    }
+  },
+  {
+    "file": "images/san-carlos-pasitos.webp",
+    "sha256": "b6f4f0061a7b5a4fc1a8b95972f27e0a149a2ada66106ee07dd90794cac385ef",
+    "bytes": 443254,
+    "source": "trabajo/antioquia-15/ilustraciones/san-carlos-pasitos.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "san-carlos-pasitos",
+      "destino": "san-carlos",
+      "nombre_destino": "San Carlos",
+      "tipo": "que-conocer",
+      "atractivo": "Pasitos del Niño Dios",
+      "descripcion": "Formación rocosa y cascada identificadas como atractivo natural de San Carlos.",
+      "sha256": "b6f4f0061a7b5a4fc1a8b95972f27e0a149a2ada66106ee07dd90794cac385ef",
+      "referencia": {
+        "archivo": "san-carlos/referencias/pasitos.jpg",
+        "autor": "No confirmado",
+        "licencia": "Permiso no confirmado",
+        "url": "https://www.semana.com/turismo/articulo/pasitos-del-nino-dios-una-maravilla-natural-imperdible-en-antioquia-a-3-horas-de-medellin/202556/",
+        "fecha_foto": "No comprobada"
+      },
+      "preview": "ilustraciones/san-carlos-pasitos.webp",
+      "archivo": "ilustraciones/san-carlos-pasitos.webp",
+      "revision_humana": "aprobada",
+      "publicacion_autorizada": false,
+      "prompt": "Ilustración editorial de san-carlos, sitio pasitos, basada estrictamente en la fotografía adjunta. Tinta fina y gouache, caricatura realista a color, conservando la arquitectura, formas, proporciones, vegetación y objetos reales visibles. Mantén los colores reales (sin sepia ni filtro amarillo). Sin inventar elementos ni detalles arqueológicos. No collage ni letras nuevas. Encuadre horizontal 3:2 respetando la escena y sin cortar el protagonista.",
+      "herramienta": "image_gen integrada",
+      "referencias_adicionales": [],
+      "lote": "original"
+    }
+  },
+  {
+    "file": "images/san-carlos-tabor.webp",
+    "sha256": "b3699cdb502897850afc8cddc978feb28c452a1355ad7252136de763ffca48ff",
+    "bytes": 273272,
+    "source": "trabajo/antioquia-15/ilustraciones/san-carlos-tabor.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "san-carlos-tabor",
+      "destino": "san-carlos",
+      "nombre_destino": "San Carlos",
+      "tipo": "que-conocer",
+      "atractivo": "Piedra El Tabor",
+      "descripcion": "",
+      "sha256": "b3699cdb502897850afc8cddc978feb28c452a1355ad7252136de763ffca48ff",
+      "referencia": {
+        "archivo": "ampliacion-referencias/tabor-vista.jpg",
+        "autor": "Fotógrafo no confirmado; ver fuente",
+        "licencia": "No confirmada; borrador privado",
+        "url": "https://colombia.travel/es/san-carlos",
+        "fecha_foto": "No comprobada"
+      },
+      "preview": "ilustraciones/san-carlos-tabor.webp",
+      "archivo": "ilustraciones/san-carlos-tabor.webp",
+      "revision_humana": "aprobada",
+      "publicacion_autorizada": false,
+      "prompt": "Use case: style-transfer. Ilustración editorial de Explorando Lugares, caricatura realista en tinta fina y gouache, a color, pinceladas visibles y fidelidad arquitectónica y geográfica. No foto filtrada, no sepia ni dominante amarilla. Formato final obligatorio horizontal 3:2, 1536 x 1024, nunca panorámico. Borrador privado. Basada exclusivamente en la referencia, sin añadir elementos. Conservar exactamente silueta y proporción del monolito: cima ancha redondeada izquierda, escalón boscoso derecho, vetas grises verticales, bosque y niebla. Mismo encuadre original, formato3:2.",
+      "herramienta": "image_gen integrada",
+      "referencias_adicionales": [],
+      "lote": "ampliacion"
+    }
+  },
+  {
+    "file": "images/san-carlos-sendero.webp",
+    "sha256": "9c691b4fda641307c5976d96e401af999f9204e2e5703d51ebdf7fbf4b68495b",
+    "bytes": 442792,
+    "source": "trabajo/antioquia-15/ilustraciones/san-carlos-sendero.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "san-carlos-sendero",
+      "destino": "san-carlos",
+      "nombre_destino": "San Carlos",
+      "tipo": "que-conocer",
+      "atractivo": "Sendero y balneario San Antonio",
+      "descripcion": "Corregido el nombre: la fotografía corresponde al sendero y balneario San Antonio, no a La Cascada.",
+      "sha256": "9c691b4fda641307c5976d96e401af999f9204e2e5703d51ebdf7fbf4b68495b",
+      "referencia": {
+        "archivo": "san-carlos/referencias/sendero.jpg",
+        "autor": "No confirmado",
+        "licencia": "Permiso no confirmado",
+        "url": "https://orienteantioqueno.com/turismo-en-san-carlos/sendero-ecologico-y-balneario-san-antonio/",
+        "fecha_foto": "No comprobada"
+      },
+      "preview": "ilustraciones/san-carlos-sendero.webp",
+      "archivo": "ilustraciones/san-carlos-sendero.webp",
+      "revision_humana": "aprobada",
+      "publicacion_autorizada": false,
+      "prompt": "Ilustración editorial de san-carlos, sitio sendero, basada estrictamente en la fotografía adjunta. Tinta fina y gouache, caricatura realista a color, conservando la arquitectura, formas, proporciones, vegetación y objetos reales visibles. Mantén los colores reales (sin sepia ni filtro amarillo). Sin inventar elementos ni detalles arqueológicos. No collage ni letras nuevas. Encuadre horizontal 3:2 respetando la escena y sin cortar el protagonista.",
+      "herramienta": "image_gen integrada",
+      "referencias_adicionales": [],
+      "lote": "original"
+    }
+  }
+]

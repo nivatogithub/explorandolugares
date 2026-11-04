@@ -1,0 +1,99 @@
+[
+  {
+    "file": "images/pore-cover.webp",
+    "sha256": "c143c64d2c0d3a10e301f20cd87356dc154a4d31f9689a699c400228bb841f17",
+    "bytes": 341374,
+    "source": "trabajo/patrimonio-15/portadas-ilustradas/revision-cuatro/pore-iglesia.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "pore-cover",
+      "archivo": "portadas-ilustradas/revision-cuatro/pore-iglesia.webp",
+      "revision_humana": "aprobada",
+      "nota": "Aprobación del lote en el chat; cotejar huella con registro de conversiones."
+    }
+  },
+  {
+    "file": "images/pore-01.webp",
+    "sha256": "e8e1b70548ea89f619d9abbec330fb84b9291474936332a2dbc941ee9e4758f6",
+    "bytes": 372662,
+    "source": "trabajo/patrimonio-15/que-conocer/ilustraciones/pore-01.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "pore-01",
+      "destino": "pore",
+      "atractivo": "Conjunto de ruinas históricas",
+      "archivo": "ilustraciones/pore-01.webp",
+      "preview": "ilustraciones/pore-01.webp",
+      "tipo": "ilustracion_IA",
+      "herramienta": "image_gen",
+      "prompt": "ilustraciones/pore-01.prompt.txt",
+      "fuentes_factuales": [
+        {
+          "id": "F1",
+          "url": "https://enciclopedia.banrepcultural.org/Pore",
+          "consulta": "2026-11-02"
+        },
+        {
+          "id": "F2",
+          "url": "https://normograma.mincultura.gov.co/mincultura/compilacion/docs/resolucion_mincultura_3914_2014.htm",
+          "consulta": "2026-11-02"
+        }
+      ],
+      "referencia": {
+        "archivo": "referencias/pore-01-referencia-ligera.webp",
+        "url": "https://casanare.travel/colombia/la-orinoquia/pore",
+        "autor": "No confirmado",
+        "licencia": "No confirmado — borrador privado",
+        "fecha_consulta": "2026-11-03",
+        "fecha_publicacion": "No confirmada",
+        "fecha_captura": "No confirmada"
+      },
+      "sha256": "e8e1b70548ea89f619d9abbec330fb84b9291474936332a2dbc941ee9e4758f6",
+      "revision_humana": "aprobada",
+      "publicado": false,
+      "fecha_aprobacion": "2026-11-03"
+    }
+  },
+  {
+    "file": "images/pore-02.webp",
+    "sha256": "f4f6fabbcb3d20cd1ad090539d4f808b1d754c25408b8c9cf2f76f760cb4f676",
+    "bytes": 387400,
+    "source": "trabajo/patrimonio-15/que-conocer/ilustraciones/pore-02.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "pore-02",
+      "destino": "pore",
+      "atractivo": "Sector histórico de Pore",
+      "archivo": "ilustraciones/pore-02.webp",
+      "preview": "ilustraciones/pore-02.webp",
+      "tipo": "ilustracion_IA",
+      "herramienta": "image_gen",
+      "prompt": "ilustraciones/pore-02.prompt.txt",
+      "fuentes_factuales": [
+        {
+          "id": "F1",
+          "url": "https://enciclopedia.banrepcultural.org/Pore",
+          "consulta": "2026-11-02"
+        },
+        {
+          "id": "F2",
+          "url": "https://normograma.mincultura.gov.co/mincultura/compilacion/docs/resolucion_mincultura_3914_2014.htm",
+          "consulta": "2026-11-02"
+        }
+      ],
+      "referencia": {
+        "archivo": "referencias/pore-02.jpg",
+        "url": "https://caracol.com.co/programa/2021/03/06/el_sabor_de_colombia/1615037680_415198.html",
+        "autor": "Alcaldía de Pore, según crédito de Caracol Radio",
+        "licencia": "No confirmado — borrador privado",
+        "fecha_consulta": "2026-11-03",
+        "fecha_publicacion": "2021-03-06",
+        "fecha_captura": "No confirmada"
+      },
+      "sha256": "f4f6fabbcb3d20cd1ad090539d4f808b1d754c25408b8c9cf2f76f760cb4f676",
+      "revision_humana": "aprobada",
+      "publicado": false,
+      "fecha_aprobacion": "2026-11-03"
+    }
+  }
+]

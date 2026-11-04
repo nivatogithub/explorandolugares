@@ -1,0 +1,51 @@
+{
+  "socorro-centre": {
+    "latitude": 6.4701768,
+    "longitude": -73.261534,
+    "label": "Parque de la Independencia",
+    "point_type": "identified_urban_centre",
+    "source": "https://www.openstreetmap.org/way/1174466412",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "socorro-01": {
+    "latitude": 6.4701768,
+    "longitude": -73.261534,
+    "label": "Parque de la Independencia",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/way/1174466412",
+    "evidence": "geography-candidates/socorro-01.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "socorro-02": {
+    "latitude": 6.4698378,
+    "longitude": -73.2608418,
+    "label": "Sacrosanta Basílica Nuestra Señora del Socorro",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/way/1174466408",
+    "evidence": "geography-candidates/socorro-02-fallback.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "socorro-03": {
+    "latitude": 6.47,
+    "longitude": -73.26055555555556,
+    "label": "Casa de la Cultura Horacio Rodríguez Plata",
+    "point_type": "site_reference",
+    "source": "https://noesis.uis.edu.co/bitstreams/355337f2-fe61-4dd1-b1dd-88b9b66fe7d7/download",
+    "verified_identity": true,
+    "access_verified": false,
+    "note": "Punto del sitio documentado; no se presenta como entrada exacta."
+  },
+  "socorro-04": {
+    "latitude": 6.472222222222222,
+    "longitude": -73.2625,
+    "label": "Muros del Capitolio",
+    "source": "https://noesis.uis.edu.co/bitstreams/355337f2-fe61-4dd1-b1dd-88b9b66fe7d7/download",
+    "point_type": "site_or_area_reference",
+    "verified_identity": true,
+    "access_verified": false,
+    "note": "Inventario turístico: carrera 15 diagonal a capilla La Inmaculada."
+  }
+}

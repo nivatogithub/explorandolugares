@@ -1,0 +1,126 @@
+[
+  {
+    "file": "images/sopetran-cover.webp",
+    "sha256": "44e488dd694bd50341a628af32640f893355d021c5820bfbeab26bf16f641600",
+    "bytes": 465954,
+    "source": "trabajo/antioquia-15/ilustraciones/sopetran-portada.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "sopetran-portada",
+      "destino": "sopetran",
+      "nombre_destino": "Sopetrán",
+      "tipo": "portada",
+      "atractivo": "Portada · Sopetrán",
+      "descripcion": "Propuesta de imagen representativa del destino. Se revisa por separado de sus atractivos.",
+      "sha256": "44e488dd694bd50341a628af32640f893355d021c5820bfbeab26bf16f641600",
+      "referencia": {
+        "archivo": "sopetran/referencias/sopetran-1.webp",
+        "autor": "laloking97",
+        "licencia": "CC BY-SA 2.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Sopetr%C3%A1n_panor%C3%A1mica.jpg",
+        "fecha_foto": "No comprobada"
+      },
+      "preview": "ilustraciones/sopetran-portada.webp",
+      "archivo": "ilustraciones/sopetran-portada.webp",
+      "revision_humana": "aprobada",
+      "publicacion_autorizada": false,
+      "prompt": "Crea una ilustración editorial de sopetran, Antioquia, basada en la fotografía adjunta: tinta fina visible, pintura gouache, caricatura realista arquitectónica, colores naturales sin sepia ni tinte amarillo. Conserva las siluetas, edificios, torres, tejados, relieve y distribución espacial reales. No añadir ni sustituir edificios. Formato horizontal 3:2. Mantener visible el conjunto representativo del lugar sin cortar torres. No texto nuevo, logos ni marcas. No convertirlo en foto retocada; acabado claramente dibujado y pintado.",
+      "herramienta": "image_gen integrada",
+      "referencias_adicionales": [],
+      "lote": "original"
+    }
+  },
+  {
+    "file": "images/sopetran-basilica.webp",
+    "sha256": "e46e9ab688d07dc67d6c63b4c61debe23ef2a8ae951ac5df20ed90b63fa469a2",
+    "bytes": 374748,
+    "source": "trabajo/antioquia-15/ilustraciones/sopetran-basilica.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "sopetran-basilica",
+      "destino": "sopetran",
+      "nombre_destino": "Sopetrán",
+      "tipo": "que-conocer",
+      "atractivo": "Basílica de Nuestra Señora de la Asunción",
+      "descripcion": "La referencia corresponde a una apariencia anterior del templo; los colores actuales deben contrastarse antes de publicarla.",
+      "sha256": "e46e9ab688d07dc67d6c63b4c61debe23ef2a8ae951ac5df20ed90b63fa469a2",
+      "referencia": {
+        "archivo": "sopetran/referencias/basilica.jpg",
+        "autor": "JAIRO POLLA",
+        "licencia": "CC BY-SA 3.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Bas%C3%ADlica_Menor_Nuestra_Se%C3%B1ora_de_la_Asunci%C3%B3n_de_Sopetr%C3%A1n_Antioquia.JPG",
+        "fecha_foto": "2012-08-15 17:46:45"
+      },
+      "preview": "ilustraciones/sopetran-basilica.webp",
+      "archivo": "ilustraciones/sopetran-basilica.webp",
+      "revision_humana": "aprobada",
+      "publicacion_autorizada": false,
+      "prompt": "Ilustración editorial de sopetran, sitio basilica, basada estrictamente en la fotografía adjunta. Tinta fina y gouache, caricatura realista a color, conservando la arquitectura, formas, proporciones, vegetación y objetos reales visibles. Mantén los colores reales (sin sepia ni filtro amarillo). Sin inventar elementos ni detalles arqueológicos. No collage ni letras nuevas. Encuadre horizontal 3:2 respetando la escena y sin cortar el protagonista.",
+      "herramienta": "image_gen integrada",
+      "referencias_adicionales": [],
+      "lote": "original"
+    }
+  },
+  {
+    "file": "images/sopetran-chagualal.webp",
+    "sha256": "65fb73da3ed473cba5ada7ed5e2d59acf79a597075a026292acb3504320f5ae1",
+    "bytes": 312454,
+    "source": "trabajo/antioquia-15/ilustraciones/sopetran-chagualal.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "sopetran-chagualal",
+      "destino": "sopetran",
+      "nombre_destino": "Sopetrán",
+      "tipo": "que-conocer",
+      "atractivo": "Mirador de Chagualal — Peñitas",
+      "descripcion": "Registro denominado Mirador de Peñitas, vereda El Chagualal, en el inventario de Corantioquia (página impresa 1203).",
+      "sha256": "65fb73da3ed473cba5ada7ed5e2d59acf79a597075a026292acb3504320f5ae1",
+      "referencia": {
+        "archivo": "ampliacion-referencias/chagualal-p170-002.jpg",
+        "autor": "Registro publicado por Corantioquia / CPA Ingeniería; fotógrafo no identificado",
+        "licencia": "No confirmada; borrador privado",
+        "url": "https://www.corantioquia.gov.co/wp-content/uploads/2022/01/2.4.Caract_SocialEcoCultural2.pdf#page=170",
+        "fecha_foto": "Documento de 2018; fecha de toma no comprobada"
+      },
+      "preview": "ilustraciones/sopetran-chagualal.webp",
+      "archivo": "ilustraciones/sopetran-chagualal.webp",
+      "revision_humana": "aprobada",
+      "publicacion_autorizada": false,
+      "prompt": "Use case: style-transfer. Ilustración editorial de Explorando Lugares, caricatura realista en tinta fina y gouache, a color, pinceladas visibles y fidelidad arquitectónica y geográfica. No foto filtrada, no dominante amarilla artificial. Formato final obligatorio horizontal 3:2, 1536 x 1024, nunca panorámico. Borrador privado. Basada exclusivamente en la referencia. Conserva perfil EXACTO de cordilleras, laderas con parcelas, techos y casas dispersas en primer plano. Ilustración del mismo paisaje sin suponer mirador construido, barandas ni ríos que no aparecen. Encuadre3:2 con leve recorte de cielo y primer plano dentro de referencia4:3.",
+      "herramienta": "image_gen integrada",
+      "referencias_adicionales": [],
+      "lote": "ampliacion"
+    }
+  },
+  {
+    "file": "images/sopetran-gallinazo.webp",
+    "sha256": "1c67602dee8c25b070fd7d64aac09de4b484e03f5df80743b61e61eeef44684b",
+    "bytes": 439296,
+    "source": "trabajo/antioquia-15/ilustraciones/sopetran-gallinazo.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "sopetran-gallinazo",
+      "destino": "sopetran",
+      "nombre_destino": "Sopetrán",
+      "tipo": "que-conocer",
+      "atractivo": "Salto del Gallinazo",
+      "descripcion": "",
+      "sha256": "1c67602dee8c25b070fd7d64aac09de4b484e03f5df80743b61e61eeef44684b",
+      "referencia": {
+        "archivo": "ampliacion-referencias/gallinazo-evento.jpg",
+        "autor": "Comfenalco Antioquia; fotógrafo no identificado",
+        "licencia": "No confirmada; borrador privado",
+        "url": "https://infolocal.comfenalcoantioquia.com/index.php/agenda/cascada-sopetran",
+        "fecha_foto": "No comprobada"
+      },
+      "preview": "ilustraciones/sopetran-gallinazo.webp",
+      "archivo": "ilustraciones/sopetran-gallinazo.webp",
+      "revision_humana": "aprobada",
+      "publicacion_autorizada": false,
+      "prompt": "Use case: style-transfer. Ilustración editorial de Explorando Lugares, caricatura realista en tinta fina y gouache, a color, pinceladas visibles y fidelidad arquitectónica y geográfica. No foto filtrada, no dominante amarilla artificial. Formato final obligatorio horizontal 3:2, 1536 x 1024, nunca panorámico. Borrador privado. Basada exclusivamente en la referencia. Mantén la cascada completa desde su nacimiento visible hasta poza inferior, el saliente rocoso angular derecho y rocas izquierdas. Crop3:2 dentro de imagen horizontal, quitando un poco de extremos laterales, sin cortar cascada, sin añadir caídas.",
+      "herramienta": "image_gen integrada",
+      "referencias_adicionales": [],
+      "lote": "ampliacion"
+    }
+  }
+]

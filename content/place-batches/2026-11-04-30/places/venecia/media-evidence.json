@@ -1,0 +1,126 @@
+[
+  {
+    "file": "images/venecia-cover.webp",
+    "sha256": "36674014715061addc21c43d3ba0fde5743a91992e1467551e8a595d494bfb8f",
+    "bytes": 550466,
+    "source": "trabajo/antioquia-15/ilustraciones/venecia-portada.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "venecia-portada",
+      "destino": "venecia",
+      "nombre_destino": "Venecia",
+      "tipo": "portada",
+      "atractivo": "Portada · Venecia",
+      "descripcion": "Propuesta de imagen representativa del destino. Se revisa por separado de sus atractivos.",
+      "sha256": "36674014715061addc21c43d3ba0fde5743a91992e1467551e8a595d494bfb8f",
+      "referencia": {
+        "archivo": "venecia/referencias/parque-iglesia.jpg",
+        "autor": "No confirmado",
+        "licencia": "Permiso no confirmado",
+        "url": "https://miguelmochilero.blogspot.com/2015/05/cerro-tusa-venecia-antioquia.html",
+        "fecha_foto": "No comprobada"
+      },
+      "preview": "ilustraciones/venecia-portada.webp",
+      "archivo": "ilustraciones/venecia-portada.webp",
+      "revision_humana": "aprobada",
+      "publicacion_autorizada": false,
+      "prompt": "Ilustración editorial en tinta fina y gouache claramente visibles para Explorando Lugares, colores naturales contenidos, horizontal 3:2. Conservar fielmente todos los rasgos arquitectónicos, volúmenes, ventanas, relación espacial y paisaje reales. No añadir adornos, edificios, personajes, texto superpuesto ni logos. No fotografía retocada ni filtro amarillo. Borrador privado. Parque e iglesia San José de Venecia, Antioquia. Conserva las dos torres completas y sus tejados rojos, fuente y árboles que las tapan parcialmente. Evita recortar la copa inferior de la fuente o remates. No eliminar árboles ni inventar la fachada oculta.",
+      "herramienta": "image_gen integrada",
+      "referencias_adicionales": [],
+      "lote": "original"
+    }
+  },
+  {
+    "file": "images/venecia-cerro-bravo.webp",
+    "sha256": "920ab9b13a9a8a6dc9d9ea31d972befbb1887fd1b47eff8f454e9cc0c1d2ff88",
+    "bytes": 216220,
+    "source": "trabajo/antioquia-15/ilustraciones/venecia-cerro-bravo.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "venecia-cerro-bravo",
+      "destino": "venecia",
+      "nombre_destino": "Venecia",
+      "tipo": "que-conocer",
+      "atractivo": "Cerro Bravo — entorno Venecia–Fredonia",
+      "descripcion": "",
+      "sha256": "920ab9b13a9a8a6dc9d9ea31d972befbb1887fd1b47eff8f454e9cc0c1d2ff88",
+      "referencia": {
+        "archivo": "ampliacion-referencias/cerro-bravo.jpg",
+        "autor": "Fotógrafo no confirmado; ver fuente",
+        "licencia": "No confirmada; borrador privado",
+        "url": "https://elturismoencolombia.com/a-donde-ir/turismo-antioquia-colombia/cerro-bravo-fredonia-antioquia-colombia/",
+        "fecha_foto": "No comprobada"
+      },
+      "preview": "ilustraciones/venecia-cerro-bravo.webp",
+      "archivo": "ilustraciones/venecia-cerro-bravo.webp",
+      "revision_humana": "aprobada",
+      "publicacion_autorizada": false,
+      "prompt": "Use case: style-transfer. Ilustración editorial para Explorando Lugares, caricatura realista con dibujo de tinta fina y gouache claramente visibles, colores naturales contenidos, no foto retocada, no sepia, no filtro amarillo. Usa exclusivamente la referencia para la geometría y distribución del lugar: conserva arquitectura, siluetas, proporciones, relieve y rasgos reconocibles, sin añadir elementos, texto, logos ni servicios. Mantén el encuadre y proporción de la referencia; no expandas la escena fuera de lo visible. Borrador privado para revisión. Cerro Bravo de Fredonia–Venecia, Antioquia. Preserva exactamente la silueta redondeada y asimétrica del cerro, cobertura forestal, pendiente a derecha y manchas rocosas. No convertirlo en pirámide tipo Cerro Tusa ni volcán. Sin inventar cumbres.",
+      "herramienta": "image_gen integrada",
+      "referencias_adicionales": [],
+      "lote": "ampliacion"
+    }
+  },
+  {
+    "file": "images/venecia-qc-1.webp",
+    "sha256": "037eef2f8fcd0067f0b115abfed5ba2baa78177ac43dd5ba4f06f4e7036ca02b",
+    "bytes": 207606,
+    "source": "trabajo/antioquia-15/ilustraciones/venecia-qc-1.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "venecia-qc-1",
+      "destino": "venecia",
+      "nombre_destino": "Venecia",
+      "tipo": "que-conocer",
+      "atractivo": "Cerro Tusa",
+      "descripcion": "Relieve piramidal que identifica el paisaje de Venecia.",
+      "sha256": "037eef2f8fcd0067f0b115abfed5ba2baa78177ac43dd5ba4f06f4e7036ca02b",
+      "referencia": {
+        "archivo": "venecia/referencias/venecia-4.webp",
+        "autor": "No machine-readable author provided. Kamilokardona assumed (based on copyright claims).",
+        "licencia": "Public domain",
+        "url": "https://commons.wikimedia.org/wiki/File:CERRO_TUSA.jpg",
+        "fecha_foto": "No comprobada"
+      },
+      "preview": "ilustraciones/venecia-qc-1.webp",
+      "archivo": "ilustraciones/venecia-qc-1.webp",
+      "revision_humana": "aprobada",
+      "publicacion_autorizada": false,
+      "prompt": "Transforma esta referencia real de Cerro Tusa, venecia, Antioquia, en ilustración editorial de viaje, tinta fina y gouache a color natural. Fidelidad estricta a edificios, paisaje, proporciones, ubicación y objetos de referencia. Sin inventar construcciones, sin volver azul agua marrón, sin cambiar el clima. Sin sepia ni amarillo dominante. Mantén composición y detalles reconocibles. No texto añadido. Una imagen horizontal 3:2, no collage.",
+      "herramienta": "image_gen integrada",
+      "referencias_adicionales": [],
+      "lote": "original"
+    }
+  },
+  {
+    "file": "images/venecia-zenufana.webp",
+    "sha256": "9ea4406443d1ff04c8525d16732c7376d50fd6b4043b1eee707a54a15a4b1f70",
+    "bytes": 274824,
+    "source": "trabajo/antioquia-15/ilustraciones/venecia-zenufana.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "venecia-zenufana",
+      "destino": "venecia",
+      "nombre_destino": "Venecia",
+      "tipo": "que-conocer",
+      "atractivo": "Museo Cerro Tusa Zenufaná",
+      "descripcion": "",
+      "sha256": "9ea4406443d1ff04c8525d16732c7376d50fd6b4043b1eee707a54a15a4b1f70",
+      "referencia": {
+        "archivo": "ampliacion-referencias/zenufana-84-referencia-ligera.webp",
+        "autor": "Fotógrafo no confirmado; ver fuente",
+        "licencia": "No confirmada; borrador privado",
+        "url": "https://museocerrotusazenufana.wordpress.com/acerca-del-museo/",
+        "fecha_foto": "2018 (publicación de la referencia)"
+      },
+      "preview": "ilustraciones/venecia-zenufana.webp",
+      "archivo": "ilustraciones/venecia-zenufana.webp",
+      "revision_humana": "aprobada",
+      "publicacion_autorizada": false,
+      "prompt": "Use case: style-transfer. Ilustración editorial de Explorando Lugares, caricatura realista en tinta fina y gouache, a color, pinceladas visibles y fidelidad arquitectónica y geográfica. No foto filtrada, no sepia ni dominante amarilla. Formato final obligatorio horizontal 3:2, 1536 x 1024, nunca panorámico. Borrador privado. Basada exclusivamente en la referencia, sin añadir elementos. Interior del museo, misma posición de vitrinas, mesa, sillas y cuadros, sin inventar objetos arqueológicos. Recorte3:2 reduciendo parte superior de techo y suelo. Conserva rótulo existente exactamente MUSEO CERRO TUSA / ZENUFANÁ, sin nuevos títulos ni etiquetas. Ilustración legible sin inventar trazos en piezas.",
+      "herramienta": "image_gen integrada",
+      "referencias_adicionales": [],
+      "lote": "ampliacion"
+    }
+  }
+]

@@ -1,0 +1,48 @@
+{
+  "slug": "san-pedro-de-los-milagros",
+  "lot": "antioquia-15",
+  "name": "San Pedro de los Milagros",
+  "base_commit": "eae3d38b14a41fd26c69047ea4ed980a146d5186",
+  "source": "trabajo/antioquia-15/san-pedro-de-los-milagros/contenido-es.json",
+  "source_sha256": "0003fd6b368a7dddcafa3385633a22553e6568294fae2ec08587873133dc04fc",
+  "status": "draft_in_dev1",
+  "images": 5,
+  "attractions": 4,
+  "draft_created": true,
+  "dev1_tested": true,
+  "preprod_ready": false,
+  "production_authorized": false,
+  "pending": [
+    {
+      "type": "translations",
+      "locales": [
+        "en",
+        "pt-BR"
+      ],
+      "note": "Traducir la versión vigente; no reutilizar borradores anteriores."
+    },
+    {
+      "type": "geolocation",
+      "count": 5,
+      "note": "Verificar núcleo urbano, sitios físicos y fichas nombradas de Maps; sin centroides ni pines inventados."
+    },
+    {
+      "type": "editorial_review",
+      "note": "Contrastar vigencia, nombres, accesos, experiencias y correspondencia con imágenes."
+    },
+    {
+      "type": "visual_review",
+      "note": "Pendiente revisión humana de las páginas construidas; HTTP e imágenes verificados."
+    }
+  ],
+  "dev1_id": 10072,
+  "dev1_preview": "http://127.0.0.1:8086/lugares/san-pedro-de-los-milagros/?preview=1",
+  "dev1_public": true,
+  "dev1_url": "http://127.0.0.1:8086/lugares/san-pedro-de-los-milagros/",
+  "visible_attractions": 3,
+  "pending_geolocation": [
+    "san-pedro-de-los-milagros-montefrio"
+  ],
+  "package_validated": true,
+  "ready_for_preprod": false
+}

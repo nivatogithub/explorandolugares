@@ -1,0 +1,31 @@
+{
+  "necocli-centre": {
+    "latitude": 8.4241424,
+    "longitude": -76.7869516,
+    "label": "Parque principal",
+    "point_type": "identified_urban_centre",
+    "source": "https://www.openstreetmap.org/way/453388356",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "necocli-marimonda": {
+    "latitude": 8.5636795,
+    "longitude": -76.8059906,
+    "label": "Ciénaga Marimonda",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/way/91613488",
+    "evidence": "geography-candidates/necocli-marimonda-fallback.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "necocli-totumo": {
+    "latitude": 8.330133333333333,
+    "longitude": -76.75386388888889,
+    "label": "Playa El Totumo",
+    "source": "https://corpouraba.gov.co/wp-content/uploads/2026/03/Inf-gest-Ano-2023-revision-febrero-2024-VF2.pdf",
+    "point_type": "site_or_area_reference",
+    "verified_identity": true,
+    "access_verified": false,
+    "note": "Referencia de área costera: estación de monitoreo DGI008; no acceso ni certificación de baño."
+  }
+}

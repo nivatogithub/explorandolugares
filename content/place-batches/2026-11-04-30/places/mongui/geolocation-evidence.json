@@ -1,0 +1,32 @@
+{
+  "mongui-centre": {
+    "latitude": 5.721753,
+    "longitude": -72.8489201,
+    "label": "Basilica Nuestra Señora de Mongui",
+    "point_type": "central_urban_landmark",
+    "source": "https://www.openstreetmap.org/way/1053502162",
+    "evidence": "geography-candidates/mongui-01-fallback.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "mongui-01": {
+    "latitude": 5.721753,
+    "longitude": -72.8489201,
+    "label": "Basilica Nuestra Señora de Mongui",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/way/1053502162",
+    "evidence": "geography-candidates/mongui-01-fallback.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "mongui-02": {
+    "latitude": 5.7188697,
+    "longitude": -72.8496614,
+    "label": "Puente de Calicanto",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/way/616719612",
+    "evidence": "geography-candidates/mongui-02.json",
+    "verified_identity": true,
+    "access_verified": false
+  }
+}

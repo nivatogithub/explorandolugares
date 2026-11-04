@@ -1,0 +1,50 @@
+{
+  "salamina-centre": {
+    "latitude": 5.40862,
+    "longitude": -75.48821,
+    "label": "Inmaculada Concepción junto al Parque Bolívar",
+    "point_type": "central_urban_landmark",
+    "source": "https://mapcarta.com/W348421269",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "salamina-01": {
+    "latitude": 5.40862,
+    "longitude": -75.48821,
+    "label": "Inmaculada Concepción junto al Parque Bolívar",
+    "point_type": "site_reference",
+    "source": "https://mapcarta.com/W348421269",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "salamina-02": {
+    "latitude": 5.40862,
+    "longitude": -75.48821,
+    "label": "Inmaculada Concepción junto al Parque Bolívar",
+    "point_type": "historic_centre_reference",
+    "source": "https://mapcarta.com/W348421269",
+    "verified_identity": true,
+    "access_verified": false,
+    "note": "Referencia del conjunto urbano, no entrada ni una casa específica."
+  },
+  "salamina-03": {
+    "latitude": 5.3768792,
+    "longitude": -75.3717838,
+    "label": "San Félix",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/node/642544033",
+    "evidence": "geography-candidates/salamina-03.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "salamina-04": {
+    "latitude": 5.3883211,
+    "longitude": -75.3403398,
+    "label": "Valle de la Samaria",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/node/5371257621",
+    "evidence": "geography-candidates/salamina-04.json",
+    "verified_identity": true,
+    "access_verified": false
+  }
+}

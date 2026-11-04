@@ -1,0 +1,51 @@
+{
+  "honda-centre": {
+    "latitude": 5.2037181,
+    "longitude": -74.7380184,
+    "label": "Plaza de Mercado",
+    "point_type": "central_urban_landmark",
+    "source": "https://www.openstreetmap.org/relation/12953405",
+    "evidence": "geography-candidates/honda-04.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "honda-01": {
+    "latitude": 5.2033708,
+    "longitude": -74.7361528,
+    "label": "Calle 12",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/way/148450612",
+    "evidence": "geography-candidates/honda-01.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "honda-02": {
+    "latitude": 5.201944,
+    "longitude": -74.734722,
+    "label": "Museo del Rio Magdalena 01.jpg",
+    "point_type": "documented_viewpoint_on_site",
+    "source": "https://commons.wikimedia.org/wiki/File:Museo_del_Rio_Magdalena_01.jpg",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "honda-03": {
+    "latitude": 5.2024243,
+    "longitude": -74.7322215,
+    "label": "Puente Navarro",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/way/148450619",
+    "evidence": "geography-candidates/honda-03.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "honda-04": {
+    "latitude": 5.2037181,
+    "longitude": -74.7380184,
+    "label": "Plaza de Mercado",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/relation/12953405",
+    "evidence": "geography-candidates/honda-04.json",
+    "verified_identity": true,
+    "access_verified": false
+  }
+}

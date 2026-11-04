@@ -1,0 +1,19 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "el-penol",
+  "businesses": [
+    {
+      "name": "Hotel Jardín del Edén",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "sources": [
+        {
+          "url": "https://www.jardindeledenguatape.com/",
+          "checked_at": "2026-11-04",
+          "note": "Fuente pública consultada para nombre, municipio y categoría. No acredita representación, alianza ni vigencia operativa."
+        }
+      ],
+      "image_references": []
+    }
+  ]
+}

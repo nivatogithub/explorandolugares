@@ -1,0 +1,41 @@
+{
+  "giron-centre": {
+    "latitude": 7.0677332,
+    "longitude": -73.1694092,
+    "label": "Parque Principal de San Juan de Girón",
+    "point_type": "identified_urban_centre",
+    "source": "https://www.openstreetmap.org/way/108701095",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "giron-01": {
+    "latitude": 7.067852,
+    "longitude": -73.169808,
+    "label": "Basílica menor San Juan Bautista Girón.JPG",
+    "point_type": "documented_viewpoint_on_site",
+    "source": "https://commons.wikimedia.org/wiki/File:Bas%C3%ADlica_menor_San_Juan_Bautista_Gir%C3%B3n.JPG",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "giron-02": {
+    "latitude": 7.0661545,
+    "longitude": -73.1713844,
+    "label": "Capilla de Nuestra Señora de las Nieves",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/node/5763572653",
+    "evidence": "geography-candidates/giron-02-fallback.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "giron-03": {
+    "latitude": 7.066987,
+    "longitude": -73.170739,
+    "label": "Puente San José, conjunto de puentes de calicanto sobre quebrada Las Nieves",
+    "point_type": "site_reference",
+    "source": "https://cdm17054.contentdm.oclc.org/digital/collection/carlos-eslava/id/525",
+    "source_map_url": "https://maps.app.goo.gl/nGQaufY1gLrt8SXb9",
+    "verified_identity": true,
+    "access_verified": false,
+    "note": "Punto enlazado por Banco de la República en descripción del puente San José. El enlace resuelve a coordenadas; no se publica como ficha nombrada Maps."
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "nombre": "San Carlos",
+  "estado": "borrador_no_publicable",
+  "presentacion": "Agua, caminos rurales y vida local en el Oriente antioqueño.",
+  "historia_base": "Los ríos y la producción de energía forman parte de la relación de San Carlos con su territorio. Su paisaje rural y los espacios del centro permiten acercarse a las historias de sus comunidades.",
+  "que_conocer": [
+    {
+      "nombre": "Parque Simón Bolívar",
+      "descripcion_base": "Conoce el corazón urbano del municipio.",
+      "estado": "por_revalidar",
+      "referencia_visual": "referencias/san-carlos-1.webp",
+      "verificacion_imagen": "Asociación heredada; pendiente de cotejo visual",
+      "estado_imagen": "referencia_disponible"
+    },
+    {
+      "nombre": "Sendero y balneario San Antonio",
+      "descripcion_base": "Recorrido y zona de agua identificados como San Antonio en la fuente local; no confundir con La Cascada.",
+      "estado": "por_revalidar",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica",
+      "fuente": "https://orienteantioqueno.com/turismo-en-san-carlos/sendero-ecologico-y-balneario-san-antonio/"
+    },
+    {
+      "nombre": "Pasitos del Niño Dios",
+      "descripcion_base": "Un recorrido junto a la quebrada La Iraca, con orientación local.",
+      "estado": "por_revalidar",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica"
+    },
+    {
+      "nombre": "Piedra El Tabor",
+      "tipo": "montana",
+      "descripcion_base": "Formación rocosa y paisaje; completar la ruta, dificultad y acceso.",
+      "estado": "seleccionado_para_ampliacion_editorial",
+      "verificacion": "existencia_documentada; acceso_vigente_por_cerrar",
+      "fuente": "https://www.sancarlos-antioquia.gov.co/NuestraAlcaldia/SaladePrensa/SiteAssets/Paginas/Forms/AllItems/SAN%20CARLOS%20%282%29.pdf",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica",
+      "publicable": false,
+      "fecha_revision": "2026-11-03",
+      "decision_usuario": "inclusion_aprobada"
+    },
+    {
+      "nombre": "Charco Cielo Escondido",
+      "tipo": "charco",
+      "descripcion_base": "Atractivo identificado en material turístico municipal; verificar punto, acceso y condiciones de baño.",
+      "estado": "seleccionado_para_ampliacion_editorial",
+      "verificacion": "existencia_documentada; acceso_vigente_por_cerrar",
+      "fuente": "https://www.sancarlos-antioquia.gov.co/NuestraAlcaldia/SaladePrensa/SiteAssets/Paginas/Forms/AllItems/SAN%20CARLOS%20%282%29.pdf",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica",
+      "publicable": false,
+      "fecha_revision": "2026-11-03",
+      "decision_usuario": "inclusion_aprobada"
+    },
+    {
+      "nombre": "Los Cajones",
+      "tipo": "charco",
+      "descripcion_base": "Atractivo identificado en material turístico municipal; verificar acceso y correspondencia de fotografías.",
+      "estado": "seleccionado_para_ampliacion_editorial",
+      "verificacion": "existencia_documentada; acceso_vigente_por_cerrar",
+      "fuente": "https://www.sancarlos-antioquia.gov.co/NuestraAlcaldia/SaladePrensa/SiteAssets/Paginas/Forms/AllItems/SAN%20CARLOS%20%282%29.pdf",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica",
+      "publicable": false,
+      "fecha_revision": "2026-11-03",
+      "decision_usuario": "inclusion_aprobada"
+    },
+    {
+      "nombre": "La Natalia",
+      "tipo": "balneario_natural",
+      "descripcion_base": "Entorno de agua documentado por el municipio; precisar acceso y condiciones vigentes.",
+      "estado": "seleccionado_para_ampliacion_editorial",
+      "verificacion": "existencia_documentada; acceso_vigente_por_cerrar",
+      "fuente": "https://www.sancarlos-antioquia.gov.co/NuestraAlcaldia/SaladePrensa/SiteAssets/Paginas/Forms/AllItems/SAN%20CARLOS%20%282%29.pdf",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica",
+      "publicable": false,
+      "fecha_revision": "2026-11-03",
+      "decision_usuario": "inclusion_aprobada"
+    }
+  ],
+  "fuentes": [
+    "https://www.sancarlos-antioquia.gov.co/MiMunicipio/Paginas/Sitios-de-Interes.aspx",
+    "https://www.antioquia.gov.co/images/pdf/anuario2014/es-CO/capitulos/turismo/rutas/cp-16-3-3/oriente/san-carlos.html",
+    "https://www.sancarlos-antioquia.gov.co/NuestraAlcaldia/SaladePrensa/SiteAssets/Paginas/Forms/AllItems/SAN%20CARLOS%20%282%29.pdf"
+  ],
+  "control_editorial": "Faltan fotografías identificadas de La Cascada y Pasitos del Niño Dios. No sustituirlas por cualquier río."
+}

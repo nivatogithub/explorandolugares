@@ -1,0 +1,32 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "buga",
+  "businesses": [
+    {
+      "name": "Castillo de Nahia",
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "sources": [
+        {
+          "url": "https://www.bugatravel.gov.co/site/castillo-de-nahia/",
+          "checked_at": "2026-11-04",
+          "note": "Fuente pública consultada para nombre, municipio y categoría. No acredita representación, alianza ni vigencia operativa."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "name": "Hotel Restaurante Lamaca",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "sources": [
+        {
+          "url": "https://www.bugatravel.gov.co/site/hotel-restaurante-lamaca/",
+          "checked_at": "2026-11-04",
+          "note": "Fuente pública consultada para nombre, municipio y categoría. No acredita representación, alianza ni vigencia operativa."
+        }
+      ],
+      "image_references": []
+    }
+  ]
+}

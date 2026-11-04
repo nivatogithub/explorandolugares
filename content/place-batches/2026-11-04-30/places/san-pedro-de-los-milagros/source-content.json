@@ -1,0 +1,66 @@
+{
+  "nombre": "San Pedro de los Milagros",
+  "estado": "borrador_no_publicable",
+  "presentacion": "Patrimonio religioso y paisajes rurales del Norte antioqueño.",
+  "historia_base": "La devoción al Señor de los Milagros forma parte de la historia de San Pedro. La vida agropecuaria y el paisaje del altiplano acompañan una tradición que atrae peregrinos y visitantes.",
+  "que_conocer": [
+    {
+      "nombre": "Basílica del Señor de los Milagros",
+      "descripcion_base": "Conoce el principal referente religioso del municipio.",
+      "estado": "por_revalidar",
+      "referencia_visual": "referencias/san-pedro-de-los-milagros-2.webp",
+      "verificacion_imagen": "Asociación heredada; pendiente de cotejo visual",
+      "estado_imagen": "referencia_disponible"
+    },
+    {
+      "nombre": "Parque principal",
+      "descripcion_base": "Recorre el centro y sus espacios de encuentro.",
+      "estado": "por_revalidar",
+      "referencia_visual": "referencias/san-pedro-de-los-milagros-1.webp",
+      "verificacion_imagen": "Asociación heredada; pendiente de cotejo visual",
+      "estado_imagen": "referencia_disponible"
+    },
+    {
+      "nombre": "Entorno del embalse Riogrande II",
+      "descripcion_base": "Un paisaje compartido con otros municipios del Norte; consulta el acceso.",
+      "estado": "por_revalidar",
+      "referencia_visual": "referencias/san-pedro-de-los-milagros-3.webp",
+      "verificacion_imagen": "Asociación heredada; pendiente de cotejo visual",
+      "estado_imagen": "referencia_disponible"
+    },
+    {
+      "nombre": "Alto de Montefrío",
+      "tipo": "montana_alta",
+      "descripcion_base": "Documentado como parte del sistema del páramo de Santa Inés. Verificar trazado, jurisdicción del acceso y ecosistema antes de describir una excursión de páramo.",
+      "estado": "seleccionado_para_ampliacion_editorial",
+      "verificacion": "existencia_documentada; acceso_vigente_por_cerrar",
+      "fuente": "https://dssa.gov.co/asis/documentos2024/asis2024/NORTE/San%20Pedro%20de%20los%20Milagros%202024.pdf",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica",
+      "publicable": false,
+      "fecha_revision": "2026-11-03",
+      "decision_usuario": "inclusion_aprobada"
+    },
+    {
+      "nombre": "Museo de Arte Religioso",
+      "tipo": "museo",
+      "descripcion_base": "Parte de la visita patrimonial a la basílica; agrupar editorialmente con ella para no inflar el conteo.",
+      "estado": "seleccionado_para_ampliacion_editorial",
+      "verificacion": "existencia_documentada; acceso_vigente_por_cerrar",
+      "fuente": "https://parroquiasanpedro.org/visita-guiada/",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica",
+      "publicable": false,
+      "fecha_revision": "2026-11-03",
+      "agrupar_con": "Basílica del Señor de los Milagros",
+      "decision_usuario": "inclusion_aprobada"
+    }
+  ],
+  "fuentes": [
+    "https://www.antioquia.gov.co/images/pdf/anuario2014/es-CO/capitulos/turismo/rutas/cp-16-3-3/norte/san-pedro.html",
+    "https://www.antioquia.gov.co/index.php/noticias-secretaria-desarrollo-economico/trece-municipios-de-antioquia-ingresaron-a-la-red-mundial-de-destinos-religiosos",
+    "https://dssa.gov.co/asis/documentos2024/asis2024/NORTE/San%20Pedro%20de%20los%20Milagros%202024.pdf",
+    "https://parroquiasanpedro.org/visita-guiada/"
+  ],
+  "control_editorial": "Riogrande II es un entorno compartido. Identificar el punto de observación y el municipio de acceso."
+}

@@ -1,0 +1,335 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "giron",
+    "department": "Santander",
+    "subregion": "",
+    "country_code": "CO",
+    "destination_type": "municipality",
+    "latitude": 7.0677332,
+    "longitude": -73.1694092,
+    "translations": {
+      "es": {
+        "display_name": "Girón",
+        "eyebrow": "",
+        "headline": "Calles que guardan historias",
+        "intro": "Girón conserva un casco antiguo que invita a caminar entre fachadas blancas, tejas y calles empedradas. Sus plazas y puentes permiten un recorrido urbano con varias escalas, desde el parque principal hasta la plazoleta de Las Nieves.",
+        "meta_description": "Girón conserva un casco antiguo que invita a caminar entre fachadas blancas, tejas y calles empedradas. Sus plazas y puentes permiten un recorrido urbano con va"
+      },
+      "en": {
+        "display_name": "Girón",
+        "eyebrow": "",
+        "headline": "Streets filled with stories",
+        "intro": "Girón preserves an old town of white façades, tiled roofs and cobbled streets. Its squares and bridges offer an urban walk at different scales, from the main park to the small square of Las Nieves.",
+        "meta_description": "Girón preserves an old town of white façades, tiled roofs and cobbled streets. Its squares and bridges offer an urban walk at different scales, from the main park to the small square of Las Nieves."
+      },
+      "pt-BR": {
+        "display_name": "Girón",
+        "eyebrow": "",
+        "headline": "Ruas que guardam histórias",
+        "intro": "Girón preserva um centro antigo de fachadas brancas, telhados de barro e ruas de pedra. Suas praças e pontes permitem um percurso urbano em diferentes escalas, do parque principal à pequena praça de Las Nieves.",
+        "meta_description": "Girón preserva um centro antigo de fachadas brancas, telhados de barro e ruas de pedra. Suas praças e pontes permitem um percurso urbano em diferentes escalas, do parque principal à pequena praça de Las Nieves."
+      }
+    },
+    "history": {
+      "es": [
+        "El patrimonio de San Juan de Girón se reconoce en la continuidad de sus calles y construcciones. Los puentes de calicanto sobre la quebrada Las Nieves también forman parte de ese tejido: muestran cómo el pueblo se conectó atravesando el agua, además de organizarse alrededor de sus espacios religiosos y civiles."
+      ],
+      "en": [
+        "San Juan de Girón's heritage is visible in the continuity of its streets and buildings. The masonry bridges over Las Nieves stream are part of that fabric: they show how the town crossed water as well as gathering around civic and religious spaces."
+      ],
+      "pt-BR": [
+        "O patrimônio de San Juan de Girón aparece na continuidade de suas ruas e construções. As pontes de alvenaria sobre o córrego Las Nieves fazem parte desse conjunto: mostram como o povoado atravessava a água e se organizava ao redor de espaços civis e religiosos."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Girón se disfruta caminando entre la plaza principal, las calles tradicionales y la plazoleta de Las Nieves. La continuidad de su arquitectura permite apreciar el conjunto del pueblo, además de visitar un monumento aislado."
+      ],
+      "en": [
+        "Girón is best explored on foot between its main square, traditional streets and Las Nieves square. Its architectural continuity makes the townscape itself part of the attraction, beyond individual monuments."
+      ],
+      "pt-BR": [
+        "Girón se descobre a pé entre a praça principal, as ruas tradicionais e a praça de Las Nieves. A continuidade da arquitetura transforma o conjunto urbano em atração, além dos monumentos isolados."
+      ]
+    },
+    "sources": {
+      "es": [
+        {
+          "section": "destination",
+          "label": "www.giron-santander.gov.co",
+          "url": "https://www.giron-santander.gov.co/MiMunicipio/Paginas/Sitios-de-Interes.aspx"
+        },
+        {
+          "section": "destination",
+          "label": "giron-santander.gov.co",
+          "url": "https://giron-santander.gov.co/MiMunicipio/Paginas/Ecologia.aspx"
+        },
+        {
+          "section": "destination",
+          "label": "colombia.travel",
+          "url": "https://colombia.travel/es/giron"
+        }
+      ],
+      "en": [
+        {
+          "section": "destination",
+          "label": "www.giron-santander.gov.co",
+          "url": "https://www.giron-santander.gov.co/MiMunicipio/Paginas/Sitios-de-Interes.aspx"
+        },
+        {
+          "section": "destination",
+          "label": "giron-santander.gov.co",
+          "url": "https://giron-santander.gov.co/MiMunicipio/Paginas/Ecologia.aspx"
+        },
+        {
+          "section": "destination",
+          "label": "colombia.travel",
+          "url": "https://colombia.travel/es/giron"
+        }
+      ],
+      "pt-BR": [
+        {
+          "section": "destination",
+          "label": "www.giron-santander.gov.co",
+          "url": "https://www.giron-santander.gov.co/MiMunicipio/Paginas/Sitios-de-Interes.aspx"
+        },
+        {
+          "section": "destination",
+          "label": "giron-santander.gov.co",
+          "url": "https://giron-santander.gov.co/MiMunicipio/Paginas/Ecologia.aspx"
+        },
+        {
+          "section": "destination",
+          "label": "colombia.travel",
+          "url": "https://colombia.travel/es/giron"
+        }
+      ]
+    }
+  },
+  "hero_image": {
+    "file": "images/giron-cover.webp",
+    "image_origin": "ai_generated",
+    "image_creator": "Explorando Lugares · ilustración generada con IA",
+    "image_source_url": "",
+    "image_license": "",
+    "image_license_url": "",
+    "alt": {
+      "es": "Ilustración de Girón",
+      "en": "Illustration of Girón",
+      "pt-BR": "Ilustração de Girón"
+    },
+    "caption": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  "places": [
+    {
+      "slug": "giron-01",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 7.067852,
+      "longitude": -73.169808,
+      "translations": {
+        "es": {
+          "name": "Parque principal y basílica de San Juan Bautista",
+          "description": "El conjunto permite empezar el paseo por el casco antiguo y reconocer la arquitectura blanca característica del destino. La basílica es un referente religioso, mientras el parque funciona como punto de orientación para continuar por las calles cercanas.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "en": {
+          "name": "Parque principal y basílica de San Juan Bautista",
+          "description": "Start exploring the old town and its characteristic white architecture here. The basilica is a religious landmark, while the park helps orient the walk through nearby streets.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "pt-BR": {
+          "name": "Parque principal y basílica de San Juan Bautista",
+          "description": "Comece aqui a visita ao centro antigo e à sua arquitetura branca característica. A basílica é uma referência religiosa, e o parque orienta o passeio pelas ruas próximas.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        }
+      },
+      "image": {
+        "file": "images/giron-01.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · ilustración generada con IA",
+        "image_source_url": "",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Parque principal y basílica de San Juan Bautista",
+          "en": "Illustration of Parque principal y basílica de San Juan Bautista",
+          "pt-BR": "Ilustração de Parque principal y basílica de San Juan Bautista"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "giron-02",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 7.0661545,
+      "longitude": -73.1713844,
+      "translations": {
+        "es": {
+          "name": "Plazoleta y capilla de Nuestra Señora de las Nieves",
+          "description": "Un espacio de menor escala que complementa el parque principal. La capilla y las fachadas de su entorno forman una parada para observar el patrimonio urbano con más calma, sin repetir simplemente otra visita a una iglesia.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "en": {
+          "name": "Plazoleta y capilla de Nuestra Señora de las Nieves",
+          "description": "This smaller square complements the main park. The chapel and surrounding façades offer a quieter setting for observing the town's architectural heritage.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "pt-BR": {
+          "name": "Plazoleta y capilla de Nuestra Señora de las Nieves",
+          "description": "Esta praça menor complementa o parque principal. A capela e as fachadas ao redor oferecem um ambiente mais tranquilo para observar o patrimônio urbano.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        }
+      },
+      "image": {
+        "file": "images/giron-02.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · ilustración generada con IA",
+        "image_source_url": "",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Plazoleta y capilla de Nuestra Señora de las Nieves",
+          "en": "Illustration of Plazoleta y capilla de Nuestra Señora de las Nieves",
+          "pt-BR": "Ilustração de Plazoleta y capilla de Nuestra Señora de las Nieves"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "giron-03",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 7.066987,
+      "longitude": -73.170739,
+      "translations": {
+        "es": {
+          "name": "Puentes de calicanto sobre Las Nieves",
+          "description": "Estos pasos de piedra forman parte de la relación entre el casco antiguo y su quebrada. Su interés está en la construcción y en cómo enlazan las calles. Se describen como conjunto patrimonial, sin inventar una ruta obligatoria que los recorra todos.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "en": {
+          "name": "Puentes de calicanto sobre Las Nieves",
+          "description": "These masonry crossings connect the old town across Las Nieves stream. Their interest lies in their construction and relationship with the streets, without requiring a route covering every bridge.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "pt-BR": {
+          "name": "Puentes de calicanto sobre Las Nieves",
+          "description": "Essas passagens de alvenaria conectam o centro antigo sobre o córrego Las Nieves. Seu interesse está na construção e na relação com as ruas, sem exigir um roteiro por todas as pontes.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        }
+      },
+      "image": {
+        "file": "images/giron-03.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · ilustración generada con IA",
+        "image_source_url": "",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Puentes de calicanto sobre Las Nieves",
+          "en": "Illustration of Puentes de calicanto sobre Las Nieves",
+          "pt-BR": "Ilustração de Puentes de calicanto sobre Las Nieves"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "giron-04",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": null,
+      "longitude": null,
+      "translations": {
+        "es": {
+          "name": "Malecón del río de Oro",
+          "description": "Añade la relación con el río al recorrido por las plazas y calles. Es una alternativa para ampliar el paseo urbano; las actividades, establecimientos o cruces habilitados deben consultarse en el lugar y no se dan por permanentes.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "en": {
+          "name": "Malecón del río de Oro",
+          "description": "Add the riverfront to your walk through the squares and streets. Check locally which activities, businesses and crossings are currently available.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "pt-BR": {
+          "name": "Malecón del río de Oro",
+          "description": "Acrescente a margem do rio ao passeio pelas praças e ruas. Consulte no local quais atividades, estabelecimentos e passagens estão disponíveis.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        }
+      },
+      "image": {
+        "file": "images/giron-04.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · ilustración generada con IA",
+        "image_source_url": "",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Malecón del río de Oro",
+          "en": "Illustration of Malecón del río de Oro",
+          "pt-BR": "Ilustração de Malecón del río de Oro"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "2026-11-03",
+    "positioning": "",
+    "competitors": [],
+    "potential_allies": [],
+    "business_prospects": [],
+    "acquisition_strategies": [],
+    "sources": [],
+    "notes": [
+      "Preparación para revisión pública exclusivamente en dev1. Las fuentes, referencias y comprobaciones se conservan en el expediente individual. No autoriza producción."
+    ]
+  }
+}

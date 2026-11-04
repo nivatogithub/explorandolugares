@@ -1,0 +1,74 @@
+{
+  "nombre": "Rionegro",
+  "estado": "borrador_no_publicable",
+  "presentacion": "Patrimonio, plazas y sabores en el valle de San Nicolás.",
+  "historia_base": "Rionegro ocupa un lugar importante en la historia republicana: allí se reunió la Convención de 1863. Sus templos, monumentos y plazas permiten acercarse a esa memoria en una ciudad activa del Oriente.",
+  "que_conocer": [
+    {
+      "nombre": "Concatedral de San Nicolás",
+      "descripcion_base": "Conoce el templo que acompaña la plaza principal.",
+      "estado": "por_revalidar",
+      "referencia_visual": "referencias/rionegro-1.webp",
+      "verificacion_imagen": "Asociación heredada; pendiente de cotejo visual",
+      "estado_imagen": "referencia_disponible"
+    },
+    {
+      "nombre": "Monumento a José María Córdova",
+      "descripcion_base": "Una obra de Rodrigo Arenas Betancur en el centro.",
+      "estado": "por_revalidar",
+      "referencia_visual": "referencias/rionegro-2.webp",
+      "verificacion_imagen": "Asociación heredada; pendiente de cotejo visual",
+      "estado_imagen": "referencia_disponible"
+    },
+    {
+      "nombre": "San Antonio de Pereira",
+      "descripcion_base": "Descubre su parque y la tradición de postres.",
+      "estado": "por_revalidar",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica"
+    },
+    {
+      "nombre": "Museo Histórico Casa de la Convención",
+      "descripcion_base": "Memoria de la Convención de 1863.",
+      "estado": "identidad_contrastada_en_fuente",
+      "referencia_visual": null,
+      "fuente": "https://colombia.travel/es/medellin/visita-el-museo-historico-casa-de-la-convencion",
+      "estado_imagen": "buscar_referencia_especifica"
+    },
+    {
+      "nombre": "Cerro El Capiro",
+      "tipo": "bosque_montana",
+      "descripcion_base": "Área protegida compartida con La Ceja; precisar sendero y acceso, sin duplicar el atractivo en el conteo del lote.",
+      "estado": "seleccionado_para_ampliacion_editorial",
+      "verificacion": "existencia_documentada; acceso_vigente_por_cerrar",
+      "fuente": "https://www.cornare.gov.co/SIAR/Plan-de-manejo/DRMI-el-capiro/Plan_de_Manejo_DRMI_El_Capiro.pdf",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica",
+      "publicable": false,
+      "fecha_revision": "2026-11-03",
+      "id_atractivo_compartido": "cerro-el-capiro",
+      "decision_usuario": "inclusion_aprobada"
+    },
+    {
+      "nombre": "Museo de Arte de Rionegro — MAR",
+      "tipo": "museo",
+      "descripcion_base": "Arte y exposiciones; actividad documentada en septiembre de 2026.",
+      "estado": "seleccionado_para_ampliacion_editorial",
+      "verificacion": "existencia_documentada; acceso_vigente_por_cerrar",
+      "fuente": "https://www.laprensaoriente.info/actualidad/tierra-compartida-la-exposicion-que-recupera-los-origenes-de-la-ceramica-en-el-oriente-antioqueno/",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica",
+      "publicable": false,
+      "fecha_revision": "2026-11-03",
+      "decision_usuario": "inclusion_aprobada"
+    }
+  ],
+  "fuentes": [
+    "https://www.antioquia.gov.co/images/pdf/anuario2014/es-CO/capitulos/turismo/rutas/cp-16-3-3/oriente/rionegro.html",
+    "https://www.senalmemoria.co/piezas/la-constitucion-de-1863-el-sueno-liberal",
+    "https://colombia.travel/es/medellin/visita-el-museo-historico-casa-de-la-convencion",
+    "https://www.cornare.gov.co/SIAR/Plan-de-manejo/DRMI-el-capiro/Plan_de_Manejo_DRMI_El_Capiro.pdf",
+    "https://www.laprensaoriente.info/actualidad/tierra-compartida-la-exposicion-que-recupera-los-origenes-de-la-ceramica-en-el-oriente-antioqueno/"
+  ],
+  "control_editorial": "Verificar vigencia de accesos y la correspondencia exacta de cada fotografía antes de ilustrar."
+}

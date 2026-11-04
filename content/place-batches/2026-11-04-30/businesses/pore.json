@@ -1,0 +1,32 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "pore",
+  "businesses": [
+    {
+      "name": "Hotel San José Pore",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "sources": [
+        {
+          "url": "https://casanare.travel/company/2458-hotel-san-jose-pore",
+          "checked_at": "2026-11-04",
+          "note": "Fuente pública consultada para nombre, municipio y categoría. No acredita representación, alianza ni vigencia operativa."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "name": "Hotel Pore Real",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "sources": [
+        {
+          "url": "https://www.colombia.com/turismo/prestadores-de-servicios-turisticos/i38738/hotel-pore-real",
+          "checked_at": "2026-11-04",
+          "note": "Fuente pública consultada para nombre, municipio y categoría. No acredita representación, alianza ni vigencia operativa."
+        }
+      ],
+      "image_references": []
+    }
+  ]
+}

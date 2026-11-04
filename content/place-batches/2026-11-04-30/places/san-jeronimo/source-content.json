@@ -1,0 +1,49 @@
+{
+  "nombre": "San Jerónimo",
+  "estado": "borrador_no_publicable",
+  "presentacion": "Vida de parque, sabores locales y paisaje cálido del Occidente.",
+  "historia_base": "Fundado en 1616, San Jerónimo conserva memoria religiosa y rural. Su cercanía con el valle del Cauca y su tradición agrícola acompañan una identidad que también se descubre en el mercado y las veredas.",
+  "que_conocer": [
+    {
+      "nombre": "Parque principal",
+      "descripcion_base": "Un punto de partida para recorrer el centro del municipio.",
+      "estado": "por_revalidar",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica"
+    },
+    {
+      "nombre": "Templo de San Jerónimo",
+      "descripcion_base": "Conoce el patrimonio religioso junto al parque.",
+      "estado": "por_revalidar",
+      "referencia_visual": "referencias/san-jeronimo-2.webp",
+      "verificacion_imagen": "Asociación heredada; pendiente de cotejo visual",
+      "estado_imagen": "referencia_disponible"
+    },
+    {
+      "nombre": "Parque Los Tamarindos",
+      "tipo": "parque_recreativo",
+      "descripcion_base": "Parque recreativo con senderos ecológicos; presentar la visita sin promocionar alojamiento.",
+      "estado": "seleccionado_para_ampliacion_editorial",
+      "verificacion": "existencia_documentada; acceso_vigente_por_cerrar",
+      "fuente": "https://infolocal.comfenalcoantioquia.com/index.php/parque-los-tamarindos",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica",
+      "publicable": false,
+      "fecha_revision": "2026-11-03",
+      "decision_usuario": "inclusion_aprobada"
+    }
+  ],
+  "fuentes": [
+    "https://www.sanjeronimo-antioquia.gov.co/MiMunicipio/Paginas/Productos%20Tur%C3%ADsticos.aspx",
+    "https://www.sanjeronimo-antioquia.gov.co/Transparencia/PlaneacionGestionyControl/Plan%20de%20Desarrollo%202024-2027.pdf",
+    "https://www.sanjeronimo-antioquia.gov.co/Transparencia/BancoDocumentos/Bolet%C3%ADn%20virtual%20No.%201%20-%20Oficina%20de%20Turismo%20del%20municipio%20de%20San%20Jer%C3%B3nimo%20-%20Mayo.pdf",
+    "https://infolocal.comfenalcoantioquia.com/index.php/parque-los-tamarindos"
+  ],
+  "control_editorial": "Verificar vigencia de accesos y la correspondencia exacta de cada fotografía antes de ilustrar.",
+  "exclusiones_editoriales": [
+    {
+      "nombre": "Plaza de mercado",
+      "motivo": "Sin valor turístico singular sustentado; excluida por revisión editorial y solicitud del propietario."
+    }
+  ]
+}

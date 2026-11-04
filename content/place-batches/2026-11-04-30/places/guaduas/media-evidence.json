@@ -1,0 +1,178 @@
+[
+  {
+    "file": "images/guaduas-cover.webp",
+    "sha256": "51bfccc9aed5e7da5b99a23829da73bc949fa31b06e4989154e969c87088841b",
+    "bytes": 260506,
+    "source": "trabajo/patrimonio-15/portadas-ilustradas/revision-once/guaduas.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "guaduas-cover",
+      "archivo": "portadas-ilustradas/revision-once/guaduas.webp",
+      "revision_humana": "aprobada",
+      "nota": "Aprobación del lote en el chat; cotejar huella con registro de conversiones."
+    }
+  },
+  {
+    "file": "images/guaduas-01.webp",
+    "sha256": "8514e504571d2a3cde7cb1d1a4cf71cf31ec0cfd2358a4d55f83be215fa8a06b",
+    "bytes": 409020,
+    "source": "trabajo/patrimonio-15/que-conocer/ilustraciones/guaduas-01.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "guaduas-01",
+      "destino": "guaduas",
+      "atractivo": "Plaza de la Constitución",
+      "archivo": "ilustraciones/guaduas-01.webp",
+      "preview": "ilustraciones/guaduas-01.webp",
+      "tipo": "ilustracion_IA",
+      "herramienta": "image_gen",
+      "prompt": "ilustraciones/guaduas-01.prompt.txt",
+      "fuentes_factuales": [
+        {
+          "id": "F1",
+          "url": "https://colombia.travel/es/guaduas?page=0",
+          "consulta": "2026-11-02"
+        },
+        {
+          "id": "F2",
+          "url": "https://www.redturisticadepueblospatrimonio.com.co/es/pueblos/villa-de-guaduas",
+          "consulta": "2026-11-02"
+        }
+      ],
+      "referencia": {
+        "archivo": "referencias/guaduas-01.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File:Guaduas_Plaza_Prinicipal.JPG",
+        "autor": "Fernando Rueda",
+        "licencia": "CC BY-SA 3.0",
+        "fecha_consulta": "2026-11-03",
+        "fecha_publicacion": "No confirmada",
+        "fecha_captura": "No confirmada"
+      },
+      "sha256": "8514e504571d2a3cde7cb1d1a4cf71cf31ec0cfd2358a4d55f83be215fa8a06b",
+      "revision_humana": "aprobada",
+      "publicado": false,
+      "fecha_aprobacion": "2026-11-03"
+    }
+  },
+  {
+    "file": "images/guaduas-02.webp",
+    "sha256": "d985aef48e3c3b72a8ef81cdcdd9c0bf473d764c3236a5efdbf762219f8fd3b2",
+    "bytes": 311984,
+    "source": "trabajo/patrimonio-15/que-conocer/ilustraciones/guaduas-02.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "guaduas-02",
+      "destino": "guaduas",
+      "atractivo": "Casa Museo de Policarpa Salavarrieta",
+      "archivo": "ilustraciones/guaduas-02.webp",
+      "preview": "ilustraciones/guaduas-02.webp",
+      "tipo": "ilustracion_IA",
+      "herramienta": "image_gen",
+      "prompt": "ilustraciones/guaduas-02.prompt.txt",
+      "fuentes_factuales": [
+        {
+          "id": "F2",
+          "url": "https://www.redturisticadepueblospatrimonio.com.co/es/pueblos/villa-de-guaduas",
+          "consulta": "2026-11-02"
+        },
+        {
+          "id": "F3",
+          "url": "https://normograma.mincultura.gov.co/mincultura/compilacion/docs/resolucion_mincultura_2908_2013.htm",
+          "consulta": "2026-11-02"
+        }
+      ],
+      "referencia": {
+        "archivo": "referencias/guaduas-02.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File:Antigua_casa_en_donde_vivi%C3%B3_Policarpa_Salavarrieta.JPG",
+        "autor": "Kamilokardona",
+        "licencia": "CC BY-SA 3.0",
+        "fecha_consulta": "2026-11-03",
+        "fecha_publicacion": "No confirmada",
+        "fecha_captura": "No confirmada"
+      },
+      "sha256": "d985aef48e3c3b72a8ef81cdcdd9c0bf473d764c3236a5efdbf762219f8fd3b2",
+      "revision_humana": "aprobada",
+      "publicado": false,
+      "fecha_aprobacion": "2026-11-03"
+    }
+  },
+  {
+    "file": "images/guaduas-03.webp",
+    "sha256": "83300077a6a0f501d2632c9615169f428ae23d929898537e9d3beeae2c2a3b5c",
+    "bytes": 287098,
+    "source": "trabajo/patrimonio-15/que-conocer/ilustraciones/guaduas-03.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "guaduas-03",
+      "destino": "guaduas",
+      "atractivo": "Antiguo convento de La Soledad",
+      "archivo": "ilustraciones/guaduas-03.webp",
+      "preview": "ilustraciones/guaduas-03.webp",
+      "tipo": "ilustracion_IA",
+      "herramienta": "image_gen",
+      "prompt": "ilustraciones/guaduas-03.prompt.txt",
+      "fuentes_factuales": [
+        {
+          "id": "F2",
+          "url": "https://www.redturisticadepueblospatrimonio.com.co/es/pueblos/villa-de-guaduas",
+          "consulta": "2026-11-02"
+        }
+      ],
+      "referencia": {
+        "archivo": "referencias/guaduas-03.jpg",
+        "url": "https://nidodelcondor.co/2021/03/16/a-punto-de-caerse-el-convento-de-la-soledad-en-guaduas/",
+        "autor": "No confirmado",
+        "licencia": "No confirmado — borrador privado",
+        "fecha_consulta": "2026-11-03",
+        "fecha_publicacion": "No confirmada",
+        "fecha_captura": "No confirmada"
+      },
+      "sha256": "83300077a6a0f501d2632c9615169f428ae23d929898537e9d3beeae2c2a3b5c",
+      "revision_humana": "aprobada",
+      "publicado": false,
+      "fecha_aprobacion": "2026-11-03"
+    }
+  },
+  {
+    "file": "images/guaduas-04.webp",
+    "sha256": "9e1d7eac4db99814d5954375e3a51756b9d674cc1141bcb69f1a3ad33631f3d1",
+    "bytes": 172868,
+    "source": "trabajo/patrimonio-15/que-conocer/ilustraciones/guaduas-04.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "guaduas-04",
+      "destino": "guaduas",
+      "atractivo": "Piedra Capira",
+      "archivo": "ilustraciones/guaduas-04.webp",
+      "preview": "ilustraciones/guaduas-04.webp",
+      "tipo": "ilustracion_IA",
+      "herramienta": "image_gen",
+      "prompt": "ilustraciones/guaduas-04.prompt.txt",
+      "fuentes_factuales": [
+        {
+          "id": "F1",
+          "url": "https://colombia.travel/es/guaduas?page=0",
+          "consulta": "2026-11-02"
+        },
+        {
+          "id": "F2",
+          "url": "https://www.redturisticadepueblospatrimonio.com.co/es/pueblos/villa-de-guaduas",
+          "consulta": "2026-11-02"
+        }
+      ],
+      "referencia": {
+        "archivo": "referencias/guaduas-04.jpg",
+        "url": "https://www.eltiempo.com/vida/viajar/guaduas-guia-para-conocer-este-destino-que-lo-ofrece-todo-604842",
+        "autor": "No confirmado",
+        "licencia": "No confirmado — borrador privado",
+        "fecha_consulta": "2026-11-03",
+        "fecha_publicacion": "No confirmada",
+        "fecha_captura": "No confirmada"
+      },
+      "sha256": "9e1d7eac4db99814d5954375e3a51756b9d674cc1141bcb69f1a3ad33631f3d1",
+      "revision_humana": "aprobada",
+      "publicado": false,
+      "fecha_aprobacion": "2026-11-03"
+    }
+  }
+]

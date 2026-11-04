@@ -1,0 +1,40 @@
+{
+  "lorica-centre": {
+    "latitude": 9.2265892,
+    "longitude": -75.8190912,
+    "label": "Parque Simón Bolívar",
+    "point_type": "identified_urban_centre",
+    "source": "https://www.openstreetmap.org/way/192164388",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "lorica-01": {
+    "latitude": 9.2261622,
+    "longitude": -75.8186567,
+    "label": "Mercado Público",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/way/153195004",
+    "evidence": "geography-candidates/lorica-01-fallback.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "lorica-03": {
+    "latitude": 9.283585,
+    "longitude": -75.893984,
+    "label": "Ribera del Sinú desde el puente",
+    "point_type": "documented_viewpoint_on_site",
+    "source": "https://commons.wikimedia.org/wiki/File:Rio_sinu_desde_el_puente_-_panoramio.jpg",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "lorica-04": {
+    "latitude": 9.2255647,
+    "longitude": -75.7894464,
+    "label": "San Sebastián",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/node/703319309",
+    "evidence": "geography-candidates/lorica-04-fallback.json",
+    "verified_identity": true,
+    "access_verified": false
+  }
+}

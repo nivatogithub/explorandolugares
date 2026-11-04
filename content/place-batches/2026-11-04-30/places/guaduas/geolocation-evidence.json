@@ -1,0 +1,41 @@
+{
+  "guaduas-centre": {
+    "latitude": 5.067512,
+    "longitude": -74.595062,
+    "label": "Plaza de la Constitución",
+    "point_type": "identified_urban_centre",
+    "source": "https://www.openstreetmap.org/way/243981342",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "guaduas-01": {
+    "latitude": 5.067512,
+    "longitude": -74.595062,
+    "label": "Plaza de la Constitución",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/way/243981342",
+    "evidence": "geography-candidates/guaduas-01.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "guaduas-02": {
+    "latitude": 5.0666865,
+    "longitude": -74.5958084,
+    "label": "Casa de Policarpa Salavarrieta",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/node/10872573909",
+    "evidence": "geography-candidates/guaduas-02-fallback.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "guaduas-04": {
+    "latitude": 5.0902756,
+    "longitude": -74.6350274,
+    "label": "Piedra de Capira",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/node/2513440488",
+    "evidence": "geography-candidates/guaduas-04.json",
+    "verified_identity": true,
+    "access_verified": false
+  }
+}

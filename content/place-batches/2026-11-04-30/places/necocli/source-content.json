@@ -1,0 +1,50 @@
+{
+  "nombre": "Necoclí",
+  "estado": "borrador_no_publicable",
+  "presentacion": "Paisaje costero, memoria y sabores del Urabá antioqueño.",
+  "historia_base": "La historia de Necoclí reúne raíces indígenas y vida caribeña. La pesca, las artesanías y la relación con el mar forman parte de su identidad, junto a comunidades que conservan saberes propios.",
+  "que_conocer": [
+    {
+      "nombre": "Playas urbanas",
+      "descripcion_base": "Conoce el frente costero y consulta las condiciones del mar.",
+      "estado": "por_revalidar",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica"
+    },
+    {
+      "nombre": "Parque principal",
+      "descripcion_base": "Acércate al centro y sus espacios de encuentro.",
+      "estado": "por_revalidar",
+      "referencia_visual": "referencias/necocli-2.webp",
+      "verificacion_imagen": "Asociación heredada; pendiente de cotejo visual",
+      "estado_imagen": "referencia_disponible"
+    },
+    {
+      "nombre": "El Totumo",
+      "descripcion_base": "Un corregimiento para conocer otra parte de la costa municipal.",
+      "estado": "por_revalidar",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica"
+    },
+    {
+      "nombre": "Ciénagas de La Marimonda y El Salado",
+      "tipo": "humedales",
+      "descripcion_base": "Paisaje de humedales y observación de fauna; confirmar recorrido comunitario, acceso y condiciones actuales del área protegida.",
+      "estado": "seleccionado_para_ampliacion_editorial",
+      "verificacion": "existencia_documentada; acceso_vigente_por_cerrar",
+      "fuente": "https://corpouraba.gov.co/wp-content/uploads/2026/03/CORPOURABA-INFORME-DE-GESTION-WORD-2025-FIN.pdf",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica",
+      "publicable": false,
+      "fecha_revision": "2026-11-03",
+      "decision_usuario": "inclusion_aprobada"
+    }
+  ],
+  "fuentes": [
+    "https://necocli-antioquia.gov.co/MiMunicipio/Paginas/Pasado%2C-Presente-y-Futuro.aspx",
+    "https://www.necocli-antioquia.gov.co/NuestraAlcaldia/SaladePrensa/Paginas/El-Totumo-le-apuesta-a-unas-playas-limpias-y-sostenibles-.aspx",
+    "https://www.antioquia.gov.co/images/pdf/anuario2014/es-CO/capitulos/turismo/rutas/cp-16-3-3/uraba/necocli.html",
+    "https://corpouraba.gov.co/wp-content/uploads/2026/03/CORPOURABA-INFORME-DE-GESTION-WORD-2025-FIN.pdf"
+  ],
+  "control_editorial": "Reemplazar la propuesta de portada: el detalle de una embarcación no representa suficientemente el destino. No atribuir la costa de Bajo Caribaná a El Totumo."
+}

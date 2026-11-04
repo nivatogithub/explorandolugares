@@ -1,0 +1,95 @@
+[
+  {
+    "file": "images/necocli-cover.webp",
+    "sha256": "49a14d72a1fc49627672edae58ea55cfe11f21749976f6aff614210a2c33ed53",
+    "bytes": 352098,
+    "source": "trabajo/antioquia-15/ilustraciones/necocli-playa.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "necocli-playa",
+      "destino": "necocli",
+      "nombre_destino": "Necoclí",
+      "tipo": "portada",
+      "atractivo": "Portada · Necoclí",
+      "descripcion": "Propuesta de imagen representativa del destino. Se revisa por separado de sus atractivos.",
+      "sha256": "49a14d72a1fc49627672edae58ea55cfe11f21749976f6aff614210a2c33ed53",
+      "referencia": {
+        "archivo": "necocli/referencias/playa-referencia-ligera.webp",
+        "autor": "No confirmado",
+        "licencia": "Permiso no confirmado",
+        "url": "https://www.necocli-antioquia.gov.co/NuestraAlcaldia/SalaDePrensa/Paginas/Las-playas-de-Necocl%C3%AD-est%C3%A1n-listas-para-el-CARNAVAL-DE-VERANO-2024-%E2%80%9CDanzando-Sin-Pasaporte%E2%80%9D.aspx",
+        "fecha_foto": "No comprobada"
+      },
+      "preview": "ilustraciones/necocli-playa.webp",
+      "archivo": "ilustraciones/necocli-playa.webp",
+      "revision_humana": "aprobada",
+      "publicacion_autorizada": false,
+      "prompt": "Ilustración editorial de necocli, sitio playa, basada estrictamente en la fotografía adjunta. Tinta fina y gouache, caricatura realista a color, conservando la arquitectura, formas, proporciones, vegetación y objetos reales visibles. Mantén los colores reales (sin sepia ni filtro amarillo). Sin inventar elementos ni detalles arqueológicos. No collage ni letras nuevas. Encuadre horizontal 3:2 respetando la escena y sin cortar el protagonista.",
+      "herramienta": "image_gen integrada",
+      "referencias_adicionales": [],
+      "lote": "original"
+    }
+  },
+  {
+    "file": "images/necocli-marimonda.webp",
+    "sha256": "8df0fa5beeca8ec828923e000759652cd9153723c572e25ad80ff6b9770889fe",
+    "bytes": 251450,
+    "source": "trabajo/antioquia-15/ilustraciones/necocli-marimonda.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "necocli-marimonda",
+      "destino": "necocli",
+      "nombre_destino": "Necoclí",
+      "tipo": "que-conocer",
+      "atractivo": "Ciénaga La Marimonda",
+      "descripcion": "La fotografía identifica La Marimonda; no representa también la ciénaga El Salado.",
+      "sha256": "8df0fa5beeca8ec828923e000759652cd9153723c572e25ad80ff6b9770889fe",
+      "referencia": {
+        "archivo": "ampliacion-referencias/marimonda-vista.jpg",
+        "autor": "NPC (crédito de la publicación)",
+        "licencia": "No confirmada; borrador privado",
+        "url": "https://www.elpais.com.co/turismo/imperdible-destino-en-antioquia-el-espejo-de-agua-dulce-para-una-experiencia-natural-unica-2405.html",
+        "fecha_foto": "Julio de 2025 (publicación)"
+      },
+      "preview": "ilustraciones/necocli-marimonda.webp",
+      "archivo": "ilustraciones/necocli-marimonda.webp",
+      "revision_humana": "aprobada",
+      "publicacion_autorizada": false,
+      "prompt": "Use case: style-transfer. Ilustración editorial de Explorando Lugares, caricatura realista en tinta fina y gouache, a color, pinceladas visibles y fidelidad arquitectónica y geográfica. No foto filtrada, no dominante amarilla artificial. Formato final obligatorio horizontal 3:2, 1536 x 1024, nunca panorámico. Borrador privado. Basada exclusivamente en la referencia. Mantén la relación verdadera entre dosel boscoso en primer plano y estrecha franja azul del humedal al fondo con orilla distante baja. Recorte3:2 quitando solo parte del cielo superior y poco del dosel inferior. No ampliar artificialmente el agua ni inventar palafitos, aves o montañas.",
+      "herramienta": "image_gen integrada",
+      "referencias_adicionales": [],
+      "lote": "ampliacion"
+    }
+  },
+  {
+    "file": "images/necocli-totumo.webp",
+    "sha256": "89d6a6e6255cdc7d4550bb98859ecdf1781f0228a10c9988c200776777a866d5",
+    "bytes": 201818,
+    "source": "trabajo/antioquia-15/ilustraciones/necocli-totumo.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "necocli-totumo",
+      "destino": "necocli",
+      "nombre_destino": "Necoclí",
+      "tipo": "que-conocer",
+      "atractivo": "Playa de El Totumo",
+      "descripcion": "",
+      "sha256": "89d6a6e6255cdc7d4550bb98859ecdf1781f0228a10c9988c200776777a866d5",
+      "referencia": {
+        "archivo": "necocli/referencias/totumo.jpg",
+        "autor": "No confirmado",
+        "licencia": "Permiso no confirmado",
+        "url": "https://necocli-antioquia.gov.co/MiMunicipio/Paginas/Sitios-de-Interes.aspx",
+        "fecha_foto": "No comprobada"
+      },
+      "preview": "ilustraciones/necocli-totumo.webp",
+      "archivo": "ilustraciones/necocli-totumo.webp",
+      "revision_humana": "aprobada",
+      "publicacion_autorizada": false,
+      "prompt": "Convierte la fotografía real adjunta de necocli, necocli-totumo, en ilustración editorial de tinta fina y gouache, caricatura realista a color natural. Mantén fielmente arquitectura, proporciones, paisaje y elementos reales. No inventes edificios, montañas ni objetos. Imagen horizontal 3:2. Sin filtro amarillo ni sepia, sin texto nuevo. Usa SOLO la fotografía grande superior, descarta las miniaturas inferiores y crea una sola escena, no un collage.",
+      "herramienta": "image_gen integrada",
+      "referencias_adicionales": [],
+      "lote": "original"
+    }
+  }
+]

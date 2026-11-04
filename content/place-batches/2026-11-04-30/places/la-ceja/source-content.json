@@ -1,0 +1,69 @@
+{
+  "nombre": "La Ceja",
+  "estado": "borrador_no_publicable",
+  "presentacion": "La Ceja reúne patrimonio religioso, espacios culturales y paisajes del Oriente antioqueño. El parque permite empezar por la cabecera; las salidas rurales requieren planificarse por separado.",
+  "historia_base": "La selección inicial se concentra en la Capilla Museo de Chiquinquirá, la Basílica del Carmen y el Teatro Juan de Dios Aranzazu. La cronología histórica queda por contrastar antes de cerrar el texto.",
+  "que_conocer": [
+    {
+      "nombre": "Capilla Museo Nuestra Señora de Chiquinquirá",
+      "descripcion_base": "Patrimonio y arte religioso.",
+      "estado": "identificado_en_fuente_municipal",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica"
+    },
+    {
+      "nombre": "Basílica Menor Nuestra Señora del Carmen",
+      "descripcion_base": "Arquitectura religiosa en la cabecera.",
+      "estado": "identificado_en_fuente_municipal",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica"
+    },
+    {
+      "nombre": "Teatro Municipal Juan de Dios Aranzazu",
+      "descripcion_base": "Espacio cultural del municipio.",
+      "estado": "identificado_en_fuente_municipal",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica"
+    },
+    {
+      "nombre": "Cerro El Capiro",
+      "tipo": "bosque_montana",
+      "descripcion_base": "Área protegida compartida con Rionegro; precisar sendero y acceso, sin duplicar el atractivo en el conteo del lote.",
+      "estado": "seleccionado_para_ampliacion_editorial",
+      "verificacion": "existencia_documentada; acceso_vigente_por_cerrar",
+      "fuente": "https://www.cornare.gov.co/SIAR/Plan-de-manejo/DRMI-el-capiro/Plan_de_Manejo_DRMI_El_Capiro.pdf",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica",
+      "publicable": false,
+      "fecha_revision": "2026-11-03",
+      "id_atractivo_compartido": "cerro-el-capiro",
+      "decision_usuario": "inclusion_aprobada"
+    }
+  ],
+  "fuentes": [
+    "https://www.laceja-antioquia.gov.co/publicaciones/57/presentacion/",
+    "https://www.laceja-antioquia.gov.co/directorio/42/cultura-y-patrimonio/",
+    "https://www.cornare.gov.co/SIAR/Plan-de-manejo/DRMI-el-capiro/Plan_de_Manejo_DRMI_El_Capiro.pdf"
+  ],
+  "control_editorial": "La referencia del parque es de 2019. Verificar apariencia vigente antes de generar; confirmar acceso y localización exacta del Salto del Río Buey.",
+  "excursiones_cercanas": [
+    {
+      "nombre": "Salto del Río Buey",
+      "descripcion_base": "Salto del Buey: salida al entorno La Ceja–Abejorral. El acceso del ecoparque figura en El Guaico, Abejorral; la reserva describe su ubicación entre ambos municipios. No atribuir exclusivamente la cascada a La Ceja sin verificar coordenadas y límite municipal.",
+      "estado": "ubicacion_regional_documentada_jurisdiccion_exacta_por_verificar",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica",
+      "relacion_con_destino": "excursion_desde_la_ceja",
+      "municipios_relacionados": [
+        "La Ceja",
+        "Abejorral"
+      ],
+      "contar_como_atractivo_exclusivo_del_municipio": false,
+      "fuentes_ubicacion": [
+        "https://www.saltodelbuey.com/",
+        "https://gis.prosperidadsocial.gov.co/VigiasAmbientalesv1/documentos/Lugaresdeinteresambiental_130522.pdf"
+      ],
+      "publicable": false
+    }
+  ]
+}

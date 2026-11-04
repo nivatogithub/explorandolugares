@@ -1,0 +1,63 @@
+{
+  "nombre": "Sopetrán",
+  "estado": "borrador_no_publicable",
+  "presentacion": "Descubre un pueblo del Occidente a través de su parque y sus tradiciones.",
+  "historia_base": "La agricultura y la devoción religiosa forman parte de la memoria de Sopetrán. Su historia se encuentra en el centro urbano y en la relación de sus habitantes con las tierras cálidas del Occidente.",
+  "que_conocer": [
+    {
+      "nombre": "Parque El Libertador",
+      "descripcion_base": "Conoce el espacio de encuentro del centro urbano.",
+      "estado": "por_revalidar",
+      "referencia_visual": "referencias/sopetran-2.webp",
+      "verificacion_imagen": "Asociación heredada; pendiente de cotejo visual",
+      "estado_imagen": "referencia_disponible"
+    },
+    {
+      "nombre": "Basílica de Nuestra Señora de la Asunción",
+      "descripcion_base": "Acércate a la tradición religiosa del municipio.",
+      "estado": "por_revalidar",
+      "referencia_visual": "referencias/sopetran-2.webp",
+      "verificacion_imagen": "Asociación heredada; pendiente de cotejo visual",
+      "estado_imagen": "referencia_disponible"
+    },
+    {
+      "nombre": "Calles del centro",
+      "descripcion_base": "Recorre fachadas y comercios alrededor del parque.",
+      "estado": "por_revalidar",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica"
+    },
+    {
+      "nombre": "Salto del Gallinazo",
+      "tipo": "cascadas",
+      "descripcion_base": "Conjunto de cascadas en Chagualal; cerrar acceso actual y recorrido antes de publicar.",
+      "estado": "seleccionado_para_ampliacion_editorial",
+      "verificacion": "existencia_documentada; acceso_vigente_por_cerrar",
+      "fuente": "https://infolocal.comfenalcoantioquia.com/index.php/agenda/cascada-sopetran",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica",
+      "publicable": false,
+      "fecha_revision": "2026-11-03",
+      "decision_usuario": "inclusion_aprobada"
+    },
+    {
+      "nombre": "Mirador de Chagualal",
+      "tipo": "mirador_natural",
+      "descripcion_base": "Paisaje del municipio desde la vereda Chagualal; comprobar punto y acceso.",
+      "estado": "seleccionado_para_ampliacion_editorial",
+      "verificacion": "existencia_documentada; acceso_vigente_por_cerrar",
+      "fuente": "https://repositoriocdim.esap.edu.co/server/api/core/bitstreams/480562ec-6ead-46e1-a333-65a39db0e247/content",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica",
+      "publicable": false,
+      "fecha_revision": "2026-11-03",
+      "decision_usuario": "inclusion_aprobada"
+    }
+  ],
+  "fuentes": [
+    "https://www.antioquia.gov.co/images/pdf/anuario2014/es-CO/capitulos/turismo/rutas/cp-16-3-3/occidente/sopetran.html",
+    "https://infolocal.comfenalcoantioquia.com/index.php/agenda/cascada-sopetran",
+    "https://repositoriocdim.esap.edu.co/server/api/core/bitstreams/480562ec-6ead-46e1-a333-65a39db0e247/content"
+  ],
+  "control_editorial": "Verificar vigencia de accesos y la correspondencia exacta de cada fotografía antes de ilustrar."
+}

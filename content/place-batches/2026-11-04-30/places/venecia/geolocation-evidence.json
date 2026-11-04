@@ -1,0 +1,42 @@
+{
+  "venecia-centre": {
+    "latitude": 5.963495,
+    "longitude": -75.7339329,
+    "label": "Parque Principal",
+    "point_type": "identified_urban_centre",
+    "source": "https://www.openstreetmap.org/way/393614767",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "venecia-cerro-bravo": {
+    "latitude": 5.95,
+    "longitude": -75.7,
+    "label": "Cerro Bravo",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/node/616074042",
+    "evidence": "geography-candidates/venecia-cerro-bravo.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "venecia-qc-1": {
+    "latitude": 5.9647365,
+    "longitude": -75.7707216,
+    "label": "Cerro Tusa",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/node/703176682",
+    "evidence": "geography-candidates/venecia-qc-1.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "venecia-zenufana": {
+    "latitude": 5.9627691,
+    "longitude": -75.7343703,
+    "label": "Museo Cerro Tusa Zenufaná",
+    "point_type": "site_reference",
+    "source": "https://museumspedia.net/es/i/17242-museo-cerro-tusa-zenufana/",
+    "corroborating_source": "https://museocerrotusazenufana.wordpress.com/acerca-del-museo/",
+    "verified_identity": true,
+    "access_verified": false,
+    "note": "Ficha cartográfica del museo y dirección del museo: pasaje peatonal, a 100 m del parque. Punto del sitio, no certificación de acceso."
+  }
+}

@@ -1,0 +1,89 @@
+[
+  {
+    "file": "images/la-playa-de-belen-cover.webp",
+    "sha256": "8c2e494d4d7178892c19d9c047f062d067799a323ef1c041c6c9376c4d1ad67a",
+    "bytes": 390734,
+    "source": "trabajo/patrimonio-15/portadas-ilustradas/revision-once/la-playa-de-belen.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "la-playa-de-belen-cover",
+      "archivo": "portadas-ilustradas/revision-once/la-playa-de-belen.webp",
+      "revision_humana": "aprobada",
+      "nota": "Aprobación del lote en el chat; cotejar huella con registro de conversiones."
+    }
+  },
+  {
+    "file": "images/la-playa-de-belen-01.webp",
+    "sha256": "0e9d85d0ac8fe24dd7f5f417784f3001da67db97a98d9ad8efb604e62cc16e45",
+    "bytes": 418166,
+    "source": "trabajo/patrimonio-15/que-conocer/ilustraciones/la-playa-de-belen-01.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "la-playa-de-belen-01",
+      "destino": "la-playa-de-belen",
+      "atractivo": "Centro histórico",
+      "archivo": "ilustraciones/la-playa-de-belen-01.webp",
+      "preview": "ilustraciones/la-playa-de-belen-01.webp",
+      "tipo": "ilustracion_IA",
+      "herramienta": "image_gen",
+      "prompt": "ilustraciones/la-playa-de-belen-01.prompt.txt",
+      "fuentes_factuales": [
+        {
+          "id": "F1",
+          "url": "https://colombia.travel/es/la-playa-de-belen",
+          "consulta": "2026-11-02"
+        }
+      ],
+      "referencia": {
+        "archivo": "referencias/la-playa-de-belen-01.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File:La_Playa_de_Bel%C3%A9n,_Norte_de_Santander_-_51818255378.jpg",
+        "autor": ")gab(:",
+        "licencia": "CC BY-SA 2.0",
+        "fecha_consulta": "2026-11-03",
+        "fecha_publicacion": "No confirmada",
+        "fecha_captura": "No confirmada"
+      },
+      "sha256": "0e9d85d0ac8fe24dd7f5f417784f3001da67db97a98d9ad8efb604e62cc16e45",
+      "revision_humana": "aprobada",
+      "publicado": false,
+      "fecha_aprobacion": "2026-11-03"
+    }
+  },
+  {
+    "file": "images/la-playa-de-belen-02.webp",
+    "sha256": "ec4d6df9d3eb3f91098636bd792035a5d0258343504805457adc6ff605ba4b80",
+    "bytes": 304802,
+    "source": "trabajo/patrimonio-15/que-conocer/ilustraciones/la-playa-de-belen-02.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "la-playa-de-belen-02",
+      "destino": "la-playa-de-belen",
+      "atractivo": "Área Natural Única Los Estoraques",
+      "archivo": "ilustraciones/la-playa-de-belen-02.webp",
+      "preview": "ilustraciones/la-playa-de-belen-02.webp",
+      "tipo": "ilustracion_IA",
+      "herramienta": "image_gen",
+      "prompt": "ilustraciones/la-playa-de-belen-02.prompt.txt",
+      "fuentes_factuales": [
+        {
+          "id": "F2",
+          "url": "https://www.parquesnacionales.gov.co/nuestros-parques/anu-los-estoraques/",
+          "consulta": "2026-11-02"
+        }
+      ],
+      "referencia": {
+        "archivo": "referencias/la-playa-de-belen-02.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File:Los_Estoraques,_Norte_de_Santander.jpg",
+        "autor": ")gab(:",
+        "licencia": "CC BY-SA 2.0",
+        "fecha_consulta": "2026-11-03",
+        "fecha_publicacion": "No confirmada",
+        "fecha_captura": "No confirmada"
+      },
+      "sha256": "ec4d6df9d3eb3f91098636bd792035a5d0258343504805457adc6ff605ba4b80",
+      "revision_humana": "aprobada",
+      "publicado": false,
+      "fecha_aprobacion": "2026-11-03"
+    }
+  }
+]

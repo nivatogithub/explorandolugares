@@ -1,0 +1,55 @@
+{
+  "slug": "tamesis",
+  "lot": "antioquia-15",
+  "name": "Támesis",
+  "base_commit": "eae3d38b14a41fd26c69047ea4ed980a146d5186",
+  "source": "trabajo/antioquia-15/tamesis/contenido-es.json",
+  "source_sha256": "8b01e51a6bd3072954b085275ab21204d35ae3324a6edf76987bc6ccac196c83",
+  "status": "draft_in_dev1",
+  "images": 6,
+  "attractions": 5,
+  "draft_created": true,
+  "dev1_tested": true,
+  "preprod_ready": false,
+  "production_authorized": false,
+  "pending": [
+    {
+      "type": "editorial_description",
+      "id": "tamesis-templo",
+      "name": "Templo San Antonio de Padua"
+    },
+    {
+      "type": "translations",
+      "locales": [
+        "en",
+        "pt-BR"
+      ],
+      "note": "Traducir la versión vigente; no reutilizar borradores anteriores."
+    },
+    {
+      "type": "geolocation",
+      "count": 6,
+      "note": "Verificar núcleo urbano, sitios físicos y fichas nombradas de Maps; sin centroides ni pines inventados."
+    },
+    {
+      "type": "editorial_review",
+      "note": "Contrastar vigencia, nombres, accesos, experiencias y correspondencia con imágenes."
+    },
+    {
+      "type": "visual_review",
+      "note": "Pendiente revisión humana de las páginas construidas; HTTP e imágenes verificados."
+    }
+  ],
+  "dev1_id": 10077,
+  "dev1_preview": "http://127.0.0.1:8086/lugares/tamesis/?preview=1",
+  "dev1_public": true,
+  "dev1_url": "http://127.0.0.1:8086/lugares/tamesis/",
+  "visible_attractions": 2,
+  "pending_geolocation": [
+    "tamesis-organales",
+    "tamesis-petroglifos",
+    "tamesis-templo"
+  ],
+  "package_validated": true,
+  "ready_for_preprod": false
+}

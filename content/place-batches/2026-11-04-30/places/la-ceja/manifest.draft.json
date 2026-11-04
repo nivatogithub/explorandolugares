@@ -1,0 +1,335 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "la-ceja",
+    "department": "Antioquia",
+    "subregion": "",
+    "country_code": "CO",
+    "destination_type": "municipality",
+    "latitude": 6.0311842,
+    "longitude": -75.4324125,
+    "translations": {
+      "es": {
+        "display_name": "La Ceja",
+        "eyebrow": "",
+        "headline": "Entre patrimonio y montañas",
+        "intro": "La Ceja reúne patrimonio religioso, espacios culturales y paisajes del Oriente antioqueño. El parque permite empezar por la cabecera; las salidas rurales requieren planificarse por separado.",
+        "meta_description": "La Ceja reúne patrimonio religioso, espacios culturales y paisajes del Oriente antioqueño. El parque permite empezar por la cabecera; las salidas rurales requie"
+      },
+      "en": {
+        "display_name": "La Ceja",
+        "eyebrow": "",
+        "headline": "Between heritage and mountains",
+        "intro": "La Ceja brings together religious heritage, cultural spaces and the landscapes of eastern Antioquia. Start in the town centre and plan rural outings separately.",
+        "meta_description": "La Ceja brings together religious heritage, cultural spaces and the landscapes of eastern Antioquia. Start in the town centre and plan rural outings separately."
+      },
+      "pt-BR": {
+        "display_name": "La Ceja",
+        "eyebrow": "",
+        "headline": "Entre patrimônio e montanhas",
+        "intro": "La Ceja reúne patrimônio religioso, espaços culturais e paisagens do leste de Antioquia. Comece pelo centro e planeje os passeios rurais separadamente.",
+        "meta_description": "La Ceja reúne patrimônio religioso, espaços culturais e paisagens do leste de Antioquia. Comece pelo centro e planeje os passeios rurais separadamente."
+      }
+    },
+    "history": {
+      "es": [
+        "La Capilla Museo de Chiquinquirá y la Basílica del Carmen forman parte del patrimonio religioso y cultural de La Ceja."
+      ],
+      "en": [
+        "The Capilla Museo de Chiquinquirá and the Basílica del Carmen are part of La Ceja's religious and cultural heritage."
+      ],
+      "pt-BR": [
+        "A Capilla Museo de Chiquinquirá e a Basílica del Carmen fazem parte do patrimônio religioso e cultural de La Ceja."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "La Ceja reúne patrimonio religioso y artístico en la basílica y la Capilla Museo de Nuestra Señora de Chiquinquirá. El Salto del Buey ofrece una alternativa de naturaleza que requiere una salida rural planificada por separado."
+      ],
+      "en": [
+        "La Ceja brings together religious and artistic heritage in its basilica and Nuestra Señora de Chiquinquirá chapel museum. Salto del Buey offers a nature outing that requires separate rural travel planning."
+      ],
+      "pt-BR": [
+        "La Ceja reúne patrimônio religioso e artístico na basílica e na Capela Museu de Nuestra Señora de Chiquinquirá. O Salto del Buey oferece uma alternativa de natureza que exige um passeio rural planejado à parte."
+      ]
+    },
+    "sources": {
+      "es": [
+        {
+          "section": "destination",
+          "label": "www.laceja-antioquia.gov.co",
+          "url": "https://www.laceja-antioquia.gov.co/publicaciones/57/presentacion/"
+        },
+        {
+          "section": "destination",
+          "label": "www.laceja-antioquia.gov.co",
+          "url": "https://www.laceja-antioquia.gov.co/directorio/42/cultura-y-patrimonio/"
+        },
+        {
+          "section": "destination",
+          "label": "www.cornare.gov.co",
+          "url": "https://www.cornare.gov.co/SIAR/Plan-de-manejo/DRMI-el-capiro/Plan_de_Manejo_DRMI_El_Capiro.pdf"
+        }
+      ],
+      "en": [
+        {
+          "section": "destination",
+          "label": "www.laceja-antioquia.gov.co",
+          "url": "https://www.laceja-antioquia.gov.co/publicaciones/57/presentacion/"
+        },
+        {
+          "section": "destination",
+          "label": "www.laceja-antioquia.gov.co",
+          "url": "https://www.laceja-antioquia.gov.co/directorio/42/cultura-y-patrimonio/"
+        },
+        {
+          "section": "destination",
+          "label": "www.cornare.gov.co",
+          "url": "https://www.cornare.gov.co/SIAR/Plan-de-manejo/DRMI-el-capiro/Plan_de_Manejo_DRMI_El_Capiro.pdf"
+        }
+      ],
+      "pt-BR": [
+        {
+          "section": "destination",
+          "label": "www.laceja-antioquia.gov.co",
+          "url": "https://www.laceja-antioquia.gov.co/publicaciones/57/presentacion/"
+        },
+        {
+          "section": "destination",
+          "label": "www.laceja-antioquia.gov.co",
+          "url": "https://www.laceja-antioquia.gov.co/directorio/42/cultura-y-patrimonio/"
+        },
+        {
+          "section": "destination",
+          "label": "www.cornare.gov.co",
+          "url": "https://www.cornare.gov.co/SIAR/Plan-de-manejo/DRMI-el-capiro/Plan_de_Manejo_DRMI_El_Capiro.pdf"
+        }
+      ]
+    }
+  },
+  "hero_image": {
+    "file": "images/la-ceja-cover.webp",
+    "image_origin": "ai_generated",
+    "image_creator": "Explorando Lugares · ilustración generada con IA",
+    "image_source_url": "",
+    "image_license": "",
+    "image_license_url": "",
+    "alt": {
+      "es": "Ilustración de La Ceja",
+      "en": "Illustration of La Ceja",
+      "pt-BR": "Ilustração de La Ceja"
+    },
+    "caption": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  "places": [
+    {
+      "slug": "la-ceja-basilica",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 6.0311842,
+      "longitude": -75.4324125,
+      "translations": {
+        "es": {
+          "name": "Basílica Nuestra Señora del Carmen",
+          "description": "Referente religioso y arquitectónico junto al parque principal de La Ceja.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "en": {
+          "name": "Basílica Nuestra Señora del Carmen",
+          "description": "A religious and architectural landmark beside La Ceja's main square.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "pt-BR": {
+          "name": "Basílica Nuestra Señora del Carmen",
+          "description": "Uma referência religiosa e arquitetônica junto à praça principal de La Ceja.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        }
+      },
+      "image": {
+        "file": "images/la-ceja-basilica.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · ilustración generada con IA",
+        "image_source_url": "",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Basílica Nuestra Señora del Carmen",
+          "en": "Illustration of Basílica Nuestra Señora del Carmen",
+          "pt-BR": "Ilustração de Basílica Nuestra Señora del Carmen"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "la-ceja-capilla",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 6.0303929,
+      "longitude": -75.4311611,
+      "translations": {
+        "es": {
+          "name": "Capilla Museo de Nuestra Señora de Chiquinquirá",
+          "description": "Una capilla y colección museológica para acercarse al patrimonio religioso de La Ceja. Confirma las condiciones de acceso al interior.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "en": {
+          "name": "Capilla Museo de Nuestra Señora de Chiquinquirá",
+          "description": "A chapel and museum collection that introduce La Ceja's religious heritage. Confirm interior access before visiting.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "pt-BR": {
+          "name": "Capilla Museo de Nuestra Señora de Chiquinquirá",
+          "description": "Uma capela e uma coleção museológica para conhecer o patrimônio religioso de La Ceja. Confirme o acesso interno antes da visita.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        }
+      },
+      "image": {
+        "file": "images/la-ceja-capilla.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · ilustración generada con IA",
+        "image_source_url": "",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Capilla Museo de Nuestra Señora de Chiquinquirá",
+          "en": "Illustration of Capilla Museo de Nuestra Señora de Chiquinquirá",
+          "pt-BR": "Ilustração de Capilla Museo de Nuestra Señora de Chiquinquirá"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "la-ceja-capiro",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 6.064,
+      "longitude": -75.404828,
+      "translations": {
+        "es": {
+          "name": "Cerro El Capiro",
+          "description": "Área protegida compartida con Rionegro. Organiza la visita por un sendero y acceso confirmados; ambas guías se refieren al mismo cerro.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "en": {
+          "name": "Cerro El Capiro",
+          "description": "A protected area shared with Rionegro. Plan a visit around a confirmed trail and access point; it is the same hill featured in both municipalities.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "pt-BR": {
+          "name": "Cerro El Capiro",
+          "description": "Uma área protegida compartilhada com Rionegro. Planeje a visita por uma trilha e um acesso confirmados; é o mesmo morro apresentado nos dois municípios.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        }
+      },
+      "image": {
+        "file": "images/la-ceja-capiro.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · ilustración generada con IA",
+        "image_source_url": "",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Cerro El Capiro",
+          "en": "Illustration of Cerro El Capiro",
+          "pt-BR": "Ilustração de Cerro El Capiro"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "la-ceja-salto-buey",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 5.9332152,
+      "longitude": -75.4456586,
+      "translations": {
+        "es": {
+          "name": "Salto del Buey",
+          "description": "Una cascada del entorno La Ceja–Abejorral. El acceso y las actividades de aventura dependen del recorrido elegido y de su responsable; consulta las condiciones antes de ir.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "en": {
+          "name": "Salto del Buey",
+          "description": "A waterfall in the La Ceja–Abejorral area. Access and adventure activities depend on the chosen route and its operator; check conditions beforehand.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "pt-BR": {
+          "name": "Salto del Buey",
+          "description": "Uma cachoeira na região de La Ceja–Abejorral. O acesso e as atividades de aventura dependem do percurso e de seu responsável; confirme as condições previamente.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        }
+      },
+      "image": {
+        "file": "images/la-ceja-salto-buey.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · ilustración generada con IA",
+        "image_source_url": "",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Salto del Buey",
+          "en": "Illustration of Salto del Buey",
+          "pt-BR": "Ilustração de Salto del Buey"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "2026-11-03",
+    "positioning": "",
+    "competitors": [],
+    "potential_allies": [],
+    "business_prospects": [],
+    "acquisition_strategies": [],
+    "sources": [],
+    "notes": [
+      "Preparación para revisión pública exclusivamente en dev1. Las fuentes, referencias y comprobaciones se conservan en el expediente individual. No autoriza producción."
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "slug": "puerto-triunfo",
+  "lot": "antioquia-15",
+  "name": "Puerto Triunfo",
+  "base_commit": "eae3d38b14a41fd26c69047ea4ed980a146d5186",
+  "source": "trabajo/antioquia-15/puerto-triunfo/contenido-es.json",
+  "source_sha256": "70a35e78abc1c0632a449bf3bafd761e7529cd18f9e3f47db9ec2f36ee5bbebd",
+  "status": "draft_in_dev1",
+  "images": 5,
+  "attractions": 4,
+  "draft_created": true,
+  "dev1_tested": true,
+  "preprod_ready": false,
+  "production_authorized": false,
+  "pending": [
+    {
+      "type": "editorial_description",
+      "id": "puerto-triunfo-rio-claro",
+      "name": "Corredor de Río Claro — excursión regional"
+    },
+    {
+      "type": "translations",
+      "locales": [
+        "en",
+        "pt-BR"
+      ],
+      "note": "Traducir la versión vigente; no reutilizar borradores anteriores."
+    },
+    {
+      "type": "geolocation",
+      "count": 3,
+      "note": "Verificar núcleo urbano, sitios físicos y fichas nombradas de Maps; sin centroides ni pines inventados."
+    },
+    {
+      "type": "editorial_review",
+      "note": "Contrastar vigencia, nombres, accesos, experiencias y correspondencia con imágenes."
+    },
+    {
+      "type": "visual_review",
+      "note": "Pendiente revisión humana de las páginas construidas; HTTP e imágenes verificados."
+    }
+  ],
+  "dev1_id": 10067,
+  "dev1_preview": "http://127.0.0.1:8086/lugares/puerto-triunfo/?preview=1",
+  "dev1_public": true,
+  "dev1_url": "http://127.0.0.1:8086/lugares/puerto-triunfo/",
+  "visible_attractions": 3,
+  "pending_geolocation": [
+    "puerto-triunfo-doradal"
+  ],
+  "package_validated": true,
+  "ready_for_preprod": false
+}

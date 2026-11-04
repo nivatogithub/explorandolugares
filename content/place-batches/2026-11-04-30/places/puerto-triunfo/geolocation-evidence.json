@@ -1,0 +1,21 @@
+{
+  "puerto-triunfo-centre": {
+    "latitude": 5.86894,
+    "longitude": -74.64083,
+    "label": "Parque principal de la cabecera de Puerto Triunfo",
+    "point_type": "identified_urban_centre",
+    "source": "https://mapcarta.com/W1547981779",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "puerto-triunfo-hacienda-napoles": {
+    "latitude": 5.9162989,
+    "longitude": -74.7245129,
+    "label": "Parque Temático Hacienda Nápoles",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/way/133508316",
+    "evidence": "geography-candidates/puerto-triunfo-hacienda-napoles.json",
+    "verified_identity": true,
+    "access_verified": false
+  }
+}

@@ -1,0 +1,157 @@
+[
+  {
+    "file": "images/el-penol-cover.webp",
+    "sha256": "3f822e50e131f25ba02ed8ccfc32afbfe010649707671dc0e7914b8e095f443e",
+    "bytes": 417998,
+    "source": "trabajo/antioquia-15/ilustraciones/el-penol-qc-2.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "el-penol-qc-2",
+      "destino": "el-penol",
+      "nombre_destino": "El Peñol",
+      "tipo": "portada",
+      "atractivo": "Portada · El Peñol",
+      "descripcion": "Propuesta de imagen representativa del destino. Se revisa por separado de sus atractivos.",
+      "sha256": "3f822e50e131f25ba02ed8ccfc32afbfe010649707671dc0e7914b8e095f443e",
+      "referencia": {
+        "archivo": "el-penol/referencias/el-penol-3.webp",
+        "autor": "Nathaly 1106",
+        "licencia": "CC BY 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Embalse_Pe%C3%B1ol-Guatape.jpg",
+        "fecha_foto": "No comprobada"
+      },
+      "preview": "ilustraciones/el-penol-qc-2.webp",
+      "archivo": "ilustraciones/el-penol-qc-2.webp",
+      "revision_humana": "aprobada",
+      "publicacion_autorizada": false,
+      "prompt": "Transforma esta referencia real de Embalse Peñol-Guatapé, el-penol, Antioquia, en ilustración editorial de viaje, tinta fina y gouache a color natural. Fidelidad estricta a edificios, paisaje, proporciones, ubicación y objetos de referencia. Sin inventar construcciones, sin volver azul agua marrón, sin cambiar el clima. Sin sepia ni amarillo dominante. Mantén composición y detalles reconocibles. No texto añadido. Una imagen horizontal 3:2, no collage.",
+      "herramienta": "image_gen integrada",
+      "referencias_adicionales": [],
+      "lote": "original"
+    }
+  },
+  {
+    "file": "images/el-penol-museo.webp",
+    "sha256": "ca16c5efefe927bc3ee111cbfdf4a2e877de36a7a3eabd3ef84b2b4b163bd243",
+    "bytes": 260118,
+    "source": "trabajo/antioquia-15/ilustraciones/el-penol-museo.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "el-penol-museo",
+      "destino": "el-penol",
+      "nombre_destino": "El Peñol",
+      "tipo": "que-conocer",
+      "atractivo": "Museo Histórico de El Peñol",
+      "descripcion": "",
+      "sha256": "ca16c5efefe927bc3ee111cbfdf4a2e877de36a7a3eabd3ef84b2b4b163bd243",
+      "referencia": {
+        "archivo": "ampliacion-referencias/penol-museo-exterior.jpg",
+        "autor": "Fotógrafo no confirmado; ver fuente",
+        "licencia": "No confirmada; borrador privado",
+        "url": "https://www.museohistoricoelpenol.com/el-museo/",
+        "fecha_foto": "No comprobada"
+      },
+      "preview": "ilustraciones/el-penol-museo.webp",
+      "archivo": "ilustraciones/el-penol-museo.webp",
+      "revision_humana": "aprobada",
+      "publicacion_autorizada": false,
+      "prompt": "Use case: style-transfer. Ilustración editorial para Explorando Lugares, caricatura realista de tinta fina y gouache, colores naturales contenidos. Basada fielmente en la fotografía: conserva proporciones, arquitectura, relieve y disposición reales. No foto retocada ni sepia. Sin objetos ni textos añadidos. Borrador privado. FORMATO OBLIGATORIO horizontal 3:2, 1536 x 1024. Reencuadra dentro de la fotografía, priorizando la mitad derecha: mural curvo a la izquierda, visitantes en el centro y paneles de historia a la derecha. Omite la sala y lectora del extremo izquierdo. No panorámica alargada. Conserva geometría y objetos reales, no extiendas la foto ni inventes fuera de ella.",
+      "herramienta": "image_gen integrada",
+      "referencias_adicionales": [],
+      "lote": "ampliacion"
+    }
+  },
+  {
+    "file": "images/el-penol-marial.webp",
+    "sha256": "dfb271241724cf6dbb599ee74e03b6ef254c5ff4cebedaa7d4734474184f88b5",
+    "bytes": 380730,
+    "source": "trabajo/antioquia-15/ilustraciones/el-penol-marial.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "el-penol-marial",
+      "destino": "el-penol",
+      "nombre_destino": "El Peñol",
+      "tipo": "que-conocer",
+      "atractivo": "Piedra del Marial",
+      "descripcion": "",
+      "sha256": "dfb271241724cf6dbb599ee74e03b6ef254c5ff4cebedaa7d4734474184f88b5",
+      "referencia": {
+        "archivo": "ampliacion-referencias/marial.jpg",
+        "autor": "Fotógrafo no confirmado; ver fuente",
+        "licencia": "No confirmada; borrador privado",
+        "url": "https://www.habitantesiete.com/la-piedra-del-marial/",
+        "fecha_foto": "No comprobada"
+      },
+      "preview": "ilustraciones/el-penol-marial.webp",
+      "archivo": "ilustraciones/el-penol-marial.webp",
+      "revision_humana": "aprobada",
+      "publicacion_autorizada": false,
+      "prompt": "Use case: style-transfer. Ilustración editorial de Explorando Lugares, caricatura realista en tinta fina y gouache, a color, pinceladas visibles y fidelidad arquitectónica y geográfica. No foto filtrada, no sepia ni dominante amarilla. Formato final obligatorio horizontal 3:2, 1536 x 1024, nunca panorámico. Borrador privado. Basada exclusivamente en la referencia, sin añadir elementos. Conservar los dos peñascos contiguos y su silueta exacta, escalera izquierda y edificio de techo azul debajo a derecha. Recorta solamente extremos laterales para obtener3:2, sin recortar lo esencial ni inventar edificio o escaleras.",
+      "herramienta": "image_gen integrada",
+      "referencias_adicionales": [],
+      "lote": "ampliacion"
+    }
+  },
+  {
+    "file": "images/el-penol-replica.webp",
+    "sha256": "be15e5a4b191c3427f22824ff46b9a391be903e46cd96fb637622a4c4bf87f3c",
+    "bytes": 349472,
+    "source": "trabajo/antioquia-15/ilustraciones/el-penol-replica.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "el-penol-replica",
+      "destino": "el-penol",
+      "nombre_destino": "El Peñol",
+      "tipo": "que-conocer",
+      "atractivo": "Réplica del Viejo Peñol",
+      "descripcion": "Recreación del antiguo poblado: se distingue del templo actual y del embalse.",
+      "sha256": "be15e5a4b191c3427f22824ff46b9a391be903e46cd96fb637622a4c4bf87f3c",
+      "referencia": {
+        "archivo": "el-penol/referencias/replica.jpg",
+        "autor": "No confirmado",
+        "licencia": "Permiso no confirmado",
+        "url": "https://www.viajescomfama.com/destinos/antioquia/guatape-dia-de-sol",
+        "fecha_foto": "No comprobada"
+      },
+      "preview": "ilustraciones/el-penol-replica.webp",
+      "archivo": "ilustraciones/el-penol-replica.webp",
+      "revision_humana": "aprobada",
+      "publicacion_autorizada": false,
+      "prompt": "Ilustración editorial para Explorando Lugares de la Réplica del Viejo Peñol, Antioquia, usando esta fotografía como referencia factual. Mantén la fachada de dos torres de ladrillo naranja y base azul claro, su geometría exacta, tejados y ventanas, los balcones de madera blancos y verdes y la plaza pavimentada. No inventes edificios ni montañas. Encuadre horizontal 3:2 con todas las torres completas y margen sobre las cruces. Tinta fina y gouache visibles, caricatura realista fiel, colores naturales sin sepia ni filtro amarillo. No texto superpuesto ni logos. No apariencia fotográfica. Mantener relaciones espaciales del original. Borrador privado para revisión humana.",
+      "herramienta": "image_gen integrada",
+      "referencias_adicionales": [],
+      "lote": "original"
+    }
+  },
+  {
+    "file": "images/el-penol-templo.webp",
+    "sha256": "09633ff84f6469dd4e915671b28ce543e03a790dfbbbba90ec9ce1fc9ac1d0a6",
+    "bytes": 402366,
+    "source": "trabajo/antioquia-15/ilustraciones/el-penol-templo.webp",
+    "approval": "aprobada",
+    "provenance": {
+      "id": "el-penol-templo",
+      "destino": "el-penol",
+      "nombre_destino": "El Peñol",
+      "tipo": "que-conocer",
+      "atractivo": "Templo Nuestra Señora del Rosario de Chiquinquirá",
+      "descripcion": "",
+      "sha256": "09633ff84f6469dd4e915671b28ce543e03a790dfbbbba90ec9ce1fc9ac1d0a6",
+      "referencia": {
+        "archivo": "el-penol/referencias/templo.jpg",
+        "autor": "No confirmado",
+        "licencia": "Permiso no confirmado",
+        "url": "https://elturismoencolombia.com/a-donde-ir/turismo-antioquia-colombia/iglesia-penol-antioquia-colombia/",
+        "fecha_foto": "No comprobada"
+      },
+      "preview": "ilustraciones/el-penol-templo.webp",
+      "archivo": "ilustraciones/el-penol-templo.webp",
+      "revision_humana": "aprobada",
+      "publicacion_autorizada": false,
+      "prompt": "Ilustración editorial de el-penol, sitio templo, basada estrictamente en la fotografía adjunta. Tinta fina y gouache, caricatura realista a color, conservando la arquitectura, formas, proporciones, vegetación y objetos reales visibles. Mantén los colores reales (sin sepia ni filtro amarillo). Sin inventar elementos ni detalles arqueológicos. No collage ni letras nuevas. Encuadre horizontal 3:2 respetando la escena y sin cortar el protagonista.",
+      "herramienta": "image_gen integrada",
+      "referencias_adicionales": [],
+      "lote": "original"
+    }
+  }
+]

@@ -1,0 +1,335 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "el-penol",
+    "department": "Antioquia",
+    "subregion": "",
+    "country_code": "CO",
+    "destination_type": "municipality",
+    "latitude": 6.217299,
+    "longitude": -75.2429499,
+    "translations": {
+      "es": {
+        "display_name": "El Peñol",
+        "eyebrow": "",
+        "headline": "La memoria de un pueblo",
+        "intro": "Un pueblo que conserva su memoria alrededor del paisaje del embalse.",
+        "meta_description": "Un pueblo que conserva su memoria alrededor del paisaje del embalse."
+      },
+      "en": {
+        "display_name": "El Peñol",
+        "eyebrow": "",
+        "headline": "The memory of a town",
+        "intro": "A town that preserves its memory beside the reservoir landscape.",
+        "meta_description": "A town that preserves its memory beside the reservoir landscape."
+      },
+      "pt-BR": {
+        "display_name": "El Peñol",
+        "eyebrow": "",
+        "headline": "A memória de um povoado",
+        "intro": "Um povoado que preserva sua memória junto à paisagem da represa.",
+        "meta_description": "Um povoado que preserva sua memória junto à paisagem da represa."
+      }
+    },
+    "history": {
+      "es": [
+        "El traslado del antiguo pueblo por la construcción del embalse cambió la historia de El Peñol. La réplica del Viejo Peñol recuerda esa transformación y conecta a visitantes con la memoria de sus habitantes."
+      ],
+      "en": [
+        "The relocation of the old town during construction of the reservoir transformed El Peñol. The replica of Viejo Peñol recalls that change and introduces visitors to the memories of its residents."
+      ],
+      "pt-BR": [
+        "A transferência do antigo povoado durante a construção da represa transformou a história de El Peñol. A réplica do Viejo Peñol recorda essa mudança e aproxima os visitantes da memória de seus moradores."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "El Peñol permite entender cómo un embalse transformó la vida de un pueblo. El Museo Histórico conecta el paisaje actual con la memoria de sus habitantes y ayuda a descubrir la historia que hay detrás del agua."
+      ],
+      "en": [
+        "El Peñol tells the story of a town transformed by a reservoir. Its Historical Museum connects today’s landscape with residents’ memories and the history behind the water."
+      ],
+      "pt-BR": [
+        "El Peñol conta a história de um povoado transformado por um reservatório. O Museu Histórico conecta a paisagem atual à memória dos moradores e à história por trás das águas."
+      ]
+    },
+    "sources": {
+      "es": [
+        {
+          "section": "destination",
+          "label": "provincia-abt.gov.co",
+          "url": "https://provincia-abt.gov.co/turismo/el-penol/"
+        },
+        {
+          "section": "destination",
+          "label": "ccoa.org.co",
+          "url": "https://ccoa.org.co/wp-content/uploads/2026/04/ficha-turismo-regenerativo-creativo.pdf"
+        },
+        {
+          "section": "destination",
+          "label": "www.museohistoricoelpenol.com",
+          "url": "https://www.museohistoricoelpenol.com/"
+        }
+      ],
+      "en": [
+        {
+          "section": "destination",
+          "label": "provincia-abt.gov.co",
+          "url": "https://provincia-abt.gov.co/turismo/el-penol/"
+        },
+        {
+          "section": "destination",
+          "label": "ccoa.org.co",
+          "url": "https://ccoa.org.co/wp-content/uploads/2026/04/ficha-turismo-regenerativo-creativo.pdf"
+        },
+        {
+          "section": "destination",
+          "label": "www.museohistoricoelpenol.com",
+          "url": "https://www.museohistoricoelpenol.com/"
+        }
+      ],
+      "pt-BR": [
+        {
+          "section": "destination",
+          "label": "provincia-abt.gov.co",
+          "url": "https://provincia-abt.gov.co/turismo/el-penol/"
+        },
+        {
+          "section": "destination",
+          "label": "ccoa.org.co",
+          "url": "https://ccoa.org.co/wp-content/uploads/2026/04/ficha-turismo-regenerativo-creativo.pdf"
+        },
+        {
+          "section": "destination",
+          "label": "www.museohistoricoelpenol.com",
+          "url": "https://www.museohistoricoelpenol.com/"
+        }
+      ]
+    }
+  },
+  "hero_image": {
+    "file": "images/el-penol-cover.webp",
+    "image_origin": "ai_generated",
+    "image_creator": "Explorando Lugares · ilustración generada con IA",
+    "image_source_url": "",
+    "image_license": "",
+    "image_license_url": "",
+    "alt": {
+      "es": "Ilustración de El Peñol",
+      "en": "Illustration of El Peñol",
+      "pt-BR": "Ilustração de El Peñol"
+    },
+    "caption": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  "places": [
+    {
+      "slug": "el-penol-museo",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 6.217299,
+      "longitude": -75.2429499,
+      "translations": {
+        "es": {
+          "name": "Museo Histórico de El Peñol",
+          "description": "Memoria local, arqueología y colecciones geológicas; el museo publica condiciones de visita.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "en": {
+          "name": "Museo Histórico de El Peñol",
+          "description": "Discover local memory, archaeology and geological collections. Check the museum's current visiting arrangements before going.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "pt-BR": {
+          "name": "Museo Histórico de El Peñol",
+          "description": "Conheça a memória local, a arqueologia e as coleções geológicas. Consulte as condições atuais de visita do museu antes de ir.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        }
+      },
+      "image": {
+        "file": "images/el-penol-museo.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · ilustración generada con IA",
+        "image_source_url": "",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Museo Histórico de El Peñol",
+          "en": "Illustration of Museo Histórico de El Peñol",
+          "pt-BR": "Ilustração de Museo Histórico de El Peñol"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "el-penol-marial",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 6.2607614,
+      "longitude": -75.2214618,
+      "translations": {
+        "es": {
+          "name": "Piedra del Marial",
+          "description": "Formación rocosa del entorno rural de El Peñol. Confirma el recorrido y las condiciones de acceso antes de incluirla en el paseo.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "en": {
+          "name": "Piedra del Marial",
+          "description": "This rock formation is a rural landmark in El Peñol. Confirm the approach and conditions of access before including it in an outing.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "pt-BR": {
+          "name": "Piedra del Marial",
+          "description": "Esta formação rochosa é uma referência rural de El Peñol. Confirme o caminho e as condições de acesso antes de incluí-la no passeio.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        }
+      },
+      "image": {
+        "file": "images/el-penol-marial.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · ilustración generada con IA",
+        "image_source_url": "",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Piedra del Marial",
+          "en": "Illustration of Piedra del Marial",
+          "pt-BR": "Ilustração de Piedra del Marial"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "el-penol-replica",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 6.21762,
+      "longitude": -75.22919,
+      "translations": {
+        "es": {
+          "name": "Réplica del Viejo Peñol",
+          "description": "Conoce una recreación de la plaza del pueblo anterior.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "en": {
+          "name": "Réplica del Viejo Peñol",
+          "description": "Visit a recreation of the square of the former town, distinct from the present town centre.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "pt-BR": {
+          "name": "Réplica del Viejo Peñol",
+          "description": "Conheça uma recriação da praça do antigo povoado, diferente do centro atual.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        }
+      },
+      "image": {
+        "file": "images/el-penol-replica.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · ilustración generada con IA",
+        "image_source_url": "",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Réplica del Viejo Peñol",
+          "en": "Illustration of Réplica del Viejo Peñol",
+          "pt-BR": "Ilustração de Réplica del Viejo Peñol"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "el-penol-templo",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": null,
+      "longitude": null,
+      "translations": {
+        "es": {
+          "name": "Templo Nuestra Señora del Rosario de Chiquinquirá",
+          "description": "Conocido como Templo Roca, forma parte del nuevo pueblo.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "en": {
+          "name": "Templo Nuestra Señora del Rosario de Chiquinquirá",
+          "description": "Known as Templo Roca, this church is part of the relocated town.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "pt-BR": {
+          "name": "Templo Nuestra Señora del Rosario de Chiquinquirá",
+          "description": "Conhecido como Templo Roca, este templo faz parte do povoado reconstruído.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        }
+      },
+      "image": {
+        "file": "images/el-penol-templo.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · ilustración generada con IA",
+        "image_source_url": "",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Templo Nuestra Señora del Rosario de Chiquinquirá",
+          "en": "Illustration of Templo Nuestra Señora del Rosario de Chiquinquirá",
+          "pt-BR": "Ilustração de Templo Nuestra Señora del Rosario de Chiquinquirá"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "2026-11-03",
+    "positioning": "",
+    "competitors": [],
+    "potential_allies": [],
+    "business_prospects": [],
+    "acquisition_strategies": [],
+    "sources": [],
+    "notes": [
+      "Preparación para revisión pública exclusivamente en dev1. Las fuentes, referencias y comprobaciones se conservan en el expediente individual. No autoriza producción."
+    ]
+  }
+}

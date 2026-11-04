@@ -1,0 +1,31 @@
+{
+  "cienaga-centre": {
+    "latitude": 11.0107446,
+    "longitude": -74.2509506,
+    "label": "Iglesia de San Juan Bautista",
+    "point_type": "central_urban_landmark",
+    "source": "https://www.openstreetmap.org/way/691541820",
+    "evidence": "geography-candidates/cienaga-02-fallback.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "cienaga-01": {
+    "latitude": 11.01088,
+    "longitude": -74.25152,
+    "label": "Templete Plaza del Centenario",
+    "point_type": "site_reference",
+    "source": "https://mapcarta.com/N2086186487",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "cienaga-02": {
+    "latitude": 11.0107446,
+    "longitude": -74.2509506,
+    "label": "Iglesia de San Juan Bautista",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/way/691541820",
+    "evidence": "geography-candidates/cienaga-02-fallback.json",
+    "verified_identity": true,
+    "access_verified": false
+  }
+}

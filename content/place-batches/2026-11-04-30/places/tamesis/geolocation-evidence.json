@@ -1,0 +1,41 @@
+{
+  "tamesis-centre": {
+    "latitude": 5.6628487,
+    "longitude": -75.7125453,
+    "label": "Parque Principal",
+    "point_type": "identified_urban_centre",
+    "source": "https://www.openstreetmap.org/way/461612632",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "tamesis-cristo-rey": {
+    "latitude": 5.6749695,
+    "longitude": -75.7232855,
+    "label": "Cerro Cristo Rey",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/node/8533013419",
+    "evidence": "geography-candidates/tamesis-cristo-rey.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "tamesis-cartama": {
+    "latitude": 5.664683,
+    "longitude": -75.713722,
+    "label": "Museo Arqueológico Cartama",
+    "point_type": "documented_viewpoint_on_site",
+    "source": "https://commons.wikimedia.org/wiki/File:Museo_Arqueológico_Cartama_-_mapa.jpg",
+    "verified_identity": true,
+    "access_verified": false,
+    "note": ""
+  },
+  "tamesis-organales": {
+    "latitude": 5.663888888,
+    "longitude": -75.72944444,
+    "label": "Organal del río San Antonio, Támesis",
+    "point_type": "area_reference",
+    "source": "https://repository.eafit.edu.co/server/api/core/bitstreams/f730d53b-dfa6-40c2-a03b-0466032daa01/content",
+    "verified_identity": true,
+    "access_verified": false,
+    "note": "Caracterización EAFIT, sección 7.4.1: referencia del organal, no entrada a cavernas ni punto de salida."
+  }
+}

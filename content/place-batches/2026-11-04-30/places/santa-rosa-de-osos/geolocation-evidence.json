@@ -1,0 +1,41 @@
+{
+  "santa-rosa-de-osos-centre": {
+    "latitude": 6.64819722,
+    "longitude": -75.46095833,
+    "label": "Catedral Santa Rosa de Lima, Plaza Simón Bolívar",
+    "point_type": "central_urban_landmark",
+    "source": "https://es.wikipedia.org/wiki/Catedral_de_Santa_Rosa_de_Osos",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "santa-rosa-de-osos-qc-2": {
+    "latitude": 6.6419079,
+    "longitude": -75.4600512,
+    "label": "Basílica Nuestra Señora de las Misericordias",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/way/590265551",
+    "evidence": "geography-candidates/santa-rosa-de-osos-qc-2-fallback.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "santa-rosa-de-osos-qc-3": {
+    "latitude": 6.6484968,
+    "longitude": -75.4609249,
+    "label": "Alegoría a Porfirio Barba Jacob",
+    "point_type": "site_reference",
+    "source": "https://www.openstreetmap.org/node/4395036349",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "santa-rosa-de-osos-guanacas": {
+    "latitude": 6.694,
+    "longitude": -75.381,
+    "label": "Reserva Fundación Guanacas Bosque de Niebla",
+    "point_type": "area_reference",
+    "source": "https://ipt.biodiversidad.co/permisos/resource?r=0790_guanacas_reporte2",
+    "corroborating_source": "https://www.fundacionguanacas.org/about-1",
+    "verified_identity": true,
+    "access_verified": false,
+    "note": "Referencia de inventario botánico Universidad CES en la reserva, no portería ni acceso libre."
+  }
+}

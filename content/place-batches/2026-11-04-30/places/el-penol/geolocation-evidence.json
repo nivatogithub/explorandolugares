@@ -1,0 +1,42 @@
+{
+  "el-penol-centre": {
+    "latitude": 6.217299,
+    "longitude": -75.2429499,
+    "label": "Museo Histórico",
+    "point_type": "central_urban_landmark",
+    "source": "https://www.openstreetmap.org/node/1212791940",
+    "evidence": "geography-candidates/el-penol-museo-fallback.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "el-penol-museo": {
+    "latitude": 6.217299,
+    "longitude": -75.2429499,
+    "label": "Museo Histórico",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/node/1212791940",
+    "evidence": "geography-candidates/el-penol-museo-fallback.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "el-penol-marial": {
+    "latitude": 6.2607614,
+    "longitude": -75.2214618,
+    "label": "Piedra del Marial",
+    "point_type": "site_reference",
+    "source": "https://www.waze.com/es-419/live-map/directions/co/antioquia/penol/piedra-del-marial?to=place.ChIJIwV2zXMeRI4RJJ63dpqeiB4",
+    "verified_identity": true,
+    "access_verified": false,
+    "note": "Ficha de Waze resuelta a Piedra del Marial en El Peñol; coordenadas de JSON-LD y routing coinciden. No usar como entrada exacta."
+  },
+  "el-penol-replica": {
+    "latitude": 6.21762,
+    "longitude": -75.22919,
+    "label": "Réplica del Viejo Peñol",
+    "point_type": "site_reference",
+    "source": "https://mapcarta.com/es/W105107848",
+    "verified_identity": true,
+    "access_verified": false,
+    "note": "Punto del sitio documentado; no se presenta como entrada exacta."
+  }
+}

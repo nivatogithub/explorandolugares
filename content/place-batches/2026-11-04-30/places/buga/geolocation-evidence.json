@@ -1,0 +1,41 @@
+{
+  "buga-centre": {
+    "latitude": 3.899853,
+    "longitude": -76.3020592,
+    "label": "Parque José María Cabal",
+    "point_type": "identified_urban_centre",
+    "source": "https://www.openstreetmap.org/way/235158879",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "buga-01": {
+    "latitude": 3.8972469,
+    "longitude": -76.3019923,
+    "label": "Basílica Menor del Señor de los Milagros",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/way/1202885973",
+    "evidence": "geography-candidates/buga-01.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "buga-02": {
+    "latitude": 3.899853,
+    "longitude": -76.3020592,
+    "label": "Parque José María Cabal",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/way/235158879",
+    "evidence": "geography-candidates/buga-02-fallback.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "buga-03": {
+    "latitude": 3.8599019,
+    "longitude": -76.3511319,
+    "label": "Laguna de Sonso",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/relation/7386831",
+    "evidence": "geography-candidates/buga-03-fallback.json",
+    "verified_identity": true,
+    "access_verified": false
+  }
+}

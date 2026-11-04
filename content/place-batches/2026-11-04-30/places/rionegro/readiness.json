@@ -1,0 +1,50 @@
+{
+  "slug": "rionegro",
+  "lot": "antioquia-15",
+  "name": "Rionegro",
+  "base_commit": "eae3d38b14a41fd26c69047ea4ed980a146d5186",
+  "source": "trabajo/antioquia-15/rionegro/contenido-es.json",
+  "source_sha256": "0a2ef1b9cbf062de247e12a3efe64ecf38e1ad5786b00cb53f7cba564694e127",
+  "status": "draft_in_dev1",
+  "images": 6,
+  "attractions": 5,
+  "draft_created": true,
+  "dev1_tested": true,
+  "preprod_ready": false,
+  "production_authorized": false,
+  "pending": [
+    {
+      "type": "translations",
+      "locales": [
+        "en",
+        "pt-BR"
+      ],
+      "note": "Traducir la versión vigente; no reutilizar borradores anteriores."
+    },
+    {
+      "type": "geolocation",
+      "count": 6,
+      "note": "Verificar núcleo urbano, sitios físicos y fichas nombradas de Maps; sin centroides ni pines inventados."
+    },
+    {
+      "type": "editorial_review",
+      "note": "Contrastar vigencia, nombres, accesos, experiencias y correspondencia con imágenes."
+    },
+    {
+      "type": "visual_review",
+      "note": "Pendiente revisión humana de las páginas construidas; HTTP e imágenes verificados."
+    }
+  ],
+  "dev1_id": 10068,
+  "dev1_preview": "http://127.0.0.1:8086/lugares/rionegro/?preview=1",
+  "dev1_public": true,
+  "dev1_url": "http://127.0.0.1:8086/lugares/rionegro/",
+  "visible_attractions": 2,
+  "pending_geolocation": [
+    "rionegro-capiro",
+    "rionegro-qc-2",
+    "rionegro-mar"
+  ],
+  "package_validated": true,
+  "ready_for_preprod": false
+}

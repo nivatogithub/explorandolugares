@@ -1,0 +1,63 @@
+{
+  "nombre": "El Peñol",
+  "estado": "borrador_no_publicable",
+  "presentacion": "Un pueblo que conserva su memoria alrededor del paisaje del embalse.",
+  "historia_base": "El traslado del antiguo pueblo por la construcción del embalse cambió la historia de El Peñol. La réplica del Viejo Peñol recuerda esa transformación y conecta a visitantes con la memoria de sus habitantes.",
+  "que_conocer": [
+    {
+      "nombre": "Réplica del Viejo Peñol",
+      "descripcion_base": "Conoce una recreación de la plaza del pueblo anterior.",
+      "estado": "por_revalidar",
+      "referencia_visual": "referencias/el-penol-2.webp",
+      "verificacion_imagen": "Asociación heredada; pendiente de cotejo visual",
+      "estado_imagen": "referencia_disponible"
+    },
+    {
+      "nombre": "Embalse Peñol-Guatapé",
+      "descripcion_base": "Contempla el paisaje que transformó este territorio.",
+      "estado": "por_revalidar",
+      "referencia_visual": "referencias/el-penol-3.webp",
+      "verificacion_imagen": "Asociación heredada; pendiente de cotejo visual",
+      "estado_imagen": "referencia_disponible"
+    },
+    {
+      "nombre": "Templo Nuestra Señora del Rosario",
+      "descripcion_base": "Conocido como Templo Roca, forma parte del nuevo pueblo.",
+      "estado": "por_revalidar",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica"
+    },
+    {
+      "nombre": "Piedra El Marial",
+      "tipo": "formacion_rocosa",
+      "descripcion_base": "Formación rocosa representativa de El Peñol; diferenciar del peñón de Guatapé y verificar acceso.",
+      "estado": "seleccionado_para_ampliacion_editorial",
+      "verificacion": "existencia_documentada; acceso_vigente_por_cerrar",
+      "fuente": "https://ccoa.org.co/wp-content/uploads/2026/04/ficha-turismo-regenerativo-creativo.pdf",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica",
+      "publicable": false,
+      "fecha_revision": "2026-11-03",
+      "decision_usuario": "inclusion_aprobada"
+    },
+    {
+      "nombre": "Museo Histórico de El Peñol",
+      "tipo": "museo",
+      "descripcion_base": "Memoria local, arqueología y colecciones geológicas; el museo publica condiciones de visita.",
+      "estado": "seleccionado_para_ampliacion_editorial",
+      "verificacion": "existencia_documentada; acceso_vigente_por_cerrar",
+      "fuente": "https://www.museohistoricoelpenol.com/",
+      "referencia_visual": null,
+      "estado_imagen": "buscar_referencia_especifica",
+      "publicable": false,
+      "fecha_revision": "2026-11-03",
+      "decision_usuario": "inclusion_aprobada"
+    }
+  ],
+  "fuentes": [
+    "https://provincia-abt.gov.co/turismo/el-penol/",
+    "https://ccoa.org.co/wp-content/uploads/2026/04/ficha-turismo-regenerativo-creativo.pdf",
+    "https://www.museohistoricoelpenol.com/"
+  ],
+  "control_editorial": "Distinguir El Peñol de Guatapé y de la ubicación de la Piedra. La réplica del Viejo Peñol y el embalse tienen identidades diferentes."
+}

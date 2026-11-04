@@ -1,0 +1,53 @@
+{
+  "la-ceja-centre": {
+    "latitude": 6.0311842,
+    "longitude": -75.4324125,
+    "label": "Basílica Menor Nuestra Señora del Carmen",
+    "point_type": "central_urban_landmark",
+    "source": "https://www.openstreetmap.org/way/386738420",
+    "evidence": "geography-candidates/la-ceja-basilica-fallback.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "la-ceja-basilica": {
+    "latitude": 6.0311842,
+    "longitude": -75.4324125,
+    "label": "Basílica Menor Nuestra Señora del Carmen",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/way/386738420",
+    "evidence": "geography-candidates/la-ceja-basilica-fallback.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "la-ceja-capilla": {
+    "latitude": 6.0303929,
+    "longitude": -75.4311611,
+    "label": "Capilla Museo Nuestra Señora de Chiquinquirá",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/node/4154627532",
+    "evidence": "geography-candidates/la-ceja-capilla-fallback.json",
+    "verified_identity": true,
+    "access_verified": false
+  },
+  "la-ceja-capiro": {
+    "latitude": 6.064,
+    "longitude": -75.404828,
+    "label": "Cerro El Capiro",
+    "point_type": "site_reference",
+    "source": "https://guiacomercialoriente.com.co/negocio/cerro-el-capiro/",
+    "corroborating_source": "https://www.cornare.gov.co/SIAR/Plan-de-manejo/DRMI-el-capiro/Plan_de_Manejo_DRMI_El_Capiro.pdf",
+    "verified_identity": true,
+    "access_verified": false,
+    "note": "Referencia del cerro compartido por el entorno de Rionegro y La Ceja, no inicio de sendero."
+  },
+  "la-ceja-salto-buey": {
+    "latitude": 5.9332152,
+    "longitude": -75.4456586,
+    "label": "Cascada Salto del Buey",
+    "point_type": "site_or_area_reference",
+    "source": "https://www.openstreetmap.org/node/7173144206",
+    "evidence": "geography-candidates/la-ceja-salto-buey.json",
+    "verified_identity": true,
+    "access_verified": false
+  }
+}

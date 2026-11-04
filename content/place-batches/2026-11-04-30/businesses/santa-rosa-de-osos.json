@@ -1,0 +1,45 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "santa-rosa-de-osos",
+  "businesses": [
+    {
+      "name": "Hotel Santa Rosa de Osos",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "sources": [
+        {
+          "url": "https://www.hotelsantarosadeosos.com/",
+          "checked_at": "2026-11-04",
+          "note": "Fuente pública consultada para nombre, municipio y categoría. No acredita representación, alianza ni vigencia operativa."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "name": "Hotel Universal Santa Rosa de Osos",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "sources": [
+        {
+          "url": "https://servicios.mincit.gov.co/rnt-bi/nuevosmensual_list.php?f=%28MUNICIPIO~equals~STA+ROSA+DE+OSOS%29",
+          "checked_at": "2026-11-04",
+          "note": "Fuente pública consultada para nombre, municipio y categoría. No acredita representación, alianza ni vigencia operativa."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "name": "Hotel y Restaurante Venezzia SRO",
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "sources": [
+        {
+          "url": "https://servicios.mincit.gov.co/rnt-bi/nuevosmensual_list.php?f=%28MUNICIPIO~equals~STA+ROSA+DE+OSOS%29",
+          "checked_at": "2026-11-04",
+          "note": "Fuente pública consultada para nombre, municipio y categoría. No acredita representación, alianza ni vigencia operativa."
+        }
+      ],
+      "image_references": []
+    }
+  ]
+}
