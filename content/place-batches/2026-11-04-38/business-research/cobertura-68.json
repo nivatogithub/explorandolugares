@@ -1,5 +1,5 @@
 {
-  "consultado": "04/11/2026 17:30",
+  "consultado": "04/11/2026 17:37",
   "lugares": [
     {
       "slug": "la-ceja",
@@ -163,15 +163,6 @@
       }
     },
     {
-      "slug": "guaduas",
-      "name": "Guaduas",
-      "batch": "30",
-      "total": 4,
-      "cats": {
-        "hospedaje": 4
-      }
-    },
-    {
       "slug": "pore",
       "name": "Pore",
       "batch": "30",
@@ -229,6 +220,16 @@
       "total": 5,
       "cats": {
         "hospedaje": 5
+      }
+    },
+    {
+      "slug": "guaduas",
+      "name": "Guaduas",
+      "batch": "30",
+      "total": 5,
+      "cats": {
+        "hospedaje": 4,
+        "alimentacion": 1
       }
     },
     {
@@ -383,9 +384,9 @@
       "slug": "rionegro",
       "name": "Rionegro",
       "batch": "30",
-      "total": 12,
+      "total": 13,
       "cats": {
-        "hospedaje": 10,
+        "hospedaje": 11,
         "alimentacion": 2
       }
     },
@@ -393,9 +394,9 @@
       "slug": "barichara",
       "name": "Barichara",
       "batch": "30",
-      "total": 13,
+      "total": 14,
       "cats": {
-        "hospedaje": 10,
+        "hospedaje": 11,
         "alimentacion": 3
       }
     },
