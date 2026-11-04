@@ -1,7 +1,7 @@
 {
   "destination": "caldas-antioquia",
   "asset": "portada",
-  "status": "pendiente_aprobacion_usuario",
+  "status": "aprobada_por_usuario",
   "reference": "Foto aportada por el usuario; fecha, autor y licencia no confirmados",
   "fact_sources": [
     "https://www.puebliandoporantioquia.com.co/subregion-valle-de-aburra/municipio-caldas/",
@@ -28,5 +28,8 @@
       "bytes": 278526
     }
   },
-  "deployed": false
+  "deployed": true,
+  "approved_at": "2026-11-04",
+  "approval_text": "probadas las 3 nuevas portadas",
+  "deployment_scope": "dev1"
 }

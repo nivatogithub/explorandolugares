@@ -1,7 +1,7 @@
 {
   "destination": "agustin-codazzi",
   "asset": "portada",
-  "status": "pendiente_aprobacion_usuario",
+  "status": "aprobada_por_usuario",
   "reference": "Foto aportada por el usuario; autor, fecha y licencia no confirmados",
   "factual_source": "https://comisionfilmicacolombia.com/locacion/plaza-alfonso-avila-quintero/",
   "date": "2026-11-04",
@@ -25,5 +25,8 @@
       "bytes": 243830
     }
   },
-  "deployed": false
+  "deployed": true,
+  "approved_at": "2026-11-04",
+  "approval_text": "probadas las 3 nuevas portadas",
+  "deployment_scope": "dev1"
 }

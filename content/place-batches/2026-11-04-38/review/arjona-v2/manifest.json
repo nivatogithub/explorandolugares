@@ -1,7 +1,7 @@
 {
   "destination": "arjona",
   "asset": "portada",
-  "status": "pendiente_aprobacion_usuario",
+  "status": "aprobada_por_usuario",
   "references": [
     {
       "file": "referencia-frontal.jpg",
@@ -39,5 +39,8 @@
       "bytes": 245100
     }
   },
-  "deployed": false
+  "deployed": true,
+  "approved_at": "2026-11-04",
+  "approval_text": "probadas las 3 nuevas portadas",
+  "deployment_scope": "dev1"
 }

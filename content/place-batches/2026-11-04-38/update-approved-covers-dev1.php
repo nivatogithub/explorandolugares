@@ -1,0 +1,7 @@
+<?php
+if(PHP_SAPI!=='cli'||!in_array('--apply',$argv,true))throw new RuntimeException('Explicit apply required');
+$c=require '/srv/state/private/config.php';if(empty($c['local_test'])||!str_contains($c['dsn'],'host=127.0.0.1;dbname=el_test_destination_'))throw new RuntimeException('Dev only');
+$rows=json_decode(file_get_contents('/srv/state/portadas-correccion-20261104/approved-covers.json'),true,512,JSON_THROW_ON_ERROR);if(count($rows)!==3)throw new RuntimeException('Expected three covers');
+$p=new PDO($c['dsn'],$c['db_user'],$c['db_password'],[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC]);$find=$p->prepare('SELECT m.id,m.asset_path FROM destinations d JOIN destination_media dm ON dm.destination_id=d.id JOIN media_assets m ON m.id=dm.media_asset_id WHERE d.slug=? AND dm.role=\'hero\'');
+foreach($rows as $r){$find->execute([$r['slug']]);$found=$find->fetchAll();if(count($found)!==1||(int)$found[0]['id']!==$r['asset_id']||$found[0]['asset_path']!==$r['asset_path'])throw new RuntimeException('Cover identity mismatch '.$r['slug']);$f='/srv/portal/public/'.$r['asset_path'];if(!is_file($f)||hash_file('sha256',$f)!==$r['sha256'])throw new RuntimeException('Cover file mismatch '.$r['slug']);}
+$p->beginTransaction();$upd=$p->prepare('UPDATE media_assets SET source_url=?,width=1200,height=800 WHERE id=?');foreach($rows as $r)$upd->execute([$r['source_url'],$r['asset_id']]);$p->commit();echo json_encode($rows,JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE);
