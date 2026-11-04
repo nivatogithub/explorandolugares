@@ -1,5 +1,5 @@
 {
-  "consultado": "04/11/2026 16:57",
+  "consultado": "04/11/2026 17:24",
   "lugares": [
     {
       "slug": "la-ceja",
@@ -162,16 +162,6 @@
       }
     },
     {
-      "slug": "el-carmen-de-viboral",
-      "name": "El Carmen de Viboral",
-      "batch": "30",
-      "total": 4,
-      "cats": {
-        "hospedaje": 3,
-        "alimentacion": 1
-      }
-    },
-    {
       "slug": "socorro",
       "name": "El Socorro",
       "batch": "30",
@@ -241,12 +231,22 @@
       }
     },
     {
-      "slug": "giron",
-      "name": "Girón",
+      "slug": "el-carmen-de-viboral",
+      "name": "El Carmen de Viboral",
       "batch": "30",
       "total": 5,
       "cats": {
-        "hospedaje": 3,
+        "hospedaje": 4,
+        "alimentacion": 1
+      }
+    },
+    {
+      "slug": "giron",
+      "name": "Girón",
+      "batch": "30",
+      "total": 6,
+      "cats": {
+        "hospedaje": 4,
         "alimentacion": 2
       }
     },
@@ -357,16 +357,6 @@
       }
     },
     {
-      "slug": "rionegro",
-      "name": "Rionegro",
-      "batch": "30",
-      "total": 10,
-      "cats": {
-        "hospedaje": 8,
-        "alimentacion": 2
-      }
-    },
-    {
       "slug": "barichara",
       "name": "Barichara",
       "batch": "30",
@@ -374,6 +364,16 @@
       "cats": {
         "hospedaje": 8,
         "alimentacion": 3
+      }
+    },
+    {
+      "slug": "rionegro",
+      "name": "Rionegro",
+      "batch": "30",
+      "total": 11,
+      "cats": {
+        "hospedaje": 9,
+        "alimentacion": 2
       }
     },
     {
@@ -399,15 +399,6 @@
       }
     },
     {
-      "slug": "villa-de-leyva",
-      "name": "Villa de Leyva",
-      "batch": "30",
-      "total": 13,
-      "cats": {
-        "hospedaje": 13
-      }
-    },
-    {
       "slug": "santa-rosa-de-osos",
       "name": "Santa Rosa de Osos",
       "batch": "30",
@@ -415,6 +406,15 @@
       "cats": {
         "hospedaje": 7,
         "alimentacion": 7
+      }
+    },
+    {
+      "slug": "villa-de-leyva",
+      "name": "Villa de Leyva",
+      "batch": "30",
+      "total": 14,
+      "cats": {
+        "hospedaje": 14
       }
     },
     {
