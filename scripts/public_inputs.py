@@ -11,7 +11,7 @@ def is_retired_static_destination_page(name):
 
 def collect(root,public):
  root=Path(root);public=Path(public);candidates={}
- layers=[('generated-static',root/'ensayos/v1'),('backend',root/'backend/public'),('integration',root/'backend/integration-medicion/public')]
+ layers=[('generated-static',root/'ensayos/v1'),('backend',root/'backend/public'),('integration',root/'backend/integration-analytics/public')]
  for label,base in layers:
   for source in sorted(base.rglob('*')):
    if not source.is_file():continue

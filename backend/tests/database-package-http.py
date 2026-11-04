@@ -3,7 +3,7 @@
 import http.cookiejar,io,json,re,urllib.request,urllib.error,zipfile
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
-URL='http://127.0.0.1:8088/admin/base-datos.php'
+URL='http://127.0.0.1:8088/admin/database.php'
 client=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
 def send(data=None,headers=None):
     try:

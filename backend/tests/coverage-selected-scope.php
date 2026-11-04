@@ -22,4 +22,7 @@ check($second['country']['covered_municipalities']===1,'Multiple guides must not
 $db->exec("INSERT INTO destinations VALUES ('covenas','Sucre','published','CO')");
 $added=(new CoverageService($read('coverage-plan'),$read('coverage-geography'),$scope))->snapshot($db);
 check($added['country']['covered_municipalities']===2,'New municipal publication in selection counts without initial catalog entry');
+$sucre=array_values(array_filter($added['departments'],fn($d)=>$d['name']==='Sucre'))[0];
+$covenas=array_values(array_filter($sucre['places'],fn($p)=>$p['municipality_code']==='70221'))[0];
+check($covenas['url']==='/lugares/covenas/','Selected municipality uses its canonical published URL');
 echo "OK: 221 target units, departmental denominator, out-of-scope, offline and municipal deduplication\n";

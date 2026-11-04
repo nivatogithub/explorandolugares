@@ -66,7 +66,7 @@ const db=sql=>JSON.parse(execFileSync('python3',['-c','import sqlite3,json,sys; 
  internalBrowser=await chromium.launch({headless:true});const internalContext=await internalBrowser.newContext();p=await internalContext.newPage();await go('/admin/index.php');
  {
  if(await p.locator('[name="username"]').count()){await fill('username',env.admin);await fill('password',env.password);await click(p.getByRole('button',{name:'Entrar al panel'}));}
- await go('/admin/suscripciones.php');const row=p.locator('tr').filter({hasText:name}).filter({has:p.locator('.payment-review-form')});await click(row.getByRole('button',{name:'Confirmar pago'}));
+ await go('/admin/subscriptions.php');const row=p.locator('tr').filter({hasText:name}).filter({has:p.locator('.payment-review-form')});await click(row.getByRole('button',{name:'Confirmar pago'}));
  if(db('SELECT publication_status FROM businesses WHERE id='+business.id)[0].publication_status==='published')throw Error('Pago publicó automáticamente');}
  await go('/business/editorial.php?business='+business.id+'&admin=1');await p.locator('form').filter({has:p.getByRole('button',{name:'Validar titularidad y eliminar documento'})}).locator('[type=checkbox]').check();await click(p.getByRole('button',{name:'Validar titularidad y eliminar documento'}));
  {

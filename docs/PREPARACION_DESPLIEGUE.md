@@ -6,7 +6,7 @@ Actualización al 12 de octubre de 2026: primera versión informativa desplegada
 
 - Sitio vigente: `ensayos/v1/`; portada con Jericó, Medellín y Guatapé destacados, 21 guías ES/EN, navegación y captación comercial.
 - Contenido y licencias: `content/`, créditos dentro de las guías y `assets/destinos/creditos.json`.
-- Construcción: `scripts/preparar-hosting.py` prepara `.local/hosting/`; no subir esa carpeta completa como raíz pública.
+- Construcción: `scripts/prepare-hosting.py` prepara `.local/hosting/`; no subir esa carpeta completa como raíz pública.
 - Backend PHP y administración privada: `backend/`, con configuración de ejemplo vacía. SQLite se usa para pruebas aisladas; MySQL del hosting sigue sin verificar.
 - Despliegue SFTP: script, documentación y plantilla sin credenciales. Servidor, usuario y carpeta exclusiva siguen sin configurar.
 - Históricos: `public/`, ZIP y `design/` se conservan. No publicar esos archivos en lugar del sitio actual.

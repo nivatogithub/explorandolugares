@@ -2,9 +2,9 @@
 declare(strict_types=1);
 header('Cache-Control: no-store');
 $path=parse_url($_SERVER['REQUEST_URI']??'/',PHP_URL_PATH)?:'/';
-if(in_array($path,['/api/cobertura.php','/api/medicion.php','/api/actividad.php'],true)){require dirname(__DIR__).'/backend/public'.$path;return true;}
+if(in_array($path,['/api/coverage.php','/api/analytics.php','/api/activity.php'],true)){require dirname(__DIR__).'/backend/public'.$path;return true;}
 if($path==='/__design-review/'&&PHP_SAPI==='cli-server'&&getenv('EL_COVERAGE_TEST_CONFIG')&&in_array($_SERVER['REMOTE_ADDR']??'',['127.0.0.1','::1'],true)){header('Content-Type: text/html; charset=utf-8');readfile(dirname(__DIR__).'/backend/tests/design-review.html');return true;}
-$shared=['/assets/style.css'=>dirname(__DIR__).'/ensayos/v1/assets/style.css','/assets/menu-principal.js'=>dirname(__DIR__).'/backend/integration-medicion/public/assets/menu-principal.js'];
+$shared=['/assets/style.css'=>dirname(__DIR__).'/ensayos/v1/assets/style.css','/assets/main-menu.js'=>dirname(__DIR__).'/backend/integration-analytics/public/assets/main-menu.js'];
 if(isset($shared[$path])&&is_file($shared[$path])){header('Content-Type: '.(str_ends_with($path,'.css')?'text/css':'text/javascript').'; charset=utf-8');readfile($shared[$path]);return true;}
 foreach(['/backend/public','/ensayos/v1'] as $root){
  $base=realpath(dirname(__DIR__).$root);$file=realpath($base.rawurldecode($path));

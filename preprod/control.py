@@ -34,7 +34,7 @@ def branch():return subprocess.check_output(['git','branch','--show-current'],cw
 def wait_ready():
  for attempt in range(120):
   try:
-   with urllib.request.urlopen('http://127.0.0.1:8088/api/cobertura.php',timeout=2) as response:ready=json.load(response).get('publication_source_available') is True
+   with urllib.request.urlopen('http://127.0.0.1:8088/api/coverage.php',timeout=2) as response:ready=json.load(response).get('publication_source_available') is True
    if ready:return
   except (OSError,ValueError):pass
   time.sleep(1)
@@ -58,7 +58,7 @@ def prepare_managed_release(release,log):
   if private.exists() and any(private.iterdir()):raise ValueError('Hay datos privados dentro de la entrega; conservarlos en STATE/private antes de reconstruir.')
  with tempfile.TemporaryDirectory(prefix='prepare-',dir=STATE) as temporary:
   temporary=Path(temporary);fresh=temporary/'release';old=temporary/'previous'
-  run(sys.executable,'scripts/preparar-hosting.py','--output',str(fresh),stdout=log,stderr=subprocess.STDOUT)
+  run(sys.executable,'scripts/prepare-hosting.py','--output',str(fresh),stdout=log,stderr=subprocess.STDOUT)
   if release.exists():release.rename(old)
   try:fresh.rename(release)
   except BaseException:
@@ -104,7 +104,7 @@ def main():
  shutil.copyfile(ROOT/'preprod/infra/mailbox.php',release/'public/admin/buzon-local.php')
  shutil.copyfile(ROOT/'preprod/infra/correo-ejemplo.php',release/'public/correo-ejemplo.php')
  # Version local assets after adding the isolated test instruments.
- run(sys.executable,'scripts/versiones-medicion.py','--public',str(release/'public'))
+ run(sys.executable,'scripts/version-analytics.py','--public',str(release/'public'))
  # This access bypass exists only in the local build, never in hosting sources.
  bootstrap=release/'app/bootstrap.php';source=bootstrap.read_text()
  anchor="    session_start();\n    $_SESSION['csrf'] ??= bin2hex(random_bytes(32));"

@@ -32,15 +32,30 @@ if (PHP_SAPI !== 'cli') {
     session_start();
     $_SESSION['csrf'] ??= bin2hex(random_bytes(32));
 }
-if (PHP_SAPI !== 'cli' && !empty($_SESSION['business_account_id'])) {
-    require_once __DIR__.'/AccountSessionSecurity.php';
-    try { AccountSessionSecurity::synchronize(db(),$_SESSION); }
-    catch (Throwable $error) { PortalIncidents::capture($error,'session_sync');AccountSessionSecurity::clear($_SESSION); }
+require_once __DIR__.'/AccountSessionValidator.php';
+if (PHP_SAPI !== 'cli') {
+    try { AccountSessionValidator::synchronize(static fn(): PDO => db(), $_SESSION, !empty($config['unified_admin_only'])); }
+    catch (Throwable $error) { PortalIncidents::capture($error,'session_validation'); }
 }
-if (PHP_SAPI !== 'cli' && !empty($config['unified_admin_only']) && empty($_SESSION['admin_account_id'])) { unset($_SESSION['admin'],$_SESSION['last_seen']); }
-if (PHP_SAPI !== 'cli' && !empty($_SESSION['admin_account_id'])) {
-    require_once __DIR__.'/AccountAuthorization.php';
-    try { AccountAuthorization::synchronize(db(),$_SESSION); } catch (Throwable $error) { PortalIncidents::capture($error,'admin_session_sync');unset($_SESSION['admin'],$_SESSION['admin_account_id'],$_SESSION['admin_user']); }
+/** Prepare private layout data at the HTTP boundary, after authorization. */
+function admin_layout_context():array
+{
+    require_once __DIR__.'/AdminLayoutContext.php';
+    require_once __DIR__.'/AdminAccountSelector.php';
+    $accountId=(int)($_SESSION['admin_account_id']??0);
+    $displayName=$accountId?(new AdminAccountSelector(db()))->displayName($accountId):'Administrador';
+    return AdminLayoutContext::prepare((string)($_SERVER['REQUEST_URI']??''),$_GET,$accountId,$displayName,(string)($_SESSION['csrf']??''));
+}
+/** Prepare the shared account shell before emitting the document. */
+function account_layout_context():array
+{
+    $locale=(string)($_GET['lang']??$_SESSION['account_locale']??'es');
+    if(!in_array($locale,['es','en','pt-br'],true))$locale='es';
+    $_SESSION['account_locale']=$locale;
+    $accountAdmin=!empty($_SESSION['admin'])
+        && !empty($_SESSION['admin_account_id'])
+        && (int)$_SESSION['admin_account_id']===(int)($_SESSION['business_account_id']??0);
+    return ['locale'=>$locale,'legacy_admin'=>$accountAdmin,'csrf'=>(string)($_SESSION['csrf']??'')];
 }
 function esc(mixed $value): string { return htmlspecialchars((string)$value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'); }
 function english_request(): bool { return ($_GET['lang'] ?? $_POST['lang'] ?? '') === 'en'; }
@@ -100,7 +115,7 @@ function require_business_session(bool $expectsJson=false,?string $returnTo=null
 }
 /** Every private administration page uses this guard; it never renders a 403 login message. */
 function require_admin_session(): void {
-    $active=!empty($_SESSION['admin']) && time()-(int)($_SESSION['last_seen']??0)<=1800;
+    $active=AccountSessionValidator::isActiveAdmin($_SESSION);
     if($active){$_SESSION['last_seen']=time();return;}
     unset($_SESSION['admin'],$_SESSION['admin_account_id'],$_SESSION['admin_user'],$_SESSION['last_seen']);
     $uri=(string)($_SERVER['REQUEST_URI']??'');$parts=parse_url($uri);$path=(string)($parts['path']??'');$query=isset($parts['query'])?'?'.$parts['query']:'';
@@ -118,13 +133,13 @@ function enforce_administration_session(): void {
     require_admin_session();
 }
 enforce_administration_session();
-function csrf(?string $returnTo=null): void {
+function csrf(?string $returnTo=null,?string $apiMessage=null): void {
     if (!is_string($_POST['csrf'] ?? null) || !hash_equals($_SESSION['csrf'], $_POST['csrf'])) {
         // Anonymous public APIs do not require an account: an expired form token
         // must stay a JSON validation failure, not send a visitor to sign-in.
         $apiPath=(string)(parse_url((string)($_SERVER['REQUEST_URI']??''),PHP_URL_PATH)?:'');
         if(empty($_SESSION['admin'])&&empty($_SESSION['business_account_id'])&&str_starts_with($apiPath,'/api/')){
-            json_response(['error'=>'csrf_invalid','message'=>'Recarga el formulario antes de enviarlo.'],403);
+            json_response(['error'=>'csrf_invalid','message'=>$apiMessage??'Recarga el formulario antes de enviarlo.'],403);
         }
         session_expired($returnTo);
     }
@@ -177,43 +192,43 @@ function lead_validation(array $input): array {
     $errors=[];$data=[];
     foreach (['name'=>120,'business'=>160,'municipality'=>120,'email'=>254,'phone'=>40,'brand_name'=>160,'description'=>2000] as $key=>$max) {
         $value=is_string($input[$key]??null)?trim($input[$key]):'';
-        if (strlen($value)>$max) $errors[$key]='El texto supera el límite permitido.';
+        if (strlen($value)>$max) $errors[$key]='field_too_long';
         $data[$key]=$value;
     }
-    foreach (['name','business','municipality'] as $key) if ($data[$key]==='') $errors[$key]='Completa este campo.';
+    foreach (['name','business','municipality'] as $key) if ($data[$key]==='') $errors[$key]='field_required';
     require_once __DIR__.'/LeadGeography.php';
     $location=LeadGeography::resolve($data['municipality'],is_string($input['contact_department']??null)?$input['contact_department']:'');
-    if(!$location)$errors['municipality']='Selecciona un municipio del departamento elegido.';else $data['municipality']=$location['label'];
-    if ($data['email']!=='' && !filter_var($data['email'], FILTER_VALIDATE_EMAIL)) $errors['email']='Revisa el correo electrónico.';
+    if(!$location)$errors['municipality']='invalid_municipality';else $data['municipality']=$location['label'];
+    if ($data['email']!=='' && !filter_var($data['email'], FILTER_VALIDATE_EMAIL)) $errors['email']='invalid_email';
     $data['phone_type']='';
     // El prefijo se calcula aquí: nunca confiar en un prefijo enviado por el navegador.
     if (array_key_exists('phone_number',$input)) {
         $number=is_string($input['phone_number'])?trim($input['phone_number']):'';
         $type=is_string($input['phone_type']??null)?$input['phone_type']:'';
         $data['phone']='';
-        if (!in_array($type,['fijo','celular','whatsapp'],true)) $errors['phone']='Revisa el número de contacto.';
-        elseif (!is_string($input['phone_number']) || strlen($number)>20) $errors['phone']='Revisa el número de contacto.';
+        if (!in_array($type,['fijo','celular','whatsapp'],true)) $errors['phone']='invalid_phone';
+        elseif (!is_string($input['phone_number']) || strlen($number)>20) $errors['phone']='invalid_phone';
         elseif ($number!=='') {
             if (in_array($type,['celular','whatsapp'],true) && preg_match('/^3[0-9]{9}$/D',$number)) $data['phone']='+57'.$number;
             elseif ($type==='fijo' && preg_match('/^[0-9]{7}$/D',$number)) $data['phone']='+57'.($location['prefix']??'').$number;
-            else $errors['phone']=$type==='fijo'?'Escribe los 7 dígitos del teléfono fijo, sin indicativo.':'Escribe los 10 dígitos del celular, empezando por 3.';
+            else $errors['phone']=$type==='fijo'?'invalid_landline':'invalid_mobile';
         }
     } elseif ($data['phone']!=='' && !preg_match('/^\+57(?:3[0-9]{9}|60[1-8][0-9]{7})$/D',$data['phone'])) {
-        $errors['phone']='Revisa el número de contacto.';
+        $errors['phone']='invalid_phone';
     }
     if ($data['phone']!=='' && isset($type) && in_array($type,['fijo','celular','whatsapp'],true)) $data['phone_type']=$type;
-    if ($data['email']==='' && $data['phone']==='') $errors['email']='Indica al menos un correo o teléfono.';
+    if ($data['email']==='' && $data['phone']==='') $errors['email']='contact_required';
     $data['category']=is_string($input['category']??null)?$input['category']:'';
-    if (!isset(categories()[$data['category']])) $errors['category']='Selecciona un tipo de negocio.';
+    if (!isset(categories()[$data['category']])) $errors['category']='invalid_category';
     // Tipos limitados en servidor: una solicitud especial no se confunde con un negocio normal.
     $requestType=is_string($input['request_type']??null)?$input['request_type']:'negocio';
-    if (!in_array($requestType,['negocio','impulsor_local'],true)) $errors['request_type']='Revisa el tipo de solicitud.';
+    if (!in_array($requestType,['negocio','impulsor_local'],true)) $errors['request_type']='invalid_request_type';
     $data['has_brand']='no';
     $data['brand_name']='';
     $data['interest']=$requestType==='impulsor_local'?'impulsor_local':'contacto';
     $data['wants_contact']=1;
-    if (($input['consent']??'')!=='1') $errors['consent']='Necesitamos tu autorización para guardar la solicitud.';
-    if (($input['understanding']??'')!=='1') $errors['understanding']='Confirma que has leído y entendido cómo participar y el alcance de esta etapa.';
+    if (($input['consent']??'')!=='1') $errors['consent']='consent_required';
+    if (($input['understanding']??'')!=='1') $errors['understanding']='understanding_required';
     $data['participation_version']=$requestType==='impulsor_local'?'impulsor-local-propuesta-v1':'participacion-informativa-v1';
     return [$data,$errors];
 }

@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-require_once __DIR__.'/DestinationAdminService.php';
+require_once __DIR__.'/PlaceAdminService.php';
 /** Private release tool: scoped editorial upserts; never imports accounts or payments. */
 final class ProductionContentTransfer
 {
@@ -29,7 +29,7 @@ final class ProductionContentTransfer
   foreach(['service_categories','service_category_translations','subscription_plans','subscription_plan_translations','subscription_features','subscription_feature_translations','subscription_plan_features','subscription_plan_prices','subscription_pricing_policy','experience_operator_prices'] as $table)foreach($tables[$table]??[] as $row)$this->upsert($table,$row,$this->primary($table));
   foreach($tables['media_assets']??[] as $row)$media[(int)$row['id']]=$this->upsert('media_assets',$row,['asset_path'],true);
   foreach($tables['media_asset_translations']??[] as $row){$row['media_asset_id']=$media[(int)$row['media_asset_id']];$this->upsert('media_asset_translations',$row,['media_asset_id','locale']);}
-  $service=new DestinationAdminService($this->db);
+  $service=new PlaceAdminService($this->db);
   foreach($pack['editorial'] as $slug=>$source){
    $q=$this->db->prepare('SELECT id FROM destinations WHERE slug=?');$q->execute([$slug]);$id=(int)$q->fetchColumn();$existing=$id?$service->find($id):null;$in=$source;$in['id']=$id;
    foreach(['hero','history'] as $role)$in[$role.'_asset_id']=$media[(int)($source['destination_media'][$role]['media_asset_id']??0)]??0;

@@ -4,7 +4,7 @@ from pathlib import Path
 import tempfile
 import unittest
 
-MODULE = Path(__file__).resolve().parents[1] / 'limpiar-paquete-publico.py'
+MODULE = Path(__file__).resolve().parents[1] / 'clean-public-package.py'
 spec = importlib.util.spec_from_file_location('package_cleaner', MODULE)
 cleaner = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(cleaner)

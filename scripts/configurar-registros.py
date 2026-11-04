@@ -43,7 +43,7 @@ def main():
         parser.error('Usuario o contraseña administrador inválidos.')
     if admin_password != getpass.getpass('Repite la contraseña administrador: '):
         parser.error('Las contraseñas no coinciden.')
-    result = subprocess.run([args.php, str(ROOT/'backend/bin/crear-hash.php')], input=admin_password, text=True, capture_output=True, check=True)
+    result = subprocess.run([args.php, str(ROOT/'backend/bin/create-password-hash.php')], input=admin_password, text=True, capture_output=True, check=True)
     privacy = {key: input(label+': ').strip() for key, label in [('operator','Responsable del tratamiento'),('contact','Contacto para privacidad'),('retention','Plazo de conservación en español'),('retention_en','Plazo de conservación en inglés')]}
     write_config(args.output, {'dsn':f'mysql:host={host};dbname={database};charset=utf8mb4', 'db_user':user, 'db_password':password, 'app_key':secrets.token_hex(32), 'admin_user':admin, 'admin_password_hash':result.stdout.strip(), 'registration_enabled':False, 'local_test':False, 'privacy':privacy})
     print('Configuración privada creada con permisos restringidos. Recepción desactivada. No se subió ningún archivo.')

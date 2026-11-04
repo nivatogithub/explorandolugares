@@ -1,0 +1,25 @@
+<?php
+declare(strict_types=1);
+if(PHP_SAPI!=='cli'||getenv('EL_PREPROD_LOCAL')!=='1')throw new RuntimeException('Local dev only.');
+$config=require '/srv/state/private/config.php';
+if(empty($config['local_test'])||!str_contains($config['dsn'],'host=127.0.0.1;dbname=el_test_destination_'))throw new RuntimeException('Synthetic development database required.');
+require '/srv/state/architecture-registration-selector/BusinessRegistrationSelector.php';
+$pdo=new PDO($config['dsn'],$config['db_user'],$config['db_password'],[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION]);
+foreach(['business_registration_drafts','business_account_applications','businesses','business_translations','business_account_memberships'] as $table)$pdo->exec('DROP TEMPORARY TABLE IF EXISTS '.$table);
+$pdo->exec('CREATE TEMPORARY TABLE business_registration_drafts(id VARCHAR(48),account_id INT,revision INT,status VARCHAR(30),business_id INT) ENGINE=InnoDB');
+$pdo->exec('CREATE TEMPORARY TABLE business_account_applications(id INT,account_id INT,destination_id INT,status VARCHAR(30)) ENGINE=InnoDB');
+$pdo->exec('CREATE TEMPORARY TABLE businesses(id INT,destination_id INT) ENGINE=InnoDB');
+$pdo->exec('CREATE TEMPORARY TABLE business_translations(business_id INT,locale VARCHAR(10),display_name VARCHAR(200)) ENGINE=InnoDB');
+$pdo->exec('CREATE TEMPORARY TABLE business_account_memberships(business_id INT,account_id INT,status VARCHAR(30)) ENGINE=InnoDB');
+$pdo->exec("INSERT INTO business_registration_drafts VALUES('fixture',1,3,'draft',NULL)");
+$pdo->exec("INSERT INTO business_account_applications VALUES(4,1,10,'pending'),(8,1,10,'in_review'),(9,1,10,'approved'),(10,2,10,'pending')");
+$pdo->exec("INSERT INTO businesses VALUES(1,10),(2,10),(3,20)");
+$pdo->exec("INSERT INTO business_translations VALUES(1,'es','Hotel Ficticio'),(2,'es','Hotel Ficticio'),(3,'es','Hotel Ficticio')");
+$pdo->exec("INSERT INTO business_account_memberships VALUES(1,1,'active'),(2,1,'inactive'),(3,2,'active')");
+$s=new BusinessRegistrationSelector($pdo);
+$draft=$s->draft('fixture');
+if(!$draft||(int)$draft['account_id']!==1||(int)$draft['revision']!==3||$s->draft('missing')!==false)throw new RuntimeException('Draft lookup failed.');
+if($s->pendingApplication(1,10)!==8||$s->pendingApplication(2,10)!==10||$s->pendingApplication(1,20)!==0)throw new RuntimeException('Pending application lookup failed.');
+if($s->latestBusiness(1,10,'hotel ficticio')!==1||$s->latestBusiness(1,20,'hotel ficticio')!==0)throw new RuntimeException('Business lookup failed.');
+if(!$s->hasActiveMembership(1,1)||$s->hasActiveMembership(1,2)||$s->hasActiveMembership(1,3))throw new RuntimeException('Membership lookup failed.');
+echo json_encode(['driver'=>'MariaDB','temporary_tables_only'=>true,'draft'=>true,'pending'=>true,'business'=>true,'membership'=>true],JSON_THROW_ON_ERROR)."\n";

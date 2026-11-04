@@ -1,0 +1,15 @@
+<?php
+declare(strict_types=1);
+if(PHP_SAPI!=='cli'||getenv('EL_PREPROD_LOCAL')!=='1')throw new RuntimeException('Reserved dev only.');
+$config=require '/srv/state/private/config.php';if(empty($config['local_test'])||!str_contains($config['dsn'],'host=127.0.0.1;dbname=el_test_destination_'))throw new RuntimeException('Synthetic dev database required.');
+require '/srv/state/request-detail-selector-test/AdminRequestDetailSelector.php';
+$pdo=new PDO($config['dsn'],$config['db_user'],$config['db_password'],[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC]);$pdo->beginTransaction();
+try{
+ $s=new AdminRequestDetailSelector($pdo);$check=static function(mixed $a,mixed $b,string $name):void{if($a!==$b)throw new RuntimeException('Mismatch: '.$name);};
+ foreach(['lead'=>'leads','account'=>'business_account_applications'] as $type=>$table){$id=(int)($pdo->query('SELECT id FROM '.$table.' ORDER BY id LIMIT 1')->fetchColumn()?:0);$q=$pdo->prepare('SELECT * FROM '.$table.' WHERE id=?');$q->execute([$id]);$check($s->request($type,$id),$q->fetch(PDO::FETCH_ASSOC),$type);}
+ $q=$pdo->prepare('SELECT b.id,t.display_name,d.display_name AS place FROM businesses b JOIN business_translations t ON t.business_id=b.id AND t.locale="es" JOIN destination_translations d ON d.destination_id=b.destination_id AND d.locale="es" WHERE t.display_name LIKE ? ORDER BY t.display_name,b.id LIMIT 30');$q->execute(['%hotel%']);$check($s->businessesMatching('hotel'),$q->fetchAll(PDO::FETCH_ASSOC),'business search');
+ $account=(int)($pdo->query('SELECT id FROM accounts ORDER BY id LIMIT 1')->fetchColumn()?:0);$business=(int)($pdo->query('SELECT id FROM businesses ORDER BY id LIMIT 1')->fetchColumn()?:0);$id=(int)($pdo->query('SELECT id FROM business_account_applications ORDER BY id LIMIT 1')->fetchColumn()?:0);
+ foreach([["SELECT id,display_name AS name,email,status FROM accounts WHERE id=?",[$account],$s->account($account),'one','account'],["SELECT id,original_name,verified_at FROM business_account_application_evidence WHERE application_id=? ORDER BY id",[$id],$s->evidence($id),'all','evidence'],["SELECT id,original_name FROM business_application_images WHERE application_id=? ORDER BY id",[$id],$s->photos($id),'all','photos'],["SELECT status,role,created_at FROM business_account_memberships WHERE business_id=? AND account_id=?",[$business,$account],$s->memberships($business,$account),'all','memberships'],['SELECT b.id,b.publication_status,b.information_status,t.display_name FROM businesses b JOIN business_translations t ON t.business_id=b.id AND t.locale="es" WHERE b.id=?',[$business],$s->business($business),'one','business']] as [$sql,$params,$actual,$mode,$name]){$q=$pdo->prepare($sql);$q->execute($params);$expected=$mode==='one'?$q->fetch(PDO::FETCH_ASSOC):$q->fetchAll(PDO::FETCH_ASSOC);$check($actual,$expected,$name);}
+ $check($s->categoryNames(),$pdo->query('SELECT category_code,label FROM service_category_translations WHERE locale="es"')->fetchAll(PDO::FETCH_KEY_PAIR),'categories');
+ echo "OK MariaDB: selector matches original reads, no writes.\n";
+}finally{if($pdo->inTransaction())$pdo->rollBack();}

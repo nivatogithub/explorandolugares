@@ -22,7 +22,7 @@ def run(env):
         return result
 
     def form():
-        code, body, _ = client.get('/contacto.php')
+        code, body, _ = client.get('/contact.php')
         check(code == 200 and '<form' in body, 'Contacto anónimo no abre formulario')
         for kind in emails:
             check('value="'+kind+'"' in body, 'Falta tipo de solicitud '+kind)
@@ -35,7 +35,7 @@ def run(env):
                   'name': run_id+' Solicitud sintética', 'email': emails[kind],
                   'message': 'PRUEBA AUTOMATIZADA LOCAL: '+run_id+' '+kind,
                   'consent': '1', 'website': ''}
-        code, body, _ = post('/contacto.php', fields)
+        code, body, _ = post('/contact.php', fields)
         check(code == 200, 'No registra solicitud anónima '+kind+'; HTTP '+str(code))
         rows = query('SELECT * FROM public_requests WHERE email=?', [emails[kind]])
         check(len(rows) == 1, 'La solicitud no persistió exactamente una vez')
@@ -47,15 +47,15 @@ def run(env):
         check(row['reference'] in body and 'Solicitud registrada' in body, 'No entrega referencia')
         references[kind] = row
         # Confirmation is session scoped and disappears; public GET does not expose email/messages.
-        _, second, _ = client.get('/contacto.php')
+        _, second, _ = client.get('/contact.php')
         check(row['reference'] not in second, 'Referencia permanece expuesta fuera de confirmación')
-        _, other, _ = Client().get('/contacto.php?reference='+row['reference'])
+        _, other, _ = Client().get('/contact.php?reference='+row['reference'])
         check(row['message'] not in other and row['email'] not in other,
               'Otro visitante puede leer contenido privado por referencia')
 
     def csrf_denied():
         form()
-        code, _, _ = post('/contacto.php', {
+        code, _, _ = post('/contact.php', {
             'csrf': 'token-invalido', 'request_type': 'suggestion', 'name': run_id,
             'email': emails['suggestion'], 'message': 'No debe persistir sin CSRF válido.', 'consent': '1'})
         check(code in (400, 403), 'Acepta formulario sin CSRF válido')
@@ -64,7 +64,7 @@ def run(env):
 
     def consent_denied():
         # This is the fifth throttled attempt; invalid CSRF never consumes form throttle.
-        code, _, _ = post('/contacto.php', {
+        code, _, _ = post('/contact.php', {
             'csrf': csrf(form()), 'request_type': 'claim', 'name': run_id,
             'email': emails['claim'], 'message': 'No debe registrarse sin consentimiento.'})
         check(code == 400, 'No rechaza falta de consentimiento')
@@ -82,13 +82,13 @@ def run(env):
         check(len(references) == 4, 'Faltan solicitudes previas para verificar acceso')
         login(admin, 'administrador')
         check(admin.state().get('administrator'), 'Falta rol administrador')
-        code, body, _ = admin.get('/admin/solicitudes-publicas.php')
+        code, body, _ = admin.get('/admin/public-requests.php')
         check(code == 200 and 'Solicitudes de usuarios' in body, 'No abre atención administrativa')
         for row in references.values():
             check(row['reference'] in body and row['message'] in body, 'Solicitud ausente en panel')
         row = references['petition']
         note = 'Prueba sintética local: atención registrada, sin envío de correos.'
-        code, _, _ = admin.request('/admin/solicitudes-publicas.php', {
+        code, _, _ = admin.request('/admin/public-requests.php', {
             'csrf': csrf(body), 'id': row['id'], 'status': 'in_review', 'response_note': note})
         check(code == 200, 'Administrador no puede registrar atención')
         updated = query('SELECT status,response_note,reviewed_at FROM public_requests WHERE id=? AND email=?',
@@ -101,12 +101,12 @@ def run(env):
         login(ordinary, 'viajero')
         check(not ordinary.state().get('administrator'), 'Fixture viajero tiene permisos administrativos')
         for target, label in ((Client(), 'anónimo'), (ordinary, 'viajero')):
-            code, body, _ = target.get('/admin/solicitudes-publicas.php')
+            code, body, _ = target.get('/admin/public-requests.php')
             check(code == 403, 'Expone solicitudes privadas a '+label)
             for row in references.values():
                 check(row['email'] not in body and row['message'] not in body, 'Filtración a '+label)
             before = query('SELECT status,response_note FROM public_requests WHERE email=?', [emails['petition']])
-            code, _, _ = target.request('/admin/solicitudes-publicas.php', {
+            code, _, _ = target.request('/admin/public-requests.php', {
                 'csrf': target.state().get('csrf', ''), 'id': references['petition']['id'],
                 'status': 'resolved', 'response_note': 'Cambio no autorizado'})
             check(code == 403, 'Acepta revisión de '+label)

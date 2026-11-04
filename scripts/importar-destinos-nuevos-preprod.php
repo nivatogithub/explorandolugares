@@ -9,11 +9,11 @@ if(!in_array($slug,$allowed,true))throw new RuntimeException('Destino fuera del 
 $folder='/srv/state/worker-review/lote-20261019';$path=$folder.'/'.$slug.'.zip';$businessPath=$folder.'/'.$slug.'-negocios.zip';
 if(!hash_equals($argv[2]??'',hash_file('sha256',$path)))throw new RuntimeException('Hash de destino incorrecto.');
 if(!hash_equals($argv[3]??'',hash_file('sha256',$businessPath)))throw new RuntimeException('Hash de negocios incorrecto.');
-foreach(['DestinationPackage','DestinationAdminService','BusinessPackage','BusinessPublicImporter'] as $class)require_once '/srv/portal/app/'.$class.'.php';
+foreach(['PlacePackage','PlaceAdminService','BusinessPackage','BusinessPublicImporter'] as $class)require_once '/srv/portal/app/'.$class.'.php';
 $p=new PDO($c['dsn'],$c['db_user'],$c['db_password'],[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC]);
-$package=DestinationPackage::readZip($path);$m=$package['manifest'];$d=$m['destination'];
+$package=PlacePackage::readZip($path);$m=$package['manifest'];$d=$m['destination'];
 if($d['slug']!==$slug||count(array_filter($m['places'],fn($x)=>$x['type']==='place'))>8)throw new RuntimeException('Manifiesto fuera del alcance.');
-$service=new DestinationAdminService($p);$q=$p->prepare('SELECT id FROM destinations WHERE slug=?');$q->execute([$slug]);$id=(int)$q->fetchColumn();$before=$id?$service->find($id):null;
+$service=new PlaceAdminService($p);$q=$p->prepare('SELECT id FROM destinations WHERE slug=?');$q->execute([$slug]);$id=(int)$q->fetchColumn();$before=$id?$service->find($id):null;
 $reportPath=$folder.'/loaded-'.$slug.'.json';
 if($before&&$before['publication_status']==='published'&&!is_file($reportPath))throw new RuntimeException('Ya existe destino publicado sin pertenecer a este lote: revisar antes de sustituir.');
 $backup=$folder.'/before-'.$slug.'.json';if(!is_file($backup))file_put_contents($backup,json_encode($before,JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE));

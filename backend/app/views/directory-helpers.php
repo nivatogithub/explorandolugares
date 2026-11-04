@@ -28,7 +28,7 @@ function directoryPlanContacts(array $business,array $contacts,string $locale): 
         $map=BusinessLocationLink::forBusiness($business);
         if($map!==''){
             $label=$locale==='en'?'Directions':($locale==='pt-BR'?'Como chegar':'Cómo llegar');
-            $out[]='<a class="directory-contact-link directory-contact-location" '.BusinessPreviewLinks::attributes($map,!empty($business['preview_only']),str_starts_with($map,'http')).' aria-label="'.e($label).'" title="'.e($label).'">'.BusinessContactVisibility::icon('location').'</a>';
+            $out[]='<a class="directory-contact-link directory-contact-location" '.BusinessPreviewLinks::attributes($map,(!empty($business['preview_only'])||!empty($business['disable_contact_links'])),str_starts_with($map,'http')).' aria-label="'.e($label).'" title="'.e($label).'">'.BusinessContactVisibility::icon('location').'</a>';
         }
     }
     $seen=[];
@@ -38,7 +38,7 @@ function directoryPlanContacts(array $business,array $contacts,string $locale): 
         $href=contactHref($contact);if(!$href)continue;
         $seen[$channel]=true;
         $label=BusinessContactVisibility::label($channel,$locale);
-        $out[]='<a class="directory-contact-link directory-contact-'.e($channel).'" '.BusinessPreviewLinks::attributes($href,!empty($business['preview_only']),str_starts_with($href,'http')).' aria-label="'.e($label).'" title="'.e($label).'">'.BusinessContactVisibility::icon($channel).'</a>';
+        $out[]='<a class="directory-contact-link directory-contact-'.e($channel).'" '.BusinessPreviewLinks::attributes($href,(!empty($business['preview_only'])||!empty($business['disable_contact_links'])),str_starts_with($href,'http')).' aria-label="'.e($label).'" title="'.e($label).'">'.BusinessContactVisibility::icon($channel).'</a>';
     }
     return $out?'<nav class="directory-contact-links" aria-label="'.e($locale==='en'?'Business contact':($locale==='pt-BR'?'Contato do negócio':'Contacto del negocio')).'">'.implode(' ',$out).'</nav>':'';
 }
@@ -70,7 +70,7 @@ function directoryActions(array $business,array $contacts,string $locale,?string
     return $html?'<nav class="directory-icon-actions" aria-label="'.e($locale==='en'?'Business actions':($locale==='pt-BR'?'Ações do negócio':'Acciones del negocio')).'">'.$html.'</nav>':'';
 }
 
-function destinationRelation(string $destination,string $kind,string $slug,string $locale,array $places):array {
+function placeRelation(string $destination,string $kind,string $slug,string $locale,array $places):array {
     if($destination!=='zipaquira')return [];
     $slugs=array_column($places,'slug');if(!in_array('estacion-tren',$slugs,true)||!in_array('tren-sabana',$slugs,true))return [];
     $labels=match($locale){'en'=>['See the train experience','See the arrival station'],'pt-BR'=>['Ver a experiência de trem','Ver a estação de chegada'],default=>['Ver la experiencia del tren','Ver la estación de llegada']};
@@ -78,13 +78,13 @@ function destinationRelation(string $destination,string $kind,string $slug,strin
     if($kind==='experience'&&$slug==='tren-sabana')return ['id'=>'experiencia-tren-sabana','target'=>'lugar-estacion-tren','label'=>$labels[1]];
     return [];
 }
-function destinationRelationLink(array $relation):string {
+function placeRelationLink(array $relation):string {
     if(!$relation)return '';
     return '<a class="text-link place-relation-link" data-place-relation href="#'.e($relation['target']).'">'.e($relation['label']).'</a>';
 }
 
 /** Exact data-backed links; location is independent of translated descriptions. */
-function destinationPointActions(array $place,array $copy,string $locale):string
+function placePointActions(array $place,array $copy,string $locale):string
 {
     $html='';$seen=[];
     foreach(['map_url'] as $key){
@@ -96,4 +96,14 @@ function destinationPointActions(array $place,array $copy,string $locale):string
         $html.='<a class="text-link destination-map-link" href="'.e($url).'" target="_blank" rel="noopener noreferrer">'.e((string)$label).'</a>';
     }
     return $html;
+}
+
+/** Responsive hints are stored with the selected database media, never per-destination files. */
+function mediaResponsiveAttributes(array $media): string
+{
+    $attributes='';
+    foreach (['srcset','sizes'] as $key) {
+        if (($media[$key]??'')!=='') $attributes.=' '.$key.'="'.htmlspecialchars((string)$media[$key],ENT_QUOTES|ENT_SUBSTITUTE,'UTF-8').'"';
+    }
+    return $attributes;
 }

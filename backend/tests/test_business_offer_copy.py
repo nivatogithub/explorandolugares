@@ -37,6 +37,6 @@ class OfferTests(unittest.TestCase):
       self.assertEqual(s.count('id="condiciones-de-publicacion"'),1)
       self.assertIn('(5)',s);self.assertNotRegex(s,r'retracto|right of withdrawal|direito legal de arrependimento')
  def test_conditions_precede_payment_instructions(self):
-  s=(ROOT/'backend/public/business/payment-instructions.php').read_text();self.assertLess(s.index("require __DIR__.'/publication-terms.php'"),s.index('<h4>Cómo realizar el pago'))
-  terms=(ROOT/'backend/public/business/publication-terms.php').read_text();self.assertIn('cinco (5) días hábiles después de recibir el pago',terms);self.assertNotIn('retracto',terms.lower())
+  s=(ROOT/'backend/app/views/account/payment-instructions.php').read_text();self.assertLess(s.index("require __DIR__.'/payment-publication-terms.php'"),s.index('<h4>Cómo realizar el pago'))
+  terms=(ROOT/'backend/app/views/account/payment-publication-terms.php').read_text();self.assertIn('cinco (5) días hábiles después de recibir el pago',terms);self.assertNotIn('retracto',terms.lower())
 if __name__=='__main__':unittest.main()

@@ -9,7 +9,7 @@ final class PublicSeo
         return match($locale){'en'=>'/en','pt-BR'=>'/pt-br',default=>''};
     }
 
-    public static function destinationTitle(string $name,string $locale,string $region=''): string
+    public static function placeTitle(string $name,string $locale,string $region=''): string
     {
         $place=$name.($region!==''?', '.$region:'');
         return match($locale){
@@ -39,11 +39,11 @@ final class PublicSeo
         ).'</script>';
     }
 
-    public static function destinationGraph(array $destination,string $canonical,string $origin,string $locale,?string $image): array
+    public static function placeGraph(array $destination,string $canonical,string $origin,string $locale,?string $image): array
     {
         $place=['@type'=>'TouristDestination','@id'=>$canonical.'#place','name'=>$destination['display_name'],'url'=>$canonical];
         if($image)$place['image']=$image;
-        $page=['@type'=>'WebPage','@id'=>$canonical.'#webpage','url'=>$canonical,'name'=>self::destinationTitle($destination['display_name'],$locale,(string)($destination['department']??'')),'inLanguage'=>$locale,'about'=>['@id'=>$place['@id']]];
+        $page=['@type'=>'WebPage','@id'=>$canonical.'#webpage','url'=>$canonical,'name'=>self::placeTitle($destination['display_name'],$locale,(string)($destination['department']??'')),'inLanguage'=>$locale,'about'=>['@id'=>$place['@id']]];
         return [$place,$page,self::breadcrumbs($origin,$locale,$destination['display_name'],$canonical)];
     }
 

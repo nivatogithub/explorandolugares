@@ -25,10 +25,10 @@ for key,row in initial['profiles'].items():
         assert 'Solicitudes asociadas a tu cuenta' in page
         for business in row['businesses']:
             assert business['display_name'] in page,'Falta un negocio asociado en el portal comercial'
-    assert call(client,'/admin/usuarios.php')[0]==(200 if key=='administrador' else 403),key+': acceso administrativo incorrecto'
+    assert call(client,'/admin/accounts.php')[0]==(200 if key=='administrador' else 403),key+': acceso administrativo incorrecto'
     assert call(client,'/negocios/salir/',{'csrf':state['csrf']})[0]==200
     assert json.loads(call(client,'/api/account-session.php')[1])['authenticated'] is False
-    assert call(client,'/admin/usuarios.php')[0]==403
+    assert call(client,'/admin/accounts.php')[0]==403
 again=prepare()
 for key,row in initial['profiles'].items():
     assert again['profiles'][key]['id']==row['id'] and again['profiles'][key]['password']==row['password'],'Preparar cambió un acceso existente'

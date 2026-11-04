@@ -6,7 +6,7 @@ ROOT=Path(__file__).resolve().parents[1]
 p=argparse.ArgumentParser();p.add_argument('--check',action='store_true');args=p.parse_args()
 subprocess.run([sys.executable,str(ROOT/'scripts/generar-tokens-portal.py'),*(['--check'] if args.check else [])],check=True)
 page=ROOT/'backend/public/cobertura/colombia/index.html';actual=page.read_text();expected=actual
-for name in ['portal-tokens.css','cobertura-meta.css','cobertura-meta.js','medicion.js']:
+for name in ['portal-tokens.css','coverage-meta.css','coverage-meta.js','analytics.js']:
  digest=hashlib.sha256((ROOT/'backend/public/assets/cobertura'/name).read_bytes()).hexdigest()[:12]
  pattern=r'(assets/cobertura/'+re.escape(name)+r')\?v=[^"\s]+'
  expected,count=re.subn(pattern,lambda m:m[1]+'?v='+digest,expected)
@@ -17,14 +17,14 @@ if args.check:
 else:page.write_text(expected)
 
 # A fresh HTML/PHP page must not reload a stale shared loader or measurement file.
-spec=importlib.util.spec_from_file_location('measurement_versions',ROOT/'scripts/versiones-medicion.py');versioner=importlib.util.module_from_spec(spec);spec.loader.exec_module(versioner)
+spec=importlib.util.spec_from_file_location('measurement_versions',ROOT/'scripts/version-analytics.py');versioner=importlib.util.module_from_spec(spec);spec.loader.exec_module(versioner)
 # The shared loader moved into the canonical public assets during template unification.
-menu=ROOT/'backend/public/assets/menu-principal.js'
-measurement_version,menu_text,menu_version=versioner.versions(ROOT/'backend/public/assets/cobertura/medicion.js',menu)
+menu=ROOT/'backend/public/assets/main-menu.js'
+measurement_version,menu_text,menu_version=versioner.versions(ROOT/'backend/public/assets/cobertura/analytics.js',menu)
 updates={menu:menu_text}
-for path in [page,*list((ROOT/'backend/integration-medicion/public').rglob('*'))]:
+for path in [page,*list((ROOT/'backend/integration-analytics/public').rglob('*'))]:
  if path.is_file() and path.suffix in {'.html','.php'}:
-  updates[path]=versioner.stamp(versioner.stamp(path.read_text(),'medicion.js',measurement_version),'menu-principal.js',menu_version)
+  updates[path]=versioner.stamp(versioner.stamp(path.read_text(),'analytics.js',measurement_version),'main-menu.js',menu_version)
 for path,expected_text in updates.items():
  if args.check and path.read_text()!=expected_text:raise SystemExit('Shared measurement loader versions are out of date: '+str(path.relative_to(ROOT)))
  if not args.check:path.write_text(expected_text)

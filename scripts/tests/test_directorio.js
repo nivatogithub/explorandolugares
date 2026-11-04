@@ -1,5 +1,5 @@
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
-const script=fs.readFileSync('ensayos/v1/assets/catalogo.js','utf8');
+const script=fs.readFileSync('ensayos/v1/assets/catalog.js','utf8');
 const options=JSON.parse(fs.readFileSync('ensayos/v1/assets/contact-options.json','utf8'));
 class Element {
  constructor(tag){this.tag=tag;this.children=[];this.dataset={};this.attributes={};this.events={};}
@@ -13,7 +13,7 @@ const walk=(node,test)=>[...(test(node)?[node]:[]),...node.children.flatMap(chil
 const base={destino:'jerico',registroConfirmado:true,informacionVerificada:true,estado:'publicado',slug:'lugar-prueba',nombre:'Prueba <b>literal</b>',tipoServicio:'hospedaje',descripcion:'Texto de prueba',descripcionEn:'Test description',contactoUrl:'https://example.invalid',imagen:'assets/jerico.webp'};
 async function run(lang,records,fail=false,reviews=false){
  const container=new Element('div');container.dataset.destino='jerico';
- vm.runInNewContext(script,{URL,document:{currentScript:{src:'http://localhost:8000/assets/catalogo.js'},documentElement:{lang},getElementById(){return container},createElement:tag=>new Element(tag)},fetch:async url=>({ok:!fail,json:async()=>String(url).includes('contact-options')?options:{publicaciones:records,resenasHabilitadas:reviews}})});
+ vm.runInNewContext(script,{URL,document:{currentScript:{src:'http://localhost:8000/assets/catalog.js'},documentElement:{lang},getElementById(){return container},createElement:tag=>new Element(tag)},fetch:async url=>({ok:!fail,json:async()=>String(url).includes('contact-options')?options:{publicaciones:records,resenasHabilitadas:reviews}})});
  await new Promise(resolve=>setImmediate(resolve));return container;
 }
 (async()=>{

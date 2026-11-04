@@ -65,7 +65,7 @@ try:
     CLIENT.open(urllib.request.Request(BASE + 'admin/index.php', data=urllib.parse.urlencode({
         'csrf': csrf, 'action': 'login', 'username': 'localadmin', 'password': 'DestinosLocal8014!'
     }).encode()))
-    editor = CLIENT.open(BASE + 'admin/destinos.php').read().decode()
+    editor = CLIENT.open(BASE + 'admin/places.php').read().decode()
     csrf = re.search(r'name="csrf" value="([^"]+)"', editor).group(1)
 
     archive_path = ROOT / 'backend/public/plantillas/paquete-destino-v2.zip'
@@ -73,7 +73,7 @@ try:
         manifest = json.loads(archive.read('paquete-destino.json'))
         raw_images = {name: archive.read(name) for name in archive.namelist() if name.startswith('images/') and not name.endswith('/')}
     fields, files = multipart({'csrf': csrf}, [('package_zip', archive_path.name, archive_path.read_bytes(), 'application/zip')])
-    request = urllib.request.Request(BASE + 'admin/paquete-destino.php', data=fields, headers={'Content-Type': f'multipart/form-data; boundary={files}'})
+    request = urllib.request.Request(BASE + 'admin/place-package.php', data=fields, headers={'Content-Type': f'multipart/form-data; boundary={files}'})
     staged = json.loads(CLIENT.open(request).read())
     assert staged['manifest']['schema_version'] == 2 and len(staged['images']) == 2
     staged_bytes = {}
@@ -112,7 +112,7 @@ try:
         place_files.append((f'place_uploads[{index}]', Path(image_name).name, staged_bytes[image_name], 'image/png'))
     hero_name = manifest['hero_image']['file']
     uploads = [('hero_upload', Path(hero_name).name, staged_bytes[hero_name], 'image/png'), *place_files]
-    response = post('admin/destinos.php', data, uploads)
+    response = post('admin/places.php', data, uploads)
     matched = re.search(r'[?&]id=(\d+)', response.geturl())
     assert matched, f'Draft save did not return to its editor: {response.geturl()}'
     destination_id = int(matched.group(1))
@@ -125,7 +125,7 @@ try:
         assert db.execute('SELECT COUNT(*) FROM destination_media WHERE destination_id=? AND role="hero"', (destination_id,)).fetchone()[0] == 1
     for (asset_path,) in assets:
         assert (MEDIA_ROOT / asset_path).is_file(), 'Uploaded destination images must exist in media storage.'
-    assert opener_404(CLIENT, BASE + 'admin/paquete-destino-imagen.php?token=' + staged['token'] + '&file=' + urllib.parse.quote(hero_name)), 'Staged copies are removed after save.'
+    assert opener_404(CLIENT, BASE + 'admin/place-package-image.php?token=' + staged['token'] + '&file=' + urllib.parse.quote(hero_name)), 'Staged copies are removed after save.'
     print('OK: ZIP import authenticates, stages the images for review, and saves all content as a private draft.')
 finally:
     if destination_id:

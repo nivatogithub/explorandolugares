@@ -5,7 +5,7 @@ import tempfile
 import unittest
 
 ROOT = Path(__file__).resolve().parents[2]
-spec = importlib.util.spec_from_file_location('seo_release', ROOT / 'scripts/generar-sitemap-entrega.py')
+spec = importlib.util.spec_from_file_location('seo_release', ROOT / 'scripts/generate-release-sitemap.py')
 seo = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(seo)
 
@@ -23,7 +23,7 @@ class SeoReleaseTests(unittest.TestCase):
             if slug in seed:self.assertEqual(seed[slug]['translations'][locale]['meta_description'],change['after'])
 
     def test_internal_links_are_canonical_without_touching_external_or_query(self):
-        composer_spec=importlib.util.spec_from_file_location('seo_composer',ROOT/'scripts/componer-presentacion.py')
+        composer_spec=importlib.util.spec_from_file_location('seo_composer',ROOT/'scripts/compose-presentation.py')
         composer=importlib.util.module_from_spec(composer_spec);composer_spec.loader.exec_module(composer)
         source='<a href="../privacidad/index.html?from=one&amp;lang=en#terms">Privacy</a><a href="https://other.invalid/index.html">Other</a><a href="#main">Jump</a>'
         result=composer.canonical_body_links(source,'/en/lugares/')
@@ -51,8 +51,8 @@ class SeoReleaseTests(unittest.TestCase):
     def test_sitemap_route_is_internal_and_templates_redirect_after_validation(self):
         rules = (ROOT / 'ensayos/v1/.htaccess').read_text()
         self.assertIn('RewriteRule ^sitemap\\.xml$ sitemap-live.php [L]', rules)
-        for template, gate in [('destino.php', 'if (!$d)'), ('negocio.php', 'if(!$business)')]:
-            source = (ROOT / 'backend/integration-medicion/public' / template).read_text()
+        for template, gate in [('place.php', 'if (!$d)'), ('business.php', 'if(!$business)')]:
+            source = (ROOT / 'backend/integration-analytics/public' / template).read_text()
             self.assertLess(source.index(gate), source.index("header('Location:"))
 
 if __name__ == '__main__':

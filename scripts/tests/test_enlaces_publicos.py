@@ -49,8 +49,8 @@ class PublicLinkTests(unittest.TestCase):
                 elif not target.exists():
                     relative=target.relative_to(self.public.resolve()).as_posix()
                     route=__import__('re').fullmatch(r'(?:en/|pt-br/)?(?:destinos|lugares)/([a-z0-9-]+)(?:/index\.html)?/?',relative)
-                    directory_route=relative.rstrip('/') in {'lugares','en/lugares','pt-br/lugares'} and (self.public/'destinos.php').is_file()
-                    claim_route=relative.rstrip('/')=='reclamar-negocio' and (self.public/'reclamar-negocio.php').is_file()
+                    directory_route=relative.rstrip('/') in {'lugares','en/lugares','pt-br/lugares'} and (self.public/'places.php').is_file()
+                    claim_route=relative.rstrip('/')=='reclamar-negocio' and (self.public/'business-claim.php').is_file()
                     business_routes={'negocios/registro':'register.php','negocios/acceso':'login.php','negocios/portal':'dashboard.php','negocios/salir':'logout.php'}
                     business_route=relative.rstrip('/') in business_routes and (self.public/'business'/business_routes[relative.rstrip('/')]).is_file()
                     if not claim_route and not business_route and not directory_route and (not route or route.group(1) not in dynamic_slugs):
@@ -79,7 +79,7 @@ class PublicLinkTests(unittest.TestCase):
         self.assertEqual(destination_urls, [])
         self.assertTrue((self.public/'sitemap-live.php').is_file())
         self.assertIn('RewriteRule ^sitemap\\.xml$ sitemap-live.php [L]', (self.public/'.htaccess').read_text())
-        self.assertTrue((self.public/'destinos.php').is_file())
+        self.assertTrue((self.public/'places.php').is_file())
         self.assertFalse(any((self.public/f'{locale}destinos').exists() for locale in ('','en/','pt-br/')))
         self.assertFalse(any((self.public/f'{locale}lugares').exists() for locale in ('','en/','pt-br/')))
         seed=__import__('json').loads((ROOT/'content/destinos-dinamicos.json').read_text())
@@ -112,12 +112,12 @@ class PublicLinkTests(unittest.TestCase):
         bootstrap=(ROOT/'backend/app/bootstrap.php').read_text()
         self.assertIn('function site_path(string $path)',bootstrap)
         self.assertNotIn("/v1",bootstrap)
-        for relative in ('business/register.php','business/login.php','business/dashboard.php','business/logout.php','reclamar-negocio.php'):
+        for relative in ('business/register.php','business/login.php','business/dashboard.php','business/logout.php','business-claim.php'):
             source=(ROOT/'backend/public'/relative).read_text()
             self.assertNotIn('/v1/',source,relative)
-        registration=(ROOT/'backend/public/business/register.php').read_text()
+        registration=(ROOT/'backend/app/views/account/business-registration.php').read_text()
         script=(ROOT/'backend/public/assets/business-registration.js').read_text()
-        self.assertIn('data-search-url="<?=esc(site_path(\'/negocios/registro/\'))?>"',registration)
+        self.assertIn('data-search-url="<?=esc(\'/negocios/registro/\')?>"',registration)
         self.assertIn('form.dataset.searchUrl',script)
 
     def test_business_registration_is_grouped_and_preserves_submission_fields(self):
@@ -131,7 +131,7 @@ class PublicLinkTests(unittest.TestCase):
             self.assertGreaterEqual(source.count('class="registration-group'), 3, relative)
             for label in labels: self.assertIn(label, source, relative)
             for field in required_fields: self.assertIn(field, source, relative)
-        registration_script=(self.public/'assets/registro.js').read_text()
+        registration_script=(self.public/'assets/registration.js').read_text()
         self.assertIn("window.location.assign('../../index.html')", registration_script)
 
     def test_public_image_credit_catalogue_is_removed_but_internal_provenance_remains(self):
@@ -146,12 +146,12 @@ class PublicLinkTests(unittest.TestCase):
         self.assertIn('license_name',catalog)
 
     def test_dynamic_destination_runtime_is_included_in_local_package(self):
-        self.assertTrue((self.public/'destino.php').is_file())
+        self.assertTrue((self.public/'place.php').is_file())
         self.assertTrue((self.public/'.htaccess').is_file())
-        self.assertTrue((self.public/'admin/paquete-destino.php').is_file())
-        self.assertTrue((self.public/'admin/paquete-destino-imagen.php').is_file())
-        self.assertTrue((self.public/'admin/negocios.php').is_file())
-        self.assertTrue((self.public/'admin/suscripciones.php').is_file())
+        self.assertTrue((self.public/'admin/place-package.php').is_file())
+        self.assertTrue((self.public/'admin/place-package-image.php').is_file())
+        self.assertTrue((self.public/'admin/businesses.php').is_file())
+        self.assertTrue((self.public/'admin/subscriptions.php').is_file())
         self.assertTrue((Path(self.temp.name)/'app/BusinessSubscriptionAdminService.php').is_file())
         self.assertTrue((Path(self.temp.name)/'app/BusinessPublicImporter.php').is_file())
         self.assertTrue((self.public/'plantillas/paquete-destino-v2.zip').is_file())
@@ -167,12 +167,14 @@ class PublicLinkTests(unittest.TestCase):
             self.assertFalse((self.public/'assets/destinos/1'/obsolete).exists(),obsolete)
         self.assertFalse((self.public/'assets/jerico.webp').exists())
         self.assertFalse((self.public/'assets/jerico').exists())
-        self.assertTrue((Path(self.temp.name)/'app/DestinationRepository.php').is_file())
+        self.assertTrue((Path(self.temp.name)/'app/PlaceRepository.php').is_file())
+        self.assertTrue((Path(self.temp.name)/'app/PlaceSelector.php').is_file())
+        self.assertFalse((Path(self.temp.name)/'app/DestinationRepository.php').exists())
         self.assertTrue((Path(self.temp.name)/'app/BusinessRepository.php').is_file())
         self.assertTrue((Path(self.temp.name)/'app/BusinessAdminService.php').is_file())
         self.assertTrue((Path(self.temp.name)/'content/destinos-dinamicos.json').is_file())
-        self.assertTrue((Path(self.temp.name)/'bin/importar-destinos.php').is_file())
-        self.assertTrue((Path(self.temp.name)/'app/bin/importar-destinos.php').is_file())
+        self.assertTrue((Path(self.temp.name)/'bin/import-places.php').is_file())
+        self.assertTrue((Path(self.temp.name)/'app/bin/import-places.php').is_file())
         self.assertTrue((Path(self.temp.name)/'app/content/destinos-dinamicos.json').is_file())
         self.assertTrue((Path(self.temp.name)/'app/database/migrations/003-dynamic-destinations.mysql.sql').is_file())
         self.assertTrue((Path(self.temp.name)/'app/database/migrations/007-media-provenance.mysql.sql').is_file())
@@ -181,13 +183,13 @@ class PublicLinkTests(unittest.TestCase):
         self.assertTrue((Path(self.temp.name)/'app/database/migrations/010-business-location-subscription-lifecycle.mysql.sql').is_file())
         self.assertTrue((Path(self.temp.name)/'app/database/migrations/011-premium-business-story.mysql.sql').is_file())
         self.assertTrue((Path(self.temp.name)/'app/database/migrations/012-business-image-references.mysql.sql').is_file())
-        self.assertTrue((Path(self.temp.name)/'app/bin/importar-negocios.php').is_file())
+        self.assertTrue((Path(self.temp.name)/'app/bin/import-businesses.php').is_file())
         self.assertTrue((Path(self.temp.name)/'app/content/plantilla-importar-negocios.json').is_file())
         self.assertTrue((Path(self.temp.name)/'app/content/plantilla-paquete-negocios.zip').is_file())
 
     def test_business_import_admin_offers_zip_with_optional_private_images(self):
-        page=(ROOT/'backend/public/admin/negocios.php').read_text()
-        importer=(ROOT/'backend/public/admin/importar-negocios.php').read_text()
+        page=(ROOT/'backend/public/admin/businesses.php').read_text()
+        importer=(ROOT/'backend/public/admin/import-businesses.php').read_text()
         self.assertIn('formato=zip',page)
         self.assertIn('application/zip',page)
         self.assertIn("BusinessPackage::readZip",importer)

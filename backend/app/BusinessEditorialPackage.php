@@ -34,6 +34,7 @@ final class BusinessEditorialPackage
         if($subscription){
             $proof=$this->pdo->prepare('SELECT id,status,original_name,reviewed_at FROM business_subscription_payment_evidence WHERE subscription_id=? ORDER BY id DESC LIMIT 1');
             $proof->execute([(int)$subscription['id']]);$payment=$proof->fetch(PDO::FETCH_ASSOC)?:null;
+            $orders=new BusinessPaymentOrderSelector($this->pdo);if($orders->available()){$group=$orders->evidenceForSubscription((int)$subscription['id']);if($group&&(!$payment||(int)$group['id']>(int)$payment['id']))$payment=$group;}
         }
         $titleReady=$application!==null&&$application['status']==='approved'&&$titleDocument!==null&&!empty($titleDocument['verified_at']);
         $paidPlan=$subscription!==null&&$subscription['plan_code']!=='free';

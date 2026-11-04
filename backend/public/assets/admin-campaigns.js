@@ -10,11 +10,11 @@ document.querySelectorAll('[data-prepare-campaign]').forEach(form => {
     button.disabled = true;
     try {
       for (let step = 0; step < 305; step++) {
-        const response = await fetch('campanas.php', {method: 'POST', body: new FormData(form), headers: {Accept: 'application/json'}, credentials: 'same-origin'});
+        const response = await fetch('campaigns.php', {method: 'POST', body: new FormData(form), headers: {Accept: 'application/json'}, credentials: 'same-origin'});
         const result = await response.json();
         if (!response.ok) throw new Error(result.message || 'No se pudo continuar. Revisa la campaña.');
         status.textContent = `Preparando en Brevo: ${result.cursor} de ${result.total} correos. No se está enviando la campaña.`;
-        if (result.status === 'prepared') { location.assign(`campanas.php?id=${encodeURIComponent(form.elements.namedItem('id').value)}`); return; }
+        if (result.status === 'prepared') { location.assign(`campaigns.php?id=${encodeURIComponent(form.elements.namedItem('id').value)}`); return; }
       }
       throw new Error('La preparación no terminó. Revisa el estado antes de continuar.');
     } catch (error) {

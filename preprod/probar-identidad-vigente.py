@@ -10,7 +10,7 @@ for p in PUBLIC.rglob('*'):
  if p.suffix not in {'.html','.php','.css','.js'}:continue
  source=p.read_text()
  assert not old_assets.search(source),f'Logotipo anterior: {p}'
- if p.suffix=='.css' and p.name not in {'leaflet.css','identidad-neutral.css'}:
+ if p.suffix=='.css' and p.name not in {'leaflet.css','portal-identity.css'}:
   assert not old_ui.search(source),f'Paleta anterior: {p}'
 for name in ['logo.svg','logo-completo.svg','favicon.svg']:
  assert not (PUBLIC/'assets'/name).exists(),name

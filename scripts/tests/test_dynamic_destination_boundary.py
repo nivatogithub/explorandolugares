@@ -19,12 +19,12 @@ class DynamicDestinationBoundaryTests(unittest.TestCase):
         self.assertFalse(public_inputs.is_retired_static_destination_page('business/register.php'))
 
     def test_destination_directory_is_dynamic_too(self):
-        source=(ROOT/'scripts/_construir-hosting.py').read_text()
-        self.assertIn('destinos.php',source)
+        source=(ROOT/'scripts/_build-hosting.py').read_text()
+        self.assertIn('places.php',source)
         self.assertIn("rglob('*.html')",source)
 
     def test_release_builder_does_not_run_the_retired_generator(self):
-        source=(ROOT/'scripts/_construir-hosting.py').read_text()
+        source=(ROOT/'scripts/_build-hosting.py').read_text()
         self.assertNotIn("scripts/generar-destinos.py')],check=True)",source)
         self.assertNotIn("scripts/generar-fichas.py')],check=True)",source)
         self.assertIn('assert_dynamic_destination_boundary',source)

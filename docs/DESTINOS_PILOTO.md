@@ -13,9 +13,9 @@ Cada guía ofrece historia breve, tres motivos para visitar, tres atractivos con
 - La presentación compartida vive en el renderer PHP y en sus vistas; Jericó no conserva una plantilla HTML independiente.
 - El índice de destinos se sirve desde el portal y usa el catálogo para búsqueda sin tildes y filtro por subregión; no se genera una copia HTML por municipio.
 - Los destinos se renderizan exclusivamente con PHP y el catálogo/base de datos; no existe un generador ni una reserva de páginas HTML por destino.
-- `scripts/preparar-hosting.py`: opciones → contenido estático general → inglés → paquete PHP local. No despliega.
+- `scripts/prepare-hosting.py`: opciones → contenido estático general → inglés → paquete PHP local. No despliega.
 
-Editar los datos y las vistas PHP, no archivos publicados derivados. Luego ejecutar `python3 scripts/preparar-hosting.py`. Las páginas institucionales multilingües se preparan desde el contenido editorial bilingüe; los destinos conservan la ruta dinámica y las fotografías son compartidas.
+Editar los datos y las vistas PHP, no archivos publicados derivados. Luego ejecutar `python3 scripts/prepare-hosting.py`. Las páginas institucionales multilingües se preparan desde el contenido editorial bilingüe; los destinos conservan la ruta dinámica y las fotografías son compartidas.
 
 ## Criterios editoriales
 

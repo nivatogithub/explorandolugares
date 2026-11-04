@@ -95,7 +95,7 @@ Cobertura: autorización, CSRF, 404, escape, instantáneas, vínculos idempotent
 
 En MariaDB 10.11.19 se ensayan las migraciones, dos procesos creando el mismo negocio y dos procesos confirmando la misma respuesta, además de dump/restauración de datos ficticios en otra base. No se restaura sobre la base origen ni sobre preprod.
 
-Se construye el paquete completo mediante `scripts/preparar-hosting.py`, incluyendo versionado final de recursos. La revisión visual se realiza en el navegador integrado; hay capturas de escritorio y revisión de HTML renderizado en un marco de 390 px, además de selección nativa con teclado. No confundir esa revisión de disposición con una ejecución funcional en Safari/Firefox/Chrome independientes: esos navegadores no están conectados en este entorno. Esa compatibilidad queda como comprobación manual del candidato, no como prueba pasada.
+Se construye el paquete completo mediante `scripts/prepare-hosting.py`, incluyendo versionado final de recursos. La revisión visual se realiza en el navegador integrado; hay capturas de escritorio y revisión de HTML renderizado en un marco de 390 px, además de selección nativa con teclado. No confundir esa revisión de disposición con una ejecución funcional en Safari/Firefox/Chrome independientes: esos navegadores no están conectados en este entorno. Esa compatibilidad queda como comprobación manual del candidato, no como prueba pasada.
 
 ## Promoción pendiente de autorización
 

@@ -1,5 +1,6 @@
 import importlib.util
 import json
+import subprocess
 from pathlib import Path
 import tempfile
 import unittest
@@ -19,7 +20,7 @@ class DeploymentTests(unittest.TestCase):
         }
 
     def test_preserve_place_content_and_images(self):
-        for path in ['public/destinos/bogota/index.html','public/en/destinos/jerico/index.html','public/destino.php','public/assets/cartagena/foto.webp','app/content/published.json']:
+        for path in ['public/destinos/bogota/index.html','public/en/destinos/jerico/index.html','public/place.php','public/assets/cartagena/foto.webp','app/content/published.json']:
             self.assertTrue(deploy.place_or_image(path),path)
         for path in ['public/business/password.php','app/AccountLifecycle.php','public/assets/account-registration.css']:
             self.assertFalse(deploy.place_or_image(path),path)
@@ -63,14 +64,14 @@ class DeploymentTests(unittest.TestCase):
             public = Path(folder) / 'public'
             (public / 'admin').mkdir(parents=True)
             (public / 'business').mkdir()
-            admin = public / 'admin/negocios.php'
+            admin = public / 'admin/businesses.php'
             admin.write_text("<?php require dirname(__DIR__,2).'/app/bootstrap.php';\n"
                              "require dirname(__DIR__,2).'/app/BusinessAdminService.php';")
-            claim = public / 'reclamar-negocio.php'
+            claim = public / 'business-claim.php'
             claim.write_text("<?php require __DIR__.'/../app/bootstrap.php';\n"
                              "require __DIR__.'/../app/BusinessClaimService.php';")
 
-            contact = public / 'contacto.php'
+            contact = public / 'contact.php'
             contact.write_text("<?php require dirname(__DIR__).'/app/bootstrap.php';\n"
                                "require dirname ( __DIR__ ) . '/app/PublicRequestService.php';")
             deploy.rewrite_private_app_includes(public, self.config['remote_base'])
@@ -85,7 +86,7 @@ class DeploymentTests(unittest.TestCase):
     def test_private_includes_accept_spacing_and_quote_styles(self):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)
-            page = root / 'inversionistas.php'
+            page = root / 'investors.php'
             page.write_text("<?php require dirname(__DIR__, 2).'/app/bootstrap.php';\n"
                             'require dirname ( __DIR__ , 2 ) . "/app/InvestorBusinessIntelligence.php";\n'
                             'require __DIR__ . "/../app/BusinessPortalAccess.php";')
@@ -96,8 +97,39 @@ class DeploymentTests(unittest.TestCase):
             self.assertIn('require "/home/usuario/explorandolugares/app/InvestorBusinessIntelligence.php";', text)
             self.assertIn('require "/home/usuario/explorandolugares/app/BusinessPortalAccess.php";', text)
 
+    def test_nested_private_includes_work_with_separate_roots(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            public = root / 'public_html' / 'site'
+            private = root / 'private'
+            (private / 'app').mkdir(parents=True)
+            (private / 'app' / 'AdminBusinessOperations.php').write_text("<?php class AdminBusinessOperations {}")
+            (private / 'app' / 'ContactPhoneFieldPresentation.php').write_text("<?php class ContactPhoneFieldPresentation {}")
+            examples = {
+                'admin/partials/business-operations.php': "require_once dirname(__DIR__,3).'/app/AdminBusinessOperations.php';",
+                'business/contact-phone-fields.php': "require_once __DIR__.'/../../app/ContactPhoneFieldPresentation.php';",
+            }
+            for relative, statement in examples.items():
+                path = public / relative
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text('<?php ' + statement + "\necho 'loaded';")
+            deploy.rewrite_private_app_includes(public, str(private))
+            for relative in examples:
+                path = public / relative
+                self.assertIn(str(private / 'app'), path.read_text())
+                result = subprocess.run(['php', str(path)], capture_output=True, text=True)
+                self.assertEqual((result.returncode, result.stdout), (0, 'loaded'), result.stderr)
+
+    def test_all_numeric_dirname_levels_are_rewritten(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            path = root / 'nested.php'
+            path.write_text("<?php require dirname ( __DIR__ , 4 ) . \"/app/Example.php\";")
+            deploy.rewrite_private_app_includes(root, self.config['remote_base'])
+            self.assertEqual(path.read_text(), '<?php require \"/home/usuario/explorandolugares/app/Example.php\";')
+
     def test_removing_live_coverage_requires_each_exact_path(self):
-        paths = ['public/cobertura/colombia/index.html', 'public/assets/cobertura/cobertura.js']
+        paths = ['public/cobertura/colombia/index.html', 'public/assets/cobertura/coverage.js']
         with self.assertRaises(ValueError): deploy.validate_removals(paths, [])
         with self.assertRaises(ValueError): deploy.validate_removals(paths, [paths[0]])
         with self.assertRaises(ValueError): deploy.validate_removals(paths, ['public/*'])
@@ -114,11 +146,11 @@ class DeploymentTests(unittest.TestCase):
                          ['public/index.html', 'public/new.css'])
 
     def test_partial_scope_is_exact_and_rejects_missing_files(self):
-        files = [{'relative': 'app/Business.php'}, {'relative': 'public/admin/negocios.php'},
+        files = [{'relative': 'app/Business.php'}, {'relative': 'public/admin/businesses.php'},
                  {'relative': 'public/index.html'}]
-        selected = deploy.select_files(files, ['app/Business.php', 'public/admin/negocios.php'])
+        selected = deploy.select_files(files, ['app/Business.php', 'public/admin/businesses.php'])
         self.assertEqual([item['relative'] for item in selected],
-                         ['app/Business.php', 'public/admin/negocios.php'])
+                         ['app/Business.php', 'public/admin/businesses.php'])
         with self.assertRaises(ValueError):
             deploy.select_files(files, ['public/admin/missing.php'])
 

@@ -44,7 +44,7 @@ def main():
     (ROOT/'.local').mkdir(exist_ok=True)
     with tempfile.TemporaryDirectory(prefix='el-release-gate-', dir=ROOT/'.local') as folder:
         package = Path(folder)/'package'
-        run('Paquete completo de pruebas', [sys.executable, 'scripts/preparar-hosting.py', '--output', str(package)])
+        run('Paquete completo de pruebas', [sys.executable, 'scripts/prepare-hosting.py', '--output', str(package)])
         for path in sorted((ROOT / 'backend/tests').glob('*.php')):
             if path.name.endswith(('.mariadb.php', '.mysql.php', '.fixture.php')):
                 continue  # Database-specific tests and HTTP routers have dedicated runners below.
@@ -53,8 +53,8 @@ def main():
         # Separate private fixtures; never replace registration's configuration.
         seo_package=Path(folder)/'seo-package'
         shutil.copytree(package,seo_package)
-        run('Fixture editorial desechable', [sys.executable, 'scripts/preparar-fixture-presentacion.py', '--package', str(seo_package)])
-        run('SEO sobre respuestas PHP finales', [sys.executable, 'scripts/probar-seo-paquete.py', '--package', str(seo_package), '--output', str(seo_package/'seo-results.json')])
+        run('Fixture editorial desechable', [sys.executable, 'scripts/prepare-presentation-fixture.py', '--package', str(seo_package)])
+        run('SEO sobre respuestas PHP finales', [sys.executable, 'scripts/check-package-seo.py', '--package', str(seo_package), '--output', str(seo_package/'seo-results.json')])
         run('Registro HTTP: cuatro planes, borradores, pago y cupones', [sys.executable, 'backend/tests/registration-flow.integration.py', '--package', str(package)])
         run('ZIP editorial y publicación Premium', [sys.executable, 'backend/tests/editorial-roundtrip.integration.py'])
         run('ZIP editorial con cupón del 100 %', [sys.executable, 'backend/tests/editorial-roundtrip.integration.py'], env={**os.environ, 'EL_EDITORIAL_PROMOTION':'1'})

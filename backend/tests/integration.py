@@ -36,50 +36,50 @@ def call(path,data=None,agent=client):
  except urllib.error.HTTPError as exc:return exc.code,exc.read().decode(),exc.headers
 try:
  for _ in range(100):
-  try:call('/api/participacion.php');break
+  try:call('/api/participation.php');break
   except urllib.error.URLError:time.sleep(.05)
- status,body,_=call('/api/participacion.php');assert status==200 and not json.loads(body)['enabled']
+ status,body,_=call('/api/participation.php');assert status==200 and not json.loads(body)['enabled']
  status,body,_=call('/business/index.php');assert status==200 and 'Para negocios locales' in body and 'Crear cuenta de negocio' not in body
- status,_,_=call('/api/participacion.php',{});assert status==503
+ status,_,_=call('/api/participation.php',{});assert status==503
  config['registration_enabled']=True;save()
- status,body,_=call('/api/participacion.php');setup=json.loads(body);assert setup['enabled']
- assert not json.loads(call('/api/participacion.php?lang=en')[1])['enabled']
+ status,body,_=call('/api/participation.php');setup=json.loads(body);assert setup['enabled']
+ assert not json.loads(call('/api/participation.php?lang=en')[1])['enabled']
  config['privacy']['retention_en']='Only during this test';save()
- english_setup=json.loads(call('/api/participacion.php?lang=en')[1]);assert english_setup['enabled'] and english_setup['privacy']['retention']=='Only during this test'
- assert not json.loads(call('/api/participacion.php?lang=pt-br')[1])['enabled']
+ english_setup=json.loads(call('/api/participation.php?lang=en')[1]);assert english_setup['enabled'] and english_setup['privacy']['retention']=='Only during this test'
+ assert not json.loads(call('/api/participation.php?lang=pt-br')[1])['enabled']
  config['privacy']['retention_pt']='Somente durante este teste';save()
- portuguese_setup=json.loads(call('/api/participacion.php?lang=pt-br')[1]);assert portuguese_setup['enabled'] and portuguese_setup['privacy']['retention']=='Somente durante este teste' and 'retention_en' not in portuguese_setup['privacy'] and 'retention_pt' not in portuguese_setup['privacy']
+ portuguese_setup=json.loads(call('/api/participation.php?lang=pt-br')[1]);assert portuguese_setup['enabled'] and portuguese_setup['privacy']['retention']=='Somente durante este teste' and 'retention_en' not in portuguese_setup['privacy'] and 'retention_pt' not in portuguese_setup['privacy']
  valid={'csrf':setup['csrf'],'request_key':setup['request_key'],'name':'Persona de prueba','business':'<script>alert(1)</script>','municipality':'Jericó','category':'hospedaje','email':'prueba@example.invalid','phone':'','description':'Descripción de prueba','consent':'1','understanding':'1'}
- bad_status,bad_body,_=call('/api/participacion.php',{**valid,'csrf':'incorrecto'})
+ bad_status,bad_body,_=call('/api/participation.php',{**valid,'csrf':'incorrecto'})
  assert bad_status==403 and json.loads(bad_body)['error']=='csrf_invalid'
  assert db.execute('SELECT COUNT(*) FROM leads').fetchone()[0]==0
- assert call('/api/participacion.php',{**valid,'category':'inventada'})[0]==422
- assert call('/api/participacion.php',{**valid,'municipality':'Municipio inventado'})[0]==422
- assert call('/api/participacion.php',{**valid,'municipality':'Envigado'})[0]==422
- assert call('/api/participacion.php',{**valid,'consent':'0'})[0]==422
+ assert call('/api/participation.php',{**valid,'category':'inventada'})[0]==422
+ assert call('/api/participation.php',{**valid,'municipality':'Municipio inventado'})[0]==422
+ assert call('/api/participation.php',{**valid,'municipality':'Envigado'})[0]==422
+ assert call('/api/participation.php',{**valid,'consent':'0'})[0]==422
  for value in ['0','']:
-  assert call('/api/participacion.php',{**valid,'understanding':value})[0]==422
+  assert call('/api/participation.php',{**valid,'understanding':value})[0]==422
  invalid_ack={k:v for k,v in valid.items() if k!='understanding'}
- assert call('/api/participacion.php',{**invalid_ack,'understanding[]':'1'})[0]==422
+ assert call('/api/participation.php',{**invalid_ack,'understanding[]':'1'})[0]==422
  missing_ack={k:v for k,v in valid.items() if k!='understanding'}
- assert call('/api/participacion.php',missing_ack)[0]==422
- assert call('/api/participacion.php',{**valid,'email':'mal-formado'})[0]==422
+ assert call('/api/participation.php',missing_ack)[0]==422
+ assert call('/api/participation.php',{**valid,'email':'mal-formado'})[0]==422
  for phone_type,number in [('celular','1234567890'),('celular','300123'),('fijo','6041234567'),('fijo','abc1234'),('whatsapp','1234567890'),('desconocido','3001234567')]:
-  assert call('/api/participacion.php',{**valid,'phone_type':phone_type,'phone_number':number})[0]==422
- assert call('/api/participacion.php',{**valid,'email':'','phone_type':'celular','phone_number':''})[0]==422
- assert call('/api/participacion.php',{**valid,'email':''})[0]==422
- en_status,en_body,_=call('/api/participacion.php?lang=en',{**valid,'email':'invalid'})
+  assert call('/api/participation.php',{**valid,'phone_type':phone_type,'phone_number':number})[0]==422
+ assert call('/api/participation.php',{**valid,'email':'','phone_type':'celular','phone_number':''})[0]==422
+ assert call('/api/participation.php',{**valid,'email':''})[0]==422
+ en_status,en_body,_=call('/api/participation.php?lang=en',{**valid,'email':'invalid'})
  assert en_status==422 and json.loads(en_body)['errors']['email']=='Please check your email address.'
- assert call('/api/participacion.php',valid)[0]==200
- assert call('/api/participacion.php',valid)[0]==200
+ assert call('/api/participation.php',valid)[0]==200
+ assert call('/api/participation.php',valid)[0]==200
  assert db.execute('SELECT COUNT(*) FROM leads').fetchone()[0]==1
  assert db.execute('SELECT wants_contact,interest,status,participation_version FROM leads').fetchone()==(1,'contacto','nuevo','participacion-informativa-v1')
  # Contactos telefónicos sin correo; ignorar cualquier prefijo enviado por el cliente.
  for phone_type,number,expected in [('celular','3001234567','+573001234567'),('fijo','1234567','+576041234567'),('whatsapp','3007654321','+573007654321')]:
   agent=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
-  tokens=json.loads(call('/api/participacion.php',agent=agent)[1])
+  tokens=json.loads(call('/api/participation.php',agent=agent)[1])
   record={**valid,'business':'Prueba '+phone_type,'csrf':tokens['csrf'],'request_key':tokens['request_key'],'email':'','phone_type':phone_type,'phone_number':number,'phone_prefix':'+999','phone':'+999000'}
-  assert call('/api/participacion.php',record,agent=agent)[0]==200
+  assert call('/api/participation.php',record,agent=agent)[0]==200
   assert db.execute('SELECT phone,phone_type FROM leads WHERE business=?',(record['business'],)).fetchone()==(expected,phone_type)
 
  # Bogotá and Caribbean cities must work without choosing a different municipality.
@@ -87,26 +87,26 @@ try:
   # The throttle is tested separately; reset only this disposable fixture's limits.
   db.execute('DELETE FROM rate_limits');db.commit()
   agent=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
-  tokens=json.loads(call('/api/participacion.php',agent=agent)[1])
+  tokens=json.loads(call('/api/participation.php',agent=agent)[1])
   record={**valid,'csrf':tokens['csrf'],'request_key':tokens['request_key'],'municipality':town,'email':'','phone_type':'fijo','phone_number':'1234567','phone_prefix':'+999'}
-  status,body,_=call('/api/participacion.php',record,agent=agent);assert status==200,(town,body)
+  status,body,_=call('/api/participation.php',record,agent=agent);assert status==200,(town,body)
   assert db.execute('SELECT municipality,phone FROM leads WHERE request_key=?',(tokens['request_key'],)).fetchone()==(town,'+57'+area+'1234567')
   db.execute('DELETE FROM leads WHERE request_key=?',(tokens['request_key'],));db.commit()
  assert db.execute('SELECT COUNT(*) FROM leads').fetchone()[0]==4
  # National codes work independently of published destinations.
  for code,department,label in [('86001','86','Mocoa'),('25899','25','Zipaquirá'),('05266','05','Envigado')]:
   db.execute('DELETE FROM rate_limits');db.commit()
-  agent=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()));tokens=json.loads(call('/api/participacion.php',agent=agent)[1])
+  agent=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()));tokens=json.loads(call('/api/participation.php',agent=agent)[1])
   record={**valid,'csrf':tokens['csrf'],'request_key':tokens['request_key'],'municipality':code,'contact_department':department}
-  status,body,_=call('/api/participacion.php',record,agent=agent);assert status==200,(code,body)
+  status,body,_=call('/api/participation.php',record,agent=agent);assert status==200,(code,body)
   assert db.execute('SELECT municipality FROM leads WHERE request_key=?',(tokens['request_key'],)).fetchone()[0].startswith(label+' · ')
   db.execute('DELETE FROM leads WHERE request_key=?',(tokens['request_key'],));db.commit()
- wrong={**valid,'municipality':'11001','contact_department':'05'};assert call('/api/participacion.php',wrong)[0]==422
+ wrong={**valid,'municipality':'11001','contact_department':'05'};assert call('/api/participation.php',wrong)[0]==422
  # Una postulación de impulsor se marca de forma distinta a un registro comercial.
  agent=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
- tokens=json.loads(call('/api/participacion.php',agent=agent)[1])
+ tokens=json.loads(call('/api/participation.php',agent=agent)[1])
  promoter={**valid,'business':'Impulsor de prueba','csrf':tokens['csrf'],'request_key':tokens['request_key'],'request_type':'impulsor_local'}
- status,body,_=call('/api/participacion.php',promoter,agent=agent)
+ status,body,_=call('/api/participation.php',promoter,agent=agent)
  assert status==200 and 'postulación como impulsor local' in json.loads(body)['message']
  assert db.execute('SELECT interest,participation_version FROM leads WHERE business=?',('Impulsor de prueba',)).fetchone()==('impulsor_local','impulsor-local-propuesta-v1')
  status,body,headers=call('/admin/index.php');assert '<script>alert(1)</script>' not in body and 'name="password"' in body
@@ -119,14 +119,14 @@ try:
  assert status==200 and 'Impulsor de prueba' in filtered and 'Prueba celular' not in filtered
  guest=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
  guest_no_redirect=urllib.request.build_opener(NoRedirect(),urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
- denied=call('/admin/base-datos.php',agent=guest_no_redirect)
+ denied=call('/admin/database.php',agent=guest_no_redirect)
  assert denied[0]==303 and denied[2]['Location']=='/negocios/acceso/'
- status,body,_=call('/admin/base-datos.php')
+ status,body,_=call('/admin/database.php')
  assert status==200 and 'Base de datos' in body and 'sqlite' in body
  assert 'Cargar un paquete' in body and config['app_key'] not in body and password not in body
  db_csrf=re.search(r'name="csrf" value="([^"]+)"',body).group(1)
  before_columns=[column[1] for column in db.execute('PRAGMA table_info(leads)').fetchall()]
- status,body,_=call('/admin/base-datos.php',{'action':'migrate','csrf':db_csrf,'confirm_migrations':'1'})
+ status,body,_=call('/admin/database.php',{'action':'migrate','csrf':db_csrf,'confirm_migrations':'1'})
  assert status==400 and 'Acción no permitida' in body
  assert before_columns==[column[1] for column in db.execute('PRAGMA table_info(leads)').fetchall()]
  status,body,_=call('/admin/index.php')
@@ -147,12 +147,12 @@ try:
  status,missing,_=call('/admin/index.php',{'action':'status','csrf':csrf,'id':999999,'status':'contactado'})
  assert status==200 and 'No se guardó: la solicitud ya no existe.' in missing
  assert db.execute('SELECT status FROM leads WHERE id=1').fetchone()[0]=='archivado'
- status,detail,_=call('/admin/solicitud-detalle.php?tipo=participation&id=1')
+ status,detail,_=call('/admin/request-details.php?tipo=participation&id=1')
  assert status==200 and 'Enviado por la persona' in detail and '<script>alert(1)</script>' not in detail,(status,detail[-700:])
  guest=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
- denied=call('/admin/solicitud-detalle.php?tipo=participation&id=1',agent=guest_no_redirect)
+ denied=call('/admin/request-details.php?tipo=participation&id=1',agent=guest_no_redirect)
  assert denied[0]==303 and denied[2]['Location']=='/negocios/acceso/'
- assert call('/admin/solicitud-detalle.php?tipo=participation&id=999999')[0]==404
+ assert call('/admin/request-details.php?tipo=participation&id=999999')[0]==404
 
  denied=call('/admin/index.php',{'action':'delete','csrf':'incorrecto','ids[]':['1','2']},agent=no_redirect)
  assert denied[0]==303 and denied[2]['Location'].startswith('/negocios/acceso/')
@@ -164,7 +164,7 @@ try:
  for _ in range(10):status,_,_=call('/admin/index.php',{'action':'login','csrf':login_csrf,'username':'invalido','password':'invalida'})
  assert status==429
  config['privacy']['operator']='';save()
- assert not json.loads(call('/api/participacion.php')[1])['enabled']
+ assert not json.loads(call('/api/participation.php')[1])['enabled']
  print('OK: registro deshabilitado sin configuración; consentimiento obligatorio; correo y teléfono válidos; fijo, celular y WhatsApp sin correo; prefijo calculado en servidor; validación; CSRF; guardado real; reintento sin duplicados; retirada del acceso por llave; separación de sistema y solicitudes; el panel no habilita el registro público; escape HTML; seguimiento; cierre de sesión; límite de login; bloqueo sin datos de privacidad.')
 finally:
  proc.terminate();proc.wait(timeout=5);db.close();shutil.rmtree(work)

@@ -13,7 +13,7 @@ if(in_array($requestPath,['/','/en/','/pt-br/','/privacidad/','/en/privacidad/',
 if(in_array($requestPath,['/negocios/recuperar-clave/','/negocios/recuperar-clave'],true)){require $public.'/business/recover.php';return true;}
 $aliases=['/admin/'=>'admin/index.php','/admin'=>'admin/index.php','/cuenta/espacio/'=>'business/workspace.php','/cuenta/verificar-correo/'=>'business/verify-email.php','/suscripciones/continuar/'=>'business/checkout.php'];
 if(isset($aliases[$requestPath])){require $public.'/'.$aliases[$requestPath];return true;}
-if(preg_match('~^/(?:(en|pt-br)/)?negocios/perfil/([a-z][a-z0-9-]{2,69})/?$~',$requestPath,$alias)){$_GET['alias']=$alias[2];$_GET['idioma']=($alias[1]??'')==='pt-br'?'pt-BR':(($alias[1]??'')==='en'?'en':'es');require $public.'/negocio.php';return true;}
+if(preg_match('~^/(?:(en|pt-br)/)?negocios/perfil/([a-z][a-z0-9-]{2,69})/?$~',$requestPath,$alias)){$_GET['alias']=$alias[2];$_GET['idioma']=($alias[1]??'')==='pt-br'?'pt-BR':(($alias[1]??'')==='en'?'en':'es');require $public.'/business.php';return true;}
 $handled=require __DIR__.'/php-destinations-router.php';
 if($handled===false&&isset($file)&&is_file($file)){
  $extension=strtolower(pathinfo($file,PATHINFO_EXTENSION));

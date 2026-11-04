@@ -10,6 +10,11 @@ RewriteRule ^ https://explorandolugares.com%{REQUEST_URI} [R=301,L,NE]
 # Read current publications on every sitemap request; internal rewrite only.
 RewriteRule ^sitemap\.xml$ sitemap-live.php [L]
 
+# Pages formerly under aliados were moved to negocios-locales.
+RewriteRule ^((?:en/|pt-br/)?)aliados/planes(?:/index\.html|/)?$ /$1negocios-locales/suscripciones/ [R=301,L,NE]
+RewriteRule ^((?:en/|pt-br/)?)aliados/(interes|proceso|por-que-participar|impulsa-tu-destino|impulsor)(?:/index\.html|/)?$ /$1negocios-locales/$2/ [R=301,L,NE]
+RewriteRule ^((?:en/|pt-br/)?)aliados(?:/index\.html|/)?$ /$1negocios-locales/ [R=301,L,NE]
+
 # Mantén una URL pública por página: el sitemap y los canonical usan la forma
 # de directorio, mientras que muchas páginas enlazan históricamente index.html.
 RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.html(?:[?\s]) [NC]
@@ -23,10 +28,14 @@ RewriteRule ^((?:en/|pt-br/)?lugares/[a-z0-9-]+)$ /$1/ [R=301,L,NE]
 # Resolver explícitamente el directorio: algunos hostings no incluyen index.php
 # en DirectoryIndex y devuelven 403 antes de ejecutar la autenticación del portal.
 RewriteRule ^admin/?$ admin/index.php [L,QSA]
-RewriteRule ^admin/inversionistas/?$ admin/inversionistas.php [L,QSA]
+RewriteRule ^admin/inversionistas/?$ admin/investors.php [L,QSA]
 
 # Inicio del buscador y solicitudes de reclamación de negocios.
-RewriteRule ^reclamar-negocio/?$ reclamar-negocio.php [L,QSA]
+# Preserve old localized account links and any continuation parameters.
+RewriteCond %{QUERY_STRING} !^$
+RewriteRule ^(en|pt-br)/negocios/(acceso|registro)/?$ /negocios/$2/?%{QUERY_STRING}&lang=$1 [R=301,L,NE]
+RewriteRule ^(en|pt-br)/negocios/(acceso|registro)/?$ /negocios/$2/?lang=$1 [R=301,L,NE]
+RewriteRule ^reclamar-negocio/?$ business-claim.php [L,QSA]
 RewriteRule ^negocios-locales/?$ business/index.php?lang=es [L,QSA]
 RewriteRule ^en/negocios-locales/?$ business/index.php?lang=en [L,QSA]
 RewriteRule ^pt-br/negocios-locales/?$ business/index.php?lang=pt-br [L,QSA]
@@ -41,20 +50,20 @@ RewriteRule ^negocios/salir/?$ business/logout.php [L,QSA]
 RewriteRule ^negocios/cambiar-clave/?$ business/password.php [L,QSA]
 
 # Páginas públicas de negocios por identificador público opaco.
-RewriteRule ^negocios/perfil/([a-z][a-z0-9-]{2,69})/?$ negocio.php?alias=$1&idioma=es [L,QSA]
-RewriteRule ^en/negocios/perfil/([a-z][a-z0-9-]{2,69})/?$ negocio.php?alias=$1&idioma=en [L,QSA]
-RewriteRule ^pt-br/negocios/perfil/([a-z][a-z0-9-]{2,69})/?$ negocio.php?alias=$1&idioma=pt-BR [L,QSA]
-RewriteRule ^negocios/([A-Fa-f0-9-]{16,64})/?$ negocio.php?id=$1&idioma=es [L,QSA,NC]
-RewriteRule ^en/negocios/([A-Fa-f0-9-]{16,64})/?$ negocio.php?id=$1&idioma=en [L,QSA,NC]
-RewriteRule ^pt-br/negocios/([A-Fa-f0-9-]{16,64})/?$ negocio.php?id=$1&idioma=pt-BR [L,QSA,NC]
+RewriteRule ^negocios/perfil/([a-z][a-z0-9-]{2,69})/?$ business.php?alias=$1&idioma=es [L,QSA]
+RewriteRule ^en/negocios/perfil/([a-z][a-z0-9-]{2,69})/?$ business.php?alias=$1&idioma=en [L,QSA]
+RewriteRule ^pt-br/negocios/perfil/([a-z][a-z0-9-]{2,69})/?$ business.php?alias=$1&idioma=pt-BR [L,QSA]
+RewriteRule ^negocios/([A-Fa-f0-9-]{16,64})/?$ business.php?id=$1&idioma=es [L,QSA,NC]
+RewriteRule ^en/negocios/([A-Fa-f0-9-]{16,64})/?$ business.php?id=$1&idioma=en [L,QSA,NC]
+RewriteRule ^pt-br/negocios/([A-Fa-f0-9-]{16,64})/?$ business.php?id=$1&idioma=pt-BR [L,QSA,NC]
 
 # Lugares publicados: la URL pública no revela parámetros ni archivos de plantilla.
-RewriteRule ^lugares/?$ destinos.php?idioma=es [L,QSA]
-RewriteRule ^en/lugares/?$ destinos.php?idioma=en [L,QSA]
-RewriteRule ^pt-br/lugares/?$ destinos.php?idioma=pt-BR [L,QSA]
-RewriteRule ^lugares/([a-z0-9-]+)/?$ destino.php?destino=$1&idioma=es [L,QSA,NC]
-RewriteRule ^en/lugares/([a-z0-9-]+)/?$ destino.php?destino=$1&idioma=en [L,QSA,NC]
-RewriteRule ^pt-br/lugares/([a-z0-9-]+)/?$ destino.php?destino=$1&idioma=pt-BR [L,QSA,NC]
+RewriteRule ^lugares/?$ places.php?locale=es [L,QSA]
+RewriteRule ^en/lugares/?$ places.php?locale=en [L,QSA]
+RewriteRule ^pt-br/lugares/?$ places.php?locale=pt-BR [L,QSA]
+RewriteRule ^lugares/([a-z0-9-]+)/?$ place.php?place=$1&idioma=es [L,QSA,NC]
+RewriteRule ^en/lugares/([a-z0-9-]+)/?$ place.php?place=$1&idioma=en [L,QSA,NC]
+RewriteRule ^pt-br/lugares/([a-z0-9-]+)/?$ place.php?place=$1&idioma=pt-BR [L,QSA,NC]
 
 # HTML must revalidate after a deployment; preserve caching for images/assets.
 <IfModule mod_headers.c>

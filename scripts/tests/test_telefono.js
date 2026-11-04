@@ -1,5 +1,5 @@
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
-const script=fs.readFileSync('ensayos/v1/assets/telefono.js','utf8');
+const script=fs.readFileSync('ensayos/v1/assets/phone.js','utf8');
 for(const lang of ['es','en','pt-BR']) {
  const type={value:'celular',addEventListener(event,fn){this[event]=fn}};
  const number={value:'',validity:{patternMismatch:true},setCustomValidity(value){this.message=value},addEventListener(event,fn){this[event]=fn}};

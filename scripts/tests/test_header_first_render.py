@@ -9,7 +9,7 @@ class HeaderFirstRender(unittest.TestCase):
   self.assertIn('aria-controls="menu-principal"',result);self.assertIn('id="menu-principal"',result)
   self.assertIn('>We’re growing</a>',result);self.assertEqual(result,module.render(result))
  def test_php_language_urls_survive(self):
-  source=(ROOT/'backend/integration-medicion/public/destino.php').read_text();result=module.render(source)
+  source=(ROOT/'backend/integration-analytics/public/place.php').read_text();result=module.render(source)
   for url in ['<?=e($langEsUrl)?>','<?=e($langEnUrl)?>','<?=e($langPtUrl)?>']:self.assertIn(url,result)
   self.assertIn('header-language-bar',result);self.assertIn('PT-BR</span></a>',result)
  def test_footer_is_ready_before_javascript_and_idempotent(self):

@@ -12,14 +12,14 @@ page=request('/negocios/acceso/')[1]
 request('/negocios/acceso/',{'csrf':re.search(r'name="csrf"\s+value="([^"]+)"',page)[1],'email':profile['email'],'password':profile['password']})
 assert json.loads(request('/api/account-session.php')[1])['administrator']
 routes=['/admin/'+p.name for p in (ROOT/'backend/public/admin').glob('*.php') if '</head>' in p.read_text()]
-routes+=['/admin/index.php?tab=sistema','/admin/campanas.php?tab=conexion']
+routes+=['/admin/index.php?tab=sistema','/admin/campaigns.php?tab=conexion']
 results=[]
 for path in sorted(routes):
  code,page=request(path)
- assert code==200 and 'portal-admin' in page and 'admin-theme.css?v=' in page and 'identidad-neutral.css?v=' in page,path
+ assert code==200 and 'portal-admin' in page and 'admin-theme.css?v=' in page and 'portal-identity.css?v=' in page,path
  assert 'assets/logo.svg' not in page,path
  results.append({'path':path,'status':code,'shared_theme':True})
-assert '--el-page:#FAFAFA' in request('/assets/identidad-neutral.css')[1]
+assert '--el-page:#FAFAFA' in request('/assets/portal-identity.css')[1]
 assert 'floating-select-trigger' in request('/assets/admin-theme.css')[1]
 out=ROOT/'.local/preprod/evidencia/admin-diseno';out.mkdir(parents=True,exist_ok=True)
 (out/'paginas.json').write_text(json.dumps({'executed_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'scope':'HTML y recursos servidos; no sustituye revisión visual','results':results},ensure_ascii=False,indent=2))

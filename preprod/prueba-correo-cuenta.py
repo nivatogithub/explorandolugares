@@ -39,7 +39,7 @@ elif a.fase=='recuperar':
  assert row and row['status']=='active' and row['email_verified_at'],'Esperar a que el usuario active la cuenta'
  assert state.get('email')==email,'Falta estado de prueba propia'
  _,login=call('/negocios/acceso/');code,_=call('/negocios/acceso/',{'csrf':csrf(login),'email':email,'password':state['password']});session=json.loads(call('/api/account-session.php')[1]);assert session['authenticated'] and not session['administrator'],'No inicia sesión o tiene privilegios incorrectos';print('PASS: acceso posterior a activación, identidad y ausencia de rol administrador')
- assert call('/admin/usuarios.php')[0]==403,'Usuario obtuvo acceso administrativo'
+ assert call('/admin/accounts.php')[0]==403,'Usuario obtuvo acceso administrativo'
  state['recovery_at']=datetime.datetime.now(datetime.timezone.utc).isoformat(timespec='seconds').replace('+00:00','Z');persist(state)
  _,page=call('/negocios/recuperar-clave/');code,_=call('/negocios/recuperar-clave/',{'csrf':csrf(page),'email':email});resets=query('SELECT id FROM account_password_resets WHERE account_id=? ORDER BY id DESC LIMIT 1',[row['id']]);state['reset_id']=resets[0]['id'] if resets else None;persist(state);print(json.dumps({'recovery_http':code,'recovery_receipts':receipts('recovery',state['recovery_at'])},ensure_ascii=False))
 else:

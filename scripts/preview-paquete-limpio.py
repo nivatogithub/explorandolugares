@@ -9,7 +9,7 @@ def main():
  (ROOT/'.local').mkdir(exist_ok=True)
  with tempfile.TemporaryDirectory(prefix='preview-',dir=ROOT/'.local') as folder:
   package=Path(folder)/'release'
-  subprocess.run([sys.executable,str(ROOT/'scripts/preparar-hosting.py'),'--output',str(package)],cwd=ROOT,check=True)
+  subprocess.run([sys.executable,str(ROOT/'scripts/prepare-hosting.py'),'--output',str(package)],cwd=ROOT,check=True)
   process=subprocess.Popen(['php','-S',f'127.0.0.1:{a.port}','-t',str(package/'public'),str(ROOT/'scripts/php-destinations-router.php')],cwd=ROOT)
   try:process.wait()
   except KeyboardInterrupt:pass

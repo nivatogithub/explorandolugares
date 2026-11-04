@@ -19,7 +19,7 @@ for item in manifest['media']:
  item['path']=new;unique[new]=item
 # Replace only explicit known asset references in active text sources.
 changed=[]
-for base in [R/'backend/public',R/'backend/integration-medicion/public',R/'backend/app/content']:
+for base in [R/'backend/public',R/'backend/integration-analytics/public',R/'backend/app/content']:
  for f in base.rglob('*'):
   if f.suffix.lower() not in {'.php','.json','.js','.css','.html'}:continue
   s=f.read_text();original=s

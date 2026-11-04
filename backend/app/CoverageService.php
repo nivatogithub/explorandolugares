@@ -27,7 +27,7 @@ final class CoverageService
                 if($liveStatus!=='published' && empty($place['public_announcement']))continue;
                 $status=$liveStatus==='published'?'published':($available?'in_progress':'unknown');
                 $counts[$status]++;
-                $places[]=['id'=>$place['id'],'name'=>$place['name'],'municipality_code'=>$place['municipality_code'],'parent_place_id'=>null,'type'=>$place['type'],'status'=>$status,'url'=>$status==='published'?'/destinos/'.rawurlencode($place['slug']).'/':null];
+                $places[]=['id'=>$place['id'],'name'=>$place['name'],'municipality_code'=>$place['municipality_code'],'parent_place_id'=>null,'type'=>$place['type'],'status'=>$status,'url'=>$status==='published'?'/lugares/'.rawurlencode($place['slug']).'/':null];
             }
             $selectedCodes=array_column($this->scope['municipalities']??[],'code');
             $scoped=!empty($selectedCodes);
@@ -39,7 +39,7 @@ final class CoverageService
                     if($candidate['publication_status']==='published' && self::normalized($candidate['department'])===self::normalized($department['name']) && self::normalized($candidate['slug'])===self::normalized($selected['name'])){$publishedRow=$candidate;break;}
                 }
                 $status=$publishedRow?'published':($available?'pending':'unknown');$counts[$status]++;
-                $places[]=['id'=>'selected-'.$selected['code'],'name'=>$selected['name'],'municipality_code'=>$selected['code'],'parent_place_id'=>null,'type'=>'municipality','status'=>$status,'url'=>$publishedRow?'/destinos/'.rawurlencode($publishedRow['slug']).'/':null];
+                $places[]=['id'=>'selected-'.$selected['code'],'name'=>$selected['name'],'municipality_code'=>$selected['code'],'parent_place_id'=>null,'type'=>'municipality','status'=>$status,'url'=>$publishedRow?'/lugares/'.rawurlencode($publishedRow['slug']).'/':null];
             }
             $municipalities=[];
             foreach($this->geography as $unit){

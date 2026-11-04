@@ -1,6 +1,6 @@
 'use strict';
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
-const script=fs.readFileSync('ensayos/v1/assets/destinos.js','utf8');
+const script=fs.readFileSync('ensayos/v1/assets/places.js','utf8');
 const storage=new Map();
 function load(href){
  const cards=Array.from({length:18},(_,i)=>({dataset:{name:'Lugar '+i,region:'Antioquia'},hidden:false}));

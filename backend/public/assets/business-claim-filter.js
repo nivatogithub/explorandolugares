@@ -46,19 +46,19 @@
           title.textContent = item.display_name;
           const status = document.createElement('small');
           status.textContent = item.information_status === 'VERIFICADO'
-            ? 'Información verificada'
-            : 'Información pública por confirmar';
+            ? form.dataset.verified
+            : form.dataset.unverified;
           if (item.address_text) status.textContent += ` · ${item.address_text}`;
           details.append(title, status);
           label.append(radio, details);
           list.append(label);
         }
-        if (count) count.textContent = `(${payload.results.length} encontrados, máximo 500)`;
+        if (count) count.textContent = form.dataset.count.replace('{count}', String(payload.results.length));
         if (empty) empty.hidden = payload.results.length > 0;
         if (submit) submit.disabled = payload.results.length === 0;
       } catch (error) {
         if (error.name !== 'AbortError' && empty) {
-          empty.textContent = 'No se pudo actualizar la búsqueda. Inténtalo otra vez.';
+          empty.textContent = form.dataset.updateError;
           empty.hidden = false;
         }
       }

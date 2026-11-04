@@ -9,7 +9,7 @@ def source(path):
  if p.is_file():return p
  for f in (R/'.local/preprod/worker-review/lote-20261019/cierre-nueve-destinos-20261020').glob('*/media/'+Path(path).name):return f
  return p
-visual=json.loads((R/'backend/integration-medicion/public/assets/destinos-semirrealistas.json').read_text());assets=d['tables']['media_assets'];trs=d['tables']['media_asset_translations'];byid={int(x['id']):x for x in assets};n=-1
+visual=json.loads((R/'backend/integration-analytics/public/assets/destinos-semirrealistas.json').read_text());assets=d['tables']['media_assets'];trs=d['tables']['media_asset_translations'];byid={int(x['id']):x for x in assets};n=-1
 for slug,e in d['editorial'].items():
  e.pop('internal_research_json',None)
  e['places']=[p for p in e['places'] if p['publication_status']=='published']

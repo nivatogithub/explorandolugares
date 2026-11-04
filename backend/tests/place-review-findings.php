@@ -1,10 +1,11 @@
 <?php
 declare(strict_types=1);
-require dirname(__DIR__).'/app/DestinationPresentation.php';
+require __DIR__.'/place-template-fixture.php';
 foreach(['jerico','guatape','santa-fe-de-antioquia'] as $slug){
- $source='<html><body><main><a href="#descubre">Historia y motivos para visitarlo</a><section id="descubre"><div><h2>Historia</h2><p>Texto histórico.</p></div><aside class="destination-reasons"><h3>Por qué visitar</h3><ul><li>Motivo real</li></ul><a href="#que-conocer">Encuentra qué te gustaría conocer</a></aside></section><section class="destination-invitation business-invitation"><div><h2>¿Tienes un negocio?</h2><p>Explicación amplia.</p></div><div class="business-invitation-action"><h3>Participa</h3><a class="pill" href="/negocios-locales/interes/">Solicitar información</a></div></section><img src="/test.webp"></main></body></html>';
- $out=DestinationPresentation::normalize($source,$slug,'es');
- foreach(['href="#descubre"','href="#que-conocer"'] as $removed)if(str_contains($out,$removed))throw new RuntimeException($slug.': redundant jump remains');
- foreach(['Motivo real','business-invitation-action','Explicaci','draggable="false"'] as $kept)if(!str_contains($out,$kept))throw new RuntimeException($slug.': missing shared content '.$kept);
+ $html=placeTemplateFixture('es',$slug);
+ foreach(['href="#descubre"','story-number','place-disclosure','pilot-banner'] as $forbidden)if(str_contains($html,$forbidden))throw new RuntimeException('Obsolete structure emitted: '.$forbidden);
+ foreach(['Motivo real','business-invitation-action','Historia en breve','compact-section-heading','draggable="false"','/negocios/registro/?tipo=business'] as $expected)if(!str_contains($html,$expected))throw new RuntimeException('Shared content missing: '.$expected);
+ $doc=new DOMDocument();@$doc->loadHTML('<?xml encoding="UTF-8">'.$html);$xpath=new DOMXPath($doc);
+ if($xpath->query('//*[@id="lugares"]/*[contains(@class,"sectionhead")]/p[@class="directory-map"]')->length!==1)throw new RuntimeException('Map is not generated inside the directory heading.');
 }
-echo "OK: common place rendering removes redundant jumps, retains reasons and wide business invitation, disables native image dragging.\n";
+echo "OK: native template emits compact sections and map position, keeps reasons/invitation and omits obsolete jumps and labels.\n";

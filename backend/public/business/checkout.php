@@ -21,5 +21,17 @@ try{
         header('Location: /negocios/portal/?tab=business&business='.$chosen.'&desde=simulador#pagos',true,303);exit;
     }
 }catch(Throwable $e){if(class_exists('PortalIncidents',false))PortalIncidents::technical($e,'checkout');$error=$e->getMessage();http_response_code(400);}
-require_once __DIR__.'/../_account-page.php';account_page(false);
-?><!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Selecciona tu negocio | Explorando Lugares</title><link rel="stylesheet" href="/assets/style.css"><link rel="stylesheet" href="/assets/account-registration.css"><link rel="stylesheet" href="/assets/subscription-simulator.css"></head><body><?php require __DIR__.'/../_account-header.php';?><main class="wrap account-portal"><section class="account-portal-card"><p class="eyebrow">Tu suscripción</p><h1>¿Para cuál negocio?</h1><?php if($error):?><p role="alert"><?=esc($error)?></p><?php endif?><?php if($intent):?><p>Elegiste <strong><?=esc(['free'=>'Gratis','featured'=>'Destacado','page'=>'Página Comercial','page_premium'=>'Premium'][$intent['plan']])?></strong> · <?=esc(BusinessSubscriptionChoice::PERIODS[$intent['period']])?><?=$intent['operator']?' + complemento de experiencia':''?>.</p><?php if($intent['operator']):?><p>Después de elegir el negocio, selecciona una experiencia publicada de su mismo lugar. Solo pueden contratar el complemento los negocios con la categoría Experiencias y actividades.</p><?php endif?><div class="checkout-businesses"><?php foreach($businesses as $business):?><a class="pill light" href="?business=<?=esc($business['id'])?>"><?=esc($business['display_name'])?> · <?=esc($business['destination_name'])?></a><?php endforeach?></div><p>¿Es un negocio nuevo o todavía no lo administras?</p><a class="pill" href="/negocios/registro/?tipo=business&desde=simulador">Crear o reclamar un negocio</a><p>Conservaremos la suscripción elegida. Un negocio sin responsable se asocia a tu cuenta con el correo verificado. Si ya tiene responsable, pasa a conciliación manual. Un negocio nuevo requiere revisión antes de publicarse; el pago queda disponible al tenerlo asociado.</p><?php endif?><p><a href="/negocios-locales/planes/">Volver al simulador</a></p></section></main></body></html>
+require_once dirname(__DIR__).'/_portal-shell.php';
+require_once dirname(__DIR__,2).'/app/BusinessSelectionPresentation.php';
+$accountLayout=account_layout_context();
+$viewBusinesses=[];
+foreach($businesses as $business)$viewBusinesses[]=[
+    'name'=>$business['display_name'],'placeName'=>$business['destination_name'],
+    'url'=>'?business='.(string)$business['id'],
+];
+BusinessSelectionPresentation::render($accountLayout,[
+    'error'=>$error,'hasSelection'=>$intent!==null,'businesses'=>$viewBusinesses,
+    'planLabel'=>$intent?['free'=>'Gratis','featured'=>'Destacado','page'=>'Página Comercial','page_premium'=>'Premium'][$intent['plan']]:'',
+    'periodLabel'=>$intent?BusinessSubscriptionChoice::PERIODS[$intent['period']]:'',
+    'hasOperator'=>$intent&&!empty($intent['operator']),
+],dirname(__DIR__));

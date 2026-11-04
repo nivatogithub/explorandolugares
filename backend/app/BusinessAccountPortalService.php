@@ -26,7 +26,7 @@ final class BusinessAccountPortalService
         try{$q->execute([$this->uuid(),$name,$email,password_hash($password,PASSWORD_DEFAULT)]);$id=(int)$this->pdo->lastInsertId();if($residence!==null)AccountResidence::save($this->pdo,$id,$residence);$this->pdo->prepare('INSERT INTO account_consents(account_id,consent_version) VALUES(?,"traveler-registration-v1")')->execute([$id]);$this->pdo->commit();return $id;}catch(Throwable $e){if($this->pdo->inTransaction())$this->pdo->rollBack();throw $e;}
     }
 
-    public function registrationDestinations(): array
+    public function registrationPlaces(): array
     {
         return $this->pdo->query('SELECT d.id,d.latitude,d.longitude,d.department,d.country_code,d.destination_type,t.display_name FROM destinations d JOIN destination_translations t ON t.destination_id=d.id AND t.locale="es" WHERE d.publication_status="published" ORDER BY d.display_order,t.display_name')->fetchAll(PDO::FETCH_ASSOC);
     }

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 require dirname(__DIR__).'/app/PortalPresentation.php';
-require dirname(__DIR__).'/app/DestinationPresentation.php';
+require __DIR__.'/place-template-fixture.php';
 function check(bool $condition,string $message):void{if(!$condition)throw new RuntimeException($message);}
 foreach(['es','en','pt-BR'] as $locale){
  $context=['locale'=>$locale,'path'=>'/destinos/bogota/'];
@@ -10,7 +10,7 @@ foreach(['es','en','pt-BR'] as $locale){
  check(substr_count($header,'class="menu-toggle"')===1,'One toggle');
  check(str_contains($header,'href="/en/lugares/bogota/"'),'Equivalent place language');
  check(str_contains($header,'href="/pt-br/lugares/bogota/"'),'Equivalent Portuguese place');
- check(str_contains($footer,'/contacto.php'),'Help preserved');
+ check(str_contains($footer,'/contact.php'),'Help preserved');
  check(!str_contains($footer,'creditos-fotograficos'),'Do not recreate a retired credits route');
  check(!str_contains($header,'<script'),'No header loader');
 }
@@ -19,21 +19,13 @@ check(str_contains($legacy,'data-admin-legacy')&&str_contains($legacy,'test-toke
 check(!str_contains($legacy,'?lang=en'),'Do not advertise an untranslated admin page');
 $private=PortalPresentation::header(['path'=>'/business/dashboard.php','locale'=>'en']);
 check(!str_contains($private,'/en/business/dashboard.php'),'No invented localized private path');
-$html='<!doctype html><html lang="es"><head><title>Jericó</title></head><body><main><section class="destination-hero"><p class="intro">Old intro</p></section><section id="descubre"><div><h2>Old history</h2><p>Old text</p></div><aside>Old aside</aside></section><section id="que-conocer"><div class="sectionhead"><h2>Old heading</h2></div><article data-place-slug="centro-historico"><h3>Centro</h3><p>Old description</p><a href="/assets/example.webp"><img src="/assets/example.webp" alt="Example"></a><a href="https://maps.example.invalid/location">Mapa</a></article></section></main></body></html>';
-$output=DestinationPresentation::normalize($html,'jerico','es');
-check(str_contains($output,'Fundado en 1850'),'History in initial HTML');
-check(str_contains($output,'Parque principal, balcones y calles tradicionales.'),'Final card description');
-check(!str_contains($output,'Old intro')&&!str_contains($output,'Old text'),'Old content absent before JS');
-check(!str_contains($output,'href="/assets/example.webp"'),'Image not a file link');
-check(str_contains($output,'https://maps.example.invalid/location'),'Map link preserved');
-check(str_contains($output,'data-place-slug="centro-historico"'),'Stable identity preserved');
-echo "OK: common shell in three languages; equivalent/private routes; server-side editorial content, identity and links.\n";
-
-$santa='<html lang="es"><head><title>Test</title></head><body><main><section id="que-conocer"><div id="atractivos-destino"><article data-place-slug="tayrona" id="keep-tayrona"><h3>Tayrona</h3></article><article data-place-slug="ciudad-perdida" id="keep-ciudad"><h3>Ciudad perdida</h3></article></div></section></main></body></html>';
-$santa=DestinationPresentation::normalize($santa,'santa-marta','es');
-check(str_contains($santa,'keep-tayrona')&&str_contains($santa,'keep-ciudad'),'Existing card attributes survive multiple records');
-check(!str_contains($santa,'data-place-slug="minca"'),'Presentation JSON cannot expose records absent from repository output');
-check(is_string(DestinationPresentation::media('medellin',null,'en')['alt']),'Media alt resolves before templates render');
+$output=placeTemplateFixture('es','jerico');
+check(str_contains($output,'Introducción de base')&&str_contains($output,'Historia de la base.'),'The native template renders repository content directly');
+check(str_contains($output,'Texto de la base &amp; sin cambios'),'Editorial data is escaped, not rewritten');
+check(!str_contains($output,'href="/assets/approved.webp"'),'An image is not a file link');
+check(str_contains($output,'https://maps.example.invalid/exact?x=1&amp;y=2'),'Exact map link preserved');
+check(str_contains($output,'data-place-slug="estacion-tren"'),'Stable identity preserved');
+echo "OK: common shell, private/equivalent routes and direct destination template.\n";
 
 $coverageLanguages=['es'=>'/cobertura/colombia/','en'=>'/en/cobertura/colombia/','pt-BR'=>'/pt-br/cobertura/colombia/'];
 $coverage=PortalPresentation::context(['path'=>'/cobertura/colombia/','languages'=>$coverageLanguages]);

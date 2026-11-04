@@ -12,7 +12,7 @@ $db->exec("INSERT INTO destinations VALUES ('jerico','Antioquia','published','CO
 $snapshot=$service->snapshot($db);$ant=array_values(array_filter($snapshot['departments'],fn($d)=>$d['code']==='05'))[0];
 expect($snapshot['publication_source_available'],'DB read succeeds');expect($snapshot['country']['counts']['published']===2,'All published CO destinations count, including outside the initial catalog');
 $jerico=array_values(array_filter($ant['places'],fn($p)=>$p['name']==='Jericó'))[0];
-expect($jerico['status']==='published'&&$jerico['url']==='/destinos/jerico/','Published links only');expect(count($ant['places'])===1,'Unannounced drafts and planned candidates must stay private');expect($jerico['parent_place_id']===null,'Independent places never inherit publication');
+expect($jerico['status']==='published'&&$jerico['url']==='/lugares/jerico/','Published links use the canonical route');expect(count($ant['places'])===1,'Unannounced drafts and planned candidates must stay private');expect($jerico['parent_place_id']===null,'Independent places never inherit publication');
 expect($ant['coverage_percent']===0.8&&$ant['municipality_total']===125,'Coverage uses all geographic municipalities, not candidates');
 expect($snapshot['national_scope_status']==='defined','National coverage scope is defined');
 expect($snapshot['country']['coverage_percent']>0&&$snapshot['estimated_destination_total']===null,'Municipal coverage has a geographic denominator without inventing tourist-place totals');

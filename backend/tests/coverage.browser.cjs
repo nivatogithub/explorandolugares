@@ -38,9 +38,9 @@ const base=process.env.COVERAGE_BASE_URL||'http://127.0.0.1:8036';
   await page.locator('#country-button').click();await page.waitForFunction(()=>document.querySelectorAll('#map svg > path').length===33);
   await select('department','63');await select('department','05');await page.waitForFunction(()=>document.querySelectorAll('#map svg > path').length===33 && !!document.querySelector('#map .department-focus[data-code="05"]'));assert.equal(await page.locator('#map-title').innerText(),'Antioquia');
   assert.deepEqual(errors,[]);
-  const offline=await browser.newPage();await offline.route('**/api/cobertura.php',async route=>{const response=await route.fetch();const body=await response.json();body.publication_source_available=false;body.country.coverage_percent=null;await route.fulfill({json:body});});
+  const offline=await browser.newPage();await offline.route('**/api/coverage.php',async route=>{const response=await route.fetch();const body=await response.json();body.publication_source_available=false;body.country.coverage_percent=null;await route.fulfill({json:body});});
   await offline.goto(base+'/cobertura/colombia/');await offline.waitForSelector('#notice:not([hidden])');assert.equal(await offline.locator('#country-published').innerText(),'—');assert.match(await offline.locator('#notice').innerText(),/no un cero/);
-  const fail=await browser.newPage();await fail.route('**/api/cobertura.php',route=>route.fulfill({status:503,json:{error:'unavailable'}}));await fail.goto(base+'/cobertura/colombia/');await fail.waitForSelector('#notice:not([hidden])');assert.match(await fail.locator('#notice').innerText(),/No pudimos cargar/);
+  const fail=await browser.newPage();await fail.route('**/api/coverage.php',route=>route.fulfill({status:503,json:{error:'unavailable'}}));await fail.goto(base+'/cobertura/colombia/');await fail.waitForSelector('#notice:not([hidden])');assert.match(await fail.locator('#notice').innerText(),/No pudimos cargar/);
   console.log('OK: country/department overlay map, filters, links, keyboard, mobile, share URL, race and outage states');
  }finally{await browser.close();}
 })().catch(e=>{console.error(e);process.exit(1);});

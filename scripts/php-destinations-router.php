@@ -15,8 +15,25 @@ if($assembled && preg_match('~^/((?:en/|pt-br/)?)(?:destinos|lugares)/jerico/(ag
 }
 // Match hosting canonical redirects, preserving unrelated query parameters.
 if($assembled && is_file($documentRoot.'/asset-manifest.json') && preg_match('~^/((?:en/|pt-br/)?)destinos(/.*)?$~',$path,$legacy)){header('Location: /'.$legacy[1].'lugares'.($legacy[2]??'/').(($query=parse_url($_SERVER['REQUEST_URI'],PHP_URL_QUERY))!==null?'?'.$query:''),true,301);return true;}
+$aliasCatalog=json_decode(file_get_contents(dirname(__DIR__).'/backend/app/public-route-aliases.json'),true,512,JSON_THROW_ON_ERROR);
+$routeAliases=$aliasCatalog['aliases'];
+if(isset($aliasCatalog['resource_aliases'][$path])){$resource=($assembled?$documentRoot:dirname(__DIR__).'/backend/public').$aliasCatalog['resource_aliases'][$path];if(is_file($resource)){header('Content-Type: '.(str_ends_with($resource,'.css')?'text/css':'application/javascript'));readfile($resource);return true;}}
+if(isset($routeAliases[$path])){
+    $target=$routeAliases[$path];
+    $controller=($assembled?$documentRoot:dirname(__DIR__).'/backend/public').$target;
+    if(!$assembled && in_array($target,['/place.php','/places.php','/business.php'],true))$controller=dirname(__DIR__).'/backend/integration-analytics/public'.$target;
+    require $controller;return true;
+}
 $query=parse_url($_SERVER['REQUEST_URI']??'/',PHP_URL_QUERY);
+if(preg_match('~^/((?:en/|pt-br/)?)aliados(?:/(interes|proceso|planes|por-que-participar|impulsa-tu-destino|impulsor))?(?:/index\.html|/)?$~',$path,$partner)){
+    $section=$partner[2]??'';
+    if($section==='planes')$section='suscripciones';
+    header('Location: /'.$partner[1].'negocios-locales/'.($section!==''?$section.'/':'').($query!==null?'?'.$query:''),true,301);return true;
+}
 if(str_ends_with($path,'/index.html')){header('Location: '.substr($path,0,-10).($query!==null?'?'.$query:''),true,301);return true;}
+if(preg_match('~^/(en|pt-br)/negocios/(acceso|registro)/?$~',$path,$account)){
+    header('Location: /negocios/'.$account[2].'/?'.($query!==null && $query!==''?$query.'&':'').'lang='.$account[1],true,301);return true;
+}
 if(preg_match('~^/(?:en/|pt-br/)?(?:destinos|lugares)/[a-z0-9-]+$~i',$path)){header('Location: '.$path.'/'.($query!==null?'?'.$query:''),true,301);return true;}
 if($path==='/negocios/cambiar-clave/' || $path==='/negocios/cambiar-clave'){require ($assembled?$documentRoot:dirname(__DIR__).'/backend/public').'/business/password.php';return true;}
 if (preg_match('~^/(en/|pt-br/)?negocios-locales/?$~',$path,$hub)) {
@@ -28,11 +45,11 @@ if ($path==='/negocios/registro/' || $path==='/negocios/registro') { require ($a
 if ($path==='/negocios/acceso/' || $path==='/negocios/acceso') { require ($assembled?$documentRoot:dirname(__DIR__).'/backend/public').'/business/login.php'; return true; }
 if ($path==='/negocios/portal/' || $path==='/negocios/portal') { require ($assembled?$documentRoot:dirname(__DIR__).'/backend/public').'/business/dashboard.php'; return true; }
 if ($path==='/negocios/salir/' || $path==='/negocios/salir') { require ($assembled?$documentRoot:dirname(__DIR__).'/backend/public').'/business/logout.php'; return true; }
-if (preg_match('~^/admin/(index|base-datos|destinos|negocios|suscripciones|usuarios|importar-negocios|reclamaciones|solicitudes-cuenta|solicitud-detalle|negocio-vista-previa|paquete-destino|paquete-destino-imagen|imagen-referencia-negocio)\.php$~',$path,$admin)) {
-    require ($assembled?$documentRoot:dirname(__DIR__).'/backend/public').'/admin/'.$admin[1].'.php';
-    return true;
+if (preg_match('~^/admin/([a-z-]+)\\.php$~',$path,$admin)) {
+    $controller=($assembled?$documentRoot:dirname(__DIR__).'/backend/public').'/admin/'.$admin[1].'.php';
+    if(is_file($controller)){require $controller;return true;}
 }
-if ($path==='/admin/inversionistas' || $path==='/admin/inversionistas/' || $path==='/admin/inversionistas.php') { require ($assembled?$documentRoot:dirname(__DIR__).'/backend/public').'/admin/inversionistas.php'; return true; }
+if ($path==='/admin/inversionistas' || $path==='/admin/inversionistas/' || $path==='/admin/investors.php') { require ($assembled?$documentRoot:dirname(__DIR__).'/backend/public').'/admin/investors.php'; return true; }
 if (preg_match('~^/assets/destinos/[0-9]+/[a-zA-Z0-9-]+\.(?:jpg|png|webp)$~',$path)) {
     $mediaRoot=getenv('EL_ADMIN_MEDIA_ROOT')?:'';
     $file=$mediaRoot?realpath(rtrim($mediaRoot,'/').$path):false;
@@ -51,20 +68,20 @@ if (preg_match('~^/assets/(admin-business-location|admin-subscriptions|admin-acc
     if($file&&$base&&str_starts_with($file,$base.DIRECTORY_SEPARATOR)&&is_file($file)){header('Content-Type: application/javascript; charset=utf-8');header('Cache-Control: no-store');readfile($file);return true;}
     http_response_code(404);echo 'No encontrado';return true;
 }
-if ($path==='/reclamar-negocio.php' || $path==='/reclamar-negocio/') {
-    require ($assembled?$documentRoot:dirname(__DIR__).'/backend/public').'/reclamar-negocio.php';
+if ($path==='/business-claim.php' || $path==='/reclamar-negocio/') {
+    require ($assembled?$documentRoot:dirname(__DIR__).'/backend/public').'/business-claim.php';
     return true;
 }
 if (preg_match('~^/(?:((?:en|pt-br)/))?negocios/([a-f0-9-]{16,64})/?$~i',$path,$match)) {
     $_GET['idioma']=match (trim($match[1]??'','/')) {'en'=>'en','pt-br'=>'pt-BR',default=>'es'};
     $_GET['id']=$match[2];
-    require ($assembled?$documentRoot:dirname(__DIR__).'/ensayos/v1').'/negocio.php';
+    require ($assembled?$documentRoot:dirname(__DIR__).'/ensayos/v1').'/business.php';
     return true;
 }
 if (preg_match('~^/(?:((?:en|pt-br)/))?(?:destinos|lugares)/([a-z0-9-]+)(?:/index\.html)?/?$~',$path,$match)) {
     $_GET['idioma']=match (trim($match[1]??'','/')) {'en'=>'en','pt-br'=>'pt-BR',default=>'es'};
-    $_GET['destino']=$match[2];
-    require ($assembled?$documentRoot:dirname(__DIR__).'/ensayos/v1').'/destino.php';
+    $_GET['place']=$match[2];
+    require ($assembled?$documentRoot:dirname(__DIR__).'/ensayos/v1').'/place.php';
     return true;
 }
 $base=$documentRoot;

@@ -15,7 +15,7 @@ Abrir http://127.0.0.1:8000/v1/. El servidor sirve únicamente los ensayos y no 
 ## Preparar una entrega
 
 ```sh
-python3 scripts/preparar-hosting.py
+python3 scripts/prepare-hosting.py
 ```
 
 Genera `.local/hosting/` con archivos públicos y componentes privados separados. Esa carpeta está excluida de Git. No publica ni modifica el hosting. Las guías y traducciones se regeneran desde `content/`; consultar [destinos piloto](docs/DESTINOS_PILOTO.md).

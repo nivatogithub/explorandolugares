@@ -6,7 +6,7 @@ function testLocalAccess(string $localFlag,string $adminFlag,bool $localConfig,s
  require __DIR__.'/admin-access.php';
  if(!empty($_SESSION['admin'])!==$expected)throw new RuntimeException('Unexpected administrator access');
 }
-testLocalAccess('1','1',true,'127.0.0.1:8088','/admin/negocios.php',true);
+testLocalAccess('1','1',true,'127.0.0.1:8088','/admin/businesses.php',true);
 testLocalAccess('1','1',true,'localhost:8088','/admin/index.php',true);
 testLocalAccess('','1',true,'localhost:8088','/admin/index.php',false);
 testLocalAccess('1','',true,'localhost:8088','/admin/index.php',false);

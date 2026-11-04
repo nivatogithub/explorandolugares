@@ -4,7 +4,7 @@ from pathlib import Path
 root=Path(__file__).resolve().parents[1]
 data=json.loads((root/'content/release-places-businesses.json').read_text())
 for locale,prefix in [('es',''),('en','en/'),('pt-BR','pt-br/')]:
- p=root/'backend/integration-medicion/public'/prefix/'destinos/index.html'
+ p=root/'backend/integration-analytics/public'/prefix/'destinos/index.html'
  text=p.read_text();cards=[]
  for slug in data['scope']:
   d=data['editorial'][slug];t=d['translations'][locale];esc=lambda s:html.escape(str(s),quote=True)

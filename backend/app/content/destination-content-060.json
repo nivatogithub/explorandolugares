@@ -1,0 +1,3368 @@
+{
+  "schema_version": 1,
+  "migration": "060-destination-content",
+  "base_commit": "c6b1ee2b4395e748fd736f3a9dc176982e34be81",
+  "destinations": {
+    "bogota": {
+      "translations": {
+        "es": {
+          "history": {
+            "before": [
+              "El territorio de Bogotá fue habitado por los muiscas antes de la fundación española de 1538. La ciudad creció alrededor de su centro histórico y se convirtió en capital de Colombia, reuniendo instituciones, universidades y una amplia vida cultural."
+            ],
+            "after": [
+              "El territorio de Bogotá fue habitado por los muiscas antes de la fundación española de 1538. La ciudad creció alrededor de su centro histórico y se convirtió en capital de Colombia, reuniendo instituciones, universidades y una amplia vida cultural."
+            ]
+          }
+        },
+        "en": {
+          "history": {
+            "before": [
+              "The Bogotá region was inhabited by the Muisca before the Spanish foundation in 1538. The city grew around its historic centre and became Colombia’s capital, bringing together institutions, universities and a broad cultural life."
+            ],
+            "after": [
+              "The Bogotá region was inhabited by the Muisca before the Spanish foundation in 1538. The city grew around its historic centre and became Colombia’s capital, bringing together institutions, universities and a broad cultural life."
+            ]
+          }
+        },
+        "pt-BR": {
+          "history": {
+            "before": [
+              "O território de Bogotá era habitado pelos muiscas antes da fundação espanhola de 1538. A cidade cresceu ao redor do centro histórico e tornou-se capital da Colômbia, reunindo instituições, universidades e uma ampla vida cultural."
+            ],
+            "after": [
+              "O território de Bogotá era habitado pelos muiscas antes da fundação espanhola de 1538. A cidade cresceu ao redor do centro histórico e tornou-se capital da Colômbia, reunindo instituições, universidades e uma ampla vida cultural."
+            ]
+          }
+        }
+      },
+      "places": {
+        "plaza": {
+          "es": {
+            "description": {
+              "before": "El corazón cívico de Bogotá, rodeado de edificios históricos.",
+              "after": "El corazón cívico de Bogotá, rodeado de edificios históricos."
+            }
+          },
+          "en": {
+            "description": {
+              "before": "Bogotá’s civic heart, surrounded by historic buildings.",
+              "after": "Bogotá’s civic heart, surrounded by historic buildings."
+            }
+          },
+          "pt-BR": {
+            "description": {
+              "before": "O coração cívico de Bogotá, cercado por edifícios históricos.",
+              "after": "O coração cívico de Bogotá, cercado por edifícios históricos."
+            }
+          }
+        },
+        "candelaria": {
+          "es": {
+            "description": {
+              "before": "Calles coloniales, plazas y espacios culturales del centro histórico.",
+              "after": "Calles coloniales, plazas y espacios culturales del centro histórico."
+            }
+          },
+          "en": {
+            "description": {
+              "before": "Colonial streets, squares and cultural spaces in the historic centre.",
+              "after": "Colonial streets, squares and cultural spaces in the historic centre."
+            }
+          },
+          "pt-BR": {
+            "description": {
+              "before": "Ruas coloniais, praças e espaços culturais no centro histórico.",
+              "after": "Ruas coloniais, praças e espaços culturais no centro histórico."
+            }
+          }
+        },
+        "museo-oro": {
+          "es": {
+            "description": {
+              "before": "Orfebrería y relatos de las sociedades indígenas de Colombia.",
+              "after": "Orfebrería y relatos de las sociedades indígenas de Colombia."
+            }
+          },
+          "en": {
+            "description": {
+              "before": "Goldwork and stories from Colombia’s Indigenous societies.",
+              "after": "Goldwork and stories from Colombia’s Indigenous societies."
+            }
+          },
+          "pt-BR": {
+            "description": {
+              "before": "Ourivesaria e histórias das sociedades indígenas da Colômbia.",
+              "after": "Ourivesaria e histórias das sociedades indígenas da Colômbia."
+            }
+          }
+        },
+        "monserrate": {
+          "es": {
+            "description": {
+              "before": "Santuario y miradores sobre la ciudad y los cerros.",
+              "after": "Santuario y miradores sobre la ciudad y los cerros."
+            }
+          },
+          "en": {
+            "description": {
+              "before": "A hilltop sanctuary and viewpoints over the city.",
+              "after": "A hilltop sanctuary and viewpoints over the city."
+            }
+          },
+          "pt-BR": {
+            "description": {
+              "before": "Santuário e mirantes sobre a cidade e os morros.",
+              "after": "Santuário e mirantes sobre a cidade e os morros."
+            }
+          }
+        },
+        "botero": {
+          "es": {
+            "description": {
+              "before": "Arte colombiano e internacional en una casa colonial.",
+              "after": "Arte colombiano e internacional en una casa colonial."
+            }
+          },
+          "en": {
+            "description": {
+              "before": "Colombian and international art in a colonial house.",
+              "after": "Colombian and international art in a colonial house."
+            }
+          },
+          "pt-BR": {
+            "description": {
+              "before": "Arte colombiana e internacional em uma casa colonial.",
+              "after": "Arte colombiana e internacional em uma casa colonial."
+            }
+          }
+        },
+        "usaquen": {
+          "es": {
+            "description": {
+              "before": "Un antiguo núcleo de pueblo con plaza, cafés y mercado de oficios.",
+              "after": "Un antiguo núcleo de pueblo con plaza, cafés y mercado de oficios."
+            }
+          },
+          "en": {
+            "description": {
+              "before": "A former village centre with a square, cafés and craft market.",
+              "after": "A former village centre with a square, cafés and craft market."
+            }
+          },
+          "pt-BR": {
+            "description": {
+              "before": "Um antigo núcleo de povoado com praça, cafés e mercado de artesanato.",
+              "after": "Um antigo núcleo de povoado com praça, cafés e mercado de artesanato."
+            }
+          }
+        },
+        "jardin": {
+          "es": {
+            "description": {
+              "before": "Colecciones vegetales y ecosistemas colombianos en el Tropicario.",
+              "after": "Colecciones vegetales y ecosistemas colombianos en el Tropicario."
+            }
+          },
+          "en": {
+            "description": {
+              "before": "Plant collections and Colombian ecosystems in the Tropicarium.",
+              "after": "Plant collections and Colombian ecosystems in the Tropicarium."
+            }
+          },
+          "pt-BR": {
+            "description": {
+              "before": "Coleções vegetais e ecossistemas colombianos no Tropicário.",
+              "after": "Coleções vegetais e ecossistemas colombianos no Tropicário."
+            }
+          }
+        },
+        "simon": {
+          "es": {
+            "description": {
+              "before": "Lago, senderos y zonas verdes para recorrer con calma.",
+              "after": "Lago, senderos y zonas verdes para recorrer con calma."
+            }
+          },
+          "en": {
+            "description": {
+              "before": "A lake, paths and green spaces for an easy stroll.",
+              "after": "A lake, paths and green spaces for an easy stroll."
+            }
+          },
+          "pt-BR": {
+            "description": {
+              "before": "Lago, caminhos e áreas verdes para passear com calma.",
+              "after": "Lago, caminhos e áreas verdes para passear com calma."
+            }
+          }
+        },
+        "ciencia": {
+          "es": {
+            "description": {
+              "before": "Descubre experiencias interactivas de ciencia en Maloka.",
+              "after": "Descubre experiencias interactivas de ciencia en Maloka."
+            }
+          },
+          "en": {
+            "description": {
+              "before": "Discover interactive science experiences at Maloka.",
+              "after": "Discover interactive science experiences at Maloka."
+            }
+          },
+          "pt-BR": {
+            "description": {
+              "before": "Descubra experiências interativas de ciência no Maloka.",
+              "after": "Descubra experiências interativas de ciência no Maloka."
+            }
+          }
+        },
+        "cielo": {
+          "es": {
+            "description": {
+              "before": "Astronomía, exposiciones y proyecciones en el domo.",
+              "after": "Acércate a la astronomía en el Planetario de Bogotá."
+            }
+          },
+          "en": {
+            "description": {
+              "before": "Astronomy, exhibitions and dome projections.",
+              "after": "Explore astronomy at Bogotá’s Planetarium."
+            }
+          },
+          "pt-BR": {
+            "description": {
+              "before": "Astronomia, exposições e projeções no domo.",
+              "after": "Conheça a astronomia no Planetário de Bogotá."
+            }
+          }
+        }
+      },
+      "media": {
+        "hero": {
+          "path": "assets/media/ce/ce3694ebfe583500db04ac97e1bfa0d021bc60f4e2ea5dea417703453cc08236.webp",
+          "before_path": "assets/media/ce/ce3694ebfe583500db04ac97e1bfa0d021bc60f4e2ea5dea417703453cc08236.webp",
+          "width": {
+            "before": 1200,
+            "after": 1200
+          },
+          "height": {
+            "before": 800,
+            "after": 800
+          },
+          "srcset": "/assets/bogota-semirrealista/portada-v4-640.webp 640w, /assets/media/ce/ce3694ebfe583500db04ac97e1bfa0d021bc60f4e2ea5dea417703453cc08236.webp 1200w",
+          "sizes": "(max-width:760px) 100vw, 55vw",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: bogota",
+              "after": "Bogotá · Torre Colpatria"
+            },
+            "en": {
+              "before": "Ilustración editorial: bogota",
+              "after": "Bogotá · Torre Colpatria"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: bogota",
+              "after": "Bogotá · Torre Colpatria"
+            }
+          },
+          "files": {
+            "assets/media/ce/ce3694ebfe583500db04ac97e1bfa0d021bc60f4e2ea5dea417703453cc08236.webp": "ce3694ebfe583500db04ac97e1bfa0d021bc60f4e2ea5dea417703453cc08236",
+            "assets/bogota-semirrealista/portada-v4-640.webp": "6f0b471e4321dc3bdbcbdafd7a5fb5487a175037f30c4833ec4ba5bdc882efa8"
+          }
+        },
+        "plaza": {
+          "path": "assets/media/ed/ed017496074a1107518d23369724dbec58203c86c89234de3b5f19a1f7cfa934.webp",
+          "before_path": "assets/media/ed/ed017496074a1107518d23369724dbec58203c86c89234de3b5f19a1f7cfa934.webp",
+          "width": {
+            "before": 800,
+            "after": 800
+          },
+          "height": {
+            "before": 533,
+            "after": 533
+          },
+          "srcset": "/assets/bogota-semirrealista/bogota-plaza-480.webp 480w, /assets/media/ed/ed017496074a1107518d23369724dbec58203c86c89234de3b5f19a1f7cfa934.webp 800w",
+          "sizes": "(max-width:650px) 100vw, (max-width:1050px) 50vw, 33vw",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Plaza de Bolívar",
+              "after": "Plaza de Bolívar"
+            },
+            "en": {
+              "before": "Ilustración editorial: Plaza de Bolívar",
+              "after": "Bolívar Square"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: Plaza de Bolívar",
+              "after": "Praça de Bolívar"
+            }
+          },
+          "files": {
+            "assets/media/ed/ed017496074a1107518d23369724dbec58203c86c89234de3b5f19a1f7cfa934.webp": "ed017496074a1107518d23369724dbec58203c86c89234de3b5f19a1f7cfa934",
+            "assets/bogota-semirrealista/bogota-plaza-480.webp": "ce7d78764df08c0d118ebb295ca1f6a73adc8f81a65ef828b3c74c3631aae621"
+          }
+        },
+        "candelaria": {
+          "path": "assets/media/ff/ff509052c72215e31c8fc123481b3d330a2cbae2d1f22ac91ffa88d698a7af57.webp",
+          "before_path": "assets/media/ff/ff509052c72215e31c8fc123481b3d330a2cbae2d1f22ac91ffa88d698a7af57.webp",
+          "width": {
+            "before": 1200,
+            "after": 1200
+          },
+          "height": {
+            "before": 800,
+            "after": 800
+          },
+          "srcset": "",
+          "sizes": "",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: La Candelaria y Chorro de Quevedo",
+              "after": "La Candelaria y Chorro de Quevedo"
+            },
+            "en": {
+              "before": "Ilustración editorial: La Candelaria y Chorro de Quevedo",
+              "after": "La Candelaria and Chorro de Quevedo"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: La Candelaria y Chorro de Quevedo",
+              "after": "La Candelaria e Chorro de Quevedo"
+            }
+          },
+          "files": {
+            "assets/media/ff/ff509052c72215e31c8fc123481b3d330a2cbae2d1f22ac91ffa88d698a7af57.webp": "ff509052c72215e31c8fc123481b3d330a2cbae2d1f22ac91ffa88d698a7af57"
+          }
+        },
+        "museo-oro": {
+          "path": "assets/media/ba/babda9479599e1ec76e21078e62427b14b17afb0e5d5acf41541635b06b5ca5c.webp",
+          "before_path": "assets/media/ba/babda9479599e1ec76e21078e62427b14b17afb0e5d5acf41541635b06b5ca5c.webp",
+          "width": {
+            "before": 1200,
+            "after": 1200
+          },
+          "height": {
+            "before": 800,
+            "after": 800
+          },
+          "srcset": "",
+          "sizes": "",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Museo del Oro",
+              "after": "Museo del Oro"
+            },
+            "en": {
+              "before": "Ilustración editorial: Museo del Oro",
+              "after": "Gold Museum"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: Museo del Oro",
+              "after": "Museu do Ouro"
+            }
+          },
+          "files": {
+            "assets/media/ba/babda9479599e1ec76e21078e62427b14b17afb0e5d5acf41541635b06b5ca5c.webp": "babda9479599e1ec76e21078e62427b14b17afb0e5d5acf41541635b06b5ca5c"
+          }
+        },
+        "monserrate": {
+          "path": "assets/media/da/da89caf723cc4dc4fec2625880285e05ed4ec2df704b1762a01966787811c6ce.webp",
+          "before_path": "assets/media/da/da89caf723cc4dc4fec2625880285e05ed4ec2df704b1762a01966787811c6ce.webp",
+          "width": {
+            "before": 800,
+            "after": 800
+          },
+          "height": {
+            "before": 533,
+            "after": 533
+          },
+          "srcset": "/assets/bogota-semirrealista/bogota-monserrate-480.webp 480w, /assets/media/da/da89caf723cc4dc4fec2625880285e05ed4ec2df704b1762a01966787811c6ce.webp 800w",
+          "sizes": "(max-width:650px) 100vw, (max-width:1050px) 50vw, 33vw",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Cerro de Monserrate",
+              "after": "Cerro de Monserrate"
+            },
+            "en": {
+              "before": "Ilustración editorial: Cerro de Monserrate",
+              "after": "Monserrate Hill"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: Cerro de Monserrate",
+              "after": "Cerro de Monserrate"
+            }
+          },
+          "files": {
+            "assets/media/da/da89caf723cc4dc4fec2625880285e05ed4ec2df704b1762a01966787811c6ce.webp": "da89caf723cc4dc4fec2625880285e05ed4ec2df704b1762a01966787811c6ce",
+            "assets/bogota-semirrealista/bogota-monserrate-480.webp": "2966074242cbc884e2d1275ed80446b2a0842a8d855ed60cb28d505fee5e43d5"
+          }
+        },
+        "botero": {
+          "path": "assets/media/0d/0da682d51c5fb5d41fc1cf4145cc7ac4fe4de3b1da1036f03a779f149e0702b1.webp",
+          "before_path": "assets/media/0d/0da682d51c5fb5d41fc1cf4145cc7ac4fe4de3b1da1036f03a779f149e0702b1.webp",
+          "width": {
+            "before": 1200,
+            "after": 1200
+          },
+          "height": {
+            "before": 800,
+            "after": 800
+          },
+          "srcset": "",
+          "sizes": "",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Museo Botero",
+              "after": "Museo Botero"
+            },
+            "en": {
+              "before": "Ilustración editorial: Museo Botero",
+              "after": "Botero Museum"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: Museo Botero",
+              "after": "Museu Botero"
+            }
+          },
+          "files": {
+            "assets/media/0d/0da682d51c5fb5d41fc1cf4145cc7ac4fe4de3b1da1036f03a779f149e0702b1.webp": "0da682d51c5fb5d41fc1cf4145cc7ac4fe4de3b1da1036f03a779f149e0702b1"
+          }
+        },
+        "usaquen": {
+          "path": "assets/media/a7/a7280c5b5dcf83b8268e11f5fe6a5238ac90cf7ff2fa1192fed9d7bb9a22fbdc.webp",
+          "before_path": "assets/media/a7/a7280c5b5dcf83b8268e11f5fe6a5238ac90cf7ff2fa1192fed9d7bb9a22fbdc.webp",
+          "width": {
+            "before": 1200,
+            "after": 1200
+          },
+          "height": {
+            "before": 800,
+            "after": 800
+          },
+          "srcset": "",
+          "sizes": "",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Usaquén: plaza, calles y mercado",
+              "after": "Usaquén: plaza, calles y mercado"
+            },
+            "en": {
+              "before": "Ilustración editorial: Usaquén: plaza, calles y mercado",
+              "after": "Usaquén: square, streets and market"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: Usaquén: plaza, calles y mercado",
+              "after": "Usaquén: praça, ruas e mercado"
+            }
+          },
+          "files": {
+            "assets/media/a7/a7280c5b5dcf83b8268e11f5fe6a5238ac90cf7ff2fa1192fed9d7bb9a22fbdc.webp": "a7280c5b5dcf83b8268e11f5fe6a5238ac90cf7ff2fa1192fed9d7bb9a22fbdc"
+          }
+        },
+        "jardin": {
+          "path": "assets/media/ea/ead49d5b03111b6bf1405eddd8c126abf5538f7daeadaeb0b9909eaf550987df.webp",
+          "before_path": "assets/media/ea/ead49d5b03111b6bf1405eddd8c126abf5538f7daeadaeb0b9909eaf550987df.webp",
+          "width": {
+            "before": 1200,
+            "after": 1200
+          },
+          "height": {
+            "before": 800,
+            "after": 800
+          },
+          "srcset": "",
+          "sizes": "",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Jardín Botánico de Bogotá",
+              "after": "Jardín Botánico de Bogotá"
+            },
+            "en": {
+              "before": "Ilustración editorial: Jardín Botánico de Bogotá",
+              "after": "Bogotá Botanical Garden"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: Jardín Botánico de Bogotá",
+              "after": "Jardim Botânico de Bogotá"
+            }
+          },
+          "files": {
+            "assets/media/ea/ead49d5b03111b6bf1405eddd8c126abf5538f7daeadaeb0b9909eaf550987df.webp": "ead49d5b03111b6bf1405eddd8c126abf5538f7daeadaeb0b9909eaf550987df"
+          }
+        },
+        "simon": {
+          "path": "assets/media/f9/f9672e4edf09970e938a0479a848796545306e89af4f59f7e306f172e3e6eb82.webp",
+          "before_path": "assets/media/f9/f9672e4edf09970e938a0479a848796545306e89af4f59f7e306f172e3e6eb82.webp",
+          "width": {
+            "before": 1200,
+            "after": 1200
+          },
+          "height": {
+            "before": 800,
+            "after": 800
+          },
+          "srcset": "",
+          "sizes": "",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Parque Metropolitano Simón Bolívar",
+              "after": "Parque Metropolitano Simón Bolívar"
+            },
+            "en": {
+              "before": "Ilustración editorial: Parque Metropolitano Simón Bolívar",
+              "after": "Simón Bolívar Metropolitan Park"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: Parque Metropolitano Simón Bolívar",
+              "after": "Parque Metropolitano Simón Bolívar"
+            }
+          },
+          "files": {
+            "assets/media/f9/f9672e4edf09970e938a0479a848796545306e89af4f59f7e306f172e3e6eb82.webp": "f9672e4edf09970e938a0479a848796545306e89af4f59f7e306f172e3e6eb82"
+          }
+        },
+        "ciencia": {
+          "path": "assets/media/e6/e69a13f54a13e434ee19caf35fc2e24f41e8cb826a2794bfac917a461a9f599b.webp",
+          "before_path": "assets/media/e6/e69a13f54a13e434ee19caf35fc2e24f41e8cb826a2794bfac917a461a9f599b.webp",
+          "width": {
+            "before": 1200,
+            "after": 1200
+          },
+          "height": {
+            "before": 800,
+            "after": 800
+          },
+          "srcset": "",
+          "sizes": "",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Ciencia interactiva en Maloka",
+              "after": "Ciencia interactiva en Maloka"
+            },
+            "en": {
+              "before": "Ilustración editorial: Ciencia interactiva en Maloka",
+              "after": "Interactive science at Maloka"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: Ciencia interactiva en Maloka",
+              "after": "Ciência interativa na Maloka"
+            }
+          },
+          "files": {
+            "assets/media/e6/e69a13f54a13e434ee19caf35fc2e24f41e8cb826a2794bfac917a461a9f599b.webp": "e69a13f54a13e434ee19caf35fc2e24f41e8cb826a2794bfac917a461a9f599b"
+          }
+        },
+        "cielo": {
+          "path": "assets/media/d8/d8b120a771ea7e83adeee83f2856b66bb6da085d4b4343afdad6e30c6bcb261f.webp",
+          "before_path": "assets/media/d8/d8b120a771ea7e83adeee83f2856b66bb6da085d4b4343afdad6e30c6bcb261f.webp",
+          "width": {
+            "before": 1200,
+            "after": 1200
+          },
+          "height": {
+            "before": 800,
+            "after": 800
+          },
+          "srcset": "",
+          "sizes": "",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Planetario de Bogotá",
+              "after": "Astronomía en el Planetario"
+            },
+            "en": {
+              "before": "Ilustración editorial: Planetario de Bogotá",
+              "after": "Astronomy at the Planetarium"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: Planetario de Bogotá",
+              "after": "Astronomia no Planetário"
+            }
+          },
+          "files": {
+            "assets/media/d8/d8b120a771ea7e83adeee83f2856b66bb6da085d4b4343afdad6e30c6bcb261f.webp": "d8b120a771ea7e83adeee83f2856b66bb6da085d4b4343afdad6e30c6bcb261f"
+          }
+        }
+      }
+    },
+    "cartagena": {
+      "translations": {
+        "es": {
+          "headline": {
+            "before": "Murallas, barrios y memoria junto al Caribe",
+            "after": "Historia y Caribe"
+          },
+          "intro": {
+            "before": "Cartagena reúne patrimonio urbano y vida caribeña. Recorre el centro histórico, reconoce las fortificaciones y reserva tiempo para Getsemaní, sus calles y la economía local. La visita también invita a mirar la historia de la ciudad más allá de sus fachadas.",
+            "after": "Recorre sus murallas, descubre Getsemaní y disfruta las playas y las Islas del Rosario."
+          },
+          "history": {
+            "before": [
+              "La fundación colonial de Cartagena de Indias se fecha el 1 de junio de 1533. Su posición en una bahía caribeña la convirtió en un puerto estratégico del sistema colonial español. Esa historia incluye a poblaciones indígenas y africanas esclavizadas, y no se reduce a arquitectura y comercio.",
+              "Las defensas se construyeron y ampliaron durante varios siglos. Murallas y fuertes permiten leer la relación entre la ciudad, la bahía y las disputas por las rutas marítimas. El 11 de noviembre de 1811 Cartagena proclamó su independencia absoluta de España.",
+              "En 1984 la UNESCO inscribió el puerto, las fortalezas y el conjunto monumental. El reconocimiento comprende un patrimonio vivo: Centro, San Diego y Getsemaní conservan usos residenciales, culturales y comerciales."
+            ],
+            "after": [
+              "Fundada en 1533, Cartagena fue un puerto clave del Caribe colonial, marcado por la esclavitud y las fortificaciones que hoy la identifican. Proclamó su independencia en 1811. En 1984, la UNESCO reconoció su puerto, fortalezas y conjunto monumental como Patrimonio Mundial."
+            ]
+          }
+        },
+        "en": {
+          "headline": {
+            "before": "City walls, neighbourhoods and memory by the Caribbean",
+            "after": "History and the Caribbean"
+          },
+          "intro": {
+            "before": "Cartagena combines urban heritage with Caribbean life. Explore the historic centre, discover its fortifications and make time for Getsemaní, its streets and local economy. Look beyond the façades to understand the city’s history.",
+            "after": "Walk the walls, discover Getsemaní and enjoy the beaches and Rosario Islands."
+          },
+          "history": {
+            "before": [
+              "Cartagena’s colonial founding dates to 1 June 1533. Its Caribbean bay made it a strategic port within the Spanish colonial system. This history includes Indigenous people and enslaved Africans, and extends beyond architecture and trade.",
+              "Defences were built and expanded over several centuries. Walls and forts reveal the relationship between the city, its bay and struggles over maritime routes. On 11 November 1811 Cartagena proclaimed its absolute independence from Spain.",
+              "In 1984 UNESCO inscribed the port, fortresses and group of monuments. This is living heritage: Centro, San Diego and Getsemaní retain residential, cultural and commercial uses."
+            ],
+            "after": [
+              "Founded in 1533, Cartagena became a key colonial Caribbean port, shaped by slavery and the fortifications that define it today. It declared independence in 1811. In 1984, UNESCO listed its port, fortresses and monumental ensemble as World Heritage."
+            ]
+          }
+        },
+        "pt-BR": {
+          "headline": {
+            "before": "Muralhas, bairros e memória à beira do Caribe",
+            "after": "História e Caribe"
+          },
+          "intro": {
+            "before": "Cartagena reúne patrimônio urbano e vida caribenha. Explore o centro histórico, conheça as fortificações e reserve tempo para Getsemaní, suas ruas e a economia local. A visita também convida a compreender a história da cidade além das fachadas.",
+            "after": "Caminhe pelas muralhas, descubra Getsemaní e aproveite as praias e as Ilhas do Rosário."
+          },
+          "history": {
+            "before": [
+              "A fundação colonial de Cartagena de Indias data de 1º de junho de 1533. Sua posição em uma baía caribenha fez dela um porto estratégico do sistema colonial espanhol. Essa história inclui povos indígenas e africanos escravizados e vai além da arquitetura e do comércio.",
+              "As defesas foram construídas e ampliadas ao longo de vários séculos. Muralhas e fortes revelam a relação entre a cidade, a baía e as disputas pelas rotas marítimas. Em 11 de novembro de 1811 Cartagena proclamou sua independência absoluta da Espanha.",
+              "Em 1984 a UNESCO inscreveu o porto, as fortalezas e o conjunto monumental. Trata-se de um patrimônio vivo: Centro, San Diego e Getsemaní mantêm usos residenciais, culturais e comerciais."
+            ],
+            "after": [
+              "Fundada em 1533, Cartagena tornou-se um porto importante do Caribe colonial, marcado pela escravidão e pelas fortificações que hoje a identificam. Declarou sua independência em 1811. Em 1984, a UNESCO reconheceu seu porto, fortalezas e conjunto monumental como Patrimônio Mundial."
+            ]
+          }
+        }
+      },
+      "places": {
+        "centro-historico": {
+          "es": {
+            "description": {
+              "before": "Murallas, plazas y balcones entre Centro y San Diego.",
+              "after": "Murallas, plazas y balcones entre Centro y San Diego."
+            }
+          },
+          "en": {
+            "description": {
+              "before": "Walls, squares and balconies in Centro and San Diego.",
+              "after": "Walls, squares and balconies in Centro and San Diego."
+            }
+          },
+          "pt-BR": {
+            "description": {
+              "before": "Muralhas, praças e varandas em Centro e San Diego.",
+              "after": "Muralhas, praças e varandas em Centro e San Diego."
+            }
+          }
+        },
+        "san-felipe": {
+          "es": {
+            "description": {
+              "before": "Fortaleza del cerro de San Lázaro, con rampas y túneles.",
+              "after": "Fortaleza del cerro de San Lázaro, con rampas y túneles."
+            }
+          },
+          "en": {
+            "description": {
+              "before": "San Lázaro hill fortress, with ramps and tunnels.",
+              "after": "San Lázaro hill fortress, with ramps and tunnels."
+            }
+          },
+          "pt-BR": {
+            "description": {
+              "before": "Fortaleza no cerro de San Lázaro, com rampas e túneis.",
+              "after": "Fortaleza no cerro de San Lázaro, com rampas e túneis."
+            }
+          }
+        },
+        "getsemani": {
+          "es": {
+            "description": {
+              "before": "Calles coloridas, arte urbano y vida de barrio.",
+              "after": "Calles coloridas, arte urbano y vida de barrio."
+            }
+          },
+          "en": {
+            "description": {
+              "before": "Colourful streets, urban art and neighbourhood life.",
+              "after": "Colourful streets, urban art and neighbourhood life."
+            }
+          },
+          "pt-BR": {
+            "description": {
+              "before": "Ruas coloridas, arte urbana e vida de bairro.",
+              "after": "Ruas coloridas, arte urbana e vida de bairro."
+            }
+          }
+        },
+        "playa-blanca-baru": {
+          "es": {
+            "description": {
+              "before": "Playa de arena clara y aguas turquesas en Barú.",
+              "after": "Playa de arena clara y aguas turquesas en Barú."
+            }
+          },
+          "en": {
+            "description": {
+              "before": "Pale sand and turquoise waters in Barú.",
+              "after": "Pale sand and turquoise waters in Barú."
+            }
+          },
+          "pt-BR": {
+            "description": {
+              "before": "Praia de areia clara e águas turquesa em Barú.",
+              "after": "Praia de areia clara e águas turquesa em Barú."
+            }
+          }
+        },
+        "cerro-popa": {
+          "es": {
+            "description": {
+              "before": "Convento histórico, claustro y vistas de Cartagena.",
+              "after": "Convento histórico, claustro y vistas de Cartagena."
+            }
+          },
+          "en": {
+            "description": {
+              "before": "Historic convent, cloister and views over Cartagena.",
+              "after": "Historic convent, cloister and views over Cartagena."
+            }
+          },
+          "pt-BR": {
+            "description": {
+              "before": "Convento histórico, claustro e vistas de Cartagena.",
+              "after": "Convento histórico, claustro e vistas de Cartagena."
+            }
+          }
+        },
+        "san-pedro-claver": {
+          "es": {
+            "description": {
+              "before": "Iglesia y museo dedicados a la memoria de Pedro Claver.",
+              "after": "Iglesia y museo dedicados a la memoria de Pedro Claver."
+            }
+          },
+          "en": {
+            "description": {
+              "before": "Church and museum dedicated to Pedro Claver.",
+              "after": "Church and museum dedicated to Pedro Claver."
+            }
+          },
+          "pt-BR": {
+            "description": {
+              "before": "Igreja e museu dedicados à memória de Pedro Claver.",
+              "after": "Igreja e museu dedicados à memória de Pedro Claver."
+            }
+          }
+        },
+        "bocagrande": {
+          "es": {
+            "description": {
+              "before": "Playas urbanas y paseo costero entre edificios modernos.",
+              "after": "Playas urbanas y paseo costero entre edificios modernos."
+            }
+          },
+          "en": {
+            "description": {
+              "before": "Urban beaches and a seafront lined with modern buildings.",
+              "after": "Urban beaches and a seafront lined with modern buildings."
+            }
+          },
+          "pt-BR": {
+            "description": {
+              "before": "Praias urbanas e passeio à beira-mar entre edifícios modernos.",
+              "after": "Praias urbanas e passeio à beira-mar entre edifícios modernos."
+            }
+          }
+        },
+        "visita-muhca": {
+          "es": {
+            "description": {
+              "before": "Descubre la historia de Cartagena en el antiguo Palacio de la Inquisición.",
+              "after": "Descubre la historia de Cartagena en el antiguo Palacio de la Inquisición."
+            }
+          },
+          "en": {
+            "description": {
+              "before": "Discover Cartagena’s history in the former Inquisition Palace.",
+              "after": "Discover Cartagena’s history in the former Inquisition Palace."
+            }
+          },
+          "pt-BR": {
+            "description": {
+              "before": "Descubra a história de Cartagena no antigo Palácio da Inquisição.",
+              "after": "Descubra a história de Cartagena no antigo Palácio da Inquisição."
+            }
+          }
+        },
+        "bus-panoramico": {
+          "es": {
+            "description": {
+              "before": "Recorre la ciudad en bus turístico; consulta paradas e itinerario.",
+              "after": "Recorre la ciudad en bus turístico; consulta paradas e itinerario."
+            }
+          },
+          "en": {
+            "description": {
+              "before": "See the city by sightseeing bus; check stops and route.",
+              "after": "See the city by sightseeing bus; check stops and route."
+            }
+          },
+          "pt-BR": {
+            "description": {
+              "before": "Conheça a cidade em ônibus turístico; consulte paradas e roteiro.",
+              "after": "Conheça a cidade em ônibus turístico; consulte paradas e roteiro."
+            }
+          }
+        },
+        "buceo-rosario": {
+          "es": {
+            "description": {
+              "before": "Explora el entorno submarino con un operador y equipo adecuado.",
+              "after": "Explora el entorno submarino con un operador y equipo adecuado."
+            }
+          },
+          "en": {
+            "description": {
+              "before": "Explore underwater with an operator and suitable equipment.",
+              "after": "Explore underwater with an operator and suitable equipment."
+            }
+          },
+          "pt-BR": {
+            "description": {
+              "before": "Explore o ambiente submarino com operador e equipamento adequado.",
+              "after": "Explore o ambiente submarino com operador e equipamento adequado."
+            }
+          }
+        },
+        "catamaran-cartagena": {
+          "es": {
+            "description": {
+              "before": "Navega desde Cartagena; confirma recorrido y condiciones.",
+              "after": "Navega desde Cartagena; confirma recorrido y condiciones."
+            }
+          },
+          "en": {
+            "description": {
+              "before": "Sail from Cartagena; confirm route and conditions.",
+              "after": "Sail from Cartagena; confirm route and conditions."
+            }
+          },
+          "pt-BR": {
+            "description": {
+              "before": "Navegue a partir de Cartagena; confirme roteiro e condições.",
+              "after": "Navegue a partir de Cartagena; confirme roteiro e condições."
+            }
+          }
+        },
+        "pesca-boquilla": {
+          "es": {
+            "description": {
+              "before": "Conoce los manglares en canoa y la pesca tradicional.",
+              "after": "Conoce los manglares en canoa y la pesca tradicional."
+            }
+          },
+          "en": {
+            "description": {
+              "before": "Discover mangroves by canoe and traditional fishing.",
+              "after": "Discover mangroves by canoe and traditional fishing."
+            }
+          },
+          "pt-BR": {
+            "description": {
+              "before": "Conheça os manguezais em canoa e a pesca tradicional.",
+              "after": "Conheça os manguezais em canoa e a pesca tradicional."
+            }
+          }
+        }
+      },
+      "media": {
+        "hero": {
+          "path": "assets/media/61/618893a558b3e9f8d3f2af794e9e1894f41b13edec7724c3dd92baab8c7e0bd0.webp",
+          "before_path": "assets/media/61/618893a558b3e9f8d3f2af794e9e1894f41b13edec7724c3dd92baab8c7e0bd0.webp",
+          "width": {
+            "before": 1200,
+            "after": 1200
+          },
+          "height": {
+            "before": 800,
+            "after": 800
+          },
+          "srcset": "",
+          "sizes": "",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: cartagena",
+              "after": "Ilustración editorial: cartagena"
+            },
+            "en": {
+              "before": "Ilustración editorial: cartagena",
+              "after": "Ilustración editorial: cartagena"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: cartagena",
+              "after": "Ilustración editorial: cartagena"
+            }
+          },
+          "files": {
+            "assets/media/61/618893a558b3e9f8d3f2af794e9e1894f41b13edec7724c3dd92baab8c7e0bd0.webp": "618893a558b3e9f8d3f2af794e9e1894f41b13edec7724c3dd92baab8c7e0bd0"
+          }
+        },
+        "centro-historico": {
+          "path": "assets/media/b5/b52c981b3df4cfb45d99822c6c7aae8ab53970e2c90b90e5d914d52a5d83c8ca.webp",
+          "before_path": "assets/media/b5/b52c981b3df4cfb45d99822c6c7aae8ab53970e2c90b90e5d914d52a5d83c8ca.webp",
+          "width": {
+            "before": 800,
+            "after": 800
+          },
+          "height": {
+            "before": 533,
+            "after": 533
+          },
+          "srcset": "",
+          "sizes": "",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Centro histórico y murallas",
+              "after": "Ilustración editorial: Centro histórico y murallas"
+            },
+            "en": {
+              "before": "Ilustración editorial: Centro histórico y murallas",
+              "after": "Ilustración editorial: Centro histórico y murallas"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: Centro histórico y murallas",
+              "after": "Ilustración editorial: Centro histórico y murallas"
+            }
+          },
+          "files": {
+            "assets/media/b5/b52c981b3df4cfb45d99822c6c7aae8ab53970e2c90b90e5d914d52a5d83c8ca.webp": "b52c981b3df4cfb45d99822c6c7aae8ab53970e2c90b90e5d914d52a5d83c8ca"
+          }
+        },
+        "san-felipe": {
+          "path": "assets/media/25/25d795d0cad345e8992f52ad8ca28f38a480dffe8e1d28b70ff6f0c5025f89d8.webp",
+          "before_path": "assets/media/25/25d795d0cad345e8992f52ad8ca28f38a480dffe8e1d28b70ff6f0c5025f89d8.webp",
+          "width": {
+            "before": 800,
+            "after": 800
+          },
+          "height": {
+            "before": 533,
+            "after": 533
+          },
+          "srcset": "",
+          "sizes": "",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Castillo de San Felipe de Barajas",
+              "after": "Ilustración editorial: Castillo de San Felipe de Barajas"
+            },
+            "en": {
+              "before": "Ilustración editorial: Castillo de San Felipe de Barajas",
+              "after": "Ilustración editorial: Castillo de San Felipe de Barajas"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: Castillo de San Felipe de Barajas",
+              "after": "Ilustración editorial: Castillo de San Felipe de Barajas"
+            }
+          },
+          "files": {
+            "assets/media/25/25d795d0cad345e8992f52ad8ca28f38a480dffe8e1d28b70ff6f0c5025f89d8.webp": "25d795d0cad345e8992f52ad8ca28f38a480dffe8e1d28b70ff6f0c5025f89d8"
+          }
+        },
+        "getsemani": {
+          "path": "assets/media/21/2174b76deef0c9331822633b77df4a7b14e2b996d51940905a347849d45f5f3e.webp",
+          "before_path": "assets/media/21/2174b76deef0c9331822633b77df4a7b14e2b996d51940905a347849d45f5f3e.webp",
+          "width": {
+            "before": 1200,
+            "after": 1200
+          },
+          "height": {
+            "before": 800,
+            "after": 800
+          },
+          "srcset": "",
+          "sizes": "",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Getsemaní",
+              "after": "Ilustración editorial: Getsemaní"
+            },
+            "en": {
+              "before": "Ilustración editorial: Getsemaní",
+              "after": "Ilustración editorial: Getsemaní"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: Getsemaní",
+              "after": "Ilustración editorial: Getsemaní"
+            }
+          },
+          "files": {
+            "assets/media/21/2174b76deef0c9331822633b77df4a7b14e2b996d51940905a347849d45f5f3e.webp": "2174b76deef0c9331822633b77df4a7b14e2b996d51940905a347849d45f5f3e"
+          }
+        },
+        "playa-blanca-baru": {
+          "path": "assets/media/3e/3e0ffe796a7900794c88239ce4f862915339e217a26903073d528579d860b667.webp",
+          "before_path": "assets/media/3e/3e0ffe796a7900794c88239ce4f862915339e217a26903073d528579d860b667.webp",
+          "width": {
+            "before": 1200,
+            "after": 1200
+          },
+          "height": {
+            "before": 800,
+            "after": 800
+          },
+          "srcset": "",
+          "sizes": "",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Playa Blanca · Barú",
+              "after": "Ilustración editorial: Playa Blanca · Barú"
+            },
+            "en": {
+              "before": "Ilustración editorial: Playa Blanca · Barú",
+              "after": "Ilustración editorial: Playa Blanca · Barú"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: Playa Blanca · Barú",
+              "after": "Ilustración editorial: Playa Blanca · Barú"
+            }
+          },
+          "files": {
+            "assets/media/3e/3e0ffe796a7900794c88239ce4f862915339e217a26903073d528579d860b667.webp": "3e0ffe796a7900794c88239ce4f862915339e217a26903073d528579d860b667"
+          }
+        },
+        "cerro-popa": {
+          "path": "assets/media/23/23edac6d1f67748c8a7d7a4353a94abb7a26db7d96f62722a578aff75bce97e5.webp",
+          "before_path": "assets/media/23/23edac6d1f67748c8a7d7a4353a94abb7a26db7d96f62722a578aff75bce97e5.webp",
+          "width": {
+            "before": 1200,
+            "after": 1200
+          },
+          "height": {
+            "before": 800,
+            "after": 800
+          },
+          "srcset": "",
+          "sizes": "",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Cerro y convento de La Popa",
+              "after": "Ilustración editorial: Cerro y convento de La Popa"
+            },
+            "en": {
+              "before": "Ilustración editorial: Cerro y convento de La Popa",
+              "after": "Ilustración editorial: Cerro y convento de La Popa"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: Cerro y convento de La Popa",
+              "after": "Ilustración editorial: Cerro y convento de La Popa"
+            }
+          },
+          "files": {
+            "assets/media/23/23edac6d1f67748c8a7d7a4353a94abb7a26db7d96f62722a578aff75bce97e5.webp": "23edac6d1f67748c8a7d7a4353a94abb7a26db7d96f62722a578aff75bce97e5"
+          }
+        },
+        "san-pedro-claver": {
+          "path": "assets/media/b7/b7876c822c787115c77f256f2bd2baf8f38641a9212b462a043054d856a2bf77.webp",
+          "before_path": "assets/media/b7/b7876c822c787115c77f256f2bd2baf8f38641a9212b462a043054d856a2bf77.webp",
+          "width": {
+            "before": 800,
+            "after": 800
+          },
+          "height": {
+            "before": 533,
+            "after": 533
+          },
+          "srcset": "",
+          "sizes": "",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Santuario y Museo San Pedro Claver",
+              "after": "Ilustración editorial: Santuario y Museo San Pedro Claver"
+            },
+            "en": {
+              "before": "Ilustración editorial: Santuario y Museo San Pedro Claver",
+              "after": "Ilustración editorial: Santuario y Museo San Pedro Claver"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: Santuario y Museo San Pedro Claver",
+              "after": "Ilustración editorial: Santuario y Museo San Pedro Claver"
+            }
+          },
+          "files": {
+            "assets/media/b7/b7876c822c787115c77f256f2bd2baf8f38641a9212b462a043054d856a2bf77.webp": "b7876c822c787115c77f256f2bd2baf8f38641a9212b462a043054d856a2bf77"
+          }
+        },
+        "bocagrande": {
+          "path": "assets/media/29/296e5ab035293f6a956856b73ebc714e9fd255cb3e8d1bc5a98a77deadb57f98.webp",
+          "before_path": "assets/media/29/296e5ab035293f6a956856b73ebc714e9fd255cb3e8d1bc5a98a77deadb57f98.webp",
+          "width": {
+            "before": 1200,
+            "after": 1200
+          },
+          "height": {
+            "before": 800,
+            "after": 800
+          },
+          "srcset": "",
+          "sizes": "",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Bocagrande",
+              "after": "Ilustración editorial: Bocagrande"
+            },
+            "en": {
+              "before": "Ilustración editorial: Bocagrande",
+              "after": "Ilustración editorial: Bocagrande"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: Bocagrande",
+              "after": "Ilustración editorial: Bocagrande"
+            }
+          },
+          "files": {
+            "assets/media/29/296e5ab035293f6a956856b73ebc714e9fd255cb3e8d1bc5a98a77deadb57f98.webp": "296e5ab035293f6a956856b73ebc714e9fd255cb3e8d1bc5a98a77deadb57f98"
+          }
+        },
+        "visita-muhca": {
+          "path": "assets/media/bf/bfbcfa27d24561b77f441bb1d98dc78eec5e17ca8cc547f40d0a877a357cea12.webp",
+          "before_path": "assets/media/bf/bfbcfa27d24561b77f441bb1d98dc78eec5e17ca8cc547f40d0a877a357cea12.webp",
+          "width": {
+            "before": 960,
+            "after": 960
+          },
+          "height": {
+            "before": 640,
+            "after": 640
+          },
+          "srcset": "",
+          "sizes": "",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Museo Histórico de Cartagena",
+              "after": "Ilustración editorial: Visitar el Museo Histórico"
+            },
+            "en": {
+              "before": "Editorial illustration: Museo Histórico de Cartagena",
+              "after": "Ilustración editorial: Visitar el Museo Histórico"
+            },
+            "pt-BR": {
+              "before": "Ilustração editorial: Museo Histórico de Cartagena",
+              "after": "Ilustración editorial: Visitar el Museo Histórico"
+            }
+          },
+          "files": {
+            "assets/media/bf/bfbcfa27d24561b77f441bb1d98dc78eec5e17ca8cc547f40d0a877a357cea12.webp": "bfbcfa27d24561b77f441bb1d98dc78eec5e17ca8cc547f40d0a877a357cea12"
+          }
+        },
+        "bus-panoramico": {
+          "path": "assets/media/9c/9c24eedef46066d7b2742541d0ac667dcaf3e3bbee3c9d1e236fcbb613be77e2.webp",
+          "before_path": "assets/media/9c/9c24eedef46066d7b2742541d0ac667dcaf3e3bbee3c9d1e236fcbb613be77e2.webp",
+          "width": {
+            "before": 960,
+            "after": 960
+          },
+          "height": {
+            "before": 640,
+            "after": 640
+          },
+          "srcset": "",
+          "sizes": "",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Bus turístico de Cartagena",
+              "after": "Ilustración editorial: Recorrer la ciudad en bus turístico"
+            },
+            "en": {
+              "before": "Editorial illustration: Bus turístico de Cartagena",
+              "after": "Ilustración editorial: Recorrer la ciudad en bus turístico"
+            },
+            "pt-BR": {
+              "before": "Ilustração editorial: Bus turístico de Cartagena",
+              "after": "Ilustración editorial: Recorrer la ciudad en bus turístico"
+            }
+          },
+          "files": {
+            "assets/media/9c/9c24eedef46066d7b2742541d0ac667dcaf3e3bbee3c9d1e236fcbb613be77e2.webp": "9c24eedef46066d7b2742541d0ac667dcaf3e3bbee3c9d1e236fcbb613be77e2"
+          }
+        },
+        "buceo-rosario": {
+          "path": "assets/media/cc/cc54e60f9c982d36125698860a699d2d4c2cfde6ba0d0be8057773c7251dd9de.webp",
+          "before_path": "assets/media/cc/cc54e60f9c982d36125698860a699d2d4c2cfde6ba0d0be8057773c7251dd9de.webp",
+          "width": {
+            "before": 960,
+            "after": 800
+          },
+          "height": {
+            "before": 640,
+            "after": 533
+          },
+          "srcset": "",
+          "sizes": "",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Buceo en las Islas del Rosario",
+              "after": "Ilustración editorial: Bucear en las Islas del Rosario"
+            },
+            "en": {
+              "before": "Editorial illustration: Buceo en las Islas del Rosario",
+              "after": "Ilustración editorial: Bucear en las Islas del Rosario"
+            },
+            "pt-BR": {
+              "before": "Ilustração editorial: Buceo en las Islas del Rosario",
+              "after": "Ilustración editorial: Bucear en las Islas del Rosario"
+            }
+          },
+          "files": {
+            "assets/media/cc/cc54e60f9c982d36125698860a699d2d4c2cfde6ba0d0be8057773c7251dd9de.webp": "cc54e60f9c982d36125698860a699d2d4c2cfde6ba0d0be8057773c7251dd9de"
+          }
+        },
+        "catamaran-cartagena": {
+          "path": "assets/media/22/22f346a658e967f6c46f6ef6039497d91831fac748b7335875ba850fc2af24a2.webp",
+          "before_path": "assets/media/22/22f346a658e967f6c46f6ef6039497d91831fac748b7335875ba850fc2af24a2.webp",
+          "width": {
+            "before": 960,
+            "after": 800
+          },
+          "height": {
+            "before": 640,
+            "after": 533
+          },
+          "srcset": "",
+          "sizes": "",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Catamarán",
+              "after": "Ilustración editorial: Navegar en catamarán"
+            },
+            "en": {
+              "before": "Editorial illustration: Catamarán",
+              "after": "Ilustración editorial: Navegar en catamarán"
+            },
+            "pt-BR": {
+              "before": "Ilustração editorial: Catamarán",
+              "after": "Ilustración editorial: Navegar en catamarán"
+            }
+          },
+          "files": {
+            "assets/media/22/22f346a658e967f6c46f6ef6039497d91831fac748b7335875ba850fc2af24a2.webp": "22f346a658e967f6c46f6ef6039497d91831fac748b7335875ba850fc2af24a2"
+          }
+        },
+        "pesca-boquilla": {
+          "path": "assets/media/9f/9f4fdf4c5f13b220858d65282be41af6858334b61b2194581af8d7008ba4a29a.webp",
+          "before_path": "assets/media/9f/9f4fdf4c5f13b220858d65282be41af6858334b61b2194581af8d7008ba4a29a.webp",
+          "width": {
+            "before": 960,
+            "after": 800
+          },
+          "height": {
+            "before": 640,
+            "after": 533
+          },
+          "srcset": "",
+          "sizes": "",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: La Boquilla",
+              "after": "Ilustración editorial: Conocer manglares y pesca tradicional en La Boquilla"
+            },
+            "en": {
+              "before": "Editorial illustration: La Boquilla",
+              "after": "Ilustración editorial: Conocer manglares y pesca tradicional en La Boquilla"
+            },
+            "pt-BR": {
+              "before": "Ilustração editorial: La Boquilla",
+              "after": "Ilustración editorial: Conocer manglares y pesca tradicional en La Boquilla"
+            }
+          },
+          "files": {
+            "assets/media/9f/9f4fdf4c5f13b220858d65282be41af6858334b61b2194581af8d7008ba4a29a.webp": "9f4fdf4c5f13b220858d65282be41af6858334b61b2194581af8d7008ba4a29a"
+          }
+        },
+        "excursion-islas-rosario": {
+          "path": "assets/media/a8/a8a81d24c669e43106e00065c50937705a3ddfb8876ebb23631bc420a41a2489.webp",
+          "before_path": "assets/media/a8/a8a81d24c669e43106e00065c50937705a3ddfb8876ebb23631bc420a41a2489.webp",
+          "width": {
+            "before": 960,
+            "after": 960
+          },
+          "height": {
+            "before": 640,
+            "after": 640
+          },
+          "srcset": "",
+          "sizes": "",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Excursión a las Islas del Rosario",
+              "after": "Ilustración editorial: Excursión a las Islas del Rosario"
+            },
+            "en": {
+              "before": "Editorial illustration: Excursión a las Islas del Rosario",
+              "after": "Ilustración editorial: Excursión a las Islas del Rosario"
+            },
+            "pt-BR": {
+              "before": "Ilustração editorial: Excursión a las Islas del Rosario",
+              "after": "Ilustración editorial: Excursión a las Islas del Rosario"
+            }
+          },
+          "files": {
+            "assets/media/a8/a8a81d24c669e43106e00065c50937705a3ddfb8876ebb23631bc420a41a2489.webp": "a8a81d24c669e43106e00065c50937705a3ddfb8876ebb23631bc420a41a2489"
+          }
+        }
+      }
+    },
+    "jerico": {
+      "translations": {
+        "es": {
+          "intro": {
+            "before": "Calles para recorrer, café para compartir y oficios que cuentan historias. Un destino entre montañas para vivir a tu manera.",
+            "after": "Recorre sus calles y miradores, descubre el carriel y disfruta su cultura cafetera."
+          },
+          "history": {
+            "before": [
+              "Fundado en 1850, Jericó creció alrededor del comercio, el café y los caminos de los arrieros. Su centro histórico conserva calles, casas y balcones que cuentan parte de esa historia y fue reconocido como patrimonio cultural nacional en 2018.",
+              "Jericó también es el lugar donde nació Laura Montoya, conocida como la Santa Madre Laura y primera santa colombiana. Su historia como educadora y misionera forma parte de la identidad del pueblo; su casa natal es uno de los lugares para acercarse a ese legado."
+            ],
+            "after": [
+              "Fundado en 1850, Jericó creció entre caminos de arrieros, comercio y café. Sus casas y balcones conservan esa memoria. El centro histórico fue reconocido como patrimonio cultural nacional en 2018."
+            ]
+          }
+        },
+        "en": {
+          "intro": {
+            "before": "Streets to wander, coffee to share and crafts that tell stories. A destination among the mountains to experience your way.",
+            "after": "Explore its streets and viewpoints, discover carriel craftsmanship and enjoy its coffee culture."
+          },
+          "history": {
+            "before": [
+              "Founded in 1850, Jericó grew around trade, coffee and muleteers’ routes. Its historic centre preserves streets, houses and balconies that tell part of that story and was recognised as national cultural heritage in 2018.",
+              "Jericó is also the birthplace of Laura Montoya, known as Mother Laura and Colombia’s first saint. Her work as a teacher and missionary is part of the town’s identity; her birthplace offers a way to discover that legacy."
+            ],
+            "after": [
+              "Founded in 1850, Jericó grew around mule routes, trade and coffee. Its houses and balconies preserve that heritage. The historic centre received national cultural heritage recognition in 2018."
+            ]
+          }
+        },
+        "pt-BR": {
+          "intro": {
+            "before": "Ruas para explorar, café para partilhar e comércios que contam histórias. Um destino entre montanhas para viver do seu jeito.",
+            "after": "Explore ruas e mirantes, descubra o carriel e aproveite sua cultura cafeeira."
+          },
+          "history": {
+            "before": [
+              "Fundada em 1850, Jericó cresceu em torno do comércio, do café e das estradas dos tropeiros. O seu centro histórico preserva ruas, casas e varandas que contam parte dessa história e foi reconhecido como património cultural nacional em 2018.",
+              "Jericó é também o lugar onde nasceu Laura Montoya, conhecida como Santa Madre Laura e a primeira santa colombiana. Sua história como educadora e missionária faz parte da identidade da cidade; Sua cidade natal é um dos lugares para se aproximar desse legado."
+            ],
+            "after": [
+              "Fundado em 1850, Jericó cresceu entre caminhos de tropeiros, comércio e café. Suas casas e varandas preservam essa memória. O centro histórico foi reconhecido como patrimônio cultural nacional em 2018."
+            ]
+          }
+        }
+      },
+      "places": {
+        "centro-historico": {
+          "es": {
+            "description": {
+              "before": "Recorre el parque principal y las calles cercanas para conocer la arquitectura y la vida cotidiana del pueblo.",
+              "after": "Parque principal, balcones y calles tradicionales."
+            }
+          },
+          "en": {
+            "description": {
+              "before": "Explore the main square and nearby streets to discover the town’s architecture and everyday life.",
+              "after": "Main square, balconies and traditional streets."
+            }
+          },
+          "pt-BR": {
+            "description": {
+              "before": "Caminhe pelo parque principal e pelas ruas próximas para conhecer a arquitetura e o cotidiano da cidade.",
+              "after": "Praça principal, varandas e ruas tradicionais."
+            }
+          }
+        },
+        "cerro-el-salvador": {
+          "es": {
+            "description": {
+              "before": "Un mirador para contemplar el pueblo y las montañas que lo rodean.",
+              "after": "Mirador del pueblo y las montañas."
+            }
+          },
+          "en": {
+            "description": {
+              "before": "A viewpoint overlooking the town and the surrounding mountains.",
+              "after": "Views over the town and mountains."
+            }
+          },
+          "pt-BR": {
+            "description": {
+              "before": "Um miradouro para contemplar a vila e as montanhas que a rodeiam.",
+              "after": "Mirante da cidade e das montanhas."
+            }
+          }
+        },
+        "santuario-de-santa-laura": {
+          "es": {
+            "description": {
+              "before": "La iglesia rosada es una de las fachadas que llaman la atención al recorrer Jericó y conocer su patrimonio religioso.",
+              "after": "Iglesia rosada del patrimonio religioso local."
+            }
+          },
+          "en": {
+            "description": {
+              "before": "The pink church is one of the striking facades you can discover while walking through Jericó and exploring its religious heritage.",
+              "after": "Pink church, part of the local religious heritage."
+            }
+          },
+          "pt-BR": {
+            "description": {
+              "before": "A igreja rosa é uma das fachadas que chamam a atenção quando se percorre Jericó e se conhece o seu património religioso.",
+              "after": "Igreja rosa do patrimônio religioso local."
+            }
+          }
+        },
+        "casa-natal-de-santa-laura": {
+          "es": {
+            "description": {
+              "before": "Conoce un lugar vinculado a la historia de Laura Montoya y a la tradición religiosa de Jericó.",
+              "after": "Casa natal de Laura Montoya."
+            }
+          },
+          "en": {
+            "description": {
+              "before": "Discover a place connected to Laura Montoya’s history and Jericó’s religious heritage.",
+              "after": "Laura Montoya’s birthplace."
+            }
+          },
+          "pt-BR": {
+            "description": {
+              "before": "Conheça um lugar ligado à história de Laura Montoya e à tradição religiosa de Jericó.",
+              "after": "Casa natal de Laura Montoya."
+            }
+          }
+        },
+        "jardin-botanico-los-balsos": {
+          "es": {
+            "description": {
+              "before": "Un jardín de senderos, estanque y vegetación para caminar y observar aves, cerca del casco urbano.",
+              "after": "Senderos, vegetación y aves cerca del centro."
+            }
+          },
+          "en": {
+            "description": {
+              "before": "A garden near town with paths, a pond and abundant vegetation for a quiet walk and birdwatching.",
+              "after": "Paths, greenery and birds near the town centre."
+            }
+          },
+          "pt-BR": {
+            "description": {
+              "before": "Um jardim com trilhas, lago e vegetação para caminhar e observar aves, perto da área urbana.",
+              "after": "Trilhas, vegetação e aves perto do centro."
+            }
+          }
+        },
+        "subida-al-cerro-de-las-nubes": {
+          "es": {
+            "description": {
+              "before": "Un recorrido de montaña con miradores hacia el Suroeste antioqueño. Consulta el acceso al sendero y las condiciones locales antes de subir.",
+              "after": "Sendero de montaña con miradores; confirma el acceso."
+            }
+          },
+          "en": {
+            "description": {
+              "before": "A mountain climb with viewpoints across southwestern Antioquia. Check trail access and local conditions before setting out.",
+              "after": "Mountain trail with viewpoints; confirm access."
+            }
+          },
+          "pt-BR": {
+            "description": {
+              "before": "Um percurso de montanha com mirantes para o Sudoeste de Antioquia. Consulte o acesso à trilha e as condições locais antes de subir.",
+              "after": "Trilha de montanha com mirantes; confirme o acesso."
+            }
+          }
+        },
+        "chorros-de-quebradona": {
+          "es": {
+            "description": {
+              "before": "Atractivo natural rural de Jericó, mencionado como Chorros de Quebradona. Confirma con fuentes locales dónde inicia el recorrido y las condiciones actuales de acceso.",
+              "after": "Cascadas rurales; confirma el recorrido y acceso local."
+            }
+          },
+          "en": {
+            "description": {
+              "before": "A rural natural attraction in Jericó, known as Chorros de Quebradona. Check with local sources for the trailhead and current access conditions.",
+              "after": "Rural waterfalls; confirm the route and local access."
+            }
+          },
+          "pt-BR": {
+            "description": {
+              "before": "Atrativo natural rural de Jericó, conhecido como Chorros de Quebradona. Confirme com fontes locais onde começa o percurso e as condições atuais de acesso.",
+              "after": "Cachoeiras rurais; confirme o percurso e o acesso."
+            }
+          }
+        },
+        "helicoptero-medellin-jerico": {
+          "es": {
+            "description": {
+              "before": "Un recorrido aéreo entre Medellín y Jericó para descubrir el paisaje montañoso del Suroeste antioqueño desde otra perspectiva. Confirma con quien preste el servicio la ruta, los puntos de salida y llegada y las condiciones del vuelo.",
+              "after": "Sobrevuela las montañas; confirma ruta y disponibilidad."
+            }
+          },
+          "en": {
+            "description": {
+              "before": "An aerial journey between Medellín and Jericó to discover the mountain scenery of southwestern Antioquia from another perspective. Confirm the route, departure and arrival points and flight conditions with the service provider.",
+              "after": "Fly over the mountains; confirm route and availability."
+            }
+          },
+          "pt-BR": {
+            "description": {
+              "before": "Um percurso aéreo entre Medellín e Jericó para conhecer as paisagens montanhosas do sudoeste de Antioquia de outra perspectiva. Confirme a rota, os pontos de partida e chegada e as condições do voo com o prestador do serviço.",
+              "after": "Sobrevoe as montanhas; confirme rota e disponibilidade."
+            }
+          }
+        },
+        "parapente-puerto-arturo": {
+          "es": {
+            "description": {
+              "before": "Una experiencia de vuelo biplaza sobre el paisaje del Suroeste antioqueño. El despegue, el aterrizaje, la duración y la realización del vuelo deben confirmarse con el prestador y dependen de las condiciones meteorológicas.",
+              "after": "Vuelo biplaza; sujeto al clima y confirmación del operador."
+            }
+          },
+          "en": {
+            "description": {
+              "before": "A tandem paragliding experience above the landscapes of southwestern Antioquia. Confirm launch and landing locations, duration and whether the flight can take place with the provider; these depend on weather conditions.",
+              "after": "Tandem flight; subject to weather and operator confirmation."
+            }
+          },
+          "pt-BR": {
+            "description": {
+              "before": "Uma experiência de voo duplo de parapente sobre as paisagens do sudoeste de Antioquia. Confirme com o prestador os locais de decolagem e pouso, a duração e a realização do voo, que dependem das condições meteorológicas.",
+              "after": "Voo duplo; sujeito ao clima e à confirmação do operador."
+            }
+          }
+        },
+        "experiencia-finca-cafetera": {
+          "es": {
+            "description": {
+              "before": "Conoce el cultivo y el proceso del café mediante una visita a una finca de Jericó. El recorrido puede acercarte a los cafetales, las formas de preparación y la degustación. Confirma la finca, los contenidos de la visita y la disponibilidad antes de organizarla.",
+              "after": "Conoce el cultivo y la preparación del café en una finca."
+            }
+          },
+          "en": {
+            "description": {
+              "before": "Learn about coffee growing and processing during a visit to a farm in Jericó. A tour may include coffee plants, preparation methods and tasting. Confirm the farm, the activities included and availability before planning your visit.",
+              "after": "Discover coffee growing and preparation on a farm."
+            }
+          },
+          "pt-BR": {
+            "description": {
+              "before": "Conheça o cultivo e o processamento do café em uma fazenda de Jericó. A visita pode incluir cafezais, métodos de preparo e degustação. Confirme a fazenda, as atividades incluídas e a disponibilidade antes de organizar o passeio.",
+              "after": "Conheça o cultivo e o preparo do café em uma fazenda."
+            }
+          }
+        }
+      },
+      "media": {}
+    },
+    "medellin": {
+      "translations": {
+        "es": {
+          "intro": {
+            "before": "Medellín combina arte, ciencia y vida urbana en el valle de Aburrá.",
+            "after": "Medellín combina arte, ciencia y vida urbana en el valle de Aburrá."
+          },
+          "history": {
+            "before": [
+              "El 2 de noviembre de 1675 se estableció la Villa de Nuestra Señora de la Candelaria de Medellín. Su historia posterior estuvo ligada al comercio y al desarrollo industrial."
+            ],
+            "after": [
+              "El 2 de noviembre de 1675 se estableció la Villa de Nuestra Señora de la Candelaria de Medellín. Su historia posterior estuvo ligada al comercio y al desarrollo industrial."
+            ]
+          }
+        },
+        "en": {
+          "intro": {
+            "before": "Medellín brings together art, science and urban life in the Aburrá Valley.",
+            "after": "Medellín brings together art, science and urban life in the Aburrá Valley."
+          },
+          "history": {
+            "before": [
+              "The Villa of Nuestra Señora de la Candelaria de Medellín was established on 2 November 1675. Trade and industrial development shaped its later history."
+            ],
+            "after": [
+              "The Villa of Nuestra Señora de la Candelaria de Medellín was established on 2 November 1675. Trade and industrial development shaped its later history."
+            ]
+          }
+        },
+        "pt-BR": {
+          "intro": {
+            "before": "Medellín reúne arte, ciência e vida urbana no vale do Aburrá.",
+            "after": "Medellín reúne arte, ciência e vida urbana no vale do Aburrá."
+          },
+          "history": {
+            "before": [
+              "Em 2 de novembro de 1675 foi estabelecida a Vila de Nuestra Señora de la Candelaria de Medellín. O comércio e o desenvolvimento industrial marcaram sua história posterior."
+            ],
+            "after": [
+              "Em 2 de novembro de 1675 foi estabelecida a Vila de Nuestra Señora de la Candelaria de Medellín. O comércio e o desenvolvimento industrial marcaram sua história posterior."
+            ]
+          }
+        }
+      },
+      "places": {
+        "parque-explora": {
+          "es": {
+            "description": {
+              "before": "Ciencia interactiva y acuario.",
+              "after": "Ciencia interactiva y acuario."
+            }
+          },
+          "en": {
+            "description": {
+              "before": "Interactive science and an aquarium.",
+              "after": "Interactive science and an aquarium."
+            }
+          },
+          "pt-BR": {
+            "description": {
+              "before": "Ciência interativa e aquário.",
+              "after": "Ciência interativa e aquário."
+            }
+          }
+        },
+        "pueblito-paisa": {
+          "es": {
+            "description": {
+              "before": "Pueblo tradicional recreado y mirador sobre la ciudad.",
+              "after": "Pueblo tradicional recreado y mirador sobre la ciudad."
+            }
+          },
+          "en": {
+            "description": {
+              "before": "A recreated traditional village and views over the city.",
+              "after": "A recreated traditional village and views over the city."
+            }
+          },
+          "pt-BR": {
+            "description": {
+              "before": "Vila tradicional recriada e mirante sobre a cidade.",
+              "after": "Vila tradicional recriada e mirante sobre a cidade."
+            }
+          }
+        },
+        "jardin-botanico": {
+          "es": {
+            "description": {
+              "before": "Colecciones vegetales y arquitectura del Orquideorama.",
+              "after": "Colecciones vegetales y arquitectura del Orquideorama."
+            }
+          },
+          "en": {
+            "description": {
+              "before": "Plant collections and the architecture of the Orquideorama.",
+              "after": "Plant collections and the architecture of the Orquideorama."
+            }
+          },
+          "pt-BR": {
+            "description": {
+              "before": "Coleções vegetais e arquitetura do Orquideorama.",
+              "after": "Coleções vegetais e arquitetura do Orquideorama."
+            }
+          }
+        },
+        "comuna13": {
+          "es": {
+            "description": {
+              "before": "Arte urbano, memoria y vida de barrio en San Javier.",
+              "after": "Arte urbano, memoria y vida de barrio en San Javier."
+            }
+          },
+          "en": {
+            "description": {
+              "before": "Street art, memory and neighbourhood life in San Javier.",
+              "after": "Street art, memory and neighbourhood life in San Javier."
+            }
+          },
+          "pt-BR": {
+            "description": {
+              "before": "Arte urbana, memória e vida de bairro em San Javier.",
+              "after": "Arte urbana, memória e vida de bairro em San Javier."
+            }
+          }
+        },
+        "museo-antioquia": {
+          "es": {
+            "description": {
+              "before": "Arte regional y colecciones de Botero en el centro.",
+              "after": "Arte regional y colecciones de Botero en el centro."
+            }
+          },
+          "en": {
+            "description": {
+              "before": "Regional art and Botero collections in the city centre.",
+              "after": "Regional art and Botero collections in the city centre."
+            }
+          },
+          "pt-BR": {
+            "description": {
+              "before": "Arte regional e coleções de Botero no centro.",
+              "after": "Arte regional e coleções de Botero no centro."
+            }
+          }
+        },
+        "arvi": {
+          "es": {
+            "description": {
+              "before": "Bosques y recorridos de naturaleza en Santa Elena.",
+              "after": "Bosques y recorridos de naturaleza en Santa Elena."
+            }
+          },
+          "en": {
+            "description": {
+              "before": "Forests and nature walks in Santa Elena.",
+              "after": "Forests and nature walks in Santa Elena."
+            }
+          },
+          "pt-BR": {
+            "description": {
+              "before": "Bosques e passeios na natureza em Santa Elena.",
+              "after": "Bosques e passeios na natureza em Santa Elena."
+            }
+          }
+        },
+        "catedral-metropolitana": {
+          "es": {
+            "description": {
+              "before": "Arquitectura de ladrillo junto al Parque Bolívar.",
+              "after": "Arquitectura de ladrillo junto al Parque Bolívar."
+            }
+          },
+          "en": {
+            "description": {
+              "before": "Brick architecture beside Parque Bolívar.",
+              "after": "Brick architecture beside Parque Bolívar."
+            }
+          },
+          "pt-BR": {
+            "description": {
+              "before": "Arquitetura de tijolos junto ao Parque Bolívar.",
+              "after": "Arquitetura de tijolos junto ao Parque Bolívar."
+            }
+          }
+        },
+        "pies-descalzos": {
+          "es": {
+            "description": {
+              "before": "Senderos, agua y espacios de descanso cerca de EPM.",
+              "after": "Senderos, agua y espacios de descanso cerca de EPM."
+            }
+          },
+          "en": {
+            "description": {
+              "before": "Paths, water and places to relax near EPM.",
+              "after": "Paths, water and places to relax near EPM."
+            }
+          },
+          "pt-BR": {
+            "description": {
+              "before": "Caminhos, água e espaços de descanso perto da EPM.",
+              "after": "Caminhos, água e espaços de descanso perto da EPM."
+            }
+          }
+        },
+        "city-comuna13": {
+          "es": {
+            "description": {
+              "before": "Descubre murales e historias del barrio con un guía local.",
+              "after": "Consulta recorridos de arte y memoria con operadores comunitarios."
+            }
+          },
+          "en": {
+            "description": {
+              "before": "Discover murals and neighborhood stories with a local guide.",
+              "after": "Check art and memory walks with community operators."
+            }
+          },
+          "pt-BR": {
+            "description": {
+              "before": "Descubra murais e histórias do bairro com um guia local.",
+              "after": "Consulte passeios de arte e memória com operadores comunitários."
+            }
+          }
+        }
+      },
+      "media": {
+        "hero": {
+          "path": "assets/media/09/090b31337d6df5bbb8b7497520283ed84ad55d88d8a7aa0af3b4d3a7f5cb5ad2.webp",
+          "before_path": "assets/media/09/090b31337d6df5bbb8b7497520283ed84ad55d88d8a7aa0af3b4d3a7f5cb5ad2.webp",
+          "width": {
+            "before": 1200,
+            "after": 1200
+          },
+          "height": {
+            "before": 800,
+            "after": 800
+          },
+          "srcset": "/assets/medellin-semirrealista/web/portada-v3-640.webp 640w, /assets/media/09/090b31337d6df5bbb8b7497520283ed84ad55d88d8a7aa0af3b4d3a7f5cb5ad2.webp 1200w",
+          "sizes": "(max-width:760px) 100vw, 55vw",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: medellin",
+              "after": "Medellín · Metro en la ciudad · ilustración editorial"
+            },
+            "en": {
+              "before": "Ilustración editorial: medellin",
+              "after": "Medellín · Metro en la ciudad · ilustración editorial"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: medellin",
+              "after": "Medellín · Metro en la ciudad · ilustración editorial"
+            }
+          },
+          "files": {
+            "assets/media/09/090b31337d6df5bbb8b7497520283ed84ad55d88d8a7aa0af3b4d3a7f5cb5ad2.webp": "090b31337d6df5bbb8b7497520283ed84ad55d88d8a7aa0af3b4d3a7f5cb5ad2",
+            "assets/medellin-semirrealista/web/portada-v3-640.webp": "bef0a1f068fad5a7203cdaea8e4b9c52971382517dc74650d69d126886b9b3bc"
+          }
+        },
+        "parque-explora": {
+          "path": "assets/media/01/01c6dfde7221158ad1bda001ab2ac561938566b896a8f05da063583aa10343a4.webp",
+          "before_path": "assets/media/01/01c6dfde7221158ad1bda001ab2ac561938566b896a8f05da063583aa10343a4.webp",
+          "width": {
+            "before": 800,
+            "after": 800
+          },
+          "height": {
+            "before": 533,
+            "after": 533
+          },
+          "srcset": "/assets/medellin-semirrealista/web/parque-explora-480.webp 480w, /assets/media/01/01c6dfde7221158ad1bda001ab2ac561938566b896a8f05da063583aa10343a4.webp 800w",
+          "sizes": "(max-width:650px) 100vw, (max-width:1050px) 50vw, 33vw",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Parque Explora",
+              "after": "Ilustración de Parque Explora"
+            },
+            "en": {
+              "before": "Ilustración editorial: Parque Explora",
+              "after": "Illustration of Parque Explora"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: Parque Explora",
+              "after": "Ilustração de Parque Explora"
+            }
+          },
+          "files": {
+            "assets/media/01/01c6dfde7221158ad1bda001ab2ac561938566b896a8f05da063583aa10343a4.webp": "01c6dfde7221158ad1bda001ab2ac561938566b896a8f05da063583aa10343a4",
+            "assets/medellin-semirrealista/web/parque-explora-480.webp": "48811c0ab4a1d16ebcdd9c0a2c3d068191da0232f4b6b1c7e854c6daa4b6ee6d"
+          }
+        },
+        "pueblito-paisa": {
+          "path": "assets/media/86/866567e69eecb183185d923cc2d8dabf674862a1265df5dd0eca65833feef143.webp",
+          "before_path": "assets/media/86/866567e69eecb183185d923cc2d8dabf674862a1265df5dd0eca65833feef143.webp",
+          "width": {
+            "before": 800,
+            "after": 800
+          },
+          "height": {
+            "before": 533,
+            "after": 533
+          },
+          "srcset": "/assets/medellin-semirrealista/web/pueblito-paisa-480.webp 480w, /assets/media/86/866567e69eecb183185d923cc2d8dabf674862a1265df5dd0eca65833feef143.webp 800w",
+          "sizes": "(max-width:650px) 100vw, (max-width:1050px) 50vw, 33vw",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Pueblito Paisa / Cerro Nutibara",
+              "after": "Ilustración de Pueblito Paisa / Cerro Nutibara"
+            },
+            "en": {
+              "before": "Ilustración editorial: Pueblito Paisa / Cerro Nutibara",
+              "after": "Illustration of Pueblito Paisa / Cerro Nutibara"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: Pueblito Paisa / Cerro Nutibara",
+              "after": "Ilustração de Pueblito Paisa / Cerro Nutibara"
+            }
+          },
+          "files": {
+            "assets/media/86/866567e69eecb183185d923cc2d8dabf674862a1265df5dd0eca65833feef143.webp": "866567e69eecb183185d923cc2d8dabf674862a1265df5dd0eca65833feef143",
+            "assets/medellin-semirrealista/web/pueblito-paisa-480.webp": "c55b8318c43bb5acdff38ae5f5f5cdbde7363155a0788cc53cec441ec8b8f1fc"
+          }
+        },
+        "jardin-botanico": {
+          "path": "assets/media/3b/3bdac1488040909d612bac3aa0f479d0c179b10c6156a421819069fa6d90d682.webp",
+          "before_path": "assets/media/3b/3bdac1488040909d612bac3aa0f479d0c179b10c6156a421819069fa6d90d682.webp",
+          "width": {
+            "before": 1200,
+            "after": 1200
+          },
+          "height": {
+            "before": 800,
+            "after": 800
+          },
+          "srcset": "",
+          "sizes": "",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Jardín Botánico Joaquín Antonio Uribe",
+              "after": "Ilustración de Jardín Botánico Joaquín Antonio Uribe"
+            },
+            "en": {
+              "before": "Ilustración editorial: Jardín Botánico Joaquín Antonio Uribe",
+              "after": "Illustration of Jardín Botánico Joaquín Antonio Uribe"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: Jardín Botánico Joaquín Antonio Uribe",
+              "after": "Ilustração de Jardín Botánico Joaquín Antonio Uribe"
+            }
+          },
+          "files": {
+            "assets/media/3b/3bdac1488040909d612bac3aa0f479d0c179b10c6156a421819069fa6d90d682.webp": "3bdac1488040909d612bac3aa0f479d0c179b10c6156a421819069fa6d90d682"
+          }
+        },
+        "comuna13": {
+          "path": "assets/media/42/42b8e62faf555c7ee35aaef105d07bb14761721adfc164ea8aa92cc191bc6102.webp",
+          "before_path": "assets/media/42/42b8e62faf555c7ee35aaef105d07bb14761721adfc164ea8aa92cc191bc6102.webp",
+          "width": {
+            "before": 1200,
+            "after": 1200
+          },
+          "height": {
+            "before": 800,
+            "after": 800
+          },
+          "srcset": "",
+          "sizes": "",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Comuna 13 / San Javier",
+              "after": "Ilustración de Comuna 13 / San Javier"
+            },
+            "en": {
+              "before": "Ilustración editorial: Comuna 13 / San Javier",
+              "after": "Illustration of Comuna 13 / San Javier"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: Comuna 13 / San Javier",
+              "after": "Ilustração de Comuna 13 / San Javier"
+            }
+          },
+          "files": {
+            "assets/media/42/42b8e62faf555c7ee35aaef105d07bb14761721adfc164ea8aa92cc191bc6102.webp": "42b8e62faf555c7ee35aaef105d07bb14761721adfc164ea8aa92cc191bc6102"
+          }
+        },
+        "museo-antioquia": {
+          "path": "assets/media/78/783525db72e34c865c984a04dc0c9fbffc676352da6a12df242ffbc889e9912a.webp",
+          "before_path": "assets/media/78/783525db72e34c865c984a04dc0c9fbffc676352da6a12df242ffbc889e9912a.webp",
+          "width": {
+            "before": 1200,
+            "after": 1200
+          },
+          "height": {
+            "before": 800,
+            "after": 800
+          },
+          "srcset": "",
+          "sizes": "",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Museo de Antioquia",
+              "after": "Ilustración de Museo de Antioquia"
+            },
+            "en": {
+              "before": "Ilustración editorial: Museo de Antioquia",
+              "after": "Illustration of Museo de Antioquia"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: Museo de Antioquia",
+              "after": "Ilustração de Museo de Antioquia"
+            }
+          },
+          "files": {
+            "assets/media/78/783525db72e34c865c984a04dc0c9fbffc676352da6a12df242ffbc889e9912a.webp": "783525db72e34c865c984a04dc0c9fbffc676352da6a12df242ffbc889e9912a"
+          }
+        },
+        "arvi": {
+          "path": "assets/media/98/98dc618193702296f6f9b99af7cdc0cb9a29f5b71607e0924b10fbe0e47ecb31.webp",
+          "before_path": "assets/media/98/98dc618193702296f6f9b99af7cdc0cb9a29f5b71607e0924b10fbe0e47ecb31.webp",
+          "width": {
+            "before": 1200,
+            "after": 1200
+          },
+          "height": {
+            "before": 800,
+            "after": 800
+          },
+          "srcset": "",
+          "sizes": "",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Parque Arví",
+              "after": "Ilustración de Parque Arví"
+            },
+            "en": {
+              "before": "Ilustración editorial: Parque Arví",
+              "after": "Illustration of Parque Arví"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: Parque Arví",
+              "after": "Ilustração de Parque Arví"
+            }
+          },
+          "files": {
+            "assets/media/98/98dc618193702296f6f9b99af7cdc0cb9a29f5b71607e0924b10fbe0e47ecb31.webp": "98dc618193702296f6f9b99af7cdc0cb9a29f5b71607e0924b10fbe0e47ecb31"
+          }
+        },
+        "catedral-metropolitana": {
+          "path": "assets/media/f8/f87f14d8c93479f0c990e34795de1d9354b8254efb42b2d09931d7b4b6633ce9.webp",
+          "before_path": "assets/media/f8/f87f14d8c93479f0c990e34795de1d9354b8254efb42b2d09931d7b4b6633ce9.webp",
+          "width": {
+            "before": 800,
+            "after": 800
+          },
+          "height": {
+            "before": 533,
+            "after": 533
+          },
+          "srcset": "/assets/medellin-semirrealista/web/catedral-metropolitana-480.webp 480w, /assets/media/f8/f87f14d8c93479f0c990e34795de1d9354b8254efb42b2d09931d7b4b6633ce9.webp 800w",
+          "sizes": "(max-width:650px) 100vw, (max-width:1050px) 50vw, 33vw",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Catedral Basílica Metropolitana",
+              "after": "Ilustración de Catedral Basílica Metropolitana"
+            },
+            "en": {
+              "before": "Ilustración editorial: Catedral Basílica Metropolitana",
+              "after": "Illustration of Catedral Basílica Metropolitana"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: Catedral Basílica Metropolitana",
+              "after": "Ilustração de Catedral Basílica Metropolitana"
+            }
+          },
+          "files": {
+            "assets/media/f8/f87f14d8c93479f0c990e34795de1d9354b8254efb42b2d09931d7b4b6633ce9.webp": "f87f14d8c93479f0c990e34795de1d9354b8254efb42b2d09931d7b4b6633ce9",
+            "assets/medellin-semirrealista/web/catedral-metropolitana-480.webp": "69526d8b5e2b0620ea2fd67cc4df42348f4f0cbfeabda7265badfb14cc868085"
+          }
+        },
+        "pies-descalzos": {
+          "path": "assets/media/c0/c0b77066646ee0a5746bb0f40b3ec8e01a4b86d675c8ee28cede3515e1ffb9ae.webp",
+          "before_path": "assets/media/c0/c0b77066646ee0a5746bb0f40b3ec8e01a4b86d675c8ee28cede3515e1ffb9ae.webp",
+          "width": {
+            "before": 1200,
+            "after": 1200
+          },
+          "height": {
+            "before": 800,
+            "after": 800
+          },
+          "srcset": "",
+          "sizes": "",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Parque de los Pies Descalzos",
+              "after": "Ilustración de Parque de los Pies Descalzos"
+            },
+            "en": {
+              "before": "Ilustración editorial: Parque de los Pies Descalzos",
+              "after": "Illustration of Parque de los Pies Descalzos"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: Parque de los Pies Descalzos",
+              "after": "Ilustração de Parque de los Pies Descalzos"
+            }
+          },
+          "files": {
+            "assets/media/c0/c0b77066646ee0a5746bb0f40b3ec8e01a4b86d675c8ee28cede3515e1ffb9ae.webp": "c0b77066646ee0a5746bb0f40b3ec8e01a4b86d675c8ee28cede3515e1ffb9ae"
+          }
+        },
+        "city-comuna13": {
+          "path": "assets/media/92/922b1e463cccd7b04986c53b3b47cac6467cdfa174b07bd5d53af9b2aa77896a.webp",
+          "before_path": "assets/media/92/922b1e463cccd7b04986c53b3b47cac6467cdfa174b07bd5d53af9b2aa77896a.webp",
+          "width": {
+            "before": 1200,
+            "after": 1200
+          },
+          "height": {
+            "before": 800,
+            "after": 800
+          },
+          "srcset": "",
+          "sizes": "",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Tour de grafiti y memoria de la Comuna 13",
+              "after": "Ilustración de Recorrido por la ciudad y Comuna 13"
+            },
+            "en": {
+              "before": "Ilustración editorial: Tour de grafiti y memoria de la Comuna 13",
+              "after": "Illustration of City and Comuna 13 tour"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: Tour de grafiti y memoria de la Comuna 13",
+              "after": "Ilustração de Passeio pela cidade e Comuna 13"
+            }
+          },
+          "files": {
+            "assets/media/92/922b1e463cccd7b04986c53b3b47cac6467cdfa174b07bd5d53af9b2aa77896a.webp": "922b1e463cccd7b04986c53b3b47cac6467cdfa174b07bd5d53af9b2aa77896a"
+          }
+        }
+      }
+    },
+    "santa-marta": {
+      "translations": {
+        "es": {
+          "headline": {
+            "before": "Caribe y Sierra Nevada",
+            "after": "Caribe y Sierra Nevada"
+          },
+          "intro": {
+            "before": "Descubre la bahía histórica, las playas y las montañas de Santa Marta.",
+            "after": "Descubre la bahía histórica, las playas y las montañas de Santa Marta."
+          },
+          "history": {
+            "before": [
+              "Santa Marta, fundada en 1525, conserva en su centro la huella del puerto colonial. La Catedral y la Casa de la Aduana dialogan con el patrimonio indígena de la Sierra Nevada. En la Quinta de San Pedro Alejandrino murió Simón Bolívar en 1830."
+            ],
+            "after": [
+              "Santa Marta, fundada en 1525, conserva en su centro la huella del puerto colonial. La Catedral y la Casa de la Aduana dialogan con el patrimonio indígena de la Sierra Nevada. En la Quinta de San Pedro Alejandrino murió Simón Bolívar en 1830."
+            ]
+          }
+        },
+        "en": {
+          "headline": {
+            "before": "The Caribbean and the Sierra Nevada",
+            "after": "The Caribbean and the Sierra Nevada"
+          },
+          "intro": {
+            "before": "Discover Santa Marta’s historic bay, beaches and mountains.",
+            "after": "Discover Santa Marta’s historic bay, beaches and mountains."
+          },
+          "history": {
+            "before": [
+              "Founded in 1525, Santa Marta retains traces of its colonial port in the historic centre. The Cathedral and Customs House sit alongside the Indigenous heritage of the Sierra Nevada. Simón Bolívar died at the Quinta de San Pedro Alejandrino in 1830."
+            ],
+            "after": [
+              "Founded in 1525, Santa Marta retains traces of its colonial port in the historic centre. The Cathedral and Customs House sit alongside the Indigenous heritage of the Sierra Nevada. Simón Bolívar died at the Quinta de San Pedro Alejandrino in 1830."
+            ]
+          }
+        },
+        "pt-BR": {
+          "headline": {
+            "before": "Caribe e Sierra Nevada",
+            "after": "Caribe e Sierra Nevada"
+          },
+          "intro": {
+            "before": "Descubra a baía histórica, as praias e as montanhas de Santa Marta.",
+            "after": "Descubra a baía histórica, as praias e as montanhas de Santa Marta."
+          },
+          "history": {
+            "before": [
+              "Fundada em 1525, Santa Marta conserva no centro as marcas do porto colonial. A Catedral e a Casa da Aduana convivem com o patrimônio indígena da Sierra Nevada. Simón Bolívar morreu na Quinta de San Pedro Alejandrino em 1830."
+            ],
+            "after": [
+              "Fundada em 1525, Santa Marta conserva no centro as marcas do porto colonial. A Catedral e a Casa da Aduana convivem com o patrimônio indígena da Sierra Nevada. Simón Bolívar morreu na Quinta de San Pedro Alejandrino em 1830."
+            ]
+          }
+        }
+      },
+      "places": {
+        "tayrona": {
+          "es": {
+            "name": {
+              "before": "Parque Tayrona",
+              "after": "Parque Tayrona"
+            },
+            "description": {
+              "before": "Bosque tropical, rocas y playas como Cabo San Juan. Consulta accesos y cierres oficiales.",
+              "after": "Bosque tropical, rocas y playas como Cabo San Juan. Consulta accesos y cierres oficiales."
+            }
+          },
+          "en": {
+            "name": {
+              "before": "Tayrona National Park",
+              "after": "Tayrona National Park"
+            },
+            "description": {
+              "before": "Tropical forest, boulders and beaches such as Cabo San Juan. Check official access and closures.",
+              "after": "Tropical forest, boulders and beaches such as Cabo San Juan. Check official access and closures."
+            }
+          },
+          "pt-BR": {
+            "name": {
+              "before": "Parque Tayrona",
+              "after": "Parque Tayrona"
+            },
+            "description": {
+              "before": "Floresta tropical, rochas e praias como Cabo San Juan. Consulte acessos e fechamentos oficiais.",
+              "after": "Floresta tropical, rochas e praias como Cabo San Juan. Consulte acessos e fechamentos oficiais."
+            }
+          }
+        },
+        "ciudad-perdida": {
+          "es": {
+            "name": {
+              "before": "Teyuna · Ciudad Perdida",
+              "after": "Teyuna · Ciudad Perdida"
+            },
+            "description": {
+              "before": "Terrazas y caminos de piedra en territorio indígena de la Sierra Nevada.",
+              "after": "Terrazas y caminos de piedra en territorio indígena de la Sierra Nevada."
+            }
+          },
+          "en": {
+            "name": {
+              "before": "Teyuna · Lost City",
+              "after": "Teyuna · Lost City"
+            },
+            "description": {
+              "before": "Stone terraces and paths in Indigenous territory in the Sierra Nevada.",
+              "after": "Stone terraces and paths in Indigenous territory in the Sierra Nevada."
+            }
+          },
+          "pt-BR": {
+            "name": {
+              "before": "Teyuna · Cidade Perdida",
+              "after": "Teyuna · Cidade Perdida"
+            },
+            "description": {
+              "before": "Terraços e caminhos de pedra em território indígena na Sierra Nevada.",
+              "after": "Terraços e caminhos de pedra em território indígena na Sierra Nevada."
+            }
+          }
+        },
+        "minca": {
+          "es": {
+            "name": {
+              "before": "Minca",
+              "after": "Minca"
+            },
+            "description": {
+              "before": "Bosques, ríos y paisaje cafetero en las montañas del distrito de Santa Marta.",
+              "after": "Bosques, ríos y paisaje cafetero en las montañas del distrito de Santa Marta."
+            }
+          },
+          "en": {
+            "name": {
+              "before": "Minca",
+              "after": "Minca"
+            },
+            "description": {
+              "before": "Forests, rivers and coffee-growing scenery in Santa Marta’s mountain foothills.",
+              "after": "Forests, rivers and coffee-growing scenery in Santa Marta’s mountain foothills."
+            }
+          },
+          "pt-BR": {
+            "name": {
+              "before": "Minca",
+              "after": "Minca"
+            },
+            "description": {
+              "before": "Florestas, rios e paisagem cafeeira nas montanhas do distrito de Santa Marta.",
+              "after": "Florestas, rios e paisagem cafeeira nas montanhas do distrito de Santa Marta."
+            }
+          }
+        },
+        "rodadero": {
+          "es": {
+            "name": {
+              "before": "El Rodadero",
+              "after": "El Rodadero"
+            },
+            "description": {
+              "before": "Playa urbana y paseo costero en la bahía de Gaira, con identidad propia.",
+              "after": "Playa urbana y paseo costero en la bahía de Gaira, con identidad propia."
+            }
+          },
+          "en": {
+            "name": {
+              "before": "El Rodadero",
+              "after": "El Rodadero"
+            },
+            "description": {
+              "before": "An urban beach and waterfront on Gaira Bay, with a character of its own.",
+              "after": "An urban beach and waterfront on Gaira Bay, with a character of its own."
+            }
+          },
+          "pt-BR": {
+            "name": {
+              "before": "El Rodadero",
+              "after": "El Rodadero"
+            },
+            "description": {
+              "before": "Praia urbana e passeio à beira-mar na baía de Gaira, com identidade própria.",
+              "after": "Praia urbana e passeio à beira-mar na baía de Gaira, com identidade própria."
+            }
+          }
+        },
+        "quinta": {
+          "es": {
+            "name": {
+              "before": "Quinta de San Pedro Alejandrino",
+              "after": "Quinta de San Pedro Alejandrino"
+            },
+            "description": {
+              "before": "Casa histórica, museo y jardines donde murió Simón Bolívar en 1830.",
+              "after": "Casa histórica, museo y jardines donde murió Simón Bolívar en 1830."
+            }
+          },
+          "en": {
+            "name": {
+              "before": "Quinta de San Pedro Alejandrino",
+              "after": "Quinta de San Pedro Alejandrino"
+            },
+            "description": {
+              "before": "Historic house, museum and gardens where Simón Bolívar died in 1830.",
+              "after": "Historic house, museum and gardens where Simón Bolívar died in 1830."
+            }
+          },
+          "pt-BR": {
+            "name": {
+              "before": "Quinta de San Pedro Alejandrino",
+              "after": "Quinta de San Pedro Alejandrino"
+            },
+            "description": {
+              "before": "Casa histórica, museu e jardins onde Simón Bolívar morreu em 1830.",
+              "after": "Casa histórica, museu e jardins onde Simón Bolívar morreu em 1830."
+            }
+          }
+        },
+        "taganga": {
+          "es": {
+            "name": {
+              "before": "Taganga",
+              "after": "Taganga"
+            },
+            "description": {
+              "before": "Bahía, barcos de pesca y laderas costeras en este corregimiento samario.",
+              "after": "Bahía, barcos de pesca y laderas costeras en este corregimiento samario."
+            }
+          },
+          "en": {
+            "name": {
+              "before": "Taganga",
+              "after": "Taganga"
+            },
+            "description": {
+              "before": "A bay, fishing boats and coastal hills in this distinctive Santa Marta settlement.",
+              "after": "A bay, fishing boats and coastal hills in this distinctive Santa Marta settlement."
+            }
+          },
+          "pt-BR": {
+            "name": {
+              "before": "Taganga",
+              "after": "Taganga"
+            },
+            "description": {
+              "before": "Baía, barcos de pesca e encostas costeiras neste corregimiento de Santa Marta.",
+              "after": "Baía, barcos de pesca e encostas costeiras neste corregimiento de Santa Marta."
+            }
+          }
+        },
+        "centro-historico": {
+          "es": {
+            "name": {
+              "before": "Centro histórico",
+              "after": "Centro histórico"
+            },
+            "description": {
+              "before": "Catedral, plazas y balcones entre calles que se abren a la bahía histórica.",
+              "after": "Catedral, plazas y balcones entre calles que se abren a la bahía histórica."
+            }
+          },
+          "en": {
+            "name": {
+              "before": "Historic centre",
+              "after": "Historic centre"
+            },
+            "description": {
+              "before": "Cathedral, squares and balconies along streets leading towards the historic bay.",
+              "after": "Cathedral, squares and balconies along streets leading towards the historic bay."
+            }
+          },
+          "pt-BR": {
+            "name": {
+              "before": "Centro histórico",
+              "after": "Centro histórico"
+            },
+            "description": {
+              "before": "Catedral, praças e varandas entre ruas que se abrem para a baía histórica.",
+              "after": "Catedral, praças e varandas entre ruas que se abrem para a baía histórica."
+            }
+          }
+        },
+        "playa-blanca": {
+          "es": {
+            "name": {
+              "before": "Playa Blanca",
+              "after": "Playa Blanca"
+            },
+            "description": {
+              "before": "Arena clara y laderas costeras cerca de El Rodadero; diferente de la playa de Barú.",
+              "after": "Arena clara y laderas costeras cerca de El Rodadero; diferente de la playa de Barú."
+            }
+          },
+          "en": {
+            "name": {
+              "before": "Playa Blanca",
+              "after": "Playa Blanca"
+            },
+            "description": {
+              "before": "Pale sand and coastal hills near El Rodadero; distinct from the beach on Barú.",
+              "after": "Pale sand and coastal hills near El Rodadero; distinct from the beach on Barú."
+            }
+          },
+          "pt-BR": {
+            "name": {
+              "before": "Playa Blanca",
+              "after": "Playa Blanca"
+            },
+            "description": {
+              "before": "Areia clara e encostas costeiras perto de El Rodadero; diferente da praia de Barú.",
+              "after": "Areia clara e encostas costeiras perto de El Rodadero; diferente da praia de Barú."
+            }
+          }
+        },
+        "buceo-taganga": {
+          "es": {
+            "name": {
+              "before": "Buceo desde Taganga",
+              "after": "Buceo desde Taganga"
+            },
+            "description": {
+              "before": "Explora el entorno submarino con equipo y acompañamiento adecuados a tu experiencia.",
+              "after": "Explora el entorno submarino con equipo y acompañamiento adecuados a tu experiencia."
+            }
+          },
+          "en": {
+            "name": {
+              "before": "Diving from Taganga",
+              "after": "Diving from Taganga"
+            },
+            "description": {
+              "before": "Explore underwater with equipment and guidance suited to your experience.",
+              "after": "Explore underwater with equipment and guidance suited to your experience."
+            }
+          },
+          "pt-BR": {
+            "name": {
+              "before": "Mergulho saindo de Taganga",
+              "after": "Mergulho saindo de Taganga"
+            },
+            "description": {
+              "before": "Explore o ambiente submarino com equipamento e acompanhamento adequados à sua experiência.",
+              "after": "Explore o ambiente submarino com equipamento e acompanhamento adequados à sua experiência."
+            }
+          }
+        },
+        "caminata-tayrona": {
+          "es": {
+            "name": {
+              "before": "Caminata por el Tayrona",
+              "after": "Caminata por el Tayrona"
+            },
+            "description": {
+              "before": "Senderos de bosque y costa; confirma recorrido, exigencia y accesos habilitados.",
+              "after": "Senderos de bosque y costa; confirma recorrido, exigencia y accesos habilitados."
+            }
+          },
+          "en": {
+            "name": {
+              "before": "Hiking in Tayrona",
+              "after": "Hiking in Tayrona"
+            },
+            "description": {
+              "before": "Forest and coastal trails; check the route, physical demands and authorised access.",
+              "after": "Forest and coastal trails; check the route, physical demands and authorised access."
+            }
+          },
+          "pt-BR": {
+            "name": {
+              "before": "Caminhada no Tayrona",
+              "after": "Caminhada no Tayrona"
+            },
+            "description": {
+              "before": "Trilhas de floresta e litoral; confirme roteiro, esforço e acessos autorizados.",
+              "after": "Trilhas de floresta e litoral; confirme roteiro, esforço e acessos autorizados."
+            }
+          }
+        },
+        "minca-cafe": {
+          "es": {
+            "name": {
+              "before": "Naturaleza y café en Minca",
+              "after": "Naturaleza y café en Minca"
+            },
+            "description": {
+              "before": "Acércate al paisaje de montaña y la cultura cafetera; consulta qué incluye cada salida.",
+              "after": "Acércate al paisaje de montaña y la cultura cafetera; consulta qué incluye cada salida."
+            }
+          },
+          "en": {
+            "name": {
+              "before": "Nature and coffee in Minca",
+              "after": "Nature and coffee in Minca"
+            },
+            "description": {
+              "before": "Discover mountain scenery and coffee culture; check what each outing includes.",
+              "after": "Discover mountain scenery and coffee culture; check what each outing includes."
+            }
+          },
+          "pt-BR": {
+            "name": {
+              "before": "Natureza e café em Minca",
+              "after": "Natureza e café em Minca"
+            },
+            "description": {
+              "before": "Conheça a paisagem de montanha e a cultura cafeeira; consulte o que cada passeio inclui.",
+              "after": "Conheça a paisagem de montanha e a cultura cafeeira; consulte o que cada passeio inclui."
+            }
+          }
+        },
+        "recorrido-centro": {
+          "es": {
+            "name": {
+              "before": "Paseo guiado por el centro",
+              "after": "Paseo guiado por el centro"
+            },
+            "description": {
+              "before": "Descubre calles, plazas y memoria samaria con un guía.",
+              "after": "Descubre calles, plazas y memoria samaria con un guía."
+            }
+          },
+          "en": {
+            "name": {
+              "before": "Guided historic-centre walk",
+              "after": "Guided historic-centre walk"
+            },
+            "description": {
+              "before": "Discover streets, squares and Santa Marta’s history with a guide.",
+              "after": "Discover streets, squares and Santa Marta’s history with a guide."
+            }
+          },
+          "pt-BR": {
+            "name": {
+              "before": "Passeio guiado pelo centro",
+              "after": "Passeio guiado pelo centro"
+            },
+            "description": {
+              "before": "Descubra ruas, praças e a memória de Santa Marta com um guia.",
+              "after": "Descubra ruas, praças e a memória de Santa Marta com um guia."
+            }
+          }
+        },
+        "caminata-ciudad-perdida": {
+          "es": {
+            "name": {
+              "before": "Caminata a Ciudad Perdida",
+              "after": "Caminata a Ciudad Perdida"
+            },
+            "description": {
+              "before": "Travesía de varios días por la Sierra; confirma esfuerzo, permisos y protocolos territoriales.",
+              "after": "Travesía de varios días por la Sierra; confirma esfuerzo, permisos y protocolos territoriales."
+            }
+          },
+          "en": {
+            "name": {
+              "before": "Trek to Lost City",
+              "after": "Trek to Lost City"
+            },
+            "description": {
+              "before": "A multi-day Sierra trek; check physical demands, permits and territorial protocols.",
+              "after": "A multi-day Sierra trek; check physical demands, permits and territorial protocols."
+            }
+          },
+          "pt-BR": {
+            "name": {
+              "before": "Caminhada à Cidade Perdida",
+              "after": "Caminhada à Cidade Perdida"
+            },
+            "description": {
+              "before": "Travessia de vários dias pela Sierra; confirme esforço, permissões e protocolos territoriais.",
+              "after": "Travessia de vários dias pela Sierra; confirme esforço, permissões e protocolos territoriais."
+            }
+          }
+        },
+        "velero-caribe": {
+          "es": {
+            "name": {
+              "before": "Navegación por el Caribe",
+              "after": "Navegación por el Caribe"
+            },
+            "description": {
+              "before": "Una salida por mar para contemplar la costa; consulta recorrido y condiciones.",
+              "after": "Una salida por mar para contemplar la costa; consulta recorrido y condiciones."
+            }
+          },
+          "en": {
+            "name": {
+              "before": "Caribbean sailing",
+              "after": "Caribbean sailing"
+            },
+            "description": {
+              "before": "A sea outing to enjoy the coast; check the route and conditions.",
+              "after": "A sea outing to enjoy the coast; check the route and conditions."
+            }
+          },
+          "pt-BR": {
+            "name": {
+              "before": "Navegação pelo Caribe",
+              "after": "Navegação pelo Caribe"
+            },
+            "description": {
+              "before": "Um passeio marítimo para contemplar a costa; consulte roteiro e condições.",
+              "after": "Um passeio marítimo para contemplar a costa; consulte roteiro e condições."
+            }
+          }
+        },
+        "visita-acuario": {
+          "es": {
+            "name": {
+              "before": "Visita al Centro de Vida Marina",
+              "after": "Visita al Centro de Vida Marina"
+            },
+            "description": {
+              "before": "Conoce sus exhibiciones marinas; es el antiguo Acuario del Rodadero, distinto de Mundo Marino.",
+              "after": "Conoce sus exhibiciones marinas; es el antiguo Acuario del Rodadero, distinto de Mundo Marino."
+            }
+          },
+          "en": {
+            "name": {
+              "before": "Visit the Marine Life Centre",
+              "after": "Visit the Marine Life Centre"
+            },
+            "description": {
+              "before": "Explore its marine exhibits; formerly Acuario del Rodadero, distinct from Mundo Marino.",
+              "after": "Explore its marine exhibits; formerly Acuario del Rodadero, distinct from Mundo Marino."
+            }
+          },
+          "pt-BR": {
+            "name": {
+              "before": "Visita ao Centro de Vida Marina",
+              "after": "Visita ao Centro de Vida Marina"
+            },
+            "description": {
+              "before": "Conheça suas exposições marinhas; antigo Acuario del Rodadero, diferente de Mundo Marino.",
+              "after": "Conheça suas exposições marinhas; antigo Acuario del Rodadero, diferente de Mundo Marino."
+            }
+          }
+        },
+        "excursion-playa-blanca": {
+          "es": {
+            "name": {
+              "before": "Salida a Playa Blanca",
+              "after": "Salida a Playa Blanca"
+            },
+            "description": {
+              "before": "Combina navegación y playa; confirma embarque, seguridad y servicios incluidos.",
+              "after": "Combina navegación y playa; confirma embarque, seguridad y servicios incluidos."
+            }
+          },
+          "en": {
+            "name": {
+              "before": "Playa Blanca outing",
+              "after": "Playa Blanca outing"
+            },
+            "description": {
+              "before": "Combine a boat trip and beach time; check boarding, safety and included services.",
+              "after": "Combine a boat trip and beach time; check boarding, safety and included services."
+            }
+          },
+          "pt-BR": {
+            "name": {
+              "before": "Passeio a Playa Blanca",
+              "after": "Passeio a Playa Blanca"
+            },
+            "description": {
+              "before": "Combine navegação e praia; confirme embarque, segurança e serviços incluídos.",
+              "after": "Combine navegação e praia; confirme embarque, segurança e serviços incluídos."
+            }
+          }
+        },
+        "moto-acuatica": {
+          "es": {
+            "name": {
+              "before": "Moto acuática",
+              "after": "Moto acuática"
+            },
+            "description": {
+              "before": "Actividad por verificar con un prestador autorizado; aún no hay una oferta confirmada.",
+              "after": "Actividad por verificar con un prestador autorizado; aún no hay una oferta confirmada."
+            }
+          },
+          "en": {
+            "name": {
+              "before": "Personal watercraft",
+              "after": "Personal watercraft"
+            },
+            "description": {
+              "before": "Check this activity with an authorised provider; no current offer has been confirmed.",
+              "after": "Check this activity with an authorised provider; no current offer has been confirmed."
+            }
+          },
+          "pt-BR": {
+            "name": {
+              "before": "Moto aquática",
+              "after": "Moto aquática"
+            },
+            "description": {
+              "before": "Atividade a verificar com prestador autorizado; ainda não há oferta confirmada.",
+              "after": "Atividade a verificar com prestador autorizado; ainda não há oferta confirmada."
+            }
+          }
+        }
+      },
+      "media": {
+        "hero": {
+          "path": "assets/media/4f/4f8c7aab98b7e71e12fc26b2ca6850d124acc06efb426cec99d27f7aaca3a369.webp",
+          "before_path": "assets/media/4f/4f8c7aab98b7e71e12fc26b2ca6850d124acc06efb426cec99d27f7aaca3a369.webp",
+          "width": {
+            "before": 1200,
+            "after": 1200
+          },
+          "height": {
+            "before": 800,
+            "after": 800
+          },
+          "srcset": "/assets/santa-marta-semirrealista/hero-v3-640.webp 640w, /assets/media/4f/4f8c7aab98b7e71e12fc26b2ca6850d124acc06efb426cec99d27f7aaca3a369.webp 1200w",
+          "sizes": "(max-width:760px) 100vw, 55vw",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: santa-marta",
+              "after": "Santa Marta · bahía histórica y Camellón"
+            },
+            "en": {
+              "before": "Ilustración editorial: santa-marta",
+              "after": "Santa Marta · bahía histórica y Camellón"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: santa-marta",
+              "after": "Santa Marta · bahía histórica y Camellón"
+            }
+          },
+          "files": {
+            "assets/media/4f/4f8c7aab98b7e71e12fc26b2ca6850d124acc06efb426cec99d27f7aaca3a369.webp": "4f8c7aab98b7e71e12fc26b2ca6850d124acc06efb426cec99d27f7aaca3a369",
+            "assets/santa-marta-semirrealista/hero-v3-640.webp": "0fded1f963253e07c56c8f5698162f0b8e992ce2e55e1cec8fbcd66eb31ef0cc"
+          }
+        },
+        "tayrona": {
+          "path": "assets/media/ea/ead4789513c728eac63f08778faf98989bfc26ce75918f1cb7ded45a1eaca473.webp",
+          "before_path": "assets/media/ea/ead4789513c728eac63f08778faf98989bfc26ce75918f1cb7ded45a1eaca473.webp",
+          "width": {
+            "before": 800,
+            "after": 800
+          },
+          "height": {
+            "before": 533,
+            "after": 533
+          },
+          "srcset": "/assets/santa-marta-semirrealista/tayrona-480.webp 480w, /assets/media/ea/ead4789513c728eac63f08778faf98989bfc26ce75918f1cb7ded45a1eaca473.webp 800w",
+          "sizes": "(max-width:650px) 100vw, (max-width:1050px) 50vw, 33vw",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Parque Tayrona",
+              "after": "Parque Tayrona"
+            },
+            "en": {
+              "before": "Ilustración editorial: Parque Tayrona",
+              "after": "Tayrona National Park"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: Parque Tayrona",
+              "after": "Parque Tayrona"
+            }
+          },
+          "files": {
+            "assets/media/ea/ead4789513c728eac63f08778faf98989bfc26ce75918f1cb7ded45a1eaca473.webp": "ead4789513c728eac63f08778faf98989bfc26ce75918f1cb7ded45a1eaca473",
+            "assets/santa-marta-semirrealista/tayrona-480.webp": "0b5e18a0696356597ad6df6fb76da948a97b6a8eadab3b784666ee24d761ea8c"
+          }
+        },
+        "ciudad-perdida": {
+          "path": "assets/media/f4/f48f47ddacf04927e00fd34f0fb3503b92b9a36f8ab2567629a24e99b85def9a.webp",
+          "before_path": "assets/media/f4/f48f47ddacf04927e00fd34f0fb3503b92b9a36f8ab2567629a24e99b85def9a.webp",
+          "width": {
+            "before": 1200,
+            "after": 1200
+          },
+          "height": {
+            "before": 800,
+            "after": 800
+          },
+          "srcset": "",
+          "sizes": "",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Teyuna · Ciudad Perdida",
+              "after": "Teyuna · Ciudad Perdida"
+            },
+            "en": {
+              "before": "Ilustración editorial: Teyuna · Ciudad Perdida",
+              "after": "Teyuna · Lost City"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: Teyuna · Ciudad Perdida",
+              "after": "Teyuna · Cidade Perdida"
+            }
+          },
+          "files": {
+            "assets/media/f4/f48f47ddacf04927e00fd34f0fb3503b92b9a36f8ab2567629a24e99b85def9a.webp": "f48f47ddacf04927e00fd34f0fb3503b92b9a36f8ab2567629a24e99b85def9a"
+          }
+        },
+        "minca": {
+          "path": "assets/media/7a/7a30f1d53a405506e6bed1ee917632266b630097a42de410494e7924d17f14ed.webp",
+          "before_path": "assets/media/7a/7a30f1d53a405506e6bed1ee917632266b630097a42de410494e7924d17f14ed.webp",
+          "width": {
+            "before": 800,
+            "after": 800
+          },
+          "height": {
+            "before": 533,
+            "after": 533
+          },
+          "srcset": "/assets/santa-marta-semirrealista/minca-480.webp 480w, /assets/media/7a/7a30f1d53a405506e6bed1ee917632266b630097a42de410494e7924d17f14ed.webp 800w",
+          "sizes": "(max-width:650px) 100vw, (max-width:1050px) 50vw, 33vw",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Minca",
+              "after": "Minca"
+            },
+            "en": {
+              "before": "Ilustración editorial: Minca",
+              "after": "Minca"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: Minca",
+              "after": "Minca"
+            }
+          },
+          "files": {
+            "assets/media/7a/7a30f1d53a405506e6bed1ee917632266b630097a42de410494e7924d17f14ed.webp": "7a30f1d53a405506e6bed1ee917632266b630097a42de410494e7924d17f14ed",
+            "assets/santa-marta-semirrealista/minca-480.webp": "868d4198ecc3d0a6a3d259a43adbcec920501855c61547c07a2a26d2f8a6a78b"
+          }
+        },
+        "rodadero": {
+          "path": "assets/media/a3/a3f49c074994ef38da8b585d8658097852135fb4e9fbd4bc84e8ab2131d2b4cc.webp",
+          "before_path": "assets/media/a3/a3f49c074994ef38da8b585d8658097852135fb4e9fbd4bc84e8ab2131d2b4cc.webp",
+          "width": {
+            "before": 1200,
+            "after": 1200
+          },
+          "height": {
+            "before": 800,
+            "after": 800
+          },
+          "srcset": "",
+          "sizes": "",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: El Rodadero",
+              "after": "El Rodadero"
+            },
+            "en": {
+              "before": "Ilustración editorial: El Rodadero",
+              "after": "El Rodadero"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: El Rodadero",
+              "after": "El Rodadero"
+            }
+          },
+          "files": {
+            "assets/media/a3/a3f49c074994ef38da8b585d8658097852135fb4e9fbd4bc84e8ab2131d2b4cc.webp": "a3f49c074994ef38da8b585d8658097852135fb4e9fbd4bc84e8ab2131d2b4cc"
+          }
+        },
+        "quinta": {
+          "path": "assets/media/a5/a5aaf07a775699201a8398331b5b3367e79d84217a53f259797b9dc7fc9c99a8.webp",
+          "before_path": "assets/media/a5/a5aaf07a775699201a8398331b5b3367e79d84217a53f259797b9dc7fc9c99a8.webp",
+          "width": {
+            "before": 1200,
+            "after": 1200
+          },
+          "height": {
+            "before": 800,
+            "after": 800
+          },
+          "srcset": "",
+          "sizes": "",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Quinta de San Pedro Alejandrino",
+              "after": "Quinta de San Pedro Alejandrino"
+            },
+            "en": {
+              "before": "Ilustración editorial: Quinta de San Pedro Alejandrino",
+              "after": "Quinta de San Pedro Alejandrino"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: Quinta de San Pedro Alejandrino",
+              "after": "Quinta de San Pedro Alejandrino"
+            }
+          },
+          "files": {
+            "assets/media/a5/a5aaf07a775699201a8398331b5b3367e79d84217a53f259797b9dc7fc9c99a8.webp": "a5aaf07a775699201a8398331b5b3367e79d84217a53f259797b9dc7fc9c99a8"
+          }
+        },
+        "taganga": {
+          "path": "assets/media/44/44bc3948c760fa2fa5275121ec95336832d5ce381c4040be0392bc01f7cef931.webp",
+          "before_path": "assets/media/44/44bc3948c760fa2fa5275121ec95336832d5ce381c4040be0392bc01f7cef931.webp",
+          "width": {
+            "before": 1200,
+            "after": 1200
+          },
+          "height": {
+            "before": 800,
+            "after": 800
+          },
+          "srcset": "",
+          "sizes": "",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Taganga",
+              "after": "Taganga"
+            },
+            "en": {
+              "before": "Ilustración editorial: Taganga",
+              "after": "Taganga"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: Taganga",
+              "after": "Taganga"
+            }
+          },
+          "files": {
+            "assets/media/44/44bc3948c760fa2fa5275121ec95336832d5ce381c4040be0392bc01f7cef931.webp": "44bc3948c760fa2fa5275121ec95336832d5ce381c4040be0392bc01f7cef931"
+          }
+        },
+        "centro-historico": {
+          "path": "assets/media/13/13c13fffb10dcbc9a40b81622c0df8433b3d24c494c78873f489e95a8e4ac41f.webp",
+          "before_path": "assets/media/13/13c13fffb10dcbc9a40b81622c0df8433b3d24c494c78873f489e95a8e4ac41f.webp",
+          "width": {
+            "before": 800,
+            "after": 800
+          },
+          "height": {
+            "before": 533,
+            "after": 533
+          },
+          "srcset": "/assets/santa-marta-semirrealista/centro-historico-480.webp 480w, /assets/media/13/13c13fffb10dcbc9a40b81622c0df8433b3d24c494c78873f489e95a8e4ac41f.webp 800w",
+          "sizes": "(max-width:650px) 100vw, (max-width:1050px) 50vw, 33vw",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Centro histórico",
+              "after": "Centro histórico"
+            },
+            "en": {
+              "before": "Ilustración editorial: Centro histórico",
+              "after": "Historic centre"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: Centro histórico",
+              "after": "Centro histórico"
+            }
+          },
+          "files": {
+            "assets/media/13/13c13fffb10dcbc9a40b81622c0df8433b3d24c494c78873f489e95a8e4ac41f.webp": "13c13fffb10dcbc9a40b81622c0df8433b3d24c494c78873f489e95a8e4ac41f",
+            "assets/santa-marta-semirrealista/centro-historico-480.webp": "ec0e100045287b28f62cfc31b6bf1252f44151da34b5c4ea4021a66b2324b614"
+          }
+        },
+        "playa-blanca": {
+          "path": "assets/media/cf/cf760503afc7ce4520164099c918cfec67c06e041a0af1c430aa09479d77e143.webp",
+          "before_path": "assets/media/cf/cf760503afc7ce4520164099c918cfec67c06e041a0af1c430aa09479d77e143.webp",
+          "width": {
+            "before": 1200,
+            "after": 1200
+          },
+          "height": {
+            "before": 800,
+            "after": 800
+          },
+          "srcset": "",
+          "sizes": "",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Playa Blanca",
+              "after": "Playa Blanca"
+            },
+            "en": {
+              "before": "Ilustración editorial: Playa Blanca",
+              "after": "Playa Blanca"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: Playa Blanca",
+              "after": "Playa Blanca"
+            }
+          },
+          "files": {
+            "assets/media/cf/cf760503afc7ce4520164099c918cfec67c06e041a0af1c430aa09479d77e143.webp": "cf760503afc7ce4520164099c918cfec67c06e041a0af1c430aa09479d77e143"
+          }
+        },
+        "buceo-taganga": {
+          "path": "assets/media/66/663113225d8fbaf3493a1f4752ac9f6e0fb9db44d65272e2e4d6fc90174c1ca2.webp",
+          "before_path": "assets/media/66/663113225d8fbaf3493a1f4752ac9f6e0fb9db44d65272e2e4d6fc90174c1ca2.webp",
+          "width": {
+            "before": 1200,
+            "after": 1200
+          },
+          "height": {
+            "before": 800,
+            "after": 800
+          },
+          "srcset": "",
+          "sizes": "",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Buceo desde Taganga",
+              "after": "Buceo desde Taganga"
+            },
+            "en": {
+              "before": "Ilustración editorial: Buceo desde Taganga",
+              "after": "Diving from Taganga"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: Buceo desde Taganga",
+              "after": "Mergulho saindo de Taganga"
+            }
+          },
+          "files": {
+            "assets/media/66/663113225d8fbaf3493a1f4752ac9f6e0fb9db44d65272e2e4d6fc90174c1ca2.webp": "663113225d8fbaf3493a1f4752ac9f6e0fb9db44d65272e2e4d6fc90174c1ca2"
+          }
+        },
+        "caminata-tayrona": {
+          "path": "assets/media/df/dfee8381a48010a86e7daca63e856bdea98a1ed9075643197bab25a5e3acdaf2.webp",
+          "before_path": "assets/media/df/dfee8381a48010a86e7daca63e856bdea98a1ed9075643197bab25a5e3acdaf2.webp",
+          "width": {
+            "before": 1200,
+            "after": 1200
+          },
+          "height": {
+            "before": 800,
+            "after": 800
+          },
+          "srcset": "",
+          "sizes": "",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Caminata por el Tayrona",
+              "after": "Caminata por el Tayrona"
+            },
+            "en": {
+              "before": "Ilustración editorial: Caminata por el Tayrona",
+              "after": "Hiking in Tayrona"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: Caminata por el Tayrona",
+              "after": "Caminhada no Tayrona"
+            }
+          },
+          "files": {
+            "assets/media/df/dfee8381a48010a86e7daca63e856bdea98a1ed9075643197bab25a5e3acdaf2.webp": "dfee8381a48010a86e7daca63e856bdea98a1ed9075643197bab25a5e3acdaf2"
+          }
+        },
+        "minca-cafe": {
+          "path": "assets/media/4f/4f6bfb62d3b9275524cc3568c191a72138aa46850731941bb50c3203588aab8c.webp",
+          "before_path": "assets/media/4f/4f6bfb62d3b9275524cc3568c191a72138aa46850731941bb50c3203588aab8c.webp",
+          "width": {
+            "before": 1200,
+            "after": 1200
+          },
+          "height": {
+            "before": 800,
+            "after": 800
+          },
+          "srcset": "",
+          "sizes": "",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Naturaleza y café en Minca",
+              "after": "Naturaleza y café en Minca"
+            },
+            "en": {
+              "before": "Ilustración editorial: Naturaleza y café en Minca",
+              "after": "Nature and coffee in Minca"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: Naturaleza y café en Minca",
+              "after": "Natureza e café em Minca"
+            }
+          },
+          "files": {
+            "assets/media/4f/4f6bfb62d3b9275524cc3568c191a72138aa46850731941bb50c3203588aab8c.webp": "4f6bfb62d3b9275524cc3568c191a72138aa46850731941bb50c3203588aab8c"
+          }
+        },
+        "recorrido-centro": {
+          "path": "assets/media/c1/c18f2a9eaeb48b3df3af4cd642cd531d05d45af1fc778cfcd9985095829c7686.webp",
+          "before_path": "assets/media/c1/c18f2a9eaeb48b3df3af4cd642cd531d05d45af1fc778cfcd9985095829c7686.webp",
+          "width": {
+            "before": 1200,
+            "after": 1200
+          },
+          "height": {
+            "before": 800,
+            "after": 800
+          },
+          "srcset": "",
+          "sizes": "",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Paseo guiado por el centro",
+              "after": "Paseo guiado por el centro"
+            },
+            "en": {
+              "before": "Ilustración editorial: Paseo guiado por el centro",
+              "after": "Guided historic-centre walk"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: Paseo guiado por el centro",
+              "after": "Passeio guiado pelo centro"
+            }
+          },
+          "files": {
+            "assets/media/c1/c18f2a9eaeb48b3df3af4cd642cd531d05d45af1fc778cfcd9985095829c7686.webp": "c18f2a9eaeb48b3df3af4cd642cd531d05d45af1fc778cfcd9985095829c7686"
+          }
+        },
+        "caminata-ciudad-perdida": {
+          "path": "assets/media/c5/c5546d60d51992ad3486ab45a33d95a858aa3bc280c28fcde82bdf00e3872ae5.webp",
+          "before_path": "assets/media/c5/c5546d60d51992ad3486ab45a33d95a858aa3bc280c28fcde82bdf00e3872ae5.webp",
+          "width": {
+            "before": 1200,
+            "after": 1200
+          },
+          "height": {
+            "before": 800,
+            "after": 800
+          },
+          "srcset": "",
+          "sizes": "",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Caminata a Ciudad Perdida",
+              "after": "Caminata a Ciudad Perdida"
+            },
+            "en": {
+              "before": "Ilustración editorial: Caminata a Ciudad Perdida",
+              "after": "Trek to Lost City"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: Caminata a Ciudad Perdida",
+              "after": "Caminhada à Cidade Perdida"
+            }
+          },
+          "files": {
+            "assets/media/c5/c5546d60d51992ad3486ab45a33d95a858aa3bc280c28fcde82bdf00e3872ae5.webp": "c5546d60d51992ad3486ab45a33d95a858aa3bc280c28fcde82bdf00e3872ae5"
+          }
+        },
+        "velero-caribe": {
+          "path": "assets/media/7a/7a38d9311c2daf70dacceabdd8344580d6da432a1f94e816884513cd302c3e43.webp",
+          "before_path": "assets/media/7a/7a38d9311c2daf70dacceabdd8344580d6da432a1f94e816884513cd302c3e43.webp",
+          "width": {
+            "before": 1200,
+            "after": 1200
+          },
+          "height": {
+            "before": 800,
+            "after": 800
+          },
+          "srcset": "",
+          "sizes": "",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Navegación por el Caribe",
+              "after": "Navegación por el Caribe"
+            },
+            "en": {
+              "before": "Ilustración editorial: Navegación por el Caribe",
+              "after": "Caribbean sailing"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: Navegación por el Caribe",
+              "after": "Navegação pelo Caribe"
+            }
+          },
+          "files": {
+            "assets/media/7a/7a38d9311c2daf70dacceabdd8344580d6da432a1f94e816884513cd302c3e43.webp": "7a38d9311c2daf70dacceabdd8344580d6da432a1f94e816884513cd302c3e43"
+          }
+        },
+        "visita-acuario": {
+          "path": "assets/media/ac/ac478e072745666ad5d3675370a32052ba2a6233cbe4f24962df48cb59101a7d.webp",
+          "before_path": "assets/media/ac/ac478e072745666ad5d3675370a32052ba2a6233cbe4f24962df48cb59101a7d.webp",
+          "width": {
+            "before": 1200,
+            "after": 1200
+          },
+          "height": {
+            "before": 800,
+            "after": 800
+          },
+          "srcset": "",
+          "sizes": "",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Visita al Centro de Vida Marina",
+              "after": "Visita al Centro de Vida Marina"
+            },
+            "en": {
+              "before": "Ilustración editorial: Visita al Centro de Vida Marina",
+              "after": "Visit the Marine Life Centre"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: Visita al Centro de Vida Marina",
+              "after": "Visita ao Centro de Vida Marina"
+            }
+          },
+          "files": {
+            "assets/media/ac/ac478e072745666ad5d3675370a32052ba2a6233cbe4f24962df48cb59101a7d.webp": "ac478e072745666ad5d3675370a32052ba2a6233cbe4f24962df48cb59101a7d"
+          }
+        },
+        "excursion-playa-blanca": {
+          "path": "assets/media/ea/eaebd2ccc5822b69a719e84bf0b6e0110e397a714b6a47cf1130b223bcdbe843.webp",
+          "before_path": "assets/media/ea/eaebd2ccc5822b69a719e84bf0b6e0110e397a714b6a47cf1130b223bcdbe843.webp",
+          "width": {
+            "before": 1200,
+            "after": 1200
+          },
+          "height": {
+            "before": 800,
+            "after": 800
+          },
+          "srcset": "",
+          "sizes": "",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Salida a Playa Blanca",
+              "after": "Salida a Playa Blanca"
+            },
+            "en": {
+              "before": "Ilustración editorial: Salida a Playa Blanca",
+              "after": "Playa Blanca outing"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: Salida a Playa Blanca",
+              "after": "Passeio a Playa Blanca"
+            }
+          },
+          "files": {
+            "assets/media/ea/eaebd2ccc5822b69a719e84bf0b6e0110e397a714b6a47cf1130b223bcdbe843.webp": "eaebd2ccc5822b69a719e84bf0b6e0110e397a714b6a47cf1130b223bcdbe843"
+          }
+        },
+        "moto-acuatica": {
+          "path": "assets/media/5c/5c6eaca613b3f2b892bde8a1e9254d124265036f15612b01fd2dd77f4233883c.webp",
+          "before_path": "assets/media/5c/5c6eaca613b3f2b892bde8a1e9254d124265036f15612b01fd2dd77f4233883c.webp",
+          "width": {
+            "before": 1200,
+            "after": 1200
+          },
+          "height": {
+            "before": 800,
+            "after": 800
+          },
+          "srcset": "",
+          "sizes": "",
+          "translations": {
+            "es": {
+              "before": "Ilustración editorial: Moto acuática",
+              "after": "Moto acuática"
+            },
+            "en": {
+              "before": "Ilustración editorial: Moto acuática",
+              "after": "Personal watercraft"
+            },
+            "pt-BR": {
+              "before": "Ilustración editorial: Moto acuática",
+              "after": "Moto aquática"
+            }
+          },
+          "files": {
+            "assets/media/5c/5c6eaca613b3f2b892bde8a1e9254d124265036f15612b01fd2dd77f4233883c.webp": "5c6eaca613b3f2b892bde8a1e9254d124265036f15612b01fd2dd77f4233883c"
+          }
+        }
+      }
+    }
+  },
+  "ignored_legacy_keys": {
+    "bogota": {
+      "absent_places": [
+        "ambiente",
+        "arte",
+        "arte-urbano",
+        "artes-escenicas",
+        "bike-tour",
+        "ciclovia",
+        "cine",
+        "cooking",
+        "gastronomia",
+        "graffiti-bike",
+        "mercado",
+        "mirador",
+        "visita-oro"
+      ],
+      "removed_already_absent": [],
+      "unused_copy_fields": []
+    },
+    "cartagena": {
+      "absent_places": [
+        "caminhada-patrimonial",
+        "islas-rosario"
+      ],
+      "removed_already_absent": [
+        "snorkel-rosario"
+      ],
+      "unused_copy_fields": [
+        "business_text",
+        "business_title",
+        "draft",
+        "events",
+        "history_title",
+        "practical"
+      ]
+    },
+    "jerico": {
+      "absent_places": [],
+      "removed_already_absent": [],
+      "unused_copy_fields": []
+    },
+    "medellin": {
+      "absent_places": [
+        "epm-visita",
+        "jardin-botanico-visita",
+        "laureles-cafes",
+        "mamm-visita",
+        "metro-metrocable-recorrido",
+        "museo-antioquia-visita",
+        "parque-explora-visita",
+        "paseo-centro"
+      ],
+      "removed_already_absent": [],
+      "unused_copy_fields": []
+    },
+    "santa-marta": {
+      "absent_places": [],
+      "removed_already_absent": [],
+      "unused_copy_fields": [
+        "business_text",
+        "business_title",
+        "directory_title",
+        "draft",
+        "experiences_title",
+        "history_title",
+        "image_label",
+        "places_title",
+        "practical",
+        "source_label"
+      ]
+    }
+  }
+}

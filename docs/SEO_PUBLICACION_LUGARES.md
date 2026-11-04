@@ -121,10 +121,10 @@ para obtener un resultado verde.
 Para inspeccionar un candidato construido en una carpeta nueva bajo `.local/`:
 
 ```sh
-python3 scripts/preparar-hosting.py --output .local/candidato-seo
-python3 scripts/preparar-fixture-presentacion.py --package .local/candidato-seo
-python3 scripts/probar-seo-paquete.py --package .local/candidato-seo --output .local/resultado-seo.json
-python3 scripts/probar-presentacion-paquete.py --package .local/candidato-seo --output .local/resultado-presentacion.json
+python3 scripts/prepare-hosting.py --output .local/candidato-seo
+python3 scripts/prepare-presentation-fixture.py --package .local/candidato-seo
+python3 scripts/check-package-seo.py --package .local/candidato-seo --output .local/resultado-seo.json
+python3 scripts/check-package-presentation.py --package .local/candidato-seo --output .local/resultado-presentacion.json
 ```
 
 La fixture contiene datos y cuentas sintéticos: nunca desplegar su carpeta

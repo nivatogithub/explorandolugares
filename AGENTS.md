@@ -49,3 +49,13 @@ Las rutas locales y públicas deben coincidir desde `/`: no introducir prefijos 
 - `backend/app/content/geolocation-policy.json` conserva las identidades estables retiradas y las excepciones. Las retiradas son reversibles; no borrar IDs, métricas, cuentas ni relaciones. No republicarlas mediante una importación antigua: reincorporar exige una revisión deliberada y actualizar la política.
 - `content/geolocation/approved-20261024.json` identifica la migración aprobada; `content/release-places-businesses.json`, el catálogo inicial y snapshots territoriales deben conservar sus coordenadas, retiradas y sustitutos. La prueba `test_geolocation_catalog.py` bloquea construcciones que reintroduzcan las fichas retiradas o sitios físicos sin coordenadas.
 - Actualizar siempre repositorio, preproducción y producción por el circuito vigente; comprobar que ninguna categoría previamente poblada quede vacía y conservar como mínimo las dos o tres alternativas aprobadas en las categorías sustituidas. No afirmar imposibilidad absoluta de regresiones: mantener y ejecutar las barreras de publicación y reconstrucción.
+
+
+## Convención de idioma y nombres — 2 de noviembre de 2026
+
+Consultar también [la guía de arquitectura y sus controles por etapa](docs/ARQUITECTURA.md). Sus límites se aplican al código y a los lugares nuevos; las excepciones históricas se retiran por etapas sin ampliarlas.
+
+- La implementación técnica usa inglés: clases, métodos, variables, archivos, recursos y nuevos identificadores de almacenamiento. La entidad del producto es `Place` / `places`; no crear clases nuevas `Destination` ni nombres técnicos nuevos en español.
+- El portal público y la administración usan español como idioma principal, con traducciones a inglés y portugués de Brasil. Conservar las URL públicas y sus idiomas; cambiar un identificador interno no traduce la interfaz.
+- Un cambio de nombre incluye todos los consumidores, construcción, pruebas y enlaces operativos. Conservar compatibilidad explícita para URL/formularios anteriores; no duplicar implementaciones.
+- Los esquemas, formatos de importación y planes ya aplicados son contratos persistidos: renombrarlos requiere una migración versionada y comprobación de IDs/relaciones. No cambiar hashes, claves históricas ni datos mediante sustitución textual. Las referencias históricas permanecen identificadas como tales.

@@ -26,6 +26,7 @@ class DynamicDestinationRenderTests(unittest.TestCase):
         with sqlite3.connect(cls.database) as connection:
             connection.executescript((ROOT / "backend/database/destinations.sqlite.sql").read_text())
             connection.executescript((ROOT / "backend/database/migrations/006-poi-experience-links.sqlite.sql").read_text())
+            connection.executescript((ROOT / "backend/database/migrations/060-destination-content.sqlite.sql").read_text())
             connection.executescript((ROOT / "backend/database/migrations/008-business-subscriptions.sqlite.sql").read_text())
             connection.executescript((ROOT / "backend/database/migrations/009-business-origin.sqlite.sql").read_text())
             connection.executescript((ROOT / "backend/database/migrations/010-business-location-subscription-lifecycle.sqlite.sql").read_text())
@@ -42,11 +43,17 @@ class DynamicDestinationRenderTests(unittest.TestCase):
                 matches = list((ROOT / "backend/database/migrations").glob(name[:3]+"-*.sqlite.sql"))
                 connection.executescript(matches[0].read_text())
         env = os.environ | {"EL_DESTINATIONS_DSN": f"sqlite:{cls.database}"}
-        subprocess.run(["php", "backend/bin/importar-destinos.php"], cwd=ROOT, env=env,
+        subprocess.run(["php", "backend/bin/import-places.php"], cwd=ROOT, env=env,
                        check=True, capture_output=True, text=True)
         cls.env = env
         cls.package = Path(cls.tempdir.name)/"package"
-        subprocess.run(["python3", "scripts/preparar-hosting.py", "--output", str(cls.package)], cwd=ROOT, check=True, capture_output=True)
+        subprocess.run(["python3", "scripts/prepare-hosting.py", "--output", str(cls.package)], cwd=ROOT, check=True, capture_output=True)
+        # These template tests explicitly exercise legacy admin mode. Unified
+        # account/role/credential revocation is covered by check-preview-authorization.py.
+        (cls.package / 'private/config.php').write_text(
+            '<?php return ["dsn"=>' + json.dumps('sqlite:' + str(cls.database))
+            + ',"local_test"=>true,"unified_admin_only"=>false];'
+        )
 
 
     @classmethod
@@ -63,7 +70,7 @@ class DynamicDestinationRenderTests(unittest.TestCase):
             f"$_GET['idioma']={json.dumps(locale)};"
             f"{session}"
             f"$_SERVER['REQUEST_URI']='/{uri_locale}destinos/{slug}/';"
-            f"include {json.dumps(str(self.package / 'public/destino.php'))};"
+            f"include {json.dumps(str(self.package / 'public/place.php'))};"
         )
         result = subprocess.run(["php", "-r", php], cwd=ROOT, env=self.env,
                                 check=True, capture_output=True, text=True)
@@ -76,7 +83,7 @@ class DynamicDestinationRenderTests(unittest.TestCase):
             f"$_SERVER['HTTP_USER_AGENT']={json.dumps(user_agent)};"
             f"$_GET['idioma']={json.dumps(locale)};"
             f"$_SERVER['REQUEST_URI']='/{uri_locale}negocios/{public_id}/';"
-            f"include {json.dumps(str(self.package / 'public/negocio.php'))};"
+            f"include {json.dumps(str(self.package / 'public/business.php'))};"
         )
         result = subprocess.run(["php", "-r", php], cwd=ROOT, env=self.env,
                                 check=True, capture_output=True, text=True)
@@ -94,7 +101,7 @@ class DynamicDestinationRenderTests(unittest.TestCase):
             public.mkdir(parents=True)
             (private_site / 'private').mkdir(parents=True)
             shutil.copytree(self.package / 'app', private_site / 'app')
-            for name in ['destinos.php', '_portal-shell.php', 'asset-manifest.json']:
+            for name in ['places.php', '_portal-shell.php', 'asset-manifest.json']:
                 shutil.copy2(self.package / 'public' / name, public / name)
             deploy.rewrite_private_app_includes(public, str(private_site))
             (private_site / 'private/config.php').write_text(
@@ -109,7 +116,7 @@ class DynamicDestinationRenderTests(unittest.TestCase):
                         '$_GET["idioma"]=' + json.dumps(locale) + ';'
                         '$_SERVER["REQUEST_URI"]=' + json.dumps(prefix + '/lugares/') + ';'
                         'register_shutdown_function(static function(){fwrite(STDERR,json_encode(["status"=>http_response_code()?:200]));});'
-                        'include ' + json.dumps(str(public / 'destinos.php')) + ';'
+                        'include ' + json.dumps(str(public / 'places.php')) + ';'
                     )
                     result = subprocess.run(['php', '-r', code], cwd=ROOT, env=env,
                                             capture_output=True, text=True, check=True)
@@ -237,9 +244,16 @@ class DynamicDestinationRenderTests(unittest.TestCase):
               "session_id('claim-test');session_start();$_SESSION['business_account_id']=(int)$argv[4];"
               "require 'backend/app/BusinessClaimService.php';"
               "$pdo=new PDO(getenv('EL_DESTINATIONS_DSN'));$service=new BusinessClaimService($pdo);"
+              "$places=array_column($service->places(),'id');"
+              "if(!in_array((int)$argv[1],array_map('intval',$places),true))throw new RuntimeException('No apareció el lugar.');"
+              "$categories=array_column($service->categories((int)$argv[1]),'code');"
+              "if(!in_array($argv[2],$categories,true))throw new RuntimeException('No apareció la categoría.');"
               "$rows=$service->search((int)$argv[1],$argv[2],'Negocio de prueba');"
               "if(count($rows)!==1)throw new RuntimeException('No apareció en la búsqueda filtrada.');"
+              "if($service->search(0,$argv[2])!==[]||$service->search((int)$argv[1],'')!==[])throw new RuntimeException('Filtro inválido.');"
               "$id=$service->submit(['business_id'=>$argv[3],'relationship_code'=>'owner','consent'=>'1']);"
+              "$requests=array_column($service->requests(),'id');"
+              "if(!in_array($id,array_map('intval',$requests),true))throw new RuntimeException('No apareció la solicitud.');"
               "$service->updateRequest($id,'in_review','Revisar documento');"
               "$service->updateRequest($id,'not_approved','Prueba cerrada');"
               "$status=$pdo->query('SELECT claim_status FROM businesses WHERE id='.(int)$argv[3])->fetchColumn();"
@@ -302,13 +316,13 @@ class DynamicDestinationRenderTests(unittest.TestCase):
 
     def test_admin_navigation_stays_one_column_and_keeps_business_import_inside_business_hub(self):
         navigation=(ROOT/"backend/public/admin/_navigation.php").read_text()
-        businesses=(ROOT/"backend/public/admin/negocios.php").read_text()
+        businesses=(ROOT/"backend/public/admin/businesses.php").read_text()
         styles=(ROOT/"ensayos/v1/assets/style.css").read_text()
-        self.assertNotIn('href="importar-negocios.php"',navigation)
-        self.assertIn('href="negocios.php?tab=importar"',businesses)
+        self.assertNotIn('href="import-businesses.php"',navigation)
+        self.assertIn('href="businesses.php?tab=importar"',businesses)
         self.assertIn('$manualCreationDisabled',businesses)
         self.assertIn("$tab==='crear'&&!$id",businesses)
-        self.assertIn('href="negocios.php?tab=revisar"',businesses)
+        self.assertIn('href="businesses.php?tab=revisar"',businesses)
         self.assertIn('publish_imported_bulk',businesses)
         self.assertIn('Posibles duplicados',businesses)
         bulk=(ROOT/"backend/app/BusinessBulkPublicationService.php").read_text()
@@ -317,11 +331,11 @@ class DynamicDestinationRenderTests(unittest.TestCase):
         self.assertIn('Posible duplicado de',bulk)
         script=(ROOT/"backend/public/assets/admin-business-bulk.js").read_text()
         self.assertIn('window.confirm',script)
-        self.assertIn('href="index.php?tab=solicitudes"',navigation)
+        self.assertIn('href="/admin/index.php?tab=solicitudes"',navigation)
         self.assertIn('Solicitudes y mensajes',navigation)
         self.assertIn(".admin-sidebar nav section{display:block!important",styles)
         self.assertIn("column-count:1!important",styles)
-        claim_page=(ROOT/"backend/public/reclamar-negocio.php").read_text()
+        claim_page=(ROOT/"backend/public/business-claim.php").read_text()
         self.assertIn('name="destino"',claim_page)
         self.assertIn('name="categoria"',claim_page)
         self.assertIn('name="nombre"',claim_page)
@@ -417,7 +431,7 @@ class DynamicDestinationRenderTests(unittest.TestCase):
                 self.assertTrue(result.stdout.startswith(b"RIFF"), f"The public image route must return {relative}")
 
     def test_business_editor_keeps_lifecycle_and_ranking_fields_out_of_creation(self):
-        editor=(ROOT/"backend/public/admin/negocios.php").read_text()+(ROOT/"backend/public/_business-map-dialog.php").read_text()
+        editor=(ROOT/"backend/public/admin/businesses.php").read_text()+(ROOT/"backend/app/views/account/business-map-dialog.php").read_text()
         for forbidden in ('name="slug"','name="display_order"','name="claim_status"',
                           'name="operation_status"','name="information_status"',
                           'name="publication_status"','name="subscription_status"'):
@@ -462,8 +476,12 @@ class DynamicDestinationRenderTests(unittest.TestCase):
         self.assertIn("'pt-BR'=>'Português (Brasil)'",editor)
         self.assertIn('translations[<?=esc($locale)?>][display_name]',editor)
         router=(ROOT/'scripts/php-destinations-router.php').read_text()
-        for route in ('importar-negocios','reclamaciones','reclamar-negocio.php'):
-            self.assertIn(route,router)
+        aliases=json.loads((ROOT/'backend/app/public-route-aliases.json').read_text())['aliases']
+        self.assertIn('public-route-aliases.json',router)
+        for legacy,current in [('/admin/importar-negocios.php','/admin/import-businesses.php'),('/admin/reclamaciones.php','/admin/claims.php')]:
+            self.assertEqual(aliases[legacy],current)
+            self.assertTrue((ROOT/'backend/public'/current.lstrip('/')).is_file())
+        self.assertIn('business-claim.php',router)
         for script in ('admin-business-location','admin-subscriptions','admin-accounts','admin-business-form','business-claim-filter'):
             self.assertIn(script,router)
 

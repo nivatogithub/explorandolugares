@@ -1,6 +1,6 @@
 import importlib.util,tempfile,unittest
 from pathlib import Path
-spec=importlib.util.spec_from_file_location('resource_versions',Path(__file__).resolve().parents[1]/'versionar-recursos.py');module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+spec=importlib.util.spec_from_file_location('resource_versions',Path(__file__).resolve().parents[1]/'version-resources.py');module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
 class PHPResourceBoundaries(unittest.TestCase):
  def test_dynamic_version_and_filesystem_are_unchanged(self):
   with tempfile.TemporaryDirectory() as directory:

@@ -62,7 +62,7 @@ try:
     opener.open(urllib.request.Request(BASE + 'admin/index.php', data=urllib.parse.urlencode({
         'csrf': csrf, 'action': 'login', 'username': 'localadmin', 'password': 'DestinosLocal8014!'
     }).encode()))
-    editor = opener.open(BASE + 'admin/destinos.php').read().decode()
+    editor = opener.open(BASE + 'admin/places.php').read().decode()
     token = re.search(r'name="csrf" value="([^"]+)"', editor).group(1)
 
     fields = {
@@ -91,7 +91,7 @@ try:
         ('hero_upload', 'cover.png', image, 'image/png'),
         ('place_uploads[0]', 'attraction.png', image, 'image/png'),
     ]
-    response = post('admin/destinos.php', fields, files)
+    response = post('admin/places.php', fields, files)
     match = re.search(r'[?&]id=(\d+)', response.geturl())
     assert match, f'Draft save did not redirect to its editor: {response.geturl()}'
     destination_id = int(match.group(1))
@@ -115,9 +115,9 @@ try:
     except urllib.error.HTTPError as error:
         assert error.code == 404
 
-    editor = opener.open(BASE + f'admin/destinos.php?id={destination_id}').read().decode()
+    editor = opener.open(BASE + f'admin/places.php?id={destination_id}').read().decode()
     token = re.search(r'name="csrf" value="([^"]+)"', editor).group(1)
-    post('admin/destinos.php', {'csrf': token, 'action': 'delete', 'id': str(destination_id)})
+    post('admin/places.php', {'csrf': token, 'action': 'delete', 'id': str(destination_id)})
     with sqlite3.connect(DB) as db:
         ids = [row[0] for row in db.execute('SELECT id FROM media_assets WHERE asset_path LIKE ?', (f'assets/destinos/{destination_id}/%',)).fetchall()]
         marks = ','.join('?' for _ in ids)

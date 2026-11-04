@@ -16,7 +16,7 @@ El acceso de pruebas mediante `?prueba=` fue retirado. Los flujos empresariales 
 
 Requisitos: PHP 8.2 o posterior con PDO MySQL, MySQL/MariaDB, HTTPS y posibilidad de mantener carpetas privadas fuera de la raíz pública. Confirmar estas capacidades con el hosting antes de activar. El frontend histórico `public/` del repositorio no se modifica.
 
-Ejecutar `python3 scripts/preparar-hosting.py` desde la raíz. Prepara `.local/hosting/` con esta estructura:
+Ejecutar `python3 scripts/prepare-hosting.py` desde la raíz. Prepara `.local/hosting/` con esta estructura:
 
 ```
 hosting/

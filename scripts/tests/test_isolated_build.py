@@ -3,7 +3,7 @@ from pathlib import Path
 import tempfile
 import unittest
 ROOT=Path(__file__).resolve().parents[2]
-spec=importlib.util.spec_from_file_location('isolated_build',ROOT/'scripts/preparar-hosting.py')
+spec=importlib.util.spec_from_file_location('isolated_build',ROOT/'scripts/prepare-hosting.py')
 module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
 class BuildBoundary(unittest.TestCase):
  def test_nonempty_output_rejected_without_removing_content(self):

@@ -2,7 +2,7 @@ import urllib.request,urllib.error,json,http.cookiejar,secrets
 base='http://127.0.0.1:8036'
 def request(data=None,origin=base):
  headers={'Content-Type':'application/json','Origin':origin,'User-Agent':'ExplorandoLugaresIntegrationTest'}
- req=urllib.request.Request(base+'/api/medicion.php',data=None if data is None else json.dumps(data).encode(),headers=headers)
+ req=urllib.request.Request(base+'/api/analytics.php',data=None if data is None else json.dumps(data).encode(),headers=headers)
  try:
   with opener.open(req) as r:return r.status,json.load(r)
  except urllib.error.HTTPError as e:return e.code,json.load(e)

@@ -2,6 +2,7 @@
 declare(strict_types=1);
 require_once __DIR__.'/BusinessSubscriptionChoice.php';
 require_once __DIR__.'/SubscriptionChangeService.php';
+require_once __DIR__.'/BusinessPaymentOrderSelector.php';
 
 /** Registration-only offers. Immutable redemption amounts never become fake payments. */
 final class BusinessPromotions
@@ -72,7 +73,8 @@ final class BusinessPromotions
         $q=$this->pdo->prepare('SELECT status FROM business_editorial_versions WHERE business_id=? ORDER BY id DESC LIMIT 1'.($locking?$this->lock():''));$q->execute([$business]);$version=$q->fetchColumn();
         $q=$this->pdo->prepare('SELECT e.id FROM business_subscription_payment_evidence e JOIN business_subscriptions s ON s.id=e.subscription_id WHERE s.business_id=? LIMIT 1');$q->execute([$business]);$hasEvidence=(bool)$q->fetchColumn();
         $q=$this->pdo->prepare('SELECT id FROM business_subscriptions WHERE business_id=? AND id<>? AND plan_code<>"free" LIMIT 1');$q->execute([$business,$sub['id']??0]);$hasPrior=(bool)$q->fetchColumn();
-        return ['subscription'=>$sub,'can_apply'=>$sub&&$row['publication_status']==='draft'&&$sub['status']==='pending'&&$sub['starts_at']===null&&isset(self::PLANS[$sub['plan_code']])&&$version==='draft'&&!$hasEvidence&&!$hasPrior];
+        $orders=new BusinessPaymentOrderSelector($this->pdo);$inOrder=$orders->available()&&$orders->openForBusiness($business);
+        return ['subscription'=>$sub,'can_apply'=>!$inOrder&&$sub&&$row['publication_status']==='draft'&&$sub['status']==='pending'&&$sub['starts_at']===null&&isset(self::PLANS[$sub['plan_code']])&&$version==='draft'&&!$hasEvidence&&!$hasPrior];
     }
     public function applyAtPayment(int $account,int $business,int $expectedSubscription,string $code):array
     {

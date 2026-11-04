@@ -2,6 +2,7 @@
 declare(strict_types=1);
 require_once __DIR__.'/BusinessAccountPortalService.php';
 require_once __DIR__.'/BusinessRegistrationDrafts.php';
+require_once __DIR__.'/BusinessPaymentOrderSelector.php';
 require_once __DIR__.'/BusinessEditorialService.php';
 
 /** One customer row per business; registration drafts and disputed claims remain private. */
@@ -27,10 +28,12 @@ final class BusinessWorkspace
     {
         $portal=new BusinessAccountPortalService($this->pdo);$businesses=$portal->businesses($account);
         $editorial=new BusinessEditorialService($this->pdo,'');$editorialReady=$editorial->ready();
-        $payment=$this->pdo->prepare('SELECT e.status,e.customer_message,e.reviewed_at FROM business_subscription_payment_evidence e JOIN business_subscriptions s ON s.id=e.subscription_id WHERE e.account_id=? AND s.business_id=? ORDER BY e.id DESC LIMIT 1');
+        $orderPayments=new BusinessPaymentOrderSelector($this->pdo);$ordersReady=$orderPayments->available();
+        $payment=$this->pdo->prepare('SELECT e.id,e.status,e.customer_message,e.reviewed_at FROM business_subscription_payment_evidence e JOIN business_subscriptions s ON s.id=e.subscription_id WHERE e.account_id=? AND s.business_id=? ORDER BY e.id DESC LIMIT 1');
         $rows=[];$seen=[];
         foreach($businesses as $business){
             $id=(int)$business['id'];$seen[$id]=true;$payment->execute([$account,$id]);$proof=$payment->fetch(PDO::FETCH_ASSOC)?:null;
+            if($ordersReady){$groupProof=$orderPayments->latestEvidence($account,$id);if($groupProof&&(!$proof||(int)$groupProof['id']>(int)$proof['id']))$proof=$groupProof;}
             $sub=$this->pdo->prepare('SELECT id FROM business_subscriptions WHERE business_id=? ORDER BY id DESC LIMIT 1');$sub->execute([$id]);$subscriptionId=(int)$sub->fetchColumn();
             $promotions=new BusinessPromotions($this->pdo);$promotion=$subscriptionId?$promotions->forSubscription($subscriptionId):null;
             $version=$editorialReady?$editorial->latest($id):null;

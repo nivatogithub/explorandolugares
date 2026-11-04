@@ -1,13 +1,15 @@
 <?php
 declare(strict_types=1);
 require_once dirname(__DIR__).'/PremiumBusinessProfile.php';
+require_once dirname(__DIR__).'/PlaceSelector.php';
 final class PublicSitemap {
     public function __construct(private PDO $db) {}
     public function xml(string $base,string $staticXml): string {
         $base=rtrim($base,'/');$parts=parse_url($base);
         if(!filter_var($base,FILTER_VALIDATE_URL)||($parts['scheme']??'')!=='https'||isset($parts['user'])||isset($parts['pass'])||isset($parts['query'])||isset($parts['fragment']))throw new InvalidArgumentException('Origen público inválido.');
-        $rows=$this->db->query("SELECT d.slug,t.locale FROM destinations d JOIN destination_translations t ON t.destination_id=d.id WHERE d.publication_status='published' AND t.locale IN ('es','en','pt-BR') ORDER BY d.id,t.locale")->fetchAll(PDO::FETCH_ASSOC);
-        $urls=[];
+        $rows=(new PlaceSelector($this->db))->sitemapLocales();
+        // The directory is a standalone indexable page in each supported language.
+        $urls=[];foreach(['','/en','/pt-br'] as $prefix)$urls[$base.$prefix.'/lugares/']=true;
         foreach($rows as $row){
             if(!preg_match('/^[a-z0-9]+(?:-[a-z0-9]+)*$/D',$row['slug']))continue;
             $prefix=match($row['locale']){'en'=>'/en','pt-BR'=>'/pt-br',default=>''};

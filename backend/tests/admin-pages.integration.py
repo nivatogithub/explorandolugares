@@ -21,8 +21,8 @@ if package_value:
 else:
     shutil.copytree(ROOT / 'backend/app', WORK / 'app')
     shutil.copytree(ROOT / 'backend/public', WORK / 'public')
-    for renderer in ('destino.php', 'negocio.php'):
-        shutil.copy2(ROOT / 'backend/integration-medicion/public' / renderer, WORK / 'public' / renderer)
+    for renderer in ('place.php', 'business.php'):
+        shutil.copy2(ROOT / 'backend/integration-analytics/public' / renderer, WORK / 'public' / renderer)
     shutil.copytree(ROOT / 'ensayos/v1/assets', WORK / 'public/assets', dirs_exist_ok=True)
 (WORK / 'app/content').mkdir(parents=True, exist_ok=True)
 shutil.copy2(ROOT / 'content/plantilla-importar-negocios.json', WORK / 'app/content/plantilla-importar-negocios.json')
@@ -189,12 +189,12 @@ try:
         def redirect_request(self, req, fp, code, msg, headers, newurl):
             return None
     direct = urllib.request.build_opener(NoRedirect())
-    for source, target in [('/destino.php?destino=jerico&idioma=es', place_prefix+'jerico/'), ('/negocio.php?id=00000000-0000-4000-8000-000000000001', '/negocios/00000000-0000-4000-8000-000000000001/')]:
+    for source, target in [('/place.php?destino=jerico&idioma=es', place_prefix+'jerico/'), ('/business.php?id=00000000-0000-4000-8000-000000000001', '/negocios/00000000-0000-4000-8000-000000000001/')]:
         status, _, headers = request(source, opener=direct)
         check(status == 301 and headers.get('Location') == target, 'Plantilla debe redirigir a ruta limpia idéntica en local y producción.')
     check(request('/v1/destinos/jerico/', opener=GUEST)[0] == 404, 'El prefijo retirado no debe seguir como alias de pruebas.')
 
-    status, body, _ = request('/api/cobertura.php', opener=GUEST)
+    status, body, _ = request('/api/coverage.php', opener=GUEST)
     check(status == 200 and 'audience' in json.loads(body), 'API pública debe ofrecer el resumen agregado de audiencia aprobado.')
 
     # Sitemap is public read-only: no bootstrap session or private robots header.
@@ -216,30 +216,30 @@ try:
     paths = [
         ('/admin/index.php', 'Solicitudes y mensajes'),
         ('/admin/index.php?tab=sistema', 'Solicitudes y mensajes'),
-        ('/admin/base-datos.php', 'Base de datos'),
-        ('/admin/destinos.php', 'Administrar lugares' if package_value else 'Administrar destinos'),
-        ('/admin/trasladar-negocios.php', 'Trasladar negocios a Cauca Viejo'),
-        ('/admin/negocios.php', 'Catálogo y cobertura'),
-        ('/admin/negocios.php?tab=crear', 'Catálogo y cobertura'),
-        ('/admin/negocios.php?tab=importar', 'Catálogo y cobertura'),
-        ('/admin/negocios.php?tab=revisar', 'Publicar importaciones Gratis sin representante'),
-        ('/admin/importar-negocios.php', 'Importar varios negocios'),
-        ('/admin/importar-negocios.php?plantilla=1', 'schema_version'),
-        ('/admin/reclamaciones.php', 'Solicitudes anteriores de representación'),
-        ('/admin/solicitudes-cuenta.php', 'Registro y reclamaciones'),
-        ('/admin/usuarios.php', 'Cuentas'),
-        ('/admin/atencion-comercios.php', 'Negocios locales'),
-        ('/admin/atencion-comercios.php?view=review', 'Negocios locales'),
-        ('/admin/incidencias.php', 'Errores de ejecución'),
-        ('/admin/reportes.php', 'Reportes'),
-        ('/admin/solicitudes-publicas.php', 'Solicitudes de usuarios'),
-        ('/admin/suscripciones.php', 'Suscripciones'),
-        ('/admin/inversionistas.php', 'Inteligencia de negocio e inversión'),
-        ('/admin/contactos-negocios.php', 'Gestión comercial'),
-        ('/admin/campanas.php', 'Campañas por correo'),
-        ('/admin/correos.php', 'Plantillas y correos'),
-        ('/admin/campanas.php?tab=conexion', 'Remitente y conexión'),
-        ('/admin/campanas.php?tab=correos', 'Negocios destinatarios'),
+        ('/admin/database.php', 'Base de datos'),
+        ('/admin/places.php', 'Administrar lugares' if package_value else 'Administrar destinos'),
+        ('/admin/transfer-businesses.php', 'Trasladar negocios a Cauca Viejo'),
+        ('/admin/businesses.php', 'Catálogo y cobertura'),
+        ('/admin/businesses.php?tab=crear', 'Catálogo y cobertura'),
+        ('/admin/businesses.php?tab=importar', 'Catálogo y cobertura'),
+        ('/admin/businesses.php?tab=revisar', 'Publicar importaciones Gratis sin representante'),
+        ('/admin/import-businesses.php', 'Importar varios negocios'),
+        ('/admin/import-businesses.php?plantilla=1', 'schema_version'),
+        ('/admin/claims.php', 'Solicitudes anteriores de representación'),
+        ('/admin/account-applications.php', 'Registro y reclamaciones'),
+        ('/admin/accounts.php', 'Cuentas'),
+        ('/admin/business-support.php', 'Negocios locales'),
+        ('/admin/business-support.php?view=review', 'Negocios locales'),
+        ('/admin/incidents.php', 'Errores de ejecución'),
+        ('/admin/reports.php', 'Reportes'),
+        ('/admin/public-requests.php', 'Solicitudes de usuarios'),
+        ('/admin/subscriptions.php', 'Suscripciones'),
+        ('/admin/investors.php', 'Inteligencia de negocio e inversión'),
+        ('/admin/business-contacts.php', 'Gestión comercial'),
+        ('/admin/campaigns.php', 'Campañas por correo'),
+        ('/admin/email-templates.php', 'Plantillas y correos'),
+        ('/admin/campaigns.php?tab=conexion', 'Remitente y conexión'),
+        ('/admin/campaigns.php?tab=correos', 'Negocios destinatarios'),
     ]
     # The login is public; all operational pages require an authenticated session.
     for path, _ in paths:
@@ -256,13 +256,13 @@ try:
     GUEST = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
 
     # Private detail and informational link must not confer permissions or publish.
-    detail='/admin/solicitud-detalle.php?type=lead&id=1'
+    detail='/admin/request-details.php?type=lead&id=1'
     guest_detail=request(detail,opener=GUEST)
     check(guest_detail[0]==200 and 'name="password"' in guest_detail[1],'El detalle privado debe redirigir al acceso.')
-    check(request('/admin/solicitud-detalle.php?type=lead&id=99999')[0]==404,'ID inexistente debe devolver 404.')
+    check(request('/admin/request-details.php?type=lead&id=99999')[0]==404,'ID inexistente debe devolver 404.')
     detail_html=request(detail)[1]
     check('&lt;script&gt;' in detail_html and '<script>alert(1)</script>' not in detail_html,'Escape de solicitud.')
-    check('Enviado por la persona' in request('/admin/solicitud-detalle.php?type=account&id=1')[1],'Detalle de cuenta con evidencia enviada.')
+    check('Enviado por la persona' in request('/admin/request-details.php?type=account&id=1')[1],'Detalle de cuenta con evidencia enviada.')
     link_csrf=re.search(r'name="csrf" value="([^"]+)"',request(detail+'&search=Hotel')[1]).group(1)
     check(login_response(request(detail,{'csrf':'invalid','action':'link','business_id':business_id,'confirm':'1'})),'Vínculo exige CSRF.')
     before_memberships=DB.execute('SELECT COUNT(*) FROM business_account_memberships').fetchone()[0]
@@ -279,7 +279,7 @@ try:
     check('ya no existe' in body,'ID ausente no anuncia éxito.')
 
     # Individual reply preview is private and local delivery is always simulated.
-    reply_url='/admin/responder-solicitud.php?lead=1'
+    reply_url='/admin/request-response.php?lead=1'
     check(login_response(request(reply_url,opener=GUEST)),'Respuesta individual requiere administrador.')
     reply_page=request(reply_url)[1]
     reply_csrf=re.search(r'name="csrf" value="([^"]+)"',reply_page).group(1)
@@ -288,7 +288,7 @@ try:
     check(prepared[0]==200 and 'Vista previa' in prepared[1],'Previsualización de respuesta.')
     reply=DB.execute('SELECT * FROM lead_reply_operations WHERE lead_id=1').fetchone()
     check(reply and reply['status']=='draft' and DB.execute('SELECT COUNT(*) FROM lead_reply_attempts').fetchone()[0]==0,'Borrador no contacta proveedor.')
-    preview_url='/admin/respuesta-vista-previa.php?lead=1&operation='+reply['id']
+    preview_url='/admin/response-preview.php?lead=1&operation='+reply['id']
     check(login_response(request(preview_url,opener=GUEST)),'La vista previa del correo debe ser privada.')
     preview_status,preview_html,preview_headers=request(preview_url)
     check(preview_status==200 and '&lt;script&gt;' in preview_html and 'sandbox' in preview_headers.get('Content-Security-Policy',''),'Vista previa escapada y aislada.')
@@ -314,29 +314,29 @@ try:
                 route = path.split('?', 1)[0]
                 expected_sidebar = {
                     '/admin/index.php': 'Estado del sistema' if 'tab=sistema' in path else 'Solicitudes y mensajes',
-                    '/admin/base-datos.php': 'Base de datos',
-                    '/admin/destinos.php': 'Lugares',
-                    '/admin/negocios.php': 'Negocios locales',
-                    '/admin/trasladar-negocios.php': 'Negocios locales',
-                    '/admin/importar-negocios.php': 'Negocios locales',
-                    '/admin/reclamaciones.php': 'Solicitudes y mensajes',
-                    '/admin/solicitudes-cuenta.php': 'Solicitudes y mensajes',
-                    '/admin/usuarios.php': 'Cuentas',
-                    '/admin/suscripciones.php': 'Suscripciones',
-                    '/admin/inversionistas.php': 'Inteligencia e inversión',
-                    '/admin/contactos-negocios.php': 'CRM y campañas',
-                    '/admin/correos.php': 'Plantillas de correo',
-                    '/admin/campanas.php': 'Conexión con Brevo' if 'tab=conexion' in path else 'CRM y campañas',
+                    '/admin/database.php': 'Base de datos',
+                    '/admin/places.php': 'Lugares',
+                    '/admin/businesses.php': 'Negocios locales',
+                    '/admin/transfer-businesses.php': 'Negocios locales',
+                    '/admin/import-businesses.php': 'Negocios locales',
+                    '/admin/claims.php': 'Solicitudes y mensajes',
+                    '/admin/account-applications.php': 'Solicitudes y mensajes',
+                    '/admin/accounts.php': 'Cuentas',
+                    '/admin/subscriptions.php': 'Suscripciones',
+                    '/admin/investors.php': 'Inteligencia e inversión',
+                    '/admin/business-contacts.php': 'CRM y campañas',
+                    '/admin/email-templates.php': 'Plantillas de correo',
+                    '/admin/campaigns.php': 'Conexión con Brevo' if 'tab=conexion' in path else 'CRM y campañas',
                 }.get(route)
                 if expected_sidebar:
                     check(active_label == expected_sidebar, f'La sección activa debe ser {expected_sidebar} en {path}; mostró {active_label}')
-            if path in ('/admin/reportes.php','/admin/solicitudes-publicas.php'):
+            if path in ('/admin/reports.php','/admin/public-requests.php'):
                 check(re.search(r'<main\b[^>]*class="[^"]*admin-page[^\"]*"[^>]*>.*?<aside\b',body,re.S) is not None,'Reports must contain the sidebar inside the page layout to reserve its width.')
-            if path == '/admin/contactos-negocios.php':
+            if path == '/admin/business-contacts.php':
                 check('<meta name="robots" content="noindex,nofollow">' in body and 'Solo administración' in body, 'La pantalla de contactos privados debe quedar autenticada y fuera de indexación.')
-            if path == '/admin/negocios.php?tab=importar':
-                check('contactos-negocios.php' in body and 'negocios.php?tab=revisar' in body, 'La pestaña de importación debe enlazar la carga de contactos privados y la revisión/publicación masiva.')
-            if path.startswith('/admin/negocios.php'):
+            if path == '/admin/businesses.php?tab=importar':
+                check('business-contacts.php' in body and 'businesses.php?tab=revisar' in body, 'La pestaña de importación debe enlazar la carga de contactos privados y la revisión/publicación masiva.')
+            if path.startswith('/admin/businesses.php'):
                 workflow = re.search(r'<nav class="admin-workflow-tabs".*?</nav>', body, re.S)
                 check(workflow is not None, f'Faltan las pestañas de Negocios en {path}')
                 selected_tabs = re.findall(r'<a\b[^>]*aria-current="page"[^>]*>(.*?)</a>', workflow.group(0), re.S)
@@ -344,25 +344,25 @@ try:
                 selected_label = re.sub(r'<[^>]+>', '', selected_tabs[0]).strip()
                 expected_tab = {'tab=crear': 'Listado de negocios', 'tab=importar': 'Importación masiva', 'tab=revisar': 'Publicar importaciones Gratis sin representante'}.get(next((part for part in path.split('?')[1:] if part.startswith('tab=')), ''), 'Listado de negocios')
                 check(selected_label == expected_tab, f'La pestaña activa debe ser {expected_tab} en {path}; mostró {selected_label}')
-    _,upcoming_subs,_=request('/admin/suscripciones.php?renovacion=7&q=Hotel+de+prueba')
+    _,upcoming_subs,_=request('/admin/subscriptions.php?renovacion=7&q=Hotel+de+prueba')
     check('Preparar recordatorio' in upcoming_subs and 'Vence en ' in upcoming_subs,'Paid renewal due within 7 days was not shown with a reminder action.')
-    _,expired_subs,_=request('/admin/suscripciones.php?renovacion=expired&q=Hotel+de+prueba')
+    _,expired_subs,_=request('/admin/subscriptions.php?renovacion=expired&q=Hotel+de+prueba')
     check('Preparar recordatorio' not in expired_subs,'Active subscription with future expiry leaked into expired filter.')
-    health_csrf = re.search(r'name="csrf" value="([^"]+)"', request('/admin/campanas.php?tab=conexion')[1]).group(1)
-    check(login_response(request('/admin/campanas.php?tab=conexion', {'action': 'check_connection', 'csrf': 'invalid'})), 'Diagnóstico sin CSRF')
-    status, health_body, _ = request('/admin/campanas.php?tab=conexion', {'action': 'check_connection', 'csrf': health_csrf, 'return_to': 'system'})
+    health_csrf = re.search(r'name="csrf" value="([^"]+)"', request('/admin/campaigns.php?tab=conexion')[1]).group(1)
+    check(login_response(request('/admin/campaigns.php?tab=conexion', {'action': 'check_connection', 'csrf': 'invalid'})), 'Diagnóstico sin CSRF')
+    status, health_body, _ = request('/admin/campaigns.php?tab=conexion', {'action': 'check_connection', 'csrf': health_csrf, 'return_to': 'system'})
     check(status == 200 and 'Salud del correo · Brevo' in health_body and 'Revisar conexión o configuración' in health_body, 'No informa conexión deshabilitada en Salud')
     check((WORK / 'private/brevo/health.json').is_file(), 'Diagnóstico no persistido en privado')
     check(health_body.index('Salud del correo · Brevo') < health_body.index('Capacidad y disponibilidad'), 'Brevo debe aparecer primero en Estado del sistema')
     check('Conexiones y presión de base de datos' not in health_body and 'Intentos de conexión desde el arranque' not in health_body, 'El detalle de base de datos no debe aparecer en Sistema')
-    db_health_body = request('/admin/base-datos.php')[1]
+    db_health_body = request('/admin/database.php')[1]
     check('Conexiones y rendimiento' in db_health_body and 'no permite consultar estos indicadores' in db_health_body, 'No se deben fabricar indicadores cuando el controlador no los ofrece')
-    check(login_response(request('/admin/base-datos.php', {'action': 'start_health_period', 'csrf': 'invalid'})), 'Período sin CSRF')
+    check(login_response(request('/admin/database.php', {'action': 'start_health_period', 'csrf': 'invalid'})), 'Período sin CSRF')
     db_health_csrf = re.search(r'name="csrf" value="([^"]+)"', db_health_body).group(1)
-    check(request('/admin/base-datos.php', {'action': 'start_health_period', 'csrf': db_health_csrf})[0] == 400, 'No debe iniciar período con contadores no disponibles en SQLite')
+    check(request('/admin/database.php', {'action': 'start_health_period', 'csrf': db_health_csrf})[0] == 400, 'No debe iniciar período con contadores no disponibles en SQLite')
     check(not (WORK / 'private/database-health/period.json').exists(), 'No debe fabricar mediciones ausentes')
-    check(login_response(request('/admin/campanas.php?tab=conexion', {'action': 'check_connection', 'csrf': health_csrf}, opener=GUEST)), 'Visitante pudo ejecutar el diagnóstico')
-    contact_csrf = re.search(r'name="csrf" value="([^"]+)"', request('/admin/contactos-negocios.php?tab=cargar')[1]).group(1)
+    check(login_response(request('/admin/campaigns.php?tab=conexion', {'action': 'check_connection', 'csrf': health_csrf}, opener=GUEST)), 'Visitante pudo ejecutar el diagnóstico')
+    contact_csrf = re.search(r'name="csrf" value="([^"]+)"', request('/admin/business-contacts.php?tab=cargar')[1]).group(1)
     research_before = DB.execute('SELECT COUNT(*) FROM business_research_contacts').fetchone()[0]
     business_before_research = DB.execute('SELECT COUNT(*) FROM businesses').fetchone()[0]
     research_package = json.dumps({
@@ -379,7 +379,7 @@ try:
             'legal_basis_status': 'Pendiente de revisión',
         }]}],
     }).encode()
-    status, body, _ = multipart('/admin/contactos-negocios.php',
+    status, body, _ = multipart('/admin/business-contacts.php',
         {'csrf': contact_csrf, 'action': 'import_private_contacts'},
         [('package', 'contactos.json', 'application/json', research_package)])
     check(status == 200 and '1 registros de canal y fuente añadidos' in body and 'Se conservaron las fichas existentes' in body,
@@ -388,18 +388,18 @@ try:
     check(tuple(research_row) == ('NO_OBTENIDA', 0, 0, 0), 'La importación no debe inventar consentimiento ni autorización de campañas.')
     check(DB.execute('SELECT COUNT(*) FROM businesses').fetchone()[0] == business_before_research,
           'Importar contactos privados creó un negocio.')
-    status, body, _ = request('/admin/contactos-negocios.php?business_id=' + str(business_id))
+    status, body, _ = request('/admin/business-contacts.php?business_id=' + str(business_id))
     check(status == 200 and 'hotel@example.invalid' in body and 'Ver fuente' in body,
           'El administrador no puede consultar el contacto privado con su fuente.')
-    repeated_status, repeated_body, _ = multipart('/admin/contactos-negocios.php',
+    repeated_status, repeated_body, _ = multipart('/admin/business-contacts.php',
         {'csrf': contact_csrf, 'action': 'import_private_contacts'},
         [('package', 'contactos.json', 'application/json', research_package)])
     check(repeated_status == 200 and '0 registros de canal y fuente añadidos' in repeated_body and '1 ya estaban guardados' in repeated_body,
           'Repetir la importación duplicó un contacto privado.')
     check(DB.execute('SELECT COUNT(*) FROM business_research_contacts').fetchone()[0] == research_before + 1,
           'La importación idempotente creó contactos duplicados.')
-    _, with_channels, _ = request('/admin/contactos-negocios.php?contact=with&subscription=all')
-    _, without_channels, _ = request('/admin/contactos-negocios.php?contact=without&subscription=all')
+    _, with_channels, _ = request('/admin/business-contacts.php?contact=with&subscription=all')
+    _, without_channels, _ = request('/admin/business-contacts.php?contact=without&subscription=all')
     def channel_summary(html):
         summary = re.search(r'<div class="crm-metrics".*?</div>', html, re.S).group(0)
         return [int(value) for value in re.findall(r'<strong>([0-9]+)</strong>', summary)]
@@ -408,103 +408,103 @@ try:
           'Con/Sin canales debe conservar los mismos totales y no ocultar los canales existentes en el resumen.')
     check('data-open-channels' in with_channels and 'admin-business-channels.js' in with_channels,
           'Los canales deben abrirse en un diálogo desde la fila del negocio.')
-    _, channel_detail, _ = request('/admin/contactos-negocios.php?business_id=' + str(business_id))
+    _, channel_detail, _ = request('/admin/business-contacts.php?business_id=' + str(business_id))
     check('crm-channel-card-value' in channel_detail and 'Fuentes y opciones' in channel_detail,
           'El detalle debe mostrar canales en tarjetas y conservar sus fuentes.')
 
 
-    status, campaign_html, _ = request('/admin/campanas.php?tab=correos')
+    status, campaign_html, _ = request('/admin/campaigns.php?tab=correos')
     check(status == 200 and 'hotel@example.invalid' in campaign_html and 'Pendiente de revisión' in campaign_html, 'Los correos importados deben verse pendientes; no habilitar campañas automáticamente.')
     campaign_csrf = re.search(r'name="csrf" value="([^"]+)"', campaign_html).group(1)
     channel_id = DB.execute('SELECT id FROM business_research_contacts WHERE contact_value=?', ('hotel@example.invalid',)).fetchone()[0]
-    bad_response = request('/admin/campanas.php', {'csrf': 'invalid', 'action': 'permission', 'channel_id': str(channel_id), 'decision': 'allowed', 'confirmed': '1', 'evidence': 'Fictitious permission for local test'})
+    bad_response = request('/admin/campaigns.php', {'csrf': 'invalid', 'action': 'permission', 'channel_id': str(channel_id), 'decision': 'allowed', 'confirmed': '1', 'evidence': 'Fictitious permission for local test'})
     check(login_response(bad_response) and DB.execute('SELECT COUNT(*) FROM business_email_permissions').fetchone()[0] == 0, 'La revisión debe exigir CSRF.')
-    status, _, _ = request('/admin/campanas.php', {'csrf': campaign_csrf, 'action': 'create', 'name': 'Prueba bloqueada', 'subject': 'Asunto', 'body': 'Mensaje', 'channels[]': str(channel_id)})
+    status, _, _ = request('/admin/campaigns.php', {'csrf': campaign_csrf, 'action': 'create', 'name': 'Prueba bloqueada', 'subject': 'Asunto', 'body': 'Mensaje', 'channels[]': str(channel_id)})
     check(status == 400 and DB.execute('SELECT COUNT(*) FROM business_email_campaigns').fetchone()[0] == 0, 'No crear campaña con audiencia pendiente.')
-    status, _, _ = request('/admin/campanas.php', {'csrf': campaign_csrf, 'action': 'permission', 'channel_id': str(channel_id), 'decision': 'allowed', 'confirmed': '1', 'evidence': 'Fictitious permission for isolated HTTP test'})
+    status, _, _ = request('/admin/campaigns.php', {'csrf': campaign_csrf, 'action': 'permission', 'channel_id': str(channel_id), 'decision': 'allowed', 'confirmed': '1', 'evidence': 'Fictitious permission for isolated HTTP test'})
     check(status == 200, 'La revisión explícita del correo no se guardó.')
-    status, body, _ = request('/admin/campanas.php', {'csrf': campaign_csrf, 'action': 'create', 'name': 'Prueba local', 'subject': 'Asunto local', 'body': '<script>alert(1)</script>', 'channels[]': str(channel_id)})
+    status, body, _ = request('/admin/campaigns.php', {'csrf': campaign_csrf, 'action': 'create', 'name': 'Prueba local', 'subject': 'Asunto local', 'body': '<script>alert(1)</script>', 'channels[]': str(channel_id)})
     check(status == 200 and '&lt;script&gt;' in body and 'Aprobar esta versión' in body, 'El borrador debe abrir para revisión con contenido escapado.')
-    email_status,email_template_form,_=request('/admin/correos.php?tab=templates')
+    email_status,email_template_form,_=request('/admin/email-templates.php?tab=templates')
     email_csrf=re.search(r'name="csrf" value="([^"]+)"',email_template_form).group(1)
-    check(login_response(request('/admin/correos.php',{'csrf':'invalid','action':'save_template'})),'Email templates must require CSRF.')
-    email_status,email_saved,_=request('/admin/correos.php?tab=templates',{'csrf':email_csrf,'action':'save_template','name':'Respuesta HTTP','subject':'Respuesta para {{business_name}}','html':'<p>Hola {{business_name}}</p><script>evil()</script>'})
+    check(login_response(request('/admin/email-templates.php',{'csrf':'invalid','action':'save_template'})),'Email templates must require CSRF.')
+    email_status,email_saved,_=request('/admin/email-templates.php?tab=templates',{'csrf':email_csrf,'action':'save_template','name':'Respuesta HTTP','subject':'Respuesta para {{business_name}}','html':'<p>Hola {{business_name}}</p><script>evil()</script>'})
     check(email_status==200 and 'Plantilla guardada' in email_saved,'HTML template was not saved.')
     template_id=re.search(r'name="template_id" value="([a-f0-9]{32})"',email_saved).group(1)
-    _,email_composer,_=request('/admin/correos.php?template='+template_id+'&business_id='+str(business_id))
+    _,email_composer,_=request('/admin/email-templates.php?template='+template_id+'&business_id='+str(business_id))
     recipient_key=re.search(r'<option value="([a-f0-9]{64})"',email_composer).group(1)
-    email_status,email_preview,_=request('/admin/correos.php',{'csrf':email_csrf,'action':'preview','template_id':template_id,'recipient':recipient_key,'requested_reply':'1'})
+    email_status,email_preview,_=request('/admin/email-templates.php',{'csrf':email_csrf,'action':'preview','template_id':template_id,'recipient':recipient_key,'requested_reply':'1'})
     check(email_status==200 and 'Vista previa del correo' in email_preview and 'Hotel de prueba' in email_preview and 'sandbox=""' in email_preview and 'evil()' not in email_preview,'Individual email did not render safe actual business data.')
-    email_status,email_history,_=request('/admin/correos.php?tab=history&business_id='+str(business_id))
+    email_status,email_history,_=request('/admin/email-templates.php?tab=history&business_id='+str(business_id))
     check(email_status==200 and 'Respuesta para Hotel de prueba' in email_history and 'Borrador revisable' in email_history,'Individual mail draft missing from business history.')
     preview_id=re.search(r'message=([a-f0-9]{32})',email_history).group(1)
-    check(request('/admin/correos.php',{'csrf':email_csrf,'action':'send','message_id':preview_id,'confirm_send':'1'})[0]==400,'Local individual email must never send live mail.')
+    check(request('/admin/email-templates.php',{'csrf':email_csrf,'action':'send','message_id':preview_id,'confirm_send':'1'})[0]==400,'Local individual email must never send live mail.')
     campaign_row = DB.execute('SELECT id,content_hash FROM business_email_campaigns').fetchone()
-    _,reuse_html,_=request('/admin/campanas.php?reuse='+str(campaign_row[0]))
+    _,reuse_html,_=request('/admin/campaigns.php?reuse='+str(campaign_row[0]))
     check('value="Asunto local"' in reuse_html and '&lt;script&gt;' in reuse_html and 'name="channels[]"' in reuse_html and 'name="channels[]" checked' not in reuse_html,'Reusing a message must escape content and require a fresh recipient selection.')
-    _,filtered_html,_=request('/admin/campanas.php?tab=correos&q=nonexistent-business')
+    _,filtered_html,_=request('/admin/campaigns.php?tab=correos&q=nonexistent-business')
     check('hotel@example.invalid' not in filtered_html,'Recipient search did not filter businesses.')
-    _,templates_html,_=request('/admin/campanas.php?tab=plantillas')
+    _,templates_html,_=request('/admin/campaigns.php?tab=plantillas')
     check('Usar como base' in templates_html and 'Prueba local' in templates_html,'Saved messages are not available to reuse.')
     campaign_tabs=re.search(r'<nav class="admin-workflow-tabs".*?</nav>',templates_html,re.S).group(0)
     check('tab=conexion' not in campaign_tabs,'Connection settings must stay out of campaign tabs.')
 
-    status, body, _ = request('/admin/campanas.php', {'csrf': campaign_csrf, 'action': 'approve', 'id': str(campaign_row[0]), 'hash': campaign_row[1], 'reviewed': '1'})
+    status, body, _ = request('/admin/campaigns.php', {'csrf': campaign_csrf, 'action': 'approve', 'id': str(campaign_row[0]), 'hash': campaign_row[1], 'reviewed': '1'})
     check(status == 400 and 'Completa y habilita' in body, 'La conexión no configurada debe bloquear aprobación y envío.')
 
     settings_input = {'csrf': campaign_csrf, 'action': 'settings', 'sender_name': 'Test Sender', 'sender_email': 'sender@example.invalid', 'reply_to': 'reply@example.invalid', 'sender_address': 'Test address', 'api_key': 'fictitious-http-api-key', 'enabled': '1'}
-    status, body, _ = request('/admin/campanas.php', settings_input)
+    status, body, _ = request('/admin/campaigns.php', settings_input)
     check(status == 200 and 'Conexión guardada' in body and 'fictitious-http-api-key' not in body, 'La llave no debe volver en HTML.')
     private_settings = (WORK / 'private/brevo/settings.json').read_text()
     check('fictitious-http-api-key' not in private_settings, 'La llave debe quedar cifrada fuera de public/.')
-    status,reloaded,_=request('/admin/campanas.php?tab=conexion')
+    status,reloaded,_=request('/admin/campaigns.php?tab=conexion')
     check('•••••••••••• · Clave guardada' in reloaded and 'name="api_key" autocomplete="new-password" maxlength="1000" placeholder=' in reloaded,'Falta máscara informativa sin devolver la clave como valor.')
     check(status==200 and 'Test Sender' in reloaded and 'Llave guardada de forma privada' in reloaded and 'fictitious-http-api-key' not in reloaded,'La conexión no persiste al recargar.')
     invalid_settings=dict(settings_input,sender_name='Nombre conservado',sender_email='correo-invalido')
-    status,invalid_body,_=request('/admin/campanas.php?tab=conexion',invalid_settings)
+    status,invalid_body,_=request('/admin/campaigns.php?tab=conexion',invalid_settings)
     check(status==400 and 'Nombre conservado' in invalid_body and 'correo-invalido' in invalid_body and 'fictitious-http-api-key' not in invalid_body,'Un error borra los datos del formulario o expone la API.')
     check((WORK/'private/brevo/settings.json').read_text()==private_settings,'Un formulario inválido alteró la conexión guardada.')
     preserved_settings=dict(settings_input,api_key='',sender_address='Test address\nFloor 15')
-    status,body,_=request('/admin/campanas.php?tab=conexion',preserved_settings)
+    status,body,_=request('/admin/campaigns.php?tab=conexion',preserved_settings)
     check(status==200 and 'Conexión guardada' in body and 'Test address Floor 15' in body,'No admite dirección pegada o clave vacía para conservar la existente.')
-    status, _, _ = request('/admin/campanas.php', {'csrf': campaign_csrf, 'action': 'approve', 'id': str(campaign_row[0]), 'hash': campaign_row[1], 'reviewed': '1'})
+    status, _, _ = request('/admin/campaigns.php', {'csrf': campaign_csrf, 'action': 'approve', 'id': str(campaign_row[0]), 'hash': campaign_row[1], 'reviewed': '1'})
     check(status == 400, 'Cambiar el remitente requiere un nuevo borrador revisado.')
     check(DB.execute('SELECT status FROM business_email_campaigns WHERE id=?', (campaign_row[0],)).fetchone()[0] == 'draft', 'Las pruebas HTTP no deben preparar ni enviar campañas al proveedor.')
 
-    _, review_html, _ = request('/admin/negocios.php?tab=revisar')
+    _, review_html, _ = request('/admin/businesses.php?tab=revisar')
     check('Seleccionar todos los' in review_html and 'Aprobar y publicar seleccionados' in review_html, 'La revisión de negocios debe admitir selección múltiple y publicación por lote.')
     check('Posibles duplicados' in review_html and 'Hospedaje' in review_html, 'La revisión por lote debe permitir filtrar posibles duplicados y categorías antes de publicar.')
-    status, body, _ = request('/admin/inversionistas.php?periodo=30')
+    status, body, _ = request('/admin/investors.php?periodo=30')
     check(status == 200 and 'Últimos 30 días' in body and 'Visitantes y comportamiento medido' in body and 'No hay analítica de visitas' not in body, 'La inteligencia debe reutilizar la medición existente y aclarar su alcance.')
     check('Valor asociado a pagos revisados' in body and '19.900 COP' in body and 'Negocios con suscripción paga vigente' in body, 'Debe presentar el valor cotizado y el negocio pago desde registros persistidos.')
     check('100,0%' in body and '1 de 1 negocios con vencimiento renovaron a tiempo' in body, 'La retención debe contar negocios con vencimiento y renovaciones enlazadas dentro del plazo.')
     check('100,0%' in body and '1 de 1 negocios con vencimiento renovaron a tiempo' in body, 'La retención debe contar negocios con vencimiento y renovaciones enlazadas dentro del plazo.')
     check('Actividad nueva; período anterior sin registros' in body or 'Sin actividad en ambos períodos' in body, 'Debe explicar comparaciones sin una base previa sin inventar porcentajes.')
-    status, costs_html, _ = request('/admin/costos.php')
+    status, costs_html, _ = request('/admin/costs.php')
     check(status==200 and 'Registrar un gasto realizado' in costs_html,'El registro de costos debe estar disponible para administración.')
     costs_csrf=__import__('re').search(r'name="csrf" value="([^\"]+)"',costs_html).group(1)
     cost_fields={'csrf':costs_csrf,'action':'add','cost_date':__import__('datetime').datetime.now(__import__('datetime').timezone.utc).strftime('%Y-%m-%d'),'category':'travel','amount_cop':'2400.50','description':'Gasto HTTP de prueba','destination_id':str(destination_id)}
-    check(login_response(request('/admin/costos.php',dict(cost_fields,csrf='incorrecto'))),'El registro de costos exige CSRF.')
-    check(request('/admin/costos.php',cost_fields)[0]==200,'El gasto válido no se guardó.')
+    check(login_response(request('/admin/costs.php',dict(cost_fields,csrf='incorrecto'))),'El registro de costos exige CSRF.')
+    check(request('/admin/costs.php',cost_fields)[0]==200,'El gasto válido no se guardó.')
     check(DB.execute('SELECT description FROM operating_costs').fetchone()[0]=='Gasto HTTP de prueba','El gasto debe persistirse en la base.')
-    check(login_response(request('/admin/costos.php',opener=GUEST)),'Los costos deben permanecer privados.')
+    check(login_response(request('/admin/costs.php',opener=GUEST)),'Los costos deben permanecer privados.')
     receipt_png=base64.b64decode('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aZ1sAAAAASUVORK5CYII=')
     before_costs=DB.execute('SELECT COUNT(*) FROM operating_costs').fetchone()[0]
     invalid_file=[('evidence','factura.pdf','application/pdf',b'<html>not a receipt</html>')]
-    check(multipart('/admin/costos.php',cost_fields,invalid_file)[0]==400,'Se aceptó un soporte con tipo falso.')
+    check(multipart('/admin/costs.php',cost_fields,invalid_file)[0]==400,'Se aceptó un soporte con tipo falso.')
     check(DB.execute('SELECT COUNT(*) FROM operating_costs').fetchone()[0]==before_costs,'Un soporte inválido dejó un gasto guardado parcialmente.')
-    check(multipart('/admin/costos.php',cost_fields,[('evidence','pantallazo.png','image/png',receipt_png)])[0]==200,'No se guardó el gasto con pantallazo.')
+    check(multipart('/admin/costs.php',cost_fields,[('evidence','pantallazo.png','image/png',receipt_png)])[0]==200,'No se guardó el gasto con pantallazo.')
     receipt=DB.execute('SELECT * FROM operating_cost_evidence ORDER BY id DESC LIMIT 1').fetchone()
     check(receipt is not None,'No se conservó el soporte asociado al gasto.')
-    with ADMIN.open(BASE+'/admin/soporte-gasto.php?id='+str(receipt['id'])) as response:
+    with ADMIN.open(BASE+'/admin/expense-evidence.php?id='+str(receipt['id'])) as response:
         check(response.read()==receipt_png and 'attachment' in response.headers.get('Content-Disposition',''),'El soporte privado no se descarga correctamente.')
-    check(login_response(request('/admin/soporte-gasto.php?id='+str(receipt['id']),opener=GUEST)),'Un visitante pudo obtener una factura privada.')
+    check(login_response(request('/admin/expense-evidence.php?id='+str(receipt['id']),opener=GUEST)),'Un visitante pudo obtener una factura privada.')
     check(not list((WORK/'public').rglob(receipt['storage_name'])),'El soporte quedó publicado dentro de la web.')
     attach_fields={'csrf':costs_csrf,'action':'attach','cost_id':str(receipt['cost_id'])}
-    check(multipart('/admin/costos.php',attach_fields,[('evidence','recibo.png','image/png',receipt_png)])[0]==200,'No se pudo adjuntar un segundo documento a un gasto existente.')
+    check(multipart('/admin/costs.php',attach_fields,[('evidence','recibo.png','image/png',receipt_png)])[0]==200,'No se pudo adjuntar un segundo documento a un gasto existente.')
     check(DB.execute('SELECT COUNT(*) FROM operating_cost_evidence WHERE cost_id=?',(receipt['cost_id'],)).fetchone()[0]==2,'Se reemplazó un soporte anterior en lugar de conservar ambos.')
 
-    review_query = '/admin/negocios.php?tab=revisar&destino=' + str(destination_id) + '&categoria=hospedaje&q=Hotel%20de%20lote&estado=draft&verificacion=PUBLICO&duplicados=no'
+    review_query = '/admin/businesses.php?tab=revisar&destino=' + str(destination_id) + '&categoria=hospedaje&q=Hotel%20de%20lote&estado=draft&verificacion=PUBLICO&duplicados=no'
     status, review_page_one, _ = request(review_query)
     check(status == 200 and '27 resultados' in review_page_one and 'Página 1 de 2' in review_page_one, 'La revisión de lotes debe paginar y conservar el conteo completo del filtro.')
     check(len(re.findall(r'data-business-id(?:\s|>)', review_page_one)) == 25, 'La primera página de revisión debe mostrar 25 negocios, no el lote completo.')
@@ -513,48 +513,48 @@ try:
     check(status == 200 and '27 resultados' in review_page_two and 'Página 2 de 2' in review_page_two, 'La segunda página debe conservar los filtros del lote.')
     review_csrf = re.search(r'name="csrf" value="([^"]+)"', review_page_two).group(1)
     bulk_fields = {'review_token': re.search(r'name="review_token" value="([^"]+)"',review_page_two).group(1), 'csrf': review_csrf, 'action': 'publish_imported_bulk', 'select_all_filtered': '1', 'filter_destination': str(destination_id), 'filter_category': 'hospedaje', 'filter_query': 'Hotel de lote', 'filter_status': 'draft', 'filter_verification': 'PUBLICO', 'filter_duplicates': 'no'}
-    status, bulk_result, _ = request('/admin/negocios.php?tab=revisar', bulk_fields)
+    status, bulk_result, _ = request('/admin/businesses.php?tab=revisar', bulk_fields)
     check(status == 200 and 'Lote revisado: 27 publicados' in bulk_result, 'Seleccionar todos los resultados filtrados debe incluir registros de ambas páginas.')
     _, html, _ = request('/admin/index.php')
     csrf = __import__('re').search(r'name="csrf" value="([^"]+)"', html).group(1)
     # Legacy representation request status transition and SQL persistence.
-    status, body, _ = request('/admin/reclamaciones.php', {'csrf': csrf, 'action': 'update', 'request_id': 1, 'status': 'in_review', 'admin_note': 'Revisar documento'})
+    status, body, _ = request('/admin/claims.php', {'csrf': csrf, 'action': 'update', 'request_id': 1, 'status': 'in_review', 'admin_note': 'Revisar documento'})
     check(status == 200 and 'Se actualizó la solicitud' in body, 'No confirmó la actualización de la solicitud anterior.')
     row = DB.execute('SELECT status,admin_note FROM business_claim_requests WHERE id=1').fetchone()
     check(tuple(row) == ('in_review', 'Revisar documento'), 'El cambio de estado anterior no persistió.')
-    status, body, _ = request('/admin/reclamaciones.php', {'csrf': csrf, 'action': 'update', 'request_id': 1, 'status': 'closed', 'admin_note': 'Estado inválido'})
+    status, body, _ = request('/admin/claims.php', {'csrf': csrf, 'action': 'update', 'request_id': 1, 'status': 'closed', 'admin_note': 'Estado inválido'})
     check(status == 400 and 'no válido' in body, 'Se aceptó un estado no permitido para una solicitud anterior.')
 
     # Business account application review: both status and note must reach the database.
-    status, body, _ = request('/admin/solicitudes-cuenta.php', {'csrf': csrf, 'action': 'review', 'application_id': 1, 'status': 'in_review', 'admin_note': 'Validar existencia'})
+    status, body, _ = request('/admin/account-applications.php', {'csrf': csrf, 'action': 'review', 'application_id': 1, 'status': 'in_review', 'admin_note': 'Validar existencia'})
     check(status == 200 and 'Se actualizó el estado de la solicitud' in body, 'No confirmó la revisión de una solicitud de cuenta.')
     row = DB.execute('SELECT status,admin_note FROM business_account_applications WHERE id=1').fetchone()
     check(tuple(row) == ('in_review', 'Validar existencia'), 'La revisión de cuenta no persistió.')
     # Requests without submitted evidence must remain unauthorized.
-    status, body, _ = request('/admin/solicitudes-cuenta.php', {'csrf': csrf, 'action': 'review', 'application_id': 1, 'status': 'approved', 'admin_note': 'RUT revisado; matrícula mercantil confirmada'})
+    status, body, _ = request('/admin/account-applications.php', {'csrf': csrf, 'action': 'review', 'application_id': 1, 'status': 'approved', 'admin_note': 'RUT revisado; matrícula mercantil confirmada'})
     check(status == 400 and 'No se puede aprobar' in body, 'La administración no debe aprobar una solicitud sin documentos de identidad y del negocio.')
     pending_application = DB.execute('SELECT status,business_id FROM business_account_applications WHERE id=1').fetchone()
     check(tuple(pending_application) == ('in_review', None), 'Una solicitud sin documentos creó un negocio o concedió acceso.')
 
     # The Accounts page does not create orphaned accounts; accounts enter through registration.
     account_form = {'csrf': csrf, 'action': 'save', 'account_type': 'business', 'display_name': 'Cuenta sin negocio', 'email': 'sin-negocio@example.invalid'}
-    status, body, _ = request('/admin/usuarios.php', account_form)
+    status, body, _ = request('/admin/accounts.php', account_form)
     check(status == 400 and 'Las cuentas se crean desde el registro empresarial' in body, 'El panel aceptó crear una cuenta empresarial por fuera del registro enlazado.')
     account_form.update(account_type='traveler', display_name='Viajera de prueba', email='viajera@example.invalid')
-    status, body, _ = request('/admin/usuarios.php', account_form)
+    status, body, _ = request('/admin/accounts.php', account_form)
     check(status == 400 and 'Las cuentas se crean desde el registro empresarial' in body, 'El panel permitió crear cuentas pendientes desconectadas del registro público.')
     check(DB.execute("SELECT COUNT(*) FROM accounts WHERE email IN ('sin-negocio@example.invalid','viajera@example.invalid')").fetchone()[0] == 0, 'Una acción deshabilitada creó cuentas huérfanas.')
 
     # Import page returns validation errors in the integrated Negocios > Importación tab.
     business_count_before_import = DB.execute('SELECT COUNT(*) FROM businesses').fetchone()[0]
     bad_package = json.dumps({'schema_version': 'business-import-v1', 'destination_slug': 'jerico', 'businesses': []}).encode()
-    status, body, _ = multipart('/admin/importar-negocios.php', {'csrf': csrf, 'action': 'import'}, [])
+    status, body, _ = multipart('/admin/import-businesses.php', {'csrf': csrf, 'action': 'import'}, [])
     check(status == 200 and 'Selecciona un archivo JSON o ZIP válido' in body and 'Importar varios negocios' in body, 'La importación integrada no indicó que falta seleccionar el archivo.')
-    status, body, _ = multipart('/admin/importar-negocios.php', {'csrf': csrf, 'action': 'import'}, [('package', 'invalid.json', 'application/json', b'{no-json')])
+    status, body, _ = multipart('/admin/import-businesses.php', {'csrf': csrf, 'action': 'import'}, [('package', 'invalid.json', 'application/json', b'{no-json')])
     check(status == 200 and 'JSON válido' in body, 'La importación integrada no rechazó JSON malformado con error legible.')
     check(DB.execute('SELECT COUNT(*) FROM businesses').fetchone()[0] == business_count_before_import, 'La importación inválida dejó registros parciales.')
     valid_package = json.dumps({'schema_version':'business-import-v1','destination_slug':'jerico','businesses':[{'name':'Comercio importado de prueba','summary':'','description':'','category_code':'hospedaje','information_status':'PUBLICO','sources':[{'url':'https://example.invalid/fuente','note':'Prueba automatizada'}]}]}).encode()
-    status, body, _ = multipart('/admin/importar-negocios.php', {'csrf': csrf, 'action': 'import'}, [('package', 'valid.json', 'application/json', valid_package)])
+    status, body, _ = multipart('/admin/import-businesses.php', {'csrf': csrf, 'action': 'import'}, [('package', 'valid.json', 'application/json', valid_package)])
     check(status == 200 and 'Se importaron 1 negocios' in body and 'Importar varios negocios' in body and ('Revisar el directorio privado del lugar' if package_value else 'Revisar el directorio privado del destino') in body, f'La importación válida no terminó, no ofreció previsualizar el directorio o no regresó a su pestaña: {status} {body[-500:]}')
     imported = DB.execute("SELECT b.publication_status,b.claim_status,b.information_status,b.record_origin,s.plan_code,s.status FROM businesses b JOIN business_translations t ON t.business_id=b.id AND t.locale='es' JOIN business_subscriptions s ON s.business_id=b.id WHERE t.display_name='Comercio importado de prueba'").fetchone()
     check(tuple(imported) == ('draft','NO_RECLAMADO','PUBLICO','public_import','free','pending_publication'), 'La ficha importada no quedó como Gratis, privada y sin reclamar.')
@@ -562,8 +562,8 @@ try:
     check(len(imported_locales) == 3 and len({row['display_name'] for row in imported_locales}) == 1, 'La importación masiva no conservó el nombre propio en los tres idiomas del portal.')
     DB.execute("UPDATE businesses SET latitude=5.7914719,longitude=-75.7862113 WHERE id=(SELECT business_id FROM business_translations WHERE locale='es' AND display_name='Comercio importado de prueba')")
     DB.commit()
-    fresh_review=request('/admin/negocios.php?tab=revisar')[1]
-    status, body, _ = request('/admin/negocios.php?tab=revisar', {'review_token':re.search(r'name="review_token" value="([^"]+)"',fresh_review).group(1),'csrf': csrf, 'action': 'publish_imported_bulk', 'select_all_filtered': '1', 'filter_destination': str(destination_id), 'filter_category': 'hospedaje', 'filter_status': 'draft', 'filter_verification': 'PUBLICO', 'filter_duplicates': 'no'})
+    fresh_review=request('/admin/businesses.php?tab=revisar')[1]
+    status, body, _ = request('/admin/businesses.php?tab=revisar', {'review_token':re.search(r'name="review_token" value="([^"]+)"',fresh_review).group(1),'csrf': csrf, 'action': 'publish_imported_bulk', 'select_all_filtered': '1', 'filter_destination': str(destination_id), 'filter_category': 'hospedaje', 'filter_status': 'draft', 'filter_verification': 'PUBLICO', 'filter_duplicates': 'no'})
     check(status == 200 and 'Lote revisado: 1 publicados' in body, 'La aprobación masiva filtrada no publicó el negocio importado seleccionado.')
     bulk_row = DB.execute("SELECT b.publication_status,s.status FROM businesses b JOIN business_translations t ON t.business_id=b.id AND t.locale='es' JOIN business_subscriptions s ON s.business_id=b.id WHERE t.display_name='Comercio importado de prueba'").fetchone()
     check(tuple(bulk_row) == ('published','active'), 'La aprobación masiva no activó el registro Gratis tras publicarlo.')
@@ -572,10 +572,10 @@ try:
     before_free = DB.execute('SELECT public_id,record_origin FROM businesses WHERE id=?', (imported_id,)).fetchone()
     count_before_free = DB.execute('SELECT COUNT(*) FROM businesses').fetchone()[0]
     minimal_free = {'csrf': csrf, 'action': 'save', 'id': str(imported_id), 'destination_id': str(destination_id), 'category_code': 'hospedaje', 'plan_code': 'free', 'map_workflow': '1', 'location_confirmed': '0', 'translations[es][display_name]': 'Comercio importado de prueba'}
-    free_status, free_body, _ = request('/admin/negocios.php', minimal_free)
+    free_status, free_body, _ = request('/admin/businesses.php', minimal_free)
     check(free_status == 200 and 'Abrir o editar este negocio' in free_body, 'Editar Gratis debe guardar sin dirección, mapa, teléfono, descripción ni frecuencia de pago.')
     check(tuple(DB.execute('SELECT public_id,record_origin FROM businesses WHERE id=?', (imported_id,)).fetchone()) == tuple(before_free) and DB.execute('SELECT COUNT(*) FROM businesses').fetchone()[0] == count_before_free, 'Editar Gratis debe conservar ID, origen y el mismo registro.')
-    _, free_form, _ = request('/admin/negocios.php?id=' + str(imported_id))
+    _, free_form, _ = request('/admin/businesses.php?id=' + str(imported_id))
     check('data-paid-only hidden disabled' in free_form and not re.search(r'<input[^>]*name="address_text"[^>]*\brequired\b', free_form), 'El HTML gratuito no debe exigir dirección ni permitir validar campos pagos ocultos.')
 
     if os.environ.get('EL_FREE_EDITOR_BROWSER') == '1':
@@ -583,24 +583,24 @@ try:
         check(DB.execute('SELECT COUNT(*) FROM business_categories WHERE business_id=? AND category_code=?', (imported_id, 'alimentacion')).fetchone()[0] == 1, 'El editor no guardó la categoría adicional en el mismo negocio.')
 
     before_manual_link=[tuple(row) for row in DB.execute('SELECT * FROM business_account_memberships ORDER BY id')]
-    status,account_list,_=request('/admin/usuarios.php')
+    status,account_list,_=request('/admin/accounts.php')
     check(status==200 and 'name="action" value="link"' not in account_list and 'Asignar un negocio' not in account_list,'Accounts must not offer manual business assignment.')
-    status,blocked_link,_=request('/admin/usuarios.php',{'csrf':csrf,'action':'link','account_id':'1','business_id':str(imported_id),'membership_role':'owner'})
+    status,blocked_link,_=request('/admin/accounts.php',{'csrf':csrf,'action':'link','account_id':'1','business_id':str(imported_id),'membership_role':'owner'})
     check(status==403 and 'asociación manual' in blocked_link,'Direct manual assignment must be blocked server-side.')
     check([tuple(row) for row in DB.execute('SELECT * FROM business_account_memberships ORDER BY id')]==before_manual_link,'Blocked manual assignment changed memberships.')
     # Manual creation is blocked even through a direct authenticated POST.
     before_manual_count=DB.execute('SELECT COUNT(*) FROM businesses').fetchone()[0]
-    failed_status,failed_body,_=request('/admin/negocios.php',{'csrf':csrf,'action':'save','id':'','translations[es][display_name]':'Forbidden manual business'})
+    failed_status,failed_body,_=request('/admin/businesses.php',{'csrf':csrf,'action':'save','id':'','translations[es][display_name]':'Forbidden manual business'})
     check(failed_status==403 and 'creación manual está deshabilitada' in failed_body,'Manual creation must be blocked server-side.')
     check(DB.execute('SELECT COUNT(*) FROM businesses').fetchone()[0]==before_manual_count,'Blocked creation inserted a business.')
-    check('id="business-form"' not in request('/admin/negocios.php?tab=crear')[1],'Direct create link exposed a creation form.')
+    check('id="business-form"' not in request('/admin/businesses.php?tab=crear')[1],'Direct create link exposed a creation form.')
     # Seed a historical business and verify editing remains available.
     DB.execute("INSERT INTO businesses(public_id,destination_id,category_code,record_origin,slug,information_status,claim_status,operation_status,publication_status) VALUES('historical-edit-fixture',?,'hospedaje','admin_created','hostal-creado-por-prueba','PENDIENTE_REVISION','NO_RECLAMADO','DESCONOCIDO','draft')",(destination_id,))
     edit_fixture_id=DB.execute('SELECT last_insert_rowid()').fetchone()[0]
     DB.execute("INSERT INTO business_translations(business_id,locale,display_name,description) VALUES(?,'es','Hostal creado por prueba','')",(edit_fixture_id,))
     DB.commit()
     missing_location = {'csrf': csrf, 'action': 'save', 'id': str(edit_fixture_id), 'destination_id': str(destination_id), 'category_code': 'hospedaje', 'translations[es][display_name]': 'Prueba sin punto de mapa', 'plan_code': 'featured', 'billing_frequency': 'monthly', 'address_text': 'Parque principal, Jericó', 'map_workflow': '1', 'location_confirmed': '0', 'image_assistance_requested': '0'}
-    location_status, location_body, _ = request('/admin/negocios.php', missing_location)
+    location_status, location_body, _ = request('/admin/businesses.php', missing_location)
     check(location_status == 400 and 'Selecciona el punto exacto en el mapa' in location_body and 'Prueba sin punto de mapa' in location_body, 'El alta sin punto confirmado debe explicar que faltó el mapa y conservar lo escrito.')
     fields = [
         ('csrf', csrf), ('action', 'save'), ('id', str(edit_fixture_id)), ('map_workflow', '1'),
@@ -613,7 +613,7 @@ try:
         ('image_assistance_requested', '0'),
     ]
     data = urllib.parse.urlencode(fields).encode()
-    req = urllib.request.Request(BASE + '/admin/negocios.php', data=data)
+    req = urllib.request.Request(BASE + '/admin/businesses.php', data=data)
     try:
         with ADMIN.open(req, timeout=10) as response:
             status, body, headers = response.status, response.read().decode(), response.headers
@@ -624,23 +624,23 @@ try:
     check(created is not None and tuple(created)[1:] == ('draft', 'PENDIENTE_REVISION', 'NO_RECLAMADO', 'admin_created', 1, 5.791, -75.786), 'El negocio no quedó en borrador privado con ubicación y estados esperados.')
     check(DB.execute('SELECT location_map_url FROM businesses WHERE id=?',(created['id'],)).fetchone()[0]=='','Capturar un punto no debe inventar una URL del proveedor de mapas.')
     check(DB.execute('SELECT COUNT(*) FROM business_subscriptions WHERE business_id=? AND plan_code="free"', (created['id'],)).fetchone()[0] == 1, 'La creación no registró la suscripción Gratis pendiente.')
-    status, body, _ = request('/admin/negocios.php?tab=lista&origen=admin_created&categoria=hospedaje&q=Hostal+creado+por+prueba')
+    status, body, _ = request('/admin/businesses.php?tab=lista&origen=admin_created&categoria=hospedaje&q=Hostal+creado+por+prueba')
     check(status == 200 and 'Hostal creado por prueba' in body and 'Pendiente de publicación' in body, 'El negocio recién creado no aparece filtrando el listado por categoría y alta administrativa.')
     check('name="categoria"' in body and 'name="representacion"' not in body, 'La lista administrativa no ofrece categoría como filtro principal.')
 
-    _,registered_segment,_=request('/admin/negocios.php?tab=lista')
-    _,historical_segment,_=request('/admin/negocios.php?tab=lista&segment=historical')
+    _,registered_segment,_=request('/admin/businesses.php?tab=lista')
+    _,historical_segment,_=request('/admin/businesses.php?tab=lista&segment=historical')
     check('Hostal creado por prueba' not in registered_segment and 'Hostal creado por prueba' in historical_segment,'Historical administrative businesses leaked into person registrations.')
-    preview_path='/admin/negocio-vista-previa.php?id='+str(created['id'])
+    preview_path='/admin/business-preview.php?id='+str(created['id'])
     check(login_response(request(preview_path,opener=GUEST)),'Business card preview must remain private.')
     status,card_preview,_=request(preview_path)
     check(status==200 and 'Hostal creado por prueba' in card_preview and 'directory-card-tier-free' in card_preview and 'Pendiente de publicación' in card_preview,'Free business preview must render its actual data with the shared public card.')
-    check(request('/admin/negocio-vista-previa.php?id=999999')[0]==404,'Unknown business preview must return 404.')
-    status, subscription_list, _ = request('/admin/suscripciones.php')
+    check(request('/admin/business-preview.php?id=999999')[0]==404,'Unknown business preview must return 404.')
+    status, subscription_list, _ = request('/admin/subscriptions.php')
     check(status == 200 and 'Negocio sin suscripción</' not in subscription_list and 'Suscripciones de pago y renovaciones' in subscription_list, 'La bandeja de suscripciones debe centrarse en planes de pago.')
 
     future_date = (date.today() + timedelta(days=7)).isoformat()
-    status, body, _ = request('/admin/suscripciones.php', {'csrf': csrf, 'action': 'save', 'business_id': created['id'], 'plan_code': 'free', 'billing_frequency': 'monthly', 'publish_not_before': future_date})
+    status, body, _ = request('/admin/subscriptions.php', {'csrf': csrf, 'action': 'save', 'business_id': created['id'], 'plan_code': 'free', 'billing_frequency': 'monthly', 'publish_not_before': future_date})
     check(status == 200 and 'Elección guardada' in body, f'No se guardó la elección de suscripción: {status} {body[-400:]}')
     subscription = DB.execute('SELECT plan_code,status,publish_not_before FROM business_subscriptions WHERE business_id=? ORDER BY id DESC LIMIT 1', (created['id'],)).fetchone()
     check(tuple(subscription) == ('free','pending_publication',future_date), 'La suscripción no quedó pendiente con fecha solicitada.')
@@ -649,14 +649,14 @@ try:
     tariff_before=DB.execute('SELECT amount FROM subscription_plan_prices WHERE plan_code="page" AND billing_frequency="quarterly"').fetchone()[0]
     DB.execute('UPDATE subscription_plan_prices SET amount=NULL WHERE plan_code="page" AND billing_frequency="quarterly"');DB.commit()
     subscription_count_before_invalid_tariff = DB.execute('SELECT COUNT(*) FROM business_subscriptions WHERE business_id=?', (created['id'],)).fetchone()[0]
-    status, body, _ = request('/admin/suscripciones.php', {'csrf': csrf, 'action': 'save', 'business_id': created['id'], 'plan_code': 'page', 'billing_frequency': 'quarterly'})
+    status, body, _ = request('/admin/subscriptions.php', {'csrf': csrf, 'action': 'save', 'business_id': created['id'], 'plan_code': 'page', 'billing_frequency': 'quarterly'})
     check(status == 400 and 'tarifa' in body.lower(), f'El servidor aceptó una frecuencia sin precio configurado: {status} {body[-500:]}')
     check(DB.execute('SELECT COUNT(*) FROM business_subscriptions WHERE business_id=?', (created['id'],)).fetchone()[0] == subscription_count_before_invalid_tariff, 'Una frecuencia sin precio creó una suscripción.')
     DB.execute('UPDATE subscription_plan_prices SET amount=? WHERE plan_code="page" AND billing_frequency="quarterly"',(tariff_before,));DB.commit()
     check(DB.execute('SELECT amount FROM subscription_plan_prices WHERE plan_code="page" AND billing_frequency="quarterly"').fetchone()[0]==tariff_before,'No se restauró la tarifa aprobada.')
 
     # The admin cannot publish an unverified draft just by posting to the subscription action.
-    status, body, _ = request('/admin/suscripciones.php', {'csrf': csrf, 'action': 'publish', 'business_id': created['id']})
+    status, body, _ = request('/admin/subscriptions.php', {'csrf': csrf, 'action': 'publish', 'business_id': created['id']})
     check(status == 400 and 'Verifica la información' in body, f'La publicación permitió un negocio todavía no verificado: {status} {body[-800:]}')
     check(DB.execute('SELECT publication_status FROM businesses WHERE id=?', (created['id'],)).fetchone()[0] == 'draft', 'Un intento de publicación no autorizado cambió la ficha.')
 
@@ -743,21 +743,21 @@ try:
     status, body, _ = request('/business/dashboard.php?tab=business', opener=business_user)
     check(status == 200 and 'business-workspace-grid' in body and 'Cafetería de cuenta HTTP' in body, 'La persona no pudo volver a entrar y consultar el estado de su solicitud.')
     csrf = __import__('re').search(r'name="csrf" value="([^"]+)"', request('/admin/index.php')[1]).group(1)
-    check(login_response(request('/admin/representacion-evidencia.php?id=' + str(representation_rows[0]['id']), opener=GUEST)), 'Un visitante pudo abrir documentos privados de representación.')
-    with ADMIN.open(BASE + '/admin/representacion-evidencia.php?id=' + str(representation_rows[0]['id']), timeout=10) as evidence_response:
+    check(login_response(request('/admin/representation-evidence.php?id=' + str(representation_rows[0]['id']), opener=GUEST)), 'Un visitante pudo abrir documentos privados de representación.')
+    with ADMIN.open(BASE + '/admin/representation-evidence.php?id=' + str(representation_rows[0]['id']), timeout=10) as evidence_response:
         check(evidence_response.status == 200 and evidence_response.read() == registration_png, 'El administrador no pudo abrir un documento de representación privado.')
     # Ordinary first association is now automatic; documents are not marked as ownership verified.
     approved = DB.execute('SELECT r.status,r.business_id,b.publication_status,b.claim_status,m.account_id FROM business_account_applications r JOIN businesses b ON b.id=r.business_id JOIN business_account_memberships m ON m.business_id=b.id WHERE r.id=?', (application_row['id'],)).fetchone()
     check(DB.execute('SELECT COUNT(*) FROM business_image_references WHERE business_id=?',(approved['business_id'],)).fetchone()[0]==0,'Destacado no debe pedir ni inventar fotografías.')
-    status,all_pending,_=request('/admin/negocios.php?'+urllib.parse.urlencode({'tab':'lista','estado':'draft','q':'Cafetería de cuenta HTTP'}))
+    status,all_pending,_=request('/admin/businesses.php?'+urllib.parse.urlencode({'tab':'lista','estado':'draft','q':'Cafetería de cuenta HTTP'}))
     check(status==200 and 'Cafetería de cuenta HTTP' in all_pending and 'Editar datos' in all_pending,'Filtered business list must include owner_submitted drafts.')
-    status,legacy_pending,_=request('/admin/negocios.php?tab=pendientes&q=Cafeter%C3%ADa')
+    status,legacy_pending,_=request('/admin/businesses.php?tab=pendientes&q=Cafeter%C3%ADa')
     check(status==200 and 'Listado de negocios' in legacy_pending and 'value="draft" selected' in legacy_pending and '?tab=pendientes"' not in legacy_pending,'Legacy pending links must use the unified list with the publication filter.')
-    _,imported_segment,_=request('/admin/negocios.php?tab=lista&segment=imported&q=Cafeter%C3%ADa')
+    _,imported_segment,_=request('/admin/businesses.php?tab=lista&segment=imported&q=Cafeter%C3%ADa')
     check('Cafetería de cuenta HTTP' not in imported_segment,'Person registration leaked into imported businesses.')
     crm_account_marker='data-crm-business-id="'+str(approved['business_id'])+'"'
-    _,crm_prospects,_=request('/admin/contactos-negocios.php?subscription=all&account=without')
-    _,crm_customers,_=request('/admin/contactos-negocios.php?subscription=all&account=with')
+    _,crm_prospects,_=request('/admin/business-contacts.php?subscription=all&account=without')
+    _,crm_customers,_=request('/admin/business-contacts.php?subscription=all&account=with')
     check(crm_account_marker not in crm_prospects and crm_account_marker in crm_customers,'Business with active account was not isolated from unassociated CRM prospects.')
     check(approved and approved['status']=='approved' and approved['publication_status']=='draft' and approved['claim_status']=='RECLAMADO' and approved['account_id']==account_row['id'], 'La aprobación no creó el borrador privado y la membresía esperados.')
     normalized_contacts=dict(DB.execute("SELECT channel,contact_value FROM business_contacts WHERE business_id=? AND channel IN ('phone','whatsapp')",(approved['business_id'],)).fetchall())
@@ -782,23 +782,23 @@ try:
     check(repeated[0]==303 and DB.execute('SELECT COUNT(*) FROM businesses').fetchone()[0]==before_free,'Repetir alta no duplica fichas: '+str(repeated[0])+' '+(' · '.join(re.findall(r'<p class="notice" role="alert">(.*?)</p>',repeated[1],re.S))))
 
     own_public_id = DB.execute('SELECT public_id FROM businesses WHERE id=?', (approved['business_id'],)).fetchone()[0]
-    status, audience_json, _ = request('/api/audiencia-entidad.php?type=business&key='+own_public_id, opener=business_user)
+    status, audience_json, _ = request('/api/entity-audience.php?type=business&key='+own_public_id, opener=business_user)
     check(status == 200 and audience_json.startswith('{'), 'Respuesta de estadísticas inesperada: '+str(status)+' '+audience_json[:240])
     check(json.loads(audience_json)['status']=='enabled', 'El titular no puede consultar sus estadísticas agregadas.')
-    status, _, _ = request('/api/audiencia-entidad.php?type=destination&key=jerico', opener=business_user)
+    status, _, _ = request('/api/entity-audience.php?type=destination&key=jerico', opener=business_user)
     check(status == 403, 'Una cuenta comercial no debe consultar estadísticas privadas de destinos.')
     other_public_id = DB.execute('SELECT public_id FROM businesses WHERE id<>? LIMIT 1', (approved['business_id'],)).fetchone()[0]
-    status, _, _ = request('/api/audiencia-entidad.php?type=business&key='+other_public_id, opener=business_user)
+    status, _, _ = request('/api/entity-audience.php?type=business&key='+other_public_id, opener=business_user)
     check(status == 403, 'Una cuenta comercial no debe consultar otro negocio por cambiar su ID.')
-    status, _, _ = request('/api/audiencia-entidad.php?type=business&key='+own_public_id, opener=GUEST)
+    status, _, _ = request('/api/entity-audience.php?type=business&key='+own_public_id, opener=GUEST)
     check(status == 403, 'Las estadísticas comerciales no deben exponerse a visitantes.')
-    status, malformed_json, _ = request('/api/audiencia-entidad.php?type[]=business&key[]=test&days[]=30', opener=business_user)
+    status, malformed_json, _ = request('/api/entity-audience.php?type[]=business&key[]=test&days[]=30', opener=business_user)
     check(status == 400 and json.loads(malformed_json)['error']=='Entidad inválida', 'Los parámetros malformados deben producir JSON sin warnings ni rutas privadas.')
-    status, malformed_json, _ = request('/api/audiencia-entidad.php?type[]=business&key[]=test', opener=GUEST)
+    status, malformed_json, _ = request('/api/entity-audience.php?type[]=business&key[]=test', opener=GUEST)
     check(status == 403 and json.loads(malformed_json)['error']=='Acceso privado requerido', 'Los parámetros malformados no deben filtrar datos a visitantes.')
     account_dashboard_csrf = __import__('re').search(r'name="csrf" value="([^"]+)"', body).group(1)
     request('/business/logout.php', {'csrf': account_dashboard_csrf}, business_flow)
-    status, body, _ = request('/admin/usuarios.php', {'csrf': csrf, 'action': 'reset_password', 'account_id': account_row['id']}, ADMIN)
+    status, body, _ = request('/admin/accounts.php', {'csrf': csrf, 'action': 'reset_password', 'account_id': account_row['id']}, ADMIN)
     reset_match = __import__('re').search(r'value="(/negocios/cambiar-clave/\?token=([a-f0-9]{64}))"', body)
     check(status == 200 and 'Enlace de contraseña' in body and reset_match, 'El panel no generó un enlace temporal de contraseña de un solo uso.')
     reset_token = reset_match.group(2)
@@ -839,19 +839,19 @@ try:
     check(payment_row and payment_row['status']=='pending' and payment_row['subscription_status']=='pending' and payment_row['quoted_amount']==25000,'El pago no conserva la tarifa ni su revisión pendiente.')
     check(payment_row['paid_amount']==25000 and payment_row['source_bank']=='BANCO FICTICIO' and re.fullmatch(r'EL-[A-F0-9]{24}',payment_row['checkout_reference']),'Se perdieron los datos de transacción.')
     check(not list((WORK/'public').rglob(payment_row['storage_name'])),'Comprobante expuesto en la raíz pública.')
-    subscriptions_with_evidence=request('/admin/suscripciones.php?q=Cafeter%C3%ADa')[1]
+    subscriptions_with_evidence=request('/admin/subscriptions.php?q=Cafeter%C3%ADa')[1]
     check('Ver comprobante' in subscriptions_with_evidence and 'BANCO FICTICIO' in subscriptions_with_evidence and payment_row['checkout_reference'] in subscriptions_with_evidence,'El administrador no puede revisar el comprobante.')
-    check(login_response(request('/admin/comprobante-pago.php?id='+str(payment_row['id']),opener=GUEST)),'El soporte debe permanecer privado.')
-    with ADMIN.open(BASE+'/admin/comprobante-pago.php?id='+str(payment_row['id']),timeout=10) as response:
+    check(login_response(request('/admin/payment-evidence.php?id='+str(payment_row['id']),opener=GUEST)),'El soporte debe permanecer privado.')
+    with ADMIN.open(BASE+'/admin/payment-evidence.php?id='+str(payment_row['id']),timeout=10) as response:
         check(response.status==200 and response.read()==sample_png,'El administrador no pudo visualizar el soporte.')
     rejection_message='El comprobante no coincide. Adjunta un soporte correcto.'
     internal_note='Nota interna no visible al comercio.'
-    check(request('/admin/suscripciones.php',{'csrf':csrf,'action':'review_payment','evidence_id':payment_row['id'],'decision':'rejected','admin_note':internal_note,'customer_message':rejection_message})[0]==200,'No registró rechazo motivado.')
+    check(request('/admin/subscriptions.php',{'csrf':csrf,'action':'review_payment','evidence_id':payment_row['id'],'decision':'rejected','admin_note':internal_note,'customer_message':rejection_message})[0]==200,'No registró rechazo motivado.')
     status,body,_=request('/business/dashboard.php?tab=business',opener=business_flow)
     check(status==200 and rejection_message in body and internal_note not in body and 'Corregir soporte de pago' in body,'El propietario debe ver el motivo público y poder corregir el soporte.')
     check(submit_payment('TRX-CORREGIDA-2026')[0]==303,'No permitió corregir un comprobante rechazado.')
     payment_row=DB.execute('SELECT e.*,s.status AS subscription_status,s.quoted_amount FROM business_subscription_payment_evidence e JOIN business_subscriptions s ON s.id=e.subscription_id WHERE e.account_id=? ORDER BY e.id DESC LIMIT 1',(account_row['id'],)).fetchone()
-    check(request('/admin/suscripciones.php',{'csrf':csrf,'action':'review_payment','evidence_id':payment_row['id'],'decision':'approved','admin_note':''})[0]==200,'No validó el comprobante corregido.')
+    check(request('/admin/subscriptions.php',{'csrf':csrf,'action':'review_payment','evidence_id':payment_row['id'],'decision':'approved','admin_note':''})[0]==200,'No validó el comprobante corregido.')
     reviewed_payment=DB.execute('SELECT e.status,s.status AS subscription_status FROM business_subscription_payment_evidence e JOIN business_subscriptions s ON s.id=e.subscription_id WHERE e.id=?',(payment_row['id'],)).fetchone()
     check(reviewed_payment['status']=='approved' and reviewed_payment['subscription_status']=='paid_pending_publication','Aprobar debe esperar publicación.')
     check(DB.execute('SELECT publication_status FROM businesses WHERE id=?',(business_id,)).fetchone()[0]=='draft','Confirmar el pago publicó sin autorización del propietario.')
@@ -863,7 +863,7 @@ try:
     dashboard_csrf=re.search(r'name="csrf" value="([^"]+)"',body)[1]
     check(multipart('/business/dashboard.php?tab=business',{'csrf':dashboard_csrf,'business_id':business_id,'plan_code':'free'},[],business_flow)[0]==400,'No se puede reemplazar el plan pagado desde el grid.')
     check(tuple(DB.execute('SELECT * FROM business_subscriptions WHERE id=?',(old_subscription['id'],)).fetchone())==tuple(old_subscription),'Se alteró el plan confirmado.')
-    status, body, _ = request('/admin/usuarios.php', {'csrf': csrf, 'action': 'set_status', 'account_id': account_row['id'], 'status': 'disabled', 'reason': 'Suspensión sintética de prueba'}, ADMIN)
+    status, body, _ = request('/admin/accounts.php', {'csrf': csrf, 'action': 'set_status', 'account_id': account_row['id'], 'status': 'disabled', 'reason': 'Suspensión sintética de prueba'}, ADMIN)
     check(status == 200 and 'La cuenta quedó suspendida' in body, f'La administración no pudo deshabilitar el acceso de una cuenta: HTTP {status}, {body[:300]}')
     status, _, headers = request('/business/dashboard.php?tab=business', opener=business_flow)
     check(status == 303 and urllib.parse.urlsplit(headers.get('Location','')).path=='/negocios/acceso/', f'Una cuenta deshabilitada conservó el acceso con una sesión abierta: HTTP {status}, destino {headers.get("Location", "")}')
@@ -871,7 +871,7 @@ try:
     disabled_login_csrf = __import__('re').search(r'name="csrf" value="([^"]+)"', body).group(1)
     status, body, _ = request('/business/login.php', {'csrf': disabled_login_csrf, 'email': 'responsable-http@example.invalid', 'password': 'NuevaClaveHTTP123'}, business_flow)
     check(status == 400 and 'Correo o contraseña incorrectos' in body, 'Una cuenta deshabilitada pudo iniciar sesión nuevamente.')
-    status, body, _ = request('/admin/usuarios.php', {'csrf': csrf, 'action': 'set_status', 'account_id': account_row['id'], 'status': 'active', 'reason': 'Fin de prueba'}, ADMIN)
+    status, body, _ = request('/admin/accounts.php', {'csrf': csrf, 'action': 'set_status', 'account_id': account_row['id'], 'status': 'active', 'reason': 'Fin de prueba'}, ADMIN)
     check(status == 200 and 'La cuenta quedó habilitada nuevamente' in body, 'La administración no pudo rehabilitar una cuenta deshabilitada.')
     status, _, _ = request('/business/login.php', {'csrf': disabled_login_csrf, 'email': 'responsable-http@example.invalid', 'password': 'NuevaClaveHTTP123'}, business_flow)
     check(status == 303, 'La cuenta rehabilitada no pudo iniciar sesión nuevamente.')
@@ -922,7 +922,7 @@ try:
         'paid_amount':'60000','payment_method':'qr','source_bank':'BANCO FICTICIO'}
     check(multipart(premium_payment,premium_payment_fields,[('payment_proof','premium.png','image/png',sample_png)],business_flow)[0]==303,'No guardó el pago Premium.')
     premium_evidence=DB.execute('SELECT id FROM business_subscription_payment_evidence WHERE account_id=? ORDER BY id DESC LIMIT 1',(account_row['id'],)).fetchone()[0]
-    check(request('/admin/suscripciones.php',{'csrf':csrf,'action':'review_payment','evidence_id':premium_evidence,'decision':'approved','admin_note':''},ADMIN)[0]==200,'No confirmó pago Premium')
+    check(request('/admin/subscriptions.php',{'csrf':csrf,'action':'review_payment','evidence_id':premium_evidence,'decision':'approved','admin_note':''},ADMIN)[0]==200,'No confirmó pago Premium')
     editorial_path='/business/editorial.php?business='+str(premium_business)
     _,premium_editor,_=request(editorial_path,opener=business_flow)
     check('name="action" value="save"' not in premium_editor,'El propietario no debe reeditar contenido ya enviado.')
@@ -1009,7 +1009,7 @@ try:
         code,review_body,_=request(admin_editorial,{'csrf':editorial_admin_csrf,'action':'verify_document','version_id':str(prepared['id']),'evidence_id':str(proof['id'])})
         check(code==200 and DB.execute('SELECT deleted_at FROM business_evidence_retirement WHERE evidence_id=?',(proof['id'],)).fetchone()[0] is not None,'No registró eliminación del documento')
         check(not list((WORK/'private').rglob(proof['storage_name'])),'El archivo sigue almacenado tras validar titularidad')
-        check(request('/admin/representacion-evidencia.php?id='+str(proof['id']))[0]==410,'El documento eliminado sigue accesible')
+        check(request('/admin/representation-evidence.php?id='+str(proof['id']))[0]==410,'El documento eliminado sigue accesible')
     code,prepared_body,_=request(admin_editorial,quality)
     check(code==200 and DB.execute('SELECT status FROM business_editorial_versions WHERE id=?',(prepared['id'],)).fetchone()[0]=='awaiting_owner','No preparó prepublicación: '+prepared_body[-1000:])
     check(DB.execute("SELECT COUNT(*) FROM business_editorial_events WHERE version_id=? AND action='mail_simulated'",(prepared['id'],)).fetchone()[0]==1,'Preparar no envió aviso automático simulado')
@@ -1050,28 +1050,28 @@ try:
     delete_id = DB.execute("SELECT id FROM businesses WHERE public_id='delete-http-fixture'").fetchone()[0]
     DB.execute("INSERT INTO business_translations(business_id,locale,display_name,summary,description) VALUES(?,'es','Negocio para borrar','','')", (delete_id,))
     DB.commit()
-    status, body, _ = request('/admin/negocios.php?id='+str(delete_id), opener=ADMIN)
+    status, body, _ = request('/admin/businesses.php?id='+str(delete_id), opener=ADMIN)
     check(status == 200 and 'Eliminar definitivamente' in body, 'Falta la confirmación visible de borrado.')
     delete_csrf = __import__('re').search(r'name="csrf" value="([^"]+)"', body).group(1)
     unauthenticated = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
     for opener, token, confirmation in [(unauthenticated, delete_csrf, '1'), (ADMIN, 'invalid', '1'), (ADMIN, delete_csrf, '')]:
-        denied = request('/admin/negocios.php', {'csrf': token, 'action':'delete', 'id':str(delete_id), 'confirm_delete':confirmation}, opener)
+        denied = request('/admin/businesses.php', {'csrf': token, 'action':'delete', 'id':str(delete_id), 'confirm_delete':confirmation}, opener)
         check((denied[0]==400 or login_response(denied)) and DB.execute('SELECT COUNT(*) FROM businesses WHERE id=?',(delete_id,)).fetchone()[0] == 1, 'Se borró sin sesión, CSRF válido o confirmación.')
-    status, body, _ = request('/admin/negocios.php', {'csrf':delete_csrf,'action':'delete','id':str(delete_id),'confirm_delete':'1'}, ADMIN)
+    status, body, _ = request('/admin/businesses.php', {'csrf':delete_csrf,'action':'delete','id':str(delete_id),'confirm_delete':'1'}, ADMIN)
     check(status == 200 and DB.execute('SELECT COUNT(*) FROM businesses WHERE id=?',(delete_id,)).fetchone()[0] == 0 and 'Negocio eliminado.' in body, f'El borrado confirmado falló: HTTP {status}, {body[:300]}')
 
-    status, body, _ = request('/admin/destinos.php', opener=ADMIN)
+    status, body, _ = request('/admin/places.php', opener=ADMIN)
     check(status == 200 and 'Agregar Cauca Viejo en borrador' in body, 'Falta el alta preparada de Cauca Viejo.')
     starter_csrf = __import__('re').search(r'name="csrf" value="([^"]+)"', body).group(1)
-    bad_response = request('/admin/destinos.php', {'csrf':'invalid','action':'create_starter','starter_slug':'cauca-viejo'}, ADMIN)
+    bad_response = request('/admin/places.php', {'csrf':'invalid','action':'create_starter','starter_slug':'cauca-viejo'}, ADMIN)
     check(login_response(bad_response) and DB.execute("SELECT COUNT(*) FROM destinations WHERE slug='cauca-viejo'").fetchone()[0] == 0, 'Alta preparada sin CSRF válido.')
     for _ in range(2):
-        status, body, _ = request('/admin/destinos.php', {'csrf':starter_csrf,'action':'create_starter','starter_slug':'cauca-viejo'}, ADMIN)
+        status, body, _ = request('/admin/places.php', {'csrf':starter_csrf,'action':'create_starter','starter_slug':'cauca-viejo'}, ADMIN)
         starter_alerts = __import__('re').findall(r'role="alert">(.*?)<', body)
         check(status == 200 and ('Lugar disponible para asociar negocios' if package_value else 'Destino disponible para asociar negocios') in body, f'No se creó o reutilizó el destino preparado: HTTP {status}, {starter_alerts}')
     starter = DB.execute("SELECT id,publication_status,destination_type FROM destinations WHERE slug='cauca-viejo'").fetchone()
     check(starter['publication_status'] == 'draft' and starter['destination_type'] == 'other' and DB.execute("SELECT COUNT(*) FROM destinations WHERE slug='cauca-viejo'").fetchone()[0] == 1, 'El destino preparado se publicó o duplicó.')
-    status, body, _ = request('/admin/negocios.php?id='+str(imported_id), opener=ADMIN)
+    status, body, _ = request('/admin/businesses.php?id='+str(imported_id), opener=ADMIN)
     check(status == 200 and 'Cauca Viejo' in body, 'El destino en borrador no está disponible para asociar negocios.')
 
     DB.execute("INSERT INTO businesses(public_id,destination_id,category_code,slug) SELECT 'transfer-http-fixture',destination_id,category_code,'transfer-http-fixture' FROM businesses WHERE id=?", (imported_id,))
@@ -1079,14 +1079,14 @@ try:
     DB.execute("INSERT INTO business_sources(business_id,source_url,note) VALUES(?,'https://example.invalid/rnt','MinCIT RNT 221062')", (transfer_id,))
     DB.execute("INSERT INTO business_translations(business_id,locale,display_name,summary,description) VALUES(?,'es','Casa Mama Rosita','','')", (transfer_id,))
     DB.commit()
-    status, body, _ = request('/admin/trasladar-negocios.php', opener=ADMIN)
+    status, body, _ = request('/admin/transfer-businesses.php', opener=ADMIN)
     check(status == 200 and 'Casa Mama Rosita' in body and 'Posada Dulcinea' in body, 'La vista previa no muestra candidatos y exclusiones.')
     transfer_csrf = __import__('re').search(r'name="csrf" value="([^"]+)"', body).group(1)
     transfer_hash = __import__('re').search(r'name="preview_hash" value="([^"]+)"', body).group(1)
     data = {'csrf':transfer_csrf,'action':'transfer','preview_hash':transfer_hash,'business_ids[]':str(transfer_id),'confirm_transfer':'1'}
-    bad = dict(data,csrf='invalid');bad_response = request('/admin/trasladar-negocios.php', bad, ADMIN)
+    bad = dict(data,csrf='invalid');bad_response = request('/admin/transfer-businesses.php', bad, ADMIN)
     check(login_response(bad_response), 'El traslado aceptó una petición sin CSRF válido.')
-    status, body, _ = request('/admin/trasladar-negocios.php', data, ADMIN)
+    status, body, _ = request('/admin/transfer-businesses.php', data, ADMIN)
     check(status == 200 and '1 negocios trasladados' in body and DB.execute('SELECT destination_id FROM businesses WHERE id=?',(transfer_id,)).fetchone()[0] == starter['id'], 'El traslado desde el panel no conservó y reasoció el mismo ID.')
     check(DB.execute("SELECT COUNT(*) FROM businesses WHERE public_id='transfer-http-fixture'").fetchone()[0] == 1, 'Se duplicó la ficha durante el traslado.')
 
@@ -1119,11 +1119,11 @@ try:
         except urllib.error.HTTPError as error:
             check(error.code == 303, 'El login del entorno incompleto no redirigió.')
         for path, phrase in [
-            ('/admin/negocios.php','migraciones 003–016'),
-            ('/admin/usuarios.php','migraciones 003, 008 y 013'),
-            ('/admin/solicitudes-cuenta.php','migraciones 013 y 019'),
-            ('/admin/reclamaciones.php','migraciones 003 y 017–018'),
-            ('/admin/suscripciones.php','migraciones 003, 008–016'),
+            ('/admin/businesses.php','migraciones 003–016'),
+            ('/admin/accounts.php','migraciones 003, 008 y 013'),
+            ('/admin/account-applications.php','migraciones 013 y 019'),
+            ('/admin/claims.php','migraciones 003 y 017–018'),
+            ('/admin/subscriptions.php','migraciones 003, 008–016'),
         ]:
             try:
                 with broken_client.open(broken_base + path, timeout=3) as response:
@@ -1149,7 +1149,7 @@ try:
     check(DB.execute('SELECT COUNT(*) FROM account_roles WHERE account_id=?',(traveler_row['id'],)).fetchone()[0]==0,'El registro público permitió elevar permisos.')
     check(DB.execute('SELECT COUNT(*) FROM business_account_applications WHERE account_id=?',(traveler_row['id'],)).fetchone()[0]==0,'Un viajero no debe generar solicitudes de negocio.')
     check(DB.execute('SELECT COUNT(*) FROM account_consents WHERE account_id=?',(traveler_row['id'],)).fetchone()[0]==1,'Falta el consentimiento de la cuenta viajera.')
-    check(login_response(request('/admin/usuarios.php',opener=traveler_user)),'La cuenta viajera obtuvo acceso al panel.')
+    check(login_response(request('/admin/accounts.php',opener=traveler_user)),'La cuenta viajera obtuvo acceso al panel.')
     _,traveler_profile,_=request('/business/dashboard.php?tab=personal',opener=traveler_user)
     traveler_tabs=re.search(r'<nav class="account-tabs".*?</nav>',traveler_profile,re.S).group(0)
     check('>Viajero</a>' in traveler_tabs and 'Mis negocios' not in traveler_tabs and 'Registrar o reclamar un negocio' in traveler_profile,'Traveler without businesses must only see Viajero and an optional registration link.')
@@ -1184,7 +1184,7 @@ try:
     code,card,headers=request(preview_path,opener=traveler_user)
     check(code==200 and 'directory-card-tier-free' in card and 'Editorial Ficticio Revisado' in card and 'noindex' in headers.get('X-Robots-Tag',''),'Vista previa no usó tarjeta real privada: '+str(code)+' '+card[-2000:])
     admin_path=path+'&admin=1';_,admin_form,_=request(admin_path)
-    check('class="portal-admin"' in admin_form and 'admin-sidebar' in admin_form and 'data-portal-shell="1"' not in admin_form and 'portal-account-fallback' not in admin_form and 'href="/admin/atencion-comercios.php"' in admin_form,'Editorial admin must use private navigation, central business hub and no public shell.')
+    check('class="portal-admin"' in admin_form and 'admin-sidebar' in admin_form and 'data-portal-shell="1"' not in admin_form and 'portal-account-fallback' not in admin_form and 'href="/admin/business-support.php"' in admin_form,'Editorial admin must use private navigation, central business hub and no public shell.')
     admin_csrf=re.search(r'name="csrf" value="([^"]+)"',admin_form)[1]
     check(request(admin_path,{'csrf':admin_csrf,'action':'prepare','quality[translations]':'1','quality[images]':'1','quality[layout]':'1','version_id':str(version['id']),'payload_hash':version['payload_hash']})[0]==200,'No dejó preparada la prepublicación.')
     # The email opens the exact review again after login, without publishing on GET.

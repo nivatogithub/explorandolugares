@@ -4,10 +4,11 @@ require dirname(__DIR__).'/app/BusinessAdminService.php';
 require dirname(__DIR__).'/app/BusinessSubscriptionAdminService.php';
 require dirname(__DIR__).'/app/BusinessPublicImporter.php';
 require dirname(__DIR__).'/app/BusinessBulkEditService.php';
-require dirname(__DIR__).'/app/DestinationRepository.php';
+require dirname(__DIR__).'/app/PlaceRepository.php';
 function categories_check(bool $ok,string $message):void{if(!$ok)throw new RuntimeException($message);}
 $pdo=new PDO('sqlite::memory:',null,null,[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC]);
 $pdo->exec(file_get_contents(dirname(__DIR__).'/database/destinations.sqlite.sql'));
+$pdo->exec(file_get_contents(dirname(__DIR__).'/database/migrations/060-destination-content.sqlite.sql'));
 $pdo->exec(file_get_contents(dirname(__DIR__).'/database/migrations/006-poi-experience-links.sqlite.sql'));
 for($n=8;$n<=34;$n++)foreach(glob(dirname(__DIR__).'/database/migrations/'.sprintf('%03d',$n).'-*.sqlite.sql') as $file)$pdo->exec(file_get_contents($file));
 $pdo->exec("INSERT INTO destinations(slug,publication_status) VALUES('jerico','published'); INSERT INTO destination_translations(destination_id,locale,display_name,headline,intro) VALUES(1,'es','Destino de prueba','','')");
@@ -24,7 +25,7 @@ $input['category_codes']=['inventada'];$failed=false;try{$admin->save($input);}c
 $bulk=new BusinessBulkEditService($pdo);$export=$bulk->export('jerico','alimentacion');categories_check(count($export['businesses'])===1,'Export matches secondary category');
 $export['businesses'][0]['category_codes']=['experiencias','transporte'];$preview=$bulk->preview($export);categories_check($preview['businesses_changed']===1,'Bulk preview includes category changes');$bulk->apply($export,'test');
 categories_check(count($admin->find($id)['category_codes'])===3,'Bulk replacement retains principal category');
-$pdo->exec('UPDATE businesses SET publication_status="published"');$destination=(new DestinationRepository($pdo))->findPublished('jerico','es');
+$pdo->exec('UPDATE businesses SET publication_status="published"');$destination=(PlaceRepository::fromDatabase($pdo))->findPublished('jerico','es');
 categories_check(count($destination['businesses'])===1&&count($destination['categories'])===3&&count($destination['businesses'][0]['category_codes'])===3,'Public directory exposes all category filters and exactly one business');
 $admin->delete($id,true);categories_check((int)$pdo->query('SELECT COUNT(*) FROM business_categories')->fetchColumn()===0,'Deleting a business removes only its category relationships');
 rmdir($storage);

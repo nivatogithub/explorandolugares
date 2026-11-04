@@ -22,16 +22,16 @@ def login(client,profile):
  _,page=client.call('/negocios/acceso/');code,_=client.call('/negocios/acceso/',{'csrf':csrf(page),'email':profile['email'],'password':profile['password']});assert code==200;return json.loads(client.call('/api/account-session.php')[1])
 runtime=json.loads(Client().call('/__preprod-runtime.php')[1]);assert runtime['database']['driver']=='mysql'
 admin=Client();assert login(admin,profiles['administrador'])['administrator']
-code,page=admin.call('/admin/medios-pago.php');assert code==200 and 'Simulación de preproducción' in page
+code,page=admin.call('/admin/payment-settings.php');assert code==200 and 'Simulación de preproducción' in page
 fields={'csrf':csrf(page),'enabled':'1','holder':'EXPLORANDO LUGARES — PRUEBA SIN VALOR','bank':'BANCO FICTICIO — NO TRANSFERIR','account_number':'NO-TRANSFERIR-0000','account_type':'savings','breb_key':'PRUEBA-EXPLORANDO-NO-PAGAR','notes':'SIMULACIÓN. Este QR contiene un texto de prueba, no una orden bancaria. No enviar dinero.'}
-code,page=admin.call('/admin/medios-pago.php',fields,'qr_image');assert code==200 and 'Medios de pago guardados' in page,('admin save failed',code)
-code,page=admin.call('/admin/medios-pago.php');assert code==200 and 'NO-TRANSFERIR-0000' in page and 'payment-qr.php' in page
+code,page=admin.call('/admin/payment-settings.php',fields,'qr_image');assert code==200 and 'Medios de pago guardados' in page,('admin save failed',code)
+code,page=admin.call('/admin/payment-settings.php');assert code==200 and 'NO-TRANSFERIR-0000' in page and 'payment-qr.php' in page
 source=b'<?php $c=require "/srv/state/private/config.php";if(empty($c["local_test"]))exit(80);$p=new PDO($c["dsn"],$c["db_user"],$c["db_password"]);$r=$p->query("SELECT enabled,test_mode,holder,bank,account_number,account_type,breb_key,qr_file FROM payment_instructions WHERE id=1")->fetch(PDO::FETCH_ASSOC);echo json_encode($r);'
 stored=json.loads(subprocess.check_output(['podman','exec','-i','explorando-preprod','php'],input=source))
 assert all(str(stored[k])==fields[k] for k in ['holder','bank','account_number','account_type','breb_key']) and stored['enabled']==1 and stored['test_mode']==1 and re.fullmatch(r'[a-f0-9]{48}\.png',stored['qr_file'])
 
-assert Client().call('/admin/medios-pago.php')[0]==403;assert Client().call('/api/payment-qr.php')[0]==403
-person=Client();session=login(person,profiles['negocio']);assert session['authenticated'] and not session['administrator'];assert person.call('/admin/medios-pago.php')[0]==403
+assert Client().call('/admin/payment-settings.php')[0]==403;assert Client().call('/api/payment-qr.php')[0]==403
+person=Client();session=login(person,profiles['negocio']);assert session['authenticated'] and not session['administrator'];assert person.call('/admin/payment-settings.php')[0]==403
 code,page=person.call('/negocios/portal/?tab=business');assert code==200 and 'SIMULACIÓN — NO ENVÍES DINERO' in page and 'PRUEBA-EXPLORANDO-NO-PAGAR' in page
 assert person.call('/api/payment-qr.php')[0]==200
 report={'configuration_saved_through_admin_form':True,'configuration_persisted_in_mariadb':True,'qr_uploaded':True,'anonymous_denied':True,'normal_account_cannot_configure':True,'public_payment_instructions_present':True,'test_mode':True,'paid_submission':False}

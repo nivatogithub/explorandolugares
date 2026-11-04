@@ -123,3 +123,10 @@ CREATE TABLE business_sources (
  source_url TEXT NOT NULL, checked_at TEXT, note TEXT NOT NULL DEFAULT ''
 );
 CREATE INDEX business_sources_business ON business_sources(business_id);
+
+CREATE TABLE IF NOT EXISTS place_labels (
+ place_id INTEGER NOT NULL REFERENCES destinations(id) ON DELETE CASCADE,
+ code TEXT NOT NULL, enabled INTEGER NOT NULL DEFAULT 1,
+ source_url TEXT NOT NULL DEFAULT '', verified_on TEXT,
+ PRIMARY KEY (place_id,code)
+);

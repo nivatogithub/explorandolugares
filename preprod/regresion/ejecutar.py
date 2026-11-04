@@ -112,7 +112,7 @@ try:
     code,body,_=person.get('/negocios/portal/?tab='+tab);check(code==200 and title in body and RUN in body,'No carga la pestaña '+tab+' con la identidad personal')
   case('AU-04','Mi cuenta contiene Personal y Mis negocios',accounttabs)
   def privileges():
-   check(person.get('/admin/usuarios.php')[0]==403,'Una persona sin rol entra al administrador')
+   check(person.get('/admin/accounts.php')[0]==403,'Una persona sin rol entra al administrador')
    state=person.state();check(not state.get('administrator'),'Cuenta nueva recibió privilegios')
    check(person.request('/api/account-session.php',{'csrf':state['csrf'],'space':'administrator'})[0]>=400,'Aceptó un rol arbitrario')
   case('AZ-01','No escalar de viajero a administrador manipulando espacio',privileges)
@@ -221,19 +221,19 @@ try:
   case('AZ-03','No exponer los negocios en borrador',drafts)
   def coverage():
    code,page,_=anon.get('/cobertura/colombia/');check(code==200,'No carga mapa');check(all(x in page for x in ['tab-cobertura','tab-visitantes','tab-participar','country-percent','invite-copy']),'Se perdió pestaña, porcentaje o compartir')
-   code,payload,_=anon.get('/api/cobertura.php');check(code==200 and isinstance(json.loads(payload),dict),'No responde API de cobertura')
+   code,payload,_=anon.get('/api/coverage.php');check(code==200 and isinstance(json.loads(payload),dict),'No responde API de cobertura')
   case('PB-03','Cobertura, Audiencia y Haz parte: documento y API',coverage)
   def lead(kind):
-   c=Client();code,body,_=c.get('/api/participacion.php');state=json.loads(body);check(state.get('enabled'),'Recepción de solicitudes deshabilitada')
+   c=Client();code,body,_=c.get('/api/participation.php');state=json.loads(body);check(state.get('enabled'),'Recepción de solicitudes deshabilitada')
    # Read accepted option from the actual public form, rather than inventing a category.
    page=c.get('/negocios-locales/interes/')[1]
    cats=re.search(r'<select[^>]*name="category"[^>]*>(.*?)</select>',page,re.S);check(cats,'No se encuentra categoría del formulario');vals=re.findall(r'<option value="([^"]+)"',cats[1]);check(vals,'Sin categorías')
    data={'csrf':state['csrf'],'request_key':state['request_key'],'request_type':kind,'name':RUN,'business':RUN,'municipality':'Jericó','category':vals[0],'email':EMAIL,'consent':'1','understanding':'1','description':'Prueba local automatizada, no contactar'}
-   code,body,_=c.request('/api/participacion.php',data)
+   code,body,_=c.request('/api/participation.php',data)
    if code==429:raise Blocked('Límite antiabuso local alcanzado por ejecuciones repetidas. No se desactivó; repetir tras la ventana de espera.')
    check(code==200,'No guarda solicitud de '+kind)
    rows=query('SELECT id,interest FROM leads WHERE email=? ORDER BY id DESC',[EMAIL]);check(rows and rows[0]['interest']==('impulsor_local' if kind=='impulsor_local' else 'contacto'),'Tipo de solicitud incorrecto o sin persistencia')
-   before=len(rows);c.request('/api/participacion.php',data);check(len(query('SELECT id FROM leads WHERE email=?',[EMAIL]))==before,'Reenvío duplica solicitud')
+   before=len(rows);c.request('/api/participation.php',data);check(len(query('SELECT id FROM leads WHERE email=?',[EMAIL]))==before,'Reenvío duplica solicitud')
   case('CT-01','Consulta de negocio anónima: guardar y evitar duplicado',lambda:lead('negocio'))
   case('CT-02','Promotor anónimo: guardar separado de consulta comercial',lambda:lead('impulsor_local'))
   if not PUBLIC_ONLY:

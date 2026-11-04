@@ -19,18 +19,18 @@ try:
   ident=int(php('$q=$p->prepare("INSERT INTO accounts(public_id,account_type,display_name,email,password_hash,status) VALUES(?,?,?,?,?,\'active\')");$q->execute([bin2hex(random_bytes(16)),'+json.dumps(kind)+',"Prueba temporal",'+json.dumps(email)+',password_hash('+json.dumps(password)+',PASSWORD_DEFAULT)]);echo $p->lastInsertId();'));ids.append(ident)
  admin,business=ids
  php('$p->prepare("INSERT INTO account_roles(account_id,role) VALUES(?,\'administrator\')")->execute(['+str(admin)+']);')
- c=client();assert call(c,'/admin/usuarios.php')[0]==403
+ c=client();assert call(c,'/admin/accounts.php')[0]==403
  assert login(c,'traveler-'+suffix+'@example.invalid')[0]==200
  state=json.loads(call(c,'/__preprod-account.php')[1]);assert state['administrator'] is True
- assert call(c,'/admin/usuarios.php')[0]==200
+ assert call(c,'/admin/accounts.php')[0]==200
  assert call(c,'/negocios/salir/',{'csrf':state['csrf']})[0]==200
- assert call(c,'/admin/usuarios.php')[0]==403
+ assert call(c,'/admin/accounts.php')[0]==403
  assert login(c,'business-'+suffix+'@example.invalid')[0]==200
  assert json.loads(call(c,'/__preprod-account.php')[1])['administrator'] is False
- assert call(c,'/admin/usuarios.php')[0]==403
+ assert call(c,'/admin/accounts.php')[0]==403
  c=client();assert login(c,'traveler-'+suffix+'@example.invalid')[0]==200
  php('$p->prepare("DELETE FROM account_roles WHERE account_id=?")->execute(['+str(admin)+']);')
- assert call(c,'/admin/usuarios.php')[0]==403
+ assert call(c,'/admin/accounts.php')[0]==403
  # The real account is only inspected for presence/role, never logged in or modified.
  assert php('$q=$p->prepare("SELECT COUNT(*) FROM accounts a JOIN account_roles r ON r.account_id=a.id WHERE a.email=? AND a.status=\'active\' AND r.role=\'administrator\'");$q->execute([\'admin@explorandolugares.com\']);echo $q->fetchColumn();')=='1'
  print('OK: anonymous rejected; administrator login; session status; admin access; logout revokes access; business cannot administer; role revocation immediate; owner account present. No owner password used.')

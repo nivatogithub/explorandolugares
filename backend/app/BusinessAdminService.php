@@ -13,6 +13,7 @@ final class BusinessAdminService
 
     public function canDelete(int $id): bool
     {
+        require_once __DIR__.'/BusinessPaymentOrderSelector.php';$orders=new BusinessPaymentOrderSelector($this->pdo);if($orders->available()&&$orders->hasHistory($id))return false;
         $q=$this->pdo->prepare('SELECT id FROM business_subscriptions bs WHERE bs.business_id=? AND '.self::PROTECTED_SUBSCRIPTION.' LIMIT 1');
         $q->execute([$id]);
         return !$q->fetchColumn();

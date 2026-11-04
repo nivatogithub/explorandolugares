@@ -18,7 +18,7 @@ Las operaciones repetibles ahora están disponibles en la página privada `/admi
 La página `/admin/index.php?tab=sistema` sigue siendo solo de diagnóstico; el control de migraciones y carga inicial está separado en `/admin/base-datos.php`. No se debe ejecutar el importador semilla si el catálogo ya contiene registros.
 
 1. Crear en cPanel una base exclusiva y un usuario exclusivo. Asociar usuario y base. Para importar el esquema se necesita permiso CREATE; la aplicación diaria solo necesita SELECT, INSERT, UPDATE y DELETE.
-2. Desde el repositorio, ejecutar `python3 scripts/preparar-hosting.py`.
+2. Desde el repositorio, ejecutar `python3 scripts/prepare-hosting.py`.
 3. Ejecutar `python3 scripts/configurar-registros.py`. Pide contraseñas sin mostrarlas, genera la clave interna y el hash del administrador. No reemplaza configuración existente ni activa el formulario. Si PHP no está en PATH, usar `--php /ruta/a/php`.
 4. Transferir por SFTP **solo** `.local/hosting/private/config.php` a `/home/d9rgqsde6im4/explorandolugares/private/config.php`. Mantener permisos 600. No compartir este archivo, pegarlo en el chat ni subirlo a Git. Base64 dentro del archivo es codificación, no cifrado.
 5. Desplegar la versión que incluye la herramienta privada, iniciar sesión y abrir `/admin/base-datos.php`. La pantalla permite instalar el esquema base si la base está vacía, luego aplicar las migraciones y cargar el catálogo inicial. Escribe la frase que solicita cada operación y comprueba el resultado en esa misma página. No hay que ejecutar SQL manualmente.

@@ -11,4 +11,8 @@ check($service->changeStatus(99,'revisado')==='missing');
 check($pdo->query('SELECT status FROM leads WHERE id=1')->fetchColumn()==='revisado');
 foreach([[1,'inventado'],[0,'nuevo']] as [$id,$status]){try{$service->changeStatus($id,$status);throw new RuntimeException('Accepted invalid input');}catch(InvalidArgumentException){}}
 check(!$pdo->inTransaction());
+$pdo->exec("CREATE TRIGGER reject_contact BEFORE UPDATE ON leads WHEN NEW.status='contactado' BEGIN SELECT RAISE(ABORT, 'synthetic failure'); END");
+try{$service->changeStatus(1,'contactado');throw new RuntimeException('Failure was not propagated');}catch(PDOException $expected){}
+check(!$pdo->inTransaction());
+check($pdo->query('SELECT status FROM leads WHERE id=1')->fetchColumn()==='revisado');
 echo "Lead states: passed\n";

@@ -12,7 +12,7 @@ import unittest
 ROOT = Path(__file__).resolve().parents[2]
 spec = importlib.util.spec_from_file_location('full_coverage_deploy', ROOT/'scripts/desplegar-sftp.py')
 deploy = importlib.util.module_from_spec(spec); spec.loader.exec_module(deploy)
-version_spec=importlib.util.spec_from_file_location('measurement_versions',ROOT/'scripts/versiones-medicion.py')
+version_spec=importlib.util.spec_from_file_location('measurement_versions',ROOT/'scripts/version-analytics.py')
 versions=importlib.util.module_from_spec(version_spec);version_spec.loader.exec_module(versions)
 
 
@@ -36,12 +36,12 @@ class FullReleaseCoverageTests(unittest.TestCase):
                     self.assertEqual(actual.read_bytes(),source.read_bytes(),relative)
                 elif source.suffix=='.js':
                     self.assertEqual(without_versions(actual.read_bytes()),without_versions(source.read_bytes()),relative)
-            for source in (ROOT/'backend/integration-medicion/public/api').rglob('*.php'):
-                relative='public/api/'+source.relative_to(ROOT/'backend/integration-medicion/public/api').as_posix()
+            for source in (ROOT/'backend/integration-analytics/public/api').rglob('*.php'):
+                relative='public/api/'+source.relative_to(ROOT/'backend/integration-analytics/public/api').as_posix()
                 self.assertEqual((Path(folder)/relative).read_bytes(),source.read_bytes(),relative)
             coverage=(Path(folder)/'public/cobertura/colombia/index.html').read_text()
             self.assertEqual(coverage.count('<header'),1)
-            self.assertIn('cobertura-meta.js',coverage)
+            self.assertIn('coverage-meta.js',coverage)
             self.assertIn('id="panel-cobertura"',coverage)
             self.assertIn('id="panel-visitantes"',coverage)
             self.assertNotIn('public/__preprod-account.php', packaged)

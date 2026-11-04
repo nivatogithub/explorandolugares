@@ -49,8 +49,8 @@ def render_footer(text):
         if dynamic:return "<?=($locale==='en'?"+repr(en)+":($locale==='pt-BR'?"+repr(pt)+":"+repr(es)+"))?>"
         return {'es':es,'en':en,'pt-BR':pt}[locale]
     body=footer[0]
-    if 'href="/contacto.php"' not in body:
-        help='<span><a class="footer-help-link" href="/contacto.php">'+word('Contacto y ayuda','Contact and help','Contato e ajuda')+'</a></span>'
+    if 'href="/contact.php"' not in body:
+        help='<span><a class="footer-help-link" href="/contact.php">'+word('Contacto y ayuda','Contact and help','Contato e ajuda')+'</a></span>'
         end=body.rfind('</div>')
         body=body[:end]+help+body[end:] if end>=0 else body.replace('</footer>',help+'</footer>')
     if 'el-measurement-preferences' not in body:
@@ -59,7 +59,7 @@ def render_footer(text):
     return text[:footer.start()]+body+text[footer.end():]
 def apply(public):
     public=Path(public)
-    versions={name:hashlib.sha256((public/'assets'/name).read_bytes()).hexdigest()[:12] for name in ['header-controls.css','account-entry.css','cobertura/medicion.css']}
+    versions={name:hashlib.sha256((public/'assets'/name).read_bytes()).hexdigest()[:12] for name in ['header-controls.css','account-entry.css','cobertura/analytics.css']}
     navigation_version=hashlib.sha256((public/'assets/language-navigation.js').read_bytes()).hexdigest()[:12]
     count=0
     for path in public.rglob('*'):

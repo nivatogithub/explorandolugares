@@ -1,7 +1,7 @@
 const fs = require('node:fs');
 const vm = require('node:vm');
 const assert = require('node:assert/strict');
-const script = fs.readFileSync('ensayos/v1/assets/registro.js', 'utf8');
+const script = fs.readFileSync('ensayos/v1/assets/registration.js', 'utf8');
 async function scenario(mode, invalidCase, lang='es') {
   const nodes = {
     'registration-fields': {disabled: false},
@@ -10,7 +10,7 @@ async function scenario(mode, invalidCase, lang='es') {
   };
   let invalidMarked = false;
   const invalidField = {setAttribute(name, value) { if (name === 'aria-invalid' && value === 'true') invalidMarked = true; }};
-  const form = {action: '/api/participacion.php', elements: {lang: {}, csrf: {}, request_key: {}, email: {value: invalidCase === 'missing-contact' ? '' : 'test@example.invalid', focus() {}}, phone_number: {value: ''}, consent: {checked: invalidCase !== 'consent', focus() {}}, understanding: {checked: invalidCase !== 'understanding', focus() {}}}, reportValidity() {return invalidCase !== 'invalid-format'}, querySelectorAll(selector) {return selector === ':invalid' && invalidCase === 'invalid-format' ? [invalidField] : []}, addEventListener(name, handler) {this.submit = handler;}};
+  const form = {action: '/api/participation.php', elements: {lang: {}, csrf: {}, request_key: {}, email: {value: invalidCase === 'missing-contact' ? '' : 'test@example.invalid', focus() {}}, phone_number: {value: ''}, consent: {checked: invalidCase !== 'consent', focus() {}}, understanding: {checked: invalidCase !== 'understanding', focus() {}}}, reportValidity() {return invalidCase !== 'invalid-format'}, querySelectorAll(selector) {return selector === ':invalid' && invalidCase === 'invalid-format' ? [invalidField] : []}, addEventListener(name, handler) {this.submit = handler;}};
   nodes['business-registration'] = form;
   let posts = 0;
   const context = {FormData: class {}, document: {documentElement: {lang}, getElementById: id => nodes[id]}, window: {}, fetch: async (url, options) => {

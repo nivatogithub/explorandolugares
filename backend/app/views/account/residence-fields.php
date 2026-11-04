@@ -1,0 +1,11 @@
+<?php declare(strict_types=1);
+$value=static fn(string $key):string=>$residence['values'][$key];
+$titleCase=static fn($value):string=>mb_convert_case((string)$value,MB_CASE_TITLE,'UTF-8');
+?>
+<fieldset class="account-residence" data-residence><legend><?=$e($residence['copy']['heading'])?></legend><p><?=$e($residence['copy']['help'])?></p>
+<div class="destination-form-grid">
+<label><?=$e($residence['copy']['country'])?><select name="residence_country_code" autocomplete="country" required><?php foreach($residence['catalog']['countries'] as $code=>$label):?><option value="<?=$e($code)?>" <?=$value('country_code')===$code?'selected':''?>><?=$e($label)?></option><?php endforeach ?></select></label>
+<label><span data-region-label>Departamento</span><select name="residence_region_code" autocomplete="address-level1" <?=$value('country_code')==='CO'?'required':'hidden disabled'?>><option value="">Selecciona un departamento</option><?php foreach($residence['catalog']['regions']['CO'] as $code=>$label):?><option value="<?=$e($code)?>" <?=$value('country_code')==='CO'&&$value('region_code')===$code?'selected':''?>><?=$e($titleCase($label))?></option><?php endforeach ?></select><input name="residence_region_name" autocomplete="address-level1" maxlength="120" <?=$value('country_code')==='CO'?'hidden disabled':'required'?> value="<?=$e($value('region_name'))?>"></label>
+<label><span data-city-label>Municipio / ciudad o pueblo</span><select name="residence_city_code" autocomplete="address-level2" <?=$value('country_code')==='CO'?'required':'hidden disabled'?>><option value="">Selecciona un municipio</option><?php foreach($residence['catalog']['municipalities'] as $city):?><option value="<?=$e($city['code'])?>" data-region="<?=$e($city['department_code'])?>" <?=$value('country_code')==='CO'&&$value('city_code')===$city['code']?'selected':''?>><?=$e($titleCase($city['name']))?></option><?php endforeach ?></select><input name="residence_city_name" autocomplete="address-level2" maxlength="120" <?=$value('country_code')==='CO'?'hidden disabled':'required'?> value="<?=$e($value('city_name'))?>"></label>
+</div><noscript><p>Colombia usa listas de departamento y municipio; otros países usan región y ciudad. Activa JavaScript para cambiar de país.</p></noscript></fieldset>
+<script src="<?=$e($residenceScriptUrl)?>" defer></script>

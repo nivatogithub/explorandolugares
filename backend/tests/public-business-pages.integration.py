@@ -27,6 +27,7 @@ with tempfile.TemporaryDirectory(prefix='el-business-pages-') as temporary:
     for schema in ('sqlite.sql', 'destinations.sqlite.sql'):
         db.executescript((ROOT / 'backend/database' / schema).read_text())
     db.executescript((ROOT / 'backend/database/migrations/006-poi-experience-links.sqlite.sql').read_text())
+    db.executescript((ROOT / 'backend/database/migrations/060-destination-content.sqlite.sql').read_text())
     for number in range(8, 35):
         migrations = list((ROOT / 'backend/database/migrations').glob(f'{number:03d}-*.sqlite.sql'))
         assert len(migrations) == 1
@@ -61,14 +62,14 @@ with tempfile.TemporaryDirectory(prefix='el-business-pages-') as temporary:
     (work / 'private/config.php').write_text("<?php return json_decode(base64_decode('" + encoded + "'),true);")
     (work / 'router.php').write_text("""<?php
     if (in_array($_SERVER['REQUEST_URI'],['/directory','/directory-contacts'],true)) {
-      require __DIR__.'/app/DestinationRepository.php';
+      require __DIR__.'/app/PlaceRepository.php';
       $config=require __DIR__.'/private/config.php';
       $pdo=new PDO($config['dsn']);
       header('Content-Type: application/json');
-      echo json_encode((new DestinationRepository($pdo))->findPublished('prueba','es')[$_SERVER['REQUEST_URI']==='/directory'?'businesses':'public_contacts']);return;
+      echo json_encode((PlaceRepository::fromDatabase($pdo))->findPublished('prueba','es')[$_SERVER['REQUEST_URI']==='/directory'?'businesses':'public_contacts']);return;
     }
     if(preg_match('~/negocios/perfil/([^/]+)/?$~',parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH),$m))$_GET['alias']=$m[1];else $_GET['id']=basename(parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH));
-    require __DIR__.'/public/negocio.php';
+    require __DIR__.'/public/business.php';
     """)
     with socket.socket() as sock:
         sock.bind(('127.0.0.1',0)); port=sock.getsockname()[1]
@@ -85,8 +86,8 @@ with tempfile.TemporaryDirectory(prefix='el-business-pages-') as temporary:
             try:
                 socket.create_connection(('127.0.0.1',port),timeout=.1).close();break
             except OSError:time.sleep(.03)
-        for source in ('ensayos/v1/negocio.php','backend/integration-medicion/public/negocio.php'):
-            shutil.copy2(ROOT/source,work/'public/negocio.php')
+        for source in ('ensayos/v1/business.php','backend/integration-analytics/public/business.php'):
+            shutil.copy2(ROOT/source,work/'public/business.php')
             status,html=get('/negocios/'+ids['pago'])
             assert status==200 and '<h1>pago</h1>' in html,(source,status,html[:100])
             assert 'id="servicio-restaurant"' not in html,'Normal page exposes Premium section'

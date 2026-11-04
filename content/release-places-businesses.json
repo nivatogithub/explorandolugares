@@ -1117,7 +1117,8 @@
           "media_asset_id": -1,
           "asset_path": "assets/media/ce/ce3694ebfe583500db04ac97e1bfa0d021bc60f4e2ea5dea417703453cc08236.webp"
         }
-      }
+      },
+      "labels": []
     },
     "cartagena": {
       "id": 22,
@@ -2395,7 +2396,8 @@
           "media_asset_id": -15,
           "asset_path": "assets/media/61/618893a558b3e9f8d3f2af794e9e1894f41b13edec7724c3dd92baab8c7e0bd0.webp"
         }
-      }
+      },
+      "labels": []
     },
     "covenas": {
       "id": 26,
@@ -3175,7 +3177,8 @@
           "media_asset_id": 333,
           "asset_path": "assets/media/4d/4d34f3e65b3ebef1e089ac16b59009d4b54a8218b618aa5f845417abf1be21cd.webp"
         }
-      }
+      },
+      "labels": []
     },
     "jardin": {
       "id": 2,
@@ -4145,7 +4148,10 @@
           "media_asset_id": 214,
           "asset_path": "assets/media/f5/f56935fc6c7bfcc87d5b794f03536e072a91742fa46f08016500956bc698df88.webp"
         }
-      }
+      },
+      "labels": [
+        "heritage_town"
+      ]
     },
     "jerico": {
       "id": 1,
@@ -4891,7 +4897,10 @@
           "media_asset_id": 10,
           "asset_path": "assets/media/5b/5b1eb668d1b2ced2d8bdd3b3950439624c1d43c742ca18902e665fc73310a717.webp"
         }
-      }
+      },
+      "labels": [
+        "heritage_town"
+      ]
     },
     "medellin": {
       "id": 16,
@@ -6255,7 +6264,8 @@
           "media_asset_id": -29,
           "asset_path": "assets/media/09/090b31337d6df5bbb8b7497520283ed84ad55d88d8a7aa0af3b4d3a7f5cb5ad2.webp"
         }
-      }
+      },
+      "labels": []
     },
     "santa-fe-de-antioquia": {
       "id": 4,
@@ -6922,7 +6932,10 @@
           "media_asset_id": 188,
           "asset_path": "assets/media/9a/9a661e252005d27e29917085b025241a86b31370e1b5f30f412f4a6da879d9f2.webp"
         }
-      }
+      },
+      "labels": [
+        "heritage_town"
+      ]
     },
     "santa-marta": {
       "id": 24,
@@ -8214,7 +8227,8 @@
           "media_asset_id": -44,
           "asset_path": "assets/media/4f/4f8c7aab98b7e71e12fc26b2ca6850d124acc06efb426cec99d27f7aaca3a369.webp"
         }
-      }
+      },
+      "labels": []
     },
     "zipaquira": {
       "id": 25,
@@ -8940,7 +8954,8 @@
           "media_asset_id": 354,
           "asset_path": "assets/media/c2/c2badfad9bda4389dc63d84ce26a38cb544a37dfdfd9751e5d6f44b0eb48c4c5.webp"
         }
-      }
+      },
+      "labels": []
     },
     "guatape": {
       "id": 10001,
@@ -9377,7 +9392,8 @@
           "media_asset_id": -10010,
           "asset_path": "assets/media/87/87c7849acefc191da5c84e3942083c4549b98bae5c976599a586861438d420df.webp"
         }
-      }
+      },
+      "labels": []
     },
     "cauca-viejo": {
       "id": 10002,
@@ -9655,7 +9671,8 @@
           "media_asset_id": -10011,
           "asset_path": "assets/media/5e/5e4b8f6ef13701fee1d4336beec8e80f10b91ec828c6ac7da7f484e9ec699019.webp"
         }
-      }
+      },
+      "labels": []
     },
     "cocorna": {
       "id": 10003,
@@ -9924,7 +9941,8 @@
           "media_asset_id": -10017,
           "asset_path": "assets/media/8f/8f9bc8e23c2a74079a0965498cfe7d030d8c48fd550815b2c99f07c8740393e4.webp"
         }
-      }
+      },
+      "labels": []
     },
     "arboletes": {
       "id": 10004,
@@ -10196,14 +10214,15 @@
           "media_asset_id": -10026,
           "asset_path": "assets/media/98/98d759d25a91891ef0142ecd3ef7ed51baed6573c92191782695c484f0fffd45.webp"
         }
-      }
+      },
+      "labels": []
     },
     "riohacha": {
       "slug": "riohacha",
       "destination_type": "city",
       "country_code": "CO",
       "department": "La Guajira",
-      "subregion": null,
+      "subregion": "Caribe",
       "latitude": 11.551435,
       "longitude": -72.909615,
       "display_order": 20,
@@ -10924,14 +10943,15 @@
           "media_asset_id": -10033,
           "asset_path": "assets/revision-caribe/riohacha/riohacha-portada-estilizada-v4.webp"
         }
-      }
+      },
+      "labels": []
     },
     "valledupar": {
       "slug": "valledupar",
       "destination_type": "city",
       "country_code": "CO",
       "department": "Cesar",
-      "subregion": null,
+      "subregion": "Caribe",
       "latitude": 10.477592,
       "longitude": -73.244536,
       "display_order": 21,
@@ -11598,7 +11618,8 @@
           "media_asset_id": -10045,
           "asset_path": "assets/revision-caribe/valledupar/portada-revolucion-v2.webp"
         }
-      }
+      },
+      "labels": []
     },
     "barranquilla": {
       "id": 10007,
@@ -11606,7 +11627,7 @@
       "destination_type": "city",
       "country_code": "CO",
       "department": "Atlántico",
-      "subregion": "",
+      "subregion": "Caribe",
       "latitude": 10.988023,
       "longitude": -74.789286,
       "publication_status": "published",
@@ -12397,7 +12418,8 @@
           "media_asset_id": 466,
           "asset_path": "assets/media/82/82fca713296939b47c8056507c7e14e2a17d8375b6aa2e47fe149ca95690f082.webp"
         }
-      }
+      },
+      "labels": []
     },
     "manizales": {
       "id": 10008,
@@ -13016,7 +13038,8 @@
           "media_asset_id": 474,
           "asset_path": "assets/media/cd/cd494f5bb4db54d05d876d5e7f47c4616042d8361cb8f03bb83bf3d358946a20.webp"
         }
-      }
+      },
+      "labels": []
     },
     "pereira": {
       "id": 10009,
@@ -13511,7 +13534,8 @@
           "media_asset_id": 481,
           "asset_path": "assets/media/54/542673cbe687f0458a9800b28448ec5f403277dea2936f07c57ab8c12bef9cb5.webp"
         }
-      }
+      },
+      "labels": []
     },
     "san-bernardo-del-viento": {
       "id": 10010,
@@ -13519,7 +13543,7 @@
       "destination_type": "municipality",
       "country_code": "CO",
       "department": "Córdoba",
-      "subregion": "",
+      "subregion": "Caribe",
       "latitude": 9.35293,
       "longitude": -75.952196,
       "publication_status": "published",
@@ -13829,7 +13853,8 @@
           "media_asset_id": 487,
           "asset_path": "assets/media/46/46d1eb40c66dc27f75fd763d66a91a20b72faceac6a4bcd5e699a370d00a5358.webp"
         }
-      }
+      },
+      "labels": []
     },
     "villavieja": {
       "id": 10011,
@@ -14212,7 +14237,8 @@
           "media_asset_id": 491,
           "asset_path": "assets/media/55/55d902d5c204af239dc22757ae7fb2d1feaf931e2665699a72bb8200e4f9deb6.webp"
         }
-      }
+      },
+      "labels": []
     }
   },
   "tables": {

@@ -4,6 +4,7 @@ declare(strict_types=1);
 require_once __DIR__.'/ExperienceOperatorAddon.php';
 require_once __DIR__.'/SubscriptionChangeService.php';
 require_once __DIR__.'/BusinessPromotions.php';
+require_once __DIR__.'/BusinessPaymentOrderSelector.php';
 final class BusinessPaymentEvidenceService
 {
     public const MAX_BYTES=8*1024*1024;
@@ -20,6 +21,7 @@ final class BusinessPaymentEvidenceService
         $reference=trim($reference);if(strlen($reference)>160)throw new RuntimeException('La referencia de pago supera los 160 caracteres.');
         if(!throttle('business_payment_evidence',5,3600,(string)$accountId))throw new RuntimeException('Se alcanzó el límite de envíos de comprobantes. Inténtalo más tarde.');
         $membership=$this->pdo->prepare('SELECT b.id FROM business_account_memberships m JOIN businesses b ON b.id=m.business_id JOIN accounts a ON a.id=m.account_id WHERE m.account_id=? AND m.business_id=? AND m.status="active" AND m.role IN ("owner","manager") AND a.status="active"');$membership->execute([$accountId,$businessId]);if(!$membership->fetchColumn())throw new RuntimeException('No tienes permiso para gestionar este negocio.');
+        $orders=new BusinessPaymentOrderSelector($this->pdo);if($orders->available()&&$orders->openForBusiness($businessId))throw new RuntimeException('Continúa la orden que ya incluye este negocio.');
         if(!in_array($planCode,['free','featured','page','page_premium'],true))throw new RuntimeException('Selecciona una suscripción vigente.');
         $planQuery=$this->pdo->prepare('SELECT code FROM subscription_plans WHERE code=? AND is_active=1');$planQuery->execute([$planCode]);if(!$planQuery->fetchColumn())throw new RuntimeException('Selecciona una suscripción vigente.');
         $pendingEvidence=$this->pdo->prepare('SELECT 1 FROM business_subscription_payment_evidence e JOIN business_subscriptions s ON s.id=e.subscription_id WHERE e.account_id=? AND s.business_id=? AND e.status="pending" LIMIT 1');$pendingEvidence->execute([$accountId,$businessId]);
@@ -49,6 +51,7 @@ final class BusinessPaymentEvidenceService
         try{
             $lock=$this->pdo->getAttribute(PDO::ATTR_DRIVER_NAME)==='mysql'?' FOR UPDATE':'';
             $locked=$this->pdo->prepare('SELECT id FROM businesses WHERE id=?'.$lock);$locked->execute([$businessId]);
+            if($orders->available()&&$orders->openForBusiness($businessId))throw new RuntimeException('Este negocio ya pertenece a una orden de pago.');
             // Serialize duplicate uploads and retain the original coupon redemption.
             $pendingEvidence->execute([$accountId,$businessId]);if($pendingEvidence->fetchColumn())throw new RuntimeException('Ya enviaste un comprobante para este negocio. Espera su revisión.');
             $latest=$this->pdo->prepare('SELECT * FROM business_subscriptions WHERE business_id=? ORDER BY id DESC LIMIT 1'.$lock);$latest->execute([$businessId]);$latest=$latest->fetch(PDO::FETCH_ASSOC);
@@ -74,13 +77,13 @@ final class BusinessPaymentEvidenceService
 
     public function pending():array
     {
-        return $this->pdo->query('SELECT e.id,e.checkout_reference,e.transaction_date,e.paid_amount,e.payment_method,e.source_bank,e.original_name,e.mime_type,e.file_size,e.payment_reference,e.submitted_at,a.display_name AS account_name,a.email,b.id AS business_id,t.display_name AS business_name,d.slug AS destination_slug,s.plan_code,s.billing_frequency,s.quoted_amount,s.currency,x.quoted_amount AS operator_amount,xt.name AS operator_experience FROM business_subscription_payment_evidence e JOIN accounts a ON a.id=e.account_id JOIN business_subscriptions s ON s.id=e.subscription_id JOIN businesses b ON b.id=s.business_id JOIN business_translations t ON t.business_id=b.id AND t.locale="es" JOIN destinations d ON d.id=b.destination_id LEFT JOIN business_experience_subscriptions x ON x.subscription_id=s.id LEFT JOIN point_of_interest_translations xt ON xt.point_of_interest_id=x.experience_id AND xt.locale="es" WHERE e.status="pending" ORDER BY e.submitted_at,e.id')->fetchAll(PDO::FETCH_ASSOC);
+        return (new BusinessPaymentOrderSelector($this->pdo))->decorate($this->pdo->query('SELECT e.id,e.checkout_reference,e.transaction_date,e.paid_amount,e.payment_method,e.source_bank,e.original_name,e.mime_type,e.file_size,e.payment_reference,e.submitted_at,a.display_name AS account_name,a.email,b.id AS business_id,t.display_name AS business_name,d.slug AS destination_slug,s.plan_code,s.billing_frequency,s.quoted_amount,s.currency,x.quoted_amount AS operator_amount,xt.name AS operator_experience FROM business_subscription_payment_evidence e JOIN accounts a ON a.id=e.account_id JOIN business_subscriptions s ON s.id=e.subscription_id JOIN businesses b ON b.id=s.business_id JOIN business_translations t ON t.business_id=b.id AND t.locale="es" JOIN destinations d ON d.id=b.destination_id LEFT JOIN business_experience_subscriptions x ON x.subscription_id=s.id LEFT JOIN point_of_interest_translations xt ON xt.point_of_interest_id=x.experience_id AND xt.locale="es" WHERE e.status="pending" ORDER BY e.submitted_at,e.id')->fetchAll(PDO::FETCH_ASSOC));
     }
 
     /** Return payment status and the response for the authenticated submitting account; never expose file paths. */
     public function history(int $accountId):array
     {
-        $query=$this->pdo->prepare('SELECT e.checkout_reference,e.transaction_date,e.paid_amount,e.payment_method,e.source_bank,e.status,e.payment_reference,e.customer_message,e.submitted_at,e.reviewed_at,
+        $query=$this->pdo->prepare('SELECT e.id AS evidence_id,e.checkout_reference,e.transaction_date,e.paid_amount,e.payment_method,e.source_bank,e.status,e.payment_reference,e.customer_message,e.submitted_at,e.reviewed_at,
                 s.id AS subscription_id,s.business_id,s.plan_code,s.billing_frequency,s.quoted_amount,s.currency,
                 COALESCE(pt.name,s.plan_code) AS plan_name,t.display_name AS business_name,dt.display_name AS destination_name
             FROM business_subscription_payment_evidence e
@@ -91,11 +94,13 @@ final class BusinessPaymentEvidenceService
             LEFT JOIN destination_translations dt ON dt.destination_id=d.id AND dt.locale="es"
             LEFT JOIN subscription_plan_translations pt ON pt.plan_code=s.plan_code AND pt.locale="es"
             WHERE e.account_id=? ORDER BY e.submitted_at DESC,e.id DESC');
-        $query->execute([$accountId]);return $query->fetchAll(PDO::FETCH_ASSOC);
+        $query->execute([$accountId]);return (new BusinessPaymentOrderSelector($this->pdo))->decorate($query->fetchAll(PDO::FETCH_ASSOC));
     }
 
     public function review(int $evidenceId,string $decision,string $note,string $admin,string $customerMessage=''):void
     {
+        $orders=new BusinessPaymentOrderSelector($this->pdo);
+        if($orders->available()&&$orders->byEvidence($evidenceId)){require_once __DIR__.'/BusinessPaymentOrderService.php';(new BusinessPaymentOrderService($this->pdo))->review($evidenceId,$decision,$note,$admin,$customerMessage);return;}
         if(!in_array($decision,['approved','clarification_requested','rejected'],true))throw new RuntimeException('Selecciona aprobar, pedir aclaración o rechazar el comprobante.');$note=trim($note);$customerMessage=trim($customerMessage);if(in_array($decision,['clarification_requested','rejected'],true)&&strlen($note)<8)throw new RuntimeException('Deja una nota interna para registrar el motivo.');if(in_array($decision,['clarification_requested','rejected'],true)&&strlen($customerMessage)<8)throw new RuntimeException('Escribe un mensaje claro para el negocio con el motivo y el siguiente paso.');
         $this->pdo->beginTransaction();try{$lock=$this->pdo->getAttribute(PDO::ATTR_DRIVER_NAME)==='mysql'?' FOR UPDATE':'';$query=$this->pdo->prepare('SELECT e.subscription_id,e.status,e.paid_amount,s.business_id,s.status AS subscription_status,s.plan_code,s.billing_frequency,s.quoted_amount,s.currency FROM business_subscription_payment_evidence e JOIN business_subscriptions s ON s.id=e.subscription_id WHERE e.id=?'.$lock);$query->execute([$evidenceId]);$row=$query->fetch(PDO::FETCH_ASSOC);if(!$row||$row['status']!=='pending')throw new RuntimeException('El comprobante ya fue revisado o no existe.');if($row['subscription_status']!=='pending')throw new RuntimeException('La suscripción ya cambió de estado; revisa el negocio antes de continuar.');
             if($decision==='approved'){ $operatorService=new ExperienceOperatorAddon($this->pdo);if($operatorService->forSubscription((int)$row['subscription_id']))$operatorService->requireEligible((int)$row['business_id']);}

@@ -100,7 +100,7 @@ def run():
     opener.open(urllib.request.Request(base + 'admin/index.php', data=urllib.parse.urlencode({
         'csrf':csrf,'action':'login','username':'localadmin','password':'DestinosLocal8014!'
     }).encode()))
-    editor = opener.open(base + 'admin/destinos.php').read().decode()
+    editor = opener.open(base + 'admin/places.php').read().decode()
     csrf = re.search(r'name="csrf" value="([^"]+)"', editor).group(1)
 
     fields = {'csrf':csrf,'action':'save','id':'','slug':slug,'destination_type':destination.get('destination_type','municipality'),'country_code':destination.get('country_code','CO'),
@@ -139,7 +139,7 @@ def run():
             files.append((f'place_uploads[{index}]',image_path))
 
     body,boundary=multipart(fields,files)
-    response=opener.open(urllib.request.Request(base+'admin/destinos.php',data=body,headers={'Content-Type':f'multipart/form-data; boundary={boundary}'}))
+    response=opener.open(urllib.request.Request(base+'admin/places.php',data=body,headers={'Content-Type':f'multipart/form-data; boundary={boundary}'}))
     saved_id=int(re.search(r'[?&]id=(\d+)',response.geturl()).group(1))
     with sqlite3.connect(args.db) as db:
         row=db.execute('SELECT slug,publication_status,internal_research_json FROM destinations WHERE id=?',(saved_id,)).fetchone()

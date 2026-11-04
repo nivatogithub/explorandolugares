@@ -19,7 +19,7 @@ ORIGINS = {'preprod': 'http://127.0.0.1:8088', 'produccion': 'https://explorando
 PLACES = ['jerico', 'cartagena', 'bogota', 'medellin', 'santa-marta']
 ROUTES = ['/', '/destinos/', '/planea-tu-visita/', '/negocios-locales/',
           '/negocios-locales/planes/', '/negocios-locales/proceso/', '/cobertura/colombia/',
-          '/contacto.php', '/privacidad/', '/negocios/acceso/', '/negocios/registro/',
+          '/contact.php', '/privacidad/', '/negocios/acceso/', '/negocios/registro/',
           '/negocios/recuperar-clave/']
 SCENARIOS = [
     ('E2E-01', 'Crear administrador técnico y acceder a cada opción del panel'),
@@ -167,7 +167,7 @@ def main():
     case('LINK', 'Enlaces públicos descubiertos en las páginas', navigation)
 
     def admin_guard():
-        for path in ('/admin/index.php', '/admin/base-datos.php', '/admin/medios-pago.php'):
+        for path in ('/admin/index.php', '/admin/database.php', '/admin/payment-settings.php'):
             status, _, final, _ = fetch(ORIGINS['produccion'], path)
             assert status in (401, 403) or (status == 200 and '/negocios/acceso/' in final), f'Administración abierta: {path}'
         return {'local_admin_exception': 'El acceso local sin clave no se exige ni se permite como paridad de producción.'}

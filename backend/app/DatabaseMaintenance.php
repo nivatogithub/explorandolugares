@@ -311,6 +311,25 @@ final class DatabaseMaintenance
             'metadata_patch'=>'content/seo-description-patch.json',
             'requires'=>['destinations','destination_translations'],
         ],
+        '062-place-labels'=>[
+            'file'=>'062-place-labels.mysql.sql','idempotent_updates'=>true,
+            'checks'=>[['place_labels',['place_id','code','enabled','source_url','verified_on']]],
+            'place_labels_patch'=>true,
+            'requires'=>['destinations'],
+        ],
+        '061-business-payment-orders'=>[
+            'file'=>'061-business-payment-orders.mysql.sql','idempotent_updates'=>true,
+            'checks'=>[['business_payment_orders',['public_id','account_id','request_key','request_hash','total_cents','currency','status']],['business_payment_order_items',['order_id','business_id','source_request_id','subscription_id','open_business_id','quote_json','due_cents']],['business_payment_order_evidence',['evidence_id','order_id']]],
+            'requires'=>['accounts','business_subscriptions','business_subscription_payment_evidence'],
+        ],
+        '060-destination-content'=>[
+            'file'=>'060-destination-content.mysql.sql',
+            'checks'=>[
+                ['media_assets',['responsive_srcset','responsive_sizes']],
+                ['destination_content_migrations',['migration_key','plan_sha256','changes_json','applied_at']],
+            ],
+            'requires'=>['media_assets'],
+        ],
     ];
 
     public function __construct(private PDO $pdo, private string $appRoot, private string $publicRoot)
@@ -512,8 +531,8 @@ final class DatabaseMaintenance
                 throw new RuntimeException('Falta una imagen del catálogo en la carpeta pública: '.$relative);
             }
         }
-        require_once $this->appRoot.'/DestinationImporter.php';
-        return DestinationImporter::import($this->pdo, $catalog, $options);
+        require_once $this->appRoot.'/PlaceImporter.php';
+        return PlaceImporter::import($this->pdo, $catalog, $options);
     }
 
     private function requireMysql(): void
@@ -555,6 +574,14 @@ final class DatabaseMaintenance
                 $q=$this->pdo->prepare('SELECT COUNT(*) FROM destination_translations t JOIN destinations d ON d.id=t.destination_id WHERE d.slug=? AND t.locale=? AND HEX(t.meta_description)=HEX(?)');
                 $q->execute([$change['slug'],$change['locale'],$change['before']]);
                 if((int)$q->fetchColumn()===0)$present++;
+            }
+        }
+        if (!empty($migration['place_labels_patch'])) {
+            $total++;
+            if (in_array('destinations',$tables,true) && in_array('place_labels',$tables,true) && !array_diff(['place_id','code','enabled','source_url','verified_on'],$this->columns('place_labels'))) {
+                $missingRegions=(int)$this->pdo->query("SELECT COUNT(*) FROM destinations WHERE country_code='CO' AND ((slug='barranquilla' AND department='Atlántico') OR (slug='riohacha' AND department='La Guajira') OR (slug='valledupar' AND department='Cesar') OR (slug='san-bernardo-del-viento' AND department='Córdoba')) AND TRIM(COALESCE(subregion,''))=''")->fetchColumn();
+                $missingLabels=(int)$this->pdo->query("SELECT COUNT(*) FROM destinations d WHERE d.country_code='CO' AND d.department='Antioquia' AND d.slug IN ('jardin','jerico','santa-fe-de-antioquia') AND NOT EXISTS (SELECT 1 FROM place_labels l WHERE l.place_id=d.id AND l.code='heritage_town')")->fetchColumn();
+                if ($missingRegions===0 && $missingLabels===0) $present++;
             }
         }
         foreach (($migration['checks']??[]) as [$table, $columns]) {

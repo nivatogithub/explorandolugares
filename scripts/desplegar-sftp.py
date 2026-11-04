@@ -97,8 +97,8 @@ def rewrite_private_app_includes(public_root, remote_base):
     """Point public PHP entrypoints to the private app directory on the host."""
     prefixes = [
         re.compile(r'''dirname\s*\(\s*__DIR__\s*\)\s*\.\s*(['"])/app/'''),
-        re.compile(r'''dirname\s*\(\s*__DIR__\s*,\s*2\s*\)\s*\.\s*(['"])/app/'''),
-        re.compile(r'''__DIR__\s*\.\s*(['"])/\.\./app/'''),
+        re.compile(r'''dirname\s*\(\s*__DIR__\s*,\s*[1-9][0-9]*\s*\)\s*\.\s*(['"])/app/'''),
+        re.compile(r'''__DIR__\s*\.\s*(['"])(?:/\.\.)+/app/'''),
     ]
     for entry in public_root.rglob('*.php'):
         source = entry.read_text()
@@ -131,7 +131,7 @@ def build(output, config=None):
     try:
         for folder in source_folders:
             shutil.copytree(ROOT / folder, source_root / folder, ignore=shutil.ignore_patterns('__pycache__', '.DS_Store'))
-        subprocess.run([sys.executable, str(source_root / 'scripts/preparar-hosting.py'), '--output', str(output)], check=True)
+        subprocess.run([sys.executable, str(source_root / 'scripts/prepare-hosting.py'), '--output', str(output)], check=True)
     finally:
         shutil.rmtree(source_temp, ignore_errors=True)
     if config and config.get('public_root'):
@@ -233,7 +233,7 @@ def select_files(files, requested_paths):
 def place_or_image(relative):
     path=PurePosixPath(relative)
     return (bool(re.match(r'^public/(?:en/|pt-br/)?destinos(?:/|$)',relative))
-            or relative=='public/destino.php' or relative.startswith('app/content/')
+            or relative=='public/place.php' or relative.startswith('app/content/')
             or path.suffix.lower() in {'.webp','.png','.jpg','.jpeg','.gif','.svg','.geojson','.mmdb'})
 
 

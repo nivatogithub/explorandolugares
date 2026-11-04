@@ -6,7 +6,7 @@ function metadata_check(bool $ok,string $message):void{if(!$ok)throw new Runtime
 metadata_check(PublicSeo::description('  Café   y tradición. ')==='Café y tradición.','Normalize whitespace');
 $excerpt=PublicSeo::description(str_repeat('Café tradición Bogotá. ',20));
 metadata_check(mb_check_encoding($excerpt,'UTF-8')&&mb_strlen($excerpt)<=160&&str_ends_with($excerpt,'…'),'Safe Unicode excerpt');
-metadata_check(str_contains(PublicSeo::destinationTitle('Jericó','en','Antioquia'),'Things to do in Jericó, Antioquia'),'Localized purpose and location');
+metadata_check(str_contains(PublicSeo::placeTitle('Jericó','en','Antioquia'),'Things to do in Jericó, Antioquia'),'Localized purpose and location');
 $business=['display_name'=>'Café </script><script>alert(1)</script>','document'=>'PRIVATE-DOCUMENT','payment'=>'PRIVATE-PAYMENT'];
 $json=PublicSeo::jsonLd(PublicSeo::businessGraph($business,'https://example.invalid/negocios/test/','Title','Description','es',null));
 metadata_check(substr_count($json,'</script>')===1&&!str_contains($json,'PRIVATE-'),'Escape and private allowlist');

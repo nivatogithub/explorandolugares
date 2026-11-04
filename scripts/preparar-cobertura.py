@@ -13,17 +13,17 @@ def target(config,relative):
  if parts.parts[0]=='app':return str(PurePosixPath(config['remote_base'],*parts.parts))
  raise ValueError('Raíz no permitida')
 def sources():
- pairs=[('backend/public/cobertura/colombia/index.html','public/cobertura/colombia/index.html'),('backend/public/api/cobertura.php','public/api/cobertura.php'),('backend/app/CoverageService.php','app/CoverageService.php'),('backend/app/content/coverage-plan.json','app/content/coverage-plan.json'),('backend/app/content/coverage-geography.json','app/content/coverage-geography.json')]
+ pairs=[('backend/public/cobertura/colombia/index.html','public/cobertura/colombia/index.html'),('backend/public/api/coverage.php','public/api/coverage.php'),('backend/app/CoverageService.php','app/CoverageService.php'),('backend/app/content/coverage-plan.json','app/content/coverage-plan.json'),('backend/app/content/coverage-geography.json','app/content/coverage-geography.json')]
  for p in sorted((ROOT/'backend/public/assets/cobertura').iterdir()):
-  if p.name in {'cobertura.css','portal-tokens.css','cobertura.js','medicion.js','select-flotante.js','departamentos.geojson','procedencia.json'} or re.fullmatch(r'municipios-\d{2}\.geojson',p.name):pairs.append((str(p.relative_to(ROOT)),'public/assets/cobertura/'+p.name))
+  if p.name in {'coverage.css','portal-tokens.css','coverage.js','analytics.js','floating-select.js','departamentos.geojson','procedencia.json'} or re.fullmatch(r'municipios-\d{2}\.geojson',p.name):pairs.append((str(p.relative_to(ROOT)),'public/assets/cobertura/'+p.name))
  for p in sorted((ROOT/'backend/app/analytics').rglob('*')):
   if p.is_file():pairs.append((str(p.relative_to(ROOT)),'app/analytics/'+str(p.relative_to(ROOT/'backend/app/analytics'))))
- for name in ['api/medicion.php','api/actividad.php','api/audiencia-entidad.php','admin/medicion.php']:
+ for name in ['api/analytics.php','api/activity.php','api/entity-audience.php','admin/analytics.php']:
   pairs.append(('backend/public/'+name,'public/'+name))
- for p in sorted((ROOT/'backend/integration-medicion/public').rglob('*')):
-  if p.is_file():pairs.append((str(p.relative_to(ROOT)),'public/'+str(p.relative_to(ROOT/'backend/integration-medicion/public'))))
+ for p in sorted((ROOT/'backend/integration-analytics/public').rglob('*')):
+  if p.is_file():pairs.append((str(p.relative_to(ROOT)),'public/'+str(p.relative_to(ROOT/'backend/integration-analytics/public'))))
  pairs.append(('backend/public/business/dashboard.php','public/business/dashboard.php'))
- return sorted(pairs,key=lambda p:4 if p[1]=="public/cobertura/colombia/index.html" else 3 if p[1].endswith("/index.html") else 2 if p[1]=="public/api/cobertura.php" else 1 if p[1].startswith("public/") else 0)
+ return sorted(pairs,key=lambda p:4 if p[1]=="public/cobertura/colombia/index.html" else 3 if p[1].endswith("/index.html") else 2 if p[1]=="public/api/coverage.php" else 1 if p[1].startswith("public/") else 0)
 def manifest(data,config):
  if data.get('site')!='explorandolugares' or data.get('host')!=config['host'] or data.get('remote_base')!=config['remote_base'] or data.get('public_root')!=sftp.public_path(config):raise ValueError('Manifiesto de otro destino o inconsistente')
  if not isinstance(data.get('files'),list):raise ValueError('Manifiesto incompleto')
@@ -50,7 +50,7 @@ def main():
  subprocess.run([sys.executable,str(ROOT/'scripts/sincronizar-estilos-cobertura.py'),'--check'],check=True)
  subprocess.run([sys.executable,str(ROOT/'backend/tests/test_portal_design.py')],check=True)
  files=prepare(config);old={x['relative']:x for x in previous['files']}
- guards=json.loads((ROOT/'backend/integration-medicion/baseline.json').read_text())
+ guards=json.loads((ROOT/'backend/integration-analytics/baseline.json').read_text())
  for relative,expected in guards.items():
   prepared=next(x['sha256'] for x in files if x['relative']==relative)
   if old.get(relative,{}).get('sha256') not in [expected,prepared]:raise ValueError('La integración necesita reconciliar cambios de producción: '+relative)

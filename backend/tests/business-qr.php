@@ -21,9 +21,10 @@ if(BusinessQrCode::publishedPage($p,$uuid)!==null)throw new RuntimeException('Ex
 $p->exec('UPDATE business_subscriptions SET ends_at=datetime("now","+1 day") WHERE business_id=4;UPDATE destinations SET publication_status="draft"');
 if(BusinessQrCode::publishedPage($p,$uuid)!==null||BusinessQrCode::publishedPage($p,'not-an-id')!==null)throw new RuntimeException('Unpublished destination or malformed ID exposed');
 echo "OK: QR only for current public page entitlements; drafts, archives, card tiers, expiration and private destinations excluded.\n";
-$dashboard=file_get_contents(__DIR__.'/../public/business/dashboard.php');
+$dashboard=file_get_contents(__DIR__.'/../app/views/account/business-workspace.php');
+$controller=file_get_contents(__DIR__.'/../public/business/dashboard.php');
 $qrCss=file_get_contents(__DIR__.'/../public/assets/business-qr.css');
 $gridCss=file_get_contents(__DIR__.'/../public/assets/business-workspace-grid.css');
-if(substr_count($dashboard,'data-business-qr-url=')!==1||!str_contains($dashboard,'business-icon-action business-qr-trigger')||str_contains($dashboard,'<th scope="col">QR</th>')||!str_contains($dashboard,'BusinessWorkspace'))throw new RuntimeException('QR integration restored the old business list or duplicated its actions.');
+if(substr_count($dashboard,'data-business-qr-url=')!==1||!str_contains($dashboard,'business-icon-action business-qr-trigger')||str_contains($dashboard,'<th scope="col">QR</th>')||!str_contains($controller,'BusinessWorkspacePresentation::render('))throw new RuntimeException('QR integration restored the old business list or duplicated its actions.');
 if(str_contains($qrCss,'min-width:44px')||str_contains($qrCss,'min-height:44px')||!str_contains($gridCss,'width:32px')||!str_contains($gridCss,'@media(pointer:coarse)'))throw new RuntimeException('QR must reuse the compact grid action and its accessible touch size.');
 echo "OK: QR integrated once into the current business grid; compact shared actions and touch targets preserved.\n";

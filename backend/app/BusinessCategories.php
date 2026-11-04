@@ -1,5 +1,6 @@
 <?php
 declare(strict_types=1);
+require_once __DIR__.'/BusinessDirectorySelector.php';
 
 /** Primary category remains canonical; extra categories never create another business. */
 final class BusinessCategories
@@ -23,8 +24,7 @@ final class BusinessCategories
 
     public static function ready(PDO $pdo): bool
     {
-        try{$pdo->query('SELECT business_id,category_code FROM business_categories LIMIT 0');return true;}
-        catch(PDOException $e){if(in_array($e->errorInfo[0]??'', ['42S02'],true)||str_contains($e->getMessage(),'no such table:'))return false;throw $e;}
+        return (new BusinessDirectorySelector($pdo))->hasExtraCategories();
     }
 
     public static function validate(PDO $pdo,mixed $codes,string $primary):array
@@ -45,13 +45,6 @@ final class BusinessCategories
 
     public static function enrich(PDO $pdo,array $rows,string $locale='es',string $primaryKey='category_code',string $labelKey='category_label'):array
     {
-        if(!$rows)return [];
-        foreach($rows as &$row){$row['category_codes']=[$row[$primaryKey]];$row['category_labels']=[$row[$labelKey]??$row[$primaryKey]];}unset($row);
-        if(!self::ready($pdo))return $rows;
-        $ids=array_map('intval',array_column($rows,'id'));
-        $q=$pdo->prepare('SELECT bc.business_id,c.code,COALESCE(t.label,c.code) AS label FROM business_categories bc JOIN service_categories c ON c.code=bc.category_code AND c.is_active=1 LEFT JOIN service_category_translations t ON t.category_code=c.code AND LOWER(t.locale)=LOWER(?) WHERE bc.business_id IN ('.implode(',',array_fill(0,count($ids),'?')).') ORDER BY c.display_order,c.code');
-        $q->execute([$locale,...$ids]);$extras=[];foreach($q->fetchAll(PDO::FETCH_ASSOC) as $item)$extras[(int)$item['business_id']][]=$item;
-        foreach($rows as &$row)foreach($extras[(int)$row['id']]??[] as $item)if(!in_array($item['code'],$row['category_codes'],true)){$row['category_codes'][]=$item['code'];$row['category_labels'][]=$item['label'];}unset($row);
-        return $rows;
+        return (new BusinessDirectorySelector($pdo))->enrichCategories($rows,$locale,$primaryKey,$labelKey);
     }
 }

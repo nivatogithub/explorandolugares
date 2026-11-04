@@ -293,26 +293,26 @@ try:
             assert db.execute('SELECT COUNT(*) FROM business_promotion_redemptions WHERE code=?',(coupon,)).fetchone()[0]==1
             assert request('/business/payment.php?business='+str(promo_business),payment,[('payment_proof','payment.pdf','application/pdf',pdf)])[0]==303
     print('OK: real HTTP coupons, invalid plan/code rejected, 100% skips payment without receipt, partial discounted checkout survives refresh and receipt upload; forged totals ignored.',flush=True)
-    assert request('/admin/cupones.php')[0]==303,'A merchant must not manage coupons'
+    assert request('/admin/coupons.php')[0]==303,'A merchant must not manage coupons'
     # Administrative role exists only in this disposable fixture, never in Dev2.
     db.execute('INSERT INTO account_roles(account_id,role) VALUES(2,"administrator")');db.commit()
     _,login,_=request('/negocios/acceso/')
     assert request('/negocios/acceso/',dict(csrf=csrf(login),email='otro@example.invalid',password=password))[0]==303
-    code,admin,_=request('/admin/cupones.php')
+    code,admin,_=request('/admin/coupons.php')
     assert code==200 and 'Últimos usos registrados' in admin and 'PAGINA1MES' in admin and 'Promoción PAGINAMITAD' in admin
     assert 'Lugares donde aplica' in admin and 'Inactivo' in admin
-    assert request('/admin/cupones.php',{'csrf':csrf(admin),'action':'delete','code':'PAGINA1MES'})[0]==400
+    assert request('/admin/coupons.php',{'csrf':csrf(admin),'action':'delete','code':'PAGINA1MES'})[0]==400
     admin_fields={'csrf':csrf(admin),'code':'ADMIN30','percentage':'30','plans[0]':'page','plans[1]':'featured','periods[0]':'monthly','periods[1]':'annual','destinations[0]':'1','destinations[1]':'2','enabled':'1','max_uses':'3','expires_on':'2030-01-01'}
-    assert request('/admin/cupones.php',admin_fields)[0]==303
+    assert request('/admin/coupons.php',admin_fields)[0]==303
     row=db.execute('SELECT * FROM business_promotion_codes WHERE code="ADMIN30"').fetchone()
     assert row['percentage']==30 and json.loads(row['plans_json'])==['page','featured'] and row['max_uses']==3
-    _,admin,_=request('/admin/cupones.php?edit=PAGINAMITAD')
-    assert request('/admin/cupones.php',{'csrf':csrf(admin),'code':'PAGINAMITAD','percentage':'75','plans[0]':'page','periods[0]':'monthly','destinations[0]':'1'})[0]==303
+    _,admin,_=request('/admin/coupons.php?edit=PAGINAMITAD')
+    assert request('/admin/coupons.php',{'csrf':csrf(admin),'code':'PAGINAMITAD','percentage':'75','plans[0]':'page','periods[0]':'monthly','destinations[0]':'1'})[0]==303
     assert db.execute('SELECT enabled FROM business_promotion_codes WHERE code="PAGINAMITAD"').fetchone()[0]==0
     redemption=db.execute('SELECT percentage,due_cents FROM business_promotion_redemptions WHERE code="PAGINAMITAD"').fetchone()
     assert redemption['percentage']==50 and redemption['due_cents']==offer['due_cents'],'admin edits must not rewrite redeemed terms'
     assert db.execute('SELECT destination_id FROM business_promotion_redemption_places WHERE subscription_id=?',(promo_subscription,)).fetchone()[0]==2,'Original redemption place is immutable'
-    code,admin,_=request('/admin/paquete-editorial.php?business='+str(promo_business))
+    code,admin,_=request('/admin/editorial-package.php?business='+str(promo_business))
     assert code==200 and 'Cupón aplicado' in admin and 'PAGINAMITAD' in admin and '50 %' in admin
     assert db.execute('SELECT COUNT(*) FROM business_promotion_audit').fetchone()[0]==2
     print('OK: administrator HTTP access, coupon creation with plan/period/limit, disabling, immutable redeemed discount, usage history and coupon visible in the business file.',flush=True)

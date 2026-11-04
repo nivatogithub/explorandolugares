@@ -24,7 +24,7 @@ with tempfile.TemporaryDirectory(prefix='el-basic-http-') as temporary:
             def call(body=None,extra=None):
                 headers={'Origin':base,'Content-Type':'application/json','User-Agent':'Local verification'}
                 headers.update(extra or {})
-                request=urllib.request.Request(base+'/api/actividad.php',data=json.dumps(body).encode() if body is not None else None,headers=headers)
+                request=urllib.request.Request(base+'/api/activity.php',data=json.dumps(body).encode() if body is not None else None,headers=headers)
                 try:
                     with urllib.request.urlopen(request,timeout=5) as r:return r.status,json.loads(r.read()),r.headers
                 except urllib.error.HTTPError as r:return r.code,json.loads(r.read()),r.headers
@@ -53,11 +53,11 @@ with tempfile.TemporaryDirectory(prefix='el-basic-http-') as temporary:
             assert [row[1] for row in db.execute('PRAGMA table_info(el_basic_country_daily)')]==['page_day','scope_code','destination_slug','country_code','page_views']
             assert db.execute('SELECT DISTINCT country_code FROM el_basic_country_daily').fetchall()==[('ZZ',)]
             for payload in [None, {'event':'page_view','consent':True,'policy_version':'measurement-v1','path':'/'}]:
-                request=urllib.request.Request(base+'/api/medicion.php',data=None if payload is None else json.dumps(payload).encode(),headers={'Origin':base,'Content-Type':'application/json'})
+                request=urllib.request.Request(base+'/api/analytics.php',data=None if payload is None else json.dumps(payload).encode(),headers={'Origin':base,'Content-Type':'application/json'})
                 with urllib.request.urlopen(request) as r:
                     legacy=json.load(r);assert 'Set-Cookie' not in r.headers
                     assert legacy.get('enabled') is False if payload is None else legacy['accepted'] is False
-            with urllib.request.urlopen(base+'/api/cobertura.php?days=all') as r:
+            with urllib.request.urlopen(base+'/api/coverage.php?days=all') as r:
                 result=json.load(r);assert result['audience']['basic']['page_views']==3
                 assert result['audience']['basic']['period_mode']=='all'
                 assert result['audience']['basic']['comparison_available'] is False

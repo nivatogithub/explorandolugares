@@ -1,6 +1,6 @@
 # Presentación única de lugares
 
-La entrada pública `backend/integration-medicion/public/destino.php` carga el contenido y utiliza `backend/app/views/destination-main.php` para presentar todos los lugares e idiomas. `ensayos/v1/destino.php` es solamente una entrada de compatibilidad que delega, sin HTML alternativo.
+La entrada pública `backend/integration-analytics/public/destino.php` carga el contenido y utiliza `backend/app/views/destination-main.php` para presentar todos los lugares e idiomas. `ensayos/v1/destino.php` es solamente una entrada de compatibilidad que delega, sin HTML alternativo.
 
 Las cuatro revisiones locales usan esa misma vista PHP mediante un adaptador CLI de datos; no mantener una maqueta Python/HTML separada. Los datos de revisión no eluden la publicación ni la autenticación de las páginas públicas.
 

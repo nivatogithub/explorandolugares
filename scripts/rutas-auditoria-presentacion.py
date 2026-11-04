@@ -18,8 +18,8 @@ def catalogue(packages):
  for lang,prefix in [('es',''),('en','/en'),('pt-BR','/pt-br')]:
   for slug in release['public_places']:
    route=prefix+'/lugares/'+slug+'/'
-   routes[route]={'route':route,'family':'place','source':'destino.php','language':lang,'roles':['anonymous','traveler','administrator']}
- for route in ['/contacto.php','/reclamar-negocio/','/negocios/acceso/','/negocios/registro/','/negocios/recuperar-clave/','/negocios/portal/','/negocios/portal/?tab=personal','/negocios/portal/?tab=business']:
+   routes[route]={'route':route,'family':'place','source':'place.php','language':lang,'roles':['anonymous','traveler','administrator']}
+ for route in ['/contact.php','/reclamar-negocio/','/negocios/acceso/','/negocios/registro/','/negocios/recuperar-clave/','/negocios/portal/','/negocios/portal/?tab=personal','/negocios/portal/?tab=business']:
   routes[route]={'route':route,'family':'account' if route.startswith('/negocios/') else 'contact','source':'PHP application','roles':['anonymous','traveler','administrator']}
  nav=(ROOT/'backend/public/admin/_navigation.php').read_text()
  for link in re.findall('href="([^"]+)"',nav):

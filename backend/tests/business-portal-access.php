@@ -17,7 +17,7 @@ access_check($session===[],'Las sesiones antiguas de prueba se invalidan.');
 access_check(BusinessPortalAccess::available(['business_accounts_enabled'=>true],$session),'El registro habilitado conserva su acceso normal.');
 access_check(!method_exists(BusinessPortalAccess::class,'unlockForTesting'),'Se eliminó la función de apertura por parámetro.');
 
-foreach (['public/business/register.php','public/business/login.php','public/business/logout.php','public/business/dashboard.php','public/reclamar-negocio.php'] as $route) {
+foreach (['public/business/register.php','public/business/login.php','public/business/logout.php','public/business/dashboard.php','public/business-claim.php'] as $route) {
     $source = file_get_contents(dirname(__DIR__).'/'.$route);
     access_check(is_string($source) && strpos($source, 'require_business_portal_access();') !== false, "La ruta {$route} exige habilitación privada.");
 }

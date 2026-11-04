@@ -12,7 +12,7 @@ Verificación completada con PHP 8.5.11 y SQLite temporal: recepción deshabilit
 
 Pendientes: confirmar soporte PHP/PDO MySQL y base de datos del cPanel, configurar valores privados y responsable real, revisar política de conservación, comprobar el funcionamiento en MySQL/HTTPS del hosting y realizar revisión visual en navegador. No existe conexión con el hosting ni se ha enviado información real. La prueba con SQLite no valida el motor MySQL. No se han subido cambios a GitHub.
 
-Preparación e instrucciones: `backend/README.md` y `python3 scripts/preparar-hosting.py`. Vista estática del formulario: `ensayos/v1/negocios-locales/index.html`; vista preliminar sin datos del panel: `ensayos/v1/admin/vista-previa.html`. El panel funcional es `backend/public/admin/index.php` y requiere el servidor PHP configurado. La vista estática mantiene el envío deshabilitado y no ejecuta PHP.
+Preparación e instrucciones: `backend/README.md` y `python3 scripts/prepare-hosting.py`. Vista estática del formulario: `ensayos/v1/negocios-locales/index.html`; vista preliminar sin datos del panel: `ensayos/v1/admin/vista-previa.html`. El panel funcional es `backend/public/admin/index.php` y requiere el servidor PHP configurado. La vista estática mantiene el envío deshabilitado y no ejecuta PHP.
 
 ## Alcance simplificado vigente
 
@@ -20,7 +20,7 @@ El propietario pospone el registro de usuarios. Todos, incluidos los comercios, 
 
 ## Catálogo JSON de opciones
 
-Municipios y categorías se mantienen en `backend/app/contact-options.json`, sin tablas de base de datos para estas listas. `scripts/generar-opciones-contacto.py` publica una copia en `assets/contact-options.json` y genera un respaldo equivalente en el HTML. `assets/opciones-contacto.js` carga y rellena las listas en español o inglés, conservando cualquier selección previa. Si falla la descarga, se conservan las opciones de respaldo. El servidor valida contra el mismo catálogo JSON. Preparar hosting ejecuta esta generación automáticamente. Una futura base de datos podrá reemplazar la fuente de opciones conservando los valores de categorías y el comportamiento del formulario.
+Municipios y categorías se mantienen en `backend/app/contact-options.json`, sin tablas de base de datos para estas listas. `scripts/generate-contact-options.py` publica una copia en `assets/contact-options.json` y genera un respaldo equivalente en el HTML. `assets/opciones-contacto.js` carga y rellena las listas en español o inglés, conservando cualquier selección previa. Si falla la descarga, se conservan las opciones de respaldo. El servidor valida contra el mismo catálogo JSON. Preparar hosting ejecuta esta generación automáticamente. Una futura base de datos podrá reemplazar la fuente de opciones conservando los valores de categorías y el comportamiento del formulario.
 
 ## Consentimiento y contacto — validaciones
 
